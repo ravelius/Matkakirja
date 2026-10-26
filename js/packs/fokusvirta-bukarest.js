@@ -470,6 +470,12 @@ export const FOKUSVIRTA_BUKAREST = {
        *
        * Commons 25.8.2026: 377×503, public domain, Carol Szathmari,
        * päiväys 1854, kuvaus "Crimean War: Turkish infantry in 1854".
+       *
+       * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+       * #3434): Szathmarin KAIKKI säilyneet Krimin sodan valokuvat ovat
+       * Commonsissa samaa pientä kokoluokkaa (377–503 px) — nämä ovat
+       * skannattuja alkuperäisiä 1854-valokuvia, ei uudelleenkuvattavissa.
+       * Isompaa versiota tästä eikä muusta saman sarjan kuvasta löytynyt.
        */
       kuva: {
         tiedosto: 'Kırım Savaşı, Türk piyadeleri 1854 senesi.jpg',
@@ -595,11 +601,11 @@ export const FOKUSVIRTA_BUKAREST = {
      * viimeinen virke puhuu.
      */
     kuva: {
-      tiedosto: 'Curtea Veche 1.jpg',
+      tiedosto: "Curtea Veche - church and building.JPG",
       lyhyt: 'Vanhan ruhtinaanhovin raunioita; Vlad III nimitti paikan asuinpaikakseen 1459.',
       selite: 'Vanhan ruhtinaanhovin raunioita Bukarestin vanhassakaupungissa. '
         + 'Juuri tämän paikan Vlad III nimitti 1459 asuinpaikakseen.',
-      lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0 ro)',
+      lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
     },
   },
 
@@ -772,8 +778,8 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli '
         + 'sijoitettu Styriaan ja kreivin nimi oli Count Wampyr; nimen '
         + 'Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja '
-        + 'Moldavian historiasta ja kopioi kirjasta alaviitteen "Dracula '
-        + 'means devil". Vlad Seivästäjää ei mainita muistiinpanoissa '
+        + 'Moldavian historiasta ja kopioi kirjasta alaviitteen ”Dracula '
+        + 'means devil”. Vlad Seivästäjää ei mainita muistiinpanoissa '
         + 'lainkaan.',
       lahde: 'en-Wikipedia "Bram Stoker", en-Wikipedia "Dracula" ja '
         + 'en-Wikipedia "Vlad the Impaler". Tarkistettu 1.9.2026.',
@@ -838,22 +844,4 @@ export const FOKUSVIRTA_BUKAREST = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy.
-   *
-   * KAKSI ASIAA, JOTKA EIVÄT SAA MUUTTUA. Ensimmäinen virke nojaa
-   * tarkistettuun faktaan (Peleșin peruskivi 22.8.1873,
-   * fokuskohteet-romania.md kohde 3), ja viimeinen virke kuittaa
-   * Istanbulin vaanijan poissaolon — kaari hengittää, ja siksi tässä
-   * kaupungissa EI ole vaanijaa.
-   */
-  aarremerkinta: {
-    teksti: 'Kätkin lippaani samana elokuuna, jona kuningas muurasi '
-      + 'Sinaiassa linnansa peruskiven. Hänen lippaansa tarvitsee linnan — '
-      + 'minun tarvitsee vain tarkan silmän. Sillalla ei tällä kertaa '
-      + 'seissyt ketään.',
-  },
 };

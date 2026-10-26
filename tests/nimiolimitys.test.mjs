@@ -80,8 +80,24 @@ const onPoltettu = (tunnus, tiiviste) => luettelo[tunnus] === tiiviste;
  * Lista on tyhjä tarkoituksella: jokainen nimiö–nimiö-limitys kaataa
  * testin. Jos tänne joskus lisätään rivi, sen viereen kirjoitetaan
  * mittaus siitä, mitä kokeiltiin ja miksi se ei riittänyt.
+ *
+ * NLD Paleis voor Volksvlijt -ihme (Sisältökirjuri 28.9.2026) lisäsi
+ * Amsterdamiin kuudennen merkin KAUPUNKIKATON_SADE:n (8 yksikköä,
+ * js/fokuskohteet.js) sisään, mikä työnsi kaupungin ruuhkanpudotuksen
+ * (KAUPUNKINOSTOJEN_KATTO 3) yli — sivuvaikutuksena Delftin Naundorff/
+ * Leeuwenhoek-pari (ei fyysisesti Amsterdamin lähellä) menetti kylkensä.
+ * KOKEILTU: Volksvlijtin siirto joka suuntaan ±6 lautayksikköä (koko
+ * ruudukko, ei yhtään toimivaa kohtaa alle 8,6 yksikön/17 km:n
+ * siirrolla, joka veisi merkin pois Amsterdamista faktavirheeksi);
+ * lyhyempi nimio ('Palace') ei vaikuttanut. Oikea korjaus vaatisi joko
+ * Volksvlijtin siirron Amsterdamin kaupunkilehden kohdekartalle
+ * (js/packs/maakartat.js KAUPUNKIKARTAT.amsterdam, raja osuu juuri ja
+ * juuri Frederikspleinin kohdalle) tai jommankumman Delft-nimiön
+ * siirron/lyhennyksen — molemmat ulkoasupäätöksiä.
  */
-const ODOTTAVAT_LIMITYKSET = new Set([]);
+const ODOTTAVAT_LIMITYKSET = new Set([
+  '[sama maa] NLD/skandaali-naundorff-delftin-valekuningas + NLD/nosto-leeuwenhoek',
+]);
 test('yksikään poltettava nimiö ei ole toisen nimiön päällä', () => {
   const { rivit, nimioNimio } = laskeNimiolimitykset(merkit);
   assert.ok(rivit.length > 400, `poltettavia merkkejä vain ${rivit.length} — testin oletus vanhentui`);

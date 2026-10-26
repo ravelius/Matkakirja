@@ -1,0 +1,35 @@
+[
+  {
+    "id": "oslo",
+    "esittely": "Kartan alue on Oslon keskusta Oslonvuonon pohjukassa. Vuonna 1624 tulipalo tuhosi vanhan kaupungin, ja Tanskan kuningas Kristian IV päätti perustaa uuden kaupungin Akershusin linnoituksen lähelle. Se nimettiin hänen mukaansa Christianiaksi, ja nimi vaihtui takaisin Osloksi 1925. Akershusin rakentaminen alkoi kuningas Haakon V:n aikana 1300-luvun vaihteessa.\n\nKuninkaanlinna valmistui 1849, ja sen luo johtava Karl Johans gate nimettiin 1852 kuningas Kaarle III Juhanan mukaan. Kaupungintalo vihittiin käyttöön 15. toukokuuta 1950, ja siellä jaetaan Nobelin rauhanpalkinto. Oopperatalo avattiin 2008, ja sen kaltevalle katolle voi kävellä. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 694,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Oslo", "title": "Wikipedia: Oslo", "tukee": "1624 tulipalo, Kristian IV, Christiania; nimi Oslo takaisin 1.1.1925; Akershusin rakennus Haakon V:n aikana"},
+      {"url": "https://snl.no/Oslo_-_historie", "title": "Store norske leksikon: Oslo - historie", "tukee": "1624 palo, Christian IV perusti Christianian Akershusin lähelle; Håkon 5 aloitti Akershusin; nimi Oslo 1925"},
+      {"url": "https://en.wikipedia.org/wiki/Akershus_Fortress", "title": "Wikipedia: Akershus Fortress", "tukee": "rakentaminen alkoi 1290-luvun lopulla Haakon V:n aikana, mainittu 1300"},
+      {"url": "https://en.wikipedia.org/wiki/Royal_Palace,_Oslo", "title": "Wikipedia: Royal Palace, Oslo", "tukee": "valmistui 26.7.1849; Karl Johans gaten päässä"},
+      {"url": "https://www.royalcourt.no/artikkel.html?tid=88577", "title": "Det kongelige hoff: Slottet (hakutulos)", "tukee": "palatsi valmistui 1849"},
+      {"url": "https://en.wikipedia.org/wiki/Karl_Johans_gate", "title": "Wikipedia: Karl Johans gate", "tukee": "nimetty 1852 kuningas Kaarle III Juhanan mukaan; yhdistää kuninkaanlinnan muuhun kaupunkiin"},
+      {"url": "https://snl.no/Karl_Johans_gate", "title": "Store norske leksikon: Karl Johans gate", "tukee": "nimetty 1852 kuningas Karl III Johanin mukaan; kulkee kuninkaanlinnalle"},
+      {"url": "https://en.wikipedia.org/wiki/Oslo_City_Hall", "title": "Wikipedia: Oslo City Hall", "tukee": "virallisesti avattu 15.5.1950; Nobelin rauhanpalkinnon seremonia"},
+      {"url": "https://snl.no/Oslo_rådhus", "title": "Store norske leksikon: Oslo rådhus", "tukee": "vihitty 15.5.1950; rauhanpalkinto jaetaan raatihuoneessa"},
+      {"url": "https://en.wikipedia.org/wiki/Oslo_Opera_House", "title": "Wikipedia: Oslo Opera House", "tukee": "avattiin 2008, Snøhetta; katolle voi kävellä"},
+      {"url": "https://snl.no/Den_Norske_Opera_%26_Ballett", "title": "Store norske leksikon: Den Norske Opera & Ballett", "tukee": "toiminut Operahuset i Bjørvikassa 2008 alkaen, Snøhetta"},
+      {"url": "https://www.dezeen.com/2025/07/04/snohetta-buildings-walkable-roofs/amp/", "title": "Dezeen: Snøhetta walkable roofs (hakutulos)", "tukee": "oopperatalon katto on kävelykelpoinen, vapaa pääsy"}
+    ],
+    "pudotetut": [
+      "Nimi Kristiania 1877 (entinen teksti): vain en-Wikipedia, jätetty pois",
+      "Bygdøyn laivamuseot (viikinkilaiva, Fram, Kon-Tiki) ja 3,5 km etäisyys: kartan ulkopuolella, ei tarkistettu",
+      "Entinen 'suoraviivainen ruudukko' ja 'kuninkaanlinna-tuomiokirkko-asema' -kuvaus: Karl Johans gate -yhteys Jernbanetorgille vain SNL:ssä, jätetty pois",
+      "Akershus '1300-luvulta paikallaan': muotoiltu 'alkoi 1300-luvun vaihteessa' koska tarkka vuosi epävarma",
+      "Tuomiokirkko: ei tarkistettu, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Akershusin rakennusaloitus: 'myöhäinen 1290-luku' (en-Wikipedia), 1299 (SNL) -> käytetty 'noin 1300-luvun vaihteessa'",
+      "Oopperatalon valmistuminen 2007 (Dezeen, en-Wikipedia) vs avajaiset 2008 -> käytetty avaamisvuotta 2008",
+      "Kuninkaanlinnan aloitus 1824/1825 -> käytetty vain valmistumisvuotta 1849"
+    ],
+    "muutos_sk": "Tiivistetty 779 -> 694 merkkiin ja jaettu kahteen kappaleeseen. Kertoo Christianian perustamisesta 1624 ja nimenmuutoksesta 1925, Akershusin alusta, kuninkaanlinnasta 1849, Karl Johans gaten nimestä 1852, kaupungintalosta 1950 ja oopperatalosta 2008. Poistettu: Kristiania 1877 (yksi lähde), Bygdøyn museot, tuomiokirkko ja 'rautatieasemalle vievä' -kuvaus."
+  }
+]

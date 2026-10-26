@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 /*
+ * ÄLÄ KÄYTÄ NORMAALEIHIN (Päätoimittaja 11.10.2026): kolmen otosvuoden ERA5-ruutu antoi 24.9.2026
+ * lisätyille 66 riville vääriä "normaaleja". Uudet säärivit: tools/hae-saa-asemat.mjs (sääaseman
+ * ilmastonormaalit en-Wikipedian ilmastotaulukoista, asema ja kausi lahde-kenttään).
+ *
  * KUUKAUSIKESKILÄMPÖ JA -SADEMÄÄRÄ -> js/packs/saatiedot.js kantarivit
  * (keskilampo[12], sade[12]). Täydentää tools/hae-saanormaalit.mjs:ää,
  * joka laskee ylimmän/alimman vain riveille, joilla keskilampo on

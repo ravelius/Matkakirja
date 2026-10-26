@@ -77,6 +77,41 @@ export function kaariLuentaSoi(kohde, osa) {
 }
 
 /*
+ * KAARILUENTOJEN TALLENTEET NATIIVILLE (PT 12.10.2026 klo 03.4x, juna 184;
+ * docs/moduulit/tarinakaari.md: saapuminen, kohtaaminen ja aarre luetaan
+ * ääneen). Vienti (tools/vienti/kokoelmat.mjs, skeema 1.65) antaa
+ * tarinakaari-riville äänikentän { kohtaaminen, aarre } = { url, kesto } vain
+ * generoiduille (TARINAKAARI = luennat !== false) ja mykistämättömille
+ * osille; natiivi soittaa ne saapumisen tallenteen tavoin, lukijaääni jää
+ * varapoluksi. Webin oma soitto ei muutu (natiivi on malli).
+ *
+ * -v3 (Äänittäjä 15.10.2026, PT:n tilaus; omistaja 14.10.: isoisän teksti aina
+ * vanhemmalla mallilla eleven_v3): samat tekstit uusina ottoina, −14,6 LUFS,
+ * nimillä puhe-kaari-<osa>-<id>-v3.mp3 (vienti isoisa-v3-uusinta-vienti-20261015).
+ * Entiset -v2 (turbo, 12.10.) ja −17,1 LUFS -tiedostot jäävät ämpäriin
+ * käyttämättä. Kesto sekunteina (afinfo vientipaketin tiedostosta 15.10.2026,
+ * sis. 0,7 s hiljaisen hännän).
+ */
+export const KAARI_AANITTEET_V3 = Object.freeze({
+  bryssel: { kohtaaminen: 24.660, aarre: 16.901 },
+  kosice: { kohtaaminen: 23.615, aarre: 15.935 },
+  ljubljana: { kohtaaminen: 19.696, aarre: 17.450 },
+  luxemburg: { kohtaaminen: 23.850, aarre: 19.696 },
+  valletta: { kohtaaminen: 19.775, aarre: 17.528 },
+  bergen: { kohtaaminen: 17.711, aarre: 18.573 },
+  firenze: { kohtaaminen: 21.864, aarre: 15.856 },
+  sevilla: { kohtaaminen: 18.416, aarre: 17.136 },
+  tampere: { kohtaaminen: 19.148, aarre: 18.887 },
+});
+
+/** Kaaren osan ('kohtaaminen' | 'aarre') tallenne { polku, kesto } tai null (mykistetty tai ei generoitu). */
+export function kaariAanite(kohde, osa) {
+  if (!kohde || kohde.luennat === false || !kaariLuentaSoi(kohde, osa)) return null;
+  const v3 = KAARI_AANITTEET_V3[kohde.id]?.[osa];
+  return { polku: `assets/audio/puhe-kaari-${osa}-${kohde.id}${v3 ? '-v3' : ''}.mp3`, kesto: v3 ?? null };
+}
+
+/*
  * Kaari koskee Euroopan lautaa ja maailmankarttaa, jolla samat
  * kaupungit ovat samoilla tunnuksilla. Muiden lautojen samannimiset
  * tunnukset (esim. Suomi-laudan helsinki) eivät kuulu kaareen — siellä

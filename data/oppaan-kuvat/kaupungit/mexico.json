@@ -1,0 +1,742 @@
+{
+ "kaupunki": "mexico",
+ "kaupunkiQ": "Q1489",
+ "kohteet": [
+  {
+   "q": "Q1348507",
+   "nimi": "Zócalo",
+   "peruste": "pelin nosto",
+   "koko_m": 240,
+   "lat": 19.43278,
+   "lon": -99.13333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Panorámicas CDMX IMG 4013 (25660958945).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panor%C3%A1micas_CDMX_IMG_4013_(25660958945).jpg?width=1280",
+     "tekija": "Gobierno CDMX",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1micas_CDMX_IMG_4013_(25660958945).jpg",
+     "selite": "Zócalo on Méxicon kaupungin suuri pääaukio, jonka laidalla kohoavat katedraali ja kansallispalatsi.",
+     "leveys": 1500,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "La Plaza (2752266747).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Plaza_(2752266747).jpg?width=1280",
+     "tekija": "Eneas De Troya from Mexico City, México",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Plaza_(2752266747).jpg",
+     "selite": "Parvekkeelta katsoen Zócalo levittäytyy valtavana kivettynä aukiona keskustan rakennusten ympäröimänä.",
+     "leveys": 6846,
+     "korkeus": 2275,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q610961",
+   "nimi": "Méxicon metropoliittakatedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 19.43439,
+   "lon": -99.13308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral Metropolitana de la Ciudad de México 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Metropolitana_de_la_Ciudad_de_M%C3%A9xico_1.jpg?width=1280",
+     "tekija": "ProtoplasmaKid",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_la_Ciudad_de_M%C3%A9xico_1.jpg",
+     "selite": "Metropoliittakatedraali on Latinalaisen Amerikan suurimpia kirkkoja ja seisoo atsteekkien temppelialueen paikalla.",
+     "leveys": 3921,
+     "korkeus": 2206,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral y Parroquia del Sagrario.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_y_Parroquia_del_Sagrario.jpg?width=1280",
+     "tekija": "Covadongino",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_y_Parroquia_del_Sagrario.jpg",
+     "selite": "Katedraalin viereen liittyy Sagrario-kappeli, jonka tiheäkoristeinen julkisivu on myöhäisbarokkia.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1517884",
+   "nimi": "Palacio Nacional",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 19.4325,
+   "lon": -99.13139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Front facade of Palacio Nacional from southwest, Mexico City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_facade_of_Palacio_Nacional_from_southwest%2C_Mexico_City.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_facade_of_Palacio_Nacional_from_southwest%2C_Mexico_City.jpg",
+     "selite": "Palacio Nacional pitkine punaisine kivijulkisivuineen reunustaa Zócalon itäpuolta.",
+     "leveys": 4536,
+     "korkeus": 3288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Nacional, México D.F., México, 2013-10-16, DD 119.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Nacional%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2013-10-16%2C_DD_119.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2013-10-16%2C_DD_119.JPG",
+     "selite": "Presidentin virka-asuntona toimiva palatsi on Méxicon vallan ja historian keskus.",
+     "leveys": 4974,
+     "korkeus": 2425,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Balcón principal del Palacio Nacional, México D.F., México, 2013-10-16, DD 103.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balc%C3%B3n_principal_del_Palacio_Nacional%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2013-10-16%2C_DD_103.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Balc%C3%B3n_principal_del_Palacio_Nacional%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2013-10-16%2C_DD_103.JPG",
+     "selite": "Palatsin pääportin yllä riippuu kello, jota soitetaan itsenäisyyshuudon aikaan.",
+     "leveys": 2062,
+     "korkeus": 4197,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1139081",
+   "nimi": "Palacio de Bellas Artes",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 19.43528,
+   "lon": -99.14139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palaco de Bellas Artes, Mexico City, from across Eje Central Lazaro Cardenas in evening.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palaco_de_Bellas_Artes%2C_Mexico_City%2C_from_across_Eje_Central_Lazaro_Cardenas_in_evening.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palaco_de_Bellas_Artes%2C_Mexico_City%2C_from_across_Eje_Central_Lazaro_Cardenas_in_evening.jpg",
+     "selite": "Valkomarmorinen Palacio de Bellas Artes loistaa illassa kultakupoleineen Alameda-puiston laidalla.",
+     "leveys": 5676,
+     "korkeus": 3660,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Bellas Artes, Ciudad de México, México, 2015-07-18, DD 10.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Bellas_Artes%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_10.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Bellas_Artes%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_10.JPG",
+     "selite": "Ylhäältä katsoen Bellas Artesin marmoripalatsi ja keltaiset kupolit erottuvat keskustan punaisista katoista.",
+     "leveys": 8496,
+     "korkeus": 5664,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q774021",
+   "nimi": "Templo Mayor",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 19.435,
+   "lon": -99.13139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aztec Great Temple & Metropolitan Cathedral (9781027846).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aztec_Great_Temple_%26_Metropolitan_Cathedral_(9781027846).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aztec_Great_Temple_%26_Metropolitan_Cathedral_(9781027846).jpg",
+     "selite": "Templo Mayorin kaivaukset paljastavat atsteekkien pääpyhäkön keskellä nykyistä keskustaa katedraalin vierellä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Templo Mayor 2015 019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Mayor_2015_019.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_Mayor_2015_019.jpg",
+     "selite": "Templo Mayorin portaiden vierellä lepää veistetty käärmeenpää, jollaisia temppelin pyhät alueet pursuavat.",
+     "leveys": 5114,
+     "korkeus": 3300,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Templo Mayor 50.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Mayor_50.jpg?width=1280",
+     "tekija": "GAED",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_Mayor_50.jpg",
+     "selite": "Tenochtitlanin pyhän alueen perustukset on kaivettu esiin nykyaikaisten talojen väliin.",
+     "leveys": 3280,
+     "korkeus": 2460,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1072510",
+   "nimi": "Chapultepecin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 19.42056,
+   "lon": -99.18167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea del Castillo de Chapultepec 7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg?width=1280",
+     "tekija": "Own work",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg",
+     "selite": "Chapultepecin linna nousee kukkulalla metsän keskellä ja katsoo kaupunkiin.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Southwest facade - Chapultepec Castle - Mexico 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Southwest_facade_-_Chapultepec_Castle_-_Mexico_2024.jpg?width=1280",
+     "tekija": "José Luiz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Southwest_facade_-_Chapultepec_Castle_-_Mexico_2024.jpg",
+     "selite": "Linnan etelälänsipuolen julkisivu on Chapultepecin kukkulan huipulla.",
+     "leveys": 3769,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jardín del castillo de chapultepec - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jard%C3%ADn_del_castillo_de_chapultepec_-_panoramio.jpg?width=1280",
+     "tekija": "Bohao Zhao",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jard%C3%ADn_del_castillo_de_chapultepec_-_panoramio.jpg",
+     "selite": "Linnan pääjulkisivun edessä seisoo muistomerkki ja pitkä katettu käytävä.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q928541",
+   "nimi": "Itsenäisyyden enkeli",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 19.427,
+   "lon": -99.16771,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Angel de la independencia170409.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angel_de_la_independencia170409.jpg?width=1280",
+     "tekija": "Carlos Valenzuela",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angel_de_la_independencia170409.jpg",
+     "selite": "Itsenäisyyden enkeli kohoaa Paseo de la Reforman kehän keskellä kultaisena voitonjumalattarena.",
+     "leveys": 5874,
+     "korkeus": 3998,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Atardecer en Paseo de la Reforma en la Ciudad de México 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atardecer_en_Paseo_de_la_Reforma_en_la_Ciudad_de_M%C3%A9xico_1.jpg?width=1280",
+     "tekija": "Mario Yaír TS",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atardecer_en_Paseo_de_la_Reforma_en_la_Ciudad_de_M%C3%A9xico_1.jpg",
+     "selite": "Illan violetti taivas piirtää enkelin pylvään ja Reforman pilvenpiirtäjät siluetteina.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q947870",
+   "nimi": "Torre Latinoamericana",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 19.43389,
+   "lon": -99.14056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torre Latinoamericana, Ciudad de México, México, 2015-07-18, DD 11.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Latinoamericana%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_11.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_Latinoamericana%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_11.JPG",
+     "selite": "Torre Latinoamericana kohoaa 1950-luvulta Méxicon keskustan yllä ja kestää maanjäristykset.",
+     "leveys": 5635,
+     "korkeus": 8452,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Latinoamerica tower, Mexico City 2022 p2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Latinoamerica_tower%2C_Mexico_City_2022_p2.jpg?width=1280",
+     "tekija": "Carlos Valenzuela",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Latinoamerica_tower%2C_Mexico_City_2022_p2.jpg",
+     "selite": "Tornin juurella seisoo ratsastajapatsas, jonka taakse suuri tornitalo kohoaa kapeana.",
+     "leveys": 3600,
+     "korkeus": 5992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1478843",
+   "nimi": "Paseo de la Reforma",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": 19.43444,
+   "lon": -99.15194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blick auf den Paseo de la Reforma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_auf_den_Paseo_de_la_Reforma.jpg?width=1280",
+     "tekija": "Fernando Flores",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_auf_den_Paseo_de_la_Reforma.jpg",
+     "selite": "Reforman pilvenpiirtäjät kohoavat Chapultepecin puiston vehreyden yllä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vistas nocturnas aéreas de Paseo de la Reforma desde la Estela de Luz 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vistas_nocturnas_a%C3%A9reas_de_Paseo_de_la_Reforma_desde_la_Estela_de_Luz_06.jpg?width=1280",
+     "tekija": "ProtoplasmaKid",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vistas_nocturnas_a%C3%A9reas_de_Paseo_de_la_Reforma_desde_la_Estela_de_Luz_06.jpg",
+     "selite": "Illan valoissa Reforman leveä bulevardi johtaa pilvenpiirtäjien välistä kohti enkelin muistomerkkiä.",
+     "leveys": 4025,
+     "korkeus": 2264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Paseo de la Reforma tomada desde el mirador del Monumento a la Independencia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo_de_la_Reforma_tomada_desde_el_mirador_del_Monumento_a_la_Independencia.jpg?width=1280",
+     "tekija": "Jacobo Ríos",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paseo_de_la_Reforma_tomada_desde_el_mirador_del_Monumento_a_la_Independencia.jpg",
+     "selite": "Ylhäältä katsottuna Paseo de la Reforman puiden reunustama suora väylä halkoo kaupungin läpi.",
+     "leveys": 2592,
+     "korkeus": 1936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q643026",
+   "nimi": "Xochimilco",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 19.24758,
+   "lon": -99.09822,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Trajinera.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trajinera.JPG?width=1280",
+     "tekija": "Jflo23",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trajinera.JPG",
+     "selite": "Xochimilcon värikkäät trajinera-veneet liukuvat vanhojen atsteekkien kanavissa.",
+     "leveys": 2576,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ahuehetes en el Parque Ecológico Xochimilco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ahuehetes_en_el_Parque_Ecol%C3%B3gico_Xochimilco.jpg?width=1280",
+     "tekija": "Paricutina",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ahuehetes_en_el_Parque_Ecol%C3%B3gico_Xochimilco.jpg",
+     "selite": "Xochimilcon ekologisen puiston ahuehuete-puut kasvavat vedessä laajoine juurineen.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q305419",
+   "nimi": "Guadalupen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 19.48444,
+   "lon": -99.11722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mexico city Insigne y Nacional Basílica de Santa María de Guadalupe 7.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_city_Insigne_y_Nacional_Bas%C3%ADlica_de_Santa_Mar%C3%ADa_de_Guadalupe_7.JPG?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mexico_city_Insigne_y_Nacional_Bas%C3%ADlica_de_Santa_Mar%C3%ADa_de_Guadalupe_7.JPG",
+     "selite": "Guadalupen uusi pyöreä basilika kokoaa miljoonia pyhiinvaeltajia Tepeyacin kukkulan juurelle.",
+     "leveys": 4912,
+     "korkeus": 3275,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Templo Expiatorio a Cristo Rey (Antigua Basílica de Guadalupe) - Ciudad de México.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Expiatorio_a_Cristo_Rey_(Antigua_Bas%C3%ADlica_de_Guadalupe)_-_Ciudad_de_M%C3%A9xico.jpg?width=1280",
+     "tekija": "Juan Carlos Fonseca Mata",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_Expiatorio_a_Cristo_Rey_(Antigua_Bas%C3%ADlica_de_Guadalupe)_-_Ciudad_de_M%C3%A9xico.jpg",
+     "selite": "Vanha Guadalupen basilika on punatiilistä barokkia, ja sen kupolit nousevat lähellä uutta kirkkoa.",
+     "leveys": 2012,
+     "korkeus": 1649,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q524249",
+   "nimi": "Kansallinen antropologiamuseo",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 19.42611,
+   "lon": -99.18611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antropología - Museo Nacional de Antropología ovedc wikimania 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antropolog%C3%ADa_-_Museo_Nacional_de_Antropolog%C3%ADa_ovedc_wikimania_003.jpg?width=1280",
+     "tekija": "Ovedc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antropolog%C3%ADa_-_Museo_Nacional_de_Antropolog%C3%ADa_ovedc_wikimania_003.jpg",
+     "selite": "Antropologian kansallismuseon valkoinen betonikatos ja suihkulähteet avautuvat Chapultepecin puistoon.",
+     "leveys": 3552,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019-02-24 - Museo Nacional de Antropología - 004.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-02-24_-_Museo_Nacional_de_Antropolog%C3%ADa_-_004.jpg?width=1280",
+     "tekija": "Oleg Yunakov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-02-24_-_Museo_Nacional_de_Antropolog%C3%ADa_-_004.jpg",
+     "selite": "Museon laaja kivinen sisäänkäynti avautuu aukion yli kohti Chapultepecin puistoa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2663377",
+   "nimi": "Frida Kahlo -museo",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 19.35514,
+   "lon": -99.16253,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Frida Kahlo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Frida_Kahlo.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Nachtwächter assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Frida_Kahlo.JPG",
+     "selite": "Frida Kahlon museo toimii Coyoacánin sinisessä talossa, jossa taiteilija syntyi ja asui.",
+     "leveys": 1590,
+     "korkeus": 2213,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1389520",
+   "nimi": "Vallankumousmuistomerkki",
+   "peruste": "sitelinks",
+   "koko_m": 70,
+   "lat": 19.43618,
+   "lon": -99.15463,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monumento a la revolucion2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumento_a_la_revolucion2020.jpg?width=1280",
+     "tekija": "Carlos Valenzuela",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumento_a_la_revolucion2020.jpg",
+     "selite": "Vallankumousmuistomerkin valtava kupoli ja holvikaari kohoavat Plaza de la Repúblicalla.",
+     "leveys": 3784,
+     "korkeus": 5856,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1851912",
+   "nimi": "Kolmen kulttuurin aukio",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 19.45167,
+   "lon": -99.13611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PLAZA DE LAS TRES CULTURAS-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PLAZA_DE_LAS_TRES_CULTURAS-1.jpg?width=1280",
+     "tekija": "No machine-readable author provided. JEDIKNIGHT1970 assumed (based on copyright claims).",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PLAZA_DE_LAS_TRES_CULTURAS-1.jpg",
+     "selite": "Kolmen kulttuurin aukiolla atsteekkien raunioiden, siirtomaakirkon ja modernien asuintalojen kerrokset kohtaavat.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6294156",
+   "nimi": "José Vasconcelos -kirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 19.44741,
+   "lon": -99.15081,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2015-07 k1 CDMX 3488.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-07_k1_CDMX_3488.jpg?width=1280",
+     "tekija": "Ziko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-07_k1_CDMX_3488.jpg",
+     "selite": "Vasconcelos-kirjaston lasi- ja teräsrakenteet kantavat valtavan kirjahyllykatedraalin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Vasconcelos\" Library - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Vasconcelos%22_Library_-_panoramio.jpg?width=1280",
+     "tekija": "ORamírezD",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Vasconcelos%22_Library_-_panoramio.jpg",
+     "selite": "Kirjaston pitkä lamellijulkisivu antaa rakennukselle jykevän, harmaan ilmeen.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q130025",
+   "nimi": "Méxicon yliopistokaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 19.33222,
+   "lon": -99.18806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biblioteca and Torre des Humanidades I from Las Islas, Ciudad Universitaria, Mexico City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_and_Torre_des_Humanidades_I_from_Las_Islas%2C_Ciudad_Universitaria%2C_Mexico_City.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biblioteca_and_Torre_des_Humanidades_I_from_Las_Islas%2C_Ciudad_Universitaria%2C_Mexico_City.jpg",
+     "selite": "Yliopistokaupungin keskuskirjasto on peitetty koko pinnaltaan Juan O'Gormanin kivimosaiikilla.",
+     "leveys": 5604,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Atardecer en Islas CU.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atardecer_en_Islas_CU.jpg?width=1280",
+     "tekija": "AnGeraldFV",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atardecer_en_Islas_CU.jpg",
+     "selite": "Illan valossa Islas-nurmikko ja yliopiston rakennukset piirtyvät puiden taakse.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2097646",
+   "nimi": "Museo Soumaya",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 19.44066,
+   "lon": -99.20462,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Soumaya, Ciudad de México, México, 2015-07-18, DD 12.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Soumaya%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_12.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Soumaya%2C_Ciudad_de_M%C3%A9xico%2C_M%C3%A9xico%2C_2015-07-18%2C_DD_12.JPG",
+     "selite": "Museo Soumayan hopeinen alumiinilaattapintainen muoto on yksi Méxicon nykyarkkitehtuurin tunnusmerkkejä.",
+     "leveys": 5150,
+     "korkeus": 4701,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q978161",
+   "nimi": "Postipalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 19.43569,
+   "lon": -99.1404,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Postal Version 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Postal_Version_2.jpg?width=1280",
+     "tekija": "Thomas Ledl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Postal_Version_2.jpg",
+     "selite": "Postipalatsin goottilais-renessanssijulkisivu on vuodelta 1907 ja seisoo Bellas Artesin vieressä.",
+     "leveys": 8243,
+     "korkeus": 5495,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1471225",
+   "nimi": "Plaza Garibaldi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 19.44056,
+   "lon": -99.13889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PLAZA EN GARIBALDI.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PLAZA_EN_GARIBALDI.jpg?width=1280",
+     "tekija": "JEDIKNIGHT1970",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PLAZA_EN_GARIBALDI.jpg",
+     "selite": "Plaza Garibaldin kioski ja aukion katukahvilat ovat mariachi-muusikoiden perinteinen kokoontumispaikka.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AgaveGardenGaribaldiDF.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AgaveGardenGaribaldiDF.JPG?width=1280",
+     "tekija": "AlejandroLinaresGarcia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AgaveGardenGaribaldiDF.JPG",
+     "selite": "Garibaldin aukion värikkäiden rakennusten edessä kasvaa agave-istutus.",
+     "leveys": 3476,
+     "korkeus": 2336,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Mexico City Reforma skyline (cropped).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_City_Reforma_skyline_(cropped).jpg?width=1280",
+   "tekija": "Jonathan Salvador",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mexico_City_Reforma_skyline_(cropped).jpg",
+   "selite": "Méxicon kaupungin Reforman pilvenpiirtäjät kohoavat vehreän Chapultepecin puiston takaa.",
+   "leveys": 2052,
+   "korkeus": 1376,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mexico City Skyline (5604867225).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_City_Skyline_(5604867225).jpg?width=1280",
+   "tekija": "Francisco Anzola",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mexico_City_Skyline_(5604867225).jpg",
+   "selite": "Méxicon kaupungin siluetti avautuu kukkulalta, ja Torre Latinoamericana kohoaa horisontissa.",
+   "leveys": 4416,
+   "korkeus": 3312,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

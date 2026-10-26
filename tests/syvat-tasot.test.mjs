@@ -22,7 +22,7 @@ import {
 } from '../tools/maasto/dem-ikkuna.mjs';
 import { demHakemisto } from '../tools/maasto/tee-maasto.mjs';
 import { bilineaarinenKorkeus } from '../tools/fokuskartta/maastovarjo.js';
-import { pelinLuettelo, PELIN_SYVIN_TASO } from '../js/laattapyramidi.js';
+import { pelinLuettelo, pohjanTaso, PELIN_SYVIN_TASO } from '../js/laattapyramidi.js';
 import { kirjoitaLuettelo } from '../tools/tee-pallolaatat.mjs';
 
 const GENERAATTORI = fileURLToPath(new URL('../tools/generoi-laattapyramidi.mjs', import.meta.url));
@@ -266,17 +266,30 @@ test('--kuiva kertoo DEM-ikkunan koon syvälle kaistalle', () => {
 
 /* ------------------------------------------------ kuluttajat */
 
-test('pelin luettelo: tasot yli PELIN_SYVIN_TASO:n jäävät pois', () => {
-  assert.equal(PELIN_SYVIN_TASO, 8);
-  const tasot = Array.from({ length: 11 }, (_, z) => ({ z, laatasto: z > 8 ? 'AA==' : null }));
-  const j = { versio: 'v', tasot, nostotaso: { tasot: [5, 6, 7, 8] } };
-  const p = pelinLuettelo(j);
+test('pelin luettelo: tasot yli katon jäävät pois (katto 10, Z10-ketju)', () => {
+  assert.equal(PELIN_SYVIN_TASO, 10);
+  const tasot = Array.from({ length: 12 }, (_, z) => ({ z, laatasto: z > 8 ? 'AA==' : null }));
+  const j0 = { versio: 'v', tasot };
+  assert.deepEqual(pelinLuettelo(j0).tasot.map((t) => t.z), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const j = { versio: 'v', tasot: tasot.slice(0, 11), nostotaso: { tasot: [5, 6, 7, 8] } };
+  const p = pelinLuettelo(j, 8);
   assert.deepEqual(p.tasot.map((t) => t.z), [0, 1, 2, 3, 4, 5, 6, 7, 8]);
   assert.equal(p.nostotaso, j.nostotaso);
   assert.equal(j.tasot.length, 11, 'alkuperäinen luettelo ei muutu');
   // Ilman syviä tasoja sama olio (tuotannon luettelo tavulleen ennallaan).
   const vanha = { versio: 'v', tasot: tasot.slice(0, 9) };
   assert.equal(pelinLuettelo(vanha), vanha);
+});
+
+test('pohjan taso: z3 tavallisesti, harvoilla syvillä tasoilla z8', () => {
+  const tasot = Array.from({ length: 11 }, (_, z) => ({ z }));
+  assert.equal(pohjanTaso(tasot, tasot[2]), null);
+  assert.equal(pohjanTaso(tasot, tasot[7]).z, 3);
+  assert.equal(pohjanTaso(tasot, tasot[8]).z, 3);
+  assert.equal(pohjanTaso(tasot, tasot[9]).z, 8);
+  assert.equal(pohjanTaso(tasot, tasot[10]).z, 8);
+  // Ilman z8:aa (osa-luettelo) takaisin z3:een.
+  assert.equal(pohjanTaso(tasot.filter((t) => t.z !== 8), tasot[10]).z, 3);
 });
 
 test('pallon luettelo: alue kirjataan vain aluesarjalle', () => {
@@ -293,6 +306,41 @@ test('pallon luettelo: alue kirjataan vain aluesarjalle', () => {
       min: 0, max: 8, nostot: false, tunniste: 'b', kansio: 'x/',
     });
     assert.equal('alue' in JSON.parse(readFileSync(join(k, 'laatat.json'), 'utf8')), false);
+  } finally {
+    rmSync(k, { recursive: true, force: true });
+  }
+});
+
+/* ------------------------------------------------ syvä laattalista (26.9.2026) */
+
+test('--syva-laatat: työlista = listan z10 + niiden z9-vanhemmat; ristiriita --syva-alueen kanssa torjutaan', () => {
+  const k = mkdtempSync(join(tmpdir(), 'syva-'));
+  try {
+    const lista = join(k, 'laatat.json');
+    const z10 = [[744, 326], [745, 326], [744, 327], [900, 200]];
+    writeFileSync(lista, JSON.stringify({ z: 10, laatat: z10 }));
+    const r = aja([join(k, 'u'), '--tasoja', '11', '--tasot', '9-10', '--syva-laatat', lista, '--vain-lista']);
+    assert.equal(r.status, 0, r.stderr);
+    const l = JSON.parse(readFileSync(join(k, 'u', 'laatat.json'), 'utf8')).laatat;
+    assert.deepEqual(l.filter((x) => x[0] === 10).map((x) => `${x[1]}:${x[2]}`).sort(), z10.map((x) => x.join(':')).sort());
+    assert.deepEqual(l.filter((x) => x[0] === 9).map((x) => `${x[1]}:${x[2]}`).sort(), ['372:163', '450:100']);
+    const r2 = aja([join(k, 'v'), '--tasoja', '11', '--tasot', '10', '--syva-laatat', lista, '--syva-alue', RANSKA, '--vain-lista']);
+    assert.notEqual(r2.status, 0);
+    assert.match(r2.stderr, /joko --syva-alue tai --syva-laatat/);
+  } finally {
+    rmSync(k, { recursive: true, force: true });
+  }
+});
+
+test('tee-syva-laatat: sama ruudukko kuin generaattorin --syva-alue (Ateena ±1°)', async () => {
+  const { kaupunkiLaatat } = await import('../tools/tee-syva-laatat.mjs');
+  const k = mkdtempSync(join(tmpdir(), 'syva-'));
+  try {
+    const r = aja([join(k, 'u'), '--tasoja', '11', '--tasot', '10', '--syva-alue', '22.7,37,24.7,39', '--vain-lista']);
+    assert.equal(r.status, 0, r.stderr);
+    const gen = new Set(JSON.parse(readFileSync(join(k, 'u', 'laatat.json'), 'utf8')).laatat.map((x) => `${x[1]}:${x[2]}`));
+    const oma = kaupunkiLaatat([{ lat: 38, lon: 23.7 }], 1);
+    assert.deepEqual([...oma].sort(), [...gen].sort());
   } finally {
     rmSync(k, { recursive: true, force: true });
   }

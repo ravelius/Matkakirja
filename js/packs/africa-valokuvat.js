@@ -375,13 +375,11 @@ export const AFRICA_VALOKUVAT = {
   orjarannikko: {
     lisat: [
       {
-        tiedosto: 'Sculpture of Amazon Female Warrior - Slave Route - Ouidah - Benin.jpg',
+        tiedosto: "Street of whidah in 1892.jpg",
         vuosi: '2010',
-        lahde: 'Adam Jones, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Dahomeyn naissoturin patsas Ouidahin orjatien varrella.',
-        selite: 'Dahomeyn naissoturin patsas Ouidahin orjatien varrella. '
-          + 'Kaupungilta rannalle vievän hiekkatien varteen on pystytetty '
-          + 'muistomerkkejä.',
+        lahde: "Tuntematon, Wikimedia Commons (public domain)",
+        lyhyt: "Whydahin katu vuonna 1892",
+        selite: "Vanha kaiverros vuodelta 1892 näyttää olkikattoisia taloja ja pensaiden reunustaman kujan Whydahissa eli nykyisessä Ouidahissa.",
       },
       {
         tiedosto: 'Beach of Ouidah Benin 2.jpg',
@@ -399,12 +397,10 @@ export const AFRICA_VALOKUVAT = {
       + 'historian vartiopaikka. Isoisän aikaan sen muurit olivat jo '
       + 'rapistumassa.',
     uusi: {
-      tiedosto: 'Benin UNESCO à la Porte du non-retour à Ouidah.jpg',
-      lahde: 'Rachad Sanoussi, Commons (CC BY-SA 4.0)',
-      lyhyt: 'Muistomerkin kivilaatta Ouidahin rannalla, portti pystytetty 1995.',
-      selite: 'Muistomerkin kivilaatta Ouidahin rannalla. Siihen on kaiverrettu '
-        + 'portin nimi ranskaksi sekä Beninin ja Unescon tunnukset; portti '
-        + 'pystytettiin 1995.',
+      tiedosto: "Marché à Ouidah (Dahomey).jpg",
+      lahde: "Tuntematon, Wikimedia Commons (public domain)",
+      lyhyt: "Tori Ouidahissa Dahomeyn aikaan",
+      selite: "Vanhalla postikortilla väkijoukko kokoontuu torille suuren puun alle Ouidahissa, ranskalaisessa Dahomeyn siirtomaassa.",
     },
   },
   kano: {
@@ -535,7 +531,7 @@ export const AFRICA_VALOKUVAT = {
         tiedosto: 'Table Mountain and Table Cloth (4610405798).jpg',
         vuosi: '2007',
         lahde: 'Jorge Láscar, Commons (CC BY 2.0)',
-        lyhyt: 'Pilvi valuu Pöytävuoren reunan yli, kapkaupunkilaisten "pöytäliina".',
+        lyhyt: 'Pilvi valuu Pöytävuoren reunan yli, kapkaupunkilaisten ”pöytäliina”.',
         selite: 'Pilvi valuu Pöytävuoren reunan yli kaupungin puolelle. '
           + 'Kapkaupunkilaiset kutsuvat tätä pilveä pöytäliinaksi.',
       },
@@ -613,7 +609,7 @@ export const AFRICA_VALOKUVAT = {
         tiedosto: 'Highlands, Madagascar (22741639463).jpg',
         vuosi: '2015',
         lahde: 'Rod Waddington, Commons (CC BY-SA 2.0)',
-        lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri antaa lempinimen "punainen saari".',
+        lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri antaa lempinimen ”punainen saari”.',
         selite: 'Madagaskarin ylängön punertavia kukkuloita ja kyliä. Maan väri '
           + 'tulee raudasta, ja se antaa saarelle lempinimen punainen saari.',
       },
@@ -746,10 +742,10 @@ export const AFRICA_VALOKUVAT = {
     tiedosto: 'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
     vuosi: '1903',
     lahde: 'A. P. Godber (PD)',
-    lyhyt: 'Muistolaatta Ujijissa: Stanley löysi Livingstonen 1871, "Tohtori Livingstone, otaksun?".',
+    lyhyt: 'Muistolaatta Ujijissa: Stanley löysi Livingstonen 1871, ”Tohtori Livingstone, otaksun?”.',
     selite: 'Muistolaatta Ujijissa Tanganjikajärven rannalla — paikassa, '
       + 'jossa Stanley löysi kadonneen Livingstonen vuonna 1871 ja '
-      + 'tervehti: "Tohtori Livingstone, otaksun?"',
+      + 'tervehti: ”Tohtori Livingstone, otaksun?”',
     uusi: {
       tiedosto: 'Lake Tanganyika ,Kigoma port.jpg',
       lahde: 'Erasmus Kamugisha, Commons (CC BY-SA 4.0)',

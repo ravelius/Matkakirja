@@ -245,34 +245,35 @@ const SAHKE_TUKHOLMA = {
  * laivasta, se antaisi tunnussanan ennen kuin sähke on edes luettu.
  */
 const POLHEM_VISA = {
-  kysymys: 'Tukholman sulkutyö annettiin vuonna 1744 Christopher Polhemille. '
-    + 'Kuinka vanha hän silloin oli?',
+  kysymys: 'Tukholman sulun rakennussopimus tehtiin vuonna 1744 Christopher '
+    + 'Polhemin kanssa. Noin kuinka vanha hän silloin oli?',
   vaihtoehdot: [
-    '83-vuotias',
-    '38-vuotias',
-    '53-vuotias',
+    'Yli 80-vuotias',
+    'Noin 40-vuotias',
+    'Noin 50-vuotias',
   ],
   oikea: 0,
   fakta: 'Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja '
-    + 'Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu '
-    + 'Itämereen. Polhem kuoli kesken hankkeen, ja hänen poikansa Gabriel '
-    + 'sai sulun valmiiksi 1755.',
+    + 'Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. '
+    + 'Polhem oli syntynyt 1661, joten hän oli yli 80-vuotias, kun sopimus '
+    + 'tehtiin. Hän kuoli 1751 kesken hankkeen, ja sulku avattiin 1755.',
 };
 
 const MARTIN_VISA = {
-  kysymys: 'Elias Martin asui kaksitoista vuotta Lontoossa ja toi sieltä '
-    + 'kotiin taidon, jolla kuparilevystä saa vesivärimäisen sävyn. Mikä '
-    + 'tekniikka se oli?',
+  kysymys: 'Elias Martinin veli Johan Fredrik teki hänen '
+    + 'Tukholma-näkymistään kuparipainokuvia tekniikalla, jolla levystä saa '
+    + 'vesivärimäisen sävyn. Mikä tekniikka se oli?',
   vaihtoehdot: [
     'Litografia',
     'Akvatinta',
     'Puupiirros',
   ],
   oikea: 1,
-  fakta: 'Kotiin palattuaan 1780 Martin kääntyi kaupunkiin, jota kukaan ei '
-    + 'ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. '
-    + 'Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin '
-    + 'sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.',
+  fakta: 'Elias Martin palasi Lontoosta Ruotsiin 1780-luvun alussa ja '
+    + 'kääntyi kaupunkiin, jota harvat olivat piirtäneet sellaisenaan: '
+    + 'satamaan, toreille ja työn ääreen. Veli Johan Fredrik teki kuvista '
+    + 'akvatintoja, ja niitä myytiin sarjoina. Ne ovat yksi tarkimmista '
+    + 'näkymistä Tukholmaan ennen valokuvaa.',
 };
 
 export const FOKUSVIRTA_TUKHOLMA = {
@@ -401,17 +402,17 @@ export const FOKUSVIRTA_TUKHOLMA = {
      * TÄMÄ POHJUSTAA SÄHKETEHTÄVÄN AIHEEN muttei sen vastausta: kuplassa
      * ei ole laivan nimeä eikä yhtään vuosilukua.
      */
-    teksti: 'Katso ensin tonne alas. Koko kaupunki seisoo neljällätoista '
+    teksti: 'Katso ensin tonne alas. Kaupungin ydin seisoo neljällätoista '
       + 'saarella siinä kohdassa, jossa makean Mälarenin vesi purkautuu '
-      + 'suolaiseen Itämereen. Ja juuri se sekoitus on tämän paikan onni: '
-      + 'Itämeri on niin vähäsuolainen, ettei laivamato viihdy siinä, joten '
-      + 'sen pohjassa säilyy puu, joka missä tahansa muualla olisi syöty. '
-      + 'Tämän kaupungin alla on enemmän tavaraa kuin sen päällä.',
+      + 'Itämereen. Ja juuri se sekoitus on tämän paikan onni: Itämeri on '
+      + 'niin vähäsuolainen, ettei laivamato viihdy siinä, joten sen '
+      + 'pohjassa säilyy puu, joka missä tahansa muualla olisi syöty. Tämän '
+      + 'kaupungin alla on enemmän tavaraa kuin sen päällä.',
     kuva: {
       ampari: 'herokoe/hero-tukholma-gamlastan.jpg',
-      lyhyt: 'Tukholma on rakennettu 14 saarelle, kohtaan jossa makea Mälaren purkautuu suolaiseen Itämereen.',
-      selite: 'Tukholma on rakennettu neljälletoista saarelle siihen '
-        + 'kohtaan, jossa makea Mälaren purkautuu suolaiseen Itämereen.',
+      lyhyt: 'Tukholman ydin on rakennettu 14 saarelle, kohtaan jossa makea Mälaren purkautuu Itämereen.',
+      selite: 'Tukholman ydin on rakennettu neljälletoista saarelle siihen '
+        + 'kohtaan, jossa makea Mälaren purkautuu Itämereen.',
       lahde: 'Matkakirjan havainnekuva',
     },
   },
@@ -453,17 +454,16 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'tunnettu viikinkiaikainen hopeakätkö. Se löytyi perjantaina 16. '
         + 'heinäkuuta 1999 metallinilmaisimella, ja maasta nousi 67 kiloa '
         + 'hopeaa: rannerenkaita, tankoja ja noin neljätoistatuhatta '
-        + 'kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa '
-        + 'Bagdadista Samarkandiin — gotlantilaiset kävivät siis kauppaa '
-        + 'Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat '
-        + 'turkiksista hopeaa. Kätkö oli oikeastaan kaksi: kaksikymmentä'
-        + 'seitsemän kiloa ja neljäkymmentä kiloa, kolmen metrin päässä '
-        + 'toisistaan viikinkiaikaisen talon lattialankkujen alla. Lähes '
-        + 'kuusi kymmenesosaa siitä on rannerenkaita. Nuorin kolikko on '
-        + 'lyöty vuonna 871, joten hopea pantiin maahan joskus sen jälkeen '
-        + '— eikä sitä koskaan haettu pois. Löytäjät saivat palkkioksi '
-        + 'miljoona kaksisataakuusikymmentäkolmetuhatta kruunua, ja se on '
-        + 'löydön arvosta se pienin puoli.',
+        + 'kolikkoa. Suurin osa kolikoista oli lyöty islamilaisissa maissa, '
+        + 'Pohjois-Afrikasta Keski-Aasiaan — gotlantilaiset kävivät siis '
+        + 'kauppaa Venäjän jokia pitkin aina Kaspianmerelle saakka ja toivat '
+        + 'turkiksista hopeaa. Kätkö oli oikeastaan kaksi erillistä, '
+        + 'muutaman metrin päässä toisistaan viikinkiaikaisen rakennuksen '
+        + 'lattialankkujen alla. Lähes kuusi kymmenesosaa siitä on '
+        + 'rannerenkaita. Nuorin kolikko on lyöty noin vuonna 870, joten '
+        + 'hopea pantiin maahan joskus sen jälkeen — eikä sitä koskaan '
+        + 'haettu pois. Maanomistaja sai löytöpalkkiona yli kaksi miljoonaa '
+        + 'kruunua, ja se on löydön arvosta se pienin puoli.',
       lahde: 'sv-Wikipedia "Spillingsskatten"; pelin oma tarkistettu aineisto '
         + 'js/packs/maa-kategoriat.js (SWE/historia). Tarkistettu 1.9.2026.',
       /*
@@ -490,9 +490,9 @@ export const FOKUSVIRTA_TUKHOLMA = {
           'Metallinilmaisimella',
         ],
         oikea: 2,
-        fakta: 'Nuorin kolikko on lyöty vuonna 871, joten hopea pantiin '
-          + 'maahan joskus sen jälkeen. Kätköjä oli kaksi, kolmen metrin '
-          + 'päässä toisistaan, viikinkiaikaisen talon lattialankkujen alla.',
+        fakta: 'Nuorin kolikko on lyöty noin vuonna 870, joten hopea pantiin '
+          + 'maahan joskus sen jälkeen. Kätköjä oli kaksi, muutaman metrin '
+          + 'päässä toisistaan, viikinkiaikaisen rakennuksen lattialankkujen alla.',
       },
     },
     {
@@ -516,16 +516,15 @@ export const FOKUSVIRTA_TUKHOLMA = {
       otsikko: 'Norrströmin lohet',
       teksti: 'Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle '
         + 'portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
-        + 'mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka '
-        + 'vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, '
-        + 'joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin '
-        + 'kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman '
-        + 'seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta '
-        + '1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha '
-        + 'vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat '
-        + 'pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia '
-        + 'seisoo siis mies onki kädessä siinä samassa virrassa, jonka '
-        + 'yli parlamentti katsoo ikkunastaan.',
+        + 'mereen aivan eduskuntatalon vierestä, ja siitä kalastetaan lohia '
+        + 'ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi noin '
+        + 'kaksikymmentä kiloa. Vedessä elää kymmeniä kalalajeja. Aina ei '
+        + 'ollut näin. 1970-luvulla alkaneet istutukset ovat elvyttäneet '
+        + 'lohi- ja taimenkantaa, ja vuonna 2024 Slussenin vanha Nils '
+        + 'Ericsonin sulku (1850) muutettiin kalatieksi, jota myöten kalat '
+        + 'pääsevät nousemaan Mälareniin. Keskellä miljoonakaupunkia seisoo '
+        + 'siis mies onki kädessä siinä samassa virrassa, jonka yli '
+        + 'parlamentti katsoo ikkunastaan.',
       lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
         + '(SWE/elaimet). Tarkistettu 1.9.2026.',
       /*
@@ -542,17 +541,17 @@ export const FOKUSVIRTA_TUKHOLMA = {
         lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
       },
       visa: {
-        kysymys: 'Mitä Tukholman keskustan vanhalle vuoden 1850 sululle '
-          + 'tehtiin vuonna 2024?',
+        kysymys: 'Mitä Slussenin vanhalle vuoden 1850 sululle tehtiin vuonna 2024?',
         vaihtoehdot: [
           'Se purettiin ja korvattiin sillalla',
           'Se muutettiin kalatieksi',
           'Se suljettiin kokonaan',
         ],
         oikea: 1,
-        fakta: 'Norrströmistä nostetaan vuosittain satoja lohia ja '
-          + 'meritaimenia, ja vedessä elää noin kolmekymmentä kalalajia. '
-          + 'Kalat palasivat 1970-luvulla aloitettujen istutusten myötä.',
+        fakta: 'Slussenin vanha Nils Ericsonin sulku muutettiin kalatieksi, '
+          + 'jota myöten kalat pääsevät nousemaan Mälareniin. Tukholman '
+          + 'virroissa elää kymmeniä kalalajeja, ja 1970-luvulla alkaneet '
+          + 'istutukset ovat elvyttäneet lohi- ja taimenkantaa.',
       },
     },
     {
@@ -590,19 +589,19 @@ export const FOKUSVIRTA_TUKHOLMA = {
       teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät '
         + 'aamutaivaalla valkoisia renkaita ja niiden kehällä useita '
         + 'hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat '
-        + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky '
-        + 'pelotti, ja siitä teetettiin maalaus — perimätiedon mukaan '
-        + 'pappi Olaus Petrin toimesta. Samalla syntyi vanhin tunnettu '
-        + 'värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen ja '
-        + 'ympäröivine hirsiaitoineen. Ja tässä on se kohta, joka '
-        + 'isoisääsi kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on '
-        + 'öljymaalaus puupaneelille, 163 senttiä leveä ja 110 korkea, ja '
-        + 'siihen on kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu '
-        + '1636". Vuonna 1999 taulu tutkittiin, ja se osoittautui '
-        + 'kokonaan 1600-luvun työksi: renovointi olikin kopiointi, jonka '
-        + 'teki Jacob Heinrich Elbfas. Alkuperäinen on kadonnut, eikä '
-        + 'kukaan tiedä minne. Kaupungin vanhin kuva on siis kuva '
-        + 'kuvasta, jota ei enää ole.',
+        + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, '
+        + 'ja siitä teetettiin maalaus — perimätiedon mukaan pappi Olaus '
+        + 'Petrin toimesta. Samalla syntyi vanhin tunnettu värikuva '
+        + 'Tukholmasta: kaupunki porttitorneineen, kirkkoineen ja veteen '
+        + 'lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi '
+        + 'kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus '
+        + 'puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on '
+        + 'kirjoitettu kaksi vuosilukua: 1535 ja ”renovoitu 1636”. Vuonna '
+        + '1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun '
+        + 'työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich '
+        + 'Elbfas. Alkuperäinen on kadonnut, eikä kukaan tiedä minne. '
+        + 'Kaupungin vanhin tunnettu värikuva on siis kuva kuvasta, jota ei '
+        + 'enää ole.',
       lahde: 'sv-Wikipedia "Vädersolstavlan" ja sv-Wikipedia "Storkyrkan"; '
         + 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
         + '(SWE/historia). Tarkistettu 1.9.2026.',
@@ -670,20 +669,19 @@ export const FOKUSVIRTA_TUKHOLMA = {
     teksti: 'Se päivä, jona isoisäsi menetti kaksi nappia, oli Ruotsin '
       + 'viimeinen kruunajaispäivä. Oscar II kruunattiin Storkyrkanissa '
       + '12. toukokuuta 1873, ja sen jälkeen yksikään Ruotsin kuningas ei '
-      + 'ole enää ottanut kruunua päähänsä. Sää oli sateinen ja muutaman '
-      + 'plusasteen, mutta väkeä oli tuhansia. Kuningatar Sofia oli '
-      + 'sairaana ja tuotiin kirkkoon vaunuilla; Oscar tuli kävellen '
-      + 'kenraalinunivormussaan ja kantoi päässään viimeisen kerran '
-      + 'herttuankruunuaan, ja hänen kolme vanhinta poikaansa kulkivat '
-      + 'perässä. Kirkossa hän polvistui alttarille ja vannoi kuninkaanvalan '
+      + 'ole enää ottanut kruunua päähänsä. Sää oli sateinen, mutta väkeä '
+      + 'oli tuhansia. Kuningatar Sofia, joka ei voinut hyvin, tuotiin '
+      + 'kirkkoon vaunuilla; Oscar saapui kenraalinunivormussa, ja hänen '
+      + 'kolme vanhinta poikaansa kulkivat perässä. Kirkossa hän polvistui '
+      + 'alttarille ja vannoi kuninkaanvalan '
       + 'kolme sormea Raamatulla. Arkkipiispa Anton Niklas Sundberg ja '
-      + 'pääministeri Axel Adlercreutz asettivat kruunun hänen päähänsä, ja '
+      + 'oikeusministeri Axel Adlercreutz asettivat kruunun hänen päähänsä, ja '
       + 'sitten hän istuutui kuningatar Kristiinan hopeavaltaistuimelle ja '
       + 'otti vastaan valtakunnan regaliat yksi kerrallaan: valtikan, '
       + 'valtakunnanomenan, valtakunnanavaimen ja miekan. Lopuksi ammuttiin '
-      + 'neljäkymmentäkaksi kunnialaukausta Skeppsholmenilta ja '
-      + 'neljäkymmentäkaksi Kastellholmenilta — kahdeksankymmentäneljä '
-      + 'pamausta yhden kaupungin yllä. Ei ihme, että tungoksessa mahtui '
+      + 'kunnialaukauksia Skeppsholmenilta ja Kastellholmenilta, pamaus '
+      + 'toisensa perään yhden kaupungin yllä. Ei ihme, että tungoksessa '
+      + 'mahtui '
       + 'katoamaan yksi sivu. Sama mies kruunattiin vielä toisen kerran '
       + 'saman vuoden heinäkuussa Nidarosin tuomiokirkossa Trondheimissa, '
       + 'koska hän oli myös Norjan kuningas.',
@@ -827,15 +825,15 @@ export const FOKUSVIRTA_TUKHOLMA = {
       id: 'vasaloppet',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Vasaloppet',
-      otsikko: 'Kuningas pakeni suksilla, ja neljäsataa vuotta myöhemmin '
-        + 'satatuhatta ihmistä lähti perään',
+      otsikko: 'Tuleva kuningas pakeni legendan mukaan suksilla, ja '
+        + 'neljäsataa vuotta myöhemmin satatuhatta ihmistä lähti perään',
       lunastus: [
         'Talvella 1520–1521 nuori Kustaa Eriksson pakeni tanskalaisia '
           + 'Taalainmaalle ja yritti saada talonpojat kapinaan. Moran '
-          + 'miehet epäröivät, ja hän jatkoi suksilla kohti Norjaa. Kun '
-          + 'tieto Tukholman verilöylystä levisi, kaksi hiihtäjää '
-          + 'lähetettiin hänen peräänsä — he saivat hänet kiinni ja '
-          + 'käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli '
+          + 'miehet epäröivät, ja hän lähti legendan mukaan suksilla kohti '
+          + 'Norjaa. Tarun mukaan moralaiset katuivat ja lähettivät kaksi '
+          + 'hiihtäjää hänen peräänsä, ja nämä tavoittivat hänet Sälenissä '
+          + 'ja käänsivät takaisin. Kolme vuotta myöhemmin hänestä tuli '
           + 'kuningas Kustaa Vaasa.',
         'Neljäsataa vuotta myöhemmin, helmikuussa 1922, moralainen Anders '
           + 'Pers kirjoitti lehteen ehdotuksen: hiihdettäisiin sama matka '
@@ -845,9 +843,9 @@ export const FOKUSVIRTA_TUKHOLMA = {
           + '22-vuotias Ernst Alm ajalla seitsemän tuntia 32 minuuttia ja '
           + '49 sekuntia. Seuraavana vuonna Margit Nordin hiihti matkan '
           + 'ensimmäisenä naisena, ja sen jälkeen naiset kiellettiin '
-          + 'kisasta — kielto purkautui vasta 1979. Vuonna 1977 mukana '
-          + 'hiihti kuningas Carl XVI Gustaf nimellä Carl Bernadotte ja '
-          + 'sijoittui viisituhatta seitsemänsataa kahdeksanneksi. '
+          + 'kisasta — kielto purkautui vasta 1981, vaikka kilpailemattomassa '
+          + 'Öppet spår -hiihdossa naiset saivat hiihtää jo 1979. Vuonna 1977 '
+          + 'mukana hiihti kuningas Carl XVI Gustaf. '
           + 'Nykyään Vasaloppet on maailman vanhin ja osanottajamäärältään '
           + 'suurin pitkän matkan hiihtokilpailu, 90 kilometriä maaliskuun '
           + 'ensimmäisenä sunnuntaina.',
@@ -881,10 +879,12 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       valokuva: {
         tiedosto: 'Jørgen Aukland Vasaloppet 2013 002.jpg',
-        lyhyt: 'Vasaloppet hiihdetään Bergasta Moraan, 90 km ja maailman vanhin, suurin hiihtokilpailu.',
-        selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
-          + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '
-          + 'osanottajamäärältään suurin hiihtokilpailu.',
+        lyhyt: 'Jørgen Aukland saa maalissa suudelman seppeleenkantajalta voitettuaan Vasaloppetin 2013.',
+        selite: 'Jørgen Aukland saa maalissa suudelman seppeleenkantajalta '
+          + 'Isabelle Janssonilta voitettuaan Vasaloppetin vuonna 2013. Kisa '
+          + 'hiihdetään maaliskuun ensimmäisenä sunnuntaina Bergasta Moraan, ja '
+          + '90 kilometrin matka on maailman vanhin ja osanottajamäärältään '
+          + 'suurin hiihtokilpailu.',
         lahde: 'Vasaloppet/Nisse Schmidt, Wikimedia Commons (CC BY 3.0)',
       },
       kysymykset: [
@@ -906,17 +906,4 @@ export const FOKUSVIRTA_TUKHOLMA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Kronan-laivan
-   * kultakolikot; Kronan upposi 1676 Öölannin edustalla. Merkintä
-   * aukeaa, kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kalastaja Öölannin edustalla vannoi, että Kronanin kulta makaa '
-      + 'hänen verkkojensa alla, eikä suostunut näyttämään paikkaa edes '
-      + 'rahasta. Kirjoitin luetteloon: meri pitää sen minkä ottaa — kunnes '
-      + 'joku kysyy oikein.',
-  },
 };

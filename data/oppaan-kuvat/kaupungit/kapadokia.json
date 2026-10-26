@@ -1,0 +1,519 @@
+{
+ "kaupunki": "kapadokia",
+ "kaupunkiQ": "Q217265",
+ "kohteet": [
+  {
+   "q": "Q620593",
+   "nimi": "Göremen kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": 38.65278,
+   "lon": 34.86306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 0329 Göreme National Park - Nevşehir (Turkey).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0329_G%C3%B6reme_National_Park_-_Nev%C5%9Fehir_(Turkey).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0329_G%C3%B6reme_National_Park_-_Nev%C5%9Fehir_(Turkey).jpg",
+     "selite": "Göremen kansallispuiston tuhkakivestä syntyneet kalliomuodostelmat ovat Kappadokian tunnusmerkki.",
+     "leveys": 3301,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 0323 Göreme Nationalpark - Nevşehir (Cappadocia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0323_G%C3%B6reme_Nationalpark_-_Nev%C5%9Fehir_(Cappadocia).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0323_G%C3%B6reme_Nationalpark_-_Nev%C5%9Fehir_(Cappadocia).jpg",
+     "selite": "Eroosio on muovannut pehmeän tuffin vaaleanpunaisiksi harjanteiksi ja laaksoiksi.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "00 2315 Tufa landscape of Goreme (Turkey).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_2315_Tufa_landscape_of_Goreme_(Turkey).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_2315_Tufa_landscape_of_Goreme_(Turkey).jpg",
+     "selite": "Laaksot ja tasangot ovat täynnä kallioihin kaivettuja luolia ja kirkkoja.",
+     "leveys": 3750,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "\"Camel\" in Cappadocia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Camel%22_in_Cappadocia.jpg?width=1280",
+     "tekija": "Emre Dokur",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Camel%22_in_Cappadocia.jpg",
+     "selite": "Tuuli ja vesi ovat veistäneet kalliosta kamelia muistuttavia muotoja.",
+     "leveys": 3941,
+     "korkeus": 2167,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6710593",
+   "nimi": "Göreme",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 38.64306,
+   "lon": 34.82889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Göreme town and valley 2015.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6reme_town_and_valley_2015.JPG?width=1280",
+     "tekija": "MusikAnimal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:G%C3%B6reme_town_and_valley_2015.JPG",
+     "selite": "Göreme on pieni kaupunki, jonka talot ja hotellit on rakennettu keijukaispiippujen ja kallioluolien väliin.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Goreme (8273665335).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goreme_(8273665335).jpg?width=1280",
+     "tekija": "Moyan Brenn from Italy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Goreme_(8273665335).jpg",
+     "selite": "Keijukaispiippujen ympäröimä kaupunki näyttää valoisana aamuauringossa.",
+     "leveys": 3840,
+     "korkeus": 2391,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Goreme fairy chimneys-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goreme_fairy_chimneys-2.jpg?width=1280",
+     "tekija": "Aytazeynep",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Goreme_fairy_chimneys-2.jpg",
+     "selite": "Kartiomaisiin kallioihin on kaivettu asuntoja, joiden ikkunat ja ovet näkyvät ulos.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1575197",
+   "nimi": "Uçhisar",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 38.62892,
+   "lon": 34.80388,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 2605 Uçhisar, town in the province of Nevşehir (Turkey).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_2605_U%C3%A7hisar%2C_town_in_the_province_of_Nev%C5%9Fehir_(Turkey).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_2605_U%C3%A7hisar%2C_town_in_the_province_of_Nev%C5%9Fehir_(Turkey).jpg",
+     "selite": "Uçhisarin linnavuori on Kappadokian korkein kohta, ja sen rinteisiin on kaivettu kokonainen kaupunki.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Uçhisar 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_U%C3%A7hisar_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_U%C3%A7hisar_01.jpg",
+     "selite": "Ilmasta Uçhisar näkyy tuffikallion juurelle rakentuneena kylänä.",
+     "leveys": 4870,
+     "korkeus": 3247,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Pigeon valley climb to Üchisar 2759.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon_valley_climb_to_%C3%9Cchisar_2759.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pigeon_valley_climb_to_%C3%9Cchisar_2759.jpg",
+     "selite": "Kyyhkyslaakson polulta näkyy kiviluolan aukosta Uçhisarin linna.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1328958",
+   "nimi": "Derinkuyun maanalainen kaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 38.3734,
+   "lon": 34.73503,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Derinkuyu Underground City 9831 Nevit Enhancer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Derinkuyu_Underground_City_9831_Nevit_Enhancer.jpg?width=1280",
+     "tekija": "Nevit Dilmen (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Derinkuyu_Underground_City_9831_Nevit_Enhancer.jpg",
+     "selite": "Derinkuyun maanalainen kaupunki ulottuu kymmeniä metrejä syvälle, ja ilmaa sinne tuo tuuletusakseli.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Derinkuyu Underground City 9760 Nevit Enhancer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Derinkuyu_Underground_City_9760_Nevit_Enhancer.jpg?width=1280",
+     "tekija": "Nevit Dilmen (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Derinkuyu_Underground_City_9760_Nevit_Enhancer.jpg",
+     "selite": "Kapeat tunnelit yhdistävät kerrokset toisiinsa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Derinkuyu Underground City 9762 Nevit Enhancer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Derinkuyu_Underground_City_9762_Nevit_Enhancer.jpg?width=1280",
+     "tekija": "Nevit Dilmen (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Derinkuyu_Underground_City_9762_Nevit_Enhancer.jpg",
+     "selite": "Kallioon hakatut huoneet toimivat asuntoina ja varastoina vaaran aikana.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q118948370",
+   "nimi": "Kaymaklın maanalainen kaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 38.46,
+   "lon": 34.75227,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kaymakli underground city 8870 Nevit Compressor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaymakli_underground_city_8870_Nevit_Compressor.jpg?width=1280",
+     "tekija": "Nevit Dilmen (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaymakli_underground_city_8870_Nevit_Compressor.jpg",
+     "selite": "Kaymaklın maanalainen kaupunki on kaivettu pehmeään tuffiin, ja sen huoneet ja käytävät ulottuvat usealle kerrokselle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q335010",
+   "nimi": "Ürgüp",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 38.62944,
+   "lon": 34.91194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of Ürgüp.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_%C3%9Crg%C3%BCp.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_%C3%9Crg%C3%BCp.jpg",
+     "selite": "Ürgüp on Kappadokian vilkas matkailukaupunki, jota ympäröi tuffikalliolaakso.",
+     "leveys": 4741,
+     "korkeus": 3081,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GÖREME, ÜRGÜP PERİBACALARI.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%96REME%2C_%C3%9CRG%C3%9CP_PER%C4%B0BACALARI.jpg?width=1280",
+     "tekija": "BoraBora704",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:G%C3%96REME%2C_%C3%9CRG%C3%9CP_PER%C4%B0BACALARI.jpg",
+     "selite": "Ürgüpin lähellä kohoavat keijukaispiiput, joiden päällä on kovempi kivilaki.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "3 Beauties Lookout.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3_Beauties_Lookout.jpg?width=1280",
+     "tekija": "Joe Wallace",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3_Beauties_Lookout.jpg",
+     "selite": "Kolmen kaunottaren näköalapaikalla nähdään kolme tunnettua keijukaispiippua.",
+     "leveys": 4156,
+     "korkeus": 2771,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q790160",
+   "nimi": "Avanos",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 38.715,
+   "lon": 34.84667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cappadoce-Avanos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappadoce-Avanos.jpg?width=1280",
+     "tekija": "Ludovic Courtès",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappadoce-Avanos.jpg",
+     "selite": "Avanos on Punaisen joen varrella oleva kaupunki, joka tunnetaan savenvalannastaan.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alaaddin Hamamı, Avanos - exterior at dusk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alaaddin_Hamam%C4%B1%2C_Avanos_-_exterior_at_dusk.jpg?width=1280",
+     "tekija": "DiliyaKhazigalievaGul",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alaaddin_Hamam%C4%B1%2C_Avanos_-_exterior_at_dusk.jpg",
+     "selite": "Alaaddin-kylpylä on vanha turkkilainen höyrykylpylä Avanosin keskustassa.",
+     "leveys": 8064,
+     "korkeus": 4536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1278352",
+   "nimi": "Ortahisar",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 38.62083,
+   "lon": 34.86472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": ".00 2622 Ortahisar, in der Provinz Nevşehir (Türkei).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/.00_2622_Ortahisar%2C_in_der_Provinz_Nev%C5%9Fehir_(T%C3%BCrkei).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:.00_2622_Ortahisar%2C_in_der_Provinz_Nev%C5%9Fehir_(T%C3%BCrkei).jpg",
+     "selite": "Ortahisarin keskellä kohoaa suuri linnakallio, johon on kaivettu huoneita ja käytäviä.",
+     "leveys": 2224,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1004503",
+   "nimi": "Güzelyurt",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 38.27722,
+   "lon": 34.37194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lived on and the living.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lived_on_and_the_living.jpg?width=1280",
+     "tekija": "Nurbanu Karaman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lived_on_and_the_living.jpg",
+     "selite": "Güzelyurtin vanhat kivitalot ovat kreikkalaisen asutuksen jättämiä.",
+     "leveys": 3999,
+     "korkeus": 2999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Güzelyurt - 25910771922.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%BCzelyurt_-_25910771922.jpg?width=1280",
+     "tekija": "prilfish",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:G%C3%BCzelyurt_-_25910771922.jpg",
+     "selite": "Kylän rinteillä näkyy luoliin ja kallioihin kaivettua rakennuskantaa.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fairy Chimneys, Selime Kasabası, Güzelyurt, Aksaray.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fairy_Chimneys%2C_Selime_Kasabas%C4%B1%2C_G%C3%BCzelyurt%2C_Aksaray.jpg?width=1280",
+     "tekija": "Veli Tasalı",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fairy_Chimneys%2C_Selime_Kasabas%C4%B1%2C_G%C3%BCzelyurt%2C_Aksaray.jpg",
+     "selite": "Selimen lähellä keijukaispiiput ja luolat kohoavat laakson rinteelle.",
+     "leveys": 4096,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q657912",
+   "nimi": "Sultanhanı",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 38.24809,
+   "lon": 33.54652,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Turkey.Aksaray014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkey.Aksaray014.jpg?width=1280",
+     "tekija": "Georges Jansoone (JoJan)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Turkey.Aksaray014.jpg",
+     "selite": "Sultanhanın karavaanisaarai on seldžukkien aikainen majatalo, jossa karavaanit yöpyivät Silkkitien varrella.",
+     "leveys": 1280,
+     "korkeus": 791,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q126804",
+   "nimi": "Erciyes-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 38.53167,
+   "lon": 35.45,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Turkey.Mount Erciyes01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Turkey.Mount_Erciyes01.jpg?width=1280",
+     "tekija": "Georges Jansoone JoJan",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Turkey.Mount_Erciyes01.jpg",
+     "selite": "Erciyes on Keski-Anatolian korkein tulivuori, ja sen lumihuippu näkyy Kappadokian yli.",
+     "leveys": 1465,
+     "korkeus": 1018,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avcılar 05 04 1999 Erciyes Dağı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avc%C4%B1lar_05_04_1999_Erciyes_Da%C4%9F%C4%B1.jpg?width=1280",
+     "tekija": "Volker Höhfeld",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avc%C4%B1lar_05_04_1999_Erciyes_Da%C4%9F%C4%B1.jpg",
+     "selite": "Tulivuori kohoaa tasangon yläpuolelle kauas kaupungin ympäristöön.",
+     "leveys": 1978,
+     "korkeus": 1327,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1302768",
+   "nimi": "Hasan-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 38.12652,
+   "lon": 34.16511,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hasan Dağı - 25936557331.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hasan_Da%C4%9F%C4%B1_-_25936557331.jpg?width=1280",
+     "tekija": "prilfish",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hasan_Da%C4%9F%C4%B1_-_25936557331.jpg",
+     "selite": "Hasan-vuori on sammunut tulivuori Aksarayn lähellä, ja se on yksi alueen korkeimmista huipuista.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vulkan Hasan Bagi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vulkan_Hasan_Bagi.jpg?width=1280",
+     "tekija": "Dr. Hans-Helmut Bissem",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vulkan_Hasan_Bagi.jpg",
+     "selite": "Lumihuippuinen kartio kohoaa viljelytasangon taustalle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Cappadocia Aerial View Landscape.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappadocia_Aerial_View_Landscape.jpg?width=1280",
+   "tekija": "Benh LIEU SONG (Flickr)",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cappadocia_Aerial_View_Landscape.jpg",
+   "selite": "Kappadokian laaksot ovat tuhkakivestä syntynyttä aaltoilevaa kalliomaisemaa.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of Cappadocia from hot air balloon 64.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Cappadocia_from_hot_air_balloon_64.jpg?width=1280",
+   "tekija": "Netha Hussain",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Cappadocia_from_hot_air_balloon_64.jpg",
+   "selite": "Ilmapallolennolta näkyvät keijukaispiiput ja kallioon kaivetut asuinluolat.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

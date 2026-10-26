@@ -1,0 +1,310 @@
+{
+ "kaupunki": "siinai",
+ "kaupunkiQ": "Q36755",
+ "kohteet": [
+  {
+   "q": "Q377485",
+   "nimi": "Siinain vuori",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 28.5384,
+   "lon": 33.9752,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Moses.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Moses.jpg?width=1280",
+     "tekija": "Mohammed Moussa",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Moses.jpg",
+     "selite": "Siinain vuori eli Mooseksen vuori on pyhiinvaeltajien kiipeämä huippu Siinain eteläosassa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Panorama Mount Sinai Northeast to South.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Mount_Sinai_Northeast_to_South.jpg?width=1280",
+     "tekija": "Florian Prischl",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Mount_Sinai_Northeast_to_South.jpg",
+     "selite": "Huipulla seisoo pieni kappeli, josta aukeaa näkymä Siinain vuoristoon.",
+     "leveys": 4207,
+     "korkeus": 1219,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q185362",
+   "nimi": "Pyhän Katariinan luostari",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 28.55583,
+   "lon": 33.97556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Catherine Monastery , Saint Catherine , south Sinai, Egypt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Catherine_Monastery_%2C_Saint_Catherine_%2C_south_Sinai%2C_Egypt.jpg?width=1280",
+     "tekija": "Ibrahimelbatout",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Catherine_Monastery_%2C_Saint_Catherine_%2C_south_Sinai%2C_Egypt.jpg",
+     "selite": "Pyhän Katariinan luostari on yksi maailman vanhimmista yhtäjaksoisesti toimineista luostareista.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A full view of Saint Catherine's Monastery.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_full_view_of_Saint_Catherine's_Monastery.jpg?width=1280",
+     "tekija": "Dr. Ondřej Havelka (cestovatel)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_full_view_of_Saint_Catherine's_Monastery.jpg",
+     "selite": "Luostarin linnoitusmuurit nousevat vuorten ympäröimässä laaksossa Siinain vuoren juurella.",
+     "leveys": 2500,
+     "korkeus": 1250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Saint Catherine's Monastery, Mount Sinai morning.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Catherine's_Monastery%2C_Mount_Sinai_morning.jpg?width=1280",
+     "tekija": "Abraham",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Catherine's_Monastery%2C_Mount_Sinai_morning.jpg",
+     "selite": "Muurien sisällä on kirkko ja kirjasto, joka säilyttää arvokkaita käsikirjoituksia.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q644",
+   "nimi": "Sharm el-Sheikh",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 27.85194,
+   "lon": 34.305,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Naama Bay R01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naama_Bay_R01.jpg?width=1280",
+     "tekija": "Marc Ryckaert",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naama_Bay_R01.jpg",
+     "selite": "Sharm el-Sheikh on Punaisenmeren suosituimpia lomakohteita Siinain eteläkärjessä.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Naama Bay Beach R01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naama_Bay_Beach_R01.jpg?width=1280",
+     "tekija": "Marc Ryckaert",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naama_Bay_Beach_R01.jpg",
+     "selite": "Rannoilta pääsee snorklaamaan ja sukeltamaan kirkkaan veden korallien keskelle.",
+     "leveys": 3216,
+     "korkeus": 1986,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q370495",
+   "nimi": "Dahab",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 28.49306,
+   "lon": 34.50472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dahab (Blue Whole).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dahab_(Blue_Whole).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dahab_(Blue_Whole).jpg",
+     "selite": "Dahab on rento rantakylä Akabanlahden rannalla ja tunnettu sukelluspaikoistaan.",
+     "leveys": 9721,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1028367",
+   "nimi": "Ras Muhammadin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 27.76944,
+   "lon": 34.20972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coral reef in Ras Muhammad nature park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coral_reef_in_Ras_Muhammad_nature_park.JPG?width=1280",
+     "tekija": "ssr (talk)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coral_reef_in_Ras_Muhammad_nature_park.JPG",
+     "selite": "Kansallispuisto Siinain eteläkärjessä suojelee Punaisenmeren tunnettuja koralliriuttoja.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ras mohammed coral reef landscape.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ras_mohammed_coral_reef_landscape.jpg?width=1280",
+     "tekija": "Sovernigo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ras_mohammed_coral_reef_landscape.jpg",
+     "selite": "Kalliorannan vieressä riutta jyrkkenee nopeasti syvään veteen.",
+     "leveys": 3648,
+     "korkeus": 2432,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q933219",
+   "nimi": "Faraon saari",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 29.46284,
+   "lon": 34.86005,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salah El Din fortress on Pharaoh island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salah_El_Din_fortress_on_Pharaoh_island.jpg?width=1280",
+     "tekija": "Abdozaghloul",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salah_El_Din_fortress_on_Pharaoh_island.jpg",
+     "selite": "Faraon saarella Akabanlahdella on Saladinin aikainen linnoitus.",
+     "leveys": 5775,
+     "korkeus": 2840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castle of Saladin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_of_Saladin.jpg?width=1280",
+     "tekija": "Adergham2017",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_of_Saladin.jpg",
+     "selite": "Pieni kalliosaari ja sen linnoitus kohoavat turkoosista merestä Taban lähellä.",
+     "leveys": 5280,
+     "korkeus": 3520,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140642",
+   "nimi": "Katariinanvuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 28.51083,
+   "lon": 33.95528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sinai-Mosesberg-168-Blick zum Katharinenberg-2009-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sinai-Mosesberg-168-Blick_zum_Katharinenberg-2009-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sinai-Mosesberg-168-Blick_zum_Katharinenberg-2009-gje.jpg",
+     "selite": "Katariinanvuori on Egyptin korkein vuori ja kohoaa Siinain vuoriston kärjessä.",
+     "leveys": 2691,
+     "korkeus": 1887,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount Catherine visible form the top of Mount Sinai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Catherine_visible_form_the_top_of_Mount_Sinai.jpg?width=1280",
+     "tekija": "Youhana Nassif",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Catherine_visible_form_the_top_of_Mount_Sinai.jpg",
+     "selite": "Vuori näkyy Siinain vuoren huipulta etelään.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1011488",
+   "nimi": "Nuweiba",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 29.03397,
+   "lon": 34.65909,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Port of Nuweiba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_of_Nuweiba.jpg?width=1280",
+     "tekija": "Shannon Hobbs (tympsy)",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_of_Nuweiba.jpg",
+     "selite": "Nuweiban satama on Siinain itärannikon yhteys Akabanlahden yli Jordaniaan.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Mont sinai2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mont_sinai2.jpg?width=1280",
+   "tekija": "Daniel Fafard",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mont_sinai2.jpg",
+   "selite": "Siinain niemimaan eteläosaa hallitsevat jyrkät punaruskeat vuoret.",
+   "leveys": 3888,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "South Sinai , Egypt.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_Sinai_%2C_Egypt.jpg?width=1280",
+   "tekija": "Mohammed Moussa",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_Sinai_%2C_Egypt.jpg",
+   "selite": "Etelä-Siinain rotkolaaksot ja aavikko avautuvat vuorten ja meren väliin.",
+   "leveys": 4502,
+   "korkeus": 2982,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

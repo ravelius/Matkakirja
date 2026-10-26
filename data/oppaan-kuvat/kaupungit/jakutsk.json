@@ -1,0 +1,332 @@
+{
+ "kaupunki": "jakutsk",
+ "kaupunkiQ": "Q6610",
+ "kohteet": [
+  {
+   "q": "Q125958285",
+   "nimi": "Jakutskin Kirkastamisen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 62.02397,
+   "lon": 129.73664,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Градоякутский Преображенский Кафедральный собор, Якутск 06.07.2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_06.07.2026.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_06.07.2026.jpg",
+     "selite": "Kirkastamisen katedraalin vihreä kellotorni ja kultaiset kupolit ovat Jakutskin ortodoksisen hiippakunnan keskus.",
+     "leveys": 5328,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Градоякутский Преображенский кафедральный собор, Якутск 10.09.2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_10.09.2025.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_10.09.2025.jpg",
+     "selite": "Valkoinen kirkko kasvaa pitkäksi kellotorniksi, ja sen aidan ympärillä on kaupungin vanha keskusta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Градоякутский Преображенский Кафедральный собор, Якутск 05.10.2026 (6).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_05.10.2026_(6).jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B0%D0%B4%D0%BE%D1%8F%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D0%B0%D1%84%D0%B5%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_05.10.2026_(6).jpg",
+     "selite": "Syksyn puiden takaa erottuvat katedraalin kultaiset ristit ja pienet kupolit.",
+     "leveys": 5328,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1869280",
+   "nimi": "Koillinen federaatioyliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 62.02139,
+   "lon": 129.71056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "КФЕН СВФУ август 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%A4%D0%95%D0%9D_%D0%A1%D0%92%D0%A4%D0%A3_%D0%B0%D0%B2%D0%B3%D1%83%D1%81%D1%82_2013.jpg?width=1280",
+     "tekija": "LirikaYumi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%A4%D0%95%D0%9D_%D0%A1%D0%92%D0%A4%D0%A3_%D0%B0%D0%B2%D0%B3%D1%83%D1%81%D1%82_2013.jpg",
+     "selite": "Koillisen federaatioyliopiston lasijulkisivuinen rakennus ja suihkulähde kuuluvat Jakutskin yliopistokampukseen.",
+     "leveys": 3551,
+     "korkeus": 2265,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Главный корпус СВФУ.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A1%D0%92%D0%A4%D0%A3.JPG?width=1280",
+     "tekija": "LxAndrew",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81_%D0%A1%D0%92%D0%A4%D0%A3.JPG",
+     "selite": "Yliopiston vaalea päärakennus on pitkä ja symmetrinen, ja sen keskellä on pylväikkö.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q60836113",
+   "nimi": "Nikolskin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 62.0301,
+   "lon": 129.71168,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Градо-Якутский Николаевский собор, Якутск 09.06.2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D1%80%D0%B0%D0%B4%D0%BE-%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.06.2026.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B0%D0%B4%D0%BE-%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.06.2026.jpg",
+     "selite": "Nikolskin valkoinen kirkko ja kellotorni seisovat Jakutskin keskustan laidalla pienen puiston keskellä.",
+     "leveys": 5328,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Градо-Якутский Николаевский собор, Якутск 09.06.2026 (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D1%80%D0%B0%D0%B4%D0%BE-%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.06.2026_(3).jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B0%D0%B4%D0%BE-%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.06.2026_(3).jpg",
+     "selite": "Nikolskin kirkon kultaiset kupolit erottuvat pilvisen taivaan alla.",
+     "leveys": 5328,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16693042",
+   "nimi": "Pushkinin draamateatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 62.02833,
+   "lon": 129.73556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Государственный академический русский драматический театр им. А.С. Пушкина 10.09.2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B8%D0%BC._%D0%90.%D0%A1._%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_10.09.2025.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B8%D0%BC._%D0%90.%D0%A1._%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0_10.09.2025.jpg",
+     "selite": "Venäläinen Pushkin-teatteri toimii pylväsrakennuksessa Leninin valtakadun varrella Jakutskin keskustassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Здание Академического Русского драматического театра им. А.С. Пушкина, Якутск 28.09.2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%82%D0%B5%D0%B0%D1%82%D1%80%D0%B0_%D0%B8%D0%BC._%D0%90.%D0%A1._%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_28.09.2025.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%82%D0%B5%D0%B0%D1%82%D1%80%D0%B0_%D0%B8%D0%BC._%D0%90.%D0%A1._%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_28.09.2025.jpg",
+     "selite": "Teatterin vaaleanpunainen julkisivu ja valkoiset pylväät ovat kaupungin tunnettuja katunäkymiä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16700039",
+   "nimi": "Spasskin luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 62.03,
+   "lon": 129.74306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Спасский монастырь, Якутск 17.07.2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_17.07.2026.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_17.07.2026.jpg",
+     "selite": "Spasskin luostarin oranssi puukirkko ja kellotorni kohoavat vanhan Jakutskin ytimessä.",
+     "leveys": 5328,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Музей истории и культуры им. Е.М. Ярославского и Якутский Спасский монастырь, Якутск 09.09.2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%B8_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%B8%D0%BC._%D0%95.%D0%9C._%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.09.2026.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%B8_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D1%8B_%D0%B8%D0%BC._%D0%95.%D0%9C._%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_09.09.2026.jpg",
+     "selite": "Luostarin kupolit nousevat punatiilisen museon takana, ja ne kuuluvat samaan kaupunginosaan.",
+     "leveys": 6000,
+     "korkeus": 3368,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q124050055",
+   "nimi": "Jaroslavskin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 62.0306,
+   "lon": 129.74641,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Краеведческий.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9.jpg?width=1280",
+     "tekija": "Prok of eva",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9.jpg",
+     "selite": "Jaroslavskin museo on Jakutskin tunnettu historian ja kulttuurin museo, jonka punatiilirakennus seisoo vanhassa keskustassa.",
+     "leveys": 4482,
+     "korkeus": 1803,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Здание Якутского краеведческого музея, Якутск 26.09.2025 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_26.09.2025_(2).jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_26.09.2025_(2).jpg",
+     "selite": "Museon punatiiliset rakennukset kuuluvat Jakutskin vanhaan kaupunkikuvaan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q65163018",
+   "nimi": "Saha-tasavallan kansallinen taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 62.0258,
+   "lon": 129.7324,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Здание Национального художественного музея.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F.jpg?width=1280",
+     "tekija": "Empressdalek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F.jpg",
+     "selite": "Kansallisen taidemuseon harmaa klassistinen rakennus seisoo Kirovin kadun varrella keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Здание национального художественного музея улица Кирова 9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F_%D1%83%D0%BB%D0%B8%D1%86%D0%B0_%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0_9.jpg?width=1280",
+     "tekija": "Александр Велигура",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F_%D1%83%D0%BB%D0%B8%D1%86%D0%B0_%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0_9.jpg",
+     "selite": "Taidemuseon pitkä julkisivu näkyy Kirovin kadun varrelta.",
+     "leveys": 3346,
+     "korkeus": 2315,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12100482",
+   "nimi": "Saha-tasavallan ooppera- ja balettiteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 62.02333,
+   "lon": 129.71889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Государственный театр оперы и балета Республики Саха (Якутия) им. Д.К.Сивцева-Суоруна Омоллоона, Якутск 14.09.2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%BE%D0%BF%D0%B5%D1%80%D1%8B_%D0%B8_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D0%B0_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8_%D0%A1%D0%B0%D1%85%D0%B0_(%D0%AF%D0%BA%D1%83%D1%82%D0%B8%D1%8F)_%D0%B8%D0%BC._%D0%94.%D0%9A.%D0%A1%D0%B8%D0%B2%D1%86%D0%B5%D0%B2%D0%B0-%D0%A1%D1%83%D0%BE%D1%80%D1%83%D0%BD%D0%B0_%D0%9E%D0%BC%D0%BE%D0%BB%D0%BB%D0%BE%D0%BE%D0%BD%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_14.09.2025.jpg?width=1280",
+     "tekija": "SmallSonMarex",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%BE%D0%BF%D0%B5%D1%80%D1%8B_%D0%B8_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D0%B0_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8_%D0%A1%D0%B0%D1%85%D0%B0_(%D0%AF%D0%BA%D1%83%D1%82%D0%B8%D1%8F)_%D0%B8%D0%BC._%D0%94.%D0%9A.%D0%A1%D0%B8%D0%B2%D1%86%D0%B5%D0%B2%D0%B0-%D0%A1%D1%83%D0%BE%D1%80%D1%83%D0%BD%D0%B0_%D0%9E%D0%BC%D0%BE%D0%BB%D0%BB%D0%BE%D0%BE%D0%BD%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_14.09.2025.jpg",
+     "selite": "Ooppera- ja balettiteatterin leveä julkisivu avautuu laajalle aukiolle, ja seinillä esitellään käynnissä olevia esityksiä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Якутск.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA.jpg?width=1280",
+   "tekija": "Якупова Инна",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA.jpg",
+   "selite": "Jakutsk kasvaa nopeasti: ikiroudalle rakennetut asuinkorttelit nousevat talvella puutalojen ja korkeampien kerrostalojen ympärille.",
+   "leveys": 2000,
+   "korkeus": 1335,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Вид на реку Лена со стороны набережной имени Романа Дмитриева, Якутск 18.06.2026.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%80%D0%B5%D0%BA%D1%83_%D0%9B%D0%B5%D0%BD%D0%B0_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B0_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_18.06.2026.jpg?width=1280",
+   "tekija": "SmallSonMarex",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%80%D0%B5%D0%BA%D1%83_%D0%9B%D0%B5%D0%BD%D0%B0_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B0_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B0%2C_%D0%AF%D0%BA%D1%83%D1%82%D1%81%D0%BA_18.06.2026.jpg",
+   "selite": "Lena virtaa Jakutskin vieressä leveänä, ja kaupungin rantaan tullaan vain laivalla tai jäätä pitkin.",
+   "leveys": 6000,
+   "korkeus": 3368,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1709336",
+   "nimi": "Saha-teatteri",
+   "peruste": "pelin nosto",
+   "lat": 62.03333,
+   "lon": 129.74194,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

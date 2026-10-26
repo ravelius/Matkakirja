@@ -23,11 +23,16 @@ const MODULES = [
   // Lauseraja (PAATOKSET 34 kohta 16): puhdas tekstiapuri ilman tuonteja,
   // jonka nähtävyysnäkymä (js/kaupunkinosto.js) tuo — siksi ennen sitä.
   'js/lauseraja.js',
+  // Lainausmerkkien normalisointi (PT 18.10., juna 202): puhdas apuri ilman tuonteja; puhe.js ja liviapuhe.js tuovat sen.
+  'js/lainausmerkit.js',
   'js/galleria.js',
   // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
   // karttaselite ja main tuovat sen.
   'js/ilme.js',
   'js/saa.js',
+  // europe-questions ennen maailma-questionsia: maailman lauta lainaa
+  // Tukholman kysymykset Euroopan laudalta (aloituskaupungit 11.10.2026).
+  'js/packs/europe-questions.js',
   'js/packs/maailma-questions.js',
   'js/packs/maailma.js',
   'js/packs/africa-questions.js',
@@ -102,6 +107,15 @@ const MODULES = [
   'js/packs/hahmotelma-rus.js',
   'js/packs/hahmotelma-bih.js',
   'js/packs/hahmotelma-ukr.js',
+  'js/packs/hahmotelma-srb.js',
+  'js/packs/hahmotelma-alb.js',
+  'js/packs/hahmotelma-mkd.js',
+  'js/packs/hahmotelma-mne.js',
+  'js/packs/hahmotelma-mda.js',
+  'js/packs/hahmotelma-blr.js',
+  // Kohdekartat käyttävät historian hetkien tekstejä suoraan,
+  // jotta kaupungin piste ja hetken oma sivu eivät eriydy.
+  'js/packs/historian-hetket.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
@@ -213,6 +227,17 @@ const MODULES = [
   'js/packs/fokusvirta-luxemburg.js',
   // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
   'js/packs/fokusvirta-valletta.js',
+  'js/packs/fokusvirta-tirana.js',
+  'js/packs/fokusvirta-minsk.js',
+  'js/packs/fokusvirta-zagreb.js',
+  'js/packs/fokusvirta-vaduz.js',
+  'js/packs/fokusvirta-monaco.js',
+  'js/packs/fokusvirta-chisinau.js',
+  'js/packs/fokusvirta-skopje.js',
+  'js/packs/fokusvirta-belgrad.js',
+  'js/packs/fokusvirta-bern.js',
+  'js/packs/fokusvirta-bratislava.js',
+  'js/packs/fokusvirta-podgorica.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
@@ -248,11 +273,14 @@ const MODULES = [
    */
   'js/packs/maastokohteet-afg.js',
   'js/packs/maastokohteet-ago.js',
+  'js/packs/maastokohteet-alb.js',
   'js/packs/maastokohteet-are.js',
   'js/packs/maastokohteet-arg.js',
   'js/packs/maastokohteet-aus.js',
   'js/packs/maastokohteet-aut.js',
+  'js/packs/maastokohteet-bgr.js',
   'js/packs/maastokohteet-bih.js',
+  'js/packs/maastokohteet-blr.js',
   'js/packs/maastokohteet-bol.js',
   'js/packs/maastokohteet-bra.js',
   'js/packs/maastokohteet-can.js',
@@ -265,6 +293,7 @@ const MODULES = [
   'js/packs/maastokohteet-cub.js',
   'js/packs/maastokohteet-cyp.js',
   'js/packs/maastokohteet-cze.js',
+  'js/packs/maastokohteet-deu.js',
   'js/packs/maastokohteet-dnk.js',
   'js/packs/maastokohteet-dza.js',
   'js/packs/maastokohteet-ecu.js',
@@ -299,10 +328,13 @@ const MODULES = [
   'js/packs/maastokohteet-ltu.js',
   'js/packs/maastokohteet-lva.js',
   'js/packs/maastokohteet-mar.js',
+  'js/packs/maastokohteet-mda.js',
   'js/packs/maastokohteet-mdg.js',
   'js/packs/maastokohteet-mex.js',
+  'js/packs/maastokohteet-mkd.js',
   'js/packs/maastokohteet-mli.js',
   'js/packs/maastokohteet-mmr.js',
+  'js/packs/maastokohteet-mne.js',
   'js/packs/maastokohteet-mng.js',
   'js/packs/maastokohteet-moz.js',
   'js/packs/maastokohteet-nam.js',
@@ -333,6 +365,7 @@ const MODULES = [
   'js/packs/maastokohteet-slb.js',
   'js/packs/maastokohteet-sle.js',
   'js/packs/maastokohteet-som.js',
+  'js/packs/maastokohteet-srb.js',
   'js/packs/maastokohteet-swe.js',
   'js/packs/maastokohteet-syr.js',
   'js/packs/maastokohteet-tcd.js',
@@ -429,12 +462,19 @@ const MODULES = [
   // passport ennen omistusta: omistus.js tuo sen staattisesti.
   'js/passport.js',
   'js/linssit/rekisteri.js',
+  // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
+  'js/apuraha.js',
+  // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
+  'js/pohjat/paneelidata.js',
+  // UI-pohjien tyylilista (pohjat.js tuo sen; yhden tiedoston versiossa tyylit ovat jo sivulla).
+  'js/pohjat/tyylit.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
   'js/packs/lippu-tekijat.js',
+  'js/packs/commons-tekijat.js',
   'js/packs/africa-valokuvat.js',
   'js/packs/africa-saapumiset.js',
   'js/packs/africa-kulttuuri.js',
@@ -442,7 +482,6 @@ const MODULES = [
   'js/packs/africa-maatiedot.js',
   'js/packs/africa.js',
   'js/packs/middleeast-questions.js',
-  'js/packs/europe-questions.js',
   'js/packs/europe-puzzles.js',
   'js/tyohuone-kehitys-data.js',
   // Kehittäjän liitteet (v697): ui.js lukee Raamatun ja tilannetaulut
@@ -454,6 +493,7 @@ const MODULES = [
   // Lukijaäänen oletusten näyttökopio (main.js tuo sen dialogiin).
   'js/puhe-oletukset.js',
   'js/packs/tarinakaari.js',
+  'js/packs/hintatasot.js',
   'js/packs/europe.js',
   // middleeast-countries.js ENNEN middleeast.js:ää: niputettu koodi on yhtä
   // näkyvyysaluetta, ja middleeast.js lukee MIDDLE_EAST_COUNTRY_SHAPESin heti
@@ -518,6 +558,8 @@ const MODULES = [
   // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',
+  // Nimetön kävijälaskuri (main.js tuo; tarvitsee pollo-asetukset.js:n).
+  'js/kaynti.js',
   'js/aani-ehdokkaat.js',
   /*
    * Taustavahti ENNEN kaikkea ääntä: jokainen äänimoduuli (sound,
@@ -556,6 +598,8 @@ const MODULES = [
   'js/livia-pilotti-cuet.js',
   'js/livia-puheleet.js',
   'js/livia-lehtireaktiot.js',
+  // Progressiivinen puhe: mp3-virran segmenttidekooderi (puhe.js tuo sen).
+  'js/puhevirta.js',
   'js/puhe.js',
   /*
    * js/isoisan-valokuvat.js OLI TÄSSÄ. Ainoa niputettu tuoja oli
@@ -604,6 +648,11 @@ const MODULES = [
    * Lukijaääni (js/puhe.js) on listalla jo aiemmin (ambience-
    * streamin tuonti), eli myös ennen lukijaa.
    */
+  'js/piirtokoe-asetus.js',
+  'js/kaiutinmittari.js',
+  // Puhetagien näyttösiivous (tuonniton): lukija ja pollo tuovat sen.
+  'js/puhetagit.js',
+  'js/ikaraja.js',
   'js/lukija.js',
   /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
@@ -613,6 +662,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
+  // jotka tuovat sen; moduuli itse ei tuo mitään.
+  'js/avausanimaatio.js',
   // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
   // moduuli itse ei tuo mitään.
   'js/saapumisasento.js',
@@ -653,6 +705,7 @@ const MODULES = [
   // Pro-tuottajan tekijäsivu ennen lähderivien piirtäjiä (nähtävyydet
   // ja maalehti tuovat sen; moduuli tuo ehdotukset ja ui-apurit, jotka
   // ovat yllä).
+  'js/kuvatekija.js',
   'js/tekijakortti.js',
   /*
    * Tasogalleria ennen ui.js:ää: galleria tuo minipopupin (yllä) ja
@@ -696,6 +749,8 @@ const MODULES = [
    * liuskan nimiö on nähtävyyksien staattinen riippuvuus.
    */
   'js/karttavalot.js',
+  // Nostojen kategoriat (liuska ja lehden osiohakemisto, ks. moduulin alku).
+  'js/nostokategoriat.js',
   /*
    * KAUPUNKILIUSKAN NIMIÖT ENNEN NÄHTÄVYYKSIÄ (Raamattu,
    * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 8). `NAHTAVYYDET_NIMIO` on
@@ -742,6 +797,7 @@ const MODULES = [
   'js/livia-chat-tila.js',
   'js/livia-svg-paa.js',
   'js/livia-astronautti.js',
+  'js/livia-eva.js',
   'js/livia-svg.js',
   'js/livia-uudet-versiot.js',
   'js/livia-nostotila.js',
@@ -749,6 +805,9 @@ const MODULES = [
   'js/pulu-paneelin-ylla.js',
   'js/livia-eleet.js',
   'js/pollo.js',
+  // UI-pohjat (NOSTOKORTTI, KORTTI): ennen js/fokuskohteet.js:ää, joka avaa kohdekortin pohjalla.
+  'js/pohjat/korttidata.js',
+  'js/pohjat/pohjat.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin
    * äänen kuplan ilmestyessä (omistaja 6.9.2026). Moduuli tuo vain
@@ -808,6 +867,11 @@ const MODULES = [
    * kääntöä ei edes yritetä ladata, lehti käyttää vanhaa liukua.
    */
   'js/sivunkaanto.js',
+  // Lehden osiohakemisto (lehti.js tuo sen).
+  'js/lehtiosiot.js',
+  // Kartalle siirtyneet jutut kaupunkilehden sivuille (lehti.js tuo sen;
+  // se tuo fokusvirrat ja Saksan fokuskohteet, jotka ovat jo yllä).
+  'js/lehtinostot.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   /*
@@ -818,6 +882,9 @@ const MODULES = [
    */
   // fokusmitat (ja sen fokus-grc) ennen fokusvirtaa: saapumisasento 9.9.2026
   'js/packs/fokus-grc.js',
+  // Maakortin pääkaupunkirivi (PT 10.10.2026): fokusmitat.maanPaakaupunki lukee molemmat.
+  'js/packs/laudan-paakaupungit.js',
+  'js/packs/paakaupungit.js',
   'js/fokusmitat.js',
   /*
    * PULU-CAM-pakka ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti).
@@ -836,14 +903,11 @@ const MODULES = [
    * kaiutinmittari tuo sen nyt voimassaOlevatKokeet-lukuun. Ei omia
    * riippuvuuksia, joten paikka muuten vapaa.
    */
-  'js/piirtokoe-asetus.js',
   /*
    * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
    * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
    * joka tuo sen.
    */
-  'js/kaiutinmittari.js',
-  'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
    * (kartta.js boardBounds → pyramidinArkki), koska pyramidilaudalla
@@ -872,6 +936,8 @@ const MODULES = [
    * versiossa moduulit ajetaan listan järjestyksessä, eikä tuoja saa
    * olla ennen tuotua.
    */
+  // Deltasarjan laattakartta (29.9.2026): js/pallo.js ja js/laattapyramidi.js tuovat tämän.
+  'js/deltasarja.js',
   'js/reliefipyramidi.js',
   'js/laattapyramidi.js',
   /*
@@ -930,6 +996,8 @@ const MODULES = [
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
    * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
+  // PANEELI-lippu ja pillerivalikon puku: ennen js/karttaselite.js:ää (sama lippu) ja js/main.js:ää.
+  'js/pilleri-paneeli.js',
   'js/karttaselite.js',
   'js/vakasikoni.js',
   'js/ylapalkki-vaaka.js',
@@ -961,6 +1029,15 @@ const MODULES = [
   // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
   // joka tuo sen avaaLisakaupunginKortti-funktion.
   'js/kaupunkinosto.js',
+  /*
+   * FOKUSVIRTA SIIRTYI TÄHÄN 29.9.2026 (Siirtosepän pariteettikatsaus,
+   * rivi 5 "vain yksi lappu kerrallaan"): se tuo nyt staattisesti
+   * `suljeKaupunkipopup`in kaupunkinosto.js:stä (yllä), joten sen on
+   * oltava kaupunkinoston JÄLKEEN. Fokuskohteet.js (alla) tuo tästä
+   * `asetaKohdeavaus`/`asetaKohdehakemisto`, joten tämän on oltava
+   * ennen sitä — tässä välissä se on.
+   */
+  'js/fokusvirta.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
@@ -973,7 +1050,7 @@ const MODULES = [
    */
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
-  'js/karttatyokalu-maakunnat.js',
+  'js/packs/maakunnat-nimet.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -987,6 +1064,9 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
+  // Maakunnat-välilehden moduuli (data yllä) vasta nostokortin jälkeen:
+  // maakunnan kortti käyttää nostokortin kuvia ja tyyliä (#3583).
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
@@ -1011,8 +1091,9 @@ const MODULES = [
    * tekijakortin lähderivin ja projektion (fokusmitat) — kaikki ovat
    * jo yllä.
    */
-  'js/packs/historian-hetket.js',
   'js/historian-hetket.js',
+  // Osiohakemiston nostokuvat fokusmoduulien jälkeen (tuontisykli, ks. moduuli).
+  'js/lehtiosiot-kuvat.js',
   /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion
@@ -1057,6 +1138,13 @@ const MODULES = [
    */
   'js/pallodiag.js',
   'js/linssivirhe.js',
+  // Kehittäjän Pelaajan näkymä -apunappi (29.9.2026) ennen ui.js:ää ja main.js:ää, jotka tuovat sen; tuo vain
+  // ui-apurit.js:n.
+  'js/pelaajanakyma.js',
+  'js/kokoelmanakyma.js',
+  'js/pilleri-animaatio.js',
+  // Visa KORTTI-pohjalla (versio B): js/ui.js puee #quiz-dialogin.
+  'js/visa-pohja.js',
   'js/ui.js',
 
   'js/muutokset.js',
@@ -1073,6 +1161,13 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  'js/linssit/ajattelija-sokrates-aikajana.js',
+  'js/linssit/ajattelija-sokrates.js',
+  'js/linssit/ajattelija-marcus-aikajana.js',
+  'js/linssit/ajattelija-marcus.js',
+  'js/linssit/ajattelija-projektori.js',
+  'js/linssit/ajattelija.js',
+  'js/ajattelijapaat.js',
   'js/main.js',
 ];
 
@@ -1123,6 +1218,25 @@ const STYLES = [
   'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
+  // UI-pohjien tyylit (js/pohjat/tyylit.js POHJAT_TYYLIT, sama järjestys).
+  'css/pohjat/perus.css',
+  'css/pohjat/nostokortti.css',
+  'css/pohjat/kortti.css',
+  'css/pohjat/paneeli.css',
+  'css/pohjat/kentta.css',
+  'css/pohjat/auto.css',
+  'css/pohjat/kuvanakyma.css',
+  'css/pohjat/pulu.css',
+  'css/pohjat/erikoisnostot.css',
+  'css/pohjat/galleria.css',
+  'css/pohjat/esikatselu.css',
+  'css/pohjat/pinnat/dialogit.css',
+  'css/pohjat/pinnat/pillerivalikko.css',
+  'css/pohjat/pinnat/visa.css',
+  'css/pohjat/pinnat/karttaselite.css',
+  'css/pohjat/pinnat/linssin-valikko.css',
+  'css/pohjat/pinnat/linssivalitsin.css',
+  'css/pohjat/pinnat/ajattelija.css',
   'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.

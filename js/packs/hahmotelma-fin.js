@@ -139,6 +139,7 @@ export const HAHMOTELMA_FIN = [
   },
   {
     id: 'hahmotelma-merenkurkku',
+    nimio: 'Merenkurkku',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-merenkurkku-14c06352.jpg',
       lyhyt: 'Näkymä Merenkurkun saaristoon ja mereen tornin ikkunasta Raippaluodossa.',
@@ -217,6 +218,7 @@ export const HAHMOTELMA_FIN = [
   },
   {
     id: 'hahmotelma-pallas',
+    nimio: 'Pallas-Ylläs',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-pallas-56f96b2b.jpg',
       lyhyt: 'Ilmakuva Pallastunturista ja Hanhijärven suolammesta Muoniossa.',
@@ -281,6 +283,7 @@ export const HAHMOTELMA_FIN = [
   },
   {
     id: 'hahmotelma-oulanka',
+    nimio: 'Oulanka',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-oulanka-b4a0a02c.jpg',
       lyhyt: 'Kiutaköngäs-koski Oulankajoella kallioiden ja metsän keskellä.',
@@ -565,6 +568,7 @@ export const HAHMOTELMA_FIN = [
   },
   {
     id: 'hahmotelma-lemmenjoki',
+    nimio: 'Lemmenjoki',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-lemmenjoki-581dc73d.jpg',
       lyhyt: 'Syksyn värit heijastuvat Lemmenjoen tyyneen veteen.',
@@ -1801,7 +1805,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-varkaus-51463788.jpg',
         lyhyt: 'Varkauden tehdasalue vesiväylän rannalla: punatiilirakennuksia ja piippuja.',
         selite: 'Panoraamakuva Varkauden paperitehtaiden alueelta. Alue on valtakunnallisesti '
-          + 'merkittävä rakennettu kulttuuriympäristö, \'Varkauden paperitehtaat\'.',
+          + 'merkittävä rakennettu kulttuuriympäristö, ’Varkauden paperitehtaat’.',
         lahde: 'Valokuva: Tiia Monto, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Tiia Monto',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Varkaus_factory_-_canal.jpg',
@@ -1979,6 +1983,7 @@ export const HAHMOTELMA_FIN = [
   },
   {
     id: 'hahmotelma-vanha-vaasa-kirkko',
+    nimio: 'Vanha Vaasa',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/fin-nosto-vanha-vaasa-kirkko-2856238b.jpg',
       lyhyt: 'Pyhän Marian kirkon rauniomuurit Vanhassa Vaasassa.',

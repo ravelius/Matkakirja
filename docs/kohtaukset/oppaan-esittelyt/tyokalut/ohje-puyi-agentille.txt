@@ -1,0 +1,16 @@
+OHJE: PUYIN LAPSUUDEN FAKTAPOHJA 1912–1918 (Matkakirja-pelin juoksupeliä varten, Sisältökirjuri 16.10.2026)
+
+Tausta: pelissä pikku-Puyi (vuosi noin 1914, ikä 8) karkaa Kielletyn kaupungin sisäosassa takaa-ajajia (eunukit, hoitajat) pakoon pyyhkäisyohjauksella: kynnysten yli, pöytien ali, ammeiden taakse, kattoja pitkin. Sävy on kepposhenkinen mutta kunnioittava (ei eunukkipilkkaa, ei eksotiikkaa, ei väkivaltaa kuvailtuna). Tarvitaan tarkistettu faktapohja: hovin arki, eunukit ja hoitajat, opettajat, leikit, vaatetus, mitä lapsi sai tehdä ja mitä ei. EI polkupyörää (se tuli vasta 1922 ja Johnstonin aikaan). Aikaikkuna 1912–1918 (Johnston tuli 1919; Pujie vieraili ensi kertaa 1916, opintotoveriksi 1919; letti leikattiin 1922; silmälasit vasta 1919 jälkeen).
+
+Tehtävä: tutki webistä (WebSearch/WebFetch) annetut aiheet ja kirjoita faktat suomeksi. Kirjoita VAIN omaan tulostiedostoosi (polku annettu), et repoon etkä muiden tiedostoihin.
+
+Lähteet: pääkirjallisuus (Puyin muistelma "Keisarista kansalaiseksi" / "From Emperor to Citizen", Reginald Johnston "Twilight in the Forbidden City" (Gutenberg/archive.org), Wikipedia (Puyi, Forbidden City, Empress Dowager Longyu, Manchu Restoration, Reginald Johnston, Eunuchs in China/Qing), Britannica, Palace Museum (dpm.org.cn), Google Arts, Wikisource/Archive.org-kokotekstit, akateemiset artikkelit, museot). Älä käytä tekoälysivuja tai blogeja ainoana lähteenä.
+
+SÄÄNNÖT
+- Jokaiselle faktalle KAKSI itsenäistä lähdettä (URL). Muistelma + toinen riippumaton lähde (Johnston/Wikipedia/tutkimus) käy. Jos sivu antaa 403/404 ja saat vain hakutuloksen tiivistelmän, merkitse "(hakutulos)".
+- Merkinnät: [EPÄVARMA] = lähteet eroavat tai vain yksi lähde; [LEGENDA] = tunnettu kertomus, jota ei voi todentaa; [EI PELIIN] = fakta on totta mutta ei sovellu sävyyn (väkivalta, ruoskinta jne.), kirjaa silti lyhyesti ettei peli vahingossa kiistä sitä; [EI LÖYDETTY].
+- Vuosiluvut ja päivämäärät: gregoriaaninen, iät länsimaisittain (Puyi s. 7.2.1906). Kerro aina vuosi, johon fakta pätee (1912–1918 vs. myöhemmin).
+- Ei arvailua. Luvut, jotka vaihtelevat lähteittäin, annetaan haarukkana.
+- Ei elokuvan (Viimeinen keisari, 1987) kuvaamia asioita faktoina, ellei muu lähde vahvista; merkitse "elokuva ≠ historia", jos elokuva on levittänyt virheen.
+- Muoto: jokaisella aiheella otsikko "### <aihe>", sen alla lyhyet faktarivit "- <fakta> (vuosi) — lähteet: URL1, URL2 [merkintä]" sekä lopussa "Pelissä käytettävää:" (2–5 ideaa, jotka perustuvat varmoihin faktoihin: esteitä, esineitä, kerättäviä, hahmoja) ja "Vältä:" (virheet/myytit/pilkka).
+- Lopuksi osio "## Avoimet kysymykset" ja vastaa lyhyesti: aiheet, [EPÄVARMA]-määrä, tärkeimmät huomiot.

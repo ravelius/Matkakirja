@@ -29,7 +29,9 @@
 
 import { EHDOTUS_OSOITE, ehdotusKaytossa } from './ehdotukset.js';
 import { merkitseHavainnekuva } from './havainnekuva.js';
+import { taydennaLahde } from './kuvatekija.js';
 import { html } from './ui-apurit.js';
+import { animoiAvaus, piilotaAnimoiden } from './avausanimaatio.js';
 
 /*
  * Istunnon välimuisti. Sama tekijä esiintyy helposti kymmenessä
@@ -146,12 +148,21 @@ export function avaaTekijaKortti(id, nimi = '') {
   document.querySelector('.tekija-ikkuna')?.remove();
   const dialogi = document.createElement('dialog');
   dialogi.className = 'tekija-ikkuna';
+  const kortti = html('div', 'tekija-kortti');
+  // Sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js): kortti pienenee ja häivyttyy, dialogi sulkeutuu
+  // vasta sen jälkeen. Esc (cancel) kulkee saman reitin.
+  let sulkeutuu = false;
+  const sulje = () => {
+    if (sulkeutuu || !dialogi.open) return;
+    sulkeutuu = true;
+    piilotaAnimoiden(kortti, null, () => dialogi.close());
+  };
   dialogi.addEventListener('click', (e) => {
-    if (e.target === dialogi) dialogi.close();
+    if (e.target === dialogi) sulje();
   });
+  dialogi.addEventListener('cancel', (e) => { e.preventDefault(); sulje(); });
   dialogi.addEventListener('close', () => dialogi.remove());
 
-  const kortti = html('div', 'tekija-kortti');
   const yla = html('div', 'tekija-ylarivi');
   const otsikko = html('h2', 'tekija-otsikko', nimi || 'Tekijä');
   yla.appendChild(otsikko);
@@ -159,7 +170,7 @@ export function avaaTekijaKortti(id, nimi = '') {
   x.type = 'button';
   x.title = 'Sulje';
   x.setAttribute('aria-label', 'Sulje');
-  x.addEventListener('click', () => dialogi.close());
+  x.addEventListener('click', sulje);
   yla.appendChild(x);
   kortti.appendChild(yla);
 
@@ -169,6 +180,7 @@ export function avaaTekijaKortti(id, nimi = '') {
   dialogi.appendChild(kortti);
   document.body.appendChild(dialogi);
   dialogi.showModal();
+  animoiAvaus(kortti);
 
   haeTekija(id).then((tekija) => {
     if (!dialogi.isConnected) return;
@@ -264,7 +276,8 @@ export function kortinKuvalahde(el, lahde, kohde = {}) {
  * @returns {HTMLElement} sama elementti
  */
 export function taytaLahderivi(el, lahde, kohde = {}) {
-  const teksti = String(lahde ?? '');
+  // Puuttuva tekijä tai lisenssi Commonsin metatiedoista (js/kuvatekija.js).
+  const teksti = taydennaLahde(lahde, kohde);
   const id = kohde?.tekijaId;
   if (!id || !ehdotusKaytossa()) {
     const linkit = [

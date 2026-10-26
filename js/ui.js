@@ -1,6 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import { visaPohjalla, pueVisaKortiksi } from './visa-pohja.js';
 import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
@@ -19,7 +20,7 @@ import {
 } from './ai.js';
 import {
   BUS_FARE, DUEL_PRIZE, FLIGHT_PRICE,
-  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE, STAR_PRIZE,
+  HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RAHATTOMUUS_VUOROJA, RECORD_DAYS, SEA_FARE, STAR_PRIZE, TURN_HOURS,
 } from './game.js';
 import {
   factSource, factText, factVoice, isSourceUrl, PACKS, packById, sourceLabel, voiceTitle,
@@ -118,7 +119,7 @@ import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
 // galleriat (siirretty tästä tiedostosta 17.8.2026, remontin M1).
 import {
-  ARTIKKELIT, EI_VALOKUVAKYSYMYKSEEN, HAVAINTOLUENNAT, KAIKKI_VALOKUVAT,
+  ARTIKKELIT, EI_VALOKUVAKYSYMYKSEEN, KAIKKI_VALOKUVAT,
   KULTTUURIT, LAUTA_TUNNUSLUVUT,
   OMAT_GALLERIAT, SAAPUMISLUENNAT, SAAPUMISTEKSTIT, VALOKUVAT, luentaLauta,
 } from './sisaltotaulut.js';
@@ -141,7 +142,7 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, assetOsoite, julisteUrl, musaPolku, peiliPetti, peilinLaji,
+  asetaKuva, assetOsoite, julistePieniUrl, julisteUrl, musaPolku, peiliPetti, peilinLaji,
   aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
@@ -193,13 +194,20 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
+import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
+import { pohjatLataaTyyli, luoPohjaGalleria } from './pohjat/pohjat.js';
+import { lahetaKaynti } from './kaynti.js';
+// Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
+/** Apurahakortin Palaute ja mukaan -osio (omistaja 7.10.2026: pois apurahakierroksen ajaksi; palautus yhdellä rivillä). */
+const APURAHA_PALAUTE = false;
+const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
   seuraavaTietajataso, tietajaAvatar, tietajataso, tietajatasonOsuus, varssynSakeet,
 } from './tietajatasot.js';
 // Matkalaukun i-napin tasogalleria (minipopup-palikan ensimmäinen käyttäjä).
-import { avaaTietajagalleria } from './tietajagalleria.js';
+import { avaaTietajagalleria, tietajaRuudukko } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
@@ -281,6 +289,8 @@ import {
   MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
   musiikkiPaalla,
 } from './musiikkivalitsin.js';
+// Saapumistunnus luetaan samasta maa→alue-taulusta kuin alueraita.
+import { KARTTA_VAIN_KAUPUNKI, saapumistunnus } from './kaupunkimusiikki.js';
 /*
  * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
  * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
@@ -310,7 +320,7 @@ import { BoardDie } from './die.js';
  */
 import {
   esipuskuroiLuenta, kaynnistaLukija, kokoaLuettavaTeksti, liitaLukija, lueAaneen,
-  lukijaLukee, lukijaTuettu, paivitaLukija, pysaytaLukija, vieritaPehmeasti,
+  lukijaLukee, lukijaTuettu, paivitaLukija, pysaytaLukija, PUHEVIRHE_TAPAHTUMA, vieritaPehmeasti,
 } from './lukija.js';
 // Lukijaäänen saatavuus ohjaa merkintöjen luentapolkua: kun lennossa
 // generoitu ääni on käytössä, ElevenLabs-äänitteet ohitetaan
@@ -358,6 +368,7 @@ import {
   drawMaastonimet,
   drawLahivesi,
   lahivedenVoima,
+  tokenIconSvg,
 } from './mapart.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import { vuorikuvat } from './packs/vuori-valokuvat.js';
@@ -381,7 +392,7 @@ import { vuorikuvat } from './packs/vuori-valokuvat.js';
 import { NukkuvaKartta, lataaTasokartta, tasokartanOsat } from './kartta-lataus.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import {
-  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
+  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet,
   piirraIhmenauha,
   avaaKohdeSuurennos,
 } from './fokuskohteet.js';
@@ -464,6 +475,11 @@ import { aaniLisenssiSallittu } from './lisenssi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
 import { taytaPohja } from './tekstipohja.js';
 import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
+// Pillerivalikko (omistaja 29.9.2026): Linssit- ja Aarteet-näkymien
+// yhteinen listapiirrin ja avaus-/sulkuanimaation apufunktiot.
+import { piirraKokoelma } from './kokoelmanakyma.js';
+import { avaaAnimoiden, suljeAnimoiden } from './pilleri-animaatio.js';
+import { paivitaPelaajanakymaNappi } from './pelaajanakyma.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -490,7 +506,7 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
  * kirjoitetaan silti näkyviin samalla kuvateksti + lähde -mallilla
  * kuin muualla pelissä (js/ui.js naytaPostikortti).
  */
-const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
+const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan havainnekuva';
 
 /*
  * SIIRRON KOREOGRAFIAN LUVUT JA KÄYRÄT (STEP_MS, HYPYN_TAUKO_MS,
@@ -1052,6 +1068,26 @@ const REVEAL_HUUDAHDUS_RIVI = false;
 export const AARRE_MUSIIKKI = {
   tavallinen: musaPolku('musa-aarre'),
   paa: musaPolku('musa-paaaarre'),
+};
+/*
+ * MATKAN AIHEET (musiikkisuunnitelma 26.9.2026, vaihe 1). Kertaraitoja
+ * kuten aarreaiheet, ja ne soivat SAMASSA PAIKASSA samalla soittimella
+ * (soitaAarreMusiikki): pohjaraita ja maisema väistyvät aiheen ajaksi
+ * ja palaavat, kun aihe loppuu. Saapumistunnus asuu maanosittain
+ * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
+ *
+ *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 20 s (doPickStart). Omistaja valitsi
+ *                    28.9.2026 vaskimarssin (ehdotus A): innostunut ja mahtipontinen, pelin oma
+ *                    johtoaihe trumpeteilla; isku 7,3 s ja loppusointu 15,1 s natiivin v3f-lennon mukaan.
+ *   loppu            kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
+ *   ratkaisu         kohtaamisen kysymys oikein, 4,3 s (soitaKohtaamisenTulos)
+ *   epaonnistuminen  kohtaamisen kysymys väärin tai aika loppui, 4,0 s (sama)
+ */
+export const MATKAN_AIHEET = {
+  aloituslento: musaPolku('musa-aloituslento-marssi-a'),
+  loppu: musaPolku('musa-loppu'),
+  ratkaisu: musaPolku('musa-ratkaisu'),
+  epaonnistuminen: musaPolku('musa-epaonnistuminen'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
@@ -2259,8 +2295,111 @@ function julisteMantereet() {
 const FACT_WIDTH = 340; // pidettävä samana kuin .fact-card css:ssä
 const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 
+/** Rahattomuuspalkin miniselite (omistaja 27.9.2026 klo 16.1x). */
+const RAHATTOMUUS_SELITE = 'Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka päättyy. '
+  + 'Ansaitse tai löydä rahaa jatkaaksesi.';
+/** Miniselite sulkeutuu itsestään tämän jälkeen (ms). */
+const RAHATTOMUUS_SELITE_MS = 7000;
+
+/** Rahattomuuspalkin punaiset lohkot: viimeiset 18 h (3 × 6 h), omistaja 27.9.2026. */
+export const RAHATTOMUUS_PUNAISIA = 3;
+
+/*
+ * KORTTI-POHJA OLEMASSA OLEVAAN DIALOGIIN (UI-pohjat, omistaja 1.10.2026; sama tapa kuin natiivissa: kortti puetaan
+ * tyylikirjan KORTIKSI, rakenne ja kuvarivi säilyvät). Peruttavissa: ?kortti=vanha (localStorage matkakirja-kortti).
+ */
+const KORTTI_POHJA = true;
+export function korttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('kortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_POHJA;
+}
+
+/** Dialogin kortti KORTTI-pohjan luokkiin: otsikko 21, kapiteeli 12, leipä 16, napit 38 (toiminto / haamu). */
+function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
+  pohjatLataaTyyli();
+  kortti.classList.add('tk-kortti', 'tk-teema-paperi');
+  if (otsikko) otsikko.className = 'tk-otsikko';
+  for (const e of kortti.querySelectorAll('.apuraha-alaotsikko')) e.className = 'tk-apuri';
+  for (const e of kortti.querySelectorAll('.periaate-valiotsikko')) e.className = 'tk-kapiteeli';
+  for (const e of kortti.querySelectorAll('.apuraha-teksti')) {
+    e.className = `tk-leipa${e.classList.contains('apuraha-teksti--korostus') ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('.apuraha-lista')) e.className = 'tk-leipa tk-lista';
+  for (const e of kortti.querySelectorAll('.apuraha-toiminto')) e.className = 'tk-nappi tk-nappi--toiminto';
+  for (const e of kortti.querySelectorAll('.apuraha-upotus')) e.className = 'tk-kuva tk-kuva--upotus tk-kuva--suurennettava';
+  if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
+}
+
+/**
+ * index.html:n kiinteä dialogi (otsikko, kappaleet, listat, toimintorivi) KORTIKSI kerran: luokat vaihtuvat, mutta
+ * tunnisteet ja kuuntelijat pysyvät. Kortti on `.dialog-card`, tai dialogi itse, jos kehystä ei ole (muutosloki).
+ * `apuri` ja `korostus` ovat valitsimia kappaleille, jotka saavat apuri- tai korostusportaan; muut kappaleet ovat
+ * leipää. `sulje` on rivin ulkopuolinen sulkunappi (levea haamu). Ensisijainen nappi on kulta, haamu haamu ja muut
+ * TOIMINTO. Muutoslokin versionumero on kapiteeli rivin alussa.
+ */
+export function puePohjaDialogiksi(dialogi, { apuri = '', korostus = '', sulje = '' } = {}) {
+  if (!dialogi || dialogi.dataset.pohja) return;
+  const kortti = dialogi.querySelector('.dialog-card') ?? dialogi;
+  dialogi.dataset.pohja = 'kortti';
+  puePohjaKortiksi(kortti, { otsikko: kortti.querySelector('h2'), sulje: sulje ? kortti.querySelector(sulje) : null });
+  for (const e of kortti.querySelectorAll('p')) {
+    if (apuri && e.matches(apuri)) e.className = 'tk-apuri';
+    else e.className = `tk-leipa${korostus && e.matches(korostus) ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('ol, ul')) {
+    e.className = `tk-leipa tk-lista${e.querySelector('.muutos-versio') ? ' tk-lista--loki' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('.muutos-versio')) e.className = 'tk-kapiteeli';
+  for (const rivi of kortti.querySelectorAll('.dialog-actions, menu, .muutokset-toiminnot')) rivi.className = 'tk-napit';
+  for (const b of kortti.querySelectorAll('.tk-napit button')) {
+    const tyyppi = b.classList.contains('primary') ? ' tk-nappi--ensisijainen' : b.classList.contains('ghost') ? ' tk-nappi--haamu' : '';
+    b.className = `tk-nappi${tyyppi}`;
+  }
+}
+
+/** Puetun dialogin toimintorivi pystyyn, jos jokin näkyvä nimi ei mahdu vierekkäin (pohjan pystyrivi, ei lyhennystä). */
+function sovitaPohjaNapit(dialogi) {
+  if (!dialogi?.dataset.pohja) return;
+  // Pohjien tyylitiedostot latautuvat ensimmäisellä kerralla taustalla: mitataan vasta niiden jälkeen.
+  const tyyli = [...document.querySelectorAll('link[data-pohjat]')].find((l) => !l.sheet);
+  if (tyyli) {
+    tyyli.addEventListener('load', () => sovitaPohjaNapit(dialogi), { once: true });
+    return;
+  }
+  for (const rivi of dialogi.querySelectorAll('.tk-napit')) {
+    rivi.classList.remove('tk-napit--pysty');
+    const ylittyy = [...rivi.querySelectorAll('.tk-nappi')].some((b) => !b.hidden && b.scrollWidth > b.clientWidth + 1);
+    rivi.classList.toggle('tk-napit--pysty', ylittyy);
+  }
+}
+
+/**
+ * Lomake KENTTÄ-pohjaosalle (omistaja 1.10.2026: "lomake ok"): kentät tk-kentta, ensisijainen nappi kulta koko
+ * leveydeltä, muut napit TOIMINTO, kappaleet leipää ja avattavat otsikot kapiteeleja. Luokat, joihin js nojaa
+ * (.sahke-nimi, .periaate-laheta, .pro-rasti), säilyvät.
+ */
+function pueLomakePohjalle(isa) {
+  for (const e of isa.querySelectorAll('input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=hidden]), textarea, select')) {
+    e.classList.remove('periaate-kentta');
+    e.classList.add('tk-kentta');
+  }
+  for (const b of isa.querySelectorAll('button')) {
+    if (b.classList.contains('seloste-nappi')) continue;
+    const ensisijainen = b.classList.contains('primary');
+    b.classList.remove('primary', 'ghost');
+    b.classList.add('tk-nappi', ensisijainen ? 'tk-nappi--ensisijainen' : 'tk-nappi--toiminto');
+  }
+  for (const p of isa.querySelectorAll('p')) if (!/tk-/.test(p.className)) p.classList.add('tk-leipa');
+  for (const s of isa.querySelectorAll('summary')) s.classList.add('tk-kapiteeli');
+}
+
 export class UI {
-  constructor(game, { onNewGame, onChange }) {
+  constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
     /*
      * Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
@@ -2273,6 +2412,9 @@ export class UI {
      */
     this.kartta = new NukkuvaKartta(this);
     this.onNewGame = onNewGame;
+    // Rahojen loppuminen: loppukortin jatko turvatallennuksesta (js/main.js).
+    this.onJatkaTurvasta = onJatkaTurvasta;
+    this.turvaOlemassa = turvaOlemassa;
     this.onChange = onChange;
     this.botTimer = null;
     // Automaattiheiton ajastin ja viimeisin automaattiheiton paikka
@@ -2294,49 +2436,50 @@ export class UI {
      */
     this.actionsEl = document.getElementById('actions');
     this.errorEl = document.getElementById('error');
-    this.passportDialog = document.getElementById('passport-dialog');
-    this.passportAarteet = document.getElementById('passport-aarteet');
-    this.passportFinds = document.getElementById('passport-finds');
     this.passportProgress = document.getElementById('passport-progress');
     /*
      * MATKAN TILASTOT: laskurit väkäsen alla (omistaja 6.9.2026,
      * "Piilota nuo tiedot väkäsen alle"). Sijainti, Kukkaro ja
      * tietäjätaso jäävät #passport-progressiin näkyviin; laskurit
-     * ladotaan tähän lohkoon, joka on oletuksena kiinni.
+     * ladotaan tähän lohkoon, joka on oletuksena kiinni. Molemmat
+     * elävät nyt #pilleri-tiedossa (js/pilleri-valikko.md-kommentti
+     * index.html:ssä), tunnisteet ovat entiset.
      */
     this.passportTilastot = document.getElementById('passport-tilastot');
     this.tilastoNappi = document.getElementById('laukku-tilastot-nappi');
     this.tilastoLohko = document.getElementById('laukku-tilastot');
     this.tilastoNappi?.addEventListener('click', () => this.vaihdaTilastolohko());
     // Kiinni-tila kirjoitetaan DOMiin heti, jotta ensimmäinenkin avaus
-    // näyttää laukun oikeassa asennossa ilman välähdystä.
+    // näyttää oikean asennon ilman välähdystä.
     this.paivitaTilastolohko(laukunTilastotAuki(), { heti: true });
-    // Julisterivi: oma kotelonsa, koska koko rivi piiloutuu ennen
-    // ensimmäistä voitettua julistetta (ks. renderJulisteet).
-    this.julisteKotelo = document.getElementById('juliste-kotelo');
-    this.passportJulisteet = document.getElementById('passport-julisteet');
-    /*
-     * Rivin sisältö rakennetaan uusiksi joka renderissä, mutta rivi
-     * itse on sama nappi koko pelin ajan — kuuntelija kiinnitetään
-     * siksi kerran tässä eikä renderJulisteetissa, jossa se
-     * kertautuisi joka avauksella.
-     */
-    this.passportJulisteet?.addEventListener('click', () => this.avaaJulisteGalleria());
-    /** Avoin julistegalleria: { kortti, huntu, nappaimet } tai null. */
+    /** Avoin julistegalleria (GALLERIA-pohja) tai null. */
     this.julisteGalleria = null;
+    /** Avoin aarteen/tavaran koko ruudun katselin, tai null. */
+    this.aarreSuurennos = null;
 
     /*
-     * Aarnin luettelon i-nappi. Teksti on tarinakaanonia (Fablen
-     * kirjoittama), joten se on tässä sellaisenaan eikä sitä lyhennetä
-     * näytön mukaan — pikkuseloste kasvaa tekstin mukaan.
+     * PILLERIVALIKKO (omistaja 29.9.2026, korvaa hampurilaisen ja
+     * isoisän matkalaukun): yksi #paavalikko-paneeli, jossa on kolme
+     * "kasvoa" (pää, linssit, aarteet). ks. index.html:n paavalikko-
+     * kommentti ja js/ui.js naytaPilleriNakyma alempana.
      */
-    document.getElementById('aarni-otsikko')?.appendChild(this.pikkuselosteNappi(
-      'Aarnin luettelo on isoisän vanhan ystävän, keräilijä Aarnin, kokoama '
-      + 'lista aarteista, jotka ovat päässeet unohtumaan. Kateissa-luku '
-      + 'kertoo, montako niistä on vielä löytämättä — jokainen matkalla '
-      + 'ratkaistu johtolanka voi viedä yhden jäljille.',
-      'Mikä Aarnin luettelo on?',
-    ));
+    this.paavalikko = document.getElementById('paavalikko');
+    this.pilleriPaanakyma = document.getElementById('pilleri-paanakyma');
+    this.pilleriLinssitNakyma = document.getElementById('pilleri-linssit-nakyma');
+    this.pilleriAarteetNakyma = document.getElementById('pilleri-aarteet-nakyma');
+    this.pilleriAarteetLista = document.getElementById('pilleri-aarteet-lista');
+    this.pilleriLinssitBtn = document.getElementById('pilleri-linssit-btn');
+    this.pilleriAarteetBtn = document.getElementById('pilleri-aarteet-btn');
+    this.pilleriNakyma = 'paa';
+    this.pilleriAarreEsikatseltu = null;
+    this.pilleriLinssitBtn?.addEventListener('click', () => this.naytaPilleriNakyma('linssit'));
+    this.pilleriAarteetBtn?.addEventListener('click', () => {
+      this.renderPilleriAarteet();
+      this.naytaPilleriNakyma('aarteet');
+    });
+    for (const takaisin of this.paavalikko?.querySelectorAll('[data-pilleri-takaisin]') ?? []) {
+      takaisin.addEventListener('click', () => this.naytaPilleriNakyma('paa'));
+    }
 
     /*
      * Laukun alalaidan nimikilpi avaa lähdeikkunan.
@@ -2360,38 +2503,6 @@ export class UI {
      */
     document.getElementById('brand-btn')?.addEventListener('click', () => {
       this.avaaLahteet();
-    });
-
-    /*
-     * Napautus laukun ulkopuolelle sulkee sen.
-     *
-     * Sulje-nappi poistui (omistaja: "se on turha kun voi klikata vain
-     * karttaa"), joten tämä on nyt ainoa hiiriele ulos. Modaalin
-     * taustakerros on osa <dialog>-elementtiä itseään, joten napautus
-     * kortin vierestä osuu dialogiin — kortin sisällä osuu korttiin.
-     */
-    this.passportDialog?.addEventListener('click', (e) => {
-      if (e.target === this.passportDialog) this.passportDialog.close();
-    });
-    // Seloste elää laukun sisällä, joten se sulkeutuu laukun mukana —
-    // muuten se jäisi leijumaan kartan päälle ilman ankkuriaan.
-    this.passportDialog?.addEventListener('close', () => {
-      this.suljePikkuseloste();
-      // Julistegalleria on laukun lapsi (suurennosIsanta): ilman tätä
-      // se jäisi suljetun dialogin sisään roikkumaan ja avautuisi
-      // seuraavan avauksen mukana ilman että kukaan sitä pyysi.
-      this.suljeJulisteGalleria();
-      document.body.classList.remove('laukku-auki');
-      // Laukun raita pois samasta kuuntelijasta kuin muukin siivous:
-      // laukun voi sulkea Escistä ja taustanapautuksesta, ja close
-      // laukeaa niistä kaikista.
-      asetaMusiikkitila('matkalaukku', false);
-      if (!this.dead) {
-        ilmoitaLivianTunne(
-          { tunne: 'lammin', voimakkuus: 0.3 },
-          { lahde: 'laukku', tunnus: 'laukku.kiinni' },
-        );
-      }
     });
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
@@ -2875,6 +2986,8 @@ export class UI {
 
     this.winnerDialog = document.getElementById('winner-dialog');
     this.quizDialog = document.getElementById('quiz-dialog');
+    // Visa KORTTI-pohjalla, versio B (peruttava ?kortti=vanha; js/visa-pohja.js).
+    if (visaPohjalla()) pueVisaKortiksi(this.quizDialog);
     this.quizCity = document.getElementById('quiz-city');
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
@@ -2989,7 +3102,7 @@ export class UI {
       this.suljeLappu(event.currentTarget);
     };
     this.taustaLaput = [
-      this.arrivalDialog, this.wikiDialog, this.eventDialog, this.passportDialog,
+      this.arrivalDialog, this.wikiDialog, this.eventDialog,
       this.quizDialog, this.winnerDialog, document.getElementById('rules-dialog'),
       // Lähdeikkuna ei vie pelitilaa eteenpäin, joten sille riittää
       // suljeLappun viimeinen haara: paperin kahina ja close(). Esc
@@ -3194,6 +3307,15 @@ export class UI {
     this.pallolautaEpaonnistui = false;
     // Turvatilan rivi näytetään kerran istunnossa (ilmoitaPallonTurvatila).
     this.pallonTurvatilaIlmoitettu = false;
+    /*
+     * Lukijaäänen raja (429) tai palvelinvirhe: workerin viesti kerran
+     * (js/lukija.js ilmoitaPuhevirhe rajaa toistot).
+     */
+    globalThis.document?.addEventListener?.(PUHEVIRHE_TAPAHTUMA, (e) => {
+      if (this.dead || !e?.detail?.viesti) return;
+      const box = this.buildToast({ kind: 'info', text: e.detail.viesti });
+      setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
+    });
     this.linssikartta = null;
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
     /*
@@ -3346,6 +3468,8 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    // Kehittäjän Pelaajan näkymä -apunappi selitenapin alle (js/pelaajanakyma.js).
+    paivitaPelaajanakymaNappi(this);
     // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
     // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
     // kuin pelaaja avaa välilehden.
@@ -4674,6 +4798,9 @@ export class UI {
     this.vapautaPohja();
     this.taideLahde = null;
     stopPlaceStream();
+    // Kohtaaminen kiinni ENNEN visan pysäytystä: muuten visan loppu
+    // nostaisi kohtaamisen hetkeksi soimaan kuolleen pelin päälle.
+    asetaMusiikkitila('kohtaaminen', false);
     stopQuizMusic();
     sfx.stopFlight();
     stopIntroVoice(this);
@@ -8267,6 +8394,7 @@ export class UI {
      * kehittäjän kytkin ei ole se hetki, jossa lauta syntyy.
      */
     this.pallolauta?.paivita();
+    paivitaPelaajanakymaNappi(this);
   }
 
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */
@@ -10875,6 +11003,146 @@ export class UI {
 
   // --- paneeli ------------------------------------------------------------
 
+  /**
+   * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x, talous): kun rahat ovat
+   * loppu, kartan yläreunaan tulee kevyt palkki — kahdeksan punaista lohkoa,
+   * yksi jokaista jäljellä olevaa kuuden tunnin jaksoa kohden (2 vrk =
+   * RAHATTOMUUS_VUOROJA). Lohko sammuu, kun vuoro (6 h pelin aikaa) kuluu,
+   * ja palkki katoaa, kun kassa selviää (js/game.js tarkistaRahattomuus).
+   * UI KEVYT (omistaja 15.2x): PELKÄT PUNAISET NELIÖT keskellä yläreunaa
+   * painikerivin alla — ei tekstiä, ei kehystä, sama ulkoasu kaikilla
+   * laitteilla; ei ota osumia. Aika on yläpalkissa lyhyenä ("0 £ 2 vrk")
+   * ja ruudunlukijalle aria-labelissa.
+   */
+  paivitaRahattomuuspalkki(piilossa = false) {
+    const { game } = this;
+    const vuoroja = piilossa || game.phase === 'over' ? null : game.rahattomuusVuorojaJaljella?.(game.player);
+    let palkki = this.rahattomuuspalkki;
+    if (vuoroja === null || vuoroja === undefined) {
+      if (palkki) palkki.hidden = true;
+      this.suljeRahattomuusSelite();
+      return;
+    }
+    if (!palkki) {
+      const kehys = document.querySelector('.rail') ?? document.querySelector('.map-pane');
+      if (!kehys) return;
+      palkki = html('div', 'rahattomuuspalkki');
+      palkki.setAttribute('role', 'button');
+      palkki.tabIndex = 0;
+      const lohkot = html('div', 'rahattomuus-lohkot');
+      /*
+       * VÄRIT (omistaja 27.9.2026 klo 17.2x): oranssi, ja viimeiset 18 h
+       * (RAHATTOMUUS_PUNAISIA lohkoa) punaisina. Lohkot sammuvat oikealta
+       * (i < vuoroja palaa), joten viimeiset tunnit palavat vasemmassa
+       * päässä: lopussa näkyvissä on vain punaista.
+       */
+      for (let i = 0; i < RAHATTOMUUS_VUOROJA; i++) {
+        lohkot.appendChild(html('span', `rahattomuus-lohko${i < RAHATTOMUUS_PUNAISIA ? ' viimeinen' : ''}`));
+      }
+      palkki.append(lohkot);
+      /*
+       * NAPAUTUS AVAA MINISELITTEEN (omistaja 16.1x): mitä neliöt
+       * tarkoittavat. Oma napautus: kartan eleet eivät saa ottaa sitä.
+       */
+      const avaa = (e) => { e.stopPropagation(); this.vaihdaRahattomuusSelite(); };
+      palkki.addEventListener('pointerdown', (e) => e.stopPropagation());
+      palkki.addEventListener('click', avaa);
+      palkki.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); avaa(e); } });
+      kehys.appendChild(palkki);
+      this.rahattomuuspalkki = palkki;
+      // Matkakirjan kortti kasvaa ja kutistuu ilman renderiä: palkki asettuu uudelleen.
+      if (typeof ResizeObserver === 'function') {
+        const seuraaja = new ResizeObserver(() => this.asetteleRahattomuuspalkki());
+        for (const v of ['.fact-card', '.karttaselite']) {
+          const el = document.querySelector(v);
+          if (el) seuraaja.observe(el);
+        }
+        seuraaja.observe(kehys);
+      }
+    }
+    const tunnit = vuoroja * TURN_HOURS;
+    const aika = `${Math.floor(tunnit / 24) ? `${Math.floor(tunnit / 24)} vrk ` : ''}${tunnit % 24 ? `${tunnit % 24} h` : ''}`.trim() || '0 h';
+    palkki.querySelectorAll('.rahattomuus-lohko').forEach((l, i) => l.classList.toggle('palaa', i < vuoroja));
+    palkki.setAttribute('aria-label', `Rahat loppu: aikaa ${aika} hankkia rahaa, muuten matka päättyy. Napauta: selitys`);
+    palkki.hidden = false;
+    this.asetteleRahattomuuspalkki();
+  }
+
+  /**
+   * PAIKKA (omistaja 16.1x): oletuksena heti kartan yläreunassa keskellä;
+   * jos palkki osuisi yläreunan kalusteisiin (matkakirjan kortti tai
+   * otsikkorivi, karttaselitteen nappi), se VÄISTÄÄ ALEMMAS niiden alle.
+   * Ei päällekkäisyyttä, sama sääntö kaikilla laitteilla.
+   */
+  asetteleRahattomuuspalkki() {
+    const palkki = this.rahattomuuspalkki;
+    if (!palkki || palkki.hidden) return;
+    const kehys = palkki.offsetParent;
+    const kr = kehys?.getBoundingClientRect();
+    if (!kr) return;
+    const esteet = ['.fact-card', '.karttaselite']
+      .map((v) => document.querySelector(v))
+      .filter((el) => el && !el.hidden)
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.width > 0 && r.height > 0);
+    // Pehmuste (css 6 px) on jo rako: laatikon yläreuna saa koskettaa kalustetta.
+    const RAKO = 0;
+    palkki.style.top = `${RAKO}px`;
+    const leveys = palkki.offsetWidth;
+    const korkeus = palkki.offsetHeight;
+    const vasen = kr.left + (kr.width - leveys) / 2;
+    let yla = kr.top + RAKO;
+    // Väistö alas, kunnes mikään kaluste ei osu (este kerrallaan; enintään esteiden määrä kierrosta).
+    for (let k = 0; k <= esteet.length; k++) {
+      const osuu = esteet.filter((r) => vasen < r.right && vasen + leveys > r.left && yla < r.bottom && yla + korkeus > r.top);
+      if (!osuu.length) break;
+      yla = Math.max(...osuu.map((r) => r.bottom)) + RAKO;
+    }
+    palkki.style.top = `${Math.round(yla - kr.top)}px`;
+    this.asetteleRahattomuusSelite();
+  }
+
+  /** Miniselite auki/kiinni (napautus palkkiin). */
+  vaihdaRahattomuusSelite() {
+    if (this.rahattomuusSelite && !this.rahattomuusSelite.hidden) { this.suljeRahattomuusSelite(); return; }
+    const palkki = this.rahattomuuspalkki;
+    if (!palkki) return;
+    let selite = this.rahattomuusSelite;
+    if (!selite) {
+      selite = html('div', 'rahattomuus-selite', RAHATTOMUUS_SELITE);
+      selite.setAttribute('role', 'status');
+      selite.addEventListener('pointerdown', (e) => e.stopPropagation());
+      selite.addEventListener('click', (e) => { e.stopPropagation(); this.suljeRahattomuusSelite(); });
+      palkki.parentElement.appendChild(selite);
+      this.rahattomuusSelite = selite;
+    }
+    selite.hidden = false;
+    this.asetteleRahattomuusSelite();
+    // Sulkeutuu napautuksella mihin tahansa tai itsestään (RAHATTOMUUS_SELITE_MS).
+    clearTimeout(this.rahattomuusSeliteAjastin);
+    this.rahattomuusSeliteAjastin = setTimeout(() => this.suljeRahattomuusSelite(), RAHATTOMUUS_SELITE_MS);
+    // Napautus muualle sulkee; palkin oma napautus hoitaa vaihdon itse (ei sulje-ja-avaa-uudelleen).
+    this.rahattomuusSeliteSulje ??= (e) => {
+      if (this.rahattomuuspalkki?.contains(e.target) || this.rahattomuusSelite?.contains(e.target)) return;
+      this.suljeRahattomuusSelite();
+    };
+    document.removeEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+    document.addEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+  }
+
+  suljeRahattomuusSelite() {
+    clearTimeout(this.rahattomuusSeliteAjastin);
+    if (this.rahattomuusSeliteSulje) document.removeEventListener('pointerdown', this.rahattomuusSeliteSulje, { capture: true });
+    if (this.rahattomuusSelite) this.rahattomuusSelite.hidden = true;
+  }
+
+  asetteleRahattomuusSelite() {
+    const selite = this.rahattomuusSelite;
+    const palkki = this.rahattomuuspalkki;
+    if (!selite || selite.hidden || !palkki) return;
+    selite.style.top = `${palkki.offsetTop + palkki.offsetHeight}px`;
+  }
+
   renderTurnPill() {
     const { game } = this;
     /*
@@ -10885,35 +11153,45 @@ export class UI {
      * pelissä kumpikaan ehto ei ole tosi ja pilleri näkyy heti.
      */
     const piilossa = game.phase === 'pickstart' || this.aloituslentoKesken;
+    this.paivitaRahattomuuspalkki(piilossa);
     this.turnPill.hidden = piilossa;
     if (piilossa) return;
     this.turnPill.textContent = '';
-    // Laukun kahva pillerin edessä: pilleri on samalla matkalaukun nappi,
-    // ja ilman kuvaketta mikään ei kertoisi sen aukeavan (omistajan toive).
-    //
-    // Isoisän mattolaukku (omistaja 15.9.2026, Raamattu "MATKALAUKKU ON
-    // FOGGIN MATTOLAUKKU"): pyöreähkö kangaslaukku, nahkakahva ja
-    // messinkilukko/kehys ylhäällä, kuvioitu kangas viitteellisesti
-    // siksak-rivinä. Bounding box (x4-20, y4.6-19.5) on tarkoituksella
-    // sama kuin vanhassa laukkukuvakkeessa.
-    const laukku = html('span', 'laukku-ikoni');
-    laukku.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
-      + '<rect x="4" y="8" width="16" height="11.5" rx="4"/>'
-      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8"/>'
-      + '<path d="M6.6 9.6h10.8"/><circle cx="12" cy="9.6" r="0.85"/>'
-      + '<path d="M7 13.6 10.3 16.4 13.7 13.6 17 16.4"/></svg>';
-    this.turnPill.appendChild(laukku);
+    // Pilleri on pelkkä teksti "1 pv £400" ilman laukkukuvaketta (omistaja 2.10.2026 klo 17.0x): se kapenee
+    // tekstin mittaiseksi. (Ennen: isoisän mattolaukun kuvake pillerin edessä, omistaja 15.9.2026.)
     if (game.phase === 'over') {
-      this.turnPill.appendChild(html('span', '', `${game.winner.name} voitti`));
+      this.turnPill.appendChild(html('span', '', game.winner ? `${game.winner.name} voitti` : 'Matka päättyi'));
       return;
     }
     // Yläpalkissa on kukkaro ja päiväkirjan päivämäärä. Sijainti, kokemus ja
     // tietoprosentti ovat passissa: kartta on tärkeämpi kuin mittaristo.
-    this.turnPill.appendChild(html('span', '', `£${game.player.money}`));
+    const kassa = html('span', 'kassa', `£${game.player.money}`);
+    /*
+     * PÄIVÄKULU JA RAHATTOMUUS (talouden vaihe 1, omistaja 27.9.2026):
+     * kassan vihje kertoo päiväkulun ja arvion; rahat lopussa kassa on
+     * punainen ja vieressä jäljellä olevat vuorokaudet.
+     */
+    const kulu = game.paivakulu?.(game.player);
+    if (kulu) {
+      const riittaa = game.kassaRiittaa(game.player);
+      kassa.title = `Päiväkulu £${kulu.yhteensa} (ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''})`
+        + (Number.isFinite(riittaa) ? ` — kassa riittää noin ${riittaa} päiväksi` : '');
+    }
+    const jaljella = game.rahattomuuttaJaljella?.(game.player);
+    kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
+    // Pilleri on vain päivä ja raha, "1 pv £400" (omistaja 2.10.2026 klo 15.1x, 15.50 ja 18.1x); kellonaika ja
+    // päiväkulu ovat valikon päivärivillä (renderValikkoTaso).
+    const paiva = html('span', 'clock', `${game.dayCount()}\u00a0pv`);
+    paiva.title = game.clockLabel();
+    this.turnPill.append(paiva, kassa);
+    // Lyhyt aika kassan vieressä (omistaja 15.2x: "0£ 2 vrk" kaikilla ruuduilla); pitkä
+    // "rahat loppu · N vrk" katkaisi puhelimella päivämäärän. Lohkot: paivitaRahattomuuspalkki.
+    if (jaljella !== null && jaljella !== undefined) {
+      this.turnPill.appendChild(html('span', 'rahaton-aika', `${jaljella} vrk`));
+    }
     // Mittari on päivämäärä, ei kello eikä palkki: aika on tarinaa, ei uhkaa,
     // joten se ei saa hälytysväriä eikä muutu punaiseksi ennätyksen jälkeen.
     const kello = game.clockLabel();
-    this.turnPill.appendChild(html('span', 'clock', kello));
     // Ajan eteneminen välähtää kevyesti, jotta pelaaja huomaa vilkaista
     // päivämäärää (omistajan toive). Ensimmäinen piirto ei väläytä.
     if (this.kelloEdellinen !== undefined && this.kelloEdellinen !== kello) {
@@ -10969,6 +11247,16 @@ export class UI {
       (this.passportTilastot ?? this.passportProgress).appendChild(row);
       return row;
     };
+
+    /*
+     * VALIKKO V2 (omistaja 2.10.2026 klo 14.37): Matka-rivin tilalla taso ja pisteet, Aarteet- ja Julisteet-riveillä
+     * kerätyt määrät suluissa, ja rivistä aukeava näkymä on pelkkä tasokortti (iso avatar, tason nimi, pisteet ja
+     * etenemispalkki). Sijainti, kukkaro ja tilastot jäävät pois; muuta lisätään vasta omistajan päätöksellä.
+     */
+    if (this.paavalikko?.classList.contains('tk-paneeli--v2')) {
+      this.renderValikkoTaso();
+      return;
+    }
 
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
@@ -11072,6 +11360,66 @@ export class UI {
 
     const tieto = game.knowledgePercent(p);
     if (tieto !== null) tilastoRivi('Tieto tästä laudasta', `${tieto} %`);
+  }
+
+  /** Valikko v2: rivien nimet (taso ja pisteet, määrät suluissa) ja Matka-näkymän tasokortti (ks. renderProgress). */
+  renderValikkoTaso() {
+    const { game } = this;
+    const p = game.player;
+    const pisteet = p.xp ?? 0;
+    const taso = tietajataso(pisteet);
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    // Kehittäjätilassa kaikki aarteet (omistaja 2.10.2026 klo 21.42), sama luku kuin Aarteet-ikkunan Aarnin luettelossa.
+    const aarteita = this.kehittajaTila ? kaikki.length : loydetyt.length;
+    const tavaroita = (p.finds ?? []).filter((type) => type !== 'star' && onAarre(type)).length;
+    const nimea = (id, teksti) => {
+      const nimi = document.getElementById(id)?.querySelector('.tk-paneeli-rivi__nimi');
+      if (nimi) nimi.textContent = teksti;
+    };
+    nimea('pilleri-matka-btn', `${taso.nimi} (${pisteet} tp)`);
+    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · £400" ja lopussa punaisena päivän kulut "−£20" (omistaja 15.1x, 15.50).
+    const paivarivi = document.getElementById('valikko-paivarivi');
+    if (paivarivi) {
+      const kulu = game.paivakulu?.(p);
+      paivarivi.replaceChildren(
+        html('span', 'valikko-paivarivi-teksti',
+          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · £${p.money}`),
+        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212£${kulu.yhteensa}`)] : []),
+      );
+      if (kulu) {
+        paivarivi.title = `Päivän kulut: ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''}`;
+      }
+    }
+    const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');
+    if (riviAvatar) riviAvatar.src = tietajaAvatar(taso);
+    nimea('pilleri-aarteet-btn', `Aarteet (${aarteita + tavaroita})`);
+    nimea('pilleri-julisteet-btn', `Julisteet (${this.julisteVoitot().length})`);
+
+    // Tasorivin etenemispalkki (nykyisen tason alusta seuraavan rajaan; ylimmällä tasolla ei palkkia).
+    const rivi = document.getElementById('pilleri-matka-btn');
+    const seuraava = seuraavaTietajataso(pisteet);
+    let rivinPalkki = rivi?.querySelector('.valikko-tasorivi-palkki');
+    if (rivi && seuraava && !rivinPalkki) {
+      rivinPalkki = html('span', 'valikko-tasorivi-palkki');
+      rivinPalkki.setAttribute('aria-hidden', 'true');
+      rivinPalkki.appendChild(html('span', 'valikko-tasorivi-tayte'));
+      rivi.querySelector('.tk-paneeli-rivi__nuoli')?.before(rivinPalkki);
+    }
+    if (rivinPalkki) {
+      rivinPalkki.hidden = !seuraava;
+      rivinPalkki.firstChild.style.width = `${Math.round(tietajatasonOsuus(pisteet) * 100)}%`;
+    }
+
+    // Tasonäkymä: nykyinen avatar isona ylhäällä, sen alla kaikki tasot (nykyinen ympyröity).
+    const avatar = document.createElement('img');
+    avatar.className = 'valikko-taso-avatar';
+    avatar.src = tietajaAvatar(taso);
+    avatar.alt = taso.nimi;
+    avatar.decoding = 'async';
+    avatar.draggable = false;
+    const ruudukko = tietajaRuudukko(pisteet);
+    ruudukko.classList.add('valikko-tasot');
+    this.passportProgress.replaceChildren(avatar, ruudukko);
   }
 
   /**
@@ -11328,9 +11676,17 @@ export class UI {
        * Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
        * pelin estetyissä napeissa (vrt. vertailunappi).
        */
-      const landBtn = this.iconButton('peukalo', 'Liftaus',
-        modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
-      if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
+      /*
+       * ODOTA (talouden vaihe 1): kun mihinkään ei pääse (saari ilman
+       * laivarahaa), liftauksen paikalla on Odota — vuoro kuluu ja
+       * kahden vuorokauden varoitus etenee (js/game.js travelModes).
+       */
+      const odotus = modes.includes('wait');
+      const landBtn = odotus
+        ? this.iconButton('saapas', 'Odota', 'primary')
+        : this.iconButton('peukalo', 'Liftaus', modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
+      if (odotus) landBtn.addEventListener('click', () => this.doAction(() => game.actionTravel('wait')));
+      else if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
       else this.estaNappi(landBtn, this.maaEste());
 
       const bussiBtn = this.iconButton('bussi', 'Bussilla');
@@ -11543,7 +11899,7 @@ export class UI {
     const maata = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'land');
     if (!maata) return 'täältä ei lähde maareittiä';
-    if (game.player.money < BUS_FARE) return `bussilippu maksaa ${BUS_FARE} puntaa`;
+    if (game.player.money < BUS_FARE) return `bussilippu maksaa £${BUS_FARE}`;
     return 'täältä ei lähde bussia';
   }
 
@@ -11555,7 +11911,7 @@ export class UI {
     const satama = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
     if (!satama) return 'täältä ei lähde laivareittiä';
-    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+    return `laivalippu maksaa £${SEA_FARE}`;
   }
 
   lentoEste() {
@@ -11566,7 +11922,7 @@ export class UI {
     // Portit poistuivat erillislautojen mukana: lentokenttä on ainoa
     // lennon lähtöpaikka (mannerlento hoituu omassa listassaan).
     if (!city.airport) return 'täällä ei ole lentokenttää';
-    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa £${FLIGHT_PRICE}`;
     return 'täältä ei lähde lentoja';
   }
 
@@ -12672,6 +13028,17 @@ export class UI {
        * väliin osuva render palauttaisi etusivun lähtöaulan.
        */
       if (!this.reducedMotion) this.aloitaLennonAmbienssi();
+      /*
+       * ALOITUSLENNON AIHE (musiikkisuunnitelma 26.9.2026, vaihe 1):
+       * vaskimarssi johtoaiheella (omistaja 28.9.2026), one-shot 20 s. Alkaa samasta
+       * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
+       * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
+       * ei aihettakaan; radiotilassa radio on ainoa ääni. KARTALLA VAIN KAUPUNGIN OMA KAPPALE
+       * (omistaja 10.10.2026, PT 11.4x): aloituslento ilman musiikkia, kaupungin kappale alkaa perillä.
+       */
+      if (!KARTTA_VAIN_KAUPUNKI && !this.reducedMotion && !this.radioPaalla()) {
+        this.soitaAarreMusiikki(MATKAN_AIHEET.aloituslento);
+      }
       // Lukuääni väistyy, kun matka alkaa.
       stopIntroVoice(this);
       this.introEl.classList.add('intro-fade');
@@ -14014,85 +14381,10 @@ export class UI {
         return;
       }
 
-      const faktat = game.pack.placeFacts?.[saapuminen.cityId] ?? [];
-      const isoisanIdx = faktat.findIndex((f) => factVoice(f) === 'isoisa');
-      const fakta = faktat[isoisanIdx >= 0 ? isoisanIdx : 0];
-      if (fakta && kaupunki) {
-        const luentaAvain = `saapui:${saapuminen.packId}:${saapuminen.cityId}`;
-        const key = luentaAvain + aikatauluLisa;
-        if (this.factKey === key) return;
-        this.uusiFactKey(key);
-        this.asetaOtsake(voiceTitle(factVoice(fakta)));
-        this.asetaPaikkarivi(kaupunki.name);
-        this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
-        this.factImage.hidden = !this.factImageTitle;
-        // Vanha valokuva kaupungista pikkukuvana tekstin kylkeen.
-        this.naytaFactValokuva(saapuminen.cityId, kaupunki.name);
-        // Ensimmäinen lause lihavoituna, loput perään samalla koneella.
-        const teksti = factText(fakta);
-        const { eka, loput } = ekaLause(teksti);
-        this.factText.textContent = '';
-        const lihava = html('b', 'fact-lead');
-        const jatko = html('span');
-        this.factText.appendChild(lihava);
-        this.factText.appendChild(document.createTextNode(' '));
-        this.factText.appendChild(jatko);
-        this.typeText(lihava, eka, 'fact', () => {
-          const loppuun = () => {
-            const rivi = this.aikatauluRivi();
-            if (rivi) this.factText.appendChild(rivi);
-          };
-          if (loput) this.typeText(jatko, loput, 'fact', loppuun);
-          else loppuun();
-        });
-        // Luenta pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen —
-        // kaiutin jatkaa samasta kohdasta. Vihjeen tai aikataulun väläys
-        // ei käynnistä luentaa uudelleen samassa kaupungissa.
-        //
-        // Lukijaääni ensin (14.8.2026): havainto luetaan striimaten
-        // tekstistä — ensimmäinen virke heti, loput kaiuttimesta.
-        if (puheTuettu()) {
-          this.diaryFullUrl = null;
-          this.naytaMerkinnanKaiutin(false);
-          const aloitaHavainto = () => {
-            if (kertojaTila() === 'ei') return;
-            stopDiaryVoice(this);
-            this.merkintaJatko = loput || null;
-            lueMerkinta(this, eka, { viive: 1000 });
-          };
-          if (this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-            this.luettuSaapuminen = luentaAvain;
-            this.asetaMerkinnanLuenta(aloitaHavainto);
-          } else {
-            stopDiaryVoice(this);
-            this.asetaMerkinnanLuenta(aloitaHavainto, { aloita: false });
-          }
-          return;
-        }
-        const havaintoLauta = luentaLauta(HAVAINTOLUENNAT, saapuminen.packId, saapuminen.cityId);
-        this.diaryFullUrl = havaintoLauta
-          ? `assets/audio/puhe-${havaintoLauta}-havainto-${saapuminen.cityId}.mp3`
-          : null;
-        this.naytaMerkinnanKaiutin(Boolean(havaintoLauta));
-        const havaintoAani = this.diaryFullUrl;
-        const soitaHavainto = havaintoLauta ? () => {
-          if (kertojaTila() === 'ei') return;
-          playDiaryVoice(this, havaintoAani, {
-            ekaLauseeseen: true,
-            // Ensimmäisen virkkeen osuus tekstistä ohjaa tauon valintaa.
-            osuus: teksti.length ? eka.length / teksti.length : null,
-            viive: 1000,
-          });
-        } : null;
-        if (soitaHavainto && this.luettuSaapuminen !== luentaAvain && kertojaTila() !== 'ei') {
-          this.luettuSaapuminen = luentaAvain;
-          this.asetaMerkinnanLuenta(soitaHavainto);
-        } else {
-          stopDiaryVoice(this);
-          this.asetaMerkinnanLuenta(soitaHavainto, { aloita: false });
-        }
-        return;
-      }
+      // SAAPUMISEN VARATEKSTI POISTETTU (omistaja 6.10.2026: "Nuo varatekstit kannattaa poistaa koko pelistä. Se kuulostaa
+      // vaaralliselta, että siellä on roikkumassa tälläisiä tekstejä."): ilman kaupungin omaa merkintää saapuminen etenee
+      // ilman varatekstiä — ei paikkatiedon ensimmäistä virkettä luentoineen eikä arvottua paikkatietoa korttiin.
+      if (kaupunki) return;
     }
 
     const player = game.player;
@@ -14253,6 +14545,17 @@ export class UI {
     const city = game.board.cityById.get(pos.city);
     if (!city) return;
     playPlaceAmbience(city.id, city.ambience ?? null, game.pack?.id, game.pack?.map?.cityCountry ?? null);
+    /*
+     * SAAPUMISTUNNUS vain kaupunkiin, jossa ei ole käyty tällä matkalla
+     * (musiikkisuunnitelma: "lyhyt tunnus uuteen kaupunkiin"). Kaupunki
+     * lisätään heti joukkoon, koska maailmankartan lento kutsuu tätä
+     * kahdesti (kalvon lopussa ja nappulan hypyssä).
+     */
+    const ennen = this.kaydytEnnenSiirtoa;
+    if (ennen && !ennen.has(city.id)) {
+      ennen.add(city.id);
+      this.soitaSaapumistunnus(city);
+    }
   }
 
   /**
@@ -15249,7 +15552,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         this.arrivalKulttuuriTulos.textContent = (oikein
-          ? `Oikein! +${KULTTUURI_PALKKIO} puntaa. `
+          ? `Oikein! +£${KULTTUURI_PALKKIO}. `
           : `Oikea vastaus: ${kysymys.options[kysymys.correct]}. `) + (kysymys.fact ?? '');
         // Palaute vieritetään näkyviin — kysymys elää dialogin alalaidassa.
         this.arrivalKulttuuriTulos.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -15261,7 +15564,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${KULTTUURI_PALKKIO} puntaa`,
+            text: `+£${KULTTUURI_PALKKIO}`,
             sub: 'Tunsit paikallista kulttuuria',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -15444,8 +15747,8 @@ export class UI {
     let nauha = null;
     /*
      * REAKTIORIVI (js/reaktiot.js) sille kuvalle, jolla on oma
-     * tunniste — käytännössä Matkakirjan ihme, joka aukeaa
-     * nähtävyysjutun "Koe ihme" -napista. Rivi seuraa kuvaa kuten
+     * tunniste — käytännössä Matkakirjan ihme, joka on nähtävyysjutun
+     * ensimmäinen kuva. Rivi seuraa kuvaa kuten
      * nauhakin: sarjaa selattaessa se vaihtuu tai katoaa.
      */
     let reaktiot = null;
@@ -15590,13 +15893,11 @@ export class UI {
     const nahtavyys = document.getElementById('nahtavyys-dialog');
     if (nahtavyys?.open) return nahtavyys;
     /*
-     * Matkalaukku on samasta syystä listalla kuin nähtävyysikkuna:
-     * julistekokoelman pikkukuvasta avautuva suurennos jäisi laukun
-     * TAAKSE, koska laukku on modaali ja elää selaimen ylimmässä
-     * kerroksessa (21.8.2026, julistepalkinnon pilotti). Laukku on
-     * ennen saapumisikkunaa, koska se avataan aina päällimmäiseksi.
+     * ISOISÄN MATKALAUKKU (passportDialog) ON POISTETTU (omistaja
+     * 29.9.2026): julistekokoelma avataan nyt #pilleri-aarteet-nakymasta,
+     * joka on tavallinen DOM-elementti eikä modaali <dialog> — se ei
+     * tarvitse omaa haaraa täällä, koska body on jo oikea isäntä sille.
      */
-    if (this.passportDialog?.open) return this.passportDialog;
     /*
      * TIIVIS ARKKI ON MYÖS ISÄNTÄ (PAATOKSET 34 kohta 18 d, omistaja
      * 18.9.2026: *"Kokoruutu-nappi EI TOIMI iPhonella"*).
@@ -15612,7 +15913,9 @@ export class UI {
      */
     const arkki = document.getElementById('tiivis-lehtiarkki');
     if (arkki?.open) return arkki;
-    return this.arrivalDialog;
+    // Suljettuun dialogiin liitetty ei piirry (yllä): ilman auki olevaa dialogia isäntä on body (valikon
+    // Julisteet ja Aarteet-näkymä avaavat gallerian kartan päälle; mitattu 2.10.2026 korkeus 0 px).
+    return this.arrivalDialog?.open ? this.arrivalDialog : document.body;
   }
 
   /**
@@ -15862,12 +16165,6 @@ export class UI {
   /** Nimetyn paikan Matkakirjan ihme kuvaoliona, tai null. */
   matkakirjanIhme(nimi) { return matkakirjanIhme(nimi); }
 
-  /** "Koe ihme" -nappi tähtineen; napautus avaa ihmekuvan suurennoksen. */
-  piirraIhmenappi(sisalto, ihme) {
-    return piirraIhmenappi(sisalto, ihme.nappi,
-      () => this.naytaKulttuuriKuva(ihme));
-  }
-
   /** Ihmenauha kuvan vasempaan yläkulmaan; isäntä on kuvan kokoinen. */
   piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }
 
@@ -15981,7 +16278,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         tulos.textContent = (oikein
-          ? `Oikein! +${MINITEHTAVA_PALKKIO} puntaa. `
+          ? `Oikein! +£${MINITEHTAVA_PALKKIO}. `
           : `Oikea vastaus: ${tehtava.vaihtoehdot[tehtava.oikea]}. `)
           + (tehtava.fakta ?? '');
         sfx.play(oikein ? 'correct' : 'wrong');
@@ -15992,7 +16289,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${MINITEHTAVA_PALKKIO} puntaa`,
+            text: `+£${MINITEHTAVA_PALKKIO}`,
             sub: 'Lehden minitehtävä ratkesi',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -16690,7 +16987,7 @@ export class UI {
      * avautui juuri näin tyhjän päälle: quizDialog puuttui listalta.
      * Visa on listan kärjessä, koska se avataan aina muiden päälle.
      */
-    const parent = [this.quizDialog, this.wikiDialog, this.arrivalDialog]
+    const parent = [this.quizDialog, this.wikiDialog, this.arrivalDialog, this.apurahaDialog]
       .find((d) => d?.open) ?? document.body;
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
@@ -17420,65 +17717,158 @@ export class UI {
     keskus.appendChild(nappi);
     portti.appendChild(keskus);
 
-    // Alareunan linkki pelin periaatteisiin.
+    // Alareuna: iOS-huomautus (apurahan esittelystä). "Oppiminen on hauskaa" -linkki poistettu (omistaja 7.10.2026
+    // klo 09.4x): sen lähde-, palaute- ja oikeustiedot ovat nyt apurahakortin lopussa.
     const alaosa = html('div', 'start-gate-alaosa');
-    const linkki = html('button', 'start-linkki', 'Oppiminen on hauskaa');
-    linkki.type = 'button';
-    linkki.addEventListener('click', () => this.naytaPeriaatteet());
-    alaosa.appendChild(linkki);
     portti.appendChild(alaosa);
+
+    /*
+     * APURAHAN ARVIOIJALLE (omistaja 30.9.2026): kevyt nappi Aloita
+     * seikkailu -napin alle ja pysyvä huomautus iOS-sovelluksesta
+     * alareunaan. Molemmat tulevat esittelytiedostosta (js/apuraha.js);
+     * jos se ei lataudu, portti on ennallaan.
+     */
+    lataaApuraha().then((esittely) => {
+      if (!esittely || this.aloitusportti !== portti) return;
+      const apuraha = html('button', 'start-apuraha', esittely.nappi);
+      apuraha.type = 'button';
+      apuraha.addEventListener('click', () => this.naytaApuraha(esittely));
+      keskus.appendChild(apuraha);
+      if (esittely.webHuomautus) {
+        alaosa.appendChild(html('p', 'start-huomautus', esittely.webHuomautus));
+      }
+    });
 
     this.mapPane.appendChild(portti);
     this.aloitusportti = portti;
   }
 
   /**
-   * Pelin periaatteet omana ikkunanaan aloitussivulta (omistajan toive).
-   * Sisältö on tiivistys README:stä ja Raamatun perustuslaista: miksi peli
-   * on olemassa ja millä säännöillä sisältöä siihen tehdään.
+   * Apurahan arvioijan esittelykortti (omistaja 30.9.2026): sama
+   * pergamenttilappu kuin periaatteilla, matkakirjakortin otsikko ja
+   * kursiivinen alaotsikko, kappaleet ja viiden kuvan rivi. Kuva avautuu
+   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Ei videota
+   * (omistaja 30.9.2026 klo 15.06); kuvarivin sarakkeet = kuvien määrä.
    */
-  naytaPeriaatteet() {
+  naytaApuraha(esittely) {
     sfx.play('paper');
-    const lappu = html('dialog', 'dialog periaate-lappu');
+    lahetaKaynti('apuraha', APURAHA_VERSIO());
+    const lappu = html('dialog', 'dialog periaate-lappu apuraha-lappu');
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
+    const otsikko = html('h2', 'apuraha-otsikko', esittely.otsikko);
     kortti.appendChild(otsikko);
+    if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
 
-    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
-    for (const osa of PERIAATTEET.osat) {
-      if (osa.otsikko) {
-        const h = html('h3', 'periaate-valiotsikko');
-        h.textContent = osa.otsikko;
-        kortti.appendChild(h);
+    // Kaikki kuvat suurennoksen selaukseen kortin järjestyksessä (kappaleiden kuvat, sitten loppurivi).
+    const kaikkiKuvat = [...esittely.kappaleet.flatMap((k) => k.kuvat ?? []), ...esittely.kuvat];
+    const lista = kaikkiKuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
+    const pikkukuva = (k, luokka) => {
+      const b = html('button', luokka);
+      b.type = 'button';
+      b.setAttribute('aria-label', k.teksti || `Kuva ${kaikkiKuvat.indexOf(k) + 1}`);
+      const img = html('img');
+      img.src = k.tiedosto;
+      img.alt = k.teksti || '';
+      img.loading = 'lazy';
+      // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
+      if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
+      b.appendChild(img);
+      b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
+      return b;
+    };
+
+    for (const k of esittely.kappaleet) {
+      if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
+      // Kuva pienenä kappaleensa vieressä (omistaja 7.10.2026 klo 14.5x, esittely.json "kappale"); teksti kiertää kuvan.
+      // Listakappaleessa "rivi" vie kuvan listan rivin viereen (Olavinlinna-rivi), muuten kappaleen alkuun.
+      const riville = (kuva) => k.lista?.length && Number.isInteger(kuva.rivi) && kuva.rivi >= 0 && kuva.rivi < k.lista.length;
+      for (const kuva of (k.kuvat ?? []).filter((x) => !riville(x))) kortti.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
+      if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
+      if (k.lista?.length) {
+        const ol = html('ol', 'apuraha-lista');
+        k.lista.forEach((r, i) => {
+          const li = html('li', null);
+          for (const kuva of (k.kuvat ?? []).filter((x) => riville(x) && x.rivi === i)) li.appendChild(pikkukuva(kuva, 'apuraha-upotus'));
+          li.appendChild(document.createTextNode(r));
+          ol.appendChild(li);
+        });
+        kortti.appendChild(ol);
       }
-      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
-      p.textContent = osa.teksti;
-      kortti.appendChild(p);
+      if (k.nappi?.toiminto === 'esittelylinssit') {
+        // Vanha kappalenappi: kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
+        const rivi = html('p', 'periaate-linkit');
+        const b = html('button', 'ghost apuraha-toiminto');
+        b.type = 'button';
+        const valmis = () => { b.textContent = k.nappi.valmis || k.nappi.teksti; b.disabled = true; };
+        b.textContent = k.nappi.teksti;
+        if (esittelylinssitAuki()) valmis();
+        b.addEventListener('click', () => {
+          avaaEsittelylinssit();
+          lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
+          sfx.play('paper');
+          valmis();
+          this.render?.();
+        });
+        rivi.appendChild(b);
+        kortti.appendChild(rivi);
+      }
+      if (k.linkki?.url) {
+        const p = html('p', 'periaate-linkit');
+        const a = html('a', 'periaate-linkki', k.linkki.teksti || k.linkki.url);
+        a.href = k.linkki.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        p.appendChild(a);
+        kortti.appendChild(p);
+      }
     }
 
-    // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
-    // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
-    // lisenssi vaatii tekijän nimeämisen — se tehdään tässä, jotta
-    // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x, esittely.json valmiitLinssit): vain listan linssit heti
+    // käyttöön ilman pisteitä ja ilman kehittäjätilaa (js/apuraha.js → js/linssit/omistus.js); sama lista natiivilla.
+    if (esittely.valmiitLinssit) {
+      const v = esittely.valmiitLinssit;
+      if (v.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', v.teksti));
+      const rivi = html('p', 'periaate-linkit');
+      const b = html('button', 'ghost apuraha-toiminto');
+      b.type = 'button';
+      const valmis = () => { b.textContent = v.valmis; b.disabled = true; };
+      b.textContent = v.nappi;
+      if (esittelylinssitAuki()) valmis();
+      b.addEventListener('click', () => {
+        avaaEsittelylinssit(v.linssit);
+        lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
+        sfx.play('paper');
+        valmis();
+        this.render?.();
+      });
+      rivi.appendChild(b);
+      kortti.appendChild(rivi);
+    }
+
+    if (esittely.kuvat.length) {
+      // Kuvat ilman kappaletta kortin loppuun riviksi kuten ennen versiota 7.
+      const rivi = html('div', 'apuraha-kuvat');
+      rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
+      for (const k of esittely.kuvat) rivi.appendChild(pikkukuva(k, 'apuraha-kuva'));
+      kortti.appendChild(rivi);
+    }
+
+    /*
+     * Lähde-, palaute- ja oikeustiedot kortin loppuun pienellä (omistaja 7.10.2026 klo 09.4x: "Oppiminen on hauskaa"
+     * -linkki pois, apurahakortti korvaa sen tiedot). Lippukuvien tekijät: lisenssi vaatii nimeämisen, eikä niiden
+     * alle mahdu omaa lähderiviä. GitHub-linkkiä ja periaatetekstejä ei siirretty.
+     */
+    let lippurivi = null;
     if (LIPPU_TEKIJAT.length) {
-      const lippurivi = html('p', 'periaate-teksti periaate-liput');
+      lippurivi = html('p', 'periaate-teksti periaate-liput');
       lippurivi.textContent = PERIAATTEET.lippurivi
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
-
-    const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
-    gh.href = PERIAATTEET.linkki.url;
-    gh.target = '_blank';
-    gh.rel = 'noopener';
-    linkit.appendChild(gh);
-    kortti.appendChild(linkit);
-
-    kortti.appendChild(this.periaatePalaute());
-
+    // Palaute ja mukaan -osio pois apurahakierroksen ajaksi (omistaja 7.10.2026 klo 14.5x); palautus: APURAHA_PALAUTE = true.
+    if (APURAHA_PALAUTE) kortti.appendChild(this.periaatePalaute());
     const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
@@ -17487,21 +17877,24 @@ export class UI {
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
 
-    lappu.addEventListener('close', () => lappu.remove());
+    // KORTTI-pohja (peruttava ?kortti=vanha): lähde- ja oikeusrivit apurina; palautelomake pitää kenttiensä tyylit.
+    if (korttiPohjalla()) {
+      if (lippurivi) lippurivi.className = 'tk-apuri';
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
+    lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
+    this.apurahaDialog = lappu;
     lappu.showModal();
-    // showModal siirtää kohdistuksen ensimmäiseen napautettavaan
-    // elementtiin, joka on kortin lopussa — selain vieritti ikkunan
-    // valmiiksi alas (omistajan havainto). Kohdistus otsikkoon ja
-    // vieritys alkuun.
     kortti.scrollTop = 0;
     otsikko.setAttribute('tabindex', '-1');
     otsikko.focus({ preventScroll: true });
   }
 
   /**
-   * Palautelohko periaateikkunan loppuun (omistajan toive). Viesti menee
+   * Palautelohko apurahakortin loppuun (alun perin periaateikkunan, omistajan toive). Viesti menee
    * ulkopuoliselle lomakepalvelulle, joka välittää sen tekijälle —
    * sähköpostiosoitetta ei ole sivulla eikä lähdekoodissa, joten
    * roskapostirobotit eivät saa sitä käsiinsä.
@@ -17691,6 +18084,11 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja ja lomake KENTTÄ-pohjaosalle (peruttava ?kortti=vanha).
+    if (korttiPohjalla()) {
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+      pueLomakePohjalle(kortti.querySelector('.periaate-lomake') ?? kortti);
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
@@ -17897,48 +18295,131 @@ export class UI {
   }
 
   /**
-   * Matkalaukku: matkan tiedot, Aarnin luettelo, tavarat ja varusteet.
+   * Avaa pillerivalikon ja näyttää sen "päänäkymän" (Äänet, Kartta,
+   * Linssit›/Aarteet›-napit, pillerin tiedot, versio). Kutsutaan
+   * js/main.js:stä sekä pilleristä että hampurilaisesta — molemmat
+   * avaavat SAMAN paneelin (omistaja 29.9.2026).
    *
-   * Varusteiden valitsin (#linssi-kotelo) muutti hampurilaisvalikosta
-   * tänne 18.8.2026 — laukku on ainoa paikka, josta linssit kytketään
-   * kartalle. Valitsin tahdistetaan avattaessa, jotta juuri löytynyt
-   * linssi on siellä heti eikä vasta seuraavan piirron jälkeen.
+   * Vastaa sisällöltään entistä openPassportia (matkan tiedot
+   * päivittyvät joka avauksella), mutta EI enää avaa mitään <dialog>ia
+   * — #paavalikko on tavallinen elementti, jota js/main.js:n
+   * vaihdaValikko piilottaa/näyttää `hidden`-attribuutilla.
    */
-  openPassport() {
-    const avautuu = !this.passportDialog.open;
-    // Uusi avaus alkaa puhtaalta pöydältä: selite kertoo päällä
-    // olevasta linssistä, kunnes jotain ruutua napautetaan.
-    this.linssiEsikatselu = undefined;
+  avaaPilleriValikko() {
+    /*
+     * NÄKYVYYS TÄSTÄ ITSESTÄÄN, EI VAIN js/main.js:n avaaPaavalikko:sta
+     * (korjaus 29.9.2026 illalla, item 3): openPassport()-yhteensopivuus-
+     * kutsuja (savuke-hiomassa-linssi.mjs, savuke-satelliittilinssi.mjs,
+     * tools/pariteettikuvat-nakymat.mjs) kutsuu TÄTÄ metodia suoraan
+     * ohittaen main.js:n avaaPaavalikko-kääreen, joka muuten olisi ainoa
+     * paikka missä `paavalikko.hidden` menee todeksi. Ilman tätä riviä
+     * openPassport() täytti näkymän sisällön mutta paneeli pysyi
+     * piilossa. Idempotentti: oikea nappireitti asettaa saman arvon jo
+     * ennen tätä kutsua (js/main.js avaaPaavalikko).
+     */
+    if (this.paavalikko) this.paavalikko.hidden = false;
     this.renderProgress();
-    this.renderAarteet();
-    this.renderFinds();
-    this.renderJulisteet();
     void this.paivitaLinssit();
-    if (avautuu) {
-      this.passportDialog.showModal();
-      ilmoitaLivianTunne(
-        { tunne: 'utelias', voimakkuus: 0.4 },
-        { lahde: 'laukku', tunnus: 'laukku.auki' },
-      );
+    // Valikko v2: Linssit ei ole valikossa (omistaja 13.56: oma nappi kartalle), joten rivi pysyy piilossa.
+    if (this.pilleriLinssitBtn) {
+      this.pilleriLinssitBtn.hidden = Boolean(this.linssiKotelo?.hidden)
+        || Boolean(this.paavalikko?.classList.contains('tk-paneeli--v2'));
     }
-    // Laukulla on oma hiljainen raitansa (nahka ja messinki); se
-    // väistyy paikan musiikin tieltä, kun laukku suljetaan. Ambienssia
-    // laukku EI hiljennä — se ei ole lukunäkymä.
+    // Kartan Linssit-nappi (js/karttaselite.js): näkyy samasta ehdosta kuin valikon Linssit-rivi ennen v2:ta.
+    if (this.karttaselite?.linssiNappi) this.karttaselite.linssiNappi.hidden = Boolean(this.linssiKotelo?.hidden);
+    this.naytaPilleriNakyma('paa', { animoi: false });
+    ilmoitaLivianTunne(
+      { tunne: 'utelias', voimakkuus: 0.4 },
+      { lahde: 'laukku', tunnus: 'laukku.auki' },
+    );
+    // Sama hiljainen raita kuin ennen matkalaukulla; se väistyy paikan
+    // musiikin tieltä. Ambienssia se EI hiljennä — tämä ei ole lukunäkymä.
     asetaMusiikkitila('matkalaukku', true);
-    // Kapealla ruudulla alanappirivi väistyy laukun alta, jotta
-    // linssin vaikutus karttaan näkyy (css: body.laukku-auki).
-    document.body.classList.add('laukku-auki');
-    this.nollaaDialoginVieritys(this.passportDialog);
-    this.asemoiLaukku();
+    // Kapealla ruudulla alanappirivi väistyy paneelin alta, jotta
+    // linssin vaikutus karttaan näkyy (css: body.pilleri-auki).
+    document.body.classList.add('pilleri-auki');
   }
 
   /**
-   * Sulkee matkalaukun, jos se on auki. Siivous (pikkuseloste,
-   * julistegalleria, body.laukku-auki) tapahtuu dialogin omassa
-   * close-kuuntelijassa, joten tämä on tarkoituksella vain portti.
+   * Sulkee pillerivalikon. Kutsuja (js/main.js suljeValikko) piilottaa
+   * itse #paavalikon `hidden`-attribuutilla; tämä metodi hoitaa vain
+   * ui.js:n oman siivouksen — entisen matkalaukun close-kuuntelijan
+   * työn, koska paneeli ei enää ole <dialog> eikä laukea itsestään.
    */
+  suljePilleriValikko() {
+    this.suljePikkuseloste();
+    // Julistegalleria ja aarteen suurennos olivat laukun lapsia
+    // (suurennosIsanta); ilman tätä ne jäisivät roikkumaan suljetun
+    // valikon taakse.
+    this.suljeJulisteGalleria();
+    this.suljeAarreSuurennos();
+    this.pilleriAarreEsikatseltu = null;
+    this.naytaPilleriNakyma('paa', { animoi: false });
+    document.body.classList.remove('pilleri-auki');
+    asetaMusiikkitila('matkalaukku', false);
+    if (!this.dead) {
+      ilmoitaLivianTunne(
+        { tunne: 'lammin', voimakkuus: 0.3 },
+        { lahde: 'laukku', tunnus: 'laukku.kiinni' },
+      );
+    }
+  }
+
+  /**
+   * YHTEENSOPIVUUSKUTSU (omistaja 29.9.2026): pilleri EI enää avaa
+   * matkalaukkua suoraan, mutta muutama ohjelmallinen kutsuja tarvitsee
+   * yhä nopean reitin linssivalitsimeen —
+   * tools/savukkeet/savuke-hiomassa-linssi.mjs,
+   * tools/savukkeet/savuke-satelliittilinssi.mjs ja
+   * tools/pariteettikuvat-nakymat.mjs kutsuvat `ui.openPassport()`
+   * suoraan. Nämä olivat ennen matkalaukun linssivalitsimen käyttäjiä,
+   * joten uusi openPassport avaa pillerivalikon JA siirtää sen
+   * suoraan Linssit-näkymään — lähin vastine entiselle avaukselle.
+   */
+  openPassport() {
+    this.avaaPilleriValikko();
+    this.naytaPilleriNakyma('linssit');
+  }
+
+  /** Vanha nimi uudelle sululle: samat kutsupaikat (esim. pallolinssi). */
   suljeLaukku() {
-    if (this.passportDialog?.open) this.passportDialog.close();
+    this.suljePilleriValikko();
+    if (this.paavalikko) this.paavalikko.hidden = true;
+  }
+
+  /**
+   * Vaihtaa pillerivalikon sisällön kolmen "kasvon" välillä: 'paa'
+   * (oletus), 'linssit' ja 'aarteet'. Paneeli itse ei sulkeudu eikä
+   * lataa mitään uudelleen — vain se, mikä lohko on näkyvissä, vaihtuu.
+   *
+   * ANIMAATIO (omistaja 29.9.2026: avaus 220 ms napin suunnasta):
+   * js/pilleri-animaatio.js hoitaa kevyen Web Animations -liikkeen;
+   * #3605:n (Siirtosepän avausanimaatio) jälkeen tämä kutsuu sen sijaan
+   * animoiAvaus/haamuSulku-funktioita.
+   *
+   * @param {'paa'|'linssit'|'aarteet'|'matka'|'asetukset'} nakyma
+   * @param {{animoi?: boolean}} [asetukset] animoi=false ohittaa liikkeen
+   *   (paneelin oma avaus/sulku hoitaa sen jo silloin)
+   */
+  naytaPilleriNakyma(nakyma, { animoi = true } = {}) {
+    if (!this.paavalikko) return;
+    this.pilleriNakyma = nakyma;
+    const kasvot = {
+      paa: this.pilleriPaanakyma,
+      linssit: this.pilleriLinssitNakyma,
+      aarteet: this.pilleriAarteetNakyma,
+      // PANEELI-pohjan alinäkymät (js/pilleri-paneeli.js luo ne; vanhassa valikossa niitä ei ole).
+      matka: document.getElementById('pilleri-matka-nakyma'),
+      asetukset: document.getElementById('pilleri-asetukset-nakyma'),
+    };
+    for (const [nimi, el] of Object.entries(kasvot)) {
+      if (el) el.hidden = nimi !== nakyma;
+    }
+    const nayta = kasvot[nakyma];
+    // Esikatselutila ei saa periytyä näkymästä toiseen.
+    if (nakyma !== 'aarteet') this.pilleriAarreEsikatseltu = null;
+    if (animoi && nayta) avaaAnimoiden(nayta, nakyma === 'paa' ? 'oikea' : 'vasen');
+    if (nakyma === 'linssit') this.paivitaLinssiTiedot();
   }
 
   /*
@@ -17993,121 +18474,53 @@ export class UI {
     };
   }
 
-  renderAarteet() {
-    if (!this.passportAarteet) return;
-    this.passportAarteet.textContent = '';
-
-    /*
-     * VAIN LÖYTYNEET NIMELTÄ, LOPUT LUKUNA.
-     *
-     * Ensin tässä luki koko luettelo rivi riviltä, ja jokaisen perässä
-     * "KATEISSA". Se oli sekä spoileri että tautologiaa: luettelo
-     * paljasti kaikki yksitoista nimeä ennen kuin pelaaja oli löytänyt
-     * yhtään, ja "kateissa" toisti sen minkä himmennys jo kertoi.
-     * Omistaja: "laita vain että kateissa: (määrä) — vasta sitten kun
-     * jotain löytyy, niin sen nimi tulee Aarnin luetteloon."
-     *
-     * Nyt luettelo täyttyy matkan mukana, kuten Aarnin oma luettelo
-     * täyttyi. Kateissa-luku kertoo silti kuinka pitkä matka on jäljellä.
-     */
-    const { kaikki, loydetyt } = this.aarreLuettelo();
-
-    for (const aarre of loydetyt) {
-      const rivi = html('div', 'aarre-rivi loytynyt');
-      const merkki = html('span', 'aarre-merkki');
-      // ◈ on pelin oma aarremerkki (docs: laatan ja nappulan merkki).
-      merkki.textContent = '◈';
-      rivi.appendChild(merkki);
-      rivi.appendChild(html('span', 'aarre-nimi', aarre.name));
-      rivi.appendChild(html('span', 'aarre-tila', 'löytyi'));
-      this.passportAarteet.appendChild(rivi);
-    }
-
-    const kateissa = Math.max(0, kaikki.length - loydetyt.length);
-    const rivi = html('div', 'aarre-rivi aarre-kateissa');
-    rivi.appendChild(html('span', 'aarre-nimi', 'Kateissa'));
-    rivi.appendChild(html('span', 'aarre-luku', String(kateissa)));
-    this.passportAarteet.appendChild(rivi);
-  }
-
   /*
-   * LAUKKU AUKEAA PILLERIN ALLE (omistaja 5.8.2026: "eikös tämä
-   * matkalaukku pitänyt aueta suoraan tuon pillerin alapuolelle").
+   * AARTEET-NÄKYMÄ: KAKSI OTSIKKOA SAMALLA js/kokoelmanakyma.js
+   * -PIIRTIMELLÄ (omistaja 29.9.2026): Aarnin luettelo ja Tavarat.
+   * Julisteet lähtivät omaan ikkunaansa (omistaja 2.10.2026 klo 21.4x). Data tulee samoista laskuista kuin ennen matkalaukussa
+   * (aarreLuettelo, p.finds, julisteVoitot) — vain kohde vaihtui.
    *
-   * <dialog> keskittää itsensä ruudulle, eikä sitä voi asemoida
-   * pelkällä CSS:llä sen napin suhteen, joka sen avasi — nappi on
-   * ylärivissä ja dialogi on ylimmässä kerroksessa, eivätkä ne ole
-   * sukua toisilleen. Paikka lasketaan siis avattaessa.
-   *
-   * Vasen reuna kohdistetaan pilleriin mutta pidetään ruudulla: kapealla
-   * puhelimella kortti on lähes ruudun levyinen, ja pilleriin
-   * kohdistettuna sen oikea laita valuisi yli.
+   * LÖYTÄMÄTTÖMIÄ EI LISTATA RIVEINÄ (omistaja: "Löytämättömiä ei
+   * listata riveinä"). Aarnin luettelon "Kateissa"-luku on siis nyt
+   * pelkkä otsikon N/kaikki-lukema; ennen erillinen laukun rivi kertoi
+   * saman luvun tekstinä ("Kateissa: 4").
    */
-  asemoiLaukku() {
-    const kortti = this.passportDialog?.querySelector('.dialog-card');
-    if (!kortti || !this.turnPill) return;
-    const pilleri = this.turnPill.getBoundingClientRect();
-    if (!pilleri.width) return;
-    const VARA = 8;
-    const leveys = kortti.getBoundingClientRect().width || kortti.offsetWidth;
-    const suurinVasen = Math.max(VARA, window.innerWidth - leveys - VARA);
-    const vasen = Math.min(Math.max(VARA, pilleri.left), suurinVasen);
-    /*
-     * KIINNI YLÄPALKKIIN, EI PILLERIN ALLE VÄLIN PÄÄHÄN.
-     *
-     * Omistaja: "laukun yläreunan voisi ottaa kokonaan pois, niin että
-     * näyttäisi että laukku aukeaa suoraan yläpalkista." Rako palkin ja
-     * kortin välissä tekisi siitä ponnahdusikkunan; kiinni oleva lukee
-     * laatikoksi, joka vedetään ulos palkista. Yläreunus ja yläkulmien
-     * pyöristys ovat pois CSS:ssä samasta syystä.
-     */
-    const palkki = document.querySelector('.topbar')?.getBoundingClientRect();
-    const ylin = palkki?.bottom ?? pilleri.bottom;
-    this.passportDialog.style.left = `${Math.round(vasen)}px`;
-    this.passportDialog.style.top = `${Math.round(ylin)}px`;
-    this.passportDialog.classList.add('pillerin-alla');
-  }
-
-  /**
-   * Matkasaalis passissa: unohdetut aarteet, mantereen aarteet ja
-   * paikallisaarteet. Nämä näkyivät ennen erillisessä
-   * pelaajapaneelissa, joka vei tilaa kartalta.
-   */
-  renderFinds() {
+  renderPilleriAarteet() {
+    if (!this.pilleriAarteetLista) return;
     const { game } = this;
     const p = game.player;
-    this.passportFinds.textContent = '';
 
-    const rivi = (icon, text) => {
-      const row = html('div', 'find');
-      row.appendChild(icon);
-      row.appendChild(html('span', 'find-text', text));
-      this.passportFinds.appendChild(row);
-    };
-
-    // Isommat kuvat ja selite alla — tavarat kuin matkamuistohyllyllä
-    // (omistajan toive).
     /*
-     * Unohdetut aarteet omina riveinään: jokaisella mantereella on oma
-     * aarteensa, joten yksi rivi ei enää riitä. Manner luetaan
-     * findManner-listasta, joka kulkee finds-listan rinnalla samoin
-     * indeksein — se kertoo mistä KUKIN tähti löytyi, myös silloin kun
-     * pelaajalla on niitä useita.
+     * KUVAPARI (osoite + peili), SAMA REITTI KUIN aarreIkoni (js/ui-
+     * apurit.js): korjaus 29.9.2026 illalla, omistajan huomio rikkinäisistä
+     * kuvista — aiemmin tähän otettiin vain aarrekuvanOsoitteet()-parin
+     * ENSIMMÄINEN arvo eikä peiliä lainkaan, ja piirrin latasi kuvan
+     * suoralla `img.src`-sijoituksella ilman uusintaa tai vikasietoa.
+     * js/kokoelmanakyma.js lataa nyt kuvat asetaKuva:lla (uusinta + peili +
+     * siisti poisto virheestä), joten tänne annetaan molemmat osoitteet.
      */
-    p.finds.forEach((type, i) => {
-      if (type !== 'star') return;
-      const tahti = game.aarreMantereella('star', p.findManner?.[i] ?? null);
-      rivi(aarreIkoni(tahti, 'star', 44), tahti.name);
+    const aarreKuvapari = (kuva) => (kuva ? aarrekuvanOsoitteet(kuva) : [null, null]);
+
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    // Kehittäjätilassa kaikki aarteet näkyvät (omistaja 2.10.2026 klo 21.4x), kuten julisteet (julisteVoitot).
+    const naytettavat = this.kehittajaTila ? kaikki.map((rivi) => rivi.aarre) : loydetyt;
+    const aarneRivit = naytettavat.map((aarre, i) => {
+      const [osoite, vara] = aarreKuvapari(aarre.kuva);
+      return {
+        id: `aarre:${i}:${aarre.name}`,
+        nimi: aarre.name,
+        kuva: osoite,
+        kuvaVara: vara,
+        kuvakeSvg: osoite ? null : tokenIconSvg('star', 96),
+        kuvaPieni: osoite,
+        kuvaPieniVara: vara,
+        kuvakePieni: osoite ? null : tokenIconSvg('star', 34),
+      };
     });
 
     /*
-     * Muut aarteet omina riveinään. Ryhmittely tehdään VALMIIN NIMEN
-     * mukaan, koska sama laattatyyppi on eri paikoissa eri aarre:
-     * mantereen aarre vaihtuu mantereittain (findManner) ja
-     * paikallisaarre maittain (findMaa). Kummankin listan alkiot
-     * kulkevat finds-listan rinnalla samoin indeksein; vanhan
-     * tallennuksen löydöillä ne ovat null, jolloin laudan oma tyyppi
-     * ja yleinen varanimi kelpaavat.
+     * TAVARAT: sama ryhmittely kuin ennen renderFinds-metodissa (nimen
+     * mukaan, koska sama laattatyyppi on eri paikoissa eri aarre).
      */
     const counts = new Map();
     p.finds.forEach((type, i) => {
@@ -18117,93 +18530,132 @@ export class UI {
       rivit.n++;
       counts.set(token.name, rivit);
     });
-    for (const { type, token, n } of counts.values()) {
-      rivi(aarreIkoni(token, type, 44), `${token.name}${n > 1 ? ` ×${n}` : ''}`);
-    }
+    const tavaraRivit = [...counts.values()].map(({ type, token, n }) => {
+      const [osoite, vara] = aarreKuvapari(token.kuva);
+      return {
+        id: `tavara:${token.name}`,
+        nimi: `${token.name}${n > 1 ? ` ×${n}` : ''}`,
+        kuva: osoite,
+        kuvaVara: vara,
+        kuvakeSvg: osoite ? null : tokenIconSvg(type, 96),
+        kuvaPieni: osoite,
+        kuvaPieniVara: vara,
+        kuvakePieni: osoite ? null : tokenIconSvg(type, 34),
+      };
+    });
 
-    /*
-     * VARUSTEET EIVÄT OLE ENÄÄ TAVAROISSA (omistaja 18.8.2026:
-     * "Varusteet ovat nyt kahteen kertaan. Nuo graafisemmat ovat
-     * parempia."). Linssit näkyivät tässä näyttölistana JA alempana
-     * Varusteet-osaston kytkiminä; nyt ne piirtyvät vain kytkiminä,
-     * samoilla varustekuvilla (rakennaLinssivalikko).
-     *
-     * Tyhjän laukun viesti katsoo siksi myös omistetut linssit:
-     * pelkkien linssien kanssa "Laukku on vielä tyhjä" valehtelisi,
-     * koska varusteet ovat laukussa heti listan alla. Silloin todetaan
-     * vain, ettei aarteita vielä ole. Omistus luetaan omistus.js:stä
-     * (passin leimat + kehittäjätila), ei pelkästä p.linssit-kentästä.
-     */
-    if (!this.passportFinds.childElementCount) {
-      const omat = this.linssiTuki?.omistus?.omistetut?.(game, p) ?? new Set(p.linssit ?? []);
-      const teksti = omat.size ? 'Ei vielä matkalöytöjä.' : 'Laukku on vielä tyhjä.';
-      this.passportFinds.appendChild(html('p', 'muted', teksti));
-    }
+    const ryhmat = [
+      {
+        otsikko: 'Aarnin luettelo',
+        luku: `${naytettavat.length} / ${kaikki.length}`,
+        rivit: aarneRivit,
+      },
+      { otsikko: 'Tavarat', luku: `${tavaraRivit.length}`, rivit: tavaraRivit },
+      // Julisteet eivät ole täällä: valikon Julisteet avaa oman ikkunansa (omistaja 21.4x: yksi ikkuna, vain julisteet).
+    ];
+
+    // Rivien data talteen id:n mukaan aktivointia varten (aktivoiAarreRivi):
+    // yksinkertaisempi ja luotettavampi kuin sama tieto DOMista lukien.
+    this.pilleriAarreData = new Map(
+      [...aarneRivit, ...tavaraRivit].map((rivi) => [rivi.id, rivi]),
+    );
+
+    piirraKokoelma(this.pilleriAarteetLista, ryhmat, {
+      // Yksi ikkuna (omistaja 21.4x): ei esikatselukorttia, napautus avaa kuvan suoraan suurennokseen.
+      esikatseltu: null,
+      esikatsele: (id) => this.aktivoiAarreRivi(id),
+      aktivoi: (id) => this.aktivoiAarreRivi(id),
+      nappiteksti: () => 'Näytä',
+      tyhjaTeksti: 'Ei vielä mitään kerättyä.',
+    });
   }
 
   /**
-   * JULISTERIVI MATKALAUKUSSA (omistajan tilaus 22.8.2026: "Julisteet
-   * voisi olla oma rivi laukussa mutta kuvakkeet todella pieniä, sama
-   * korkeus kuin tekstillä ja näkyisi vain kolme viimeisintä. Perässä
-   * olisi numeromäärä ja >> merkki.").
-   *
-   * TILAUS KUMOAA 21.8.2026 TEHDYN RUUDUKON. Siinä laukussa oli
-   * otsikkorivi, kaikki voitetut pikkuvedokset ja loput himmeinä
-   * ?-paikkoina — eli osasto kasvoi sitä pidemmäksi mitä paremmin peli
-   * sujui, ja loppupelissä se peitti laukun muun sisällön. Nyt rivi on
-   * aina yhtä korkea: kolme tuoreinta vedosta tekstirivin korkuisina,
-   * perässä määrä ja ». Kaikki muu — myös voittamattomat paikat —
-   * asuu gallerian sisällä (avaaJulisteGalleria).
-   *
-   * TUOREIN ENSIN: game.julisteet on Set, johon myönnöt lisätään
-   * voittohetkellä (js/game.js myonnaJuliste), joten listan loppupää on
-   * tuorein. Siksi kolme viimeistä otetaan lopusta ja käännetään.
-   *
-   * RIVI ON PIILOSSA ENNEN ENSIMMÄISTÄ JULISTETTA. Vaihtoehto olisi
-   * himmeä "Julisteet 0/15 »", joka avaisi gallerian pelkkine
-   * lukkopaikkoineen, mutta valinta on piilotus samasta syystä kuin
-   * Varusteet-osastolla: tyhjä osasto kertoisi pelaajalle vain sen,
-   * mitä hänellä ei ole. Galleria ei jää saavuttamattomaksi —
-   * ensimmäinen juliste tulee lehden minitehtävästä, ja juuri se
-   * paljastaa rivin.
+   * Aarteet-näkymän rivin toinen napautus: juliste avaa olemassa
+   * olevan julistegallerian (omistajan hyväksymä vaihtoehto koko ruudun
+   * katselimelle), aarre/tavara avautuu itse koko ruudulle.
    */
+  aktivoiAarreRivi(id) {
+    if (id.startsWith('juliste:')) {
+      this.avaaJulisteGalleria();
+      return;
+    }
+    const rivi = this.pilleriAarreData?.get(id);
+    this.naytaAarreSuurennos({
+      nimi: rivi?.nimi ?? id,
+      kuva: rivi?.kuva ?? null,
+      kuvaVara: rivi?.kuvaVara ?? null,
+    });
+  }
+
+  /*
+   * Aarteen/tavaran koko ruudun katselin (juliste käyttää galleriaa).
+   * KUVA ASETAKUVAN KAUTTA (korjaus 29.9.2026 illalla, sama syy kuin
+   * js/kokoelmanakyma.js asetaRivinKuva): suora img.src ei kokeillut
+   * kuvaVara-peiliosoitetta eikä poistanut kuvaa siististi, jos molemmat
+   * pettivät — rikkinäinen kuvake jäi näkyviin koko ruudun katselimeen.
+   */
+  naytaAarreSuurennos({ nimi, kuva, kuvaVara = null }) {
+    this.suljeAarreSuurennos();
+    const huntu = html('div', 'aarre-suurennos-huntu');
+    const kotelo = html('div', 'aarre-suurennos');
+    if (kuva) {
+      const img = document.createElement('img');
+      img.className = 'aarre-suurennos-kuva';
+      img.alt = nimi;
+      img.decoding = 'async';
+      kotelo.appendChild(img);
+      asetaKuva(img, kuva, kuvaVara, () => {
+        const ikoni = html('div', 'aarre-suurennos-ikoni');
+        ikoni.innerHTML = tokenIconSvg('star', 96);
+        img.replaceWith(ikoni);
+      });
+    } else {
+      const ikoni = html('div', 'aarre-suurennos-ikoni');
+      ikoni.innerHTML = tokenIconSvg('star', 96);
+      kotelo.appendChild(ikoni);
+    }
+    kotelo.appendChild(html('p', 'aarre-suurennos-nimi', nimi));
+    const sulje = html('button', 'aarre-suurennos-sulje', '×');
+    sulje.type = 'button';
+    sulje.setAttribute('aria-label', 'Sulje kuva');
+    sulje.addEventListener('click', () => this.suljeAarreSuurennos());
+    huntu.addEventListener('click', () => this.suljeAarreSuurennos());
+    const nappaimet = (e) => { if (e.key === 'Escape') this.suljeAarreSuurennos(); };
+    document.addEventListener('keydown', nappaimet, { capture: true });
+    document.body.append(huntu, kotelo, sulje);
+    this.aarreSuurennos = { huntu, kotelo, sulje, nappaimet };
+    sfx.play('paper');
+  }
+
+  suljeAarreSuurennos() {
+    const auki = this.aarreSuurennos;
+    if (!auki) return;
+    this.aarreSuurennos = null;
+    auki.huntu.remove();
+    auki.kotelo.remove();
+    auki.sulje.remove();
+    document.removeEventListener('keydown', auki.nappaimet, { capture: true });
+  }
+
   /**
-   * Voitettujen julisteiden lista rivin ja gallerian tarpeisiin.
-   * KEHITTÄJÄTILASSA KAIKKI JULISTEET NÄKYVÄT VOITETTUINA (omistajan
-   * tilaus 22.8.2026: "Laita kaikki julisteet matkalaukkuun kun
-   * kehittäjä tila") — koko kokoelman voi katselmoida pelaamatta
+   * Voitettujen julisteiden lista Aarteet-näkymän ja gallerian
+   * tarpeisiin. KEHITTÄJÄTILASSA KAIKKI JULISTEET NÄKYVÄT VOITETTUINA
+   * (omistajan tilaus 22.8.2026: "Laita kaikki julisteet matkalaukkuun
+   * kun kehittäjä tila") — koko kokoelman voi katselmoida pelaamatta
    * minitehtäviä. Pelitilaan (game.julisteet) ei kosketa: tämä on
    * pelkkä näkymä, ja kehittäjätilan sammuttaminen palauttaa oikean
    * tilanteen.
+   *
+   * ENTINEN LAUKUN JULISTERIVI (kolme tuoreinta vedosta + luku) POISTUI
+   * (omistaja 29.9.2026): Aarteet-näkymässä Julisteet on nyt oma
+   * otsikkonsa muiden joukossa (renderPilleriAarteet), joten erillistä
+   * pikkuriviä ei enää tarvita — julisteVoitot() palvelee sekä sitä
+   * että gallerian (avaaJulisteGalleria).
    */
   julisteVoitot() {
     if (this.kehittajaTila) return Object.keys(JULISTEET);
     return [...(this.game.julisteet ?? [])].filter((id) => JULISTEET[id]);
-  }
-
-  renderJulisteet() {
-    if (!this.julisteKotelo || !this.passportJulisteet) return;
-    const voitetut = this.julisteVoitot();
-    this.julisteKotelo.hidden = voitetut.length === 0;
-    if (!voitetut.length) return;
-    const kaikki = Object.keys(JULISTEET).length;
-    const rivi = this.passportJulisteet;
-    rivi.replaceChildren();
-    rivi.setAttribute('aria-label',
-      `Julisteet: ${voitetut.length}/${kaikki} voitettu — avaa julistegalleria`);
-    rivi.appendChild(html('span', 'laukku-julisterivi-nimio', 'Julisteet'));
-    const vedokset = html('span', 'laukku-julisterivi-vedokset');
-    for (const cityId of voitetut.slice(-3).reverse()) {
-      const kuva = document.createElement('img');
-      kuva.decoding = 'async';
-      kuva.alt = '';
-      // Puuttuva tiedosto (ämpärivienti kesken) vie vain vedoksen:
-      // rivi, luku ja galleria jäävät paikoilleen.
-      asetaKuva(kuva, julisteUrl(JULISTEET[cityId].tiedosto), null, () => kuva.remove());
-      vedokset.appendChild(kuva);
-    }
-    rivi.appendChild(vedokset);
-    rivi.appendChild(html('span', 'laukku-julisterivi-luku', `${voitetut.length}/${kaikki} »`));
   }
 
   /**
@@ -18216,117 +18668,67 @@ export class UI {
    * avautuvat popupit: isäntä on päällimmäinen avoin dialogi
    * (suurennosIsanta), koska modaali <dialog> on selaimen top
    * layerissa eikä sen päälle pääse z-indexillä ulkopuolelta. Oma
-   * huntu kortin alle, rasti ja Escape sulkevat.
+   * huntu kortin alle, ✕, ohinapautus ja Escape sulkevat.
    *
-   * Kerroksia on kaksi: galleria (z 66) ja sen päälle avautuva täysi
-   * koko (kulttuurisuurennos, z 70). Escape purkaa ne oikeassa
-   * järjestyksessä ilman erillistä pinologiikkaa: gallerian kuuntelija
-   * väistää, jos suurennos on auki, ja suurennoksen oma kuuntelija
-   * sulkee sen ensin.
+   * Kerroksia on kaksi: galleria (z 66) ja sen päälle avautuva
+   * kuvanäkymä (z 67). Escape purkaa ne pohjien yhteisellä sulkupinolla
+   * (js/pohjat/pohjat.js): ylin, eli kuvanäkymä, sulkeutuu ensin.
    */
   avaaJulisteGalleria() {
     this.suljeJulisteGalleria();
     // Kehittäjätilassa koko kokoelma on auki (ks. julisteVoitot).
     const voitetut = new Set(this.julisteVoitot());
-    const ryhmat = julisteMantereet();
-    const kortti = html('div', 'julistegalleria');
-    kortti.setAttribute('role', 'dialog');
-    kortti.setAttribute('aria-label', 'Julistekokoelma');
-    const ylapalkki = html('div', 'julistegalleria-ylapalkki');
-    ylapalkki.appendChild(html('h2', 'julistegalleria-otsikko', 'Julisteet'));
-    ylapalkki.appendChild(html('span', 'julistegalleria-luku',
-      `${voitetut.size}/${Object.keys(JULISTEET).length}`));
-    const rasti = html('button', 'julistegalleria-rasti', '×');
-    rasti.type = 'button';
-    rasti.setAttribute('aria-label', 'Sulje julistegalleria');
-    rasti.addEventListener('click', () => this.suljeJulisteGalleria());
-    ylapalkki.appendChild(rasti);
-    kortti.appendChild(ylapalkki);
     /*
-     * Täyden koon selailu seuraa gallerian omaa järjestystä (maanosa
-     * kerrallaan): nuoli vie siihen julisteeseen, joka on ruudulla
-     * seuraavana, eikä johonkin muuhun voittojärjestykseen.
+     * GALLERIA-POHJA (tyylikirja pohjat.GALLERIA, js/pohjat/pohjat.js luoPohjaGalleria; Julisteet ensimmäinen käyttäjä).
+     * Voittamaton paikka on pelkkä kehys omassa maanosassaan: kokoelma kertoo, että sitä voi täydentää ja mistä päin
+     * maailmaa, muttei sitä mistä kaupungista (sama linjaus kuin Aarnin luettelossa). Napautus avaa KUVANÄKYMÄN saman
+     * maanosan voitetuista julisteista; ruudukossa pikkukuva (360 px), varana täysikokoinen.
      */
-    const selattavat = ryhmat.flatMap((r) => r.kaupungit.filter((id) => voitetut.has(id)));
-    const teokset = selattavat.map((cityId) => ({
-      otsikko: JULISTEET[cityId].otsikko,
-      lyhyt: JULISTEET[cityId].lyhyt,
-      selite: JULISTEET[cityId].selite,
-      lahde: JULISTE_LAHDE,
-      // Valmis osoite ohittaa Commons-portaikon (ks. naytaKulttuuriKuva).
-      osoite: julisteUrl(JULISTEET[cityId].tiedosto),
-    }));
-    for (const ryhma of ryhmat) {
-      const osio = html('section', 'julistegalleria-ryhma');
-      const saatu = ryhma.kaupungit.filter((id) => voitetut.has(id)).length;
-      osio.appendChild(html('h3', 'julistegalleria-ryhma-otsikko',
-        `${ryhma.nimi} ${saatu}/${ryhma.kaupungit.length}`));
-      const ruudukko = html('div', 'julistegalleria-ruudukko');
-      for (const cityId of ryhma.kaupungit) {
-        /*
-         * Voittamaton paikka näkyy himmeänä kysymysmerkkinä omassa
-         * ryhmässään: kokoelma kertoo että sitä voi täydentää ja mistä
-         * päin maailmaa, muttei sitä mistä kaupungista — sama linjaus
-         * kuin Aarnin luettelossa.
-         */
-        if (!voitetut.has(cityId)) {
-          const lukossa = html('div', 'julistegalleria-vedos lukossa', '?');
-          lukossa.setAttribute('aria-hidden', 'true');
-          ruudukko.appendChild(lukossa);
-          continue;
-        }
-        const juliste = JULISTEET[cityId];
-        const nappi = html('button', 'julistegalleria-vedos');
-        nappi.type = 'button';
-        nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
-        const kuva = document.createElement('img');
-        kuva.decoding = 'async';
-        kuva.alt = '';
-        // Viemättä oleva tiedosto jättää nimen ja kehyksen paikalleen,
-        // jottei ryhmästä katoaisi kokonainen ruutu.
-        asetaKuva(kuva, julisteUrl(juliste.tiedosto), null, () => {
-          kuva.remove();
-          nappi.classList.add('kuvaton');
-        });
-        nappi.appendChild(kuva);
-        nappi.appendChild(html('span', 'julistegalleria-nimi', juliste.kaupunki));
-        const kohdalla = selattavat.indexOf(cityId);
-        nappi.addEventListener('click', () => {
-          sfx.play('paper');
-          this.naytaKulttuuriKuva(teokset[kohdalla], { teokset, kohdalla });
-        });
-        ruudukko.appendChild(nappi);
-      }
-      osio.appendChild(ruudukko);
-      kortti.appendChild(osio);
-    }
-    const huntu = html('div', 'julistegalleria-huntu');
-    huntu.addEventListener('click', () => this.suljeJulisteGalleria());
-    const nappaimet = (e) => {
-      if (e.key !== 'Escape') return;
-      // Täysi koko on kerrosta ylempänä ja sulkee itsensä omalla
-      // kuuntelijallaan — galleria odottaa vuoroaan.
-      if (this.lehtitila.kulttuuriKuvaEl) return;
-      e.preventDefault();
-      e.stopPropagation();
-      this.suljeJulisteGalleria();
+    const data = {
+      otsikko: 'Julisteet',
+      nimi: 'Julistekokoelma',
+      laskuri: `${voitetut.size}/${Object.keys(JULISTEET).length}`,
+      suhde: '2:3',
+      osiot: julisteMantereet().map((ryhma) => ({
+        nimi: ryhma.nimi,
+        laskuri: `${ryhma.kaupungit.filter((id) => voitetut.has(id)).length}/${ryhma.kaupungit.length}`,
+        ruudut: ryhma.kaupungit.map((cityId) => {
+          if (!voitetut.has(cityId)) return { lukossa: true };
+          const juliste = JULISTEET[cityId];
+          return {
+            nimi: juliste.kaupunki,
+            kuva: julistePieniUrl(juliste.tiedosto),
+            vara: julisteUrl(juliste.tiedosto),
+            suuri: {
+              url: julisteUrl(juliste.tiedosto),
+              otsikko: juliste.otsikko,
+              kuvateksti: juliste.lyhyt,
+              lahde: JULISTE_LAHDE,
+            },
+          };
+        }),
+      })),
     };
+    const pohja = luoPohjaGalleria(data, {
+      avattu: () => sfx.play('paper'),
+      sulje: (p) => {
+        if (this.julisteGalleria === p) this.julisteGalleria = null;
+        // Häivytys (kesto-sulku) loppuun ennen poistoa.
+        setTimeout(() => { p.el.remove(); p.tausta.remove(); }, 250);
+      },
+    });
+    if (!pohja) return;
     const isanta = this.suurennosIsanta();
-    isanta.appendChild(huntu);
-    isanta.appendChild(kortti);
-    document.addEventListener('keydown', nappaimet, { capture: true });
-    this.julisteGalleria = { kortti, huntu, nappaimet };
-    rasti.focus({ preventScroll: true });
+    isanta.append(pohja.tausta, pohja.el);
+    this.julisteGalleria = pohja;
+    pohja.avaa();
+    pohja.sulku.focus({ preventScroll: true });
   }
 
-  /** Sulkee julistegallerian ja purkaa sen näppäinkuuntelijan. */
+  /** Sulkee julistegallerian (GALLERIA-pohja; ✕, ohinapautus ja Esc sulkevat sen myös itse). */
   suljeJulisteGalleria() {
-    const auki = this.julisteGalleria;
-    if (!auki) return;
+    this.julisteGalleria?.sulje();
     this.julisteGalleria = null;
-    auki.kortti.remove();
-    auki.huntu.remove();
-    document.removeEventListener('keydown', auki.nappaimet, { capture: true });
   }
 
   /**
@@ -18350,6 +18752,7 @@ export class UI {
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.apu));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.ehdot));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.johdanto));
+      if (PELI.yksityisyys) sisus.appendChild(html('p', 'lahteet-teksti', PELI.yksityisyys));
 
       sisus.appendChild(html('h3', 'lahteet-otsikko', 'Lähteet ja aineistot'));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.kolmannet));
@@ -18549,7 +18952,9 @@ export class UI {
      * (?lauta=kartta) linssi jää valikoimaan ennalleen.
      */
     const pallolauta = lautaValinta() === 'pallo';
-    return tuki.kaikki.filter((linssi) => omat.has(linssi.tunnus)
+    // Kehittäjätilan linssit (js/linssit/rekisteri.js KEHITTAJALINSSIT) vain kehittäjätilassa, eivät omistuksen kautta.
+    const kehittajalle = (t) => Boolean(this.kehittajaTila) && tuki.kerros.KEHITTAJALINSSIT?.some((r) => r.tunnus === t);
+    return tuki.kaikki.filter((linssi) => (omat.has(linssi.tunnus) || kehittajalle(linssi.tunnus))
       && !(pallolauta && linssi.tunnus === 'pallo')
       && tuki.kerros.kelpaaLaudalle(linssi, this.game.pack.id)
       && !this.linssiPois.has(linssi.tunnus));
@@ -18580,6 +18985,7 @@ export class UI {
     const hiomassa = tuki.omistus?.hiomassaOlevat?.(this.game, this.game.player) ?? [];
     const valmistuneet = tuki.omistus?.valmistuneet?.(this.game, this.game.player) ?? [];
     this.linssiKotelo.hidden = nakyvat.length === 0 && hiomassa.length === 0;
+    if (this.karttaselite?.linssiNappi) this.karttaselite.linssiNappi.hidden = this.linssiKotelo.hidden;
 
     const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`
       + `|hiomassa:${hiomassa.join(',')}|valmistui:${valmistuneet.join(',')}`;
@@ -18921,148 +19327,198 @@ export class UI {
    * nuolinäppäinnavigoinnin, jota tässä pelissä ei ole yhdessäkään
    * liuskarivissä (suunnitelman luku 5.2).
    */
+  /**
+   * Valitsimen sisältö: js/kokoelmanakyma.js piirtää tiheän listan ja
+   * esikatselukortin (omistaja 29.9.2026: "Linssit voisivat olla
+   * listana ilman selitetekstiä ... kun linssiä klikkaa, niin
+   * vasemmalle puolelle tulee havainnekuva linssistä sekä selite").
+   * Data talletetaan, koska koko näkymä piirretään uudelleen joka
+   * esikatselu-/aktivointimuutoksella — sama malli kuin Aarteet-
+   * näkymässä (renderPilleriAarteet).
+   */
   rakennaLinssivalikko(linssit, { hiomassa = [], valmistuneet = [] } = {}) {
     if (!this.linssiValikko) return;
-    this.linssiValikko.replaceChildren();
-    // Vanha tietolohko jäi irralleen puusta: viittaus siihen kirjoittaisi
-    // näkymättömään elementtiin.
-    this.linssiTiedot = null;
-    // Ruudukko on uusi, joten napautusmuisti ei koske siihen.
+    this.linssiTuoreLista = { linssit, hiomassa, valmistuneet };
     this.linssiEsikatselu = undefined;
-    if (!linssit.length && !hiomassa.length) return;
-
-    const liuskat = html('nav', 'linssi-liuskat');
-    liuskat.setAttribute('role', 'group');
-    liuskat.setAttribute('aria-label', 'Linssit');
-    // "Ei linssiä" on aina ensimmäisenä: paluu tavalliseen karttaan on
-    // yhtä lähellä kuin linssin valinta.
-    liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä'));
-    /*
-     * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja
-     * 20.9.2026 klo 15.10: *"merkitse vertailulinssi, maidentiedot,
-     * sekä vesistölinssi harmaalla ja siirrä omalle rivilleen ja
-     * pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
-     * Linssi kertoo itse (`kesken: true`, linssimoduulin oma metatieto
-     * kuten nimi ja kuvake); laukku latoo ne toiseen ruudukkoon
-     * harmaana ja pienempänä (css .linssi-liuskat-kesken). Napit ovat
-     * samat kuin valmiilla — esikatselu ja aktivointi toimivat.
-     */
-    const valmiit = linssit.filter((l) => !l.kesken);
-    const keskeneraiset = linssit.filter((l) => l.kesken);
-    for (const linssi of valmiit) {
-      const nappi = this.linssiLiuska(linssi.tunnus, linssi.nimi);
-      // Optikolta valmistunut linssi: merkki, kunnes ruutua on napautettu.
-      if (valmistuneet.includes(linssi.tunnus)) {
-        nappi.classList.add('valmistui');
-        nappi.title = `${linssi.nimi} — optikko toi linssin valmiina`;
-      }
-      liuskat.appendChild(nappi);
-    }
-    this.linssiValikko.appendChild(liuskat);
-    if (keskeneraiset.length) {
-      const kesken = html('nav', 'linssi-liuskat linssi-liuskat-kesken');
-      kesken.setAttribute('role', 'group');
-      kesken.setAttribute('aria-label', 'Keskeneräiset linssit');
-      for (const linssi of keskeneraiset) {
-        const nappi = this.linssiLiuska(linssi.tunnus, `${linssi.nimi} (keskeneräinen)`);
-        nappi.classList.add('kesken');
-        kesken.appendChild(nappi);
-      }
-      this.linssiValikko.appendChild(kesken);
-    }
-    /*
-     * HIOMASSA OPTIKOLLA: samalla harmaalla rivillä kuin keskeneräiset,
-     * mutta ilman aktivointia — linssiä ei ole. Kuvake on rekisterin
-     * paikkavaraus (Codex piirtää) tai yhteinen hiomassa-kuva.
-     */
-    if (hiomassa.length) {
-      const rivi = html('nav', 'linssi-liuskat linssi-liuskat-kesken linssi-liuskat-hiomassa');
-      rivi.setAttribute('role', 'group');
-      rivi.setAttribute('aria-label', 'Hiomassa optikolla');
-      for (const tunnus of hiomassa) {
-        const nimi = this.linssiTuki?.omistus?.hiomassaNimi?.(tunnus) ?? tunnus;
-        const nappi = this.linssiLiuska(tunnus, `${nimi} (hiomassa optikolla)`, { hiomassa: true });
-        nappi.classList.add('kesken', 'hiomassa');
-        rivi.appendChild(nappi);
-      }
-      this.linssiValikko.appendChild(rivi);
-    }
-    this.linssiTiedot = html('div', 'linssi-tiedot');
-    this.linssiValikko.appendChild(this.linssiTiedot);
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
   }
 
-  linssiLiuska(tunnus, nimi, { hiomassa = false } = {}) {
-    const nappi = html('button');
-    nappi.type = 'button';
-    nappi.dataset.linssi = tunnus ?? '';
-    // Nimi jää saavutettavuuteen ja pitkään painallukseen, koska
-    // ruudulla näkyy vain kuva ilman nimilappua.
-    nappi.title = nimi;
-    nappi.setAttribute('aria-label', nimi);
-    if (tunnus) {
-      /*
-       * Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu, aarreIkoni
-       * pudottaa tilalle laattatyypin viivakuvakkeen. ASTRONAUTIN KAMERA
-       * -linssillä (satelliitti) on 20.9.2026 alkaen oma maalattu
-       * varustekuva (omistaja klo 14.50: *"tee astronautin kameralle
-       * uusi kuvake, missä on astronautti ja kamera"*; Fable valitsi
-       * ehdokkaan 3, docs/raportit/kaappaukset/astro-kuvake-20260920/).
-       * Varasolu on yhä sen oma vektorikuvake (js/mapart.js
-       * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
-       */
-      const onSatelliitti = tunnus === 'satelliitti';
-      // Hiomassa: rekisterin ikonipaikka tai yhteinen hiomassa-kuva.
-      const kuva = hiomassa
-        ? (LINSSIT.find((r) => r.tunnus === tunnus)?.ikoni ?? LINSSI_HIOMASSA_KUVA)
-        : `assets/varusteet/varuste-${tunnus}.jpg`;
-      const tiedot = { kuva, name: nimi };
-      nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
-    } else {
-      // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut
-      // taikalasit pyöreässä kehyksessä pitävät sen samassa rivissä
-      // kuvien kanssa mutta selvästi "paljain silmin" -valintana.
-      nappi.innerHTML = liuskaIkoniSvg(LINSSI_EI_IKONI, 30);
+  /**
+   * Yksittäisen linssirivin data js/kokoelmanakyma.js:lle.
+   *
+   * HAVAINNEKUVA: `LINSSI.havainnekuva`, jos sellainen on annettu, muuten
+   * sama varustekuva kuin ennen (assets/varusteet/varuste-<tunnus>.jpg).
+   * Ei yhdelläkään yhdeksästä pelissä olevasta linssistä ole 29.9.2026
+   * vielä omaa havainnekuvaa — kaikki käyttävät varustekuvaa.
+   *
+   * ESITTELYTEKSTI: `LINSSI.esittely` (ylätason merkkijono, Sisältökirjurin
+   * PR #3611), VARANA `lyhyt`. HUOM: kahdella aikajanalinssillä
+   * (keksinnot, ihmisen-matka) on JO ENNESTÄÄN oma `esittely`-kenttä,
+   * mutta se asuu `LINSSI.aikajana.esittely`-polussa (avausjakson
+   * otsikko+teksti, js/aikajana.js avaaAvausjakso) — ERI POLKU eikä siis
+   * törmää ylätason kenttään. Tyyppitarkistus (`typeof === 'string'`)
+   * jätetään silti varmuuden vuoksi: jos joku joskus lisäisi ylätasolle
+   * ei-merkkijonoarvon, esikatselu putoaa `lyhyt`-varakenttään kaatumatta.
+   */
+  linssiRivi(tunnus, nimi, { hiomassa = false, kesken = false } = {}) {
+    if (!tunnus) {
+      return {
+        id: null,
+        nimi,
+        kuvakePieni: liuskaIkoniSvg(LINSSI_EI_IKONI, 30),
+        selite: 'Kartta sellaisena kuin isoisä sen piirsi.',
+        aktiivinen: this.linssiValittu === null,
+      };
     }
+    const linssi = this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
     /*
-     * NAPAUTUS EI SYTYTÄ, VAAN SELITTÄÄ (omistaja 5.9.2026 sanatarkasti:
-     * *"kun linssi klikataan matkalaukussa niin silloin päivittyy vasta
-     * selite teksti ja tekstin loppuun tulee "aktivoi", mitä
-     * klikkaamalla linssi menee päälle ja matkalaukku sulkeutuu"*).
-     * Kytkentä on siis kaksivaiheinen: ruudun napautus vaihtaa
-     * selitteen, ja selitteen perässä oleva "aktivoi" kytkee linssin.
+     * HIOMASSA-KUVA UNOHTUI ENSIMMÄISESSÄ UUDISTUKSESSA (korjaus
+     * 29.9.2026 illalla, item 3: "harmaa 'hiomassa optikolla' -tila
+     * pitää näkyä Linssit-listassa"). LINSSI_HIOMASSA_KUVA
+     * (assets/linssit/hiomassa.svg) oli jo olemassa entisestä laukusta
+     * mutta jäi käyttämättä — rivi näytti ennen tätä pelkän nimen ilman
+     * kuvaketta.
      */
-    nappi.addEventListener('click', () => this.esikatseleLinssi(tunnus));
-    return nappi;
+    const kuva = hiomassa ? LINSSI_HIOMASSA_KUVA : (linssi?.havainnekuva ?? `assets/varusteet/varuste-${tunnus}.jpg`);
+    const esittely = typeof linssi?.esittely === 'string' ? linssi.esittely : null;
+    return {
+      id: hiomassa ? `hiomassa:${tunnus}` : tunnus,
+      // Keskeneräisyys näkyy vain Keskeneräiset-väliotsikossa, ei nimessä (omistaja 29.9.2026 klo 23.0x,
+      // 1.0.56: "Maininta vain otsikossa, ei linssin nimessä"; natiivi Linssivalitsin.cs).
+      nimi,
+      kuva,
+      kuvaPieni: kuva,
+      selite: hiomassa
+        ? 'Hiomassa optikolla. Linssi tulee laukkuun käyttöön, kun se on valmis — kerran nähtyä maailmaa ei oteta pois.'
+        : (esittely ?? linssi?.lyhyt ?? ''),
+      aktiivinen: !hiomassa && tunnus === this.linssiValittu,
+      hiomassa,
+    };
   }
 
   /**
-   * Laukun ruudun napautus: merkitsee linssin katsotuksi ja kirjoittaa
-   * sen selitteen ruudukon alle. EI kytke linssiä — sen tekee vasta
-   * selitteen perässä oleva "aktivoi" (aktivoiLinssi).
-   *
-   * @param {string|null} tunnus napautettu linssi; null = "Ei linssiä"
+   * Piirtää koko Linssit-näkymän uudelleen tallennetusta datasta
+   * (rakennaLinssivalikko) ja nykyisestä esikatselu-/valintatilasta.
+   * Kutsutaan myös silloin, kun mikään ei muutu (esim. näkymän avaus),
+   * koska rivimäärä on pieni eikä uudelleenpiirto ole kallista.
    */
-  esikatseleLinssi(tunnus) {
-    this.linssiEsikatselu = tunnus ?? null;
+  paivitaLinssiTiedot() {
+    // Linssikartan otsikkorivi seuraa valintaa (js/pallolauta/linssikartta.js).
+    this.pallolauta?.linssikartta?.paivita();
+    if (!this.linssiValikko) return;
+    const { linssit = [], hiomassa = [], valmistuneet = [] } = this.linssiTuoreLista ?? {};
+    if (!linssit.length && !hiomassa.length) {
+      this.linssiValikko.replaceChildren();
+      return;
+    }
+    const valmiit = linssit.filter((l) => !l.kesken);
+    const keskeneraiset = linssit.filter((l) => l.kesken);
+    const eiLinssiaRivi = this.linssiRivi(null, 'Ei linssiä');
+    const valmiitRivit = valmiit.map((l) => {
+      const rivi = this.linssiRivi(l.tunnus, l.nimi);
+      // Optikolta valmistunut linssi: merkki, kunnes ruutua on napautettu.
+      if (valmistuneet.includes(l.tunnus)) rivi.nimi = `${rivi.nimi} ✦`;
+      return rivi;
+    });
+    const ryhmat = [
+      { rivit: [eiLinssiaRivi, ...valmiitRivit] },
+      keskeneraiset.length
+        ? { otsikko: 'Keskeneräiset', rivit: keskeneraiset.map((l) => this.linssiRivi(l.tunnus, l.nimi, { kesken: true })) }
+        : null,
+      hiomassa.length
+        ? {
+          otsikko: 'Hiomassa optikolla',
+          rivit: hiomassa.map((tunnus) => this.linssiRivi(
+            tunnus, this.linssiTuki?.omistus?.hiomassaNimi?.(tunnus) ?? tunnus, { hiomassa: true },
+          )),
+        }
+        : null,
+    ].filter(Boolean);
+
+    /*
+     * EI OLETUSESIKATSELUA (omistaja 29.9.2026, pillerivalikkouudistus:
+     * "Linssit voisivat olla listana ilman selitetekstiä ... kun
+     * linssiä klikkaa, niin vasemmalle puolelle tulee ... selite").
+     * Ennen 29.9.2026 esikatselu näytti oletuksena PÄÄLLÄ olevan
+     * linssin selitteen ilman napautusta (mutta ilman toimintonappia);
+     * uusi tiheä lista näyttää selitteen VASTA napautuksesta, kuten
+     * Aarteet-näkymässäkin. Aktiivinen linssi erottuu silti kultaisesta
+     * kuvakerenkaasta (linssiRivi: `aktiivinen`), joten pelaaja näkee
+     * kartalla juuri nyt olevan linssin ilman napautustakin — vain
+     * teksti ja toimintonappi vaativat napautuksen.
+     */
+    const esikatseltu = this.linssiEsikatselu;
+    piirraKokoelma(this.linssiValikko, ryhmat, {
+      esikatseltu,
+      esikatsele: (id) => this.esikatseleLinssi(id),
+      aktivoi: (id) => this.aktivoiLinssiRivi(id),
+      nappiteksti: (rivi) => (rivi.hiomassa ? 'Hiomassa' : (rivi.aktiivinen ? 'Ota pois' : 'Aktivoi')),
+      tyhjaTeksti: 'Ei vielä yhtään linssiä.',
+    });
+
+    /*
+     * YHTEENSOPIVUUSMERKINNÄT VANHOILLE SAVUKKEILLE (omistaja 29.9.2026;
+     * tools/savukkeet/savuke-satelliittilinssi.mjs, savuke-astro-pallo.mjs,
+     * savuke-satelliitti-avaruus.mjs ja savuke-hiomassa-linssi.mjs lukevat
+     * `button[data-linssi=…]` ja `.linssi-aktivoi` suoraan DOMista — nämä
+     * neljä päivitettiin 29.9.2026 illalla käyttämään uusia valitsimia,
+     * ks. kunkin tiedoston oma kommentti). VAIN attribuutti ja kolme
+     * luokkaa, joilla EI OLE omaa CSS:ää enää tässä uudessa asussa —
+     * `.linssi-liuskat`-luokkaa EI lisätä, koska sen vanha ruudukko-CSS
+     * (grid, neliönapit) muuttaisi tiheän listan takaisin ruudukoksi ja
+     * romahdutti kotelon korkeuden (mitattu vika, korjattu 29.9.2026).
+     * `.hiomassa`-luokka SAA oman, UUDEN CSS-säännön (harmaa suodatin,
+     * css/styles.css) — se ei ole vanha luokka eikä siis törmää mihinkään.
+     */
+    for (const rivi of this.linssiValikko.querySelectorAll('.kokoelma-rivi')) {
+      rivi.dataset.linssi = rivi.dataset.id ?? '';
+      rivi.classList.toggle('paalla', rivi.classList.contains('aktiivinen'));
+      rivi.classList.toggle('hiomassa', String(rivi.dataset.id ?? '').startsWith('hiomassa:'));
+    }
+    const esikatselulohko = this.linssiValikko.querySelectorAll('.kokoelma-esikatselu')[0];
+    esikatselulohko?.classList.add('linssi-tiedot');
+    const toiminto = this.linssiValikko.querySelectorAll('.kokoelma-toiminto')[0];
+    if (toiminto) {
+      toiminto.classList.add('linssi-aktivoi');
+      toiminto.classList.toggle('pois', esikatseltu !== undefined && esikatseltu === this.linssiValittu && esikatseltu !== null);
+    }
+  }
+
+  /**
+   * Linssit-näkymän rivin napautus: merkitsee linssin katsotuksi. EI
+   * kytke linssiä — sen tekee vasta toimintonappi (aktivoiLinssiRivi).
+   *
+   * @param {string|null} id napautettu linssi (kokoelmarivin id); null =
+   *   "Ei linssiä", `hiomassa:<tunnus>` = hiomassa optikolla
+   */
+  esikatseleLinssi(id) {
+    this.linssiEsikatselu = id;
     // Valmistuneen linssin merkki kuitataan ensimmäisellä napautuksella.
     const omistus = this.linssiTuki?.omistus;
-    if (tunnus && omistus?.valmistuneet?.(this.game, this.game.player).includes(tunnus)) {
-      omistus.merkitseLinssiNahdyksi?.(tunnus);
-      this.linssiValikko?.querySelector(`.linssi-liuskat button[data-linssi="${tunnus}"]`)?.classList.remove('valmistui');
+    if (id && omistus?.valmistuneet?.(this.game, this.game.player).includes(id)) {
+      omistus.merkitseLinssiNahdyksi?.(id);
     }
     this.paivitaLinssiTiedot();
   }
 
   /**
-   * Selitteen "aktivoi" (tai päällä olevan linssin kohdalla
-   * "sammuta"): kytkee linssin ja sulkee laukun, jotta kartta jää
-   * heti näkyviin.
+   * Kokoelmarivin toimintonapin ("Aktivoi"/"Ota pois"/"Hiomassa")
+   * napautus. Hiomassa optikolla ei tee mitään — linssiä ei vielä ole.
+   */
+  aktivoiLinssiRivi(id) {
+    if (typeof id === 'string' && id.startsWith('hiomassa:')) return;
+    this.aktivoiLinssi(id);
+  }
+
+  /**
+   * Aktivoi (tai päällä olevan linssin kohdalla ottaa pois): kytkee
+   * linssin ja sulkee pillerivalikon, jotta kartta jää heti näkyviin.
    */
   aktivoiLinssi(tunnus) {
+    const paalla = Boolean(tunnus) && tunnus === this.linssiValittu;
     this.linssiEsikatselu = undefined;
-    this.valitseLinssi(tunnus);
+    this.valitseLinssi(paalla ? null : tunnus);
     this.suljeLaukku();
   }
 
@@ -19186,130 +19642,6 @@ export class UI {
     return this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
   }
 
-  /** Valittu rivi korostetaan ja sen kuvaus kirjoitetaan rivien alle. */
-  paivitaLinssiTiedot() {
-    // Linssikartan otsikkorivi seuraa valintaa (js/pallolauta/linssikartta.js).
-    this.pallolauta?.linssikartta?.paivita();
-    if (!this.linssiValikko) return;
-    /*
-     * KAKSI KOROSTUSTA, KAKSI ERI ASIAA (omistaja 5.9.2026). `paalla`
-     * on messinkirengas päällä olevan linssin ympärillä — se kertoo,
-     * mikä kartalla nyt on. `esikatselu` on kevyt rengas juuri
-     * napautetun ruudun ympärillä: se kertoo, mistä alla oleva selite
-     * puhuu. Ne voivat olla eri ruuduissa yhtä aikaa, ja juuri siksi
-     * ne ovat eri luokkia.
-     */
-    const esikatselussa = this.linssiEsikatselu !== undefined;
-    for (const nappi of this.linssiValikko.querySelectorAll('.linssi-liuskat button')) {
-      const tunnus = nappi.dataset.linssi || null;
-      const paalla = tunnus === this.linssiValittu;
-      nappi.classList.toggle('paalla', paalla);
-      nappi.classList.toggle('esikatselu', esikatselussa && tunnus === this.linssiEsikatselu);
-      nappi.setAttribute('aria-pressed', String(paalla));
-    }
-    if (!this.linssiTiedot) return;
-    this.linssiTiedot.replaceChildren();
-    // Napautettu ruutu selitetään; ilman napautusta selite kertoo
-    // päällä olevasta linssistä kuten ennen.
-    const tunnus = esikatselussa ? this.linssiEsikatselu : this.linssiValittu;
-    const linssi = this.linssiTunnuksella(tunnus);
-    if (!linssi && tunnus && this.linssiTuki?.omistus?.hiomassa?.(tunnus)) {
-      // Hiomassa optikolla: nimi rekisteristä, ei aktivointia.
-      const nimi = this.linssiTuki.omistus.hiomassaNimi?.(tunnus) ?? tunnus;
-      this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', nimi));
-      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt',
-        'Hiomassa optikolla. Linssi tulee laukkuun käyttöön, kun se on valmis — kerran nähtyä maailmaa ei oteta pois.'));
-      this.havaitseLinssiTietojenVaihto();
-      return;
-    }
-    if (!linssi) {
-      // "Ei linssiä" on napautettuna yhtä lailla varuste: sillä on nimi
-      // ja selite, ja sen Aktivoi-nappi palauttaa paljaan kartan.
-      if (esikatselussa) this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', 'Paljain silmin'));
-      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.'));
-      if (esikatselussa) this.lisaaLinssinAktivointi(null, null);
-      this.havaitseLinssiTietojenVaihto();
-      return;
-    }
-    this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', linssi.nimi));
-    this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', linssi.lyhyt));
-    if (esikatselussa) this.lisaaLinssinAktivointi(tunnus, linssi);
-    this.havaitseLinssiTietojenVaihto();
-
-    /*
-     * LÄHDELINKKI POISTETTU VALIKOSTA (omistaja 5.8.2026: "poista myös,
-     * mistä tämä tieto on, linkki").
-     *
-     * Tässä oli nappi, joka avasi aineiston nimen, lisenssin ja
-     * hakupäivän. Se oli valikossa väärässä paikassa kahdesta syystä:
-     * valikko on säädin eikä lukusali, ja täysleveä tekstinappi rikkoi
-     * keskitetyn ladelman.
-     *
-     * NIMEÄMINEN EI KADONNUT. Molempien nykyisten linssien aineistot
-     * (Natural Earth ja ETOPO1) ovat luettelossa js/lahteet.js:ssä, joka
-     * aukeaa ylärivin logosta — ja siellä ne ovat täydellisinä
-     * merkintöinä lisensseineen. Jos joskus tulee CC BY -aineistoon
-     * perustuva linssi, sen nimeäminen kuuluu sinne, ei tähän.
-     */
-  }
-
-  /**
-   * AKTIVOI-NAPPI SELITTEEN ALLE (omistaja 6.9.2026: *"Tee aktivoi
-   * tekstistä nappi."*).
-   *
-   * Kaksivaiheisuus on ennallaan (omistaja 5.9.2026: *"kun linssi
-   * klikataan matkalaukussa niin silloin päivittyy vasta selite teksti
-   * ... mitä klikkaamalla linssi menee päälle ja matkalaukku
-   * sulkeutuu"*) — vain painike vaihtoi muotoa. Sana oli ennen ladottu
-   * selitekappaleen perään tekstilinkin näköisenä ja oli yhden
-   * tekstirivin korkuinen: laukun ainoa varsinainen toiminto ei näyttänyt
-   * napilta eikä osunut sormeen. Nyt se on OMA LOHKONSA selitteen alla,
-   * messinkireunaisena ja 44 pikselin korkuisena (css .linssi-aktivoi).
-   *
-   * Päällä olevan linssin kohdalla nappi sanoo "Ota pois" ja kytkee
-   * linssin pois (valitseLinssi(null)) — sama nappi, käänteinen suunta.
-   * Poiskytkentä säilyy siis samassa kohdassa kuin ennenkin; siksi nappi
-   * ei ole disabloitu "Käytössä"-teksti.
-   *
-   * aria-label kertoo, MITÄ aktivoidaan: pelkkä "Aktivoi" ei sitä kerro.
-   *
-   * @param {string|null} tunnus esikatseltu linssi (null = paljain silmin)
-   * @param {object|null} linssi linssimoduuli, jos tunnus osoittaa sellaiseen
-   */
-  lisaaLinssinAktivointi(tunnus, linssi) {
-    const paalla = Boolean(tunnus) && tunnus === this.linssiValittu;
-    const nappi = html('button', `linssi-aktivoi${paalla ? ' pois' : ''}`,
-      paalla ? 'Ota pois' : 'Aktivoi');
-    nappi.type = 'button';
-    const nimi = linssi?.nimi ?? 'Paljain silmin';
-    if (paalla) nappi.setAttribute('aria-label', `Ota linssi ${nimi} pois käytöstä`);
-    else if (linssi) nappi.setAttribute('aria-label', `Aktivoi linssi ${nimi}`);
-    else nappi.setAttribute('aria-label', 'Katso karttaa paljain silmin');
-    /*
-     * Nappi tulee selitteen JÄLKEEN tietolohkoon, ei kappaleen sisään:
-     * kappale on virke ja nappi on toiminto. Kutsuja on siksi jo
-     * latonut selitteen paikalleen, kun tänne tullaan.
-     */
-    this.linssiTiedot.appendChild(nappi);
-    nappi.addEventListener('click', () => this.aktivoiLinssi(paalla ? null : tunnus));
-    return nappi;
-  }
-
-  /**
-   * Selitteen vaihto häivytetään sisään (css: .linssi-tiedot.vaihtui).
-   * Luokka otetaan pois ja pannaan takaisin, jotta sama animaatio
-   * lähtee alusta joka napautuksella; välissä oleva asettelun luku
-   * pakottaa selaimen huomaamaan muutoksen. Reduced motion nollaa
-   * keston tyylitiedostossa, joten tästä ei tarvitse kysyä.
-   */
-  havaitseLinssiTietojenVaihto() {
-    const lohko = this.linssiTiedot;
-    if (!lohko?.classList) return;
-    lohko.classList.remove('vaihtui');
-    void lohko.offsetWidth;
-    lohko.classList.add('vaihtui');
-  }
-
   /**
    * Selitekortti kartan nurkassa: linssin nimi, värilaput selityksineen,
    * mahdolliset askeleet ja lähdemerkintä.
@@ -19342,6 +19674,14 @@ export class UI {
       return;
     }
     /*
+     * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x, ensin Topografia; linssimoduulin `valikko`):
+     * oikean yläkulman nimipilleri poistuu, ja sen paikalle tulee OHJAUSNAPPI-neliö, jonka valikossa ylimpänä on
+     * selitteen kytkin (Topografia: Korkeustasot) ja sen alla Sulje linssi. Selitekortti on silloin kokonaan
+     * piilossa, kunnes kytkin avaa sen; kortin napautus sulkee sen kuten ennenkin.
+     */
+    const valikossa = Boolean(linssi.valikko);
+    void this.piirraLinssinHampurilainen(valikossa ? linssi : null);
+    /*
      * Selite avautuu ja sulkeutuu napauttamalla, ja kutistettuna siitä
      * jää näkyviin vain linssin nimi. Aloitustila on kutistettu: linssin
      * päällä kartta on se, jota katsotaan, ja värilaatikot ovat
@@ -19369,10 +19709,15 @@ export class UI {
      * kumpi tila on päällä. Otsikkotaso säilyy sen ympärillä.
      */
     const otsikko = html('h2');
-    const otsikkoNappi = html('button', 'linssi-selite-nappi', linssi.nimi);
-    otsikkoNappi.type = 'button';
-    otsikkoNappi.addEventListener('click', () => this.vaihdaLinssiSelite());
-    otsikko.appendChild(otsikkoNappi);
+    kortti.classList.toggle('valikossa', valikossa);
+    if (valikossa) {
+      otsikko.textContent = linssi.valikko.selite ?? linssi.nimi;
+    } else {
+      const otsikkoNappi = html('button', 'linssi-selite-nappi', linssi.nimi);
+      otsikkoNappi.type = 'button';
+      otsikkoNappi.addEventListener('click', () => this.vaihdaLinssiSelite());
+      otsikko.appendChild(otsikkoNappi);
+    }
     kortti.appendChild(otsikko);
 
     let rivit = [];
@@ -19454,6 +19799,8 @@ export class UI {
     const kortti = this.linssiSelite;
     if (!kortti) return;
     kortti.classList.toggle('pieni', this.linssiSelitePieni);
+    // Hampurilaisen linssillä kutistettua nimilappua ei ole: kortti on piilossa, kunnes valikon kytkin avaa sen.
+    kortti.hidden = kortti.classList.contains('valikossa') && this.linssiSelitePieni;
     kortti.querySelector('.linssi-selite-nappi')
       ?.setAttribute('aria-expanded', String(!this.linssiSelitePieni));
   }
@@ -19461,6 +19808,43 @@ export class UI {
   suljeLinssiSelite() {
     this.linssiSelite?.remove();
     this.linssiSelite = null;
+    void this.piirraLinssinHampurilainen(null);
+  }
+
+  /**
+   * Kartan päälle piirtyvän linssin hampurilainen oikeaan yläkulmaan (js/aikajana-valikko.js luoLinssivalikko,
+   * PANEELI (LASI) -pohja, nappi OHJAUSNAPPI-neliönä). `null` purkaa sen. Rakennetaan uudelleen vain linssin
+   * vaihtuessa, ei joka selitteen piirrolla, jotta auki oleva valikko ei sulkeudu kesken. Valikkomoduuli ladataan
+   * vasta tarvittaessa kuten aikajanakin (js/aikajana-valikko.js ei ole yhden tiedoston version ydinlistalla).
+   */
+  async piirraLinssinHampurilainen(linssi) {
+    const vanha = this.linssiHampurilainen;
+    if (vanha && vanha.tunnus === linssi?.tunnus && vanha.kotelo.isConnected) return;
+    vanha?.pura();
+    this.linssiHampurilainen = null;
+    const pyynto = (this.linssiHampurilainenPyynto = (this.linssiHampurilainenPyynto ?? 0) + 1);
+    if (!linssi || !this.mapPane) return;
+    const { luoLinssivalikko } = await import('./aikajana-valikko.js');
+    // Linssi ehti vaihtua tai sulkeutua latauksen aikana: tuoreempi kutsu hoitaa napin.
+    if (pyynto !== this.linssiHampurilainenPyynto || this.linssiHampurilainen) return;
+    const valikko = luoLinssivalikko({
+      ui: this,
+      kohdat: [
+        {
+          luokka: 'linssi-valikko-selite',
+          teksti: linssi.valikko.selite ?? 'Selite',
+          lue: () => !this.linssiSelitePieni,
+          kirjoita: (auki) => this.vaihdaLinssiSelite(!auki),
+        },
+        { luokka: 'linssi-valikko-sulje', teksti: 'Sulje linssi', teko: () => this.valitseLinssi(null) },
+      ],
+    });
+    valikko.tunnus = linssi.tunnus;
+    valikko.kotelo.classList.add('linssi-karttavalikko');
+    // Kartan oma napautuskuuntelija kutistaisi päiväkirjan (sama syy kuin selitekortilla).
+    valikko.kotelo.addEventListener('click', (e) => e.stopPropagation());
+    this.mapPane.appendChild(valikko.kotelo);
+    this.linssiHampurilainen = valikko;
   }
 
   /**
@@ -19504,6 +19888,11 @@ export class UI {
   showWinner() {
     clearTimeout(this.botTimer);
     clearTimeout(this.automaattiheittoAjastin);
+    // Rahat loppuivat (yksinpeli): loppukortti voittoruudun paikalla.
+    if (!this.game.winner && this.game.matkaPaattyi) {
+      this.naytaMatkanLoppu();
+      return;
+    }
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
@@ -19521,7 +19910,46 @@ export class UI {
     // Läpipeluu on saavutus vasta voitossa — ei vaellustilan välietapissa.
     natiiviSaavutus(NATIIVI_SAAVUTUKSET.lapipeluu);
     this.paivitaJakonappi();
+    // KORTTI-pohja (peruttava ?kortti=vanha); sama dialogi palvelee loppukorttia.
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
+  }
+
+  /**
+   * LOPPUKORTTI (talouden vaihe 1, omistaja 27.9.2026 klo 10.3x): rahat
+   * loppuivat eikä kassa noussut kahdessa vuorokaudessa. Sama dialogi kuin
+   * voitossa, mutta otsikko, teksti ja napit ovat matkan päättymisen:
+   * "Jatka viimeisestä tallennuksesta" (turvatallennus ennen rahojen
+   * loppumista, js/main.js) ja "Uusi peli".
+   */
+  naytaMatkanLoppu() {
+    const g = this.game;
+    const loppu = g.matkaPaattyi;
+    const p = g.players.find((x) => x.id === loppu.pelaaja) ?? g.player;
+    document.getElementById('winner-title').textContent = 'Matka päättyi';
+    const paikka = loppu.kaupunki ? `kaupungissa ${loppu.kaupunki}` : 'matkalla';
+    const maat = new Set((p.findMaa ?? []).filter(Boolean));
+    this.typeText(
+      document.getElementById('winner-text'),
+      `Rahat loppuivat ${paikka}, matkan ${loppu.paiva}. päivänä. `
+        + `Laukussa ${p.finds?.length ?? 0} löytöä${maat.size ? ` ${maat.size} maasta` : ''} ja ${p.stars ?? 0} unohdettua aarretta.`,
+      'winner',
+    );
+    const roamBtn = document.getElementById('winner-roam');
+    const nimi = roamBtn.querySelector('span:last-child');
+    const vanhaNimi = nimi?.textContent;
+    const turva = this.onJatkaTurvasta && this.turvaOlemassa?.();
+    roamBtn.hidden = !turva;
+    if (nimi) nimi.textContent = 'Jatka viimeisestä tallennuksesta';
+    roamBtn.onclick = () => {
+      if (nimi && vanhaNimi) nimi.textContent = vanhaNimi;
+      this.onJatkaTurvasta?.();
+    };
+    this.paivitaJakonappi();
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
+    if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
   }
 
   /**
@@ -19724,7 +20152,7 @@ export class UI {
     };
     const { effect } = kortti;
     this.eventEffect.textContent = effect?.kind === 'raha'
-      ? (effect.amount >= 0 ? `Kukkaroon +${effect.amount} puntaa.` : `Kukkarosta ${effect.amount} puntaa.`)
+      ? (effect.amount >= 0 ? `Kukkaroon +£${effect.amount}.` : `Kukkarosta \u2212£${-effect.amount}.`)
       : (selitteet[effect?.kind] ?? '');
     this.eventText.textContent = '';
     this.typeText(this.eventText, kortti.text, 'event');
@@ -19796,11 +20224,19 @@ export class UI {
    * PUUTTUVA TIEDOSTO ON HILJAINEN: kytkentä on pelissä ennen kuin
    * mp3 on generoitu (.github/workflows/generoi-musiikki.yml), ja
    * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
+   *
+   * SAMA PAIKKA MATKAN AIHEILLE (musiikkisuunnitelma 26.9.2026):
+   * aloituslento, saapumistunnus ja loppu soivat tämän kautta
+   * (MATKAN_AIHEET). Taso on sama AARRE_MUSIIKIN_VOIMA: viimeistellyt
+   * raidat ovat paletin tavoin noin −11 LUFS:ssä
+   * (tools/viimeistele-musiikki.mjs), joten korjausta ei tarvita.
+   *
+   * @returns {?HTMLAudioElement} soiva aihe, tai null jos se jäi pois
    */
   soitaAarreMusiikki(lahde) {
     // Paljastusaihe on musiikkia: oma kytkin vaientaa sen erikseen
     // (Raamattu, VIAT v1672) — äänimaisema ja tehosteet jatkavat.
-    if (!sfx.enabled || !musiikkiPaalla()) return;
+    if (!sfx.enabled || !musiikkiPaalla()) return null;
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
@@ -19853,8 +20289,11 @@ export class UI {
      * ja hiljennys puretaan heti — juhla ilman fanfaaria on parempi
      * kuin fanfaari, joka jyrää huudahduksen yli.
      */
-    if (!musiikkiSaaSoida(audio)) { ohi(); return; }
+    if (!musiikkiSaaSoida(audio)) { ohi(); return null; }
     audio.play().catch(ohi);
+    // Viimeinen pääaarre: matkan loppuaihe jatkaa tämän perään.
+    if (lahde === AARRE_MUSIIKKI.paa) this.ajastaMatkanLoppu(audio);
+    return audio;
   }
 
   /** Katkaisee soivan aarremusiikin ja purkaa taustan hiljennyksen. */
@@ -19872,6 +20311,87 @@ export class UI {
     // elementin kiinni destinationissa jokaisen aarteen jälkeen.
     irrotaMusiikinVahvistin(audio);
     palautaAmbienssi(AARRE_MUSIIKIN_SYY);
+  }
+
+  /**
+   * SAAPUMISTUNNUS UUTEEN KAUPUNKIIN (musiikkisuunnitelma 26.9.2026;
+   * vaihe 2: kaikki kymmenen maanosaa, js/kaupunkimusiikki.js
+   * SAAPUMISTUNNUKSET ja kaupunginMaanosa).
+   *
+   * Kutsuja (ennakoiAmbienssi) on jo todennut, että kaupungissa ei ole
+   * käyty tällä matkalla. Tunnus EI KESKEYTÄ soivaa aihetta: jos
+   * aloituslennon tai aarteen aihe soi vielä, tunnus jää pois — aarre
+   * sen sijaan saa katkaista tunnuksen (soitaAarreMusiikki pysäyttää
+   * edellisen). Aloituslennon kohde ei saa tunnusta lainkaan: lento
+   * päättyy siihen omalla aiheellaan (ks. run, kaydytEnnenSiirtoa).
+   */
+  soitaSaapumistunnus(city) {
+    if (!city || this.aarreMusiikki || this.aloituslentoKesken || this.radioPaalla()) return;
+    const maa = this.game.pack?.map?.cityCountry?.[city.id] ?? null;
+    const tunnus = saapumistunnus(city.id, maa);
+    if (tunnus) this.soitaAarreMusiikki(tunnus);
+  }
+
+  /**
+   * KOHTAAMISEN TULOS (musiikkisuunnitelma 26.9.2026, vaihe 2):
+   * `musa-ratkaisu` oikeasta vastauksesta, `musa-epaonnistuminen`
+   * väärästä tai ajan loppumisesta. Kutsuja on js/visa.js (answerQuiz
+   * ja timeUp) ja vain kohtaamisen kysymyksessä (onKohtaaminen).
+   *
+   * EI KATKAISE: sama sääntö kuin saapumistunnuksella. Jos aarre- tai
+   * matkan aihe soi yhä, tulos jää pois. Toisin päin aarre voittaa:
+   * kun oikea vastaus avaa aarteen, paljastuksen aihe (playTokenReveal
+   * → soitaAarreMusiikki) katkaisee ratkaisun hetken päästä, ja juuri
+   * niin kuuluu — löytö on isompi hetki kuin oikea vastaus.
+   *
+   * Oikein/väärin-tehosteet (sfx correct/wrong/timeout) soivat
+   * ennallaan; tämä on musiikkia niiden päällä, joten musiikin kytkin
+   * ja säädin koskevat sitä soitaAarreMusiikin kautta.
+   *
+   * @param {boolean} oikein
+   */
+  soitaKohtaamisenTulos(oikein) {
+    if (this.aarreMusiikki || this.radioPaalla()) return;
+    this.soitaAarreMusiikki(oikein ? MATKAN_AIHEET.ratkaisu : MATKAN_AIHEET.epaonnistuminen);
+  }
+
+  /**
+   * MATKAN LOPPU (musiikkisuunnitelma 26.9.2026: `musa-loppu`, "matkan
+   * loppu, kaikki aarteet"). Kun viimeinen pääaarre paljastuu, sen
+   * fanfaari soi ensin loppuun ja loppuaihe jatkaa perään — kaksi
+   * aihetta päällekkäin olisi sotku, ja katkaistu fanfaari veisi
+   * löydöltä sen hetken.
+   *
+   * Kerran pelikerrassa. Jos toinen aihe ehtii paikalle ennen kuin
+   * fanfaari loppuu, loppuaihe jää pois eikä katkaise sitä.
+   *
+   * @param {?HTMLAudioElement} aihe soiva pääaarteen aihe
+   */
+  ajastaMatkanLoppu(aihe) {
+    if (!aihe || this.katselu || this.matkanLoppuSoitettu) return;
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    if (kaikki.length === 0 || loydetyt.length < kaikki.length) return;
+    this.matkanLoppuSoitettu = true;
+    let jatkettu = false;
+    const jatka = () => {
+      if (jatkettu) return;
+      jatkettu = true;
+      if (this.dead || this.radioPaalla()) return;
+      if (this.aarreMusiikki && this.aarreMusiikki !== aihe) return;
+      this.soitaAarreMusiikki(MATKAN_AIHEET.loppu);
+    };
+    // Myös virhe jatkaa: puuttuva fanfaari ei saa viedä loppuaihetta.
+    aihe.addEventListener('ended', jatka);
+    aihe.addEventListener('error', jatka);
+  }
+
+  /** Kaikkien pelin maailmojen käydyt kaupungit (saapumistunnus). */
+  kaydytKaupungit() {
+    const kaydyt = new Set();
+    for (const maailma of this.game.worlds?.values?.() ?? []) {
+      for (const id of maailma.visited ?? []) kaydyt.add(id);
+    }
+    return kaydyt;
   }
 
   /**
@@ -20146,7 +20666,7 @@ export class UI {
           ? `${mannerNimi.toUpperCase()} · UNOHDETTU AARRE` : 'UNOHDETTU AARRE',
         // Pääaarteen arvo on kiinteä eikä revealToken arvo sitä
         // (arvoAarteenArvo antaa tähdelle laattataulun nollan).
-        alanauha: `Arvo ${STAR_PRIZE} puntaa`,
+        alanauha: `Arvo £${STAR_PRIZE}`,
         leima: 'Löydetty',
         leimaPvm: `${nyt.getDate()} · ${KUUT[nyt.getMonth()]}`,
       };
@@ -20164,7 +20684,7 @@ export class UI {
       caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     }
     caption.appendChild(html('strong', '', token.name));
-    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
+    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+£${arvo}`));
     /*
      * FAKTA ON OPPIMISTEKSTI (Raamattu: *"Löytöteksti: lyhyt tosi
      * fakta aarteesta"*; omistajan leiskapäätös 28.8.2026 nosti sen
@@ -20173,6 +20693,11 @@ export class UI {
      * kenttää rivi jää pois eikä kortti muutu.
      */
     if (token.fakta) caption.appendChild(html('p', 'reveal-fakta', token.fakta));
+    /*
+     * EI HAVAINNEKUVA-MERKKIÄ AARREKUVAN PÄÄLLÄ (omistaja 27.9.2026 klo
+     * 18.3x): aarrekuvat ovat tekoälyn tuottamia, mutta sen kertovat
+     * Tekijät ja lähteet -sivu ja kuvan lähderivi — ei paljastuskortti.
+     */
     /*
      * Tarinakaaren aarreteksti paljastuksen alle: kätkön löytyessä
      * kaaren henkilö sulkee kohtaamisen ja jättää auki jäävän vihjeen
@@ -20507,8 +21032,29 @@ export class UI {
     if (this.busy || this.dead) return;
     this.busy = true;
     this.actionsEl.dataset.busy = 'true';
+    /*
+     * Käydyt kaupungit ENNEN tekoa: peli kirjaa saapumisen käydyksi jo
+     * teossa (js/game.js visitCity), joten saapumistunnus
+     * (ennakoiAmbienssi) ei muuten tietäisi, oliko kaupunki uusi.
+     * Lähtövalinnalle ei kirjata mitään: aloituslennon kohde saa
+     * lennon oman aiheen eikä tunnusta sen päälle.
+     */
+    this.kaydytEnnenSiirtoa = this.game.phase === 'pickstart' ? null : this.kaydytKaupungit();
     try {
+      // Tekijä ennen tekoa: vuoro voi vaihtua teon aikana (moninpeli, botit).
+      const tekija = this.game.player;
+      const lahtovalinta = this.game.phase === 'pickstart';
       const result = fn();
+      /*
+       * PELISTREAK (talous 5b, omistaja 27.9.2026): päivän ensimmäinen
+       * onnistunut teko kirjaa pelipäivän laitteen paikallisella päivällä
+       * (js/game.js kirjaaPelipaiva; botit ja lähtövalinta eivät kirjaa).
+       */
+      if (!(result && result.ok === false) && !lahtovalinta) {
+        const nyt = new Date();
+        const paivays = `${nyt.getFullYear()}-${String(nyt.getMonth() + 1).padStart(2, '0')}-${String(nyt.getDate()).padStart(2, '0')}`;
+        this.game.kirjaaPelipaiva?.(paivays, tekija);
+      }
       if (result && result.ok === false) {
         this.showError(result.error);
         // Peruuntunut lento ei saa jättää kalvolippua päälle mykistämään
@@ -23633,7 +24179,17 @@ export class UI {
     for (const event of events) {
       sfx.play(EVENT_SOUND[event.kind] ?? 'turn');
       const box = this.buildToast(event);
-      if (event.tilanne === 'peli.vararikko.pankkiapu') {
+      if (event.tilanne === 'peli.vararikko.varoitus') {
+        ilmoitaLivianTunne(
+          { tunne: 'vakava', voimakkuus: 0.55 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.streak') {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.5 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.vararikko.selvisi') {
         ilmoitaLivianTunne(
           { tunne: 'lammin', voimakkuus: 0.5 },
           { lahde: 'peli', tunnus: event.tilanne },

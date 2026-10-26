@@ -1,0 +1,173 @@
+{
+ "kaupunki": "cooberpedy",
+ "kaupunkiQ": "Q779188",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q1226474",
+  "Q120192",
+  "Q1193414",
+  "Q1517727"
+ ],
+ "kohteet": [
+  {
+   "q": "Q1226474",
+   "nimi": "Dingoaita",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -28.99889,
+   "lon": 141.00056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dingo fence Coober pedy.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dingo_fence_Coober_pedy.jpg?width=1280",
+     "tekija": "Foramparikh21",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dingo_fence_Coober_pedy.jpg",
+     "selite": "Dingoaita halkoo Etelä-Australian aavikkoa tuhansia kilometrejä pitkänä rajana lampaiden ja villikoirien välillä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dingo Barrier fence, near Bell, Queensland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dingo_Barrier_fence%2C_near_Bell%2C_Queensland.jpg?width=1280",
+     "tekija": "JulieMay54",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dingo_Barrier_fence%2C_near_Bell%2C_Queensland.jpg",
+     "selite": "Dingoaidan kylttejä ja portteja on pitkin aitaa, joka on maailman pisimpiä rakennelmia.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q120192",
+   "nimi": "Stuartin valtatie",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.62,
+   "lon": 133.345,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Australia Dia Fund 1990 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_Dia_Fund_1990_-_panoramio.jpg?width=1280",
+     "tekija": "FOLIEN FISCHER",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Australia_Dia_Fund_1990_-_panoramio.jpg",
+     "selite": "Stuartin valtatie halkoo punaista sisämaata Adelaidesta Darwiniin ja kulkee Coober Pedyn kautta.",
+     "leveys": 4405,
+     "korkeus": 2894,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Stuart Highway Solar Car.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuart_Highway_Solar_Car.JPG?width=1280",
+     "tekija": "Kohei SAGAWA, Hideki KIMURA",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stuart_Highway_Solar_Car.JPG",
+     "selite": "Kenguruvaroitus ja punainen aavikko kuuluvat Stuartin valtatien maisemaan.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1193414",
+   "nimi": "Oodnadatta",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -27.53333,
+   "lon": 135.43333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Canoe-Hire-Pink-Roadhouse-Oodnadatta.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canoe-Hire-Pink-Roadhouse-Oodnadatta.JPG?width=1280",
+     "tekija": "Kr.afol",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canoe-Hire-Pink-Roadhouse-Oodnadatta.JPG",
+     "selite": "Oodnadattan vaaleanpunainen Pink Roadhouse on aavikkotien tunnetuin tienvarsipysäkki.",
+     "leveys": 1249,
+     "korkeus": 750,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Camel Team, Oodnadatta, 1914 (14778653351).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camel_Team%2C_Oodnadatta%2C_1914_(14778653351).jpg?width=1280",
+     "tekija": "State Library of South Australia from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Camel_Team%2C_Oodnadatta%2C_1914_(14778653351).jpg",
+     "selite": "Kamelikaravaanit toivat tarvikkeet sisämaan asemille ennen rautateitä ja maanteitä.",
+     "leveys": 1200,
+     "korkeus": 968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1517727",
+   "nimi": "Painted Desert",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -27.9059,
+   "lon": 134.836,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mintabie painted desert (3738906428).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mintabie_painted_desert_(3738906428).jpg?width=1280",
+     "tekija": "Dietmar Down Under",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mintabie_painted_desert_(3738906428).jpg",
+     "selite": "Painted Desertin värikkäät kalliot ja savikerrokset hehkuvat punaisena, keltaisena ja valkoisena.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Coober Pedy - panoramio (1).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coober_Pedy_-_panoramio_(1).jpg?width=1280",
+   "tekija": "Pavel Špindler",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coober_Pedy_-_panoramio_(1).jpg",
+   "selite": "Coober Pedy näkyy ylhäältä matalana ja hajanaisena, ja suuri osa asunnoista on maan alla.",
+   "leveys": 1994,
+   "korkeus": 1509,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Coober Pedy, South Australia (13292909895).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coober_Pedy%2C_South_Australia_(13292909895).jpg?width=1280",
+   "tekija": "Travel & Shit from Brighton, UK",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coober_Pedy%2C_South_Australia_(13292909895).jpg",
+   "selite": "Coober Pedyn tulotie ja jättikyltti kertovat opaalikaupungin kaivoshistoriasta.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

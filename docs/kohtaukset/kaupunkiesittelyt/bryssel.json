@@ -1,0 +1,43 @@
+[
+ {
+  "id": "bryssel",
+  "esittely": "Kartan alue on Brysselin vanhakaupunki. Grand-Place sai nykyisen ilmeensä, kun ranskalaiset pommittivat sen 1695 ja killat rakensivat talonsa uudelleen. Manneken Pis on vuonna 1619 tilattu pronssipatsas, joka on noin 55 senttiä korkea. Galeries Royales Saint-Hubert avattiin 1847 ja sen lasikatto peittää käytävät.\n\nPörssipalatsi rakennettiin 1868–1873 ja Oikeuspalatsi 1866–1883 Joseph Poelaertin suunnitelmien mukaan. Kuninkaanpalatsin paikalla ollut Coudenbergin linna paloi 1731, ja nykyinen julkisivu on 1900-luvun alusta. Mont des Artsin puisto ja kirjasto rakennettiin 1950- ja 1960-luvuilla. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 653,
+  "kappaleita": 2,
+  "lahteet": [
+   {"url": "https://en.wikipedia.org/wiki/Grand-Place", "title": "Wikipedia: Grand-Place", "tukee": "ranskalainen pommitus 13.8.1695 tuhosi suurimman osan; killat rakensivat uudelleen noin neljässä vuodessa"},
+   {"url": "https://www.brussels.be/grand-place-brussels", "title": "City of Brussels: Grand-Place (hakutulos)", "tukee": "pommitus 1695, suurin osa taloista tuhoutui, uudelleenrakennus killoilla"},
+   {"url": "https://en.wikipedia.org/wiki/Manneken_Pis", "title": "Wikipedia: Manneken Pis", "tukee": "pronssipatsas tilattu 1619; korkeus 55,5 cm"},
+   {"url": "https://www.vrt.be/vrtnws/en/2023/06/12/who-was-manneken-pis/", "title": "VRT NWS: Who was Manneken Pis", "tukee": "kaupunki päätti patsaasta 1619; korkeus noin 55 cm"},
+   {"url": "https://en.wikipedia.org/wiki/Galeries_Royales_Saint-Hubert", "title": "Wikipedia: Royal Saint-Hubert Galleries", "tukee": "avattiin 1847; Cluysenaar; lasikatto valurautarungolla"},
+   {"url": "https://www.erih.net/i-want-to-go-there/site/galeries-royales-de-saint-hubert", "title": "ERIH: Galeries Royales de Saint-Hubert", "tukee": "avattiin 1847; rauta-lasikatto noin 200 m pitkällä akselilla"},
+   {"url": "https://en.wikipedia.org/wiki/Brussels_Stock_Exchange", "title": "Wikipedia: Bourse Palace", "tukee": "rakennettu 1868-1873, arkkitehti Léon-Pierre Suys"},
+   {"url": "https://dominikgehl.com/belgium/brussels/palais-de-la-bourse", "title": "Dominik Gehl: Palais de la Bourse", "tukee": "1868-1873, Suys"},
+   {"url": "https://en.wikipedia.org/wiki/Palace_of_Justice,_Brussels", "title": "Wikipedia: Palace of Justice, Brussels", "tukee": "Joseph Poelaert; rakennettu 1866-1883"},
+   {"url": "https://www.altaplana.be/en/dictionary/palais-de-justice-de-bruxelles", "title": "Altaplana: Palais de Justice de Bruxelles (hakutulos)", "tukee": "Poelaert, 1866-1883"},
+   {"url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Brussels", "title": "Wikipedia: Royal Palace of Brussels", "tukee": "Coudenbergin palatsi paloi 3.2.1731; nykyinen julkisivu rakennettu 1900 jälkeen Leopold II:n aloitteesta"},
+   {"url": "https://en.wikipedia.org/wiki/Palace_of_Coudenberg", "title": "Wikipedia: Palace of Coudenberg (hakutulos)", "tukee": "tuli 1731 tuhosi palatsin lähes kokonaan; nykyinen julkisivu 1900-luvun alusta (1903 mennessä)"},
+   {"url": "https://en.wikipedia.org/wiki/Mont_des_Arts", "title": "Wikipedia: Mont des Arts", "tukee": "nykyinen puisto 1956-1969 (René Pechère); Kuninkaallinen kirjasto vihittiin 1969"},
+   {"url": "https://heritagedays.urban.brussels/en/programme/brussels/mont-des-arts-and-royal-library", "title": "Brussels Heritage Days: Mont des Arts and Royal Library (hakutulos)", "tukee": "kompleksi rakennettu 1954-1969, kirjasto valmis 1969, Pechèren puisto"}
+  ],
+  "pudotetut": [
+   "Nykyisen tekstin Senne-joen kattaminen 1867–1871 ja bulevardit: ei kahdesta lähteestä tässä ajossa, ei tekstissä",
+   "Grand-Placen Unesco-vuosi 1998 (Wikipedia + brussels.be-hakutulos; jätetty pois tilan vuoksi), kaupungintalon rakennusvuodet 1401–1455 ja aukion mitat 68 x 110 m (vain Wikipedia)",
+   "Oikeuspalatsin pinta-ala 26 000 m2 ja 'suurin 1800-luvun rakennus' (Wikipedia; altaplana vain hakutuloksessa 'reputed') sekä korkeus (116 m vs kupoli 105 m)",
+   "Manneken Pisin jäljennös 1965 ja alkuperäinen Brysselin kaupunginmuseossa, noin tuhat pukua (Wikipedia + VRT kertoo kopiosta, vuosi 1965 vain Wikipedia)",
+   "Galeries-käytävän pituus (213 m / noin 200 m) ja avauspäivä (20.6. vs 20.7.1847) -> vain vuosi 1847",
+   "Pörssipalatsin kuvanveistäjät (Rodin, Carrier-Belleuse, ristiriitaiset lähteet)",
+   "Kuninkaanpalatsin nykyisen rakennuksen aloitus 1783 ja valmistuminen 1934 (vain Wikipedia)",
+   "Mont des Artsin Vacherot'n puutarha 1910 (vain Wikipedia)"
+  ],
+  "ristiriidat": [
+   "Mont des Artsin avaus: heritagedays 1958 (ensimmäiset rakennukset), Wikipedia 1969 -> teksti 'rakennettiin 1950- ja 1960-luvuilla'",
+   "Kuninkaanpalatsin julkisivu: 'after 1900' vs valmis 1903 -> teksti '1900-luvun alusta'",
+   "Manneken Pisin korkeus: 55,5 cm (Wikipedia), 61 cm jalustan kanssa, VRT 55 cm -> 'noin 55 senttiä'",
+   "Galeries Royalesin avauspäivä: Wikipedia 20.6.1847, ERIH 20.7.1847 -> vain vuosi",
+   "Kuvanveistäjän etunimi: Jérôme / Hieronymus Duquesnoy -> nimeä ei tekstissä",
+   "ESTO: unesco.org (403); Britannica ja useat viralliset sivut eivät auenneet, osa lähteistä on hakutulosten tiivistelmiä"
+  ],
+  "muutos_sk": "Poistettu Senne-joen kattamisen, Brysselin 1873-näkökulman ('isoisän matkan aikaan'), Oikeuspalatsin 'rakenteilla' ja Mont des Artsin 'tulevat vasta 1900-luvulla' -kuvaus (nykyajan kartta). Lisätty Grand-Placen pommitus 1695, Manneken Pisin 1619, Galeries Royalesin 1847, Coudenbergin palo 1731 ja julkisivun ajoitus."
+ }
+]

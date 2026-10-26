@@ -373,6 +373,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-borgund',
+    nimio: 'Borgund',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-borgund-1117f633.jpg',
       lyhyt: 'Borgundin sauvakirkon lohikäärmepäiset katot ja tapuli vuorten edessä.',
@@ -936,7 +937,7 @@ export const HAHMOTELMA_NOR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-notodden-1b4117f6.jpg',
         lyhyt: 'Svelgfossin voimalaitoksen portti ja vuodet 1905–1907 kertova kivi.',
-        selite: 'Metalliportin vierellä on kivi, jossa lukee "Svælgfos Kraftan 1905–1907". Taustalla '
+        selite: 'Metalliportin vierellä on kivi, jossa lukee ”Svælgfos Kraftan 1905–1907”. Taustalla '
           + 'erottuu voimajohtopylväitä.',
         lahde: 'Valokuva: PeltonMan, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'PeltonMan',
@@ -987,6 +988,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-lindesnes',
+    nimio: 'Lindesnes',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-lindesnes-8977a9cc.jpg',
       lyhyt: 'Lindesnesin punavalkoinen majakka kirkkaan sinistä taivasta vasten.',
@@ -1057,6 +1059,7 @@ export const HAHMOTELMA_NOR = [
   },
   {
     id: 'hahmotelma-dovrefjell',
+    nimio: 'Dovrefjell',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/nor-nosto-dovrefjell-39500673.jpg',
       lyhyt: 'Myskihärkä laiduntaa Dovrefjellin tunturilaaksossa.',

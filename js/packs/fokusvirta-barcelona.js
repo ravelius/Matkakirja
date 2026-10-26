@@ -929,19 +929,4 @@ export const FOKUSVIRTA_BARCELONA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: NAYTTELY_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: Vigon lahden hopealasti. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta), samaan matkakirja-
-   * korttiin kuin saapumismerkintä.
-   */
-  aarremerkinta: {
-    teksti: 'Satamakapakassa laulettiin laulua lahdesta pohjoisessa, '
-      + 'jonne upposi laivasto hopeaa lasteinaan — ja joka mies vannoi '
-      + 'tietävänsä jonkun, joka melkein nosti sen. Melkein on tässä '
-      + 'maassa raskain sana. Kirjoitan laulun säkeen muistiin: "hopea '
-      + 'makaa Vigossa, kärsivällisyys sen perii."',
-  },
 };

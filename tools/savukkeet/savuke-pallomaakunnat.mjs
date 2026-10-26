@@ -14,7 +14,7 @@
  *   5. maanvaihto: asetaMaa('CHE') vaihtaa oliota ja FRA jää muistiin.
  *
  * Aineisto luetaan paikallisesta kansiosta (MAAKUNNAT=<kansio>, oletus
- * /Users/koodaus/pyramidi-poltto/maakunnat-2026-09-22a), koska sitä ei
+ * /Users/Shared/Claude/pyramidi-poltto/maakunnat-2026-09-25a), koska sitä ei
  * ole vielä ämpärissä: ämpärin maakuntapolku ohjataan kansioon.
  *
  *   PLAYWRIGHT_JS=… MAAKUNNAT=<kansio> node tools/savukkeet/savuke-pallomaakunnat.mjs
@@ -24,6 +24,7 @@ import http from 'node:http';
 import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -31,7 +32,7 @@ const { packById } = await import(`${JUURI}/js/pack.js`);
 const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const paketti = pw.webkit ? pw : (pw.default ?? pw);
 const MOOTTORI = process.env.SAVUKE_MOOTTORI ?? 'webkit';
-const MAAKUNNAT = process.env.MAAKUNNAT ?? '/Users/koodaus/pyramidi-poltto/maakunnat-2026-09-22a';
+const MAAKUNNAT = process.env.MAAKUNNAT ?? '/Users/Shared/Claude/pyramidi-poltto/maakunnat-2026-09-25a';
 const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/pallomaakunnat';
 mkdirSync(ULOS, { recursive: true });
 const DPR = Number(process.env.DPR) || 3;
@@ -60,7 +61,7 @@ const prosenttipiste = (arvot, q) => { const s = [...arvot].sort((a, b) => a - b
 
 const selain = MOOTTORI === 'webkit'
   ? await paketti.webkit.launch()
-  : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal'] });
+  : await avaaChromium({ args: ['--use-angle=metal'] });
 const ctx = await selain.newContext({ viewport: VIEWPORT, deviceScaleFactor: DPR, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
 await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, tallenne);
 const sivu = await ctx.newPage();

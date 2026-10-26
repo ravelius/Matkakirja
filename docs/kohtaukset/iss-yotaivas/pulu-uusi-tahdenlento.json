@@ -1,0 +1,84 @@
+[
+ {
+  "kysymys": "Näkyvätkö tähdenlennot avaruudesta?",
+  "vastaus": "Kyllä, mutta asemalta niitä katsotaan alaspäin. Tähdenlento syntyy, kun pieni avaruuspölyn hiukkanen palaa ilmakehässä, noin sadan kilometrin korkeudessa, eli selvästi aseman noin 400 kilometrin korkeutta alempana. Elokuussa 2011 astronautti Ron Garan kuvasi asemalta tällaisen tähdenlennon Kiinan yllä, ja NASA kutsuu kuvaa katseeksi tähdenlentoon ylhäältä. Elokuu on Perseidien aikaa: silloin Maa kulkee komeetta Swift–Tuttlen jättämän pölyparven läpi. Tähdenlento on siis ilmakehän ilmiö, ei avaruuden.",
+  "lahteet": [
+   {
+    "url": "https://science.nasa.gov/resource/looking-down-on-a-shooting-star",
+    "title": "Looking Down on a Shooting Star - NASA"
+   },
+   {
+    "url": "https://www.scientificamerican.com/article/iss-perseid-meteor/",
+    "title": "Astronaut Snaps Spectacular Meteor Photo from Space - Scientific American"
+   },
+   {
+    "url": "https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/perseids/in-depth.amp",
+    "title": "Perseids In Depth - NASA Solar System Exploration"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Perseids",
+    "title": "Perseids - Wikipedia"
+   },
+   {
+    "url": "https://www.discovermagazine.com/the-sciences/what-a-falling-star-looks-like-from-space",
+    "title": "What a falling star looks like from space - Discover Magazine"
+   },
+   {
+    "url": "https://spaceplace.nasa.gov/mesosphere",
+    "title": "Mesosphere - NASA Space Place"
+   },
+   {
+    "url": "https://www.nasa.gov/missions/station/observing-our-planet-from-low-earth-orbit/",
+    "title": "Observing our Planet from Low Earth Orbit - NASA"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+    "title": "International Space Station - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ron Garan (Expedition 28) kuvasi tähdenlennon ISS:ltä elokuussa 2011",
+    "lahde1": "NASA, Looking Down on a Shooting Star: Garan, Expedition 28, julkaisi Twitterissä 14.8.2011, kuvattu 13.8.2011 (sivun otsikkotieto 11.8.)",
+    "lahde2": "Scientific American: Garan, lauantaina 13.8.2011, twiittasi kuvan",
+    "huom": "V. Tarkkaa päivää ei käytetty (NASA-sivun otsikko 11.8. vs teksti 13.8.), vain 'elokuussa 2011'."
+   },
+   {
+    "vaite": "Kuva otettu Kiinan yllä",
+    "lahde1": "NASA: 'over China, about 250 miles (400 km) northwest of Beijing'",
+    "lahde2": "Discover: ISS 'Mongolia/China border' -rajaseudun yllä",
+    "huom": "Lähteet lähes samaa; vastauksessa vain 'Kiinan yllä'. Luku 400 km on etäisyys Pekingistä, ei korkeus; ei käytetty."
+   },
+   {
+    "vaite": "Kyseessä Perseidi",
+    "lahde1": "NASA: kuva näyttää Perseidien tähdenlennon, Perseidit ovat komeetta Swift–Tuttlen hiukkasia",
+    "lahde2": "Scientific American: Perseidit huipussaan 12.8.2011, Garan kuvasi tähdenlennon 13.8.",
+    "huom": "V. SciAm ei sano suoraan, että juuri tämä meteori oli Perseidi; NASA-sivun tulkinta riittää, mutta kuvaaja ei voi tietää varmasti (satunnaisia meteoreja on myös)."
+   },
+   {
+    "vaite": "Perseidit ovat komeetta Swift–Tuttlen pölyä ja ilmiö toistuu joka elokuu",
+    "lahde1": "NASA Solar System: Perseidit komeetta 109P/Swift-Tuttlen jäämistöä, aktiivinen 14.7.-1.9., huippu n. 13.8.",
+    "lahde2": "Wikipedia, Perseids: emokappale Swift–Tuttle, huippu elokuussa (9.-14.8.)",
+    "huom": "V."
+   },
+   {
+    "vaite": "Tähdenlento syntyy ilmakehässä noin 100 km:n korkeudessa, aseman alapuolella",
+    "lahde1": "Discover Magazine: meteorit palavat noin 100 km:n korkeudessa (kirjoittajan yksinkertaistus); ISS n. 350 km",
+    "lahde2": "NASA Space Place: meteorit palavat mesosfäärissä (hakutuloksen mukaan 48-80/85 km, ei sivulla tarkkaa rajaa)",
+    "huom": "HEIKOSTI TUETTU luku: lähteet antavat 80-120 km:n haarukan (palaminen huipussaan n. 80-85 km, näkyminen alkaa ~100-120 km). Vastauksessa 'noin sadan km' - varovasti. ISS n. 400 km vahvistettu aiemmin (NASA LEO + Wikipedia)."
+   },
+   {
+    "vaite": "Asemalta tähdenlennot nähdään alaspäin",
+    "lahde1": "NASA-kuvan otsikko 'Looking Down on a Shooting Star'",
+    "lahde2": "Discover: ISS-korkeudesta nähdään tähdenlentoja alhaalla, Garanin meteori lähellä horisonttia",
+    "huom": "V. Vastaus ei väitä paljaan silmän havaintoa: kuvan otti kamera (Garan 'photographed'); paljaasta silmästä lähteet eivät sano mitään, joten sitä ei väitetä."
+   },
+   {
+    "vaite": "SK-muokkaus",
+    "lahde1": "",
+    "lahde2": "",
+    "huom": "SK: väite että kuvan meteori oli Perseidi pois (lähteet eivät sano suoraan)"
+   }
+  ]
+ }
+]

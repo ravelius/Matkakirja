@@ -662,7 +662,7 @@ export const MAASTOKOHTEET_EST = [
       + 'suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. '
       + '5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja '
       + 'Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa '
-      + '"tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille '
+      + '”tšuudien järveä” — tšuudi oli vanha nimitys näillä mailla asuneille '
       + 'itämerensuomalaisille.',
     lahde: 'en-Wikipedia "Lake Peipus", johdanto-osa ja osio "Name" (tarkistettu 11.9.2026).',
   },
@@ -817,7 +817,7 @@ export const MAASTOKOHTEET_EST = [
       maailmankartta: { x: 6711.9, y: 958.1 },
     },
     teksti: 'Rakvere on Länsi-Virumaan pääkaupunki noin sadan kilometrin päässä Tallinnasta. '
-      + 'Vanhin nimi on Tarvanpea, "uroshärän pää", ja se mainitaan ensimmäisen kerran vuonna '
+      + 'Vanhin nimi on Tarvanpea, ”uroshärän pää”, ja se mainitaan ensimmäisen kerran vuonna '
       + '1226 Henrikin Liivinmaan kronikassa. Tanskalaiset kirjasivat paikan 1252 muotoon '
       + 'Wesenbergh, ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti; Novgorodin '
       + 'ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Samana vuonna, 18. helmikuuta, '

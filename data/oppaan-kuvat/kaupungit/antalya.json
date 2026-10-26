@@ -1,0 +1,385 @@
+{
+ "kaupunki": "antalya",
+ "kaupunkiQ": "Q6487",
+ "kohteet": [
+  {
+   "q": "Q5994531",
+   "nimi": "Kaleiçi",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 600,
+   "lat": 36.88102,
+   "lon": 30.70367,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antalya kaleiçi 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya_kalei%C3%A7i_2.jpg?width=1280",
+     "tekija": "REHBER0770",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya_kalei%C3%A7i_2.jpg",
+     "selite": "Kaleiçin vanha satama on Antalyan vanhankaupungin sydän, ja sen yllä kohoavat kalliot ja muurit.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Roman Harbour of Antalya - 2014.10 - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Harbour_of_Antalya_-_2014.10_-_panoramio_(1).jpg?width=1280",
+     "tekija": "rheins",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roman_Harbour_of_Antalya_-_2014.10_-_panoramio_(1).jpg",
+     "selite": "Roomalaisaikainen satama kätkeytyy jyrkkien kallioiden ja punakattoisten talojen väliin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antalya Kaleiçi walls in 2011 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya_Kalei%C3%A7i_walls_in_2011_06.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya_Kalei%C3%A7i_walls_in_2011_06.jpg",
+     "selite": "Vanhankaupungin muurit ja Yivli-minareetti hallitsevat Kaleiçin siluettia.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1283114",
+   "nimi": "Hadrianuksen portti",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 36.88531,
+   "lon": 30.70835,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20180111 HardrianGate 5238 (26236564008).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180111_HardrianGate_5238_(26236564008).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180111_HardrianGate_5238_(26236564008).jpg",
+     "selite": "Hadrianuksen portti on kolmikaarinen marmorinen riemukaari, joka pystytettiin keisari Hadrianuksen kunniaksi.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180111 HardrianGate 5237 (40078096422).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180111_HardrianGate_5237_(40078096422).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180111_HardrianGate_5237_(40078096422).jpg",
+     "selite": "Portti on rakennettu vanhankaupungin muuriin, jonka torni kohoaa sen vieressä.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "P9271456 Hadrians Gate, Antalya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P9271456_Hadrians_Gate%2C_Antalya.jpg?width=1280",
+     "tekija": "Joe Wallace",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:P9271456_Hadrians_Gate%2C_Antalya.jpg",
+     "selite": "Portin kautta pääsee Kaleiçin kapeille kujille.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1753844",
+   "nimi": "Yivli-minareetti",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 36.88639,
+   "lon": 30.70444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antalya - Kaleiçi.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya_-_Kalei%C3%A7i.JPG?width=1280",
+     "tekija": "Dat doris",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya_-_Kalei%C3%A7i.JPG",
+     "selite": "Uurteinen Yivli-minareetti on Antalyan tunnetuin maamerkki ja hallitsee vanhankaupungin kattoja.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yivli Minare Mosque 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yivli_Minare_Mosque_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yivli_Minare_Mosque_04.jpg",
+     "selite": "Minareetin tiilirunko on koristeltu uurretuilla pylväillä seldžukkiajalta.",
+     "leveys": 2294,
+     "korkeus": 3723,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q719815",
+   "nimi": "Perge",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 36.96035,
+   "lon": 30.85369,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Perge city overview.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perge_city_overview.jpg?width=1280",
+     "tekija": "Saffron Blaze",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perge_city_overview.jpg",
+     "selite": "Pergen muinaisen kaupungin pylväskatu halkoo raunioita Antalyan lähellä.",
+     "leveys": 4062,
+     "korkeus": 2708,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2007 0215TurkeyThursdayA0034 (3281734687).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_0215TurkeyThursdayA0034_(3281734687).jpg?width=1280",
+     "tekija": "Paul VanDerWerf from Brunswick, Maine, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_0215TurkeyThursdayA0034_(3281734687).jpg",
+     "selite": "Pergen pylväät kohoavat vielä roomalaisen kaupunkikeskuksen rauniosta.",
+     "leveys": 2816,
+     "korkeus": 2120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q633757",
+   "nimi": "Aspendos",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 36.93889,
+   "lon": 31.17222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aspendos Amphitheatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aspendos_Amphitheatre.jpg?width=1280",
+     "tekija": "Saffron Blaze",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aspendos_Amphitheatre.jpg",
+     "selite": "Aspendoksen roomalainen teatteri on yksi maailman parhaiten säilyneistä antiikin teattereista.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antalya'daki Aspendos Antik Tiyatrosu'nun içten fotoğrafı..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya'daki_Aspendos_Antik_Tiyatrosu'nun_i%C3%A7ten_foto%C4%9Fraf%C4%B1..jpg?width=1280",
+     "tekija": "YusseleE",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya'daki_Aspendos_Antik_Tiyatrosu'nun_i%C3%A7ten_foto%C4%9Fraf%C4%B1..jpg",
+     "selite": "Teatterin katsomo ja korkea lavarakennus ovat säilyneet lähes ehjinä.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2666468",
+   "nimi": "Düdenin vesiputoukset",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 36.9638,
+   "lon": 30.7269,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lower Duden Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lower_Duden_Falls.jpg?width=1280",
+     "tekija": "Saffron Blaze",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lower_Duden_Falls.jpg",
+     "selite": "Alempi Düdenin putous syöksyy kalliorinteeltä suoraan Välimereen Antalyan rannikolla.",
+     "leveys": 2832,
+     "korkeus": 3540,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Upper Duden Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Upper_Duden_Falls.jpg?width=1280",
+     "tekija": "Saffron Blaze",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Upper_Duden_Falls.jpg",
+     "selite": "Ylempi Düdenin putous laskee vihreän puiston keskellä kallioreunan yli.",
+     "leveys": 2669,
+     "korkeus": 3737,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2493895",
+   "nimi": "Konyaaltın ranta",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 800,
+   "lat": 36.865,
+   "lon": 30.64444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antalyabeach.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalyabeach.JPG?width=1280",
+     "tekija": "user:دانقولا",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalyabeach.JPG",
+     "selite": "Konyaaltın pitkä kiviranta kaartuu Antalyan lahdella Taurus-vuorten juurella.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antalya, Turkey Beaches.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya%2C_Turkey_Beaches.JPG?width=1280",
+     "tekija": "Akampfer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya%2C_Turkey_Beaches.JPG",
+     "selite": "Rannan takana kohoavat kalliot ja vuoret.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q218118",
+   "nimi": "Hıdırlıkin torni",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 50,
+   "lat": 36.88139,
+   "lon": 30.70361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antalya - Hidirlik Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya_-_Hidirlik_Tower.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya_-_Hidirlik_Tower.jpg",
+     "selite": "Hıdırlıkin pyöreä torni seisoo kalliolla vanhankaupungin laidalla meren yllä.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2007 0211TurkeySaturdayA0093 (3276657895).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_0211TurkeySaturdayA0093_(3276657895).jpg?width=1280",
+     "tekija": "Paul VanDerWerf from Brunswick, Maine, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_0211TurkeySaturdayA0093_(3276657895).jpg",
+     "selite": "Muinainen tornirakennus on peräisin roomalaiselta ajalta.",
+     "leveys": 2816,
+     "korkeus": 2120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6395079",
+   "nimi": "Kesik-minareetti",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 36.88258,
+   "lon": 30.70606,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antalya - Kesik Minare - Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya_-_Kesik_Minare_-_Temple.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya_-_Kesik_Minare_-_Temple.jpg",
+     "selite": "Kesik-minareetin raunioitunut rakennus on ollut temppeli, kirkko ja moskeija.",
+     "leveys": 3852,
+     "korkeus": 2755,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2007 0211TurkeySaturdayA0112 (3276658753).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_0211TurkeySaturdayA0112_(3276658753).jpg?width=1280",
+     "tekija": "Paul VanDerWerf from Brunswick, Maine, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_0211TurkeySaturdayA0112_(3276658753).jpg",
+     "selite": "Katkennut minareetti kohoaa Kaleiçin kujien yllä.",
+     "leveys": 2120,
+     "korkeus": 2816,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View of Konyaaltı Beach and Beydağları Mountains, Antalya.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Konyaalt%C4%B1_Beach_and_Beyda%C4%9Flar%C4%B1_Mountains%2C_Antalya.jpg?width=1280",
+   "tekija": "FingerWiki",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Konyaalt%C4%B1_Beach_and_Beyda%C4%9Flar%C4%B1_Mountains%2C_Antalya.jpg",
+   "selite": "Antalyan lahti ja Beydağları-vuoret kohoavat Välimeren rannikolla.",
+   "leveys": 4080,
+   "korkeus": 3072,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Antalya, Turkey skyline 19 February 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antalya%2C_Turkey_skyline_19_February_2022.jpg?width=1280",
+   "tekija": "Sharon Hahn Darlin",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antalya%2C_Turkey_skyline_19_February_2022.jpg",
+   "selite": "Taurus-vuoret kehystävät Antalyan kaupunkia talvisessa illassa.",
+   "leveys": 2478,
+   "korkeus": 1288,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

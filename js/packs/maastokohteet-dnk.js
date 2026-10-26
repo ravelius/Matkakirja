@@ -199,6 +199,7 @@ export const MAASTOKOHTEET_DNK = [
    * ============================================================== */
   {
     id: 'roskilden-tuomiokirkko',
+    nimio: 'Roskilde',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-roskilden-tuomiokirkko-dbb66426.jpg',
       lyhyt: 'Roskilden tuomiokirkon punatiilinen länsipääty ja kaksi tornia.',
@@ -482,6 +483,7 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'frederiksborgin-linna',
+    nimio: 'Frederiksborg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-frederiksborgin-linna-1a648f36.jpg',
       lyhyt: 'Frederiksborgin linna järven saarilla Hillerødissä.',
@@ -876,5 +878,70 @@ export const MAASTOKOHTEET_DNK = [
       + 'Legoland-huvipuistoa, elokuvia ja pelejä.',
     lahde: 'en-Wikipedia "The Lego Group", johdanto-osa ja osio "History", sekä '
       + '"Lego", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kattegat',
+    nimi: 'Kattegat',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi Kattegatin vesi on kahdessa kerroksessa?',
+      'Miksi Kattegatilla vuorovesi on niin pieni?',
+    ],
+    nappi: 'Kissan reikä Tanskan ja Ruotsin välissä',
+    // 11.2 E / 56.7 N — ulappa Jyllannin ja Ruotsin länsirannikon välissä
+    laudat: {
+      maailmankartta: { x: 6206.7, y: 1086.1 },
+      europe: { x: 426.2, y: 402.4 },
+    },
+    teksti: 'Kattegat on Tanskan ja Ruotsin välinen meri, jota rajaavat lännessä Jylland ja '
+      + 'etelässä Tanskan salmet; pohjoisessa se jatkuu Skagerrakiin. Nimi on hollantilaista '
+      + 'perua ja ilmestyy lähteisiin 1600-luvun puolivälin tienoilla: se tarkoittaa '
+      + 'suunnilleen kissan reikää tai porttia, viittauksena ahtaaseen väylään. Kattegat on '
+      + 'Pohjanmeren ja Itämeren välinen siirtymävyöhyke.',
+    lahde: 'en-Wikipedia "Kattegat", johdanto-osa ja Etymology-osio; Lex.dk (Den Store Danske) '
+      + '"Kattegat"; Viking Ship Museum Roskilde, paikannimiartikkeli (tarkistettu 16.10.2026).',
+  },
+  {
+    id: 'skagerrak',
+    nimi: 'Skagerrak',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Skagerrakin suulla ja Jyllannin edustalla tapahtui vuonna 1916?',
+      'Missä Skagerrak ja Kattegat kohtaavat?',
+    ],
+    nappi: 'Pohjanmeren ja Kattegatin yhdistäjä',
+    // 9 E / 57.8 N — ulappa Jyllannin kärjen pohjoispuolella
+    laudat: {
+      maailmankartta: { x: 6133.3, y: 1033.5 },
+      europe: { x: 384, y: 373.5 },
+    },
+    teksti: 'Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää Pohjanmeren '
+      + 'Kattegatiin. Se on noin 240 kilometriä pitkä, ja Norjan rannikon edustalla syvyys '
+      + 'ylittää 700 metriä. Nimi on hollantilaista perua: rak tarkoittaa suoraa vesiväylää, ja '
+      + 'ensimmäinen osa viittaa Tanskan pohjoiskärjessä sijaitsevaan Skageniin.',
+    lahde: 'en-Wikipedia "Skagerrak", johdanto-osa; Lex.dk (Den Store Danske) "Skagerrak" '
+      + '(tarkistettu 16.10.2026).',
+  },
+  {
+    id: 'juutinrauma',
+    nimi: 'Juutinrauma',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miksi laivojen piti maksaa tulli Juutinrauman läpi?',
+      'Mitä Tycho Brahe teki Hvenin saarella?',
+    ],
+    nappi: 'Salmi, jonka yli rakennettiin silta',
+    // 12.7 E / 55.85 N — salmen keskiosa Själlannin ja Skånen välissä (Øresund)
+    laudat: {
+      maailmankartta: { x: 6256.7, y: 1126.2 },
+      europe: { x: 455, y: 424.7 },
+    },
+    teksti: 'Juutinrauma eli tanskaksi Øresund on Tanskan ja Ruotsin rajalla oleva salmi, joka '
+      + 'erottaa Själlannin Skånesta. Se on 118 kilometriä pitkä, mutta kapeimmillaan '
+      + 'Helsingørin ja Helsingborgin välillä vain noin neljän kilometrin levyinen. Salmen yli '
+      + 'kulkee Kööpenhaminan ja Malmön yhdistävä silta- ja tunneliyhteys, joka avattiin 1. '
+      + 'heinäkuuta 2000.',
+    lahde: 'en-Wikipedia "Øresund", johdanto-osa ja Øresund Bridge; Lex.dk (Den Store Danske) '
+      + '"Øresund" (tarkistettu 16.10.2026).',
   },
 ];

@@ -1,0 +1,31 @@
+{
+ "huomio": "Ranskan taidemuseon lähestymissarja (Louvre → Orsay → Rodin), Sisältökirjuri 17.10.2026, PT:n pyyntö. Malli: ranska/lahestyminen.json (sarja[].aani kuvittain; Louvre ja Orsay äänitetty, Rodin puuttui) ja Rijksin lahestyminen.json (teksti ~425 mrk). Riippumaton Sonnet-tarkistus omilla hauilla (tarkistus-lahestyminen-20261017.md). Ääntä ei ole tehty; Rodinin puhe äänitetään kertojan pysyvällä luvalla PT:n hyväksynnän jälkeen.",
+ "rodin_puhe": {
+  "id": "ranska-rodin-puhe",
+  "sarja_otsikko": "Musée Rodin",
+  "kertojan_teksti": "Edessäsi on Hôtel Biron, Pariisin 1700-luvun kartano, jossa Rodin piti ateljeetaan vuodesta 1908. Hän lahjoitti teoksensa valtiolle, ja museo avattiin vuonna 1919. Puutarhassa istuu Ajattelija. Astu sisään, niin katsotaan, miten pronssi ja marmori heräävät eloon.",
+  "puhuttu": "Edessäsi on Hôtel Biron, Pariisin tuhatseitsemänsataaluvun kartano, jossa Rodin piti ateljeetaan vuodesta tuhatyhdeksänsataakahdeksan. Hän lahjoitti teoksensa valtiolle, ja museo avattiin vuonna tuhatyhdeksänsataayhdeksäntoista. Puutarhassa istuu Ajattelija. Astu sisään, niin katsotaan, miten pronssi ja marmori heräävät eloon.",
+  "puhuttu_merkkeja": 328,
+  "huom": "Verrokit: ranska-louvre-puhe 299 mrk, ranska-orsay-puhe 295 mrk (näkyvä teksti). 'Puutarhassa istuu Ajattelija' (Helvetin porttien sijaintia puutarhassa ei varmistettu, joten ei mainita).",
+  "lahteet": [
+   "https://en.wikipedia.org/wiki/Mus%C3%A9e_Rodin",
+   "https://en.wikipedia.org/wiki/H%C3%B4tel_Biron"
+  ],
+  "tarkistus": "OK (Hôtel Biron 1727–1732; Rodin vuokrasi huoneet 1908; lahjoitus valtiolle 1916; museo avattu 4.8.1919; Ajattelija puutarhassa)"
+ },
+ "teksti_kentta": {
+  "teksti": "Louvre on Pariisin suuri valtion taidemuseo ja entinen kuninkaanlinna: Filip II rakennutti paikalle linnoituksen noin vuonna 1190, ja palatsi avattiin kansalle museona vuonna 1793. Tunnetuimpia teoksia ovat Leonardon Mona Lisa, Veronesen Kaanaan häät ja Davidin Horatiusten vala. Pelin saleissa ovat Louvren mestariteosten lisäksi myös Orsayn museon impressionistit, kuten Monet, Renoir, Degas ja Cézanne, sekä Rodinin museon veistokset.",
+  "merkkeja": 436,
+  "tarkistus": "Muutokset LS1:n luonnokseen: 'Ranskan kansallismuseo' → 'Pariisin suuri valtion taidemuseo' (epävarma yleisnimitys); 'Rodinin veistokset' → 'Rodinin museon veistokset' (Rodinin teokset ovat Musée Rodinissa, ei Louvressa); 'palatsi avattiin kansalle museona 1793' (10.8.1793)."
+ },
+ "suositukset_olemassa_oleviin": [
+  "ranska-orsay-puhe (jo äänitetty): 'suuren kellon alla asuvat impressionistit' on epätarkka (kello on veistoshallin päädyssä); korjausehdotus 'sen holvien alla asuvat impressionistit' vaatisi uudelleenäänityksen; PT päättää.",
+  "ranska-louvre-infolappu: 'avoinna vuodesta 1793' → 'on toiminut museona vuodesta 1793' (museo oli suljettuna 1796–1801).",
+  "ranska-orsay-infolappu: 'impressionistit' → 'impressionistit ja jälki-impressionistit' (Cézanne, Van Gogh)."
+ ],
+ "aanisivu_paivitys": {
+  "pvm": "2026-10-17",
+  "ohje": "PT 17.10. 16.4x",
+  "tehty": "Äänisivun Ranska-infolaput päivitetty (julkaistu, Access-suoja ok, varmuuskopio index.html.ennen-ranska-infolaput-20261017): ranska-louvre-infolappu = hyväksytty teksti-kenttä (436 mrk, 'avattiin kansalle museona vuonna 1793'); ranska-orsay-infolappu: 'impressionistit ja jälki-impressionistit'."
+ }
+}

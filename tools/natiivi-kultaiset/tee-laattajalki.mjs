@@ -31,7 +31,7 @@ if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 
 // Koelauta: sama kartta, mutta ylimääräisiä pääaarteita (rosvolaatat on poistettu pelistä) (jaaLaatat-funktion aloituskaupunkivaihto).
 // Pinon koko pysyy kaupunkien määrässä (266).
-const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 168 };   // 277 kaupunkia (juna 193: + 8 pääkaupunkia, 193b: + Bern, Bratislava, Podgorica)
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 
 // Enter­Worldin jälkeinen kutsumäärä talteen (jako erikseen konstruktorista).

@@ -146,7 +146,7 @@ export const FOKUSKOHTEET_BIH = [
       + 'yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein '
       + 'ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen '
       + 'riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan '
-      + '"kuolemanpelossa".',
+      + '”kuolemanpelossa”.',
     lahde: 'en-Wikipedia "Stari Most", johdanto ja osio "History" '
       + '(tarkistettu 25.8.2026).',
     // Commons 25.8.2026: 2390×1600, CC BY-SA 4.0, Ramirez, 10.7.2007,
@@ -157,6 +157,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Mostarin vanhaakaupunkia ja Neretvan yli kaartuva Vanha '
         + 'silta.',
       lahde: 'Ramirez, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mostar_Old_Town_Panorama_2007.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -203,6 +206,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Blagajin tekija ja Bunan lähde pystysuoran kallioseinän '
         + 'alla.',
       lahde: 'Bosancica by MK, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Blagaj_Tekke,_the_spring_of_the_Buna_river,_Bosnia_and_Herzegovina_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -227,7 +233,7 @@ export const FOKUSKOHTEET_BIH = [
       europe: { x: 521.0, y: 723.4 },
     },
     teksti: 'Paikallisen tarinan mukaan joen nimesivät roomalaiset: '
-      + 'nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" '
+      + 'nähtyään sen ensi kerran he sanoivat una — ”ainoa”, ”yksi ainoa” '
       + '— kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on '
       + 'täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu '
       + 'kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. '
@@ -257,6 +263,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Štrbački buk on Unan suurin putous, ja se sijaitsee '
         + 'Bihaćista etelään.',
       lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%A0trba%C4%8Dki_buk_1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -292,6 +301,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Pliva Waterfall, Jajce, 2022.jpg',
       selite: 'Plivan putous keskellä Jajcen vanhaakaupunkia.',
       lahde: 'YxMb, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pliva_Waterfall,_Jajce,_2022.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -332,6 +344,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Mehmed Paša Sokolović Bridge, Višegrad.JPG',
       selite: 'Mehmed-pasha Sokolovićin silta Drinan yli Višegradissa.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mehmed_Pa%C5%A1a_Sokolovi%C4%87_Bridge,_Vi%C5%A1egrad.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -346,19 +361,18 @@ export const FOKUSKOHTEET_BIH = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Dinaaristen Alppien suurin karstijoki',
     /*
-     * 43,01972 N / 17,445 E — en-Wikipedia "Neretva". HUOM: tämä on JOEN
-     * SUU Adrianmerellä KROATIAN puolella, ei Bosnian osuus (aineiston
-     * Hylätyt-kohta 1 ja kohteen oma huomio). Piste kelpaa koko joen
-     * nimeämiseen kartalla; jos Bosnian kohdalle halutaan täsmäpiste, se
-     * on valittava erikseen esimerkiksi Mostarin tai Konjicin kohdalta.
+     * 17,74 E / 43,20 N — Neretvan Bosnian osuus Mostarin ja Čapljinan
+     * välillä. Karttavalon piste ei saa olla toisen maan alueella (kartan
+     * tarkistus 10.10.2026, A3): aiempi piste 17,445 E / 43,0197 N oli
+     * joen suulla Adrianmerellä Kroatian puolella.
      */
     laudat: {
-      maailmankartta: { x: 6414.8, y: 1682.6 },
-      europe: { x: 546.1, y: 762.2 },
+      maailmankartta: { x: 6424.7, y: 1675.3 },
+      europe: { x: 551.8, y: 757.4 },
     },
     teksti: 'Neretva on Dinaaristen Alppien suurin karstijoki: 225 '
       + 'kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen '
-      + 'arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — '
+      + 'arvellaan tulevan indoeurooppalaisesta juuresta ner, ”sukeltaa” — '
       + 'sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että '
       + 'Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen '
       + 'vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.',
@@ -374,6 +388,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Bosnia IMG 9590 Konjic Neretva river.JPG',
       selite: 'Neretva Konjicin kohdalla Bosnian puolella.',
       lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bosnia_IMG_9590_Konjic_Neretva_river.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -419,6 +436,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Maglić Sutjeskan kansallispuistossa on maan korkein '
         + 'huippu.',
       lahde: 'Darko Gavrić, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Np_sutjeska_maglic.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -453,6 +473,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Travnik western panorama.jpg',
       selite: 'Travnikin vanhaakaupunkia linnan portilta katsottuna.',
       lahde: 'Dans, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Travnik_western_panorama.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -496,6 +519,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Neum, costa.jpg',
       selite: 'Neumin rannikko on maan ainoa kosketus Adrianmereen.',
       lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Neum,_costa.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -516,7 +542,7 @@ export const FOKUSKOHTEET_BIH = [
     },
     teksti: 'Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi '
       + 'mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti '
-      + '"banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin '
+      + '”banin niittyä” — ei kylpylää, vaikka moni niin luulee. Kaupungin '
       + 'keskellä seisoo Kastel, jonka juuret ovat roomalaisessa '
       + 'linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja '
       + 'trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle '
@@ -532,6 +558,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Vrbas from Kastel Banja Luka 2019.jpg',
       selite: 'Vrbas Kastelin muurilta katsottuna Banja Lukassa.',
       lahde: '130309p, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrbas_from_Kastel_Banja_Luka_2019.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -576,6 +605,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Vjetrenica Cave Inside 2024.jpg',
       selite: 'Vjetrenican luolakäytävää Itä-Hertsegovinassa.',
       lahde: 'Bdx, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vjetrenica_Cave_Inside_2024.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -615,6 +647,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Hutovo Blato Wetlands 01.jpg',
       selite: 'Hutovo Blaton kosteikkoa Neretvan alajuoksulla.',
       lahde: 'CV1958 (Colin Viney), Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hutovo_Blato_Wetlands_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 ];

@@ -54,6 +54,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
 const ULOS = arg('ulos', process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/pallo-rantaviivat');
@@ -88,9 +89,6 @@ const VALKE_RAJA = 0.002;
 /** Pikselin luminanssiero, jota pienempi on kohinaa eikä mustetta. */
 const MUSTERAJA = 12;
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -148,8 +146,7 @@ const tallenne = JSON.stringify(peli.toJSON());
  * Kaappauksia otetaan toistakymmentä peräkkäin ohjelmistorasteroijalla;
  * ilman /dev/shm:n ohitusta kontin selain kaatuu kesken sarjan.
  */
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 const ctx = await selain.newContext({

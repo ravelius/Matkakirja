@@ -1,0 +1,241 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 250,
+ "hila": {
+  "lon0": 85,
+  "lon1": 128,
+  "lat0": 18,
+  "lat1": 50,
+  "askel": 0.15,
+  "leveys": 287,
+  "korkeus": 213,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-250.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 86.3,
+  "p99": 32.6,
+  "summa_milj": 28.65,
+  "arvio": true,
+  "korotus": 1.924
+ },
+ "omistus": {
+  "tiedosto": "omistus-250.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 250
+ },
+ "dynastiat": [
+  {
+   "avain": "shu",
+   "nimi": "Shu",
+   "vari": "#b5714d",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "wei",
+   "nimi": "Wei",
+   "vari": "#8f4a34",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "wu",
+   "nimi": "Wu",
+   "vari": "#c98a5a",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "xianbei",
+   "nimi": "Xianbeit",
+   "vari": "#3f7f7a",
+   "tyyppi": "ulkoinen"
+  }
+ ],
+ "vakiluku_milj": 25.0,
+ "aluejako": "jako",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-250.geojson (Matkakirja, CC0)",
+  "armeijat": "Armeijoiden koot: Sisältökirjurin tietopohja docs/kohtaukset/kiinan-dynastiat/punaiset-kalliot-luvut.md (96692a25f; Sanguozhi, de Crespigny Wikipedian kautta); reitit tunnetuista paikoista (kerrokset_data.py). Kaikki luvut arvioita (pelissä \"noin\"); jälkeen-luvut ovat kuvan mittasuhteita, eivät tappiolukuja. Taistelut -260, 383, 1279 ja 1644: taistelukohtaiset lähteet kunkin hetken lahteet-kentässä (vaestopinta-19/taistelut/*.md)."
+ },
+ "hetki": {
+  "nimi": "Punaiset kalliot",
+  "vuosi": 208,
+  "rajat_vuosi": 250,
+  "huom": "Omistusvärit vuoden 250 rajoista (Wei = Cao Caon Han-hovi, Wu = Sun Quan; Shun alue oli 208 vielä Liu Zhangin ja Liu Biaon perillisten). Taistelupaikka kiistanalainen (kerrokset: taistelu.alue).",
+  "armeijat": [
+   {
+    "avain": "cao-cao",
+    "nimi": "Cao Cao",
+    "dynastia": "wei",
+    "miehia": 200000,
+    "miehia_vali": [
+     150000,
+     240000
+    ],
+    "arvio": true,
+    "huom": "Noin 150 000–240 000 (Zhou Yun puhe, Sanguozhi 54 Pei; de Crespigny ~230 000 huoltoineen); pohjoisia enintään ~150 000, Jingzhoun antautuneita enintään ~70 000–80 000. 800 000 on Cao Caon oma propagandaluku.",
+    "keraus": [
+     {
+      "lon": 114.0,
+      "lat": 35.2,
+      "sade_km": 260,
+      "osuus": 0.65
+     },
+     {
+      "lon": 112.2,
+      "lat": 31.4,
+      "sade_km": 150,
+      "osuus": 0.35
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 114.35,
+      "lat": 36.3,
+      "paikka": "Ye"
+     },
+     {
+      "t": 0.18,
+      "lon": 113.82,
+      "lat": 34.03,
+      "paikka": "Xuchang"
+     },
+     {
+      "t": 0.28,
+      "lon": 112.15,
+      "lat": 32.02,
+      "paikka": "Xiangyang"
+     },
+     {
+      "t": 0.36,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.5,
+      "lat": 29.95,
+      "paikka": "Wulin (leiri)"
+     }
+    ]
+   },
+   {
+    "avain": "sun-liu",
+    "nimi": "Sun Quan ja Liu Bei",
+    "dynastia": "wu",
+    "miehia": 45000,
+    "miehia_vali": [
+     40000,
+     50000
+    ],
+    "arvio": true,
+    "huom": "Noin 40 000–50 000: Zhou Yu noin 30 000 (Sanguozhi 54), Liu Bei ja Liu Qi noin 10 000–20 000.",
+    "keraus": [
+     {
+      "lon": 117.0,
+      "lat": 30.4,
+      "sade_km": 180,
+      "osuus": 0.6
+     },
+     {
+      "lon": 114.3,
+      "lat": 30.5,
+      "sade_km": 90,
+      "osuus": 0.4
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.3,
+      "lon": 115.98,
+      "lat": 29.73,
+      "paikka": "Chaisang"
+     },
+     {
+      "t": 0.4,
+      "lon": 114.27,
+      "lat": 30.57,
+      "paikka": "Xiakou"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.62,
+      "lat": 29.87,
+      "paikka": "Punainen kallio"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.55,
+    "lon": 113.56,
+    "lat": 29.91,
+    "voittaja": "sun-liu",
+    "havio": "cao-cao",
+    "voima": 1.0,
+    "huom": "Tulilaivat polttavat Cao Caon kiinnitetyn laivaston; tauti ja vetäytyminen."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "cao-cao",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 90000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.62,
+      "lon": 112.9,
+      "lat": 29.8,
+      "paikka": "Huarongin tie"
+     },
+     {
+      "t": 0.72,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling"
+     },
+     {
+      "t": 0.8,
+      "lon": 112.15,
+      "lat": 32.02,
+      "paikka": "Xiangyang"
+     }
+    ],
+    "huom": "Häviäjä valuu takaisin pinnaksi; tappiot (tulipalo, tauti, nälkä, pakomatka) madaltavat pintaa. Tappioista EI ole lähteissä lukua: miehia on vain kuvan mittasuhde, ei esitetä lukuna."
+   },
+   {
+    "armeija": "sun-liu",
+    "t0": 0.55,
+    "t1": 0.85,
+    "miehia": 42000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.7,
+      "lon": 112.2,
+      "lat": 30.35,
+      "paikka": "Jiangling (piiritys)"
+     }
+    ],
+    "huom": "Voittajat etenevät Jianglingiin; joukot palaavat pinnaksi hitaasti."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Maa toipuu hitaasti: keräysalueiden painuma palautuu, tappiot jäävät pois."
+  }
+ }
+}

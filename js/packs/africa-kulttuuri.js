@@ -18,7 +18,7 @@ export const AFRICA_KULTTUURI = {
         tiedosto: 'Henri Matisse, 1911-12, La Fenêtre à Tanger (Paysage vu d\'une fenêtre Landscape viewed from a window, Tangiers), oil on canvas, 115 x 80 cm, Pushkin Museum.jpg',
         teksti: 'Ranskalainen taidemaalari Henri Matisse asui Tangerissa talvina '
           + '1912–1913 ja maalasi hotellihuoneensa ikkunasta näkymän yli '
-          + 'kaupungin — sininen "Ikkuna Tangerissa" kuuluu nykyään Moskovan '
+          + 'kaupungin — sininen ”Ikkuna Tangerissa” kuuluu nykyään Moskovan '
           + 'Pushkin-museon aarteisiin.',
         // Suurennoksen alle kirjoitettava parin lauseen kuvaus itse
         // teoksesta (omistajan toive).
@@ -55,7 +55,7 @@ export const AFRICA_KULTTUURI = {
       options: ['Henri Matisse', 'Claude Monet', 'Pablo Picasso', 'Vincent van Gogh'],
       correct: 0,
       fact: 'Matisse maalasi Tangerissa kahtena talvena. Hotelli-ikkunan näkymä '
-        + '"La Fenêtre à Tanger" on nähtävissä nostossa yllä.',
+        + '”La Fenêtre à Tanger” on nähtävissä nostossa yllä.',
     },
   },
   tripoli: {
@@ -204,8 +204,8 @@ export const AFRICA_KULTTUURI = {
         tiedosto: 'Island of Gorée, Senegal.jpg',
         teksti: 'Dakarin edustalla on pieni Goréen saari, jonka kautta '
           + 'orjakauppa kulki vuosisatojen ajan. Nykyään saari on Unescon '
-          + 'maailmanperintökohde ja muistopaikka, jossa "paluuttoman '
-          + 'oven" talo muistuttaa miljoonien kohtalosta.',
+          + 'maailmanperintökohde ja muistopaikka, jossa ”paluuttoman '
+          + 'oven” talo muistuttaa miljoonien kohtalosta.',
         selite: 'Goréen satama ja punakattoiset talot mereltä nähtynä. '
           + 'Rauhallinen saari on hiljainen muistomerkki: täältä laivat '
           + 'veivät ihmisiä Atlantin yli, eikä kukaan heistä palannut.',
@@ -314,7 +314,7 @@ export const AFRICA_KULTTUURI = {
         teksti: 'Ghanan oma musiikki on highlife: kitarat soivat kuin '
           + 'palmuviinin äärellä ennen vanhaan, ja puhaltimet tulivat '
           + 'mukaan tanssiorkesterien kaudella. Nimi syntyi, kun tavallinen '
-          + 'väki kuunteli aidan takaa hienoston "korkeaa elämää".',
+          + 'väki kuunteli aidan takaa hienoston ”korkeaa elämää”.',
       },
     ],
     kysymys: {
@@ -345,7 +345,7 @@ export const AFRICA_KULTTUURI = {
         tyyppi: 'teksti',
         otsikko: 'Cape jazz',
         teksti: 'Kapkaupungilla on oma jazzinsa: pianisti Abdullah '
-          + 'Ibrahimin "Mannenberg" soi 1970-luvulla niin, että siitä '
+          + 'Ibrahimin ”Mannenberg” soi 1970-luvulla niin, että siitä '
           + 'tuli hiljainen vastarintalaulu — ja kaupungin jazzklubit '
           + 'soivat yhä viikon jokaisena iltana.',
         musiikki: 'https://music.apple.com/fi/artist/abdullah-ibrahim/3924942',
@@ -748,7 +748,7 @@ export const AFRICA_KULTTUURI = {
         otsikko: 'Krio-kieli',
         teksti: 'Sierra Leonen yhteinen kieli on krio, joka syntyi '
           + 'vapautettujen orjien tuomista kielistä ja englannista. '
-          + '"Aw di bodi?" — mitä kuuluu — ymmärretään koko maassa, '
+          + '”Aw di bodi?” — mitä kuuluu — ymmärretään koko maassa, '
           + 'vaikka äidinkieliä on parikymmentä.',
       },
       {
@@ -789,7 +789,7 @@ export const AFRICA_KULTTUURI = {
         otsikko: 'Pippurirannikko',
         teksti: 'Eurooppalaiset kutsuivat tätä rannikkoa '
           + 'Pippurirannikoksi: täältä ostettiin melegueta-pippuria, '
-          + '"paratiisin jyviä", joka oli 1400-luvun Euroopassa mustaa '
+          + '”paratiisin jyviä”, joka oli 1400-luvun Euroopassa mustaa '
           + 'pippuria kalliimpaa herkkua.',
       },
       {
@@ -814,15 +814,13 @@ export const AFRICA_KULTTUURI = {
       {
         tyyppi: 'kuva',
         otsikko: 'Paluuttoman portti',
-        tiedosto: 'Porte du non-retour au Benin.jpg',
+        tiedosto: "Ouidah-Petit temple vaudou sur la plage.jpg",
         teksti: 'Ouidahin rannalla seisoo Paluuttoman portti: muistomerkki '
           + 'sillä kohdalla, josta orjalaivat lähtivät Atlantin yli. '
           + 'Rantatietä pitkin kulkee muistopolku, jonka jokainen '
           + 'pysähdys kertoo yhden vaiheen tarinasta.',
-        selite: 'Paluuttoman portti Ouidahissa: pronssireliefit kuvaavat '
-          + 'lähtijöitä, jotka eivät koskaan palanneet. Portti pystytettiin '
-          + '1995 muistuttamaan siitä, mitä täällä tapahtui.',
-        lahde: 'Wikimedia Commons (CC0)',
+        selite: "Pieni olkikattoinen vodun-temppeli seisoo Ouidahin hiekkarannalla; seinää koristavat siniset kuviot ja viereisessä tangossa on lippu.",
+        lahde: "Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)",
       },
       {
         tyyppi: 'teksti',
@@ -939,7 +937,7 @@ export const AFRICA_KULTTUURI = {
         otsikko: 'Manu Dibango ja makossa',
         tiedosto: 'LesEscales2019ManuDibango 03 (cropped).jpg',
         teksti: 'Kamerunin oma sointi on makossa, jonka saksofonisti Manu '
-          + 'Dibango vei maailmalle: hänen "Soul Makossa" -kappaleensa '
+          + 'Dibango vei maailmalle: hänen ”Soul Makossa” -kappaleensa '
           + 'rytmiä on lainattu maailmanhiteissä vuosikymmenten ajan. '
           + 'Douala tanssii makossaa yhä.',
         selite: 'Manu Dibango lavalla saksofoneineen: tumma puku, '
@@ -971,7 +969,7 @@ export const AFRICA_KULTTUURI = {
       q: 'Kuka vei Kamerunin makossa-rytmin maailmalle?',
       options: ['Miriam Makeba', 'Louis Armstrong', 'Fela Kuti', 'Manu Dibango'],
       correct: 3,
-      fact: 'Saksofonisti Manu Dibangon "Soul Makossa" (1972) teki '
+      fact: 'Saksofonisti Manu Dibangon ”Soul Makossa” (1972) teki '
         + 'makossasta maailmankuulun.',
     },
   },

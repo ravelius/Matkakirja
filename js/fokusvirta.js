@@ -151,7 +151,7 @@ import {
  */
 import {
   livianAanenKesto, livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,
-  livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
+  livianKuplanAika, livianKuplanAjastin, livianKuplat, puhuTaiKupla, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { aaniKuuluu, luennanLoppuun, stopDiaryVoice } from './luenta.js';
@@ -164,6 +164,7 @@ import {
   POLLO_KEHITTAJA_OTSAKE,
   arvoMietinta,
   polloPuheenvuoro,
+  polloPuheIlmanKuplaa,
   polloVihje,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
@@ -181,6 +182,7 @@ import {
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { suljeKaupunkipopup } from './kaupunkinosto.js';
 /*
  * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (omistaja 9.9.2026 klo
  * 18.50). Lähderivin oma maininta säilyy ennallaan; tämä on sen rinnalle
@@ -373,6 +375,18 @@ export function asetaFokusvirtaTila(game, city, tila) {
 }
 
 /* ==================== KYTKENTÄ PELIIN ==================== */
+
+/**
+ * Onko pelaaja matkansa alussa aloituskaupungissa: kaupunki on pelaajan
+ * lähtökaupunki (game.js actionPickStart, player.start), eikä laudalla ole
+ * vielä käyty missään muualla.
+ */
+export function aloituskaupungissa(ui, city) {
+  const pelaaja = ui?.game?.player;
+  const kaydyt = ui?.game?.world?.visited;
+  if (!city || !pelaaja || pelaaja.start !== city.id || !kaydyt) return false;
+  return [...kaydyt].every((id) => id === city.id);
+}
 
 /**
  * Onko tällä kaupungilla fokusvirta juuri nyt käytössä?
@@ -1164,6 +1178,14 @@ function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
 export function fokusvirtaSaapumiskupla(ui, city) {
   if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
   if (!ui?.game?.pack) return false;
+  /*
+   * ALOITUSKAUPUNGISSA EI PULUN KOMMENTTIA EIKÄ KUVIA (omistaja 11.10.2026
+   * klo 11.5x, natiivi on malli): matkan alussa pelaaja kuulee jo
+   * tuurauspaljastuksen ja isoisän luennan, joten kommentti ja PULU-CAM-
+   * pakka (naytaPulunKuvapakka alla) jäävät pois. Paluu aloituskaupunkiin
+   * myöhemmin kommentoidaan kuten muutkin saapumiset.
+   */
+  if (aloituskaupungissa(ui, city)) return false;
   /*
    * ENSISAAPUMISEN TUURAUSPALJASTUS ENSIN, KOMMENTTI SEN JÄLKEEN.
    * 29.8.2026 paljastus VOITTI ja maadoitus jäi ensimmäisessä
@@ -3558,23 +3580,22 @@ function isonKuvanRuutu(kuva, pulusta, jarjestys = 0) {
   img.className = 'fokusvirta-isokuva-kuva';
   img.decoding = 'async';
   img.draggable = false;
-  // Isossa kuvassa lyhyt teksti, kuten kartalla (js/kuvatekstit.js).
+  /*
+   * EI ENÄÄ PAPERIA EIKÄ KUVATEKSTIÄ RUUDULLA (Siirtosepän
+   * pariteettikatsaus 29.9.2026, löydös 138 / build 16, Päätoimittajan
+   * päätös: "kehys ja kuvateksti pois, pelkkä kuva" — natiivissa
+   * saapumisen valokuvakortti on jo pelkkä kuva). Ennen tässä
+   * rakennettiin erillinen `figcaption`-paperi kuvan alle (PAATOKSET 35
+   * kohta 2); sama lyhyt teksti riittää `alt`-attribuuttina, joten se
+   * on yhä saatavilla ruudunlukijalle eikä katoa kokonaan. Tämä poisti
+   * samalla Ohita-napin ja kuvatekstin päällekkäisyyden (pariteetin
+   * rivi 4): kuvassa ei ole enää tekstiä, jonka päälle Ohita voisi
+   * osua.
+   */
   img.alt = kuvatekstiLyhyt(kuva);
   asetaKuva(img, kuvanOsoite(kuva, LUENTAKUVAN_PX), kuvanVara(kuva, LUENTAKUVAN_PX));
   kotelo.appendChild(img);
   if (pulusta) kotelo.appendChild(puluCamMerkki({ luokka: 'pulucam-merkki-iso' }));
-  const teksti = kuvatekstiLyhyt(kuva);
-  if (teksti) {
-    /*
-     * KUVATEKSTI PAPERILLA (omistaja 17.9.2026, PAATOKSET 35 kohta 2).
-     * `figcaption` ON se valkoinen paperi, joka jatkuu kuvan alta;
-     * teksti itse on sen sisällä omana lohkonaan, jotta ladonta
-     * (leveysrajaus, keskitys) ei ole sama asia kuin paperin mitta.
-     */
-    const lappu = html('figcaption', 'fokusvirta-isokuva-teksti');
-    lappu.appendChild(html('span', 'fokusvirta-isokuva-selite', teksti));
-    kotelo.appendChild(lappu);
-  }
   ruutu.appendChild(kotelo);
   return ruutu;
 }
@@ -3598,6 +3619,28 @@ function isokuvanKoti() {
 }
 
 /**
+ * VAIN YKSI LAPPU KERRALLAAN (Siirtosepän pariteettikatsaus 29.9.2026,
+ * rivi 5: "valokuvakortti avautuu jo auki olevan maakortin tai
+ * kaupunkilehden päälle, jolloin kaksi lappua on auki yhtä aikaa ja
+ * alempi jää sumennettuna näkyviin"). Kutsutaan ennen kuin valokuvakortti
+ * (fokusvirran isokuva TAI fokusnoston kortti, ks. js/fokusnosto.js)
+ * nousee kartan päälle: suljetaan kaikki muut mahdolliset auki olevat
+ * laput NIIDEN OMILLA sulkufunktioilla, jotka jo animoivat sulkeutumisen
+ * (maapaneelin oma liuku, kaupunkipopupin ja lehden omat purut). Jos
+ * mikään niistä ei ole auki, funktio ei tee mitään.
+ *
+ * TAHALLISET PÄÄLLEKKÄISYYDET EIVÄT KUULU TÄHÄN: kuvan suurennos kortin
+ * päällä (avaaSuurennos) ja PULU-CAM-pakan omat kortit toistensa päällä
+ * (isonKuvanRuutu) jäävät ennalleen — ne eivät ole eri LAPPUJA vaan
+ * saman lapun sisäistä tilaa.
+ */
+export function suljeMuutAvoimetLaput(ui) {
+  ui?.pallolauta?.maapaneeli?.suljeValikko?.();
+  suljeKaupunkipopup(ui);
+  if (ui?.arrivalDialog?.open) ui.closeArrival?.();
+}
+
+/**
  * Yksi iso keskipäällys: kehys, ajastimet ja kuvanvaihto — ilman
  * sisältöä. Kutsujat päättävät, mitkä kuvat siihen ladotaan: isoisän
  * luentasarja (naytaLuentakuvasarja) tai pulun oma sarja, joka alkaa
@@ -3615,6 +3658,8 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
    */
   if (luentaOhitettu(ui, city)) return null;
   lataaTyyli();
+  // Vain yksi lappu kerrallaan (rivi 5, ks. suljeMuutAvoimetLaput yllä).
+  suljeMuutAvoimetLaput(ui);
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
   kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
@@ -3719,6 +3764,9 @@ function avaaIsoisanSarja(ui, city, pohjakuvat) {
   ui.isoisanSarjaAjettu ??= new Set();
   ui.isoisanSarjaAjettu.add(sarjanAvain(ui, city));
   const tila = avaaIsokuvaPaallys(ui, city, pohjakuvat[0]);
+  // Ohitettu luenta ei avaa päällystä (avaaIsokuvaPaallys → null): Ohita
+  // ennen äänen alkua kaatoi tämän purkuun (savuke-pollo 11.10.2026).
+  if (!tila) return false;
   const { aja, vaihda, ajastimet } = tila;
 
   vaihda(pohjakuvat[0], false);
@@ -5912,9 +5960,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
     const avain = sahkePullaAvain(tehtava, 'vinkki');
     pullaOstosnappi(ui, kotelo, {
       hinta: SAHKE_PULLA_VINKKI_HINTA,
-      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA} £) — vinkki`,
-      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA} £`,
-      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      teksti: `Osta ${nimi} Livialle (£${SAHKE_PULLA_VINKKI_HINTA}) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, £${SAHKE_PULLA_VINKKI_HINTA}`,
+      koyha: `Kassa ei riitä: ${nimi} £${SAHKE_PULLA_VINKKI_HINTA}`,
       kelluke: `${nimi} Livialle`,
       tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
       ostettu: ui.game.pullaOstettu?.(avain) === true,
@@ -5951,9 +5999,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
   const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
   pullaOstosnappi(ui, kotelo, {
     hinta: SAHKE_PULLA_LINKKI_HINTA,
-    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA} £) — suora linkki`,
-    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA} £`,
-    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    teksti: `Osta puolikas ${nimi} (£${SAHKE_PULLA_LINKKI_HINTA}) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, £${SAHKE_PULLA_LINKKI_HINTA}`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} £${SAHKE_PULLA_LINKKI_HINTA}`,
     kelluke: `puolikas ${nimi} Livialle`,
     tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
     ostettu: ostettuJo,
@@ -6349,7 +6397,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * palkkion juuri siitä.
    */
   kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
-    `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
+    `Sähkeen palkkio nyt £${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)}. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
 
   /*
@@ -6597,7 +6645,9 @@ function paljastaSahkeAarre(ui, city, data) {
  *
  * KAKSI AVAINTA SAMAAN LUKKOON (TAI-ehto), ei yhtä:
  *
- *   1. UUSI — kaksi ratkaistua NOSTON minikysymystä koko matkalla
+ *   1. UUSI — ratkaistu NOSTON minikysymys koko matkalla (LÖYDÖS 145,
+ *      omistaja 25.9.2026: kynnys kahdesta yhteen — vihreä piste syttyy
+ *      jo ensimmäisestä oikeasta ratkaisusta)
  *      (game.nostotehtavatRatkaistu, erä 6). Laskuri on GLOBAALI eikä
  *      kaupunkikohtainen: omistajan sana on *"kaksi mita tahansa mini
  *      tehtavaa"*, ja kaupunkikohtainen laskuri lukitsisi pelaajan
@@ -6612,21 +6662,28 @@ function paljastaSahkeAarre(ui, city, data) {
  * koskee VAIN sitä, milloin vihreä piste on napautettavissa.
  */
 
-/** Montako noston minikysymystä avaa aarrepisteen (Raamattu: kaksi). */
-export const NOSTOTEHTAVIA_AARREPISTEESEEN = 2;
+/** Montako noston minikysymystä avaa aarrepisteen (löydös 145, 25.9.2026: yksi; ennen kaksi). */
+export const NOSTOTEHTAVIA_AARREPISTEESEEN = 1;
 
 /**
  * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
  * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
+ *
+ * KAUPUNKILEHDESTÄ, EI KARTALTA (PT 11.10.2026): jokaisella kaupungilla on
+ * lehdessä aarteen avaava kysymys, mutta karttavisoja ei ole kaikissa maissa
+ * (esim. Kreikka), joten "kartalta" johti Ateenassa harhaan.
  */
-export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kaksi kysymystä kartalta';
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kysymys kaupunkilehdestä';
 
 /** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
-export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kaksi kysymystä kartalta.';
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kysymys kaupunkilehdestä.';
 
-/** Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto, ks. yllä). */
-export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kaksi kysymystä ja '
-  + 'vastaamalla niihin oikein saat vihjeen aarteen sijainnista.';
+/**
+ * Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto 13.9., ks. yllä,
+ * yksikössä löydöksen 145 kynnyksen mukaan).
+ */
+export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kysymyksen ja '
+  + 'vastaamalla siihen oikein saat vihjeen aarteen sijainnista.';
 
 /** Kuinka kauan ohje odottaa saapumisen rauhoittumista. */
 const AARREPISTEEN_OHJE_VIIVE_MS = 2500;
@@ -6927,8 +6984,14 @@ function naytaPolloKupla(ui, teksti, { luokka = '' } = {}) {
 function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
   const teksti = kuplat[i];
   if (!teksti) return false;
-  if (!naytaPolloKupla(ui, teksti)) return false;
-  const aani = soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
+  // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): äänite ensin, kupla vain jos ääntä ei tule. Sarja
+  // etenee äänen kestoon sidotulla ajastimella (alla), joten kuplaa ei tarvita.
+  const { audio: aani, kupla } = puhuTaiKupla(
+    () => soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti }),
+    () => naytaPolloKupla(ui, teksti),
+    { ilmanKuplaa: () => polloPuheIlmanKuplaa(teksti) },
+  );
+  if (!kupla) return false;
   if (i + 1 < kuplat.length) {
     clearTimeout(ui.polloKuplasarjaAjastin);
     // KUPLA ODOTTAA PUHEEN LOPPUUN (js/liviapuhe.js livianKuplanAjastin).
@@ -6954,6 +7017,19 @@ function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
  * kuluteta ennen kuin kupla oikeasti näkyy: pöllönappi voi olla
  * piilossa, ja silloin vinkki kuuluu yhä ensi kerralle.
  */
+/**
+ * Lehden näkyvä elementti, jonka OMA tekstisolmu sisältää avainsanan (js/ilme.js korostaSana ympyröi vain suoria
+ * tekstisolmuja). null, jos sanaa ei lehdessä ole — silloin vinkki näyttää pelkän ympyröidyn avainsanan kuplassa.
+ */
+export function lehdenAvainsana(lehti, sana) {
+  if (!lehti?.querySelectorAll || !sana) return null;
+  for (const el of lehti.querySelectorAll('p, h1, h2, h3, h4, li, span, em, strong')) {
+    if (el.closest?.('[hidden]')) continue;
+    if ([...el.childNodes].some((solmu) => solmu.nodeType === 3 && solmu.data.includes(sana))) return el;
+  }
+  return null;
+}
+
 export function fokusvirtaLehtivinkki(ui, city) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!city || !fokusvirtaSisalto(ui, city)) return false;
@@ -6967,14 +7043,34 @@ export function fokusvirtaLehtivinkki(ui, city) {
     // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä, eikä
     // kertalippu kulu.
     if (ui.dead || !polloNappi()) return;
-    if (!naytaPolloKupla(ui, LIVIAN_LEHTIVINKKI)) return;
-    merkitseLehtivinkkiNahdyksi();
-    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
-    korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
-      LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
-    // Vinkki on pulun repliikki kuten muutkin: sama soitin, sama
-    // kytkin, ja puuttuva tai vanhentunut äänite on hiljainen.
-    soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI });
+    /*
+     * PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09; Päätoimittajan tarkennus): vinkki on pulun repliikki
+     * kuten muutkin. Äänen kanssa puhuttua lausetta ei näytetä: avainsana ympyröidään kynällä lehteen
+     * itseensä (lehdenAvainsana), ja jos sitä ei lehdessä ole, kuplaan jää pelkkä ympyröity avainsana. Ilman ääntä
+     * (mykistys, puuttuva tai katkennut äänite) kupla koko lauseella kuten ennen.
+     */
+    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä teksti.
+    const ympyroi = (isa) => korostaSana(isa, LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
+    const kuplaan = (teksti) => {
+      if (!naytaPolloKupla(ui, teksti)) return false;
+      merkitseLehtivinkkiNahdyksi();
+      ympyroi(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'));
+      return true;
+    };
+    puhuTaiKupla(
+      () => soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI }),
+      () => kuplaan(LIVIAN_LEHTIVINKKI),
+      {
+        ilmanKuplaa: () => {
+          polloPuheIlmanKuplaa(LIVIAN_LEHTIVINKKI);
+          const lehdessa = lehdenAvainsana(ui.arrivalDialog, LIVIAN_LEHTIVINKIN_SANA);
+          if (!lehdessa) return kuplaan(LIVIAN_LEHTIVINKIN_SANA);
+          merkitseLehtivinkkiNahdyksi();
+          ympyroi(lehdessa);
+          return true;
+        },
+      },
+    );
   }, LEHTIVINKKI_VIIVE_MS);
   return true;
 }

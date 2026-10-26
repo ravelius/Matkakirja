@@ -91,8 +91,9 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Ivalojoen kultahippu',
       kuva: 'assets/aarteet/paikallis/fin-iso.jpg',
-      fakta: 'Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta '
-        + 'huuhdottiin yli 50 kiloa kultaa.',
+      fakta: 'Kulta löytyi Ivalojoesta 1869, ja kruunu perusti joen rannalle '
+        + 'Kultalan aseman 1870. Suurimmat valtaukset tuottivat vain noin '
+        + 'kymmenen kiloa kultaa vuodessa.',
     },
   },
   SWE: {
@@ -307,11 +308,12 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Florentiner-timantti',
       kuva: 'assets/aarteet/paikallis/aut-iso.jpg',
-      fakta: 'Florentiner oli 137 karaatin keltainen timantti ja Habsburgien '
-        + 'kruununjalokivi. Keisariperhe otti sen mukaan maanpakoon 1918, ja '
-        + 'Sveitsissä kivi katosi; sen uskotaan päätyneen varkaan mukana '
-        + 'valtameren taakse ja mahdollisesti hiotun uudelleen tunnistamattomaksi. '
-        + 'Julkisesti sitä ei ole nähty sadan vuoden aikana.',
+      fakta: 'Florentiner on 137 karaatin keltainen timantti ja entinen '
+        + 'Habsburgien kruununjalokivi. Keisariperhe lähti maanpakoon 1918, ja '
+        + 'kiven jäljet katosivat julkisuudesta sadaksi vuodeksi. Marraskuussa '
+        + '2025 kerrottiin, että se oli säilytyslokerossa kanadalaisessa pankissa '
+        + 'Québecin maakunnassa, ja syyskuusta 2026 se on ollut esillä Québecin '
+        + 'taidemuseossa. Omistuksesta ei ole vielä ratkaisua.',
     },
   },
   CHE: {
@@ -429,7 +431,7 @@ export const PAIKALLISAARTEET = {
     isoAarre: {
       name: 'Minette-rautamalmin lohkare',
       fakta: 'Maan eteläosasta, Eschin seudulta, löytyi 1850-luvulla '
-        + 'punertavaa "minette"-rautamalmia. Löytö muutti pienen '
+        + 'punertavaa ”minette”-rautamalmia. Löytö muutti pienen '
         + 'maatalouskylän muutamassa vuosikymmenessä yhdeksi Euroopan '
         + 'tärkeimmistä teräksentuottajista.',
     },
@@ -483,8 +485,8 @@ export const PAIKALLISAARTEET = {
       fakta: 'Marmeladi tarvitsee katkeraa sevillanappelsiinia, joka kypsyy vain '
         + 'talvella, ja valtaosa Sevillan sadosta viedään Britanniaan '
         + 'keitettäväksi. Sana tulee portugalin kvittenihilloa tarkoittavasta '
-        + 'sanasta marmelada; tarina Maria Stuartista ja sanoista "Marie est '
-        + 'malade" on pelkkä kansanselitys. Dundeessa marmeladia on tehty '
+        + 'sanasta marmelada; tarina Maria Stuartista ja sanoista ”Marie est '
+        + 'malade” on pelkkä kansanselitys. Dundeessa marmeladia on tehty '
         + 'kaupaksi 1700-luvun lopulta asti.',
     },
     isoAarre: {
@@ -818,6 +820,224 @@ export const PAIKALLISAARTEET = {
         + 'siirtomaahallinnon kesken, ja lautaset ovat nykyään hajallaan '
         + 'Kyproksen museossa, Lontoon British Museumissa ja New Yorkin '
         + 'Metropolitan-museossa.',
+    },
+  },
+  /*
+   * KYMMENEN PÄÄKAUPUNKIMAAN PARIT (12.10.2026, Sisältökirjuri; PT:n tilaus). Maalla on vain pääkaupunkipiste,
+   * joten pari kuuluu pääkaupungin aarretehtävän maa-vihjeelle (docs/raportit/paikallisaarteet-10-maata-20261012.json).
+   * Faktat kahdesta lähteestä, itsenäinen tarkistus; ei kuvia vielä (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   * Legendat: MDA (alkuhärän pää, Dragoşin taru) ja MCO (Pyhä Devota, legenda) merkitty taruiksi.
+   */
+  ALB: {
+    pieniAarre: {
+      name: 'Pala kuumaa byrekiä',
+      kuva: 'assets/aarteet/paikallis/alb-pieni.jpg',
+      fakta: 'Byrek on käsin ohueksi kaulituista taikinakerroksista leivottu '
+        + 'piirakka. Täytteenä on juustoa, jauhelihaa tai pinaattia, joskus '
+        + 'myös papuja. Nimi on lainattu turkin sanasta börek. Tiranassa '
+        + 'byrekejä myydään byrektore-nimisistä erikoisleipomoista, usein '
+        + 'kolmioiksi leikattuina.',
+    },
+    isoAarre: {
+      name: 'Vrapin kultakätkö',
+      kuva: 'assets/aarteet/paikallis/alb-iso.jpg',
+      fakta: 'Tiranan seudun Vrapin kylästä tuli esiin varhaiskeskiajan kullan '
+        + 'ja hopean kätkö: kultaisia pikareita, hopeinen ämpäri, '
+        + 'juoma-astioita, kannu ja vyön koristeita. Esineet ovat noin 600- '
+        + 'ja 700-luvuilta. Tutkijat kiistelevät, tekivätkö ne avaarit vai '
+        + 'bysanttilaiset käsityöläiset. Suurin osa kätköstä on nykyisin New '
+        + 'Yorkin Metropolitan-museossa.',
+    },
+  },
+  AND: {
+    pieniAarre: {
+      name: 'Padallinen trinxatia',
+      kuva: 'assets/aarteet/paikallis/and-pieni.jpg',
+      fakta: 'Trinxat on Pyreneiden vuoristoruoka, jota syödään Andorrassa sekä '
+        + 'Cerdanyan ja Alt Urgellin seuduilla. Nimi tulee katalaanin '
+        + 'verbistä trinxar, ”pilkkoa”, ja ruoka tehdään kaalista ja '
+        + 'perunoista, jotka keitetään ja soseutetaan. Sen kanssa tarjoillaan '
+        + 'paistettua pekonia. Andorrassa sitä saa erityisesti bordoista, '
+        + 'perinteisistä maatilarakennuksista, joissa tarjoillaan paikallisia '
+        + 'ruokia.',
+    },
+    isoAarre: {
+      name: 'Seitsemän avaimen kaappi',
+      kuva: 'assets/aarteet/paikallis/and-iso.jpg',
+      fakta: 'Casa de la Vallin neuvostosalissa on kaappi, jossa säilytetään '
+        + 'maan tärkeimpiä asiakirjoja, vanhimmat jo 1300-luvulta. Lukkoja '
+        + 'oli aluksi kuusi, yksi jokaiselle pitäjälle, ja seitsemäs '
+        + 'lisättiin vuonna 1978, kun Escaldes-Engordanysta tuli oma pitäjä. '
+        + 'Kaappi aukeaa vain, kun kaikkien pitäjien avaimet ovat paikalla. '
+        + 'Neuvosto osti talon vuonna 1702.',
+    },
+  },
+  BLR: {
+    pieniAarre: {
+      name: 'Lautasellinen draniki-perunalättyjä',
+      kuva: 'assets/aarteet/paikallis/blr-pieni.jpg',
+      fakta: 'Draniki on raastetusta perunasta, sipulista ja suolasta öljyssä '
+        + 'paistettu lätty, jonka päälle lusikoidaan smetanaa. '
+        + 'Valko-Venäjällä syödään Euroopan eniten perunaa, yli 150 kiloa '
+        + 'henkeä kohti vuodessa, ja perunaa sanotaan siellä toiseksi '
+        + 'leiväksi.',
+    },
+    isoAarre: {
+      name: 'Slutskin kultalankavyö',
+      kuva: 'assets/aarteet/paikallis/blr-iso.jpg',
+      fakta: 'Slutskin silkkivyöt kudottiin 1700-luvun puolivälistä alkaen '
+        + 'ruhtinas Radziwiłłin kangaspajassa silkistä sekä kulta- ja '
+        + 'hopealangasta. Kalleimmat vyöt olivat kaksipuolisia, joten niissä '
+        + 'ei ollut nurjaa puolta. Vyö kiedottiin kaftaanin ympärille '
+        + 'vaurauden merkiksi. Alle tuhannen vyön arvioidaan säilyneen, ja '
+        + 'Minskin kansallinen taidemuseo hankki yhden kokoelmiinsa.',
+    },
+  },
+  LIE: {
+    pieniAarre: {
+      name: 'Pussillinen Ribel-maissijauhoa',
+      kuva: 'assets/aarteet/paikallis/lie-pieni.jpg',
+      fakta: 'Ribel on Reinin laakson ja Liechtensteinin vanha maissiruoka: '
+        + 'karkea maissijauho keitetään ja paistetaan voissa pieniksi '
+        + 'muruiksi, ja sen kanssa juodaan maitokahvia tai syödään '
+        + 'omenasosetta. Ribelmais sai suojatun alkuperänimen AOP vuonna '
+        + '2000, ja sitä saa kasvattaa myös Liechtensteinissa.',
+    },
+    isoAarre: {
+      name: 'Gutenbergin pronssiset uhrihahmot',
+      kuva: 'assets/aarteet/paikallis/lie-iso.jpg',
+      fakta: 'Balzersin Gutenbergin linnakukkulan rinteeltä löytyi vuonna 1932 '
+        + 'pronssisia uhrihahmoja: sotureita sekä saksanhirvi ja villisika. '
+        + 'Ne on valettu myöhäisellä rautakaudella, noin 500-100 eaa., ja '
+        + 'niissä näkyy kelttiläisiä vaikutteita.',
+    },
+  },
+  MCO: {
+    pieniAarre: {
+      name: 'Lautasellinen barbagiuaneja',
+      kuva: 'assets/aarteet/paikallis/mco-pieni.jpg',
+      fakta: 'Barbagiuan on Monacon kansallisruoaksi sanottu paistettu piiras, '
+        + 'jonka täytteenä on perinteisesti mangoldia ja ricottaa. Nimi '
+        + 'tarkoittaa monégasquen kielellä ”setä Jeania”: tarun mukaan kokki '
+        + 'Jean ei saanut kastiketta raviolieihinsa, joten hän täytti '
+        + 'taikinan mangoldilla ja paistoi sen. Barbagiuaneja syödään '
+        + 'erityisesti kansallispäivänä 19. marraskuuta.',
+    },
+    isoAarre: {
+      name: 'Pyhän Devotan pyhäinjäännökset',
+      kuva: 'assets/aarteet/paikallis/mco-iso.jpg',
+      fakta: 'Legendan mukaan Korsikalla marttyyrina kuolleen Devotan ruumis '
+        + 'lähetettiin veneellä kohti Afrikkaa, mutta myrskyssä kyyhkynen '
+        + 'ohjasi veneen Monacoon Gaumatesin laaksoon, ja hänet haudattiin '
+        + 'pieneen kappeliin. Taru kertoo myös varkaista, jotka yrittivät '
+        + 'viedä pyhäinjäännökset: vastatuuli esti pakenemisen ja heidän '
+        + 'veneensä poltettiin rannalla. Devota on Monacon suojelija.',
+    },
+  },
+  MDA: {
+    pieniAarre: {
+      name: 'Punavalkoinen mărțișor-lanka',
+      kuva: 'assets/aarteet/paikallis/mda-pieni.jpg',
+      fakta: 'Maaliskuun ensimmäisenä päivänä Moldovassa lahjoitetaan '
+        + 'punavalkoinen lanka tai siitä tehty pieni koru, joka kiinnitetään '
+        + 'rintaan kevään merkiksi. Se pidetään yllä, kunnes näkyy '
+        + 'ensimmäinen kukkiva puu, pääskynen tai haikara. Tapa kuuluu '
+        + 'Unescon aineettomaan kulttuuriperintöön vuodesta 2017, yhdessä '
+        + 'Bulgarian, Romanian ja Pohjois-Makedonian kanssa.',
+    },
+    isoAarre: {
+      name: 'Alkuhärän pään hopeagrosi',
+      kuva: 'assets/aarteet/paikallis/mda-iso.jpg',
+      fakta: 'Taru kertoo metsästäjä Dragoşista, joka ajoi alkuhärkää Karpaattien '
+        + 'yli ja jäi Moldova-joen rannalle. Tarun mukaan alkuhärän pää tuli '
+        + 'sen jälkeen Moldovan vaakunaan. Se komeilee myös keskiaikaisissa '
+        + 'hopeagroseissa 1300-luvun lopulta: alkuhärän pää, sarvien välissä '
+        + 'tähti, vieressä ruusu ja kuunsirppi.',
+    },
+  },
+  MKD: {
+    pieniAarre: {
+      name: 'Savipannullinen tavče gravčea',
+      kuva: 'assets/aarteet/paikallis/mkd-pieni.jpg',
+      fakta: 'Tavče gravče on Pohjois-Makedonian kansallisruoka: isoja valkoisia '
+        + 'papuja, sipulia, paprikaa ja kuivattua minttua, paistettuina ja '
+        + 'tarjoiltuina samassa savivuoassa. Nimi on suunnilleen ”pavut '
+        + 'pannulla”, ja pannun sana tava on lainattu turkin kautta. '
+        + 'Perinteisesti sitä syödään perjantaisin ilman lihaa. Tetovon '
+        + 'seudun pavut ovat tunnetuimpia.',
+    },
+    isoAarre: {
+      name: 'Skopjen linnoituksen kolikkoarkku',
+      kuva: 'assets/aarteet/paikallis/mkd-iso.jpg',
+      fakta: 'Skopjen Kale-linnoituksen kaivauksissa löytyi toukokuussa 2010 '
+        + 'pieni arkku, jossa oli 44 kultakolikkoa ja 76 hopeakolikkoa '
+        + '1200-luvulta. Kultakolikoissa on Bysantin hallitsija ja '
+        + 'raamatullisia aiheita, hopeakolikoissa Venetsian doogeja. '
+        + 'Linnoituksen arvellaan olevan 500-luvulta, ja sen kivet haettiin '
+        + 'maanjäristyksessä tuhoutuneesta Scupin roomalaiskaupungista.',
+    },
+  },
+  MNE: {
+    pieniAarre: {
+      name: 'Terttu vranac-rypäleitä',
+      kuva: 'assets/aarteet/paikallis/mne-pieni.jpg',
+      fakta: 'Vranac on Montenegron istutetuin viinirypälelajike, ja sen tummat '
+        + 'marjat poimitaan käsin yleensä syys–lokakuussa. Podgorican '
+        + 'eteläpuolella Ćemovskon tasangolla on yli 2 000 hehtaarin '
+        + 'viinitarha, jota viinitalo Plantaže kutsuu Euroopan suurimmaksi '
+        + 'yhtenäiseksi viinitarhaksi. Siitä noin kaksi kolmasosaa on '
+        + 'vranacia.',
+    },
+    isoAarre: {
+      name: 'Podgorican malja Doclean raunioilta',
+      kuva: 'assets/aarteet/paikallis/mne-iso.jpg',
+      fakta: 'Podgorican malja on myöhäisantiikin lasinen malja, jonka '
+        + 'tuntematon antiikinmetsästäjä löysi tiettävästi Doclean '
+        + 'roomalaiskaupungin raunioilta 1870-luvun alussa. Hän myi sen '
+        + 'Shkodrassa italialaiselle konsulille, ja Pariisin ja venäläisen '
+        + 'keräilijän kautta malja päätyi Pietarin Eremitaasiin. Löytö teki '
+        + 'Doclean tunnetuksi eurooppalaisille tutkijoille.',
+    },
+  },
+  SMR: {
+    pieniAarre: {
+      name: 'Torta Tre Monti -kakku',
+      kuva: 'assets/aarteet/paikallis/smr-pieni.jpg',
+      fakta: 'Torta Tre Monti on sanmarinolainen kakku, jossa ohuet vohvelilevyt '
+        + 'liimataan yhteen suklaa- tai hasselpähkinäkermalla ja reunat '
+        + 'koristellaan suklaafondantilla. Nimi tarkoittaa kolmen vuoren '
+        + 'kakkua, ja se viittaa Titano-vuoren kolmeen torniin, San Marinon '
+        + 'tunnukseen. Kakkua on valmistettu kaupallisesti vuodesta 1942.',
+    },
+    isoAarre: {
+      name: 'San Marinon vuoden 1600 lakikirja',
+      kuva: 'assets/aarteet/paikallis/smr-iso.jpg',
+      fakta: 'San Marinon lait koottiin vuonna 1600 latinankieliseen '
+        + 'lakikirjaan, Statutiin, joka jakautuu kuuteen kirjaan; sen kokosi '
+        + 'Camillo Bonelli. Se uudisti kaupungin vanhempia säädöksiä, ja '
+        + 'siihen perustuu yhä maan lainsäädäntö.',
+    },
+  },
+  SRB: {
+    pieniAarre: {
+      name: 'Purkillinen kotitekoista ajvaria',
+      kuva: 'assets/aarteet/paikallis/srb-pieni.jpg',
+      fakta: 'Ajvar on paahdetuista paprikoista tehty tahna, jonka nimi tulee '
+        + 'turkin sanasta havyar, kaviaari. Paprikat paahdetaan liedellä tai '
+        + 'nuotiolla, kuoritaan, jauhetaan ja haudutetaan öljyssä '
+        + 'tuntikausia. Perheet ja naapurit tekevät sitä yhdessä syksyllä, ja '
+        + 'Leskovacin ajvar on suojattu tuotenimi.',
+    },
+    isoAarre: {
+      name: 'Miroslavin evankeliumikirja',
+      kuva: 'assets/aarteet/paikallis/srb-iso.jpg',
+      fakta: 'Humin ruhtinas Miroslav tilasi evankeliumikirjan noin vuonna 1180, '
+        + 'ja sen koristeena on lähes 300 kullalla koristeltua miniatyyriä. '
+        + 'Se on vanhimpia serbialaisin kyrillisin kirjaimin kirjoitettuja '
+        + 'käsikirjoituksia, ja sitä säilytettiin vuosisatoja Hilandarin '
+        + 'luostarissa Athos-vuorella. Nykyään kirja on Belgradin '
+        + 'kansallismuseossa, ja Unesco kirjasi sen Maailman muisti '
+        + '-rekisteriin 2005.',
     },
   },
 };

@@ -19,17 +19,19 @@
  *     Mapit näkyvät samoina $-merkintöinä kuin raakakerroksessa.
  */
 import { sarjallista } from './sarjallista.mjs';
-import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { laudaltaAsteiksi, projisoiLaudalle } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
+import { HALLINNON_PAIKAT } from '../../js/packs/laudan-paakaupungit.js';
+import { ETUSIVUN_KOHTEET } from '../../js/ui-apurit.js';
 import { lueKorkeudet } from './korkeudet.mjs';
 import ASUKASLUVUT from './kaupunkien-asukkaat.json' with { type: 'json' };
 import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia, sivustoReitit } from './media.mjs';
-import { aaniUrl, horatioAanenKesto, musaPolku } from '../../js/media.js';
+import { aaniUrl, horatioAanenKesto, musaPolku, PEILI_JUURI } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
@@ -37,7 +39,11 @@ import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
-import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import {
+  karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, takynostoKokoelma,
+} from './karttavalot.mjs';
+import { rikastaElavaKartta } from './elava-kartta.mjs';
+import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
@@ -112,6 +118,11 @@ function lautaKokoelmat(ns) {
       saari: saaret.has(c.id),
       lentokentta: Boolean(c.airport),
       aloitus: Boolean(c.start),
+      // Skeema 1.62 (omistaja 10.10.2026, NUI): alkulennon valittavat kohteet
+      // (js/ui-apurit.js ETUSIVUN_KOHTEET). aloitus jää pelisäännöille
+      // (mannerlento, aarteiden jako); natiivin Lahtokaupungit() käyttää tätä,
+      // kun kenttä on paketissa. Kirjoitetaan jokaiselle kaupungille.
+      lahtokohde: ETUSIVUN_KOHTEET.has(c.id),
       tyyppi: c.ambience ?? null,
       tarkeys: tarkeys(c, reitteja.get(c.id) ?? 0, Boolean(maa) && PAAKAUPUNGIT[maa] === c.id),
       // Skeema 1.5 (3D-selvittäjä 23.9.2026): natiivin reittigeometria
@@ -151,7 +162,7 @@ function lautaKokoelmat(ns) {
   }
   return {
     kaupungit: taulukko(`${LAUTA}#MAAILMANKARTTA.cities`,
-      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput. tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
+      'Pelilaudan kaupungit. lat/lon: pallopiste jos on, muuten laudan Miller-koordinaateista laskettu. maa = ISO3, maa2 = ISO2 (tools/vienti/iso2.mjs). tyyppi = laudan ambience, lentokentta ja aloitus laudan liput, lahtokohde = alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET). tarkeys 0–3 nimiöiden harvennukseen (3 = pääkaupunki tai aloitus). lauta = { x, y } laudan Miller-yksiköissä (reittigeometriaan). data = laudan raakaolio (x, y, la, lx, ly…), johon natiivi ei nojaa.',
       {}, kaupungit),
     reitit: taulukko(`${LAUTA}#MAAILMANKARTTA.edges+airRoutes`,
       'Kaupunkien väliset yhteydet: laji maa | sea (meri) | lento. askelia = laudan steps (lennolla null), via = taitepisteet laudan Miller-yksiköissä [[x, y], …] (tyhjä = suora viiva).',
@@ -253,7 +264,8 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
         data: k,
       }))),
     tarinakaari: avaimittain(`${P}tarinakaari.js#TARINAKAARI`, hae(`${P}tarinakaari.js`).TARINAKAARI,
-      'Tarinakaaren kohteet (luennalliset). Koko 69 kohteen lähde: js/tyohuone-kehitys-data.js#KAARI_PAKETIT raakakerroksessa.',
+      'Tarinakaaren kohteet (luennalliset). Koko 69 kohteen lähde: js/tyohuone-kehitys-data.js#KAARI_PAKETIT raakakerroksessa. '
+        + 'aanet = { kohtaaminen, aarre }: { url, kesto } tallenne tai null (mykistetty / ei generoitu; skeema 1.65).',
       'kaupunki'),
     saapumispuheet: avaimittain(`${P}saapumispuheet.js#SAAPUMISPUHEET`, hae(`${P}saapumispuheet.js`).SAAPUMISPUHEET,
       'Saapumispuheet kaupungeittain; url = valmis ääni ämpärissä.', 'kaupunki'),
@@ -489,7 +501,12 @@ function radioKokoelma(hae) {
     const alkuperainen = {
       iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
       lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
-      perusteLahde: l.lahde ?? null, varaAani: null, ...tila(r.url),
+      perusteLahde: l.lahde ?? null, varaAani: null,
+      // Skeema (radioiden maailmanlaajennus 28.9.2026): aseman kaupunki
+      // (yhtiön kotipaikka tai maan pääkaupunki) ja koordinaatit,
+      // tools/radiot.json:sta. Ei enää aluenimeä (Sahara, Kamerun…)
+      // aseman paikkana kartalla.
+      kaupunki: r.kaupunki ?? null, lat: r.lat ?? null, lon: r.lon ?? null, ...tila(r.url),
     };
     const k = korvaavat[iso];
     if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
@@ -499,7 +516,10 @@ function radioKokoelma(hae) {
     rivit.push({
       id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
       lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
-      kaupunki: k.kaupunki, kuvaus: k.kuvaus, ...tila(k.url),
+      // korvaavan oma kaupunki (teksti) säilyy; lat/lon tulevat silti
+      // maan asemasta (tools/radiot.json), koska korvaava-tiedostolla
+      // ei ole koordinaatteja.
+      kaupunki: k.kaupunki, lat: r.lat ?? null, lon: r.lon ?? null, kuvaus: k.kuvaus, ...tila(k.url),
     });
   }
   return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
@@ -508,8 +528,15 @@ function radioKokoelma(hae) {
       + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
       + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
       + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null). toimii = iOS ATS '
-      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }.',
-    { iso3: 'maat' }, rivit);
+      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }. '
+      + 'Skeema (28.9.2026, radioiden maailmanlaajennus omistajan päätöksellä koko maailmaan): kaupunki (suomeksi), '
+      + 'lat/lon = aseman kotipaikka tai maan pääkaupunki asteina (Wikidata P625), tai null jos ei tiedossa. '
+      + 'Natiivin RadioAineisto.cs lukee nämä kartan merkin sijaintina aluenimen (Sahara, Kamerun, Kongo…) sijasta. '
+      + 'iso3 EI enää ole osajoukko kokoelmasta "maat": omistajan linjaus 28.9.2026 "haluan että on kaikki maailman '
+      + 'maat mukana... eurooppa linjaus on vain kartan ja sisällön suhteen mutta ei koske linssejä" -> radiot kattaa '
+      + 'kaikki YK:n jäsenmaat + Vatikaani, Palestiina, Kosovo, Taiwan riippumatta siitä onko maalla laudalla omaa '
+      + 'countryShapes-hahmoa (VAIN EUROOPPA -rajaus koskee vain karttageometrian lisäämistä, ei tätä listaa).',
+    {}, rivit);
 }
 
 function maisemakorit(P, hae) {
@@ -535,6 +562,7 @@ function aaniKokoelma(ns, hae) {
   const aani = hae('js/sound.js');
   const siirtyma = hae('js/siirtymamusiikki.js');
   const valitsin = hae('js/musiikkivalitsin.js');
+  const kaupunkimusa = hae('js/kaupunkimusiikki.js');
   const P = ns.MAAILMANKARTTA;
   // Radioerä (skeema 1.16): viritysäänet (radion haku), pelin osoitteella.
   const viritys = hae('js/packs/viritysaanet.js');
@@ -560,6 +588,8 @@ function aaniKokoelma(ns, hae) {
     ...P.cities.map((c) => ({
       id: `musiikkiketju:${c.id}`, laji: 'musiikkiketju', kaupunki: c.id,
       ketju: valitsin.musiikkiketju(c.id, P.map.cityCountry?.[c.id] ?? null),
+      // Skeema 1.50: kaupungin maanosa (saapumistunnus = musiikkiaihe saapuminen-<maanosa>).
+      maanosa: kaupunkimusa.kaupunginMaanosa(c.id, P.map.cityCountry?.[c.id] ?? null) ?? null,
     })),
     // B7 (Pelikoodari 23.9.2026): äänimaiseman korit pelin omilla funktioilla
     // (js/ambience-stream.js arvoAani: kaupunkiKori → maaKori → tyyppiKori).
@@ -567,6 +597,18 @@ function aaniKokoelma(ns, hae) {
     // Tilaraidat ja aarreaiheet täysin poluin (musaPolku + aaniUrl).
     ...Object.entries(valitsin.TILARAIDAT).map(([nimi, v]) => ({
       id: `tilaraitaUrl:${nimi}`, laji: 'tilaraitaUrl', nimi, url: aaniUrl(musaPolku(v.tunnus)),
+    })),
+    /*
+     * Skeema 1.50 (Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2): matkan aiheet (js/ui.js MATKAN_AIHEET:
+     * aloituslento, loppu, ratkaisu, epaonnistuminen) ja saapumistunnukset maanosittain (js/kaupunkimusiikki.js
+     * SAAPUMISTUNNUKSET: nimi saapuminen-<maanosa>). tunnus ilman -lyria-päätettä kuten aarreaiheissa.
+     */
+    ...[
+      ...Object.entries(hae('js/ui.js').MATKAN_AIHEET),
+      ...Object.entries(kaupunkimusa.SAAPUMISTUNNUKSET).map(([maanosa, t]) => [`saapuminen-${maanosa}`, musaPolku(t)]),
+    ].map(([nimi, polku]) => ({
+      id: `musiikkiaihe:${nimi}`, laji: 'musiikkiaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
+      url: aaniUrl(polku),
     })),
     ...Object.entries(hae('js/ui.js').AARRE_MUSIIKKI).map(([nimi, polku]) => ({
       id: `aarreaihe:${nimi}`, laji: 'aarreaihe', nimi, tunnus: polku.split('/').at(-1).replace(/(-lyria)?\.mp3$/, ''),
@@ -582,7 +624,8 @@ function aaniKokoelma(ns, hae) {
       + '(B7): kaupungin tai virtuaalipaikan (etusivu, lentomatka, jalkamatka, merimatka) äänimaisema = kori (url-lista '
       + '#alku/#voima-fragmentein, js/aani-ehdokkaat.js jaaAlku), porras (kaupunki | maa | tyyppi), tyyppi; vakio = true → '
       + 'soita kori[0], muuten arvo satunnaisesti. tilaraitaUrl ja aarreaihe (tavallinen = musa-aarre, paa = musa-paaaarre '
-      + 'tähtilaatalle): valmiit osoitteet.',
+      + 'tähtilaatalle): valmiit osoitteet. Skeema 1.50: musiikkiaihe (nimi aloituslento | loppu | ratkaisu | epaonnistuminen | '
+      + 'saapuminen-<maanosa>; tunnus, url) ja musiikkiketju.maanosa (kaupungin maanosa, js/kaupunkimusiikki.js kaupunginMaanosa).',
     { kaupunki: 'kaupungit' }, rivit);
 }
 
@@ -713,7 +756,7 @@ function livianPuheKokoelma(hae) {
   const eleet = lueLivianEleet();
   return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
     'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
-      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
+      + 'vieressä; null, kun eleetTila ei ole ok), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
       + 'kommentin tekstin tiiviste, jota eleet vastaavat. ele = tekninen SVG-ele (js/livia-tilanteet.js '
       + 'livianPuheeleenTiedot). eleetTila: ok = alku/loppu (ms äänen alusta) on tarkistettu pelin validaattorilla '
       + 'ja aaniTavut/aaniSha256 kertovat, mihin mp3:een ne kuuluvat; puuttuu = ämpärissä ei eleitä (alku/loppu '
@@ -730,7 +773,8 @@ function livianPuheKokoelma(hae) {
       const ajat = new Map((haettu.tila === 'ok' ? haettu.eleet : []).map((e) => [e.id, e]));
       return {
         id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
-        tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
+        // PT 10.10.2026 (tarkistus C2): osoite vain, kun eleet on ämpärissä (ei 404-viittauksia).
+        tekstiSha256: c.tekstiSha256, aani, eleet: aani && haettu.tila === 'ok' ? livianEleidenOsoite(aani) : null,
         eleetTila: haettu.tila,
         aaniTavut: haettu.aani?.tavut ?? null, aaniSha256: haettu.aani?.sha256 ?? null,
         odottaa: odottaa.has(c.kaupunki),
@@ -782,6 +826,21 @@ function maaKokoelma(ns, hae) {
   const { FOKUS_MAANIMET } = hae('js/packs/fokus-grc.js');
   const { MAA_KATEGORIAT } = hae('js/packs/maa-kategoriat.js');
   const tiedot = MAATIEDOT.maailmankartta ?? {};
+  const { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT, PAAKAUPUNKIEN_KUVAT } = hae('js/packs/paakaupungit.js');
+  const pisteet = new Map(PAAKAUPUNKIPISTEET.map((p) => [p.maa, p]));
+  /*
+   * Israel (PT 10.10.2026): Jerusalem on laudan kaupunki ilman maata eikä
+   * pääkaupunki-kiistaan oteta kantaa; maakortti näyttää sen "hallinnon
+   * paikkana" (hallitus ja parlamentti) symmetrisesti Palestiinan Ramallahin
+   * kanssa. asema kertoo kortille otsikon: "pääkaupunki" tai "hallinnon paikka".
+   */
+  // HALLINNON_PAIKAT: js/packs/laudan-paakaupungit.js (sama taulu webin maakortille).
+  const linkki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit', asema: 'pääkaupunki' }
+    : HALLINNON_PAIKAT[iso] ? { id: HALLINNON_PAIKAT[iso], kokoelma: 'kaupungit', asema: 'hallinnon paikka' }
+    : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit', asema: pisteet.get(iso).asema } : null);
+  // Skeema 1.61: kuvat myös linkissä, jotta kortti saa ne samasta paikasta laudan
+  // pääkaupungeille (Pariisi) ja pisteille (Vaduz).
+  const paakaupunki = (iso) => { const l = linkki(iso); return l && { ...l, kuvat: paakaupunkiKuvat(PAAKAUPUNKIEN_KUVAT, iso) }; };
   const rivit = Object.entries(P.map.countryShapes).map(([iso, maa]) => {
     const lippu = maa.lippu ? ratkaiseMedia(maa.lippu, 'lippu-commons') : null;
     const nimet = FOKUS_MAANIMET[iso] ?? {};
@@ -792,14 +851,65 @@ function maaKokoelma(ns, hae) {
       tiedot: tiedot[iso] ?? null,
       maalehti: Object.hasOwn(MAA_KATEGORIAT, iso) ? iso : null,
       aiheet: (MAA_KATEGORIAT[iso] ?? []).map((a) => ({ id: a.id, nimi: a.nimi })),
+      perustiedot: MAIDEN_PERUSTIEDOT[iso] ?? null,
+      paakaupunki: paakaupunki(iso),
     };
   });
   return taulukko(`${LAUTA}#MAAILMANKARTTA.map.countryShapes + MAATIEDOT + FOKUS_MAANIMET`,
     'Laudan maat kartuschaa varten (id = ISO3): nimi, lippu (Commons) ja lippuUrl, paikallinen nimi ja valtiomuoto '
       + '1873 (FOKUS_MAANIMET, ei kaikilla), tiedot = MAATIEDOT (vakiluku, pintaAla, sijat, demokratia {arvo, sija}, '
       + 'keskitulo {arvo, sija}, tervehdykset [{teksti, kieli, osuus, lippu}]) tai null, maalehti = maalehdet-id, '
-      + 'aiheet = maalehden aiheet järjestyksessä.',
+      + 'aiheet = maalehden aiheet järjestyksessä. Skeema 1.60: perustiedot (js/packs/paakaupungit.js MAIDEN_PERUSTIEDOT: '
+      + 'virallinenNimi, valtiomuoto, vakiluku {arvo, vuosi, lahde, linkki}, pintaAlaKm2, kielet, valuutta, rajanaapurit, '
+      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit", asema: "pääkaupunki" | "hallinnon paikka", kuvat (1.61) } tai null '
+      + '(Israelilla Jerusalem hallinnon paikkana, ei kannanottoa pääkaupunkikiistaan).',
     { maalehti: 'maalehdet' }, rivit);
+}
+
+/*
+ * Skeema 1.60 (omistaja 10.10.2026 PT:n kautta: kaikkiin maihin pääkaupunki ja
+ * perustiedot; PT:n päätös suositus A): pääkaupungit, jotka EIVÄT ole laudan
+ * pysäkkejä, kevyinä pisteinä. Ei reittejä eikä laudan välisääntöä — Vatikaani
+ * on Rooman sisällä, Bratislava Wienin vieressä oikeilla paikoillaan.
+ * Piirto olemassa olevalla kaupunkimerkillä tärkeysluokassa 0 ja nimien
+ * olemassa olevalla karsinnalla; napautus avaa maan kortin perustiedoilla.
+ * Vanhat buildit ohittavat tuntemattoman kokoelman.
+ */
+/*
+ * Skeema 1.61 (PT 10.10.2026): pääkaupunkien Codex-havainnekuvat ämpärissä
+ * paakaupungit/<ISO3>/<pvm>/ (Sisältökirjurin hyväksymät; tools/tee-paakaupungit.mjs
+ * --kuvat). [{ avain, url, motiivi, kuvateksti, lahde, havainnekuva, leveys, korkeus, sha256 }];
+ * tyhjä lista, jos kuvaa ei ole. Näyttö vain olemassa olevalla kuvapohjalla.
+ */
+function paakaupunkiKuvat(KUVAT, iso) {
+  return (KUVAT?.[iso] ?? []).map((k) => ({
+    avain: k.tiedosto, url: PEILI_JUURI + k.tiedosto, motiivi: k.motiivi, kuvateksti: k.kuvateksti, lahde: k.lahde,
+    havainnekuva: k.havainnekuva, leveys: k.leveys, korkeus: k.korkeus, sha256: k.sha256,
+  }));
+}
+
+function paakaupunkiKokoelma(ns, hae) {
+  const { PAAKAUPUNKIPISTEET, PAAKAUPUNKIEN_KUVAT } = hae('js/packs/paakaupungit.js');
+  const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
+  const rivit = PAAKAUPUNKIPISTEET.map((p) => {
+    if (kaupunkiIdt.has(p.id)) throw new Error(`paakaupungit: ${p.id} on laudan kaupunki`);
+    const lauta = projisoiLaudalle('maailmankartta', p.lon, p.lat);
+    return {
+      id: p.id, nimi: p.nimi, nimiAlkukieli: p.nimiAlkukieli, maa: p.maa, maa2: ISO2[p.maa] ?? null,
+      lat: p.lat, lon: p.lon, lauta: { x: Math.round(lauta.x * 10) / 10, y: Math.round(lauta.y * 10) / 10 },
+      tarkeys: 0, pysakki: false, asema: p.asema, wikidata: p.wikidata,
+      asukkaat: p.asukkaat?.arvo ?? null, asukkaatVuosi: p.asukkaat?.vuosi ?? null, asukkaatLahde: p.asukkaat?.lahde ?? null,
+      kuvaus: p.kuvaus, tunnusrakennukset: p.tunnusrakennukset, kuvat: paakaupunkiKuvat(PAAKAUPUNKIEN_KUVAT, p.maa),
+    };
+  });
+  return taulukko('js/packs/paakaupungit.js#PAAKAUPUNKIPISTEET (tools/tee-paakaupungit.mjs, Sisältökirjurin faktat)',
+    'Pääkaupungit, jotka eivät ole laudan pysäkkejä (id ei ole kaupungit-kokoelmassa): id, nimi, nimiAlkukieli, '
+      + 'maa (ISO3) ja maa2, lat/lon (Wikidata), lauta {x, y} (maailmankartan Miller), tarkeys 0, pysakki false '
+      + '(ei reittejä, ei laudan välisääntöä — voi olla toisen kaupungin vieressä), asema ("pääkaupunki" tai '
+      + '"hallinnon paikka"), wikidata, asukkaat + asukkaatVuosi + asukkaatLahde, kuvaus, tunnusrakennukset. '
+      + 'Piirto olemassa olevalla kaupunkimerkillä pienimmässä tärkeysluokassa; napautus avaa maan (maat[maa]). '
+      + 'Skeema 1.61: kuvat [{ avain, url, motiivi, kuvateksti, lahde, havainnekuva, leveys, korkeus, sha256 }] (Codex-havainnekuvat).',
+    { maa: 'maat' }, rivit);
 }
 
 /*
@@ -851,9 +961,16 @@ function linssiluennat(hae) {
   return tulos;
 }
 
-function rikastaNippu4(kokoelmat, ns) {
+function rikastaNippu4(kokoelmat, ns, hae) {
   for (const a of kokoelmat.kohtaamiset.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaTavalliselleKohtaamiselle(a.kaupunki)) : null;
   for (const a of kokoelmat.tarinakaari.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaKohteelle(a.kaupunki)) : null;
+  // Skeema 1.65 (PT 12.10.2026, juna 184): kaaren kohtaamis- ja aarreluennan tallenteet natiiville (js/packs/tarinakaari.js
+  // kaariAanite: vain generoidut ja mykistämättömät osat, -v2 korjatuille). null = osaa ei soiteta tallenteena.
+  const { kaariAanite } = hae('js/packs/tarinakaari.js');
+  const aaneksi = (x) => (x ? { url: aaniUrl(x.polku), kesto: x.kesto } : null);
+  for (const a of kokoelmat.tarinakaari.alkiot) {
+    a.aanet = { kohtaaminen: aaneksi(kaariAanite(a.data, 'kohtaaminen')), aarre: aaneksi(kaariAanite(a.data, 'aarre')) };
+  }
   const tokens = ns.MAAILMANKARTTA.tokens;
   const [laatta] = kokoelmat.laatat.alkiot;
   laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).filter(([t]) => t !== 'robber').map(([t, v]) => [t, mediaOsoite(v.kuva)]));
@@ -936,6 +1053,7 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     livianpuhe: livianPuheKokoelma(hae),
     livianrepliikit: livianRepliikkiKokoelma(hae, kaupunkiIdt),
     maat: maaKokoelma(ns, hae),
+    paakaupungit: paakaupunkiKokoelma(ns, hae),
     karttamerkit: karttamerkkiKokoelma(),
     // Natiivisepän tarve 23.9.2026 ilta: sumu (PaljastaMaa) ja maatila.
     maastonimet: maastonimiKokoelma(),
@@ -952,14 +1070,17 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   const maakunnat = lueMaakuntarajat();
   kokoelmat.maakuntarajat = taulukko(`js/pallomaakunnat.js ämpäriaineisto ${maakunnat.versio ?? ''} (Natural Earth 10m admin-1)`.trim(),
     'Maakuntarajat asteina, sama muoto kuin maarajat: id = "<ISO3>:<tunnus>" (sama avain kuin '
-      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
+      + 'js/karttatyokalu-maakunnat.js), iso3, nimi (suomeksi), vari (skeema 1.43: webin väri-indeksi, naapureilla eri), bbox [w, s, e, n], renkaat [[[lon, lat], …]], '
       + `harvennettu ${maakunnat.toleranssi ?? MAAKUNTARAJOJEN_TOLERANSSI}° Douglas–Peuckerilla. Täytä parillisuussäännöllä. `
-      + 'Maat: AUT, CHE, DEU, ESP, FRA (myös merentakaiset alueet), GBR, ITA, POL. '
+      + 'Skeema 1.42: kaikki webin maakuntamaat (js/karttatyokalu-maakunnat.js MAAKUNTIEN_MAAT, joilla '
+      + 'webin maakuntienMaa); juuren maat [{ iso3, nimi }] = maat, joilla on maakunnat. Maa, jota ei ole listalla, ei näytä '
+      + 'maakuntia (listassa vain maan nimi tai tyhjä). Nimet webin maakunnanNimi-funktiolla. '
       + 'Skeema 1.25: juuren kaaret [[[lon, lat], …]] = rajaviivat, jokainen sisäraja ja maiden välinen raja '
       + 'kerran sekä ulkorajat (rannikko); harvennettu kaarina solmusta solmuun, ja renkaat on rakennettu '
       + 'samoista kaarista, joten täyttö ja viiva osuvat yhteen.',
     {}, maakunnat.alueet);
   kokoelmat.maakuntarajat.kaaret = maakunnat.kaaret ?? [];
+  kokoelmat.maakuntarajat.maat = maakunnat.maat ?? [];
   // Skeema 1.22 (Natiivi-UI:n "Mitä uutta"): käsin kirjoitetut rivit, uusin ensin.
   const muutosloki = lueMuutosloki();
   kokoelmat['muutosloki-natiivi'] = taulukko('tools/vienti/muutosloki-natiivi.json',
@@ -970,7 +1091,13 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
-  rikastaNippu4(kokoelmat, ns);
+  // PT 10.10.2026 (Karttasepän tarkistus A2): ladonnan karkaama nimi (> 25 km tai toinen maa) omaan pisteeseensä ilman nimeä.
+  rajaaKarkaavatNimet(kokoelmat.karttavalot.alkiot, kokoelmat.maarajat.alkiot);
+  // PT 10.10.2026 (tarkistus B2): sama nimiö kahdesti alle 2 km:n päässä → vain yksi nimi.
+  piilotaKaksoisnimet(kokoelmat.karttavalot.alkiot);
+  // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
+  rikastaElavaKartta(kokoelmat, taulukko);
+  rikastaNippu4(kokoelmat, ns, hae);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).
@@ -983,6 +1110,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.merinimet = merinimiKokoelma(taulukko);
   // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
   kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
+  // Skeema 1.46 (Elävä kartta): 1873 laivalinjat ja rautatiet (Karttaseppä, tools/vienti/reitit1873.mjs).
+  kokoelmat.reitit1873 = reitti1873Kokoelma(taulukko);
   // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
   // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
   // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.

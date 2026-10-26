@@ -1,0 +1,402 @@
+{
+ "kaupunki": "manila",
+ "kaupunkiQ": "Q1461",
+ "kohteet": [
+  {
+   "q": "Q773443",
+   "nimi": "Manilan katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.59147,
+   "lon": 120.97356,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral de la Inmaculada Concepción, Manila, Filipinas, 2023-08-26, DD 21.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_la_Inmaculada_Concepci%C3%B3n%2C_Manila%2C_Filipinas%2C_2023-08-26%2C_DD_21.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Inmaculada_Concepci%C3%B3n%2C_Manila%2C_Filipinas%2C_2023-08-26%2C_DD_21.jpg",
+     "selite": "Manilan katedraali on Intramurosin keskellä oleva basilika, joka on rakennettu uudelleen useita kertoja.",
+     "leveys": 6213,
+     "korkeus": 5695,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Manila Cathedral, Plaza Roma (Intramuros, Manila; 12-31-2021).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manila_Cathedral%2C_Plaza_Roma_(Intramuros%2C_Manila%3B_12-31-2021).jpg?width=1280",
+     "tekija": "patrickroque01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manila_Cathedral%2C_Plaza_Roma_(Intramuros%2C_Manila%3B_12-31-2021).jpg",
+     "selite": "Katedraali ja sen kellotorni kohoavat Plaza Roman puiston takaa.",
+     "leveys": 3552,
+     "korkeus": 2664,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1306513",
+   "nimi": "San Agustinin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.58886,
+   "lon": 120.97535,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ph-mm-manila-intramuros-san agustin church (2014).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ph-mm-manila-intramuros-san_agustin_church_(2014).JPG?width=1280",
+     "tekija": "Patrick Roque (talk) (Uploads)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ph-mm-manila-intramuros-san_agustin_church_(2014).JPG",
+     "selite": "San Agustin on Filippiinien vanhin säilynyt kivikirkko, ja se kuuluu UNESCOn maailmanperintöön.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "02342jfManila Intramuros Streets Buildings Churches Landmarksfvf 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02342jfManila_Intramuros_Streets_Buildings_Churches_Landmarksfvf_09.jpg?width=1280",
+     "tekija": "Judgefloro",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02342jfManila_Intramuros_Streets_Buildings_Churches_Landmarksfvf_09.jpg",
+     "selite": "Kirkon barokkijulkisivu ja kellotorni taivasta vasten.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q478181",
+   "nimi": "Fort Santiago",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 14.595,
+   "lon": 120.96944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrance of Fort Santiago, Intramuros, Manila - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_of_Fort_Santiago%2C_Intramuros%2C_Manila_-_panoramio.jpg?width=1280",
+     "tekija": "André Héroux",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_of_Fort_Santiago%2C_Intramuros%2C_Manila_-_panoramio.jpg",
+     "selite": "Fort Santiagon vallihauta ja kivinen sisäänkäynti Pasig-joen rannalla Intramurosissa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "38818-Manila (35622665220).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/38818-Manila_(35622665220).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:38818-Manila_(35622665220).jpg",
+     "selite": "Linnoituksen vallit ja vallihauta vesililjoineen.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "38842-Manila (35970637076).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/38842-Manila_(35970637076).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:38842-Manila_(35970637076).jpg",
+     "selite": "Linnoituksen kivinen holvikäytävä vihreyden keskellä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q772211",
+   "nimi": "Intramuros",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 14.59083,
+   "lon": 120.975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Intramuros.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Intramuros.jpg?width=1280",
+     "tekija": "P199",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Intramuros.jpg",
+     "selite": "Intramuros on Manilan vanha muurien ympäröimä espanjalaisen ajan kaupunki.",
+     "leveys": 2007,
+     "korkeus": 1400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2306339",
+   "nimi": "Rizal-puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 14.58167,
+   "lon": 120.97669,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rizal Monument at Rizal Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rizal_Monument_at_Rizal_Park.jpg?width=1280",
+     "tekija": "Maynard Rabanal (Greedyplus)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rizal_Monument_at_Rizal_Park.jpg",
+     "selite": "Rizal-puisto on Manilan keskeinen puisto, jonka muistomerkki kunnioittaa kansallissankari José Rizalia.",
+     "leveys": 4419,
+     "korkeus": 2851,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q864029",
+   "nimi": "Binondon kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 14.59997,
+   "lon": 120.97444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Binondo Church in front of Plaza San Lorenzo Ruiz, Binondo, Manila.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binondo_Church_in_front_of_Plaza_San_Lorenzo_Ruiz%2C_Binondo%2C_Manila.jpg?width=1280",
+     "tekija": "Patrick Roque",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Binondo_Church_in_front_of_Plaza_San_Lorenzo_Ruiz%2C_Binondo%2C_Manila.jpg",
+     "selite": "Binondon kirkko on punaharmaa kivikirkko Manilan kiinalaiskorttelin sydämessä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Binondo Church and Plaza Lorenzo Ruiz Aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binondo_Church_and_Plaza_Lorenzo_Ruiz_Aerial.jpg?width=1280",
+     "tekija": "Icqgirl",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Binondo_Church_and_Plaza_Lorenzo_Ruiz_Aerial.jpg",
+     "selite": "Kirkko ja Plaza Lorenzo Ruiz ilmasta katsottuna.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1899439",
+   "nimi": "Quiapon kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 14.59878,
+   "lon": 120.98377,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Quiapo Church Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quiapo_Church_Facade.jpg?width=1280",
+     "tekija": "H.abanil",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quiapo_Church_Facade.jpg",
+     "selite": "Quiapon kirkko on tunnettu Mustan Nasaretilaisen juhlakulkueesta ja suosittu pyhiinvaelluskohde.",
+     "leveys": 5616,
+     "korkeus": 3744,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15216775",
+   "nimi": "Escolta-katu",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 14.59778,
+   "lon": 120.97851,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ph-mm-manila-binondo-escolta - east end (2014).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ph-mm-manila-binondo-escolta_-_east_end_(2014).JPG?width=1280",
+     "tekija": "w:User:Patrickroque01",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ph-mm-manila-binondo-escolta_-_east_end_(2014).JPG",
+     "selite": "Escolta oli Manilan vanha kauppakatu, jota reunustavat 1900-luvun alun liikerakennukset.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6275142",
+   "nimi": "Jones-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 14.59583,
+   "lon": 120.97731,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Binondo in Manila 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binondo_in_Manila_22.jpg?width=1280",
+     "tekija": "RamaGaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Binondo_in_Manila_22.jpg",
+     "selite": "Jones-silta ylittää Pasig-joen Binondon ja Intramurosin välillä koristeellisine lyhtypylväineen.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Binondo in Manila 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binondo_in_Manila_24.jpg?width=1280",
+     "tekija": "RamaGaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Binondo_in_Manila_24.jpg",
+     "selite": "Siltaa joen yli katsottuna: kaaret ja koristeelliset valaisinpylväät.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q123815605",
+   "nimi": "Kansallinen taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 14.5869,
+   "lon": 120.9813,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "04762jfNational Museum of the Philippines Ermita Manilafvf 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04762jfNational_Museum_of_the_Philippines_Ermita_Manilafvf_07.jpg?width=1280",
+     "tekija": "Judgefloro",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04762jfNational_Museum_of_the_Philippines_Ermita_Manilafvf_07.jpg",
+     "selite": "Kansallinen taidemuseo toimii vanhassa uusklassisessa lakiasäätävän elimen rakennuksessa Ermitassa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gerald R Mondala NATIONAL MUSEUM INTERIOR 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerald_R_Mondala_NATIONAL_MUSEUM_INTERIOR_2.jpg?width=1280",
+     "tekija": "GRMondala",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gerald_R_Mondala_NATIONAL_MUSEUM_INTERIOR_2.jpg",
+     "selite": "Museon portaikon kattoikkuna valaisee korkean pääsalin.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18708349",
+   "nimi": "Baluarte de San Diego",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 14.5854,
+   "lon": 120.976,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baluarte de San Diego.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baluarte_de_San_Diego.jpg?width=1280",
+     "tekija": "Ian Jay Traquena",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baluarte_de_San_Diego.jpg",
+     "selite": "Baluarte de San Diego on Intramurosin muurien pyöreä kivinen bastioni.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q942688",
+   "nimi": "Malacañangin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 14.59386,
+   "lon": 120.99452,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Malacanang Palace facade 1910.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malacanang_Palace_facade_1910.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Malacanang_Palace_facade_1910.jpg",
+     "selite": "Malacañang on Filippiinien presidentin virallinen asuinpaikka Pasig-joen rannalla, tässä vanhassa kuvassa.",
+     "leveys": 2783,
+     "korkeus": 1875,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Intramuros, Plaza Roma, Ermita skyline drone (Manila; 09-06-2025).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Intramuros%2C_Plaza_Roma%2C_Ermita_skyline_drone_(Manila%3B_09-06-2025).jpg?width=1280",
+   "tekija": "Patrickroque01",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Intramuros%2C_Plaza_Roma%2C_Ermita_skyline_drone_(Manila%3B_09-06-2025).jpg",
+   "selite": "Manilan keskusta ja Manilan lahti Intramurosin yläpuolelta katsottuna.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Manila Bay sunset from Malate district (002) 2023-11-15.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manila_Bay_sunset_from_Malate_district_(002)_2023-11-15.jpg?width=1280",
+   "tekija": "LMP 2001",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manila_Bay_sunset_from_Malate_district_(002)_2023-11-15.jpg",
+   "selite": "Manilan lahden auringonlasku, jonka rannalla kaupunki syntyi.",
+   "leveys": 7902,
+   "korkeus": 5927,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

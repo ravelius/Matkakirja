@@ -1,0 +1,875 @@
+{
+ "kaupunki": "Monaco",
+ "id": "monaco",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Monacoon. Ylhäältä kaupunkivaltio on kapea kaistale Välimeren rannan ja jyrkän rinteen välissä: talot nousevat rannasta rinnettä ylös, ja niiden takana kohoavat Ranskan puolen vuoret. Monacon kallio työntyy niemenä mereen, ja sen ja Monte Carlon väliin jää satama. Mereltä käy tuuli, ja se kuljettaa koriamme hitaasti kohti rantaa. Kierros alkaa kallion Palatsiaukiolta, jonka laidalla ruhtinaanlinna kohoaa tornien ja keskiaikaisten muurien kanssa."
+ },
+ "kierros": [
+  "Q1164788",
+  "Q667450",
+  "Q851527",
+  "Q7230673",
+  "Q1577048",
+  "Q1779905",
+  "Q584191",
+  "Q1384208"
+ ],
+ "kohteet": [
+  {
+   "id": "Q1164788",
+   "nimi": "Monacon ruhtinaallinen palatsi",
+   "kuvaus": "Monacon ruhtinaan linna kalliolla",
+   "luokka": "palatsi",
+   "koko_m": 135,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Ruhtinaanlinna kohoaa pallokorista katsottuna Monacon kallion laella, ja sen edessä on Palatsiaukio. Palatsin ydin on linnoitus, jonka rakentaminen aloitettiin kesäkuussa 1215 genovalaisten toimesta. Tammikuussa 1297 François Grimaldi valtasi linnoituksen, mutta Grimaldit menettivät sen pian, ja suku sai kallion pysyvästi hallintaansa vasta 1419. Vasta 1500-luvulla Honoré I alkoi muuttaa linnoitusta palatsiksi. Sisäpihaa kiertävät kaksikerroksiset kaarikäytävät, ja ylempää kutsutaan Herkuleen galleriaksi. Pihalta nousee Carraran marmorista tehty portaikko. Valtiohuoneisiin pääsee tutustumaan keväästä lokakuun puoliväliin.",
+   "lyhyt": "Vuosina 1793–1814 palatsi ei ollut ruhtinaan koti: Ranskan vallankumouksen johtajat liittivät Monacon Ranskaan, palatsi ryöstettiin ja valtiohuoneet muutettiin sotilassairaalaksi. Ruhtinas Rainier III, joka tuli valtaan vuonna 1949, kunnosti palatsin myöhemmin takaisin entiseen loistoonsa.",
+   "syventava": "Miksi genovalaiset rakensivat linnoituksen juuri tälle kalliolle?",
+   "kysymykset": [
+    "Miten Grimaldit saivat linnoituksen haltuunsa vuonna 1297?",
+    "Mitä palatsille tapahtui Ranskan vallankumouksen aikana?",
+    "Mikä on Herkuleen galleria?",
+    "Mistä kivestä palatsin pihan portaikko on tehty?",
+    "Kuka muutti linnoituksen palatsiksi 1500-luvulla?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoituksen rakentaminen kalliolla alkoi kesäkuussa 1215 (genovalaiset).",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Linnoituksen rakentaminen kalliolla alkoi kesäkuussa 1215 (genovalaiset).",
+     "url": "https://monacodc.org/monhistory.html"
+    },
+    {
+     "vaite": "Linnoituksen rakentaminen kalliolla alkoi kesäkuussa 1215 (genovalaiset).",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "François Grimaldi valtasi linnoituksen tammikuussa 1297.",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "François Grimaldi valtasi linnoituksen tammikuussa 1297.",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "François Grimaldi valtasi linnoituksen tammikuussa 1297.",
+     "url": "https://monacodc.org/monhistory.html"
+    },
+    {
+     "vaite": "Honoré I muutti linnoitusta palatsiksi 1500-luvulla (Honoré I hallitsi 1522/1523-1581).",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Honoré I muutti linnoitusta palatsiksi 1500-luvulla (Honoré I hallitsi 1522/1523-1581).",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "Pihassa kaksikerroksiset kaarikäytävät; ylempi on Herkuleen galleria.",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "Pihassa kaksikerroksiset kaarikäytävät; ylempi on Herkuleen galleria.",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Pihan marmoriportaikko Carraran marmoria.",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "Pihan marmoriportaikko Carraran marmoria.",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Valtiohuoneet ovat avoinna yleisölle kesällä (kesäkuusta lokakuuhun).",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Valtiohuoneet ovat avoinna yleisölle kesällä (kesäkuusta lokakuuhun).",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "Ranskan vallankumouksen aikana 1793 palatsi ryöstettiin ja valtiohuoneet olivat sotilassairaalana.",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    },
+    {
+     "vaite": "Ranskan vallankumouksen aikana 1793 palatsi ryöstettiin ja valtiohuoneet olivat sotilassairaalana.",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Rainier III (valtaan 1949) kunnosti palatsin menetettyä loistoa.",
+     "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html"
+    },
+    {
+     "vaite": "Rainier III (valtaan 1949) kunnosti palatsin menetettyä loistoa.",
+     "url": "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco"
+    }
+   ]
+  },
+  {
+   "id": "Q667450",
+   "nimi": "Monacon katedraali",
+   "kuvaus": "Monacon katolinen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 75,
+   "teksti": "Monacon katedraali seisoo Monaco-Villen vanhassa kaupungissa, ja ylhäältä katsottuna sen vaalea kivirunko erottuu kattojen seasta. Kirkko on rakennettu uusromaaniseen tyyliin arkkitehti Charles Lenormandin johdolla. Rakennustyöt kestivät lähes 30 vuotta, vuodesta 1875 vuoteen 1903, ja kirkko vihittiin käyttöön vasta 11.6.1911. Se nousi vuonna 1874 puretun vanhan Pyhän Nikolauksen kirkon paikalle. Kirkon kuorikäytävässä on useimpien edesmenneiden ruhtinaiden haudat. Sinne on haudattu myös ruhtinas Rainier III ja hänen puolisonsa, ruhtinatar Grace.",
+   "lyhyt": "Katedraalissa on Pyhän Nikolauksen alttaritaulu vuodelta 1500, jonka tekijäksi mainitaan taiteilija Ludovico Brea. Sisäänkäynnin yläpuolella olevalla urkuparvella on suuret, neljän koskettimiston urut, jotka otettiin käyttöön vuonna 1976.",
+   "syventava": "Miksi vanha Pyhän Nikolauksen kirkko purettiin ja tilalle rakennettiin uusi katedraali?",
+   "kysymykset": [
+    "Keitä ruhtinaita katedraalin kuorikäytävään on haudattu?",
+    "Minkä tyylinen katedraali on?",
+    "Mitä vanhasta Pyhän Nikolauksen kirkosta on säilynyt?",
+    "Kuka maalasi Pyhän Nikolauksen alttaritaulun?",
+    "Montako koskettimistoa katedraalin suurissa urkuissa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraali on uusromaanista tyyliä.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Katedraali on uusromaanista tyyliä.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Rakennustyöt Charles Lenormandin johdolla.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Rakennustyöt Charles Lenormandin johdolla.",
+     "url": "https://diocese.mc/storage/documents/64Z9eFnaihJuxQBURMZvyL5ZjLRWp7vFsayHfr77.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Rakennettu vuosina 1875-1903.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Rakennettu vuosina 1875-1903.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Pyhitys 11.6.1911.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Pyhitys 11.6.1911.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Vanha Pyhän Nikolauksen kirkko purettiin 1874 ja katedraali rakennettiin sen paikalle.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Vanha Pyhän Nikolauksen kirkko purettiin 1874 ja katedraali rakennettiin sen paikalle.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Kuorikäytävässä useimpien edesmenneiden ruhtinaiden haudat.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Kuorikäytävässä useimpien edesmenneiden ruhtinaiden haudat.",
+     "url": "https://diocese.mc/storage/documents/64Z9eFnaihJuxQBURMZvyL5ZjLRWp7vFsayHfr77.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Rainier III ja Grace haudattu katedraaliin.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Rainier III ja Grace haudattu katedraaliin.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Pyhän Nikolauksen alttaritaulu vuodelta 1500, tekijä Ludovico Brea.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Pyhän Nikolauksen alttaritaulu vuodelta 1500, tekijä Ludovico Brea.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    },
+    {
+     "vaite": "Urut vuodelta 1976, neljä koskettimistoa.",
+     "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral"
+    },
+    {
+     "vaite": "Urut vuodelta 1976, neljä koskettimistoa.",
+     "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality"
+    }
+   ]
+  },
+  {
+   "id": "Q851527",
+   "nimi": "Monacon merimuseo",
+   "kuvaus": "Albert I:n valtamerimuseo kalliolla",
+   "luokka": "museo",
+   "koko_m": 90,
+   "katse_suunta": 340,
+   "katse_kaari": 30,
+   "teksti": "Valtamerimuseo kohoaa suoraan kallion jyrkältä reunalta, ja sen julkisivu on noin 85 metriä merenpinnan yläpuolella. Rakennuksen suunnitteli arkkitehti Paul Delefortrie, ja peruskivi muurattiin 25.4.1899. Rakennustyöt kestivät yksitoista vuotta, ja ruhtinas Albert I vihki museon käyttöön vuonna 1910. Rakennusaineena käytettiin La Turbien valkoista kalkkikiveä, ja julkisivun pylväät on tehty italialaisesta Brescian kalkkikivestä. Albert I oli merentutkija, ja museo on omistettu hänen aloittamalleen meren tutkimukselle ja tuntemukselle.",
+   "lyhyt": "Albert I johti yhteensä 28 tieteellistä tutkimusretkeä ja perusti Valtamerentutkimuslaitoksen, joka vastaa museosta. Vuosina 1957–1988 museota johti merentutkija Jacques-Yves Cousteau. Museon pysyviin akvaarioihin kuuluu hailaguuni.",
+   "syventava": "Miksi museota kutsutaan meren temppeliksi?",
+   "kysymykset": [
+    "Kuka suunnitteli Valtamerimuseon rakennuksen?",
+    "Kuinka kauan museon rakentaminen kesti?",
+    "Kuka johti museota vuosina 1957–1988?",
+    "Montako tutkimusretkeä ruhtinas Albert I johti?",
+    "Mistä museon rakennuskivi tuotiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Julkisivu kohoaa noin 85 metriä merenpinnan yläpuolelle kallion jyrkällä reunalla.",
+     "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco"
+    },
+    {
+     "vaite": "Julkisivu kohoaa noin 85 metriä merenpinnan yläpuolelle kallion jyrkällä reunalla.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Julkisivu kohoaa noin 85 metriä merenpinnan yläpuolelle kallion jyrkällä reunalla.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Arkkitehti Paul Delefortrie.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Arkkitehti Paul Delefortrie.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Arkkitehti Paul Delefortrie.",
+     "url": "https://structurae.net/en/structures/oceanographic-museum",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Peruskivi muurattiin 25.4.1899.",
+     "url": "https://www.oceano.org/en/organization/the-great-figures/prince-albert-i"
+    },
+    {
+     "vaite": "Peruskivi muurattiin 25.4.1899.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Peruskivi muurattiin 25.4.1899.",
+     "url": "https://structurae.net/en/structures/oceanographic-museum",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Rakennustyöt kestivät yksitoista vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco"
+    },
+    {
+     "vaite": "Rakennustyöt kestivät yksitoista vuotta.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Rakennustyöt kestivät yksitoista vuotta.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Albert I vihki museon käyttöön vuonna 1910.",
+     "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco"
+    },
+    {
+     "vaite": "Albert I vihki museon käyttöön vuonna 1910.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Albert I vihki museon käyttöön vuonna 1910.",
+     "url": "https://www.oceano.org/en/organization/the-great-figures/prince-albert-i"
+    },
+    {
+     "vaite": "Rakennuskivi La Turbien valkoista kalkkikiveä.",
+     "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco"
+    },
+    {
+     "vaite": "Rakennuskivi La Turbien valkoista kalkkikiveä.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Rakennuskivi La Turbien valkoista kalkkikiveä.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Julkisivun pylväät italialaista Brescian kalkkikiveä.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Julkisivun pylväät italialaista Brescian kalkkikiveä.",
+     "url": "https://structurae.net/en/structures/oceanographic-museum",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Albert I oli merentutkija, ja museota on kutsuttu meren temppeliksi.",
+     "url": "https://www.oceano.org/en/organization/the-great-figures/prince-albert-i"
+    },
+    {
+     "vaite": "Albert I oli merentutkija, ja museota on kutsuttu meren temppeliksi.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Albert I johti 28 tieteellistä tutkimusretkeä ja perusti Valtamerentutkimuslaitoksen.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Albert I johti 28 tieteellistä tutkimusretkeä ja perusti Valtamerentutkimuslaitoksen.",
+     "url": "https://www.visitmonaco.com/en/explore/activities/museums-and-attractions-in-monaco/oceanographic-museum"
+    },
+    {
+     "vaite": "Jacques-Yves Cousteau johti museota 1957-1988.",
+     "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco"
+    },
+    {
+     "vaite": "Jacques-Yves Cousteau johti museota 1957-1988.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Jacques-Yves Cousteau johti museota 1957-1988.",
+     "url": "https://www.hellomonaco.com/sightseeing/must-sees/the-oceanographic-museum-of-monaco-temple-of-the-sea/"
+    },
+    {
+     "vaite": "Pysyviin akvaarioihin kuuluu hailaguuni.",
+     "url": "https://www.finestresullarte.info/en/travelnotebooks/22857vn_the-oceanographic-museum-in-monaco-a-century-of-underwater-exploration-and-wonders.php"
+    },
+    {
+     "vaite": "Pysyviin akvaarioihin kuuluu hailaguuni.",
+     "url": "https://www.visitmonaco.com/en/explore/activities/museums-and-attractions-in-monaco/oceanographic-museum"
+    }
+   ]
+  },
+  {
+   "id": "Q7230673",
+   "nimi": "Port Hercule",
+   "kuvaus": "Monacon syvä pääsatama kallion juurella",
+   "luokka": "satama",
+   "koko_m": 800,
+   "katse_suunta": 45,
+   "katse_kaari": 30,
+   "teksti": "Port Hercule on Monacon pääsatama, ja ylhäältä katsottuna se on kallion ja Monte Carlon väliin jäävä laaja lahti. Sataman nimi viittaa Herkulekseen: antiikissa paikkaa kutsuttiin nimellä Portus Herculis Monoeci. Paikka tunnettiin Monoikos-nimellä jo noin vuonna 500 eaa., ja Julius Caesar kerrotaan pysähtyneen siellä vuonna 50 eaa. Nykyisen muotonsa satama sai ruhtinas Albert I:n aikana aloitetuissa töissä, jotka valmistuivat vuonna 1926. Monacon Grand Prix -rata kulkee sataman rantalaiturien, muun muassa Quai des États-Unisin, kautta.",
+   "lyhyt": "Satamaa on uusittu useaan otteeseen: 1970-luvulla se kunnostettiin perusteellisesti, ja 2010–2011 vanhat kiinteät laiturit korvattiin kolmella kelluvalla betonilaiturilla. Vuonna 2011 satamassa pidettiin ilmainen Jean-Michel Jarren konsertti, jota seurasi noin 85 000 katsojaa.",
+   "syventava": "Miksi sataman nimi viittaa Herkulekseen?",
+   "kysymykset": [
+    "Mitä Monoikos tarkoittaa?",
+    "Milloin sataman nykyinen muoto valmistui?",
+    "Millä laiturilla Grand Prix -radan pitkä suora kulkee?",
+    "Milloin Julius Caesarin kerrotaan käyneen satamassa?",
+    "Mikä purjehdusseura toimii satamassa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Satama on Monacon pääsatama kallion juurella (La Condamine).",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Satama on Monacon pääsatama kallion juurella (La Condamine).",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Latinankielinen nimi Portus Herculis Monoeci viittaa Herkulekseen.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Latinankielinen nimi Portus Herculis Monoeci viittaa Herkulekseen.",
+     "url": "https://monacolife.net/2024/01/21/"
+    },
+    {
+     "vaite": "Paikka tunnettiin nimellä Monoikos noin 500 eaa.",
+     "url": "https://monacolife.net/2024/01/21/"
+    },
+    {
+     "vaite": "Paikka tunnettiin nimellä Monoikos noin 500 eaa.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Julius Caesar kerrotaan pysähtyneen satamassa vuonna 50 eaa.",
+     "url": "https://monacolife.net/2024/01/21/"
+    },
+    {
+     "vaite": "Julius Caesar kerrotaan pysähtyneen satamassa vuonna 50 eaa.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Albert I aloitti modernin sataman, ja sen muoto valmistui 1926.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Albert I aloitti modernin sataman, ja sen muoto valmistui 1926.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Grand Prix -radan osa kulkee sataman rantalaiturin (Quai des États-Unis) kautta.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Grand Prix -radan osa kulkee sataman rantalaiturin (Quai des États-Unis) kautta.",
+     "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco"
+    },
+    {
+     "vaite": "1970-luvun perusteellinen uudistus ja kolme kelluvaa betonilaituria 2010-2011.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "1970-luvun perusteellinen uudistus ja kolme kelluvaa betonilaituria 2010-2011.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Jean-Michel Jarren ilmainen konsertti 2011, noin 85 000 katsojaa.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Jean-Michel Jarren ilmainen konsertti 2011, noin 85 000 katsojaa.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    },
+    {
+     "vaite": "Yacht Club de Monaco toimii satamassa.",
+     "url": "https://en.wikipedia.org/wiki/Port_Hercules"
+    },
+    {
+     "vaite": "Yacht Club de Monaco toimii satamassa.",
+     "url": "https://www.hellomonaco.com/sightseeing/monacos-port-hercule-the-beating-heart-of-the-principality-the-grand-prix-the-yacht-show-and-local-culture/"
+    }
+   ]
+  },
+  {
+   "id": "Q1577048",
+   "nimi": "Salle Garnier",
+   "kuvaus": "Monte Carlon oopperan sali",
+   "luokka": "teatteri",
+   "koko_m": 60,
+   "katse_suunta": 60,
+   "katse_kaari": 30,
+   "teksti": "Salle Garnier on Monte Carlon oopperasali, joka sijaitsee kasinon takana. Salin suunnitteli Charles Garnier, Pariisin oopperatalon arkkitehti, ja se vihittiin käyttöön 25.1.1879. Sali rakennettiin kasinon laajennuksen yhteydessä vuosina 1878–1879. Avajaisiltana esiintyi näyttelijä Sarah Bernhardt. Salissa on runsaat 500 paikkaa, joten se on paljon pienempi kuin Pariisin Garnier-ooppera. Monte Carlon oopperassa on ensiesitetty monia oopperoita, muun muassa Giacomo Puccinin La rondine vuonna 1917.",
+   "lyhyt": "Raoul Gunsbourg johti Monte Carlon oopperaa 1890-luvun alusta lähtien, ja hänen kaudellaan talo nousi suurten kansainvälisten oopperanäyttämöiden rinnalle. Vuonna 1910 siellä sai kantaesityksensä Jules Massenet'n ooppera Don Quijote.",
+   "syventava": "Miksi Pariisin oopperan arkkitehti suunnitteli salin juuri Monacoon?",
+   "kysymykset": [
+    "Kuka esiintyi salin avajaisissa vuonna 1879?",
+    "Missä salin rakennus sijaitsee suhteessa kasinoon?",
+    "Mikä Puccinin ooppera sai ensiesityksensä Monte Carlossa?",
+    "Kuka Raoul Gunsbourg oli?",
+    "Kuinka monta paikkaa salissa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Salle Garnier on Monte-Carlon oopperan sali kasinon takana.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Salle Garnier on Monte-Carlon oopperan sali kasinon takana.",
+     "url": "https://www.visitmonaco.com/en/explore/activities/museums-and-attractions-in-monaco/casino-de-monte-carlo"
+    },
+    {
+     "vaite": "Salin suunnitteli Charles Garnier; vihkiäiset 25.1.1879.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Salin suunnitteli Charles Garnier; vihkiäiset 25.1.1879.",
+     "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/"
+    },
+    {
+     "vaite": "Salin suunnitteli Charles Garnier; vihkiäiset 25.1.1879.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Sali rakennettiin kasinon laajennuksen yhteydessä 1878-1879.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+    },
+    {
+     "vaite": "Sali rakennettiin kasinon laajennuksen yhteydessä 1878-1879.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Avajaisissa esiintyi Sarah Bernhardt.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Avajaisissa esiintyi Sarah Bernhardt.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Salissa noin 524-525 paikkaa, Pariisin oopperassa noin 2000.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Salissa noin 524-525 paikkaa, Pariisin oopperassa noin 2000.",
+     "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Puccinin La rondine sai maailmanensi-iltansa 1917.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Puccinin La rondine sai maailmanensi-iltansa 1917.",
+     "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/"
+    },
+    {
+     "vaite": "Gunsbourg oopperan johtajana 1890-luvun alusta (1892/1893 lähteestä riippuen).",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Gunsbourg oopperan johtajana 1890-luvun alusta (1892/1893 lähteestä riippuen).",
+     "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/"
+    },
+    {
+     "vaite": "Massenet'n Don Quijote (1910) luotu Monte Carlossa.",
+     "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+    },
+    {
+     "vaite": "Massenet'n Don Quijote (1910) luotu Monte Carlossa.",
+     "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/"
+    }
+   ]
+  },
+  {
+   "id": "Q1779905",
+   "nimi": "Monte Carlon kasino",
+   "kuvaus": "Monte Carlon kasino Kasinoaukiolla",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "katse_suunta": 135,
+   "katse_kaari": 30,
+   "teksti": "Monte Carlon kasino seisoo ylhäältä katsottuna Kasinoaukion laidalla Spélugues-tasangolla, joka oli ennen rakentamatonta maata. Kasinon rakentaminen alkoi 13.5.1858, ja rakennus valmistui vuonna 1863. Samana vuonna liiketoiminnan otti haltuunsa François Blanc, joka sai 50 vuoden toimiluvan vuoteen 1913 asti. Kasinon vanhat rakennukset purettiin 1878, ja arkkitehti Charles Garnier uudisti ne vuosina 1878–1879. Samalla rakennukseen liitettiin konserttisali, joka tunnetaan nykyään nimellä Salle Garnier ja on osa Monte Carlon oopperaa.",
+   "lyhyt": "Kasinon viereen rakennettiin Hôtel de Paris, joka avattiin noin vuonna 1864, ja kasinon ympärille kasvoi uusi kaupunginosa. Vuonna 1866 ruhtinas Kaarle III antoi sille nimen Monte Carlo, joka tarkoittaa Kaarlen vuorta. Entinen nimi Spélugues tarkoitti luolia.",
+   "syventava": "Miksi alueen nimi vaihdettiin Spéluguesista Monte Carloksi?",
+   "kysymykset": [
+    "Kuka oli François Blanc?",
+    "Mikä on Spélugues?",
+    "Mitä Monte Carlo tarkoittaa?",
+    "Milloin Hôtel de Paris avattiin?",
+    "Mitä muita rakennuksia Kasinoaukion ympärillä on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kasino rakennettiin Spélugues-tasangolle, joka oli rakentamatonta maata.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Kasino rakennettiin Spélugues-tasangolle, joka oli rakentamatonta maata.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 13.5.1858 ja valmistui 1863.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 13.5.1858 ja valmistui 1863.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 13.5.1858 ja valmistui 1863.",
+     "url": "https://www.visitmonaco.com/en/explore/activities/museums-and-attractions-in-monaco/casino-de-monte-carlo"
+    },
+    {
+     "vaite": "Blanc sai 50 vuoden toimiluvan 1863-1913.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+    },
+    {
+     "vaite": "Blanc sai 50 vuoden toimiluvan 1863-1913.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Garnier uudisti kasinon 1878-1879 ja lisäsi konserttisalin.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+    },
+    {
+     "vaite": "Garnier uudisti kasinon 1878-1879 ja lisäsi konserttisalin.",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Hôtel de Paris avattiin noin 1864; kaupunginosa kasvoi kasinon ympärille.",
+     "url": "https://www.visitmonaco.com/en/explore/activities/museums-and-attractions-in-monaco/casino-de-monte-carlo"
+    },
+    {
+     "vaite": "Hôtel de Paris avattiin noin 1864; kaupunginosa kasvoi kasinon ympärille.",
+     "url": "https://www.gouv.mc/en/government-institutions/history-and-heritage/periods/inventing-monte-carlo-years-1860-to-1920/the-founding-of-monte-carlo"
+    },
+    {
+     "vaite": "Ruhtinas Kaarle III antoi kaupunginosalle nimen Monte Carlo 1866 (Kaarlen vuori).",
+     "url": "https://www.gouv.mc/en/government-institutions/history-and-heritage/periods/inventing-monte-carlo-years-1860-to-1920/the-founding-of-monte-carlo"
+    },
+    {
+     "vaite": "Ruhtinas Kaarle III antoi kaupunginosalle nimen Monte Carlo 1866 (Kaarlen vuori).",
+     "url": "https://www.montecarlosbm-corporate.com/the-company/history/"
+    },
+    {
+     "vaite": "Ruhtinas Kaarle III antoi kaupunginosalle nimen Monte Carlo 1866 (Kaarlen vuori).",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo"
+    },
+    {
+     "vaite": "Spélugues tarkoittaa luolia.",
+     "url": "https://www.gouv.mc/en/government-institutions/history-and-heritage/periods/inventing-monte-carlo-years-1860-to-1920/the-founding-of-monte-carlo",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q584191",
+   "nimi": "Sainte-Dévoten kappeli",
+   "kuvaus": "Monacon suojeluspyhimyksen kappeli",
+   "luokka": "kirkko",
+   "koko_m": 30,
+   "teksti": "Sainte-Dévoten kappeli on pieni kirkko Gaumates-laaksossa, ja ylhäältä katsottuna se on kohteista pienin. Se on omistettu Monacon suojeluspyhimykselle Dévotelle. Legendan mukaan Dévote syntyi Korsikalla ja kuoli marttyyrina Diocletianuksen vainoissa 300-luvun alussa. Hänen ruumiinsa pantiin veneeseen, ja myrskyssä kyyhkynen ohjasi veneen Monacon rannalle Gaumatesin laaksoon. Kappelin ensimmäinen maininta on asiakirjoissa vuodelta 1070. Pyhimyksen juhlapäivä on 27. tammikuuta, ja sitä edeltävänä iltana satamassa poltetaan vene.",
+   "lyhyt": "Kappelia kunnostettiin ja laajennettiin ruhtinas Kaarle III:n aikana, ja se vihittiin uudelleen käyttöön 26.1.1871. Monacon ruhtinaan morsian vie perinteen mukaan hääseremonian jälkeen hääkimppunsa kappeliin. Monacon Grand Prix -radan ensimmäinen mutka on nimetty kappelin mukaan.",
+   "syventava": "Miksi pyhimyksen juhlan aattona poltetaan vene?",
+   "kysymykset": [
+    "Missä Dévote syntyi?",
+    "Mikä lintu ohjasi veneen Monacoon legendan mukaan?",
+    "Mitä varkaalle tapahtui vuonna 1070?",
+    "Minkä Grand Prix -mutkan nimi tulee kappelista?",
+    "Mihin ruhtinaan morsian vie hääkimppunsa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kappeli on omistettu Monacon suojeluspyhimykselle Dévotelle.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-D%C3%A9vote_Chapel"
+    },
+    {
+     "vaite": "Kappeli on omistettu Monacon suojeluspyhimykselle Dévotelle.",
+     "url": "https://www.monaco-tribune.com/2024/01/qui-etait-sainte-devote-et-pourquoi-brule-t-on-sa-barque/"
+    },
+    {
+     "vaite": "Legenda: Dévote syntyi Korsikalla ja kuoli Diocletianuksen aikana.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Devota"
+    },
+    {
+     "vaite": "Legenda: Dévote syntyi Korsikalla ja kuoli Diocletianuksen aikana.",
+     "url": "https://www.monaco-tribune.com/2024/01/qui-etait-sainte-devote-et-pourquoi-brule-t-on-sa-barque/"
+    },
+    {
+     "vaite": "Legenda: ruumis veneessä, kyyhkynen ohjasi Gaumatesin laaksoon.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Devota"
+    },
+    {
+     "vaite": "Legenda: ruumis veneessä, kyyhkynen ohjasi Gaumatesin laaksoon.",
+     "url": "https://www.monaco-tribune.com/2024/01/qui-etait-sainte-devote-et-pourquoi-brule-t-on-sa-barque/"
+    },
+    {
+     "vaite": "Kappelin ensimmäinen maininta asiakirjoissa vuodelta 1070.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-D%C3%A9vote_Chapel"
+    },
+    {
+     "vaite": "Kappelin ensimmäinen maininta asiakirjoissa vuodelta 1070.",
+     "url": "https://monaco-tribune.com/en/listing/sainte-devote-church",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Juhlapäivä 27. tammikuuta; vene poltetaan edellisenä iltana satamassa.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Devota"
+    },
+    {
+     "vaite": "Juhlapäivä 27. tammikuuta; vene poltetaan edellisenä iltana satamassa.",
+     "url": "https://www.monaco-tribune.com/2024/01/qui-etait-sainte-devote-et-pourquoi-brule-t-on-sa-barque/"
+    },
+    {
+     "vaite": "Kappelia kunnostettiin Kaarle III:n aikana, vihkiäiset 26.1.1871.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-D%C3%A9vote_Chapel"
+    },
+    {
+     "vaite": "Kappelia kunnostettiin Kaarle III:n aikana, vihkiäiset 26.1.1871.",
+     "url": "https://monaco-tribune.com/en/listing/sainte-devote-church",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Ruhtinaan morsian vie hääkimppunsa kappeliin.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-D%C3%A9vote_Chapel"
+    },
+    {
+     "vaite": "Ruhtinaan morsian vie hääkimppunsa kappeliin.",
+     "url": "https://monaco-tribune.com/en/listing/sainte-devote-church",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Grand Prix -radan ensimmäinen mutka Sainte-Dévote on nimetty kappelin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-D%C3%A9vote_Chapel"
+    },
+    {
+     "vaite": "Grand Prix -radan ensimmäinen mutka Sainte-Dévote on nimetty kappelin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco"
+    }
+   ]
+  },
+  {
+   "id": "Q1384208",
+   "nimi": "Jardin Exotique",
+   "kuvaus": "Kalliorinteen mehikasvipuutarha",
+   "luokka": "puisto",
+   "koko_m": 180,
+   "teksti": "Jardin Exotique eli Eksoottinen puutarha kiipeää pallokorista katsottuna Monacon länsiosassa kallionrinnettä. Ruhtinas Albert I osti Observatorion niemekkeen vuonna 1912 ja päätti perustaa puutarhan mehikasveille, jotka olivat siihen aikaan Euroopassa vähän tunnettuja. Rakennustyöt alkoivat vuonna 1913 ja jatkuivat yli kaksikymmentä vuotta, koska rinne oli vaikea ja vanhat kaktukset piti siirtää uuteen paikkaan. Puutarha vihittiin käyttöön vuonna 1933. Siellä kasvaa noin tuhatta lajia kaktuksia, agaveja ja muita mehikasveja, ja rinteestä avautuu näkymä Monacon ja Välimeren yli.",
+   "lyhyt": "Puutarhan alla on Observatorion luola, joka löydettiin vuonna 1916 ja avattiin yleisölle vuonna 1950. Luolasta on löytynyt eläinten luita ja merkkejä esihistoriallisen ihmisen oleskelusta. Luolan nimi tulee pienestä tähtitieteellisestä observatoriosta, joka siinä aikoinaan sijaitsi.",
+   "syventava": "Miksi ruhtinas Albert I päätti perustaa juuri mehikasveille omistetun puutarhan?",
+   "kysymykset": [
+    "Kuka oli Augustin Gastaud?",
+    "Mistä kaktukset siirrettiin puutarhaan?",
+    "Kuka insinööri liittyy puutarhan rakentamiseen?",
+    "Miksi luolaa kutsutaan Observatorion luolaksi?",
+    "Milloin Observatorion luola avattiin yleisölle?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puutarha on kallionrinteellä ja siitä on näkymä Monacon yli.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Puutarha on kallionrinteellä ja siitä on näkymä Monacon yli.",
+     "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world"
+    },
+    {
+     "vaite": "Albert I osti Observatorion niemekkeen 1912.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Albert I osti Observatorion niemekkeen 1912.",
+     "url": "https://www.monaco-tribune.com/en/2025/07/5-anecdotes-on-a-prickly-subject-cacti-in-monaco/"
+    },
+    {
+     "vaite": "Albert I päätti perustaa mehikasveille omistetun puutarhan, joka oli Euroopassa vähän tunnettuja.",
+     "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world"
+    },
+    {
+     "vaite": "Albert I päätti perustaa mehikasveille omistetun puutarhan, joka oli Euroopassa vähän tunnettuja.",
+     "url": "https://www.monaco-tribune.com/en/2025/07/5-anecdotes-on-a-prickly-subject-cacti-in-monaco/"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1913 ja jatkuivat yli kaksikymmentä vuotta.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1913 ja jatkuivat yli kaksikymmentä vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Rakennustyöt alkoivat 1913 ja jatkuivat yli kaksikymmentä vuotta.",
+     "url": "https://www.monaco-tribune.com/en/2025/07/5-anecdotes-on-a-prickly-subject-cacti-in-monaco/"
+    },
+    {
+     "vaite": "Vanhat kaktukset siirrettiin kalliolta (Le Rocher) rinteeseen.",
+     "url": "https://www.monaco-tribune.com/en/2025/07/5-anecdotes-on-a-prickly-subject-cacti-in-monaco/"
+    },
+    {
+     "vaite": "Vanhat kaktukset siirrettiin kalliolta (Le Rocher) rinteeseen.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Puutarha vihittiin käyttöön 1933.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Puutarha vihittiin käyttöön 1933.",
+     "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world"
+    },
+    {
+     "vaite": "Puutarha vihittiin käyttöön 1933.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Noin tuhat lajia kaktuksia ja mehikasveja.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Noin tuhat lajia kaktuksia ja mehikasveja.",
+     "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world"
+    },
+    {
+     "vaite": "Observatorion luola löydettiin 1916.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Observatorion luola löydettiin 1916.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Observatorion luola avattiin yleisölle 1950.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Observatorion luola avattiin yleisölle 1950.",
+     "url": "https://museedupatrimoine.fr/jardin-exotique-de-monaco-principaute-de-monaco/32990.html?lang=en",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Luolasta löytyi eläinten luita ja merkkejä varhaisesta ihmisasutuksesta.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco"
+    },
+    {
+     "vaite": "Luolasta löytyi eläinten luita ja merkkejä varhaisesta ihmisasutuksesta.",
+     "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world"
+    },
+    {
+     "vaite": "Luolan nimi tulee siinä aiemmin olleesta pienestä observatoriosta.",
+     "url": "https://museedupatrimoine.fr/jardin-exotique-de-monaco-principaute-de-monaco/32990.html?lang=en",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Luolan nimi tulee siinä aiemmin olleesta pienestä observatoriosta.",
+     "url": "https://en.wikipedia.org/wiki/Monte_Carlo",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Augustin Gastaud aloitti mehikasvikokoelman; insinööri Louis Notari.",
+     "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco"
+    },
+    {
+     "vaite": "Augustin Gastaud aloitti mehikasvikokoelman; insinööri Louis Notari.",
+     "url": "https://www.monaco-tribune.com/en/2025/07/5-anecdotes-on-a-prickly-subject-cacti-in-monaco/"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Ruhtinaanlinnan 'virallinen asuinpaikka yhä' (Albert II): vain Wikipedia sanoo suoraan; palais.mc ei; ei käytetty",
+  "Linnoituksen alku 1191: vain yksi lähde Wikipedia/palais.mc kontekstina (Henrik IV:n lahjoitus), 1215-rakennustyön alku käytetty",
+  "Munkkiasu 1297: legenda, osa historioitsijoista kiistää; ei mainittu",
+  "Charles V:n vierailu 1529, Honoré IV:n paluu 17.6.1814, konsertit pihalla 1960: vain Wikipedia; pudotettu",
+  "Palatsin sisäpihan noin 3 miljoonaa pikkukiveä: vain palais.mc; pudotettu",
+  "Palatsin portaikko 'hevosenkenkä, 30 askelmaa, yksi marmorilohkare': vain Wikipedia; palais.mc sanoo vain Carraran marmoria; käytetty vain 'Carraran marmoria'",
+  "Katedraalin valkoinen La Turbien kivi: vain Finestre sull'Arte; pudotettu (teksti sanoo vain 'vaalea kivirunko', joka on silmin havaittava)",
+  "Katedraalin vanhan kirkon vuodet 1252/1247-1321: Wikipedia ja Finestre ristiriidassa; pudotettu",
+  "Katedraalin uruston uusiminen 2009-2011, 79 äänikertaa: vain Finestre; pudotettu",
+  "Valtamerimuseon 100 000 tonnia kiveä: vain yksi matkasivusto; pudotettu",
+  "Valtamerimuseon hailaguunin syvyys/lasin paksuus: Finestre 30 cm, Hello Monaco 35 cm, kuusi metriä; ristiriita, pudotettu",
+  "Valtamerimuseon tutkimusretkien vuodet 1884-1915: vain Finestre; käytetty vain '28 retkeä'",
+  "Valtamerimuseon akvaarioiden lajimäärä: Wikipedia ~4000 kalalajia, Finestre ~6000 yksilöä/350 lajia; ristiriita, pudotettu",
+  "Port Hercule 'Monacon ainoa syvänveden satama', syvyys 7-40 m, 40 eekkeriä/700 alusta: vain Wikipedia; pudotettu",
+  "Port Hercule rakennusalku 1901 (Hello Monaco) vs 1910 (hakutulos): ristiriita; käytetty vain valmistumisvuosi 1926 ('Albert I:n aikana aloitetuissa töissä')",
+  "Salle Garnierin paikkamäärä 517/524/525: käytetty 'runsaat 500'",
+  "Salle Garnierin ensimmäinen ooppera Planquetten Le Chevalier Gaston 8.2.1879, Schmitin remontti 1898-99, Hélène 1904 ja Amica 1905: vain Wikipedia; pudotettu",
+  "Salle Garnierin ensiesitysten lukumäärä: Wikipedia 45, Universalis 'yli viisikymmentä 1914 mennessä', hakutulos 78; ristiriita, pudotettu",
+  "Kasinon sali Salle Garnier 'Atrium 28 joonialaista pilaria': vain visitmonaco; pudotettu",
+  "Kasinon 'Garnier suunnitteli alkuperäisen 1863-rakennuksen': hakutulokset ristiriidassa Wikipedian kanssa (Gobineau de la Bretonnerie); käytetty vain Garnierin 1878-1879 uudistus",
+  "Kasinon ensimmäinen kasino La Condamine 1856/1862: Wikipedian kaksi sivua eri vuosilla; pudotettu",
+  "Monte Carlon nimen päivämäärä 1.6./1.7.1866: lähteet eroavat; käytetty vain vuosi 1866",
+  "Rautatie 1868: vain Wikipedia (Monte Carlo); pudotettu",
+  "Sainte-Dévoten marttyyrikuoleman vuosi 303/304: käytetty '300-luvun alussa'",
+  "Sainte-Dévoten veneenpolton alkamisvuosi 1874: Wikipedia 1874, Monaco Tribune 'yli 150 vuotta'; vuotta ei käytetty",
+  "Sainte-Dévoten kappelin rakennusvuosi: lähteet eroavat (Gaumates vs Herkuleen temppelin paikka); käytetty vain maininta 1070",
+  "Jardin Exotiquen avaus 1931 (Wikipedia) vs 1933 (muut): käytetty 'vihittiin käyttöön 1933'",
+  "Jardin Exotiquen pinta-ala noin 15 000 m2: vain Monaco Now; pudotettu",
+  "Louis Notari puutarhan rakentajana: Wikipedia ja Monaco Tribune; kysymyksissä, ei tekstissä; Louis II vs Albert I aloitteentekijänä ristiriita",
+  "Esihistoriallisen antropologian museo siirtyi puutarhaan 1959: vain Wikipedia; pudotettu"
+ ],
+ "ristiriidat": [
+  "Linnoituksen alku 1191 (Wikipedia) vs 1215 (palais.mc, Monaco-Ville, monacodc): käytetty 1215",
+  "Kasinon valmistumisen ja avaamisen vuosi: Wikipedian infokenttä 'July 1865', teksti 1863, SBM/visitmonaco 1863: käytetty 1863",
+  "Gunsbourgin johtajuuden alku 1892 (Wikipedia) vs 1893 (Universalis): käytetty '1890-luvun alusta'",
+  "Valtamerimuseon vihkiäispäivä 25.3. vs 29.3.1910: käytetty vain vuosi 1910",
+  "Jardin Exotique: avaus 1931 vs vihkiäiset 7.2.1933: käytetty 1933 'vihittiin käyttöön'",
+  "Hakutulos-lähteet (huom: hakutulos): D_CAT diocese.mc pdf (Lenormand, ruhtinashaudat), structurae (Delefortrie, peruskivi), Universalis (paikkamäärä), Monaco Tribune listing (kappelin 1070, 1871, morsiamen kimppu), gouv.mc (Spélugues-nimen merkitys), museedupatrimoine (luola 1950, nimi)",
+  "Wikipedia sekä kaksi Wikipedia-sivua käytetty yhdessä kahdessa kohdassa (Grand Prix -mutka Sainte-Dévote; Grand Prix -radan satamalaituri): Wikipedia-sivut eivät ole itsenäisiä, toinen lähde Hello Monaco (satama); Sainte-Dévote-mutkalle itsenäinen toinen lähde puuttuu",
+  "Alun 'Ranskan puolen vuoret' ja jyrkkä rinne: kohdelistan pallolento-kuvauksen mukaan (Merialppien kalkkikivivuoret); Wikipedia Monaco ei kuvaa maastoa jyrkäksi; tarkistettava jos halutaan tiukasti"
+ ]
+}

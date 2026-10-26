@@ -357,8 +357,17 @@ pakettien otsikkokommentit).
 | Aineisto | Tekijä / julkaisija | Lisenssi |
 | --- | --- | --- |
 | Natural Earth — rannikot, maarajat, joet, järvet ja meri (1:10m, 1:50m, 1:110m) | Natural Earth, naturalearthdata.com | Public domain |
+| GEOGLOWS v2 (TDX-Hydro) — jokiverkko natiivin elävään karttaan | GEOGLOWS ECMWF Streamflow Service; jokiviivat NGA TDX-Hydro | CC BY-SA 4.0 |
+| OpenHistoricalMap — vuoden 1873 rautatiet elävään karttaan | OpenHistoricalMap-yhteisö | CC0 1.0 |
 | ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — korkeus, syvyys, varjostus, reliefikartta | Amante & Eakins 2009, NOAA NGDC/NCEI, doi:10.7289/V5C8276M; haettu NOAA CoastWatch ERDDAPista | Public domain (Yhdysvaltain liittovaltion virasto) |
 | Earth at Night (Black Marble) 2016 — yökartan valot | NASA Earth Observatory / Visible Earth; NASA GSFC, Miguel Román, kuvankäsittely Joshua Stevens (SSAI) | Public domain (NASA), maininta ehtona |
+| IGN LiDAR HD — Pariisin maanpinta ja pintamalli natiivipelissä | © IGN | Licence Ouverte Etalab 2.0 |
+| Lantmäteriet Markhöjdmodell — Tukholman maanpinta natiivipelissä | © Lantmäteriet | CC BY 4.0 |
+| Danmarks Højdemodel (Terræn, Overflade) — Kööpenhaminan maanpinta ja pintamalli natiivipelissä | © Klimadatastyrelsen | CC BY 4.0 |
+| Environment Agency LIDAR Composite DTM ja First Return DSM 1 m — Lontoon maanpinta ja pintamalli natiivipelissä | © Environment Agency copyright and/or database right 2022 | Open Government Licence v3.0 |
+| ČÚZK DMR 4G ja DMP 1G — Prahan maanpinta ja pintamalli natiivipelissä | © ČÚZK | CC BY 4.0 |
+| Mapterhorn — muiden kaupunkien maanpinta (DTM) natiivipelissä | mapterhorn.com; kansalliset korkeusmallit, tekijä tiedostossa maa-<kaupunki>.json | Lähdekohtainen avoin lisenssi |
+| ESA WorldCover 2021 — kaupunkien vesialueet natiivipelissä | © ESA WorldCover project 2021, Copernicus Sentinel data | CC BY 4.0 |
 
 ### Tietoaineistot
 
@@ -379,6 +388,10 @@ pakettien otsikkokommentit).
 | Wikidata — koordinaatit, ISO-koodit, maannimet | Wikidata-yhteisö | CC0 1.0 |
 | Ihmisen leviämisen ajoitukset | Julkaistut tutkimusartikkelit (Hublin, Richter, Vidal, Hershkovitz, Groucutt, Clarkson, Fu, Bennett, Dillehay, Wilmshurst, Iasi ym.) | Lainauksia; viite rivikohtaisesti |
 | Silkkitien kaupungit, reitit ja valtakuntien rajat | UNESCO Silk Roads Programme; IDP (British Library); Silk Road Seattle; Britannica; Wikipedia | Tosiasiatietoa; selitetekstit kirjoitettu itse |
+| AERONET Version 3, Level 2.0 — kaupunkien ilman utu (aerosoli) natiivipelissä | NASA GSFC, AERONET; asemien vastuututkijat ilmakeha.json-tiedostossa | Vapaa käyttö lähteen maininnalla |
+| METAR-havainnot, IEM ASOS -arkisto — kaupunkien pilvi-ilmasto natiivipelissä | Iowa Environmental Mesonet, Iowa State University | Vapaa käyttö lähteen maininnalla |
+| SYNOP-havainnot, NOAA Integrated Surface Database (ISD) — kaupunkien pilvi-ilmasto natiivipelissä (pilvet-v4) | NOAA NCEI (AWS Open Data noaa-global-hourly-pds) | NOAA:n avoin data, lähteen maininnalla |
+| Copernicus Sentinel-2 L2A (Earth Search) — kaupunkien veden väri natiivipelissä | Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 | Copernicus-avoin data |
 
 ### Valokuvat ja kuvitus
 
@@ -388,6 +401,7 @@ pakettien otsikkokommentit).
 | Library of Congress — vanhat vedokset ja lasilevyt (mm. Matson, Prokudin-Gorski, Photochrom) | Library of Congress | Public domain |
 | Rijksmuseum — vanhat piirrokset ja vedokset | Rijksmuseum, Amsterdam | Public domain |
 | Internet Archive Book Images | Internet Archive | Public domain |
+| Paikallisaarteiden valokuvat (10 pääkaupunkimaata: ALB, AND, BLR, LIE, MCO, MDA, MKD, MNE, SMR, SRB) | Wikimedia Commons ja Metropolitan Museum of Art (Open Access): Antidiskriminator (byrek, PD), Metropolitan Museum of Art (Vrapin aarre, CC0), Kronologiko (trinxat, CC BY-SA 4.0), Zinneke (Casa de la Vall, CC BY-SA 3.0), Tess Mattew (draniki, CC BY-SA 4.0), Jauhienij (Slutskin vyö, PD), Schofför (Ribel, CC BY-SA 3.0), JoachimKohler-HB (Gutenbergin linna, CC BY-SA 4.0), Lemone (barbagiuai, CC BY-SA 4.0), Tangopaso (Sainte-Dévoten reliikki, PD), Endangered Snowdrop (mărțișor, CC BY-SA 4.0), Petru I Mușatin grosi (PD, kolikot), Наташа Величковска (tavče gravče, CC BY-SA 4.0), Dumbarton Oaks (Mikael VIII:n hyperpyron, PD) ja Enrico Dandolon grosso (PD), Sunshine Soon (vranac, CC BY 2.0), BuhaM (Doclea, CC BY-SA 4.0), Mooonswimmer (Torta Tre Monti, CC BY 4.0), San Marinon Statuta 1600 (PD), Verica 1966 (ajvar, CC BY-SA 4.0), Miroslavin evankeliumi (PD) | PD, CC0, CC BY, CC BY-SA |
 | Lippukuvat | Wikimedia Commons; nimeämistä vaativat neljä on lueteltu `js/packs/lippu-tekijat.js`:ssä | Public domain sekä CC BY-SA 2.5 ja 3.0 |
 | Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, aikakausjulisteet, sovelluskuvakkeet | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
@@ -395,9 +409,11 @@ pakettien otsikkokommentit).
 
 | Aineisto | Tekijä / julkaisija | Lisenssi |
 | --- | --- | --- |
-| radio aporee ::: maps — kenttä-äänitykset (äänimaisemat, "Kuuntele kieltä") | Äänittäjät kohteittain, jakelu archive.org | PD, CC BY, CC BY-SA, CC BY-NC kohteittain |
-| Freesound — äänimaisemat ja tehosteet | Äänittäjät kohteittain (mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal) | CC0, CC BY, CC BY-NC kohteittain |
-| Freesound — Livian ääniefektit ja linssien nauhoitetut äänimaisemat (Ihmisen matka) | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/, aanet/tehosteet/ihmisen-matka/) | CC0 ja CC BY kohteittain |
+| radio aporee ::: maps — kenttä-äänitykset (äänimaisemat, "Kuuntele kieltä") | Äänittäjät kohteittain, jakelu archive.org | PD, CC BY, CC BY-SA kohteittain |
+| Freesound — äänimaisemat ja tehosteet | Äänittäjät kohteittain (mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal) | CC0, CC BY kohteittain |
+| Freesound — Livian ääniefektit | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/) | CC0 ja CC BY kohteittain |
+| Freesound — Ihmisen matka II -linssin äänimaisemat (15) | CC BY 4.0: "Hluhluwe13_unknown_bird.WAV" — reinsamba (freesound.org/s/58233); "Small Creek & Birds" — KasperAugustTopp (freesound.org/s/328140); "Calm Waves" — nsmusic (freesound.org/s/397358); "Doi bo ambi 02 wind up mountain.wav" — fundamental_harmonics (freesound.org/s/437514); "Sailing Ambience - Focus On Cutting Through the Waves" — iainmccurdy (freesound.org/s/645968); "waves and oystercatcher 01 xy90 160717_0917.wav" — klankbeeld (freesound.org/s/355344). CC0: monotraum, gladkiy, emainta, Sclolex, cobratronik, dhallcomposer, felix.blume, DBlover, BenHarmSound. Muokattu: lyhennetty, tasattu −30 LUFS, mp3. Manifesti: aanet/tehosteet/ihmisen-matka/ | CC BY 4.0 (6) ja CC0 (9) |
+| Olavinlinnan lyhty — kaiut (tilan impulssivasteet) | Aalto Acoustics Lab, OK5 (de las Heras, Meyer-Kahlen, Lokki, Arend), doi 10.5281/zenodo.18622201 | CC BY 4.0 |
 | Lyhytaaltoäänitteet — maailmanradion viritysäänet | archive.orgin arkistot, mm. samnewton94 | Public Domain Mark 1.0, CC0 |
 | "Pocket camera start and shut down" — zoomausääni | stephan, pdsounds.org Wikimedia Commonsin kautta | Public domain |
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |

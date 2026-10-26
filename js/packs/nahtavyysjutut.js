@@ -79,7 +79,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Vuonna 1540 Cosimo I de\' Medici muutti taloon, ja hän '
           + 'muutti sen palatsiksi. Kun hovi siirtyi 1565 joen toiselle '
           + 'puolelle Pitti-palatsiin, vanha talo sai nimen Palazzo '
-          + 'Vecchio, "vanha palatsi". Sisällä on Viidensadan sali, '
+          + 'Vecchio, ”vanha palatsi”. Sisällä on Viidensadan sali, '
           + 'joka rakennettiin 1494 suurta kansanneuvostoa varten ja '
           + 'jonka seiniä Leonardo da Vinci ja Michelangelo saivat '
           + 'saman aikaan maalattavakseen — kumpikaan ei saanut työtään '
@@ -104,7 +104,7 @@ export const NAHTAVYYSJUTUT = {
     Uffizi: {
       aika: '1560–1581',
       teksti: 'Uffizi ei ole rakennettu museoksi vaan virastotaloksi. '
-          + 'Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": '
+          + 'Nimi tarkoittaa italiaksi yksinkertaisesti ”virastoja”: '
           + 'Cosimo I halusi kaupungin hallinnon toimistot yhteen '
           + 'taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna '
           + '1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha '
@@ -298,7 +298,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Dominikaanimunkit saivat vuonna 1221 haltuunsa pienen kirkon '
           + 'kaupungin laidalla peltojen keskellä. Se kävi nopeasti ahtaaksi, '
           + 'ja uuden kirkon rakentaminen alkoi 1279. Paavi Eugenius IV vihki '
-          + 'sen 1420. Nimi Novella eli "uusi" jäi kirkkoon kiinni, ja se on '
+          + 'sen 1420. Nimi Novella eli ”uusi” jäi kirkkoon kiinni, ja se on '
           + 'kantanut sitä nyt seitsemänsataa vuotta.'
         + '\n\n'
         + 'Julkisivu tehtiin kahdessa erässä sadan vuoden välein. Alaosa on '
@@ -472,8 +472,10 @@ export const NAHTAVYYSJUTUT = {
           + 'neuvostosotilaat pystyttivät katolle lipun kuuluisassa '
           + 'valokuvassa.'
         + '\n\n'
-        + 'Sodan jälkeen talo seisoi tyhjänä Länsi-Berliinissä koko '
-          + 'kylmän sodan ajan, kunnes Saksa yhdistyi 1990. Uusi '
+        + 'Sodan jälkeen talo kunnostettiin osittain Länsi-Berliinissä '
+          + 'ja siinä oli pysyvä historianäyttely sekä satunnaisia '
+          + 'virallisia tilaisuuksia, mutta se ei ollut parlamentin '
+          + 'varsinainen istuntopaikka ennen kuin Saksa yhdistyi 1990. Uusi '
           + 'lasikupoli nousi 1990-luvulla arkkitehti Norman Fosterin '
           + 'suunnitelmien mukaan: sen läpi näkee suoraan alla istuvien '
           + 'kansanedustajien saliin.',
@@ -494,12 +496,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jürgen Matern, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Raising a flag over the Reichstag - Restoration.jpg',
-          lyhyt: 'Reichstag raunioitui sodassa, ja sen katolle 1945 pystytetystä lipusta otettu kuva kiersi maailman.',
-          selite: 'Talo raunioitui toisessa maailmansodassa, ja toukokuussa 1945 '
-            + 'sen katolle pystytetystä lipusta otettu valokuva kiersi '
-            + 'maailman.',
-          lahde: 'Jevgeni Haldei, Wikimedia Commons (PD)',
+          tiedosto: "Ruins of the Reichstag in Berlin, 3 June 1945. BU8573.jpg",
+          lyhyt: "Reichstag raunioina Berliinissä 3. kesäkuuta 1945.",
+          selite: "Talo raunioitui toisessa maailmansodassa. Kuva on otettu 3. kesäkuuta 1945, kun julkisivu ja kupoli olivat pahoin vaurioituneet.",
+          lahde: "Sgt Hewitt, No 5 Army Film & Photographic Unit / Imperial War Museums, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -691,8 +691,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, '
         + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine '
         + 'liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on '
-        + 'Archaeopteryxin Berliinin yksilö, lajin kahdestatoista löydetystä '
-        + 'yksilöstä täydellisin ja ensimmäinen, jolla on kokonainen pää.'
+        + 'Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä '
+        + 'täydellisin ja ensimmäinen, jolla on kokonainen pää.'
         + '\n\n'
         + 'Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna '
         + '1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen '
@@ -722,7 +722,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-berliini-karhu',
       teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta '
         + '1280 lähtien: ensimmäinen todistettu sinetti on turkkurien '
-        + 'kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". '
+        + 'kiltakirjeessä, ja siinä lukee ”olen Berliinin porvarien sinetti”. '
         + 'Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen '
         + 'kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan '
         + 'paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on '
@@ -800,7 +800,7 @@ export const NAHTAVYYSJUTUT = {
         + '1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli '
         + 'kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti '
         + 'jätevedet kaupungin laidalle sadetuskentille. Pääputkien '
-        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1893. Samalta '
+        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1909. Samalta '
         + 'mieheltä tilattiin sen jälkeen viemärit kolmeenkymmeneen '
         + 'saksalaiseen kaupunkiin sekä Moskovaan, Tokioon ja Kairoon.',
       kuvat: [
@@ -851,7 +851,7 @@ export const NAHTAVYYSJUTUT = {
         + 'jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
         + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
         + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
-        + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" '
+        + 'tikku-ukkoon — kunnes kansalaiskampanja ”Pelastakaa Ampelmännchen” '
         + 'nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa '
         + 'kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on '
         + 'tullut koko kaupungin maskotti, jota myydään matkamuistona.',
@@ -1027,14 +1027,6 @@ export const NAHTAVYYSJUTUT = {
           + 'näkee koko Kairon. Vuosina 2006–2009 torni kunnostettiin, ja '
           + 'se on yhä suosittu nähtävyys.',
       kuvat: [
-        {
-          tiedosto: 'نهر النيل وبرج القاهرة.jpg',
-          lyhyt: '187 metriä korkea Kairon torni valmistui 1961 muistuttamaan lootuskukkaa.',
-          selite: 'Naoum Shebibin suunnittelema 187 metriä korkea torni valmistui '
-            + '1961 muistuttamaan muinaista lootuskukkaa, ja se oli hetken '
-            + 'Afrikan korkein rakennelma.',
-          lahde: 'Abdouououou, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -1067,7 +1059,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Tahririn aukio': {
       aika: '2011',
-      teksti: 'Tahririn aukio tarkoittaa arabiaksi "vapautuksen aukiota". '
+      teksti: 'Tahririn aukio tarkoittaa arabiaksi ”vapautuksen aukiota”. '
           + 'Aukio syntyi vuonna 1867 nimellä Ismailia-aukio, mutta se '
           + 'sai nykyisen nimensä vasta myöhemmin, kansannousun jälkeen.'
         + '\n\n'
@@ -1429,7 +1421,7 @@ export const NAHTAVYYSJUTUT = {
     'Pyhän Markuksen tori': {
       aika: '1902',
       teksti: 'Pyhän Markuksen tori on Venetsian sydän, jota '
-          + 'Napoleonin kerrotaan kutsuneen "Euroopan olohuoneeksi". '
+          + 'Napoleonin kerrotaan kutsuneen ”Euroopan olohuoneeksi”. '
           + 'Torin laidalla kohoaa Pyhän Markuksen basilika: pyhän '
           + 'Markuksen jäännökset tuotiin sinne salaa Alexandriasta, ja '
           + 'ensimmäinen kirkko niille valmistui jo vuonna 836.'
@@ -1657,7 +1649,10 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kuningas Filip V käski rakentaa palon paikalle upouuden '
           + 'linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli '
-          + 'sen, ja rakennustyöt kestivät vuodesta 1738 vuoteen 1755.'
+          + 'sille ensin hahmotelman, mutta kuoli ennen rakennustöiden '
+          + 'alkua — hänen oppilaansa Giovanni Battista Sacchetti '
+          + 'suunnitteli lopulta rakennetun linnan, ja työt kestivät '
+          + 'vuodesta 1738 vuoteen 1755.'
         + '\n\n'
         + 'Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä '
           + 'lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. '
@@ -2093,11 +2088,10 @@ export const NAHTAVYYSJUTUT = {
         + 'suihkulähteellä.',
       kuvat: [
         {
-          tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
-          lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real '
-            + 'Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Estadio Santiago Bernabéu 11.jpg",
+          lyhyt: "Real Madridin kotistadion Santiago Bernabéu kuvattuna ulkoa luoteiskulmasta.",
+          selite: "Real Madridin kotistadion Santiago Bernabéu Madridissa, kuvattuna kadulta stadionin luoteiskulmasta.",
+          lahde: "Luis García (Zaqarbal), Wikimedia Commons (CC BY-SA 3.0)",
         },
         {
           tiedosto: 'Fuente de Cibeles - 03.jpg',
@@ -2181,11 +2175,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
-          tiedosto: 'Gyllene salen (Golden Hall) and mosaic of Mälardrottningen - Stockholms stadshus (24831465706).jpg',
-          lyhyt: 'Kultaisessa salissa tanssitaan Nobel-illallisen jälkeen, seinillä yli 18 miljoonaa mosaiikkipalaa.',
-          selite: 'Kultaisessa salissa tanssitaan Nobel-illallisen jälkeen, ja sen '
-            + 'seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla.',
-          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "5a1 Den blå hallen - the blue hall - Stockholm city hall.JPG",
+          lyhyt: "Sininen sali, Tukholman kaupungintalo",
+          selite: "Kaupungintalon Sinisessä salissa (Blå hallen) kohoavat paljaat punatiiliseinät, joiden yläosassa on ikkunarivi ja alaosassa pylväskaaria.",
+          lahde: "Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -2247,19 +2240,20 @@ export const NAHTAVYYSJUTUT = {
           + 'urheiluvoittoja, mielenosoitetaan ja vietetään vappua.',
       kuvat: [
         {
-          tiedosto: 'Sergels torg-Stockholm-DSC 0115w.jpg',
-          lyhyt: 'Edvin Öhrströmin 37 metrin lasi- ja teräsobeliski valmistui 1974, torin muuta rakennetta myöhemmin.',
-          selite: 'Edvin Öhrströmin suunnittelema 37 metriä korkea lasi- ja '
-            + 'teräsobeliski valmistui vasta 1974, seitsemän vuotta torin muuta '
-            + 'rakennetta myöhemmin.',
-          lahde: 'Peter Haas, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Brunkebergstorg ombyggnad 1969.jpg',
+          lyhyt: 'Perustustöitä Brunkebergstorgin kupeessa 1969: Norrmalmin uudistus oli vuosikymmenten työmaa.',
+          selite: 'Perustustöitä Brunkebergstorgin kupeessa vuonna 1969, taustalla '
+            + 'Telegrafverketin talo. Norrmalmin uudistus pyöri 1950-luvulta '
+            + '1970-luvulle, ja Sergelin torin ympäristö oli pitkään työmaata.',
+          lahde: 'Ingemar Gram, Wikimedia Commons (CC BY 4.0)',
         },
         {
-          tiedosto: 'Sergels Torg.jpg',
-          lyhyt: 'Alemman kävelytason mustavalkoinen kolmiokuvio toistuu nykyään Tukholman metrojunien penkeissä.',
-          selite: 'Alemman kävelytason mustavalkoinen kolmiokuvio on niin tunnettu, '
-            + 'että sama kuvio löytyy nykyään Tukholman metrojunien penkeistä.',
-          lahde: 'Kallerna, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: 'Brunkebergstorg, 1953.jpg',
+          lyhyt: 'Brunkebergstorg vuonna 1953, jolloin se oli alueen tärkein aukio — ennen Sergelin toria.',
+          selite: 'Brunkebergstorg vuonna 1953, jolloin se oli alueen tärkein aukio. '
+            + 'Pian ympäröivät Klaran korttelit purettiin, ja alueen uudeksi '
+            + 'keskukseksi tuli Sergelin tori.',
+          lahde: 'Jan Ehnemark, Svenska Dagbladet, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -2386,20 +2380,22 @@ export const NAHTAVYYSJUTUT = {
      */
     'Vädersolstavlan': {
       nosto: 'syvennys-tukholma-aurinkotaulu',
-      teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät aamutaivaalla '
-        + 'valkoisia renkaita ja niiden kehällä useita hehkuvia auringonkuvia. '
-        + 'Kyse oli halosta: ilmassa leijuvat jääkiteet taittavat auringonvaloa '
-        + 'kuin lasiprismat. Näky pelotti, ja siitä teetettiin maalaus — '
-        + 'perimätiedon mukaan pappi Olaus Petrin toimesta. Samalla syntyi vanhin '
-        + 'tunnettu värikuva Tukholmasta: kaupunki muureineen, kirkontorneineen '
-        + 'ja ympäröivine hirsiaitoineen. Ja tässä on se kohta, joka isoisääsi '
+      teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät '
+        + 'aamutaivaalla valkoisia renkaita ja niiden kehällä useita '
+        + 'hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat '
+        + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky pelotti, '
+        + 'ja siitä teetettiin maalaus — perimätiedon mukaan pappi Olaus '
+        + 'Petrin toimesta. Samalla syntyi vanhin tunnettu värikuva '
+        + 'Tukholmasta: kaupunki porttitorneineen, kirkkoineen ja veteen '
+        + 'lyötyine paalurivineen. Ja tässä on se kohta, joka isoisääsi '
         + 'kiinnostaisi. Taulu, joka Storkyrkanissa riippuu, on öljymaalaus '
         + 'puupaneelille, 163 senttiä leveä ja 110 korkea, ja siihen on '
-        + 'kirjoitettu kaksi vuosilukua: 1535 ja "renovoitu 1636". Vuonna 1999 '
-        + 'taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun työksi: '
-        + 'renovointi olikin kopiointi, jonka teki Jacob Heinrich Elbfas. '
-        + 'Alkuperäinen on kadonnut, eikä kukaan tiedä minne. Kaupungin vanhin '
-        + 'kuva on siis kuva kuvasta, jota ei enää ole.',
+        + 'kirjoitettu kaksi vuosilukua: 1535 ja ”renovoitu 1636”. Vuonna '
+        + '1999 taulu tutkittiin, ja se osoittautui kokonaan 1600-luvun '
+        + 'työksi: renovointi olikin kopiointi, jonka teki Jacob Heinrich '
+        + 'Elbfas. Alkuperäinen on kadonnut, eikä kukaan tiedä minne. '
+        + 'Kaupungin vanhin tunnettu värikuva on siis kuva kuvasta, jota ei '
+        + 'enää ole.',
       kuvat: [
         {
           tiedosto: 'Vädersolstavlan 1535.jpg',
@@ -2413,17 +2409,17 @@ export const NAHTAVYYSJUTUT = {
     },
     'Norrström': {
       nosto: 'syvennys-tukholma-lohi',
-      teksti: 'Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle portti. '
-        + 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan '
-        + 'eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja '
-        + 'meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes '
-        + 'kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, '
-        + 'enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut '
-        + 'näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten '
-        + 'myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, '
-        + 'jota myöten kalat pääsevät nousemaan järveen asti. Keskellä '
-        + 'miljoonakaupunkia seisoo siis mies onki kädessä siinä samassa '
-        + 'virrassa, jonka yli parlamentti katsoo ikkunastaan.',
+      teksti: 'Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle '
+        + 'portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
+        + 'mereen aivan eduskuntatalon vierestä, ja siitä kalastetaan lohia '
+        + 'ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi noin '
+        + 'kaksikymmentä kiloa. Vedessä elää kymmeniä kalalajeja. Aina ei '
+        + 'ollut näin. 1970-luvulla alkaneet istutukset ovat elvyttäneet '
+        + 'lohi- ja taimenkantaa, ja vuonna 2024 Slussenin vanha Nils '
+        + 'Ericsonin sulku (1850) muutettiin kalatieksi, jota myöten kalat '
+        + 'pääsevät nousemaan Mälareniin. Keskellä miljoonakaupunkia seisoo '
+        + 'siis mies onki kädessä siinä samassa virrassa, jonka yli '
+        + 'parlamentti katsoo ikkunastaan.',
       kuvat: [
         {
           tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
@@ -2463,7 +2459,7 @@ export const NAHTAVYYSJUTUT = {
         + 'naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. '
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
-        + 'perustuslakikriisin.',
+        + 'holhoojahallituksen.',
       lahde: 'Wikipedia',
     },
     Kreuger: {
@@ -2661,14 +2657,6 @@ export const NAHTAVYYSJUTUT = {
             + 'tähtitieteilijä.',
           lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
         },
-        {
-          tiedosto: 'St Paul\'s Survives.jpg',
-          lyhyt: 'Valokuva St Paul\'sin kupolista savun keskellä 1940 pommitusyönä teki kirkosta maan symbolin.',
-          selite: 'Joulukuun 1940 pommitusyönä savun keskellä seisovasta kupolista '
-            + 'otettu valokuva kiersi maailman ja teki kirkosta koko maan '
-            + 'symbolin.',
-          lahde: 'Herbert Mason, Wikimedia Commons (PD)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -2725,7 +2713,7 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'skandaali-etelameren-kupla',
       teksti: 'Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, '
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
-        + 'sanan \'kupla\' kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
+        + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. Konttorirakennuksen '
         + 'nimi seisoo yhä Threadneedle Streetin kulmassa.',
       lahde: 'Wikipedia',
     },
@@ -3017,7 +3005,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Abbey Roadin suojatie': {
       nosto: 'nosto-abbey-roadin-suojatie',
-      teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kahdeksan '
+      teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi '
         + 'kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin '
         + 'Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit '
         + 'jonottavat yhä joka päivä ylittämään sen samassa rivissä, '
@@ -3047,12 +3035,10 @@ export const NAHTAVYYSJUTUT = {
         + 'iltaan mennessä kadonnut toisen alle.',
       kuvat: [
         {
-          tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
-          lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
-          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
-            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
-            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
-          lahde: 'Ted Potters, Wikimedia Commons (PD)',
+          tiedosto: "Underneath the arches. Leake Street.jpg",
+          lyhyt: "Leake Streetin tunnelien holveja Waterloon aseman alla",
+          selite: "Pimeä holvikäytävä Leake Streetin tunneleissa Waterloon aseman alla. Kuva on mustavalkoinen ja vuodelta 2011.",
+          lahde: "maggie jones., Wikimedia Commons (PD)",
         },
       ],
       lahde: 'Wikipedia',
@@ -3068,19 +3054,17 @@ export const NAHTAVYYSJUTUT = {
         + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.',
       kuvat: [
         {
-          tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
-          lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
-          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
-            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
-            + 'ajan kesällä 2009.',
-          lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Empty Fourth Plinth.jpg",
+          lyhyt: "Tyhjä neljäs jalusta Trafalgar Squarella",
+          selite: "Tyhjä neljäs jalusta Trafalgar Squarella. Taustalla näkyvät National Galleryn kupoli ja St Martin-in-the-Fields -kirkon torni.",
+          lahde: "Matt Brown, Wikimedia Commons (CC BY 2.0)",
         },
       ],
       lahde: 'Wikipedia',
     },
     'Turbiinihalli': {
       nosto: 'nosto-tate-modernin-turbiinihalli',
-      teksti: 'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+      teksti: 'Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen '
         + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
         + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
         + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
@@ -3090,12 +3074,10 @@ export const NAHTAVYYSJUTUT = {
         + 'pääsee sisään ilmaiseksi.',
       kuvat: [
         {
-          tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
-          lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
-          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
-            + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
-            + 'teoksen.',
-          lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Tate Modern - Bankside Power Station.jpg",
+          lyhyt: "Tate Modern Thames-joen toiselta puolelta",
+          selite: "Tate Modernin rakennus ja korkea savupiippu Thames-joelta katsottuna. Rakennus toimi aiemmin Bankside-voimalana.",
+          lahde: "Acabashi, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -3261,41 +3243,6 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
-    'Astronominen kello': {
-      aika: '1410',
-      teksti: 'Prahan astronominen kello eli Orloj on maailman vanhin yhä '
-          + 'toimiva astronominen kello — sen vanhin osa valmistui jo '
-          + 'vuonna 1410, ja sen suunnittelivat kellomestari Mikuláš '
-          + 'Kadaňista ja matemaatikko Jan Šindel. Kello ei näytä '
-          + 'pelkästään kellonaikaa, vaan myös Auringon ja Kuun paikan '
-          + 'taivaalla sekä kalenterivuoden.'
-        + '\n\n'
-        + 'Joka tunti kellon yläpuolella avautuu kaksi pientä '
-          + 'ikkunaa, joista kulkee ohi kaikki kaksitoista apostolia. '
-          + 'Samalla luurankona kuvattu Kuolema-hahmo soittaa kelloaan, '
-          + 'ja muutkin kellon vieressä seisovat patsaat liikahtavat. '
-          + 'Legendan mukaan Prahalle käy huonosti, jos kelloa '
-          + 'laiminlyödään.'
-        + '\n\n'
-        + 'Kellon kuunkiertoa näyttävä osa toimii pelkän painovoiman '
-          + 'ja ruuvikierteen avulla eikä tarvitse erillistä moottoria, '
-          + 'ja se osuu kuun vaiheen kohdalleen niin tarkasti, että '
-          + 'virhe on vain noin yksi päivä viidessä vuodessa. Kello '
-          + 'selvisi elossa myös toisen maailmansodan pommituksista '
-          + 'vuonna 1945 ja saatiin korjattua toimintaan jälleen vuonna '
-          + '1948.',
-      kuvat: [
-        {
-          tiedosto: 'Prague - Astronomical Clock Detail 1.JPG',
-          lyhyt: 'Prahan Orloj valmistui 1410 ja on maailman vanhin yhä toimiva astronominen kello.',
-          selite: 'Orlojin vanhin osa valmistui jo vuonna 1410, ja se on maailman '
-            + 'vanhin yhä toimiva astronominen kello: kellonajan lisäksi se '
-            + 'näyttää Auringon ja Kuun paikan taivaalla.',
-          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Kansallismuseo: {
       aika: '1885–1891',
       teksti: 'Prahan kansallismuseo perustettiin jo vuonna 1818, mutta '
@@ -3364,6 +3311,14 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Klementinumin barokkikirjaston sali, joka valmistui vuosien 1709 '
             + 'ja 1726 välisessä rakennusvaiheessa.',
           lahde: 'Václav Jiroušek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Prague - Astronomical Clock Detail 1.JPG',
+          lyhyt: 'Vanhankaupungintalon Orloj on kivenheiton päässä: maailman vanhin yhä toimiva astronominen kello, 1410.',
+          selite: 'Kivenheiton päässä Vanhankaupungintalolla tikittää Orloj, '
+            + 'maailman vanhin yhä toimiva astronominen kello — sen vanhin '
+            + 'osa valmistui jo vuonna 1410.',
+          lahde: 'Maros Mraz, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -4190,7 +4145,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1889',
       teksti: 'Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna '
           + '1889, insinööri Gustave Eiffelin toimisto pystytti Champ '
-          + 'de Mars -puistoon 330 metriä korkean rautatornin vain '
+          + 'de Mars -puistoon noin 300 metriä korkean rautatornin vain '
           + 'reilussa kahdessa vuodessa. Torniin käytettiin 18 038 '
           + 'metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko '
           + 'rakennustyön aikana sattui vain yksi kuolemantapaus.'
@@ -4210,13 +4165,10 @@ export const NAHTAVYYSJUTUT = {
           + 'seisoo yhä paikallaan.',
       kuvat: [
         {
-          tiedosto: 'Eiffel tower from trocadero.jpg',
-          lyhyt: 'Eiffel-torni pystytettiin 1889 maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta niitistä.',
-          selite: 'Gustave Eiffelin toimisto pystytti 330 metriä korkean '
-            + 'rautatornin reilussa kahdessa vuodessa vuoden 1889 '
-            + 'maailmannäyttelyyn 18 038 metalliosasta ja 2,5 miljoonasta '
-            + 'niitistä.',
-          lahde: 'NonOmnisMoriar, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Eiffel Tower and Pont d'Iéna, Paris 3 December 2016.jpg",
+          lyhyt: "Eiffel-torni Seinen yli kuvattuna",
+          selite: "Eiffel-torni kohoaa Seinen rannalla kirkkaana päivänä. Joella kulkee proomu ja rannassa on asuntolaivoja.",
+          lahde: "Guilhem Vellut, Wikimedia Commons (CC BY 2.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -4303,12 +4255,10 @@ export const NAHTAVYYSJUTUT = {
           + 'maamerkeistä.',
       kuvat: [
         {
-          tiedosto: 'Louvre Museum Wikimedia Commons.jpg',
-          lyhyt: 'I. M. Pein lasipyramidi nousi Louvren pihalle 1989, aluksi moni pariisilainen paheksui sitä.',
-          selite: 'I. M. Pein lasipyramidi nousi palatsin sisäpihalle vuonna 1989 '
-            + 'museon pääsisäänkäynniksi, ja aluksi moni pariisilainen paheksui '
-            + 'sitä.',
-          lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Paris 1er Louvre Colonnade 559.jpg",
+          lyhyt: "Louvren kolonnadi",
+          selite: "Louvren itäjulkisivun kolonnadi, jossa kaksoispylväät kantavat rikkaasti koristeltua kattolistaa. Kuva on otettu Pariisin 1. kaupunginosassa.",
+          lahde: "GFreihalter, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -4337,8 +4287,9 @@ export const NAHTAVYYSJUTUT = {
           + 'Kahdeksankulmaisella altaalla lapset uittavat purjeveneitä, '
           + 'nukketeatteri on toiminut puistossa vuodesta 1933, ja '
           + 'patsaita on toista sataa — niiden joukossa kaksikymmentä '
-          + 'Ranskan kuningatarta ja Bartholdin ensimmäinen pieni malli '
-          + 'Vapaudenpatsaasta. Victor Hugo pani Kurjissa Mariuksen ja '
+          + 'Ranskan kuningatarta ja jäljennös Bartholdin pienoismallista '
+          + 'Vapaudenpatsaasta (alkuperäinen siirrettiin Musée d\'Orsayhin '
+          + '2012). Victor Hugo pani Kurjissa Mariuksen ja '
           + 'Cosetten kohtaamaan juuri täällä.',
       kuvat: [
         {
@@ -4375,7 +4326,7 @@ export const NAHTAVYYSJUTUT = {
           + 'yksi maailman suurimmista mosaiikeista, joka on koottu 25 '
           + '000 pienestä keraamisesta palasesta.'
         + '\n\n'
-        + 'Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka '
+        + 'Tornissa riippuu ”Savoyarde”, Ranskan suurin kello, joka '
           + 'painaa lähes 19 tonnia. Kirkon huipulta, 200 metrin '
           + 'korkeudesta Seine-joen yläpuolelta, avautuu näkymä koko '
           + 'Pariisiin.',
@@ -4603,7 +4554,7 @@ export const NAHTAVYYSJUTUT = {
         + 'koomisina ja että lopun kuolema jää kulkueiden, balettien ja '
         + 'riemufanfaarien varjoon. Lupaukset eivät riittäneet, ja de Leuven '
         + 'erosi teatterista alkuvuodesta 1874. Nimiroolikin oli vaikea täyttää: '
-        + 'Marie Roze kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.'
+        + 'Marie Roze kieltäytyi roolista (Winton Deanin elämäkerran mukaan siksi, että hänen olisi kuoltava lavalla), ja rooli meni lopulta Célestine Galli-Mariélle.'
         + '\n\n'
         + 'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
         + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. Ensimmäinen '
@@ -4614,8 +4565,7 @@ export const NAHTAVYYSJUTUT = {
         + 'yksi kriitikko kutsui pääosan tulkintaa paheen ruumiillistumaksi. '
         + 'Taloa ei saatu täyteen edes jakamalla lippuja ilmaiseksi. Bizet kuoli '
         + '3. kesäkuuta 1875, kolmannenkymmenennenkolmannen esityksen jälkeen, '
-        + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: Wien '
-        + '1875, Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera palasi '
+        + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: ensin Wien 1875, Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera palasi '
         + 'vasta 1883. Se sijoittuu Sevillaan, mutta kaikki tämä tapahtui täällä, '
         + 'Place Boïeldieun varrella. Sekin sali paloi 1887; paikalla seisoo nyt '
         + 'kolmas samanniminen teatteri.',
@@ -4644,7 +4594,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
         + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
         + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi '
-        + 'täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset '
+        + 'täpliä ja väri nimeltä ”kirahvin vatsa” myi kaiken. Aikalaiset '
         + 'kutsuivat eläintä nimellä la Belle Africaine, ja se eli Jardin des '
         + 'Plantes\'ssa 18 vuotta.',
       kuvat: [
@@ -4674,7 +4624,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
         + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-        + 'kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja '
+        + 'kauppasumman. Sitten hän pakeni Itävaltaan ja '
         + 'luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. '
         + 'Niinpä Lustig palasi Pariisiin saman vuoden puolella tekemään saman '
         + 'tempun uudestaan. Tällä kertaa joku ilmoitti, ja hän pakeni '
@@ -4694,8 +4644,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1861–1870',
       nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       teksti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
-        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään '
-        + '27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
+        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä '
         + 'todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut '
         + 'aivan yhtä ilahtunut.',
       lahde: 'Wikipedia',
@@ -4706,13 +4655,13 @@ export const NAHTAVYYSJUTUT = {
         + 'Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa '
         + 'näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. '
         + 'Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, '
-        + 'Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Degas ja joukko '
+        + 'Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko '
         + 'muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
-        + 'jäseneksi liittyvän piti luopua Salonista kokonaan. Ensimmäinen '
+        + 'jäseniltä odotettiin Salonista luopumista. Ensimmäinen '
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja '
         + 'mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi '
         + 'Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa '
-        + '"Impressionistien näyttely". Pilkkanimi jäi — ja taiteilijat ottivat '
+        + '”Impressionistien näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat '
         + 'sen itse käyttöön.',
       kuvat: [
         {
@@ -4731,7 +4680,7 @@ export const NAHTAVYYSJUTUT = {
         + 'sulkivat Pariisin syyskuussa 1870, viimeiset lennätinlangat '
         + 'katkaistiin 19. päivä ja Seinen pohjassa kulkenut salakaapeli '
         + 'löydettiin ja katkaistiin 27. päivä. Kaupunkiin päin ainoa toimiva '
-        + 'reitti oli kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
+        + 'reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja '
         + 'valokuvaaja René Dagron — mikrofilmin patentin haltija vuodesta 1859 — '
         + 'tarjoutui pienentämään viestit. Sopimus allekirjoitettiin 11. '
         + 'marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. Dagron '
@@ -4756,22 +4705,16 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'syvennys-pariisi-tuileriat',
       teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu korjata. Palo oli '
         + 'vienyt katon ja koko sisustan, mutta kivimuurit seisoivat ehjinä — ja '
-        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin '
-        + 'uudelleen jo 1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'kaupungintalo, jonka kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki tyhjät '
         + 'ikkuna-aukot taivasta vasten. Purkupäätöksen teki 1882 kolmas '
         + 'tasavalta, sama joka oli armahtanut maanpakoon lähteneet kommunardit; '
-        + 'vastaan olivat muun muassa Georges-Eugène Haussmann ja joukko '
-        + 'historioitsijoita. Purku alkoi helmikuussa 1883 ja päättyi 30. '
-        + 'syyskuuta samana vuonna. Sitten palatsi levisi ympäri maailman: '
+        + 'vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: '
         + 'yrittäjä Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
-        + 'osista rakennettiin Korsikalle Ajaccion lähelle kokonainen palatsi, '
-        + 'Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
+        + 'osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio seisoo Pariisissa '
         + 'Square Georges Cainissa, ja paloja on Louvressa, Trocadéron '
         + 'puutarhassa, Berliinissä, Italian Bordigherassa ja Quiton '
-        + 'presidentinpalatsissa asti. Huonekalut ja maalaukset olivat koko ajan '
-        + 'tallessa: ne oli viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
-        + 'perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
+        + 'presidentinpalatsissa asti. Suuri osa huonekaluista ja maalauksista oli tallessa: ne oli viety varastoon, kun sota alkoi 1870. 2000-luvun alussa perustettiin komitea, joka esittää palatsin rakentamista takaisin.',
       kuvat: [
         {
           osoite: 'assets/kartat/nostot/nosto-tuileriat-loistoaika.webp',
@@ -4795,11 +4738,10 @@ export const NAHTAVYYSJUTUT = {
     '72 nimeä': {
       nosto: 'nosto-pariisin-72-nimea',
       teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-        + 'muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin '
-        + 'korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, '
+        + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
         + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
         + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-        + 'maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. '
+        + 'maalilla 1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. '
         + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
         + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
         + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna '
@@ -4808,8 +4750,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
           lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen ympäri kiertää 65 metrin '
-            + 'korkeudella 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
+          selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
             + 'kullatuin, 60 senttiä korkein kirjaimin.',
           lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
         },
@@ -4825,13 +4766,11 @@ export const NAHTAVYYSJUTUT = {
         + 'valurautaisia vakio-osia, jotka sopivat yhteen kuin '
         + 'rakennussarja: samoista paloista sai kasattua sopivan '
         + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
-        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä '
-        + 'olevat 86 rauhoitettiin vuonna 1978.',
+        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
       kuvat: [
         {
           tiedosto: "01 Guimard's Métropolitain.jpg",
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevat '
-            + '86 rauhoitettiin vuonna 1978.',
+          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
           lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
         },
       ],
@@ -4840,7 +4779,7 @@ export const NAHTAVYYSJUTUT = {
     'Notre-Damen kukko': {
       nosto: 'nosto-notre-damen-kukko',
       teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-        + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+        + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
         + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
         + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. '
         + 'Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana '
@@ -4864,19 +4803,17 @@ export const NAHTAVYYSJUTUT = {
       nosto: 'nosto-pariisi-soi',
       teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
         + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
-        + 'lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla '
-        + 'ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée '
+        + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
         + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
         + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
-        + 'Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose '
-        + 'ilmestyi 1946, ja sen sanat hän kirjoitti itse.'
+        + 'Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.'
         + '\n\n'
         + 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
           + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
-          + 'lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä '
+          + 'lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä '
           + 'kaatui selluloidikukkien päälle. Vasemman käden nimetön ja '
           + 'pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei '
-          + 'hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli '
+          + 'hän soita enää. Veli osti hänelle kitaran, ja Django opetteli '
           + 'soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti '
           + 'Pariisissa yhtyeen Quintette du Hot Club de France.',
       kuvat: [
@@ -4894,15 +4831,13 @@ export const NAHTAVYYSJUTUT = {
     'Paras patonki': {
       nosto: 'nosto-pariisin-patonki',
       teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
-        + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
         + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
         + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
-        + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
-        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
-        + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
-        + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
-        + 'seuraavan vuoden ajan.',
+        + 'vaiheessa pakastaa. Leivät ovat anonyymejä, jottei '
+        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
+        + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+        + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       kuvat: [
         {
           tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
@@ -4924,15 +4859,13 @@ export const NAHTAVYYSJUTUT = {
         + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. '
         + 'Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen '
         + 'Versailles\'n puistossa, jossa kuningatarta esitti palkattu nuori '
-        + 'nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla '
-        + 'livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
+        + 'nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
         + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
         + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
         + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
         + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.'
         + '\n\n'
-        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel '
-          + 'Chasles\'lle noin 27 000 käsin kirjoitettua kirjettä, joiden '
+        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden '
           + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, Kleopatra, '
           + 'Aristoteles ja Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun '
           + 'ranskaksi. Chasles maksoi kokoelmasta noin 140 000 frangia ja '
@@ -5181,8 +5114,8 @@ export const NAHTAVYYSJUTUT = {
     Päärautatieasema: {
       aika: '1919',
       teksti: 'Nykyinen asemarakennus syntyi arkkitehti Eliel Saarisen '
-          + 'kilpailuehdotuksesta, jonka nimi oli "Siivekäs pyörä '
-          + 'maapallon päällä". Rakennustyöt alkoivat vuonna 1912, '
+          + 'kilpailuehdotuksesta, jonka nimi oli ”Siivekäs pyörä '
+          + 'maapallon päällä”. Rakennustyöt alkoivat vuonna 1912, '
           + 'mutta ensimmäinen maailmansota hidasti niitä — kesken '
           + 'rakennustöiden asema toimi jopa venäläisten '
           + 'sotilassairaalana vuosina 1915–1916. Uusi asema avattiin '
@@ -5217,7 +5150,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1812',
       teksti: 'Kaisaniemi on Helsingin vanhin julkinen puisto — se sai '
           + 'alkunsa jo vuonna 1812. Puisto on saanut nimensä '
-          + 'paikallisesta naisesta, Catharina eli "Kajsa" '
+          + 'paikallisesta naisesta, Catharina eli ”Kajsa” '
           + 'Wahllundista. Vuonna 1829 osa alueesta annettiin Helsingin '
           + 'yliopistolle puutarhaksi, ja vuonna 1889 sinne avattiin '
           + 'ensimmäinen kasvihuone — Kaisaniemen kasvitieteellinen '
@@ -5269,7 +5202,7 @@ export const NAHTAVYYSJUTUT = {
           + 'soitetaan joka päivä kello 12 ja 18 sävelmä, jonka Jean '
           + 'Sibelius sävelsi varta vasten kirkon vihkiäisiin. '
           + 'Alttaritauluna on Hannes Autereen vuonna 1956 veistämä '
-          + 'puureliefi, jonka aiheena on kutsu "Tulkaa minun tyköni" — '
+          + 'puureliefi, jonka aiheena on kutsu ”Tulkaa minun tyköni” — '
           + 'hahmojen malleina olivat kalliolaiset itse.',
       kuvat: [
         {
@@ -5355,7 +5288,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Kirkon kaksoistornit kohoavat 74 metrin korkeuteen ja '
           + 'näkyvät kauas ympäri kaupunkia. Sisällä alttaritaulun '
-          + '"Jumalallinen ilmestys" maalasi taidemaalari Eero '
+          + '”Jumalallinen ilmestys” maalasi taidemaalari Eero '
           + 'Järnefelt vuonna 1932.'
         + '\n\n'
         + 'Kirkon urkuja on kasvatettu vuosikymmenien varrella: '
@@ -5383,8 +5316,8 @@ export const NAHTAVYYSJUTUT = {
           + 'rakensi yhtä aikaa noin 7000 työntekijää. Alun perin '
           + 'linnoitus tunnettiin nimellä Sveaborg.'
         + '\n\n'
-        + 'Maineestaan huolimatta — sitä kutsuttiin "Pohjolan '
-          + 'Gibraltariksi" — linnoitus antautui venäläisille jo vuonna '
+        + 'Maineestaan huolimatta — sitä kutsuttiin ”Pohjolan '
+          + 'Gibraltariksi” — linnoitus antautui venäläisille jo vuonna '
           + '1808, vain parin kuukauden piirityksen jälkeen. Vuonna '
           + '1855 Krimin sodan aikana Englannin ja Ranskan laivastot '
           + 'pommittivat saaria voimakkaasti.'
@@ -5480,8 +5413,8 @@ export const NAHTAVYYSJUTUT = {
         + 'kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen '
         + 'osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että '
         + 'kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä '
-        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen "jotain, mitä nyt '
-        + 'sattui syntymään". Nimen Finlandia teos sai vasta vuonna 1900. Se '
+        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen ”jotain, mitä nyt '
+        + 'sattui syntymään”. Nimen Finlandia teos sai vasta vuonna 1900. Se '
         + 'kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, '
         + 'mitä yksikään puhe ei olisi saanut tehdä ääneen.',
       kuvat: [
@@ -5568,12 +5501,6 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Hefaistoksen temppeli on kestänyt agoran laidalla lähes koskemattomana yli 2 400 vuotta, vaikka moni muu aukion rakennus on murentunut ajan saatossa.',
           lahde: 'Jebulon, Wikimedia Commons (CC0)',
         },
-        {
-          tiedosto: 'Attalos Stoa.jpg',
-          lyhyt: 'Attaloksen pylväikkö rakennettiin uudelleen 1950-luvulla alkuperäisin mitoin.',
-          selite: 'Attaloksen pylväikkö rakennettiin uudelleen 1950-luvulla alkuperäisin mitoin — sen varjoisa käytävä on sama, jossa ateenalaiset kävelivät 2 100 vuotta sitten.',
-          lahde: 'Mirjanamimi, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -5653,7 +5580,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'Sýntagman aukio': {
       aika: '1843',
-      teksti: 'Sýntagman aukio tarkoittaa "perustuslain aukiota". Vuonna '
+      teksti: 'Sýntagman aukio tarkoittaa ”perustuslain aukiota”. Vuonna '
           + '1843 sotilaat ja kaupunkilaiset kokoontuivat vanhan '
           + 'kuninkaanlinnan eteen vaatimaan kuningas Otolta Kreikalle '
           + 'perustuslakia. Vaatimus onnistui, ja aukio nimettiin '
@@ -5705,7 +5632,7 @@ export const NAHTAVYYSJUTUT = {
           + 'jopa Bob Dylanin kaltaisia maailmantähtiä.'
         + '\n\n'
         + 'Huipulle pääsee kävellen tai köysirautatiellä. Nimen '
-          + 'Lykavittós arvellaan juontuvan kreikan sanasta "lykos", '
+          + 'Lykavittós arvellaan juontuvan kreikan sanasta ”lykos”, '
           + 'susi — ehkä kukkula oli aikoinaan yksinäisten susien '
           + 'piilopaikka kaupungin laidalla.',
       kuvat: [
@@ -5729,7 +5656,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Kallimarmaro: {
       aika: '144 jaa. – 1896',
-      teksti: 'Kallimarmaro tarkoittaa "kauniisti marmoroitua" — se on '
+      teksti: 'Kallimarmaro tarkoittaa ”kauniisti marmoroitua” — se on '
           + 'maailman ainoa stadion, joka on kokonaan valkoista '
           + 'marmoria. Rikas roomalainen Herodes Atticus rakennutti sen '
           + 'vanhan juoksuradan paikalle, ja se valmistui noin vuonna '
@@ -5753,7 +5680,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: '1896 Olympic opening ceremony.jpg',
           lyhyt: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896.',
-          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa 80 000 ihmistä.',
+          selite: 'Ensimmäisten uuden ajan olympialaisten avajaiset Kallimarmarolla huhtikuussa 1896 — katsomossa noin 60 000 ihmistä.',
           lahde: 'Wikimedia Commons (PD)',
         },
       ],
@@ -5808,20 +5735,21 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     'Iliou Melathron': {
-      teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
-          + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+      teksti: 'Kevään ja kesän 1873 taitteessa, kaivauskauden loppupuolella, '
+          + 'Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
           + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
           + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
           + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
           + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
-          + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
-          + 'ikuisesti, lapio kädessä.',
+          + 'numismaattinen museo. Seinillä on pompeijilaistyylisiä '
+          + 'maalauksia, ja lattioiden mosaiikit esittävät Schliemannin '
+          + 'kaivauslöytöjä tai niiden innoittamia aiheita.',
       kuvat: [
         {
-          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          tiedosto: 'The Numismatic Museum of Athens (Iliou Melathron) on August 2, 2020.jpg',
           selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
             + 'nykyään Ateenan numismaattinen museo.',
-          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+          lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -5863,16 +5791,16 @@ export const NAHTAVYYSJUTUT = {
         + 'Kun eräs nuorukainen kerran rikkoi hänen astiansa, ateenalaiset eivät '
         + 'suuttuneet vaan hankkivat uuden tilalle — omituista kunnioitusta '
         + 'miehelle, joka kulki päivällä lyhty kädessä ja väitti etsivänsä '
-        + '"rehellistä ihmistä", ikään kuin kirkkainkaan valo ei siihen '
+        + '”ihmistä”, ikään kuin kirkkainkaan valo ei siihen '
         + 'riittäisi. Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin '
         + 'olisi kävellyt Diogeneen astian ohi tietämättään.',
       kuvat: [
         {
           tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
-          lyhyt: 'Myöhäisroomalainen pithos Ateenasta, samaa lajia kuin Diogeneen viljanastia-asumus.',
+          lyhyt: 'Myöhäisroomalainen pithos Ateenan lentokentän arkeologisesta kokoelmasta, samaa lajia kuin Diogeneen astia.',
           selite: 'Tällaisessa viljanastiassa Diogenes majaili: myöhäisroomalainen '
-            + 'pithos Ateenasta. Astia on samaa lajia kuin filosofin asumus, ei '
-            + 'se itse.',
+            + 'pithos Ateenan lentokentän arkeologisesta kokoelmasta. Astia on '
+            + 'samaa lajia kuin filosofin asumus, ei se itse.',
           lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -5881,11 +5809,13 @@ export const NAHTAVYYSJUTUT = {
     'Niken temppeli': {
       nosto: 'syvennys-ateena-nike',
       teksti: 'Kiipeä Propylaian ohi Akropoliin lounaiskulmaan, niin löydät pienimmän '
-        + 'mutta ehkä ovelimman temppelin: Athena Niken pyhäkön. Sen kaidetta '
-        + 'koristi aikoinaan marmoripatsas voitonjumalattaresta — mutta '
-        + 'kuvanveistäjä oli jättänyt siltä siivet pois. Myöhemmät ateenalaiset '
-        + 'selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois '
-        + 'heidän kaupungistaan, joten sen siivet piti riisua. Isoisäsi ei taida '
+        + 'mutta ehkä ovelimman temppelin: Athena Niken pyhäkön. Sen sisällä '
+        + 'seisoi puinen jumalatar-patsas ilman siipiä — ateenalaiset kutsuivat '
+        + 'sitä siivettömäksi Voitoksi, Nike Apterokseksi — vaikka temppelin '
+        + 'kaiteen kuvissa Voitot lentävät siivet levällään. Myöhemmät '
+        + 'ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan '
+        + 'saisi lentää pois heidän kaupungistaan, joten patsas tehtiin '
+        + 'siivettömäksi. Isoisäsi ei taida '
         + 'mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista kuin '
         + 'temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän kulmaan '
         + 'hetkeksi.',
@@ -6366,11 +6296,11 @@ export const NAHTAVYYSJUTUT = {
           + 'retket. Swift toimi katedraalin kirkkoherrana vuosina '
           + '1713–1745.'
         + '\n\n'
-        + 'Kirkossa on myös kummallinen "sovinnon ovi": vuonna 1492 '
+        + 'Kirkossa on myös kummallinen ”sovinnon ovi”: vuonna 1492 '
           + 'kaksi riitaista aatelissukua teki rauhan leikkaamalla '
           + 'oveen reiän, jotta toinen voisi kätellä pelkäämättä '
-          + 'väijytystä. Tästä syntyi englanninkielinen sanonta "to '
-          + 'chance your arm".',
+          + 'väijytystä. Tästä syntyi englanninkielinen sanonta ”to '
+          + 'chance your arm”.',
       lainaus: {
         teksti: 'Swift on purjehtinut lepoon, minne raju suuttumus ei enää '
           + 'voi raadella hänen rintaansa. Matkalainen, seuraa hänen '
@@ -6428,7 +6358,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Silta sai lempinimensä tulliltaan. Ennen siltaa joen yli '
           + 'kuljettiin lautoilla, ja lauttoja pyörittänyt William '
           + 'Walsh sai luvan periä sillan käyttäjiltä puolen pennyn eli '
-          + '"ha\'pennyn" maksun peräti 100 vuoden ajan, kunnes se '
+          + '”ha\'pennyn” maksun peräti 100 vuoden ajan, kunnes se '
           + 'lopulta poistettiin vuonna 1919.'
         + '\n\n'
         + 'Sillan virallinen nimi oli aluksi Wellingtonin silta, '
@@ -6448,7 +6378,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Spire: {
       aika: '2002–2003',
-      teksti: 'Dublinin Spire eli "Valon monumentti" kohoaa O\'Connell '
+      teksti: 'Dublinin Spire eli ”Valon monumentti” kohoaa O\'Connell '
           + 'Streetillä, kaupungin pääkadulla. Samalla paikalla seisoi '
           + 'ennen Nelsonin pylväs, jonka aktivistit räjäyttivät vuonna '
           + '1966. Uusi teräksinen huippu pystytettiin vuosina '
@@ -6461,8 +6391,8 @@ export const NAHTAVYYSJUTUT = {
           + 'valoreikää, jotka loistavat pimeän tultua.'
         + '\n\n'
         + 'Dublinilaiset ovat antaneet patsaalle monta hupaisaa '
-          + 'lempinimeä, kuten "piikkikorko slummissa" ja "nuppineula '
-          + 'roskiksessa". Teräspylväs maksoi 4,6 miljoonaa euroa ja '
+          + 'lempinimeä, kuten ”piikkikorko slummissa” ja ”nuppineula '
+          + 'roskiksessa”. Teräspylväs maksoi 4,6 miljoonaa euroa ja '
           + 'pystytettiin osana vuosituhannen vaihteen juhlallisuuksia.',
       kuvat: [
         {
@@ -6565,8 +6495,8 @@ export const NAHTAVYYSJUTUT = {
         + 'kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai osittain '
         + 'molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä vasikannahkaa '
         + 'ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin annaaleihin '
-        + 'kirjattiin, että "Columkillen suuri evankeliumikirja, läntisen '
-        + 'maailman päämuistoesine" varastettiin yöllä kivikirkon läntisestä '
+        + 'kirjattiin, että ”Columkillen suuri evankeliumikirja, läntisen '
+        + 'maailman päämuistoesine” varastettiin yöllä kivikirkon läntisestä '
         + 'sakaristosta — ja syy sanotaan merkinnässä suoraan: sen taotun '
         + 'kotelon tähden. Kirja löytyi muutamaa kuukautta myöhemmin turpeen '
         + 'alta. Kotelo oli poissa, kulta ja jalokivet sen mukana, ja noin '
@@ -6595,6 +6525,16 @@ export const NAHTAVYYSJUTUT = {
         + 'maksettiin — sitten koko komeus purjehti takaisin satamaan lasti '
         + 'täynnä. Kenelle kuuluu aarre, jonka omistajille on jo korvattu sen '
         + 'menetys? Dublin perusti kysymyksen ratkomiseen kokonaisen seuran.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-ouzel-galleyn-mysteeri-photo-v1.jpg',
+          lyhyt: 'Kolmimastoinen kauppagalleija palaa hämärässä satamaan, laituriväki katselee hiljaa.',
+          selite: 'Ouzel palaa Liffeytä ylös hämärässä lasti täynnä, ja laiturille '
+            + 'kerääntynyt väki katselee laivaa, jonka he olivat jo julistaneet '
+            + 'kadonneeksi vuosia sitten.',
+          lahde: 'Matkakirjan havainnekuva.',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -6651,7 +6591,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Moskeijassa on kuusi minarettia, mikä oli rakennusaikaan '
           + 'poikkeuksellista — vain Mekan pyhäkössä oli yhtä monta. '
           + 'Perimätiedon mukaan arkkitehti kuuli sulttaanin pyynnön '
-          + '"kultaiset minareetit" väärin "kuutena minareettina", ja '
+          + '”kultaiset minareetit” väärin ”kuutena minareettina”, ja '
           + 'kohusta selvittiin lopulta rakentamalla Mekkaan seitsemäs '
           + 'minareetti.'
         + '\n\n'
@@ -6789,7 +6729,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Üsküdar sijaitsee Istanbulin Aasian-puoleisella rannalla, '
           + 'vastapäätä vanhaa kaupunkia. Kreikkalaiset siirtolaiset '
           + 'Megarasta perustivat sen jo 600-luvulla eaa. ja antoivat '
-          + 'sille nimen Khrysopolis, "Kultainen kaupunki". Osmanit '
+          + 'sille nimen Khrysopolis, ”Kultainen kaupunki”. Osmanit '
           + 'valtasivat sen jo vuonna 1338 — yli sata vuotta ennen kuin '
           + 'Konstantinopoli itse kaatui vuonna 1453.'
         + '\n\n'
@@ -6888,7 +6828,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata '
           + 'kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan '
           + 'muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin '
-          + '"väliaikainen" asema.'
+          + '”väliaikainen” asema.'
         + '\n\n'
         + 'Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, '
           + 'ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli '
@@ -7147,12 +7087,10 @@ export const NAHTAVYYSJUTUT = {
       },
       kuvat: [
         {
-          tiedosto: '"Beeindruckende Architektur". 5.jpg',
-          lyhyt: 'MuCEM avattiin 2013 Marseillen kulttuuripääkaupunkivuonna, silta yhdistää sen Saint-Jeanin linnaan.',
-          selite: 'MuCEM avattiin vuonna 2013, kun Marseille oli Euroopan '
-            + 'kulttuuripääkaupunki, ja 130 metriä pitkä silta yhdistää sen '
-            + 'viereiseen Saint-Jeanin linnaan.',
-          lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Fort-Jean à Marseille 3.jpg",
+          lyhyt: "Fort Saint-Jean Marseillen Vanhan sataman suulla",
+          selite: "Fort Saint-Jean Marseillen Vanhan sataman suulla kuvattuna Pharon puutarhasta. Kuva on otettu maaliskuussa 2008.",
+          lahde: "Robert Valette, Wikimedia Commons (CC BY-SA 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -7257,8 +7195,8 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Tornin huipulla, 41 metrin korkeudessa, seisoo 11,2 metriä '
           + 'korkea kultainen patsas Neitsyt Mariasta lapsi sylissään. '
-          + 'Marseillelaiset kutsuvat kirkkoa lempinimellä "Bonne '
-          + 'Mère", Hyvä Äiti.',
+          + 'Marseillelaiset kutsuvat kirkkoa lempinimellä ”Bonne '
+          + 'Mère”, Hyvä Äiti.',
       kuvat: [
         {
           tiedosto: '1027 Basilique Notre-Dame-de-la-Garde in Marseille at sunset Photo by Giles Laurent.jpg',
@@ -7291,12 +7229,6 @@ export const NAHTAVYYSJUTUT = {
           + 'jo lähes 18 miljoonaa.',
       kuvat: [
         {
-          tiedosto: 'Gare Saint Charles Marseille 02.jpg',
-          lyhyt: 'Marseillen asema avattiin 1848 vanhan hautausmaan paikalle Pariisi–Marseille-radan pääteasemaksi.',
-          selite: 'Asema avattiin 8. tammikuuta 1848 vanhan hautausmaan paikalle, ja siitä tuli Pariisi–Marseille-radan eteläinen pääteasema.',
-          lahde: 'Houss 2020, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
           tiedosto: 'Gare Marseille Saint Charles - Marseille I (FR13) - 2023-07-22 - 3.jpg',
           lyhyt: 'Asemalla on 16 raidetta, matkustajamäärä on kasvanut seitsemästä lähes 18 miljoonaan vuodessa.',
           selite: 'Asemalla on 16 raidetta, ja matkustajamäärä on kasvanut vuoden 2000 runsaasta seitsemästä miljoonasta lähes 18 miljoonaan vuodessa.',
@@ -7312,7 +7244,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Charlotte Square on yksi Edinburghin uuden kaupunginosan, '
           + 'New Townin, komeimmista aukioista. Arkkitehti Robert Adam '
           + 'suunnitteli sen vuonna 1791. Aukiosta tuli koko New Townin '
-          + 'rakennushankkeen viimeinen ja hitain osa — se "valmistui" '
+          + 'rakennushankkeen viimeinen ja hitain osa — se ”valmistui” '
           + 'vasta vuonna 1820, ja sen luoteiskulma jopa vasta vuonna '
           + '1990.'
         + '\n\n'
@@ -7450,8 +7382,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Kuuluisin on Kansallismonumentti, joka aloitettiin vuonna '
           + '1826 antiikin Parthenonin mallin mukaan mutta jäi '
           + 'rahapulan takia kesken vain 12 pylvään kohdalla — '
-          + 'edinburghilaiset ristivät sen pilkkanimellä "Edinburghin '
-          + 'häpeä". Vieressä kohoaa amiraali Nelsonin muistoksi '
+          + 'edinburghilaiset ristivät sen pilkkanimellä ”Edinburghin '
+          + 'häpeä”. Vieressä kohoaa amiraali Nelsonin muistoksi '
           + 'rakennettu torni.'
         + '\n\n'
         + 'Huhtikuun viimeisenä iltana kukkulalla juhlitaan '
@@ -7465,7 +7397,7 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Kansallismonumentti aloitettiin vuonna 1826 antiikin '
             + 'Parthenonin mallin mukaan mutta jäi rahapulan takia kesken '
             + '12 pylvään kohdalle — kaupunkilaiset ristivät sen '
-            + '"Edinburghin häpeäksi".',
+            + '”Edinburghin häpeäksi”.',
           lahde: 'Saffron Blaze, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -7519,7 +7451,7 @@ export const NAHTAVYYSJUTUT = {
         + 'ja isoisäsi olisi voinut nousta sen portaat, sillä torni oli seissyt '
         + 'jo lähes kolmekymmentä vuotta hänen tullessaan. Muistomerkkikilpailu '
         + 'järjestettiin Walter Scottin kuoltua 1832, ja sen voitti ehdotus, '
-        + 'jonka lähettäjä oli allekirjoittanut nimellä "John Morvo" — Melrosen '
+        + 'jonka lähettäjä oli allekirjoittanut nimellä ”John Morvo” — Melrosen '
         + 'luostarin keskiaikaisen rakentajan mukaan. Nimimerkin takana oli '
         + '45-vuotias George Meikle Kemp, puuseppä ja piirtäjä ilman arkkitehdin '
         + 'koulutusta, joka pelkäsi että hänen nimensä hylättäisiin heti kuoreen '
@@ -7547,6 +7479,26 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  luxemburg: {
+    // Kohdekartan oma piste käyttää samaa tekstiä kuin historian hetki.
+    'Bockin kauppa 963': {
+      nosto: 'hetki-siegfried-ostaa-bockin-963',
+      teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella '
+        + 'Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. '
+        + 'Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, '
+        + 'yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen '
+        + 'päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta '
+        + 'omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu '
+        + 'vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa '
+        + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, ”pieni linna”, '
+        + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään '
+        + 'louhitaan kilometrikaupalla käytäviä, ja linnan ympärille kasvava kaupunki '
+        + 'kantaa yhä saman nimen johdannaista. Jyrkänne suojaa paikkaa kolmelta '
+        + 'puolelta, ja vain lännestä sinne pääsee helposti. Siegfried kääntää '
+        + 'pergamentin kädessään ja katsoo jokimutkaa vielä kerran: kauppa näyttää '
+        + 'nyt pieneltä, mutta sen seuraukset kasvavat vuosisatoja.',
+    },
+  },
   lissabon: {
     // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
     // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
@@ -7567,45 +7519,11 @@ export const NAHTAVYYSJUTUT = {
         + 'kartan Kastilian hoviin, sitten uudelleen ja uudelleen, kunnes '
         + 'joku vihdoin sanoo kyllä.',
     },
-    'Glórian köysirata': {
-      aika: '1885',
-      teksti: 'Osa Lissabonin kaduista nousee niin jyrkkinä mäkinä, että '
-          + 'niitä olisi työlästä kiivetä jalan. Siksi kaupunkiin '
-          + 'rakennettiin hassunhauska kulkuneuvo, joka on osittain '
-          + 'raitiovaunu ja osittain hissi - Glórian köysirata. Se '
-          + 'avattiin vuonna 1885, ja se vie matkustajat '
-          + 'Restauradoresin aukiolta ylös Bairro Alton kaupunginosaan.'
-        + '\n\n'
-        + 'Matka on lyhyt, vain 275 metriä, mutta rinne on niin '
-          + 'jyrkkä - lähes 18 astetta - että matkaan kuluu silti pari '
-          + 'minuuttia. Aluksi pieniä vaunuja liikutti veden '
-          + 'painovoima, sitten höyry, ja lopulta 1910-luvulla rata sai '
-          + 'sähkömoottorit.'
-        + '\n\n'
-        + 'Radan suunnitteli insinööri Raoul Mesnier du Ponsard, ja '
-          + 'saksalaisessa tehtaassa rakennettuihin keltaisiin '
-          + 'vaunuihin mahtuu kerralla 42 matkustajaa ja kuljettaja. '
-          + 'Rata on säilynyt niin hyvin alkuperäisessä asussaan, että '
-          + 'siitä tehtiin Portugalin kansallinen muistomerkki vuonna '
-          + '2002.',
-      kuvat: [
-        {
-          tiedosto: 'Elevador da Glória, Lisbon, 20250604 1603 9346.jpg',
-          lyhyt: 'Vuonna 1885 avattu köysirata nousee 275 metriä Restauradoresilta Bairro Altoon 18 asteen rinnettä.',
-          selite: 'Vuonna 1885 avattu köysirata nousee 275 metrin matkan '
-            + 'Restauradoresin aukiolta Bairro Altoon lähes 18 asteen '
-            + 'rinnettä pitkin, ja sen keltaisiin vaunuihin mahtuu 42 '
-            + 'matkustajaa.',
-          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Rossio: {
       aika: '1755–1874',
       teksti: 'Rossio on yksi Lissabonin vanhimmista aukioista - täällä '
-          + 'on kokoonnuttu jo keskiajalta asti. Nimi "rossio" '
-          + 'tarkoittaa suunnilleen "yhteismaata", ja aikoinaan '
+          + 'on kokoonnuttu jo keskiajalta asti. Nimi ”rossio” '
+          + 'tarkoittaa suunnilleen ”yhteismaata”, ja aikoinaan '
           + 'aukiolla pidettiin jopa hevosmarkkinoita. Noin vuonna 1450 '
           + 'aukion laidalle nousi komea palatsi, josta tuli myöhemmin '
           + 'pelätyn inkvisition päämaja - ja aukiolla poltettiin '
@@ -7638,6 +7556,14 @@ export const NAHTAVYYSJUTUT = {
             + 'jonka huipulla seisoo kuningas Pedro IV:n patsas.',
           lahde: 'Felix König, Wikimedia Commons (CC BY 3.0)',
         },
+        {
+          tiedosto: 'Elevador da Glória, Lisbon, 20250604 1603 9346.jpg',
+          lyhyt: 'Rossion kupeesta lähtee 1885 avattu köysirata Glória, joka nousee 275 metriä Bairro Altoon.',
+          selite: 'Rossion kupeessa Restauradoresin aukiolta lähtee vuonna '
+            + '1885 avattu köysirata Glória, joka nousee 275 metrin matkan '
+            + 'Bairro Altoon lähes 18 asteen rinnettä pitkin.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
       ],
       lahde: 'Wikipedia',
     },
@@ -7657,7 +7583,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vuoden 1755 maanjäristys vaurioitti linnaa pahoin, ja se '
           + 'kunnostettiin nykyiseen kuntoonsa vasta 1930-luvulla. '
-          + 'Yhdestä torneista, "Odysseuksen tornista", löytyy '
+          + 'Yhdestä torneista, ”Odysseuksen tornista”, löytyy '
           + 'erikoinen kamera obscura -laite, jonka avulla voi katsella '
           + 'koko kaupunkia kuin taikapeilistä.',
       kuvat: [
@@ -7721,7 +7647,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Kauppatori eli Praça do Comércio on yksi Euroopan '
           + 'suurimmista aukioista - se on lähes neliön muotoinen ja '
           + 'mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä '
-          + 'myös nimellä Terreiro do Paço, "palatsin piha", sillä '
+          + 'myös nimellä Terreiro do Paço, ”palatsin piha”, sillä '
           + 'täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, '
           + 'jonka kirjastossa oli yli 200 000 kirjaa.'
         + '\n\n'
@@ -7769,8 +7695,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Rakennus oli alun perin Pyhän Engrácian kirkko, ja sen '
           + 'rakentaminen aloitettiin vuonna 1681. Työ kesti niin '
           + 'uskomattoman kauan - peräti 285 vuotta! - että '
-          + 'portugalilaiset alkoivat käyttää sanontaa "Pyhän Engrácian '
-          + 'työmaa" tarkoittamaan mitä tahansa hanketta, joka ei tunnu '
+          + 'portugalilaiset alkoivat käyttää sanontaa ”Pyhän Engrácian '
+          + 'työmaa” tarkoittamaan mitä tahansa hanketta, joka ei tunnu '
           + 'koskaan valmistuvan.'
         + '\n\n'
         + 'Rakennus valmistui lopulta vasta vuonna 1966, ja pian sen '
@@ -7955,7 +7881,7 @@ export const NAHTAVYYSJUTUT = {
           + 'jotka näyttävät valtavan eläimen kylkiluilta, ja keskellä '
           + 'rakennusta on siniseksi laatoitettu valokuilu, joka tuo '
           + 'päivänvaloa aina alimpiin kerroksiin asti. Talon '
-          + 'lempinimikin, \'Luiden talo\', kertoo sen erikoisesta, '
+          + 'lempinimikin, ’Luiden talo’, kertoo sen erikoisesta, '
           + 'melkein elävältä tuntuvasta muodosta. Nykyään talossa voi '
           + 'vierailla museona, ja se on ollut Unescon '
           + 'maailmanperintökohde vuodesta 2005.',
@@ -8074,7 +8000,7 @@ export const NAHTAVYYSJUTUT = {
           + 'myyjiä ja ostajia edelleen tänäkin päivänä.'
         + '\n\n'
         + 'Torin nimi Boqueria juontuu luultavasti katalaanin sanasta '
-          + '\'boc\', joka tarkoittaa vuohta – ennen vanhaan siellä '
+          + '’boc’, joka tarkoittaa vuohta – ennen vanhaan siellä '
           + 'nimittäin myytiin paljon vuohenlihaa. Nykyään hallin sadat '
           + 'myyntikojut pursuavat tuoreita hedelmiä, kaloja, lihaa ja '
           + 'herkullisia makeisia, ja se on yksi Barcelonan '
@@ -8089,40 +8015,13 @@ export const NAHTAVYYSJUTUT = {
             + 'päälle nostettiin näyttävä metallikatto.',
           lahde: 'Nicholas Gemini, Wikimedia Commons (CC BY-SA 4.0)',
         },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Kolumbuksen patsas': {
-      aika: '1882–1888',
-      teksti: 'Kolumbuksen patsas kohoaa Barcelonan satamassa siinä, '
-          + 'missä La Rambla -katu päättyy mereen. Se rakennettiin '
-          + 'vuosina 1882–1888 suurta maailmannäyttelyä varten, joka '
-          + 'järjestettiin Barcelonassa vuonna 1888, ja arkkitehti '
-          + 'Gaietà Buigas voitti kilpailun patsaan suunnittelusta.'
-        + '\n\n'
-        + 'Koko monumentti on 60 metriä korkea – lähes kahdenkymmenen '
-          + 'kerroksisen talon mittainen! Huipulla seisoo 7,2 metrin '
-          + 'korkuinen pronssinen Kolumbus-patsas, joka osoittaa '
-          + 'kädellään kohti merta ja pitää toisessa kädessä '
-          + 'karttakääröä. Pylvästä koristavat muun muassa siivekkäät '
-          + 'voitonjumalattaret ja mytologiset griipit.'
-        + '\n\n'
-        + 'Hauska yksityiskohta: monet luulevat Kolumbuksen '
-          + 'osoittavan kohti Amerikkaa, mutta todellisuudessa sormi '
-          + 'näyttää suuntaan, joka vie kartalla Pohjois-Afrikkaan '
-          + 'asti. Todennäköisin selitys on, että patsas haluttiin '
-          + 'yksinkertaisesti kääntää kohti avomerta korostamaan '
-          + 'Kolumbuksen mainetta merenkulkijana. Pylvään sisällä on '
-          + 'jopa pieni hissi, jolla pääsee näköalatasanteelle aivan '
-          + 'patsaan jalustan alle.',
-      kuvat: [
         {
           tiedosto: 'Mirador de Colom - panoramio.jpg',
-          lyhyt: 'Kolumbuksen 60 metrin monumentti pystytettiin 1882–1888, patsas osoittaa kohti avomerta.',
-          selite: 'Kolumbuksen 60 metriä korkea monumentti pystytettiin '
-            + 'vuosina 1882–1888 maailmannäyttelyä varten, ja huipun 7,2 '
-            + 'metriä korkea pronssipatsas osoittaa kädellään kohti '
-            + 'avomerta.',
+          lyhyt: 'La Ramblan toisessa päässä, satamassa, kohoaa 60-metrinen Kolumbuksen patsas vuosilta 1882–1888.',
+          selite: 'Samaa La Rambla -katua alaspäin, siinä missä se '
+            + 'päättyy mereen, kohoaa 60 metriä korkea Kolumbuksen '
+            + 'monumentti vuosilta 1882–1888, jonka huipun pronssipatsas '
+            + 'osoittaa kädellään kohti avomerta.',
           lahde: 'Mister No, Wikimedia Commons (CC BY 3.0)',
         },
       ],
@@ -8496,7 +8395,7 @@ export const NAHTAVYYSJUTUT = {
         + 'isä oli aloittanut palatsin korjaustyöt 1828 ja jonka poika jatkoi '
         + 'niitä hänen jälkeensä — kolme sukupolvea samaa taloa, aina vuoteen '
         + '1907 asti. He tekivät työnsä sen ajan opin mukaan: rakennukseen sai '
-        + 'lisätä osia, jotta siitä tulisi "kokonainen", vaikkei lisäys vastaisi '
+        + 'lisätä osia, jotta siitä tulisi ”kokonainen”, vaikkei lisäys vastaisi '
         + 'mitään, mitä siinä oli joskus ollut. Kupolin esikuva oli osittain '
         + 'Persiassa, tuhannen kilometrin ja monen vuosisadan päässä tästä '
         + 'pihasta. Se ei ollut huijaus vaan makuasia: niin arabialaisen tyylin '
@@ -8720,7 +8619,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ne.'
         + '\n\n'
         + 'Portaiden alla on 1620-luvulta peräisin oleva suihkulähde, '
-          + 'jonka lempinimi on \'ruma vene\' — se on muotoiltu puoliksi '
+          + 'jonka lempinimi on ’ruma vene’ — se on muotoiltu puoliksi '
           + 'upoksissa olevaksi laivaksi. Ylhäällä portaat päättyvät '
           + 'Trinità dei Monti -kirkon eteen, jonka kaksoistornit '
           + 'näkyvät kauas yli kaupungin katujen.'
@@ -8749,7 +8648,7 @@ export const NAHTAVYYSJUTUT = {
           tiedosto: 'Piazza di Spagna, Roma - scalinata fc03.jpg',
           lyhyt: 'Espanjalaisten portaiden alla on 1620-luvun suihkulähde lempinimeltään ruma vene.',
           selite: 'Portaiden alla on 1620-luvun suihkulähde, jonka lempinimi '
-            + 'on "ruma vene", ja ylhäällä ne päättyvät Trinità dei Monti '
+            + 'on ”ruma vene”, ja ylhäällä ne päättyvät Trinità dei Monti '
             + '-kirkon eteen.',
           lahde: 'Fczarnowski, Wikimedia Commons (CC BY-SA 3.0)',
         },
@@ -8812,7 +8711,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Temppelin kupoli on edelleen maailman suurin '
           + 'raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. '
-          + 'Katon keskellä on pyöreä aukko, oculus eli \'silmä\', jonka '
+          + 'Katon keskellä on pyöreä aukko, oculus eli ’silmä’, jonka '
           + 'läpi paistaa aurinko ja sataa sade suoraan lattialle. '
           + 'Roomalaiset käyttivät kupolin yläosassa yhä kevyempää '
           + 'kiveä kuin alaosassa, jotta se ei romahtaisi omaan '
@@ -8842,7 +8741,7 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Interior oculus of the Rome Pantheon.jpg',
           lyhyt: 'Pantheonin kupolin oculus päästää auringon ja sateen sisään, maailman suurin raudoittamaton kupoli.',
-          selite: 'Kupolin keskellä oleva pyöreä aukko, oculus eli "silmä", '
+          selite: 'Kupolin keskellä oleva pyöreä aukko, oculus eli ”silmä”, '
             + 'päästää sisään auringon ja sateen; kupoli on yhä maailman '
             + 'suurin raudoittamaton betonikupoli, halkaisijaltaan 43 '
             + 'metriä.',
@@ -8867,7 +8766,7 @@ export const NAHTAVYYSJUTUT = {
           + 'käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia '
           + 'juhlittiin peräti 100 päivän ajan erilaisin näytöksin. '
           + 'Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — '
-          + 'lempinimi \'Colosseum\' tulee sen vierestä kohonneesta '
+          + 'lempinimi ’Colosseum’ tulee sen vierestä kohonneesta '
           + 'jättiläismäisestä Colossus-patsaasta, ei areenasta '
           + 'itsestään.'
         + '\n\n'
@@ -9530,6 +9429,88 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  valletta: {
+    'Pyhän Johanneksen ko-katedraali': {
+      aika: '1572–1577 (rakennus), 1608 (Caravaggion maalaus)',
+      teksti: 'Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan '
+          + 'omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on '
+          + 'yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa '
+          + 'tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. '
+          + 'Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko '
+          + 'katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia '
+          + 'on yhtenäinen mosaiikki kahdeksastasadasta ritarin '
+          + 'hautalaatasta.'
+          + '\n\n'
+          + 'Caravaggio pakeni Roomasta 1607 tapettuaan miehen '
+          + 'kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa '
+          + '1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi '
+          + 'oratorioon ”Johannes Kastajan mestauksen” — ainoan '
+          + 'teoksensa, jonka hän koskaan signeerasi: nimikirjoitus on '
+          + 'piirretty Johanneksen kaulasta valuvaan vereen.'
+          + '\n\n'
+          + 'Kunnia ei kestänyt kauan. Elokuussa 1608 Caravaggio '
+          + 'haavoitti tappelussa vanhempaa ritaria ja joutui '
+          + 'vankityrmään Pyhän Angelon linnoitukseen, mutta pakeni '
+          + 'sieltä Sisiliaan. Joulukuussa 1608 ritarikunta erotti hänet '
+          + 'muodollisesti kokouksessaan sanoin ”kuin mätänevä ja '
+          + 'löyhkäävä jäsen”.',
+      kuvat: [
+        {
+          tiedosto: 'Beheading of Saint John the Baptist by Caravaggio.jpg',
+          lyhyt: 'Caravaggion ”Johannes Kastajan mestaus” oratoriossa — hänen ainoa signeeraamansa teoksensa.',
+          selite: 'Caravaggion 1608 maalaama ”Johannes Kastajan mestaus” '
+            + 'katedraalin oratoriossa. Taiteilija signeerasi teoksen '
+            + 'ainoan kerran urallaan — nimikirjoitus on piirretty '
+            + 'Johanneksen kaulasta valuvaan vereen.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: "Interior of St. John's Co-Cathedral 2025 26.jpg",
+          lyhyt: 'Katedraalin sisätila: Mattia Pretin 1660-luvun kultainen kattomaalaus ja ritarien hautalaattalattia.',
+          selite: 'Katedraalin sisätila, jonka Mattia Preti maalasi '
+            + 'kokonaan 1660-luvulla. Ulkoapäin vaatimaton rakennus '
+            + 'kätkee sisäänsä yhden barokin runsaimmista kirkkotiloista.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Elmon linnake': {
+      aika: '1552 (rakennus), 1565 (piiritys)',
+      teksti: 'Linnake rakennettiin 1552 vartioimaan kahden sataman, '
+          + 'Grand Harbourin ja Marsamxettin, suuta samalta kapealta '
+          + 'niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden '
+          + 'muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, '
+          + 'mutta osmanien saapuessa 1565 moni piti sitä silti liian '
+          + 'pienenä kestämään pitkää piiritystä.'
+          + '\n\n'
+          + 'Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. '
+          + 'kesäkuuta, vaikka miehistö oli moninkertaisesti '
+          + 'alivoimainen. Yöllä veneet toivat Birgusta lisää '
+          + 'puolustajia ja veivät haavoittuneita pois, ja monet '
+          + 'pahoin haavoittuneet ritarit kieltäytyivät poistumasta: '
+          + 'he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen '
+          + 'taistelua istualtaan viimeiseen asti.'
+          + '\n\n'
+          + 'Kun linnake lopulta kaatui, se oli maksanut osmaneille '
+          + 'kuukauden ajan ja tuhansia miehiä — hinnan, jota suurmestari '
+          + 'Jean de Valette käytti hyväkseen vahvistaakseen Birgun ja '
+          + 'Senglean puolustuksen ennen pääpiiritystä. Linnake '
+          + 'jälleenrakennettiin ja laajennettiin myöhemmin, ja tänään '
+          + 'sen muurien sisällä toimii Maltan sotamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Fuerte de San Telmo, La Valeta, isla de Malta, Malta, 2021-08-25, DD 218.jpg',
+          lyhyt: 'Pyhän Elmon linnakkeen tähdenmuotoiset muurit niemenkärjessä kahden sataman välissä.',
+          selite: 'Pyhän Elmon linnakkeen tähdenmuotoiset muurit '
+            + 'niemenkärjessä, josta se vartioi sekä Grand Harbourin '
+            + 'että Marsamxettin suuta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   varsova: {
     'Vanhankaupungin tori': {
@@ -9981,8 +9962,8 @@ export const NAHTAVYYSJUTUT = {
           + 'elämää.'
         + '\n\n'
         + 'Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 '
-          + 'porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha '
-          + 'Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on '
+          + 'porrasaskelmaa. Huipulla pyörii Vana Toomas, eli ”Vanha '
+          + 'Toomas” - kaupunginvartijaa esittävä tuuliviiri, joka on '
           + 'ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. '
           + 'Alkuperäinen tuuliviiri on nykyään esillä raatihuoneen '
           + 'kellarissa, sillä sotavaurioiden vuoksi huipulle '
@@ -10088,7 +10069,7 @@ export const NAHTAVYYSJUTUT = {
           + 'arvokkaina. Torneja on sittemmin kunnostettu useaan '
           + 'otteeseen, muun muassa Moskovan olympialaisia varten '
           + 'vuonna 1980, ja nykyään ne on rekisteröity Tallinnan '
-          + 'kaupungin omaksi tavaramerkiksi nimellä "Virun portti".',
+          + 'kaupungin omaksi tavaramerkiksi nimellä ”Virun portti”.',
       kuvat: [
         {
           tiedosto: 'Viru värav ja tornid.jpg',
@@ -10476,31 +10457,6 @@ export const NAHTAVYYSJUTUT = {
           + 'näyttävän kulttuurin kodin. Vuonna 2005 rakennus '
           + 'palkittiin maailman parhaana kongressikeskuksena.',
       kuvat: [
-        {
-          tiedosto: 'The National Palace of Culture, Sofia, 2012 - 004.jpg',
-          lyhyt: 'Sofian kulttuurikeskus rakennettiin 1978–1981 Bulgarian juhlavuoteen, tilaa 123 000 neliömetriä.',
-          selite: 'Sofian suurin kulttuurikeskus rakennettiin vuosina 1978–1981 '
-            + 'ja avattiin juuri kun Bulgaria juhli 1300-vuotista taivaltaan; '
-            + 'tilaa on 123 000 neliömetriä kahdeksassa maanpäällisessä '
-            + 'kerroksessa.',
-          lahde: 'Peter Kirkov, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'National Palace of Culture (23997858848).jpg',
-          lyhyt: 'Kulttuurikeskuksessa on yli 80 taideteosta tunnetuilta bulgarialaisilta taiteilijoilta.',
-          selite: 'Rakennuksen sisällä ja ulkopuolella on yli 80 taideteosta – '
-            + 'seinämaalauksia, mosaiikkeja ja veistoksia – jotka tunnetut '
-            + 'bulgarialaiset taiteilijat loivat.',
-          lahde: 'Deensel, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'National Palace of Culture, Sofia 1.jpg',
-          lyhyt: 'Idean palatsista antoi Ljudmila Živkova, rakennus palkittiin 2005 parhaana kongressikeskuksena.',
-          selite: 'Idean koko palatsista antoi Ljudmila Živkova, '
-            + 'kommunistijohtaja Todor Živkovin tytär, ja vuonna 2005 '
-            + 'rakennus palkittiin maailman parhaana kongressikeskuksena.',
-          lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -10588,11 +10544,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Viisautta. Minulla ei ole tähän mitään lisättävää.',
       kuvat: [
         {
-          tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
-          lyhyt: 'Kahdeksan metriä korkea kuparinen Sofia-patsas seisoo 16 metrin jalustalla Nezavisimost-aukiolla.',
-          selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on kahdeksan '
-            + 'metriä korkea ja seisoo 16 metrin jalustalla.',
-          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Bulgaria-02926 - Saint Sofia Church (11047630053).jpg",
+          lyhyt: "Pyhän Sofian kirkko on 500-luvulta ja antoi kaupungille nimen.",
+          selite: "Pyhän Sofian kirkko on Sofian toiseksi vanhin kirkko ja ajoittuu 500-luvulle. Commonsin kuvauksen mukaan kirkko antoi kaupungille nimensä 1300-luvulla.",
+          lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -10658,7 +10613,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna '
           + '1865, kun joukko sivistyneitä romanialaisia perusti '
           + 'kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta '
-          + 'ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja '
+          + 'ihmisiltä tunnuslauseella ”Anna yksi leu Ateneumille!”, ja '
           + 'rakennus vihittiin käyttöön vuonna 1888, vaikka '
           + 'viimeistelytyöt jatkuivat vielä vuoteen 1897 asti.'
         + '\n\n'
@@ -10793,8 +10748,8 @@ export const NAHTAVYYSJUTUT = {
           + 'luostarikirkko Bukarestin vanhassa keskustassa. '
           + 'Kreikkalainen munkki Ioannikios Stratonikeas rakennutti '
           + 'sen vuonna 1724 ruhtinas Nicholas Mavrocordatoksen aikana. '
-          + 'Nimi tulee kreikan sanoista "Stavropolis", joka tarkoittaa '
-          + '"Ristin kaupunkia".'
+          + 'Nimi tulee kreikan sanoista ”Stavropolis”, joka tarkoittaa '
+          + '”Ristin kaupunkia”.'
         + '\n\n'
         + 'Kirkon arkkitehtuuri edustaa niin sanottua '
           + 'brâncoveanu-tyyliä, jossa on koristeellisia kiviveistoksia '
@@ -10891,23 +10846,6 @@ export const NAHTAVYYSJUTUT = {
           + 'rakentamiseen käytettiin miljoona kuutiometriä marmoria. '
           + 'Nykyään rakennuksessa istuu Romanian parlamentti.',
       kuvat: [
-        {
-          tiedosto: 'Palatul Parlamentului 1.jpg',
-          lyhyt: 'Ceaușescun palatsin piti valmistua kahdessa vuodessa, rakentaminen kesti 13 vuotta.',
-          selite: 'Diktaattori Nicolae Ceaușescun rakennuttaman palatsin piti '
-            + 'valmistua kahdessa vuodessa, mutta rakentaminen kesti 13 '
-            + 'vuotta ja päättyi vasta vuonna 1997.',
-          lahde: 'Mihai Petre, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'Palace București 23 BG.jpg',
-          lyhyt: 'Palatsissa on 1100 huonetta ja pommisuoja, maailman raskain rakennus lähes 2 miljoonaa tonnia.',
-          selite: 'Palatsissa on 1100 huonetta, ja se ulottuu 92 metriä maan '
-            + 'alle, jonne rakennettiin ydinpommisuoja 1,5 metriä paksuine '
-            + 'betoniseinineen. Se on maailman raskain rakennus, arviolta '
-            + 'lähes 2 miljoonaa tonnia.',
-          lahde: 'Bingar1234, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -10940,6 +10878,14 @@ export const NAHTAVYYSJUTUT = {
             + 'museo sai 1933 tutkija Grigore Antipan mukaan.',
           lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
         },
+        /*
+         * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+         * #3434): ainoa löytynyt Belle Époque -aikainen postikorttikuva
+         * museosta Voittoaukiolla. Isompaa versiota tai muuta saman
+         * ajan kuvaa ei löytynyt Commonsista — museon nykytilasta on jo
+         * iso kuva yllä (Chainwit.), joten tämä täydentää sitä
+         * aikalaiskuvana eikä sitä korvata nykyisemmällä.
+         */
         {
           tiedosto: 'Belle Époque photo of the Antipa Museum in Victory Square of Bucharest, Romania.jpg',
           lyhyt: 'Museon juuret ulottuvat vuoteen 1834, kokoelmissa nykyään yli 2 miljoonaa näytettä.',
@@ -11238,7 +11184,7 @@ export const NAHTAVYYSJUTUT = {
           + 'nykyinen silta on pääosin vuosilta 1798–1799. Silta lepää '
           + 'neljän kivikaaren ja kolmen pilarin varassa, ja pilarien '
           + 'yläpuolella on pyöreitä keventäviä aukkoja — nämä '
-          + 'tunnusomaiset "silmät" näkyvät jopa Sarajevon vanhassa '
+          + 'tunnusomaiset ”silmät” näkyvät jopa Sarajevon vanhassa '
           + 'kaupunginvaakunassa.'
         + '\n\n'
         + 'Silta on kantanut montaa nimeä. Jugoslavian aikana sitä '
@@ -11600,20 +11546,16 @@ export const NAHTAVYYSJUTUT = {
           + 'suojeluspyhälle, arkkienkeli Mikaelille.',
       kuvat: [
         {
-          tiedosto: '2005-08-15 Maidan Nezalezhnosti Kiev 261.JPG',
-          lyhyt: 'Aukion tunnetuin nähtävyys on 2001 pystytetty 61 metrin Itsenäisyyspatsas kultaisine Berehyniaan.',
-          selite: 'Aukion tunnetuin nähtävyys on vuonna 2001 pystytetty 61 metriä '
-            + 'korkea Itsenäisyyspatsas, jonka huipulla seisoo kultainen '
-            + 'Berehynia, ukrainalaisen tarinaperinteen suojelijatar.',
-          lahde: 'Norbert Aepli, Wikimedia Commons (CC BY 3.0)',
+          tiedosto: "Kyiv-city-duma-c1900.jpg",
+          lyhyt: "Kiovan kaupunginduuma 1800-luvun lopulla",
+          selite: "Vanha valokuva Kiovan kaupunginduuman rakennuksesta, joka sijaitsi nykyisen Itsenäisyydenaukion (Maidan) paikalla. Rakennus on sittemmin tuhoutunut.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (Public domain)",
         },
         {
-          tiedosto: 'Modern fountain on the Independence square (8162296734).jpg',
-          lyhyt: 'Vuosina 1976–1977 aukion alle rakennettiin metroasema ja suihkulähteitä.',
-          selite: 'Vuosina 1976–1977 aukion alle rakennettiin metroasema, ja '
-            + 'samalla paikalle valmistui suihkulähteitä ja avaria '
-            + 'kävelyalueita.',
-          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
+          tiedosto: "Майдан 1850і.jpg",
+          lyhyt: "Hreštšatykin aukio 1850–60-luvuilla",
+          selite: "Vanha kuva Hreštšatykin aukiosta, joka tunnetaan nykyisin Itsenäisyydenaukiona (Maidan Nezalezhnosti). Kuva on tehty vuosien 1850 ja 1870 välillä.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -11652,12 +11594,10 @@ export const NAHTAVYYSJUTUT = {
           + 'pieni museo.',
       kuvat: [
         {
-          tiedosto: 'Kiev Golden Gate.jpg',
-          lyhyt: 'Jaroslav Viisas rakennutti Kultaisen portin 1017–1024 Konstantinopolin mallin mukaan.',
-          selite: 'Jaroslav Viisas rakennutti portin vuosina 1017–1024 kaupungin '
-            + 'muurien pääsisäänkäynniksi Konstantinopolin Kultaisen portin '
-            + 'mallin mukaan; läpikulkuaukko oli noin 12 metriä korkea.',
-          lahde: 'Луц Фишер-Лампрехт, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Zoloty vorota 1860s.jpg",
+          lyhyt: "Kultaisen portin rauniot 1860-luvulla",
+          selite: "Vanha valokuva 1860-luvulta näyttää Kultaisen portin rauniot ja niiden edessä seisovan miesryhmän; Commonsin kuvauksen mukaan kyseessä on vankikomppania.",
+          lahde: "Tuntematon tekijä, Wikimedia Commons (CC BY 4.0)",
         },
         {
           tiedosto: 'Киев. Золотые ворота. Почтовая открытка 04.jpg',
@@ -11666,15 +11606,6 @@ export const NAHTAVYYSJUTUT = {
             + '1240, ja 1970-luvulle tultaessa maan päällä oli enää kaksi '
             + 'muurinpätkää jäljellä.',
           lahde: 'Tuntematon kustantaja, Wikimedia Commons (Public domain)',
-        },
-        {
-          tiedosto: 'Золоті ворота повний вигляд.jpg',
-          lyhyt: 'Kultainen portti rakennettiin uudelleen Kiovan juhlavuoteen 1982 vanhojen kuvausten pohjalta.',
-          selite: 'Portti rakennettiin kokonaan uudelleen Kiovan '
-            + '1500-vuotisjuhlaan vuonna 1982; koska alkuperäisestä ei ole '
-            + 'säilynyt yhtään aitoa kuvaa, ulkonäkö jouduttiin päättelemään '
-            + 'vanhoista kirjallisista kuvauksista.',
-          lahde: 'Ольжич Мушинський, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -12045,7 +11976,7 @@ export const NAHTAVYYSJUTUT = {
     'Bolšoi-teatteri': {
       aika: '1825',
       teksti: 'Moskovan Bolšoi-teatteri, jonka nimi tarkoittaa venäjäksi '
-          + '"suurta teatteria", avasi ovensa vuonna 1825. Sen '
+          + '”suurta teatteria”, avasi ovensa vuonna 1825. Sen '
           + 'suunnitteli arkkitehti Joseph Bové, ja rakennuksen '
           + 'pylväikön yläpuolella nelivaljakkoa ajaa jumala Apollo '
           + 'pronssisessa vaunussa - patsaan teki kuvanveistäjä Pjotr '
@@ -12094,8 +12025,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kutsuttiin yksinkertaisesti Toriksi, sillä siellä käytiin '
           + 'kauppaa vuosisatojen ajan.'
         + '\n\n'
-        + 'Nimi "punainen" ei alun perin viitannut väriin: vanhalla '
-          + 'venäjän kielellä sana tarkoitti "kaunista". Vasta '
+        + 'Nimi ”punainen” ei alun perin viitannut väriin: vanhalla '
+          + 'venäjän kielellä sana tarkoitti ”kaunista”. Vasta '
           + 'myöhemmin samasta sanasta tuli myös punaisen värin '
           + 'nimitys. Tori on lähes 330 metriä pitkä ja 70 metriä leveä '
           + '- yhteensä melkein 73 000 neliömetriä.'
@@ -12301,13 +12232,10 @@ export const NAHTAVYYSJUTUT = {
           + 'täynnä taidetta - kauas Siperian Novosibirskiin.',
       kuvat: [
         {
-          tiedosto: 'Tretyakov and his gallery.jpg',
-          lyhyt: 'Kauppias Pavel Tretjakov lahjoitti kokoelmansa Moskovalle 1892, galleria avattiin 1893.',
-          selite: 'Kauppias Pavel Tretjakov lahjoitti kokoelmansa Moskovan '
-            + 'kaupungille elokuussa 1892, ja galleria avattiin yleisölle 15. '
-            + 'elokuuta 1893. Satumaisen punatiilisen julkisivun suunnitteli '
-            + 'taiteilija Viktor Vasnetsov vuosina 1902–1904.',
-          lahde: 'Andrey, Wikimedia Commons (CC BY 2.0)',
+          tiedosto: "Municipal Album 1.050 Tretyakovka.jpg",
+          lyhyt: "Tretjakovin galleria 1910-luvulla",
+          selite: "Moskovan kaupungin rakennusalbumin vanha valokuva Tretjakovin veljesten taidegalleriasta Lavrušinskin kujalla, noin vuosilta 1910–1915.",
+          lahde: "Tuntematon valokuvaaja (P. P. Pavlovin valokuvaamo), Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -12421,22 +12349,6 @@ export const NAHTAVYYSJUTUT = {
           + 'myrskyiltä ja korkeilta aalloilta.',
       kuvat: [
         {
-          tiedosto: 'Воронцовський маяк DSC5033.jpg',
-          lyhyt: 'Odessan lähes 30 metrin majakka on jo kolmas torni samalla paikalla, nykyinen valmistui 1955.',
-          selite: 'Lähes 30 metriin kohoava majakka on jo kolmas torni samalla '
-            + 'paikalla: puisen ja valurautaisen edeltäjänsä jälkeen nykyinen '
-            + 'valmistui vuonna 1955.',
-          lahde: 'Konstantin Brizhnichenko, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Воронцовський маяк та грузовий порт.jpg',
-          lyhyt: 'Majakan valo näkyy yli 20 kilometrin päähän ja vilkkuu Morse-kirjaimen O tunnuksella.',
-          selite: 'Majakan valo näkyy merelle yli 20 kilometrin päähän ja vilkkuu '
-            + 'aina samalla tunnuksella: kolme pitkää välähdystä, mikä on '
-            + 'Morse-aakkosissa kirjain O – niin kuin Odessa.',
-          lahde: 'SvetlanaM85, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
           tiedosto: 'Vorontsov Lighthouse.jpg',
           lyhyt: 'Majakka on nimetty ruhtinas Vorontsovin mukaan ja yhdistetty rantaan kivisellä aallonmurtajalla.',
           selite: 'Majakka on nimetty Odessan seutua aikanaan hallinneen ruhtinas '
@@ -12469,12 +12381,10 @@ export const NAHTAVYYSJUTUT = {
           + 'on lähtenyt matkalle miljoonia matkustajia vuodessa.',
       kuvat: [
         {
-          tiedosto: 'Вид на морской вокзал (Одесса).jpg',
-          lyhyt: 'Odessan satama sai alkunsa 1793, nykyään siellä on 46 laituripaikkaa ja 52 laituria.',
-          selite: 'Satama sai alkunsa vuonna 1793, kun upseeri José de Ribas oli '
-            + 'etsinyt sille parhaan paikan Mustanmeren rannalta; nykyään '
-            + 'siellä on 46 laituripaikkaa ja 52 laituria.',
-          lahde: 'Georgiy Dolgopskiy, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Oděsa, přístav II.jpg",
+          lyhyt: "Odessan satamaa",
+          selite: "Nostureita ja kauppalaivoja Odessan satama-altaassa.",
+          lahde: "Aktron, Wikimedia Commons (CC BY 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -12882,7 +12792,7 @@ export const NAHTAVYYSJUTUT = {
           + 'betonista, mikä oli 1960-luvulla hyvin moderni ratkaus.'
         + '\n\n'
         + 'Itäpäädyssä on vuonna 1972 valmistunut suurikokoinen '
-          + 'lasimosaiikki \'Kristuksen paluu\', taiteilija Victor '
+          + 'lasimosaiikki ’Kristuksen paluu’, taiteilija Victor '
           + 'Sparren käsialaa. Kirkossa on tilaa noin 600 hengelle, ja '
           + 'siellä soi nykyään komea urku, jossa on 42 äänikertaa ja '
           + 'lähes 3000 pilliä.',
@@ -12910,6 +12820,15 @@ export const NAHTAVYYSJUTUT = {
             + '”Kristuksen paluu”.',
           lahde: 'Henrik, Wikimedia Commons (CC BY 2.5)',
         },
+        {
+          tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
+          lyhyt: 'Katedraalin kupeesta lähtee Fjellheisenin köysirata, joka nostaa neljässä minuutissa 420 metriin.',
+          selite: 'Katedraalin vieressä on Fjellheisenin köysiradan '
+            + 'alaasema: rata nostaa matkustajat Storsteinen-vuorelle '
+            + '420 metrin korkeuteen neljässä minuutissa, ja se avattiin '
+            + 'yleisölle 1961.',
+          lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
       ],
       lahde: 'Wikipedia',
     },
@@ -12922,7 +12841,7 @@ export const NAHTAVYYSJUTUT = {
           + 'merellä oikeasti tapahtuu myrskyjen aikana.'
         + '\n\n'
         + 'Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi '
-          + 'katsella altaan reunalta tai kävellä niiden \'alla\' '
+          + 'katsella altaan reunalta tai kävellä niiden ’alla’ '
           + 'läpinäkyvässä tunnelissa altaan pohjan alla. Muissa '
           + 'näyttelyissä pääsee tutustumaan Norjan rannikon kaloihin '
           + 'ja eläimiin, ja viisiruutuisessa '
@@ -12949,52 +12868,6 @@ export const NAHTAVYYSJUTUT = {
             + 'katsella altaan reunalta tai läpinäkyvästä tunnelista altaan '
             + 'pohjan alta.',
           lahde: 'Lee Dyer, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
-    'Fjellheisenin köysirata': {
-      aika: '1961',
-      teksti: 'Fjellheisen on köysirata, joka nostaa matkustajat Tromssan '
-          + 'laidalta ylös Storsteinen-vuorelle, 420 metrin korkeuteen '
-          + 'merenpinnasta. Matka kestää vain neljä minuuttia, mutta '
-          + 'näkymä ylhäältä palkitsee: koko kaupunki, saaret ja vuonot '
-          + 'avautuvat jalkojen alle.'
-        + '\n\n'
-        + 'Köysirata rakennettiin laivayhtiö Brødrene Jakobsens '
-          + 'Rederin toimesta, ja se avattiin yleisölle 22. helmikuuta '
-          + '1961 - siis lähes sata vuotta isoisän matkan jälkeen. '
-          + 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
-          + 'matkaa jalan vielä korkeammalle, Tromsdalstindenin '
-          + 'huipulle (1238 metriä).'
-        + '\n\n'
-        + 'Kesäisin ylhäältä näkee yötöntä yötä eli keskiyön '
-          + 'aurinkoa, ja talvella paikka on yksi parhaista revontulien '
-          + 'katselupaikoista koko kaupungissa.',
-      kuvat: [
-        {
-          tiedosto: 'Fjellheisen, Tromsø 2019.jpg',
-          lyhyt: 'Köysirata nostaa matkustajat Storsteinenille 420 metrin korkeuteen neljässä minuutissa.',
-          selite: 'Köysirata nostaa matkustajat Storsteinen-vuorelle 420 metrin '
-            + 'korkeuteen merenpinnasta, ja matka kestää vain neljä '
-            + 'minuuttia.',
-          lahde: 'Olivier Bruchez, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'Fjellheisen view Tromsø 02.jpg',
-          lyhyt: 'Ylhäällä on Fjellstua-ravintola, monet jatkavat jalan Tromsdalstindenin huipulle 1238 metriin.',
-          selite: 'Ylhäällä on Fjellstua-niminen ravintola, ja monet jatkavat '
-            + 'matkaa jalan vielä korkeammalle Tromsdalstindenin huipulle '
-            + '1238 metriin.',
-          lahde: 'weisserstier, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Tromsø Cable cars Fjellheisen 06.jpg',
-          lyhyt: 'Laivayhtiön rakennuttama köysirata avattiin 1961, lähes sata vuotta isoisän matkan jälkeen.',
-          selite: 'Laivayhtiö Brødrene Jakobsens Rederin rakennuttama köysirata '
-            + 'avattiin yleisölle 22. helmikuuta 1961 – lähes sata vuotta '
-            + 'isoisän matkan jälkeen.',
-          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -13089,13 +12962,13 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'ETH-BIB-Dobrovnik, Pile-Tor-Dia 247-09508.tif',
-          lyhyt: 'Vuonna 1936 Pilen portista kuljettiin vapaasti, mutta aiemmin nostosilta vedettiin joka ilta ylös.',
-          selite: 'Vuonna 1936 portista kuljettiin jo vapaasti, mutta '
-            + 'aikoinaan sisäportille johti puinen nostosilta, joka '
-            + 'vedettiin joka ilta ylös — kukaan ei päässyt sisään eikä '
-            + 'ulos ennen aamua.',
-          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Pile Gate from inside, Dubrovnik (2) (29524644444).jpg',
+          lyhyt: 'Nykyään Pilen portista kuljetaan vapaasti, mutta aikoinaan nostosilta vedettiin joka ilta ylös.',
+          selite: 'Pilen portin sisäpuoli: nykyään portista kuljetaan '
+            + 'vapaasti, mutta aikoinaan sisäportille johti puinen '
+            + 'nostosilta, joka vedettiin joka ilta ylös — kukaan ei '
+            + 'päässyt sisään eikä ulos ennen aamua.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -13105,7 +12978,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti '
           + 'Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee '
           + 'kahta tyyliä: osa rakennuksesta on goottilaista, osa '
-          + 'renessanssia. Nimi \'Sponza\' tulee latinan sanasta, joka '
+          + 'renessanssia. Nimi ’Sponza’ tulee latinan sanasta, joka '
           + 'tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta '
           + 'valuva vesi kerääntyi juuri tämän talon pihalle.'
         + '\n\n'
@@ -13213,7 +13086,7 @@ export const NAHTAVYYSJUTUT = {
           + 'dubrovnikilaiset luottivat siihen, ettei heidän oma '
           + 'kaupunkinsa koskaan hyökkäisi omaa linnakettaan vastaan. '
           + 'Linnaketta puolusti kymmenen suurta tykkiä, joista '
-          + 'suurinta kutsuttiin nimellä \'Gušter\', eli Lisko.'
+          + 'suurinta kutsuttiin nimellä ’Gušter’, eli Lisko.'
         + '\n\n'
         + 'Portin yläpuolella on yhä luettavissa latinankielinen '
           + 'lause, joka kertoi koko Dubrovnikin tasavallan '
@@ -13245,13 +13118,12 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'ETH-BIB-Dobrovnik, Fort Lovrijenac vom Hôtel Impérial-Dia 247-09506.tif',
-          lyhyt: 'Vuonna 1936 linnaketta puolusti kymmenen tykkiä, suurin nimeltään Gušter eli Lisko.',
-          selite: 'Vuonna 1936 linnake oli jo aikoja sitten menettänyt '
-            + 'sotilaallisen tehtävänsä; sitä puolusti aikanaan kymmenen '
-            + 'suurta tykkiä, joista suurinta kutsuttiin nimellä '
-            + '\'Gušter\' eli Lisko.',
-          lahde: 'Leo Wehrli, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: 'Fort Lovrijenac. Dubrovnik.jpg',
+          lyhyt: 'Linnaketta puolusti aikanaan kymmenen tykkiä, suurin nimeltään Gušter eli Lisko.',
+          selite: 'Fort Lovrijenac kalliolla kaupungin länsipuolella; '
+            + 'linnaketta puolusti aikanaan kymmenen suurta tykkiä, joista '
+            + 'suurinta kutsuttiin nimellä ’Gušter’ eli Lisko.',
+          lahde: 'Zysko serhii, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -13346,32 +13218,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kirjailija Kārlis Skalben sanoin',
       },
       kuvat: [
-        {
-          tiedosto: 'Brīvības laukums.jpg',
-          lyhyt: '42-metrinen Vapaudenpatsas pystytettiin 1935 Latvian itsenäisyyssodassa kaatuneiden muistoksi.',
-          selite: '42 metriä korkea patsas pystytettiin 1935 Latvian '
-            + 'itsenäisyyssodassa kaatuneiden muistoksi. Huipulla seisova '
-            + 'Vapaus — latvialaisittain Milda — pitelee kolmea kultaista '
-            + 'tähteä maan vanhojen maakuntien merkkinä.',
-          lahde: 'DaceX, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'Centrs, Centra rajons, Rīga, Latvia - panoramio (11).jpg',
-          lyhyt: 'Patsas kesti neuvostomiehityksen: sitä pidettiin liian arvokkaana hävitettäväksi.',
-          selite: 'Patsas seisoo paikalla, jossa aiemmin oli tsaari Pietari '
-            + 'Suuren ratsastajapatsas, ja se kesti neuvostomiehityksen: '
-            + 'kuvanveistäjä Vera Muhinan kerrotaan pitäneen sitä liian '
-            + 'arvokkaana hävitettäväksi.',
-          lahde: 'alinco_fan, Wikimedia Commons (CC BY 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
-    'Kolme veljestä': {
+    'Kolme veljestä -talot': {
       aika: '1400-luvun loppu–1746',
       teksti: 'Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, '
           + 'seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan '
-          + 'Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt '
+          + 'Kolme veljestä -taloiksi. Ne ovat koko Riian vanhin säilynyt '
           + 'asuinrakennusten rivi. Vanhin veljeksistä on peräisin '
           + '1400-luvun lopulta, ja alun perin siellä oli vain yksi '
           + 'suuri huone sekä ullakko tavaroiden säilytystä varten.'
@@ -13383,7 +13237,7 @@ export const NAHTAVYYSJUTUT = {
           + 'koristeellinen barokkitalo.'
         + '\n\n'
         + 'Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne '
-          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä sai '
+          + 'kunnostettiin 1950-luvulla. Vuonna 2020 Kolme veljestä -talot saivat '
           + 'arvostetun Euroopan perintötunnuksen. Nykyään taloissa '
           + 'toimii Latvian arkkitehtuurimuseo, joten sisään pääsee yhä '
           + 'tutustumaan siihen, miltä Riiassa näytti satoja vuosia '
@@ -13763,8 +13617,8 @@ export const NAHTAVYYSJUTUT = {
           + 'tähtitieteilijät tarkkailivat taivasta aikansa parhailla '
           + 'kaukoputkilla.'
         + '\n\n'
-        + 'Yliopiston tunnuslause \'Hinc itur ad astra\' tarkoittaa '
-          + '\'täältä tie vie tähtiin\', ja se sopii hyvin paikkaan, '
+        + 'Yliopiston tunnuslause ’Hinc itur ad astra’ tarkoittaa '
+          + '’täältä tie vie tähtiin’, ja se sopii hyvin paikkaan, '
           + 'josta on valmistunut esimerkiksi kirjailija Czesław '
           + 'Miłosz, joka voitti myöhemmin Nobelin '
           + 'kirjallisuuspalkinnon. Tsaarin hallitus sulki yliopiston '
@@ -13798,7 +13652,7 @@ export const NAHTAVYYSJUTUT = {
     Užupis: {
       aika: '1997',
       teksti: 'Užupis on pieni Vilnan kaupunginosa joen toisella puolella '
-          + '– nimikin tarkoittaa suunnilleen \'joen takana\'. '
+          + '– nimikin tarkoittaa suunnilleen ’joen takana’. '
           + 'Aprillipäivänä eli huhtikuun 1. päivänä 1997 alueen '
           + 'taiteilijat julistivat sen leikkimielisesti omaksi '
           + 'tasavallakseen, jolla on oma lippu, oma pieni armeija ja '
@@ -13806,7 +13660,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Tasavallalla on oma perustuslaki, jossa on 41 pykälää ja '
           + 'jotka on käännetty jo yli 40 kielelle. Yksi '
-          + 'suosikkipykälistä kuuluu: \'Koiralla on oikeus olla koira.\' '
+          + 'suosikkipykälistä kuuluu: ’Koiralla on oikeus olla koira.’ '
           + 'Toinen muistuttaa, että jokaisella on oikeus olla sekä '
           + 'onnellinen että onneton, aivan miten itse haluaa.'
         + '\n\n'
@@ -13831,18 +13685,10 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'William John Gauthier, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'The Uzupis Angel (7932213486).jpg',
-          lyhyt: 'Trumpettia puhaltava pronssienkeli pystytettiin Užupikseen 2002 aiemman munaveistoksen tilalle.',
-          selite: 'Trumpettia puhaltava pronssienkeli pystytettiin '
-            + 'Užupikseen vuonna 2002, ja se korvasi paikalla aiemmin '
-            + 'seisseen munan muotoisen veistoksen.',
-          lahde: 'Guillaume Speurt, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
           tiedosto: 'Vilnia, Zarečča. Вільня, Зарэчча (S. Fleury, 1896).jpg',
           lyhyt: 'Vuonna 1896 Užupis oli matalien puutalojen kaupunginosa; nyt siellä asuu paljon taiteilijoita.',
           selite: 'Vuonna 1896 Zarečča eli Užupis — nimi tarkoittaa suunnilleen '
-            + '\'joen takana\' — oli vielä matalien puutalojen '
+            + '’joen takana’ — oli vielä matalien puutalojen '
             + 'kaupunginosa; nykyään sen noin 7000 asukkaasta lähes tuhat '
             + 'on taiteilijoita.',
           lahde: 'Stanisław Filibert Fleury, Wikimedia Commons (Public domain)',
@@ -14137,7 +13983,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Joka vuosi 10. joulukuuta salissa jaetaan Nobelin '
           + 'rauhanpalkinto, ja marmoripintainen juhlasali on 31 metriä '
           + 'pitkä. Kansanäänestyksessä norjalaiset valitsivat '
-          + 'kaupungintalon kerran jopa "vuosisadan rakennukseksi".',
+          + 'kaupungintalon kerran jopa ”vuosisadan rakennukseksi”.',
       kuvat: [
         {
           tiedosto: 'Oslo Rådhus - Oslo City Hall - Oslo, Norway 2020-09-16.jpg',
@@ -14238,14 +14084,6 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Beata May, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'Oslo Opera House at sunset 4.jpg',
-          lyhyt: 'Talossa on 1 100 huonetta 49 000 neliömetrin alalla, ja suurimpaan saliin mahtuu 1 364 katsojaa.',
-          selite: 'Talossa on peräti 1 100 huonetta yhteensä 49 000 '
-            + 'neliömetrin alalla, ja suurimpaan saliin mahtuu 1 364 '
-            + 'katsojaa.',
-          lahde: 'Nurtenge, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
           tiedosto: '2025-09-26-Operahuset-Oslo-1.jpg',
           lyhyt: 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa voi kävellä katolle.',
           selite: 'Kattokaltevuudet ulottuvat maahan asti, joten kuka tahansa '
@@ -14336,57 +14174,6 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   kobenhavn: {
-    'Pieni merenneito': {
-      aika: '1913',
-      teksti: 'Pieni merenneito -patsas istuu kalliolla Langelinien '
-          + 'rannassa Kööpenhaminassa. Se on valettu pronssista, vain '
-          + '1,25 metriä korkea ja painaa 175 kiloa. Panimomiljonääri '
-          + 'Carl Jacobsen tilasi patsaan innostuttuaan baletista, joka '
-          + 'kertoi H. C. Andersenin sadun pienestä merenneidosta. '
-          + 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
-          + 'patsas paljastettiin 23. elokuuta 1913.'
-        + '\n\n'
-        + 'Hauska yksityiskohta liittyy patsaan malliin: baleriina, '
-          + 'jonka tanssi oli koko idean innoittaja, ei halunnut '
-          + 'poseerata patsasta varten, joten Eriksen käytti mallina '
-          + 'omaa vaimoaan Eline Eriksenia.'
-        + '\n\n'
-        + 'Pieni merenneito on kokenut yllättävän kovaa kohtelua '
-          + 'vuosien varrella. Pää on sahattu irti kahdesti, vuosina '
-          + '1964 ja 1998, käsi katkaistiin 1984 ja koko patsas jopa '
-          + 'räjäytettiin veteen vuonna 2003. Siitä huolimatta se on '
-          + 'aina nostettu takaisin paikalleen, ja sen kopioita on '
-          + 'pystytetty yli kolmeentoista kaupunkiin ympäri maailmaa.',
-      kuvat: [
-        {
-          tiedosto: 'The Little Mermaid - 4668118032.jpg',
-          lyhyt: '1,25-metrinen pronssipatsas syntyi panimomiljonääri Carl Jacobsenin innostuttua merenneitobaletista.',
-          selite: 'Pronssipatsas on vain 1,25 metriä korkea ja painaa 175 '
-            + 'kiloa. Panimomiljonääri Carl Jacobsen tilasi sen '
-            + 'innostuttuaan baletista, joka kertoi H. C. Andersenin '
-            + 'sadun pienestä merenneidosta.',
-          lahde: 'Andrea Lai, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'Denmark, Copenhagen, Little Mermaid, Langelinie Promenade 150422-26.jpg',
-          lyhyt: 'Kuvanveistäjä Edvard Eriksen sai tilauksen 1909, ja mallina oli hänen vaimonsa Eline Eriksen.',
-          selite: 'Kuvanveistäjä Edvard Eriksen sai tilauksen vuonna 1909, ja '
-            + 'koska baleriina ei halunnut poseerata, mallina oli hänen '
-            + 'oma vaimonsa Eline Eriksen.',
-          lahde: 'Richardmaackphotography, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: '1913-Edvard Eriksen-Den lillie Havfrue.jpg',
-          lyhyt: 'Patsas paljastettiin 1913; sen pää on sahattu irti kahdesti ja koko patsas räjäytetty veteen 2003.',
-          selite: 'Patsas paljastettiin 23. elokuuta 1913. Sen jälkeen sen pää '
-            + 'on sahattu irti kahdesti, käsi katkaistiin 1984 ja koko '
-            + 'patsas räjäytettiin veteen 2003 — mutta se on aina '
-            + 'nostettu takaisin paikalleen.',
-          lahde: 'Tuntematon (postikorttikustantajien kokoelma), Wikimedia Commons (Public domain)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     Amalienborg: {
       aika: '1750–1760',
       teksti: 'Amalienborg on Tanskan kuninkaallisen perheen koti '
@@ -14475,7 +14262,7 @@ export const NAHTAVYYSJUTUT = {
     },
     Nyhavn: {
       aika: '1670–1675',
-      teksti: 'Nyhavn eli "uusi satama" on 450 metriä pitkä kanava '
+      teksti: 'Nyhavn eli ”uusi satama” on 450 metriä pitkä kanava '
           + 'Kööpenhaminan keskustassa. Kuningas Christian V rakennutti '
           + 'sen vuosina 1670–1675, ja työn tekivät tanskalaiset '
           + 'sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet '
@@ -16548,25 +16335,6 @@ export const NAHTAVYYSJUTUT = {
         + 'aukesivat uudelleen 4. lokakuuta 2022: saleja oli 18 ja esillä '
         + 'yli 1 100 esinettä.',
       kuvat: [
-        {
-          tiedosto: 'Doha Museum of Islamic Arts Interior Hall 01.jpg',
-          lyhyt: 'Näyttelysalit on ryhmitelty keskusaulan ympärille; sisustuksen suunnitteli Wilmotte & Associés.',
-          selite: 'Näyttelysalit on ryhmitelty tämän keskusaulan ympärille, '
-            + 'ja pohjoissivulla kaikki viisi kerrosta on verhottu '
-            + 'lasiseinällä. Salien sisustuksen suunnitteli Wilmotte & '
-            + 'Associés, sama toimisto kuin Louvren hankkeessa.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Doha Museum of Islamic Arts Interior Hall Ceiling 1.jpg',
-          lyhyt: 'Aulan monikulmaiseen kupoliin on jätetty tähdenmuotoinen aukko, josta päivänvalo putoaa alas.',
-          selite: 'Aulan valo tulee ylhäältä: monikulmainen kupoli on koottu '
-            + 'kolmiomaisista pinnoista, ja sen lakeen on jätetty '
-            + 'tähdenmuotoinen aukko, josta päivänvalo putoaa suoraan alas. '
-            + 'Museo avattiin yleisölle 8. joulukuuta 2008 ja remontin '
-            + 'jälkeen uudelleen 4. lokakuuta 2022.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -16701,16 +16469,6 @@ export const NAHTAVYYSJUTUT = {
         + 'hiekkakenttä, palmuja ja kaksikerroksinen päärakennus, jonka '
         + 'yläkerrassa on rivi kaariaukkoja.',
       kuvat: [
-        {
-          tiedosto: 'Old Palace at National Museum of Qatar.jpg',
-          lyhyt: 'Sheikki Jassim bin Mohammed Al Thanin merenrantapalatsi avattiin kansallismuseona 1975.',
-          selite: 'Sheikki Jassim bin Mohammed Al Thanin merenrantapalatsi '
-            + 'jäi ilman tehtävää vuonna 1923, kun hallinto siirtyi '
-            + 'keskustaan, ja rapistui. Vuonna 1972 valtaan noussut Khalifa '
-            + 'bin Hamad Al Thani päätti tehdä siitä maan kansallismuseon, '
-            + 'joka avattiin 23. kesäkuuta 1975.',
-          lahde: 'Manjri Saxena, Wikimedia Commons (CC BY-SA 4.0)',
-        },
         {
           tiedosto: 'Courtyard of the Palace.jpg',
           lyhyt: 'Palatsikokonaisuudesta tunnistettiin 2010 yhdeksän osaa; berliiniläinen ZRS kunnosti sen 2015.',
@@ -17209,26 +16967,6 @@ export const NAHTAVYYSJUTUT = {
         + 'Kunnostuksen ajan maaliskuusta 2012 maaliskuuhun 2016 tornit '
         + 'olivat suljettuina.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait towers -2005 2006 Winter- (302658101).jpg',
-          lyhyt: 'Malene Bjørnin suunnittelema torniryhmä rakennettiin 1971–1976 ruotsalaisen VBB:n hankkeessa.',
-          selite: 'Tanskalaisen arkkitehdin Malene Bjørnin suunnittelema '
-            + 'ryhmä rakennettiin 1971–1976 ruotsalaisen insinööritoimisto '
-            + 'VBB:n hankkeessa. Kolmas torni on kapea neula ilman palloa: '
-            + 'siihen sijoitettiin laitteet, joilla kaksi muuta valaistaan '
-            + 'pimeän tultua.',
-          lahde: 'radiant guy from Den Haag, The Netherlands, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        {
-          tiedosto: 'Kuwait City\'s popular landmarks Liberty Tower & Kuwait Towers.jpg',
-          lyhyt: 'Pallojen kuori on koottu emaloiduista teräskiekoista; kuvio muistuttaa moskeijoiden kaakelointia.',
-          selite: 'Pallojen kuori on koottu pienistä emaloiduista '
-            + 'teräskiekoista, jotka on ladottu kierteisiksi nauhoiksi '
-            + 'pallon ympäri, joten pallo näyttää eri suunnista ja eri '
-            + 'valossa eri väriseltä. Kuvio muistuttaa vanhojen '
-            + 'moskeijoiden kaakeloituja kupoleita.',
-          lahde: 'Mahrs Multiverse, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17261,26 +16999,6 @@ export const NAHTAVYYSJUTUT = {
         + 'kellarikaivuiden. Gary Haneyn ja Skidmore, Owings & Merrillin '
         + 'suunnittelema torni valmistui 2011.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait City Kuwait Towers View to the al-Hamra Tower.jpg',
-          lyhyt: '412-metrinen torni on 80-kerroksinen; leikattu neljännes pohjakaavasta saa sen näyttämään kiertyvän.',
-          selite: 'Torni on 412 metriä korkea ja siinä on 80 kerrosta, '
-            + 'joista noin 72 toimistokerroksia. Pohjakaavasta on leikattu '
-            + 'neljännes pois, ja koska viilto siirtyy kerros kerrokselta, '
-            + 'torni näyttää kiertyvän.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Al Hamra Kuwait Mai 2010.jpg',
-          lyhyt: 'Kuwait Cityn leveyspiiri saneli muodon: poistettu neljännes kääntää toimistokerrokset merelle.',
-          selite: 'Muodon sanelee aurinko: Kuwait City on 29. '
-            + 'leveyspiirillä, joten poistettu neljännes siirtää '
-            + 'toimistokerrokset pois eteläsivulta ja kääntää ne merelle '
-            + 'päin. Kantavat betoniseinät ovat alhaalla 1 200 millimetriä '
-            + 'paksuja ja ohenevat huipulla 300 millimetriin; torni '
-            + 'valmistui 2011.',
-          lahde: 'J.Stiegler, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17361,25 +17079,6 @@ export const NAHTAVYYSJUTUT = {
         + 'käyttöön id al-fitr -juhlana, hijri-vuoden 1407 shawwal-kuun '
         + 'ensimmäisenä päivänä.',
       kuvat: [
-        {
-          tiedosto: 'Kuwait City Grand Mosque Interior 12.jpg',
-          lyhyt: 'Päärukoussali on 72-metrinen neliö; päivänvalo tulee 144 ikkunasta seinien yläosassa.',
-          selite: 'Päärukoussali on neliö, jonka jokainen sivu on 72 metriä, '
-            + 'ja päivänvalo tulee saliin 144 ikkunasta korkealla seinien '
-            + 'yläosassa. Ovet ovat tiikkiä, ja seinustalla on rivi matalia '
-            + 'puisia lukutelineitä.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
-        {
-          tiedosto: 'Kuwait City Grand Mosque Interior Dome 2.jpg',
-          lyhyt: 'Moskeija peittää 20 000 neliömetriä ja maksoi 13 miljoonaa Kuwaitin dinaaria.',
-          selite: 'Salin katossa on yksi ainoa kupoli, ja sen keskellä '
-            + 'olevan medaljongin kahdessa kehässä kiertää kullattu '
-            + 'kalligrafia. Moskeija peittää 20 000 neliömetriä, hanke '
-            + 'maksoi 13 miljoonaa Kuwaitin dinaaria, ja rakennus otettiin '
-            + 'käyttöön id al-fitr -juhlana.',
-          lahde: 'Zairon, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -17522,27 +17221,6 @@ export const NAHTAVYYSJUTUT = {
         + 'niiden päällä rivi kapeita kaari-ikkunoita ja hammastettu '
         + 'harja, ja kummassakin päässä pyöreä torni.',
       kuvat: [
-        {
-          tiedosto: 'Muscat Gate Museum.jpg',
-          lyhyt: 'Vanhan Maskatin muuri rakennettiin 1625; sen sisään avattiin 2001 Muscat Gate Museum.',
-          selite: 'Vanhaa Maskatia kiertävä muuri rakennettiin vuonna 1625 '
-            + 'portugalilaisten kaudella, ja sen läpi vievä Al Saidiyan '
-            + 'katu on yhä se reitti, jota myöten vanhaan kaupunkiin '
-            + 'ajetaan. Muurin sisään avattiin tammikuussa 2001 Muscat Gate '
-            + 'Museum, jonka näyttely kulkee Omanin historian läpi '
-            + 'nuoremmasta kivikaudesta nykypäivään.',
-          lahde: 'Tristan from Luxembourg, Luxembourg, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          tiedosto: 'The gate to Muscat (8727196402).jpg',
-          lyhyt: 'Muuri kulkee vain länsi- ja etelälaidalla; portit suljettiin kolme tuntia hämärän jälkeen.',
-          selite: 'Muuri kulkee vain kaupungin länsi- ja eteläsivulla: '
-            + 'idässä ja pohjoisessa raja syntyy itsestään merestä ja '
-            + 'kalliosta. Portit suljettiin kolme tuntia hämärän jälkeen, '
-            + 'ja tapa jatkui 1900-luvun puoliväliin asti — sen jälkeen '
-            + 'kadulla liikkuvan oli kannettava mukanaan lyhtyä.',
-          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -18100,16 +17778,6 @@ export const NAHTAVYYSJUTUT = {
             + 'puolelle kaupunkia, ja rakennus itse on vuodelta 1869.',
           lahde: 'Ayat Jaryan, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'Photos from the Al Baghdadi Museum- Baghdadi cafe.jpg',
-          lyhyt: 'Museon kokoelma on 385 hahmoa 77 kohtauksessa, jotka kuvaavat bagdadilaisperheiden elämää.',
-          selite: 'Museon kokoelma on 385 täysikokoista hahmoa 77 '
-            + 'kohtauksessa, ja se rajaa tarkoituksella yhden ajanjakson: '
-            + 'sen, miten bagdadilaiset perheet elivät ja miten juhlat '
-            + 'vietettiin. Kohtauksiin kuuluu hahmojen lisäksi ajan '
-            + 'työkaluja, astioita ja huonekaluja.',
-          lahde: 'Mustafa alsalhi, Wikimedia Commons (CC BY-SA 3.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -18194,8 +17862,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Rukoustilaa on kesäpuolella noin 330:lle ja talvipuolella '
         + '500:lle. Brittiläinen matkakirjailija James Silk Buckingham '
         + 'kävi moskeijassa ja kuvasi vuonna 1827 ilmestyneessä '
-        + 'kirjassaan Travels in Mesopotamia sen "hienon kupolin ja '
-        + 'korkean minareetin".',
+        + 'kirjassaan Travels in Mesopotamia sen ”hienon kupolin ja '
+        + 'korkean minareetin”.',
       kuvat: [
         {
           tiedosto: 'Al-Wazeer Mosque.png',
@@ -19595,16 +19263,6 @@ export const NAHTAVYYSJUTUT = {
           + 'tunnistusta ei pidetä varmana.',
       kuvat: [
         {
-          tiedosto: 'Luxor Museum 1.JPG',
-          lyhyt: 'Museo avattiin 1975 Niilin itärannalle; esillä on tarkoituksella vähän esineitä ja väljä ripustus.',
-          selite: 'Museo avattiin 1975 Niilin itärannalle rantakadun '
-            + 'varteen, ja kaksikerroksisen talon piirsi Mahmud El Hakim jo '
-            + '1962. Esillä on tarkoituksella paljon vähemmän kuin Kairon '
-            + 'egyptiläisessä museossa: vähän esineitä, väljä ripustus ja '
-            + 'monikieliset selitteet.',
-          lahde: 'Charlesdrakew at English Wikipedia, Wikimedia Commons (PD)',
-        },
-        {
           tiedosto: 'Luxor Museum Amenophis III. Statue 05.jpg',
           lyhyt: 'Patsas löytyi 1989 Luxorin temppelin aurinkopihan kätköstä; kartuššeista on hakattu Amunin nimi.',
           selite: 'Patsas tuli esiin vuonna 1989, kun Luxorin temppelin '
@@ -20409,16 +20067,6 @@ export const NAHTAVYYSJUTUT = {
             + 'mutta kokoelmassa on löytöjä koko maasta.',
           lahde: 'Navid Sadighi, Wikimedia Commons (CC BY-SA 4.0)',
         },
-        {
-          tiedosto: 'Detail of Anxiety - Sculpture by Ahad Hosseini - Azerbaijan Museum - Tabriz - Iranian Azerbaijan - Iran (7421593886).jpg',
-          lyhyt: 'Tabrizilainen Ahad Hosseini teki kellarissaan sarjan Misery Around the World museolle.',
-          selite: 'Tabrizilainen Ahad Hosseini (s. 1944) opiskeli Firenzen '
-            + 'taideakatemiassa ja teki paluunsa jälkeen viisi vuotta '
-            + 'kellarissaan kaksitoista veistosta, sarjan Misery Around the '
-            + 'World. Hän lahjoitti ne museolle, ja niille on varattu '
-            + 'kokonainen sali.',
-          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -20713,26 +20361,6 @@ export const NAHTAVYYSJUTUT = {
             + 'sasanidiholvi on pienemmässä mitassa tehty Ktesifonin Taq '
             + 'Kasran mukaan, ja tiili oli kotimaista.',
           lahde: 'Parsa 2au, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          tiedosto: 'The Islamic Museum Of National Museum of Iran Darafsh (05).jpg',
-          lyhyt: 'Islamilaisen ajan museo on valkoista travertiinia, pohjakaavaltaan kahdeksankulmainen risti.',
-          selite: 'Islamilaisen ajan museo on valkoista travertiinia ja '
-            + 'pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. '
-            + 'Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 '
-            + 'tai 1958, perustamisvuodeksi merkitään 1972, ja museona se '
-            + 'avattiin 1996.',
-          lahde: 'Darafsh, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-        {
-          tiedosto: 'Musée de l\'Ère Islamique, Téhéran (2).jpg',
-          lyhyt: 'Islamilaisen ajan museon seitsemässä salissa on 170 vitriiniä ja noin 1 500 esinettä.',
-          selite: 'Islamilaisen ajan museon seitsemässä salissa on 170 '
-            + 'vitriiniä ja noin 1 500 esinettä: ylimpänä '
-            + 'varhaisislamilainen aika, seldžukit ja ilkhanidit, alempana '
-            + 'koraanisali kullattuine kufi-käsikirjoituksineen sekä '
-            + 'timuridien, safavidien ja qajarien salit.',
-          lahde: 'ZarlokX, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -21472,15 +21100,10 @@ export const NAHTAVYYSJUTUT = {
           + 'laivat.',
       kuvat: [
         {
-          tiedosto: 'Hämeensilta, Tampere.jpg',
-          lyhyt: 'Hämeensilta on 68-metrinen holvisilta; nykyinen 2019 silta jäljittelee vuoden 1929 edeltäjäänsä.',
-          selite: 'Hämeensilta on 68 metriä pitkä yksiaukkoinen holvisilta, '
-            + 'jonka julkisivut on verhoiltu Kalvolan punertavalla '
-            + 'graniitilla. Nykyinen silta valmistui 2019 mutta tehtiin '
-            + 'tarkoituksella edeltäjänsä eli vuoden 1929 kivisillan '
-            + 'näköiseksi, ja kaiteilla seisovat yhä Wäinö Aaltosen neljä '
-            + 'pronssiveistosta vuodelta 1929.',
-          lahde: 'Eteil, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Hämeensilta.JPG",
+          lyhyt: "Hämeensilta Tammerkosken yllä",
+          selite: "Kivinen Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa, ja taustalla kohoavat tehdasrakennus ja korkea savupiippu.",
+          lahde: "M62, Wikimedia Commons (CC BY-SA 3.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -22069,8 +21692,8 @@ export const NAHTAVYYSJUTUT = {
       aika: '1627',
       teksti: 'Pyhäkkö perustettiin vuonna 1627 Tokugawa Ieyasun muistoksi. '
         + 'Ieyasu oli shogunaatin perustaja, ja kuolemansa jälkeen hänet '
-        + 'nostettiin jumaluudeksi nimellä Tōshō Daigongen, "suuri '
-        + 'idästä loistava ilmestys". Pyhäkön rakennutti sotapäällikkö '
+        + 'nostettiin jumaluudeksi nimellä Tōshō Daigongen, ”suuri '
+        + 'idästä loistava ilmestys”. Pyhäkön rakennutti sotapäällikkö '
         + 'Tōdō Takatora, ja päärakennus uusittiin 1651 Ieyasun '
         + 'pojanpojan, kolmannen shogunin Tokugawa Iemitsun toimesta. '
         + 'Vuoteen 1868 asti pyhäkkö oli osa viereistä Kan\'ei-jin '
@@ -22583,8 +22206,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Gwanghwamun on Gyeongbokgungin eteläportti ja koko '
         + 'Joseon-kauden Soulin pääportti. Se valmistui vuoden 1395 '
         + 'yhdeksännessä kuussa ja sai nimensä 1426 kuningas Sejong '
-        + 'Suurelta; nimi luetaan yleensä "valo levittää maan hyveen '
-        + 'joka suuntaan". Kolmen kiviholvin yläpuolella lepää '
+        + 'Suurelta; nimi luetaan yleensä ”valo levittää maan hyveen '
+        + 'joka suuntaan”. Kolmen kiviholvin yläpuolella lepää '
         + 'puinen porttitorni, ja portin edessä istuu kivinen '
         + 'haetae, tarueläin, jonka uskottiin torjuvan tulipalot ja '
         + 'pahat henget. Portin katon alapinta on maalattu täyteen '
@@ -24008,7 +23631,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ympärillä olevista kukkuloista louhittiin onyksia, '
           + 'kalsedonia ja karneolia, ja niitä työstettiin täällä. '
           + 'Metallityöstä kaupunki oli kuuluisa: britit kuvasivat sen '
-          + '1900-luvun alussa sanalla "famous", vaikka huomauttivat '
+          + '1900-luvun alussa sanalla ”famous”, vaikka huomauttivat '
           + 'samalla, että ala oli hiipumassa. Torilla vaihtui myös '
           + 'kaikki muu, mitä ympäröivä maatalous tuotti, ja koska Sana '
           + 'on Adenista muualle arabimaailmaan johtavan reitin varrella, '
@@ -24029,7 +23652,7 @@ export const NAHTAVYYSJUTUT = {
           + 'persialainen maantieteilijä Ibn Rustah kirjoitti, ettei '
           + 'suurempaa, väkirikkaampaa tai vauraampaa kaupunkia löydy, '
           + 'ja lakioppinut al-Shafii tiivisti asian lauseeseen '
-          + '"La budda min Sanaa" — Sana on nähtävä.',
+          + '”La budda min Sanaa” — Sana on nähtävä.',
       kuvat: [
         {
           tiedosto: 'Sanaa, Yemen view.jpg',
@@ -24386,8 +24009,8 @@ export const NAHTAVYYSJUTUT = {
           + 'esi-islamilaisiin uhritoimituksiin — se sopisi yhteen '
           + 'yleisimmän ikäoletuksen kanssa. '
           + 'Kirjallisia mainintoja on vasta islamin ajalta: '
-          + '900-luvulla al-Hamdani kirjoitti, että "Adenissa on '
-          + 'altaita, jotka varastoivat veden kun sataa", ja 1300-luvulla '
+          + '900-luvulla al-Hamdani kirjoitti, että ”Adenissa on '
+          + 'altaita, jotka varastoivat veden kun sataa”, ja 1300-luvulla '
           + 'paikalla käynyt Ibn Battuta täsmensi, että vesi kerätään '
           + 'yksinomaan kaupunkilaisten juomavedeksi.'
           + '\n\n'
@@ -24482,16 +24105,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kertoo eniten siitä miltä Salalah näyttää nyt: leveitä '
           + 'katuja, hiekanväristä kiveä ja paljon tilaa.',
       kuvat: [
-        {
-          tiedosto: 'Sultan Qaboos Mosque 14.JPG',
-          lyhyt: 'Salalahin suurin moskeija valmistui 2009 ja mahtuu 14 000 rukoilijaa.',
-          selite: 'Salalahin suurin moskeija valmistui vuonna 2009, ja '
-            + 'siihen mahtuu neljätoistatuhatta rukoilijaa. Marmoripihaa '
-            + 'kiertävän kaarikäytävän teräväkärkiset kaaret ja hammastettu '
-            + 'muuri ovat samaa muotokieltä, jolla Omanissa on tuhat vuotta '
-            + 'rakennettu linnakkeita.',
-          lahde: 'Rrburke, Wikimedia Commons (CC BY 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -24603,16 +24216,6 @@ export const NAHTAVYYSJUTUT = {
           + 'sipulikupoli on vihreä. Sisään mennessä kengät jätetään '
           + 'ulos, ja naisilta odotetaan huivia.',
       kuvat: [
-        {
-          tiedosto: 'Salalah, tomba del profeta Imran, ossia Gioacchino padre di maria (Nabi Umran mausoleum), 01.jpg',
-          lyhyt: 'Nabi Imranin hauta on ainoa Salalahin neljästä profeetanhaudasta kaupungin sisällä.',
-          selite: 'Nabi Imranin hauta on ainoa Salalahin seudun neljästä '
-            + 'profeetanhaudasta, joka on kaupungin sisällä, ja sen '
-            + 'pituudesta lähteet ovat eri mieltä: kahdestatoista metristä '
-            + 'kolmeenkymmeneenkolmeen. Rakennus itse on vaatimaton — matala '
-            + 'kaarikäytävä, laatoitettu piha ja yksi minareetti.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -24729,16 +24332,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kulttuurikeskuksessa lännempänä, ja siellä on muun muassa '
           + 'pysyvä näyttely Wilfred Thesigerin valokuvista.',
       kuvat: [
-        {
-          tiedosto: 'Salalah, museo della terra degli incensi, entrata.jpg',
-          lyhyt: 'Museo avattiin 2007 Al-Baleedin puistoon sulttaani Qaboosin rahoituksella.',
-          selite: 'Museo rakennettiin kahdessa vuodessa Al-Baleedin puiston '
-            + 'sisään ja avattiin vuonna 2007 sulttaani Qaboosin '
-            + 'rahoituksella. Sen kaksi salia kertovat Omanin merenkulusta '
-            + 'ja Dhofarin historiasta, ja suitsuke kulkee molempien läpi '
-            + 'myös uskonnollisten menojen ja perinnelääkinnän aineena.',
-          lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -27841,17 +27434,6 @@ export const NAHTAVYYSJUTUT = {
           + 'edustalla seisoo arkkitehdin oma patsas — harvinainen '
           + 'kunnia rakennukselle ja sen tekijälle samassa kuvassa.',
       kuvat: [
-        {
-          tiedosto: 'Стоквартирный дом и памятник его автору - архитектору Крячкову.jpg',
-          lyhyt: 'Sata asuntoa käsittävä talo sai Pariisin maailmannäyttelyssä 1937 kultamitalin.',
-          selite: 'Taloon suunniteltiin sata asuntoa, ja siitä se tunnetaan; '
-            + 'sen piirsivät Andrei Krjatškov ja Vitali Maslennikov, ja '
-            + 'kahdeksankerroksinen rakennus valmistui vuonna 1937. Pariisin '
-            + 'maailmannäyttelyssä 11. joulukuuta 1937 hanke sai '
-            + 'kultamitalin ja Grand Prix -palkinnon, ja talo on yhä '
-            + 'asuinkäytössä.',
-          lahde: 'Елена Горланова, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -28526,7 +28108,7 @@ export const NAHTAVYYSJUTUT = {
           + 'metrin pudotuksesta. Hyppyjä kirjattiin 234, ja '
           + 'hyppääjistä 85,4 prosenttia selvisi. Tapa kiellettiin '
           + 'vuonna 1872 — vuotta ennen isoisän matkaa. Sanonta '
-          + '"hypätä Kiyomizun lavalta" tarkoittaa japanissa yhä '
+          + '”hypätä Kiyomizun lavalta” tarkoittaa japanissa yhä '
           + 'suuren päätöksen tekemistä.',
       kuvat: [
         {
@@ -28651,7 +28233,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupunkilaiset ovat pystyttäneet itse.',
       kuvat: [
         {
-          tiedosto: 'Inari fox statue, Fushimi-Inari Shrine (46473407471).jpg',
+          tiedosto: "2026-06-29 kyoto-fushimi-inari torii-romon night.jpg",
           lyhyt: 'Fushimi Inari perustettiin 711, ja vuorenrinteen polulle on lahjoitettu tuhansia torii-portteja.',
           selite: 'Pyhäkön perusti vuonna 711 Hata-suku, ja se on omistettu '
             + 'Inarille, riisin ja maanviljelyn kamille — ja koska riisi oli '
@@ -28660,7 +28242,7 @@ export const NAHTAVYYSJUTUT = {
             + 'lahjoitettu noin kymmenentuhatta torii-porttia ja '
             + 'kymmeniätuhansia pieniä kivialttareita, jotka kaupunkilaiset '
             + 'ovat pystyttäneet itse.',
-          lahde: 'Dumphasizer, Wikimedia Commons (CC BY-SA 2.0)',
+          lahde: "DuckMaestro, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -29250,7 +28832,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Rakennus on suorakaiteen muotoinen, noin viisitoista metriä '
           + 'pitkä sali, jonka katolla on viisi kupolia. Se on '
           + '1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan '
-          + 'teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn '
+          + 'teoksen ”Samaria” mukaan Khoja Doniyor oli Qutham ibn '
           + 'Abbasin seuralaisia, ja perimätiedon mukaan Timur '
           + 'rakennutti haudan päälle moskeijan.'
           + '\n\n'
@@ -29303,7 +28885,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Tutkijoiden mukaan se on väännös persian sanasta Parsiab, '
           + 'sogdiksi Parshvab, joka tarkoittaa mustan joen takaista — '
           + 'joki on Siyob, joka rajaa aluetta pohjoisessa. Nimi '
-          + '"Afrasiabin linna" esiintyy kirjallisissa lähteissä vasta '
+          + '”Afrasiabin linna” esiintyy kirjallisissa lähteissä vasta '
           + '1600-luvun lopulla.'
           + '\n\n'
           + 'Ensimmäiset kaivaukset teki Nikolai Veselovski 1800-luvun '
@@ -31134,7 +30716,7 @@ export const NAHTAVYYSJUTUT = {
           + 'joka valmistui tammikuussa 2025.',
       kuvat: [
         {
-          tiedosto: 'Zaisan Memorial in Ulaanbaatar, Mongolia.jpg',
+          tiedosto: "Zaisan Memorial from the North.jpg",
           lyhyt: 'Muistomerkki paljastettiin 1971 toisessa maailmansodassa kaatuneiden muistoksi.',
           selite: 'Muistomerkki paljastettiin vuonna 1971, ja se on '
             + 'omistettu toisessa maailmansodassa kaatuneille '
@@ -31142,7 +30724,7 @@ export const NAHTAVYYSJUTUT = {
             + 'Renkaan muoto on otettu mongolialaisesta tulgasta eli '
             + 'liesijalustasta, ja sen sisäpintaa kiertää maalaus '
             + 'neuvostoliittolais-mongolialaisen yhteistyön vaiheista.',
-          lahde: 'Quintin Soloviev, Wikimedia Commons (CC0)',
+          lahde: "Chinneeb, Wikimedia Commons (CC BY 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -31594,16 +31176,6 @@ export const NAHTAVYYSJUTUT = {
           + 'Pähkinänsärkijä että kotimaiset oopperat Abai ja Birzhan '
           + 'ja Sara.',
       kuvat: [
-        {
-          tiedosto: 'The State Opera and Ballet Theatre “Astana Opera”.jpg',
-          lyhyt: 'Oopperatalo avattiin 2013 italialaisin piirustuksin, pääsalissa 1 250 paikkaa.',
-          selite: 'Oopperatalo avattiin vuonna 2013 italialaisen '
-            + 'ABDR-toimiston piirustusten mukaan, ja sen antiikin '
-            + 'temppeliä muistuttavan julkisivun päätykolmion harjalla ajaa '
-            + 'nelivaljakko. Pääsalissa on 1 250 paikkaa ja '
-            + 'orkesterisyvennyksessä tilaa 120 soittajalle.',
-          lahde: 'Nikolamikovic82, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31669,16 +31241,6 @@ export const NAHTAVYYSJUTUT = {
           + 'sen kuva on ollut myös 10 000 tengen setelissä. Tarun, '
           + 'jonka mukaan se on muotoiltu, kertoo lehden kansisivu.',
       kuvat: [
-        {
-          tiedosto: 'Kazakhstan P9130290 (39375228604).jpg',
-          lyhyt: 'Näköalatorni Bajterek valmistui 2002, näköalatasanne 97 metrin korkeudessa.',
-          selite: 'Näköalatasanne on 97 metrin korkeudessa 105-metrisessä '
-            + 'tornissa, ja sinne noustaan kahdella hissillä kuilussa, jota '
-            + 'kiertävät valkoiset oksamaiset ristikkopalkit. Nimi '
-            + 'tarkoittaa kazakiksi korkeaa poppelia, ja torni valmistui '
-            + '30. elokuuta 2002.',
-          lahde: 't_y_l, Wikimedia Commons (CC BY-SA 2.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31697,8 +31259,8 @@ export const NAHTAVYYSJUTUT = {
           + 'ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella '
           + 'on suihkulähteiden kuja.'
           + '\n\n'
-          + 'Suunta ei ole sattumaa. Kurokawan periaate oli "historian '
-          + 'ja tulevaisuuden symbioosi": vanha kaupunki joen '
+          + 'Suunta ei ole sattumaa. Kurokawan periaate oli ”historian '
+          + 'ja tulevaisuuden symbioosi”: vanha kaupunki joen '
           + 'pohjoispuolella säilytettäisiin ennallaan, ja uusi '
           + 'rakennettaisiin eteläpuolelle omalle akselilleen. Siksi '
           + 'bulevardilta katsoo kahteen suuntaan kahta eri '
@@ -31775,17 +31337,6 @@ export const NAHTAVYYSJUTUT = {
           + 'jonka huipulla on tarun Samruk-lintu — sama lintu, joka '
           + 'munii Bajterekin kultaisen pallon.',
       kuvat: [
-        {
-          tiedosto: 'National Museum of Kazakhstan 03.jpg',
-          lyhyt: 'Vuonna 2012 avatun moskeijan kupoli on maan suurin, 51 metriä korkea.',
-          selite: 'Vuonna 2012 avatun moskeijan päälaen kupoli on maan '
-            + 'suurin, 51 metriä korkea, ja nurkissa nousee neljä 77 metrin '
-            + 'minareettia. Naapureina samalla aukiolla Esilin '
-            + 'koillisrannalla ovat kansallismuseo ja Kazak Elin '
-            + 'muistomerkki, 91 metrin pylväs, jonka huipulla on tarun '
-            + 'Samruk-lintu.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -31859,16 +31410,6 @@ export const NAHTAVYYSJUTUT = {
           + 'tai -ruhtinattarelle 300-luvulla eaa. Kokoelmien perusta '
           + 'koottiin valtion Kulttuuriperintö-ohjelmassa.',
       kuvat: [
-        {
-          tiedosto: 'National Museum of the Republic of Kazakhstan 01.jpg',
-          lyhyt: 'Vuonna 2014 avattu museo oli Keski-Aasian suurin, tunnetuin esine Issykin kultainen soturi.',
-          selite: 'Vuonna 2014 avattu museo oli silloin Keski-Aasian '
-            + 'suurin, ja sen yhdessätoista salissa on näyttelytilaa noin '
-            + '14 000 neliömetriä. Kokoelmien tunnetuin esine on Issykin '
-            + 'kultainen soturi, tuhansista kultalevyistä koottu asu '
-            + '300-luvulta eaa.',
-          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -32574,7 +32115,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kuningas Okkalapa hoviväkineen kerääntyivät hänen '
           + 'ympärilleen kysymään paikkaa, ja lopulta hän muisti sen. '
           + 'Nimelle on kolme selitystä: su-way tarkoittaa '
-          + '"kerääntyä ympärille", su-le orjantappurapensaikkoa, ja '
+          + '”kerääntyä ympärille”, su-le orjantappurapensaikkoa, ja '
           + 'kolmas johtaa sen paalin sanoista cula, pieni, ja ceti, '
           + 'pagodi.'
           + '\n\n'
@@ -33349,7 +32890,7 @@ export const NAHTAVYYSJUTUT = {
           + 'suurimman korjauksen.'
           + '\n\n'
           + 'Ympärillä on Ximending, joka sai nimensä Japanin ajan '
-          + 'kaupunginosasta Seimon-chō — "länsiportin kaupunginosa" — '
+          + 'kaupunginosasta Seimon-chō — ”länsiportin kaupunginosa” — '
           + 'sillä alue oli muurin länsiportin ulkopuolella. Portti ja '
           + 'muurit purettiin, mutta nimi jäi. Ximendingistä tuli '
           + '1930-luvulla teatterikatu, jonka yhdellä korttelilla oli '
@@ -34387,17 +33928,6 @@ export const NAHTAVYYSJUTUT = {
           + 'ruostumatonta terästä. Marmori tuotiin Itä-Jaavan '
           + 'Tulungagungista italialaisen sijaan.',
       kuvat: [
-        {
-          tiedosto: 'Masjid Istiqlal.jpg',
-          lyhyt: 'Kaakkois-Aasian suurin moskeija vihittiin 1978, mitat sidottu itsenäisyyden vuosilukuun.',
-          selite: 'Kaakkois-Aasian suurin moskeija vihittiin 22. helmikuuta '
-            + '1978, ja sen mitat on sidottu itsenäisyyteen: päärukoussalin '
-            + 'kupolin halkaisija on 45 metriä vuoden 1945 mukaan ja '
-            + 'kerroksia on viisi islamin viiden pilarin mukaan. '
-            + 'Presidentti Sukarno halusi sen nimenomaan katedraalin '
-            + 'viereen merkiksi uskontojen rinnakkaiselosta.',
-          lahde: 'Michael Coghlan, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -34432,18 +33962,6 @@ export const NAHTAVYYSJUTUT = {
           + 'marmorihalli, jonka seinillä on 51 dioraamaa Indonesian '
           + 'historiasta.',
       kuvat: [
-        {
-          tiedosto: 'Monas (monumen nasional) di Jakarta.jpg',
-          lyhyt: 'Monas-monumentti rakennettiin 1961–1975, mitat itsenäisyysjulistuksen päivämäärän mukaan.',
-          selite: 'Monumentti rakennettiin vuosina 1961–1975, ja arkkitehti '
-            + 'R. M. Soedarsono kirjoitti sen mittoihin '
-            + 'itsenäisyysjulistuksen päivämäärän: jalustan korkeus on 17 '
-            + 'metriä, leveys pohjalta 8 metriä ja kupin leveys 45 metriä. '
-            + 'Huipun pronssinen liekki päällystettiin alun perin 35 '
-            + 'kilolla kultalehteä, ja vuoden 1995 juhlaan määrä nostettiin '
-            + 'viiteenkymmeneen kiloon.',
-          lahde: 'Ayu Saraswati31, Wikimedia Commons (CC0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -35241,7 +34759,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vanhin säilynyt tiibetinkielinen kirjoitus: kertomus '
           + 'kenraali Nganlam Takdra Lukhongin palveluksista '
           + 'kuninkaalle. Pilarin ikä ilmoitetaan Wikipediassa kahdella '
-          + 'tavalla, Lhasa-artikkelissa "noin 764" ja pilarin omassa '
+          + 'tavalla, Lhasa-artikkelissa ”noin 764” ja pilarin omassa '
           + 'artikkelissa vuoden 783 rajasopimuksen muistoksi '
           + 'pystytettynä.',
       kuvat: [
@@ -37046,8 +36564,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaiteeseen asti 68 jalan korkeudella, ja siitä ylöspäin muoto '
           + 'vaihtuu kahdeksankulmaiseksi. 1800-luvulla kello soitti '
           + 'kuudestatoista sävelmästä neljää kerrallaan ja vaihtoi '
-          + 'ohjelmaansa neljästi päivässä; joukossa olivat "Home! Sweet '
-          + 'Home!" ja Händel-sinfonia. Nykyään se soittaa yhtä sävelmää '
+          + 'ohjelmaansa neljästi päivässä; joukossa olivat ”Home! Sweet '
+          + 'Home!” ja Händel-sinfonia. Nykyään se soittaa yhtä sävelmää '
           + 'vartin välein. Aikanaan torni oli kaupungin korkein '
           + 'rakennus, ja se kuuluu Unescon maailmanperintöluetteloon '
           + 'osana Mumbain viktoriaanista ja art deco -kokonaisuutta.',
@@ -37420,7 +36938,7 @@ export const NAHTAVYYSJUTUT = {
           + 'selityksen mukaan nimi tulee portugalilaiselta insinööriltä '
           + 'nimeltä Beira, toisen mukaan hollantilaiselta insinööriltä '
           + 'nimeltä De Beer — tätä tukee sulkuportista löytynyt '
-          + 'graniittilaatta, johon on hakattu "De Beer 1700". Kolmas '
+          + 'graniittilaatta, johon on hakattu ”De Beer 1700”. Kolmas '
           + 'selitys on portugalin sana beira, järven ranta tai reuna, '
           + 'neljäs samanniminen Portugalin maakunta.'
         + '\n\n'
@@ -38654,8 +38172,8 @@ export const NAHTAVYYSJUTUT = {
     'Karangahape Road': {
       aika: '1868',
       teksti: 'Karangahape on maorinkielinen nimi, jonka alkuperästä on useita '
-          + 'tulkintoja: se on käännetty niin "mutkittelevaksi ihmisten '
-          + 'harjanteeksi" kuin "Hapen kutsumiseksi". Hape oli Tainui-'
+          + 'tulkintoja: se on käännetty niin ”mutkittelevaksi ihmisten '
+          + 'harjanteeksi” kuin ”Hapen kutsumiseksi”. Hape oli Tainui-'
           + 'kanootin tohunga eli tietäjä, joka asui Manukau-sataman '
           + 'seudulla, ja harjannetta pitkin kulkenutta polkua sanottiin '
           + 'nimellä Te Ara o Karangahape, Karangahapen tie. Katu on siis '
@@ -39002,8 +38520,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungissa ei ollut vakinaista palokuntaa ennen joulukuuta '
           + '1866, vaan paloista vastasivat vapaaehtoiset komppaniat. '
           + 'Testamentissaan Coit määräsi kolmanneksen omaisuudestaan, '
-          + '118 000 dollaria, käytettäväksi "sopivalla tavalla sen '
-          + 'kaupungin kaunistamiseen, jota olen aina rakastanut". '
+          + '118 000 dollaria, käytettäväksi ”sopivalla tavalla sen '
+          + 'kaupungin kaunistamiseen, jota olen aina rakastanut”. '
           + 'Kaupunginvaltuutetut ehdottivat rahoilla tietä Lake '
           + 'Merced\'ille, mutta pesänhoitajat vaativat itsenäistä '
           + 'muistomerkkiä, ja taidelautakunnan puheenjohtaja Herbert '
@@ -39131,8 +38649,8 @@ export const NAHTAVYYSJUTUT = {
           + 'pyramidia vastustettiin äänekkäästi ja sitä pidettiin '
           + 'silmäsärkynä, mutta arvostelijat vaihtoivat mieltään: '
           + 'San Francisco Chroniclen John King kuvasi taloa 2009 '
-          + '"parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
-          + 'joka sopii paikkaansa ja paranee iän myötä". '
+          + '”parhaan lajin arkkitehtoniseksi ikoniksi — sellaiseksi, '
+          + 'joka sopii paikkaansa ja paranee iän myötä”. '
           + 'Kahdennenkymmenennenseitsemännen kerroksen näköalatasanne '
           + 'suljettiin 2001, ja tilalle asennettiin huipun neljä '
           + 'kameraa, joiden kuvaa aulan näytöiltä voi kääntää itse.',
@@ -39219,7 +38737,7 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungin ja koko osavaltion korkein rakennus.'
           + '\n\n'
           + 'Kellotornin kellotaulun alle hakattiin lause '
-          + '"Son, observe the time and fly from evil" eli poika, pane '
+          + '”Son, observe the time and fly from evil” eli poika, pane '
           + 'merkille aika ja pakene pahaa. Se on Sirakin kirjasta ja '
           + 'oli tarkoitettu ohjeeksi kadun ohikulkijoille. Katedraali '
           + 'kirkko oli vuoteen 1891, jolloin kasvava seurakunta sai '
@@ -39315,7 +38833,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Grand Court, jonne vaunut ajoivat sisään ja jota '
           + 'ympäröi seitsemän kerrosta valkoisia pylväsparvekkeita. '
           + 'Hisseinä oli punapuupaneloituja hydraulisia '
-          + '"nousuhuoneita", ja joka huoneessa oli oma kylpyhuone ja '
+          + '”nousuhuoneita”, ja joka huoneessa oli oma kylpyhuone ja '
           + 'sähköinen kutsunappi palvelusväen hälyttämiseksi. Kun '
           + 'isoisä kulki kaupungin läpi 1873, hotellia ei siis vielä '
           + 'ollut — se avattiin kaksi vuotta myöhemmin.'
@@ -39337,7 +38855,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Enrico Caruso, joka oli edellisiltana laulanut Don Josén '
           + 'osan Carmenissa ja joka vannoi järistyksen jälkeen, ettei '
           + 'palaa kaupunkiin koskaan. Väliaikaiseksi majataloksi '
-          + 'pystytettiin 23 huoneen "Baby" Palace, joka avattiin jo '
+          + 'pystytettiin 23 huoneen ”Baby” Palace, joka avattiin jo '
           + 'marraskuussa 1906. Nykyinen hotelli avattiin samalle '
           + 'tontille 19. joulukuuta 1909, ja vanhan Grand Courtin '
           + 'paikalla on siitä lähtien ollut ruokasali Garden Court. '
@@ -40676,7 +40194,7 @@ export const NAHTAVYYSJUTUT = {
           + 'alussa osa niistä kuului varakkaalle portugalilaiselle '
           + 'kauppiaalle Elias António Lopesille. Hän rakensi noin 1803 '
           + 'kukkulan päälle kartanon, jonka ikkunoista näkyi Guanabaran '
-          + 'lahti — siitä nimi Boa Vista, "hyvä näköala". Kun '
+          + 'lahti — siitä nimi Boa Vista, ”hyvä näköala”. Kun '
           + 'prinssiregentti João VI saapui hoveineen 1808, Lopes '
           + 'lahjoitti tilan hänelle.'
           + '\n\n'
@@ -41216,7 +40734,7 @@ export const NAHTAVYYSJUTUT = {
           + 'sunnuntaina 21. lokakuuta 1906. Sen suunnitteli George '
           + 'Troup flaamilaisen renessanssin tyyliin, ja rakennus on '
           + 'hänen tunnetuin työnsä — se toi hänelle lempinimen '
-          + '"Gingerbread George".'
+          + '”Gingerbread George”.'
           + '\n\n'
           + 'Paikalliset arvelevat asemaa maan valokuvatuimmaksi '
           + 'rakennukseksi ja eteläisen pallonpuoliskon toiseksi '
@@ -42493,7 +42011,7 @@ export const NAHTAVYYSJUTUT = {
           + 'se oli purku-uhan alla: tilalle oli suunniteltu puisto. '
           + 'Vuoden 1989 vallanvaihdon jälkeen joukko '
           + 'arkkitehtiopiskelijoita aloitti kampanjan nimellä '
-          + '"Salvemos la Manzana frente al palacio" — pelastetaan '
+          + '”Salvemos la Manzana frente al palacio” — pelastetaan '
           + 'palatsin edessä oleva kortteli.'
         + '\n\n'
         + 'Amerikan löytämisen 500-vuotispäivää varten perustettiin '
@@ -42535,7 +42053,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ihmistä — kuitenkin aivan keskustassa, hallituspalatsin, '
           + 'parlamentin, katedraalin ja Costaneran naapurissa, '
           + 'Paraguayjoen rannassa. Muusikko Maneco Galeano teki '
-          + 'kaupunginosasta guarania-laulun "Soy de la Chacarita".'
+          + 'kaupunginosasta guarania-laulun ”Soy de la Chacarita”.'
         + '\n\n'
         + 'Korttelien keskellä on jalkapallokenttä. Stadion on '
           + 'Resistencia-seuran koti, siihen mahtuu 3 500 katsojaa, '
@@ -42574,7 +42092,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Vuonna 1886 katalonialainen liikemies Baudillo Alió sai '
           + 'tontin ja luvan purkaa vanhan talon. Uusi '
-          + '"kansallisteatteri" valmistui 1889 ja vihittiin '
+          + '”kansallisteatteri” valmistui 1889 ja vihittiin '
           + '21. heinäkuuta orkesterilla ja espanjalaisella '
           + 'Estudiantina Fígaro -yhtyeellä, joka soitti Verdiä, '
           + 'Schubertia ja Flotowia. Vuoden 1894 korjauksessa saliin '
@@ -43101,8 +42619,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Montrealin taidemuseo on Kanadan vanhin taidemuseo ja '
           + 'näyttelypinta-alaltaan maan suurin. Se perustettiin '
           + 'huhtikuussa 1860, kun anglikaanipiispa Francis Fulford '
-          + 'käynnisti Montrealin taideyhdistyksen "edistämään '
-          + 'kaupunkilaisten taiteentuntemusta". Yhdistyksellä ei '
+          + 'käynnisti Montrealin taideyhdistyksen ”edistämään '
+          + 'kaupunkilaisten taiteentuntemusta”. Yhdistyksellä ei '
           + 'ollut taloa eikä siis paikkaa säilyttää hankintoja, '
           + 'joten se ei voinut ostaa teoksia eikä ottaa vastaan '
           + 'kokoelmia. Parikymmentä vuotta se piti näyttelynsä '
@@ -43218,7 +42736,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Point Cruz on niemi keskellä Honiaraa, Tandai Highwayn '
           + 'varrella noin neljäsosamailin päässä parlamenttitalosta '
           + 'pohjoiseen. Ghari-kielellä paikan nimi on naho-ni-ara, '
-          + '"kohti itä- ja kaakkoispasaatituulia" — ja siitä on '
+          + '”kohti itä- ja kaakkoispasaatituulia” — ja siitä on '
           + 'saanut nimensä myös koko kaupunki.'
         + '\n\n'
         + 'Niemen satama on Salomonsaarten pääsaapumissatama. '
@@ -43262,8 +42780,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Suunnittelijaksi valittiin honolululainen arkkitehtitoimisto '
           + 'Wimberly Allison Tong & Goo. Projektiarkkitehti Michael '
           + 'J. Batchelorin mukaan hallitus pyysi rakennusta, joka '
-          + 'olisi "olennaisesti salomonsaarelainen tyyliltään, ei '
-          + 'päälle asetettua arkkitehtuuria". Kaksikerroksinen, noin '
+          + 'olisi ”olennaisesti salomonsaarelainen tyyliltään, ei '
+          + 'päälle asetettua arkkitehtuuria”. Kaksikerroksinen, noin '
           + 'kahdentuhannen neliömetrin talo on teräsrunkoinen ja '
           + 'raudoitettua betonia, ja siinä on paljon lasia.'
         + '\n\n'
@@ -43306,7 +42824,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Pysyvän katedraalin peruskivi laskettiin 1976 samalle '
           + 'kukkulalle, ja rakennus vihittiin ja avattiin 1978. '
           + 'Samana vuonna paavi Johannes Paavali II korotti Honiaran '
-          + 'arkkihiippakunnaksi bullalla "Laetentur insulae multae". '
+          + 'arkkihiippakunnaksi bullalla ”Laetentur insulae multae”. '
           + 'Katedraali on arkkihiippakunnan istuin.',
       kuvat: [
         {
@@ -43340,10 +42858,10 @@ export const NAHTAVYYSJUTUT = {
           + 'viidestä taistelusta ja luettelevat menetettyjen alusten '
           + 'nimet.'
         + '\n\n'
-        + 'Muistomerkin teksti kuuluu: "Yhdysvallat on pystyttänyt '
+        + 'Muistomerkin teksti kuuluu: ”Yhdysvallat on pystyttänyt '
           + 'tämän muistomerkin nöyränä kunnianosoituksena pojilleen '
           + 'ja liittolaisilleen, jotka maksoivat viimeisen hinnan '
-          + 'Salomonsaarten vapauttamisesta 1942–1943." Muistotilaisuus '
+          + 'Salomonsaarten vapauttamisesta 1942–1943.” Muistotilaisuus '
           + 'pidetään joka vuosi 7. elokuuta. Mount Austenilla on '
           + 'japanilaisten pystyttämä muistomerkki heidän omille '
           + 'kaatuneilleen.',
@@ -44134,10 +43652,9 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupunkinsa lehti-ilmoituksessa 1836.',
       kuvat: [
         {
-          tiedosto: 'Sam Houston Monument in Hermann Park.JPG',
-          selite: 'Ratsastajapatsas seisoo kaariportin päällä puiston '
-            + 'pohjoispäässä kaupungin tornien edessä.',
-          lahde: 'Agsftw, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Hermann Park, Houston Texas.jpg",
+          selite: "Hermann Parkin lammen rannalla kasvaa tiheää puustoa, ja kuvan oikealla puolella lampea ylittää matala puusilta.",
+          lahde: "Zp 2298, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -44842,36 +44359,6 @@ export const NAHTAVYYSJUTUT = {
    * miami-lohkossa eikä matkakirjan valokuvataulussa.
    */
   miami: {
-    'Wynwoodin muraalikorttelit': {
-      aika: '2009',
-      teksti: 'Wynwood oli pitkään teollisuus- ja varastokortteli, jota '
-          + 'kutsuttiin nimillä Little San Juan ja El Barrio: '
-          + 'puertoricolaisia muutti alueelle 1950-luvulla sekä '
-          + 'saarelta että koillisen kaupungeista. Puertoricolaisten '
-          + 'ravintolat, kaupat ja torit reunustavat katuja yhä.'
-          + '\n\n'
-          + 'Kun Midtown Miamin rakennustyöt alkoivat 2005 vanhan '
-          + 'ratapihan paikalla, huomio palasi alueelle ja taiteilijat '
-          + 'alkoivat asettua tyhjiin varastoihin. Vuonna 2009 '
-          + 'kaupunkikehittäjä Tony Goldman tilasi taiteilijoilta '
-          + 'Wynwood Wallsin. Ajatus oli yksinkertainen: muuttaa '
-          + 'varastorakennukset teoksiksi.'
-          + '\n\n'
-          + 'Wynwood Walls on ulkoilmanäyttely, jonka teokset '
-          + 'vaihtuvat, ja se on maailman suurin ulkoilmassa oleva '
-          + 'katutaidemuseo. Kaupunginosan rajat ovat selvät: 20th '
-          + 'Street etelässä, moottoritie I-195 pohjoisessa, I-95 '
-          + 'lännessä ja Florida East Coast Railwayn rata idässä.',
-      kuvat: [
-        {
-          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
-          selite: 'Portin takana avautuu pihamaa, jonka jokainen '
-            + 'seinä on maalattu.',
-          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Wikipedia',
-    },
     'Esittävän taiteen keskus': {
       aika: '2006',
       teksti: 'Adrienne Arsht Center on yksi Yhdysvaltain suurimmista '
@@ -44924,10 +44411,20 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäisten neljän kuukauden aikana.',
       kuvat: [
         {
-          tiedosto: 'PAMM MRD 08.jpg',
+          tiedosto: "Perez museum, Miami, Florida, Usa (51015332721).jpg",
           selite: 'Riippuvat kasvipylväät varjostavat museon '
             + 'julkisivua lahden puolelta.',
-          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+          lahde: "Paolo Gamba, Wikimedia Commons (CC BY 2.0)",
+        },
+        {
+          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
+          lyhyt: 'Miamin toinen suuri taidekohde on Wynwoodin ulkoilmanäyttely Wynwood Walls, avattu 2009.',
+          selite: 'Miamin toinen suuri taidekohde on muutaman kilometrin '
+            + 'päässä Wynwoodin entisessä varastokorttelissa: '
+            + 'kaupunkikehittäjä Tony Goldmanin vuonna 2009 tilaama '
+            + 'Wynwood Walls on maailman suurin ulkoilmassa oleva '
+            + 'katutaidemuseo.',
+          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -45259,7 +44756,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Museon tunnetuin näyttely kertoo Titanicista. Halifax oli '
           + 'huhtikuussa 1912 lähin suuri satama onnettomuuspaikalle, '
           + 'ja pelastustyöt johdettiin täältä. Julkisivun lippurivissä '
-          + 'lukee "Welcome aboard L44 38N G63 34W" — se on museon oma '
+          + 'lukee ”Welcome aboard L44 38N G63 34W” — se on museon oma '
           + 'sijainti asteina ja minuutteina.',
       kuvat: [
         {
@@ -45540,7 +45037,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Yhdessä kolmesta teatteritilasta māorien tarinat '
           + 'esitetään Pepperin haamu -illuusiolla, ylimmässä '
-          + 'kerroksessa on "Wellington Time Machine", ja vuoden 2015 '
+          + 'kerroksessa on ”Wellington Time Machine”, ja vuoden 2015 '
           + 'lopussa avattiin ullakkonäyttely. The Times valitsi '
           + 'museon 2013 maailman viidenkymmenen parhaan joukkoon. '
           + 'Talon vanha kokoushuone on säilynyt sellaisenaan: siinä '
@@ -45599,8 +45096,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kuuntelemaan musiikkia ja ostamaan kukkakimppu; se pysyi '
           + 'muodissa vuosikymmeniä. Ensimmäinen kylpylaitos avattiin '
           + '1864 avoimena merivesialtaana. Vuoden 1897 esittelyn '
-          + 'mukaan altaat oli "turvallisesti suojattu merihirviöiden '
-          + 'vierailuilta", ja niiden ympärillä oli 34 pukukoppia. '
+          + 'mukaan altaat oli ”turvallisesti suojattu merihirviöiden '
+          + 'vierailuilta”, ja niiden ympärillä oli 34 pukukoppia. '
           + 'Kaupunki rakensi 1901 uudet Te Aron kylpylät, ja niiden '
           + 'tilalle tuli 1963 Freybergin uimahalli. Raitiovaunut '
           + 'alkoivat kulkea Oriental Paradea pitkin syyskuussa 1904 '
@@ -45704,7 +45201,7 @@ export const NAHTAVYYSJUTUT = {
           + 'ruokki Waitangi-puro. William Mein Smith mittasi paikan '
           + '1840 ja suunnitteli, että allas syvennettäisiin ja '
           + 'siitä kaivettaisiin kanava merelle; vuoden 1841 kartassa '
-          + 'alue on nimeltään "Proposed Basin and Canal". Kanavaa ei '
+          + 'alue on nimeltään ”Proposed Basin and Canal”. Kanavaa ei '
           + 'tullut. Vuoden 1855 Wairarapan maanjäristys nosti aluetta '
           + 'lähes 1,8 metriä ja kuivatti suon osittain.'
           + '\n\n'
@@ -45914,7 +45411,7 @@ export const NAHTAVYYSJUTUT = {
     },
     'New Regent Street': {
       aika: '1932',
-      teksti: 'Kadun paikalla oli ennen "sirkuslaidun", jolla '
+      teksti: 'Kadun paikalla oli ennen ”sirkuslaidun”, jolla '
           + 'kiertävät sirkukset pystyttivät telttansa. Vuodesta 1888 '
           + 'siinä seisoi Colosseum-niminen halli, joka oli vuoron '
           + 'perään luistinrata, saapastehdas, taksiasema ja 1908 '
@@ -46024,7 +45521,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Jellicoe. Hän myös paljasti valmiin holvin aselepopäivänä '
           + '11. marraskuuta 1924. Suunnittelukilpailun voitti '
           + 'toimisto Prouse and Gummer, ja piirustukset teki William '
-          + 'Gummer. Holvin keskellä lukee "Quid non pro patria".'
+          + 'Gummer. Holvin keskellä lukee ”Quid non pro patria”.'
           + '\n\n'
           + 'Paikka ei ole sattuma. Kuningas Edvardin kasarmilta '
           + 'Cashel Streetin länsipäästä sotilaat marssivat juuri '
@@ -46176,10 +45673,9 @@ export const NAHTAVYYSJUTUT = {
           + 'nykyään pieni museo.',
       kuvat: [
         {
-          tiedosto: 'Melbourne Central abseiling shot tower.jpg',
-          selite: 'Tiilitorni seisoo kokonaisena kartiomaisen lasikaton alla; '
-            + 'köysilaskijat antavat mittakaavan.',
-          lahde: 'Stephen Bain, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Melbourne City Loop Museum Station, now Melbourne Central, under construction 1974 with Coop's Shot Tower 3.jpg",
+          selite: "Vuoden 1974 kuvassa haulitorni nousee kerrostalon vieressä Museum Stationin rakennusaidan takaa, ennen nykyistä ostoskeskusta.",
+          lahde: "Leone Mills, State Library of Victoria, Wikimedia Commons (CC BY 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -46915,14 +46411,14 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Uuden kirkon rakensi isä James McGuckin, ja hanketta '
           + 'pidettiin niin uhkarohkeana, että sitä kutsuttiin '
-          + 'nimellä "McGuckinin hulluus". Seurakunta oli jo velkaa, '
+          + 'nimellä ”McGuckinin hulluus”. Seurakunta oli jo velkaa, '
           + 'ja rahat saatiin lopulta siten, että McGuckinin oma '
           + 'sääntökunta kiinnitti päämajansa Ranskassa. Peruskivi '
           + 'laskettiin 16. heinäkuuta 1899, arkkitehteina Thomas '
           + 'Ennor Julian ja H. J. Williams, ja kirkko valmistui '
           + '491 päivässä. Se avattiin 8. joulukuuta 1900, ja sitä '
-          + 'kehuttiin "hienoimmaksi arkkitehtuuriksi Torontosta '
-          + 'länteen ja San Franciscosta pohjoiseen". Katedraaliksi '
+          + 'kehuttiin ”hienoimmaksi arkkitehtuuriksi Torontosta '
+          + 'länteen ja San Franciscosta pohjoiseen”. Katedraaliksi '
           + 'kirkko korotettiin 1916. Vihkiä sitä ei kuitenkaan '
           + 'voitu, koska katolinen kirkko vihitään vasta velattomana '
           + '— vihkiminen tapahtui 3. lokakuuta 1953, '
@@ -46976,7 +46472,7 @@ export const NAHTAVYYSJUTUT = {
           + 'pienen kohun.'
           + '\n\n'
           + 'Vuonna 1918 vancouverilaiset kerääntyivät katsomaan, kun '
-          + 'Harry Gardiner, "ihmiskärpänen", kiipesi talon ulkoseinää '
+          + 'Harry Gardiner, ”ihmiskärpänen”, kiipesi talon ulkoseinää '
           + 'ylös. Nimensä talo sai 1937, kun The Vancouver Sun osti '
           + 'sen; lehti muutti pois jo kauan sitten, mutta nimi jäi. '
           + 'Ikkunoiden alla on paikallista andesiittiä Haddington '
@@ -47008,7 +46504,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Playersin omistuksessa; Ivan Ackery johti taloa vuodesta '
           + '1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous '
           + 'Players päätti purkaa sisätilat ja tehdä talosta '
-          + 'monisalin. Siitä syntyi kansanliike "Save the Orpheum", '
+          + 'monisalin. Siitä syntyi kansanliike ”Save the Orpheum”, '
           + 'ja jopa koomikko Jack Benny lensi paikalle auttamaan '
           + 'varainkeruussa. Kaupunki osti teatterin 19. maaliskuuta '
           + '1974, ja hinta oli 7,1 miljoonaa dollaria; kaupungin '
@@ -47197,7 +46693,7 @@ export const NAHTAVYYSJUTUT = {
           + 'teräsrungon päällä, eivätkä sen kallistuvat seinät '
           + 'kosketa vanhoja suojeltuja seiniä lainkaan. Mielipiteet '
           + 'jakautuivat heti: Globe and Mailin arkkitehtuurikriitikko '
-          + 'kirjoitti, että uusi museo "raivoaa maailmalle", kun '
+          + 'kirjoitti, että uusi museo ”raivoaa maailmalle”, kun '
           + 'taas toiset pitivät sitä monumenttina — ja jotkin '
           + 'listat ovat panneet sen maailman kymmenen rumimman '
           + 'rakennuksen joukkoon.',
@@ -47233,9 +46729,9 @@ export const NAHTAVYYSJUTUT = {
           + 'puiselle portaikolle; tuli tuhosi koko itäsiiven ja '
           + 'kirjaston. Ottawassa yliopiston kansleri Edward Blake, '
           + 'joka oli myös kansanedustaja, keskeytti puheensa ja '
-          + 'kertoi alahuoneelle, että "suuri laitos, maamme '
+          + 'kertoi alahuoneelle, että ”suuri laitos, maamme '
           + 'oppilaitosten kruunu ja kunnia, on tällä hetkellä '
-          + 'liekeissä". Kirjoja ehdittiin pelastaa noin sata. Palon '
+          + 'liekeissä”. Kirjoja ehdittiin pelastaa noin sata. Palon '
           + 'muistoksi collegen opiskelijat järjestävät yhä vuosittain '
           + 'Fireball-juhlan.'
           + '\n\n'
@@ -47273,7 +46769,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + '1900-luvun alussa alueelle muutti itäeurooppalaisia '
           + 'juutalaisia ja italialaisia siirtolaisia. He tulivat '
-          + '"Wardista", ahtaasta tulijoiden korttelistosta Yonge '
+          + '”Wardista”, ahtaasta tulijoiden korttelistosta Yonge '
           + 'Streetin ja University Avenuen välissä, ja hakivat '
           + 'väljyyttä, parempia asuntoja ja mahdollisuutta pitää '
           + 'kauppaa oman talon edessä. 1920-luvulla aluetta '
@@ -47347,7 +46843,7 @@ export const NAHTAVYYSJUTUT = {
           + 'julkisivussa on lasia ja mittatilaustyönä tehtyjä '
           + 'titaanilevyjä. Se oli Gehryn ensimmäinen suunnitelma '
           + 'ilman voimakkaasti vääntyvää teräsrunkoa, ja Globe and '
-          + 'Mail kutsui tulosta "pidättyväiseksi mestariteokseksi".',
+          + 'Mail kutsui tulosta ”pidättyväiseksi mestariteokseksi”.',
       kuvat: [
         {
           tiedosto: 'AGO Toronto 1.jpg',
@@ -47365,9 +46861,9 @@ export const NAHTAVYYSJUTUT = {
           + 'suurta torontolaista arkkitehtitoimistoa esitteli '
           + 'varovaisen ehdotuksen, ja se sai murskaavan '
           + 'vastaanoton: Frank Lloyd Wright kutsui sitä '
-          + '"kliseeksi, joka on jo vanhentunut", ja Walter Gropius '
-          + '"hyvin huonoksi pseudomoderniksi suunnitelmaksi, joka on '
-          + 'Toronton arvolle sopimaton". Äänestäjät hylkäsivät '
+          + '”kliseeksi, joka on jo vanhentunut”, ja Walter Gropius '
+          + '”hyvin huonoksi pseudomoderniksi suunnitelmaksi, joka on '
+          + 'Toronton arvolle sopimaton”. Äänestäjät hylkäsivät '
           + 'kahdeksantoista miljoonan dollarin hankkeen. Pormestari '
           + 'Nathan Phillips ajoi tilalle kansainvälisen '
           + 'suunnittelukilpailun — Ontarion ensimmäisen, johon '
@@ -47385,9 +46881,9 @@ export const NAHTAVYYSJUTUT = {
           + 'tanskalaisen ja viiden yhdysvaltalaisen suunnitelman '
           + 'rinnalla. Kuudentenakolmatta syyskuuta 1958 tuomaristo '
           + 'valitsi hänet äänin kolme kaksi vastaan. Alvar Aalto '
-          + 'sähkötti oppilaalleen: "Harvoin kollega iloitsee näin '
-          + 'paljon toisen voitosta." Frank Lloyd Wright kutsui '
-          + 'suunnitelmaa "haudan päätykiveksi".'
+          + 'sähkötti oppilaalleen: ”Harvoin kollega iloitsee näin '
+          + 'paljon toisen voitosta.” Frank Lloyd Wright kutsui '
+          + 'suunnitelmaa ”haudan päätykiveksi”.'
           + '\n\n'
           + 'Revell muutti perheineen Torontoon ja työskenteli '
           + 'paikallisen toimiston John B. Parkin Associatesin '
@@ -47521,11 +47017,11 @@ export const NAHTAVYYSJUTUT = {
           + 'pääministeri William Lyon Mackenzie King ja Britannian '
           + 'pääministeri Stanley Baldwin. Prinssi oli ensimmäinen '
           + 'ihminen, joka astui junasta tälle asemalle, ja '
-          + 'päähallissa hän kuittasi näkemänsä lauseella: "te '
+          + 'päähallissa hän kuittasi näkemänsä lauseella: ”te '
           + 'rakennatte rautatieasemanne niin kuin me rakennamme '
-          + 'katedraalimme". Hänelle annettiin aseman ensimmäinen '
-          + 'lippu, joka kelpasi "ikuisesti" ja "kaikkien asemien '
-          + 'välillä". Neljä päivää myöhemmin raiteet siirrettiin '
+          + 'katedraalimme”. Hänelle annettiin aseman ensimmäinen '
+          + 'lippu, joka kelpasi ”ikuisesti” ja ”kaikkien asemien '
+          + 'välillä”. Neljä päivää myöhemmin raiteet siirrettiin '
           + 'vanhalta asemalta tänne, ja koko hanke valmistui vasta '
           + '1930, kun laiturikatos oli tehty.'
           + '\n\n'
@@ -48074,12 +47570,6 @@ export const NAHTAVYYSJUTUT = {
           + 'kuivuudesta lähtien ja avattiin uudelleen joulukuussa '
           + '2018.',
       kuvat: [
-        {
-          tiedosto: 'Los Angeles, California (September 9, 2022) - 241.jpg',
-          selite: 'Kreisin terrakottapaneeli vasemmalla ja 24 metriä leveä '
-            + 'vesiputous, joka avattiin uudelleen 2018.',
-          lahde: 'Another Believer, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -48366,12 +47856,10 @@ export const NAHTAVYYSJUTUT = {
           + 'syyskuussa 2026.',
       kuvat: [
         {
-          tiedosto: 'Art in Pershing Square Park, a public park in downtown Los Angeles, California LCCN2013632114.tif',
-          lyhyt: 'Legorretan ja Olinin 1994 aukiolla on violetti kellotorni ja oranssit pallot.',
-          selite: 'Legorretan ja Olinin vuoden 1994 aukio: violetti '
-            + 'kellotorni, oranssit pallot ja kivetys, jonka alla on 1952 '
-            + 'kaivettu pysäköintilaitos.',
-          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+          tiedosto: "Pershing Square, Biltmore Hotel to the left, Los Angeles, California (64208).jpg",
+          lyhyt: "Pershing Square vanhassa postikortissa: palmuja, nurmikoita ja Biltmore-hotelli.",
+          selite: "Vanhassa postikortissa Pershing Squaren puisto, jonka palmut ja nurmikot ulottuvat vasemmalla kohoavan Biltmore-hotellin ja muiden korkeiden rakennusten juurelle.",
+          lahde: "Tichnor Brothers / Boston Public Library, Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -48948,7 +48436,7 @@ export const NAHTAVYYSJUTUT = {
           + 'maailmanperintöalueeseen; 19. maaliskuuta 2016 siitä tuli '
           + 'Chilen ensimmäinen anglikaaninen katedraali. Vuodesta '
           + '1995 siellä on soitettu joka sunnuntai-iltapäivä '
-          + 'urkukonsertti — "Música en las alturas" on maan ainoa '
+          + 'urkukonsertti — ”Música en las alturas” on maan ainoa '
           + 'säännöllinen urkukonserttisarja, ja se aloitettiin '
           + 'kertomaan kirkon korjaustarpeesta.',
       kuvat: [
@@ -48993,7 +48481,7 @@ export const NAHTAVYYSJUTUT = {
           + 'pohjoispäässä katolisen yliopiston päärakennus. Yliopisto '
           + 'on yksi kuudestatoista Chilen valtionyliopistojen '
           + 'konsortion jäsenestä ja yksi 25 rehtorineuvoston '
-          + '"perinteisestä" yliopistosta.',
+          + '”perinteisestä” yliopistosta.',
       lahde: 'Wikipedia',
     },
     'Katolinen yliopisto': {
@@ -49020,7 +48508,7 @@ export const NAHTAVYYSJUTUT = {
           + 'rehtori.'
           + '\n\n'
           + 'Yliopiston tunnetuin sivutuote on arkkitehtuurin '
-          + 'korkeakoulu, "Valparaíson koulu". Se rakensi muutama '
+          + 'korkeakoulu, ”Valparaíson koulu”. Se rakensi muutama '
           + 'kilometri kaupungista pohjoiseen kokeellisen Avoimen '
           + 'kaupungin, jossa opettajat opettavat ja asuvat taloissa, '
           + 'jotka he ja opiskelijat ovat itse suunnitelleet ja '
@@ -49238,12 +48726,10 @@ export const NAHTAVYYSJUTUT = {
           + '2009 sulkemispäätös peruttiin.',
       kuvat: [
         {
-          tiedosto: 'TremeTombUnknownSlave.jpg',
-          lyhyt: 'Tuntemattoman orjan hauta on raskaista ketjuista taivutettu risti kirkon puutarhassa.',
-          selite: 'Tuntemattoman orjan hauta on raskaista ketjuista '
-            + 'taivutettu risti kirkon puutarhassa, lasimaalausikkunoiden '
-            + 'alla.',
-          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "St augustine church 23 march 2023.jpg",
+          lyhyt: "St. Augustinen kirkon kellotorni ja julkisivu Tremén kaupunginosassa.",
+          selite: "St. Augustinen kirkon kellotorni ja julkisivu Tremén kaupunginosassa New Orleansissa.",
+          lahde: "Ryan Nixon, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -49639,7 +49125,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Nimi on vanhempi kuin talo ja vanhempi kuin kaupunki. '
           + 'Tequendama tulee muiscojen chibcha-kielestä ja tarkoittaa '
-          + 'suunnilleen "se, joka syöksee alaspäin" — sama sana on '
+          + 'suunnilleen ”se, joka syöksee alaspäin” — sama sana on '
           + 'annettu Bogotá-joen suurelle putoukselle ylätasangon '
           + 'reunalla. Hotellin aulassa on muiscojen jumalia esittävä '
           + 'seinämaalaus.',
@@ -49772,9 +49258,9 @@ export const NAHTAVYYSJUTUT = {
           + 'ovat toimineet korkein oikeus, perustuslakituomioistuin, '
           + 'valtionneuvosto ja ylin tuomarineuvosto. Sisäänkäynnillä '
           + 'on ainoa vanhasta talosta säilynyt osa: laatta, johon on '
-          + 'kaiverrettu kenraali Santanderin lause "kolumbialaiset, '
+          + 'kaiverrettu kenraali Santanderin lause ”kolumbialaiset, '
           + 'aseet ovat antaneet teille itsenäisyyden, lait antavat '
-          + 'teille vapauden". Talo on nimetty Alfonso Reyes '
+          + 'teille vapauden”. Talo on nimetty Alfonso Reyes '
           + 'Echandían mukaan — hän oli korkeimman oikeuden '
           + 'presidentti ja kuoli piirityksessä.',
       kuvat: [
@@ -49953,8 +49439,8 @@ export const NAHTAVYYSJUTUT = {
           + 'vuodeksi, ja tilalle rakennettiin uusi museo OMA:n ja '
           + 'Hassellin piirustusten mukaan. Se avattiin lauantaina '
           + '21. marraskuuta 2020 nimellä WA Museum Boola Bardip. '
-          + 'Boola Bardip on noongaria ja tarkoittaa "monia '
-          + 'tarinoita". Museolla on kuusi toimipistettä: Perthin '
+          + 'Boola Bardip on noongaria ja tarkoittaa ”monia '
+          + 'tarinoita”. Museolla on kuusi toimipistettä: Perthin '
           + 'lisäksi merenkulku- ja hylkymuseot Fremantlessa sekä omat '
           + 'museot Albanyssa, Geraldtonissa ja '
           + 'Kalgoorlie-Boulderissa.',
@@ -50425,7 +49911,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Tarjoukset tulivat silti seitsemäntuhannen punnan '
           + 'tienoille, ja piirustuksia karsittiin vielä ennen kuin '
           + 'urakka annettiin. Gawler kutsuttiin 1841 takaisin '
-          + 'Englantiin osittain juuri "tuhlailevien" '
+          + 'Englantiin osittain juuri ”tuhlailevien” '
           + 'rakennushankkeidensa vuoksi, ja hänen seuraajansa '
           + 'käyttivät taloon niin vähän rahaa kuin suinkin.'
           + '\n\n'
@@ -50552,7 +50038,7 @@ export const NAHTAVYYSJUTUT = {
           + '\n\n'
           + 'Ensimmäinen näyttely esitteli Utopian yhteisön naisten '
           + 'silkille tekemiä töitä Pohjoisterritoriosta nimellä '
-          + '"Utopia — A Picture Story". Sen jälkeen talossa on nähty '
+          + '”Utopia — A Picture Story”. Sen jälkeen talossa on nähty '
           + 'näyttelyitä ja tapahtumia laidasta laitaan, muun muassa '
           + 'Adelaiden fringe-festivaalin esityksiä ja helmikuussa '
           + '2023 alkuperäiskansojen parlamenttiäänen kyllä-kampanjan '
@@ -51542,7 +51028,7 @@ export const NAHTAVYYSJUTUT = {
           + 'lipas, jossa on 522 ensimmäisessä maailmansodassa '
           + 'kaatuneen tasmanialaisen nimet. Muistomerkki paljastettiin '
           + '13. joulukuuta 1925. Itse kivessä ei ole nimiä, vain '
-          + '"Lest We Forget" ja vuosiluvut 1914–1919 — jälkimmäinen '
+          + '”Lest We Forget” ja vuosiluvut 1914–1919 — jälkimmäinen '
           + 'viittaa Versaillesin rauhaan eikä aselepoon.'
           + '\n\n'
           + 'Muistomerkkiä vanhempi on sen alapuolella kulkeva '
@@ -51932,8 +51418,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Victoria Hotel.'
           + '\n\n'
           + 'Talo menetti kattonsa kolmesti alle sadassa vuodessa. '
-          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun "suureksi '
-          + 'hirmumyrskyksi" kutsuttu myrsky tappoi 28 ihmistä ja '
+          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun ”suureksi '
+          + 'hirmumyrskyksi” kutsuttu myrsky tappoi 28 ihmistä ja '
           + 'upotti satamaan 19 alusta, koko helmenkalastuslaivueen '
           + 'mukaan lukien; hotelli oli niitä harvoja taloja, joiden '
           + 'rakenteet kestivät. Toinen kerta oli maaliskuussa 1937 ja '
@@ -52008,8 +51494,8 @@ export const NAHTAVYYSJUTUT = {
           + 'maksoi 2 000 puntaa, mitä pidettiin aikanaan valtavana '
           + 'summana. Kylpylä oli Darwinin ainoa uima-allas 1900-luvun '
           + 'alkupuoliskolla — ensimmäinen yksityinen allas rakennettiin '
-          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin "pieneksi '
-          + 'Manlyksi", ja haita ja krokotiileja nähtiin usein, mutta '
+          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin ”pieneksi '
+          + 'Manlyksi”, ja haita ja krokotiileja nähtiin usein, mutta '
           + 'se ei vähentänyt suosiota.'
           + '\n\n'
           + 'Vuosina 1969–1974 rannalla asui jopa 400 telttailijaa, ja '
@@ -52030,8 +51516,8 @@ export const NAHTAVYYSJUTUT = {
     },
     'Hotel Darwin': {
       aika: '1940',
-      teksti: 'Esplanadin hotelli tunnettiin lempinimellä "Grand Old '
-          + 'Duchess". Sen piirsi D. K. Turner toimistosta Stephenson '
+      teksti: 'Esplanadin hotelli tunnettiin lempinimellä ”Grand Old '
+          + 'Duchess”. Sen piirsi D. K. Turner toimistosta Stephenson '
           + 'and Turner, ja se rakennettiin vanhan Club Hotelin '
           + 'paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin '
           + 'heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta '
@@ -52050,7 +51536,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Seuraavana vuonna Laurance sai syytteen hinnaston '
           + 'puuttumisesta, ja ravintoloitsija lopetti oluen '
           + 'myymisen oikeudenkäynnin ajaksi — jaksoa on kutsuttu '
-          + 'hotellin "oluettomiksi, ilottomiksi päiviksi".'
+          + 'hotellin ”oluettomiksi, ilottomiksi päiviksi”.'
           + '\n\n'
           + 'Hotelli kesti sekä pommitukset että hirmumyrsky Tracyn, '
           + 'mutta ei 1990-lukua. Omistajat ilmoittivat 9. syyskuuta '
@@ -52384,8 +51870,8 @@ export const NAHTAVYYSJUTUT = {
           + 'setri- ja mahonkipuusta veistettyä parveketta, ja niiden '
           + 'jaotus on eri: oikeanpuoleisessa on kolme osaa ja '
           + 'vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun '
-          + 'vaakuna ja teksti "Tagle se llamó el que la sierpe mató y '
-          + 'con la infanta casó" — Tagleksi kutsuttiin sitä, joka '
+          + 'vaakuna ja teksti ”Tagle se llamó el que la sierpe mató y '
+          + 'con la infanta casó” — Tagleksi kutsuttiin sitä, joka '
           + 'tappoi käärmeen ja nai prinsessan. Eteisholvin seinät '
           + 'ovat sevillalaista kaakelia ja katto veistettyä puuta; '
           + 'sivuilla on matalat astinkivet, joilta talon naiset '
@@ -52405,8 +51891,8 @@ export const NAHTAVYYSJUTUT = {
         {
           tiedosto: 'Jr Ucayali, centro de Lima 02.jpg',
           lyhyt: 'Portaalin vaakunassa lukee tarina käärmeen tappaneesta ja prinsessan naineesta Taglesta.',
-          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä "Tagle se llamó '
-            + 'el que la sierpe mató y con la infanta casó".',
+          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä ”Tagle se llamó '
+            + 'el que la sierpe mató y con la infanta casó”.',
           lahde: 'Ibrehaut, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -52620,7 +52106,7 @@ export const NAHTAVYYSJUTUT = {
           + 'joka suunniteltiin vasta 1700-luvulla. Siellä '
           + 'allekirjoitettiin vuoden 1809 hallintoneuvoston asiakirja. '
           + 'Pääalttarilla riippuu Miguel de Santiagon 1600-luvulla '
-          + 'maalaama valtava teos "Pyhän Augustinuksen riemuvoitto"; '
+          + 'maalaama valtava teos ”Pyhän Augustinuksen riemuvoitto”; '
           + 'saman maalarin töitä on muuallakin talossa.',
       kuvat: [
         {
@@ -52722,8 +52208,8 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungin tapojen, ihmisten ja perinteiden läpi '
           + '1500-luvulta 1800-luvulle, toinen kertoo sairaalasta ja '
           + 'esittelee erään sen lääkärin kokoelman, ja kolmannen nimi '
-          + 'on "uusi yhteiskuntajärjestys murtautuu esiin: Quito '
-          + '1800-luvulla".'
+          + 'on ”uusi yhteiskuntajärjestys murtautuu esiin: Quito '
+          + '1800-luvulla”.'
           + '\n\n'
           + 'Heinäkuussa 2020 museo sai 69 esinettä takaisin '
           + 'Ecuadoriin. Ne oli vienyt maasta 1960-luvulla '
@@ -52747,7 +52233,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Kukkula on tulivuoriperäinen ja kohoaa kaupungin '
           + 'kattojen yli kaksisataa metriä; sen laki on 3 016 metriä '
           + 'merenpinnasta. Espanjalaiset antoivat sille nimen '
-          + 'Panecillo, "pieni leipä", muodon mukaan. Vanha nimi oli '
+          + 'Panecillo, ”pieni leipä”, muodon mukaan. Vanha nimi oli '
           + 'Yavirac, ja jesuiittahistorioitsija Juan de Velascon '
           + 'mukaan sen laella oli temppeli, jossa palvottiin '
           + 'aurinkoa, kunnes valloittajat hävittivät sen. Kukkulalle '
@@ -52764,16 +52250,15 @@ export const NAHTAVYYSJUTUT = {
           + 'on tavanomaista kuvastoa — mutta hänellä on siivet, ja '
           + 'quitolaisten mukaan hän on maailman ainoa siivekäs '
           + 'Madonna. Esikuva on Bernardo de Legardan vuonna 1734 '
-          + 'veistämä "Quiton Neitsyt", jota sanotaan tanssijattareksi, '
+          + 'veistämä ”Quiton Neitsyt”, jota sanotaan tanssijattareksi, '
           + 'koska se esittää liikkeessä olevaa hahmoa aikansa '
           + 'liikkumattomien madonnien sijaan. Patsaan pronssikilven '
           + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
       kuvat: [
         {
-          tiedosto: 'Virgen del Panecillo.jpg',
-          selite: 'Alumiininen Neitsyt seisoo kukkulan laella, ja rinne on '
-            + 'rakennettu täyteen taloja lakea myöten.',
-          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Vista de Quito desde El Panecillo, Ecuador, 2015-07-22, DD 60.JPG",
+          selite: "Quiton rinteille nousevat värikkäät talot näkyvät El Panecillon laelta; kukkula tarjoaa laajan näkymän pääkaupungin ylle.",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -52783,7 +52268,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Quito järjesti 1909 oman maailmannäyttelynsä. Syy oli '
           + 'sata vuotta täyttänyt itsenäisyystaistelu, ja '
           + 'näyttelypalatsi avattiin juhlallisesti 10. elokuuta 1909 '
-          + '— päivälleen sata vuotta "ensimmäisen vapaudenhuudon" '
+          + '— päivälleen sata vuotta ”ensimmäisen vapaudenhuudon” '
           + 'jälkeen. Itse näyttely aukesi 8. syyskuuta. Suojelijana '
           + 'toimi presidentti Eloy Alfaro, ja palkinnot jaettiin 28. '
           + 'syyskuuta.'
@@ -52862,10 +52347,10 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Papua-Uuden-Guinean kansalliskirjasto perustettiin '
           + '1978, kolme vuotta itsenäistymisen jälkeen. Se ei ollut '
           + 'maan oma hanke vaan Australian lahja: kirjasto '
-          + 'perustettiin sanoin "lahjana Papua-Uuden-Guinean '
-          + 'hallitukselle ja kansalle", ja tehtäväksi annettiin '
-          + '"auttaa kokoamaan kansallisesti merkittävien aineistojen '
-          + 'kokoelma".'
+          + 'perustettiin sanoin ”lahjana Papua-Uuden-Guinean '
+          + 'hallitukselle ja kansalle”, ja tehtäväksi annettiin '
+          + '”auttaa kokoamaan kansallisesti merkittävien aineistojen '
+          + 'kokoelma”.'
           + '\n\n'
           + 'Kokoelmassa on noin 56 000 nimikettä. Se ei ole pelkkä '
           + 'kirjavarasto: mukana on kirjojen lisäksi elokuvia ja '
@@ -53512,10 +52997,10 @@ export const NAHTAVYYSJUTUT = {
           + 'kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon '
           + 'espanjalaisperäisistä asukkaista halusi estää uuden '
           + 'kuninkaan tunnustamisen ja tarjosi Amador Buenolle '
-          + '"São Paulon kuninkaan" arvoa. Bueno kieltäytyi ja pakeni '
+          + '”São Paulon kuninkaan” arvoa. Bueno kieltäytyi ja pakeni '
           + 'luostariin kansanjoukkoa; munkkien avulla tilanne '
           + 'rauhoittui ja Juhana IV tunnustettiin. Vuonna 1650 '
-          + 'bandeirante Fernão Dias Pais, "smaragdinmetsästäjä", '
+          + 'bandeirante Fernão Dias Pais, ”smaragdinmetsästäjä”, '
           + 'kustansi korjauksen ja sai vastineeksi hautapaikan '
           + 'kirkosta; hänen jäännöksensä lepäävät yhä pääkirkkosalissa.'
           + '\n\n'
@@ -53688,8 +53173,8 @@ export const NAHTAVYYSJUTUT = {
           + 'Castro Alves, Álvares de Azevedo ja Fagundes Varela, '
           + 'juristi ja poliitikko Ruy Barbosa sekä kirjailija '
           + 'Monteiro Lobato. Talon edessä seisoo Álvares de Azevedon '
-          + 'patsas, jonka jalustassa lukee "Foi poeta, sonhou e amou '
-          + 'na vida" — hän oli runoilija, uneksi ja rakasti '
+          + 'patsas, jonka jalustassa lukee ”Foi poeta, sonhou e amou '
+          + 'na vida” — hän oli runoilija, uneksi ja rakasti '
           + 'elämässään.'
           + '\n\n'
           + 'Pihalla on hautakivi. Saksalainen professori Julius '
@@ -53987,11 +53472,10 @@ export const NAHTAVYYSJUTUT = {
           + 'piirustusta, käsintehtyä paperia ja veistoa.',
       kuvat: [
         {
-          tiedosto: 'Museu de Arte Moderna da Bahia Solar do Unhão Escada Helicoidal 2021-8567 01.jpg',
-          lyhyt: 'Lina Bo Bardin portaikon askelmat on liitetty vanhan myllyn puuhun ilman nauloja.',
-          selite: 'Lina Bo Bardin portaikko lähikuvassa: askelmat on liitetty '
-            + 'vanhan myllyn puuhun ilman nauloja tai betonia.',
-          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Lateral da Capela de Nossa Senhora da Conceição 2021-0960.jpg",
+          lyhyt: "Solar do Unhãon kappeli Salvadorissa",
+          selite: "Solar do Unhãon entisen kartanon alueen valkoinen kappeli punaisine ikkunoineen; kompleksi on nykyään Bahian nykytaiteen museo.",
+          lahde: "Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -54338,7 +53822,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja '
           + 'pääsiäisenä väkeä tulee paljon. Juuri siitä syntyi '
           + 'kaupungin pahin kirkko-onnettomuus: 9. huhtikuuta 1952 '
-          + 'joku huusi täydessä kirkossa "tulipalo", ja viisikymmentä '
+          + 'joku huusi täydessä kirkossa ”tulipalo”, ja viisikymmentä '
           + 'ihmistä kuoli tungoksessa jalkoihin. Neljäkymmentä '
           + 'ihmistä pidätettiin tapauksen johdosta. Rakennus '
           + 'julistettiin kansalliseksi historialliseksi kohteeksi '
@@ -54380,11 +53864,10 @@ export const NAHTAVYYSJUTUT = {
           + 'Cádizissa.',
       kuvat: [
         {
-          tiedosto: 'Galeria de Arte Nacional, em Caracas 23.JPG',
-          lyhyt: 'Salien renkaassa on marmoriveistos ja siirtomaa-ajasta nykypäivään ulottuvia maalauksia.',
-          selite: 'Salien renkaassa marmoriveistos osoittaa ulos kuvasta, ja '
-            + 'seinillä on maalauksia siirtomaa-ajalta nykypäivään.',
-          lahde: 'Béria Lima de Rodríguez, Wikimedia Commons (CC BY-SA 3.0)',
+          tiedosto: "Arturo Michelena 00.JPG",
+          lyhyt: "Arturo Michelena: Escenas del circo (1891), Galería de Arte Nacional",
+          selite: "Arturo Michelenan öljymaalaus Escenas del circo (1891) esittää sirkuksen kulisseja: balerinan, harlekiinin ja pierrot'n sekä koiran.",
+          lahde: "Arturo Michelena (k. 1898), Wikimedia Commons (Public domain)",
         },
       ],
       lahde: 'Wikipedia',
@@ -54467,7 +53950,7 @@ export const NAHTAVYYSJUTUT = {
    */
   bergen: {
     Nykirken: {
-      aika: '1621',
+      aika: '1622',
       teksti: 'Tämä osa Bergeniä kuului alun perin tuomiokirkon '
           + 'seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus '
           + 'perusti Strandenille oman seurakunnan ja antoi asukkaille '
@@ -54475,13 +53958,13 @@ export const NAHTAVYYSJUTUT = {
           + '1618 mennessä rahat oli kerätty ja tontti hankittu. '
           + 'Kirkko nousi arkkipiispan asuintalon raunioille — '
           + '1300-luvun kivitalon, joka oli palanut — ja piispa Nils '
-          + 'Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden '
+          + 'Paaske vihki sen 18. syyskuuta 1622 Pyhän Kolminaisuuden '
           + 'kirkoksi. Koska Bergenissä oli jo useita satoja vuosia '
           + 'vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, '
           + 'ja lempinimi jäi.'
         + '\n\n'
-        + 'Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi '
-          + 'vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti '
+        + 'Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi vain noin '
+          + 'seitsemän kuukautta ja paloi 6. huhtikuuta 1623; se rakennettiin heti '
           + 'samanlaisena uudelleen. Vuonna 1643 kirkkosalia '
           + 'laajennettiin, 1660 tuli taas palo, ja korjaus valmistui '
           + '1670 uuden poikkisiiven kanssa. Heinäkuun 23. ja 24. '
@@ -54518,8 +54001,7 @@ export const NAHTAVYYSJUTUT = {
       aika: '1667',
       teksti: 'Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, '
           + 'ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan '
-          + 'mereen. Työn aloitti hollantilainen insinööri, '
-          + 'kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan '
+          + 'mereen. Suunnitelmassa oli maan '
           + 'puolella kolme bastionia ja yksi puolibastioni ja '
           + 'kallion puolella pelkkä muuri. Linnake rakennettiin '
           + '1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen '
@@ -54527,8 +54009,8 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta '
           + 'kun Christian V:n poika Christian Gyldenløve tarkasti '
-          + 'Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 '
-          + 'linnake oli valmis — yksinkertaisempana kuin '
+          + 'Bergenin 1695, työt käynnistyivät uudelleen, ja kesällä '
+          + '1702 linnake oli valmis — yksinkertaisempana kuin '
           + 'alkuperäisessä suunnitelmassa. Katten-bastioni oli '
           + 'noussut jo 1666 sinne, missä nykyään on Nordnesin '
           + 'puisto, ja lavettitalot rakennettiin sotilasvarastoiksi '
@@ -54578,14 +54060,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Hovedøyan luostariin, sisterssiläiset rakensivat talot '
           + 'uudelleen, ja birgittalaiset palasivat 1480.'
         + '\n\n'
-        + 'Uskonpuhdistuksessa luostari lakkautettiin. Bergenin '
-          + 'piispa otti sen asunnokseen ja käytti luostarikirkkoa '
-          + 'tuomiokirkkonaan, mutta koko rakennusryhmä paloi 1536. '
+        + 'Luostari lakkautettiin 1531, ennen virallista '
+          + 'uskonpuhdistusta, ja piispa suostui purkamaan lähes koko '
+          + 'rakennusryhmän. Loput paloivat 1536 arkkipiispa Olavin '
+          + 'kapinan yhteydessä, eikä luostaria rakennettu uudelleen. '
           + 'Kirkko oli ollut noin 32 metriä pitkä ja 11 leveä, ja '
           + '1200-luvulla siihen oli lisätty länsitorni. Kaivauksissa '
           + '1857 ja 1860 löytyi hienosti veistettyjä rakennusosia, '
-          + 'muun muassa Nicolay Nicolaysenin löytämä kuningas '
-          + 'Øystein I:n marmoripää, jota pidetään vanhimpana '
+          + 'muun muassa kuningas Øystein I:n marmoripää, jota pidetään vanhimpana '
           + 'tunnettuna norjalaisen muotokuvana. Muureja oli tuolloin '
           + 'vielä pystyssä noin 2,4 metrin korkeuteen, mutta ne '
           + 'purettiin kaivausten jälkeen.',
@@ -54624,7 +54106,7 @@ export const NAHTAVYYSJUTUT = {
           + 'vuoteen 2002, jolloin useat Bergenin keskustan '
           + 'seurakunnat yhdistettiin. Sen jälkeen se ei ole ollut '
           + 'tavallinen seurakuntakirkko: se luovutettiin Kirkens '
-          + 'Bymisjonille, ja nykyään se on "avoin kirkko", jossa on '
+          + 'Bymisjonille, ja nykyään se on ”avoin kirkko”, jossa on '
           + 'joka päivä väkeä vastassa. Sisään voi tulla hiljaisuuden '
           + 'takia, sytyttämään kynttilän, juttelemaan, '
           + 'jumalanpalvelukseen tai kuuntelemaan musiikkia, ja työstä '
@@ -54806,11 +54288,10 @@ export const NAHTAVYYSJUTUT = {
           + 'arboretum.',
       kuvat: [
         {
-          tiedosto: 'Bergen-University-modf.jpg',
-          lyhyt: 'Vuoden 1865 museotalon edessä on perustaja Christien patsas ja kivileijona.',
-          selite: 'Vuoden 1865 museotalon edessä seisoo perustajan Wilhelm '
-            + 'Frimann Koren Christien patsas ja sen juurella kivileijona.',
-          lahde: 'Floflo, muokannut Aqwis, Wikimedia Commons (CC BY-SA 2.5)',
+          tiedosto: "Naturhistorisk museum 2025.jpg",
+          lyhyt: "Luonnonhistoriallinen museo, Bergen",
+          selite: "Bergenin yliopistomuseon luonnonhistoriallisen museon vaalea rakennus pyöreine päätyosineen näkyy museopuutarhan puolelta.",
+          lahde: "EllenGrong, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -54891,7 +54372,7 @@ export const NAHTAVYYSJUTUT = {
         + 'Vierailijoiden lista on pitkä ja kirjava. Kahvilassa ovat '
         + 'istuneet muun muassa Beatles ja Rolling Stones sekä '
         + 'espanjalainen kirjailija Juan Goytisolo. Laulaja-lauluntekijä '
-        + 'Luis Eduardo Aute omisti paikalle kappaleen "Hafa Café" '
+        + 'Luis Eduardo Aute omisti paikalle kappaleen ”Hafa Café” '
         + 'levyllään Slowly.',
       kuvat: [
         {
@@ -55196,9 +54677,9 @@ export const NAHTAVYYSJUTUT = {
         + 'on koristeltu maalatuin ja taltatuin kasviaihein.'
         + '\n\n'
         + 'Sisällä vaakapalkin yläpuolella on leveä stukkofriisi, jonka '
-        + 'kahdeksansakaraista tähtikuviota kutsutaan nimellä "Mtemmen '
-        + 'maa\'kous". Sen molemmin puolin kapeammissa friiseissä toistuu '
-        + 'ylistys "kunnia Jumalalle". Palkkiin oli maalattu runosäe, joka '
+        + 'kahdeksansakaraista tähtikuviota kutsutaan nimellä ”Mtemmen '
+        + 'maa\'kous”. Sen molemmin puolin kapeammissa friiseissä toistuu '
+        + 'ylistys ”kunnia Jumalalle”. Palkkiin oli maalattu runosäe, joka '
         + 'on sittemmin kadonnut; se tunnetaan vain vanhasta valokuvasta '
         + 'ja piirroksesta. Medinassa on kaikkiaan 45 juomavesilähdettä, '
         + 'ja niiden koko kertoo korttelin koosta.',
@@ -55339,7 +54820,7 @@ export const NAHTAVYYSJUTUT = {
         + 'katto lepää kahdentoista carraranmarmorisen pylvään varassa.'
         + '\n\n'
         + 'Aikanaan nekropoli eristettiin ympäröivistä kaduista ja '
-        + 'unohtui. Marokon muinaismuistoviranomainen "löysi" sen '
+        + 'unohtui. Marokon muinaismuistoviranomainen ”löysi” sen '
         + 'uudelleen 1917 ja aloitti tarkan ennallistuksen, jossa '
         + 'puuttuvat koristeet tehtiin säilyneiden osien mallin mukaan; '
         + 'samalla paikka avattiin ensi kertaa yleisölle. Monet '
@@ -55377,7 +54858,7 @@ export const NAHTAVYYSJUTUT = {
         + 'kaarta kiertävät vuorottelevat puolikaaret, kulmissa on '
         + 'kasviaiheita ja kummankin keskellä kaiverrettu simpukka, ja '
         + 'kaiken kehyksenä kulkee Koraanin al-Hijr-suuran katkelmia '
-        + 'lehväkufilaisin kirjaimin. Nimen alkuperä on epäselvä: "agnaou" '
+        + 'lehväkufilaisin kirjaimin. Nimen alkuperä on epäselvä: ”agnaou” '
         + 'on todennäköisesti berberiä, ja sille on kirjattu useita '
         + 'merkityksiä. Kivi on kärsinyt laastin liukoisista suoloista ja '
         + 'ilmansaasteista.',
@@ -55981,12 +55462,6 @@ export const NAHTAVYYSJUTUT = {
           + 'käsikirjasto, islamilainen keskus ja ylimmän imaamin '
           + 'asunto.',
       kuvat: [
-        {
-          tiedosto: 'LAGOS CENTRAL MOSQUE.jpg',
-          selite: 'Moskeijan kaarikäytävä ja kaksi minareettia kohoavat '
-            + 'suoraan torikadun päivänvarjojen yläpuolelle.',
-          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -56017,10 +55492,9 @@ export const NAHTAVYYSJUTUT = {
           + 'viisikymmentä vuotta myöhemmin.',
       kuvat: [
         {
-          tiedosto: 'Stutues of orishas in Tinubu square, Lagos.jpg',
-          selite: 'Aukion pronssiveistokset nähtynä pyöreän aukon läpi; '
-            + 'taustalla kohoavat keskustan tornit.',
-          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "An old Brazilian building at Tinubu square, Lagos.jpg",
+          selite: "Vanha brasilialaistyylinen rakennus Tinubun aukion laidalla Lagosin saarella; edessä seisoo keltaisia minibusseja.",
+          lahde: "Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Wikipedia',
@@ -56549,7 +56023,7 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Nimi on paljon vanhempi kuin portti. Erään selityksen '
           + 'mukaan se on kansanomainen väännös ilmauksesta Abu '
-          + 'al-Junud, "sotilaiden isä", ja viittaa portin '
+          + 'al-Junud, ”sotilaiden isä”, ja viittaa portin '
           + 'länsipuolella olleeseen paraatikenttään. Vanha Bab Bou '
           + 'Jeloud oli vaatimaton portti, joka saattoi olla peräisin '
           + '1100-luvulta; sen käytävä kulki muurin suuntaisesti, '
@@ -56876,7 +56350,7 @@ export const NAHTAVYYSJUTUT = {
         {
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-4-r20260907-v2.jpg',
           selite: 'Dakarin historiallisen Pasteur-instituutin nykyistä '
-            + 'pääsisäänkäyntiä mukaileva tekoälykuvitus.',
+            + 'pääsisäänkäyntiä mukaileva tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Institut '
             + 'Pasteur de Dakar — laitoksen oma esittely; Action Santé '
             + 'Mondiale — vierailu Dakarin Pasteur-instituutissa',
@@ -57028,7 +56502,7 @@ export const NAHTAVYYSJUTUT = {
         {
           osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-6-r20260907-v1.jpg',
           selite: 'Dakarin suuren moskeijan todellista julkisivua ja '
-            + 'minareettia mukaileva tekoälykuvitus.',
+            + 'minareettia mukaileva tekoälyn havainnekuva.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Wikimedia '
             + 'Commons — Grande mosquée de Dakar',
         },
@@ -57309,7 +56783,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Argentiinan lipun ensimmäistä kertaa cabildon '
           + 'parvekkeelle. Talo palveli poliisia ja hallintoa '
           + '1880-luvulle asti; lähteet antavat loppuvuodeksi sekä '
-          + '1888 että "1880 ja yhdeksän vuotta myöhemmin", eikä '
+          + '1888 että ”1880 ja yhdeksän vuotta myöhemmin”, eikä '
           + 'kumpikaan ole varmempi. Sitten se myytiin julkisella '
           + 'huutokaupalla yksityisille, ja siinä asuttiin, myytiin '
           + 'tavaraa ja pidettiin hotellia. Osa purettiin: '
@@ -57395,8 +56869,8 @@ export const NAHTAVYYSJUTUT = {
           + 'veistetty käsin algarrobo-puusta vuonna 1762. Sen '
           + 'pielissä on pylväät, jotka kannattavat kaksoiskaaren '
           + 'muotoista kamanaa, ja keskellä on lehtiaihe ja Kristuksen '
-          + 'nimikirjaimet. Kylkeen on kaiverrettu "Don Pedro '
-          + 'Balentín de la Cámara, año 1762". Ovi tuli talosta, ja '
+          + 'nimikirjaimet. Kylkeen on kaiverrettu ”Don Pedro '
+          + 'Balentín de la Cámara, año 1762”. Ovi tuli talosta, ja '
           + 'se asennettiin luostarin uuteen sisäänkäyntiin 1847, kun '
           + 'vanha sairaalanovi kapelin vieressä muurattiin umpeen. '
           + 'Monumentti vuodesta 1941.',
@@ -57424,8 +56898,8 @@ export const NAHTAVYYSJUTUT = {
           + 'puolustuksen gaucho-ratsumiehistä, jotka opetettiin '
           + 'sissitaktiikkaan. Kuninkaanmielinen kenraali Joaquín de '
           + 'la Pezuela kirjoitti Perun varakuninkaalle, että '
-          + 'Güemesin väki kävi "melkein rankaisematta hidasta mutta '
-          + 'väsyttävää ja vahingollista sotaa". Vuonna 1817 '
+          + 'Güemesin väki kävi ”melkein rankaisematta hidasta mutta '
+          + 'väsyttävää ja vahingollista sotaa”. Vuonna 1817 '
           + 'espanjalainen sotamarsalkka de la Serna marssi Saltaan '
           + 'suuren joukon kanssa ja saapui kaupunkiin '
           + 'huhtikuussa — mutta väestö ei antautunut, ja joukot '
@@ -57442,10 +56916,9 @@ export const NAHTAVYYSJUTUT = {
           + '1931. Sen takaa alkavat kiviportaat huipulle.',
       kuvat: [
         {
-          tiedosto: 'Monumento a Guemes - Salta.JPG',
-          selite: 'Ratsastajapatsas piirtyy iltataivasta vasten kivikasan '
-            + 'päällä kaupungin yläpuolella.',
-          lahde: 'Gabo2013, Wikimedia Commons (CC BY-SA 4.0)',
+          tiedosto: "Vista panorámica de la Ciudad de Salta 2.JPG",
+          selite: "Salta levittyy laaksoon punaisine kattoineen ja kerrostaloineen; näkymä avautuu Cerro San Bernardon rinteeltä kohti sumuista vuoristoa.",
+          lahde: "Marcos Combet, Wikimedia Commons (CC BY-SA 4.0)",
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
@@ -58357,39 +57830,6 @@ export const NAHTAVYYSJUTUT = {
    * helmikuusta 1983. Molemmat kerrotaan.
    */
   puntaarenas: {
-    'Lampuripatsas': {
-      aika: '1944 ja 1962',
-      teksti: 'Avenida Bulnesin keskikaistalla seisoo '
-          + 'kaksitoistaosainen veistosryhmä luonnollisessa koossa. '
-          + 'Siinä lampuri kestää pampan tuulta hevosensa ohjakset '
-          + 'toisessa kädessä ja ruoska toisessa, jolla hän ohjaa '
-          + 'lampaitaan. Ryhmä on kaupungin tunnetuin ulkoveistos ja '
-          + 'seisoo juuri sillä kadulla, jonka varrella ovat myös '
-          + 'salesiaanien museo ja hautausmaa.'
-          + '\n\n'
-          + 'Aloite tuli kenraali Ramón Cañas Montalvalta, ja teoksen '
-          + 'lahjoitti Francisco Campos Torreblanca. Ensimmäinen '
-          + 'versio oli graniittia, ja se paljastettiin 1944 '
-          + 'tasavallan presidentin Juan Antonio Ríosin läsnä '
-          + 'ollessa.'
-          + '\n\n'
-          + 'Nykyinen pronssiveistos paljastettiin 1. huhtikuuta '
-          + '1962, jotta teos kestäisi ikuisesti. Graniittinen '
-          + 'ensimmäinen versio ei joutunut varastoon: Punta Arenas '
-          + 'lahjoitti sen naapurialueen pääkaupungille Coyhaiquelle, '
-          + 'jossa se seisoo nykyään Avenida Baquedanon '
-          + 'keskikaistalla joen rinnalla kaupungin pohjoislaidassa.',
-      kuvat: [
-        {
-          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
-          lyhyt: 'Pronssinen lammaslauma kulkee kadun keskikaistaa lampurin johdattamana.',
-          selite: 'Pronssinen lammaslauma kulkee kadun keskikaistaa '
-            + 'pitkin, ja lampuri johtaa sitä hevosineen ja koirineen.',
-          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
-    },
     'Sara Braunin hautausmaa': {
       aika: '1894',
       teksti: 'Avenida Bulnesin varrella on neljän hehtaarin '
@@ -58563,6 +58003,16 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Palatsin liuskekivikatto ja pyöreä kulmatorni näkyvät '
             + 'katua reunustavan takorauta-aidan takaa.',
           lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
+          lyhyt: 'Avenida Bulnesin keskikaistalla on kaksitoistaosainen lampuripatsas, muistomerkki lammastiloille jotka vaurastuttivat myös tämän palatsin.',
+          selite: 'Avenida Bulnesin keskikaistalla seisoo kaksitoistaosainen '
+            + 'lampuripatsas: pronssinen lammaslauma kulkee lampurin '
+            + 'johdattamana — muistomerkki sille lammastilojen '
+            + 'vaurastuttamalle Patagonialle, joka teki myös tästä '
+            + 'palatsista mahdollisen.',
+          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
@@ -58919,8 +58369,8 @@ export const NAHTAVYYSJUTUT = {
           + 'neliömetrillä ja kokoelmassa 1 325 esinettä, joista vain '
           + 'osa on kerrallaan esillä. Esineistä tunnetuimpia ovat '
           + 'Porfirio Díazin vaunut, 1800-luvun kastemalja ja Servando '
-          + 'Teresa de Mierin kirjapaino. Salissa nimeltä "Nuestros '
-          + 'caudillos" riippuu Santiago Vidaurrin muotokuva. Kukkulan '
+          + 'Teresa de Mierin kirjapaino. Salissa nimeltä ”Nuestros '
+          + 'caudillos” riippuu Santiago Vidaurrin muotokuva. Kukkulan '
           + 'laella on lisäksi näköalapaikka ja monumenttilippu.',
       kuvat: [
         {
@@ -60238,7 +59688,7 @@ export const NAHTAVYYSJUTUT = {
           + 'miekkamuseoksi.'
         + '\n\n'
         + 'Tarinaa kannattaa lukea niin kuin lähde sen kertoo. '
-          + 'Wikipedia käyttää sanaa "uskotaan" ja merkitsee saman '
+          + 'Wikipedia käyttää sanaa ”uskotaan” ja merkitsee saman '
           + 'artikkelin toisen väitteen — että eurooppalaiset '
           + 'olisivat yrittäneet irrottaa Anokyen tikaria '
           + 'viidensadan vuoden ajan — lähteettömäksi. Miekka on '
@@ -60305,7 +59755,7 @@ export const NAHTAVYYSJUTUT = {
           + 'syntyi kaksi lähetysasemaa ja kaksi koulua. Hanke ei '
           + 'ollut suosittu: sotilaallisen valloituksen jälkeen '
           + 'lähetystyötä pidettiin siirtomaavallan jatkeena ja '
-          + 'kristinuskoa "voittajan uskontona".'
+          + 'kristinuskoa ”voittajan uskontona”.'
         + '\n\n'
         + 'Vuoteen 1900 mennessä Baselin lähetyksellä oli Kumasissa '
           + 'kuusitoista koulua ja niissä 311 oppilasta. Kappeli '
@@ -60337,12 +59787,6 @@ export const NAHTAVYYSJUTUT = {
           + 'alkulohko-ottelua ja välierän, 2000 seitsemän ottelua ja '
           + '2008 uudestaan.',
       kuvat: [
-        {
-          tiedosto: 'Baba Yara Sports Stadium in Kumasi.jpg',
-          selite: 'Iltaottelussa valonheittimet valaisevat kentän ja '
-            + 'keltaiset katsomot täyttyvät reunoja myöten.',
-          lahde: 'Michael Schubert, Wikimedia Commons (PD)',
-        },
       ],
       lahde: 'Wikipedia',
     },
@@ -61303,10 +60747,10 @@ export const NAHTAVYYSJUTUT = {
           + 'Djennéssä hän oli maaliskuussa 1828.'
         + '\n\n'
         + 'Kaupunki ei vastannut sitä, mitä Euroopassa oli luvattu. '
-          + 'Caillié kirjoitti: "Olin muodostanut aivan toisenlaisen '
+          + 'Caillié kirjoitti: ”Olin muodostanut aivan toisenlaisen '
           + 'käsityksen Timbuktun mahtavuudesta ja rikkaudesta. '
           + 'Kaupunki ei ensi näkemältä ollut muuta kuin joukko '
-          + 'rumannäköisiä, savesta rakennettuja taloja." Hän vietti '
+          + 'rumannäköisiä, savesta rakennettuja taloja.” Hän vietti '
           + 'täällä kaksi viikkoa ja lähti 4. toukokuuta 1828 '
           + 'karavaanin mukana, jossa oli noin kuusisataa kamelia — '
           + 'hän antoi kirjassaan kaksi eri lukua, leipätekstissä '
@@ -61424,9 +60868,9 @@ export const NAHTAVYYSJUTUT = {
         + '\n\n'
         + 'Barth arvosteli edeltäjänsä Caillién kuvausta kaupungista. '
           + 'Caillién piirroksissa talot seisoivat erillään, mutta '
-          + 'Barthin mukaan "todellisuudessa kadut ovat kokonaan '
+          + 'Barthin mukaan ”todellisuudessa kadut ovat kokonaan '
           + 'suljettuja, sillä asunnot muodostavat yhtenäisiä, '
-          + 'katkeamattomia rivejä". Talosta, jossa Barth asui, on '
+          + 'katkeamattomia rivejä”. Talosta, jossa Barth asui, on '
           + 'valokuva vuodelta 1908 — otettu ennen kuin rakennus '
           + 'sortui.',
       lahde: 'Wikipedia',
@@ -61438,10 +60882,10 @@ export const NAHTAVYYSJUTUT = {
           + 'tuaregnaisen rahoituksella. Se sijaitsi Sankorén '
           + 'kaupunginosassa, jossa asui suurin osa kaupungin '
           + 'berbereistä ja arabeista. Nimi tarkoittaa songhaiksi '
-          + 'valkoisia mestareita tai valkoisia ylimyksiä; "valkoinen" '
+          + 'valkoisia mestareita tai valkoisia ylimyksiä; ”valkoinen” '
           + 'viittaa vaaleaihoisiin sanhaja-berbereihin. Kronikan '
           + 'ranskantajat Octave Houdas ja Maurice Delafosse '
-          + 'käänsivät nimen muotoon "ylimysten kaupunginosa".'
+          + 'käänsivät nimen muotoon ”ylimysten kaupunginosa”.'
         + '\n\n'
         + 'Rakennus on savea ja puupalkkeja, ja se on pienempi ja '
           + 'koristelultaan vaatimattomampi kuin Djennén suuri '
@@ -62143,8 +61587,8 @@ export const NAHTAVYYSJUTUT = {
         + 'Kumibuumin aikaan täällä yöpyivät kumiherrat ja '
           + 'eurooppalaiset kauppiaat. Vuodesta 1961 talossa on '
           + 'toiminut Itäisen sotilasalueen esikunta. Rakennus on '
-          + 'kuvattu Perun yhden solin kolikossa nimellä "Antiguo '
-          + 'Hotel Palace, 1912".',
+          + 'kuvattu Perun yhden solin kolikossa nimellä ”Antiguo '
+          + 'Hotel Palace, 1912”.',
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Malecón Tarapacá': {
@@ -62517,7 +61961,7 @@ export const NAHTAVYYSJUTUT = {
     'Weaver & Devoren kauppa': {
       aika: '1936',
       teksti: 'Turkiskauppiaat ja vesikulkijat Harry Weaver ja Ellis '
-          + '"Bud" Devore tulivat Peace Riveristä Albertasta ja tekivät '
+          + '”Bud” Devore tulivat Peace Riveristä Albertasta ja tekivät '
           + 'ensimmäisen kauppamatkansa Yellowknife Baylle kesällä '
           + '1936, kun kaivostoiminta oli juuri vilkastunut. Seuraavana '
           + 'vuonna he pystyttivät pysyvän hirsisen kauppa-aseman.'
@@ -62541,7 +61985,7 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Old Townissa on noin sadanviidenkymmenen metrin mittainen '
           + 'päällystämätön asuinkatu, jota on kutsuttu yhdeksi Kanadan '
           + 'kuuluisimmista. Nimi tarkoittaa suunnilleen '
-          + '"riekaleiskatu" ja on peräisin sanonnasta, jolla '
+          + '”riekaleiskatu” ja on peräisin sanonnasta, jolla '
           + 'kuvataan täysin rahatonta ihmistä. Sitä ennen katu '
           + 'tunnettiin nimellä Privy Road eli huussitie, koska sen '
           + 'varrella oli paljon ulkohuusseja.'
@@ -63163,7 +62607,7 @@ export const NAHTAVYYSJUTUT = {
           + 'Fen oman rakennustyylin keskeisistä nimistä.'
           + '\n\n'
           + 'Kokoelma jakautuu neljään siipeen. Girardin siiven näyttely '
-          + '"Multiple Visions: A Common Bond" avattiin 1982 ja esittää '
+          + '”Multiple Visions: A Common Bond” avattiin 1982 ja esittää '
           + 'leluja, nukkeja, pukuja, naamioita, tekstiilejä ja '
           + 'uskonnollista kansantaidetta yli sadasta maasta; sen '
           + 'suunnitteli lahjoittaja itse, arkkitehti ja muotoilija '
@@ -63174,4 +62618,4780 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * BRYSSEL (23.9.2026): kohdekartan seitsemän kohdetta
+   * (maakartat.js KAUPUNKIKARTAT.bryssel). Tekstit en-Wikipedian
+   * kohdeartikkeleista 1873-katseella; nämä voittavat kohteiden omat
+   * `teksti`-kentät (Oikeuspalatsi, Mont des Arts) nahtavyydet.js:n
+   * yhdistyksessä.
+   */
+  bryssel: {
+    'Brysselin pörssi': {
+      aika: '1868–1873',
+      teksti: 'Brysselin pörssi perustettiin Napoleonin määräyksellä '
+          + 'vuonna 1801. Aluksi kaupankävijät kokoontuivat entisessä '
+          + 'augustinolaisluostarissa, sitten La Monnaie -teatterissa ja '
+          + 'lopulta vuokratalossa. Kun Belgian teollisuus kasvoi '
+          + '1850-luvulla, ahtaat ja epäterveelliset tilat eivät enää '
+          + 'riittäneet, ja liike-elämä alkoi vaatia kaupungilta kunnon '
+          + 'pörssirakennusta.'
+          + '\n\n'
+          + 'Isoisän matkan vuonna 1873 uusi pörssipalatsi on juuri '
+          + 'valmistumassa Anspachin bulevardin varrelle. Sen suunnitteli '
+          + 'arkkitehti Léon-Pierre Suys eklektiseen tyyliin, jossa '
+          + 'uusrenessanssi yhdistyy Ranskan toisen keisarikunnan '
+          + 'loistoon, ja se nousi vuosina 1868–1873 entisen voitorin '
+          + 'paikalle — tori oli puolestaan rakennettu 1200-luvulla '
+          + 'perustetun fransiskaaniluostarin raunioille. Julkisivun '
+          + 'runsaita veistoksia tekivät muun muassa Jacquet-veljekset, '
+          + 'ranskalainen Albert-Ernest Carrier-Belleuse ja hänen '
+          + 'silloinen apulaisensa, nuori Auguste Rodin.'
+          + '\n\n'
+          + 'Palatsi palveli pörssinä yli sata vuotta. Tulipalo vaurioitti '
+          + 'sitä marraskuussa 1990, ja vuonna 1996 kaupankäynti siirtyi '
+          + 'kokonaan tietokoneille, jolloin meklarien päivittäiset '
+          + 'kokoontumiset salissa loppuivat. Vuonna 2000 Brysselin pörssi '
+          + 'yhdistyi Pariisin ja Amsterdamin pörssien kanssa Euronextiksi, '
+          + 'ja 2015 se muutti pois liian suureksi käyneestä palatsista.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles. Bourse Late 19th-begin 20th century barcode 800000030846.jpg',
+          lyhyt: 'Uusi pörssipalatsi valokuvassa, johon on merkitty vuosiluku 1873.',
+          selite: 'Uusi pörssipalatsi kupoleineen ja pylväskäytävineen '
+            + 'valokuvassa, jonka kulmaan on merkitty vuosiluku 1873 — '
+            + 'rakennus sellaisena kuin se valmistui isoisän matkan aikaan.',
+          lahde: 'Tuntematon kuvaaja (Gentin yliopiston kirjasto), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manneken Pis': {
+      aika: '1619',
+      teksti: 'Manneken Pis on 55,5 senttimetrin korkuinen pronssinen '
+          + 'suihkulähdepatsas, joka esittää alastonta poikaa pissaamassa '
+          + 'altaaseen. Suihkulähde mainitaan jo vuosien 1451–1452 '
+          + 'asiakirjassa kaupungin vesijohdoista, ja alun perin se jakoi '
+          + 'asukkaille juomavettä. Nykyisen hahmon muotoili kuvanveistäjä '
+          + 'Jérôme Duquesnoy vanhempi kaupunginneuvoston tilauksesta '
+          + 'vuonna 1619, ja sinisestä kivestä tehty rokokoosyvennys on '
+          + 'vuodelta 1770.'
+          + '\n\n'
+          + 'Patsasta on varastettu ja rikottu monta kertaa. Vuonna 1817 '
+          + 'vapautettu vanki Antoine Licas vei sen, ja patsas hajosi '
+          + 'yhteentoista palaan. Varas tuomittiin elinkautiseen '
+          + 'pakkotyöhön, ja ensin hänet sidottiin tunniksi häpeäpaaluun '
+          + 'Grand-Placella. Palat koottiin ja niistä valettiin uusi '
+          + 'pronssi, jonka jalustaan merkittiin ”1620 – REST 1817”. '
+          + 'Isoisän aikaan patsasta ympäröi vuonna 1851 tehty takorautainen '
+          + 'aita, joka esti pääsyn veteen: juomavesilähteestä oli tullut '
+          + 'pelkkä koriste ja kaupungin vertauskuva.'
+          + '\n\n'
+          + 'Pojan pukeminen on vanha perinne: ensimmäisen pukunsa hän sai '
+          + 'vuonna 1698. Kerrotaan, että kun ranskalaiset sotilaat olivat '
+          + '1747 yrittäneet viedä patsaan, kuningas Ludvig XV lepytteli '
+          + 'kaupunkilaisia lahjoittamalla kullalla kirjaillun '
+          + 'brokadiasun. Nykyään vaatekaapissa on noin tuhat pukua. '
+          + 'Vuoden 1965 varkauden jälkeen paikalla on ollut kopio, ja '
+          + 'alkuperäinen on Brysselin kaupunginmuseossa Grand-Placella.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles Manneken Pis.jpg',
+          lyhyt: 'Manneken Pis sinisen kiven rokokoosyvennyksessään.',
+          selite: 'Manneken Pis sinisen kiven rokokoosyvennyksessään. '
+            + 'Paikalla on vuodesta 1965 ollut kopio; alkuperäinen '
+            + 'pronssi on Brysselin kaupunginmuseossa.',
+          lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oikeuspalatsi': {
+      aika: '1866–1883',
+      teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja '
+          + 'siellä istuu muun muassa maan korkein oikeus. Se seisoo '
+          + 'Galgenbergin kukkulalla ylä- ja alakaupungin välissä: nimi '
+          + 'tarkoittaa hirsipuumäkeä, sillä keskiajalla tuomitut '
+          + 'hirtettiin täällä. Kaupungin edellinen oikeustalo oli '
+          + 'rakennettu vasta 1818–1823, mutta se rapistui niin nopeasti, '
+          + 'että uutta ja suurempaa alettiin suunnitella jo 1837.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan palatsi on vielä työmaa. Peruskivi '
+          + 'muurattiin 31. lokakuuta 1866 arkkitehti Joseph Poelaertin '
+          + 'piirustusten mukaan, mutta Poelaert kuoli 1879 eikä nähnyt '
+          + 'työtä valmiina; kuningas Leopold II vihki rakennuksen 15. '
+          + 'lokakuuta 1883. Työmaan tieltä purettiin osa Marollesin '
+          + 'kaupunginosaa, ja satakunta vaatimatonta asukasta joutui '
+          + 'muuttamaan. Moni syytti Poelaertia, ja ”schieven architect”, '
+          + 'häpeällinen arkkitehti, tuli Marollesin murteen pahimpiin '
+          + 'haukkumasanoihin.'
+          + '\n\n'
+          + 'Valmistuessaan palatsi oli maailman suurin rakennus: 160 kertaa '
+          + '150 metriä, pohja-alaltaan 26 006 neliömetriä eli suurempi '
+          + 'kuin Rooman Pietarinkirkko, ja kupoli nousee 105 metriin. '
+          + 'Kustannusarvio oli alle neljä miljoonaa frangia, mutta lasku '
+          + 'ylitti 50 miljoonaa — koko maan yhden vuoden julkisten töiden '
+          + 'verran. Toisen maailmansodan lopussa perääntyvät saksalaiset '
+          + 'sytyttivät palatsin, ja kupoli romahti; uusi rakennettiin '
+          + '2,5 metriä alkuperäistä korkeammaksi. Kunnostus alkoi 1984, '
+          + 'ja telineet ovat yhä paikoillaan.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles. Palais de Justice. Façade principale Late 19th-begin 20th century barcode 800000060227.jpg',
+          lyhyt: 'Oikeuspalatsin pääjulkisivu ja alkuperäinen kupoli vanhassa kuvaplanssissa.',
+          selite: 'Oikeuspalatsin pääjulkisivu 1800-luvun lopun tai '
+            + '1900-luvun alun kuvaplanssissa. Kupoli on vielä '
+            + 'alkuperäinen, matalampi versio, joka tuhoutui toisen '
+            + 'maailmansodan lopussa.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grand-Place': {
+      aika: '1695–1699',
+      teksti: 'Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä '
+          + 'ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla '
+          + 'kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla '
+          + 'seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, '
+          + 'jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys '
+          + 'Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, '
+          + 'jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen '
+          + 'olleen leipätorin mukaan, vaikka yksikään kuningas ei ole '
+          + 'siinä asunut.'
+          + '\n\n'
+          + 'Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija '
+          + 'alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin '
+          + 'osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori '
+          + '— ironista kyllä, sillä se oli tykistön päämaali. Killat ja '
+          + 'muut omistajat rakensivat aukion uudelleen neljässä vuodessa, '
+          + 'ja koska jokaisen piirustukset piti hyväksyttää viranomaisilla, '
+          + 'aukiosta tuli yllättävän yhtenäinen, vaikka goottilaisuus, '
+          + 'barokki ja Ludvig XIV:n tyyli sekoittuvat siinä.'
+          + '\n\n'
+          + 'Isoisän aikaan aukio on yhä kaupungin kauppatori, ja torina se '
+          + 'toimi vuoteen 1959 asti. Killat oli lakkautettu 1795, ja '
+          + 'kiltatalot olivat päässeet rapistumaan; herätys tuli 1853, '
+          + 'kun yksi taloista purettiin hevosraitiotien tieltä, ja '
+          + 'myöhemmin pormestari Charles Buls palautti aukion entiseen '
+          + 'loistoonsa. Victor Hugo oli asunut aukion laidalla 1852, ja '
+          + 'Charles Baudelaire piti Kuninkaan talossa esitelmiä '
+          + '1860-luvulla. Vuodesta 1998 aukio on ollut Unescon '
+          + 'maailmanperintökohde.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles Grand-Place Hôtel de Ville & No. 7-1.jpg',
+          lyhyt: 'Kaupungintalo tornineen ja kiltatalojen rivi Grand-Placella.',
+          selite: 'Kaupungintalo ja sen 96-metrinen torni; oikealla '
+            + 'aukion luoteislaidan kiltatalot numerot 1–7, jotka '
+            + 'rakennettiin uudelleen vuoden 1695 pommituksen jälkeen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galeries Royales Saint-Hubert': {
+      aika: '1846–1847',
+      teksti: 'Galeries Royales Saint-Hubert on kolmen lasikattoisen '
+          + 'kauppakäytävän kokonaisuus: Kuninkaan galleria, Kuningattaren '
+          + 'galleria ja Prinssien galleria. Nuori hollantilainen '
+          + 'arkkitehti Jean-Pierre Cluysenaar halusi pyyhkiä pois '
+          + 'hämärien kujien sokkelon, jonne porvarit tuskin uskalsivat, '
+          + 'ja korvata sen yli 200 metrin katetulla ostoskadulla. Idea '
+          + 'syntyi 1836, kaupunki hyväksyi sen 1845, ja rakentaminen '
+          + 'kesti kolmetoista kuukautta. Kuningas Leopold I poikineen '
+          + 'avasi 213 metrin käytävän 20. kesäkuuta 1847.'
+          + '\n\n'
+          + 'Tonttien lunastaminen oli kestänyt yhdeksän vuotta. Kerrotaan, '
+          + 'että yksi talonomistaja kuoli halvaukseen ja että eräs parturi '
+          + 'viilsi kurkkunsa, kun naapuritaloa purettiin. Viranomaisten '
+          + 'takaama rahoitus teki galleriasta kuitenkin menestyksen: se '
+          + 'oli ensimmäinen poliittisella tahdolla ja julkisin takuin '
+          + 'rakennettu katettu galleria, ja sitä pidetään Euroopan '
+          + 'ensimmäisenä todella julkisena kauppakäytävänä. Se edelsi '
+          + 'myös Milanon kuuluisaa Galleria Vittorio Emanuele II:ta.'
+          + '\n\n'
+          + 'Päätykolmion tunnuslause Omnibus omnia, ”kaikkea kaikille”, '
+          + 'piti paikkansa. Isoisän aikaan gallerioissa kävellään ja '
+          + 'istutaan kahviloissa Brysselin sateelta suojassa, ja '
+          + 'Kuninkaan galleriassa toimii Cluysenaarin suunnittelema '
+          + 'teatteri, joka avattiin samana kesänä kuin käytävätkin. '
+          + 'Vuoteen 1892 Café des Arts -nimellä toimineessa tavernassa '
+          + 'kävivät Victor Hugo, Alexandre Dumas, Charles Baudelaire ja '
+          + 'Paul Verlaine, ja maaliskuussa 1896 '
+          + 'gallerioissa näytettiin Lumièren veljesten liikkuvia kuvia '
+          + 'ensimmäistä kertaa Brysselin yleisölle.',
+      kuvat: [
+        {
+          tiedosto: 'Galeries royales Saint-Hubert, Bruselas, Bélgica, 2021-12-15, DD 14-16 HDR.jpg',
+          lyhyt: 'Galerian käytävä lasikattoineen ja kaarevine näyteikkunoineen.',
+          selite: 'Galeries Royales Saint-Hubertin käytävä: '
+            + 'valurautakehikkoinen lasikatto, kaarevat näyteikkunat ja '
+            + 'kahviloiden pöydät, kuten gallerioissa on ollut vuodesta '
+            + '1847.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mont des Arts': {
+      aika: '1910',
+      teksti: 'Mont des Arts eli Kunstberg, ”taiteiden mäki”, on '
+          + 'kulttuurikortteli Brysselin keskustan rinteessä: siellä ovat '
+          + 'Belgian kuninkaallinen kirjasto, valtionarkisto, '
+          + 'kongressikeskus ja maisema-arkkitehti René Pechèren '
+          + 'geometrinen puutarha. Isoisän matkan aikaan mitään tästä ei '
+          + 'vielä ole. Rinnettä peittää tiheään asuttu Saint-Rochin '
+          + 'kaupunginosa, ja rinteen vanha nimi Montagne de la Cour, '
+          + 'Hovin mäki, muistuttaa ylhäällä seisoneesta Coudenbergin '
+          + 'palatsista, joka paloi 1731.'
+          + '\n\n'
+          + 'Kuningas Leopold II halusi rinteelle taiteiden kaupunginosan '
+          + 'ja osti koko korttelin. Pormestari Charles Buls olisi '
+          + 'säilyttänyt vanhasta kaupunginosasta mahdollisimman paljon, '
+          + 'mutta kaupunginvaltuusto äänesti 19. marraskuuta 1894 '
+          + 'kuninkaan suunnitelman puolesta, ja Buls erosi viisi vuotta '
+          + 'myöhemmin. Vanhat talot purettiin 1897–1898, mutta rahaa ei '
+          + 'ollut, ja paikka jäi vuosiksi tyhjäksi. Vuoden 1910 '
+          + 'maailmannäyttelyä varten rinteeseen tehtiin väliaikainen '
+          + 'puisto portaineen ja porrastettuine suihkulähteineen, ja '
+          + 'kuningas Albert I vihki sen vuosi Leopold II:n kuoleman '
+          + 'jälkeen.'
+          + '\n\n'
+          + 'Väliaikaisesta puistosta tuli rakastettu, mutta se '
+          + 'purettiin, kun alueelle vuosina 1956–1969 rakennettiin '
+          + 'arkkitehtien Maurice Houyoux\'n ja Jules Ghobertin '
+          + 'järeät, geometriset rakennukset. Pechèren puutarha on tehty '
+          + 'pysäköintihallin betonikannen päälle, ja sen alapäässä on '
+          + 'kuningas Albert I:n ratsastajapatsas vuodelta 1951. '
+          + 'Ylhäältä avautuu yksi Brysselin tunnetuimmista näköaloista '
+          + 'kohti Grand-Placen kaupungintalon tornia.',
+      kuvat: [
+        {
+          tiedosto: 'Brussels, Jardin du Mont des Arts foto5 2015-06-07 14.01.jpg',
+          lyhyt: 'Mont des Artsin puutarha, Albert I:n patsas ja kaupungintalon torni.',
+          selite: 'Mont des Artsin geometrinen puutarha kesällä. '
+            + 'Keskellä kuningas Albert I:n ratsastajapatsas, taustalla '
+            + 'Grand-Placen kaupungintalon torni.',
+          lahde: 'Michielverbeek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuninkaanpalatsi': {
+      aika: '1815–1909',
+      teksti: 'Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen '
+          + 'palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa '
+          + 'vastaan vieraita ja järjestää suuret vastaanotot. Asunto se '
+          + 'ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin '
+          + 'pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin '
+          + 'palatsin mailla. Sen suuressa salissa keisari Kaarle V '
+          + 'luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, '
+          + 'mutta helmikuun 1731 tulipalo tuhosi palatsin lähes '
+          + 'kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin '
+          + 'pääsee tutustumaan.'
+          + '\n\n'
+          + 'Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin '
+          + 'kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan '
+          + 'toinen pääkaupunki. Kuningas Vilhelm I yhdisti kaksi '
+          + '1700-luvun kartanoa gallerialla, ja välissä kulkenut katu '
+          + 'katettiin. Belgian itsenäistyttyä 1830–1831 palatsi siirtyi '
+          + 'Leopold I:lle, joka asui Laekenissa ja muutti rakennusta '
+          + 'vähän. Isoisän aikaan hallitsee hänen poikansa Leopold II, '
+          + 'jonka mielestä palatsi on liian vaatimaton hänen arvoiselleen '
+          + 'kuninkaalle; hänen kaudellaan palatsin pinta-ala lähes '
+          + 'kaksinkertaistui, ja arkkitehti Alphonse Balat lisäsi siihen '
+          + 'suuren portaikon, valtaistuinsalin ja suuren gallerian.'
+          + '\n\n'
+          + 'Nykyinen julkisivu rakennettiin vasta vuoden 1904 jälkeen '
+          + 'arkkitehti Henri Maquet\'n piirustusten mukaan, ja '
+          + 'päätykolmiossa Belgiaa esittävää hahmoa ympäröivät '
+          + 'Teollisuus ja Maanviljely. Peilisali tehtiin Leopold II:n '
+          + 'Kongon siirtomaan kunniaksi, ja sen kattoon kiinnitettiin '
+          + 'vuonna 2004 yli miljoona kuoriaisen siipipeitettä, jotka '
+          + 'hohtavat metallinvihreinä. Vuodesta 1965 palatsi on ollut '
+          + 'kesäisin avoinna yleisölle kansallispäivästä 21. heinäkuuta '
+          + 'syyskuun alkuun.',
+      kuvat: [
+        {
+          tiedosto: 'Palais Royal Brussels 1911.jpg',
+          lyhyt: 'Kuninkaanpalatsi uuden julkisivunsa kanssa postikortissa vuodelta 1911.',
+          selite: 'Kuninkaanpalatsi postikortissa, joka lähetettiin '
+            + 'vuonna 1911: uusi, vuoden 1904 jälkeen rakennettu '
+            + 'julkisivu etupuutarhoineen ja edessä raitiovaunu.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KOŠICE (23.9.2026). Faktat en-Wikipedian artikkeleista Cathedral of
+   * St. Elizabeth, St. Urban Tower, Hlavná ulica, National Theatre Košice,
+   * Plague Column, Košice, Executioner's Bastion ja Old Town, Košice.
+   * Miklušin vankilalla ja Jakabin palatsilla ei ole omaa en-artikkelia,
+   * joten niiden tiedot ovat sk-Wikipediasta (Miklušova väznica, Jakabov
+   * palác); samoin vanhan teatterin (1788) ja Urbanin tornin kauppojen
+   * tiedot (Národné divadlo Košice, Urbanova veža). Kuvat eivät ole
+   * käytössä muualla repossa, myöskään maakartat.js:n Košice-kohteissa.
+   */
+  kosice: {
+    'Pyhän Elisabetin tuomiokirkko': {
+      aika: '1380–1508',
+      teksti: 'Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja '
+          + 'yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on '
+          + '60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 '
+          + 'ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. '
+          + 'Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari '
+          + 'Sigismundin tuella, ja työ valmistui 1508.'
+          + '\n\n'
+          + 'Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, '
+          + 'koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se '
+          + 'avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, '
+          + 'ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla '
+          + 'kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen '
+          + 'kierreportaikko, jonka mallin mukaan Grazin keisarilliseen '
+          + 'residenssiin rakennettiin samanlainen 1499–1500.'
+          + '\n\n'
+          + 'Isoisä näkee kirkon vuonna 1873 juuri ennen suurta muutosta. '
+          + 'Rakenteissa oli korjaamattomia vaurioita, ja 1875 myrsky pahensi '
+          + 'niitä. Vuosina 1877–1896 kirkko rakennettiin arkkitehti Imre '
+          + 'Steindlin johdolla laajasti uudelleen, osin halvalla hiekkakivellä, '
+          + 'joka rapautui nopeasti. Samalle Steindlille annettiin 1885 '
+          + 'Budapestin parlamenttitalon suunnittelu.',
+      kuvat: [
+        {
+          tiedosto: 'TUTKÓ(1861) p087 Košice, St.Elizabeth.jpg',
+          lyhyt: 'Tuomiokirkko vuoden 1861 litografiassa, ennen 1877 alkanutta suurta uudelleenrakennusta.',
+          selite: 'Béla Klimkovicsin piirtämä ja Kassassa painettu litografia '
+            + 'vuodelta 1861 näyttää tuomiokirkon sellaisena kuin isoisä sen '
+            + 'näkee: tornissa on 1700-luvun kupolikatto, eikä Steindlin '
+            + 'uudelleenrakennus ole vielä alkanut.',
+          lahde: 'British Library, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Urbanin torni': {
+      aika: '1500-luku',
+      teksti: 'Urbanin torni on tuomiokirkon renessanssiajan kellotorni, '
+          + 'joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin '
+          + 'ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 '
+          + 'suuri Urbanin kello, joka sai nimensä viininviljelijöiden '
+          + 'suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja '
+          + 'Franciscus Illenfeld.'
+          + '\n\n'
+          + 'Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin '
+          + '1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin '
+          + 'ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 '
+          + 'vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on '
+          + 'roomalaisajalta 300-luvulta.'
+          + '\n\n'
+          + 'Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. '
+          + 'Sirpaleista koottu kello on nykyään esillä tornin edessä, ja '
+          + 'tornissa soi kopio, jonka Košicen terästehtaan työntekijät '
+          + 'valoivat 1996.',
+      kuvat: [
+        {
+          tiedosto: 'Fő tér (Hlavné namestie), Szent Erzsébet-főszékesegyház (Dóm), előtte az Orbán-torony. Fortepan 17733.jpg',
+          lyhyt: 'Urbanin torni ja tuomiokirkko 1904, vielä ilman tornin ympärille 1912 tehtyä kaariholvia.',
+          selite: 'Valokuva vuodelta 1904: Urbanin torni seisoo puiston '
+            + 'laidalla tuomiokirkon edessä. Tornin ympärillä ei vielä ole '
+            + 'kaariholvia, joka rakennettiin 1911–1912.',
+          lahde: 'Schoch Frigyes, Fortepan / Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hlavná-katu': {
+      aika: 'keskiaika',
+      teksti: 'Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se '
+          + 'on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan '
+          + 'asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja '
+          + 'Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. '
+          + '1700-luvun kartoissa se on Platea principalis.'
+          + '\n\n'
+          + 'Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi '
+          + 'Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, '
+          + 'kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui '
+          + 'politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, '
+          + 'ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi '
+          + 'palautettiin 1. heinäkuuta 1990.'
+          + '\n\n'
+          + 'Vuonna 1984 Hlavnásta tuli koko Tšekkoslovakian ensimmäinen '
+          + 'laaja kävelykatu. Pormestari Rudolf Schuster otti mallia '
+          + 'saksalaisesta Wuppertalista, ja monet slovakialaiset ja '
+          + 'tšekkiläiset kaupungit seurasivat esimerkkiä.',
+      kuvat: [
+        {
+          tiedosto: 'Kaschau Theater 1900.jpg',
+          lyhyt: 'Pääkatu ja uusi teatteri noin 1900; kadulla kulkee raitiovaunu.',
+          selite: 'Värillinen valokuvapainate noin vuodelta 1900 näyttää, '
+            + 'miten Pääkatu levenee teatterin kohdalla ja kapenee taas. '
+            + 'Kadulla kulkee raitiovaunu, ja taustalla kohoavat kukkulat.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valtionteatteri': {
+      aika: '1899',
+      teksti: 'Teatteri seisoo keskiaikaisen raatihuoneen paikalla. '
+          + 'Raatihuone oli jäänyt tyhjäksi jo 1500-luvulla, ja 1756 siihen '
+          + 'avattiin kahvila, josta tuli kaupungin seuraelämän keskus. '
+          + 'Ensimmäinen teatteritalo otettiin käyttöön 1788: klassistinen '
+          + 'rakennus, jonka katsomoon mahtui 500 ihmistä.'
+          + '\n\n'
+          + 'Isoisä näkee vuonna 1873 juuri tämän vanhan teatterin. '
+          + 'Aluksi siellä esitettiin vain saksaksi, mutta vuodesta 1816 '
+          + 'vuorotellen unkariksi ja saksaksi. Samassa talossa toimivat '
+          + 'myös kahvila, tanssisali ja vuodesta 1828 kasino. Rakennus '
+          + 'suljettiin 1894 turvallisuussyistä.'
+          + '\n\n'
+          + 'Nykyinen uusbarokkinen teatteri rakennettiin Adolf Langin '
+          + 'suunnitelmien mukaan, ja se avattiin juhlallisesti 28. syyskuuta '
+          + '1899. Näyttämö on lyyran muotoinen, ja katossa on kohtauksia '
+          + 'Shakespearen näytelmistä Othello, Romeo ja Julia, Kuningas Lear '
+          + 'ja Kesäyön unelma.',
+      kuvat: [
+        {
+          tiedosto: 'Kosice - National Theatre.jpg',
+          lyhyt: 'Vuonna 1899 avattu uusbarokkinen teatteri aamuvalossa.',
+          selite: 'Košicen kansallisteatterin uusbarokkinen päärakennus '
+            + 'Hlavná-kadulla. Se avattiin 1899 vanhan, vuonna 1788 '
+            + 'valmistuneen teatterin paikalle.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Immaculata': {
+      aika: '1723',
+      teksti: 'Immaculata on barokkiajan ruttopylväs, joka on pystytetty '
+          + 'kiitokseksi Neitsyt Marialle vuosien 1709–1710 '
+          + 'ruttoepidemian päättymisestä. Se pystytettiin 1723 paikalle, '
+          + 'jossa keskiajalla olivat kaupungin hirsipuut. Jalustan laatan '
+          + 'mukaan sen alle on kätketty pyhän Valentinuksen reliikit.'
+          + '\n\n'
+          + 'Pylväs on 14 metriä korkea, ja sen huipulla seisoo Neitsyt Maria. '
+          + 'Jalustalla ovat pyhä Joosef, pyhä Sebastian ja pyhä Laslo, ja '
+          + 'aidan pilareilla viisi pyhimystä, muun muassa Unkarin Elisabet, '
+          + 'kaupungin suojeluspyhimys.'
+          + '\n\n'
+          + 'Isoisän aikaan pylväs on jo 150 vuotta vanha. Toisessa '
+          + 'maailmansodassa se vaurioitui, ja kuvanveistäjä Vojtech Löffler '
+          + 'korjasi sen 1949–1951 ja uudelleen 1971–1972.',
+      kuvat: [
+        {
+          tiedosto: 'Košice - Súsošie Immaculata.jpg',
+          lyhyt: 'Immaculatan ruttopylväs aitauksessaan Pääkadun puistossa.',
+          selite: 'Neitsyt Marian patsas pylvään huipulla ja pyhimysten patsaat '
+            + 'jalustalla. Pylväs seisoo pienessä aidatussa puistossa '
+            + 'Pääkadun varrella.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Miklušin vankila': {
+      aika: '1400-luvun alkupuoli',
+      teksti: 'Miklušin vankila on kaksi toisiinsa liitettyä goottilaista '
+          + 'porvaristaloa 1400-luvun alkupuoliskolta. 1600-luvun alussa ne '
+          + 'muutettiin kaupungin vankilaksi ja kidutushuoneeksi.'
+          + '\n\n'
+          + 'Isoisän aikaan talot ovat yhä vankilana, ja siinä tehtävässä ne '
+          + 'pysyivät vuoteen 1909. Sen jälkeen ne annettiin Ylä-Unkarin '
+          + 'museon hoitoon, josta on tullut nykyinen Itä-Slovakian museo. '
+          + 'Museo aikoi tehdä taloihin kaupungin historian näyttelyn, mutta '
+          + 'se toteutui vasta sota-aikana 1940–1942 tehdyn peruskorjauksen '
+          + 'jälkeen.'
+          + '\n\n'
+          + 'Vuonna 2009 valmistunut korjaus yhdisti vankilan, viereisen '
+          + 'Pyövelin bastionin ja Rákóczin muistotalon yhdeksi '
+          + 'museoalueeksi. Samalla yleisö pääsi taas pyövelin asuntoon, ja '
+          + 'pihalle tehtiin kivimuistomerkkien kokoelma.',
+      kuvat: [
+        {
+          tiedosto: 'Kálvin tér (Kálvinovo námestie), Miklós börtön. Fortepan 71238.jpg',
+          lyhyt: 'Vankilarakennus 1939, rapautuneena ja vielä ennen peruskorjausta.',
+          selite: 'Valokuva vuodelta 1939: rapattu seinä on lohkeillut, '
+            + 'ikkunoissa on ristikot ja kulmassa katukyltti Kálvin tér. '
+            + 'Talot korjattiin museoksi 1940–1942.',
+          lahde: 'Lissák Tivadar, Fortepan / Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyövelin bastioni': {
+      aika: '1400-luku',
+      teksti: 'Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa '
+          + 'keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni '
+          + 'vaan barbakaani eli portin eteen rakennettu puolustusvarustus. '
+          + 'Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on '
+          + 'vasta 1800-luvulta.'
+          + '\n\n'
+          + 'Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan '
+          + 'Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli '
+          + 'yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se '
+          + 'muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, '
+          + 'jonka ympärillä oli iskuja vaimentava maavalli.'
+          + '\n\n'
+          + 'Kasemateissa toimi myöhemmin Friedrich Gebrechtin '
+          + 'hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian '
+          + 'museo otti bastionin käyttöönsä 1900-luvulla, ja 1940–1943 sen '
+          + 'viereen rakennettiin kopio Ferenc II Rákóczin '
+          + 'maanpakolaistalosta Turkin Tekirdağissa.',
+      kuvat: [
+        {
+          tiedosto: 'East Slovak Museum in Košice - Executioner\'s Bastion, Hrnčiarska 7 - Wheeled cannon displayed at the courtyard of the Executioner\'s Bastion in Košice, winter (February 2006).jpg',
+          lyhyt: 'Vanha pyörillä kulkeva tykki bastionin lumisella pihalla.',
+          selite: 'Itä-Slovakian museon vanhoja tykkejä Pyövelin bastionin '
+            + 'pihalla helmikuussa 2006. Bastioni muutettiin 1460-luvulla '
+            + 'tykistölinnoitteeksi.',
+          lahde: 'Marian Gladis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jakabin palatsi': {
+      aika: '1899',
+      teksti: 'Jakabin palatsi on uusgoottilainen talo Mlynská- ja '
+          + 'Štefánikova-katujen kulmassa. Rakennusmestari Peter Jakab '
+          + 'suunnitteli sen itselleen, ja se valmistui 1899. Jakab sai '
+          + 'rakennusainetta tuomiokirkon uudelleenrakennuksesta: talossa '
+          + 'on käytetty kirkosta poistettuja kiviosia.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan palatsia ei siis vielä ole. Se rakennettiin '
+          + 'Mlynský náhon -myllykanavan rannalle ja seisoi veden äärellä '
+          + 'vuoteen 1968, jolloin kanava lakkautettiin. Nykyään '
+          + 'talon vieressä kulkee vilkas nelikaistainen katu.'
+          + '\n\n'
+          + 'Vuonna 1945 palatsissa asui jonkin aikaa presidentti Edvard '
+          + 'Beneš, ja vuosina 1992–2000 siinä toimi British Council. '
+          + 'Talon omistuksesta on käyty oikeutta 1990-luvulta asti.',
+      kuvat: [
+        {
+          tiedosto: 'Jakab-palota. Fortepan 51521.jpg',
+          lyhyt: 'Jakabin palatsin torni ja goottilainen portti vuonna 1956.',
+          selite: 'Valokuva vuodelta 1956: palatsin tornissa on '
+            + 'kulmatornit ja jyrkkä kattohuippu. Kuva on otettu ennen '
+            + 'vuotta 1968, jolloin myllykanava lakkautettiin.',
+          lahde: 'Nagy Gyula, Fortepan / Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LJUBLJANA (Opus 23.9.2026). Kohteet ovat kohdekartan kahdeksan
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.ljubljana), ja jokainen väite
+   * on luettu en-Wikipedian raakatekstistä 23.9.2026 (artikkelit
+   * "Tivoli City Park", "Križanke", "Prešeren Square", "Triple Bridge",
+   * "Ljubljana Cathedral", "Ljubljana Castle", "Ljubljana Central
+   * Market", "Vodnik Square" ja "Dragon Bridge (Ljubljana)").
+   * Keskustori on kartan koordinaateilla Vodnikin aukion torialue eikä
+   * Mestni trg, joten juttu kertoo keskustorista ja Plečnikin hallista.
+   *
+   * Juttu korvaa ajonaikaisesti kohteen oman lyhyen tekstin ja kuvan
+   * (js/nahtavyydet.js: juttu voittaa raa'an kohteen), joten jutut
+   * kertovat myös, miltä paikka näytti isoisän matkan aikaan 1873.
+   * Kaupunkilehden artikkeli (europe-artikkelit.js: Ljubljana) käsittelee
+   * jo linnan vankilakuilun ja Illyrian ajan, joten linnan juttu
+   * painottuu keskiajan mainintaan, Erasmuksen torniin ja palovartijaan.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.9.2026
+   * (lisenssi ja tekijä extmetadatasta, leveys vähintään 1200 px) ja
+   * katsottu silmin 960 px esikatseluna. Yksikään tiedosto ei ole
+   * käytössä muualla js/-kansiossa (grep). HYLÄTTY: "Fruit stalls at
+   * Ljubljana Central Market 02.JPG" ja "SLO-Ljubljana17.JPG" (jo
+   * käytössä kulttuuri-kategoriat.js:ssä) sekä "Postcard of Vodnik
+   * Square 1899.jpg" (paikkaa ei voinut varmistaa kuvasta).
+   */
+  ljubljana: {
+    'Tivoli-puisto': {
+      aika: '1813',
+      teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitelman '
+          + 'laati insinööri Jean Blanchard vuonna 1813, kun Ljubljana '
+          + 'oli Napoleonin Illyrian maakuntien pääkaupunki. Blanchard '
+          + 'ei aloittanut tyhjästä: hän yhdisti kaksi valmista puistoa '
+          + 'Podturnin ja Cekinin kartanoiden ympäriltä ja liitti ne '
+          + 'kaupungin keskustaan. Nimensä puisto sai vasta 1800-luvun '
+          + 'jälkipuoliskolla Kasinoseuran kesäpaikasta, joka oli avattu '
+          + '1835 Podturnin kartanon viereen; siellä oli huvipuisto, '
+          + 'kapakka ja kahvila.'
+          + '\n\n'
+          + 'Podturnin kartano on nykyinen Tivolin linna. Se rakennettiin '
+          + '1600-luvulla renessanssilinnan raunioille, ja sen omisti '
+          + 'aluksi jesuiittajärjestö. 1800-luvun puolivälissä marsalkka '
+          + 'Joseph Radetzky kunnosti sen uusklassiseen asuun, joka sillä '
+          + 'on yhä. Vuonna 1864 linnan eteen tuli neljä valurautakoiraa, '
+          + 'jotka itävaltalaiset kuvanveistäjät suunnittelivat '
+          + 'määriläisessä valimossa. Koirilta puuttuvat kielet, ja siitä '
+          + 'syntyi sitkeä mutta perätön huhu: kuvanveistäjä Fernkorn '
+          + 'olisi ampunut itsensä virheensä takia. Cekinin kartano '
+          + 'puiston pohjoislaidalla on vuodelta 1720, ja sen piirustukset '
+          + 'teki wieniläinen barokkiarkkitehti Fischer von Erlach.'
+          + '\n\n'
+          + 'Isoisän aikaan puistossa ei ole vielä lampea: se kaivettiin '
+          + 'vasta 1880, ja siellä on sittemmin soudettu, luisteltu ja '
+          + 'kalastettu. Suora näkymä puistosta kaupunkiin on Jože '
+          + 'Plečnikin työtä 1920-luvulta. Hänen Jakopičin kävelykatunsa '
+          + 'luo näköakselin, joka kulkee Tivolin linnalta Prešernin '
+          + 'aukion ja Tromostovjen yli aina Ljubljanan linnalle asti.',
+      kuvat: [
+        {
+          tiedosto: 'Tivolski grad 1873.jpg',
+          lyhyt: 'Tivolin linna valokuvassa vuodelta 1873.',
+          selite: 'Tivolin linna ja sen puutarhaportaat Wilhelm Schulzen '
+            + 'valokuvassa vuodelta 1873, samana vuonna kun isoisä '
+            + 'matkusti: rakennus on jo Radetzkyn uusklassisessa asussa.',
+          lahde: 'Wilhelm Schulze, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Križanke': {
+      aika: '1228',
+      teksti: 'Križanke on entinen Pyhän ristin luostari. Saksalaisen '
+          + 'ritarikunnan luostarin rakentamisen uskotaan alkaneen '
+          + 'vuonna 1228. Vuoden 1511 Idrijan maanjäristys vaurioitti '
+          + 'rakennuksia pahoin, ja niitä rakennettiin osin uudelleen '
+          + '1567–1579.'
+          + '\n\n'
+          + 'Luostarikirkko rakennettiin kokonaan uudelleen barokkiin '
+          + '1714–1715 venetsialaisen Domenico Rossin piirustuksilla. Sen '
+          + 'pohja on kreikkalainen risti, ja se oli ensimmäinen laatuaan '
+          + 'Sloveniassa; julkisivua korostavat pilasterit ja aaltoileva '
+          + 'kupoli. Työssä oli mukana paikallisia mestareita, kuten '
+          + 'Gregor Maček vanhempi, joka suunnitteli myös nykyisen '
+          + 'kaupungintalon. Kirkon alkuperäinen pienoismalli on yhä '
+          + 'Ljubljanan kaupunginmuseossa, ja luostarin Ritarisali '
+          + 'rakennettiin samalla vuosisadalla.'
+          + '\n\n'
+          + 'Isoisän aikaan Križanke on toimiva luostari, ja sellaisena se '
+          + 'pysyi vuoteen 1945, jolloin se kansallistettiin. Vuonna 1952 '
+          + 'kaupunki pyysi Jože Plečnikiä muuttamaan rapistuneen '
+          + 'luostarin Ljubljanan festivaalin näyttämöksi. Työ valmistui '
+          + '1956, ja se jäi Plečnikin viimeiseksi suureksi työksi '
+          + 'kaupungissa. Eteläpihasta tuli amfiteatterimainen '
+          + 'ulkonäyttämö suurine siirrettävine katoksineen, ja yksi '
+          + 'pihoista tunnetaan nimellä Helvetin piha.',
+      kuvat: [
+        {
+          tiedosto: "Gor v višave.jpg",
+          lyhyt: "Križankejen luostarikirkon barokkijulkisivu kuvattuna alhaalta.",
+          selite: "Križankejen luostarikirkon (Commonsissa Neitsyt Marian Auttajan kirkko) julkisivua jäsentävät pilasterit.",
+          lahde: "Ninca.pugelj86, Wikimedia Commons (CC BY-SA 4.0)",
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Prešernin aukio': {
+      aika: '1600-luku',
+      teksti: 'Prešernin aukio on Ljubljanan keskusaukio vanhan '
+          + 'kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta '
+          + 'kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen '
+          + 'yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen '
+          + 'Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa '
+          + '1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko '
+          + 'rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian '
+          + 'aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja '
+          + 'kivettiin.'
+          + '\n\n'
+          + 'Wolfin ja Čopin kadun välissä seisova Hauptmannin talo '
+          + 'rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu '
+          + 'aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen '
+          + 'jälkeen: Max Fabiani suunnitteli sen neljän kadun '
+          + 'solmukohdaksi, ja vaurioituneiden keskiaikaisten talojen '
+          + 'tilalle nousi palatseja. Vuonna 1905 keskusapteekin eteen '
+          + 'pystytettiin kansallisrunoilija France Prešerenin '
+          + 'pronssipatsas muusan kanssa; sen teki Ivan Zajec, ja '
+          + 'jalustan suunnitteli Fabiani.'
+          + '\n\n'
+          + 'Nykyisen pyöreän muotonsa aukio sai Edvard Ravnikarilta '
+          + '1987–88: graniittikiveykseen upotettiin ympyrä ja säteet '
+          + 'makedonialaista Sivec-marmoria. Ravnikar ehdotti myös '
+          + 'suihkulähdettä, mutta kaupunkilaiset eivät sitä hyväksyneet. '
+          + 'Moottoriliikenteeltä aukio suljettiin 3. syyskuuta 2007.',
+      kuvat: [
+        {
+          tiedosto: 'Prešernov trg in frančiškanska cerkev Marijinega oznanjenja v Ljubljani 1905.jpg',
+          lyhyt: 'Prešernin aukio ja fransiskaanikirkko vuonna 1905.',
+          selite: 'Ilmestyksen fransiskaanikirkko ja aukion talot Fran '
+            + 'Veselin valokuvassa vuodelta 1905. Kirkko on 1600-luvulta, '
+            + 'joten sen isoisäkin näki vuonna 1873.',
+          lahde: 'Fran Vesel, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tromostovje: {
+      aika: '1842',
+      teksti: 'Tromostovje, suomeksi Kolmisilta, on Ljubljanan vanhin '
+          + 'silta. Samassa kohdassa mainitaan puusilta jo vuonna 1280. '
+          + 'Sitä kutsuttiin ensin Vanhaksi sillaksi ja myöhemmin '
+          + 'Alasillaksi, erotuksena samalla vuosisadalla rakennetusta '
+          + 'Yläsillasta, ja myös Špitalin sillaksi läheisen köyhäintalon '
+          + 'mukaan. Tulipalon jälkeen silta rakennettiin uudelleen 1657.'
+          + '\n\n'
+          + 'Vuonna 1842 puusillan tilalle tuli kivisilta, jonka '
+          + 'suunnitteli villachilainen italialaisarkkitehti Giovanni '
+          + 'Picco. Se avattiin 25. syyskuuta 1842 ja nimettiin Franzin '
+          + 'sillaksi arkkiherttua Franz Karlin kunniaksi. Siinä oli kaksi '
+          + 'kaarta ja metallikaide, ja keskipilarin yllä on yhä '
+          + 'latinankielinen omistus: ”Arkkiherttua Franz Karlille 1842, '
+          + 'kaupunki.” Tämän kaksikaarisen kivisillan yli isoisä kulkee '
+          + 'vuonna 1873.'
+          + '\n\n'
+          + 'Kolmisillaksi se muuttui vasta, kun Jože Plečnik suunnitteli '
+          + '1929 kivisillan kummallekin puolelle loivassa kulmassa '
+          + 'jalankulkusillan, jotta vanha silta ei olisi pullonkaula. '
+          + 'Piirustukset teki hänen oppilaansa Ciril Tavčar, ja sillat '
+          + 'rakennettiin 1931–1932. Kaiteissa on 642 betonista '
+          + 'kaidepuolaa. Vuodesta 2021 silta kuuluu Plečnikin töiden '
+          + 'mukana UNESCOn maailmanperintöön.',
+      kuvat: [
+        {
+          tiedosto: 'Tromostovje napis.jpg',
+          lyhyt: 'Vuoden 1842 omistuskirjoitus sillan keskipilarin yllä.',
+          selite: 'Keskimmäisen sillan pilarin yllä lukee yhä '
+            + '”ARCHIDVCI. FRANCISCO. CAROLO. MDCCCXLII. CIVITAS.”, '
+            + 'kaupungin omistus arkkiherttua Franz Karlille vuodelta 1842.',
+          lahde: 'Eleassar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ljubljanan tuomiokirkko': {
+      aika: '1701–1706',
+      teksti: 'Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen '
+          + 'kirkko, ja sen tuntee vihreästä kupolista ja kahdesta '
+          + 'tornista. Paikalla seisoi ensin kolmilaivainen romaaninen '
+          + 'kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 '
+          + 'se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta '
+          + 'perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se '
+          + 'paloi taas, ja tuhopoltosta epäiltiin turkkilaisia.'
+          + '\n\n'
+          + 'Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann '
+          + 'Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman '
+          + 'teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo '
+          + 'muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse '
+          + 'valvonut työtä, joten rakentajat muuttivat suunnitelmaa '
+          + 'paljon. Salzburgin tuomiokirkkoa muistuttavat tornit tehtiin '
+          + 'Giulio Quaglion piirustuksilla, ja freskot maalasi Giulio '
+          + 'Quaglio. Kirkko vihittiin 8. toukokuuta 1707.'
+          + '\n\n'
+          + 'Isoisän aikaan oikea kupoli on vielä uusi: se korvasi '
+          + 'maalatun valekupolin vasta vuonna 1841, ja Matevž Langus '
+          + 'maalasi sen sisäpuolen 1843–44. Etelänseinän Pyhän '
+          + 'Hermagoraan ja Pyhän Fortunatuksen hiekkakivipatsaat '
+          + 'valmistuivat 1872, vain vuotta ennen hänen tuloaan. Samalla '
+          + 'seinällä on aurinkokello vuodelta 1826 latinankielisine '
+          + 'mietelauseineen ”Ette tiedä päivää ettekä hetkeä”, ja '
+          + 'torneissa soi Slovenian toiseksi vanhin kello vuodelta 1326.',
+      kuvat: [
+        {
+          tiedosto: 'Stolnica sv. Nikolaja - kupola.JPG',
+          lyhyt: 'Tuomiokirkon kupoli sisältä nähtynä.',
+          selite: 'Kupolin sisäpuolen maalasi Matevž Langus 1843–44: '
+            + 'lakikuvassa on Pyhä Henki enkelien keskellä, seinissä '
+            + 'Neitsyt Marian kruunaus ja Pyhän Nikolauksen kirkastus.',
+          lahde: 'ModriDirkac, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ljubljanan linna': {
+      aika: '1100-luku',
+      teksti: 'Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti '
+          + 'vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti '
+          + '1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin '
+          + 'kirjallinen maininta on Udinen tuomiokirkon arkistossa '
+          + 'säilytetyssä pergamentissa, luultavasti vuoden 1161 '
+          + 'jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. '
+          + 'Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä '
+          + 'linnana, ja 1278 se siirtyi Rudolf Habsburgille.'
+          + '\n\n'
+          + 'Nykyisen ääriviivansa linna sai 1400-luvulla, kun se '
+          + 'purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, '
+          + 'porttitorneineen ja nostosiltoineen; samaan aikaan valmistui '
+          + 'Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin '
+          + 'luultavasti ylhäisiä vankeja, ja sen seiniin raaputettujen '
+          + 'merkintöjen joukossa on vuosiluku 1442. Tornin nimi tulee '
+          + 'ritari ja rosvo Erazem Luegerista, joka pakeni vankilasta '
+          + 'yöllä nostetusta nostosillasta huolimatta, todennäköisesti '
+          + 'lahjomalla vartijan.'
+          + '\n\n'
+          + 'Vuonna 1873 linna on vankila. Se toimi vankilana vuodesta '
+          + '1815, ja tauon 1848–1868 jälkeen tehtävä oli palannut vain '
+          + 'viisi vuotta aiemmin. Näkötorni on vuodelta 1848, ja siinä '
+          + 'asui vartija, joka ampui tykillä varoituksen tulipalosta tai '
+          + 'ilmoitti tärkeän vieraan saapumisesta. Kaupunki osti linnan '
+          + '1905, ja köysirata huipulle avattiin vasta 28. joulukuuta '
+          + '2006.',
+      kuvat: [
+        {
+          tiedosto: 'Ljubljana Castle Tower.jpg',
+          lyhyt: 'Linnan näkötorni ja Pyhän Yrjön kappeli.',
+          selite: 'Linnan näkötorni rakennettiin kiviseksi 1845–1848 '
+            + 'puisen merkkitornin tilalle, ja sitä korotettiin 1982. '
+            + 'Edessä on goottilainen Pyhän Yrjön kappeli.',
+          lahde: 'Valerio2468, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Keskustori: {
+      aika: '1940–1942',
+      teksti: 'Keskustori levittäytyy Vodnikin aukiolle Tromostovjen ja '
+          + 'Lohikäärmesillan väliin Ljubljanica-joen oikealle rannalle. '
+          + 'Aukio on nimetty Valentin Vodnikin mukaan: hän oli '
+          + 'valistusajan lopun pappi, toimittaja ja runoilija. Isoisän '
+          + 'aikaan aukiolla ei ole toria eikä Vodnikin patsasta, joka '
+          + 'paljastettiin vasta 1889. Paikalla seisoo vanha luostari, '
+          + 'jossa toimivat hiippakunnan tyttökoulu ja kirjasto.'
+          + '\n\n'
+          + 'Vuoden 1895 maanjäristys tuhosi luostarin niin pahoin, että '
+          + 'se purettiin kokonaan, ja tyhjälle aukiolle syntyi ulkotori. '
+          + 'Torihallin suunnitteli Jože Plečnik 1931–1939, ja se '
+          + 'rakennettiin 1940–1942. Kaksikerroksinen halli seuraa joen '
+          + 'kaarta: jokipuolella on suuret puolipyöreät ikkunat, '
+          + 'katupuolella pylväskäytävä, ja kaksi avointa loggiaa jättää '
+          + 'näkymän joelle. Plečnik halusi hallien väliin katetun sillan '
+          + 'joen yli, mutta se jäi rakentamatta. Ajatus toteutui vasta '
+          + 'heinäkuussa 2010, kun uusi Teurastajien silta avattiin.'
+          + '\n\n'
+          + 'Tori on auki joka päivä paitsi sunnuntaisin. Kukat myydään '
+          + 'Pogačarin ja Vodnikin aukioiden kulmassa, kala ja kuivatut '
+          + 'hedelmät hallin alakerrassa, ja Tromostovjen pään '
+          + 'pylväikössä on yrttejä, mausteita ja käsitöitä. Vuodesta 2021 '
+          + 'tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöön.',
+      kuvat: [
+        {
+          tiedosto: 'Tržnica - panoramio (3).jpg',
+          lyhyt: 'Torikojut ja Valentin Vodnikin patsas Vodnikin aukiolla.',
+          selite: 'Keskustorin kojut Vodnikin aukiolla ja oikealla '
+            + 'Valentin Vodnikin patsas, joka paljastettiin 1889.',
+          lahde: 'Kasius Klej, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lohikäärmesilta': {
+      aika: '1901',
+      teksti: 'Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan '
+          + 'Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden '
+          + '1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan '
+          + 'Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta '
+          + 'uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun '
+          + 'professori Janez Koželj on arvellut, että uutta tekniikkaa '
+          + 'kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että '
+          + 'epäonnistuminen olisi täällä ollut pienempi vahinko.'
+          + '\n\n'
+          + 'Silta tehtiin wieniläisen Pittel+Brausewetterin '
+          + 'suunnitelmista insinööri Josef Melanin patentin mukaan, ja '
+          + 'arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij '
+          + 'Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton '
+          + 'Bonaventura Jeglič avasi sillan liikenteelle 4. lokakuuta '
+          + '1901. Se sai nimen keisari Frans Joosefin jubileumisilta '
+          + 'hänen 40-vuotisen hallituskautensa 1848–1888 muistoksi, ja '
+          + 'Lohikäärmesillaksi se nimettiin heinäkuussa 1919.'
+          + '\n\n'
+          + 'Melanin järjestelmässä betonin sisään jää rautaiset '
+          + 'ristikkokaaret, joten siltaa ei tarvinnut rakentaa tukitelineen '
+          + 'varaan. Kolminivelkaaren jänneväli on 33,34 metriä, ja '
+          + 'valmistuessaan se oli Euroopan kolmanneksi suurin kaari. Se '
+          + 'oli myös Slovenian ensimmäinen asfaltoitu silta. Kulmissa '
+          + 'seisoo neljä kuparilevystä tehtyä lohikäärmettä ja pitkin '
+          + 'siltaa kuusitoista pienempää; ne valmistettiin A. M. '
+          + 'Beschornerin tehtaalla Wienissä.',
+      kuvat: [
+        {
+          tiedosto: 'Mesarski most in Resljev trg pred 1882.jpg',
+          lyhyt: 'Teurastajien puusilta ennen vuotta 1882.',
+          selite: 'Teurastajien silta ja Resslin aukio ennen vuotta 1882. '
+            + 'Tämän vuoden 1819 tammisillan isoisä näki; '
+            + 'Lohikäärmesilta rakennettiin sen paikalle vasta 1900–1901.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    'Belgradin linnoitus': {
+      aika: 'keltit 200-luvulta eaa., nykyasu 1700-luvulta',
+      teksti: 'Belgradin linnoitus on lähteen mukaan kaupungin vanhin osa, ja asukkaat asuivat vuosisatoja vain sen muurien sisällä. Linnoitus muodostuu ylä- ja alakaupungista, ja sen edustalla ovat Suuri ja Pieni Kalemegdan -puistot. Rooman aikana paikalla oli neliskulmainen castrum, jonka muurit rakennettiin valkoisesta Tašmajdanin kalkkikivestä.\n\nItävaltalaiset rakensivat linnoituksen uudelleen 1700-luvun alkupuoliskolla. Ottomaanit lähtivät sieltä vuonna 1867, kun ensimmäinen serbialaisjoukko korvasi vartiot 18. huhtikuuta. Kulttuurimuistomerkiksi linnoitus julistettiin vuonna 1979.\n\nIsoisän matkavuonna 1873 linnoitusta vartioivat serbialaiset joukot, mutta Itävalta-Unkari ei tunnustanut Serbiaa sen omistajaksi. Muurien sisällä kaupunki oli siis jo siirtynyt uuteen aikaan, vaikka maiden välinen tilanne oli yhä avoin.',
+      kuvat: [
+        {
+          tiedosto: 'Belgrade Fortress (13806788265).jpg',
+          lyhyt: 'Belgradin linnoitus on kaupungin vanhin osa.',
+          selite: 'Linnoitus koostuu ylä- ja alakaupungista.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kalemegdanin puisto': {
+      aika: '1860-luvun lopulta',
+      teksti: 'Kalemegdan on Belgradin suurin puisto: se on noin 50 hehtaarin laajuinen (Suuri ja Pieni Kalemegdan) ja siinä kasvaa yli 3 400 puuta. Nimi tulee turkin sanoista kale, linnoitus, ja meydan, kenttä, sillä alue oli ottomaanien harjoituskenttä. Böömiläinen kirjailija Siegfried Kapper kuvasi kenttää 1850-luvulla puuttomaksi ja kuivaksi, mutta näköalaltaan hienoksi.\n\nPuiston järjestelytyöt alkoivat 1860-luvun lopulla, ja ensimmäinen istutusvaihe kesti vuoteen 1875. Milan Obrenović sai innoituksen Ranskan puistoista. Pieni portaikko valmistui vuonna 1903 Jelisaveta Načićin suunnitelman mukaan, ja hän oli lähteen mukaan Serbian ensimmäinen naisarkkitehti. Suuri portaikko valmistui vuonna 1928.\n\nIsoisän matkavuonna 1873 istutukset olivat kesken: ensimmäinen istutusvaihe kesti vuoteen 1875, ja polut raivattiin vasta 1890-luvun alussa. Kenttä oli kuitenkin jo muuttumassa kaupunkilaisten kävelypaikaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Belgrade Fortress (13807712985).jpg',
+          lyhyt: 'Kalemegdanin puisto syntyi ottomaanien harjoituskentän paikalle.',
+          selite: 'Puiston järjestelytyöt alkoivat 1860-luvun lopulla.',
+          lahde: 'Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nebojšan torni': {
+      aika: 'noin 1460',
+      teksti: 'Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni. Unkarilaiset rakensivat sen noin vuonna 1460. Nimi Nebojša tarkoittaa pelotonta, ja alkuperäinen torni, jonka despootti Stefan Lazarević rakennutti 1400-luvun alussa, tuhoutui 1600-luvulla. Tornia on sanottu myös Valkoiseksi torniksi, joka mainitaan 1500-luvulla, ja Temišvarin torniksi.\n\nOttomaanien aikana torni toimi vankilana, ja kreikkalainen vallankumouksellinen Rigas Feraios kuoli siellä vuonna 1798. Tornin edessä pelattiin Serbian ensimmäinen jalkapallo-ottelu 19. toukokuuta 1896. Torni kunnostettiin 1960-luvulla, ja siitä tuli museo 2010-luvun alussa.\n\nIsoisän matkavuonna 1873 torni oli ottomaanien rakentama vanha vankila, jonka ympäristö kuului Serbian valvomaan linnoitukseen.',
+      kuvat: [
+        {
+          tiedosto: 'Nebojša Tower, February 2022.jpg',
+          lyhyt: 'Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni.',
+          selite: 'Unkarilaiset rakensivat sen noin vuonna 1460, ja nykyään siinä toimii museo.',
+          lahde: 'Imeao, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän arkkienkeli Mikaelin katedraali': {
+      aika: '1837–1840',
+      teksti: 'Pyhän arkkienkeli Mikaelin katedraali on Belgradin katedraalikirkko ja yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa. Se rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä, ja vanha kirkko purettiin vuonna 1836.\n\nIkonostaasin veisti Dimitrije Petrović, ja seinämaalaukset teki Dimitrije Avramović vuosina 1841–1845. Rakennus edustaa klassismia, johon on yhdistetty barokkityylinen torni itävaltalaisten kirkkojen tapaan. Vuonna 1853 kirkossa perustettiin ensimmäinen Belgradin laulajaseura.\n\nIsoisän matkavuonna 1873 katedraali oli ollut käytössä yli kolme vuosikymmentä, ja se kuului kaupungin vakiintuneeseen vanhaan ytimeen uusien ruutukaavakatujen vierellä.',
+      kuvat: [
+        {
+          tiedosto: 'Beograd Saborna crkva 1.JPG',
+          lyhyt: 'Mikaelin katedraali rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä.',
+          selite: 'Se on yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa.',
+          lahde: 'Nemezis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tasavallan aukio': {
+      aika: '1860-luvulta; nykyasu 1882–',
+      teksti: 'Tasavallan aukion paikalla oli Stambolin portti, joka purettiin vuonna 1866. Portti oli kaupungin kauneimpana pidetty, ja sen nimi tuli Istanbulin tieltä. Kansallisteatteri valmistui vuonna 1869, ja se oli yli 30 vuotta aukion ainoa suuri rakennus. Aukio tunnettiin nimellä Pozorišni trg, teatteriaukio, kommunistiaikaan asti, ja siellä pidettiin myös maalaismarkkinoita, joilla myytiin sian- ja lampaanlihaa, pekonia ja kajmakia.\n\nRuhtinas Mihailon ratsastajapatsas, jonka teki Enrico Pazzi, pystytettiin joulukuussa 1882. Josimovićin vuoden 1867 vihreän vyöhykkeen suunnitelmasta toteutui aukion osalta vain osa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut kaupunkitilana. Teatteri seisoi suon ja rotkojen reunalla, ja patsas ja ympäröivät rakennukset tulivat vasta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Republic Square (27420599076).jpg',
+          lyhyt: 'Tasavallan aukion keskellä on ruhtinas Mihailon ratsastajapatsas.',
+          selite: 'Patsas pystytettiin joulukuussa 1882 Enrico Pazzin veistämänä.',
+          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Skadarlija: {
+      aika: '1800-luku, boheemi erityisesti 1901 jälkeen',
+      teksti: 'Skadarlija on Belgradin boheemikortteli. Alue oli romaniasutusta vielä 1870-luvun alkuun asti, ja jo vuoden 1854 kaupunkisuunnitelmassa majat oli korvattu tiilirakennuksilla. Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.\n\nBoheemi luonne vahvistui vuoden 1901 jälkeen, kun Dardaneli-krouvin vieraat, kirjailijat ja näyttelijät, siirtyivät tänne. Vuosisadan alussa kafanoita oli useita, ja Tri šešira, joka perustettiin vuonna 1864, on lähteen mukaan yksi vanhimmista yhä toimivista. Alue suojeltiin vuonna 1967 ja kunnostus alkoi pian sen jälkeen. 1800-luvun lopulla pienpanimon rakennustöissä löytyi mammuttien luita.\n\nIsoisän matkavuonna 1873 katu oli vasta saanut nimensä, ja kafanat olivat vasta syntymässä. Lähteen mukaan alue on nykyään Belgradin toiseksi vierailluin kohde Kalemegdanin jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Skadarska street, Belgrade.jpg',
+          lyhyt: 'Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.',
+          selite: 'Alueen boheemi luonne vahvistui erityisesti vuoden 1901 jälkeen.',
+          lahde: 'Imeao, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Savan temppeli': {
+      aika: '1935–2020',
+      teksti: 'Pyhän Savan temppeli on yksi maailman suurimmista kirkoista. Se pystytettiin paikalle, jossa ottomaanien kerrotaan polttaneen Pyhän Savan pyhäinjäännökset vuonna 1595. Hanke sai alkunsa 1890-luvulla, noin kolmensadan vuoden kuluttua tapahtumasta, ja rakennustyöt alkoivat 10. toukokuuta 1935. Työt keskeytyivät, ja ne jatkuivat 12. elokuuta 1985.\n\nKupoli painaa 4 000 tonnia, ja se nostettiin paikalleen hydraulisilla nostimilla vuonna 1989. Julkisivu on valkoista Volakas-marmoria Kreikasta, ja reunalistat ovat punaista Balmoral-graniittia Suomesta. Pohjapiirros on risti, jonka mitat ovat 91 × 81 metriä. Ulkopuoli valmistui vuonna 2004 ja sisätyöt vuonna 2020.\n\nIsoisän matkavuonna 1873 Vračarin kukkulalla ei ollut temppeliä, ja sen suunnittelu alkoi vasta 1890-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Church of Saint Sava (Belgrade, Serbia).jpg',
+          lyhyt: 'Pyhän Savan temppelin julkisivu on valkoista Volakas-marmoria Kreikasta.',
+          selite: 'Reunalistat ovat punaista Balmoral-graniittia Suomesta.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Church of Saint Sava 2.jpg',
+          lyhyt: 'Temppelin sisätyöt valmistuivat vuonna 2020.',
+          selite: 'Rakennustyöt alkoivat vuonna 1935 ja jatkuivat vuosikymmeniä.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri sotasaari': {
+      aika: '1400-luvulta, luonnonsuojelualue',
+      teksti: 'Suuri sotasaari on 2,11 neliökilometrin kokoinen, matala ja tulvaherkkä saari Savan suulla Tonavassa. Se muodostui täydeksi saareksi 1400-luvulla hiekkasärkästä. Ottomaanien vuoden 1521 hyökkäykset linnoitusta vastaan tehtiin pääosin saarelta, ja 1700-luvulla Itävalta ja Turkki jakoivat saaren rajasopimuksella.\n\nNykyään saari on suojelualue yli 180 lintulajille. Saaren vesissä on 53 kalalajia, ja yli puolet saaresta on metsää. Merikotkapari pesii saarella 2010-luvun alusta.\n\nIsoisän matkavuonna 1873 saarella oli käytössä useita nimiä, ja nykyinen nimi Suuri sotasaari vakiintui lopullisesti vasta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Lido veliko ratno ostrvo.jpg',
+          lyhyt: 'Suuri sotasaari on Savan suulla Tonavassa sijaitseva matala ja tulvaherkkä saari.',
+          selite: 'Saari muodostui täydeksi saareksi 1400-luvulla hiekkasärkästä.',
+          lahde: 'Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0 RS)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bratislava: {
+    'Bratislavan linna': {
+      aika: '800-luku–nykypäivä; raunioina 1811–1950-luvulle',
+      teksti: 'Bratislavan linna on suuri nelikulmainen rakennus, jonka jokaisessa kulmassa on torni. Se seisoo eristäytyneellä kalliolla noin 85 metriä Tonavan yläpuolella, ja paikka on ollut asuttu jo kivikauden ja pronssikauden taitteesta. Kelttien akropolis, roomalaisten Tonavan raja ja suuri slaavilainen linnoitettu asutus seurasivat toisiaan, ja 800-luvulla kukkulalla oli esiromaaninen kivibasilika.\n\nLinnaa muokattiin vuosisatojen mittaan: Sigismundin aikana 1400-luvun alkupuolella siitä tehtiin goottilainen linnoitus hussilaisia vastaan, 1562 renessanssilinna ja 1600-luvulla barokkilinna. Maria Teresian aikana 1760-luvulla siitä tuli kuninkaallinen asunto, ja portaat tehtiin loivemmiksi, jotta hän pääsi ratsastamaan niillä. Sisäpihan kaivo on yli 80 metriä syvä.\n\nTulipalo tuhosi linnan 28. toukokuuta 1811, kun siellä majoittuneet sotilaat olivat huolimattomia, ja palo levisi osaan kaupunkia. Isoisän matkavuonna 1873 linna oli yhä raunio, jonka materiaalia sotilaat myivät rakennusaineeksi. Raunioina se pysyi 1950-luvulle, jolloin kunnostus 1700-luvun asuun alkoi.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Castle Pano S 01.jpg',
+          lyhyt: 'Bratislavan linna, nelikulmainen kulmatornillinen linna Tonavan yläpuolella.',
+          selite: 'Linna paloi raunioksi 1811 ja kunnostettiin 1950-luvulta alkaen 1700-luvun asuunsa.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Martinin tuomiokirkko': {
+      aika: '1311–1452; uudelleengotisointi 1865–1877',
+      teksti: 'Pyhän Martinin tuomiokirkko on goottilainen ristipohjainen basilika, jonka rakentaminen alkoi 1311 aiemman romaanisen kirkon paikalla. Kirkko vihittiin 1452, ja työt jatkuivat vielä 1500-luvulle. Laivan mitat ovat 69,37 × 22,85 metriä, ja noin 85 metriä korkea torni oli osa keskiaikaista kaupunginmuuria. Alttarilla seisoo Georg Raphael Donnerin vuonna 1734 tekemä ratsastajapatsas Pyhästä Martinista, joka on puettu unkarilaisen husaarin asuun.\n\nKirkko kärsi tuhoja: salamanisku vaurioitti sitä 1760, ja barokkihuippu paloi 1833. Nykyisen asunsa kirkko sai uudelleengotisoinnissa 1860-luvun puolivälistä vuoteen 1877, joten isoisän matkavuonna 1873 työt olivat käynnissä. Kirkon alla on katakombit ja useita kryptia. Kirkko on ollut kansallinen kulttuurimonumentti vuodesta 2002.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Saint Martin\'s Cathedral O 01.jpg',
+          lyhyt: 'Pyhän Martinin tuomiokirkko, goottilainen kruunajaiskirkko vanhassa kaupungissa.',
+          selite: 'Kirkon rakennustyöt alkoivat 1311, ja nykyasunsa se sai uudelleengotisoinnissa 1860-luvun puolivälistä vuoteen 1877.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mikaelin portti': {
+      aika: '1300-luku; nykyasu 1753–1758',
+      teksti: 'Mikaelin portti on lähteen mukaan ainoa säilynyt keskiaikaisista kaupunginporteista, ja se rakennettiin 1300-luvulla. Ensimmäinen kirjallinen maininta on 1400-luvun alusta. Kaupungin muut kolme porttia olivat Laurincin portti idässä, Kalastajien portti etelässä ja Vydrican portti lännessä.\n\nTornia on korotettu ja rakennettu uudelleen, ja nykyinen asu on vuosilta 1753–1758. Nykyinen 51-metrinen torni on tuolta ajalta, ja sen huipulla on Pyhän Mikaelin ja lohikäärmeen patsas. Portin sisäpuolella oleva kivikyltti kertoo, että kaupunginvaltuusto ja asukkaat korjasivat tornin 1758. Kaupungin ympärillä olleet muurit purettiin 1700-luvulla, koska ne estivät kaupungin kasvun, joten isoisän matkavuonna 1873 muureja ei ollut enää juuri jäljellä.\n\nNykyään tornissa toimii Bratislavan kaupunginmuseon asemuseo, ja tornin parvekkeelta näkee vanhan kaupungin, linnan ja ympäristön. Portin edessä on tiilinen Mikaelin silta 1700-luvulta.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava - Michalská - Michalská brána.jpg',
+          lyhyt: 'Mikaelin portti, vanhan kaupungin tornillinen portti.',
+          selite: 'Tornin nykyasu on vuosilta 1753–1758, ja huipulla on Pyhän Mikaelin patsas.',
+          lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha raatihuone': {
+      aika: '1200–1300-luku–nykypäivä; kaupungintalona 1400-luvulta 1800-luvun loppuun',
+      teksti: 'Vanha raatihuone on vanhan kaupungin sydämessä päätorin ja Primasin aukion välissä oleva rakennuskompleksi. Se on yksi Bratislavan vanhimmista rakennuksista. Sen torni on peräisin 1200-luvun lopulta tai 1300-luvulta. Kompleksi syntyi 1400-luvulla, kun kolme kaupunkitaloa ja Apponyin palatsi yhdistettiin; Apponyin palatsi rakennettiin 1700-luvulla.\n\nRaatihuone toimi kaupungintalona 1400-luvulta 1800-luvun lopulle, ja se oli välillä myös vankila ja rahapaja. Isoisän matkavuonna 1873 se oli yhä kaupungin hallinnon käytössä. Renessanssikunnostus tehtiin 1599 maanjäristyksen jälkeen, ja uusrenessanssisiipi lisättiin 1912.\n\nNapoleonin sotilaat ampuivat 1800-luvun alussa tykinkuulan torniin, ja kuula on kerrotusti yhä seinässä. Nykyään rakennuksessa on Bratislavan kaupunginmuseo, joka perustettiin 1868, ja tornin näköalatasanteelta avautuu näkymä vanhaan kaupunkiin.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Old Town Hall.jpg',
+          lyhyt: 'Vanha raatihuone, kaupunginmuseon koti vanhan kaupungin sydämessä.',
+          selite: 'Raatihuone syntyi 1400-luvulla useiden kaupunkitalojen yhdistämisestä.',
+          lahde: 'Valerio2468, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hviezdoslavin aukio': {
+      aika: '1700-luku–nykypäivä',
+      teksti: 'Hviezdoslavin aukio on vanhan kaupungin pitkä kävelyaukio Uuden sillan ja Slovakian kansallisteatterin välissä. Se on nimetty runoilija Pavol Országh Hviezdoslavin mukaan, mutta aiemmin sillä on ollut nimiä Kossuth Lajos tér, Radetzky tér ja Séta tér. Aukion halki kulkee kaksi suihkulähderiviä, ja se uudistettiin myöhemmin kävelyalueeksi.\n\nMaaliskuussa 1848 Lajos Kossuth puhui väkijoukolle Zöldfa-hotellin parvekkeelta. Neorenessanssiteatteri, jonka suunnittelivat Fellner ja Helmer, rakennettiin 1885–1886 ja avattiin 22. syyskuuta 1886 oopperalla Bánk bán. Isoisän matkavuonna 1873 paikalla oli vielä vanhempi kaupunginteatteri, joka oli avattu 1776 ja jonka tilalle nykyinen rakennus nousi 1880-luvulla.\n\nTeatterin edustalla on 1800-luvun lopun Ganymedes-suihkulähde, ja runoilija Petőfin patsas pystytettiin aukiolle 1900-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava - Statue of Pavol Országh Hviezdoslav.jpg',
+          lyhyt: 'Hviezdoslavin aukio ja runoilija Pavol Országh Hviezdoslavin patsas.',
+          selite: 'Aukio sijaitsee Uuden sillan ja Slovakian kansallisteatterin välissä.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen kirkko': {
+      aika: '1900-luvun alku–1913',
+      teksti: 'Sininen kirkko, virallisesti Pyhän Elisabetin kirkko, on unkarilaisen jugendin edustaja vanhan kaupungin itäosassa. Se on omistettu Unkarin Elisabetille, joka lähteen mukaan kasvoi Pressburgin linnassa. Kirkon suunnitteli Ödön Lechner, ja se rakennettiin 1900-luvun alussa, ja se valmistui 1913. Alun perin se oli viereisen lukion kappeli.\n\nKirkon pohjapiirros on soikea, ja sylinterimäinen torni on noin 37 metriä korkea. Kupolia suunniteltiin, mutta lopulta rakennettiin tynnyriholvi. Katto on lasitettua tiiltä, ja julkisivu oli alun perin vaaleanpastellia ennen kuin siitä tuli sininen.\n\nIsoisän matkavuonna 1873 kirkkoa ei vielä ollut, sillä sen rakennustyöt alkoivat vasta 1900-luvun alussa. Pienoismalli kirkosta on Brysselin Mini-Europe-puistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Blue Church, Bratislava 01.jpg',
+          lyhyt: 'Sininen kirkko eli Pyhän Elisabetin kirkko, Ödön Lechnerin suunnittelema jugendkirkko.',
+          selite: 'Kirkko rakennettiin 1900-luvun alussa Unkarin Elisabetille omistettuna.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grassalkovichin palatsi': {
+      aika: '1760',
+      teksti: 'Grassalkovichin palatsi on rokokoo- ja myöhäisbarokkityylinen palatsi, jonka ympärillä on ranskalaistyylinen puutarha Hodžovo-aukion vieressä. Arkkitehti Andreas Mayerhoffer suunnitteli sen kreivi Antal Grassalkovichille, joka toimi Unkarin kuninkaallisen kamarin puheenjohtajana. Palatsi valmistui 1760.\n\nKappelin seinillä on Joseph von Pichlerin freskoja, ja pääportaikon barokkiveistokset kuvaavat vuodenaikoja; ne on liitetty kuvanveistäjä Johann Wilhelm Beyeriin. Isoisän matkavuonna 1873 palatsi oli olemassa, ja viimeiset omistajat ennen Itävalta-Unkarin loppua olivat arkkiherttua Fredrik Teschenistä ja hänen puolisonsa.\n\nPalatsi restauroitiin 1990-luvulla. Vuodesta 1996 se on ollut Slovakian presidentin virka-asunto, ja puutarha on avoin julkinen puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Bratislava Grassalkovich Palace 01.jpg',
+          lyhyt: 'Grassalkovichin palatsi, kreivi Antal Grassalkovichin kesäpalatsi vuodelta 1760.',
+          selite: 'Palatsi on nykyisin Slovakian presidentin virka-asunto.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  chisinau: {
+    'Kristuksen syntymän katedraali': {
+      aika: '1830–1836',
+      teksti: 'Kristuksen syntymän katedraali on uusklassinen kirkko Chișinăun keskustassa. Sen rakennuttivat Uuden Venäjän kuvernööri Mihail Voroncov ja metropoliitta Gavril Bănulescu-Bodoni, ja rakennustyö kesti vuodesta 1830 vuoteen 1836. Suunnittelija oli arkkitehti Abram eli Avraam Melnikov, ja sisäänkäyntiportiikissa on kuusi doorilaista pylvästä. Vastaava kirkko on rakennettu Bolhradiin.\n\nIsoisän matkavuonna 1873 katedraali oli ollut valmiina yli 35 vuotta, joten se kuului jo kaupungin vakiintuneeseen kuvaan. Toisessa maailmansodassa rakennusta pommitettiin, ja sen kellotorni purettiin Neuvostoaikana 1960-luvulla. Torni rakennettiin uudelleen 1990-luvun lopulla.\n\nNeuvostoaikana kirkko toimi näyttelykeskuksena, ja uskonnollinen käyttö palasi 1980- ja 1990-lukujen taitteessa. Kunnostus kesti vuoteen 1996, ja nykyinen sinkkikupoli ja risti ovat 1990-luvulta. Moldovan pankki on lyönyt katedraalin 180-vuotismuistokolikon.',
+      kuvat: [
+        {
+          tiedosto: 'Nativity Cathedral, Chișinău 02.jpg',
+          lyhyt: 'Katedraalin rakennuttivat kuvernööri Voroncov ja metropoliitta Bănulescu-Bodoni.',
+          selite: 'Nykyinen sinkkikupoli ja risti ovat 1990-luvulta.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Riemukaari: {
+      aika: '1840-luku',
+      teksti: 'Riemukaari on 13 metriä korkea, kaksikerroksinen rakennelma, jonka pohja on neliömäinen ja pylväänpäät korinttilaisia. Arkkitehti Luka Zaushkevich suunnitteli sen muistoksi Venäjän voitosta Venäjän–Turkin sodassa 1828–1829. Valmistumisvuodeksi lähteet antavat 1840 tai 1841, joten kirjoitetaan noin 1840.\n\nKaaren sisällä oli yli kuuden tonnin kello, joka pysyi paikallaan 2010-luvun alkuun asti. Se valettiin osmanilta vallattujen tykkien kuparista ja oli alun perin tarkoitettu katedraalin kellotorniin, mutta osoittautui liian suureksi. Ensimmäinen kello tuli Odessasta, tuuli repi kellotaulun irti, ja uusi mekanismi hankittiin Itävallasta 1800-luvun lopulla.\n\nIsoisän matkavuonna 1873 kaari seisoi siis jo paikallaan. Kaari vaurioitui toisessa maailmansodassa ja kunnostettiin 1900-luvun jälkipuoliskolla.',
+      kuvat: [
+        {
+          tiedosto: 'Triumphal arch, Chișinău 03.jpg',
+          lyhyt: 'Riemukaari on kaksikerroksinen ja 13 metriä korkea.',
+          selite: 'Arkkitehti Luka Zaushkevichin suunnittelema kaari valmistui 1840-luvulla.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tapani Suuren keskuspuisto': {
+      aika: '1818',
+      teksti: 'Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta, ja se on Moldovan vanhin puisto. Puisto on noin seitsemän hehtaarin kokoinen, siellä kasvaa kymmeniä puulajeja, ja mulperit ja akaasiat ovat yli satavuotiaita. Arkkitehti Bogdan Eitner loi nykyiset käytävät ja istutti satoja akaasioita ja lehmuksia sekä kukkapenkkejä.\n\nPuiston aita oli alun perin pajusta. 1800-luvun jälkipuoliskolla arkkitehti Bernardazzin ehdotuksesta tilalle hankittiin Odessasta valurautaaita. Isoisän matkavuonna 1873 puisto oli siis ollut olemassa yli 50 vuotta, mutta Tapani Suuren patsas ei vielä seissyt sisäänkäynnillä. Patsas paljastettiin vuonna 1928, ja sen suunnitteluun osallistui Alexandru Plămădeală.\n\nPuistossa on kävellyt 1820-luvun alussa runoilija Aleksandr Puškin. Klassikoiden puistokuja avattiin vuonna 1958, ja nykyisin puistossa on useita suihkulähteitä. Sen lempinimi on Rakastavaisten puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Ștefan cel Mare Central Park 2021 01.jpg',
+          lyhyt: 'Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta.',
+          selite: 'Puiston mulperit ja akaasiat ovat yli satavuotiaita.',
+          lahde: 'Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: 'noin 1901',
+      teksti: 'Kaupungintalo on italialaista goottia edustava rakennus, joka valmistui noin vuonna 1901 alun perin kaupunginduumalle. Suunnittelijoihin kuuluivat kaupunginarkkitehti Mitrofan Elladi ja arkkitehti Alexander Bernardazzi, joka suunnitteli myös Pyhän Teodora de la Sihlan kirkon 1800-luvun lopulla.\n\nDuuma ja pormestarin virka perustettiin Chișinăuhun jo vuonna 1817, ja ensimmäinen pormestari oli kapteeni Anghel Nour. Pormestari Carol Schmidt johti kaupunkia 1800-luvun lopulta 1900-luvun alkuun, ja häntä muistetaan yhä kaupungin uudistajana. Isoisän matkavuonna 1873 nykyistä kaupungintaloa ei vielä ollut. Vuonna 1837 kaupunginduuman päämajaksi rakennettiin talo, josta tuli 1842 poikien lukio, ja se seisoi nykyisen historiamuseon paikalla.\n\nToisessa maailmansodassa kaupungintalo tuhoutui lähes kokonaan. Rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja rakennussuunnitelmien pohjalta.',
+      kuvat: [
+        {
+          tiedosto: 'Ayuntamiento, Chisináu, Moldavia, 2023-11-03, DD 22.jpg',
+          lyhyt: 'Kaupungintalo rakennettiin alun perin kaupunginduumalle noin vuonna 1901.',
+          selite: 'Italialaista goottia edustava rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja suunnitelmien pohjalta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Măzărache-kirkko': {
+      aika: '1752',
+      teksti: 'Măzărache-kirkko on Chișinăun vanhimmaksi katsottu kirkko. Vasile Măzărache rakennutti sen vuonna 1752, ja rakennus edustaa perinteistä moldavialaista kirkkoarkkitehtuuria. Kirkko nousi osmanien tuhoaman linnoituksen paikalle.\n\nMäen juurella oleva kivilohkare merkitsee kaupungin nimen antaneen lähteen paikkaa, sillä chisla noua tarkoittaa uutta lähdettä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja kirkko valmistui näiden paloja väliin.\n\nIsoisän matkavuonna 1873 kirkko oli seissyt jo 121 vuotta. Toinen vanha kirkko on Râșcani-kirkko vuodelta 1777, jonka rakennutti bojaari Constantin Râșcanu ja joka seisoo Bîc-joen yläpuolisella kukkulalla.',
+      kuvat: [
+        {
+          tiedosto: 'MD.C.C - Măzărache church - aug 2020 - 01.jpg',
+          lyhyt: 'Măzărache-kirkkoa pidetään Chișinăun vanhimpana kirkkona.',
+          selite: 'Vasile Măzărache rakennutti kirkon vuonna 1752.',
+          lahde: 'Gikü ( talk ), Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ciuflea-luostari': {
+      aika: '1854–1858',
+      teksti: 'Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle. Sen rahoitti Anastase Ciufli veljensä Teodor Ciuflin testamentin mukaan. Veljekset olivat aromunikauppiaita, jotka muuttivat Makedoniasta Bessarabiaan vuonna 1821.\n\nRakennuslupa saatiin 1854, ja kirkko vihittiin vuonna 1858. Teodorin jäännökset ovat eteläsiivessä, ja Anastase (1801–1870) liittyi hänen viereensä kuoltuaan.\n\nIsoisän matkavuonna 1873 kirkko oli ollut valmiina 15 vuotta. 1960-luvulla katedraalin sulkemisen vuoksi kirkon johto muutti Ciufleaan, josta tuli katedraali. Luostariksi se muuttui 2000-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Ciuflea Monastery, Chișinău.jpg',
+          lyhyt: 'Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle.',
+          selite: 'Aromunikauppiasveljekset Ciuflit rahoittivat kirkon, joka vihittiin vuonna 1858.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen historiamuseo': {
+      aika: '1837 ja 1987',
+      teksti: 'Moldovan kansallinen arkeologia- ja historiamuseo toimii talossa, jonka julkisivu perustuu vuonna 1837 valmistuneeseen rakennukseen. Alkuperäinen talo tehtiin kaupunginduuman päämajaksi, ja vuonna 1842 siitä tuli poikien lukio numero 1. Isoisän matkavuonna 1873 rakennus oli siis lukio, ei museo.\n\nVuoden 1977 maanjäristys vahingoitti rakennusta niin pahoin, ettei sitä voitu korjata. Se purettiin, ja uusi rakennus valmistui 1987 vanhan julkisivun mukaan eklektiseen tyyliin.\n\nMuseo perustettiin 21.12.1983. Pihassa on Kapitolinuksen naaraasuden kopio, ja osoite on 31 Augusti 1989 -katu 121A.',
+      kuvat: [
+        {
+          tiedosto: 'Museum of History (AP4L0086 1PS) (28922487610).jpg',
+          lyhyt: 'Historiamuseon rakennus valmistui 1987 vanhan julkisivun mukaan.',
+          selite: 'Alkuperäinen vuonna 1837 valmistunut rakennus purettiin maanjäristysvaurioiden jälkeen.',
+          lahde: 'Alexandru Panoiu from Bucharest, Romania, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  minsk: {
+    'Kolminaisuuden esikaupunki': {
+      aika: '1100-luvulta',
+      teksti: 'Kolminaisuuden esikaupunki eli valkovenäjäksi Trajeckaje pradmiescie, Kolminaisuusmäki, on historiallinen alue keskustan koillisosassa Svislačin vasemmalla rannalla. Se oli aikanaan kaupan ja hallinnon keskus. Nimi tulee todennäköisimmin Jogailan vuonna 1390 perustamasta Kolminaisuuden kirkosta, ja toisen selityksen mukaan se viittaa Pyhän Kolminaisuuden puolustuslinnakkeeseen.\n\nAlue on vanhaa asutusta. Lipkatataarit asettuivat Tatarskaja Slabadaan 1400-luvulta, ja ensimmäinen asutus ajoitetaan vuoteen 1428, joten tataariasutus oli vanhaa jo isoisän matkavuonna 1873. Minskin ensimmäinen katolinen kirkko oli alueella.\n\nNykyään alueella on Kansallinen ooppera- ja balettiteatteri. Läheinen Kyynelten saari liittyy esikaupunkiin sillalla.',
+      kuvat: [
+        {
+          tiedosto: 'Trajeckaje pradmiescie (Minsk, February 2020) p44.jpg',
+          selite: 'Kolminaisuuden esikaupunki on historiallinen alue Svislačin vasemmalla rannalla.',
+          lahde: 'Homoatrox, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Hengen katedraali': {
+      aika: '1633–1642',
+      teksti: 'Pyhän Hengen katedraali rakennettiin vuosina 1633–1642 bernardiiniluostarin osaksi paikalle, jossa oli aiemmin luostari. Barokkikirkko vaurioitui sodassa 1654–67 ja vihittiin uudelleen elokuussa 1687. Tulipalo koetteli sitä 1741, ja suurpalo 1835 vaurioitti myös luostarirakennuksia. Bernardiinien luostari suljettiin 1852, ja kirkko oli ollut sen osana vuodesta 1642 lähtien.\n\nKirkko palautettiin itäkirkon käyttöön 1860, kunnostus alkoi 1869, ja se vihittiin uudelleen 22.10.1870. Isoisän matkavuonna 1873 katedraali oli siis vasta kolmen vuoden ikäinen uudelleen vihitty kirkko.\n\nVuonna 1961 siitä tuli hiippakunnan katedraali, ja nykyään se on Valko-Venäjän oikeauskoisen kirkon päätuomiokirkko. Ikonistasissa on Minskin Jumalanäidin ikoni vuodelta 1500.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral of Holy Spirit in Minsk 20190502-2.jpg',
+          selite: 'Pyhän Hengen katedraali rakennettiin 1633–1642 ja palautettiin itäkirkon käyttöön 1860.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Neitsyt Marian arkkikatedraali': {
+      aika: '1700–1710',
+      teksti: 'Neitsyt Marian nimen arkkikatedraali on barokkikirkko, joka valmistui 1710 jesuiittakollegion kirkkona. Jesuiittajärjestö lakkautettiin 1773, ja palo 1797 vaati kunnostuksen. Isoisän matkavuonna 1873 kirkko oli jo vanha, ja hiippakunta oli lakkautettu 1869.\n\nHiippakunta palautettiin marraskuussa 1917, mutta kirkko suljettiin 1934 ja kellotornit purettiin 1951. Kirkko palautettiin käyttöön 1993, kunnostettiin 1997, ja sille hankittiin uudet urut 2005. Hiippakunnan lakkauttamisesta 1869 sen palauttamiseen 1917 kului lähes puoli vuosisataa, ja kellotornien purkamisesta 1951 kirkon palauttamiseen 1993 yli neljä vuosikymmentä.\n\nKatedraali sijaitsee Vapauden aukion laidalla. Siitä näkee uudelleen rakennetulle vanhalle raatihuoneelle.',
+      kuvat: [
+        {
+          tiedosto: 'Minsk Catholic Mary church.jpg',
+          selite: 'Neitsyt Marian arkkikatedraali on barokkikirkko, joka valmistui jesuiittakollegion kirkkona 1710.',
+          lahde: 'A.Savin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Punainen kirkko': {
+      aika: '1905–1910',
+      teksti: 'Punainen kirkko eli Pyhien Simeonin ja Helenan kirkko on uusromaaninen. Sen suunnittelivat arkkitehdit Tomasz Pajzderski ja Władysław Marconi, peruskivi muurattiin lähteistä riippuen 1905 tai 1906, ja kirkko vihittiin 1910. Tiilet tuotiin Częstochowasta ja kattotiilet Włocławekista. Isoisän matkavuonna 1873 kirkkoa ei ollut vielä olemassa.\n\nRahoittaja oli Edward Woyniłłowicz, ja kirkko nimettiin hänen kahden kuolleen lapsensa, Szymonin ja Helenan, muistoksi. Vuonna 1903 noin 2 000 katolilaista oli anonut tonttia kirkolle.\n\nKirkko suljettiin 1932 ja sitä käytettiin muun muassa elokuvateatterina. Se palautettiin kirkolle 1990. Lähteen mukaan sen siluetti on suosittu matkamuistoissa.',
+      kuvat: [
+        {
+          tiedosto: 'Church of Saints Simon and Helena (Aug 2019).jpg',
+          selite: 'Punainen kirkko vihittiin 1910 Pyhien Simeonin ja Helenan kirkkona.',
+          lahde: 'KpokeJlJla, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kyynelten saari': {
+      aika: '1988–1996',
+      teksti: 'Kyynelten saari, virallisesti Rohkeuden ja surun saari, on pieni muistosaari Svislač-joessa. Siltaa pitkin pääsee Kolminaisuuden esikaupunkiin. Saari on muistomerkki ulkomailla sotatoimissa kuolleille valkovenäläisille.\n\nKokonaisuuteen kuuluu veistoksia, muistokiviä ja kappeli. Arkkitehtuuri syntyi kuvanveistäjä J. Pavlovin johdolla, ja muistomerkki rakennettiin 1988–1996 ja vihittiin 3.8.1996. Saari sijaitsee aivan Kolminaisuuden esikaupungin vieressä, joten sen voi liittää samaan kävelykierrokseen vanhan Minskin kanssa.\n\nSuomenkielisen lähteen mukaan Afganistanin sodassa 1979–89 menehtyi 771 valkovenäläistä ja sotaan osallistui 30 000. Isoisän matkavuonna 1873 saarta ei ollut.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    Voitonaukio: {
+      aika: '1954',
+      teksti: 'Voitonaukio on historiallisessa keskustassa Itsenäisyydenkadun ja Zaharaŭ-kadun risteyksessä. Ennen vuotta 1958 sen nimi oli Kruglaja, pyöreä. Keskellä on 38 metrin graniittipylväs, jonka huipulla on Voiton ritarikunnan kunniamerkin kolmen metrin kopio. Pylväs pystytettiin 1954, ja sen ympärillä on neljä pronssireliefiä ja neljä pronssista seppelettä.\n\nIkuinen tuli sytytettiin 3.7.1961. Aukio muotoiltiin soikeaksi 1984 metroaseman uloskäyntien vuoksi. Kaksi kaarevaa asuintaloa rakennettiin 1936–39, ja lähteen mukaan ne valmistuivat 1947.\n\nPuisto ulottuu aukiolta Svislačille ja Gorki-puistoon. Lähteen mukaan vihkiparit kuvauttavat itsensä aukiolla. Isoisän matkavuonna 1873 pylvästä ei ollut vielä pystytetty.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gorki-puisto': {
+      aika: '1800–1805',
+      teksti: 'Gorki-puisto laadittiin 1800 ja avattiin 1805 nimellä Kuvernöörin puutarha. Neuvostoaikana se nimettiin Maksim Gorkin mukaan. Puisto on lähellä Voitonaukiota ja Janka Kupalan puistoa, ja Voitonaukion kautta se yhtyy Svislačin rantapuistoon.\n\nNykyään puistossa on huvipuisto ja yli 50 metriä korkea maailmanpyörä. Lisäksi siellä on opetuksellinen observatorio ja planetaario sekä Jäälinna-halli, joka toimii sisäjäähallina. Puisto yhdistää siis huvipuiston, tähtitieteen ja jääurheilun. Voitonaukio, Gorki-puisto ja Janka Kupalan puisto ovat lähellä toisiaan, joten ne sopivat samalle kävelykierrokselle, ja Svislačin rantapuisto jatkaa reittiä joen varrella.\n\nPuisto oli avattu jo 1805, joten se oli olemassa isoisän matkavuonna 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Minsk. Pedestrian bridge across the Svisloch River in Gorky Park.jpg',
+          selite: 'Gorki-puisto avattiin 1805 Kuvernöörin puutarhana, ja siinä on yli 50 metriä korkea maailmanpyörä.',
+          lahde: 'Bestalex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  podgorica: {
+    'Sahat kula -kellotorni': {
+      aika: '1667',
+      teksti: 'Sahat kula on noin 16–19 metriä korkea itsenäinen kivitorni Bećir Beg Osmanagićin aukiolla Stara Varošissa. Sen rakennutti Hadži-paša Osmanagić vuonna 1667, ja se on yksi harvoista ottomaanien ajan merkeistä, jotka selvisivät toisen maailmansodan pommituksista.\n\nIsoisän matkavuonna 1873 torni seisoi jo paikallaan, mutta nykyinen koneisto tuli vasta vuonna 1890, ja sen teki italialainen Colbachinin valimo Bassano del Grappassa. Tornin huippu sai metalliristin 1800-luvun lopulla, kun kaupunki oli siirtynyt Montenegrolle.\n\nKellon uusi sähkökoneisto asennettiin tammikuussa 2012. Torni on lailla suojeltu kulttuurimonumentti.',
+      kuvat: [
+        {
+          tiedosto: 'Podgorica Clock Tower Sahat kula 01.jpg',
+          selite: 'Sahat kula valmistui vuonna 1667, ja se on harvoja ottomaanien ajan merkkejä, jotka säilyivät.',
+          lahde: 'MOs810, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ribnican linnoitus': {
+      aika: '1400-luvun loppu',
+      teksti: 'Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Salamanisku sytytti myöhemmin 1800-luvun lopulla räjähdyksen, joka vaurioitti linnoitusta pahoin, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.',
+      kuvat: [
+        {
+          tiedosto: 'Depedogen.JPG',
+          selite: 'Ribnican linnoitus rakennettiin 1400-luvun lopulla, ja salamanisku vaurioitti sitä pahoin 1878.',
+          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha silta Ribnican yli': {
+      aika: 'uusittu 1700-luvulla',
+      teksti: 'Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi. Siltaa pidetään hyvin vanhana: sen alkuperä ulottuu roomalaisaikaan, ja sitä on uusittu myöhemmin. Vezirov most on eri silta: se ylittää Moračan.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ytimeen, jota 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.',
+      kuvat: [
+        {
+          tiedosto: 'Starimost.JPG',
+          selite: 'Vanha silta yhdistää Stara Varošin Ribnican yli kohdassa, jossa joki laskee Moračaan.',
+          lahde: 'Rasho992, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Itsenäisyydenaukio': {
+      aika: 'uudistettu 2006',
+      teksti: 'Itsenäisyydenaukio on Podgorican keskusaukio Nova Varošissa, uuden kaupungin hallinnollisessa ja sosiokulttuurisessa sydämessä. Isoisän matkavuonna 1873 Nova Varošia ei vielä ollut, joten aukiotakaan ei ollut.\n\nVuoteen 2006 aukion nimi oli Ivan Milutinovićin aukio. Montenegron itsenäistymisvuonna 2006 aukio uusittiin kokonaan: sitä laajennettiin, päällystettiin ja siitä tehtiin autoton alue, ja sille rakennettiin iso keskussuihkulähde, kolonnadit ja vesikanavat sekä istutettiin palmuja.\n\nAukion laidalla on kaupunginkirjasto ja valtion galleria Art. Aukiota reunustavat Slobode- ja Njegoševa-kadut ovat kävelykatuja.',
+      kuvat: [
+        {
+          tiedosto: 'Podgorica - Independence Square PG.jpg',
+          selite: 'Itsenäisyydenaukio uusittiin kokonaan Montenegron itsenäistymisvuonna 2006.',
+          lahde: 'Desemeus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Millennium-silta': {
+      aika: '2005',
+      teksti: 'Millennium-silta on vinoköysisilta Moračan yli. Se avattiin liikenteelle 13.7.2005, Montenegron kansallispäivänä, ja se yhdistää Ivan Crnojevićin bulevardin ja 13. heinäkuuta -kadun. Isoisän matkavuonna 1873 siltaa ei ollut, ja Moračan yli kuljettiin muilla silloilla.\n\nSillan suunnittelijat ovat Marjan Pipenbaher (Ponting Bridges) ja Mladen Ulićević, ja rakentaja oli slovenialainen Primorje. Pituutta sillalla on 173 metriä, ja pylon nousee 57 metriä tien yläpuolelle. Kaksitoista köyttä kantaa kantta, ja 24 muuta kiinnittyy vastapainoihin.\n\nSillan kustannus oli noin 7 miljoonaa euroa. Siinä on kaksi ajokaistaa sekä jalkakäytävä kumpaankin suuntaan.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen ylösnousemuksen katedraali': {
+      aika: '1993–2013',
+      teksti: 'Kristuksen ylösnousemuksen katedraali on Montenegron ja Rannikon metropoliitan kirkko, Serbian kirkon alainen. Sen rakentaminen alkoi vuonna 1993 Predrag Ristićin suunnitelmin, ja se pyhitettiin vuonna 2013 Milanon ediktin 1 700-vuotisjuhlan yhteydessä. Isoisän matkavuonna 1873 katedraalia ei vielä ollut.\n\nArkkitehtuurissa on kaksi tornia ja näkyvä kaari, ja esikuvana oli keskiaikainen Pyhän Tryfonin katedraali Kotorissa. Siinä on romaanisia, italialaisia ja bysanttilaisia vaikutteita. Sisätilat ovat täynnä kultataustaisia ikonimaalauksia, ja lattiat ovat marmoria.\n\nPyhitykseen osallistui useita patriarkkoja, muun muassa Serbian patriarkka Irinej ja ekumeeninen patriarkka Bartolomeos. Metropoliitta Amfilohije Radović, joka toimi tehtävässä 1990–2020, haudattiin katedraalin kryptaan vuonna 2020.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  skopje: {
+    Kivisilta: {
+      aika: '1451–1469',
+      teksti: 'Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin Vardarin yli. Se on 214 metriä pitkä ja 6 metriä leveä, ja sillä on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle Mehmed II:n suojeluksessa vuosina 1451–1469, ja se on kaupungin vaakunan pääaihe.\n\nVuoden 1555 maanjäristys vaurioitti siltaa, ja korjaukset tehtiin samana vuonna. Viimeisin laaja kunnostus alkoi 1990-luvulla ja kesti useita vuosia; silta oli sen ajan suljettu liikenteeltä, mikä vaikutti basaarin käsityöläisiin. Mihrabin muotoinen vartiotorni rekonstruoitiin 2000-luvulla.\n\nIsoisän matkavuonna 1873 silta oli jo yli 400 vuotta vanha: se oli valmistunut viimeistään 1469, joten kaupunkilaiset kulkivat sen yli samoin kuin nykyäänkin.',
+      kuvat: [
+        {
+          tiedosto: 'Stone Bridge (Skopje).JPG',
+          selite: 'Kivisilta on 214 metriä pitkä, ja sillä on 12 puolipyöreää kaarta.',
+          lahde: 'Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Makedonia-aukio': {
+      aika: '2000-luku (uudistettu)',
+      teksti: 'Lähteen mukaan Makedonia-aukio on Skopjen pääaukio, ja sen pinta-ala on noin 18 500 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyvät muun muassa Maksim Gorki-, Dimitar Vlahov- ja Makedonia-katu. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla.\n\nMaksim Gorki -kadun japaninkirsikat aloittavat keväisin aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia.\n\nIsoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä joen sille puolelle, jota ei ollut aiemmin kaupunkirakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Macedonia Square, Skopje, NMK.jpg',
+          selite: 'Makedonia-aukion pinta-ala on noin 18 500 neliömetriä.',
+          lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Skopjen linnoitus (Kale)': {
+      aika: '500-luku',
+      teksti: 'Skopjen linnoitus eli Kale kohoaa kaupungin korkeimmalle kohdalle. Ensimmäinen linnoitus rakennettiin 500-luvulla keltaisesta kalkkikivestä ja travertiinista, ja lähteen mukaan materiaalia otettiin tuhoutuneesta Scupista; lähteiden mukaan myöhempiä vaiheita on 900–1000-luvuilta. Alueen vanhin asutus on Kale-kallionokalla jo noin vuodesta 4000 eaa.\n\nStefan Dušan kruunattiin keisariksi Skopjessa 1346, ja Skopje oli yksi Serbian valtakunnan pääkaupungeista. Evliya Çelebi kuvasi 1600-luvulla linnoituksen kaksoismuureineen. Vuoden 1963 maanjäristys tuhosi osan linnoituksesta, ja se on sittemmin kunnostettu keskiaikaiseen ulkoasuunsa.\n\nIsoisän matkavuonna 1873 linnoitus oli ottomaanien Üskübin yllä, ja se on vaakunassa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Skopje Fortress, 2026.jpg',
+          selite: 'Kale on kaupungin korkeimmalla kohdalla, ja sen ensimmäinen vaihe on 500-luvulta.',
+          lahde: 'Julian Lupyan, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha basaari': {
+      aika: '1100-luvulta ottomaanikauteen',
+      teksti: 'Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja ottomaanikaudella basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa.\n\nBezisten, katettu kauppahalli, rakennettiin 1400-luvulla. Se tuhoutui tulipalossa, on kunnostettu ja näyttää 1800-luvun lopun kunnostuksen jälkeiseltä. Kellotorni on kuusikulmainen, ja järistys vaurioitti sitä 1963, mutta se korjattiin pian. Kapan Han on yksi kolmesta jäljellä olevasta karavaanisarajista.\n\nIsoisän matkavuonna 1873 basaari oli kaupungin elävä ydin: moskeijat, sarajit ja hamamit olivat jo paikallaan. Pohjois-Makedonian parlamentti suojeli sen kulttuuriperintönä 2000-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Skopje Old Bazaar 1.jpg',
+          selite: 'Vanhassa basaarissa on noin kolmekymmentä ottomaanikauden moskeijaa ja karavaanisarajeja.',
+          lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mustafa-pasan moskeija': {
+      aika: '1492',
+      teksti: 'Mustafa-pasan moskeija valmistui 1492. Sen rakennutti Çoban Mustafa-pasa, josta tuli myöhemmin Selim I:n visiiri. Moskeija seisoo tasanteella basaarin yläpuolella lähellä Kalea, ja siitä avautuu näköala basaarille. Lähteen mukaan se rakennettiin vanhalle kristilliselle paikalle.\n\nKupolin halkaisija on noin 16 metriä, ja minareetin korkeudeksi lähteet antavat noin 40–50 metriä. Portiikki lepää marmoripilareilla, joita koristavat stalaktiittimaiset yksityiskohdat. Moskeijan piha on täynnä ruusuja.\n\nVieressä on türbe: Mustafa-pasa on haudattu kuusikulmaiseen marmoriseen türbeen, ja hänen tyttärensä Umi lepää koristeellisessa sarkofagissa, jonka kahdella seinällä on persialaisia kirjoituksia. Turkin valtion rahoittama kunnostus valmistui 2010-luvun alussa. Isoisän matkavuonna 1873 moskeija oli jo yli 380 vuotta vanha.',
+      kuvat: [
+        {
+          tiedosto: 'Mustafa Paşa Mosque, Skopje.jpg',
+          selite: 'Mustafa-pasan moskeijan minareetti ja kupoli kohoavat basaarin yläpuolelle.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Mustafa Pasha Mosque Skopje 2.jpg',
+          selite: 'Moskeijan portiikki lepää marmoripilareilla.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuršumli An': {
+      aika: '1500-luku',
+      teksti: 'Kuršumli An on ottomaanien karavaanisaraji Vanhassa basaarissa, ja se on toiminut majatalona ja vankilana. Se rakennettiin 1500-luvulla, todennäköisesti vuosisadan puolivälissä. Se on yksi Vanhan basaarin kolmesta jäljellä olevasta karavaanisarajista.\n\nRakennus on neliömäinen, ja sen kupolit ovat pyramidin muotoisia. Kupolit katettiin alun perin lyijyllä, minkä vuoksi paikkaa on kutsuttu Lyijyn basaariksi tai Lyijyn majataloksi. Alakerta toimi varastona tai eläinten tilana, yläkerta yöpyjien majoituksena.\n\nSen yhteydessä ollut moskeija ja suurin osa hamamista tuhoutuivat 1900-luvulla. Nykyään siellä on museon kivimuistomerkkien kokoelma (lapidarium). Isoisän matkavuonna 1873 sarajissa oli yli kolmesataa vuotta takana.',
+      kuvat: [
+        {
+          tiedosto: 'Kursumli an, Skopje.jpg',
+          selite: 'Kuršumli Anin kaksikerroksinen kaaripiha oli alun perin karavaanien majatalo.',
+          lahde: 'Veraumka, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Daut-pasan hamam': {
+      aika: '1400-luku',
+      teksti: 'Daut-pasan hamam on Vanhan basaarin tunnetuin kylpylä. Itä-Rumelian suurvisiiri Daut-pasa rahoitti basaarin rakennuksia, ja hamam rakennettiin 1400-luvulla. Rakennusta peittää 13 kupolia: suurimmat kupolit peittävät pukuhuoneet ja loput yksittäisiä kylpyhuoneita.\n\nKansallisgalleria on toiminut rakennuksessa vuodesta 1948, ja se esittelee 1300-luvulta alkaen ajoittuvia maalauksia kahdessa entisessä hamamissa. Lähellä on Čifte Hamam, kaksoishamam, jossa on myöhemmin toiminut nykytaidegalleria.\n\nIsoisän matkavuonna 1873 hamam oli jo yli 370 vuotta vanha: se rakennettiin 1400-luvulla, ja läheinen Čifte Hamam toimi vielä kylpylänä.',
+      kuvat: [
+        {
+          tiedosto: 'Daut Pa$a Amam (9).JPG',
+          selite: 'Daut-pasan hamamissa on 13 kupolia, ja galleria on toiminut siinä vuodesta 1948.',
+          lahde: 'Darko Nikolovski, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  tirana: {
+    'Skanderbeg-aukio': {
+      aika: '1910-luvulla, uudistettu 2017',
+      teksti: 'Skanderbeg-aukio on Tiranan pääaukio, ja sen pinta-ala on noin neljä hehtaaria. Aukio on nimetty Albanian kansallissankarin Skanderbegin mukaan, ja sitä hallitsee hänen monumenttinsa, jonka kuvanveistäjä oli Odhise Paskali. Itävaltalaiset rakensivat julkisen aukion paikalle 1910-luvulla, joten isoisän matkavuonna 1873 aukiota ei vielä ollut.\n\nKaupungin suunnitelman laati ensin Armando Brasini 1925, ja sitä jatkoi Florestano Di Fausto uusrenessanssityylillä. Gherardo Bosio päivitti pääsuunnitelman 1939. Kuningaskunnan aikana aukiolla oli liikenneympyrä ja suihkulähde.\n\nAukio uudistettiin jalankulkualueeksi 51N4E-toimiston ja Anri Salan suunnitelman mukaan, ja se valmistui vuonna 2017. Se sai Euroopan julkisen kaupunkitilan palkinnon 2018. Aukion ympärillä ovat oopperatalo, kansalliskirjasto, kansallinen historiallinen museo, Et\'hem Beyn moskeija, kellotorni ja kaupungintalo.',
+      kuvat: [
+        {
+          tiedosto: 'Tirana - Skanderbeg Square (Sheshi Skënderbej) - by Pudelek.jpg',
+          lyhyt: 'Skanderbeg-aukio on Tiranan pääaukio, jota hallitsee kansallissankarin monumentti.',
+          selite: 'Aukion nykyinen jalankulkuilme valmistui 2017, ja ympärillä ovat muun muassa oopperatalo ja kansalliskirjasto.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Et\'hem Beyn moskeija': {
+      aika: '1790-luvulta 1819–1821',
+      teksti: 'Virallisesti Haji Et\'hem Beyn moskeija on sunnalaismoskeija, jonka rakentaminen alkoi 1791 tai 1794 Molla Beyn johdolla. Se valmistui 1819 tai 1821 hänen poikansa Haxhi Ethem Beyn aikana, joten isoisän matkavuonna 1873 moskeija oli seissyt jo yli viisikymmentä vuotta. Rakennuksessa on kupolilla katettu neliöpohjainen rukoushuone, pohjoispuolinen portiikki ja minareetti.\n\nJulkisivun ja sisätilan seinämaalauksissa on puita, vesiputouksia ja siltoja, ja useimmat kohtaukset ovat mielikuvitusmaisemia. Moskeija ja viereinen kellotorni muodostavat rakennuskokonaisuuden. Sen edessä oli vanha basaari ja idässä Sulejman Pashan moskeija vuodelta 1614, joka tuhoutui toisessa maailmansodassa.\n\nKommunistiajan uskonnonvastaisen politiikan aikana moskeija suljettiin, julistettiin kulttuurimonumentiksi ja kunnostettiin kommunistiajan kuluessa. 1990-luvun alussa tuhannet ihmiset astuivat sisään lippujen kanssa, ja moskeija avattiin uskonnolliseen käyttöön.',
+      kuvat: [
+        {
+          tiedosto: 'Ethem Bey mosque, Tirana (by Pudelek).jpg',
+          lyhyt: 'Et\'hem Beyn moskeija on sunnalaismoskeija, jossa on kupolilla katettu rukoushuone.',
+          selite: 'Rakennuksen pohjoispuolella on portiikki, ja kupolissa ei ole ikkunoita.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan kellotorni': {
+      aika: '1822 tai 1830',
+      teksti: 'Kellotorni on ottomaanien aikainen kulttuuriperintökohde, joka tunnistettiin ensimmäisen kerran 1940-luvulla. Et\'hem Bey rakennutti tornin minareetin jälkeen, ja valmistumista juhlisti runoilija Shaban Hulusi Bey Toptani kronogrammilla. Valmistumisvuosi on lähteen mukaan 1822 tai 1830, joten torni seisoi jo isoisän matkavuonna 1873.\n\nTorni on yli 30 metriä korkea ja neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta. Se sai nykyisen ulkoasunsa vuoden 1928 remontissa, mutta ensimmäinen kerros on alkuperäinen. Pohjoisseinän kiviriviin on veistetty reliefit: lohikäärme ja kasvikuvio. Kellon kunnossapidosta huolehti vuoteen 1973 asti Tufina-suku.\n\nTornin varhaisin kuvadokumentti on Edward Learin kaksi akvarellia syyskuulta 1848. Laaja kunnostus valmistui vuonna 2010. Ramadanin ja bajramin aikaan tornin ja moskeijan minareetin väliin ripustetaan toisinaan mahya-valoja.',
+      kuvat: [
+        {
+          tiedosto: 'Tirana-Clock Tower.JPG',
+          lyhyt: 'Tiranan kellotorni on ottomaanien aikainen kulttuuriperintökohde.',
+          selite: 'Torni on neliöpohjainen, ja sen kivet tuotiin Priskën kukkuloilta.',
+          lahde: 'David.r.1929, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan linnoitus': {
+      aika: 'ennen vuotta 1300',
+      teksti: 'Tiranan linnoitus eli albaniaksi Kalaja e Tiranës on bysanttilaiskauden jäänne, jonka historia ulottuu lähteen mukaan ennen vuotta 1300. Mahdollinen varhaisempi nimi Tirkan liittyy linnoitukseen. Linnoitus sijaitsi kohdassa, jossa risteävät itä–länsi- ja pohjois–etelä-suuntaiset tiet, ja se muodosti Tiranan sydämen.\n\nLinnoituksessa tunnetaan useita torneja. Maanpäällä on jäljellä noin kuusi metriä korkea, viiniköynnöksen peittämä ottomaanien aikainen muuri, ja muurin perustukset on liitetty Murat Toptanin jalankulkukatuun. Isoisän matkavuonna 1873 muuri oli jo vanhaa kaupunkia.\n\nLinnoitus julistettiin ensimmäisen luokan kulttuurimonumentiksi 1970-luvulla. Alueelle avattiin perinteinen basaari joulukuussa 2018: siellä on käsityöliikkeitä ja perinneravintoloita. Alueella on myös hotelleja ja kulttuurilaitoksia.',
+      kuvat: [
+        {
+          tiedosto: 'Fortress Walls, Tirana.JPG',
+          lyhyt: 'Tiranan linnoitus on bysanttilaiskauden jäänne, ja sen muuri on ottomaanien ajalta.',
+          selite: 'Maanpäällä on jäljellä noin kuusi metriä korkea ottomaanien aikainen muuri.',
+          lahde: 'Imfishy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tabakkien silta': {
+      aika: '1700-luku',
+      teksti: 'Tabakkien silta eli albaniaksi Ura e Tabakëve on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta. Se sijaitsee Tabakkien moskeijan lähellä. Nimi tulee nahkureista: heitä kutsuttiin nimellä tabakë, ja tunnettuja nahanparkitsijasukuja olivat muun muassa Xheleti ja Kuka.\n\nSilta kuului tiehen, joka yhdisti Tiranan Debariin Priskë e Madhen, Qafe Priskën, Domjen, Shëngjergjin, Bizën, Martaneshin ja Zerqanin kautta. Tietä käyttivät pääasiassa maanviljelijät tuodessaan tuotteita ja karjaa kaupunkiin. Silta ylitti Lanë-puron paikassa, jonka lähellä oli lihakauppiaiden ja nahkureiden alue, ja se oli isoisän matkavuonna 1873 jo vanha.\n\nLanë ohjattiin pois vanhalta uomaltaan 1930-luvulla, ja silta jäi rappiolle. Se puhdistettiin ja kunnostettiin myöhemmin, ja kunnostuksessa paljastuivat sillan perustukset. Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.',
+      kuvat: [
+        {
+          tiedosto: 'Tanners\' Bridge, Tirana, Albania 02.jpg',
+          lyhyt: 'Tabakkien silta on 1700-luvun ottomaanien aikainen kivinen jalankulkusilta.',
+          selite: 'Silta kuului Tiranasta Debariin johtaneeseen tiehen.',
+          lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kokonozin moskeija': {
+      aika: '1750',
+      teksti: 'Virallisesti Mahmut Agë Kokonozin moskeija tunnetaan myös nimellä Uuden basaarin moskeija. Nimi tulee ottomaanien aikaisesta aga-arvonimestä. Moskeija rakennettiin 1750 ottomaanien aikana, joten isoisän matkavuonna 1873 se oli seissyt jo yli sata vuotta.\n\nKommunistiajan uskonnonvastainen politiikka kosketti myös tätä moskeijaa: 1960-luvulla se suljettiin ja muutettiin ruokavarastoksi, myöhemmin tupakkakaupaksi. Lähteen mukaan se on silti yksi harvoista moskeijoista, jotka selvisivät kommunistiajasta. Moskeija avattiin uudelleen 1990-luvun alussa, ja nimensä mukaisesti se kuuluu yhä Uuden basaarin ympäristöön.',
+      kuvat: [
+        {
+          tiedosto: 'Pazari i Ri, Tirana Albania 2017.jpg',
+          lyhyt: 'Kokonozin moskeija kohoaa Uuden basaarin torin laidalla Tiranan keskustassa.',
+          selite: 'Moskeijan kerrotaan rakennetun 1750, ja se on yksi harvoista Tiranan moskeijoista, jotka selvisivät kommunistiajasta.',
+          lahde: 'Kevin Jasini, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tiranan pyramidi': {
+      aika: '1988, uudistettu 2023',
+      teksti: 'Pyramidi avattiin vuonna 1988 museona, ja sen suunnittelivat muun muassa Pranvera Hoxha ja Klement Kolaneci. Kompleksin pinta-ala on noin 1,7 hehtaaria. Isoisän matkavuonna 1873 sitä ei ollut vielä olemassa.\n\nVuoden 1991 jälkeen rakennus toimi konferenssi- ja näyttelykeskuksena, ja osaa on käytetty 2000-luvun alusta television ja radion lähetyskeskuksena. Purkusuunnitelmia tehtiin useita: historioitsija Ardian Klosi keräsi vetoomukseen tuhansia allekirjoituksia. 2010-luvun lopulla ilmoitettiin, ettei rakennusta puretakaan vaan kunnostetaan.\n\nArkkitehtitoimisto MVRDV muutti rakennuksen nuorten teknologiakeskus TUMO Tiranaksi. Alkuperäinen betonirakenne säilytettiin, ja siihen lisättiin portaat, kattoikkunat ja värikkäitä uusia elementtejä. Huipulle voi kävellä portaita pitkin.',
+      kuvat: [
+        {
+          tiedosto: 'Pyramid of Tirana 1.jpg',
+          lyhyt: 'Pyramidin portaat avattiin yleisölle toukokuussa 2023.',
+          selite: 'Kompleksin pinta-ala on noin 1,7 hehtaaria.',
+          lahde: 'BBB2021, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rinian puisto': {
+      aika: '1950',
+      teksti: 'Rinian puisto eli Parku Rinia, nuorisopuisto, on Tiranan keskeinen yleinen puisto. Se rakennettiin noin 1950 kommunistiajalla, pinta-ala on noin kolme hehtaaria ja se sijaitsee noin 500 metrin päässä keskusaukiolta. Isoisän matkavuonna 1873 puistoa ei ollut.\n\nPuisto alkoi saada ironisesti nimen Taiwan, ja sen länsireunan terassoitu valkoinen Taivani-keskus on nimetty sen mukaan. Keskuksessa on kahviloita, ravintoloita, suihkulähteitä ja keilarata kellarissa. Vuoden 1991 jälkeen puiston ympärille nousi luvattomia rakennuksia, ja vuoden 2000 siivouksessa niitä purettiin runsaasti.\n\nJoka vuosi 14. maaliskuuta vietetään Kesäpäivää eli Dita e Verësiä, joka merkitsee talven päättymistä ja luonnon heräämistä. Pääjuhla on Elbasanissa, mutta Tiranassa järjestetään tapahtumia ja sirkusesityksiä Rinian puistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Rinia Park Tirana (1).jpg',
+          lyhyt: 'Rinian puisto rakennettiin noin 1950 Tiranan keskeiseksi yleiseksi puistoksi.',
+          selite: 'Puiston länsireunalla on Taivani-keskus, jonka nimi viittaa puiston ironiseen lempinimeen Taiwan.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  zagreb: {
+    'Kivinen portti': {
+      aika: '1200-luku',
+      teksti: 'Kivinen portti on ainoa säilynyt Gradecin neljästä kaupunginportista; muut olivat Mesnička, Opatička ja Dverce. Se rakennettiin 1200-luvulla osana Gradecin muureja, ja nykyilmeensä se sai myöhemmin. Isoisän matkavuonna 1873 portti oli yhä kaupunginportti Yläkaupungin itälaidalla.\n\nToukokuun lopussa 1731 syttyi tulipalo Pyhän Joosefin seminaarissa, ja se levisi Yläkaupunkiin ja Kaptoliin. Kolmantena päivänä raunioista löytyi vahingoittumaton Neitsyt Marian maalaus, josta vain puinen kehys oli palanut. Hurskas leski rakennutti maalaukselle pienen alttarin portin holvin alle.\n\nKivinen portti esiintyy August Šenoan romaanissa Zlatarevo zlato, ja holvin syvennyksessä on Dora Krupićin pieni patsas. Kardinaali Kuharić julisti Kivisen portin Neitsyt Marian Zagrebin suojeluspyhimykseksi 31.5.1991.',
+      kuvat: [
+        {
+          tiedosto: 'Puerta de Piedra, Zagreb, Croacia, 2014-04-20, DD 02.JPG',
+          lyhyt: 'Kivisen portin holvin alla on Neitsyt Marian maalaukselle rakennettu alttari.',
+          selite: 'Kivisen portin holvin alla on pieni alttari, joka rakennettiin 1731 tulipalosta säilyneelle Neitsyt Marian maalaukselle.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lotrščakin torni': {
+      aika: '1200-luku',
+      teksti: 'Lotrščakin torni rakennettiin osana Gradecin muureja, jotka valmistuivat 1260-luvulla, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello. Kello soi merkiksi porttien sulkemisesta, ja Dverce-portti purettiin 1812 eteläisen kävelykadun tieltä.\n\nVuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Isoisän matkavuonna 1873 nämä lisäykset olivat jo paikallaan, mutta tykkiä ei vielä ollut. Kaupunki päätti hankkia sen myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus toimi merkkinä kirkonkellojen soittajille.\n\nTykki ammutaan neljännen kerroksen eteläikkunasta. Laukaukset keskeytyivät ensimmäisen maailmansodan ajaksi ja jatkuivat 1927. Pohjakerroksessa toimi aikoinaan kahvila, ja nykyisin tornissa on näköalatasanne, joka kuuluu Klovićevi Dvori -galleriaan.',
+      kuvat: [
+        {
+          tiedosto: 'Kula Lotrščak i Dverce.jpg',
+          lyhyt: 'Lotrščakin torni sijaitsee Yläkaupungin eteläreunalla.',
+          selite: 'Lotrščakin torni rakennettiin Gradecin muurien eteläisen Dverce-portin puolustukseksi.',
+          lahde: 'Bobonajbolji, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zagrebin tuomiokirkko': {
+      aika: '1217, 1880-luvulta alkaen',
+      teksti: 'Zagrebin tuomiokirkon virallinen nimi on Neitsyt Marian taivaaseenottamisen ja pyhien Tapanin ja Ladislauksen katedraali. Piispanistuin perustettiin 1094, ja ensimmäinen katedraali valmistui ja vihittiin 1217. Lähteen mukaan se on Kroatian korkein sakraalirakennus. Tataarit tuhosivat Kaptolin 1242, ja piispa Timotej jälleenrakensi kirkon 1263–1287.\n\nIsoisän matkavuonna 1873 tuomiokirkko oli vielä keskiajan ja barokin sekoitus ilman kaksoistorneja. Vuoden 1880 maanjäristys romahdutti päälaivan, ja arkkitehti Hermann Bollén johtama uusgoottilainen kunnostus kesti 1880-luvulta 1900-luvun alkuun. Tornit rakennettiin 1889–1899, ja ne ovat noin 105–108 metriä korkeat.\n\nJäristys 22.3.2020 pudotti eteläisen tornin kärjen arkkipiispanpalatsin katolle, ja pohjoisen tornin kärki poistettiin 17.4.2020. Kunnostus jatkui lähteen mukaan vielä 2020-luvun puolivälissä.',
+      kuvat: [
+        {
+          tiedosto: 'Zagreb Cathedral 03.jpg',
+          lyhyt: 'Tuomiokirkon kaksi tornia kohoavat Kaptolin yllä.',
+          selite: 'Tuomiokirkon kaksi uusgoottilaista tornia rakennettiin 1889–1899 ja ne ovat noin 105–108 metriä korkeat.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Zrinjevac: {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Zrinjevac eli virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa. Karjamarkkina siirrettiin sen paikalle 1800-luvun alkupuolella. Isoisän matkavuonna 1873 puiston musiikkipaviljonkia ei vielä ollut, sillä se tuli 1891 Eduard Pristerin lahjoituksena.\n\nAukio kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Eteläosassa on merkittävien kroatialaisten rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin.\n\nAukion ympärillä on arkeologinen museo lännessä, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria etelässä sekä korkein oikeus pohjoisessa. Moderni galleria on toiminut Vranyczanyn palatsissa Zrinjevacin laidalla vuodesta 1934.',
+      kuvat: [
+        {
+          tiedosto: 'Zrinjevac Park, Zagreb, May 2025.jpg',
+          lyhyt: 'Zrinjevac on Alakaupungin puisto-aukio ja yksi vihreän hevosenkengän seitsemästä aukiosta.',
+          selite: 'Zrinjevac eli Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa, ja sen keskellä on Eduard Pristerin lahjoittama musiikkipaviljonki vuodelta 1891.',
+          lahde: 'Hijerovit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Taidepaviljonki: {
+      aika: '1898',
+      teksti: 'Taidepaviljonki valmistui Zagrebin näyttelytilaksi 1898. Maalari Vlaho Bukovac esitti ajatuksen 1895, ja Budapestin vuosituhatnäyttelyyn 1896 pystytettiin esivalmistetun rautarungon varaan paviljonki, jotta se voitaisiin siirtää Zagrebiin. Rakennuksen uuden version suunnittelivat wieniläiset Fellner ja Helmer. Isoisän matkavuonna 1873 paviljonkia ei vielä ollut.\n\nAvajaiset olivat 15.12.1898. Lähteen mukaan paviljonki on Kaakkois-Euroopan vanhin galleria. Se on järjestänyt satoja näyttelyitä, joissa on ollut esillä muiden muassa Rodinin, Miron ja Warholin töitä.\n\nRakennus sijaitsee Tomislav-aukion pohjoislaidalla päärautatieaseman edessä. Julkisivun rintakuvat esittävät idässä Klovićia, Medulićia ja Carpaccioa sekä lännessä Michelangeloa, Raffaelloa ja Tizianoa. Lasikatto kunnostettiin 2000-luvulla, ja paviljonki vaurioitui vuoden 2020 järistyksessä, joten avoinnaolo kannattaa tarkistaa.',
+      kuvat: [
+        {
+          tiedosto: 'Umjetnički paviljon, Zagreb.jpg',
+          lyhyt: 'Taidepaviljonki sijaitsee Tomislav-aukion pohjoislaidalla.',
+          selite: 'Taidepaviljonki on Zagrebin näyttelytila, jonka lasikatto kunnostettiin 2000-luvulla.',
+          lahde: 'ScF, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  andorralavella: {
+    'Casa de la Vall': {
+      aika: '1500-luvun loppu',
+      teksti: 'Casa de la Vall on historiallinen talo Andorra la Vellan vanhassa keskustassa, ja se toimi Andorran parlamentin, General Councilin, paikkana vuoteen 2011. Busquetsin suku rakennutti sen kartanoksi ja puolustustorniksi 1500-luvun lopulla, ja pääoven yläpuolisessa vaakunassa on vuosiluku 1580. Talo seisoo kalliolla, josta avautuu näkymä Valira-joen laaksoon.\n\nAndorran yleiskokous osti talon 1700-luvun alussa ja kokoontui siellä vuodesta 1702. Sisällä on oikeussali, neuvostosali ja pyhälle Ermengolille omistettu kappeli sekä seitsemän avaimen kaappi, jossa on lukko jokaiselle Andorran seurakunnalle. Kulmassa on kyyhkyslän muotoinen torni, ja pihassa on creu de terme.\n\nIsoisän matkavuonna 1873 talo oli ollut parlamentin käytössä noin 170 vuotta. Peruskorjauksessa 1960-luvulla ulkorappaus poistettiin ja taloon lisättiin torni. Talo on kuvattu Andorran yhden euron kolikossa.',
+      kuvat: [
+        {
+          tiedosto: 'Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 01.JPG',
+          selite: 'Casa de la Vallin kulmassa on kyyhkyslän muotoinen torni.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sant Esteven kirkko': {
+      aika: '1000-1100-luku',
+      teksti: 'Sant Esteven kirkko on roomalaiskatolinen kirkko, joka seisoo Plaça del Príncep Benlloch -aukiolla Andorra la Vellassa. Se rakennettiin 1000-1100-luvuilla romaanisessa tyylissä. Kirkko on säilyttänyt alkuperäisen puoliympyrän muotoisen apsiksensa, joka on lähteen mukaan ruhtinaskunnan suurin, sekä 1100-luvun alttaritaulun.\n\nKirkko oli olemassa jo isoisän matkavuonna 1873, mutta sitä on muutettu sen jälkeen. Arkkitehti Josep Puig i Cadafalch muotoili kellotornin ja sivusisäänkäynnin uudelleen 1940-luvulla, ja 1960-luvulla kirkkoon rakennettiin uusi nave.\n\nKirkossa oli freskoja, jotka poistettiin pääosin 1900-luvun alussa; osa niistä on nykyisin Museu Nacional d\'Art de Catalunyassa Barcelonassa ja osa Espai Columbassa. Sisällä on kaksi barokkialttaritaulua, joiden aiheet ovat Johannes Kastaja ja pyhä Lucia. Kirkko kuuluu Andorran kulttuuriperintörekisteriin.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de San Esteve, Andorra la Vieja, Andorra, 2013-12-30, DD 02.JPG',
+          selite: 'Sant Esteven kirkko kuuluu Andorran kulttuuriperintörekisteriin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santa Coloman kirkko': {
+      aika: '700- tai 800-luku',
+      teksti: 'Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se sijaitsee Santa Coloman kylässä Andorra la Vellan seurakunnassa ja on omistettu Sensin Columballe. Runkohuone on rakennettu 700- tai 800-luvulla ja kellotorni 1100-luvulla.\n\nSeinät on tehty kiilleliuskeesta ja graniitista kalkkilaastilla, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkossa oli 1100-luvun seinämaalauksia, jotka irrotettiin pääosin 1933. Ne olivat Berliinissä vuoteen 2007, ja nykyisin ne ovat esillä Espai Columba -museossa kirkon vieressä.\n\nKirkko oli olemassa jo 1873. Sitä on kunnostettu muun muassa 1740-1749, 1930-luvulla Cèsar Martinellin johdolla ja 1970-luvulla. Kirkko on esillä joissakin Andorran euro-kolikoissa.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Santa Coloma de Andorra, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG',
+          selite: 'Santa Coloman kirkko on omistettu Sensin Columballe.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pont de la Margineda': {
+      aika: '1300-1400-luku',
+      teksti: 'Pont de la Margineda on keskiaikainen kivisilta Santa Coloman kylässä Andorra la Vellan seurakunnassa. Lähteen mukaan se on rakennettu 1300-1400-luvulla, ja se ylittää Gran Valiran. Silta on noin 3,5 km:n päässä vanhasta keskustasta, ja Gran Valira muodostuu kahden vuoristopuron yhtymästä Escaldes–Engordanyssä.\n\nSillan seinät ovat graniittia, ja kaarikivet on tehty pimssistä keveyden vuoksi. Silta kuuluu Andorran kulttuuriperintörekisteriin. Andorran romaanisen taiteen kohteiden joukossa mainitaan Margineda- ja Escalls-sillat.\n\nIsoisän matkavuonna 1873 silta oli seissyt jo satoja vuosia. Lähteet eivät kerro sen myöhemmästä rakennushistoriasta.',
+      kuvat: [
+        {
+          tiedosto: 'Puente de la Margineda, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG',
+          selite: 'Pont de la Margineda ylittää Gran Valiran Santa Coloman kylässä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Caldea: {
+      aika: '1994',
+      teksti: 'Caldea on kylpyläkeskus Escaldes–Engordanyssä, joka sijaitsee Andorra la Vellan vieressä ja kuuluu samaan kaupunkialueeseen. Se valmistui 1994, ja rakennuksessa on 18 kerrosta. Lähteen mukaan Caldea on yksi Euroopan suurimmista kylpylöistä ja Andorran korkein rakennus, 80 metriä korkea.\n\nEscaldes-Engordany erotettiin omaksi kunnakseen 1978, ja Caldea kuuluu sen alueeseen. Andorran palvelutalous alkoi 1800-luvun uudistusten jälkeen rakentaa hotelleja, kylpylöitä, teitä ja lennätinlinjoja.\n\nIsoisän matkavuonna 1873 Caldeaa ei vielä ollut, sillä rakennus valmistui vasta 1994. Kylpyläkeskus on kaupunkialueen nykyaikaisia rakennuksia vastapainona vanhan keskustan romaanisille kirkoille.',
+      kuvat: [
+        {
+          tiedosto: 'Caldea 20231205 122111.jpg',
+          selite: 'Caldea on Escaldes–Engordanyssä sijaitseva kylpyläkeskus, joka valmistui 1994.',
+          lahde: 'FrankAndProust, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Madriu-Perafita-Claror': {
+      aika: 'maailmanperintö 2004',
+      teksti: 'Madriu-Perafita-Claror on jäätikön muovaama laakso Andorran kaakkoisosassa. Se on kulttuurimaisema, jossa on asumuksia, peltoterasseja, polkuja ja rautatyön jäänteitä yli 700 vuoden ajalta. Unesco hyväksyi laakson maailmanperintökohteeksi 2004.\n\nLaaksossa on kaksi asutusta, Entremesaigües ja Ramio, joissa on yhteensä 12 taloa. Vain noin 1 % laaksosta on yksityisomistuksessa. Kesäisin laiduntivat lampaat, lehmät ja hevoset, ja paimenet asuivat turvekattoisissa kivimajoissa. Laaksoon pääsee vain jalkapolkuja pitkin, ja läpi kulkevat GR 7, GR 11 ja GRP-kierros.\n\nMadriu-joen rannalla sulatettiin rautaa paikallisesta malmista, ja ahjo hylättiin 1790. Metsiä hoidettiin hiilen tekoon 1800-luvulle asti. Laakso on osittain Andorra la Vellan kunnan alueella.',
+      kuvat: [
+        {
+          tiedosto: 'Vall del Madriu-Perafita-Claror - 49.jpg',
+          selite: 'Madriu-Perafita-Claror on Unescon maailmanperintökohde vuodesta 2004.',
+          lahde: 'Ferran Llorens, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bern: {
+    Zytglogge: {
+      aika: 'noin 1218–1220',
+      teksti: 'Zytglogge eli kelloportti rakennettiin noin 1218–1220 kaupungin läntisen muurin porttitorniksi. Kun muuri siirtyi 1344–1346, tornista tuli naisvankila. Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413.\n\nTorni paloi tyhjäksi 1405, ja samana vuonna valettiin uusi suuri kello. Tähtitieteellisen kellon mekanismi uusittiin noin 1530 Kaspar Brunnerin työnä. Noin kolme minuuttia ennen tasatuntia kellon eläinhahmot ja narri esiintyvät, ja kultainen Kronos-hahmo lyö kelloa.\n\nIsoisän matkavuonna 1873 portti oli seissyt paikallaan yli 600 vuotta. Nykyinen ulkoasu on pääosin vuosien 1770–71 kunnostuksesta, ja palautus tehtiin 1981–83. Lähteen mukaan se on kaupungin vanhin muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Zytglogge in Bern Switzerland by Robbie Conceptuel.png',
+          lyhyt: 'Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi.',
+          selite: 'Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sen tähtitieteellinen kello on uusittu noin 1530.',
+          lahde: 'Conceptuel, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bernin tuomiokirkko': {
+      aika: '1421–1893',
+      teksti: 'Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1500-luvun lopulla, ja noin 100 metrin torni valmistui lopulta 1893.\n\nUrut rakennettiin ja laajennettiin 1700-luvulla. Suurin kello painaa noin 10 tonnia, ja kellot soivat päivittäin. Sisätilassa on säilynyt lasimaalauksia 1440-luvulta ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin sivualttarit.\n\nIsoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan torni on Sveitsin korkein kirkontorni.',
+      kuvat: [
+        {
+          tiedosto: 'Bern munster.jpg',
+          lyhyt: 'Münsterin rakentaminen aloitettiin 1421, ja sen kellot soivat päivittäin.',
+          selite: 'Münsterin rakentaminen aloitettiin 1421 Matthäus Ensingerin johdolla, ja kellot soivat päivittäin.',
+          lahde: 'Pugefco, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Liittopalatsi: {
+      aika: '1852–1902',
+      teksti: 'Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä. Länsisiipi rakennettiin 1852–1857 Jakob Friedrich Studerin suunnitelmien mukaan, ja siihen sijoitettiin hallinto, hallitus ja parlamentti. Itäsiipi valmistui 1892, ja kupolilla varustettu parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.\n\nParlamenttirakennuksen kupolin ulkokorkeus on noin 60 metriä, ja sen mosaiikissa on vaakuna ja motto Unus pro omnibus, omnes pro uno. Rakennuksessa on käytetty kiveä yli kymmenestä kantonista, ja sen koristeluun osallistui 38 sveitsiläistä taiteilijaa.\n\nIsoisän matkavuonna 1873 vain länsisiipi oli valmis. Se tunnettiin silloin nimellä Bundes-Rathaus, eikä itäsiipeä tai kupolirakennusta ollut vielä olemassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bundeshauskuppel-von-Süden.JPG',
+          lyhyt: 'Parlamenttirakennus rakennettiin 1894–1902, ja sen kupoli on ulkoa noin 60 metriä korkea.',
+          selite: 'Parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla, ja sen kupoli on ulkoa noin 60 metriä korkea.',
+          lahde: 'Absolutely new, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Bundesplatz: {
+      aika: '1991–2004',
+      teksti: 'Bundesplatzin länsikolmannes on entisen toisen kaupunginmuurin vallihaudan paikalla. Nimenä oli Parlamentplatz vuoteen 1909, ja vuosikymmenien ajan aukio toimi pysäköintialueena.\n\nKansallinen kilpailu järjestettiin 1991, ja voittaja oli ehdotus Platz als Platz. Aukio valmistui 31.7.2004 ja vihittiin 1.8.2004. Hanke palkittiin 2006 Yhdysvaltain arkkitehtiyhdistyksen kaupunkisuunnittelupalkinnolla. Kivilaatoituksen länsiosassa on 26 vesisuihkua, yksi kutakin kantonia kohti.\n\nIsoisän matkavuonna 1873 nykyistä parlamenttirakennusta ei vielä ollut, ja aukion laidalla oli 1820-luvulla rakennettu kasino.',
+      kuvat: [
+        {
+          tiedosto: 'Bern Bundesplatz view from above IMG 4365.JPG',
+          lyhyt: 'Bundesplatz sai nykyisen ilmeensä vuonna 2004.',
+          selite: 'Bundesplatz sai nykyisen ilmeensä vuonna 2004, ja sen suunnittelukilpailun voitti ehdotus Platz als Platz.',
+          lahde: 'Hadi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bärengraben ja BärenPark': {
+      aika: '1857 ja 2009',
+      teksti: 'Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä, ja se on kansallisesti merkittävä kulttuurikohde. Nykyinen, neljäs kuoppa avattiin 1857. Vuonna 1925 viereen lisättiin pienempi kuoppa pennuille, ja kuoppa saneerattiin 1994–1996. Kuoppa kuuluu Dählhölzlin eläintarhan hallintoon.\n\nBärenPark avattiin 2009 luonnonmukaisempana tarhana Aare-rinteeseen, ja sen ja kuopan välillä on tunneli. Kalteva hissi, Bärenbähnli, rakennettiin 2010-luvulla. Karhu on sekä kaupungin että kantonin vaakunassa, ja Mary Plain -lastenkirjasarjan nuori karhu asuu kuopassa. Lähteen mukaan kuoppa näkyy myös Bond-elokuvassa On Her Majesty\'s Secret Service.\n\nIsoisän matkavuonna 1873 karhut olivat asuneet nykyisessä kuopassa jo kuusitoista vuotta, mutta BärenParkia ei ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Bern 126.jpg',
+          lyhyt: 'Bärengraben avattiin 1857, ja viereinen BärenPark 2009.',
+          selite: 'Bärengraben, Bernin karhukuoppa, avattiin 1857, ja viereinen BärenPark avattiin 2009.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Einsteinhaus: {
+      aika: '1903–1905',
+      teksti: 'Einsteinhaus on Kramgasse 49:ssä, ja Albert Einstein asui talon toisessa kerroksessa vaimonsa Mileva Marićin ja poikansa Hansin kanssa 1903–1905. Annus mirabilis -artikkelit kirjoitettiin tässä talossa. Samaan aikaan Einstein työskenteli liittovaltion henkisen omaisuuden toimistossa.\n\nNykyisin talossa on museo. Toisessa kerroksessa on aikakauden kalusteilla sisustettu asunto, ja kolmannessa kerroksessa kerrotaan Einsteinin elämäkerta. Pienempi näyttely on Bernin historiallisessa museossa.\n\nIsoisän matkavuonna 1873 Einsteinin asuminen talossa ei ollut vielä alkanut: se tapahtui vasta 1903–1905.',
+      kuvat: [
+        {
+          tiedosto: 'Einstein Haus.jpg',
+          lyhyt: 'Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Einstein asui 1903–1905.',
+          selite: 'Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Albert Einstein asui perheineen 1903–1905.',
+          lahde: 'Aliman5040, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  monaco: {
+    'Monte Carlon kasino': {
+      aika: '1863, laajennettu 1878–81',
+      teksti: 'Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, avattiin vuotta kasinon jälkeen, 1864. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 1863.\n\nIsoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Englantilainen Joseph Jagger rikkoi pankin huomattuaan rulettipyörän vinoutuman; lähteet ajoittavat tapauksen eri tavoin, 1873 tai noin 1881. Charles Garnier, Pariisin oopperan arkkitehti, laajensi kasinoa Jules Dutroun kanssa 1878–79, ja 1880–81 lisättiin Trente-et-Quarante-sali, jonka Garnierin osat ovat suureksi osaksi hävinneet.\n\nKasino on yhä Société des Bains de Mer -yhtiön käytössä. Monégasqueilta on pääsy pelisaleihin kielletty, ja sääntö oli ruhtinatar Carolinen aloite.',
+      kuvat: [
+        {
+          tiedosto: 'Casino de Montecarlo, Mónaco, 2016-06-23, DD 05.jpg',
+          lyhyt: 'Monte Carlon kasino valmistui 1863 ja on Beaux-Arts-tyylinen.',
+          selite: 'Kasinoa laajensi 1878–79 Charles Garnier, Pariisin oopperan arkkitehti.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Salle Garnier': {
+      aika: '1879',
+      teksti: 'Salle Garnier on Monte Carlon oopperan sali kasinon yhteydessä. Sali rakennettiin kasinon yhteyteen, koska Monacossa oli 1870-luvulla vähän kulttuuritarjontaa. Pariisin oopperan arkkitehti Charles Garnier suunnitteli sen, ja se valmistui 8,5 kuukaudessa. Paikkoja on 524, kun Pariisin Palais Garnierissa niitä on noin 2 000.\n\nIsoisän matkavuonna 1873 salia ei vielä ollut. Avajaiset pidettiin 25. tammikuuta 1879, kun Sarah Bernhardt esiintyi nymfinä, ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston 8. helmikuuta 1879.\n\nRaoul Gunsbourg johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan. Hector Berliozin La damnation de Faust ensiesitettiin salissa 1893, ja 1909 esitettiin Wagnerin Nibelungin sormus kokonaan ranskaksi. Salia muutettiin 1898–99 ja uudistettiin 2004–05.',
+      kuvat: [
+        {
+          tiedosto: 'Opéra de Monte-Carlo (50326975807).jpg',
+          lyhyt: 'Salle Garnier on Monte Carlon oopperan sali, ja se avattiin 1879.',
+          selite: 'Sali rakennettiin kasinon yhteyteen Charles Garnierin suunnitelmin, ja siinä on 524 paikkaa.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Port Hercule': {
+      aika: 'antiikista, nykyinen satama 1926',
+      teksti: 'Port Hercule on Monacon syvänmeren satama, jonka pinta-ala on noin 16 hehtaaria. Nimi liittyy Herkuleeseen: kreikkalaiset siirtokuntalaiset perustivat Monoikoksen 500-luvulla eaa. Plinius vanhempi ja Tacitus mainitsevat sataman, ja Virgilius kuvaa Aeneiksessa linnoitettua kalliota, Monoecusta, meren rannalla.\n\nIsoisän matkavuonna 1873 satama oli nykyistä vanhempi, sillä nykyinen satama valmistui vasta 1926. Sitä uudistettiin 1970-luvulla, ja suomalainen Marinetek toimitti kolme uutta ponttonia vuoteen 2011 mennessä.\n\nSatamassa voi ankkuroida jopa 700 alusta. Vesi on tavallisilla laitureilla seitsemän metriä syvää ja ulkolaitureilla jopa 40 metriä. Satamasta kulkee myös Monacon Grand Prix -kierros.',
+      kuvat: [
+        {
+          tiedosto: 'Monaco Port Hercule 02.jpg',
+          lyhyt: 'Port Hercule on Monacon syvänmeren satama, jossa voi ankkuroida jopa 700 alusta.',
+          selite: 'Nykyinen satama valmistui 1926, mutta paikka on ollut satamana antiikista asti.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jardin Exotique': {
+      aika: '1913–1933',
+      teksti: 'Jardin Exotique on rinteeseen rakennettu kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja. Augustin Gastaud alkoi viljellä sukkulentteja Saint-Martinin puutarhassa 1895. Albert I osti observatorion kallion 1912 ja tilasi puutarhan Louis Notarilta. Rakennustyöt alkoivat 1913, puutarha avattiin 1931 ja vihittiin virallisesti helmikuussa 1933.\n\nIsoisän matkavuonna 1873 puutarhaa ei vielä ollut. Sukkulentteja oli tuotu Eurooppaan Meksikosta 1860-luvun lopulla, ja Monacossa niitä alettiin viljellä vasta 1895.\n\nVuonna 1916 puutarhan alueelta löytyi luola, jossa oli asumisen jälkiä. Esihistoriallisen antropologian museo siirtyi puutarhaan 1959. Kokoelmassa on lähteen mukaan yli 1 000 lajia ja 6 000 lajiketta, ja ensimmäinen johtaja Louis Vatrican toimi tehtävässä 1933–1969.',
+      kuvat: [
+        {
+          tiedosto: 'Jardin exotique de Monaco D190408 g.jpg',
+          lyhyt: 'Jardin Exotique on Monacon kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja.',
+          selite: 'Puutarha rakennettiin Albert I:n tilauksesta 1913 alkaen, ja se avattiin yleisölle 1931.',
+          lahde: 'Tangopaso, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Valtamerimuseo: {
+      aika: '1890-luvun lopulta 1910',
+      teksti: 'Valtamerimuseo on Monacon merentutkimukseen keskittyvä museo, jonka ruhtinas Albert I vihki 1910. Uusbarokkinen julkisivu kohoaa 85 metrin korkeuteen jyrkän kallion yläpuolelle. Rakentaminen kesti 11 vuotta (1899–1910), ja rakennus on tehty pääosin La Turbien valkoisesta kalkkikivestä. Julkisivun friisissä on 20 tutkimusaluksen nimeä.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut, ja sen rakentaminen alkoi vasta 1890-luvun lopulla. Ensimmäisessä kerroksessa on A Sailor\'s Career -näyttely ja Hirondellen laboratorio. Anafylaksian löytö, josta Charles Richet sai Nobelin 1913, tehtiin Albert I:n tutkimusretkellä Princesse Alice II -jahdilla.\n\nJacques-Yves Cousteau johti museota 1957–1988. Akvaariossa on satoja lajeja ja noin 6 000 yksilöä. Museo juhli satavuotista taivaltaan maaliskuussa 2010 laajan kunnostuksen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Musée Océanographique de Monaco 20150807.jpg',
+          lyhyt: 'Valtamerimuseo vihittiin 1910, ja sen perusti ruhtinas Albert I.',
+          selite: 'Museon julkisivun friisissä on 20 oseanografisen tutkimusaluksen nimeä.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Ruhtinaanlinna: {
+      aika: '1215 (linnoitus), 1500–1800-luvut',
+      teksti: 'Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka kallion päällä. Paikalle rakennettiin 1191 genovalaisten linnake, ja 1215 aloitettu linnoitus, jossa oli neljä tornia ja muuri, muodostaa palatsin ytimen. Grimaldit ovat pitäneet linnoitusta hallussaan vuodesta 1297.\n\nIsoisän matkavuonna 1873 hallitsi Charles III, joka kunnosti palatsia muun muassa rakentamalla Pyhän Marian tornin uudelleen sekä uusimalla kappelin ja julkisivumaalaukset. Edellisen vuosisadan lopulla, 1793, Ranskan vallankumouksen joukot olivat vallanneet palatsin, vanginneet ruhtinaan ja ryöstäneet rakennuksen.\n\nHonoré II:n arkkitehti Jacques Catone pehmensi ulkoasua, ja 1600-luvulla syntyi valtiohuoneiden jono. Herkuleen galleria on saanut nimensä Orazio de Ferrarin 1600-luvulla maalaamista Herkuleen urotöistä, ja Peilien galleria on mallinnettu Versailles\'n peilisalin mukaan.',
+      kuvat: [
+        {
+          tiedosto: 'Exterior of the Prince\'s Palace (Monaco).jpg',
+          lyhyt: 'Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka, ja sen ydin on 1215 aloitettu linnoitus.',
+          selite: 'Grimaldit ovat hallinneet linnoitusta vuodesta 1297, ja Charles III kunnosti sitä 1800-luvulla.',
+          lahde: 'Joseolgon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Monacon katedraali': {
+      aika: '1875–1903, vihitty 1911',
+      teksti: 'Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252.\n\nIsoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875.\n\nKorkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalinen urku vihittiin 1976.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral of Our Lady Immaculate, Monaco (frontage).jpg',
+          lyhyt: 'Monacon katedraali rakennettiin 1875–1903, ja siellä ovat monien Grimaldien haudat.',
+          selite: 'Katedraalin paikalla oli aiemmin Pyhän Nikolauksen kirkko, joka purettiin 1874.',
+          lahde: 'Uhooep, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  reykjavik: {
+    'Hallgrímskirkja': {
+      aika: '1945–1986',
+      teksti: 'Hallgrímskirkja on luterilainen seurakuntakirkko '
+          + 'Skólavörðuholt-kukkulalla lähellä keskustaa. Se on noin 74 metriä '
+          + 'korkea ja Islannin suurin kirkko. Nimi tulee runoilija ja pappi '
+          + 'Hallgrímur Péturssonista (1614–1674), joka kirjoitti Passiovirret.'
+        + '\n\n'
+          + 'Valtion arkkitehti Guðjón Samúelsson aloitti suunnittelun 1937, ja '
+          + 'hänen kerrotaan ottaneen mallia Islannin basalttipylväistä. '
+          + 'Rakentaminen alkoi 1945 ja päättyi 1986: krypta vihittiin 1948, '
+          + 'torni ja siivet valmistuivat 1974 ja päälaiva eli kirkkosali '
+          + 'vihittiin 1986. Urut valmistuivat joulukuussa 1992.'
+        + '\n\n'
+          + 'Kirkon edessä on Leif Erikssonin patsas, Yhdysvaltain lahja '
+          + 'Alþingin tuhatvuotisjuhlaan 1930. Isoisän matkavuonna 1873 '
+          + 'kukkulalla ei vielä ollut kirkkoa, sillä suunnittelu aloitettiin '
+          + 'vasta 1937.',
+      kuvat: [
+        {
+          tiedosto: 'Hallgrimskirkja 2026.jpg',
+          lyhyt: 'Hallgrímskirkja on Reykjavíkin luterilainen seurakuntakirkko Skólavörðuholt-kukkulalla.',
+          selite: 'Kirkon rakentaminen kesti vuodesta 1945 vuoteen 1986.',
+          lahde: 'VeraVidiVici, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Harpa: {
+      aika: '2007–2011',
+      teksti: 'Harpa on konsertti- ja kongressitalo Reykjavíkin satamassa. '
+          + 'Ensimmäiset konsertit pidettiin 4.5.2011, ja talossa toimii '
+          + 'Islannin sinfoniaorkesteri. Rakennuksen suunnittelivat '
+          + 'tanskalainen Henning Larsen Architects ja islantilainen Batteríið '
+          + 'arkitektar, ja lasisen julkisivun suunnitteli taiteilija Ólafur '
+          + 'Elíasson. Rakennustyöt alkoivat 2007. Vuoden 2008 pankkikriisi '
+          + 'keskeytti ne, mutta valtio ja kaupunki rahoittivat talon '
+          + 'valmiiksi, ja työt jatkuivat 2009. Nimi Harpa annettiin 11.12.2009 '
+          + 'islantilaisen musiikin päivänä.'
+        + '\n\n'
+          + 'Julkisivussa on 714 LED-valoa, jotka näyttävät videoteoksia. Talo '
+          + 'sai Euroopan unionin Mies van der Rohe -arkkitehtuuripalkinnon '
+          + '2013.'
+        + '\n\n'
+          + 'Talon edessä vedessä on Ólöf Pálsdóttirin Muusikko-veistos, jonka '
+          + 'mallina oli sellisti Erling Blöndal Bengtsson. Veistos muutti '
+          + 'orkesterin mukana Harpaan 2014. Isoisän matkavuonna 1873 talosta '
+          + 'ei ollut vielä suunnitelmaakaan.',
+      kuvat: [
+        {
+          tiedosto: "Reykjavik-40-vom Hallgrimskirchturm-2018-gje.jpg",
+          lyhyt: "Reykjavíkin satama ja Harpa Hallgrímskirkjan tornista nähtynä",
+          selite: "Hallgrímskirkjan tornista näkee kattojen yli satamaan, jonka rannalla Harpa-konserttitalo sijaitsee.",
+          lahde: "Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)",
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tjörnin': {
+      aika: 'lampi; silta 1920, uusi silta 1942',
+      teksti: 'Tjörnin on pieni lampi Reykjavíkin keskustassa, ja sen nimi '
+          + 'tarkoittaa suomeksi lampea. Sitä ruokkii Vatnsmýrin suo, ja '
+          + 'lammella käy kymmeniä vesilintulajeja, kuten sorsia ja hanhia. '
+          + 'Lammen eteläpuolella on Hljómskálagarður-puisto, ja Vatnsmýrin '
+          + 'alueella on Reykjavíkin lentokenttä. Talvella lampi jäätyy usein, '
+          + 'ja jäällä luistellaan.'
+        + '\n\n'
+          + 'Lammen laskupuro Lækurinn kulki ennen avoimena kanavana keskustan '
+          + 'läpi, mutta se on ollut viemärijärjestelmän osa Lækjargatan alla '
+          + 'vuodesta 1911. Lammen yli rakennettiin 1920 jalankulkusilta, ja '
+          + '1942 sen tilalle tuli betonisilta, joka kestää myös '
+          + 'autoliikenteen.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 kumpaakaan siltaa ei vielä ollut. Lammen '
+          + 'ympärillä oleva suojelualue Vatnsmýri on heikentynyt, ja sen '
+          + 'kunnostamiseksi on tehty suunnitelmia.',
+      kuvat: [
+        {
+          tiedosto: 'Lago Tjörnin, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 087.JPG',
+          lyhyt: 'Tjörnin on Reykjavíkin keskustan lampi, jonka rannalla käy kymmeniä vesilintulajeja.',
+          selite: 'Lampi jäätyy talvella ajoittain, ja jäällä luistellaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Austurvöllur': {
+      aika: '1700-luvun alussa nykyistä suurempi',
+      teksti: 'Austurvöllur on Reykjavíkin keskustan julkinen aukio ja suosittu '
+          + 'kokoontumispaikka etenkin hyvällä säällä, kun laitojen kahvilat '
+          + 'täyttyvät. Aukiota ympäröivät kadut ovat Vallarstræti, '
+          + 'Pósthússtræti, Kirkjustræti ja Thorvaldsensstræti. Aukio oli '
+          + 'aiemmin heinäpelto ja paljon nykyistä laajempi.'
+        + '\n\n'
+          + 'Aukion keskellä on itsenäisyysliikkeen johtajan Jón Sigurðssonin '
+          + 'iso patsas. Sitä ennen keskellä seisoi pitkään kuvanveistäjä '
+          + 'Bertel Thorvaldsenin patsas, jonka mukaan Thorvaldsensstræti on '
+          + 'nimetty. Aukion laidalla ovat parlamenttitalo Alþingishúsið, '
+          + 'tuomiokirkko Dómkirkjan, Hotel Borg ja kahviloita.'
+        + '\n\n'
+          + 'Tanskalaisen Ferdinand Meldahlin suunnittelema Alþingishúsið '
+          + 'rakennettiin kivestä 1880–1881. Tuomiokirkko vihittiin käyttöön '
+          + '1796, ja sitä suurennettiin 1840-luvun lopulla. Isoisän '
+          + 'matkavuonna 1873 aukion laidalla ei siis vielä ollut '
+          + 'parlamenttitaloa, mutta kirkko seisoi jo.',
+      kuvat: [
+        {
+          tiedosto: 'Austurvöllur panoramic.jpg',
+          lyhyt: 'Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat Alþingin talo ja tuomiokirkko.',
+          selite: 'Aukiolla seisoo Jón Sigurðssonin patsas.',
+          lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Perlan: {
+      aika: '1939–1991',
+      teksti: 'Perlan seisoo Öskjuhlíð-kukkulalla noin 61 metrin korkeudessa '
+          + 'merenpinnasta. Kukkulan korkeus antoi kuumavesisäiliöille '
+          + 'riittävän paineen: vesi nousi sen avulla 38 metrin korkeudelle '
+          + 'merenpinnasta suunnitellun rakennuksen kymmenenteen kerrokseen. '
+          + 'Jokaiseen kuudesta säiliöstä mahtuu noin neljä miljoonaa litraa '
+          + 'vettä, mikä vastaa noin 4 000 kuutiometriä.'
+        + '\n\n'
+          + 'Näyttelyihin kuuluvat Wonders of Iceland, revontulista kertova '
+          + 'Áróra-planetaariohjelma ja Látrabjargin lintuvuoren kymmenen '
+          + 'metrin korkuinen kopio. Näköalatasanteelta näkee kaupungin, '
+          + 'ympäröivät vuoret ja Atlantin, ja sisällä on ravintola, joka '
+          + 'kiertää 360 astetta.'
+        + '\n\n'
+          + 'Ensimmäinen säiliö valmistui 1939 ja loput viisi seuraavien kahden '
+          + 'vuosikymmenen aikana. Perlan avattiin yleisölle 21.6.1991. Isoisän '
+          + 'matkavuonna 1873 Öskjuhlíð oli vielä rakentamaton kukkula.',
+      kuvat: [
+        {
+          tiedosto: "View of Reykjavík from Perlan, 20230507 1341 5757.jpg",
+          lyhyt: "Näkymä Perlanilta Reykjavíkiin",
+          selite: "Perlanin näköalatasanteelta avautuu näkymä Reykjavíkin kattojen ja lahden yli kaukaisille vuorille.",
+          lahde: "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Höfði': {
+      aika: '1909',
+      teksti: 'Höfði on vuonna 1909 valmistunut talo, joka suunniteltiin Norjassa '
+          + 'ja kuljetettiin osina Reykjavíkiin Ranskan konsulille Jean-Paul '
+          + 'Brillouinille. Kaupunki osti talon 1958 ja kunnosti sen, ja sitä '
+          + 'käytetään juhlavastaanottoihin.'
+        + '\n\n'
+          + 'Runoilija Einar Benediktsson asui talossa perheineen 1910-luvulta '
+          + 'alkaen, ja taiteilija Louisa Matthíasdóttir asui siinä lapsena '
+          + '1920- ja 1930-luvuilla. Talo on tunnetuin Reaganin ja Gorbatšovin '
+          + 'huippukokouksen paikkana lokakuussa 1986, ja sisällä on ristiin '
+          + 'ripustetut Yhdysvaltojen ja Neuvostoliiton liput kokouksen '
+          + 'muistoksi.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 nykyistä taloa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Höfði 5528.JPG',
+          lyhyt: 'Höfði on vuonna 1909 pystytetty talo, jonka osat valmistettiin Norjassa.',
+          selite: 'Talo tunnetaan Reaganin ja Gorbatšovin kokouksen paikkana 1986.',
+          lahde: 'Hedwig Storch, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Viðey': {
+      aika: '900-luvulta',
+      teksti: 'Viðey on Kollafjörður-lahden suurin saari aivan Reykjavíkin '
+          + 'edustalla, ja sen pinta-ala on noin 1,6 neliökilometriä. Saari oli '
+          + 'noin kahdesta kolmeen miljoonaa vuotta sitten aktiivinen '
+          + 'tulivuori. Sinne pääsee lautalla Skarfabakkin laiturilta: kesäisin '
+          + 'lautta kulkee päivittäin, talvella vain viikonloppuisin.'
+        + '\n\n'
+          + 'Saarella on arkeologisia jäänteitä 900-luvun alusta, ja '
+          + 'keskiajalla siellä toimi augustinolaisluostari. Viðeyjarstofa-talo '
+          + 'valmistui 1755 Skúli Magnússonille, ja se on Islannin vanhimpia '
+          + 'kivitaloja. Nykyään talossa on ravintola. Saarella on myös Richard '
+          + 'Serran Áfangar-teos, yhdeksän basalttipylväsparia, sekä Yoko Onon '
+          + 'Imagine Peace Tower, joka sytytetään vuosittain Lennonin '
+          + 'syntymäpäivän 9.10. ja kuolinpäivän 8.12. välillä.'
+        + '\n\n'
+          + 'Isoisän matkavuonna 1873 saari oli vielä asuttu.',
+      kuvat: [
+        {
+          tiedosto: 'Viðey island.jpg',
+          lyhyt: 'Viðey on Kollafjörður-lahden suurin saari aivan Reykjavíkin edustalla.',
+          selite: 'Viðeyn nimi tarkoittaa suunnilleen puusaarta.',
+          lahde: 'Slawojar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  sanmarino: {
+    'Guaitan torni': {
+      aika: '1000-luku; nykymuoto 1400-luku',
+      teksti: 'Guaita on yksi Monte Titanon kolmesta tornista ja lähteen mukaan niistä vanhin: se rakennettiin 1000-luvulla. Nimi tarkoittaa San Marinon murteessa vartioimista. Linnake on kuvattu San Marinon lipussa ja vaakunassa.\n\nLinnaketta vahvistettiin useasti ja se rakennettiin uudelleen 1400-luvun lopulla, ja myöhemmin siihen lisättiin viistokatto. Sitä suojaa kaksinkertainen muuri, jonka ulompi osa on varustettu tykkimuurein ja torneilla. Vanhin osa, mastio, on säilynyt muuttumattomana, ja ylempää porttia puolustaa bertesca. Sisällä on Pyhän Barbaran kappeli, ja linnakkeesta on haettu suojaa piiritysten aikana.\n\nSisämuurin tiloja käytettiin alle kuuden kuukauden tuomioiden vankilana vielä 1900-luvun jälkipuoliskolla. Vuonna 1873 Guaita oli jo vuosisatoja vanha. Ulkopihalla on kaksi mörssäriä ja kaksi tykkiä, jotka ovat lahjoja Viktor Emanuel II:lta ja III:lta.',
+      kuvat: [
+        {
+          tiedosto: 'Torre Guaita (San Marino) large view.jpg',
+          lyhyt: 'Guaita on Monte Titanon tornien vartiolinnake, jossa on kaksinkertainen muuri.',
+          selite: 'Sisämuurin tiloja käytettiin vankilana vielä 1900-luvun jälkipuoliskolla.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cestan torni': {
+      aika: '1000-luvun loppu tai 1200-luku',
+      teksti: 'Cesta seisoo lähteen mukaan Monte Titanon korkeimmalla huipulla, ja sen toinen nimi on Fratta. Torni on rakennettu vanhan roomalaisen linnakkeen jäännösten päälle, ja sen pohja on viisikulmainen. Rakennusajaksi lähteet antavat joko 1000-luvun lopun tai 1200-luvun.\n\nPäätornissa on vartiotupa ja muutamia vankilasoluja. Sisällä on Pyhän Marinuksen kunniaksi vuonna 1956 perustettu museo, jossa on aseita keskiajalta nykypäivään. Museon esineisiin kuuluu miekka, jonka Garibaldin kerrotaan lahjoittaneen San Marinolle.\n\nVuonna 1873 torni oli jo vuosisatoja vanha, mutta museota ei vielä ollut. Cesta on kuvattu San Marinon lipussa ja vaakunassa.',
+      kuvat: [
+        {
+          tiedosto: 'Torre Cesta - San Marino - GT 01 - 2024 04 30.jpg',
+          lyhyt: 'Cestan torni seisoo vanhan roomalaisen linnakkeen jäännösten päällä.',
+          selite: 'Sisällä on vuonna 1956 perustettu asemuseo.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Montalen torni': {
+      aika: '1300-luku',
+      teksti: 'Montale on Monte Titanon kolmesta tornista pienin ja lähteen mukaan nuorin, ja se on yksityisessä omistuksessa. Rakennusajaksi lähteet antavat 1300-luvun. Tornin arvellaan rakennetun suojaksi Malatestojen kasvavaa valtaa vastaan.\n\nTorni on viisikulmainen. Katto on puurunkoinen ja päällystetty paanuilla. Torni seisoo suoraan kallion päällä erillään muista rakennuksista. Sisäänkäynti on ovi korkealla maanpinnan yläpuolella, kuten tuon ajan vankiloissa, ja tornia on käytetty vankilana.\n\nLaaja restaurointi tehtiin vuonna 1935, eli vuonna 1873 sitä ei ollut vielä tehty. Lähteen mukaan torni ei ole koskaan ollut yleisölle avoin.',
+      kuvat: [
+        {
+          tiedosto: 'Montale Tower - San Marino.jpg',
+          lyhyt: 'Montalen torni on viisikulmainen.',
+          selite: 'Tornin sisäänkäynti on korkealla maanpinnan yläpuolella, kuten tuon ajan vankiloissa.',
+          lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palazzo Pubblico': {
+      aika: '1884–1894',
+      teksti: 'Palazzo Pubblico on San Marinon kaupungintalo ja valtiollisten seremonioiden paikka. Siellä istuvat kapteenivaltionhoitajat, Suuri ja yleinen neuvosto, Kahdentoista neuvosto ja Valtionkongressi. Rakennus kuuluu Piazza della Libertàn historialliseen ympäristöön.\n\nNykyinen palatsi on 1800-luvun lopun rakennus: Francesco Azzurri suunnitteli sen, työ alkoi 17.5.1884 ja rakennus valmistui 1894. Paikalla oli aiemmin 1300-luvulla rakennettu Domus Magna Comunis, mutta vuonna 1873 nykyistä rakennusta ei vielä ollut. Julkisivun yläosaa kruunaa tykkimuuri ja konsolit, ja kellotornissa on sama rakenne. Ulkoasu muistuttaa Firenzen Palazzo Vecchiota, mutta on paljon pienempi.\n\nGae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996. Kahdentoista neuvoston salissa on Guercinon maalaus San Marino che benedice la città.',
+      kuvat: [
+        {
+          tiedosto: 'Palazzo Pubblico (San Marino) 2.jpg',
+          lyhyt: 'Palazzo Pubblico on San Marinon kaupungintalo, jonka suunnitteli Francesco Azzurri.',
+          selite: 'Gae Aulenti johti laajaa kunnostusta, jonka uudelleenvihkiäiset olivat 30.9.1996.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'San Marinon basilika': {
+      aika: '1826–1838',
+      teksti: 'San Marinon basilika on kaupungin pääkirkko, omistettu valtion perustajalle ja suojeluspyhimykselle Marinukselle. Se on San Marinon-Montefeltron hiippakunnan rinnakkaiskatedraali, ja se nostettiin basilikaksi 21.7.1926.\n\nAiempi kirkko purettiin 1807. Uusi rakennus aloitettiin 28.7.1826, ja Montefeltron piispa Crispino Agostinucci vihki sen 5.2.1838, joten vuonna 1873 basilika oli jo valmis. Uusklassisen rakennuksen pääovella on kahdeksan korinttilaista pylvästä ja sisällä kuusitoista.\n\nPyhän Marinuksen patsas on Adamo Tadolinin, Canovan oppilaan, työ, ja pyhimyksen jäännökset löytyivät 3.3.1586. Pääovella on latinankielinen omistuskirjoitus suojelijalle ja vapauden luojalle. Basilika on kuvattu San Marinon 10 sentin eurokolikossa.',
+      kuvat: [
+        {
+          tiedosto: 'San Marino - Concattedrale (2023).jpg',
+          lyhyt: 'San Marinon basilika on kaupungin pääkirkko.',
+          selite: 'Pääovella on latinankielinen omistuskirjoitus suojelijalle ja vapauden luojalle.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Piazza della Libertà': {
+      aika: 'Vapauden patsas 1876',
+      teksti: 'Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä. Aukion ympärillä ovat Palazzo Pubblico ja Statua della Libertà eli Vapauden patsas. Köysiradan yläpysäkiltä aukiolle on matkaa alle 200 metriä.\n\nPatsas on tehty valkoisesta Carraran marmorista, ja se on uusklassinen. Kuvanveistäjä oli Stefano Galletti, ja patsaan lahjoitti vuonna 1876 kreivitär Otilia Heyroth Wagener Berliinistä. Patsaan päässä on kolmen tornin kruunu, joka symboloi linnoitettua kaupunkia. Patsas on kuvattu San Marinon 2 sentin eurokolikossa.\n\nVuonna 1873 patsasta ei vielä ollut, eikä nykyistä Palazzo Pubblicoa. Alueen keskeisiin paikkoihin kuuluu myös Teatro Titano, joka rakennettiin 1700-luvulla ja joka oli siis jo olemassa 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Piazza della Libertà - San Marino - 2024 02 13 - GT 01.jpg',
+          lyhyt: 'Piazza della Libertà on San Marinon kaupungin aukio Palazzo Pubblicon edessä.',
+          selite: 'Aukiolta on alle 200 metriä köysiradan yläpysäkille.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Monte Titano': {
+      aika: 'UNESCO 2008',
+      teksti: 'Monte Titano on Apenniinien kalkkikivinen kallioharjanne noin 10–13 kilometrin päässä Adrianmerestä. Vuoren korkeus on noin 740 metriä. Sillä on kolme huippua, ja kullakin on torni.\n\nSan Marino: Historic Centre and Mount Titano merkittiin UNESCOn maailmanperintöluetteloon vuonna 2008. Alueen koko on 55 hehtaaria ja suoja-alueen 167 hehtaaria. Perusteluna on vapaan tasavallan jatkuvuus keskiajalta. UNESCO-asemaa ei vuonna 1873 vielä ollut.\n\nRinteiltä on löydetty kalojen ja erityisesti haiden hampaiden fossiileja, osa mioseenikaudelta. Kasvillisuuteen kuuluvat kastanja, tammi, sypressi ja pihta, ja eläimiä ovat metsäkauris, villisika, jänis ja kettu. Italialaiset kutsuvat huippua Monte Brugolaksi, koska muoto muistuttaa kuusiokoloavainta Po-tasangolta katsottuna.',
+      kuvat: [
+        {
+          tiedosto: 'San Marino - Cloudy sunset.jpg',
+          lyhyt: 'Monte Titano on kalkkikivinen kallioharjanne, jolla on kolme huippua.',
+          selite: 'Rinteiltä on löydetty kalojen ja erityisesti haiden hampaiden fossiileja, osa mioseenikaudelta.',
+          lahde: 'Terragio67, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  vaduz: {
+    'Vaduzin linna': {
+      aika: '1100-luku–',
+      teksti: 'Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja virallinen asuinpaikka sekä kaupungin tunnetuin maamerkki. Se kohoaa rinteellä kaupungin yllä ja näkyy lähes joka puolelle. Linnan vanhimmat osat ovat 1100-luvun torni ja itäpuolen rakenteet, ja linna mainitaan lähteissä 1322. Tornin pohja on noin 12 × 13 metriä ja alkuperäinen sisäänkäynti on yhdentoista metrin korkeudessa. Rakentajiksi oletetaan Werdenberg-Sargansin kreivit.\n\nSveitsin valaliitto poltti linnan Švaabin sodassa 1499. Kreivi Kaspar von Hohenems laajensi länsisiipeä 1613–1640, ja Liechtensteinin suku osti linnan 1712. Linnassa on Anna-kappeli, jossa on myöhäisgoottilainen pääalttari. Suurkunnostus tehtiin 1900-luvun alussa, ja ruhtinasperheen vakituinen asuinpaikka linnasta tuli 1938.\n\nIsoisän matkavuonna 1873 linna oli ollut suvun omaisuutta jo yli puolitoista vuosisataa, mutta ruhtinas ei asunut maassa. Linnan tarkkaa kuntoa tuolloin lähteet eivät kuvaa. Nykyään linna ei ole yleisölle avoin, koska ruhtinassuku asuu siellä.',
+      kuvat: [
+        {
+          tiedosto: 'LIE Vaduz, Schloss Vaduz 0007.jpg',
+          lyhyt: 'Vaduzin linnan pyöreä torni rakennettiin 1500-luvulla.',
+          selite: 'Linnan tornit ja siivet ovat syntyneet eri vuosisatoina, ja vanhin osa on 1100-luvun itätorni.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'St. Florinin katedraali': {
+      aika: '1869–1873',
+      teksti: 'St. Florinin katedraali on uusgoottilainen kirkko ja Vaduzin arkkihiippakunnan keskus. Sen suojeluspyhimys on Remüsin Florinus, Vinschgaun laaksosta kotoisin oleva pyhimys. Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen. Katedraali on kansallisten ja ruhtinassuvun seremonioiden paikka.\n\nPappilakirkosta katedraali tuli 1997, kun paavi Johannes Paavali II perusti arkkihiippakunnan 2. joulukuuta 1997. Aiemmin seurakunta kuului Churin hiippakunnan dekanaattiin.\n\nKatedraalin vieressä on ruhtinaiden hautakappeli, joka on avoin yleisölle vain 1. marraskuuta. Sinne on haudattu muun muassa Franz Joseph II (1989) ja prinssi Alois (1869–1955). Kirkko rakennettiin 1869–1873 ja valmistui 1873, joten isoisän matkavuonna 1873 se oli juuri valmistunut.',
+      kuvat: [
+        {
+          tiedosto: 'Vaduz Kathedrale StFlorin.jpg',
+          lyhyt: 'St. Florinin katedraali on uusgoottilainen kirkko.',
+          selite: 'Kirkon arkkitehti oli Friedrich von Schmidt, ja se rakennettiin 1869–1873 vanhan kappelin viereen.',
+          lahde: 'AuHaidhausen, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Liechtensteinin kansallismuseo': {
+      aika: '1400-luku',
+      teksti: 'Liechtensteinin kansallismuseo toimii rakennuksessa, joka ajoitetaan lähteen mukaan vuoteen 1438. Rakennus oli ruhtinaallinen taverna, tullihuone ja hallituksen kokouspaikka. Feldkirchin ja Churin välisen kauppareitin tavarat tarkastettiin siellä.\n\nHallitus toimi rakennuksessa 1800-luvun lopulta vuoteen 1905, ja goottilaisia kellareita käytettiin vankilana. Museo perustettiin 1800-luvun lopulla linnaan kuvernööri Friedrich Stellwag von Carionin aloitteesta, ja nykyisessä rakennuksessa se on ollut vuodesta 1972. Rakennus vaurioitui 1992 ja museo suljettiin, ja laajennus avattiin 28.11.2003.\n\nMuseossa on neljä osaa: päärakennus, postimuseo, aarrekammio (2015) ja maatalomuseo. Näyttelytilaa on 2 000 neliömetriä ja noin 40 huonetta. Isoisän matkavuonna 1873 museota ei vielä ollut, mutta rakennus oli hallituksen paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Liechtensteinisches Landesmuseum in Vaduz (2018).jpg',
+          lyhyt: 'Kansallismuseo esittelee Liechtensteinin kulttuuri- ja luonnonhistoriaa.',
+          selite: 'Museon näyttelytilaa on yhteensä 2 000 neliömetriä ja noin 40 huonetta.',
+          lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kunstmuseum Liechtenstein': {
+      aika: '2000',
+      teksti: 'Kunstmuseum Liechtenstein on valtion taidemuseo ja maan kansallinen taidekokoelma. Se esittelee kansainvälistä modernia ja nykytaidetta, ja kokoelman painotus on 1900–2000-lukujen veistoksissa ja installaatioissa. Rakennus on arkkitehtien Meinrad Morgerin, Heinrich Degelon ja Christian Kerezin työ, ja se valmistui marraskuussa 2000.\n\nUlkopuoli on värjättyä betonia ja mustaa basalttia, ja ulkopintaan on upotettu jokikiviä. Sisällä on kuusi näyttelytilaa ja kaksi vastakkaista porrasta, joiden ansiosta rakennuksen läpi näkee vinottain. Rakennus lahjoitettiin valtiolle vuosituhannen lahjana elokuussa 2000, ja avajaisia vietettiin 12.11.2000. Hilti Art Foundationin näyttelyrakennus lisättiin viereen vuonna 2015.\n\nKokoelman perusta on vuonna 1967 saaduissa kymmenessä maalauksessa, ja valtion taidekokoelma perustettiin 1968. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä se rakennettiin yli sata vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Kunstmuseum Liechtenstein (Vaduz, 2018).jpg',
+          lyhyt: 'Kunstmuseum Liechtensteinin rakennus on väritettyä betonia ja mustaa basalttia.',
+          selite: 'Museon rakennus on lahjoitettu valtiolle vuosituhannen lahjana, ja se avattiin yleisölle 12.11.2000.',
+          lahde: 'JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Schalunin linnanraunio': {
+      aika: '1100-luvun loppu',
+      teksti: 'Schalunin linnanraunio, puhekielessä Wildschloss eli linna erämaassa, on Vaduzin kunnan alueella vuorilla noin kilometrin koilliseen keskustasta. Linna rakennettiin todennäköisesti 1100-luvun lopulla, ja ensimmäinen kirjallinen maininta on vuodelta 1237, jolloin nimenä oli Schalun.\n\nKaivaukset ovat tuottaneet vähän löytöjä, ja linna on voitu tyhjentää ja polttaa myöhemmin. Parhaiten ovat säilyneet suuri sali ja osa vartiotornia. Linna siirtyi 1700-luvulla ruhtinaan omistukseen, ja kunnalle se tuli 1933.\n\nLähteet eivät kuvaa linnan tilaa isoisän matkavuonna 1873. Nykyään raunio on vapaasti avoin, ja sinne pääsee jalan tai pyörällä paikallista polkua pitkin.',
+      kuvat: [
+        {
+          tiedosto: 'Schalun Castle.jpg',
+          lyhyt: 'Schalunin linnanraunio on Vaduzin kunnan alueella vuorilla.',
+          selite: 'Raunion parhaiten säilyneet osat ovat suuri sali ja osa vartiotornia.',
+          lahde: 'Lucas Kendall, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    'Qasr Al Hosn': {
+      aika: '1700-luvulta',
+      teksti: 'Qasr Al Hosn on linnake ja museo Abu Dhabin keskustassa. Nykyinen muotonsa on peräisin 1930-luvun lopun laajennuksesta, joka lähteen mukaan rahoitettiin ensimmäisen öljylupasopimuksen tuloilla. Se oli emiirin palatsi ja hallituspaikka vuoteen 1966.\n\nKoska nykyinen muoto syntyi vasta 1930-luvun lopun laajennuksessa, isoisän matkavuonna 1873 linnake oli pienempi. Nimi Valkoinen linnake ei ole alkuperäinen: linnake maalattiin kirkkaan valkoiseksi vasta 1900-luvun lopun kunnostuksissa.\n\nNykyään Qasr Al Hosn on museo ja kulttuurikohde, joka avattiin uudelleen 2010-luvun lopulla pitkän entisöinnin jälkeen. Sen vieressä on Abu Dhabin kulttuurisäätiö, ja koko alueeseen kuuluu myös käsityöpaja House of Artisans.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr al Hosn.jpg',
+          selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+          lahde: 'Darthjipsu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Qasr Al Watan': {
+      aika: '2010-luvun loppu',
+      teksti: 'Qasr Al Watan eli Kansakunnan palatsi on Arabiemiirikuntien presidentin palatsi. Sitä käytetään juhla- ja valtiovierailuihin sekä ministerineuvoston tarpeisiin, eikä se ole asuinkäytössä.\n\nRakennus valmistui 2010-luvun lopulla ja avattiin yleisölle maaliskuussa 2019. Julkisivu on valkoista graniittia ja kalkkikiveä, ja sisällä on iso kupoli sekä kristallikruunu. Palatsin Great Hallin itäsiivessä on House of Knowledge, jossa on esillä diplomaattilahjoja ja jonka kirjastossa on tuhansia teoksia.\n\nIsoisän matkavuonna 1873 palatsia ei vielä ollut. Lähteen mukaan hallitsijan pysyvä asuinpaikka oli tuolloin linnake Qasr Al Hosn,.',
+      kuvat: [
+        {
+          tiedosto: 'Qasr Al Watan 13.jpg',
+          selite: 'Qasr Al Watan avattiin yleisölle maaliskuussa 2019, ja se on Arabiemiirikuntien presidentin palatsi.',
+          lahde: 'EditQ, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Emirates Palace': {
+      aika: '2005',
+      teksti: 'Emirates Palace on viiden tähden hotelli Cornichen eteläpäässä. Se avattiin vuonna 2005, ja sen suunnitteli arkkitehtitoimisto WATG. Rakennuksessa on islamilaisen rakennustaiteen elementtejä, kuten symmetriaa ja geometrisia kuvioita, sekä keskikupoli ja kymmeniä pienempiä kupoleita.\n\nHotellilla on oma ranta ja marina. Lähteen mukaan sitä pidetään hotellina myös suosittuna nähtävyytenä. Palatsilla on rooli myös taidehistoriassa: Louvre Abu Dhabin kokoelman ensimmäinen esittely oli täällä 2000-luvun lopulla, vuosia ennen museon avaamista.\n\nIsoisän matkavuonna 1873 tällaista rakennusta ei ollut. Cornichen paikalla oli lähteen mukaan ennen 1970-lukua ranta, jolla dhow-alukset ankkuroituivat, ja öljy löydettiin vasta 1900-luvun puolivälin tienoilla.',
+      kuvat: [
+        {
+          tiedosto: 'Emirates Palace - 55482143859.jpg',
+          selite: 'Emirates Palace avattiin hotellina vuonna 2005 Cornichen eteläpäähän.',
+          lahde: 'xiquinhosilva, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Etihad Towers': {
+      aika: '2010-luku',
+      teksti: 'Etihad Towers on viiden tornin kokonaisuus Emirates Palacea vastapäätä. Tornien korkeudet ovat suunnilleen 200–300 metriä, ja niissä on toimistoja, asuntoja ja hotelli. Lähteen mukaan toinen torneista on yksi kaupungin korkeimmista, ja sen yläkerroksessa on katselutaso.\n\n2010-luvun alussa tornit otettiin käyttöön, ja hotelli avattiin pian sen jälkeen. Kokonaisuus kuuluu siihen rakennusryhmään, joka on antanut Abu Dhabin länsirannalle sen tämänhetkisen siluetin. Tornit ovat esiintyneet myös elokuvassa Furious 7, jossa autolla ajetaan tornien läpi.\n\nIsoisän matkavuonna 1873 tällä kohdalla ei seissyt yhtään tällaista rakennusta: rannikolla oli asutus, ja korkeat tornit kuuluvat öljyn jälkeiseen aikaan.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  amman: {
+    'Suuri temppeli': {
+      aika: '100-luku',
+      teksti: 'Suuri temppeli kohoaa linnavuoren ylätasanteella. Se rakennettiin 100-luvun jälkipuoliskolla, kun Arabian provinssia hallitsi kuvernööri Geminius Marcianus, samoihin aikoihin kuin Rooman teatteri.\n\nNimi Herkuleen temppeli on lähteen mukaan epätarkka, koska jumaluutta ei tunneta varmasti. Arkkitraavin kirjoituksessa mainitaan Herkuleen pyhäkkö ja juhlapaikka, mikä tukee Herkules-tulkintaa, mutta kirjoituksen tulkinnasta on esitetty myös epäilyjä.\n\nIsoisän matkavuonna 1873 linnavuori oli lähteen mukaan hylätty rauniokasa; kaivauksia on tehty 1920-luvulta alkaen, ja iso osa kukkulasta on yhä kaivamatta.',
+      kuvat: [
+        {
+          tiedosto: 'Sunrise over the Temple of Hercules.jpg',
+          lyhyt: 'Suuren temppelin pylväät Ammanin linnavuorella.',
+          selite: 'Suuri temppeli rakennettiin Philadelphian akropolikselle 100-luvun jälkipuoliskolla.',
+          lahde: 'andryn2006, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Umaijadien palatsi': {
+      aika: '700-luku',
+      teksti: 'Umaijadien palatsi on linnavuoren ylätason pohjoisosassa. Sen rakennutti lähteen mukaan kalifi Hisham ibn Abd al-Malik, joka hallitsi 700-luvun alkupuoliskolla, ja rakennuksen on oletettu olleen hallintorakennus tai umaijadivirkamiehen asuinpaikka.\n\nKompleksiin kuuluu vastaanottosali, useita kokoushuoneita ja pylväikkötie. Arkkitehtuuri yhdistää bysanttilaista, sassanidista ja selvästi islamilaista tyyliä. Palatsin eteläpuolella on moskeija, jonka pylväsmetsä-malli esiintyy lähteen mukaan yleensä vain Persiassa ja Mesopotamiassa, ja lähellä on suuri vesisäiliö, joka toimitti vettä kylpylöihin ja muihin tiloihin.\n\nPalatsi rapistui abbasidien ja fatimidien aikana, ja kaupunkia oli jo aiemmin vaurioittanut voimakas maanjäristys 700-luvun puolivälissä. Isoisän matkavuonna 1873 paikka oli lähteen mukaan rauniona, ja kaivauksia on tehty 1920-luvulta alkaen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman citadel - Umayyad Palace entrance.jpg',
+          lyhyt: 'Umaijadien palatsi Ammanin linnavuoren pohjoisosassa.',
+          selite: 'Palatsi sijaitsee linnavuoren pohjoisosassa ja on peräisin kalifi Hishamin ajalta.',
+          lahde: 'AliAbuRas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rooman teatteri': {
+      aika: '100-luku',
+      teksti: 'Rooman teatteri on rakennettu rinteeseen Jabal al-Joufahin juurelle linnavuorta vastapäätä. Siinä oli useita tuhansia paikkoja, ja jyrkkä katsomo on jaettu vaakasuoriin osiin. Kreikankielinen kirjoitus yhdistää teatterin keisari Antoninus Piuksen aikaan, ja hän hallitsi 100-luvun puolivälissä.\n\nTeatteri on suunnattu pohjoiseen, jotta aurinko ei lähteen mukaan häikäisisi katsojia. Lähteen mukaan ylimmille riveille kuuluu ja näkyy erinomaisesti jyrkän rakenteen ansiosta. Sivuovien takana ovat Jordan Folklore Museum ja Museum of Popular Tradition. Nykyään teatteri on kulttuuritapahtumien käytössä, ja esimerkiksi Al-Balad Music Festival järjestetään siellä ja viereisessä odeonissa.\n\nIsoisän matkavuonna 1873 teatteri oli rauniona. Kun tšerkessit asettuivat sen viereen 1870-luvun lopulla, he rakensivat talonsa teatterin kivistä.',
+      kuvat: [
+        {
+          tiedosto: 'Roman theater of Amman 01.jpg',
+          lyhyt: 'Rooman teatteri on rakennettu rinteeseen, ja siinä oli useita tuhansia paikkoja.',
+          selite: 'Rooman teatteri on peräisin 100-luvun puolivälistä, ja nykyään siellä pidetään kulttuuritapahtumia.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Odeon: {
+      aika: '100-luku',
+      teksti: 'Odeon on pieni teatteri Hashemite Plazan itälaidalla. Se on pieni, ja se rakennettiin 100-luvulla samoihin aikoihin viereisen suuren teatterin kanssa. Kaksi katsomoa sijaitsevat lähellä toisiaan: suuri teatteri Hashemite Plazan eteläpuolella ja pieni odeon plazan itäpuolella.\n\nArkeologien arvion mukaan odeon oli peitetty puukatolla tai tilapäisellä kangaskatoksella. Rakennus on kunnostettu äskettäin yhdessä nymfaionin kanssa, ja nykyään siellä pidetään konsertteja. Lähteen mukaan tunnetuin niistä on Al-Balad Music Festival, joka järjestetään Rooman teatterissa ja odeonissa.\n\nIsoisän matkavuonna 1873 laakso, jossa odeon sijaitsee, oli lähteen mukaan autio rauniopaikka, jossa kävivät vain viljelijät ja beduiinit.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Odeon 03.jpg',
+          lyhyt: 'Odeon on pieni roomalaisajan teatteri Hashemite Plazan laidalla.',
+          selite: 'Odeon oli pieni teatteri, ja nykyään siellä järjestetään konsertteja.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Nymfaion: {
+      aika: '100-luku',
+      teksti: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde, josta on säilynyt osa. Se rakennettiin samoihin aikoihin teatterin ja odeonin kanssa, ja se sijaitsi Seil-puron vieressä. Lähteen mukaan siinä oli arviolta useiden satojen neliömetrien allas, joka täytettiin jatkuvasti vedellä.\n\nNykyisin nymfaionin jäänteet ovat Ibn al-Atheer- ja Quraysh-katujen risteyksessä alakaupungin keskellä. Forum sijaitsi lähteen mukaan nykyisen Hashemite Plazan paikalla. Kunnostus alkoi 2010-luvun puolivälissä: työhön osallistui arkeologian opiskelijoita ja ammattilaisia useasta jordanialaisesta yliopistosta, ja rahoittajana oli Yhdysvaltain suurlähetystö.\n\nPuro peitettiin 1900-luvulla, ja sen paikalla kulkee nykyään katu. Isoisän matkavuonna 1873 laakso oli lähteen mukaan autio rauniopaikka, ja asutus levisi sen päälle ja ympärille vasta 1870-luvun lopun jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Amman Nymphaeum 0138.jpg',
+          lyhyt: 'Nymfaion oli roomalaisen Philadelphian julkinen suihkulähde.',
+          selite: 'Nymfaionin allas täytettiin jatkuvasti vedellä, ja rakennus sijaitsi Seil-puron vieressä.',
+          lahde: 'Dosseman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Husseinin moskeija': {
+      aika: '1920-luku',
+      teksti: 'Suuri Husseinin moskeija on perjantaimoskeija alakaupungissa ja lähteen mukaan yksi kaupungin vanhimmista moskeijoista. Se sijaitsee vanhemman moskeijan paikalla; alkuperäinen Omari-moskeija rakennettiin lähteen mukaan umaijadien aikana bysanttilaisen basilikan paikalle.\n\nAl-Muqaddasi kuvasi 900-luvulla kaupungin kaunista moskeijaa, jonka lattia oli mosaiikkia. Brittiläinen tutkija Charles Warren kuvasi paikalla ollutta vanhaa moskeijaa 1860-luvulla, ja C. R. Conder valokuvasi sen 1880-luvun alussa. Tšerkessiasutuksen jälkeen rukoussali tyhjennettiin ja katto rakennettiin uudelleen.\n\nNykyinen moskeija rakennettiin 1920-luvulla emiiri Abdullahin määräyksestä, ja se nimettiin hänen isänsä Sharif Hussein bin Alin mukaan. Se oli yksi emiirikunnan perustamisen jälkeisistä ensimmäisistä uusista rakennuksista. Isoisän matkavuoden molemmin puolin paikalla oli yhä vanha moskeija.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Husseini Mosque na 2026 (2).jpg',
+          lyhyt: 'Suuri Husseinin moskeija on perjantaimoskeija Ammanin alakaupungissa.',
+          selite: 'Suuri Husseinin moskeija rakennettiin 1920-luvulla vanhemman moskeijan paikalle ja nimettiin Sharif Hussein bin Alin mukaan.',
+          lahde: 'Justwiki, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Duke\'s Diwan': {
+      aika: '1920-luku',
+      teksti: 'Duke\'s Diwan on historiallinen talo King Faisal Streetillä, joka lähteen mukaan kuuluu kaupungin vanhimpiin rakennuksiin. Talo rakennettiin 1920-luvulla, ja Transjordanian hallitus vuokrasi sen lähteen mukaan Ammanin ensimmäiseksi postitoimistoksi. Posti toimi talossa 1940-luvulle asti.\n\nSen jälkeen talossa toimi hetken valtiovarainministeriö, ja 1900-luvun jälkipuoliskolla se oli Haifa-hotelli. Vuosituhannen vaihteessa Mamdouh Bisharat vuokrasi talon estääkseen sen purkamisen. Diwan on arabiaksi huone, joka on aina avoin vieraille.\n\nNykyään talossa on antiikkia, valokuvia ja 1920-luvun huonekaluja, ja siellä järjestetään musiikki-, maalaus-, kirjallisuus- ja runotapahtumia. King Faisal Street oli emiirikunnan aikana kaupungin keskeisimpiä katuja. Isoisän matkavuonna 1873 taloa ei ollut vielä rakennettu.',
+      kuvat: [
+        {
+          tiedosto: 'Diwan al Duq.jpg',
+          lyhyt: 'Duke\'s Diwan oli Ammanin ensimmäinen postitoimisto 1920-luvulta.',
+          selite: 'Duke\'s Diwan rakennettiin 1920-luvulla Ammanin ensimmäiseksi postitoimistoksi, ja nykyään siellä on kulttuuri- ja taidekeskus.',
+          lahde: 'Fjmustak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  baku: {
+    Neitotorni: {
+      aika: '1100-luku',
+      teksti: 'Neitotorni on lieriömäinen, kahdeksankerroksinen torni vanhankaupungin rannan puolella. Sen korkeus on lähteestä ja mittauspuolesta riippuen noin 28–31 metriä ja perushalkaisija noin 16–16,5 metriä, ja seinät ovat alaosassa useita metrejä paksut. Torni on rakennettu kallion päälle, ja sen perustuksista on löytynyt korkeita puupalkkeja. Etelämuurin kufi-kirjoituksessa mainitaan nimi Qubbeye Masud ibn Davud; häntä on pidetty arkkitehtina, mutta kirjoitus ei välttämättä tarkoita tornin rakentajaa.\n\nTornin ikä on kiistanalainen. Yleisesti sen ajoitetaan 1100-luvulle, mutta osa tutkijoista pitää perustuksia ja alimpia kerroksia paljon vanhempina. Lähteen mukaan tornista kerrotaan useita legendoja, joista tunnetuin kertoo tulenpunatukkaisesta neidosta, joka pelasti kaupunkilaiset.\n\nIsoisän matkavuonna 1873 torni seisoi vanhankaupungin muurien rannan puolella, ja Venäjä oli valtauksen jälkeen korjannut muureja ja laajentanut linnoitusta. Meri on lähteen mukaan sittemmin vetäytynyt, ja tornin edustalle on syntynyt maakaistale. Nykyään tornissa on museo, ja katolta näkyvät vanhankaupungin kujat, minareetit ja Bakunlahti.',
+      kuvat: [
+        {
+          tiedosto: 'Torre de la Doncella, Baku, Azerbaiyán, 2016-09-26, DD 212-214 HDR.jpg',
+          lyhyt: 'Neitotorni kuuluu Bakun vanhankaupungin UNESCO-kohteeseen.',
+          selite: 'Neitotorni ja Širvanšahien palatsi inskriboitiin yhdessä UNESCOn maailmanperintöluetteloon vanhankaupungin kanssa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Širvanšahien palatsi': {
+      aika: '1400-luku',
+      teksti: 'Širvanšahien palatsi kohoaa vanhankaupungin kukkulalla. Päärakennus aloitettiin 1411, ja se oli alun perin kaksikerroksinen rakennus, jossa oli useita kymmeniä huoneita ja kapeita kierreportaita. Kompleksiin kuuluvat Divan-khana, hautaholvit, hovimoskeija minareetteineen, Seyyid Yahya Bakuvin mausoleumi, itäportaali eli Muradin portti, vesisäiliö ja kylpylän jäänteet. Shirvanshah Khalilullah I haudattiin perheineen palatsin alueelle.\n\nSafavidit valtasivat Bakun 1501, ja osmanit saivat kaupungin haltuunsa 1578. Palatsi oli tyhjillään 1600-luvulta, ja Venäjän joukkojen pommitus vaurioitti sen kaakkoisjulkisivua 1723, kun Pietari Suuren käskystä Bakua vallattiin.\n\nIsoisän matkavuonna 1873 palatsi oli Venäjän sotilasosaston hallussa. Osasto oli 1800-luvulla tehnyt siihen osittaisen kunnostuksen ja muuttanut tiloja varastoiksi. Kei-Kubad-moskeija tuhoutui 1900-luvun alussa, ja kunnostustöitä tehtiin neuvostoaikana. Museo-suojelualueeksi palatsi julistettiin 1960-luvulla, ja restaurointi alkoi uudelleen 1990-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Palace of the Shirvanshahs, Baku (Şirvanşahlar sarayı).jpg',
+          lyhyt: 'Širvanšahien palatsi on 1400-luvun palatsikompleksi vanhankaupungin kukkulalla.',
+          selite: 'Palatsin tiloissa toimii nykyään museo, ja se on kuulunut maailmanperintöön vuodesta 2000.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Juma-moskeija': {
+      aika: '1100-luku ja 1899',
+      teksti: 'Bakun ensimmäinen Jame-moskeija rakennettiin 1100-luvulla paikalle, jolle se rakennettiin useita kertoja uudelleen. Kirjoituksen mukaan Amir Sharaf al-Din Mahmud määräsi sen kunnostettavaksi 709 AH eli 1309–1310. Stalaktiittikoristeinen minaretti rakennettiin pohjoisseinälle 1437, ja pihassa oli 1400-luvun medresan huoneita, joista yksi on säilynyt.\n\nNykyinen moskeija rakennettiin 1899 kauppias ja hyväntekijä Haji Sheikhali Agha Dadashovin rahoituksella. Lähteen mukaan rakennuksessa on jälkiä zarathustralaisesta temppelistä, ja yksi tutkija uskoi sen nousseen tulenpalvojien temppelin jäänteille.\n\nIsoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut, vaan paikalla oli vanha Jame-moskeija. Neuvostoaikana rakennus toimi kilimimuseona, ja sen jälkeen se palasi moskeijakäyttöön. Se restauroitiin täysin 2000-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Juma Mosque (Baku) 14.JPG',
+          lyhyt: 'Juma-moskeijan nykyinen rakennus valmistui 1899.',
+          selite: 'Moskeija sijaitsee vanhassakaupungissa, ja sen edeltäjä rakennettiin 1100-luvulla.',
+          lahde: 'Urek Meniashvili, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanhankaupungin muurit ja Shemakhan portti': {
+      aika: '1000–1100-luku',
+      teksti: 'Bakun vanhakaupunki on muurien ympäröimä, ja lähteen mukaan Bakuun ja sen ympäristöön rakennettiin 1100–1300-luvuilla massiivisia linnoituksia. Keskiajan monumentteja ovat Synyg Galan minaretti 1000-luvulta, muurit ja tornit 1000–1100-luvulta sekä Multanin karavaaniseraiji ja Haji Gayyibin kylpylä 1400-luvulta. Vanhakaupunki jaettiin asuinalueisiin, joista Gemichiler oli laivanrakentajien ja Noyutchuler öljytyöläisten.\n\nVenäjä valtasi Bakun 1806, ja muureja korjattiin ja linnoitusta laajennettiin pian sen jälkeen. Muureille sijoitettiin kymmeniä tykkejä. Alun perin muureissa oli kaksi porttia, Salyan ja Shemakha.\n\nIsoisän matkavuonna 1873 muurit olivat vielä pitkälti ennallaan, mutta merenpuoleinen osa oli purettu 1800-luvun puolivälissä. Kivet myytiin, ja tuotto käytettiin bulevardin rakentamiseen. Bulevardin ensimmäiset suihkulähteet ilmestyivät 1860-luvulla. Taghiyevin portti avattiin vasta 1800-luvun lopulla. Vanhakaupunki oli 2000-luvulla jonkin aikaa UNESCOn vaaralistalla.',
+      kuvat: [
+        {
+          tiedosto: 'Walls of the fortress of the Baku Old City (Azerbaijan) - 10-12centuries6.jpg',
+          lyhyt: 'Vanhankaupungin muurit ovat peräisin 1000–1100-luvulta.',
+          selite: 'Venäjä valtasi Bakun 1806, ja muureja korjattiin pian sen jälkeen; niissä oli alun perin kaksi porttia, Salyan ja Shemakha.',
+          lahde: 'Самый древний, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taza Pirin moskeija': {
+      aika: '1905–1914',
+      teksti: 'Taza Pirin moskeija rakennettiin 1905–1914 Nabat Khanum Ashurbeyovan rakennuttamana ja rahoittamana. Arkkitehti oli Eugeniusz Skibiński. Moskeija seisoo 1300–1400-luvun pyhimyksen Abu Seyid Abdullan haudan paikalla, ja se oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä. Sisäpinta-ala on 1 400 neliömetriä.\n\nHankkeeseen osallistui myös Zeynalabdin Taghiyev. Balkanin sota ja viranomaisvalvonta hidastivat rakentamista. Moskeija suljettiin vallankumouksen yhteydessä, ja sitä käytettiin elokuvateatterina ja jyväaittana. Moskeijaksi se palasi 1900-luvun puolivälissä, ja restaurointi tehtiin 2000-luvulla.\n\nIsoisän matkavuonna 1873 moskeijaa ei vielä ollut, vaan paikalla oli vain pyhimyksen hautapaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Təzəpir məscidinin Mərkəzi parkdan görünüşü.jpg',
+          lyhyt: 'Taza Pirin moskeija rakennettiin 1905–1914 pyhimyksen haudan paikalle.',
+          selite: 'Moskeija oli ensimmäinen Bakun uskonnollinen rakennus, jossa käytettiin valkoista kiveä.',
+          lahde: 'Sefer azeri, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bakun bulevardi': {
+      aika: '1900-luvun alku',
+      teksti: 'Bakun bulevardi on merenrantapromenadi, jonka pituus on nykyään noin neljä kilometriä. Municipal Horticultural Commission päätti 1900-luvun alussa istuttaa meren rantaan puita ja pensaita, ja puolalainen insinööri Kazimierz Skurewicz suunnitteli penkereen. Pitkään toisella puolella olivat kartanot ja toisella meri, eikä alueella ollut puita, joten multaa tuotiin muualta. Mammad Hassan Hajinski paransi puistoa myöhemmin. Kilpailun voitti ehdotus Zvezda eli Tähti, jossa oli uimala, ravintola ja tusina paviljonkia, ja työt valmistuivat 1910-luvun alussa.\n\nPuolalaisen arkkitehdin Józef Plośkon suunnittelema Phenomenon-rakennus valmistui 1910-luvulla kasinoksi, elokuvateatteriksi ja ravintolaksi, ja nykyään siinä toimii nukketeatteri. Laskuvarjotorni rakennettiin 1930-luvulla ja kunnostettiin 2000-luvun lopulla. Bulevardi julistettiin kansallispuistoksi 1990-luvun lopulla.\n\nIsoisän matkavuonna 1873 bulevardia ei vielä ollut. Muurien merenpuoleinen osa oli kuitenkin purettu 1800-luvun puolivälissä ja kivien myynnistä saadut rahat osoitettu bulevardin rakentamiseen, ja ensimmäiset suihkulähteet ilmestyivät 1860-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Promenade, Baku (P1090242).jpg',
+          lyhyt: 'Bakun bulevardi on Bakunlahden rantaa seuraava promenadi.',
+          selite: 'Bulevardin nykyinen puisto on peräisin 1900-luvun alusta, ja sen laskuvarjotorni rakennettiin 1930-luvulla.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  beirut: {
+    'Raouchén Kyyhkyskalliot': {
+      aika: 'Luonnonmuodostelma',
+      teksti: 'Raouché on Beirutin länsireunalla sijaitseva asuin- ja liikekaupunginosa, jonka edustalla kohoaa rannikolta kaksi kalliota. Kalliot tunnetaan nimellä Kyyhkyskalliot (Pigeons\' Rock) tai Raouchén kallio, ja ne ovat luonnonmuodostelma.\n\nCorniche-rantabulevardi nousee Raouchén kohdalla korkeimmilleen meren yläpuolelle, ja kaupunginosa on rakennettu valkoisen kalkkikivijyrkänteen päälle. Jyrkänteen reunaa seuraavan Avenue de Parisin varrella on kahviloita ja ravintoloita. Lähteen mukaan kalliot ovat tunnistettava luonnonmaamerkki.\n\nSeudun rannoilta on löytynyt alueen vanhimmat todisteet ihmisasutuksesta, piikiviä ja yksinkertaisia kivityökaluja, jotka ovat esillä American University of Beirutin arkeologisessa museossa. Kalliot olivat paikallaan jo isoisän matkavuonna 1873.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut-Rouche rock.jpg',
+          lyhyt: 'Raouchén Kyyhkyskalliot Beirutin rannikolla.',
+          selite: 'Kyyhkyskalliot ovat Raouchén edustalla kohoava luonnonmuodostelma, joka koostuu kahdesta kalliosta.',
+          lahde: 'Oussama Tahmaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beirutin kansallismuseo': {
+      aika: '1930-luku',
+      teksti: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo. Rakennus on ranskalaistyylistä egyptiläistä uusklassismia, ja sen suunnittelivat arkkitehdit Antoine Nahas ja Pierre Leprince-Ringuet. Materiaalina on libanonilainen okran värinen kalkkikivi, ja keskiosassa on lasikatto, joka tuo päivänvalon sisään.\n\nRakentaminen alkoi 1930-luvun alussa, ja museo avattiin virallisesti 1940-luvun alussa. Tontin antoi kaupunki, ja se sijaitsee Beirutin hipodromin lähellä. Kokoelmassa on lähteen mukaan suuri määrä esineitä, pääosin antiikin ja keskiajan löytöjä, ja esillä on esineitä esihistoriasta mamelukkien aikaan.\n\nAlakerran gallerian kokoelmiin kuuluu foinikialaisia ihmishahmoisia sarkofageja sekä Neitsyt Marian kuva, jonka lähde ajoittaa 200-luvulle ja jonka mukaan se on yksi vanhimmista löydetyistä Marian kuvauksista. Isoisän matkavuonna 1873 museota ei vielä ollut, sillä rakennus valmistui vasta 1900-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut National Museum, Main Entrance, March 2017.jpg',
+          lyhyt: 'Beirutin kansallismuseo on Libanonin tärkein arkeologinen museo.',
+          selite: 'Museon rakennus on egyptiläistä uusklassismia, ja sen kokoelmat ulottuvat esihistoriasta mamelukkien aikaan.',
+          lahde: 'Bdx, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sursock-museo': {
+      aika: '1912',
+      teksti: 'Sursock-museo on moderni- ja nykytaiteen museo huvilassa Rmeilin kaupunginosassa Rue Sursockilla. Huvilan rakennutti vuonna 1912 aatelismies Nicolas Ibrahim Sursock, joka määräsi testamentissaan sen muutettavaksi museoksi. Hän kuoli vuonna 1952, ja huvila periytyi Beirutin kaupungille.\n\nRakennuksessa on italialaisia eli venetsialaisia ja osmanien arkkitehtuurin vaikutteita, ja se on yksi harvoista säilyneistä saman aikakauden huviloista Beirutissa. Museo avattiin 1960-luvun alussa näyttelyllä, jossa oli nykyisten libanonilaistaiteilijoiden töitä. Pysyvään kokoelmaan kuuluu satoja teoksia 1800- ja 1900-luvuilta: maalauksia, veistoksia ja grafiikkaa, myös japanilaisia puupiirroksia ja islamilaista taidetta.\n\nMuseon tilat ovat kasvaneet moninkertaisiksi, kun puutarhan alle rakennettiin uusia maanalaisia kerroksia. Ulkopuolella on esillä Youssef Hoyekin veistos Les Pleureuses eli itkevät naiset, joka oli alun perin Marttyyrien aukion muistomerkki. Sursock-suku oli yksi 1800-luvun kauppasuvuista, mutta isoisän matkavuonna 1873 huvilaa ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'The Sursock Museum façade.jpg',
+          lyhyt: 'Sursock-museo toimii huvilassa Rmeilin kaupunginosassa.',
+          selite: 'Sursock-museo toimii 1900-luvun alussa rakennetussa huvilassa Rmeilin kaupunginosassa.',
+          lahde: 'murielkahwagi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marttyyrien aukio': {
+      aika: '1700-luvulta',
+      teksti: 'Marttyyrien aukio on Beirutin historiallinen pääaukio. Sen vanhin nimi on Sahat al-Burj eli Tornin aukio. Aukio oli kaupunginmuurin ulkopuolinen avoin tori, ja muinainen Burj al-Kashefin vartiotorni merkitsi sen ulkoreunaa.\n\nAukion nimi on vaihtunut useita kertoja. 1700-luvulla se sai nimen Place du Canon Burj-tornin lähelle sijoitetun venäläisen tykin mukaan, ja myöhemmin se tunnettiin nimellä Place des Canons. Sulttaani Abdul Hamid II:n mukaan sitä kutsuttiin Hamidiyyeh-aukioksi, ja nuorturkkilaisten vallankumouksen jälkeen Vapauden aukioksi. Nykyisen nimensä aukio sai 1930-luvulla muistoksi teloitetuille nationalisteille, jotka edustivat eri uskontokuntia.\n\nIsoisän matkavuonna 1873 aukio tunnettiin nimellä Place des Canons, ja kunta uudisti sen kaupungin pääkokoontumispaikaksi 1870-luvun lopulla. Aukiota katsoi Petit Serail, kuvernöörin virka-asunto. Ratikka tuli aukiolle 1900-luvun alussa, ja 1950-luvulla siitä tuli bussi- ja taksiterminaali sekä elokuvateattereiden ja kahviloiden paikka.',
+      kuvat: [
+        {
+          tiedosto: 'Martyrs Square (48706314).jpg',
+          lyhyt: 'Marttyyrien muistomerkki Beirutin keskustan pääaukiolla.',
+          selite: 'Marttyyrien aukio sai nykyisen nimensä 1930-luvulla ensimmäisen maailmansodan aikana teloitettujen nationalistien muistoksi.',
+          lahde: 'upyernoz from Haverford, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mohammad Al-Aminin moskeija': {
+      aika: '2000-luku',
+      teksti: 'Mohammad Al-Aminin moskeija on sunnalaisuuden moskeija Beirutin keskustassa, ja sitä kutsutaan myös Siniseksi moskeijaksi. Sen suunnitteli Azmi Fakhoury, ja tyyli muistuttaa osmanien aikaista arkkitehtuuria. Kupoleissa on vaaleansinistä laattaa, ja moskeijaan mahtuu tuhansia rukoilijoita.\n\nMoskeija vihittiin käyttöön 2000-luvulla. Paikalla oli 1800-luvulla zawiya eli sufilaisluostari, jonka vieressä toimi tori. Rakennustyön aikana kaivauksissa paljastui osa roomalaisen kaupungin pääkadun Decumanus Maximuksen päällysteestä ja pylväistä.\n\nMoskeija seisoo aivan Pyhän Yrjänän maroniittikatedraalin vieressä. Isoisän matkavuonna 1873 nykyistä moskeijaa ei vielä ollut.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjänän maroniittikatedraali': {
+      aika: '1800-luvun loppu',
+      teksti: 'Pyhän Yrjänän maroniittikatedraali on maroniittien Beirutin arkkihiippakunnan katedraali keskustassa. Nykyinen kolmilaivainen basilika rakennettiin 1800-luvun lopulla arkkipiispa Joseph Debsin johdolla 1700-luvun puolivälissä rakennetun pienemmän Pyhän Yrjänän kirkon paikalle.\n\nUusklassisen julkisivun suunnitteli italialainen arkkitehti Giuseppe Maggiore, ja sisätila muistuttaa Santa Maria Maggioren basilikaa Roomassa. Katossa on kullattu kassettikatto, ja seinissä on stukkia ja marmoria. Rakentamisessa käytettiin roomalaisia pylväitä Beit Meryn Deir El Qalaan temppelistä.\n\nEsipihan alta on säilytetty hellenistinen rakennelma, osa roomalaista pylväskatua ja osmanien aikainen muuri. Uusi kellotorni on noin 70 metriä korkea, ja lähteen mukaan arkkipiispa kertoi sen korkeuden vastaavan viereisen moskeijan minareetteja uskontojen välisen sovun viestinä. Isoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: "Berytus ruins and St. George Maronite Cathedral, Beirut.jpg",
+          lyhyt: 'Pyhän Yrjänän maroniittikatedraali ja sen kellotorni.',
+          selite: 'Katedraalin esipihan alla on säilytetty osa roomalaista pylväskatua.',
+          lahde: "Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)",
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nejmehin aukio': {
+      aika: '1920-luku',
+      teksti: 'Nejmehin aukio eli Place de l\'Étoile on Beirutin keskustan pääaukio. Ranskalaiset purkivat 1920-luvulla vanhat basaarit ja muuttivat alueen nykyaikaiseksi kaupunginosaksi, ja aukio tunnetaan art deco -arkkitehtuuristaan.\n\nAukion kaunistus on 1930-luvun kellotorni, jonka lahjoitti libanonilaistaustainen siirtolainen Michel Abed. Parlamenttirakennuksen suunnitteli Mardiros Altounian, joka suunnitteli myös kellotornin. Rakennus yhdistää Beaux-Arts-tyylin paikallisiin piirteisiin, kuten kaksois- ja kolmoiskaariin, ja sen julkisivu on kalkkikiveä.\n\nAukion kreikkalainen Pyhän Yrjänän katedraali valmistui 1700-luvulla, ja sen alla on maanalainen museo, jossa on usean samalle paikalle rakennetun kirkon kerrostumia. Aukiota tunnetaan kyyhkysistään. Isoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut: alueella oli vanhoja basaareja.',
+      kuvat: [
+        {
+          tiedosto: 'Beirut, Central District, Nejmeh Square.jpg',
+          lyhyt: 'Nejmehin aukio on Beirutin keskustan pääaukio.',
+          selite: 'Aukio syntyi 1920-luvulla, kun vanhat basaarit purettiin ja alue rakennettiin uudelleen.',
+          lahde: 'Heinz Hövel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Suuri Serail': {
+      aika: '1800-luku',
+      teksti: 'Suuri Serail eli al-Sarāy al-Kabir, hallituspalatsi, kohoaa kukkulalla Beirutin keskustassa, ja nykyään se on Libanonin pääministerin virkapaikka. Rakennus syntyi osmanien sotilas- ja siviilihallinnon päämajaksi, ja beirutilaiset kutsuivat sitä nimellä Al-Quishleh eli varuskunta.\n\nLinnoittaminen alkoi 1800-luvun puolivälissä, ja rakennukseen lisättiin toinen kerros. Sulttaani Abdülazizin määräämä sotilassairaala valmistui 1860-luvulla. Isoisän matkavuonna 1873 rakennus oli siis jo olemassa kasarmina ja sotilashallinnon rakennuksena, mutta lopullisen muotonsa se sai vasta myöhemmissä muutoksissa 1800-luvun lopulla.\n\nSuunnittelu noudatti osmanien uuden sotilasjärjestyksen arkkitehtuuria, ja korkealla sijaitseva vaatimaton julkisivu jäljittelee Istanbulin Selimiye-kasarmia. Ranskalaiset muuttivat rakennuksen Ylikomissariaatiksi 1900-luvun alussa. Lähellä on Hamidiyyeh-kellotorni, joka rakennettiin 1800-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Grand Serail, Government Palace, Beirut.jpg',
+          lyhyt: 'Suuri Serail on Libanonin pääministerin virkapaikka.',
+          selite: 'Suuri Serail rakennettiin osmanien aikana kasarmiksi ja hallinnon päämajaksi.',
+          lahde: 'Pjposullivan1, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  jerevan: {
+    'Tasavallan aukio': {
+      aika: '1926–1977',
+      teksti: 'Tasavallan aukio on Jerevanin keskusaukio. Siihen kuuluvat soikea liikenneympyrä, jonka keskellä oleva kivikuvio on tehty näyttämään perinteiseltä armenialaiselta matolta, sekä puolisuunnikkaan muotoinen osa, jossa on allas ja musiikkisuihkulähteet. Uudistetut suihkulähteet avattiin 2000-luvun lopulla.\n\nAukiota ympäröi viisi pääasiassa vaaleanpunaisesta ja keltaisesta tuffista tehtyä uusklassista rakennusta: hallituksen talo, historiamuseo ja kansallisgalleria, hotelli sekä kaksi entistä ministeriörakennusta. Aukion suunnitteli arkkitehti Alexander Tamanian vuoden 1924 yleissuunnitelmassa, rakentaminen alkoi 1926 hallituksen talosta, ja viimeinen rakennus, kansallisgalleria, valmistui 1977. Aukio on ollut myös nimeltään Leninin aukio, kunnes kaupunginvaltuusto nimesi sen Tasavallan aukioksi 1990-luvun taitteessa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut, vaan paikalla oli vanhaa Erivania. 2000-luvun alun kunnostuksessa tehdyissä kaivauksissa löytyi 1700–1800-lukujen kellareita ja tuffista tehtyjä vesiputkia, jotka ajoitetaan 800–1000-luvuille.',
+      kuvat: [
+        {
+          tiedosto: 'Yerevan, Musical fountain, Republic Square, Armenia.jpg',
+          lyhyt: 'Tasavallan aukion musiikkisuihkulähteet avattiin uudistettuina 2000-luvun lopulla.',
+          selite: 'Musiikkisuihkulähteet esiintyvät useimpina iltoina huhti–lokakuussa, ja niiden takana on hallituksen talo.',
+          lahde: 'Vyacheslav Argenberg, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sininen moskeija': {
+      aika: '1765–1766',
+      teksti: 'Sininen moskeija rakennettiin 1765–66 Erivanin kaanikunnan hallitsijan Hoseyn Ali Khanin tilauksesta kaupungin pääasialliseksi perjantaimoskeijaksi. Kun venäläiset valtasivat kaupungin 1827, se oli suurin kahdeksasta Jerevanin moskeijasta. Minaretti oli 1800-luvun Jerevanin korkein rakennelma.\n\nMoskeijassa toimi 1700-luvun lopulta madrasa, ja saksalainen August von Haxthausen kuvasi 1840-luvulla koulun, jossa joukko poikia opiskeli persiaa. Länsimaiset matkailijat H. F. B. Lynch ja Luigi Villari kutsuivat moskeijaa nimellä Gök Jami, ’taivaansininen moskeija’. Laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.\n\nIsoisän matkavuonna 1873 moskeija oli toiminnassa. 1920-luvulta se ei enää toiminut uskonnollisena laitoksena, ja sisäpihan teehuoneessa kävi kirjailijoita ja taiteilijoita, muun muassa Yeghishe Charents, Martiros Saryan ja William Saroyan. Restauroinnin jälkeen 1990-luvulla se on ollut jälleen uskonnollisessa käytössä, ja sen yhteydessä on Persian kielen kirjasto, joka avattiin 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Dome of Blue Mosque, Yerevan, Armenia.jpg',
+          lyhyt: 'Sinisen moskeijan laatoitus tehtiin 1800-luvun lopulla, ja rakennus uudistettiin 1900-luvun alussa.',
+          selite: 'Moskeijan nimi Gök Jami tarkoittaa ’taivaansinistä moskeijaa’.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Sargiksen katedraali': {
+      aika: '1835–1842',
+      teksti: 'Pyhän Sargiksen katedraali on Armenian apostolisen kirkon Araratin hiippakunnan keskus. Nykyinen kirkko rakennettiin 1835–1842 Hrazdanin vasemmalle rannalle Kentronin alueelle, ja se seisoi Dzoragyughin kylän yläosan vieressä vastapäätä vanhaa Erivanin linnoitusta.\n\nPaikalla oli alkukristillisestä ajasta lähtien erakkoluostari, jonka kirkot olivat pyhien Sargiksen, Georgin ja Jaakobin kirkot. Vuoden 1679 maanjäristys tuhosi sen, ja se rakennettiin uudelleen katolikos Nahabetin aikana 1600-luvun lopulla.\n\nIsoisän matkavuonna 1873 kirkko oli jo valmiina. Nykyinen ulkoasu on myöhempi: kunnostus tehtiin Rafayel Israyelianin suunnitelman mukaan 1970-luvulla, jolloin julkisivu verhoiltiin Anin oranssilla tuffilla ja vanha kupoli korvattiin korkeammalla. Kellotorni valmistui 2000-luvun vaihteessa, ja kunnostuksen rahoittivat Lontoossa asuvat lahjoittajat Sarkis Kurkjian poikineen.',
+      kuvat: [
+        {
+          tiedosto: 'Saint Sarkis Cathedral, Yerevan 25.jpg',
+          lyhyt: 'Pyhän Sargiksen katedraali valmistui 1835–1842 Hrazdanin vasemmalle rannalle.',
+          selite: 'Julkisivu verhoiltiin Anin oranssilla tuffilla Rafayel Israyelianin 1970-luvun suunnitelman mukaan.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zoravorin kirkko': {
+      aika: '1693–94',
+      teksti: 'Zoravor Surp Astvatsatsin on kupoliton kolminaavinen basilika Shaharin vanhassa kaupunginosassa, jossa oli aiemmin apostoli Ananiaan hauta ja kappeli. Nimi Zoravor tarkoittaa ’voimakas’, ja se lisättiin, koska kirkossa säilytettiin 1200-luvun Zoravor-Raamattua.\n\n1600-luvun alkupuoliskolla munkki Movses Syunetsi rakensi paikalle luostarikompleksin jerevanilaisten rahoituksella katolikos Pilipoksen aikana, ja vuoden 1679 maanjäristys tuhosi sen. Nykyinen kirkko rakennettiin 1693–94 samalle paikalle jerevanilaisen kauppiaan Khoja Panosin lahjoituksella. Sisä- ja ulkoasu ovat yksinkertaiset, ja ulkoseinillä on 1600-luvun khachkar-ristikiviä.\n\nIsoisän matkavuonna 1873 kirkko oli olemassa, mutta Pyhän Ananiaan kappeli sen koillispuolella rakennettiin vasta 1800-luvun lopulla. Neuvostoaikana kirkkoa käytettiin muihin tarkoituksiin; se palautettiin kirkolle 1970-luvulla ja kunnostettiin täysin.',
+      kuvat: [
+        {
+          tiedosto: 'Surp Zoravor Astvatsatsin Church.JPG',
+          lyhyt: 'Zoravorin kirkko on kupoliton kolminaavinen basilika, joka rakennettiin 1693–94.',
+          selite: 'Kirkon ulkoseinillä on 1600-luvun khachkar-ristikiviä, ja kirkko sijaitsee Shaharin vanhassa kaupunginosassa.',
+          lahde: '© Travis K. Witt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Oopperatalo: {
+      aika: '1930-luku–1953',
+      teksti: 'Virallisesti rakennus on Alexander Spendiaryanin kansallinen akateeminen ooppera- ja balettiteatteri, mutta paikalliset sanovat sitä yksinkertaisesti Operaksi. Perustuskivi laskettiin 1930-luvun alussa, ja teatteri avattiin 1933 Spendiaryanin oopperalla Almast. Rakennuksen suunnitteli Alexander Tamanian; salin rakentaminen valmistui 1939 ja koko rakennus 1953.\n\nTalossa on kaksi salia: Aram Khachaturianin konserttisali sekä Spendiaryanin ooppera- ja balettisali, ja kummassakin on yli tuhat paikkaa. Teatterin ensimmäinen balettiesitys oli Tšaikovskin Joutsenlampi, ja ensimmäinen armenialainen baletti oli Khachaturianin Onni, josta syntyi Gayane. Armen Tigranianin ooppera Anoush on ollut ohjelmistossa teatterin alkuvuosista asti.\n\nIsoisän matkavuonna 1873 oopperataloa ei vielä ollut. Rakennuksen eteläpuolella on Vapaudenaukio, jossa seisovat Tumanyanin ja Spendiaryanin patsaat, ja Joutsenjärvi rakennettiin 1960-luvun alussa muodoltaan Sevan-järveä muistuttavaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Ópera, Ereván, Armenia, 2016-10-03, DD 13.jpg',
+          lyhyt: 'Jerevanin oopperatalo avattiin 1933, ja sen suunnitteli Alexander Tamanian.',
+          selite: 'Talossa toimii kansallinen akateeminen ooppera- ja balettiteatteri, jossa on kaksi salia.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaskadi: {
+      aika: '1970-luku–2009',
+      teksti: 'Kaskadi on portaikkokompleksi, joka yhdistää keskustan Kanaker-Zeytunin kukkuloihin ja kuuluu Tamanianin kaupunkisuunnitelmassa määriteltyyn akseliin. Siinä on useita terasseja, satoja askelmia noin 300 metrin matkalla ja sisäpuolella liukuportaat. Rakenne on maidonvalkoista tuffia ja travertiinia, ja koristeissa on khachkar-ristikivien, viiniköynnösten, granaattiomenoiden ja elämänpuun aiheita.\n\nArkkitehdit Jim Torosyan, Sargis Gurzadyan ja Aslan Mkhitaryan alkoivat suunnitella portaikkoa 1970-luvun alussa. Rakentaminen alkoi lähteiden mukaan 1970- tai 1980-luvulla, ja se keskeytyi 1980-luvun lopulla; hallitus päätti 2000-luvun alussa saattaa kompleksin loppuun, ja sisälle avattiin Cafesjian Center for the Arts 2009.\n\nIsoisän matkavuonna 1873 Kaskadia ei vielä ollut. Sisällä on muun muassa Khanjyan-galleria, jossa on Grigor Khanjyanin triptyykki Armenian historia, sekä Sasuntsi Davit -galleria, jossa on Artashes Hovsepyanin reliefejä armenialaisesta eepoksesta. Keväästä alkusyksyyn portailla pidetään klassisen musiikin ja jazzin konsertteja.',
+      kuvat: [
+        {
+          tiedosto: '2014 Erywań, Kaskady (18).jpg',
+          lyhyt: 'Kaskadin alaterassit ovat osa terassien portaikkoa keskustan pohjoislaidalla.',
+          selite: 'Portaikon rakenne on maidonvalkoista tuffia ja travertiinia.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Matenadaran: {
+      aika: '1900-luvun puoliväli',
+      teksti: 'Matenadaran on armenialaisten käsikirjoitusten arkisto. Harmaalla basaltilla verhoiltu rakennus kohoaa Mashtotsin kadun koillispäähän ja muodostaa kadun näköalan päätteen. Sen suunnitteli kaupungin ylikaupunginarkkitehti Mark Grigorian, ja rakentaminen kesti 1900-luvun puolivälissä useita vuosia. Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.\n\nEdessä seisovat Mashtotsin ja hänen oppilaansa Koryunin patsas sekä keskiaikaisten oppineiden patsaat, jotka edustavat muun muassa käsikirjoitusten kuvitusta, filosofiaa, kosmologiaa ja historiaa. Sisäänkäynnin aulassa on Van Khachaturin mosaiikki Avarayrin taistelusta ja portaikon ympärillä kolmen aikakauden seinämaalaus. Uusi rakennus arkkitehti Arthur Meschianin suunnittelemana vihittiin käyttöön 2010-luvun alussa.\n\nIsoisän matkavuonna 1873 Matenadarania ei vielä ollut, ja käsikirjoitukset olivat Etchmiadzinissa. Kävijöitä oli yli satatuhatta vuodessa 2010-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Մատենադարան, Երևան - Matenadaran, Yerevan (2019) 45.jpg',
+          lyhyt: 'Matenadaranin basalttijulkisivun esikuvana on Anin keskiaikaisten kirkkojen rakennustaide.',
+          selite: 'Julkisivun esikuvana on Anin Pyhien apostolien kirkon 1100-luvun eteishallin itäjulkisivu.',
+          lahde: 'Gardmanahay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Englantilainen puisto': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Englantilainen puisto on yksi Jerevanin vanhimmista puistoista. Lähteiden mukaan se on peräisin 1800-luvun puolivälistä. Puisto sijaitsee Kentronin alueella Italian kadun varrella aivan Tasavallan aukion eteläpuolella.\n\nPuistoa uusittiin usein ensimmäiseen maailmansotaan asti, ja 1900-luvun alussa siinä oli suuri kunnostus. Siellä pelattiin 1920-luvun alussa Armenian modernin historian ensimmäinen jalkapallo-ottelu Jerevanin ja Aleksandropolin joukkueiden välillä. 2000-luvun alussa uusi Italian katu jakoi puiston kahtia, ja erotettu osa kunnostettiin erilliseksi puistoksi.\n\nIsoisän matkavuonna 1873 puisto oli todennäköisesti jo olemassa. Puiston laidalla sijaitsee Sundukyanin akateeminen teatteri, ja keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+      kuvat: [
+        {
+          tiedosto: 'English Park of Yerevan 05.jpg',
+          lyhyt: 'Englantilainen puisto on yksi kaupungin vanhimmista puistoista Tasavallan aukion eteläpuolella.',
+          selite: 'Puiston keskellä olevat suihkulähteet ovat suosittu hääkuvauspaikka.',
+          lahde: '23artashes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  manama: {
+    'Bab Al Bahrain': {
+      aika: '1940-luvun lopulta',
+      teksti: 'Bab Al Bahrain eli Bahrainin portti on valkoinen porttirakennus Customs Squaren eli Tullitorin laidalla Manaman liikealueella. Se on Manaman soukin pääsisäänkäynti. Lähteen mukaan rakennus avattiin 1940-luvun lopulla, ja sen suunnitteli Bahrainin hallitsijan brittiläinen neuvonantaja Charles Belgrave.\n\nRakennusta on uudistettu useaan otteeseen, viimeksi 2010-luvulla, jolloin julkisivut ja sisätilat kunnostettiin. Pohjakerroksessa toimivat nykyään matkailuneuvonta ja käsityökauppa. Portin ympärille on kertynyt kauppoja ja kahviloita: lähteen mukaan Naseef Cafe oli maan ensimmäinen jäätelökauppa, ja aukio on lähteen mukaan alueen ensimmäinen virallinen julkinen tila.\n\nIsoisän matkavuonna 1873 porttia ei vielä ollut. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Al Bahrain, Manama, Baréin, 2024-08-18, DD 72.jpg',
+          selite: 'Bab Al Bahrain on Manaman soukin pääsisäänkäynti.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manaman souk': {
+      aika: 'vanha basaari',
+      teksti: 'Manaman souk on pääkaupungin vanha basaari, joka sijaitsee kaupungin pohjoisosassa vanhan kaupungin ja liikealueen välissä. Pääsisäänkäynti on Bab Al Bahrain. Lähteen mukaan kaupunki rajoittui historiallisesti soukiin ja etelässä olevaan linnakkeeseen.\n\nSouk on kapeiden kujien verkko, jossa myydään matkamuistoja, kultaa ja koruja sekä räätälin palveluita. Alue on jaettu uuteen jalankulkualueeseen ja vanhaan osaan, jossa on sekä autotie että jalkakäytävät; uudistettu alue avattiin yleisölle 2010-luvulla. Keskustassa on lähteen mukaan myös pieniä työpajoja ja kauppiaita, ja alueella on maan ainoa synagoga.\n\nIsoisän matkavuonna 1873 Manama oli helmenpyynnin ja kaupan satamakaupunki. Vuosina 1911–12 Manamassa kävi lähteen mukaan kymmeniä höyrylaivoja, enimmäkseen brittiläisiä, ja tuontitavaroina mainitaan riisi, tekstiilit, kahvi, taatelit, tee ja tupakka.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bab al-Bahrain Souq 1.jpg',
+          selite: 'Manaman souk on pääkaupungin vanha basaari.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain Financial Harbour': {
+      aika: '2000-luvun alusta',
+      teksti: 'Bahrain Financial Harbour on kaupallinen rantakompleksi Manaman pohjoisrannalla King Faisal Highwayn varrella. Se on rakennettu pääosin täytemaalle entisen Manaman laiturin paikalle. Rakentaminen alkoi 2000-luvun alussa, ja tornit valmistuivat 2000-luvun puolivälissä.\n\nKompleksin kaksi päätornia ovat yli 250 metriä korkeat, ja niissä on yli 50 kerrosta. Torneissa toimii pankkeja ja kansainvälisiä yrityksiä. Harbour Gate -rakennuksessa toimii Bahrainin pörssi. Finanssikriisi viivästytti joitakin hankkeen osia.\n\nIsoisän matkavuonna 1873 kompleksia ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain Financial Harbour Panoramablick 4.jpg',
+          selite: 'Bahrain Financial Harbour on Manaman pohjoisrannan kaupallinen kompleksi.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrain World Trade Center': {
+      aika: '2000-luvun lopulta',
+      teksti: 'Bahrain World Trade Center sijaitsee King Faisal Highwayn lähellä Bahrain Financial Harbourin tuntumassa. Kaksi purjeen muotoista tornia valmistui 2000-luvun lopulla, ja turbiinit käynnistyivät ensimmäisen kerran 2000-luvun lopulla. Rakennuksen alakerrassa on ostoskeskus.\n\nTornien välisissä silloissa on tuuliturbiineja. Lähteen mukaan turbiinien odotetaan pyörivän noin puolet ajasta, ja niiden tarkoitus on tuottaa osa tornien sähköstä. Rakennus on voittanut kestävän rakentamisen palkintoja, muun muassa LEAF Award -palkinnon.\n\nIsoisän matkavuonna 1873 tornia ei ollut, sillä rakennus valmistui vasta 2000-luvun lopulla.',
+      kuvat: [
+        {
+          tiedosto: 'Manama Bahrain World Trade Centre & Bahrain Financial Harbour 1.jpg',
+          selite: 'Bahrain World Trade Centerin tornit valmistuivat 2000-luvun lopulla.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Beit Al Quran': {
+      aika: '1980-luvulta',
+      teksti: 'Beit Al Quran eli Koraanin talo on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa. Rakentaminen alkoi 1980-luvulla, ja museo avattiin 1990-luvun kynnyksellä. Kompleksiin kuuluvat moskeija, kirjasto, auditorio, koraanikoulu ja museo, jossa on useita näyttelysaleja.\n\nKokoelman ydin on liikemies Abdul Latif Jassim Kanoon oma käsikirjoituskokoelma, jonka hän lahjoitti museolle. Lähteen mukaan rahoitus tuli kokonaan lahjoituksina valtionpäämiehistä koululaisiin. Rakennuksen ulkoasu perustuu 1100-luvun moskeijaan. Kirjastossa on lähteen mukaan kymmeniä tuhansia kirjoja ja käsikirjoituksia, ja kokoelma kattaa kalligrafiaperinteen varhaisimmilta vuosisadoilta nykypäivään.\n\nIsoisän matkavuonna 1873 talo ei ollut vielä olemassa.',
+      kuvat: [
+        {
+          tiedosto: 'Beit Al Quran 001.tiff',
+          selite: 'Beit Al Quran on islamilaisen taiteen monitoimikeskus Hooran kaupunginosassa.',
+          lahde: 'Mohamsuraj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahrainin kansallismuseo': {
+      aika: '1988',
+      teksti: 'Bahrainin kansallismuseo avattiin vuonna 1988, ja se on lähteen mukaan maan suurin julkinen museo. Sen suunnittelivat tanskalaiset arkkitehdit Krohn & Hartvig Rasmussen, ja rakennus seisoo keinotekoisella niemellä Muharraqin saarta vastapäätä. Museossa on useita pysyviä näyttelysaleja.\n\nDilmunin salissa on leimasinsinettejä sekä Barbarin temppelin ja Saarin löytöjä, ja museossa on esillä jäljennös Durand-kivestä. Tylos–islamin sali käsittelee hellenististä aikaa ja islamin aikaa 700-luvulta, ja siellä on esillä Khamisin moskeijan esineitä. Perinteisten ammattien salissa on jäljennös perinteisestä soukista, ja Dilmun-hautojen salissa on A\'alista siirretty ja museossa uudelleen koottu hautakumpu.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut; se on rakennettu keinotekoiselle niemelle.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Fatih-suurmoskeija': {
+      aika: '1980-luvulta',
+      teksti: 'Al-Fatih-suurmoskeija sijaitsee Juffairin kaupunginosassa Al Fateh Highwayn vieressä, ja se rakennettiin 1980-luvulla. Moskeija on nimetty Ahmed Al Fatehin kunniaksi, ja siinä on tilaa tuhansille rukoilijoille.\n\nSisätiloissa lattia on italialaista marmoria, kattokruunu on tehty Itävallassa ja ovet ovat intialaista tiikkiä. Kufi-kalligrafiaa on kauttaaltaan. Moskeijan keskuksen kirjastossa on tuhansia kirjoja. Moskeija on avoinna kävijöille kaikkina päivinä paitsi perjantaina, ja kierroksia järjestetään useilla kielillä.\n\nIsoisän matkavuonna 1873 moskeijaa ei ollut.',
+      kuvat: [
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  tbilisi: {
+    'Narikalan linnoitus': {
+      aika: '300-luvulta; nykyiset linnoitteet 1600-luvulta tai vanhempia',
+      teksti: 'Narikala on muinainen linnoitus Tbilisin ja Kuran yllä, jyrkällä kukkulalla rikkikylpylöiden ja kasvitieteellisen puutarhan välissä. Ensimmäinen kirjallinen maininta on 300-luvulta kuningas Varaz-Bakurin ajalta, ja legendan mukaan linnoituksen rakensi kuningas Vakhtang I Gorgasali. Umayyadit laajensivat sitä 600-luvulla, ja kuningas Davit Rakentaja rakennutti sitä edelleen. Mongolit antoivat sille nimen Narin Qala, pieni linnoitus.\n\nNykyiset linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista. Muurien ympäröimässä linnoituksessa on kaksi osaa, ja alapihalla on Pyhän Nikolauksen kirkko, joka on uusi rakennus tulipalossa tuhoutuneen vanhan kirkon tilalla.\n\nOsia linnoituksesta oli purettu vuoden 1827 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 linnoitus oli siis osin vaurioitunut. 2010-luvulta sinne on noussut gondolihissi Rike-puistosta.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Ruiny twierdzy Narikala (02).jpg',
+          selite: 'Narikalan linnoitteet ovat pääosin 1600-luvun tai sitä aiempaa rakentamista.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Metekhin kirkko': {
+      aika: '1200-luvulta',
+      teksti: 'Metekhin kirkko on Neitsyt Marian kuolonuneen kirkko, jonka kuningas Demetrios II rakennutti 1200-luvulla. Se seisoo kalliolla Kuran yllä, ja nimi tarkoittaa palatsin ympäristöä; nimi on peräisin 1100-luvulta. Perinteen mukaan Vakhtang rakensi alueelle kirkon ja linnakkeen, mutta mikään niistä ei säilynyt mongolien hyökkäyksestä. Nykyinen kirkko on tiilestä ja veistetystä kivestä, ja siinä on useita ulkonevia apsiksia ja vapaita pilareita kupolin alla.\n\nKuningas Rostom linnoitti alueen, ja Venäjän vallan aikana kirkko oli kasarmina. Linnake purettiin 1800-luvun alussa ja tilalle rakennettiin vankila, joka toimi vielä Neuvostoaikana. Isoisän matkavuonna 1873 paikalla siis toimi vankila.\n\nKirkko palautettiin patriarkaatille ja otettiin uudelleen käyttöön 1900-luvun lopulla. Vakhtang I Gorgaslanin ratsastajapatsas pystytettiin 1900-luvulla, ja Kuran yli vievä betonisilta rakennettiin vanhojen siltojen paikalle.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Cerkiew Metechi (02).jpg',
+          selite: 'Metekhin kirkon edessä on Vakhtang I Gorgaslanin ratsastajapatsas, joka pystytettiin 1900-luvulla.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abanotubanin rikkikylpylät': {
+      aika: 'legendan mukaan 400-luvulta; kylpylät kirjattu 1200-luvulla',
+      teksti: 'Abanotubani on kylpyläkaupunginosa Mtkvarin itärannalla Narikalan juurella, Metekhin vastapäätä. Nimi tarkoittaa kirjaimellisesti kylpylän aluetta. Legendan mukaan juuri tähän kuninkaan haukka putosi, ja kuumat lähteet johtivat uuden pääkaupungin perustamiseen. Kaupungin nimikin tulee lämpimistä, rikkipitoisista lähteistä.\n\nKylpylät ovat kaupungin vanhimpia tunnettuja paikkoja: 1200-luvun loppuun mennessä Tbilisissä oli kirjattu kymmeniä kylpylöitä, ja ne olivat muslimiasukkaille ilmaisia. Alueen tunnistaa pienistä kupoleista, jotka kohoavat maanpinnalta. Isoisän matkavuonna 1873 kylpylöillä oli siis takanaan vuosisatojen historia.\n\nAlueen vieressä on turkkilainen sunnimoskeija. Abanotubani kuuluu hallinnollisesti Krtsanisin piiriin.',
+      kuvat: [
+        {
+          tiedosto: '2014 Tbilisi, Łaźnie siarkowe w Abanotubani (01).jpg',
+          selite: 'Abanotubanin kylpylät sijaitsevat Narikalan juurella, ja kaupungin nimi tulee lähteistä.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Siionin katedraali': {
+      aika: '500–600-luvuilta; nykyinen rakenne 1100-luvulta',
+      teksti: 'Siionin katedraali on Georgian kirkon Neitsyt Marian kuolonuneen katedraali Sionin kadulla. Nimi tulee Siionin vuoresta Jerusalemissa. Alkuperäinen kirkko rakennettiin lähteen mukaan 500–600-luvuilla, ja keskiaikaisten kronikoiden mukaan rakentamisen aloitti jo kuningas Vakhtang Gorgasali. Kuningas Davit Rakentaja rakennutti kirkon uudelleen 1100-luvulla, ja nykyisen rakenteen peruselementit ovat tältä ajalta. Lähteet antavat nykyiselle rakenteelle eri ajoituksia; peruselementit ovat 1100-luvulta.\n\nKatedraali on kärsinyt vaurioita monta kertaa vihollisten hyökkäyksissä ja maanjäristyksessä, viimeksi Persian hyökkäyksessä 1795. Kellotorni on 1400-luvulta, ja se on palautettu nykyiseen asuunsa 1900-luvulla. Keltainen tuffi on tuotu Bolnisista, ja alttarin vasemmalla puolella on viiniköynnösristi, joka muistuttaa Pyhän Ninon rististä.\n\nIsoisän matkavuonna 1873 katedraalin sisäasu oli jo muuttunut: Grigori Gagarin maalasi seinämaalausten sarjan ja suunnitteli kivisen ikonostaasin 1800-luvun puolivälissä, ja osa keskiaikaisista freskoista katosi. Katedraali oli maan pääkatedraali ja katolikos-patriarkan istuin, kunnes Pyhän Kolminaisuuden katedraali vihittiin 2000-luvun alussa.',
+      kuvat: [
+        {
+          tiedosto: 'Sioni Cathedral, Tbilisi. Western façade with the main entrance.jpg',
+          selite: 'Siionin katedraalin nykyisen rakenteen peruselementit ovat 1100-luvulta.',
+          lahde: 'Kober, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anchiskhatin basilika': {
+      aika: '500-luvulta',
+      teksti: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko, ja se on peräisin 500-luvulta. Kronikoiden mukaan sen rakennutti kuningas Dachi. Kirkko on kolmilaivainen basilika, jonka konkat ovat hevosenkengän muotoisia, ja se rakennettiin alun perin keltaisesta tuffikivestä.\n\nNimi Anchiskhati tarkoittaa Anchan ikonia. Se otettiin käyttöön 1600-luvulla, kun Beka Opizarin 1100-luvulla tekemä Vapahtajan ikoni tuotiin Klarjetin Anchan luostarista Tbilisiin ottomaanien uhkaa pakoon. Ikoni on nykyään Georgian taidemuseossa. Tiilinen kellotorni on peräisin samalta ajalta katolikos Domentin ajalta.\n\nKirkon ulkoasu muuttui rajusti 1800-luvulla, kun siihen lisättiin kupoli. Neuvostoaikana jumalanpalvelukset keskeytettiin ja kirkko oli käsityömuseo ja taidestudio; entisöinti 1900-luvun puolivälissä palautti 1600-luvun ilmeen, ja uskonnollinen käyttö palasi Georgian itsenäistymisen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Anchiskhati Basilica of Saint Mary 1.jpg',
+          selite: 'Anchiskhatin basilika on lähteen mukaan Tbilisin vanhin säilynyt kirkko.',
+          lahde: 'Kakhi Kuloshvili, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vapaudenaukio: {
+      aika: 'Venäjän vallan ajalta; nimi Vapaudenaukio 1900-luvulta',
+      teksti: 'Vapaudenaukio on aukio keskustassa Rustaveli-kadun itäpäässä. Sieltä haarautuu useita katuja, kuten Rustaveli, Pushkin ja Kote Apkhazi. Aukion pohjoispuolella on pieni puistikko suihkulähteineen ja Pushkinin rintakuva, ja Tbilisin kaupunginvaltuusto toimii aukiolla.\n\nAukion nimi on vaihdellut. Venäjän vallan aikana, siis myös isoisän matkavuonna 1873, se oli Erivanin aukio. Nimi tuli kenraali Ivan Paskevichin mukaan, joka sai kreivin arvon Erivanin valtauksesta. Ensimmäisen Georgian tasavallan perustamisen aikaan aukio sai nimekseen Vapaudenaukio, ja Neuvostoaikana sitä kutsuttiin Berian ja Leninin aukioksi.\n\n2000-luvulla aukiolle paljastettiin Vapauden muistomerkki, jossa Pyhä Yrjö surmaa lohikäärmettä. Sen on tehnyt kuvanveistäjä Zurab Tsereteli.',
+      kuvat: [
+        {
+          tiedosto: 'Freedom Square, Tbilisi (50497944841).jpg',
+          selite: 'Vapaudenaukiolta haarautuu useita katuja, ja aukion nimi on vaihtunut useita kertoja.',
+          lahde: 'Andrew Milligan sumo, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: 'varhaisemmista kuninkaallisista puutarhoista; virallisesti 1845',
+      teksti: 'Kansallinen kasvitieteellinen puutarha sijaitsee Tsavkisis-Tskalin rotkossa Sololakin vuoriston etelärinteillä. Lähteen mukaan sen pinta-ala on yli sata hehtaaria. Jean Chardin kuvasi alueen 1600-luvulla kuninkaallisina puutarhoina, ja myös Tournefort ja prinssi Vakhushtin kartta mainitsevat sen.\n\nPersian hyökkäyksessä 1795 puutarha ryöstettiin, mutta se elvytettiin 1800-luvun alussa ja perustettiin virallisesti 1845. Isoisän matkavuonna 1873 puutarha oli siis ollut virallisesti perustettu jo lähes kolme vuosikymmentä. 1800-luvun lopulla se toimi kasvistokeskuksena, ja sitä laajennettiin länteen.\n\nEntisen muslimihautausmaan alue liitettiin puutarhaan 1900-luvun puolivälissä; säilyneiden hautojen joukossa on azerbaidžanilaisen kirjailijan Mirza Fatali Akhundovin hauta. Pääsisäänkäynti on Narikalan linnoituksen juurella, ja kävely- ja pyöräreitit valmistuivat 2010-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Waterfall on the Tsavkisistsqali river in the National Botanical Gardens, Tbilisi.jpg',
+          lyhyt: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa.',
+          selite: 'Puutarha sijaitsee Tsavkisis-Tskalin rotkossa, ja Chardin kuvasi sen 1600-luvulla kuninkaallisina puutarhoina.',
+          lahde: 'Alf Altendorf, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    'Al-Manaran aukio': {
+      aika: '1900-luku',
+      teksti: 'Al-Manaran aukio (arabiaksi Maydan al-Manara) on Ramallahin keskusaukio ja lähteen mukaan yksi Palestiinan tunnetuista julkisista tiloista. Isoisän matkavuonna 1873 aukiota ei vielä ollut: paikalla kulki multatie, joka yhdisti Ramallahin ja viereisen al-Birehin. Tie sai 1900-luvun alussa yhä enemmän merkitystä, ja 1930-luvulla Ramallah ja al-Bireh yhdistettiin sähköverkkoon. Katuvalojen kytkintaulu asetettiin tolppaan tien varteen, ja paikkaa alettiin kutsua al-Manaraksi eli majakaksi.\n\n1950-luvun alussa tolppa korvattiin muistomerkillä, jossa kivipylvään ympärillä oli viisi leijonaa; ne edustivat viittä sukua, jotka kaikki polveutuvat Rashid al-Haddadinin suvusta. Leijonat ovat lähteen mukaan perinteisiä rohkeuden, voiman ja ylpeyden symboleita, ja nykyisessä muistomerkissä ne ovat pylvään juurella suihkulähteen ja kukkapenkkien ympärillä. Muistomerkki rakennettiin myöhemmin uudelleen alkuperäisen mallin mukaan, ja työ valmistui vuoden 2000 paikkeilla.\n\nAukion laidalla toimii Silwadi-mehubaari, ja Hisbeh-tuoretori on lähellä aukiota.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 22.jpg',
+          lyhyt: 'Al-Manaran aukio Ramallahissa: pylväs ja leijonapatsaat pylvään juurella.',
+          selite: 'Aukion muistomerkin leijonat edustavat Ramallahin perustajasukuja, jotka polveutuvat Haddadin-suvusta.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän perheen kirkko': {
+      aika: '1910-luku',
+      teksti: 'Pyhän perheen kirkko on Ramallahin latinalaiskatolinen kirkko. Isoisän matkavuonna 1873 kirkkoa ei vielä ollut: latinalaiskatolinen yhteisö oli pieni, ja messu vietettiin talossa. Katolisia asettui Ramallahiin 1800-luvun jälkipuoliskolla sen jälkeen, kun Pyhän Joosefin sisaret ja Rosary-sisaret olivat perustaneet kouluja. Kirkon rakentamislupa myönnettiin vasta useita vuosikymmeniä myöhemmin, ja rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.\n\nKirkon yhteydessä on pappila, luostari ja koulu. Katolinen kirkko on kaupungin toiseksi suurin kristillinen kirkkokunta, ja Pyhän Joosefin tyttökoulu ja Al-Ahliyyah College ovat katolisia kouluja.',
+      kuvat: [
+        {
+          tiedosto: '2010-08 Ramallah 56.jpg',
+          lyhyt: 'Pyhän perheen kirkon pitkä kylki ja nelikulmainen kellotorni Ramallahissa.',
+          selite: 'Kirkon rakentaminen alkoi 1910-luvun alussa ottomaanien viranomaisten luvalla.',
+          lahde: 'Ralf Lotys (Sicherlich), Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramallahin Friends-koulut': {
+      aika: '1860-luvun loppu',
+      teksti: 'Ramallahin Friends-koulut ovat amerikkalaisten kveekarien perustamia. Isoisän matkavuonna 1873 tyttöjen koulutyö oli jo alkanut: Jones-pariskunta aloitti sen 1860-luvun lopulla, ja koulun myöhempi nimi oli Ramallahin tyttöjen koulutuskoti. Koulu syntyi ottomaanien aikana Jerusalemin hallintoalueella. Poikien koulun rakentaminen alkoi 1900-luvun alussa. Alakoulun kampus, entinen tyttökoulu, on vanhan kaupungin keskustan lähellä, ja yläkoulun kampus, entinen poikakoulu, on al-Birehin puolella.\n\nKoulu on avoin tytöille ja pojille, ja opetus on arabiaksi ja englanniksi; nykyään koulut tarjoavat kansainvälistä IB-ohjelmaa. Entisiin oppilaisiin kuuluvat kansanperinteen tutkija Widad Kawar, joka on tutkinut palestiinalaisia pukuja, sekä kirjailija ja historioitsija Serene Husseini Shahid.',
+      kuvat: [
+        {
+          tiedosto: 'Ramallah Friends Schools2.JPG',
+          lyhyt: 'Friends-koulun piha ja Friends Boys School -rakennus Ramallahissa.',
+          selite: 'Rakennus kuuluu kveekarien kouluihin, joiden tyttöjen koulutyö alkoi 1860-luvun lopulla.',
+          lahde: 'Palobserver, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kulttuuripalatsi ja Mahmoud Darwish -museo': {
+      aika: '2000-luku',
+      teksti: 'Ramallahin Kulttuuripalatsi (Ramallah Cultural Palace) avattiin 2000-luvun alussa. Isoisän matkavuonna 1873 kukkulalla ei vielä ollut kumpaakaan rakennusta. Lähteen mukaan palatsi on Palestiinan hallinnoimilla alueilla ainoa laatuaan oleva kulttuurikeskus: siellä on noin 700-paikkainen sali, kokoushuoneita, näyttelysaleja ja elokuvatiloja. Hankkeen toteuttivat yhdessä Palestiinan hallinto, YK:n kehitysohjelma UNDP ja Japanin hallitus, ja palatsi on kaupungin pääpaikka esityksille ja konserteille.\n\nPalatsin viereen kukkulan laelle on haudattu runoilija Mahmoud Darwish, jonka muistolle on Ramallahissa museo ja mausoleumi. Museo on aivan palatsin lähellä, kadun toisella puolella.',
+      kuvat: [
+        {
+          tiedosto: 'Mahmoud Darwish Museum IMG 4086.jpg',
+          lyhyt: 'Mahmoud Darwish -museon piha Ramallahissa: pitkä vesiallas kalkkikivimuurien välissä.',
+          selite: 'Museo ja mausoleumi on rakennettu runoilijan muistolle Kulttuuripalatsin viereen.',
+          lahde: 'بدارين, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tell en-Nasbeh': {
+      aika: 'rautakausi',
+      teksti: 'Tell en-Nasbeh on pieni muinainen kumpu heti Ramallahin eteläpuolella, ja se on yksi kolmesta kohteesta, jotka usein yhdistetään Raamatun Mispaan; muut ehdokkaat ovat Nabi Samwil ja Shuafat. Isoisän matkavuonna 1873 kohdetta ei vielä ollut kaivettu.\n\nKumpu sijaitsi muinaisen tien varrella Jerusalemista pohjoiseen, ja rautakaudella se oli Juudan pohjoinen rajalinnoitus. Rautakaudella paikka oli muurein ja massiivisin kaupunginportein ympäröity asutus, ja babylonialaisten aikaan Jerusalemin tuhon jälkeen Mispa nousi lähteen mukaan alueen hallintokeskukseksi. Kaivauksia tehtiin 1920- ja 1930-luvuilla yhdysvaltalaisen William Frederic Badèn johdolla, ja ne olivat lähteen mukaan yksi alueen varhaisimmista tieteellisistä kaivauksista. Löydöt, tuhansia esineitä, ovat Badèn museossa Berkeleyssä. Kukkulan ympäri voi kävellä.',
+      kuvat: [
+        {
+          tiedosto: 'Tel a-Nasba.jpg',
+          lyhyt: 'Tell en-Nasbeh, jonka usein katsotaan olevan raamatullinen Mispa, ilmasta kuvattuna.',
+          selite: 'Kumpua ympäröivät nykyään kaupungin kerrostalot, ja sen kaivauksia tehtiin 1920- ja 1930-luvuilla.',
+          lahde: 'דניאל צבי, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Kasaba-teatteri': {
+      aika: 'vuosituhannen vaihde',
+      teksti: 'Al-Kasaba (arabiaksi القصبة) on teatteri ja elokuva-arkisto, Al-Kasaba Theatre and Cinematheque, Ramallahin keskustassa lähellä Al-Manaran aukiota ja Khalil Sakakini -kulttuurikeskusta. Isoisän matkavuonna 1873 sitä ei vielä ollut: toiminta alkoi vasta vuonna 1970 Jerusalemissa, ja Ramallahin teatteri ja elokuvateatteri avattiin vuosituhannen vaihteessa entisen elokuvateatterin tiloihin.\n\nLähteen mukaan Al-Kasaba on yksi harvoista alueen paikoista, joissa palestiinalaiset taiteilijat, näyttelijät ja elokuvantekijät voivat tuottaa ja esittää töitään. Sen salit tarjoavat tilan sekä palestiinalaisille että kansainvälisille esitysryhmille, ja siellä esitetään näytelmiä, tanssia, elokuvia ja konsertteja sekä järjestetään konferensseja.\n\nTeatteri on yksi Ramallahin kulttuuripaikoista Kulttuuripalatsin ja Khalil Sakakini -kulttuurikeskuksen rinnalla.',
+      kuvat: [
+        {
+          tiedosto: 'Théâtre Al-Kasaba en 2017.jpg',
+          lyhyt: 'Al-Kasaba-teatterin sisäänkäynti Ramallahissa: kaarikatos ja arabian- ja englanninkielinen kyltti.',
+          selite: 'Al-Kasaba Theatre and Cinematheque toimii Ramallahin keskustassa, ja sen toiminta alkoi Jerusalemissa vuonna 1970.',
+          lahde: 'Djex93, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
+  alger: {
+    'Casbahin linnoitus': {
+      aika: '1500-luku',
+      teksti: 'Casbahin linnoitus sijaitsee vanhankaupungin korkealla puolella. Se antoi nimensä kaupunginosalle, joka levittäytyy rinnettä alas kohti merta. Osmanikauden kokonaisuuteen kuului hallitsijan palatsin lisäksi moskeijoita, kylpytiloja, puutarhoja ja puolustusrakennuksia. Palatsin huoneet, keittiöt ja hammamit liittyivät sisäpihan ympärille rakentuvaan kokonaisuuteen.\n\nDeyt siirsivät hallintonsa ja asuinpaikkansa tänne 1800-luvun alkupuolella. Rakennusten koristelussa käytettiin keramiikkaa, ja arkkitehtuurissa yhdistyvät maurilaiset, osmaniset ja eurooppalaiset piirteet. Linnoitus oli olemassa vuonna 1873, mutta Alger oli jo Ranskan siirtomaavallan alainen. Siirtomaakaudella tie halkaisi vanhaa linnoituskokonaisuutta.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Palace_of_the_Dey',
+    },
+    'Ketchaoua-moskeija': {
+      aika: '1600-luku; nykyinen rakennus 1800-luvulta',
+      teksti: 'Ketchaoua sijaitsee Casbahin alareunassa. Paikan moskeijahistoria ulottuu 1600-luvulle. Ranskan siirtomaakauden alussa paikasta tehtiin Saint-Philippen katedraali. Vanhaa rakennusta purettiin ja tilalle rakennettiin katedraali 1800-luvun puolivaiheilla.\n\nVuonna 1873 rakennus oli katolisessa kirkkokäytössä. Nykyisin se toimii jälleen moskeijana. Sisäänkäyntiin noustaan portaita, ja sitä kehystävät minareetit. Sisäänkäynnin koristeellista portiikkia kannattavat marmoripylväät, ja rakennuksen koristelussa yhdistyvät maurilaiset ja bysanttilaiset piirteet.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Ketchaoua_Mosque',
+    },
+    'Dar Mustapha Pacha': {
+      aika: '1700-luvun loppu',
+      teksti: 'Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmoripylväiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Dar_Mustapha_Pacha',
+    },
+    'Djamaa el Djedid': {
+      aika: '1600-luku',
+      teksti: 'Djamaa el Djedid tarkoittaa Uutta moskeijaa, vaikka rakennus on peräisin osmanikauden 1600-luvulta. Se sijaitsee Place des Martyrs -aukion merenpuoleisella laidalla ja tunnettiin myös kalastajien moskeijana. Suuren keskuskupolin ympärillä on pienempiä kupoleita ja holvattuja osia. Kupolien osmaniset piirteet yhdistyvät nelikulmaiseen pohjoisafrikkalaiseen minareettiin.\n\nSisätiloissa eri rakennusperinteet kohtaavat edelleen: rukoussyvennyksessä on andalusialaisia piirteitä ja saarnatuolissa italialaista marmoria. Ulkoseinät ja kupolit on kalkittu valkoisiksi. Minareetin kello tuotiin vanhasta Djenina-palatsista. Kalastajien moskeija -nimitys puolestaan liittyi läheiseen satamaan ja sen käyttäjiin.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Djamaa_el_Djedid',
+    },
+    'Djamaa el Kebir': {
+      aika: '1000-luku; myöhempiä lisäyksiä',
+      teksti: 'Djamaa el Kebir on Casbahin historiallinen moskeija sataman lähellä. Sen alkuperäinen rakennus kuuluu almoravidikaudelle, 1000-luvun loppuun. Myöhemmät rakentajat täydensivät ja uudistivat kokonaisuutta: minareetti on alkuperäistä rakennusta nuorempi keskiaikainen lisäys. Rukoussalissa valkoiset pilarit ja hevosenkenkäkaaret jakavat tilan pitkittäisiin käytäviin.\n\nRanskan siirtomaakauden alkupuolella ulkopuolelle lisättiin kaarikäytävä, jossa käytettiin puretun al-Sa’ida-moskeijan marmoripylväitä. Kaarikäytävä täydensi keskiaikaista moskeijaa. Vanha puinen minbar eli saarnatuoli kulki pyörillä lattiaan upotettuja kiskoja pitkin. Saarnatuoli on nykyään museossa, mutta kiskot ovat jääneet moskeijaan.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Djamaa_el_Kebir',
+    },
+    'Raïsien palatsi': {
+      aika: '1500–1700-luvut',
+      teksti: 'Raïsien palatsi eli Palais des Rais on merenrannan rakennuskokonaisuus, joka tunnetaan myös nimellä Bastion 23. Siihen kuuluu palatseja ja vanhoja kalastajien taloja. Alueen puolustusrakenteiden historia alkaa 1500-luvulta, kun taas palatsiosat ovat nuorempia. Kokonaisuus säilyttää alemman Casbahin merenrantaperintöä kaupungissa, jonka rantakortteleita järjestettiin siirtomaakaudella uudelleen.\n\nRakennuksia käytettiin eri aikoina asuntoina, konsulaattina ja kirjastona. Restauroituna se toimii nykyisin taiteen ja kulttuurin keskuksena. Bastion-nimi ja rakennusten numerointi kuuluvat alueen Ranskan ajan kartoituksen historiaan.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Palais_des_Rais',
+    },
+    'Sidi Abderrahmanen mausoleumi': {
+      aika: '1400-luvun hautapaikka; mausoleumi 1600-luvulta',
+      teksti: 'Mausoleumi liittyy oppineeseen Sidi Abd al-Rahman al-Tha’alibiin, jota Algerissa pidetään kaupungin suojeluspyhimyksenä. Hautapaikan ja uskonnollisen yhteisön juuret ovat 1400-luvulla; historiallisen mausoleumin arkkitehtuuri kuuluu myöhempään 1600-luvun vaiheeseen. Zawiya-kokonaisuuteen kuuluu hautarakennuksen lisäksi moskeija ja hautausmaata.\n\nMausoleumin sisustuksessa on kalligrafisia tekstiaiheita, ja siihen liittyvässä moskeijassa kupoleita sekä koristeltu minareetti. Hautausmaalle on haudattu myös muita Algerin historian henkilöitä. Vieressä sijaitseva Thaâlibiyya-madrassa rakennettiin 1900-luvun alussa. Madrassa oli oppilaitos; hautarakennus, moskeija ja hautausmaa muodostavat sitä vanhemman uskonnollisen kokonaisuuden.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Zawiya_Thaalibia_(Algiers)',
+    },
+  },
+  banjul: {
+    'Albertin tori': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tori muodostuu tiheästä kojujen ja käytävien verkosta.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary\'s -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Gambia-joen suu': {
+      aika: 'Luonnonpaikka',
+      teksti: 'Gambia-joki saavuttaa Atlantin Banjulin kohdalla. Pääkaupungin St Mary\'s -saari on jokisuun reunassa, ja vastarannalla on Barra. Rannikon lähellä joki levenee laajaksi estuaariksi, jossa meri ja joen alajuoksu liittyvät samaan vesialueeseen.\n\nBanjulin ja Barran lautta ylittää tätä suualuetta sekä matkustajien että ajoneuvojen kanssa. Barrasta yhteydet jatkuvat pohjoisrannan teitä pitkin Senegalin suuntaan.',
+      kuvat: [
+        {
+          tiedosto: 'Banjul Ferry (5197916345).jpg',
+          lyhyt: 'Gambia-joen suun ylitys yhdistää Banjulin ja Barran.',
+          selite: 'Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla, missä käyttöveneet ja rannikon liikenne kohtaavat Atlantin vesialueen.',
+          lahde: 'dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/n2-822e470f7b7601a368ff.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tanbin kosteikko': {
+      aika: 'Luonnonpaikka, myöhempi suojelualue',
+      teksti: 'Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.',
+      kuvat: [
+        {
+          tiedosto: 'Gambia (9383665170).jpg',
+          lyhyt: 'Tanbin mangrovet kasvavat Gambia-joen suun vuorovesirannoilla.',
+          selite: 'Tanbin mangrovejuuristo ja juuriin kiinnittyneet kuoret kuuluvat Gambia-joen suun vuorovesirannan luonnonympäristöön.',
+          lahde: 'Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/n3-ec170997ac73f36d15aa.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bissau: {
+    'Amuran linnoitus': {
+      aika: 'Ensimmäinen vaihe 1600-luvun lopulla, nykyinen kokonaisuus myöhemmistä vaiheista',
+      teksti: 'Amuran linnoitus kuuluu Bissaun vanhaan satamaytimeen. Paikan ensimmäinen linnake rakennettiin 1600-luvun lopun kauppa-asemavaiheessa, mutta se hylättiin ja tuhoutui. Nykyisen kokonaisuuden tärkeät rakennusvaiheet ajoittuvat 1700-luvulle.\n\nPerusratkaisua on luonnehdittu Vauban-tyyliseksi bastionilinnoitukseksi. Muurin kulmista ulkonevat bastionit mahdollistavat viereisten muuriosien puolustamisen sivusuunnasta. Sisällä oli komentotalo, kasarmeja ja varastorakennuksia, joten linnoitus oli myös majoituksen ja huollon ympäristö.\n\nIsoisän matkavuonna 1873 linnoitus oli jo olemassa. Sitä korjattiin 1800-luvulla ja restauroitiin vielä 1900-luvulla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Pidjiguitin laituri': {
+      aika: '1800-luvun loppupuoli ja myöhemmät muutokset',
+      teksti: 'Pidjiguiti on Bissaun sataman vanha laituripaikka. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin sataman muihin osiin rakennettiin uusia laitureita.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.',
+          lyhyt: 'Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tulliaukio: {
+      aika: 'Vanhan satamaytimen aukio',
+      teksti: 'Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Aukiolla on myös puutarhatilaa. Nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia.\n\nTullitalossa käsitellään maahan tulevia ja sieltä lähteviä tavaroita. Sen lähellä ovat linnoitus ja sataman laiturit Geba-joen suistoalueen pohjoisrannalla. Nimi muistuttaa kauppasataman tullitoiminnasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  conakry: {
+    'Tombon saari': {
+      aika: 'Luonnonpaikka, kaupunkikehitys 1800-luvun lopulta',
+      teksti: 'Tombon saari sijaitsee Atlantilla Kaloumin niemimaan kärjessä. Nykyisen Conakryn vanha kaupunki kasvoi saarelle, joka on yhdistetty niemimaahan pengeryhteydellä. Kaupungin laajeneminen jatkui niemimaata pitkin koilliseen.\n\nAlueella oli Baga- ja Susu-yhteisöjen asutusta, ja Conakryn nimi liittyy Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla. Siirtomaakaupungin syntyyn liittyivät ensin maa-alueen luovutus Tombolta ja myöhemmin uuden hallintokeskuksen kehittäminen.',
+      kuvat: [
+        {
+          tiedosto: 'Un aperçu de la ville de conakry.jpg',
+          lyhyt: 'Tombon ja Kaloumin vanha ydin Conakryssa.',
+          selite: 'Tombon ja Kaloumin vanhan kaupunkiytimen näkymä liittää Conakryn korttelit ympäröivään mereen.',
+          lahde: 'Alpha hmd, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n1-2995c4e5d0dbdc72277c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Conakryn satama': {
+      aika: 'Siirtomaakaudella kehittynyt satamaympäristö–nykyaika',
+      teksti: 'Conakryn kaupallinen satama sijaitsee Kaloumissa vanhan keskustan alueella. Atlantin rannalla toimivaan satamaan kuuluvat konttien käsittely sekä lastaus- ja varastointitoiminnot.\n\nSataman kautta tuodaan elintarvikkeita, teollisuustuotteita ja energiatuotteita sekä viedään mineraaleja. Vientituotteisiin kuuluvat erikseen bauksiitti ja alumiinioksidi. Historiallinen rata yhdisti Conakryn Kankaniin sisämaassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bateau au port Autonome de Conakry.jpg',
+          lyhyt: 'Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.',
+          selite: 'Rahtialus ja konttien lastinkäsittely Conakryn satamassa vuonna 2019 kuuluvat kaupungin merikaupan ympäristöön.',
+          lahde: 'Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n2-70bd94ad7283bec055a7.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Camayennen kasvitieteellinen puutarha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.\n\nKaupunkirakentaminen on vähentänyt puutarhan pinta-alaa: 2000-luvun alussa jäljellä oli vain osa alkuperäisestä istutusalueesta.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Kapokkipuun tyvipönkät. Havainnekuva.',
+          lyhyt: 'Kapokkipuun tyvipönkät. Havainnekuva.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kassan saari': {
+      aika: 'Luonnon- ja asutuspaikka, kauppaa 1700-luvulla, kaivoksia 1900-luvulla',
+      teksti: 'Kassa kuuluu Conakryn edustan Los-saariston pääsaariin. Kassan ja Tamaran kaaret ympäröivät keskellä olevaa Roumea. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo.\n\nSaarella oli 1700-luvulla kauppapaikka, jonka toimintaan kuuluivat laivojen korjaajat ja jokireittien luotsit. 1900-luvulla Kassalla louhittiin bauksiittia, ja keskiosiin jäi avolouhoksia. Pohjoisosan kivilouhoksesta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten.\n\nVuonna 1873 saaristo oli Britannian hallinnassa ja Kassan kauppapaikan historia oli jo alkanut. Myöhemmät bauksiittikaivokset eivät kuulu matkavuoden maisemaan. Kassan saari on myös eri laajuinen paikka kuin koko saaristoa kattava Kassa-kommuuni. Kassan rannoilta maisema jatkuu metsäisiin sisäosiin ja entisiin louhoksiin.',
+      kuvat: [
+        {
+          tiedosto: 'Ille de kassa.jpg',
+          lyhyt: 'Kassan saaren luonnonranta vuonna 2017.',
+          selite: 'Kassan saaren luonnonranta vuonna 2017 on osa Conakryn edustan Los-saaristoa.',
+          lahde: 'Ourysow92, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n4-6964d1d503837557d72b.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Roumen saari': {
+      aika: 'Vanha luonnon- ja asutuspaikka, nimikerrostumia 1800–1900-luvuilta',
+      teksti: 'Roume on asuttu saari Los-saariston keskellä. Kassa ja Tamara muodostavat sen ympärille lähes sulkeutuvan kaaren. Saaren rantoihin kuuluu Plage du Gouverneur, mutta Roume on koko saaren nimi. \n\nRoom ja Crawford Island ovat saaren vanhoja nimiä. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, ja Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Saarella kerrotaan olleen 1800-luvun alussa rakennettu brittiläinen linnake.\n\nIsoisän matkavuonna 1873 Roume kuului Britannian hallitsemaan saaristoon. Room ja Crawford Island olivat tuon aikakauden saaresta käytettyjä nimiä.',
+      kuvat: [
+        {
+          tiedosto: 'Strand nach Süden auf Roume.jpg',
+          lyhyt: 'Roumen kivinen eteläranta vuonna 2020.',
+          selite: 'Roumen kivinen eteläranta vuoden 2020 kuvassa kuuluu saariston keskellä olevan saaren merimaisemaan.',
+          lahde: 'Flucco, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n5-313518aed4fda03935b9.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tamaran saari': {
+      aika: 'Vanha luonnon- ja asutuspaikka, kaivostoimintaa 1900-luvulla',
+      teksti: 'Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimestä käytetään myös kirjoitusasua Fortoba.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saaren rakennushistoriaan kuuluvat myös merenkulun majakka ja Fotoban entinen vankila. ',
+      kuvat: [
+        {
+          tiedosto: 'Île de fotoba 2.jpg',
+          lyhyt: 'Tamaran eli Fotoban vesireuna vuonna 2019.',
+          selite: 'Tamaran eli Fotoban rantakivet ja kasvillisuus vuoden 2019 kuvassa kuuluvat saaren luonnonympäristöön.',
+          lahde: 'Kalissa Mamayimbé kir, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n6-9d1b1617cbb29b11e796.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  monrovia: {
+    'Kansallismuseon vanha oikeustalo': {
+      aika: '1800-luvun oikeustalo, myöhempi museokäyttö',
+      teksti: 'Liberian kansallismuseo toimii Monroviassa vanhassa Supreme Court -oikeustalossa. Rakennuksen historiallinen käyttö ajoittuu 1800-luvulle. Museo laitoksena syntyi myöhemmin, joten talon ja kokoelman historiat alkavat eri aikoina.\n\nMuseon tehtävänä on hankkia, säilyttää ja esitellä Liberian kulttuurista ja historiasta kertovaa aineistoa. Asiakirjat, kartat ja valokuvat ovat osa tätä muistia. Huonekalut ja arkiset käyttöesineet täydentävät kirjallista aineistoa. Museo on aiemmin sijainnut muualla, myös Providence Islandilla.\n\nIsoisän matkavuonna 1873 vanha oikeustalo kuului kaupungin rakennuksiin, mutta kansallismuseokäyttö oli vielä tulevaisuutta. Museon kokoelmien joukossa on vanhoja toimitustekstejä ja valokuvia Monroviasta.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.',
+          lyhyt: 'Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Providence Baptist Church, historiallinen pyhäkkö': {
+      aika: '1800-luvun historiallinen pyhäkkö',
+      teksti: 'Providence Baptistin kirkkopaikka sijaitsee Monroviassa Broad-, Center- ja Ashmun-katujen ympäristössä. Seurakunta sai alkunsa 1800-luvun alun uudisasutusvaiheessa, ja sen historiallinen pyhäkkö rakennettiin saman vuosisadan aikana. Pieni vanha rakennus on säilynyt seurakunnan käytössä.\n\nPyhäkössä hyväksyttiin Liberian itsenäisyysjulistukseen ja perustuslakiin liittyneet historialliset asiakirjat. Hilary Teage osallistui julistuksen kirjoittamiseen ja oli seurakunnan pastori.\n\nSeurakunnan kasvu johti paljon suuremman viereisen pyhäkön rakentamiseen 1900-luvun jälkipuolella. Modernistinen naapuri kuuluu eri aikakauteen, vaikka molemmat rakennukset ovat samalla kirkkopaikalla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Providence Island': {
+      aika: 'Vanha jokisaari, myöhempiä paikkakäytön kerroksia',
+      teksti: 'Providence Island on Monroviassa Mesuradojoen vesialueella oleva saari. Sen sijainti liittyy myös Stockton Creekiin, joka yhdistää kaupungin jokivesiä. Vesireitit erottavat saaren Cape Mesuradon niemimaalla sijaitsevasta keskustasta.\n\nSaaren kaakkoisosassa kasvaa mangrovea. Saarella on vanha kaivo ja rantautumislaiturin jälkiä. Saarella on myös puustoa, ja myöhemmin rakennettuja majoja on sovitettu perinteisiä rakennustapoja jäljitteleviksi.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif',
+          lyhyt: 'Providence Island Mesuradojoessa vuonna 1975.',
+          selite: 'Providence Island Mesuradojoessa vuoden 1975 kuvassa näyttää Monrovian jokisaaren historiallisen maisemakerroksen.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n3-ff065f646d1eb2dc146a.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bushrod Island': {
+      aika: 'Vanha luonnon- ja käyttöpaikka, myöhempiä kaupunkivaiheita',
+      teksti: 'Bushrod Island on Monrovian keskustan niemimaan pohjoispuolella sijaitseva saari. Sitä ympäröivät Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. Stockton Creek yhdistää jokien vesialueita vuorovesikanavana.\n\nDei-yhteisöt käyttivät saarta ennen 1800-luvun uudisasutusvaihetta. Saaren nimi liittyy Bushrod Washingtoniin. Asuinalueisiin kuuluvat muun muassa Vai Town, New Kru Town, Logan Town ja Clara Town. Nykyinen Freeport of Monrovia ja muuta kaupallista toimintaa sijaitsee saarella.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'West Point': {
+      aika: 'Nykyinen asuinalue 1900-luvulta',
+      teksti: 'West Point on Monrovian asuinalue Atlanttiin työntyvällä niemekkeellä. Se sijaitsee Watersiden luoteispuolella Mesurado- ja Saint Paul -jokien välisessä rannikkoympäristössä. Meren ja jokivesien ympäröimälle niemekkeelle on kasvanut tiivis asutus.\n\nKalastajien asettuminen liittyy West Pointin 1900-luvun syntyyn. Kalastus, pienkauppa ja palvelutyö yhdistävät aluetta keskustan kauppa-arkeen. Rantaeroosio on syönyt niemen reunaa ja muuttanut rantaviivan paikkaa.\n\nIsoisän matkavuonna 1873 nykyistä West Pointin asuinaluetta ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'An aerial view of the West Point area of Monrovia.jpg',
+          lyhyt: 'West Pointin niemeke ja rannikko vuonna 2014.',
+          selite: 'West Pointin niemeke, asuinalue ja rantaviiva vuoden 2014 kuvassa kuuluvat Monrovian paikalliseen kaupunkimaisemaan.',
+          lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n5-ca7af30b933106c217b2.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mesuradon kosteikkoalue': {
+      aika: 'Luonnonpaikka, nykyinen suojeluvaihe myöhempi',
+      teksti: 'Mesuradon kosteikkoalue sijaitsee Monrovian ja Montserradon alueella. Sen keskeistä kasvillisuutta on mangrove. Rantakasvillisuus vakauttaa rantaviivaa ja kosteikko pidättää sedimenttiä, joten puusto, veden liike ja maan kertyminen liittyvät toisiinsa.\n\nLinnut käyttävät kosteikkoa ravinnonhakuun. Kalastus ja äyriäiset yhdistävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kosteikon historiasta on dokumentoitu polttopuun ja hiilen keruuta sekä teollista kuormitusta luontoympäristön paineina.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif',
+          lyhyt: 'Mesuradojoen ja taustan kosteikon maisema vuonna 1975.',
+          selite: 'Mesuradojoki ja taustan kosteikkokasvillisuus vuoden 1975 kuvassa kertovat Monrovian historiallisesta vesimaisemasta.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n6-589160cd108ec7cf85d0.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Mesurado Wetlands, Ramsar RSIS 1631: https://rsis.ramsar.org/ris/1631',
+    },
+  },
+  nouakchott: {
+    Kalastajaranta: {
+      aika: 'nykykaupunki',
+      teksti: 'Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Puuveneitä vedetään hiekalle ja saalista tuodaan myyntiin. Rannan työalueella toimivat kalastajien lisäksi jälleenmyyjät ja kalanperkaajat.\n\nPienveneiden mukana tullut kala jatkaa rannasta useita reittejä. Osa kuljetetaan kaupungin myyntipaikkoihin, osa käsitellään ja pakataan vientiin. Saaliin purkaminen, kauppa ja jatkokäsittely tuovat rannan ympärille monenlaisia ammatteja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mauritanian kansallismuseo': {
+      aika: '1900-luvun museolaitos',
+      teksti: 'Mauritanian kansallismuseo sijaitsee Nouakchottissa. Sen kokoelmissa on arkeologista ja etnografista aineistoa: esihistoriallisia kivityökaluja, keramiikansirpaleita, nuolenkärkiä sekä paikalliseen pukeutumiseen liittyviä esineitä. Kokoelmat kertovat Mauritanian eri yhteisöjen elämästä.\n\nMuseossa säilytetään löytöjä vanhoista mauritanialaisista kaupungeista, kuten Koumbi Salehista, Aoudaghostista, Tichitistä ja Ouadanesta. Samassa rakennuksessa toimivat myös kansalliskirjasto sekä tutkimukseen ja käsikirjoitusten säilyttämiseen liittyvät laitokset. Muinaiset esineet ovat nykyistä pääkaupunkia vanhempia: museolaitosta ei ollut isoisän matkavuonna 1873.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/National_Museum_of_Mauritania',
+    },
+    'Friendship Port': {
+      aika: '1980-luvulta alkanut satamatoiminta',
+      teksti: 'Friendship Port eli Port de l’Amitié on Nouakchottin keinotekoinen syväsatama. Se rakennettiin 1980-luvulla avoimelle Atlantin rannikolle, jolla ei ollut luonnostaan suojaista satamalahtea. Betonilohkoista tehdyt aallonmurtajat suojaavat laivojen lastauspaikkaa merenkäynniltä.\n\nSatama avattiin vuonna 1986. Sen kautta pääkaupungin tavaroita voitiin tuoda suoraan meritse sen sijaan, että kuljetus olisi kulkenut ensin Dakarista maanteitse. Laitureita on myöhemmin laajennettu.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Friendship_Port_of_Nouakchott',
+    },
+    'Marché Capitale': {
+      aika: 'Nykyisen pääkaupungin markkinapaikka',
+      teksti: 'Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Torilla myydään ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Ompelimot ja muut käsityöläisten tilat sijaitsevat markkinarakennusten yläkerrassa.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/March%C3%A9_Capitale ; https://de.wikipedia.org/wiki/Nouakchott',
+    },
+    'Nouakchottin olympiastadion': {
+      aika: '1980-luvulla avattu urheilupaikka',
+      teksti: 'Nouakchottin olympiastadion on jalkapallopaikka, jonka kenttää ympäröi yleisurheilurata. Se sijaitsee keskustan pohjoispuolisella lähetystöalueella Route des Ambassadesin suunnassa. Kentällä on käytetty tekonurmea.\n\nStadion avattiin vuonna 1983, ja sitä on myöhemmin kunnostettu. Siellä on järjestetty myös konsertteja. Stadionilla ovat esiintyneet mauritanialaiset laulajat Dimi Mint Abba ja Malouma.',
+      kuvat: [],
+      lahde: 'https://fr.wikipedia.org/wiki/Stade_olympique_de_Nouakchott ; https://de.wikipedia.org/wiki/Nouakchott',
+    },
+  },
+  praia: {
+    'Praça Alexandre Albuquerque -aukio': {
+      aika: 'vanha aukio, 1800-luvun kehitys',
+      teksti: 'Praça Alexandre Albuquerque on Praian historiallisen keskustan aukio Plateaun lounaisosassa. Sen keskellä on puistomainen julkinen tila, ja reunoilla eri-ikäisiä kaupunkitaloja sekä julkisia rakennuksia. Aukio liittyy Rua Serpa Pinton ja muiden keskustakatujen verkkoon. Se kuuluu tasanteen ruutukaavan keskeisiin paikkoihin.\n\nVuonna 1873 aukio oli olemassa, mutta tunnettiin vanhemmalla nimellä Praça do Pelourinho. Nykyinen nimi kuuluu myöhempään 1800-luvun nimenvaihtoon ja liittyy siirtomaakuvernöörin nimeen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jaime Motan entinen kasarmi': {
+      aika: '1800-luku, useita vaiheita',
+      teksti: 'Jaime Motan entinen kasarmi sijaitsee Plateaun eteläpäässä, Avenida Andrade Corvon eteläpään yhteydessä. Sen ensimmäinen rakennusvaihe on 1800-luvun alkupuolelta. Kasarmi kuuluu vanhan keskustan hallinto- ja rakennushistoriaan; presidentinpalatsi on sen lähellä sijaitseva erillinen talo.\n\nKokonaisuutta muutettiin 1800-luvun lopulla ja 1900-luvun alussa, ja siihen kuuluu uusmanueliinisen tyylin piirteitä. Ensimmäinen kasarmivaihe oli olemassa vuonna 1873, mutta nykyinen nimi ja kaikki julkisivun osat eivät kuulu tuohon aikaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Praian etnografinen museo': {
+      aika: '1800-luvun talo, myöhempi museo',
+      teksti: 'Praian etnografinen museo sijaitsee vanhassa Plateau-keskustassa Rua 5 de Julholla. Se toimii 1800-luvun rakennuksessa, mutta museon synty liittyy myöhäisen 1900-luvun kulttuuriperintöhankkeisiin. Kokoelmia kerättiin eri Kap Verden saarilta: Praia kokoaa samassa museossa koko saariston esineperintöä.\n\nAineisto kertoo arjen taidoista ja elinkeinoista, kuten kalastuksesta, maataloudesta, kudonnasta, korinpunonnasta ja keramiikasta. Mukana on myös kertomuksia, arvoituksia ja muuta suullista perinnettä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Maria Pian majakka': {
+      aika: '1800-luvun loppu',
+      teksti: 'Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita.\n\nMajakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Majakkaa ei vielä ollut vuonna 1873.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santa Marian luoto': {
+      aika: 'tuliperäinen luoto, 1800-luvun käyttö',
+      teksti: 'Santa Marian luoto on Santiagon rannan edustalla, Praian lahden suulla Gamboan rantaa vastapäätä. Tuliperäinen luoto tunnetaan myös vanhalla englanninkielisellä nimellä Quail Island.\n\nLuodolle rakennettiin 1800-luvun puolivälissä tullitalo ja varastoja. Rakennuksia käytettiin karanteeniin, joka siirtyi myöhemmin Ponta Temerosaan. Luoto ja varhaiset rakennukset olivat olemassa vuonna 1873; karanteenin toiminta vaihtui myöhemmin toiseen paikkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Praia-Ilhéu de Santa Maria (3).jpg',
+          lyhyt: 'Santa Marian luoto Gamboan edustalla vuonna2012.',
+          selite: 'Santa Marian luoto Gamboan edustalla vuonna2012.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  rabat: {
+    'Udayan kasbah': {
+      aika: '1100-luku, myöhemmät laajennukset',
+      teksti: 'Udayan kasbah on kukkulalle rakennettu linnoitettu kaupunginosa Bou Regreg -joen suulla. Almohadit rakensivat sitä 1100-luvulla aiempien tukikohtien paikalle. Rakennushankkeeseen kuuluivat palatsi, moskeija ja maanalainen vesikanava, joka toi vettä alueelle. Suuri Bab Oudaya -portti liittyy myöhempään almohadien rakennusvaiheeseen.\n\nKasbahin sisällä pohjoisen keskiaikainen ydin ja etelän myöhemmät lisäykset kuuluvat eri aikoihin. Moulay Ismailin paviljonki tuli eteläosaan vasta myöhemmin. Nykyiset sinivalkoiset talot ovat osa asuttua kaupunginosaa, ja Rue Jamaa johtaa suuren portin suunnasta kohti joelle avautuvaa näkymää. Medina on kasbahin vieressä, Salé joen toisella puolella.\n\nVuonna 1873 kasbah, sen vanha portti ja paviljonki olivat jo olemassa. Nykyistä Andalusialaista puutarhaa ja paviljongin museokäyttöä ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Kasbah des Oudaias P1060323.JPG',
+          lyhyt: 'Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.',
+          selite: 'Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.',
+          lahde: 'Pline, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Kasbah_of_the_Udayas',
+    },
+    'Bou Regreg -joen suisto': {
+      aika: 'Luontokohde',
+      teksti: 'Bou Regreg saapuu Keski-Atlaksen suunnalta Atlantin valtamereen Rabatin ja Salén välissä. Rabat sijaitsee joen eteläpuolella, Salé pohjoispuolella. Suisto tunnetaan myös nimellä Wadi Sala. Joen suu on samalla kohta, jossa jokivesi ja vuoroveden kuljettama suolainen merivesi kohtaavat.\n\nUdayan kasbahista avautuu näkymä joelle, vastarannan Saléen ja Atlantille. Vesi erottaa kaupunkien historialliset ytimet, vaikka niillä on yhteistä historiaa ja nykyinen raitiovaunuyhteys. Myös muinaisen Salan paikka Chellahissa liittyi joen rantaan ja satamaan.',
+      kuvat: [
+        {
+          tiedosto: 'Boats in Bouregreg (2).jpg',
+          lyhyt: 'Bou Regreg laskee mereen Rabatin ja Salén välissä.',
+          selite: 'Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.',
+          lahde: 'MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Bou_Regreg',
+    },
+    'Andalusialainen muuri': {
+      aika: '1600-luku',
+      teksti: 'Andalusialainen muuri rajaa Rabatin medinan eteläreunaa. Se rakennettiin 1600-luvun alkupuolella keskiaikaisen almohadikaupungin sisään. Ulomman kaupunginmuurin sisäpuolella oli ollut myös harvaan asuttuja ja avoimia alueita; myöhempi muuri rajasi tiiviimmän asutuksen oman kokonaisuutensa sisään.\n\nEspanjasta karkotettuja moriskoja asettui tälle alueelle. Muurin portit yhdistivät kaupunginosan eri suuntiin: Bab Mellah liittyi vanhaan juutalaiskortteliin, ja Bab Chellah sai monumentaalisen nykyasunsa 1800-luvun alun uudelleenrakennuksessa. Muurin jokipäässä on Borj Sidi Makhlouf -linnake.',
+      kuvat: [
+        {
+          tiedosto: 'Muraille des Andalous 2 - Rabat.JPG',
+          lyhyt: 'Andalusialainen muuri Rabatin medinan reunalla vuonna2013.',
+          selite: 'Andalusialainen muuri Rabatin medinan reunalla vuonna2013.',
+          lahde: 'Omar-toons, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Andalusian_wall_of_Rabat',
+    },
+    'Moulay Slimanen moskeija': {
+      aika: '1800-luvun alku',
+      teksti: 'Moulay Slimanen moskeija sijaitsee Rabatin medinassa Andalusialaisen muurin pohjoispuolella. Sulttaani Moulay Slimane rakennutti sen 1800-luvun alussa, ja rakennus kantaa hänen nimeään. Paikka on Souika Streetin ja Sidi Fateh Streetin risteyksessä lähellä Bab Bouiba -porttia.\n\nRakennuksen sisällä on perinteinen avoin piha, sahn, ja rukoussalin tilaa jakavat pylväät ja kaaret. Kokonaisuuteen kuuluu myös minareetti. Moskeija kuuluu 1800-luvun alun Rabatiin. Medina oli jo pitkään asuttu, mutta nykyinen uusi kaupunginosa rakennettiin vasta myöhemmin, 1900-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Moulay Slimane Mosque.jpg',
+          lyhyt: 'Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.',
+          selite: 'Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.',
+          lahde: 'Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Moulay_Slimane_Mosque',
+    },
+    'Bab er-Rouah -portti': {
+      aika: '1100-luvun loppu',
+      teksti: 'Bab er-Rouah on almohadien kaupunginmuurin monumentaalinen portti. Se rakennettiin 1100-luvun lopulla osaksi Ya’qub al-Mansurin kaupunkihanketta. Nimi tarkoittaa Tuulten porttia. Ulompaa julkisivua reunustavat puolustustornit, ja kiveen veistetyt kaaret, kasviaiheet sekä suorakulmainen kehys kuuluvat sen vanhaan koristeluun.\n\nPortti sisältää enemmän kuin ulkoa näkyvän oviaukon. Vanha sisäänkäynti kulkee peräkkäisten kammioiden läpi ja tekee suorakulmaisia mutkia; suoraa käytävää kaupungin ulkopuolelta sisään ei ole. Ulompi ja sisempi julkisivu ovat saman kulkureitin eri päät. Alkuperäistä sisäänkäyntikaarta pienennettiin myöhemmin kivimuurauksella 1700-luvulla.\n\nVuonna 1873 portti ja sen muutettu kulkuaukko olivat jo olemassa. Portin vanhoihin sisätiloihin on sovitettu taidegalleria. Puolustuskäytöstä säilyneet kammiot muodostavat rakennuksen sisällä mutkittelevan kulkureitin.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Rouah inner facade edit.jpg',
+          lyhyt: 'Bab er-Rouahin sisäsivu päättää vanhan porttireitin.',
+          selite: 'Bab er-Rouahin sisempi julkisivu kuuluu almohadien porttiin, jonka vanha sisäänkäyntireitti mutkittelee kammioiden kautta.',
+          lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n5-51a9dd0e4256f4cbd16a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Bab_er-Rouah',
+    },
+    'Chellahin raunioalue': {
+      aika: 'Antiikki ja keskiaika',
+      teksti: 'Chellah on muurein rajattu raunioalue, jossa eri aikakaudet sijaitsevat osittain päällekkäin. Roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Rinteeseen tehtiin keinotekoisia tasanteita, ja kaupungissa oli pääkatuja, forum, temppeleitä ja kylpylä. Kaikkien rauniorakennusten tulkinta ei ole yhtä varma.\n\nKeskiajan lopulla marinidien hallitsijasuku otti alueen dynastiansa hautausmaaksi. Uskonnolliseen kokonaisuuteen kuului moskeija, hautakammioita ja oppilaitos. Marinidien muurien rajaama alue on aiempaa roomalaista kaupunkia pienempi. Nykyisellä puutarhamaisella raunioalueella elää myös haikaroita, jotka pesivät puissa ja säilyneessä minareetissa.\n\nVuonna 1873 marinidien rauniot olivat jo paikalla. Roomalaiskorttelin nykyinen avoin näkymä syntyi vasta myöhemmistä arkeologisista kaivauksista.',
+      kuvat: [
+        {
+          tiedosto: 'Chellah interior hill.jpg',
+          lyhyt: 'Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.',
+          selite: 'Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.',
+          lahde: 'Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Chellah',
+    },
+    'Borj Sidi Makhlouf -linnake': {
+      aika: '1600–1700-luvut',
+      teksti: 'Borj Sidi Makhlouf on Rabatin joenpuoleinen linnake medinan itäreunassa. Se liittyy Andalusialaisen muurin Bou Regregin puoleiseen päähän. Linnake rakennettiin suojaamaan läheistä satamaa, joten sen paikka kertoo joen merkityksestä vanhalle kaupungille. Pyöristetty rakennus erottuu pitkästä muurista omana puolustusrakenteenaan.\n\nLinnakkeen nimi viittaa paikalliseen Sidi Makhloufiin, jonka hauta on sen yhteydessä. Rakennuksen historia ulottuu 1600–1700-luvuille.',
+      kuvat: [
+        {
+          tiedosto: 'Sidi Makhlouf 1.jpg',
+          lyhyt: 'Borj Sidi Makhlouf rakennettiin sataman suojaksi.',
+          selite: 'Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.',
+          lahde: 'Omar-toons, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Borj_Sidi_Makhlouf',
+    },
+  },
+  tunis: {
+    'Bab el Bhar – Merenportti': {
+      aika: 'Vanha kaupunginportti, eri aikojen muutoksia',
+      teksti: 'Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista, vaikka se ei seiso nykyisellä merenrantaviivalla. Merenportti-nimi liittyy reittiin, joka yhdisti medinan Tunisinjärven satamaan ja Tunisinlahdelle.\n\nSuuren kaaren yläpuolella on sakarareunainen osa. Sen kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Bhar photo 2 باب البحر.jpg',
+          lyhyt: 'Bab el Bhar erottaa medinan uudemmasta Tunisista.',
+          selite: 'Bab el Bhar eli Merenportti on Tunisin medinan itäpuolinen portti, joka tunnetaan myös nimellä Porte de France.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n1-111f7de60f0fb4f9f627.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zitouna-moskeija': {
+      aika: 'Varhaiskeskiaikainen perusta ja myöhempiä rakennusvaiheita',
+      teksti: 'Zitouna eli Oliivimoskeija sijaitsee Tunisin medinan keskuksessa. Sen perustamisen tarkasta ajasta on erilaisia historiallisia tulkintoja. Nykyisen kokonaisuuden keskeinen rakennusvaihe on 800-luvun uudelleenrakennus.\n\nSisäpihaa reunustavat kaarigalleriat, ja rukoussalia jäsentävät pylväsrivit sekä hevosenkenkäkaaret. Moskeijaan liittyi pitkään korkeamman oppimisen perinne. Uskonnollisten aineiden ohella opetettiin esimerkiksi arabian kielioppia, historiaa ja lääketiedettä.\n\nVuoden 1873 moskeijalla oli eri torni: nykyinen minareetti on 1800-luvun lopun jälleenrakennus ja ottaa tyylivaikutteita Kasbah-moskeijan tornista.',
+      kuvat: [
+        {
+          tiedosto: 'Corridor of Al-Zaytuna Mosque.jpg',
+          lyhyt: 'Zitounan sisäpihaa reunustavat kaarigalleriat.',
+          selite: 'Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasbah-moskeija': {
+      aika: 'Keskiaika, hafsidivaihe',
+      teksti: 'Kasbah-moskeija sijaitsee Tunisin medinan Kasbah-kaupunginosassa. Se rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Moskeija kuului Kasbahin linnoitus- ja hallintoympäristöön. Aluksi sen käyttäjiä olivat siellä asuneet hallitsijat.\n\nMyöhemmin moskeijasta tuli julkinen perjantaimoskeija. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät, ja rukoussuuntaa osoittavan mihrabin edessä on muqarnas-koristeltu eli porrastettuihin koristeholveihin jäsennetty kupoli. Minareetin rakenne ja ornamentiikka ovat kiveä. Sen julkisivuissa sebka-koristelu muodostaa vinoneliömäisen verkon. Myöhemmät Tunisin minareetit ottivat tornista tyylivaikutteita.',
+      kuvat: [
+        {
+          tiedosto: 'Tunis Mosqué Kasbah.JPG',
+          lyhyt: 'Kasbah-moskeija rakennettiin keskiajalla.',
+          selite: 'Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.',
+          lahde: 'Rais67, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Lasram': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Dar Lasram sijaitsee Tunisin medinassa Tribunal-kadulla. Palatsin rakennuttaja Hamouda Lasram oli varakas maanomistaja ja hallinnollinen kirjuri. Rakennuspaikka koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Uusi palatsi syntyi 1800-luvun alkupuolella vanhan kaupungin sisään.\n\nTalon tilat jaettiin eri tehtäviin kerroksittain. Pohjakerros palveli varastoja ja palvelutyötä, perheellä oli omat tilansa ja vieraille varattiin ylempi kerros. Sisäpihan kaaret ja pylväät jäsentävät rakennusta. Palatsin arkkitehtuuriin kuuluvat myös stukkokoristelu ja maalatut katot. Myöhemmin talossa ovat toimineet medinan suojeluyhdistys ja Tahar Haddad -klubi.',
+      kuvat: [
+        {
+          tiedosto: 'Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg',
+          lyhyt: 'Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.',
+          selite: 'Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n4-1fdba48d816acee49d95.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Othman': {
+      aika: '1500- ja 1600-luvun taite, myöhempiä käyttövaiheita',
+      teksti: 'Dar Othman on palatsi Tunisin medinan eteläosassa El Mebazaâ -kadulla. Sen rakennuttaja oli Othman Dey, ja rakentaminen ajoittuu 1500- ja 1600-luvun taitteen tienoille. Julkisivuun kuuluu hevosenkenkäkaari, pylväitä ja puisia rakenteita.\n\nOven jälkeen tulee driba eli eteistila, jota reunustavat kivipenkit. Eteisestä kuljetaan pihaan. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja.\n\n1800-luvun alkupuolella palatsi muutettiin sotilaiden tarvikkeiden säilytyspaikaksi. Tähän käyttöön liittyy toinen nimi Dar al-Oula, tarvikkeiden talo. Myöhempi käyttö on liittynyt medinan kulttuuriperinnön suojeluun. ',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Dar Hussein': {
+      aika: 'Vanha palatsi, kerrostumia ennen 1800-lukua ja sen aikana',
+      teksti: 'Dar Hussein sijaitsee Tunisin medinassa Bab Menaran kaupunginosassa, Place du Château -osoitteessa. Palatsia on laajennettu ja koristeltu eri omistajien aikana. Sen nimi liittyy kenraali Husseiniin, yhteen rakennuksen entisistä omistajista.\n\nPalatsin pihaan kuuluu valkoista marmoria, pylväitä ja uuskorinttilaisia kapiteeleja. Koristelussa esiintyvät Qallaline-kaakelit, stukko ja maalattu puu. Youssef Saheb Ettabaâ liittyy 1800-luvun koristeluvaiheeseen.\n\n1800-luvun puolivälissä rakennuksessa toimi kunnallinen neuvosto. Myöhempi instituutiokäyttö on liittynyt kansallisen kulttuuriperinnön hallintaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  abuja: {
+    'Aso-kallio': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Aso-kallio on suuri graniittinen monoliitti Abujan reunassa. Kaupunki levittäytyy pääosin sen eteläpuolelle, ja kallio toimii tunnistettavana luonnonmaamerkkinä. Alueeseen liittyy myös Asokoro-paikannimi. Läheiset valtion rakennukset kuuluvat rakennettuun ympäristöön; kallio ja Aso Villa -palatsi ovat eri kohteet.\n\nKallio kohoaa noin 400 metriä ympäröivän maan yläpuolelle. Sen ympärillä sijaitsevat presidentin hallintokompleksi, parlamentti ja korkein oikeus. Asokoro-yhteisön kielessä Aso merkitsee voitokasta. Aso-kallion mukaan nimettiin myös Kansainyhteisön vuonna 2003 antama julistus, joka painotti demokratiaa ja kehitystä.',
+      kuvat: [
+        {
+          tiedosto: 'Aso Rock Nigeria.jpg',
+          lyhyt: 'Aso-kallion graniittimuodostuma Abujassa vuonna 2018.',
+          selite: 'Aso-kallion graniittimuodostuma Abujassa vuonna 2018.',
+          lahde: 'Ovinuchi Prince Ejiohuo, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/n1-9f1ebdd2512951a61002.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jabin järvi': {
+      aika: 'Tekojärvi',
+      teksti: 'Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Rannalla voi ratsastaa ja ostaa tuoretta kalaa. Puistoalue nimettiin Jabi Lake Parkiksi vuonna 2007.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  accra: {
+    'Jamesin linnoitus': {
+      aika: '1600-luku',
+      teksti: 'Jamesin linnoitus sijaitsee Jamestownissa Accran vanhalla rannikolla. Sen rakennutti englantilainen Royal African Company kauppapaikaksi. Kullan rinnalla käytiin kauppaa orjuutetuilla ihmisillä: linnoituksen historia kuuluu myös Atlantin orjakaupan historiaan. Rannikon kauppapaikat olivat eurooppalaisten vallankäytön välineitä, samalla kun niiden ympärillä elivät paikalliset yhteisöt.\n\nSen lähellä olivat Ussherin linnoitus ja idempänä Osun linna, jotka kuuluivat saman rannikon kauppaverkostoon. Jamesin linnoitusta käytettiin myöhemmin myös vankilana. Nykyisin se on historiallinen kohde ja yksi Ghanan rannikon Unescon maailmanperintökokonaisuuteen nimetyistä linnoituksista. Viereinen Jamestownin majakka on oma rakennuksensa, vaikka se esiintyy usein samoissa näkymissä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ussherin linnoitus': {
+      aika: '1600-luku, uudistuksia 1800-luvulla',
+      teksti: 'Ussherin linnoitus sai alkunsa hollantilaisena rannikon kauppapaikkana. Sen alkuperäinen nimi oli Fort Crèvecœur, ja kauppavarastoa laajennettiin linnoitukseksi. Se kuului Hollannin Kultarannikon toimipaikkoihin, joissa Euroopan kauppayhtiöt tavoittelivat rannikkokaupan tuottoja. Paikka sijaitsee vanhan Accran rannikkoytimessä, lähellä Jamesin linnoitusta.\n\nRakennuksen historiaan kuuluu tuhoutumista ja jälleenrakentamista. Hollantilainen rakennusmestari Hubertus Varlet johti sen uudelleen rakentamista 1800-luvulla. Paikka siirtyi brittien hallintaan, ja Ussher-nimi muistuttaa siirtomaahallinnon nimikerroksesta. Nykyinen historiallinen kohde kuuluu Unescon Ghanan rannikon linnoitusten ja linnojen kokonaisuuteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Osun linna': {
+      aika: '1600-luku, myöhempiä rakennuskerroksia',
+      teksti: 'Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat samaa rakennusta.\n\nLinna on vaihtanut omistajaa Tanska–Norjan, Portugalin, akwamu-yhteisön ja Britannian välillä. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Linna on ollut sekä kauppapaikka että valtion hallinnon käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Holy Trinity -katedraali': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Holy Trinity on anglikaaninen kirkko Accran High Streetillä. Sen virallinen nimi on Cathedral Church of the Most Holy Trinity. Tiilisen, romaaniseen tyyliin suunnitellun rakennuksen arkkitehti oli Aston Webb. Rahoitus tuli Britannian siirtomaahallinnolta, ja alkuaikojen kävijöihin kuului kaupungissa asuvia siirtomaavirkamiehiä.\n\nKirkko valmistui vuonna 1894. Katedraaliksi se nimettiin vasta myöhemmin Accran hiippakunnan perustamisen yhteydessä. Se kuuluu Accran anglikaaniseen hiippakuntaan ja Länsi-Afrikan kirkkoprovinssiin. High Streetiltä reitti jatkuu Ussherin ja Jamesin linnoitusten suuntaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Korlen laguuni': {
+      aika: 'Luonnonvesistö ja vanha asutusympäristö',
+      teksti: 'Korlen laguuni on Accran keskustan länsipuolinen vesistö, jolla on yhteys Guineanlahteen. Sen rantojen asutushistoria liittyy Jamestownin kasvuun. Laguuni oli aikanaan tärkeä kalan lähde, joten vesi kuului sekä asuinympäristöön että elinkeinoon. Odaw kulkee Accran esikaupunkien halki, ja sen valuma-alue kattaa suuren osan kaupungista.\n\nMyöhempi kaupunki muutti rantoja. Maata kuivattiin ja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä ja jätettä. Veden laatu heikkeni, ja kunnostushankkeissa on pyritty vähentämään saastumista sekä parantamaan virtausta.',
+      kuvat: [
+        {
+          tiedosto: 'Korle Lagoon 4.jpg',
+          lyhyt: 'Korlen laguuni sijaitsee Accran keskustan länsipuolella.',
+          selite: 'Korlen laguuni on keskustan länsipuolinen vesistö, jonka rannat liittyvät Jamestownin historiaan.',
+          lahde: 'SAgbley, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/n5-145f61c60cde0072d65c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Labadin ranta': {
+      aika: 'Luonnonranta, nykyinen vapaa-ajan ympäristö',
+      teksti: 'Labadin ranta on Accran meriranta La-nimisellä alueella, Teshien lähellä. La tunnetaan usein nimellä Labadi, ja rannasta käytetään myös nimeä La Pleasure Beach. Se kuuluu Guineanlahden rannikkoympäristöön. Ranta sijaitsee La Palm- ja La Badi Beach -hotellien välissä. Rantakaistaleella on kahviloita, ravintoloita ja matkamuistokauppiaita.\n\nNykyisin rannalla järjestetään musiikki- ja rumputapahtumia, ja aamuisin siellä käy myös liikkujia. Hotellit osallistuvat rannan ylläpitoon. Rannalla on myös ratsastusta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bamako: {},
+  lome: {
+    'Lomén keskustan meriranta': {
+      aika: 'Luonnonrannikko',
+      teksti: 'Lomén meriranta kuuluu Atlantin Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa.\n\nRannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  ndjamena: {
+    'Logonen ja Charin yhtymäkohta': {
+      aika: 'Luonnonvesistön yhtymäkohta',
+      teksti: 'Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä.\n\nLogonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Charin ja Logonen vedet jatkavat yhtymäkohdasta yhteisenä jokena Tšadjärven suuntaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  niamey: {
+    'Gounti Yénan suu': {
+      aika: 'Luonnonuoma',
+      teksti: 'Gounti Yéna laskee Nigeriin Niameyn keskustassa. Joen vasemmalle rannalle päättyvä uoma kokoaa sade- ja valumavesiä ylempänä sijaitsevista kaupunginosista. Sen virtaus on kausittaista, joten laakso voi näyttää hyvin erilaiselta eri oloissa. Uoman varrella harjoitetaan hedelmä- ja vihannesviljelyä.\n\nLaakso kuului alueen maantieteeseen jo ennen nykyisen pääkaupungin kasvua. Se erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sen kohdalle asettui myös siirtomaa-ajan asuinalueiden raja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Néini Goungoun saari': {
+      aika: 'Luonnonsaari ja vanha kylä',
+      teksti: 'Néini Goungou on Nigerjoen saarella sijaitseva kylä Niamey V:n alueella. Goudel on vastarannalla, Lamordé saaresta kaakkoon ja Kourtéré Samboro lounaaseen. Saari kuuluu pääkaupungin asuttuihin jokimaisemiin. Kyläyhteisöä johtaa paikallinen päällikkö.\n\nSaaresta tunnetaan tietoja jo 1800-luvulta, ennen nykyisen pääkaupungin kasvua. Myöhemmät tulvat ovat muuttaneet asukkaiden elämää, ja osa on joutunut muuttamaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Trois Sœursin kukkulat': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Trois Sœursin kukkulajono sijaitsee Niamey V:n alueella. Ranskankielinen nimi tarkoittaa kolmea sisarta. Rakentamattomien kukkuloiden pinnassa näkyy paljasta lateriittia, ja kokonaisuus asettuu suunnilleen itä–länsisuuntaan. Pohjoisessa maasto viettää kohti Nigerjoen kaupunkitasankoa.\n\nKukkulat ovat luonnonmuodostuma, jonka olemassaolo edeltää pääkaupungin kasvua. Lähialueisiin kuuluvat Diamowé, Nordiré ja Lokoto, ja kukkuloilta on kirjattu myös linnustohavaintoja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  ouagadougou: {
+    'Bangr Weogon kaupunkimetsä': {
+      aika: 'Vanha metsäympäristö, nykyinen kaupunkipuisto myöhempi',
+      teksti: 'Bangr Weogo on Ouagadougoun kaupunkimetsä, joka kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Metsään liittyi pyhinä koettuja paikkoja, eläimiä ja pyhiä esineitä.\n\nKaupungin hallinnoima puisto toimii nykyisin myös ympäristökasvatuksessa ja virkistyksessä. Sen nimellä on tiedon metsän merkitys. Puistossa on kävely- ja juoksupolkuja sekä kosteikko, jossa elää krokotiileja.',
+      kuvat: [
+        {
+          lahde: 'Arzantiga, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.',
+          lyhyt: 'Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.',
+          tiedosto: 'Crocodile lake at Parc Urbain Bangr-Weoogo.jpg',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansakunnan aukion vanha markkinapaikka': {
+      aika: 'Markkinapaikka ennen siirtomaakautta, nykyinen aukio myöhempi',
+      teksti: 'Ouagadougoun keskustan Kansakunnan aukio tunnetaan nimillä Place de la Nation ja Place de la Révolution. Paikalla oli suuri markkina jo ennen siirtomaakautta.\n\nTori siirrettiin siirtomaakaudella, ja paikka sai tuolloin d’Arboussier-nimen. Aukio sijaitsee Avenue du Yatengan tuntumassa, lähellä kaupungin julkisia instituutioita. Markkinapaikan siirtäminen muutti alueen käyttöä kaupankäynnin paikasta julkiseksi aukioksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  portonovo: {
+    'Jardin des plantes et de la nature': {
+      aika: 'Aiempi pyhä metsä, myöhempi puutarha',
+      teksti: 'Jardin des plantes et de la nature on Porto-Novon viheralue hallinto- ja sairaalakortteleiden välissä. Paikassa kasvaa suuria vanhoja puita, muun muassa irokoa ja Ceiba pentandraa. Kasvillisuuden ohella alueelta on kirjattu lintu-, apina- ja sammakkoeläinhavaintoja. Puutarha palvelee kasvien säilyttämistä ja opetusta.\n\nAlue oli aiemmin Hogbonun pyhä metsä, joka liittyi kuningaskunnan perinteiseen auktoriteettiin. Sittemmin paikasta tuli koekasvipuutarha, ja sitä on kunnostettu eri vaiheissa.',
+      kuvat: [
+        {
+          tiedosto: 'Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg',
+          lyhyt: 'Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.',
+          selite: 'Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.',
+          lahde: 'Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  yamoussoukro: {},
+  yaounde: {
+    'Mont Fébé': {
+      aika: 'Luonnonkukkula',
+      teksti: 'Mont Fébé on Kamerunin Centre-alueella, Mfoundin hallintoalueessa sijaitseva luonnonkukkula Yaoundén lähellä. Se kuuluu pääkaupunkiseudun kukkulamaisemaan, ja paikasta tunnetaan näkymä kaupunkiin.\n\nSen ympäristössä on myös luostari, hotelli ja golfkenttä, jotka ovat luonnonpaikasta erillisiä rakennettuja ympäristöjä. Kukkula oli olemassa ennen nykyisen kaupungin kasvua. Luostarin yhteydessä on myös pieni museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mont Eloundem': {
+      aika: 'Luonnonkukkula',
+      teksti: 'Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin.\n\nEloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Kukkulan rinteet ja laaksot ovat osa Yaoundén ympäröivää maastoa, jossa asutus ja kasvillisuus vuorottelevat.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Yaoundén kunnallinen järvi': {
+      aika: '1900-luvun tekojärvi',
+      teksti: 'Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Se sijaitsee Atemenguen ylängön laaksossa vanhan hallinto- ja asuinalueen välissä. Kreikkalaissyntyinen kauppias Georges Kyriakidès ehdotti kaupungille järveä saatuaan lahjaksi perämoottoriveneen. Järvi rakennettiin 1900-luvun puolivälissä, ja myöhemmin Kyriakidèsin vene kulki sen vesillä.\n\nSen myöhempään historiaan kuuluu erilaisia kunnostus- ja uudistushankkeita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mvog-Betsin zoo-botaaninen puisto': {
+      aika: '1900-luvun laitos',
+      teksti: 'Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä.\n\nMyöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä. Puiston vaiheisiin kuuluvat eläinten hoito, kasvien kasvattaminen, opetus ja luonnontutkimus. Eläimistöön on kuulunut esimerkiksi kädellisiä ja suuria kissaeläimiä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bangui: {},
+  brazzaville: {
+    'Djoué-joen suu': {
+      aika: 'Luonnonympäristö',
+      teksti: 'Djoué on Kongojoen oikeanpuoleinen sivujoki, joka kulkee Brazzavillen länsiosassa. Se laskee Kongoon Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen.\n\nKosteikkoihin kuuluu pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Ne tarjoavat lisääntymisympäristöjä kaloille ja selkärangattomille. Alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva makean veden kalojen elinympäristöstä.',
+          selite: 'Havainnekuva makean veden kalojen elinympäristöstä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-n1-v01-59000b325254.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia; Ramsar',
+    },
+  },
+  ciudaddelapaz: {},
+  gitega: {},
+  kigali: {
+    'Kigali-kukkula': {
+      aika: 'Luonnonmaasto',
+      teksti: 'Kigali-kukkula sijaitsee Nyarugengen alueella keskustan länsipuolella. Sen rinteillä on kaupunkialueita, ja länsirinne suuntautuu Nyabarongon laaksoon. Pohjoisessa on Jali-kukkula, joka on eri luonnonmuoto. Kukkula kuuluu harjanteiden ja laaksojen kokonaisuuteen, jonka mukana Kigali levittäytyy ympäristöönsä.\n\nKaupungin nimi liittyy Kigali-kukkulaan. Vuonna 1873 maasto oli olemassa, mutta nykyisen hallintokaupungin alku tuli myöhemmin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jali-kukkula': {
+      aika: 'Luonnonmaasto',
+      teksti: 'Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Vuonna 1873 nykyisiä radio- ja energiatoiminnan rakenteita ei vielä ollut kukkulalla. Kukkulalla sijaitsee myös Kigali Solaire -aurinkovoimala.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nyabugogon jokisuu': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Nyabugogo saa alkunsa Muhazijärveltä ja kulkee Kigalin alueella ennen liittymistään Nyabarongoon. Jokisuu on tämän sivujoen ja suuremman joen kohtaamispaikka. Kaupungin sivu-uomat ja laaksojen kosteikot liittyvät samaan vesiverkkoon, joka kuuluu Niilin valuma-alueeseen.\n\nNyabugogon sivujokiin kuuluvat muun muassa Kujevuba, Muyanza ja Yanze. Muhazijärvestä lähtevä joki virtaa länteen ja muodostaa osan Kigalin ja Pohjoisen provinssin rajasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nyandungun kosteikko': {
+      aika: 'Vanha kosteikko; nykyinen kunnostus 2000-luvulla',
+      teksti: 'Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Kohteena on kosteikon ja metsän luonnonympäristö. Infokeskus ja luontopolut tukevat kosteikon käyttöä opetuspaikkana.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva kosteikon kasvillisuudesta.',
+          selite: 'Havainnekuva kosteikon kasvillisuudesta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  kinshasa: {
+    'Ngalieman lahti': {
+      aika: 'Luonnonlahti; satamahistoria 1800-luvun lopulta',
+      teksti: 'Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana.\n\nLahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Joenrannan Nshasan ja Ntamon kalastus- ja kauppapaikat edelsivät siirtomaa-asemaa. Lahti oli myös Henry Morton Stanleyn 1800-luvun lopun tutkimusretken paikka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kinshasan kasvitieteellinen puutarha': {
+      aika: 'perustettu 1933',
+      teksti: 'Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubu-kadun varrella eläintarhaa vastapäätä. Puutarha perustettiin vuonna 1933 nimellä Parc de Bock. Sitä hallinnoi Kongon luonnonsuojeluinstituutti ICCN.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva kasvin lisäämisestä pistokkaasta.',
+          selite: 'Havainnekuva kasvin lisäämisestä pistokkaasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  libreville: {
+    'Mont-Bouët\'n tori': {
+      aika: 'Nykyinen markkinapaikka',
+      teksti: 'Mont-Bouët on Librevillen keskeinen tori kaupungin kolmannessa hallintoalueessa. Sen tarjontaan kuuluvat hedelmät ja vihannekset sekä tekstiilit ja vaatteet. Kaupankäynti ulottuu myös torin ympäristöön, jossa on muita liikkeitä ja ravintoloita. Torilla myydään Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet osana tätä tavaroiden liikkumista.\n\nTori kuuluu nykyisen pääkaupungin arkisiin kohtaamispaikkoihin. Kantajat siirtävät tavaroita torin ahtaissa käytävissä kottikärryillä, ja ympärillä on vaatekauppoja sekä ruokapaikkoja.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva torikaupan kankaista.',
+          selite: 'Havainnekuva torikaupan kankaista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-n1-v01-ce0daa3a5353.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sibangin arboretum': {
+      aika: '1900-luvun puoliväli',
+      teksti: 'Sibang on Librevillen sisäinen arboretum, jossa päiväntasaajan metsän puita säilytetään tutkimuksen ja suojelun kohteina. Se sijaitsee kaupungin kolmannessa hallintoalueessa.\n\nTutkimusta ohjaavat kansallinen tiede- ja teknologiatutkimuksen keskus ja farmakopean sekä perinteisen lääketieteen tutkimuslaitos, ja alueen puulajistossa mainitaan muun muassa okoumé sekä Duboscia macrocarpa. Metsän itäpuolta rajaa Adoung-joki ja pohjoispuolta Nzeng-Ayongin tie. Arboretum perustettiin 1900-luvun puolivälissä, joten vuonna 1873 nykyistä tutkimusmetsän instituutiota ei vielä ollut.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva tutkimusmetsän elävistä puista.',
+          selite: 'Havainnekuva tutkimusmetsän elävistä puista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-n2-v01-26980766cef3.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  luanda: {
+    'Nossa Senhora dos Remédiosin katedraali': {
+      aika: '1600-luku, myöhempiä kunnostuksia',
+      teksti: 'Nossa Senhora dos Remédios on Luandan roomalaiskatolinen katedraali ja arkkipiispan pääkirkko. Sen rakennushistoria alkaa 1600-luvulta. Kun Angolan ja Kongon hiippakunnan pääpaikka siirtyi Luandaan, kirkon tehtävä muuttui myöhemmin katedraalin tehtäväksi.\n\nKirkko oli olemassa vuonna 1873, mutta sen nykyinen julkisivun perusmuoto syntyi myöhemmässä kunnostuksessa. Rakennus rapistui 1800-luvulla, ja vuosisadan lopun korjauksissa se sai oviaukot ja kaarevan päädyn nykyiseen järjestykseensä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Carmon kirkko ja luostari': {
+      aika: '1600-luku, kunnostuksia 1800-luvulla',
+      teksti: 'Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Havainnekuva koristeettomien laattojen pinnasta.',
+          lyhyt: 'Havainnekuva koristeettomien laattojen pinnasta.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nazarén kirkko': {
+      aika: '1600-luku',
+      teksti: 'Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jesuiittojen Jesus-kirkon historiallinen paikka': {
+      aika: '1600-luku, myöhempiä muutoksia',
+      teksti: 'Jesus-kirkon historiallinen paikka sijaitsee Luandan Cidade Altassa, Ingombotan alueella. Kirkko kuului alun perin jesuiittakollegioon, joka perustettiin kaupunkiin 1600-luvun alussa. Paikka tunnettiin aiemmin nimellä Praça da Feira. Kirkon barokkijulkisivu liittyy näin alueeseen, jossa uskonnollinen toiminta ja opetus olivat lähekkäin.\n\nJesuiittojen toiminnan päätyttyä rakennus rapistui. Sitä kunnostettiin 1900-luvun puolivälissä arkkitehti Humberto Reisin suunnitelmien mukaan, ja myöhempiäkin muutoksia tehtiin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nossa Senhora do Cabon kirkko': {
+      aika: '1500-luku, jälleenrakennus 1600-luvulla',
+      teksti: 'Nossa Senhora do Cabon kirkko sijaitsee Ilha de Luandan alueella. Sen alku liittyy portugalilaisten kauppiaiden asutukseen 1500-luvun loppupuolella. Kirkko omistettiin aluksi Nossa Senhora da Conceiçãolle. Myöhemmän jälleenrakennuksen yhteydessä se sai nykyisen Cabo-nimensä, joka liittää sen niemen paikkaan.\n\nKirkkoa rakennettiin uudelleen 1600-luvulla, ja se oli olemassa vuonna 1873. Kivirakennuksen tuntomerkkeihin kuuluu sivutorni. Se sai myöhemmin myös seurakuntakirkon tehtävän.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ilha de Luandan hiekkaniemi': {
+      aika: 'Luonnonmuodostuma ja vanha asutusympäristö',
+      teksti: 'Ilha de Luanda eli Ilha do Cabo on matala hiekkaniemi Luandan edustalla. Se muodostui sedimentin kerrostumisesta ja liittyy kaupunkiin kapean yhteyden kautta. Niemi rajaa Luandan lahden ympäristöä ja kuuluu kaupungin rannikkomaantieteeseen.\n\nPaikalla eli Axi-lwanda-yhteisön asukkaita ennen portugalilaisten asettumista mantereelle. Myös Nossa Senhora do Cabon kirkon historia liittyy Ilhaan. Vuonna 1873 luonnonpaikka ja vanha asutusympäristö olivat jo olemassa, mutta nykyiset palvelut kuuluvat myöhempään kaupunkiin. Nykyisin Ilhalla on rantoja, ravintoloita ja veneilyä, ja alueella viettävät aikaa myös Luandan asukkaat.',
+      kuvat: [
+        {
+          tiedosto: '海滩beach - panoramio.jpg',
+          lyhyt: 'Ilha do Cabo on Luandan edustan luonnonmuodostuma.',
+          selite: 'Ilha do Cabon hiekkaranta kuuluu Luandan edustan matalaan niemimaiseen rannikkoympäristöön.',
+          lahde: 'yu huatian, Wikimedia Commons (CC BY 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/n6-ed92867125868253d8c8.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  saotome: {
+    'São Sebastiãon linnake': {
+      aika: '1500-luku',
+      teksti: 'São Sebastiãon linnake seisoo Ana Chavesin lahden kaakkoispäässä, nykyisen kaupungin koillisosassa. Se rakennettiin 1500-luvulla sataman ja kaupungin puolustukseksi. Rannan puolustusrakennus kuuluu São Tomén pitkään satamahistoriaan.\n\nLinnakkeessa toimii nykyisin kansallismuseo. Sen kokoelmiin kuuluu siirtomaa-ajan esineistöä ja uskonnollista taidetta. Linnaketta kunnostettiin myös 1900-luvun puolivälissä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ana Chavesin lahti': {
+      aika: 'Luonnonlahti',
+      teksti: 'Ana Chavesin lahti sijaitsee São Tomén saaren koillisrannikolla. Pääkaupunki ja sen satama ovat asettuneet lahden äärelle. Pohjoisessa sitä rajaa Ponta Oque del Rei, etelässä Ponta São Sebastião.\n\nLahti on matala, ja sen rannalla näkyy useita rakentamisen vaiheita. Nykyinen satamalaituri kuuluu 1900-luvun jälkipuoliskolle, vaikka vesialue ja rantakaupunki olivat olemassa jo vuonna 1873. Satamasta kulkee kiinteää tavaraa; nestemäisten polttoaineiden pääsatama on Neves.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ilhéu das Cabras': {
+      aika: 'Luonnonsaari; majakka 1800-luvun lopulta',
+      teksti: 'Ilhéu das Cabras on pieni asumaton saari Guineanlahdella. Ilhéu das Cabras sijaitsee Guineanlahdella São Tomén saaren koillisrannikon edustalla, pääkaupungin pohjoispuolella. Sen nimi viittaa vuohiin, ja vanhassa Vingboonsin kartassa esiintyy nimi Mooro Caebres.\n\nKoillisella kukkulalla on majakka, jonka alku kuuluu 1800-luvun loppuun. Vuonna 1873 saari oli olemassa, mutta tämä myöhempi majakka ei vielä kuulunut siihen.',
+      kuvat: [
+        {
+          tiedosto: 'Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg',
+          lyhyt: 'Ilhéu das Cabras näkyy Fernão Diasin rannalta.',
+          selite: 'Ilhéu das Cabras näkyy Fernão Diasin rannalta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  asmara: {
+    'Ruusukon Neitsyt Marian kirkko': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Ruusukon Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva.\n\nNykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä. Kokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali.',
+      kuvat: [
+        {
+          tiedosto: 'Asmara, cattedrale cattolica, campanile 01.JPG',
+          lyhyt: 'Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.',
+          selite: 'Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.',
+          lahde: 'sailko, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/n1-87d53cae3ac4fe93f521.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  djibouti: {},
+  dodoma: {},
+  juba: {},
+  kampala: {
+    'Vanhan Kampalan kukkula': {
+      aika: 'vanha maastonpaikka; myöhempi kaupunkikerros',
+      teksti: 'Old Kampala eli Kampala Hill on kukkula keskustassa. Kampala-nimi tarkoitti ensin tätä paikkaa, ja sen yleinen selitys liittyy impala-antilooppeihin sekä Bugandan kuninkaan metsästysalueeseen. Kaupungin levittäytyessä muille mäille vanhaa aluetta alettiin kutsua Old Kampalaksi. Nykyisessä naapurustossa on asumista ja kaupankäyntiä.\n\nMakerere sijaitsee pohjoisessa, Namirembe lännessä ja Nakasero idempänä. Vuonna 1873 seutu oli Bugandan ydinaluetta, mutta myöhempää Fort Lugardia ei vielä ollut. Fort Lugard kuului myöhempään brittiläiseen kaupunkivaiheeseen, jonka jälkeen Kampala kasvoi alkuperäisen kukkulan ulkopuolelle.',
+      kuvat: [
+        {
+          tiedosto: 'Gaddafi Mosque view 24.jpg',
+          lyhyt: 'Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.',
+          selite: 'Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.',
+          lahde: 'Ruslik0, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Namiremben kukkula': {
+      aika: 'vanha kukkula; lähetyskeskus 1800-luvun lopulta',
+      teksti: 'Namirembe on kukkula vanhan kaupungin länsipuolella. Sen nimi liittyy lugandan rauhaa tarkoittavaan mirembe-sanaan. Old Kampala on idässä, Lubaga lounaassa ja Mengo kaakossa.\n\nAnglikaaninen instituutio tuli alueelle 1800-luvun lopulla, ja nykyistä tiilikirkkoa edelsi useita eri rakennuksia. Myös Mengo Hospital sijaitsee tällä alueella nimestään huolimatta. Vuonna 1873 myöhempää anglikaanista keskusta ja nykyistä kirkkoa ei ollut. Namiremben kirkkojen uudelleenrakentaminen myrskyn, termiittituhojen pelon ja salamaniskun jälkeen muutti mäen ilmettä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Lubagan kukkula': {
+      aika: 'vanha palatsipaikan kukkula; myöhempiä laitoksia',
+      teksti: 'Lubaga eli Rubaga on kukkula ja samanniminen naapurusto Kampalan vanhassa länsiytimessä. Mengo sijaitsee sen itäpuolella ja Namirembe koillisessa.\n\nKatolinen lähetysyhteisö sai myöhemmin maata kukkulalta, ja alueelle tuli kirkollisen toiminnan lisäksi hoitoa sekä koulutusta. Sairaala ja hoitajakoulu kuuluvat tähän myöhempään kerrokseen. Kukkulalla ollut palatsi paloi Muteesa I:n kaudella, ja hovi siirtyi pois. Katolinen lähetysyhteisö tuli alueelle vasta vuoden 1873 jälkeen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nakasero-kukkula': {
+      aika: 'vanha maasto; myöhempi kauppa ja hallinto',
+      teksti: 'Nakasero on keskustan kukkula ja sen rinteille levittäytyvä naapurusto. Alemmilla länsi- ja etelärinteillä on kaupan sekä liikkumisen toimintaa, ylemmälle alueelle sijoittui myöhemmin hallintoa ja muita laitoksia.\n\nOld Kampala on lännessä, Makerere luoteessa ja Kololo idässä. Alueen myöhempi linnake kuului brittiläisen siirtomaakaupungin vaiheeseen. Vuonna 1873 myöhempi linnake ja nykyiset liike- sekä hallintokorttelit eivät vielä olleet kukkulalla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kibulin kukkula': {
+      aika: 'vanha maasto; myöhempi yhteisö- ja opetusympäristö',
+      teksti: 'Kibuli on kukkula keskisessä Kampalassa. Sen nimi tarkoittaa myös rinteiden asuin- ja kaupallisia alueita. Nsambya on lounaassa ja Namuwongo itäpuolella. Kibuli kuuluu kaupungin muslimiyhteisön historiallisiin paikkoihin.\n\nPrinssi Nuhu Mbogo lahjoitti maata ensimmäiseen moskeijaan liittyvää käyttöä varten. Myöhempää lahjoitettua maata käytettiin myös koulu- ja hoitotoimintaan; alueen oppilaitoksiin kuuluvat Kibulin lukio ja opettajankoulutuslaitos. Nämä nimetyt vaiheet ovat vuotta 1873 myöhempiä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nsambyan kukkula': {
+      aika: 'vanha maasto; opetus- ja hoitokeskus myöhemmin',
+      teksti: 'Nsambya on keskustan eteläisempi kukkula, jonka nimi ulottuu myös rinteiden kaupunginosiin. Se sijaitsee Ggaban suuntaan kulkevalla liikenneakselilla. Mäen maastonpaikka kuuluu vanhaan kaupunkiympäristöön, mutta monet sen tunnetut tehtävät ovat paljon myöhempiä.\n\nMill Hill -lähetysyhteisö aloitti toimintaa 1800-luvun lopulla. Kirkon rinnalle tuli kouluja, ja lääke- sekä hoitopaikasta kasvoi St. Francis -sairaala. Hoitajien ja lääkärien koulutus täydensi myöhemmin alueen tehtäviä. Vuonna 1873 tätä lähetys- ja sairaalakerrosta ei vielä ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Makereren kukkula': {
+      aika: 'vanha maasto; korkeakoulutus 1900-luvulta',
+      teksti: 'Makerere on kukkula ja sen mukaan nimetty kaupunginosa. Old Kampala on etelässä, Wandegeya kaakossa ja Mulago idässä. Yliopiston pääkampus sijoittuu kukkulalle, mutta alueella on myös muita oppilaitoksia sekä kampusrajan ulkopuolista opiskelija-asumista.\n\nMakereren opetuksen taustalla oli 1900-luvun alkupuolen tekninen koulu, jossa opiskeltiin puusepäntyötä, rakentamista ja mekaniikkaa. Ammattiopinnot laajenivat myöhemmin korkeakoulutukseksi. Vuonna 1873 tätä koulua tai yliopistoa ei vielä ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  khartum: {
+    'Tutin saari': {
+      aika: 'vanha kylä; myöhempiä yhteyksiä',
+      teksti: 'Tuti on jokisaari Khartumin, Omdurmanin ja Bahrin välissä. Saaren kylä perustettiin 1400-luvun lopulla. Sen pelloilla ja kasvitarhoissa viljeltiin hedelmiä ja vihanneksia läheisiin kaupunkeihin, ja saarella kasvoi sitrus- ja limettipuita.\n\nSaarelle kuljettiin pitkään lautoilla. Vuonna 2008 valmistunut riippusilta yhdisti sen Khartumiin. Tutin maankäytössä yhdistyivät kyläasutus, pellot, puutarhat ja hedelmätarhat.',
+      kuvat: [
+        {
+          tiedosto: 'Tuti Island (Khartoum, Sudan) 001.jpg',
+          lyhyt: 'Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.',
+          selite: 'Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.',
+          lahde: 'Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: 'perustettu 1954',
+      teksti: 'Khartumin kansallinen kasvitieteellinen puutarha perustettiin vuonna 1954 Mogranin alueelle, Valkoisen ja Sinisen Niilin yhtymäkohtaan. \n\nSiellä on elävien kasvien kokoelma ja herbaario eli talletettujen kasvinäytteiden kokoelma. Puutarhassa on omat yksikkönsä siementen keruulle, kasvien lisäämiselle, geneettisten resurssien säilyttämiselle ja luokittelulle. Myös taloudellisesti tärkeille kasveille ja kansainväliselle vaihdolle on omat yksikkönsä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Souq al Arabi': {
+      aika: 'markkinapaikka',
+      teksti: 'Souq al Arabi on Khartumin keskustan ulkoilmamarkkina. Sen alue levittäytyy usealle korttelille suuren moskeijan ja minibussiaseman eteläpuolelle. Myyjät sijoittuvat tavararyhmittäisiin osiin. Markkinassa on esimerkiksi kultaan ja koruihin keskittyvä myyntialue.\n\nOmdurmanin markkina ja Bahrin Saad Gishra ovat kaupunkiseudun muita kauppapaikkoja. Ne sijaitsevat jokien eri puolilla, kun Souq al Arabi kuuluu Khartumin keskustaan.',
+      kuvat: [],
+      lahde: 'Wikipedia; Wikivoyage',
+    },
+  },
+  lilongwe: {
+    'Lilongwe Wildlife Centren metsäalue': {
+      aika: 'Nykyinen vierailu- ja kuntoutuskeskus 2000-luvulla',
+      teksti: 'Lilongwe Wildlife Centren metsäalue sijaitsee Old Townin ja City Centren välissä. Vierailualueelle tullaan Kenyatta Roadin kautta. Acacia- ja Combretum-puiden ympäristön läpi kulkee Lingadzi-joki. Metsässä on luonnonvaraisia marakatteja, ja jokialueen linnustoon kuuluvat myös Scopus umbretta -vesilinnut. Julkinen metsä ja erillinen eläinkuntoutusalue ovat eri osia.\n\nKuntoutuksessa ihmiskontaktia rajoitetaan villin käyttäytymisen säilyttämiseksi; metsäalueen tehtäviin taas kuuluvat luontokävelyt ja ympäristökasvatus. Vuonna 1873 nykyistä keskusta ei ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  lusaka: {},
+  mogadishu: {
+    'Arba\'a Rukun -moskeija': {
+      aika: 'keskiaika',
+      teksti: 'Arba\'a Rukun on Shanganin historiallisessa kaupunginosassa oleva moskeija, joka tunnetaan myös nimellä Arba Rucun. Sen alkuperäinen rakennus on keskiajalta. Perustajaksi nimetään Khusra ibn Mubarak al-Shirazi, jonka nimi esiintyy rukoussyvennyksen eli mihrabin piirtokirjoituksessa.\n\nMoskeijan arkkitehtuuriin kuuluu kupoli ja minareetteja. Mihrabin piirtokirjoitus ajoittuu 1200-luvun jälkipuoliskolle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mogadishun katedraalin rauniot': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Mogadishun katedraalin alkuperäisen suunnitelman teki Antonio Vandone. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus edusti normannivaikutteista historiallistyyliä. Alkuperäisessä julkisivussa tornit olivat molemmilla sivuilla. Pohjamuoto oli latinalainen risti; sisätilan laivoja erottivat pilarit ja teräväkaaret.\n\nKatedraali rakennettiin 1900-luvun alkupuolen siirtomaakaudella. Nykyisin katedraali on raunioitunut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Liidon ranta': {
+      aika: 'luonnonranta; nimetty palvelualue 1900-luvulta',
+      teksti: 'Liido on Mogadishun hiekkaranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa. Paikallisessa käytössä kirjoitusasu on Liido. Luonnonrannan yhteyteen kehittyi siirtomaakaudella nimetty ranta- ja palvelualue, ja rannalla on ollut myöhempiä hotelli- ja ravintolarakennuksia.\n\nNykyinen Liido-nimi ja rannan palvelurakentaminen tulivat vasta 1900-luvun siirtomaakaudella.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  antananarivo: {
+    'Anosy-järvi': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan.\n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Lac anosy Antananarivo 2019-10-02 8.jpg',
+          lyhyt: 'Anosy-järven rantaa Antananarivossa, 2019.',
+          selite: 'Anosy-järven rantaa Antananarivossa, 2019.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  gaborone: {
+    'Kgale Hill': {
+      aika: 'Luontokohde',
+      teksti: 'Kgale Hill on Gaboronen maisemaan kuuluva kukkula, joka tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi viittaa kuivuneeseen paikkaan. Laelta avautuu näkymä kaupunkiin ja ympäristöön, ja ylös johtaa kolme kävelyreittiä. Reiteillä voi nähdä paviaaneja.\n\nKukkulalla on toiminut myös televisiotoistin. Sen juurella kuvattiin televisiosarjaa The No. 1 Ladies’ Detective Agency, ja kuvauspaikkaa kutsuttiin leikillisesti Kgalewoodiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Kgale Hill area, Walking Trail 20200329.jpg',
+          lyhyt: 'Polku marulapuiden alla kohti Kgale Hilliä, 2020.',
+          selite: 'Polku marulapuiden alla kohti Kgale Hilliä, 2020.',
+          lahde: 'CNJerem, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gaboronen pato': {
+      aika: '1960-luku; myöhempi korotus 1980-luvulla',
+      teksti: 'Gaboronen pato kokoaa Notwane-joen vettä kaupungin eteläpuolella. Vesihuolto palvelee Gaboronen lisäksi Lobatsea. Altaan valuma-alueeseen kuuluvat Notwanen ohella Taungin, Metsemaswaanen ja Nywanen jokien vedet. Pato on maatäyttöpato, ja sitä korotettiin myöhemmin varastointikyvyn lisäämiseksi.\n\nRakentaminen alkoi 1960-luvulla, kun uutta pääkaupunkia suunniteltiin. Altaan historia kuuluu modernin pääkaupungin rakentamiseen. Altaan vesitilanteeseen ovat vaikuttaneet sekä vaihtelevat sateet ja haihtuminen että vedenkulutuksen kasvu.\n\nTekojärven ympäristössä harrastetaan myös lintujen tarkkailua, purjehdusta ja kalastusta.',
+      kuvat: [
+        {
+          tiedosto: 'Gaborone Dam 20200315a.jpg',
+          lyhyt: 'Gaboronen padon tekojärven rantaa, 2020.',
+          selite: 'Gaboronen padon tekojärven rantaa, 2020.',
+          lahde: 'CNJerem, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: '2000-luku',
+      teksti: 'Kansallinen kasvitieteellinen puutarha sijaitsee Okwa Roadin varrella The Village -alueella Notwanen ympäristössä. Se kuuluu Botswanan kansallismuseon luonnonhistorian yksikölle. Puutarhaan on koottu maan alkuperäiskasveja, ja sen tehtävä liittyy Botswanan kasviperinnön suojelemiseen.\n\nOsastot seuraavat maan erilaisia ekologisia alueita. Mukana ovat esimerkiksi Choben kasvisto, Okavangon ja suola-altaiden ympäristöihin liittyvät palmut sekä mopanemetsien kasvit. Lounaisen Kalaharin osastossa esitellään muun muassa ruohoja ja Hoodia-suvun kasveja.\n\nNykyinen puutarha avattiin 2000-luvulla. Se liittyy modernin pääkaupungin kulttuuri- ja luonnonhistoriallisiin laitoksiin: sama museo, joka säilyttää käsityöperinnettä, huolehtii myös elävästä kasvikokoelmasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  harare: {},
+  maputo: {},
+  maseru: {},
+  mbabane: {
+    'Sibeben kallio': {
+      aika: 'Geologinen muodostuma',
+      teksti: 'Sibebe on graniittimuodostuma Mbabanen lähellä, Mbuluzi-joen laakson yläpuolella. Kalliosta käytetään myös englanninkielistä nimeä Bald Rock, Kalju kallio. Sen ympäristöön kuuluu ruohomaita, lohkareita ja metsäisiä uurteita.\n\nNykyisin Sibebelle noustaan merkittyjä polkuja pitkin, ja paikallisia oppaita on saatavilla. Sibebe on myös yhteisöllinen paikka: Mbabanen ja Mbuluzi-seudun Rotary järjestää Sibebe Survivor -kävelyä, jolla kerätään varoja hyväntekeväisyyteen.',
+      kuvat: [
+        {
+          tiedosto: 'Granite monolith.jpg',
+          lyhyt: 'Retkeilijöitä Sibeben graniittivuorella, 2012.',
+          selite: 'Retkeilijöitä Sibeben graniittivuorella, 2012.',
+          lahde: 'theswazigirl, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  moroni: {
+    Karthala: {
+      aika: 'Tulivuorimaisema; historiallisia purkauksia 1800-luvulta',
+      teksti: 'Karthala on Ngazidjan aktiivinen kilpitulivuori, joka kohoaa Moronin taustalla. Huipulla on laaja kaldera, ja sen ympäristö on muuttunut purkausten seurauksena. Vuoren rinteillä kostea ainavihanta metsä vaihtuu ylempänä matalampiin puihin ja kanervikkoon. Maisema kertoo yhtä aikaa tulivuoren toiminnasta ja eri korkeuksien elinympäristöistä.\n\nKarthalan tutkiminen on erillinen vuoristoretki, jonka olosuhteet eroavat kaupungin kävelystä. Rinteiden metsä ja huipun kaldera muodostavat erilliset elinympäristöt. Kraatterijärvi katosi 2000-luvun purkauksen yhteydessä, mikä muutti huipun maisemaa.',
+      kuvat: [
+        {
+          tiedosto: 'Hiking to Karthala crater.jpg',
+          lyhyt: 'Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.',
+          selite: 'Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.',
+          lahde: 'Rokaso, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  portlouis: {
+    'Aapravasi Ghat': {
+      aika: '1800-luku',
+      teksti: 'Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\nMonet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Champ de Marsin laukkarata': {
+      aika: '1800-luvun alku',
+      teksti: 'Champ de Mars on Port Louis’n kukkuloiden juurella sijaitseva laukkarata. Ennen hevoskilpailuja aluetta käyttivät ranskalaiset joukot harjoituskenttänä. Laukkakilpailut alkoivat 1800-luvun alussa, joten rata oli toiminnassa jo isoisän matkavuonna 1873. Ovaali kiertää oikealle ja päättyy ylämäkeen nousevaan loppusuoraan.\n\nVarhaisilla kilpailupäivillä paikalle rakennettiin ja vuokrattiin tilapäisiä aitioita. Pysyvät katsomot tulivat myöhemmin. Paikka kuuluu myös Mauritiuksen juhlahistoriaan: itsenäistymisen lipunnosto järjestettiin tällä kentällä.',
+      kuvat: [
+        {
+          tiedosto: 'Pferderennbahn port Louis 2019-09-27.jpg',
+          lyhyt: 'Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.',
+          selite: 'Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  victoria: {
+    'Mont Fleurin kasvitieteellinen puutarha': {
+      aika: '1900-luvun alku',
+      teksti: 'Mont Fleurin kasvitieteellinen puutarha on Victorian keskustan tuntumassa Mahén saarella. Se alkoi maatalousasemana, jonka kokoelmaan kerättiin hyötykasveja: puita, palmuja, mausteita, hedelmäpuita ja aromaattisia kasveja. Perustaja oli Mauritiukselta tullut agronomi Dupont.\n\nAlue kehittyi myöhemmin yleiseksi puistoksi. Nykyisessä kokoelmassa on sekä Seychellien omia kasveja että muualta tuotuja koristekasveja. Coco de mer -palmuja kasvaa täällä viljeltyinä, vaikka lajin luonnonvarainen elinalue on Praslinilla ja Curieusella. Puutarhassa elää myös Aldabran jättiläiskilpikonnia.\n\nKasvien säilyttäminen alkuperäisen elinympäristön ulkopuolella kuuluu puutarhan tehtäviin. Elävien kokoelmien tunnistus ja tutkimus täydentävät puiston virkistyskäyttöä.',
+      kuvat: [
+        {
+          tiedosto: 'Giant alocasia.jpg',
+          lyhyt: 'Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.',
+          selite: 'Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.',
+          lahde: 'Anatoly Terentiev, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  windhoek: {
+    Christuskirche: {
+      aika: '1900-luvun alku',
+      teksti: 'Christuskirche on Windhoekin keskustassa sijaitseva luterilainen kirkko. Gottlieb Redeckerin suunnittelemassa rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Kirkon hiekkakivi saatiin Avisin padon läheltä, mutta sisäänkäynnin Carraran marmori tuotiin Italiasta. Myös kellolaite ja osa katosta kulkivat paikalle Saksasta.\n\nKirkko rakennettiin siirtomaakaudella 1900-luvun alussa. Christuskirche sijaitsee liikennesaarekkeella Robert Mugabe Avenuen varrella.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg',
+          lyhyt: 'Christuskirche Windhoekissa, 2018.',
+          selite: 'Christuskirche Windhoekissa, 2018.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/n1-2e1d8ed267280c5ce11a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Alte Feste': {
+      aika: '1800-luvun loppu ja 1900-luvun alku',
+      teksti: 'Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nSotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Myöhemmät kunnostukset ovat muokanneet rakennuksen käyttöä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  asgabat: {
+    Nisa: {
+      aika: 'Antiikin aika',
+      teksti: 'Nisa on partialaisten arkeologinen alue nykyisen Ašgabatin länsipuolella. Maailmanperintökohteeseen kuuluvat Vanhan ja Uuden Nisan jäänteet. Kaivauksissa on löytynyt asumiseen, hallintoon ja uskonnolliseen käyttöön liittyneitä rakennuksia. Alue oli kauppa- ja kulkureittien risteyksessä, ja löydöissä näkyy Keski-Aasian sekä Välimeren kulttuurien vuorovaikutus. Iranilainen perinne kohtasi täällä hellenistisen maailman.\n\nNisan löydöissä on kirjoitettuja asiakirjoja, taideteoksia ja norsunluisia juomasarvia eli rhyton-astioita. Raunioilla nähtävä rakennusten hahmo ei vastaa muinaisen kaupungin alkuperäistä ulkoasua: eroosio on muuttanut maavalleja ja rakennusten jäänteitä.',
+      kuvat: [
+        {
+          tiedosto: 'Nisa fortress walls close to Ashgabat (44675736824).jpg',
+          lyhyt: 'Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.',
+          selite: 'Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.',
+          lahde: 'Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  biskek: {
+    'Osh-tori': {
+      aika: '1900-luku',
+      teksti: 'Osh-tori sijaitsee Biškekin länsipuolella. Tällä torilla myydään elintarvikkeita, vaatteita, kodin tavaroita ja matkamuistoja, mutta tarjontaan kuuluvat myös soittimet.\n\nKansallistuotteiden osasto tunnetaan nimellä Kyyal, joka merkitsee unelmaa tai mielikuvitusta. Sieltä löytyy kirgisialaisia vaatteita, puisia säilytysarkkuja, vuodevaatteita ja kehtoja. Vaatteita voi myös tilata myyjiltä toivotussa koossa tai värissä.',
+      kuvat: [
+        {
+          tiedosto: 'Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg',
+          lyhyt: 'Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.',
+          selite: 'Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.',
+          lahde: 'ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  dhaka: {
+    'Lalbaghin linnake': {
+      aika: '1600-luku',
+      teksti: 'Lalbaghin linnake rakennettiin Dhakan vanhaan kaupunkiin mogulikauden Bengalin kuvernöörin asuinpaikaksi. Työt aloitti 1600-luvulla prinssi Muhammad Azam Shah, keisari Aurangzebin poika. Prinssin lähdettyä Shaista Khan jatkoi hanketta, mutta kokonaisuus jäi keskeneräiseksi: rakennustyö pysähtyi Pari Bibin kuoleman jälkeen. Paikalla on kuvernöörin asuintiloja, moskeija ja Pari Bibin hautarakennus.\n\nKuvernöörin asuintiloihin liittyy hammam, jonka veden lämmitys- ja jakelujärjestelmän osia on löydetty arkeologisissa tutkimuksissa. Vesikanavat ja suihkulähteet kuuluvat myös kompleksin puutarhoihin.\n\nSen alkuperäisen sijainnin ymmärtämistä vaikeuttaa myös joen muutos: Buriganga kulki aiemmin linnakkeen vierellä, mutta on sittemmin siirtynyt kauemmas.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Armenialainen kirkko': {
+      aika: '1700-luku',
+      teksti: 'Pyhän ylösnousemuksen armenialainen kirkko sijaitsee Armanitolassa Dhakan vanhassa kaupungissa. Kirkko valmistui 1700-luvulla alueelle, jolla oli jo armenialainen hautausmaa. Kauppiaiden yhteisö oli asettunut kaupunkiin ja osallistui muun muassa juutin ja nahan kauppaan. Armanitolan nimi säilyttää tämän historian kaupungin kartassa.\n\nRakennuksessa on rukoussali ja sivuilla suorakulmaiset siivet, joiden yhteydessä ovat sisäänkäynnit. Vanhan hautausmaan säilyneet kivet ovat toinen tapa seurata yhteisön historiaa: ne kertovat kaupungissa eläneistä ihmisistä. Kirkon yhteydessä oli myös kellotorni, joka tuhoutui myöhemmin maanjäristyksessä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  dusanbe: {},
+  islamabad: {
+    'Margallan kansallispuisto': {
+      aika: 'Kukkulat luonnonmaisemaa; kansallispuisto 1900-luvulta',
+      teksti: 'Margallan kansallispuiston kokonaisuuteen kuuluvat kukkulat, Shakarparianin alue ja Rawal-järvi. Himalajan esivuoriston rinteet alkavat aivan pääkaupungin vierestä. Puiston kasvistossa on Pinus roxburghii -mäntyä, villioliivia, paikallisia päärynäpuita sekä monia kukkivia puita ja pensaita. Eläimistöön kuuluvat leopardit, muntjakit ja goralit; lisäksi alueella elää makakkeja, piikkisikoja, lintuja ja käärmeitä.\n\nKukkuloilla on kävelyreittejä, mutta nousut voivat olla jyrkkiä. Luonnonlähteet ja monsuunin aikaan voimistuvat purot ovat osa maisemaa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Rawal-järvi': {
+      aika: 'Tekoallas 1900-luvulta',
+      teksti: 'Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\nJärven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita.',
+      kuvat: [
+        {
+          tiedosto: 'Rawal Lake Eastern Bank.jpg',
+          lyhyt: 'Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.',
+          selite: 'Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.',
+          lahde: 'ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  taskent: {
+    'Kukeldashin medresa': {
+      aika: '1500-luku',
+      teksti: 'Kukeldashin medresa sijaitsee Taškentin vanhan kaupungin alueella Chorsun basaarin lähellä. Se on 1500-luvulla rakennettu islamilainen oppilaitosrakennus. Keltaisesta tiilestä tehdyn rakennuksen perusmuotoon kuuluvat sisäänkäyntiportaali ja sisäpiha, jota reunustavat opiskelijoiden huoneet. Rakennuksen rakenteita on korjattu useaan otteeseen.\n\nRakennus toimi 1700-luvulla myös karavaanien majapaikkana ja myöhemmin linnoituksena. Seuraavalla vuosisadalla osa siitä purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash kunnostettiin myöhemmin. Viime vuosisadalla rakennus oli museona, muun muassa kansanmusiikin esittelypaikkana, ja vuosisadan loppupuolella se palautettiin medresaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  thimphu: {
+    'Simtokhan dzong': {
+      aika: '1600-luku',
+      teksti: 'Simtokhan dzong kohoaa Thimphun eteläpuolisella harjanteella. Sen sijainti liittyy laaksoon sekä kulkureitteihin, jotka johtavat Paron ja itäisen Bhutanin suuntiin. Dzong tarkoittaa linnoitusluostaria: samassa kokonaisuudessa on ollut sekä uskonnollisia että hallinnollisia tehtäviä. Simtokhan rakennutti 1600-luvulla Zhabdrung Ngawang Namgyal, joka yhdisti Bhutania.\n\nSisällä ja ulkoseinillä on kappeleita, maalauksia, rukouspyöriä ja liuskekivireliefejä. Ne kertovat rakennuksen uskonnollisesta käytöstä; linnoituksen historia ei näy vain muurien paksuudessa. Kokonaisuutta on korjattu ja laajennettu useaan otteeseen, joten nykyistä ulkoasua ei voi sellaisenaan siirtää menneisyyteen.\n\nRakennukseen on myöhemmin liittynyt myös dzongkhan kielen opetusta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bandarseribegawan: {
+    'Kampong Ayer': {
+      aika: 'Vuosisatoja vanha vesiasutus',
+      teksti: 'Kampong Ayer on usean kylän muodostama vesiasutus Brunei-joella. Talot ja osa julkisista rakennuksista seisovat paalujen päällä, ja kävelysillat yhdistävät niitä toisiinsa. Leveämpien vesiväylien yli kuljetaan moottoriveneillä. Koulujen, moskeijoiden ja tavallisten kotien rinnakkaisuus kertoo, että alue on elävä kaupunginosa.\n\nNykyinen maalla sijaitseva keskusta kasvoi myöhemmin sen rinnalle, mutta vesikylän asukkaat eivät kaikki muuttaneet pois. Talojen materiaalit ja palvelut ovat muuttuneet: moniin koteihin tulee sähkö ja vesijohtovesi. Alueen galleria avaa vesikylän vaiheita ennen kävelyä sen yhteisillä kulkuväylillä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Tasek Lama': {
+      aika: 'Nykyinen virkistyspuisto 1900-luvun lopulta',
+      teksti: 'Tasek Lama on Bandar Seri Begawanin virkistyspuisto Jalan Tasek Laman varrella. Sen polkuja käytetään kävelyyn ja juoksuun, ja reittejä jatkuu myös ympäristön kukkuloille. Polkuja kulkee myös vesiputouksen luo. Puistossa on kasvillisuuden lisäksi liikunta- ja leikkipaikkoja. Se toimii kaupungin asukkaiden ulkoilupaikkana, eikä puistoretki edellytä siirtymistä kauas sisämaan metsiin.\n\nAlueen vedenkäyttö kuuluu myös kaupungin myöhempään historiaan: vesiputouksen yhteyteen rakennettiin pato veden johtamiseksi Brunei Towniin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kualalumpur: {
+    'Kuala Lumpurin historiallinen rautatieasema': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Kuala Lumpurin historiallinen rautatieasema sijaitsee Jalan Sultan Hishamuddinin varrella. Arthur Benison Hubback suunnitteli rakennuksen, jonka arkkitehtuuri yhdistää länsimaisia ja moguliperinteeseen liittyviä muotoja. Julkisivun kaaret ja kulmien kattopaviljongit tekevät asemasta tunnistettavan. Julkisivu on rapattu vaaleaksi. Asemassa on ollut myös rautatiehotelli.\n\nNykyinen päärakennus syntyi 1900-luvun alkupuolella aiemman aseman tilalle. Sittemmin KL Sentral otti suuren osan kaupungin pääaseman tehtävistä.',
+      kuvat: [
+        {
+          tiedosto: '2024-09 Kuala Lumpur station 03.jpg',
+          lyhyt: 'Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.',
+          selite: 'Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.',
+          lahde: 'Ariyanto, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/n1-819b4c7b1af87ad392bb.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bukit Nanas': {
+      aika: 'Metsän suojelualue 1900-luvun alusta',
+      teksti: 'Bukit Nanas on Kuala Lumpurin keskustan kukkula, jonka alueella on säilynyt trooppista sademetsää. Metsässä on kävelypolkuja, ja suojelualue tunnetaan nykyisin nimellä KL Forest Eco Park. Rakentaminen on vähentänyt metsän pinta-alaa, joten nykyinen vihreä alue on osa laajemmasta historiallisesta kokonaisuudesta.\n\nBukit Nanas merkitsee ananaskukkulaa. Perimätiedon mukaan ananaksia kasvatettiin puolustusasemaa ympäröivänä esteenä, mutta nimen selitys esitetään kertomuksena eikä todistettuna tapahtumana. Suojelualue perustettiin vasta 1900-luvun alussa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  male: {
+    'Hukuru Miskiy, vanha perjantaimoskeija': {
+      aika: '1600-luku',
+      teksti: 'Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle.\n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen pontti-uraliitoksilla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  naypyidaw: {
+    'National Herbal Park': {
+      aika: '2000-luvun kasvipuisto',
+      teksti: 'National Herbal Park on Naypyidaw–Taungnyo-tien lähellä sijaitseva kasvipuisto. Sinne on koottu Myanmarin eri alueilta kasveja, jotka tunnetaan perinteisistä lääkekasvien käyttötavoista. Kokoelman tarkoitukseen kuuluu kasvien säilyttäminen ja perinteisen kasviosaamisen ylläpitäminen. Kasvien alkuperä ja käyttötavat kuuluvat kokoelman aiheeseen.\n\nPuisto kuuluu 2000-luvulla rakennetun pääkaupungin aikaan. Eri alueiden kasvit on tuotu samaan paikkaan, ja elävä kokoelma vaatii hoitoa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  phnompenh: {
+    'Kambodžan kansallismuseo': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Kambodžan kansallismuseo sijaitsee Kuninkaanpalatsin pohjoispuolella Phnom Penhin keskustassa. Sen rakennus ei ole vanha temppeli, vaikka suunnittelussa on käytetty khmerien temppeliarkkitehtuurin muotoja. George Groslier sovitti nämä esikuvat museon suurempiin tilatarpeisiin. Näyttelyrakennukset ja sisäpiha muodostavat kokonaisuuden, jossa arkkitehtuuri ja esineistö edustavat eri ikäisiä kerrostumia.\n\nKokoelmissa on veistoksia, keramiikkaa, pronssiesineitä ja kansatieteellistä aineistoa. Museo sekä esittelee että säilyttää kambodžalaista kulttuuriperintöä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  pjongjang: {
+    'Moran-kukkula': {
+      aika: 'Luonnollinen kukkula; nykyinen puistoalue',
+      kuvat: [
+        {
+          tiedosto: 'Moranbong Park - 03.jpg',
+          lyhyt: 'Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.',
+          selite: 'Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.',
+          lahde: 'Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+      teksti: 'Moran-kukkula eli Moranbong muodostaa puiston Pjongjangin keskustassa. Sen koreankielinen nimi tarkoittaa pionikukkulaa. Paikka tuo tasangolla sijaitsevaan kaupunkiin korkeuseroja ja liittyy myös joenrantaan: Taedongin puoleisella rantatörmällä sijaitsee vanha Pubyok-paviljonki. Kukkulan ympäristö on virkistysaluetta, ja sen lähellä on ravintoloita sekä muita vapaa-ajan paikkoja.\n\nPubyokin aiempi nimi oli Yongmyong, ja paviljonki kuului samannimiseen temppeliin. Keskiajalla käyttöön tullut Pubyok-nimi viittaa kelluviin muureihin, mielikuvaan rakennuksesta joen yllä. Paviljongin pylväät ja kattorakenne edustavat korealaista puurakentamista.',
+    },
+  },
+  vientiane: {
+    'Wat Si Saket': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Wat Si Saket sijaitsee Lan Xangin ja Setthathiratin katujen kulmassa lähellä Haw Phra Kaewta. Kuningas Anouvong rakennutti temppelin 1800-luvun alkupuolella.\n\nTemppelin ympärillä on terassi, ja varsinaiseen rakennukseen kuuluu monitasoinen koristeltu katto. Käytäväseinien syvennyksissä on pieniä Buddha-kuvia, joiden materiaaleihin kuuluvat keramiikka ja hopea. Sisäpihan keskellä on sim, temppelin vihkimyssali. Sen seinämaalaukset kuvaavat Buddhan aiempia elämiä.\n\nKaupungin 1800-luvun tuhon yhteydessä Siamin joukot käyttivät temppelialuetta päämajana ja majoituspaikkana. Temppeliä korjattiin myöhemmin ranskalaisajan hallinnon aikana, ja siellä toimii myös museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  belmopan: {
+    'Guanacasten kansallispuisto': {
+      aika: 'Suojelualue 1900-luvun jälkipuoliskolta',
+      teksti: 'Guanacasten kansallispuisto sijaitsee Belmopanin lähellä, Roaring Creekin sillan tuntumassa päätien pohjoispuolella. Puisto sai nimensä suuresta guanacaste-puusta, jonka haarautunut runko vähensi sen arvoa puutavarana. Puu säästyi aikanaan hakkuulta ja antoi myöhemmin nimensä suojelualueelle.\n\nPuistoa hoitaa Belize Audubon Society. Alueella on ylläpidettyjä metsäpolkuja ja ympäristöopetuksen keskus. Puustoon kuuluu esimerkiksi mahonkia, ja metsän eläimistä on havaittu valkohäntäpeuroja, jaguarundeja ja vyötiäisiä. Lintuharrastajalle alue on myös paikallinen retkikohde.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kingston: {},
+  ottawa: {
+    'Rideau-putoukset': {
+      aika: 'Luontokohde; teollisuutta 1800-luvulla, puisto 1900-luvulla',
+      teksti: 'Rideau-putoukset ovat Rideau-joen suulla, jossa sen vesi liittyy Ottawa-jokeen. Green Island jakaa joen kahteen haaraan ja erottaa myös putoukset toisistaan. Varhaiset ranskalaiset näkivät putoavassa vedessä verhon ja antoivat sille nimen rideau. Myöhemmin nimi siirtyi putouksilta joelle.\n\nPaikan historiaan kuuluu myös teollisuus. Joen haarojen virtaamaa säätelevät padot; ympäristö muutettiin vasta myöhemmin puistoksi. Nykyinen puisto on syntynyt entiselle teollisuusalueelle.',
+      kuvat: [
+        {
+          tiedosto: 'Rideau Falls - 01.jpg',
+          lyhyt: 'Rideau-putousten vettä ja kallioita vuonna 2016.',
+          selite: 'Rideau-putousten vettä ja kallioita vuonna 2016.',
+          lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dominion Arboretum': {
+      aika: '1800-luvun loppu',
+      teksti: 'Dominion Arboretum on Central Experimental Farmin puiden ja pensaiden tutkimuskokoelma. Se sijaitsee kumpuilevalla maalla Prince of Wales Driven, Dows Laken ja Rideau-kanavan välissä. Kokoelman tarkoitus on arvioida kasvien kestävyyttä paikallisissa oloissa. Kävelijälle paikka avautuu puistona, mutta sen puut ovat myös tutkimusaineistoa.\n\nMaaston synnyttämä pienilmasto on mahdollistanut seudulle tavallista arempien kasvien kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kanavan toisella puolella on Carleton University.',
+      kuvat: [
+        {
+          tiedosto: 'Dominion Arboretum 2025.JPG',
+          lyhyt: 'Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.',
+          selite: 'Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.',
+          lahde: 'Canmenwalker, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n2-cfc04dcb8f02d27db355.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dows Lake': {
+      aika: 'Rideau-kanavan rakentaminen 1800-luvun alkupuolella',
+      teksti: 'Dows Lake on Rideau-kanavaan kuuluva ihmisen tekemä järvi Ottawassa. Ennen kanavan rakentamista paikka tunnettiin Dow’n suurena suona. Pohjoisreunalle rakennettu maapato mahdollisti alueen tulvittamisen osaksi kanavareittiä. Nimi viittaa Abram Dow’hun, joka omisti seudulla maata.\n\nNykyisen järven länsipuolella on Dominion Arboretum ja etelän suunnalla Carleton University. Pohjoisrannan paviljongin yhteydessä on veneilypalveluja, ja kanavan varsia seuraavat tieyhteydet kulkevat myös järven ohi.',
+      kuvat: [
+        {
+          tiedosto: 'Dow’s Lake, off the Rideau Canal (48363469826).jpg',
+          lyhyt: 'Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.',
+          selite: 'Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.',
+          lahde: 'Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  portauprince: {},
+  sanjose: {},
+  sansalvador: {
+    'San Salvadorin tulivuori': {
+      aika: 'Tuliperäinen maisema',
+      teksti: 'San Salvadorin tulivuori kohoaa kaupungin luoteispuolella, ja pääkaupungin länsiosat levittäytyvät sen rinteille. Samaan tulivuorikokonaisuuteen kuuluu El Picachon huippu. Boquerón on suuren kraatterin nimi; se tarkoittaa suurta suuta. Kraatterin pohjalla näkyvä pienempi kartio tunnetaan nimellä Boqueroncito.\n\nSe syntyi vasta 1900-luvun alun purkauksessa, jolloin aiempi kraatterijärvi katosi.\n\nBoquerónin ympäristöön pääsee El Boquerónin tietä ja kansallispuiston kautta.',
+      kuvat: [
+        {
+          tiedosto: 'El salvador Quezaltepeque Boquerón crater.jpg',
+          lyhyt: 'Boquerónin kraatterin sisällä kohoaa San Salvadorin tulivuoren pienempi Boqueroncito-kartio.',
+          selite: 'Boquerónin kraatterin sisällä kohoaa San Salvadorin tulivuoren pienempi Boqueroncito-kartio.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/n1-ff48e17ea5eb0fae406c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  santodomingo: {
+    'Ozaman linnoitus': {
+      aika: '1500-luvun alku',
+      teksti: 'Ozaman linnoitus rakennettiin 1500-luvun alussa Santo Domingon sataman sisääntulon vartiointiin. Se sijaitsee Ozama-joen äärellä vanhassa keskustassa, ja sen keskellä kohoaa Torre del Homenaje. Rakennukseen käytettiin korallikiveä. Työhön osallistui orjuutettuja rakentajia, myös taínoja.\n\nRakennus palveli historiansa aikana myös vankilana. Nykyinen historiallinen kohde kuuluu Unescon maailmanperintöalueeseen yhdessä vanhan keskustan muiden rakennusten kanssa. Sen sijainti joen suun lähellä kertoo alkuperäisestä tehtävästä: vartiointi kohdistui satamaan tuleviin aluksiin ja kaupungin meriyhteyteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon katedraali': {
+      aika: '1500-luku',
+      teksti: 'Santa María la Menorin katedraali kuuluu Santo Domingon vanhan keskustan 1500-luvun rakennuksiin. Se on omistettu Marialle ja toimii edelleen katedraalina. Julkisivu on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen arkkitehtuurissa goottilaiset piirteet ja ruodeholvit yhdistyvät renessanssin vaikutukseen.\n\nKatedraali kuuluu Unescon maailmanperintöalueeseen. Ruodeholvien poikki kulkevat kiviset ruoteet ovat osa rakennuksen goottilaista arkkitehtuuria.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  tegucigalpa: {},
+  washington: {
+    'Georgetownin vanha kivitalo': {
+      aika: '1700-luku',
+      teksti: 'Old Stone House seisoo Georgetownin M Streetillä, liikkeiden ja ravintoloiden keskellä. Sen rakentaminen alkoi vaatimattomasta kodista 1700-luvulla. Rakennusta kasvatettiin vaiheittain: siihen lisättiin keittiö ja ylempiä kerroksia, ja eri aikoina siinä sekä asuttiin että harjoitettiin liiketoimintaa.\n\nTaloon liitettiin pitkään väärä tarina George Washingtonin ja L’Enfantin tapaamisesta. Kansallispuistopalvelun tutkimus osoitti kokousten tapahtuneen muualla. Talo kuitenkin säilyi, ja se kunnostettiin kotimuseoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg',
+          lyhyt: 'Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.',
+          selite: 'Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.',
+          lahde: 'Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n1-b3c814505039faf604da.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Smithsonianin linna': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Smithsonianin linnarakennus on punaisesta hiekkakivestä rakennettu museon ja tutkimuslaitoksen talo National Mallin laidalla. Sen suunnitteli James Renwick nuorempi, joka käytti romaanisen ja goottilaisen rakentamisen muotoja. Kivi saatiin Marylandin Senecasta. Alun perin taloon sijoittui myös laitoksen sihteerin perheen asunto: tiedon kerääminen, hallinto ja koti elivät saman katon alla.\n\nSitä oli myös ehditty korjata suuren tulipalon jälkeen; palo tuhosi muun muassa kirjastoja ja tutkimuspapereita.',
+      kuvat: [
+        {
+          tiedosto: 'Smithsonian Institution Building (53831938398).jpg',
+          lyhyt: 'Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.',
+          selite: 'Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.',
+          lahde: 'ajay_suresh, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Washington-monumentti': {
+      aika: '1800-luvun jälkipuoli',
+      teksti: 'Washington-monumentti on George Washingtonin muistoksi tehty kivinen obeliski National Mallilla. Robert Millsin alkuperäisessä suunnitelmassa tornin ympärille kuului pylväikkö, mutta sitä ei toteutettu. Rakentaminen alkoi yksityisen muistomerkkiyhdistyksen hankkeena, ja työn loppuvaiheista vastasivat liittovaltio ja armeijan insinöörit.\n\nTyö oli pysähtynyt rahoitusvaikeuksiin, ja pitkä tauko näkyy edelleen kivien sävyissä. Uutta marmoria haettiin eri louhoksista, eikä se sopinut täysin yhteen vanhan kanssa. Myös perustuksia vahvistettiin ennen korkeuden kasvattamista.\n\nVuoden 2011 maanjäristys vaurioitti monumentin kivilaatoitusta, ja rakennus suljettiin korjausten ajaksi. Se avattiin uudelleen vuonna 2014.',
+      kuvat: [
+        {
+          tiedosto: 'Washington Monument 2011 earthquake damage 5.jpg',
+          lyhyt: 'Washington-monumentin marmoripinnan halkeama vuonna 2011.',
+          selite: 'Washington-monumentin marmoripinnan halkeama vuonna 2011.',
+          lahde: 'National Park Service, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n3-7cd24386a35c9eb19a04.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'National Building Museum': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'National Building Museum toimii entisessä eläkeviraston talossa Judiciary Squaren lähellä. Montgomery C. Meigs suunnitteli punatiilisen rakennuksen, joka ottaa mallia Italian renessanssipalatsien arkkitehtuurista. Suuri keskushalli ja sen korkeat pylväät tekevät sisätilasta näyttävän, mutta pylväiden marmorilta näyttävä pinta on maalausta: niiden sisällä on tiiltä.\n\nVirastossa hoidettiin veteraanien ja heidän perheidensä etuuksia, ja käytännön tarpeet näkyivät rakennuksessa. Portaista tehtiin matalia kulkemisen helpottamiseksi. Viileää ilmaa otettiin sisään sisäpihan alatasolta, ja lämmintä johdettiin ulos katon kautta. Nykyinen museo käsittelee rakentamista ja suunnittelua tilassa, joka on itsekin niiden historian esimerkki. Talo kuuluu 1800-luvun loppupuolen kaupungin kasvuun.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Thomas Jefferson -kirjastotalo': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Kongressin kirjaston Thomas Jefferson -rakennus sijaitsee Kapitolin vieressä. Kirjaston kasvavat kokoelmat saivat siinä oman talonsa 1800-luvun lopulla. Julkisivu ja koristeelliset sisätilat kuuluvat Beaux-Arts- ja klassistiseen arkkitehtuuriin. Suunnittelutyöhön osallistuivat John L. Smithmeyer, Paul J. Pelz ja myöhemmin Edward Pearce Casey.\n\nKirjastotaloa ei rakennettu vain katsottavaksi. Se yhdistettiin Kapitoliin kirjatunnelilla, jossa sähköinen kuljetin siirsi niteitä. Rakennuksen nykyinen nimi kunnioittaa Thomas Jeffersonia.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kanavanvartijan talo': {
+      aika: '1800-luku',
+      teksti: 'Kanavanvartijan talo on National Mallin länsilaidan pieni rakennus Constitution Avenuen ja 17th Streetin kulmassa. Se palveli sulkua, jossa C&O-kanavan itäinen jatke liittyi Washington City Canaliin. Georgetownista jatkettu kanava liittyi Tiber Creekin suunnalla Washington City Canaliin, joka kulki nykyisen National Mallin alueen läpi kohti Kapitolia. Talo auttaa paikantamaan vesireitin maisemassa, jossa kanava ei enää muodosta kaupungin näkyvää selkärankaa.\n\nC&O-kanavan alukset kuljettivat hiiltä ja monenlaisia muita tavaroita Cumberlandin ja Washingtonin välillä. Niitä vedettiin muuleilla rantapolkua pitkin, ja sulut rytmittivät kulkua eri vedenkorkeuksien välillä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  basseterre: {
+    'Itsenäisyydenaukio': {
+      aika: '1700-luvulla hallituksen hankkima aukio',
+      teksti: 'Itsenäisyydenaukio on vanhan Basseterren keskeinen julkinen tila. Se tunnettiin aiemmin nimellä Pall Mall Square, ja siitä kehittyi hallinnon, kaupan ja sosiaalisen elämän keskus.\n\nAukion historiaan kuuluu orjuutettujen ihmisten myynti. Nykyinen nimi annettiin Saint Kittsin ja Nevisin itsenäistyessä. Orjakauppiaita toimi aukion lisäksi Liverpool Row -kadulla; kauppa käytiin heidän liiketiloissaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bridgetown: {
+    'Nidhe Israelin synagoga': {
+      aika: '1600-luvulta; nykyinen rakennus 1800-luvulta',
+      teksti: 'Nidhe Israel on Bridgetownin historiallinen synagoga Synagogue Lanella. Sen alkuperäinen rakennus valmistui 1600-luvulla, tuhoutui myöhemmin hurrikaanissa ja korvattiin uudella synagogalla. Synagogan ympäristöön kuuluvat myös hautausmaa, museo ja arkeologisissa kaivauksissa löydetty mikveh eli rituaalikylpy.\n\nRakennus myytiin myöhemmin, ja sitä muutettiin uutta käyttöä varten. Naisten lehterin kohdalle rakennettiin kokonainen toinen kerros, ikkunoiden kaaria ja lattiaa vaihdettiin ja hautausmaa rappeutui. Kunnostus palautti talon synagogaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttirakennukset: {
+      aika: '1800-luku',
+      teksti: 'Bridgetownin parlamenttirakennukset koostuvat itä- ja länsisiivestä keskustan vesialueen tuntumassa. Uusgoottilainen arkkitehtuuri liittyy Britannian viktoriaaniseen rakennusperinteeseen, mutta rakennusmateriaalina käytettiin paikallista korallikalkkikiveä. Parlamentin kokoussalit sijaitsevat itäsiivessä; länsisiivessä on ollut erilaisia julkisia toimistoja.\n\nKellotornin historiaan kuuluu paikkaa koskeva muutos. Alkuperäinen itäsiiven yhteydessä seissyt torni alkoi vajota huonojen maaperäolojen vuoksi ja purettiin. Uusi torni rakennettiin länsisiiven yhteyteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  castries: {
+    'Castriesin tori': {
+      aika: '1800-luvun loppu',
+      teksti: 'Castriesin tori sijaitsee keskustassa Jeremie Streetin äärellä. Kauppapaikan nimi on Castries Market and Vendor’s Arcade. Sen rakennuksen toteutti 1800-luvun lopulla Liverpoolin Bruce & Still -toimisto. Torilla myytiin lihaa, kalaa, yrttejä, mausteita ja käsitöitä.\n\nKauppapaikan toiminta on muuttunut ajan mukana: kalaa ei enää myydä entiseen tapaan eikä lihaa teurasteta paikan päällä. Kaupunginvaltuusto perusti torin rinnalle Vendor’s Arcaden vähentämään jalkakäytävien ruuhkaa. Lisärakennuksessa on paikallisia ruokapaikkoja, käsityömyyntiä ja elintarvikkeita. Torin ympärillä kauppa jatkuu sekä päivittäisinä ruokaostoksina että matkailijoiden hankintoina.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Derek Walcottin aukio': {
+      aika: 'Historiallinen aukio, nykyinen nimi 1900-luvun lopulta',
+      teksti: 'Derek Walcottin aukio on puistoaukio Castriesin keskustassa. Sen reunat seuraavat Bourbon-, Brazil-, Laborie- ja Micoud-katuja. Aukion äärellä sijaitsevat Neitsyt Marian tahrattoman sikiämisen katedraali ja kaupungin keskuskirjasto. Paikka on tunnettu muun muassa nimillä Place d’Armes, Promenade Square ja Columbus Square.\n\nNykyinen nimi kunnioittaa Castriesissa syntynyttä Derek Walcottia, joka sai kirjallisuuden Nobelin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Morne Fortune': {
+      aika: 'Kukkula; vanha linnoitusalue 1700-luvulta',
+      teksti: 'Morne Fortune on Castriesin eteläpuolella sijaitseva kukkula ja asuinalue. Ranskalaiset rakensivat sinne linnoituksen, ja alue siirtyi myöhemmin brittien hallintaan. Myöhemmät tykkiasemat kuuluivat sataman puolustukseen.\n\nKukkulalla säilyy vanhoja linnoituksia ja sotilasrakennuksia, mutta alueella on myös oppilaitoksia. Niihin kuuluvat Sir Arthur Lewis Community College ja Länsi-Intian yliopiston Saint Lucian toimipaikka. Kukkulan pohjoispuolelta avautuu näkymiä Castriesiin. Historiallista aluetta hoitaa Saint Lucia National Trust.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kingstown: {
+    'Kingstownin kasvitieteellinen puutarha': {
+      aika: '1700-luku',
+      teksti: 'Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla uusien ravinto-, lääke- ja kauppakasvien kasvattamista varten. Varhaiseen työhön osallistuivat Robert Melville, George Young ja myöhemmin Alexander Anderson. Kasveja saatiin muilta Karibian saarilta sekä Aasiasta ja muualta maailmasta. William Blighin tuomat leipäpuut kuuluivat tähän kansainväliseen kasvinsiirtoon.\n\nHoito heikkeni 1800-luvun puolivälin tienoilla, ja elvytystyö alkoi myöhemmin vuosisadan loppupuolella. Nykyiseen alueeseen kuuluu kasvikokoelman lisäksi papukaijan suojelua palveleva lintutarha.',
+      kuvat: [
+        {
+          tiedosto: 'St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg',
+          lyhyt: 'Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.',
+          selite: 'Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort Charlotte': {
+      aika: 'Rakentaminen 1700-luvulta 1800-luvun alkuun',
+      teksti: 'Fort Charlotte on Britannian siirtomaa-ajan linnake Berkshire Hillillä Kingstownin länsipuolella. Sen rakentaminen alkoi 1700-luvulla ja valmistui 1800-luvun alussa. Nimi viittaa kuningas Yrjö III:n puolisoon Charlotteen. Linnakkeen tykit suunnattiin sisämaahan, sillä puolustussuunnitelma varautui saaren muulta rannikolta maitse tulevaan hyökkäykseen. Tukikohtaan kuljettiin viaduktia pitkin.\n\nSen sijainti näkyy laajoissa näkymissä Kingstowniin, Young Islandille, Bequialle ja Grenadiineille. Alueen rakennuksia käytettiin myöhemmin erilaisiin hoito- ja laitoskäyttöihin. Linnakkeella toimii myös sataman sisääntuloa merkitsevä majakka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  nassau: {
+    'Fort Fincastle': {
+      aika: '1700-luvun loppu',
+      teksti: 'Fort Fincastle sijaitsee Bennet’s Hillin kukkulalla Nassaun keskustan yläpuolella. Lordi Dunmoren rakennuttama linnake on muotoiltu siipirataslaivaa muistuttavaksi. Sen nimen taustalla on Dunmoren toinen aatelisarvo, varakreivi Fincastle. Kukkulalta voi nähdä Nassaun, Paradise Islandin ja New Providencen itäiset lähestymissuunnat.\n\nLinnake ei toiminut pelkästään puolustusrakennuksena: se palveli myös majakkana, kunnes Paradise Islandille tuli korvaava valo, ja myöhemmin viestiasemana. Vierailijan kävelyreitti kulkee usein Queen’s Staircasen kautta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kuningattaren portaat': {
+      aika: '1700-luvun loppu',
+      teksti: 'Queen’s Staircase on kallioon louhittu portaikko Nassaun keskustassa. Orjuutetut ihmiset tekivät portaiden ja tien louhintatyön 1700-luvun lopulla, jotta kaupungin ja Fort Fincastlen välille syntyi kulkuyhteys. Reitti työstettiin kiinteään kalkkikiveen rajallisilla työkaluilla.\n\nPortaiden alaosan kulkuväylä jää korkeiden kiviseinien väliin. Reitti johtaa kohti Bennet’s Hillin linnaketta. Queen’s Staircase -nimi annettiin myöhemmin kuningatar Victorian kunniaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Fort Charlotte': {
+      aika: '1700-luvun loppu',
+      teksti: 'Fort Charlotte seisoo kukkulalla Nassaun sataman länsipuolella. Kalkkikivestä rakennettu linnake syntyi Britannian siirtomaakaudella, kun lordi Dunmore hallitsi Bahamaa.\n\nLinnake rakennettiin Yhdysvaltain itsenäisyyssodan päättymisen jälkeen sataman puolustukseen. Se on yksi Nassaussa säilyneistä Britannian siirtomaakauden linnakkeista. Varustusten tarkoituksena oli torjua espanjalaisten hyökkäyksiä, mutta Fort Charlotte ei joutunut taistelukäyttöön.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  portofspain: {
+    'Queen\'s Park Savannah': {
+      aika: '1800-luvun alusta alkaen',
+      teksti: 'Queen\'s Park Savannahin alue oli sokeriruokomaata ennen kuin kaupunki osti sen Peschierin suvulta 1800-luvun alussa. Kauppaan ei kuulunut suvun hautapaikka, joka jäi yksityiseksi saarekkeeksi yhteisen alueen keskelle. Aluksi Savannah oli karjan laidun kaupungin laidalla.\n\nAlueella on myöhemmin pidetty hevoskilpailuja ja pelattu krikettiä, jalkapalloa sekä rugbya. Savannahin ydin ei ole kauttaaltaan istutettu puutarha; puut reunustavat sen laajaa avointa tilaa. Luoteiskulman Hollows puolestaan on entinen vesiallas, joka on tyhjennetty ja istutettu koristepensailla. Eteläreunan katsomo liittyy nykyiseen karnevaalin tapahtumapaikkaan, kun taas pohjoisreunalta alkaa erillinen kasvitieteellinen puutarha.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Royal Botanic Gardens': {
+      aika: '1800-luvun alusta alkaen',
+      teksti: 'Royal Botanic Gardens sijaitsee Queen\'s Park Savannahin pohjoispuolella Port of Spainissa. Puutarha on puukokoelma, jossa kasvaa sekä Trinidadin ja Tobagon omia lajeja että eri puolilta maailmaa tuotuja puita.\n\nAlueella on myös pieni hautapaikka, johon on haudattu Trinidadin entisiä kuvernöörejä. Savannahin avoin entinen laidun ja tämän puutarhan istutettu ympäristö ovat vierekkäin, mutta eri kohteita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  roseau: {
+    'Old Market': {
+      aika: 'Siirtomaa-aika',
+      teksti: 'Old Market sijaitsee Dominican museon takana vanhassa rantakorttelissa. Paikka tunnetaan myös nimillä Old Market Plaza ja Dawbiney Market Square. Siirtomaa-aikana torilla käytiin kauppaa Dominican ja ympäröivien saarten välillä; tavaroiden lisäksi siellä myytiin orjuutettuja ihmisiä.\n\nMyöhemmin alue kunnostettiin käsityömyynnin paikaksi, ja nykyään siellä on esimerkiksi koruja, mausteita ja matkamuistoja. Jokirannan nykyinen ruokatori on eri paikka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Dominican kasvitieteellinen puutarha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Dominican kasvitieteellinen puutarha sijaitsee Roseaun keskustan itälaidalla Morne Bruce -kukkulan alapuolella. Alueella on nurmikenttiä, istutuksia ja nimikyltillä merkittyjä trooppisia puita. Kasvilajeihin kuuluvat myös ylang-ylang ja tykinkuulapuu.\n\nPuutarha perustettiin entiselle sokeriviljelmälle kokeilemaan hyötykasveja ja tuottamaan taimia viljelijöille. Alueelta lähtevä Jack’s Walk nousee Morne Brucelle, jolta näkyvät Roseau ja Karibianmeri.',
+      kuvat: [
+        {
+          tiedosto: 'Dominica Botanic Gardens 02 2025 08.jpg',
+          lyhyt: 'Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.',
+          selite: 'Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.',
+          lahde: 'Concord, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  saintjohns: {
+    'Saint John’sin katedraali': {
+      aika: '1800-luvun alkupuolisko',
+      teksti: 'Saint John’sin anglikaaninen katedraali seisoo kukkulalla keskustan yläpuolella. Nykyisen kirkon suunnitteli englantilainen Thomas Fuller. Sen ulkorakenne on kiveä, mutta sisällä on mäntypuusta tehty rakenne ja verhoilu. Puinen sisäosa tukee kirkkoa maanjäristysten ja myrskyjen kuormia vastaan. Tästä tulee rakennuksen kuvaus rakennuksena rakennuksen sisällä.\n\nSamalla paikalla oli aiemmin ensin puukirkko ja sitten suurempi tiilikirkko. Tornit kuuluvat kaupungin siluettiin, ja sisärakenne kertoo myös paikallisista rakentamisen haasteista. Katedraali on edelleen anglikaanisen kirkon käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Antiguan ja Barbudan museo': {
+      aika: 'Rakennus 1700-luvun puoliväli',
+      teksti: 'Antiguan ja Barbudan museo sijaitsee Saint John’sin vanhassa siirtomaa-ajan oikeustalossa. Rakennus nousi kaupungin varhaisen torin paikalle 1700-luvun puolivälissä.\n\nMuseossa on saarilta arkeologisissa kaivauksissa löydettyjä alkuperäiskansojen ja siirtomaakauden esineitä. Kokoelmiin kuuluvat myös sokeriplantaasien mallit ja krikettipelaaja Viv Richardsin maila. Museon kokoelmiin kuuluu myös Antiguan sokeriruokorautateillä käytettyjä vetureita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Fort James': {
+      aika: '1700-luku',
+      teksti: 'Fort James sijaitsee niemellä Saint John’sin sataman suulla. Britit rakensivat sen 1700-luvulla vartioimaan satamaa, ja rakennushanketta vauhditti pelko Ranskan hyökkäyksestä. Nimi viittaa Englannin kuningas Jaakko II:een. Paikalla on säilynyt ruutivarasto, tykkejä ja muurien perustuksia, ja niemeltä näkyy ympäröivä satama. Vastakkaisella puolella satamansuuta on Fort Barrington.\n\nSen tykeillä oli 1800-luvulla myös merkinantotehtäviä: vierailevia sotalaivoja tervehdittiin laukauksilla, ja tykillä annettiin merkkejä auringonnousun sekä auringonlaskun aikaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  stgeorges: {
+    'Fort George': {
+      aika: '1700-luvun alku',
+      teksti: 'Fort George on St. George’sin satamaa valvova historiallinen linnake. Ranskalaiset rakensivat sen 1700-luvun alussa ja kutsuivat sitä Fort Royaliksi. Brittihallinnon aikana se sai nimensä kuningas Yrjö III:n mukaan. Moniulmainen pohjamuoto ja ulkonevat bastionit kuuluvat aikakauden puolustusarkkitehtuuriin.\n\nLinnakkeen paikka kertoo sekä sen vahvuudesta että maaston aiheuttamasta ongelmasta. Se hallitsi satamaa, mutta sen yläpuolella sijaitsi korkeampaa maata. Ranskalaiset lähestyivät brittien hallitsemaa linnaketta myöhemmin maalta ja käyttivät korkeampia asemia. Kaupungin linnoitusten kokonaisuus kehittyi kukkuloiden harjanteille. Fort George on osa samaa linnoitusverkostoa kuin Fort Frederick ja Fort Matthew.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Grenadan kansallismuseo': {
+      aika: 'rakennuksia 1700–1800-luvuilta; museo 1900-luvulta',
+      teksti: 'Grenadan kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen historia liittyy brittihallinnon poliisitoimintaan, viereiseen vankilaan, myöhempiin hotelleihin ja varastoon. Varsinaiset vankilarakennukset sijaitsivat nykyisten museotalojen takana.\n\nMuseotoiminta alkoi vasta 1900-luvulla, pitkän hotelli- ja varastohistorian jälkeen. Kokoelmien aiheisiin kuuluvat saaren alkuperäisasukkaat, eurooppalaisten saapuminen, orjuus, plantaasitalous sekä vanha teknologia ja valaanpyynti.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  brasilia: {
+    'Brasílian kansallispuisto': {
+      aika: '1900-luvun jälkipuoliskolta',
+      teksti: 'Brasílian kansallispuisto sijaitsee pääkaupungin luoteispuolella. Se perustettiin uuden pääkaupungin syntymisen yhteydessä suojelemaan sen ympäristön luontoa.\n\nPuistossa cerrado vaihtelee avoimista kasvillisuusalueista vesistöjen varsia seuraaviin metsiin. Lähteet ja purot ovat tärkeä osa aluetta, ja vierailijoita houkuttelevat myös vedestä muodostuneet uima-altaat. Alueella on retkeilypolkuja ja ympäristökasvatusta. Puistoa hallinnoi luonnonsuojelusta vastaava Chico Mendesin luonnonsuojeluinstituutti, joten retki kuuluu suojelualueelle. Sen eläimistöön lukeutuvat esimerkiksi harjasusi, jättiläismuurahaiskarhu ja vesialueiden kapybara.',
+      kuvat: [
+        {
+          tiedosto: 'Piscina parquenacionalbrasilia.jpg',
+          lyhyt: 'Brasílian kansallispuiston allasalue tammikuussa 2008.',
+          selite: 'Brasílian kansallispuiston allasalue tammikuussa 2008.',
+          lahde: 'Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n1-7f523a2f1fdcf525ded6.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Paranoá-järvi': {
+      aika: 'Brasílian rakentamisen ajalta',
+      teksti: 'Paranoá on Brasílian rakentamisen yhteydessä patoamalla muodostettu järvi. Sen rannoilla on Lago Norten ja Lago Sulin asuinalueita, urheiluseuroja, ravintoloita ja yliopiston toimintoja. Nykyinen laaja vesimaisema on osa pääkaupungin rakentamista, vaikka järven vettä ja rantojen luontoa tarkastellaan nyt myös virkistysympäristönä.\n\nJärven pinnan alle jäi Vila Amaury, jossa asui Brasílian työmaille tulleita rakentajia. Vedenalainen Vila Amaury on sukelluskohde. Järvi on vapaa-ajan ja vesiurheilun ympäristö. Järven saaria on myös suojeltu ekologisina alueina. Järven vesi tulee muun muassa Torton, Gaman, Riacho Fundon ja Bananalin puroista, joten vesialue liittyy useisiin pääkaupunkiseudun valuma-alueisiin.',
+      kuvat: [
+        {
+          tiedosto: 'IlhaDosClubes.jpg',
+          lyhyt: 'Ilha dos Clubes on pieni saari Brasílian Paranoá-järvessä.',
+          selite: 'Ilha dos Clubes on pieni saari Brasílian Paranoá-järvessä.',
+          lahde: 'EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n2-0e8a0b9750cdfdf01957.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  georgetown: {
+    'Georgetownin majakka': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Georgetownin majakka sijaitsee Water Streetillä. Nykyinen torni korvasi aiemman majakan 1800-luvun alkupuolella. Ylöspäin kapenevassa kivisessä tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Majakka kuuluu Guyanan National Trustin ylläpitämiin kohteisiin.\n\nTornin perustus on greenheart-puusta tehtyjen paalujen varassa. Sen valo näyttää punaista tai valkoista katselusuunnan mukaan, joten kyse ei ole pelkästä yöllä erottuvasta tornista vaan merenkulun merkkijärjestelmästä. Majakka liittyy Georgetownin paikkaan jokisuun satamakaupunkina.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Promenade Gardens': {
+      aika: '',
+      teksti: 'Promenade Gardens on Georgetownin keskustan julkinen puutarha Middle Streetin tuntumassa. Siellä kasvaa trooppisia kasveja, ja se on pienempi kuin idempänä sijaitseva Guyana Botanical Gardens. Keskustan merkittävät rakennukset, kuten National Library ja St. George\'s Cathedral, sijoittuvat puutarhan ja Independence Squaren ympärille.\n\nMiddle Street erottaa puutarhan eteläpuolisesta Independence Parkista, jota kutsutaan myös Parade Groundiksi. Tämä naapuripaikka liittyy siirtomaa-ajan historiaan: siellä teloitettiin orjuutettuja ihmisiä, jotka osallistuivat kapinaan 1800-luvun alussa. Puutarha ja paraatikenttä ovat eri kohteita.',
+      kuvat: [
+        {
+          lyhyt: 'Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.',
+          selite: 'Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Guyana Botanical Gardens': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Guyana Botanical Gardens perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle 1800-luvun loppupuolella. Paikka oli silloisen kaupungin itälaidalla, mutta nykyisin ympärillä on asuinalueita. Puutarha sijaitsee Guyanan eläintarhan ja Castellani Housen lähellä. Sen varhaisiin hoitajiin kuului kasvitieteilijä George Samuel Jenman.\n\nPuutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella. Niitä tuotiin alueelle jo 1800-luvun loppupuolella, ja manaatteja pidetään myös kaupungin National Parkissa. Puutarhassa kasvaa trooppisia kasveja, palmuja ja suuria lumpeita.',
+      kuvat: [
+        {
+          lyhyt: 'Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.',
+          selite: 'Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens ; https://en.wikivoyage.org/wiki/Georgetown_(Guyana)',
+    },
+  },
+  lapaz: {
+    'San Franciscon basilika': {
+      aika: '1700-luku; torni 1800-luvun lopulta',
+      teksti: 'San Franciscon basilika on Franciscus Assisilaiselle omistettu katolinen kirkko La Pazin keskustassa. Se seisoo Plaza San Franciscon laidalla ja edustaa Andien barokkia. Kirkon ja luostarin historia ulottuu kaupungin espanjalaisen perustamisen aikoihin, mutta nykyinen kirkkorakennus on 1700-luvulta. Sitä edeltänyt kirkko sortui runsaan lumisateen jälkeen 1600-luvun alussa.\n\nSen torni kuuluu kuitenkin 1800-luvun lopun rakennusvaiheeseen, joten nykyistä kokonaisuutta ei voi siirtää sellaisenaan tuohon vuoteen. Kirkon historia ei pääty julkisivuun: saman kompleksin luostarissa toimii museo, joka esittelee rakennuksen menneisyyttä. Aukio, kirkko ja luostari ovat eri osia samasta keskustan historiallisesta ympäristöstä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Plaza Murillo': {
+      aika: 'Siirtomaa-ajan aukio; nykyinen nimi myöhemmältä ajalta',
+      teksti: 'Plaza Murillo sijaitsee La Pazin vanhassa keskustassa eli Casco Viejossa. Aukion ympärillä ovat katedraali sekä hallintorakennuksia, ja sen rajoina kulkevat keskustan kadut. Se muodostui osaksi espanjalaisen kaupungin ruutukaavaa. Siirtomaa-aikana aukion laidalle sijoitettiin kaupunginhallinto, kirkollisia rakennuksia ja kruunun rahasto.\n\nAukio oli olemassa isoisän matkavuonna 1873, mutta nimet ovat vaihtuneet sen historian aikana. Se tunnettiin ensin Plaza Mayorina ja myös Plaza de Armasina. Nykyinen nimi viittaa itsenäisyyshistorian Pedro Domingo Murilloon. Aukion sivuja rajaavat muun muassa Socabaya-, Ayacucho- ja Comercio-kadut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  paramaribo: {
+    'Fort Zeelandia': {
+      aika: '1600-luku',
+      teksti: 'Fort Zeelandia seisoo Paramaribon historiallisessa keskustassa Surinam-joen äärellä. Paikalla olleesta ranskalaisesta puulinnoituksesta kehittyi englantilaiskaudella Fort Willoughby. Hollantilaisten haltuun siirryttyään se sai nykyisen nimensä.\n\nNykyisin linnoituksessa toimii Surinaams Museum eli Surinamen museo. Sen kokoelmissa on arkeologista aineistoa, tekstiilejä, historiallisia valokuvia ja siirtomaa-ajan huonekaluja. Linnoituksen lähellä säilyneet upseeritalot kuuluvat samaan historialliseen ympäristöön, ja entisessä komentajan talossa toimii taidekoulu.',
+      kuvat: [
+        {
+          tiedosto: 'Fort Zeelandia, Paramaribo, Suriname.jpg',
+          lyhyt: 'Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.',
+          selite: 'Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.',
+          lahde: 'Medimir, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Palmupuisto: {
+      aika: '1600-luvulta',
+      teksti: 'Palmentuin eli Palmupuisto sijaitsee Paramaribon historiallisessa keskustassa presidentinpalatsin takana. Kuningaspalmut istutettiin kuvernööri Cornelis van Aerssen van Sommelsdijckin määräyksestä siirtomaakaudella, ja puutarha avattiin yleisölle jo 1600-luvulla. Alue suljettiin myöhemmin pitkäksi aikaa ja avattiin uudelleen vasta 1900-luvun alussa.\n\nPalmupuisto mainitaan kaupungin maailmanperintöarvoihin kuuluvana maiseman osana. Palmujen lisäksi siellä on leikkipaikka, ja juhlapäivinä alueelle tulee myyntikojuja. Puustossa elää trooppisia lintuja, ja puutarhan historia liittyy suoraan sitä ympäröivään hallintokaupunkiin.',
+      kuvat: [
+        {
+          lyhyt: 'Palmujen yleishavainnollistus. Havainnekuva.',
+          selite: 'Palmujen yleishavainnollistus. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-n2-palmut-v1-fbb9192ae09b.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  santiagodechile: {
+    'Plaza de Armas': {
+      aika: '1500-luvulta kehittynyt aukio',
+      teksti: 'Plaza de Armas on Santiagon keskustan pääaukio. Espanjalainen kaupunki suunniteltiin 1500-luvulla ruutukaavaksi, jonka keskelle sijoitettiin aukio hallintoa ja kirkkoa varten. Nykyään sen ympärillä ovat katedraali, keskusposti, entinen kuninkaallinen oikeusistuin ja kaupunginhallinnon rakennus. Metroasema sijaitsee aukion alapuolella.\n\nPostitalo ja aukion laidalla oleva Edwardsin liikerakennus valmistuivat myöhemmin 1800-luvulla. Lähellä sijaitsevat myös Casa Colorada ja esikolumbiaanisen taiteen museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'La Moneda': {
+      aika: '1800-luvun alku; hallintokäyttö samalla vuosisadalla',
+      teksti: 'La Moneda suunniteltiin siirtomaa-ajan Chilen rahapajaksi. Italialaissyntyinen Joaquín Toesca laati uusklassisen rakennuksen suunnitelmat, mutta kuoli ennen sen valmistumista. Rakennus otettiin käyttöön 1800-luvun alussa. Sen nimi muistuttaa edelleen kolikoista, vaikka paikka tunnetaan nykyään hallinnon kotina.\n\nHallinto muutti rakennukseen 1800-luvulla, ja kolikoiden valmistus jatkui sen rinnalla. Rakennuksessa on useita sisäpihoja. Nykyinen palatsi ei silti ole sellaisenaan sama kokonaisuus kuin varhaisen rahapajan aikana: rakennus on saanut myöhempiä osia, korjauksia ja muutoksia. Vanha pääjulkisivu osoittaa Moneda-kadulle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mercado Central': {
+      aika: '1800-luvun jälkipuolisko',
+      teksti: 'Mercado Central on Santiagon keskustan kauppahalli. Sen valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa Skotlannissa. Suunnitteluun osallistuivat Edward Woods ja Charles Henry Driver, ja metalliosat teki Laidlaw’n yritys. Santiagossa rakennustyötä johti Fermín Vivaceta. Kauppahalli korvasi aiemman Plaza del Abaston, joka oli tuhoutunut tulipalossa.\n\nSen rakenne yhdistää keskiosan metallikaton ja sitä ympäröivän muuratun rakennuksen. Katon keskellä on pyramidimainen osa, jonka yläpuolella kohoaa kupolitorni; pienemmät kattotasot jatkavat kokonaisuutta sen ympärillä. Kauppahallin ympäristöön kuuluu myös ravintoloita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santa Lucían kukkula': {
+      aika: 'Luonnonkukkula; puistotyöt 1800-luvun loppupuolella',
+      teksti: 'Santa Lucía, aiemmalta nimeltään Huelén, on kukkula Santiagon keskustassa. Sen eteläpuolella kulkee Alameda, ja kukkulan huipulla on näköalapaikka. Nykyisessä puistossa kulkee portaita ja kävelyreittejä, mutta ennen puistoa kukkulalla oli useita käytännön tehtäviä. Sen rinteiltä otettiin kiveä katujen, talojen ja julkisten rakennusten rakentamiseen.\n\nOsa paikasta oli hautausmaana katoliseen kirkkoon kuulumattomille. Kukkulalla toimi myös tähtitieteellinen havaintopaikka, jossa tutkittiin Auringon parallaksia. Kukkula itsessään oli vanha maamerkki: muutos koski sen käyttöä, reittejä ja istutuksia.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  apia: {
+    'Mount Vaea': {
+      aika: 'Luonnonvuori; kirjailijan hautapaikka 1800-luvun lopulta',
+      teksti: 'Mount Vaea kohoaa Apian eteläpuolella, Upolun sisämaan suunnassa. Vuoren juurella on Lalovaea, jonka nimi tarkoittaa Vaean alapuolta. Itäisellä rinteellä sijaitseva Vailima tunnetaan Robert Louis Stevensonin entisestä kodista. Vuoren maisema ja kirjailijan muistopaikka kuuluvat suojeltuun alueeseen.\n\nStevenson valitsi vuoren viimeiseksi leposijakseen, ja samoalaiset kantoivat hänen arkkunsa sinne hänen kuoltuaan 1800-luvun lopulla. Myös hänen puolisonsa Fannyn tuhka tuotiin myöhemmin Samoaan. Vailiman museolta johtaa kävelypolku hautapaikalle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  canberra: {
+    'Mount Ainslie': {
+      aika: 'Luonnonmäki; nykyinen pääkaupunkimaisema 1900-luvulta',
+      teksti: 'Mount Ainslie on Canberran koillisosassa sijaitseva luonnonmäki, jonka rinteet kuuluvat Canberra Nature Parkiin. Nykyinen englanninkielinen nimi muistuttaa Duntroonin tilan työnjohtajasta James Ainsliestä. Ngunnawal- ja Ngambri-kansoille mäki on pyhä paikka. Sen luontopolkujen varrella tavataan harmaita kenguruja ja kakaduja.\n\nCanberran suunnitelmassa mäestä tehtiin kaupungin keskeisen maa-akselin pohjoispää. Huipulta avautuu näkymä muistomerkkialueen ja parlamenttitalojen kautta keskustaan.',
+      kuvat: [
+        {
+          lyhyt: 'Harmaa kenguru havainnollistaa Mount Ainslien tekstissä mainittua eläimistöä; yleinen havainnekuva.',
+          selite: 'Harmaa kenguru havainnollistaa Mount Ainslien tekstissä mainittua eläimistöä; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n1-v1-20261012-7ad0ff1a1a95.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galambary – Black Mountain': {
+      aika: 'Luonnonmäki; kallioperä siluurikaudelta',
+      teksti: 'Galambary eli Black Mountain sijaitsee Canberran keskustan länsipuolella. Se on paikallisten alkuperäiskansojen tärkeä kohtaamis- ja seremoniapaikka, ja nykyään sen rinteet kuuluvat Canberra Nature Parkiin. Alkuperäinen pensas- ja puukasvillisuus tarjoaa elinympäristöjä kaupungin lähellä. Englanninkielinen nimi tunnettiin aiemmin muodossa Black Hill.\n\nNimestä huolimatta mäen pääasiallinen kivilaji on vaalea kvartsihiekkakivi. Kallioperä on peräisin siluurikaudelta, joten se kertoo aivan eri aikamittakaavasta kuin pääkaupungin rakennukset. Canberra kasvoi mäen itäpuolelle, ja yliopiston pääkampus sijaitsee sen lähellä. Luonnonalue rajaa keskustaa lännen suunnasta.',
+      kuvat: [
+        {
+          lyhyt: 'Vaalea kvartsihiekkakivi havainnollistaa Black Mountainin kivilajia; yleinen havainnekuva.',
+          selite: 'Vaalea kvartsihiekkakivi havainnollistaa Black Mountainin kivilajia; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n2-v1-20261012-859f0d770592.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mount Majura': {
+      aika: 'Luonnonmäki; nykyinen pääkaupunki 1900-luvulta',
+      teksti: 'Mount Majura sijaitsee Canberran koillisreunalla, lähellä Mount Ainslieta. Se kuuluu Canberra Nature Parkiin. Rinteitä peittävät pääasiassa eukalyptukset, joiden joukossa kasvaa herkkiä kasvilajeja ja maassa kasvavia orkideoita. Alueella toimii Friends of Mount Majura -niminen vapaaehtoinen puistonhoitoryhmä.\n\nMäen huipulla on lentoaseman tutka-asema. Kävelypolut nousevat Hackettin ja Ainslien suunnalta.',
+      kuvat: [
+        {
+          lyhyt: 'Eukalyptuksen lehtiä Mount Majuran kasvillisuusaiheen havainnollistuksena; yleinen havainnekuva.',
+          selite: 'Eukalyptuksen lehtiä Mount Majuran kasvillisuusaiheen havainnollistuksena; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n3-v1-20261012-2fc0f1607f66.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  funafuti: {},
+  majuro: {},
+  ngerulmud: {
+    'Ngardok-järvi': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Ngardok on makean veden järvi Babeldaobin saarella Melekeokin osavaltiossa. Ramsar-kohteeseen kuuluu myös järven valuma-alue, puroja, jokivarsien kosteikkoja ja makean veden suometsää. Kokonaisuuden suojelu liittyy veden laadun säilyttämiseen ja Melekeokin vesihuoltoon.\n\nJärvi ja suot ovat suistokrokotiilien (Crocodylus porosus) lisääntymisympäristöä. Ngerdorch-joki yhdistää ne merelle. Alueella tavataan myös Palaun omia lintuja, kuten palaunhedelmäkyyhkyä (Ptilinopus pelewensis), paikalliselta nimeltään biib.',
+      kuvat: [
+        {
+          lyhyt: 'Crocodylus porosus havainnollistaa Ngardok-jutun eläinaihetta; yleinen havainnekuva.',
+          selite: 'Crocodylus porosus havainnollistaa Ngardok-jutun eläinaihetta; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-n1-v1-20261012-d8032706a02f.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  nukualofa: {},
+  palikir: {},
+  southtarawa: {},
+  yaren: {
+    'Moquan maanalainen järvi': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Moqua Well on Yarenin alla sijaitseva pieni maanalainen järvi. Nimen Well merkitys on kaivo, ja nimi liittyy järven käyttöön juomaveden lähteenä. Toisen maailmansodan aikana Moqua oli Naurun asukkaiden tärkeä juomavesivaranto. Lähellä sijaitsevat myös Moquan luolat.\n\nMoqua ja Makwa ovat Yarenin entisiä nimimuotoja. Vuonna 2001 järven ympärille rakennettiin aita onnettomuuksien ehkäisemiseksi. Järven vesipinta-ala on noin 2 000 neliömetriä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
 };
+
+// Islannin kohdekartta = Reykjavikin kartta (js/packs/maakartat.js KAUPUNKIKARTAT.islanti); jutut samat (Karttaseppä 12.10.2026).
+NAHTAVYYSJUTUT.islanti = NAHTAVYYSJUTUT.reykjavik;

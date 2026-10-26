@@ -37,10 +37,15 @@
  *   5. KYTKENTÄ — kytkeMaakunnatKarttaselitteeseen
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
-import { kohteidenNykyinenIso } from './fokuskohteet.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { avaaKohdeSuurennos, kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
+import { luoPohjaNostokortti } from './pohjat/pohjat.js';
+import { polloEhdota } from './pollo.js';
+import { assetOsoite } from './media.js';
+import { valokuvaUrl } from './packs/africa-valokuvat.js';
+import { nostoLataaTyyli, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
+import { MAAKUNNAT_KAIKKI, MAAKUNNAT_KAIKKI_MAAT } from './packs/maakunnat-nimet.js';
 
 /* ===========================================================================
    1. NIMISTÖ
@@ -56,8 +61,13 @@ import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
    avaimet.md-proosasta, koska yksi tunnus poikkeaa nimiFi:stä vain
    välimerkin osalta (ks. Ranskan kommentti alla) — sellainen eroaa
    huomaisi vain lähdettä vertaamalla.
+
+   MAAKUNNAT KAIKILLE MAILLE (löydös 105, Fable 25.9.2026): muiden pelin
+   maiden nimistö on generoitu (js/packs/maakunnat-nimet.js, tools/
+   tee-maakuntavektorit.mjs). Tämän tiedoston kahdeksan kuratoitua maata
+   korvaavat generoidun rivistön kokonaan; tunnukset ovat samat.
    =========================================================================== */
-export const MAAKUNTIEN_NIMET = {
+const KURATOIDUT_NIMET = {
   FRA: {
     "Hauts-de-France": "Hauts-de-France",
     "Grand Est": "Grand Est",
@@ -205,17 +215,20 @@ export const MAAKUNTIEN_NIMET = {
   },
 };
 
-/** Maat listausjärjestyksessä, suomenkielisin nimin (maaotsikkorivit). */
-export const MAAKUNTIEN_MAAT = [
-  { iso: 'FRA', nimi: 'Ranska' },
-  { iso: 'DEU', nimi: 'Saksa' },
-  { iso: 'ITA', nimi: 'Italia' },
-  { iso: 'ESP', nimi: 'Espanja' },
-  { iso: 'GBR', nimi: 'Britannia' },
-  { iso: 'POL', nimi: 'Puola' },
-  { iso: 'AUT', nimi: 'Itävalta' },
-  { iso: 'CHE', nimi: 'Sveitsi' },
-];
+/*
+ * iso → { tunnus: nimi } KAIKILLE pelin maille. TYHJÄ OLIO = maalla ei
+ * ole maakuntia (pienvaltiot, alueet ilman admin-1-jakoa); avain on
+ * silti olemassa, joten "ei maakuntia" ja "tuntematon maa" eroavat.
+ */
+export const MAAKUNTIEN_NIMET = { ...MAAKUNNAT_KAIKKI, ...KURATOIDUT_NIMET };
+
+/** Kuratoitujen maiden otsikkonimet (lyhyempi "Britannia" kuin paketin nimi). */
+const KURATOIDUT_MAANIMET = {
+  FRA: 'Ranska', DEU: 'Saksa', ITA: 'Italia', ESP: 'Espanja', GBR: 'Britannia', POL: 'Puola', AUT: 'Itävalta', CHE: 'Sveitsi',
+};
+
+/** Kaikki pelin maat suomalaisessa aakkosjärjestyksessä (maaotsikkorivit). */
+export const MAAKUNTIEN_MAAT = MAAKUNNAT_KAIKKI_MAAT.map(({ iso, nimi }) => ({ iso, nimi: KURATOIDUT_MAANIMET[iso] ?? nimi }));
 
 /** Alueen suomenkielinen nimi; tuntematon avainpari palauttaa tunnuksen itsensä. */
 export function maakunnanNimi(iso, tunnus) {
@@ -296,12 +309,22 @@ function tallennaValinta(avain) {
  */
 /*
  * EI ENÄÄ RANSKAA VARALLE (löydös 70, Fable 25.9.2026: Kreikassa
- * välilehti näytti Ranskan). Maassa, jolla ei ole maakuntia, yhtäkään
- * ryhmää ei avata; lista kertoo sen tekstillä ja muut maat jäävät
- * suljettuina sen alle. null = maa ei tiedossa (esim. ennen peliä).
+ * välilehti näytti Ranskan). Palauttaa maan vain, jos sillä on
+ * maakuntia; null = ei maakuntia tai maa ei tiedossa.
  */
 export function maakuntienMaa(iso) {
-  return MAAKUNTIEN_MAAT.some((m) => m.iso === iso) ? iso : null;
+  return Object.keys(MAAKUNTIEN_NIMET[iso] ?? {}).length > 0 ? iso : null;
+}
+
+/*
+ * VAIN NYKYINEN MAA LISTASSA (löydös 105, omistaja build 13): listassa ei
+ * koskaan näy muiden maiden maakuntia. Näytettävä maa on pelaajan maa;
+ * ennen peliä tallennetun valinnan maa. Maalla ilman maakuntia listassa on
+ * pelkkä maan nimi. null = ei näytettävää maata (lista tyhjä).
+ */
+export function naytettavaMaa(nykyIso, valittuAvain) {
+  const iso = nykyIso ?? (typeof valittuAvain === 'string' ? valittuAvain.split(':')[0] : null);
+  return iso && MAAKUNTIEN_NIMET[iso] !== undefined ? iso : null;
 }
 
 export const EI_MAAKUNTIA_TEKSTI = 'Tälle maalle ei ole vielä maakuntia';
@@ -358,10 +381,11 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
    * avataan valitun rivin ryhmä kuten ennen.
    */
   let nykyIso = kohteidenNykyinenIso(ui) ?? null;
-  const avoinIso = nykyIso
-    ? maakuntienMaa(nykyIso)
-    : (valittuAvain ? jaaAvain(valittuAvain).iso : null);
-  eiMaakuntia.hidden = !nykyIso || Boolean(avoinIso);
+  const naytettava = naytettavaMaa(nykyIso, valittuAvain);
+  const avoinIso = maakuntienMaa(naytettava);
+  // Teksti vain, jos pelaajan maa ei ole pelin maaluettelossa lainkaan;
+  // maalla ilman maakuntia näkyy pelkkä maan nimi (löydös 105).
+  eiMaakuntia.hidden = !nykyIso || Boolean(naytettava);
 
   /** Vain yksi maaryhmä auki kerrallaan — sama tila kuin karttaselitteen levyllä. */
   function vaihdaRyhma(iso) {
@@ -386,9 +410,11 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
     const iso = kohteidenNykyinenIso(ui) ?? null;
     if (!iso || iso === nykyIso) return;
     nykyIso = iso;
-    const auki = maakuntienMaa(iso);
-    eiMaakuntia.hidden = Boolean(auki);
+    const naytettava = naytettavaMaa(iso, valittuAvain);
+    const auki = maakuntienMaa(naytettava);
+    eiMaakuntia.hidden = Boolean(naytettava);
     for (const [muuIso, r] of ryhmat) {
+      r.ryhma.hidden = muuIso !== naytettava;
       r.otsikko.setAttribute('aria-expanded', String(muuIso === auki));
       r.rivitRyhma.hidden = muuIso !== auki;
     }
@@ -411,7 +437,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       lisaa.title = 'Lisää alueesta';
       lisaa.setAttribute('aria-label', 'Lisää alueesta');
       lisaa.innerHTML = PLUS_IKONI;
-      lisaa.addEventListener('click', () => avaaMaakuntaKortti(avain, nimi, data));
+      lisaa.addEventListener('click', () => avaaMaakuntaKortti(ui, avain, nimi, data, lisaa));
       kuvaus.appendChild(lisaa);
     }
   }
@@ -443,6 +469,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
     const rivitRyhma = html('div', 'maakunnat-rivit-ryhma');
     rivitRyhma.hidden = !auki;
+    ryhma.hidden = iso !== naytettava;
 
     for (const tunnus of Object.keys(tunnukset)) {
       const avain = `${iso}:${tunnus}`;
@@ -465,7 +492,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
     ryhma.append(otsikko, rivitRyhma);
     lista.appendChild(ryhma);
-    ryhmat.set(iso, { otsikko, rivitRyhma });
+    ryhmat.set(iso, { ryhma, otsikko, rivitRyhma });
   }
 
   /*
@@ -525,18 +552,138 @@ const PULU_IKONI = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden=
   + '<circle cx="9.5" cy="10" r="0.9" fill="currentColor" stroke="none"/>'
   + '<circle cx="14.5" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg>';
 
+/** Käyttäjä on pyytänyt vähemmän liikettä: vieritys ilman animaatiota. */
+const liikettaVahennetty = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /** Auki oleva kortti (yksi kerrallaan, kuten fokusnosto.js:n ui.fokusnostoKortti). */
 let avoinKortti = null;
+
+/** Kuvan suurennoksen ui-avain (js/fokuskohteet.js avaaKohdeSuurennos): kortin sulku ja Esc kuorivat sen ensin. */
+const MAAKUNTA_ZOOM = 'maakuntaZoom';
+
+/**
+ * Maakunnan kuva nostokortin kuvaksi: osoite sellaisenaan (assetOsoite päästää valmiin osoitteen läpi), lähderiviin
+ * lisenssi vain, jos lähde ei jo mainitse sitä (omistajan kaappaus 28.9.: "… (CC BY-SA 4.0) · CC BY-SA 4.0").
+ */
+export function maakunnanNostokuva(kuva) {
+  const lahde = kuva?.lahde ?? '';
+  const lisenssi = kuva?.lisenssi && !lahde.includes(kuva.lisenssi) ? kuva.lisenssi : '';
+  return { ...kuva, lahde: [lahde, lisenssi].filter(Boolean).join(' · ') };
+}
+
+/** Sulkuanimaation kesto (css/styles.css .maakunta-kortti) ja varmistus, jos transitionend jää tulematta. */
+const KORTIN_SULKU_MS = 200;
 
 function suljeMaakuntaKortti() {
   const auki = avoinKortti;
   avoinKortti = null;
   auki?.purku?.();
-  auki?.kerros?.remove();
+  // Kuvan suurennos on kortin jatke: se ei saa jäädä yksin kartan päälle.
+  suljeKohdeSuurennos(auki?.ui, MAAKUNTA_ZOOM);
+  const kerros = auki?.kerros;
+  if (!kerros) return;
+  // Sulku samaa reittiä takaisin avanneeseen nappiin (omistaja 29.9.2026); ilman liikettä heti pois.
+  if (liikettaVahennetty()) { kerros.remove(); return; }
+  kerros.classList.add('maakunta-kortti-sulkeutuu');
+  kerros.classList.remove('maakunta-kortti-auki');
+  setTimeout(() => kerros.remove(), KORTIN_SULKU_MS + 40);
 }
 
-function avaaMaakuntaKortti(avain, nimi, data) {
+/*
+ * ── MAAKUNTAKORTTI NOSTOKORTTI-POHJALLA (omistajan kokeilu 1.10.2026, Päätoimittaja) ──────────────────────────────
+ * Kortti avautuu NOSTOKORTTI-pohjalla (PAPERI): iPhonella alareunaan ≤ 45 %, iPadilla sivukortti; kuvat kuvasäännöin
+ * (hero, upotus, galleria), napautus avaa saman suurennoksen kuin ennen; Pulun kysymykset Kysy-napista chattiin, jossa
+ * valmis vastaus annetaan ilman mallikutsua (sama ui.pulunLinssikysymykset-kytkentä kuin Ihmisen matkassa); ✕ pois.
+ * Peruttavissa: MAAKUNTAKORTTI_POHJA = false tai ?maakuntakortti=vanha (localStorage matkakirja-maakuntakortti).
+ */
+const MAAKUNTAKORTTI_POHJA = true;
+
+/** Lippu + ?maakuntakortti=vanha|pohja tai localStorage matkakirja-maakuntakortti. */
+export function maakuntakorttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('maakuntakortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-maakuntakortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return MAAKUNTAKORTTI_POHJA;
+}
+
+/** Pulun valmiit kysymykset chatille (ui.pulunLinssikysymykset-muoto, js/linssit/ihmisen-matka-pulukysymykset.js). */
+export function maakunnanPulukysymykset(avain, kysymykset) {
+  const lista = (kysymykset ?? []).filter((k) => k?.q);
+  if (!lista.length) return null;
+  return {
+    avain: `maakunta:${avain}`,
+    tunnus: avain,
+    lisanosto: false,
+    kysymykset: lista.map((k) => k.q),
+    vastaus: (kysymys) => {
+      const osuma = lista.find((k) => k.q === kysymys);
+      return osuma?.a ? { vastaus: osuma.a, lahteet: [] } : null;
+    },
+  };
+}
+
+function avaaMaakuntaPohjalla(ui, avain, nimi, data) {
+  const kuvat = maakunnanKuvat(data).map(maakunnanNostokuva).filter((k) => k.osoite || k.tiedosto).map((k) => ({
+    url: k.osoite ? assetOsoite('nostot', k.osoite) : valokuvaUrl(k.tiedosto, 800),
+    kuvateksti: k.selite ?? k.lyhyt ?? '',
+    lahde: k.lahde ?? '',
+    alkuperainen: k,
+  }));
+  const pulu = maakunnanPulukysymykset(avain, haePulu(avain));
+  const edellinen = ui?.pulunLinssikysymykset ?? null;
+  const kysely = pulu ? () => pulu : null;
+  const pohja = luoPohjaNostokortti({
+    yla: 'Maakunta',
+    otsikko: nimi,
+    kuvat,
+    kappaleet: [{ teksti: data?.pitka ?? data?.lyhyt ?? '' }],
+    napit: pulu ? [{ teksti: 'Kysy', tyyppi: 'toiminto', toiminto: 'kysy' }] : [],
+  }, {
+    toiminnot: {
+      kysy: () => {
+        // Chat näyttää tämän maakunnan valmiit kysymykset ja vastaa niihin ilman mallikutsua.
+        if (ui && kysely) ui.pulunLinssikysymykset = kysely;
+        polloEhdota([]);
+        try { globalThis.matkakirjaPollo?.tarkistaKonteksti?.(); } catch { /* pulu ei ole pelissä */ }
+      },
+    },
+    kuvaAuki: (kuva, i, img) => avaaKohdeSuurennos(ui, kuvat[i]?.alkuperainen ?? kuva, () => img, MAAKUNTA_ZOOM),
+    sulje: (p) => { if (avoinKortti?.pohja === p) suljeMaakuntaKortti(); },
+  });
+  if (!pohja) return;
+  document.body.appendChild(pohja.el);
+  avoinKortti = {
+    ui,
+    kerros: null,
+    pohja,
+    purku: () => {
+      if (pohja.auki) pohja.sulje();
+      setTimeout(() => pohja.el.remove(), 260);
+      if (ui && kysely && ui.pulunLinssikysymykset === kysely) ui.pulunLinssikysymykset = edellinen;
+    },
+  };
+  pohja.avaa();
+}
+
+/** Kortti suoraan avaimella "ISO:tunnus" (testit, pariteettikuvat ja savukkeet; sama kortti kuin plus-napista). */
+export function avaaMaakuntaKorttiAvaimella(ui, avain) {
+  const osat = jaaAvain(avain);
+  const data = osat ? haeLuonnehdinta(avain) : null;
+  if (!data) return false;
+  avaaMaakuntaKortti(ui, avain, maakunnanNimi(osat.iso, osat.tunnus), data);
+  return true;
+}
+
+function avaaMaakuntaKortti(ui, avain, nimi, data, avaaja = null) {
   suljeMaakuntaKortti();
+  if (maakuntakorttiPohjalla()) {
+    avaaMaakuntaPohjalla(ui, avain, nimi, data);
+    return;
+  }
+  nostoLataaTyyli();
 
   const kerros = html('div', 'maakunta-kortti-kerros');
   const kortti = html('div', 'maakunta-kortti');
@@ -553,26 +700,23 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   const sisalto = html('div', 'maakunta-kortti-sisalto');
   sisalto.appendChild(html('h2', 'maakunta-kortti-otsikko', nimi));
 
-  // KUVAT (voi puuttua kokonaan erässä 1) — kaksi vierekkäin, useampi
-  // vaakakaruselliin (scroll-snap, ks. css). Ilman kuvia lohko jää pois.
-  const kuvat = maakunnanKuvat(data);
-  if (kuvat.length) {
-    const kuvalohko = html('div', 'maakunta-kuvat');
-    kuvalohko.classList.add(kuvat.length > 2 ? 'maakunta-kuvat-karuselli' : 'maakunta-kuvat-ruudukko');
-    for (const kuva of kuvat) {
-      const kehys = html('figure', 'maakunta-kuva');
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.src = kuva?.osoite ?? '';
-      img.alt = '';
-      kehys.appendChild(img);
-      const lahdeteksti = [kuva?.lahde, kuva?.lisenssi].filter(Boolean).join(' · ');
-      // Lähderivi kulkee talon apurin kautta (tekijakortti.js taytaLahderivi):
-      // Commons- ja lisenssilinkit sekä havainnekuvan selite samoin kuin korteissa.
-      if (lahdeteksti) kehys.appendChild(taytaLahderivi(html('figcaption', 'maakunta-kuva-lahde'), lahdeteksti, kuva));
-      kuvalohko.appendChild(kehys);
-    }
-    sisalto.appendChild(kuvalohko);
+  /*
+   * KUVAT KUTEN MUISSA NOSTOISSA (omistaja 28.9.2026 iPadilla: "Nosto pitää olla saman kokoinen kuin muut nostot ja
+   * kuva pitää pystyä klikkaamaan kokoruudulle"): sama kuvakomponentti kuin nostokortilla (js/fokusnosto.js
+   * piirraNostonKuva / piirraNostonKuvasarja), eli koko kuva näkyy (korkeuskatto 42vh), napautus avaa suurennoksen
+   * samalla kuvaselaimella, ja useampi kuva selataan nuolilla. Ilman kuvia lohko jää pois.
+   */
+  const kuvat = maakunnanKuvat(data).map(maakunnanNostokuva).filter((k) => k.osoite || k.tiedosto);
+  if (kuvat.length === 1) piirraNostonKuva(ui, sisalto, kuvat[0], 'fokusnosto-kuva', undefined, MAAKUNTA_ZOOM);
+  else if (kuvat.length > 1) {
+    piirraNostonKuvasarja(ui, sisalto, kuvat, {
+      otsikko: nimi,
+      kehysLuokka: 'fokusnosto-kuva nostosarja-kuva',
+      nuoliLuokka: 'nostosarja-kuvanuoli',
+      laskuriLuokka: 'nostosarja-kuvalaskuri',
+      leveys: 800,
+      zoomAvain: MAAKUNTA_ZOOM,
+    });
   }
 
   // PITKÄ TEKSTI — jos `pitka` puuttuu (erä 2 ei ole vielä valmis), näytetään `lyhyt`.
@@ -583,6 +727,14 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   if (kysymykset.length) {
     const pulu = html('div', 'maakunta-pulu');
     let avoinVastaus = null;
+    /*
+     * KORTIN KOKO EI MUUTU (omistaja 29.9.2026: "Ikkunan koko ei saa muuttua kun noita klikkaa auki"): korkeus
+     * lukitaan ensimmäisellä napautuksella siihen, mikä se on (kuvat ovat jo ehtineet latautua; katto on
+     * max-height), ja vastaus avautuu kortin sisällä vieritettävänä. Sulkeminen ei kutista korttia.
+     */
+    const lukitseKorkeus = () => {
+      if (!kortti.style.height) kortti.style.height = `${kortti.getBoundingClientRect().height}px`;
+    };
     for (const { q, a } of kysymykset) {
       const nappi = html('button', 'maakunta-pulu-kysymys');
       nappi.type = 'button';
@@ -603,10 +755,12 @@ function avaaMaakuntaKortti(avain, nimi, data) {
           avoinVastaus.vastaus.remove();
           avoinVastaus.nappi.setAttribute('aria-expanded', 'false');
         }
+        lukitseKorkeus();
         const vastaus = html('p', 'maakunta-pulu-vastaus', a);
         nappi.insertAdjacentElement('afterend', vastaus);
         nappi.setAttribute('aria-expanded', 'true');
         avoinVastaus = { nappi, vastaus };
+        vastaus.scrollIntoView?.({ block: 'nearest', behavior: liikettaVahennetty() ? 'auto' : 'smooth' });
       });
       pulu.appendChild(nappi);
     }
@@ -629,18 +783,30 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    // Kuvan suurennos sulkeutuu ensin (sama väistö kuin nostokortilla js/fokusnosto.js).
+    if (ui?.[MAAKUNTA_ZOOM]) return;
     tapahtuma.stopPropagation();
     kiinni();
   };
   document.addEventListener('keydown', nappain, true);
 
   avoinKortti = {
+    ui,
     kerros,
     purku: () => {
       document.removeEventListener('keydown', nappain, true);
       puraNapautus();
     },
   };
+  // Kortti kasvaa avanneen napin kohdalta: origo napin keskelle kortin omissa koordinaateissa (ennen skaalausta).
+  const napista = avaaja?.getBoundingClientRect?.();
+  if (napista?.width) {
+    const kortinLaatikko = { vasen: kortti.offsetLeft, yla: kortti.offsetTop };
+    const kerroksenLaatikko = kerros.getBoundingClientRect();
+    const x = napista.left + napista.width / 2 - kerroksenLaatikko.left - kortinLaatikko.vasen;
+    const y = napista.top + napista.height / 2 - kerroksenLaatikko.top - kortinLaatikko.yla;
+    kortti.style.transformOrigin = `${Math.round(x)}px ${Math.round(y)}px`;
+  }
   void kerros.offsetWidth;
   kerros.classList.add('maakunta-kortti-auki');
 }

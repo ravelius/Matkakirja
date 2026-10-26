@@ -1,5 +1,20 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 28.9.2026 (Pulun äänikeskustelu, KOE):** uusi reitti
+> `tehtava: 'realtime'` antaa selaimelle lyhytikäisen xAI-tokenin
+> (`POST https://api.x.ai/v1/realtime/client_secrets`) ja valmiin
+> `session.update`-istunnon: sama Pulun kehote kuin chatissa
+> (`worker.js pulunKehote`, muoto `'aani'`), pelin xAI-ääni (`ara` tai
+> pelaajan valinta) ja server VAD. Selain avaa WebSocketin suoraan
+> xAI:hin (`js/pulu-realtime.js`); API-avain ei lähde workerista. Reitti
+> on **vain kehittäjäkoodilla** (403 muuten) eikä natiiville. Päiväkatto
+> minuutteina koko pelille: `REALTIME_PAIVARAJA_MIN` (oletus 30), ja
+> jokainen token varaa istunnon enimmäispituuden `REALTIME_ISTUNTO_MIN`
+> (oletus 3) — kehittäjäkoodikaan ei ohita kattoa (429). Ei uusia
+> salaisuuksia: sama `XAI_API_KEY` kuin striimiluennalla. Mittaus ilman
+> ihmistä: `node tools/pollo/realtime-koe.mjs` (ohje tiedoston alussa).
+> Käyttöönotto vasta Pelikoodarin päätöksellä: "Pöllön julkaisu" -ajo.
+
 > **Päivitys 29.8.2026 (sähketehtävän vapaa vastaus):** sama worker
 > arvioi nyt myös sähketehtävän vapaamuotoiset vastaukset
 > (`tehtava: 'sahke'`). Peli tulkitsee tekstin ensin itse ilmaiseksi ja
@@ -24,6 +39,16 @@
 > ympäristömuuttujasta POLLO_KEHITTAJAKOODI). Turvaraja 60 kuvaa/vrk
 > (`KUVA_PAIVARAJA`). Käyttöönotto: aja "Pöllön julkaisu" -ajo
 > uudelleen, jotta uusi worker-versio menee Cloudflareen.
+>
+> **Päivitys 27.9.2026 (striimiluenta xAI:lla):** omistajan päätös
+> 27.9.2026 klo 00.25 — kaikki striimiluenta luetaan xAI:n Grok TTS:llä
+> äänellä `ara` (ensimmäinen tavu ~0,2 s suomeksi). Viides salaisuus
+> `XAI_API_KEY` (<https://console.x.ai> → API keys); "Pöllön julkaisu"
+> vie sen workerille. Kytkin `PUHE_MOOTTORI` (wrangler.jsonc: `xai` |
+> `openai`); ilman xAI-avainta worker lukee OpenAI:lla kuin ennen, ja
+> xAI:n virhe tai 8 s:n aikakatkaisu putoaa samaan varapolkuun.
+> Kehittäjävalikon *striimiääni*-valitsin kokeilee muita xAI-ääniä
+> (vain kehittäjäkoodilla). Äänilista: worker.js `XAI_AANET`.
 >
 > **Päivitys 14.8.2026 (lukijaääni):** sama worker välittää nyt myös
 > pelin lukijaäänen (OpenAI gpt-4o-mini-tts, `tehtava: 'puhe'`).
@@ -140,6 +165,39 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
   (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
   `natiivilleSallittu`).
+- **Elävän oppaan ohjaimet** (omistaja 6.10.2026, opas-juna 148; `opaskeskustelu.js`): `GET /opas/kysymykset?paikka&nimi&kaupunki`
+  → 5–6 valmista kysymystä (esihaku taustalla pysähdyksen yhteydessä, R2 30 vrk), `POST /opas/kysy` → oppaan vastaus,
+  Williamin ääni oppaan polulla ja katolla, toiminto (siirry {nimi, lat, lon, ulkona} | kohde {id} | kaupunki {nimi, lat,
+  lon} | kierros | tauko | jatka | null) ja 2 jatkokysymystä, `GET /opas/liiku?kaupunki` → 12 tärkeintä kohdetta
+  koordinaatteineen (R2 30 vrk). Kysy lasketaan oppaan IP-rajoihin.
+- **Maailman 50 suosikkia** (omistaja 6.10.2026, juna 149): `GET /opas/kohteet?n=50` ilman kaupunkia → `{kohteet: [50 ×
+  {id, nimi, koukku, kaupunki, iso, lat, lon, alarivi, kuva|null}]}`. Lista on vakaa (R2 30 vrk), ja maanosat ovat tasaisesti.
+  Koordinaatit, kuvaus ja P18-kuva haetaan erinä (`kohteetErana`, muutama alipyyntö), ja kuva tulee vain tekijä- ja
+  lisenssitiedoin. Täkyjen oletuspyyntö (8, päivittäin) lämmittää listan taustalla.
+- **"Mikä tämä on?"** (omistaja 6.10.2026; Päätoimittaja): `GET /opas/lahella?lat&lon&r` → `{r, laajennettu, kohteet: [enintään
+  8 × {id, nimi, alarivi, etaisyys_m, lat, lon, kuva|null}]}` etäisyysjärjestyksessä. Säde r on oletuksena 150 m (25–400). Jos
+  säteeltä ei löydy mitään, haetaan 400 m:stä (`laajennettu: true`). Lähde on Wikipedian geohaku (fi + en; artikkeli = tunnettu).
+  Wikidatan tyypeillä pois jäävät ihmiset, järjestöt, tapahtumat, asutukset, kadut ja puretut rakennukset (P576, Q19860854).
+  Nimi tulee fi-Wikipedian otsikosta tai nimiöstä (`suomiNimi`), kuva Commonsista vain tekijätiedoin. WDQS (SPARQL) jätettiin
+  pois: se oli 6.10. rajoitettu yhteen pyyntöön minuutissa. Ehdokkaat tallennetaan ruuduittain (0,002°, R2 30 vrk, 3–5
+  alipyyntöä kylmänä). Jerusalemin alueella alarivistä jätetään maan nimi pois. Valitusta kohteesta kysytään `POST
+  /opas/kysy` -polulla (`paikka: {id, nimi, lat, lon}`).
+- **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
+  testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
+  valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
+  Ohitus vain äänilupalipulla `x-matkakirja-aanilupa` = salaisuus `POLLO_AANILUPA`, omistajan luvalla tarkalle määrälle.
+- **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
+  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana; R2:n elinkaarisääntö `opas-teksti-48h` poistaa tekstit 48 h:n jälkeen, alaikäistarkistus 7.10.2026). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
+  välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
+  (Cache API ei toimi *.workers.dev-osoitteissa). Oppaan IP-laskuri kirjoitetaan harvana
+  (10 pyynnön välein), ja testitunnuksen ja kehittäjän pyynnöt eivät kirjoita IP-laskureita. Päivän operaatiot näkyvät
+  julkaisuajon yhteenvedossa (`kv-kaytto.mjs`).
+- **Astronauttien kuvan sirut** (omistaja 6.10.2026, `kuvasirut.js`): `vastaus`- ja
+  `ehdotukset`-pyynnössä valinnainen `kuva: { tunnus, nimi, maa, lat, lon, selite, teksti, aika }`
+  (tunnus pakollinen). Ehdotukset (3) tehdään vain kuvan tiedoista ja tallennetaan KV:hen
+  avaimella `pulu:kuvasirut:v2:<tiiviste kaikista kentistä>` 30 vrk:ksi: yksi generointi kuvaa kohden
+  ensimmäisellä katselulla, välimuistiosuma ei kuluta rajoja. Vastauksessa kuvan tiedot kulkevat
+  kontekstina. Ei etukäteiseriä ilman omistajan lupaa.
 - **API-avain**: syötetään wranglerille putkessa, jolloin se ei näy
   komentorivillä eikä lokissa. Cloudflare säilöö sen salaisuutena, eikä
   sitä voi lukea takaisin sen paremmin dashboardista kuin ajostakaan.
@@ -295,6 +353,8 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 | `POLLO_PAIVARAJA` | `30` | Kysymystä per vierailija per vuorokausi. Estää yksittäistä käyttäjää kuluttamasta budjettia. |
 | `POLLO_KUUKAUSIRAJA` | `1500` | **Kova kuukausikatto** koko palvelulle. Kun se täyttyy, pöllö lopettaa vastaamisen kuun loppuun asti. |
 | `POLLO_MALLI` | `claude-haiku-4-5-20251001` | Käytettävä malli. Halvin ja nopein riittää — pöllö vastaa lyhyesti. |
+| `OPAS_TESTI_MALLI` | `claude-haiku-5-5` | Testi- ja kehitysliikenteen malli (proto3d-/kehityskäännökset, node/curl, testiotsakkeet; tools/pollo/kulut.js). `pois` = tuotantomalli kaikille. Jaetut välimuistit (kohteet, Liiku, valmiit kysymykset, suosikit) generoidaan aina tuotantomallilla. Jokaisesta mallikutsusta lokirivi `kulu: <reitti> <testi\|peli> <malli> in= cw= cr= out=`. |
+| `PULU_PUUTTUVA_KURATOITU` | (ei asetettu) | Kuratoitu live alle 18-vuotiaille (tools/pollo/kuratoitu.js): otsake `x-matkakirja-aikuinen: 0` kuratoi aina. `1` = myös otsakkeeton pyyntö (vanha appi, web ilman ikäkyselyä) kuratoidaan. Asetetaan vasta, kun vanhan TF-apin todennus on tehty. Seurantalaskurit KV:ssä `kuratoitu:<päivä>:<tehtävä>:<tulos>` (ei IP:tä eikä tekstiä). |
 
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.
@@ -361,7 +421,9 @@ riittää tähän moninkertaisesti.
 - Worker lokittaa virhetilanteesta vain tilakoodin — ei pelaajan
   tekstiä eikä avainta.
 - Käyttörajojen laskurit tallentavat IP-osoitteesta vain lyhyen
-  tiivisteen, ei osoitetta itseään.
+  tiivisteen, ei osoitetta itseään. Tiiviste on suolattu
+  (HMAC-SHA-256 salaisuudella `IP_SUOLA`, GitHubin `POLLO_IP_SUOLA`),
+  jottei sitä voi palauttaa osoitteeksi kokeilemalla kaikkia osoitteita.
 - Järjestelmäkehote (pöllön säännöt: ei tehtävävastauksia, ei
   juonipaljastuksia, ei keksittyjä faktoja) on workerissa, ei pelin
   koodissa. Sitä ei voi kiertää muokkaamalla selaimen puolta.
@@ -379,3 +441,19 @@ riittää tähän moninkertaisesti.
 
 Workerin lokit näet komennolla `npx wrangler tail` (aja tässä
 kansiossa) — siitä näkee, tuleeko pyyntöjä ylipäätään perille.
+
+## Nimetön kävijälaskuri (30.9.2026)
+
+Peli lähettää kerran istunnossa tehtävän `kaynti` (web `js/kaynti.js`, iOS
+`Kaynti.cs`) ja apurahakortin avauksen sekä esittelylinssit omina
+tapahtumina. Worker (`kaynnit.js`) laskee päivän eri kävijät tiivisteenä
+SHA-256(IP + päivän suola). Suola vanhenee kahdessa vuorokaudessa, eikä
+raakaa IP:tä tallenneta eikä lokiteta. Omistajan laitteet (VAIN
+eksplisiittiset merkit: webissä kerran avattu `?omistaja`, iOS:ssä Pöllön
+kehittäjäkoodi Keychainissa tai `ui omistaja 1`; kehittäjätila ja
+esittelylinssit EIVÄT ole omistajan tunniste, koska arvioijien TF:ssä ne
+voivat olla päällä), paikalliset palvelimet, automaatioselaimet ja
+simulaattorit eivät näy luvuissa.
+
+Luku vain kehittäjäkoodilla: `POLLO_KEHITTAJAKOODI=… node tools/kaynnit.mjs 14`.
+KV-kulutus: uusi kävijä tai uusi tapahtuma = 1 kirjoitus, suola 1/vrk.

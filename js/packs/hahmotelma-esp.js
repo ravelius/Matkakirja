@@ -357,6 +357,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-tabernas',
+    nimio: 'Tabernas',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-tabernas-a2f30462.jpg',
       lyhyt: 'Tabernasin autiomaan eroosion uurtamia rotkoja ja kuivia harjuja Almeríassa.',
@@ -838,6 +839,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-las-navas',
+    nimio: 'Las Navas',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-navas-81efc4af.jpg',
       lyhyt: 'Las Navas de Tolosan taistelu 1212 Van Halenin maalauksessa vuodelta 1864.',
@@ -851,7 +853,7 @@ export const HAHMOTELMA_ESP = [
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-navas-3f5dbea6.jpg',
-        lyhyt: 'Kaiverros "Las Navasin taistelun aatto" vuodelta 1852.',
+        lyhyt: 'Kaiverros ”Las Navasin taistelun aatto” vuodelta 1852.',
         selite: 'Kirjaillustraatio teoksesta Las glorias nacionales (1852) esittää sotapäällikön ja sotilaat leirissä ennen taistelua: lippuja kohotetaan, ja oikealla näkyy alttari ristin kanssa.',
         lahde: 'Kaiverrus: Fondo Antiguo de la Biblioteca de la Universidad de Sevilla, Wikimedia Commons (CC BY 2.0).',
         tekija: 'Fondo Antiguo de la Biblioteca de la Universidad de Sevilla',
@@ -887,6 +889,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-campo-de-criptana',
+    nimio: 'Campo de Criptana',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-campo-de-criptana-7b3f58b5.jpg',
       lyhyt: 'Valkoiset tuulimyllyt Sierra de los Molinosin harjanteella pilvisen taivaan alla.',
@@ -1208,6 +1211,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-riotinto',
+    nimio: 'Riotinto',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-riotinto-4c8af57d.jpg',
       lyhyt: 'Riotinto-joen punertava vesi virtaa oranssien ja punaruskeiden kivien välissä.',
@@ -1281,6 +1285,7 @@ export const HAHMOTELMA_ESP = [
   },
   {
     id: 'hahmotelma-almaden',
+    nimio: 'Almadén',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-almaden-72965ff2.jpg',
       lyhyt: 'Puinen kottikärry täynnä malmikiviä Almadénin kaivoskäytävässä.',
@@ -1778,7 +1783,7 @@ export const HAHMOTELMA_ESP = [
       + 'II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin '
       + 'raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on '
       + 'kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen '
-      + 'maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".',
+      + 'maailmanperintöluetteloon vuonna 2018 nimellä ”Caliphate City of Medina Azahara”.',
     lahde: 'en-Wikipedia "Madinat al-Zahra" (uudelleenohjaus "Medina Azahara"), johdanto-osa '
       + '(tarkistettu 21.9.2026).',
     ihme: {

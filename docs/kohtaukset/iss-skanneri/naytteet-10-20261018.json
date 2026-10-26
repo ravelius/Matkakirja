@@ -1,0 +1,256 @@
+{
+ "_meta": {
+  "kuvaus": "Näyte 10 kohteesta, uusi rakenne (B1, omistaja 18.10.): aloitus (tunnistava), luonne, 2–4 riviä. Lähteet vain krediittitiedostoon, ei skanneriin. Faktat tarkistettu riippumattomalla Sonnet-tarkistajalla verkosta 18.10.",
+  "rajat_ehdotus": "aloitus ≤ 45, luonne ≤ 110, rivin arvo ≤ 24, nimike ≤ 18 merkkiä (PT hyväksyi 19.10.)"
+ },
+ "kohteet": [
+  {
+   "tunnus": "k-sumatra",
+   "nimi": "Sumatra",
+   "aloitus": "Maailman kuudenneksi suurin saari",
+   "luonne": "Päiväntasaajan halkaisema sademetsäsaari, jolla elävät sumatrantiikeri ja orangutan.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 700 km"
+    ],
+    [
+     "Asukasluku",
+     "n. 58,6 milj. (2020)"
+    ],
+    [
+     "Korkein kohta",
+     "Kerinci 3 805 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sumatra"
+   ]
+  },
+  {
+   "tunnus": "k-shanghai",
+   "nimi": "Shanghai",
+   "aloitus": "Kiinan väkirikkain kaupunki",
+   "luonne": "Huangpu-joen varrella oleva satama- ja rahoituskeskus, jonka horisontissa kohoaa Shanghai Tower.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "24,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "6 341 km²"
+    ],
+    [
+     "Korkein rakennus",
+     "Shanghai Tower 632 m"
+    ]
+   ],
+   "lahteet": [
+    "https://citypopulation.de/en/china/prov/admin/31__shanghai/",
+    "https://en.wikipedia.org/wiki/Shanghai_Tower"
+   ]
+  },
+  {
+   "tunnus": "k-sierra-leone",
+   "nimi": "Sierra Leone",
+   "aloitus": "Länsi-Afrikan rannikkovaltio",
+   "luonne": "Nimi tulee portugalilaisten ’leijonavuorista’; pääkaupunki Freetown on vuoristoisella niemimaalla.",
+   "rivit": [
+    [
+     "Pääkaupunki",
+     "Freetown"
+    ],
+    [
+     "Asukasluku",
+     "n. 8,5 milj. (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 72 000 km²"
+    ],
+    [
+     "Itsenäistyi",
+     "1961"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sierra_Leone",
+    "https://fred.stlouisfed.org/series/POPTOTSLA647NWDB"
+   ]
+  },
+  {
+   "tunnus": "k-kilimandzaro",
+   "nimi": "Kilimandžaro",
+   "aloitus": "Afrikan korkein vuori",
+   "luonne": "Yksinäinen tulivuori kohoaa savannin yläpuolelle, ja huipulla on yhä jäätä, joka sulaa nopeasti.",
+   "rivit": [
+    [
+     "Korkeus",
+     "5 895 m"
+    ],
+    [
+     "Tyyppi",
+     "lepotilainen tulivuori"
+    ],
+    [
+     "Maa",
+     "Tansania"
+    ],
+    [
+     "Ensinousu",
+     "1889"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+   ]
+  },
+  {
+   "tunnus": "k-lalibela",
+   "nimi": "Lalibela",
+   "aloitus": "Etiopian kalliokirkkojen kaupunki",
+   "luonne": "Kirkot on hakattu alaspäin yhtenäisestä kalliosta 1100–1200-luvun vaihteessa.",
+   "rivit": [
+    [
+     "Kalliokirkkoja",
+     "11"
+    ],
+    [
+     "Korkeus",
+     "n. 2 500 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1978"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lalibela",
+    "https://en.wikipedia.org/wiki/Rock-Hewn_Churches,_Lalibela"
+   ]
+  },
+  {
+   "tunnus": "k-hechi",
+   "nimi": "Hechi",
+   "aloitus": "Vuoristokaupunki Etelä-Kiinan Guangxissa",
+   "luonne": "Vuoristoinen kaupunki, jonka Bama-alue tunnetaan pitkäikäisistä asukkaistaan.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,4 milj. (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 33 500 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hechi",
+    "https://fi.wikipedia.org/wiki/Hechi",
+    "https://en.wikipedia.org/wiki/Bama_Yao_Autonomous_County"
+   ]
+  },
+  {
+   "tunnus": "k-rovaniemi",
+   "nimi": "Rovaniemi",
+   "aloitus": "Lapin maakuntakeskus",
+   "luonne": "Joulupukin kotikaupunkina tunnettu Kemijoen ja Ounasjoen yhtymäkohdan kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 66 000 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "8 017 km²"
+    ],
+    [
+     "Tuhot 1944",
+     "n. 90 % rakennuksista"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Rovaniemi",
+    "https://en.wikipedia.org/wiki/Rovaniemi",
+    "https://www.visitrovaniemi.fi/professionals/media/rovaniemi-facts/"
+   ]
+  },
+  {
+   "tunnus": "v-himalaja",
+   "nimi": "Himalaja",
+   "aloitus": "Maailman korkein vuoristo",
+   "luonne": "Vuoristo kohoaa yhä, koska Intian laatta työntyy Aasian laatan alle.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 2 400 km"
+    ],
+    [
+     "Korkein huippu",
+     "Everest 8 849 m"
+    ],
+    [
+     "8 000 m:n huippuja",
+     "10"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Himalayas",
+    "https://en.wikipedia.org/wiki/Mount_Everest"
+   ]
+  },
+  {
+   "tunnus": "v-uluru",
+   "nimi": "Uluru",
+   "aloitus": "Australian sisämaan pyhä hiekkakivikallio",
+   "luonne": "Yksittäinen punainen kalliomuodostuma kohoaa tasaisesta aavikosta ja muuttaa väriä auringon mukana.",
+   "rivit": [
+    [
+     "Korkeus maasta",
+     "348 m"
+    ],
+    [
+     "Merenpinnasta",
+     "863 m"
+    ],
+    [
+     "Ympärysmitta",
+     "9,4 km"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1987"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Uluru",
+    "https://www.britannica.com/place/Uluru"
+   ]
+  },
+  {
+   "tunnus": "k-tromssa",
+   "nimi": "Tromssa",
+   "aloitus": "Pohjois-Norjan suurin kaupunki",
+   "luonne": "Napapiirin pohjoispuolella saarella sijaitseva kaupunki, jossa revontulia seurataan talvisin.",
+   "rivit": [
+    [
+     "Asukasluku (kunta)",
+     "n. 80 000 (2026)"
+    ],
+    [
+     "Leveysaste",
+     "69,6° N"
+    ],
+    [
+     "Pinta-ala (kunta)",
+     "2 521 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Troms%C3%B8",
+    "https://www.ssb.no/kommuneareal/tromso"
+   ]
+  }
+ ]
+}

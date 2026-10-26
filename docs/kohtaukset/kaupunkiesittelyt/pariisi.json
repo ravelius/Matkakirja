@@ -1,0 +1,40 @@
+[
+ {
+  "id": "pariisi",
+  "esittely": "Kartan alue on Pariisin keskusta. Eiffel-torni rakennettiin vuosina 1887–1889 vuoden 1889 maailmannäyttelyn päänähtävyydeksi, ja Riemukaaren työt aloitettiin Napoleonin tilauksesta 1806; kaari vihittiin käyttöön 1836. Louvre sai alkunsa Filip II Augustuksen 1100-luvun lopulla rakennuttamasta linnoituksesta ja avattiin museona 1793.\n\nNotre-Damen rakentaminen alkoi 1163, tulipalo vaurioitti kirkkoa 2019 ja se avattiin uudelleen joulukuussa 2024. Orsayn asema valmistui maailmannäyttelyn aikaan 1900, ja siitä tuli taidemuseo 1986. Montmartren Sacré-Cœurin työt alkoivat 1875, ja basilika vihittiin 1919. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 659,
+  "kappaleita": 2,
+  "lahteet": [
+   {"url": "https://en.wikipedia.org/wiki/Eiffel_Tower", "title": "Wikipedia: Eiffel Tower", "tukee": "rakennus 28.1.1887-31.3.1889, avattiin yleisölle 15.5.1889"},
+   {"url": "https://aviewoncities.com/paris/eiffel-tower", "title": "A View on Cities: Eiffel Tower", "tukee": "rakennus tammikuu 1887-31.3.1889; 1889 maailmannäyttelyn keskipiste"},
+   {"url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe", "title": "Wikipedia: Arc de Triomphe", "tukee": "Napoleon I tilasi Austerlitzin voiton jälkeen; työ alkoi 15.8.1806; vihittiin 28.7.1836"},
+   {"url": "https://www.guinnessworldrecords.com/world-records/83529-largest-triumphal-arch", "title": "Guinness World Records: Largest triumphal arch", "tukee": "Napoleon Bonaparte tilasi 1806, valmis 1836"},
+   {"url": "https://frenchglimpses.com/2022/10/15/l-arc-de-triomphe-the-largest-in-the-world/", "title": "French Glimpses: L'Arc de Triomphe", "tukee": "Napoleon I, 1806-1836, vihitty heinäkuussa 1836"},
+   {"url": "https://en.wikipedia.org/wiki/Louvre", "title": "Wikipedia: Louvre", "tukee": "linnoitus Filip II:n aloittama 1100-luvun lopulla; museo avattiin 10.8.1793"},
+   {"url": "https://www.france.fr/en/article/louvre-museum-3/", "title": "France.fr: Louvre Museum", "tukee": "linnoitus Philippe Auguste (1190-1202) aikana; museo 10.8.1793"},
+   {"url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris", "title": "Wikipedia: Notre-Dame de Paris", "tukee": "rakennus alkoi 1163; tulipalo 15.4.2019; avattiin uudelleen joulukuussa 2024"},
+   {"url": "https://paris-notredame.com/history/", "title": "Notre-Dame de Paris: History", "tukee": "peruskivi 12.3.1163; tulipalo 15.4.2019; uudelleenavaus 8.12.2024"},
+   {"url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay", "title": "Wikipedia: Musée d'Orsay", "tukee": "asema rakennettu 1898-1900 maailmannäyttelyyn 1900; museo avattiin joulukuussa 1986"},
+   {"url": "https://www.france.fr/en/article/orsay-train-station-museum/", "title": "France.fr: The Orsay, from a Train Station to a Museum", "tukee": "asema valmis 1900; museo avattiin 1986"},
+   {"url": "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris", "title": "Wikipedia: Sacré-Cœur, Paris", "tukee": "työt alkoivat 1875; valmis 1914; vihitty 1919"},
+   {"url": "https://artsandculture.google.com/entity/m01q_np", "title": "Google Arts & Culture: Sacré-Cœur", "tukee": "alku 1875, valmistuminen 1914, vihkiminen 1919"}
+  ],
+  "pudotetut": [
+   "Île de la Citén koko ja Lutetia-tarina (nykyisestä tekstistä): ei tarkistettavissa kahdesta lähteestä tässä ajossa, ei tekstissä",
+   "Eiffel-tornin korkeus (330 m / 300 m / 312 m avattaessa; lähteet erilaiset antennin vuoksi), rautaosien ja niittien määrät (vain Wikipedia)",
+   "Riemukaaren mitat (49,54 m Wikipedia / 50 m Guinness) ja Tuntemattoman sotilaan hauta (vain Wikipedia): ei tekstissä",
+   "Louvren lasipyramidi 1989 / I. M. Pei ja kokoelmien koko (vain Wikipedia)",
+   "Notre-Damen valmistumisvuosi (1260 vs 1345) ja uudelleenavauspäivä 7. vai 8.12.2024 -> vain 'joulukuussa 2024'",
+   "Sacré-Cœurin arkkitehti Paul Abadie ja kupolin korkeus (vain Wikipedia)",
+   "Kartan muut kohteet (Concorden aukio, Luxembourgin puisto, Panthéon, Palais Garnier, Place des Vosges, Bastilji jne.) jätetty pois tilan vuoksi"
+  ],
+  "ristiriidat": [
+   "Riemukaaren vihkimispäivä: Wikipedia 28.7.1836, muut lähteet 29.7.1836 -> vain vuosi 1836",
+   "Riemukaaren rakennuksen aloitus: Wikipedia 15.8.1806; frenchglimpses viittaa myös 1810 -> käytetty 1806 (Wikipedia, Guinness, chemins de mémoire -hakutulos)",
+   "Eiffel-tornin korkeus lähteittäin 300/312/324/330 m -> ei lukua tekstissä",
+   "Notre-Damen uudelleenavaus: 7. ja 8.12.2024 eri lähteissä -> vain kuukausi",
+   "ESTO: Britannica, toureiffel.paris, musee-orsay.fr ja cheminsdememoire.gouv.fr eivät auenneet (403/uudelleenohjaus); toiset lähteet haettu muualta"
+  ],
+  "muutos_sk": "Poistettu Île de la Cité -kuvaus (kymmenen katua pitkä, viisi leveä), Lutetia ja Seinen kaari sekä Eiffel-tornin ja Sacré-Cœurin 5 km:n väli (ei kahdesta lähteestä). Lisätty Eiffel-tornin, Riemukaaren, Louvren, Notre-Damen, Orsayn ja Sacré-Cœurin rakennus- ja avausvuodet."
+ }
+]

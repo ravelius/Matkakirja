@@ -15,7 +15,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  JASENIA_ENINTAAN, KIRJOITUKSIA_IKKUNASSA, KYSYMYKSEN_KATTO, POHJAT,
+  JASENIA_ENINTAAN, KIRJOITUKSIA_IKKUNASSA, KOODIN_ARVONTAMERKIT, teeKoodi, KYSYMYKSEN_KATTO, POHJAT,
   NATIIVIT_OLETUS, SAILYTYS_VRK, VAIHTOEHDON_KATTO, kasittele, normalisoiKoodi,
   sallittuNatiivi, sallittuOrigin, siivoaTeksti, vertaaSalaisuus, ylimaarainenKentta,
 } from '../worker/sahke/kasittelija.js';
@@ -67,6 +67,16 @@ function teeVarasto() {
     },
     async lisaaJasen(rivi) {
       jasenet.push({ ...rivi, ikkuna: 0, laskuri: 0 });
+    },
+    async poistaJasen(koodi, jasenId) {
+      const i = jasenet.findIndex((j) => j.koodi === koodi && j.jasenId === jasenId);
+      if (i >= 0) jasenet.splice(i, 1);
+    },
+    async poistaRetkikunta(koodi) {
+      for (const taulu of [jasenet, sahkeet, apupyynnot, apuvastaukset]) {
+        for (let i = taulu.length - 1; i >= 0; i--) if (taulu[i].koodi === koodi) taulu.splice(i, 1);
+      }
+      retkikunnat.delete(koodi);
     },
     async paivitaKirjoitusIkkuna(koodi, jasenId, ikkuna, laskuri) {
       const rivi = jasenet.find((j) => j.koodi === koodi && j.jasenId === jasenId);
@@ -288,6 +298,28 @@ test('vapaa nimimerkki ei mene läpi', async () => {
 /* ---------------------------------------------------------------- */
 /* Sähke                                                             */
 /* ---------------------------------------------------------------- */
+
+// Jäsenavain otsakkeessa (1.10.2026, tietoturvakorjaus); kysely kelpaa siirtymän ajan.
+test('tila hyväksyy jäsenavaimen x-sahke-avain-otsakkeesta, väärä hylätään, CORS sallii otsakkeen', async () => {
+  const kello = teeKello();
+  const apurit = { varasto: teeVarasto(), nyt: kello.nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit, ['Utelias Ilves']);
+  const polku = `/retkikunta/tila?koodi=${koodi}&jasenId=${ilves.jasenId}`;
+  const oikea = await aja(polku, { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(oikea.status, 200);
+  const vaara = await aja(polku, { metodi: 'GET', otsakkeet: { 'x-sahke-avain': 'huti' } }, apurit);
+  assert.equal(vaara.status, 401);
+  const esi = await kasittele(pyynto('/retkikunta/tila', { metodi: 'OPTIONS' }), YMPARISTO, apurit);
+  assert.match(esi.headers.get('access-control-allow-headers') ?? '', /x-sahke-avain/);
+});
+
+test('web-asiakas ei laita jäsenavainta osoitteeseen', async () => {
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  const tila = koodi.slice(koodi.indexOf('function sahkeHaeTila'), koodi.indexOf('function sahkeHaeTila') + 400);
+  assert.ok(!/avain: tunnus\.avain/.test(tila.split('otsakkeet')[0]), tila);
+  assert.match(tila, /'x-sahke-avain': tunnus\.avain/);
+});
 
 test('sähke tallentuu ja näkyy tilannekuvassa virstanpylväänä', async () => {
   const kello = teeKello();
@@ -662,4 +694,83 @@ test('ilman tietokantaa worker kertoo sen eikä kaadu', async () => {
     { SAHKE_ORIGINIT: PELI },
   );
   assert.equal(vastaus.status, 503);
+});
+
+// Asiakkaan sanalistat = workerin sanalistat (1.10.2026: lista oli erkaantunut, ja worker hylkäsi osan arvotuista
+// nimistä "Nimimerkki ei ole sanalistoilta"; natiivi Sahke.cs kopioi webin listat kultaisen jäljen kautta).
+test('js/sahke.js:n nimimerkkisanat ovat täsmälleen workerin listat samassa järjestyksessä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { ADJEKTIIVIT, SUBSTANTIIVIT } = await import('../worker/sahke/nimimerkit.js');
+  const koodi = readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8');
+  const lista = (nimi) => [...koodi.match(new RegExp(`const ${nimi} = \\[([\\s\\S]*?)\\];`))[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  assert.deepEqual(lista('SAHKE_ADJEKTIIVIT'), [...ADJEKTIIVIT]);
+  assert.deepEqual(lista('SAHKE_SUBSTANTIIVIT'), [...SUBSTANTIIVIT]);
+});
+
+/*
+ * LIITTYMISKOODIN AAKKOSTO (PT 12.10., kiire): jokaisen arvotun koodin on mentävä asiakkaiden koodikenttään
+ * sellaisenaan. Asiakkaiden suodattimet luetaan lähteestä, jotta aakkostojen ero huomataan heti.
+ */
+test('jokainen arvottu koodi läpäisee webin ja natiivin koodikentän suodattimen', async () => {
+  const fs = await import('node:fs');
+  const web = /const SAHKE_KOODIN_MERKIT = '([^']+)'/.exec(fs.readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8'))[1];
+  assert.ok(!/[S5]/.test(KOODIN_ARVONTAMERKIT), 'arvonnassa ei S:ää eikä 5:tä');
+  for (const m of KOODIN_ARVONTAMERKIT) assert.ok(web.includes(m), `webin kenttä hylkää merkin ${m}`);
+  for (let i = 0; i < 5000; i++) {
+    const koodi = teeKoodi();
+    assert.equal(koodi.length, 6);
+    const kentta = [...koodi].filter((m) => web.includes(m)).join('');
+    assert.equal(kentta, koodi, `koodi ${koodi} ei mene kenttään`);
+  }
+});
+
+test('vanhan aakkoston koodi (S tai 5) kelpaa yhä tilakyselyyn', async () => {
+  // Ennen korjausta perustettu retkikunta: koodissa S ja 5. Perustajan laite pollaa sillä edelleen.
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  const vanha = 'AS5S2D';
+  const rivi = apurit.varasto.retkikunnat.get(koodi);
+  apurit.varasto.retkikunnat.delete(koodi); apurit.varasto.retkikunnat.set(vanha, { ...rivi, koodi: vanha });
+  for (const j of apurit.varasto.jasenet) if (j.koodi === koodi) j.koodi = vanha;
+  const tila = await aja(`/retkikunta/tila?koodi=${vanha}&jasenId=${ilves.jasenId}`,
+    { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(tila.status, 200, JSON.stringify(tila.data));
+  assert.equal(normalisoiKoodi('as5d-2s'), 'AS5D2S');
+});
+
+/*
+ * EROAMINEN (Julkaisijan löydös 12.10., PT): paikka ja nimimerkki vapautuvat, tyhjä retkikunta poistuu.
+ */
+test('eroa vapauttaa paikan ja nimimerkin; kahdeksan liittymis–eroamiskierrosta ei täytä retkikuntaa', async () => {
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  for (let kierros = 0; kierros < 12; kierros++) {
+    // eslint-disable-next-line no-await-in-loop
+    const liittyja = await aja('/retkikunta/liity', { runko: { koodi, nimimerkki: 'Rohkea Kompassi' } }, apurit);
+    assert.equal(liittyja.status, 200, `kierros ${kierros}: ${JSON.stringify(liittyja.data)}`);
+    // eslint-disable-next-line no-await-in-loop
+    const ero = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: liittyja.data.jasenId, avain: liittyja.data.avain } }, apurit);
+    assert.equal(ero.status, 200);
+    assert.deepEqual(ero.data, { ok: true, jaljella: 1 });
+  }
+  assert.equal(apurit.varasto.jasenet.filter((j) => j.koodi === koodi).length, 1, 'vain perustaja jäljellä');
+  const tila = await aja(`/retkikunta/tila?koodi=${koodi}&jasenId=${ilves.jasenId}`,
+    { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(tila.status, 200);
+});
+
+test('eroa: väärä avain 401, viimeinen jäsen poistaa retkikunnan, eronneen tunnukset eivät enää kelpaa', async () => {
+  const apurit = { varasto: teeVarasto(), nyt: teeKello().nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit);
+  const vaara = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: 'x'.repeat(32) } }, apurit);
+  assert.equal(vaara.status, 401);
+  const ylim = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain, syy: 'x' } }, apurit);
+  assert.equal(ylim.status, 400);
+  const ero = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain } }, apurit);
+  assert.deepEqual(ero.data, { ok: true, jaljella: 0 });
+  assert.equal(apurit.varasto.retkikunnat.has(koodi), false, 'tyhjä retkikunta poistettu');
+  const uudelleen = await aja('/retkikunta/eroa', { runko: { koodi, jasenId: ilves.jasenId, avain: ilves.avain } }, apurit);
+  assert.equal(uudelleen.status, 401, 'eronnut ei voi enää kirjoittaa');
+  const liity = await aja('/retkikunta/liity', { runko: { koodi, nimimerkki: 'Rohkea Kompassi' } }, apurit);
+  assert.notEqual(liity.status, 200, 'poistettuun retkikuntaan ei voi liittyä');
 });

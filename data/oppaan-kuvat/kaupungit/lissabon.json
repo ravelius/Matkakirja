@@ -1,0 +1,552 @@
+{
+ "kaupunki": "lissabon",
+ "kaupunkiQ": "Q597",
+ "kohteet": [
+  {
+   "q": "Q215003",
+   "nimi": "Belémin torni",
+   "peruste": "UNESCO",
+   "koko_m": 60,
+   "lat": 38.69139,
+   "lon": -9.21583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Belem Tower - April 2019 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belem_Tower_-_April_2019_(2).jpg?width=1280",
+     "tekija": "Rehman Abubakr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Belem_Tower_-_April_2019_(2).jpg",
+     "selite": "Tejo-joen rannalla seisova manuelilaistyylinen torni suojasi aikanaan Lissabonin satamaa ja lähtevien merenkulkijoiden reittiä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Belém - Torre de Belém - 2025-10-31 17-56-53 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bel%C3%A9m_-_Torre_de_Bel%C3%A9m_-_2025-10-31_17-56-53_002.jpg?width=1280",
+     "tekija": "Rafael Lemieszek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bel%C3%A9m_-_Torre_de_Bel%C3%A9m_-_2025-10-31_17-56-53_002.jpg",
+     "selite": "Torni nousee suoraan jokisuiston rantavesistä.",
+     "leveys": 3000,
+     "korkeus": 1770,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aerial view of Belém, Lisboa (48212310956).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Bel%C3%A9m%2C_Lisboa_(48212310956).jpg?width=1280",
+     "tekija": "pedrik",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bel%C3%A9m%2C_Lisboa_(48212310956).jpg",
+     "selite": "Ilmasta näkyy, miten Belémin torni ja Tejon suisto avautuvat kohti Atlanttia.",
+     "leveys": 4384,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q272781",
+   "nimi": "Hieronymuksen luostari",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 38.69785,
+   "lon": -9.2056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1502 legte König Manuel I. den Grundstein für das Hieronymus Kloster in Lissabon. 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg",
+     "selite": "Luostarin pitkä kalkkikivinen julkisivu on manuelilaisen goottilaisuuden pääteos Belémissä.",
+     "leveys": 5769,
+     "korkeus": 3467,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "33534-Lisbon (49090554052).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/33534-Lisbon_(49090554052).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:33534-Lisbon_(49090554052).jpg",
+     "selite": "Kirkon ja luostarin yksityiskohtaiset kivikoristeet kertovat Portugalin löytöretkien ajan rikkaudesta.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ambient Light, Mosterio dos Jerónimos, Lisbon Portugal (54123888415).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambient_Light%2C_Mosterio_dos_Jer%C3%B3nimos%2C_Lisbon_Portugal_(54123888415).jpg?width=1280",
+     "tekija": "londonexpat",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ambient_Light%2C_Mosterio_dos_Jer%C3%B3nimos%2C_Lisbon_Portugal_(54123888415).jpg",
+     "selite": "Sisätilojen holvit ja azulejo-seinät kuuluvat luostarin vaikuttavimpiin yksityiskohtiin.",
+     "leveys": 1858,
+     "korkeus": 1139,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q999002",
+   "nimi": "Praça do Comércio",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 38.7075,
+   "lon": -9.13639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Empty Praça do Comércio during the COVID-19 lockdown, Lisbon, Portugal julesvernex2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empty_Pra%C3%A7a_do_Com%C3%A9rcio_during_the_COVID-19_lockdown%2C_Lisbon%2C_Portugal_julesvernex2.jpg?width=1280",
+     "tekija": "Jules Verne Times Two",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empty_Pra%C3%A7a_do_Com%C3%A9rcio_during_the_COVID-19_lockdown%2C_Lisbon%2C_Portugal_julesvernex2.jpg",
+     "selite": "Tejon rannalle avautuva keltainen kaarikäytävien ympäröimä aukio on Lissabonin suurin ja nousi jälleenrakennuksen symboliksi suuren maanjäristyksen jälkeen.",
+     "leveys": 5751,
+     "korkeus": 3724,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Terreiro do Paço\" seen from the river (4487596196).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Terreiro_do_Pa%C3%A7o%22_seen_from_the_river_(4487596196).jpg?width=1280",
+     "tekija": "Pedro Ribeiro Simões from Lisboa, Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Terreiro_do_Pa%C3%A7o%22_seen_from_the_river_(4487596196).jpg",
+     "selite": "Joelta katsottuna aukion rakennukset ja riemukaari muodostavat Lissabonin edustavimman rantanäkymän.",
+     "leveys": 3615,
+     "korkeus": 2016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q985517",
+   "nimi": "Alfama",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 38.71066,
+   "lon": -9.13238,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alfama-CCBY.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfama-CCBY.jpg?width=1280",
+     "tekija": "Miguel Vieira [2]",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alfama-CCBY.jpg",
+     "selite": "Alfama on Lissabonin vanhin kaupunginosa, jonka mutkaiset kujat kiipeävät kukkulalle jokirannasta.",
+     "leveys": 2293,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(Welcome to) Alfama (15501690782).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Welcome_to)_Alfama_(15501690782).jpg?width=1280",
+     "tekija": "Fabrizio Sciami from Terni, Italy",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Welcome_to)_Alfama_(15501690782).jpg",
+     "selite": "Alfaman kapeilla kaduilla talojen julkisivut ja juhlakoristeet luovat tiiviin kaupunginosan tunnelman.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "04 - Alfama - Tramvaj.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04_-_Alfama_-_Tramvaj.jpg?width=1280",
+     "tekija": "Misa.stefanovic.07",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04_-_Alfama_-_Tramvaj.jpg",
+     "selite": "Keltainen ratikka mahtuu juuri ja juuri Alfaman kapeiden kujien läpi.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q636780",
+   "nimi": "São Jorgen linna",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 38.71389,
+   "lon": -9.13333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castelo de São Jorge (4166049903).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castelo_de_S%C3%A3o_Jorge_(4166049903).jpg?width=1280",
+     "tekija": "Robert Nyman",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castelo_de_S%C3%A3o_Jorge_(4166049903).jpg",
+     "selite": "Maurilaisten rakentama linnoitus hallitsee kukkulaa Lissabonin keskustan yläpuolella.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "011499 - Lisboa (21691724913).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/011499_-_Lisboa_(21691724913).jpg?width=1280",
+     "tekija": "M.Peinado from Alcalá de Henares, España",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:011499_-_Lisboa_(21691724913).jpg",
+     "selite": "Illalla valaistu linna erottuu kukkulan huipulla kaupungin yllä.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q168001",
+   "nimi": "Santa Justan hissi",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 38.71194,
+   "lon": -9.13917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2009-05-01 Lisboa - Elevador Santa Justa 027.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2009-05-01_Lisboa_-_Elevador_Santa_Justa_027.jpg?width=1280",
+     "tekija": "Ricardo Manuel Aguiar Santos",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2009-05-01_Lisboa_-_Elevador_Santa_Justa_027.jpg",
+     "selite": "Rautarakenteinen hissitorni yhdistää Baixan alakaupungin Carmon kukkulaan.",
+     "leveys": 2272,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+ Abends mit dem Tuck-Tuck durch Lissabon. 38.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Abends_mit_dem_Tuck-Tuck_durch_Lissabon._38.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Abends_mit_dem_Tuck-Tuck_durch_Lissabon._38.jpg",
+     "selite": "Illalla valaistu hissi seisoo Baixan kapean kadun päässä.",
+     "leveys": 3652,
+     "korkeus": 5476,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1133712",
+   "nimi": "Löytöretkien muistomerkki",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 38.69368,
+   "lon": -9.20569,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lisbonne - Padrão dos Descobrimentos - Closeup.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lisbonne_-_Padr%C3%A3o_dos_Descobrimentos_-_Closeup.jpg?width=1280",
+     "tekija": "Jean-Christophe BENOIST",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lisbonne_-_Padr%C3%A3o_dos_Descobrimentos_-_Closeup.jpg",
+     "selite": "Muistomerkin keulan kaltaisessa rakenteessa seisovat Portugalin löytöretkien keskeiset hahmot.",
+     "leveys": 3483,
+     "korkeus": 5225,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20150503 122656 lisboa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20150503_122656_lisboa.jpg?width=1280",
+     "tekija": "Imene za",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20150503_122656_lisboa.jpg",
+     "selite": "Valkoinen kivimonumentti kohoaa Tejon rannalla Belémissä.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q432290",
+   "nimi": "Lissabonin tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.70985,
+   "lon": -9.13298,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lisboa May 2013-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lisboa_May_2013-1.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lisboa_May_2013-1.jpg",
+     "selite": "Kaksi linnamaista tornia ja ruusuikkuna kuuluvat Lissabonin vanhimman kirkon romaaniseen julkisivuun.",
+     "leveys": 4897,
+     "korkeus": 5871,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alfama - Lisboa - Portugal (51283759377).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfama_-_Lisboa_-_Portugal_(51283759377).jpg?width=1280",
+     "tekija": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alfama_-_Lisboa_-_Portugal_(51283759377).jpg",
+     "selite": "Kirkon sivu ja kulmatorni nousevat Alfaman kapeiden katujen yläpuolelle.",
+     "leveys": 3413,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q721152",
+   "nimi": "Huhtikuun 25. päivän silta",
+   "peruste": "sitelinks",
+   "koko_m": 2300,
+   "lat": 38.69418,
+   "lon": -9.17815,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "25 De Abril Bridge (226290561).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/25_De_Abril_Bridge_(226290561).jpeg?width=1280",
+     "tekija": "Mike",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:25_De_Abril_Bridge_(226290561).jpeg",
+     "selite": "Punainen riippusilta ylittää Tejon ja yhdistää Lissabonin Almadan rantaan.",
+     "leveys": 2048,
+     "korkeus": 1580,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ponte25Abril1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte25Abril1.jpg?width=1280",
+     "tekija": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte25Abril1.jpg",
+     "selite": "Sillan nimi viittaa vuoden 1974 neilikkavallankumoukseen.",
+     "leveys": 1280,
+     "korkeus": 959,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1549270",
+   "nimi": "Rossio",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 38.71389,
+   "lon": -9.13944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Praça Don Pedro IV (Rossio).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pra%C3%A7a_Don_Pedro_IV_(Rossio).jpg?width=1280",
+     "tekija": "Bznein",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_Don_Pedro_IV_(Rossio).jpg",
+     "selite": "Rossio on Lissabonin Baixan keskeinen aukio, jonka keskellä kohoaa Pedro IV:n patsas ja jonka laidalla on kansallisteatteri.",
+     "leveys": 2080,
+     "korkeus": 1544,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q233737",
+   "nimi": "Vasco da Gama -silta",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 38.76219,
+   "lon": -9.04331,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Vasco da Gama\" bridge (1439057763).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Vasco_da_Gama%22_bridge_(1439057763).jpg?width=1280",
+     "tekija": "Feliciano Guimarães from Guimarães, Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Vasco_da_Gama%22_bridge_(1439057763).jpg",
+     "selite": "Tejon yli kulkeva siltaryhmä on Euroopan pisimpiä siltoja.",
+     "leveys": 1968,
+     "korkeus": 1298,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1470414",
+   "nimi": "Carmon luostari",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 38.71222,
+   "lon": -9.14,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lissabon - Convento do Carmo from Castle.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lissabon_-_Convento_do_Carmo_from_Castle.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lissabon_-_Convento_do_Carmo_from_Castle.jpg",
+     "selite": "Vuoden 1755 maanjäristys jätti luostarin kirkosta jäljelle vain kaarimaiset rauniot.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+ Abends mit dem Tuck-Tuck durch Lissabon. 32.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2B_Abends_mit_dem_Tuck-Tuck_durch_Lissabon._32.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2B_Abends_mit_dem_Tuck-Tuck_durch_Lissabon._32.jpg",
+     "selite": "Iltavalossa kullanhohtoiset kaaret kohoavat raunioissa, jotka on jätetty paikalleen muistuttamaan järistyksestä.",
+     "leveys": 3925,
+     "korkeus": 5096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q637590",
+   "nimi": "Rua Augustan riemukaari",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 38.7084,
+   "lon": -9.1368,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arco Triunfal da Rua Augusta, Plaza del Comercio, Lisboa, Portugal, 2012-05-12, DD 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_02.JPG",
+     "selite": "Riemukaari avaa Baixan pääkadun suuntaan Praça do Comércion aukiolle.",
+     "leveys": 4924,
+     "korkeus": 3340,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019.05.01-Arco da Rua Augusta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019.05.01-Arco_da_Rua_Augusta.jpg?width=1280",
+     "tekija": "MonicaHenriquesT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019.05.01-Arco_da_Rua_Augusta.jpg",
+     "selite": "Kaaren veistoksia koristavat Portugalin historian henkilöt.",
+     "leveys": 2976,
+     "korkeus": 3968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q623228",
+   "nimi": "Águas Livres -akveduktti",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 38.72667,
+   "lon": -9.16667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aqueduto das Águas Livres (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aqueduto_das_%C3%81guas_Livres_(1).jpg?width=1280",
+     "tekija": "No machine-readable author provided. Juntas assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aqueduto_das_%C3%81guas_Livres_(1).jpg",
+     "selite": "Kivinen akvedukti kuljetti vettä Lissaboniin ja selvisi vuoden 1755 maanjäristyksestä.",
+     "leveys": 2151,
+     "korkeus": 1167,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Águas Livres\" Aqueduct (1917100763).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22%C3%81guas_Livres%22_Aqueduct_(1917100763).jpg?width=1280",
+     "tekija": "Pedro Ribeiro Simões from Lisboa, Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22%C3%81guas_Livres%22_Aqueduct_(1917100763).jpg",
+     "selite": "Yli 60 metriä korkeat suippokaaret ylittävät Alcântaran laakson.",
+     "leveys": 1364,
+     "korkeus": 1071,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panoramic View from Miradouro da Senhora do Monte in Lisbon (54742879994).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_View_from_Miradouro_da_Senhora_do_Monte_in_Lisbon_(54742879994).jpg?width=1280",
+   "tekija": "Dale Cruse - 10M views from San Francisco, CA, USA",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_View_from_Miradouro_da_Senhora_do_Monte_in_Lisbon_(54742879994).jpg",
+   "selite": "Lissabonin punaiset katot levittäytyvät seitsemän kukkulan rinteille Tejon rannalle.",
+   "leveys": 11656,
+   "korkeus": 6557,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Blue Hour over Lisbon (43257906392).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Hour_over_Lisbon_(43257906392).jpg?width=1280",
+   "tekija": "Vicuna R from Germany",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Hour_over_Lisbon_(43257906392).jpg",
+   "selite": "Sinisen hetken valossa Lissabonin keskusta ja joki hohtavat kukkuloilta katsottuna.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

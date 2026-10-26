@@ -1,0 +1,36 @@
+OHJE: OPPAAN ESITTELY YHDELLE KAUPUNGILLE (Matkakirja-peli, Sisältökirjuri 16.10.2026)
+
+Tehtävä: kirjoita kaupungille oppaan esigeneroitu, ÄÄNETÖN esittely suomeksi: pallolennon "Tervetuloa"-avaus ja 8 kohteen kierros. Faktat tarkistetaan webistä (WebSearch/WebFetch). Kirjoitat VAIN omaan tulostiedostoosi (polku annettu tehtävässä), et mitään muuta, et repoa, et muiden agenttien tiedostoja.
+
+SYÖTTEET (lue ensin)
+1. Kohdelista: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/paakaupungit-3d-20261016/kohteet.json, avain = kaupungin id. Siinä on kierrosjärjestyksessä 8 kohdetta: q (Wikidata-id), nimi, lat, lon, luokka, koko_m, korkeus_m (jos on), katse_suunta/katse_kaari (jos on), huom, ja kaupungin "pallolento"-kuvaus (maisema ylhäältä). Kohteita EI vaihdeta, eikä niiden järjestystä. Lue myös /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/paakaupungit-3d-20261016/KOHTEET.md kaupunkisi osio.
+2. Jo tarkistetut faktat kaupungista (kaksi lähdettä per väite, pudotetut ja ristiriitaiset väitteet kirjattu): /Users/Shared/Claude/Matkakirja-sisaltokirjuri/docs/kohtaukset/kaupunkiesittelyt/<id>.json. Käytä näitä lähteinä ja älä käytä siellä "pudotettu"-listalla olevia väitteitä, ellet löydä kahta vahvaa lähdettä.
+3. Tyylimallit (lue ainakin kaksi kaupunkia kokonaan, katso avaus, kohteet, pituudet, lahteet): /Users/Shared/Claude/proto-3d/_tyo/esittely-aaneton-v2/vienti/opas/esittely-aaneton-v3/ljubljana.json, budapest.json ja luxemburg.json.
+
+TULOSTIEDOSTON MUOTO (JSON-objekti, UTF-8, kuten mallit)
+{
+ "kaupunki": "<nimi suomeksi>", "id": "<id>", "versio": 1, "aaneton": true, "tarkistettu": "2026-10-16",
+ "avaus": { "teksti": "..." },
+ "kierros": ["Q...", ... 8 kpl kohdelistan järjestyksessä],
+ "kohteet": [ { "id": "Q...", "nimi": "...", "kuvaus": "...", "luokka": "...", "koko_m": N, "korkeus_m": N (vain jos kohdelistassa), "katse_suunta": N, "katse_kaari": N (vain jos kohdelistassa; kopioi sellaisenaan),
+   "teksti": "...", "lyhyt": "..." tai null, "syventava": "...", "kysymykset": ["..", 5 kpl], "isoisa": false,
+   "lahteet": [ { "vaite": "...", "url": "https://..." }, ... ] } ... ]
+}
+Kentät id/nimi/luokka/koko_m/korkeus_m/katse_* kopioidaan kohdelistasta (id = q, nimi = nimi). "kuvaus" = lyhyt luonnehdinta, enintään noin 45 merkkiä, esim. "Luxemburgin katolinen tuomiokirkko".
+
+SISÄLTÖSÄÄNNÖT
+- avaus.teksti, 3–5 virkettä, tässä järjestyksessä: (a) "Tervetuloa <kaupunki partitiivissa/illatiivissa, esim. 'Luxemburgiin', 'Ljubljanaan'>." (b) Maisema ylhäältä omin sanoin kohdelistan "pallolento"-kuvauksen pohjalta (tarkista väitteet; älä kopioi sanatarkasti). (c) YKSI pallovirke tuulesta, ilman nimettyä kohdetta; fysiikka oikein: noste syntyy kuvun ja ympäröivän ilman lämpötilaerosta, poltin vain nostaa tai pitää korkeutta, vaakaliike tulee aina tuulesta; esimerkki: "Meren suunnalta käy tuuli, ja se kuljettaa koriamme hitaasti kohti kaupungin sydäntä." (d) Viimeinen virke: "Kierros alkaa …" ja nimeää ensimmäisen kohteen paikka (aukio/kaupunginosa) sekä 1–2 tunnistettavaa piirrettä.
+- teksti (kohteen pitkä kerronta): 500–750 merkkiä, 4–6 tarkistettua faktaa: rakennusvuodet, mitat, nimen selitys, rakentaja, tapahtumat. Ääneen luettava, selkeä, ei mainoskieltä, kohderyhmä 13-vuotiaasta aikuiseen. Aloita kohteen nimellä tai ylhäältä näkyvällä piirteellä (pallokorista katsottuna). Vuosiluvut numeroina.
+- lyhyt (kierroksen lyhytversio): 220–380 merkkiä, MUUT faktat kuin tekstissä (toinen tarkistettu fakta tai kaksi), ei saa toistaa tekstiä. Jos toista vahvistettua faktaa ei ole, aseta null.
+- syventava: yksi kysymys (Miksi/Kuka/Miten), johon teksti vihjaa mutta jota ei vielä selitetä.
+- kysymykset: tasan 5 erilaista jatkokysymystä, joihin löytyy tarkistettu vastaus.
+- isoisa: aina false.
+- Jokainen teksti- ja lyhyt-kentän väite saa vähintään yhden lahteet-alkion ("vaite" lyhyesti omin sanoin + url). KAHDEN LÄHTEEN SÄÄNTÖ: jokainen väite tarvitsee KAKSI itsenäistä lähdettä (Wikipedia + toinen: Britannica, UNESCO, virallinen/kaupungin/museon/matkailusivu, tutkimus). Kirjaa molemmat lahteet-alkioina samalla "vaite"-tekstillä. Jos toinen lähde on vain hakutuloksen tiivistelmä (sivu antoi 403/404), lisää alkioon kenttä "huom": "hakutulos". Älä käytä wikiä (muuta kuin Wikipedia) tai tekoälyn kirjoittamia sivuja toisena lähteenä.
+- Väitteet, joille ei löydy kahta lähdettä, tai joiden luku vaihtelee lähteittäin, jätetään pois tai muotoillaan varovasti ("noin", vuosikymmen, vuosisata). Ei arvailua.
+- Ei nykytaidetta eikä poliittisesti kiistanalaisia arvioita. Älä mainitse vuotta 1873 muuten kuin historiallisena tosiasiana. Ei lastenpelimäistä kieltä.
+- Kohteet, joilla on luokka aukio/puisto/saari/katu/satama: kuvaa paikkaa ylhäältä näkyvin piirtein ja tarkista faktat yhtä huolella.
+- Kaikki 8 kohdetta on täytettävä.
+
+PUDOTETUT JA HUOMIOT: lisää tulostiedoston yläkenttiin "pudotetut" (lista: pudotettu väite + syy) ja "ristiriidat" (lista), jotta PT voi tarkistaa. Nämä kentät poistetaan ennen vientiä.
+
+OMA TARKISTUS ENNEN VALMISTA: laske koodilla pituudet (teksti 500–750, lyhyt 220–380 tai null, 5 kysymystä, 8 kohdetta, kierros = kohteiden id:t samassa järjestyksessä, jokaisella kohteella vähintään 2 lahteet-alkiota) ja korjaa, kunnes kaikki täsmää. Lopuksi vastaa lyhyesti: pituuksien minimit/maksimit, heikoimmat kohdat (hakutulos-lähteet, pudotetut).

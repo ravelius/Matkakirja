@@ -32,6 +32,9 @@ import { miller, kaupungit, KOKO_MAAILMA } from './vanha-maailma.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const kuiva = process.argv.includes('--kuiva');
+// --korvaa=ISO,ISO: laudalla jo olevat maat generoidaan uudelleen ja rivi korvataan
+// paikallaan (Islanti 10.10.2026: vanhan laudan muoto oli väärässä paikassa ja koossa).
+const KORVAA = new Set((process.argv.find((a) => a.startsWith('--korvaa='))?.slice(9) ?? '').split(',').filter(Boolean));
 const LAHDE = process.env.NE_GEOJSON ?? join(JUURI, 'ne_50m_admin_0_countries.geojson');
 const luku = (n) => Number(n.toFixed(1));
 
@@ -62,6 +65,8 @@ const SIETO = 1.2;        // harvennuksen sallima poikkeama lautayksikköinä
  *   sade     pisin sallittu etäisyys keskuksesta lautayksikköinä —
  *            Saint Helenan kortti näyttää saaren, ei koko Atlanttia
  *            (NE:n SHN sisältää myös Ascensionin)
+ *   nimiPiste  [lon, lat] nimen paikaksi NE:n LABEL_X/Y:n sijaan — Kiribatin
+ *            LABEL on Linesaarilla, pääkaupunki Tarawa 3 000 km lännempänä
  *   lisaksi  NE:n erilliset alueet, jotka kuuluvat maan muotoon,
  *            koska laudan kaupunki on siellä: San Juan on Puerto
  *            Ricossa (NE:ssä oma piirre PRI, suvereniteetti US1) ja
@@ -81,6 +86,7 @@ const MAAT = {
   TJK: ['Tadžikistan', 'Tadžikistan', 'Flag of Tajikistan.svg'],
   TKM: ['Turkmenistan', 'Turkmenistan', 'Flag of Turkmenistan.svg'],
   // Eurooppa
+  ISL: ['Islanti', 'Islanti', 'Flag of Iceland.svg'],
   ALB: ['Albania', 'Albania', 'Flag of Albania.svg'],
   BEL: ['Belgia', 'Belgia', 'Flag of Belgium (civil).svg'],
   BLR: ['Valko-Venäjä', 'Valko-Venäjä', 'Flag of Belarus.svg'],
@@ -95,12 +101,94 @@ const MAAT = {
   // 1:50M:ssä vain muutaman lautayksikön kokoinen, joten pienin rengas
   // ja harvennus kuten Hongkongilla ja Singaporella.
   MLT: ['Malta', 'Malta', 'Flag of Malta.svg', { minKoko: 0, sieto: 0.3 }],
+  // Euroopan minivaltiot (omistaja PT:n kautta 10.10.2026: "eurooppaan voisi
+  // ottaa ne minivaltiot mukaan ja tehdä niille kevyt sisältö"). Laudalla
+  // ne ovat 0,1–4 yksikön kokoisia, joten pienin rengas ja harvennus kuten
+  // Maltalla; muoto Natural Earthin 10m-aineistosta (NE_GEOJSON, _swe).
+  AND: ['Andorra', 'Andorra', 'Flag of Andorra.svg', { minKoko: 0, sieto: 0.1 }],
+  LIE: ['Liechtenstein', 'Liechtenstein', 'Flag of Liechtenstein.svg', { minKoko: 0, sieto: 0.1 }],
+  MCO: ['Monaco', 'Monaco', 'Flag of Monaco.svg', { minKoko: 0, sieto: 0.05 }],
+  SMR: ['San Marino', 'San Marino', 'Flag of San Marino.svg', { minKoko: 0, sieto: 0.1 }],
+  VAT: ['Vatikaani', 'Vatikaanivaltio', 'Flag of Vatican City (2023–present).svg', { minKoko: 0, sieto: 0.05 }],
   // Aasia ja Atlantti: pienet mutta kaupungilliset — pilleri ja
   // Tutki-palsta tarvitsevat muodon, pieni rengas riittää.
   HKG: ['Hongkong', 'Hongkong', 'Flag of Hong Kong.svg', { minKoko: 0, sieto: 0.3 }],
   SGP: ['Singapore', 'Singapore', 'Flag of Singapore.svg', { minKoko: 0, sieto: 0.3 }],
   SHN: ['Saint Helena', 'Saint Helena', 'Flag of Saint Helena.svg', { minKoko: 0, sieto: 0.3, sade: 200 }],
   TLS: ['Itä-Timor', 'Itä-Timor', 'Flag of East Timor.svg'],
+  // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
+  // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
+  // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Oseania (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Atollivaltiot pienin rengas; Nauru,
+  // Tuvalu ja Marshallinsaaret myös MINIVALTIOT-poikkeukseen. Tonga ylittää
+  // sauman (175°W): renkaat siirtyvät keskuksen kierrokselle.
+  FSM: ['Mikronesia', 'Mikronesian liittovaltio', 'Flag of the Federated States of Micronesia.svg', { minKoko: 0, sieto: 0.3 }],
+  KIR: ['Kiribati', 'Kiribati', 'Flag of Kiribati.svg', { minKoko: 0, sieto: 0.3, nimiPiste: [172.97, 1.33] }],
+  MHL: ['Marshallinsaaret', 'Marshallinsaaret', 'Flag of the Marshall Islands.svg', { minKoko: 0, sieto: 0.1 }],
+  NRU: ['Nauru', 'Nauru', 'Flag of Nauru.svg', { minKoko: 0, sieto: 0.05 }],
+  PLW: ['Palau', 'Palau', 'Flag of Palau.svg', { minKoko: 0, sieto: 0.3 }],
+  TON: ['Tonga', 'Tonga', 'Flag of Tonga.svg', { minKoko: 0, sieto: 0.3 }],
+  TUV: ['Tuvalu', 'Tuvalu', 'Flag of Tuvalu.svg', { minKoko: 0, sieto: 0.05 }],
+  WSM: ['Samoa', 'Samoa', 'Flag of Samoa.svg', { minKoko: 0, sieto: 0.3 }],
+  // Amerikat (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Karibian saarivaltiot pienin rengas.
+  ATG: ['Antigua ja Barbuda', 'Antigua ja Barbuda', 'Flag of Antigua and Barbuda.svg', { minKoko: 0, sieto: 0.3 }],
+  BHS: ['Bahama', 'Bahama', 'Flag of the Bahamas.svg', { minKoko: 3, sieto: 0.5 }],
+  BLZ: ['Belize', 'Belize', 'Flag of Belize.svg'],
+  BRB: ['Barbados', 'Barbados', 'Flag of Barbados.svg', { minKoko: 0, sieto: 0.3 }],
+  CRI: ['Costa Rica', 'Costa Rica', 'Flag of Costa Rica.svg'],
+  DMA: ['Dominica', 'Dominica', 'Flag of Dominica.svg', { minKoko: 0, sieto: 0.3 }],
+  DOM: ['Dominikaaninen tasavalta', 'Dominikaaninen tasavalta', 'Flag of the Dominican Republic.svg'],
+  GRD: ['Grenada', 'Grenada', 'Flag of Grenada.svg', { minKoko: 0, sieto: 0.3 }],
+  GUY: ['Guyana', 'Guyana', 'Flag of Guyana.svg'],
+  HND: ['Honduras', 'Honduras', 'Flag of Honduras (1949–2022, 2026–present).svg'],
+  HTI: ['Haiti', 'Haiti', 'Flag of Haiti.svg'],
+  JAM: ['Jamaika', 'Jamaika', 'Flag of Jamaica.svg'],
+  KNA: ['Saint Kitts ja Nevis', 'Saint Kitts ja Nevis', 'Flag of Saint Kitts and Nevis.svg', { minKoko: 0, sieto: 0.3 }],
+  LCA: ['Saint Lucia', 'Saint Lucia', 'Flag of Saint Lucia.svg', { minKoko: 0, sieto: 0.3 }],
+  SLV: ['El Salvador', 'El Salvador', 'Flag of El Salvador.svg'],
+  SUR: ['Suriname', 'Suriname', 'Flag of Suriname.svg'],
+  TTO: ['Trinidad ja Tobago', 'Trinidad ja Tobago', 'Flag of Trinidad and Tobago.svg', { minKoko: 0, sieto: 0.3 }],
+  VCT: ['Saint Vincent ja Grenadiinit', 'Saint Vincent ja Grenadiinit', 'Flag of Saint Vincent and the Grenadines.svg', { minKoko: 0, sieto: 0.3 }],
+  // Afrikka (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Saarivaltiot pienin rengas kuten Maltalla.
+  BDI: ['Burundi', 'Burundi', 'Flag of Burundi.svg'],
+  BEN: ['Benin', 'Benin', 'Flag of Benin.svg'],
+  BFA: ['Burkina Faso', 'Burkina Faso', 'Flag of Burkina Faso.svg'],
+  BWA: ['Botswana', 'Botswana', 'Flag of Botswana.svg'],
+  CAF: ['Keski-Afrikan tasavalta', 'Keski-Afrikan tasavalta', 'Flag of the Central African Republic.svg'],
+  CIV: ['Norsunluurannikko', 'Norsunluurannikko', 'Flag of Côte d\'Ivoire.svg'],
+  COG: ['Kongon tasavalta', 'Kongon tasavalta', 'Flag of the Republic of the Congo.svg'],
+  COM: ['Komorit', 'Komorit', 'Flag of the Comoros.svg', { minKoko: 0, sieto: 0.3 }],
+  CPV: ['Kap Verde', 'Kap Verde', 'Flag of Cape Verde.svg', { minKoko: 0, sieto: 0.3 }],
+  DJI: ['Djibouti', 'Djibouti', 'Flag of Djibouti.svg'],
+  ERI: ['Eritrea', 'Eritrea', 'Flag of Eritrea.svg'],
+  GAB: ['Gabon', 'Gabon', 'Flag of Gabon.svg'],
+  GIN: ['Guinea', 'Guinea', 'Flag of Guinea.svg'],
+  GMB: ['Gambia', 'Gambia', 'Flag of The Gambia.svg', { minKoko: 0 }],
+  GNB: ['Guinea-Bissau', 'Guinea-Bissau', 'Flag of Guinea-Bissau.svg'],
+  GNQ: ['Päiväntasaajan Guinea', 'Päiväntasaajan Guinea', 'Flag of Equatorial Guinea.svg'],
+  LSO: ['Lesotho', 'Lesotho', 'Flag of Lesotho.svg'],
+  MRT: ['Mauritania', 'Mauritania', 'Flag of Mauritania.svg'],
+  MUS: ['Mauritius', 'Mauritius', 'Flag of Mauritius.svg', { minKoko: 0, sieto: 0.3 }],
+  MWI: ['Malawi', 'Malawi', 'Flag of Malawi.svg'],
+  NER: ['Niger', 'Niger', 'Flag of Niger.svg'],
+  RWA: ['Ruanda', 'Ruanda', 'Flag of Rwanda.svg'],
+  STP: ['São Tomé ja Príncipe', 'São Tomé ja Príncipe', 'Flag of São Tomé and Príncipe.svg', { minKoko: 0, sieto: 0.3 }],
+  SWZ: ['Swazimaa', 'Swazimaa', 'Flag of Eswatini.svg'],
+  SYC: ['Seychellit', 'Seychellit', 'Flag of Seychelles.svg', { minKoko: 0, sieto: 0.1 }],
+  TGO: ['Togo', 'Togo', 'Flag of Togo.svg'],
+  ZMB: ['Sambia', 'Sambia', 'Flag of Zambia.svg'],
+  // Aasia (kaikki maat -projekti 10.10.2026): Brunei ja Malediivien atollit
+  // ovat pieniä renkaita; Malediivit myös MINIVALTIOT-poikkeukseen
+  // (generoi-maapolygonit, vienti/maarajat), koska saaret ovat alle MIN_KOKOn.
+  BRN: ['Brunei', 'Brunei', 'Flag of Brunei.svg', { minKoko: 0, sieto: 0.3 }],
+  MDV: ['Malediivit', 'Malediivit', 'Flag of Maldives.svg', { minKoko: 0, sieto: 0.1 }],
+  BHR: ['Bahrain', 'Bahrain', 'Flag of Bahrain.svg', { minKoko: 0, sieto: 0.3 }],
+  ISR: ['Israel', 'Israel', 'Flag of Israel.svg'],
+  LBN: ['Libanon', 'Libanon', 'Flag of Lebanon.svg'],
+  PSE: ['Palestiina', 'Palestiinan valtio', 'Flag of Palestine.svg', { minKoko: 0, sieto: 0.3 }],
   // Amerikat
   ARG: ['Argentiina', 'Argentiina', 'Flag of Argentina.svg', { sieto: 2 }],
   BOL: ['Bolivia', 'Bolivia', 'Flag of Bolivia.svg'],
@@ -146,12 +234,19 @@ const ANKKURIT = [
   ['UZB', ['KGZ', 'TJK', 'TKM']],
   ['DNK', ['ALB', 'BEL', 'BLR', 'LUX', 'MDA', 'MKD', 'MNE', 'SRB', 'SVK', 'SVN']],
   ['MKD', ['MLT']],
+  ['MLT', ['AND', 'LIE', 'MCO', 'SMR', 'VAT']],
   ['MDG', ['SHN']],
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
   ['IDN', ['TLS']],
+  ['ZWE', ['BDI', 'BEN', 'BFA', 'BWA', 'CAF', 'CIV', 'COG', 'COM', 'CPV', 'DJI', 'ERI', 'GAB', 'GIN', 'GMB', 'GNB', 'GNQ', 'LSO', 'MRT', 'MUS', 'MWI', 'NER', 'RWA', 'STP', 'SWZ', 'SYC', 'TGO', 'ZMB']],
+  ['SGP', ['BRN']],
+  ['LKA', ['MDV']],
+  ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
+  ['VUT', ['FSM', 'KIR', 'MHL', 'NRU', 'PLW', 'TON', 'TUV', 'WSM']],
+  ['VEN', ['ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'GUY', 'HND', 'HTI', 'JAM', 'KNA', 'LCA', 'SLV', 'SUR', 'TTO', 'VCT']],
 ];
 
 const { MAAILMANKARTTA } = await import(`file://${join(JUURI, 'js/packs/maailmankartta.js')}`);
@@ -363,12 +458,17 @@ for (const f of data.features) {
   const iso = f.properties.ADM0_A3 || f.properties.ISO_A3;
   if (iso && !piirteet.has(iso)) piirteet.set(iso, f);
 }
+// Toinen kierros ISO_A3:lla: Palestiina on ADM0_A3:ssa PSX mutta pelissä PSE.
+for (const f of data.features) {
+  const iso = f.properties.ISO_A3;
+  if (iso && iso !== '-99' && !piirteet.has(iso)) piirteet.set(iso, f);
+}
 
 const uudet = {};
 let renkaita = 0;
 let pisteitaKaikkiaan = 0;
 for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
-  if (nykyiset[iso]) { console.log(`${iso} on jo laudalla — ohitetaan`); continue; }
+  if (nykyiset[iso] && !KORVAA.has(iso)) { console.log(`${iso} on jo laudalla — ohitetaan`); continue; }
   const f = piirteet.get(iso);
   if (!f) throw new Error(`${iso} ei ole Natural Earthissa`);
   const minKoko = asetukset.minKoko ?? MIN_KOKO;
@@ -379,7 +479,8 @@ for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
    * kartografin asettama ja parempi kuin laskettu keskipiste. Se
    * lasketaan ENNEN renkaita, koska renkaat keskitetään sen ympärille.
    */
-  let keskus = Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
+  let keskus = asetukset.nimiPiste ? viivaLaudalle([asetukset.nimiPiste])[0]
+    : Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
     ? viivaLaudalle([[f.properties.LABEL_X, f.properties.LABEL_Y]])[0]
     : null;
 
@@ -491,6 +592,12 @@ if (kuiva) process.exit(0);
 const polku = join(JUURI, 'js/packs/maailmankartta.js');
 let teksti = readFileSync(polku, 'utf8');
 let lisatty = 0;
+for (const iso of KORVAA) {
+  const osuma = teksti.match(new RegExp(`^ {2}"${iso}": .*$`, 'm'));
+  if (!osuma || !uudet[iso]) throw new Error(`${iso}: korvattavaa riviä tai uutta muotoa ei ole`);
+  teksti = teksti.replace(osuma[0], `  ${JSON.stringify(iso)}: ${JSON.stringify(uudet[iso])},`);
+  console.log(`${iso} korvattu`);
+}
 for (const [ankkuri, isot] of ANKKURIT) {
   for (const iso of isot) {
     if (!uudet[iso]) continue;

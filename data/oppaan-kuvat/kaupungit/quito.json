@@ -1,0 +1,463 @@
+{
+ "kaupunki": "quito",
+ "kaupunkiQ": "Q2900",
+ "kohteet": [
+  {
+   "q": "Q8343766",
+   "nimi": "Quiton historiallinen keskusta",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": -0.22,
+   "lon": -78.51208,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A view from the Roof deck (Palacio de Pizarro) Historic Center of Quito, pic.bb2633.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_from_the_Roof_deck_(Palacio_de_Pizarro)_Historic_Center_of_Quito%2C_pic.bb2633.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_from_the_Roof_deck_(Palacio_de_Pizarro)_Historic_Center_of_Quito%2C_pic.bb2633.jpg",
+     "selite": "Quiton historiallinen keskusta on yksi Latinalaisen Amerikan parhaiten säilyneitä siirtomaa-ajan kaupunkikeskustoja.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "B5 Ecuador 028 Quito, historical zone, January 1985.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B5_Ecuador_028_Quito%2C_historical_zone%2C_January_1985.jpg?width=1280",
+     "tekija": "Photography, Scan and postprocessing by Hubertl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B5_Ecuador_028_Quito%2C_historical_zone%2C_January_1985.jpg",
+     "selite": "Valkoiset kirkot ja luostarit seisovat tiiviisti kapeiden katujen varrella.",
+     "leveys": 2214,
+     "korkeus": 3371,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(Centro Histórico, Quito) pic a1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Centro_Hist%C3%B3rico%2C_Quito)_pic_a1.JPG?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Centro_Hist%C3%B3rico%2C_Quito)_pic_a1.JPG",
+     "selite": "Vanhan kaupungin talot kiipeävät rinteille vuorten juurella.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5758380",
+   "nimi": "Quiton katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -0.22028,
+   "lon": -78.51417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Metropolitan Cathedral of Quito.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropolitan_Cathedral_of_Quito.jpg?width=1280",
+     "tekija": "Ángel M. Felicísimo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropolitan_Cathedral_of_Quito.jpg",
+     "selite": "Quiton katedraali on Plaza Grandea reunustava valkoinen siirtomaa-ajan kirkko.",
+     "leveys": 2364,
+     "korkeus": 1479,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A cool view from the Roof deck (Palacio de Pizarro), Historic Center of Quito, pic.r2d2,01b.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_cool_view_from_the_Roof_deck_(Palacio_de_Pizarro)%2C_Historic_Center_of_Quito%2C_pic.r2d2%2C01b.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_cool_view_from_the_Roof_deck_(Palacio_de_Pizarro)%2C_Historic_Center_of_Quito%2C_pic.r2d2%2C01b.jpg",
+     "selite": "Katedraalin kupolit ja katot erottuvat vanhan kaupungin yli.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A cool view from the Roof deck (Palacio de Pizarro), Historic Center of Quito, pic.r2d2,01bbb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_cool_view_from_the_Roof_deck_(Palacio_de_Pizarro)%2C_Historic_Center_of_Quito%2C_pic.r2d2%2C01bbb.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_cool_view_from_the_Roof_deck_(Palacio_de_Pizarro)%2C_Historic_Center_of_Quito%2C_pic.r2d2%2C01bbb.jpg",
+     "selite": "Kupolin kaakeloitu katto erottuu vanhan kaupungin kattojen yläpuolella.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4868435",
+   "nimi": "Voto Nacionalin basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -0.215,
+   "lon": -78.50739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "49 - Quito - Décembre 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/49_-_Quito_-_D%C3%A9cembre_2008.jpg?width=1280",
+     "tekija": "Martin St-Amant (S23678)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:49_-_Quito_-_D%C3%A9cembre_2008.jpg",
+     "selite": "Voto Nacionalin basilika on uusgoottilainen kirkko, jonka tornit nousevat vanhan kaupungin yli.",
+     "leveys": 3796,
+     "korkeus": 2640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Altstadt von Quito 27.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altstadt_von_Quito_27.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altstadt_von_Quito_27.jpg",
+     "selite": "Kaksi tornia näkyvät kaukaa laakson toiselta puolelta.",
+     "leveys": 2600,
+     "korkeus": 1463,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(La Basílica del Voto Nacional, Quito) pic. h 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(La_Bas%C3%ADlica_del_Voto_Nacional%2C_Quito)_pic._h_1.JPG?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(La_Bas%C3%ADlica_del_Voto_Nacional%2C_Quito)_pic._h_1.JPG",
+     "selite": "Julkisivua koristavat eläinhahmot muistuttavat Ecuadorin omasta luonnosta.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1871347",
+   "nimi": "El Panecillo",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": -0.22861,
+   "lon": -78.51861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Panecillo, Ecuador, pic.a1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Panecillo%2C_Ecuador%2C_pic.a1.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Panecillo%2C_Ecuador%2C_pic.a1.jpg",
+     "selite": "El Panecillo on vanhan kaupungin eteläpuolella kohoava kukkula, jonka huipulla seisoo Quiton neitsyen patsas.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "El Panecillo, Ecuador, pic.a1, looking to the South of the City, Quito.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Panecillo%2C_Ecuador%2C_pic.a1%2C_looking_to_the_South_of_the_City%2C_Quito.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Panecillo%2C_Ecuador%2C_pic.a1%2C_looking_to_the_South_of_the_City%2C_Quito.jpg",
+     "selite": "Kukkulalta avautuu laaja näkymä yli Andien laakson ympäröimän pääkaupungin.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Quito calle García Moreno.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quito_calle_Garc%C3%ADa_Moreno.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quito_calle_Garc%C3%ADa_Moreno.jpg",
+     "selite": "Calle García Morenon pään yläpuolella kohoaa Panecillon kukkula.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18326422",
+   "nimi": "La Mercedin basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 90,
+   "lat": -0.2182,
+   "lon": -78.5137,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "(Quito) Exterior of the Iglesia de la Merced Centro Historico de Quito.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Quito)_Exterior_of_the_Iglesia_de_la_Merced_Centro_Historico_de_Quito.JPG?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Quito)_Exterior_of_the_Iglesia_de_la_Merced_Centro_Historico_de_Quito.JPG",
+     "selite": "La Mercedin basilika on valkoinen siirtomaa-ajan kirkko, jonka kellotorni näkyy kauas.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica de La Merced, Quito - Equador - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_de_La_Merced%2C_Quito_-_Equador_-_panoramio.jpg?width=1280",
+     "tekija": "Paulo JC Nogueira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_de_La_Merced%2C_Quito_-_Equador_-_panoramio.jpg",
+     "selite": "Kirkon edessä on pieni aukio keskellä vanhaa kaupunkia.",
+     "leveys": 4244,
+     "korkeus": 2496,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fiesta de la luz - Iglesia de La Merced (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiesta_de_la_luz_-_Iglesia_de_La_Merced_(02).jpg?width=1280",
+     "tekija": "Agencia de Noticias ANDES",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fiesta_de_la_luz_-_Iglesia_de_La_Merced_(02).jpg",
+     "selite": "Valofestivaalin aikaan kirkon julkisivu valaistaan värikkäillä projektioilla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5117072",
+   "nimi": "San Agustínin luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 90,
+   "lat": -0.22038,
+   "lon": -78.51036,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de San Agustín - Quito.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_Agust%C3%ADn_-_Quito.JPG?width=1280",
+     "tekija": "David C. S.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Agust%C3%ADn_-_Quito.JPG",
+     "selite": "San Agustínin luostari ja kirkko kuuluvat Quiton vanhimpiin, ja ne ovat kaupungin historian tärkeä näyttämö.",
+     "leveys": 3240,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(Iglesia de San Agustin, Quito) pic a2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Iglesia_de_San_Agustin%2C_Quito)_pic_a2.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Iglesia_de_San_Agustin%2C_Quito)_pic_a2.jpg",
+     "selite": "Barokkijulkisivun koristeellinen kiviveistos on vanhan kaupungin tunnusmerkki.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(Iglesia de San Agustin, Quito) pic a3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Iglesia_de_San_Agustin%2C_Quito)_pic_a3.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Iglesia_de_San_Agustin%2C_Quito)_pic_a3.jpg",
+     "selite": "Kirkon sisäänkäynnit avautuvat kapealle kivikadulle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6446453",
+   "nimi": "El Sagrarion kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -0.2207,
+   "lon": -78.5128,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fachada de la Iglesia de El Sagrario, Quito.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_de_la_Iglesia_de_El_Sagrario%2C_Quito.jpg?width=1280",
+     "tekija": "Ranoutofusername",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fachada_de_la_Iglesia_de_El_Sagrario%2C_Quito.jpg",
+     "selite": "El Sagrarion barokkikirkko seisoo Plaza Grandelta lähtevän Calle García Morenon varrella.",
+     "leveys": 3974,
+     "korkeus": 2980,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(Iglesia de El Sagrario, Quito) from the roof of the Centro Cultural Metropolitano.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Iglesia_de_El_Sagrario%2C_Quito)_from_the_roof_of_the_Centro_Cultural_Metropolitano.JPG?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Iglesia_de_El_Sagrario%2C_Quito)_from_the_roof_of_the_Centro_Cultural_Metropolitano.JPG",
+     "selite": "Kupoli ja julkisivu erottuvat katedraalin viereen kohoavina.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Iglesia de El Sagrario, Quito, Ecuador, 2015-07-22, DD 101.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_El_Sagrario%2C_Quito%2C_Ecuador%2C_2015-07-22%2C_DD_101.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_El_Sagrario%2C_Quito%2C_Ecuador%2C_2015-07-22%2C_DD_101.JPG",
+     "selite": "Kirkon koristeellinen kivijulkisivu on 1700-luvun alun barokkia.",
+     "leveys": 4030,
+     "korkeus": 6484,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6033890",
+   "nimi": "Casa del Alabado",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -0.22126,
+   "lon": -78.51582,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Casa del Alabado pic.aaa Calle Cuenca, Quito Photography by David Adam Kess.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Casa_del_Alabado_pic.aaa_Calle_Cuenca%2C_Quito_Photography_by_David_Adam_Kess.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Casa_del_Alabado_pic.aaa_Calle_Cuenca%2C_Quito_Photography_by_David_Adam_Kess.jpg",
+     "selite": "Casa del Alabado on esikolumbiaanisen taiteen museo, joka toimii valkoisessa siirtomaa-ajan talossa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Quito Museo Casa del Alabado seen from Calle Cuenca.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quito_Museo_Casa_del_Alabado_seen_from_Calle_Cuenca.jpg?width=1280",
+     "tekija": "Ymblanter",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quito_Museo_Casa_del_Alabado_seen_from_Calle_Cuenca.jpg",
+     "selite": "Museo sijaitsee Calle Cuencan kapealla kivikadulla vanhassa kaupungissa.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19896440",
+   "nimi": "Kaupunkimuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -0.22306,
+   "lon": -78.515,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo de la Ciudad, Quito (exterior) pic b1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_la_Ciudad%2C_Quito_(exterior)_pic_b1.JPG?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_de_la_Ciudad%2C_Quito_(exterior)_pic_b1.JPG",
+     "selite": "Quiton kaupunkimuseo kertoo kaupungin vaiheista entisen sairaalan tiloissa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrada del Museo de la ciudad, Quito.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrada_del_Museo_de_la_ciudad%2C_Quito.jpg?width=1280",
+     "tekija": "Ranoutofusername",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrada_del_Museo_de_la_ciudad%2C_Quito.jpg",
+     "selite": "Museon sisäänkäynti on kivikehyksinen vanha portti Calle Rocafuerten varrella.",
+     "leveys": 5631,
+     "korkeus": 4224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(Calle Rocafuerte, Quito) pic bb1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Calle_Rocafuerte%2C_Quito)_pic_bb1.jpg?width=1280",
+     "tekija": "David Adam Kess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Calle_Rocafuerte%2C_Quito)_pic_bb1.jpg",
+     "selite": "Pitkä valkoinen julkisivu seuraa kapeaa katua vanhan kaupungin keskellä.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista de Quito desde la Loma de Puengasi.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Quito_desde_la_Loma_de_Puengasi.jpg?width=1280",
+   "tekija": "Josuadaniel",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Quito_desde_la_Loma_de_Puengasi.jpg",
+   "selite": "Quito sijaitsee korkealla Andien laaksossa, ja kaupungin yllä kohoaa Pichincha-tulivuori.",
+   "leveys": 3872,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Quito as from panecillo Basilica.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quito_as_from_panecillo_Basilica.jpg?width=1280",
+   "tekija": "Cayambe",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quito_as_from_panecillo_Basilica.jpg",
+   "selite": "Panecillon kukkulalta näkyy vanha keskusta ja Voto Nacionalin basilikan tornit.",
+   "leveys": 4170,
+   "korkeus": 2583,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

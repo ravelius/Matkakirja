@@ -1,0 +1,336 @@
+{
+ "kaupunki": "tromssa",
+ "kaupunkiQ": "Q42328401",
+ "kohteet": [
+  {
+   "q": "Q1319441",
+   "nimi": "Jäämerenkatedraali",
+   "peruste": "sitelinks",
+   "koko_m": 70,
+   "lat": 69.64807,
+   "lon": 18.9874,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NOR-2016-Tromsø-Arctic Cathedral (Ishavskatedralen) 01 front.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NOR-2016-Troms%C3%B8-Arctic_Cathedral_(Ishavskatedralen)_01_front.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NOR-2016-Troms%C3%B8-Arctic_Cathedral_(Ishavskatedralen)_01_front.jpg",
+     "selite": "Tromsdalenin kirkon teräväkulmainen valkoinen julkisivu muistuttaa jäävuorta ja on Tromssan tunnetuin maamerkki.",
+     "leveys": 6428,
+     "korkeus": 4285,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral del ártico, Tromsø, Noruega, 2019-09-04, DD 33.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_del_%C3%A1rtico%2C_Troms%C3%B8%2C_Noruega%2C_2019-09-04%2C_DD_33.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_del_%C3%A1rtico%2C_Troms%C3%B8%2C_Noruega%2C_2019-09-04%2C_DD_33.jpg",
+     "selite": "Ylhäältä näkyy kirkon porrastettu jäämäinen muoto Tromsdalenin asuinalueen keskellä.",
+     "leveys": 3984,
+     "korkeus": 2656,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arctic Cathedral.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_Cathedral.JPG?width=1280",
+     "tekija": "Jma",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arctic_Cathedral.JPG",
+     "selite": "Kirkon lasinen päätyseinä heijastaa taivasta Pohjois-Norjan kirkkaassa valossa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q945944",
+   "nimi": "Tromssan silta",
+   "peruste": "sitelinks",
+   "koko_m": 1100,
+   "lat": 69.6513,
+   "lon": 18.97813,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tromsøsund bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Troms%C3%B8sund_bridge.jpg?width=1280",
+     "tekija": "Lars Tiede from Karlsruhe, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Troms%C3%B8sund_bridge.jpg",
+     "selite": "Kaareva silta yhdistää Tromssan saarikeskustan mantereen puolelle Tromsdaleniin.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "09516 Tromsdalen church and eastern half of Tromso bridge - Tromso, Norway - V-P.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/09516_Tromsdalen_church_and_eastern_half_of_Tromso_bridge_-_Tromso%2C_Norway_-_V-P.jpg?width=1280",
+     "tekija": "Virtual-Pano",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:09516_Tromsdalen_church_and_eastern_half_of_Tromso_bridge_-_Tromso%2C_Norway_-_V-P.jpg",
+     "selite": "Sillan takana kohoavat vuoret ja Jäämerenkatedraali ympäröivät Tromssansalmea.",
+     "leveys": 7614,
+     "korkeus": 5078,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1422197",
+   "nimi": "Fjellheisen",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 69.64096,
+   "lon": 18.98724,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ankunft in der Bergstation Fjellheisen Tromsø.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankunft_in_der_Bergstation_Fjellheisen_Troms%C3%B8.jpg?width=1280",
+     "tekija": "JoachimKohlerBremen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankunft_in_der_Bergstation_Fjellheisen_Troms%C3%B8.jpg",
+     "selite": "Fjellheisenin köysirata nousee kaupungin kohdalta Storsteinenin vuorelle, jolta näkee saaren ja salmen.",
+     "leveys": 2000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fjellheisen - Tromsø, Norway 2023-07-08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fjellheisen_-_Troms%C3%B8%2C_Norway_2023-07-08.jpg?width=1280",
+     "tekija": "Ryan Hodnett",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fjellheisen_-_Troms%C3%B8%2C_Norway_2023-07-08.jpg",
+     "selite": "Köysiradan kori liukuu metsäisen rinteen yli ylös vuorelle.",
+     "leveys": 6000,
+     "korkeus": 3989,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28888",
+   "nimi": "Polaria",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 69.64369,
+   "lon": 18.94987,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Polaria 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Polaria_01.JPG?width=1280",
+     "tekija": "Bjoertvedt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Polaria_01.JPG",
+     "selite": "Polarian jäälohkareita muistuttava rakennus esittelee arktista luontoa ja siellä uiskentelee hylkeitä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0906 Kreuzfahrt Norwegen 0896.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0906_Kreuzfahrt_Norwegen_0896.jpg?width=1280",
+     "tekija": "weisserstier from Wien, Austria",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0906_Kreuzfahrt_Norwegen_0896.jpg",
+     "selite": "Ilmasta Polaria näkyy satama-alueen reunalla keskustan ja sairaalan vieressä.",
+     "leveys": 2048,
+     "korkeus": 1362,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2296475",
+   "nimi": "Tromssan tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 69.64877,
+   "lon": 18.95682,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "24 Tromso Cathedral (5618113605).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Tromso_Cathedral_(5618113605).jpg?width=1280",
+     "tekija": "michael clarke stuff",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Tromso_Cathedral_(5618113605).jpg",
+     "selite": "Puinen goottilaistyylinen kirkko vuodelta 1861 on Norjan pohjoisin protestanttinen tuomiokirkko.",
+     "leveys": 1683,
+     "korkeus": 2146,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral, Tromsø, Noruega, 2019-09-04, DD 67.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%2C_Troms%C3%B8%2C_Noruega%2C_2019-09-04%2C_DD_67.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral%2C_Troms%C3%B8%2C_Noruega%2C_2019-09-04%2C_DD_67.jpg",
+     "selite": "Kirkon kapea torni kohoaa Tromssan keskustan puutalojen yläpuolelle.",
+     "leveys": 4028,
+     "korkeus": 6974,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1727268",
+   "nimi": "Polaarimuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 69.65221,
+   "lon": 18.96343,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Polar Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Polar_Museum.jpg?width=1280",
+     "tekija": "Illustratedjc",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Polar_Museum.jpg",
+     "selite": "Vanhassa tullirakennuksessa toimiva museo kertoo napaseutujen tutkimusretkistä ja pyyntiperinteestä.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Polar Museum in Tromsø (Jul 2019) 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Polar_Museum_in_Troms%C3%B8_(Jul_2019)_1.jpg?width=1280",
+     "tekija": "Visem",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Polar_Museum_in_Troms%C3%B8_(Jul_2019)_1.jpg",
+     "selite": "Museon punaiset puurakennukset seisovat Tromssan sataman rannalla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q74652",
+   "nimi": "Kvaløya",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": 69.61667,
+   "lon": 18.55,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eidkjosen, Blåmann, Kvaløya (28822407497).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eidkjosen%2C_Bl%C3%A5mann%2C_Kval%C3%B8ya_(28822407497).jpg?width=1280",
+     "tekija": "Harald Groven from Tromsø, Norway",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eidkjosen%2C_Bl%C3%A5mann%2C_Kval%C3%B8ya_(28822407497).jpg",
+     "selite": "Kvaløyan saarta ympäröivät merenlahdet ja vuoret, ja Blåmann kohoaa lahden ylle.",
+     "leveys": 6788,
+     "korkeus": 3946,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kvaloysletta kvaloya tromso.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kvaloysletta_kvaloya_tromso.JPG?width=1280",
+     "tekija": "MiraculixHB",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kvaloysletta_kvaloya_tromso.JPG",
+     "selite": "Kvaløyan rannikolta näkyy Tromssan silta ja kaupungin takainen vuoristo.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1779489",
+   "nimi": "Arktis-alpiininen kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 69.6768,
+   "lon": 18.9763,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Botanicgardentromso.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Botanicgardentromso.jpg?width=1280",
+     "tekija": "Kongharald",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Botanicgardentromso.jpg",
+     "selite": "Maailman pohjoisin kasvitieteellinen puutarha kasvattaa arktisia ja alppikasveja vuoristomaisemassa.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arctic-Alpine Botanic Garden (Jul 2019) 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic-Alpine_Botanic_Garden_(Jul_2019)_04.jpg?width=1280",
+     "tekija": "Visem",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arctic-Alpine_Botanic_Garden_(Jul_2019)_04.jpg",
+     "selite": "Kesällä rinteet vihertävät ja kukkivat napapiirin pohjoispuolella.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama Tromsø from Fjellheisen.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Troms%C3%B8_from_Fjellheisen.jpg?width=1280",
+   "tekija": "Happy Discover",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Troms%C3%B8_from_Fjellheisen.jpg",
+   "selite": "Tromssan saarikeskusta levittäytyy vuonon ja vuorten väliin Fjellheisenin näköalapaikalta katsottuna.",
+   "leveys": 5376,
+   "korkeus": 1887,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Tromsø harbour 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Troms%C3%B8_harbour_01.jpg?width=1280",
+   "tekija": "Bernt Rostad from Oslo, Norway",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Troms%C3%B8_harbour_01.jpg",
+   "selite": "Sataman puutalot ja kalastusalukset kuuluvat Tromssan keskustan tunnelmaan.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

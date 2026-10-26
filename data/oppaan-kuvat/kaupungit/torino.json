@@ -1,0 +1,516 @@
+{
+ "kaupunki": "torino",
+ "kaupunkiQ": "Q495",
+ "kohteet": [
+  {
+   "q": "Q201902",
+   "nimi": "Mole Antonelliana",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 45.06898,
+   "lon": 7.69324,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mole Antonelliana di sera.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mole_Antonelliana_di_sera.jpg?width=1280",
+     "tekija": "Abbrey82",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mole_Antonelliana_di_sera.jpg",
+     "selite": "Mole Antonelliana on Torinon tunnetuin maamerkki, ja sen kärki kohoaa illalla Alppien eteen.",
+     "leveys": 4000,
+     "korkeus": 2716,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino Mole Antonelliana Esterno 9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Mole_Antonelliana_Esterno_9.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Mole_Antonelliana_Esterno_9.jpg",
+     "selite": "Tornin laaja kupoli ja pylväskerrokset kuuluvat 1800-luvun arkkitehtuurin erikoisuuksiin.",
+     "leveys": 3850,
+     "korkeus": 3136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "TurinMolewithAlps.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TurinMolewithAlps.jpg?width=1280",
+     "tekija": "Marit & Toomas Hinnosaar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TurinMolewithAlps.jpg",
+     "selite": "Kaupungin katoilta Mole erottuu selvästi Alppien lumihuippuja vasten.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19824",
+   "nimi": "Torinon kuninkaallinen palatsi",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 45.07283,
+   "lon": 7.68633,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo Reale di Torino Facciata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Reale_di_Torino_Facciata.jpg?width=1280",
+     "tekija": "Ambra75",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_Reale_di_Torino_Facciata.jpg",
+     "selite": "Palatsi oli Savoijin hallitsijasuvun pääasunto, ja se kuuluu UNESCOn maailmanperintöön.",
+     "leveys": 3258,
+     "korkeus": 2440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino Palazzo Reale Esterno 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Palazzo_Reale_Esterno_3.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Palazzo_Reale_Esterno_3.jpg",
+     "selite": "Palatsin edessä ratsastajapatsaat vartioivat porttia Piazzetta Realella.",
+     "leveys": 4371,
+     "korkeus": 3025,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1145261",
+   "nimi": "Supergan basilika",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 45.08062,
+   "lon": 7.76737,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La basilica al tramonto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_basilica_al_tramonto.jpg?width=1280",
+     "tekija": "Domeian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_basilica_al_tramonto.jpg",
+     "selite": "Supergan basilika kohoaa kukkulalla Torinon yläpuolella Alppien edessä.",
+     "leveys": 3936,
+     "korkeus": 2624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica di Superga (Turin).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_Superga_(Turin).jpg?width=1280",
+     "tekija": "Paris Orlando",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Superga_(Turin).jpg",
+     "selite": "Barokkikirkon pylväsportiikki ja kupoli ovat Filippo Juvarran työtä.",
+     "leveys": 7337,
+     "korkeus": 5456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basilica di Superga (Turin) at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_Superga_(Turin)_at_night.jpg?width=1280",
+     "tekija": "Paris Orlando",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Superga_(Turin)_at_night.jpg",
+     "selite": "Valaistu basilika loistaa kukkulalla pimeässä.",
+     "leveys": 7130,
+     "korkeus": 5365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q958699",
+   "nimi": "Torinon tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.07332,
+   "lon": 7.68544,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DuomoTorino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DuomoTorino.jpg?width=1280",
+     "tekija": "Eccekevin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DuomoTorino.jpg",
+     "selite": "Torinon renessanssityylinen tuomiokirkko seisoo erillisen kellotornin vieressä.",
+     "leveys": 3735,
+     "korkeus": 3215,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino Cattedrale metropolitana di San Giovanni Battista Esterno Cupola.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Cattedrale_metropolitana_di_San_Giovanni_Battista_Esterno_Cupola.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Cattedrale_metropolitana_di_San_Giovanni_Battista_Esterno_Cupola.jpg",
+     "selite": "Guarinin suunnittelema kupoli on barokkiarkkitehtuurin erikoisuus.",
+     "leveys": 4400,
+     "korkeus": 3182,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Torino Cattedrale metropolitana di San Giovanni Battista Esterno 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Cattedrale_metropolitana_di_San_Giovanni_Battista_Esterno_2.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Cattedrale_metropolitana_di_San_Giovanni_Battista_Esterno_2.jpg",
+     "selite": "Kirkon vaalea marmorijulkisivu avautuu katukuvaan.",
+     "leveys": 4317,
+     "korkeus": 3181,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19826",
+   "nimi": "Palazzo Madama",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": 45.07094,
+   "lon": 7.68578,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo Madama (Torino).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Madama_(Torino).jpg?width=1280",
+     "tekija": "Federico Spadaro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_Madama_(Torino).jpg",
+     "selite": "Palazzo Madaman barokkijulkisivu kätkee taakseen keskiaikaisen linnan.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino, palazzo Madama (09).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino%2C_palazzo_Madama_(09).jpg?width=1280",
+     "tekija": "Gianni Careddu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino%2C_palazzo_Madama_(09).jpg",
+     "selite": "Palatsin takaa paljastuvat keskiaikaisen linnan pyöreät tornit.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Luce di fine settembre su Palazzo Madama, Torino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luce_di_fine_settembre_su_Palazzo_Madama%2C_Torino.jpg?width=1280",
+     "tekija": "Andbog",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luce_di_fine_settembre_su_Palazzo_Madama%2C_Torino.jpg",
+     "selite": "Illan valo värjää palatsin julkisivun kullanhohtoiseksi.",
+     "leveys": 5815,
+     "korkeus": 3271,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19829",
+   "nimi": "Palazzo Carignano",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 45.06901,
+   "lon": 7.68559,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torino Palazzo Carignano Esterno 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Palazzo_Carignano_Esterno_1.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Palazzo_Carignano_Esterno_1.jpg",
+     "selite": "Palazzo Carignanon punatiilinen barokkijulkisivu on syntynyt Savoijin ruhtinaiden asunnoksi.",
+     "leveys": 4535,
+     "korkeus": 3062,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3902175",
+   "nimi": "Piazza Castello",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 200,
+   "lat": 45.0708,
+   "lon": 7.6858,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza Castello di Torino e scorcio della Piazzetta Reale.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_Castello_di_Torino_e_scorcio_della_Piazzetta_Reale.jpg?width=1280",
+     "tekija": "Guglielmo di Rivoli",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_Castello_di_Torino_e_scorcio_della_Piazzetta_Reale.jpg",
+     "selite": "Piazza Castello on Torinon historiallinen keskusaukio, jota reunustavat Savoijin palatsit.",
+     "leveys": 5622,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino - Piazza Castello (24269304747).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_-_Piazza_Castello_(24269304747).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_-_Piazza_Castello_(24269304747).jpg",
+     "selite": "Aukion laidalla kohoaa San Lorenzon kirkon kupoli.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3902294",
+   "nimi": "Piazza San Carlo",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 45.0677,
+   "lon": 7.68257,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza San Carlo, Torino .jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_San_Carlo%2C_Torino_.jpg?width=1280",
+     "tekija": "Giorgio Duma .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}This image contains digital watermarking or credits in the image itself. The usage of visible watermarks is discouraged. If a non-watermarked version of the image is available, please upload it under the same file name and then remove this template. Ensure that removed information is present in the image description page and replace this template with {{Metadata from image}} or {{Attribution metadata from licensed image}}. Caution: Before removing a watermark from a copyrighted image, please read the WMF's analysis of the legal ramifications of doing so, as well as Commons' proposed policy regarding watermarks. If the old version is still useful, for example if removing the watermark damages the image significantly, upload the new version under a different title so that both can be used. After uploading the non-watermarked version, replace this template with .mw-parser-output .nowrap,.mw-parser-output .nowrap a:before,.mw-parser-output .nowrap .selflink:before{white-space:nowrap}{{Superseded|new filename|version without watermarks}}.العربية ∙ беларуская (тарашкевіца) ∙ български ∙ català ∙ čeština ∙ Deutsch ∙ Ελληνικά ∙ English ∙ español ∙ eesti ∙ فارسی ∙ suomi ∙ français ∙ galego ∙ עברית ∙ हिन्दी ∙ hrvatski ∙ magyar ∙ Bahasa Indonesia ∙ italiano ∙ 日本語 ∙ македонски ∙ മലയാളം ∙ Plattdüütsch ∙ Nederlands ∙ polski ∙ português ∙ română ∙ русский ∙ sicilianu ∙ slovenščina ∙ svenska ∙ ไทย ∙ українська ∙ 中文 ∙ 中文（简体） ∙ 中文（繁體） ∙ +/−",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_San_Carlo%2C_Torino_.jpg",
+     "selite": "Piazza San Carlo on Torinon barokkinen salonki, jota kehystävät tasaiset arkadit.",
+     "leveys": 5510,
+     "korkeus": 3673,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino - Piazza San Carlo - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_-_Piazza_San_Carlo_-_1.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_-_Piazza_San_Carlo_-_1.jpg",
+     "selite": "Aukion päässä seisovat kaksoiskirkot ja ratsastajapatsas.",
+     "leveys": 5854,
+     "korkeus": 4390,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19830",
+   "nimi": "Valentinon linna",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 45.05403,
+   "lon": 7.68687,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castello del Valentino settembre 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castello_del_Valentino_settembre_2023.jpg?width=1280",
+     "tekija": "TorinoDoc",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castello_del_Valentino_settembre_2023.jpg",
+     "selite": "Valentinon linna on Po-joen rannalla seisova Savoijin ranskalaistyylinen palatsi.",
+     "leveys": 8074,
+     "korkeus": 5126,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castello del Valentino (12186463553).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castello_del_Valentino_(12186463553).jpg?width=1280",
+     "tekija": "Fulvio Spada from Torino, Italy",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castello_del_Valentino_(12186463553).jpg",
+     "selite": "Palatsin korkeat mansardikatot muistuttavat ranskalaisista linnoista.",
+     "leveys": 5148,
+     "korkeus": 3432,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1061804",
+   "nimi": "Valentinon puisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 45.054,
+   "lon": 7.686,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torino - View from Parco del Valentino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_-_View_from_Parco_del_Valentino.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_-_View_from_Parco_del_Valentino.jpg",
+     "selite": "Valentinon puisto levittäytyy Po-joen rannalla, ja vastarannalla kohoaa Capuccinin kukkula.",
+     "leveys": 6688,
+     "korkeus": 3762,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q868498",
+   "nimi": "Gran Madre di Dion kirkko",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 45.0622,
+   "lon": 7.6991,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torino Chiesa della Gran Madre di Dio Esterno 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Chiesa_della_Gran_Madre_di_Dio_Esterno_2.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Chiesa_della_Gran_Madre_di_Dio_Esterno_2.jpg",
+     "selite": "Gran Madre di Dion pantheonia muistuttava uusklassinen kirkko on rakennettu Napoleonin kukistumisen muistoksi.",
+     "leveys": 4056,
+     "korkeus": 2999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino Ponte Vittorio Emanuele I 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino_Ponte_Vittorio_Emanuele_I_2.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino_Ponte_Vittorio_Emanuele_I_2.jpg",
+     "selite": "Po-joen sillalta avautuu näkymä kirkon kupolille.",
+     "leveys": 4476,
+     "korkeus": 3150,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1054755",
+   "nimi": "Porta Palatina",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 45.075,
+   "lon": 7.6847,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PortaPalatina (Turin).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PortaPalatina_(Turin).jpg?width=1280",
+     "tekija": "TorinoDoc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PortaPalatina_(Turin).jpg",
+     "selite": "Porta Palatina on roomalaisen Augusta Taurinorumin kaupunginportti ajanlaskun alun tienoilta.",
+     "leveys": 6784,
+     "korkeus": 5287,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torino- Porta Palatina - 52736877254.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torino-_Porta_Palatina_-_52736877254.jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torino-_Porta_Palatina_-_52736877254.jpg",
+     "selite": "Punatiiliset kaksoistornit ovat yksi Italian parhaiten säilyneistä antiikin porteista.",
+     "leveys": 5999,
+     "korkeus": 3374,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q934424",
+   "nimi": "Borgo Medievale",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 45.04904,
+   "lon": 7.68511,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Borgo Medievale Torino -6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Borgo_Medievale_Torino_-6.jpg?width=1280",
+     "tekija": "Cielo99",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Borgo_Medievale_Torino_-6.jpg",
+     "selite": "Borgo Medievale on vuoden 1884 näyttelyä varten rakennettu jäljitelmä piemontelaisesta keskiaikaisesta kylästä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Turin skyline from Monte dei Cappuccini Turin.jpeg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Turin_skyline_from_Monte_dei_Cappuccini_Turin.jpeg?width=1280",
+   "tekija": "Peter Glyn",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Turin_skyline_from_Monte_dei_Cappuccini_Turin.jpeg",
+   "selite": "Capuccinin kukkulalta näkyy Torinon keskusta, Mole Antonelliana ja lumiset Alpit.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Turin and the Alps.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Turin_and_the_Alps.jpg?width=1280",
+   "tekija": "Chivista",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Turin_and_the_Alps.jpg",
+   "selite": "Po-joen laakso ja Torinon kaupunki leviävät Alppien juurelle.",
+   "leveys": 2900,
+   "korkeus": 2134,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

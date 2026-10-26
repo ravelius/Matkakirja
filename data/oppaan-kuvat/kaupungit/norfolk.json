@@ -1,0 +1,169 @@
+{
+ "kaupunki": "norfolk",
+ "kaupunkiQ": "Q31057",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q1580915",
+   "nimi": "Kingstonin ja Arthur's Valen historiallinen alue",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": -29.05306,
+   "lon": 167.95861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Norfolk Island convict buildings.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norfolk_Island_convict_buildings.jpg?width=1280",
+     "tekija": "Steve Daggar",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norfolk_Island_convict_buildings.jpg",
+     "selite": "Kingstonin vankisiirtolan kivirakennukset kuuluvat Australian vankilasiirtoloiden maailmanperintökohteeseen.",
+     "leveys": 1200,
+     "korkeus": 773,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Norfolk Island jail.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norfolk_Island_jail.jpg?width=1280",
+     "tekija": "Steve Daggar",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norfolk_Island_jail.jpg",
+     "selite": "Vankilan hiekkakivinen porttikaari ja muuri ovat jäljellä siirtolan ajalta.",
+     "leveys": 1200,
+     "korkeus": 783,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Norfolk Island Kingston.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norfolk_Island_Kingston.jpg?width=1280",
+     "tekija": "Steve Daggar",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norfolk_Island_Kingston.jpg",
+     "selite": "Kingstonin rannalla vanha venevaja ja vene, taustalla pieni saari merellä.",
+     "leveys": 1200,
+     "korkeus": 690,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Convict Establishment Norfolk Island 1848.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Convict_Establishment_Norfolk_Island_1848.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Convict_Establishment_Norfolk_Island_1848.jpg",
+     "selite": "Vanha näkymä esittää Kingstonin vankisiirtolaa norfolkinmäntyjen keskellä 1840-luvulla.",
+     "leveys": 4813,
+     "korkeus": 3500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2740764",
+   "nimi": "Burnt Pine",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -29.03333,
+   "lon": 167.95,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Burnt Pine in Norfolk Island, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burnt_Pine_in_Norfolk_Island%2C_Australia.jpg?width=1280",
+     "tekija": "bertknot",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burnt_Pine_in_Norfolk_Island%2C_Australia.jpg",
+     "selite": "Burnt Pine on saaren kauppa- ja asiointikeskus, jossa kasvaa puusaniaisia ja palmuja.",
+     "leveys": 4368,
+     "korkeus": 2912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2732089",
+   "nimi": "Norfolkinsaaren lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -29.0425,
+   "lon": 167.93806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Norfolk terminal.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norfolk_terminal.JPG?width=1280",
+     "tekija": "Rwiseman97",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norfolk_terminal.JPG",
+     "selite": "Lentoasema on saaren tärkein yhteys mantereelle ja Uuteen-Seelantiin.",
+     "leveys": 2100,
+     "korkeus": 1575,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Dusk on Norfolk Island.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dusk_on_Norfolk_Island.jpg?width=1280",
+   "tekija": "Peter James McNally",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dusk_on_Norfolk_Island.jpg",
+   "selite": "Norfolkinsaaren metsää ja norfolkinmäntyjä, kaukana siintää Phillip-saari.",
+   "leveys": 5760,
+   "korkeus": 3840,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Emily Bay Norfolk Island.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Emily_Bay_Norfolk_Island.jpg?width=1280",
+   "tekija": "Inas",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Emily_Bay_Norfolk_Island.jpg",
+   "selite": "Emily Bayn matala laguuni ja yksinäinen norfolkinmänty rannalla.",
+   "leveys": 4032,
+   "korkeus": 1960,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q586302",
+   "nimi": "Phillip-saari",
+   "peruste": "sitelinks",
+   "lat": -29.11955,
+   "lon": 167.95053,
+   "syy": "ei vapaata maisemakuvaa >= 1200 px (vain lintukuvia)"
+  },
+  {
+   "q": "Q1636644",
+   "nimi": "Nepean-saari",
+   "peruste": "sitelinks",
+   "lat": -29.07131,
+   "lon": 167.96506,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q1361458",
+   "nimi": "Mount Bates",
+   "peruste": "sitelinks",
+   "lat": -29.01123,
+   "lon": 167.93996,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

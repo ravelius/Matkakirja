@@ -64,6 +64,52 @@ export const MAASTOKOHTEET_LBY = [
   },
   {
     id: 'valimeri',
+    kuva: {
+      tiedosto: 'Mediterranean Sea 16.61811E 38.99124N.jpg',
+      lyhyt: 'Koko Välimeri satelliittikuvassa Gibraltarista Levantin rannikolle.',
+      selite: 'Välimeri avaruudesta: vasemmalla Iberia ja Gibraltarinsalmi, keskellä Italia ja '
+        + 'Sisilia, oikealla Kreikka, Turkki ja Niilin suisto; ylhäällä oikealla Mustameri.',
+      lahde: 'Satelliittikuva: NASA World Wind, muokannut Eric Gaba, Wikimedia Commons (public domain).',
+      tekija: 'NASA World Wind, muokannut Eric Gaba',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_16.61811E_38.99124N.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        tiedosto: 'Strait of Gibraltar perspective.jpg',
+        lyhyt: 'Gibraltarinsalmi itään katsottuna: Espanja vasemmalla, Marokko oikealla.',
+        selite: 'Satelliittiaineistosta koottu viistonäkymä Gibraltarinsalmesta Välimeren suuntaan; '
+          + 'vasemmalla takana Gibraltarin kallio, oikealla Ceuta. Korkeuserot on kolminkertaistettu.',
+        lahde: 'Kuva: NASA / JPL / NIMA, Wikimedia Commons (public domain).',
+        tekija: 'NASA / JPL / NIMA',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Strait_of_Gibraltar_perspective.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        tiedosto: 'Opening of the Suez Canal, Port Said, 1869.jpg',
+        lyhyt: 'Liputettuja laivoja Port Saidissa Suezin kanavan avajaisissa 1869.',
+        selite: 'Höyry- ja purjelaivat ovat koristautuneet viirein ja lipuin Port Saidin satamassa '
+          + 'Suezin kanavan avajaisissa marraskuussa 1869.',
+        lahde: 'Valokuva vuodelta 1869, tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Opening_of_the_Suez_Canal,_Port_Said,_1869.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        tiedosto: 'Mediterranean Sea (MODIS 2020-08-20).jpg',
+        lyhyt: 'Itäinen Välimeri, Kreeta, Kypros ja Niilin suisto satelliitista.',
+        selite: 'NASAn MODIS-satelliittikuva itäiseltä Välimereltä elokuussa 2020: ylhäällä Kreikka '
+          + 'ja Turkki, keskellä Kreeta ja Kypros, alhaalla Egyptin autiomaa ja vihreä Niilin suisto.',
+        lahde: 'Satelliittikuva: MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+        tekija: 'MODIS Land Rapid Response Team, NASA GSFC',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_(MODIS_2020-08-20).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Välimeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -77,12 +123,18 @@ export const MAASTOKOHTEET_LBY = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Välimeri on Euroopan, Aasian ja Afrikan välissä lepäävä meri, jonka rantaa koko Libyan '
-      + 'pitkä rannikko on. Meri on lähes kokonaan maan ympäröimä ja peittää noin 2,5 miljoonaa '
-      + 'neliökilometriä. Antiikissa se oli kauppiaiden, matkalaisten ja siirtolaisten '
-      + 'valtatie, jonka ääreltä nousivat Egyptin, Kreikan ja hedelmällisen puolikuun varhaiset '
-      + 'korkeakulttuurit — siksi sitä on kutsuttu lännen sivilisaation hautomoksi.',
-    lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Välimeri on lähes umpinainen meri Euroopan, Aasian ja Afrikan välissä. Sen '
+      + 'keskisyvyys on 1 500 metriä, ja Joonianmeren Calypsonsyvänne painuu 5 109 metriin. '
+      + 'Atlanttiin sen avaa vain 14 kilometriä leveä Gibraltarinsalmi, ja rannoille ketjuuntuu '
+      + 'viisitoista reunamerta Adrianmerestä Egeanmereen. Vettä haihtuu enemmän kuin joet ja '
+      + 'sateet tuovat, joten meri on Atlanttia suolaisempi: raskas suolavesi valuu '
+      + 'Gibraltarissa pohjaa pitkin ulos, kun kevyempi valtamerivesi virtaa pinnalla sisään. '
+      + 'Antiikissa meri oli kauppiaiden valtatie, jonka ääreltä nousivat Egyptin, Kreikan ja '
+      + 'hedelmällisen puolikuun korkeakulttuurit — siksi sitä kutsutaan lännen sivilisaation '
+      + 'hautomoksi. Vuonna 1869 avattu Suezin kanava liitti sen Punaiseen mereen, ja nopein '
+      + 'reitti Euroopasta Aasiaan kulki taas Välimeren kautta.',
+    lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa sekä osiot "History", "Geography" ja '
+      + '"Geology" (tarkistettu 25.9.2026).',
   },
   {
     id: 'isosyrtti',
@@ -142,7 +194,7 @@ export const MAASTOKOHTEET_LBY = [
     laudat: {
       maailmankartta: { x: 6249.5, y: 2078.1 },
     },
-    teksti: 'Sabratha oli läntisin Rooman Tripoliksen "kolmesta kaupungista" Oean ja Leptis '
+    teksti: 'Sabratha oli läntisin Rooman Tripoliksen ”kolmesta kaupungista” Oean ja Leptis '
       + 'Magnan rinnalla, ja se sijaitsee Välimeren rannalla nykyisestä Tripolista länteen. '
       + 'Satama perustettiin ehkä noin 500 eaa. foinikialaiseksi kauppapaikaksi nimeltä '
       + 'Tsabratan, ja sitä kautta kulki Afrikan sisämaan tavara. Karthagon tappion jälkeen '
@@ -181,7 +233,7 @@ export const MAASTOKOHTEET_LBY = [
       + 'Rooman valtaan Kyrene siirtyi 96 eaa., ja vuosien 262 ja 365 maanjäristykset '
       + 'runtelivat sen. Vuoden 642 muslimivalloituksen jälkeen paikka autioitui, kunnes '
       + 'italialaiset perustivat sinne sotilastukikohdan 1913 — ja tukikohtaa rakentaessaan '
-      + 'sotilaat löysivät päättömän marmoripatsaan, "Kyrenen Venuksen", joka vietiin Roomaan ja '
+      + 'sotilaat löysivät päättömän marmoripatsaan, ”Kyrenen Venuksen”, joka vietiin Roomaan ja '
       + 'palautettiin Libyaan vasta 2008. Unescon maailmanperintökohde 1982.',
     lahde: 'en-Wikipedia "Cyrene, Libya", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
@@ -231,7 +283,7 @@ export const MAASTOKOHTEET_LBY = [
       maailmankartta: { x: 6150, y: 2176 },
     },
     teksti: 'Ghadames on keidaskaupunki Luoteis-Libyassa lähellä Algerian ja Tunisian rajoja, ja '
-      + 'sitä kutsutaan "aavikon helmeksi". Se on vanhimpia Saharan pohjoispuolisia '
+      + 'sitä kutsutaan ”aavikon helmeksi”. Se on vanhimpia Saharan pohjoispuolisia '
       + 'asuinpaikkoja: arkeologisen aineiston perusteella seutu on ollut asuttu neljännestä '
       + 'vuosituhannesta eaa. Kaupungin talot on jaettu pystysuunnassa käyttötavan mukaan: '
       + 'katutasolla säilytettiin tavaraa, ensimmäisessä kerroksessa asui perhe, ja katolla '
@@ -262,7 +314,7 @@ export const MAASTOKOHTEET_LBY = [
     },
     teksti: 'Tadrart Acacus on vuorijono Länsi-Libyan aavikossa Ghatin kaupungista itään, ja se '
       + 'tunnetaan poikkeuksellisen runsaasta kalliotaiteestaan. Berberikielessä tadrart on '
-      + 'sanan "vuori" feminiinimuoto. Metsästäjä-keräilijät asuivat alueella yhtäjaksoisesti '
+      + 'sanan ”vuori” feminiinimuoto. Metsästäjä-keräilijät asuivat alueella yhtäjaksoisesti '
       + 'koko holoseenin ajan, vaikka ilmasto vaihteli Afrikan kostean kauden aikana, ja '
       + 'eläinten kesyttäminen tuli seudulle noin 7 000 vuotta sitten. Maalaukset ja '
       + 'kaiverrukset ovat vuosilta 12 000 eaa. – 100 jaa., ja ne kertovat, miten seutu on '

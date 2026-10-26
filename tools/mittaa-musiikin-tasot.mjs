@@ -9,10 +9,8 @@ import http from 'node:http';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 import { aaniUrl } from '../js/media.js';
+import { avaaChromium } from './selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('..', import.meta.url).pathname;
 const KANSIO = join(JUURI, 'assets/audio');
@@ -69,7 +67,7 @@ const palvelin = http.createServer((req, res) => {
 await new Promise((ok) => palvelin.listen(0, ok));
 const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const sivu = await (await selain.newContext()).newPage();
 await sivu.goto(osoite, { waitUntil: 'domcontentloaded' });
 

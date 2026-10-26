@@ -21,12 +21,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
@@ -40,7 +38,7 @@ await new Promise((ok) => palvelin.listen(0, ok));
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const konteksti = await selain.newContext({ viewport: { width: 390, height: 844 } });
 await konteksti.route('**samireivinen.workers.dev/**', (route) => route.abort());
 const sivu = await konteksti.newPage();
@@ -89,20 +87,19 @@ const raamattu = await sivu.evaluate(async () => {
   ui.vaihdaTutkiSivu(1);
   await odota(400);
   const toinen = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
-  // Hyväksytyn osion (Ydinajatus) otsikossa vihreä valmis-chippi.
+  // Hyväksytyn luvun (1. Pelin visio) otsikossa vihreä valmis-chippi.
   const tagi = document.querySelector('#arrival-dialog .aihe-nimi .kehittaja-tagi.valmis')?.textContent ?? '';
   return {
     auki: Boolean(dialogi?.open),
     otsikko,
     sivuja: ui.tutkiSivuja(),
-    // kansi-indeksi 0 + johdanto + osiot + osioiden generoidut
-    // taulusivut (Aarteet, Tutki kätkö -pelit).
+    // kansi-indeksi 0 + johdanto + luvut + luvun 2 (Pelisuunnittelu)
+    // kaksi generoitua taulusivua (aarteet, tutki kätkö -pelit).
     odotus: m.RAAMATTU.osiot.length + 2
-      + m.RAAMATTU.osiot.filter((o) => o.otsikko.startsWith('Aarteet')
-        || o.otsikko.startsWith('Tutki kätkö')).length,
+      + 2 * m.RAAMATTU.osiot.filter((o) => /^\d+\. Pelisuunnittelu/.test(o.otsikko)).length,
     ekaOk: /Raamattu/.test(eka),
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
-    toinenOk: /Ydinajatus/.test(toinen),
+    toinenOk: /Pelin visio/.test(toinen),
     tagiOk: tagi === 'valmis',
     lahetaNappi,
   };

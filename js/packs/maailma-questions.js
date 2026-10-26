@@ -3,6 +3,8 @@
 //
 // Muoto: { q, options[4], correct, fact, hint, level? } — ks. CONTRIBUTING.md.
 
+import { EUROPE_QUESTIONS, EUROPE_FACTS } from './europe-questions.js';
+
 export const MAAILMA_QUESTIONS = {
   tanger: [
     {
@@ -263,7 +265,7 @@ export const MAAILMA_QUESTIONS = {
       q: 'Mikä teräskaarisilta ylittää Sydneyn sataman oopperatalon vierellä?',
       options: ['Sydneyn satamasilta', 'Golden Gate', 'Tower Bridge', 'Bosporin silta'],
       correct: 0,
-      fact: 'Vuonna 1932 valmistuneen sillan lempinimi on "henkari", ja sen kaarelle kiipeää päivittäin köysiin kytkettyjä kävijöitä.',
+      fact: 'Vuonna 1932 valmistuneen sillan lempinimi on ”henkari”, ja sen kaarelle kiipeää päivittäin köysiin kytkettyjä kävijöitä.',
       hint: 'Paikalliset kutsuvat sitä henkariksi.',
     },
   ],
@@ -345,7 +347,7 @@ export const MAAILMA_QUESTIONS = {
       options: ['Japanin', 'Kiinan', 'Etelä-Korean', 'Vietnamin'],
       correct: 0,
       level: 1,
-      fact: 'Kaupunki oli aiemmin Edo; kun keisari siirtyi sinne Kiotosta 1868, nimeksi tuli Tokio eli "itäinen pääkaupunki".',
+      fact: 'Kaupunki oli aiemmin Edo; kun keisari siirtyi sinne Kiotosta 1868, nimeksi tuli Tokio eli ”itäinen pääkaupunki”.',
       hint: 'Saarivaltio Aasian itälaidalla, lipussa punainen ympyrä.',
     },
     {
@@ -786,6 +788,16 @@ export const MAAILMA_QUESTIONS = {
       hint: 'Vähän alle kaksisataa.',
     },
   ],
+
+  /*
+   * TUKHOLMA tuli aloitusnäytön laudalle 10.10.2026 (omistaja: alkulennossa
+   * vain Eurooppa, js/ui-apurit.js ETUSIVUN_KOHTEET). Kysymyksiä ei kysytä
+   * tällä laudalla (ks. San Francisco ja Istanbul yllä), joten eheyssäännön
+   * viisi kysymystä ovat samat kuin Euroopan laudalla.
+   */
+  tukholma: EUROPE_QUESTIONS.tukholma,
+  // Pariisi 11.10.2026 aloitusnäytön laudalle samoin perustein.
+  pariisi: EUROPE_QUESTIONS.pariisi,
 };
 
 /**
@@ -858,7 +870,7 @@ export const MAAILMA_FACTS = {
   ],
   lontoo: [
     'Lontoossa puhutaan yli 300 kieltä — se on yksi maailman monikulttuurisimmista kaupungeista.',
-    'Lontoon metro eli "the Tube" on maailman vanhin — se avattiin jo 1863 höyryvetureilla.',
+    'Lontoon metro eli ”the Tube” on maailman vanhin — se avattiin jo 1863 höyryvetureilla.',
     {
       text: 'Kotikaupungissani kulkee juna maan alla, kaasulyhdyt palavat aamuun ja sumu on niin paksua, että vaunut kulkevat käyden. Enempää ei ihminen voi rakentaa; tähän maailma pysähtyy.',
       voice: 'isoisa',
@@ -929,4 +941,7 @@ export const MAAILMA_FACTS = {
       voice: 'isoisa',
     },
   ],
+  // Tukholma 10.10.2026: samat tiedot kuin Euroopan laudalla (ks. kysymykset).
+  tukholma: EUROPE_FACTS.tukholma,
+  pariisi: EUROPE_FACTS.pariisi,
 };

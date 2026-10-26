@@ -1,0 +1,395 @@
+{
+ "kaupunki": "split",
+ "kaupunkiQ": "Q1663",
+ "kohteet": [
+  {
+   "q": "Q322287",
+   "nimi": "Diocletianuksen palatsi",
+   "peruste": "UNESCO",
+   "koko_m": 215,
+   "lat": 43.50806,
+   "lon": 16.43833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Diocletian's Palace in Split, Croatia (48608247353).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Diocletian's_Palace_in_Split%2C_Croatia_(48608247353).jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Diocletian's_Palace_in_Split%2C_Croatia_(48608247353).jpg",
+     "selite": "Roomalaiskeisari Diocletianuksen eläkepalatsi muuttui vuosisatojen kuluessa Splitin vanhaksikaupungiksi.",
+     "leveys": 5464,
+     "korkeus": 3070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Old Town of Split from Above (2017).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Town_of_Split_from_Above_(2017).jpg?width=1280",
+     "tekija": "Kris Martyn",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Old_Town_of_Split_from_Above_(2017).jpg",
+     "selite": "Palatsin muurien sisällä on yhä asuttu kaupunginosa kapeine kujineen ja punaisine kattoineen.",
+     "leveys": 2992,
+     "korkeus": 3992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1268475",
+   "nimi": "Pyhän Dujmin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 43.50806,
+   "lon": 16.44028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral of Saint Domnius.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Saint_Domnius.jpg?width=1280",
+     "tekija": "Mattias Hill",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Saint_Domnius.jpg",
+     "selite": "Katedraali on rakennettu Diocletianuksen mausoleumiin, ja sen kellotorni hallitsee palatsin aukiota.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bell Tower - Cathedral of Saint Domnius - Split.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bell_Tower_-_Cathedral_of_Saint_Domnius_-_Split.jpg?width=1280",
+     "tekija": "Sumitsurai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bell_Tower_-_Cathedral_of_Saint_Domnius_-_Split.jpg",
+     "selite": "Romaaninen kellotorni kohoaa palatsin kaarten yläpuolelle.",
+     "leveys": 5000,
+     "korkeus": 3135,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral of Split 01(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Split_01(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Split_01(js).jpg",
+     "selite": "Katedraalin torni ja keisarillisen mausoleumin kahdeksankulmainen runko.",
+     "leveys": 3670,
+     "korkeus": 4145,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12639517",
+   "nimi": "Peristyyli",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 43.50819,
+   "lon": 16.44014,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arches Of Split (199746261).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arches_Of_Split_(199746261).jpeg?width=1280",
+     "tekija": "Justin W Flory",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arches_Of_Split_(199746261).jpeg",
+     "selite": "Peristyyli on palatsin pylväiden ympäröimä juhlapiha, jossa keisari kohtasi alamaisiaan.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19979018",
+   "nimi": "Riva",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 600,
+   "lat": 43.50783,
+   "lon": 16.43829,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20130603 Split 025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130603_Split_025.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130603_Split_025.jpg",
+     "selite": "Riva on palatsin eteläseinän vierustalla kulkeva palmukatuinen rantakävelykatu.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "21000, Split, Croatia - panoramio (34).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21000%2C_Split%2C_Croatia_-_panoramio_(34).jpg?width=1280",
+     "tekija": "ARKADIUSZ MARKIEWICZ",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21000%2C_Split%2C_Croatia_-_panoramio_(34).jpg",
+     "selite": "Palmut reunustavat Rivaa, jonka kahviloissa splitiläiset viettävät iltojaan.",
+     "leveys": 3648,
+     "korkeus": 2056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1789113",
+   "nimi": "Marjan",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 43.50855,
+   "lon": 16.40934,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marjan from the Riva.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marjan_from_the_Riva.jpg?width=1280",
+     "tekija": "DIREKTOR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marjan_from_the_Riva.jpg",
+     "selite": "Metsäinen Marjan-kukkula kohoaa kaupungin länsipuolella ja toimii splitiläisten ulkoilualueena.",
+     "leveys": 2892,
+     "korkeus": 1836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "J32 392 Telegrin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/J32_392_Telegrin.jpg?width=1280",
+     "tekija": "Falk2",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:J32_392_Telegrin.jpg",
+     "selite": "Kukkulan rinteille nousee vanhaa Varošin asuinaluetta aivan meren rannalla.",
+     "leveys": 5604,
+     "korkeus": 3736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ermitaža.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ermita%C5%BEa.jpg?width=1280",
+     "tekija": "Irena Štefanec",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ermita%C5%BEa.jpg",
+     "selite": "Marjanin kallioseinämiin on louhittu keskiajan erakkoluolia.",
+     "leveys": 2544,
+     "korkeus": 1696,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4501094",
+   "nimi": "Jupiterin temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 20,
+   "lat": 43.50834,
+   "lon": 16.43957,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Croatia-01189 - Temple of Jupiter (9548525017).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Croatia-01189_-_Temple_of_Jupiter_(9548525017).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Croatia-01189_-_Temple_of_Jupiter_(9548525017).jpg",
+     "selite": "Roomalainen temppeli palatsin sisällä toimii nykyään kastekappelina.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3908683",
+   "nimi": "Kultainen portti",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 43.50914,
+   "lon": 16.44039,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "J32 370 Diokletianspalast, »Goldenes Tor«.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/J32_370_Diokletianspalast%2C_%C2%BBGoldenes_Tor%C2%AB.jpg?width=1280",
+     "tekija": "Falk2",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:J32_370_Diokletianspalast%2C_%C2%BBGoldenes_Tor%C2%AB.jpg",
+     "selite": "Kultainen portti oli palatsin pohjoinen pääsisäänkäynti, jota koristavat kaariaukkojen rivit.",
+     "leveys": 5934,
+     "korkeus": 3956,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130602 Split 149.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130602_Split_149.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130602_Split_149.jpg",
+     "selite": "Illan valossa portin muuri hehkuu lämpimän oranssina.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1564354",
+   "nimi": "Tasavallan aukio",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 43.50899,
+   "lon": 16.43641,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "21000, Split, Croatia - panoramio (36).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21000%2C_Split%2C_Croatia_-_panoramio_(36).jpg?width=1280",
+     "tekija": "ARKADIUSZ MARKIEWICZ",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21000%2C_Split%2C_Croatia_-_panoramio_(36).jpg",
+     "selite": "Punaisten arkadirakennusten reunustama aukio avautuu mereen palatsin länsipuolella.",
+     "leveys": 3648,
+     "korkeus": 2056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130602 Split 141.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130602_Split_141.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130602_Split_141.jpg",
+     "selite": "Neoklassiset julkisivut ja merinäkymä tekevät aukiosta kaupungin tunnelmallisimpia.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1291166",
+   "nimi": "Splitin kansallisteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 43.51111,
+   "lon": 16.43694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Croatian National Theatre in Split.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Croatian_National_Theatre_in_Split.jpg?width=1280",
+     "tekija": "Gaius Cornelius",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Croatian_National_Theatre_in_Split.jpg",
+     "selite": "Keltainen teatteritalo valmistui 1890-luvulla Splitin kulttuurielämän keskukseksi.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130605 Split 74.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130605_Split_74.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130605_Split_74.jpg",
+     "selite": "Iltavalaistu julkisivu erottuu teatteriaukion laidalta.",
+     "leveys": 2976,
+     "korkeus": 3968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25502514",
+   "nimi": "Hopeaportti",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 43.50806,
+   "lon": 16.44111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20130602 Split 150.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130602_Split_150.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130602_Split_150.jpg",
+     "selite": "Hopeaportti oli palatsin itäinen sisäänkäynti, ja sen muuri on yhä kaarikerrosten koristama.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "21000, Split, Croatia - panoramio (38).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21000%2C_Split%2C_Croatia_-_panoramio_(38).jpg?width=1280",
+     "tekija": "ARKADIUSZ MARKIEWICZ",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21000%2C_Split%2C_Croatia_-_panoramio_(38).jpg",
+     "selite": "Portin takana alkaa kapea kuja kohti palatsin sydäntä.",
+     "leveys": 3648,
+     "korkeus": 2056,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Split iz zraka.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Split_iz_zraka.jpg?width=1280",
+   "tekija": "E.coli",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Split_iz_zraka.jpg",
+   "selite": "Split sijaitsee Adrianmeren rannalla, ja vanhakaupunki työntyy lahdelle punaisine kattoineen.",
+   "leveys": 2081,
+   "korkeus": 1535,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "20130605 Split 67.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130605_Split_67.jpg?width=1280",
+   "tekija": "Mark Ahsmann",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130605_Split_67.jpg",
+   "selite": "Rivan ja kellotornin siluetti nousee vuorten edessä Splitin satamanäkymässä.",
+   "leveys": 3968,
+   "korkeus": 2976,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

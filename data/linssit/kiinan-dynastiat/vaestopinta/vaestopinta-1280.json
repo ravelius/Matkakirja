@@ -1,0 +1,529 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 1280,
+ "hila": {
+  "lon0": 78,
+  "lon1": 135,
+  "lat0": 18,
+  "lat1": 54,
+  "askel": 0.2,
+  "leveys": 285,
+  "korkeus": 180,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-1280.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 220.8,
+  "p99": 83.3,
+  "summa_milj": 79.29,
+  "arvio": true,
+  "korotus": 0.909
+ },
+ "omistus": {
+  "tiedosto": "omistus-1280.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 1280
+ },
+ "dynastiat": [
+  {
+   "avain": "mongol",
+   "nimi": "Tiibet",
+   "vari": "#34406f",
+   "tyyppi": "protektoraatti"
+  },
+  {
+   "avain": "song",
+   "nimi": "Pohjoinen Song",
+   "vari": "#b86a4a",
+   "tyyppi": "kiina",
+   "alueeton": true
+  }
+ ],
+ "vakiluku_milj": 75.0,
+ "aluejako": "yuan",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-1280.geojson (Matkakirja, CC0)",
+  "armeijat": "Song shi 47, 451; Yuan shi 129, 156 (Wikisource); Wikipedia: Battle of Yamen, Mongol conquest of the Song dynasty. Kaikki luvut arvioita."
+ },
+ "hetki": {
+  "nimi": "Yamen",
+  "vuosi": 1279,
+  "rajat_vuosi": 1280,
+  "huom": "Omistusvärit linssin pysäkiltä 1280 (Yuan hallitsee jo Etelä-Kiinaa). Taistelu 19.3.1279. Songin 200 000 sisältää hovin ja siviilit (kiistelty, ei primäärilähdettä); Yuanin vahvuus on huonoiten tunnettu. Kaikki luvut arvioita.",
+  "armeijat": [
+   {
+    "avain": "yuan-zhang",
+    "nimi": "Yuanin laivasto (Zhang Hongfan)",
+    "dynastia": "mongol",
+    "miehia": 20000,
+    "miehia_vali": [
+     20000,
+     35000
+    ],
+    "arvio": true,
+    "huom": "Yuan shi 156: valitut upseerit ja ~20 000 miestä (lähtöjoukko, ei varmasti koko voima). Keräysosuudet ovat päätelmiä; WP-zh antaa 70 000+ (kiistelty).",
+    "keraus": [
+     {
+      "lon": 115.0,
+      "lat": 38.5,
+      "sade_km": 250,
+      "osuus": 0.3
+     },
+     {
+      "lon": 119.4,
+      "lat": 32.4,
+      "sade_km": 200,
+      "osuus": 0.45
+     },
+     {
+      "lon": 118.0,
+      "lat": 25.0,
+      "sade_km": 180,
+      "osuus": 0.25
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 119.42,
+      "lat": 32.39,
+      "paikka": "Yangzhou (1278)"
+     },
+     {
+      "t": 0.25,
+      "lon": 117.65,
+      "lat": 24.51,
+      "paikka": "Zhangzhou"
+     },
+     {
+      "t": 0.4,
+      "lon": 115.33,
+      "lat": 22.99,
+      "paikka": "Wupo-harju (Wen Tianxiang vangitaan joulukuu 1278)"
+     },
+     {
+      "t": 0.45,
+      "lon": 116.6,
+      "lat": 23.26,
+      "paikka": "Chaoyang-satama"
+     },
+     {
+      "t": 0.46,
+      "lon": 115.83,
+      "lat": 22.76,
+      "paikka": "Jiazimen"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan (saapuu n. 27.2.1279)"
+     }
+    ]
+   },
+   {
+    "avain": "yuan-li-heng",
+    "nimi": "Li Hengin joukot (Yuan)",
+    "dynastia": "mongol",
+    "miehia": 20000,
+    "miehia_vali": [
+     5000,
+     35000
+    ],
+    "arvio": true,
+    "huom": "Yuan shi 129 ei anna joukkolukua (200 000 oli 1277 antautuneita, ei armeija). Luku on vaihteluvälin keskiarvo, ei lähde. Keräysosuudet arvioita.",
+    "keraus": [
+     {
+      "lon": 115.9,
+      "lat": 28.7,
+      "sade_km": 200,
+      "osuus": 0.55
+     },
+     {
+      "lon": 113.3,
+      "lat": 23.4,
+      "sade_km": 120,
+      "osuus": 0.3
+     },
+     {
+      "lon": 105.0,
+      "lat": 38.0,
+      "sade_km": 400,
+      "osuus": 0.15
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 116.0,
+      "lat": 29.7,
+      "paikka": "Jiangzhou (Jiujiang)"
+     },
+     {
+      "t": 0.14,
+      "lon": 114.93,
+      "lat": 25.83,
+      "paikka": "Ganzhou"
+     },
+     {
+      "t": 0.26,
+      "lon": 113.4,
+      "lat": 24.18,
+      "paikka": "Yingde / Qingyuan"
+     },
+     {
+      "t": 0.44,
+      "lon": 113.26,
+      "lat": 23.13,
+      "paikka": "Guangzhou (valtaus talvella 1278-79)"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan (liittyy n. 7-11.3.1279)"
+     }
+    ]
+   },
+   {
+    "avain": "song-laivasto",
+    "nimi": "Songin laivasto (Zhang Shijie)",
+    "dynastia": "song",
+    "miehia": 50000,
+    "miehia_vali": [
+     20000,
+     100000
+    ],
+    "arvio": true,
+    "huom": "Song shi 451: sotilaita \"muutama kymmenentuhatta\"; alukset \"yli tuhat\" (kiistelty). Keräysosuudet ovat päätelmiä.",
+    "keraus": [
+     {
+      "lon": 119.0,
+      "lat": 26.0,
+      "sade_km": 180,
+      "osuus": 0.4
+     },
+     {
+      "lon": 114.0,
+      "lat": 22.9,
+      "sade_km": 200,
+      "osuus": 0.4
+     },
+     {
+      "lon": 120.2,
+      "lat": 30.2,
+      "sade_km": 150,
+      "osuus": 0.2
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 120.17,
+      "lat": 30.25,
+      "paikka": "Lin'an (Hangzhou) antautuu 4.2.1276"
+     },
+     {
+      "t": 0.12,
+      "lon": 120.65,
+      "lat": 28.02,
+      "paikka": "Wenzhou"
+     },
+     {
+      "t": 0.16,
+      "lon": 119.3,
+      "lat": 26.08,
+      "paikka": "Fuzhou (Duanzong kruunataan kesäkuu 1276)"
+     },
+     {
+      "t": 0.23,
+      "lon": 118.68,
+      "lat": 24.87,
+      "paikka": "Quanzhou (joulukuu 1276)"
+     },
+     {
+      "t": 0.26,
+      "lon": 116.62,
+      "lat": 23.66,
+      "paikka": "Chaozhou (1277)"
+     },
+     {
+      "t": 0.3,
+      "lon": 117.07,
+      "lat": 23.43,
+      "paikka": "Nan'ao-saari (1277)"
+     },
+     {
+      "t": 0.34,
+      "lon": 114.19,
+      "lat": 22.33,
+      "paikka": "Kowloon / Qianwan (1277)"
+     },
+     {
+      "t": 0.39,
+      "lon": 113.67,
+      "lat": 22.82,
+      "paikka": "Xiushan (Humen, joulukuu 1277; heikko)"
+     },
+     {
+      "t": 0.4,
+      "lon": 113.5,
+      "lat": 22.15,
+      "paikka": "Jing'ao (myrsky; heikko, ±30 km)"
+     },
+     {
+      "t": 0.44,
+      "lon": 110.6,
+      "lat": 21.05,
+      "paikka": "Naozhou (1278; sijainti kiistelty, vaihtoehto Lantau)"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan / Yamen (kesä 1278)"
+     }
+    ]
+   },
+   {
+    "avain": "song-hovi",
+    "nimi": "Songin hovi ja siviilit",
+    "dynastia": "song",
+    "miehia": 150000,
+    "miehia_vali": [
+     50000,
+     180000
+    ],
+    "arvio": true,
+    "siviili": true,
+    "huom": "KIISTELTY: koko joukko \"noin 200 000\" (WP-en/zh, ei primäärilähdettä); tässä kokonaisluku miinus taistelijat. Valtaosa virkamiehiä, perheitä ja palvelijoita.",
+    "keraus": [
+     {
+      "lon": 120.2,
+      "lat": 30.2,
+      "sade_km": 150,
+      "osuus": 0.3
+     },
+     {
+      "lon": 118.8,
+      "lat": 25.5,
+      "sade_km": 180,
+      "osuus": 0.3
+     },
+     {
+      "lon": 114.0,
+      "lat": 22.9,
+      "sade_km": 200,
+      "osuus": 0.3
+     },
+     {
+      "lon": 110.5,
+      "lat": 21.5,
+      "sade_km": 150,
+      "osuus": 0.1
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 120.17,
+      "lat": 30.25,
+      "paikka": "Lin'an (Hangzhou) antautuu 4.2.1276"
+     },
+     {
+      "t": 0.12,
+      "lon": 120.65,
+      "lat": 28.02,
+      "paikka": "Wenzhou"
+     },
+     {
+      "t": 0.16,
+      "lon": 119.3,
+      "lat": 26.08,
+      "paikka": "Fuzhou (Duanzong kruunataan kesäkuu 1276)"
+     },
+     {
+      "t": 0.23,
+      "lon": 118.68,
+      "lat": 24.87,
+      "paikka": "Quanzhou (joulukuu 1276)"
+     },
+     {
+      "t": 0.26,
+      "lon": 116.62,
+      "lat": 23.66,
+      "paikka": "Chaozhou (1277)"
+     },
+     {
+      "t": 0.3,
+      "lon": 117.07,
+      "lat": 23.43,
+      "paikka": "Nan'ao-saari (1277)"
+     },
+     {
+      "t": 0.34,
+      "lon": 114.19,
+      "lat": 22.33,
+      "paikka": "Kowloon / Qianwan (1277)"
+     },
+     {
+      "t": 0.39,
+      "lon": 113.67,
+      "lat": 22.82,
+      "paikka": "Xiushan (Humen, joulukuu 1277; heikko)"
+     },
+     {
+      "t": 0.4,
+      "lon": 113.5,
+      "lat": 22.15,
+      "paikka": "Jing'ao (myrsky; heikko, ±30 km)"
+     },
+     {
+      "t": 0.44,
+      "lon": 110.6,
+      "lat": 21.05,
+      "paikka": "Naozhou (1278; sijainti kiistelty, vaihtoehto Lantau)"
+     },
+     {
+      "t": 0.48,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan / Yamen (kesä 1278)"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.55,
+    "lon": 113.08,
+    "lat": 22.27,
+    "voittaja": "yuan-zhang",
+    "havio": "song-laivasto",
+    "voima": 1.0,
+    "huom": "19.3.1279: Yuan katkaisi veden ja polttopuun, hyökkäsi ryhmissä (Zhang etelästä, Li Heng pohjoisesta, SS47). Ketjutettu Song-linnake murtui. Kulku tiivistelmä (YS129 ja YS156 eroavat)."
+   },
+   {
+    "t": 0.56,
+    "lon": 113.08,
+    "lat": 22.27,
+    "voittaja": "yuan-li-heng",
+    "havio": "song-hovi",
+    "voima": 0.8,
+    "huom": "Hovin alukset ja siviilit murskautuvat linnakkeen mukana. Keisari Bing hukkui Lu Xiufun sylissä. Luvut kiisteltyjä."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "song-hovi",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 100000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan"
+     },
+     {
+      "t": 0.8,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "pinta palautuu Guangdongin väestöön"
+     }
+    ],
+    "huom": "Song shi 47: \"yli 100 000 ruumista\" kellui (kiistelty, pyöreä luku). Visuaalinen mittasuhde, EI tappioluku."
+   },
+   {
+    "armeija": "song-laivasto",
+    "t0": 0.55,
+    "t1": 0.78,
+    "miehia": 1000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan (Zhang Shijie katkaisee ankkurit)"
+     },
+     {
+      "t": 0.7,
+      "lon": 112.2,
+      "lat": 21.6,
+      "paikka": "avomeri"
+     },
+     {
+      "t": 0.78,
+      "lon": 111.82,
+      "lat": 21.6,
+      "paikka": "Hailing-saari (Zhang Shijie hukkuu; heikko)"
+     }
+    ],
+    "huom": "Song shi 451: pakeni yli kymmenellä aluksella, myrsky. Paikka ja päivä epävarmoja."
+   },
+   {
+    "armeija": "yuan-zhang",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 20000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan"
+     },
+     {
+      "t": 0.8,
+      "lon": 113.26,
+      "lat": 23.13,
+      "paikka": "Guangzhou (oletus)"
+     }
+    ],
+    "huom": "Lähde ei kerro Yuan-joukkojen paluureittiä; oletus. Zhang Hongfan kuoli 1280."
+   },
+   {
+    "armeija": "yuan-li-heng",
+    "t0": 0.55,
+    "t1": 0.8,
+    "miehia": 20000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.55,
+      "lon": 113.08,
+      "lat": 22.27,
+      "paikka": "Yashan"
+     },
+     {
+      "t": 0.8,
+      "lon": 113.26,
+      "lat": 23.13,
+      "paikka": "Guangzhou (oletus)"
+     }
+    ],
+    "huom": "Lähde ei kerro Li Hengin joukkojen jatkoa; oletus."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Song shi ja Yuan shi eivät anna väestölukuja. Pinta palautuu vain visuaalisesti; alueen väestömuutokselle ei ole lähdetukea."
+  },
+  "lahteet": "Song shi 47, 451; Yuan shi 129, 156 (Wikisource); Wikipedia: Battle of Yamen, Mongol conquest of the Song dynasty. Kaikki luvut arvioita."
+ }
+}

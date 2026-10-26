@@ -241,7 +241,7 @@ export const ELAINTAKYT = {
   IRL: {
     elain: 'rusakko',
     otsikko: 'Niittyjen nyrkkeilijä',
-    teksti: 'Keväisin Irlannin niityillä näkee jänisten "nyrkkeilyottelun": takajaloilleen nousseet jänikset huitovat toisiaan etukäpälillä. Kyse ei ole urosten kaksintaistelusta, kuten pitkään luultiin — useimmiten naaras torjuu liian innokasta kosijaa.',
+    teksti: 'Keväisin Irlannin niityillä näkee jänisten ”nyrkkeilyottelun”: takajaloilleen nousseet jänikset huitovat toisiaan etukäpälillä. Kyse ei ole urosten kaksintaistelusta, kuten pitkään luultiin — useimmiten naaras torjuu liian innokasta kosijaa.',
     lahde: 'en-Wikipedia "European hare". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-irl.jpg',
     lon: -7.6,
@@ -311,8 +311,10 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "St. Bernard (dog)" ja en-Wikipedia "Barry (dog)". '
       + 'Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-che.jpg',
-    lon: 7.4,
-    lat: 46.2,
+    // Siirretty Valais'sta Vaudiin 15.10.2026 (juna 193b): Bernin laatta on 78 km
+    // etelään Valais'ssa, ja merkin pitää olla 35 yksikön päässä kaupungeista.
+    lon: 6.5,
+    lat: 46.55,
   },
   AUT: {
     elain: 'murmeli',
@@ -494,7 +496,7 @@ export const ELAINTAKYT = {
   TUR: {
     elain: 'angoravuohi',
     otsikko: 'Silkkiä ylängöltä',
-    teksti: 'Angoravuohi on saanut nimensä Ankarasta, joka tunnettiin ennen Angorana, ja sen kiiltävää kiharaa kuitua kutsutaan mohairiksi. Ranskalainen Pierre Belon näki vuonna 1555 Anatoliassa vuohia, joiden villa oli hänestä "niin hienoa, että sen sanoisi silkkiä hienommaksi". Mohairia tuotettiin pelkästään Turkissa 1800-luvun puoliväliin asti; rotu vietiin Etelä-Afrikkaan 1838 ja Yhdysvaltoihin 1849, ja nyt kumpikin tuottaa mohairia enemmän kuin kotimaa — amerikkalainen kuitu tulee lähes kokonaan Texasista. Turkissa vuohet keritään kerran vuodessa eikä kahdesti niin kuin muualla, ja siksi maailman pisin mohair kasvaa yhä täällä. Kilin ensimmäinen villa on hienointa, sillä kuitu paksunee vuosi vuodelta.',
+    teksti: 'Angoravuohi on saanut nimensä Ankarasta, joka tunnettiin ennen Angorana, ja sen kiiltävää kiharaa kuitua kutsutaan mohairiksi. Ranskalainen Pierre Belon näki vuonna 1555 Anatoliassa vuohia, joiden villa oli hänestä ”niin hienoa, että sen sanoisi silkkiä hienommaksi”. Mohairia tuotettiin pelkästään Turkissa 1800-luvun puoliväliin asti; rotu vietiin Etelä-Afrikkaan 1838 ja Yhdysvaltoihin 1849, ja nyt kumpikin tuottaa mohairia enemmän kuin kotimaa — amerikkalainen kuitu tulee lähes kokonaan Texasista. Turkissa vuohet keritään kerran vuodessa eikä kahdesti niin kuin muualla, ja siksi maailman pisin mohair kasvaa yhä täällä. Kilin ensimmäinen villa on hienointa, sillä kuitu paksunee vuosi vuodelta.',
     lahde: 'en-Wikipedia "Angora goat", osio "History", en-Wikipedia "Mohair", '
       + 'osiot "Production" ja "History", ja en-Wikipedia "Ankara". '
       + 'Tarkistettu 2.9.2026.',
@@ -741,7 +743,7 @@ export const ELAINTAKYT = {
   SAU: {
     elain: 'arabianoryksi',
     otsikko: 'Yksisarvinen ilman toista sarvea',
-    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta "luonnosta hävinnyt" takaisin vaarantuneeksi.',
+    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta ”luonnosta hävinnyt” takaisin vaarantuneeksi.',
     lahde: 'en-Wikipedia "Arabian oryx", osiot "Unicorn myth" ja "Adaptations for desert '
       + 'environments" sekä johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
@@ -947,6 +949,7 @@ export const ELAINTAKYT = {
     lat: 58.8,
   },
   ARG: {
+    nimio: 'Pingviini',
     elain: 'magellaninpingviini',
     otsikko: 'Ääni tuntee puolison',
     teksti: 'Magellaninpingviini kaivaa pesäkolonsa pensaan alle Patagonian rannikolle, ja Punta Tombo on lajin suurimpia yhdyskuntia. Pari pysyy samana vuodesta toiseen: koiras ottaa vanhan kolonsa haltuun ja odottaa, ja naaras tunnistaa kumppaninsa pelkästä äänestä. Kaksi munaa haudotaan vuorotellen 10–15 päivän vahdeissa, kun toinen käy merellä syömässä. Pesimäkauden jälkeen linnut vaeltavat pohjoiseen Perun ja Brasilian vesille; nimensä laji sai Magalhãesilta, joka näki sen vuonna 1520.',
@@ -1222,6 +1225,7 @@ export const ELAINTAKYT = {
     lat: -14.0,
   },
   COL: {
+    nimio: 'Myrkkysammakko',
     elain: 'kultamyrkkysammakko',
     otsikko: 'Yksi milligramma, kymmenen ihmistä',
     teksti: 'Kultamyrkkysammakko elää vain Kolumbian Tyynenmeren puoleisissa '
@@ -1371,6 +1375,7 @@ export const ELAINTAKYT = {
     lat: -1.5,
   },
   LKA: {
+    nimio: 'Leopardi',
     elain: 'sri lankan leopardi',
     otsikko: 'Saaren ainoa huippupeto',
     teksti: 'Sri Lankan leopardi on saarella elävä leopardin alalaji, jonka kuvaili 1956 srilankalainen eläintieteilijä Paulus Edward Pieris Deraniyagala. Turkki on kellanruskea tai ruosteenkeltainen, ja täplät ovat tiheässä ruusukkeina. Koska leopardi on saaren huippupeto eikä sillä ole kilpailijaa, alalaji on kehittynyt kookkaaksi: yksitoista mitattua urosta painoi keskimäärin 56 kiloa ja suurin 77. Lajia tavataan kaikissa saaren elinympäristöissä aavikkovyöhykkeeltä sademetsään, ja keskiylängöllä se on kirjattu myös teeviljelmiltä, männiköistä ja kotipuutarhoista. Vuodesta 2020 se on ollut vaarantunut: aikuisia yksilöitä arvioidaan olevan alle 800.',
@@ -1447,6 +1452,7 @@ export const ELAINTAKYT = {
     lat: 27.5,
   },
   AGO: {
+    nimio: 'Palanca negra',
     elain: 'jättiläisseeprantilooppi',
     otsikko: 'Antilooppi, joka löydettiin kahdesti',
     teksti: 'Jättiläisseeprantilooppi on vain Angolan keskiylängöllä elävä seeprantiloopin alalaji, jonka kuvaili 1916 brittiläinen eläintieteilijä Oldfield Thomas. Nimen lisäosa variani muistaa Frank Variania, Benguelan rataa rakentanutta insinööriä, joka toi eläimen tieteen tietoon. Nimi jättiläinen viittaa sonnin sarviin, jotka ovat kaikista seeprantiloopeista pisimmät: usein yli 129 senttiä ja pisimmillään mitattuna 165. Aikuinen sonni on kiiltävän musta ja painaa noin 240 kiloa, lehmät jäävät ruskeiksi kuten vasat. Laji katosi sisällissodan vuosiksi ja löydettiin uudelleen, mutta kaikki kuvatut yksilöt olivat naaraita; 2009 sonni paikannettiin ulostenäytteiden DNA:n avulla Luandon luonnonpuistosta ja siirrettiin helikopterilla Cangandalan aitaukseen. Kanta on äärimmäisen uhanalainen: vuonna 2026 yksilöitä arvioidaan olevan noin 310 kahdeksassa laumassa.',
@@ -1749,7 +1755,7 @@ export const ELAINTAKYT = {
   JOR: {
     elain: 'nubiantorvikauris',
     otsikko: 'Aavikon vuohi, joka opittiin tuntemaan Ylä-Egyptistä',
-    teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä "Ylä-Egyptin villivuohi". Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
+    teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä ”Ylä-Egyptin villivuohi”. Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
     lahde: 'en-Wikipedia "Nubian ibex", johdanto sekä osiot "Classification", "Description", '
       + '"Distribution", "Conservation and population status by country" ja "Cultural significance". Tarkistettu 6.9.2026.',
     kuvat: [
@@ -1767,6 +1773,7 @@ export const ELAINTAKYT = {
     lat: 30.85,
   },
   IRQ: {
+    nimio: 'Ruokokerttunen',
     elain: 'basranruokokerttunen',
     otsikko: 'Kerttunen, joka menetti kotisuonsa',
     teksti: 'Basranruokokerttunen on kerttusiin kuuluva pikkulintu, joka pesii lähes yksinomaan Tigriin ja Eufratin jokijärjestelmässä: Lounais-Iranissa, Itä- ja Etelä-Irakissa sekä Kuwaitissa, ja viime aikoina se on levittäytynyt myös Israelin kosteikoille. Se pesii laajoissa papyrus- ja ruovikoissa ja viihtyy matalan makean tai murtoveden äärellä tiheässä ruovikossa. Lajin erottaa helposti sekoittuvasta rastaskerttusesta pienemmästä koosta, valkoisemmasta alapuolesta ja kapeammasta, pidemmästä ja terävämmästä nokasta; ääni on karhea chaar, syvempi kuin rytikerttusen. Lintu on muuttaja ja talvehtii Itä-Afrikassa, Euroopassa se on hyvin harvinainen harhailija. Kun Mesopotamian suot kuivattiin 1980- ja 1990-luvuilla ja lajin oma elinympäristö tuhoutui lähes kokonaan, siitä tuli erittäin uhanalainen.',
@@ -2013,6 +2020,7 @@ export const ELAINTAKYT = {
    * se ilmestyy kortille ilman koodimuutosta.
    */
   GHA: {
+    nimio: 'Kalliovaris',
     elain: 'valkokaulakalliovaris',
     otsikko: 'Lintu, jonka luultiin kadonneen Ghanasta',
     teksti: 'Valkokaulakalliovaris on keskikokoinen varpuslintu, jota tavataan vain Länsi-Afrikan kallioisissa metsissä Guineasta Ghanaan. Sen pää on lähes höyhenetön: paljas iho on kirkkaan keltainen, ja silmien takana on kaksi suurta pyöreää mustaa laikkua. Yläpuoli on harmaanmusta, alapuoli valkoinen, ja poikkeuksellisen pitkä tummanruskea pyrstö toimii tasapainottajana. Lintu ei juuri lennä pitkiä matkoja vaan liikkuu metsässä hyppien ja loikkien tai lyhyin lennoin matalassa kasvillisuudessa. Se syö hyönteisiä ja seuraa toisinaan ajajamuurahaisten parvia napaten niiden säikyttämiä otuksia; poikasille vanhemmat kantavat pieniä sammakoita. Pesä on syvä savikuppi, joka muurataan kallionpintaan tavallisesti luolassa, ja munia on kaksi kahdesti vuodessa. Ghanassa lajin luultiin kuolleen sukupuuttoon vuoteen 2003 asti, jolloin se löydettiin uudelleen maan eteläkeskiosasta.',
@@ -2060,6 +2068,7 @@ export const ELAINTAKYT = {
     lat: 5.6,
   },
   SLE: {
+    nimio: 'Simpanssi',
     elain: 'länsiafrikansimpanssi',
     otsikko: 'Länsiafrikansimpanssin oma kulttuuri',
     teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Senegalin Fongolissa tämän alalajin yhteisön on havaittu veistävän teräväkärkisiä keppejä ja metsästävän niillä galagoja — tapa on kuvattu juuri sieltä, ei koko alalajilta. Nämä simpanssit käyttävät myös luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
@@ -2117,7 +2126,7 @@ export const ELAINTAKYT = {
   TCD: {
     elain: 'sapelisarvioryksi',
     otsikko: 'Antilooppi, joka palasi luonnosta hävinneiden listalta',
-    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun "vihreä Sahara" kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
+    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun ”vihreä Sahara” kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
     lahde: 'en-Wikipedia "Scimitar oryx", johdanto sekä osio "Status and '
       + 'conservation". Tarkistettu 6.9.2026.',
     kuva: 'elain-tcd',
@@ -2257,6 +2266,7 @@ export const ELAINTAKYT = {
     lat: -2,
   },
   PAN: {
+    nimio: 'Kultasammakko',
     elain: 'panamankultasammakko',
     otsikko: 'Sammakko, joka viittoo',
     teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnonkannat romahtivat chytridi-sienitaudin takia, ja viimeiset luonnonhavainnot ennen palautuskokeiluja ovat vuodelta 2009. Lajia kasvatetaan yli viidessäkymmenessä laitoksessa, ja helmikuussa 2026 Smithsonianin sammakkohanke ilmoitti ensimmäisistä kokeellisista luontoonpalautuksista — vakiintuneesta luonnonkannasta ei vielä voi puhua.',
@@ -2313,6 +2323,7 @@ export const ELAINTAKYT = {
     lat: -32.5,
   },
   VEN: {
+    nimio: 'Muurahaiskarhu',
     elain: 'jättimuurahaiskarhu',
     otsikko: 'Kieli, joka käy ulkona kolmesti sekunnissa',
     teksti: 'Jättimuurahaiskarhu on Keski- ja Etelä-Amerikan hyönteissyöjänisäkäs ja neljästä elävästä muurahaiskarhulajista suurin. Toisin kuin sukulaisensa ja laiskiaiset se elää lähes kokonaan maassa. Kokonaispituus on 182–217 senttimetriä, urokset painavat 33–50 ja naaraat 27–47 kilogrammaa. Pää on 30 senttimetriä pitkä ja lieriömäinen kuono vie siitä suurimman osan; näkö on heikko, mutta hajuaisti on noin neljäkymmentä kertaa ihmisen hajuaistia tarkempi. Hampaita ei ole lainkaan, ja noin 60 senttimetrin kieli on kiinnitetty omalla lihaksellaan suoraan rintalastaan; ojennettuna se ulottuu 45 senttimetriä ja liikkuu edestakaisin noin 160 kertaa minuutissa eli lähes kolmesti sekunnissa. Eläin etsii saaliinsa hajun perusteella, repii pesän auki etukynsillään ja kerää muurahaiset ja termiitit tahmealle kielelleen: se käy päivässä jopa kahdessasadassa pesässä, kussakin enintään minuutin, ja syö noin 35 000 hyönteistä. Emo kantaa poikastaan selässään vieroitukseen asti. Kansainvälinen luonnonsuojeluliitto luokittelee lajin vaarantuneeksi.',
@@ -2376,7 +2387,7 @@ export const ELAINTAKYT = {
       {
         url: `${ELAINTAKY_KUVAJUURI_0709}elain-fji-fidzinleguaani-r20260907-v3.jpg`,
         kuvateksti: 'Nauhaleguaani (Brachylophus fasciatus) lehvästössä '
-          + 'Lau-saarten ympäristöä mukailevassa kuvituksessa.',
+          + 'Lau-saarten ympäristöä mukailevassa havainnekuvassa.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
           + 'Iguana Specialist Group — Iguana Species',
         lahdeUrl: 'https://www.iucn-isg.org/species/iguana-species/',
@@ -2408,9 +2419,9 @@ export const ELAINTAKYT = {
     kuvat: [
       {
         url: `${ELAINTAKY_KUVAJUURI_0709}elain-slb-ducorpsinkakadu-r20260907-v1.jpg`,
-        lyhyt: 'Ducorpsinkakadu pitää nokassaan pähkinää Salomonsaarten metsäkuvituksessa.',
+        lyhyt: 'Ducorpsinkakadu pitää nokassaan pähkinää Salomonsaarten metsää mukailevassa havainnekuvassa.',
         kuvateksti: 'Ducorpsinkakadu pitää nokassaan pyöreää pähkinää '
-          + 'Salomonsaarten metsäympäristöä mukailevassa kuvituksessa.',
+          + 'Salomonsaarten metsäympäristöä mukailevassa havainnekuvassa.',
         lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
           + 'BirdNet — Cacatua ducorpsii; Avibase — Cacatua ducorpsii',
         lahdeUrl: 'https://birdnet.cornell.edu/taxonomy/species/Cacatua%20ducorpsii',
@@ -2565,7 +2576,9 @@ export const ELAINTAKYT = {
     teksti: 'Tikkuri eli wirebird on noin 15 senttimetrin mittainen kahlaaja, joka elää vain Saint Helenan saarella keskellä Atlanttia, ja paikallinen nimi tulee sen ohuista jaloista. Lintu mainittiin ensi kerran vuonna 1638, ja se on saaren kansallislintu: se on kuvattuna vaakunassa ja lipussa sekä ennen vuotta 1998 lyötyjen viiden pennin kolikoiden kääntöpuolella. Tikkuri pysyttelee ympäri vuoden saaren avoimilla alueilla, ja saarta muuten runnellut laaja metsänhakkuu on itse asiassa hyödyttänyt juuri tätä lajia, koska se elää metsän aukoissa. Kanta on vaihdellut ja ainakin 1970-luvulta lähtien laskenut: laskennassa 1988–89 lintuja oli noin 450, vuosien 2005–06 kartoituksissa enää 200–220, ja laji luokiteltiin 2007 äärimmäisen uhanalaiseksi; vuoteen 2021 mennessä kanta oli toipunut noin 545 aikuiseen yksilöön ja luokitus laskettu vaarantuneeksi. Uhkina ovat villiintyneet kissat, vahingossa tuodut rotat, tuotu kettumaina, maastoajoneuvojen käyttö, Prosperous Bay Plainille rakennettu lentoasema ja suunniteltu tuulipuisto, ja RSPB:n hankkeet seuraavat lintuja ja yrittävät pysäyttää laskun.',
     lahde: 'en-Wikipedia "Saint Helena plover", johdanto sekä osiot "Description" '
       + 'ja "Status and conservation". Tarkistettu 8.9.2026.',
-    kuva: 'elain-shn',
+    // Kuvaa ei ole ämpärissä (HEAD 404, kartan tarkistus 10.10.2026, C4):
+    // `kuva`-viittaus poistettu, kortti latoo tekstin ja lähteen ilman
+    // kuvakehystä. Lisää `kuva: 'elain-shn'` takaisin, kun kuva on ämpärissä.
     // Piste on saaren eteläosassa (5,72 W / 15,99 S), 84,3
     // lautayksikköä St. Helena -kaupunkilaatasta (vähimmäisetäisyys 35)
     // ja SHN:n monikulmion sisällä. Laji on lähteen mukaan ympäri

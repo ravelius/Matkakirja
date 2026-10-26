@@ -34,6 +34,7 @@ let yhtLapi = 0;
 let yhtYht = 0;
 let yhtKesto = 0;
 let uusiaYht = 0;
+const ohitetut = [];
 
 for (const tiedosto of tiedostot) {
   let rivi;
@@ -43,7 +44,14 @@ for (const tiedosto of tiedostot) {
     console.log(`| ${tiedosto} | VIRHE | — | — | — (tuloksen jäsennys epäonnistui: ${e.message}) |`);
     continue;
   }
-  const { tiedosto: nimi, kesto, tulosJson } = rivi;
+  const { tiedosto: nimi, kesto, tulosJson, ohitettu } = rivi;
+  // OHITETTU (aja-sarja.mjs: GPU-väistö tai ei näyttöistuntoa): ei väitteitä,
+  // ei punainen — näytetään omana tilanaan, ettei 0/0 näytä OK:lta.
+  if (ohitettu) {
+    console.log(`| ${nimi} | — (OHITETTU: ${ohitettu}) | — | 0 | — |`);
+    ohitetut.push(nimi);
+    continue;
+  }
   const lapi = tulosJson?.lapi ?? '?';
   const yhteensa = tulosJson?.yhteensa ?? '?';
   const uusia = tulosJson?.uusiaPunaisia ?? 0;
@@ -55,4 +63,4 @@ for (const tiedosto of tiedostot) {
   uusiaYht += uusia;
 }
 
-console.log(`\n**Yhteensä:** ${yhtLapi}/${yhtYht} väitettä läpi, ${uusiaYht} uutta punaista, ${tiedostot.length} savuketta, kesto yhteensä ${yhtKesto} s (rinnakkain, joten seinäkello on lyhyempi).`);
+console.log(`\n**Yhteensä:** ${yhtLapi}/${yhtYht} väitettä läpi, ${uusiaYht} uutta punaista, ${tiedostot.length - ohitetut.length} savuketta${ohitetut.length ? ` (+ ${ohitetut.length} ohitettu)` : ''}, kesto yhteensä ${yhtKesto} s (rinnakkain, joten seinäkello on lyhyempi).`);

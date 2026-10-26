@@ -205,6 +205,7 @@ export const MAASTOKOHTEET_BOL = [
   {
     id: 'chiquitos',
     nimi: 'Chiquitosin lähetysasemat',
+    nimio: 'Chiquitos',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Mikä reduktio oli?',
@@ -318,6 +319,7 @@ export const MAASTOKOHTEET_BOL = [
   {
     id: 'samaipata',
     nimi: 'El Fuerte de Samaipata',
+    nimio: 'Samaipata',
     tyyppi: 'historia',
     kysymykset: [
       'Onko Samaipata linnoitus vai temppeli?',

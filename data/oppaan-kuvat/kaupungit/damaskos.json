@@ -1,0 +1,676 @@
+{
+ "kaupunki": "damaskos",
+ "kaupunkiQ": "Q3766",
+ "kohteet": [
+  {
+   "q": "Q183562",
+   "nimi": "Umaijadien moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 33.51139,
+   "lon": 36.30667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ancient City of Damascus-107604.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_City_of_Damascus-107604.jpg?width=1280",
+     "tekija": "Francesco Bandarin",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_City_of_Damascus-107604.jpg",
+     "selite": "Umaijadien moskeijan avara sisäpiha on ympäröity kaarikäytävillä, ja keskellä seisoo aarrekupoli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ancient City of Damascus-107603.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_City_of_Damascus-107603.jpg?width=1280",
+     "tekija": "Francesco Bandarin",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_City_of_Damascus-107603.jpg",
+     "selite": "Umaijadien moskeijan minareetti kohoaa vanhankaupungin kattojen yläpuolelle.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Damascus west exterior of Umayyad Mosque 5594.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_west_exterior_of_Umayyad_Mosque_5594.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_west_exterior_of_Umayyad_Mosque_5594.jpg",
+     "selite": "Moskeijan ulkomuuri on rakennettu roomalaisen temppelialueen kiviaitauksen paikalle.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Ancient City of Damascus-107606.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_City_of_Damascus-107606.jpg?width=1280",
+     "tekija": "Francesco Bandarin",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_City_of_Damascus-107606.jpg",
+     "selite": "Moskeijan pihan arkadit hohtavat illalla valaistuina.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q206246",
+   "nimi": "Damaskoksen linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 33.51167,
+   "lon": 36.30194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus western Citadel wall 0362.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_western_Citadel_wall_0362.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_western_Citadel_wall_0362.jpg",
+     "selite": "Damaskoksen linnoituksen massiivinen kivimuuri kohoaa vanhankaupungin luoteiskulmassa.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Damascus Citadel western wall right 7926.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_Citadel_western_wall_right_7926.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_Citadel_western_wall_right_7926.jpg",
+     "selite": "Linnoitusta ympäröivät paksut muurit ja tornit, jotka rakennettiin 1200-luvulla.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Damascus eastern gate of the Citadel 7935.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_eastern_gate_of_the_Citadel_7935.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_eastern_gate_of_the_Citadel_7935.jpg",
+     "selite": "Linnoituksen tornin kivimuuriin on upotettu koristeellinen tekstikaiverrus ja kapeita ikkunoita.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Citadel of old Damascus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadel_of_old_Damascus.jpg?width=1280",
+     "tekija": "Soleman aldbeat",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Citadel_of_old_Damascus.jpg",
+     "selite": "Linnoituksen muurin juuri on valaistu iltaisin.",
+     "leveys": 5312,
+     "korkeus": 3984,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3678596",
+   "nimi": "Damaskoksen vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 33.51111,
+   "lon": 36.30639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Umayyad Mosque, Damascus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Umayyad_Mosque%2C_Damascus.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Umayyad_Mosque%2C_Damascus.jpg",
+     "selite": "Damaskoksen vanhakaupunki on Unescon maailmanperintökohde, ja sen keskellä seisoo Umaijadien moskeija.",
+     "leveys": 3056,
+     "korkeus": 2054,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ancient City of Damascus-107607.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_City_of_Damascus-107607.jpg?width=1280",
+     "tekija": "Ron Van Oers",
+     "lisenssi": "CC BY-SA 3.0 igo",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_City_of_Damascus-107607.jpg",
+     "selite": "Vanhankaupungin kujilla näkyy yhä roomalaisen ajan pylväitä ja kaaria.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1338588",
+   "nimi": "Hamidiyyan suuki",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 33.51094,
+   "lon": 36.30164,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Hamidiyah Souq 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Hamidiyah_Souq_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Hamidiyah_Souq_02.jpg",
+     "selite": "Hamidiyyan suukin kaareva rautakatto peittää vanhankaupungin vilkkaimman kauppakadun.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1.30.3 Souq.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1.30.3_Souq.jpg?width=1280",
+     "tekija": "Haubi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1.30.3_Souq.jpg",
+     "selite": "Suukin pitkä katettu katu johtaa linnoituksen luota Umaijadien moskeijalle.",
+     "leveys": 3667,
+     "korkeus": 2502,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "200712 syria-6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/200712_syria-6.jpg?width=1280",
+     "tekija": "aiace telamonio",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:200712_syria-6.jpg",
+     "selite": "Illalla suuki täyttyy valaistuista myymälöistä.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q793784",
+   "nimi": "Azemin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 33.51028,
+   "lon": 36.30694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Azm Palace photo1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Azm_Palace_photo1.jpg?width=1280",
+     "tekija": "Hanin Jamal Batikh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Azm_Palace_photo1.jpg",
+     "selite": "Azemin palatsin sisäpihaa kiertävät raidalliset kaarikäytävät ja appelsiinipuut.",
+     "leveys": 3468,
+     "korkeus": 4624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Azm Palace fountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Azm_Palace_fountain.jpg?width=1280",
+     "tekija": "Hanin Jamal Batikh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Azm_Palace_fountain.jpg",
+     "selite": "Palatsin sisäpihan keskellä on suihkulähde, joka viilentää kuuman kesäpäivän.",
+     "leveys": 6936,
+     "korkeus": 9248,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al-Azm palace garden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Azm_palace_garden.jpg?width=1280",
+     "tekija": "Hanin Jamal Batikh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Azm_palace_garden.jpg",
+     "selite": "Palatsi rakennettiin 1700-luvulla Damaskoksen ottomaanikuvernöörille.",
+     "leveys": 6936,
+     "korkeus": 9248,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1061557",
+   "nimi": "Khan As'ad Pasha",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 33.50917,
+   "lon": 36.30667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "خان اسعد باشا.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AE%D8%A7%D9%86_%D8%A7%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg?width=1280",
+     "tekija": "Sheam k",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%AE%D8%A7%D9%86_%D8%A7%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg",
+     "selite": "Khan As'ad Pashan kupolikatteinen sisäpiha on Damaskoksen kauneimpia karavaanimajataloja.",
+     "leveys": 3841,
+     "korkeus": 5120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2 خان اسعد باشا.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_%D8%AE%D8%A7%D9%86_%D8%A7%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg?width=1280",
+     "tekija": "Noor Khayat",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_%D8%AE%D8%A7%D9%86_%D8%A7%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg",
+     "selite": "Majatalon kerroksissa vuorottelevat tumma ja vaalea kivi.",
+     "leveys": 2048,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A Dome in Khan As'ad Pasha- قبة في خان أسعد باشا.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Dome_in_Khan_As'ad_Pasha-_%D9%82%D8%A8%D8%A9_%D9%81%D9%8A_%D8%AE%D8%A7%D9%86_%D8%A3%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg?width=1280",
+     "tekija": "Hani Zaitoun",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Dome_in_Khan_As'ad_Pasha-_%D9%82%D8%A8%D8%A9_%D9%81%D9%8A_%D8%AE%D8%A7%D9%86_%D8%A3%D8%B3%D8%B9%D8%AF_%D8%A8%D8%A7%D8%B4%D8%A7.jpg",
+     "selite": "Majatalon kupolin sisäpuolta koristaa kuviollinen kivityö.",
+     "leveys": 4703,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q715273",
+   "nimi": "Sulaymaniyyan takkiyya",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 33.51231,
+   "lon": 36.29134,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus Tekkiye complex 7905.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_Tekkiye_complex_7905.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_Tekkiye_complex_7905.jpg",
+     "selite": "Sulaymaniyyan takkiyyan kaksi hoikkaa minareettia ovat 1500-luvun ottomaaniarkkitehtuuria.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "دمشق التكية السليمانية.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AF%D9%85%D8%B4%D9%82_%D8%A7%D9%84%D8%AA%D9%83%D9%8A%D8%A9_%D8%A7%D9%84%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86%D9%8A%D8%A9.jpg?width=1280",
+     "tekija": "Khaled ajlani",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%AF%D9%85%D8%B4%D9%82_%D8%A7%D9%84%D8%AA%D9%83%D9%8A%D8%A9_%D8%A7%D9%84%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86%D9%8A%D8%A9.jpg",
+     "selite": "Takkiyyan kompleksiin kuuluu moskeijan lisäksi lukuisia pienkupolisia rakennuksia.",
+     "leveys": 5087,
+     "korkeus": 3391,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1993 in Damascus. Takiyya as-Süleimaniyya Mosque garden. Spielvogel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1993_in_Damascus._Takiyya_as-S%C3%BCleimaniyya_Mosque_garden._Spielvogel.jpg?width=1280",
+     "tekija": "For a gallery of some more of my uploaded pictures see: here.",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1993_in_Damascus._Takiyya_as-S%C3%BCleimaniyya_Mosque_garden._Spielvogel.jpg",
+     "selite": "Kompleksin piha oli alun perin pyhiinvaeltajien ja matkailijoiden majatalo.",
+     "leveys": 2986,
+     "korkeus": 2157,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q257153",
+   "nimi": "Saladinin mausoleumi",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 33.51211,
+   "lon": 36.30593,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saladin mouselum tomb Damascus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saladin_mouselum_tomb_Damascus.jpg?width=1280",
+     "tekija": "Jan Smith",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saladin_mouselum_tomb_Damascus.jpg",
+     "selite": "Saladinin hautamonumentti sijaitsee aivan Umaijadien moskeijan vieressä.",
+     "leveys": 2652,
+     "korkeus": 2273,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saladin's Tomb, Damascus (دمشق), Syria - Ablution fountain in courtyard - PHBZ024 2016 1330 - Dumbarton Oaks.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saladin's_Tomb%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_Ablution_fountain_in_courtyard_-_PHBZ024_2016_1330_-_Dumbarton_Oaks.jpg?width=1280",
+     "tekija": "Frank Kidner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saladin's_Tomb%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_Ablution_fountain_in_courtyard_-_PHBZ024_2016_1330_-_Dumbarton_Oaks.jpg",
+     "selite": "Mausoleumin pihalla on suihkulähde pergolan varjossa.",
+     "leveys": 4824,
+     "korkeus": 3212,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4837223",
+   "nimi": "Bab Sharqin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 33.50944,
+   "lon": 36.31778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bab Sharqi, Damascus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Sharqi%2C_Damascus.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Sharqi%2C_Damascus.jpg",
+     "selite": "Itäportti on vanhankaupungin vanhin säilynyt portti, jonka roomalainen kolmoiskaari on yhä paikallaan.",
+     "leveys": 2844,
+     "korkeus": 2436,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bab Sharqi, Damascus (دمشق), Syria - View looking east (exit) - PHBZ024 2016 0097 - Dumbarton Oaks.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Sharqi%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_View_looking_east_(exit)_-_PHBZ024_2016_0097_-_Dumbarton_Oaks.jpg?width=1280",
+     "tekija": "Frank Kidner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Sharqi%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_View_looking_east_(exit)_-_PHBZ024_2016_0097_-_Dumbarton_Oaks.jpg",
+     "selite": "Portin kaarien ylle on rakennettu minareetti ja vanhoja asuintaloja.",
+     "leveys": 4792,
+     "korkeus": 3206,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4119844",
+   "nimi": "Kisanin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 33.50639,
+   "lon": 36.31528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus-Bab Kisan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus-Bab_Kisan.jpg?width=1280",
+     "tekija": "Heretiq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus-Bab_Kisan.jpg",
+     "selite": "Kisanin portti on vanhankaupungin kaakkoisportti, josta perimätiedon mukaan Paavali pääsi pakenemaan.",
+     "leveys": 2034,
+     "korkeus": 1518,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bab Kisan - Chapel of St. Paul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Kisan_-_Chapel_of_St._Paul.jpg?width=1280",
+     "tekija": "Bassel Khabbaz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Kisan_-_Chapel_of_St._Paul.jpg",
+     "selite": "Portin sisälle on rakennettu pieni Paavalin kappeli.",
+     "leveys": 2163,
+     "korkeus": 2163,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5701244",
+   "nimi": "Hijazin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 33.51122,
+   "lon": 36.29496,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus-Hejaz station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus-Hejaz_station.jpg?width=1280",
+     "tekija": "Heretiq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus-Hejaz_station.jpg",
+     "selite": "Hijazin rautatieasema valmistui 1900-luvun alussa Medinan radan päätepisteeksi.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1261879",
+   "nimi": "Qasiyun-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 33.54583,
+   "lon": 36.28639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Urban Landscape and Scenes of Everyday Life, Damascus (دمشق), Syria - View looking northeast to Mount Qasioun - PHBZ024 2016 0037 - Dumbarton Oaks.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Urban_Landscape_and_Scenes_of_Everyday_Life%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_View_looking_northeast_to_Mount_Qasioun_-_PHBZ024_2016_0037_-_Dumbarton_Oaks.jpg?width=1280",
+     "tekija": "Frank Kidner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Urban_Landscape_and_Scenes_of_Everyday_Life%2C_Damascus_(%D8%AF%D9%85%D8%B4%D9%82)%2C_Syria_-_View_looking_northeast_to_Mount_Qasioun_-_PHBZ024_2016_0037_-_Dumbarton_Oaks.jpg",
+     "selite": "Qasiyun-vuori kohoaa Damaskoksen yläpuolelle kaupungin pohjoispuolella.",
+     "leveys": 4799,
+     "korkeus": 3213,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Qasiyon Damascus.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qasiyon_Damascus.JPG?width=1280",
+     "tekija": "Aziz1005",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qasiyon_Damascus.JPG",
+     "selite": "Vuoren rinteille on rakentunut kaupunginosia aina huipun tuntumaan asti.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q617254",
+   "nimi": "Damaskoksen kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 33.51257,
+   "lon": 36.29004,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus-National-Museum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus-National-Museum.JPG?width=1280",
+     "tekija": "User:Aziz1005",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus-National-Museum.JPG",
+     "selite": "Kansallismuseon sisäänkäynti on tehty Qasr al-Hayr al-Gharbin linnan portin mukaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Damasco Museo NazionaleHPIM3267.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damasco_Museo_NazionaleHPIM3267.JPG?width=1280",
+     "tekija": "Mappo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damasco_Museo_NazionaleHPIM3267.JPG",
+     "selite": "Museon kokoelmissa on esineitä Palmyrasta, Marista ja Ugaritista.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3399936",
+   "nimi": "Sayyida Ruqayyan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 33.51333,
+   "lon": 36.30722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sayyidah Ruqayya Mosque 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sayyidah_Ruqayya_Mosque_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sayyidah_Ruqayya_Mosque_01.jpg",
+     "selite": "Sayyida Ruqayyan pyhäkkö on tärkeä šiialaisten pyhiinvaelluskohde Damaskoksen vanhassakaupungissa.",
+     "leveys": 2592,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1021901",
+   "nimi": "Bab Tuman portti",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 33.51373,
+   "lon": 36.3152,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DamascusBabTouma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DamascusBabTouma.jpg?width=1280",
+     "tekija": "Heretiq",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DamascusBabTouma.jpg",
+     "selite": "Bab Tuma on vanhankaupungin koillisportti ja kristillisen kaupunginosan sisäänkäynti.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12208702",
+   "nimi": "Nur al-Dinin hamam",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 33.50956,
+   "lon": 36.3064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damasco Hammam al-BazuriyeHPIM3227.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damasco_Hammam_al-BazuriyeHPIM3227.JPG?width=1280",
+     "tekija": "Mappo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damasco_Hammam_al-BazuriyeHPIM3227.JPG",
+     "selite": "Nur al-Dinin hamamin kupolisali on 1100-luvulta, ja se toimii yhä kylpylänä.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Damascus Hammam Nur Ad ‘Din 0446.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_Hammam_Nur_Ad_%E2%80%98Din_0446.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_Hammam_Nur_Ad_%E2%80%98Din_0446.jpg",
+     "selite": "Hamamin sisäänkäynti avautuu Bazuriyyan suukin kujalle.",
+     "leveys": 2832,
+     "korkeus": 4256,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "DamascusSkyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DamascusSkyline.jpg?width=1280",
+   "tekija": "Samosyr at English Wikipedia",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DamascusSkyline.jpg",
+   "selite": "Damaskos levittäytyy Qasiyun-vuoren juurelle tasaiselle vuoristoaavikon laaksolle.",
+   "leveys": 1280,
+   "korkeus": 853,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Damascus Jabal Qasioun 3121-3123mod.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_Jabal_Qasioun_3121-3123mod.jpg?width=1280",
+   "tekija": "JYB Devot",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_Jabal_Qasioun_3121-3123mod.jpg",
+   "selite": "Vuoren rinteeltä näkee koko kaupungin ja sen taloista muodostuvan meren.",
+   "leveys": 3854,
+   "korkeus": 1941,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

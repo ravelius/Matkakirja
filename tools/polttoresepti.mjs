@@ -20,6 +20,7 @@
  * KÄYTTÖ SKRIPTISTÄ (rivit muotoa AVAIN=arvo, shell-eval):
  *   node tools/polttoresepti.mjs liput 2026-09-25
  *   node tools/polttoresepti.mjs shardit 2026-09-25 --korkeus 1
+ *   node tools/polttoresepti.mjs delta 2026-09-26    (R_DELTA_LAJI, R_DELTA_RESEPTI)
  */
 
 /*
@@ -46,7 +47,7 @@
 export const Z8_SARAKKEITA = 338;
 export const LOHKO = 4;
 
-export const RESEPTIT = Object.freeze({
+const RESEPTITAULU = {
   '2026-09-25': Object.freeze({
     kuvaus: 'D2 + C-reliefi + natiivin vektorirannat (omistaja 25.9.2026)',
     /* Kaikille shardeille ja luettelolle (23a:n mukaan). */
@@ -79,6 +80,13 @@ export const RESEPTIT = Object.freeze({
     kielletyt: ['--syvyyskayrat', '--vesiviivoitus', '--syvyysportaat', '--rantaleveys'],
     laatu: '0.9',
     patina: 'kevyt',
+    /*
+     * NOSTOTASO ILMAN NIMIÖITÄ kuten tuotannossa (23a): laattaan vain merkki,
+     * nimi elävänä ja napautettavana (omistajan löydös 25.9.2026: 25-sarjan
+     * nostoja ei voinut klikata, koska lippu puuttui; ks. polta-paikallisesti.sh
+     * NOSTOT ILMAN NIMIÖITÄ).
+     */
+    nostoliput: ['--nostot-ilman-nimioita'],
     /* Pallon sarja Z0–Z9: laatikkosuodatin, JPEG 90 ilman värin alinäytteistystä. */
     palloliput: ['--suodatin', 'laatikko', '--jpeg-laatu', '90', '--jpeg-444'],
     palloTasot: '0-9',
@@ -89,7 +97,36 @@ export const RESEPTIT = Object.freeze({
     /* Kaukotasot 3′-varalla kuten ennen, z7–z8 polttoskriptin --korkeus (1′). */
     karkeatTasotEnintaan: 6,
   }),
+};
+
+/*
+ * 2026-09-26 (omistaja 25.9.2026 klo 23, löydös 129, valinta "vahvempi"
+ * kuvakolmikosta docs/raportit/kuvapari-loydos129-meri-20260925.jpg):
+ * sama kuin 2026-09-25, mutta meren syvyysliuku voimakkaampi — litistys
+ * pois (1) ja syvyysrampin kirkkauskontrasti 1,35 (piirto.js
+ * asetaSyvyyskontrasti). Kaikki muu tavulleen sama resepti.
+ */
+const R25 = RESEPTITAULU['2026-09-25'];
+const POHJA26 = R25.pohjaliput.map((l) => (l === '{"syvyys":{"litistys":0.8}}' ? '{"syvyys":{"litistys":1}}' : l === '2026-09-25' ? '2026-09-26' : l));
+RESEPTITAULU['2026-09-26'] = Object.freeze({
+  ...R25,
+  kuvaus: 'D2 + C-reliefi + natiivin vektorirannat + voimakkaampi meren syvyysliuku (omistaja 25.9.2026 klo 23, löydös 129)',
+  pohjaliput: [...POHJA26, '--syvyyskontrasti', '1.35'],
+  /*
+   * DELTA EDELLISEEN (Karttaseppä 26.9.2026, ks. tools/delta-luokitin.mjs):
+   * reseptin ero edeltäjäänsä koskee vain merta (syvyysrampin kontrasti
+   * ja patinan syvyyslitistys), joten sen voi polttaa 2026-09-25-pohjan
+   * päälle `--delta meri` -tilassa. Kenttä on VÄITE, jonka ajo todistaa:
+   * tarkistusotos (piirretyt kopioitavat laatat) on oltava bitilleen
+   * lähteen laattoja, tai vertailu kaatuu ennen julkaisua. Patinan
+   * litistys lukee meren KROMASTA, joten vaalea maa olisi voinut kuulua
+   * siihen; koeajossa 26.9.2026 (z7, 1′, ilman DEM:ää) 25- ja 26-reseptin
+   * puhtaat maalaatat olivat tavulleen samat Libyassa (8/8) ja Grönlannin
+   * jäätiköllä (35/35), ja kaikki muuttuneet laatat olivat vesi-/rantalaattoja.
+   */
+  deltaEdelliseen: Object.freeze({ resepti: '2026-09-25', laji: 'meri' }),
 });
+export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
 export function resepti(nimi) {
   const r = RESEPTIT[nimi];
@@ -143,6 +180,7 @@ async function paa(argv) {
       R_YHTEISLIPUT: r.yhteisliput.join(' '),
       R_POHJALIPUT: r.pohjaliput.join(' '),
       R_PALLOLIPUT: r.palloliput.join(' '),
+      R_NOSTOLIPUT: (r.nostoliput ?? []).join(' '),
       R_PALLO_TASOT: r.palloTasot,
       R_LAATU: r.laatu,
       R_PATINA: r.patina,
@@ -152,13 +190,23 @@ async function paa(argv) {
     for (const [k, v] of Object.entries(rivit)) console.log(`${k}=${shellArvo(v)}`);
     return;
   }
+  /*
+   * DELTA-TIETO OMANA KOMENTONA, jotta `liput`-tuloste pysyy tavulleen
+   * entisenä: R_DELTA_LAJI on tyhjä, jos reseptillä ei ole edeltäjää.
+   */
+  if (komento === 'delta') {
+    const d = resepti(nimi).deltaEdelliseen ?? null;
+    console.log(`R_DELTA_LAJI=${shellArvo(d?.laji ?? '')}`);
+    console.log(`R_DELTA_RESEPTI=${shellArvo(d?.resepti ?? '')}`);
+    return;
+  }
   if (komento === 'shardit') {
     const i = muut.indexOf('--korkeus');
     const korkeus = i >= 0 ? Number(muut[i + 1]) : 1;
     for (const s of reseptinShardit(nimi, { korkeus })) console.log(`${s.nimi}|${s.args}`);
     return;
   }
-  throw new Error('käyttö: polttoresepti.mjs liput|shardit <nimi> [--korkeus 1|3]');
+  throw new Error('käyttö: polttoresepti.mjs liput|shardit|delta <nimi> [--korkeus 1|3]');
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

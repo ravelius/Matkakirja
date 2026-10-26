@@ -766,17 +766,4 @@ export const FOKUSVIRTA_TALLINNA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: hansakauppiaan
-   * hopeakätkö seinän sisässä. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Raatihuoneen vahtimestari kertoi, että vanhoista taloista '
-      + 'löytyy yhä hopeaa seinien sisästä — hansakauppias ei luottanut '
-      + 'pankkiin vaan muuriin. Koputin yhtä seinää ja jätin sen rauhaan: '
-      + 'kätkön suoja on talo, eikä taloa pureta uteliaan takia.',
-  },
 };

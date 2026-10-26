@@ -1,0 +1,862 @@
+{
+ "kaupunki": "Podgorica",
+ "id": "podgorica",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Podgoricaan. Ylhäältä kaupunki levittyy Zetan tasangolle kahden joen yhtymäkohtaan: Morača virtaa syvässä kivisessä uomassa keskustan länsilaidalla, ja Ribnica yhtyy siihen aivan kaupungin sydämessä. Pohjoispuolella kohoaa metsäinen Gorica-kukkula, ympärillä nousevat vuoret, ja etelässä tasanko jatkuu kohti Skadarjärveä. Etelän suunnalta käy lempeä tuuli, ja se kuljettaa koriamme hitaasti kohti jokien yhtymäkohtaa. Kierros alkaa Itsenäisyydenaukiolta, Nova Varošin laajalta aukiolta, jonka keskellä on suuri suihkulähde ja jota reunustavat puut ja palmut."
+ },
+ "kierros": [
+  "Q7314419",
+  "Q5134791",
+  "Q5260605",
+  "Q4686996",
+  "Q3501389",
+  "Q12761051",
+  "Q1267436",
+  "Q658743"
+ ],
+ "kohteet": [
+  {
+   "id": "Q7314419",
+   "nimi": "Itsenäisyydenaukio",
+   "kuvaus": "Podgorican keskusaukio",
+   "luokka": "aukio",
+   "koko_m": 95,
+   "teksti": "Pallokorista katsottuna Itsenäisyydenaukio on suorakulmainen, puiden ja palmujen reunustama aukio Podgorican keskustassa, ja sen keskellä on suuri suihkulähde. Aukio on Nova Varošin, suomeksi Uuden kaupungin, keskus, ja sen lähellä on Montenegron kansallisteatteri. Se uudistettiin perusteellisesti vuonna 2006 ja päällystettiin uudelleen kivellä, ja uusi aukio luovutettiin kaupunkilaisille 6. syyskuuta 2006. Samana vuonna Montenegro äänesti itsenäisyydestä toukokuun kansanäänestyksessä, ja Podgoricasta tuli itsenäisen valtion pääkaupunki.",
+   "lyhyt": "Aukio on kantanut kolmea nimeä. Toisen maailmansodan jälkeen se oli Ivan Milutinovićin aukio, jonka nimikkohenkilö oli kansallissankariksi julistettu kommunistipoliitikko ja kenraali. Myöhemmin siitä tuli Tasavallan aukio, ja nykyisin se on Itsenäisyydenaukio.",
+   "syventava": "Miten Montenegrosta tuli itsenäinen valtio vuonna 2006?",
+   "kysymykset": [
+    "Mikä oli aukion nimi ennen vuotta 2006?",
+    "Mitä aukion keskellä on?",
+    "Milloin uudistettu aukio avattiin?",
+    "Mitä Nova Varoš tarkoittaa?",
+    "Milloin Podgoricasta tuli itsenäisen Montenegron pääkaupunki?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio on Podgorican keskusaukio Nova Varošin (Uuden kaupungin) kaupunginosassa.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Aukio on Podgorican keskusaukio Nova Varošin (Uuden kaupungin) kaupunginosassa.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    },
+    {
+     "vaite": "Aukion keskellä on suihkulähde.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Aukion keskellä on suihkulähde.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    },
+    {
+     "vaite": "Aukiota reunustavat palmut ja puut.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Aukiota reunustavat palmut ja puut.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    },
+    {
+     "vaite": "Kansallisteatteri on aukion lähellä.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Kansallisteatteri on aukion lähellä.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    },
+    {
+     "vaite": "Aukio uudistettiin ja päällystettiin kivellä vuonna 2006.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Aukio uudistettiin ja päällystettiin kivellä vuonna 2006.",
+     "url": "https://stoneworld.com/articles/84539-indian-stone-plays-an-historical-role-in-montenegro"
+    },
+    {
+     "vaite": "Uusi aukio vihittiin käyttöön 6.9.2006 (kauppalehtiartikkeli, kivitoimittajan kuvaus).",
+     "url": "https://stoneworld.com/articles/84539-indian-stone-plays-an-historical-role-in-montenegro"
+    },
+    {
+     "vaite": "Uusi aukio vihittiin käyttöön 6.9.2006 (kauppalehtiartikkeli, kivitoimittajan kuvaus).",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)",
+     "huom": "Wikipedia antaa vain vuoden 2006; tarkka päivämäärä vain stoneworld-artikkelista"
+    },
+    {
+     "vaite": "Montenegro äänesti itsenäisyydestä toukokuun 2006 kansanäänestyksessä, ja Podgoricasta tuli itsenäisen valtion pääkaupunki.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Montenegro äänesti itsenäisyydestä toukokuun 2006 kansanäänestyksessä, ja Podgoricasta tuli itsenäisen valtion pääkaupunki.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    },
+    {
+     "vaite": "Aukio oli Ivan Milutinovićin aukio (kansallissankari), myöhemmin Tasavallan aukio, nykyisin Itsenäisyydenaukio.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Aukio oli Ivan Milutinovićin aukio (kansallissankari), myöhemmin Tasavallan aukio, nykyisin Itsenäisyydenaukio.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    },
+    {
+     "vaite": "Ivan Milutinović oli kommunistipoliitikko, kenraali ja kansallissankari.",
+     "url": "https://en.wikipedia.org/wiki/Independence_Square_(Podgorica)"
+    },
+    {
+     "vaite": "Ivan Milutinović oli kommunistipoliitikko, kenraali ja kansallissankari.",
+     "url": "https://montenegro-for.me/2022/03/walking-through-the-parks-of-podgorica-ii/"
+    }
+   ]
+  },
+  {
+   "id": "Q5134791",
+   "nimi": "Sahat kula -kellotorni",
+   "kuvaus": "Ottomaanien ajan kellotorni",
+   "luokka": "torni",
+   "koko_m": 20,
+   "teksti": "Pallokorista katsottuna Sahat kula on kapea kivitorni Stara Varošissa, Podgorican vanhassa ottomaanikaupunginosassa. Torni on noin 19 metriä korkea, ja sen rakennutti ottomaanien aikana kaupungin vaikutusvaltainen Osmanagićin suvun jäsen. Stara Varoš oli ottomaanien vallan aikana kaupungin ydin. Toisen maailmansodan pommitukset tuhosivat suuren osan kaupunginosasta, mutta kellotorni säilyi, ja se on yksi harvoista säilyneistä ottomaanien ajan maamerkeistä. Montenegro on suojellut tornin kulttuurimonumenttina.",
+   "lyhyt": "Tornin kello sai vuonna 1890 uuden, Italiassa valmistetun koneiston. Podgorica oli silloin kuulunut Montenegroon jo kaksitoista vuotta, sillä kaupunki liitettiin siihen vuonna 1878 Berliinin kongressin päätöksellä. Noihin aikoihin tornin huipulle lisättiin myös metalliristi.",
+   "syventava": "Miksi Stara Varoš tuhoutui toisessa maailmansodassa niin pahoin?",
+   "kysymykset": [
+    "Kuka rakennutti Sahat kulan?",
+    "Mitä Stara Varoš tarkoittaa?",
+    "Mitkä moskeijat Stara Varošissa ovat?",
+    "Kuinka korkea Sahat kula on?",
+    "Missä Italian kaupungissa tornin vuoden 1890 kello valmistettiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni on vapaasti seisova kivitorni, korkeudeltaan 19 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Torni on vapaasti seisova kivitorni, korkeudeltaan 19 metriä.",
+     "url": "https://www.myguidemontenegro.com/things-to-do/sahat-tower-and-stara-varos"
+    },
+    {
+     "vaite": "Torni on vapaasti seisova kivitorni, korkeudeltaan 19 metriä.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/stara-varos-sahat-kula"
+    },
+    {
+     "vaite": "Torni on ottomaanien ajalta ja sen rakennutti Osmanagićin suvun jäsen (lähteet nimeävät rakentajan eri tavoin, sukunimi on sama).",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Torni on ottomaanien ajalta ja sen rakennutti Osmanagićin suvun jäsen (lähteet nimeävät rakentajan eri tavoin, sukunimi on sama).",
+     "url": "https://www.myguidemontenegro.com/things-to-do/sahat-tower-and-stara-varos"
+    },
+    {
+     "vaite": "Torni on ottomaanien ajalta ja sen rakennutti Osmanagićin suvun jäsen (lähteet nimeävät rakentajan eri tavoin, sukunimi on sama).",
+     "url": "https://www.gpsmycity.com/attractions/sahat-kula-(clock-tower)-54461.html"
+    },
+    {
+     "vaite": "Stara Varoš oli ottomaanien ajan kaupungin ydin.",
+     "url": "https://en.wikipedia.org/wiki/Stara_Varo%C5%A1,_Podgorica"
+    },
+    {
+     "vaite": "Stara Varoš oli ottomaanien ajan kaupungin ydin.",
+     "url": "https://www.myguidemontenegro.com/things-to-do/sahat-tower-and-stara-varos"
+    },
+    {
+     "vaite": "Toisen maailmansodan pommitukset tuhosivat suuren osan Stara Varošista, mutta torni säilyi.",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Toisen maailmansodan pommitukset tuhosivat suuren osan Stara Varošista, mutta torni säilyi.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/stara-varos-sahat-kula"
+    },
+    {
+     "vaite": "Toisen maailmansodan pommitukset tuhosivat suuren osan Stara Varošista, mutta torni säilyi.",
+     "url": "https://www.gpsmycity.com/attractions/sahat-kula-(clock-tower)-54461.html"
+    },
+    {
+     "vaite": "Torni on suojeltu kulttuurimonumentti.",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Torni on suojeltu kulttuurimonumentti.",
+     "url": "https://www.gpsmycity.com/attractions/sahat-kula-(clock-tower)-54461.html"
+    },
+    {
+     "vaite": "Torni on suojeltu kulttuurimonumentti.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/stara-varos-sahat-kula"
+    },
+    {
+     "vaite": "Uusi italialainen kellokoneisto asennettiin 1890.",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Uusi italialainen kellokoneisto asennettiin 1890.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/stara-varos-sahat-kula",
+     "huom": "sivu mahdollisesti peilaa Wikipediaa"
+    },
+    {
+     "vaite": "Metalliristi lisättiin tornin huipulle noin 1890.",
+     "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)"
+    },
+    {
+     "vaite": "Metalliristi lisättiin tornin huipulle noin 1890.",
+     "url": "https://www.gpsmycity.com/attractions/sahat-kula-(clock-tower)-54461.html"
+    },
+    {
+     "vaite": "Podgorica liitettiin Montenegroon 1878 Berliinin kongressin päätöksellä.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica",
+     "huom": "tarkistettu aiemmassa kaupunkiesittelytiedostossa, ei avattu uudelleen tässä ajossa"
+    },
+    {
+     "vaite": "Podgorica liitettiin Montenegroon 1878 Berliinin kongressin päätöksellä.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    }
+   ]
+  },
+  {
+   "id": "Q5260605",
+   "nimi": "Ribnican linnoitus",
+   "kuvaus": "Osmanien linnoituksen rauniot",
+   "luokka": "linnoitus",
+   "koko_m": 140,
+   "teksti": "Pallokorista katsottuna Ribnican linnoitus on rauniokokonaisuus Ribnica- ja Morača-jokien yhtymäkohdassa, Podgorican vanhan kaupunginosan reunalla. Osmanit rakensivat linnoituksen 1400-luvun lopulla valloitettuaan kaupungin vuonna 1474. Turkin kielellä sitä kutsutaan nimellä Depedogen, ja sitä kutsutaan myös Nemanjin Gradiksi. Nykyään linnoitus on pahoin rapistunut. Alue kuuluu Stara Varošiin, ottomaanien ajan kaupungin ytimeen. Rauniot ovat avoinna kävijöille, ja viereisen Adži-pašan sillan yli pääsee kävelemään niiden luo.",
+   "lyhyt": "Nemanjin Grad -nimi viittaa perimätietoon, jonka mukaan paikalla on ollut asutus jo 1100-luvulla ja Nemanjić-dynastian perustaja Stefan Nemanja syntyi siellä. Varmaa tietoa tästä ei ole, ja varmistettu rakennusaika on osmanien 1400-luvun loppu.",
+   "syventava": "Miksi linnoitusta kutsutaan Nemanjan kaupungiksi?",
+   "kysymykset": [
+    "Milloin osmanit valtasivat Podgorican?",
+    "Kuka Stefan Nemanja oli?",
+    "Mikä oli Podgorican keskiaikainen nimi?",
+    "Missä kaupunginosassa linnoitus sijaitsee?",
+    "Mikä joki laskee Moračaan linnoituksen vieressä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitus on joen yhtymäkohdassa, jossa Ribnica ja Morača kohtaavat.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Linnoitus on joen yhtymäkohdassa, jossa Ribnica ja Morača kohtaavat.",
+     "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/"
+    },
+    {
+     "vaite": "Osmanit rakensivat linnoituksen 1400-luvun lopulla, valtauksen 1474 jälkeen.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Osmanit rakensivat linnoituksen 1400-luvun lopulla, valtauksen 1474 jälkeen.",
+     "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/"
+    },
+    {
+     "vaite": "Linnoituksen turkkilainen nimi on Depedogen.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Linnoituksen turkkilainen nimi on Depedogen.",
+     "url": "https://www.myguidemontenegro.com/experiences/ancient-podgorica-illyrian-roman-ottoman-heritage"
+    },
+    {
+     "vaite": "Linnoitusta kutsutaan serbeillä myös Nemanjin Gradiksi.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Linnoitusta kutsutaan serbeillä myös Nemanjin Gradiksi.",
+     "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/"
+    },
+    {
+     "vaite": "Linnoitus on pahoin rapistunut ja kunnostustyöt on aloitettu.",
+     "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/"
+    },
+    {
+     "vaite": "Linnoitus on pahoin rapistunut ja kunnostustyöt on aloitettu.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)",
+     "huom": "Wikipedia: pahoin vaurioitunut; kunnostustöiden aloitus vain montenegro-for.me-artikkelissa"
+    },
+    {
+     "vaite": "Perimätieto: paikalla asutus jo 1100-luvulla, Stefan Nemanjan syntymäpaikka; ei varmistettu.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Perimätieto: paikalla asutus jo 1100-luvulla, Stefan Nemanjan syntymäpaikka; ei varmistettu.",
+     "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/"
+    },
+    {
+     "vaite": "Rauniot ovat avoinna kävijöille ja kuuluvat Stara Varošiin; sillan yli pääsee raunioille.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Rauniot ovat avoinna kävijöille ja kuuluvat Stara Varošiin; sillan yli pääsee raunioille.",
+     "url": "https://www.montenegropulse.com/things-to-do-in-podgorica.html"
+    },
+    {
+     "vaite": "Stara Varoš sijaitsee linnoituksen vieressä; linnoitus on osa vanhaa ottomaanikaupunginosaa.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    },
+    {
+     "vaite": "Stara Varoš sijaitsee linnoituksen vieressä; linnoitus on osa vanhaa ottomaanikaupunginosaa.",
+     "url": "https://en.wikipedia.org/wiki/Stara_Varo%C5%A1,_Podgorica"
+    }
+   ]
+  },
+  {
+   "id": "Q4686996",
+   "nimi": "Adži-pašan silta",
+   "kuvaus": "Vanha kivisilta Ribnican yli",
+   "luokka": "silta",
+   "koko_m": 25,
+   "teksti": "Ylhäältä katsottuna Adži-pašan silta on pieni kaksikaarinen kivisilta, joka ylittää Ribnica-joen aivan sen ja Moračan yhtymäkohdan läheltä. Sitä pidetään Podgorican vanhimpana siltana, ja perimätiedon mukaan sen alkuperä on roomalaisajalta. Ottomaanien vallan aikana siltaa uusittiin perusteellisesti. Nimensä silta on saanut Adži-paša Osmanagićilta, joka rahoitti uudistuksen. Ribnica on pieni Moračan sivujoki, ja silta kuuluu Stara Varošiin, ottomaanien ajan kaupungin ytimeen. Nykyään sen yli kuljetaan jalan.",
+   "lyhyt": "Vanhemmat podgoricalaiset kutsuvat siltaa Sastavcin sillaksi sen alueen mukaan, jossa Ribnica ja Morača yhtyvät, ja sana sastavci tarkoittaa joen yhtymäkohtaa. Sillalta voi kävellä suoraan Ribnican linnoituksen raunioille.",
+   "syventava": "Kuka Adži-paša Osmanagić oli?",
+   "kysymykset": [
+    "Mitä Sastavci tarkoittaa?",
+    "Mihin jokeen Ribnica laskee?",
+    "Milloin osmanit valtasivat Podgorican?",
+    "Missä kaupunginosassa silta sijaitsee?",
+    "Mikä oli roomalaisajan kaupunki Doclea?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Ribnica on Moračan sivujoki; silta kuuluu Stara Varošiin.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(Mora%C4%8Da)"
+    },
+    {
+     "vaite": "Ribnica on Moračan sivujoki; silta kuuluu Stara Varošiin.",
+     "url": "https://en.wikipedia.org/wiki/Stara_Varo%C5%A1,_Podgorica"
+    },
+    {
+     "vaite": "Silta ylittää Ribnican lähellä sen yhtymäkohtaa Moračaan.",
+     "url": "https://en.wikipedia.org/wiki/Ad%C5%BEi-pa%C5%A1a%27s_bridge"
+    },
+    {
+     "vaite": "Silta ylittää Ribnican lähellä sen yhtymäkohtaa Moračaan.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu"
+    },
+    {
+     "vaite": "Silta on kivirakenteinen ja kaksikaarinen ja jalankulkusilta.",
+     "url": "https://en.wikipedia.org/wiki/List_of_bridges_in_Montenegro",
+     "huom": "listaus: masonry, 2 arches, footbridge; portal: päälaki ja pienempi kaari"
+    },
+    {
+     "vaite": "Silta on kivirakenteinen ja kaksikaarinen ja jalankulkusilta.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu",
+     "huom": "kuvaa pääkaaren ja pienemmän kaaren, ei kokonaismäärää"
+    },
+    {
+     "vaite": "Silta on Podgorican vanhin silta.",
+     "url": "https://en.wikipedia.org/wiki/Ad%C5%BEi-pa%C5%A1a%27s_bridge"
+    },
+    {
+     "vaite": "Silta on Podgorican vanhin silta.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu"
+    },
+    {
+     "vaite": "Alkuperän uskotaan olevan roomalaisajalta.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu"
+    },
+    {
+     "vaite": "Alkuperän uskotaan olevan roomalaisajalta.",
+     "url": "https://www.lebonroadtrip.fr/article/visiter-podgorica-montenegro/"
+    },
+    {
+     "vaite": "Silta on uudistettu ottomaanien vallan aikana.",
+     "url": "https://en.wikipedia.org/wiki/Ad%C5%BEi-pa%C5%A1a%27s_bridge"
+    },
+    {
+     "vaite": "Silta on uudistettu ottomaanien vallan aikana.",
+     "url": "https://www.montenegropulse.com/things-to-do-in-podgorica.html"
+    },
+    {
+     "vaite": "Silta on nimetty Adži-paša Osmanagićin mukaan, joka rahoitti uudistuksen.",
+     "url": "https://cherylhoward.com/visit-podgorica/"
+    },
+    {
+     "vaite": "Silta on nimetty Adži-paša Osmanagićin mukaan, joka rahoitti uudistuksen.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu"
+    },
+    {
+     "vaite": "Vanhat asukkaat kutsuvat siltaa Sastavcin sillaksi jokien yhtymäkohdan alueen mukaan.",
+     "url": "https://www.portalanalitika.me/clanak/jedan-od-najljepsih-sacuvanih-stari-most-na-uscu-ribnice-u-moracu"
+    },
+    {
+     "vaite": "Vanhat asukkaat kutsuvat siltaa Sastavcin sillaksi jokien yhtymäkohdan alueen mukaan.",
+     "url": "https://cherylhoward.com/visit-podgorica/"
+    },
+    {
+     "vaite": "Sillalta pääsee kävelemään linnoituksen raunioille.",
+     "url": "https://www.montenegropulse.com/things-to-do-in-podgorica.html"
+    },
+    {
+     "vaite": "Sillalta pääsee kävelemään linnoituksen raunioille.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)"
+    }
+   ]
+  },
+  {
+   "id": "Q3501389",
+   "nimi": "Montenegron kansallisteatteri",
+   "kuvaus": "Montenegron kansallisteatteri",
+   "luokka": "teatteri",
+   "koko_m": 70,
+   "teksti": "Montenegron kansallisteatteri seisoo Podgorican keskustassa osoitteessa Stanka Dragojevića 18. Teatteri perustettiin vuonna 1953 Titogradin kaupunginteatteriksi; Titograd oli Podgorican nimi vuosina 1946–1992. Kansallisteatterin nimen se sai vuonna 1969. Vanha teatterirakennus paloi 10. marraskuuta 1989, ja uusi rakennus valmistui seitsemän vuoden remontin jälkeen. Se avattiin 25. toukokuuta 1997 Njegošin näytelmän Gorski vijenac eli Vuorten seppele ensi-illalla, ohjaajanaan Branislav Mićunović.",
+   "lyhyt": "Teatterilla ei ollut alussa omaa taloa, vaan se esiintyi Kultura-elokuvateatterin tiloissa. Palon jälkeen vuonna 1989 ryhmä siirtyi riittämättömiin tiloihin Budo Tomović -nuorisotalolle ja piti toimintansa käynnissä vierailuesityksillä. Ensimmäinen johtaja oli Vasilije Šćućkin.",
+   "syventava": "Miksi Podgoricaa kutsuttiin Titogradiksi?",
+   "kysymykset": [
+    "Missä teatteri esiintyi ennen omaa taloa?",
+    "Minne teatteri siirtyi palon jälkeen?",
+    "Kuka oli teatterin ensimmäinen johtaja?",
+    "Kuka ohjasi uuden rakennuksen avajaisnäytelmän?",
+    "Kenen mukaan Titograd nimettiin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Teatteri sijaitsee osoitteessa Stanka Dragojevića 18.",
+     "url": "https://en.wikipedia.org/wiki/Montenegrin_National_Theatre"
+    },
+    {
+     "vaite": "Teatteri sijaitsee osoitteessa Stanka Dragojevića 18.",
+     "url": "https://myguidemontenegro.com/things-to-do/montenegrin-national-theatre"
+    },
+    {
+     "vaite": "Teatteri perustettiin 1953 Titogradin kaupunginteatteriksi.",
+     "url": "https://en.wikipedia.org/wiki/Montenegrin_National_Theatre"
+    },
+    {
+     "vaite": "Teatteri perustettiin 1953 Titogradin kaupunginteatteriksi.",
+     "url": "https://myguidemontenegro.com/things-to-do/montenegrin-national-theatre"
+    },
+    {
+     "vaite": "Teatteri perustettiin 1953 Titogradin kaupunginteatteriksi.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Titograd oli Podgorican nimi 1946–1992.",
+     "url": "https://en.wikipedia.org/wiki/Titograd"
+    },
+    {
+     "vaite": "Titograd oli Podgorican nimi 1946–1992.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica",
+     "huom": "aiemmassa kaupunkiesittelytiedostossa vahvistettu; ei avattu uudelleen"
+    },
+    {
+     "vaite": "Kansallisteatterin nimi vuonna 1969.",
+     "url": "https://en.wikipedia.org/wiki/Montenegrin_National_Theatre"
+    },
+    {
+     "vaite": "Kansallisteatterin nimi vuonna 1969.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Kansallisteatterin nimi vuonna 1969.",
+     "url": "https://myguidemontenegro.com/things-to-do/montenegrin-national-theatre"
+    },
+    {
+     "vaite": "Vanha rakennus paloi 10.11.1989 (CNP, srWikipedia); Wikipedia: 1989.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Vanha rakennus paloi 10.11.1989 (CNP, srWikipedia); Wikipedia: 1989.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    },
+    {
+     "vaite": "Uusi rakennus valmistui seitsemän vuoden remontin (1990–1997) jälkeen.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Uusi rakennus valmistui seitsemän vuoden remontin (1990–1997) jälkeen.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    },
+    {
+     "vaite": "Uusi rakennus avattiin 25.5.1997 näytelmällä Gorski vijenac, ohjaaja Branislav Mićunović.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Uusi rakennus avattiin 25.5.1997 näytelmällä Gorski vijenac, ohjaaja Branislav Mićunović.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    },
+    {
+     "vaite": "Uusi rakennus avattiin 25.5.1997 näytelmällä Gorski vijenac, ohjaaja Branislav Mićunović.",
+     "url": "https://en.wikipedia.org/wiki/Montenegrin_National_Theatre"
+    },
+    {
+     "vaite": "Alussa teatteri esiintyi Kultura-elokuvateatterin tiloissa.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Alussa teatteri esiintyi Kultura-elokuvateatterin tiloissa.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    },
+    {
+     "vaite": "Palon jälkeen teatteri siirtyi Budo Tomović -nuorisotalolle ja kiersi vierailuilla.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Palon jälkeen teatteri siirtyi Budo Tomović -nuorisotalolle ja kiersi vierailuilla.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    },
+    {
+     "vaite": "Ensimmäinen johtaja Vasilije Šćućkin.",
+     "url": "https://cnp.me/o-nama/"
+    },
+    {
+     "vaite": "Ensimmäinen johtaja Vasilije Šćućkin.",
+     "url": "https://sr.wikipedia.org/sr-el/%D0%A6%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5"
+    }
+   ]
+  },
+  {
+   "id": "Q12761051",
+   "nimi": "Pyhän Yrjön kirkko",
+   "kuvaus": "Gorican juuren vanha kirkko",
+   "luokka": "kirkko",
+   "koko_m": 20,
+   "teksti": "Pyhän Yrjön kirkko on pieni ortodoksikirkko Gorica-kukkulan juurella, ja ylhäältä katsottuna se erottuu metsäisen rinteen alla. Kukkula kohoaa keskustan yläpuolelle ja on merkittävin kaupunkia ympäröivistä kukkuloista, ja sen mukaan koko kaupunki on saanut nimensä. Kirkon rakennusaikaa arvioidaan 800-luvulta 1000-luvulle, joten se on yksi Podgorican vanhimmista kirkoista. Sitä on korjattu ja rakennettu uudelleen useaan kertaan, eikä sen alkuperäinen ulkoasu ole säilynyt täysin. Kirkon sisätiloissa on vanhoja seinämaalauksia.",
+   "lyhyt": "Sana gorica tarkoittaa pientä kukkulaa tai vuorta, joten Podgorica tarkoittaa sananmukaisesti paikkaa kukkulan alla. Nimi Podgorica mainitaan ensimmäisen kerran vuonna 1326 Kotorin arkiston oikeusasiakirjassa. Keskiajalla kaupunki tunnettiin vielä nimellä Ribnica.",
+   "syventava": "Miksi kirkkoa on korjattu ja rakennettu uudelleen niin monta kertaa?",
+   "kysymykset": [
+    "Mitä Podgorica tarkoittaa?",
+    "Milloin nimi Podgorica mainitaan ensimmäisen kerran?",
+    "Mikä oli kaupungin keskiaikainen nimi?",
+    "Mikä roomalaisajan kaupunki sijaitsi Podgorican luoteispuolella?",
+    "Milloin Podgoricasta tuli itsenäisen Montenegron pääkaupunki?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko on Gorica-kukkulan juurella, ja kaupunki on saanut nimensä kukkulasta.",
+     "url": "https://podgorica.travel/en/the-church-of-st-george/"
+    },
+    {
+     "vaite": "Kirkko on Gorica-kukkulan juurella, ja kaupunki on saanut nimensä kukkulasta.",
+     "url": "https://livetheworld.com/post/gorica-hill-a-natural-oasis-in-the-heart-of-podgorica-5z47"
+    },
+    {
+     "vaite": "Gorica kohoaa keskustan yläpuolelle ja on merkittävin ympäröivistä kukkuloista.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Gorica kohoaa keskustan yläpuolelle ja on merkittävin ympäröivistä kukkuloista.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    },
+    {
+     "vaite": "Kirkon rakennusaika on 800–1000-lukujen välillä.",
+     "url": "https://podgorica.travel/en/the-church-of-st-george/"
+    },
+    {
+     "vaite": "Kirkon rakennusaika on 800–1000-lukujen välillä.",
+     "url": "https://livetheworld.com/post/gorica-hill-a-natural-oasis-in-the-heart-of-podgorica-5z47"
+    },
+    {
+     "vaite": "Kirkon rakennusaika on 800–1000-lukujen välillä.",
+     "url": "https://tib.oeaw.ac.at/balkan/explore/entity/120380"
+    },
+    {
+     "vaite": "Kirkkoa on korjattu ja rakennettu uudelleen useaan kertaan; alkuperäinen ulkoasu ei ole täysin säilynyt.",
+     "url": "https://podgorica.travel/en/the-church-of-st-george/"
+    },
+    {
+     "vaite": "Kirkkoa on korjattu ja rakennettu uudelleen useaan kertaan; alkuperäinen ulkoasu ei ole täysin säilynyt.",
+     "url": "https://tib.oeaw.ac.at/balkan/explore/entity/120380"
+    },
+    {
+     "vaite": "Kirkon sisällä on vanhoja seinämaalauksia (freskoja).",
+     "url": "https://podgorica.travel/en/the-church-of-st-george/"
+    },
+    {
+     "vaite": "Kirkon sisällä on vanhoja seinämaalauksia (freskoja).",
+     "url": "https://tib.oeaw.ac.at/balkan/explore/entity/120380",
+     "huom": "TIB-merkintä ei mainitse fresko; toinen lähde Lonely Planet -hakutulos"
+    },
+    {
+     "vaite": "Kirkko on yksi kaupungin vanhimpia.",
+     "url": "https://podgorica.travel/en/the-church-of-st-george/"
+    },
+    {
+     "vaite": "Kirkko on yksi kaupungin vanhimpia.",
+     "url": "https://livetheworld.com/post/gorica-hill-a-natural-oasis-in-the-heart-of-podgorica-5z47"
+    },
+    {
+     "vaite": "Gorica tarkoittaa pientä kukkulaa/vuorta; Podgorica 'kukkulan alla'.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Gorica tarkoittaa pientä kukkulaa/vuorta; Podgorica 'kukkulan alla'.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    },
+    {
+     "vaite": "Nimi Podgorica mainitaan ensi kerran 1326 Kotorin arkiston oikeusasiakirjassa.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Nimi Podgorica mainitaan ensi kerran 1326 Kotorin arkiston oikeusasiakirjassa.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    },
+    {
+     "vaite": "Keskiajalla kaupunki tunnettiin nimellä Ribnica.",
+     "url": "https://en.wikipedia.org/wiki/Ribnica_(Mora%C4%8Da)"
+    },
+    {
+     "vaite": "Keskiajalla kaupunki tunnettiin nimellä Ribnica.",
+     "url": "https://www.photomontenegro.me/en/podgorica/"
+    }
+   ]
+  },
+  {
+   "id": "Q1267436",
+   "nimi": "Millennium-silta",
+   "kuvaus": "Moračan yli kulkeva vinopylonisilta",
+   "luokka": "silta",
+   "koko_m": 160,
+   "korkeus_m": 57,
+   "teksti": "Pallokorista katsottuna Millennium-silta erottuu Moračan yllä vinosta pylonistaan, jonka varaan kansi on ripustettu kaapeleilla. Pylon on 57 metriä korkea, ja silta yhdistää keskustan Moračan toisella puolella olevaan tiheästi asuttuun uudempaan kaupunginosaan. Silta avattiin liikenteelle 13. heinäkuuta 2005, Montenegron kansallispäivänä. Sen suunnittelivat slovenialaisen Ponting-yrityksen insinööri Marjan Pipenbaher ja Podgorican rakennustekniikan professori Mladen Ulićević, ja rakentajana oli slovenialainen Primorje.",
+   "lyhyt": "Silta rakennettiin keventämään liikennettä muilla Moračan ylittävillä silloilla, jotka olivat ruuhkautuneet. Se yhdistää Ivan Crnojevićin bulevardin 13. heinäkuuta -katuun. Rakennuskustannukset olivat noin 7 miljoonaa euroa.",
+   "syventava": "Miten sillan kansi rakennettiin Moračan yli?",
+   "kysymykset": [
+    "Mikä on sillan virallinen nimi montenegroksi?",
+    "Mikä päivä on Montenegron kansallispäivä?",
+    "Mitkä joet kohtaavat Podgorican keskustassa?",
+    "Mitä tarkoittaa kaapeliharustettu silta?",
+    "Mikä yritys rakensi sillan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta avattiin 13.7.2005, Montenegron kansallispäivänä.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Silta avattiin 13.7.2005, Montenegron kansallispäivänä.",
+     "url": "https://www.photomontenegro.me/en/most-milenijum/",
+     "huom": "sivu mahdollisesti peilaa Wikipedian tekstiä"
+    },
+    {
+     "vaite": "Pylon on 57 metriä korkea ja vino.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Pylon on 57 metriä korkea ja vino.",
+     "url": "https://ponting.si/en/projects/millennium-bridge-40.html"
+    },
+    {
+     "vaite": "Silta on kaapeliharustettu silta Moračan yli.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Silta on kaapeliharustettu silta Moračan yli.",
+     "url": "https://ponting.si/en/projects/millennium-bridge-40.html"
+    },
+    {
+     "vaite": "Suunnittelijat Marjan Pipenbaher (Ponting) ja Mladen Ulićević.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Suunnittelijat Marjan Pipenbaher (Ponting) ja Mladen Ulićević.",
+     "url": "https://www.photomontenegro.me/en/most-milenijum/",
+     "huom": "sivu mahdollisesti peilaa Wikipedian tekstiä; Ponting-sivu nimeää Pipenbaher-konsulttitoimiston yhteistyökumppaniksi"
+    },
+    {
+     "vaite": "Rakentaja slovenialainen Primorje.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Rakentaja slovenialainen Primorje.",
+     "url": "https://ponting.si/en/projects/millennium-bridge-40.html"
+    },
+    {
+     "vaite": "Silta yhdistää keskustan Moračan toisella puolella olevaan tiheästi asuttuun uudempaan kaupunginosaan.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Silta yhdistää keskustan Moračan toisella puolella olevaan tiheästi asuttuun uudempaan kaupunginosaan.",
+     "url": "https://www.photomontenegro.me/en/most-milenijum/",
+     "huom": "sivu mahdollisesti peilaa Wikipedian tekstiä"
+    },
+    {
+     "vaite": "Silta helpottaa liikennettä muilla Moračan silloilla ja yhdistää Ivan Crnojevićin bulevardin 13. heinäkuuta -kadun.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Silta helpottaa liikennettä muilla Moračan silloilla ja yhdistää Ivan Crnojevićin bulevardin 13. heinäkuuta -kadun.",
+     "url": "https://www.photomontenegro.me/en/most-milenijum/",
+     "huom": "sivu mahdollisesti peilaa Wikipedian tekstiä"
+    },
+    {
+     "vaite": "Rakennuskustannukset noin 7 miljoonaa euroa.",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)"
+    },
+    {
+     "vaite": "Rakennuskustannukset noin 7 miljoonaa euroa.",
+     "url": "https://www.photomontenegro.me/en/most-milenijum/",
+     "huom": "sivu mahdollisesti peilaa Wikipedian tekstiä"
+    },
+    {
+     "vaite": "Kansi rakennettiin työntämällä (incremental launching).",
+     "url": "https://ponting.si/en/projects/millennium-bridge-40.html"
+    },
+    {
+     "vaite": "Kansi rakennettiin työntämällä (incremental launching).",
+     "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)",
+     "huom": "Wikipedia ei mainitse menetelmää; vain Ponting-sivu"
+    }
+   ]
+  },
+  {
+   "id": "Q658743",
+   "nimi": "Kristuksen ylösnousemuksen katedraali",
+   "kuvaus": "Podgorican ortodoksinen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 45,
+   "korkeus_m": 41.5,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Kristuksen ylösnousemuksen katedraalin länsijulkisivua hallitsevat kaksi valkokivistä tornia ja niiden välinen suuri kaari. Tyylissä yhdistyvät romaaniset ja bysanttilaiset piirteet, ja esikuvana on ollut Kotorin Pyhän Tryfonin katedraali. Rakentaminen alkoi vuonna 1993 arkkitehti Predrag Ristićin suunnitelmilla ja kesti noin kaksikymmentä vuotta, ja katedraali vihittiin 7. lokakuuta 2013. Tornien yläkerroksissa on 17 kelloa. Sisätiloja koristavat marmorilattiat ja kultataustaiset seinämaalaukset.",
+   "lyhyt": "Vihkiäiset ajoitettiin Milanon ediktin 1700-vuotispäivään, ja paikalla oli useiden ortodoksisten kirkkojen johtajia. Katolla on seitsemän ristiä, jotka poikkeavat toisistaan tyyliltään ja suunnaltaan. Kirkko on Serbian ortodoksisen kirkon Montenegron ja rannikon metropoliittakunnan piispankirkko.",
+   "syventava": "Miksi katedraalin rakentaminen kesti kaksikymmentä vuotta?",
+   "kysymykset": [
+    "Kuinka painava raskain kello on?",
+    "Mikä oli Milanon edikti?",
+    "Kuka oli arkkitehti?",
+    "Kuinka monta ristiä katolla on?",
+    "Mihin kirkkokuntaan katedraali kuuluu?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Länsijulkisivulla on kaksi tornia ja suuri kaari; mallina Kotorin Pyhän Tryfonin katedraali.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Länsijulkisivulla on kaksi tornia ja suuri kaari; mallina Kotorin Pyhän Tryfonin katedraali.",
+     "url": "https://orthodoxartsjournal.org/a-new-cathedral-for-montenegro-thoughts-on-the-architecture/"
+    },
+    {
+     "vaite": "Tyylissä on romaanisia ja bysanttilaisia piirteitä.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Tyylissä on romaanisia ja bysanttilaisia piirteitä.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/cathedral-of-the-resurrection-of-christ"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin kaksikymmentä vuotta.",
+     "url": "https://podgorica.travel/?p=7241"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin kaksikymmentä vuotta.",
+     "url": "https://360monte.me/spiritual-montenegro-tour/"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin kaksikymmentä vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1993 arkkitehti Predrag Ristićin suunnitelmilla.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1993 arkkitehti Predrag Ristićin suunnitelmilla.",
+     "url": "https://orthodoxartsjournal.org/a-new-cathedral-for-montenegro-thoughts-on-the-architecture/"
+    },
+    {
+     "vaite": "Katedraali vihittiin 7.10.2013.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/cathedral-of-the-resurrection-of-christ",
+     "huom": "sivu mahdollisesti peilaa Wikipediaa"
+    },
+    {
+     "vaite": "Katedraali vihittiin 7.10.2013.",
+     "url": "https://montenegro-for.me/2013/11/podgoricas-new-landmark-the-cathedral-of-the-resurrection/"
+    },
+    {
+     "vaite": "Katedraali vihittiin 7.10.2013.",
+     "url": "https://en.wikipedia.org/wiki/Podgorica"
+    },
+    {
+     "vaite": "Tornien yläkerroksissa on 17 kelloa.",
+     "url": "https://podgorica.travel/?p=7241"
+    },
+    {
+     "vaite": "Tornien yläkerroksissa on 17 kelloa.",
+     "url": "https://360monte.me/spiritual-montenegro-tour/"
+    },
+    {
+     "vaite": "Tornien yläkerroksissa on 17 kelloa.",
+     "url": "https://montenegro-for.me/2013/11/podgoricas-new-landmark-the-cathedral-of-the-resurrection/"
+    },
+    {
+     "vaite": "Sisällä on marmorilattiat ja kultataustaiset ikonimaalaukset.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Sisällä on marmorilattiat ja kultataustaiset ikonimaalaukset.",
+     "url": "https://orthodoxartsjournal.org/a-new-cathedral-for-montenegro-thoughts-on-the-architecture/"
+    },
+    {
+     "vaite": "Vihkiäiset ajoitettiin Milanon ediktin 1700-vuotispäivään; paikalla oli patriarkkoja.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Vihkiäiset ajoitettiin Milanon ediktin 1700-vuotispäivään; paikalla oli patriarkkoja.",
+     "url": "https://www.gov.me/en/article/131671--pm-dukanovic-hosts-patriarchs-and"
+    },
+    {
+     "vaite": "Katolla on seitsemän ristiä.",
+     "url": "https://orthodoxartsjournal.org/a-new-cathedral-for-montenegro-thoughts-on-the-architecture/"
+    },
+    {
+     "vaite": "Katolla on seitsemän ristiä.",
+     "url": "https://montenegro-for.me/2013/11/podgoricas-new-landmark-the-cathedral-of-the-resurrection/"
+    },
+    {
+     "vaite": "Katedraali on Montenegron ja rannikon metropoliittakunnan piispankirkko.",
+     "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica"
+    },
+    {
+     "vaite": "Katedraali on Montenegron ja rannikon metropoliittakunnan piispankirkko.",
+     "url": "https://www.triplinkhub.com/en/montenegro/podgorica/places/cathedral-of-the-resurrection-of-christ"
+    },
+    {
+     "vaite": "Raskain kello painaa noin 11 tonnia.",
+     "url": "https://podgorica.travel/?p=7241"
+    },
+    {
+     "vaite": "Raskain kello painaa noin 11 tonnia.",
+     "url": "https://360monte.me/spiritual-montenegro-tour/"
+    },
+    {
+     "vaite": "Raskain kello painaa noin 11 tonnia.",
+     "url": "https://montenegro-for.me/2013/11/podgoricas-new-landmark-the-cathedral-of-the-resurrection/"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Ajo: Itsenäisyydenaukio, aiemmassa kaupunkiesittelyssä 'ei faktaa': nyt kaksi lähdettä (Wikipedia, montenegro-for.me) riittää suihkulähteeseen, puihin, Nova Varošiin ja nimihistoriaan; 6.9.2006 avajaispäivä vain stoneworld-artikkelissa, mutta vuosi 2006 vahvistettu Wikipediasta.",
+  "Itsenäisyydenaukion koko: 5 000 m2 (Wikipedia) vs. 15 000 m2 (montenegro-for.me) -> pudotettu; aukion kustannus 2,5 milj. euroa (vain Wikipedia) -> pudotettu; leventäminen ja autottomuus (vain Wikipedia) -> pudotettu.",
+  "Itsenäisyydenaukion nykyisen nimen vuosi (2016 Wikipedian viite, 2019 yhden oppaan mukaan) -> vuotta ei mainita.",
+  "Kuulumaton aukion laitamilla oleva obeliski (Mirko Petrović), Town Hall 1929-1931, kaupunginkirjasto ja galleria -> vain yksi lähde, pudotettu.",
+  "Stoneworld-artikkelin materiaalitiedot (intialainen hiekkakivi, Carraran marmori) -> kauppalehden toimittajan kuvaus, pudotettu; vain 'päällystettiin kivellä'.",
+  "Sahat kulan rakennusvuosi 1667 (Wikipedia, GPSmyCity, TripLinkHub) vs. 1600-luvun loppu (My Guide) vs. 1700-luku (Britannica, hakutulos) -> vuosisata pudotettu; rakentajan nimi (Hadži-paša / Mehmed-paša / Adzi-pasa Osmanagić) -> vain suvun nimi Osmanagić.",
+  "Sahat kulan korkeus 16 m (lebonroadtrip) vs. 19 m (Wikipedia, My Guide, TripLinkHub) -> 'noin 19 m'.",
+  "Sahat kulan 2012 kellokoneiston uusiminen (Wikipedia: sähkökäyttöinen, vanha säilytetty; GPSmyCity: digitaalinen, alkuperäinen korvattu) -> pudotettu. Metalliristin symboliikka (siirtyminen ottomaaneilta) -> vain Wikipedia, pudotettu; kellokoneiston alkuperäinen itävaltalainen valmistaja -> vain Wikipedia, pudotettu.",
+  "Ribnican linnoituksen tarkka rakennusvuosi (1474/1477/1474-1478) -> vain '1400-luvun lopulla'; salaman aiheuttama räjähdys 1878 ja ammusvarasto -> vain Wikipedia (ja yksi nimeämätön hakutuloksen tiiviste), pudotettu; kuningas Nikolan rooli nimen levittäjänä -> vain Wikipedia, pudotettu.",
+  "Adži-pašan sillan rakennusajankohta: roomalainen (Wikipedia, kopioivat sivut) vs. ottomaanien 1400-luku (matkablogi) vs. 'nykyinen muoto keskiajalta' (Portal Analitika) -> alkuperä esitetty perimätietona; 1700-luvun perusteellinen uudistus (Wikipedia, discover-montenegro) -> ei mainita vuosisataa tekstissä; 'ensimmäinen puolisko 1700-lukua' vain yhdessä haun tiivisteessä, pudotettu.",
+  "Adži-pašan sillan suojelurekisteröinti 1949 ja viereinen myllyn tuho 1963 -> vain Portal Analitika, pudotettu. Adži-pašan titteli (Hadži-/Adži-paša, Skadarin visiiri) ja syntymäpaikka -> ristiriitaiset/yksi lähde, pudotettu.",
+  "Kansallisteatterin uusi rakennus 5.5.1956 ja Mala scena/Studio-näyttämöt -> vain srWikipedia, pudotettu; teatterin siirto Cetinjestä Titograd-ajatukseen liittyvä tausta -> vain srWikipedia, pudotettu.",
+  "Pyhän Yrjön kirkon yksilaivainen kupolillinen basilika, vanhemman rakennuksen jäänteet itäpuolella, Stefan Nemanjan kastelegenda -> vain TIB (oeaw), pudotettu. Gorican korkeus 130,3 m (Wikipedia) vs. 107 m (Photo Montenegro) -> pudotettu.",
+  "Millennium-sillan pituus 140 / 173 / 181 m, jänneväli 140 / 150 m, kaistat 2 (Wikipedia) vs. 4 (Ponting), kaapelimäärä (vain Wikipedia) -> pudotettu.",
+  "Katedraalin korkeus 41,5 m (Wikipedia, TripLinkHub: kellotorni) vs. tornien korkeus 26,7 m (Podgorica Travel, 360monte) -> korkeuslukuja ei mainita; valmistumisvuosi 1999/2012 (Structurae, 360monte) vs. vihkiminen 2013 -> käytetty vain aloitus 1993 ja vihkiminen 2013; hautaus kryptaan (Amfilohije, 2020) -> vain Wikipedia, pudotettu.",
+  "Podgorican maisema-avauksen väitteet (Zetan tasanko, Morača-uoma, Gorica, Skadarjärvi etelässä) tarkistettu Wikipedia-sivulta Podgorica; muuta toista lähdettä ei avauksen virkkeille haettu (avauksella ei ole lahteet-kenttää mallin mukaan)."
+ ],
+ "ristiriidat": [
+  "Sahat kulan rakennusvuosisata (1667 / 1600-luvun loppu / 1700-luvun loppu), korkeus (16 vs. 19 m) ja rakentajan nimi vaihtelevat lähteittäin.",
+  "Ribnican linnoituksen rakennusvuosi (1474 valtaus vs. noin 1477 rakennus) ja Nemanja-perimätieto (1100-luku) vs. osmanien rakennusaika.",
+  "Adži-pašan sillan alkuperä: roomalainen (Wikipedia, Cheryl Howard 'some accounts', Montenegro Pulse) vs. osmanien 1400-luku vs. keskiaikainen nykyasu (Portal Analitika); 1700-luvun uudistus vain Wikipediassa ja kopioissa.",
+  "Millennium-sillan pituus ja kaistamäärä (Wikipedia vs. Ponting); photomontenegro.me näyttää kopioivan Wikipediaa (sama sanamuoto).",
+  "Katedraalin korkeus (41,5 m vs. tornit 26,7 m) ja valmistumisvuosi (1999 / 2012 / 2013).",
+  "Itsenäisyydenaukion pinta-ala (5 000 vs. 15 000 m2) ja nimen vaihtumisvuosi (2016 / 2019).",
+  "Pyhän Yrjön kirkon rakennusaika: 800–1000-luku (Podgorica Travel, Live the World) vs. 890–1000 (TIB) vs. 900-luku (yksi matkasivu).",
+  "Aiemman kaupunkiesittelytiedoston (docs/kohtaukset/kaupunkiesittelyt/podgorica.json) pudotettu Vanha silta ja Itsenäisyydenaukio ovat nyt mukana, koska kohdelista vaatii ne; Vanha silta kirjoitettu vain varovasti (perimätieto, uudistus ottomaanien aikana, nimi, Sastavci).",
+  "Podgorican liittäminen Montenegroon 1878 ja Titograd 1946-1992 on peritty aiemmasta kaupunkiesittelytiedostosta (Wikipedia, Britannica, Photo Montenegro, Wikipedia Titograd), ei avattu kaikilta osin uudelleen tässä ajossa."
+ ]
+}

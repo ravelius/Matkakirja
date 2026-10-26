@@ -1,0 +1,519 @@
+{
+ "kaupunki": "zagreb",
+ "kaupunkiQ": "Q1435",
+ "kohteet": [
+  {
+   "q": "Q312220",
+   "nimi": "Zagrebin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.81444,
+   "lon": 15.97972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Záhřeb, katedrála 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%A1h%C5%99eb%2C_katedr%C3%A1la_3.jpg?width=1280",
+     "tekija": "VitVit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%A1h%C5%99eb%2C_katedr%C3%A1la_3.jpg",
+     "selite": "Zagrebin katedraalin kaksi uusgoottilaista tornia ovat Kroatian korkeimpia ja näkyvät kauas.",
+     "leveys": 3888,
+     "korkeus": 3082,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Zagreb Cathedral against blue sky and puffy clouds.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_Cathedral_against_blue_sky_and_puffy_clouds.jpg?width=1280",
+     "tekija": "Bodro777",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_Cathedral_against_blue_sky_and_puffy_clouds.jpg",
+     "selite": "Katedraalin tornit kohoavat Kaptolin kaupunginosan yläpuolelle.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Záhřeb, katedrála 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%A1h%C5%99eb%2C_katedr%C3%A1la_1.jpg?width=1280",
+     "tekija": "VitVit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%A1h%C5%99eb%2C_katedr%C3%A1la_1.jpg",
+     "selite": "Katedraalin länsijulkisivu ja sen tornit.",
+     "leveys": 2821,
+     "korkeus": 3880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Zagreb cathedral portal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_cathedral_portal.jpg?width=1280",
+     "tekija": "Palauenc05",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_cathedral_portal.jpg",
+     "selite": "Katedraalin pääportin koristeellinen goottilainen kuvanveisto.",
+     "leveys": 2318,
+     "korkeus": 3212,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q377002",
+   "nimi": "Ban Jelačićin aukio",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 45.81306,
+   "lon": 15.97722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zagreb (29255640143).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_(29255640143).jpg?width=1280",
+     "tekija": "Nick Savchenko from Kiev, Ukraine",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_(29255640143).jpg",
+     "selite": "Ban Jelačićin aukio on Zagrebin keskusaukio, jonka laidalla on tori ja katedraali.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estatua de Ban Jelacic, Zagreb, Croacia, 2014-04-20, DD 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estatua_de_Ban_Jelacic%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_03.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estatua_de_Ban_Jelacic%2C_Zagreb%2C_Croacia%2C_2014-04-20%2C_DD_03.JPG",
+     "selite": "Aukion keskellä seisoo vuonna 1866 pystytetty ratsastajapatsas.",
+     "leveys": 4852,
+     "korkeus": 3633,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Trg bana Jelačića (2021).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trg_bana_Jela%C4%8Di%C4%87a_(2021).jpg?width=1280",
+     "tekija": "Vojtěch Dočkal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trg_bana_Jela%C4%8Di%C4%87a_(2021).jpg",
+     "selite": "Aukiota reunustavat 1800-luvun lopun julkisivut ja raitiotiet.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1637186",
+   "nimi": "Pyhän Markuksen kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 45.81611,
+   "lon": 15.97389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zagreb Church of St. Mark (34411766366).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_Church_of_St._Mark_(34411766366).jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_Church_of_St._Mark_(34411766366).jpg",
+     "selite": "Pyhän Markuksen kirkon värikäs laattakatto on Zagrebin tunnetuin maamerkki.",
+     "leveys": 3946,
+     "korkeus": 2630,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Marks church in Zagreb seen from the South.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Marks_church_in_Zagreb_seen_from_the_South.jpg?width=1280",
+     "tekija": "Alex Sirac",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Marks_church_in_Zagreb_seen_from_the_South.jpg",
+     "selite": "Kirkko seisoo Yläkaupungin Markuksenaukiolla, lähellä parlamenttia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Roof of St, Mark's Church, Zagreb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roof_of_St%2C_Mark's_Church%2C_Zagreb.jpg?width=1280",
+     "tekija": "Paula Borkovic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roof_of_St%2C_Mark's_Church%2C_Zagreb.jpg",
+     "selite": "Kattolaatoissa on Kroatian ja Zagrebin vaakunat.",
+     "leveys": 4445,
+     "korkeus": 2617,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1278569",
+   "nimi": "Gradec (Yläkaupunki)",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 45.81611,
+   "lon": 15.97389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gornji Grad and St. Catherine's Church as seen from Lotrščak Tower (13023271625).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gornji_Grad_and_St._Catherine's_Church_as_seen_from_Lotr%C5%A1%C4%8Dak_Tower_(13023271625).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gornji_Grad_and_St._Catherine's_Church_as_seen_from_Lotr%C5%A1%C4%8Dak_Tower_(13023271625).jpg",
+     "selite": "Gradec on Zagrebin keskiaikainen muurien ympäröimä Yläkaupunki, jossa on punakattoisia taloja.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Authentic gas lamps lit twice a day by lamplighters - Gornji grad (13023943713).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Authentic_gas_lamps_lit_twice_a_day_by_lamplighters_-_Gornji_grad_(13023943713).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Authentic_gas_lamps_lit_twice_a_day_by_lamplighters_-_Gornji_grad_(13023943713).jpg",
+     "selite": "Yläkaupungin kapeilla kivikaduilla valaistaan edelleen kaasulyhtyjä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q603560",
+   "nimi": "Kivinen portti",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 45.8158,
+   "lon": 15.9753,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kamenita kuća Zagreb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamenita_ku%C4%87a_Zagreb.jpg?width=1280",
+     "tekija": "Matulus",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kamenita_ku%C4%87a_Zagreb.jpg",
+     "selite": "Kivinen portti on Yläkaupungin ainoa jäljellä oleva keskiaikainen porttirakennus.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Croatia-00554 - Stone Gate (9314790767).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Croatia-00554_-_Stone_Gate_(9314790767).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Croatia-00554_-_Stone_Gate_(9314790767).jpg",
+     "selite": "Portin käytävässä on Neitsyt Marian kuvaa kunnioittava kappeli.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2986837",
+   "nimi": "Lotrščakin torni",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 45.81463,
+   "lon": 15.97325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zagreb - Kula Lotrščak (44810267174).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_-_Kula_Lotr%C5%A1%C4%8Dak_(44810267174).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_-_Kula_Lotr%C5%A1%C4%8Dak_(44810267174).jpg",
+     "selite": "Lotrščakin torni on Yläkaupungin 1200-luvulta periytyvä puolustustorni.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Zagreb - Kula Lotrščak (30594985447).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_-_Kula_Lotr%C5%A1%C4%8Dak_(30594985447).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_-_Kula_Lotr%C5%A1%C4%8Dak_(30594985447).jpg",
+     "selite": "Tornin huipulta on näköala yli kaupungin, ja sieltä ammutaan joka päivä keskipäivän tykinlaukaus.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q583140",
+   "nimi": "Zagrebin köysirata",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 45.81427,
+   "lon": 15.97308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2007 - panoramio (32).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_-_panoramio_(32).jpg?width=1280",
+     "tekija": "Валерий Дед",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_-_panoramio_(32).jpg",
+     "selite": "Lyhyt köysirata yhdistää Alakaupungin ja Yläkaupungin jyrkän rinteen yli.",
+     "leveys": 1300,
+     "korkeus": 863,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blick auf die Seilbahn von Zagreb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_auf_die_Seilbahn_von_Zagreb.jpg?width=1280",
+     "tekija": "Roland Puskaric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_auf_die_Seilbahn_von_Zagreb.jpg",
+     "selite": "Köysirata kulkee Tomićevan kadulta ylös Yläkaupunkiin.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1262136",
+   "nimi": "Mirogojin hautausmaa",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 45.83569,
+   "lon": 15.98444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mirogoj Cemetery Front.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mirogoj_Cemetery_Front.jpg?width=1280",
+     "tekija": "Budgiekiller",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mirogoj_Cemetery_Front.jpg",
+     "selite": "Mirogojin hautausmaan kupolikappeli ja arkadit ovat 1800-luvun lopulta.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arkaden, Mirogoj in Zagreb, Croatia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkaden%2C_Mirogoj_in_Zagreb%2C_Croatia.JPG?width=1280",
+     "tekija": "Modzzak",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arkaden%2C_Mirogoj_in_Zagreb%2C_Croatia.JPG",
+     "selite": "Pitkät arkadikäytävät kiertävät hautausmaata ja ovat Zagrebin arvostetuimpia lepopaikkoja.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q268151",
+   "nimi": "Kroatian kansallisteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 45.8095,
+   "lon": 15.97,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Nacional, Zagreb, Croacia, 2014-04-13, DD 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Nacional%2C_Zagreb%2C_Croacia%2C_2014-04-13%2C_DD_03.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Nacional%2C_Zagreb%2C_Croacia%2C_2014-04-13%2C_DD_03.JPG",
+     "selite": "Kansallisteatteri on keltainen uusbarokkirakennus, joka valmistui vuonna 1895.",
+     "leveys": 4399,
+     "korkeus": 3221,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130609 in Zagreb 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130609_in_Zagreb_08.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130609_in_Zagreb_08.jpg",
+     "selite": "Teatterin kupolitornit ja runsas koristelu hallitsevat Marsalkka Titon aukiota.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q391613",
+   "nimi": "Taidepaviljonki",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 45.80722,
+   "lon": 15.97861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Umj-paviljon 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Umj-paviljon_01.jpg?width=1280",
+     "tekija": "Bobonajbolji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Umj-paviljon_01.jpg",
+     "selite": "Taidepaviljonki on keltainen näyttelyrakennus Kuningas Tomislavin aukion laidalla.",
+     "leveys": 2300,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Art Pavilion cupola in Zagreb (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art_Pavilion_cupola_in_Zagreb_(cropped).jpg?width=1280",
+     "tekija": "EmperorTomato",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Art_Pavilion_cupola_in_Zagreb_(cropped).jpg",
+     "selite": "Paviljongin lasi- ja rautarakenteinen kupoli on 1800-luvun lopulta.",
+     "leveys": 2688,
+     "korkeus": 1861,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q140377",
+   "nimi": "Zagrebin päärautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 45.80444,
+   "lon": 15.9787,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zagreb Glavni kolodvor 1g - front.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_Glavni_kolodvor_1g_-_front.jpg?width=1280",
+     "tekija": "Miroslav.vajdic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_Glavni_kolodvor_1g_-_front.jpg",
+     "selite": "Päärautatieasema avattiin vuonna 1892, ja sen edessä on kuningas Tomislavin patsas.",
+     "leveys": 6000,
+     "korkeus": 3375,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bahnhof Glavni Kolodvor Zagreb Building Railwaystation Zagreb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahnhof_Glavni_Kolodvor_Zagreb_Building_Railwaystation_Zagreb.jpg?width=1280",
+     "tekija": "Spock1801",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahnhof_Glavni_Kolodvor_Zagreb_Building_Railwaystation_Zagreb.jpg",
+     "selite": "Aseman uusrenessanssijulkisivu on tuttu näky puistoketjun päässä.",
+     "leveys": 2782,
+     "korkeus": 2111,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q348076",
+   "nimi": "Maksimirin puisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 500,
+   "lat": 45.82964,
+   "lon": 16.02047,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zagreb - Maksimirsko jezero u travnju.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_-_Maksimirsko_jezero_u_travnju.JPG?width=1280",
+     "tekija": "Silverije",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_-_Maksimirsko_jezero_u_travnju.JPG",
+     "selite": "Maksimirin puisto on Zagrebin suurin ja vanhin kaupunkipuisto järvineen.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ljetnikovac biskupa Haulika, zima 2025.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ljetnikovac_biskupa_Haulika%2C_zima_2025.jpeg?width=1280",
+     "tekija": "Hana Gaon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ljetnikovac_biskupa_Haulika%2C_zima_2025.jpeg",
+     "selite": "Puiston paviljongit ovat peräisin 1800-luvun alun maisemapuistosta.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Zagrebačka katedrala - pogled s Gornjeg Grada (Zagreb Cathedral - view from Upper Town) - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreba%C4%8Dka_katedrala_-_pogled_s_Gornjeg_Grada_(Zagreb_Cathedral_-_view_from_Upper_Town)_-_panoramio.jpg?width=1280",
+   "tekija": "Nikolai Karaneschev",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreba%C4%8Dka_katedrala_-_pogled_s_Gornjeg_Grada_(Zagreb_Cathedral_-_view_from_Upper_Town)_-_panoramio.jpg",
+   "selite": "Zagrebin punakattoiset talot ja katedraalin tornit näkyvät Yläkaupungilta.",
+   "leveys": 3456,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Zagreb Altstadt.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zagreb_Altstadt.JPG?width=1280",
+   "tekija": "Zeitblick",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zagreb_Altstadt.JPG",
+   "selite": "Zagrebin vanhakaupunki laajenee katedraalin ja Pyhän Katariinan kirkon ympärille.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

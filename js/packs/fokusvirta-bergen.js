@@ -1055,17 +1055,4 @@ export const FOKUSVIRTA_BERGEN = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: viikinkien
-   * hopeakätkö. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Vuonon suulla asuva vanhus vannoi, että hänen sukunsa mailta on '
-      + 'kynnetty esiin hopeaa, jonka viikingit kätkivät ja unohtivat — '
-      + 'käätyjä, rahoja, katkottuja harkkoja. Maa muistaa pidempään kuin '
-      + 'suku. Jossain aura ei ole vielä osunut oikeaan vakoon.',
-  },
 };

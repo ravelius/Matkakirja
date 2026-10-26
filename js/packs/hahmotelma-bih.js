@@ -142,8 +142,8 @@ export const HAHMOTELMA_BIH = [
       + 'kutsuttu Euroopan Jerusalemiksi: samassa kaupunginosassa on moskeija, katolinen kirkko, '
       + 'ortodoksikirkko ja synagoga. Ottomaanit perustivat kaupungin 1450-luvulla, ja sen '
       + 'ensimmäinen kuvernööri Isa-Beg Ishaković rakennutti moskeijan, katetun torin, hammamin ja '
-      + 'karavaanimajatalon — nimi Sarajevo juontuu näistä rakennuksista, sanoista "saray" ja '
-      + '"evo". Kaupunki kasvoi nopeasti, ja 1660-luvulla se oli Istanbulin jälkeen Ottomaanien '
+      + 'karavaanimajatalon — nimi Sarajevo juontuu näistä rakennuksista, sanoista ”saray” ja '
+      + '”evo”. Kaupunki kasvoi nopeasti, ja 1660-luvulla se oli Istanbulin jälkeen Ottomaanien '
       + 'valtakunnan suurin kaupunki Balkanilla. Baščaršijan kauppatori on ollut kaupungin sydän '
       + 'jo perustamisesta asti, ja vuoteen 1850 mennessä Sarajevosta oli tullut koko Bosnian '
       + 'hallinnollinen keskus.',
@@ -199,7 +199,7 @@ export const HAHMOTELMA_BIH = [
     },
     teksti: 'Bjelašnica on Dinaaristen vuorten huippu Sarajevon lounaispuolella, vain kahdenkymmenen '
       + 'minuutin matkan päässä kaupungista. Sen korkein kohta kohoaa 2 067 metriin, ja nimi tulee '
-      + 'sanasta "bijel", valkoinen. Vuoren rinteillä hiihdettiin vuoden 1984 talviolympialaisten '
+      + 'sanasta ”bijel”, valkoinen. Vuoren rinteillä hiihdettiin vuoden 1984 talviolympialaisten '
       + 'miesten alppihiihtolajit: amerikkalainen Bill Johnson yllätti kaikki voittamalla laskettelun '
       + 'ennustettuaan voittonsa etukäteen, kaksoset Phil ja Steve Mahre veivät pujottelun kulta- ja '
       + 'hopeamitalin, ja sveitsiläinen Max Julen voitti suurpujottelun jugoslavialaisen Jure '
@@ -308,7 +308,7 @@ export const HAHMOTELMA_BIH = [
     teksti: 'Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee '
       + 'ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, '
       + 'joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä '
-      + 'Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä '
+      + 'Soli, ”suolat”, ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä '
       + 'Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien '
       + 'varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa '
       + 'suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.',
@@ -503,7 +503,7 @@ export const HAHMOTELMA_BIH = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260921/bih-nosto-hahmotelma-prokosko-0c3e892e.jpg',
         lyhyt: 'Kävelypolun opastaulu Prokoškon järven rannalla sumuisessa säässä.',
-        selite: 'Puinen portti ja kyltti "Pjesacka staza" johtavat polulle, joka häviää sumuun '
+        selite: 'Puinen portti ja kyltti ”Pjesacka staza” johtavat polulle, joka häviää sumuun '
           + 'järven rannalla.',
         lahde: 'Valokuva: Emin Tarahija, Wikimedia Commons (CC0).',
         tekija: 'Emin Tarahija',
@@ -602,6 +602,7 @@ export const HAHMOTELMA_BIH = [
   },
   {
     id: 'hahmotelma-gradacac',
+    nimio: 'Gradačac',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bih-nosto-hahmotelma-gradacac-79c1a7c8.jpg',
       lyhyt: 'Husein-kapetan Gradaščevićin vartiotorni Gradačacin linnoituksessa.',
@@ -630,7 +631,7 @@ export const HAHMOTELMA_BIH = [
     tyyppi: 'historia',
     lahi: true,
     kysymykset: [
-      'Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi "Bosnian lohikäärme" tulee?',
+      'Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi ”Bosnian lohikäärme” tulee?',
       'Mitä kapteeni tavoitteli vuoden 1831 kansannousussaan?',
     ],
     korostukset: ['Zmaj od Bosne|Zmaj od Bosnen', 'Tanzimat|Tanzimat-uudistuksia'],
@@ -642,7 +643,7 @@ export const HAHMOTELMA_BIH = [
     },
     teksti: 'Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien '
       + 'kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, '
-      + 'Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 '
+      + 'Husein-kapetan Gradaščević eli Zmaj od Bosne — ”Bosnian lohikäärme” — nousi vuonna 1831 '
       + 'lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli '
       + 'autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti '
       + 'kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin '
@@ -767,6 +768,7 @@ export const HAHMOTELMA_BIH = [
   },
   {
     id: 'hahmotelma-kozara',
+    nimio: 'Kozara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bih-nosto-hahmotelma-kozara-575961ac.jpg',
       lyhyt: 'Kozaran kansallispuiston lehtimetsää kesäisin.',

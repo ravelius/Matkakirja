@@ -17,9 +17,10 @@ const ihme = (tiedosto, selite, url) => ({
   url,
 });
 
-const kohde = ({ id, nimi, nappi, laudat, teksti, lahde, kuva, url }) => ({
+const kohde = ({ id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, url }) => ({
   id: `hahmotelma-${id}`,
   nimi,
+  ...(nimio ? { nimio } : {}),
   tyyppi: 'historia',
   lahi: true,
   kysymykset: [
@@ -34,9 +35,44 @@ const kohde = ({ id, nimi, nappi, laudat, teksti, lahde, kuva, url }) => ({
     + 'jäänteiden ja tutkimuslähteiden perusteella.', url),
 });
 
+/*
+ * RAPPEUTUNUT KOHDE (kadonnut: false) — paikka on yhä olemassa
+ * raunioina/muuttuneena, joten kartalla säilyy kohteen oma nykytila-
+ * valokuva (Commonsista) ja "Koe ihme" -nappi avaa Codexin loistoaika-
+ * havainnekuvan (kuvapari, Raamattu 21.9.2026: rappeutunut = nykytila +
+ * kulta-aika). Sama malli kuin fokuskohteet-grc.js:n Delfoi.
+ */
+const rappeutunutKohde = ({
+  id, nimi, nimio, nappi, laudat, teksti, lahde, kuva, ihmeKuva, ihmeSelite, url,
+}) => ({
+  id: `hahmotelma-${id}`,
+  nimi,
+  ...(nimio ? { nimio } : {}),
+  tyyppi: 'historia',
+  lahi: true,
+  kysymykset: [
+    `Miltä ${nimi} näytti loistoaikanaan?`,
+    `Miksi ${nimi} on nykyään raunioina?`,
+  ],
+  nappi,
+  laudat,
+  teksti,
+  lahde,
+  kuva,
+  ihme: {
+    osoite: `https://media.matkakirja.app/kohtaamiset/ihmeet/${ihmeKuva}`,
+    kadonnut: false,
+    selite: ihmeSelite,
+    lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. '
+      + 'Faktapohja on kohdekortin lähderivillä.',
+    url,
+  },
+});
+
 export const EUROOPAN_KADONNEET = {
   FRA: [kohde({
     id: 'saint-cloud', nimi: 'Saint-Cloud’n linna',
+    nimio: 'Saint-Cloud',
     nappi: 'Aurinkokuninkaan veljen palatsi Pariisin länsipuolella',
     laudat: { maailmankartta: { x: 5906.2, y: 1440.4 }, europe: { x: 253.2, y: 609.2 } },
     teksti: 'Saint-Cloud’n linna kasvoi 1600-luvulla Orléansin herttuan loisteliaaksi '
@@ -48,6 +84,7 @@ export const EUROOPAN_KADONNEET = {
   DEU: [
     kohde({
       id: 'hampurin-vanha-raatihuone', nimi: 'Hampurin vanha raatihuone',
+      nimio: 'Vanha raatihuone',
       nappi: 'Renessanssiraatihuone, joka räjäytettiin suurpalon tieltä',
       laudat: { maailmankartta: { x: 6166.4, y: 1232.3 }, europe: { x: 403.1, y: 485.2 } },
       teksti: 'Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 '
@@ -80,6 +117,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'vanha-pietarinkirkko', nimi: 'Vanha Pietarinkirkko',
+      nimio: 'Pietarinkirkko',
       nappi: 'Konstantinuksen basilika ennen uuden kirkon rakennustöitä',
       laudat: { maailmankartta: { x: 6248.5, y: 1727.5 }, europe: { x: 450.3, y: 791.6 } },
       teksti: 'Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin '
@@ -102,6 +140,7 @@ export const EUROOPAN_KADONNEET = {
   ESP: [
     kohde({
       id: 'real-alcazar-madrid', nimi: 'Madridin Real Alcázar',
+      nimio: 'Real Alcázar',
       nappi: 'Habsburgien kuninkaanlinna ennen jouluyön tulipaloa',
       laudat: { maailmankartta: { x: 5709.5, y: 1786.4 }, europe: { x: 139.9, y: 830.6 } },
       teksti: 'Madridin maurilainen linnoitus kasvoi Habsburgien kuninkaanlinnaksi, jossa '
@@ -112,6 +151,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'buen-retiro', nimi: 'Palacio del Buen Retiro',
+      nimio: 'Buen Retiro',
       nappi: 'Filip IV:n laaja huvilinna puutarhoineen',
       laudat: { maailmankartta: { x: 5710.4, y: 1786.6 }, europe: { x: 140.4, y: 830.7 } },
       teksti: 'Buen Retiro oli Filip IV:lle 1630-luvulla rakennettu yli kahdenkymmenen '
@@ -134,6 +174,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'hospital-real-todos-os-santos', nimi: 'Hospital Real de Todos-os-Santos',
+      nimio: 'Todos-os-Santos',
       nappi: 'Manuel I:n suuri sairaala Rossion laidalla',
       laudat: { maailmankartta: { x: 5528.7, y: 1853.2 }, europe: { x: 35.7, y: 875.4 } },
       teksti: 'Kaikkien pyhien kuninkaallinen sairaala rakennettiin Lissaboniin vuosina '
@@ -146,6 +187,7 @@ export const EUROOPAN_KADONNEET = {
   NLD: [
     kohde({
       id: 'amsterdamin-vanha-raatihuone', nimi: 'Amsterdamin vanha raatihuone',
+      nimio: 'Vanha raatihuone',
       nappi: 'Damin goottilainen raatihuone ennen vuoden 1652 paloa',
       laudat: { maailmankartta: { x: 5996.4, y: 1285.4 }, europe: { x: 305.1, y: 516.2 } },
       teksti: 'Amsterdamin keskiaikainen raatihuone seisoi Damin torilla 1400-luvulta lähtien. '
@@ -156,6 +198,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'utrechtin-domkirkon-keskilaiva', nimi: 'Utrechtin Domkirkon keskilaiva',
+      nimio: 'Utrecht',
       nappi: 'Katedraalin keskilaiva ennen vuoden 1674 myrskyä',
       laudat: { maailmankartta: { x: 6004.1, y: 1298.0 }, europe: { x: 309.5, y: 523.6 } },
       teksti: 'Utrechtin Domkirkon keskilaiva jäi vuosisadoiksi keskeneräiseksi rahapulan '
@@ -164,10 +207,23 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'en-Wikipedia "St. Martin’s Cathedral, Utrecht", vuoden 1674 myrsky (tarkistettu 21.9.2026).',
       kuva: 'ihme-utrechtin-domkirkon-keskilaiva-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/St._Martin%27s_Cathedral,_Utrecht',
     }),
+    kohde({
+      id: 'paleis-voor-volksvlijt', nimi: 'Paleis voor Volksvlijt',
+      nimio: 'Volksvlijt',
+      nappi: 'Amsterdamin lasi-rautapalatsi ennen vuoden 1929 tulipaloa',
+      laudat: { maailmankartta: { x: 5996.5, y: 1286.2 }, europe: { x: 305.2, y: 516.6 } },
+      teksti: 'Lääkäri Samuel Sarphatin Vereeniging voor Volksvlijt -yhdistys rakennutti '
+        + 'Lontoon Crystal Palacen innoittaman lasi-rautapalatsin Frederiksplein-torille; '
+        + 'se valmistui 1864 näyttely- ja konserttihalliksi. Tulipalo tuhosi rakennuksen '
+        + 'yöllä 17.–18.4.1929, ja säilyneet tiiliholvikäytävätkin purettiin myöhemmin.',
+      lahde: 'en-Wikipedia "Paleis voor Volksvlijt", historia ja vuoden 1929 palo (tarkistettu 28.9.2026).',
+      kuva: 'ihme-paleis-voor-volksvlijt-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Paleis_voor_Volksvlijt',
+    }),
   ],
   AUT: [
     kohde({
       id: 'vanha-burgtheater', nimi: 'Wienin vanha Burgtheater',
+      nimio: 'Burgtheater',
       nappi: 'Keisarillinen hoviteatteri Michaelerplatzilla',
       laudat: { maailmankartta: { x: 6378.9, y: 1467.4 }, europe: { x: 525.4, y: 625.7 } },
       teksti: 'Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin '
@@ -178,6 +234,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'karntnertor-bastioni', nimi: 'Kärntnertor-bastioni',
+      nimio: 'Kärntnertor',
       nappi: 'Wienin renessanssimuuri juuri ennen Ringstraßea',
       laudat: { maailmankartta: { x: 6379.0, y: 1467.6 }, europe: { x: 525.5, y: 625.9 } },
       teksti: 'Wieniä ympäröivät 1500-luvulta renessanssiajan bastionimuurit. Keisari '
@@ -186,10 +243,23 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'de-Wikipedia "Wiener Stadtmauern" ja Kärntnertor (tarkistettu 21.9.2026).',
       kuva: 'ihme-karntnertor-bastioni-loistoaika.jpg', url: 'https://de.wikipedia.org/wiki/Wiener_Stadtmauern',
     }),
+    kohde({
+      id: 'wienin-rotunde', nimi: 'Wienin maailmannäyttelyn Rotunde',
+      nimio: 'Rotunde',
+      nappi: 'Maailman suurin kupolirakennus 1873 maailmannäyttelyssä',
+      laudat: { maailmankartta: { x: 6380.1, y: 1467.0 }, europe: { x: 526.1, y: 625.5 } },
+      teksti: 'Praterin puistoon rakennettu Rotunde oli 1873 maailmannäyttelyn keskuspaviljonki '
+        + 'ja valmistuessaan maailman suurin kupolirakennus, 108 metriä halkaisijaltaan. '
+        + 'Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa '
+        + 'kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.',
+      lahde: 'en-Wikipedia "Rotunde" ja "1873 Vienna World’s Fair" (tarkistettu 28.9.2026).',
+      kuva: 'ihme-wienin-rotunde-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rotunde',
+    }),
   ],
   CHE: [
     kohde({
       id: 'christoffelturm', nimi: 'Bernin Christoffelturm',
+      nimio: 'Christoffelturm',
       nappi: 'Pyhän Kristoforoksen vartioima keskiaikainen kaupunginportti',
       laudat: { maailmankartta: { x: 6081.3, y: 1520.7 }, europe: { x: 354.0, y: 658.9 } },
       teksti: 'Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen '
@@ -200,6 +270,7 @@ export const EUROOPAN_KADONNEET = {
     }),
     kohde({
       id: 'porte-neuve', nimi: 'Geneven Porte Neuve',
+      nimio: 'Porte Neuve',
       nappi: 'Geneven läntinen pääportti ennen linnoitusten purkua',
       laudat: { maailmankartta: { x: 6038.1, y: 1552.0 }, europe: { x: 329.1, y: 678.5 } },
       teksti: 'Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. '
@@ -208,9 +279,23 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'fr-Wikipedia "Place Neuve" ja Geneven linnoitushistoria (tarkistettu 21.9.2026).',
       kuva: 'ihme-porte-neuve-loistoaika.jpg', url: 'https://fr.wikipedia.org/wiki/Place_Neuve_(Gen%C3%A8ve)',
     }),
+    kohde({
+      id: 'grand-hotel-schreiber-rigi-kulm', nimi: 'Rigi Kulmin Grand Hotel Schreiber',
+      nimio: 'Rigi Kulm',
+      nappi: 'Alppien suurhotelli Euroopan ensimmäisen vuoristoradan päätepisteessä',
+      laudat: { maailmankartta: { x: 6116.3, y: 1516.2 }, europe: { x: 374.2, y: 656.1 } },
+      teksti: 'Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean '
+        + 'suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien '
+        + '(Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli '
+        + '1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin '
+        + 'kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.',
+      lahde: 'en-Wikipedia "Rigi Kulm Hotel" ja "Vitznau-Rigi railway line" (tarkistettu 28.9.2026).',
+      kuva: 'ihme-grand-hotel-schreiber-rigi-kulm-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Rigi_Kulm_Hotel',
+    }),
   ],
   CZE: [kohde({
     id: 'josefov-asanace', nimi: 'Josefov ennen asanacea',
+    nimio: 'Josefov',
     nappi: 'Prahan juutalaiskorttelin keskiaikainen kujaverkko',
     laudat: { maailmankartta: { x: 6313.9, y: 1386.3 }, europe: { x: 488.0, y: 576.2 } },
     teksti: 'Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. '
@@ -221,6 +306,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   HUN: [kohde({
     id: 'budan-matyas-palatsi', nimi: 'Budan Mátyás-palatsi',
+    nimio: 'Mátyás-palatsi',
     nappi: 'Mátyás Corvinuksen italialainen renessanssihovi',
     // Pieni itäinen asettelusiirto pitää Hollókőn ja Kruunuvarkaus 1440:n nimiöt erillään.
     laudat: { maailmankartta: { x: 6469.0, y: 1497.6 }, europe: { x: 577.3, y: 644.5 } },
@@ -233,6 +319,7 @@ export const EUROOPAN_KADONNEET = {
   BGR: [
     kohde({
       id: 'pliska-palatsi', nimi: 'Pliskan kaanien palatsi',
+      nimio: 'Pliska',
       nappi: 'Ensimmäisen Bulgarian valtakunnan pääkaupungin suurpalatsi',
       laudat: { maailmankartta: { x: 6737.5, y: 1668.6 }, europe: { x: 732.0, y: 753.1 } },
       teksti: 'Pliska oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. '
@@ -254,6 +341,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   HRV: [kohde({
     id: 'salona-porta-caesarea', nimi: 'Salonan Porta Caesarea',
+    nimio: 'Porta Caesarea',
     nappi: 'Rooman Dalmatian pääkaupungin monumentaalinen portti',
     laudat: { maailmankartta: { x: 6382.8, y: 1661.5 }, europe: { x: 527.7, y: 748.5 } },
     teksti: 'Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen '
@@ -274,6 +362,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   SVK: [kohde({
     id: 'vydrica-zuckermandel', nimi: 'Vydrica–Zuckermandel',
+    nimio: 'Zuckermandel',
     nappi: 'Bratislavan linnan ja Tonavan välinen rantakaupunginosa',
     laudat: { maailmankartta: { x: 6403.1, y: 1470.2 }, europe: { x: 539.4, y: 627.5 } },
     teksti: 'Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen '
@@ -294,6 +383,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   LVA: [kohde({
     id: 'mustapaiden-talo', nimi: 'Riian Mustapäiden talo',
+    nimio: 'Mustapäiden talo',
     nappi: 'Kauppiasveljeskunnan manneristinen juhlarakennus',
     laudat: { maailmankartta: { x: 6636.9, y: 1074.4 }, europe: { x: 674.1, y: 395.9 } },
     teksti: 'Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. '
@@ -304,6 +394,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   EST: [kohde({
     id: 'narvan-vanhakaupunki', nimi: 'Narvan barokkinen vanhakaupunki',
+    nimio: 'Narva',
     nappi: 'Narvan yhtenäinen barokkikaupunki 1700-luvun asussa',
     laudat: { maailmankartta: { x: 6773.0, y: 956.6 }, europe: { x: 752.4, y: 332.0 } },
     teksti: 'Narvan vanhakaupunki oli Pohjois-Euroopan parhaiten säilyneitä barokkikaupunkeja. '
@@ -314,6 +405,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   FIN: [kohde({
     id: 'turun-tuomiokirkon-vanha-torni', nimi: 'Turun tuomiokirkon vanha torni',
+    nimio: 'Tuomiokirkon torni',
     nappi: 'Sipulikupolinen barokkitorni ennen Turun suurpaloa',
     laudat: { maailmankartta: { x: 6575.9, y: 903.1 }, europe: { x: 638.9, y: 303.7 } },
     teksti: 'Turun tuomiokirkon keskiaikainen torni sai barokkisen sipulikupolin '
@@ -343,9 +435,23 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'sv-Wikipedia "Sankta Klara kloster" (tarkistettu 21.9.2026).',
       kuva: 'ihme-klara-kloster-loistoaika.jpg', url: 'https://sv.wikipedia.org/wiki/Sankta_Klara_kloster',
     }),
+    kohde({
+      id: 'industripalatset-1897', nimi: 'Industripalatset',
+      nimio: 'Industripalatset',
+      nappi: 'Tukholman 1897-näyttelyn 100-metrinen kupolihalli',
+      laudat: { maailmankartta: { x: 6436.6, y: 959.1 }, europe: { x: 558.7, y: 333.3 } },
+      teksti: 'Kuningas Oscar II avasi Tukholman suuren taide- ja teollisuusnäyttelyn '
+        + 'Djurgårdenilla 15.5.1897. Arkkitehti Ferdinand Bobergin suunnittelema '
+        + 'Industripalatset oli näyttelyn näyttävin rakennus, 16 820 m² puinen halli, '
+        + 'jonka 100-metrinen kupoli ja neljä minareettia hallitsivat koko saarta. '
+        + 'Tilapäiseksi tarkoitettu jättiläinen purettiin näyttelyn päätyttyä.',
+      lahde: 'en-Wikipedia "General Art and Industrial Exposition of Stockholm" (tarkistettu 28.9.2026).',
+      kuva: 'ihme-industripalatset-stockholm-1897-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/General_Art_and_Industrial_Exposition_of_Stockholm',
+    }),
   ],
   IRL: [kohde({
     id: 'dublinin-keskiaikainen-linna', nimi: 'Dublinin keskiaikainen linna',
+    nimio: 'Dublin Castle',
     nappi: 'Englannin vallan nelitorninen linnoitus ennen vuoden 1684 paloa',
     laudat: { maailmankartta: { x: 5624.4, y: 1241.7 }, europe: { x: 90.9, y: 490.7 } },
     teksti: 'Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui '
@@ -357,6 +463,7 @@ export const EUROOPAN_KADONNEET = {
   DNK: [
     kohde({
       id: 'christiansborg', nimi: 'Toinen Christiansborg',
+      nimio: 'Christiansborg',
       nappi: 'Tanskan kuninkaanlinna ennen vuoden 1884 tulipaloa',
       laudat: { maailmankartta: { x: 6252.6, y: 1134.3 }, europe: { x: 452.7, y: 429.3 } },
       teksti: 'Ensimmäinen Christiansborg tuhoutui tulipalossa vuonna 1794. Toinen palatsi '
@@ -378,6 +485,7 @@ export const EUROOPAN_KADONNEET = {
   ],
   RUS: [kohde({
     id: 'valkokivinen-kreml', nimi: 'Moskovan valkokivinen Kreml',
+    nimio: 'Kreml',
     nappi: 'Dmitri Donskoin kalkkikivimuuri ennen tiililinnoitusta',
     laudat: { maailmankartta: { x: 7087.2, y: 1130.8 }, europe: { x: 933.4, y: 427.3 } },
     teksti: 'Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina '
@@ -388,6 +496,7 @@ export const EUROOPAN_KADONNEET = {
   })],
   UKR: [kohde({
     id: 'kymmenyskirkko', nimi: 'Kiovan Kymmenyskirkko',
+    nimio: 'Kymmenyskirkko',
     nappi: 'Kiovan Venäjän ensimmäinen kivikirkko',
     laudat: { maailmankartta: { x: 6850.6, y: 1370.2 }, europe: { x: 797.1, y: 566.6 } },
     teksti: 'Vladimir Suuri rakennutti Kymmenyskirkon vuosina 989–996 Kiovan Venäjän '
@@ -418,26 +527,223 @@ export const EUROOPAN_KADONNEET = {
       lahde: 'en-Wikipedia "Kition", johdanto ja historia (tarkistettu 21.9.2026).',
       kuva: 'ihme-kition-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Kition',
     }),
+    rappeutunutKohde({
+      id: 'varosha-famagusta', nimi: 'Varosha', nimio: 'Varosha',
+      nappi: 'Famagustan lomakaupunginosa 1960–70-lukujen kulta-aikanaan',
+      // Siirretty 2/-2 lautayksikköä (n. 6 km koilliseen, yhä Famagustan
+      // alueella) alkuperäisestä tarkasta koordinaatista (6965,0/1991,0):
+      // se limittyi CYP-ryppään muiden nimiöiden kanssa (nimiolimitys.test.mjs,
+      // tools/tarkista-nimiolimitys.mjs CYP).
+      laudat: { maailmankartta: { x: 6967.0, y: 1989.0 }, europe: { x: 864.2, y: 968.6 } },
+      teksti: 'Varosha oli 1960- ja 1970-luvun alun Famagustan vilkas rantalomakaupunginosa, '
+        + 'yksi Itä-Välimeren suosituimmista matkailukohteista korkeine hotelleineen. Alue '
+        + 'suljettiin asukkailta elokuussa 1974 eikä sitä ole avattu asumiseen sen jälkeen '
+        + '— osa siitä avattiin rajoitetusti vierailijoille vasta 2020.',
+      lahde: 'en-Wikipedia "Varosha, Famagusta" (tarkistettu 28.9.2026).',
+      kuva: {
+        tiedosto: 'Cyprus - Famagusta Varosha 07.JPG',
+        selite: 'Varoshan hylättyjä rantahotelleja nykyään.',
+        lahde: 'Dickelbers, Wikimedia Commons (CC BY-SA 3.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cyprus_-_Famagusta_Varosha_07.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+      ihmeKuva: 'ihme-cyp-varosha-famagusta-loistoaika.jpg',
+      ihmeSelite: 'Varosha kuvattuna 1960–70-lukujen lomakulta-aikanaan, ennen vuoden 1974 sulkemista.',
+      url: 'https://en.wikipedia.org/wiki/Varosha,_Famagusta',
+    }),
   ],
-  MLT: [kohde({
-    id: 'mdinan-vanha-katedraali', nimi: 'Mdinan vanha normannikatedraali',
-    nappi: 'Keskiaikainen katedraali ennen vuoden 1693 maanjäristystä',
-    laudat: { maailmankartta: { x: 6313.4, y: 1961.8 }, europe: { x: 487.7, y: 949.8 } },
-    teksti: 'Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian '
-      + 'maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja '
-      + 'korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.',
-    lahde: 'en-Wikipedia "St. Paul’s Cathedral, Mdina", vanha katedraali (tarkistettu 21.9.2026).',
-    kuva: 'ihme-mdinan-vanha-katedraali-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/St._Paul%27s_Cathedral,_Mdina',
+  MLT: [
+    kohde({
+      id: 'mdinan-vanha-katedraali', nimi: 'Mdinan vanha normannikatedraali',
+      nimio: 'Mdina',
+      nappi: 'Keskiaikainen katedraali ennen vuoden 1693 maanjäristystä',
+      laudat: { maailmankartta: { x: 6313.4, y: 1961.8 }, europe: { x: 487.7, y: 949.8 } },
+      teksti: 'Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian '
+        + 'maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja '
+        + 'korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.',
+      lahde: 'en-Wikipedia "St. Paul’s Cathedral, Mdina", vanha katedraali (tarkistettu 21.9.2026).',
+      kuva: 'ihme-mdinan-vanha-katedraali-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/St._Paul%27s_Cathedral,_Mdina',
+    }),
+    rappeutunutKohde({
+      id: 'royal-opera-house-valletta', nimi: 'Vallettan Royal Opera House', nimio: 'Royal Opera House',
+      nappi: 'Vallettan oopperatalo ennen vuoden 1942 pommitusta',
+      laudat: { maailmankartta: { x: 6317.1, y: 1961.4 }, europe: { x: 489.9, y: 949.5 } },
+      teksti: 'Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui '
+        + 'Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku '
+        + 'tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo '
+        + 'Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).',
+      lahde: 'en-Wikipedia "Royal Opera House, Valletta" (tarkistettu 28.9.2026).',
+      kuva: {
+        tiedosto: 'Renzo Piano Pjazza Teatru Rjal.jpeg',
+        selite: 'Pjazza Teatru Rjal nykyään: alkuperäiset pylväät osana avointa teatteria.',
+        lahde: 'Continentaleurope, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Renzo_Piano_Pjazza_Teatru_Rjal.jpeg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+      ihmeKuva: 'ihme-mlt-royal-opera-house-valletta-loistoaika.jpg',
+      ihmeSelite: 'Royal Opera House kuvattuna toimivana oopperatalona ennen vuoden 1942 pommitusta.',
+      url: 'https://en.wikipedia.org/wiki/Royal_Opera_House,_Valletta',
+    }),
+  ],
+  BIH: [
+    kohde({
+      id: 'mile-kruunajaiskirkko', nimi: 'Milen kruunajaiskirkko',
+      nimio: 'Mile',
+      nappi: 'Bosnian kuninkaiden kruunajais- ja hautauskirkko',
+      // Pieni eteläinen asettelusiirto jättää Visokon ympäristön vanhoille nimiöille vapaat kyljet.
+      laudat: { maailmankartta: { x: 6437.3, y: 1643.1 }, europe: { x: 559.1, y: 736.6 } },
+      teksti: 'Milen kirkko Arnautovićissa rakennettiin 1300-luvulla Bosnian kuninkaiden '
+        + 'kruunajais- ja hautauskirkoksi. Tvrtko I kruunattiin siellä ensimmäiseksi Bosnian '
+        + 'kuninkaaksi vuonna 1377. Kirkko raunioitui valtakunnan kukistumisen jälkeen.',
+      lahde: 'en-Wikipedia "Mile, Visoko" ja Bosnian kansallismonumenttien komissio (tarkistettu 21.9.2026).',
+      kuva: 'ihme-mile-kruunajaiskirkko-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Mile,_Visoko',
+    }),
+    rappeutunutKohde({
+      id: 'bobovacin-kuninkaanlinna', nimi: 'Bobovacin kuninkaanlinna', nimio: 'Bobovac',
+      nappi: 'Keskiajan Bosnian kuninkaiden linnoitettu pääkaupunki',
+      // Asettelusiirto Varešin suuntaan jättää Visokon/Sarajevon täkypisteille (Pyramidihuijaus,
+      // Sarajevon haggada) nimiöille vapaat kyljet.
+      laudat: { maailmankartta: { x: 6462.0, y: 1628.0 }, europe: { x: 572.0, y: 726.0 } },
+      teksti: 'Bobovac oli keskiajan Bosnian kuningaskunnan linnoitettu pääkaupunki '
+        + '1300-luvun puolivälistä lähtien — siellä säilytettiin kruunua ja useita kuninkaita '
+        + 'haudattiin sinne. Osmanit valtasivat ja hävittivät linnan kolmen päivän '
+        + 'piirityksen jälkeen 21.5.1463, kun viimeinen kuningas Stjepan Tomašević oli '
+        + 'juuri paennut Jajceen. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä.',
+      lahde: 'en-Wikipedia "Bobovac" (tarkistettu 28.9.2026).',
+      kuva: {
+        tiedosto: 'Bobovac 0352.jpg',
+        selite: 'Bobovacin kuninkaanlinnan säilyneitä muurinpohjia nykyään.',
+        lahde: 'Badener, Wikimedia Commons (CC BY 3.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bobovac_0352.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+      ihmeKuva: 'ihme-bih-bobovacin-kuninkaanlinna-loistoaika.jpg',
+      ihmeSelite: 'Bobovac kuvattuna Bosnian kuninkaiden linnoitettuna pääkaupunkina n. 1440–1460.',
+      url: 'https://en.wikipedia.org/wiki/Bobovac',
+    }),
+  ],
+  BLR: [kohde({
+    id: 'vanha-minsk', nimi: 'Vanha Minsk',
+    nimio: 'Vanha Minsk',
+    nappi: 'Minskin vanhakaupunki ennen toisen maailmansodan tuhoa',
+    laudat: { maailmankartta: { x: 6751.8, y: 1216.2 }, europe: { x: 740.2, y: 475.9 } },
+    teksti: 'Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen '
+      + 'kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia '
+      + '24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta '
+      + 'oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa '
+      + 'kaupunkia ei palautettu ennalleen.',
+    lahde: 'en-Wikipedia "Minsk", toinen maailmansota ja jälleenrakennus (tarkistettu 28.9.2026).',
+    kuva: 'ihme-vanha-minsk-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Minsk',
   })],
-  BIH: [kohde({
-    id: 'mile-kruunajaiskirkko', nimi: 'Milen kruunajaiskirkko',
-    nappi: 'Bosnian kuninkaiden kruunajais- ja hautauskirkko',
-    // Pieni eteläinen asettelusiirto jättää Visokon ympäristön vanhoille nimiöille vapaat kyljet.
-    laudat: { maailmankartta: { x: 6437.3, y: 1643.1 }, europe: { x: 559.1, y: 736.6 } },
-    teksti: 'Milen kirkko Arnautovićissa rakennettiin 1300-luvulla Bosnian kuninkaiden '
-      + 'kruunajais- ja hautauskirkoksi. Tvrtko I kruunattiin siellä ensimmäiseksi Bosnian '
-      + 'kuninkaaksi vuonna 1377. Kirkko raunioitui valtakunnan kukistumisen jälkeen.',
-    lahde: 'en-Wikipedia "Mile, Visoko" ja Bosnian kansallismonumenttien komissio (tarkistettu 21.9.2026).',
-    kuva: 'ihme-mile-kruunajaiskirkko-loistoaika.jpg', url: 'https://en.wikipedia.org/wiki/Mile,_Visoko',
+  SRB: [rappeutunutKohde({
+    id: 'smederevon-linnoitus', nimi: 'Smederevon linnoitus', nimio: 'Smederevo',
+    nappi: 'Serbian despotaatin Tonavan-rantalinnoitus 1440-luvulla',
+    laudat: { maailmankartta: { x: 6531.1, y: 1615.6 }, europe: { x: 613.1, y: 719.0 } },
+    teksti: 'Despootti Đurađ Branković rakennutti Smederevon linnoituksen Tonavan rannalle '
+      + 'uudeksi pääkaupungikseen 1420-luvun lopulla; laajempi 25 tornin ulkomuuri '
+      + 'valmistui vasta 1440-luvulla. Toisen maailmansodan aikana saksalaisten sinne '
+      + 'varastoima ammus ja polttoaine räjähti 5.6.1941, tappaen tuhansia ja tuhoten '
+      + 'suuren osan linnoituksesta. Muurit ja tornit seisovat yhä, osin sortuneina.',
+    lahde: 'en-Wikipedia "Smederevo Fortress" ja "Smederevo Fortress explosion", UNESCOn '
+      + 'kohde-esitys (tarkistettu 28.9.2026).',
+    kuva: {
+      tiedosto: 'Smederevo fortress (Smederevska tvrđava) - pano.JPG',
+      selite: 'Smederevon linnoitus Tonavan rannalla nykyään.',
+      lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0 RS)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Smederevo_fortress_(Smederevska_tvr%C4%91ava)_-_pano.JPG',
+    },
+    ihmeKuva: 'ihme-srb-smederevon-linnoitus-loistoaika.jpg',
+    ihmeSelite: 'Smederevon linnoitus kuvattuna valmistuneena Pienenä kaupunkina ja despotin hovina 1430-luvulla.',
+    url: 'https://en.wikipedia.org/wiki/Smederevo_Fortress',
+  })],
+  ALB: [rappeutunutKohde({
+    id: 'butrint', nimi: 'Butrint', nimio: 'Butrint',
+    nappi: 'Antiikin satamakaupunki roomalais-kreikkalaisella kulta-ajallaan',
+    laudat: { maailmankartta: { x: 6500.8, y: 1812.7 }, europe: { x: 595.6, y: 848.2 } },
+    teksti: 'Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten '
+      + 'laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja '
+      + 'foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla '
+      + 'ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin '
+      + 'vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.',
+    lahde: 'en-Wikipedia "Butrint" (tarkistettu 28.9.2026).',
+    kuva: {
+      tiedosto: 'Amphitheatre of Butrint 2009.jpg',
+      selite: 'Butrintin antiikin teatterin raunioita nykyään.',
+      lahde: 'Geoff Wong, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amphitheatre_of_Butrint_2009.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    ihmeKuva: 'ihme-alb-butrint-loistoaika.jpg',
+    ihmeSelite: 'Butrint kuvattuna vilkkaana roomalais-kreikkalaisena satamakaupunkina n. 100–300 jaa.',
+    url: 'https://en.wikipedia.org/wiki/Butrint',
+  })],
+  MKD: [rappeutunutKohde({
+    id: 'skopjen-vanha-rautatieasema', nimi: 'Skopjen vanha rautatieasema', nimio: 'Vanha asema',
+    nappi: 'Skopjen keskusasema hetkeä ennen vuoden 1963 maanjäristystä',
+    laudat: { maailmankartta: { x: 6547.5, y: 1723.7 }, europe: { x: 622.6, y: 789.1 } },
+    teksti: 'Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia '
+      + 'rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski '
+      + 'kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren '
+      + 'osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. '
+      + 'Osittain sortunut rakennus toimii nykyään kaupunginmuseona.',
+    lahde: 'en-Wikipedia "1963 Skopje earthquake" ja "Museum of the City of Skopje" '
+      + '(tarkistettu 28.9.2026).',
+    kuva: {
+      tiedosto: 'Old Railway station Skopje Earthquake 1963 Macedonia.JPG',
+      selite: 'Skopjen vanhan rautatieaseman julkisivu, kello yhä pysähtyneenä 5.17:ään.',
+      lahde: 'Furmum, Wikimedia Commons (PD)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_Railway_station_Skopje_Earthquake_1963_Macedonia.JPG',
+    },
+    ihmeKuva: 'ihme-mkd-skopjen-vanha-rautatieasema-loistoaika.jpg',
+    ihmeSelite: 'Skopjen keskusasema kuvattuna vilkkaana rautatieasemana 1950-luvulla, ennen vuoden 1963 maanjäristystä.',
+    url: 'https://en.wikipedia.org/wiki/1963_Skopje_earthquake',
+  })],
+  MNE: [rappeutunutKohde({
+    id: 'zabljak-crnojevica', nimi: 'Žabljak Crnojevića', nimio: 'Žabljak',
+    nappi: 'Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärvellä',
+    laudat: { maailmankartta: { x: 6470.4, y: 1712.6 }, europe: { x: 578.2, y: 781.8 } },
+    teksti: 'Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki '
+      + 'Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit '
+      + 'valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi '
+      + 'lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin '
+      + 'kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.',
+    lahde: 'en-Wikipedia "Žabljak Crnojevića" (tarkistettu 28.9.2026).',
+    kuva: {
+      tiedosto: 'Žabljak Crnojevića - Golubovci - panoramio.jpg',
+      selite: 'Žabljak Crnojevićan raunioita Skadarjärven rannalla nykyään.',
+      lahde: 'Zoran Kurelić Rabko, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%BDabljak_Crnojevi%C4%87a_-_Golubovci_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    ihmeKuva: 'ihme-mne-zabljak-crnojevica-loistoaika.jpg',
+    ihmeSelite: 'Žabljak Crnojevića kuvattuna Zetan linnoitettuna pääkaupunkina 1466–1478.',
+    url: 'https://en.wikipedia.org/wiki/%C5%BDabljak_Crnojevi%C4%87a',
+  })],
+  MDA: [rappeutunutKohde({
+    id: 'orheiul-vechi', nimi: 'Orheiul Vechi', nimio: 'Orheiul Vechi',
+    nappi: 'Kalkkikivijyrkänteen luolaluostari ja keskiaikainen linnakaupunki',
+    laudat: { maailmankartta: { x: 6799.8, y: 1503.3 }, europe: { x: 767.9, y: 648.0 } },
+    teksti: 'Orheiul Vechi (”Vanha Orhei”) on kalkkikivijyrkänteelle Răutin joen mutkaan '
+      + 'kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen '
+      + 'Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut '
+      + 'luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien '
+      + 'ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.',
+    lahde: 'en-Wikipedia "Old Orhei" (tarkistettu 28.9.2026).',
+    kuva: {
+      tiedosto: 'Orhei Vechi 08.JPG',
+      selite: 'Orheiul Vechin luolaluostari ja kalkkikivijyrkänne nykyään.',
+      lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Orhei_Vechi_08.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    ihmeKuva: 'ihme-mda-orheiul-vechi-loistoaika.jpg',
+    ihmeSelite: 'Orheiul Vechi kuvattuna keskiaikaisena linnakaupunkina ja luolaluostarina n. 1400-luvulla.',
+    url: 'https://en.wikipedia.org/wiki/Old_Orhei',
   })],
 };

@@ -102,7 +102,9 @@ test('pluskuplaa ei enää rakenneta', () => {
 });
 
 test('chatin ylärivillä on Näytä puhekuplat -nappi, joka piiloutuu tyhjänä', () => {
-  assert.match(RAAKA, /'pollo-naytakuplat', 'Näytä puhekuplat'/);
+  // Ikonina (omistaja 29.9.2026: "napit ikoneiksi"); nimi title- ja aria-label-määreissä.
+  assert.match(RAAKA, /'pollo-naytakuplat pollo-ylaikoni'/);
+  assert.match(RAAKA, /naytaKuplat\.setAttribute\('aria-label', 'Näytä Pulun puhekuplat uudelleen'\)/);
   assert.match(TYYLIT, /button\.pollo-naytakuplat \{/);
   assert.match(TYYLIT, /\.pollo-naytakuplat\[hidden\] \{ display: none; \}/);
   // Piilotus, ei disabled-tila (omistajan kohta 20 c).

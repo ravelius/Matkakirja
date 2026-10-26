@@ -1,0 +1,430 @@
+{
+ "kaupunki": "xian",
+ "kaupunkiQ": "Q5826",
+ "kohteet": [
+  {
+   "q": "Q47672",
+   "nimi": "Terrakotta-armeija",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 34.385,
+   "lon": 109.27306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Terracotta Army - Pit 1 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terracotta_Army_-_Pit_1_1.JPG?width=1280",
+     "tekija": "BrokenSphere",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Terracotta_Army_-_Pit_1_1.JPG",
+     "selite": "Terrakotta-armeija vartioi Qin Shi Huangdin hautaa, ja kuoppa 1 on suurin kaivetuista halleista.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Terracotta Army - Pit 1, Xi'an, China (14148051222).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terracotta_Army_-_Pit_1%2C_Xi'an%2C_China_(14148051222).jpg?width=1280",
+     "tekija": "Joe Hart from Southampton, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Terracotta_Army_-_Pit_1%2C_Xi'an%2C_China_(14148051222).jpg",
+     "selite": "Savisotilaat seisovat riveissä kaivauskuopan käytävillä.",
+     "leveys": 2816,
+     "korkeus": 1880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Terracotta Army - Pit 1 22.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Terracotta_Army_-_Pit_1_22.JPG?width=1280",
+     "tekija": "BrokenSphere",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Terracotta_Army_-_Pit_1_22.JPG",
+     "selite": "Jokaisella sotilaalla on omat kasvonpiirteensä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1334336",
+   "nimi": "Xi'anin kaupunginmuuri",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 34.25334,
+   "lon": 108.94223,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "City wall of Xi'an 51550-Xian (27959363326).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_wall_of_Xi'an_51550-Xian_(27959363326).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_wall_of_Xi'an_51550-Xian_(27959363326).jpg",
+     "selite": "Xi'anin kaupunginmuuri on Mingin ajalta ja ympäröi vanhaa kaupunkia.",
+     "leveys": 3000,
+     "korkeus": 1987,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Xi'an city walls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_city_walls.jpg?width=1280",
+     "tekija": "Ideophagous",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xi'an_city_walls.jpg",
+     "selite": "Muurin päällä kulkee leveä tie, ja kulmissa on vartiotorneja.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1047061",
+   "nimi": "Suuri villihanhipagodi",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 34.21977,
+   "lon": 108.95933,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Giant Wild Goose Pagoda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant_Wild_Goose_Pagoda.jpg?width=1280",
+     "tekija": "Alex Kwok",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giant_Wild_Goose_Pagoda.jpg",
+     "selite": "Suuri villihanhipagodi rakennettiin Tang-kaudella pitämään buddhalaisia kirjoituksia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Giant Wild Goose Pagoda 20240806 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant_Wild_Goose_Pagoda_20240806_02.jpg?width=1280",
+     "tekija": "沈澄心",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giant_Wild_Goose_Pagoda_20240806_02.jpg",
+     "selite": "Pagodin edessä on suuri suihkulähdeaukio.",
+     "leveys": 3904,
+     "korkeus": 2928,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1194818",
+   "nimi": "Pieni villihanhipagodi",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 34.2408,
+   "lon": 108.93736,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Small Wild Goose Pagoda 2024 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Small_Wild_Goose_Pagoda_2024_03.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Small_Wild_Goose_Pagoda_2024_03.jpg",
+     "selite": "Pieni villihanhipagodi on Tang-kauden tiilinen pagodi Xi'anin keskustassa.",
+     "leveys": 1707,
+     "korkeus": 2560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Xiaoyan \"Little Wild Goose\" Pagoda (9911811266).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xiaoyan_%22Little_Wild_Goose%22_Pagoda_(9911811266).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xiaoyan_%22Little_Wild_Goose%22_Pagoda_(9911811266).jpg",
+     "selite": "Pagodi kohoaa puiston puiden yllä.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1151087",
+   "nimi": "Kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.26101,
+   "lon": 108.94238,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Xi'an Bell Tower 2024.10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_Bell_Tower_2024.10.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xi'an_Bell_Tower_2024.10.jpg",
+     "selite": "Xi'anin kellotorni seisoo vanhan kaupungin keskellä.",
+     "leveys": 2560,
+     "korkeus": 1707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Xi'an Bell Tower - 54075117224.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_Bell_Tower_-_54075117224.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xi'an_Bell_Tower_-_54075117224.jpg",
+     "selite": "Torni on liikenneympyrän keskellä ja kaikkien pääkatujen risteyksessä.",
+     "leveys": 2560,
+     "korkeus": 1508,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Xi'an Bell Tower (34431323221).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xi'an_Bell_Tower_(34431323221).jpg?width=1280",
+     "tekija": "Mingli Yuan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xi'an_Bell_Tower_(34431323221).jpg",
+     "selite": "Illalla torni valaistaan lämpimin värein.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2742315",
+   "nimi": "Rumpitorni",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.26179,
+   "lon": 108.93893,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Drum Tower of Xi'an.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drum_Tower_of_Xi'an.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drum_Tower_of_Xi'an.jpg",
+     "selite": "Rumpitorni seisoo Muslimikorttelin vieressä kellotornin länsipuolella.",
+     "leveys": 2560,
+     "korkeus": 1707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Drum Tower Xi'an.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drum_Tower_Xi'an.jpg?width=1280",
+     "tekija": "TarnishedPath",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drum_Tower_Xi'an.jpg",
+     "selite": "Tornin sisällä on suuria rumpuja, joilla ilmoitettiin ilta.",
+     "leveys": 3783,
+     "korkeus": 2837,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q820842",
+   "nimi": "Xi'anin suuri moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 34.26339,
+   "lon": 108.93666,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Mosque of Xi'an 20240808 112.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_Xi'an_20240808_112.jpg?width=1280",
+     "tekija": "沈澄心",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Xi'an_20240808_112.jpg",
+     "selite": "Xi'anin suuri moskeija on kiinalaiseen palatsityyliin rakennettu moskeija ilman minareettia.",
+     "leveys": 12032,
+     "korkeus": 9024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Great Mosque of Xi'an 20240808 022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_Xi'an_20240808_022.jpg?width=1280",
+     "tekija": "沈澄心",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Xi'an_20240808_022.jpg",
+     "selite": "Moskeijan pihat ovat kiinalaisen temppelin tapaan peräkkäin.",
+     "leveys": 2928,
+     "korkeus": 3904,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q641427",
+   "nimi": "Steelametsä",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.25573,
+   "lon": 108.9482,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beilin Stone Museum Entrance (9914463304).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beilin_Stone_Museum_Entrance_(9914463304).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beilin_Stone_Museum_Entrance_(9914463304).jpg",
+     "selite": "Steelametsä on museo, jossa on tuhansia kivitaulua ja kirjoituksia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beilin Stone Museum, Xi'an (9914563603).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beilin_Stone_Museum%2C_Xi'an_(9914563603).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beilin_Stone_Museum%2C_Xi'an_(9914563603).jpg",
+     "selite": "Kivitaulut seisovat paviljongeissa Konfutse-temppelin alueella.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1151210",
+   "nimi": "Shaanxin historiallinen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 34.22505,
+   "lon": 108.95063,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shaanxi Provincial Museum, Xi'an (9950389253).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaanxi_Provincial_Museum%2C_Xi'an_(9950389253).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shaanxi_Provincial_Museum%2C_Xi'an_(9950389253).jpg",
+     "selite": "Shaanxin historiallinen museo on Tang-kauden tyyliin rakennettu museo.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shaanxi History Museum 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaanxi_History_Museum_2.JPG?width=1280",
+     "tekija": "jesse",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shaanxi_History_Museum_2.JPG",
+     "selite": "Museon esineistö kertoo Shaanxin alueen historiasta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1158530",
+   "nimi": "Daming-palatsi",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 34.29139,
+   "lon": 108.95944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Daming Palace National Heritage Park - Hanyuan Hall 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daming_Palace_National_Heritage_Park_-_Hanyuan_Hall_01.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daming_Palace_National_Heritage_Park_-_Hanyuan_Hall_01.jpg",
+     "selite": "Daming-palatsin Hanyuan-sali oli Tang-keisarien pääsali.",
+     "leveys": 2560,
+     "korkeus": 1645,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Daming Palace Hanyuan Hall Site.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daming_Palace_Hanyuan_Hall_Site.jpg?width=1280",
+     "tekija": "Danielinblue",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daming_Palace_Hanyuan_Hall_Site.jpg",
+     "selite": "Alueella on vain peruskiveyksiä ja rekonstruoituja rakenteita.",
+     "leveys": 2688,
+     "korkeus": 1792,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline of Xi'an CBD.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Xi'an_CBD.jpg?width=1280",
+   "tekija": "Derxxxxx",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Xi'an_CBD.jpg",
+   "selite": "Xi'anin uudet pilvenpiirtäjät kohoavat muinaisen Chang'anin kaupungin paikalla.",
+   "leveys": 1978,
+   "korkeus": 1825,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Bell Tower during Sunset in Xi'an, Jun 21 2023.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bell_Tower_during_Sunset_in_Xi'an%2C_Jun_21_2023.jpg?width=1280",
+   "tekija": "A Chinese ID",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bell_Tower_during_Sunset_in_Xi'an%2C_Jun_21_2023.jpg",
+   "selite": "Kellotorni auringonlaskussa on Xi'anin keskustan symboli.",
+   "leveys": 3933,
+   "korkeus": 2274,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q910180",
+   "nimi": "Qin Shi Huangdin hauta",
+   "peruste": "UNESCO",
+   "lat": 34.38167,
+   "lon": 109.25389,
+   "syy": "ei vapaata kelvollista kuvaa (haudan kumpu hämärä, vain heikkoja kuvia)"
+  }
+ ]
+}

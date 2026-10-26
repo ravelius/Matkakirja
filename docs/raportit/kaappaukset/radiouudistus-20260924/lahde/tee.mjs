@@ -57,7 +57,7 @@ function mastokerros(valittu, { vuValo = 1 } = {}) {
   for (const { nimi: n, x, y, koko, mk: m } of jarj) {
     const v = n === valittu;
     const valot = KOOT[koko].valot.map(() => v || arpa() > 0.4);
-    if (v) s += `<ellipse cx="${x}" cy="${y}" rx="${140 * vuValo}" ry="${108 * vuValo}" fill="url(#maavalo)" style="mix-blend-mode:screen"/>`;
+    if (v && !process.env.PAIVA) s += `<ellipse cx="${x}" cy="${y}" rx="${140 * vuValo}" ry="${108 * vuValo}" fill="url(#maavalo)" style="mix-blend-mode:screen"/>`;
     s += masto(x, y, koko, { mittakaava: m * (v ? 1.05 : 1), valot, valittu: v });
     if (v) s += `<text x="${x + 16}" y="${y + 18}" font-family="Georgia,serif" font-size="15" fill="#ffd9b0" letter-spacing="2" style="paint-order:stroke" stroke="#1a0f06" stroke-width="3">${n.toUpperCase()}</text>`;
   }
@@ -69,6 +69,7 @@ const sivu = (runko, l, k, lisa = '') => `<!doctype html><html><head><meta chars
   ${TYYLI}${lisa}</style></head><body>${SUODIN}${runko}</body></html>`;
 
 const kuvat = {};
+const VAIN = process.env.VAIN;
 
 // 1. PÄÄKUVA: iPad 1024 × 1366, hämärä, mastot, renkaat, paneeli
 {
@@ -77,13 +78,13 @@ const kuvat = {};
     rivit: ['RADIO FRANCE', 'PARIISI · RANSKA'], vuTaso: 0.72,
     kaupungit: ['LONTOO', 'MADRID', 'BRYSSEL', 'LUXEMBURG', 'PARIISI', 'BERN', 'AMSTERDAM', 'OSLO', 'ROOMA'], soiva: 'PARIISI' });
   kuvat['1-paakuva-ipad'] = sivu(`
-    <div style="position:absolute;inset:0;background:url(${b64('kall-hamara2.png')}) 0 0/1024px 1366px"></div>
+    <div style="position:absolute;inset:0;background:url(${b64(process.env.TAUSTA ?? 'kall-hamara2.png')}) 0 0/1024px 1366px"></div>
     <svg width="1024" height="1366" style="position:absolute;inset:0"><defs>${MAARITTEET}</defs>
       ${renkaat(p[1], p[2], [[110, 0.6], [250, 0.38], [380, 0.18]])}
       ${mastokerros(VALITTU)}
     </svg>
     <div style="position:absolute;left:0;top:62px;width:370px;height:310px;box-sizing:border-box;padding:18px 18px;background:linear-gradient(180deg,rgba(20,12,5,.98),rgba(20,12,5,.98) 94%,rgba(20,12,5,.0));border-radius:0 0 14px 0;color:#f0d9b5;font:13px/1.45 Georgia,serif">
-      <b style="letter-spacing:1px">HAVAINNEKUVA</b><br>Kartta on natiivin kuvakaappaus (40°, 2 600 km) hämärän kertoimella 0,18/0,17/0,24. Yövalot ovat NASA Black Marble (VIIRS, PD), projisoitu samaan näkymään: perustaso 0,5 kaikkialla, Pariisin ympärillä 1,0, hehku kahdessa kerroksessa. Mastot oikeissa paikoissa, koko asukasluvusta (Wikidata).</div>
+      <b style="letter-spacing:1px">HAVAINNEKUVA${process.env.OTSIKKO ? ' ' + process.env.OTSIKKO : ''}</b><br>${process.env.SELITE ?? 'Kartta on natiivin kuvakaappaus (40°, 2 600 km) hämärän kertoimella 0,18/0,17/0,24. Yövalot ovat NASA Black Marble (VIIRS, PD), projisoitu samaan näkymään: perustaso 0,5 kaikkialla, Pariisin ympärillä 1,0, hehku kahdessa kerroksessa. Mastot oikeissa paikoissa, koko asukasluvusta (Wikidata).'}</div>
     <div style="position:absolute;left:${(1024 - 640) / 2}px;bottom:22px">${paneeli}</div>`, 1024, 1366);
 }
 
@@ -190,6 +191,7 @@ const pw = await import(process.env.PLAYWRIGHT_JS ?? '/Users/Shared/Claude/Matka
 const chromium = pw.chromium ?? pw.default?.chromium;
 const selain = await chromium.launch();
 for (const [nimi, html] of Object.entries(kuvat)) {
+  if (VAIN && nimi !== VAIN) continue;
   const m = html.match(/width:(\d+)px;height:(\d+)px/);
   const sivuO = await selain.newPage({ viewport: { width: +m[1], height: +m[2] }, deviceScaleFactor: 1 });
   await sivuO.setContent(html);

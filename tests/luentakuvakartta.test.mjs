@@ -31,7 +31,10 @@ test('luentakuvalliset kaupungit johdetaan pakeista', () => {
    * kaupungeilla ei ole vielä ajettu Brysselille). Poikkeus on nimetty,
    * jotta uusi aukko ei livahda mukaan huomaamatta.
    */
-  const ILMAN_LUENTAKUVAA = new Set(['bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta']);
+  // Juna 193 (PT 15.10.2026): kahdeksan pääkaupunkia laudan pysäkeiksi kevyillä pakeilla, luentakuva oma kuvaeränsä.
+  const ILMAN_LUENTAKUVAA = new Set(['bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta',
+    'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad',
+    'bern', 'bratislava', 'podgorica']);
   const puuttuu = Object.keys(FOKUSVIRRAT).filter((id) => !joukko.has(id));
   assert.deepEqual(puuttuu.sort(), [...ILMAN_LUENTAKUVAA].sort(),
     'kuva puuttuu vain nimetyiltä, tietoisesti keskeneräisiltä kaupungeilta');

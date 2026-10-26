@@ -69,7 +69,7 @@ export const NOSTOANKKURIT_GRC = {
   'nosto:santorini': { lat: 36.415092, lng: 25.433000 },
   'nosto:skandaali-simonides-kasikirjoitusvaarentaja': { lat: 36.615800, lng: 27.838800 },
   'nosto:smolikas': { lat: 40.088855, lng: 20.915000 },
-  'nosto:strymonas': { lat: 41.801856, lng: 23.165000 },
+  'nosto:strymonas': { lat: 41.209461, lng: 23.171000 },
   'nosto:taygetos': { lat: 36.953778, lng: 22.352000 },
   'nosto:thessaloniki': { lat: 40.639171, lng: 22.937000 },
   'nosto:traakianmeri': { lat: 40.401114, lng: 25.049000 },

@@ -1,0 +1,542 @@
+{
+ "kaupunki": "chennai",
+ "kaupunkiQ": "Q1352",
+ "kohteet": [
+  {
+   "q": "Q1438739",
+   "nimi": "Fort St. George",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 13.07972,
+   "lon": 80.28694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort St. George, Chennai 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_St._George%2C_Chennai_2.jpg?width=1280",
+     "tekija": "L.vivian.richard at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_St._George%2C_Chennai_2.jpg",
+     "selite": "Pyhän Yrjön linnoitus on Itä-Intian yhtiön 1600-luvulla perustama kaupunginydin, jonka ympärille Madras kasvoi.",
+     "leveys": 2500,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort St George GJE 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_St_George_GJE_1.jpg?width=1280",
+     "tekija": "George John Edkins (1921-2001)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_St_George_GJE_1.jpg",
+     "selite": "Linnoituksen sisällä on siirtomaa-ajan virastorakennuksia, joissa toimii nykyään osavaltion hallinto.",
+     "leveys": 2820,
+     "korkeus": 1880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fort St. George George Town Chennai India - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_St._George_George_Town_Chennai_India_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_St._George_George_Town_Chennai_India_-_panoramio_(1).jpg",
+     "selite": "Linnoituksen lippusalko kohoaa Chennain rantatien varrella.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q673659",
+   "nimi": "Marina Beach",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 13.05418,
+   "lon": 80.28368,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kamarajar Salai and Marina Beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamarajar_Salai_and_Marina_Beach.jpg?width=1280",
+     "tekija": "This Image was created by User:PlaneMad. If you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you. If you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kamarajar_Salai_and_Marina_Beach.jpg",
+     "selite": "Marina Beach on Chennain pitkä kaupunkiranta, jota reunustaa vilkas rantatie.",
+     "leveys": 1500,
+     "korkeus": 1521,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_beach.jpg?width=1280",
+     "tekija": "VARSHA KRISHNARAJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_beach.jpg",
+     "selite": "Bengalinlahden aallot vyöryvät leveälle hiekkarannalle.",
+     "leveys": 2976,
+     "korkeus": 1984,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q257382",
+   "nimi": "Chennai Centralin asema",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 13.08476,
+   "lon": 80.27486,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ChennaiCentral2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ChennaiCentral2.JPG?width=1280",
+     "tekija": "No machine-readable author provided. SwiftRakesh assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ChennaiCentral2.JPG",
+     "selite": "Chennai Centralin punatiilinen kellotorni on kaupungin tunnetuimpia rautatieaseman maamerkkejä.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai Central Station panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_Central_Station_panorama.jpg?width=1280",
+     "tekija": "This Image was created by User:PlaneMad. If you are using the image under the creative commons share alike license please credit the photo CC-by-sa PlaneMad/Wikimedia and include a link to this page. No explicit permission is needed from me, but id appreciate an email if my work has been of help to you. If you dont want to release your work under a creative commons license, please mail me at arun.planemad@gmail.com or catch me at my Website to negotiate a custom license as per your needs.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_Central_Station_panorama.jpg",
+     "selite": "Aseman pitkä arkadijulkisivu on rakennettu 1800-luvun lopun brittiläiseen tyyliin.",
+     "leveys": 3000,
+     "korkeus": 1886,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1587164",
+   "nimi": "Kapaleeshwararin temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 13.03389,
+   "lon": 80.26972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MylaporeKapaleeshwararTemple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MylaporeKapaleeshwararTemple.jpg?width=1280",
+     "tekija": "G V Balasubramanian",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MylaporeKapaleeshwararTemple.jpg",
+     "selite": "Mylaporen Shiva-temppelin värikäs gopuram-torni kohoaa kaupunginosan yläpuolelle.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai, Arulmigu Kapaleeswarar, mandapa 00.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai%2C_Arulmigu_Kapaleeswarar%2C_mandapa_00.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai%2C_Arulmigu_Kapaleeswarar%2C_mandapa_00.jpg",
+     "selite": "Temppelin pylväshalli on koristeltu tuhansilla veistetyillä jumalhahmoilla.",
+     "leveys": 5016,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q733577",
+   "nimi": "San Thomen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 13.0336,
+   "lon": 80.27783,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santhome Basilica.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santhome_Basilica.jpg?width=1280",
+     "tekija": "w:user:PlaneMad",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santhome_Basilica.jpg",
+     "selite": "Valkoinen uusgoottilainen basilika on rakennettu perinteen mukaan apostoli Tuomaan haudan päälle.",
+     "leveys": 2370,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_church.jpg?width=1280",
+     "tekija": "Indyblue",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_church.jpg",
+     "selite": "Iltavalo kultaa basilikan terävät tornit Mylaporen rannalla.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basilica of San Thome, Chennai, 1896 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_of_San_Thome%2C_Chennai%2C_1896_(1).jpg?width=1280",
+     "tekija": "Richard Mortel from Riyadh, Saudi Arabia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_of_San_Thome%2C_Chennai%2C_1896_(1).jpg",
+     "selite": "Kirkon terävät huiput ja holvikaaret nousevat pilvien alle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q502531",
+   "nimi": "Madrasin ylin oikeus",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 13.08778,
+   "lon": 80.28812,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Madras High Court - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madras_High_Court_-_panoramio.jpg?width=1280",
+     "tekija": "Raki_Man",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madras_High_Court_-_panoramio.jpg",
+     "selite": "Punainen indo-saraseeninen oikeustalo on yksi maailman suurimmista oikeustaloista.",
+     "leveys": 1920,
+     "korkeus": 1440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai High Court (70255).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_High_Court_(70255).jpg?width=1280",
+     "tekija": "Sankar 1995",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_High_Court_(70255).jpg",
+     "selite": "Oikeustalon kupolitornit erottuvat Chennain katukuvassa.",
+     "leveys": 6000,
+     "korkeus": 8000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3521669",
+   "nimi": "Ripon Building",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 13.0817,
+   "lon": 80.2716,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ripon Building aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ripon_Building_aerial_view.jpg?width=1280",
+     "tekija": "Saiphani02",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ripon_Building_aerial_view.jpg",
+     "selite": "Valkoinen Ripon Building on kaupunginvaltuuston talo, jonka kellotorni hallitsee puistoa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ripon building, Chennai 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ripon_building%2C_Chennai_2.jpg?width=1280",
+     "tekija": "L.vivian.richard at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ripon_building%2C_Chennai_2.jpg",
+     "selite": "Uusklassisen julkisivun valkoiset pylväät ja kaaret on rakennettu 1900-luvun alussa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Greater Chennai Corporation Ripon Buildings Chennai India.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater_Chennai_Corporation_Ripon_Buildings_Chennai_India.jpg?width=1280",
+     "tekija": "N. Vivekananthamoorthy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Greater_Chennai_Corporation_Ripon_Buildings_Chennai_India.jpg",
+     "selite": "Rakennus on nimetty Intian varakuninkaan lordi Ripon mukaan.",
+     "leveys": 3000,
+     "korkeus": 2227,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3536643",
+   "nimi": "Chennai Egmoren asema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 13.07768,
+   "lon": 80.26019,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chennai Egmore Railway Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_Egmore_Railway_Station.jpg?width=1280",
+     "tekija": "Thamizhpparithi Maari",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_Egmore_Railway_Station.jpg",
+     "selite": "Egmoren punavalkoinen asema kupoleineen on Etelä-Intian vanhimpia rautatieasemia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chennai Egmore Railway Station 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai_Egmore_Railway_Station_1.jpg?width=1280",
+     "tekija": "Gowtham Sampath",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai_Egmore_Railway_Station_1.jpg",
+     "selite": "Aseman koristeellinen julkisivu yhdistää indo-saraseenista tyyliä ja siirtomaa-ajan arkkitehtuuria.",
+     "leveys": 2048,
+     "korkeus": 1152,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3536763",
+   "nimi": "Chennain valtion museo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 13.07065,
+   "lon": 80.25729,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Madras museum theatre in October 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madras_museum_theatre_in_October_2007.jpg?width=1280",
+     "tekija": "L.vivian.richard at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madras_museum_theatre_in_October_2007.jpg",
+     "selite": "Museon punatiilinen pyöreä teatterirakennus on yksi Intian vanhimpiin kuuluvan museon rakennuksista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Building of Chennai Egmore Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_Chennai_Egmore_Museum.jpg?width=1280",
+     "tekija": "Thamizhpparithi Maari",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_of_Chennai_Egmore_Museum.jpg",
+     "selite": "Museorakennuksen kaarikäytävät ja parveke on rakennettu punatiilestä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aerial view of Museum at Chennai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Museum_at_Chennai.jpg?width=1280",
+     "tekija": "Saiphani02",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Museum_at_Chennai.jpg",
+     "selite": "Museoalueen punakattoiset rakennukset sijaitsevat vehreässä Egmoren korttelissa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5091701",
+   "nimi": "Chepaukin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 13.06336,
+   "lon": 80.28171,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chepauk Palace, the heritage building and former official residence of the Nawab of Arcot in Chennai 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chepauk_Palace%2C_the_heritage_building_and_former_official_residence_of_the_Nawab_of_Arcot_in_Chennai_04.jpg?width=1280",
+     "tekija": "Pinakpani",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chepauk_Palace%2C_the_heritage_building_and_former_official_residence_of_the_Nawab_of_Arcot_in_Chennai_04.jpg",
+     "selite": "Chepaukin palatsi oli Arcotin nawabin virallinen asuinpaikka.",
+     "leveys": 4080,
+     "korkeus": 1633,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chepauk Palace - Minar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chepauk_Palace_-_Minar.jpg?width=1280",
+     "tekija": "Williamsatish25",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chepauk_Palace_-_Minar.jpg",
+     "selite": "Palatsin sipulikupoliset minareetit edustavat indo-saraseenista tyyliä.",
+     "leveys": 2592,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3524002",
+   "nimi": "Chennain satama",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 13.08441,
+   "lon": 80.2899,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bulk ship\"Nantor\"port of Chennai, India - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulk_ship%22Nantor%22port_of_Chennai%2C_India_-_panoramio.jpg?width=1280",
+     "tekija": "Alexey Seleznev",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bulk_ship%22Nantor%22port_of_Chennai%2C_India_-_panoramio.jpg",
+     "selite": "Chennain satama on tekoaltaaseen rakennettu Bengalinlahden tärkeimpiä kauppasatamia.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Madras Port In 1996.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madras_Port_In_1996.jpg?width=1280",
+     "tekija": "Ipsingh at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madras_Port_In_1996.jpg",
+     "selite": "Rahtilaivat ja nosturit täyttävät sataman laiturit.",
+     "leveys": 2940,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1188061",
+   "nimi": "M. A. Chidambaram -stadion",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 13.06278,
+   "lon": 80.27944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MA Chidambaram Stadium In the Night during a CSK Game.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MA_Chidambaram_Stadium_In_the_Night_during_a_CSK_Game.jpg?width=1280",
+     "tekija": "BCCI/Sportzpics",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MA_Chidambaram_Stadium_In_the_Night_during_a_CSK_Game.jpg",
+     "selite": "Chepaukin kriketistadion on yksi Intian tunnetuimmista kriketin areenoista.",
+     "leveys": 2400,
+     "korkeus": 1350,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q648548",
+   "nimi": "Guindyn kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 13.00259,
+   "lon": 80.23079,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A National Park in Chennai 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_National_Park_in_Chennai_02.JPG?width=1280",
+     "tekija": "SWARNA",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_National_Park_in_Chennai_02.JPG",
+     "selite": "Guindyn kansallispuisto on harvinainen trooppinen lehtimetsä keskellä miljoonakaupunkia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Children's park at Guindy National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Children's_park_at_Guindy_National_Park.jpg?width=1280",
+     "tekija": "Bagavath G",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Children's_park_at_Guindy_National_Park.jpg",
+     "selite": "Puiston nurmikot ja varjoisat polut tarjoavat kaupunkilaisille hengähdyspaikan.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial SE Island Grounds Chennai Jul25 R16 07919.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_SE_Island_Grounds_Chennai_Jul25_R16_07919.jpg?width=1280",
+   "tekija": "Timothy A. Gonsalves",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_SE_Island_Grounds_Chennai_Jul25_R16_07919.jpg",
+   "selite": "Ilmakuvassa Chennain keskusta, Cooum-joki ja Marina Beachin pitkä hiekkaranta.",
+   "leveys": 5388,
+   "korkeus": 3592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Chennai-Skyline-from-Mount.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chennai-Skyline-from-Mount.jpg?width=1280",
+   "tekija": "Karthikeyan321",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chennai-Skyline-from-Mount.jpg",
+   "selite": "Chennain horisontti levittyy matalan rakennuskannan yllä Bengalinlahden rannikolla.",
+   "leveys": 5949,
+   "korkeus": 3966,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -101,6 +101,20 @@ const AANI_ALIPOLKU = 'audio/';
  * rivit — ja js/packs/fokusvirta-*.js:ssä niiden teksti — pysyvät 13.9.2026
  * asussa. Teksti ja ääni on pidettävä samassa polvessa, tai ankkurit osuisivat
  * eri lauseeseen. Ks. js/livia-pilotti-cuet.js ERA5_ODOTTAVAT_KAUPUNGIT.
+ *
+ * 11.10.2026: VIISI VERSIOIMATONTA RIVIÄ (bryssel, kosice, ljubljana,
+ * luxemburg, valletta). Äänittäjä vei luennat suoraan ämpärin juureen
+ * (`audio/puhe-fokus-matkakirja-<id>.mp3`), ilman Horation versions-
+ * alikansiota ja tuotantokuittia. Rivin polku on siksi tavallinen
+ * `audio/<nimi>`, ja kesto on äänitteen todellinen kesto (afinfo, kuten kuitillisilla
+ * riveillä; PT 11.10.). Uusi nimi ei ole vanhassa välimuistissa,
+ * mutta kyselyversio (UUSITUT_AANET) on silti 2, koska aikaleimatiedosto
+ * kantaa `aani.versio: 2` ja tools/kohdista-luennat.mjs laskee sen sieltä.
+ *
+ * 15.10.2026: samat viisi uusittu eleven_v3:lla (Äänittäjä, PT:n tilaus;
+ * omistaja 14.10.: isoisän teksti aina vanhemmalla mallilla): polku
+ * `audio/puhe-fokus-matkakirja-<id>-v3.mp3`, sisaraikaleimat -v3.aikaleimat.json
+ * (sama teksti, uudet sana-ajat) ja repon kopio assets/aikaleimat/ päivitetty.
  */
 export const HORATIO_TUOTANTO = Object.freeze({
   'puhe-fokus-matkakirja-alpit.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-alpit.mp3', kesto: 24.346 }),
@@ -109,6 +123,7 @@ export const HORATIO_TUOTANTO = Object.freeze({
   'puhe-fokus-matkakirja-barcelona.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-barcelona.mp3', kesto: 22.047 }),
   'puhe-fokus-matkakirja-bergen.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-bergen.mp3', kesto: 23.406 }),
   'puhe-fokus-matkakirja-berliini.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-berliini.mp3', kesto: 19.958 }),
+  'puhe-fokus-matkakirja-bryssel.mp3': Object.freeze({ polku: 'audio/puhe-fokus-matkakirja-bryssel-v3.mp3', kesto: 39.549 }),
   'puhe-fokus-matkakirja-budapest.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-budapest.mp3', kesto: 22.674 }),
   'puhe-fokus-matkakirja-bukarest.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-bukarest.mp3', kesto: 23.719 }),
   'puhe-fokus-matkakirja-dublin.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-dublin.mp3', kesto: 22.753 }),
@@ -121,11 +136,14 @@ export const HORATIO_TUOTANTO = Object.freeze({
   'puhe-fokus-matkakirja-istanbul.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-istanbul.mp3', kesto: 21.081 }),
   'puhe-fokus-matkakirja-kiova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kiova.mp3', kesto: 19.226 }),
   'puhe-fokus-matkakirja-kobenhavn.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-kobenhavn.mp3', kesto: 24.921 }),
+  'puhe-fokus-matkakirja-kosice.mp3': Object.freeze({ polku: 'audio/puhe-fokus-matkakirja-kosice-v3.mp3', kesto: 43.050 }),
   'puhe-fokus-matkakirja-krakova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-krakova.mp3', kesto: 21.002 }),
   'puhe-fokus-matkakirja-kreeta.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kreeta.mp3', kesto: 17.868 }),
   'puhe-fokus-matkakirja-lappi.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-lappi.mp3', kesto: 22.753 }),
   'puhe-fokus-matkakirja-lissabon.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-lissabon.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-ljubljana.mp3': Object.freeze({ polku: 'audio/puhe-fokus-matkakirja-ljubljana-v3.mp3', kesto: 38.426 }),
   'puhe-fokus-matkakirja-lontoo.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-lontoo.mp3', kesto: 31.948 }),
+  'puhe-fokus-matkakirja-luxemburg.mp3': Object.freeze({ polku: 'audio/puhe-fokus-matkakirja-luxemburg-v3.mp3', kesto: 41.691 }),
   'puhe-fokus-matkakirja-madrid.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-madrid.mp3', kesto: 24.921 }),
   'puhe-fokus-matkakirja-marseille.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-marseille.mp3', kesto: 22.518 }),
   'puhe-fokus-matkakirja-moskova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-moskova.mp3', kesto: 25.469 }),
@@ -144,6 +162,7 @@ export const HORATIO_TUOTANTO = Object.freeze({
   'puhe-fokus-matkakirja-tampere.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-tampere.mp3', kesto: 24.451 }),
   'puhe-fokus-matkakirja-tromssa.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-tromssa.mp3', kesto: 22.439 }),
   'puhe-fokus-matkakirja-tukholma.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-tukholma.mp3', kesto: 19.487 }),
+  'puhe-fokus-matkakirja-valletta.mp3': Object.freeze({ polku: 'audio/puhe-fokus-matkakirja-valletta-v3.mp3', kesto: 36.571 }),
   'puhe-fokus-matkakirja-varsova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-varsova.mp3', kesto: 31.556 }),
   'puhe-fokus-matkakirja-venetsia.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-venetsia.mp3', kesto: 23.327 }),
   'puhe-fokus-matkakirja-vilna.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-vilna.mp3', kesto: 22.282 }),
@@ -305,6 +324,11 @@ export const UUSITUT_AANET = {
   'puhe-fokus-matkakirja-oslo.mp3': 2,
   'puhe-fokus-matkakirja-bergen.mp3': 2,
   'puhe-fokus-matkakirja-kobenhavn.mp3': 2,
+  'puhe-fokus-matkakirja-bryssel.mp3': 2,
+  'puhe-fokus-matkakirja-kosice.mp3': 2,
+  'puhe-fokus-matkakirja-ljubljana.mp3': 2,
+  'puhe-fokus-matkakirja-luxemburg.mp3': 2,
+  'puhe-fokus-matkakirja-valletta.mp3': 2,
 };
 
 /*
@@ -325,6 +349,15 @@ const JULISTE_ALIPOLKU = 'julisteet/';
 /** Aikakausjulisteen osoite ämpärissä. */
 export function julisteUrl(tiedosto) {
   return `${PEILI_JUURI}${JULISTE_ALIPOLKU}${tiedosto}`;
+}
+
+/**
+ * Julisteen pikkukuva gallerian ruudukkoon: `tuotanto/tuot-x.png` → `tuotanto/pieni/tuot-x.jpg` (360 px JPEG,
+ * Päätoimittaja 2.10.2026: täysikokoiset PNG:t olivat ~4 Mt kukin). Kutsuja käyttää julisteUrl:ää varana.
+ */
+export function julistePieniUrl(tiedosto) {
+  const i = tiedosto.lastIndexOf('/');
+  return julisteUrl(`${tiedosto.slice(0, i + 1)}pieni/${tiedosto.slice(i + 1).replace(/\.png$/i, '.jpg')}`);
 }
 
 /*
@@ -348,6 +381,42 @@ const PYRAMIDI_ALIPOLKU = 'julisteet/pyramidi/';
  */
 export function pyramidiUrl(polku) {
   return `${PEILI_JUURI}${PYRAMIDI_ALIPOLKU}${polku}`;
+}
+
+/*
+ * KOEPYRAMIDI ILMAN OSOITINVAIHTOA (Fable 25.9.2026: omistajan
+ * kuvakokeilu uudesta peruskartasta ennen kuin tuotannon luettelo
+ * vaihtuu). `?pyramidi=<sarja>` (esim. `?pyramidi=2026-09-25`) lukee
+ * luettelon polusta `julisteet/pyramidi/koe/<sarja>/pyramidi.json`
+ * tuotannon `pyramidi.json`:n sijaan, ja pallo lukee saman sarjan
+ * Mercator-laatat (koepyramidinPallokansio). Laattojen versiopolut
+ * tulevat luettelosta kuten aina, joten koe näkee täsmälleen sen
+ * kartan, jonka osoitinvaihto myöhemmin toisi kaikille. Ilman lippua
+ * mikään ei muutu. Arvo hyväksytään vain päivämäärämuodossa, jotta
+ * osoiteriviltä ei voi koota mielivaltaista polkua.
+ */
+export function pyramidiKoe(haku = globalThis.location?.search ?? '') {
+  let arvo = null;
+  try {
+    arvo = new URLSearchParams(haku).get('pyramidi');
+  } catch {
+    return null;
+  }
+  return arvo && /^\d{4}-\d{2}-\d{2}[a-z]?$/.test(arvo) ? arvo : null;
+}
+
+/** Luettelon polku pyramidiUrl:lle: koesarjan kopio tai tuotannon osoitin. */
+export function pyramidinLuettelonPolku(koe = pyramidiKoe()) {
+  return koe ? `koe/${koe}/pyramidi.json` : 'pyramidi.json';
+}
+
+/**
+ * Koesarjan pallokansio julisteet/pallo/laatat/-juuren alla: polton
+ * nimeämä `<sarja>-pohja-<sarja ilman viivoja>` (tools/polta-
+ * paikallisesti.sh --pallotunniste), esim. 2026-09-25-pohja-20260925.
+ */
+export function koepyramidinPallokansio(koe) {
+  return `${koe}-pohja-${koe.replace(/-/g, '')}`;
 }
 
 /*
@@ -388,6 +457,8 @@ export const ASSET_KANSIOT = {
   aarteet: 'assets/aarteet',
   nostot: 'assets/kartat/nostot',
   ihmeet: 'assets/kartat/ihmeet',
+  // Maakuntien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
+  maakunnat: 'assets/kartat/maakunnat',
 };
 
 /**
@@ -400,6 +471,7 @@ export const R2_ASSETIT = {
   aarteet: true,
   nostot: true,
   ihmeet: true,
+  maakunnat: true,
 };
 
 /**
@@ -427,7 +499,8 @@ export function assetOsoite(laji, tiedosto) {
    */
   if (!tiedosto.includes('/')) {
     if (!ASSET_KANSIOT[laji]) return tiedosto;
-    const pääte = laji === 'miniatyyrit' ? 'png' : 'jpg';
+    // Maakuntien pikkukuvat ovat miniatyyrien tyylisiä leikattuja piirroksia (löydös 115), joten sama poikkeus.
+    const pääte = laji === 'miniatyyrit' || laji === 'maakunnat' ? 'png' : 'jpg';
     return `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.${pääte}`;
   }
   const osuma = Object.entries(ASSET_KANSIOT)
@@ -657,21 +730,73 @@ export function peilinKatkoJaljella(laji = 'kuvat') {
   return Math.max(0, (poisAsti[laji] ?? 0) - Date.now());
 }
 
-/** Peili petti: kolmannen virheen jälkeen se laji jätetään hetkeksi väliin. */
+/*
+ * ── KOLME PERÄKKÄISTÄ VIRHETTÄ, EI KOLME KOKO ISTUNNOSSA (28.9.2026) ──
+ *
+ * Laskuri nollautui ennen vain katkon vanhetessa. Kolme hajanaista
+ * verkkovirhettä pitkän pelin aikana — tai yksi Safarin taustakatko —
+ * pysäytti siksi laattojen haun 20 sekunniksi, vaikka peili vastasi
+ * koko ajan. Mitattu WebKit-savukkeella (savuke-laattaaukot, 25 %
+ * katkaistuja hakuja): katkaisija laukesi uudelleen jokaisessa
+ * ikkunassa, ja 62/72 näkyvää laattaa jäi jonoon 70 sekunniksi.
+ *
+ * Nyt onnistunut haku nollaa laskurin (`peiliToimi`), ja katkaisija
+ * laukeaa vain, kun kolme hakua peräkkäin kaatuu EIKÄ peili ole
+ * vastannut kertaakaan PEILIN_TUORE_MS:n aikana — se on peilin vika,
+ * ei yksittäinen yskähdys. Aikaehto tarvitaan, koska katkennut haku
+ * palaa heti mutta onnistunut vasta siirron jälkeen: rinnakkaisten
+ * hakujen virheet kasautuvat jonon alkuun, ja pelkkä nollaus antoi
+ * mitatusti yhä katkon joka ikkunaan (50/72 jonossa).
+ *
+ * TAUSTAKATKO EI OLE PEILIN VIKA: Safari katkaisee haut, kun sivu menee
+ * taustalle tai näyttö lukittuu. Piilossa tulleita virheitä ei lasketa,
+ * ja kun sivu palaa näkyviin, laattojen katko puretaan heti — laatat
+ * (js/pallolaatat.js) uusivat virheensä samassa tapahtumassa.
+ */
+/** Peili vastasi: peräkkäisten virheiden laskuri alkaa alusta. */
+export const PEILIN_TUORE_MS = 5000;
+const viimeisinOk = { kuvat: 0, aanet: 0, laatat: 0 };
+export function peiliToimi(laji = 'kuvat') {
+  if (!LAJIT.includes(laji) || poisAsti[laji]) return;
+  virheita[laji] = 0;
+  viimeisinOk[laji] = Date.now();
+}
+
+const piilossa = () => Boolean(globalThis.document?.hidden);
+
+/** Peili petti: kolmannen peräkkäisen virheen jälkeen se laji jätetään hetkeksi väliin. */
 export function peiliPetti(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || !peiliKaytossa(laji)) return;
+  if (piilossa()) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
+  // Peili vastasi äskettäin: virheet ovat yskähdyksiä, eivät katko.
+  if (Date.now() - viimeisinOk[laji] < PEILIN_TUORE_MS) return;
   poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
   try {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
   } catch { /* ks. yllä */ }
 }
 
+/*
+ * Paluu näkyviin purkaa laattojen katkon. Kuuntelija rekisteröidään
+ * moduulin latautuessa, eli ennen laattakerroksen omaa uusintaa, joka
+ * kuuntelee samaa tapahtumaa.
+ */
+try {
+  globalThis.document?.addEventListener?.('visibilitychange', () => {
+    if (piilossa() || !poisAsti.laatat) return;
+    poisAsti.laatat = 0;
+    virheita.laatat = 0;
+    try { globalThis.sessionStorage?.removeItem(poisAvain('laatat')); } catch { /* ks. yllä */ }
+  });
+} catch { /* ei dokumenttia (testit, worker) */ }
+
 /** Vain testejä varten: nollaa katkaisijan tila. */
 export function nollaaPeili() {
   for (const laji of LAJIT) {
     virheita[laji] = 0;
+    viimeisinOk[laji] = 0;
     poisAsti[laji] = 0;
     try { globalThis.sessionStorage?.removeItem(poisAvain(laji)); } catch { /* ks. yllä */ }
   }

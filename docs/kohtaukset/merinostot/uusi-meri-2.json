@@ -1,0 +1,554 @@
+[
+ {
+  "id": "riianlahti",
+  "maa": "LVA",
+  "nimi": "Riianlahti",
+  "lon": 23.5,
+  "lat": 57.6,
+  "lahdeKoordinaatti": "lahden keskiosa Latvian Kuurinmaan ja Viron Ruhnun saaren välissä",
+  "nappi": "Itämeren sisäinen lahti",
+  "kysymykset": [
+   "Mikä Irbensalmi on?",
+   "Mikä joki tuo eniten vettä Riianlahteen?"
+  ],
+  "teksti": "Riianlahti on Itämeren lahti Latvian ja Viron välissä, ja sen läntistä reunaa rajaa Saarenmaa. Pinta-ala on noin 18 000 neliökilometriä, mutta keskisyvyys vain noin 26 metriä. Suurimpia lahteen laskevia jokia on Väinäjoki eli Daugava, joka päättyy mereen Riiassa. Ankarina talvina koko lahti voi jäätyä umpeen.",
+  "lahde": "en-Wikipedia \"Gulf of Riga\", johdanto-osa ja hydrologia; Store norske leksikon \"Rigabukta\"; fi-Wikipedia \"Riianlahti\" (tarkistettu 16.10.2026).",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Riga",
+    "title": "Gulf of Riga - Wikipedia"
+   },
+   {
+    "url": "https://snl.no/Rigabukta",
+    "title": "Rigabukta - Store norske leksikon"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Riianlahti",
+    "title": "Riianlahti - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Itämeren lahti Latvian ja Viron välissä; lännessä Saarenmaa",
+    "lahde1": "en.wikipedia Gulf of Riga: bay of the Baltic Sea between Latvia and Estonia",
+    "lahde2": "Store norske leksikon: lahti Saarenmaan sisäpuolella Viron ja Latvian välissä",
+    "huom": ""
+   },
+   {
+    "vaite": "Pinta-ala noin 18 000 km2; keskisyvyys noin 26 m",
+    "lahde1": "en.wikipedia: 18 000 km2, keskisyvyys 26 m",
+    "lahde2": "SNL: 17 913 km2, keskisyvyys 26 m; fi.wikipedia: pääaltaan ala 16 330 km2, osa lähteistä 18 000, keskisyvyys 27 m",
+    "huom": "Pinta-ala vaihtelee määritelmän mukaan (16 330-18 000), siksi 'noin 18 000'. Suurin syvyys jätettiin pois: en.wikipedia antaa 54 ja 66 m, fi.wikipedia 60 m, SNL 66 m."
+   },
+   {
+    "vaite": "Väinäjoki (Daugava) laskee lahteen Riiassa ja on suurimpia jokia",
+    "lahde1": "en.wikipedia Gulf of Riga: pääjoet Daugava, Pärnu, Lielupe, Gauja, Salaca; en.wikipedia Daugava: laskee Riianlahteen Riiassa; suomenkielinen nimi Väinäjoki",
+    "lahde2": "SNL: Daugava suurin joki, laskee lahteen Riiassa; fi.wikipedia: Väinäjoki suurimpien jokien joukossa",
+    "huom": ""
+   },
+   {
+    "vaite": "Ankarina talvina koko lahti voi jäätyä",
+    "lahde1": "en.wikipedia: lahti jäätyy talvisin lähes tai kokonaan",
+    "lahde2": "SNL: kylminä talvina koko lahti jään peitossa; fi.wikipedia: ankarina talvina koko lahti voi jäätyä",
+    "huom": ""
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mikä Irbensalmi on?",
+    "vastaus": "Irbensalmi on Riianlahden pääyhteys Itämereen. Se sijaitsee Saarenmaan Sõrven niemimaan ja Latvian Kuurinmaan niemimaan välissä, ja sen leveys on noin 27 kilometriä. Salmen kynnyssyvyys on vain noin 25 metriä. Valtaosa (noin 70–80 %) lahden ja Itämeren vedenvaihdosta kulkee tämän salmen kautta, joten kapea portti pitää lahden melko eristettynä Itämerestä.",
+    "sanoja": 49,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Irbe_Strait",
+      "title": "Irbe Strait - Wikipedia"
+     },
+     {
+      "url": "https://snl.no/Rigabukta",
+      "title": "Rigabukta - Store norske leksikon"
+     },
+     {
+      "url": "https://bg.copernicus.org/preprints/bg-2021-160/bg-2021-160.pdf",
+      "title": "Biogeosciences Discussions bg-2021-160, Gulf of Riga (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Irbensalmi on lahden päänsalmi Sõrven (Saarenmaa) ja Kuurinmaan niemimaan välissä",
+      "lahde1": "en.wikipedia Irbe Strait: pääväylä Riianlahdelta Itämerelle, Sõrven niemimaan ja Kuurinmaan välissä",
+      "lahde2": "SNL: lahdella kaksi aukkoa, suurin on Irbensalmi",
+      "huom": ""
+     },
+     {
+      "vaite": "Leveys noin 25 km; kynnyssyvyys noin 25 m",
+      "lahde1": "en.wikipedia: kapeimmillaan 27 km; Biogeosciences-preprintti (hakutulos): 27 km, kynnyssyvyys 25 m",
+      "lahde2": "SNL: 24 km leveä, kynnyssyvyys 25 m",
+      "huom": "Leveys 24-27 km, siksi 'noin 25'. Preprintin PDF-tiedot vain hakutuloksen tiivistelmästä."
+     },
+     {
+      "vaite": "Suurin osa vedenvaihdosta kulkee Irbensalmen kautta",
+      "lahde1": "Biogeosciences-preprintti (hakutulos): Irbensalmen kautta noin 70-80 % vedenvaihdosta",
+      "lahde2": "SNL: Irbensalmi on kahdesta aukosta suurempi",
+      "huom": "Prosenttilukua ei käytetty, koska se on yhden hakutuloksen lukema. Heikosti tuettu."
+     }
+    ]
+   },
+   {
+    "kysymys": "Mikä joki tuo eniten vettä Riianlahteen?",
+    "vastaus": "Väinäjoki eli Daugava. Se saa alkunsa Venäjän Valdain kukkuloilta, virtaa Valko-Venäjän ja Latvian halki ja laskee lahteen Riiassa. Virtaama on keskimäärin noin 670 kuutiometriä sekunnissa. Joki on yli tuhat kilometriä pitkä ja tuo noin 70 prosenttia lahteen virtaavasta jokivedestä. Yksi joki tuottaa siis suurimman osan lahden makeasta vedestä.",
+    "sanoja": 0,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Daugava",
+      "title": "Daugava - Wikipedia"
+     },
+     {
+      "url": "https://snl.no/Rigabukta",
+      "title": "Rigabukta - Store norske leksikon"
+     },
+     {
+      "url": "https://bg.copernicus.org/preprints/bg-2021-160/bg-2021-160.pdf",
+      "title": "Biogeosciences Discussions bg-2021-160, Gulf of Riga (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Daugava tuo noin 70 % lahden jokivedestä",
+      "lahde1": "SNL: Daugava noin 70 % lahden makean veden tulosta",
+      "lahde2": "Biogeosciences-preprintti (hakutulos): Daugava noin 70 % jokien tuomasta vedestä",
+      "huom": "Preprintti vain hakutuloksen tiivistelmästä."
+     },
+     {
+      "vaite": "Lähde Valdain kukkuloilla Venäjällä, kulkee Valko-Venäjän ja Latvian läpi, suisto Riiassa, yli 1 000 km",
+      "lahde1": "en.wikipedia Daugava: 1 020 km, lähtee Valdain kukkuloilta, Venäjä-Valko-Venäjä-Latvia, laskee Riianlahteen Riiassa",
+      "lahde2": "SNL: Daugava saa alkunsa Valdain kukkuloilta ja laskee lahteen Riiassa",
+      "huom": "Pituus (1 020 km) vain en.wikipediassa, mutta tekstissä vain 'yli tuhat'. Heikosti tuettu."
+     },
+     {
+      "vaite": "Keskivirtaama noin 670 m3/s",
+      "lahde1": "en.wikipedia Daugava: keskimäärin 678 m3/s",
+      "lahde2": "SNL: keskimäärin 660 m3/s",
+      "huom": "Lukujen väli 660-678, siksi noin 670."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "vienanmeri",
+  "maa": "RUS",
+  "nimi": "Vienanmeri",
+  "lon": 38,
+  "lat": 65.5,
+  "lahdeKoordinaatti": "meren keskiosa Solovetskin saarten ja Arkangelin Dvinanlahden välissä",
+  "nappi": "Valkoinen meri pohjoisessa",
+  "kysymykset": [
+   "Mikä Solovetskin saaristo on?",
+   "Mikä Vienanmeren kanava on?"
+  ],
+  "teksti": "Vienanmeri on Barentsinmeren etelään työntyvä lahti Venäjän luoteisrannikolla, ja sitä rajaa vain Venäjä. Pinta-ala on noin 90 000 neliökilometriä, keskisyvyys 60-70 metriä ja syvin kohta yli 300 metriä. Meri jäätyy talveksi, mutta jäänmurtajat pitävät väylät auki. Venäjäksi se on Valkoinen meri.",
+  "lahde": "en-Wikipedia \"White Sea\", johdanto-osa; Store norske leksikon \"Kvitsjøen\"; fi-Wikipedia \"Vienanmeri\" (tarkistettu 16.10.2026).",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/White_Sea",
+    "title": "White Sea - Wikipedia"
+   },
+   {
+    "url": "https://snl.no/Kvitsj%C3%B8en",
+    "title": "Kvitsjøen - Store norske leksikon"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Vienanmeri",
+    "title": "Vienanmeri - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Barentsinmeren lahti Venäjän luoteisrannikolla; vain Venäjä rajaa",
+    "lahde1": "en.wikipedia White Sea: southern inlet of the Barents Sea on Russia's northwest coast",
+    "lahde2": "SNL: lahti Venäjän luoteisrannikolla; fi.wikipedia: lahti, joka työntyy etelään Barentsinmerestä",
+    "huom": ""
+   },
+   {
+    "vaite": "Pinta-ala noin 90 000 km2; keskisyvyys 60-70 m; syvin kohta yli 300 m",
+    "lahde1": "en.wikipedia: 90 000 km2, keskisyvyys 60 m, syvin 340 m",
+    "lahde2": "SNL: noin 90 000 km2, keskisyvyys 67 m, syvin 343 m; fi.wikipedia: 90 000 km2, keskisyvyys 60 m, syvin 330 (340) m",
+    "huom": "Syvimmän kohdan luvut 330-343 m, siksi 'yli 300'."
+   },
+   {
+    "vaite": "Meri jäätyy talveksi, jäänmurtajat pitävät väylät auki; venäjäksi Valkoinen meri",
+    "lahde1": "en.wikipedia: jäätyy loka-marraskuusta touko-kesäkuuhun, jäänmurtajat pitävät kulkukelpoisena; Beloye more",
+    "lahde2": "SNL: jäätön vain touko-lokakuussa, jäänmurtajat pitävät väylät auki; fi.wikipedia: Beloje more = Valkoinen meri, yhteydet auki jäänmurtajilla",
+    "huom": ""
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mikä Solovetskin saaristo on?",
+    "vastaus": "Solovetskin saaristo on Vienanmeren Äänisenlahden suulla sijaitseva saariryhmä, jonka tunnetuin kohde on Solovetskin luostari. Luostari perustettiin jo 1400-luvulla. Vuonna 1923 sen tiloihin perustettiin vankileiri, jota pidetään Gulagin esikuvana ja ensimmäisenä. Saaret erottavat Äänisenlahden Vienanmeren pääaltaasta. Saaristo otettiin Unescon maailmanperintöluetteloon 1992, ja se kertoo sekä pyhiinvaelluksen että pakkotyön historiasta.",
+    "sanoja": 48,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Solovetsky_Islands",
+      "title": "Solovetsky Islands - Wikipedia"
+     },
+     {
+      "url": "https://whc.unesco.org/en/list/632",
+      "title": "Cultural and Historic Ensemble of the Solovetsky Islands - UNESCO (hakutulos)"
+     },
+     {
+      "url": "https://snl.no/Kvitsj%C3%B8en",
+      "title": "Kvitsjøen - Store norske leksikon"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Saaristo Äänisenlahden (Onega Bay) suulla Vienanmerellä",
+      "lahde1": "en.wikipedia Solovetsky Islands: Onega Bay of the White Sea, erottavat lahden pääaltaasta",
+      "lahde2": "SNL: Solovetskin saaret Äänisenlahden suulla",
+      "huom": ""
+     },
+     {
+      "vaite": "Luostari perustettu 1400-luvulla",
+      "lahde1": "en.wikipedia: perustettu 1436",
+      "lahde2": "UNESCO (hakutulos): munkkiluostari perustettu 1400-luvulla",
+      "huom": "UNESCO-sivun suora WebFetch antoi 403; tieto hakutuloksen tiivistelmästä. Vuosi 1436 jätettiin pois (yksi lähde)."
+     },
+     {
+      "vaite": "Vankileiri 1923; Gulagin ensimmäinen",
+      "lahde1": "SNL: luostari muutettiin vankileiriksi 1923, Gulag-järjestelmän ensimmäinen leiri",
+      "lahde2": "en.wikipedia: 1923 ensimmäinen Gulag-laitos; UNESCO (hakutulos): leiri 1923-1939",
+      "huom": "en.wikipedian runko-osa antaa myös vuoden 1921, joten päivämäärä on lähteissä ristiriitainen; 1923 on kolmen lähteen yhteinen luku."
+     },
+     {
+      "vaite": "Unescon maailmanperintö 1992",
+      "lahde1": "en.wikipedia: merkitty maailmanperintöluetteloon 1992",
+      "lahde2": "UNESCO (hakutulos): inscribed 1992",
+      "huom": ""
+     }
+    ]
+   },
+   {
+    "kysymys": "Mikä Vienanmeren kanava on?",
+    "vastaus": "Vienanmeri-Itämeri-kanava eli Belomorkanal on 227 kilometriä pitkä vesiväylä, joka yhdistää Vienanmeren Äänisjärveen ja sitä kautta Itämereen. Vangit kaivoivat sen vuosina 1931-1933, ja kanava avattiin elokuussa 1933. Virallisten lukujen mukaan yli 12 000 vankia kuoli, arvioiden mukaan jopa 25 000. Väylä on vain noin 3,5 metriä syvä, joten merialukset eivät mahdu siihen. Kanava kertoo Stalinin ajan pakkotyöstä.",
+    "sanoja": 56,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/White_Sea%E2%80%93Baltic_Canal",
+      "title": "White Sea-Baltic Canal - Wikipedia"
+     },
+     {
+      "url": "https://snl.no/Kvitsj%C3%B8en",
+      "title": "Kvitsjøen - Store norske leksikon"
+     },
+     {
+      "url": "https://www.rferl.org/a/25064519.html",
+      "title": "White Sea-Baltic Canal - RFE/RL (hakutulos)"
+     },
+     {
+      "url": "https://www.ebsco.com/research-starters/history/soviets-open-white-sea-baltic-canal",
+      "title": "Soviets open White Sea-Baltic Canal - EBSCO Research Starters (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Pituus 227 km; rakennettu 1931-1933, avattu elokuussa 1933",
+      "lahde1": "en.wikipedia: 227 km, 1931-1933, ensimmäinen käyttö 2.8.1933",
+      "lahde2": "SNL: 227 km; RFE/RL (hakutulos): 227 km, rakennettu 20 kuukaudessa 1931-1933",
+      "huom": ""
+     },
+     {
+      "vaite": "Vangit rakensivat; tuhansia kuoli",
+      "lahde1": "en.wikipedia: 12 000-25 000 kuollutta",
+      "lahde2": "SNL: Gulag-vangit rakensivat, valtavat ihmishenkien menetykset; RFE/RL (hakutulos): 8 700 - yli 25 000",
+      "huom": "Kuolleiden määrä vaihtelee 8 700 - 25 000+, siksi pelkkä 'tuhansia'."
+     },
+     {
+      "vaite": "Väylän syvyys noin 3,5 m, liian matala merialuksille; yhdistää Vienanmeren Äänisjärveen ja sitä kautta Itämereen",
+      "lahde1": "en.wikipedia: kulkusyvyys 3,5 m, liian matala useimmille merialuksille; yhteys Äänisjärveen, Laatokan ja Nevan kautta Itämerelle",
+      "lahde2": "EBSCO (hakutulos): käyttöarvo rajallinen matalan syvyyden vuoksi; SNL ja fi.wikipedia: kanava yhdistää meren Itämereen Laatokan ja Äänisen kautta",
+      "huom": "Tarkka 3,5 m vain en.wikipediassa (1970-luvulla nostettu 4 m); heikosti tuettu, voi pudottaa 'noin 3,5 metriä'."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "keltienmeri",
+  "maa": "IRL",
+  "nimi": "Keltienmeri",
+  "lon": -7,
+  "lat": 50.8,
+  "lahdeKoordinaatti": "ulappa Irlannin eteläpuolella, Cornwallin ja Bretagnen välillä",
+  "nappi": "Meri Irlannin eteläpuolella",
+  "kysymykset": [
+   "Mitä Lusitanialle tapahtui vuonna 1915?",
+   "Mikä Fastnet Rock on?"
+  ],
+  "teksti": "Keltienmeri on Atlantin osa Irlannin eteläpuolella, ja sitä rajaavat Irlanti, Britannia ja Ranska. Pinta-ala on noin 300 000 neliökilometriä, ja meren pohja on osa Euroopan mannerjalustaa. Nimen ehdotti tutkija E. W. L. Holt vuonna 1921 Dublinin kalastusasiantuntijoiden kokouksessa; aiemmin pohjoisosaa pidettiin St. George's Channelin osana.",
+  "lahde": "en-Wikipedia \"Celtic Sea\", johdanto-osa ja nimiosio; WorldAtlas \"Celtic Sea\"; AM Nautical \"10 Major Facts About the Celtic Sea\" (tarkistettu 16.10.2026).",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Celtic_Sea",
+    "title": "Celtic Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.worldatlas.com/seas/celtic-sea.html",
+    "title": "Celtic Sea - WorldAtlas"
+   },
+   {
+    "url": "https://www.amnautical.com/blogs/the-mariners-blog/celtic-sea-facts",
+    "title": "10 Major Facts About the Celtic Sea - AM Nautical (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Irlannin eteläpuolella; rajamaat Irlanti, Britannia, Ranska",
+    "lahde1": "en.wikipedia Celtic Sea: altaan maat Irlanti, Yhdistynyt kuningaskunta, Ranska",
+    "lahde2": "AM Nautical: Irlanti, Britannia ja Ranska rajaavat; WorldAtlas: merialue Irlannin tasavallan eteläpuolella, Bretagne, Cornwall, Wales",
+    "huom": "Etelä- ja länsiraja on epätarkka (WorldAtlas), siksi sijainti annettu yleisesti."
+   },
+   {
+    "vaite": "Pinta-ala noin 300 000 km2; pohja on osa Euroopan mannerjalustaa",
+    "lahde1": "en.wikipedia: 300 000 km2, Celtic Shelf osa Euroopan mannerjalustaa",
+    "lahde2": "WorldAtlas: 300 000 km2, Celtic Shelf osa mannerjalustaa; AM Nautical: noin 300 000 km2",
+    "huom": ""
+   },
+   {
+    "vaite": "Nimen ehdotti E. W. L. Holt 1921 Dublinin kokouksessa; pohjoisosa kuului ennen St. George's Channeliin",
+    "lahde1": "en.wikipedia: Holt ehdotti nimeä 1921 Dublinin kalastusasiantuntijoiden kokouksessa; pohjoisosa St. George's Channelia",
+    "lahde2": "AM Nautical (hakutulos): Holt 1921, Dublin, kokous Britannian, Ranskan ja Irlannin asiantuntijoita, pohjoisosa St. George's Channelia; WorldAtlas: Holt 1921",
+    "huom": "WorldAtlas ja AM Nautical toistavat osin Wikipedian sisältöä."
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mitä Lusitanialle tapahtui vuonna 1915?",
+    "vastaus": "Brittiläisen matkustajalaivan RMS Lusitanian upotti saksalainen sukellusvene U-20 7. toukokuuta 1915 Old Head of Kinsalen edustalla Irlannin etelärannikolla. Laivalla oli noin 1 960 ihmistä. Se upposi alle 20 minuutissa, ja noin 1 200 kuoli, heistä 128 amerikkalaisia. Tapaus järkytti maailmaa ja vaikutti siihen, että Yhdysvallat liittyi ensimmäiseen maailmansotaan 1917.",
+    "sanoja": 0,
+    "lahteet": [
+     {
+      "url": "https://www.rmg.co.uk/stories/maritime-history/sinking-lusitania",
+      "title": "The Sinking of the Lusitania - Royal Museums Greenwich"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Sinking_of_the_RMS_Lusitania",
+      "title": "Sinking of the RMS Lusitania - Wikipedia"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "U-20 upotti laivan 7.5.1915 Old Head of Kinsalen edustalla",
+      "lahde1": "RMG: 7.5.1915, Old Head of Kinsalen edustalla, U-20",
+      "lahde2": "en.wikipedia: 7.5.1915, 11,5 meripeninkulmaa Old Head of Kinsalesta, U-20",
+      "huom": "Etäisyys rannasta vaihtelee (RMG 15 mailia, Wikipedia 11,5 mpk), joten sitä ei mainittu."
+     },
+     {
+      "vaite": "Upposi alle 20 minuutissa; noin 1 200 kuollutta, 128 amerikkalaista",
+      "lahde1": "RMG: alle 20 minuuttia, 1 198 kuollutta, 128 amerikkalaista",
+      "lahde2": "en.wikipedia: 18 minuuttia, 1 197 kuollutta",
+      "huom": "Kuolleiden luku 1 197-1 198, siksi 'noin 1 200'. 128 amerikkalaista RMG:n mukaan ja Wikipedia-peilin hakutuloksessa."
+     },
+     {
+      "vaite": "Vaikutti Yhdysvaltain sotaan liittymiseen 1917",
+      "lahde1": "RMG: helped draw the US into the First World War in 1917",
+      "lahde2": "Wikipedia-peilin hakutulos: contributed to American entry into the war two years later",
+      "huom": "Muotoiltu varovasti 'vaikutti'."
+     },
+     {
+      "vaite": "Laivalla noin 1 960 ihmistä",
+      "lahde1": "RMG: 1 959 ihmistä",
+      "lahde2": "en.wikipedia: 1 960 ihmistä",
+      "huom": ""
+     }
+    ]
+   },
+   {
+    "kysymys": "Mikä Fastnet Rock on?",
+    "vastaus": "Fastnet Rock on pieni kallio Irlannin lounaisrannikon edustalla, noin 6-7 kilometriä Cape Clearin saaresta lounaaseen. Sen päällä on Irlannin korkein majakka, noin 54 metriä, joka valmistui 1904. Kallion lempinimi on Irlannin kyynel, koska se oli viimeinen osa Irlantia, jonka 1800-luvun siirtolaiset Amerikkaan matkatessaan näkivät. Ensimmäinen majakka syttyi kalliolla 1. tammikuuta 1854.",
+    "sanoja": 0,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Fastnet_Lighthouse",
+      "title": "Fastnet Lighthouse - Wikipedia"
+     },
+     {
+      "url": "https://www.boatnews.com/story/31664/fastnet-lighthouse-irelands-highest-stone-lighthouse",
+      "title": "The Fastnet Lighthouse, the highest stone lighthouse in Ireland - Boatnews"
+     },
+     {
+      "url": "https://lighthousedigest.com/Digest/database/uniquelighthouse.cfm?value=1206",
+      "title": "Fastnet Lighthouse - Lighthouse Digest (hakutulos)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "6-7 km Cape Clearista lounaaseen",
+      "lahde1": "en.wikipedia: 6,5 km lounaaseen Cape Clearista",
+      "lahde2": "Boatnews: 7 km lounaaseen Cape Clearista (toisessa kohdassa 6,5 km)",
+      "huom": "Haarukka 6-7 km."
+     },
+     {
+      "vaite": "Irlannin korkein majakka; noin 54 m; valmistui 1904",
+      "lahde1": "en.wikipedia: 54 m (kivitorni 45 m), tallest in Ireland, otettiin käyttöön 27.6.1904",
+      "lahde2": "Boatnews: highest and widest stone lighthouse in Ireland and Great Britain, valmis 1904; Lighthouse Digest / Cruising World (hakutulos): noin 175-176 jalkaa",
+      "huom": "Korkeus riippuu mittaustavasta (torni 45 m, lyhdyn kanssa 54 m); Boatnews ei anna korkeutta. Suurimmat luvut hakutuloksista. Heikosti tuettu."
+     },
+     {
+      "vaite": "Lempinimi Irlannin kyynel: viimeinen osa Irlantia, jonka siirtolaiset näkivät",
+      "lahde1": "en.wikipedia: sometimes known as 'Ireland's Teardrop', last part of Ireland some 19th-century emigrants saw",
+      "lahde2": "Boatnews: 'Teardrop of Ireland'",
+      "huom": "Boatnews ei toista siirtolaisselitystä; hakutuloksissa (Southern Star, Afloat) selitys sama. Afloatin WebFetch antoi 403."
+     },
+     {
+      "vaite": "Ensimmäinen majakka syttyi 1.1.1854",
+      "lahde1": "en.wikipedia: first produced a light on 1 January 1854",
+      "lahde2": "Boatnews: lit for the first time on January 1, 1854",
+      "huom": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "lioninlahti",
+  "maa": "FRA",
+  "nimi": "Lioninlahti",
+  "lon": 4,
+  "lat": 42.8,
+  "lahdeKoordinaatti": "lahden ulappa Languedocin rannikon edustalla, Sètesta etelään",
+  "nappi": "Mistralin ja tramontanen lahti",
+  "kysymykset": [
+   "Mikä on mistral-tuuli?",
+   "Mikä Camargue on?"
+  ],
+  "teksti": "Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla; se ulottuu lännessä Espanjan Katalonian rannikolle ja idässä Toulonin tienoille. Alue tunnetaan kylmistä, puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.",
+  "lahde": "en-Wikipedia \"Gulf of Lion\", johdanto-osa ja Etymology-osio; Store norske leksikon \"Løvebukta\" (tarkistettu 16.10.2026).",
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Lion",
+    "title": "Gulf of Lion - Wikipedia"
+   },
+   {
+    "url": "https://snl.no/Lionbukta",
+    "title": "Løvebukta - Store norske leksikon"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Mistral_(wind)",
+    "title": "Mistral (wind) - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Välimeren lahti Ranskan etelärannikolla, Pyreneiltä ja Espanjan rajalta Rhônen suistoon",
+    "lahde1": "SNL: Rhônen suistosta idässä Pyreneille ja Espanjan rajalle lännessä",
+    "lahde2": "en.wikipedia Gulf of Lion: Ranska ja Espanja (Katalonia), Begurista Toulonin suuntaan",
+    "huom": "Lähteet antavat lahden rajauksen eri laajuisena (en.wikipedia ulottaa Katalonian rannikolle ja Toulonin suuntaan), PT 16.10.: teksti korjattu en.wikipedian rajaukseen (Begur–Toulon)."
+   },
+   {
+    "vaite": "Tunnettu kylmistä puuskaisista tuulista mistralista ja tramontanesta",
+    "lahde1": "en.wikipedia Gulf of Lion: cold, gusty winds Mistral and Tramontane",
+    "lahde2": "SNL: voimakkaat rannikolta merelle käyvät tuulet (mistral); en.wikipedia Mistral: Languedocissa mistral ja tramontane usein puhaltavat yhdessä lahdelle",
+    "huom": "SNL mainitsee vain mistralin; tramontane perustuu en.wikipedian kahteen artikkeliin. Heikosti tuettu."
+   },
+   {
+    "vaite": "Nimi mainitaan keskiajalla; viittaa luultavasti tuulten vaaraan",
+    "lahde1": "en.wikipedia: sinus Leonis / mare Leonis 1200-luvulle mennessä, luultavasti viittaa äkillisten rajujen tuulten leijonamaiseen vaaraan",
+    "lahde2": "SNL: nimi luultavasti keskiajalta, saattaa liittyä kovaan merenkäyntiin ja tuuliin",
+    "huom": "Nimen alkuperä on arvelu; teksti sanoo 'arvellaan'."
+   }
+  ],
+  "vastaukset": [
+   {
+    "kysymys": "Mikä on mistral-tuuli?",
+    "vastaus": "Mistral on kylmä, kuiva luoteistuuli, joka puhaltaa Etelä-Ranskasta Lioninlahdelle. Rhônen laaksossa se voi ylittää 90 kilometriä tunnissa. Kerrallaan se voi kestää muutamasta tunnista yli viikkoon, ja se on voimakkaimmillaan talvella ja keväällä. Se kirkastaa taivaan ja antaa Provencelle aurinkoisen ilmaston. Mistral kertoo, miksi lahden nimen arvellaan viittaavan sen äkillisiin, leijonamaisiin tuuliin.",
+    "sanoja": 0,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Mistral_(wind)",
+      "title": "Mistral (wind) - Wikipedia"
+     },
+     {
+      "url": "https://snl.no/mistral",
+      "title": "Mistral - Store norske leksikon"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Gulf_of_Lion",
+      "title": "Gulf of Lion - Wikipedia"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Kylmä, kuiva tuuli Etelä-Ranskasta Lioninlahdelle",
+      "lahde1": "en.wikipedia Mistral: strong, cold northwesterly wind from southern France into the Gulf of Lion",
+      "lahde2": "SNL: kuiva ja kylmä pohjoistuuli Etelä-Ranskassa ja Välimerellä",
+      "huom": "SNL sanoo 'pohjoistuuli', Wikipedia 'luoteistuuli'; 'luoteistuuli' pidetty (Wikipedia), heikompi tuki."
+     },
+     {
+      "vaite": "Ylittää 90 km/h Rhônen laaksossa",
+      "lahde1": "en.wikipedia Mistral: more than 90 km/h, particularly in the Rhône Valley",
+      "lahde2": "SNL: voi ylittää 30 m/s Rhônen laaksossa (noin 108 km/h)",
+      "huom": ""
+     },
+     {
+      "vaite": "Kestää tunneista yli viikkoon; voimakkain talvella ja keväällä",
+      "lahde1": "SNL: muutamasta tunnista yli viikkoon, voimakkain talvella ja keväällä",
+      "lahde2": "en.wikipedia Mistral: yhdestä kahteen päivään, usein useita päiviä, joskus yli viikon; yleisin talvella ja keväällä",
+      "huom": ""
+     },
+     {
+      "vaite": "Kirkastaa taivaan, antaa Provencelle aurinkoisen ilmaston",
+      "lahde1": "en.wikipedia Mistral: clears the sky quickly, helps give Provence its sunny climate",
+      "lahde2": "SNL: tuulella vaikutuksia ilmastoon ja kulttuuriin Rhônen alalaaksossa",
+      "huom": "SNL ei mainitse Provencen aurinkoisuutta erikseen; heikosti tuettu."
+     }
+    ]
+   },
+   {
+    "kysymys": "Mikä Camargue on?",
+    "vastaus": "Camargue on Rhônen suistoalue Etelä-Ranskassa, Grand Rhônen ja Petit Rhônen haarojen välissä, ja sen pinta-ala on yli 900 neliökilometriä. Alue on vanhaa laidunmaata, jossa kasvatetaan hevosia ja härkiä, ja luonnonsuojelualueella elää runsaasti lintuja, kuten flamingoja. Pohjoisosassa viljellään riisiä ja viiniä. Camargue kertoo, mitä Rhône rakentaa Lioninlahden laidalle: laajan, luonnonvaraisen suiston.",
+    "sanoja": 0,
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Camargue",
+      "title": "Camargue - Wikipedia"
+     },
+     {
+      "url": "https://snl.no/Camargue",
+      "title": "Camargue - Store norske leksikon"
+     },
+     {
+      "url": "https://lex.dk/Camargue",
+      "title": "Camargue - Lex.dk (Den Store Danske)"
+     }
+    ],
+    "tarkistus": [
+     {
+      "vaite": "Rhônen suisto Grand Rhônen ja Petit Rhônen välissä, Etelä-Ranskassa",
+      "lahde1": "en.wikipedia Camargue: Mediterranean ja Rhônen suiston kaksi haaraa, Grand ja Petit Rhône",
+      "lahde2": "SNL ja Lex.dk: Grand ja Petit Rhônen välissä Rhônen suistossa",
+      "huom": ""
+     },
+     {
+      "vaite": "Pinta-ala yli 900 km2",
+      "lahde1": "en.wikipedia: yli 930 km2",
+      "lahde2": "Lex.dk: 950 km2",
+      "huom": "Lukujen väli 930-950, siksi 'yli 900'."
+     },
+     {
+      "vaite": "Hevosten ja härkien kasvatusta; luonnonsuojelualue; runsas linnusto, flamingot",
+      "lahde1": "SNL: härkien ja hevosten kasvatusta, suojelualueella runsas linnusto kuten flamingot",
+      "lahde2": "Lex.dk: hevosten ja härkien kasvatusta, luonnonsuojelualue, flamingot ja haikarat; en.wikipedia: flamingojen elinympäristö",
+      "huom": "'Vanhaa laidunmaata' perustuu Lex.dk:n ja SNL:n kuvaukseen entisestä laidunalueesta."
+     },
+     {
+      "vaite": "Pohjoisosassa viljellään riisiä ja viiniä",
+      "lahde1": "en.wikipedia Camargue: riisi, viljat ja viinirypäleet pohjoisen pääsatoja",
+      "lahde2": "Lex.dk: pohjoisessa viljellään viiniä, riisiä, hedelmiä ja maissia",
+      "huom": ""
+     }
+    ]
+   }
+  ]
+ }
+]

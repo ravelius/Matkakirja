@@ -14,6 +14,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.argv[2] ?? process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-etusivu';
@@ -33,10 +34,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8733, r));
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 const LEVEYDET = [
   { nimi: '390', width: 390, height: 844 },

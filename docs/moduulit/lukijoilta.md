@@ -47,9 +47,9 @@ Reitit:
 | Reitti | Kuka | Mitä |
 | --- | --- | --- |
 | `POST /laheta` | pelaaja (CORS: pelin origin + localhost) | multipart-lähetys ämpäriin |
-| `GET /lista?avain=` | omistaja | metat uusin ensin |
-| `GET /kohde/<polku>?avain=` | omistaja | yksittäinen kuva |
-| `PUT /kommentti?avain=` | kuratointi | kommentti, tila, palkkio, lunastuskoodi |
+| `GET /lista` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | metat uusin ensin |
+| `GET /kohde/<polku>` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | yksittäinen kuva |
+| `PUT /kommentti` (avain otsakkeessa `x-matkakirja-avain`) | kuratointi | kommentti, tila, palkkio, lunastuskoodi |
 
 Portit lähetyksessä: origin-tarkistus, hunajapurkkikenttä (`hunaja`),
 enintään 3 kuvaa, 8 Mt/kuva, vain jpeg/png/webp/heic, ja pakollinen
@@ -171,10 +171,10 @@ pelaaja  ─GET /tekija/<id>───▶ tekijäsivu kuvan lähderiviltä
 
 | Reitti | Kuka | Mitä |
 | --- | --- | --- |
-| `PUT /pro-tuottaja?avain=` | omistaja | luo tuottajan, palauttaa PYSYVÄN koodin |
-| `GET /pro-lista?avain=` | omistaja | kaikki tuottajat koodeineen ja tiloineen |
-| `GET /pro-kuva/<id>?avain=` | omistaja | odottavan profiilin kuva |
-| `PUT /pro-hyvaksy?avain=` | omistaja | `odottaa` → `julkaistu` \| `hylatty` |
+| `PUT /pro-tuottaja` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | luo tuottajan, palauttaa PYSYVÄN koodin |
+| `GET /pro-lista` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | kaikki tuottajat koodeineen ja tiloineen |
+| `GET /pro-kuva/<id>` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | odottavan profiilin kuva |
+| `PUT /pro-hyvaksy` (avain otsakkeessa `x-matkakirja-avain`) | omistaja | `odottaa` → `julkaistu` \| `hylatty` |
 | `POST /pro-tarkista` | tuottaja | onko sähköposti + koodi voimassa |
 | `POST /pro-profiili` | tuottaja | kuva (1 kpl, 4 Mt), esittely (600 mrk), 1–3 linkkiä |
 | `GET /tekija/<id>` | pelaaja | vain `julkaistu`-tilainen profiili |

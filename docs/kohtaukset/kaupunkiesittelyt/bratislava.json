@@ -1,0 +1,100 @@
+[
+  {
+    "id": "bratislava",
+    "esittely": "Kartan alue on Bratislavan vanha kaupunki Tonavan varrella. Pyhän Martinin tuomiokirkossa kruunattiin Unkarin hallitsijoita vuosina 1563–1830, ja kirkon torni on 85 metriä korkea. Bratislavan linna paloi 1811 ja kunnostettiin 1950- ja 1960-luvuilla.\n\nMikaelin portti on keskiaikaisista kaupunginporteista ainoa säilynyt, ja sen barokkimuoto on 1750-luvulta. Ödön Lechnerin suunnittelema Sininen kirkko valmistui 1913 ja on omistettu Pyhälle Elisabet Unkarilaiselle. Grassalkovichin palatsi valmistui 1760, ja se on ollut Slovakian presidentin virka-asunto vuodesta 1996. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 624,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava",
+        "title": "Wikipedia: St Martin's Cathedral, Bratislava",
+        "tukee": "kruunajaiskirkko 1563-1830; torni 85 m; vihitty 1452"
+      },
+      {
+        "url": "https://www.visitbratislava.com/places/st-martins-cathedral/",
+        "title": "Visit Bratislava: St Martin's Cathedral",
+        "tukee": "1563-1830 kruunajaiskirkko; 85 m torni"
+      },
+      {
+        "url": "https://www.britannica.com/place/Bratislava",
+        "title": "Britannica: Bratislava (hakutulos)",
+        "tukee": "kaupunki Tonavan varrella, linna joen yllä; linna tuhoutui tulipalossa 1811; kruunajaiset 1563-1830 (tiivistelmä)"
+      },
+      {
+        "url": "https://new.visitbratislava.com/sights-attractions/hviezdoslavovo-square/",
+        "title": "Visit Bratislava: Hviezdoslavovo Square",
+        "tukee": "Hviezdoslavin aukio ulottuu Kansallisteatterilta Tonavalle (kaupunki Tonavan varrella)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Bratislava_Castle",
+        "title": "Wikipedia: Bratislava Castle",
+        "tukee": "tulipalo 28.5.1811; tutkimus 1953, restaurointi alkoi 1957, infolaatikko 1956-1964"
+      },
+      {
+        "url": "https://castles.sk/1.html",
+        "title": "castles.sk: Bratislava castle",
+        "tukee": "paloi 1811, jäi raunioksi; kunnostus 1956-1968 (historiaosassa 1953)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate",
+        "title": "Wikipedia: Michael's Gate",
+        "tukee": "ainoa säilynyt keskiaikaisen linnoituksen kaupunginportti; barokkimuoto 1758 (Mikaelin patsas)"
+      },
+      {
+        "url": "https://hunektar.sk/en/records/mihaly-kapu",
+        "title": "Hunektar: Mihály kapu",
+        "tukee": "ainoa ehjänä säilynyt keskiaikaisen linnoitusjärjestelmän portti; torni rakennettu uudelleen 1753-1758"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Blue_Church",
+        "title": "Wikipedia: Blue Church",
+        "tukee": "Ödön Lechner; rakennettu 1908-1913; pyhitetty Elisabet Unkarilaiselle"
+      },
+      {
+        "url": "https://www.esn.sk/node/187",
+        "title": "esn.sk: Blue Church",
+        "tukee": "rakennettu 1909-1913, Lechnerin suunnitelmat; pyhitetty Elisabet Unkarilaiselle"
+      },
+      {
+        "url": "https://www.visitbratislava.com/places/blue-church/",
+        "title": "Visit Bratislava: Blue Church",
+        "tukee": "vihitty 11.10.1913; Church of St Elizabeth of Hungary"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace",
+        "title": "Wikipedia: Grassalkovich Palace",
+        "tukee": "valmis 1760; presidentin residenssi 30.9.1996 alkaen"
+      },
+      {
+        "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/",
+        "title": "Visit Bratislava: Presidential Palace and Gardens",
+        "tukee": "palatsi valmistui 1760"
+      },
+      {
+        "url": "http://www.prezident.sk/en/presidential-palace/",
+        "title": "Slovakian presidentin kanslia: Seat of the President",
+        "tukee": "Slovakian presidentin virallinen asuinpaikka syyskuusta 1996"
+      }
+    ],
+    "pudotetut": [
+      "Kruunattujen määrä: Wikipedia 11 kuningasta/kuningatarta + 8 puolisoa vs. Visit Bratislava 10 kuningasta, 1 kuningatar, 7 puolisoa -> luvut jätetty pois, vain vuodet 1563-1830",
+      "Linnan kunnostuksen tarkat vuodet: 1953/1956/1957 alku, 1964/1968 loppu lähteittäin -> muotoiltu '1950- ja 1960-luvuilla'",
+      "Mikaelin tornin korkeus 51 m: Wikipedia 'torni 51 m' vs. Hunektar 'patsas 51 metrin korkeudessa kypärän päällä' -> pudotettu",
+      "Mikaelin portin synty (noin 1300 / 1300-luvun puoliväli / 1300-1400-luvun vaihde): lähteet ristiriidassa -> pudotettu; vanhan tekstin 'tornia korjattiin 1758' muotoiltu 'barokkimuoto 1750-luvulta' (1753-1758)",
+      "Vanha raatihuone 'Slovakian vanhin': vain Wikipedia (+ hakutulosyhteenvedot), Visit Bratislava ei sano; torni 1370 vs. 1200-luvun loppu vs. 1288/1387 -> pudotettu kokonaan",
+      "Hviezdoslavin aukio nimetty runoilija Pavol Országh Hviezdoslavin mukaan: vahvistettu (Wikipedia + Visit Bratislava), jätetty pois tilan vuoksi; aukion pituutta ei löytynyt",
+      "Sinisen kirkon vihkiäispäivä 11.10.1913: vain Visit Bratislava (ja hakutuloksen toistot) -> vain vuosi 1913; Wikipedian aika 1908-1913 vs. esn.sk 1909-1913 -> ei rakennusaikaa",
+      "Sinisen kirkon torni 36,8 m: vahvistettu (Wikipedia, esn.sk, Visit Bratislava), jätetty pois tilan vuoksi",
+      "Tuomiokirkon vihkiminen 1452: vahvistettu (Wikipedia + Visit Bratislava), jätetty pois tilan vuoksi",
+      "Vanhan tekstin 'Unkarin kruunajaiskaupunki' ja 'Tonavan rannalla, linnamäen juurella': muotoiltu 'Tonavan varrella'; 'linnamäen juurella' pudotettu (ei tarkistettu)",
+      "Grassalkovichin palatsin arkkitehti (Mayerhoffer vs. Hillebrandt): lähteet ristiriidassa -> pudotettu"
+    ],
+    "ristiriidat": [
+      "Kruunattujen määrä: 11+8 (Wikipedia) vs. 10+1+7 (Visit Bratislava) -> ei mainita",
+      "Linnan kunnostus: 1953/1956/1957 -> 1964/1968 -> käytetty vuosikymmeniä",
+      "Mikaelin portin synty ja tornin 51 m (torni vai patsas) -> ei mainita",
+      "Sinisen kirkon rakennusaika 1908-1913 (Wikipedia, citation needed) vs. 1909-1913 (esn.sk) -> käytetty vain valmistumisvuotta 1913; Visit Bratislavan sivulla arkkitehti virheellisesti 'Edmund Lechner' -> nimi otettu Wikipediasta ja esn.sk:sta"
+    ],
+    "muutos_sk": "Säilytetty: kruunajaiset 1563-1830, linnan palo 1811 ja kunnostus 1900-luvun jälkipuoliskolla (nyt 1950- ja 1960-luvuilla), Mikaelin portti ainoana säilyneenä porttina (1750-luvun barokkimuoto), Sininen kirkko 1913, Grassalkovichin palatsi presidentin virka-asuntona 1996. Lisätty: tuomiokirkon torni 85 m, Lechner ja Elisabet Unkarilainen, palatsin valmistuminen 1760. Poistettu: vanha raatihuone, Hviezdoslavin aukio, 'linnamäen juurella' ja 'ydin/idässä/pohjoisessa' -sijaintimaininnat (ei tarkistettu), '1758 korjattiin'."
+  }
+]

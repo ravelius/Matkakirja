@@ -1,0 +1,405 @@
+{
+ "kuvaus": "Matkakirjan äänipankki v1 (Pelikoodari 5.10.2026, omistajan päätös 13.1x): ElevenLabs Voice Design v3, yhteinen pohja 'Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise.', ei kieli-/aksenttimerkintää. Näytteet eleven_v4. Käyttöpaikat viittaavat tunnuksiin; sama ääni ei puhu kahta henkilöä samassa paikassa. Kertoja, Pulu ja isoisä eivät kuulu pankkiin.",
+ "aanet": {
+  "mies-50-jamakka-hajamielinen": {
+   "voice_id": "MZvBk0qJWqOzeRt8hTt6",
+   "generated_voice_id": "MZvBk0qJWqOzeRt8hTt6",
+   "kuvaus": "Male, 45-55 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: castle bailiff used to command, now distracted and worried about something he lost. Emotion: preoccupied, slightly flustered. Firm full baritone timbre, natural pacing with small hesitations.",
+   "selko": "jämäkkä johtaja, nyt hajamielinen ja huolestunut",
+   "sukupuoli": "mies",
+   "ika": 50,
+   "kayttopaikat": [
+    "olavinlinna:vouti"
+   ],
+   "luotu": "2026-10-05T13:17:00",
+   "nayte": {
+    "teksti": "Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.7
+   },
+   "hyvaksytty": true
+  },
+  "mies-55-karhea-tuulinen": {
+   "voice_id": "wocshSIDGCqslHrj4bVd",
+   "generated_voice_id": "wocshSIDGCqslHrj4bVd",
+   "kuvaus": "Male, 50-60 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: weathered boatman who has rowed in wind and rain all his life, dry humour. Emotion: wry, tired but good-natured. Rough, slightly hoarse low-mid timbre, unhurried pacing.",
+   "selko": "karhea, tuulen ja veden parkitsema työmies, kuiva huumori",
+   "sukupuoli": "mies",
+   "ika": 55,
+   "kayttopaikat": [
+    "olavinlinna:soutaja"
+   ],
+   "luotu": "2026-10-05T13:17:44",
+   "nayte": {
+    "teksti": "Kaikki tulee vesitse: kivi, kalkki, kala ja vouti. Ilman venettä tämä linna olisi pelkkä kivikasa saaressa.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-25-reipas-avulias": {
+   "voice_id": "M5M01S43Sb00tnajCRvZ",
+   "generated_voice_id": "M5M01S43Sb00tnajCRvZ",
+   "kuvaus": "Male, 20-30 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: young farmhand and servant, eager, helpful and respectful. Emotion: earnest, slightly out of breath from work. Clear bright mid timbre, quick natural pacing.",
+   "selko": "nuori, reipas ja avulias työmies, kunnioittava",
+   "sukupuoli": "mies",
+   "ika": 25,
+   "kayttopaikat": [
+    "olavinlinna:renki"
+   ],
+   "luotu": "2026-10-05T13:18:14",
+   "nayte": {
+    "teksti": "Isoisä souti kiveä, kun linnaa rakennettiin. Proomuissa istui toista kymmentä haarniskamiestä vahdissa.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-55-tarkka-rauhallinen": {
+   "voice_id": "ouCQQM9R2uEh1TugPh4T",
+   "generated_voice_id": "ouCQQM9R2uEh1TugPh4T",
+   "kuvaus": "Male, 50-60 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: meticulous storekeeper who counts every item, calm authority. Emotion: composed, slightly stern. Rich warm low timbre, measured deliberate pacing.",
+   "selko": "tarkka ja rauhallinen kirjanpitäjä, arvovaltainen",
+   "sukupuoli": "mies",
+   "ika": 55,
+   "kayttopaikat": [
+    "olavinlinna:hoitaja"
+   ],
+   "luotu": "2026-10-05T13:18:47",
+   "nayte": {
+    "teksti": "Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan – muuten vouti kysyy.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hyvaksytty": true
+  },
+  "mies-40-kiireinen-virkailija": {
+   "voice_id": "RgBrizTAuszgl4fIyXzH",
+   "generated_voice_id": "RgBrizTAuszgl4fIyXzH",
+   "kuvaus": "Male, 35-45 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: hurried clerk with letters to deliver, fussy and a little sarcastic. Emotion: harried, mildly exasperated. Thin precise nasal-free mid timbre, fast clipped pacing.",
+   "selko": "kiireinen ja hieman kärttyisä virkailija, nopea puhe",
+   "sukupuoli": "mies",
+   "ika": 40,
+   "kayttopaikat": [
+    "olavinlinna:kirjuri"
+   ],
+   "luotu": "2026-10-05T13:19:16",
+   "nayte": {
+    "teksti": "Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-45-jamakka-karhea": {
+   "voice_id": "tueYPmNkZixd2PUS7Wgb",
+   "generated_voice_id": "tueYPmNkZixd2PUS7Wgb",
+   "kuvaus": "Male, 40-50 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: seasoned castle guard, gruff and commanding, watchful. Emotion: firm, alert. Deep gravelly timbre, steady confident pacing.",
+   "selko": "jämäkkä ja karhea sotilas, käskevä",
+   "sukupuoli": "mies",
+   "ika": 45,
+   "kayttopaikat": [
+    "olavinlinna:vartija"
+   ],
+   "luotu": "2026-10-05T13:19:43",
+   "nayte": {
+    "teksti": "Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hyvaksytty": true
+  },
+  "mies-30-letkea-pelimies": {
+   "voice_id": "xRHBPmRPAGCPeOQJVQ2u",
+   "generated_voice_id": "xRHBPmRPAGCPeOQJVQ2u",
+   "kuvaus": "Male, 25-35 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: young soldier playing dice in the mess hall, cocky and cheerful. Emotion: playful triumph. Lively mid timbre with a grin in the voice, energetic pacing.",
+   "selko": "letkeä ja kerskaileva nuori sotilas, iloinen",
+   "sukupuoli": "mies",
+   "ika": 30,
+   "kayttopaikat": [
+    "olavinlinna:vartija2"
+   ],
+   "luotu": "2026-10-05T13:20:13",
+   "nayte": {
+    "teksti": "Kolme kuutosta! Maksa, kun vielä kehtaat.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-70-lempea-muistelija": {
+   "voice_id": "i5MApVdm05SBFn71supu",
+   "generated_voice_id": "i5MApVdm05SBFn71supu",
+   "kuvaus": "Male, 65-75 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: old peasant who once defended the castle walls, gentle and thoughtful storyteller. Emotion: calm, nostalgic. Soft low slightly husky timbre, slow relaxed pacing.",
+   "selko": "vanha, lempeä ja hiljainen muistelija",
+   "sukupuoli": "mies",
+   "ika": 70,
+   "kayttopaikat": [
+    "olavinlinna:talonpoika"
+   ],
+   "luotu": "2026-10-05T13:20:50",
+   "nayte": {
+    "teksti": "Minä seisoin tällä samalla harjalla vuonna tuhatneljäsataayhdeksänkymmentäviisi, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-60-syva-juhlallinen": {
+   "voice_id": "83b91EQobLgd0b5QVgjN",
+   "generated_voice_id": "83b91EQobLgd0b5QVgjN",
+   "kuvaus": "Male, 55-65 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: castle chaplain, solemn and dignified, gently reproachful. Emotion: serene with quiet authority. Deep resonant warm timbre, unhurried pacing.",
+   "selko": "syvä ja juhlallinen hengenmies, nuhteleva mutta lämmin",
+   "sukupuoli": "mies",
+   "ika": 60,
+   "kayttopaikat": [
+    "olavinlinna:kappalainen"
+   ],
+   "luotu": "2026-10-05T13:21:29",
+   "nayte": {
+    "teksti": "Dominus vobiscum… Herra vouti, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "nainen-30-nopea-touhukas": {
+   "voice_id": "Hd2f1k79HQ5HFaZ0ChVm",
+   "generated_voice_id": "Hd2f1k79HQ5HFaZ0ChVm",
+   "kuvaus": "Female, 25-35 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: busy serving maid carrying soup through a crowded hall, friendly but in a hurry. Emotion: energetic, cheerful urgency. Bright warm mid timbre, fast pacing.",
+   "selko": "touhukas ja nopea nainen, ystävällinen",
+   "sukupuoli": "nainen",
+   "ika": 30,
+   "kayttopaikat": [
+    "olavinlinna:apulainen"
+   ],
+   "luotu": "2026-10-05T13:22:00",
+   "nayte": {
+    "teksti": "Tietä, tietä! Kalakeittoa Linnantupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-45-aanekas-komentaja": {
+   "voice_id": "NF0saj4MVqmAOV5CcTKo",
+   "generated_voice_id": "NF0saj4MVqmAOV5CcTKo",
+   "kuvaus": "Male, 40-50 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: proud head cook ruling a busy kitchen, bossy and blunt. Emotion: exasperated, theatrical. Strong full mid-low timbre, punchy pacing.",
+   "selko": "kovaääninen ja ylpeä keittiömestari, komentava",
+   "sukupuoli": "mies",
+   "ika": 45,
+   "kayttopaikat": [
+    "olavinlinna:kokki"
+   ],
+   "luotu": "2026-10-05T13:22:31",
+   "nayte": {
+    "teksti": "Kalaa ja naurista, naurista ja kalaa! Jos vouti vielä kerran kysyy, mitä tänään syödään, sanon: samaa mitä järvi ja pelto antaa.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-18-reipas-nuorukainen": {
+   "voice_id": "dxjs8crcOOSSbPPSdf15",
+   "generated_voice_id": "dxjs8crcOOSSbPPSdf15",
+   "kuvaus": "Male, 18-20 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: young kitchen helper carrying water buckets, cheeky and good-hearted. Emotion: tired but cheerful. Light youthful timbre, quick pacing.",
+   "selko": "reipas nuorukainen, hieman uupunut mutta iloinen",
+   "sukupuoli": "mies",
+   "ika": 18,
+   "kayttopaikat": [
+    "olavinlinna:vesipoika"
+   ],
+   "luotu": "2026-10-05T13:24:47",
+   "nayte": {
+    "teksti": "Kaksi sankoa lisää. Tuli on palanu aamusta asti – kohta tää keittiö kiehuu itekin.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "nainen-30-hatainen": {
+   "voice_id": "BWONTNg3jS6Tqx5gyCyF",
+   "generated_voice_id": "BWONTNg3jS6Tqx5gyCyF",
+   "kuvaus": "Female, 25-35 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: anxious young woman who has lost something important. Emotion: worried, urgent. Bright slightly tense timbre, fast uneven pacing.",
+   "selko": "hätäinen ja huolestunut nuori nainen",
+   "sukupuoli": "nainen",
+   "ika": 30,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:27:14",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "nainen-20-reipas-utelias": {
+   "voice_id": "CNrr71qAAgBOMhM4G7uZ",
+   "generated_voice_id": "CNrr71qAAgBOMhM4G7uZ",
+   "kuvaus": "Female, 18-24 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: curious young traveller, bold and cheerful. Emotion: excited, open. Light clear timbre, brisk pacing.",
+   "selko": "nuori, reipas ja utelias nainen",
+   "sukupuoli": "nainen",
+   "ika": 20,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:27:47",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hyvaksytty": true
+  },
+  "nainen-18-helea-nuori": {
+   "voice_id": "WLp1jRpq16bq4A24NjcJ",
+   "generated_voice_id": "WLp1jRpq16bq4A24NjcJ",
+   "kuvaus": "Female, 18-20 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: cheerful young apprentice asking many questions. Emotion: delighted, playful. Light high youthful timbre, quick pacing.",
+   "selko": "heleä ja iloinen nuori nainen",
+   "sukupuoli": "nainen",
+   "ika": 18,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:28:37",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "mies-80-hauras-vanhus": {
+   "voice_id": "4duSz0Vtr0nNxVL1vKvU",
+   "generated_voice_id": "4duSz0Vtr0nNxVL1vKvU",
+   "kuvaus": "Male, 75-85 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: very old man telling stories by the fire, frail but sharp-minded. Emotion: wistful, kind. Thin aged slightly trembling timbre, slow pacing.",
+   "selko": "hyvin vanha, hauras ja verkkainen mies",
+   "sukupuoli": "mies",
+   "ika": 80,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:29:22",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hyvaksytty": true
+  },
+  "mies-35-puhelias-kauppias": {
+   "voice_id": "22nhU1mjaefHZ2S6QXG9",
+   "generated_voice_id": "22nhU1mjaefHZ2S6QXG9",
+   "kuvaus": "Male, 30-40 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: market merchant praising his wares, charming and persuasive. Emotion: upbeat, salesy but likable. Smooth bright mid timbre, quick confident pacing.",
+   "selko": "puhelias ja vakuuttava kauppias",
+   "sukupuoli": "mies",
+   "ika": 35,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:29:59",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "nainen-70-lempea-viisas": {
+   "voice_id": "gabEqusRJqiUSA7cwwsj",
+   "generated_voice_id": "gabEqusRJqiUSA7cwwsj",
+   "kuvaus": "Female, 65-75 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: wise elderly village healer, kind, clear-minded and patient, speaks with quiet confidence. Emotion: warm, gently reassuring. Clear mature alto timbre with natural age, unhurried even pacing.",
+   "selko": "vanha, lempeä ja viisas nainen",
+   "sukupuoli": "nainen",
+   "ika": 70,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:43:07",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hyvaksytty": true
+  },
+  "nainen-45-lampin-emanta": {
+   "voice_id": "kQhMRFRacwtvr8mOnSQy",
+   "generated_voice_id": "kQhMRFRacwtvr8mOnSQy",
+   "kuvaus": "Female, 40-50 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: hearty innkeeper who runs a busy house, welcoming, practical and quick-witted. Emotion: friendly, cheerful. Rich clear mid timbre, crisp articulation, lively natural pacing.",
+   "selko": "lämmin ja puhelias majatalon emäntä",
+   "sukupuoli": "nainen",
+   "ika": 45,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:43:43",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  },
+  "nainen-50-oppinut-selkea": {
+   "voice_id": "ELGKD0pgxm12f1wgylDw",
+   "generated_voice_id": "ELGKD0pgxm12f1wgylDw",
+   "kuvaus": "Female, 45-55 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: respected librarian and scholar who explains things clearly and kindly. Emotion: engaged, warm and composed. Clear resonant mid timbre, precise articulation, measured pacing.",
+   "selko": "oppinut ja selkeä nainen, asiallinen",
+   "sukupuoli": "nainen",
+   "ika": 50,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:45:03",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hyvaksytty": true
+  }
+ },
+ "hylatyt": {
+  "nainen-70-lempea-viisas-v1": {
+   "voice_id": "Zn6aBBSQd5eKAwt5g4sv",
+   "generated_voice_id": "Zn6aBBSQd5eKAwt5g4sv",
+   "kuvaus": "Female, 65-75 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: wise grandmother who has seen much, kind and patient. Emotion: warm, reassuring. Soft slightly aged timbre, slow gentle pacing.",
+   "selko": "vanha, lempeä ja viisas nainen",
+   "sukupuoli": "nainen",
+   "ika": 70,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:25:29",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.4
+   },
+   "hylatty": "omistaja 5.10.2026 klo 13.4x: \"tee 13 ja 15 jollain toisella äänellä\" (tililtä ei poistettu: poisto omistajalle)",
+   "tiedostot": "poistettu 5.10. (levy)"
+  },
+  "nainen-45-lampin-emanta-v1": {
+   "voice_id": "Q4vIDKd7QThzVW7BRkrx",
+   "generated_voice_id": "Q4vIDKd7QThzVW7BRkrx",
+   "kuvaus": "Female, 40-50 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: innkeeper's wife, welcoming and chatty. Emotion: hearty, friendly. Full warm timbre, lively natural pacing.",
+   "selko": "lämmin ja puhelias majatalon emäntä",
+   "sukupuoli": "nainen",
+   "ika": 45,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:26:40",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hylatty": "omistaja 5.10.2026 klo 13.4x: \"tee 13 ja 15 jollain toisella äänellä\" (tililtä ei poistettu: poisto omistajalle)",
+   "tiedostot": "poistettu 5.10. (levy)"
+  },
+  "nainen-50-oppinut-selkea-v1": {
+   "voice_id": "JZL3tAJjgFYJPrPSXx6L",
+   "generated_voice_id": "JZL3tAJjgFYJPrPSXx6L",
+   "kuvaus": "Female, 45-55 years old. Studio quality, perfect audio quality, close-mic, dry, no reverb, no background noise. Persona: learned scholar and teacher, articulate and precise. Emotion: engaged, calmly enthusiastic. Clear mid timbre, measured pacing.",
+   "selko": "oppinut ja selkeä nainen, asiallinen",
+   "sukupuoli": "nainen",
+   "ika": 50,
+   "kayttopaikat": [],
+   "luotu": "2026-10-05T13:26:08",
+   "nayte": {
+    "teksti": "Hyvää päivää, matkalainen. Tämä tie vie torille, ja sieltä löydät majatalon, jos kysyt ystävällisesti.",
+    "malli": "eleven_v4",
+    "mean_dB": -17.5
+   },
+   "hylatty": "omistaja 5.10.2026 klo 13.4x: \"ja 14\" (tililtä ei poistettu: poisto omistajalle)",
+   "tiedostot": "poistettu 5.10. (levy)"
+  }
+ },
+ "versio": 1,
+ "lukittu": "5.10.2026 klo 14.1x: omistaja hyväksyi kaikki 20 ääntä (13–15 v2), Päätoimittaja. Muutokset vain uutena versiona (versio 2), ei tämän päälle.",
+ "tila": "lukittu"
+}

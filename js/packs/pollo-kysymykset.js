@@ -396,6 +396,72 @@ export const POLLO_VALMISKYSYMYKSET = {
    * pakki (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti
    * jäävät täyden pinon sisältöerään.
    */
+  minsk: {
+    saapuminen: [
+      'Minkä valtakunnan kuvernementin kaupunki Minsk oli vuonna 1873?',
+      'Minkä kirkon isoisä mainitsee vihityn uudelleen kolme vuotta aiemmin?',
+    ],
+  },
+  chisinau: {
+    saapuminen: [
+      'Minkä valtakunnan kaupunki Chișinău oli isoisän matkan aikaan?',
+      'Minkä sodan voitosta riemukaari muistuttaa?',
+    ],
+  },
+  belgrad: {
+    saapuminen: [
+      'Kuka suunnitteli Belgradin suorat kadut vuonna 1867?',
+      'Miksi Tasavallan aukion patsas esittää ruhtinas Mihailoa?',
+    ],
+  },
+  vaduz: {
+    saapuminen: [
+      'Missä kaupungissa Liechtensteinin ruhtinas asuu vuonna 1873?',
+      'Miksi Liechtensteinin armeija lakkautettiin vuonna 1868?',
+    ],
+  },
+  monaco: {
+    saapuminen: [
+      'Minkä kahden kaupungin Monaco menetti Ranskalle vuonna 1861?',
+      'Mikä rakennus rahoittaa Monacon menot ilman tuloveroa?',
+    ],
+  },
+  skopje: {
+    saapuminen: [
+      'Minkä valtakunnan kaupunki Üsküb oli isoisän matkan aikaan?',
+      'Minkä joen molemmin puolin kaupunki makaa?',
+    ],
+  },
+  tirana: {
+    saapuminen: [
+      'Minkä valtakunnan basaarikaupunki Tirana oli isoisän matkan aikaan?',
+      'Minkä rakennuksen seinillä on maalattuja puita ja siltoja?',
+    ],
+  },
+  zagreb: {
+    saapuminen: [
+      'Kenen kuva säilyi Zagrebin Yläkaupungin palossa 1731?',
+      'Minä vuonna Kroatian ja Unkarin sopimus tehtiin?',
+    ],
+  },
+  bern: {
+    saapuminen: [
+      'Millä nimellä sveitsiläiset kutsuvat Berniä pääkaupungin sijaan?',
+      'Mikä rakennus yhdisti hallituksen ja parlamentin saman katon alle?',
+    ],
+  },
+  podgorica: {
+    saapuminen: [
+      'Mikä on Podgorican vanhan kaupunginosan nimi Ribnican rannalla?',
+      'Mikä kivitorni seisoi Podgoricassa jo isoisän aikaan?',
+    ],
+  },
+  bratislava: {
+    saapuminen: [
+      'Millä unkarilaisella nimellä kaupunki tunnettiin isoisän aikaan?',
+      'Minkä kirkon tornin huipulla kiiltää kultainen kruunu?',
+    ],
+  },
   luxemburg: {
     saapuminen: [
       'Kenen linnasta Luxemburgin kaupunki sai alkunsa vuonna 963?',
@@ -900,7 +966,7 @@ export const POLLO_VALMISKYSYMYKSET = {
       'Miksi Krišjānis Barons rakensi lapuille oman kaapin?',
       'Mitä sklandrausis-piirakan sisällä on?',
       'Keitä Mustapäiden veljeskuntaan kuului?',
-      'Kuinka vanhoja Riian Kolme veljestä ovat?',
+      'Kuinka vanhoja Riian Kolme veljestä -talot ovat?',
     ],
   },
 

@@ -1,0 +1,768 @@
+{
+ "kaupunki": "newyork",
+ "kaupunkiQ": "Q60",
+ "kohteet": [
+  {
+   "q": "Q9202",
+   "nimi": "Vapaudenpatsas",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 40.68921,
+   "lon": -74.04443,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Liberty Island photo Don Ramey Logan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Liberty_Island_photo_Don_Ramey_Logan.jpg?width=1280",
+     "tekija": "Don Ramey Logan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Liberty_Island_photo_Don_Ramey_Logan.jpg",
+     "selite": "Vapaudenpatsas seisoo tähdenmuotoisen linnakkeen päällä Liberty Islandilla New Yorkin satamassa.",
+     "leveys": 4800,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "HIghsmith 2017 LOC Statue of Liberty NY Harbor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HIghsmith_2017_LOC_Statue_of_Liberty_NY_Harbor.jpg?width=1280",
+     "tekija": "Carol M. Highsmith",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HIghsmith_2017_LOC_Statue_of_Liberty_NY_Harbor.jpg",
+     "selite": "Saaren takana häämöttää Etelä-Manhattanin siluetti.",
+     "leveys": 2172,
+     "korkeus": 1448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Statue of Liberty New York view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_Liberty_New_York_view.jpg?width=1280",
+     "tekija": "Gucio666",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_New_York_view.jpg",
+     "selite": "Patsaan viitta ja soihtu nousevat korkealle jalustan päälle.",
+     "leveys": 2455,
+     "korkeus": 3725,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9188",
+   "nimi": "Empire State Building",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 40.74833,
+   "lon": -73.98556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of Empire State Building from Rockefeller Center New York City dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg",
+     "selite": "Empire State Building on Manhattanin tunnetuin art deco -pilvenpiirtäjä, jonka mastoa valaistaan eri väreillä.",
+     "leveys": 8207,
+     "korkeus": 6167,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Empire State Building from Hudson River Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empire_State_Building_from_Hudson_River_Park.JPG?width=1280",
+     "tekija": "Wusel007",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_from_Hudson_River_Park.JPG",
+     "selite": "Joen toiselta rannalta torni erottuu kaukaa Midtownin yllä.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Empire Over Fifth Avenue (50015020637).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empire_Over_Fifth_Avenue_(50015020637).jpg?width=1280",
+     "tekija": "Eden, Janine and Jim from New York City",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empire_Over_Fifth_Avenue_(50015020637).jpg",
+     "selite": "Illalla Fifth Avenuen päässä kohoaa valaistu torni.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125006",
+   "nimi": "Brooklynin silta",
+   "peruste": "pelin nosto",
+   "koko_m": 1100,
+   "lat": 40.70567,
+   "lon": -73.99633,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brooklyn Bridge and the Lower Manhattan skyline from Pebble Beach, New York.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg",
+     "selite": "Brooklynin silta yhdistää Brooklynin ja Manhattanin East Riverin yli, ja sen kivitornit ovat kaupungin tunnuskuvia.",
+     "leveys": 26508,
+     "korkeus": 8836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brooklyn Bridge Manhattan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Bridge_Manhattan.jpg?width=1280",
+     "tekija": "Suiseiseki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_Manhattan.jpg",
+     "selite": "Sillan kaarevat kaapelit ja goottilaiset kaariaukot erottuvat tornien päällä.",
+     "leveys": 2100,
+     "korkeus": 1400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Brooklyn Bridge August 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn_Bridge_August_2017.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_August_2017.jpg",
+     "selite": "Kaapelien verkko kehystää kävelysillan ja Manhattanin siluetin.",
+     "leveys": 5803,
+     "korkeus": 3874,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q160409",
+   "nimi": "Central Park",
+   "peruste": "sitelinks",
+   "koko_m": 3500,
+   "lat": 40.7825,
+   "lon": -73.96611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Drone photo of Central Park 20170506-001-2 (33679392984).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drone_photo_of_Central_Park_20170506-001-2_(33679392984).jpg?width=1280",
+     "tekija": "CucombreLibre from New York, NY, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drone_photo_of_Central_Park_20170506-001-2_(33679392984).jpg",
+     "selite": "Central Park on Manhattanin keskellä oleva suuri puisto, jonka ympärillä kohoavat korttelit.",
+     "leveys": 3804,
+     "korkeus": 2140,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bow Bridge over the Lake, Central Park, Manhattan, New York.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bow_Bridge_over_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bow_Bridge_over_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg",
+     "selite": "Bow Bridge on puiston järven yli kaartuva rautasilta.",
+     "leveys": 9328,
+     "korkeus": 5247,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bethesda Terrace and 432 Park Avenue from the Lake, Central Park, Manhattan, New York.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bethesda_Terrace_and_432_Park_Avenue_from_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bethesda_Terrace_and_432_Park_Avenue_from_the_Lake%2C_Central_Park%2C_Manhattan%2C_New_York.jpg",
+     "selite": "Bethesda Terrace avautuu järvelle, ja taustalla kohoavat Midtownin tornit.",
+     "leveys": 7671,
+     "korkeus": 5114,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11259",
+   "nimi": "Times Square",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 40.7575,
+   "lon": -73.98583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New york times square-terabass.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_york_times_square-terabass.jpg?width=1280",
+     "tekija": "Terabass",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg",
+     "selite": "Times Square on Broadwayn ja Seventh Avenuen risteys, jota valtavat mainostaulut hallitsevat.",
+     "leveys": 3904,
+     "korkeus": 2602,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Times Square 20190726.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Times_Square_20190726.jpg?width=1280",
+     "tekija": "Nkon21",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Times_Square_20190726.jpg",
+     "selite": "Iltaisin aukion näytöt valaisevat korttelit kirkkaasti.",
+     "leveys": 2448,
+     "korkeus": 2241,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11290",
+   "nimi": "Grand Central Terminal",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 40.75278,
+   "lon": -73.97722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Image-Grand central Station Outside Night 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Image-Grand_central_Station_Outside_Night_2.jpg?width=1280",
+     "tekija": "Fcb981 ; Eric Baetscher (attribution required)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Image-Grand_central_Station_Outside_Night_2.jpg",
+     "selite": "Grand Central Terminalin beaux-arts-julkisivu seisoo 42nd Streetin päässä Manhattanilla.",
+     "leveys": 4726,
+     "korkeus": 3805,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Central Terminal December 2022 004.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Central_Terminal_December_2022_004.jpg?width=1280",
+     "tekija": "Kidfly182",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_December_2022_004.jpg",
+     "selite": "Julkisivun huipulla on jumalten veistosryhmä ja suuri kello.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11274",
+   "nimi": "Chrysler Building",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 40.75143,
+   "lon": -73.97572,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chrysler Building - 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysler_Building_-_05.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_-_05.jpg",
+     "selite": "Chrysler Buildingin porrastettu, kaaria täynnä oleva kruunu on art deco -tyylin tunnetuimpia huippuja.",
+     "leveys": 2250,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chrysler Building NYC-20090519-RM-094845.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysler_Building_NYC-20090519-RM-094845.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_NYC-20090519-RM-094845.jpg",
+     "selite": "Kruunun teräsrakenteen kaaret ja kotkakoristeet erottuvat taivasta vasten.",
+     "leveys": 3000,
+     "korkeus": 4263,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11245",
+   "nimi": "One World Trade Center",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 40.713,
+   "lon": -74.0135,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "One World Trade Center from New York Harbor, New York City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_World_Trade_Center_from_New_York_Harbor%2C_New_York_City.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_World_Trade_Center_from_New_York_Harbor%2C_New_York_City.jpg",
+     "selite": "One World Trade Center on Länsi-Pohjois-Amerikan korkein rakennus ja Etelä-Manhattanin uusi tunnusmerkki.",
+     "leveys": 5023,
+     "korkeus": 7535,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "One World Trade Center at blue hour, New York City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_World_Trade_Center_at_blue_hour%2C_New_York_City.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_World_Trade_Center_at_blue_hour%2C_New_York_City.jpg",
+     "selite": "Tornin lasijulkisivu kimmeltää hämärässä muiden rakennusten yläpuolella.",
+     "leveys": 4705,
+     "korkeus": 7057,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11277",
+   "nimi": "Rockefeller Center",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 40.75861,
+   "lon": -73.97919,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "30 Rockefeller Plaza viewed from 5th Avenue, August 29, 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/30_Rockefeller_Plaza_viewed_from_5th_Avenue%2C_August_29%2C_2024.jpg?width=1280",
+     "tekija": "D. Benjamin Miller",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:30_Rockefeller_Plaza_viewed_from_5th_Avenue%2C_August_29%2C_2024.jpg",
+     "selite": "Rockefeller Centerin pääkorkeus 30 Rockefeller Plaza kohoaa art deco -rakennusten välistä.",
+     "leveys": 3353,
+     "korkeus": 2682,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GE-Bldg 30-Rockefeller-Plaza NYC 2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GE-Bldg_30-Rockefeller-Plaza_NYC_2012.jpg?width=1280",
+     "tekija": "SteveStrummer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GE-Bldg_30-Rockefeller-Plaza_NYC_2012.jpg",
+     "selite": "Porrastettu torni kapenee kohti huippua.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q160236",
+   "nimi": "Metropolitan-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 40.77944,
+   "lon": -73.96333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Metropolitan Museum of Art (The Met) - Central Park, NYC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park%2C_NYC.jpg?width=1280",
+     "tekija": "Hugo Schneider",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park%2C_NYC.jpg",
+     "selite": "Metropolitan-museon klassistinen pääjulkisivu avautuu Fifth Avenuelle Central Parkin reunalla.",
+     "leveys": 2666,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Metropolitan museum of art 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropolitan_museum_of_art_1.jpg?width=1280",
+     "tekija": "Fcb981",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropolitan_museum_of_art_1.jpg",
+     "selite": "Illalla valaistu julkisivu hohtaa Fifth Avenuen varrella.",
+     "leveys": 3272,
+     "korkeus": 3113,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q217717",
+   "nimi": "Amerikan luonnonhistoriallinen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 40.78083,
+   "lon": -73.97444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Facade of the American museum of natural history NYC (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_the_American_museum_of_natural_history_NYC_(5).jpg?width=1280",
+     "tekija": "Ferfive",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_the_American_museum_of_natural_history_NYC_(5).jpg",
+     "selite": "Museon Central Park Westin puoleinen sisäänkäynti on Theodore Rooseveltin muistoksi rakennettu kaariportti.",
+     "leveys": 3072,
+     "korkeus": 4080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "American Museum of Natural History, South Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/American_Museum_of_Natural_History%2C_South_Facade.jpg?width=1280",
+     "tekija": "Internet Archive Book Images",
+     "lisenssi": "No restrictions",
+     "lisenssiUrl": "https://www.flickr.com/commons/usage/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:American_Museum_of_Natural_History%2C_South_Facade.jpg",
+     "selite": "Vanhan kuvan museorakennus esittelee romaanista tornijulkisivua ennen myöhempiä laajennuksia.",
+     "leveys": 3144,
+     "korkeus": 2352,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q220728",
+   "nimi": "Flatiron Building",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 40.74111,
+   "lon": -73.98972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Flatiron Building, Fifth Avenue, Manhattan, New York.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flatiron_Building%2C_Fifth_Avenue%2C_Manhattan%2C_New_York.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flatiron_Building%2C_Fifth_Avenue%2C_Manhattan%2C_New_York.jpg",
+     "selite": "Flatiron Building on kolmion muotoinen pilvenpiirtäjä Fifth Avenuen ja Broadwayn risteyksessä.",
+     "leveys": 4075,
+     "korkeus": 6112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Edificio Fuller (Flatiron) en 2010 desde el Empire State crop boxin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_Fuller_(Flatiron)_en_2010_desde_el_Empire_State_crop_boxin.jpg?width=1280",
+     "tekija": "Imelenchon (original work)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificio_Fuller_(Flatiron)_en_2010_desde_el_Empire_State_crop_boxin.jpg",
+     "selite": "Ylhäältä rakennuksen kapea kulma muistuttaa laivan keulaa.",
+     "leveys": 1489,
+     "korkeus": 2818,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Flatiron Building NYC c1903.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flatiron_Building_NYC_c1903.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flatiron_Building_NYC_c1903.jpg",
+     "selite": "Vanhassa kuvassa rakennus seisoo vielä uutena sadepäivän kadulla.",
+     "leveys": 1830,
+     "korkeus": 2382,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q624556",
+   "nimi": "Pyhän Patrickin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 40.75861,
+   "lon": -73.97639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Patrick's Cathedral II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Patrick's_Cathedral_II.jpg?width=1280",
+     "tekija": "SpaceEconomist192",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Patrick's_Cathedral_II.jpg",
+     "selite": "Pyhän Patrickin katedraalin kaksi terävää tornia nousevat Fifth Avenuen toimistotornien väliin.",
+     "leveys": 1707,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Patrick's Cathedral (20).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Patrick's_Cathedral_(20).jpg?width=1280",
+     "tekija": "PortableNYCTours",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Patrick's_Cathedral_(20).jpg",
+     "selite": "Goottilaisen julkisivun jyrkät pylväät kohoavat kolmen portin yläpuolelle.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q202175",
+   "nimi": "Ellis Island",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 40.69944,
+   "lon": -74.03972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ellis island immigration museum entrance.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellis_island_immigration_museum_entrance.JPG?width=1280",
+     "tekija": "chensiyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ellis_island_immigration_museum_entrance.JPG",
+     "selite": "Ellis Islandin punatiilinen päärakennus toimi maahanmuuttajien vastaanottoasemana.",
+     "leveys": 3375,
+     "korkeus": 2462,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main building, Ellis Island NY.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_building%2C_Ellis_Island_NY.jpg?width=1280",
+     "tekija": "David Brossard",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_building%2C_Ellis_Island_NY.jpg",
+     "selite": "Päärakennuksen kupolitornit ja kaariaukot kuuluvat saaren tunnetuimpiin näkymiin.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q201469",
+   "nimi": "Solomon R. Guggenheim -museo",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 40.78306,
+   "lon": -73.95889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Solomon R. Guggenheim Museum New York City.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Solomon_R._Guggenheim_Museum_New_York_City.jpg?width=1280",
+     "tekija": "Kristoffer Arvidsson (Göteborgs konstmuseum)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Solomon_R._Guggenheim_Museum_New_York_City.jpg",
+     "selite": "Frank Lloyd Wrightin suunnittelema Guggenheim-museo on kierteinen betonirakennus Fifth Avenuella.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guggenheim Museum- New York City - Aerial View (17025685767).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guggenheim_Museum-_New_York_City_-_Aerial_View_(17025685767).jpg?width=1280",
+     "tekija": "Sam valadi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guggenheim_Museum-_New_York_City_-_Aerial_View_(17025685767).jpg",
+     "selite": "Ilmasta museon pyöreä muoto erottuu kortteleiden joukosta.",
+     "leveys": 1440,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125050",
+   "nimi": "Manhattan Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 40.70722,
+   "lon": -73.99083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manhattan Bridge and One Manhattan Square from Brooklyn Bridge, 20231005 0939 2164.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manhattan_Bridge_and_One_Manhattan_Square_from_Brooklyn_Bridge%2C_20231005_0939_2164.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_and_One_Manhattan_Square_from_Brooklyn_Bridge%2C_20231005_0939_2164.jpg",
+     "selite": "Manhattan Bridge ylittää East Riverin Brooklynin silta vierellään.",
+     "leveys": 3933,
+     "korkeus": 4070,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q866896",
+   "nimi": "Trinity Church",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 40.70801,
+   "lon": -74.01221,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Trinity Church NYC 004b.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_Church_NYC_004b.JPG?width=1280",
+     "tekija": "Gryffindor",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trinity_Church_NYC_004b.JPG",
+     "selite": "Trinity Churchin goottilainen torni kohoaa Wall Streetin päässä pilvenpiirtäjien kanjonissa.",
+     "leveys": 1872,
+     "korkeus": 2496,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7013887",
+   "nimi": "New Yorkin pääkirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 40.75333,
+   "lon": -73.98222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New York City, Midtown Manhattan, New York Public Library, Stephen A. Schwarzman Building, 1897-1911. 5th Avenue (2011).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_City%2C_Midtown_Manhattan%2C_New_York_Public_Library%2C_Stephen_A._Schwarzman_Building%2C_1897-1911._5th_Avenue_(2011).jpg?width=1280",
+     "tekija": "(vincent desjardins) from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_York_City%2C_Midtown_Manhattan%2C_New_York_Public_Library%2C_Stephen_A._Schwarzman_Building%2C_1897-1911._5th_Avenue_(2011).jpg",
+     "selite": "New Yorkin pääkirjaston marmorijulkisivua vartioivat leijonapatsaat Fifth Avenuella.",
+     "leveys": 4368,
+     "korkeus": 2912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1065206",
+   "nimi": "New Yorkin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 40.71278,
+   "lon": -74.00611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New York City Hall - September 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_City_Hall_-_September_2025.jpg?width=1280",
+     "tekija": "Nielsoncaetanosalmeron",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_York_City_Hall_-_September_2025.jpg",
+     "selite": "Vanha kaupungintalo seisoo vehreässä City Hall Parkissa Etelä-Manhattanilla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2550491",
+   "nimi": "Washington Squaren riemukaari",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 40.73124,
+   "lon": -73.9971,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Washington Square Arch, New York.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Washington_Square_Arch%2C_New_York.jpg?width=1280",
+     "tekija": "Marco Almbauer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Washington_Square_Arch%2C_New_York.jpg",
+     "selite": "Marmorinen riemukaari merkitsee Washington Square Parkin pohjoisreunaa Greenwich Villagessa.",
+     "leveys": 4234,
+     "korkeus": 3588,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Washington Square Arch September 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Washington_Square_Arch_September_2022.jpg?width=1280",
+     "tekija": "Kidfly182",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Washington_Square_Arch_September_2022.jpg",
+     "selite": "Kaaren alta avautuu näkymä Fifth Avenuea pitkin pohjoiseen.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lower Manhattan skyline and Brooklyn Bridge from the East River, New York.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lower_Manhattan_skyline_and_Brooklyn_Bridge_from_the_East_River%2C_New_York.jpg?width=1280",
+   "tekija": "Christian David",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_skyline_and_Brooklyn_Bridge_from_the_East_River%2C_New_York.jpg",
+   "selite": "Etelä-Manhattanin siluetti kohoaa East Riverin takana Brooklynin sillan vierellä.",
+   "leveys": 23695,
+   "korkeus": 5500,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lower Manhattan from Brooklyn May 2015 panorama.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lower_Manhattan_from_Brooklyn_May_2015_panorama.jpg?width=1280",
+   "tekija": "King of Hearts",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Brooklyn_May_2015_panorama.jpg",
+   "selite": "Brooklynin rannalta aukeaa panoraama Etelä-Manhattanin pilvenpiirtäjiin.",
+   "leveys": 12800,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

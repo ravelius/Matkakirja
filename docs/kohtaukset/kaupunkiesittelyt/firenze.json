@@ -1,0 +1,86 @@
+[
+  {
+    "id": "firenze",
+    "esittely": "Kartan alue on Firenzen keskusta Arnon molemmin puolin. Kaupunki perustettiin roomalaisena veteraanisiirtokuntana ensimmäisellä vuosisadalla eaa., ja sen suorakulmainen katuverkko näkyy yhä keskustassa. Keskiajan muurit purettiin 1860-luvulla, kun Firenze oli Italian pääkaupunki, ja niiden paikalle rakennettiin kehäkatu.\n\nDuomon rakentaminen alkoi 1296, ja Brunelleschin kupoli valmistui 1436. Palazzo Vecchion työt alkoivat 1299, ja sen torni on noin 94 metriä korkea. Uffizin rakennus aloitettiin 1560 virastotaloksi. Ponte Vecchio rakennettiin uudelleen 1345, ja se oli ainoa Arnon silta, jota ei räjäytetty 1944. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 672,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Florence",
+        "title": "Wikipedia: Florence",
+        "tukee": "roomalainen siirtokunta 59 eaa. (perinne); pääkaupunki 1865-1871"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Florentia_(Roman_city)",
+        "title": "Wikipedia: Florentia (Roman city) (hakutulos)",
+        "tukee": "perinteinen 59 eaa., vallitseva hypoteesi 30-15 eaa."
+      },
+      {
+        "url": "https://www.feelflorence.it/en/experiences-itineraries/roman-florence",
+        "title": "Feel Florence: Roman Florence (hakutulos)",
+        "tukee": "roomalainen leiri Florentia, suorakulmainen katuverkko erottuu Piazza della Repubblican seudulla"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Viali_di_Circonvallazione",
+        "title": "Wikipedia: Viali di Circonvallazione",
+        "tukee": "muurit purettiin 1865, tilalle kehäkadut, suunnittelija Poggi"
+      },
+      {
+        "url": "https://www.theflorentine.net/2015/02/05/florence-is-the-capital/",
+        "title": "The Florentine: The Poggi makeover (hakutulos)",
+        "tukee": "muurien purku 1865-1869 Firenzen ollessa pääkaupunki"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Florence_Cathedral",
+        "title": "Wikipedia: Florence Cathedral",
+        "tukee": "ensimmäinen kivi 1296; kupoli valmistui 1436"
+      },
+      {
+        "url": "https://aviewoncities.com/florence/duomo-di-firenze",
+        "title": "A View on Cities: Florence Cathedral (hakutulos)",
+        "tukee": "rakennus alkoi 1296, kupoli 1420-1436"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Palazzo_Vecchio",
+        "title": "Wikipedia: Palazzo Vecchio",
+        "tukee": "rakennus alkoi 1299; torni 94 m"
+      },
+      {
+        "url": "https://www.archiseek.com/?p=565934",
+        "title": "Archiseek: 1299 - Palazzo Vecchio (hakutulos)",
+        "tukee": "1299, 94 m torni"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Uffizi",
+        "title": "Wikipedia: Uffizi",
+        "tukee": "rakennus 1560-1581 virastoiksi"
+      },
+      {
+        "url": "https://historyofinformation.com/detail.php?id=2661",
+        "title": "History of Information: Vasari begins the Uffizi (hakutulos)",
+        "tukee": "1560 alkoi, tuomareiden virastot"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ponte_Vecchio",
+        "title": "Wikipedia: Ponte Vecchio",
+        "tukee": "nykyinen silta 1345; ainoa Firenzen silta joka säästyi 1944"
+      },
+      {
+        "url": "https://smarthistory.org/ponte-vecchio-florence",
+        "title": "Smarthistory: Ponte Vecchio (hakutulos)",
+        "tukee": "1345; ainoa silta joka säästyi 1944"
+      }
+    ],
+    "pudotetut": [
+      "Entinen teksti: kaupungin laajuus noin 2 km ja \"muurit rakennettiin kolmesti uudelleen\" (kolme kehää vain yhdessä lähteessä), jätetty pois",
+      "Oltrarno, Bobolin puutarha, Signorian aukio: ei tarkistettu tekstiin, jätetty pois",
+      "Unescon maailmanperintövuosi 1982: UNESCO-sivu antoi 403, vain Wikipedia, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Firenzen perustamisvuosi 59 eaa. (perinne) vs. 30-15 eaa. (vallitseva tutkimus): käytetty vain \"ensimmäisellä vuosisadalla eaa.\"",
+      "Pääkaupunkiajan loppu 1870 vs. 1871: ei mainita, käytetty vain \"kun Firenze oli pääkaupunki\"",
+      "Ponte Vecchion rakennusaika 1339-1345 / 1345: käytetty 1345 (\"rakennettiin uudelleen\")"
+    ],
+    "muutos_sk": "Alku muutettu muotoon \"Kartan alue on …\". Säilytetty: roomalainen perustaminen (vuosiluku yleistetty), suorakulmainen katuverkko, muurien purku 1860-luvulla. Poistettu tarkistamattomat: 2 km laajuus, kolme muurikehää, villa ja pankit, Oltrarno, Signorian aukio. Lisätty: Duomo 1296/1436, Palazzo Vecchio 1299 ja 94 m, Uffizi 1560, Ponte Vecchio 1345 ja 1944."
+  }
+]

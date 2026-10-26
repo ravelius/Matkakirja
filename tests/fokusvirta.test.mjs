@@ -257,9 +257,10 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
      * kuva tulee `ihme`-kentästä (js/fokuskohteet.js piirraKohdeKuvat).
      * Kaikilla muilla kuva on pakollinen — ja 27.8.2026 alkaen se on
      * kohteen NYKYISTÄ kuntoa esittävä valokuva, ei havainnekuva
-     * (omistajan täsmennys; generoitu ihmekuva aukeaa vain "Koe ihme"
-     * -napista). `osoite` on yhä sallittu muoto muille repon omille
-     * kuville — sillä ei ole Commons-nimeä.
+     * (omistajan täsmennys; 27.9.2026 alkaen ihmekuva on kortin
+     * ensimmäinen kuva ja valokuva kelluu pienenä tekstissä). `osoite`
+     * on yhä sallittu muoto muille repon omille kuville — sillä ei ole
+     * Commons-nimeä.
      */
     const kuvatonKadonnut = Boolean(kohde.ihme?.kadonnut) && !kohde.kuva;
     if (!kuvatonKadonnut) {
@@ -637,10 +638,6 @@ test('Sofian pelitestattu sisältö on ennallaan sähkepilotin jälkeen', () => 
   assert.deepEqual(sofia.lehtitehtavat.map((t) => [t.id, t.sivu, t.otsake]),
     [['aarre', 2, 'AARTEEN AVAUS'], ['juliste', 3, 'JULISTE']], 'lehtitehtävät muuttuivat');
   assert.match(sofia.lehtitehtavat[0].visa.kysymys, /banitsa/i, 'AARTEEN AVAUS -visa muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /^Konakin varjossa punnitsin lapion ostamista/,
-    'aarremerkintä muuttui');
-  assert.match(sofia.aarremerkinta.teksti, /jotkut aarteet saavat odottaa rohkeampaa\.$/,
-    'aarremerkintä muuttui');
   // Nadia on tallessa, vaikka sähke voittaa hänet kortilla: pilotin
   // peruminen on yksi rivi vain, jos data on yhä paikallaan.
   assert.equal(sofia.kohtaaminen?.hahmo, 'Lähteenvartija Nadia',
@@ -803,20 +800,32 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
   }
 });
 
-test('aarremerkintä voittaa saapumismerkinnän myös laatan ratkettua', () => {
+/*
+ * AARREMERKINNÄT POIS PELISTÄ (omistaja 11.10.2026: eivät loogisia aarteen
+ * avaamisen jälkeen). Moottorin aarremerkintäpolku (js/fokusvirta.js) jäi
+ * yleiseksi mekanismiksi, mutta yksikään kaupunki ei anna sille dataa:
+ * aarteen jälkeen matkakirja näyttää saman tavallisen merkinnän kuin ennen.
+ * Vanhat tekstit poistettiin myös arkistosta (omistaja 11.10.2026), ettei niitä palaa peliin vahingossa.
+ */
+test('yhdelläkään fokusvirtakaupungilla ei ole aarremerkintää', () => {
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    assert.equal(virta.aarremerkinta, undefined,
+      `${cityId}: aarremerkintä on poistettu pelistä (11.10.2026)`);
+  }
+});
+
+test('aarteen jälkeen kortissa on yhä tavallinen saapumismerkintä', () => {
   const game = ateenaPeli();
   const city = game.board.cityById.get('ateena');
   laattaRatkaistu(game, 'ateena');
   const ui = uiTynka(game);
-  // Lipun nostaa js/fokusvirta.js avaaAarremerkinta aarteen löytyessä.
+  const ennen = fokusvirtaMatkakirja(ui, city);
+  // Lipun nostaisi js/fokusvirta.js avaaAarremerkinta, mutta ilman dataa se
+  // ei nosta sitä; nostetaan lippu silti käsin ja varmistetaan, ettei kortti vaihdu.
   ui.fokusaarreMerkinta = { avain: 'maailmankartta:ateena', kuitattu: false };
-  const merkinta = fokusvirtaMatkakirja(ui, city);
-  // Aarremerkintä on olio (`{ teksti }`) jokaisessa kaupungissa v1301:stä
-  // lähtien; moottori kelpuuttaa yhä myös vanhan merkkijonomuodon.
-  assert.equal(merkinta.teksti, ATEENA.aarremerkinta.teksti,
-    'aarteen jälkeen kortissa on isoisän myöhempi sivu');
-  assert.ok(merkinta.avain.startsWith('fokusaarre:'),
-    'aarremerkinnällä on oma korttiavain (ui.js tunnistaa siitä äänitesäännön)');
+  const jalkeen = fokusvirtaMatkakirja(ui, city);
+  assert.deepEqual(jalkeen, ennen, 'aarremerkinnätön kaupunki ei saa uutta korttia aarteen jälkeen');
+  assert.ok(!jalkeen.avain.startsWith('fokusaarre:'), 'aarremerkinnän korttiavain ei saa ilmestyä');
 });
 
 test('kaupunki ilman fokusvirtaa jää vanhan saapumispolun varaan', () => {
@@ -848,9 +857,8 @@ test('botti ei saa fokusvirran merkintää', () => {
  * asiaa, jotka eivät näkyisi rikkoutuessaan ruudulla mitenkään:
  *
  *   1. LUPAUS ILMAN KUVAA. Väärä polku jättäisi kortista vain tyhjän
- *      paikan (piirraKohdeKuva poistaa kehyksen) tai "Koe ihme"
- *      -napin, joka avaa tyhjän suurennoksen. Siksi tiedosto
- *      tarkistetaan levyltä.
+ *      paikan (piirraKohdeKuva poistaa kehyksen) kortin ensimmäisen
+ *      kuvan kohdalle. Siksi tiedosto tarkistetaan levyltä.
  *   2. HAVAINNEKUVAMERKINTÄ. Kuva näyttää valokuvalta, joten sen on
  *      sanottava itse olevansa havainnekuva. Nauhan piirtää peli;
  *      lähderivin on oltava datassa.
@@ -940,8 +948,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
         /*
          * OLEMASSA OLEVAN PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ
          * KUNNOSTA (omistajan täsmennys 27.8.2026 ilta) — Commons-nimi,
-         * ei repon oma generoitu kuva. Generoitu ihmekuva aukeaa vain
-         * "Koe ihme" -napista, joka piirtyy tämän kuvan ALLE.
+         * ei repon oma generoitu kuva. Generoitu ihmekuva on 27.9.2026
+         * alkaen kortin ensimmäinen kuva, ja tämä valokuva kelluu pienenä
+         * tekstin kyljessä (js/fokuskohteet.js kohteenNykykuva).
          */
         assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.osoite,
           `${tunnus}: olemassa olevan kohteen pääkuvan on oltava Commons-valokuva`);
@@ -951,14 +960,18 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     }
   }
   /*
-   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN. Ensimmäinen erä
-   * (26.–27.8.2026) oli antiikin kadonneet ihmeet, Euroopan erä
-   * (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries, vanha
-   * St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
+   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN + KOLMETOISTA.
+   * Ensimmäinen erä (26.–27.8.2026) oli antiikin kadonneet ihmeet,
+   * Euroopan erä (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries,
+   * vanha St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
    * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
-   * ja Mesopotamiasta.
+   * ja Mesopotamiasta. Sisältökirjurin erä (28.9.2026) kytki Codexin
+   * tilaamat 14 loistoaikakuvaa peliin — 6 kadonnutta (AUT, NLD, CHE,
+   * SWE, BLR, BIH) ja 8 rappeutunutta parikuvana (SRB, ALB, MKD, MNE,
+   * CYP, MLT, MDA, BIH); DNK oli jo pelissä (christiansborg), joten
+   * nettolisäys on 13.
    */
-  assert.equal(ihmeita, 104, 'Matkakirjan ihmeitä on sataneljä');
+  assert.equal(ihmeita, 117, 'Matkakirjan ihmeitä on sataseitsemäntoista');
 });
 
 /*
@@ -1235,11 +1248,11 @@ test('lehtivinkin kupla on ruksiton ja puhuu pulun äänellä', async () => {
   // Kertalippu Livian omasta moduulista, ei enää kaupunkikohtaista muistia.
   assert.match(virta, /if \(!livianLehtivinkkiOdottaa\(\)\) return false;/);
   assert.doesNotMatch(virta, /fokusvinkkiNaytetty/);
-  // Lippu kuluu vasta kun kupla oikeasti näkyi.
-  assert.match(virta, /if \(!naytaPolloKupla\(ui, LIVIAN_LEHTIVINKKI\)\) return;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
+  // Lippu kuluu vasta kun kupla tai lehden ympyröinti oikeasti näkyi.
+  assert.match(virta, /if \(!naytaPolloKupla\(ui, teksti\)\) return false;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
   // Avainsana ympyröidään ja repliikki luetaan pulun äänellä.
   assert.match(virta, /LIVIAN_LEHTIVINKIN_SANA, \{ tyyppi: 'circle'/);
-  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\);/);
+  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\)/);
 });
 
 /* ---------- matkakirjakortin otsikko (omistaja 8.9.2026) ---------- */

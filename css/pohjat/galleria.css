@@ -1,0 +1,200 @@
+/*
+ * GALLERIA (tyylikirja.json pohjat.GALLERIA; omistaja 2.10.2026 klo 15.5x, Natiivi-UI määritteli; js/pohjat/pohjat.js
+ * luoPohjaGalleria). Kuvakokoelman ikkuna PAPERI-teemalla hunnun päällä; ruudukko galleria.sarake/galleria.vali, vedos
+ * kuvan suhteella (--tk-kokoelma-suhde datasta), lukossa pelkkä kehys. Napautus avaa KUVANÄKYMÄN (.tk-kokoelma-kuvanakyma).
+ * Malli ja mitat vanhasta julistegalleriasta. Osa UI-pohjien tyylejä; VAIN --tk-*-tokenit.
+ */
+
+.tk-kokoelma-tausta {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  background: var(--tk-himmennys-kevyt);
+  backdrop-filter: blur(var(--tk-vali-xs));
+  -webkit-backdrop-filter: blur(var(--tk-vali-xs));
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+}
+
+.tk-kokoelma {
+  position: fixed;
+  inset: 0;
+  z-index: 66;
+  box-sizing: border-box;
+  width: min(var(--tk-leveys-levea), 100vw - var(--tk-vali-xl));
+  height: fit-content;
+  max-height: var(--tk-peitto-laajennettu);
+  margin: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 var(--tk-vali-l) var(--tk-vali-l);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 18px 44px var(--tk-himmennys-tumma);
+  transition: opacity var(--tk-kesto-avaus) var(--liike-sisaan), transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+.tk-kokoelma.tk-piilossa,
+.tk-kokoelma-tausta.tk-piilossa {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: var(--tk-kesto-sulku);
+}
+.tk-kokoelma.tk-piilossa { transform: scale(0.98); }
+.tk-kokoelma--esikatselu { position: relative; inset: auto; z-index: auto; max-height: none; margin: 0; }
+
+/* Otsikkorivi pysyy ylhäällä vieritettäessä; alla ohut reunus-viiva. */
+.tk-kokoelma__yla {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--tk-vali-s);
+  margin: 0 0 var(--tk-vali-s);
+  padding: var(--tk-vali-m) 0 var(--tk-vali-s);
+  border-bottom: 1px solid var(--tk-reunus);
+  background: var(--tk-pinta);
+}
+.tk-kokoelma .tk-kokoelma__otsikko { flex: 1; margin: 0; font-size: var(--tk-koko-valiotsikko); }
+.tk-kokoelma__laskuri { color: var(--tk-muste-pehmea); }
+
+/* ✕ OHJAUSNAPPINA: nappi.ohjaus-neliö, kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma. */
+.tk-kokoelma__sulku,
+button.tk-kokoelma__sulku:hover:not(:disabled),
+button.tk-kokoelma__sulku:active:not(:disabled) {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--tk-nappi-ohjaus);
+  height: var(--tk-nappi-ohjaus);
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--tk-pinta);
+  box-shadow: none;
+  color: var(--tk-muste);
+  cursor: pointer;
+}
+.tk-kokoelma__sulku::before {
+  content: '';
+  position: absolute;
+  inset: calc((var(--tk-nappi-ohjaus) - var(--tk-nappi-osuma)) / 2);
+}
+.tk-kokoelma__sulku svg {
+  width: var(--tk-nappi-ohjaus-kuvake);
+  height: var(--tk-nappi-ohjaus-kuvake);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+}
+.tk-kokoelma__sulku:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: 2px; }
+
+.tk-kokoelma__osio + .tk-kokoelma__osio { margin-top: var(--tk-vali-m); }
+.tk-kokoelma .tk-kokoelma__osiootsikko { margin: var(--tk-vali-s) 0 var(--tk-vali-s); }
+
+.tk-kokoelma__ruudukko {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tk-galleria-sarake), 1fr));
+  gap: var(--tk-galleria-vali);
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .tk-kokoelma__ruudukko { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.tk-kokoelma__vedos,
+button.tk-kokoelma__vedos:hover:not(:disabled),
+button.tk-kokoelma__vedos:active:not(:disabled) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--tk-muste-pehmea);
+  text-align: center;
+  cursor: zoom-in;
+}
+.tk-kokoelma__vedos:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: 2px; }
+.tk-kokoelma__kuva {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: var(--tk-kokoelma-suhde, 2 / 3);
+  overflow: hidden;
+  border: 1px solid var(--tk-muste-pehmea);
+}
+.tk-kokoelma__kuva img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tk-kokoelma__nimi {
+  display: -webkit-box;
+  margin-top: var(--tk-vali-xs);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+/* Lukossa: sama ruutu ohuella reunus-kehyksellä ja himmeällä pohjalla, ei kuvaa eikä nimeä. Kuvaton: sama kehys, nimi jää. */
+.tk-kokoelma__vedos--lukossa { cursor: default; }
+.tk-kokoelma__vedos--lukossa .tk-kokoelma__kuva,
+.tk-kokoelma__vedos--kuvaton .tk-kokoelma__kuva {
+  border-color: var(--tk-reunus);
+  background: color-mix(in srgb, var(--tk-reunus) 30%, transparent);
+}
+
+/* ── Gallerian KUVANÄKYMÄ: yksi kuva kerrallaan, ‹ › reunakaistat ja kuvateksti alhaalla. Gallerian (66) päällä. ── */
+.tk-kuvanakyma.tk-kokoelma-kuvanakyma { z-index: 67; }
+.tk-kokoelma-kuvanakyma__kuva {
+  position: absolute;
+  inset: calc(var(--tk-vali-xl) + env(safe-area-inset-top, 0px)) var(--tk-vali-xl) calc(var(--tk-vali-xl) * 4);
+  width: calc(100% - 2 * var(--tk-vali-xl));
+  height: calc(100% - var(--tk-vali-xl) * 5 - env(safe-area-inset-top, 0px));
+  object-fit: contain;
+}
+.tk-kokoelma-kuvanakyma__teksti {
+  position: absolute;
+  right: var(--tk-vali-xl);
+  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
+  left: var(--tk-vali-xl);
+  text-align: center;
+}
+.tk-kokoelma-kuvanakyma__teksti p { margin: 0 auto; max-width: var(--tk-leveys-lukupalsta); }
+.tk-kokoelma-kuvanakyma__otsikko { font-family: var(--font-luku); font-size: var(--tk-koko-leipa); font-weight: 700; }
+.tk-kokoelma-kuvanakyma__kuvateksti { font-family: var(--font-luku); font-size: var(--tk-koko-apuri); color: var(--tk-muste-pehmea); }
+.tk-kokoelma-kuvanakyma__laskuri { font-family: var(--font-type); font-size: var(--tk-koko-kapiteeli); color: var(--tk-muste-pehmea); }
+.tk-kokoelma-kuvanakyma__kaista,
+button.tk-kokoelma-kuvanakyma__kaista:hover:not(:disabled),
+button.tk-kokoelma-kuvanakyma__kaista:active:not(:disabled) {
+  position: absolute;
+  top: 0;
+  bottom: calc(var(--tk-vali-xl) * 4);
+  z-index: 2;
+  width: var(--tk-nappi-laukaisin);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-otsikko);
+  cursor: pointer;
+}
+.tk-kokoelma-kuvanakyma__kaista--edellinen { left: env(safe-area-inset-left, 0px); }
+.tk-kokoelma-kuvanakyma__kaista--seuraava { right: env(safe-area-inset-right, 0px); }
+.tk-kokoelma-kuvanakyma__kaista:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: -4px; }

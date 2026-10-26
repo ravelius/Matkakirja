@@ -35,10 +35,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
-
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = new URL('..', import.meta.url).pathname;
 
@@ -123,7 +120,7 @@ if (kirjasto?.status !== 200) {
 
 /* ---------------------------------------------------------- selain */
 
-const selain = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
+const selain = await avaaChromium();
 const ctx = await selain.newContext({
   viewport: { width: 480, height: 854 }, deviceScaleFactor: 2, serviceWorkers: 'block', reducedMotion: 'reduce',
 });

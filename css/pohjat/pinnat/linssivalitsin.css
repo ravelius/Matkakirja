@@ -1,0 +1,101 @@
+/*
+ * PINTA: pillerivalikon Linssit-näkymä (linssivalitsin) PANEELI-pohjalla (Natiivi-UI 1.10.2026, 2. erä A).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── PANEELI: pillerivalikon Linssit-näkymä (linssivalitsin; Natiivi-UI 1.10.2026, 2. erä A) ───────────────────────
+   Kokoelmanäkymät (Linssit, Aarteet; js/kokoelmanakyma.js) lukevat myös näitä kehysmuuttujia: paperin arvot
+   tokeneista, muuten tumman paneelin vaaleat sävyt jäisivät paperille. */
+
+.paavalikko.tk-paneeli--paikallaan {
+  --ink-light: var(--tk-muste);
+  --accent: var(--tk-korostus);
+  --accent-dark: var(--tk-toiminto);
+  --panel-2: var(--tk-pergamentti);
+}
+/* Rivi 38 (osuma 44), kuvake 28 vasemmalla, nimi leipä 16; päällä-tila kapiteelina oikealla korostusvärillä. */
+#pilleri-linssit-nakyma .kokoelma-rivi {
+  min-height: var(--tk-nappi-korkeus);
+  gap: var(--tk-vali-s);
+  padding: 0 var(--tk-vali-s);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+}
+#pilleri-linssit-nakyma .kokoelma-rivi-kuvake {
+  width: calc(var(--tk-vali-xl) + var(--tk-vali-xs));
+  height: calc(var(--tk-vali-xl) + var(--tk-vali-xs));
+  background: var(--tk-pergamentti);
+}
+#pilleri-linssit-nakyma .kokoelma-rivi-nimi { flex: 1 1 auto; font-family: var(--font-luku); font-size: var(--tk-koko-leipa); }
+#pilleri-linssit-nakyma .kokoelma-rivi.aktiivinen::after {
+  content: 'päällä';
+  flex: none;
+  color: var(--tk-korostus);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+/* Valittu (esikatseltu) rivi: pergamentti ja toimintoreunus, kuten nostoselaimen nykyinen rivi. */
+#pilleri-linssit-nakyma .kokoelma-rivi.esikatselu {
+  border-color: var(--tk-toiminto);
+  background: var(--tk-pergamentti);
+  color: var(--tk-muste);
+}
+/* KESKENERÄISET ja Hiomassa: kapiteeli ja 1 px reunusviiva alla. */
+#pilleri-linssit-nakyma .kokoelma-otsikko {
+  margin: var(--tk-vali-m) 0 var(--tk-vali-xs);
+  padding-bottom: var(--tk-vali-xs);
+  border-bottom: 1px solid var(--tk-reunus);
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-kapiteeli);
+  letter-spacing: 0.12em;
+}
+/* Esikatselukortti avaajan puolella: paperi, kortin kulma, kuva 1:1, nimi leipä lihava, kuvaus apuri kursiivi. */
+#pilleri-linssit-nakyma .kokoelma-esikatselu {
+  gap: var(--tk-vali-xs);
+  padding: var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+}
+#pilleri-linssit-nakyma .kokoelma-esikatselu-kuva { border-radius: var(--tk-kulma-pieni); }
+#pilleri-linssit-nakyma .kokoelma-esikatselu-nimi {
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+#pilleri-linssit-nakyma .kokoelma-esikatselu-selite {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-apuri);
+  font-style: italic;
+}
+#pilleri-linssit-nakyma .kokoelma-toiminto {
+  min-height: var(--tk-nappi-korkeus);
+  border: 1px solid var(--tk-toiminto);
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+/* Kapea listasarake (esikatselu auki): PÄÄLLÄ nimen alle omalle rivilleen, nimi ei lyhene eikä tila piiloudu
+   (Natiivi-UI 1.10.2026); rivi saa kasvaa (min 38). Leveässä tila pysyy oikealla. */
+#pilleri-linssit-nakyma .kokoelma-esikatselu-auki .kokoelma-rivi.aktiivinen {
+  flex-wrap: wrap;
+  row-gap: 0;
+  padding-top: var(--tk-vali-xs);
+  padding-bottom: var(--tk-vali-xs);
+}
+#pilleri-linssit-nakyma .kokoelma-esikatselu-auki .kokoelma-rivi.aktiivinen::after {
+  flex-basis: 100%;
+  margin-top: var(--tk-vali-xs);
+  padding-left: calc(var(--tk-vali-xl) + var(--tk-vali-xs) + var(--tk-vali-s));
+}

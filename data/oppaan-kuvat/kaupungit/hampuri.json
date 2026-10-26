@@ -1,0 +1,444 @@
+{
+ "kaupunki": "hampuri",
+ "kaupunkiQ": "Q1055",
+ "kohteet": [
+  {
+   "q": "Q661881",
+   "nimi": "Speicherstadt",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 53.54333,
+   "lon": 9.99194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, Speicherstadt, Wasserschloss -- 2016 -- 3265-71.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_3265-71.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_3265-71.jpg",
+     "selite": "Speicherstadtin tiilivarastot kanavineen muodostavat maailman suurimman varastokaupunginosan.",
+     "leveys": 5309,
+     "korkeus": 3318,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blick über den Brooksfleet auf die Speicher am Brook-1000288.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_%C3%BCber_den_Brooksfleet_auf_die_Speicher_am_Brook-1000288.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_%C3%BCber_den_Brooksfleet_auf_die_Speicher_am_Brook-1000288.jpg",
+     "selite": "Punatiiliset varastorakennukset vihertävine kattoineen reunustavat Brooksfleet-kanavaa.",
+     "leveys": 9311,
+     "korkeus": 5819,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hamburg, Speicherstadt, Wasserschloss -- 2016 -- 2971.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_2971.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_2971.jpg",
+     "selite": "Vesilinna eli Wasserschloss seisoo kahden kanavan välissä Speicherstadtin sydämessä.",
+     "leveys": 4957,
+     "korkeus": 3305,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3987",
+   "nimi": "Hampurin raatihuone",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.55022,
+   "lon": 9.99277,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, Rathaus -- 2023 -- 6597.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Rathaus_--_2023_--_6597.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Rathaus_--_2023_--_6597.jpg",
+     "selite": "Uusrenessanssityylinen raatihuone on Hampurin kaupungin ja osavaltion hallituksen koti.",
+     "leveys": 5973,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Radnice (Rathaus), Rathausmarkt, Hamburg-Mitte, Germany 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Radnice_(Rathaus)%2C_Rathausmarkt%2C_Hamburg-Mitte%2C_Germany_2026.jpg?width=1280",
+     "tekija": "Fry72 (Karel Frydrýšek)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Radnice_(Rathaus)%2C_Rathausmarkt%2C_Hamburg-Mitte%2C_Germany_2026.jpg",
+     "selite": "Raatihuoneen korkea kellotorni ja valaistu julkisivu hallitsevat Rathausmarkt-aukiota.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q674472",
+   "nimi": "Pyhän Mikaelin kirkko (Michel)",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 53.54833,
+   "lon": 9.97889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, St. Michaelis -- 2023 -- 6615.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_St._Michaelis_--_2023_--_6615.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_St._Michaelis_--_2023_--_6615.jpg",
+     "selite": "Barokkinen Michel on Hampurin tunnetuin kirkko ja kaupungin tunnusmerkki.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg, Hafen, Schiff -Rickmer Rickmers- und St.-Michaelis-Kirche -- 2016 -- 3127.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Hafen%2C_Schiff_-Rickmer_Rickmers-_und_St.-Michaelis-Kirche_--_2016_--_3127.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Hafen%2C_Schiff_-Rickmer_Rickmers-_und_St.-Michaelis-Kirche_--_2016_--_3127.jpg",
+     "selite": "Michelin kuparikattoinen torni näkyy kauas Elbelle ja sataman laivoille.",
+     "leveys": 5472,
+     "korkeus": 3420,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hamburg, St. Michaelis, Kirchturm -- 2025 -- 2855.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_St._Michaelis%2C_Kirchturm_--_2025_--_2855.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_St._Michaelis%2C_Kirchturm_--_2025_--_2855.jpg",
+     "selite": "Tornin kello on Saksan suurin kirkontornin kello.",
+     "leveys": 3460,
+     "korkeus": 5190,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q542783",
+   "nimi": "Chilehaus",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 53.5482,
+   "lon": 10.0016,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, Kontorhausviertel, Chilehaus -- 2016 -- 3397.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Kontorhausviertel%2C_Chilehaus_--_2016_--_3397.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Kontorhausviertel%2C_Chilehaus_--_2016_--_3397.jpg",
+     "selite": "Chilehausin terävä kulma muistuttaa laivan keulaa, ja se on tiiliekspressionismin tunnetuin esimerkki.",
+     "leveys": 2954,
+     "korkeus": 4136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg, Kontorhausviertel, Chilehaus -- 2016 -- 3403.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Kontorhausviertel%2C_Chilehaus_--_2016_--_3403.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Kontorhausviertel%2C_Chilehaus_--_2016_--_3403.jpg",
+     "selite": "Talon pitkä, kaareva tiiliseinä kiertää kadun mutkaa kuin laivan kylki.",
+     "leveys": 3285,
+     "korkeus": 4970,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3964",
+   "nimi": "Hampurin satama",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 53.54,
+   "lon": 9.98278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial image of the Eurogate and Burchardkai container terminals (view from the southeast).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_the_Eurogate_and_Burchardkai_container_terminals_(view_from_the_southeast).jpg?width=1280",
+     "tekija": "Carsten Steger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Eurogate_and_Burchardkai_container_terminals_(view_from_the_southeast).jpg",
+     "selite": "Hampurin satama on Saksan suurin ja yksi Euroopan vilkkaimmista konttisatamista.",
+     "leveys": 5500,
+     "korkeus": 3600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg Steinwerder Juni 2019 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg_Steinwerder_Juni_2019_1.jpg?width=1280",
+     "tekija": "Kasa Fue",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg_Steinwerder_Juni_2019_1.jpg",
+     "selite": "Elbe jakautuu sataman halki lukemattomiksi laituri- ja telakka-altaiksi.",
+     "leveys": 5464,
+     "korkeus": 3640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "CMA CGM Kerguelen, Container Terminal Burchardkai, Hamburg (P1080471).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CMA_CGM_Kerguelen%2C_Container_Terminal_Burchardkai%2C_Hamburg_(P1080471).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CMA_CGM_Kerguelen%2C_Container_Terminal_Burchardkai%2C_Hamburg_(P1080471).jpg",
+     "selite": "Suuret konttialukset lastataan terminaalin nostureilla ympäri vuorokauden.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q458970",
+   "nimi": "St. Paulin Landungsbrücken",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 53.54611,
+   "lon": 9.96667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, Landungsbrücken -- 2016 -- 3131-7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg",
+     "selite": "Landungsbrücken on Hampurin laivalaiturien pitkä rivi, josta satamakierrokset ja lautat lähtevät.",
+     "leveys": 5434,
+     "korkeus": 3622,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg Bei den St. Pauli Landungsbrücken 3 5 003 2020 01 23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg_Bei_den_St._Pauli_Landungsbr%C3%BCcken_3_5_003_2020_01_23.jpg?width=1280",
+     "tekija": "Friedrich Haag",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg_Bei_den_St._Pauli_Landungsbr%C3%BCcken_3_5_003_2020_01_23.jpg",
+     "selite": "Joen toiselta rannalta laiturit erottuvat kupolikattoisina rakennuksina kaupungin siluetissa.",
+     "leveys": 5280,
+     "korkeus": 1968,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3238460",
+   "nimi": "Binnenalster",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 53.555,
+   "lon": 9.995,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg Binnenalster DS578n.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg_Binnenalster_DS578n.jpg?width=1280",
+     "tekija": "AltSylt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg_Binnenalster_DS578n.jpg",
+     "selite": "Binnenalster on Hampurin keskustan sisäjärvi, jonka rannoilla kohoavat kirkontornit.",
+     "leveys": 4270,
+     "korkeus": 2135,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg, Schiffe auf der Binnenalster -- 2016 -- 4185.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_Schiffe_auf_der_Binnenalster_--_2016_--_4185.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_Schiffe_auf_der_Binnenalster_--_2016_--_4185.jpg",
+     "selite": "Järvellä liikennöi pienlaivoja, ja sen keskeltä nousee kuuluisa suihkulähde.",
+     "leveys": 3921,
+     "korkeus": 2206,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3392985",
+   "nimi": "Außenalster",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 53.565,
+   "lon": 10.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Außenalster Heinrich-Hertz-Turm 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Au%C3%9Fenalster_Heinrich-Hertz-Turm_02.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Au%C3%9Fenalster_Heinrich-Hertz-Turm_02.jpg",
+     "selite": "Außenalster on Hampurin suuri keskustajärvi, jonka rannoilla ihmiset purjehtivat ja kävelevät.",
+     "leveys": 5163,
+     "korkeus": 3447,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg - Außenalster - Segelboot 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg_-_Au%C3%9Fenalster_-_Segelboot_01.jpg?width=1280",
+     "tekija": "Llez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg_-_Au%C3%9Fenalster_-_Segelboot_01.jpg",
+     "selite": "Järvi on suosittu purjehduspaikka koko Hampurin kaupungin keskellä.",
+     "leveys": 2880,
+     "korkeus": 5136,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q494440",
+   "nimi": "Planten un Blomen",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 53.56111,
+   "lon": 9.98333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wasserlichtspiele at Planten un Blomen, Hamburg (14532954044).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wasserlichtspiele_at_Planten_un_Blomen%2C_Hamburg_(14532954044).jpg?width=1280",
+     "tekija": "Hauke Musicaloris",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wasserlichtspiele_at_Planten_un_Blomen%2C_Hamburg_(14532954044).jpg",
+     "selite": "Puiston vesivalonäytös valaisee tekojärven kesäisin iltaisin.",
+     "leveys": 3200,
+     "korkeus": 2368,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q564532",
+   "nimi": "Pyhän Jaakobin kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 53.55028,
+   "lon": 10.00056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Jacobi (Hamburg-Altstadt).11866.ajb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Jacobi_(Hamburg-Altstadt).11866.ajb.jpg?width=1280",
+     "tekija": "Ajepbah",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Jacobi_(Hamburg-Altstadt).11866.ajb.jpg",
+     "selite": "Keskiaikainen tiilikirkko on yksi Hampurin viidestä pääkirkosta ja tunnetaan Schnitgerin urusta.",
+     "leveys": 2664,
+     "korkeus": 3552,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hamburg - Hauptkirche St. Jacobi (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg_-_Hauptkirche_St._Jacobi_(1).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg_-_Hauptkirche_St._Jacobi_(1).jpg",
+     "selite": "Kirkon korkea tornihuippu nousee vanhankaupungin kattojen yläpuolelle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q460264",
+   "nimi": "Vanha Elbtunneli",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 450,
+   "lat": 53.544,
+   "lon": 9.9665,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hamburg, St.-Pauli-Elbtunnel -- 2016 -- 3103.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg%2C_St.-Pauli-Elbtunnel_--_2016_--_3103.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hamburg%2C_St.-Pauli-Elbtunnel_--_2016_--_3103.jpg",
+     "selite": "Vuonna 1911 avattu kaakeloitu tunneli kulkee Elben alta ja on edelleen jalankulkijoiden käytössä.",
+     "leveys": 5346,
+     "korkeus": 3605,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Blick vom Michel Richtung Rathau in Hamburg.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_vom_Michel_Richtung_Rathau_in_Hamburg.jpg?width=1280",
+   "tekija": "JoachimKohler-HB",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_vom_Michel_Richtung_Rathau_in_Hamburg.jpg",
+   "selite": "Hampurin keskustan kattojen yllä kohoavat raatihuoneen ja kirkkojen tornit.",
+   "leveys": 4200,
+   "korkeus": 3150,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Blick vom Michel-Turm nach Westen (Hamburg, 2019).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blick_vom_Michel-Turm_nach_Westen_(Hamburg%2C_2019).jpg?width=1280",
+   "tekija": "JoachimKohler-HB",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blick_vom_Michel-Turm_nach_Westen_(Hamburg%2C_2019).jpg",
+   "selite": "Elbe virtaa Hampurin halki satamaan ja laajoihin kaupunginosiin.",
+   "leveys": 4800,
+   "korkeus": 3200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

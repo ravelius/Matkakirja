@@ -217,6 +217,55 @@ erässä tehtiin.
 | pääaarre ja pelin loppu | `musa-paaaarre` samasta soittimesta; pelin päätyttyä pohjavire | — (soi jo) |
 | työhuoneen Musiikki-lehti | kuunneltava raita, ambienssi hiljennetty (`musiikkisivu`) | uudet raidat listautuvat lehteen itsestään |
 
+## Matkan aiheet (musiikkisuunnitelma, vaihe 1, 26.9.2026)
+
+Suunnitelma: `docs/raportit/musiikki-ja-aanisuunnitelma-20260926.md`.
+Kaikki musiikkitiedostot (paletti ja suunnitelman raidat) ovat noin
+−11 LUFS:ssä; suunnitelman raidat leikataan ja normalisoidaan
+`tools/viimeistele-musiikki.mjs`:llä. Soittotaso tulee siis samoista
+voimista ja samasta säätimestä (`musiikinKerroin`) kuin muullakin
+musiikilla.
+
+| raita | milloin | soitin |
+|---|---|---|
+| `musa-johtoaihe` | etusivu (kiertää; ei saumaton looppi, sauma on fraasin loppu ja 0,7 s hengähdys) | pohjavirekoneisto, `PAIKKARAIDAT.etusivu` |
+| `musa-aloituslento` | Lontoosta ensimmäiseen kaupunkiin, napautuksesta (ei liikeherkkyydessä) | aarreaiheen paikka (`soitaAarreMusiikki`, `MATKAN_AIHEET`) |
+| `musa-saapuminen-<maanosa>` | ensimmäinen saapuminen kaupunkiin; tunnus kaupungin maanosan mukaan (vaihe 2, ks. alla); ei aloituslennon kohteeseen, ei soivan aiheen päälle | sama; `js/kaupunkimusiikki.js` `SAAPUMISTUNNUKSET` |
+| `musa-loppu` | kaikki pääaarteet löydetty: viimeisen pääaarteen fanfaarin perään | sama; `ajastaMatkanLoppu` |
+
+Aiheen ajan pohjaraita ja äänimaisema väistyvät (`hiljennaAmbienssi`,
+0,45) ja palaavat aiheen loputtua. Aarreaihe saa katkaista
+saapumistunnuksen, tunnus ei katkaise mitään.
+
+### Vaihe 2: maanosat, kohtaaminen ja tulos (26.9.2026)
+
+Natiivi peilaa tämän sellaisenaan (web on malli).
+
+**Maanosa** (`js/kaupunkimusiikki.js` `kaupunginMaanosa`): kaupungin
+alue → `ALUEEN_MAANOSA`; ilman aluetta maa → `MAAN_MAANOSA`; muuten ei
+maanosaa. Kymmenen maanosaa: `lansi-eurooppa`, `valimeri`,
+`ita-eurooppa`, `lahi-ita`, `saharan-etelapuoli`, `etela-aasia`,
+`ita-aasia`, `pohjois-amerikka`, `etela-amerikka`, `oseania`. Jokaisella
+pakkojen `cityCountry`-maalla on maanosa (testi vartioi).
+
+| raita | missä soi | soitin |
+|---|---|---|
+| `musa-saapuminen-<maanosa>` (10) | ensimmäinen saapuminen kaupunkiin, maanosan mukaan; ehdot kuten vaiheessa 1 | aarreaiheen paikka, ei katkaise |
+| `musa-maanosa-<maanosa>` (10; vaihe 2: valimeri, lansi-eurooppa, vaihe 3: loput 8) | alueraidan varareitti: ketjussa alueraidan jälkeen, ennen pohjavirettä (Euroopan ulkopuolella maanosaraita on paikan raita; Euroopassa alueraita voittaa) | pohjavirekoneisto, `MAANOSARAIDAT` |
+| `musa-kaupunki-<id>` tunnuskaupungit (vaihe 3): pariisi, lontoo, rooma, istanbul, kairo, pietari | kaupungin oma kappale kuten Ateena | `KAUPUNKIRAIDAT` |
+| `musa-kohtaaminen` | henkilön kohtaaminen: visan kortti, jolla puhuu tarinakaaren henkilö tai nimetty paikallinen (`js/visa.js` `onKohtaaminen`), tervehdyssivulta kortin sulkuun | pohjavirekoneisto, tilaraita `kohtaaminen` |
+| `musa-ratkaisu` | kohtaamisen kysymys oikein | aarreaiheen paikka, ei katkaise; aarteen paljastus katkaisee sen |
+| `musa-epaonnistuminen` | kohtaamisen kysymys väärin tai aika loppui | sama |
+
+**Visa voittaa kohtaamisen.** Tervehdyssivulla soi kohtaaminen; Aloita
+peli -napista (kysymyssivu) alkaa visan raita, ja kohtaaminen väistyy
+ketjusta niin kauan kuin visan raita on päällä (`asetaVisaSoi`,
+`VISAN_ALLE_JAAVAT`). Vastauksen tai ajan loppumisen jälkeen visan raita
+loppuu ja kohtaaminen palaa tuloksen ja vastausrepliikin ajaksi; kortin
+sulkeutuessa tila puretaan. Ilman tervehdyssivua (henkilö jo tavattu)
+visa alkaa heti kuten ennenkin. Lehti ja matkalaukku voittavat
+kohtaamisen (`TILARAIDAT`-järjestys).
+
 ## Pohjaraidan valitsin (5.9.2026 yö)
 
 Pelissä on **yksi musiikin paikka sekoituksessa**: ambienssiäänten alla,
@@ -229,8 +278,9 @@ pohjavireen ja Ateenan kappaleen.
 **Ketju parhaasta alkaen:**
 
 ```
-tila (lehti → matkalaukku) → paikan raita (etusivu)
-→ kaupungin oma kappale → kaupungin alueen raita → pohjavire
+tila (lehti → matkalaukku → kohtaaminen) → paikan raita (etusivu)
+→ kaupungin oma kappale → kaupungin alueen raita
+→ kaupungin maanosan raita → pohjavire
 ```
 
 Soitin ottaa ketjusta ensimmäisen, jota ei ole todettu puuttuvaksi.
@@ -243,9 +293,11 @@ automaattisesti. Peli ei ole hetkeäkään hiljainen. Vaihto on aina
 |---|---|---|
 | `musa-lehti` | 90 s | lehti auki (kaupunki-, maa- ja kehittäjän lehti) |
 | `musa-matkalaukku` | 45 s | matkalaukku auki |
-| `musa-etusivu` | 90 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta |
+| `musa-kohtaaminen` | 70 s | kohtaaminen auki, paitsi visan raidan soidessa |
+| `musa-johtoaihe` | 60 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta (26.9.2026 alkaen; vanha `musa-etusivu` jää ämpäriin, paluu on `PAIKKARAIDAT.etusivu.tunnus`-rivin vaihto) |
 | `musa-kaupunki-<id>` | 60–90 s | kaupungin oma kappale (Ateena) |
 | `musa-kaupunki-<alue>` | 75 s | alueen raita: `britteinsaaret`, `pohjola`, `keski-eurooppa`, `valimeri`, `balkan`, `ita-eurooppa` |
+| `musa-maanosa-<maanosa>` | 50–72 s | maanosan raita, alueraidan varareitti: kaikki 10 maanosaa (vaiheet 2 ja 3) |
 | `musa-pohja` | 80 s | kaikkialla muualla |
 
 **Mistä tila tulee.** Kaksi lähdettä, kumpikin jo olemassa olevaa

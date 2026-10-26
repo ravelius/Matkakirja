@@ -1,0 +1,670 @@
+{
+ "kaupunki": "montreal",
+ "kaupunkiQ": "Q340",
+ "kohteet": [
+  {
+   "q": "Q887686",
+   "nimi": "Notre-Damen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.50444,
+   "lon": -73.55611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montréal - Notre-Dame - Extérieur.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_-_Notre-Dame_-_Ext%C3%A9rieur.jpg?width=1280",
+     "tekija": "Concierge.2C",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montr%C3%A9al_-_Notre-Dame_-_Ext%C3%A9rieur.jpg",
+     "selite": "Notre-Damen basilikan kaksi tornia hallitsevat Place d'Armesin aukiota Vanhassa Montrealissa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Façade de la Basilique Notre-Dame de Montréal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fa%C3%A7ade_de_la_Basilique_Notre-Dame_de_Montr%C3%A9al.jpg?width=1280",
+     "tekija": "Louis Bouret",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_de_la_Basilique_Notre-Dame_de_Montr%C3%A9al.jpg",
+     "selite": "Goottilaisen herätyksen julkisivussa on kolme sisäänkäyntiä ja kaksi tornia.",
+     "leveys": 2771,
+     "korkeus": 4156,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1757764",
+   "nimi": "Mont Royal",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 45.50639,
+   "lon": -73.58889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montreal from above Mont Royal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_from_above_Mont_Royal.jpg?width=1280",
+     "tekija": "John Lian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_from_above_Mont_Royal.jpg",
+     "selite": "Mont Royal on kaupungin keskellä kohoava kukkula, jonka puistosta avautuu näkymä keskustaan.",
+     "leveys": 3992,
+     "korkeus": 2661,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Downtown Montreal seen from Mount Royal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Montreal_seen_from_Mount_Royal.jpg?width=1280",
+     "tekija": "Stanisom",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Montreal_seen_from_Mount_Royal.jpg",
+     "selite": "Kukkulalta näkyy keskustan pilvenpiirtäjien rykelmä.",
+     "leveys": 6000,
+     "korkeus": 2534,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q285467",
+   "nimi": "Montrealin olympiastadion",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 45.55781,
+   "lon": -73.55164,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Le Stade Olympique de Montréal Nuit Arriere-Gauche.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Stade_Olympique_de_Montr%C3%A9al_Nuit_Arriere-Gauche.jpg?width=1280",
+     "tekija": "Acarpentier (photograph); Roger Taillibert (architect)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_Stade_Olympique_de_Montr%C3%A9al_Nuit_Arriere-Gauche.jpg",
+     "selite": "Olympiastadionin kallistunut torni ja kaarevat betonirakenteet rakennettiin vuoden 1976 kisoja varten.",
+     "leveys": 1872,
+     "korkeus": 1316,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montreal - Olympic Park panorama - Cropped version.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_-_Olympic_Park_panorama_-_Cropped_version.jpg?width=1280",
+     "tekija": "Paolo Costa Baldi",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_-_Olympic_Park_panorama_-_Cropped_version.jpg",
+     "selite": "Olympiapuiston stadion ja torni näkyvät laajana panoraamana.",
+     "leveys": 7125,
+     "korkeus": 2770,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1529351",
+   "nimi": "Vanha Montreal",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 45.505,
+   "lon": -73.555,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rue Saint-Paul Street, Old Montréal,Québec, Canada - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rue_Saint-Paul_Street%2C_Old_Montr%C3%A9al%2CQu%C3%A9bec%2C_Canada_-_panoramio.jpg?width=1280",
+     "tekija": "Richard Mc Neil",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rue_Saint-Paul_Street%2C_Old_Montr%C3%A9al%2CQu%C3%A9bec%2C_Canada_-_panoramio.jpg",
+     "selite": "Vanhan Montrealin Rue Saint-Paul on kapea katu, jonka varrella on harmaakivisiä taloja.",
+     "leveys": 2256,
+     "korkeus": 1662,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rue Saint-Paul (8391089921).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rue_Saint-Paul_(8391089921).jpg?width=1280",
+     "tekija": "shankar s. from Dubai, united arab emirates",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rue_Saint-Paul_(8391089921).jpg",
+     "selite": "Vanhat kauppatalot muodostavat yhtenäisen kadunvarren.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1032248",
+   "nimi": "Habitat 67",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 45.5,
+   "lon": -73.54389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Habitat 67 2019 dllu 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habitat_67_2019_dllu_01.jpg?width=1280",
+     "tekija": "Dllu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Habitat_67_2019_dllu_01.jpg",
+     "selite": "Habitat 67 on Expo 67 -näyttelyä varten rakennettu asuinrakennus, jossa betonikuutiot on pinottu limittäin.",
+     "leveys": 7362,
+     "korkeus": 6045,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Habitat 67 Montreal summer sunset view from the river.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habitat_67_Montreal_summer_sunset_view_from_the_river.jpg?width=1280",
+     "tekija": "Citlallirios",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Habitat_67_Montreal_summer_sunset_view_from_the_river.jpg",
+     "selite": "Joen puolelta kuutiot muodostavat porrastetun siluetin.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q284716",
+   "nimi": "Pyhän Joosefin oratorio",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 45.49167,
+   "lon": -73.61667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Joseph's Oratory Montreal April 2017 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Joseph's_Oratory_Montreal_April_2017_003.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Joseph's_Oratory_Montreal_April_2017_003.jpg",
+     "selite": "Pyhän Joosefin oratorion vihreä kupoli kohoaa Mont Royalin rinteellä, ja sinne johtavat pitkät portaat.",
+     "leveys": 4800,
+     "korkeus": 3600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Oratoire Saint-Joseph du Mont-Royal 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oratoire_Saint-Joseph_du_Mont-Royal_3.jpg?width=1280",
+     "tekija": "Acarpentier",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oratoire_Saint-Joseph_du_Mont-Royal_3.jpg",
+     "selite": "Illalla valaistu kupoli näkyy kauas.",
+     "leveys": 2000,
+     "korkeus": 1465,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q860812",
+   "nimi": "Montrealin taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 45.49915,
+   "lon": -73.57976,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Musée des Beaux-Arts de Montréal, Montréal, Québec (29441604613).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e_des_Beaux-Arts_de_Montr%C3%A9al%2C_Montr%C3%A9al%2C_Qu%C3%A9bec_(29441604613).jpg?width=1280",
+     "tekija": "Ken Lund from Reno, Nevada, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_des_Beaux-Arts_de_Montr%C3%A9al%2C_Montr%C3%A9al%2C_Qu%C3%A9bec_(29441604613).jpg",
+     "selite": "Taidemuseon vanha klassistinen pääsisäänkäynti avautuu Sherbrooke-kadulle.",
+     "leveys": 4000,
+     "korkeus": 2491,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montreal Museum of Fine Arts.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_Museum_of_Fine_Arts.jpg?width=1280",
+     "tekija": "Fontaoj",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_Museum_of_Fine_Arts.jpg",
+     "selite": "Museon julkisivu ja sen ulkopuolinen veistos kohtaavat kadun varrella.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q437955",
+   "nimi": "Vanha satama",
+   "peruste": "pelin nosto",
+   "koko_m": 1200,
+   "lat": 45.5049,
+   "lon": -73.5524,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Montréal Clock Tower at sunrise.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Montr%C3%A9al_Clock_Tower_at_sunrise.jpg?width=1280",
+     "tekija": "Michael Vesia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Montr%C3%A9al_Clock_Tower_at_sunrise.jpg",
+     "selite": "Vanhan sataman kellotorni seisoo laiturilla, ja sen takana kaartuu Jacques Cartier -silta.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clock Tower @ Old Port @ Montreal (30318959041).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_%40_Old_Port_%40_Montreal_(30318959041).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_%40_Old_Port_%40_Montreal_(30318959041).jpg",
+     "selite": "Torni ja satama-alue näkyvät Saint-Laurent-joen puolelta.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2890014",
+   "nimi": "Victoria-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 2500,
+   "lat": 45.49165,
+   "lon": -73.52912,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pont victoria montréal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont_victoria_montr%C3%A9al.jpg?width=1280",
+     "tekija": "Adqproductions",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pont_victoria_montr%C3%A9al.jpg",
+     "selite": "Victoria-silta ylittää Saint-Laurent-joen ja oli valmistuessaan maailman pisin silta.",
+     "leveys": 2815,
+     "korkeus": 1362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Victoria Bridge 2011 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Bridge_2011_18.jpg?width=1280",
+     "tekija": "Doug Kerr",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Bridge_2011_18.jpg",
+     "selite": "Sillan teräsrakenteet lepäävät kivisten pilarien varassa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1151208",
+   "nimi": "Montrealin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 45.5087,
+   "lon": -73.5539,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hôtel de Ville de Montréal, juin 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B4tel_de_Ville_de_Montr%C3%A9al%2C_juin_2024.jpg?width=1280",
+     "tekija": "Pierre5018",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Ville_de_Montr%C3%A9al%2C_juin_2024.jpg",
+     "selite": "Kaupungintalon ranskalaistyylinen kellotorni ja harmaa kivijulkisivu nousevat Vanhassa Montrealissa.",
+     "leveys": 8237,
+     "korkeus": 5368,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montreal City Hall Jan 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_City_Hall_Jan_2006.jpg?width=1280",
+     "tekija": "David Iliff (Diliff)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_City_Hall_Jan_2006.jpg",
+     "selite": "Illalla valaistu kaupungintalo hohtaa vihreän kuparikatonsa alla.",
+     "leveys": 6400,
+     "korkeus": 5378,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q175067",
+   "nimi": "Kiinalaiskaupunki",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 45.5076,
+   "lon": -73.5608,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gate of Chinatown (South Paifang) 2026.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_Chinatown_(South_Paifang)_2026.JPG?width=1280",
+     "tekija": "Canmenwalker",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Chinatown_(South_Paifang)_2026.JPG",
+     "selite": "Kiinalaiskaupungin eteläinen portti on perinteisen paifang-kaaren muotoinen sisäänkäynti.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montréal - païfang Est 20170814.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_-_pa%C3%AFfang_Est_20170814.jpg?width=1280",
+     "tekija": "Pymouss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montr%C3%A9al_-_pa%C3%AFfang_Est_20170814.jpg",
+     "selite": "Itäinen paifang avaa kävelykadun kaupunginosaan.",
+     "leveys": 2107,
+     "korkeus": 3160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q864789",
+   "nimi": "Montrealin Biosphère",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 45.51409,
+   "lon": -73.53149,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "201708 Biosphere Montreal 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/201708_Biosphere_Montreal_24.jpg?width=1280",
+     "tekija": "Ziko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:201708_Biosphere_Montreal_24.jpg",
+     "selite": "Biosphère on Expo 67 -näyttelyn Yhdysvaltain paviljongista jäänyt teräsverkkopallo Saint-Helen-saarella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Biosphère de Montréal en juillet 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biosph%C3%A8re_de_Montr%C3%A9al_en_juillet_2011.jpg?width=1280",
+     "tekija": "Idej Elixe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biosph%C3%A8re_de_Montr%C3%A9al_en_juillet_2011.jpg",
+     "selite": "Pallon sisällä on nykyään ympäristömuseo.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1317109",
+   "nimi": "Pyhän Patrickin basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 45.50361,
+   "lon": -73.56472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Patrick Basilica Montreal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Patrick_Basilica_Montreal.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Patrick_Basilica_Montreal.jpg",
+     "selite": "Pyhän Patrickin basilikan tornin vihreä huippu erottuu harmaasta kivijulkisivusta.",
+     "leveys": 2013,
+     "korkeus": 2806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q894652",
+   "nimi": "Montrealin kasvitieteellinen puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 45.55987,
+   "lon": -73.56396,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montreal Botanical Garden April 2017 006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_Botanical_Garden_April_2017_006.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_Botanical_Garden_April_2017_006.jpg",
+     "selite": "Kasvitieteellisen puutarhan lammet ja nurmikot levittäytyvät laajalle alueelle.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montreal Botanical Garden April 2017 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_Botanical_Garden_April_2017_001.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_Botanical_Garden_April_2017_001.jpg",
+     "selite": "Kiinalaisessa puutarhassa on perinteinen paviljonki kivien keskellä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q168737",
+   "nimi": "Château Ramezay",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 45.50903,
+   "lon": -73.55333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Musée du Château Ramezay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e_du_Ch%C3%A2teau_Ramezay.jpg?width=1280",
+     "tekija": "Joanne Lévesque",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_du_Ch%C3%A2teau_Ramezay.jpg",
+     "selite": "Château Ramezay on vanha kivinen kuvernöörin talo, joka toimii nykyään museona.",
+     "leveys": 4212,
+     "korkeus": 2797,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montréal - Château Ramezay 20170809-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_-_Ch%C3%A2teau_Ramezay_20170809-01.jpg?width=1280",
+     "tekija": "Pymouss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montr%C3%A9al_-_Ch%C3%A2teau_Ramezay_20170809-01.jpg",
+     "selite": "Talon takana on pieni puutarha ja tornillinen sivurakennus.",
+     "leveys": 4104,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1496027",
+   "nimi": "Pointe-à-Callièren museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 45.5026,
+   "lon": -73.5542,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pointe-à-Callière Museum 2023a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pointe-%C3%A0-Calli%C3%A8re_Museum_2023a.jpg?width=1280",
+     "tekija": "Antony-22",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pointe-%C3%A0-Calli%C3%A8re_Museum_2023a.jpg",
+     "selite": "Pointe-à-Callièren arkeologinen museo seisoo paikalla, jossa kaupunki aikanaan perustettiin.",
+     "leveys": 4160,
+     "korkeus": 6240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pointe-à-Callière Museum 2023d.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pointe-%C3%A0-Calli%C3%A8re_Museum_2023d.jpg?width=1280",
+     "tekija": "Antony-22",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pointe-%C3%A0-Calli%C3%A8re_Museum_2023d.jpg",
+     "selite": "Museon vanha rakennus on osa Vanhan Montrealin satamapuolta.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1477966",
+   "nimi": "Saint-Sulpicen vanha seminaari",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 45.50389,
+   "lon": -73.55694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montréal - Vieux Séminaire de Saint-Sulpice 20170814-02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_-_Vieux_S%C3%A9minaire_de_Saint-Sulpice_20170814-02.jpg?width=1280",
+     "tekija": "Pymouss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montr%C3%A9al_-_Vieux_S%C3%A9minaire_de_Saint-Sulpice_20170814-02.jpg",
+     "selite": "Saint-Sulpicen vanha seminaari on Montrealin vanhimpia säilyneitä rakennuksia.",
+     "leveys": 4104,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montréal - Vieux Séminaire de Saint-Sulpice 20170814-03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montr%C3%A9al_-_Vieux_S%C3%A9minaire_de_Saint-Sulpice_20170814-03.jpg?width=1280",
+     "tekija": "Pymouss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montr%C3%A9al_-_Vieux_S%C3%A9minaire_de_Saint-Sulpice_20170814-03.jpg",
+     "selite": "Julkisivun kello ja kivimuuri kuuluvat Notre-Damen kirkon vieressä olevaan rakennuskokonaisuuteen.",
+     "leveys": 2736,
+     "korkeus": 4104,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q201492",
+   "nimi": "McGillin yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 45.505,
+   "lon": -73.5775,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Roddick Gates closed, McGill University, July 17, 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roddick_Gates_closed%2C_McGill_University%2C_July_17%2C_2024.jpg?width=1280",
+     "tekija": "D. Benjamin Miller",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roddick_Gates_closed%2C_McGill_University%2C_July_17%2C_2024.jpg",
+     "selite": "Roddick Gates on McGillin yliopiston kampuksen pääportti Sherbrooke-kadulla.",
+     "leveys": 8146,
+     "korkeus": 5431,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Portail Roddick 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portail_Roddick_01.jpg?width=1280",
+     "tekija": "Jeangagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Portail_Roddick_01.jpg",
+     "selite": "Porttikaarten kaarevat pylväikköt ympäröivät kampuksen sisäänkäyntiä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Montreal - QC - Skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montreal_-_QC_-_Skyline.jpg?width=1280",
+   "tekija": "Taxiarchos228",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montreal_-_QC_-_Skyline.jpg",
+   "selite": "Montrealin keskustan pilvenpiirtäjät erottuvat Mont Royalilta katsottuna.",
+   "leveys": 4144,
+   "korkeus": 2676,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Saint-Lawrence river with Montreal skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint-Lawrence_river_with_Montreal_skyline.jpg?width=1280",
+   "tekija": "Johannes Meyer",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint-Lawrence_river_with_Montreal_skyline.jpg",
+   "selite": "Saint-Laurent-joen takana kohoaa keskustan siluetti.",
+   "leveys": 4975,
+   "korkeus": 2988,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

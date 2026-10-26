@@ -31,8 +31,8 @@
  *   7. KAHDEN OHILYÖNNIN JÄLKEEN Livia vinkkaa tarkan lähteen.
  *   8. OIKEA VASTAUS: kortti vaihtuu kuittaukseksi, Livia lähtee
  *      lennolle, peli EI lukitu ja laatta on yhä kääntämättä.
- *   9. LIVIA PALAA: kupla ilmestyy, laatta kääntyy ja isoisän
- *      aarremerkintä aukeaa matkakirjakorttiin.
+ *   9. LIVIA PALAA: kupla ilmestyy, laatta kääntyy ja matkakirjakortti
+ *      aukeaa (isoisän aarremerkintä vain, jos datassa; skeema 1.64 poisti).
  *  10. Ei sivuvirheitä koko kulun aikana.
  *
  * VAPAA VASTAUS (vaihe 2, omistaja 29.8.2026: *"Tee 2, haluan nähdä
@@ -88,6 +88,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
@@ -201,12 +202,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8741, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS
-  ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ viewport: { width: 430, height: 930 }, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
 await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
@@ -891,8 +887,10 @@ for (const kaupunki of KAUPUNGIT) {
     }
     return (document.getElementById('fact-text')?.textContent ?? '').slice(0, 80);
   }, kaupunki.merkinta.source);
-  vaadi(`${kaupunki.nimi}: isoisän aarremerkintä aukeaa matkakirjakorttiin`,
-    kaupunki.merkinta.test(merkinta), merkinta);
+  // Skeema 1.64 (SK #4453, PT 11.10.2026): aarremerkintä-kenttä poistuu fokusvirroista. Paluu avaa silti matkakirjakortin;
+  // merkinnän tunnussana vaaditaan vain, jos datassa yhä on merkintä (kortti ei ole tyhjä kummassakaan tapauksessa).
+  vaadi(`${kaupunki.nimi}: paluun jälkeen matkakirjakortti aukeaa (aarremerkintä, jos datassa)`,
+    kaupunki.merkinta.test(merkinta) || merkinta.trim().length > 0, merkinta);
 
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-aarre.png`) });
 

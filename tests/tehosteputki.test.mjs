@@ -22,6 +22,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { viimeistelySuodatin } from '../tools/generoi-tehosteet.mjs';
 
 import {
   TEHOSTEET, kokoaKuitti, raakaAmpariKansio, raakavientiEste,
@@ -155,4 +156,12 @@ test('kuitti kertoo koodauksen ja tason, ei vanhoja arvoja', () => {
   assert.equal(kuitti.postprocess.targetLufs, -30);
   assert.equal(kuitti.postprocess.silenceTrim, true);
   assert.equal(kuitti.synthesis.outputFormat, 'mp3_44100_128');
+});
+
+test('lyhyt isku: sisäänhäivytys 5 ms ja taso mitataan häivytysten jälkeen (myllyn napsahdus 3.10.2026)', () => {
+  const HAKU = readFileSync(new URL('../tools/hae-freesound.mjs', import.meta.url), 'utf8');
+  assert.match(HAKU, /const sisaan = leikattu < 0\.5 \? 0\.005 : null;/);
+  assert.match(HAKU, /'-hide_banner', '-v', 'info', '-i', haivytetty,/);
+  assert.match(HAKU, /'-af', `volume=\$\{korjaus\.toFixed\(2\)\}dB`,/);
+  assert.match(viimeistelySuodatin({ kesto: 0.13, korjausDb: 0, sisaan: 0.005 }), /^afade=t=in:st=0:d=0\.005,/);
 });

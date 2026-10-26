@@ -1,0 +1,309 @@
+{
+ "kaupunki": "kabul",
+ "kaupunkiQ": "Q5838",
+ "kohteet": [
+  {
+   "q": "Q1900234",
+   "nimi": "Baburin puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 34.503,
+   "lon": 69.16,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Babur Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Babur_Gardens.jpg?width=1280",
+     "tekija": "Jim Kelly",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Babur_Gardens.jpg",
+     "selite": "Baburin puutarha on terassipuutarha Kabulin rinteellä, johon mogulien perustaja Babur haudattiin.",
+     "leveys": 1504,
+     "korkeus": 999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Babur Gardens from a mountain top.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Babur_Gardens_from_a_mountain_top.jpg?width=1280",
+     "tekija": "Jim Kelly",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Babur_Gardens_from_a_mountain_top.jpg",
+     "selite": "Vuoren huipulta näkyy Baburin puutarhan ruudukkomainen asemakaava kaupungin keskellä.",
+     "leveys": 1504,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bagh-e Babur-2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bagh-e_Babur-2013.jpg?width=1280",
+     "tekija": "ninara from Helsinki, Finland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bagh-e_Babur-2013.jpg",
+     "selite": "Restauroitu puutarha on kaupunkilaisten suosima ruusujen ja puiden täyttämä lepopaikka.",
+     "leveys": 2667,
+     "korkeus": 1778,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q715467",
+   "nimi": "Afganistanin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 34.4675,
+   "lon": 69.12,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kabul's national history museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabul's_national_history_museum.jpg?width=1280",
+     "tekija": "Babak Fakhamzadeh",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kabul's_national_history_museum.jpg",
+     "selite": "Kabulin kansallismuseo säilyttää Silkkitien ja Baktrian aarteita lumisen vuorimaiseman alla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AiKhanumCapitals.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AiKhanumCapitals.jpg?width=1280",
+     "tekija": "Artacoana",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AiKhanumCapitals.jpg",
+     "selite": "Ai Khanoumin kreikkalaisvaikutteiset pylväänpäät kertovat Baktrian hellenistisestä kaupungista.",
+     "leveys": 1980,
+     "korkeus": 1145,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q804581",
+   "nimi": "Bala Hissar",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 34.50556,
+   "lon": 69.19167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bala Hisar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bala_Hisar.jpg?width=1280",
+     "tekija": "AhmadElhan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bala_Hisar.jpg",
+     "selite": "Bala Hissar on vuoren harjalle rakennettu muinainen linnoitus, joka hallitsi Kabulin laaksoa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bala hissar shah shaheed kabul afghanistan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bala_hissar_shah_shaheed_kabul_afghanistan.jpg?width=1280",
+     "tekija": "AhmadElhan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bala_hissar_shah_shaheed_kabul_afghanistan.jpg",
+     "selite": "Linnoituksen paksut savitiilitornit ovat säilyneet vuosisatojen ajan Kabulin vartijoina.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Afghan fort (60 of 69).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afghan_fort_(60_of_69).jpg?width=1280",
+     "tekija": "LarkAbroad",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afghan_fort_(60_of_69).jpg",
+     "selite": "Muurit kiertävät kukkulan harjaa kaupungin eteläpuolella.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q902222",
+   "nimi": "Darul Amanin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 34.4648,
+   "lon": 69.10894,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darulaman palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darulaman_palace.jpg?width=1280",
+     "tekija": "Qasimmirzaie",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darulaman_palace.jpg",
+     "selite": "Darul Amanin palatsi on kuningas Amanullahin 1920-luvulla rakennuttama uudistusten symboli.",
+     "leveys": 5732,
+     "korkeus": 3821,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Afghanistan, Dar-ul-Aman, Palais du Gouvernement - autre aspect - A58488.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afghanistan%2C_Dar-ul-Aman%2C_Palais_du_Gouvernement_-_autre_aspect_-_A58488.jpg?width=1280",
+     "tekija": "Gadmer Frédéric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afghanistan%2C_Dar-ul-Aman%2C_Palais_du_Gouvernement_-_autre_aspect_-_A58488.jpg",
+     "selite": "Vanha värivalokuva esittää palatsin laajan julkisivun Kabulin kuivan laakson laidalla.",
+     "leveys": 2560,
+     "korkeus": 1899,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7461208",
+   "nimi": "Shah-Do Shamshiran moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 34.51567,
+   "lon": 69.17144,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Masdjid-i-Chah-Do-Chamshirah (mosquée du Roi aux deux épées) de profil et la rivière Kaboul - A57464S.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Masdjid-i-Chah-Do-Chamshirah_(mosqu%C3%A9e_du_Roi_aux_deux_%C3%A9p%C3%A9es)_de_profil_et_la_rivi%C3%A8re_Kaboul_-_A57464S.jpg?width=1280",
+     "tekija": "Gadmer Frédéric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Masdjid-i-Chah-Do-Chamshirah_(mosqu%C3%A9e_du_Roi_aux_deux_%C3%A9p%C3%A9es)_de_profil_et_la_rivi%C3%A8re_Kaboul_-_A57464S.jpg",
+     "selite": "Kaksimiekkaisen kuninkaan moskeija heijastuu Kabulin joen vedestä.",
+     "leveys": 2560,
+     "korkeus": 1899,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "La rivière Kaboul vers la Masdjid-i-Chah-Do-Chamshirah (Mosquée du Roi aux deux épées) - A58684.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_rivi%C3%A8re_Kaboul_vers_la_Masdjid-i-Chah-Do-Chamshirah_(Mosqu%C3%A9e_du_Roi_aux_deux_%C3%A9p%C3%A9es)_-_A58684.jpg?width=1280",
+     "tekija": "Gadmer Frédéric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_rivi%C3%A8re_Kaboul_vers_la_Masdjid-i-Chah-Do-Chamshirah_(Mosqu%C3%A9e_du_Roi_aux_deux_%C3%A9p%C3%A9es)_-_A58684.jpg",
+     "selite": "Moskeija kohoaa Kabul-joen rannalla vuorten reunustamassa vanhassa kaupungissa.",
+     "leveys": 2560,
+     "korkeus": 1899,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3407426",
+   "nimi": "Id Gah -moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 34.5178,
+   "lon": 69.19,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kabul, Id Gah Mosque.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabul%2C_Id_Gah_Mosque.JPG?width=1280",
+     "tekija": "KevinScottNL at English Wikipedia, KevinScottNL@Yahoo.com , http://www.kevinscott.org",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kabul%2C_Id_Gah_Mosque.JPG",
+     "selite": "Id Gah on Kabulin suuri juhlamoskeija, jonka sinikeltainen julkisivu kohoaa vuoria vasten.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrée de la Masjid (mosquée) Id-Gah - A57582S.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entr%C3%A9e_de_la_Masjid_(mosqu%C3%A9e)_Id-Gah_-_A57582S.jpg?width=1280",
+     "tekija": "Gadmer Frédéric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_de_la_Masjid_(mosqu%C3%A9e)_Id-Gah_-_A57582S.jpg",
+     "selite": "Moskeijan kaareva portaali on koristeltu punatiilellä ja kaakeleilla.",
+     "leveys": 2560,
+     "korkeus": 1898,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15378655",
+   "nimi": "Timur Shahin mausoleumi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.5164,
+   "lon": 69.17537,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tomb of Timur Shah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tomb_of_Timur_Shah.jpg?width=1280",
+     "tekija": "Christan Richers",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tomb_of_Timur_Shah.jpg",
+     "selite": "Kahdeksankulmainen mausoleumi kupolin alla on Durrani-valtakunnan hallitsijan Timur Shahin hauta.",
+     "leveys": 1971,
+     "korkeus": 1227,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kabul skyline -b.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kabul_skyline_-b.jpg?width=1280",
+   "tekija": "Jim Kelly",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kabul_skyline_-b.jpg",
+   "selite": "Kabul levittyy laakson pohjalle ja rinteille vuorten ympäröimänä.",
+   "leveys": 1504,
+   "korkeus": 1000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Old City Wall – Sher Darwaza, Kabul, Afghanistan.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_Wall_%E2%80%93_Sher_Darwaza%2C_Kabul%2C_Afghanistan.JPG?width=1280",
+   "tekija": "Christopher Killalea",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_Wall_%E2%80%93_Sher_Darwaza%2C_Kabul%2C_Afghanistan.JPG",
+   "selite": "Vanhankaupungin talot nousevat portaittain vuorenrinnettä Sher Darwazan muurin alla.",
+   "leveys": 4416,
+   "korkeus": 3312,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q2393709",
+   "nimi": "Pul-e Khishti -moskeija",
+   "peruste": "sitelinks",
+   "lat": 34.51556,
+   "lon": 69.18028,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

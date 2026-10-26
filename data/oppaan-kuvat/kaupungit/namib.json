@@ -1,0 +1,401 @@
+{
+ "kaupunki": "namib",
+ "kaupunkiQ": "Q131377",
+ "kohteet": [
+  {
+   "q": "Q1932730",
+   "nimi": "Sossusvlei",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -24.73983,
+   "lon": 15.28765,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2011-02-09 066.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-02-09_066.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-02-09_066.JPG",
+     "selite": "Sossusvlein punaiset dyynit kuuluvat maailman korkeimpiin, ja niiden väri syvenee auringon laskiessa.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "123 Single tree in Sossusvlei Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/123_Single_tree_in_Sossusvlei_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:123_Single_tree_in_Sossusvlei_Photo_by_Giles_Laurent.jpg",
+     "selite": "Yksinäinen akaasia kasvaa dyynien reunalla, missä kuivan joenuoman vesi joskus tihkuu maahan.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20150731 Sossusvlei (Namibia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20150731_Sossusvlei_(Namibia).jpg?width=1280",
+     "tekija": "Matthias Bethke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20150731_Sossusvlei_(Namibia).jpg",
+     "selite": "Punainen dyyni ja kuollut puu erottuvat kirkkaana sinistä taivasta vasten.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1180957",
+   "nimi": "Deadvlei",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -24.76333,
+   "lon": 15.29472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Big Daddy, one of the highest dunes in the world.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Daddy%2C_one_of_the_highest_dunes_in_the_world.jpg?width=1280",
+     "tekija": "Ajka462",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Daddy%2C_one_of_the_highest_dunes_in_the_world.jpg",
+     "selite": "Deadvleissä kuolleet akaasiat seisovat valkoisella savitasangolla punaisten dyynien ympäröimänä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At the bottom of Big Daddy, Dead Vlei (3688098498).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_the_bottom_of_Big_Daddy%2C_Dead_Vlei_(3688098498).jpg?width=1280",
+     "tekija": "Greg Willis from Denver, CO, usa",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_the_bottom_of_Big_Daddy%2C_Dead_Vlei_(3688098498).jpg",
+     "selite": "Kuivunut savi on halkeillut kuusikulmaisiksi laatoiksi, koska vesi ei ole saapunut sinne vuosiin.",
+     "leveys": 1600,
+     "korkeus": 1067,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dead Vlei (134616897).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dead_Vlei_(134616897).jpg?width=1280",
+     "tekija": "Mike from Vancouver, Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dead_Vlei_(134616897).jpg",
+     "selite": "Puut kuolivat, kun dyynit tukkivat joen reitin, ja kuiva ilma on säilyttänyt ne satoja vuosia.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5314935",
+   "nimi": "Dyyni 45",
+   "peruste": "pelin nosto",
+   "koko_m": 1200,
+   "lat": -24.71667,
+   "lon": 15.46667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "006 Dune 45 in Sossusvlei at sunrise Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/006_Dune_45_in_Sossusvlei_at_sunrise_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:006_Dune_45_in_Sossusvlei_at_sunrise_Photo_by_Giles_Laurent.jpg",
+     "selite": "Dyyni 45 on helposti saavutettava ja valokuvattu tähtidyyni, joka hohtaa oranssina aamuauringossa.",
+     "leveys": 5385,
+     "korkeus": 3590,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Duna 45, Sossusvlei, Namibia, 2018-08-06, DD 009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duna_45%2C_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_009.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Duna_45%2C_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_009.jpg",
+     "selite": "Dyynin terävä harja erottaa auringonvalaiseman rinteen varjoon jäävästä jyrkästä seinämästä.",
+     "leveys": 7993,
+     "korkeus": 5329,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Duna č. 45, poušť Namib - Namibie - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duna_%C4%8D._45%2C_pou%C5%A1%C5%A5_Namib_-_Namibie_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Pavel Špindler",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Duna_%C4%8D._45%2C_pou%C5%A1%C5%A5_Namib_-_Namibie_-_panoramio_(1).jpg",
+     "selite": "Tuuli muotoilee hiekan hienoiksi väreiksi, jotka muuttuvat joka päivä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1773441",
+   "nimi": "Namib-Naukluftin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": -24.54639,
+   "lon": 15.32972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NamibNaukluftParkDunes.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NamibNaukluftParkDunes.JPG?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NamibNaukluftParkDunes.JPG",
+     "selite": "Namib-Naukluft on Afrikan suurimpia suojelualueita, ja siihen kuuluvat dyynimeri ja sen takana nousevat vuoret.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "121 Mountains in Namib-Naukluft National Park Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/121_Mountains_in_Namib-Naukluft_National_Park_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:121_Mountains_in_Namib-Naukluft_National_Park_Photo_by_Giles_Laurent.jpg",
+     "selite": "Naukluftin vuoret kohoavat ruohoisen tasangon yli aavikon itälaidalla.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Canyon de la rivière Kuiseb 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon_de_la_rivi%C3%A8re_Kuiseb_01.jpg?width=1280",
+     "tekija": "Lidine Mia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canyon_de_la_rivi%C3%A8re_Kuiseb_01.jpg",
+     "selite": "Kuiseb-joen kanjoni muodostaa aavikon pohjoisen rajan, ja joki virtaa harvoin.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q819123",
+   "nimi": "Kolmanskop",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -26.70417,
+   "lon": 15.23167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ghost Town (37051953173).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghost_Town_(37051953173).jpg?width=1280",
+     "tekija": "Sonse",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ghost_Town_(37051953173).jpg",
+     "selite": "Hiekka valtaa hylättyä timanttikaivoskaupunkia, jonka talot ovat vähitellen romahtaneet.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kaiser Wilhelm Strasse, Kolmanskop.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaiser_Wilhelm_Strasse%2C_Kolmanskop.jpg?width=1280",
+     "tekija": "Pgallert",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_Strasse%2C_Kolmanskop.jpg",
+     "selite": "Saksalaiset rakensivat kaivosyhteisölle tyylikkäitä taloja keskelle aavikkoa 1900-luvun alussa.",
+     "leveys": 2048,
+     "korkeus": 1232,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "01Kolmannskuppe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01Kolmannskuppe.jpg?width=1280",
+     "tekija": "Uploaded on April 24, 2006 by SqueakyMarmot",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01Kolmannskuppe.jpg",
+     "selite": "Kolmanskop oli timanttilöydön jälkeen vauras kaivoskylä, mutta nykyään se on kummituskaupunki.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1135237",
+   "nimi": "Luurankorannikko",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": -21.61222,
+   "lon": 14.54,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Namibie Skeleton Coast 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Namibie_Skeleton_Coast_01.JPG?width=1280",
+     "tekija": "GIRAUD Patrick",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Namibie_Skeleton_Coast_01.JPG",
+     "selite": "Rannalle ajautuneet hylyt ovat tehneet Luurankorannikosta merenkulkijoiden pelkäämän paikan.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eduoard Bohlen shipwreck.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduoard_Bohlen_shipwreck.jpg?width=1280",
+     "tekija": "WiPhi267",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eduoard_Bohlen_shipwreck.jpg",
+     "selite": "Eduard Bohlen -laiva ajoi karille rannikolla, ja sen hylky makaa nykyään kaukana hiekassa.",
+     "leveys": 5203,
+     "korkeus": 2768,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Laika ac Skeleton Coast (8417425691).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laika_ac_Skeleton_Coast_(8417425691).jpg?width=1280",
+     "tekija": "Laika ac from USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laika_ac_Skeleton_Coast_(8417425691).jpg",
+     "selite": "Rannikon takana avautuu loputon dyynimeri, jota meren sumu pitää hengissä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q59698",
+   "nimi": "Swakopmund",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.66667,
+   "lon": 14.53333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mole, Jetty and Lighthouse Swakopmund, Namibia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mole%2C_Jetty_and_Lighthouse_Swakopmund%2C_Namibia.jpg?width=1280",
+     "tekija": "Olga Ernst",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mole%2C_Jetty_and_Lighthouse_Swakopmund%2C_Namibia.jpg",
+     "selite": "Swakopmund on saksalaisvaikutteinen rantakaupunki, jonka laituri ja majakka erottuvat dyynien ja meren välissä.",
+     "leveys": 4384,
+     "korkeus": 2951,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Swakopmund panorama from mole 20190522.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swakopmund_panorama_from_mole_20190522.jpg?width=1280",
+     "tekija": "Daniel Kraft",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Swakopmund_panorama_from_mole_20190522.jpg",
+     "selite": "Laiturilta näkee kaupungin rantaviivan, jota viilentää kylmä Benguelan merivirta.",
+     "leveys": 12311,
+     "korkeus": 2895,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q220843",
+   "nimi": "Walvis Bay",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.94944,
+   "lon": 14.50694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NA WalvisBay Aeroview.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NA_WalvisBay_Aeroview.JPG?width=1280",
+     "tekija": "Digr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NA_WalvisBay_Aeroview.JPG",
+     "selite": "Walvis Bay on Namibian tärkein satama, ja sen laguuni houkuttelee lintuja aavikon laidalle.",
+     "leveys": 3960,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2011-02-11 24.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-02-11_24.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-02-11_24.JPG",
+     "selite": "Pelican Pointin majakka seisoo hiekkaniemen kärjessä, ja sen rannalla lepää merikarhuja.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Duna en Sossusvlei, Namibia, 2018-08-06, DD 002.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Duna_en_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_002.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Duna_en_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_002.jpg",
+   "selite": "Namibin aavikon punaiset dyynit ovat maailman vanhimpia, ja niiden jyrkät harjat erottuvat auringonvalossa.",
+   "leveys": 8112,
+   "korkeus": 4529,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Amanecer en Namib.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amanecer_en_Namib.jpg?width=1280",
+   "tekija": "Teo Gómez",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amanecer_en_Namib.jpg",
+   "selite": "Aurinko nousee Namibin yli kuivuneen joenuoman ja dyynien takaa.",
+   "leveys": 3072,
+   "korkeus": 2304,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

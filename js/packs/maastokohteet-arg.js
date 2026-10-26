@@ -159,6 +159,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'quebradadehumahuaca',
     nimi: 'Quebrada de Humahuaca',
+    nimio: 'Humahuaca',
     tyyppi: 'historia',
     kysymykset: [
       'Mikä pucará on?',
@@ -185,6 +186,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'cordobanjesuiitat',
     nimi: 'Córdoban jesuiittakortteli',
+    nimio: 'Córdoba, jesuiitat',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Mitä estancia tarkoitti jesuiitoille?',
@@ -213,6 +215,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'polvorilla',
     nimi: 'La Polvorillan viadukti',
+    nimio: 'La Polvorilla',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miksi rata ylipäätään rakennettiin?',
@@ -321,6 +324,7 @@ export const MAASTOKOHTEET_ARG = [
   {
     id: 'peritomoreno',
     nimi: 'Perito Moreno -jäätikkö',
+    nimio: 'Perito Moreno',
     tyyppi: 'vuori',
     kysymykset: [
       'Kenen mukaan jäätikkö on nimetty?',

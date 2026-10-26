@@ -1,0 +1,545 @@
+{
+ "kaupunki": "krakova",
+ "kaupunkiQ": "Q31487",
+ "kohteet": [
+  {
+   "q": "Q18820",
+   "nimi": "Wawelin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 450,
+   "lat": 50.0544,
+   "lon": 19.9366,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wawel Castle view from south. Krakow, Poland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wawel_Castle_view_from_south._Krakow%2C_Poland.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wawel_Castle_view_from_south._Krakow%2C_Poland.jpg",
+     "selite": "Wawelin linna on Puolan entinen kuninkaanlinna, joka kohoaa kukkulalla Veikselin äyrästä.",
+     "leveys": 5739,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wawel - Castle from Sandomierz Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wawel_-_Castle_from_Sandomierz_Tower.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wawel_-_Castle_from_Sandomierz_Tower.jpg",
+     "selite": "Renessanssityylinen sisäpiha ja linnan tornit erottuvat punaisten kattojen yllä.",
+     "leveys": 6000,
+     "korkeus": 3560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Wawel Royal Castle, view from Stradomska Street, Old Town, Kraków, Poland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wawel_Royal_Castle%2C_view_from_Stradomska_Street%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg?width=1280",
+     "tekija": "Igor123121",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wawel_Royal_Castle%2C_view_from_Stradomska_Street%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg",
+     "selite": "Linnan muurit ja tornit hallitsevat Krakovan etelälaitaa.",
+     "leveys": 3200,
+     "korkeus": 2398,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q770631",
+   "nimi": "Rynek Główny (Krakovan pääaukio)",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 50.06167,
+   "lon": 19.93722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Krakow - Cloth Hall from Basilica - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krakow_-_Cloth_Hall_from_Basilica_-_1.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krakow_-_Cloth_Hall_from_Basilica_-_1.jpg",
+     "selite": "Krakovan pääaukio on yksi Euroopan suurimmista keskiaikaisista kauppatoreista.",
+     "leveys": 6409,
+     "korkeus": 4212,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kraków Cloth Hall. Poland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krak%C3%B3w_Cloth_Hall._Poland.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krak%C3%B3w_Cloth_Hall._Poland.jpg",
+     "selite": "Aukion keskellä seisoo pitkä kauppahalli, jota ympäröivät värikkäät kaupunkitalot.",
+     "leveys": 5569,
+     "korkeus": 2606,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20200516 Wieża Ratuszowa i Sukiennice w Krakowie 0943 9990.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200516_Wie%C5%BCa_Ratuszowa_i_Sukiennice_w_Krakowie_0943_9990.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200516_Wie%C5%BCa_Ratuszowa_i_Sukiennice_w_Krakowie_0943_9990.jpg",
+     "selite": "Vanhan raatihuoneen torni on jäänyt aukiolle ainoana osana entistä raatihuonetta.",
+     "leveys": 2960,
+     "korkeus": 3729,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1143171",
+   "nimi": "Mariankirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 50.06167,
+   "lon": 19.93917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Mary's Basilica. Kraków, Poland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Mary's_Basilica._Krak%C3%B3w%2C_Poland.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Mary's_Basilica._Krak%C3%B3w%2C_Poland.jpg",
+     "selite": "Mariankirkon epäsymmetriset tornit ovat Krakovan pääaukion tunnetuin tuntomerkki.",
+     "leveys": 3336,
+     "korkeus": 4695,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Krakow - Kosciol Mariacki.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krakow_-_Kosciol_Mariacki.jpg?width=1280",
+     "tekija": "Jar.ciurus",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krakow_-_Kosciol_Mariacki.jpg",
+     "selite": "Goottilainen tiilikirkko näkyy kauppahallin arkadien läpi.",
+     "leveys": 2911,
+     "korkeus": 4314,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1072350",
+   "nimi": "Sukiennice (kauppahalli)",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 50.06168,
+   "lon": 19.93738,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20200516 Sukiennice w Krakowie 0909 9963.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200516_Sukiennice_w_Krakowie_0909_9963.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200516_Sukiennice_w_Krakowie_0909_9963.jpg",
+     "selite": "Sukiennice on renessanssiarkadein koristeltu kauppahalli, jossa on kaupattu kankaita jo keskiajalta.",
+     "leveys": 5758,
+     "korkeus": 3062,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20200512 Sukiennice w Krakowie 1741 9935.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200512_Sukiennice_w_Krakowie_1741_9935.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200512_Sukiennice_w_Krakowie_1741_9935.jpg",
+     "selite": "Rakennuksen kattolinjaa koristavat koristeelliset kattokoristeet.",
+     "leveys": 5944,
+     "korkeus": 3952,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q638519",
+   "nimi": "Wawelin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 50.05464,
+   "lon": 19.93542,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kraków - Wawel Cathedral 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krak%C3%B3w_-_Wawel_Cathedral_01.jpg?width=1280",
+     "tekija": "Lestat (Jan Mehlich)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krak%C3%B3w_-_Wawel_Cathedral_01.jpg",
+     "selite": "Wawelin katedraali on Puolan kuninkaiden kruunajais- ja hautakirkko.",
+     "leveys": 3400,
+     "korkeus": 2266,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Krakow - Wawel Cathedral from balloon - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krakow_-_Wawel_Cathedral_from_balloon_-_1.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krakow_-_Wawel_Cathedral_from_balloon_-_1.jpg",
+     "selite": "Ilmasta katsottuna katedraalin kappelit ja kupolit erottuvat selvästi.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Wawel Cathedral Front.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wawel_Cathedral_Front.jpg?width=1280",
+     "tekija": "Ingo Mehling",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wawel_Cathedral_Front.jpg",
+     "selite": "Kultainen kupoli kuuluu katedraalin kuuluisiin kappeleihin.",
+     "leveys": 3735,
+     "korkeus": 4379,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q807309",
+   "nimi": "Barbaakani",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 50.06553,
+   "lon": 19.94166,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2015 Kraków, Barbakan 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015_Krak%C3%B3w%2C_Barbakan_02.jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015_Krak%C3%B3w%2C_Barbakan_02.jpg",
+     "selite": "Barbaakani on pyöreä tiilinen linnake, joka suojasi kaupunginmuurin pohjoista porttia.",
+     "leveys": 3962,
+     "korkeus": 2840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barbakan przed wschodem słońca.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbakan_przed_wschodem_s%C5%82o%C5%84ca.jpg?width=1280",
+     "tekija": "Gswito",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barbakan_przed_wschodem_s%C5%82o%C5%84ca.jpg",
+     "selite": "Auringonnousussa punatiilinen linnake hehkuu hämärässä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kraków - Kraków Barbican - 20240418225013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krak%C3%B3w_-_Krak%C3%B3w_Barbican_-_20240418225013.jpg?width=1280",
+     "tekija": "Olliebailie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krak%C3%B3w_-_Krak%C3%B3w_Barbican_-_20240418225013.jpg",
+     "selite": "Linnakkeen yhdistää kaupunginmuuriin kapea käytävä.",
+     "leveys": 5588,
+     "korkeus": 3730,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1363724",
+   "nimi": "Florianin portti",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 50.06472,
+   "lon": 19.94139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20200516 Brama Floriańska w Krakowie 0911 9966.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200516_Brama_Floria%C5%84ska_w_Krakowie_0911_9966.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200516_Brama_Floria%C5%84ska_w_Krakowie_0911_9966.jpg",
+     "selite": "Florianin portti on goottilainen kaupunginportti, joka kuuluu Krakovan keskiaikaiseen puolustusmuuriin.",
+     "leveys": 2206,
+     "korkeus": 3548,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Florian Gate in Kraków, 2024 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florian_Gate_in_Krak%C3%B3w%2C_2024_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Florian_Gate_in_Krak%C3%B3w%2C_2024_(01).jpg",
+     "selite": "Portin kautta alkaa kuninkaiden tie vanhaankaupunkiin.",
+     "leveys": 2513,
+     "korkeus": 3363,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q93706",
+   "nimi": "Kazimierz",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 50.05167,
+   "lon": 19.94472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alte Synagoge (Krakau).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Synagoge_(Krakau).jpg?width=1280",
+     "tekija": "Marco Almbauer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alte_Synagoge_(Krakau).jpg",
+     "selite": "Kazimierz on Krakovan vanha juutalaiskaupunginosa, jonka vanha synagoga on yksi Puolan vanhimmista.",
+     "leveys": 5616,
+     "korkeus": 2505,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017-05-29 Kościół Bożego Ciała 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-05-29_Ko%C5%9Bci%C3%B3%C5%82_Bo%C5%BCego_Cia%C5%82a_2.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-05-29_Ko%C5%9Bci%C3%B3%C5%82_Bo%C5%BCego_Cia%C5%82a_2.jpg",
+     "selite": "Kaupunginosassa seisovat sekä kirkkoja että synagogia rinnakkain.",
+     "leveys": 4703,
+     "korkeus": 3455,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Παλιά Συναγωγή Κρακοβίας 7812.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%A3%CF%85%CE%BD%CE%B1%CE%B3%CF%89%CE%B3%CE%AE_%CE%9A%CF%81%CE%B1%CE%BA%CE%BF%CE%B2%CE%AF%CE%B1%CF%82_7812.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%A3%CF%85%CE%BD%CE%B1%CE%B3%CF%89%CE%B3%CE%AE_%CE%9A%CF%81%CE%B1%CE%BA%CE%BF%CE%B2%CE%AF%CE%B1%CF%82_7812.jpg",
+     "selite": "Punatiilinen synagoga edustaa alueen keskiaikaista juutalaista perintöä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q919596",
+   "nimi": "Collegium Maius",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 50.06174,
+   "lon": 19.93376,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Courtyard of the Collegium Maius, Kraków, 2024, 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard_of_the_Collegium_Maius%2C_Krak%C3%B3w%2C_2024%2C_22.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Collegium_Maius%2C_Krak%C3%B3w%2C_2024%2C_22.jpg",
+     "selite": "Collegium Maius on Jagellonian yliopiston vanhin rakennus ja goottilaisen pihan ympäröimä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Courtyard of the Collegium Maius (Kraków), 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Courtyard_of_the_Collegium_Maius_(Krak%C3%B3w)%2C_2019.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Collegium_Maius_(Krak%C3%B3w)%2C_2019.jpg",
+     "selite": "Sisäpihan arkadikäytävät ja kaivo ovat opiskelijaperinteen symboli.",
+     "leveys": 3774,
+     "korkeus": 2887,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9338697",
+   "nimi": "Wawelin lohikäärme",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 50.05302,
+   "lon": 19.93359,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wawel 2010-6.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wawel_2010-6.JPG?width=1280",
+     "tekija": "Artico2",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wawel_2010-6.JPG",
+     "selite": "Wawelin lohikäärmeen pronssipatsas suoltaa liekkejä Wawelin linnan juurella.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20230526 Krakow-samples-16 (52976280143).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20230526_Krakow-samples-16_(52976280143).jpg?width=1280",
+     "tekija": "markowihu",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20230526_Krakow-samples-16_(52976280143).jpg",
+     "selite": "Legendan mukaan lohikäärme asui kukkulan luolassa.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1945780",
+   "nimi": "Plantyn puisto",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 50.06556,
+   "lon": 19.94,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Πάρκο Πλάντυ, Κρακοβία 5608.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%AC%CF%81%CE%BA%CE%BF_%CE%A0%CE%BB%CE%AC%CE%BD%CF%84%CF%85%2C_%CE%9A%CF%81%CE%B1%CE%BA%CE%BF%CE%B2%CE%AF%CE%B1_5608.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%AC%CF%81%CE%BA%CE%BF_%CE%A0%CE%BB%CE%AC%CE%BD%CF%84%CF%85%2C_%CE%9A%CF%81%CE%B1%CE%BA%CE%BF%CE%B2%CE%AF%CE%B1_5608.jpg",
+     "selite": "Plantyn puisto kiertää vanhaakaupunkia vihreänä renkaana entisen kaupunginmuurin paikalla.",
+     "leveys": 4447,
+     "korkeus": 3335,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Planty Park, springn, Old Town, Kraków, Poland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Planty_Park%2C_springn%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg?width=1280",
+     "tekija": "Igor123121",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Planty_Park%2C_springn%2C_Old_Town%2C_Krak%C3%B3w%2C_Poland.jpg",
+     "selite": "Puistokäytävät ovat suosittu kävelyreitti keskustassa.",
+     "leveys": 5598,
+     "korkeus": 3023,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q641398",
+   "nimi": "Kościuszkon kumpu",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 50.0549,
+   "lon": 19.89328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DJI 0236 Kopiec Kościuszki.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DJI_0236_Kopiec_Ko%C5%9Bciuszki.jpg?width=1280",
+     "tekija": "Pawelsuder",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DJI_0236_Kopiec_Ko%C5%9Bciuszki.jpg",
+     "selite": "Kościuszkon kumpu on tekokukkula, joka on kasattu kansallissankari Tadeusz Kościuszkon muistoksi.",
+     "leveys": 5449,
+     "korkeus": 3630,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chapel of St. Bronisława, Kościuszko Mound, Kraków, Poland, 2019, 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chapel_of_St._Bronis%C5%82awa%2C_Ko%C5%9Bciuszko_Mound%2C_Krak%C3%B3w%2C_Poland%2C_2019%2C_02.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chapel_of_St._Bronis%C5%82awa%2C_Ko%C5%9Bciuszko_Mound%2C_Krak%C3%B3w%2C_Poland%2C_2019%2C_02.jpg",
+     "selite": "Kummun juurella on 1800-luvun linnoituksen kappeli.",
+     "leveys": 3583,
+     "korkeus": 2706,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kościuszko Mound, Kraków, Poland, 2019, 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ko%C5%9Bciuszko_Mound%2C_Krak%C3%B3w%2C_Poland%2C_2019%2C_04.jpg?width=1280",
+     "tekija": "Kgbo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ko%C5%9Bciuszko_Mound%2C_Krak%C3%B3w%2C_Poland%2C_2019%2C_04.jpg",
+     "selite": "Huipulta avautuu laaja näkymä Krakovan ylle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Krakow - Wawel from Vistula - 4.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krakow_-_Wawel_from_Vistula_-_4.jpg?width=1280",
+   "tekija": "Ingo Mehling",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krakow_-_Wawel_from_Vistula_-_4.jpg",
+   "selite": "Krakova levittäytyy Veikselin rannalla, ja Wawelin linna kohoaa kaupungin yllä.",
+   "leveys": 10175,
+   "korkeus": 3058,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "20200826 Wawel i Wisła w Krakowie 1752 1334.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg?width=1280",
+   "tekija": "Jakub Hałun",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg",
+   "selite": "Veikselin varrelta näkyy linnakukkula ja katedraalin tornit.",
+   "leveys": 4557,
+   "korkeus": 3030,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

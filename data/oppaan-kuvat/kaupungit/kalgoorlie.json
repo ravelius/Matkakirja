@@ -1,0 +1,136 @@
+{
+ "kaupunki": "kalgoorlie",
+ "kaupunkiQ": "Q329503",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q97657475",
+  "Q1129708",
+  "Q1016823"
+ ],
+ "kohteet": [
+  {
+   "q": "Q97657475",
+   "nimi": "Hannans North -kaivos",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -30.72727,
+   "lon": 121.4704,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hannans North Tourist Mine, 2016 (07).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hannans_North_Tourist_Mine%2C_2016_(07).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hannans_North_Tourist_Mine%2C_2016_(07).jpg",
+     "selite": "Vanhan kultakaivoksen nostotornit ja rakennukset kertovat Kalgoorlien kultaryntäyksen ajasta.",
+     "leveys": 3897,
+     "korkeus": 2193,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hannans North Tourist Mine, 2016 (05).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hannans_North_Tourist_Mine%2C_2016_(05).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hannans_North_Tourist_Mine%2C_2016_(05).jpg",
+     "selite": "Kaivosmuseon höyrykattilan savupiippu ja vesitorni seisovat punaisen maan keskellä.",
+     "leveys": 3769,
+     "korkeus": 2119,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Daisy Mae Kalgoorlie.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daisy_Mae_Kalgoorlie.JPG?width=1280",
+     "tekija": "Geomartin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daisy_Mae_Kalgoorlie.JPG",
+     "selite": "Puinen nostotorni nosti aikoinaan kultamalmia ylös Kalgoorlien kuiluista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1129708",
+   "nimi": "Coolgardie",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -30.953,
+   "lon": 121.164,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coolgardie Town Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coolgardie_Town_Hall.jpg?width=1280",
+     "tekija": "Nachoman-au",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coolgardie_Town_Hall.jpg",
+     "selite": "Coolgardien komea kaupungintalo on jäänne kultakuumeen ajasta, jolloin kaupunki oli Länsi-Australian suuria.",
+     "leveys": 1269,
+     "korkeus": 679,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1016823",
+   "nimi": "Norseman",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -32.1961,
+   "lon": 121.778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Norseman, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norseman%2C_Western_Australia.jpg?width=1280",
+     "tekija": "Nachoman-au",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norseman%2C_Western_Australia.jpg",
+     "selite": "Norsemanin pääkatu on Nullarborin tien portilla, kullankaivajien perustaman pikkukaupungin keskustassa.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kalgoorlie Super Pit, October 2023 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalgoorlie_Super_Pit%2C_October_2023_01.jpg?width=1280",
+   "tekija": "Chuq",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalgoorlie_Super_Pit%2C_October_2023_01.jpg",
+   "selite": "Super Pit on Kalgoorlien reunalla avautuva valtava avolouhos, yksi Australian suurimmista kultakaivoksista.",
+   "leveys": 8088,
+   "korkeus": 3642,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Super Pit Gold Mine, Kalgoorlie, WA, 2023, 10.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Super_Pit_Gold_Mine%2C_Kalgoorlie%2C_WA%2C_2023%2C_10.jpg?width=1280",
+   "tekija": "Kgbo",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Super_Pit_Gold_Mine%2C_Kalgoorlie%2C_WA%2C_2023%2C_10.jpg",
+   "selite": "Louhoksen porrastetut seinämät laskeutuvat satoja metrejä kohti pohjaa.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,368 @@
+{
+ "kaupunki": "sarajevo",
+ "kaupunkiQ": "Q11194",
+ "kohteet": [
+  {
+   "q": "Q629641",
+   "nimi": "Baščaršija",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 43.85972,
+   "lon": 18.43112,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sarajevo, Baščaršija, kopce.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo%2C_Ba%C5%A1%C4%8Dar%C5%A1ija%2C_kopce.jpg?width=1280",
+     "tekija": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gallery.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo%2C_Ba%C5%A1%C4%8Dar%C5%A1ija%2C_kopce.jpg",
+     "selite": "Baščaršija on Sarajevon vanha ottomaanikauden basaari, jonka kujilla on käsityöläisten pajoja ja kahviloita.",
+     "leveys": 4770,
+     "korkeus": 3178,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baščaršija l'hiver.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C5%A1%C4%8Dar%C5%A1ija_l'hiver.jpg?width=1280",
+     "tekija": "Yukof",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ba%C5%A1%C4%8Dar%C5%A1ija_l'hiver.jpg",
+     "selite": "Basaarin yllä kohoaa moskeijan minareetti, ja talvella kaupunki hiljenee lumen alle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1277685",
+   "nimi": "Latinalaissilta",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 43.85765,
+   "lon": 18.42901,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sarajevo Lateinerbrücke 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_Lateinerbr%C3%BCcke_1.JPG?width=1280",
+     "tekija": "Julian Nyča",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_Lateinerbr%C3%BCcke_1.JPG",
+     "selite": "Latinalaissilta ylittää Miljacka-joen, ja sen lähellä murhattiin arkkiherttua Franz Ferdinand vuonna 1914.",
+     "leveys": 3200,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Miljacka and the Latin bridge (55018397907).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miljacka_and_the_Latin_bridge_(55018397907).jpg?width=1280",
+     "tekija": "Filip Maljković from Belgrade, Serbia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miljacka_and_the_Latin_bridge_(55018397907).jpg",
+     "selite": "Ottomaanikautinen kivisilta heijastuu joen tyyneen veteen.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1255835",
+   "nimi": "Gazi Husrev-begin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 43.85917,
+   "lon": 18.42903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gazi Husrev-beg's Mosque IMG 9523 sarajevo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gazi_Husrev-beg's_Mosque_IMG_9523_sarajevo.jpg?width=1280",
+     "tekija": "Bjoertvedt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gazi_Husrev-beg's_Mosque_IMG_9523_sarajevo.jpg",
+     "selite": "Gazi Husrev-begin moskeija on Sarajevon tärkein moskeija ja ottomaanien rakennustaiteen helmi.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gazi Husrev-beg Mosque in Sarajevo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gazi_Husrev-beg_Mosque_in_Sarajevo.jpg?width=1280",
+     "tekija": "Adam Harangozó",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gazi_Husrev-beg_Mosque_in_Sarajevo.jpg",
+     "selite": "Moskeijan pylväikköinen sisäpiha on rauhallinen paikka basaarin vieressä.",
+     "leveys": 5838,
+     "korkeus": 3284,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16831150",
+   "nimi": "Vijećnica (kaupungintalo)",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 43.85912,
+   "lon": 18.43323,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vijećnica Sarajevo 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vije%C4%87nica_Sarajevo_2014.jpg?width=1280",
+     "tekija": "Choinowski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vije%C4%87nica_Sarajevo_2014.jpg",
+     "selite": "Vijećnica on Itävalta-Unkarin ajan kaupungintalo, joka on rakennettu pseudomaurilaiseen tyyliin.",
+     "leveys": 5077,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vijecnica (41626036484).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vijecnica_(41626036484).jpg?width=1280",
+     "tekija": "Jocelyn Erskine-Kellie from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vijecnica_(41626036484).jpg",
+     "selite": "Rakennus seisoo Miljacka-joen rannalla ja toimi pitkään kansalliskirjastona.",
+     "leveys": 5642,
+     "korkeus": 3757,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sarajevo City Hall Vijecnica (23242695334).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_City_Hall_Vijecnica_(23242695334).jpg?width=1280",
+     "tekija": "Alen Djuderija Photography from Sarajevo, Bosnia and Herzegovina",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_City_Hall_Vijecnica_(23242695334).jpg",
+     "selite": "Julkisivun raidalliset kaaret ja koristeet ovat kaupungin tunnetuimpia yksityiskohtia.",
+     "leveys": 5168,
+     "korkeus": 3568,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1267112",
+   "nimi": "Pyhän sydämen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 43.85929,
+   "lon": 18.42539,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Katedrala Srca Isusova - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Katedrala_Srca_Isusova_-_panoramio.jpg?width=1280",
+     "tekija": "Mister No",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Katedrala_Srca_Isusova_-_panoramio.jpg",
+     "selite": "Pyhän sydämen katedraali on Sarajevon katolinen pääkirkko ja Bosnian suurin goottilaistyylinen kirkko.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sarajevo - Katedrala Srca Isusova (49094383401).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_-_Katedrala_Srca_Isusova_(49094383401).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_-_Katedrala_Srca_Isusova_(49094383401).jpg",
+     "selite": "Kahden suippotornin kirkko seisoo vanhankaupungin kävelykatujen varrella.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1062192",
+   "nimi": "Sebilj",
+   "peruste": "sitelinks",
+   "koko_m": 20,
+   "lat": 43.85972,
+   "lon": 18.43126,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sebilj fountain, Sarajevo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sebilj_fountain%2C_Sarajevo.jpg?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sebilj_fountain%2C_Sarajevo.jpg",
+     "selite": "Sebilj on puinen juomavesikoju Baščaršijan keskellä ja Sarajevon tunnetuin tuntomerkki.",
+     "leveys": 1632,
+     "korkeus": 2262,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sebilj fountain in Sarajevo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sebilj_fountain_in_Sarajevo.jpg?width=1280",
+     "tekija": "Michał Bulsa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sebilj_fountain_in_Sarajevo.jpg",
+     "selite": "Koristeellinen puinen suihkulähde on peräisin ottomaanien ajalta.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1261159",
+   "nimi": "Ferhadija-moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 43.8589,
+   "lon": 18.42713,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ferhadija džamija, Sarajevo 2023.01.22 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferhadija_d%C5%BEamija%2C_Sarajevo_2023.01.22_2.jpg?width=1280",
+     "tekija": "Niegodzisie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ferhadija_d%C5%BEamija%2C_Sarajevo_2023.01.22_2.jpg",
+     "selite": "Ferhadija-moskeija on 1500-luvulla rakennettu kupolimoskeija Sarajevon keskustassa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ferhat Pasha Mosque, Sarajevo (15840490028).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferhat_Pasha_Mosque%2C_Sarajevo_(15840490028).jpg?width=1280",
+     "tekija": "Clay Gilliland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ferhat_Pasha_Mosque%2C_Sarajevo_(15840490028).jpg",
+     "selite": "Moskeijan vieressä on vanha hautausmaa ja korkea minareetti.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1257066",
+   "nimi": "Inat kuća",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 43.85854,
+   "lon": 18.43427,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sarajevo - Inat kuća (49100426901).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_-_Inat_ku%C4%87a_(49100426901).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_-_Inat_ku%C4%87a_(49100426901).jpg",
+     "selite": "Inat kuća eli kiusantalo siirrettiin kiven kiveltä vastapäätä rannalle, kun sen paikalle rakennettiin kaupungintaloa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sarajevo - Inat kuća (49104054186).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_-_Inat_ku%C4%87a_(49104054186).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_-_Inat_ku%C4%87a_(49104054186).jpg",
+     "selite": "Talossa toimii nykyään ravintola, ja sen takana näkyy Vijećnican raidallinen julkisivu.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q612240",
+   "nimi": "Trebević",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 43.82333,
+   "lon": 18.44889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sarajevo Trebević.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarajevo_Trebevi%C4%87.JPG?width=1280",
+     "tekija": "Julian Nyča",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sarajevo_Trebevi%C4%87.JPG",
+     "selite": "Trebević on Sarajevon yllä kohoava vuori, jolle pääsee köysiradalla ja jossa pidettiin vuoden 1984 talviolympialaisten rekikilpailut.",
+     "leveys": 2800,
+     "korkeus": 1867,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama de Sarajevo.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_de_Sarajevo.jpg?width=1280",
+   "tekija": "lloull",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_de_Sarajevo.jpg",
+   "selite": "Sarajevo levittäytyy vuorten ympäröimässä laaksossa Miljacka-joen varrella.",
+   "leveys": 22088,
+   "korkeus": 4440,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama of Sarajevo in 2016.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Sarajevo_in_2016.png?width=1280",
+   "tekija": "User:Tomica",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Sarajevo_in_2016.png",
+   "selite": "Talvella kaupungin rinnetalot ja minareetit peittyvät lumeen.",
+   "leveys": 6880,
+   "korkeus": 2328,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q8502697",
+   "nimi": "Keltainen linnake",
+   "peruste": "pelin nosto",
+   "lat": 43.86146,
+   "lon": 18.4377,
+   "syy": "ei kelvollista kuvaa: vain kaupunkipanoraamoja ja yksityiskohtia"
+  }
+ ]
+}

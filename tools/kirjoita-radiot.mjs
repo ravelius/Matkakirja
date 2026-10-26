@@ -99,6 +99,13 @@ const rivit = maat.map((maa) => {
   const r = data[maa];
   const osat = [`url: ${lainaa(r.url)}`, `asema: ${lainaa(r.asema)}`];
   if (r.virallinen) osat.push('virallinen: true');
+  /*
+   * Aseman kaupunki (omistaja 28.9.2026, radioiden maailmanlaajennus):
+   * yhtiön kotipaikka tai pääkaupunki, koordinaatit Wikidatasta (P625).
+   * Kartalla ei enää näytetä aluenimeä (Sahara, Kamerun, Kongo…) aseman
+   * paikkana. Kaikilla mailla on nämä kentät (tools/radiot.json).
+   */
+  if (r.kaupunki) osat.push(`kaupunki: ${lainaa(r.kaupunki)}`, `lat: ${r.lat}`, `lon: ${r.lon}`);
   return `  ${maa}: { ${osat.join(', ')} },`;
 });
 
@@ -130,6 +137,11 @@ const sisalto = `/*
  * ${maat.length} maata, joista ${viralliset} maan yleisradion kanava.
  *
  * Avaimena ISO-3-maatunnus, sama jota map.cityCountry käyttää.
+ *
+ * kaupunki/lat/lon (skeema, radioiden maailmanlaajennus 28.9.2026):
+ * aseman kaupunki (yhtiön kotipaikka tai maan pääkaupunki), koordinaatit
+ * Wikidatasta (P625), 2 desimaalia. Käytetään kartalla aseman paikkana
+ * sen sijaan että näytettäisiin aluenimi (Sahara, Kamerun, Kongo…).
  */
 export const RADIOT = {
 ${rivit.join('\n')}

@@ -184,5 +184,88 @@ export const MAASTOKOHTEET_TUR = [
       fakta: 'Fırat on Länsi-Aasian pisin joki ja saa alkunsa Turkista.',
     },
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'selimiyen-moskeija',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/tur-nosto-selimiyen-moskeija-63ac3142.jpg',
+      lyhyt: 'Selimiyen moskeijan minareetit ja kupolit kohoavat tiilimuurin takaa sinisellä taivaalla.',
+      selite: 'Edirnen Selimiyen moskeija ulkoa: korkeita minareetteja, keskikupoli ja pienemmät kupolit sekä raidallinen tiili- ja kivimuuri etualalla.',
+      lahde: 'Valokuva: Ali Osman Dilekoğlu, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ali Osman Dilekoğlu',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selimiye_Camii_IMG_4328.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Selimiyen moskeija',
+    nimio: 'Selimiye',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka leveä on Selimiyen kupoli?',
+      'Mitä Sinan kertomuksen mukaan väitti Hagia Sofiasta?',
+    ],
+    korostukset: ['kupoli|kupoli'],
+    nappi: 'Sinanin mestariteos Edirnessä',
+    // 26.5594 E / 41.6781 N — en-Wikipedia "Selimiye Mosque, Edirne", yleiskuvaus, arkkitehtuuri ja kompleksi
+    laudat: {
+      maailmankartta: { x: 6718.6, y: 1736.4 },
+    },
+    teksti: 'Selimiyen moskeija Edirnessä on arkkitehti Sinanin suunnittelema ja sulttaani Selim '
+      + 'II:lle rakennettu. Työ alkoi vuonna 1568, ja valmistumisvuodeksi mainitaan 1574 tai '
+      + '1575. Rukoussalia peittää yksi kupoli, jonka halkaisija on 31,28 metriä ja jota '
+      + 'tukee kahdeksan pilaria, ja rakennuksen kulmissa on neljä 70,89-metristä '
+      + 'minareettia. Kertomuksen mukaan Sinan väitti rakentaneensa Hagia Sofiaa korkeamman '
+      + 'ja leveämmän kupolin. UNESCO hyväksyi kohteen maailmanperintöön vuonna 2011 '
+      + 'sosiaalisen kompleksin kanssa, ja medresat toimivat nykyisin museoina.',
+    lahde: 'en-Wikipedia "Selimiye Mosque, Edirne", yleiskuvaus, arkkitehtuuri ja kompleksi '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'bosporinsalmi',
+    nimi: 'Bosporinsalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Montako siltaa ja tunnelia Bosporin ylittää?',
+      'Miksi Bosporissa vesi virtaa kahteen suuntaan?',
+    ],
+    nappi: 'Istanbulin halki kulkeva salmi',
+    // 29.06 E / 41.1 N — salmen keskiosa Istanbulin kohdalla
+    laudat: {
+      maailmankartta: { x: 6802, y: 1759.4 },
+      europe: { x: 769.2, y: 812.7 },
+    },
+    teksti: 'Bosporinsalmi on Turkin salmi, joka yhdistää Mustanmeren Marmaranmereen ja kulkee '
+      + 'Istanbulin halki Euroopan ja Aasian välistä. Se on noin 30 kilometriä pitkä ja '
+      + 'kapeimmillaan vain noin 700–750 metriä leveä. Salmen yli on rakennettu kolme siltaa, '
+      + 'joista vanhin avattiin vuonna 1973, ja sen alitse kulkee kaksi tunnelia. Nimi tulee '
+      + 'kreikasta, ja kreikkalaiset tulkitsivat sen tarkoittavan härän kulkuväylää.',
+    lahde: 'en-Wikipedia "Bosporus", johdanto-osa ja Geography-osa; New World Encyclopedia '
+      + '"Bosporus"; Britannica "Bosporus" (hakutulos); CNN Style / KTVZ 26.12.2022 '
+      + '(tarkistettu 16.10.2026).',
+  },
+  {
+    id: 'dardanellit',
+    nimi: 'Dardanellit',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Gallipolin sotaretkellä tapahtui?',
+      'Miten Kserkes ylitti Hellespontoksen?',
+    ],
+    nappi: 'Muinainen Hellespontos',
+    // 26.4 E / 40.2 N — salmen keskiosa Çanakkalen kohdalla
+    laudat: {
+      maailmankartta: { x: 6713.3, y: 1795 },
+      europe: { x: 718.1, y: 836.3 },
+    },
+    teksti: 'Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 '
+      + 'kilometriä pitkä, noin 1,2–6 kilometriä leveä ja syvimmillään noin 100 metriä. '
+      + 'Pohjoispuolella on Gallipolin niemimaa, jonka mukaan salmea kutsutaan myös Gallipolin '
+      + 'salmeksi. Muinaiset kreikkalaiset kutsuivat sitä Hellespontokseksi. Maaliskuussa 2022 '
+      + 'salmen ylitse avattiin 1915 Çanakkalen silta.',
+    lahde: 'en-Wikipedia "Dardanelles", johdanto-osa (tarkistettu 16.10.2026); WorldAtlas '
+      + '"Dardanelles Strait"; CNN Style / KTVZ 26.12.2022.',
+  },
 ];
 

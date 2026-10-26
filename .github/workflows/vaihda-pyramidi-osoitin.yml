@@ -1,0 +1,96 @@
+# Vaihtaa webin pyramidi-osoittimen (julisteet/pyramidi/pyramidi.json) koesarjan
+# luetteloon (julisteet/pyramidi/koe/<sarja>/pyramidi.json).
+#
+# Fablen päätös 25.9.2026 (vaihtoehto B): osoitin vaihdetaan tällä käsin ajettavalla
+# työnkululla Actions-secreteillä, ei sessioiden avaimilla. Aja vasta, kun pelin
+# vastaava versio (pallon laattaversio) on Pagesissa: pallon sarja ja luettelo
+# tarkistetaan versioltaan, ja jos vain toinen vaihtuu, lepokerros sammuu siksi aikaa.
+#
+# Vaiheet: 1) nykyinen pyramidi.json varmuuskopioksi pyramidi-<pvm-aika>.json,
+# 2) koe/<sarja>/pyramidi.json → pyramidi.json. Molempien sha256 tulosteeseen.
+# Palautus: aja uudelleen niin, että lähteenä on varmuuskopio (syöte palauta).
+
+name: Vaihda pyramidi-osoitin
+
+on:
+  workflow_dispatch:
+    inputs:
+      sarja:
+        description: 'Koesarja, jonka luettelo otetaan käyttöön (esim. 2026-09-25): koe/<sarja>/pyramidi.json'
+        type: string
+        required: true
+      palauta:
+        description: 'Palauta varmuuskopiosta: anna varmuuskopion nimi (esim. pyramidi-20260925-1830.json). Tyhjä = normaali vaihto sarjaan.'
+        type: string
+        default: ''
+
+concurrency:
+  group: pyramidi-osoitin
+  cancel-in-progress: false
+
+jobs:
+  vaihda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      SARJA: ${{ inputs.sarja }}
+      PALAUTA: ${{ inputs.palauta }}
+    steps:
+      - name: Tarkista syötteet ja hae luettelot
+        run: |
+          set -euo pipefail
+          case "$SARJA" in *[!A-Za-z0-9._-]*|'') echo "::error::Sarjan nimi saa sisältää vain A-Z a-z 0-9 . _ -"; exit 1 ;; esac
+          case "$PALAUTA" in *[!A-Za-z0-9._-]*) echo "::error::Varmuuskopion nimi saa sisältää vain A-Z a-z 0-9 . _ -"; exit 1 ;; esac
+          P=julisteet/pyramidi
+          if [ -n "$PALAUTA" ]; then LAHDE="$P/$PALAUTA"; else LAHDE="$P/koe/$SARJA/pyramidi.json"; fi
+          echo "LAHDE=$LAHDE" >> "$GITHUB_ENV"
+          aws s3 cp "s3://$AMPARI/$P/pyramidi.json" nykyinen.json --endpoint-url "$PAATE" --no-progress
+          aws s3 cp "s3://$AMPARI/$LAHDE" uusi.json --endpoint-url "$PAATE" --no-progress
+          # Uuden luettelon on oltava kelvollista JSONia ennen kuin se julkaistaan.
+          python3 -c 'import json,sys; json.load(open("uusi.json")); json.load(open("nykyinen.json"))'
+          if cmp -s nykyinen.json uusi.json; then
+            echo "::warning::Osoitin on jo sama kuin $LAHDE, vaihtoa ei tehdä."
+            echo "SAMA=1" >> "$GITHUB_ENV"
+          fi
+
+      - name: Varmuuskopioi nykyinen pyramidi.json
+        if: env.SAMA != '1'
+        run: |
+          set -euo pipefail
+          VARA="pyramidi-$(TZ=Europe/Helsinki date +%Y%m%d-%H%M).json"
+          aws s3 cp nykyinen.json "s3://$AMPARI/julisteet/pyramidi/$VARA" \
+            --endpoint-url "$PAATE" --content-type application/json \
+            --cache-control 'public, max-age=300' --no-progress
+          echo "VARA=$VARA" >> "$GITHUB_ENV"
+
+      - name: Vaihda osoitin
+        if: env.SAMA != '1'
+        run: |
+          set -euo pipefail
+          aws s3 cp uusi.json "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
+            --endpoint-url "$PAATE" --content-type application/json \
+            --cache-control 'public, max-age=300' --no-progress
+          # Tarkistus: ämpärin pyramidi.json on nyt tavu tavulta uusi luettelo.
+          aws s3 cp "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" tarkistus.json --endpoint-url "$PAATE" --no-progress
+          cmp -s uusi.json tarkistus.json || { echo "::error::Ämpärin pyramidi.json ei vastaa uutta luetteloa"; exit 1; }
+
+      - name: Kerro mitä tehtiin
+        if: always()
+        run: |
+          {
+            echo "## Pyramidi-osoitin"
+            echo
+            echo "- Lähde: \`${LAHDE:-?}\`"
+            [ -f nykyinen.json ] && echo "- Aiempi pyramidi.json sha256: \`$(sha256sum nykyinen.json | cut -d' ' -f1)\`"
+            [ -f uusi.json ] && echo "- Uusi pyramidi.json sha256: \`$(sha256sum uusi.json | cut -d' ' -f1)\`"
+            [ -n "${VARA:-}" ] && echo "- Varmuuskopio: \`julisteet/pyramidi/$VARA\` (palautus: syöte palauta=$VARA)"
+            [ "${SAMA:-}" = 1 ] && echo "- Osoitin oli jo sama, ei muutosta."
+            true
+          } | tee -a "$GITHUB_STEP_SUMMARY"

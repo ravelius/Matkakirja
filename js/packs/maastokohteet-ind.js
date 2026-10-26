@@ -170,6 +170,7 @@ export const MAASTOKOHTEET_IND = [
   {
     id: 'konark',
     nimi: 'Konarkin aurinkotemppeli',
+    nimio: 'Konark',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Minkä muotoiseksi temppeli rakennettiin?',
@@ -223,6 +224,7 @@ export const MAASTOKOHTEET_IND = [
   {
     id: 'darjeelingin-vuoristorata',
     nimi: 'Darjeelingin vuoristorata',
+    nimio: 'Darjeeling',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miten rata nousee vuorelle ilman hammastankoa?',
@@ -267,7 +269,7 @@ export const MAASTOKOHTEET_IND = [
       + 'trigonometrisen mittauksen laskelmat 1849 osoittivat Mount Everestin '
       + 'korkeammaksi; asia julistettiin virallisesti 1856. Nimen selittivät '
       + 'veljekset Hermann, Adolf ja Robert Schlagintweit tiibetin sanoista '
-      + '"korkean lumen viisi aarretta". Joe Brown ja George Band nousivat '
+      + '”korkean lumen viisi aarretta”. Joe Brown ja George Band nousivat '
       + 'ensimmäisinä 25. toukokuuta 1955, mutta pysähtyivät juuri ennen huippua '
       + 'pitääkseen lupauksensa Sikkimin hallitsijalle Tashi Namgyalille siitä, '
       + 'että laki jää koskemattomaksi.',

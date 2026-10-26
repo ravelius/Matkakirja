@@ -434,8 +434,7 @@ export const KAARI_PAKETIT = {
         oikea: 0,
         fakta: 'Bouquin on ranskaa ja tarkoittaa vanhaa kirjaa — bukinisti '
           + 'on siis vanhojen kirjojen kauppias. Vihreät laatikot ovat '
-          + 'kuuluneet Seinen kaiteille satojen vuosien ajan, ja '
-          + 'myyntipaikat periytyvät jonossa, jota odotetaan vuosia.',
+          + 'kuuluneet Seinen kaiteille satojen vuosien ajan, ja vapautuvat myyntipaikat jakaa kaupunki hakukierroksilla (lupa myönnetään viideksi vuodeksi).',
       },
       aarre: 'Kirjan viimeinen, avaamaton sivu kätki litteän kätkön. '
         + 'Colette leikkasi sivun auki: "Tämä ei ole isoisoisäni '
@@ -2571,6 +2570,353 @@ export const KAARI_PAKETIT = {
         + 'alla. Einar vertasi karttaa maastoon kauan: "Polku on siirretty '
         + 'kolmesti." Merkki osuu silti — enkä keksi, mistä sen olisi '
         + 'voinut tietää.',
+    },
+    {
+      id: 'bryssel',
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Bryssel — kivi, jonka paino oli kirjattu',
+      saapuminen: 'Pörssitalon julkisivua hakataan sateessakin, koska talon pitää '
+        + 'valmistua jouluksi. Märästä kivestä nousi kellarin haju. Yksi '
+        + 'veistäjistä sanoi nimensä ranskaksi niin nopeasti, että kirjaan '
+        + 'mahtui vain R. Hän ojensi minulle sirun koristeesta. Punnitsin '
+        + 'sen: neljäsataa grammaa. Palautin sirun, sillä seinästä ei oteta '
+        + 'mitään.',
+      henkilo: 'Kivenveistäjä Aline huoltaa pörssitalon julkisivun koristeita '
+        + 'telineillä ja tuntee jokaisen kiven painon.',
+      kohtaaminen: 'Aline hakkaa telineillä ja puhuu hakkaamisen tahdissa. Kun '
+        + 'näytät kirjan merkin, hän laskee taltan. "Työmaan vanhassa '
+        + 'kirjassa on rivi: vuonna 1873 vieras herra punnitsi sirun ja toi '
+        + 'sen takaisin. Harvinaista! Vastaa, niin näytän, minne se '
+        + 'laitettiin."',
+      kysymys: {
+        q: 'Kuka myöhemmin maailmankuuluksi tullut ranskalainen taiteilija '
+          + 'veisti 1870-luvun alussa koristeita Brysselin pörssitaloon?',
+        vaihtoehdot: [
+          'Edgar Degas',
+          'Auguste Rodin',
+          'Claude Monet',
+          'Pierre-Auguste Renoir',
+        ],
+        oikea: 1,
+        fakta: 'Auguste Rodin asui Brysselissä 1871–1877 ja teki muun muassa '
+          + 'pörssitalon koristeveistoksia; maailmankuuluksi hän tuli vasta '
+          + 'myöhemmin. Pörssitalo vihittiin käyttöön 27. joulukuuta 1873.',
+      },
+      aarre: 'Siru oli kääritty nenäliinaan ja piilotettu reliefin takaiseen '
+        + 'rakoon. Aline vei kätensä sinne ja hiljeni. "Tämän raon veistin '
+        + 'itse, eikä kukaan tiedä siitä." Nenäliina oli vanhempi kuin '
+        + 'rako.',
+    },
+    {
+      id: 'kosice',
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'utelias', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Kassa — avain, jonka pantti jäi',
+      saapuminen: 'Sähke Wieniin kulki minuutissa, mutta sen hinta ei mahtunut '
+        + 'taskuuni. Jätin lennätinvirkailijalle pantiksi kellon avaimen ja '
+        + 'lupasin palata. Hän kirjasi avaimen pöytäkirjaan kuin se olisi '
+        + 'arvopaperi, ja leimasi sivun. Kello kulkee nyt avaimetta, ja '
+        + 'minä sen mukana: aika on ostettu velaksi.',
+      henkilo: 'Arkistonhoitaja Katarína hoitaa kaupungin asiakirja- ja '
+        + 'esinekortistoa ja tietää, mitä on jäänyt lunastamatta.',
+      kohtaaminen: 'Katarína asettaa arkistokortin pöydälle ja pitää sormensa sen '
+        + 'päällä. "Kortissa lukee: avain, pantiksi, 1873, lunastamatta. '
+        + 'Meillä ei hävitetä mitään, mitä ei ole lunastettu. Ensin yksi '
+        + 'kysymys. Vastaa."',
+      kysymys: {
+        q: 'Katarínan arkistokortin leimassa on Kassan vaakuna. Mistä se on '
+          + 'Euroopassa kuuluisa?',
+        vaihtoehdot: [
+          'Ensimmäinen vaakuna, johon on kuvattu lohikäärme',
+          'Euroopan ainoa vaakuna, jossa on kaksi kruunua',
+          'Euroopan vanhin säilynyt kaupungin vaakunakirja',
+          'Vaakuna, jonka paavi suunnitteli itse',
+        ],
+        oikea: 2,
+        fakta: 'Kuningas Ludvig I Suuri myönsi Kassalle vaakunan 1369. '
+          + 'Vaakunakirja on Euroopan vanhin säilynyt kaupungille myönnetty, '
+          + 'ja Kassaa sanotaan usein ensimmäiseksi. Isoisäsi aikaan Kassa '
+          + 'kuului Unkarin kuningaskuntaan; nykyään se on Slovakian toiseksi '
+          + 'suurin kaupunki.',
+      },
+      aarre: 'Avain oli kaapin pohjalla arkistokortin alla, messinki puhtaana '
+        + 'ja kiiltävänä. "Tätä kaappia ei ole avattu vuosiin", Katarína '
+        + 'sanoi ja katsoi lukkoa. Lukko oli öljytty.',
+    },
+    {
+      id: 'ljubljana',
+      tunneKohtaaminen: { tunne: 'lammin', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'lammin', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Ljubljana — kimppu ja kartta',
+      saapuminen: 'Torilla kukkakauppias sanoi kukkien nimet kahdella kielellä, ja '
+        + 'minä ymmärsin toisen. Ostin kimpun, jonka nimeä en osannut '
+        + 'lausua. Vastalahjaksi piirsin hänelle kartan joen mutkista, '
+        + 'sillä jokaisella on oikeus tietää, minne joki ehtii. Hän katsoi '
+        + 'karttaa ylösalaisin ja sanoi sen olevan kaunis.',
+      henkilo: 'Kukkakauppias Vesna sitoo kimppuja Keskustorilla '
+        + 'Ljubljanica-joen rannalla ja tuntee jokaisen kukan nimen '
+        + 'kahdella kielellä.',
+      kohtaaminen: 'Vesna sitoo kimppua yhdellä kädellä ja osoittaa toisella torin '
+        + 'seinän lehtileikettä. "Siinä kerrotaan vieraasta herrasta, joka '
+        + 'sai kimpun ja jätti vastalahjaksi kartan joen mutkista. Karttaa '
+        + 'en ole nähnyt. Vastaa, niin kerron, mihin se joutui."',
+      kysymys: {
+        q: 'Ljubljanan tunnuksena on lohikäärme. Kuka legendan mukaan tappoi '
+          + 'sen kaupungin suolla?',
+        vaihtoehdot: [
+          'Beowulf ja hänen kaksitoista miestään',
+          'Siegfried Reinin rannalla',
+          'Jason ja hänen argonauttinsa',
+          'Tristan ja kuningas Marke',
+        ],
+        oikea: 2,
+        fakta: 'Legendan mukaan Jason ja argonautit tappoivat lohikäärmeen '
+          + 'Ljubljanican lähteillä suolla. Siitä lohikäärme on jäänyt '
+          + 'kaupungin tunnukseksi: se on vaakunassa linnan tornin päällä ja '
+          + 'Lohikäärmesillan kulmilla.',
+      },
+      aarre: 'Kätkö oli ruukun pohjalla kuivuneen kimpun alla: kartta, joka '
+        + 'oli piirretty yhdellä pitkällä viivalla. Vesna seurasi viivaa '
+        + 'sormellaan. "Tämä ei ole joki. Joessa ei ole näin monta mutkaa."',
+    },
+    {
+      id: 'luxemburg',
+      tunneKohtaaminen: { tunne: 'hammastys', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'vakava', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Luxemburg — kivi, joka jäi kesken',
+      saapuminen: 'Kallio kaikui vasaroista kuin jättimäinen kello. Muuri kaatui '
+        + 'sekuntia ennen kuin ehdin ymmärtää huudon. Purkutyöläinen oli '
+        + 'vetänyt minut sen taakse, ja pöly nousi kuin vaalea seinä. '
+        + 'Kiitin, ja hän vastasi omalla kielellään, eikä kumpikaan '
+        + 'ymmärtänyt toista. Nauroimme silti, koska kallio oli yhä '
+        + 'pystyssä, ja minä myös.',
+      henkilo: 'Kivenhakkaaja Nic veistää puretun linnoituksen kivistä uusia '
+        + 'paasia ja tuntee jokaisen kiven tarinan.',
+      kohtaaminen: 'Nic pysäyttää talttansa ja kääntää kiven, jonka kyljessä on '
+        + 'kaiverrettu merkki ja vuosiluku 1873. "Isoisoisäni jätti tämän '
+        + 'kiven kesken, ja suvussa sitä on pidetty laiskuutena. Merkin '
+        + 'merkitystä kukaan ei tiedä. Vastaa, niin saan kiven valmiiksi."',
+      kysymys: {
+        q: 'Luxemburgin kallioon rakennettu linnoitus oli aikanaan Euroopan '
+          + 'vahvimpia. Millä lempinimellä sitä kutsuttiin?',
+        vaihtoehdot: [
+          'Reinin Verdun',
+          'Pohjolan Gibraltar',
+          'Idän Konstantinopoli',
+          'Ardennien Malta',
+        ],
+        oikea: 1,
+        fakta: 'Luxemburgin linnoitusta kutsuttiin Pohjolan Gibraltariksi. '
+          + 'Lontoon sopimus 1867 määräsi sen purettavaksi ja maan '
+          + 'puolueettomaksi, ja purku kesti vuoteen 1883. Bockin '
+          + 'kalliokasematit ovat nykyään osa Unescon maailmanperintöä.',
+      },
+      aarre: 'Nic nosti kiven pois paikaltaan. Sen alla oli toinen merkki, '
+        + 'kulunut ja paljon vanhempi: joku oli hakannut tähän jo ennen '
+        + 'vuotta 1873. "Hakkaajan tunnus", Nic mutisi. "Ei meidän '
+        + 'sukumme."',
+    },
+    {
+      id: 'valletta',
+      tunneKohtaaminen: { tunne: 'miettiva', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Valletta — talo ilman kattoa',
+      saapuminen: 'Oopperatalo oli palanut toukokuussa sisältä tyhjäksi, mutta '
+        + 'lippuluukulla istui silti mies. Kysyin, mitä hän myy. Hän '
+        + 'vastasi, ettei mitään, mutta ettei hänellä ole muutakaan '
+        + 'paikkaa. Maksoin hänelle teen ja piirsin talon julkisivun, joka '
+        + 'oli yhä pystyssä. Hän ripusti piirroksen luukkunsa taakse.',
+      henkilo: 'Teatterin lipunmyyjä Rita istuu lippukopissa oopperatalon '
+        + 'raunioilla ja pitää kirjaa esityksistä, joita ei koskaan '
+        + 'annettu.',
+      kohtaaminen: 'Rita leikkaa lipun ihmiselle, joka ei sitä tarvitse. "Tapa on '
+        + 'tapa." Hän osoittaa luukun takana riippuvaa vanhaa valokuvaa: '
+        + 'mies piirtää palanutta julkisivua. "Kuka hän oli, ei tiedä '
+        + 'kukaan. Vastaa, niin avaan lattialaudan."',
+      kysymys: {
+        q: 'Vallettan kuninkaallisen oopperatalon raunioille on rakennettu '
+          + 'uusi teatteri. Millainen se on?',
+        vaihtoehdot: [
+          'Tarkka kopio palaneesta talosta',
+          'Lasikupolin alla toimiva elokuvateatteri',
+          'Maanalainen konserttisali',
+          'Katoton, taivaan alla toimiva teatteri',
+        ],
+        oikea: 3,
+        fakta: 'Oopperatalo avattiin 1866 ja paloi pahoin toukokuussa 1873, '
+          + 'mutta se korjattiin ja avattiin uudelleen 1877. Sodan '
+          + 'pommitukset tuhosivat sen 1942, ja jäännökset purettiin '
+          + '1950-luvun lopulla. Raunioiden paikalle valmistui 2013 Renzo '
+          + 'Pianon suunnittelema katoton ulkoilmateatteri.',
+      },
+      aarre: 'Lipukopin lattialaudan alta löytyi toinen piirros: palaneen '
+        + 'oopperatalon julkisivu, vanha ja kulunut. Rita katsoi sitä '
+        + 'pitkään. "Tästä puuttuu vain yleisö", hän sanoi ja pani laudan '
+        + 'takaisin.',
+    },
+    {
+      id: 'bergen',
+      tunneKohtaaminen: { tunne: 'vakava', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'jannitys', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Bergen — rivi väärässä sarakkeessa',
+      saapuminen: 'Bryggenin lattialankut kitisivät jalkojeni alla kuin talo olisi '
+        + 'kuunnellut askeleitani. Kuivattu kala haisi niin, että silmiin '
+        + 'nousi vettä. Mestari antoi minulle esiliinan ja kysyi, osaanko '
+        + 'erottaa hyvän kalan huonosta. Sanoin osaavani mitata sen. Hän '
+        + 'sanoi, ettei se auta, ja antoi vihkon, johon sain kirjata yhden '
+        + 'rivin.',
+      henkilo: 'Kalanvrakari Solveig lajittelee kuivattua turskaa Bryggenin '
+        + 'laiturilla ja pitää suvun lajittelukirjaa.',
+      kohtaaminen: 'Solveig ei kehu eikä tervehdi. "Lajittelukirjassamme on '
+        + '1800-luvulta rivi vierasta käsialaa, väärässä sarakkeessa. En '
+        + 'korjaa sitä, vaikka kuinka katsoisit. Vastaa, äläkä seiso '
+        + 'tiellä."',
+      kysymys: {
+        q: 'Bryggenin värikkäät puutalot olivat vuosisatoja yhden '
+          + 'kauppaliiton ulkomainen kauppakonttori. Minkä liiton?',
+        vaihtoehdot: [
+          'Hansaliiton',
+          'Hollannin Itä-Intian kauppakomppanian',
+          'Kalmarin unionin',
+          'Englannin Muscovy-yhtiön',
+        ],
+        oikea: 0,
+        fakta: 'Bergenissä oli 1300-luvun puolivälistä alkaen Hansaliiton '
+          + 'kauppakonttori, jonka kauppa perustui kuivatun kalan vientiin ja '
+          + 'viljan tuontiin. Nykyiset Bryggenin puutalot ovat vuoden 1702 '
+          + 'palon jälkeiseltä ajalta, ja alue on Unescon '
+          + 'maailmanperintökohde 1979.',
+      },
+      aarre: 'Lajittelukirjan väliin oli painettu kuivunut lehti. Isoisän '
+        + 'rivin alla oli uusi merkintä, tämän viikon päivämäärällä. '
+        + '"Kukaan ei ole kirjoittanut tähän kuuteenkymmeneen vuoteen", '
+        + 'Solveig sanoi. Muste ei ollut kuivunut.',
+    },
+    {
+      id: 'firenze',
+      tunneKohtaaminen: { tunne: 'utelias', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'miettiva', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Firenze — tilaus, jota ei haettu',
+      saapuminen: 'Firenze oli ollut Italian pääkaupunki kuusi vuotta, ja kun '
+        + 'virkamiehet muuttivat Roomaan, kaupunki jäi täyteen tyhjiä '
+        + 'huoneita. Vuokrasin yhden puolella hinnalla ja tinkin silti. '
+        + 'Isäntä tunnisti tinkijän. Hän laski hintaa vielä, jotta pääsisi '
+        + 'minusta eroon. Kirjasin vuokran ja alennuksen vierekkäin, ja '
+        + 'alennus oli suurempi luku.',
+      henkilo: 'Kultaseppä Ginevra tekee työtä Ponte Vecchion verstaassa ja '
+        + 'pitää vihkoa tilauksista, joita ei koskaan haettu.',
+      kohtaaminen: 'Ginevra ei nosta katsettaan sormuksesta. "Vihkossa on rivi ilman '
+        + 'nimeä, vieras käsiala: lasi kompassiin, maksettu puoliksi, '
+        + 'hakematta. Pidän vihkoa taikauskona ja kirjoitan siihen silti. '
+        + 'Vastaa, niin avaan vihkon."',
+      kysymys: {
+        q: 'Ponte Vecchion liikkeissä myytiin ennen kultaseppiä jotakin '
+          + 'muuta. Mitä?',
+        vaihtoehdot: [
+          'Silkkiä',
+          'Pergamenttia',
+          'Lihaa',
+          'Lasia',
+        ],
+        oikea: 2,
+        fakta: 'Sillalla oli aikoinaan teurastajien pitämiä liikkeitä. '
+          + 'Ferdinando I de’ Medici käski 1590-luvulla kultaseppien korvata '
+          + 'heidät, koska haju nousi Vasarin käytävään, ja kultasepät ovat '
+          + 'pysyneet sillalla siitä asti.',
+      },
+      aarre: 'Verstaan lattialaudan alta nousi pieni kehys: tilauksen numero '
+        + 'ja puoli kompassikotelon kantta. "Toinen puoli on jossain '
+        + 'muualla", Ginevra sanoi epäuskoisena. "Kauppa jäi kesken."',
+    },
+    {
+      id: 'sevilla',
+      tunneKohtaaminen: { tunne: 'ylpea', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'utelias', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Sevilla — sarja, joka jatkuu',
+      saapuminen: 'Triana-sillan raudan alla jokilaivat jonottivat satamaan, ja '
+        + 'minä arvioin joen leveyden silmämitalla: erehdyin sata askelta. '
+        + 'Luotsi kuuli arvaukseni, mutta ei sanonut mitään, vaan pyyhki '
+        + 'otsaansa. Appelsiininkukat tuoksuivat sillalle asti. Hän näytti '
+        + 'sormella, missä pohja nousee, ja minä kirjasin sen.',
+      henkilo: 'Jokiluotsi Amparo tuo laivoja Guadalquivirin mutkan läpi ja '
+        + 'pitää kirjaa joen pohjasta.',
+      kohtaaminen: 'Amparo katsoo jokea eikä sinua. "Satamassa kerrotaan, että '
+        + 'luotsin ollessa sairaana vieras herra kirjasi syvyyden kirjaan, '
+        + 'eikä rivi katkennut. Pidän tapaa vanhanaikaisena ja jatkan sitä '
+        + 'silti. Vastaa, niin avaan kirjan."',
+      kysymys: {
+        q: 'Torre del Oron rannassa purettiin 1500-luvulla rahtia '
+          + 'kaukaisista maista. Minkä kaupan yksinoikeuden Sevilla sai?',
+        vaihtoehdot: [
+          'Itämeren viljan kaupan Hansaliiton kanssa',
+          'Uuden maailman kaupan Atlantin yli',
+          'Venetsialaisten lasikaupan Levantissa',
+          'Pohjolan turkiskaupan Moskovan kanssa',
+        ],
+        oikea: 1,
+        fakta: 'Sevilla sai 1503 yksinoikeuden Espanjan Amerikan-kauppaan, ja '
+          + 'laivat purkivat rahtinsa Guadalquivirin rannalla; kauppaa valvoi '
+          + 'kruunun Casa de Contratación, joka siirrettiin Cádiziin vasta '
+          + '1717.',
+      },
+      aarre: 'Syvyyskirjan viimeiselle riville oli merkitty tämän aamun '
+        + 'lukema. Amparo luki sen kahdesti. "En kirjoittanut tätä." Hän '
+        + 'mittasi pohjan itse ja katsoi sitten pitkään jokea. Lukema oli '
+        + 'oikea.',
+    },
+    {
+      id: 'tampere',
+      tunneKohtaaminen: { tunne: 'ilo', voimakkuus: 0.5 },
+      tunneAarre: { tunne: 'ilo', voimakkuus: 0.55 },
+      /* Luonnokset hyväksytty 12.10.2026 (docs/raportit/kaaret-eurooppa-luonnokset-20261011.md); luennat 18 = kohtaaminen + aarre, saapuminen jää ilman (varapolku). */
+      mykistetyt: ['saapuminen'],
+      otsikko: 'Tampere — viisitoista, ehkä kuusitoista',
+      saapuminen: 'Laskin sillalta tehtaiden piiput ääneen ja sain viisitoista. '
+        + 'Ohikulkija pysähtyi, kysyi, mitä teen, ja laski kanssani. Hän '
+        + 'sai kuusitoista. Tehtaan kello soi kesken laskun, ja kumpikin '
+        + 'aloitti alusta. Seisoimme sillalla kymmenen minuuttia emmekä '
+        + 'sopineet. Kirjasin molemmat luvut, koska kumpikaan ei antanut '
+        + 'periksi.',
+      henkilo: 'Koneenhoitaja Vieno pitää Tammerkosken turbiinin käynnissä ja '
+        + 'luottaa mittareihin enemmän kuin tarinoihin.',
+      kohtaaminen: 'Vieno pyyhkii käsiään rättiin. "Sukumme kertoo, että tehtaan '
+        + 'nainen opetti vieraalle herralle katkenneen langan solmun. Pidän '
+        + 'sitä satuna. Solmun osaan silti, ja se pitää. Vastaa, niin saat '
+        + 'nähdä sen."',
+      kysymys: {
+        q: 'Tammerkoski virtaa Tampereen halki kahden järven välillä. Mitkä '
+          + 'järvet ovat?',
+        vaihtoehdot: [
+          'Päijänne ja Vesijärvi',
+          'Näsijärvi ja Pyhäjärvi',
+          'Saimaa ja Pyhäselkä',
+          'Oulujärvi ja Kallavesi',
+        ],
+        oikea: 1,
+        fakta: 'Tammerkoski virtaa Näsijärvestä Pyhäjärveen noin kilometrin '
+          + 'matkan, ja sen putouskorkeus on noin 18 metriä. Koski antoi '
+          + 'voimaa Finlaysonin kehräämölle ja muille tehtaille.',
+      },
+      aarre: 'Kätkö oli turbiinihallin oven pielessä: lanka, solmittu isoisän '
+        + 'solmulla, ja sen päässä lappu, jossa luki kuusitoista. Vieno '
+        + 'luki sen kolmesti. "Eihän se voi olla." Hän lähti laskemaan.',
     },
     {
       id: 'aden',

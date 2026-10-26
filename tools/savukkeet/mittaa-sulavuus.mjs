@@ -39,10 +39,9 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join } from 'node:path';
 import { dirname, join as liita } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 const JUURI = process.env.JUURI ?? liita(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`); const { packById } = await import(`${JUURI}/js/pack.js`);
-const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = pw.chromium ?? pw.default?.chromium;
 const NAKYMA = process.env.NAKYMA ?? 'puhelin'; const KURISTUS = Number(process.env.KURISTUS ?? 1); const PROFIILI = process.env.PROFIILI === '1';
 const KORKEUS = Number(process.env.KORKEUS ?? 0.2); const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/sulavuus'; mkdirSync(ULOS, { recursive: true });
 const NAKYMAT = { puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true }, tyopoyta: { viewport: { width: 1400, height: 900 }, deviceScaleFactor: 2 } };
@@ -51,8 +50,7 @@ const palvelin = http.createServer((req, res) => { const polku = join(JUURI, req
 await new Promise((ok) => palvelin.listen(0, ok)); const osoite = `http://localhost:${palvelin.address().port}/`;
 const muisti = new Map(); const ampari = (url) => { if (!muisti.has(url)) muisti.set(url, fetch(url).then(async (v) => (v.ok ? { body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') } : null)).catch(() => null)); return muisti.get(url); };
 const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: 'marseille' }], pack: packById('maailmankartta'), seed: 5 }); peli.phase = 'action'; peli.tokens.delete('marseille');
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM || undefined,
+const selain = await avaaChromium({
   // Oikea GPU Macilla (ANGLE Metal); muualla liput ovat harmittomia.
   args: ['--use-angle=metal', '--ignore-gpu-blocklist', '--enable-gpu-rasterization'],
 });

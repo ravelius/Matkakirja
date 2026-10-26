@@ -56,6 +56,18 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
+
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
@@ -92,9 +104,7 @@ const palvelin = createServer((req, res) => {
 const PORTTI = Number(process.env.PORTTI) || 8757;
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /*
  * KOLME RUUTUA, JOISTA YKSI ON OMISTAJAN OMA. iPad 1024 × 1366 on se
@@ -165,6 +175,7 @@ const pysaytaAvaus = async (s) => {
 
 async function avaaSivu(nakyma, virheet) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   // Ämpäri ja NASAn kuva-ämpäri Noden kautta; muu verkko katki.

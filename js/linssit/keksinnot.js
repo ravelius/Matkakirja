@@ -317,8 +317,8 @@ export const KEKSINNOT = [
       + 'vastaan vanhalla ja vaarallisella variloinnilla, ja se rasitti '
       + 'hänen terveyttään koko elämän ajan. Kolmentoista vanhana hän '
       + 'meni seitsemäksi vuodeksi kirurgin oppiin ja opiskeli sitten '
-      + 'Lontoossa John Hunterin johdolla; Hunterilta hän sai ohjeen "älä '
-      + 'arvaile, kokeile", josta tuli hänen työtapansa.'
+      + 'Lontoossa John Hunterin johdolla; Hunterilta hän sai ohjeen ”älä '
+      + 'arvaile, kokeile”, josta tuli hänen työtapansa.'
       + '\n\n'
       + 'Jenner palasi maaseudulle kyläläisten lääkäriksi eikä lähtenyt '
       + 'sieltä enää. Hän tutki myös lintuja ja kuvasi ensimmäisenä '
@@ -331,10 +331,10 @@ export const KEKSINNOT = [
       + 'vastustusliikkeen.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1796-edward-jenner.jpg`,
-      lyhyt: 'Edward Jenner, maaseudun lääkäri, jonka ohje oli "älä arvaile, kokeile".',
+      lyhyt: 'Edward Jenner, maaseudun lääkäri, jonka ohje oli ”älä arvaile, kokeile”.',
       selite: 'Edward Jenner pysyi koko ikänsä maaseudun lääkärinä ja '
         + 'innokkaana luonnontutkijana. Opettajaltaan hän oli oppinut '
-        + 'ohjeen "älä arvaile, kokeile" — ja tunsi lapsena itse vanhan '
+        + 'ohjeen ”älä arvaile, kokeile” — ja tunsi lapsena itse vanhan '
         + 'rokotustavan vaarat.',
       lahde: 'Matkakirjan havainnekuva',
     },
@@ -622,7 +622,7 @@ export const KEKSINNOT = [
       + 'Nicéphore Niépcen kautta ja jatkoi yksin, kun Niépce kuoli 1833.'
       + '\n\n'
       + 'Illuusioiden ammattilainen puhui myös keksinnöstään näyttämön '
-      + 'sanoin: "Olen siepannut valon — olen pysäyttänyt sen lennon." '
+      + 'sanoin: ”Olen siepannut valon — olen pysäyttänyt sen lennon.” '
       + 'Maaliskuussa 1839 dioraamateatteri paloi, ja Daguerre kehotti '
       + 'palomiehiä pelastamaan viidennen kerroksen, jossa olivat hänen '
       + 'levynsä ja muistiinpanonsa. Kun Foggin isoisä matkusti vuonna '
@@ -866,7 +866,7 @@ export const KEKSINNOT = [
       asento: '30% top',
       selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä '
         + 'saattaja vastaa hänen pieneen hyvästieleeseensä.',
-      lahde: 'Kuvaputken generoitu valokuva',
+      lahde: 'Matkakirjan havainnekuva',
     },
     /*
      * HAVAINNEKUVA KARTAN PÄÄLLE TEKSTILAATIKON TILALLE (omistaja
@@ -889,7 +889,7 @@ export const KEKSINNOT = [
       selite: 'Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka '
         + 'teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut '
         + 'vedos säilyttää yhteisen hetken mutta kadottaa isoisän kasvot varjoon.',
-      lahde: 'Kuvaputken generoitu valokuva',
+      lahde: 'Matkakirjan havainnekuva',
     },
     /*
      * KUVAKIERTO (omistaja 4.9.2026 iltapäivä: *"ne itseasiassa voisivat
@@ -911,7 +911,7 @@ export const KEKSINNOT = [
         ulkoinen: true,
         selite: 'Isoisä kättelee lautturia Bombayn laiturilla. Kuva on hänen '
           + 'matka-arkustaan; kasvot jäävät katoksen varjoon.',
-        lahde: 'Kuvaputken generoitu valokuva',
+        lahde: 'Matkakirjan havainnekuva',
       },
     ],
     /*
@@ -1035,7 +1035,7 @@ export const KEKSINNOT = [
       + 'Siemens oli yhtä paljon järjestäjä kuin keksijä: yhtiö '
       + 'kansainvälistyi heti, ja veljet hoitivat Lontoon ja Pietarin. '
       + 'Hän kannatti avoimesti työväen aseman parantamista ja kirjoitti, '
-      + 'ettei päämääränä saa olla tehdas, jossa "työn orjat" raatavat '
+      + 'ettei päämääränä saa olla tehdas, jossa ”työn orjat” raatavat '
       + 'rikkaiden käsissä. Kun Foggin isoisä matkusti vuonna 1873, '
       + 'Siemens & Halske oli jo rakentanut yli 11 000 kilometrin '
       + 'lennätinlinjan Lontoosta Kalkuttaan, mutta sähköveturiin oli '
@@ -1045,7 +1045,7 @@ export const KEKSINNOT = [
       lyhyt: 'Werner von Siemens, upseeri ja yritysjohtaja, joka puolusti työväen asemaa.',
       selite: 'Werner von Siemens oli upseeri ja yritysjohtaja yhtä paljon kuin '
         + 'keksijä. Hän puolusti avoimesti työväen asemaa ja varoitti '
-        + 'tehtaista, joissa raatavat "työn orjat".',
+        + 'tehtaista, joissa raatavat ”työn orjat”.',
       lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: {
@@ -1193,7 +1193,7 @@ export const KEKSINNOT = [
       + 'aaltoja, jotka vastaanotin toisella puolella huonetta tunnisti.'
       + '\n\n'
       + 'Kun opiskelija kysyi, mihin aaltoja voisi käyttää, Hertz vastasi: '
-      + '"Ei mihinkään." Seitsemän vuotta myöhemmin Marconi lähetti niillä '
+      + '”Ei mihinkään.” Seitsemän vuotta myöhemmin Marconi lähetti niillä '
       + 'viestin. Taajuuden yksikkö hertsi on nimetty hänen mukaansa.',
     henkilojuttu: 'Heinrich Hertz (1857–1894) syntyi Hampurissa asianajajan ja '
       + 'poliitikon poikana. Koulussa hän oli hyvä sekä luonnontieteissä '
@@ -1304,7 +1304,7 @@ export const KEKSINNOT = [
       + 'läpi mutta ei luun eikä metallin. Röntgen nimesi sen X-säteiksi.'
       + '\n\n'
       + 'Joulukuun 22. päivänä 1895 hän kuvasi vaimonsa Anna Berthan käden. '
-      + '"Olen nähnyt kuolemani", vaimo sanoi. Kuukaudessa säteitä käytettiin '
+      + '”Olen nähnyt kuolemani”, vaimo sanoi. Kuukaudessa säteitä käytettiin '
       + 'jo sairaaloissa, ja Röntgen sai ensimmäisen fysiikan Nobel-palkinnon 1901.',
     henkilojuttu: 'Wilhelm Röntgen (1845–1923) syntyi Lennepissä kangaskauppiaan '
       + 'ainoana lapsena ja muutti kolmivuotiaana Alankomaihin, minkä '
@@ -1492,7 +1492,7 @@ export const KEKSINNOT = [
       + 'välineet kotiin ja opetti lapsensa käyttämään niitä. Äiti kuoli '
       + 'tuberkuloosiin ja vanhin sisar lavantautiin; Maria oli silloin '
       + 'kymmenvuotias. Naisena hän ei päässyt yliopistoon, joten hän '
-      + 'opiskeli salaisessa "lentävässä yliopistossa" ja työskenteli '
+      + 'opiskeli salaisessa ”lentävässä yliopistossa” ja työskenteli '
       + 'kotiopettajattarena.'
       + '\n\n'
       + 'Sisarusten sopimus vei hänet eteenpäin: ensin Maria elätti '
@@ -1507,8 +1507,8 @@ export const KEKSINNOT = [
       + 'neljännesvuosisataa myöhemmin.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1898-marie-curie.jpg`,
-      lyhyt: 'Marie Curie, salaisen "lentävän yliopiston" opiskelija, joka paleli ullakollaan.',
-      selite: 'Marie Curie opiskeli salaisessa "lentävässä yliopistossa", koska '
+      lyhyt: 'Marie Curie, salaisen ”lentävän yliopiston” opiskelija, joka paleli ullakollaan.',
+      selite: 'Marie Curie opiskeli salaisessa ”lentävässä yliopistossa”, koska '
         + 'naisia ei otettu Varsovan yliopistoon. Pariisissa hän paleli '
         + 'ullakollaan ja unohti syödä.',
       lahde: 'Matkakirjan havainnekuva',
@@ -1681,7 +1681,7 @@ export const KEKSINNOT = [
       + 'parsinneuloista, polkupyörän lampunlinsseistä, teelaatikosta ja '
       + 'sinettivahasta. Kun hän tuli esittelemään laitettaan Daily '
       + 'Expressin toimitukseen, uutispäällikkö pyysi hankkiutumaan eroon '
-      + '"hullusta, jolla on kone langattomaan näkemiseen". Kun Foggin '
+      + '”hullusta, jolla on kone langattomaan näkemiseen”. Kun Foggin '
       + 'isoisä matkusti vuonna 1873, Bairdia ei ollut syntynyt — mutta '
       + 'helmikuussa 1873 Willoughby Smith kertoi Lontoon '
       + 'lennätininsinööreille, että valo muuttaa seleenin '
@@ -1785,6 +1785,7 @@ export const LINSSI = {
   kerros: false,
   nimi: 'Keksintölinssi',
   lyhyt: 'Keksinnöt Euroopassa 1769–1928: kello juoksee, valot syttyvät.',
+  esittely: 'Eurooppalaisten keksintöjen aikajana 1769–1928: käynnistä kello ja katso, missä ja milloin mikin keksintö syntyi.',
   ikoni: '<circle cx="12" cy="12" r="7.5"/><path d="M12 7.5V12l3 2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2"/>',
   valokuva: false,
   laudat: ['maailmankartta'],

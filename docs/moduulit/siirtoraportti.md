@@ -14,16 +14,16 @@ se, mikä toistuu joka kerta, ja se, minkä puuttuminen on maksanut
 seuraavalle sessiolle aikaa.
 
 Yhden lauseen sääntö: **siirtoraportti kertoo tilan ja keskeneräisen,
-Raamattu kertoo linjaukset.** Jos jokin on pysyvä sääntö, se
-kirjoitetaan Raamattuun (`js/tyohuone-raamattu.js`) ja raportissa
-viitataan siihen osion nimellä. Raporttiin kirjoitettu uusi linjaus
-katoaa, koska raportteja ei lueta vanhoina.
+Raamattu kertoo linjaukset.** Pysyvät säännöt kirjataan Raamattuun ja raportti viittaa niihin (Raamattu 7.43).
+
+## 0. Pituus ja lukeminen (omistaja 14.10.2026 klo 22.4x, kortti "Aloitus")
+
+- Luovutus on enintään 60 riviä; pitkä aineisto tiedostoon ja luovutukseen vain polku. Roolin aloituksen lukulista, peruttu työ ja 8 %:n tavoite: Raamattu 7.22, 7.24 ja 7.37.
 
 ## 1. Mihin se tallennetaan
 
 **Polku:** `docs/raportit/viesti-fable-luovutus-<pvm>.md`, missä
-`<pvm>` on `YYYYMMDD`. Sama polku on Raamatussa (osio AGENTIT VAIN
-OPUS JA SONNET, tarkennus 5).
+`<pvm>` on `YYYYMMDD`. Sama polku: Raamattu 7.37.
 
 - Useampi luovutus samana päivänä: lisää vuorokaudenaika loppuun,
   `...-20260918-ilta.md`. Näin on tehty ja se toimii.
@@ -69,9 +69,7 @@ mainitse edellisen raportin tiedostonimi.
 ### 3.2 Lue ensin
 Numeroitu lista luettavista, tärkein ensin: `CLAUDE.md`,
 `docs/roolitus.md` ja **Raamatun osiot nimeltä lueteltuina** (esim.
-"MAC STUDIO: UUDEN SESSION ALOITUS", "AGENTIT VAIN OPUS JA SONNET
-tarkennukset 1–11"). Pelkkä "lue Raamattu" ei riitä: se on yli 11 000
-riviä. Nimeä ne osiot, jotka ovat muuttuneet tai koskevat kesken
+"luku 12: MAC STUDIO: UUDEN SESSION ALOITUS", "luku 1: AGENTIT VAIN OPUS JA SONNET"). Pelkkä "lue Raamattu" ei riitä: se on 14 lukua. Nimeä ne osiot, jotka ovat muuttuneet tai koskevat kesken
 olevaa työtä.
 
 ### 3.3 Tila
@@ -89,6 +87,9 @@ Tärkeysjärjestyksessä, ei aikajärjestyksessä. Jokaisesta kohdasta:
 mitä on tehty, mitä puuttuu, mistä jatketaan (tiedosto, haara,
 komento). Kirjaa myös **keskeytyneet agentit ja se, onko niiden työ
 committoitu** — worktreet ja scratchpadit katoavat resetissä.
+Kirjaa myös **avoimet Codex-viestit** (posti/codex-<rooli>-*, joihin ei ole vastattu
+tiedostolla <rooli>-codex-<aihe>-*): tiedosto, SHA ja mitä vastaukseen tarvitaan
+(omistajan kortti 17.10.2026 klo 07.25).
 
 ### 3.6 Odottaa omistajan päätöstä
 Erillinen osio, ei kesken-listan sekaan. Jokaisesta: kysymys,
@@ -141,18 +142,14 @@ Aloitusviestissä on vähintään:
 2. Ensimmäinen komento (`git fetch` + `checkout -B <haara>`).
 3. Luettavat: `CLAUDE.md`, `docs/roolitus.md`, tämä raportti nimeltä,
    Raamatun osiot nimeltä.
-4. Sitovat säännöt tiiviisti: agentit vain Opus/Sonnet, haarasääntö,
-   kysymykset omistajalle kysymyskorttina, omistajan sanat Raamattuun
-   sanatarkasti ASCII:na, aikavyöhyke.
+4. Sitovat säännöt viittauksina Raamattuun (agentit 7.10, haarat 7.7, kysymykset 7.27, kellonaika 12.8); AVOIN (ei Raamatussa): omistajan sanat Raamattuun sanatarkasti ASCII:na.
 5. **Ensimmäinen tehtävä nimeltä** — ei "jatka siitä mihin jäin".
 6. Vastauskieli ja -tyyli: suomeksi, tiiviisti.
 
 ## 5. Mitä raporttiin EI kirjoiteta
 
-- **Avainten arvoja.** Vain nimet ja sijainti. Ei API-avaimia repoon
-  eikä lokiin.
-- **Omistajan sähköpostiosoitetta** mihinkään käyttötarkoitukseen.
-- **Mallin tunnistetta** (ei committeihin, ei PR:iin, ei koodiin).
+- **Avainten arvoja** (Raamattu 12.2, 12.5): vain nimet ja sijainti.
+- AVOIN (ei Raamatussa): **omistajan sähköpostiosoitetta** ei mihinkään käyttötarkoitukseen; **mallin tunnistetta** ei committeihin, PR:iin eikä koodiin (Co-Authored-By-rivi: päätettävä).
 - **Uusia linjauksia.** Ne kuuluvat Raamattuun; raportti viittaa.
 - **Mediaa** — vain `docs/raportit/kuvat/` näyttökuville.
 - `dist/`-kansiota tai muuta rakennettua.

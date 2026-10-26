@@ -1,0 +1,311 @@
+{
+ "huomio": "Alankomaiden 34 patsasskannauksen lähdetiedot pelin Tekijätietoihin (Tietoja.cs lukee veistokset.json lahteet[]; sama muoto kuin ranska/veistokset.json lahteet). Johdettu proton alankomaat/sali.json veistospaikat[].teos-kentistä (krediitti, lisenssi, lahde_url) ja veistokset.json sijoitus-avaimista (SK 17.10.2026). CC BY 4.0 (8 skannausta, Rijksmuseum) vaatii nimeämisen; CC0 (26, Rijksmuseum van Oudheden) nimetään silti. Siirtoseppä lisää tämän listan alankomaat/veistokset.json:iin avaimella \"lahteet\".",
+ "lahteet": [
+  {
+   "patsas": "rijks-ccby-keyser-mies",
+   "teos": "Bust of a Man - Rijksmuseum",
+   "tekija": "Moshe Caine",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Moshe Caine, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/bust-of-a-man-rijksmuseum-bbb4099a2a9946c29f362d12f5a0f0ae"
+  },
+  {
+   "patsas": "rijks-ccby-verhulst-van-liere",
+   "teos": "Portrait of Baron Willem van Liere, Rijksmuseum",
+   "tekija": "Thomas Flynn",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Thomas Flynn, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/portrait-of-baron-willem-van-liere-rijksmuseum-b94c34276a824ed2ba9a434106d568a6"
+  },
+  {
+   "patsas": "rijks-ccby-dieussart-spiering",
+   "teos": "Portrait of Pieter Spiering - Rijksmuseum",
+   "tekija": "Moshe Caine",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Moshe Caine, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/portrait-of-pieter-spiering-rijksmuseum-913cc495565c4dc2aeec0bbc6a64ada9"
+  },
+  {
+   "patsas": "rijks-ccby-maria-lapsi-alabasteri",
+   "teos": "Mary with Christ Child 1424 Île-de-France",
+   "tekija": "Kees Veling",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Kees Veling, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/mary-with-christ-child-1424-ile-de-france-3d687c12542f48d0b3ac3fac839005b1"
+  },
+  {
+   "patsas": "rijks-ccby-houdon-suffren",
+   "teos": "Pierre André de Suffren - Rijksmuseum",
+   "tekija": "Moshe Caine",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Moshe Caine, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/pierre-andre-de-suffren-rijksmuseum-acbc73ef3bd44f9c81140e0492d677db"
+  },
+  {
+   "patsas": "rijks-ccby-falconet-cupido",
+   "teos": "Seated Cupid - Rijksmuseum",
+   "tekija": "Moshe Caine",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Moshe Caine, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/seated-cupid-rijksmuseum-921f91e7667b44759c5a92d27622c904"
+  },
+  {
+   "patsas": "rijks-ccby-keulakuva-prins-van-oranje",
+   "teos": "Figurehead from the frigate Prins van Oranje",
+   "tekija": "Thomas Flynn",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Thomas Flynn, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/figurehead-from-the-frigate-prins-van-oranje-ce3c7efafe6841f9ab6a550e4aab4acd"
+  },
+  {
+   "patsas": "rijks-ccby-keyser-oranian-vilhelm",
+   "teos": "William of Orange, lying in state - Rijksmuseum",
+   "tekija": "Zoilo",
+   "lisenssi": "CC BY 4.0",
+   "kohde": "Rijksmuseum",
+   "nimea": "Skannaus: Zoilo, CC BY 4.0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/william-of-orange-lying-in-state-rijksmuseum-7345dc5b428849a28fc5695bad86a290"
+  },
+  {
+   "patsas": "rmo-beeld-van-maya-en-merit",
+   "teos": "Beeld van Maya en Merit",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeld-van-maya-en-merit-f2d7a014141841d99f16ccb4cc404326"
+  },
+  {
+   "patsas": "rmo-altaar-uit-vechten",
+   "teos": "Altaar uit Vechten",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/altaar-uit-vechten-0f106d4226f0458bb29c8fc5d7ed5111"
+  },
+  {
+   "patsas": "rmo-beeld-van-een-heerser-of-prins",
+   "teos": "Beeld van een heerser of prins",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeld-van-een-heerser-of-prins-02ba2904e94748d1bdb40a89e88ce880"
+  },
+  {
+   "patsas": "rmo-germanicus",
+   "teos": "Germanicus",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/germanicus-6aea3a466ce444b4b4798c37d502648c"
+  },
+  {
+   "patsas": "rmo-beeld-van-raia-en-ptah",
+   "teos": "Beeld van Raia en Ptah",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeld-van-raia-en-ptah-6b9f8d953c0548c7a30043ee2087845d"
+  },
+  {
+   "patsas": "rmo-hecate-triformis",
+   "teos": "Hecate Triformis",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/hecate-triformis-f0f37da4c26344f382276498dfa878a7"
+  },
+  {
+   "patsas": "rmo-julius-caesar",
+   "teos": "Julius Caesar?",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/julius-caesar-bc68d05694af4688ab800461a3f6ef96"
+  },
+  {
+   "patsas": "rmo-pyramidion-van-ptahemwia",
+   "teos": "Pyramidion van Ptahemwia",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/pyramidion-van-ptahemwia-f92ca6a968634540aab7960012b6b059"
+  },
+  {
+   "patsas": "rmo-faustina",
+   "teos": "Faustina",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/faustina-8154fd1ab9d14ebbbc64af23c2667103"
+  },
+  {
+   "patsas": "rmo-beeld-van-tjairy-en-hathor",
+   "teos": "Beeld van Tjairy en Hathor",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeld-van-tjairy-en-hathor-734bbbc58413454887e10ecb4f56878a"
+  },
+  {
+   "patsas": "rmo-keizer-licinius",
+   "teos": "Keizer Licinius",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/keizer-licinius-0d2a0430f2384249ab57f3196f8c34fb"
+  },
+  {
+   "patsas": "rmo-kouros-van-cyprus",
+   "teos": "Kouros van Cyprus",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/kouros-van-cyprus-87a3a9876b9a4579a0a121d2a11ab779"
+  },
+  {
+   "patsas": "rmo-stadhoudersvaas",
+   "teos": "Stadhoudersvaas",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/stadhoudersvaas-a08b7a4c44f14553bf8f5992873bc2ae"
+  },
+  {
+   "patsas": "rmo-grafsteen-uit-valens-uit-vechten",
+   "teos": "Grafsteen uit Valens uit Vechten",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/grafsteen-uit-valens-uit-vechten-387df22f048740c696ee1b9f227466f7"
+  },
+  {
+   "patsas": "rmo-grafsteen-van-gumattius-uit-dodewaard",
+   "teos": "Grafsteen van Gumattius uit Dodewaard",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/grafsteen-van-gumattius-uit-dodewaard-393410cdb6404797a2e9853ea85558bb"
+  },
+  {
+   "patsas": "rmo-asclepius-en-hygieia",
+   "teos": "Asclepius en Hygieia",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/asclepius-en-hygieia-a06c3fe4915641cb93a3b78e2122f0b4"
+  },
+  {
+   "patsas": "rmo-nehalennia-altaar-uit-domburg",
+   "teos": "Nehalennia altaar uit Domburg",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/nehalennia-altaar-uit-domburg-72054cae6aa447849168b309a69da570"
+  },
+  {
+   "patsas": "rmo-palmyreens-grafreli-f-van-een-man",
+   "teos": "Palmyreens grafreliëf van een man",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/palmyreens-grafrelief-van-een-man-3cbab6a0e6754c1e93c85eae04981489"
+  },
+  {
+   "patsas": "rmo-beeldje-van-de-oud-egyptische-godin-neit",
+   "teos": "Beeldje van de oud-Egyptische godin Neith",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeldje-van-de-oud-egyptische-godin-neith-3e6e4ea4f25b4df6bd90e99878398234"
+  },
+  {
+   "patsas": "rmo-beeldje-van-een-moedergodin-uit-valkenbu",
+   "teos": "Beeldje van een moedergodin uit Valkenburg",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/beeldje-van-een-moedergodin-uit-valkenburg-d7d745237dd7464cbf065216542018e4"
+  },
+  {
+   "patsas": "rmo-figurine-van-een-vrouw-met-kind",
+   "teos": "Figurine van een vrouw met kind",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/figurine-van-een-vrouw-met-kind-4c0c73b76d644ebb923e19480ca1e0c4"
+  },
+  {
+   "patsas": "rmo-mannetje-van-willemstad",
+   "teos": "Mannetje van Willemstad",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/mannetje-van-willemstad-5241eb438d0f4dd08667aeb2230a2409"
+  },
+  {
+   "patsas": "rmo-romeins-houten-speelgoedpaardje-uit-valk",
+   "teos": "Romeins houten speelgoedpaardje uit Valkenburg",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/romeins-houten-speelgoedpaardje-uit-valkenburg-052370a42949479183c452a67297931e"
+  },
+  {
+   "patsas": "rmo-gemma-constantiniana",
+   "teos": "Gemma Constantiniana",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/gemma-constantiniana-a4a7fc990ca5430bad25d17f8ccab232"
+  },
+  {
+   "patsas": "rmo-offertafel-van-defdji",
+   "teos": "Offertafel van Defdji",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/offertafel-van-defdji-580f4c7aebaf4de885b4d184cdcb87b2"
+  },
+  {
+   "patsas": "rmo-eros-pelike",
+   "teos": "Eros pelike",
+   "tekija": "The National Museum of Antiquities",
+   "lisenssi": "CC0",
+   "kohde": "Rijksmuseum van Oudheden, Leiden",
+   "nimea": "Skannaus: The National Museum of Antiquities, CC0, Sketchfab",
+   "lahde": "https://sketchfab.com/3d-models/eros-pelike-3b81be98b310473f952931088a7b1930"
+  }
+ ]
+}

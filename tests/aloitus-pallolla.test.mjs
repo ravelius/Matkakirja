@@ -29,7 +29,7 @@ const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
 const {
   KOHDEMERKIN_HALO_LAAJIN, KOHDEMERKIN_HUOMIO_PX, KOHDEMERKIN_PX,
 } = await import('../js/pallolauta/merkit.js');
-const { ETUSIVUN_KOHTEET, ETUSIVUN_NAKYVAT } = await import('../js/ui-apurit.js');
+const { ETUSIVUN_KOHTEET, ETUSIVUN_KOHTEET_TAUOLLA, ETUSIVUN_NAKYVAT } = await import('../js/ui-apurit.js');
 const {
   LIVIAN_AVAUKSEN_VIIVE_MS, LIVIAN_AVAUS, LIVIAN_YHDEN_REITIN_KUPLA, livianAvausSarja,
 } = await import('../js/livia.js');
@@ -278,17 +278,21 @@ test('terävä tila on pakotettuna valinnan ajan ja vapautuu purussa', () => {
  * kaikki kohdekaupungit takaisin mitä aiemmin oli käytössä"* ja *"Ja
  * valittavien kohdekaupunkien huomioympyrää voisi hieman tehostaa."*
  */
-test('lähtövalinnassa on neljätoista kohdetta ja kaikki näkyvät', () => {
-  assert.equal(ETUSIVUN_KOHTEET.size, 14);
-  // Omistajan päätös 7.9.2026 illalla: Los Angeles vaihtui San
-  // Franciscoksi ja Istanbul lisättiin.
+test('lähtövalinnassa on kolme Euroopan kohdetta, muut tauolla palautettavina', () => {
+  /*
+   * OMISTAJA 10.10.2026 (PT:n kautta): alkulennossa vain Eurooppa;
+   * 11.10.2026 kohteet Ateena, Pariisi ja Tukholma. Istanbul, Moskova
+   * ja muiden maanosien yksitoista ovat ETUSIVUN_KOHTEET_TAUOLLA-joukossa, joten
+   * palautus on siirto takaisin, ja Los Angeles (7.9.2026) pysyy poissa.
+   */
+  assert.deepEqual([...ETUSIVUN_KOHTEET].sort(), ['ateena', 'pariisi', 'tukholma']);
+  assert.equal(ETUSIVUN_KOHTEET_TAUOLLA.size, 13);
+  for (const id of ETUSIVUN_KOHTEET_TAUOLLA) {
+    assert.ok(!ETUSIVUN_KOHTEET.has(id) && !ETUSIVUN_NAKYVAT.has(id), `${id} on tauolla eikä näy`);
+  }
   assert.ok(!ETUSIVUN_KOHTEET.has('losangeles'), 'Los Angeles ei ole enää kohde');
   assert.ok(!ETUSIVUN_NAKYVAT.has('losangeles'), 'Los Angeles ei näy lähtövalinnassa');
-  for (const id of ['ateena', 'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
-    'moskova', 'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger', 'istanbul']) {
-    assert.ok(ETUSIVUN_KOHTEET.has(id), `${id} puuttuu lähtökohteista`);
-    assert.ok(ETUSIVUN_NAKYVAT.has(id), `${id} ei näy aloituskartalla`);
-  }
+  for (const id of ETUSIVUN_KOHTEET) assert.ok(ETUSIVUN_NAKYVAT.has(id), `${id} ei näy aloituskartalla`);
   assert.ok(ETUSIVUN_NAKYVAT.has('lontoo'), 'Lontoo on lähtöpiste');
   assert.equal(ETUSIVUN_NAKYVAT.size, ETUSIVUN_KOHTEET.size + 1);
   // Jokainen kohde on olemassa sekä aloitusnäytön että pallon laudalla.
@@ -352,7 +356,7 @@ test('Livian "vasta yhden reitin" -kupla väistyy usealla kohteella', () => {
   assert.deepEqual(livianAvausSarja(14).map((r) => r.indeksi), [0, 1, 2, 4]);
   // Teksti kulkee mukana, jotta vanhentunut äänite jää hiljaiseksi
   // (js/liviapuhe.js livianAaniAjanTasalla).
-  assert.match(livia, /soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\);/);
+  assert.match(livia, /soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\)/);
 });
 
 /* ================================================================== *
@@ -498,4 +502,20 @@ test('häivytetty avausteksti on poissa myös sormelta', () => {
   const css = lue('../css/styles.css');
   assert.match(css, /\.intro\.intro-fade,\n\.intro\.intro-fade \* \{ pointer-events: none; \}/,
     'näkymätön Valitse aloituskaupunki -nappi veisi pallon pyörityksen');
+});
+
+/*
+ * Karttasepän havainto 11.10.2026: lähtövalinnassa Lontoon pelinappula
+ * osui Pariisin kohdenimen päälle (mitattu 1400 × 900 ja 390 × 844).
+ * Nappula on kiinteä este, joten kohdenimi vaihtaa puolta halon alle.
+ */
+test('kohdenimi väistää pelinappulaa halon alle (Lontoo ja Pariisi)', () => {
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /nimi\.dataset\.ala = String\(nimenSade \+ KOHDEMERKIN_NIMI_RAKO_PX \+ KOHDEMERKIN_NIMI_PX\);/);
+  assert.match(merkit, /const y = alle \? Number\(t\.dataset\.ala\) : yla;/);
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Sekä ladonnassa että merkkien vaihtuessa (GL-nappula valmistuu myöhemmin).
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu[^\n]*\n\s*vaistoSeuraavaan\(\);/);
+  assert.match(lauta, /const pelinLaatikot = [^\n]*\n[^\n]*\n\s*vaistaNappulaa\(\);/);
+  assert.match(lue('../js/pallolauta/glnimiot-sovitin.js'), /nappulanLaatikko\(\) \{/);
 });

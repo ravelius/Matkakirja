@@ -1009,7 +1009,7 @@ export const NORTHAMERICA_VALOKUVAT = {
         lahde: 'Bohemian Baltimore, Commons (CC BY-SA 4.0)',
         lyhyt: 'St-Viateur Bagel Mile Endin kaupunginosassa Montrealissa vuonna 2013.',
         selite: 'St-Viateur Bagel Mile Endin kaupunginosassa. Ikkunassa lukee '
-          + 'vuosiluku 1957 ja ovessa "ouvert 24 h": leipomo paistaa '
+          + 'vuosiluku 1957 ja ovessa ”ouvert 24 h”: leipomo paistaa '
           + 'puu-uunissa vuorokauden ympäri, ja Montrealin bageli on ohuempi '
           + 'ja makeampi kuin newyorkilainen.',
       },
@@ -1029,8 +1029,8 @@ export const NORTHAMERICA_VALOKUVAT = {
     lahde: 'Rise Studio, Rapid City / Library of Congress (PD)',
     lyhyt: 'Työmiehet kiipeävät Mount Rushmoren keskeneräisillä kasvoilla noin 1932.',
     selite: 'Työmiehet kiipeävät tikkaita George Washingtonin kasvoilla, kun '
-      + 'veistos on vielä kesken. Kuvaan on kirjoitettu käsin "Workmen on '
-      + 'face of Geo. Washington"; kalliota muotoiltiin dynamiitilla ja '
+      + 'veistos on vielä kesken. Kuvaan on kirjoitettu käsin ”Workmen on '
+      + 'face of Geo. Washington”; kalliota muotoiltiin dynamiitilla ja '
       + 'poravasaroilla, ja miehet laskeutuivat työhön vaijerien varassa.',
     lisat: [
       {
@@ -1041,15 +1041,6 @@ export const NORTHAMERICA_VALOKUVAT = {
         selite: 'Intiaanitanssijoita esiintymässä Mount Rushmoren alueella. Black '
           + 'Hills on lakotoille pyhää maata, ja veistos on hakattu vuoreen, '
           + 'josta heidät aikanaan siirrettiin pois.',
-      },
-      {
-        tiedosto: 'Crazy Horse Memorial from Visitors Center.jpg',
-        vuosi: '2018',
-        lahde: 'Jeffreylcooke, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Crazy Horse Memorial samassa vuoristossa vuonna 2018.',
-        selite: 'Crazy Horse Memorial samassa vuoristossa. Lakotapäällikköä '
-          + 'esittävää veistosta on louhittu vuodesta 1948, se on yhä kesken '
-          + 'ja rahoitetaan ilman valtion tukea.',
       },
       {
         tiedosto: 'Mount Rushmore and the Avenue of Flags SD.jpg',

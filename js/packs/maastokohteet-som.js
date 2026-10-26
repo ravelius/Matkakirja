@@ -379,7 +379,7 @@ export const MAASTOKOHTEET_SOM = [
       + 'perustivat oman Tunnin sulttaanikuntansa, ja Barawasta tuli sen pääkaupunki. Kaupunki '
       + 'vaurastui ja siitä tuli yksi Afrikan sarven merkittävistä islamilaisen oppineisuuden '
       + 'keskuksista: barawanilaiset ulamat vetivät oppilaita koko alueelta, ja 1200-luvun '
-      + 'oppinut Ibn Sa\'id kutsui kaupunkia "islamilaiseksi saareksi Somalian rannikolla". '
+      + 'oppinut Ibn Sa\'id kutsui kaupunkia ”islamilaiseksi saareksi Somalian rannikolla”. '
       + 'Al-Idrisi kuvasi, miten talot rakennettiin korallista, ja kertoi kaupungin olevan '
       + 'täynnä sekä kotimaista että ulkomaista tavaraa. Barawa tunnettiin käsityöläisistään ja '
       + 'heidän kutomastaan alindi- eli kioy-kankaasta sekä barawan-kufi-lakista.',

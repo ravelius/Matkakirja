@@ -1110,6 +1110,7 @@ export const HAHMOTELMA_MLT = [
   },
   {
     id: 'hahmotelma-victoria-cittadella',
+    nimio: 'Cittadella',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-victoria-cittadella-7a7d152d.jpg',
       lyhyt: 'Cittadellan bastionimuuri Victorian yllä, taustalla kaupungin kattoja ja Pyhän Yrjön basilikan kupoli.',
@@ -1190,7 +1191,7 @@ export const HAHMOTELMA_MLT = [
         selite: 'Kapea laakso avautuu vähitellen kohti avomerta, ja rannassa uivat pienet ihmishahmot antavat mittakaavan jyrkille kallioseinille.',
         lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Diego Delso',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_Il-%C4%9Easri,_isla_de_Gozo,_Malta,_2021-08-23,_DD_07.jpg',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_Il-G%C4%A7asri,_isla_de_Gozo,_Malta,_2021-08-23,_DD_07.jpg',
         lisenssi: 'CC BY-SA 4.0',
         lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
       },
@@ -1258,7 +1259,7 @@ export const HAHMOTELMA_MLT = [
     teksti: 'Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen '
       + 'mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. '
       + 'Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin '
-      + 'virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä '
+      + 'virheellisesti ”maltalaiseksi sieneksi” ja jonka uskottiin ajan lääketieteessä '
       + 'parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että '
       + 'antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion '
       + 'kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin '
@@ -1364,7 +1365,7 @@ export const HAHMOTELMA_MLT = [
       maailmankartta: { x: 6309.4, y: 1955.2 },
       europe: { x: 485.4, y: 945.2 },
     },
-    teksti: 'Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon '
+    teksti: 'Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli ”punainen hiekka”, on lahti Gozon '
       + 'koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä '
       + 'Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä '
       + 'poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä '
@@ -1473,9 +1474,9 @@ export const HAHMOTELMA_MLT = [
       europe: { x: 485.7, y: 945.8 },
     },
     teksti: 'Nadur on Gozon toiseksi suurin kaupunki, ja se levittäytyy korkealle harjanteelle '
-      + 'Victorian itäpuolelle; sitä kutsutaan saaren "toiseksi kaupungiksi". Nimi juontuu '
+      + 'Victorian itäpuolelle; sitä kutsutaan saaren ”toiseksi kaupungiksi”. Nimi juontuu '
       + 'arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa, ja sama ajatus näkyy '
-      + 'kaupungin tunnuslauseessa "Valpas" sekä vaakunassa, jossa aurinko nousee sinisestä '
+      + 'kaupungin tunnuslauseessa ”Valpas” sekä vaakunassa, jossa aurinko nousee sinisestä '
       + 'merestä. Kaupunki tunnetaan leipomoistaan, ja sen lähellä ovat San Blasin ja Daħlet '
       + 'Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. '
       + 'Varhaisimmista asukkaista ei ole säilynyt asiakirjoja, mutta harjanteella on ollut '

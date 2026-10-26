@@ -1,0 +1,259 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävien mallierä (PT:n hyväksymä 12.10.): Praha, Rooma, Helsinki, Tallinna, Bern. Faktat varmistettu kahdesta lähteestä ja tarkistettu itsenäisellä Sonnet-kierroksella (liite aarretehtavat-eurooppa-malli-faktat-20261012.md). Uudet lajit (valinta, kartta, etsi_kartalta) odottavat Pelikoodarin moottoria. Maan aarrevihjeet: maa_vihjeet (3 tehtävää/maa → kaupunki merkitään kartalle isoisän merkinnällä). PT 12.10.: CHE-vihjekaupunki on Alpit (pelin alue), Grindelwaldia ei nimetä (Tell on Urin taru; rivit sanovat taru). Kenttä \"muistomerkki\": true merkitsee tehtävän kohteen, joka voi vaatia alueellisen piilotuksen (Italia/Kreikka); Rooman a-tehtävän Pantheon on merkitty.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "praha",
+      "nimi": "Praha",
+      "maa": "CZE",
+      "hahmo": "Lyhdynsytyttäjä Tomáš (Kultaisen kujan talo)",
+      "saapumispiste": {
+        "nimi": "Kultainen kuja, Prahan linna",
+        "lat": 50.0921,
+        "lon": 14.4043
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Kahdeksan kynttilää on vielä sytyttämättä. Katso sillä aikaa lounaaseen kukkulalle: siellä kohoaa teräsrakenteinen torni, jonka esikuva on Pariisissa.",
+        "kohde": {
+          "nimi": "Petřínin näkötorni",
+          "lat": 50.0835,
+          "lon": 14.3951,
+          "etaisyys_saapumispisteesta_m": 1160
+        },
+        "vihje_vaarin": "Ei se. Etsi puiden peittämä kukkula linnan lounaispuolelta: tornin teräsrunko on pienoismalli, ja esikuva on viisi kertaa korkeampi.",
+        "tiesitko": "Petřínin torni valmistui 1891. Tšekkiläiset turistit näkivät Eiffel-tornin Pariisissa ja halusivat Prahaan oman. Siinä on 299 askelmaa.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "kysymys": "Linnan alla virtaa Vltava. Kuinka monta metriä pitkä on Kaarlensilta päästä päähän? Mittaa kartalta.",
+        "liukusaadin": {
+          "min": 100,
+          "max": 1000,
+          "askel": 10
+        },
+        "oikea": 520,
+        "hyvaksyttava_vali": [
+          480,
+          550
+        ],
+        "vihje_vaarin": "Kävelen sillan päästä päähän reilussa kuudessa minuutissa, ja minuutissa taittuu noin 80 metriä. Laske siitä.",
+        "tiesitko": "Kaarlensilta on noin 516 metriä pitkä, ja työ alkoi 1357. Tarun mukaan ensimmäinen kivi laskettiin 9.7. klo 5.31: luvut 1357-9-7-5-31 ovat palindromi.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "rooma",
+      "nimi": "Rooma",
+      "maa": "ITA",
+      "hahmo": "Pasunisti Nico (soittaa iltakeikkoja kaupungin juhlissa)",
+      "saapumispiste": {
+        "nimi": "Campo de' Fiori, torin laita",
+        "lat": 41.8956,
+        "lon": 12.4722
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Soitan iltaisin täällä, päivällä kuljen yhden kupolin alle: sen katossa on pyöreä aukko taivaaseen ja sade tulee sisään. Etsi se rakennus.",
+        "kohde": {
+          "nimi": "Pantheon",
+          "lat": 41.8986,
+          "lon": 12.4769,
+          "etaisyys_saapumispisteesta_m": 512
+        },
+        "vihje_vaarin": "Ei se. Kävele koilliseen: pylväikön takana odottaa pyöreä rakennus, jonka katossa on aukko taivaaseen.",
+        "tiesitko": "Pantheonin kupoli on noin 43 metriä leveä ja yhä maailman suurin raudoittamaton betonikupoli. Rakennus valmistui Hadrianuksen aikana, 120-luvulla.",
+        "muistomerkki": true
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "kysymys": "Missä järjestyksessä nämä Rooman tapahtumat sattuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Colosseum valmistuu keisari Tituksen aikana",
+            "vuosi": "n. 80 jaa."
+          },
+          {
+            "teksti": "Paavi vihkii uuden Pietarinkirkon käyttöön",
+            "vuosi": "1626"
+          },
+          {
+            "teksti": "Rooma tulee yhtenäisen Italian pääkaupungiksi",
+            "vuosi": "1871"
+          }
+        ],
+        "vihje_vaarin": "Muusikon korvalla: Colosseum on kaikkein vanhin, ja pääkaupunkiuutinen tuli vasta, kun Pietarinkirkko oli seissyt yli kaksisataa vuotta.",
+        "tiesitko": "Italian joukot astuivat Roomaan syyskuussa 1870, ja pääkaupungiksi Rooma tuli virallisesti 3. helmikuuta 1871.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "helsinki",
+      "nimi": "Helsinki",
+      "maa": "FIN",
+      "hahmo": "Luotsi Aino, laivaluotsi",
+      "saapumispiste": {
+        "nimi": "Kauppatorin laituri",
+        "lat": 60.1671,
+        "lon": 24.9535
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Laivasta katsoen kalliolla hohtaa punatiilinen kirkko kultaisine sipulikupoleineen. Etsi se kaupungista.",
+        "kohde": {
+          "nimi": "Uspenskin katedraali",
+          "lat": 60.1683,
+          "lon": 24.96,
+          "etaisyys_saapumispisteesta_m": 380
+        },
+        "vihje_vaarin": "Ei se. Katso itään, Katajanokan kalliolle: siellä seisoo punatiilinen ortodoksinen kirkko, jonka kupolit hohtavat kultaa.",
+        "tiesitko": "Kirkko vihittiin käyttöön 25. lokakuuta 1868. Sen rakentamiseen käytettiin Ahvenanmaan Bomarsundin linnoituksen tiiliä.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "kysymys": "Laivat tarkistivat kellonsa tähtitornin ajasta. Napauta vuoden 1860 kartalta kohtaa, jossa tähtitorni on.",
+        "kuva": {
+          "commons_tiedosto": "Karta öfver Helsingfors 1860.jpeg",
+          "tekija": "tuntematon (Kansalliskirjasto digitoinut)",
+          "lisenssi": "CC0",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Karta_%C3%B6fver_Helsingfors_1860.jpeg",
+          "leveys_px": 1920,
+          "korkeus_px": 1840
+        },
+        "oikea_piste_px": [
+          1187,
+          1211
+        ],
+        "toleranssi_px": 70,
+        "vihje_vaarin": "Ei tuo. Tähtitorni on mäellä kaupungin eteläosassa, Eteläsataman länsipuolella; kartassa sen vieressä lukee Observatorium.",
+        "tiesitko": "Tähtitorni valmistui 1834 C. L. Engelin piirustuksin, ja se seisoo yhä Tähtitorninmäellä. Nykyään siellä on tähtitieteen kävijäkeskus.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "tallinna",
+      "nimi": "Tallinna",
+      "maa": "EST",
+      "hahmo": "Opas Leena (opas)",
+      "saapumispiste": {
+        "nimi": "Raatihuoneentori",
+        "lat": 59.4369,
+        "lon": 24.7453
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Ryhmäni kysyy aina, mikä torni nousee pohjoisessa. Salama on iskenyt sen kärkeen monta kertaa. Etsi se kirkko kartalta.",
+        "kohde": {
+          "nimi": "Olevisten kirkko",
+          "lat": 59.4413,
+          "lon": 24.7479,
+          "etaisyys_saapumispisteesta_m": 511
+        },
+        "vihje_vaarin": "Ei se. Kävele torilta pohjoiseen ja katso ylös: etsimäsi kirkon torni nousee yli sadan metrin korkeuteen.",
+        "tiesitko": "Olevisten kirkon torni on noin 124 metriä korkea. Salama on iskenyt siihen noin kymmenen kertaa, viimeksi vuonna 1931.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "kysymys": "Kuuntele isoisän merkintä. Mitä hän kysyi Revalin torin apteekissa sydänsuruihin auttavan?",
+        "vaihtoehdot": [
+          "Hunajaa",
+          "Marsipaania",
+          "Piparkakkua",
+          "Lakritsia"
+        ],
+        "oikea_indeksi": 1,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-tallinna.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-tallinna.js, kenttä matkakirja.teksti (sama teksti: assets/aikaleimat/puhe-fokus-matkakirja-tallinna.aikaleimat.json, kenttä teksti)"
+        },
+        "vihje_vaarin": "Kuuntele uudestaan heti alussa: se on makea, manteleista tehty herkku, josta apteekkari leikkasi isoisälle suuremman palan.",
+        "tiesitko": "Raatihuoneen vastapäinen Raeapteek on toiminut samassa paikassa 1400-luvulta ja myy yhä marsipaania.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "bern",
+      "nimi": "Bern",
+      "maa": "CHE",
+      "hahmo": "Leipuri Ruth Zbinden",
+      "saapumispiste": {
+        "nimi": "Kramgasse, Ruthin leipomon kohdalla (holvikäytävän alla)",
+        "lat": 46.94797,
+        "lon": 7.45028
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "vihjelause": "Kaupunkimme nimen taru liittyy karhuun. Etsi kartalta paikka Aare-joen rinteessä, jossa karhuja pidetään yhä.",
+        "kohde": {
+          "nimi": "Bärengraben ja BärenPark",
+          "lat": 46.94802,
+          "lon": 7.45963,
+          "etaisyys_saapumispisteesta_m": 710
+        },
+        "vihje_vaarin": "Ei se. Kävele kaupungin itäreunalle Nydeggin sillan tuntumaan: karhut asuvat joen rinteessä sillan vieressä.",
+        "tiesitko": "Tarun mukaan perustaja nimesi kaupungin metsästyksensä ensimmäisen saaliin, karhun, mukaan. Nimen alkuperää selitetään nykyään myös kelttiläisellä sanalla.",
+        "muistomerkki": false
+      }
+    }
+  ],
+  "maa_vihjeet": [
+    {
+      "iso3": "CZE",
+      "kaupunki": "praha",
+      "vihjeet": [
+        "Eräs keisari kokosi linnaansa kummallisuuksien kabinetin. Vuonna 1648 vieras sotajoukko lastasi sen proomuihin ja vei sen pohjoiseen.",
+        "Rudolf II:n Prahan linnassa se oli. Osa on yhä Ruotsissa, suuri osa kadonnut, ja kenties jokin helmi on Prahassa vielä piilossa."
+      ]
+    },
+    {
+      "iso3": "ITA",
+      "kaupunki": "sisilia",
+      "vihjeet": [
+        "Saari on kuin kolmio meren keskellä, ja sen idässä savuaa vuori, jonka tuhkaa tuuli kantaa kauas kylistä.",
+        "Pienen rukoushuoneen alttarilla riippui Caravaggion seimikuva, maalattu 1600-luvun alussa. Sen värejä muistetaan vielä kauan.",
+        "Mene Sisilian Palermoon, Pyhän Laurentiuksen rukoushuoneeseen, ja kysy kuvan perään. Siellä sen tarina on kirjoitettu."
+      ]
+    },
+    {
+      "iso3": "FIN",
+      "kaupunki": "lappi",
+      "vihjeet": [
+        "Muistiinpano: ulkomailla kullanhuuhdonnan oppineet miehet huuhtoivat vuonna 1869 pohjoisen joesta pari kiloa kiiltävää metallia, joka ei ruostu.",
+        "Vuonna 1870 kruunu rakensi sen joen rannalle aseman, jossa virkamiehet antavat kaivuuluvat ja valvovat kullankauppaa. Hiput kulkevat sen kautta.",
+        "Joki on Ivalojoki Lapissa, ja Kultalan asema seisoo sen rannalla. Pohjoista kohti, Lappiin."
+      ]
+    },
+    {
+      "iso3": "EST",
+      "kaupunki": "tallinna",
+      "vihjeet": [
+        "Kun sota kolkutti ovelle, viisas kätki hopeansa maahan ja toivoi palaavansa. Moni ei palannut, ja hopea odottaa yhä.",
+        "Reval kuului Hansaan, ja hopealla käytiin kauppaa aina Novgorodiin asti. Liivin sodan ajan kätköjä löytyy Viron pelloilta yhä."
+      ]
+    },
+    {
+      "iso3": "CHE",
+      "kaupunki": "alpit",
+      "vihjeet": [
+        "Yksikään aikalaisasiakirja ei tunne miestä, joka ampui omenan poikansa päästä. Aarre on taru, ei löytö; etsi sitä sieltä, missä vuoret kohoavat korkeimmiksi.",
+        "Taru sijoittaa varsijousimiehen Sveitsin vuoristoon. Eigerin huipulle nousivat ensimmäiset vasta 1858, ja siellä jäätiköt laskeutuvat laaksoihin.",
+        "Tellin jousesta ei tiedä kukaan, sillä Tell on taru. Jos aarretta etsii vuorilta, mene Alpeille."
+      ]
+    }
+  ]
+}

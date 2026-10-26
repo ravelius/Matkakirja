@@ -94,7 +94,7 @@ import { el, maare } from './mapart.js';
 import {
   NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KYLJET, NOSTOSYM_TYYPIT,
   nostosymAsetaPorras, nostosymNimioLaatikko, nostosymVirkistaRasterit,
-  piirraNostosymKartalle, piirraNostosymboli,
+  piirraNostosymKartalle, piirraNostosymboli
 } from './fokusnosto-symbolit.js';
 // Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
@@ -105,19 +105,18 @@ import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import {
   LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, asetaMaastonOmistajat,
-  karttanimetLatovat, normalisoiNimi,
+  karttanimetLatovat, normalisoiNimi
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
-  html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
-  arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
-  suurennoksenMitat, lehtipalstaKotelo,
+  html, linssiEstaa, nielaiseSulkevaNapautus, suurennoksenMitat
 } from './ui-apurit.js';
-import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
+import {
+  nostokuvaKortissa, nostokuvaTurvaAlue
+} from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
-import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
@@ -162,6 +161,12 @@ import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
 import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
 import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
+import { HAHMOTELMA_SRB } from './packs/hahmotelma-srb.js';
+import { HAHMOTELMA_ALB } from './packs/hahmotelma-alb.js';
+import { HAHMOTELMA_MKD } from './packs/hahmotelma-mkd.js';
+import { HAHMOTELMA_MNE } from './packs/hahmotelma-mne.js';
+import { HAHMOTELMA_MDA } from './packs/hahmotelma-mda.js';
+import { HAHMOTELMA_BLR } from './packs/hahmotelma-blr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -190,20 +195,22 @@ import { MAASTOKOHTEET } from './packs/maastokohteet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
-  nippuLaattaEsteet,
+  nippuLaattaEsteet
 } from './fokusniput.js';
 import { laatoissaOnNostoja, nostoOnPoltettu } from './laattapyramidi.js';
 import { elaintakyKarttarivit } from './elaintaky-rivit.js';
 import {
   NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
-  onKaupunkipiste,
+  onKaupunkipiste
 } from './nostoladonta.js';
-import { polloKysy } from './pollo.js';
+import { polloEhdota, polloKysy } from './pollo.js';
+import { luoPohjaKortti, luoPohjaNostokortti } from './pohjat/pohjat.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
-import { KUVASARJA_PYYHKAISY_PX, piirraKuvasarja } from './kuvasarja.js';
+import { KUVASARJA_PYYHKAISY_PX } from './kuvasarja.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
+import { haamuSulku } from './avausanimaatio.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -677,6 +684,20 @@ KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
  * haara karttaseppa-bodensee).
  */
 KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
+
+/*
+ * SRB/ALB/MKD/MNE/MDA/BLR ENSIMMÄISET KARTTANOSTOT (Fablen tilaus
+ * 28.9.2026): kullakin maalla ei ollut ennestään yhtään karttanostoa
+ * (VAIN EUROOPPA -karttatyö kesken), joten Matkakirjan ihme -kohde
+ * (js/packs/monumentit-eurooppa.js) on nyt maan ainoa nosto. Loput
+ * kohteet lisätään myöhemmissä erissä.
+ */
+KOHDE_MAAT.SRB = [...(KOHDE_MAAT.SRB ?? []), ...HAHMOTELMA_SRB];
+KOHDE_MAAT.ALB = [...(KOHDE_MAAT.ALB ?? []), ...HAHMOTELMA_ALB];
+KOHDE_MAAT.MKD = [...(KOHDE_MAAT.MKD ?? []), ...HAHMOTELMA_MKD];
+KOHDE_MAAT.MNE = [...(KOHDE_MAAT.MNE ?? []), ...HAHMOTELMA_MNE];
+KOHDE_MAAT.MDA = [...(KOHDE_MAAT.MDA ?? []), ...HAHMOTELMA_MDA];
+KOHDE_MAAT.BLR = [...(KOHDE_MAAT.BLR ?? []), ...HAHMOTELMA_BLR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -4693,6 +4714,8 @@ export function suljeFokuskohde(ui) {
   auki.merkki?.classList.remove('auki');
   // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
   auki.popup?.nostokuvaPurku?.();
+  // Sulkeutuu samaa reittiä merkkiin (haamu; kortti itse lähtee heti).
+  haamuSulku(auki.popup, auki.merkki ?? auki.ankkuri);
   auki.popup?.remove();
   if (auki.purku) auki.purku();
 }
@@ -4783,6 +4806,12 @@ function asetaKohteenPaikka(ui) {
    * pysähtyy tai ikkuna vaihtaa kokoa.
    */
   if (nostokuvaKortissa(auki.popup)) return;
+  /*
+   * KUVATON KORTTI KESKELLE (löydös 135): kaikki karttanostot aukeavat
+   * samaan kokoon ja paikkaan kuin kuva edellä -kortti. Merkin viereen
+   * asemointi alla jää vain korteille, jotka eivät ole vakiokortteja.
+   */
+  if (auki.popup.nostokuvaVakioAsemoi) { auki.popup.nostokuvaVakioAsemoi(); return; }
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
@@ -4926,12 +4955,10 @@ function kysyKohteesta(ui, kysymys) {
  *     Useimmilla kadonneilla se on kortin AINOA kuva — kohteesta ei ole
  *     valokuvaa, koska kohdetta ei ole.
  *   • `kadonnut: false` — kohde on yhä pystyssä. Kartalla on kohteen
- *     tavallinen merkki, ja "Koe ihme" -nappi tulee kortissa
- *     ENSIMMÄISEN KUVAN ALLE (omistajan tilaus 27.8.2026 ilta, Akropolis
- *     iPhonella): pelaaja näkee ensin sen, mitä paikalla NYT on, ja
- *     nappi seisoo juuri siinä kohdassa, jossa vanha rekonstruktiokuva
- *     ennen oli. Ihmekuva ei ole kuvalistassa: kaksi rinnakkaista
- *     näkymää samasta paikasta hukuttaisi yllätyksen.
+ *     tavallinen merkki. Ihmekuva on 27.9.2026 alkaen (omistaja klo
+ *     23.4x, Olympia-kortti: "Koe ihme" -nappi pois) kortin ENSIMMÄINEN
+ *     ja iso kuva kuten kadonneilla, ja valokuva siitä, mitä paikalla NYT
+ *     on, kelluu pienenä tekstin kyljessä (kohteenNykykuva).
  *
  * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
  * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DIAGONAALINEN
@@ -4952,9 +4979,8 @@ function kysyKohteesta(ui, kysymys) {
  * KOLMAS IKKUNA 27.8.2026 ILTA (omistaja, kaappaus nähtävyysikkunasta:
  * *"täällä pitäisi olla myöskin se ihme nähtävillä"*). Kaupunkikartan
  * nähtävyysjuttu (js/nahtavyydet.js) näyttää samat kaksi esitystapaa
- * samoilla säännöillä, ja siksi nauha, nappi ja ihmekuvan haku ovat
- * tästä lohkosta VIENTILISTALLA (matkakirjanIhme, piirraIhmenauha,
- * piirraIhmenappi). Ihmettä ei kopioida nähtävyysaineistoon: se pysyy
+ * samoilla säännöillä, ja siksi nauha ja ihmekuvan haku ovat tästä
+ * lohkosta VIENTILISTALLA (matkakirjanIhme, piirraIhmenauha). Ihmettä ei kopioida nähtävyysaineistoon: se pysyy
  * fokuskohteen kenttänä, ja juttu hakee sen nimellä.
  * =================================================================== */
 
@@ -5009,6 +5035,12 @@ function kohteenIhmekuva(kohde) {
   return {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
+    /*
+     * LYHYT KUVATEKSTI kortin ja nähtävyysjutun kuvan alle (Natiivi-UI:n
+     * löydös 28.9.2026: web näytti koko pitkän selitteen, natiivi lyhyen).
+     * Pitkä selite jää suurennokseen (js/kuvatekstit.js).
+     */
+    ...(ihme.lyhyt ? { lyhyt: ihme.lyhyt } : {}),
     lahde: ihme.lahde ?? '',
     /*
      * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
@@ -5081,53 +5113,13 @@ export function piirraIhmenauha(isanta, teksti) {
   return nauha;
 }
 
-/**
- * "Koe ihme" -nappi tähtineen. Nappi kantaa saman tähden kuin
- * kadonneiden kohteiden karttamerkki: sama lupaus, sama merkki.
- *
- * AVAUS TULEE KUTSUJALTA (jako 27.8.2026 ilta, kun ihme vietiin myös
- * nähtävyysikkunaan): kartan tietoruudussa suurennos on kartan päällä
- * oleva `.fokuskohde-zoom`, mutta nähtävyysikkuna on modaali <dialog>
- * eli selaimen ylimmässä kerroksessa — bodyyn liitetty suurennos jäisi
- * sen TAAKSE (js/ui.js suurennosIsanta). Nappi on siis sama komponentti
- * molemmissa, mutta katselin on se, joka kussakin ikkunassa toimii.
- *
- * @param {Element} sisalto mihin nappi liitetään
- * @param {string} teksti napin teksti
- * @param {(nappi: Element) => void} avaa mitä napautus tekee; saa napin
- *   itsensä, jotta suurennos voi kasvaa juuri siitä kohdasta ruutua
- * @returns {Element} nappi, jotta kutsuja voi siirtää sen paikalleen
+/*
+ * "KOE IHME" -NAPPI POISTETTU (omistaja 27.9.2026 klo 23.4x, Olympia-kortti).
+ * Yhä olemassa olevan kohteen ihmekuva on nyt kortin ENSIMMÄINEN ja iso
+ * kuva kuten kadonneilla (kohteenKuvalista), ja valokuva siitä, mitä
+ * paikalla NYT on, kulkee pienenä tekstin kyljessä (kohteenNykykuva,
+ * piirraKohdeTeksti). Sama nähtävyysikkunassa (js/nahtavyydet.js).
  */
-export function piirraIhmenappi(sisalto, teksti, avaa) {
-  lataaKohdeTyyli();
-  const nappi = html('button', 'fokuskohde-ihmenappi');
-  nappi.type = 'button';
-  const tahti = el('svg', {
-    class: 'fokuskohde-ihmetahti',
-    viewBox: '-12 -12 24 24',
-    'aria-hidden': 'true',
-  }, nappi);
-  piirraNostosymboli(el('g', {}, tahti), 'ihme');
-  nappi.appendChild(document.createTextNode(teksti));
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    avaa(nappi);
-  });
-  sisalto.appendChild(nappi);
-  return nappi;
-}
-
-/**
- * Kortin oma "Koe ihme" -nappi, jos kohde on YHÄ OLEMASSA ja sillä on
- * ihmekuva. Paikan valitsee kutsuja (piirraKohdeKuvat: ensimmäisen
- * kuvan alle).
- */
-function piirraKortinIhmenappi(ui, sisalto, kohde) {
-  const kuva = kohteenIhmekuva(kohde);
-  if (!kuva || kohde.ihme.kadonnut) return;
-  piirraIhmenappi(sisalto, kohde.ihme.nappi ?? 'Koe ihme',
-    (nappi) => avaaKohdeSuurennos(ui, kuva, () => nappi));
-}
 
 /* ---------- IHME MYÖS NÄHTÄVYYSIKKUNAAN (omistaja 27.8.2026 ilta) ----
  *
@@ -5183,9 +5175,9 @@ function ihmehaku() {
  * Nimetyn paikan Matkakirjan ihme, tai null jos sillä ei ole sellaista.
  *
  * Palautettu olio on kuvalistan kanssa samaa muotoa (`osoite`, `selite`,
- * `lahde`, `nauha`) ja kertoo lisäksi, kumpi esitystapa kohteelle
- * kuuluu: `kadonnut` (kuva on kuvasarjan ensimmäinen) vai nappi
- * (`nappi`-teksti, kuva odottaa suurennoksessa).
+ * `lahde`, `nauha`) ja kertoo lisäksi `kadonnut`. Esitys on 27.9.2026
+ * alkaen sama molemmille: ihmekuva on kuvasarjan ensimmäinen; yhä
+ * olemassa olevan paikan valokuva kulkee pienenä tekstin kyljessä.
  */
 export function matkakirjanIhme(nimi) {
   const haettu = KOHDE_IHMEEN_NIMET[String(nimi ?? '').trim()] ?? nimi;
@@ -5195,7 +5187,6 @@ export function matkakirjanIhme(nimi) {
   return {
     ...kuva,
     kadonnut: Boolean(kohde.ihme.kadonnut),
-    nappi: kohde.ihme.nappi ?? 'Koe ihme',
   };
 }
 
@@ -5208,10 +5199,16 @@ export function matkakirjanIhme(nimi) {
  */
 export function kohteenKuvalista(kohde) {
   const nahty = new Set();
-  // Kadonneen ihmeen kuva on kortin ENSIMMÄINEN kuva (ks. lohkon alku):
-  // kortti avaa suoraan sen, mitä paikalla ei enää ole.
-  const ihme = kohde?.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
-  return [ihme, kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
+  /*
+   * IHMEKUVA ON KORTIN ENSIMMÄINEN KUVA — kadonneella ja 27.9.2026 alkaen
+   * myös yhä olemassa olevalla kohteella (omistaja klo 23.4x: "Koe ihme"
+   * -nappi pois, ihme ensimmäisenä ja isona). Olemassa olevan paikan
+   * valokuva (`kuva`) ei ole sarjassa: se kulkee pienenä tekstin
+   * kyljessä (kohteenNykykuva).
+   */
+  const ihme = kohteenIhmekuva(kohde);
+  const nykykuva = kohteenNykykuva(kohde);
+  return [ihme, nykykuva ? null : kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
     .filter((kuva) => {
       const tunnus = kuva?.tiedosto ?? kuva?.osoite;
       if (!tunnus || nahty.has(tunnus)) return false;
@@ -5221,65 +5218,14 @@ export function kohteenKuvalista(kohde) {
 }
 
 /**
- * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
- *   kuvakehys (js/nostokuva.js) kortin ENSIMMÄISEN kuvan tilalle:
- *   `undefined` piirtää kuvat kuten ennen, elementti sijoittaa juuri
- *   sen kehyksen (sama kuva, sama elementti, ei uutta latausta), ja
- *   `null` jättää pääkuvan pois (kuvaesittely peruttiin).
+ * Yhä olemassa olevan ihmekohteen valokuva siitä, mitä paikalla NYT on:
+ * pieni kuva tekstin kyljessä (float, napautus → suurennos). Muilla
+ * kohteilla null — niiden `kuva` on kuvasarjassa kuten ennen.
  */
-function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
-  const lista = kohteenKuvalista(kohde);
-  /*
-   * "KOE IHME" ENSIMMÄISEN KUVAN ALLE eikä otsikon alle (omistajan
-   * tilaus 27.8.2026 ilta). Nappi asuu siinä kohdassa, jossa poistettu
-   * loistoaikarekonstruktio ennen oli: pelaaja näkee ensin valokuvan
-   * kohteen NYKYISESTÄ kunnosta, ja nappi lupaa sen viereen sen, miltä
-   * paikka näyttäisi ehjänä. Kuvaton kohde saa napin silti — muuten
-   * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
-   */
-  /*
-   * USEAMPI KUVA ON KARUSELLI, EI PINO (omistaja 20.9.2026, kaappaus
-   * nosto-kuvat-paallekkain-v1980.webp: Avignonin paavinpalatsin `kuva`
-   * ja `kuvat` latoutuivat kahdeksi kuvaksi allekkain). Sama 1/2-
-   * karuselli kuin täky- ja skandaalinostolla (js/kuvasarja.js), kohteen
-   * omalla lataajalla ja suurennoksella; ihmenauha kulkee kuvan mukana
-   * (`koristele`). "Koe ihme" -nappi tulee sarjan alle, kuten se tuli
-   * ennen ensimmäisen kuvan alle. Peruttu kuvaesittely (valmisKuva
-   * null) vie vain pääkuvan: loput ladotaan sarjana kuten ennenkin.
-   */
-  const kuvat = valmisKuva === null ? lista.slice(1) : lista;
-  if (kuvat.length >= 2) {
-    piirraKuvasarja(ui, sisalto, kuvat, {
-      otsikko: kohde?.nimi ?? '',
-      valmisKehys: valmisKuva ?? undefined,
-      kehysLuokka: 'fokuskohde-kuva nostosarja-kuva',
-      nuoliLuokka: 'nostosarja-kuvanuoli',
-      laskuriLuokka: 'nostosarja-kuvalaskuri',
-      leveys: KOHDE_KUVAN_PX,
-      lataa: asetaKohdeKuva,
-      avaaSuurennos: (u, kuva, ankkuri, sarja) => avaaKohdeSuurennos(u, kuva, ankkuri, 'fokuskohdeZoom', sarja),
-      koristele: (nappi, kuva) => {
-        const nauha = piirraIhmenauha(nappi, kuva.nauha);
-        if (nauha) nauha.classList.add('kuvasarja-koriste');
-        nappi.closest('figure')?.classList.toggle('fokuskohde-kuva-nauhalla', Boolean(kuva.nauha));
-      },
-      kuvatekstiLuokka: 'fokuskohde-kuvaselite',
-      lahdeLuokka: 'fokuskohde-kuvalahde',
-      kuvatekstiKaare: 'fokuskohde-kuvateksti',
-      nappiLuokka: 'fokuskohde-kuvanappi',
-    });
-    piirraKortinIhmenappi(ui, sisalto, kohde);
-    return;
-  }
-  lista.forEach((kuva, i) => {
-    if (i === 0 && valmisKuva !== undefined) {
-      if (valmisKuva) sisalto.appendChild(valmisKuva);
-    } else {
-      piirraKohdeKuva(ui, sisalto, kuva);
-    }
-    if (i === 0) piirraKortinIhmenappi(ui, sisalto, kohde);
-  });
-  if (!lista.length) piirraKortinIhmenappi(ui, sisalto, kohde);
+export function kohteenNykykuva(kohde) {
+  if (!kohteenIhmekuva(kohde) || kohde.ihme.kadonnut) return null;
+  const kuva = kohde?.kuva;
+  return kuva?.tiedosto || kuva?.osoite ? kuva : null;
 }
 
 /*
@@ -5385,107 +5331,6 @@ function puraKorostus(merkinta) {
   return { perus, nakyva };
 }
 
-/** Napautettava sana leipätekstin sisällä. */
-function piirraKorostettuSana(ui, kohde, korostus, nakyvaTeksti) {
-  const nappi = html('button', 'fokuskohde-sana', nakyvaTeksti);
-  nappi.type = 'button';
-  // Pelkkätekstipinnat (title, aria-label): ei yliviivausta, vain "pululta".
-  nappi.title = `Kysy pululta lisää: ${korostus.perus}`;
-  nappi.setAttribute('aria-label', `Kysy pululta lisää: ${korostus.perus}`);
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    kysyKohteesta(ui, `Kerro lisää: ${korostus.perus} (kohteessa ${kohde.nimi})`);
-  });
-  return nappi;
-}
-
-/**
- * Yksi kappale, jossa jäljellä olevat korostukset ovat painikkeina.
- *
- * Teksti asetetaan aina TEKSTISOLMUINA eikä merkkauksena — sama sääntö
- * kuin pöllön vastauksissa (js/pollo.js): pelin oma aineisto on tekstiä,
- * eikä siitä tulkita hakasulkeita, kulmasulkeita tai mitään muutakaan.
- */
-function piirraKohdeKappale(ui, kohde, kappale, jaljella) {
-  const p = html('p', '');
-  let loppu = kappale;
-  for (;;) {
-    let osuma = null;
-    const matala = loppu.toLowerCase();
-    for (const korostus of jaljella) {
-      const kohta = matala.indexOf(korostus.nakyva.toLowerCase());
-      if (kohta < 0) continue;
-      if (!osuma || kohta < osuma.kohta) osuma = { kohta, korostus };
-    }
-    if (!osuma) break;
-    const pituus = osuma.korostus.nakyva.length;
-    if (osuma.kohta > 0) p.appendChild(document.createTextNode(loppu.slice(0, osuma.kohta)));
-    // Näkyvä teksti otetaan KAPPALEESTA eikä datasta: kirjoitusasu
-    // (iso alkukirjain, tarkkeet) on tekstin oma, ei merkinnän.
-    p.appendChild(piirraKorostettuSana(ui, kohde, osuma.korostus,
-      loppu.slice(osuma.kohta, osuma.kohta + pituus)));
-    loppu = loppu.slice(osuma.kohta + pituus);
-    jaljella.delete(osuma.korostus);
-  }
-  if (loppu) p.appendChild(document.createTextNode(loppu));
-  return p;
-}
-
-/** Kortin leipäteksti kappaleittain, korostukset painikkeina. */
-function piirraKohdeTeksti(ui, sisalto, kohde) {
-  const jaljella = new Set(
-    (Array.isArray(kohde.korostukset) ? kohde.korostukset : [])
-      .map(puraKorostus).filter(Boolean),
-  );
-  const teksti = html('div', 'fokuskohde-teksti');
-  for (const kappale of jaaKappaleiksi(kohde.teksti)) {
-    teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
-  }
-  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
-  sisalto.appendChild(lehtipalstaKotelo(teksti, kohde.teksti));
-}
-
-/** Kortin loppuun enintään kaksi valmista kysymystä pöllölle. */
-function piirraKohdeKysymykset(ui, sisalto, kohde) {
-  const kysymykset = (Array.isArray(kohde.kysymykset) ? kohde.kysymykset : [])
-    .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 2);
-  if (!kysymykset.length) return;
-  // Omistaja 25.8.2026: "Ennen kysymyksiä voisi olla lause: kysy
-  // pöllöltä" — kertoo, mihin pisteviivanapit johtavat.
-  // Otsikkorivi on nimilappu → yliviivausvitsi (omistaja 27.8.2026,
-  // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
-  // jossa koko nimi on yhden vedon alla. Ryhmän aria-label on pelkkää
-  // tekstiä eikä siinä ole yliviivausta.
-  /*
-   * ARVONIMI KOHTEEN MAASTA, EI PELAAJAN SIJAINNISTA (kierros 16b,
-   * 20.9.2026): Liettuan kortissa luki *"Pariisin salonkien pöllöltä"*.
-   * Kortti kertoo kohteestaan, joten arvonimikin kuuluu sen maahan.
-   * Tuntemattomalle maalle paikka jää tyhjäksi, jolloin arvonta osuu
-   * yleisiin arvonimiin kuten ennen.
-   */
-  const paikka = arvonimenPaikkaMaalle(kohteenIso(kohde), ui?.game ?? null);
-  sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
-    ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
-    // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
-    arvonimi: true,
-    maanosa: paikka.maanosa,
-    iso: paikka.iso,
-  }));
-  const rivi = html('div', 'fokuskohde-kysymykset');
-  rivi.setAttribute('role', 'group');
-  rivi.setAttribute('aria-label', `Kysy pululta: ${kohde.nimi}`);
-  for (const kysymys of kysymykset) {
-    const nappi = html('button', 'fokuskohde-kysymys', kysymys);
-    nappi.type = 'button';
-    nappi.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      kysyKohteesta(ui, kysymys);
-    });
-    rivi.appendChild(nappi);
-  }
-  sisalto.appendChild(rivi);
-}
-
 /* ============ VIRTUAALIKIERROS PELIN SISÄLLÄ (v1119, kohta 19) ======
  *
  * Omistajan tilaus: *"omistaja löysi acropolisvirtualtour.gr ja haluaa
@@ -5528,36 +5373,6 @@ const KIERROS_ODOTUS_MS = 10000;
 function kohteenKierrokset(kohde) {
   if (Array.isArray(kohde?.kierrokset)) return kohde.kierrokset.filter((k) => k?.url);
   return kohde?.kierros?.url ? [kohde.kierros] : [];
-}
-
-/**
- * "Avaa kierros" -nappi tietoruutuun, jos kohteella on kierros.
- *
- * Nappi eikä suora avaus: tietoruutu kertoo ensin mistä on kyse ja
- * mistä kierros on peräisin, ja vasta sitten pelaaja päättää avaako
- * hän koko ruudun kokoisen ikkunan.
- */
-function piirraKierrosnappi(ui, sisalto, kohde) {
-  for (const kierros of kohteenKierrokset(kohde)) {
-    if (kierros.avaustapa !== 'upotus') {
-      // Linkkikierros: suoraan laitteen selaimeen. Kuori (WKWebView) vie
-      // target="_blank"-linkin ulkoiseen selaimeen.
-      const linkki = html('a', 'fokuskohde-kierrosnappi', `${kierros.nappi ?? 'Avaa kierros'} ↗`);
-      linkki.href = kierros.url;
-      linkki.target = '_blank';
-      linkki.rel = 'noopener noreferrer';
-      linkki.addEventListener('click', (tapahtuma) => tapahtuma.stopPropagation());
-      sisalto.appendChild(linkki);
-      continue;
-    }
-    const nappi = html('button', 'fokuskohde-kierrosnappi', kierros.nappi ?? 'Avaa kierros');
-    nappi.type = 'button';
-    nappi.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      avaaKierros(ui, kohde, kierros);
-    });
-    sisalto.appendChild(nappi);
-  }
 }
 
 /** Sulkee auki olevan kierrosikkunan. */
@@ -6189,109 +6004,6 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom', 
   setTimeout(aloita, 400);
 }
 
-/**
- * Avaa yhden kohteen tietoruudun. Vain yksi kerrallaan: uusi napautus
- * sulkee edellisen, ja fokusvirran kortin tai kuplan avautuminen sulkee
- * tämän (ks. vahdiVirtaa).
- */
-/*
- * Kynnys, jonka jälkeen kortin päällä alkanut ele on raahaus eikä
- * napautus. Sama luokka kuin selainten omissa napautustoleransseissa —
- * tärisevä sormi ei saa vahingossa siirtää korttia.
- */
-const KOHDE_RAAHAUSKYNNYS = 8;
-
-/**
- * Yksi kortin päällä alkanut ele: napautus sulkee sormen noustessa,
- * kynnyksen ylittänyt liike raahaa korttia. Raahattu kortti muistetaan
- * (auki.raahattu), eikä automaattinen asemointi enää siirrä sitä —
- * pelaajan valitsema paikka voittaa (asetaKohteenPaikka).
- *
- * Kosketuksella pystyveto tekstin päällä jää selaimen vieritykseksi
- * (touch-action: pan-y → pointercancel), jolloin ele ei sulje eikä
- * siirrä — vieritys voittaa. Ylärivin ja otsikon päältä raahaus toimii
- * joka suuntaan (css/fokuskohteet.css touch-action: none).
- */
-function raahausTaiSulku(ui, popup, alku) {
-  /*
-   * EDELLINEN ELE PURETAAN AINA ENSIN (omistajan iPad-havainto 4.9.2026,
-   * Zadarin kortti: *"ei anna klikata kuvaa suuremmaksi vaan nosto
-   * itsessään vain hyppää eri kohtaan"*). Kuuntelijat olivat kortissa
-   * itsessään, ja jos sormen irrotus ei koskaan saapunut kortille
-   * (sormi liukui kortin ulkopuolelle ennen kaappausta, tai iOS:n
-   * WKWebView jätti pointercancelin lähettämättä), ele jäi elämään.
-   * Seuraava kosketus sai iOS:ssa saman pointerId:n, ja vanha
-   * siirtokäsittelijä laski sen matkan VANHASTA lähtöpisteestä: kortti
-   * hyppäsi ja kaappaus söi kuvanapin napautuksen. Nyt liike ja
-   * irrotus kuunnellaan ikkunasta, uusi ele purkaa edellisen, ja hiiren
-   * irronnut nappi purkaa eleen itse.
-   */
-  popup.puraEle?.();
-  const alkuX = alku.clientX;
-  const alkuY = alku.clientY;
-  const alkuHetki = alku.timeStamp || Date.now();
-  const lahtoVasen = popup.offsetLeft;
-  const lahtoYlin = popup.offsetTop;
-  let raahaa = false;
-  const siirry = (tapahtuma) => {
-    if (tapahtuma.pointerId !== alku.pointerId) return;
-    if (tapahtuma.pointerType === 'mouse' && !tapahtuma.buttons) { puru(); return; }
-    const dx = tapahtuma.clientX - alkuX;
-    const dy = tapahtuma.clientY - alkuY;
-    if (!raahaa) {
-      if (Math.hypot(dx, dy) < KOHDE_RAAHAUSKYNNYS) return;
-      raahaa = true;
-      popup.classList.add('raahauksessa');
-      try { popup.setPointerCapture(alku.pointerId); } catch { /* ei pakollinen */ }
-    }
-    const koti = popup.offsetParent;
-    const maxVasen = Math.max(0, (koti?.clientWidth ?? Infinity) - popup.offsetWidth);
-    const maxYlin = Math.max(0, (koti?.clientHeight ?? Infinity) - popup.offsetHeight);
-    popup.style.left = `${Math.round(Math.min(Math.max(0, lahtoVasen + dx), maxVasen))}px`;
-    popup.style.top = `${Math.round(Math.min(Math.max(0, lahtoYlin + dy), maxYlin))}px`;
-  };
-  const puru = () => {
-    globalThis.removeEventListener?.('pointermove', siirry);
-    globalThis.removeEventListener?.('pointerup', loppu);
-    globalThis.removeEventListener?.('pointercancel', peru);
-    popup.classList.remove('raahauksessa');
-    if (popup.puraEle === puru) popup.puraEle = null;
-  };
-  popup.puraEle = puru;
-  const loppu = (tapahtuma) => {
-    if (tapahtuma.pointerId !== alku.pointerId) return;
-    puru();
-    if (raahaa) {
-      if (ui.fokuskohdeAuki?.popup === popup) ui.fokuskohdeAuki.raahattu = true;
-      return;
-    }
-    /*
-     * VETO EI OLE NAPAUTUS — EIKÄ SITÄ SAA PÄÄTELLÄ PELKÄSTÄ
-     * `raahaa`-LIPUSTA (mitattu 12.9.2026, iPad 834 x 1194: veto
-     * kortin OTSIKOSTA ylöspäin sulki kortin). Kosketuksessa
-     * pointermove-tapahtumia ei aina tule lainkaan — selain vie eleen
-     * vieritykseen ja lähettää parhaimmillaan pointercancelin, joskus
-     * pelkän pointerupin muualta ruudulta — jolloin `raahaa` jäi
-     * epätodeksi ja irrotus luettiin napautukseksi. Matka ja kesto
-     * luetaan siksi IRROTUKSESTA: sama sääntö ja sama kynnys kuin
-     * kortin ulkopuolisella sulkevalla napautuksella (ui-apurit
-     * kuunteleSulkevaNapautus, RAAHAUKSEN_KYNNYS).
-     */
-    const matka = Math.hypot(tapahtuma.clientX - alkuX, tapahtuma.clientY - alkuY);
-    const kesto = (tapahtuma.timeStamp || Date.now()) - alkuHetki;
-    if (matka >= RAAHAUKSEN_KYNNYS || kesto > NAPAUTUKSEN_KESTO_MS) return;
-    sfx.play('paper');
-    suljeFokuskohde(ui);
-  };
-  const peru = (tapahtuma) => {
-    if (tapahtuma.pointerId !== alku.pointerId) return;
-    puru();
-  };
-  globalThis.addEventListener?.('pointermove', siirry);
-  globalThis.addEventListener?.('pointerup', loppu);
-  globalThis.addEventListener?.('pointercancel', peru);
-}
-
 /*
  * KORTIN YLÄRIVI (omistaja 26.8.2026 ilta: *"Voisiko symboli ja sen
  * luokka näkyä noston ylimmällä rivillä nykyisen ylimmän rivin
@@ -6412,41 +6124,6 @@ function piirraKohdeYlarivi(kohde) {
   return rivi;
 }
 
-/**
- * YHDEN KOHTEEN SISUS — kaikki se, mikä otsikon alle kuuluu.
- *
- * Erotettu omaksi funktiokseen 31.8.2026 yhdistetyn merkin lehteä
- * varten; yhdistely purettiin saman päivän illalla, mutta jako jäi,
- * koska se pitää kortin rungon (avaaFokuskohde) luettavana. Rivit ovat
- * täsmälleen entiset ja entisessä järjestyksessä.
- */
-function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
-  // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
-  // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
-  piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
-  piirraKohdeTeksti(ui, sailio, kohde);
-  kohdeVisaPiirtaja?.(ui, sailio, kohde);
-  piirraKohdeKysymykset(ui, sailio, kohde);
-  piirraKierrosnappi(ui, sailio, kohde);
-  piirraKohteenNosto(ui, sailio, kohde);
-  /*
-   * TEKSTIN LÄHDERIVI EI ENÄÄ PIIRRY KORTILLE (omistaja 20.9.2026,
-   * Laitetestaajan kierros 20: *"en-Wikipedia … tarkistettu 18.9.2026."*
-   * näkyi LISÄÄ-tilan lopussa; omistaja halusi kaiken alaosan
-   * metatekstin pois — sama päätös kuin täkynostolla, js/fokusnosto.js
-   * KORTIN LÄHDERIVI POIS). `kohde.lahde` säilyy datassa tarkistuksen
-   * kirjanpitona ja Lähteet-lehdellä; kuvan Commons-tekijärivi piirtyy
-   * kuvan omana rivinä kuten ennen.
-   */
-  /*
-   * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja
-   * virheilmoitus samasta kortista, jossa teksti on. Tunniste on
-   * kohteen oma id, joka on sama kaikissa kaupungeissa — kohde ei
-   * kuulu yhdelle kaupungille (ks. pakettien lohkon alku).
-   */
-  piirraReaktiot(sailio, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
-}
-
 /* ============ YHDISTETYN MERKIN LEHTI PURETTIIN (31.8.2026) =======
  *
  * Kortilla oli 31.8.2026 aamusta iltaan kaksi asua: yhden kohteen sisus
@@ -6460,6 +6137,88 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
  * juuri osioita varten: se on nyt kortin ainoa runko, ja jako pitää
  * `avaaFokuskohde`-funktion luettavana.
  */
+
+/*
+ * ── KOHDEKORTTI NOSTOKORTTI-POHJALLA (omistaja 1.10.2026: "kokeiluun", loki f344f1034) ─────────────────────────
+ *
+ * Omistajan hyväksymä mallikuva (proto-3d/lokit/pelikoodari-kohdekortti-malli-20261001): ei kuva edellä -vaihetta,
+ * kortti avautuu suoraan; kysymykset Kysy-napista Pulun chattiin ehdotuksina; visa omana KORTTINA Visa-napista;
+ * kierros ja kohteen lehti-juttu napeiksi; reaktiot lähderivin paikalle; ✕ pois (ohinapautus, veto alas, Esc);
+ * iPhonella alareunaan ≤ 45 %, iPadilla sivukortti. Omistaja 2.10.2026 ("Ok kaikkiin"): pysyvä, vanha kortti poistettu.
+ */
+/** Kohteen kuvat KorttiDataksi: ihme- tai pääkuva heroksi, nykykuva upotukseksi (kuvasäännöt), lähderivi mukaan. */
+export function kohteenPohjakuvat(kohde) {
+  const nykykuva = kohteenNykykuva(kohde);
+  const kuvat = [...kohteenKuvalista(kohde), ...(nykykuva ? [nykykuva] : [])];
+  return kuvat.map((kuva) => ({
+    url: kuva.osoite ? assetOsoite('ihmeet', kuva.osoite) : valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
+    kuvateksti: kuva.lyhyt ?? kuva.selite ?? '',
+    lahde: kuva.osoite ? '' : (kuva.lahde ?? ''),
+    alkuperainen: kuva,
+  }));
+}
+
+function avaaKohdePohjalla(ui, kohde, { ankkuri = null } = {}) {
+  sfx.play('popup');
+  suljeFokuskohde(ui);
+  const merkki = ui.fokuskohdeMerkit?.get(kohde.id)?.[0];
+  const kuvat = kohteenPohjakuvat(kohde);
+  // Visa piirtyy pohjan KORTTIIN; sen olemassaolo selviää piirtämällä irralliseen säiliöön.
+  const visaSailio = document.createElement('div');
+  kohdeVisaPiirtaja?.(ui, visaSailio, kohde);
+  const onVisa = visaSailio.childElementCount > 0;
+  const kysymykset = (Array.isArray(kohde.kysymykset) ? kohde.kysymykset : [])
+    .map((k) => String(k ?? '').trim()).filter(Boolean);
+  const kierros = kohteenKierrokset(kohde)[0] ?? null;
+  const nosto = kohdeNostoHaku?.(ui, kohde.id);
+  const napit = [
+    kysymykset.length ? { teksti: 'Kysy', tyyppi: 'toiminto', toiminto: 'kysy' } : null,
+    onVisa ? { teksti: 'Visa', tyyppi: 'toiminto', toiminto: 'visa' } : null,
+    kierros ? { teksti: 'Kierros', tyyppi: 'toiminto', toiminto: 'kierros' } : null,
+    nosto?.otsikko && typeof nosto.avaa === 'function' ? { teksti: 'Lehti', tyyppi: 'ensisijainen', toiminto: 'lehti' } : null,
+  ].filter(Boolean);
+  const toiminnot = {
+    kysy: () => { if (polloEhdota(kysymykset.slice(0, 2))) siirraKohdeMyohemmin(ui); },
+    visa: () => {
+      const visa = luoPohjaKortti({ yla: 'Visa', otsikko: kohde.nimi });
+      if (!visa) return;
+      kohdeVisaPiirtaja?.(ui, visa.kortti, kohde);
+      document.body.appendChild(visa.el);
+      visa.avaa();
+    },
+    kierros: () => {
+      if (kierros.avaustapa === 'upotus') avaaKierros(ui, kohde, kierros);
+      else globalThis.open?.(kierros.url, '_blank', 'noopener');
+    },
+    lehti: () => nosto.avaa(),
+  };
+  const pohja = luoPohjaNostokortti({
+    yla: kohteenYlarivinNimike(kohde) ?? KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu,
+    otsikko: kohde.nimi,
+    kuvat,
+    kappaleet: [{ teksti: kohde.teksti ?? '' }],
+    napit,
+  }, {
+    toiminnot,
+    kuvaAuki: (kuva, i, img) => avaaKohdeSuurennos(ui, kuvat[i]?.alkuperainen ?? kuva, () => img, 'fokuskohdeZoom'),
+    sulje: (p) => { if (ui.fokuskohdeAuki?.pohja === p) suljeFokuskohde(ui); },
+  });
+  if (!pohja) return null;
+  // Reaktiot (peukku ja virheilmoitus) lähderivin paikalle kortin loppuun.
+  const vieritys = pohja.el.querySelector('.tk-nostokortti__vieritys');
+  if (vieritys) piirraReaktiot(vieritys, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
+  (document.querySelector('.map-pane') ?? document.body).appendChild(pohja.el);
+  merkki?.classList.add('auki');
+  ui.fokuskohdeAuki = {
+    id: kohde.id, kohde, popup: pohja.el, merkki, ankkuri, pohja,
+    // suljeFokuskohde nollaa tilan ennen purkua, joten pohjan oma sulku ei palaa tänne.
+    purku: () => { if (pohja.auki) pohja.sulje(); },
+  };
+  document.body.classList.add('nosto-popup-auki');
+  asetaAkustiikka(kohde.akustiikka ?? null);
+  pohja.avaa();
+  return pohja.el;
+}
 
 export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
@@ -6510,312 +6269,6 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
    * Äänen mykistys ja TAUSTAÄÄNET-kytkin hoituvat SoundKit.play():n
    * sisällä (enabled), joten tässä ei tarvitse tietää niistä mitään.
    */
-  sfx.play('popup');
-  lataaKohdeTyyli();
-  suljeFokuskohde(ui);
-  const merkki = ui.fokuskohdeMerkit?.get(kohde.id)?.[0];
-  const koti = document.querySelector('.map-pane') ?? document.body;
-
-  const popup = html('div', 'fokuskohde-popup');
-  popup.setAttribute('role', 'group');
-  popup.setAttribute('aria-label', `${kohde.nimi}: tietoruutu`);
-  /*
-   * NAPAUTUS SULKEE, PAINIKE EI, RAAHAUS SIIRTÄÄ. Sulkusopimus on sama
-   * kuin pöllön kuplalla (js/fokusvirta.js piirraKupla): kortin päällä
-   * napautus on sulku, mutta painikkeen tai linkin päällä se on
-   * valinta. Uutena (omistaja 25.8.2026: *"Pystyykö pop up ikkunoista
-   * tehdä raahattavia"*) sama ele jatkettuna on siirto: sulku ratkeaa
-   * vasta sormen noustessa, ja kynnyksen ylittänyt liike muuttuu
-   * raahaukseksi eikä sulje. Samalla korjaantui vanha vika, jossa
-   * pitkän kortin vieritysyritys sulki kortin heti pointerdownissa.
-   */
-  popup.addEventListener('pointerdown', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    // Kesken jäänyt ele ei saa periytyä painikkeen napautukselle
-    // (ks. raahausTaiSulku): puretaan ennen painike-ehtoa.
-    popup.puraEle?.();
-    if (tapahtuma.target?.closest?.('button, a')) return;
-    /*
-     * KUVA EDELLÄ -KORTTIA EI RAAHATA: kortti on kuvan kehys, ja
-     * raahaus kirjoittaisi sen offsetLeft/offsetTop-paikan päälle
-     * paikan, jonka js/nostokuva.js laskee ruudun koordinaateissa.
-     *
-     * EIKÄ SE SULJE TÄSSÄ (omistajan vikailmoitus 12.9.2026,
-     * sanatarkasti: *"Nosto häviää edelleen näkyvistä, jos vieritän
-     * mistään muualta kohdasta kuin kuvaa painamalla."*). Tässä oli
-     * `suljeFokuskohde` suoraan pointerdownissa, ja se oli koko vian
-     * juuri: kuvan päältä alkava ele osuu NAPPIIN (ehto yllä palaa
-     * ennen tätä), mutta otsikon, leipätekstin, lähderivin tai
-     * pöllökysymysten päältä alkava vieritys osui tähän ja kortti
-     * katosi ennen kuin sormi oli liikkunut pikseliäkään. v1806:n
-     * napautusvahti korjasi vain kortin ULKOPUOLISEN eleen — tämä
-     * haara jäi silloin huomaamatta.
-     *
-     * Napautus kortin päällä sulkee yhä (sama sopimus kuin ennen),
-     * mutta se ratkeaa vasta sormen noustessa: vahti on
-     * `kuvanNapautus` (kuunteleKohdetta), sama kynnys ja sama
-     * napautusaika kuin muillakin korteilla.
-     */
-    if (nostokuvaKortissa(popup)) return;
-    raahausTaiSulku(ui, popup, tapahtuma);
-  });
-
-  const sulje = html('button', 'fokuskohde-sulje', '✕');
-  sulje.type = 'button';
-  sulje.title = 'Sulje';
-  sulje.setAttribute('aria-label', `Sulje ${kohde.nimi}`);
-  sulje.addEventListener('click', () => {
-    sfx.play('paper');
-    suljeFokuskohde(ui);
-  });
-  popup.appendChild(sulje);
-
-  const sisalto = html('div', 'fokuskohde-sisalto');
-  const latoKohde = (kotelo, kuvakehys) => {
-    kotelo.appendChild(piirraKohdeYlarivi(kohde));
-    kotelo.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-    piirraKohteenSisus(ui, kotelo, kohde, kuvakehys);
-  };
-  popup.appendChild(sisalto);
-  koti.appendChild(popup);
-  /*
-   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
-   * nosto avautuu ensin pelkkänä lähes koko ruudun kokoisena kuvana,
-   * jonka alla on lyhyt kuvateksti ja "Lisää"-nappi; napista kortti
-   * latoutuu SAMAN kuvan ympärille eikä kuva liiku pikseliäkään.
-   * Kuvaton kohde aukeaa suoraan tekstikorttina kuten ennenkin.
-   *
-   * KUTSU ON VASTA SEN JÄLKEEN, KUN KORTTI ON DOMISSA: kuvaesittely
-   * mittaa oikeita ruutulaatikoita, eikä irrallisella elementillä ole
-   * sellaista.
-   */
-  const paakuva = kohteenKuvalista(kohde)[0] ?? null;
-  let kuvakehysRef = null;
-  const kaksivaihe = paakuva ? nostokuvaAloita({
-    kortti: popup,
-    sisalto,
-    kuva: paakuva,
-    aseta: (img, leveys, onVirhe) => asetaKohdeKuva(img, paakuva, leveys, onVirhe),
-    // Suurennos näyttää sen kuvan, joka on kohdalla, ja selaa koko
-    // sarjaa (js/kuvasarja.js kirjoittaa valintansa kuvakehykseen).
-    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
-      ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'fokuskohdeZoom',
-      kuvakehysRef?.nostokuvaSarja?.(),
-    ),
-    koristele: (nappi, kehys) => {
-      if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
-      piirraIhmenauha(nappi, paakuva.nauha);
-    },
-    latoNosto: latoKohde,
-    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
-    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
-    // kuva pienenee vasemmalle ja teksti tulee oikealle.
-    kaksipalstaTaitto: true,
-  }) : null;
-  kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoKohde(sisalto, undefined);
-  // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
-  // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
-  // lisaaLukijanappi. Kutsu on sisällön JÄLKEEN: teksitön kortti (pelkkä
-  // kuva tai kierrosnappi) piilottaa kaiuttimen itse.
-  lisaaLukijanappi(popup, { otsikko: `Kuuntele: ${kohde.nimi}` });
-
-  merkki?.classList.add('auki');
-  /*
-   * KOHDE ITSE TALTEEN, ei vain sen tunnus: pöllön kontekstinkeruu
-   * (js/pollo.js lueNakyma) lukee tästä auki olevan kortin nimen,
-   * tyypin ja tekstin, jotta chat vastaa siitä, mitä ruudulla näkyy.
-   */
-  // `ankkuri` on pallolaudan ruutupiste (ks. ankkurinLaatikko); kartalla null.
-  ui.fokuskohdeAuki = {
-    id: kohde.id, kohde, popup, merkki, ankkuri, purku: null,
-  };
-  /*
-   * NOSTOPOPUPIN LIPPU (omistaja 15.9.2026: matkakirjan lappu ja
-   * Liiku-nappi eivät saa jäädä kohdekortin ALLE — ks. css/styles.css
-   * body.nosto-popup-auki .fact-card / .toimintorivi .monitoimi-nappi).
-   * Yhteinen lippu kaikille kartan päälle avautuville korteille
-   * (tämä, js/kaupunkinosto.js avaaKortti); turisti-info avaa
-   * suoraan nähtävyys-dialogin (showModal, top layer), joka peittää
-   * jo kaiken eikä tarvitse tätä lippua.
-   */
-  document.body.classList.add('nosto-popup-auki');
-  ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
-  // Puhujan akustiikka kortin ajaksi (js/tehosteketju.js): luolan kortilla
-  // Livian ja kertojan ääni saa luolan kaiun; sulkeminen nollaa (ks.
-  // suljeFokuskohde). Kohteen `akustiikka`-kenttä on pakkidataa.
-  asetaAkustiikka(kohde.akustiikka ?? null);
-  asetaKohteenPaikka(ui);
-  // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
-  // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
-  globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
-  setTimeout(() => asetaKohteenPaikka(ui), 200);
-  // Avausääni soi jo funktion alussa (ks. sfx.play('popup') ylhäällä).
-  return popup;
-}
-
-/**
- * Kortin kuuntelijat: Esc, napautus kortin ulkopuolelle, ikkunan koko
- * ja fokusvirran pinnat. Palauttaa purkufunktion — jokainen tähän
- * lisätty kuuntelija on purettava, tai suljettu kortti jäisi
- * kuuntelemaan ikkunaa ikuisesti.
- */
-function kuunteleKohdetta(ui, popup) {
-  const nappain = (tapahtuma) => {
-    if (tapahtuma.key === 'Escape') {
-      // Suurennos kuoritaan ensin: Esc sulkee sen, ei koko tietoruutua.
-      // Myös osion oma suurennos (ks. KOHDE_SUURENNOSAVAIMET).
-      if (KOHDE_SUURENNOSAVAIMET.some((avain) => ui?.[avain])) return;
-      tapahtuma.stopPropagation();
-      suljeFokuskohde(ui);
-    }
-  };
-  /*
-   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
-   * jos yrittää scrollata."*). `ulos` kertoo vain, VOISIKO tästä
-   * pointerdownista tulla sulkeva napautus; itse sulkeminen tapahtuu
-   * vasta `sulkeva`:ssa, kun sormi on noussut kynnyksen sisällä ja
-   * ajoissa (ui-apurit kuunteleSulkevaNapautus).
-   */
-  const ulos = (tapahtuma) => {
-    if (popup.contains(tapahtuma.target)) return false;
-    /*
-     * Suurennos on tämän kortin oma jatke, vaikka se asuu bodyssa
-     * (js/kartta.js KELLUVA_UI: kelluvat pinnat ovat siellä samasta
-     * syystä). Ilman tätä napautus suurennoksen päällä sulkisi kortin, ja
-     * kuva kutistuisi paikkaan, jota ei enää ole.
-     */
-    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return false;
-    /*
-     * PÖLLÖ EI SULJE KORTTIA (omistajan pelitesti 25.8.2026: *"kohteen
-     * pop-up katoaa, kun painaa pöllönappia"*). Juurisyy oli tässä:
-     * pöllönappi on kortin ulkopuolella, joten sen napautus meni tästä
-     * läpi sulkuna, ja chat aukesi tyhjän kartan päälle. Nyt nappi ja
-     * paneeli ovat kortin työpari — kortti jää auki ja väistää
-     * paneelia (asetaKohteenPaikka). Sama sopimus toiseen suuntaan on
-     * js/pollo.js seuraaSulkemista.
-     */
-    if (tapahtuma.target?.closest?.('.pollo-nappi, .pollo-paneeli')) {
-      siirraKohdeMyohemmin(ui);
-      return false;
-    }
-    /*
-     * SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026:
-     * *"jos näkyvillä on jokin nosto popup ja pelaaja klikkaa popupin
-     * ulkopuolelta karttaa, niin popup pitäisi aina sulkeutua, mutta
-     * mitään uutta ei saisi koskaan aueta samalla napautus kerralla
-     * vaikka pelaaja klikkaisi kartalla jotain toista kohdetta"*).
-     *
-     * Ennen tässä oli poikkeus `.fokuskohde` — toisen merkin napautus
-     * VAIHTOI kohdetta, ja kortti vaihtui sormen alta toiseksi. Nyt
-     * napautus vain sulkee, ja seuraava napautus avaa normaalisti.
-     *
-     * NIELU ON TÄSSÄ, EI AVAAJISSA. Tämä on koko napautusketjun juuri
-     * kortin kannalta: ainoa käsittelijä, joka näkee sulkevan
-     * napautuksen ennen ketään muuta (document + kaappausvaihe).
-     * Vaihtoehto olisi ripotella "onko kortti auki" -ehto jokaiseen
-     * avaajaan erikseen — kohdemerkkiin, kaupungin laattaan,
-     * kohderenkaaseen, poltettuun kaupunginnimeen, nipun kuoreen —
-     * ja seuraava uusi avaaja unohtaisi sen taas. Yksi nielu kattaa
-     * ne kaikki, myös ne, joita tämä paketti ei saa koskea
-     * (js/laattapyramidi.js, js/karttanimet.js).
-     *
-     * VAIN KARTALTA (`#board`): omistajan sääntö koskee napautusta
-     * *kartalle*. Kartan ulkopuoliset painikkeet — zoomirivi,
-     * matkustusnapit, valikot — pitävät entisen käytöksensä, eikä
-     * kortin sulkeminen syö niiltä painallusta.
-     *
-     * VETO EI OLE NAPAUTUS EIKÄ NIELU KOSKE SIIHEN. Nielu odottaa
-     * CLICKIÄ napautuksen KOHDALTA ja vain puolen sekunnin ajan
-     * (ui-apurit nielaiseSulkevaNapautus): kynnyksen ylittänyt veto ei
-     * tuota clickiä lainkaan, ja kartan oma raahausvahti nielee senkin
-     * (js/kartta.js raahattiin). Vetoele ei myöskään enää sulje
-     * korttia lainkaan (omistaja 12.9.2026, ks. `sulkeva` alla): veto
-     * panoroi karttaa ja kortti jää auki — sulku vaatii napautuksen.
-     */
-    return true;
-  };
-  /*
-   * SULKEMINEN VASTA NAPAUTUKSESTA. Nielu tarvitsee ALKUPERÄISEN
-   * pointerdownin — sen kohde ratkaisee, oliko napautus kartalle, ja
-   * sen koordinaatit rajaavat nielun (ui-apurit nielaiseSulkevaNapautus).
-   */
-  const sulkeva = (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('#board')) nielaiseSulkevaNapautus(tapahtuma);
-    suljeFokuskohde(ui);
-  };
-  const asemoi = () => asetaKohteenPaikka(ui);
-  /*
-   * FOKUSVIRTA VOITTAA. Kun pöllö puhuu kuplasta tai annostelukortti
-   * aukeaa, tietoruutu väistyy — kaksi paperia päällekkäin kartan
-   * päällä olisi juuri sitä raskautta, jota omistaja moitti. Vahti on
-   * MutationObserver eikä kutsu js/fokusvirta.js:ään: se tiedosto on
-   * toisen työvaiheen hallussa, eikä tämä paketti saanut koskea siihen.
-   */
-  const vahti = new MutationObserver((muutokset) => {
-    for (const muutos of muutokset) {
-      for (const solmu of muutos.addedNodes ?? []) {
-        if (solmu.nodeType !== 1) continue;
-        if (solmu.matches?.('.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom')
-          || solmu.querySelector?.('.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom')) {
-          suljeFokuskohde(ui);
-          return;
-        }
-      }
-    }
-  });
-  /*
-   * KUVA EDELLÄ -KORTIN OMA NAPAUTUS (omistaja 12.9.2026: *"peli
-   * luulee, että edelleen, jos pelaaja klikkaa mistä tahansa muualta
-   * kuin kuvan päältä, niin artikkeli pitää sulkea, mikä on tietenkin
-   * virhe"*).
-   *
-   * Tavallista korttia hallitsee `raahausTaiSulku`, joka lukee eleen
-   * irrotuksesta. Kuva edellä -korttia ei raahata lainkaan, joten sen
-   * eleen lukee talon yhteinen napautusvahti: vieritys (matka yli
-   * kynnyksen, pitkä painallus tai selaimen oma vieritys, joka
-   * lähettää pointercancelin) EI sulje, napautus sulkee. Sama sääntö
-   * ja samat luvut kuin kortin ulkopuolisella napautuksella.
-   *
-   * Painikkeet ja linkit — kuvanappi, "Lisää", pöllökysymykset,
-   * lähderivin linkit, sulkuristi — eivät ole sulkuja: ne hoitavat
-   * oman tekonsa itse.
-   */
-  /*
-   * VAIN VAIHEESSA 1 (omistaja 19.9.2026 klo 23.41, iPad, Chartres,
-   * sanatarkasti: *"Nosto sulkeutuu kun leipätekstin kohdalta klikkaa.
-   * Johtuu siitä että peliin ei päivity että lisää sisältöä on tuotu
-   * ruudulle."*). Kortti pitää luokan `nostokuva-kortti` myös Lisää-
-   * napautuksen jälkeen, joten tämä vahti sulki kortin leipätekstin,
-   * kuvatekstin ja lähderivin napautuksesta. Vaiheessa 2
-   * (`nostokuva-vaihe2`, js/nostokuva.js avaaLisaa) kortti on tavallinen
-   * luettava kortti: sen päällä napautus ei tee mitään, ja sulku on ✕ tai
-   * napautus kortin ULKOPUOLELLE (`ulos`/`sulkeva` alla) — sama sopimus
-   * kuin täkynoston ja eläinkortin kerroksilla.
-   */
-  const kuvanNapautus = kuunteleSulkevaNapautus(popup, {
-    kelpaa: (tapahtuma) => nostokuvaKortissa(popup)
-      && !popup.classList.contains('nostokuva-vaihe2')
-      && !tapahtuma.target?.closest?.('button, a'),
-    napautus: () => {
-      sfx.play('paper');
-      suljeFokuskohde(ui);
-    },
-  });
-  document.addEventListener('keydown', nappain, true);
-  const puraNapautus = kuunteleSulkevaNapautus(
-    document, { kelpaa: ulos, napautus: sulkeva }, { kaappaus: true },
-  );
-  globalThis.addEventListener?.('resize', asemoi);
-  globalThis.addEventListener?.('orientationchange', asemoi);
-  vahti.observe(document.body, { childList: true, subtree: true });
-  return () => {
-    document.removeEventListener('keydown', nappain, true);
-    puraNapautus();
-    kuvanNapautus();
-    popup.puraEle?.();
-    globalThis.removeEventListener?.('resize', asemoi);
-    globalThis.removeEventListener?.('orientationchange', asemoi);
-    vahti.disconnect();
-  };
+  // Kohdekortti on NOSTOKORTTI-pohjalla (omistaja 2.10.2026: pysyvä; vanha kortti ja ?kohdekortti=vanha poistettu).
+  return avaaKohdePohjalla(ui, kohde, { ankkuri });
 }

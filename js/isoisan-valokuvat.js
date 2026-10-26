@@ -49,7 +49,7 @@ export const ISOISAN_VALOKUVAT = {
     rajaus: { x0: 0.13, y0: 0.115, x1: 0.873, y1: 0.866 },
     selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
       + 'isoisän matkalaukusta.',
-    lahde: 'Kuvaputken generoitu valokuva',
+    lahde: 'Matkakirjan havainnekuva',
     kuvateksti: 'Isoisä, Kanton, 1873',
   },
   bombay: {
@@ -58,7 +58,7 @@ export const ISOISAN_VALOKUVAT = {
     rajaus: { x0: 0.125, y0: 0.13, x1: 0.875, y1: 0.873 },
     selite: 'Isoisä Bombayn satamalaiturilla matka-arkkunsa vieressä 1873. '
       + 'Valokuva löytyi matkakirjan välistä.',
-    lahde: 'Kuvaputken generoitu valokuva',
+    lahde: 'Matkakirjan havainnekuva',
     kuvateksti: 'Isoisä, Bombay, 1873',
   },
   /*
@@ -118,7 +118,7 @@ export const ISOISAN_VALOKUVAT = {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-giza-aged-r20260905-v1.jpg`,
     selite: 'Pieni hahmo Gizan aavikolla 1873, pyramidien juurella. '
       + 'Valokuva löytyi matkakirjan välistä.',
-    lahde: 'Kuvaputken generoitu valokuva',
+    lahde: 'Matkakirjan havainnekuva',
     kuvateksti: 'Isoisä, Giza, 1873',
   },
 };

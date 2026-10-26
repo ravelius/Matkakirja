@@ -1,0 +1,5147 @@
+{
+ "laadittu": "Karttaseppä 11.10.2026 (tools/paakaupungit/laudan-valmistelu.mjs)",
+ "lauta": "maailmankartta",
+ "minCityDistance": 60,
+ "kaupungit": [
+  {
+   "paikka": "maa",
+   "id": "rabat",
+   "era": "e04",
+   "name": "Rabat",
+   "wiki": "Rabat",
+   "maa": "MAR",
+   "lat": 34.0211,
+   "lon": -6.8414,
+   "x": 5621,
+   "y": 2040.9,
+   "siirto": [
+    15.7,
+    8.7
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "fes",
+    "yks": 47,
+    "km": 131
+   },
+   "lahinUusi": {
+    "id": "alger",
+    "yks": 315
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MAR",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "fes",
+     "b": "rabat",
+     "steps": 1
+    },
+    {
+     "a": "tanger",
+     "b": "rabat",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 47 yks (131 km) kaupungista fes"
+   ]
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "alger",
+   "era": "e04",
+   "name": "Alger",
+   "wiki": "Alger",
+   "maa": "DZA",
+   "lat": 36.7764,
+   "lon": 3.0586,
+   "x": 5917.7,
+   "y": 1934.5,
+   "siirto": [
+    -20.2,
+    -3.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "karthago",
+    "yks": 191,
+    "km": 510
+   },
+   "lahinUusi": {
+    "id": "tunis",
+    "yks": 187
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "DZA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "fes",
+     "b": "alger",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "nouakchott",
+   "era": "e04",
+   "name": "Nouakchott",
+   "wiki": "Nouakchott",
+   "maa": "MRT",
+   "lat": 18.0858,
+   "lon": -15.9785,
+   "x": 5319.4,
+   "y": 2604.4,
+   "siirto": [
+    18.7,
+    2.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "dakar",
+    "yks": 125,
+    "km": 397
+   },
+   "lahinUusi": {
+    "id": "banjul",
+    "yks": 160
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MRT",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "dakar",
+     "b": "nouakchott",
+     "steps": 2
+    },
+    {
+     "a": "sierraleone",
+     "b": "nouakchott",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "praia",
+   "era": "e04",
+   "name": "Praia",
+   "wiki": "Praia",
+   "maa": "CPV",
+   "lat": 14.9177,
+   "lon": -23.5092,
+   "x": 5049.7,
+   "y": 2710.6,
+   "siirto": [
+    18.5,
+    1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "dakar",
+    "yks": 230,
+    "km": 742
+   },
+   "lahinUusi": {
+    "id": "banjul",
+    "yks": 261
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "CPV",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "dakar",
+     "b": "praia",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "joaopessoa",
+     "b": "praia",
+     "type": "sea",
+     "steps": 11
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "banjul",
+   "era": "e04",
+   "name": "Banjul",
+   "wiki": "Banjul",
+   "maa": "GMB",
+   "lat": 13.4531,
+   "lon": -16.5775,
+   "x": 5305.5,
+   "y": 2763.9,
+   "siirto": [
+    24.7,
+    3.5
+   ],
+   "lippu": "**pieni** · **≤60**",
+   "lahin": {
+    "id": "dakar",
+    "yks": 49,
+    "km": 158
+   },
+   "lahinUusi": {
+    "id": "bissau",
+    "yks": 57
+   },
+   "alle60": true,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GMB",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "dakar",
+     "b": "banjul",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 49 yks (158 km) kaupungista dakar",
+    "≤60 toisesta uudesta: bissau 57 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "bissau",
+   "era": "e04",
+   "name": "Bissau",
+   "wiki": "Bissau",
+   "maa": "GNB",
+   "lat": 11.86,
+   "lon": -15.5833,
+   "x": 5328.9,
+   "y": 2815.4,
+   "siirto": [
+    15,
+    1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "dakar",
+    "yks": 105,
+    "km": 343
+   },
+   "lahinUusi": {
+    "id": "banjul",
+    "yks": 57
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GNB",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "dakar–sierraleone (2)",
+     "a": "dakar",
+     "b": "bissau",
+     "steps": 1
+    },
+    {
+     "a": "bissau",
+     "b": "sierraleone",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: banjul 57 yks"
+   ]
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "conakry",
+   "era": "e04",
+   "name": "Conakry",
+   "wiki": "Conakry",
+   "maa": "GIN",
+   "lat": 9.5092,
+   "lon": -13.7122,
+   "x": 5376.8,
+   "y": 2892,
+   "siirto": [
+    1.6,
+    0.2
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "sierraleone",
+    "yks": 41,
+    "km": 136
+   },
+   "lahinUusi": {
+    "id": "freetown",
+    "yks": 41
+   },
+   "alle60": true,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GIN",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "sierraleone",
+     "b": "conakry",
+     "steps": 1
+    },
+    {
+     "a": "kappalmas",
+     "b": "conakry",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 41 yks (136 km) kaupungista sierraleone",
+    "≤60 toisesta uudesta: freetown 41 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "monrovia",
+   "era": "e04",
+   "name": "Monrovia",
+   "wiki": "Monrovia",
+   "maa": "LBR",
+   "lat": 6.3106,
+   "lon": -10.8047,
+   "x": 5484.8,
+   "y": 2997.8,
+   "siirto": [
+    11.6,
+    -3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "sierraleone",
+    "yks": 110,
+    "km": 365
+   },
+   "lahinUusi": {
+    "id": "freetown",
+    "yks": 114
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "LBR",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "sierraleone–kappalmas (2)",
+     "a": "sierraleone",
+     "b": "monrovia",
+     "steps": 1
+    },
+    {
+     "a": "monrovia",
+     "b": "kappalmas",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "tunis",
+   "era": "e04",
+   "name": "Tunis",
+   "wiki": "Tunis",
+   "maa": "TUN",
+   "lat": 36.8065,
+   "lon": 10.1815,
+   "x": 6104,
+   "y": 1925,
+   "siirto": [
+    -68.8,
+    -1.8
+   ],
+   "lippu": "**päällekkäin**: Karthagon lehti 15 km:n päässä (31 mainintaa)",
+   "lahin": {
+    "id": "karthago",
+    "yks": 5,
+    "km": 14
+   },
+   "lahinUusi": {
+    "id": "alger",
+    "yks": 187
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TUN",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "karthago",
+     "b": "tunis",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 5 yks (14 km) kaupungista karthago",
+    "päällekkäin pelin lehden kanssa",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "freetown",
+   "era": "e04",
+   "name": "Freetown",
+   "wiki": "Freetown",
+   "maa": "SLE",
+   "lat": 8.487,
+   "lon": -13.236,
+   "x": 5393.7,
+   "y": 2929.4,
+   "siirto": [
+    0.2,
+    0
+   ],
+   "lippu": "**päällekkäin**: pelikaupunki Sierra Leone on Freetownin lehti (55 mainintaa) · **≤60**",
+   "lahin": {
+    "id": "sierraleone",
+    "yks": 12,
+    "km": 41
+   },
+   "lahinUusi": {
+    "id": "conakry",
+    "yks": 41
+   },
+   "alle60": true,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SLE",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "sierraleone",
+     "b": "freetown",
+     "steps": 1
+    },
+    {
+     "a": "kappalmas",
+     "b": "freetown",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 12 yks (41 km) kaupungista sierraleone",
+    "≤60 toisesta uudesta: conakry 41 yks",
+    "päällekkäin pelin lehden kanssa"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "bamako",
+   "era": "e05",
+   "name": "Bamako",
+   "wiki": "Bamako",
+   "maa": "MLI",
+   "lat": 12.6458,
+   "lon": -7.9922,
+   "x": 5560.5,
+   "y": 2780.5,
+   "siirto": [
+    -6.5,
+    -7.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "timbuktu",
+    "yks": 201,
+    "km": 655
+   },
+   "lahinUusi": {
+    "id": "ouagadougou",
+    "yks": 214
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MLI",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "timbuktu",
+     "b": "bamako",
+     "steps": 3
+    },
+    {
+     "a": "sierraleone",
+     "b": "bamako",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "ouagadougou",
+   "era": "e05",
+   "name": "Ouagadougou",
+   "wiki": "Ouagadougou",
+   "maa": "BFA",
+   "lat": 12.3686,
+   "lon": -1.5275,
+   "x": 5774.1,
+   "y": 2800,
+   "siirto": [
+    -8.3,
+    2.9
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "gao",
+    "yks": 147,
+    "km": 481
+   },
+   "lahinUusi": {
+    "id": "niamey",
+    "yks": 138
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BFA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "timbuktu–kumasi (3)",
+     "a": "timbuktu",
+     "b": "ouagadougou",
+     "steps": 1
+    },
+    {
+     "a": "ouagadougou",
+     "b": "kumasi",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "niamey",
+   "era": "e05",
+   "name": "Niamey",
+   "wiki": "Niamey",
+   "maa": "NER",
+   "lat": 13.515,
+   "lon": 2.1175,
+   "x": 5902.8,
+   "y": 2750.4,
+   "siirto": [
+    -1.1,
+    -7.9
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "gao",
+    "yks": 112,
+    "km": 362
+   },
+   "lahinUusi": {
+    "id": "ouagadougou",
+    "yks": 138
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "NER",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "gao",
+     "b": "niamey",
+     "steps": 2
+    },
+    {
+     "a": "orjarannikko",
+     "b": "niamey",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "yamoussoukro",
+   "era": "e05",
+   "name": "Yamoussoukro",
+   "wiki": "Yamoussoukro",
+   "maa": "CIV",
+   "lat": 6.8161,
+   "lon": -5.2742,
+   "x": 5682.2,
+   "y": 2994.4,
+   "siirto": [
+    24.7,
+    10.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kappalmas",
+    "yks": 99,
+    "km": 327
+   },
+   "lahinUusi": {
+    "id": "accra",
+    "yks": 147
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CIV",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kappalmas",
+     "b": "yamoussoukro",
+     "steps": 1
+    },
+    {
+     "a": "kumasi",
+     "b": "yamoussoukro",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "accra",
+   "era": "e05",
+   "name": "Accra",
+   "wiki": "Accra",
+   "maa": "GHA",
+   "lat": 5.556,
+   "lon": -0.1969,
+   "x": 5825.4,
+   "y": 3027.5,
+   "siirto": [
+    29.4,
+    30.3
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "kumasi",
+    "yks": 34,
+    "km": 112
+   },
+   "lahinUusi": {
+    "id": "lome",
+    "yks": 51
+   },
+   "alle60": true,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GHA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kumasi",
+     "b": "accra",
+     "steps": 1
+    },
+    {
+     "a": "orjarannikko",
+     "b": "accra",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 34 yks (112 km) kaupungista kumasi",
+    "≤60 toisesta uudesta: lome 51 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "lome",
+   "era": "e05",
+   "name": "Lomé",
+   "wiki": "Lomé",
+   "maa": "TGO",
+   "lat": 6.1319,
+   "lon": 1.2228,
+   "x": 5872.7,
+   "y": 3008.3,
+   "siirto": [
+    62.1,
+    28
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kumasi",
+    "yks": 83,
+    "km": 274
+   },
+   "lahinUusi": {
+    "id": "accra",
+    "yks": 51
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TGO",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "korvaa": "kumasi–orjarannikko (1)",
+     "a": "kumasi",
+     "b": "lome",
+     "steps": 1
+    },
+    {
+     "a": "lome",
+     "b": "orjarannikko",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: accra 51 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "portonovo",
+   "era": "e05",
+   "name": "Porto-Novo",
+   "wiki": "Porto-Novo",
+   "maa": "BEN",
+   "lat": 6.4833,
+   "lon": 2.6167,
+   "x": 6022.6,
+   "y": 3025.1,
+   "siirto": [
+    102.1,
+    30
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "lagos",
+    "yks": 44,
+    "km": 147
+   },
+   "lahinUusi": {
+    "id": "lome",
+    "yks": 151
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BEN",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "lagos",
+     "b": "portonovo",
+     "steps": 1
+    },
+    {
+     "a": "orjarannikko",
+     "b": "portonovo",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 44 yks (147 km) kaupungista lagos"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "abuja",
+   "era": "e05",
+   "name": "Abuja",
+   "wiki": "Abuja",
+   "maa": "NGA",
+   "lat": 9.06,
+   "lon": 7.49,
+   "x": 6121.3,
+   "y": 2905.6,
+   "siirto": [
+    38.3,
+    -3.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "lagos",
+    "yks": 136,
+    "km": 448
+   },
+   "lahinUusi": {
+    "id": "portonovo",
+    "yks": 155
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "NGA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "lagos",
+     "b": "abuja",
+     "steps": 2
+    },
+    {
+     "a": "kano",
+     "b": "abuja",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "ndjamena",
+   "era": "e05",
+   "name": "N'Djamena",
+   "wiki": "N'Djamena",
+   "maa": "TCD",
+   "lat": 12.11,
+   "lon": 15.05,
+   "x": 6337.4,
+   "y": 2805.1,
+   "siirto": [
+    2.4,
+    -0.8
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "tshadjarvi",
+    "yks": 50,
+    "km": 163
+   },
+   "lahinUusi": {
+    "id": "abuja",
+    "yks": 238
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TCD",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "tshadjarvi",
+     "b": "ndjamena",
+     "steps": 1
+    },
+    {
+     "a": "kano",
+     "b": "ndjamena",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 50 yks (163 km) kaupungista tshadjarvi"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "yaounde",
+   "era": "e05",
+   "name": "Yaoundé",
+   "wiki": "Yaoundé",
+   "maa": "CMR",
+   "lat": 3.8578,
+   "lon": 11.5181,
+   "x": 6250,
+   "y": 3126.6,
+   "siirto": [
+    32.7,
+    43.7
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "kamerun",
+    "yks": 63,
+    "km": 211
+   },
+   "lahinUusi": {
+    "id": "ciudaddelapaz",
+    "yks": 76
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CMR",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kamerun",
+     "b": "yaounde",
+     "steps": 1
+    },
+    {
+     "a": "kongo",
+     "b": "yaounde",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "libreville",
+   "era": "e06",
+   "name": "Libreville",
+   "wiki": "Libreville",
+   "maa": "GAB",
+   "lat": 0.4081,
+   "lon": 9.4403,
+   "x": 6179.3,
+   "y": 3231.5,
+   "siirto": [
+    31.3,
+    33.6
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kamerun",
+    "yks": 106,
+    "km": 353
+   },
+   "lahinUusi": {
+    "id": "ciudaddelapaz",
+    "yks": 57
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GAB",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "kamerun–kongo (3)",
+     "a": "kamerun",
+     "b": "libreville",
+     "steps": 1
+    },
+    {
+     "a": "libreville",
+     "b": "kongo",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: ciudaddelapaz 57 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "ciudaddelapaz",
+   "era": "e06",
+   "name": "Ciudad de la Paz",
+   "wiki": "Ciudad de la Paz",
+   "maa": "GNQ",
+   "lat": 1.592,
+   "lon": 10.822,
+   "x": 6225,
+   "y": 3198.1,
+   "siirto": [
+    30.9,
+    39.7
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "kamerun",
+    "yks": 82,
+    "km": 272
+   },
+   "lahinUusi": {
+    "id": "libreville",
+    "yks": 57
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GNQ",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "kamerun–kongo (3)",
+     "a": "kamerun",
+     "b": "ciudaddelapaz",
+     "steps": 1
+    },
+    {
+     "a": "ciudaddelapaz",
+     "b": "kongo",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: libreville 57 yks"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "saotome",
+   "era": "e06",
+   "name": "São Tomé",
+   "wiki": "São Tomé",
+   "maa": "STP",
+   "lat": 0.3365,
+   "lon": 6.7273,
+   "x": 6057.6,
+   "y": 3200.3,
+   "siirto": [
+    40.5,
+    30.7
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kamerun",
+    "yks": 149,
+    "km": 497
+   },
+   "lahinUusi": {
+    "id": "libreville",
+    "yks": 126
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "STP",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kamerun",
+     "b": "saotome",
+     "type": "sea",
+     "steps": 2
+    },
+    {
+     "a": "kappalmas",
+     "b": "saotome",
+     "type": "sea",
+     "steps": 6
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "bangui",
+   "era": "e06",
+   "name": "Bangui",
+   "wiki": "Bangui",
+   "maa": "CAF",
+   "lat": 4.3733,
+   "lon": 18.5628,
+   "x": 6460.9,
+   "y": 3080.2,
+   "siirto": [
+    8.8,
+    14.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kamerun",
+    "yks": 278,
+    "km": 926
+   },
+   "lahinUusi": {
+    "id": "yaounde",
+    "yks": 216
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CAF",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kamerun",
+     "b": "bangui",
+     "steps": 4
+    },
+    {
+     "a": "bahrelghazal",
+     "b": "bangui",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "brazzaville",
+   "era": "e06",
+   "name": "Brazzaville",
+   "wiki": "Brazzaville",
+   "maa": "COG",
+   "lat": -4.2694,
+   "lon": 15.2711,
+   "x": 6343.8,
+   "y": 3356.2,
+   "siirto": [
+    1.4,
+    2.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kongo",
+    "yks": 79,
+    "km": 262
+   },
+   "lahinUusi": {
+    "id": "kinshasa",
+    "yks": 2
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "COG",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kongo",
+     "b": "brazzaville",
+     "steps": 1
+    },
+    {
+     "a": "angola",
+     "b": "brazzaville",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: kinshasa 2 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "kinshasa",
+   "era": "e06",
+   "name": "Kinshasa",
+   "wiki": "Kinshasa",
+   "maa": "COD",
+   "lat": -4.3219,
+   "lon": 15.3119,
+   "x": 6345.1,
+   "y": 3357.9,
+   "siirto": [
+    1.4,
+    2.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kongo",
+    "yks": 80,
+    "km": 265
+   },
+   "lahinUusi": {
+    "id": "brazzaville",
+    "yks": 2
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "COD",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kongo",
+     "b": "kinshasa",
+     "steps": 1
+    },
+    {
+     "a": "angola",
+     "b": "kinshasa",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: brazzaville 2 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "luanda",
+   "era": "e06",
+   "name": "Luanda",
+   "wiki": "Luanda",
+   "maa": "AGO",
+   "lat": -8.8383,
+   "lon": 13.2344,
+   "x": 6275.8,
+   "y": 3509,
+   "siirto": [
+    1.3,
+    2.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kongo",
+    "yks": 138,
+    "km": 454
+   },
+   "lahinUusi": {
+    "id": "kinshasa",
+    "yks": 166
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "AGO",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "kongo–angola (2)",
+     "a": "kongo",
+     "b": "luanda",
+     "steps": 1
+    },
+    {
+     "a": "luanda",
+     "b": "angola",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "kigali",
+   "era": "e06",
+   "name": "Kigali",
+   "wiki": "Kigali",
+   "maa": "RWA",
+   "lat": -1.9441,
+   "lon": 30.0619,
+   "x": 6840.6,
+   "y": 3266.5,
+   "siirto": [
+    5.2,
+    -9.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "viktoria",
+    "yks": 75,
+    "km": 251
+   },
+   "lahinUusi": {
+    "id": "gitega",
+    "yks": 48
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "RWA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "viktoria–tanganjika (2)",
+     "a": "viktoria",
+     "b": "kigali",
+     "steps": 1
+    },
+    {
+     "a": "kigali",
+     "b": "tanganjika",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: gitega 48 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "gitega",
+   "era": "e06",
+   "name": "Gitega",
+   "wiki": "Gitega",
+   "maa": "BDI",
+   "lat": -3.4283,
+   "lon": 29.925,
+   "x": 6837.5,
+   "y": 3314.4,
+   "siirto": [
+    6.6,
+    -11.4
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "viktoria",
+    "yks": 116,
+    "km": 388
+   },
+   "lahinUusi": {
+    "id": "kigali",
+    "yks": 48
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BDI",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "viktoria–tanganjika (2)",
+     "a": "viktoria",
+     "b": "gitega",
+     "steps": 1
+    },
+    {
+     "a": "gitega",
+     "b": "tanganjika",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: kigali 48 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "khartum",
+   "era": "e07",
+   "name": "Khartum",
+   "wiki": "Khartum",
+   "maa": "SDN",
+   "lat": 15.603,
+   "lon": 32.527,
+   "x": 6917,
+   "y": 2687,
+   "siirto": [
+    -0.6,
+    -0.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "suakin",
+    "yks": 200,
+    "km": 643
+   },
+   "lahinUusi": {
+    "id": "asmara",
+    "yks": 214
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SDN",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "suakin",
+     "b": "khartum",
+     "steps": 3
+    },
+    {
+     "a": "lalibela",
+     "b": "khartum",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "juba",
+   "era": "e07",
+   "name": "Juba",
+   "wiki": "Juba",
+   "maa": "SDS",
+   "lat": 4.851,
+   "lon": 31.583,
+   "x": 6889.8,
+   "y": 3031.6,
+   "siirto": [
+    3.7,
+    -18
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "bahrelghazal",
+    "yks": 178,
+    "km": 594
+   },
+   "lahinUusi": {
+    "id": "kampala",
+    "yks": 169
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SDS",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "bahrelghazal",
+     "b": "juba",
+     "steps": 2
+    },
+    {
+     "a": "viktoria",
+     "b": "juba",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "asmara",
+   "era": "e07",
+   "name": "Asmara",
+   "wiki": "Asmara",
+   "maa": "ERI",
+   "lat": 15.3366,
+   "lon": 38.9363,
+   "x": 7130.8,
+   "y": 2696.2,
+   "siirto": [
+    -0.4,
+    -0.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "lalibela",
+    "yks": 112,
+    "km": 362
+   },
+   "lahinUusi": {
+    "id": "djibouti",
+    "yks": 190
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "ERI",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "lalibela–suakin (2)",
+     "a": "lalibela",
+     "b": "asmara",
+     "steps": 1
+    },
+    {
+     "a": "asmara",
+     "b": "suakin",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "djibouti",
+   "era": "e07",
+   "name": "Djibouti",
+   "wiki": "Djibouti",
+   "maa": "DJI",
+   "lat": 11.595,
+   "lon": 43.1481,
+   "x": 7271.6,
+   "y": 2823.1,
+   "siirto": [
+    0,
+    -0.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "aden",
+    "yks": 75,
+    "km": 246
+   },
+   "lahinUusi": {
+    "id": "asmara",
+    "yks": 190
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "DJI",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "middle",
+   "lx": 0,
+   "ly": -24,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "lalibela",
+     "b": "djibouti",
+     "steps": 2
+    },
+    {
+     "a": "addisabeba",
+     "b": "djibouti",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "mogadishu",
+   "era": "e07",
+   "name": "Mogadishu",
+   "wiki": "Mogadishu",
+   "maa": "SOM",
+   "lat": 2.0369,
+   "lon": 45.3387,
+   "x": 7367.8,
+   "y": 3129.4,
+   "siirto": [
+    40.5,
+    -4.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "nairobi",
+    "yks": 281,
+    "km": 938
+   },
+   "lahinUusi": {
+    "id": "djibouti",
+    "yks": 321
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SOM",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "nairobi",
+     "b": "mogadishu",
+     "steps": 4
+    },
+    {
+     "a": "rashafun",
+     "b": "mogadishu",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "kampala",
+   "era": "e07",
+   "name": "Kampala",
+   "wiki": "Kampala",
+   "maa": "UGA",
+   "lat": 0.314,
+   "lon": 32.581,
+   "x": 6921,
+   "y": 3197.2,
+   "siirto": [
+    1.6,
+    -3.8
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "viktoria",
+    "yks": 33,
+    "km": 109
+   },
+   "lahinUusi": {
+    "id": "kigali",
+    "yks": 106
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "UGA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "viktoria",
+     "b": "kampala",
+     "steps": 1
+    },
+    {
+     "a": "nairobi",
+     "b": "kampala",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 33 yks (109 km) kaupungista viktoria"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "dodoma",
+   "era": "e07",
+   "name": "Dodoma",
+   "wiki": "Dodoma",
+   "maa": "TZA",
+   "lat": -6.173,
+   "lon": 35.742,
+   "x": 7084.4,
+   "y": 3443.9,
+   "siirto": [
+    59.7,
+    26.4
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kilimandzaro",
+    "yks": 108,
+    "km": 358
+   },
+   "lahinUusi": {
+    "id": "moroni",
+    "yks": 249
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TZA",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kilimandzaro",
+     "b": "dodoma",
+     "steps": 1
+    },
+    {
+     "a": "tanganjika",
+     "b": "dodoma",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "lilongwe",
+   "era": "e07",
+   "name": "Lilongwe",
+   "wiki": "Lilongwe",
+   "maa": "MWI",
+   "lat": -13.9864,
+   "lon": 33.7681,
+   "x": 6904.2,
+   "y": 3738.9,
+   "siirto": [
+    -54.7,
+    58.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "mosambik",
+    "yks": 156,
+    "km": 504
+   },
+   "lahinUusi": {
+    "id": "harare",
+    "yks": 104
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MWI",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "mosambik",
+     "b": "lilongwe",
+     "steps": 2
+    },
+    {
+     "a": "viktorianputoukset",
+     "b": "lilongwe",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "lusaka",
+   "era": "e07",
+   "name": "Lusaka",
+   "wiki": "Lusaka",
+   "maa": "ZMB",
+   "lat": -15.4167,
+   "lon": 28.2833,
+   "x": 6742.5,
+   "y": 3689.6,
+   "siirto": [
+    -33.6,
+    -39.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "viktorianputoukset",
+    "yks": 96,
+    "km": 311
+   },
+   "lahinUusi": {
+    "id": "harare",
+    "yks": 131
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "ZMB",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "viktorianputoukset–tanganjika (2)",
+     "a": "viktorianputoukset",
+     "b": "lusaka",
+     "steps": 1
+    },
+    {
+     "a": "lusaka",
+     "b": "tanganjika",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "harare",
+   "era": "e08",
+   "name": "Harare",
+   "wiki": "Harare",
+   "maa": "ZWE",
+   "lat": -17.829,
+   "lon": 31.052,
+   "x": 6818.3,
+   "y": 3796.8,
+   "siirto": [
+    -50.1,
+    -15.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "viktorianputoukset",
+    "yks": 159,
+    "km": 505
+   },
+   "lahinUusi": {
+    "id": "lilongwe",
+    "yks": 104
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "ZWE",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "viktorianputoukset",
+     "b": "harare",
+     "steps": 2
+    },
+    {
+     "a": "mosambik",
+     "b": "harare",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "maputo",
+   "era": "e08",
+   "name": "Maputo",
+   "wiki": "Maputo",
+   "maa": "MOZ",
+   "lat": -25.9689,
+   "lon": 32.5733,
+   "x": 6882.2,
+   "y": 4100.3,
+   "siirto": [
+    -36.9,
+    3.6
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kimberley",
+    "yks": 243,
+    "km": 728
+   },
+   "lahinUusi": {
+    "id": "mbabane",
+    "yks": 38
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MOZ",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kimberley",
+     "b": "maputo",
+     "steps": 3
+    },
+    {
+     "a": "mosambik",
+     "b": "maputo",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: mbabane 38 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "mbabane",
+   "era": "e08",
+   "name": "Mbabane",
+   "wiki": "Mbabane",
+   "maa": "SWZ",
+   "lat": -26.3167,
+   "lon": 31.1333,
+   "x": 6845.3,
+   "y": 4107,
+   "siirto": [
+    -25.8,
+    -2.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kimberley",
+    "yks": 206,
+    "km": 617
+   },
+   "lahinUusi": {
+    "id": "maputo",
+    "yks": 38
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SWZ",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kimberley",
+     "b": "mbabane",
+     "steps": 3
+    },
+    {
+     "a": "mosambik",
+     "b": "mbabane",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: maputo 38 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "maseru",
+   "era": "e08",
+   "name": "Maseru",
+   "wiki": "Maseru",
+   "maa": "LSO",
+   "lat": -29.3167,
+   "lon": 27.4833,
+   "x": 6750.5,
+   "y": 4212,
+   "siirto": [
+    1,
+    -5.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kimberley",
+    "yks": 93,
+    "km": 270
+   },
+   "lahinUusi": {
+    "id": "mbabane",
+    "yks": 141
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "LSO",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (5 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "kimberley",
+     "b": "maseru",
+     "steps": 1
+    },
+    {
+     "a": "kapkaupunki",
+     "b": "maseru",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "gaborone",
+   "era": "e08",
+   "name": "Gaborone",
+   "wiki": "Gaborone",
+   "maa": "BWA",
+   "lat": -24.6569,
+   "lon": 25.9086,
+   "x": 6692.7,
+   "y": 4032,
+   "siirto": [
+    -4.2,
+    -18.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kimberley",
+    "yks": 167,
+    "km": 507
+   },
+   "lahinUusi": {
+    "id": "mbabane",
+    "yks": 170
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BWA",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (4 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "kimberley–viktorianputoukset (2)",
+     "a": "kimberley",
+     "b": "gaborone",
+     "steps": 1
+    },
+    {
+     "a": "gaborone",
+     "b": "viktorianputoukset",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "windhoek",
+   "era": "e08",
+   "name": "Windhoek",
+   "wiki": "Windhoek",
+   "maa": "NAM",
+   "lat": -22.57,
+   "lon": 17.0836,
+   "x": 6401.9,
+   "y": 3974.6,
+   "siirto": [
+    -0.8,
+    -2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "namib",
+    "yks": 61,
+    "km": 188
+   },
+   "lahinUusi": {
+    "id": "gaborone",
+    "yks": 296
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "NAM",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "namib",
+     "b": "windhoek",
+     "steps": 1
+    },
+    {
+     "a": "kimberley",
+     "b": "windhoek",
+     "steps": 5
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "moroni",
+   "era": "e08",
+   "name": "Moroni",
+   "wiki": "Moroni",
+   "maa": "COM",
+   "lat": -11.7036,
+   "lon": 43.2536,
+   "x": 7275.1,
+   "y": 3603.4,
+   "siirto": [
+    -90.3,
+    114.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "sansibar",
+    "yks": 84,
+    "km": 274
+   },
+   "lahinUusi": {
+    "id": "dodoma",
+    "yks": 249
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "COM",
+   "cityManner": "africa",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "sansibar",
+     "b": "moroni",
+     "type": "sea",
+     "steps": 1
+    },
+    {
+     "a": "kilimandzaro",
+     "b": "moroni",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "portlouis",
+   "era": "e08",
+   "name": "Port Louis",
+   "wiki": "Port Louis",
+   "maa": "MUS",
+   "lat": -20.1619,
+   "lon": 57.4989,
+   "x": 7750,
+   "y": 3892.6,
+   "siirto": [
+    -20,
+    36.7
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "madagaskar",
+    "yks": 288,
+    "km": 902
+   },
+   "lahinUusi": {
+    "id": "antananarivo",
+    "yks": 340
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "MUS",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (7 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "madagaskar",
+     "b": "portlouis",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "victoria",
+   "era": "e08",
+   "name": "Victoria",
+   "wiki": "Victoria",
+   "maa": "SYC",
+   "lat": 4.6236,
+   "lon": 55.4544,
+   "x": 7681.8,
+   "y": 3057.3,
+   "siirto": [
+    -14.8,
+    -2.4
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "rashafun",
+    "yks": 259,
+    "km": 861
+   },
+   "lahinUusi": {
+    "id": "mogadishu",
+    "yks": 322
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "SYC",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (6 kohdetta)",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "rashafun",
+     "b": "victoria",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "salalah",
+     "b": "victoria",
+     "type": "sea",
+     "steps": 6
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "antananarivo",
+   "era": "e08",
+   "name": "Antananarivo",
+   "wiki": "Antananarivo",
+   "maa": "MDG",
+   "lat": -18.91,
+   "lon": 47.525,
+   "x": 7411.8,
+   "y": 3855.5,
+   "siirto": [
+    -5.7,
+    6.2
+   ],
+   "lippu": "**päällekkäin**: Madagaskar-lehden kansi (Kuninkaanmäki, Hopeapalatsi, Ranavalona II) · **≤60**",
+   "lahin": {
+    "id": "madagaskar",
+    "yks": 53,
+    "km": 167
+   },
+   "lahinUusi": {
+    "id": "moroni",
+    "yks": 287
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MDG",
+   "cityManner": "africa",
+   "kohdekartta": "valmis (8 kohdetta)",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "madagaskar",
+     "b": "antananarivo",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 53 yks (167 km) kaupungista madagaskar",
+    "päällekkäin pelin lehden kanssa"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "taskent",
+   "era": "e09",
+   "name": "Taškent",
+   "wiki": "Taškent",
+   "maa": "UZB",
+   "lat": 41.3111,
+   "lon": 69.2797,
+   "x": 8140.5,
+   "y": 1749.6,
+   "siirto": [
+    -2.1,
+    -1.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "samarkand",
+    "yks": 101,
+    "km": 253
+   },
+   "lahinUusi": {
+    "id": "dusanbe",
+    "yks": 109
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "UZB",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "samarkand",
+     "b": "taskent",
+     "steps": 1
+    },
+    {
+     "a": "kashgar",
+     "b": "taskent",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "biskek",
+   "era": "e09",
+   "name": "Biškek",
+   "wiki": "Biškek",
+   "maa": "KGZ",
+   "lat": 42.8667,
+   "lon": 74.5667,
+   "x": 8316.7,
+   "y": 1687,
+   "siirto": [
+    -2.2,
+    -1.7
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kashgar",
+    "yks": 143,
+    "km": 351
+   },
+   "lahinUusi": {
+    "id": "taskent",
+    "yks": 187
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "KGZ",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kashgar",
+     "b": "biskek",
+     "steps": 2
+    },
+    {
+     "a": "samarkand",
+     "b": "biskek",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "dusanbe",
+   "era": "e09",
+   "name": "Dušanbe",
+   "wiki": "Dušanbe",
+   "maa": "TJK",
+   "lat": 38.5731,
+   "lon": 68.7864,
+   "x": 8123.8,
+   "y": 1857.4,
+   "siirto": [
+    -2.4,
+    -1.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "samarkand",
+    "yks": 74,
+    "km": 193
+   },
+   "lahinUusi": {
+    "id": "taskent",
+    "yks": 109
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TJK",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "samarkand–kashgar (4)",
+     "a": "samarkand",
+     "b": "dusanbe",
+     "steps": 1
+    },
+    {
+     "a": "dusanbe",
+     "b": "kashgar",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "asgabat",
+   "era": "e09",
+   "name": "Ašgabat",
+   "wiki": "Ašgabat",
+   "maa": "TKM",
+   "lat": 37.95,
+   "lon": 58.3833,
+   "x": 7778.9,
+   "y": 1882.4,
+   "siirto": [
+    -0.5,
+    -0.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "teheran",
+    "yks": 248,
+    "km": 653
+   },
+   "lahinUusi": {
+    "id": "dusanbe",
+    "yks": 346
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TKM",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "teheran–samarkand (5)",
+     "a": "teheran",
+     "b": "asgabat",
+     "steps": 2
+    },
+    {
+     "a": "asgabat",
+     "b": "samarkand",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "islamabad",
+   "era": "e09",
+   "name": "Islamabad",
+   "wiki": "Islamabad",
+   "maa": "PAK",
+   "lat": 33.6989,
+   "lon": 73.0369,
+   "x": 8263.5,
+   "y": 2044.6,
+   "siirto": [
+    -4.4,
+    0.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kabul",
+    "yks": 127,
+    "km": 353
+   },
+   "lahinUusi": {
+    "id": "dusanbe",
+    "yks": 234
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "PAK",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kabul",
+     "b": "islamabad",
+     "steps": 2
+    },
+    {
+     "a": "delhi",
+     "b": "islamabad",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "thimphu",
+   "era": "e09",
+   "name": "Thimphu",
+   "wiki": "Thimphu",
+   "maa": "BTN",
+   "lat": 27.4713,
+   "lon": 89.6337,
+   "x": 8824,
+   "y": 2259.4,
+   "siirto": [
+    2.9,
+    -13.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "lhasa",
+    "yks": 126,
+    "km": 375
+   },
+   "lahinUusi": {
+    "id": "dhaka",
+    "yks": 145
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BTN",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "lhasa",
+     "b": "thimphu",
+     "steps": 2
+    },
+    {
+     "a": "kathmandu",
+     "b": "thimphu",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "dhaka",
+   "era": "e09",
+   "name": "Dhaka",
+   "wiki": "Dhaka",
+   "maa": "BGD",
+   "lat": 23.7289,
+   "lon": 90.3944,
+   "x": 8848.1,
+   "y": 2402.6,
+   "siirto": [
+    1.7,
+    -3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "kolkata",
+    "yks": 80,
+    "km": 246
+   },
+   "lahinUusi": {
+    "id": "thimphu",
+    "yks": 145
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BGD",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "kolkata",
+     "b": "dhaka",
+     "steps": 1
+    },
+    {
+     "a": "mandalay",
+     "b": "dhaka",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "male",
+   "era": "e10",
+   "name": "Malé",
+   "wiki": "Malé",
+   "maa": "MDV",
+   "lat": 4.175,
+   "lon": 73.5083,
+   "x": 8283.6,
+   "y": 3072.2,
+   "siirto": [
+    10.7,
+    -14.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "colombo",
+    "yks": 258,
+    "km": 860
+   },
+   "lahinUusi": {
+    "id": "srijayawardenepurakotte",
+    "yks": 259
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "MDV",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "colombo",
+     "b": "male",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "mumbai",
+     "b": "male",
+     "type": "sea",
+     "steps": 7
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "naypyidaw",
+   "era": "e10",
+   "name": "Naypyidaw",
+   "wiki": "Naypyidaw",
+   "maa": "MMR",
+   "lat": 19.7475,
+   "lon": 96.115,
+   "x": 9038.2,
+   "y": 2544.1,
+   "siirto": [
+    1,
+    -0.6
+   ],
+   "lippu": "**herkkä**: spec-asia Myanmar-linjaus (ei juntta- eikä konfliktisisältöä)",
+   "lahin": {
+    "id": "mandalay",
+    "yks": 78,
+    "km": 246
+   },
+   "lahinUusi": {
+    "id": "vientiane",
+    "yks": 224
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MMR",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "yangon–mandalay (3)",
+     "a": "yangon",
+     "b": "naypyidaw",
+     "steps": 2
+    },
+    {
+     "a": "naypyidaw",
+     "b": "mandalay",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "vientiane",
+   "era": "e10",
+   "name": "Vientiane",
+   "wiki": "Vientiane",
+   "maa": "LAO",
+   "lat": 17.98,
+   "lon": 102.63,
+   "x": 9254,
+   "y": 2605.4,
+   "siirto": [
+    -0.3,
+    -0.3
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "hanoi",
+    "yks": 149,
+    "km": 472
+   },
+   "lahinUusi": {
+    "id": "naypyidaw",
+    "yks": 224
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "LAO",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "bangkok–hanoi (4)",
+     "a": "bangkok",
+     "b": "vientiane",
+     "steps": 2
+    },
+    {
+     "a": "vientiane",
+     "b": "hanoi",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "phnompenh",
+   "era": "e10",
+   "name": "Phnom Penh",
+   "wiki": "Phnom Penh",
+   "maa": "KHM",
+   "lat": 11.5696,
+   "lon": 104.921,
+   "x": 9329.5,
+   "y": 2821.1,
+   "siirto": [
+    -1.2,
+    -3.1
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "bangkok",
+    "yks": 163,
+    "km": 534
+   },
+   "lahinUusi": {
+    "id": "vientiane",
+    "yks": 229
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "KHM",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "bangkok",
+     "b": "phnompenh",
+     "steps": 2
+    },
+    {
+     "a": "hanoi",
+     "b": "phnompenh",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "kualalumpur",
+   "era": "e10",
+   "name": "Kuala Lumpur",
+   "wiki": "Kuala Lumpur",
+   "maa": "MYS",
+   "lat": 3.1478,
+   "lon": 101.6953,
+   "x": 9219.2,
+   "y": 3096.2,
+   "siirto": [
+    -4,
+    -10.4
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "singapore",
+    "yks": 87,
+    "km": 291
+   },
+   "lahinUusi": {
+    "id": "phnompenh",
+    "yks": 296
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "MYS",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "singapore",
+     "b": "kualalumpur",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "bandarseribegawan",
+   "era": "e10",
+   "name": "Bandar Seri Begawan",
+   "wiki": "Bandar Seri Begawan",
+   "maa": "BRN",
+   "lat": 4.9167,
+   "lon": 114.9167,
+   "x": 9665.9,
+   "y": 3047.5,
+   "siirto": [
+    -69.9,
+    -56.4
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "borneo",
+    "yks": 192,
+    "km": 639
+   },
+   "lahinUusi": {
+    "id": "phnompenh",
+    "yks": 405
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BRN",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "singapore",
+     "b": "bandarseribegawan",
+     "type": "sea",
+     "steps": 5
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "pjongjang",
+   "era": "e10",
+   "name": "Pjongjang",
+   "wiki": "Pjongjang",
+   "maa": "PRK",
+   "lat": 39.0167,
+   "lon": 125.7475,
+   "x": 10023.3,
+   "y": 1838.8,
+   "siirto": [
+    -1.6,
+    -2.5
+   ],
+   "lippu": "**herkkä**: ei nykypolitiikkaa",
+   "lahin": {
+    "id": "soul",
+    "yks": 72,
+    "km": 187
+   },
+   "lahinUusi": {
+    "id": "vientiane",
+    "yks": 1086
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "PRK",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "soul",
+     "b": "pjongjang",
+     "steps": 1
+    },
+    {
+     "a": "vladivostok",
+     "b": "pjongjang",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "srijayawardenepurakotte",
+   "era": "e10",
+   "name": "Sri Jayawardenepura Kotte",
+   "wiki": "Sri Jayawardenepura Kotte",
+   "maa": "LKA",
+   "lat": 6.9108,
+   "lon": 79.8878,
+   "x": 8518.2,
+   "y": 2961.8,
+   "siirto": [
+    21.9,
+    -19
+   ],
+   "lippu": "**päällekkäin**: Colombo 6 km:n päässä · **≤60**",
+   "lahin": {
+    "id": "colombo",
+    "yks": 2,
+    "km": 6
+   },
+   "lahinUusi": {
+    "id": "male",
+    "yks": 259
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "LKA",
+   "cityManner": "asia",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "colombo",
+     "b": "srijayawardenepurakotte",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 2 yks (6 km) kaupungista colombo",
+    "päällekkäin pelin lehden kanssa",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "washington",
+   "era": "e11",
+   "name": "Washington",
+   "wiki": "Washington",
+   "maa": "USA",
+   "lat": 38.895,
+   "lon": -77.0367,
+   "x": 3262.5,
+   "y": 1840.3,
+   "siirto": [
+    -2.9,
+    -5.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "newyork",
+    "yks": 122,
+    "km": 316
+   },
+   "lahinUusi": {
+    "id": "ottawa",
+    "yks": 282
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "USA",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "appalakit–newyork (3)",
+     "a": "appalakit",
+     "b": "washington",
+     "steps": 2
+    },
+    {
+     "a": "washington",
+     "b": "newyork",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "ottawa",
+   "era": "e11",
+   "name": "Ottawa",
+   "wiki": "Ottawa",
+   "maa": "CAN",
+   "lat": 45.4247,
+   "lon": -75.695,
+   "x": 3315.1,
+   "y": 1563.6,
+   "siirto": [
+    5,
+    -20.6
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "montreal",
+    "yks": 73,
+    "km": 170
+   },
+   "lahinUusi": {
+    "id": "washington",
+    "yks": 282
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CAN",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "korvaa": "toronto–montreal (3)",
+     "a": "toronto",
+     "b": "ottawa",
+     "steps": 2
+    },
+    {
+     "a": "ottawa",
+     "b": "montreal",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "belmopan",
+   "era": "e11",
+   "name": "Belmopan",
+   "wiki": "Belmopan",
+   "maa": "BLZ",
+   "lat": 17.25,
+   "lon": -88.7675,
+   "x": 2873.2,
+   "y": 2638.1,
+   "siirto": [
+    -1.2,
+    7.3
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "guatemala",
+    "yks": 92,
+    "km": 295
+   },
+   "lahinUusi": {
+    "id": "sansalvador",
+    "yks": 107
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BLZ",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "merida–guatemala (4)",
+     "a": "merida",
+     "b": "belmopan",
+     "steps": 2
+    },
+    {
+     "a": "belmopan",
+     "b": "guatemala",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "sansalvador",
+   "era": "e11",
+   "name": "San Salvador",
+   "wiki": "San Salvador",
+   "maa": "SLV",
+   "lat": 13.6976,
+   "lon": -89.1912,
+   "x": 2861.1,
+   "y": 2744.3,
+   "siirto": [
+    0.8,
+    -7.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "guatemala",
+    "yks": 55,
+    "km": 180
+   },
+   "lahinUusi": {
+    "id": "tegucigalpa",
+    "yks": 66
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SLV",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "guatemala",
+     "b": "sansalvador",
+     "steps": 1
+    },
+    {
+     "a": "merida",
+     "b": "sansalvador",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 55 yks (180 km) kaupungista guatemala"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "tegucigalpa",
+   "era": "e11",
+   "name": "Tegucigalpa",
+   "wiki": "Tegucigalpa",
+   "maa": "HND",
+   "lat": 14.1058,
+   "lon": -87.2047,
+   "x": 2926.2,
+   "y": 2731.6,
+   "siirto": [
+    -0.3,
+    -6.7
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "managua",
+    "yks": 71,
+    "km": 231
+   },
+   "lahinUusi": {
+    "id": "sansalvador",
+    "yks": 66
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "HND",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "korvaa": "guatemala–managua (3)",
+     "a": "guatemala",
+     "b": "tegucigalpa",
+     "steps": 2
+    },
+    {
+     "a": "tegucigalpa",
+     "b": "managua",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "sanjose",
+   "era": "e11",
+   "name": "San José",
+   "wiki": "San José",
+   "maa": "CRI",
+   "lat": 9.9327,
+   "lon": -84.0796,
+   "x": 3028.2,
+   "y": 2871.1,
+   "siirto": [
+    -2.4,
+    -8.2
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "managua",
+    "yks": 104,
+    "km": 341
+   },
+   "lahinUusi": {
+    "id": "tegucigalpa",
+    "yks": 173
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CRI",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "managua",
+     "b": "sanjose",
+     "steps": 1
+    }
+   ],
+   "reittitapa": "maa 1",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "santodomingo",
+   "era": "e11",
+   "name": "Santo Domingo",
+   "wiki": "Santo Domingo",
+   "maa": "DOM",
+   "lat": 18.4625,
+   "lon": -69.9361,
+   "x": 3488.5,
+   "y": 2595,
+   "siirto": [
+    -12.6,
+    9.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 132,
+    "km": 417
+   },
+   "lahinUusi": {
+    "id": "portauprince",
+    "yks": 86
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "DOM",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "santodomingo",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "portauprince",
+   "era": "e11",
+   "name": "Port-au-Prince",
+   "wiki": "Port-au-Prince",
+   "maa": "HTI",
+   "lat": 18.5469,
+   "lon": -72.3403,
+   "x": 3402.8,
+   "y": 2597,
+   "siirto": [
+    -19.2,
+    10.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 217,
+    "km": 688
+   },
+   "lahinUusi": {
+    "id": "santodomingo",
+    "yks": 86
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "HTI",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "portauprince",
+     "type": "sea",
+     "steps": 5
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "kingston",
+   "era": "e11",
+   "name": "Kingston",
+   "wiki": "Kingston",
+   "maa": "JAM",
+   "lat": 17.9714,
+   "lon": -76.7931,
+   "x": 3273.6,
+   "y": 2606.1,
+   "siirto": [
+    -33.5,
+    11
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "havanna",
+    "yks": 297,
+    "km": 942
+   },
+   "lahinUusi": {
+    "id": "portauprince",
+    "yks": 130
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "JAM",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "end",
+   "lx": -20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "havanna",
+     "b": "kingston",
+     "type": "sea",
+     "steps": 4
+    },
+    {
+     "a": "panama",
+     "b": "kingston",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "nassau",
+   "era": "e12",
+   "name": "Nassau",
+   "wiki": "Nassau",
+   "maa": "BHS",
+   "lat": 25.078,
+   "lon": -77.339,
+   "x": 3255.4,
+   "y": 2357.9,
+   "siirto": [
+    -27.9,
+    0.4
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "miami",
+    "yks": 119,
+    "km": 360
+   },
+   "lahinUusi": {
+    "id": "kingston",
+    "yks": 249
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "BHS",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "miami",
+     "b": "nassau",
+     "type": "sea",
+     "steps": 2
+    },
+    {
+     "a": "sanjuan",
+     "b": "nassau",
+     "type": "sea",
+     "steps": 6
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "saintjohns",
+   "era": "e12",
+   "name": "Saint John's",
+   "wiki": "Saint John's",
+   "maa": "ATG",
+   "lat": 17.121,
+   "lon": -61.845,
+   "x": 3771.8,
+   "y": 2635.3,
+   "siirto": [
+    -7.2,
+    8.6
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 156,
+    "km": 499
+   },
+   "lahinUusi": {
+    "id": "basseterre",
+    "yks": 30
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "ATG",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "sanjuan",
+     "b": "saintjohns",
+     "type": "sea",
+     "steps": 2
+    },
+    {
+     "a": "caracas",
+     "b": "saintjohns",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: basseterre 30 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "basseterre",
+   "era": "e12",
+   "name": "Basseterre",
+   "wiki": "Basseterre",
+   "maa": "KNA",
+   "lat": 17.2983,
+   "lon": -62.7342,
+   "x": 3742.2,
+   "y": 2629.2,
+   "siirto": [
+    -7.3,
+    8.5
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 126,
+    "km": 402
+   },
+   "lahinUusi": {
+    "id": "saintjohns",
+    "yks": 30
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "KNA",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "sanjuan",
+     "b": "basseterre",
+     "type": "sea",
+     "steps": 2
+    },
+    {
+     "a": "caracas",
+     "b": "basseterre",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: saintjohns 30 yks"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "roseau",
+   "era": "e12",
+   "name": "Roseau",
+   "wiki": "Roseau",
+   "maa": "DMA",
+   "lat": 15.3,
+   "lon": -61.3833,
+   "x": 3787.2,
+   "y": 2697.6,
+   "siirto": [
+    -5.8,
+    8.3
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 195,
+    "km": 627
+   },
+   "lahinUusi": {
+    "id": "castries",
+    "yks": 46
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "DMA",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "sanjuan",
+     "b": "roseau",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "caracas",
+     "b": "roseau",
+     "type": "sea",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: castries 46 yks"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "castries",
+   "era": "e12",
+   "name": "Castries",
+   "wiki": "Castries",
+   "maa": "LCA",
+   "lat": 14.0108,
+   "lon": -60.9894,
+   "x": 3800.4,
+   "y": 2741.5,
+   "siirto": [
+    -4.9,
+    8
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "sanjuan",
+    "yks": 230,
+    "km": 747
+   },
+   "lahinUusi": {
+    "id": "kingstown",
+    "yks": 30
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "LCA",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "sanjuan",
+     "b": "castries",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "caracas",
+     "b": "castries",
+     "type": "sea",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: kingstown 30 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "kingstown",
+   "era": "e12",
+   "name": "Kingstown",
+   "wiki": "Kingstown",
+   "maa": "VCT",
+   "lat": 13.1553,
+   "lon": -61.2274,
+   "x": 3792.4,
+   "y": 2770.5,
+   "siirto": [
+    -4.3,
+    7.9
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "caracas",
+    "yks": 214,
+    "km": 695
+   },
+   "lahinUusi": {
+    "id": "castries",
+    "yks": 30
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "VCT",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "kingstown",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "sanjuan",
+     "b": "kingstown",
+     "type": "sea",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: castries 30 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "bridgetown",
+   "era": "e12",
+   "name": "Bridgetown",
+   "wiki": "Bridgetown",
+   "maa": "BRB",
+   "lat": 13.0975,
+   "lon": -59.6167,
+   "x": 3846.1,
+   "y": 2772.5,
+   "siirto": [
+    -4.8,
+    7.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "caracas",
+    "yks": 262,
+    "km": 851
+   },
+   "lahinUusi": {
+    "id": "kingstown",
+    "yks": 54
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "BRB",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "bridgetown",
+     "type": "sea",
+     "steps": 4
+    },
+    {
+     "a": "sanjuan",
+     "b": "bridgetown",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: kingstown 54 yks",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "saari",
+   "id": "stgeorges",
+   "era": "e12",
+   "name": "St. George's",
+   "wiki": "St. George's",
+   "maa": "GRD",
+   "lat": 12.0525,
+   "lon": -61.7531,
+   "x": 3774.9,
+   "y": 2807.8,
+   "siirto": [
+    -3.5,
+    7.9
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "caracas",
+    "yks": 183,
+    "km": 596
+   },
+   "lahinUusi": {
+    "id": "kingstown",
+    "yks": 41
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "GRD",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "stgeorges",
+     "type": "sea",
+     "steps": 2
+    },
+    {
+     "a": "sanjuan",
+     "b": "stgeorges",
+     "type": "sea",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: kingstown 41 yks"
+   ]
+  },
+  {
+   "paikka": "rannikko (siirretty maalle)",
+   "id": "portofspain",
+   "era": "e12",
+   "name": "Port of Spain",
+   "wiki": "Port of Spain",
+   "maa": "TTO",
+   "lat": 10.6667,
+   "lon": -61.5167,
+   "x": 3764.1,
+   "y": 2853,
+   "siirto": [
+    -3.1,
+    7.3
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "caracas",
+    "yks": 162,
+    "km": 531
+   },
+   "lahinUusi": {
+    "id": "stgeorges",
+    "yks": 46
+   },
+   "alle60": false,
+   "alle60uusi": true,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "TTO",
+   "cityManner": "northamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "caracas",
+     "b": "portofspain",
+     "type": "sea",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60 toisesta uudesta: stgeorges 46 yks"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "georgetown",
+   "era": "e13",
+   "name": "Georgetown",
+   "wiki": "Georgetown",
+   "maa": "GUY",
+   "lat": 6.8058,
+   "lon": -58.1508,
+   "x": 3890.6,
+   "y": 2987.2,
+   "siirto": [
+    -4.4,
+    2.9
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "boavista",
+    "yks": 153,
+    "km": 506
+   },
+   "lahinUusi": {
+    "id": "paramaribo",
+    "yks": 100
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "GUY",
+   "cityManner": "southamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "boavista",
+     "b": "georgetown",
+     "steps": 2
+    },
+    {
+     "a": "caracas",
+     "b": "georgetown",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "paramaribo",
+   "era": "e13",
+   "name": "Paramaribo",
+   "wiki": "Paramaribo",
+   "maa": "SUR",
+   "lat": 5.852,
+   "lon": -55.203,
+   "x": 3984.4,
+   "y": 3020.7,
+   "siirto": [
+    -8.8,
+    4.5
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "cayenne",
+    "yks": 98,
+    "km": 327
+   },
+   "lahinUusi": {
+    "id": "georgetown",
+    "yks": 100
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "SUR",
+   "cityManner": "southamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "cayenne",
+     "b": "paramaribo",
+     "steps": 1
+    },
+    {
+     "a": "boavista",
+     "b": "paramaribo",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "brasilia",
+   "era": "e13",
+   "name": "Brasília",
+   "wiki": "Brasília",
+   "maa": "BRA",
+   "lat": -15.7939,
+   "lon": -47.8828,
+   "x": 4227,
+   "y": 3721.7,
+   "siirto": [
+    -10.3,
+    -20.6
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "bananal",
+    "yks": 163,
+    "km": 523
+   },
+   "lahinUusi": {
+    "id": "lapaz",
+    "yks": 667
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BRA",
+   "cityManner": "southamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "bananal",
+     "b": "brasilia",
+     "steps": 2
+    },
+    {
+     "a": "ouropreto",
+     "b": "brasilia",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "maa",
+   "id": "lapaz",
+   "era": "e13",
+   "name": "La Paz",
+   "wiki": "La Paz",
+   "maa": "BOL",
+   "lat": -16.4958,
+   "lon": -68.1333,
+   "x": 3561.8,
+   "y": 3765.9,
+   "siirto": [
+    -0.4,
+    -0.4
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "titicaca",
+    "yks": 46,
+    "km": 149
+   },
+   "lahinUusi": {
+    "id": "santiagodechile",
+    "yks": 605
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "BOL",
+   "cityManner": "southamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "titicaca",
+     "b": "lapaz",
+     "steps": 1
+    },
+    {
+     "a": "santacruz",
+     "b": "lapaz",
+     "steps": 2
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 46 yks (149 km) kaupungista titicaca"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "santiagodechile",
+   "era": "e13",
+   "name": "Santiago de Chile",
+   "wiki": "Santiago de Chile",
+   "maa": "CHL",
+   "lat": -33.4375,
+   "lon": -70.65,
+   "x": 3492,
+   "y": 4367.2,
+   "siirto": [
+    13.7,
+    -1.7
+   ],
+   "lippu": "**≤60**",
+   "lahin": {
+    "id": "valparaiso",
+    "yks": 35,
+    "km": 98
+   },
+   "lahinUusi": {
+    "id": "lapaz",
+    "yks": 605
+   },
+   "alle60": true,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "CHL",
+   "cityManner": "southamerica",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": false,
+   "reitit": [
+    {
+     "a": "valparaiso",
+     "b": "santiagodechile",
+     "steps": 1
+    },
+    {
+     "a": "puertomontt",
+     "b": "santiagodechile",
+     "steps": 4
+    }
+   ],
+   "reittitapa": "maa 2",
+   "airport": false,
+   "suositus": "kevyt piste (maakortin pääkaupunkirivi, kuten e01–e03)",
+   "syyt": [
+    "≤60: 35 yks (98 km) kaupungista valparaiso",
+    "nimikyltti ei mahdu"
+   ]
+  },
+  {
+   "paikka": "maa",
+   "id": "canberra",
+   "era": "e14",
+   "name": "Canberra",
+   "wiki": "Canberra",
+   "maa": "AUS",
+   "lat": -35.2931,
+   "lon": 149.1269,
+   "x": 10798.6,
+   "y": 4427.8,
+   "siirto": [
+    -5.6,
+    -10.8
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "sydney",
+    "yks": 86,
+    "km": 235
+   },
+   "lahinUusi": {
+    "id": "nukualofa",
+    "yks": 1296
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": true,
+   "saari": false,
+   "cityCountry": "AUS",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "korvaa": "sydney–melbourne (4)",
+     "a": "sydney",
+     "b": "canberra",
+     "steps": 1
+    },
+    {
+     "a": "canberra",
+     "b": "melbourne",
+     "steps": 3
+    }
+   ],
+   "reittitapa": "halkaisu",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "apia",
+   "era": "e14",
+   "name": "Apia",
+   "wiki": "Apia",
+   "maa": "WSM",
+   "lat": -13.8333,
+   "lon": -171.8333,
+   "x": 105.6,
+   "y": 3675.5,
+   "siirto": [
+    -4.2,
+    -9.6
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "suva",
+    "yks": 356,
+    "km": 1156
+   },
+   "lahinUusi": {
+    "id": "nukualofa",
+    "yks": 275
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "WSM",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "suva",
+     "b": "apia",
+     "type": "sea",
+     "steps": 5
+    },
+    {
+     "a": "portvila",
+     "b": "apia",
+     "type": "sea",
+     "steps": 9
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "nukualofa",
+   "era": "e14",
+   "name": "Nukuʻalofa",
+   "wiki": "Nukuʻalofa",
+   "maa": "TON",
+   "lat": -21.1343,
+   "lon": -175.2018,
+   "x": 11993.3,
+   "y": 3926.4,
+   "siirto": [
+    -5.6,
+    -12.8
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "suva",
+    "yks": 252,
+    "km": 784
+   },
+   "lahinUusi": {
+    "id": "apia",
+    "yks": 275
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "TON",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "suva",
+     "b": "nukualofa",
+     "type": "sea",
+     "steps": 3
+    },
+    {
+     "a": "portvila",
+     "b": "nukualofa",
+     "type": "sea",
+     "steps": 8
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "funafuti",
+   "era": "e14",
+   "name": "Funafuti",
+   "wiki": "Funafuti",
+   "maa": "TUV",
+   "lat": -8.5211,
+   "lon": 179.1966,
+   "x": 11806.6,
+   "y": 3496.2,
+   "siirto": [
+    -4.1,
+    -9
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "suva",
+    "yks": 310,
+    "km": 1024
+   },
+   "lahinUusi": {
+    "id": "apia",
+    "yks": 351
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "TUV",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "suva",
+     "b": "funafuti",
+     "type": "sea",
+     "steps": 4
+    },
+    {
+     "a": "portvila",
+     "b": "funafuti",
+     "type": "sea",
+     "steps": 6
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "southtarawa",
+   "era": "e14",
+   "name": "South Tarawa",
+   "wiki": "South Tarawa",
+   "maa": "KIR",
+   "lat": 1.3333,
+   "lon": 172.9667,
+   "x": 11598.9,
+   "y": 3167,
+   "siirto": [
+    -1.5,
+    -2.9
+   ],
+   "lippu": "",
+   "lahin": {
+    "id": "honiara",
+    "yks": 564,
+    "km": 1884
+   },
+   "lahinUusi": {
+    "id": "majuro",
+    "yks": 199
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "KIR",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "honiara",
+     "b": "southtarawa",
+     "type": "sea",
+     "steps": 8
+    },
+    {
+     "a": "portvila",
+     "b": "southtarawa",
+     "type": "sea",
+     "steps": 9
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "majuro",
+   "era": "e14",
+   "name": "Majuro",
+   "wiki": "Majuro",
+   "maa": "MHL",
+   "lat": 7.0918,
+   "lon": 171.3802,
+   "x": 11546,
+   "y": 2974.7,
+   "siirto": [
+    -1.5,
+    -2.8
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "honiara",
+    "yks": 671,
+    "km": 2223
+   },
+   "lahinUusi": {
+    "id": "southtarawa",
+    "yks": 199
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "MHL",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "honiara",
+     "b": "majuro",
+     "type": "sea",
+     "steps": 9
+    },
+    {
+     "a": "portvila",
+     "b": "majuro",
+     "type": "sea",
+     "steps": 11
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "palikir",
+   "era": "e14",
+   "name": "Palikir",
+   "wiki": "Palikir",
+   "maa": "FSM",
+   "lat": 6.9178,
+   "lon": 158.185,
+   "x": 11106.2,
+   "y": 2980.5,
+   "siirto": [
+    -1,
+    -1.6
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "honiara",
+    "yks": 548,
+    "km": 1817
+   },
+   "lahinUusi": {
+    "id": "yaren",
+    "yks": 383
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "FSM",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "honiara",
+     "b": "palikir",
+     "type": "sea",
+     "steps": 7
+    },
+    {
+     "a": "portvila",
+     "b": "palikir",
+     "type": "sea",
+     "steps": 12
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "yaren",
+   "era": "e14",
+   "name": "Yaren",
+   "wiki": "Yaren",
+   "maa": "NRU",
+   "lat": -0.5477,
+   "lon": 166.9209,
+   "x": 11397.4,
+   "y": 3229.8,
+   "siirto": [
+    -2.2,
+    -3.8
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "honiara",
+    "yks": 377,
+    "km": 1260
+   },
+   "lahinUusi": {
+    "id": "southtarawa",
+    "yks": 211
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "NRU",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "honiara",
+     "b": "yaren",
+     "type": "sea",
+     "steps": 5
+    },
+    {
+     "a": "portvila",
+     "b": "yaren",
+     "type": "sea",
+     "steps": 8
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  },
+  {
+   "paikka": "saari",
+   "id": "ngerulmud",
+   "era": "e14",
+   "name": "Ngerulmud",
+   "wiki": "Ngerulmud",
+   "maa": "PLW",
+   "lat": 7.5006,
+   "lon": 134.6242,
+   "x": 10320.8,
+   "y": 2961,
+   "siirto": [
+    0.9,
+    -4
+   ],
+   "lippu": "**pieni**",
+   "lahin": {
+    "id": "sepik",
+    "yks": 492,
+    "km": 1630
+   },
+   "lahinUusi": {
+    "id": "bandarseribegawan",
+    "yks": 661
+   },
+   "alle60": false,
+   "alle60uusi": false,
+   "maalla": false,
+   "saari": true,
+   "cityCountry": "PLW",
+   "cityManner": "oceania",
+   "kohdekartta": "puuttuu",
+   "la": "start",
+   "lx": 20,
+   "ly": 5,
+   "nimioOk": true,
+   "reitit": [
+    {
+     "a": "dili",
+     "b": "ngerulmud",
+     "type": "sea",
+     "steps": 8
+    },
+    {
+     "a": "taipei",
+     "b": "ngerulmud",
+     "type": "sea",
+     "steps": 10
+    }
+   ],
+   "reittitapa": "meri",
+   "airport": false,
+   "suositus": "pelikaupunki mahdollinen",
+   "syyt": []
+  }
+ ]
+}

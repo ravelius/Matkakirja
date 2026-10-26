@@ -2591,7 +2591,7 @@ export const TAHTITAIVAS = {
     kuviotViite: "van der Sluys, Marc (2005-2023), hemel.waarnemen.com. DOI 10.5281/zenodo.10397192.",
     nimet: "IAU Catalog of Star Names (IAU-CSN), tähtien viralliset erisnimet",
     nimetViite: "IAU Division C Working Group on Star Names (WGSN), päivitetty 2022-04-04.",
-    suomi: "Wikipedia-artikkelin \"Tähdistö\" taulukko: 88 tähdistön suomenkieliset ja latinankieliset nimet, lyhenteet ja genetiivit",
+    suomi: "Wikipedia-artikkelin ”Tähdistö” taulukko: 88 tähdistön suomenkieliset ja latinankieliset nimet, lyhenteet ja genetiivit",
     suomiViite: "Wikipedia (fi), artikkeli \"Tähdistö\".",
     haettu: "2026-08-04",
   },

@@ -1,0 +1,379 @@
+{
+ "kaupunki": "honiara",
+ "kaupunkiQ": "Q40921",
+ "kohteet": [
+  {
+   "q": "Q192767",
+   "nimi": "Guadalcanal",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -9.59,
+   "lon": 160.235,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Visale, Solomon Islands.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Visale%2C_Solomon_Islands.JPG?width=1280",
+     "tekija": "StewyOz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Visale%2C_Solomon_Islands.JPG",
+     "selite": "Guadalcanalin rannikolla vihreät kukkulat laskeutuvat valkohiekkaiselle rannalle.",
+     "leveys": 1800,
+     "korkeus": 1202,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Fighter 2 airfield on Guadalcanal 1943 (USMC 108547).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Fighter_2_airfield_on_Guadalcanal_1943_(USMC_108547).JPG?width=1280",
+     "tekija": "U.S. Marine Corps photo 127-GR-88-108547",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Fighter_2_airfield_on_Guadalcanal_1943_(USMC_108547).JPG",
+     "selite": "Vuoden 1943 ilmakuvassa Guadalcanalin sotilaskenttä on raivattu sademetsän keskelle.",
+     "leveys": 5870,
+     "korkeus": 4664,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q852433",
+   "nimi": "Itä-Rennell",
+   "peruste": "UNESCO",
+   "koko_m": 5000,
+   "lat": -11.68333,
+   "lon": 160.33333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Forestandcoralroads.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forestandcoralroads.jpg?width=1280",
+     "tekija": "Phenss (talk)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Forestandcoralroads.jpg",
+     "selite": "Itä-Rennellin sademetsän halki kulkee korallisorasta tehty tie, ja saari on UNESCOn suojelukohde.",
+     "leveys": 2848,
+     "korkeus": 2134,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Farmingplotrennell.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Farmingplotrennell.jpg?width=1280",
+     "tekija": "Phenss",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Farmingplotrennell.jpg",
+     "selite": "Saaren viljelypalstat ovat sademetsän keskelle raivattuja pieniä aukioita.",
+     "leveys": 2848,
+     "korkeus": 2134,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28747002",
+   "nimi": "Holy Crossin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -9.43625,
+   "lon": 159.96347,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Holy Cross Cathedral, St Mary Catholic. Front view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Cathedral%2C_St_Mary_Catholic._Front_view.jpg?width=1280",
+     "tekija": "Phenss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Cathedral%2C_St_Mary_Catholic._Front_view.jpg",
+     "selite": "Holy Crossin katedraalin jyrkkä satulakatto muistuttaa perinteistä saarelaista kattorakennetta.",
+     "leveys": 3451,
+     "korkeus": 2059,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Holy Cross Cathedral in Honiara.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Cathedral_in_Honiara.jpg?width=1280",
+     "tekija": "Torbenbrinker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Cathedral_in_Honiara.jpg",
+     "selite": "Katedraalin sisällä avoin puurakenteinen katto kohoaa penkkirivien yläpuolelle.",
+     "leveys": 5184,
+     "korkeus": 3559,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q859876",
+   "nimi": "Honiaran kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -9.428,
+   "lon": 160.05479,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Honiara Airport, Solomon Islands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honiara_Airport%2C_Solomon_Islands.jpg?width=1280",
+     "tekija": "Torbenbrinker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honiara_Airport%2C_Solomon_Islands.jpg",
+     "selite": "Lentoaseman terminaali nousee Henderson Fieldin entiselle sotilaskentälle.",
+     "leveys": 5184,
+     "korkeus": 3619,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Honiara Airport.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honiara_Airport.jpg?width=1280",
+     "tekija": "Jenny Scott",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honiara_Airport.jpg",
+     "selite": "Lentokentän laaja nurmi on paikka, jonka hallinnasta Guadalcanalin taistelussa kamppailtiin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1673110",
+   "nimi": "Ironbottom Sound",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -9.25,
+   "lon": 160,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "US Navy Destroyer Squadron 12 in Ironbottom Sound in early 1944.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Navy_Destroyer_Squadron_12_in_Ironbottom_Sound_in_early_1944.jpg?width=1280",
+     "tekija": "U.S. Navy",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:US_Navy_Destroyer_Squadron_12_in_Ironbottom_Sound_in_early_1944.jpg",
+     "selite": "Merenkulkuväylän nimi tulee sen pohjaan upotetuista sotalaivoista, ja taustalla kohoaa Savon saari.",
+     "leveys": 5698,
+     "korkeus": 4517,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Benham-class destroyer in Ironbottom Sound on 7 August 1942 (NH 97761).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Benham-class_destroyer_in_Ironbottom_Sound_on_7_August_1942_(NH_97761).jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Benham-class_destroyer_in_Ironbottom_Sound_on_7_August_1942_(NH_97761).jpg",
+     "selite": "Elokuussa 1942 hävittäjä purjehtii salmella, jossa käytiin vuoden mittainen meritaistelu.",
+     "leveys": 5161,
+     "korkeus": 3821,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1059040",
+   "nimi": "Savon saari",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": -9.13333,
+   "lon": 159.81667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ISS056-E-169144 - View of Earth.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS056-E-169144_-_View_of_Earth.jpg?width=1280",
+     "tekija": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS056-E-169144_-_View_of_Earth.jpg",
+     "selite": "Avaruudesta Savon pyöreä tulivuorisaari erottuu tummansinisellä merellä.",
+     "leveys": 3712,
+     "korkeus": 5568,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q864870",
+   "nimi": "Tulagi",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -9.1,
+   "lon": 160.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rainbow over Tulagi Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rainbow_over_Tulagi_Island.jpg?width=1280",
+     "tekija": "mjwinoz",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rainbow_over_Tulagi_Island.jpg",
+     "selite": "Tulagi oli Salomonsaarten brittiläinen hallintokeskus ennen Honiaraa.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16891911",
+   "nimi": "Guadalcanalin amerikkalainen muistomerkki",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -9.44261,
+   "lon": 159.958,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Battle of Guadalcanal- 84th anniversary of Operation Watchtower (9855809).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Battle_of_Guadalcanal-_84th_anniversary_of_Operation_Watchtower_(9855809).jpg?width=1280",
+     "tekija": "U.S. Marine Corps photo by Cpl. Grant Schirmer",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_Guadalcanal-_84th_anniversary_of_Operation_Watchtower_(9855809).jpg",
+     "selite": "Kukkulalla seisova granittimuistomerkki muistaa Guadalcanalin taistelussa 1942–43 kaatuneita.",
+     "leveys": 1815,
+     "korkeus": 1021,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q106512453",
+   "nimi": "Salomonsaarten kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -9.43111,
+   "lon": 159.95417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Solomon Islands National Museum (9574486108).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Solomon_Islands_National_Museum_(9574486108).jpg?width=1280",
+     "tekija": "Jenny Scott from Adelaide, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Solomon_Islands_National_Museum_(9574486108).jpg",
+     "selite": "Museorakennuksen jyrkkä, olkikattoa muistuttava katto erottuu rantatien varrella.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Honiara National Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honiara_National_Museum.jpg?width=1280",
+     "tekija": "Torbenbrinker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honiara_National_Museum.jpg",
+     "selite": "Museon pihalla seisovat veistetyt puiset patsaat ja seinää koristaa kalamaalaus.",
+     "leveys": 4729,
+     "korkeus": 3062,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28224122",
+   "nimi": "Honiaran keskustori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -9.43194,
+   "lon": 159.95556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Central Market Honiara.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Market_Honiara.jpg?width=1280",
+     "tekija": "Torbenbrinker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Market_Honiara.jpg",
+     "selite": "Torin matala halli ja värikkäät sateenvarjot sijaitsevat Honiaran satamassa.",
+     "leveys": 4434,
+     "korkeus": 3199,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Honiara Central Market.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honiara_Central_Market.jpg?width=1280",
+     "tekija": "Phenss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honiara_Central_Market.jpg",
+     "selite": "Torin portti ja ostajat kaupungin keskustassa meren äärellä.",
+     "leveys": 4000,
+     "korkeus": 1500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q109973596",
+   "nimi": "Salomonsaarten parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -9.43361,
+   "lon": 159.95583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of the National Parliament Building, Honiara, Solomon Islands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_National_Parliament_Building%2C_Honiara%2C_Solomon_Islands.jpg?width=1280",
+     "tekija": "David Jones",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_National_Parliament_Building%2C_Honiara%2C_Solomon_Islands.jpg",
+     "selite": "Parlamenttitalon vihreä katto erottuu kukkulan rinteellä Honiaran keskustan yllä.",
+     "leveys": 1734,
+     "korkeus": 1176,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Honiara Mendana Avenue.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Honiara_Mendana_Avenue.jpg?width=1280",
+   "tekija": "Torbenbrinker",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Honiara_Mendana_Avenue.jpg",
+   "selite": "Mendana Avenuen värikkäät kaupat ja minibussit ovat Honiaran pääkadun elämää.",
+   "leveys": 5004,
+   "korkeus": 2892,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial photo of Rove Police HQ and corrections centre.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photo_of_Rove_Police_HQ_and_corrections_centre.jpg?width=1280",
+   "tekija": "Phenss",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_Rove_Police_HQ_and_corrections_centre.jpg",
+   "selite": "Ilmasta näkyy Honiaran rantaniemi, jolle kaupunki on rakennettu.",
+   "leveys": 4000,
+   "korkeus": 1500,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

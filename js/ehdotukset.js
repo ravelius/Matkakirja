@@ -39,6 +39,18 @@ import { avaaMinipopup } from './minipopup.js';
  */
 export const EHDOTUS_OSOITE = 'https://matkakirja-ehdotukset.samireivinen.workers.dev';
 
+/*
+ * KURATOINTIAVAIN OTSAKKEESSA, EI OSOITTEESSA (Päätoimittaja 1.10.2026,
+ * tietoturvakorjaus): ?avain= jäi palvelinlokeihin. Sama nimi kuin
+ * workerissa (worker/ehdotukset/kasittelija.js AVAIN_OTSAKE).
+ */
+export const AVAIN_OTSAKE = 'x-matkakirja-avain';
+
+/** Otsakkeet avaimellisiin kutsuihin (fetchin headers-kenttään). */
+export function avainOtsakkeet(avain, muut = {}) {
+  return { ...muut, [AVAIN_OTSAKE]: avain };
+}
+
 /** Kuratointiavain laitteen muistissa (työhuoneen Lukijoilta-lehti). */
 export const EHDOTUS_AVAIN_TALLE = 'matkakirja-ehdotus-avain';
 
@@ -315,17 +327,20 @@ export function lahetaProMateriaali(m) {
  * @returns {Promise<Array<object>>} ehdotusten metat
  */
 export async function haeEhdotukset(avain) {
-  const vastaus = await fetch(`${EHDOTUS_OSOITE}/lista?avain=${encodeURIComponent(avain)}`);
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}/lista`, { headers: avainOtsakkeet(avain) });
   if (vastaus.status === 401) throw new Error('Avain ei kelpaa.');
   if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
   const data = await vastaus.json();
   return data.ehdotukset ?? [];
 }
 
-/** Kuvan osoite työhuoneelle (kulkee avaimen kanssa workerin kautta). */
-export function ehdotusKuvaOsoite(kansio, tiedosto, avain) {
-  return `${EHDOTUS_OSOITE}/kohde/${encodeURIComponent(`${kansio}/${tiedosto}`)}`
-    + `?avain=${encodeURIComponent(avain)}`;
+/**
+ * Kuvan osoite työhuoneelle workerin kautta. Avain EI ole osoitteessa:
+ * kuva haetaan fetchillä avainOtsakkeet-otsakkeella (js/maalehti.js
+ * kuvaOtsakkeet), koska img-elementti ei voi lähettää otsaketta.
+ */
+export function ehdotusKuvaOsoite(kansio, tiedosto) {
+  return `${EHDOTUS_OSOITE}/kohde/${encodeURIComponent(`${kansio}/${tiedosto}`)}`;
 }
 
 /* ------------------------------------------------------------------ *
@@ -334,10 +349,10 @@ export function ehdotusKuvaOsoite(kansio, tiedosto, avain) {
 
 /** Yhteinen virheenkäsittely omistajan pro-kutsuille. */
 async function omistajanKutsu(polku, avain, asetukset = {}) {
-  const erotin = polku.includes('?') ? '&' : '?';
-  const vastaus = await fetch(
-    `${EHDOTUS_OSOITE}${polku}${erotin}avain=${encodeURIComponent(avain)}`, asetukset,
-  );
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}${polku}`, {
+    ...asetukset,
+    headers: avainOtsakkeet(avain, asetukset.headers ?? {}),
+  });
   let data = null;
   try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
   if (vastaus.status === 401) throw new Error('Avain ei kelpaa.');
@@ -389,10 +404,9 @@ export function paataProProfiili(avain, sahkoposti, tila, kommentti = '') {
   });
 }
 
-/** Odottavan profiilikuvan osoite työhuoneelle (kulkee avaimen kanssa). */
-export function proKuvaOsoite(tekijaId, avain) {
-  return `${EHDOTUS_OSOITE}/pro-kuva/${encodeURIComponent(tekijaId)}`
-    + `?avain=${encodeURIComponent(avain)}`;
+/** Odottavan profiilikuvan osoite työhuoneelle (avain otsakkeessa, ks. ehdotusKuvaOsoite). */
+export function proKuvaOsoite(tekijaId) {
+  return `${EHDOTUS_OSOITE}/pro-kuva/${encodeURIComponent(tekijaId)}`;
 }
 
 /** Ihmisluettava aika listaan. */

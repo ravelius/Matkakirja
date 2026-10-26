@@ -1,0 +1,561 @@
+{
+ "kaupunki": "sevilla",
+ "kaupunkiQ": "Q8717",
+ "kohteet": [
+  {
+   "q": "Q231606",
+   "nimi": "Sevillan katedraali",
+   "peruste": "UNESCO",
+   "koko_m": 160,
+   "lat": 37.38574,
+   "lon": -5.9931,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Exterior of the Cathedral of Seville 20180719.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_the_Cathedral_of_Seville_20180719.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_Cathedral_of_Seville_20180719.jpg",
+     "selite": "Sevillan katedraali on maailman suurimpia goottilaisia kirkkoja, ja sen kylkeen liittyy Giraldan torni.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Seville Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seville_Cathedral.jpg?width=1280",
+     "tekija": "Paul VanDerWerf",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seville_Cathedral.jpg",
+     "selite": "Katedraali kohoaa kaupungin vanhan keskustan yllä laajana hiekanvärisenä rakennuksena.",
+     "leveys": 1563,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "View of roof of Cathedral from Giralda of Seville on March 9 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_roof_of_Cathedral_from_Giralda_of_Seville_on_March_9_2017.jpg?width=1280",
+     "tekija": "Tim Adams",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_roof_of_Cathedral_from_Giralda_of_Seville_on_March_9_2017.jpg",
+     "selite": "Katedraalin katolla kohoavat lukuisat goottilaiset huiput ja tukikaaret.",
+     "leveys": 4589,
+     "korkeus": 3059,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q834479",
+   "nimi": "Giralda",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 37.38614,
+   "lon": -5.99238,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Giralda cathédrale tour Seville Espagne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giralda_cath%C3%A9drale_tour_Seville_Espagne.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giralda_cath%C3%A9drale_tour_Seville_Espagne.jpg",
+     "selite": "Giralda on katedraalin kellotorni, joka oli alun perin moskeijan minareetti.",
+     "leveys": 3016,
+     "korkeus": 2458,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Plaza Virgen de los Reyes, Seville, Spain - Sep 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Virgen_de_los_Reyes%2C_Seville%2C_Spain_-_Sep_2009.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Virgen_de_los_Reyes%2C_Seville%2C_Spain_-_Sep_2009.jpg",
+     "selite": "Illalla valaistu torni kohoaa Plaza Virgen de los Reyesin yläpuolelle.",
+     "leveys": 3000,
+     "korkeus": 2145,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "La Giralda, Seville, Spain - Sep 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Giralda%2C_Seville%2C_Spain_-_Sep_2009.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Giralda%2C_Seville%2C_Spain_-_Sep_2009.jpg",
+     "selite": "Tornin tiilinen pinta on koristeltu ruudukkomaisin kaarin.",
+     "leveys": 2912,
+     "korkeus": 4368,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Seville April 2019-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seville_April_2019-1.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seville_April_2019-1.jpg",
+     "selite": "Tornin huipulla seisoo patsas, jota kutsutaan nimellä Giraldillo.",
+     "leveys": 4912,
+     "korkeus": 7360,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q498261",
+   "nimi": "Sevillan Alcázar",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 37.38443,
+   "lon": -5.99119,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "JardinLasDamas Alcazar Seville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JardinLasDamas_Alcazar_Seville.jpg?width=1280",
+     "tekija": "Martinvl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JardinLasDamas_Alcazar_Seville.jpg",
+     "selite": "Alcázarin puutarhat levittäytyvät palatsin ympärille palmuineen ja sisäpihoineen.",
+     "leveys": 4980,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puerta del Privilegio real alcazares Seville Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_del_Privilegio_real_alcazares_Seville_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_del_Privilegio_real_alcazares_Seville_Spain.jpg",
+     "selite": "Alcázar on mudéjar-tyylinen kuninkaanlinna, jonka portit ja pihat on koristeltu runsaasti.",
+     "leveys": 2053,
+     "korkeus": 3087,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Alcázar Seville April 2019-11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alc%C3%A1zar_Seville_April_2019-11.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alc%C3%A1zar_Seville_April_2019-11.jpg",
+     "selite": "Palatsin salien kupolit on päällystetty kullatuin geometrisin kuvioin.",
+     "leveys": 6375,
+     "korkeus": 6375,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q956018",
+   "nimi": "Plaza de España",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 37.37708,
+   "lon": -5.9869,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de España (Sevilla) - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Espa%C3%B1a_(Sevilla)_-_01.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Espa%C3%B1a_(Sevilla)_-_01.jpg",
+     "selite": "Plaza de España on puoliympyrän muotoinen aukio, jonka rakennukset valmistuivat 1929 näyttelyä varten.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sevilla - Plaza de España - 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Plaza_de_Espa%C3%B1a_-_3.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Plaza_de_Espa%C3%B1a_-_3.jpg",
+     "selite": "Rakennuksen keskiosan portaikko ja tornit hallitsevat aukiota.",
+     "leveys": 6320,
+     "korkeus": 3520,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Seville, Plaza de España (38625005691) (edited).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seville%2C_Plaza_de_Espa%C3%B1a_(38625005691)_(edited).jpg?width=1280",
+     "tekija": "Dmitry Dzhus from London",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seville%2C_Plaza_de_Espa%C3%B1a_(38625005691)_(edited).jpg",
+     "selite": "Kanavaa ylittävät koristeelliset sillat, ja sen varrella on laattakoristeltuja penkkejä.",
+     "leveys": 4353,
+     "korkeus": 3453,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q943873",
+   "nimi": "Torre del Oro",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 37.38246,
+   "lon": -5.9963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torre del Oro, Guadalquivir, Sevilla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_del_Oro%2C_Guadalquivir%2C_Sevilla.jpg?width=1280",
+     "tekija": "Martinvl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_del_Oro%2C_Guadalquivir%2C_Sevilla.jpg",
+     "selite": "Torre del Oro on keskiaikainen vartiotorni Guadalquivirin rannalla.",
+     "leveys": 3842,
+     "korkeus": 2887,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sevilla - Torre del Oro and river Guadalquivir at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Torre_del_Oro_and_river_Guadalquivir_at_night.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Torre_del_Oro_and_river_Guadalquivir_at_night.jpg",
+     "selite": "Valaistu torni heijastuu illalla joen pintaan.",
+     "leveys": 6409,
+     "korkeus": 4276,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sevilla - Torre del Oro and river Guadalquivir - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Torre_del_Oro_and_river_Guadalquivir_-_1.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Torre_del_Oro_and_river_Guadalquivir_-_1.jpg",
+     "selite": "Tornin takaa avautuu Guadalquivirin ranta ja Sevillan vanha satama-alue.",
+     "leveys": 6744,
+     "korkeus": 4500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q477051",
+   "nimi": "Intian arkisto",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 37.38478,
+   "lon": -5.99308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral and Archivo de Indias - Seville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_and_Archivo_de_Indias_-_Seville.jpg?width=1280",
+     "tekija": "Seville Tourism Bureau",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_and_Archivo_de_Indias_-_Seville.jpg",
+     "selite": "Intian arkisto säilyttää Espanjan siirtomaavallan asiakirjoja Sevillan katedraalin vieressä.",
+     "leveys": 1800,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sevilla - Cathedral of Seville, facade south.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Cathedral_of_Seville%2C_facade_south.jpg?width=1280",
+     "tekija": "Jelger",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Cathedral_of_Seville%2C_facade_south.jpg",
+     "selite": "Renessanssirakennus seisoo katedraalin kupeessa vanhassa kaupungissa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3087671",
+   "nimi": "Metropol Parasol",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 37.39325,
+   "lon": -5.99188,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Metropol Parasol 2019 (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropol_Parasol_2019_(3).jpg?width=1280",
+     "tekija": "Gzzz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropol_Parasol_2019_(3).jpg",
+     "selite": "Metropol Parasol on suuri puinen rakennelma Plaza de la Encarnaciónilla, josta paikalliset käyttävät nimeä Las Setas.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Metropol Parasol Plaza de la Encarnación 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropol_Parasol_Plaza_de_la_Encarnaci%C3%B3n_1.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropol_Parasol_Plaza_de_la_Encarnaci%C3%B3n_1.jpg",
+     "selite": "Rakenne muodostuu sienimäisistä puuristikoista, jotka kattavat torin ja museon.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Metropol Parasol 2019 (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Metropol_Parasol_2019_(4).jpg?width=1280",
+     "tekija": "Gzzz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Metropol_Parasol_2019_(4).jpg",
+     "selite": "Rakennuksen päällä on näköalakäytävä Sevillan vanhan kaupungin ylle.",
+     "leveys": 5068,
+     "korkeus": 3502,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2274061",
+   "nimi": "Maestranzan areena",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 37.38596,
+   "lon": -5.99841,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Real Maestranza main entrance Seville Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Maestranza_main_entrance_Seville_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Maestranza_main_entrance_Seville_Spain.jpg",
+     "selite": "Maestranzan härkätaisteluareena on yksi Espanjan vanhimmista ja tunnetuimmista.",
+     "leveys": 3218,
+     "korkeus": 2086,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Real Maestranza Sevilla bullring (gatehouse).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Maestranza_Sevilla_bullring_(gatehouse).jpg?width=1280",
+     "tekija": "Roger Davies",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Maestranza_Sevilla_bullring_(gatehouse).jpg",
+     "selite": "Areenan keltaiset ja valkoiset julkisivut ovat Sevillan tunnettuja maamerkkejä.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Real Maestranza Loge Royale Seville Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Maestranza_Loge_Royale_Seville_Spain.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Maestranza_Loge_Royale_Seville_Spain.jpg",
+     "selite": "Areenan kuninkaallinen aitio ja portaat avautuvat hiekkakentälle päin.",
+     "leveys": 2075,
+     "korkeus": 3412,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1862973",
+   "nimi": "Trianan silta",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 37.38633,
+   "lon": -6.00237,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puente de triana 2013An008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_de_triana_2013An008.jpg?width=1280",
+     "tekija": "Anual",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_de_triana_2013An008.jpg",
+     "selite": "Trianan silta ylittää Guadalquivirin ja yhdistää keskustan Trianan kaupunginosaan.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puente de triana 2019An002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_de_triana_2019An002.jpg?width=1280",
+     "tekija": "Anual",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_de_triana_2019An002.jpg",
+     "selite": "Rautaiset kaaret valaistaan illalla joen yllä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Puente de Triana, o de Isabel II, Sevilla - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_de_Triana%2C_o_de_Isabel_II%2C_Sevilla_-_panoramio.jpg?width=1280",
+     "tekija": "cesar.ruiz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_de_Triana%2C_o_de_Isabel_II%2C_Sevilla_-_panoramio.jpg",
+     "selite": "Silta on myös nimeltään Isabel II:n silta.",
+     "leveys": 4751,
+     "korkeus": 2365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046529",
+   "nimi": "Casa de Pilatos",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 37.39027,
+   "lon": -5.98699,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1483 wurde mit dem Bau de Casa de Pilatos begonnen. 15.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1483_wurde_mit_dem_Bau_de_Casa_de_Pilatos_begonnen._15.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1483_wurde_mit_dem_Bau_de_Casa_de_Pilatos_begonnen._15.jpg",
+     "selite": "Casa de Pilatos on renessanssi- ja mudéjar-tyylinen palatsi, jonka sisäpihaa kehystävät kaaret ja laatat.",
+     "leveys": 5956,
+     "korkeus": 3358,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sevilla - Casa de Pilatos - 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Casa_de_Pilatos_-_2.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Casa_de_Pilatos_-_2.jpg",
+     "selite": "Palatsin kaarikäytävien stukkikoristeet ovat mudéjar-tyylin esimerkkejä.",
+     "leveys": 6391,
+     "korkeus": 4446,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sevilla - Casa de Pilatos - 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_-_Casa_de_Pilatos_-_3.jpg?width=1280",
+     "tekija": "Benjamin Smith",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_-_Casa_de_Pilatos_-_3.jpg",
+     "selite": "Sisäpihan portit ja laattakoristeet kuuluvat palatsin tunnuspiirteisiin.",
+     "leveys": 4500,
+     "korkeus": 6744,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1353494",
+   "nimi": "Alamillon silta",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 37.41333,
+   "lon": -5.99028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puente del Alamillo 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_del_Alamillo_2017.jpg?width=1280",
+     "tekija": "Gzzz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_del_Alamillo_2017.jpg",
+     "selite": "Alamillon silta on Santiago Calatravan suunnittelema vinoköysisilta Guadalquivirin yllä.",
+     "leveys": 4461,
+     "korkeus": 3007,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puente del Alamillo, Sevilla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_del_Alamillo%2C_Sevilla.jpg?width=1280",
+     "tekija": "Jl FilpoC",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_del_Alamillo%2C_Sevilla.jpg",
+     "selite": "Sillan korkea kalteva pylväs kannattaa kaikkia siltakantta.",
+     "leveys": 4112,
+     "korkeus": 3088,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sevilla Luft 120308.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sevilla_Luft_120308.JPG?width=1280",
+   "tekija": "El-mejor",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sevilla_Luft_120308.JPG",
+   "selite": "Sevilla levittäytyy Guadalquivirin molemmin puolin Andalusian tasangolla.",
+   "leveys": 2816,
+   "korkeus": 2112,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama dalla Giralda di Siviglia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_dalla_Giralda_di_Siviglia.jpg?width=1280",
+   "tekija": "Elisa.rolle",
+   "lisenssi": "CC BY-SA 3.0 es",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_dalla_Giralda_di_Siviglia.jpg",
+   "selite": "Giraldan huipulta näkyvät katedraalin katot ja vanhan kaupungin talot.",
+   "leveys": 1746,
+   "korkeus": 1170,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

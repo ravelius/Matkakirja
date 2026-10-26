@@ -1,0 +1,39 @@
+{
+ "huom": "KOHTEET-erä tools/hae-satelliittihavainnot.mjs:lle; kuvat ämpärissä linssit/astronautin-kamera/20261015/<id>~large|small.jpg (versiokansio, immutable). Ei palkkia (astro-palkki.mjs puhdas). Reykjanes (ISS070) EI mukana: kuvatunnusta ei löytynyt.",
+ "kohteet": [
+  {
+   "tunnus": "raikoke",
+   "nimi": "Raikoke",
+   "seutu": "Kuriilit, Venäjä",
+   "lat": 48.292,
+   "lon": 153.25,
+   "selite": "Pieni tulivuorisaari, joka purkautui kesäkuussa 2019 odottamatta ja lähetti tuhkaa kymmenien kilometrien korkeuteen.",
+   "oletus": "ISS059-E-119250",
+   "kuvat": [
+    {
+     "id": "ISS059-E-119250",
+     "aika": "2019-06-21T22:45:53Z",
+     "kuvaaja": "Expedition 59 -miehistö",
+     "teksti": "Raikoken purkaus kesäkuussa 2019 suoraan ylhäältä: kapea tuhkapylväs nousee kraatterista ja leviää huipulla sateenvarjopilveksi. Pilven varjo putoaa alla oleville pilville."
+    }
+   ]
+  },
+  {
+   "tunnus": "hunga-tonga",
+   "nimi": "Hunga Tonga",
+   "seutu": "Tonga, Tyynimeri",
+   "lat": -20.536,
+   "lon": -175.382,
+   "selite": "Vedenalainen tulivuori, jonka tammikuun 2022 purkaus oli yksi vuosikymmenten voimakkaimmista.",
+   "oletus": "ISS066-E-117997",
+   "kuvat": [
+    {
+     "id": "ISS066-E-117997",
+     "aika": "2022-01-16T19:34:41Z",
+     "kuvaaja": "Kayla Barron",
+     "teksti": "Hunga Tongan purkauksen pilvi päivän kuluttua purkauksesta. Kayla Barron kuvasi ruskehtavan tuhkakerroksen, joka leviää horisontissa ilmakehän reunaa pitkin, kun asema ohitti Uuden-Seelannin noin 2 000 kilometrin päässä purkauspaikasta."
+    }
+   ]
+  }
+ ]
+}

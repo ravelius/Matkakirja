@@ -969,7 +969,7 @@ test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
 test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
   assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
-  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false, \{ kay = null \} = \{\}\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
   // (Väli kasvoi hiljaisen pysäkin haaralla: kohahdus on sen jälkeen.)
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,2200}this\.keksinnonAani\(t\);/);
@@ -1139,7 +1139,7 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
       const sarja = /kohtaamiset\/isoisa\/isoisa-[a-z]+-aged-r20260905-v\d\.jpg$/;
       assert.ok(t.kuva?.ulkoinen && sarja.test(t.kuva.osoite), 'merkkipaalun muotokuva on isoisä kaukaa (sarja r20260905)');
       assert.equal(t.kuva.asento, '30% top', 'vaakakuvan 4:5-rajaus osuu hahmoon');
-      assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
+      assert.equal(t.kuva.lahde, 'Matkakirjan havainnekuva');
       assert.ok(t.ilmio?.ulkoinen && sarja.test(t.ilmio.osoite), 'merkkipaalun ilmiökuva on sarjasta r20260905');
       for (const k of t.ilmioSarja ?? []) assert.ok(sarja.test(k.osoite), 'kuvakierron kuvat ovat sarjasta r20260905');
       for (const k of [t.kuva, t.ilmio, ...(t.ilmioSarja ?? [])]) {
@@ -1788,8 +1788,9 @@ test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', ()
   // WebKit piirtää saapumattoman <image>-elementin tilalle sinisen
   // laatikon ja kysymysmerkin, venytettynä laatan koko alaan
   // (omistajan kuvakaappaus 4.9.2026). Osoitteen poisto vie merkin.
+  // Ikkuna 2600 (28.9.2026, #3516): väliin tuli virhelaatan uusinnan selitys.
   const PYRAMIDI = readFileSync(new URL('../js/laattapyramidi.js', import.meta.url), 'utf8');
-  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,1600}kuva\.removeAttribute\('href'\);/);
+  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,2600}kuva\.removeAttribute\('href'\);/);
 });
 
 
@@ -2294,9 +2295,13 @@ test('sumennaRullat kirjoittaa muuttujat ja luokan vain liikkuville rullille; no
     assert.ok(!r.kehys.tyyli.has('--sumu'));
   }
   // Moottori kytkee: naytaVuosi sumentaa, pysayta nollaa, css ei käytä filter: blur -suodatinta.
-  assert.match(MOOTTORI, /this\.sumennaKello\(arvo, heti\);/);
+  assert.match(MOOTTORI, /this\.sumennaKello\(arvo, heti, kay\);/);
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,500}sumennaRullat\(this\.rullat, 0, \{ nollaa: true \}\);/);
-  assert.match(MOOTTORI, /if \(!this\.kaynnissa \|\| heti \|\| this\.reducedMotion \|\| !edellinen\) \{/);
+  assert.match(MOOTTORI, /if \(!kayko \|\| heti \|\| this\.reducedMotion \|\| !edellinen\) \{/);
+  // Ihmisen matkan esitys kertoo kellon käyvän (omistaja 1.10.2026: webin malli on sumullinen rullaus).
+  assert.match(MOOTTORI, /const kayko = kay \?\? this\.kaynnissa;/);
+  assert.match(readFileSync(new URL('../js/linssit/ihmisen-matka-esitys.js', import.meta.url), 'utf8'),
+    /ajo\.naytaVuosi\(paikka, reduced, \{ kay: true \}\);/);
   const lohko = AIKAJANA_CSS.match(/\.vuosi-numero\.vauhdissa \.vuosi-merkki \{[\s\S]*?\n\}/)[0];
   assert.match(lohko, /text-shadow:/);
   assert.ok(!/filter/.test(lohko), 'sumu ilman suodatinta');

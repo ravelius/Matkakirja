@@ -1,0 +1,82 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/puherivit/1",
+ "lahde": "docs/kohtaukset/kiinan-dynastiat/kasikirjoitus-william-5min-20261017.md v2 (Sisältökirjuri, PT hyväksyi): pysäkin perus-lause ennen ►",
+ "rivit": [
+  {
+   "vuosi": -221,
+   "teksti": "Vuonna 221 eaa. Qin yhdistää Kiinan ja yhtenäistää kirjoituksen ja rahat."
+  },
+  {
+   "vuosi": -200,
+   "teksti": "Vuonna 200 eaa. Hanin ensimmäinen keisari piiritetään Baidengissa, ja Han alkaa pian maksaa pohjoisen ratsastajille lahjoja. Pääkaupunki on Chang'an."
+  },
+  {
+   "vuosi": -100,
+   "teksti": "Vuonna 100 eaa. keisari Wudin Han on työntänyt rajansa länteen, ja Hexi-käytävästä on tullut Silkkitien portti. Pääkaupunki on yhä Chang'an."
+  },
+  {
+   "vuosi": 140,
+   "teksti": "Vuonna 140 Itäinen Han on yksi maailman suurimmista valtioista; pääkaupunki on Luoyang."
+  },
+  {
+   "vuosi": 250,
+   "teksti": "Vuonna 250 Han on hajonnut kolmeen kuningaskuntaan."
+  },
+  {
+   "vuosi": 440,
+   "teksti": "Vuonna 440 maa on jakautunut: etelässä Liu Song hallitsee Jiankangista ja pohjoisessa aroilta tullut Pohjois-Wei Pingchengistä."
+  },
+  {
+   "vuosi": 500,
+   "teksti": "Vuonna 500 Pohjois-Wei on siirtänyt pääkaupunkinsa Luoyangiin, ja hovi pukeutuu ja puhuu kiinalaisittain. Etelässä Qi hallitsee Jiankangista."
+  },
+  {
+   "vuosi": 589,
+   "teksti": "Vuonna 589 Sui yhdistää etelän ja pohjoisen, ja pian alkaa Suuren kanavan rakennus. Pääkaupunki on Daxing."
+  },
+  {
+   "vuosi": 669,
+   "teksti": "Vuonna 669 Tang on kukistanut Goguryeon ja hallitsee Chang'anista."
+  },
+  {
+   "vuosi": 790,
+   "teksti": "Vuonna 790 Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen."
+  },
+  {
+   "vuosi": 950,
+   "teksti": "Vuonna 950 Kiina on pirstoutunut: Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao nykyisen Pekingin seutua."
+  },
+  {
+   "vuosi": 1100,
+   "teksti": "Vuonna 1100 Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea."
+  },
+  {
+   "vuosi": 1142,
+   "teksti": "Vuonna 1142 jurchenien Jin on vallannut Kaifengin jo vuonna 1127, ja Song jatkaa etelässä Lin'anista eli Hangzhousta."
+  },
+  {
+   "vuosi": 1280,
+   "teksti": "Vuonna 1280 Kublai-kaanin Yuan hallitsee koko Kiinaa, pääkaupunkinaan Dadu."
+  },
+  {
+   "vuosi": 1421,
+   "teksti": "Vuonna 1421 Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna 1420."
+  },
+  {
+   "vuosi": 1644,
+   "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu."
+  },
+  {
+   "vuosi": 1760,
+   "teksti": "Vuonna 1760 Qing on liittänyt Dzungarian ja Tarimin altaan valtakuntaansa, ja pääkaupunki on Peking."
+  },
+  {
+   "vuosi": 1873,
+   "teksti": "Vuonna 1873, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kanton on yksi avatuista satamista."
+  },
+  {
+   "vuosi": 1912,
+   "teksti": "Vuonna 1912 kuusivuotias Puyi luopuu vallasta ja keisarikunta päättyy. Tasavalta julistettiin Nankingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking."
+  }
+ ]
+}

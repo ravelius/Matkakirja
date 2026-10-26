@@ -1,0 +1,187 @@
+{
+ "kaupunki": "praha",
+ "versio": 1,
+ "kuvaus": "Prahan historiaosiot pallokierroksen lentojen ajaksi (Sisältökirjuri 14.10.2026; kaksi lähdettä per väite, faktaliite praha-historia-faktat-20261014.md). Kertoja William. kesto_s on arvio (sanamäärä x 0,70 s); korvataan äänityksen todellisella kestolla. sha lisätään äänityksen jälkeen. kuva on lisäkenttä (Commons; PD/CC0/CC BY tarkistettu Commons API:lla 14.10.2026).",
+ "osiot": [
+  {
+   "tunnus": "praha-historia-kaarle-iv",
+   "otsikko": "Kaarle IV:n Praha",
+   "teksti": "Vuonna 1344 Prahan hiippakunta korotettiin arkkihiippakunnaksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Prahan Uudenkaupungin. Vuoden 1342 tulva vaurioitti pahoin Juditin siltaa, ja sen tilalle rakennettiin Kaarlensilta. Työ alkoi vuonna 1357 ja valmistui vasta vuonna 1402.",
+   "kesto_s": 29.4,
+   "lahteet": [
+    "https://www.lovecpokladu.cz/en/home/21-11-1344-the-foundation-stone-of-st-vitus-cathedral-was-laid-8303",
+    "https://en.wikipedia.org/wiki/Prague_Cathedral",
+    "https://praha.aiscr.cz/p/201",
+    "https://www.guide-prague.org/en/nove-mesto",
+    "https://en.wikipedia.org/wiki/New_Town,_Prague",
+    "https://charles700.cuni.cz/KARELEN-40.html",
+    "http://prague.eu/en/object/places/184/charles-bridge-karluv-most",
+    "https://en.wikipedia.org/wiki/Charles_Bridge"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Wenceslas Hollar - Prague (State 1) 2.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_Prague_(State_1)_2.jpg",
+    "tekija": "Wenceslaus Hollar (1607-1677), skannaus University of Toronto Wenceslaus Hollar Digital Collection",
+    "lisenssi": "Public domain",
+    "leveys_px": 3760,
+    "korkeus_px": 1714,
+    "kuvaus": "Wenceslaus Hollarin 1600-luvun etsaus Kaarlensillasta ('Pons Pragensis'), vasemmalla Vanhankaupungin siltatorni, taustalla Petrinin rinne. Commonsin luokitus: Charles Bridge in the 17th century. Tarkkaa vuotta ei ole merkitty."
+   }
+  },
+  {
+   "tunnus": "praha-historia-kaarlensilta",
+   "otsikko": "Ainoa silta",
+   "teksti": "Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Johannes Nepomukilaisen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuoteen 1714 mennessä. Monet patsaista ovat kopioita, sillä vaurioituneita alkuperäisiä on vaihdettu jo 1900-luvun alusta lähtien. Alkuperäisiä säilytetään museossa ja Vyšehradin kasemateissa.",
+   "kesto_s": 34.3,
+   "lahteet": [
+    "https://www.archiweb.cz/en/n/home/pred-170-lety-mela-praha-jen-jeden-most-pres-vltavu",
+    "https://www.visitczechia.com/en-us/news/2025/07/n-charles-bridge-660-years",
+    "https://en.wikipedia.org/wiki/Charles_Bridge",
+    "https://en.wikipedia.org/wiki/Statue_of_John_of_Nepomuk,_Charles_Bridge",
+    "http://prague.eu/en/object/places/184/charles-bridge-karluv-most",
+    "https://www.inyourpocket.com/czech-republic/prague/articles/statues-of-charles-bridge"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Alois von Saar - Ansicht von Prag mit der Moldaubrücke (Karlsbrücke) - 3573 - Kunsthistorisches Museum.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Alois_von_Saar_-_Ansicht_von_Prag_mit_der_Moldaubrücke_(Karlsbrücke)_-_3573_-_Kunsthistorisches_Museum.jpg",
+    "tekija": "Alois von Saar (1779-1840 tai myöhemmin), öljymaalaus 1831; kuvalähde Belvedere (digital.belvedere.at)",
+    "lisenssi": "Public domain",
+    "leveys_px": 3508,
+    "korkeus_px": 2278,
+    "kuvaus": "Alois von Saarin öljymaalaus vuodelta 1831: näkymä Vltavalta Kaarlensillalle ja Vanhankaupungin siltatornille, siis ajalta ennen vuoden 1841 ketjusiltaa. Commonsin luokitus: Charles Bridge in the 19th century. Patsaat ovat maalauksessa pieniä. Varakuva: File:Prague. Old bridge over the Moldau LCCN94512595.jpg (albumiinivalokuva 1860-luvulta, Library of Congress, tekijä tuntematon, PD, 4096 x 3287)."
+   }
+  },
+  {
+   "tunnus": "praha-historia-heittoikkuna",
+   "otsikko": "Heittoikkuna 1618",
+   "teksti": "Toukokuun 23. päivänä 1618 protestanttisten aatelisten joukko, jonka johtajiin kuului kreivi Thurn, tunkeutui Prahan linnan Böömin kansliaan. Joukko heitti ikkunasta ulos kaksi katolista käskynhaltijaa, Martinicin ja Slavatan, sekä sihteeri Fabriciuksen. Kaikki kolme jäivät henkiin. Tapaus käynnisti Böömin kapinan, jota pidetään kolmikymmenvuotisen sodan alkuna.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Defenestrations_of_Prague",
+    "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/the-war-begins-the-defenestration-of-prague-may-1618",
+    "https://www.historyskills.com/classroom/year-8/defenestrations-of-prague/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Prager.Fenstersturz.1618.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Prager.Fenstersturz.1618.jpg",
+    "tekija": "Matthäus Merian (1593-1650), kuparikaiverrus teoksessa Theatrum Europaeum, osa 1 (painos 1662; teksti Johann Philipp Abelin); digitointi Augsburgin yliopiston kirjasto",
+    "lisenssi": "Public domain",
+    "leveys_px": 1530,
+    "korkeus_px": 1112,
+    "kuvaus": "Merianin kaiverrus Prahan heittoikkunatapauksesta 1618 (Commonsin kuvauksessa 'Second Defenestration of Prague'): huoneessa miehet tarttuvat uhreihin ja kantavat heitä kohti ikkunaa. Kaiverrus on tehty tapahtuman jälkeen, ei silminnäkijän piirros."
+   }
+  },
+  {
+   "tunnus": "praha-historia-rudolf2",
+   "otsikko": "Rudolf II:n tähtitieteilijät",
+   "teksti": "Keisari Rudolf II siirsi hovinsa Prahaan vuonna 1583. Tycho Brahe tuli sinne keisarin tähtitieteilijäksi, ja Johannes Kepler saapui hänen avustajakseen vuonna 1600. Tycho kuoli Prahassa 24. lokakuuta 1601 ja haudattiin Týnin kirkkoon. Kepler seurasi häntä keisarin matemaatikkona ja käytti Tychon havaintoja planeettojen liikelakeihinsa.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://english.radio.cz/1583-rudolf-ii-moves-seat-habsburg-monarchy-vienna-prague-8796981",
+    "https://www.habsburger.net/en/chapter/royal-castle-prague",
+    "https://en.wikipedia.org/wiki/Rudolf_II,_Holy_Roman_Emperor",
+    "https://prague.eu/en/tycho-brahe/",
+    "https://en.wikipedia.org/wiki/Tycho_Brahe",
+    "https://en.wikipedia.org/wiki/Johannes_Kepler",
+    "https://mathshistory.st-andrews.ac.uk/Biographies/Kepler/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Alfons Mucha Rudolf II besucht Tycho Brahe.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Alfons_Mucha_Rudolf_II_besucht_Tycho_Brahe.jpg",
+    "tekija": "Alfons Mucha (1860-1939), laveerattu piirros; kuvalähde Dorotheum (huutokauppa Praha 17.9.2011)",
+    "lisenssi": "Public domain",
+    "leveys_px": 952,
+    "korkeus_px": 1278,
+    "kuvaus": "Alfons Muchan piirros 'Rudolf II. besucht Tycho Brahe': keisari istuu tähtitieteilijän työhuoneessa maapallojen ja karttojen keskellä, ikkunasta näkyy Prahan linna. Huom. pitkä sivu vain 1278 px ja kuvan ympärillä paperin reunus (rajaa). Varakuva: File:Frontispice Tables Rudolphines.jpg (Rudolfiinisten taulujen nimiölehti 1627, PD, 1540 x 1124)."
+   }
+  },
+  {
+   "tunnus": "praha-historia-josefov",
+   "otsikko": "Josefov",
+   "teksti": "Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanhauusi synagoga.",
+   "kesto_s": 32.9,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Josefov,_Prague",
+    "https://expats.cz/czech-news/article/prague-s-josefov-began-its-upscale-transformation-130-years-ago",
+    "https://virtualni.praha.eu/night/the-jewish-quarter",
+    "https://en.wikipedia.org/wiki/Old_New_Synagogue",
+    "http://prague.eu/en/object/places/1635/old-new-synagogue-staronova-synagoga?back=1"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Prager Josefstadt - Durchhaus genannt Beim Sisling.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Prager_Josefstadt_-_Durchhaus_genannt_Beim_Sisling.jpg",
+    "tekija": "Zikmund Reach (1859-1935), valokuva ennen vuotta 1919; kuvalähde Archiv Corps Austria",
+    "lisenssi": "Public domain",
+    "leveys_px": 1011,
+    "korkeus_px": 1634,
+    "kuvaus": "Zikmund Reachin valokuva Josefovin vanhasta läpikulkupihasta ('Beim Šišling'): kapea kuja ja parvekkein reunustettu sisäpiha, jollaista vanhassa gettokorttelissa oli. Commonsin luokitus: History of Josefov (Prague). Tarkkaa vuotta ei ole merkitty (ennen 1919)."
+   }
+  },
+  {
+   "tunnus": "praha-historia-kansallisteatteri",
+   "otsikko": "Teatteri, joka nousi tuhkasta",
+   "teksti": "Kansallisteatteri rakennettiin kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona guldenia, ja Josef Schulzin johtaman uudelleenrakennuksen jälkeen teatteri avattiin uudelleen 18. marraskuuta 1883.",
+   "kesto_s": 33.6,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/National_Theatre_(Prague)",
+    "http://prague.eu/en/object/places/490/national-theatre",
+    "https://archiweb.cz/en/n/home/pozar-narodniho-divadla-pred-125-lety-byl-narodni-tragedii",
+    "https://english.radio.cz/node/8725124",
+    "https://pragitecture.eu/?p=155"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:National Theatre before fire west view.png",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:National_Theatre_before_fire_west_view.png",
+    "tekija": "Tuntematon (Architektonický obzor, Praha 1914, s. 135)",
+    "lisenssi": "Public domain",
+    "leveys_px": 2642,
+    "korkeus_px": 1849,
+    "kuvaus": "Kansallisteatteri rakenteilla ennen vuoden 1881 paloa, näkymä Střelecký-saarelta Vltavan yli; julkisivulla on vielä rakennustelineitä. Commonsin kuvaus: building under construction before the fire."
+   }
+  },
+  {
+   "tunnus": "praha-historia-venceslauksen-aukio",
+   "otsikko": "Aukio, jolla historia kääntyi",
+   "teksti": "Elokuun 20. ja 21. päivän välisenä yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja saman kuun 24. päivänä Havel ja Dubček ilmestyivät Melantrichin talon parvekkeelle.",
+   "kesto_s": 39.2,
+   "lahteet": [
+    "https://www.helloprague.net/wenceslas-square-prague/",
+    "https://www.visitczechia.com/en-us/news/2025/11/n-places-velvet-revolution-prague-1989",
+    "https://en.wikipedia.org/wiki/Wenceslas_Square",
+    "https://en.wikipedia.org/wiki/Prague_Spring",
+    "https://en.wikipedia.org/wiki/Jan_Palach",
+    "https://en.wikipedia.org/wiki/Velvet_Revolution",
+    "https://rferl.org/amp/czechoslovakia-politics-prague-spring/28688205.html"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:1989 November Prague Velvet Revolution Wenceslas Square night time protest.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:1989_November_Prague_Velvet_Revolution_Wenceslas_Square_night_time_protest.jpg",
+    "tekija": "RobbieIanMorrison (own work)",
+    "lisenssi": "CC BY 4.0",
+    "leveys_px": 6307,
+    "korkeus_px": 4134,
+    "kuvaus": "Mielenosoitus Venceslauksen aukiolla Samettivallankumouksen aikana marraskuussa 1989, taustalla Kansallismuseo ja Pyhän Venceslauksen patsas. Tarkka päivä epävarma (Commonsin arvio: 24.–28.11.1989, todennäköisesti jakson loppupuoli). Nimeäminen pakollinen (CC BY 4.0)."
+   }
+  },
+  {
+   "tunnus": "praha-historia-vituksen-katedraali",
+   "otsikko": "Katedraali, joka valmistui vasta 1929",
+   "teksti": "Pyhän Vituksen katedraalin goottilainen rakennustyö alkoi vuonna 1344. Hussiittisodat katkaisivat sen 1400-luvun alussa, ja rakennus pysyi pitkään keskeneräisenä. Josef Kranner johti 1860-luvulla restaurointia, ja vuonna 1873 Josef Mocker otti työn johtoonsa. Katedraali valmistui vuonna 1929, lähes 600 vuotta alkamisensa jälkeen.",
+   "kesto_s": 28.0,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Prague_Cathedral",
+    "https://www.katedralasvatehovita.cz/en/?p=1281",
+    "http://prague.eu/en/object/places/98/prague-castle-cathedral-of-st-vitus-st-wenceslas-and-st-adalbert-katedrala-sv-vita-vaclava-a-vojtecha"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Achterzijde van de Sint Vituskathedraal in Praag, RP-F-F02222.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Achterzijde_van_de_Sint_Vituskathedraal_in_Praag,_RP-F-F02222.jpg",
+    "tekija": "Tuntematon valokuvaaja; Rijksmuseum (RP-F-F02222)",
+    "lisenssi": "CC0",
+    "leveys_px": 5004,
+    "korkeus_px": 6592,
+    "kuvaus": "Pyhän Vituksen katedraalin itäpää ja torni Hradčanyn kukkulalla, valokuva vuosilta 1850–1920 (Rijksmuseum, kirjoitus 'Prag - Dom St Veit am Hradschin'). Tarkkaa vuotta ei ole merkitty."
+   }
+  }
+ ]
+}

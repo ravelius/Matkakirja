@@ -61,6 +61,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { LIUSKAN_AJO_MS } from '../../js/pallolauta/kamera.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 // Julkaisusarjassa kaappauskansio tulee ajurilta (tools/savukkeet/
@@ -178,7 +179,7 @@ const TALLENNE = JSON.stringify(peli.toJSON());
 const konttiSelain = '/opt/pw-browsers/chromium';
 const selainPolku = process.env.CHROMIUM
   ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
-const selain = await chromium.launch({ executablePath: selainPolku });
+const selain = await avaaChromium({ executablePath: selainPolku });
 
 /**
  * Kaupungin ruutupiste LUETAAN AINA TUOREENA (sama syy kuin
@@ -261,15 +262,33 @@ async function valitseNakyva(sivu, ehdokkaat) {
   return { id: null, katsotut };
 }
 
-/** Liuskan tila yhtenä lukemana: kerroksen lippu ja DOMin rivit. */
-const liuskanTila = (sivu) => sivu.evaluate(() => ({
-  auki: window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
-  rivit: document.querySelectorAll('.pallolauta-liuska-rivi').length,
-}));
+/*
+ * KAUPUNGIN AVAUSKORTTI KORVAA LIUSKAN (omistaja 27.9.2026 klo 23.4x, PR
+ * #3364, js/pallolauta/lauta.js KAUPUNKILIUSKA = false): kaupunkimerkin
+ * napautus avaa nyt avauskortin (.kaupunkipopup-avaus). Vartioiden väite
+ * on sama kuin ennen — ei-kohde ja oma kaupunki avaavat kaupungin oman
+ * näkymän, kohdekaupunki aloittaa siirron eikä avaa sitä — joten "auki"
+ * tarkoittaa liuskaa TAI avauskorttia sen mukaan, kumpi on käytössä.
+ * Auki jäänyt kortti peitti ennen seuraavat napautukset (osuma
+ * IMG.kulttuuri-kuva-nappi, main-savuke 36405304787), joten suljeLiuska
+ * sulkee myös kortin.
+ */
+/** Kaupunkinäkymän tila yhtenä lukemana: liuska tai avauskortti ja DOMin rivit. */
+const liuskanTila = (sivu) => sivu.evaluate(() => {
+  const liuska = window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null;
+  const kortti = Boolean(document.querySelector('.kaupunkipopup-avaus'));
+  return {
+    auki: liuska || kortti || (liuska === null ? null : false),
+    kortti,
+    rivit: document.querySelectorAll('.pallolauta-liuska-rivi').length,
+  };
+});
 
 /** Sulkee liuskan kerroksesta (ei kartan napautuksella: `korttiOliAuki`). */
-const suljeLiuska = (sivu) => sivu.evaluate(() => {
+const suljeLiuska = (sivu) => sivu.evaluate(async () => {
   window.matkakirja.ui.pallolauta.nostot.suljeLiuska?.();
+  window.matkakirja.ui.suljeKulttuuriKuva?.();
+  (await import('/js/kaupunkinosto.js')).suljeKaupunkipopup(window.matkakirja.ui);
 });
 
 /** Nopanheitto ilman noppa-animaatiota: sama tila kuin heiton jälkeen. */
@@ -466,7 +485,8 @@ async function mittaa(ruutu) {
       siirto: Boolean(window.matkakirja.ui.siirtoKaynnissa)
         || window.matkakirja.ui.movingPlayerId != null
         || Boolean(document.querySelector('.pawn-moving')),
-      auki: window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+      auki: (window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null)
+        || Boolean(document.querySelector('.kaupunkipopup-avaus')),
       rivit: document.querySelectorAll('.pallolauta-liuska-rivi').length,
       t: performance.now() - (window.__t0 ?? 0),
     }));
@@ -544,17 +564,17 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
   tieto(`${t} lähtötila`, JSON.stringify(tulos.alkutila ?? null));
   tieto(`${t} ilman noppaa napautettu`, JSON.stringify(tulos.ilmanNoppaaValinta ?? null));
   vaadi(`1 ${t}: ilman noppaa näkyvä kaupunki (${tulos.ilmanNoppaaValinta?.id ?? '—'}`
-    + `${tulos.ilmanNoppaaValinta?.omaVara ? ', oma varalla' : ''}) avaa liuskan`,
+    + `${tulos.ilmanNoppaaValinta?.omaVara ? ', oma varalla' : ''}) avaa kaupunkinäkymän (avauskortti/liuska)`,
     Boolean(tulos.ilmanNoppaa?.auki),
     JSON.stringify({ valinta: tulos.ilmanNoppaaValinta, tulos: tulos.ilmanNoppaa ?? null }));
 
   tieto(`${t} nopanheitto`, JSON.stringify(tulos.heitto ?? null));
   tieto(`${t} ei-kohdekaupunki`, JSON.stringify(tulos.eiKohde ?? null));
-  vaadi(`2 ${t}: ei-kohdekaupunki (${tulos.eiKohde?.id ?? '—'}) avaa liuskan siirtovaiheessa`,
+  vaadi(`2 ${t}: ei-kohdekaupunki (${tulos.eiKohde?.id ?? '—'}) avaa kaupunkinäkymän siirtovaiheessa`,
     Boolean(tulos.eiKohteenLiuska?.auki),
     JSON.stringify({ valittu: tulos.eiKohde, tulos: tulos.eiKohteenLiuska ?? null }));
 
-  vaadi(`3 ${t}: pelaajan oma kaupunki avaa yhä liuskan siirtovaiheessa`,
+  vaadi(`3 ${t}: pelaajan oma kaupunki avaa yhä kaupunkinäkymän siirtovaiheessa`,
     Boolean(tulos.omaKaupunki?.auki),
     JSON.stringify(tulos.omaKaupunki ?? null));
 
@@ -564,7 +584,7 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
   vaadi(`4 ${t}: kohdekaupungin napautus aloittaa siirron (${s.hetki ?? '—'} ms)`,
     Boolean(s.siirto),
     JSON.stringify({ piste: tulos.kohdePiste, seuranta: s }));
-  vaadi(`5 ${t}: liuskaa ei avattu (rivejä DOMissa ${s.riveja ?? 0})`,
+  vaadi(`5 ${t}: kaupunkinäkymää ei avattu (liuska/avauskortti; rivejä DOMissa ${s.riveja ?? 0})`,
     s.liuskaNakyi === false,
     JSON.stringify(s));
   /*

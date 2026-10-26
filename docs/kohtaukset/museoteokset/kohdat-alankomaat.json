@@ -1,0 +1,3185 @@
+{
+ "versio": 1,
+ "luonnos": false,
+ "teokset": {
+  "SK-C-5": [
+   {
+    "x": 0.485,
+    "y": 0.49,
+    "otsikko": "Kapteeni Frans Banninck Cocq",
+    "teksti": "Mustapukuinen kapteeni johtaa komppaniaa. Rijksmuseon mukaan hän käskee luutnanttiaan panemaan miehet liikkeelle.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Rijksmuseum: The Night Watch (SK-C-5)"
+     }
+    ]
+   },
+   {
+    "x": 0.625,
+    "y": 0.51,
+    "otsikko": "Luutnantti van Ruytenburch",
+    "teksti": "Keltaiseen asuun ja valkoiseen vyöhön pukeutunut luutnantti kuuntelee kapteenin käskyä. Hänen vaalea asunsa erottuu kapteenin mustasta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Rijksmuseum: The Night Watch (SK-C-5)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Night_Watch",
+      "title": "The Night Watch (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.31,
+    "y": 0.62,
+    "otsikko": "Tyttö ja kana",
+    "teksti": "Kultaisen tytön vyöllä roikkuu kana, jolla on isot kynnet. Kynnet olivat komppanian tunnus, ja Rijksmuseo kutsuu tyttöä komppanian maskotiksi.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/dALSivMco4xIJA",
+      "title": "The Night Watch (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Rijksmuseum: The Night Watch (SK-C-5)"
+     }
+    ]
+   },
+   {
+    "x": 0.94,
+    "y": 0.68,
+    "otsikko": "Rumpali",
+    "teksti": "Oikeassa reunassa seisoo palkattu rumpali suuren rumpunsa kanssa. Hänet maalattiin mukaan ilmaiseksi.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Night_Watch",
+      "title": "The Night Watch (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Rijksmuseum: The Night Watch (SK-C-5)"
+     }
+    ]
+   },
+   {
+    "x": 0.335,
+    "y": 0.37,
+    "otsikko": "Lipunkantaja Cornelissen",
+    "teksti": "Vänrikki Jan Visscher Cornelissen pitää komppanian lippua ojennettuna vasemmassa yläosassa. Hänen nimensä on seinän nimikilvessä.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/dALSivMco4xIJA",
+      "title": "The Night Watch (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Night_Watch",
+      "title": "The Night Watch (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Tarkistus: vaandrig Jan Visscher Cornelisen vasemmalla ylhäällä lippu ojennettuna; nimi kilvessä"
+     }
+    ]
+   },
+   {
+    "x": 0.205,
+    "y": 0.52,
+    "otsikko": "Punapukuinen muskettisoturi",
+    "teksti": "Punapukuinen Jan van der Heede, Rijksmuseon mukaan amsterdamilainen ruokakauppias, lataa muskettiaan. Kuvassa näkyy lataus, laukaus ja puhdistus.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/a-red-nose-mystery-in-the-night-watch",
+      "title": "A Red Nose Mystery in The Night Watch (Rijksmuseum)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",
+      "title": "10 things about Rembrandt's Night Watch (Rijksmuseum)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/cwXR16Hnd0PwSQ",
+      "title": "Tarkistus: vasemmalla kaadetaan ruutia, keskellä ammutaan, lopuksi puhdistetaan"
+     }
+    ]
+   },
+   {
+    "x": 0.8,
+    "y": 0.86,
+    "otsikko": "Haukkuva koira",
+    "teksti": "Koiran malli on Adriaen van de Vennen piirros vuodelta 1619: pään asento ja kaulus vastaavat lähes täsmälleen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/the-night-watch-dog-up-close",
+      "title": "The Night Watch Dog Up Close (Rijksmuseum)"
+     }
+    ]
+   },
+   {
+    "x": 0.07,
+    "y": 0.74,
+    "otsikko": "Juokseva ruutipoika",
+    "teksti": "Rijksmuseon rekonstruktiossa, jossa leikatut reunat on täydennetty, ruutipoika näyttää selvemmin juoksevan miliisin edellä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/press/press-releases/for-the-first-time-in-300-years-the-night-watch-is-complete-again",
+      "title": "For the first time in 300 years The Night Watch is complete again (Rijksmuseum)"
+     },
+     {
+      "url": "https://nl.wikipedia.org/wiki/De_Nachtwacht",
+      "title": "De Nachtwacht (Wikipedia, nl)"
+     }
+    ]
+   },
+   {
+    "x": 0.59,
+    "y": 0.17,
+    "otsikko": "Nimikilpi seinällä",
+    "teksti": "Kilpeen maalattiin noin vuonna 1715 kahdeksantoista nimeä, kapteeni ja luutnantti ensimmäisinä. Kuvassa on silti enemmän hahmoja kuin nimiä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-5",
+      "title": "Rijksmuseum: The Night Watch (SK-C-5)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Night_Watch",
+      "title": "The Night Watch (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.58,
+    "y": 0.65,
+    "otsikko": "Kapteenin käden varjo",
+    "teksti": "Kapteenin käden varjo lankeaa luutnantin viitalle niin, että Amsterdamin vaakuna jää peukalon ja sormien väliin.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/10-things/story/10-things-about-rembrandt-s-night-watch",
+      "title": "10 things about Rembrandt's Night Watch (Rijksmuseum)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/dALSivMco4xIJA",
+      "title": "The Night Watch (Google Arts & Culture)"
+     }
+    ]
+   }
+  ],
+  "SK-A-45": [
+   {
+    "x": 0.41,
+    "y": 0.42,
+    "otsikko": "Joanna de Geer",
+    "teksti": "Nainen katsoo suoraan sinuun ja hymyilee hieman. Rijksmuseon mukaan hän on Joanna de Geer. Kaulassa on helminauha ja korvassa helmikoru.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
+      "title": "Rijksmuseum: Caritas (SK-A-45)"
+     }
+    ]
+   },
+   {
+    "x": 0.55,
+    "y": 0.45,
+    "otsikko": "Äitiin tarrautuva lapsi",
+    "teksti": "Pieni lapsi kurottautuu äitinsä luo. Hän on yksi Trip-sisaruksista, Cecilia (s. 1660) tai Laurens (s. 1662), mutta teoksen nimi ei kerro kumpi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
+      "title": "Rijksmuseum: Caritas (SK-A-45)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Johanna_de_Geer_and_her_Children_as_Charity",
+      "title": "Portrait of Johanna de Geer and her Children as Charity (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.3,
+    "y": 0.63,
+    "otsikko": "Toinen lapsi katsoo ylös",
+    "teksti": "Vasemmassa alakulmassa toinen lapsi katsoo ylös kultaisessa päähineessään. Kaulassa hänellä on kultaisia koruja.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
+      "title": "Rijksmuseum: Caritas (SK-A-45)"
+     }
+    ]
+   },
+   {
+    "x": 0.2,
+    "y": 0.78,
+    "otsikko": "Pieni koira",
+    "teksti": "Ferdinand Bolin maalauksessa vasemmassa alakulmassa pieni koira nousee takajaloilleen ja kurottaa ylös lasta kohti.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
+      "title": "Rijksmuseum: Caritas (SK-A-45)"
+     }
+    ]
+   },
+   {
+    "x": 0.07,
+    "y": 0.5,
+    "otsikko": "Maalatut pilasterit",
+    "teksti": "Sivuilla näyttää olevan kiveä, mutta se on maalattua. Taulu oli tarkoitettu takan päälle, ja pilastereiden piti jatkaa takan veistettyä koristetta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-45",
+      "title": "Rijksmuseum: Caritas (SK-A-45)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Johanna_de_Geer_and_her_Children_as_Charity",
+      "title": "Portrait of Johanna de Geer and her Children as Charity (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-A-44": [
+   {
+    "x": 0.47,
+    "y": 0.3,
+    "otsikko": "Yksi kuudesta versiosta",
+    "teksti": "Bol maalasi De Ruyterista kuusi lähes samanlaista muotokuvaa. Tämä on yksi niistä, ja Mauritshuisilla ja Greenwichin museolla on omansa.",
+    "lahteet": [
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Michiel_de_Ruyter",
+      "title": "Portrait of Michiel de Ruyter (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.245,
+    "y": 0.565,
+    "otsikko": "Komentosauva",
+    "teksti": "Pitkä putki De Ruyterin kädessä näyttää kaukoputkelta, mutta museot kutsuvat sitä komentosauvaksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
+      "title": "Rijksmuseum: Michiel de Ruyter vara-amiraalina (SK-A-44)"
+     },
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     }
+    ]
+   },
+   {
+    "x": 0.16,
+    "y": 0.7,
+    "otsikko": "Taivaanpallo",
+    "teksti": "De Ruyter nojaa palloon, jonka pinnalla on tähtikuvioita. Se on taivaanpallo, merenkulkijan työkalu.",
+    "lahteet": [
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
+      "title": "Rijksmuseum: Michiel de Ruyter vara-amiraalina (SK-A-44)"
+     }
+    ]
+   },
+   {
+    "x": 0.1,
+    "y": 0.907,
+    "otsikko": "Walcheren kartalla",
+    "teksti": "Pöydällä olevan kartan keskellä on Walcherenin saari. Siellä sijaitsee Vlissingen, De Ruyterin syntymäkaupunki.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
+      "title": "Rijksmuseum: Michiel de Ruyter vara-amiraalina (SK-A-44)"
+     },
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     }
+    ]
+   },
+   {
+    "x": 0.465,
+    "y": 0.53,
+    "otsikko": "Pyhän Mikaelin ritarimerkki",
+    "teksti": "Rinnalla riippuu Pyhän Mikaelin ritarikunnan merkki, jossa Mikael surmaa Saatanan. De Ruyter liittyi ritarikuntaan 1666.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
+      "title": "Rijksmuseum: Michiel de Ruyter vara-amiraalina (SK-A-44)"
+     },
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.5,
+    "otsikko": "Lippulaiva meren takana",
+    "teksti": "Taustan merimaisemassa on De Ruyterin lippulaiva Zeven Provinciën muiden alusten keskellä. Kuva viittaa Neljän päivän taisteluun 1666.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-44",
+      "title": "Rijksmuseum: Michiel de Ruyter vara-amiraalina (SK-A-44)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Michiel_de_Ruyter",
+      "title": "Portrait of Michiel de Ruyter (Wikipedia)"
+     },
+     {
+      "url": "https://rmg.co.uk/collections/objects/rmgc-object-14470",
+      "title": "Royal Museums Greenwich: Lieutenant-Admiral Michiel de Ruyter"
+     }
+    ]
+   }
+  ],
+  "SK-A-3957": [],
+  "SK-A-2099": [
+   {
+    "x": 0.74,
+    "y": 0.69,
+    "otsikko": "Parsat kivireunalla",
+    "teksti": "Parsat lepäävät kivireunalla, ja yksi niistä kurottuu reunan yli kuin putoamaisillaan.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Adriaen_Coorte",
+      "title": "Adriaen Coorte (Wikipedia)"
+     },
+     {
+      "url": "https://www.sothebys.com/en/auctions/ecatalogue/2006/old-master-paintings-l06031/lot.36.html",
+      "title": "Sotheby's 2006: Coorte-luettelomuistio"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2099",
+      "title": "Tarkistus: Rijksmuseo: Stilleven met asperges 1697, maalaus kuvaa parsanippua kivisellä reunalla; kuv"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Adriaen_Coorte_-_Still_Life_with_Asparagus.jpg",
+      "title": "Tarkistus: kuva: ulos kurottuva parsa reunan yli"
+     }
+    ]
+   },
+   {
+    "x": 0.82,
+    "y": 0.82,
+    "otsikko": "Signeeraus ja vuosi",
+    "teksti": "Kiven reunaan on maalattu signeeraus ”A. Coorte 1697”. Maalaus on pieni, vain 25 × 20,5 cm.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2099",
+      "title": "Tarkistus: signed and dated A. Coorte 1697; koko 25 x 20,5 cm, öljy paperille paneeliin"
+     }
+    ]
+   },
+   {
+    "x": 0.4,
+    "y": 0.45,
+    "otsikko": "Kuin valokeilassa",
+    "teksti": "Parsanippu hohtaa tummaa taustaa vasten kuin valokeilassa. Coorten aiheet olivat yksinkertaisia kasviksia ja marjoja.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/one-hundred-masterpieces/story/still-life-asparagus",
+      "title": "Tarkistus: tumma tausta, valaistu kuin valokeilassa; yksinkertaiset aiheet (parsat, marjat)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2099",
+      "title": "Tarkistus: yksinkertaiset aiheet kontrastina ylellisille asetelmille"
+     }
+    ]
+   }
+  ],
+  "mauritshuis-605": [
+   {
+    "x": 0.664,
+    "y": 0.37,
+    "otsikko": "Lemmikkilintu",
+    "teksti": "Tikli oli 1600-luvulla suosittu lemmikki. Se opetettiin nostamaan vettä pienellä ämpärillä, ja siitä tulee sen hollantilainen lempinimi \"puttertje\".",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Goldfinch_(painting)",
+      "title": "The Goldfinch (painting) (Wikipedia)"
+     },
+     {
+      "url": "https://www.mauritshuis.nl/en/our-collection/stories/the-goldfinch",
+      "title": "Mauritshuis: The Goldfinch"
+     }
+    ]
+   },
+   {
+    "x": 0.71,
+    "y": 0.488,
+    "otsikko": "Ketjussa",
+    "teksti": "Linnun jalka on sidottu ohuella ketjulla puurenkaaseen. Pieni lintu ei pääse lentämään pois.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Goldfinch_(painting)",
+      "title": "The Goldfinch (painting) (Wikipedia)"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-goldfinch/",
+      "title": "CODART Canon: The Goldfinch"
+     }
+    ]
+   },
+   {
+    "x": 0.87,
+    "y": 0.465,
+    "otsikko": "Varjo seinällä",
+    "teksti": "Linnun ja laatikon varjo lankeaa vaaleaan seinään. Se saa ne näyttämään irtoavan seinästä, ikään kuin maalaus huijaisi silmää.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Goldfinch_(painting)",
+      "title": "The Goldfinch (painting) (Wikipedia)"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-goldfinch/",
+      "title": "CODART Canon: The Goldfinch"
+     }
+    ]
+   }
+  ],
+  "RP-F-AB12278-Z": [
+   {
+    "x": 0.4,
+    "y": 0.5,
+    "otsikko": "Laiva on pienoismalli",
+    "teksti": "Kolmimastoinen alus näyttää oikealta, mutta se on pienoismalli. Niin Rijksmuseo sen nimeääkin: Scheepsmodel eli laivamalli.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-Z",
+      "title": "Rijksmuseum: Laivamalli (RP-F-AB12278-Z)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-AH",
+      "title": "Rijksmuseum: Asetelma Meissen-vaasista ja laivamallista (RP-F-AB12278-AH)"
+     }
+    ]
+   },
+   {
+    "x": 0.777,
+    "y": 0.836,
+    "otsikko": "Ankkuri laivan keulassa",
+    "teksti": "Laivan keulassa roikkuu rengas ja ankkurin varsi. Pienoismallissakin on siis pieniä, tarkasti tehtyjä varusteita.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-Z",
+      "title": "Rijksmuseo: Scheepsmodel, RP-F-AB12278-Z"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Scheepsmodel,_RP-F-AB12278-Z.jpg",
+      "title": "Wikimedia Commons: Scheepsmodel, RP-F-AB12278-Z.jpg"
+     }
+    ]
+   },
+   {
+    "x": 0.49,
+    "y": 0.86,
+    "otsikko": "Rungon valkoinen vyö",
+    "teksti": "Rungon valkoisessa vyössä on tummia suorakulmaisia aukkoja tasaisin välein. Niiden yläpuolella roikkuu köysiä ja pieniä rattaita.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-AB12278-Z",
+      "title": "Rijksmuseo: Scheepsmodel, RP-F-AB12278-Z"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Scheepsmodel,_RP-F-AB12278-Z.jpg",
+      "title": "Wikimedia Commons: Scheepsmodel, RP-F-AB12278-Z.jpg"
+     }
+    ]
+   }
+  ],
+  "RP-F-AB12278-A": [],
+  "uva-amsterdam-kartta-1625": [
+   {
+    "x": 0.5,
+    "y": 0.04,
+    "otsikko": "Ainoa väritetty kappale",
+    "teksti": "Yläreunan otsikkopalkki on puupiirros, ja kartta on värjätty käsin. Tämä on ainoa tunnettu kappale, jossa on sekä väritys että otsikkopalkki.",
+    "lahteet": [
+     {
+      "url": "https://www.allardpierson.nl/en/news/allard-pierson-acquires-unique-17th-century-wall-map-of-amsterdam",
+      "title": "Allard Pierson: Unique 17th century wall map of Amsterdam"
+     }
+    ]
+   },
+   {
+    "x": 0.15,
+    "y": 0.15,
+    "otsikko": "Kaupunki sivulta katsottuna",
+    "teksti": "Kartta näyttää kaupungin suoraan ylhäältä, mutta vasemman yläkulman kehyksessä Amsterdam näkyy vedeltä päin. Siluetista erottuu monta kirkontornia.",
+    "lahteet": [
+     {
+      "url": "https://www.allardpierson.nl/en/news/allard-pierson-acquires-unique-17th-century-wall-map-of-amsterdam",
+      "title": "Allard Pierson: Unique 17th century wall map of Amsterdam"
+     }
+    ]
+   },
+   {
+    "x": 0.85,
+    "y": 0.15,
+    "otsikko": "Pienoiskartta ja Vermeer",
+    "teksti": "Oikean yläkulman pienoiskartta esittää Amsterdamin ympäristöä ja Zuiderzeetä. Saman tekijän Hollannin seinäkartta näkyy Vermeerin maalauksissa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Balthasar_Florisz._van_Berckenrode",
+      "title": "Balthasar Florisz. van Berckenrode (Wikipedia)"
+     },
+     {
+      "url": "https://www.frick.org/blogs/curatorial/vermeers_return_stinebring",
+      "title": "Frick Collection: Return of the Vermeers"
+     }
+    ]
+   },
+   {
+    "x": 0.7,
+    "y": 0.105,
+    "otsikko": "Amsterdamin vaakuna",
+    "teksti": "Vaakunassa on kolme hopeista Andreaan ristiä. Keisarillisen kruunun salli kaupungille keisari Maksimilian I 1400-luvun lopulla.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Coat_of_arms_of_Amsterdam",
+      "title": "Coat of arms of Amsterdam (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.789,
+    "y": 0.352,
+    "otsikko": "Tuulimylly vallin kärjessä",
+    "teksti": "Kaupunkia ympäröivän vallin kulmissa seisoo pieniä tuulimyllyjä, jotka on piirretty tarkasti.",
+    "lahteet": [
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Map_of_Amsterdam,_1625_(1630s_edition)_by_Balthasar_Florisz._van_Berckenrode_Universiteit_van_Amsterdam_OTM-_HB-KZL_W.X._020.jpg",
+      "title": "UvA:n kuva kartasta (Wikimedia Commons)"
+     }
+    ]
+   },
+   {
+    "x": 0.3,
+    "y": 0.87,
+    "otsikko": "Laivatungos kaupungin edustalla",
+    "teksti": "Veden täyttävät laivat, ja monen mastossa liehuu hollantilainen lippu. Joidenkin vieressä näkyy ruutisavua, kun ne laukaisevat tykkejä.",
+    "lahteet": [
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Map_of_Amsterdam,_1625_(1630s_edition)_by_Balthasar_Florisz._van_Berckenrode_Universiteit_van_Amsterdam_OTM-_HB-KZL_W.X._020.jpg",
+      "title": "UvA:n kuva kartasta (Wikimedia Commons)"
+     }
+    ]
+   }
+  ],
+  "SK-A-135": [
+   {
+    "x": 0.39,
+    "y": 0.4,
+    "otsikko": "Vihreä varjo kasvoissa",
+    "teksti": "Rijksmuseon tutkimuksen mukaan kasvojen alla on tumma oliivinvihreä pohjamaali. Hals jätti sen näkyviin varjoksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-135",
+      "title": "Rijksmuseum: A Militiaman Raising His Glass, known as the 'Merry Drinker' (SK-A-135)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-A-135",
+      "title": "Tarkistus: dark olive green under the face, left visible as shadow (Underpainting-osio)"
+     }
+    ]
+   },
+   {
+    "x": 0.15,
+    "y": 0.75,
+    "otsikko": "Puhutteleva käsi",
+    "teksti": "Mies viittoo avoimella kämmenellä, ja huulet ovat raollaan. Hän näyttää puhuttelevan suoraan sinua.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-135",
+      "title": "Rijksmuseum: A Militiaman Raising His Glass, known as the 'Merry Drinker' (SK-A-135)"
+     }
+    ]
+   },
+   {
+    "x": 0.83,
+    "y": 0.81,
+    "otsikko": "Lasi sormenpäillä",
+    "teksti": "Lasi on vaarallisen tasapainoisesti miehen sormenpäillä. Tällaista lasia kutsutaan berkemeijeriksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-135",
+      "title": "Rijksmuseum: A Militiaman Raising His Glass, known as the 'Merry Drinker' (SK-A-135)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Merry_Drinker",
+      "title": "The Merry Drinker (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "fhm-os-i-116": [
+   {
+    "x": 0.82,
+    "y": 0.21,
+    "otsikko": "Talon sisäemäntä",
+    "teksti": "Takana seisova nainen on talon ”sisäemäntä”. Hän johti arkea yhdessä talon isännän kanssa.",
+    "lahteet": [
+     {
+      "url": "https://franshalsmuseum.nl/en/collection/regentesses-of-the-old-mens-alms-house",
+      "title": "Frans Hals Museum: Regentesses of the Old Men's Alms House"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Regentesses_of_the_Old_Men's_Almshouse",
+      "title": "Regentesses of the Old Men's Almshouse (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.72,
+    "y": 0.49,
+    "otsikko": "Kopio, joka löytyi 2018",
+    "teksti": "Manet kopioi tämän maalauksen Haarlemissa 1872. Kadoksissa ollut kopio löytyi 2018 yksityiskokoelmasta Roomasta.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Regentesses_of_the_Old_Men's_Almshouse",
+      "title": "Regentesses of the Old Men's Almshouse (Wikipedia)"
+     },
+     {
+      "url": "https://apollo-magazine.com/?p=847991",
+      "title": "Apollo: The modern painters who were mad about Frans Hals"
+     },
+     {
+      "url": "https://nos.nl/nieuwsuur/artikel/2254498-zoek-geraakte-manet-nu-te-zien-in-haarlem-met-dank-aan-frans-hals",
+      "title": "Tarkistus: Manetin kopio Regentessen-maalauksesta, tehty 1872 Haarlemissa, löytyi yksityiskokoelmasta"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Regentesses_of_the_Old_Men%27s_Almshouse",
+      "title": "Tarkistus: Manetin kopio 26.6.1872, löytyi 2018, esillä Frans Hals and the Moderns -näyttelyssä; Sarg"
+     }
+    ]
+   },
+   {
+    "x": 0.45,
+    "y": 0.8,
+    "otsikko": "Pöytäliina oli harmaanvihreä",
+    "teksti": "Pöytäliina on nyt tummanruskea, mutta museon mukaan liinat ja verhot olivat alun perin harmaanvihreitä.",
+    "lahteet": [
+     {
+      "url": "https://frans-hals-and-his-workshop.rkdstudies.nl/a3-paintings-frans-hals-and-his-workshop-assistants/a356-a364/",
+      "title": "RKD Studies: Frans Hals and his workshop, A3.56-A3.64"
+     },
+     {
+      "url": "https://www.codart.nl/?p=72126",
+      "title": "Tarkistus: Frans Hals Museum (Good as New, 2018): Governors- ja Governesses-muotokuvien pöytäliinat j"
+     },
+     {
+      "url": "https://frans-hals-and-his-workshop.rkdstudies.nl/1-a-visit-to-the-workshop/122-frans-i-and-frans-ii/",
+      "title": "Tarkistus: RKD: miesregenttien pöytäliina nyt tummanruskea, alun perin vihreä (tukeva, ei sama maalau"
+     }
+    ]
+   },
+   {
+    "x": 0.125,
+    "y": 0.74,
+    "otsikko": "Monta mustan sävyä",
+    "teksti": "Van Gogh ihaili Halsin monia mustan sävyjä. Katso, miten naisten puvut eroavat toisistaan valkoisten kaulusten rinnalla.",
+    "lahteet": [
+     {
+      "url": "https://franshalsmuseum.nl/en/collection/regentesses-of-the-old-mens-alms-house",
+      "title": "Frans Hals Museum: Regentesses of the Old Men's Alms House"
+     },
+     {
+      "url": "https://wallacecollection.org/art/collection/collection-highlights/laughing-cavalier",
+      "title": "Wallace Collection: The Laughing Cavalier (Van Goghin 27 mustaa)"
+     }
+    ]
+   }
+  ],
+  "SK-C-374": [
+   {
+    "x": 0.08,
+    "y": 0.36,
+    "otsikko": "Van Goghin ihailema lipunkantaja",
+    "teksti": "Vasemmassa reunassa oranssin lipun vieressä seisoo harmaaseen asuun pukeutunut lipunkantaja. Van Gogh ihaili häntä kirjeessään Theolle vuonna 1885.",
+    "lahteet": [
+     {
+      "url": "https://vangoghletters.org/vg/letters/let534/letter.html",
+      "title": "Van Gogh Letters: kirje 534 Theolle, n. 10.10.1885"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-374",
+      "title": "Rijksmuseum: Militia Company of District XI (SK-C-374)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Meagre_Company",
+      "title": "Meagre Company (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.19,
+    "y": 0.5,
+    "otsikko": "Kapteeni Reynier Reael",
+    "teksti": "Istuva hattupäinen mies pitelee komentosauvaa. Hän on kapteeni Reynier Reael (1588–1648), jonka mukaan maalaus on nimetty.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-374",
+      "title": "Rijksmuseum: Militia Company of District XI (SK-C-374)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-374",
+      "title": "Rijksmuseum (NL): Schuttersstuk wijk XI (SK-C-374)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Meagre_Company",
+      "title": "Meagre Company (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.3,
+    "y": 0.42,
+    "otsikko": "Luutnantti Cornelis Blaeuw",
+    "teksti": "Kaljuuntuva mies istuu profiilissa kapteenin vieressä ja pitelee pitkävartista asetta. Hän on luutnantti Cornelis Blaeuw (1591–1638).",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-374",
+      "title": "Rijksmuseum: Militia Company of District XI (SK-C-374)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-374",
+      "title": "Rijksmuseum (NL): Schuttersstuk wijk XI (SK-C-374)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Meagre_Company",
+      "title": "Meagre Company (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.872,
+    "y": 0.29,
+    "otsikko": "Vihertävä kasvo",
+    "teksti": "Oikealta toisen miehen kasvot ovat saaneet sairaalloisen vihertävän sävyn. Syynä on värin muuttuminen ajan myötä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-374",
+      "title": "Rijksmuseum: Militia Company of District XI (SK-C-374)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-374",
+      "title": "Rijksmuseum (NL): Schuttersstuk wijk XI (SK-C-374)"
+     }
+    ]
+   },
+   {
+    "x": 0.715,
+    "y": 0.25,
+    "otsikko": "Hals vai Codde?",
+    "teksti": "Hals aloitti ryhmämuotokuvan, mutta Pieter Codde viimeisteli sen: oikean reunan seitsemän hahmoa on hänen maalaamiaan.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-374",
+      "title": "Rijksmuseum: Militia Company of District XI (SK-C-374)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-374",
+      "title": "Rijksmuseum (NL): Schuttersstuk wijk XI (SK-C-374)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Meagre_Company",
+      "title": "Tarkistus: Codde viimeisteli seitsemän oikeanpuoleista hahmoa"
+     }
+    ]
+   }
+  ],
+  "SK-A-1328": [
+   {
+    "x": 0.45,
+    "y": 0.27,
+    "otsikko": "Toistuvat värit",
+    "teksti": "Mustapunaiset karvalakit ja univormujen kultanauhat toistuvat ratsastajasta toiseen. Se korostaa liikkeen vauhtia.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1328",
+      "title": "Rijksmuseum: The Yellow Riders (SK-A-1328)"
+     }
+    ]
+   },
+   {
+    "x": 0.75,
+    "y": 0.1,
+    "otsikko": "Alas dyynin rinnettä",
+    "teksti": "Ratsastajat syöksyvät alas dyyniä. Teoksen toinen nimi on Rijdende artillerie eli ratsastava tykistö.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1328",
+      "title": "Rijksmuseum: The Yellow Riders (SK-A-1328)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-A-1328",
+      "title": "Rijksmuseum (NL): De Gele Rijders (SK-A-1328)"
+     }
+    ]
+   }
+  ],
+  "kmska-2200": [
+   {
+    "x": 0.56,
+    "y": 0.48,
+    "otsikko": "Palvelijatar ja pieni tyttö",
+    "teksti": "Palvelijattaren univormu on kirkkaansininen ja lakki valkoinen. Hänen vieressään kulkeva hienosti puettu tyttö on todennäköisesti työnantajan tytär.",
+    "lahteet": [
+     {
+      "url": "https://kmska.be/en/masterpiece/evening-dam-square-amsterdam",
+      "title": "KMSKA: Evening on Dam Square in Amsterdam"
+     },
+     {
+      "url": "https://vlaamsekunstcollectie.be/en/collection/2200",
+      "title": "Vlaamse Kunstcollectie: Evening on Dam Square in Amsterdam (2200)"
+     }
+    ]
+   },
+   {
+    "x": 0.08,
+    "y": 0.2,
+    "otsikko": "Oranssit näyteikkunat",
+    "teksti": "Rakennukset on vain luonnosteltu tummilla sävyillä, mutta kauppojen näyteikkunat hehkuvat oranssina.",
+    "lahteet": [
+     {
+      "url": "https://kmska.be/en/masterpiece/evening-dam-square-amsterdam",
+      "title": "KMSKA: Evening on Dam Square in Amsterdam"
+     },
+     {
+      "url": "https://vlaamsekunstcollectie.be/en/collection/2200",
+      "title": "Vlaamse Kunstcollectie: Evening on Dam Square in Amsterdam (2200)"
+     }
+    ]
+   },
+   {
+    "x": 0.38,
+    "y": 0.69,
+    "otsikko": "Laihat koirat",
+    "teksti": "KMSKA:n mukaan Breitnerin vuoden 1890 maalauksessa aukiolla juoksentelee laihoja koiria edestakaisin.",
+    "lahteet": [
+     {
+      "url": "https://kmska.be/en/masterpiece/evening-dam-square-amsterdam",
+      "title": "KMSKA: Evening on Dam Square in Amsterdam"
+     }
+    ]
+   },
+   {
+    "x": 0.18,
+    "y": 0.34,
+    "otsikko": "Palvelijattaret iltaostoksilla",
+    "teksti": "Vaaleisiin mekkoihin pukeutuneet palvelijattaret erottuvat tummaa aukiota vasten. He kiirehtivät päivän viimeisille ostoksille.",
+    "lahteet": [
+     {
+      "url": "https://kmska.be/en/masterpiece/evening-dam-square-amsterdam",
+      "title": "KMSKA: Evening on Dam Square in Amsterdam"
+     }
+    ]
+   }
+  ],
+  "RP-F-00-565": [
+   {
+    "x": 0.26,
+    "y": 0.34,
+    "otsikko": "Pyykkiä ikkunoissa",
+    "teksti": "Kanavan varrella näkyvät Zeedijkin talojen takasivut. Ikkunoiden eteen on ripustettu pyykkiä kuivumaan.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-00-565",
+      "title": "Rijksmuseum: Oudezijds Achterburgwal en links de achterzijde van de Zeedijk (RP-F-00-565)"
+     }
+    ]
+   },
+   {
+    "x": 0.64,
+    "y": 0.72,
+    "otsikko": "Mies kärryn vieressä",
+    "teksti": "Kanavan rannalla seisoo lava- tai laatikkokärry, ja mies nojaa sen reunan yli katsomaan vettä. Kuvassa kaukana näkyy toinen kärry.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-00-565",
+      "title": "Tarkistus: valokuva Breitnerin 1890-luvulta, kanavan ranta; yksityiskohta nähtävissä kuvasta"
+     }
+    ]
+   }
+  ],
+  "RP-F-K89497": [
+   {
+    "x": 0.28,
+    "y": 0.38,
+    "otsikko": "Kuninkaallinen palatsi",
+    "teksti": "Vasemmalla on palatsi, joka rakennettiin 1600-luvulla kaupungintaloksi. Kuningas Ludvig Napoleon otti sen palatsikseen vuonna 1808.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-K89497",
+      "title": "Rijksmuseum: Gezicht op de Dam in Amsterdam (RP-F-K89497)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam",
+      "title": "Royal Palace of Amsterdam (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.66,
+    "y": 0.4,
+    "otsikko": "Nieuwe Kerk",
+    "teksti": "Nieuwe Kerk vihittiin käyttöön 1409. Vuoden 1645 tulipalo tuhosi sen lähes kokonaan, ja se rakennettiin uudelleen goottilaiseen tyyliin.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-K89497",
+      "title": "Rijksmuseum: Gezicht op de Dam in Amsterdam (RP-F-K89497)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Nieuwe_Kerk,_Amsterdam",
+      "title": "Nieuwe Kerk, Amsterdam (Wikipedia)"
+     },
+     {
+      "url": "https://www.nieuwekerk.nl/en/?p=3111",
+      "title": "Tarkistus: 1408 piispa hyväksyi, vuotta myöhemmin vihitty; 1645 katto tuhoutui, jäljelle hiiltynyt ra"
+     }
+    ]
+   }
+  ],
+  "RP-F-K89483": [
+   {
+    "x": 0.42,
+    "y": 0.78,
+    "otsikko": "Työläiset rakennuskuopassa",
+    "teksti": "Breitnerin valokuvassa työmiehet ahertavat Van Diemenstraatin rakennuskuopassa. Etualalla mies pitelee kottikärryn kahvoja.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-K89483",
+      "title": "Rijksmuseum: Bouwvakkers aan het werk in een bouwput aan de Van Diemenstraat (RP-F-K89483)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-T-1949-445",
+      "title": "Tarkistus: Breitnerin Van Diemenstraatin rakennuskuoppa-aiheinen työ, paalutustyö (heistelling)"
+     }
+    ]
+   },
+   {
+    "x": 0.37,
+    "y": 0.4,
+    "otsikko": "Paaluseinä",
+    "teksti": "Taustalla pystyssä seisoo tiheä rivi puupaaluja. Niiden edessä työmiehet kulkevat lankkujen päällä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-F-K89483 (rakennuskuoppa, Van Diemenstraat; paalut näkyvät kuvassa)",
+      "title": "Tarkistus: lähde"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-T-1949-445 (paalutustyö samalla paikalla)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   },
+   {
+    "x": 0.53,
+    "y": 0.15,
+    "otsikko": "Talot rakennuskuopan takana",
+    "teksti": "Rakennuskuopan takana näkyy rivi taloja. Van Diemenstraat oli Amsterdamin uusia, tuolloin rakennettavia katuja.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3581 (Van Diemenstraat oli uusi rakennettava katu Amsterdamissa)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   }
+  ],
+  "SK-A-2979": [
+   {
+    "x": 0.52,
+    "y": 0.86,
+    "otsikko": "Lumiset proomut",
+    "teksti": "Lumi on jäänyt kanavan proomujen kansille ja reunoille. Proomut täyttävät lähes koko kuvan alareunan.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2979",
+      "title": "Winter in Amsterdam (Rijksmuseum, SK-A-2979)"
+     }
+    ]
+   },
+   {
+    "x": 0.84,
+    "y": 0.08,
+    "otsikko": "Harmaa talvitaivas",
+    "teksti": "Matala, harmaanruskea taivas painaa talvista kaupunkia. Näkymä on Brouwersgrachtin ja Korte Prinsengrachtin kulmasta.",
+    "lahteet": [
+     {
+      "url": "https://eclecticlight.co/2026/02/01/a-painted-weekend-in-amsterdam-1871-1923/",
+      "title": "A Painted Weekend in Amsterdam (Eclectic Light Company)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/George_Hendrik_Breitner",
+      "title": "George Hendrik Breitner (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2979",
+      "title": "Tarkistus: paikka: Brouwersgrachtin ja Korte Prinsengrachtin kulma; c. 1900-1901"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Winter_in_Amsterdam,_SK-A-2979.jpg",
+      "title": "Tarkistus: kuva: pilvinen harmaa taivas"
+     }
+    ]
+   }
+  ],
+  "SK-A-404": [
+   {
+    "x": 0.3,
+    "y": 0.6,
+    "otsikko": "Satiinipukuinen nainen",
+    "teksti": "Nainen seisoo selin katsojaan satiinipuvussa ja ottaa vastaan kaksi vierasta. Yhden tulkinnan mukaan hän on kosijan ihastuksen kohde.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
+      "title": "Gallant Conversation, known as ‘The Paternal Admonition’ (Rijksmuseum, SK-A-404)"
+     }
+    ]
+   },
+   {
+    "x": 0.595,
+    "y": 0.525,
+    "otsikko": "Upseerin ele",
+    "teksti": "Upseeri on juuri saapunut, hattu vielä kädessä. Peukalo ja etusormi koskettavat toisiaan; kolikkoa ei tämän version tutkimuksessa löytynyt.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
+      "title": "Gallant Conversation, known as ‘The Paternal Admonition’ (Rijksmuseum, SK-A-404)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404/catalogue-entry",
+      "title": "Tarkistus: hattu kädessä, sormieleet, tutkimuksessa ei kolikon jälkiä, Berliinin versiossa ei kolikko"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Gallant_Conversation",
+      "title": "Tarkistus: kolikko näkyi Berliinin version puhdistuksen jälkeen"
+     }
+    ]
+   },
+   {
+    "x": 0.485,
+    "y": 0.575,
+    "otsikko": "Juova kaitsija",
+    "teksti": "Vanha tummapukuinen nainen juo lasista upseerin vieressä. Tulkinnan mukaan hän on nuoren naisen kaitsija.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
+      "title": "Gallant Conversation, known as ‘The Paternal Admonition’ (Rijksmuseum, SK-A-404)"
+     }
+    ]
+   },
+   {
+    "x": 0.2,
+    "y": 0.38,
+    "otsikko": "Punainen sänky",
+    "teksti": "Taustan punainen sänky oli 1600-luvulla kallis huonekalu. Osa tutkijoista pitää sitä eroottisena vihjeenä, toiset avioliiton merkkinä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-404",
+      "title": "Gallant Conversation, known as ‘The Paternal Admonition’ (Rijksmuseum, SK-A-404)"
+     }
+    ]
+   }
+  ],
+  "SK-A-1718": [
+   {
+    "x": 0.05,
+    "y": 0.965,
+    "otsikko": "Pakkasen uhri",
+    "teksti": "Vasemmassa alakulmassa pakkaseen kuollut hevonen on varisten ja koiran ruokana. Avercamp ei kaihtanut synkkiäkään yksityiskohtia.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1718",
+      "title": "Winter Landscape with Ice Skaters (Rijksmuseum, SK-A-1718)"
+     }
+    ]
+   },
+   {
+    "x": 0.473,
+    "y": 0.828,
+    "otsikko": "Kolf-pelaaja",
+    "teksti": "Jäällä pelataan kolfia, jota pidetään golfin esiasteena. Etualan pelaaja on juuri iskemässä palloa kepillään.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1718",
+      "title": "Winter Landscape with Ice Skaters (Rijksmuseum, SK-A-1718)"
+     }
+    ]
+   },
+   {
+    "x": 0.215,
+    "y": 0.635,
+    "otsikko": "Leijonavaakuna",
+    "teksti": "Vasemman tiilitalon päädyssä on vaakuna, jonka kaksi leijonaa viittaa Antwerpeniin. Talon arvellaan olleen panimo tai majatalo nimeltä De Halve Maan.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1718",
+      "title": "Winter Landscape with Ice Skaters (Rijksmuseum, SK-A-1718)"
+     },
+     {
+      "url": "https://sunsite2.icm.edu.pl/wm/paint/auth/avercamp/rijks-winter-landscape",
+      "title": "Avercamp: Winter Landscape with Iceskaters (Web Museum)"
+     }
+    ]
+   }
+  ],
+  "SK-A-1320": [
+   {
+    "x": 0.51,
+    "y": 0.58,
+    "otsikko": "Kaatunut nainen",
+    "teksti": "Sillan edessä nainen on kaatunut jäälle. Avercamp lainasi hahmon Pieter Brueghelin grafiikasta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1320",
+      "title": "Ice-Skating in a Village (Rijksmuseum, SK-A-1320)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.825,
+    "otsikko": "Komea luistelija",
+    "teksti": "Etualalla tyylikkäästi pukeutunut herra luistelee kohti katsojaa. Hän saattaa olla sotilas.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1320",
+      "title": "Ice-Skating in a Village (Rijksmuseum, SK-A-1320)"
+     }
+    ]
+   }
+  ],
+  "SK-A-2280": [
+   {
+    "x": 0.711,
+    "y": 0.482,
+    "otsikko": "Pieni valo huipulla",
+    "teksti": "Merimerkin huipulla hohtaa pieni valo. Se erottuu tummaa, myrskyisää taivasta vasten, vaikka aallot paiskovat merkkiä joka puolelta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/object/SK-A-2280--e9b43b0883a7826bcaf02e0fdd8af35a",
+      "title": "Lighthouse in Breaking Waves (Rijksmuseum, SK-A-2280)"
+     }
+    ]
+   },
+   {
+    "x": 0.312,
+    "y": 0.487,
+    "otsikko": "Lokki myrskyssä",
+    "teksti": "Tumman taivaan edessä liitää pieni vaalea lokki merimerkin vasemmalla puolella.",
+    "lahteet": [
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Hendrik_Willem_Mesdag_-_Vuurtoren_in_de_branding.jpg",
+      "title": "Tarkistus: kuvan tarkistus: lokki (0.312,0.487), pelkkä kuvassa näkyvä yksityiskohta"
+     }
+    ]
+   },
+   {
+    "x": 0.208,
+    "y": 0.677,
+    "otsikko": "Pieni purjevene",
+    "teksti": "Vasemmalla aaltojen takana häämöttää pieni tumma purjevene vasten tummaa taivasta.",
+    "lahteet": [
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Hendrik_Willem_Mesdag_-_Vuurtoren_in_de_branding.jpg",
+      "title": "Tarkistus: kuvan tarkistus: purjevene (0.208,0.677), pelkkä kuvassa näkyvä yksityiskohta"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-832": [
+   {
+    "x": 0.79,
+    "y": 0.682,
+    "otsikko": "Kaksi pientä kulkijaa",
+    "teksti": "Kärrynjälkien uurtamalla tiellä kulkee kaksi pientä hahmoa jyrkkien kallioiden keskellä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-832",
+      "title": "Rocky Landscape with a Road and a River (Rijksmuseum, RP-P-OB-832)"
+     }
+    ]
+   },
+   {
+    "x": 0.2,
+    "y": 0.35,
+    "otsikko": "Etsaus ja siveltimen jälki",
+    "teksti": "Segers painoi etsauksen paperille ja maalasi vedoksen käsin. Viivat ja maali yhdessä antavat maisemalle syvyyttä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-832 (etsaus mustalla paperille, käsin värjätty, viivat ja maali luovat syvyyttä)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   },
+   {
+    "x": 0.35,
+    "y": 0.78,
+    "otsikko": "Joki laaksossa",
+    "teksti": "Joki kiemurtelee kallioiden välistä kohti kaukaista tasankoa. Tie kulkee sen yläpuolella.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-832 (nimi: kallioinen maisema, tie ja joki; kuvasta nähtävä)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-810": [
+   {
+    "x": 0.7,
+    "y": 0.22,
+    "otsikko": "Sammaleiset oksat",
+    "teksti": "Ylhäällä roikkuu sammaleiselta näyttävä oksa. Itse puuta ei näy lainkaan, vaan oksa kehystää maiseman.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-810",
+      "title": "Distant View with a Road and Mossy Branches (Rijksmuseum, RP-P-OB-810)"
+     }
+    ]
+   },
+   {
+    "x": 0.523,
+    "y": 0.635,
+    "otsikko": "Autio tie",
+    "teksti": "Tiellä kulkee pieni hahmo, ja koko maisema tuntuu autiolta. Samasta laatasta on tehty myös aurinkoinen ja synkkä versio.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-810",
+      "title": "Distant View with a Road and Mossy Branches (Rijksmuseum, RP-P-OB-810)"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-849": [
+   {
+    "x": 0.475,
+    "y": 0.875,
+    "otsikko": "Puun juurella",
+    "teksti": "Puu on istutettu pieneen paaluilla ympäröityyn penkkiin. Huigen Leeflangin mukaan tällaiset yksityiskohdat tekevät kuvasta rakennellun.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-849",
+      "title": "The Large Tree (Rijksmuseum, RP-P-OB-849)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-849/catalogue-entry",
+      "title": "Tarkistus: pieni penkki, johon iso puu on istutettu; rakennellumpi vaikutelma (Leeflang 2016)"
+     }
+    ]
+   },
+   {
+    "x": 0.55,
+    "y": 0.74,
+    "otsikko": "Kylä taustalla",
+    "teksti": "Ison puun takana horisontissa näkyy kylä. Rijksmuseon kuvauksessa teos esittää suurta puuta niityllä ja kylää taustalla.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-849/catalogue-entry",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   },
+   {
+    "x": 0.4,
+    "y": 0.3,
+    "otsikko": "Tiheä viivoitus",
+    "teksti": "Segers peitti lähes koko levyn tiheällä ristiviivoituksella ja suojasi vaaleat kohdat peitelakalla ennen syövytystä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-849/catalogue-entry",
+      "title": "Tarkistus: lähde"
+     },
+     {
+      "url": "https://www.metmuseum.org/perspectives/hercules-segers-etching-process",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   }
+  ],
+  "SK-A-4": [
+   {
+    "x": 0.62,
+    "y": 0.45,
+    "otsikko": "Joutsen tulkittiin De Wittiksi",
+    "teksti": "Joutsenen on tulkittu esittävän valtiomies Johan de Wittiä, joka surmattiin 1672. Asselijn kuoli jo 1652, ennen De Wittin valtakautta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4",
+      "title": "Rijksmuseum: The Threatened Swan (SK-A-4)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Jan_Asselijn",
+      "title": "Jan Asselijn (Wikipedia)"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-threatened-swan/",
+      "title": "CODART Canon: The Threatened Swan"
+     }
+    ]
+   },
+   {
+    "x": 0.13,
+    "y": 0.85,
+    "otsikko": "Koira, valtion vihollinen",
+    "teksti": "Vasemmalla vedessä on koira, jota joutsen torjuu. Sen yläpuolella lukee ”De viand van de staat”, valtion vihollinen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4",
+      "title": "Rijksmuseum: The Threatened Swan (SK-A-4)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Threatened_Swan",
+      "title": "The Threatened Swan (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.835,
+    "otsikko": "Kirjoitus joutsenen jaloissa",
+    "teksti": "”De raad-pensionaris” nimeää joutsenen Hollannin johtavaksi virkamieheksi. Kirjoitukset lisättiin vasta Asselijnin kuoleman jälkeen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4",
+      "title": "Rijksmuseum: The Threatened Swan (SK-A-4)"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-threatened-swan/",
+      "title": "CODART Canon: The Threatened Swan"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/in-detail/story/political-swan",
+      "title": "Rijksmuseum: Political Swan"
+     }
+    ]
+   },
+   {
+    "x": 0.9,
+    "y": 0.66,
+    "otsikko": "Muna nimeltä Holland",
+    "teksti": "Pesässä on muna, johon on maalattu ”Holland”. Rijksmuseo tulkitsee: muna on Hollanti, jota joutsen suojelee.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4",
+      "title": "Rijksmuseum: The Threatened Swan (SK-A-4)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Threatened_Swan",
+      "title": "The Threatened Swan (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-A-351": [
+   {
+    "x": 0.345,
+    "y": 0.69,
+    "otsikko": "Pyhän Bavon kirkko",
+    "teksti": "Horisontilla kohoaa Pyhän Bavon kirkon korkea katto, josta Haarlemin tunnistaa. Kirkko tunnetaan myös nimellä Grote Kerk.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-351",
+      "title": "Rijksmuseum: View of Haarlem from the Northwest (SK-A-351)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Grote_Kerk,_Haarlem",
+      "title": "Grote Kerk, Haarlem (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.38,
+    "y": 0.88,
+    "otsikko": "Pellavaa valkaistumassa",
+    "teksti": "Etualan vaaleat viirut ovat pitkiä pellavakangasta, jotka on levitetty auringon valkaistaviksi. Niistä maalaus sai nimensä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-351",
+      "title": "Rijksmuseum: View of Haarlem from the Northwest (SK-A-351)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Haarlem_from_the_Northwest,_with_the_Bleaching_Fields_in_the_Foreground",
+      "title": "View of Haarlem from the Northwest (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-C-211": [
+   {
+    "x": 0.65,
+    "y": 0.525,
+    "otsikko": "Mylläri parvekkeella",
+    "teksti": "Myllyn ulkoparvekkeella seisoo pieni hahmo, mylläri. Hän jää aivan pieneksi tumman taivaan ja suuren myllyn rinnalla.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/one-hundred-masterpieces/story/windmill-wijk-bij-duurstede",
+      "title": "Rijksmuseum: Windmill at Wijk bij Duurstede (One hundred masterpieces)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-211",
+      "title": "Rijksmuseum: The Windmill at Wijk bij Duurstede (SK-C-211)"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:De_molen_bij_Wijk_bij_Duurstede_Rijksmuseum_SK-C-211.jpeg",
+      "title": "Tarkistus: kuvan tarkistus: pieni hahmo parvekkeella (0.653,0.537)"
+     }
+    ]
+   },
+   {
+    "x": 0.54,
+    "y": 0.66,
+    "otsikko": "Linna myllyn varjossa",
+    "teksti": "Taustalla häämöttävät Duurstedin linnan tornit. Kuvassa mylly kohoaa linnan yläpuolelle ja jättää sen varjoonsa.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-211",
+      "title": "Rijksmuseum: The Windmill at Wijk bij Duurstede (SK-C-211)"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.705,
+    "otsikko": "Naiset rantatiellä",
+    "teksti": "Myllyn juurella kolme naista kävelee rantatietä. Heidän rinnallaan mylly näyttää vielä suuremmalta.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Windmill_at_Wijk_bij_Duurstede",
+      "title": "Windmill at Wijk bij Duurstede (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-211",
+      "title": "Tarkistus: Langs de oever lopen enkele vrouwen"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:De_molen_bij_Wijk_bij_Duurstede_Rijksmuseum_SK-C-211.jpeg",
+      "title": "Tarkistus: kuvan tarkistus: kolme naista"
+     }
+    ]
+   }
+  ],
+  "SK-A-385": [
+   {
+    "x": 0.375,
+    "y": 0.475,
+    "otsikko": "Kenkä ja vitsa",
+    "teksti": "Hymyilevä tyttö pitelee kenkää, jossa on lahjan sijaan vitsa, risukimppu. Itkevä poika löysi sen kengästään.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-385",
+      "title": "Rijksmuseum: The Feast of St Nicholas (SK-A-385)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Feast_of_Saint_Nicholas",
+      "title": "The Feast of Saint Nicholas (Wikipedia)"
+     },
+     {
+      "url": "https://dutchnews.nl/2015/11/eight-things-about-jan-steens-the-feast-of-st-nicholaas",
+      "title": "Tarkistus: yksi lapsi pitää kenkää ylhäällä, itkevä poika löysi koivuvitsan kengästään"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-feast-of-saint-nicholas/",
+      "title": "Tarkistus: vitsa kengässä"
+     }
+    ]
+   },
+   {
+    "x": 0.54,
+    "y": 0.34,
+    "otsikko": "Isoäiti verhon takana",
+    "teksti": "Verhon takaa kurkistava isoäiti näyttää viittovan itkevää poikaa luokseen. Hän on melkein piilossa verhojen takana.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/TgVxsGBRfCkcIA",
+      "title": "Jan Steen: a born storyteller (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-385",
+      "title": "Rijksmuseum: The Feast of St Nicholas (SK-A-385)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Feast_of_Saint_Nicholas",
+      "title": "Tarkistus: isoäiti piilossa verhojen takana viittoo poikaa"
+     },
+     {
+      "url": "https://dutchnews.nl/2015/11/eight-things-about-jan-steens-the-feast-of-st-nicholaas",
+      "title": "Tarkistus: isoäiti viittoo itkevää poikaa"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-feast-of-saint-nicholas/",
+      "title": "Tarkistus: vanha nainen verhon takana"
+     }
+    ]
+   },
+   {
+    "x": 0.9,
+    "y": 0.3,
+    "otsikko": "Poika osoittaa savupiippua",
+    "teksti": "Taustalla poika kantaa pienempää lasta ja osoittaa savupiippua, jonka kautta pyhimyksen kerrotaan tuoneen lahjat.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Feast_of_Saint_Nicholas",
+      "title": "The Feast of Saint Nicholas (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.735,
+    "y": 0.405,
+    "otsikko": "Piparkakkupyhimys",
+    "teksti": "Pieni lapsi pitelee piparkakkuhahmoa, jonka on arveltu esittävän pyhää Nikolaosta. Protestantit paheksuivat sellaisia pyhimysleivonnaisia.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Feast_of_Saint_Nicholas",
+      "title": "The Feast of Saint Nicholas (Wikipedia)"
+     },
+     {
+      "url": "https://smarthistory.org/jan-steen-feast-of-st-nicholas",
+      "title": "Smarthistory: Jan Steen, Feast of St. Nicholas"
+     },
+     {
+      "url": "https://canon.codart.nl/artwork/the-feast-of-saint-nicholas/",
+      "title": "Tarkistus: lapsen pitelemä piparkakku- tai nukkehahmo Nikolauksesta"
+     },
+     {
+      "url": "https://www.dbnl.org/tekst/_med009201701_01/_med009201701_01_0014.php",
+      "title": "Tarkistus: kalvinistiset saarnaajat vastustivat juhlaa"
+     }
+    ]
+   },
+   {
+    "x": 0.85,
+    "y": 0.88,
+    "otsikko": "Juhlaleipä duivekater",
+    "teksti": "Pöytää vasten nojaa suuri vinoneliön muotoinen duivekater, makea leipä, joka kuului juhlaan.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Feast_of_Saint_Nicholas",
+      "title": "The Feast of Saint Nicholas (Wikipedia)"
+     },
+     {
+      "url": "https://smarthistory.org/jan-steen-feast-of-st-nicholas",
+      "title": "Smarthistory: Jan Steen, Feast of St. Nicholas"
+     }
+    ]
+   }
+  ],
+  "SK-C-229": [
+   {
+    "x": 0.3,
+    "y": 0.38,
+    "otsikko": "Laulava mies ja viinilasi",
+    "teksti": "Pöydän ääressä vanhempi mies laulaa ja kohottaa roemeria, korkeajalkaista viinilasia. Vieressä kaksi naista laulaa paperilapusta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-229",
+      "title": "Rijksmuseum: Het vrolijke huisgezin (SK-C-229)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-229",
+      "title": "Rijksmuseum: The Merry Family (SK-C-229)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/one-hundred-masterpieces/story/merry-family",
+      "title": "Tarkistus: perhe laulaa kovaäänisesti"
+     }
+    ]
+   },
+   {
+    "x": 0.38,
+    "y": 0.28,
+    "otsikko": "Säkkipillin soittaja",
+    "teksti": "Säkkipillin soittaja on Rijksmuseon mukaan Steenin oma omakuva. Hän katsoo katsojaan ja soittaa narrien soitinta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/one-hundred-masterpieces/story/merry-family",
+      "title": "Rijksmuseum: The Merry Family (One hundred masterpieces)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/TgVxsGBRfCkcIA",
+      "title": "Jan Steen: a born storyteller (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-229",
+      "title": "Rijksmuseum: The Merry Family (SK-C-229)"
+     }
+    ]
+   },
+   {
+    "x": 0.08,
+    "y": 0.31,
+    "otsikko": "Poika ikkunassa",
+    "teksti": "Ikkunasta kurkistava poika pitää piippua, ja alapuolella roikkuu torvi. Kuvan lapset matkivat aikuisten melua.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-229",
+      "title": "Rijksmuseum: The Merry Family (SK-C-229)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-229",
+      "title": "Rijksmuseum: Het vrolijke huisgezin (SK-C-229)"
+     }
+    ]
+   }
+  ],
+  "SK-C-230": [
+   {
+    "x": 0.52,
+    "y": 0.53,
+    "otsikko": "Lääkäri ottaa pulssia",
+    "teksti": "Lääkäri tunnustelee pulssia nuoren naisen ranteesta. Rijksmuseon mukaan nainen on kuumeen uuvuttama ja nojaa päänsä tyynyyn.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/SK-C-230",
+      "title": "Rijksmuseum: De zieke vrouw (SK-C-230)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-230",
+      "title": "Rijksmuseum: The Sick Woman (SK-C-230)"
+     }
+    ]
+   },
+   {
+    "x": 0.65,
+    "y": 0.29,
+    "otsikko": "Puoskarilääkäri",
+    "teksti": "Lääkärin vanhanaikainen puku tekee hänestä koomisen hahmon. Rijksmuseon mukaan hän on puoskari, joka tekee diagnoosia.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-230",
+      "title": "Tarkistus: lähde"
+     },
+     {
+      "url": "https://hekint.org/2018/08/30/jan-steen-quack-doctors-visit-lovesick-maidens/",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   },
+   {
+    "x": 0.15,
+    "y": 0.9,
+    "otsikko": "Komfoori lattialla",
+    "teksti": "Lattialla on komfoori. Rijksmuseon mukaan puoskari poltti palan potilaan vaatetta ja päätteli hajusta, onko tämä raskaana tai rakastunut.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-230",
+      "title": "Tarkistus: lähde"
+     },
+     {
+      "url": "https://hekint.org/2018/08/30/jan-steen-quack-doctors-visit-lovesick-maidens/",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   }
+  ],
+  "SK-A-2860": [
+   {
+    "x": 0.79,
+    "y": 0.79,
+    "otsikko": "Ompelija avoimella ovella",
+    "teksti": "Oikean talon avoimella ovella istuva nainen ompelee tai paikkaa. Hänen nimeään ei kerrota.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2860",
+      "title": "Rijksmuseum: View of Houses in Delft, Known as 'The Little Street' (SK-A-2860)"
+     }
+    ]
+   },
+   {
+    "x": 0.43,
+    "y": 0.77,
+    "otsikko": "Nainen kujalla",
+    "teksti": "Kapean kujan perällä nainen kumartuu pesuammeen ylle. Rijksmuseon mukaan tavallisten talojen kuvaaminen oli aikanaan huomionarvoista.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2860",
+      "title": "Rijksmuseum: View of Houses in Delft, Known as 'The Little Street' (SK-A-2860)"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/cat_about/street.html",
+      "title": "Tarkistus: yksi kolmesta Vermeerin ulkokuvasta, ei sisätilaa"
+     }
+    ]
+   }
+  ],
+  "SK-A-2344": [
+   {
+    "x": 0.74,
+    "y": 0.85,
+    "otsikko": "Kupido seinälaatassa",
+    "teksti": "Seinän alaosan Delft-laatoista yhdessä on Kupido jalkojenlämmittimen vieressä. Sen on tulkittu viittaavan rakkauteen tai piian haaveisiin.",
+    "lahteet": [
+     {
+      "url": "https://essentialvermeer.com/catalogue/milkmaid.html",
+      "title": "Essential Vermeer: The Milkmaid"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/the-milkmaid-rijksmuseum/eQVhb89R45GfJg?hl=en",
+      "title": "The Milkmaid (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Milkmaid_(Vermeer)",
+      "title": "Tarkistus: Kupido-laatta jalkojenlämmittimen lähellä; tulkinta kiihottuminen tai haaveilu miehestä"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/cat_about/milkmaid.html",
+      "title": "Tarkistus: Kupido laatalla pesäpöydän ja jalkojenlämmittimen välissä (Nevitt)"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.88,
+    "otsikko": "Jalkojenlämmitin",
+    "teksti": "Reikäkantisessa puulaatikossa on hiilipata, joka lämmitti jalkoja. Sitä on tulkittu rakkauden vertauskuvaksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2344",
+      "title": "Rijksmuseum: The Milkmaid (SK-A-2344)"
+     },
+     {
+      "url": "https://essentialvermeer.com/catalogue/milkmaid.html",
+      "title": "Essential Vermeer: The Milkmaid"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/the-milkmaid-rijksmuseum/eQVhb89R45GfJg?hl=en",
+      "title": "The Milkmaid (Google Arts & Culture)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.68,
+    "otsikko": "Ultramariininen esiliina",
+    "teksti": "Esiliinan sininen on ultramariinia, jota tehtiin kalliista lapislatsulista. Vermeer ei turvautunut halvempaan atsuriittiin.",
+    "lahteet": [
+     {
+      "url": "https://colourlex.com/project/vermeer-the-milkmaid/",
+      "title": "ColourLex: Vermeer, The Milkmaid"
+     },
+     {
+      "url": "https://essentialvermeer.com/catalogue/milkmaid.html",
+      "title": "Essential Vermeer: The Milkmaid"
+     }
+    ]
+   }
+  ],
+  "mauritshuis-92": [
+   {
+    "x": 0.44,
+    "y": 0.63,
+    "otsikko": "Schiedamin portti",
+    "teksti": "Keskellä on Schiedamin portti, jonka katolla on pieni kellotorni. Portti purettiin 1830-luvulla.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
+      "title": "View of Delft (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Delft",
+      "title": "View of Delft (Wikipedia)"
+     },
+     {
+      "url": "https://www.lensonleeuwenhoek.net/content/rotterdamse-poort-and-schiedamse-poort",
+      "title": "Tarkistus: Schiedamse Poort keskellä, Rotterdamse Poort oikealla; molemmat purettu 1836"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/delft/delft_today/view_of_delft.html",
+      "title": "Tarkistus: Schiedam Gate with its clock tower; both gates pulled down in the 1830s"
+     }
+    ]
+   },
+   {
+    "x": 0.84,
+    "y": 0.66,
+    "otsikko": "Rotterdamin portti",
+    "teksti": "Oikealla on keskiaikainen tiiliportti kahden teräväkärkisen tornin kera. Se ja Schiedamin portti purettiin 1830-luvulla.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Delft",
+      "title": "View of Delft (Wikipedia)"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/catalogue/view_of_delft.html",
+      "title": "View of Delft (Essential Vermeer)"
+     }
+    ]
+   },
+   {
+    "x": 0.64,
+    "y": 0.58,
+    "otsikko": "Uusi kirkko auringossa",
+    "teksti": "Torni kylpee auringossa. Oikeasti se oli hieman enemmän oikealla, mutta Vermeer siirsi sen keskemmäs. Kirkossa on Oranian Vilhelmin hauta.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
+      "title": "View of Delft (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Delft",
+      "title": "View of Delft (Wikipedia)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/view-of-delft-mauritshuis/vQVxjoHjWi8xIQ?hl=en",
+      "title": "Tarkistus: Mauritshuis: spire in full sunshine, shifted toward the center; William of Orange's tomb"
+     }
+    ]
+   },
+   {
+    "x": 0.085,
+    "y": 0.865,
+    "otsikko": "Odottajat ja proomu",
+    "teksti": "Rannalla odottavien matkustajien joukossa on tummiin pukeutuneita hattupäisiä miehiä ja valkolakkisia naisia. Proomua veti hevonen.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
+      "title": "View of Delft (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Delft",
+      "title": "View of Delft (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.29,
+    "y": 0.88,
+    "otsikko": "Kaksi naista rannalla",
+    "teksti": "Kaksi valkolakkista naista seisoo rannalla kasvokkain. Toisella on käsivarrellaan kori ja yllään sininen esiliina.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/vQVxjoHjWi8xIQ",
+      "title": "View of Delft (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/View_of_Delft",
+      "title": "View of Delft (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-C-251": [
+   {
+    "x": 0.395,
+    "y": 0.405,
+    "otsikko": "Kirje kädessä",
+    "teksti": "Nainen lukee kirjettä syventyneenä aamun valossa. Vermeer ei paljasta sisältöä, joten hetki tuntuu yksityiseltä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-251",
+      "title": "Rijksmuseum: Woman Reading a Letter (SK-C-251)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/ngXx9jBWKOb9IA",
+      "title": "Woman Reading a Letter (Google Arts & Culture)"
+     }
+    ]
+   },
+   {
+    "x": 0.56,
+    "y": 0.57,
+    "otsikko": "Sininen vuodejakku",
+    "teksti": "Nainen on yllään vuodejakku, jota arvokkaat naiset käyttivät sängyssä. Sininen on ultramariinia eli jauhettua lapislatsulia, ja se oli kallista.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/ngXx9jBWKOb9IA",
+      "title": "Woman Reading a Letter (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-251",
+      "title": "Rijksmuseum: Woman Reading a Letter (SK-C-251)"
+     }
+    ]
+   },
+   {
+    "x": 0.3,
+    "y": 0.69,
+    "otsikko": "Helmet pöydällä",
+    "teksti": "Pöydällä on helminauha ja korurasia, jotka erottuvat hämärästä vain hädin tuskin. Rasia oli alun perin selvempi.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/ngXx9jBWKOb9IA",
+      "title": "Woman Reading a Letter (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/catalogue/woman_in_blue_reading_a_letter.html",
+      "title": "Woman in Blue Reading a Letter (Essential Vermeer)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Woman_Reading_a_Letter_(Vermeer)",
+      "title": "Tarkistus: rasia ja helmet pöydällä, tuskin näkyvät"
+     }
+    ]
+   },
+   {
+    "x": 0.265,
+    "y": 0.435,
+    "otsikko": "Varjoton nainen",
+    "teksti": "Kartan tangon pää ja tuoli heittävät seinälle varjot, mutta naisella ei ole varjoa. Sen on tulkittu kiinnittävän huomio häneen.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/ngXx9jBWKOb9IA",
+      "title": "Woman Reading a Letter (Google Arts & Culture)"
+     },
+     {
+      "url": "https://www.essentialvermeer.com/catalogue/woman_in_blue_reading_a_letter.html",
+      "title": "Woman in Blue Reading a Letter (Essential Vermeer)"
+     }
+    ]
+   }
+  ],
+  "mauritshuis-670": [
+   {
+    "x": 0.55,
+    "y": 0.33,
+    "otsikko": "Kallis sininen",
+    "teksti": "Turbaanin sininen on ultramariinia, jota tehtiin lapislatsulikivestä. Vermeerin aikaan se oli hyvin kallista.",
+    "lahteet": [
+     {
+      "url": "https://artandobject.com/news/new-revelations-about-girl-pearl-earring",
+      "title": "New revelations about Girl with a Pearl Earring (Art & Object)"
+     },
+     {
+      "url": "https://hal.sorbonne-universite.fr/hal-02557251",
+      "title": "Out of the blue: Vermeer's use of ultramarine (Heritage Science 2020)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.545,
+    "otsikko": "Helmi ilman koukkua",
+    "teksti": "Helmessä ei ole koukkua eikä selvää ääriviivaa. Se on harhaa muutamasta valkoisesta maalikosketuksesta, joka näyttää leijuvan korvan alla.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring",
+      "title": "Girl with a Pearl Earring (Wikipedia)"
+     },
+     {
+      "url": "https://artandobject.com/news/new-revelations-about-girl-pearl-earring",
+      "title": "New revelations about Girl with a Pearl Earring (Art & Object)"
+     },
+     {
+      "url": "https://www.barnebys.com/blog/new-secrets-revealed-about-girl-with-a-pearl-earring",
+      "title": "Tarkistus: helmi muutamalla läpikuultavalla ja peittävällä valkoisella kosketuksella"
+     }
+    ]
+   }
+  ],
+  "SK-A-1595": [
+   {
+    "x": 0.38,
+    "y": 0.4,
+    "otsikko": "Palvelijatar ja kirje",
+    "teksti": "Rijksmuseon mukaan palvelijatar on juuri ojentanut kirjeen naiselle, jolla on sylissään cister. Nainen katsoo häntä odottavasti.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1595",
+      "title": "Rijksmuseum: The Love Letter (SK-A-1595)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Love_Letter_(Vermeer)",
+      "title": "The Love Letter (Vermeer) (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.58,
+    "otsikko": "Nainen ja cittern",
+    "teksti": "Nainen katsoo ylös palvelijattareen, sylissään luuttua muistuttava cittern. 1600-luvulla musiikki ja rakkaus liitettiin usein toisiinsa.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1595",
+      "title": "Rijksmuseum: The Love Letter (SK-A-1595)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/CgVR2jmZi452Lg",
+      "title": "The Love Letter (Google Arts & Culture)"
+     }
+    ]
+   },
+   {
+    "x": 0.38,
+    "y": 0.945,
+    "otsikko": "Tossut ja luuta",
+    "teksti": "Etualan varjossa ovat tossut ja luuta. Niiden ohi katsoja kurkistaa pimeästä valoisaan huoneeseen, ja Rijksmuseon mukaan näkökulma on epätavallinen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1595",
+      "title": "Rijksmuseum: The Love Letter (SK-A-1595)"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/CgVR2jmZi452Lg",
+      "title": "The Love Letter (Google Arts & Culture)"
+     }
+    ]
+   },
+   {
+    "x": 0.75,
+    "y": 0.1,
+    "otsikko": "Maalattu verho",
+    "teksti": "Sivuun vedetty verho saa tuntemaan, että kurkistaa yksityiseen hetkeen. 1600-luvun Alankomaissa maalauksia peitettiin usein verholla.",
+    "lahteet": [
+     {
+      "url": "https://artsandculture.google.com/story/CgVR2jmZi452Lg",
+      "title": "The Love Letter (Google Arts & Culture)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Love_Letter_(Vermeer)",
+      "title": "The Love Letter (Vermeer) (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-A-2326": [
+   {
+    "x": 0.4,
+    "y": 0.27,
+    "otsikko": "Piilotettu valonlähde",
+    "teksti": "Valo osuu kasvoihin ja olkapäähän, mutta lähdettä ei näy. Rijksmuseon mukaan tämä oli utrechtilaisten caravaggistien keksintö.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2326",
+      "title": "Rijksmuseum: The Serenade (SK-A-2326)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.94,
+    "otsikko": "Haalistunut punainen",
+    "teksti": "Housujen raidoissa oli runsaasti punaista lasitetta, joka on haalistunut. Alkuperäinen väri oli vielä rikkaampi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2326",
+      "title": "Rijksmuseum: The Serenade (SK-A-2326)"
+     }
+    ]
+   }
+  ],
+  "SK-A-1685": [
+   {
+    "x": 0.1,
+    "y": 0.45,
+    "otsikko": "Punainen strutsinsulka",
+    "teksti": "Baretissa on pitkä punainen strutsinsulka. Rijksmuseon mukaan se sopii narrin pukuun ja liittyy turhamaisuuteen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
+      "title": "Rijksmuseum: The Merry Drinker (SK-A-1685)"
+     }
+    ]
+   },
+   {
+    "x": 0.85,
+    "y": 0.385,
+    "otsikko": "Tyhjä kannu",
+    "teksti": "Mies nauraa ja nostaa katsojalle kannellista kannua, joka Rijksmuseon mukaan on tyhjä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
+      "title": "Rijksmuseum: The Merry Drinker (SK-A-1685)"
+     }
+    ]
+   },
+   {
+    "x": 0.27,
+    "y": 0.92,
+    "otsikko": "Tupakkaa ja tikut",
+    "teksti": "Pöydän tupakka ja kaksi puutikkua ulottuvat näennäisesti reunan yli katsojan tilaan. Rijksmuseon mukaan Leyster tunsi ajan uudet asetelmat.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-1685",
+      "title": "Rijksmuseum: The Merry Drinker (SK-A-1685)"
+     }
+    ]
+   }
+  ],
+  "SK-A-156": [
+   {
+    "x": 0.9,
+    "y": 0.5,
+    "otsikko": "Myllärin talo",
+    "teksti": "Oikealla seisoo myllärin talo punaisine kattoineen. Rijksmuseon mukaan Hobbema maalasi myllyn itäisessä Alankomaissa tekemänsä piirroksen pohjalta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-156",
+      "title": "Rijksmuseum: A Watermill (SK-A-156)"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.72,
+    "otsikko": "Vesipyörä",
+    "teksti": "Hobbema maalasi yli 30 vesimyllyn muotokuvaa. Tässä vesi syöksyy padon yli ja vesipyörä on sen vieressä.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Meindert_Hobbema",
+      "title": "Meindert Hobbema (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-144",
+      "title": "Rijksmuseum: A Watermill (SK-C-144), yleistieto myllykuvista"
+     }
+    ]
+   },
+   {
+    "x": 0.875,
+    "y": 0.73,
+    "otsikko": "Pihan väki",
+    "teksti": "Ovella seisoo nainen ja pihalla mies tynnyrin kanssa, pieniä hahmoja ison talon ja puiden keskellä. Miehen punainen paita erottuu vihreästä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-156",
+      "title": "Rijksmuseum: A Watermill (SK-A-156)"
+     }
+    ]
+   }
+  ],
+  "SK-C-206": [
+   {
+    "x": 0.2,
+    "y": 0.66,
+    "otsikko": "Katsojaan tuijottava sonni",
+    "teksti": "Vaalea sonni katsoo suoraan katsojaan. Teosta kutsuttiin ennen nimellä Neljä lehmää, mutta Rijksmuseo luettelee eläimet nuoriksi sonneiksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-206",
+      "title": "Rijksmuseum: Four Young Bulls in a Meadow (SK-C-206)"
+     }
+    ]
+   },
+   {
+    "x": 0.43,
+    "y": 0.74,
+    "otsikko": "Neljäs sonni makaa",
+    "teksti": "Vaalean sonnin takana makaa nuori sonni, jonka päästä näkyy vain tumma kuono.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-206 (neljä nuorta sonnia; kuvasta nähtävä)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   },
+   {
+    "x": 0.09,
+    "y": 0.835,
+    "otsikko": "Potterin nimikirjoitus",
+    "teksti": "Maalaus on signeerattu ja päivätty: Paulus Potter f 1651. Teos on maalattu puupaneelille.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-206 (signed and dated Paulus Potter f 1651, oil on panel)",
+      "title": "Tarkistus: lähde"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/tAHYqwHxviLTRA (oil on panel, 1651)",
+      "title": "Tarkistus: lähde"
+     }
+    ]
+   }
+  ],
+  "SK-A-182": [
+   {
+    "x": 0.44,
+    "y": 0.54,
+    "otsikko": "Kannu piialta lapselle",
+    "teksti": "Piika kumartuu ojentamaan lapselle kannun. Rijksmuseon tarinan mukaan kannussa on olutta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-182",
+      "title": "Rijksmuseum: A Maid with a Child in a Pantry (SK-A-182)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/dutch-masters/story/pieter-de-hooch-10",
+      "title": "Pieter de Hooch (Rijksmuseum, Dutch masters)"
+     }
+    ]
+   },
+   {
+    "x": 0.825,
+    "y": 0.285,
+    "otsikko": "Muotokuva oviaukon takana",
+    "teksti": "Oviaukosta näkyy toinen huone: ikkuna on auki ja seinällä riippuu miehen muotokuva. Tällaiset näkymät huoneesta toiseen olivat De Hoochin erikoisuus.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-182",
+      "title": "Rijksmuseum: A Maid with a Child in a Pantry (SK-A-182)"
+     }
+    ]
+   }
+  ],
+  "SK-C-149": [
+   {
+    "x": 0.665,
+    "y": 0.59,
+    "otsikko": "Äidin tehtävä",
+    "teksti": "Äiti etsii lapsensa hiuksista täitä. Rijksmuseon mukaan hänen rakkautensa on yhtä käsinkosketeltavaa kuin lämmin auringonvalo.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-149",
+      "title": "Rijksmuseum: A Mother Delousing her Child's Hair (SK-C-149)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/dutch-masters/story/pieter-de-hooch-10",
+      "title": "Pieter de Hooch (Rijksmuseum, Dutch masters)"
+     }
+    ]
+   },
+   {
+    "x": 0.72,
+    "y": 0.33,
+    "otsikko": "Seinään upotettu vuode",
+    "teksti": "Äidin takana on verhoilla varustettu seinävuode eli bedstee. Oviaukon kautta näkyy valoisa takahuone ja puutarha.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-149",
+      "title": "Rijksmuseum: A Mother Delousing her Child's Hair (SK-C-149)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/A_Mother%27s_Duty",
+      "title": "A Mother's Duty (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.205,
+    "y": 0.8,
+    "otsikko": "Koira lattialla",
+    "teksti": "Vasemmalla lattialla istuu pieni koira selin katsojaan. Se katsoo kohti ovea, jonka takana on aurinkoinen huone ja puutarha.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-149",
+      "title": "Rijksmuseum: A Mother Delousing her Child's Hair (SK-C-149)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/A_Mother%27s_Duty",
+      "title": "A Mother's Duty (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "SK-A-2338": [
+   {
+    "x": 0.378,
+    "y": 0.658,
+    "otsikko": "Kukkien seassa hyönteisiä",
+    "teksti": "Valkoisen kukan terälehdellä istuu pieni hyönteinen. Rijksmuseon mukaan kimppu vilisee hyönteisiä ja on maalattu hämmästyttävän tarkasti.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2338",
+      "title": "Rijksmuseum: Still Life with Flowers on a Marble Tabletop (SK-A-2338)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/stories/dutch-masters/story/rachel-ruysch-10",
+      "title": "Rachel Ruysch (Rijksmuseum, Dutch masters)"
+     }
+    ]
+   },
+   {
+    "x": 0.23,
+    "y": 0.856,
+    "otsikko": "Ruusu pöydän reunalla",
+    "teksti": "Yksi ruusu lepää kimpun alapuolella pöydän reunalla. Sen terälehdet kiertyvät kerroksittain, ja toinen puoli on punertava.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2338",
+      "title": "Rijksmuseo: Still Life with Flowers on a Marble Tabletop, SK-A-2338"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Still_Life_with_Flowers_on_a_Marble_Tabletop_1716_Rachel_Ruysch.jpg",
+      "title": "Wikimedia Commons: Still Life with Flowers on a Marble Tabletop 1716 Rachel Ruysch.jpg"
+     }
+    ]
+   },
+   {
+    "x": 0.547,
+    "y": 0.128,
+    "otsikko": "Kurjenmiekka kimpun huipulla",
+    "teksti": "Kimpun huipulla kukkii violetti kurjenmiekka, jonka terälehdissä on tummia raitoja. Sen ympärillä tausta on lähes musta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-2338",
+      "title": "Rijksmuseo: Still Life with Flowers on a Marble Tabletop, SK-A-2338"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Still_Life_with_Flowers_on_a_Marble_Tabletop_1716_Rachel_Ruysch.jpg",
+      "title": "Wikimedia Commons: Still Life with Flowers on a Marble Tabletop 1716 Rachel Ruysch.jpg"
+     }
+    ]
+   }
+  ],
+  "SK-A-354": [
+   {
+    "x": 0.63,
+    "y": 0.085,
+    "otsikko": "Juovikas tulppaani",
+    "teksti": "Korkeimman tulppaanin punaiset liekkijuovat johtuivat tuolloin yleensä virustaudista, joka heikensi sipulia mutta tuotti halutun kuvion.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-354",
+      "title": "Rijksmuseum: Still Life with Flowers in a Glass Vase (SK-A-354)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Tulip_breaking_virus",
+      "title": "Tulip breaking virus (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.8,
+    "otsikko": "Tuhat guldenia kukista",
+    "teksti": "Kimppu seisoo lasimaljakossa marmoripöydällä. Rijksmuseon mukaan Ruyschin kukka-asetelmista oltiin valmiita maksamaan yli tuhat guldenia.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-354",
+      "title": "Rijksmuseum: Still Life with Flowers in a Glass Vase (SK-A-354)"
+     }
+    ]
+   }
+  ],
+  "SK-A-3276": [
+   {
+    "x": 0.58,
+    "y": 0.41,
+    "otsikko": "Valokeila surevan päällä",
+    "teksti": "Valo osuu surevan profeetan kasvoihin ja käteen, ja muu luola painuu hämärään. Jeremia nojaa väsynyttä päätään käteensä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3276",
+      "title": "Rijksmuseum: Jeremiah Lamenting (SK-A-3276)"
+     },
+     {
+      "url": "https://apollo-magazine.com/rembrandt-jeremiah-lamenting-destruction-jerusalem/",
+      "title": "Rembrandt's sorrowful Jeremiah (Apollo)"
+     }
+    ]
+   },
+   {
+    "x": 0.045,
+    "y": 0.455,
+    "otsikko": "Palava Jerusalem",
+    "teksti": "Taustalla vasemmalla palaa kaupunki, jonka tuhon Jeremia oli ennustanut. Surun syy on siis kuvassa mukana.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3276",
+      "title": "Rijksmuseum: Jeremiah Lamenting the Destruction of Jerusalem (SK-A-3276)"
+     }
+    ]
+   }
+  ],
+  "mauritshuis-146": [
+   {
+    "x": 0.65,
+    "y": 0.29,
+    "otsikko": "Tohtori Tulp",
+    "teksti": "Mustapukuinen Tulp johtaa opetusta leveä hattu päässä. Hän oli Amsterdamin kaupunginanatomi ja kirurgikillan opettaja.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp (Wikipedia)"
+     },
+     {
+      "url": "https://culturezvous.com/en/rembrandt-analysis-anatomy-lesson-tulp/",
+      "title": "Culturezvous: Analysis, Anatomy Lesson of Dr Tulp"
+     }
+    ]
+   },
+   {
+    "x": 0.57,
+    "y": 0.68,
+    "otsikko": "Pihdit ja käsivarren lihas",
+    "teksti": "Tulp nostaa pihdeillä lihaksen ruumiin kyynärvarresta. Useimpien tulkintojen mukaan se on sormia koukistava lihas.",
+    "lahteet": [
+     {
+      "url": "https://www.academie-medecine.fr/la-lecon-danatomie-du-docteur-tulp-2/?lang=en",
+      "title": "La leçon d'anatomie du docteur Tulp (Académie nationale de médecine)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.55,
+    "otsikko": "Tulpin kämmen",
+    "teksti": "Tulpin vasen käsi on koukistunut sormista. Tulkinnan mukaan hän näyttää omalla kädellään, miten lihaksen veto sulkee sormet.",
+    "lahteet": [
+     {
+      "url": "https://www.academie-medecine.fr/la-lecon-danatomie-du-docteur-tulp-2/?lang=en",
+      "title": "La leçon d'anatomie du docteur Tulp (Académie nationale de médecine)"
+     }
+    ]
+   },
+   {
+    "x": 0.43,
+    "y": 0.7,
+    "otsikko": "Ruumis keskellä kuvaa",
+    "teksti": "Ruumiin vaalea vartalo on kuvan kirkkain kohta. Pöydällä makaa samana päivänä hirtetty mies.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp (Wikipedia)"
+     },
+     {
+      "url": "https://www.theochem.ru.nl/~pwormer/Knowino/knowino.org/wiki/Anatomy_Lesson_of_Dr._Nicolaes_Tulp.html",
+      "title": "Knowino: Anatomy Lesson of Dr. Nicolaes Tulp"
+     }
+    ]
+   },
+   {
+    "x": 0.565,
+    "y": 0.425,
+    "otsikko": "Hartmansz ja piirros",
+    "teksti": "Takana Hartman Hartmansz pitää paperia, johon on kirjoitettu kuvan miesten nimet. Kiltojen ryhmämuotokuvissa miehet maksoivat paikastaan.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp (Wikipedia)"
+     },
+     {
+      "url": "https://culturezvous.com/en/rembrandt-analysis-anatomy-lesson-tulp/",
+      "title": "Culturezvous: Analysis, Anatomy Lesson of Dr Tulp"
+     },
+     {
+      "url": "https://www.bonhams.com/auction/22964/lot/47/the-anatomy-lesson-of-dr-nicolaes-tulp-group-portrait-after-rembrandt-van-rijn-unattributed-oil-on-canvas-approx-31-x-2312-framed-to-38-x-3012-depicting-a-group-of-men-watching-a-dissection-c-1950",
+      "title": "Tarkistus: paperi on luettelo kaikista kuvan miehistä"
+     }
+    ]
+   },
+   {
+    "x": 0.875,
+    "y": 0.885,
+    "otsikko": "Valtava anatomian kirja",
+    "teksti": "Oikeassa alakulmassa on avoin jättikirja. Tulkinnan mukaan se voi olla Vesaliuksen vuoden 1543 anatomian perusteos, mutta varmaa tietoa ei ole.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp",
+      "title": "The Anatomy Lesson of Dr. Nicolaes Tulp (Wikipedia)"
+     },
+     {
+      "url": "https://www.theochem.ru.nl/~pwormer/Knowino/knowino.org/wiki/Anatomy_Lesson_of_Dr._Nicolaes_Tulp.html",
+      "title": "Knowino: Anatomy Lesson of Dr. Nicolaes Tulp"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-444": [
+   {
+    "x": 0.65,
+    "y": 0.5,
+    "otsikko": "Kolme puuta",
+    "teksti": "Puut seisovat mäellä myrskypilvien alla. Joidenkin tulkintojen mukaan ne viittaavat kolminaisuuteen tai Golgatan kolmeen ristiin.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Three_Trees",
+      "title": "The Three Trees (Wikipedia)"
+     },
+     {
+      "url": "https://artmuseum.princeton.edu/art/stories-perspectives/rembrandts-three-trees",
+      "title": "Princeton University Art Museum: Rembrandt's Three Trees"
+     }
+    ]
+   },
+   {
+    "x": 0.125,
+    "y": 0.805,
+    "otsikko": "Kalastaja ja seuralainen",
+    "teksti": "Vasemmassa alakulmassa istuva kalastaja onkii, ja vierellä seisoo seuralainen. Ihmiset jäävät maiseman rinnalla hyvin pieniksi.",
+    "lahteet": [
+     {
+      "url": "https://www.artic.edu/artworks/29271/the-three-trees",
+      "title": "Art Institute of Chicago: The Three Trees"
+     },
+     {
+      "url": "https://www.nga.gov/artworks/35123-three-trees",
+      "title": "National Gallery of Art: The Three Trees"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:De_drie_bomen,_RP-P-OB-444.jpg",
+      "title": "Tarkistus: kuva: istuva kalastaja ja seisova hahmo"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Three_Trees",
+      "title": "Tarkistus: kalastaja alareunassa; pienet hahmot"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-616": [
+   {
+    "x": 0.53,
+    "y": 0.36,
+    "otsikko": "Kristus valossa",
+    "teksti": "Valo säteilee ylhäältä keskimmäisen ristin ympärille. Rijksmuseon mukaan Kristus riippuu kahden ryövärin välissä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-616",
+      "title": "Rijksmuseum: Christ Crucified between the Two Thieves: The Three Crosses (RP-P-OB-616)"
+     }
+    ]
+   },
+   {
+    "x": 0.39,
+    "y": 0.51,
+    "otsikko": "Ratsumiehet ja sotilaat",
+    "teksti": "Ristin juurella ratsumiehet ja sotilaat kokoontuvat hevosten ympärille. Rijksmuseon mukaan mukana on apostoleja ja Jeesuksen äiti.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-616",
+      "title": "Rijksmuseum: Christ Crucified between the Two Thieves: The Three Crosses (RP-P-OB-616)"
+     }
+    ]
+   }
+  ],
+  "SK-A-3137": [
+   {
+    "x": 0.85,
+    "y": 0.46,
+    "otsikko": "Pietarin torjuva ele",
+    "teksti": "Pietari kohottaa kätensä torjuvasti. Hänen valkoinen viittansa hohtaa kynttilän valossa pimeän keskellä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
+      "title": "Rijksmuseum: The Denial of St Peter (SK-A-3137)"
+     }
+    ]
+   },
+   {
+    "x": 0.39,
+    "y": 0.2,
+    "otsikko": "Kajafaan palvelijatar",
+    "teksti": "Pietarin vieressä seisova nainen on ylipappi Kajafaan palvelijatar. Hän katsoo miestä tarkasti kynttilän valossa.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
+      "title": "Rijksmuseum: The Denial of St Peter (SK-A-3137)"
+     }
+    ]
+   },
+   {
+    "x": 0.485,
+    "y": 0.285,
+    "otsikko": "Kynttilä sormien välissä",
+    "teksti": "Palvelijattaren sormien takana oleva kynttilä valaisee hänen kasvonsa ja Pietarin valkoisen viitan. Muu kohtaus jää pimentoon.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
+      "title": "Rijksmuseum: The Denial of St Peter (SK-A-3137)"
+     }
+    ]
+   },
+   {
+    "x": 0.26,
+    "y": 0.395,
+    "otsikko": "Kannua pitelevä sotilas",
+    "teksti": "Rijksmuseon mukaan vasemmalla on kaksi panssaroitua sotilasta, joista toinen istuu ja juo kannusta.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
+      "title": "Rijksmuseum: The Denial of St Peter (SK-A-3137)"
+     }
+    ]
+   },
+   {
+    "x": 0.82,
+    "y": 0.155,
+    "otsikko": "Kahlittu Jeesus taustalla",
+    "teksti": "Pimeässä taustalla oikealla viedään pois kahlittua Jeesusta. Pietari on juuri kieltänyt tuntevansa hänet.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-3137",
+      "title": "Rijksmuseum: The Denial of St Peter (SK-A-3137)"
+     }
+    ]
+   }
+  ],
+  "SK-C-6": [
+   {
+    "x": 0.51,
+    "y": 0.36,
+    "otsikko": "Palvelija Bel",
+    "teksti": "Taustalla keskellä seisoo killan palvelija Frans Hendricksz Bel (1629–1701). Hän on ainoa paljain päin oleva mies.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
+      "title": "Rijksmuseum: The Syndics (SK-C-6)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-T-1896-A-3172/catalogue-entry",
+      "title": "Rijksmuseum: Study of Jacob van Loon, katalogimerkintä"
+     }
+    ]
+   },
+   {
+    "x": 0.81,
+    "y": 0.63,
+    "otsikko": "Hansikkaat kädessä",
+    "teksti": "Oikeassa reunassa istuu nuorin tarkastajista, Jochem de Neve. Hänen kädessään olevaa esinettä luultiin pitkään leimasinpussiksi, mutta se on käsineet.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
+      "title": "Rijksmuseum: The Syndics (SK-C-6)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Syndics_of_the_Drapers%27_Guild",
+      "title": "Syndics of the Drapers' Guild (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.09,
+    "y": 0.41,
+    "otsikko": "Jacob van Loon",
+    "teksti": "Vasemmalla istuu viidestä tarkastajasta vanhin, Jacob van Loon (1595–1674). Rembrandt teki hänestä ensin valmistelevan piirroksen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-T-1896-A-3172/catalogue-entry",
+      "title": "Rijksmuseum: Study of Jacob van Loon, katalogimerkintä"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
+      "title": "Rijksmuseum: The Syndics (SK-C-6)"
+     }
+    ]
+   },
+   {
+    "x": 0.325,
+    "y": 0.36,
+    "otsikko": "Nouseeko hän ylös?",
+    "teksti": "Toinen vasemmalta, Volckert Jansz, nojaa eteenpäin ja näyttää nousevan. Rijksmuseon mukaan yksi tarkastajista nousee kuin tervehtimään katsojaa.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-T-1896-A-3172/catalogue-entry",
+      "title": "Rijksmuseum: Study of Jacob van Loon, katalogimerkintä"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6/catalogue-entry",
+      "title": "Tarkistus: Rijksmuseo: yksi tarkastaja nousee tuoliltaan huomioidakseen katsojan; Volckert Jansz 1605"
+     },
+     {
+      "url": "https://archief.rembrandthuis.nl/en/meet-rembrandt/rembrandt-the-artist/most-important-work/the-syndics",
+      "title": "Tarkistus: toinen vasemmalta todennäköisesti Volckert Jansz"
+     }
+    ]
+   },
+   {
+    "x": 0.415,
+    "y": 0.47,
+    "otsikko": "Willem van Doeyenburg",
+    "teksti": "Vasemmalta kolmantena istuu Willem van Doeyenburg (n. 1616–1687). Hänen kätensä ojentuu avoimen kirjan viereen.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
+      "title": "Rijksmuseum: The Syndics (SK-C-6)"
+     }
+    ]
+   },
+   {
+    "x": 0.54,
+    "y": 0.705,
+    "otsikko": "Avoin kirja pöydällä",
+    "teksti": "Pöydällä on avattu näytekirja. Tarkastajat nostavat katseensa siitä kuin tulijan keskeyttäminä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-6",
+      "title": "Rijksmuseum: The Syndics (SK-C-6)"
+     }
+    ]
+   }
+  ],
+  "SK-A-4050": [
+   {
+    "x": 0.42,
+    "y": 0.26,
+    "otsikko": "Ryppyinen otsa",
+    "teksti": "Kirkkaasti valaistun otsan paksu maali saa sen näyttämään ryppyiseltä. Valo vetää katseen kasvoihin.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Apostle_Paul",
+      "title": "Self-Portrait as the Apostle Paul (Wikipedia, viittaa van de Weteringin Corpus-teokseen 2005)"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.665,
+    "otsikko": "Kirjenippu valossa",
+    "teksti": "Kirjenipun yläreunat käpristyvät kirkkaassa valossa. Rembrandt esittää itsensä apostoli Paavalina.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Self-Portrait_as_the_Apostle_Paul",
+      "title": "Self-Portrait as the Apostle Paul (Wikipedia)"
+     }
+    ]
+   }
+  ],
+  "mauritshuis-840": [
+   {
+    "x": 0.533,
+    "y": 0.415,
+    "otsikko": "Kasvot maalilla veistettyinä",
+    "teksti": "Kasvot on maalattu voimakkain, paksuin vedoin. Siksi hahmo näyttää lihaa ja verta.",
+    "lahteet": [
+     {
+      "url": "https://www.mauritshuis.nl/en/our-collection/artworks/840-self-portrait",
+      "title": "Mauritshuis: Rembrandt, Self-Portrait (840)"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/self-portrait-rijn-rembrandt-van/QgHA3WPpbgKD6g",
+      "title": "Google Arts & Culture: Self-Portrait (Mauritshuis)"
+     }
+    ]
+   },
+   {
+    "x": 0.26,
+    "y": 0.35,
+    "otsikko": "Harmaantuneet hiukset",
+    "teksti": "Rembrandtin harmaat kiharat on maalattu pehmein, vapain vedoin. Ne sulautuvat taustan hämärään.",
+    "lahteet": [
+     {
+      "url": "https://www.mauritshuis.nl/en/our-collection/artworks/840-self-portrait",
+      "title": "Mauritshuis: Rembrandt, Self-Portrait (840)"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/QgHA3WPpbgKD6g",
+      "title": "Tarkistus: vapaa, ilmeikäs tyyli (expressive freedom)"
+     }
+    ]
+   },
+   {
+    "x": 0.07,
+    "y": 0.545,
+    "otsikko": "Mahdollisesti viimeinen omakuva",
+    "teksti": "Rembrandt maalasi tämän vuonna 1669, kuolinvuotenaan. Mauritshuis pitää sitä mahdollisesti hänen viimeisenä omakuvanaan.",
+    "lahteet": [
+     {
+      "url": "https://www.mauritshuis.nl/en/our-collection/artworks/840-self-portrait",
+      "title": "Mauritshuis: Rembrandt, Self-Portrait (840)"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/self-portrait-rijn-rembrandt-van/QgHA3WPpbgKD6g",
+      "title": "Google Arts & Culture: Self-Portrait (Mauritshuis)"
+     }
+    ]
+   }
+  ],
+  "SK-A-4691": [
+   {
+    "x": 0.53,
+    "y": 0.395,
+    "otsikko": "Katse varjosta",
+    "teksti": "Silmät jäävät varjoon, joten katseen huomaa vasta hetken kuluttua. Rembrandt kokeili rohkeasti jo nuorena.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4691",
+      "title": "Rijksmuseum: Self-portrait (SK-A-4691)"
+     },
+     {
+      "url": "https://bulletin.rijksmuseum.nl/article/view/20691",
+      "title": "Rijksmuseum Bulletin 1989: Rembrandt, Zelfportret op jeugdige leeftijd (van Thiel)"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Zelfportret_Rijksmuseum_SK-A-4691.jpeg",
+      "title": "Tarkistus: kuva: silmät varjossa"
+     }
+    ]
+   },
+   {
+    "x": 0.22,
+    "y": 0.47,
+    "otsikko": "Korva vastavalossa",
+    "teksti": "Valo osuu korvaan ja poskeen, kun muu kasvot jäävät varjoon. Hiuskiharat Rembrandt raaputti kosteaan maaliin siveltimen päällä.",
+    "lahteet": [
+     {
+      "url": "https://bulletin.rijksmuseum.nl/article/view/20691",
+      "title": "Rijksmuseum Bulletin 1989: Rembrandt, Zelfportret op jeugdige leeftijd (van Thiel)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-4691",
+      "title": "Tarkistus: valo hipaisee poskea; kiharat raaputettu siveltimen päällä"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-550": [
+   {
+    "x": 0.722,
+    "y": 0.252,
+    "otsikko": "Valtaistuimen kaltainen tuoli",
+    "teksti": "Lutma istuu kuin hallitsija upeassa nojatuolissa. Selkänojan yläkulmissa on pienet naamiomaiset koristeet.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-550",
+      "title": "Rijksmuseum: Lutma (RP-P-OB-550)"
+     }
+    ]
+   },
+   {
+    "x": 0.89,
+    "y": 0.69,
+    "otsikko": "Lutman oma hopeamalja",
+    "teksti": "Pöydällä oleva hopeinen juomamalja on yksi Lutman omista töistä. Se kertoo katsojalle hänen ammattinsa.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-550",
+      "title": "Rijksmuseum: Lutma (RP-P-OB-550)"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-612": [
+   {
+    "x": 0.435,
+    "y": 0.413,
+    "otsikko": "Pilatus esittelee Jeesuksen",
+    "teksti": "Turbaanipäinen Pilatus seisoo korokkeella sauva kädessään ja osoittaa vankeja sanoilla 'ecce homo', 'katso ihmistä'.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-OB-612",
+      "title": "Rijksmuseum: Ecce Homo (RP-P-OB-612)"
+     },
+     {
+      "url": "https://www.artgallery.nsw.gov.au/collection/works/8130/",
+      "title": "Art Gallery of NSW: Christ presented to the people"
+     },
+     {
+      "url": "https://www.nationalgalleries.org/art-and-artists/23903/christ-presented-people-ecce-homo-dated-1655",
+      "title": "National Galleries of Scotland: Christ Presented to the People"
+     }
+    ]
+   },
+   {
+    "x": 0.332,
+    "y": 0.12,
+    "otsikko": "Oikeudenmukaisuuden patsas",
+    "teksti": "Rakennuksen syvennyksessä seisoo Oikeudenmukaisuuden patsas vaakoineen. Rakennuksen on arveltu muistuttavan Amsterdamin uutta kaupungintaloa.",
+    "lahteet": [
+     {
+      "url": "https://www.nationalgalleries.org/art-and-artists/23903/christ-presented-people-ecce-homo-dated-1655",
+      "title": "National Galleries of Scotland: Christ Presented to the People"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Christ_Presented_to_the_People",
+      "title": "Christ Presented to the People (Wikipedia)"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Christus_aan_het_volk_getoond_liggende_plaat,_RP-P-OB-612.jpg",
+      "title": "Tarkistus: kuva: sidottusilmäinen patsas vaaka kädessä"
+     }
+    ]
+   },
+   {
+    "x": 0.293,
+    "y": 0.565,
+    "otsikko": "Vesikannu ja vati",
+    "teksti": "Lavan vasemmassa reunassa nuori mies pitelee vesikannua. Kannu on valmiina hetkeen, jolloin Pilatus pesee kätensä.",
+    "lahteet": [
+     {
+      "url": "https://www.artgallery.nsw.gov.au/collection/works/8130/",
+      "title": "Art Gallery of NSW: Christ presented to the people"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Christ_Presented_to_the_People",
+      "title": "Christ Presented to the People (Wikipedia)"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:Christus_aan_het_volk_getoond_liggende_plaat,_RP-P-OB-612.jpg",
+      "title": "Tarkistus: kuva: kannu vasemman nuorukaisen kohdalla"
+     }
+    ]
+   }
+  ],
+  "RP-P-OB-602": [
+   {
+    "x": 0.43,
+    "y": 0.33,
+    "otsikko": "Valo Jeesuksen takana",
+    "teksti": "Valo säteilee Jeesuksen pään takaa tummaa, hänen ympärilleen kohoavaa luolan aukkoa vasten.",
+    "lahteet": [
+     {
+      "url": "https://www.nga.gov/artworks/35132-christ-preaching-hundred-guilder-print",
+      "title": "National Gallery of Art: Christ Preaching (Hundred Guilder Print)"
+     },
+     {
+      "url": "https://www.metmuseum.org/art/collection/search/371732",
+      "title": "Metropolitan Museum: The Hundred Guilder Print"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Hundred_Guilder_Print",
+      "title": "Tarkistus: tumma kellomainen alkovi, sädekehä"
+     }
+    ]
+   },
+   {
+    "x": 0.335,
+    "y": 0.53,
+    "otsikko": "Nainen kantaa vauvaa",
+    "teksti": "Selin katsojaan seisova nainen kantaa vauvaa Jeesuksen luo. Kohtaus liittyy Matteuksen evankeliumin 19. lukuun, jossa lapsia tuodaan Jeesuksen luo.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Hundred_Guilder_Print",
+      "title": "Hundred Guilder Print (Wikipedia)"
+     },
+     {
+      "url": "https://www.britishmuseum.org/collection/object/P_F-4-154",
+      "title": "British Museum: Hundred Guilder Print"
+     },
+     {
+      "url": "https://isis2.cc.oberlin.edu/amam/Rembrandt_HundredGuilder.htm",
+      "title": "Tarkistus: kuva yhdistää Matteuksen 19. luvun jaksoja"
+     },
+     {
+      "url": "https://gallerycollections.courtauld.ac.uk/object-g-1978-pg-87",
+      "title": "Tarkistus: äidit vauvoineen vasemmalla, Matt. 19:14"
+     }
+    ]
+   }
+  ],
+  "RP-P-1961-1117": [
+   {
+    "x": 0.45,
+    "y": 0.7,
+    "otsikko": "Pieni metsästäjä",
+    "teksti": "Keskellä tiellä kulkee yksinäinen metsästäjä. Teoksen perinteinen nimi Het jagertje tarkoittaa pientä metsästäjää.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/RP-P-1961-1117",
+      "title": "Rijksmuseum: Landscape with Sportsman and Dogs"
+     }
+    ]
+   },
+   {
+    "x": 0.08,
+    "y": 0.925,
+    "otsikko": "Kaksi ankkaa",
+    "teksti": "Vasemmassa alakulmassa uivat kaksi ankkaa. Suuren maiseman nurkassa on pieni, rauhallinen yksityiskohta.",
+    "lahteet": [
+     {
+      "url": "https://auktionen.karlundfaber.de/en/auction-lot/902",
+      "title": "Karl & Faber: Rembrandt, Landscape with Sportsman and Dogs (hanka)"
+     }
+    ]
+   }
+  ],
+  "SK-C-216": [
+   {
+    "x": 0.535,
+    "y": 0.505,
+    "otsikko": "Kädet kertovat hellyydestä",
+    "teksti": "Mies laskee kätensä naisen rintakehälle, ja nainen painaa omansa hänen kätensä päälle. Ele kertoo parin läheisyydestä ilman sanoja.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-216",
+      "title": "Rijksmuseum: Isaac and Rebecca (SK-C-216)"
+     }
+    ]
+   },
+   {
+    "x": 0.285,
+    "y": 0.385,
+    "otsikko": "Kultainen hiha",
+    "teksti": "Miehen hiha on rakennettu paksuista maalikokkareista, jotka heijastavat valoa kuin kulta. Rembrandt raaputti maalia pensselin takapäällä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-216",
+      "title": "Rijksmuseum: Isaac and Rebecca (SK-C-216)"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/hAERFV8rdOOssw",
+      "title": "Tarkistus: hiha rakennettu maalikokkareista jotka heijastavat valoa"
+     }
+    ]
+   }
+  ],
+  "vgm-s0149v1962": [
+   {
+    "x": 0.75,
+    "y": 0.29,
+    "otsikko": "Uhkaavat varikset",
+    "teksti": "Vincentin käly Jo piti kuvaa uhkaavana ja variksia pahaenteisinä. Linnut voi nähdä myös pakenevan myrskyä: kuva sallii molemmat tulkinnat.",
+    "lahteet": [
+     {
+      "url": "https://www.theartnewspaper.com/2021/09/03/van-goghs-mysterious-wheatfield-with-crowswhat-does-it-really-mean",
+      "title": "The Art Newspaper: Van Gogh's mysterious Wheatfield with Crows"
+     }
+    ]
+   },
+   {
+    "x": 0.575,
+    "y": 0.67,
+    "otsikko": "Polut, jotka loppuvat",
+    "teksti": "Polut kääntyvät pois ja päättyvät äkkiä. Niitä on luettu kuoleman enteeksi, mutta Van Goghin museo pitää sitä sitkeänä myyttinä.",
+    "lahteet": [
+     {
+      "url": "https://www.theartnewspaper.com/2021/09/03/van-goghs-mysterious-wheatfield-with-crowswhat-does-it-really-mean",
+      "title": "The Art Newspaper: Van Gogh's mysterious Wheatfield with Crows"
+     },
+     {
+      "url": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+      "title": "Van Gogh Museum: Wheatfield with Crows"
+     }
+    ]
+   }
+  ],
+  "vgm-s0005v1962": [
+   {
+    "x": 0.45,
+    "y": 0.22,
+    "otsikko": "Lampun hehku",
+    "teksti": "Lamppu valaisee talonpoikien illallisen. Van Gogh kirjoitti Theolle, että lampun punakultainen hehku on selvästi valkoisia kohtia kirkkaampi.",
+    "lahteet": [
+     {
+      "url": "https://vangoghletters.org/vg/letters/let499/letter.html",
+      "title": "Van Gogh Letters: kirje 499"
+     }
+    ]
+   },
+   {
+    "x": 0.345,
+    "y": 0.45,
+    "otsikko": "Talonpoikien kasvot",
+    "teksti": "Van Gogh maalasi Nuenenin talvena noin 40 talonpoikaispäätä ennen tätä maalausta. Ne olivat harjoitusta ennen suurta ryhmäkuvaa.",
+    "lahteet": [
+     {
+      "url": "https://krollermuller.nl/en/vincent-van-gogh-the-potato-eaters-1",
+      "title": "Kröller-Müller Museum: The Potato Eaters (luonnos)"
+     },
+     {
+      "url": "https://www.theartnewspaper.com/2021/10/08/van-goghs-potato-eaters-mistake-or-masterpiece",
+      "title": "The Art Newspaper: Van Gogh's Potato Eaters: mistake or masterpiece?"
+     },
+     {
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincent-van-gogh-faq/what-is-the-story-behind-the-potato-eaters",
+      "title": "Tarkistus: kuukausien päiden harjoittelu, kymmeniä esitutkielmia"
+     },
+     {
+      "url": "https://webexhibits.org/vangogh/letter/15/404.htm",
+      "title": "Tarkistus: koko talvi päiden ja käsien tutkielmia (kirje n. 30.4.1885)"
+     },
+     {
+      "url": "https://www.thecollector.com/van-gogh-head-peasant/",
+      "title": "Tarkistus: noin 40 talonpoikaispäätä"
+     }
+    ]
+   }
+  ],
+  "vgm-s0031v1962": [
+   {
+    "x": 0.79,
+    "y": 0.47,
+    "otsikko": "Nuppu, kukka ja lakastuva",
+    "teksti": "Kukat ovat eri vaiheissa: nupusta täyteen kukintaan ja lakastumiseen. Tämän kukan terälehdet ovat ohentuneet, ja keskellä roikkuu vaalea terälehti.",
+    "lahteet": [
+     {
+      "url": "https://www.nationalgallery.org.uk/audio/audio-descriptions/vincent-van-gogh-s-sunflowers",
+      "title": "National Gallery: Van Gogh Sunflowers (audiokuvaus, Lontoon versio)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Sunflowers_(Van_Gogh_series)",
+      "title": "Sunflowers (Van Gogh series) (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.15,
+    "y": 0.1,
+    "otsikko": "Keltaisen monta sävyä",
+    "teksti": "Taulun monet keltaiset sävyt tulivat pääosin kromikeltaisista. Van Gogh kertoi käyttäneensä kolmea kromikeltaista, keltaokraa ja vihreää.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Sunflowers_(Van_Gogh_series)",
+      "title": "Sunflowers (Van Gogh series) (Wikipedia)"
+     },
+     {
+      "url": "https://www.mentalfloss.com/article/501953/15-facts-about-vincent-van-goghs-sunflowers",
+      "title": "Mental Floss: 15 facts about Van Gogh's Sunflowers"
+     },
+     {
+      "url": "https://nationalgallery.org.uk/paintings/learn-about-art/paintings-in-depth/the-sunflowers?viewPage=3",
+      "title": "Tarkistus: chrome yellow dominates, many shades, several varieties in each Sunflowers"
+     },
+     {
+      "url": "https://artsandculture.google.com/story/GgURl4IDCftC1A",
+      "title": "Tarkistus: Van Goghin kirje: three chrome yellows, yellow ochre, Veronese green; kromikeltainen n. 18"
+     }
+    ]
+   }
+  ],
+  "SK-A-199": [
+   {
+    "x": 0.75,
+    "y": 0.755,
+    "otsikko": "Kuorittu sitrus",
+    "teksti": "Kulho on kallellaan, ja siitä valuu ulos puoliksi kuorittua sitrusta. Kalf asetteli Wanli-kulhonsa usein juuri näin.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Willem_Kalf",
+      "title": "Willem Kalf (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.8,
+    "y": 0.89,
+    "otsikko": "Taskukello pöydän reunalla",
+    "teksti": "Pöydän reunalla kulhon vieressä on kullanvärinen taskukello. Rijksmuseo luettelee sen hopeakannun ja Wan Li -kulhon rinnalle.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-199",
+      "title": "Rijksmuseum: Still Life with a Silver Jug and a Porcelain Bowl"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Willem_Kalf",
+      "title": "Willem Kalf (Wikipedia)"
+     },
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-A-199/catalogue-entry",
+      "title": "Tarkistus: horloge, silver jug, Wan Li bowl with lemons and oranges"
+     }
+    ]
+   }
+  ],
+  "SK-C-244": [
+   {
+    "x": 0.71,
+    "y": 0.75,
+    "otsikko": "Kuka laiva on?",
+    "teksti": "Keräilijä luuli laivaa 1800-luvulla Michiel de Ruyterin lippulaivaksi. Rijksmuseo kuvaa sitä vain hollantilaiseksi sotalaivaksi.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-244",
+      "title": "Rijksmuseum: The Cannon Shot (SK-C-244)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Gun_Salute",
+      "title": "The Gun Salute (Wikipedia)"
+     }
+    ]
+   },
+   {
+    "x": 0.204,
+    "y": 0.807,
+    "otsikko": "Miehet veneessä",
+    "teksti": "Sotalaivan kummallakin puolella kelluu yksi vene. Vasemmassa veneessä näkyy joukko miehiä.",
+    "lahteet": [
+     {
+      "url": "https://www.rijksmuseum.nl/en/collection/SK-C-244",
+      "title": "Rijksmuseum: The Cannon Shot (SK-C-244)"
+     }
+    ]
+   }
+  ]
+ },
+ "huomio": " Riippumaton tarkistus 17.10.2026 (6 Sonnet-agenttia, omat haut + kuvapaikat): ks. docs/raportit/alankomaat-kohdat-tarkistus-20261017.md. HUOM: tämä on mainin kopio protossa olevasta kohdat.json:sta; Linssiseppä vie proton Resources/Museo/alankomaat/kohdat.json:iin."
+}

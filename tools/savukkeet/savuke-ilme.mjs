@@ -39,12 +39,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -86,7 +84,7 @@ const kirjastot = await Promise.all(VENDOR.map((v) => ampariHaku(AMPARI + v)));
 const AMPARI_TOIMII = kirjastot.every((k) => k?.status === 200);
 if (!AMPARI_TOIMII) console.log('HUOM  ämpäri ei vastaa — ajetaan vain kirjastottomat vartiot (F, G)');
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /** Uusi sivu Sofiassa pelitilassa; ämpäri reititetty Noden kautta tai katkaistu. */
 async function avaaSivu({ kirjastot: kirjastotMukana = true, reducedMotion = 'no-preference', liput = true }) {

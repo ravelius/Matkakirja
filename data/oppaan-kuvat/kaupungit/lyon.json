@@ -1,0 +1,407 @@
+{
+ "kaupunki": "lyon",
+ "kaupunkiQ": "Q456",
+ "kohteet": [
+  {
+   "q": "Q1516",
+   "nimi": "Fourvièren Notre-Damen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 45.76229,
+   "lon": 4.82256,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "France-003038 - Basilica of Notre-Dame de Fourvière (15939822990).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/France-003038_-_Basilica_of_Notre-Dame_de_Fourvi%C3%A8re_(15939822990).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:France-003038_-_Basilica_of_Notre-Dame_de_Fourvi%C3%A8re_(15939822990).jpg",
+     "selite": "Fourvièren valkoinen basilika kohoaa kukkulalla koko Lyonin yläpuolella.",
+     "leveys": 6071,
+     "korkeus": 4106,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lyon - Basilique Notre-Dame de Fourvière - 2025-09-29 14-37-27 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_-_Basilique_Notre-Dame_de_Fourvi%C3%A8re_-_2025-09-29_14-37-27_001.jpg?width=1280",
+     "tekija": "Thomas_Hummel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_-_Basilique_Notre-Dame_de_Fourvi%C3%A8re_-_2025-09-29_14-37-27_001.jpg",
+     "selite": "Illalla valaistu basilika on Lyonin tunnetuin maamerkki, ja se valmistui 1800-luvun lopulla.",
+     "leveys": 4786,
+     "korkeus": 3191,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Exterior Basilica of Notre Dame de Fourvière Lyon France.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_Basilica_of_Notre_Dame_de_Fourvi%C3%A8re_Lyon_France.jpg?width=1280",
+     "tekija": "Tim Adams",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_Basilica_of_Notre_Dame_de_Fourvi%C3%A8re_Lyon_France.jpg",
+     "selite": "Basilikan pääjulkisivu tornien kanssa avautuu kukkulan portaille.",
+     "leveys": 3227,
+     "korkeus": 4531,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8399",
+   "nimi": "Vanha Lyon",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 45.76306,
+   "lon": 4.82806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vieux Lyon (25667252093).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vieux_Lyon_(25667252093).jpg?width=1280",
+     "tekija": "Weekend Wayfarers",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vieux_Lyon_(25667252093).jpg",
+     "selite": "Vanhassa Lyonissa kapeat mukulakivikadut kulkevat renessanssiaikaisten talojen välissä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "007. Photo prise depuis les toits de la Basilique Notre-Dame de Fourvière.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/007._Photo_prise_depuis_les_toits_de_la_Basilique_Notre-Dame_de_Fourvi%C3%A8re.JPG?width=1280",
+     "tekija": "Otourly",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:007._Photo_prise_depuis_les_toits_de_la_Basilique_Notre-Dame_de_Fourvi%C3%A8re.JPG",
+     "selite": "Saônen rannalle kerääntyneen vanhankaupungin keskellä seisoo Saint-Jeanin katedraali.",
+     "leveys": 2688,
+     "korkeus": 4144,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1521",
+   "nimi": "Lyonin Saint-Jeanin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.76083,
+   "lon": 4.82722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "West facade of Cathédrale Saint-Jean de Lyon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/West_facade_of_Cath%C3%A9drale_Saint-Jean_de_Lyon.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:West_facade_of_Cath%C3%A9drale_Saint-Jean_de_Lyon.jpg",
+     "selite": "Gotiikan ja romaanisen tyylin yhdistävä katedraali on Lyonin arkkipiispan istuinkirkko.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathédrale Saint-Jean-Baptiste Lyon.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Saint-Jean-Baptiste_Lyon.jpeg?width=1280",
+     "tekija": "Peter Glyn",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Saint-Jean-Baptiste_Lyon.jpeg",
+     "selite": "Katedraalin kolme tornia nousevat Saône-joen rannalla vanhankaupungin päällä.",
+     "leveys": 3761,
+     "korkeus": 2821,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q614",
+   "nimi": "Place Bellecour",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 45.7575,
+   "lon": 4.83222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2015-05-26 Lyon 29, square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-05-26_Lyon_29%2C_square.jpg?width=1280",
+     "tekija": "Nemo bis",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-05-26_Lyon_29%2C_square.jpg",
+     "selite": "Bellecour on yksi Euroopan suurimmista kävelyaukioista Lyonin kaupunkiniemen keskellä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lyon PlaceBellecour.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_PlaceBellecour.JPG?width=1280",
+     "tekija": "Claude",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_PlaceBellecour.JPG",
+     "selite": "Aukion yli näkyy Fourvièren kukkula ja basilika.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1506",
+   "nimi": "Place des Terreaux",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "aliakset": [
+    "Q516"
+   ],
+   "lat": 45.76748,
+   "lon": 4.83349,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Avant de l’hôtel de ville (Lyon, 2026).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avant_de_l%E2%80%99h%C3%B4tel_de_ville_(Lyon%2C_2026).jpg?width=1280",
+     "tekija": "Corentin Eustacchi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avant_de_l%E2%80%99h%C3%B4tel_de_ville_(Lyon%2C_2026).jpg",
+     "selite": "Barokkityylinen kaupungintalo hallitsee Terreaux'n aukiota Lyonin keskustassa.",
+     "leveys": 3505,
+     "korkeus": 2629,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20151107 lyon041.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20151107_lyon041.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20151107_lyon041.jpg",
+     "selite": "Aukio on ympäröity tyylikkäillä klassisilla julkisivuilla ja kaupungin tärkeimmillä rakennuksilla.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q187834",
+   "nimi": "Saône",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 45.72833,
+   "lon": 4.81861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lyon quais Fulchiron et Maréchal Joffre - Saône - Péniches.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_quais_Fulchiron_et_Mar%C3%A9chal_Joffre_-_Sa%C3%B4ne_-_P%C3%A9niches.jpg?width=1280",
+     "tekija": "Romainbehar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_quais_Fulchiron_et_Mar%C3%A9chal_Joffre_-_Sa%C3%B4ne_-_P%C3%A9niches.jpg",
+     "selite": "Rauhallinen Saône virtaa Lyonin vanhankaupungin ohi, ja sen rannoilla on pastellisävyisiä taloja.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lyon Quais Saône 3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_Quais_Sa%C3%B4ne_3.JPG?width=1280",
+     "tekija": "Frachet",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_Quais_Sa%C3%B4ne_3.JPG",
+     "selite": "Jokivarren puiden takaa Fourvièren basilika ja torni nousevat taivasta vasten.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1510",
+   "nimi": "Fourvièren antiikin teatteri",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 200,
+   "lat": 45.75972,
+   "lon": 4.81972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lyon - Lugdunum - Théatre Romain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_-_Lugdunum_-_Th%C3%A9atre_Romain.jpg?width=1280",
+     "tekija": "Jean-Christophe BENOIST",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_-_Lugdunum_-_Th%C3%A9atre_Romain.jpg",
+     "selite": "Roomalaisen Lugdunumin teatteri on Euroopan vanhimpia ja sen portaat nousevat Fourvièren rinteelle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Roman Theatre and Odeon at Fourvière 2022-10-22 09.32.22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Theatre_and_Odeon_at_Fourvi%C3%A8re_2022-10-22_09.32.22.jpg?width=1280",
+     "tekija": "Chris j wood",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roman_Theatre_and_Odeon_at_Fourvi%C3%A8re_2022-10-22_09.32.22.jpg",
+     "selite": "Teatterin vieressä on pienempi odeon, jossa esitetään edelleen musiikkia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q625",
+   "nimi": "Fourvièren metallitorni",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 45.76377,
+   "lon": 4.82227,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "015. Photo prise depuis les toits de la Basilique Notre-Dame de Fourvière.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/015._Photo_prise_depuis_les_toits_de_la_Basilique_Notre-Dame_de_Fourvi%C3%A8re.JPG?width=1280",
+     "tekija": "Otourly",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:015._Photo_prise_depuis_les_toits_de_la_Basilique_Notre-Dame_de_Fourvi%C3%A8re.JPG",
+     "selite": "Rautarakenteinen torni Fourvièren kukkulalla muistuttaa Pariisin Eiffel-tornia.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lyon - Tour métallique de Fourvière, septembre 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_-_Tour_m%C3%A9tallique_de_Fourvi%C3%A8re%2C_septembre_2015.jpg?width=1280",
+     "tekija": "Yann Caradec from Paris, France",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_-_Tour_m%C3%A9tallique_de_Fourvi%C3%A8re%2C_septembre_2015.jpg",
+     "selite": "Torni valmistui 1890-luvulla, ja se toimii nykyään lähetystornina.",
+     "leveys": 3351,
+     "korkeus": 4506,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3991",
+   "nimi": "Tête d'Orin puisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 900,
+   "lat": 45.78056,
+   "lon": 4.85417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lyon 6e - Parc de la Tête d'Or - Grandes Serres - Vue extérieure.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lyon_6e_-_Parc_de_la_T%C3%AAte_d'Or_-_Grandes_Serres_-_Vue_ext%C3%A9rieure.jpg?width=1280",
+     "tekija": "Romainbehar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lyon_6e_-_Parc_de_la_T%C3%AAte_d'Or_-_Grandes_Serres_-_Vue_ext%C3%A9rieure.jpg",
+     "selite": "Tête d'Orin suuressa puistossa on lasisia kasvihuoneita 1800-luvulta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lac du Parc de la tête d'or, Lyon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lac_du_Parc_de_la_t%C3%AAte_d'or%2C_Lyon.jpg?width=1280",
+     "tekija": "Matt Neale from Leicester, UK",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lac_du_Parc_de_la_t%C3%AAte_d'or%2C_Lyon.jpg",
+     "selite": "Puiston keskellä on suuri järvi, jota ympäröivät vanhat puut.",
+     "leveys": 2000,
+     "korkeus": 1339,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q511",
+   "nimi": "Lyonin kuvataidemuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 45.76694,
+   "lon": 4.83361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Avant du musée des Beaux-Arts (Lyon, 2026).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avant_du_mus%C3%A9e_des_Beaux-Arts_(Lyon%2C_2026).jpg?width=1280",
+     "tekija": "Corentin Eustacchi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avant_du_mus%C3%A9e_des_Beaux-Arts_(Lyon%2C_2026).jpg",
+     "selite": "Entisessä luostarirakennuksessa toimiva museo sijaitsee Place des Terreaux'n laidalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "01. Panorama de Lyon pris depuis le toit de la Basilique de Fourvière.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01._Panorama_de_Lyon_pris_depuis_le_toit_de_la_Basilique_de_Fourvi%C3%A8re.jpg?width=1280",
+   "tekija": "Otourly",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01._Panorama_de_Lyon_pris_depuis_le_toit_de_la_Basilique_de_Fourvi%C3%A8re.jpg",
+   "selite": "Lyonin punakattoinen vanhakaupunki levittäytyy kahden joen väliselle niemelle.",
+   "leveys": 7798,
+   "korkeus": 2800,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama Lyon depuis Fourvière sous averses (2012).JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Lyon_depuis_Fourvi%C3%A8re_sous_averses_(2012).JPG?width=1280",
+   "tekija": "Florian Pépellin",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Lyon_depuis_Fourvi%C3%A8re_sous_averses_(2012).JPG",
+   "selite": "Fourvièren kukkulalta avautuu laaja näkymä Lyonin kattojen yli.",
+   "leveys": 3036,
+   "korkeus": 2264,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q8656",
+   "nimi": "Croix-Rousse",
+   "peruste": "sitelinks",
+   "lat": 45.77944,
+   "lon": 4.8275,
+   "syy": "ei tunnistettavaa vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

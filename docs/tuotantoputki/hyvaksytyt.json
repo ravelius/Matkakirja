@@ -1,0 +1,138 @@
+{
+ "_ohje": "Omistajan peliin hyväksymät Codex/Tripo-mallit, joita tools/tuotantoputki.mjs valvoo Tripo-vientipakettien lisäksi: jokaisen ampari-polun pitää olla ämpärissä ja viitattuna natiivipelin koodissa ilman pois olevaa kehityslippua. Lisää rivi heti hyväksynnän jälkeen (id, mitä, hyväksyntä ja lähde, ämpäripolut); poista vasta, kun malli on omistajan päätöksellä poistettu pelistä. suljetut_tilaukset: postilaatikon tilaukset (tiedostonimi tai { tiedosto, syy }), jotka PT on todennut suljetuiksi ilman Codexin toimitusta (esim. pelkkä sopimus tai tauolle jäänyt hanke); ne eivät hälytä. korvatut_viennit: _valmiit-viennit, jotka uudempi vienti toiseen kansioon on korvannut (ei valvota). seuratut_tilaukset: PT:n seurantaan nimeämät mallitilaukset, joita sanastohaku ei tunnista mallitilaukseksi. vastaanotetut: noudetut ja SHA-tarkistetut Codex-toimitukset { tiedosto, toimitus, sha, noudettu }.",
+ "mallit": [
+  {
+   "id": "louvre-mies-vartija",
+   "mita": "Louvren kävijä k2 (mies) ja vartija tuolillaan (Tripo, Codexin kuvista posti/valoseppa-codex-louvre-ihmiset-20261018.md)",
+   "hyvaksytty": "omistaja 18.10.2026 11.41 (KK; raamattu-loki PAATOKSET 18.10. ja viesti-fable-luovutus-20261018-paiva.md)",
+   "ampari": [
+    "taidemuseo/louvre-ihmiset-v1/k2.glb",
+    "taidemuseo/louvre-ihmiset-v1/vartija.glb"
+   ]
+  },
+  {
+   "id": "louvre-nainen",
+   "mita": "Louvren kävijä k1 (nainen, Tripo ehdokas 2, luuranko + idle)",
+   "hyvaksytty": "PT 19.10.2026 (vienti taidemuseo-louvre-ihmiset-v1-vienti-20261019, omistajan hyväksymä peliin)",
+   "ampari": [
+    "taidemuseo/louvre-ihmiset-v1/k1.glb"
+   ]
+  },
+  {
+   "id": "juoksupeli-aarteet799",
+   "mita": "Juoksupelin rikkoutuvat aarteet: Codexin PT799/829-ryhmät (7), Lavastajan kokoamina (aarteet799-v2; lautaspino PT801 HOLD)",
+   "hyvaksytty": "omistaja 21.10.2026 19.52 (PT: kahdeksasta esineestä tehdään ensin rikottavat 3D-mallit); vienti juoksupeli-aarteet799-v2-vienti-20261021",
+   "ampari": [
+    "juoksupeli/maailma-v4/aarteet799-v2/sinivalkoinen-maljakko-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/sinivalkoinen-maljakko-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/keltainen-maljakko-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/keltainen-maljakko-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/turkoosi-ruukku-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/turkoosi-ruukku-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/teeastiat-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/teeastiat-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/rubiinilasit-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/rubiinilasit-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/bambusermi-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/bambusermi-rikki.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/maisemasermi-ehja.glb",
+    "juoksupeli/maailma-v4/aarteet799-v2/maisemasermi-rikki.glb"
+   ]
+  },
+  {
+   "id": "amsterdam-kavijat",
+   "mita": "Rijksmuseumin kävijät NL1–NL4 (Tripo, Codex PT834–837)",
+   "hyvaksytty": "PT 21.10.2026 (tilaus PT834–837, omistajan Tripo-lupa 17.28); vienti taidemuseo-amsterdam-ihmiset-v1-vienti-20261021",
+   "ampari": [
+    "taidemuseo/amsterdam-ihmiset-v1/nl1.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl2.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl3.glb",
+    "taidemuseo/amsterdam-ihmiset-v1/nl4.glb"
+   ]
+  }
+ ],
+ "suljetut_tilaukset": [
+  "valoseppa-codex-peking46-vesi-ja-valoputki-20261015.md",
+  {
+   "tiedosto": "fable-codex-juoksupeli-kamerapaatos-20261019.md",
+   "syy": "kuittaus ilman mallia (paketti vastaanotettu, kamerapäätös)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-rakettikokeilu-pois-20261019.md",
+   "syy": "kokeilun lopetus (rakettivideo pois, omistaja 18.25)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-rakettivideo-kokeilu-20261019.md",
+   "syy": "kokeilun lopetus (rakettikokeilu-pois 18.3x)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-paja-taustat-ja-andoya-20261019.md",
+   "syy": "kuittaus ilman mallia (pajan taustat hyväksytty; Andøya rakettivideoon peruttu)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-smaragdi-unikuva-645-hyvaksytty-20261019.md",
+   "syy": "kuittaus ilman mallia (unikuva hyväksytty)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-tauolle-20261019.md",
+   "syy": "tauolla (Olavinlinna, omistaja 17.05 / 10.10.)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-6-10-geometria-20261019.md",
+   "syy": "tauolla (Olavinlinna)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-olavinlinna-tripo-pilotti-20261019.md",
+   "syy": "tauolla (Olavinlinna)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-kaaretaulu-sopimus-20261019.md",
+   "syy": "sopimus (kääretaulun mallisopimus)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-estemallit-sopimus-20261019.md",
+   "syy": "sopimus (esteiden mallisopimus; tilaus juoksupeli-esteet erikseen)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-3d-toimitusmuoto-20261019.md",
+   "syy": "sopimus (3D-toimitusmuoto ja tuontiportti)"
+  },
+  {
+   "tiedosto": "keskustelukanava-codex-juoksupeli-viestinta-20261019.md",
+   "syy": "kuittaus ilman mallia (viestintälinja)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-viittaenergia-20261019.md",
+   "syy": "kuittaus ilman mallia (tiedoksi, ei muutospyyntöjä)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-esteet-20261019.md",
+   "syy": "korvattu (v1 hyväksytty 19.10.; seurannassa paatoimittaja-codex-juoksu-esteet-v2-20261020)"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-paperilohikaarme-20261019.md",
+   "syy": "korvattu (seurannassa paatoimittaja-codex-kaksi-lohikaarmetta-20261019)"
+  }
+ ],
+ "korvatut_viennit": [
+  "juoksupeli-aarteet799-v1-vienti-20261021"
+ ],
+ "seuratut_tilaukset": [
+  "paatoimittaja-codex-kaksi-lohikaarmetta-20261019.md",
+  "paatoimittaja-codex-juoksu-esteet-v2-20261020.md"
+ ],
+ "vastaanotetut": [
+  {
+   "tiedosto": "paatoimittaja-codex-juoksupeli-ylareitti-20261019.md",
+   "toimitus": "ylareitti-v2.zip (posti codex-paatoimittaja-avoimet-juoksupelitilaukset-875877-20261021.md, #876)",
+   "sha": "7f59d00ef224caea3703bcfbd373017551561b38ff8eb7d61dfb6b55ad20dae4",
+   "noudettu": "Pelikoodari 21.10.2026 → proto-3d/_tyo/pelikoodari/codex-noudot-20261021/"
+  },
+  {
+   "tiedosto": "paatoimittaja-codex-kaksi-lohikaarmetta-20261019.md",
+   "toimitus": "paperilohikaarme-v3.zip (sama posti, #877)",
+   "sha": "8a012ec020d8952b3dbe73ff1dd661e4cf78904a6b60b7d20150f4751c16728a",
+   "noudettu": "Pelikoodari 21.10.2026 → proto-3d/_tyo/pelikoodari/codex-noudot-20261021/"
+  }
+ ]
+}

@@ -1,0 +1,428 @@
+{
+ "kaupunki": "frankfurtammain",
+ "kaupunkiQ": "Q1794",
+ "kohteet": [
+  {
+   "q": "Q195146",
+   "nimi": "Römer",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 50.11028,
+   "lon": 8.68167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frankfurter Römer 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_R%C3%B6mer_2019.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurter_R%C3%B6mer_2019.jpg",
+     "selite": "Römerin porrastetut päätyjulkisivut ovat Frankfurtin kaupungintalo vuosisatojen ajalta.",
+     "leveys": 6698,
+     "korkeus": 5202,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Römerberg Frankfurt abends.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/R%C3%B6merberg_Frankfurt_abends.jpg?width=1280",
+     "tekija": "Thomas Wolf (Der Wolf im Wald)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:R%C3%B6merberg_Frankfurt_abends.jpg",
+     "selite": "Illan valoissa kaupungintalon päädyt hohtavat punaisina Römerbergin laidalla.",
+     "leveys": 4478,
+     "korkeus": 2985,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q195141",
+   "nimi": "Römerberg",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 50.11028,
+   "lon": 8.68222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Roemerberg-ffm-033.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roemerberg-ffm-033.jpg?width=1280",
+     "tekija": "Dontworry",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Roemerberg-ffm-033.jpg",
+     "selite": "Römerberg on vanhankaupungin pääaukio, jota reunustavat kaupungintalon päädyt.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Frankfurt am Main, Ostzeile am Samstagsberg -- 2015 -- 6679.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_am_Main%2C_Ostzeile_am_Samstagsberg_--_2015_--_6679.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main%2C_Ostzeile_am_Samstagsberg_--_2015_--_6679.jpg",
+     "selite": "Aukion itälaidan uudelleen rakennetut hirsirunkotalot kuuluvat Frankfurtin tunnetuimpiin näkymiin.",
+     "leveys": 3927,
+     "korkeus": 3099,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q57341",
+   "nimi": "Frankfurtin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 50.11056,
+   "lon": 8.685,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frankfurter Dom Eiserner Steg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_Dom_Eiserner_Steg.jpg?width=1280",
+     "tekija": "rupp.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurter_Dom_Eiserner_Steg.jpg",
+     "selite": "Goottilainen punahiekkakivinen torni kohoaa Main-joen yllä, jossa Pyhän Bartolomeuksen kirkossa kruunattiin keisareita.",
+     "leveys": 1563,
+     "korkeus": 1495,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Frankfurter Dom 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_Dom_2.JPG?width=1280",
+     "tekija": "rupp.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurter_Dom_2.JPG",
+     "selite": "Tuomiokirkon kapea torni on kaupungin vanhimpia tunnusmerkkejä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q198106",
+   "nimi": "Paavalinkirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 50.11111,
+   "lon": 8.68083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paulskirche (Dom).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paulskirche_(Dom).jpg?width=1280",
+     "tekija": "Jörg Braukmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paulskirche_(Dom).jpg",
+     "selite": "Pyöreä punahiekkakivikirkko oli vuoden 1848 Saksan kansalliskokouksen kokouspaikka.",
+     "leveys": 8509,
+     "korkeus": 6012,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014-11 ffm 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014-11_ffm_01.JPG?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014-11_ffm_01.JPG",
+     "selite": "Paavalinkirkon punainen kivijulkisivu on Saksan demokratiahistorian symboli.",
+     "leveys": 3217,
+     "korkeus": 2149,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q436079",
+   "nimi": "Alte Oper",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 50.11583,
+   "lon": 8.67194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alte Oper Frankfurt 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Oper_Frankfurt_2019.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alte_Oper_Frankfurt_2019.jpg",
+     "selite": "Renessanssityylinen Alte Oper avattiin 1880 ja rakennettiin sodan jälkeen uudelleen konserttitaloksi.",
+     "leveys": 6997,
+     "korkeus": 4701,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2008-07-31 in Frankfurt 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-07-31_in_Frankfurt_13.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-07-31_in_Frankfurt_13.jpg",
+     "selite": "Oopperatalon julkisivu on koristeltu patsailla ja pylväillä.",
+     "leveys": 3627,
+     "korkeus": 2523,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Frankfurt 02 Alte Oper ji lmnr1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Frankfurt_02_Alte_Oper_ji_lmnr1.jpg?width=1280",
+     "tekija": "Steffen 962",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Frankfurt_02_Alte_Oper_ji_lmnr1.jpg",
+     "selite": "Iltavalaistuna Alte Oper hehkuu kullankeltaisena kaupungin pilvenpiirtäjien keskellä.",
+     "leveys": 4975,
+     "korkeus": 2799,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q896039",
+   "nimi": "Goethen talo",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 50.11119,
+   "lon": 8.67767,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frankfurt Am Main-Goethe-Haus-Ansicht am Grossen Hirschgraben.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Am_Main-Goethe-Haus-Ansicht_am_Grossen_Hirschgraben.jpg?width=1280",
+     "tekija": "Mylius",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_Am_Main-Goethe-Haus-Ansicht_am_Grossen_Hirschgraben.jpg",
+     "selite": "Kirjailija Johann Wolfgang von Goethe syntyi tässä talossa Frankfurtissa vuonna 1749.",
+     "leveys": 2000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1313525",
+   "nimi": "Eiserner Steg",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 170,
+   "lat": 50.1081,
+   "lon": 8.68212,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eiserner-Steg-2012-Ffm-977-8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiserner-Steg-2012-Ffm-977-8.jpg?width=1280",
+     "tekija": "Simsalabimbam",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eiserner-Steg-2012-Ffm-977-8.jpg",
+     "selite": "Rautainen kävelysilta yhdistää vanhankaupungin ja Sachsenhausenin Main-joen yli.",
+     "leveys": 5820,
+     "korkeus": 3202,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q195116",
+   "nimi": "Hauptwache",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 50.11333,
+   "lon": 8.67889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2015-03-04 Hauptwache Frankfurt am Main Hesse Germany 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-03-04_Hauptwache_Frankfurt_am_Main_Hesse_Germany_02.jpg?width=1280",
+     "tekija": "Norbert Nagel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-03-04_Hauptwache_Frankfurt_am_Main_Hesse_Germany_02.jpg",
+     "selite": "Barokkinen vartiotalo seisoo keskustan vilkkaalla aukiolla.",
+     "leveys": 5500,
+     "korkeus": 3671,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2015-03-04 Hauptwache Frankfurt am Main Hesse Germany 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-03-04_Hauptwache_Frankfurt_am_Main_Hesse_Germany_01.jpg?width=1280",
+     "tekija": "Norbert Nagel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-03-04_Hauptwache_Frankfurt_am_Main_Hesse_Germany_01.jpg",
+     "selite": "Hauptwachen mansardikatto erottuu uusien toimistotalojen keskeltä.",
+     "leveys": 6000,
+     "korkeus": 4004,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q883643",
+   "nimi": "Eschenheimer Turm",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 40,
+   "lat": 50.11694,
+   "lon": 8.67972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2025EschenheimerTorSkylineTag.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025EschenheimerTorSkylineTag.jpg?width=1280",
+     "tekija": "Stefan Oemisch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025EschenheimerTorSkylineTag.jpg",
+     "selite": "Keskiaikainen porttitorni on säilynyt vanhan kaupunginmuurin muistona nykykeskustassa.",
+     "leveys": 4200,
+     "korkeus": 3150,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2025EschenheimerTorSkylineAbend.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025EschenheimerTorSkylineAbend.jpg?width=1280",
+     "tekija": "Stefan Oemisch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025EschenheimerTorSkylineAbend.jpg",
+     "selite": "Illansuussa torni erottuu pilvenpiirtäjien edestä.",
+     "leveys": 4697,
+     "korkeus": 3522,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q165368",
+   "nimi": "Frankfurtin päärautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 50.10726,
+   "lon": 8.66262,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hauptbahnhof Frankfurt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hauptbahnhof_Frankfurt.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hauptbahnhof_Frankfurt.jpg",
+     "selite": "Asemarakennuksen kolme tynnyrikattoista hallia avautuvat laajalle raidealueelle.",
+     "leveys": 3066,
+     "korkeus": 1880,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q163804",
+   "nimi": "Städel-museo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 50.10322,
+   "lon": 8.67388,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Staedel-Frankfurt-2013-Ffm-862-867.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Staedel-Frankfurt-2013-Ffm-862-867.jpg?width=1280",
+     "tekija": "Simsalabimbam",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Staedel-Frankfurt-2013-Ffm-862-867.jpg",
+     "selite": "Städelin museorakennus seisoo Main-joen Museumsuferin rannalla.",
+     "leveys": 9690,
+     "korkeus": 4592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q663149",
+   "nimi": "Palmengarten",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 50.1233,
+   "lon": 8.65806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Frankfurt am Main, Palmengarten (aerial view, 2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_am_Main%2C_Palmengarten_(aerial_view%2C_2024).jpg?width=1280",
+     "tekija": "Dr. Thomas Liptak",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_am_Main%2C_Palmengarten_(aerial_view%2C_2024).jpg",
+     "selite": "Kasvitieteellinen puutarha on yksi Frankfurtin suurimmista vihreistä alueista.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alpinum im Frankfurter Palmengarten.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alpinum_im_Frankfurter_Palmengarten.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alpinum_im_Frankfurter_Palmengarten.jpg",
+     "selite": "Alppikasvien kivikkopuutarha on osa Palmengartenin ulkoalueita.",
+     "leveys": 2048,
+     "korkeus": 1150,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Frankfurter Altstadt mit Skyline 2019 (100MP).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurter_Altstadt_mit_Skyline_2019_(100MP).jpg?width=1280",
+   "tekija": "Thomas Wolf, www.foto-tw.de",
+   "lisenssi": "CC BY-SA 3.0 de",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurter_Altstadt_mit_Skyline_2019_(100MP).jpg",
+   "selite": "Vanhankaupungin katot ja Römer ovat pilvenpiirtäjien edessä.",
+   "leveys": 13024,
+   "korkeus": 7678,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Frankfurt Skyline with river Main 2014.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankfurt_Skyline_with_river_Main_2014.jpg?width=1280",
+   "tekija": "Norbert Nagel",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frankfurt_Skyline_with_river_Main_2014.jpg",
+   "selite": "Frankfurtin pilvenpiirtäjien siluetti kohoaa Main-joen yllä.",
+   "leveys": 6500,
+   "korkeus": 4338,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

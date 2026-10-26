@@ -57,7 +57,7 @@ export const MAASTOKOHTEET_IRQ = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Cheekha Dar, kurdiksi "musta teltta", on nykytiedon mukaan Irakin korkein vuori: noin '
+    teksti: 'Cheekha Dar, kurdiksi ”musta teltta”, on nykytiedon mukaan Irakin korkein vuori: noin '
       + '3 611 metriä Kurdistanin alueella maan pohjoisosassa, aivan Iranin rajalla. Kahden '
       + 'jokilaakson maana tunnettu Irak nousee siis koilliskulmastaan oikeaksi vuoristoksi — '
       + 'ja huipun tarkasta korkeudesta kiistellään yhä, sillä lukema on peräisin mittausten '
@@ -80,7 +80,7 @@ export const MAASTOKOHTEET_IRQ = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Tigris on Mesopotamian eli "jokien välisen maan" kahdesta joesta itäisempi — läntinen '
+    teksti: 'Tigris on Mesopotamian eli ”jokien välisen maan” kahdesta joesta itäisempi — läntinen '
       + 'on Eufrat. Se virtaa Armenian ylängöltä etelään aavikoiden halki ja yhtyy lopulta '
       + 'Eufratiin ennen Persianlahtea. Sen rannoilla ovat Mosul, Tikrit, Samarra ja Bagdad, ja '
       + 'muinaisuudessa sen vesi elätti Assyrian suurvallan.',
@@ -102,7 +102,7 @@ export const MAASTOKOHTEET_IRQ = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Shatt al-Arab, "arabien joki", syntyy kun Eufrat ja Tigris yhtyvät al-Qurnahin '
+    teksti: 'Shatt al-Arab, ”arabien joki”, syntyy kun Eufrat ja Tigris yhtyvät al-Qurnahin '
       + 'kaupungin kohdalla Etelä-Irakissa. Yhteistä virtaa riittää enää noin 200 kilometriä '
       + 'Basran ohi Persianlahteen, ja alajuoksullaan joki on Irakin ja Iranin rajana. Iranin '
       + 'puolelta siihen laskeva Karun tuo mukanaan niin paljon lietettä, että väylä pysyy '

@@ -977,18 +977,4 @@ export const FOKUSVIRTA_MARSEILLE = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: NAVETTE_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Ranskan
-   * kruununjalokivien safiiri, sama kuin Pariisilla. Merkintä aukeaa,
-   * kun aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Vanha merimies kertoi safiirista, joka katosi Pariisin '
-      + 'kruununjalokivien mukana vallankumouksen sekasorrossa — osa '
-      + 'löytyi, osa ei, ja hänen mukaansa yksi kivistä kulki tämän '
-      + 'sataman kautta etelään. Satama muistaa kaiken mikä sen läpi '
-      + 'kulkee, hän sanoi, mutta ei kerro mihin se meni.',
-  },
 };

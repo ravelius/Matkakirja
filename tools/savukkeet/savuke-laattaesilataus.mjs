@@ -22,6 +22,7 @@ import http from 'node:http';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -57,7 +58,7 @@ const KOHDE = { lat: 46.5, lng: 2.5 };
 
 const selain = MOOTTORI === 'webkit'
   ? await paketti.webkit.launch()
-  : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal'] });
+  : await avaaChromium({ args: ['--use-angle=metal'] });
 
 /** Tason vaihdot ja aika 90 %:n peittoon (sama kuin mittaa-zoomiennakko-meri.mjs). */
 const vaihdot = (kehykset) => {

@@ -1,0 +1,512 @@
+{
+ "kaupunki": "valparaiso",
+ "kaupunkiQ": "Q33986",
+ "kohteet": [
+  {
+   "q": "Q16333721",
+   "nimi": "Valparaíson historiallinen keskusta",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": -33.04064,
+   "lon": -71.628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cerro Alegre, Valparaíso (28299816069).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_Alegre%2C_Valpara%C3%ADso_(28299816069).jpg?width=1280",
+     "tekija": "Deensel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerro_Alegre%2C_Valpara%C3%ADso_(28299816069).jpg",
+     "selite": "Cerro Alegren rinteellä värikkäät talot nousevat ylös kukkulalle Valparaíson Unescon maailmanperintöalueella.",
+     "leveys": 3640,
+     "korkeus": 2992,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cerro Alegre, Valparaíso (39369451214).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_Alegre%2C_Valpara%C3%ADso_(39369451214).jpg?width=1280",
+     "tekija": "Deensel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerro_Alegre%2C_Valpara%C3%ADso_(39369451214).jpg",
+     "selite": "Cerro Alegren rinnekorttelit hohtavat iltaauringossa, ja talot ovat tiiviisti kukkulan rinteellä.",
+     "leveys": 3517,
+     "korkeus": 2588,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cerro Concepción, Valparaíso 20201102 127.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_Concepci%C3%B3n%2C_Valpara%C3%ADso_20201102_127.jpg?width=1280",
+     "tekija": "Carlos Figueroa Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerro_Concepci%C3%B3n%2C_Valpara%C3%ADso_20201102_127.jpg",
+     "selite": "Cerro Concepciónin rinteeltä näkyy kirkontorni värikkäiden talojen yllä ja lahti taustalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Casa en calle Miramar, Cerro Alegre, Valparaíso 20201102 93.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_en_calle_Miramar%2C_Cerro_Alegre%2C_Valpara%C3%ADso_20201102_93.jpg?width=1280",
+     "tekija": "Carlos Figueroa Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_en_calle_Miramar%2C_Cerro_Alegre%2C_Valpara%C3%ADso_20201102_93.jpg",
+     "selite": "Cerro Alegren siirtolaisaikaiset huvilat rakennettiin 1800-luvun lopun satamakaupungin varakkaille.",
+     "leveys": 5549,
+     "korkeus": 3699,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7203651",
+   "nimi": "Plaza Sotomayor",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -33.03847,
+   "lon": -71.62877,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Central square valparaiso (3048946621).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_square_valparaiso_(3048946621).jpg?width=1280",
+     "tekija": "Peretz Partensky from San Francisco, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_square_valparaiso_(3048946621).jpg",
+     "selite": "Plaza Sotomayorin keskellä on Iquiquen sankarien muistomerkki ja taustalla laivaston päämaja.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Armada de Chile, Plaza Sotomayor.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Armada_de_Chile%2C_Plaza_Sotomayor.JPG?width=1280",
+     "tekija": "Leitoxx",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Armada_de_Chile%2C_Plaza_Sotomayor.JPG",
+     "selite": "Laivaston päämajarakennus hallitsee Plaza Sotomayoria sataman vieressä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Atardecer de Otoño en Valparaíso.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atardecer_de_Oto%C3%B1o_en_Valpara%C3%ADso.jpg?width=1280",
+     "tekija": "Jhoncrispapo",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atardecer_de_Oto%C3%B1o_en_Valpara%C3%ADso.jpg",
+     "selite": "Plaza Sotomayorin vanhat julkisivut hehkuvat iltahämärässä Valparaíson satamakaupungin sydämessä.",
+     "leveys": 4080,
+     "korkeus": 1884,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4801155",
+   "nimi": "Artillerían köysirata",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -33.03333,
+   "lon": -71.63028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ascensor Artillería.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ascensor_Artiller%C3%ADa.jpg?width=1280",
+     "tekija": "Javier Rubilar from Santiago, Chile",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ascensor_Artiller%C3%ADa.jpg",
+     "selite": "Artillerían vanha hissivaunu kulkee jyrkkää rinnettä pitkin satamasta kukkulalle.",
+     "leveys": 3215,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Artilleria2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artilleria2.JPG?width=1280",
+     "tekija": "Maclemo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artilleria2.JPG",
+     "selite": "Artillerían rata kapuaa Cerro Artillerían rinnettä, ja alapuolella levittyy Valparaíson alakaupunki.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ascensor Artilleria - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ascensor_Artilleria_-_panoramio.jpg?width=1280",
+     "tekija": "Pavel Špindler",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ascensor_Artilleria_-_panoramio.jpg",
+     "selite": "Köysiradan kiskot laskeutuvat jyrkästi palmujen ohi kohti lahtea.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6057588",
+   "nimi": "Baburizzan palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -33.04044,
+   "lon": -71.62887,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Baburizza Valparaíso.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Baburizza_Valpara%C3%ADso.JPG?width=1280",
+     "tekija": "Ana Soto Castro",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Baburizza_Valpara%C3%ADso.JPG",
+     "selite": "Baburizzan palatsi on jugendtyylinen huvila Cerro Alegren reunalla, nykyisin taidemuseo.",
+     "leveys": 2816,
+     "korkeus": 1584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ascensor El Peral 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ascensor_El_Peral_01.jpg?width=1280",
+     "tekija": "Marcelo Ois Lagarde",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ascensor_El_Peral_01.jpg",
+     "selite": "Baburizzan palatsin vieressä kulkee El Peralin hissirata, ja palatsin tornit nousevat vehreyden keskeltä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Baburizza 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baburizza_4.jpg?width=1280",
+     "tekija": "Dhcarlos2010",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baburizza_4.jpg",
+     "selite": "Palatsin pyöristetty kulmatorni ja sen ruutukuvioidut koristeet muistuttavat 1900-luvun alun jugendista.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5965210",
+   "nimi": "La Sebastiana",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -33.05375,
+   "lon": -71.62276,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Museo La Sebastiana - Pablo Neruda, Valparaiso.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Museo_La_Sebastiana_-_Pablo_Neruda%2C_Valparaiso.jpg?width=1280",
+     "tekija": "Mikel Santamaria",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Museo_La_Sebastiana_-_Pablo_Neruda%2C_Valparaiso.jpg",
+     "selite": "La Sebastiana oli Pablo Nerudan koti kukkulan rinteellä, nyt se on museo.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa Museo La Sebastiana 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Museo_La_Sebastiana_01.jpg?width=1280",
+     "tekija": "Marcelo Ois Lagarde",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Museo_La_Sebastiana_01.jpg",
+     "selite": "Talon monikerroksinen julkisivu on maalattu kirkkain värein ja sen edessä kasvaa jakarandapuu.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casa Museo La Sebastiana 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Museo_La_Sebastiana_02.jpg?width=1280",
+     "tekija": "Marcelo Ois Lagarde",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Museo_La_Sebastiana_02.jpg",
+     "selite": "Neruda rakennutti talon kukkulalle, josta avautuu näkymä lahdelle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5758625",
+   "nimi": "Valparaíson katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -33.0462,
+   "lon": -71.619,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral, Valparaíso, Chile 20211003 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%2C_Valpara%C3%ADso%2C_Chile_20211003_01.jpg?width=1280",
+     "tekija": "Carlos yo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral%2C_Valpara%C3%ADso%2C_Chile_20211003_01.jpg",
+     "selite": "Valparaíson katedraali on uusgoottilainen kivikirkko Plaza Victorian laidalla, kellotorni julkisivun kulmassa.",
+     "leveys": 5512,
+     "korkeus": 3675,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Valparaiso1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Valparaiso1.JPG?width=1280",
+     "tekija": "Julian Moggia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Valparaiso1.JPG",
+     "selite": "Katedraalin harmaa kivijulkisivu ja kupoli kohoavat Plaza Victorian puiden yläpuolelle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Catedral en plaza victoria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_en_plaza_victoria.jpg?width=1280",
+     "tekija": "Dhcarlos2010",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_en_plaza_victoria.jpg",
+     "selite": "Katedraalin suippokaariportit avautuvat Plaza Victorian puolelle.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1968468",
+   "nimi": "Chilen kansalliskongressin rakennus",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "aliakset": [
+    "Q78054941"
+   ],
+   "lat": -33.04778,
+   "lon": -71.60583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Edificio del Congreso Nacional, Valparaíso 20230903 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_del_Congreso_Nacional%2C_Valpara%C3%ADso_20230903_01.jpg?width=1280",
+     "tekija": "Carlos Figueroa Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificio_del_Congreso_Nacional%2C_Valpara%C3%ADso_20230903_01.jpg",
+     "selite": "Chilen kansalliskongressi toimii 1990-luvulla valmistuneessa rakennuksessa Valparaíson kukkuloiden juurella.",
+     "leveys": 5342,
+     "korkeus": 3561,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Edificio del Congreso Nacional de Chile (Valparaíso).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_del_Congreso_Nacional_de_Chile_(Valpara%C3%ADso).jpg?width=1280",
+     "tekija": "ShootingStarMax",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificio_del_Congreso_Nacional_de_Chile_(Valpara%C3%ADso).jpg",
+     "selite": "Kongressirakennuksen vaalea julkisivu ja suuri porttiaukko erottuvat kaupungin kattojen keskellä.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5760329",
+   "nimi": "Toisinajattelijoiden hautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -33.04526,
+   "lon": -71.62504,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cementerio de Disidentes, Valparaíso.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cementerio_de_Disidentes%2C_Valpara%C3%ADso.jpg?width=1280",
+     "tekija": "B Angeles",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cementerio_de_Disidentes%2C_Valpara%C3%ADso.jpg",
+     "selite": "Toisinajattelijoiden hautausmaa perustettiin ei-katolisille, ja sen hautakivien takana nousevat kukkulan talot.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cementerio de Disidentes - Valparaíso - 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cementerio_de_Disidentes_-_Valpara%C3%ADso_-_2011.jpg?width=1280",
+     "tekija": "Carlos yo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cementerio_de_Disidentes_-_Valpara%C3%ADso_-_2011.jpg",
+     "selite": "Hautausmaalla lepäävät muun muassa protestanttisten siirtolaisten ja merenkulkijoiden suvut.",
+     "leveys": 2044,
+     "korkeus": 1530,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cementerio de Disidentes.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cementerio_de_Disidentes.JPG?width=1280",
+     "tekija": "Felipe Silva Bascuñan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cementerio_de_Disidentes.JPG",
+     "selite": "Enkelipatsas ja ristit kohoavat hautausmaan rinteellä, taustalla Cerro Panteónin talot.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16578028",
+   "nimi": "Pyhien sydänten kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -33.04843,
+   "lon": -71.61549,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de los Sagrados Corazones, Valparaíso - detalle entrada.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_los_Sagrados_Corazones%2C_Valpara%C3%ADso_-_detalle_entrada.JPG?width=1280",
+     "tekija": "Nereidas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_los_Sagrados_Corazones%2C_Valpara%C3%ADso_-_detalle_entrada.JPG",
+     "selite": "Pyhien sydänten kirkon portaalia koristavat enkelit ja kaiverrettu kaaren pinta.",
+     "leveys": 4912,
+     "korkeus": 2760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Iglesia de los Sagrados Corazones, Valparaíso 20230901 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_los_Sagrados_Corazones%2C_Valpara%C3%ADso_20230901_02.jpg?width=1280",
+     "tekija": "Carlos Figueroa Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_los_Sagrados_Corazones%2C_Valpara%C3%ADso_20230901_02.jpg",
+     "selite": "Pyhien sydänten kirkon uusgoottilainen kellotorni nousee korttelin yläpuolelle.",
+     "leveys": 2812,
+     "korkeus": 5252,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1284408",
+   "nimi": "Valparaíson paavillis-katolinen yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -33.0447,
+   "lon": -71.6056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aulario de la Facultad de Ingeniería PUCV, Valparaíso 20230704 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aulario_de_la_Facultad_de_Ingenier%C3%ADa_PUCV%2C_Valpara%C3%ADso_20230704_01.jpg?width=1280",
+     "tekija": "Carlos Figueroa Rojas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aulario_de_la_Facultad_de_Ingenier%C3%ADa_PUCV%2C_Valpara%C3%ADso_20230704_01.jpg",
+     "selite": "Valparaíson paavillis-katolinen yliopisto on yksi Chilen vanhimmista yksityisistä yliopistoista.",
+     "leveys": 5043,
+     "korkeus": 3362,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1546014",
+   "nimi": "Valparaíson yliopisto",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -33.04071,
+   "lon": -71.62546,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Universidad de Valparaíso - Facultad de Medicina (Ed Bruno Gunther).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Universidad_de_Valpara%C3%ADso_-_Facultad_de_Medicina_(Ed_Bruno_Gunther).jpg?width=1280",
+     "tekija": "Farisori",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Universidad_de_Valpara%C3%ADso_-_Facultad_de_Medicina_(Ed_Bruno_Gunther).jpg",
+     "selite": "Valparaíson yliopisto on julkinen yliopisto, jonka rakennukset levittyvät ympäri kaupunkia.",
+     "leveys": 5456,
+     "korkeus": 3632,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista aerea Valparaíso, Chile.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_aerea_Valpara%C3%ADso%2C_Chile.jpg?width=1280",
+   "tekija": "Marca Chile",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_aerea_Valpara%C3%ADso%2C_Chile.jpg",
+   "selite": "Valparaíso levittyy ilmasta katsottuna lahden ympärille ja kukkuloiden rinteille.",
+   "leveys": 8256,
+   "korkeus": 5504,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "La ciudad de Valparaíso desde el Cerro Artillería, Chile 2019.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_ciudad_de_Valpara%C3%ADso_desde_el_Cerro_Artiller%C3%ADa%2C_Chile_2019.jpg?width=1280",
+   "tekija": "CARLOS TEIXIDOR CADENAS",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_ciudad_de_Valpara%C3%ADso_desde_el_Cerro_Artiller%C3%ADa%2C_Chile_2019.jpg",
+   "selite": "Cerro Artillerían rinteeltä näkyy Valparaíson satama, kontit ja kukkuloille nouseva kaupunki.",
+   "leveys": 4896,
+   "korkeus": 3672,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

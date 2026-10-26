@@ -244,8 +244,8 @@ const VISA_TEHTAVA = {
 /**
  * VOIKO TÄSSÄ KAUPUNGISSA AVATA AARTEEN LEHDEN KYSYMYKSELLÄ?
  *
- * Vihreä piste tarvitsee kaksi asiaa datassa: kohtaamisen ja sille
- * paikan tällä laudalla (js/packs/fokusvirta-ateena.js kohtaamispiste;
+ * Vihreä piste tarvitsee kaksi asiaa datassa: kohtaamisen (tai sähketehtävän)
+ * ja sille paikan tällä laudalla (js/packs/fokusvirta-ateena.js kohtaamispiste;
  * ehdot luetaan auki js/fokusvirta.js:n fokusvirtaKohtaaminenPisteessa
  * -kommentissa). Ilman niitä aarteen avaus olisi tyhjä lupaus, ja
  * kulttuurivisa on pelin JOKAISESSA pilottikaupungissa — se ei saa
@@ -260,7 +260,15 @@ function aarteenAvausMahdollista(ui, city) {
   if (!FOKUS_LEHTITEHTAVAT || !city || !ui?.game || ui.game.player?.isBot) return false;
   if (!fokusmoodiPaalla()) return false;
   const data = fokusvirtaKaupungille(city.id);
-  if (!data?.kohtaaminen) return false;
+  /*
+   * SÄHKEKAUPUNKI KELPAA (PT 11.10.2026, aloituskaupunkien tarkistus): vihreä
+   * piste avaa siellä sähketehtävän eikä kohtaamista (js/fokusvirta.js
+   * fokusvirtaKohtaaminenPisteessa hyväksyy kummankin). Ilman tätä Tukholma
+   * lukittui yhteen väärään vastaukseen: lehden kysymykseen vastataan kerran,
+   * pullaa ei tarjottu eikä Ruotsissa ole karttavisaa. Pulla on nyt turvaverkko
+   * jokaisessa kaupungissa, jossa pisteellä on paikka.
+   */
+  if (!data?.kohtaaminen && !data?.sahketehtava) return false;
   const paikka = data.kohtaamispiste?.laudat?.[ui.game.pack?.id];
   return Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y);
 }
@@ -494,17 +502,17 @@ function pullaIsolla(nimi) {
 
 /** Tarjousnappi vastaamattomana. */
 function pullaNapinTeksti(nimi) {
-  return `Osta ${nimi} Livialle (${PULLA_HINTA} £)`;
+  return `Osta ${nimi} Livialle (£${PULLA_HINTA})`;
 }
 
 /** Sama nappi varmistusta odottamassa. */
 function pullaVarmistusTeksti(nimi) {
-  return `Varmista: ${nimi} Livialle, ${PULLA_HINTA} £`;
+  return `Varmista: ${nimi} Livialle, £${PULLA_HINTA}`;
 }
 
 /** Kassa ei riitä — nappi kertoo sen itse eikä jätä arvailtavaksi. */
 function pullaKoyhaTeksti(nimi) {
-  return `Kassa ei riitä: ${nimi} ${PULLA_HINTA} £`;
+  return `Kassa ei riitä: ${nimi} £${PULLA_HINTA}`;
 }
 
 /*
@@ -519,7 +527,7 @@ const PULLA_VARMISTUS_OHJE = 'Toinen napautus maksaa. Muuten tarjous raukeaa.';
 
 /** Kauppa tehty — rivi jää laatikkoon napin tilalle. */
 function pullaTehtyTeksti(nimi) {
-  return `Livia sai maksunsa (${nimi}, ${PULLA_HINTA} £) ja näytti paikan kartalta.`;
+  return `Livia sai maksunsa (${nimi}, £${PULLA_HINTA}) ja näytti paikan kartalta.`;
 }
 
 /**
@@ -632,7 +640,7 @@ export function pullaOstosnappi(ui, kotelo, {
     sfx.play('coin');
     rivi.replaceChildren(html('p', 'fokus-pulla-tehty', tehty));
     const box = ui.buildToast?.({
-      kind: 'stamp', icon: 'kukkaro', text: `−${hinta} puntaa`, sub: kelluke,
+      kind: 'stamp', icon: 'kukkaro', text: `−£${hinta}`, sub: kelluke,
     });
     if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
     ui.onChange?.(ui.game);
@@ -657,7 +665,7 @@ export function pullaOstosnappi(ui, kotelo, {
  *      Jo ostettu pulla sammuttaa tarjouksen tätä kautta:
  *      fokusAarreAvattu lukee saman kirjanpidon.
  */
-function pullaTarjolla(ui, city) {
+export function pullaTarjolla(ui, city) {
   if (!aarteenAvausMahdollista(ui, city)) return false;
   return !aarreAuki(ui, city);
 }
@@ -890,7 +898,7 @@ export function piirraVisanVastaukset(laatikko, {
       tulos.hidden = false;
       tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
       tulos.textContent = (oikein
-        ? `Oikein! +${palkkio} puntaa. `
+        ? `Oikein! +£${palkkio}. `
         : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
       sfx.play(oikein ? 'correct' : 'wrong');
       natiiviVastaus(oikein);
@@ -1017,7 +1025,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
         const box = ui.buildToast?.({
           kind: 'stamp',
           icon: 'kukkaro',
-          text: `+${FOKUS_TEHTAVA_PALKKIO} puntaa`,
+          text: `+£${FOKUS_TEHTAVA_PALKKIO}`,
           sub: `${nimilaatta} ratkesi`,
         });
         if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);

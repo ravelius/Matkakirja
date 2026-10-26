@@ -1,0 +1,52 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 669,
+ "hila": {
+  "lon0": 73,
+  "lon1": 132,
+  "lat0": 18,
+  "lat1": 53,
+  "askel": 0.2,
+  "leveys": 295,
+  "korkeus": 175,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-669.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 174.3,
+  "p99": 55.5,
+  "summa_milj": 55.43,
+  "arvio": true,
+  "korotus": 1.259
+ },
+ "omistus": {
+  "tiedosto": "omistus-669.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 669
+ },
+ "dynastiat": [
+  {
+   "avain": "tang",
+   "nimi": "Tang",
+   "vari": "#c25a2c",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "tiibet",
+   "nimi": "Tiibetin valtakunta",
+   "vari": "#6b4f86",
+   "tyyppi": "ulkoinen"
+  }
+ ],
+ "vakiluku_milj": 50.0,
+ "aluejako": "tang",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-669.geojson (Matkakirja, CC0)"
+ }
+}

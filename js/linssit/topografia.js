@@ -383,6 +383,7 @@ export const LINSSI = {
 
   nimi: 'Topografialinssi',
   lyhyt: 'Maailma maastona: väri kertoo korkeuden, varjo kertoo muodon.',
+  esittely: 'Maailma maastona: väri kertoo korkeuden, varjo kertoo muodon.',
   /*
    * Kaksihuippuinen vuorijono ja lumiraja. Ei kompassia eikä karttalehteä:
    * kuvakkeen on kerrottava mitä linssi NÄYTTÄÄ, ja tämä linssi näyttää
@@ -407,6 +408,13 @@ export const LINSSI = {
    * pahempi kuin ei reliefiä.
    */
   laudat: ['maailmankartta'],
+
+  /*
+   * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x): oikean yläkulman nimipilleri pois, tilalle
+   * hampurilainen, jonka valikossa ylimpänä Korkeustasot (värilaput) ja sen alla Sulje linssi (js/ui.js
+   * piirraLinssinHampurilainen). Linssien hampurilaisen ensimmäinen käyttäjä.
+   */
+  valikko: { selite: 'Korkeustasot' },
 
   lahde: {
     // Oletuksena reliefipyramidi (js/reliefipyramidi.js, ETOPO 2022 15″);

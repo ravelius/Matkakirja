@@ -27,10 +27,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
+import { avaaChromium } from './selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('..', import.meta.url).pathname;
 const MARKDOWN = process.argv[2] === 'markdown';
@@ -72,7 +70,7 @@ peli.tokens.delete('ateena');
 const tallenne = JSON.stringify(peli.toJSON());
 
 const OTANTA_MS = 4000;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 const jarjestysluku = (lista, osuus) => {
   const s = [...lista].sort((a, b) => a - b);

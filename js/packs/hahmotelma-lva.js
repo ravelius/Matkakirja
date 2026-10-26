@@ -126,7 +126,7 @@ export const HAHMOTELMA_LVA = [
     },
     teksti: 'Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu '
       + 'Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi '
-      + 'tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan '
+      + 'tarkoittaa kirjaimellisesti ”linnaa Venta-joella”, ja se viittaa Liivinmaan '
       + 'ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai '
       + 'vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan '
       + 'herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. '
@@ -204,8 +204,8 @@ export const HAHMOTELMA_LVA = [
       europe: { x: 667.6, y: 395.3 },
     },
     teksti: 'Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella '
-      + 'noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja '
-      + 'mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu '
+      + 'noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra (”meri”) ja '
+      + 'mala (”reuna”), joten se tarkoittaa suunnilleen ”merenrantaa”. Kaupunki koostuu '
       + 'ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä '
       + 'pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. '
       + 'Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: '
@@ -419,7 +419,7 @@ export const HAHMOTELMA_LVA = [
       + 'länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti '
       + 'puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren '
       + 'luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä '
-      + 'ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten '
+      + 'ovat Zilie Kalni eli ”Siniset kukkulat”, jotka olivat tuhansia vuosia sitten '
       + 'Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset '
       + 'suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on '
       + 'havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden '
@@ -590,7 +590,7 @@ export const HAHMOTELMA_LVA = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-tukums-ee0474bf.jpg',
         lyhyt: 'Brīvības-aukio ja luterilainen kirkko Tukumin keskustassa.',
         selite: 'Kivetyn aukion takana kohoaa valkoinen Pyhän Kolminaisuuden luterilainen '
-          + 'kirkko terävine torneineen, ja sen vieressä alkaa Lielā iela. Lielā (\'suuri\') '
+          + 'kirkko terävine torneineen, ja sen vieressä alkaa Lielā iela. Lielā (’suuri’) '
           + 'iela oli kaupungin epävirallinen pääkatu, jonka varrelle rakentui julkisia '
           + 'rakennuksia, yrityksiä ja pieniä liikkeitä.',
         lahde: 'Valokuva: Marrx, Wikimedia Commons (CC BY-SA 4.0).',

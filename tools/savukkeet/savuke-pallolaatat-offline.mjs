@@ -48,16 +48,14 @@
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-pallolaatat-offline.mjs [kuvakansio]
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -175,8 +173,7 @@ if (kirjasto?.status !== 200) {
   process.exit(1);
 }
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: [
     '--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist',
     // Muut R2-pyynnöt (kuvat, äänet) kaatuvat heti: kontissa ei ole
@@ -211,6 +208,7 @@ await ctx.addInitScript((data) => {
   } catch { /* yksityinen tila */ }
 }, tallenne);
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text()); });

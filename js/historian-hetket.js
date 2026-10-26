@@ -61,13 +61,14 @@ import {
   avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA — sama järjestely ja sama
@@ -263,7 +264,11 @@ export function avaaHetki(ui, iso, hetki) {
     kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoHetki(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoHetki(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele hetki' });
 
@@ -299,6 +304,7 @@ export function avaaHetki(ui, iso, hetki) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('hetki-auki');
+  animoiAvaus(kortti);
 }
 
 /**
@@ -491,7 +497,7 @@ function piirraHetkiVisa(ui, sisalto, iso, hetki) {
   }
   // Palkkio näkyviin ennen vastaamista, kuten skandaalivisassa.
   laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
-    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
+    `Oikeasta vastauksesta saat £${TAKY_PALKKIO}.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);
@@ -505,14 +511,14 @@ function piirraHetkiVisa(ui, sisalto, iso, hetki) {
       vaihtoehdot.replaceChildren();
       tulos.className = `fokusvirta-visa-tulos ${oikein ? 'oikein-tulos' : 'vaarin-tulos'}`;
       tulos.textContent = oikein
-        ? `Oikein! +${TAKY_PALKKIO} puntaa.`
+        ? `Oikein! +£${TAKY_PALKKIO}.`
         : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}.`;
       sfx.play(oikein ? 'correct' : 'wrong');
       natiiviVastaus(oikein);
       if (oikein) {
         const leima = ui.buildToast?.({
           kind: 'stamp', icon: 'kukkaro',
-          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Historian hetki',
+          text: `+£${TAKY_PALKKIO}`, sub: 'Historian hetki',
         });
         if (leima) setTimeout(() => ui.removeToast(leima), TOAST_MS.default);
       }
@@ -533,8 +539,8 @@ export function suljeHetki(ui) {
   if (typeof document === 'undefined') return;
   for (const vanha of document.querySelectorAll('.hetki-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
-    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
+    suljeKerrosAnimoiden(vanha, '.hetki-kortti', ['hetki-kerros', 'hetki-auki']);
   }
 }
 

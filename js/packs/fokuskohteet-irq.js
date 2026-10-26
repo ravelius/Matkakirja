@@ -177,8 +177,8 @@ export const FOKUSKOHTEET_IRQ = [
       + 'tiivistettiin bitumilla. Kerran vuodessa, kevätpäiväntasauksen '
       + 'aikaan alkaneena uudenvuoden juhlana, jumalten patsaat '
       + 'kannettiin portista Prosessiotietä pitkin. Nebukadnessarin '
-      + 'vihkikirjoitus kertoo, miksi portti koristeltiin näin: "jotta '
-      + 'ihmiskunta katselisi niitä ihmeissään".',
+      + 'vihkikirjoitus kertoo, miksi portti koristeltiin näin: ”jotta '
+      + 'ihmiskunta katselisi niitä ihmeissään”.',
     lahde: 'en-Wikipedia "Ishtar Gate", johdanto sekä osiot "History", '
       + '"Design", "Ishtar Gate and Processional Way", "Inscription of '
       + 'Nebuchadnezzar II" ja "Excavation and display" (tarkistettu '
@@ -241,7 +241,7 @@ export const FOKUSKOHTEET_IRQ = [
     teksti: 'Assyrian kuningas Sanherib siirsi valtakuntansa '
       + 'pääkaupungin Niniveen ja aloitti vuonna 702 eaa. '
       + 'lounaispalatsin rakentamisen Kuyunjiqin kummulle. Hän kutsui '
-      + 'sitä nimellä "palatsi vailla vertaa". Rakennus mitattiin '
+      + 'sitä nimellä ”palatsi vailla vertaa”. Rakennus mitattiin '
       + 'kummun mukaan noin 500 metriä pitkäksi ja 240 metriä leveäksi, '
       + 'ja siinä oli ainakin kahdeksankymmentä huonetta. Perustus '
       + 'muurattiin kalkkikivestä ja savitiilestä 22 metrin korkeuteen '

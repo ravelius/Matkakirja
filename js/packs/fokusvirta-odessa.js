@@ -700,8 +700,8 @@ export const FOKUSVIRTA_ODESSA = {
           + '(CC BY-SA 3.0)',
       },
       visa: {
-        kysymys: 'Isoisäsi kirjoitti elokuussa 1873, että oopperatalo "paloi '
-          + 'talvella". Milloin palo oli?',
+        kysymys: 'Isoisäsi kirjoitti elokuussa 1873, että oopperatalo ”paloi '
+          + 'talvella”. Milloin palo oli?',
         vaihtoehdot: [
           'Helmikuun lopulla, laskiaisviikolla',
           'Edellisenä jouluna, joulukuussa 1872',
@@ -1127,18 +1127,4 @@ export const FOKUSVIRTA_ODESSA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: DERIBAS_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: hetmani
-   * Polubotokin kultakätkö, sama kuin Kiovalla. Merkintä aukeaa, kun
-   * aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Satamakonttorissa naurettiin tarinalle hetmanin kullasta, joka '
-      + 'makaa Lontoon pankissa korkoa kasvamassa — joku oli laskenut, '
-      + 'että sillä ostaisi jo koko tämän kaupungin laivoineen. Nauru '
-      + 'loppui, kun vanha kirjanpitäjä totesi hiljaa: tarina elää siksi, '
-      + 'että tynnyri lähti aikoinaan liikkeelle juuri meren kautta.',
-  },
 };

@@ -26,7 +26,9 @@ test('sumun peitto: kaukaa ohut, keskellä tihein, lähellä nolla', () => {
   const keski = sumunPeitto(AVAUS * SUMUN_KESKI, AVAUS);
   const lahi = sumunPeitto(AVAUS * SUMUN_LAHI, AVAUS);
   assert.ok(kauko < 0.2, `kaukaa ${kauko}`);
-  assert.ok(keski > 0.5, `keskeltä ${keski}`);
+  // Omistaja 2.10.2026 klo 21.3x: sumua selvästi vähemmän (peitot puolitettu).
+  assert.ok(keski > 0.25 && keski <= 0.35, `keskeltä ${keski}`);
+  assert.ok(kauko <= 0.1, `kaukaa ${kauko}`);
   assert.equal(lahi, 0);
   // Profiili NOUSEE ja LASKEE: kamera kulkee sumun läpi.
   assert.ok(keski > kauko && keski > lahi);

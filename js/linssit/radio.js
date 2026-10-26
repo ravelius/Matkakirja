@@ -2180,6 +2180,7 @@ export const LINSSI = {
 
   nimi: 'Maailmanradio',
   lyhyt: 'Kaupungit ovat play-nappeja: kuulet mitä siellä lähetetään juuri nyt.',
+  esittely: 'Kaupungit ovat play-nappeja: kuulet mitä siellä lähetetään juuri nyt.',
   // Putkiradio: kotelo, viritysasteikko, säädin ja antenni.
   ikoni: '<rect x="2.6" y="9" width="18.8" height="11.4" rx="2"/>'
     + '<path d="M7.5 4.3 15.6 9"/>'

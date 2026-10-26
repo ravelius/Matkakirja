@@ -1,0 +1,310 @@
+{
+ "kaupunki": "valletta",
+ "kaupunkiQ": "Q23800",
+ "kohteet": [
+  {
+   "q": "Q613619",
+   "nimi": "Pyhän Johanneksen ko-katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.89778,
+   "lon": 14.51278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Concatedral de San Juan, La Valeta, isla de Malta, Malta, 2021-08-25, DD 246-248 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Concatedral_de_San_Juan%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_246-248_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Concatedral_de_San_Juan%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_246-248_HDR.jpg",
+     "selite": "Johanneksen ritarikunnan kirkko on Vallettan pääkirkko, jonka julkisivu on yksinkertainen.",
+     "leveys": 5187,
+     "korkeus": 5219,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Johns Co-cathedral Valletta Malta 2014 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Johns_Co-cathedral_Valletta_Malta_2014_3.jpg?width=1280",
+     "tekija": "Karelj",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Johns_Co-cathedral_Valletta_Malta_2014_3.jpg",
+     "selite": "Sisällä kirkko hohtaa barokkikullassa ja holveja peittävissä maalauksissa.",
+     "leveys": 2400,
+     "korkeus": 1794,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1368885",
+   "nimi": "Suurmestarin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 35.89883,
+   "lon": 14.51406,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valletta St Johns square Malta 2014 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta_St_Johns_square_Malta_2014_3.jpg?width=1280",
+     "tekija": "Karelj",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valletta_St_Johns_square_Malta_2014_3.jpg",
+     "selite": "Suurmestarin palatsi oli Johanneksen ritarikunnan päämaja, ja nykyään se toimii Maltan presidentin työpaikkana.",
+     "leveys": 2400,
+     "korkeus": 1619,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2024 Großmeisterpalast Valletta 6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2024_Gro%C3%9Fmeisterpalast_Valletta_6.jpg?width=1280",
+     "tekija": "Bärwinkel,Klaus",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2024_Gro%C3%9Fmeisterpalast_Valletta_6.jpg",
+     "selite": "Palatsin rauhallista sisäpihaa koristaa patsas.",
+     "leveys": 2961,
+     "korkeus": 3948,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7898477",
+   "nimi": "Yläbarrakan puutarhat",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.89498,
+   "lon": 14.51202,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "! Valletta 3951 26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/!_Valletta_3951_26.jpg?width=1280",
+     "tekija": "Continentaleurope",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:!_Valletta_3951_26.jpg",
+     "selite": "Yläbarrakan puutarhat on Vallettan puistoterassi, jolta avautuu näkymä Grand Harbouriin.",
+     "leveys": 2592,
+     "korkeus": 1936,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Upper barrakka gardens-IMG 1669.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Upper_barrakka_gardens-IMG_1669.jpg?width=1280",
+     "tekija": "C T Johansson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Upper_barrakka_gardens-IMG_1669.jpg",
+     "selite": "Puutarhan kaarikäytävät ja puut tarjoavat varjoa bastionin päällä.",
+     "leveys": 3570,
+     "korkeus": 2678,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2499012",
+   "nimi": "Auberge de Castille",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.89583,
+   "lon": 14.51139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auberge de Castille, Valletta 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auberge_de_Castille%2C_Valletta_001.jpg?width=1280",
+     "tekija": "Matthew Axiak",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auberge_de_Castille%2C_Valletta_001.jpg",
+     "selite": "Auberge de Castille oli Johanneksen ritarikunnan kastilialaisten ritarien majatalo, ja nykyään siellä on Maltan pääministerin toimisto.",
+     "leveys": 3949,
+     "korkeus": 2470,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Albergue de Castilla, La Valeta, isla de Malta, Malta, 2021-08-25, DD 181.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albergue_de_Castilla%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_181.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albergue_de_Castilla%2C_La_Valeta%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_181.jpg",
+     "selite": "Barokkijulkisivun symmetria ja koristeet tekevät rakennuksesta Vallettan komeimpia.",
+     "leveys": 6981,
+     "korkeus": 3768,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1438745",
+   "nimi": "Pyhän Elmon linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 35.90194,
+   "lon": 14.51861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort St. Elmo; Valletta, Malta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_St._Elmo%3B_Valletta%2C_Malta.jpg?width=1280",
+     "tekija": "John Haslam",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_St._Elmo%3B_Valletta%2C_Malta.jpg",
+     "selite": "Pyhän Elmon linnake vartioi Vallettan niemen kärkeä ja oli ratkaisevassa asemassa Maltan suuressa piirityksessä 1565.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q220899",
+   "nimi": "Grand Harbour",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 35.895,
+   "lon": 14.52056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valletta, Malta's Grand Harbor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta%2C_Malta's_Grand_Harbor.jpg?width=1280",
+     "tekija": "TerryDOtt",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valletta%2C_Malta's_Grand_Harbor.jpg",
+     "selite": "Grand Harbour on Maltan suuri luonnonsatama, jonka rantoja reunustavat linnoitukset.",
+     "leveys": 7081,
+     "korkeus": 5263,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand harbour 2019-04-11 (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_harbour_2019-04-11_(2).jpg?width=1280",
+     "tekija": "Z thomas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_harbour_2019-04-11_(2).jpg",
+     "selite": "Vallettan kalkkikivinen muuri nousee suoraan sataman rannalta.",
+     "leveys": 4160,
+     "korkeus": 2336,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Malta Vittoriosa BW 2011-10-06 10-23-35.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malta_Vittoriosa_BW_2011-10-06_10-23-35.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Malta_Vittoriosa_BW_2011-10-06_10-23-35.JPG",
+     "selite": "Satamassa on myös venesatamia Kolmen kaupungin puolella.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q576800",
+   "nimi": "Manoel-teatteri",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 35.89983,
+   "lon": 14.51282,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Il-Manoel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Il-Manoel.jpg?width=1280",
+     "tekija": "Wikichan94",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Il-Manoel.jpg",
+     "selite": "Manoel-teatteri on 1700-luvulla rakennettu teatteri, joka on yksi Euroopan vanhimmista toimivista.",
+     "leveys": 1644,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q110391255",
+   "nimi": "Piirityskello-muistomerkki",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 35.89759,
+   "lon": 14.51828,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Siege Bell Monument Valletta n03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siege_Bell_Monument_Valletta_n03.jpg?width=1280",
+     "tekija": "Marie-Lan Nguyen",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siege_Bell_Monument_Valletta_n03.jpg",
+     "selite": "Piirityskello-muistomerkki on toisen maailmansodan aikaisen Maltan piirityksen uhrien muistomerkki.",
+     "leveys": 4108,
+     "korkeus": 2729,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Siege Bell War Memorial - Valletta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siege_Bell_War_Memorial_-_Valletta.jpg?width=1280",
+     "tekija": "MrPanyGoff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siege_Bell_War_Memorial_-_Valletta.jpg",
+     "selite": "Muistomerkki seisoo Grand Harbourin yläpuolella.",
+     "leveys": 2318,
+     "korkeus": 1700,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Valletta, Malta (Aerial View).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta%2C_Malta_(Aerial_View).jpg?width=1280",
+   "tekija": "Jonathan Mercieca",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valletta%2C_Malta_(Aerial_View).jpg",
+   "selite": "Valletta on Euroopan pienimpiä pääkaupunkeja, ja se rakentui ritarien linnoittamalle niemelle.",
+   "leveys": 5472,
+   "korkeus": 3078,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Valletta vom Grand Harbour aus gesehen. - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valletta_vom_Grand_Harbour_aus_gesehen._-_panoramio.jpg?width=1280",
+   "tekija": "Martin Furtschegger",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valletta_vom_Grand_Harbour_aus_gesehen._-_panoramio.jpg",
+   "selite": "Kaupungin kalkkikivinen siluetti kohoaa Grand Harbourin ylle.",
+   "leveys": 4000,
+   "korkeus": 2248,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

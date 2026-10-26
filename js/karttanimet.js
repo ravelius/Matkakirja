@@ -1431,6 +1431,8 @@ function varausruudukko() {
  */
 function sijoitaKaupunginNimi({
   c, x, y, pino = null, este, varaa, pakota = true, kokoKerroin = 1, pisteSade = 0,
+  /** Lisäehto ehdokaslaatikolle (pallo: NIMI ON LÄHIMPÄNÄ OMAA PISTETTÄÄN); null = ei ehtoa. */
+  kelpaa = null,
 }) {
   let pakotettu = false;
   /*
@@ -1583,7 +1585,7 @@ function sijoitaKaupunginNimi({
   let asetettu = null;
   for (const e of ehdokkaat) {
     const p = laatikko(e);
-    if (!este(p.r)) { varaa(p.r); asetettu = p; break; }
+    if (!este(p.r) && (!kelpaa || kelpaa(p.r))) { varaa(p.r); asetettu = p; break; }
   }
   /*
    * ── LIUKU: SAMA PAIKKA JUURI ESTEEN OHI ────────────────────────
@@ -1621,7 +1623,7 @@ function sijoitaKaupunginNimi({
         const rl = {
           x0: p.r.x0, y0: p.r.y0 + dy, x1: p.r.x1, y1: p.r.y1 + dy,
         };
-        if (este(rl)) continue;
+        if (este(rl) || (kelpaa && !kelpaa(rl))) continue;
         asetettu = {
           kx: p.kx, ky: p.ky + dy, ank: p.ank, r: rl,
         };
@@ -2770,6 +2772,9 @@ export function karttanimienKaupungit(pack) {
  *   `dx`/`dy` on nimen ankkurin siirtymä pisteestä ruutupikseleinä,
  *   `r` nimen laatikko ruudulla
  */
+/** Sallittu ero (px): toinen piste saa olla enintään näin paljon lähempänä nimeä kuin oma (pyöristys, pisteen säde). */
+export const NIMEN_PISTEVARA_PX = 2;
+
 export function ladoRuutunimet(ehdokkaat, {
   varaukset = [], pinot = [], katto = 40, kokoKerroin = 1, pisteSade = 0, ruutu = null,
 } = {}) {
@@ -2826,14 +2831,39 @@ export function ladoRuutunimet(ehdokkaat, {
     }
     return laatikko;
   };
+  /*
+   * NIMI ON LÄHIMPÄNÄ OMAA PISTETTÄÄN (PT 10.10.2026; mitattu Jerusalemin
+   * lähinäkymässä: Ramallahin piste osui pelinappulan laatikkoon, ja nimi
+   * päätyi ehdokaskehällä Jerusalemin nimen alle — 61 px Jerusalemin
+   * pisteestä mutta 92 px omastaan, eli kartta näytti Ramallahin Jerusalemin
+   * eteläpuolella). Verrokkeina ovat jo ladotut nimet pisteineen (piste
+   * näkyy vain nimen kanssa, joten pudotettu piste ei kilpaile), molempiin
+   * suuntiin: uuden nimen laatikko ei saa olla lähempänä toisen pistettä
+   * kuin omaansa, eikä uusi piste saa olla lähempänä ladottua nimeä kuin sen
+   * oma piste. Jos yksikään paikka ei kelpaa, nimi ja piste jäävät pois.
+   * Sama kuin kartografin yhdistämisperiaate: nimen paikka ei saa vihjata
+   * väärään pisteeseen.
+   */
+  const etaisyys = (r, px, py) => Math.hypot(
+    Math.max(r.x0 - px, 0, px - r.x1),
+    Math.max(r.y0 - py, 0, py - r.y1),
+  );
+  const ladotut = []; // { x, y, r }
+  const vieVieraan = (x, y) => ladotut.some((n) => etaisyys(n.r, x, y) < etaisyys(n.r, n.x, n.y) - NIMEN_PISTEVARA_PX);
+  const lahinOma = (x, y) => (r) => {
+    const oma = etaisyys(r, x, y);
+    return !ladotut.some((n) => etaisyys(r, n.x, n.y) < oma - NIMEN_PISTEVARA_PX);
+  };
   const nimiot = [];
   let pudotettu = 0;
   for (const { c, x, y } of ehdokkaat) {
     if (nimiot.length >= katto) { pudotettu += 1; continue; }
+    if (vieVieraan(x, y)) { pudotettu += 1; continue; }
     const s = sijoitaKaupunginNimi({
-      c, x, y, pino: pino(x, y), este, varaa, pakota: false, kokoKerroin, pisteSade,
+      c, x, y, pino: pino(x, y), este, varaa, pakota: false, kokoKerroin, pisteSade, kelpaa: lahinOma(x, y),
     });
     if (!s.asetettu) { pudotettu += 1; continue; }
+    ladotut.push({ x, y, r: s.asetettu.r });
     nimiot.push({
       c,
       dx: s.asetettu.kx - x,

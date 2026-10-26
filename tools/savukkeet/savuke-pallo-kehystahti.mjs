@@ -69,6 +69,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
@@ -150,8 +151,6 @@ async function ampariHaku(url) {
 
 const { Game } = await import(`${JUURI}/js/game.js`);
 const { packById } = await import(`${JUURI}/js/pack.js`);
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }], pack: packById('maailmankartta'), seed: 5 });
 peli.phase = 'action';
@@ -160,7 +159,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 
 const nakyma = { ...NAKYMAT[NAKYMA] };
 if (arg('dpr', null)) nakyma.deviceScaleFactor = Number(arg('dpr'));
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
 await ctx.addInitScript((data) => {
   try {

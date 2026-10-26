@@ -1,0 +1,375 @@
+{
+ "kaupunki": "sthelena",
+ "kaupunkiQ": "Q34497",
+ "kohteet": [
+  {
+   "q": "Q30970",
+   "nimi": "Jamestown",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -15.92514,
+   "lon": -5.71792,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St-Helena-Jamestown.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St-Helena-Jamestown.jpg?width=1280",
+     "tekija": "Andrew Neaum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St-Helena-Jamestown.jpg",
+     "selite": "Jamestown sijaitsee ahtaassa laaksossa jyrkkien kallioseinämien välissä, saaren ainoa satama edessä.",
+     "leveys": 2000,
+     "korkeus": 1043,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Jamestown (c 1984), from the Ladder Hill Road, St Helena Island. Peter Neaum. - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Jamestown_(c_1984)%2C_from_the_Ladder_Hill_Road%2C_St_Helena_Island._Peter_Neaum._-_panoramio.jpg?width=1280",
+     "tekija": "Peter Neaum",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Jamestown_(c_1984)%2C_from_the_Ladder_Hill_Road%2C_St_Helena_Island._Peter_Neaum._-_panoramio.jpg",
+     "selite": "Saaren pääkaupungin katot ja kadut ovat tiiviisti kalliojyrkänteen alla.",
+     "leveys": 4000,
+     "korkeus": 2717,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St-Helena-Jamestown-from-above.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St-Helena-Jamestown-from-above.jpg?width=1280",
+     "tekija": "Andrew Neaum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St-Helena-Jamestown-from-above.jpg",
+     "selite": "Jamestownin talot ja satama ylhäältä nähtynä Jaakobin portaiden suunnalta.",
+     "leveys": 1500,
+     "korkeus": 916,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q578060",
+   "nimi": "Longwood House",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -15.95022,
+   "lon": -5.68302,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Longwood House le 12 janvier 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Longwood_House_le_12_janvier_2008.jpg?width=1280",
+     "tekija": "Michel Dancoisne-Martineau",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Longwood_House_le_12_janvier_2008.jpg",
+     "selite": "Longwood House oli Napoleonin viimeinen asuinpaikka saaren ylängöllä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Longwood House 1 (40348609044).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Longwood_House_1_(40348609044).jpg?width=1280",
+     "tekija": "Luke McKernan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Longwood_House_1_(40348609044).jpg",
+     "selite": "Matala valkoinen talo palmujen ja puiden keskellä, jossa keisari vietti vankeutensa viimeiset vuodet.",
+     "leveys": 5207,
+     "korkeus": 2647,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Longwood House 2 (26186905447).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Longwood_House_2_(26186905447).jpg?width=1280",
+     "tekija": "Luke McKernan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Longwood_House_2_(26186905447).jpg",
+     "selite": "Longwoodin puutarha ja päärakennus on pidetty museona yli sata vuotta.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Longwood billiard table.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Longwood_billiard_table.jpg?width=1280",
+     "tekija": "Paul F. Brunyee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Longwood_billiard_table.jpg",
+     "selite": "Longwoodin biljardihuone on säilytetty niin kuin se Napoleonin aikaan oli.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7401347",
+   "nimi": "Jaakobin portaat",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -15.9256,
+   "lon": -5.7192,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jacob's Ladder - 2 (41038211402).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jacob's_Ladder_-_2_(41038211402).jpg?width=1280",
+     "tekija": "Luke McKernan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jacob's_Ladder_-_2_(41038211402).jpg",
+     "selite": "Jaakobin portaat nousevat suoraan Jamestownin yllä olevaa kalliorinnettä ylös.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jacob's Ladder viewed from the bottom Jamestown Saint Helena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jacob's_Ladder_viewed_from_the_bottom_Jamestown_Saint_Helena.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jacob's_Ladder_viewed_from_the_bottom_Jamestown_Saint_Helena.jpg",
+     "selite": "Portaiden alapää on kaupungin keskustassa kalliojyrkänteen juurella.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jacob's Ladder near St. James Cathedral in Jamestown Saint Helena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jacob's_Ladder_near_St._James_Cathedral_in_Jamestown_Saint_Helena.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jacob's_Ladder_near_St._James_Cathedral_in_Jamestown_Saint_Helena.jpg",
+     "selite": "Portaat kulkevat Jamestownin kirkon ja talojen takana rinnettä pitkin.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3554092",
+   "nimi": "Napoleonin hautalaakso",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -15.9592,
+   "lon": -5.69821,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Napoleon's Tomb on Saint Helena 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Napoleon's_Tomb_on_Saint_Helena_2020.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Napoleon's_Tomb_on_Saint_Helena_2020.jpg",
+     "selite": "Napoleonin tyhjä hauta on vihreässä laaksossa, vaikka ruumis vietiin Ranskaan 1840.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Napoleon's tomb 2 (40164267375).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Napoleon's_tomb_2_(40164267375).jpg?width=1280",
+     "tekija": "Luke McKernan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Napoleon's_tomb_2_(40164267375).jpg",
+     "selite": "Rautaritilän ympäröimä hautapaikka kasvillisuuden keskellä Geraniumilaaksossa.",
+     "leveys": 3712,
+     "korkeus": 5568,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5755803",
+   "nimi": "High Knollin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -15.944,
+   "lon": -5.7168,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "High Knoll Fort on Saint Helena Island, March 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/High_Knoll_Fort_on_Saint_Helena_Island%2C_March_2020.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:High_Knoll_Fort_on_Saint_Helena_Island%2C_March_2020.jpg",
+     "selite": "High Knollin linnake vartioi Jamestownia kukkulalta ylhäältä.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gate of High Knoll Fort.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_High_Knoll_Fort.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_High_Knoll_Fort.jpg",
+     "selite": "Linnakkeen kivinen portti on Itä-Intian yhtiön ajalta.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "View to the north from High Knoll Fort.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_to_the_north_from_High_Knoll_Fort.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_to_the_north_from_High_Knoll_Fort.jpg",
+     "selite": "Linnakkeen muureilta avautuu näkymä pohjoiseen yli meren.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q913330",
+   "nimi": "Briarsin paviljonki",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -15.94333,
+   "lon": -5.70972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Briars pavilion (40164448305).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Briars_pavilion_(40164448305).jpg?width=1280",
+     "tekija": "Luke McKernan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Briars_pavilion_(40164448305).jpg",
+     "selite": "Napoleon asui Briarsin puutarhapaviljongissa ensimmäiset viikkonsa saarella.",
+     "leveys": 4252,
+     "korkeus": 2827,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7401394",
+   "nimi": "Pyhän Jaakobin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -15.9253,
+   "lon": -5.7181,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint James Church in Jamestown in 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_James_Church_in_Jamestown_in_2020.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_James_Church_in_Jamestown_in_2020.jpg",
+     "selite": "Pyhän Jaakobin kirkko on eteläisen pallonpuoliskon vanhin yhä toimiva anglikaaninen kirkko.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Interior of Saint James' Church Jamestown.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_of_Saint_James'_Church_Jamestown.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_Saint_James'_Church_Jamestown.jpg",
+     "selite": "Kirkon valkoinen sisätila ja lasimaalaukset kuorin kohdalla.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q269294",
+   "nimi": "Saint Helenan lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -15.95906,
+   "lon": -5.64592,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "First Comair Boeing 737-800 flight to Saint Helena Airport (191).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_Comair_Boeing_737-800_flight_to_Saint_Helena_Airport_(191).jpg?width=1280",
+     "tekija": "Paul Tyson",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_Comair_Boeing_737-800_flight_to_Saint_Helena_Airport_(191).jpg",
+     "selite": "Lentoasema avattiin 2017, ja se päätti saaren pitkän yksinäisyyden pelkän laivayhteyden varassa.",
+     "leveys": 2048,
+     "korkeus": 833,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saint Helena Airport terminal building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Helena_Airport_terminal_building.jpg?width=1280",
+     "tekija": "Kevstan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Helena_Airport_terminal_building.jpg",
+     "selite": "Matala terminaalirakennus on rakennettu tuliperäisen saaren kuivalle itäpuolelle.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Saint Helena Island.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Helena_Island.jpg?width=1280",
+   "tekija": "This image was taken by the NASA Expedition 19 crew.",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Helena_Island.jpg",
+   "selite": "Astronautin kuva näyttää Saint Helenan tuliperäisen saaren keskellä eteläistä Atlanttia.",
+   "leveys": 1440,
+   "korkeus": 1080,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "View of Sandy Bay Saint Helena.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Sandy_Bay_Saint_Helena.jpg?width=1280",
+   "tekija": "Kevstan",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Sandy_Bay_Saint_Helena.jpg",
+   "selite": "Saaren karu rannikko ja Sandy Bayn laakso Atlantin edessä.",
+   "leveys": 5312,
+   "korkeus": 2988,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -52,6 +52,7 @@ import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { paakartanNostot, kohdekarttojenNostot } from '../tarkista-nostopaikat.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -197,9 +198,6 @@ for (const { id, iso } of KAUPUNGIT) {
 
 /* ==================== VARTIOT 4–5: SELAIN ==================== */
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -245,7 +243,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const virheet = [];
 
 for (const { id, nakyma } of KAUPUNGIT) {

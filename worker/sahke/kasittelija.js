@@ -33,6 +33,8 @@
  *   POST /sahke             {koodi, jasenId, avain, pohjaId, paikkaId}
  *   POST /apu/kysy          {koodi, jasenId, avain, apuId, kysymys, vaihtoehdot}
  *   POST /apu/vastaa        {koodi, jasenId, avain, apuId, veikkaus}
+ *   POST /retkikunta/eroa   {koodi, jasenId, avain} — paikka ja nimimerkki vapaiksi, tyhjä retkikunta pois
+ *   GET  /pallot?koodi=&jasenId=&kaupunki=  WebSocket-päivitys retkikunnan kaupunkihuoneeseen (pallohuone.js, juna 185)
  *
  * TURVA: jokainen kirjoitus (ja tilannekuvan luku) vaatii kolmikon
  * koodi + jasenId + avain. Avain on jäsenkohtainen salaisuus, joka
@@ -55,6 +57,7 @@
  * wrangleria ja ilman D1:tä (tests/sahke-worker.test.mjs).
  */
 
+import { PALLO_JASEN_OTSAKE } from './pallohuone.js';
 import { normalisoiNimimerkki } from './nimimerkit.js';
 import { teeVarasto } from './varasto.js';
 
@@ -83,11 +86,19 @@ export const JASENIA_ENINTAAN = 8;
 /*
  * LIITTYMISKOODI luetaan ääneen ja näpytellään puhelimella, joten
  * aakkostosta puuttuvat sekoittuvat merkit I, O, 0 ja 1 (sama
- * aakkosto kuin pro-koodeissa). 32 merkkiä jakaa 256 tasan, joten
- * arvonta ei vinoudu. Kuusi merkkiä = noin miljardi koodia.
+ * aakkosto kuin pro-koodeissa). Kuusi merkkiä = noin 730 miljoonaa koodia.
+ *
+ * ARVONTA ILMAN S:ÄÄ JA 5:TÄ (PT 12.10., kiire): asiakkaiden koodikenttä
+ * (web js/sahke.js SAHKE_KOODIN_MERKIT, natiivi SahkeVakiot.KoodinMerkit)
+ * suodattaa pois myös S:n ja 5:n, joten noin kolmannes vanhan aakkoston
+ * koodeista ei mennyt kenttään ja liittyminen epäonnistui. Arvonta käyttää
+ * nyt asiakkaiden aakkostoa (30 merkkiä, hylkäysotanta: ei vinoumaa).
+ * TARKISTUS hyväksyy yhä vanhan aakkoston, jotta jo perustetut koodit
+ * (S tai 5 mukana) toimivat perustajan omalla laitteella.
  */
 export const KOODIN_PITUUS = 6;
 const KOODIN_MERKIT = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+export const KOODIN_ARVONTAMERKIT = 'ABCDEFGHJKLMNPQRTUVWXYZ2346789';
 
 /** Jäsentunnus on julkinen retkikunnan sisällä; avain ei ole koskaan. */
 const TUNNUKSEN_MERKIT = 'abcdefghijkmnpqrstuvwxyz23456789';
@@ -183,7 +194,7 @@ export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
 function korsOtsakkeet(origin, sallitut) {
   const otsakkeet = {
     'access-control-allow-methods': 'GET, POST, OPTIONS',
-    'access-control-allow-headers': 'content-type',
+    'access-control-allow-headers': `content-type, ${AVAIN_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -212,7 +223,19 @@ function arvo(merkit, pituus) {
   return ulos;
 }
 
-export function teeKoodi() { return arvo(KOODIN_MERKIT, KOODIN_PITUUS); }
+/** Tasajakauma mille tahansa aakkoston koolle: tavut ≥ suurin monikerta hylätään. */
+function arvoTasan(merkit, pituus) {
+  const katto = 256 - (256 % merkit.length);
+  let ulos = '';
+  while (ulos.length < pituus) {
+    const tavut = new Uint8Array(pituus * 2);
+    crypto.getRandomValues(tavut);
+    for (const tavu of tavut) if (tavu < katto && ulos.length < pituus) ulos += merkit[tavu % merkit.length];
+  }
+  return ulos;
+}
+
+export function teeKoodi() { return arvoTasan(KOODIN_ARVONTAMERKIT, KOODIN_PITUUS); }
 export function teeJasenId() { return arvo(TUNNUKSEN_MERKIT, JASENTUNNUKSEN_PITUUS); }
 export function teeAvain() { return arvo(TUNNUKSEN_MERKIT, AVAIMEN_PITUUS); }
 
@@ -454,12 +477,20 @@ function virstanpylvaat(sahkeetUusinEnsin, jasenId) {
   return ulos;
 }
 
+/*
+ * JÄSENAVAIN OTSAKKEESSA (Päätoimittaja 1.10.2026, tietoturvakorjaus): ?avain=
+ * jäi palvelinlokeihin osoitteen mukana. Asiakkaat (web js/sahke.js, natiivi
+ * Sahke.cs) lähettävät avaimen otsakkeessa; kysely kelpaa siirtymän ajan
+ * (vanhat TF-buildit), poistetaan kun uusi natiivi on testiryhmällä.
+ */
+export const AVAIN_OTSAKE = 'x-sahke-avain';
+
 /** GET /retkikunta/tila — koko oman retkikunnan tilannekuva yhdellä pyynnöllä. */
-async function tila(url, varasto, kors, nyt) {
+async function tila(pyynto, url, varasto, kors, nyt) {
   const loyto = await tunnista(varasto, {
     koodi: url.searchParams.get('koodi'),
     jasenId: url.searchParams.get('jasenId'),
-    avain: url.searchParams.get('avain'),
+    avain: pyynto?.headers?.get?.(AVAIN_OTSAKE) || url.searchParams.get('avain'),
   });
   if (!loyto) {
     return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
@@ -542,6 +573,57 @@ async function avaaKirjoitus(pyynto, varasto, kors, nyt, sallitutKentat) {
       { status: 429, ...kors });
   }
   return { runko, jasen: loyto.jasen };
+}
+
+/**
+ * POST /retkikunta/eroa (Julkaisijan löydös 12.10., PT): ennen tätä ero tapahtui vain asiakkaassa, joten paikka ja
+ * nimimerkki jäivät varatuiksi ja kahdeksan liittymis–eroamiskerran jälkeen retkikunta oli pysyvästi täynnä (409).
+ * Jäsenen rivi poistetaan; jos ketään ei jää, retkikunta sisältöineen poistetaan. Vanhat asiakkaat (TF 183) eivät
+ * kutsu reittiä, joten muutos on yhteensopiva; hiljentynyt retkikunta poistuu edelleen siivouksessa (30 vrk).
+ * Ei kirjoitusrajoitinta: ero on kertaluonteinen, ja sen jälkeen tunnukset eivät enää kelpaa.
+ */
+async function eroa(pyynto, varasto, kors) {
+  let runko;
+  try { runko = await pyynto.json(); } catch { return vastaa({ virhe: 'Runko ei jäsenny' }, { status: 400, ...kors }); }
+  const ylimaarainen = ylimaarainenKentta(runko, ['koodi', 'jasenId', 'avain']);
+  if (ylimaarainen) return vastaa({ virhe: `Tuntematon kenttä: ${ylimaarainen}` }, { status: 400, ...kors });
+  const loyto = await tunnista(varasto, runko);
+  if (!loyto) return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
+  const { koodi, jasenId } = loyto.jasen;
+  await varasto.poistaJasen(koodi, jasenId);
+  const jaljella = await varasto.haeJasenet(koodi);
+  if (jaljella.length === 0) await varasto.poistaRetkikunta(koodi);
+  return vastaa({ ok: true, jaljella: jaljella.length }, kors);
+}
+
+/** Kaupunkitunnus huoneen avaimeen: pelin kaupunki-id (pienet kirjaimet, numerot, viiva). */
+export const KAUPUNKI_MUOTO = /^[a-z0-9-]{2,40}$/;
+
+/**
+ * GET /pallot — retkikunnan pallot näkyviin (suunnitelma #4501, juna 185). Tunnistus kuten /retkikunta/tila
+ * (avain otsakkeessa; selaimen WebSocket ei voi asettaa otsakkeita, joten kysely kelpaa), sitten pyyntö
+ * Durable Object -huoneeseen "<koodi>:<kaupunki>". Vain oman retkikunnan jäsenet pääsevät huoneeseen.
+ * Ilman PALLOT-sidosta (vanha julkaisu) tai Free-tason ylittyessä asiakas saa virheen ja jatkaa ilman palloja.
+ */
+async function pallot(pyynto, url, env, varasto, kors) {
+  if ((pyynto.headers.get('upgrade') ?? '').toLowerCase() !== 'websocket') {
+    return vastaa({ virhe: 'Vain WebSocket' }, { status: 426, ...kors });
+  }
+  const kaupunki = String(url.searchParams.get('kaupunki') ?? '');
+  if (!KAUPUNKI_MUOTO.test(kaupunki)) return vastaa({ virhe: 'Tuntematon kaupunki' }, { status: 400, ...kors });
+  const loyto = await tunnista(varasto, {
+    koodi: url.searchParams.get('koodi'),
+    jasenId: url.searchParams.get('jasenId'),
+    avain: pyynto?.headers?.get?.(AVAIN_OTSAKE) || url.searchParams.get('avain'),
+  });
+  if (!loyto) return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
+  if (!env?.PALLOT) return vastaa({ virhe: 'Pallot eivät ole käytössä' }, { status: 503, ...kors });
+  const { koodi, jasenId } = loyto.jasen;
+  const otsakkeet = new Headers(pyynto.headers);
+  otsakkeet.set(PALLO_JASEN_OTSAKE, jasenId);
+  otsakkeet.delete(AVAIN_OTSAKE);
+  const huone = env.PALLOT.get(env.PALLOT.idFromName(`${koodi}:${kaupunki}`));
+  return huone.fetch(new Request(pyynto.url, { method: 'GET', headers: otsakkeet }));
 }
 
 /** POST /sahke — valkolistattu pohja ja pelin kaupunkitunnus, ei muuta. */
@@ -744,14 +826,18 @@ export async function kasittele(pyynto, env, apurit = {}) {
       return pyynto.method === 'POST' ? luo(pyynto, varasto, kors, nyt) : vain('POST');
     case '/retkikunta/liity':
       return pyynto.method === 'POST' ? liity(pyynto, varasto, kors, nyt) : vain('POST');
+    case '/retkikunta/eroa':
+      return pyynto.method === 'POST' ? eroa(pyynto, varasto, kors) : vain('POST');
     case '/retkikunta/tila':
-      return pyynto.method === 'GET' ? tila(url, varasto, kors, nyt) : vain('GET');
+      return pyynto.method === 'GET' ? tila(pyynto, url, varasto, kors, nyt) : vain('GET');
     case '/sahke':
       return pyynto.method === 'POST' ? sahke(pyynto, varasto, kors, nyt) : vain('POST');
     case '/apu/kysy':
       return pyynto.method === 'POST' ? apuKysy(pyynto, varasto, kors, nyt) : vain('POST');
     case '/apu/vastaa':
       return pyynto.method === 'POST' ? apuVastaa(pyynto, varasto, kors, nyt) : vain('POST');
+    case '/pallot':
+      return pyynto.method === 'GET' ? pallot(pyynto, url, env, varasto, kors) : vain('GET');
     default:
       return vastaa({ virhe: 'Tuntematon reitti' }, { status: 404, ...kors });
   }

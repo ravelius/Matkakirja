@@ -1,0 +1,904 @@
+{
+ "kaupunki": "buenosaires",
+ "kaupunkiQ": "Q1486",
+ "kohteet": [
+  {
+   "q": "Q478926",
+   "nimi": "Casa Rosada",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -34.60806,
+   "lon": -58.37028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Rosada Buenos Aires.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Rosada_Buenos_Aires.JPG?width=1280",
+     "tekija": "Dragan",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Rosada_Buenos_Aires.JPG",
+     "selite": "Casa Rosada on Argentiinan presidentin virka-asunto, jonka vaaleanpunainen julkisivu katsoo Plaza de Mayolle.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-10-19 Plaza de Mayo, Buenos Aires, Argentina (Martin Rulsch) 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_03.jpg?width=1280",
+     "tekija": "DerHexer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_03.jpg",
+     "selite": "Rakennuksen vaaleanpunainen väri tekee siitä helposti tunnistettavan maamerkin.",
+     "leveys": 6720,
+     "korkeus": 4234,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2011.10.17.091510 Casa Rosada Buenos Aires.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011.10.17.091510_Casa_Rosada_Buenos_Aires.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011.10.17.091510_Casa_Rosada_Buenos_Aires.jpg",
+     "selite": "Keskikaaren yksityiskohdista näkyy kaupunkirakennuksen juhlava, eurooppalaishenkinen tyyli.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1126357",
+   "nimi": "Plaza de Mayo",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -34.60833,
+   "lon": -58.37194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea de Plaza de Mayo 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_de_Plaza_de_Mayo_06.jpg?width=1280",
+     "tekija": "ProtoplasmaKid",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_de_Plaza_de_Mayo_06.jpg",
+     "selite": "Plaza de Mayo on Buenos Airesin historiallinen pääaukio, jonka ympärillä sijaitsevat tärkeimmät hallintorakennukset.",
+     "leveys": 8064,
+     "korkeus": 4536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-10-19 Plaza de Mayo, Buenos Aires, Argentina (Martin Rulsch) 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_14.jpg?width=1280",
+     "tekija": "DerHexer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_14.jpg",
+     "selite": "Aukion keskellä seisoo Toukokuun pyramidi, ja sen takana häämöttää Casa Rosada.",
+     "leveys": 5325,
+     "korkeus": 4465,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-10-19 Plaza de Mayo, Buenos Aires, Argentina (Martin Rulsch) 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_08.jpg?width=1280",
+     "tekija": "DerHexer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-19_Plaza_de_Mayo%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_08.jpg",
+     "selite": "Laaja aukio on ollut kaupungin mielenosoitusten ja juhlien kokoontumispaikka.",
+     "leveys": 6417,
+     "korkeus": 4012,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q831389",
+   "nimi": "Obeliski",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -34.60376,
+   "lon": -58.38162,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ObeliscoBA2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ObeliscoBA2015.jpg?width=1280",
+     "tekija": "Sebastianalmaraz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ObeliscoBA2015.jpg",
+     "selite": "Obeliski on Buenos Airesin tunnetuin maamerkki ja nousee Avenida 9 de Julion ja Corrientesin risteyksestä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "9 de julio (Buenos Aires).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/9_de_julio_(Buenos_Aires).JPG?width=1280",
+     "tekija": "user:Sking",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:9_de_julio_(Buenos_Aires).JPG",
+     "selite": "Ylhäältä näkyy, kuinka obeliski jakaa leveän kaupunkibulevardin keskelle.",
+     "leveys": 2204,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "9 de Julio (8193198902).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/9_de_Julio_(8193198902).jpg?width=1280",
+     "tekija": "Juanedc from Zaragoza, España",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:9_de_Julio_(8193198902).jpg",
+     "selite": "Obeliskin ympärillä kulkee yksi maailman leveimmistä kaupunkikaduista.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q827401",
+   "nimi": "Teatro Colón",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -34.60108,
+   "lon": -58.38308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fachada del Teatro Colón en Buenos Aires, Argentina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires%2C_Argentina.jpg?width=1280",
+     "tekija": "EEJCC",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires%2C_Argentina.jpg",
+     "selite": "Teatro Colón on Buenos Airesin oopperatalo ja yksi maailman tunnetuimmista konserttisaleista.",
+     "leveys": 3847,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Angiebrizuelacolon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angiebrizuelacolon.jpg?width=1280",
+     "tekija": "Angiebri",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angiebrizuelacolon.jpg",
+     "selite": "Illalla valaistu julkisivu hehkuu keltaisena kaupungin keskustassa.",
+     "leveys": 2792,
+     "korkeus": 1764,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Buenos Aires Teatro Colon 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires_Teatro_Colon_2.jpg?width=1280",
+     "tekija": "Andrzej Otrębski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_Teatro_Colon_2.jpg",
+     "selite": "Julkisivun koristeet kertovat teatterin eurooppalaisesta esikuvasta.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q967929",
+   "nimi": "Buenos Airesin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -34.60741,
+   "lon": -58.37328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Argentina-02271 - Metropolitan Cathedral (49024465657).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina-02271_-_Metropolitan_Cathedral_(49024465657).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina-02271_-_Metropolitan_Cathedral_(49024465657).jpg",
+     "selite": "Katedraalin julkisivun kreikkalaistyylinen pylväsrivi katsoo Plaza de Mayolle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral Metropolitana de Buenos Aires en la Plaza de Mayo.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Metropolitana_de_Buenos_Aires_en_la_Plaza_de_Mayo.png?width=1280",
+     "tekija": "Dpalma01",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Metropolitana_de_Buenos_Aires_en_la_Plaza_de_Mayo.png",
+     "selite": "Pylväikön takaa nousee kupoli kaupungin keskustan kortteleiden yläpuolelle.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Catedral de la ciudad de Buenos Aires 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_la_ciudad_de_Buenos_Aires_1.jpg?width=1280",
+     "tekija": "Rodseide",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_ciudad_de_Buenos_Aires_1.jpg",
+     "selite": "Sisällä pitkä tynnyriholvattu laivakäytävä johtaa pääalttarille.",
+     "leveys": 2161,
+     "korkeus": 1621,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q690649",
+   "nimi": "La Boca",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -34.63556,
+   "lon": -58.36472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Argentina 2015-11-09 (22989289853).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_2015-11-09_(22989289853).jpg?width=1280",
+     "tekija": "Guillaume Baviere from Uppsala, Sweden",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina_2015-11-09_(22989289853).jpg",
+     "selite": "La Boca on entinen satamakaupunginosa, jonka talot maalattiin värikkäillä laivamaaleilla.",
+     "leveys": 4655,
+     "korkeus": 2936,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Argentina-01943 - La Boca (49017444906).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina-01943_-_La_Boca_(49017444906).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina-01943_-_La_Boca_(49017444906).jpg",
+     "selite": "Julkisivuja koristavat seinämaalaukset ja tangoaiheet tekevät kaupunginosasta turistien suosikin.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Argentina 2015-11-09 (22974927393).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_2015-11-09_(22974927393).jpg?width=1280",
+     "tekija": "Guillaume Baviere from Uppsala, Sweden",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina_2015-11-09_(22974927393).jpg",
+     "selite": "Caminiton kujan värikkäät talot kuvastavat kaupunginosan satamaperinnettä.",
+     "leveys": 4620,
+     "korkeus": 2596,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q781553",
+   "nimi": "Puerto Madero",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -34.61194,
+   "lon": -58.36472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "J34 377 Dique 1, Hochhäuser.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/J34_377_Dique_1%2C_Hochh%C3%A4user.jpg?width=1280",
+     "tekija": "Falk2",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:J34_377_Dique_1%2C_Hochh%C3%A4user.jpg",
+     "selite": "Puerto Madero on entinen satama-allasalue, jonne on noussut Buenos Airesin uusin pilvenpiirtäjäkaupunginosa.",
+     "leveys": 5254,
+     "korkeus": 3445,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "793 Arg BA PuertoMadero.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/793_Arg_BA_PuertoMadero.JPG?width=1280",
+     "tekija": "Simona.cerrato",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:793_Arg_BA_PuertoMadero.JPG",
+     "selite": "Satama-altaan laiturilla on museolaivana säilytetty vanha purjelaiva.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Acuma757.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Acuma757.jpg?width=1280",
+     "tekija": "Lmalena",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Acuma757.jpg",
+     "selite": "Vanhat tiilivarastot ja uudet tornit heijastuvat vedessä allasalueen rannoilla.",
+     "leveys": 5592,
+     "korkeus": 3720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q831322",
+   "nimi": "Recoletan hautausmaa",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -34.58806,
+   "lon": -58.39306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cementerio de la Recoleta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cementerio_de_la_Recoleta.jpg?width=1280",
+     "tekija": "Sking",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cementerio_de_la_Recoleta.jpg",
+     "selite": "Recoletan hautausmaan kolonnadiportti avaa tien kuuluisaan kaupunkimaiseen hautausmaahan.",
+     "leveys": 2848,
+     "korkeus": 2144,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2 ways on Recoleta's Cementery.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_ways_on_Recoleta's_Cementery.JPG?width=1280",
+     "tekija": "Jose Luis1972",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_ways_on_Recoleta's_Cementery.JPG",
+     "selite": "Hautausmaan kapeilla käytävillä seisovat mausoleumit muodostavat pienen kuolleiden kaupungin.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-10-19 Cementerio de la Recoleta, Buenos Aires, Argentina (Martin Rulsch) 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-19_Cementerio_de_la_Recoleta%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_04.jpg?width=1280",
+     "tekija": "DerHexer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-19_Cementerio_de_la_Recoleta%2C_Buenos_Aires%2C_Argentina_(Martin_Rulsch)_04.jpg",
+     "selite": "Mausoleumien takaa pilkottaa nykyaikaisen kaupungin korkeita taloja.",
+     "leveys": 6720,
+     "korkeus": 3684,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q646142",
+   "nimi": "Argentiinan kongressitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -34.60986,
+   "lon": -58.39269,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 Buenos Aires - Palacio del Congreso de la Nación Argentina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_Buenos_Aires_-_Palacio_del_Congreso_de_la_Naci%C3%B3n_Argentina.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_Buenos_Aires_-_Palacio_del_Congreso_de_la_Naci%C3%B3n_Argentina.jpg",
+     "selite": "Kongressitalon vihreä kupoli hallitsee Plaza del Congresoa Avenida de Mayon päässä.",
+     "leveys": 5053,
+     "korkeus": 3789,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Argentina Congreso.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_Congreso.JPG?width=1280",
+     "tekija": "Self-photographed",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina_Congreso.JPG",
+     "selite": "Klassistinen pylväsjulkisivu antaa rakennukselle valtiollisen ilmeen.",
+     "leveys": 2592,
+     "korkeus": 1456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Argentine National Congress at dusk (8081433155).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentine_National_Congress_at_dusk_(8081433155).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentine_National_Congress_at_dusk_(8081433155).jpg",
+     "selite": "Hämärässä valaistu kongressitalo näkyy kauas aukion yli.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q571763",
+   "nimi": "Palacio Barolo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -34.60956,
+   "lon": -58.38586,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BAROLO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BAROLO.jpg?width=1280",
+     "tekija": "SILTRIZ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BAROLO.jpg",
+     "selite": "Palacio Barolo on Avenida de Mayon varrella seisova toimistotalo, jonka torni muistuttaa Danten Jumalaista näytelmää.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Buenos Aires-Av. de Mayo-Palacio Barolo-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires-Av._de_Mayo-Palacio_Barolo-1.jpg?width=1280",
+     "tekija": "Guglielmo Celata",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires-Av._de_Mayo-Palacio_Barolo-1.jpg",
+     "selite": "Julkisivun koristeet yhdistävät italialaista ja itämaista tyyliä.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio Barolo 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Barolo_10.jpg?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Barolo_10.jpg",
+     "selite": "Ylhäältä kapeneva torni oli valmistuessaan Etelä-Amerikan korkeimpia rakennuksia.",
+     "leveys": 3864,
+     "korkeus": 5152,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2336867",
+   "nimi": "Puente de la Mujer",
+   "peruste": "sitelinks",
+   "koko_m": 170,
+   "lat": -34.60794,
+   "lon": -58.36491,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puente de la mujer, Buenos Aires (32008).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_de_la_mujer%2C_Buenos_Aires_(32008).jpg?width=1280",
+     "tekija": "Carlos Adampol Galindo",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_de_la_mujer%2C_Buenos_Aires_(32008).jpg",
+     "selite": "Puente de la Mujer on Puerto Maderon satama-altaan ylittävä kääntösilta, jonka muoto muistuttaa tangoparia.",
+     "leveys": 1555,
+     "korkeus": 1037,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20060128 - Puente de la Mujer (Puerto Madero, Buenos Aires).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20060128_-_Puente_de_la_Mujer_(Puerto_Madero%2C_Buenos_Aires).jpg?width=1280",
+     "tekija": "Mr. Tickle",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20060128_-_Puente_de_la_Mujer_(Puerto_Madero%2C_Buenos_Aires).jpg",
+     "selite": "Silta kääntyy sivuun, kun laivat haluavat kulkea altaan läpi.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2011.10.17.151426 Puente de la Mujer Puerto Madero Buenos Aires.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011.10.17.151426_Puente_de_la_Mujer_Puerto_Madero_Buenos_Aires.jpg?width=1280",
+     "tekija": "Hermann Luyken (photo)Santiago Calatrava (1951–) (bridge)",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011.10.17.151426_Puente_de_la_Mujer_Puerto_Madero_Buenos_Aires.jpg",
+     "selite": "Valkoinen pylonirakenne erottuu kaupungin uusien tornien edessä.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q499855",
+   "nimi": "La Bombonera",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -34.63565,
+   "lon": -58.36465,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Bombonera 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Bombonera_2.jpg?width=1280",
+     "tekija": "Matibro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Bombonera_2.jpg",
+     "selite": "La Bombonera on Boca Juniorsin jalkapallostadion La Bocan kaupunginosassa, ja sen sinikeltainen väritys tunnistaa seuran.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1018128",
+   "nimi": "Palermo",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "aliakset": [
+    "Q1276582"
+   ],
+   "lat": -34.58889,
+   "lon": -58.43056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rosedal de Buenos Aires.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosedal_de_Buenos_Aires.jpg?width=1280",
+     "tekija": "Gobierno de la Ciudad de Buenos Aires",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rosedal_de_Buenos_Aires.jpg",
+     "selite": "Rosedal on Palermon puistojen ruusutarha, joka kukkii kirkkaimmillaan keväällä.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Glorieta en Palermo I.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glorieta_en_Palermo_I.jpg?width=1280",
+     "tekija": "Roberto Fiadone",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glorieta_en_Palermo_I.jpg",
+     "selite": "Puiston lammen rannalla kohoaa pieni huvimaja, jossa kaupunkilaiset viettävät sunnuntaita.",
+     "leveys": 2280,
+     "korkeus": 1708,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Día soleado en los Bosques de Palermo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%ADa_soleado_en_los_Bosques_de_Palermo.jpg?width=1280",
+     "tekija": "Hrazdan33",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%ADa_soleado_en_los_Bosques_de_Palermo.jpg",
+     "selite": "Palermon puistot ovat laaja viheralue kaupungin pohjoisosissa.",
+     "leveys": 2944,
+     "korkeus": 1658,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1025674",
+   "nimi": "Café Tortoni",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": -34.60879,
+   "lon": -58.37831,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Café Tortoni.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caf%C3%A9_Tortoni.JPG?width=1280",
+     "tekija": "Ferchulandia05",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Tortoni.JPG",
+     "selite": "Café Tortoni on Avenida de Mayon varrella toimiva vuodesta 1858 avoinna ollut kahvila, tangon ja kirjailijoiden kohtauspaikka.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avenida de Mayo Café Tortoni.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_de_Mayo_Caf%C3%A9_Tortoni.jpg?width=1280",
+     "tekija": "Roberto Fiadone is the author of this work",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenida_de_Mayo_Caf%C3%A9_Tortoni.jpg",
+     "selite": "Kahvilan julkisivu katsoo katua, jota reunustavat puut ja kerrostalot.",
+     "leveys": 2848,
+     "korkeus": 2134,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3361112",
+   "nimi": "Palacio de Aguas Corrientes",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -34.60056,
+   "lon": -58.395,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aguas Corrientes-2011-TM.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguas_Corrientes-2011-TM.jpg?width=1280",
+     "tekija": "HalloweenHJB (photo)Carl Nyströmer (1856–1913) and Olaf Boye (1864–1933) (building)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aguas_Corrientes-2011-TM.jpg",
+     "selite": "Aguas Corrientesin palatsi on koristeellinen vesilaitos, joka rakennettiin kaupungin juomavesivarastoksi.",
+     "leveys": 2476,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CABA - Balvanera - Palacio de Aguas Corrientes.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CABA_-_Balvanera_-_Palacio_de_Aguas_Corrientes.jpg?width=1280",
+     "tekija": "Leandro Kibisz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CABA_-_Balvanera_-_Palacio_de_Aguas_Corrientes.jpg",
+     "selite": "Julkisivu on päällystetty tuhansilla koristeellisilla terrakottalaatoilla.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aguas Corrientes-full-HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguas_Corrientes-full-HDR.jpg?width=1280",
+     "tekija": "HalloweenHJB",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aguas_Corrientes-full-HDR.jpg",
+     "selite": "Rakennuksen tiilimuurin ja koristeiden väriloisto on poikkeuksellinen vesilaitokselle.",
+     "leveys": 2700,
+     "korkeus": 1791,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2886930",
+   "nimi": "Pilarin basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -34.5868,
+   "lon": -58.392,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Buenos Aires - Recoleta - Basílica de Nuestra Señora del Pilar - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires_-_Recoleta_-_Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_del_Pilar_-_1.jpg?width=1280",
+     "tekija": "Starus",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_-_Recoleta_-_Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_del_Pilar_-_1.jpg",
+     "selite": "Pilarin neitsyt Marian basilika on Recoletan kaupunginosan siirtomaa-ajan valkoinen kirkko.",
+     "leveys": 3056,
+     "korkeus": 2842,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q375910",
+   "nimi": "Kavanagh-rakennus",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -34.59542,
+   "lon": -58.37467,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kavanagh building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kavanagh_building.jpg?width=1280",
+     "tekija": "Marcos Prack",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kavanagh_building.jpg",
+     "selite": "Kavanagh-rakennus on Retiron kaupunginosan art deco -tyylinen asuintorni.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CABA - Retiro - Edificio Kavanagh.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CABA_-_Retiro_-_Edificio_Kavanagh.jpg?width=1280",
+     "tekija": "Leandro Kibisz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CABA_-_Retiro_-_Edificio_Kavanagh.jpg",
+     "selite": "Kerroksittain kapeneva torni nousee Plaza San Martínin yläpuolelle Retiron kaupunginosassa.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Buenos Aires www.h3nn.de - panoramio (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires_www.h3nn.de_-_panoramio_(2).jpg?width=1280",
+     "tekija": "Hannes Henn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_www.h3nn.de_-_panoramio_(2).jpg",
+     "selite": "Puiden takaa erottuu rakennuksen pitkä siluetti.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1026688",
+   "nimi": "San Telmo",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -34.62056,
+   "lon": -58.37167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Calle Defensa - Plaza Dorrego.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calle_Defensa_-_Plaza_Dorrego.jpg?width=1280",
+     "tekija": "Banfield",
+     "lisenssi": "CC BY-SA 2.5 ar",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5/ar/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Calle_Defensa_-_Plaza_Dorrego.jpg",
+     "selite": "San Telmon mukulakivikadut Plaza Dorregon lähellä muistuttavat kaupungin vanhoista kortteleista.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Café la Poesía, Barrio de San Telmo, Buenos Aires 20181103 165709.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caf%C3%A9_la_Poes%C3%ADa%2C_Barrio_de_San_Telmo%2C_Buenos_Aires_20181103_165709.jpg?width=1280",
+     "tekija": "Josefito123",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_la_Poes%C3%ADa%2C_Barrio_de_San_Telmo%2C_Buenos_Aires_20181103_165709.jpg",
+     "selite": "Kaupunginosan kulmakahvilat ovat siirtomaa-ajan ja 1800-luvun rakennuksissa.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Argentina 2015-11-09 (23222675879).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_2015-11-09_(23222675879).jpg?width=1280",
+     "tekija": "Guillaume Baviere from Uppsala, Sweden",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina_2015-11-09_(23222675879).jpg",
+     "selite": "Vanhat baarit ja ravintolat värittävät San Telmon kapeita katuja.",
+     "leveys": 4408,
+     "korkeus": 3100,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2099124",
+   "nimi": "Plaza San Martín",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -34.59444,
+   "lon": -58.375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza San Martín - Buenos Aires.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_San_Mart%C3%ADn_-_Buenos_Aires.jpg?width=1280",
+     "tekija": "Banfield",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_San_Mart%C3%ADn_-_Buenos_Aires.jpg",
+     "selite": "Plaza San Martín on Retiron kaupunginosan suuri puisto, jonka reunalla seisoo Torre Monumental.",
+     "leveys": 2080,
+     "korkeus": 1544,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Argentina 2015-11-22 (24844175572).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Argentina_2015-11-22_(24844175572).jpg?width=1280",
+     "tekija": "Guillaume Baviere from Uppsala, Sweden",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Argentina_2015-11-22_(24844175572).jpg",
+     "selite": "Puiston keskellä on kenraali San Martínin ratsastajapatsas.",
+     "leveys": 4547,
+     "korkeus": 2924,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Buenos Aires - Retiro - Plaza San Martín - 20090829.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buenos_Aires_-_Retiro_-_Plaza_San_Mart%C3%ADn_-_20090829.jpg?width=1280",
+     "tekija": "Taken by the uploader, w:es:Usuario:Barcex",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_-_Retiro_-_Plaza_San_Mart%C3%ADn_-_20090829.jpg",
+     "selite": "Nurmikko ja vanhat puut tekevät aukiosta kaupunkilaisten suosiman levähdyspaikan.",
+     "leveys": 3770,
+     "korkeus": 2541,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view - Recoleta, Buenos Aires.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_-_Recoleta%2C_Buenos_Aires.jpg?width=1280",
+   "tekija": "Ricardo Patiño",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_-_Recoleta%2C_Buenos_Aires.jpg",
+   "selite": "Buenos Aires levittäytyy tasaiselle Río de la Platan rannalle, ja Recoletan puistot katkaisevat korkeiden talojen merta.",
+   "leveys": 3955,
+   "korkeus": 2637,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view - Palermo, Buenos Aires.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_-_Palermo%2C_Buenos_Aires.jpg?width=1280",
+   "tekija": "Ricardo Patiño",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_-_Palermo%2C_Buenos_Aires.jpg",
+   "selite": "Palermon puistot ja pilvenpiirtäjät muodostavat kaupungin pohjoisosan vihreän ja korkean siluetin.",
+   "leveys": 5246,
+   "korkeus": 3497,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

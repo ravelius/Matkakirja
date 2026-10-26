@@ -1,0 +1,99 @@
+[
+ {
+  "kohde": "linnunrata",
+  "commons_tiedosto": "File:Milky Way Arching Over La Silla.jpg",
+  "kuvateksti": "Linnunrata kaareutuu La Sillan observatorion yllä Chilessä",
+  "rajaus": [
+   0,
+   0,
+   1,
+   0.85
+  ],
+  "perustelu": "Katsoin esikatselun: laaja yötaivaskuva, Linnunradan kaista kaareutuu taivaalla ja punaisia vetysumuja näkyy; etualalla observatorion rakennuksia (CC BY 4.0, ESO/P. Horalek). Ei galaktista keskustaa erikseen, vaan koko kaista."
+ },
+ {
+  "kohde": "andromeda",
+  "commons_tiedosto": "File:Andromeda Galaxy 2025.png",
+  "kuvateksti": "Andromedan galaksi M31 ja sen kaksi kumppania, harrastajan kuva",
+  "perustelu": "Vaihdettu 15.10.: vanha kuva (heic0512d) oli Commonsissa PD mutta tekijänoikeusmerkintä © R. Gendler, joten ei varma. Katsoin esikatselun: valokuva M31:stä ja kahdesta kumppanigalaksista (M32, M110), CC0 (Brody Wesner)."
+ },
+ {
+  "kohde": "orioninsumu",
+  "commons_tiedosto": "File:Orion Nebula - Hubble 2006 mosaic.jpg",
+  "kuvateksti": "Orionin sumu M42 Hubble-avaruusteleskoopin kuvaamana",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: Hubblen Orionin sumun mosaiikki, koko sumu keskellä Trapezium-tähdet; ei reunahäiriöitä (PD, NASA/ESA/M. Robberto)."
+ },
+ {
+  "kohde": "magellan",
+  "commons_tiedosto": "File:LMC snapped by the ESO 1-metre Schmidt telescope.jpg",
+  "kuvateksti": "Suuri Magellanin pilvi ESOn Schmidt-teleskoopin kuvassa",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: LMC:n tähtikenttä, vasemmalla vaaleanpunainen Tarantula-sumu; kuva on leikattu LMC:n ympäriltä, ei kehystä (CC BY 4.0, ESO)."
+ },
+ {
+  "kohde": "seulaset",
+  "commons_tiedosto": "File:M45 (Pleiades) – 2020-03-24 (55247431954).png",
+  "kuvateksti": "Seulaset eli Plejadit M45 siniseen heijastussumuun kietoutuneena",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: harrastajan syväkuva, kirkkaat siniset tähdet ja heijastussumu selvästi näkyvissä; ei kehystä (CC0, horizon_productions_sfl). Amatoorikuva, ei observatorio."
+ },
+ {
+  "kohde": "orion",
+  "commons_tiedosto": "File:Orion the Hunter Watches Over ALMA.jpg",
+  "kuvateksti": "Orionin tähdistö ALMA-antennien yllä; oranssina Betelgeuze",
+  "rajaus": [
+   0,
+   0,
+   1,
+   0.8
+  ],
+  "perustelu": "Katsoin esikatselun: Orionin vyö keskellä, punainen Betelgeuze oikealla, punaista Barnardin kehää taustalla; ALMA-antennit etualalla (CC BY 4.0, ESO/B. Tafreshi). Epäilys: antennit vievät paljon tilaa, tähdistö pieni; vaihtoehto kuvaa vain yötaivasta ei löytynyt CC/PD-lisenssillä."
+ },
+ {
+  "kohde": "betelgeuze",
+  "commons_tiedosto": "File:Betelgeuse captured by ALMA.jpg",
+  "kuvateksti": "Betelgeuze ALMA-radioteleskoopin kuvaamana",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: oranssi pehmeä kiekko, jossa kirkas laikku (ALMA, CC BY 4.0). Oikea tähden kiekkokuva, ei taiteilijakuvitusta; suurennus on epätarkka koska tähti on kaukana."
+ },
+ {
+  "kohde": "kuu",
+  "commons_tiedosto": "File:Full Moon (5836482263).jpg",
+  "kuvateksti": "Täysikuu, kuvattu Kuun tutkimusaluksen tiedoista koottuna",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: täysikuun kiekko, kraatterit ja meret selvästi näkyvissä, tumma tausta (PD, NASA Goddard). Epäilys: NASAn visualisaatio, joka on koottu LRO-aineistosta, ei yksittäinen valokuva; en ole varma, onko Commons-kuvaus tämän täsmällinen."
+ },
+ {
+  "kohde": "jupiter",
+  "commons_tiedosto": "File:Jupiter - Juno.jpg",
+  "kuvateksti": "Jupiter Juno-luotaimen kuvaamana",
+  "rajaus": [
+   0.05,
+   0.05,
+   0.95,
+   0.92
+  ],
+  "perustelu": "Katsoin esikatselun: Jupiterin kiekko pilvikuvioineen mustaa taustaa vasten, ei kehystä (PD, NASA/JPL-Caltech). Värit prosessoitu, mutta kohde on oikea planeetta."
+ },
+ {
+  "kohde": "saturnus",
+  "commons_tiedosto": "File:Saturn from Cassini Orbiter (2004-10-06).jpg",
+  "kuvateksti": "Saturnus renkaineen Cassini-luotaimen kuvaamana",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: Saturnus ja renkaat luonnollisin värein mustaa taustaa vasten, ei kehystä (PD, NASA/JPL/Space Science Institute)."
+ },
+ {
+  "kohde": "mars",
+  "commons_tiedosto": "File:Mars from Hubble (Dec. 13, 1990).jpg",
+  "kuvateksti": "Mars Hubble-avaruusteleskoopin kuvaamana",
+  "rajaus": null,
+  "perustelu": "Katsoin esikatselun: Marsin kiekko, tummia alueita ja napalakki, musta tausta (PD, NASA/ESA/STScI). Epäilys: kuva on rakeinen (vuodelta 1990); tarkemmat Hubble-kuvat Commonsissa ovat nelijakoisia ja tekstitettyjä."
+ },
+ {
+  "kohde": "revontulet",
+  "commons_tiedosto": "File:ISS-45 Aurora and Stars From the Space Station's JEM Window.jpg",
+  "kuvateksti": "Revontulet ja tähdet kansainväliseltä avaruusasemalta nähtynä",
+  "perustelu": "Katsoin esikatselun: tähtitaivas, kaarena vihreä revontulihehku Maan reunalla ja punertava hehku sen yläpuolella; etualalla avaruusaseman rakenteita ja aurinkopaneeli. Commons: PD (NASA/JAXA, Kimiya Yui, JEM-ikkuna, 6.12.2015)."
+ }
+]

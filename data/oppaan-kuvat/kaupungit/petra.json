@@ -1,0 +1,450 @@
+{
+ "kaupunki": "petra",
+ "kaupunkiQ": "Q5788",
+ "kohteet": [
+  {
+   "q": "Q1259626",
+   "nimi": "Al-Khazneh",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 30.32206,
+   "lon": 35.45145,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Khazneh 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Khazneh_2025.jpg?width=1280",
+     "tekija": "ほっきー",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Khazneh_2025.jpg",
+     "selite": "Al-Khazneh eli Aarrekammio on Petran tunnetuin rakennus, kokonaan punaiseen hiekkakiveen veistetty julkisivu.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "24 Petra (85) (13251197265).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Petra_(85)_(13251197265).jpg?width=1280",
+     "tekija": "xorge",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Petra_(85)_(13251197265).jpg",
+     "selite": "Julkisivun pilarit ja veistokset on veistetty suoraan kalliosta ylhäältä alaspäin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al Khazneh (The Treasury) - Petra, Jordan - 14 Oct. 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Khazneh_(The_Treasury)_-_Petra%2C_Jordan_-_14_Oct._2009.jpg?width=1280",
+     "tekija": "David Berkowitz from New York, NY, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Khazneh_(The_Treasury)_-_Petra%2C_Jordan_-_14_Oct._2009.jpg",
+     "selite": "Aarrekammio avautuu kapean rotkon päässä aukiolle, jossa nabatealaiset järjestivät seremonioita.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Al Khazneh Petra edit 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Khazneh_Petra_edit_2.jpg?width=1280",
+     "tekija": "Al_Khazneh_Petra.jpg: Graham Racher from London, UK derivative work: MrPanyGoff",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Khazneh_Petra_edit_2.jpg",
+     "selite": "Kamelit lepäävät julkisivun edessä, kuten karavaanit aikoinaan Petrassa.",
+     "leveys": 1683,
+     "korkeus": 2810,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2118373",
+   "nimi": "Siq",
+   "peruste": "pelin nosto",
+   "koko_m": 1200,
+   "lat": 30.32301,
+   "lon": 35.45649,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Petra Siq, entrance to the ancient Nabatean city of Petra, Jordan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petra_Siq%2C_entrance_to_the_ancient_Nabatean_city_of_Petra%2C_Jordan.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Petra_Siq%2C_entrance_to_the_ancient_Nabatean_city_of_Petra%2C_Jordan.jpg",
+     "selite": "Siq on kilometrien pituinen kapea rotko, joka on Petran ainoa kulkureitti kaupunkiin.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Petra First Glimpse.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petra_First_Glimpse.jpg?width=1280",
+     "tekija": "David Bjorgen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Petra_First_Glimpse.jpg",
+     "selite": "Rotkon päästä pilkahtaa ensimmäinen näkymä Aarrekammion julkisivuun.",
+     "leveys": 1200,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "24 Petra (25) (13251622554).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Petra_(25)_(13251622554).jpg?width=1280",
+     "tekija": "xorge",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Petra_(25)_(13251622554).jpg",
+     "selite": "Kallioseinät kohoavat paikoin kymmeniä metrejä ja jättävät taivaasta vain kapean viirun.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q345467",
+   "nimi": "Ad Deir",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 30.33823,
+   "lon": 35.43093,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Petra Jordan BW 36.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Petra_Jordan_BW_36.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Petra_Jordan_BW_36.JPG",
+     "selite": "Ad Deir eli Luostari on Petran suurin kallioon veistetty julkisivu, noin 47 metriä leveä.",
+     "leveys": 3529,
+     "korkeus": 2482,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20100925 petra259.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20100925_petra259.JPG?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20100925_petra259.JPG",
+     "selite": "Luostarille kiivetään useita satoja kallioon hakattuja portaita pitkin kaupungin yläpuolelle.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(Supposedly) Best View of the Monastery at Petra (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Supposedly)_Best_View_of_the_Monastery_at_Petra_(3).jpg?width=1280",
+     "tekija": "Ankur P",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Supposedly)_Best_View_of_the_Monastery_at_Petra_(3).jpg",
+     "selite": "Etäältä Luostari erottuu yksinäisenä kalliolta kohoavana julkisivuna autiomaan keskellä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2500932",
+   "nimi": "Uurnahauta ja kuninkaanhaudat",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 30.32755,
+   "lon": 35.44926,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal Tombs in Petra 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Tombs_in_Petra_002.jpg?width=1280",
+     "tekija": "Freedom's Falcon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Tombs_in_Petra_002.jpg",
+     "selite": "Kuninkaanhaudat ovat rivi suuria kallioon veistettyjä hautajulkisivuja, joiden joukossa Uurnahauta ja Palatsihauta.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Royal Tombs, Petra - 2258517029.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Tombs%2C_Petra_-_2258517029.jpg?width=1280",
+     "tekija": "twiga-swala",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Tombs%2C_Petra_-_2258517029.jpg",
+     "selite": "Julkisivut kohoavat Petran laakson itäreunan jyrkässä kalliossa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Urn Tomb, Petra 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Urn_Tomb%2C_Petra_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Urn_Tomb%2C_Petra_01.jpg",
+     "selite": "Uurnahaudan alla on holvattu terassi, jolla oli tilaa suurelle joukolle.",
+     "leveys": 2650,
+     "korkeus": 1861,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55629697",
+   "nimi": "Petran teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 30.32469,
+   "lon": 35.44682,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amphitheatre, Petra, Jordan2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphitheatre%2C_Petra%2C_Jordan2.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amphitheatre%2C_Petra%2C_Jordan2.jpg",
+     "selite": "Petran teatterin istuinrivit on veistetty suoraan kallioon, ja se mahtui noin kolme tuhatta katsojaa.",
+     "leveys": 3705,
+     "korkeus": 2439,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "09 Petra High Place of Sacrifice Trail - The Amphitheater - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/09_Petra_High_Place_of_Sacrifice_Trail_-_The_Amphitheater_-_panoramio.jpg?width=1280",
+     "tekija": "hikinginjordan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:09_Petra_High_Place_of_Sacrifice_Trail_-_The_Amphitheater_-_panoramio.jpg",
+     "selite": "Teatterin takana kohoavat nabatealaisten hautaluolat.",
+     "leveys": 2048,
+     "korkeus": 1366,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3412437",
+   "nimi": "Qasr al-Bint",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 30.3297,
+   "lon": 35.4403,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jordan 2021 P225 Petra Qasr al-Bint.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jordan_2021_P225_Petra_Qasr_al-Bint.jpg?width=1280",
+     "tekija": "Fallaner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jordan_2021_P225_Petra_Qasr_al-Bint.jpg",
+     "selite": "Qasr al-Bint on Petran harvoja vapaasti seisovia rakennuksia ja kaupungin tärkeimpiä temppeleitä.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jordan-18C-108.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jordan-18C-108.jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jordan-18C-108.jpg",
+     "selite": "Temppelin paksut kivimuurit ovat säilyneet kohoamassa autiomaan rauniokentällä.",
+     "leveys": 2560,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jordan-18C-095 - Temple of Dushares (view large).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jordan-18C-095_-_Temple_of_Dushares_(view_large).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jordan-18C-095_-_Temple_of_Dushares_(view_large).jpg",
+     "selite": "Temppeli oli omistettu nabatealaisten pääjumalalle Dusharalle.",
+     "leveys": 2590,
+     "korkeus": 1749,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20395818",
+   "nimi": "Suuri temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 30.32872,
+   "lon": 35.4423,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Temple of Petra 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Temple_of_Petra_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Temple_of_Petra_01.jpg",
+     "selite": "Suuri temppeli on laaja temppelialue Petran keskustassa, ja siitä on kaivettu esiin pylväikköjä ja portaita.",
+     "leveys": 3287,
+     "korkeus": 2254,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "24 Petra (613) (13250712905).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Petra_(613)_(13250712905).jpg?width=1280",
+     "tekija": "xorge",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Petra_(613)_(13250712905).jpg",
+     "selite": "Pylväsrivi kohoaa temppelialueen rinteessä aavikon taustaa vasten.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Capitel of Great Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capitel_of_Great_Temple.jpg?width=1280",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capitel_of_Great_Temple.jpg",
+     "selite": "Pylväänpäät on koristeltu norsunpäillä, joita kaivauksissa löytyi satoja palasia.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1623923",
+   "nimi": "Uhripaikka",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 30.32194,
+   "lon": 35.44694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "High Place of Sacrifice (12293233565).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/High_Place_of_Sacrifice_(12293233565).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:High_Place_of_Sacrifice_(12293233565).jpg",
+     "selite": "Uhripaikka sijaitsee korkealla kalliolla Petran yläpuolella, ja sieltä avautuu näkymä koko laaksoon.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20100926 petra078.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20100926_petra078.JPG?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20100926_petra078.JPG",
+     "selite": "Kalliolta nousevat kaksi suurta obeliskia, jotka ovat luonnonkallioon veistettyjä.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2284751",
+   "nimi": "Pieni Petra",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 30.37528,
+   "lon": 35.45139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "06 Little Petra Canyon Trail - At the Entrance of Little Petra - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/06_Little_Petra_Canyon_Trail_-_At_the_Entrance_of_Little_Petra_-_panoramio.jpg?width=1280",
+     "tekija": "hikinginjordan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:06_Little_Petra_Canyon_Trail_-_At_the_Entrance_of_Little_Petra_-_panoramio.jpg",
+     "selite": "Pieni Petra eli Siq al-Barid oli pienempi asuinalue ja karavaanien majatalo muutaman kilometrin päässä.",
+     "leveys": 2048,
+     "korkeus": 1361,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "05 Little Petra Canyon Trail - The Trail Starts at the End of Little Petra - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/05_Little_Petra_Canyon_Trail_-_The_Trail_Starts_at_the_End_of_Little_Petra_-_panoramio.jpg?width=1280",
+     "tekija": "hikinginjordan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:05_Little_Petra_Canyon_Trail_-_The_Trail_Starts_at_the_End_of_Little_Petra_-_panoramio.jpg",
+     "selite": "Kapean rotkon seinämiin on veistetty pieniä huoneita ja asuntoja.",
+     "leveys": 2048,
+     "korkeus": 1361,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "City center and the so called colonnaded street, upper view. Petra.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_center_and_the_so_called_colonnaded_street%2C_upper_view._Petra.jpg?width=1280",
+   "tekija": "Qais Tweissi",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_center_and_the_so_called_colonnaded_street%2C_upper_view._Petra.jpg",
+   "selite": "Ylhäältä Petran laakso näyttää laajalta, kallioiden ympäröimältä kaupunkialueelta.",
+   "leveys": 5152,
+   "korkeus": 3438,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Royal Tombs & colonnaded street Petra.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Tombs_%26_colonnaded_street_Petra.jpg?width=1280",
+   "tekija": "Clem23",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Tombs_%26_colonnaded_street_Petra.jpg",
+   "selite": "Pylväskadun varrella Petra levittäytyy kallioseinämien juurelle.",
+   "leveys": 1909,
+   "korkeus": 1273,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

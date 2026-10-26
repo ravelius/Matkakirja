@@ -141,11 +141,11 @@ export const MAASTOKOHTEET_NAM = [
     laudat: {
       maailmankartta: { x: 6339.8, y: 3950.5 },
     },
-    teksti: 'Spitzkoppe — saksaksi "terävä kumpu" — on joukko paljaita graniittihuippuja eli '
+    teksti: 'Spitzkoppe — saksaksi ”terävä kumpu” — on joukko paljaita graniittihuippuja eli '
       + 'inselbergejä Namibin autiomaassa Usakosin ja Swakopmundin välissä. Graniitti on yli '
       + '120 miljoonaa vuotta vanhaa, ja korkein kallio kohoaa noin 1 728 metriin '
       + 'merenpinnasta ja noin 670 metriä ympäröivän autiomaan pinnan yläpuolelle, mistä sen '
-      + 'lisänimi "Namibian Matterhorn". Lähellä on matalampi Pikku-Spitzkoppe, 1 557 metriä, '
+      + 'lisänimi ”Namibian Matterhorn”. Lähellä on matalampi Pikku-Spitzkoppe, 1 557 metriä, '
       + 'ja muut kohoumat jatkuvat Pontokvuorten jonoksi. Kallioihin on maalattu runsaasti '
       + 'sanikansojen kalliotaidetta.',
     lahde: 'en-Wikipedia "Spitzkoppe", johdanto-osa (tarkistettu 6.9.2026).',
@@ -168,7 +168,7 @@ export const MAASTOKOHTEET_NAM = [
       + 'kilometriä sisämaahan Lüderitzin satamasta. Vuonna 1908 rautatietyöläinen Zacharias '
       + 'Lewala löysi täältä timantin ja näytti sitä esimiehelleen, saksalaiselle '
       + 'rautatietarkastaja August Stauchille; saksalaisia kaivosmiehiä muutti paikalle, ja '
-      + 'Saksan keisarikunta julisti pian laajan alueen "Sperrgebietiksi" eli kielletyksi '
+      + 'Saksan keisarikunta julisti pian laajan alueen ”Sperrgebietiksi” eli kielletyksi '
       + 'alueeksi ja alkoi hyödyntää timanttikenttää. Rikkaus näkyi rakennuksissa: kylään '
       + 'nousi saksalaiseen tyyliin sairaala, juhlasali, voimalaitos, koulu, keilarata, '
       + 'teatteri ja urheiluhalli, kasino, jäätehdas sekä eteläisen pallonpuoliskon '
@@ -182,6 +182,7 @@ export const MAASTOKOHTEET_NAM = [
   {
     id: 'fish-riverin-kanjoni',
     nimi: 'Fish Riverin kanjoni',
+    nimio: 'Fish River',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka syvä kanjoni on?',
@@ -223,9 +224,9 @@ export const MAASTOKOHTEET_NAM = [
       + 'alueeksi maaliskuussa 1907 asetuksella 88; kansallispuiston aseman se sai 1967. '
       + 'Puisto on 22 270 neliökilometriä, ja se on nimetty Etoshan suolapannun mukaan, joka '
       + 'on lähes kokonaan sen sisällä ja kattaa 4 760 neliökilometrillään 23 prosenttia koko '
-      + 'pinta-alasta. Nimi tulee oshindongan sanasta, joka tarkoittaa "suurta valkoista '
-      + 'paikkaa"; hai//omit kutsuivat pannua nimellä Khubus, "täysin paljas, valkoinen ja '
-      + 'pölyinen paikka". Eurooppalaisista sen merkitsivät muistiin ensimmäisinä Charles '
+      + 'pinta-alasta. Nimi tulee oshindongan sanasta, joka tarkoittaa ”suurta valkoista '
+      + 'paikkaa”; hai//omit kutsuivat pannua nimellä Khubus, ”täysin paljas, valkoinen ja '
+      + 'pölyinen paikka”. Eurooppalaisista sen merkitsivät muistiin ensimmäisinä Charles '
       + 'John Andersson ja Francis Galton 29. toukokuuta 1851, vaikka paikalliset olivat '
       + 'tunteneet sen kauan. Puistossa elää satoja nisäkäs-, lintu- ja matelijalajeja, '
       + 'muiden muassa uhanalainen musta sarvikuono.',
@@ -248,8 +249,8 @@ export const MAASTOKOHTEET_NAM = [
     },
     teksti: 'Sossusvlei on suola- ja savipannu korkeiden punaisten dyynien keskellä eteläisessä '
       + 'Namibissa, Namib-Naukluftin kansallispuistossa. Nimi on sekakieltä ja tarkoittaa '
-      + 'suunnilleen "umpikujasuota": vlei on afrikaansia ja tarkoittaa suota, sossus on '
-      + 'namaa ja tarkoittaa "ei paluuta" tai "umpikuja" — pannu on kausiluonteisen Tsauchab-'
+      + 'suunnilleen ”umpikujasuota”: vlei on afrikaansia ja tarkoittaa suota, sossus on '
+      + 'namaa ja tarkoittaa ”ei paluuta” tai ”umpikuja” — pannu on kausiluonteisen Tsauchab-'
       + 'joen valuma-alueen päätepiste, josta vesi ei pääse minnekään. Dyynit kuuluvat '
       + 'maailman korkeimpiin: moni niistä on yli 200 metriä ja korkein, lempinimeltään Big '
       + 'Daddy, noin 325 metriä. Oranssin sävy kertoo raudasta, joka on hapettunut vuosien '
@@ -272,7 +273,7 @@ export const MAASTOKOHTEET_NAM = [
     laudat: {
       maailmankartta: { x: 6317.8, y: 3980.6 },
     },
-    teksti: 'Swakopmund — "Swakopin suu" — on kaupunki Namibian länsirannikolla, 352 '
+    teksti: 'Swakopmund — ”Swakopin suu” — on kaupunki Namibian länsirannikolla, 352 '
       + 'kilometriä Windhoekista länteen, Erongon alueen pääkaupunki ja Namibian neljänneksi '
       + 'suurin asutuskeskus. Se perustettiin 1892 Saksan Lounais-Afrikan pääsatamaksi, ja '
       + '1800-luvun lopun saksalainen siirtomaa-arkkitehtuuri leimaa sitä yhä. Kaupunki on '

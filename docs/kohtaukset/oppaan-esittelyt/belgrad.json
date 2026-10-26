@@ -1,0 +1,927 @@
+{
+ "kaupunki": "Belgrad",
+ "id": "belgrad",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Belgradiin. Ylhäältä kaupunki levittäytyy Pannonian tasangon eteläreunalle, missä Sava yhtyy Tonavaan: joenhaaran yllä harjanteella seisoo muurien ympäröimä linnoitus, ja jokien väliin jää metsäinen saari. Savan vastarannalla suorakulmaiset korttelit kuuluvat Uuteen Belgradiin. Joen suunnalta käy tuuli, ja se kuljettaa koriamme hitaasti kohti jokien yhtymäkohtaa. Kierros alkaa Kalemegdanin harjanteelta, missä linnoituksen muurit ja puiston puut kohoavat Savan ja Tonavan yllä."
+ },
+ "kierros": [
+  "Q1409017",
+  "Q1669926",
+  "Q1548278",
+  "Q1265998",
+  "Q2633804",
+  "Q1264635",
+  "Q1590792",
+  "Q330385"
+ ],
+ "kohteet": [
+  {
+   "id": "Q1409017",
+   "nimi": "Belgradin linnoitus",
+   "kuvaus": "Savan ja Tonavan yllä kohoava linnoitus",
+   "luokka": "linnoitus",
+   "koko_m": 380,
+   "teksti": "Belgradin linnoitus seisoo ylhäältä katsottuna harjanteella, jonka juurella Sava yhtyy Tonavaan. Paikalla oli kelttiläisen skordiskien heimon perustama Singidunum, ja roomalaiset rakensivat kukkulalle kivisen leirilinnoituksen. Kaupungin slaavilainen nimi Beograd mainitaan ensimmäisen kerran vuonna 878. Linnoitusta rakennettiin ja korjattiin 100-luvulta aina 1700-luvulle asti. Sitä ympäröivä Kalemegdan on saanut nimensä turkin sanoista kale, linnake, ja megdan, kenttä. Nykyään kenttä on puisto, josta näkee joenhaaran yli.",
+   "lyhyt": "Serbian despootti Stefan Lazarević teki Belgradista pääkaupunkinsa 1400-luvun alussa ja uudisti linnoituksen muureja. Sulttaani Suleiman Suuri valloitti kaupungin vuonna 1521. Ottomaanit poistuivat linnoituksesta 18. huhtikuuta 1867, ja avaimet luovutettiin Kalemegdanilla serbeille.",
+   "syventava": "Miksi linnoitus rakennettiin juuri jokien yhtymäkohdan yläpuolelle?",
+   "kysymykset": [
+    "Kuka teki Belgradista Serbian pääkaupungin 1400-luvun alussa?",
+    "Kuka valloitti Belgradin vuonna 1521?",
+    "Milloin ottomaanit luovuttivat linnoituksen serbeille?",
+    "Milloin Kalemegdanista alettiin tehdä puistoa?",
+    "Mikä kansa perusti Singidunumin ennen roomalaisia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitus on harjanteella Savan ja Tonavan yhtymäkohdan yläpuolella.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Linnoitus on harjanteella Savan ja Tonavan yhtymäkohdan yläpuolella.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Singidunumin perustivat kelttiläiset skordiskit 200-luvulla eaa.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Singidunumin perustivat kelttiläiset skordiskit 200-luvulla eaa.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Roomalaiset rakensivat Yläkaupungin alueelle kivisen leirilinnoituksen (castrum); tarkka vuosi vaihtelee lähteittäin, ei mainita.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Roomalaiset rakensivat Yläkaupungin alueelle kivisen leirilinnoituksen (castrum); tarkka vuosi vaihtelee lähteittäin, ei mainita.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Slaavilainen nimi Beograd mainitaan ensimmäisen kerran 878.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Slaavilainen nimi Beograd mainitaan ensimmäisen kerran 878.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Linnoitusta rakennettiin 100-luvulta 1700-luvulle (rakentajat vaihtuivat).",
+     "url": "https://www.serbiaincoming.com/?p=1682"
+    },
+    {
+     "vaite": "Linnoitusta rakennettiin 100-luvulta 1700-luvulle (rakentajat vaihtuivat).",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Kalemegdan = turkin kale (linnake) + megdan/meydan (kenttä).",
+     "url": "https://en.wikipedia.org/wiki/Kalemegdan"
+    },
+    {
+     "vaite": "Kalemegdan = turkin kale (linnake) + megdan/meydan (kenttä).",
+     "url": "https://www.serbiaincoming.com/?p=1682"
+    },
+    {
+     "vaite": "Kalemegdanin kenttä muutettiin puistoksi 1800-luvulla (tarkka vuosi vaihtelee, tekstissä vain 'nykyään puisto').",
+     "url": "https://en.wikipedia.org/wiki/Kalemegdan"
+    },
+    {
+     "vaite": "Kalemegdanin kenttä muutettiin puistoksi 1800-luvulla (tarkka vuosi vaihtelee, tekstissä vain 'nykyään puisto').",
+     "url": "https://www.serbiaincoming.com/?p=1682"
+    },
+    {
+     "vaite": "Stefan Lazarević teki Belgradista pääkaupunkinsa 1400-luvun alussa (1402/1403) ja uudisti linnoituksen.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Stefan Lazarević teki Belgradista pääkaupunkinsa 1400-luvun alussa (1402/1403) ja uudisti linnoituksen.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Ottomaanit valtasivat Belgradin vuonna 1521 (Suleiman Suuri).",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Ottomaanit valtasivat Belgradin vuonna 1521 (Suleiman Suuri).",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    },
+    {
+     "vaite": "Ottomaanit poistuivat linnoituksesta 18.4.1867; avaimet luovutettiin Kalemegdanilla.",
+     "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+    },
+    {
+     "vaite": "Ottomaanit poistuivat linnoituksesta 18.4.1867; avaimet luovutettiin Kalemegdanilla.",
+     "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html"
+    }
+   ]
+  },
+  {
+   "id": "Q1669926",
+   "nimi": "Nebojšan torni",
+   "kuvaus": "Linnoituksen jokirannan vartiotorni",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 22,
+   "katse_suunta": 135,
+   "katse_kaari": 30,
+   "teksti": "Nebojšan torni nousee linnoituksen alakaupungissa joen rannalla, missä Sava yhtyy Tonavaan. Nykyinen torni rakennettiin noin vuonna 1460 linnoituksen puolustukseksi, ja sen seinät ovat lähes kolmen metrin paksuiset. Nimi nebojša tarkoittaa serbiaksi pelotonta. Aluksi tornia kutsuttiin Valkoiseksi torniksi. Torni on nelikerroksinen. 1700-luvulla se muuttui pahamaineiseksi vankilaksi, jossa vankien kerrotaan kärsineen hirvittävistä oloista. Kuuluisin vanki oli kreikkalainen vallankumouksellinen ja runoilija Rigas Feraios, joka sai tornissa surmansa vuonna 1798.",
+   "lyhyt": "Nykyään tornissa on museo, jonka kerrokset kertovat vankilan ajasta, Rigas Feraioksesta ja ensimmäisestä serbikapinasta. Torni kunnostettiin vuosina 2009–2010, ja Kreikka tuki sitä suurella lahjoituksella. Myös Belgradin metropoliitta Metodios surmattiin tornissa muutamaa vuotta Rigasin jälkeen.",
+   "syventava": "Kuka oli Rigas Feraios, ja miksi hän joutui vankilaan?",
+   "kysymykset": [
+    "Mikä oli tornin entinen nimi?",
+    "Mihin tornia käytettiin ennen vankilaa?",
+    "Kuka muu tunnettu vanki sai surmansa tornissa?",
+    "Miten vankeja kohdeltiin tornissa?",
+    "Milloin torni muutettiin museoksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nykyinen torni rakennettiin noin 1460 (1456-vuosi vaihtelee, ei käytetä).",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin noin 1460 (1456-vuosi vaihtelee, ei käytetä).",
+     "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin noin 1460 (1456-vuosi vaihtelee, ei käytetä).",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Seinät noin 2,8–3 m paksuja.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Seinät noin 2,8–3 m paksuja.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Nebojša = peloton serbiaksi.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Nebojša = peloton serbiaksi.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Torni tunnettiin aluksi Valkoisena tornina.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Torni tunnettiin aluksi Valkoisena tornina.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Torni on nelikerroksinen.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Torni on nelikerroksinen.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Vankien olot tornissa olivat hirvittävät (kidutus, surmat).",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Vankien olot tornissa olivat hirvittävät (kidutus, surmat).",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Torni oli pahamaineinen vankila 1700-luvulta alkaen (tarkka ajankohta vaihtelee, tekstissä 1700-luku).",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Torni oli pahamaineinen vankila 1700-luvulta alkaen (tarkka ajankohta vaihtelee, tekstissä 1700-luku).",
+     "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en"
+    },
+    {
+     "vaite": "Torni oli pahamaineinen vankila 1700-luvulta alkaen (tarkka ajankohta vaihtelee, tekstissä 1700-luku).",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Kreikkalainen vallankumouksellinen Rigas Feraios sai surmansa tornissa 1798.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Kreikkalainen vallankumouksellinen Rigas Feraios sai surmansa tornissa 1798.",
+     "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en"
+    },
+    {
+     "vaite": "Kreikkalainen vallankumouksellinen Rigas Feraios sai surmansa tornissa 1798.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Tornin museo kertoo kerroksittain vankilasta, Rigasista ja ensimmäisestä serbikapinasta.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Tornin museo kertoo kerroksittain vankilasta, Rigasista ja ensimmäisestä serbikapinasta.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Kunnostus 2009–2010, Kreikan tuki.",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Kunnostus 2009–2010, Kreikan tuki.",
+     "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en"
+    },
+    {
+     "vaite": "Kunnostus 2009–2010, Kreikan tuki.",
+     "url": "https://beotura.rs/en/nebojsa-tower/"
+    },
+    {
+     "vaite": "Belgradin metropoliitta Metodios surmattiin tornissa vuosia Rigasin jälkeen (lyhyt).",
+     "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower"
+    },
+    {
+     "vaite": "Belgradin metropoliitta Metodios surmattiin tornissa vuosia Rigasin jälkeen (lyhyt).",
+     "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en"
+    }
+   ]
+  },
+  {
+   "id": "Q1548278",
+   "nimi": "Suuri sotasaari",
+   "kuvaus": "Savan ja Tonavan yhtymäkohdan luonnonsaari",
+   "luokka": "saari",
+   "koko_m": 1935,
+   "teksti": "Suuri sotasaari on ylhäältä katsottuna vehreä metsäsaari keskellä kaupunkia, Savan ja Tonavan yhtymäkohdassa. Maa on matalaa ja soista, ja Tonava tulvii sen usein. Nimi tulee sotahistoriasta: saari oli tukikohta, josta Belgradin linnoitusta piiritettiin ja ammuttiin. Vuosisatoja saari sijaitsi kahden valtakunnan rajalla, kun Belgrad ja Zemun kuuluivat eri valtioihin. Raja ja suo suojelivat saarta rakentamiselta. Nykyään saari on suojeltu luontokohde, jossa pesii merikotkapari ja jossa on yli sata lintulajia.",
+   "lyhyt": "Toisen maailmansodan jälkeen Uuden Belgradin rakentamiseen suunniteltiin saaren hiekan ottamista, mutta Tonavan virta toi uutta maata ja saari säilyi. Kesäisin Serbian armeija rakentaa saarelle ponttonisillan Zemunin puolelta.",
+   "syventava": "Miksi saarta ei ole rakennettu täyteen, vaikka se on keskellä kaupunkia?",
+   "kysymykset": [
+    "Mitä lintuja saarella pesii?",
+    "Miten saarelle pääsee kesällä?",
+    "Mikä on Pieni sotasaari?",
+    "Mitä villieläimiä saarella elää?",
+    "Mikä on Lido?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Saari sijaitsee Savan ja Tonavan yhtymäkohdassa keskellä Belgradia.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Saari sijaitsee Savan ja Tonavan yhtymäkohdassa keskellä Belgradia.",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Saari on matala ja soinen, ja tulvii usein.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Saari on matala ja soinen, ja tulvii usein.",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Nimi tulee sotahistoriasta: saari oli tukikohta Belgradin piirityksissä ja pommituksissa.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Nimi tulee sotahistoriasta: saari oli tukikohta Belgradin piirityksissä ja pommituksissa.",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Nimi tulee sotahistoriasta: saari oli tukikohta Belgradin piirityksissä ja pommituksissa.",
+     "url": "https://www.bradtguides.com/birdwatching",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Belgrad ja Zemun kuuluivat vuosisatoja eri valtakunnille; raja kulki saaren kohdalla.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Belgrad ja Zemun kuuluivat vuosisatoja eri valtakunnille; raja kulki saaren kohdalla.",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Saari on suojeltu luontokohde (suojeluvuosi 2005/2007 vaihtelee, ei mainita).",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Saari on suojeltu luontokohde (suojeluvuosi 2005/2007 vaihtelee, ei mainita).",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Merikotkapari asuu saarella (pesinyt 2010-luvulta).",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Merikotkapari asuu saarella (pesinyt 2010-luvulta).",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Merikotkapari asuu saarella (pesinyt 2010-luvulta).",
+     "url": "https://www.bradtguides.com/birdwatching",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Saarella on lähes 200 lintulajia; luku vaihtelee lähteittäin (140–200), tekstissä 'yli sata'.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Saarella on lähes 200 lintulajia; luku vaihtelee lähteittäin (140–200), tekstissä 'yli sata'.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/great-war-island/1548845",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Saarella on lähes 200 lintulajia; luku vaihtelee lähteittäin (140–200), tekstissä 'yli sata'.",
+     "url": "https://www.bradtguides.com/birdwatching",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Hiekanottosuunnitelma Uuden Belgradin rakentamiseen ei onnistunut, koska Tonava toi uutta maata.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Hiekanottosuunnitelma Uuden Belgradin rakentamiseen ei onnistunut, koska Tonava toi uutta maata.",
+     "url": "https://thenutshelltimes.com/2017/06/26/hidden-belgrade-8-the-mysterious-green-heart-of-belgrade/"
+    },
+    {
+     "vaite": "Kesäisin saarelle rakennetaan tilapäinen ponttonisilta Zemunin puolelta.",
+     "url": "https://en.wikipedia.org/wiki/Great_War_Island"
+    },
+    {
+     "vaite": "Kesäisin saarelle rakennetaan tilapäinen ponttonisilta Zemunin puolelta.",
+     "url": "https://www.lonelyplanet.com/points-of-interest/great-war-island/1548845",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q1265998",
+   "nimi": "Pyhän arkkienkeli Mikaelin katedraali",
+   "kuvaus": "Belgradin ortodoksinen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 40,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Pyhän arkkienkeli Mikaelin katedraali, serbiaksi Saborna crkva, näkyy ylhäältä yksilaivaisena kirkkona Belgradin vanhankaupungin ytimessä. Se rakennettiin vuosina 1837–1840 vanhemman kirkon paikalle. Samalle paikalle oli rakennettu kirkko vuonna 1728, ja arkkienkeli Mikaelille omistettu kirkko mainitaan alueella jo 1500-luvulla. Uusi rakennus on tyyliltään uusklassinen, ja sisustustyöt jatkuivat vielä 1840-luvun puoliväliin saakka. Kirkon edustalle on haudattu kaksi serbialaista kulttuurihahmoa, Vuk Karadžić ja Dositej Obradović.",
+   "lyhyt": "Kirkon veistetyn ikonostaasin on tehnyt kuvanveistäjä Dimitrije Petrović, ja ikonit maalasi Dimitrije Avramović, joka työskenteli kirkossa vuosina 1841–1845. Sisällä on haudattuna myös ruhtinaat Miloš ja Mihailo Obrenović.",
+   "syventava": "Millainen oli kirkko, joka seisoi samalla paikalla ennen nykyistä katedraalia?",
+   "kysymykset": [
+    "Kuka maalasi kirkon ikonit?",
+    "Kuka veisti ikonostaasin?",
+    "Mihin tyyliin kirkko kuuluu?",
+    "Ketkä ruhtinaat on haudattu kirkkoon?",
+    "Milloin kirkon edeltäjä mainitaan ensimmäisen kerran?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Nykyinen kirkko rakennettiin 1837–1840.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Nykyinen kirkko rakennettiin 1837–1840.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Samalla paikalla oli vanhempi kirkko (1728), ja Mikaelille omistettu kirkko mainitaan jo 1500-luvulla.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Samalla paikalla oli vanhempi kirkko (1728), ja Mikaelille omistettu kirkko mainitaan jo 1500-luvulla.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Tyyli uusklassinen, yksilaivainen kirkko.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Tyyli uusklassinen, yksilaivainen kirkko.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Vuk Karadžić ja Dositej Obradović on haudattu kirkkoon (edustalle).",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Vuk Karadžić ja Dositej Obradović on haudattu kirkkoon (edustalle).",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Ikonostaasin veisti Dimitrije Petrović, ikonit maalasi Dimitrije Avramović.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Ikonostaasin veisti Dimitrije Petrović, ikonit maalasi Dimitrije Avramović.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Avramović maalasi kirkossa 1841–1845; sisustustyöt jatkuivat 1840-luvun puoliväliin.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Avramović maalasi kirkossa 1841–1845; sisustustyöt jatkuivat 1840-luvun puoliväliin.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    },
+    {
+     "vaite": "Ruhtinaat Miloš ja Mihailo Obrenović on haudattu kirkkoon.",
+     "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade"
+    },
+    {
+     "vaite": "Ruhtinaat Miloš ja Mihailo Obrenović on haudattu kirkkoon.",
+     "url": "https://beotura.rs/en/saborna-crkva/"
+    }
+   ]
+  },
+  {
+   "id": "Q2633804",
+   "nimi": "Tasavallan aukio",
+   "kuvaus": "Belgradin tärkein kohtaamisaukio",
+   "luokka": "aukio",
+   "koko_m": 150,
+   "teksti": "Tasavallan aukio, serbiaksi Trg Republike, on Belgradin tärkein kohtaamispaikka. Ylhäältä sen keskeltä erottuu ratsastajapatsas, joka esittää ruhtinas Mihailo Obrenovićia. Italialainen kuvanveistäjä Enrico Pazzi teki patsaan, ja se paljastettiin joulukuussa 1882 muistoksi ottomaanien karkottamisesta ja kaupunkien vapauttamisesta. Belgradilaiset sopivat tapaamisia ”kod konja”, hevosen luona. Aukion laidoilla ovat Kansallismuseo ja Kansallisteatteri. Aukio on alle sadan metrin päässä Terazijesta, jota pidetään virallisesti kaupungin keskustana.",
+   "lyhyt": "Pitkään aukio tunnettiin nimellä Teatteriaukio, Pozorišni trg. Nykyinen aukion muoto syntyi vasta, kun Istanbulin portti purettiin vuonna 1866. Patsaan jalustaan on kirjattu ruhtinas Mihailon aikana vapautettujen kaupunkien nimet.",
+   "syventava": "Miksi ruhtinas Mihailoa muistetaan Serbiassa?",
+   "kysymykset": [
+    "Mikä oli aukion vanha nimi?",
+    "Milloin Istanbulin portti purettiin?",
+    "Mitä jalustan kaupunkien nimet kertovat?",
+    "Milloin ruhtinas Mihailo kuoli?",
+    "Mikä on Kansallismuseo?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio on Belgradin tärkein kohtaamispaikka.",
+     "url": "https://tob.rs/en/what-to-see/belgrade-attractions/republic-square"
+    },
+    {
+     "vaite": "Aukio on Belgradin tärkein kohtaamispaikka.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Ruhtinas Mihailon ratsastajapatsas, tekijä Enrico Pazzi, paljastettu 1882.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Ruhtinas Mihailon ratsastajapatsas, tekijä Enrico Pazzi, paljastettu 1882.",
+     "url": "https://tob.rs/en/what-to-see/belgrade-attractions/republic-square"
+    },
+    {
+     "vaite": "Patsas muistuttaa ottomaanien karkottamisesta ja kaupunkien vapauttamisesta (ruhtinas Mihailo).",
+     "url": "https://en.wikipedia.org/wiki/Prince_Mihailo_Monument"
+    },
+    {
+     "vaite": "Patsas muistuttaa ottomaanien karkottamisesta ja kaupunkien vapauttamisesta (ruhtinas Mihailo).",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Patsasta sanotaan 'kod konja' (hevosen luona), ja se on tapaamispaikka.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Patsasta sanotaan 'kod konja' (hevosen luona), ja se on tapaamispaikka.",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Kansallismuseo ja Kansallisteatteri ovat aukion laidalla.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Kansallismuseo ja Kansallisteatteri ovat aukion laidalla.",
+     "url": "https://tob.rs/en/what-to-see/belgrade-attractions/republic-square"
+    },
+    {
+     "vaite": "Aukio on alle 100 m:n päässä Terazijesta, joka on virallinen kaupungin keskusta.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Aukio on alle 100 m:n päässä Terazijesta, joka on virallinen kaupungin keskusta.",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Aukion entinen nimi oli Teatteriaukio (Pozorišni trg).",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Aukion entinen nimi oli Teatteriaukio (Pozorišni trg).",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Istanbulin portti purettiin 1866, minkä jälkeen aukio muotoutui.",
+     "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade"
+    },
+    {
+     "vaite": "Istanbulin portti purettiin 1866, minkä jälkeen aukio muotoutui.",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Patsaan jalustaan on kirjattu vapautetut kaupungit.",
+     "url": "https://en.wikipedia.org/wiki/Prince_Mihailo_Monument"
+    },
+    {
+     "vaite": "Patsaan jalustaan on kirjattu vapautetut kaupungit.",
+     "url": "https://www.inyourpocket.com/republic-square_38550v",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q1264635",
+   "nimi": "Skadarlija",
+   "kuvaus": "Belgradin boheemi kivetty katu",
+   "luokka": "katu",
+   "koko_m": 265,
+   "teksti": "Skadarlija on ylhäältä katsottuna lyhyt, mutkitteleva kivetty katu vanhan Belgradin ytimessä. 1800-luvun alkupuoliskolla alue oli köyhä romanien asuinalue, kunnes kaupunkirakentaminen ulottui sinne ja katu sai vuonna 1872 nykyisen nimensä, Skadarska. Alueen tunnetuin kapakka on Tri šešira, Kolme hattua. Boheemi leima syntyi vuonna 1901, kun Teatteriaukion kuuluisa Dardaneli-kapakka purettiin ja sen vakioasiakkaat, kirjailijat ja näyttelijät, siirtyivät Skadarlijan kapakoihin. Kirjailija ja taidemaalari Đura Jakšić asui ja kuoli kadun varrella.",
+   "lyhyt": "Katu kunnostettiin vuonna 1968, ja Pariisin aloitteesta Skadarlijasta tehtiin Montmartren vastine Belgradissa 22. lokakuuta 1977.",
+   "syventava": "Kuka oli Đura Jakšić?",
+   "kysymykset": [
+    "Millainen paikka Tri šešira on?",
+    "Millainen kapakka Dardaneli oli?",
+    "Milloin Skadarlija kunnostettiin?",
+    "Mikä merkitys Jakšićin talolla on?",
+    "Miksi Skadarlijasta tehtiin Montmartren vastine?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katu nimettiin Skadarskaksi vuonna 1872.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Katu nimettiin Skadarskaksi vuonna 1872.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Katu nimettiin Skadarskaksi vuonna 1872.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Alue oli aiemmin köyhä romanien asuinalue.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Alue oli aiemmin köyhä romanien asuinalue.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Alue oli aiemmin köyhä romanien asuinalue.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Dardaneli purettiin 1901 ja sen kävijät siirtyivät Skadarlijan kapakoihin, mikä teki alueesta boheemin.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Dardaneli purettiin 1901 ja sen kävijät siirtyivät Skadarlijan kapakoihin, mikä teki alueesta boheemin.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Dardaneli purettiin 1901 ja sen kävijät siirtyivät Skadarlijan kapakoihin, mikä teki alueesta boheemin.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Katu on kivetty (kaldrma).",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Katu on kivetty (kaldrma).",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Katu on kivetty (kaldrma).",
+     "url": "https://www.tob.rs/en/see-and-do/attractions/skadarlija"
+    },
+    {
+     "vaite": "Đura Jakšić, kirjailija ja taidemaalari, asui ja kuoli Skadarlijassa.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Đura Jakšić, kirjailija ja taidemaalari, asui ja kuoli Skadarlijassa.",
+     "url": "https://www.tob.rs/en/see-and-do/attractions/skadarlija"
+    },
+    {
+     "vaite": "Đura Jakšić, kirjailija ja taidemaalari, asui ja kuoli Skadarlijassa.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Skadarlijasta tuli Montmartren vastine 22.10.1977 (Pariisin aloitteesta).",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Skadarlijasta tuli Montmartren vastine 22.10.1977 (Pariisin aloitteesta).",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Tri šešira (Kolme hattua) on yksi alueen kapakoista.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Tri šešira (Kolme hattua) on yksi alueen kapakoista.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Tri šešira (Kolme hattua) on yksi alueen kapakoista.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Katu kunnostettiin 1968.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Katu kunnostettiin 1968.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Ensimmäisen maailmansodan aikana katu oli hetken Ružina.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Ensimmäisen maailmansodan aikana katu oli hetken Ružina.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    },
+    {
+     "vaite": "Ensimmäisen maailmansodan aikana katu oli hetken Ružina.",
+     "url": "https://nacionalnarevija.com/en/tekstovi/Br 16/Skadarlija.html"
+    },
+    {
+     "vaite": "Katupituus vaihtelee lähteittäin (alle 400 m / 600 m), ei mainita tekstissä.",
+     "url": "https://en.wikipedia.org/wiki/Skadarlija"
+    },
+    {
+     "vaite": "Katupituus vaihtelee lähteittäin (alle 400 m / 600 m), ei mainita tekstissä.",
+     "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/"
+    }
+   ]
+  },
+  {
+   "id": "Q1590792",
+   "nimi": "Serbian kansalliskokouksen talo",
+   "kuvaus": "Serbian parlamenttitalo",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "teksti": "Serbian kansalliskokouksen talo erottuu ylhäältä massiivisena, kupolilla kruunattuna rakennuksena. Suunnittelukilpailun voitti vuonna 1901 arkkitehti Jovan Ilkić. Peruskiven laski kuningas Pietari I 27. elokuuta 1907, mutta Balkanin sodat ja ensimmäinen maailmansota keskeyttivät rakentamisen. Jovanin jälkeen työtä jatkoi hänen poikansa Pavle Ilkić, ja sisätilat suunnitteli Nikolai Krasnov. Talo valmistui 18. lokakuuta 1936, lähes kolme vuosikymmentä peruskiven jälkeen, ja ensimmäinen täysistunto pidettiin kaksi päivää myöhemmin.",
+   "lyhyt": "Rakennuksen portaiden vierellä ovat kuvanveistäjä Toma Rosandićin pronssiset hevosryhmät. Toisen maailmansodan aikana talo oli saksalaisten Kaakkois-Euroopan komentokeskus. Vuodesta 2006 se on ollut Serbian kansalliskokouksen käytössä.",
+   "syventava": "Kuka oli Nikolai Krasnov?",
+   "kysymykset": [
+    "Mitä kupolin alla olevassa eteishallissa on?",
+    "Mikä on Suuri täysistuntosali?",
+    "Mitä Rosandićin hevosveistokset esittävät?",
+    "Milloin talo julistettiin kulttuurimonumentiksi?",
+    "Mitkä parlamentit kokoontuivat talossa ennen vuotta 2006?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Suunnittelukilpailun voitti 1901 Jovan Ilkić.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Suunnittelukilpailun voitti 1901 Jovan Ilkić.",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Suunnittelukilpailun voitti 1901 Jovan Ilkić.",
+     "url": "https://www.parlament.gov.rs/citizens`-corner/education-center/cultural-heritage/architecture.701.html"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 27.8.1907 (kuningas Pietari I).",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 27.8.1907 (kuningas Pietari I).",
+     "url": "https://www.parlament.gov.rs/citizens`-corner/education-center/cultural-heritage/architecture.701.html"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 27.8.1907 (kuningas Pietari I).",
+     "url": "https://www.dvorcisrbije.rs/en/house-of-the-national-assembly/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Balkanin sodat ja ensimmäinen maailmansota keskeyttivät rakentamisen.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Balkanin sodat ja ensimmäinen maailmansota keskeyttivät rakentamisen.",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Pavle Ilkić jatkoi isänsä työtä; Krasnov suunnitteli sisätilat.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Pavle Ilkić jatkoi isänsä työtä; Krasnov suunnitteli sisätilat.",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Pavle Ilkić jatkoi isänsä työtä; Krasnov suunnitteli sisätilat.",
+     "url": "https://www.parlament.gov.rs/citizens`-corner/education-center/cultural-heritage/architecture.701.html"
+    },
+    {
+     "vaite": "Talo valmistui 18.10.1936, lähes kolme vuosikymmentä peruskiven jälkeen; ensimmäinen täysistunto 20.10.1936.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Talo valmistui 18.10.1936, lähes kolme vuosikymmentä peruskiven jälkeen; ensimmäinen täysistunto 20.10.1936.",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Talo valmistui 18.10.1936, lähes kolme vuosikymmentä peruskiven jälkeen; ensimmäinen täysistunto 20.10.1936.",
+     "url": "https://www.parlament.gov.rs/citizens`-corner/education-center/cultural-heritage/architecture.701.html"
+    },
+    {
+     "vaite": "Kupoli: tilat kupolin alla (eteishalli) ja kupoliset siivet.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Kupoli: tilat kupolin alla (eteishalli) ja kupoliset siivet.",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Toma Rosandićin pronssihevoset portaiden vieressä (vuosiluku 1938/1939 vaihtelee, ei mainita).",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Toma Rosandićin pronssihevoset portaiden vieressä (vuosiluku 1938/1939 vaihtelee, ei mainita).",
+     "url": "https://beotura.rs/en/national-assembly/"
+    },
+    {
+     "vaite": "Talo oli WWII:n aikana saksalaisten Kaakkois-Euroopan komento.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Talo oli WWII:n aikana saksalaisten Kaakkois-Euroopan komento.",
+     "url": "https://www.dvorcisrbije.rs/en/house-of-the-national-assembly/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Vuodesta 2006 Serbian kansalliskokouksen käytössä.",
+     "url": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly_of_Serbia"
+    },
+    {
+     "vaite": "Vuodesta 2006 Serbian kansalliskokouksen käytössä.",
+     "url": "https://www.dvorcisrbije.rs/en/house-of-the-national-assembly/",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q330385",
+   "nimi": "Pyhän Savan katedraali",
+   "kuvaus": "Maailman suurimpia ortodoksikirkkoja",
+   "luokka": "kirkko",
+   "koko_m": 90,
+   "korkeus_m": 77.34,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Pyhän Savan temppeli kohoaa Vračarin kukkulalla, ja sen suuri kupoli erottuu ylhäältä kauas. Se on yksi maailman suurimmista ortodoksikirkoista. Temppeli rakennettiin paikalle, jonka uskotaan olevan se, jossa ottomaanien suurvisiiri Sinan-pasha poltti Pyhän Savan pyhäinjäännökset 1500-luvun lopulla. Rakentaminen alkoi vuonna 1935 Bogdan Nestorovićin ja Aleksandar Derokon suunnitelmilla. Toinen maailmansota keskeytti työn, ja se jatkui vasta 1980-luvulla. Keskuskupoli painaa noin 4 000 tonnia, ja se nostettiin paikalleen vuonna 1989.",
+   "lyhyt": "Rakennushanke käynnistettiin jo vuonna 1895, jolloin perustettiin temppelin rakennusyhdistys. Temppelin ulkopuoli valmistui vuonna 2004, ja sisätilojen mosaiikit saatiin valmiiksi vuonna 2020. Alakerrassa on noin 1 800 neliömetrin krypta. Temppelissä on 49 kelloa.",
+   "syventava": "Miksi rakentaminen kesti lähes sata vuotta?",
+   "kysymykset": [
+    "Mistä luostarista Pyhän Savan pyhäinjäännökset tuotiin Belgradiin?",
+    "Mihin tyyliin temppelin ulkoasu kuuluu?",
+    "Mitä kupolin mosaiikki esittää?",
+    "Kuinka paljon väkeä temppeliin mahtuu?",
+    "Mitä temppelin kryptassa on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Temppeli on yksi maailman suurimmista ortodoksikirkoista (sijoitus vaihtelee: suurin / neljänneksi suurin).",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Temppeli on yksi maailman suurimmista ortodoksikirkoista (sijoitus vaihtelee: suurin / neljänneksi suurin).",
+     "url": "https://www.serbiaincoming.com/?p=4371"
+    },
+    {
+     "vaite": "Sinan-pasha poltti Pyhän Savan pyhäinjäännökset Belgradissa Vračarin kukkulan oletetulla paikalla 1500-luvun lopulla (vuosi 1594/1595 vaihtelee).",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Sinan-pasha poltti Pyhän Savan pyhäinjäännökset Belgradissa Vračarin kukkulan oletetulla paikalla 1500-luvun lopulla (vuosi 1594/1595 vaihtelee).",
+     "url": "https://johnsanidopoulos.com/2020/01/the-fate-of-relics-of-saint-sava-of.html",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Hanke käynnistettiin 1895 (rakennusyhdistys perustettiin).",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Hanke käynnistettiin 1895 (rakennusyhdistys perustettiin).",
+     "url": "https://dobrocinstvo.rs/hram-svetog-save-2/"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1935; suunnittelijat Bogdan Nestorović ja Aleksandar Deroko.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1935; suunnittelijat Bogdan Nestorović ja Aleksandar Deroko.",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Toinen maailmansota keskeytti työn.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Toinen maailmansota keskeytti työn.",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Työ jatkui 1980-luvulla (1984/1985 vaihtelee).",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Työ jatkui 1980-luvulla (1984/1985 vaihtelee).",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Keskuskupoli painaa noin 4 000 tonnia ja asetettiin paikalleen 1989.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Keskuskupoli painaa noin 4 000 tonnia ja asetettiin paikalleen 1989.",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Keskuskupoli painaa noin 4 000 tonnia ja asetettiin paikalleen 1989.",
+     "url": "https://www.serbia.travel/en/stories-items/light-over-belgrade/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Ulkopuoli valmistui 2004.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Ulkopuoli valmistui 2004.",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Ulkopuoli valmistui 2004.",
+     "url": "https://www.serbia.travel/en/stories-items/light-over-belgrade/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Sisätilojen mosaiikit valmistuivat 2020.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Sisätilojen mosaiikit valmistuivat 2020.",
+     "url": "https://www.serbia.travel/en/stories-items/light-over-belgrade/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Alakerran krypta on noin 1 800 m2.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Alakerran krypta on noin 1 800 m2.",
+     "url": "https://beotura.rs/en/hram-svetog-save/"
+    },
+    {
+     "vaite": "Temppelissä on 49 kelloa.",
+     "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+    },
+    {
+     "vaite": "Temppelissä on 49 kelloa.",
+     "url": "https://www.hramsvetogsave.rs/en/"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Roomalaisen leirin vuosi ja legioona: VIII Augusta 46–69 / IV Flavia 86 tai 91 (beograd.rs:n teksti vs. aikajana) vaihtelee, tekstissä vain 'roomalaiset rakensivat kivisen leirin'.",
+  "Linnoituksen pinta-ala 66 ha ja harjanteen korkeus 125 m: vain Wikipedia (Kalemegdanin puisto 53 ha toisessa artikkelissa), ei toista lähdettä, pois.",
+  "Kalemegdanin puiston tarkka vuosi (1869 Wikipedia vs. 1880-luku serbiaincoming): ei mainita vuotta, Kalemegdan-nimi ja 'nykyään puisto' riittävät.",
+  "Roomalaiskaivo (Rimski bunar) ja Balthasar Neumann: hakutulokset eivät vahvistaneet Neumannin yhteyttä, pois.",
+  "Pobednik-patsas (Meštrović, 1928, korkeus 14 m): vain hakutulos, Wikipedia-sivua ei tarkistettu eikä toista lähdettä saatu (Atlas Obscura 403), pois.",
+  "Nebojšan tornin rakennusvuosi 1456 (beotura) vs. noin 1460 (Wikipedia, beogradskatvrdjava): käytetty 'noin 1460'.",
+  "Nebojšan tornin korkeus: Wikipedia 19 m, beogradskatvrdjava 22 m, beotura n. 16–17 m (neljä kerrosta): korkeutta ei mainita tekstissä (kohdelistan korkeus_m 22 kopioitu sellaisenaan).",
+  "Nebojšan tornin kahdeksankulmainen pohja: vain Wikipedia, pois.",
+  "Nebojšan tornin vankilakäytön alku: Wikipedia 1730-luku, beogradskatvrdjava 1700-luvun loppu: käytetty '1700-luvulla'.",
+  "Metropoliitta Metodioksen surmavuosi (1800 vs. 1801): vuotta ei mainita, lyhyessä vain 'muutamaa vuotta Rigasin jälkeen'.",
+  "Nebojšan tornin rakentajat unkarilaiset (Wikipedia, beotura; beogradskatvrdjava ei mainitse): pois (jo aiemmassa kaupunkiesittelyssä pudotettu).",
+  "Suuri sotasaari: suojeluvuosi 2005 (Wikipedia) vs. 2007 (nutshelltimes), pinta-ala 2,11 km2 / 2,11 ha / 1,5 km2 vaihtelee: ei mainita.",
+  "Suuri sotasaari: lintulajien lukumäärä 66 pesivää / 140 (Bradt) / 196 / yli 200: tekstissä vain 'yli sata'.",
+  "Suuri sotasaari: villisikayhdyskunta (35+) ja Veliki Galijaš -järvi: vain Wikipedia, pois.",
+  "Mikaelin katedraalin arkkitehti (Querfeld/Kwerfeld, kiistelty) ja vihkimispäivä (8.11.1845 Wikipedia vs. beotura 'koristelu valmis 1845 vihkimisen jälkeen'): pois.",
+  "Mikaelin katedraalin kellotorni länsipäässä ja kulttuurimonumenttivuosi 1979: vain Wikipedia, pois.",
+  "Tasavallan aukio: patsaan paljastuspäivä 18.12. (patsasartikkeli) vs. 19.12.1882 (aukioartikkeli): vain 'joulukuussa 1882'.",
+  "Tasavallan aukio: patsaan sormen suunta (Vanha Serbia / Konstantinopol) vaihtelee, pronssin valupaikka (München), korkeus 11 m, Kansallisteatterin valmistumisvuosi 1869 (vain Wikipedia): pois.",
+  "Skadarlija: kadun pituus (alle 400 m Wikipedia vs. 600 m dipos), Tri šešira -vuosi 1864 (vain Wikipedia), suojelu 1967 (nacionalnarevija ei mainitse), Skadar-nimen selitys (kaari vs. kaupunki): pois.",
+  "Kansalliskokouksen talo: Rosandićin hevosten vuosi 1938 (beotura) vs. 1939 (Wikipedia): vuotta ei mainita; kulttuurimonumentti 1984, pinta-ala 13 400 m2: ei tekstissä.",
+  "Pyhän Savan temppeli: pyhäinjäännösten polttovuosi 1594 (johnsanidopoulos, dobrocinstvo) vs. 1595 (Wikipedia): käytetty '1500-luvun lopulla'.",
+  "Pyhän Savan temppeli: jatkamisvuosi 1984 (beotura) vs. 1985 (Wikipedia, dobrocinstvo): käytetty '1980-luvulla'.",
+  "Pyhän Savan temppeli: kupolin nosto 20 vrk (Wikipedia) vs. 40 vrk (beotura), mosaiikkien ala 15 000 vs. 17 000 m2, korkeus 77,34 / 78,3 m, 'neljänneksi suurin' vs. 'suurin': pois."
+ ],
+ "ristiriidat": [
+  "Nebojšan tornin korkeus: kohdelistan korkeus_m 22 (OSM) vs. Wikipedia 19 m ja beotura n. 16–17 m; kopioitu kohdelistasta, tekstissä ei lukua.",
+  "Pyhän Savan temppelin nimi: kohdelistan 'nimi' on Pyhän Savan katedraali, nimi_pelissa 'Pyhän Savan temppeli'. Kohteen nimi-kenttä kopioitu kohdelistasta, tekstissä käytetään pelinimeä 'temppeli'.",
+  "Pyhän Savan temppeli, mosaiikki 2020: serbia.travel sanoo mosaiikkikokonaisuuden valmistuneen 2020, Wikipedia sanoo koko sisätilan; tekstissä rajattu mosaiikkeihin.",
+  "Hakutulos-lähteet (huom: hakutulos): Bradt, Lonely Planet (sivu antoi vain navigaatiota), inyourpocket, dvorcisrbije, serbia.travel, johnsanidopoulos (haettu sivu vahvisti, mutta merkitty varovasti)."
+ ]
+}

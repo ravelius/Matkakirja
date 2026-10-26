@@ -1,0 +1,470 @@
+{
+ "kaupunki": "bratislava",
+ "kaupunkiQ": "Q1780",
+ "kohteet": [
+  {
+   "q": "Q593311",
+   "nimi": "Bratislavan linna",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 48.14222,
+   "lon": 17.1,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bratislava - Burg (a).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_-_Burg_(a).JPG?width=1280",
+     "tekija": "C.Stadler/Bwag",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_-_Burg_(a).JPG",
+     "selite": "Bratislavan nelitornisen valkoinen linna kohoaa Tonavan rannan kukkulalla.",
+     "leveys": 4860,
+     "korkeus": 2932,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bratislava Castle, 20210727 1004 0250.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Castle%2C_20210727_1004_0250.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_Castle%2C_20210727_1004_0250.jpg",
+     "selite": "Linna hallitsee Tonavan rantaa ja näkyy kauas joelle.",
+     "leveys": 3429,
+     "korkeus": 2313,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2017-06-15 SK Bratislava I, Kapucínska, Bratislavský hrad, T6A5 7925+T6A5 linka 5 (50120000281).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-06-15_SK_Bratislava_I%2C_Kapuc%C3%ADnska%2C_Bratislavsk%C3%BD_hrad%2C_T6A5_7925%2BT6A5_linka_5_(50120000281).jpg?width=1280",
+     "tekija": "Paul Korecky",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-06-15_SK_Bratislava_I%2C_Kapuc%C3%ADnska%2C_Bratislavsk%C3%BD_hrad%2C_T6A5_7925%2BT6A5_linka_5_(50120000281).jpg",
+     "selite": "Linnan kukkula ja muurit nousevat vanhankaupungin yläpuolelle.",
+     "leveys": 5867,
+     "korkeus": 3667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q239560",
+   "nimi": "Pyhän Martinuksen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 48.14194,
+   "lon": 17.10472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bratislava (agost 2012) - panoramio (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_(agost_2012)_-_panoramio_(5).jpg?width=1280",
+     "tekija": "EliziR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_(agost_2012)_-_panoramio_(5).jpg",
+     "selite": "Goottilaisen katedraalin torni näkyy vanhankaupungin muurien yllä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bratislava-Dom-sv-Martina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava-Dom-sv-Martina.jpg?width=1280",
+     "tekija": "Helix84",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava-Dom-sv-Martina.jpg",
+     "selite": "Katedraalissa kruunattiin Unkarin kuninkaita 1500- ja 1800-lukujen välillä.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q439356",
+   "nimi": "Vanha kaupungintalo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 48.14361,
+   "lon": 17.10889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bratislava Františkánské náměstí 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Franti%C5%A1k%C3%A1nsk%C3%A9_n%C3%A1m%C4%9Bst%C3%AD_2.jpg?width=1280",
+     "tekija": "VitVit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_Franti%C5%A1k%C3%A1nsk%C3%A9_n%C3%A1m%C4%9Bst%C3%AD_2.jpg",
+     "selite": "Vanhan kaupungintalon torni kohoaa Pääaukion laidalla.",
+     "leveys": 2048,
+     "korkeus": 1247,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019-03-17 in Bratislava 25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_in_Bratislava_25.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-03-17_in_Bratislava_25.jpg",
+     "selite": "Kaupungintalon keskiaikainen torni ja punakattoinen siipi.",
+     "leveys": 3768,
+     "korkeus": 2896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2019-03-17 in Bratislava 31.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_in_Bratislava_31.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-03-17_in_Bratislava_31.jpg",
+     "selite": "Kaupungintalon sisäpihaa ympäröivät renessanssiarkadit.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1717975",
+   "nimi": "Mikaelin portti",
+   "peruste": "sitelinks",
+   "koko_m": 50,
+   "lat": 48.1451,
+   "lon": 17.1068,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20231226.Bratislava.-036.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20231226.Bratislava.-036.jpg?width=1280",
+     "tekija": "Bybbisch94",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20231226.Bratislava.-036.jpg",
+     "selite": "Mikaelin portti on vanhankaupungin ainoa säilynyt keskiaikainen porttitorni.",
+     "leveys": 8991,
+     "korkeus": 5460,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bratislava, Michalská veža, Slovensko.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava%2C_Michalsk%C3%A1_ve%C5%BEa%2C_Slovensko.jpg?width=1280",
+     "tekija": "LMih",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava%2C_Michalsk%C3%A1_ve%C5%BEa%2C_Slovensko.jpg",
+     "selite": "Tornin barokkikupoli ja patsas ovat 1700-luvulta.",
+     "leveys": 2737,
+     "korkeus": 4225,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q579043",
+   "nimi": "Pyhän Elisabetin kirkko (Sininen kirkko)",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 48.14339,
+   "lon": 17.11683,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biserica Albastra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biserica_Albastra.jpg?width=1280",
+     "tekija": "HistoryGuy336",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biserica_Albastra.jpg",
+     "selite": "Sininen kirkko on vaaleansininen jugendkirkko, jonka suunnitteli Ödön Lechner.",
+     "leveys": 1600,
+     "korkeus": 1063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blue Church, Bratislava 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Church%2C_Bratislava_02.jpg?width=1280",
+     "tekija": "Thomas Ledl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Church%2C_Bratislava_02.jpg",
+     "selite": "Kirkko valmistui vuonna 1913, ja sen torni on tunnettu maamerkki.",
+     "leveys": 3598,
+     "korkeus": 3745,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Blaue Kirche Bratislava.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blaue_Kirche_Bratislava.JPG?width=1280",
+     "tekija": "Toffel",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blaue_Kirche_Bratislava.JPG",
+     "selite": "Kirkon julkisivun koristeet ovat jugendin tyypillistä kukkaista kuvastoa.",
+     "leveys": 1720,
+     "korkeus": 2580,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q830976",
+   "nimi": "Devínin linna",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 48.17389,
+   "lon": 16.97806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bratislava, Devín, pohled na centrální část Devínského hradu II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava%2C_Dev%C3%ADn%2C_pohled_na_centr%C3%A1ln%C3%AD_%C4%8D%C3%A1st_Dev%C3%ADnsk%C3%A9ho_hradu_II.jpg?width=1280",
+     "tekija": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gallery.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava%2C_Dev%C3%ADn%2C_pohled_na_centr%C3%A1ln%C3%AD_%C4%8D%C3%A1st_Dev%C3%ADnsk%C3%A9ho_hradu_II.jpg",
+     "selite": "Devínin linnanrauniot sijaitsevat kalliolla Tonavan ja Morava-joen yhtymäkohdassa.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bratislava, Devín, opevnění hradu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava%2C_Dev%C3%ADn%2C_opevn%C4%9Bn%C3%AD_hradu.jpg?width=1280",
+     "tekija": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gallery.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava%2C_Dev%C3%ADn%2C_opevn%C4%9Bn%C3%AD_hradu.jpg",
+     "selite": "Linnan muurit seurailevat jyrkkää kalliota joen yläpuolella.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bratislava, Devín, areál hradu, Slovensko.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava%2C_Dev%C3%ADn%2C_are%C3%A1l_hradu%2C_Slovensko.jpg?width=1280",
+     "tekija": "LMih",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava%2C_Dev%C3%ADn%2C_are%C3%A1l_hradu%2C_Slovensko.jpg",
+     "selite": "Kalliolla on ollut linnoitus jo antiikin ajoista.",
+     "leveys": 4288,
+     "korkeus": 2580,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q568640",
+   "nimi": "Grassalkovichin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 48.14944,
+   "lon": 17.10778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Grassalkovich, Bratislava, Eslovaquia, 2020-02-01, DD 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Grassalkovich%2C_Bratislava%2C_Eslovaquia%2C_2020-02-01%2C_DD_24.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Grassalkovich%2C_Bratislava%2C_Eslovaquia%2C_2020-02-01%2C_DD_24.jpg",
+     "selite": "Grassalkovichin rokokoopalatsi on Slovakian presidentin virka-asunto.",
+     "leveys": 7448,
+     "korkeus": 2423,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grasalkovičov palác Bratislava Oct. 2006 011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grasalkovi%C4%8Dov_pal%C3%A1c_Bratislava_Oct._2006_011.jpg?width=1280",
+     "tekija": "Slovakian99",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grasalkovi%C4%8Dov_pal%C3%A1c_Bratislava_Oct._2006_011.jpg",
+     "selite": "Palatsin edustalla liehuvat Slovakian liput ja edessä on rautainen portti.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q938516",
+   "nimi": "Priimaksen palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 48.14396,
+   "lon": 17.10867,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio primacial, Bratislava, Eslovaquia, 2020-02-01, DD 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_primacial%2C_Bratislava%2C_Eslovaquia%2C_2020-02-01%2C_DD_30.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_primacial%2C_Bratislava%2C_Eslovaquia%2C_2020-02-01%2C_DD_30.jpg",
+     "selite": "Priimaksen palatsi on uusklassinen rakennus, jossa on nykyään kaupungin virallisia tiloja.",
+     "leveys": 4842,
+     "korkeus": 3399,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bratislava (agost 2012) - panoramio (12).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_(agost_2012)_-_panoramio_(12).jpg?width=1280",
+     "tekija": "EliziR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_(agost_2012)_-_panoramio_(12).jpg",
+     "selite": "Palatsin julkisivu avautuu Priimaksen aukiolle Pääaukion vierellä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q949192",
+   "nimi": "Pääaukio",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 48.14323,
+   "lon": 17.10843,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hlavné námestie with the Old Town Hall and Roland Fountain (10267625666).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hlavn%C3%A9_n%C3%A1mestie_with_the_Old_Town_Hall_and_Roland_Fountain_(10267625666).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hlavn%C3%A9_n%C3%A1mestie_with_the_Old_Town_Hall_and_Roland_Fountain_(10267625666).jpg",
+     "selite": "Pääaukio on vanhankaupungin keskus, ja sen keskellä on Rolandin suihkulähde.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019-03-17 in Bratislava 74.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_in_Bratislava_74.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-03-17_in_Bratislava_74.jpg",
+     "selite": "Aukion reunoilla seisovat vanha kaupungintalo ja värikkäät kaupunkitalot.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q281805",
+   "nimi": "Slovakian kansallisteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 48.14241,
+   "lon": 17.11024,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bratislava ND 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_ND_4.jpg?width=1280",
+     "tekija": "VitVit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_ND_4.jpg",
+     "selite": "Kansallisteatterin vanha uusrenessanssirakennus sijaitsee Hviezdoslavin aukion päässä.",
+     "leveys": 1613,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1639599",
+   "nimi": "Hviezdoslavin aukio",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 48.14176,
+   "lon": 17.10826,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hviezdoslavovo námestie (10266936594).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hviezdoslavovo_n%C3%A1mestie_(10266936594).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hviezdoslavovo_n%C3%A1mestie_(10266936594).jpg",
+     "selite": "Hviezdoslavin aukio on puiden reunustama pitkä kävelyaukio vanhassakaupungissa.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017-06-15 SK Bratislava I, Hviezdoslavovo námestie (50123357911).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-06-15_SK_Bratislava_I%2C_Hviezdoslavovo_n%C3%A1mestie_(50123357911).jpg?width=1280",
+     "tekija": "Paul Korecky",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-06-15_SK_Bratislava_I%2C_Hviezdoslavovo_n%C3%A1mestie_(50123357911).jpg",
+     "selite": "Aukion päässä seisoo kansallisteatterin rakennus.",
+     "leveys": 5679,
+     "korkeus": 3786,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bratislava Old Town (3706932185).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Old_Town_(3706932185).jpg?width=1280",
+   "tekija": "xlibber",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava_Old_Town_(3706932185).jpg",
+   "selite": "Bratislavan vanhakaupunki, linna ja Tonava näkyvät ylhäältä.",
+   "leveys": 4240,
+   "korkeus": 1981,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Bratislava-Old Town, Slovakia - panoramio (137).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava-Old_Town%2C_Slovakia_-_panoramio_(137).jpg?width=1280",
+   "tekija": "Андрей Бобровский",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bratislava-Old_Town%2C_Slovakia_-_panoramio_(137).jpg",
+   "selite": "Linna kohoaa vanhankaupungin punakattoisten talojen yllä.",
+   "leveys": 6016,
+   "korkeus": 4016,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

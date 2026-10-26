@@ -28,10 +28,6 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -52,6 +48,7 @@ const KOESIVU = `<!doctype html><meta charset="utf-8">
 <style>html,body{margin:0;background:#111}</style>
 <script type="module">
 import { naytaSaapumistraileri } from '/js/saapumistraileri.js';
+import { avaaChromium } from '../selain.mjs';
 window.ui = {};
 window.aloita = (id, nimi) => { naytaSaapumistraileri(window.ui, { id, name: nimi }); };
 window.valmis = true;
@@ -78,7 +75,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** Koekuva 3:2 — sama suhde kuin lehden herokuvilla. */
 const koekuva = {

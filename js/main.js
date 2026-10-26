@@ -3,7 +3,11 @@
 import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
-import { UI } from './ui.js';
+import { nollaaLivianEnsikerta } from './livia.js';
+import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
+import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
+import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
+import { PAAVALIKKO_NAPILTA } from './ylapalkki-vaaka.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -16,7 +20,7 @@ import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
-  kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
+  kehittajaMaailmaValittu, kehittajaTilaPaalla, lautaValinta,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -36,6 +40,8 @@ import {
 import {
   asetaMusiikinLiuku, asetaMusiikkiPaalla, musiikinLiuku, musiikinLiuunTeksti, musiikkiPaalla,
 } from './musiikkivalitsin.js';
+// Maailmatilan Pelaajan näkymä -apunappi (#3608); tuonti puuttui, joten ES-moduuleina sivu kaatui.
+import { paivitaPelaajanakymaNappi } from './pelaajanakyma.js';
 // Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
 import {
   MUSIIKKILAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
@@ -54,10 +60,11 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, paivitaLukijanVoima,
-  puheenNopeus, puheenVoima, tallennaPuheAsetukset,
+  asetaPuheenVoima, luePuheAsetukset,
+  paivitaLukijanVoima, puheenVoima, PUHEMITTARI_TAPAHTUMA,
+  tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
-import { lueAaneen, pysaytaLukija } from './lukija.js';
+import { lueAaneen, pysaytaLukija, vaiennaAanikytkimella } from './lukija.js';
 import { PUHE_OLETUKSET } from './puhe-oletukset.js';
 // iOS-kuoren kytkennät. Selaimessa jokainen näistä on mykkä (js/natiivi.js).
 import {
@@ -77,12 +84,21 @@ import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
 import { kytkeHistorianHetket } from './historian-hetket.js';
+import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
 /*
  * Pulun paikkanäyttö (js/pulu-paikka.js, omistajan tilaus 6.9.2026):
  * kytkentä on tässä samasta syystä kuin yllä — paikannus tarvitsee
  * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
+import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
+import { lahetaKaynti, merkitseOmistajaOsoitteesta } from './kaynti.js';
+import { luoPohjaKortti } from './pohjat/pohjat.js';
+import { ajattelijaLipusta, avaaAjattelija } from './linssit/ajattelija.js';
+import { kytkeAjattelijaPaat } from './ajattelijapaat.js';
+
+// Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
+asennaDialogianimaatiot();
 
 /*
  * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
@@ -95,6 +111,7 @@ kytkeFokusnosto();
 kytkeSyvennys();
 kytkeSkandaalit();
 kytkeHistorianHetket();
+kytkeOsiohakKuvat();
 kytkePulunPaikannus();
 
 const PLAYER_COLOR = '#d94f3d';
@@ -143,6 +160,12 @@ const PLAYER_COLOR = '#d94f3d';
 }());
 
 const SAVE_KEY = 'matkakirja-save-v1';
+/*
+ * TURVATALLENNUS (talouden vaihe 1, omistaja 27.9.2026 klo 10.3x): viimeisin
+ * tallennus, jossa kenenkään rahat eivät ole lopussa. Kun matka päättyy
+ * rahojen loppumiseen, loppukortti tarjoaa jatkon tästä (js/ui.js showWinner).
+ */
+const TURVA_KEY = 'matkakirja-save-turva-v1';
 const VANHA_SAVE_KEY = 'afrikan-tahti-save-v1';
 /*
  * iCloud-synkan lähtötilanne talteen HETI, ennen kuin peli ehtii
@@ -156,7 +179,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2214';
+const APP_VERSION = '2026-09-21.2617';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -274,6 +297,7 @@ function saveGame(game) {
     else {
       talletettu = JSON.stringify(game.toJSON());
       localStorage.setItem(SAVE_KEY, talletettu);
+      if (game.players.every((p) => !p.rahaton && !p.pudonnut)) localStorage.setItem(TURVA_KEY, talletettu);
     }
   } catch {
     /* yksityinen selaustila tai täysi levy — peli jatkuu ilman tallennusta */
@@ -454,8 +478,33 @@ function siirraVanhaMaailma(arvo) {
   return arvo;
 }
 
+/** Turvatallennuksesta ladattu peli (rahat vielä kunnossa), tai null. */
+function lataaTurva() {
+  try {
+    const raw = localStorage.getItem(TURVA_KEY);
+    if (!raw) return null;
+    const tila = JSON.parse(raw);
+    siirraVanhaMaailma(tila);
+    const game = Game.fromJSON(tila);
+    return game && game.phase !== 'over' ? game : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Loppukortin "Jatka viimeisestä tallennuksesta": false, jos turvatallennusta ei ole. */
+function jatkaTurvasta() {
+  const game = lataaTurva();
+  if (!game) return false;
+  if (winnerDialog.open) winnerDialog.close();
+  attach(game);
+  saveGame(game);
+  return true;
+}
+
 function clearSave() {
   try {
+    localStorage.removeItem(TURVA_KEY);
     localStorage.removeItem(SAVE_KEY);
   } catch {
     /* ei mitään tehtävissä */
@@ -491,8 +540,17 @@ function attach(game) {
    * Retkikuntaa tämä ei pura — se on laitteen eikä pelikerran asia.
    */
   nollaaSahke();
-  ui = new UI(game, { onNewGame: startGame, onChange: saveGame });
+  ui = new UI(game, {
+    onNewGame: uusiMatka, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
+  });
   ui.mount();
+  // PILLERIVALIKKO PANEELI-pohjalla (peruttava ?paneeli=vanha): puetaan kerran, nappien kohde on aina nykyinen UI.
+  if (paneeliPohjalla()) puePilleriPaneeliksi(() => ui);
+  // AJATTELIJAT-LINSSI, vaihe 1 (Päätoimittaja 2.10.2026): vain kehityslipulla ?ajattelija=sokrates, ei pelaajille.
+  // Ajattelijoiden päät kartuutsin lipun alla (omistaja 2.10.2026 klo 12.34): toistaiseksi vain kehittäjätilassa.
+  if (kehittajaTilaPaalla()) kytkeAjattelijaPaat(ui, { kehittaja: kehittajaTilaPaalla });
+  const ajattelija = ajattelijaLipusta();
+  if (ajattelija) avaaAjattelija(ajattelija).catch((syy) => console.warn('ajattelija', syy));
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
   // työkalut ja kuvakaappausskriptit käyttävät sitä.
   window.matkakirja = { game, ui, sfx };
@@ -503,6 +561,16 @@ function startGame() {
   if (winnerDialog.open) winnerDialog.close();
   clearSave();
   attach(new Game({ players: [newPlayer()], pack: packById('maailma') }));
+}
+
+/**
+ * Pelaajan valitsema uusi matka (voittoikkunan Uusi peli ja sen sulkeminen): Pulun alku toistuu kuten
+ * ensimmäisellä kerralla (omistaja 11.10.2026, js/livia.js nollaaLivianEnsikerta). Sivun avaus ilman
+ * talletusta kutsuu startGamea suoraan, jottei esittely toistu pelkästä uudelleenlatauksesta.
+ */
+function uusiMatka() {
+  nollaaLivianEnsikerta();
+  startGame();
 }
 
 // --- äänet ------------------------------------------------------------------
@@ -576,7 +644,8 @@ const AANIKYTKIMET = [
   },
   {
     avain: 'tausta',
-    nimi: 'Äänimaisema',
+    // Valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila").
+    nimi: 'Tila',
     seloste: 'Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys',
     ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 8.6a4.4 4.4 0 0 1 0 6.8"/><path d="M18.2 6.2a7.6 7.6 0 0 1 0 11.6"/>',
     paalla: () => sfx.enabled,
@@ -607,7 +676,7 @@ const naytaKertoja = () => {
 const kaannaKertoja = (paalle) => {
   asetaKertojaTila(paalle ? 'pitka' : 'ei');
   // Pois kesken luennan: kertoja vaikenee heti eikä jää lauseen puoliväliin.
-  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); pysaytaLukija(); }
+  if (!paalle && ui) { stopDiaryVoice(ui); stopIntroVoice(ui); vaiennaAanikytkimella(); }
   ui?.paivitaKaiutinTila?.();
 };
 
@@ -1153,47 +1222,136 @@ naytaLauta();
 
 const menuBtn = document.getElementById('menu-btn');
 const paavalikko = document.getElementById('paavalikko');
+const turnPillNappi = document.getElementById('turn-pill');
 
-const suljeValikko = () => {
-  if (paavalikko.hidden) return;
-  paavalikko.hidden = true;
-  menuBtn.setAttribute('aria-expanded', 'false');
+/*
+ * AVAUS JA SULKU ANIMOIDEN NAPIN KULMASTA (omistaja 29.9.2026,
+ * js/avausanimaatio.js, PR #3605). Kaksi nappia voi avata paneelin
+ * (hampurilainen ja pilleri, ks. pillerivalikkouudistus alla) —
+ * `lahdeNappi` on siis se nappi, jota OIKEASTI napautettiin, ei aina
+ * `menuBtn`, jotta liike lähtee kartalla oikeasta kulmasta kummallakin
+ * napilla.
+ */
+const avaaPaavalikko = (lahdeNappi = menuBtn) => {
+  if (!paavalikko.hidden) return;
+  paavalikko.hidden = false;
+  animoiAvaus(paavalikko, lahdeNappi);
+  menuBtn.setAttribute('aria-expanded', 'true');
+  turnPillNappi.setAttribute('aria-expanded', 'true');
+  ui?.avaaPilleriValikko();
 };
 
-menuBtn.addEventListener('click', () => {
-  paavalikko.hidden = !paavalikko.hidden;
-  menuBtn.setAttribute('aria-expanded', String(!paavalikko.hidden));
+const suljeValikko = (lahdeNappi = menuBtn) => {
+  if (paavalikko.hidden) return;
+  haamuSulku(paavalikko, lahdeNappi);
+  paavalikko.hidden = true;
+  menuBtn.setAttribute('aria-expanded', 'false');
+  turnPillNappi.setAttribute('aria-expanded', 'false');
+  ui?.suljePilleriValikko();
+};
+
+/*
+ * PILLERIVALIKKOUUDISTUS (omistaja 29.9.2026): sama paneeli avautuu nyt
+ * sekä hampurilaisesta että ylärivin pilleristä (#turn-pill) — "kun
+ * pilleriä klikkaa, niin siihen avautuisi nykyiset napit, mitkä ovat
+ * jo nyt hampurilaisessa". Avaus ja sulku kutsuvat myös ui.js:n
+ * avaaPilleriValikko/suljePilleriValikko-metodeja (matkan tiedot,
+ * musiikkitila, Livian tunnereaktio) — ne olivat ennen isoisän
+ * matkalaukun openPassport/close-kuuntelijan työtä.
+ */
+const vaihdaValikko = (tapahtuma) => {
+  const lahdeNappi = tapahtuma?.currentTarget ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahdeNappi); else suljeValikko(lahdeNappi);
   // Kiintiöpalkit (R2, repo, ElevenLabs, pöllö) EIVÄT enää täyty
   // täällä: ne siirtyivät Tilastot-lehden Kiintiöt-sivulle
   // (omistajan tilaus 21.8.2026), ja haku lähtee sen avauksesta —
   // js/tyohuone-tilastot.js osio KIINTIÖT.
+};
+
+menuBtn.addEventListener('click', vaihdaValikko);
+
+// Vaakatilan kartan hampurilainen (js/ylapalkki-vaaka.js; omistaja 2.10.2026 klo 23.07): ei yläpalkkia, valikko
+// avautuu suoraan napin päälle (js/pilleri-paneeli.js ankkuroi paneelin napin kulmaan).
+document.addEventListener(PAAVALIKKO_NAPILTA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde); else suljeValikko(lahde);
+});
+
+// Kartan Linssit-nappi (js/karttaselite.js, omistaja 2.10.2026 klo 13.56): pillerivalikko suoraan Linssit-näkymään.
+document.addEventListener(LINSSIT_AVAA_TAPAHTUMA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde);
+  ui?.naytaPilleriNakyma('linssit', { animoi: false });
 });
 
 /*
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten
  * nappien omat toiminnot pysyvät siellä missä ne on määritelty.
  *
- * POIKKEUS: äänet ovat säätimiä eivätkä komentoja. Niitä napautetaan
- * usein peräkkäin — äänitilan kokeilu — ja jos valikko sulkeutuisi joka
- * kerta, se pitäisi avata uudelleen jokaista säätöä varten. Uusi peli
- * ja ehdotuskanava sen sijaan vievät pois valikosta, joten ne sulkevat
- * sen.
+ * POIKKEUKSET, JOTKA EIVÄT SULJE:
+ *   .kertoja-kotelo   äänet ja kartan pieni liike ovat säätimiä eivätkä
+ *                     komentoja; niitä napautetaan usein peräkkäin.
+ *   .pilleri-pikanapit Linssit›/Aarteet›-napit VAIHTAVAT näkymää, eivät
+ *                     sulje paneelia (omistaja: sama pilleri, eri kasvot).
+ *   .pilleri-alanakyma Linssit- ja Aarteet-näkymien omat rivit ja
+ *                     ‹ Takaisin -nappi: kaksivaiheinen napautus
+ *                     (esikatselu → aktivoi) sulkeutuisi ensimmäisestä
+ *                     napautuksesta, jos tämä yleiskuuntelija sulkisi
+ *                     paneelin. Aktivointi sulkee itse (aktivoiLinssi),
+ *                     ja Aarteet-näkymän "Näytä" avaa oman katselimensa
+ *                     paneelin pysyessä auki sen takana.
  *
- * Varusteet olivat tässä samasta syystä, mutta linssivalitsin muutti
- * matkalaukkuun 18.8.2026 — se ei ole enää valikossa lainkaan.
+ * Uusi peli ja ehdotuskanava VIEVÄT pois valikosta, joten ne sulkevat sen.
+ *
+ * KAAPPAUSVAIHEESSA, EI KUPLINNASSA (korjaus mitatusta viasta
+ * 29.9.2026): Linssit-/Aarteet-rivin oma click-kuuntelija (js/
+ * kokoelmanakyma.js) piirtää koko listan UUDELLEEN saman tapahtuman
+ * KÄSITTELYN AIKANA (replaceChildren). Jos tämä kuuntelija olisi
+ * kuplintavaiheessa (oletus), `event.target` olisi jo ehtinyt irrota
+ * puusta ennen kuin tänne tullaan, jolloin `nappi.closest('.pilleri-
+ * alanakyma')` EI löytäisi esiä enää — poikkeus ei toimisi, ja paneeli
+ * sulkeutuisi jo ensimmäisestä esikatselunapautuksesta (mitattu: rivi
+ * esikatseli itsensä ja paneeli sulkeutui SAMALLA napautuksella).
+ * Kaappausvaihe ratkaisee tämän: se ajetaan ENNEN kuin rivin oma
+ * kuuntelija ehtii piirtää mitään uudelleen.
  */
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  // Lautarivi (.lauta-kotelo on myös .kertoja-kotelo) on säädin kuten
-  // äänet: se ei vie pois valikosta, ja "Vaihdetaan lautaa…" jää
-  // näkyviin latauksen ajaksi.
-  if (nappi.closest('.kertoja-kotelo')) return;
+  // PANEELI-pohja: kytkinryhmä ja Asetukset-nappi vaihtavat tilaa tai näkymää; Ehdota sisältöä vie pois (sulkee).
+  if (!nappi.matches('[data-paneeli-sulje]')
+    && nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma, [data-paneeli-pysy]')) return;
   suljeValikko();
-});
+}, true);
 
+/*
+ * #TURN-PILL JA #PAAVALIKKO KUULUVAT "SISÄPUOLELLE" (omistaja
+ * 29.9.2026, pillerivalikkouudistus, korjaus mitatusta viasta):
+ *
+ *   #turn-pill   paneelin toinen avausnappi, ei paneelin ulkopuolinen
+ *                kohde — ilman tätä poikkeusta pilleriä napauttaessa
+ *                pointerdown sulkisi paneelin juuri ennen kuin
+ *                click-tapahtuma ehtisi avata sen uudelleen kiinni
+ *                olevana, tai sulkisi sen heti uudelleen auki olevana.
+ *
+ *   #paavalikko  ITSE PANEELI. Ennen #paavalikko asui .valikko-kotelon
+ *                (hampurilaiskotelon) SISÄLLÄ, joten sen omat napit
+ *                (Linssit›, Aarteet›, kokoelmarivit, ‹ Takaisin, ...)
+ *                olivat jo .valikko-kotelon jälkeläisiä eikä erillistä
+ *                poikkeusta tarvittu. Kun paneeli nostettiin
+ *                .topbar-actionsin lapseksi (puhelimen hampurilaisen
+ *                piilotus, ks. .topbar-actions position: relative
+ *                css/styles.css:ssä), sen omat napit EIVÄT enää olleet
+ *                .valikko-kotelon jälkeläisiä — pointerdown sulki
+ *                paneelin JOKAISESTA napautuksesta sen SISÄLLÄ ennen
+ *                kuin napin oma click-kuuntelija ehti reagoida
+ *                (mitattu: Linssit›-napin napautus ei koskaan
+ *                vaihtanut näkymää oikealla hiiritapahtumasarjalla,
+ *                vain synteettisellä .click()-kutsulla, joka ei
+ *                laukaise pointerdownia).
+ */
 document.addEventListener('pointerdown', (event) => {
-  if (!event.target.closest?.('.valikko-kotelo')) suljeValikko();
+  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko, .ylapalkki-nappi')) suljeValikko();
 });
 
 document.addEventListener('keydown', (event) => {
@@ -1317,6 +1475,9 @@ const versioPaivitys = document.getElementById('versio-paivitys');
 versioPaivitys?.addEventListener('click', () => haeUusinVersio(versioPaivitys));
 
 document.getElementById('app-version').textContent = APP_VERSION;
+// Nimetön kävijälaskuri (js/kaynti.js): ?omistaja merkitsee laitteen, sitten kerran istunnossa 'avaus'.
+merkitseOmistajaOsoitteesta();
+lahetaKaynti('avaus', APP_VERSION);
 
 /*
  * Kulmaan lyhyt muoto ("v39") — koko päivämäärä on sääntöjen
@@ -1330,7 +1491,8 @@ function paivitaVersioKulma() {
   const numero = `v${APP_VERSION.split('.').pop()}`;
   // Kehittäjätila merkitään numeron perään (omistajan päätös 13.8.2026,
   // kumoaa 8.8. linjan): valikossa merkintä ei häiritse pelinäkymää.
-  versioKulma.textContent = kehittajaTilaPaalla() ? `${numero} · kehittäjä` : numero;
+  // Kehittäjätilassa versio suluissa kuten natiivin "v1.1 (120)" (omistaja 2.10.2026 klo 14.03); pelaajalle ennallaan.
+  versioKulma.textContent = kehittajaTilaPaalla() ? `kehittäjä (${numero})` : numero;
 }
 paivitaVersioKulma();
 
@@ -1377,6 +1539,8 @@ function avaaMuutokset() {
     for (const m of MUUTOKSET) muutoksetLista.appendChild(muutosRivi(m));
     lokiRakennettu = true;
   }
+  // KORTTI-pohja (peruttava ?kortti=vanha), kun lista on rakennettu.
+  if (korttiPohjalla()) puePohjaDialogiksi(muutoksetDialog, { sulje: '#muutokset-sulje' });
   muutoksetDialog.showModal();
 }
 
@@ -1422,6 +1586,7 @@ const nollaaDialog = document.getElementById('nollaa-dialog');
  */
 const SAILYVAT_ASETUKSET = new Set([
   'matkakirja-kehittaja',
+  'matkakirja-omistaja',
   'matkakirja-pollo-kehittajakoodi',
   'matkakirja-puhe-kehittaja',
   'matkakirja-puhe-voima',
@@ -1462,7 +1627,55 @@ async function tyhjennaMuistit() {
   location.replace(osoite.toString());
 }
 
-document.getElementById('newgame-btn').addEventListener('click', () => nollaaDialog.showModal());
+/*
+ * UUDEN PELIN VAHVISTUS KORTTI-POHJALLA (UI-pohjat, omistaja 1.10.2026: ensin NOSTOKORTTI ja KORTTI, myös webiin).
+ * Modaali: sulkeutuu vain napeista. Teksti on sama kuin nollaa-dialogissa. Peruttavissa: KORTTI_VAHVISTUS_POHJA =
+ * false tai ?kortti=vanha (localStorage matkakirja-kortti = 'vanha'), jolloin vanha <dialog> aukeaa kuten ennen.
+ */
+const KORTTI_VAHVISTUS_POHJA = true;
+function vahvistusPohjalla() {
+  try {
+    const valinta = new URLSearchParams(location.search).get('kortti') ?? localStorage.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_VAHVISTUS_POHJA;
+}
+function avaaNollausKortti() {
+  const kortti = luoPohjaKortti({
+    yla: 'Uusi peli',
+    otsikko: 'Aloitetaanko uusi matka?',
+    kappaleet: [
+      { teksti: 'Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat, ääniasetukset ja välimuisti.' },
+      { teksti: 'Tätä ei voi perua.', korostus: true },
+    ],
+    napit: [
+      { teksti: 'Peruuta', tyyppi: 'toiminto', toiminto: 'peruuta' },
+      { teksti: 'Aloita alusta', tyyppi: 'ensisijainen', toiminto: 'aloita' },
+    ],
+  }, {
+    modaali: true,
+    toiminnot: {
+      peruuta: () => {},
+      aloita: (_nappi, pohja) => {
+        const ok = pohja.kortti.querySelector('.tk-nappi--ensisijainen');
+        if (ok) { ok.disabled = true; ok.textContent = 'Tyhjennetään…'; }
+        merkitsePaivitys();
+        tyhjennaMuistit();
+        return false; // kortti jää auki, kunnes sivu latautuu uudelleen
+      },
+    },
+    sulje: (pohja) => setTimeout(() => pohja.el.remove(), 240),
+  });
+  if (!kortti) { nollaaDialog.showModal(); return; }
+  document.body.appendChild(kortti.el);
+  kortti.avaa();
+}
+
+document.getElementById('newgame-btn').addEventListener('click', () => {
+  if (vahvistusPohjalla()) avaaNollausKortti();
+  else nollaaDialog.showModal();
+});
 document.getElementById('nollaa-peru').addEventListener('click', () => nollaaDialog.close());
 document.getElementById('nollaa-ok').addEventListener('click', () => {
   const nappi = document.getElementById('nollaa-ok');
@@ -1473,13 +1686,16 @@ document.getElementById('nollaa-ok').addEventListener('click', () => {
 });
 // Passi kuuluu pelaajalle eikä yksittäiselle pelille, joten nappi kytketään
 // kerran täällä eikä käyttöliittymän mukana joka uudessa pelissä.
-// Kukkaropilleri on samalla matkalaukun nappi (omistajan toive).
-document.getElementById('turn-pill').addEventListener('click', () => ui?.openPassport());
+// PILLERI AVAA SAMAN VALIKON KUIN HAMPURILAINEN (omistaja 29.9.2026,
+// pillerivalikkouudistus, ks. avaaPaavalikko/suljeValikko "--- päävalikko
+// ---" -osiossa yllä): pilleri EI enää avaa isoisän matkalaukkua
+// suoraan, vaan "nykyiset napit, mitkä ovat jo nyt hampurilaisessa".
+turnPillNappi.addEventListener('click', vaihdaValikko);
 // Alakulman huutomerkki: palaute juuri siitä kohdasta peliä, jossa
 // pelaaja on. Kytketään kerran, koska nappi elää pelin ulkopuolella.
 document.getElementById('palaute-kulma').addEventListener('click', () => ui?.naytaPalauteKulmasta());
 document.getElementById('rules-close').addEventListener('click', () => rulesDialog.close());
-document.getElementById('winner-close').addEventListener('click', startGame);
+document.getElementById('winner-close').addEventListener('click', uusiMatka);
 
 // Palvelutyöntekijä tekee pelistä asennettavan ja offline-toimivan.
 // Ohitetaan hiljaisesti, jos sivu on avattu file://-osoitteesta tai hiekkalaatikossa.
@@ -1698,7 +1914,7 @@ if (lehtiPeli) {
   try { localStorage.setItem('matkakirja-kehittaja', '1'); } catch { /* yksityinen tila */ }
   if (ui) ui.destroy();
   nollaaSahke();
-  ui = new UI(pikatiePeli, { onNewGame: startGame, onChange: () => {} });
+  ui = new UI(pikatiePeli, { onNewGame: uusiMatka, onChange: () => {} });
   ui.mount();
   window.matkakirja = { game: pikatiePeli, ui, sfx };
   window.afrikanTahti = window.matkakirja;
@@ -1809,6 +2025,7 @@ if (paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaall
   paivitysDialog.addEventListener('click', (e) => {
     if (e.target === paivitysDialog) paivitysDialog.close();
   });
+  if (korttiPohjalla()) puePohjaDialogiksi(paivitysDialog, { sulje: '#paivitys-sulje' });
   paivitysDialog.showModal();
 }
 
@@ -1952,8 +2169,6 @@ const puheDialog = document.getElementById('puhe-dialog');
 const puhePersoonaValinta = document.getElementById('puhe-persoona');
 const puheAaniValinta = document.getElementById('puhe-aani');
 const puheOhjeKentta = document.getElementById('puhe-ohje');
-const puheNopeusLiuku = document.getElementById('puhe-nopeus');
-const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
 // Voimakkuus siirtyi poistetulta työhuonesivustolta 18.8.2026.
 const puheVoimaLiuku = document.getElementById('puhe-voima');
 const puheVoimaArvo = document.getElementById('puhe-voima-arvo');
@@ -2155,13 +2370,17 @@ function merkitseKytkin(nappi, paalla) {
 
 function paivitaKehittajaValikko() {
   /*
-   * Ratas itse on pelaajan valikko (Äänentasot), joten kotelo ei enää
-   * katoa kehittäjätilan mukana — vain kehittäjän omat ryhmät katoavat.
+   * RATAS ON TAAS PELKKÄ KEHITTÄJÄN VALIKKO (omistaja 29.9.2026,
+   * pillerivalikkouudistus): Äänentasot-ryhmä siirtyi pillerivalikon
+   * Äänet-osioon (index.html #aanivoimat), joten rattaan alla ei ole
+   * enää mitään pelaajalle aina näkyvää — koko kotelo piiloutuu taas
+   * kehittäjätilan mukana, kuten ennen 11.9.2026.
    */
-  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = false;
+  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
   for (const ryhma of kehittajaRyhmat) ryhma.hidden = !kehittajaTilaPaalla();
-  const maailma = kehittajaMaailmaPaalla();
+  const maailma = kehittajaMaailmaValittu();
   merkitseKytkin(maailmaNappi, maailma);
+  paivitaPelaajanakymaNappi(ui);
   if (maailmaNappi) {
     maailmaNappi.title = maailma
       ? 'Maailmanäkymä on PÄÄLLÄ: koko lauta ja kaupunkien laatat näkyvissä '
@@ -2216,6 +2435,32 @@ function paivitaKehittajaValikko() {
   }
 }
 
+/*
+ * STRIIMIÄÄNEN VALINTA muutti kehittäjävalikosta nostokortin säätörattaaseen
+ * (omistaja 27.9.2026 klo 09.3x; js/lukija.js avaaKortinSaadot).
+ */
+
+/*
+ * LUKIJAMITTARI (Fable 27.9.2026 klo 07.2x): viimeisimmän lukijaäänen palan
+ * moottori (xai|openai), lähde ja ensimmäisen tavun aika — todiste siitä,
+ * millä äänellä ja kuinka nopeasti luenta oikeasti lähti. Rivi päivittyy
+ * jokaisesta haetusta palasta (js/puhe.js PUHEMITTARI_TAPAHTUMA).
+ */
+const puhemittariRivi = document.getElementById('kehittaja-puhemittari');
+const PUHEEN_LAHTEET = {
+  generoitu: 'generoitu', reuna: 'reunavälimuisti', r2: 'R2-ämpäri', laite: 'laitteen säilö',
+};
+function naytaPuhemittari(m = viimeisinPuhe()) {
+  if (!puhemittariRivi) return;
+  puhemittariRivi.hidden = !m;
+  if (!m) return;
+  const lahde = PUHEEN_LAHTEET[m.lahde] ?? (m.lahde || '?');
+  puhemittariRivi.textContent = `lukija: ${m.moottori ?? '?'} · ${lahde} · 1. tavu ${m.ekaTavuMs} ms`
+    + ` · valmis ${m.valmisMs} ms · ${m.merkkeja} mrk`;
+}
+window.addEventListener(PUHEMITTARI_TAPAHTUMA, (e) => naytaPuhemittari(e.detail));
+naytaPuhemittari();
+
 /* Valikon avaus ja sulku — sama kaava kuin hampurilaisella yllä. */
 const suljeKehittajaValikko = () => {
   if (!kehittajaValikko || kehittajaValikko.hidden) return;
@@ -2248,7 +2493,7 @@ document.addEventListener('keydown', (event) => {
  * valikko on myös se paikka, josta kytkennän tulos luetaan.
  */
 maailmaNappi?.addEventListener('click', () => {
-  asetaKehittajaMaailma(!kehittajaMaailmaPaalla());
+  asetaKehittajaMaailma(!kehittajaMaailmaValittu());
   paivitaKehittajaValikko();
   ui?.paivitaKehittajaMaailma();
 });
@@ -2376,8 +2621,6 @@ function lataaPuheKentat() {
   }
   puheAaniValinta.value = PUHE_AANIVAIHTOEHDOT.includes(oma.aani) ? oma.aani : '';
   puheOhjeKentta.value = oma.ohje ?? '';
-  puheNopeusLiuku.value = String(puheenNopeus());
-  puheNopeusArvo.textContent = `${puheenNopeus().toFixed(2)}×`;
   if (puheVoimaLiuku) {
     puheVoimaLiuku.value = String(puheenVoima());
     puheVoimaArvo.textContent = `${puheenVoima().toFixed(2)}×`;
@@ -2416,10 +2659,6 @@ if (puheDialog) {
   puhePersoonaValinta.addEventListener('change', lataaPuheKentat);
   puheAaniValinta.addEventListener('change', tallennaPuheKentat);
   puheOhjeKentta.addEventListener('change', tallennaPuheKentat);
-  puheNopeusLiuku.addEventListener('input', () => {
-    const nopeus = asetaPuheenNopeus(Number(puheNopeusLiuku.value));
-    puheNopeusArvo.textContent = `${nopeus.toFixed(2)}×`;
-  });
   // Voimakkuus vaikuttaa heti soivaan ääneen (js/puhe.js vahvistin).
   puheVoimaLiuku?.addEventListener('input', () => {
     const voima = asetaPuheenVoima(Number(puheVoimaLiuku.value));

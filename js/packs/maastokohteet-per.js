@@ -72,7 +72,7 @@ export const MAASTOKOHTEET_PER = [
       + 'omaansa. Nimi Huascarán mainittiin ensi kerran 1850 muodossa Huascan, ja se tulee '
       + 'todennäköisesti alapuolisesta Huashcon kylästä — sen oma nimi tulee ketšuan '
       + 'köyttä tarkoittavasta sanasta waska. Paikalliset kutsuvat vuorta mieluummin '
-      + 'nimellä Mataraju, ancashinketšuaksi "kaksoislumihuiput".',
+      + 'nimellä Mataraju, ancashinketšuaksi ”kaksoislumihuiput”.',
     lahde: 'en-Wikipedia "Huascarán", johdanto-osa ja osio "Names" (tarkistettu 6.9.2026).',
   },
   {

@@ -37,7 +37,7 @@ const pack = packById('maailmankartta');
 if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 if (Array.isArray(pack.texts.schedule)) throw new Error('maailmankartalla on aikataulu: updateSchedule pitää portata');
 // Rosvolaatat ja kaksintaistelu on poistettu pelistä (Raamattu 25.8.2026): koelaudalla ei ryöstäjiä.
-const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 168 };   // 277 kaupunkia (juna 193: + 8 pääkaupunkia, 193b: + Bern, Bratislava, Podgorica)
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 
 const pos = (p) => (p.pos.type === 'city' ? `c:${p.pos.city}` : `e:${p.pos.edge}:${p.pos.idx}`);

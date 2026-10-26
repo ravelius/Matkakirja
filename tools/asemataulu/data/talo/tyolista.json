@@ -1,0 +1,450 @@
+{
+ "kysymykset": [],
+ "rivit": [
+  {
+   "edistys": 2,
+   "lisa": "Pelikoodari, Codex",
+   "otsikko": "Muistokuplat ensin pelin rikottaville esineille",
+   "teksti": "Pyysit 19.52: ensin muistokupla jokaiselle juoksupelin nykyiselle rikottavalle 3D-esineelle (noin 8). Sen jälkeen mietitään, mitkä muut sopisivat rikottaviksi: pienet tai vaikeasti rikottavat eivät sovi.",
+   "tila": "työn alla",
+   "tilanne": "Kahdeksan kuplakuvaa valmiina ja tarkistettu; arkit odottavat valintaasi. Tekstit valmiit, Pelikoodari korjasi arvonnan junaan 210 ja kytkee kuvat valintasi jälkeen.",
+   "ts": 1792601566290
+  },
+  {
+   "edistys": 3,
+   "lisa": "Linssiseppä",
+   "otsikko": "Kameratyylit omistajan kanssa (omistaja palaa)",
+   "teksti": "Pyysit 19.27: kamerat tarvitsevat tarkemman selityksen, palaat niihin itse.",
+   "tila": "pidossa",
+   "tilanne": "Selitykset valmiina (docs/tuotanto/suunta/kamera-selitykset.md, 9 kohtaa, #5168). Odottaa, että palaat niihin.",
+   "ts": 1792600085682
+  },
+  {
+   "edistys": 5,
+   "lisa": "Päätoimittaja → kaikki roolit",
+   "otsikko": "Kaikki työlistan rivit etenevät matkan aikana (pyyntö 17.20)",
+   "teksti": "Kysyit 17.20, voiko muitakin työlistan asioita viedä aktiivisesti eteenpäin. Matkasi ajan (ma 26.10. asti) kaikki Työn alla -rivit etenevät rinnakkain, Mac ja iso iPad yötä päivää; pidossa ja myöhemmin pysyvät tauolla; sinua koskevat kysymykset odottavat Keskustelukanavalla.",
+   "tila": "valmis",
+   "tilanne": "Tehty 17.3x: kaikki roolit käynnissä tai levossa tyhjällä jonolla; rivit etenevät omilla riveillään.",
+   "ts": 1792594457592,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 0,
+   "lisa": "Natiiviseppä, Julkaisija, Valoseppä, Lavastaja, Laitetestaaja",
+   "otsikko": "Pelitesti TestFlightiin (pyyntö 16.14)",
+   "teksti": "Pyysit 16.14: TestFlight, kun 16.03-korjaukset ja grafiikan parannukset ovat valmiit. Iso iPad ja Mac vapaasti käytössä maanantaihin.",
+   "tila": "työn alla",
+   "tilanne": "Kierros 33 viimeinen korjauskierros (loppukortti, piilossa, käännöskohta), sitten lukitus ja TestFlight.",
+   "ts": 1792588521125
+  },
+  {
+   "edistys": 5,
+   "lisa": "Pelikoodari, Valoseppä, Laitetestaaja",
+   "otsikko": "Juoksupelin korjaukset (palaute 16.03)",
+   "teksti": "Pyysit 16.03: latauskuva kokonaisena eikä suurennettuna; musiikki soi koko avauslennon; vihreä ei värise missään; ulkona kamera matalammalla ja lähempänä; isolla aukiolla ei kääntyilyä; sisätiloissa kamera ylempänä, katto pois ja pelaaja aina näkyvissä.",
+   "tila": "valmis",
+   "tilanne": "Kaikki viisi korjattu, junassa 209.",
+   "ts": 1792587853836,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 0,
+   "lisa": "Lavastaja, Valoseppä, Laitetestaaja",
+   "otsikko": "Juoksupelin grafiikka latauskuvan tasolle",
+   "teksti": "Päätit 15.33: grafiikan parannus alkaa heti korjausten rinnalla. Mallina 7 hyväksyttyä havainnekuvaa ja latauskuva. Ensin muureihin harmaa kivinen alaosa, sitten pinnat ja valo. Peliin vain iPad-mittauksen läpäisseenä; korjattu versio tulee sinulle odottamatta grafiikkaa.",
+   "tila": "työn alla",
+   "tilanne": "Kierros 1 (kivinen alaosa) Lavastajalla ja kierros 2 (pinnat ja valo) Valosepällä; tavoite isolle iPadille vielä tänään.",
+   "ts": 1792586076498
+  },
+  {
+   "edistys": 2,
+   "lisa": "Keskustelukanava, Codex, Pelikoodari",
+   "otsikko": "Muistokuplien korjaus",
+   "teksti": "Pyysit 08.21: näytä pelin nykyiset muistokuplat; ne toistivat samaa asentoa ja osassa kädet olivat liian suuret. Tavoite: jokainen kupla omanlaisensa (eri asento ja kuvakulma), luontevat mittasuhteet. Korjauslista kanssasi ennen uusia kuvia.",
+   "tila": "pidossa",
+   "tilanne": "22 uutta kuvaa tarkistettu ja arkeilla; doucai-kuppi uusittu. Peliin vasta valintasi jälkeen; ensin kahdeksan rikottavan esineen kuplat.",
+   "ts": 1792596436985
+  },
+  {
+   "edistys": 1,
+   "lisa": "Päätoimittaja",
+   "otsikko": "Säännöt vain Raamattuun",
+   "teksti": "Päätit 22.11: jokainen sääntö kirjoitetaan kokonaan vain Raamattuun; muistissa, aloitusviesteissä ja muistutuksissa enintään yksi lyhyt viittausrivi. CLAUDE.md-tiedostot karsii Keskustelukanava. Päätit 22.24: lisäksi jokainen rooli lukee aloittaessaan Raamatusta vain oman lukulistansa, ja roolien kansiot pidetään ajan tasalla.",
+   "tila": "työn alla",
+   "tilanne": "Muistin ja aloitusviestien säännöt siirretty Raamattuun (20.10.). Lukulistojen ja kansioiden työkalut kesken; jatkuu pe aamuna toisella tilillä (viikkoraja).",
+   "ts": 1792614130448
+  },
+  {
+   "edistys": 1,
+   "lisa": "Päätoimittaja, Natiivi-UI, Äänittäjä, Lavastaja, Linssiseppä",
+   "otsikko": "Selkeät työtavat: tuotantopohjat sitoviksi",
+   "teksti": "Päätit 22.38: jokaiselle työtyypille (esim. uusi peli, taidemuseon maa, uusi linssi) yksi valmis pohja, jota kaikki käyttävät. Seitsemän luonnosta viimeistellään, vanhat ohjeet yhdistetään, lautapeleille tehdään pohja.\n\nYhdistetty tähän: Tuotantoputkien työtapojen läpikäynti.",
+   "tila": "työn alla",
+   "tilanne": "18.02: Hyväksyit jaon. Ohjeet kootaan neljään osaan: suunta (taide, ääni, kerronta, kamera esimerkein), tekotavat aloittain, lyhyet reseptit tuotetyypeille ja yksi tuotannonohjaus, jossa luvat ja vaiheet ovat kerran. Jokaiselle osalle on nimetty tekijä. Ensimmäisenä näet taiteen suunnan: hyväksytyt ja hylätyt esimerkkikuvat (Projektiseppä kokoaa, Valoseppä ja Päätoimittaja tarkistavat). Lupalistat (Tarkista ennen) suljettiin; niiden sisältö kootaan tuotannonohjaukseen.",
+   "ts": 1792595710746
+  },
+  {
+   "edistys": 5,
+   "lisa": "Pelikoodari, Lavastaja",
+   "otsikko": "Kielletyn kaupungin puuttuvat laatat",
+   "teksti": "Huomasit 17.42: Kielletystä kaupungista puuttuu laattoja alusta ja aukion toisen puolen portaiden edestä.",
+   "tila": "valmis",
+   "tilanne": "Valmis junassa 209: taustamalli v13, muurien katot (v3), lattialaattojen vaihtelu (v11).",
+   "ts": 1792594457592,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 5,
+   "lisa": "Linssiseppä, Natiivi-UI, Karttaseppä, Äänittäjä",
+   "otsikko": "Korjauksia muualle peliin (Louvre, karttanostot, ISS)",
+   "teksti": "Pyysit 00.40: tärkeimpänä Mona Lisan lähestyminen (taulu ja teksti ensin, sitten yksi jatkuva zoomi kehysten täyttämään lähikuvaan, sama tapa kaikkiin maalauksiin ja vartija hyppyä vastaan); museon valikot, hiljaisemmat askeleet salikaiulla; karttanostojen Auto-kuva, yläpalkki, M-kirjain ja värilliset pisteet; ISS:n musta siirtymä, revontulet, ukkonen ja napautusalueet.",
+   "tila": "valmis",
+   "tilanne": "Valmis: TF 207: Mona Lisan lähestyminen, museon valikot ja askeleet, karttanostot, ISS-siirtymä ja revontulet; TF 208.",
+   "ts": 1792532634182,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 2,
+   "lisa": "Pelikoodari, Valoseppä, Lavastaja, Codex, Sisältökirjuri, Äänittäjä, Natiivi-UI",
+   "otsikko": "Juoksupeli täysin valmiiksi",
+   "teksti": "Päätit 22.37: tärkeintä on saada juoksupeli täysin valmiiksi mahdollisimman pian; videot siirtyvät päivälle. Valmis = 1) grafiikka (leveä näkymä, taivas, usva, horisontti), 2) laajempi juostava alue, 3) joka juoksu erilainen ja loputon, 4) Puyin liikkeet, 5) kokoelmat, nimetyt paikat ja pääportti maalina (päätit 10.13), 6) musiikki ja liu'un ääni, 7) Pelit-valikossa.",
+   "tila": "työn alla",
+   "tilanne": "18.02: Päätit: ei lisää musiikkia; tasoilla 2+ soivat nykyiset kappaleet (Pelikoodari kytkee).\n\n21.10. klo 10.15: isossa iPadissa uusin versio (lähtö pienten huoneiden kujalta, aukion laatat tasattu, peukalomerkit läpinäkyvämmät, drone syvemmälle oviaukoista, uudet osumaäänet). Päätit 10.13: maaliksi pääportti – työn alla.",
+   "ts": 1792595710746
+  },
+  {
+   "edistys": 5,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "Asemataulu yhdeksi tarkaksi työnkuluksi",
+   "teksti": "Pyyntösi 19.51: Asemataulu yhdeksi tarkkaan kuvatuksi työnkuluksi, joka ei hajoa tilinvaihdossa.\n\nYhdistetty tähän: Asemataulun Boost ja junien otsikot.",
+   "tila": "valmis",
+   "tilanne": "Valmis 21.10. 18.1x: taulu päivittää koodinsa ja ohjeensa mainista itse joka kierroksella ja tarkistaa etenemisen; vanha tunniste pois aloitusviestistä.",
+   "ts": 1792595744211,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 1,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "Pyörivä 3D-aarre löytöhetkeen (kokeilu: Kolme veljestä)",
+   "teksti": "Pyyntösi 16.45: löytyessään aarre kääntyy hitaasti 3D-mallina oman kotiympäristönsä edessä. Päätit: ensin yksi kokeilu, Kolme veljestä; lupa tasan 3 Tripo-generointiin.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa Codexia (posti aamulla).\n\nAiempi tilanne: Hyväksyit mallikuvan 17.21. Codex tekee nyt pajan taustakuvan (toimii pystyssä ja vaakassa) ja Tripolla riipuksen 3D-mallin (tasan 3 generointia). Sen jälkeen kuvapari sinulle mallikuvasta ja pelistä, pysty ja vaaka. Muut kuusi aarretta vasta hyväksytyn kokeilun jälkeen. Ei junaan 204.",
+   "ts": 1792527288045
+  },
+  {
+   "edistys": 5,
+   "lisa": "Pelikoodari",
+   "otsikko": "Mac-sovellukseen lento näppäimillä",
+   "teksti": "Pyysit 11.27: Macilla lento nuolinäppäimillä ja WASD-näppäimillä (korvaa vasemman ja oikean ohjaimen).",
+   "tila": "valmis",
+   "tilanne": "Valmis junassa 209 (todennettu simulla 21.10. yöllä). Toimii simulla rungossa 209 (21.10. yöllä): W/↑ nostaa nokkaa, D/→ kallistaa ja kääntää, irti päästäessä kone oikaisee. Oikeilla näppäimillä Macilla kokeillaan, kun työpöytä on vapaa.",
+   "ts": 1792537081719,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 5,
+   "lisa": "Äänittäjä, Keskustelukanava",
+   "otsikko": "Puyin ääni nuoremmaksi",
+   "teksti": "Pyysit 11.02: paras lause kokeillaan vielä muilla hahmoäänillä, jotta Puyi kuulostaa nuoremmalta lapselta ilman äänenmurrosta.",
+   "tila": "valmis",
+   "tilanne": "Valmis: Ääni lukittu 08 Kavya 19.10. 11.23, alut ja 17 huutoa hyväksytty. Jäännös, huutojen venytys, on rivillä #67.",
+   "ts": 1792532634182,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 0,
+   "lisa": "Codex, Keskustelukanava",
+   "otsikko": "Muistokuplat aidoissa paikoissa",
+   "teksti": "Pyysit 10.58: kuvat aidoissa paikoissa, vaaleat tilat, vanhat harmaahiuksiset opettajat, läheltä pehmeällä syväterävyydellä ja kevyellä vastavalolla.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa Pelikoodaria juoksupelin jälkeen.\n\nAiempi tilanne: Hyväksyit 12.32 v4-tyylin ja leveän häivytyksen: Pelikoodari asettaa häivytyksen peliin (juna 204), Codex tekee loput 51 kuplaa erissä. Erä A: 08 ja 09 hyväksytty, 10 uusintaan. Ilman kuvaa kuplaa ei enää näytetä (Pelikoodari 785c7941c); hyväksytyt kuvat peliin seuraavaksi.",
+   "ts": 1792527288045
+  },
+  {
+   "edistys": 5,
+   "lisa": "Valoseppä",
+   "otsikko": "ISS: vain asemalta näkyvät kohteet, harmaa alue ja EXTEND-nappi",
+   "teksti": "Päätöksesi 01.17, 01.18 ja 01.21: älä näytä kohteita, joita asemalta ei oikeasti näe. Pienoismaapallolla radan ulottumattomissa oleva alue kevyesti harmaana, eivätkä piirretyt radat osu harmaalle. Suurennetun pallon päälle EXTEND-nappi, oletuksena pois; päällä harmaa katoaa, radat voivat ulottua pidemmälle ja kaikki kohteet ja pääkaupungit ovat valittavissa.",
+   "tila": "valmis",
+   "tilanne": "Valmis: TF 201 ja TF 203.",
+   "ts": 1792532634182,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 5,
+   "lisa": "Natiiviseppä",
+   "otsikko": "Koko ruudun valikoissa 3D lepää (akku)",
+   "teksti": "Havaintosi 23.06: Louvren aloitusnäkymä kulutti paljon akkua, koska sali ja Pariisin 3D-kaupunki piirtyivät taustalla.",
+   "tila": "valmis",
+   "tilanne": "Valmis: Juna 201: KokoSivuPeitto (proto 86064a98f), museon aloitus ei piirrä 3D:tä. Valinnainen: iPad-akkumittaus.",
+   "ts": 1792532634182,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 2,
+   "lisa": "Linnanrakentaja, Valoseppä, Linssiseppä",
+   "otsikko": "Kartan 3D-maamerkit yhtenäiseksi sarjaksi",
+   "teksti": "Pyyntösi 19.27: kaikki kartan 3D-elementit yhdenmukaisen värisiä ja kokoisia – yksi seepiapaletti, sama koko ruudulla, sama valo ja maavarjo, kuin lautapelin nappulat; pelaajan nappula ja pallot pitävät värinsä, Pulu on hahmo.",
+   "tila": "työn alla",
+   "tilanne": "21.10. 17.25: Matterhorn, Kinderdijk ja Colosseum (kolme kaarikerrosta + attika) kuvat hyväksytty; Codex tekee 3D-mallit, sitten vertailuarkki (koodiversio | Codex) sinulle.",
+   "ts": 1792564790527
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "ISS: tulivuorenpurkaukset, salamat, pimennyksen varjo, tähdenlennot ja hurrikaani",
+   "teksti": "Päätöksesi 20.05: kohdevalikkoon ryhmä Tulivuoret – Sarytšev 2009, Etna 2002, Raikoke 2019, Hunga Tonga 2022 ja Reykjanes yöllä, kukin purkauksen todellisena hetkenä.\n\nYhdistetty tähän: ISS: salamat, pimennyksen varjo, tähdenlennot ja hurrikaani.\nPäätöksesi 20.07: ISS-näkymään animoituina salamat ja keijut myrskyn yllä, Kuun varjo Maan yllä (12.8.2026), Perseidit aseman alapuolella ja hurrikaanin silmä.",
+   "tila": "työn alla",
+   "tilanne": "Valoseppä tekee ensin tulivuoret, sitten salamat, varjon, tähdenlennot ja hurrikaanin; kuvapari tai video sinulle ennen kytkentää.",
+   "ts": 1792560146139
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "Kaukoputki Chilen Atacamaan",
+   "teksti": "Päätöksesi 18.10: tehdään, mutta odottaviin. Liukuva lähennys koko taivaasta Hubblen ja Webbin kuviin, valon matka-aika jokaisesta kohteesta.",
+   "tila": "myöhemmin",
+   "tilanne": "Päätit 21.10. klo 00.51: ei vielä, ydin ensin.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "Louvre havainnekuvia kohti",
+   "teksti": "Päätöksesi 17.17: v2d pohjaksi ja jatko tavoiteluuppina omasta aineistosta (ei Googlen näkymästä). Päätöksesi 17.22: uudet 3D-mallit tilataan jatkossa Codexilta; Louvre tehdään vielä Claudella vertailuksi. Yhdistetty: lähikuvat (Richelieu, Cour Carrée, pyramidin kiveys) ja siistiminen.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa Codexin tavoitekuvia (posti aamulla).\n\nAiempi tilanne: Linnanrakentaja tilaa Codexilta tavoitekuvat pallokierroksen kulmista ja lähikuvat julkisivuista; kierros kerrallaan vertailu ja arvioija. Näet uuden kuvaparin ennen peliin kytkemistä. Linnanrakentaja kirjaa kierrokset, keston, kulutuksen ja lopputuloksen, ja ne verrataan Codexin seuraavaan maamerkkiin.\n\nJunassa 197: uusi muoto, lämmin kivi myös varjossa, pyramidin möhkäle poissa (hyväksyit 18.27). Koristelu ja vähemmän oranssia jatkuvat.\n\nValmiina junaan 200 (hyväksyit 15.18):\n– pihan altaat pyramidin ympärillä vaalean sinertäviä (ennen lähes mustia)\n\nTyön alla (Valoseppä):\n– altaiden heijastukset (pyramidi ja taivas)\n– Ludvig XIV:n ratsastajapatsaalle valo (nyt musta siluetti); kuvapari sinulle",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 3,
+   "lisa": "Linssiseppä, Valoseppä, Siirtoseppä, Linnanrakentaja",
+   "otsikko": "Bugikorjaukset",
+   "tila": "työn alla",
+   "tilanne": "21.10. 17.5x: Linssisepän bugilistalla ei avoimia. Juoksupelin äänistä 14 korvataan säännön mukaisilla (Äänittäjä, aanet-v7).\n\nKorjatut:\n– Tukholma ei lukitu väärään vastaukseen (juna 182)\n– Pariisin saapumisesitys, kippi, Notre-Dame, Concorde ja maakortin lippu (TF 181)\n– maan lippu näkyy taas kartalla korkeimmalla laadulla (juna 183)\n– kaupunkiin saapuessa ei kelluvia puita eikä harmaita laattoja (juna 183)\n– kartassa ei aukkoja kipistä palatessa (TF 185)\n– kehittäjätilan kohdekaupungit näkyvät (TF 185)\n– maakartalla ei muiden maiden eläinmerkkejä (TF 185; verkossa 186)\n– kipistä palatessa pelinappula näkyy kartalla (TF 186)\n– erikoismallien nimet väistävät kaupunkipalloja (TF 186)\n– keskeytetty kerronta: himmennetty kaiutin ja taukomerkki (TF 184)\n– Mac: kaupunkilehden vieritys ei enää liian nopea (TF 184)\n– kehittäjätila: kaikki pelit ja linssit näkyvissä, Takaisin palaa oikeaan paikkaan (TF 184)\n\nTyön alla:\n– Olavinlinna: tallennuksesta jatkaminen (ks. Olavinlinna)\n– Amsterdamiin saapuessa ei tullut introa (TF 188): lyhyt saapumisesittely soi testeissä joka kerta; pitkä esittely on vain Pariisissa, Ateenassa ja Tukholmassa — kysytty sinulta\n– museossa taaksepäin astuminen ei enää heilu sisään-ulos (juna 189, TestFlightissa)\n– museossa teoslistan kautta siirtyminen rauhallinen ja pehmeä (juna 189, TestFlightissa)\n– museon tauko-nappi pysäyttää kertojan (juna 189, TestFlightissa)\n– museon salilistassa napautus ei aina avaa salia heti pyyhkäisyn jälkeen (myös TF 188): selvitetään (Natiivi-UI)",
+   "ts": 1792594457592
+  },
+  {
+   "edistys": 0,
+   "lisa": "Natiiviseppä",
+   "otsikko": "Android-versio",
+   "teksti": "Pelin oma Android-sovellus Google Playhin. Android-pelaajat voivat jo nyt pelata selaimella osoitteessa matkakirja.app, myös retkikunnassa.",
+   "tila": "myöhemmin",
+   "tilanne": "Päätit 21.10. klo 00.51: ei vielä, ydin ensin.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 0,
+   "lisa": "Karttaseppä, Linssiseppä",
+   "otsikko": "Linssi: Euroopan linnat",
+   "teksti": "Linnat syttyvät kartalle aikajanalla rakennusvuoden mukaan, mukana Olavinlinna ja Allymes (aineisto Wikidata, vapaasti käytettävä).",
+   "tila": "myöhemmin",
+   "tilanne": "Päätit 21.10. klo 00.51: ei vielä, ydin ensin.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 0,
+   "lisa": "Valoseppä",
+   "otsikko": "Linssi: Jos Maa lakkaisi pyörimästä",
+   "teksti": "Pääkartalla säädetään Maan pyörimistä hitaammaksi tai nopeammaksi, ja meret siirtyvät oikean merenpohjan mukaan.",
+   "tila": "pidossa",
+   "tilanne": "Päätit 21.10. klo 00.51: pysyy tauolla.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 4,
+   "lisa": "Codex, Päätoimittaja",
+   "otsikko": "Koekaupunki Peking",
+   "teksti": "Peking omina malleina ja omalla vedellä, vain sinulle piilokaupunkina (junasta 197); mallit paranevat tavoitekuvien mukaan.",
+   "tila": "pidossa",
+   "tilanne": "Tauolla (keskitys 10.10.): Codex jatkaa omassa sessiossaan, Claude kytkee tauon jälkeen.\n\nValmiina:\n– erä 1/5: vertailu oikeaan ilmakuvaan, pienet katot säilyvät kauempaakin; hyväksytty välivaiheena (13.10.)\n– erät 2–4/5: Taihedianin terassi, Tiananmen, Jingshanin paviljongit, Beihain stupa ja hutongien talot; hyväksytty välivaiheina puolestasi (14.10.)\n– erä 5/5: lehtipuut, oikea maasto ja keltaiset katot; hyväksytty (14.10.)\n\nTyön alla:\n– Codex jatkaa Pekingiä omassa rinnakkaisessa sessiossaan, samaan aikaan kuin muut kuvatyöt\n– Codex jatkaa mallinnusta päätöksen mukaan: ensin vertailu oikeaan ilmakuvaan, sitten Kielletty kaupunki, Taivaallisen rauhan portti, Jingshan ja Beihai, hutongit sekä puut ja pinnat; tarkistan jokaisen erän\n– peliin vasta, kun tauko päättyy (Claude kytkee)\n– erä 6: julkisivut kaikkiin rakennuksiin 64 tekoälyllä tehdyllä pekingiläisellä pinnalla (neljä versiota jokaisesta 16 talotyypistä) ja aukiolle kivilaatoitus (Codex)",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 4,
+   "lisa": "Linnanrakentaja, Valoseppä, Siirtoseppä, Laitetestaaja",
+   "otsikko": "Olavinlinna",
+   "teksti": "Palatsin osuus, linnan nykyasu ja pelattavuus.",
+   "tila": "pidossa",
+   "tilanne": "Päätit 21.10. klo 00.51: tauko jatkuu.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 0,
+   "lisa": "",
+   "otsikko": "Seuraava linna: Allymes",
+   "teksti": "Uusi linna nykyisten töiden jälkeen.",
+   "tila": "myöhemmin",
+   "tilanne": "Ei aloitettu."
+  },
+  {
+   "edistys": 0,
+   "lisa": "Valoseppä",
+   "otsikko": "Olavinlinnan väki Tripolla",
+   "teksti": "Päätit 11.34: koko linnan väki 3D-malleiksi kerralla, kun linnan tauko päättyy (Tripo-tilaus voimassa 18.11. asti).",
+   "tila": "pidossa",
+   "tilanne": "Päätit 21.10. klo 00.51: tauko jatkuu.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 3,
+   "lisa": "Päätoimittaja, Natiivi-UI, Linssiseppä, Pelikoodari",
+   "otsikko": "Yhtenäiset napit, tyylikirja ja linssien ja pelien toimintalogiikka",
+   "teksti": "Linjasit 22.58: napit, tyylikirjat sekä linssien ja pelien toimintalogiikka yhtenäisiksi. Pelaaja oppii kerran, miten linssit ja pelit toimivat: sisään ja ulos, samat napit samoissa paikoissa, sama ratas, samat kortit ja luenta.",
+   "tila": "työn alla",
+   "tilanne": "Junassa 209: ikkunoiden ja korttien yhteiset osat (Natiivi-UI, ulkonäkö ennallaan).\n\nPäätit 23.17 kaikki suositukset. Junaan 209: Poistu ☰:n alimpana kaikissa linsseissä, lautapelien Säännöt ja Poistu ☰:ssä, tuloskortin jatko avauspaikan mukaan, tyylikirja päivittyy itsestään (Natiivi-UI).\nTyön alla: sama ⚙ kaikissa linsseissä ja lentopelin Poistu (Natiivi-UI); juoksupeli junan 209 jälkeen (Pelikoodari); Olavinlinna tauolla.",
+   "ts": 1792535428761,
+   "vahti": "ei päivitystä 27 h"
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Aamun yhteenveto karsinnasta",
+   "teksti": "Kerron omistajalle aamulla karsinnan tuloksen: määrät, kansiot ja ohjeiden kokeen tulos.",
+   "tila": "jonossa",
+   "tilanne": "Odottaa Päätoimittajan yöajoa; 21.10. aamulla.",
+   "ts": 1792528306860
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "CLAUDE.md-tiedostojen karsinta",
+   "teksti": "Karsin koneen yhteisen ja projektin CLAUDE.md-tiedostot (PR), kun Päätoimittaja lähettää listan.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa PR #5121:n hyväksyntää (CLAUDE.md muutetaan vain omistajan omalla viestillä). Koneen yhteinen CLAUDE.md karsittu.",
+   "ts": 1792594457592
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Codexin toimitusten tarkistus",
+   "teksti": "Tarkistan Codexin toimitukset ja postilaatikon; jumista toimikortti omistajalle.",
+   "tila": "jonossa",
+   "tilanne": "21.10. aamulla.",
+   "ts": 1792528306862
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Pulu v3:n ulkoasu omistajalle",
+   "teksti": "Lavastajan kuva omistajalle ja kortti; sen jälkeen Codexin linturigi.",
+   "tila": "jonossa",
+   "tilanne": "21.10.",
+   "ts": 1792528306863
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Junan 209 kuvaparit omistajalle",
+   "teksti": "Tavoitekuva ja pelikuva rinnakkain, ja rehellisesti mitä puuttuu.",
+   "tila": "jonossa",
+   "tilanne": "Kun kuvat ovat valmiina.",
+   "ts": 1792528306864
+  },
+  {
+   "edistys": 1,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Pohjien läpikäynnit omistajan kanssa",
+   "teksti": "Tuotantopohjat käydään omistajan kanssa läpi yksi kerrallaan; lisäksi lautapelien uusi pohja.",
+   "tila": "työn alla",
+   "tilanne": "Korvautunut studiojaolla (päätit 18.02): A suunta, B tekotavat, C reseptit ja D ohjaus mainissa; omistajan päätökset 19.43–19.45 kirjattu. Puuttuvat osat jaetaan pe aamuna toisella tilillä.",
+   "ts": 1792614981944
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Myöhemmin omistajalta kysyttävät",
+   "teksti": "Seuraava museomaa ja Italia, seuraava linssi ja uusi kehys (kun alkamassa), kokoelmakortti (kuvan kanssa), huutojen venytys (ääninäytteen kanssa), kipin 20 kappaleen soittolista ja jazz-piano (äänisivulla).",
+   "tila": "myöhemmin",
+   "tilanne": "Kysytään, kun kukin on ajankohtainen.",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 5,
+   "lisa": "Päätoimittaja, Lavastaja, Valoseppä, Linssiseppä",
+   "otsikko": "Taidemuseoiden yhteiset osat",
+   "teksti": "Päätit 23.4x: Louvren penkit, teoskyltit ja kävijät kaikkiin museoihin (myös Amsterdam), kalusteet yhteisestä kirjastosta ja valon valmiit tyypit uusille saleille. Eri maihin omat ihmiset, mutta kaikilla sama tapa liikkua.",
+   "tila": "valmis",
+   "tilanne": "Valmis: museoiden yhteiset osat rungossa (Lavastaja 4186554cd); Amsterdam Louvre-tasolla (Linssiseppä c2e3aef04).",
+   "ts": 1792594457592,
+   "valmistui": "21.10."
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava → Päätoimittaja",
+   "otsikko": "Museoiden lentävä kamera ja yhteinen liikesääntö",
+   "teksti": "Pyysit 00.03 ja 00.05: museoiden kävelijästä tulee lentävä kamera. Se on nopeampi ja pehmeä, kiihdyttää ja hidastaa pehmeästi kaikilla akseleilla, kallistuu hieman mutkissa, eikä siirtymissä ole mustaa feidausta. Vierekkäisten taulujen välillä kamera peruuttaa ja liukuu sivulle. Kävijät sijoitetaan niin, ettei kameran tarvitse väistellä. Samalla selvitetään, mikä kameran liikkeissä on yhteistä peleille ja linsseille ja missä käytetään liitännäisiä.",
+   "tila": "työn alla",
+   "tilanne": "Työstät tätä ensin Keskustelukanavan kanssa: kartoitus kameran yhteisistä osista ja liitännäisistä (Cinemachine, Splines) on käynnissä, ja tavoitekuvaus tulee sen jälkeen. Toteutusta ei ole aloitettu.",
+   "ts": 1792530397237,
+   "vahti": "ei päivitystä 28 h"
+  },
+  {
+   "edistys": 0,
+   "lisa": "Keskustelukanava",
+   "otsikko": "Isoisän uni v3: suunnittelu omistajan kanssa",
+   "teksti": "Päätit 21.10. klo 00.51: unen suunnittelu on kesken eikä sitä tehdä yksin; Keskustelukanava suunnittelee sen kanssasi myöhemmin. Yhdistetty: uni v3 (värikuvat isoisän matkoilta) ja aarrejahdin alun uni (unikuvat ennen aloituslentoa).",
+   "tila": "myöhemmin",
+   "tilanne": "Matkan jälkeen. Kysyit 16.2x Scenarion tekoälyvideosta (Blender-liitännäinen, Unity-versio tulossa): kokeilu unen tyylittelyyn vasta unen suunnittelussa matkan jälkeen; vaatii Scenarion tilin ja krediitit (ostot tauolla). Ei toimia nyt.",
+   "ts": 1792533148070
+  },
+  {
+   "edistys": 0,
+   "lisa": "Codex, Natiivi-UI",
+   "otsikko": "Alkuintro: Ateenan, Košicen ja Vilnan kuvat",
+   "teksti": "Viimeiset kolme kaupunkia saapumisintron havainnekuviin.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa Codexin kuvia.",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 0,
+   "lisa": "Sisältökirjuri, Pelikoodari",
+   "otsikko": "Aarretehtävät: Bern ja 13 pääkaupunkia",
+   "teksti": "14 valmista tehtävää tulee näkyviin, kun kaupungit ovat pelissä.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa kaupunkeja peliin (Muut Euroopan pääkaupungit).",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 0,
+   "lisa": "Karttaseppä, Sisältökirjuri",
+   "otsikko": "Muut Euroopan pääkaupungit peliin",
+   "teksti": "Varsova, Tallinna, Sarajevo, Vaduz ym.: tiedot valmiina, 3D-kartta ei vielä riitä.",
+   "tila": "pidossa",
+   "tilanne": "Odottaa riittävää 3D-karttaa.",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 0,
+   "lisa": "Karttaseppä",
+   "otsikko": "Tarkka maasto vuorille",
+   "teksti": "Alppien ja Norjan 1–2 m maasto on valmiina ajoon.",
+   "tila": "pidossa",
+   "tilanne": "Tehdään, kun peliin tulee matala vuoristonäkymä.",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 0,
+   "lisa": "Valoseppä",
+   "otsikko": "Rakettivideo pelistä (meri ja valas)",
+   "teksti": "Pyysit 19.10. 17.26 ja 21.10. 00.52: raketin laukaisu ja valaan hyppy yhtenä videona pelin omasta kohtauksesta, savu täysillä; korvaa meri- ja valasrivit.",
+   "tila": "jonossa",
+   "tilanne": "Yksi yö matkan aikana juoksupelin jälkeen; näet valmiin näytteen.",
+   "ts": 1792533339235
+  },
+  {
+   "edistys": 1,
+   "lisa": "Valoseppä",
+   "otsikko": "Raketin nousu kevyemmäksi iPadilla",
+   "teksti": "Raketin nousussa iPad 13:n muisti nousee 4,3 Gt:hen ja iPad varoittaa kolmesti (ei kaatumista). Tavoite enintään 3,5 Gt ilman näkyvää laadun laskua.",
+   "tila": "työn alla",
+   "tilanne": "21.10. 02.0x: Natiiviseppä mittasi (209 parempi kuin 208); Valoseppä keventää pallon laattoja nousun ajaksi, sitten uusi mittaus.",
+   "ts": 1792537081719,
+   "vahti": "ei päivitystä 26 h"
+  }
+ ],
+ "ts": 1792586076498,
+ "vahti": "3 vanhaa riviä"
+}

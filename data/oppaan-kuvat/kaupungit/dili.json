@@ -1,0 +1,322 @@
+{
+ "kaupunki": "dili",
+ "kaupunkiQ": "Q9310",
+ "kohteet": [
+  {
+   "q": "Q680813",
+   "nimi": "Cristo Rein patsas",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -8.52053,
+   "lon": 125.60832,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cristo Rei (31988940360).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristo_Rei_(31988940360).jpg?width=1280",
+     "tekija": "Bro. Jeffrey Pioquinto, SJ from Dublin, Ireland, Philippines",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cristo_Rei_(31988940360).jpg",
+     "selite": "Cristo Rein Kristus-patsas seisoo maapallon päällä Fatucaman niemekkeellä Dilin lahden itäpuolella.",
+     "leveys": 5946,
+     "korkeus": 3376,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cristo Rei Dili Timor Leste 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristo_Rei_Dili_Timor_Leste_2.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cristo_Rei_Dili_Timor_Leste_2.jpg",
+     "selite": "Patsas kohoaa vehreän kukkulan huipulla yli kaupungin ja meren.",
+     "leveys": 6016,
+     "korkeus": 3912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "110623-F-HS649-551 (5881875275).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/110623-F-HS649-551_(5881875275).jpg?width=1280",
+     "tekija": "Naval Surface Warriors",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:110623-F-HS649-551_(5881875275).jpg",
+     "selite": "Patsaan takaa avautuu näkymä Dilin lahdelle ja kaupungin satamaan.",
+     "leveys": 2100,
+     "korkeus": 1500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "4K UHD Strand Osttimor 2019-08-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4K_UHD_Strand_Osttimor_2019-08-01.jpg?width=1280",
+     "tekija": "DrTrumpet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4K_UHD_Strand_Osttimor_2019-08-01.jpg",
+     "selite": "Valkohiekkainen ranta ja Cristo Rein kukkula kuuluvat Dilin itäisen rannikon tunnetuimpiin maisemiin.",
+     "leveys": 4843,
+     "korkeus": 2724,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1539961",
+   "nimi": "Tatamailau",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -8.90667,
+   "lon": 125.49333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "East Timor 80080 (14553149502).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Timor_80080_(14553149502).jpg?width=1280",
+     "tekija": "Felix Dance",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:East_Timor_80080_(14553149502).jpg",
+     "selite": "Itä-Timorin korkein vuori kohoaa pilvien yläpuolelle, ja rinteillä kasvaa vuoristometsää.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "East Timor 80106 (14367437788).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Timor_80106_(14367437788).jpg?width=1280",
+     "tekija": "Felix Dance",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:East_Timor_80106_(14367437788).jpg",
+     "selite": "Huipulla seisoo suuri Neitsyt Marian patsas, jolle pyhiinvaeltajat kiipeävät yön yli.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q753794",
+   "nimi": "Atauro",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -8.24,
+   "lon": 125.58,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Atauro island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atauro_island.jpg?width=1280",
+     "tekija": "Maria Auxilia",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atauro_island.jpg",
+     "selite": "Atauro on Dilin edustalla kohoava saari, jonka rannat ovat tunnettuja koralliriuttojen sukelluskohteina.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q124488074",
+   "nimi": "Dilin tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -8.55472,
+   "lon": 125.57839,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Immaculate Conception Cathedral (Dili), 2023 (04).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Immaculate_Conception_Cathedral_(Dili)%2C_2023_(04).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Immaculate_Conception_Cathedral_(Dili)%2C_2023_(04).jpg",
+     "selite": "Vaalean katedraalin tunnuksia ovat korkea kellotorni ja jyrkkä satulakatto.",
+     "leveys": 5239,
+     "korkeus": 3491,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Immaculate Conception Cathedral (Dili), 2023 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Immaculate_Conception_Cathedral_(Dili)%2C_2023_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Immaculate_Conception_Cathedral_(Dili)%2C_2023_(01).jpg",
+     "selite": "Tuomiokirkon porttia vartioivat kaksi valkoista enkelipatsasta, jotka puhaltavat torviin.",
+     "leveys": 5420,
+     "korkeus": 3612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Immaculate Conception Cathedral (Dili), 2023 (03).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Immaculate_Conception_Cathedral_(Dili)%2C_2023_(03).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Immaculate_Conception_Cathedral_(Dili)%2C_2023_(03).jpg",
+     "selite": "Katedraalin ympärillä on laaja aukio ja puisto Dilin keskustassa.",
+     "leveys": 4863,
+     "korkeus": 3889,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4120850",
+   "nimi": "Motaelin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -8.55095,
+   "lon": 125.57059,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Motael Church, Dili, East Timor (312012049).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Motael_Church%2C_Dili%2C_East_Timor_(312012049).jpg?width=1280",
+     "tekija": "yeowatzup",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Motael_Church%2C_Dili%2C_East_Timor_(312012049).jpg",
+     "selite": "Motaelin kirkon valkoinen kellotorni ja punainen katto erottuvat Dilin rantakadun varrella.",
+     "leveys": 2077,
+     "korkeus": 2815,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018 Motael Kirche 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_Motael_Kirche_1.jpg?width=1280",
+     "tekija": "Ludwig Müller",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_Motael_Kirche_1.jpg",
+     "selite": "Motaelin seurakunta on omistettu pyhälle Antoniukselle, ja kirkkoa ympäröi matala keltainen muuri.",
+     "leveys": 4884,
+     "korkeus": 3285,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q77318660",
+   "nimi": "Dilin satama",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -8.5525,
+   "lon": 125.57361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018 Hafen Dilis 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_Hafen_Dilis_1.JPG?width=1280",
+     "tekija": "Ludwig Müller",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_Hafen_Dilis_1.JPG",
+     "selite": "Dilin satamassa hinaajat ja nosturit työskentelevät lahden vuoristomaiseman edessä.",
+     "leveys": 4036,
+     "korkeus": 3028,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dili harbour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dili_harbour.jpg?width=1280",
+     "tekija": "Alex Castro",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dili_harbour.jpg",
+     "selite": "Rantalaiturilta näkee satamalaivat ja perinteisen kattorakennuksen, jonka muoto muistuttaa Timorin talotyyppiä.",
+     "leveys": 3072,
+     "korkeus": 1534,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15834851",
+   "nimi": "Dilin kauppahalli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -8.56011,
+   "lon": 125.57906,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Municipal Market of Dili, 2023 (03).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Municipal_Market_of_Dili%2C_2023_(03).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Municipal_Market_of_Dili%2C_2023_(03).jpg",
+     "selite": "Portugalilaisen ajan kauppahallin kaareva porttirakennus on yksi Dilin keskustan tunnistettavimmista siirtomaa-ajan rakennuksista.",
+     "leveys": 5916,
+     "korkeus": 3937,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "026 Dili market, Timor 1971 (51245319639).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/026_Dili_market%2C_Timor_1971_(51245319639).jpg?width=1280",
+     "tekija": "wilford peloquin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:026_Dili_market%2C_Timor_1971_(51245319639).jpg",
+     "selite": "Sama halli vuonna 1971: punainen peltikatto ja pieni porttirakennus vuoristomaiseman edessä.",
+     "leveys": 2566,
+     "korkeus": 1722,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Dili municipality.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dili_municipality.jpg?width=1280",
+   "tekija": "Diamantino Soares",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dili_municipality.jpg",
+   "selite": "Dilin matala kaupunki levittäytyy rantatasangolle merenlahden ja kuivien vuorten väliin.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Baía de Díli, 2018 (05).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C3%ADa_de_D%C3%ADli%2C_2018_(05).jpg?width=1280",
+   "tekija": "Bahnfrend",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_de_D%C3%ADli%2C_2018_(05).jpg",
+   "selite": "Dilin lahden rannikko vuorineen on kaupungin tunnetuin maisema.",
+   "leveys": 5916,
+   "korkeus": 3864,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1432488",
+   "nimi": "Presidentti Nicolau Lobaton kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "lat": -8.54655,
+   "lon": 125.52472,
+   "syy": "vain 1971 sisäkuvia, joissa ihmiset pääosassa; ei vapaata ulkokuvaa"
+  }
+ ]
+}

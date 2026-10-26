@@ -71,3 +71,12 @@ export const LINSSIT = [
   { tunnus: 'vesistot',     manner: null,            tuo: () => import('./vesistot.js') },
   // { tunnus: 'yokartta',     manner: 'northamerica',  tuo: () => import('./yokartta.js') },
 ];
+
+/*
+ * KEHITTÄJÄTILAN LINSSIT (omistaja 2.10.2026 klo 12.27: Ajattelijat-linssi kokeiltavaksi): EIVÄT kuulu LINSSIT-taulukkoon,
+ * joten omistus, tietäjäpistekynnykset, palkinnot ja natiivin kultaiset jäljet eivät näe niitä. Moottori (kerros.js) löytää
+ * ne, ja linssivalikko (js/ui.js nakyvatLinssit) näyttää ne vain kehittäjätilassa.
+ */
+export const KEHITTAJALINSSIT = [
+  { tunnus: 'ajattelijat', manner: null, tuo: () => import('./ajattelijat.js') },
+];

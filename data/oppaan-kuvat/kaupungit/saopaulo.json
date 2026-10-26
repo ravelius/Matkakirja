@@ -1,0 +1,878 @@
+{
+ "kaupunki": "saopaulo",
+ "kaupunkiQ": "Q174",
+ "kohteet": [
+  {
+   "q": "Q41068",
+   "nimi": "Avenida Paulista",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": -23.56139,
+   "lon": -46.65639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Av Paulista - Sao Paulo - SP - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Av_Paulista_-_Sao_Paulo_-_SP_-_panoramio.jpg?width=1280",
+     "tekija": "Paulo Humberto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Av_Paulista_-_Sao_Paulo_-_SP_-_panoramio.jpg",
+     "selite": "Avenida Paulista on São Paulon rahoituskeskuksen pääkatu, jota reunustavat pilvenpiirtäjät.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Av Paulista ao lado do MASP - Sao Paulo - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Av_Paulista_ao_lado_do_MASP_-_Sao_Paulo_-_panoramio.jpg?width=1280",
+     "tekija": "Paulo Humberto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Av_Paulista_ao_lado_do_MASP_-_Sao_Paulo_-_panoramio.jpg",
+     "selite": "Kadun varrella MASP:n punainen kehikko erottuu muista rakennuksista.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Vista da Avenida Paulista - Sesc Avenida Paulista por Rodrigo Tetsuo Argenton (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_da_Avenida_Paulista_-_Sesc_Avenida_Paulista_por_Rodrigo_Tetsuo_Argenton_(1).jpg?width=1280",
+     "tekija": "Rodrigo Tetsuo Argenton",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_da_Avenida_Paulista_-_Sesc_Avenida_Paulista_por_Rodrigo_Tetsuo_Argenton_(1).jpg",
+     "selite": "Illalla kadun valot ja ikkunat värittävät kaupungin liike-elämän valtaväylän.",
+     "leveys": 4165,
+     "korkeus": 6568,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q82941",
+   "nimi": "São Paulon taidemuseo MASP",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -23.56111,
+   "lon": -46.65583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea de la Avenida Paulista de São Paulo 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_de_la_Avenida_Paulista_de_S%C3%A3o_Paulo_05.jpg?width=1280",
+     "tekija": "ProtoplasmaKid",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_de_la_Avenida_Paulista_de_S%C3%A3o_Paulo_05.jpg",
+     "selite": "MASP:n punaisten betonipylväiden varassa lepää lasinen museorakennus Avenida Paulistan varrella.",
+     "leveys": 8064,
+     "korkeus": 4536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Avenida Paulista, São Paulo 2019 44.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Avenida_Paulista%2C_S%C3%A3o_Paulo_2019_44.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Avenida_Paulista%2C_S%C3%A3o_Paulo_2019_44.jpg",
+     "selite": "Museon alla jää vapaa tila, jossa järjestetään markkinoita ja kokoontumisia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Avenida Paulista, São Paulo 2019 67.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Avenida_Paulista%2C_S%C3%A3o_Paulo_2019_67.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Avenida_Paulista%2C_S%C3%A3o_Paulo_2019_67.jpg",
+     "selite": "Rakennuksen modernistinen rakenne tekee siitä yhden kaupungin tunnetuimmista maamerkeistä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q169420",
+   "nimi": "Edifício Altino Arantes",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -23.54567,
+   "lon": -46.6341,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Centro Histórico de SP.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_Hist%C3%B3rico_de_SP.jpg?width=1280",
+     "tekija": "Claudia Bueno (Cacau Bueno)",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_SP.jpg",
+     "selite": "Altino Arantesin torni nousee São Paulon historiallisen keskustan yllä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Inauguração do Edifício Farol Santander (39971421051).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inaugura%C3%A7%C3%A3o_do_Edif%C3%ADcio_Farol_Santander_(39971421051).jpg?width=1280",
+     "tekija": "Governo do Estado de São Paulo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inaugura%C3%A7%C3%A3o_do_Edif%C3%ADcio_Farol_Santander_(39971421051).jpg",
+     "selite": "Entisen Banespan pääkonttorin torni tunnetaan nykyään nimellä Farol Santander.",
+     "leveys": 4000,
+     "korkeus": 2750,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Altino Arantes Building (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altino_Arantes_Building_(cropped).jpg?width=1280",
+     "tekija": "Dornicke",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altino_Arantes_Building_(cropped).jpg",
+     "selite": "Tornin porrastettu huippu muistuttaa New Yorkin pilvenpiirtäjiä.",
+     "leveys": 1500,
+     "korkeus": 4200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q170610",
+   "nimi": "Edifício Itália",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -23.54542,
+   "lon": -46.64361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Das \"Edifício Itália\" Bildmitte, ist mit 164m das zweithöchste Gebäude von Sao Paulo. In der obersten Etage befindet sich ein Panoramarestaurant mit herrlicher Fernsicht. - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Das_%22Edif%C3%ADcio_It%C3%A1lia%22_Bildmitte%2C_ist_mit_164m_das_zweith%C3%B6chste_Geb%C3%A4ude_von_Sao_Paulo._In_der_obersten_Etage_befindet_sich_ein_Panoramarestaurant_mit_herrlicher_Fernsicht._-_panoramio.jpg?width=1280",
+     "tekija": "Helfmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Das_%22Edif%C3%ADcio_It%C3%A1lia%22_Bildmitte%2C_ist_mit_164m_das_zweith%C3%B6chste_Geb%C3%A4ude_von_Sao_Paulo._In_der_obersten_Etage_befindet_sich_ein_Panoramarestaurant_mit_herrlicher_Fernsicht._-_panoramio.jpg",
+     "selite": "Edifício Itália on keskustan korkeimpia torneja, ja sen huipulla on näköalaravintola.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Edifício Caetano de Campos e Edifício Italia - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edif%C3%ADcio_Caetano_de_Campos_e_Edif%C3%ADcio_Italia_-_panoramio.jpg?width=1280",
+     "tekija": "CORRETOR-CARVALHO",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_Caetano_de_Campos_e_Edif%C3%ADcio_Italia_-_panoramio.jpg",
+     "selite": "Torni erottuu vanhojen kivikorttelien yläpuolelle.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Edifício Itália (8576576952).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edif%C3%ADcio_It%C3%A1lia_(8576576952).jpg?width=1280",
+     "tekija": "paulisson miura from Cuiabá, Brasil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_It%C3%A1lia_(8576576952).jpg",
+     "selite": "Julkisivun pyöreät kulmat ovat modernistista arkkitehtuuria.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q42258",
+   "nimi": "Mirante do Vale",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -23.5422,
+   "lon": -46.63542,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "At São Paulo 2018 143.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_S%C3%A3o_Paulo_2018_143.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_S%C3%A3o_Paulo_2018_143.jpg",
+     "selite": "Mirante do Vale on São Paulon korkeimpia rakennuksia, ja se hallitsee keskustan siluettia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "File by Peteris P1170251 (3666895085).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File_by_Peteris_P1170251_(3666895085).jpg?width=1280",
+     "tekija": "Pēteris",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:File_by_Peteris_P1170251_(3666895085).jpg",
+     "selite": "Torni kohoaa Viaduto Santa Ifigêniaa vasten Anhangabaún laakson yläpuolella.",
+     "leveys": 1958,
+     "korkeus": 1432,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mirante do vale Building(by felipe mostarda).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mirante_do_vale_Building(by_felipe_mostarda).JPG?width=1280",
+     "tekija": "Felipe Mostarda",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mirante_do_vale_Building(by_felipe_mostarda).JPG",
+     "selite": "Pitkä lasi- ja betoniseinä kohoaa monen kymmenen kerroksen korkeuteen.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1050668",
+   "nimi": "Catedral da Sé",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -23.55125,
+   "lon": -46.63437,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Webysther 20190306143154 - Catedral Metropolitana de São Paulo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Webysther_20190306143154_-_Catedral_Metropolitana_de_S%C3%A3o_Paulo.jpg?width=1280",
+     "tekija": "Webysther Nunes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Webysther_20190306143154_-_Catedral_Metropolitana_de_S%C3%A3o_Paulo.jpg",
+     "selite": "Catedral da Sé on São Paulon uusgoottilainen pääkirkko, jonka kaksi vihreää tornia erottuvat ympäröivien talojen yllä.",
+     "leveys": 3604,
+     "korkeus": 2883,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral da Sé 13.Nov.2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_da_S%C3%A9_13.Nov.2022.jpg?width=1280",
+     "tekija": "Geovana li malike",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_da_S%C3%A9_13.Nov.2022.jpg",
+     "selite": "Kirkon edessä kasvaa korkeita palmuja Praça da Séllä.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-11-15 - São Paulo Cathedral - 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-11-15_-_S%C3%A3o_Paulo_Cathedral_-_002.jpg?width=1280",
+     "tekija": "Oleg Yunakov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-11-15_-_S%C3%A3o_Paulo_Cathedral_-_002.jpg",
+     "selite": "Katedraalin kaksi tornia ja kupoli hallitsevat aukiota.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2297627",
+   "nimi": "Teatro Municipal",
+   "peruste": "sitelinks",
+   "koko_m": 110,
+   "lat": -23.54528,
+   "lon": -46.63861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Municipal de São Paulo 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Municipal_de_S%C3%A3o_Paulo_8.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Municipal_de_S%C3%A3o_Paulo_8.jpg",
+     "selite": "Teatro Municipal on São Paulon keskustan oopperatalo, jonka julkisivu valaistaan iltaisin.",
+     "leveys": 11224,
+     "korkeus": 7210,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q212248",
+   "nimi": "Ibirapueran puisto",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -23.58833,
+   "lon": -46.65889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "-i---i- (339051050).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(339051050).jpg?width=1280",
+     "tekija": "Pedro Angelini from São Paulo, Brasil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(339051050).jpg",
+     "selite": "Ibirapuera on São Paulon suuri kaupunkipuisto, jonka lammen rannoille on rakennettu paviljonkeja ja kulttuuritiloja.",
+     "leveys": 2600,
+     "korkeus": 1241,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agapanthus in Sao Paulo (5293878215).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agapanthus_in_Sao_Paulo_(5293878215).jpg?width=1280",
+     "tekija": "Diego Torres Silvestre from Sao Paulo, Brazil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agapanthus_in_Sao_Paulo_(5293878215).jpg",
+     "selite": "Puiston lammen takana näkyy kaupungin siluetti.",
+     "leveys": 1680,
+     "korkeus": 1050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A chuva a tarde Parque Ibirapuera 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_chuva_a_tarde_Parque_Ibirapuera_1.JPG?width=1280",
+     "tekija": "Sérgio Valle Duarte .mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}Wikidata has entry Sergio Valle Duarte (Q16269994) with data related to this item.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_chuva_a_tarde_Parque_Ibirapuera_1.JPG",
+     "selite": "Vanhat puut ja nurmikentät tarjoavat tilaa levähtää keskellä kaupunkia.",
+     "leveys": 3488,
+     "korkeus": 2616,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q632566",
+   "nimi": "Edifício Copan",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -23.54661,
+   "lon": -46.64436,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Caminhada Noturna 12 October 2017 045.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caminhada_Noturna_12_October_2017_045.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caminhada_Noturna_12_October_2017_045.jpg",
+     "selite": "Copan on Oscar Niemeyerin suunnittelema aaltomainen asuintalo São Paulon keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "COPAN (9278196775).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/COPAN_(9278196775).jpg?width=1280",
+     "tekija": "Luiz Pantoja from São Paulo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:COPAN_(9278196775).jpg",
+     "selite": "Talon S-muotoinen julkisivu kaartuu kadun mukaan.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Copan (7908313340).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Copan_(7908313340).jpg?width=1280",
+     "tekija": "Gabriel Fernandes from São Paulo, Brasil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Copan_(7908313340).jpg",
+     "selite": "Betoniset aurinkosuojat rytmittävät julkisivua.",
+     "leveys": 2616,
+     "korkeus": 1780,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2095209",
+   "nimi": "Pinacoteca de São Paulo",
+   "peruste": "sitelinks",
+   "koko_m": 110,
+   "lat": -23.53444,
+   "lon": -46.63389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pinacoteca de São Paulo, Brazil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinacoteca_de_S%C3%A3o_Paulo%2C_Brazil.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pinacoteca_de_S%C3%A3o_Paulo%2C_Brazil.jpg",
+     "selite": "Pinacoteca on São Paulon vanhin taidemuseo, ja se toimii punatiilisessä rakennuksessa Luzin puistoalueen vieressä.",
+     "leveys": 6903,
+     "korkeus": 3984,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2015-02-28-Pinacoteca.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-02-28-Pinacoteca.jpg?width=1280",
+     "tekija": "M. B., Jr.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2015-02-28-Pinacoteca.jpg",
+     "selite": "Museon eteen levittäytyy puistoalue ja suihkulähde.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-12-06 - Pinacoteca de São Paulo - 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-12-06_-_Pinacoteca_de_S%C3%A3o_Paulo_-_04.jpg?width=1280",
+     "tekija": "Oleg Yunakov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-12-06_-_Pinacoteca_de_S%C3%A3o_Paulo_-_04.jpg",
+     "selite": "Tiilirakennuksen sisäpihat on katettu lasilla.",
+     "leveys": 11042,
+     "korkeus": 3860,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2983699",
+   "nimi": "Estação da Luz",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -23.53509,
+   "lon": -46.63528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A estação da Luz de São Paulo centro - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_esta%C3%A7%C3%A3o_da_Luz_de_S%C3%A3o_Paulo_centro_-_panoramio.jpg?width=1280",
+     "tekija": "Renan Rangel Camargo…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_esta%C3%A7%C3%A3o_da_Luz_de_S%C3%A3o_Paulo_centro_-_panoramio.jpg",
+     "selite": "Luzin asema on São Paulon viktoriaanista tyyliä edustava rautatieasema, jonka kellotorni erottuu keskustassa.",
+     "leveys": 3664,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2023-01-07 Estação da Luz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-01-07_Esta%C3%A7%C3%A3o_da_Luz.jpg?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023-01-07_Esta%C3%A7%C3%A3o_da_Luz.jpg",
+     "selite": "Aseman tiili- ja kivijulkisivu on kuin pieni linna kaupungin keskellä.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dentro da Estaçao da Luz - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dentro_da_Esta%C3%A7ao_da_Luz_-_panoramio.jpg?width=1280",
+     "tekija": "Paulo Humberto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dentro_da_Esta%C3%A7ao_da_Luz_-_panoramio.jpg",
+     "selite": "Sisällä rautarunkoinen katos peittää laiturit.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q192146",
+   "nimi": "Liberdade",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": -23.56664,
+   "lon": -46.63189,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bela Vista e Liberdade 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bela_Vista_e_Liberdade_01.jpg?width=1280",
+     "tekija": "Dornicke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bela_Vista_e_Liberdade_01.jpg",
+     "selite": "Liberdade on São Paulon japanilaisen yhteisön perinteinen kaupunginosa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bairro da Liberdade - São Paulo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bairro_da_Liberdade_-_S%C3%A3o_Paulo.jpg?width=1280",
+     "tekija": "Adriano Makoto Suzuki",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bairro_da_Liberdade_-_S%C3%A3o_Paulo.jpg",
+     "selite": "Kaupunginosan katujen yllä näkyy keskustan pilvenpiirtäjiä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q655175",
+   "nimi": "Pacaembun stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -23.54864,
+   "lon": -46.66511,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio Municipal do Pacaembú. - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg?width=1280",
+     "tekija": "joao batista Shimoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg",
+     "selite": "Pacaembu on São Paulon art deco -tyylinen jalkapallostadion, joka avattiin 1940.",
+     "leveys": 2844,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bairro do Pacaembu - Vista do Estádio II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bairro_do_Pacaembu_-_Vista_do_Est%C3%A1dio_II.jpg?width=1280",
+     "tekija": "Janazamb",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bairro_do_Pacaembu_-_Vista_do_Est%C3%A1dio_II.jpg",
+     "selite": "Katsomosta avautuu näkymä ympäröivän kaupunginosan kerrostaloihin.",
+     "leveys": 4000,
+     "korkeus": 2666,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Entrada do Estádio do Pacaembu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrada_do_Est%C3%A1dio_do_Pacaembu.jpg?width=1280",
+     "tekija": "Guilherme B Alves",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrada_do_Est%C3%A1dio_do_Pacaembu.jpg",
+     "selite": "Stadionin pylväikköinen sisäänkäynti avautuu nurmikkoaukiolle.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q751824",
+   "nimi": "Eldorado Business Tower",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -23.57339,
+   "lon": -46.69767,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eldorado Business tower, São Paulo, Brazil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eldorado_Business_tower%2C_S%C3%A3o_Paulo%2C_Brazil.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eldorado_Business_tower%2C_S%C3%A3o_Paulo%2C_Brazil.jpg",
+     "selite": "Eldorado Business Tower on lasi- ja teräsjulkisivuinen toimistotorni Pinheiros-joen varrella.",
+     "leveys": 4000,
+     "korkeus": 6188,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vista Panorâmica de São Paulo Noite.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_Panor%C3%A2mica_de_S%C3%A3o_Paulo_Noite.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_Panor%C3%A2mica_de_S%C3%A3o_Paulo_Noite.jpg",
+     "selite": "Illalla tornit heijastuvat joen veteen.",
+     "leveys": 3186,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Eldorado Business Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eldorado_Business_Tower.jpg?width=1280",
+     "tekija": "Victor Lopes",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eldorado_Business_Tower.jpg",
+     "selite": "Tornin selkeä muoto edustaa kaupungin uudempaa liikekeskustaa.",
+     "leveys": 2824,
+     "korkeus": 3999,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1075303",
+   "nimi": "Octávio Frias de Oliveira -silta",
+   "peruste": "sitelinks",
+   "koko_m": 290,
+   "lat": -23.61275,
+   "lon": -46.69924,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CENU, São Paulo, Brasil (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CENU%2C_S%C3%A3o_Paulo%2C_Brasil_(cropped).jpg?width=1280",
+     "tekija": "ikedaleo",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CENU%2C_S%C3%A3o_Paulo%2C_Brasil_(cropped).jpg",
+     "selite": "Ponte Estaiada on X-muotoisella pylonilla varustettu kaapelisilta Pinheiros-joen yllä.",
+     "leveys": 4360,
+     "korkeus": 2775,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ponte estaiada Octavio Frias - Sao Paulo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_estaiada_Octavio_Frias_-_Sao_Paulo.jpg?width=1280",
+     "tekija": "Marcosleal",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ponte_estaiada_Octavio_Frias_-_Sao_Paulo.jpg",
+     "selite": "Yöllä valaistut kaapelit kimaltelevat joen ja moottoritien yllä.",
+     "leveys": 2956,
+     "korkeus": 1948,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Grand Hyatt Sao Paulo Brazil 1729 (4961369618).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Hyatt_Sao_Paulo_Brazil_1729_(4961369618).jpg?width=1280",
+     "tekija": "Gary Bembridge from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Hyatt_Sao_Paulo_Brazil_1729_(4961369618).jpg",
+     "selite": "Sillan taustalla kohoavat Brooklinin kaupunginosan uudet pilvenpiirtäjät.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3243994",
+   "nimi": "Sala São Paulo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -23.53417,
+   "lon": -46.63972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cia Paulista Trens Metropolitanos - CPTM - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cia_Paulista_Trens_Metropolitanos_-_CPTM_-_panoramio_(1).jpg?width=1280",
+     "tekija": "CORRETOR-CARVALHO",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cia_Paulista_Trens_Metropolitanos_-_CPTM_-_panoramio_(1).jpg",
+     "selite": "Sala São Paulo on São Paulon osavaltion sinfoniaorkesterin konserttisali, joka toimii entisessä Júlio Prestesin rautatieasemassa.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sala São Paulo (16627058179).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sala_S%C3%A3o_Paulo_(16627058179).jpg?width=1280",
+     "tekija": "Vania Wolf from Indaiatuba, Brasil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sala_S%C3%A3o_Paulo_(16627058179).jpg",
+     "selite": "Salin puinen katto voidaan säätää akustiikan mukaan.",
+     "leveys": 1260,
+     "korkeus": 932,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Estação Júlio Prestes - São Paulo - 20240929134459.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esta%C3%A7%C3%A3o_J%C3%BAlio_Prestes_-_S%C3%A3o_Paulo_-_20240929134459.jpg?width=1280",
+     "tekija": "A Viscondi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_J%C3%BAlio_Prestes_-_S%C3%A3o_Paulo_-_20240929134459.jpg",
+     "selite": "Konserttisalin parvet ja pylväät kiertävät lavaa.",
+     "leveys": 4080,
+     "korkeus": 2296,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2820368",
+   "nimi": "São Benton luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -23.54356,
+   "lon": -46.63403,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Década de 2000 Mosteiro Sao Bento.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%A9cada_de_2000_Mosteiro_Sao_Bento.png?width=1280",
+     "tekija": "Pedu0303",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D%C3%A9cada_de_2000_Mosteiro_Sao_Bento.png",
+     "selite": "São Benton luostari on benediktiinien kirkko ja luostari São Paulon keskustassa, ja sen kaksi tornia näkyvät kauas.",
+     "leveys": 2690,
+     "korkeus": 1779,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bento halls (3613248814).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bento_halls_(3613248814).jpg?width=1280",
+     "tekija": "Fernando Mafra from São Paulo, Brasil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bento_halls_(3613248814).jpg",
+     "selite": "Kirkon sisällä raidalliset kaaret johtavat alttarille.",
+     "leveys": 1600,
+     "korkeus": 1071,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Céu e provações (3612429477).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A9u_e_prova%C3%A7%C3%B5es_(3612429477).jpg?width=1280",
+     "tekija": "Fernando Mafra from São Paulo, Brasil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:C%C3%A9u_e_prova%C3%A7%C3%B5es_(3612429477).jpg",
+     "selite": "Katto on koristeltu kuvilla ja ornamenteilla.",
+     "leveys": 1600,
+     "korkeus": 1071,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2667184",
+   "nimi": "Largo São Francisco -oikeustieteellinen tiedekunta",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -23.55,
+   "lon": -46.63722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Centro cultural da caixa economica federal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_cultural_da_caixa_economica_federal.jpg?width=1280",
+     "tekija": "Luiz coelho",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centro_cultural_da_caixa_economica_federal.jpg",
+     "selite": "Largo São Franciscon oikeustieteellinen tiedekunta kuuluu Brasilian vanhimpiin oikeuskouluihin.",
+     "leveys": 3289,
+     "korkeus": 2193,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At São Paulo, Brazil 2019 180.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_S%C3%A3o_Paulo%2C_Brazil_2019_180.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_S%C3%A3o_Paulo%2C_Brazil_2019_180.jpg",
+     "selite": "Palmut reunustavat tiedekunnan neoklassista julkisivua.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Caminhada Noturna 5 October 2017 009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caminhada_Noturna_5_October_2017_009.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caminhada_Noturna_5_October_2017_009.jpg",
+     "selite": "Illalla valaistu rakennus näkyy kauas Largo São Franciscon aukion yli.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista aérea do Ibirapuera, São Paulo.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_do_Ibirapuera%2C_S%C3%A3o_Paulo.jpg?width=1280",
+   "tekija": "Daniel Whistler",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_do_Ibirapuera%2C_S%C3%A3o_Paulo.jpg",
+   "selite": "São Paulo on Etelä-Amerikan suurin kaupunki, ja sen korkeiden talojen meri ulottuu horisonttiin asti.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Centro de SP.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_de_SP.jpg?width=1280",
+   "tekija": "Ana Paula Hirama",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centro_de_SP.jpg",
+   "selite": "Keskustan tiheä rakennuskanta peittää kaupungin kukkuloita kilometrien matkalla.",
+   "leveys": 3504,
+   "korkeus": 2208,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

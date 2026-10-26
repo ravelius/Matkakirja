@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-09-12. Kohteita 64, kuvia 83.
+ * Haettu: 2026-10-05. Kohteita 236, kuvia 277.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -19,7 +19,7 @@ export const SATELLIITTI_LAHDE = {
   "lisenssi": "Public domain",
   "osoite": "https://images.nasa.gov/",
   "katalogi": "https://images-api.nasa.gov/search?media_type=image",
-  "haettu": "2026-09-12"
+  "haettu": "2026-10-05"
 };
 
 export const SATELLIITTI_KOHTEET = [
@@ -66,7 +66,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "italia-yolla",
-    "nimi": "Italian saapas yöllä",
+    "nimi": "Italian saapas",
     "seutu": "Italia",
     "selite": "Koko niemimaa kerralla: kaupunkien valot piirtävät rannikon tarkemmin kuin kartta.",
     "lat": 41.3,
@@ -278,7 +278,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "korea",
-    "nimi": "Korean niemimaa yöllä",
+    "nimi": "Korean niemimaa",
     "seutu": "Korea",
     "selite": "Yökuva, jossa valtioiden raja näkyy pelkkänä pimeytenä.",
     "lat": 38.3,
@@ -591,7 +591,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "new-york",
-    "nimi": "New York yöllä",
+    "nimi": "New York",
     "seutu": "Yhdysvallat",
     "selite": "Katuverkko, jonka muodon tunnistaa pelkistä valoista.",
     "lat": 40.71,
@@ -1261,6 +1261,21 @@ export const SATELLIITTI_KOHTEET = [
     "oletus": "iss071e488058",
     "havainnot": [
       {
+        "id": "iss063e002730",
+        "aika": "2020-04-23",
+        "teksti": "Huhtikuussa 2020 otettu kuva samasta suistosta neljä vuotta aiemmin. Saarten ja kanavien muodot ovat pysyneet samoina ihmisen rakentamien patojen ansiosta, mutta veden sameus ja pilvisyys vaihtelevat vuodenajan ja sään mukaan kuvasta toiseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 63",
+        "kuvaaja": "Christopher Cassidy",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss063e002730/iss063e002730~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss063e002730/iss063e002730~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss063e002730"
+      },
+      {
         "id": "iss071e488058",
         "aika": "2024-08-11",
         "teksti": "Rein, Maas ja Schelde laskevat mereen samassa suistossa. Saarten väliset lahdet on suljettu padoilla vuoden 1953 tulvakatastrofin jälkeen; osa suluista aukeaa yhä vuoroveden mukana, jotta suolainen vesi pitää luonnon ennallaan.",
@@ -1792,7 +1807,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "tunis",
-    "nimi": "Tunis yöllä",
+    "nimi": "Tunis",
     "seutu": "Tunisia",
     "selite": "Kaupungin valot piirtävät lahden ja laguunin muodon.",
     "lat": 36.8,
@@ -1818,7 +1833,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "kairo-yolla",
-    "nimi": "Kairo yöllä",
+    "nimi": "Kairo",
     "seutu": "Egypti",
     "selite": "Niili halkaisee valomeren ja jatkuu suistoon.",
     "lat": 30.05,
@@ -1971,5 +1986,5036 @@ export const SATELLIITTI_KOHTEET = [
         "sivu": "https://images.nasa.gov/details/iss018e038182"
       }
     ]
+  },
+  {
+    "tunnus": "pariisi",
+    "nimi": "Pariisi",
+    "seutu": "Ranska",
+    "selite": "Ranskan pääkaupunki, jonka säteittäiset bulevardit erottuvat selvästi yöllä avaruudesta.",
+    "lat": 48.857,
+    "lon": 2.352,
+    "oletus": "iss072e789833",
+    "havainnot": [
+      {
+        "id": "iss072e789833",
+        "aika": "2025-03-14",
+        "teksti": "Pariisi yöllisessä valaistuksessa avaruusasemalta kuvattuna. Eiffel-tornin ja Champs de Marsin kohdalla erottuu kirkas valopilkku kuvan keskellä, ja kaupungin säteittäiset bulevardit haarautuvat siitä joka suuntaan. Seine-joki näkyy tummana, valottomana nauhana kaupungin halki.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e789833/iss072e789833~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e789833/iss072e789833~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e789833"
+      }
+    ]
+  },
+  {
+    "tunnus": "lontoo",
+    "nimi": "Lontoo",
+    "seutu": "Englanti, Yhdistynyt kuningaskunta",
+    "selite": "Yhdistyneen kuningaskunnan pääkaupunki, jonka halki mutkitteleva Thames erottaa sen kahtia myös yöllä.",
+    "lat": 51.507,
+    "lon": -0.128,
+    "oletus": "iss074e0405029",
+    "havainnot": [
+      {
+        "id": "iss074e0405029",
+        "aika": "2026-03-19",
+        "teksti": "Lontoo yöllä avaruusasemalta kuvattuna. Thames-joki mutkittelee kirkkaana valonauhojen välissä kaupungin keskellä ja jakaa sen kahtia. Kuvan alareunassa erottuu Heathrowin lentokentän kiitoratavalaistus ja oikeassa reunassa Gatwickin lentokenttä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0405029/iss074e0405029~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0405029/iss074e0405029~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0405029"
+      }
+    ]
+  },
+  {
+    "tunnus": "rooma",
+    "nimi": "Rooma",
+    "seutu": "Italia",
+    "selite": "Italian pääkaupunki ja antiikin valtakunnan sydän, asutettuna yhtäjaksoisesti tuhansia vuosia.",
+    "lat": 41.893,
+    "lon": 12.483,
+    "oletus": "iss073e0343840",
+    "havainnot": [
+      {
+        "id": "iss073e0343840",
+        "aika": "2025-07-15",
+        "teksti": "Rooma yöllä, avaruusasemalta kuvattuna. Kaupungin tiivis, sokkeloinen valokudos erottuu selvästi ympäröivästä maaseudusta, ja kuvan vasemmassa reunassa näkyy Tyrrhenanmeren pimeä rantaviiva.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0343840/iss073e0343840~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0343840/iss073e0343840~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0343840"
+      }
+    ]
+  },
+  {
+    "tunnus": "venetsia",
+    "nimi": "Venetsia",
+    "seutu": "Italia",
+    "selite": "Italian kanavakaupunki, rakennettu sadan sokkeloisen saaren päälle laguunin keskelle.",
+    "lat": 45.44,
+    "lon": 12.332,
+    "oletus": "iss014e17346",
+    "havainnot": [
+      {
+        "id": "iss014e17346",
+        "aika": "2007-03-15",
+        "teksti": "Venetsia päivänvalossa avaruusasemalta kuvattuna. Kaupungin tunnusomainen kalanmuotoinen saari erottuu selvästi laguunin vihertävästä vedestä, ja Canal Granden S-mutka halkoo sitä keskeltä. Kuvan yläosassa näkyy Muranon saari, ja vasemmassa reunassa rautatiesilta, joka yhdistää Venetsian Italian mantereeseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e17346~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e17346~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e17346"
+      }
+    ]
+  },
+  {
+    "tunnus": "moskova",
+    "nimi": "Moskova",
+    "seutu": "Venäjä",
+    "selite": "Venäjän pääkaupunki, jonka säteittäis-rengasmainen katuverkko erottuu selvästi avaruudesta.",
+    "lat": 55.751,
+    "lon": 37.617,
+    "oletus": "iss064e024687",
+    "havainnot": [
+      {
+        "id": "iss064e024687",
+        "aika": "2021-01-20",
+        "teksti": "Moskova yöllä avaruusasemalta kuvattuna. Kaupungin säteittäis-rengasmainen katuverkko erottuu kirkkaana valokuviona, ja tiiviisti valaistu keskusta hehkuu selvästi ympäröivää, harvemmin valaistua esikaupunkialuetta vasten. Moskova-joki virtaa keskustan halki tummana, valottomana raitana.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e024687/iss064e024687~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e024687/iss064e024687~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e024687"
+      }
+    ]
+  },
+  {
+    "tunnus": "peking",
+    "nimi": "Peking",
+    "seutu": "Kiina",
+    "selite": "Kiinan pääkaupunki ja Kielletyn kaupungin kotipaikka, ainoa isännöinyt kesä- ja talviolympialaiset.",
+    "lat": 39.904,
+    "lon": 116.408,
+    "oletus": "iss072e444944",
+    "havainnot": [
+      {
+        "id": "iss072e444944",
+        "aika": "2024-12-28",
+        "teksti": "Peking yöllä avaruusasemalta kuvattuna. Kaupungin keskusta erottuu ruudukkomaisena, oranssinsävyisenä valomerenä, jota ympäröivät konsentriset kehätiet. Kuvan keskellä erottuu Kielletyn kaupungin kirkkaasti valaistu Meridiaaniportti, ja oikeassa yläkulmassa näkyvät lentokentän valaistut kiitoradat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e444944/iss072e444944~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e444944/iss072e444944~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e444944"
+      }
+    ]
+  },
+  {
+    "tunnus": "hongkong",
+    "nimi": "Hongkong",
+    "seutu": "Kiina (erityishallintoalue)",
+    "selite": "Kiinan erityishallintoalue, jonka valot erottuvat selvästi naapurikaupunki Shenzhenin valoista.",
+    "lat": 22.278,
+    "lon": 114.159,
+    "oletus": "iss072e399613",
+    "havainnot": [
+      {
+        "id": "iss072e399613",
+        "aika": "2024-12-20",
+        "teksti": "Hongkong ja naapurikaupunki Shenzhen yöllä avaruusasemalta kuvattuna. Kuvan alaosan Hongkongin rannikko erottuu lämpimän kellertävänä valona, kun taas yläosan Shenzhen hohtaa sinertävänä — ero johtuu kaupunkien erilaisesta valaistushistoriasta ja -tekniikasta rajan molemmin puolin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e399613/iss072e399613~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e399613/iss072e399613~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e399613"
+      }
+    ]
+  },
+  {
+    "tunnus": "singapore",
+    "nimi": "Singapore",
+    "seutu": "Singapore",
+    "selite": "Kaupunkivaltio Malesian kärjessä, jonka lentokenttä ja konttisatama näkyvät selvästi yöllä.",
+    "lat": 1.3,
+    "lon": 103.8,
+    "oletus": "iss073e0763866",
+    "havainnot": [
+      {
+        "id": "iss073e0763866",
+        "aika": "2025-09-21",
+        "teksti": "Singapore erottuu kuvan keskellä, erotettuna Malesian Johor Bahrusta vasemmalla Johorin salmella. Oikealla keskellä siintää Changin lentokenttä, ja kuvan alaosan kirkas suorakulmainen alue on Pasir Panjangin konttisatama, suunniteltu maailman suurimmille konttialuksille. Kuva otettu yöllä ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0763866/iss073e0763866~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0763866/iss073e0763866~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0763866"
+      }
+    ]
+  },
+  {
+    "tunnus": "sydney",
+    "nimi": "Sydney",
+    "seutu": "Australia",
+    "selite": "Australian suurin kaupunki, jonka lentokenttä ja satama-alueet reunustavat Botany Baytä.",
+    "lat": -33.868,
+    "lon": 151.21,
+    "oletus": "iss055e073720",
+    "havainnot": [
+      {
+        "id": "iss055e073720",
+        "aika": "2018-05-19",
+        "teksti": "Kuvassa näkyy Sydneyn lentokenttä kahdella kiitoradallaan Botany Bayn rannalla. Lentokentän ympärillä erottuvat sataman konttiterminaalit ja tiheä ruudukkomainen kaupunkirakenne, joka jatkuu rannikkoa pitkin koilliseen. Kuva otettu päivänvalossa ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 55",
+        "kuvaaja": "Andrew Feustel",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss055e073720/iss055e073720~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss055e073720/iss055e073720~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss055e073720"
+      }
+    ]
+  },
+  {
+    "tunnus": "rio",
+    "nimi": "Rio de Janeiro",
+    "seutu": "Brasilia",
+    "selite": "Brasilian rantakaupunki Guanabaran lahden rannalla, yhdistettynä Niteróihin pitkällä sillalla.",
+    "lat": -22.911,
+    "lon": -43.206,
+    "oletus": "iss070e108427",
+    "havainnot": [
+      {
+        "id": "iss070e108427",
+        "aika": "2024-03-05",
+        "teksti": "Kuvan keskellä avautuu Guanabaran lahti, jonka länsirannalla on Rio de Janeiro ja itärannalla Niterói. Lahden poikki kulkee noin 13 kilometrin pituinen Rio-Niterói-silta, joka yhdistää kaupungit. Kuva otettu päivänvalossa ISS:ltä Atlantin rannikon yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e108427/iss070e108427~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e108427/iss070e108427~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e108427"
+      }
+    ]
+  },
+  {
+    "tunnus": "saopaulo",
+    "nimi": "São Paulo",
+    "seutu": "Brasilia",
+    "selite": "Etelä-Amerikan suurin kaupunki ja Brasilian talouden veturi, levittäytynyt laajana valomerenä.",
+    "lat": -23.55,
+    "lon": -46.634,
+    "oletus": "iss073e0982063",
+    "havainnot": [
+      {
+        "id": "iss073e0982063",
+        "aika": "2025-09-21",
+        "teksti": "São Paulo levittäytyy kuvassa laajana valomerenä yöllä otetussa kuvassa. Kaupungin valot ovat siirtyneet energiatehokkaisiin valkoisiin LED-lamppuihin, jotka näkyvät kuvassa vanhoja oransseja natriumlamppuja kirkkaampina. São Paulon metropolialueella asuu noin 22 miljoonaa ihmistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0982063/iss073e0982063~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0982063/iss073e0982063~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0982063"
+      }
+    ]
+  },
+  {
+    "tunnus": "losangeles",
+    "nimi": "Los Angeles",
+    "seutu": "Yhdysvallat",
+    "selite": "Yhdysvaltain Tyynenmeren rannikon suurkaupunki, jonka satama on maan vilkkain konttisatama.",
+    "lat": 34.05,
+    "lon": -118.25,
+    "oletus": "iss073e0513936",
+    "havainnot": [
+      {
+        "id": "iss073e0513936",
+        "aika": "2025-08-22",
+        "teksti": "Kuvassa erottuu Los Angelesin rannikkoa ja tiheää ruudukkomaista kaupunkirakennetta aina Long Beachin satama-alueelle ja Terminal Islandille asti oikeassa alakulmassa. Vasemmalla rannikolla näkyy myös lentokenttä- ja satamarakenteita. Kuva otettu päivänvalossa ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0513936/iss073e0513936~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0513936/iss073e0513936~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0513936"
+      }
+    ]
+  },
+  {
+    "tunnus": "sanfrancisco",
+    "nimi": "San Francisco",
+    "seutu": "Yhdysvallat",
+    "selite": "Kalifornian lahtikaupunki, joka tunnetaan Golden Gate -sillasta ja lähellä syntyneestä Piilaaksosta.",
+    "lat": 37.779,
+    "lon": -122.419,
+    "oletus": "iss073e0285002",
+    "havainnot": [
+      {
+        "id": "iss073e0285002",
+        "aika": "2025-07-04",
+        "teksti": "Kuvassa San Franciscon lahti erottuu pimeänä alueena, jonka ympärillä valot piirtävät kaupungin ja sen esikaupunkien, kuten San Josen ja Oaklandin, ääriviivat näkyviin. Lahden yli kulkevat siltayhteydet erottuvat valojuovina veden yllä. Kuva otettu keskiyön aikaan ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0285002/iss073e0285002~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0285002/iss073e0285002~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0285002"
+      }
+    ]
+  },
+  {
+    "tunnus": "chicago",
+    "nimi": "Chicago",
+    "seutu": "Yhdysvallat",
+    "selite": "Yhdysvaltain Keskilännen suurkaupunki Michiganjärven rannalla, pilvenpiirtäjien syntypaikka.",
+    "lat": 41.882,
+    "lon": -87.628,
+    "oletus": "iss073e0080182",
+    "havainnot": [
+      {
+        "id": "iss073e0080182",
+        "aika": "2025-05-15",
+        "teksti": "Chicago erottuu kuvassa kirkkaana valoruudukkona Michiganjärven eteläkärjessä, ja järven pimeä pinta rajaa kaupungin selvästi idässä. Kaupungin ydin pistää esiin ympäröivästä esikaupunkialueesta kirkkaimpana valopilkkuna. Kuva otettu yöllä ISS:ltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0080182/iss073e0080182~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0080182/iss073e0080182~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0080182"
+      }
+    ]
+  },
+  {
+    "tunnus": "mexico",
+    "nimi": "Mexico City",
+    "seutu": "Meksiko",
+    "selite": "Meksikon pääkaupunki entisen järven pohjalla korkealla vuoristolaaksossa, joka vaipuu vuosi vuodelta.",
+    "lat": 19.411,
+    "lon": -99.131,
+    "oletus": "iss073e0075943",
+    "havainnot": [
+      {
+        "id": "iss073e0075943",
+        "aika": "2025-05-16",
+        "teksti": "Mexico City loistaa yöllä kirkkaana Meksikon laakson pohjalla. Kaupungin valot täyttävät koko altaan, ja niitä reunustavat tummat, valottomat alueet: Texcocon ja Tláhuac-Xicon luonnonsuojelualueet sekä Ajuscon kansallispuiston vuoret. Kuva otettiin Kansainväliseltä avaruusasemalta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0075943/iss073e0075943~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0075943/iss073e0075943~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0075943"
+      }
+    ]
+  },
+  {
+    "tunnus": "kapkaupunki",
+    "nimi": "Kapkaupunki",
+    "seutu": "Etelä-Afrikka",
+    "selite": "Etelä-Afrikan lainsäädäntöpääkaupunki mantereen lounaiskärjessä, Kapniemen vuorten juurella.",
+    "lat": -33.925,
+    "lon": 18.425,
+    "oletus": "iss064e038871",
+    "havainnot": [
+      {
+        "id": "iss064e038871",
+        "aika": "2021-02-28",
+        "teksti": "Kapkaupunki ja sen ympäröivä rannikko näkyvät päivänvalossa Etelä-Afrikan kärjessä, auringon kimmellyksen loistaessa Atlantin pinnalla. Kaupungin katuverkko erottuu vaaleana, tiiviisti rakennettuna alueena rannikon tuntumassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1364
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e038871/iss064e038871~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e038871/iss064e038871~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e038871"
+      }
+    ]
+  },
+  {
+    "tunnus": "mumbai",
+    "nimi": "Mumbai",
+    "seutu": "Intia",
+    "selite": "Intian talouselämän keskus, rakennettu alun perin seitsemälle erilliselle saarelle Arabianmeren rannalla.",
+    "lat": 18.975,
+    "lon": 72.826,
+    "oletus": "iss014e08744",
+    "havainnot": [
+      {
+        "id": "iss014e08744",
+        "aika": "2006-11-28",
+        "teksti": "Mumbain satama ja kaupunkialue täyttävät kapean Salsette-niemekkeen Arabianmeren rannalla. Rakennettu alue jatkuu yhtenäisenä noin 50 kilometrin matkan pohjoisesta etelään, ja kuvassa erottuvat myös rannikon pienet niemet ja lahdet.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08744~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08744~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e08744"
+      }
+    ]
+  },
+  {
+    "tunnus": "delhi",
+    "nimi": "Delhi",
+    "seutu": "Intia",
+    "selite": "Intian pääkaupunkialue, maailman toiseksi suurin metropolialue Himalajan eteläpuolella.",
+    "lat": 28.61,
+    "lon": 77.23,
+    "oletus": "iss072e757452",
+    "havainnot": [
+      {
+        "id": "iss072e757452",
+        "aika": "2025-03-06",
+        "teksti": "Delhin valot loistavat kirkkaina lähellä puolta yötä paikallista aikaa, Himalajan reunan tuntumassa. Kaupungin tiivis valoverkko peittää laajan alueen tasaisella tasangolla, ja valojen tiheys vaihtelee vanhan ja uuden kaupunginosan välillä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757452/iss072e757452~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757452/iss072e757452~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757452"
+      }
+    ]
+  },
+  {
+    "tunnus": "bangkok",
+    "nimi": "Bangkok",
+    "seutu": "Thaimaa",
+    "selite": "Thaimaan pääkaupunki, jonka Chao Phraya -joki jakaa kahtia matkalla Siaminlahteen.",
+    "lat": 13.75,
+    "lon": 100.517,
+    "oletus": "iss072e757257",
+    "havainnot": [
+      {
+        "id": "iss072e757257",
+        "aika": "2025-03-05",
+        "teksti": "Bangkok jakautuu selvästi kahtia Chao Phraya -joen ympärille, joka erottuu kuvassa mustana nauhana kaupungin valojen keskellä. Kuvan keskioikealla erottuu tumma, vähemmän valaistu Bang Krachaon viheralue joen mutkassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757257/iss072e757257~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757257/iss072e757257~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757257"
+      }
+    ]
+  },
+  {
+    "tunnus": "jakarta",
+    "nimi": "Jakarta",
+    "seutu": "Indonesia",
+    "selite": "Indonesian pääkaupunki, joka vajoaa nopeasti ja jota siksi korvaamaan rakennetaan uutta pääkaupunkia.",
+    "lat": -6.21,
+    "lon": 106.845,
+    "oletus": "iss030e015896",
+    "havainnot": [
+      {
+        "id": "iss030e015896",
+        "aika": "2011-12-25",
+        "teksti": "Kuva on otettu infrapunakameralla, joten Jakartan kaupunkialue hohtaa oranssinpunaisena rannikolla. Tiivis, verkkomainen kaupunkirakenne erottuu selvästi ympäröivästä pimeästä merestä ja harvaan asutusta maaseudusta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e015896/iss030e015896~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e015896/iss030e015896~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e015896"
+      }
+    ]
+  },
+  {
+    "tunnus": "shanghai",
+    "nimi": "Shanghai",
+    "seutu": "Kiina",
+    "selite": "Kiinan väkirikkain kaupunki Jangtse-joen suulla, jonka rannikko värjäytyy joen liejusta.",
+    "lat": 31.224,
+    "lon": 121.476,
+    "oletus": "iss073e0513927",
+    "havainnot": [
+      {
+        "id": "iss073e0513927",
+        "aika": "2025-08-22",
+        "teksti": "Kuva näyttää Shanghain kaupunkialueen päiväsaikaan Jangtse-joen suulla Itä-Kiinan meren rannalla. Ylälaidassa erottuu Pudongin kansainvälisen lentokentän kiitoradat, ja kuvan oikealla puolella näkyy pyöreä Dishui-järvi, Kiinan suurin tekoallas. Mereen laskeva sedimenttipitoinen vesi näkyy vaaleanruskeana rannikon tuntumassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0513927/iss073e0513927~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0513927/iss073e0513927~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0513927"
+      }
+    ]
+  },
+  {
+    "tunnus": "wien",
+    "nimi": "Wien",
+    "seutu": "Itävalta",
+    "selite": "Itävallan pääkaupunki Tonavan rannalla, jonka tiivis keskusta erottuu selvästi yöllä avaruudesta.",
+    "lat": 48.208,
+    "lon": 16.373,
+    "oletus": "iss064e005231",
+    "havainnot": [
+      {
+        "id": "iss064e005231",
+        "aika": "2020-11-21",
+        "teksti": "Kuva näyttää Wienin yöllä avaruusasemalta kuvattuna, katuvalot piirtävät kaupungin tiheän verkkomaisen rakenteen selvästi näkyviin. Tonava-joki erottuu kuvan keskellä pimeänä, valottomana nauhana, joka halkoo valaistua kaupunkialuetta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": "VIV",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e005231/iss064e005231~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e005231/iss064e005231~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e005231"
+      }
+    ]
+  },
+  {
+    "tunnus": "soul",
+    "nimi": "Soul",
+    "seutu": "Etelä-Korea",
+    "selite": "Etelä-Korean pääkaupunki, jonka Han-joki jakaa kaupungin kahtia niemimaan keskiosassa.",
+    "lat": 37.567,
+    "lon": 126.978,
+    "oletus": "iss072e757318",
+    "havainnot": [
+      {
+        "id": "iss072e757318",
+        "aika": "2025-03-05",
+        "teksti": "Kuva näyttää Soulin yöllä, kaupungin tiheä valoverkko peittää laajan alueen Korean niemimaan keskiosassa. Han-joki kulkee kuvan poikki pimeänä nauhana ja jakaa kaupungin selvästi kahteen osaan. Kuva paljastaa myös kaupungin ympärille leviävän esikaupunkialueen tiiviin tieverkoston.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": "Don Pettit",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e757318/iss072e757318~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e757318/iss072e757318~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e757318"
+      }
+    ]
+  },
+  {
+    "tunnus": "kilimanjaro",
+    "nimi": "Kilimanjaro",
+    "seutu": "Tansania",
+    "selite": "Afrikan korkein vuori, jonka huipun jää on kutistunut 85 prosenttia sadan vuoden aikana.",
+    "lat": -3.07,
+    "lon": 37.35,
+    "oletus": "iss014e18950",
+    "havainnot": [
+      {
+        "id": "iss014e18950",
+        "aika": "2007-04-03",
+        "teksti": "Kraatterin reuna suoraan ylhäältä kuvattuna. Lumi ja jää peittävät enää osan Kibon huipusta, ja tumma kivikko pilkistää esiin rengasmaisen jäätikön keskeltä. Vuoren jää oli vuonna 1912 vielä 11,4 neliökilometrin kokoinen korkki; tässä kuvassa siitä on jäljellä hajanaisia läiskiä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss014e18950/iss014e18950~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss014e18950/iss014e18950~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e18950"
+      },
+      {
+        "id": "iss056e098062",
+        "aika": "2018-07-22",
+        "teksti": "Sama vuori yksitoista vuotta myöhemmin, pilvirenkaan ympäröimänä kuin silmä. Lumihuippu erottuu tumman rinteen keskeltä pienenä valkoisena kolmiona. Kenian raja jää kuvan taakse pohjoiseen, ja Kilimanjaro nousee tasangosta ilman yhtäkään vieressään kilpailevaa huippua.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": "Alexander Gerst",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss056e098062/iss056e098062~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss056e098062/iss056e098062~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss056e098062"
+      }
+    ]
+  },
+  {
+    "tunnus": "victorianputous",
+    "nimi": "Victorianputous",
+    "seutu": "Sambia ja Zimbabwe",
+    "selite": "Maailman suurin yhtenäinen putoavan veden verho, 1708 metriä leveä.",
+    "lat": -17.92,
+    "lon": 25.86,
+    "oletus": "iss007e14361",
+    "havainnot": [
+      {
+        "id": "iss007e14361",
+        "aika": "2003-09-03",
+        "teksti": "Putous näkyy ohuena valkoisena raitana Zambezi-joen poikki, ja sen alapuolella joki jatkaa matkaansa terävinä sik-sakkeina — samoja basalttirotkoja, jotka putous on kaivertanut itselleen perääntyessään vuosituhansien varrella. Victoria Falls -kaupunki näkyy oikealla partaalla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 7",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e14361~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e14361~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss007e14361"
+      }
+    ]
+  },
+  {
+    "tunnus": "iso-valliriutta",
+    "nimi": "Iso valliriutta",
+    "seutu": "Queensland, Australia",
+    "selite": "Maailman suurin koralliriuttajärjestelmä, yli 2300 kilometrin matkalla.",
+    "lat": -16.5,
+    "lon": 145.7,
+    "oletus": "iss068e004262",
+    "havainnot": [
+      {
+        "id": "iss068e004262",
+        "aika": "2022-09-30",
+        "teksti": "Queenslandin rannikko oikealla, ja sen edustalla riuttojen laikukas turkoosi vyöhyke jatkuu kuvan reunalle asti. Jokainen vaaleampi laikku on oma matala riuttansa, jonka ympärillä syvempi vesi tummuu siniseksi — tässä kuvassa näkyy vain murto-osa yli 2900 erillisestä riutasta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 68",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss068e004262/iss068e004262~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss068e004262/iss068e004262~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss068e004262"
+      }
+    ]
+  },
+  {
+    "tunnus": "kata-tjuta",
+    "nimi": "Kata Tjuta",
+    "seutu": "Pohjoisterritorio, Australia",
+    "selite": "Kolmisenkymmentä punaista kivikupolia aution tasangon keskellä, Uluru-Kata Tjuta -kansallispuistossa.",
+    "lat": -25.31,
+    "lon": 130.74,
+    "oletus": "iss023e029806",
+    "havainnot": [
+      {
+        "id": "iss023e029806",
+        "aika": "2010-04-30",
+        "teksti": "Iltapäivän valo korostaa Kata Tjutan pyöristyneitä kivikupoleja, joiden väliin varjot piirtävät syviä rakoja. Korkein kupoli, Mount Olga, on 206 metriä naapuriaan Ulurua korkeampi, vaikka Uluru on niistä kahdesta kuuluisampi. Vihreä kasvillisuus seuraa kuivia puronuomia alaosassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 23",
+        "kuvaaja": "Soichi Noguchi",
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e029806~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e029806~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss023e029806"
+      }
+    ]
+  },
+  {
+    "tunnus": "kuollutmeri",
+    "nimi": "Kuollut meri",
+    "seutu": "Israel, Jordania ja Länsiranta",
+    "selite": "Maapallon matalin kohta merenpinnasta, ja järvi joka kutistuu vuosi vuodelta.",
+    "lat": 31.4,
+    "lon": 35.5,
+    "oletus": "iss062e078990",
+    "havainnot": [
+      {
+        "id": "iss062e078990",
+        "aika": "2020-03-04",
+        "teksti": "Meren eteläpää, jossa luonnollinen sininen vesi (vasen) vaihtuu geometrisiksi haihdutusaltaiksi (oikea): niissä auringossa haihdutetaan suolavettä potaskaksi. Altaiden vihertävä ja vaaleanpunainen sävy syntyy eri suolapitoisuuksista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 62",
+        "kuvaaja": "Drew Morgan",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss062e078990/iss062e078990~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss062e078990/iss062e078990~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss062e078990"
+      },
+      {
+        "id": "iss073e0425936",
+        "aika": "2025-08-07",
+        "teksti": "Laajempi näkymä samalta seudulta: Galileanjärvi (vasemmalla) ja Kuollut meri (oikealla) yhdistää Jordan-joki, ohut tumma viiva kuvan keskellä. Galileanjärvi on maailman matalin makeanveden järvi, Kuollut meri matalin suolajärvi — molemmat samassa hautavajoamassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0425936/iss073e0425936~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0425936/iss073e0425936~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0425936"
+      }
+    ]
+  },
+  {
+    "tunnus": "tsadjarvi",
+    "nimi": "Tšadjärvi",
+    "seutu": "Tšad, Niger, Nigeria ja Kamerun",
+    "selite": "Järvi, joka on kutistunut noin 90 prosenttia 1960-luvulta.",
+    "lat": 13.15,
+    "lon": 14.3,
+    "oletus": "iss037e015757",
+    "havainnot": [
+      {
+        "id": "iss037e015757",
+        "aika": "2013-10-17",
+        "teksti": "Auringon heijastus vedestä paljastaa matalan, pirstoutuneen järven ääriviivat paremmin kuin suora kuva pystyisi. 1960-luvulla järvi peitti 25 000 neliökilometriä; nyt siitä on jäljellä enää murto-osa, ja vesi on hajonnut saarekkeiden ja ruovikon verkoksi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": "Karen Nyberg",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss037e015757/iss037e015757~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e015757/iss037e015757~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e015757"
+      }
+    ]
+  },
+  {
+    "tunnus": "fitrijarvi",
+    "nimi": "Fitrijärvi",
+    "seutu": "Tšad",
+    "selite": "Umpijärvi keskellä Saheliä, josta ei lähde ainuttakaan jokea mereen.",
+    "lat": 12.83,
+    "lon": 17.43,
+    "oletus": "iss030e059398",
+    "havainnot": [
+      {
+        "id": "iss030e059398",
+        "aika": "2012-01-19",
+        "teksti": "Mutainen keltaruskea vesi täyttää autiomaan painanteen keskeltä, ja sen ympärillä tummempi rengas on paljastunut, palaneen kasvillisuuden peittämä järvenpohja. Kaikki Fitrijärveen tuleva vesi joko haihtuu tai imeytyy hiekkaan — mereen ei johda yksikään puro.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e059398/iss030e059398~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e059398/iss030e059398~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e059398"
+      }
+    ]
+  },
+  {
+    "tunnus": "dardanellit",
+    "nimi": "Dardanellit",
+    "seutu": "Turkki",
+    "selite": "Kapea salmi, joka yhdistää Egeanmeren Marmarameren kautta Mustallemerelle.",
+    "lat": 40.14,
+    "lon": 26.4,
+    "oletus": "iss014e08138",
+    "havainnot": [
+      {
+        "id": "iss002e7758",
+        "aika": "2001-06-28",
+        "teksti": "Laajempi näkymä samalta salmelta viisi vuotta aiemmin: Gelibolun niemimaa työntyy alas vasemmalla, Egeanmeren saaria pilkottaa oikealla, ja avaruuden musta reuna kaartuu ylhäällä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 2",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1312
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss002e7758~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss002e7758~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss002e7758"
+      },
+      {
+        "id": "iss014e08138",
+        "aika": "2006-11-09",
+        "teksti": "Gallipolin kaupunki kuvan keskellä salmen suulla. Vesi virtaa yhtä aikaa koilliseen ja lounaaseen, sillä pinta- ja pohjavirtaus kulkevat vastakkaisiin suuntiin, ja muutama laiva näkyy tummina pilkkuina salmessa kaupungin lounaispuolella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08138~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08138~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e08138"
+      }
+    ]
+  },
+  {
+    "tunnus": "okavango",
+    "nimi": "Okavango-suisto",
+    "seutu": "Botswana",
+    "selite": "Joki joka ei koskaan tavoita merta vaan haihtuu aavikon keskellä viuhkamaiseksi kosteikoksi.",
+    "lat": -19.28,
+    "lon": 22.97,
+    "oletus": "iss073e0604445",
+    "havainnot": [
+      {
+        "id": "iss040e008209",
+        "aika": "2014-06-05",
+        "teksti": "Auringon heijastus vedestä muuttaa suiston yhdeksi kirkkaaksi hopeajuovaksi tummaa maata vasten — tekniikka, jolla miehistö saa esiin veden hienoimmatkin yksityiskohdat. Aseman oma aurinkopaneeli reunustaa kuvan oikeaa laitaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": "Reid Wiseman",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss040e008209/iss040e008209~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss040e008209/iss040e008209~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss040e008209"
+      },
+      {
+        "id": "iss073e0604445",
+        "aika": "2025-08-30",
+        "teksti": "Angolasta virtaava Okavango-joki haarautuu Kalaharin hiekalle lukemattomiksi tummiksi suoniksi vaaleaa hiekkaa vasten, kuin puun juuristo. Vesi ei koskaan saavuta merta: se haihtuu ja imeytyy kokonaan, ja suisto ylläpitää yhtä Afrikan lajirikkaimmista ekosysteemeistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0604445/iss073e0604445~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0604445/iss073e0604445~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0604445"
+      }
+    ]
+  },
+  {
+    "tunnus": "kolmen-rotkon-pato",
+    "nimi": "Kolmen rotkon pato",
+    "seutu": "Kiina",
+    "selite": "Maailman suurin pato, jonka tekojärvi on yli 600 kilometriä pitkä.",
+    "lat": 30.82,
+    "lon": 111,
+    "oletus": "iss019e007720",
+    "havainnot": [
+      {
+        "id": "iss019e007720",
+        "aika": "2009-04-15",
+        "teksti": "Pato näkyy vasemmassa reunassa kapeana valkoisena viivana joen poikki, ja sen takana Jangtse-joki on juuri alkanut täyttää laaksoaan uudeksi, kapeaksi tekojärveksi — kuva on yksi ensimmäisistä, jotka tallensivat täyttymisen vuonna 2009. Vuoristoinen maasto selittää altaan mutkittelun.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 19",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss019e007720~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss019e007720~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss019e007720"
+      }
+    ]
+  },
+  {
+    "tunnus": "vesuvius",
+    "nimi": "Vesuvius",
+    "seutu": "Italia",
+    "selite": "Tulivuori joka tuhosi Pompejin vuonna 79, ja asuu nyt kolmen miljoonan ihmisen naapurina.",
+    "lat": 40.82,
+    "lon": 14.43,
+    "oletus": "iss067e010622",
+    "havainnot": [
+      {
+        "id": "iss061e006435",
+        "aika": "2019-10-15",
+        "teksti": "Naapurikaupunki Pompeiji jää kuvassa vuoren juurelle: se hautautui tuhkaan vuonna 79 purkauksessa, joka tappoi tuhansia. Kolme miljoonaa ihmistä asuu nykyään alueella, jonka Vesuvius voisi vielä joskus haudata uudelleen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 61",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss061e006435/iss061e006435~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss061e006435/iss061e006435~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss061e006435"
+      },
+      {
+        "id": "iss067e010622",
+        "aika": "2022-04-12",
+        "teksti": "Vesuviuksen pyöreä kraatteri erottuu Napolinlahden rannalla, ja kaupunki on levittäytynyt aivan rinteille asti. Capri ja Ischia näkyvät saarina lahden suulla. Vuori purkautui viimeksi 1944, mutta se on yhä yksi maailman tarkimmin valvotuista tulivuorista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e010622/iss067e010622~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e010622/iss067e010622~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e010622"
+      }
+    ]
+  },
+  {
+    "tunnus": "ounianga",
+    "nimi": "Ouniangan järvet",
+    "seutu": "Tšad",
+    "selite": "Kymmenen makean veden järveä keskellä Saharaa, jäänteinä muinaisesta suurjärvestä.",
+    "lat": 19.05,
+    "lon": 20.49,
+    "oletus": "iss021e026475",
+    "havainnot": [
+      {
+        "id": "iss021e026475",
+        "aika": "2009-11-14",
+        "teksti": "Oranssit hiekkadyynit ovat tunkeutuneet järven poikki ja pilkkoneet sen tummiksi kaistaleiksi, jotka näyttävät puun oksilta. Järvet ovat jäänteitä yhdestä isosta järvestä, joka peitti alueen 14 800–5 500 vuotta sitten kun Sahara oli vihreä; nyt pohjavesi pitää ne täynnä keskellä autiomaata.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 21",
+        "kuvaaja": "Jeffrey Williams",
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e026475~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e026475~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss021e026475"
+      }
+    ]
+  },
+  {
+    "tunnus": "sokotra",
+    "nimi": "Sokotra",
+    "seutu": "Jemen",
+    "selite": "Saari niin eristyksissä, että 37 prosenttia sen kasveista ei kasva missään muualla.",
+    "lat": 12.46,
+    "lon": 53.82,
+    "oletus": "iss069e004768",
+    "havainnot": [
+      {
+        "id": "iss069e004768",
+        "aika": "2023-04-20",
+        "teksti": "Sokotran eteläisen rannikon vuoristo laskeutuu jyrkkinä laaksoina turkoosiin mereen. Saari erosi mantereesta miljoonia vuosia sitten ja on siksi oma evoluution laboratorionsa: sen sateenvarjonmuotoiset lohikäärmeenveripuut eivät kasva luonnossa missään muualla maailmassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e004768/iss069e004768~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e004768/iss069e004768~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e004768"
+      }
+    ]
+  },
+  {
+    "tunnus": "titicaca",
+    "nimi": "Titicaca-järvi",
+    "seutu": "Peru ja Bolivia",
+    "selite": "Maailman korkeimmalla sijaitseva suuri purjehduskelpoinen järvi, Andien huipuilla.",
+    "lat": -15.78,
+    "lon": -69.34,
+    "oletus": "iss055e071030",
+    "havainnot": [
+      {
+        "id": "iss055e071030",
+        "aika": "2018-05-14",
+        "teksti": "Järvi täyttää Andien ylätasangon painanteen, ja sen luoteisreunaa vasten kohoavat lumihuippuiset vuoret. Järvi sijaitsee noin 3812 metrin korkeudessa ja jakautuu Perun ja Bolivian kesken rajaviivaa pitkin keskeltä vettä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 55",
+        "kuvaaja": "Ricky Arnold",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss055e071030/iss055e071030~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss055e071030/iss055e071030~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss055e071030"
+      },
+      {
+        "id": "iss067e149915",
+        "aika": "2022-06-26",
+        "teksti": "Lähempi kuva samasta järvestä: auringon kimallus vedessä piirtää vaaleita raitoja, jotka paljastavat pintavirtausten suunnan. Niemet ja lahdet erottuvat terävinä rantaviivoina — järvi on niin suuri, että sen tuulet ja aallot muistuttavat merta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e149915/iss067e149915~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e149915/iss067e149915~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e149915"
+      }
+    ]
+  },
+  {
+    "tunnus": "gizan-pyramidit",
+    "nimi": "Gizan pyramidit",
+    "seutu": "Egypti",
+    "selite": "Muinaisen maailman seitsemästä ihmeestä ainoa, joka on vielä pystyssä.",
+    "lat": 29.87,
+    "lon": 30.95,
+    "oletus": "iss032e009123",
+    "havainnot": [
+      {
+        "id": "iss032e009123",
+        "aika": "2012-07-25",
+        "teksti": "Kolme pyramidia näkyy tummina kolmiovarjoineen aivan siinä kohtaa, missä Kairon tiheä kaupunkikudos loppuu ja aavikko alkaa — raja on käytännössä suora viiva. Suurin pyramideista, 146,6 metriä valmistuessaan noin 2560 eaa., oli maailman korkein rakennelma yli 3700 vuotta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 32",
+        "kuvaaja": "                                ",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss032e009123/iss032e009123~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss032e009123/iss032e009123~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss032e009123"
+      },
+      {
+        "id": "iss068e006657",
+        "aika": "2022-10-01",
+        "teksti": "Laajempi näkymä kymmenen vuotta myöhemmin: pyramidit näkyvät pieninä kolmioina kuvan yläosassa, ja alhaalla Niilin vihreä laakso ja joki itse leikkaavat aavikon halki. Kaupunki on levinnyt entistä lähemmäs pyramideja.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 68",
+        "kuvaaja": "Bob Hines",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss068e006657/iss068e006657~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss068e006657/iss068e006657~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss068e006657"
+      }
+    ]
+  },
+  {
+    "tunnus": "tshernobyl",
+    "nimi": "Tšernobyl",
+    "seutu": "Ukraina",
+    "selite": "Ydinvoimala, jonka ympärille jäi kielletty vyöhyke vuoden 1986 onnettomuuden jälkeen.",
+    "lat": 51.39,
+    "lon": 30.1,
+    "oletus": "iss057e051419",
+    "havainnot": [
+      {
+        "id": "iss057e051419",
+        "aika": "2018-10-14",
+        "teksti": "Voimalan rakennukset ja niitä ympäröivät jäähdytysaltaat erottuvat Pripjat-joen mutkassa. Räjähtäneen neljännen reaktorin päälle rakennettu uusi teräskaari näkyy vaaleana suorakulmiona. Rajan taakse Valko-Venäjälle perustettiin oma suojelualueensa säteilylle altistuneelle alueelle — luonto on vallannut molemmat puolet takaisin ihmisen lähdettyä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 57",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss057e051419/iss057e051419~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss057e051419/iss057e051419~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss057e051419"
+      }
+    ]
+  },
+  {
+    "tunnus": "everest",
+    "nimi": "Mount Everest",
+    "seutu": "Nepal ja Kiina",
+    "selite": "Maapallon korkein kohta merenpinnasta, 8849 metriä.",
+    "lat": 27.99,
+    "lon": 86.93,
+    "oletus": "iss069e003192",
+    "havainnot": [
+      {
+        "id": "iss069e003192",
+        "aika": "2023-04-13",
+        "teksti": "Terävät lumihuiput työntyvät pilvimeren yläpuolelle Nepalin puolella Himalajaa, Everest kuvan keskellä muiden jättiläisten joukossa. Pilvet kasautuvat vuorten eteläpuolelle, koska kostea ilma nousee ja jäähtyy törmätessään Himalajan seinämään.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e003192/iss069e003192~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e003192/iss069e003192~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e003192"
+      }
+    ]
+  },
+  {
+    "tunnus": "aletsch",
+    "nimi": "Aletschin jäätikkö",
+    "seutu": "Sveitsi",
+    "selite": "Alppien pisin jäätikkö, 23 kilometriä, joka virtaa kolmen tunnetun huipun juurelta.",
+    "lat": 46.43,
+    "lon": 8.02,
+    "oletus": "iss013e77377",
+    "havainnot": [
+      {
+        "id": "iss013e77377",
+        "aika": "2006-09-05",
+        "teksti": "Jäätikkö mutkittelee laaksossa Jungfrau-, Mönch- ja Eiger-huippujen juurelta alaspäin, ja sen keskellä kulkevat tummat raidat ovat moreeneja: kolmen erillisen jäävirran mukanaan tuomaa kivi- ja soraröykkiötä, joka on puristunut yhteen jäätiköiden sulautuessa. Kuvan yläreunassa siintää Brienzinjärvi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77377~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77377~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e77377"
+      }
+    ]
+  },
+  {
+    "tunnus": "torres-del-paine",
+    "nimi": "Torres del Paine",
+    "seutu": "Chile",
+    "selite": "Patagonian graniittitornit ja niitä ympäröivät jäätiköt, jotka kalvavat vuosi vuodelta.",
+    "lat": -50.95,
+    "lon": -73.03,
+    "oletus": "iss056e096830",
+    "havainnot": [
+      {
+        "id": "iss016e012047",
+        "aika": "2007-11-22",
+        "teksti": "Tyndall-jäätikkö yksitoista vuotta aiemmin: 32 kilometriä pitkä jäävirta, jonka keskellä näkyy tumma moreeniviiva ja lähempänä reunaa rikkonaisia railokenttiä — kohtia, joissa jää halkeilee virratessaan kallionkielekkeen ohi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 16",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss016e012047/iss016e012047~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss016e012047/iss016e012047~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss016e012047"
+      },
+      {
+        "id": "iss056e096830",
+        "aika": "2018-07-15",
+        "teksti": "Jäätikkö päättyy jyrkkään, siniseen jäärintamaan järveen, joka on täynnä juuri irronneita jäälohkareita. Ympärillä jyrkät vuoret kohoavat suoraan jäästä — koko kansallispuisto on graniittihuippujen ja jään yhteispeliä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss056e096830/iss056e096830~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss056e096830/iss056e096830~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss056e096830"
+      }
+    ]
+  },
+  {
+    "tunnus": "kilauea",
+    "nimi": "Kilauea",
+    "seutu": "Havaiji, Yhdysvallat",
+    "selite": "Yksi maailman aktiivisimmista tulivuorista, joka muokkaa Ison saaren rantaviivaa yhä uudelleen.",
+    "lat": 19.42,
+    "lon": -155.29,
+    "oletus": "iss055e070297",
+    "havainnot": [
+      {
+        "id": "iss055e070297",
+        "aika": "2018-05-12",
+        "teksti": "Vaalea tuhka- ja kaasupilvi valuu Ison saaren itärannikolta merelle päin — tämä on toukokuussa 2018 alkaneen purkauksen alkuvaiheita, jolloin laava tuhosi yli 700 kotia ja loi saarelle kokonaan uutta rantaviivaa. Vuoren rinteet näkyvät tummina laavavirtojen uurtamina.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 55",
+        "kuvaaja": "Ricky Arnold",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss055e070297/iss055e070297~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss055e070297/iss055e070297~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss055e070297"
+      }
+    ]
+  },
+  {
+    "tunnus": "ararat",
+    "nimi": "Ararat",
+    "seutu": "Turkki",
+    "selite": "Turkin korkein vuori, kaksoishuippu joka näkyy kolmen maan rajaseudulta.",
+    "lat": 39.7,
+    "lon": 44.3,
+    "oletus": "iss064e029480",
+    "havainnot": [
+      {
+        "id": "iss064e029480",
+        "aika": "2021-02-06",
+        "teksti": "Vinosta kuvakulmasta otettu näkymä paljastaa Araratin kaksi huippua selvästi: suurempi, 5137-metrinen Suur-Ararat etualalla ja pienempi kartiomainen Pikku-Ararat sen takana. Lumi peittää molemmat huiput kokonaan, ja rinteiltä laskeutuvat tummat laavavirrat erottuvat terävinä juovina lumen alta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e029480/iss064e029480~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e029480/iss064e029480~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e029480"
+      }
+    ]
+  },
+  {
+    "tunnus": "crater-lake",
+    "nimi": "Crater Lake",
+    "seutu": "Oregon, Yhdysvallat",
+    "selite": "Yhdysvaltain syvin järvi, 592 metriä, syntynyt kun tulivuori romahti sisäänpäin.",
+    "lat": 42.94,
+    "lon": -122.11,
+    "oletus": "iss013e54243",
+    "havainnot": [
+      {
+        "id": "iss013e54243",
+        "aika": "2006-07-19",
+        "teksti": "Poikkeuksellisen syvänsininen järvi täyttää pyöreän kalderan, joka syntyi kun Mount Mazama -tulivuori räjähti ja romahti noin 7700 vuotta sitten. Wizard Island, pieni tulivuorikartio järven sisällä, näkyy tummana pilkkuna eteläreunan lähellä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss013e54243/iss013e54243~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss013e54243/iss013e54243~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e54243"
+      },
+      {
+        "id": "iss062e152575",
+        "aika": "2020-03-05",
+        "teksti": "Sama kaldera talvella, lähes 14 vuotta myöhemmin: lumi peittää kraatterin reunat kauttaaltaan, mutta järven pinta pysyy sulana ja yhtä tummansinisenä kuin kesällä. Wizard Island erottuu nyt valkoisena lumihuippuna tumman veden keskeltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 62",
+        "kuvaaja": "Roscosmos",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss062e152575/iss062e152575~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss062e152575/iss062e152575~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss062e152575"
+      }
+    ]
+  },
+  {
+    "tunnus": "upsala-jaatikko",
+    "nimi": "Upsalan jäätikkö",
+    "seutu": "Patagonia, Argentiina",
+    "selite": "Etelä-Patagonian jäätikköalueen kolmanneksi suurin jäätikkö, joka on vetäytynyt nopeasti.",
+    "lat": -49.88,
+    "lon": -73.3,
+    "oletus": "iss021e015243",
+    "havainnot": [
+      {
+        "id": "iss021e015243",
+        "aika": "2009-10-25",
+        "teksti": "Upsala-jäätikön pää työntyy Argentino-järveen lokakuussa 2009. Reunasta irtoaa jäävuoria järveen — kaksi niistä kuljettaa mukanaan tummaa moreeniainesta, joka näkyy tummana raitana jään pinnalla. Vasemmalla oleva sininen järvi on jäätikön kuluttaman kallion ympäröimä, kirkkaampi kuin sameampi pääjärvi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 21",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e015243~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e015243~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss021e015243"
+      },
+      {
+        "id": "iss037e005104",
+        "aika": "2013-09-30",
+        "teksti": "Sama jäätikön pää neljä vuotta myöhemmin, lokakuussa 2013. Jään reuna on vetäytynyt keskimäärin 3,6 kilometriä vuodesta 2002, ja järven pinta on tuoreen jäänmurtuman jäljiltä valkoisen jäämurskan peitossa; suuremmat jäävuoret näkyvät valkoisina pilkkuina oikealla. Tutkijoiden mukaan vetäytyminen kertoo alueen ilmaston lämpenemisestä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss037e005104/iss037e005104~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e005104/iss037e005104~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e005104"
+      }
+    ]
+  },
+  {
+    "tunnus": "poopojarvi",
+    "nimi": "Poopó-järvi",
+    "seutu": "Oruro, Bolivia",
+    "selite": "Andien korkealla ylängöllä oleva matala suolajärvi, joka on kuivunut toistuvasti lähes kokonaan.",
+    "lat": -18.75,
+    "lon": -67.13,
+    "oletus": "iss012e06469",
+    "havainnot": [
+      {
+        "id": "iss012e06469",
+        "aika": "2005-11-03",
+        "teksti": "Poopó-järvi marraskuussa 2005, vielä vihertävän veden peittämänä ja valkoisen suolareunuksen kehystämänä. Järvi on niin matala — yleensä alle kolme metriä — että pienetkin sademäärän muutokset ylä-Andeilla näkyvät suoraan sen pinta-alassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 12",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss012e06469~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss012e06469~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss012e06469"
+      },
+      {
+        "id": "iss070e098385",
+        "aika": "2024-02-23",
+        "teksti": "Sama järvi helmikuussa 2024, lähes täysin kuivana. Punaiset ja oranssinruskeat sävyt ovat paljastunutta suolaista ja mineraalipitoista pohjaa, ja vain muutama tumma vesiallas on enää jäljellä. Kaivostoiminta ja kastelu ovat vieneet vettä syöttöjoista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e098385/iss070e098385~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e098385/iss070e098385~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e098385"
+      }
+    ]
+  },
+  {
+    "tunnus": "etosha",
+    "nimi": "Etosha-tasanko",
+    "seutu": "Namibia",
+    "selite": "Suunnaton, yleensä täysin kuiva suolatasanko, joka värjäytyy harvinaisina sadevuosina levien mukaan.",
+    "lat": -18.6,
+    "lon": 16,
+    "oletus": "iss030e234965",
+    "havainnot": [
+      {
+        "id": "iss011e09504",
+        "aika": "2005-06-24",
+        "teksti": "Sama seutu lähempää: pinkki ja vaaleanvihreä lampi pistävät esiin valkoisen suolakuoren keskeltä. Värin tekevät suolaa sietävät mikrolevät, joiden sävy vaihtelee veden lämpötilan ja suolaisuuden mukaan. Tasanko on 120 kilometriä pitkä ja Namibian suurimman eläinpuiston sydän.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 11",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss011e09504/iss011e09504~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss011e09504/iss011e09504~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss011e09504"
+      },
+      {
+        "id": "iss030e234965",
+        "aika": "2012-12-30",
+        "teksti": "Etosha-tasangon luoteiskulma, jonka valkoinen suolapinta erottuu ruskeasta savannista. Harvinaisen sadejakson jäljiltä Ekuma-joki on tuonut vettä lampeen oikealla, ja levä värjää sen vaaleanvihreäksi; toinen pieni allas hehkuu kirkkaan vihreänä. Yleensä tasanko on täysin kuiva.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e234965/iss030e234965~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e234965/iss030e234965~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e234965"
+      }
+    ]
+  },
+  {
+    "tunnus": "eyrejarvi",
+    "nimi": "Eyre-järven tulva",
+    "seutu": "Etelä-Australia",
+    "selite": "Yleensä täysin kuiva järvi, joka harvinaisina vuosina värjäytyy suolaa rakastavien mikrobien mukaan.",
+    "lat": -28.9,
+    "lon": 137.3,
+    "oletus": "iss030e009271",
+    "havainnot": [
+      {
+        "id": "iss030e009271",
+        "aika": "2011-12-05",
+        "teksti": "Vuoden 2011 poikkeuksellisten sateiden täyttämä Eyre-järvi. Vihreä Belt Bay on syvempää vettä, punainen Madigan Gulf matalampaa ja suolaisempaa — sen mikrobitiheys voi kohota niin suureksi, että solujen karotenoidipigmentti värjää koko lahden. Alareunassa näkyvä lohko on yhä täysin kuiva ja valkoinen suolasta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1275,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e009271/iss030e009271~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e009271/iss030e009271~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e009271"
+      }
+    ]
+  },
+  {
+    "tunnus": "sharkbay",
+    "nimi": "Shark Bay",
+    "seutu": "Länsi-Australia",
+    "selite": "Haarautunut aavikkolahti, jossa kasvaa maailman laajin merikaislaniitty ja elää eläviä stromatoliitteja.",
+    "lat": -25.75,
+    "lon": 113.6,
+    "oletus": "iss064e003722",
+    "havainnot": [
+      {
+        "id": "iss057e105411",
+        "aika": "2018-11-20",
+        "teksti": "Sama rannikko idempää, missä lahti pilkkoutuu saariksi ja matalikoiksi. Vaaleat hiekkasärkät ja tummemmat syvänteet piirtävät lahden pohjan muodon suoraan veden läpi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 57",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss057e105411/iss057e105411~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss057e105411/iss057e105411~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss057e105411"
+      },
+      {
+        "id": "iss064e003722",
+        "aika": "2020-11-07",
+        "teksti": "Shark Bayn syvälle Länsi-Australian rannikkoon pistävät turkoosit haarat. Matala vesi on täynnä merikaislaa, ja lahden pohjalla elää myös eläviä stromatoliitteja — kivimäisiä mikrobimattoja, jotka muistuttavat maapallon varhaisimpia elämänmuotoja.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1078,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e003722/iss064e003722~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e003722/iss064e003722~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e003722"
+      }
+    ]
+  },
+  {
+    "tunnus": "pyramidjarvi",
+    "nimi": "Pyramid Lake",
+    "seutu": "Nevada, Yhdysvallat",
+    "selite": "Jääkautisen jättimäisen Lahontan-järven jäänne aavikon keskellä, nimetty pyramidinmuotoisesta kalkkikivipatsaasta.",
+    "lat": 40,
+    "lon": -119.58,
+    "oletus": "iss073e0919979",
+    "havainnot": [
+      {
+        "id": "iss025e005259",
+        "aika": "2010-09-28",
+        "teksti": "Sama järvi talvella, jolloin auringon kajastus paljastaa veden pinnalla kaksi suurta pyörrettä — tuulen jättämän jäljen. Ne kertovat pintavirtauksista, jotka muuttavat paikallisesti sitä, kuinka paljon valoa vesi heijastaa takaisin avaruusasemalle.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 25",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss025e005259~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss025e005259~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss025e005259"
+      },
+      {
+        "id": "iss073e0919979",
+        "aika": "2025-10-19",
+        "teksti": "Pyramid Lake syysauringossa; vihreät ja siniset pyörteet vedessä ovat levän värjäämiä virtauksia. Järveä ympäröi jyrkkä aavikkomaasto keskellä Nevadaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0919979/iss073e0919979~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0919979/iss073e0919979~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0919979"
+      }
+    ]
+  },
+  {
+    "tunnus": "monojarvi",
+    "nimi": "Mono-järvi",
+    "seutu": "Kalifornia, Yhdysvallat",
+    "selite": "Laskujoeton suolajärvi Kalifornian korkealla aavikolla, jonka keskellä kohoaa tulivuoritoiminnan synnyttämä saari.",
+    "lat": 38,
+    "lon": -119.02,
+    "oletus": "iss069e000859",
+    "havainnot": [
+      {
+        "id": "iss069e000859",
+        "aika": "2023-04-04",
+        "teksti": "Lumen ympäröimä Mono-järvi huhtikuussa. Järven keskellä kohoava vaalea Paoha-saari on kolmesta saaresta nuorin ja syntyi tulivuoritoiminnasta alle 400 vuotta sitten. Järvellä ei ole luonnollista laskujokea, joten se on jäänyt suolaiseksi ja emäksiseksi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e000859/iss069e000859~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e000859/iss069e000859~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e000859"
+      }
+    ]
+  },
+  {
+    "tunnus": "saltonjarvi",
+    "nimi": "Salton Sea",
+    "seutu": "Kalifornia, Yhdysvallat",
+    "selite": "Vahingossa vuonna 1905 syntynyt järvi Kalifornian eteläisellä aavikolla, joka suolaantuu vuosi vuodelta.",
+    "lat": 33.3,
+    "lon": -115.8,
+    "oletus": "iss040e011868",
+    "havainnot": [
+      {
+        "id": "iss040e011868",
+        "aika": "2014-06-14",
+        "teksti": "Salton Sea makaa tummana pisarana aavikon keskellä, vihreiden viljelysten ympäröimänä. Järvi syntyi, kun Colorado-joki murtautui kastelukanavan läpi ja täytti kuivan altaan kahdeksi vuodeksi ennen padon korjaamista; ilman jokea uudistuvaa vettä siitä on sittemmin tullut yhä suolaisempi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": "Steve Swanson",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss040e011868/iss040e011868~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss040e011868/iss040e011868~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss040e011868"
+      }
+    ]
+  },
+  {
+    "tunnus": "etelaalpit-jarvet",
+    "nimi": "Etelä-Alppien jäätikköjärvet",
+    "seutu": "Uusi-Seelanti",
+    "selite": "Jäätikköjauhon turkoosiksi värjäämiä järviä Uuden-Seelannin korkeimpien vuorten juurella.",
+    "lat": -44.13,
+    "lon": 170.13,
+    "oletus": "iss071e073568",
+    "havainnot": [
+      {
+        "id": "iss071e073568",
+        "aika": "2024-05-11",
+        "teksti": "Kolme peräkkäistä jäätikköjärveä samassa kuvassa — Tekapo, Pukaki ja Ohau vasemmalta oikealle. Kunkin sävy on hieman erilainen sen mukaan, kuinka paljon jäätikköjauhoa eli hienoksi jauhautunutta kivipölyä sen oma syöttöjoki kuljettaa; suurin niistä, Pukaki, on Aoraki/Mount Cookin, maan korkeimman vuoren, eteläpuolella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e073568/iss071e073568~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e073568/iss071e073568~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e073568"
+      }
+    ]
+  },
+  {
+    "tunnus": "zion",
+    "nimi": "Zion Canyon",
+    "seutu": "Utah, Yhdysvallat",
+    "selite": "Virginin joen kaivama punahiekkakivikanjoni, jonka jyrkät seinämät kohoavat satoja metrejä.",
+    "lat": 37.3,
+    "lon": -113.05,
+    "oletus": "iss017e005351",
+    "havainnot": [
+      {
+        "id": "iss017e005351",
+        "aika": "2008-04-26",
+        "teksti": "Zion Canyonin punertavat ja vaaleanpinkit hiekkakivijyrkänteet lähes suoraan ylhäältä kuvattuna. Kivi on noin 200 miljoonaa vuotta vanhan aavikon hiekkadyynien jäänne, ja jokien kaivamat pystysuorat railot seuraavat kallion vanhoja säröjä. Vasemmassa alakulmassa erottuu kapea tie, joka kiipeää kanjonin seinämää pitkin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 17",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1310
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005351~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005351~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss017e005351"
+      }
+    ]
+  },
+  {
+    "tunnus": "volgansuisto",
+    "nimi": "Volgan suisto",
+    "seutu": "Astrahanin alue, Venäjä",
+    "selite": "Euroopan pisimmän joen laaja haarautuva suisto Kaspianmeren rannalla.",
+    "lat": 45.7,
+    "lon": 47.9,
+    "oletus": "iss005e11203",
+    "havainnot": [
+      {
+        "id": "iss005e11203",
+        "aika": "2002-08-25",
+        "teksti": "Volga-joki haarautuu kymmeniksi uomiksi ennen laskuaan Kaspianmereen; vihreät suistosaaret erottuvat selvästi ruskeasta maasta pohjoisessa ja vihertävästä merestä etelässä. Suisto on tärkeä pysähdyspaikka muuttolinnuille ja elinympäristö belugasammille, joista saadaan Venäjän kuuluisaa kaviaaria.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 5",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss005e11203~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss005e11203~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss005e11203"
+      },
+      {
+        "id": "iss013e77351",
+        "aika": "2006-09-05",
+        "teksti": "Sama suisto tulvan aikaan syyskuussa 2006, muutama päivä rankkojen sateiden jälkeen. Sameat tulvavedet virtaavat pitkinä juovina laivaväylän molemmin puolin kosteikkojen yli suoraan Kaspianmereen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 13",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77351~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77351~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss013e77351"
+      }
+    ]
+  },
+  {
+    "tunnus": "irrawaddyn-suisto",
+    "nimi": "Irrawaddyn suisto",
+    "seutu": "Myanmar",
+    "selite": "Myanmarin tärkeimmän joen mangrovemetsien ja riisipeltojen halkoma suisto Andamaanien merellä.",
+    "lat": 16,
+    "lon": 95,
+    "oletus": "iss073e1197819",
+    "havainnot": [
+      {
+        "id": "iss073e1197819",
+        "aika": "2025-11-22",
+        "teksti": "Irrawaddy-joki haarautuu lukemattomiksi mangrovemetsän reunustamiksi uomiksi ennen laskuaan Andamaanien merelle. Ruskea sedimenttivyöhyke rannikon edustalla paljastaa, kuinka paljon liejua joki kuljettaa mukanaan riisipeltojen ja kosteikkojen halki. Avaruusaseman aurinkopaneeli näkyy kuvan oikeassa reunassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1197819/iss073e1197819~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1197819/iss073e1197819~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1197819"
+      }
+    ]
+  },
+  {
+    "tunnus": "colorado-suisto",
+    "nimi": "Colorado-joen suisto",
+    "seutu": "Kalifornianlahti, Meksiko",
+    "selite": "Kuivunut jokisuisto, joka paljastaa kuinka kastelu vie Colorado-joen veden ennen kuin se ehtii mereen.",
+    "lat": 31.8,
+    "lon": -114.75,
+    "oletus": "iss064e002258",
+    "havainnot": [
+      {
+        "id": "iss064e002258",
+        "aika": "2020-10-28",
+        "teksti": "Colorado-joen suisto Kalifornianlahden pohjukassa. Valkoinen alue vasemmalla on entistä jokiuomaa, joka on kuivunut, koska joen vesi käytetään lähes kokonaan kasteluun ennen kuin se ehtii merelle asti. Turkoosi sedimenttipitoinen vesi näyttää, missä vielä virtaava vesi kohtaa lahden. Avaruusaseman rakenteet näkyvät kuvan oikeassa reunassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e002258/iss064e002258~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e002258/iss064e002258~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e002258"
+      }
+    ]
+  },
+  {
+    "tunnus": "santorini",
+    "nimi": "Santorini",
+    "seutu": "Kykladit, Kreikka",
+    "selite": "Kalderasaaristo, joka syntyi yhden historian voimakkaimmista tulivuorenpurkauksista.",
+    "lat": 36.4,
+    "lon": 25.4,
+    "oletus": "iss017e005037",
+    "havainnot": [
+      {
+        "id": "iss017e005037",
+        "aika": "2008-04-20",
+        "teksti": "Santorinin saariryhmä ylhäältä: oikealla Théran pääsaari, jonka valkoiset kattojen rivit seuraavat jyrkän kalderan reunaa, ja vasemmalla tumma Nea Kamenin saari, joka on kasvanut esiin merestä laavavirroista. Kalderan synnytti noin vuonna 1620 eaa. tapahtunut purkaus, yksi viimeisten 10 000 vuoden voimakkaimmista. Saaren oikeassa yläkulmassa erottuu lentokenttä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 17",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005037~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005037~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss017e005037"
+      }
+    ]
+  },
+  {
+    "tunnus": "amazonin-suu",
+    "nimi": "Amazonin suu",
+    "seutu": "Pará, Brasilia",
+    "selite": "Maailman vesirikkaimman joen suualue, jossa virtaukset muovaavat rantaviivaa jatkuvasti uudelleen.",
+    "lat": -0.6,
+    "lon": -49.9,
+    "oletus": "iss010e13029",
+    "havainnot": [
+      {
+        "id": "iss010e13029",
+        "aika": "2005-01-13",
+        "teksti": "Punaruskea liejuinen vesi virtaa vehreiden saarien välistä siellä missä Amazon laskee mereen; Perigoso-kanava erottaa saaren mantereesta, ja pilvet peittävät osan näkymästä. NASA:n tutkijat vertasivat vuosien 2000 ja 2005 kuvia ja havaitsivat kanavan siirtyneen satoja metrejä, kun joki syö rantaa toiselta puolelta ja kasaa lietettä toiselle.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss010e13029/iss010e13029~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss010e13029/iss010e13029~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e13029"
+      }
+    ]
+  },
+  {
+    "tunnus": "fundynlahti",
+    "nimi": "Fundynlahti",
+    "seutu": "Nova Scotia ja New Brunswick, Kanada",
+    "selite": "Lahti, jossa on maailman suurin vuorovesivaihtelu — vesi voi nousta ja laskea yli kymmenen metriä.",
+    "lat": 45.3,
+    "lon": -64.5,
+    "oletus": "iss059e059149",
+    "havainnot": [
+      {
+        "id": "iss059e059149",
+        "aika": "2019-05-07",
+        "teksti": "Fundynlahti erottaa Nova Scotian (oikealla) New Brunswickistä (vasemmalla). Lahden pohjukoissa vesi on punaruskeaa: maailman suurimmat vuorovedet huuhtovat esiin hiekkakiveä ja punaista mutaa kahdesti päivässä. Pilvijuova kulkee lahden yli kuvan alareunassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 59",
+        "kuvaaja": "David Saint-Jacques",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss059e059149/iss059e059149~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss059e059149/iss059e059149~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss059e059149"
+      }
+    ]
+  },
+  {
+    "tunnus": "falklandinsaaret",
+    "nimi": "Falklandinsaaret",
+    "seutu": "Etelä-Atlantti, Britannian merentakainen alue",
+    "selite": "Kahden pääsaaren ja satojen pienempien saarten ryhmä keskellä eteläistä Atlanttia, kaukana lähimmästä mantereesta.",
+    "lat": -51.7,
+    "lon": -59.5,
+    "oletus": "iss071e582470",
+    "havainnot": [
+      {
+        "id": "iss066e091560",
+        "aika": "2021-11-30",
+        "teksti": "Sama saaristo runsaat kaksi vuotta aiemmin, pilvien raosta kuvattuna. Saarten välistä kulkeva salmi erottaa Länsi- ja Itä-Falklandin toisistaan. Saariryhmän kaksi nimeä — brittiläinen Falklandinsaaret ja argentiinalainen Malvinas — kertovat kiistasta, joka johti sotaan 1982.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 66",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss066e091560/iss066e091560~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss066e091560/iss066e091560~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss066e091560"
+      },
+      {
+        "id": "iss071e582470",
+        "aika": "2024-09-02",
+        "teksti": "Länsi- ja Itä-Falkland erottuvat tummina, repaleisina saarina kirkkaan sinisen valtameren keskeltä. Saarilla asuu vain runsaat 3 700 ihmistä mutta moninkertainen määrä lampaita, ja rannikon lahdet ovat pingviinien ja merileijonien suosimia poikuupaikkoja.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e582470/iss071e582470~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e582470/iss071e582470~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e582470"
+      }
+    ]
+  },
+  {
+    "tunnus": "etela-georgia",
+    "nimi": "Etelä-Georgia",
+    "seutu": "Eteläinen Atlantti, Britannian merentakainen alue",
+    "selite": "Jäätikköinen vuorisaari, jonne Ernest Shackleton käveli hakemaan apua pelastusretkellään 1916.",
+    "lat": -54.3,
+    "lon": -36.5,
+    "oletus": "iss011e12148",
+    "havainnot": [
+      {
+        "id": "iss011e12148",
+        "aika": "2005-08-26",
+        "teksti": "Lumihuippuiset vuoret laskevat suoraan jäätiköinä mereen, ja niiden välissä tumma vuono heijastaa taivasta. Saari on niin jyrkkä ja jäätikköinen, ettei sen halki ole koskaan rakennettu tietä — Shackleton ja kaksi toveria ylittivät samankaltaisen maaston jalan vuonna 1916 pelastaakseen haaksirikkoutuneen miehistönsä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 11",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss011e12148/iss011e12148~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss011e12148/iss011e12148~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss011e12148"
+      }
+    ]
+  },
+  {
+    "tunnus": "dasht-e-lut",
+    "nimi": "Dasht-e Lutin kaluutit",
+    "seutu": "Kerman, Iran",
+    "selite": "Yksi Maan kuumimmista paikoista, jonka tuuli on veistänyt pitkiksi, harjanteisiksi yardangeiksi.",
+    "lat": 30.7,
+    "lon": 58.5,
+    "oletus": "iss012e18779",
+    "havainnot": [
+      {
+        "id": "iss012e18779",
+        "aika": "2006-02-28",
+        "teksti": "Kaluutit eli tuulen kuluttamat harjanteet piirtyvät aavikkoon kymmenien kilometrien pituisina riveinä, kultaisina iltapäivän valossa. Satelliitit ovat mitanneet Dasht-e Lutin pintalämpötilaksi yli 70 astetta — yhden korkeimmista koskaan mitatuista maanpinnan lämpötiloista. Pilvet kuvassa ovat harvinaisia: alueella ei sada juuri koskaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 12",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss012e18779/iss012e18779~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss012e18779/iss012e18779~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss012e18779"
+      }
+    ]
+  },
+  {
+    "tunnus": "damavand",
+    "nimi": "Damavand",
+    "seutu": "Mazandaran, Iran",
+    "selite": "Iranin ja koko Lähi-idän korkein huippu, lähes symmetrinen lumihuippuinen tulivuori.",
+    "lat": 35.951,
+    "lon": 52.109,
+    "oletus": "iss010e13393",
+    "havainnot": [
+      {
+        "id": "iss010e13393",
+        "aika": "2005-01-15",
+        "teksti": "Vuoren rinteiltä laskeutuu säteittäin lumiuurteita joka suuntaan kuin valtava valkoinen sateenvarjo. Damavand on yli 5 600 metriä korkea ja yhä toimiva tulivuori — huipulla purkautuu rikkikaasua — vaikka viimeisestä laavapurkauksesta on kulunut tuhansia vuosia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss010e13393~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss010e13393~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e13393"
+      }
+    ]
+  },
+  {
+    "tunnus": "sarezjarvi",
+    "nimi": "Sarezjärvi",
+    "seutu": "Pamir, Tadžikistan",
+    "selite": "Maanjäristyksen padottu vuoristojärvi, jonka luonnollinen pato uhkaa yhä pettää.",
+    "lat": 38.264,
+    "lon": 72.573,
+    "oletus": "iss074e0814815",
+    "havainnot": [
+      {
+        "id": "iss074e0814815",
+        "aika": "2026-07-17",
+        "teksti": "Turkoosi järvi täyttää Pamirin vuoristolaakson mutkitellen yli 60 kilometrin matkan. Se syntyi 1911, kun voimakas maanjäristys irrotti kalliovyöryn, joka tukki laakson — Usoin sortuma on yhä yksi maailman korkeimmista luonnollisista padoista. Geologit seuraavat patoa jatkuvasti, sillä sen pettäminen uhkaisi satojatuhansia ihmisiä alajuoksulla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0814815/iss074e0814815~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0814815/iss074e0814815~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0814815"
+      }
+    ]
+  },
+  {
+    "tunnus": "toktogul",
+    "nimi": "Toktogulin tekojärvi",
+    "seutu": "Tien-shan, Kirgisia",
+    "selite": "Keski-Aasian suurimpiin kuuluva tekojärvi, joka varastoi vuoriston sulamisvedet vuoriston sisään.",
+    "lat": 41.72,
+    "lon": 73,
+    "oletus": "iss074e0825692",
+    "havainnot": [
+      {
+        "id": "iss074e0825692",
+        "aika": "2026-07-17",
+        "teksti": "Kirkkaan turkoosi tekojärvi täyttää joenlaakson Tien-shanin vuorten keskellä. Pato valmistui 1974, ja järvi tuottaa suuren osan Kirgisian sähköstä. Kesken talven päästetty vesi on toistuvasti riidan aihe naapurimaiden kanssa, jotka tarvitsisivat saman veden keväällä kastelukauden alkuun.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1280,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0825692/iss074e0825692~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0825692/iss074e0825692~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0825692"
+      }
+    ]
+  },
+  {
+    "tunnus": "kljutsevskaja",
+    "nimi": "Kljutševskaja Sopka",
+    "seutu": "Kamtšatka, Venäjä",
+    "selite": "Euraasian korkein toimiva tulivuori, joka purkautuu useita kertoja vuosikymmenessä.",
+    "lat": 56.056,
+    "lon": 160.642,
+    "oletus": "iss038e005515",
+    "havainnot": [
+      {
+        "id": "iss038e005515",
+        "aika": "2013-11-16",
+        "teksti": "Tuhkapatsas nousee suoraan huipulta ja taittuu tuulen mukana sivulle — purkaus oli käynnissä juuri kun avaruusasema lensi ylitse. Vuori on lähes 4 800 metriä korkea ja kasvaa joka purkauksen myötä. Vasemmalla näkyy lumihuippuinen naapuritulivuori, jonka purkauspilvi jättää varjoonsa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 38",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss038e005515/iss038e005515~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss038e005515/iss038e005515~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss038e005515"
+      }
+    ]
+  },
+  {
+    "tunnus": "reunion",
+    "nimi": "Réunion",
+    "seutu": "Intian valtameri, Ranska",
+    "selite": "Ranskan merentakainen departementti, jonka keskellä kohoaa yksi maailman aktiivisimmista tulivuorista.",
+    "lat": -21.13,
+    "lon": 55.54,
+    "oletus": "iss055e020372",
+    "havainnot": [
+      {
+        "id": "iss055e020372",
+        "aika": "2018-04-10",
+        "teksti": "Saaren pyöreä muoto ja rosoiset laaksot paljastavat sen synnyn: koko saari on yhden ainoan kilpitulivuoren, Piton des Neigesin, rakentama. Vuoren jyrkät valurenkaat erottuvat kuvan vasemmassa reunassa vihreinä syvänteinä. Saaren toisella laidalla purkautuu säännöllisesti Piton de la Fournaise, joka purkautuu keskimäärin kerran vuodessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 55",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss055e020372/iss055e020372~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss055e020372/iss055e020372~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss055e020372"
+      }
+    ]
+  },
+  {
+    "tunnus": "villarrica",
+    "nimi": "Villarrica",
+    "seutu": "Araucanía, Chile",
+    "selite": "Yksi Etelä-Amerikan aktiivisimmista tulivuorista, jonka kraatterissa lipuu pysyvä laavajärvi.",
+    "lat": -39.42,
+    "lon": -71.93,
+    "oletus": "iss068e040596",
+    "havainnot": [
+      {
+        "id": "iss068e040596",
+        "aika": "2023-01-17",
+        "teksti": "Lumihuippu piirtää täydellisen kartion kahden järven, Villarrican ja Calafquénin, väliin. Rinteiltä laskeutuvat tummat juovat ovat vanhoja laavavirtoja ja mutavirtojen uria. Huipun kraatterissa kiehuu jatkuvasti näkyvä laavajärvi — yksi vain viidestä koko maailmassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 68",
+        "kuvaaja": "Koichi Wakata",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss068e040596/iss068e040596~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss068e040596/iss068e040596~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss068e040596"
+      }
+    ]
+  },
+  {
+    "tunnus": "laguna-verde",
+    "nimi": "Laguna Verde",
+    "seutu": "Atacama, Chile",
+    "selite": "Turkoosi korkean vuoriston järvi maailman korkeimman aktiivisen tulivuoren, Ojos del Saladon, juurella.",
+    "lat": -26.98,
+    "lon": -68.55,
+    "oletus": "iss074e0760459",
+    "havainnot": [
+      {
+        "id": "iss074e0760459",
+        "aika": "2026-06-22",
+        "teksti": "Järven vesi hohtaa kirkkaan turkoosina liuenneiden mineraalien ansiosta, yli 4 300 metrin korkeudessa. Ympäröivä maasto on täynnä pieniä tulivuorenkartioita ja tuoreita laavavirtoja. Vain muutaman kilometrin päässä kohoaa Ojos del Salado, 6 893 metriä korkea maailman korkein aktiivinen tulivuori.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0760459/iss074e0760459~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0760459/iss074e0760459~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0760459"
+      }
+    ]
+  },
+  {
+    "tunnus": "laguna-colorada",
+    "nimi": "Laguna Colorada",
+    "seutu": "Potosí, Bolivia",
+    "selite": "Veripunainen suolajärvi Andien ylätasangolla, jonka rannoilla pesii tuhansia flamingoja.",
+    "lat": -22.2,
+    "lon": -67.78,
+    "oletus": "iss066e110899",
+    "havainnot": [
+      {
+        "id": "iss066e110899",
+        "aika": "2022-01-07",
+        "teksti": "Järven pinta hohtaa veripunaisena keskellä ruskeaa ylätasankoa, ja valkoiset boraattisaarekkeet pilkottavat sen läpi. Punainen väri syntyy pigmentistä, jota levät ja mikrobit tuottavat suojautuakseen kirkkaalta auringolta yli 4 200 metrin korkeudessa. Kolme flamingolajia ruokailee järven levillä ja äyriäisillä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 66",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss066e110899/iss066e110899~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss066e110899/iss066e110899~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss066e110899"
+      }
+    ]
+  },
+  {
+    "tunnus": "san-rafael",
+    "nimi": "San Rafaelin jäätikkö",
+    "seutu": "Aysén, Chile",
+    "selite": "Patagonian pohjoisen jäätikköalueen jäätikkö, joka laskee suoraan laguuniin ja kalvaa siihen jäävuoria.",
+    "lat": -46.68,
+    "lon": -73.83,
+    "oletus": "iss063e081907",
+    "havainnot": [
+      {
+        "id": "iss063e081907",
+        "aika": "2020-09-01",
+        "teksti": "Jäätikön sininen, rikkonainen etureuna työntyy suoraan laguuniin, ja sen edestä irronneet jäävuoret kelluvat vedessä satoina valkoisina lohkareina. San Rafael on eteläisen pallonpuoliskon matalimmilla leveysasteilla oleva jäätikkö, joka ulottuu lähes sademetsävyöhykkeeseen asti — ja on vetäytynyt viime vuosikymmeninä useita kilometrejä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 63",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss063e081907/iss063e081907~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss063e081907/iss063e081907~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss063e081907"
+      }
+    ]
+  },
+  {
+    "tunnus": "simienit",
+    "nimi": "Simienin vuoret",
+    "seutu": "Amhara, Etiopia",
+    "selite": "Jyrkkiin huippuihin ja syviin rotkoihin kulunut ylätasanko, jota kutsutaan Afrikan Grand Canyoniksi.",
+    "lat": 13.19,
+    "lon": 38.24,
+    "oletus": "iss016e010784",
+    "havainnot": [
+      {
+        "id": "iss016e010784",
+        "aika": "2007-11-16",
+        "teksti": "Vuosimiljoonien sadevedet ovat uurtaneet rotkoja, jotka haarautuvat ylätasangosta kuin puun juuret, ja jyrkät reunat erottuvat terävinä varjoina. Ylätasanko on jäänne paljon suuremmasta laavakerrostumasta, josta eroosio on jättänyt jäljelle vain kovimmat, sakaraiset huiput. Alueella elää geladapaviaani, jota ei tavata luonnossa missään muualla maailmassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 16",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010784~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010784~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss016e010784"
+      }
+    ]
+  },
+  {
+    "tunnus": "everglades",
+    "nimi": "Everglades",
+    "seutu": "Florida, Yhdysvallat",
+    "selite": "Valtavan matalana virtaava ”ruohon joki”, yksi maailman suurimmista kosteikoista.",
+    "lat": 25.4,
+    "lon": -80.9,
+    "oletus": "iss015e08920",
+    "havainnot": [
+      {
+        "id": "iss015e08920",
+        "aika": "2007-05-19",
+        "teksti": "Turkoosin ja tummanvihreän kirjava kuvio on satojen tuhansien hehtaarien laajuinen saraikko, jonka läpi vesi virtaa niin hitaasti — vain muutaman sadan metrin päivässä — että aluetta kutsutaan ”ruohon joeksi”. Kansallispuisto on maailman ainoa paikka, jossa amerikanalligaattori ja amerikankrokotiili elävät luonnossa samalla alueella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 15",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e08920~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e08920~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss015e08920"
+      }
+    ]
+  },
+  {
+    "tunnus": "ennedi",
+    "nimi": "Ennedin ylänkö",
+    "seutu": "Ennedi, Tšad",
+    "selite": "UNESCOn suojelema hiekkakivimuodostuma Saharan keskellä, jonka pinnalla on myös muinaisen meteoriitin jättämä kraatteri.",
+    "lat": 17.42,
+    "lon": 21.75,
+    "oletus": "iss074e0320315",
+    "havainnot": [
+      {
+        "id": "iss072e404551",
+        "aika": "2024-12-26",
+        "teksti": "Laajempi näkymä samasta ylängöstä: punertava hiekkakivi on kulunut sokkeloiseksi labyrintiksi kanjoneita ja pylväitä. Muodostuma on satoja miljoonia vuosia vanha, ja sen kallioseinillä on tuhansia vuosia vanhoja maalauksia ajalta, jolloin Sahara oli vihreä ja märkä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1280,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e404551/iss072e404551~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e404551/iss072e404551~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e404551"
+      },
+      {
+        "id": "iss074e0320315",
+        "aika": "2026-02-21",
+        "teksti": "Gweni-Fadan kraatteri erottuu lähes täydellisenä ympyränä aavikon keskeltä — NASA tunnistaa sen eroosion paljastamaksi, meteoriitin törmäyksestä syntyneeksi rakenteeksi, halkaisijaltaan yli kolme kilometriä. Sen ympärillä mutkittelevat kuivat jokiuomat täyttyvät vedellä vain harvoin sadekausina.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0320315/iss074e0320315~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0320315/iss074e0320315~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0320315"
+      }
+    ]
+  },
+  {
+    "tunnus": "nevado-del-ruiz",
+    "nimi": "Nevado del Ruiz",
+    "seutu": "Kolumbia",
+    "selite": "Jäätikköinen tulivuori, jonka vuoden 1985 purkaus suli jäätikköä ja hautasi kokonaisen kaupungin mutavirran alle.",
+    "lat": 4.892,
+    "lon": -75.324,
+    "oletus": "iss023e027737",
+    "havainnot": [
+      {
+        "id": "iss023e027737",
+        "aika": "2010-04-23",
+        "teksti": "Lumi- ja jäätikkökupu peittää huipun, ja sen keskellä erottuu tumma, pyöreä kraatteri, josta nousee yhä höyryä. Rinteiltä laskeutuvat syvät, säteittäiset uurteet ovat vanhojen mutavirtojen jälkiä. Vuoden 1985 purkaus suli osan jäätiköstä ja synnytti laharin, joka hautasi Armeron kaupungin ja surmasi yli 23 000 ihmistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 23",
+        "kuvaaja": "Soichi Noguchi",
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e027737~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e027737~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss023e027737"
+      }
+    ]
+  },
+  {
+    "tunnus": "sakurajima",
+    "nimi": "Sakurajima",
+    "seutu": "Kyūshū, Japani",
+    "selite": "Yksi Japanin aktiivisimmista tulivuorista kohoaa keskellä Kagoshiman lahtea, kaupungin kupeessa.",
+    "lat": 31.593,
+    "lon": 130.657,
+    "oletus": "iss034e027139",
+    "havainnot": [
+      {
+        "id": "iss034e027139",
+        "aika": "2013-01-10",
+        "teksti": "Sakurajima purkautuu tammikuussa 2013 kuvattuna Kansainväliseltä avaruusasemalta. Tuhkapilvi kulkeutuu kaakkoon yli lahden, ja purkauspilven varjo osuu vedenpinnalle. Alempana näkyy Kagoshiman kaupunki, jonka noin 600 000 asukasta elävät tulivuoren varjossa ja pyyhkivät tuhkaa katoiltaan lähes viikoittain.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e027139/iss034e027139~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e027139/iss034e027139~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e027139"
+      }
+    ]
+  },
+  {
+    "tunnus": "aorounga",
+    "nimi": "Aorounga-kraatteri",
+    "seutu": "Sahara, Tšad",
+    "selite": "Yksi maailman parhaiten säilyneistä meteoriittikraattereista piirtyy tarkkoina renkaina Saharan hiekkaan.",
+    "lat": 19.1,
+    "lon": 19.25,
+    "oletus": "iss012e09639",
+    "havainnot": [
+      {
+        "id": "iss012e09639",
+        "aika": "2005-11-29",
+        "teksti": "Aorounga-kraatterin renkaat erottuvat terävinä Tšadin pohjoisosan aavikolla. Kraatterin halkaisija on noin 17 kilometriä, ja tutkijoiden mukaan sen iskun jäljet ovat säilyneet lähes koskemattomina satojen miljoonien vuosien ajan, koska alueella ei ole ollut juuri lainkaan eroosiota kuluttavaa kasvillisuutta tai vettä. Tutkakuvaukset ovat paljastaneet hiekan alta vielä kaksi samanikäistä kraatteria vierekkäin, mikä viittaa kolmen kappaleen peräkkäiseen törmäykseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 12",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss012e09639/iss012e09639~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss012e09639/iss012e09639~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss012e09639"
+      }
+    ]
+  },
+  {
+    "tunnus": "emi-koussi",
+    "nimi": "Emi Koussi",
+    "seutu": "Tibestin vuoret, Tšad",
+    "selite": "Saharan korkein huippu on kilpitulivuori, jonka laella on yksi maailman suurimmista kalderoista.",
+    "lat": 19.792,
+    "lon": 18.556,
+    "oletus": "iss030e005456",
+    "havainnot": [
+      {
+        "id": "iss030e005456",
+        "aika": "2011-11-26",
+        "teksti": "Emi Koussin harmaanvihreä kilpitulivuori kohoaa Tšadin Tibestin vuoristossa, ja oikealla näkyy vertailun vuoksi Aorounga-kraatterin rengasmuodostuma samassa kuvassa. Emi Koussin huipulla on noin 12 x 19 kilometrin kalderarakennelma, yksi laajimmista koko maailmassa. Vuori kohoaa 3 415 metriin ja on samalla koko Saharan aavikon korkein kohta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e005456/iss030e005456~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e005456/iss030e005456~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e005456"
+      }
+    ]
+  },
+  {
+    "tunnus": "meteor-crater-arizona",
+    "nimi": "Meteorikraatteri",
+    "seutu": "Arizona, Yhdysvallat",
+    "selite": "Ensimmäinen kraatteri, joka todistettiin tieteellisesti meteoriitin iskun jäljeksi, aukeaa terävärajaisena Arizonan ylängöllä.",
+    "lat": 35.027,
+    "lon": -111.022,
+    "oletus": "iss074e0208832",
+    "havainnot": [
+      {
+        "id": "iss074e0208832",
+        "aika": "2026-01-26",
+        "teksti": "Meteorikraatteri erottuu tarkkarajaisena reikänä Arizonan lumisen ylängön keskellä. Kraatteri syntyi noin 50 000 vuotta sitten, kun noin 50 metriä leveä rauta-nikkelimeteoriitti iski maahan. Se on halkaisijaltaan noin 1,2 kilometriä, ja NASA on käyttänyt paikkaa Kuu-astronauttien maastokoulutukseen sen kuumaisemaa muistuttavan pinnan takia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0208832/iss074e0208832~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0208832/iss074e0208832~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0208832"
+      }
+    ]
+  },
+  {
+    "tunnus": "buenos-aires-yolla",
+    "nimi": "Buenos Aires",
+    "seutu": "Argentiina",
+    "selite": "Argentiinan pääkaupunki levittäytyy miljoonine valoineen Río de la Platan rannalle.",
+    "lat": -34.61,
+    "lon": -58.44,
+    "oletus": "iss072e519264",
+    "havainnot": [
+      {
+        "id": "iss072e519264",
+        "aika": "2025-01-21",
+        "teksti": "Buenos Airesin katuverkko piirtyy oranssina ja valkoisena yöllisessä kuvassa tammikuulta 2025. Kaupungissa asuu noin 3,1 miljoonaa ihmistä, mutta metropolialueella yli 15 miljoonaa – lähes kolmasosa koko Argentiinan väestöstä. Río de la Plata, maailman leveimpiin kuuluva jokisuisto, jää kuvan oikeaan reunaan mustana.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e519264/iss072e519264~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e519264/iss072e519264~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e519264"
+      }
+    ]
+  },
+  {
+    "tunnus": "riyadh-yolla",
+    "nimi": "Riad",
+    "seutu": "Saudi-Arabia",
+    "selite": "Aavikon keskelle noussut pääkaupunki hehkuu yöllä laajana ruudukkona ilman ainoatakaan lähijokea.",
+    "lat": 24.7136,
+    "lon": 46.6753,
+    "oletus": "iss033e020288",
+    "havainnot": [
+      {
+        "id": "iss033e020288",
+        "aika": "2012-11-13",
+        "teksti": "Riadin katuverkko hohtaa keltaisena ja sinisenä marraskuisessa yökuvassa vuodelta 2012. Kaupungin väkiluku on kasvanut räjähdysmäisesti: vielä 1960 asukkaita oli noin 150 000, nykyään yli 7 miljoonaa. Riad sijaitsee Najdin ylätasangolla, eikä sen lähellä virtaa yhtään pysyvää jokea – vesi tulee suolanpoistolaitoksista ja pohjavedestä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 33",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss033e020288/iss033e020288~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss033e020288/iss033e020288~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss033e020288"
+      }
+    ]
+  },
+  {
+    "tunnus": "casablanca-yolla",
+    "nimi": "Casablanca",
+    "seutu": "Marokko",
+    "selite": "Marokon suurin kaupunki ja tärkein satama loistaa Atlantin rannalla.",
+    "lat": 33.5731,
+    "lon": -7.5898,
+    "oletus": "iss072e645691",
+    "havainnot": [
+      {
+        "id": "iss072e645691",
+        "aika": "2025-02-17",
+        "teksti": "Casablancan valot piirtävät rannikon ääriviivan tarkasti Atlantin mustaa merta vasten. Kaupunki on Marokon suurin ja tärkein talouskeskus, ja siellä asuu yli 3,7 miljoonaa ihmistä. Nimi tarkoittaa espanjaksi ’valkoista taloa’ – portugalilaiset ja espanjalaiset merenkulkijat antoivat sen valkoisiksi kalkittujen rakennusten mukaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 72",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss072e645691/iss072e645691~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss072e645691/iss072e645691~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss072e645691"
+      }
+    ]
+  },
+  {
+    "tunnus": "empty-quarter",
+    "nimi": "Tyhjä neljännes",
+    "seutu": "Rub al-Khali, Saudi-Arabia",
+    "selite": "Maailman suurin yhtenäinen hiekkameri aaltoilee tuulen muovaamana loputtomiin.",
+    "lat": 20,
+    "lon": 52,
+    "oletus": "iss027e034290",
+    "havainnot": [
+      {
+        "id": "iss027e034290",
+        "aika": "2011-05-16",
+        "teksti": "Rub al-Khalin – Tyhjän neljänneksen – dyynit muodostavat tarkan, säännöllisen kuvion aavikon pinnalle. Hiekkameri on maailman suurin yhtenäinen dyynialue, ja sen dyynit voivat kohota jopa 250 metrin korkuisiksi. Alueen ylitti ensimmäisten eurooppalaisten joukossa brittiläinen tutkimusmatkailija Bertram Thomas vuosina 1930–31.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 27",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss027e034290~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss027e034290~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss027e034290"
+      }
+    ]
+  },
+  {
+    "tunnus": "taklamakan",
+    "nimi": "Taklamakanin autiomaa",
+    "seutu": "Xinjiang, Kiina",
+    "selite": "Yksi maailman suurimmista liikkuvan hiekan aavikoista täyttää koko Tarimin altaan Keski-Aasiassa.",
+    "lat": 39.5,
+    "lon": 76.5,
+    "oletus": "iss074e0316083",
+    "havainnot": [
+      {
+        "id": "iss074e0316083",
+        "aika": "2026-02-18",
+        "teksti": "Taklamakanin autiomaan läntinen reuna kohtaa Pamirin vuoriston lumihuiput jyrkässä siirtymässä. Autiomaa on toiseksi suurin liikkuvan hiekan alue maailmassa, ja sen nimen on tulkittu tarkoittavan suunnilleen ’sinne menee mutta ei tule takaisin’. Muinaiset silkkitiekulkijat kiersivät koko autiomaan sen reunoja pitkin sen sijaan, että olisivat yrittäneet ylittää sen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0316083/iss074e0316083~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0316083/iss074e0316083~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0316083"
+      }
+    ]
+  },
+  {
+    "tunnus": "simpson-desert",
+    "nimi": "Simpsonin autiomaa",
+    "seutu": "Australia",
+    "selite": "Satojen kilometrien pituiset punaiset hiekkaharjanteet juovittavat Australian sydänmaata.",
+    "lat": -24.5,
+    "lon": 137,
+    "oletus": "iss005e21295",
+    "havainnot": [
+      {
+        "id": "iss005e21295",
+        "aika": "2002-11-23",
+        "teksti": "Simpsonin autiomaan oranssinpunaiset dyyniharjanteet erottuvat selvästi vastikään palaneesta, sinertävän vihreästä kasvillisuudesta. Dyynit ovat pitkittäisiä ja voivat jatkua satojen kilometrien matkan lähes suorina linjoina. Punainen väri syntyy hiekanjyvien pintaa peittävästä rautaoksidikerroksesta, joka on muodostunut vuosituhansien kuluessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 5",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss005e21295/iss005e21295~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss005e21295/iss005e21295~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss005e21295"
+      }
+    ]
+  },
+  {
+    "tunnus": "aurora-scandinavia",
+    "nimi": "Revontulet Pohjolan yllä",
+    "seutu": "Ruotsi ja Suomi",
+    "selite": "Vihreä revontulinauha kaartuu maapallon reunan yli Pohjoismaiden kaupunkivalojen päällä.",
+    "lat": 60,
+    "lon": 20,
+    "oletus": "iss064e024089",
+    "havainnot": [
+      {
+        "id": "iss064e024089",
+        "aika": "2021-01-18",
+        "teksti": "Vihreä ja punertava revontulinauha kaartuu tähtitaivasta vasten Ruotsin ja Suomen kaupunkivalojen yllä, ja niiden välissä pimeänä erottuu Itämeri. Revontulet syntyvät, kun Auringosta tulevat varautuneet hiukkaset törmäävät yläilmakehän kaasuihin. Vihreä väri syntyy noin 100–300 kilometrin korkeudessa hehkuvasta hapesta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e024089/iss064e024089~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e024089/iss064e024089~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e024089"
+      }
+    ]
+  },
+  {
+    "tunnus": "manam",
+    "nimi": "Manam",
+    "seutu": "Papua-Uusi-Guinea",
+    "selite": "Oma saarensa muodostava tulivuori on yksi Papua-Uusi-Guinean aktiivisimmista.",
+    "lat": -4.08,
+    "lon": 145.037,
+    "oletus": "sts093-709-051",
+    "havainnot": [
+      {
+        "id": "sts093-709-051",
+        "aika": "1999-07-25",
+        "teksti": "Manam-saaren pyöreä tulivuori työntää tuhkapilveä pitkälle Bismarckinmerelle. Vuori muodostaa kokonaan oman, halkaisijaltaan noin 10 kilometrin saarensa Papua-Uuden-Guinean koillisrannikon edustalla. Vuoden 2004 suuri purkaus pakotti evakuoimaan koko saaren noin 9 000 asukasta mantereelle.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1859
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts093-709-051/sts093-709-051~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts093-709-051/sts093-709-051~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts093-709-051"
+      }
+    ]
+  },
+  {
+    "tunnus": "karymsky",
+    "nimi": "Karymski",
+    "seutu": "Kamtšatka, Venäjä",
+    "selite": "Kamtšatkan aktiivisin tulivuori purkautuu lähes jatkuvasti vanhan kalderajärven kupeessa.",
+    "lat": 54.049,
+    "lon": 159.443,
+    "oletus": "iss033e019822",
+    "havainnot": [
+      {
+        "id": "iss033e019822",
+        "aika": "2012-11-09",
+        "teksti": "Karymskin tulivuoren tumma tuhkapilvi kohoaa lumisen rinteen yllä, ja vieressä siintää pyöreä kalderajärvi. Vuori on yksi Kamtšatkan aktiivisimmista, ja se on purkautunut lähes yhtäjaksoisesti vuodesta 1996 lähtien. Vuori sijaitsee vanhemman, suuremman kalderan sisällä, joka syntyi noin 7 600 vuotta sitten.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 33",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss033e019822/iss033e019822~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss033e019822/iss033e019822~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss033e019822"
+      }
+    ]
+  },
+  {
+    "tunnus": "tarawa",
+    "nimi": "Tarawan atollit",
+    "seutu": "Kiribati",
+    "selite": "Matalat koralliatollit Tyynellämerellä ovat sekä Kiribatin sydän että ilmastonmuutoksen etulinja.",
+    "lat": 1.5,
+    "lon": 173,
+    "oletus": "iss053e180184",
+    "havainnot": [
+      {
+        "id": "iss053e180184",
+        "aika": "2017-11-12",
+        "teksti": "Abaiangin, Tarawan ja Maianan atollit kuvattuna marraskuussa 2017 muodostavat vihreänsinisen ketjun keskelle Tyyntämerta. Yhdessä ne ovat osa Kiribatin 33 koralliatollin ja saaren joukkoa. Tarawa oli näyttämönä toisen maailmansodan verisimpiin taisteluihin kuuluneelle Tarawan taistelulle marraskuussa 1943.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 53",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss053e180184/iss053e180184~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss053e180184/iss053e180184~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss053e180184"
+      }
+    ]
+  },
+  {
+    "tunnus": "wake-island",
+    "nimi": "Waken saari",
+    "seutu": "Tyynimeri, Yhdysvallat",
+    "selite": "Yksinäinen koralliatolli keskellä Tyyntämerta toimi lentotukikohtana jo ennen toista maailmansotaa.",
+    "lat": 19.28,
+    "lon": 166.65,
+    "oletus": "iss033e007873",
+    "havainnot": [
+      {
+        "id": "iss033e007873",
+        "aika": "2012-09-27",
+        "teksti": "Waken atollin vaaleanturkoosi laguuni erottuu selvästi tummansinistä valtamerta vasten. Atollin muodostavat kolme pientä saarta noin 4 000 kilometrin päässä Havaijista. Japani valtasi Waken joulukuussa 1941 lyhyen mutta ankaran taistelun jälkeen, ja saari pysyi japanilaismiehityksessä koko sodan ajan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 33",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss033e007873/iss033e007873~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss033e007873/iss033e007873~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss033e007873"
+      }
+    ]
+  },
+  {
+    "tunnus": "bassac-vietnam",
+    "nimi": "Bassac-joen suisto",
+    "seutu": "Vietnam",
+    "selite": "Mekongin toiseksi suurin haara jakautuu hedelmätarhojen ja mangrovemetsien ympäröimäksi jokisaareksi ennen Etelä-Kiinan merta.",
+    "lat": 9.55,
+    "lon": 106.23,
+    "oletus": "iss073e0818427",
+    "havainnot": [
+      {
+        "id": "iss073e0818427",
+        "aika": "2025-10-02",
+        "teksti": "Bassac-joki – Mekongin yksi yhdeksästä ’lohikäärmehaarasta’ – kiertää Cù Lao Dungin jokisaarta ruskeana ja sedimenttipitoisena juuri ennen laskuaan mereen. Vasemmalla näkyy tummempaa maata ja oikealla vihreämpää viljelysmaata ja hedelmätarhoja. Sameus syntyy Mekongin koko valuma-alueelta kertyneestä liejusta, jota vuorovesi sekoittaa edelleen suulla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0818427/iss073e0818427~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0818427/iss073e0818427~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0818427"
+      }
+    ]
+  },
+  {
+    "tunnus": "kenya-rift",
+    "nimi": "Kenian riftilaakso",
+    "seutu": "Kenia",
+    "selite": "Itä-Afrikan hautavajoama repii mannerta kahtia ja jättää jälkeensä värikkäitä soodajärviä.",
+    "lat": -1.87,
+    "lon": 36.28,
+    "oletus": "iss030e035487",
+    "havainnot": [
+      {
+        "id": "iss030e035487",
+        "aika": "2012-01-14",
+        "teksti": "Kenian riftilaakson rinnakkaiset murroslinjat viiruttavat maastoa vinosti kuvan poikki, ja keskellä hohtaa vaaleanpunertava soodajärvi. Laakso on osa Itä-Afrikan hautavajoamaa, joka syntyy, kun Afrikan ja Somalian mannerlaatat vetäytyvät hitaasti erilleen. Miljoonien vuosien kuluessa liike voi lopulta halkaista Afrikan ja synnyttää alueelle uuden valtameren.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e035487/iss030e035487~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e035487/iss030e035487~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e035487"
+      }
+    ]
+  },
+  {
+    "tunnus": "sahara-dust-western",
+    "nimi": "Länsi-Saharan pölymyrsky",
+    "seutu": "Länsi-Sahara",
+    "selite": "Saharasta nouseva pölypilvi peittää rannikon ja kulkeutuu edelleen Atlantin ylle.",
+    "lat": 24,
+    "lon": -13.5,
+    "oletus": "iss007e08259",
+    "havainnot": [
+      {
+        "id": "iss007e08259",
+        "aika": "2003-06-25",
+        "teksti": "Vaaleanruskea pölypilvi peittää Länsi-Saharan rannikon ja leviää pilvien lomasta kohti Atlantin valtamerta ja Kanariansaaria. Sahara nostaa ilmakehään valtavia määriä hienoa pölyä, joka voi kulkeutua tuhansien kilometrien päähän saakka Amazonin sademetsään asti. Pöly tuo mukanaan fosforia, joka lannoittaa sademetsän köyhää maaperää.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 7",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e08259~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e08259~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss007e08259"
+      }
+    ]
+  },
+  {
+    "tunnus": "baghdad-yolla",
+    "nimi": "Bagdad",
+    "seutu": "Irak",
+    "selite": "Tigris-joen mutka kiemurtelee kirkkaana miljoonakaupungin valomeren keskellä.",
+    "lat": 33.3152,
+    "lon": 44.3661,
+    "oletus": "iss073e0515117",
+    "havainnot": [
+      {
+        "id": "iss073e0515117",
+        "aika": "2025-08-23",
+        "teksti": "Bagdadin valot piirtävät kaupungin ääriviivat, ja niiden keskeltä erottuu Tigris-joen tumma S-mutka. Bagdad perustettiin vuonna 762 Abbasidien kalifikunnan pääkaupungiksi, ja siitä tuli pian yksi keskiajan maailman suurimmista ja oppineimmista kaupungeista. Nykyään Bagdadissa asuu yli seitsemän miljoonaa ihmistä, ja se on edelleen Irakin pääkaupunki.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0515117/iss073e0515117~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0515117/iss073e0515117~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0515117"
+      }
+    ]
+  },
+  {
+    "tunnus": "malaspina",
+    "nimi": "Malaspina",
+    "seutu": "Alaska, Yhdysvallat",
+    "selite": "Maailman suurin niin sanottu jalustajäätikkö, joka levittäytyy vuorten juurelta leveäksi jäälakeudeksi rannikolle.",
+    "lat": 59.87,
+    "lon": -140.5,
+    "oletus": "STS066-117-014",
+    "havainnot": [
+      {
+        "id": "STS066-117-014",
+        "aika": "1994-11-14",
+        "teksti": "Jäätikön pinnalla kiemurtelee tummia raitoja: ne ovat moreeneja, kivi- ja soravöitä, jotka syntyvät kun useampi vuoristojäätikkö yhtyy samaksi jäälevyksi rannikkotasangolla. Malaspina on niin laaja, että se peittäisi kokonaisen pienen osavaltion. Kuva otettiin sukkula Atlantiksen STS-66-lennolta marraskuussa 1994.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS066-117-014/STS066-117-014~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS066-117-014/STS066-117-014~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS066-117-014"
+      }
+    ]
+  },
+  {
+    "tunnus": "makgadikgadin-altaat",
+    "nimi": "Makgadikgadin suola-altaat",
+    "seutu": "Botswana",
+    "selite": "Yksi maailman suurimmista suolatasangoista, jonka reunalla altaissa haihdutetaan soodaa ja suolaa punaisten suolarakkojen värjäämästä suolavedestä.",
+    "lat": -20.6,
+    "lon": 26.08,
+    "oletus": "iss014e15732",
+    "havainnot": [
+      {
+        "id": "iss014e15732",
+        "aika": "2007-03-01",
+        "teksti": "Geometriset haihdutusaltaat reunustavat Makgadikgadin suolatasankoa: tummanpunaiset lammikot ovat suolaa rakastavien levien värjäämiä, ja niiden reunoille on kiteytynyt valkoista soodaa ja suolaa. Suolavesi pumpataan pinnan alta ja haihdutetaan alueen aurinkoisessa ilmastossa. Tuotanto on jatkunut samalla paikalla vuodesta 1991 lähtien.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e15732~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e15732~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss014e15732"
+      }
+    ]
+  },
+  {
+    "tunnus": "kaukasusvuoret",
+    "nimi": "Kaukasusvuoret",
+    "seutu": "Azerbaidžan ja Venäjä",
+    "selite": "Euroopan ja Aasian rajalla kohoava lumihuippuinen vuorijono, jonka juurella lepää Kaukasuksen suurin tekojärvi.",
+    "lat": 41.05,
+    "lon": 47,
+    "oletus": "iss071e041651",
+    "havainnot": [
+      {
+        "id": "iss023e035670",
+        "aika": "2010-05-08",
+        "teksti": "Sama tekojärvi lähempää, neljätoista vuotta aiemmin kuvattuna. Mingečaurin allas täyttää Kuran laakson syvennystä Suur- ja Vähä-Kaukasuksen välissä, ja sen rannat on jaettu selkeisiin, suorakulmaisiin viljelylohkoihin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 23",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e035670~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e035670~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss023e035670"
+      },
+      {
+        "id": "iss071e041651",
+        "aika": "2024-04-25",
+        "teksti": "Lumipeitteiset Kaukasuksen huiput kohoavat Azerbaidžanin ja Venäjän rajaseudulla, ja kuvan yläreunassa kimaltaa Mingečaurin tekojärvi. Se on Kaukasuksen suurin allas, ja sitä käytetään kalastukseen, juomaveden hankintaan ja peltojen kasteluun. Kuva otettiin huhtikuussa 2024 avaruusaseman kiertäessä noin 415 kilometrin korkeudessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 71",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss071e041651/iss071e041651~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss071e041651/iss071e041651~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss071e041651"
+      }
+    ]
+  },
+  {
+    "tunnus": "guadalupen-pyorteet",
+    "nimi": "Guadalupen saaren pyörteet",
+    "seutu": "Tyynimeri, Meksiko",
+    "selite": "Tulivuorisaari, jonka jyrkkä huippu pysäyttää matalan pilvikerroksen virtauksen ja synnyttää toistuvasti näyttäviä pilvipyörteiden ketjuja.",
+    "lat": 29.03,
+    "lon": -118.27,
+    "oletus": "iss036e035663",
+    "havainnot": [
+      {
+        "id": "iss036e035663",
+        "aika": "2013-08-24",
+        "teksti": "Guadalupen saaren korkea, tulivuorinen selänne katkaisee tasaisen pilvikerroksen virtauksen, ja saaren tuulen alle syntyy pyörteiden ketju eli von Kármánin pyörrekatu. Ilmiö on nimetty Theodore von Kármánin mukaan, joka kuvasi sen ensimmäisenä ja oli myöhemmin perustamassa NASAn JPL-tutkimuskeskusta. Pyörteiden sarja jatkuu satoja kilometrejä saaren taakse.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": "Karen Nyberg",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e035663/iss036e035663~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e035663/iss036e035663~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e035663"
+      },
+      {
+        "id": "iss040e016570",
+        "aika": "2014-06-21",
+        "teksti": "Sama saari lähes suoraan ylhäältä kuvattuna vajaan vuoden kuluttua. Pyörteet ovat nyt kiertyneet tiukemmiksi spiraaleiksi; niiden tarkka muoto riippuu kulloisestakin tuulen nopeudesta ja pilvikerroksen paksuudesta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": "Alex Gerst",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss040e016570/iss040e016570~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss040e016570/iss040e016570~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss040e016570"
+      }
+    ]
+  },
+  {
+    "tunnus": "kanariansaarten-pyorteet",
+    "nimi": "Kanariansaarten pyörteet",
+    "seutu": "Atlantti, Espanja",
+    "selite": "Saariketju, jonka tulivuorihuiput pysäyttävät passaatituulen alapilvet ja synnyttävät toistuvia pyörrekatuja valtamerelle.",
+    "lat": 28.3,
+    "lon": -16.5,
+    "oletus": "s40-75-003",
+    "havainnot": [
+      {
+        "id": "s40-75-003",
+        "aika": "1991-06-14",
+        "teksti": "Yksi Kanariansaarista lepää matalan pilvikerroksen keskellä kuin reikä valkoisessa peitteessä, ja sen taakse kiertyy peräkkäisiä pyörteitä. Passaattituulten yllä oleva lämmin ilmakerros lukitsee pilvet matalalle, jolloin saaren jyrkkä huippu muokkaa virtausta selvästi näkyväksi kuvioksi. Kuva otettiin sukkula Columbian STS-40-lennolla kesäkuussa 1991.",
+        "kuvaustapa": "NASAn miehitetyltä lennolta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/s40-75-003/s40-75-003~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/s40-75-003/s40-75-003~small.jpg",
+        "sivu": "https://images.nasa.gov/details/s40-75-003"
+      }
+    ]
+  },
+  {
+    "tunnus": "zagrosvuoret",
+    "nimi": "Zagrosvuoret",
+    "seutu": "Iran",
+    "selite": "Iranin ylängön reunalla kohoava poimuvuoristo, jonka rinteet piirtyvät avaruudesta kuin sormenjäljet.",
+    "lat": 33.5,
+    "lon": 46.7,
+    "oletus": "iss074e0315889",
+    "havainnot": [
+      {
+        "id": "iss074e0315889",
+        "aika": "2026-02-16",
+        "teksti": "Kalliokerrokset ovat taittuneet mannerlaattojen puristuksessa pitkiksi, yhdensuuntaisiksi harjanteiksi. Kuvan yläreunassa harjanteiden laet kohoavat lumirajan yläpuolelle. Poimut ovat syntyneet, kun Arabian laatta on työntynyt hitaasti Euraasian laattaa vasten miljoonien vuosien ajan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0315889/iss074e0315889~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0315889/iss074e0315889~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0315889"
+      }
+    ]
+  },
+  {
+    "tunnus": "lasvegas-yolla",
+    "nimi": "Las Vegas",
+    "seutu": "Nevada, Yhdysvallat",
+    "selite": "Aavikkokaupunki, jonka suorakulmainen katuverkko ja kirkkaasti valaistu Strip erottuvat yöllä selvästi ympäröivästä pimeästä autiomaasta.",
+    "lat": 36.17,
+    "lon": -115.14,
+    "oletus": "iss026e006255",
+    "havainnot": [
+      {
+        "id": "iss026e006255",
+        "aika": "2010-11-26",
+        "teksti": "Las Vegasin kaupunkialue täyttää laakson Mojaven aavikon keskellä, ja kadut piirtävät säännöllisen ruudukon. Kirkkain, valkoinen valokimppu keskellä kuvaa on kuuluisa Strip, jonka kasinot ja hotellit ovat auki ympäri vuorokauden. Kaupungin ympärillä alkaa heti asumaton, pimeä aavikko.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 26",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss026e006255~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss026e006255~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss026e006255"
+      }
+    ]
+  },
+  {
+    "tunnus": "iberia-yolla",
+    "nimi": "Iberian niemimaa",
+    "seutu": "Espanja ja Portugali",
+    "selite": "Koko niemimaa yöllä: kaksi pääkaupunkia erottuu kirkkaimpina pisteinä valoverkon keskellä.",
+    "lat": 40,
+    "lon": -4.5,
+    "oletus": "iss030e010008",
+    "havainnot": [
+      {
+        "id": "iss030e010008",
+        "aika": "2011-12-04",
+        "teksti": "Espanjan ja Portugalin rannikot ja kaupungit piirtyvät oranssina valoverkkona. Madrid hehkuu kirkkaana pisteenä niemimaan keskellä, ja Lissabon loistaa rannikolla oikealla. Ilmakehän vihertävä hehku erottuu selvästi horisontin yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e010008/iss030e010008~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e010008/iss030e010008~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e010008"
+      }
+    ]
+  },
+  {
+    "tunnus": "labradorin-jaameri",
+    "nimi": "Labradorin merijää",
+    "seutu": "Kanada",
+    "selite": "Kylmä Labradorin virta kuljettaa merijäätä ja jäävuoria etelään, ja jään reunalla näkyvät virtausten piirtämät pyörteet.",
+    "lat": 54,
+    "lon": -57,
+    "oletus": "iss070e086805",
+    "havainnot": [
+      {
+        "id": "iss070e086805",
+        "aika": "2024-02-03",
+        "teksti": "Merijää ajelehtii Labradorin rannikolla virtausten mukana, ja jään reuna piirtää näkyviin pyörteitä ja raitoja. Kuvan otti astronautti Loral O'Hara käsikamerallaan helmikuussa 2024. Saman talven aikana Arktiksen merijää kasvoi tutkijoiden mukaan tavallista hitaammin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e086805/iss070e086805~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e086805/iss070e086805~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e086805"
+      }
+    ]
+  },
+  {
+    "tunnus": "lake-sharpe",
+    "nimi": "Lake Sharpe ja kastelurenkaat",
+    "seutu": "Etelä-Dakota, Yhdysvallat",
+    "selite": "Missourijoen entinen mutka padottiin tekojärveksi, ja sen niemekkeelle piirtyy pyöreiden keskipistekastelukoneiden kuvio.",
+    "lat": 44.07,
+    "lon": -99.57,
+    "oletus": "iss038e023651",
+    "havainnot": [
+      {
+        "id": "iss038e023651",
+        "aika": "2013-12-30",
+        "teksti": "Missourijoen entinen mutka on nyt Lake Sharpe -tekojärven lahti, ja sen sisäkaarteeseen jäänyt niemeke on täynnä pyöreitä keskipistekastelun kenttiä. Missourijoki on Pohjois-Amerikan pisin joki, ja sen alajuoksua on padottu useaan otteeseen 1900-luvulla. Kuva otettiin joulukuussa 2013, ennen talven lumia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 38",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss038e023651/iss038e023651~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss038e023651/iss038e023651~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss038e023651"
+      }
+    ]
+  },
+  {
+    "tunnus": "new-orleans-mutka",
+    "nimi": "New Orleans ja joen mutka",
+    "seutu": "Louisiana, Yhdysvallat",
+    "selite": "Mississippijoki kiemurtelee kaupungin läpi niin jyrkästi, että New Orleansia kutsutaan Puolikuun kaupungiksi.",
+    "lat": 29.95,
+    "lon": -90.07,
+    "oletus": "iss039e001640",
+    "havainnot": [
+      {
+        "id": "iss039e001640",
+        "aika": "2014-03-13",
+        "teksti": "Mississippijoen ruskea vesi kiertää New Orleansin keskustan läpi kahdessa jyrkässä mutkassa. Oikeassa alakulmassa Pontchartrain-järvi kimaltaa auringon heijastuksessa. Kuva on otettu 400 millimetrin polttovälillä maaliskuussa 2014.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Rick Mastracchio",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e001640/iss039e001640~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e001640/iss039e001640~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e001640"
+      }
+    ]
+  },
+  {
+    "tunnus": "rio-negro-mutkat",
+    "nimi": "Río Negron mutkat",
+    "seutu": "Patagonia, Argentiina",
+    "selite": "Yksi Etelä-Amerikan mutkittelevimmista joista kiemurtelee Patagonian tasangon poikki lukemattomina hylättyinä lenkkeinä.",
+    "lat": -40.5,
+    "lon": -63.5,
+    "oletus": "iss022e019513",
+    "havainnot": [
+      {
+        "id": "iss022e019513",
+        "aika": "2010-01-04",
+        "teksti": "Río Negron nykyinen uoma ja lukuisat entiset jokilenkit erottuvat tummina käyrinä kuivalla tasangolla. Yksi hylätyistä lenkeistä hohtaa oranssina, todennäköisesti kuivuneen kasvillisuuden värjäämänä. Joki tunnetaan astronauttien keskuudessa juuri poikkeuksellisen mutkittelevasta uomastaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 22",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1311
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss022e019513~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss022e019513~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss022e019513"
+      }
+    ]
+  },
+  {
+    "tunnus": "ebron-suisto",
+    "nimi": "Ebron suisto",
+    "seutu": "Espanja",
+    "selite": "Riisiviljelysten pilkkoma suisto, jossa joen makea vesi ja Välimeren suolainen vesi kohtaavat.",
+    "lat": 40.72,
+    "lon": 0.72,
+    "oletus": "iss009e09985",
+    "havainnot": [
+      {
+        "id": "iss009e09985",
+        "aika": "2004-06-03",
+        "teksti": "Ebro-joki laskee Välimereen kolmiomaisena suistona, jonka pintaa peittävät geometriset riisipellot. Kuva on otettu auringon kimmellyksessä, joka paljastaa joen makean veden rajapinnan suolaisempaa merta vasten. Yläjuoksun padot ovat vähentäneet suistoon päätyvän veden ja kiintoaineksen määrää.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 9",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss009e09985/iss009e09985~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss009e09985/iss009e09985~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss009e09985"
+      }
+    ]
+  },
+  {
+    "tunnus": "selengan-suisto",
+    "nimi": "Selengajoen suisto",
+    "seutu": "Burjatia, Venäjä",
+    "selite": "Baikal-järven suurimman sivujoen suisto, joka suodattaa vettä ennen kuin se päätyy järveen.",
+    "lat": 52.16,
+    "lon": 106.5,
+    "oletus": "iss029e037915",
+    "havainnot": [
+      {
+        "id": "iss029e037915",
+        "aika": "2011-11-03",
+        "teksti": "Selengajoki haarautuu lukemattomiksi kanaviksi ja koukeroisiksi harjanteiksi ennen laskuaan Baikal-järveen. Tuore lumi korostaa suiston lohkomaista, viuhkamaista muotoa. Suiston laajuus ja muoto riippuvat siitä, kuinka paljon kiintoainesta joki kuljettaa mukanaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 29",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss029e037915/iss029e037915~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss029e037915/iss029e037915~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss029e037915"
+      }
+    ]
+  },
+  {
+    "tunnus": "texasin-kastelurenkaat",
+    "nimi": "Länsi-Texasin kastelurenkaat",
+    "seutu": "Texas, Yhdysvallat",
+    "selite": "Permin altaan öljynporausalue ja pyöreät kastelupellot limittyvät samalle kuivalle tasangolle.",
+    "lat": 32,
+    "lon": -102.1,
+    "oletus": "iss074e0603632",
+    "havainnot": [
+      {
+        "id": "iss074e0603632",
+        "aika": "2026-05-16",
+        "teksti": "Satoja pyöreitä keskipistekastelun kenttiä peittää Länsi-Texasin tasankoa, ja niiden joukossa erottuu öljynporauslaitteita ja teitä vaaleina pilkkuina. Alue lepää Permin altaan päällä, joka on yksi maailman tuottavimmista öljyesiintymistä. Kastelu tekee viljelyn mahdolliseksi muuten kuivalla aavikkoalueella.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0603632/iss074e0603632~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0603632/iss074e0603632~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0603632"
+      }
+    ]
+  },
+  {
+    "tunnus": "ningaloo-riutta",
+    "nimi": "Ningaloo-riutta",
+    "seutu": "Länsi-Australia",
+    "selite": "Mantereen laidalle kasvanut reunariutta erottaa turkoosin matalikon syvästä valtamerestä pitkän niemen länsipuolella.",
+    "lat": -22.7,
+    "lon": 113.85,
+    "oletus": "sts067-722a-053",
+    "havainnot": [
+      {
+        "id": "sts067-722a-053",
+        "aika": "1995-03-17",
+        "teksti": "Ningaloo-riutta kulkee ohuena turkoosina reunuksena Luoteisniemen länsirannalla aivan mantereen laidassa. Niemen itäpuolella avautuu Exmouth-lahti, jonka sameaan veteen hurrikaani Bobbyn tulvat olivat huuhtoneet punaista mutaa viikkoa aiemmin. Riutta on yksi harvoista suurista koralliriutoista, jotka kasvavat kiinni mantereeseen kaukana avomerellä sijaitsevien riuttojen sijaan.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts067-722a-053/sts067-722a-053~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts067-722a-053/sts067-722a-053~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts067-722a-053"
+      }
+    ]
+  },
+  {
+    "tunnus": "niagara",
+    "nimi": "Niagaranputous",
+    "seutu": "New York, Yhdysvallat ja Ontario, Kanada",
+    "selite": "Niagaranjoki ja sen kuuluisa putous muodostavat luonnollisen rajan Yhdysvaltojen ja Kanadan välille.",
+    "lat": 43.08,
+    "lon": -79.07,
+    "oletus": "iss010e17563",
+    "havainnot": [
+      {
+        "id": "iss010e17563",
+        "aika": "2005-02-11",
+        "teksti": "Talvinen näkymä Niagaranjoelta helmikuussa 2005: joki mutkittelee lumisen maiseman halki ja erottaa Yhdysvallat ja Kanadan toisistaan. Kuvan alaosassa erottuu jokiuoman jyrkkä silmukka, Niagaran pyörre, joka syntyi kun putous on vuosituhansien aikana kaivautunut taaksepäin kalliopohjaan. Itse putous jää kuvassa lumipeitteisen maiseman keskelle, mutta sen tekemä jälki näkyy koko jokilaaksossa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 10",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss010e17563/iss010e17563~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss010e17563/iss010e17563~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss010e17563"
+      },
+      {
+        "id": "iss015e05624",
+        "aika": "2007-04-29",
+        "teksti": "Sama alue huhtikuussa 2007, kun Erie-järven talvijää on juuri sulanut ja lähtenyt liikkeelle Niagaranjokea pitkin. Vaalea, jäänmurskaa täynnä oleva joki erottuu selvästi jo sulaneesta, tummasta vedestä. Erie-järven suulle asennettu jääpuomi pidättelee jäätä joka talvi, jotta se ei tukkisi voimalaitosten vedenottoa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 15",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e05624~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e05624~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss015e05624"
+      }
+    ]
+  },
+  {
+    "tunnus": "gronlannin-vuonot",
+    "nimi": "Grönlannin vuonot",
+    "seutu": "Lounais-Grönlanti, Tanska",
+    "selite": "Grönlannin lounaisrannikko on satojen jääkauden veistämien vuonojen pirstoma, ja saaren sisäosaa peittää kilometrien paksuinen mannerjää.",
+    "lat": 60.72,
+    "lon": -46.03,
+    "oletus": "sts066-114-031",
+    "havainnot": [
+      {
+        "id": "sts066-114-031",
+        "aika": "1994-11-14",
+        "teksti": "Marraskuussa 1994 otettu kuva näyttää Grönlannin lounaisrannikon vuonoverkoston lähellä Kap Farvelia ja Julianehåbin lahtea. Rannikon terävät niemet ja syvät lahdet erottuvat selvästi sisämaan tasaisesta, valkoisesta jäätikköylängöstä. Grönlannin mannerjää on paksuimmillaan lähes 3,5 kilometriä, ja sen reunoilta valuu jäätikkövirtoja, jotka murtuvat mereen jäävuoriksi.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1916
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts066-114-031/sts066-114-031~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts066-114-031/sts066-114-031~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts066-114-031"
+      }
+    ]
+  },
+  {
+    "tunnus": "manaus",
+    "nimi": "Vetten kohtaaminen Manausissa",
+    "seutu": "Amazonas, Brasilia",
+    "selite": "Manausin kaupungin kohdalla tumma Rio Negro ja samea Solimões-joki yhtyvät muodostaen Amazon-joen, mutta niiden vedet sekoittuvat toisiinsa vasta kilometrien päässä.",
+    "lat": -3.1,
+    "lon": -59.99,
+    "oletus": "iss009e15488",
+    "havainnot": [
+      {
+        "id": "iss009e15488",
+        "aika": "2004-07-20",
+        "teksti": "Heinäkuussa 2004 otettu kuva näyttää, miten Solimõesin vaaleanruskea, sedimenttipitoinen vesi virtaa kaupungin ohi kuvan alalaitaa kohti, kun taas Rio Negron tummempi vesi tulee oikealta. Manausin kaupunki erottuu keskellä terävänä, ruutukaavamaisena alueena jokikielekkeen kärjessä. Vedet eivät sekoitu heti, koska niiden lämpötila, virtausnopeus ja tiheys eroavat toisistaan – ilmiö jatkuu jokien yhtymäkohdasta kymmenien kilometrien päähän.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 9",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1271
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss009e15488/iss009e15488~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss009e15488/iss009e15488~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss009e15488"
+      }
+    ]
+  },
+  {
+    "tunnus": "cosiguina",
+    "nimi": "Cosigüinan tulivuori",
+    "seutu": "Nicaragua",
+    "selite": "Cosigüinan tulivuoren huippua peittää kraatterijärvi niemellä, joka sulkee Fonsecanlahden suuta Tyynenmeren rannikolla Nicaraguassa.",
+    "lat": 12.98,
+    "lon": -87.58,
+    "oletus": "iss016e010894",
+    "havainnot": [
+      {
+        "id": "iss016e010894",
+        "aika": "2007-11-17",
+        "teksti": "Marraskuussa 2007 otettu kuva näyttää Cosigüinan tulivuoren pyöreän tunturin ja sen huipulla lepäävän kraatterijärven, Laguna Cosigüinan. Vuoren juurella erottuu Fonsecanlahden sameaa vettä, joka virtaa jokisuistosta Tyynellemerelle. Vuori purkautui viimeksi vuonna 1859, mutta sen vuoden 1835 purkaus oli Keski-Amerikan historian suurin: tuhkaa levisi aina Meksikoon ja Jamaikalle asti.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 16",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1307
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010894~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010894~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss016e010894"
+      }
+    ]
+  },
+  {
+    "tunnus": "jamesinlahti-harjanteet",
+    "nimi": "Jamesinlahden rantaharjanteet",
+    "seutu": "Ontario ja Québec, Kanada",
+    "selite": "Jamesinlahden etelärannalla maankamara nousee yhä, koska jääkauden mannerjää painoi sitä alas tuhansien vuosien ajan.",
+    "lat": 51.05,
+    "lon": -80,
+    "oletus": "STS099-706-090",
+    "havainnot": [
+      {
+        "id": "STS099-706-090",
+        "aika": "2000-03-14",
+        "teksti": "Helmikuussa 2000 kuvattu Hannah Bay Jamesinlahden eteläosassa näyttää kymmeniä toisiaan seuraavia vaaleita harjanteita, jotka ovat entisiä rantaviivoja. Kun mannerjää suli viimeisen jääkauden jälkeen, maa alkoi hitaasti kohota ja meri perääntyi, jättäen jälkeensä nämä 100–200 metriä leveät muinaiset rantavallit. Ilmiö jatkuu yhä: Hudsoninlahden ja Jamesinlahden ranta-alueet ovat yksi maapallon nopeimmin kohoavista alueista.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1907,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS099-706-090/STS099-706-090~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS099-706-090/STS099-706-090~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS099-706-090"
+      }
+    ]
+  },
+  {
+    "tunnus": "krimin-lagunit",
+    "nimi": "Krimin värilliset lagunit",
+    "seutu": "Krimin niemimaa",
+    "selite": "Krimin niemimaan matalat rannikkolagunit hehkuvat turkoosina, punaisena ja violettina, koska niiden suola- ja levämäärä vaihtelee lammikoittain.",
+    "lat": 45.35,
+    "lon": 36.3,
+    "oletus": "iss056e032828",
+    "havainnot": [
+      {
+        "id": "iss056e032828",
+        "aika": "2018-06-24",
+        "teksti": "Kesäkuussa 2018 otettu kuva näyttää sarjan pieniä rannikkolaguuneja Krimillä, Atsovanmeren ja Mustanmeren välissä. Jokainen allas hohtaa omaa väriään – turkoosia, vaaleanpunaista, viininpunaista – koska veden suolapitoisuus, syvyys ja mikrolevien määrä poikkeavat toisistaan lammikosta toiseen. Krim on kansainvälisesti tunnustettu osaksi Ukrainaa, mutta Venäjä on hallinnoinut aluetta vuodesta 2014 lähtien.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          1280,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss056e032828/iss056e032828~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss056e032828/iss056e032828~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss056e032828"
+      }
+    ]
+  },
+  {
+    "tunnus": "valakian-tasanko",
+    "nimi": "Valakian tasanko",
+    "seutu": "Romania",
+    "selite": "Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat joet erottuvat siitä, miten asutuksen valot seuraavat jokilaaksoja.",
+    "lat": 45.3,
+    "lon": 25.3,
+    "oletus": "iss074e0149572",
+    "havainnot": [
+      {
+        "id": "iss074e0149572",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otettu yökuva näyttää, kuinka kylien ja kaupunkien valot haarautuvat puumaiseksi kuvioksi seuraten jokilaaksoja, jotka virtaavat Karpaateilta Romanian Valakian tasangon hedelmällisille alangoille. Tummat, valottomat alueet kuvion välissä ovat vuorten metsäisiä, harvaan asuttuja rinteitä. Valakia on Romanian väkirikkain alue, ja sen eteläosassa sijaitsee myös pääkaupunki Bukarest.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149572/iss074e0149572~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149572/iss074e0149572~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149572"
+      }
+    ]
+  },
+  {
+    "tunnus": "montreal",
+    "nimi": "Montréal",
+    "seutu": "Québec, Kanada",
+    "selite": "Montréal on rakennettu saarelle, jonka kärjessä Ottawa-joki yhtyy Saint Lawrence -jokeen.",
+    "lat": 45.5,
+    "lon": -73.57,
+    "oletus": "sts060-94-072",
+    "havainnot": [
+      {
+        "id": "sts060-94-072",
+        "aika": "1994-02-09",
+        "teksti": "Helmikuussa 1994 kuvattu lumipeitteinen Montréal näkyy tarkkarajaisena saarena, jonka pääväylät ja katuverkko erottuvat valkoista lunta vasten. Kaupungin keskellä kohoava Mont Royal -puisto erottuu tummana, metsäisenä kukkulana keskustan yllä. Montréal on Kanadan toiseksi suurin kaupunki ja maailman toiseksi suurin ranskankielinen kaupunki Pariisin jälkeen, vaikka se sijaitsee lähes 1 600 kilometrin päässä merestä.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1903,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts060-94-072/sts060-94-072~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts060-94-072/sts060-94-072~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts060-94-072"
+      }
+    ]
+  },
+  {
+    "tunnus": "englanninkanaali-yolla",
+    "nimi": "Englannin kanaali",
+    "seutu": "Iso-Britannia, Ranska, Belgia ja Alankomaat",
+    "selite": "Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan tiheimmin asutuksi yövyöhykkeeksi.",
+    "lat": 51.2,
+    "lon": 2,
+    "oletus": "iss058e005276",
+    "havainnot": [
+      {
+        "id": "iss058e005276",
+        "aika": "2019-01-18",
+        "teksti": "Tammikuussa 2019 otettu yökuva näyttää Englannin kanaalin molemmin puolin loistavat kaupungit: oikealla Lontoo, vasemmalla myötäpäivään Amsterdam, Haag, Rotterdam, Antwerpen ja Bryssel. Itse kanaali erottuu kuvan keskellä täysin pimeänä vyönä, koska merellä ei ole maakohteiden valoja. Kanaalin ali kulkee Eurotunneli, ja sen vedet ovat yksi maailman vilkkaimmin liikennöidyistä merireiteistä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 58",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss058e005276/iss058e005276~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss058e005276/iss058e005276~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss058e005276"
+      }
+    ]
+  },
+  {
+    "tunnus": "tanska",
+    "nimi": "Tanskan saaristo",
+    "seutu": "Tanska",
+    "selite": "Tanska koostuu Jyllannin niemimaasta ja yli 400 saaresta, jotka pistävät esiin meren sinestä kuin palapelin palat.",
+    "lat": 55.5,
+    "lon": 9.8,
+    "oletus": "iss039e017228",
+    "havainnot": [
+      {
+        "id": "iss039e017228",
+        "aika": "2014-04-28",
+        "teksti": "Kuvassa näkyy Tanskan keskiosa: vasemmalla Jyllannin niemimaan itärannikko, keskellä pyöreähkö Fynin saari ja oikealla saaristo, joka jatkuu kohti Sjællantia. Kesäinen kuva näyttää maan poikkeuksellisen tasaisena ja vihreänä, sillä Tanskassa ei ole yhtään yli 200 metrin korkeuteen nousevaa kukkulaa. Maan yli 400 saaresta noin 70 on asuttuja, ja monet niistä on yhdistetty toisiinsa silloilla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Rick Mastracchio",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e017228/iss039e017228~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e017228/iss039e017228~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e017228"
+      }
+    ]
+  },
+  {
+    "tunnus": "geneven-jarvi",
+    "nimi": "Geneven järvi",
+    "seutu": "Sveitsi ja Ranska",
+    "selite": "Geneven järven puolikuun muotoinen allas lepää Alppien juurella Sveitsin ja Ranskan rajalla.",
+    "lat": 46.45,
+    "lon": 6.5,
+    "oletus": "sts068-243-076",
+    "havainnot": [
+      {
+        "id": "sts068-243-076",
+        "aika": "1994-09-30",
+        "teksti": "Syyskuussa 1994 otettu kuva näyttää Geneven järven sinisenä puolikuuna Alppien lumihuippujen keskellä. Järveä ruokkii Rhône-joki, joka syntyy alppijäätiköiltä ja virtaa järven läpi matkallaan kohti Välimerta. Järvi on tilavuudeltaan Länsi-Euroopan suurin, ja Ranskan ja Sveitsin raja kulkee sitä pitkin lähes keskeltä.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1904
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/sts068-243-076/sts068-243-076~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/sts068-243-076/sts068-243-076~small.jpg",
+        "sivu": "https://images.nasa.gov/details/sts068-243-076"
+      }
+    ]
+  },
+  {
+    "tunnus": "pico",
+    "nimi": "Pico-tulivuori",
+    "seutu": "Azorit, Portugali",
+    "selite": "Portugalin korkein vuori, Pico, on jyrkkäpiirteinen tulivuori keskellä Atlantin valtamerta Azoreilla.",
+    "lat": 38.47,
+    "lon": -28.4,
+    "oletus": "iss036e009390",
+    "havainnot": [
+      {
+        "id": "iss036e009390",
+        "aika": "2013-06-18",
+        "teksti": "Kesäkuussa 2013 otettu pystykuva näyttää Pico-saaren pitkänomaisena vihreänä muotona Atlantilla; saaren itäpäässä kohoaa 2 351 metriä korkea Pico-tulivuori huippukraattereineen. Vuori on koko Portugalin korkein kohta, vaikka se sijaitsee tuhansien kilometrien päässä Euroopan mantereesta. Saaren länsiosan viinitarhat kasvavat mustan laavakiven ruutujen suojissa, ja perinne on nykyään Unescon maailmanperintökohde.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e009390/iss036e009390~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e009390/iss036e009390~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e009390"
+      }
+    ]
+  },
+  {
+    "tunnus": "prinssiedwardinsaari",
+    "nimi": "Prinssi Edwardin saari",
+    "seutu": "Saint Lawrencenlahti, Kanada",
+    "selite": "Kanadan pienin provinssi on punamultainen, sirppimäinen saari Saint Lawrencenlahdella.",
+    "lat": 46.51,
+    "lon": -63.42,
+    "oletus": "iss067e035819",
+    "havainnot": [
+      {
+        "id": "iss059e019410",
+        "aika": "2019-04-11",
+        "teksti": "Huhtikuussa 2019 kuvattu laajempi näkymä samalta alueelta näyttää Saint Lawrencenlahden, Prinssi Edwardin saaren sekä osia Québecistä ja Uudesta-Brunswickista yhdellä silmäyksellä. Saari on tunnettu myös kirjailija L. M. Montgomeryn Anna-kirjoista, jotka sijoittuvat sen maalaismaisemiin. Manterelle saaren yhdistää Confederation-silta, joka on yksi maailman pisimmistä jääpeitteisen veden yli rakennetuista silloista.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 59",
+        "kuvaaja": "David Saint-Jacques",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss059e019410/iss059e019410~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss059e019410/iss059e019410~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss059e019410"
+      },
+      {
+        "id": "iss067e035819",
+        "aika": "2022-05-07",
+        "teksti": "Toukokuussa 2022 otettu kuva auringon kimallellessa merestä näyttää Prinssi Edwardin saaren tumman sirpin Saint Lawrencenlahdella, Uuden-Brunswickin ja Uuden-Skotlannin välissä. Kirkas heijastus meren pinnalla korostaa rannikon muotoja tavallista tarkemmin. Saari on Kanadan pienin provinssi, ja sen punamulta syntyy maaperän runsaasta rautapitoisuudesta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e035819/iss067e035819~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e035819/iss067e035819~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e035819"
+      }
+    ]
+  },
+  {
+    "tunnus": "ateena-yolla",
+    "nimi": "Ateena",
+    "seutu": "Kreikka",
+    "selite": "Yksi maailman vanhimmista jatkuvasti asutuista kaupungeista kuvattuna yöllä.",
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "oletus": "iss074e0416472",
+    "havainnot": [
+      {
+        "id": "iss074e0416472",
+        "aika": "2026-03-25",
+        "teksti": "Maaliskuussa 2026 otettu kuva näyttää Ateenan, yhden maailman vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 miljoonaa ihmistä. Kuva otettiin noin kello 22.11 paikallista aikaa Kansainväliseltä avaruusasemalta, joka kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0416472/iss074e0416472~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0416472/iss074e0416472~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0416472"
+      }
+    ]
+  },
+  {
+    "tunnus": "budapest-yolla",
+    "nimi": "Budapest",
+    "seutu": "Unkari",
+    "selite": "Unkarin pääkaupungin valot hallitsevat yömaisemaa Balaton-järven lähellä.",
+    "lat": 47.4979,
+    "lon": 19.0402,
+    "oletus": "iss074e0149554",
+    "havainnot": [
+      {
+        "id": "iss074e0149554",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otettu kuva näyttää Budapestin valojen hallitsevan Unkarin yömaisemaa, jota koristavat pienet kylät. Kuvan keskellä kimmeltää Balaton, Keski-Euroopan suurin järvi, jota ympäröivät tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot. Kansainvälinen avaruusasema kiersi noin 422 kilometrin korkeudessa, kun kuva otettiin noin kello 21.10 paikallista aikaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149554/iss074e0149554~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149554/iss074e0149554~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149554"
+      }
+    ]
+  },
+  {
+    "tunnus": "barcelona-yolla",
+    "nimi": "Barcelona",
+    "seutu": "Espanja",
+    "selite": "Espanjan toiseksi suurimman kaupungin tunnistettava ruutukaava Välimeren rannalla.",
+    "lat": 41.3851,
+    "lon": 2.1734,
+    "oletus": "iss073e0078528",
+    "havainnot": [
+      {
+        "id": "iss073e0078528",
+        "aika": "2025-05-17",
+        "teksti": "Toukokuussa 2025 otetussa kuvassa näkyy Barcelona, Espanjan toiseksi suurin kaupunki, jonka kaupunkiseudulla asuu 5,74 miljoonaa ihmistä. Kaupungin tunnetun Eixample-kaupunginosan säännöllinen ruutukaava erottuu selvästi valaistuna Välimeren rannalla. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Välimeren yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0078528/iss073e0078528~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0078528/iss073e0078528~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0078528"
+      }
+    ]
+  },
+  {
+    "tunnus": "bukarest-yolla",
+    "nimi": "Bukarest",
+    "seutu": "Romania",
+    "selite": "Romanian pääkaupunki yöllä, vanhat ja uudet katuvalot erottuvat väreiltään.",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "oletus": "iss073e1047246",
+    "havainnot": [
+      {
+        "id": "iss073e1047246",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa Romanian pääkaupunki Bukarest, jonka kaupunkiseudulla asuu noin 1,78 miljoonaa ihmistä, näkyy yöllä. Kaupungin keskustan vanhat, keltaiset natriumlamput vaihtuvat esikaupunkialueilla uudempaan, valkoisempaan LED-valaistukseen. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Itä-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047246/iss073e1047246~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047246/iss073e1047246~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047246"
+      }
+    ]
+  },
+  {
+    "tunnus": "lissabon-suisto",
+    "nimi": "Lissabon",
+    "seutu": "Portugali",
+    "selite": "Portugalin pääkaupunki ja sen Tejo-joen suisto päivänvalossa.",
+    "lat": 38.7223,
+    "lon": -9.1393,
+    "oletus": "iss073e0078399",
+    "havainnot": [
+      {
+        "id": "iss073e0078399",
+        "aika": "2025-05-22",
+        "teksti": "Toukokuussa 2025 otetussa päiväkuvassa näkyy Lissabon, Portugalin pääkaupunki ja suurin kaupunki, esikaupunkeineen Tejo-joen rannalla. Joki laskee tässä kohtaa leveänä suistona Atlantin valtamereen. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä Iberian niemimaan rannikon yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0078399/iss073e0078399~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0078399/iss073e0078399~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0078399"
+      }
+    ]
+  },
+  {
+    "tunnus": "thessaloniki-yolla",
+    "nimi": "Thessaloniki",
+    "seutu": "Kreikka",
+    "selite": "Yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla.",
+    "lat": 40.6401,
+    "lon": 22.9444,
+    "oletus": "iss073e1047210",
+    "havainnot": [
+      {
+        "id": "iss073e1047210",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa näkyy Thessaloniki, yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. Kaupunkiseudulla asuu noin 815 000 ihmistä. Kuten Bukarestissa, myös täällä keskustan vanhat keltaiset natriumlamput vaihtuvat esikaupungeissa valkoisempaan LED-valoon.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047210/iss073e1047210~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047210/iss073e1047210~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047210"
+      }
+    ]
+  },
+  {
+    "tunnus": "dublin-revontulet",
+    "nimi": "Dublin",
+    "seutu": "Irlanti",
+    "selite": "Irlannin pääkaupunki yöllä revontulten alla, Lontoo näkyy kauempana.",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "oletus": "iss034e050137",
+    "havainnot": [
+      {
+        "id": "iss034e050137",
+        "aika": "2013-02-14",
+        "teksti": "Helmikuussa 2013 otetussa kuvassa näkyvät Brittein saaret yöllä. Dublin, Irlannin pääkaupunki, erottuu vasemmalla keskellä omana kirkkaana laikkunaan, kun taas Lontoo näkyy kauempana oikealla alakulmassa suurempana valoläiskänä. Horisontin vihreä hehku on revontulia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e050137"
+      }
+    ]
+  },
+  {
+    "tunnus": "sofia-vitosha",
+    "nimi": "Sofia",
+    "seutu": "Bulgaria",
+    "selite": "Bulgarian pääkaupunki laaksossa, vieressä lumihuippuinen Vitosha-vuori.",
+    "lat": 42.6977,
+    "lon": 23.3219,
+    "oletus": "iss039e002766",
+    "havainnot": [
+      {
+        "id": "iss039e002766",
+        "aika": "2014-03-19",
+        "teksti": "Vuonna 2014 otetussa päiväkuvassa Sofia, Bulgarian pääkaupunki, näkyy laajassa vuoristolaaksossa. Kaupungin eteläpuolella kohoaa Vitosha, lumihuippuinen vuori, joka on suosittu retkeily- ja hiihtokohde aivan pääkaupungin kyljessä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Koichi Wakata",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e002766"
+      }
+    ]
+  },
+  {
+    "tunnus": "kiova-tekojarvi",
+    "nimi": "Kiova",
+    "seutu": "Ukraina",
+    "selite": "Ukrainan pääkaupunki Dneprin tekojärven rannalla.",
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "oletus": "iss008e20656",
+    "havainnot": [
+      {
+        "id": "iss008e20656",
+        "aika": "2004-04-04",
+        "teksti": "Huhtikuussa 2004 otetussa kuvassa näkyy Kiova, lähes kolmen miljoonan asukkaan Ukrainan pääkaupunki, Dnepr-joen tekojärven rannalla. Seudulla on pitkä historia osana länsimaisen sivilisaation kehitystä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 8",
+        "kuvaaja": null,
+        "mitat": [
+          1271,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss008e20656/iss008e20656~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss008e20656/iss008e20656~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss008e20656"
+      }
+    ]
+  },
+  {
+    "tunnus": "belgrad",
+    "nimi": "Belgrad",
+    "seutu": "Serbia",
+    "selite": "Serbian pääkaupunki Tonavan ja Savan jokien yhtymäkohdassa.",
+    "lat": 44.7866,
+    "lon": 20.4489,
+    "oletus": "iss034e061717",
+    "havainnot": [
+      {
+        "id": "iss034e061717",
+        "aika": "2013-03-05",
+        "teksti": "Maaliskuussa 2013 otetussa kuvassa näkyy Belgrad, Serbian pääkaupunki, Tonava- ja Sava-jokien yhtymäkohdassa. Kaupunkialueella asuu noin 1,65 miljoonaa ihmistä, ja seudulla on asuttu yli 6 000 vuoden ajan. Kuvan keskellä erottuva Kalemegdan on Belgradin vanha ydin jokien oikealla rannalla; Sava-joen toisella puolella on toisen maailmansodan jälkeen rakennettu Uusi Belgrad.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e061717/iss034e061717~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e061717/iss034e061717~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e061717"
+      }
+    ]
+  },
+  {
+    "tunnus": "chevril-jarvi",
+    "nimi": "Lac du Chevril",
+    "seutu": "Ranskan Alpit",
+    "selite": "Turkoosinsininen tekojärvi lumihuippuisten Alppien keskellä Kaakkois-Ranskassa.",
+    "lat": 45.567,
+    "lon": 6.9,
+    "oletus": "iss069e025220",
+    "havainnot": [
+      {
+        "id": "iss069e025220",
+        "aika": "2023-06-26",
+        "teksti": "Kesäkuussa 2023 otetussa kuvassa näkyy Lac du Chevril, tekojärvi Auvergne-Rhône-Alpesin alueella Kaakkois-Ranskassa, kun avaruusasema kiersi noin 420 kilometrin korkeudessa. Järven kirkkaan turkoosi väri erottuu selvästi lumijuovaisten vuorenhuippujen keskeltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": "Sultan Alneyadi",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e025220/iss069e025220~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e025220/iss069e025220~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e025220"
+      }
+    ]
+  },
+  {
+    "tunnus": "palermo",
+    "nimi": "Palermo",
+    "seutu": "Sisilia, Italia",
+    "selite": "Yli 2 700 vuotta vanha kaupunki Sisilian rannikolla Tyrrhenanmerellä.",
+    "lat": 38.1157,
+    "lon": 13.3613,
+    "oletus": "iss073e1047080",
+    "havainnot": [
+      {
+        "id": "iss073e1047080",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 noin kello 22.12 paikallista aikaa otetussa kuvassa Palermon valot erottuvat Sisilian rannikolla. Kaupungin keskustan vanhat, kellertävät natriumlamput vaihtuvat esikaupunkialueilla viileämmän sävyisiin, valkoisiin LED-valoihin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047080/iss073e1047080~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047080/iss073e1047080~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047080"
+      }
+    ]
+  },
+  {
+    "tunnus": "bari",
+    "nimi": "Bari",
+    "seutu": "Italia",
+    "selite": "Adrianmeren rannalla sijaitseva, yli 2 700 vuotta vanha satamakaupunki.",
+    "lat": 41.1171,
+    "lon": 16.8719,
+    "oletus": "iss073e1047143",
+    "havainnot": [
+      {
+        "id": "iss073e1047143",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa Barin ja sen esikaupunkien valot pilkottavat Italian Adrianmeren rannikolla. Yli 2 700 vuotta vanha Bari tunnetaan oliivilehdoistaan, viinitarhoistaan ja rannikon jyrkänteisiin kaiverretuista luolistaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047143/iss073e1047143~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047143/iss073e1047143~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047143"
+      }
+    ]
+  },
+  {
+    "tunnus": "minsk",
+    "nimi": "Minsk",
+    "seutu": "Valko-Venäjä",
+    "selite": "Valko-Venäjän pääkaupunki, jonka kehätie piirtää selvän soikion kaupungin valoihin.",
+    "lat": 53.9006,
+    "lon": 27.559,
+    "oletus": "iss066e117709",
+    "havainnot": [
+      {
+        "id": "iss066e117709",
+        "aika": "2022-01-06",
+        "teksti": "Tammikuussa 2022 otetussa yökuvassa näkyy Minsk, Valko-Venäjän pääkaupunki, lähellä maan rajaa Ukrainaan. Kaupungin kehätie piirtää valoihin selvän soikean muodon.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 66",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss066e117709/iss066e117709~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss066e117709/iss066e117709~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss066e117709"
+      }
+    ]
+  },
+  {
+    "tunnus": "porto",
+    "nimi": "Porto",
+    "seutu": "Portugali",
+    "selite": "Douro-joen suulla sijaitsevat kaksoiskaupungit Porto ja Vila Nova de Gaia.",
+    "lat": 41.1579,
+    "lon": -8.6291,
+    "oletus": "iss032e015055",
+    "havainnot": [
+      {
+        "id": "iss032e015055",
+        "aika": "2012-08-05",
+        "teksti": "Elokuussa 2012 otetussa yökuvassa näkyvät Porto (vasemmalla) ja Vila Nova de Gaia (oikealla) Douro-joen molemmin puolin Portugalin luoteisrannikolla. Joki erottaa kaupungit selvästi toisistaan ennen sen laskua Atlantille.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 32",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss032e015055/iss032e015055~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss032e015055/iss032e015055~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss032e015055"
+      }
+    ]
+  },
+  {
+    "tunnus": "valencia",
+    "nimi": "Valencia",
+    "seutu": "Espanja",
+    "selite": "Espanjan kolmanneksi suurin kaupunki Välimeren rannalla, tunnistettavissa satamansa aallonmurtajista.",
+    "lat": 39.4699,
+    "lon": -0.3763,
+    "oletus": "iss064e000399",
+    "havainnot": [
+      {
+        "id": "iss064e000399",
+        "aika": "2020-10-25",
+        "teksti": "Lokakuussa 2020 otetussa kuvassa Valencia erottuu Espanjan Välimeren rannikolla juuri ennen kuin avaruusasema ylitti rannikkoviivan. Kaupungin sataman aallonmurtajat ja etelämpänä siintävä Albufera-laguuni näkyvät kuvassa selvästi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e000399/iss064e000399~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e000399/iss064e000399~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e000399"
+      }
+    ]
+  },
+  {
+    "tunnus": "kreeta",
+    "nimi": "Kreeta",
+    "seutu": "Kreikka",
+    "selite": "Kreikan suurin saari, pitkänomainen ja vuoristoinen, Egeanmeren eteläreunalla.",
+    "lat": 35.2401,
+    "lon": 24.8093,
+    "oletus": "iss028e018562",
+    "havainnot": [
+      {
+        "id": "iss028e018562",
+        "aika": "2011-07-22",
+        "teksti": "Heinäkuussa 2011 otetussa kuvassa näkyy Kreeta, Kreikan suurin ja väkirikkain saari. Saari on noin 260 kilometriä pitkä ja enimmillään 60 kilometriä leveä, ja sen pääkaupunki Iraklion sijaitsee pohjoisrannikolla kuvan keskellä. Kreikkalaisen mytologian mukaan saarella hallitsi kuningas Minos, jonka labyrintissa asusti puoliksi ihminen, puoliksi sonni ollut Minotauros.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 28",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss028e018562/iss028e018562~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss028e018562/iss028e018562~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss028e018562"
+      }
+    ]
+  },
+  {
+    "tunnus": "brindisi",
+    "nimi": "Brindisi",
+    "seutu": "Italia",
+    "selite": "Adrianmeren satamakaupunki Italian ”koron” kärjessä, josta 1800-luvun matkustajalaivat lähtivät kohti Suezia.",
+    "lat": 40.632,
+    "lon": 17.9369,
+    "oletus": "iss028e008604",
+    "havainnot": [
+      {
+        "id": "iss028e008604",
+        "aika": "2011-06-11",
+        "teksti": "Kesäkuussa 2011 otetussa yökuvassa Italian ”saappaan” kantapää ja kärki piirtyvät esiin suurten kaupunkien, kuten Napolin, Barin ja Brindisin, valoista. Brindisi oli 1800-luvulla tärkeä satama, josta höyrylaivat lähtivät kohti Suezin kanavaa ja Intiaa — samaa reittiä, jota pitkin moni aikansa matkailija kiersi maailman ympäri.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 28",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss028e008604/iss028e008604~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss028e008604/iss028e008604~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss028e008604"
+      }
+    ]
+  },
+  {
+    "tunnus": "antwerpenin-satama",
+    "nimi": "Antwerpenin satama",
+    "seutu": "Belgia",
+    "selite": "Euroopan toiseksi suurin satama Schelde-joen varrella.",
+    "lat": 51.299,
+    "lon": 4.297,
+    "oletus": "iss065e096050",
+    "havainnot": [
+      {
+        "id": "iss065e096050",
+        "aika": "2021-06-10",
+        "teksti": "Kesäkuussa 2021 otetussa kuvassa näkyy Antwerpenin satama Schelde-joen varrella Belgiassa. Kuva otettiin avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Pohjois-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": "Shane Kimbrough",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss065e096050/iss065e096050~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss065e096050/iss065e096050~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss065e096050"
+      }
+    ]
+  },
+  {
+    "tunnus": "bratislava-wienin-vieressa",
+    "nimi": "Bratislava",
+    "seutu": "Slovakia",
+    "selite": "Slovakian pääkaupunki Tonavan rannalla, lähellä toista pääkaupunkia Wieniä.",
+    "lat": 48.1486,
+    "lon": 17.1077,
+    "oletus": "iss074e0149548",
+    "havainnot": [
+      {
+        "id": "iss074e0149548",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otetussa yökuvassa Itävallan pääkaupunki Wien ja Slovakian pääkaupunki Bratislava valaisevat molemmat Keski-Euroopan yömaisemaa, Tonava-joen erottamina. Kaupunkien ympärillä siintävät viinitarha- ja markkinakylät.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149548/iss074e0149548~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149548/iss074e0149548~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149548"
+      }
+    ]
+  },
+  {
+    "tunnus": "kykladit",
+    "nimi": "Kykladit",
+    "seutu": "Kreikka",
+    "selite": "Egeanmeren saariryhmä, jonka läpi monet Välimeren laivareitit kulkivat.",
+    "lat": 37,
+    "lon": 25.3,
+    "oletus": "iss040e033303",
+    "havainnot": [
+      {
+        "id": "iss040e033303",
+        "aika": "2014-07-03",
+        "teksti": "Heinäkuussa 2014 otetussa kuvassa näkyvät Joonianmeri (ylhäällä), Kreeta (eteläisin saari vasemmalla), Kykladit (keskellä alhaalla) sekä suuri osa Kreikan mannerta (oikealla).",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": "Alex Gerst",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss040e033303/iss040e033303~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss040e033303/iss040e033303~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss040e033303"
+      }
+    ]
+  },
+  {
+    "tunnus": "messinansalmi",
+    "nimi": "Messinansalmi",
+    "seutu": "Italia",
+    "selite": "Kapea salmi, joka erottaa Sisilian Italian mantereesta.",
+    "lat": 38.2466,
+    "lon": 15.6186,
+    "oletus": "iss036e025908",
+    "havainnot": [
+      {
+        "id": "iss036e025908",
+        "aika": "2013-07-29",
+        "teksti": "Heinäkuussa 2013 otetussa yökuvassa Sisilia (keskellä) ja Etelä-Italia (vasemmalta keskelle) erottuvat valoistaan. Messinansalmi, joka erottaa Sisilian Italian mantereesta, sijaitsee lähellä kuvan keskustaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e025908/iss036e025908~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e025908/iss036e025908~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e025908"
+      }
+    ]
+  },
+  {
+    "tunnus": "sardinia-korsika",
+    "nimi": "Sardinia",
+    "seutu": "Italia",
+    "selite": "Välimeren toiseksi suurin saari; Korsika näkyy vieressä pohjoisessa.",
+    "lat": 40.09,
+    "lon": 9.14,
+    "oletus": "iss067e123679",
+    "havainnot": [
+      {
+        "id": "iss067e123679",
+        "aika": "2022-06-12",
+        "teksti": "Kesäkuussa 2022 otetussa kuvassa näkyy Italian Sardinia-saari ja sen pohjoispuolella Ranskan Korsika (oikealla ylhäällä). Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa Tyrrhenanmeren yllä, Napolin edustalla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e123679/iss067e123679~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e123679/iss067e123679~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e123679"
+      }
+    ]
+  },
+  {
+    "tunnus": "peloponnesos",
+    "nimi": "Peloponnesos",
+    "seutu": "Kreikka",
+    "selite": "Kreikan suuri niemimaa, jonka Korinthin kannas erottaa mantereesta.",
+    "lat": 37.5,
+    "lon": 22.3,
+    "oletus": "iss039e003505",
+    "havainnot": [
+      {
+        "id": "iss039e003505",
+        "aika": "2014-03-21",
+        "teksti": "Maaliskuussa 2014 otetussa kuvassa näkyy Peloponnesos, antiikin Spartan koti, kapean Korinthin kannaksen erottamana muusta Kreikasta. Kannaksen poikki kaivettiin laivakanava vuonna 1893 yhdistämään sen länsi- ja itäpuoliset lahdet. Kuvassa erottuvat myös lumihuippuiset vuoret, vihreät viljelylaaksot ja tuulen meren pintaan piirtämät juovat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Rick Mastracchio",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e003505/iss039e003505~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e003505/iss039e003505~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e003505"
+      }
+    ]
+  },
+  {
+    "tunnus": "feneos-palo",
+    "nimi": "Feneoksen metsäpalo",
+    "seutu": "Kreikka",
+    "selite": "Metsäpalon savupilvi leviää Korinthinlahden eteläpuolella.",
+    "lat": 37.97,
+    "lon": 22.4,
+    "oletus": "iss073e0421317",
+    "havainnot": [
+      {
+        "id": "iss073e0421317",
+        "aika": "2025-07-22",
+        "teksti": "Heinäkuussa 2025 otetussa kuvassa metsäpalo roihuaa Feneoksen kylän lähellä, Korinthinlahden eteläpuolella Kreikassa. Kuva otettiin avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Etelä-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0421317/iss073e0421317~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0421317/iss073e0421317~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0421317"
+      }
+    ]
+  },
+  {
+    "tunnus": "mallorca",
+    "nimi": "Mallorca",
+    "seutu": "Baleaarit, Espanja",
+    "selite": "Baleaarien suurin saari, suosittu matkailukohde Espanjan edustalla.",
+    "lat": 39.57,
+    "lon": 2.65,
+    "oletus": "iss030e030290",
+    "havainnot": [
+      {
+        "id": "iss030e030290",
+        "aika": "2011-12-31",
+        "teksti": "Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee pieni Cabreran saari, jonka ympärillä on kansallispuisto. Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla ja saaren itäosassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e030290/iss030e030290~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e030290/iss030e030290~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e030290"
+      }
+    ]
+  },
+  {
+    "tunnus": "mont-saint-michel-lahti",
+    "nimi": "Mont-Saint-Michelin lahti",
+    "seutu": "Ranska",
+    "selite": "Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.",
+    "lat": 48.64,
+    "lon": -1.51,
+    "oletus": "iss068e053846",
+    "havainnot": [
+      {
+        "id": "iss068e053846",
+        "aika": "2023-02-12",
+        "teksti": "Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 68",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss068e053846/iss068e053846~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss068e053846/iss068e053846~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss068e053846"
+      }
+    ]
+  },
+  {
+    "tunnus": "le-havre",
+    "nimi": "Le Havre",
+    "seutu": "Ranska",
+    "selite": "Ranskan suurin konttisatama Seine-joen suulla.",
+    "lat": 49.49,
+    "lon": 0.11,
+    "oletus": "iss037e021618",
+    "havainnot": [
+      {
+        "id": "iss037e021618",
+        "aika": "2013-10-26",
+        "teksti": "Lokakuussa 2013 otetussa kuvassa näkyy Le Havren satama Seine-joen ja Englannin kanaalin yhtymäkohdassa Pohjois-Ranskassa. Le Havre on Ranskan suurin konttisatama, ja sen laitureilla näkyy suuria rahtilaivoja. Kaupunki rakennettiin suurelta osin uudelleen toisen maailmansodan jälkeen arkkitehti Auguste Perret’n suunnitelman mukaan betonista, mikä teki siitä Unescon maailmanperintökohteen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss037e021618/iss037e021618~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e021618/iss037e021618~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e021618"
+      }
+    ]
+  },
+  {
+    "tunnus": "malta-sisilia",
+    "nimi": "Malta",
+    "seutu": "Malta",
+    "selite": "Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.",
+    "lat": 35.94,
+    "lon": 14.38,
+    "oletus": "STS100-713-064",
+    "havainnot": [
+      {
+        "id": "STS100-713-064",
+        "aika": "2001-04-24",
+        "teksti": "Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan pienet saaret.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS100-713-064/STS100-713-064~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS100-713-064/STS100-713-064~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS100-713-064"
+      }
+    ]
+  },
+  {
+    "tunnus": "ambrakia-ioonianmeri",
+    "nimi": "Ambrakian lahti",
+    "seutu": "Kreikka",
+    "selite": "Saaria Kreikan länsirannikolla Joonianmeren tuntumassa.",
+    "lat": 38.85,
+    "lon": 20.75,
+    "oletus": "iss070e035893",
+    "havainnot": [
+      {
+        "id": "iss070e035893",
+        "aika": "2023-12-04",
+        "teksti": "Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa Joonianmeren yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e035893/iss070e035893~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e035893/iss070e035893~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e035893"
+      }
+    ]
+  },
+  {
+    "tunnus": "odessa",
+    "nimi": "Odessa",
+    "seutu": "Ukraina",
+    "selite": "Mustanmeren satamakaupunki lahden kaartuvalla rannalla.",
+    "lat": 46.477,
+    "lon": 30.733,
+    "oletus": "ISS062-E-142201",
+    "havainnot": [
+      {
+        "id": "ISS062-E-142201",
+        "aika": "2020-04-11T14:28:02Z",
+        "teksti": "Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 62",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS062/ISS062-E-142201.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS062/ISS062-E-142201.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201"
+      }
+    ]
+  },
+  {
+    "tunnus": "praha",
+    "nimi": "Praha",
+    "seutu": "Tšekki",
+    "selite": "Tšekin pääkaupunki Vltava-joen mutkassa.",
+    "lat": 50.087,
+    "lon": 14.421,
+    "oletus": "ISS052-E-78028",
+    "havainnot": [
+      {
+        "id": "ISS052-E-78028",
+        "aika": "2017-08-29T10:06:14Z",
+        "teksti": "Elokuussa 2017 otetussa päiväkuvassa näkyy Praha, Tšekin pääkaupunki, Vltava-joen jyrkän mutkan ympärillä. Kaupungin tiivis keskusta erottuu vaaleana laikkuna joen molemmin puolin, ja ympäröivä maaseutu näkyy peltoina ja metsälaikkuina.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 52",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS052/ISS052-E-78028.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS052/ISS052-E-78028.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=78028"
+      }
+    ]
+  },
+  {
+    "tunnus": "marseille",
+    "nimi": "Marseille",
+    "seutu": "Ranska",
+    "selite": "Ranskan suurin Välimeren satamakaupunki; vieressä Calanques-kansallispuiston jyrkät kalkkikivirannikot.",
+    "lat": 43.297,
+    "lon": 5.381,
+    "oletus": "ISS050-E-51867",
+    "havainnot": [
+      {
+        "id": "ISS050-E-51867",
+        "aika": "2017-02-19T10:28:41Z",
+        "teksti": "Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy kuvan vasemmassa alakulmassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 50",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS050/ISS050-E-51867.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS050/ISS050-E-51867.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS050&roll=E&frame=51867"
+      }
+    ]
+  },
+  {
+    "tunnus": "sarajevo",
+    "nimi": "Sarajevo",
+    "seutu": "Bosnia ja Hertsegovina",
+    "selite": "Bosnia ja Hertsegovinan pääkaupunki kapeassa laaksossa Dinaaristen Alppien keskellä.",
+    "lat": 43.867,
+    "lon": 18.417,
+    "oletus": "ISS036-E-3068",
+    "havainnot": [
+      {
+        "id": "ISS036-E-3068",
+        "aika": "2013-05-21T07:41:27Z",
+        "teksti": "Toukokuussa 2013 otetussa päiväkuvassa näkyy Sarajevo, kapeaan vuoristolaaksoon rakentunut Bosnia ja Hertsegovinan pääkaupunki. Kaupunkia ympäröivät joka puolelta Dinaaristen Alppien metsäiset vuorenrinteet ja laaksot.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          4256,
+          2832
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS036/ISS036-E-3068.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS036/ISS036-E-3068.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS036&roll=E&frame=3068"
+      }
+    ]
+  },
+  {
+    "tunnus": "bryssel",
+    "nimi": "Bryssel",
+    "seutu": "Belgia",
+    "selite": "Belgian pääkaupunki ja EU:n kotikaupunki yöllä avaruudesta kuvattuna.",
+    "lat": 50.847,
+    "lon": 4.353,
+    "oletus": "ISS065-E-393478",
+    "havainnot": [
+      {
+        "id": "ISS065-E-393478",
+        "aika": "2021-09-17T22:55:28Z",
+        "teksti": "Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin lentoasema kiitoteineen ja asematasoineen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS065/ISS065-E-393478.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS065/ISS065-E-393478.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS065&roll=E&frame=393478"
+      }
+    ]
+  },
+  {
+    "tunnus": "dubrovnik",
+    "nimi": "Dubrovnik",
+    "seutu": "Kroatia",
+    "selite": "Kroatian Dalmatian-rannikon kaupunki ja edustan saaret.",
+    "lat": 42.64,
+    "lon": 18.108,
+    "oletus": "ISS052-E-84306",
+    "havainnot": [
+      {
+        "id": "ISS052-E-84306",
+        "aika": "2017-09-02T09:53:14Z",
+        "teksti": "Syyskuussa 2017 otetussa päiväkuvassa näkyy Dubrovnikin seutu Kroatian Dalmatian-rannikolla. Kaupungin edustalla erottuu Lokrumin saari, ja rannikon tuntumassa näkyy muitakin pieniä saaria pirstaleisen Adrianmeren rannikon tapaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 52",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS052/ISS052-E-84306.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS052/ISS052-E-84306.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=84306"
+      }
+    ]
+  },
+  {
+    "tunnus": "varsova",
+    "nimi": "Varsova",
+    "seutu": "Puola",
+    "selite": "Puolan pääkaupunki Veiksel-joen (Wisła) molemmin puolin.",
+    "lat": 52.23,
+    "lon": 21.011,
+    "oletus": "ISS056-E-153400",
+    "havainnot": [
+      {
+        "id": "ISS056-E-153400",
+        "aika": "2018-08-23T10:06:24Z",
+        "teksti": "Elokuussa 2018 otetussa päiväkuvassa näkyy Varsova, Puolan pääkaupunki, Veiksel-joen molemmin puolin. Joki halkoo kaupungin kahtia, ja kuvassa erottuu myös kaupungin lentokenttä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS056/ISS056-E-153400.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS056/ISS056-E-153400.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS056&roll=E&frame=153400"
+      }
+    ]
+  },
+  {
+    "tunnus": "kobenhavn",
+    "nimi": "Kööpenhamina",
+    "seutu": "Tanska",
+    "selite": "Tanskan pääkaupunki Själlannin itärannalla Juutinrauman äärellä.",
+    "lat": 55.676,
+    "lon": 12.568,
+    "oletus": "ISS034-E-66957",
+    "havainnot": [
+      {
+        "id": "ISS034-E-66957",
+        "aika": "2013-03-12T09:18:08Z",
+        "teksti": "Maaliskuussa 2013 otetussa päiväkuvassa näkyy Kööpenhamina Själlannin itärannalla. Kaupungin edessä leveä Juutinrauma (Øresund) erottaa Tanskan Ruotsista, ja kuvassa erottuu Saltholmin matala saari sekä sen yli kulkeva Juutinrauman silta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          4256,
+          2832
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS034/ISS034-E-66957.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS034/ISS034-E-66957.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS034&roll=E&frame=66957"
+      }
+    ]
+  },
+  {
+    "tunnus": "luzern",
+    "nimi": "Luzern",
+    "seutu": "Sveitsi",
+    "selite": "Sveitsiläiskaupunki Vierwaldstättersee-järven rannalla Alppien reunalla.",
+    "lat": 47.05,
+    "lon": 8.307,
+    "oletus": "ISS040-E-16849",
+    "havainnot": [
+      {
+        "id": "ISS040-E-16849",
+        "aika": "2014-06-21T14:41:50Z",
+        "teksti": "Kesäkuussa 2014 otetussa päiväkuvassa näkyy Luzernin seutu Sveitsin keskiosassa. Kaupunki sijaitsee Vierwaldstättersee-järven (Luzernin järven) pohjoisrannalla, ja kuvan oikeassa reunassa Alppien huiput nousevat pilvien alta.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": null,
+        "mitat": [
+          4256,
+          2832
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS040/ISS040-E-16849.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS040/ISS040-E-16849.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS040&roll=E&frame=16849"
+      }
+    ]
+  },
+  {
+    "tunnus": "bergen",
+    "nimi": "Bergenin vuonot",
+    "seutu": "Norja",
+    "selite": "Norjan länsirannikon vuonot Bergenin ympärillä talvisessa valossa.",
+    "lat": 60.39,
+    "lon": 5.32,
+    "oletus": "STS060-94-2",
+    "havainnot": [
+      {
+        "id": "STS060-94-2",
+        "aika": "1994-02-10T09:18:25Z",
+        "teksti": "Helmikuussa 1994 avaruussukkulan kyydistä otetussa kuvassa näkyvät Bergenin ympäristön vuonot Norjan länsirannikolla. Aurinko oli horisontin lähellä, joten matalat valot ja varjot piirtävät vuonojen jyrkät rinteet esiin.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          5700,
+          5900
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/STS060-94-2~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/STS060-94-2~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=STS060&roll=94&frame=2"
+      }
+    ]
+  },
+  {
+    "tunnus": "monaco",
+    "nimi": "Monaco",
+    "seutu": "Monaco",
+    "selite": "Maailman toiseksi pienin valtio Välimeren rannalla Ranskan ja Italian välissä.",
+    "lat": 43.738,
+    "lon": 7.424,
+    "oletus": "iss056e032555",
+    "havainnot": [
+      {
+        "id": "iss056e032555",
+        "aika": "2018-06-19",
+        "teksti": "Kesäkuussa 2018 otetussa kuvassa näkyy Monacon ruhtinaskunta Välimeren rannikolla Ranskan ja Italian rajalla. Kuvassa erottuvat Monte Carlon kaupunginosa, Louis II -stadion ja Fontvieillen satama.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss056e032555/iss056e032555~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss056e032555/iss056e032555~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss056e032555"
+      }
+    ]
+  },
+  {
+    "tunnus": "berliini",
+    "nimi": "Berliini",
+    "seutu": "Saksa",
+    "selite": "Saksan pääkaupunki Spree-joen varrella.",
+    "lat": 52.52,
+    "lon": 13.405,
+    "oletus": "ISS027-E-7390",
+    "havainnot": [
+      {
+        "id": "ISS027-E-7390",
+        "aika": "2011-03-24T09:26:20Z",
+        "teksti": "Maaliskuussa 2011 otetussa päiväkuvassa näkyy Berliinin keskusta Spree-joen mutkittelevan uoman molemmin puolin. Kuvassa erottuu myös vanhan Tempelhofin lentokentän laaja avoin alue sekä kaupungin säteittäiset tiet.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 27",
+        "kuvaaja": null,
+        "mitat": [
+          4288,
+          2929
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS027-E-7390~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS027-E-7390~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS027&roll=E&frame=7390"
+      }
+    ]
+  },
+  {
+    "tunnus": "amsterdam",
+    "nimi": "Amsterdam",
+    "seutu": "Alankomaat",
+    "selite": "Alankomaiden pääkaupunki IJ-lahden ja Markermeerin rannalla.",
+    "lat": 52.37,
+    "lon": 4.9,
+    "oletus": "ISS023-E-48029",
+    "havainnot": [
+      {
+        "id": "ISS023-E-48029",
+        "aika": "2010-05-19T14:46:34Z",
+        "teksti": "Toukokuussa 2010 otetussa päiväkuvassa näkyy Amsterdamin kaupunki Markermeer-järven rannalla. Kuvassa erottuvat Amstel-joki, satama-altaat ja kaupungin ympärillä kulkevat kanavat ja maantiet.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 23",
+        "kuvaaja": null,
+        "mitat": [
+          6048,
+          4147
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS023-E-48029~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS023-E-48029~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48029"
+      }
+    ]
+  },
+  {
+    "tunnus": "madrid",
+    "nimi": "Madrid",
+    "seutu": "Espanja",
+    "selite": "Espanjan pääkaupunki Iberian niemimaan keskellä.",
+    "lat": 40.416,
+    "lon": -3.703,
+    "oletus": "ISS023-E-48969",
+    "havainnot": [
+      {
+        "id": "ISS023-E-48969",
+        "aika": "2010-05-20T11:58:32Z",
+        "teksti": "Toukokuussa 2010 otetussa päiväkuvassa näkyy Madridin tiivis kaupunkialue Espanjan keskiylängöllä. Kuvasta erottuvat kaupungin punertavat asuinalueet, moottoritiet ja ympäröivät puistot ja metsät.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 23",
+        "kuvaaja": null,
+        "mitat": [
+          4256,
+          2913
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS023-E-48969~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS023-E-48969~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48969"
+      }
+    ]
+  },
+  {
+    "tunnus": "sevilla",
+    "nimi": "Sevilla",
+    "seutu": "Espanja",
+    "selite": "Andalusian pääkaupunki Guadalquivir-joen varrella.",
+    "lat": 37.389,
+    "lon": -5.984,
+    "oletus": "ISS014-E-15604",
+    "havainnot": [
+      {
+        "id": "ISS014-E-15604",
+        "aika": "2007-02-28T12:46:20Z",
+        "teksti": "Helmikuussa 2007 otetussa päiväkuvassa näkyy Sevilla Guadalquivir-joen mutkittelevan uoman varrella Andalusiassa. Kaupungin tiivis ydin ja ympäröivät pellot erottuvat selvästi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 14",
+        "kuvaaja": null,
+        "mitat": [
+          3032,
+          2064
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS014-E-15604~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS014-E-15604~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS014&roll=E&frame=15604"
+      }
+    ]
+  },
+  {
+    "tunnus": "krakova",
+    "nimi": "Krakova",
+    "seutu": "Puola",
+    "selite": "Puolan vanha kuninkaallinen kaupunki lumisessa maisemassa.",
+    "lat": 50.065,
+    "lon": 19.945,
+    "oletus": "ISS006-E-31123",
+    "havainnot": [
+      {
+        "id": "ISS006-E-31123",
+        "aika": "2003-02-24T08:28:44Z",
+        "teksti": "Helmikuussa 2003 otetussa päiväkuvassa näkyy Krakova Puolan eteläosassa lumen peittämän maiseman keskellä. Kaupungin tumma taajama erottuu valkoista peltoaukeaa vasten, ja ympärillä kiemurtelee Veikselin laakso.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 6",
+        "kuvaaja": null,
+        "mitat": [
+          3032,
+          2064
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS006-E-31123~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/ISS006-E-31123~small.jpg",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS006&roll=E&frame=31123"
+      }
+    ]
+  },
+  {
+    "tunnus": "milano",
+    "nimi": "Milano",
+    "seutu": "Italia",
+    "selite": "Pohjois-Italian suurkaupunki yöllä, kirkkaina valoina Lombardian tasangolla.",
+    "lat": 45.464,
+    "lon": 9.19,
+    "oletus": "iss026e028829",
+    "havainnot": [
+      {
+        "id": "iss026e028829",
+        "aika": "2011-02-22",
+        "teksti": "Helmikuussa 2011 otetussa yökuvassa Milanon suurkaupunkialue valaisee Lombardian tasangon lappupeitteen tavoin. Kaupungin tiivis ydin erottuu kuvan vasemmassa laidassa kirkkaana keskittymänä, jonka ympärillä kaupungit ja kylät jatkuvat oranssina valoverkkona.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 26",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1314
+        ],
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/iss026e028829~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/iss026e028829~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss026e028829"
+      }
+    ]
   }
+];
+
+/*
+ * Maailmankierros ‹ › -napeille ja gallerian jatkolle (js/linssit/
+ * astronautin-kierros.js: lähin naapuri + 2-opt, myötäpäivään
+ * läntisimmästä). Natiivi lukee saman järjestyksen.
+ */
+export const SATELLIITTI_KIERROS = [
+  "kilauea",
+  "malaspina",
+  "kanadan-palot",
+  "lake-sharpe",
+  "mount-hood",
+  "crater-lake",
+  "pyramidjarvi",
+  "sanfrancisco",
+  "monojarvi",
+  "suolajarvi-utah",
+  "bingham",
+  "lake-powell",
+  "meteor-crater-arizona",
+  "grand-canyon",
+  "zion",
+  "lasvegas-yolla",
+  "saltonjarvi",
+  "losangeles",
+  "guadalupen-pyorteet",
+  "colorado-suisto",
+  "white-sands",
+  "texasin-kastelurenkaat",
+  "chicago",
+  "jamesinlahti-harjanteet",
+  "niagara",
+  "new-york",
+  "montreal",
+  "manicouagan",
+  "prinssiedwardinsaari",
+  "fundynlahti",
+  "bermuda",
+  "turks-caicos",
+  "bahama",
+  "everglades",
+  "mississippi-suisto",
+  "new-orleans-mutka",
+  "mexico",
+  "popocatepetl",
+  "cosiguina",
+  "galapagos",
+  "nevado-del-ruiz",
+  "ucayali",
+  "titicaca",
+  "poopojarvi",
+  "uyuni",
+  "laguna-colorada",
+  "laguna-verde",
+  "buenos-aires-yolla",
+  "rio-negro-mutkat",
+  "villarrica",
+  "san-rafael",
+  "upsala-jaatikko",
+  "lago-argentino",
+  "torres-del-paine",
+  "falklandinsaaret",
+  "jaavuori",
+  "etela-georgia",
+  "rio",
+  "saopaulo",
+  "manaus",
+  "amazonin-suu",
+  "namib",
+  "kapkaupunki",
+  "bazaruto",
+  "makgadikgadin-altaat",
+  "victorianputous",
+  "okavango",
+  "etosha",
+  "niger-suisto",
+  "richat",
+  "sahara-dust-western",
+  "kanariansaarten-pyorteet",
+  "pico",
+  "merijaa",
+  "revontulet-pohjoinen",
+  "labradorin-jaameri",
+  "gronlannin-vuonot",
+  "porto",
+  "lissabon-suisto",
+  "casablanca-yolla",
+  "gibraltar",
+  "sevilla",
+  "iberia-yolla",
+  "madrid",
+  "valencia",
+  "ebron-suisto",
+  "mallorca",
+  "barcelona-yolla",
+  "marseille",
+  "monaco",
+  "chevril-jarvi",
+  "aletsch",
+  "milano",
+  "venetsia",
+  "luzern",
+  "geneven-jarvi",
+  "pariisi",
+  "le-havre",
+  "mont-saint-michel-lahti",
+  "dublin-revontulet",
+  "lontoo",
+  "englanninkanaali-yolla",
+  "bryssel",
+  "antwerpenin-satama",
+  "zeeland",
+  "amsterdam",
+  "praha",
+  "berliini",
+  "kobenhavn",
+  "tanska",
+  "bergen",
+  "aurora-scandinavia",
+  "moskova",
+  "krimin-lagunit",
+  "istanbul",
+  "dardanellit",
+  "ateena-yolla",
+  "kykladit",
+  "santorini",
+  "kreeta",
+  "peloponnesos",
+  "feneos-palo",
+  "ambrakia-ioonianmeri",
+  "thessaloniki-yolla",
+  "sofia-vitosha",
+  "bukarest-yolla",
+  "valakian-tasanko",
+  "odessa",
+  "kiova-tekojarvi",
+  "tshernobyl",
+  "minsk",
+  "varsova",
+  "krakova",
+  "wien",
+  "bratislava-wienin-vieressa",
+  "budapest-yolla",
+  "belgrad",
+  "sarajevo",
+  "dubrovnik",
+  "brindisi",
+  "bari",
+  "italia-yolla",
+  "vesuvius",
+  "rooma",
+  "sardinia-korsika",
+  "palermo",
+  "messinansalmi",
+  "etna",
+  "malta-sisilia",
+  "tunis",
+  "issaouane",
+  "tsadjarvi",
+  "fitrijarvi",
+  "ennedi",
+  "ounianga",
+  "aorounga",
+  "emi-koussi",
+  "khufrah",
+  "nasser",
+  "faiyum",
+  "gizan-pyramidit",
+  "kairo-yolla",
+  "niilin-suisto",
+  "suez",
+  "kuollutmeri",
+  "kasteluympyrat",
+  "tiran",
+  "al-wadj",
+  "riyadh-yolla",
+  "empty-quarter",
+  "dubai",
+  "dasht-e-lut",
+  "damavand",
+  "zagrosvuoret",
+  "baghdad-yolla",
+  "ararat",
+  "kaukasusvuoret",
+  "volgansuisto",
+  "araljarvi",
+  "toktogul",
+  "taklamakan",
+  "sarezjarvi",
+  "delhi",
+  "himalaja",
+  "everest",
+  "ganges",
+  "bangkok",
+  "irrawaddyn-suisto",
+  "mumbai",
+  "goidhoo",
+  "sokotra",
+  "simienit",
+  "riftin-jarvet",
+  "kenya-rift",
+  "kilimanjaro",
+  "quirimbas",
+  "mayotte",
+  "betsiboka",
+  "reunion",
+  "heard",
+  "eyrejarvi",
+  "simpson-desert",
+  "kata-tjuta",
+  "carnegie",
+  "sharkbay",
+  "ningaloo-riutta",
+  "jakarta",
+  "singapore",
+  "bassac-vietnam",
+  "hongkong",
+  "kolmen-rotkon-pato",
+  "peking",
+  "selengan-suisto",
+  "baikal",
+  "siveluts",
+  "kljutsevskaja",
+  "karymsky",
+  "onekotan",
+  "sarytsev",
+  "tokio",
+  "fuji",
+  "sakurajima",
+  "korea",
+  "soul",
+  "shanghai",
+  "taifuuni",
+  "manam",
+  "ulawun",
+  "iso-valliriutta",
+  "sydney",
+  "etelaalpit-jarvet",
+  "revontulet-etela",
+  "seurasaaret",
+  "mataiva",
+  "tarawa",
+  "wake-island"
 ];

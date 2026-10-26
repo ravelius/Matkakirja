@@ -1,0 +1,322 @@
+{
+  "versio": 2,
+  "kaupunki": "luxemburg",
+  "teksti": "Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.",
+  "tekstiSha256": "c309772d970716fbd7464337173df57f0665ddc3ff5d4550fef88150f126c650",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-luxemburg-v3.mp3",
+    "versio": 2,
+    "tavut": 1001264,
+    "sha256": "f89f6be985e67c547e9ee15d5f40fbafde54d88380ea2fc0652ad84f2a6f8272"
+  },
+  "kesto": 41660,
+  "sanat": [
+    {
+      "sana": "Luxemburg",
+      "alku": 1760,
+      "loppu": 2800
+    },
+    {
+      "sana": "kesäkuussa",
+      "alku": 3180,
+      "loppu": 3720
+    },
+    {
+      "sana": "1873",
+      "alku": 3760,
+      "loppu": 5840
+    },
+    {
+      "sana": "Koko",
+      "alku": 6600,
+      "loppu": 7520
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 7580,
+      "loppu": 8160
+    },
+    {
+      "sana": "on",
+      "alku": 8180,
+      "loppu": 8240
+    },
+    {
+      "sana": "yhtä",
+      "alku": 8280,
+      "loppu": 8480
+    },
+    {
+      "sana": "louhostyömaata",
+      "alku": 8540,
+      "loppu": 9520
+    },
+    {
+      "sana": "kuusi",
+      "alku": 10020,
+      "loppu": 11040
+    },
+    {
+      "sana": "vuotta",
+      "alku": 11060,
+      "loppu": 11360
+    },
+    {
+      "sana": "sitten",
+      "alku": 11400,
+      "loppu": 11760
+    },
+    {
+      "sana": "Lontoon",
+      "alku": 11840,
+      "loppu": 12320
+    },
+    {
+      "sana": "herrat",
+      "alku": 12360,
+      "loppu": 12720
+    },
+    {
+      "sana": "päättivät",
+      "alku": 12800,
+      "loppu": 13200
+    },
+    {
+      "sana": "pöydän",
+      "alku": 13280,
+      "loppu": 13680
+    },
+    {
+      "sana": "ääressä",
+      "alku": 13720,
+      "loppu": 14400
+    },
+    {
+      "sana": "että",
+      "alku": 14680,
+      "loppu": 14880
+    },
+    {
+      "sana": "tämä",
+      "alku": 14940,
+      "loppu": 15200
+    },
+    {
+      "sana": "kallio",
+      "alku": 15240,
+      "loppu": 15680
+    },
+    {
+      "sana": "jota",
+      "alku": 15960,
+      "loppu": 16160
+    },
+    {
+      "sana": "kukaan",
+      "alku": 16240,
+      "loppu": 16640
+    },
+    {
+      "sana": "valloittaja",
+      "alku": 16700,
+      "loppu": 17360
+    },
+    {
+      "sana": "ei",
+      "alku": 17420,
+      "loppu": 17520
+    },
+    {
+      "sana": "ole",
+      "alku": 17580,
+      "loppu": 17760
+    },
+    {
+      "sana": "koskaan",
+      "alku": 17800,
+      "loppu": 18240
+    },
+    {
+      "sana": "saanut",
+      "alku": 18300,
+      "loppu": 18640
+    },
+    {
+      "sana": "auki",
+      "alku": 18720,
+      "loppu": 19040
+    },
+    {
+      "sana": "on",
+      "alku": 19760,
+      "loppu": 19920
+    },
+    {
+      "sana": "purettava",
+      "alku": 19960,
+      "loppu": 20560
+    },
+    {
+      "sana": "kivi",
+      "alku": 20640,
+      "loppu": 20880
+    },
+    {
+      "sana": "kiveltä",
+      "alku": 20960,
+      "loppu": 21440
+    },
+    {
+      "sana": "Bockin",
+      "alku": 22560,
+      "loppu": 23920
+    },
+    {
+      "sana": "käytävissä",
+      "alku": 23980,
+      "loppu": 24560
+    },
+    {
+      "sana": "kaikuu",
+      "alku": 24620,
+      "loppu": 25040
+    },
+    {
+      "sana": "iskuvasaroita",
+      "alku": 25120,
+      "loppu": 26000
+    },
+    {
+      "sana": "siellä",
+      "alku": 26080,
+      "loppu": 26480
+    },
+    {
+      "sana": "missä",
+      "alku": 26760,
+      "loppu": 27120
+    },
+    {
+      "sana": "kreivi",
+      "alku": 27160,
+      "loppu": 27440
+    },
+    {
+      "sana": "Siegfried",
+      "alku": 27520,
+      "loppu": 28240
+    },
+    {
+      "sana": "aikoinaan",
+      "alku": 28360,
+      "loppu": 29040
+    },
+    {
+      "sana": "rakensi",
+      "alku": 29100,
+      "loppu": 29600
+    },
+    {
+      "sana": "ensimmäisen",
+      "alku": 29640,
+      "loppu": 30240
+    },
+    {
+      "sana": "linnansa",
+      "alku": 30280,
+      "loppu": 30880
+    },
+    {
+      "sana": "Suurherttua",
+      "alku": 33100,
+      "loppu": 33600
+    },
+    {
+      "sana": "hallitsee",
+      "alku": 33640,
+      "loppu": 34160
+    },
+    {
+      "sana": "täältä",
+      "alku": 34220,
+      "loppu": 34480
+    },
+    {
+      "sana": "käsin",
+      "alku": 34540,
+      "loppu": 34880
+    },
+    {
+      "sana": "mutta",
+      "alku": 35320,
+      "loppu": 35520
+    },
+    {
+      "sana": "asuu",
+      "alku": 35600,
+      "loppu": 35920
+    },
+    {
+      "sana": "Haagissa",
+      "alku": 35980,
+      "loppu": 36560
+    },
+    {
+      "sana": "en",
+      "alku": 37980,
+      "loppu": 38080
+    },
+    {
+      "sana": "ole",
+      "alku": 38120,
+      "loppu": 38240
+    },
+    {
+      "sana": "vielä",
+      "alku": 38280,
+      "loppu": 38520
+    },
+    {
+      "sana": "tavannut",
+      "alku": 38560,
+      "loppu": 38880
+    },
+    {
+      "sana": "ketään",
+      "alku": 38940,
+      "loppu": 39360
+    },
+    {
+      "sana": "joka",
+      "alku": 39420,
+      "loppu": 39600
+    },
+    {
+      "sana": "olisi",
+      "alku": 39620,
+      "loppu": 39840
+    },
+    {
+      "sana": "nähnyt",
+      "alku": 39880,
+      "loppu": 40240
+    },
+    {
+      "sana": "hänet",
+      "alku": 40260,
+      "loppu": 40480
+    },
+    {
+      "sana": "täällä",
+      "alku": 40540,
+      "loppu": 40880
+    }
+  ],
+  "lauseet": [
+    1760,
+    6600,
+    22560,
+    33100
+  ],
+  "luotu": "2026-10-15T12:57:37.000Z"
+}

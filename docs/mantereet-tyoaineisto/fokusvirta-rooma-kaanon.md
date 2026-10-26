@@ -28,9 +28,7 @@ aanite: `assets/audio/puhe-fokus-matkakirja-rooma.mp3` (generoitu)
 isoisän korvissa, ei faktaväite. Kuva: Tuminellon valokuva Porta Pian
 murtumasta 1870 (PD, täkyraportissa) tai muu tarkistettu aikalaiskuva.)
 
-## 2. Pöllön huomio (reportteri; EI silminnäkijäheittoa tähän maahan
-— käytetään aarremerkinnän jälkeisessä kuittauksessa jos tarvis, mutta
-mieluummin ei lainkaan Roomassa)
+## 2. Pöllön huomio (reportteri; EI silminnäkijäheittoa tähän maahan)
 
 > Muurin sisään jäätiin viideksikymmeneksiyhdeksäksi vuodeksi — vasta
 > 1929 paavi astui taas Rooman puolelle. Ikkunasta katselu ei
@@ -59,15 +57,10 @@ Rakentaja tarkistaa olemassa olevan hahmon ja laattakysymyksen — EI
 vaihdeta. Kohtaamispiste: Aventinuksen avaimenreikä (41.8827 N,
 12.4783 E — rakentaja laskee laudat ja tarkistaa).
 
-## 5. Aarremerkintä (isoisän salaisuusvihje — twist-siemen)
+## 5. Aarremerkintä — poistettu
 
-> Rooman aarre oli ainoa, jota en yrittänytkään. Seisoin avaimenreiän
-> edessä, näin kupolin rajautuvan lehtien väliin — ja käänsin
-> ympäri. Jonain päivänä ymmärrät miksi.
-
-HUOM: "kupoli avaimenreiästä" on todellinen näkymä (Pietarinkirkon
-kupoli). Merkintä EI paljasta miksi isoisä käänsi ympäri — se on
-kaaren avoin kysymys nro 4 (jättikö hän aarteita tarkoituksella).
+Aarremerkinnät poistettiin pelistä 11.10.2026 (omistaja), eikä niiden tekstejä säilytetä repossa
+(Raamattu, Poistetut ideat).
 
 ## 6. Täkynostopooli (otsikot sitovia)
 

@@ -746,7 +746,7 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'vain viitisentoista metriä merenpinnan yläpuolella. Maalla '
       + 'asuivat karankawat ja atakapat vähintään kaksituhatta vuotta '
       + 'ennen ensimmäisiä tunnettuja uudisasukkaita; atakapat '
-      + 'kutsuivat itseään nimellä **Ishak**, "ne ihmiset".'
+      + 'kutsuivat itseään nimellä **Ishak**, ”ne ihmiset”.'
       + '\n\n'
       + 'Kaupunki myytiin ennen kuin sitä oli olemassa. Veljekset '
       + 'Augustus ja John Kirby Allen ostivat elokuussa 1836 maata '

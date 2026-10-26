@@ -1,0 +1,2585 @@
+{
+ "versio": 1,
+ "luonnos": true,
+ "huomio": "Ranskan taidemuseon i-napin ympyrät (Sisältökirjuri 17.10.2026, PT 00.3x). Muoto kuten Alankomaat/kohdat.json: teokset[id] = [{x,y (0..1, koko maalaus), otsikko, teksti, lahteet}]. LUONNOS: x,y silmämääräisiä (tarkistettu piirtämällä kuvan päälle), lähteet ja epävarmat kohdat ks. docs/raportit/ranska-kohdat-20261017.md; PT hyväksyy ennen kytkentää. Ei alastomuuden/väkivallan kuvausta. Riippumaton tarkistus 17.10.2026 (5 Sonnet-agenttia, omat haut + kuvapaikat): 152 ympyrästä 91 OK, 61 muutettu (teksti/otsikko/paikka); varmistumattomat väitteet korvattu kuvasta nähtävällä tai lähteen sanamuodolla.",
+ "teokset": {
+  "louvre-inv-779": [
+   {
+    "x": 0.467,
+    "y": 0.32,
+    "otsikko": "Hymy ja sfumato",
+    "teksti": "Louvren mukaan kasvot on rakennettu ohuista lasiteista (sfumato). Wikipedian mukaan pehmeä häivytys vaikuttaa eniten suun ja silmien kulmissa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+      "title": "Louvre: Portrait de Lisa Gherardini (La Joconde), INV 779"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "title": "Wikipedia: Mona Lisa"
+     }
+    ]
+   },
+   {
+    "x": 0.867,
+    "y": 0.45,
+    "otsikko": "Silta taustalla",
+    "teksti": "Louvren mukaan taustalla on vuoristoa ja vesiä, vasemmalla mutkitteleva tie ja oikealla silta joen yli. Sillan paikasta on esitetty arvauksia.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+      "title": "Louvre: Portrait de Lisa Gherardini (La Joconde), INV 779"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "title": "Wikipedia: Mona Lisa"
+     }
+    ]
+   },
+   {
+    "x": 0.406,
+    "y": 0.845,
+    "otsikko": "Rennot kädet",
+    "teksti": "Louvren mukaan kädet lepäävät luonnollisesti tuolin käsinojalla, oikea käsi vasemman päällä, eivätkä jäykästi kuvan reunalla.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062370",
+      "title": "Louvre: Portrait de Lisa Gherardini (La Joconde), INV 779"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "title": "Tarkistus: sfumato suun ja silmien kulmissa; Vincentin silta-ehdotus (Romito/Laterina), oikea käsi va"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-777": [
+   {
+    "x": 0.741,
+    "y": 0.567,
+    "otsikko": "Enkelin katse muuttui",
+    "teksti": "Louvren mukaan infrapunakuva paljasti, että enkeli katsoi ensin Johannesta kuten Lontoon versiossa. Nyt hän katsoo ulos kuvasta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+      "title": "Louvre: La Vierge aux rochers (Delieuvinin essee), INV 777"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Virgin_of_the_Rocks",
+      "title": "Wikipedia: Virgin of the Rocks"
+     }
+    ]
+   },
+   {
+    "x": 0.462,
+    "y": 0.436,
+    "otsikko": "Marian katse",
+    "teksti": "Louvren mukaan Marian katse on mietteliäs ja alakuloinen. Hän on pyramidin muotoisen sommitelman keskus.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+      "title": "Louvre: La Vierge aux rochers (Delieuvinin essee), INV 777"
+     }
+    ]
+   },
+   {
+    "x": 0.07,
+    "y": 0.85,
+    "otsikko": "Tarkat kasvit",
+    "teksti": "Louvren mukaan Leonardo kuvasi kasvit ja kallion kerrokset tarkasti. Wikipedian mukaan Lontoon version kukat ovat kuvitteellisia.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062373",
+      "title": "Louvre: La Vierge aux rochers (Delieuvinin essee), INV 777"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Virgin_of_the_Rocks",
+      "title": "Wikipedia: Virgin of the Rocks"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-775": [
+   {
+    "x": 0.389,
+    "y": 0.36,
+    "otsikko": "Sumea hymy",
+    "teksti": "Louvren tiedotteen mukaan kasvot erottuvat lähes mustasta taustasta, ja ääriviivat on pehmennetty ohuilla öljylasitteilla.",
+    "lahteet": [
+     {
+      "url": "https://presse.louvre.fr/le-musee-du-louvre-prete-le-saint-jean-baptiste-de-leonard-de-vinci-2",
+      "title": "Louvre, lehdistötiedote: Saint Jean-Baptiste (INV 775)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_(Leonardo)",
+      "title": "Wikipedia: Saint John the Baptist (Leonardo)"
+     }
+    ]
+   },
+   {
+    "x": 0.754,
+    "y": 0.345,
+    "otsikko": "Kohotettu käsi",
+    "teksti": "Wikipedian mukaan kohotettu käsi muistuttaa Pyhän Annan hahmoa Leonardon Burlington House -kartongissa.",
+    "lahteet": [
+     {
+      "url": "https://presse.louvre.fr/le-musee-du-louvre-prete-le-saint-jean-baptiste-de-leonard-de-vinci-2",
+      "title": "Louvre, lehdistötiedote: Saint Jean-Baptiste (INV 775)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_(Leonardo)",
+      "title": "Wikipedia: Saint John the Baptist (Leonardo)"
+     }
+    ]
+   },
+   {
+    "x": 0.841,
+    "y": 0.645,
+    "otsikko": "Keskeneräinen nahka",
+    "teksti": "Louvren tiedotteen mukaan eläimennahka ja oikea käsivarsi olivat vielä kesken Leonardon kuollessa.",
+    "lahteet": [
+     {
+      "url": "https://presse.louvre.fr/le-musee-du-louvre-prete-le-saint-jean-baptiste-de-leonard-de-vinci-2",
+      "title": "Louvre, lehdistötiedote: Saint Jean-Baptiste (INV 775)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Saint_John_the_Baptist_(Leonardo)",
+      "title": "Wikipedia: Saint John the Baptist (Leonardo)"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-602": [
+   {
+    "x": 0.19,
+    "y": 0.47,
+    "otsikko": "Heikot sädekehät",
+    "teksti": "Wikipedian mukaan kaikilla kolmella hahmolla on himmeä sädekehä, piirre joka katoaa korkearenessanssista.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060754",
+      "title": "Louvre: La Vierge à l'Enfant avec le petit saint Jean Baptiste (La Belle Jardinière), INV 602"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/La_belle_jardini%C3%A8re",
+      "title": "Wikipedia: La belle jardinière"
+     }
+    ]
+   },
+   {
+    "x": 0.566,
+    "y": 0.505,
+    "otsikko": "Marian kirja",
+    "teksti": "Wikipedian mukaan kirjan uskotaan sisältävän ennustuksen Kristuksen kuolemasta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060754",
+      "title": "Louvre: La Vierge à l'Enfant avec le petit saint Jean Baptiste (La Belle Jardinière), INV 602"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/La_belle_jardini%C3%A8re",
+      "title": "Wikipedia: La belle jardinière"
+     }
+    ]
+   },
+   {
+    "x": 0.905,
+    "y": 0.386,
+    "otsikko": "Maaseutumaisema",
+    "teksti": "Wikipedian mukaan maisema on kaunis maaseutupuutarha. Oikealla häämöttää kaupunki, jonka torni nousee korkeimmaksi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060754",
+      "title": "Louvre: La Vierge à l'Enfant avec le petit saint Jean Baptiste (La Belle Jardinière), INV 602"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/La_belle_jardini%C3%A8re",
+      "title": "Wikipedia: La belle jardinière"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-611": [
+   {
+    "x": 0.328,
+    "y": 0.268,
+    "otsikko": "Turbaani ja baretti",
+    "teksti": "Wikipedian mukaan päässä on turbaani, jonka päällä on lovettu baretti. Sen kyljessä välähtää pieni kullanruskea koriste.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066418",
+      "title": "Louvre: Portrait de Baldassare Castiglione, INV 611"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Baldassare_Castiglione",
+      "title": "Wikipedia: Portrait of Baldassare Castiglione"
+     }
+    ]
+   },
+   {
+    "x": 0.17,
+    "y": 0.94,
+    "otsikko": "Rajatut kädet",
+    "teksti": "Maalauksessa kädet on rajattu alareunaan. 1600-luvun kopioissa ne näkyvät kokonaan; myöhemmän tutkimuksen mukaan kangasta ei leikattu.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066418",
+      "title": "Louvre: Portrait de Baldassare Castiglione, INV 611"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Baldassare_Castiglione",
+      "title": "Wikipedia: Portrait of Baldassare Castiglione"
+     },
+     {
+      "url": "https://rembrandtcatalogue.net/catalogue-benesch-451-500/",
+      "title": "Tarkistus: Rembrandtin ja Rubensin kopiot, trimmausteoria"
+     }
+    ]
+   },
+   {
+    "x": 0.715,
+    "y": 0.85,
+    "otsikko": "Oravannahkainen reunus",
+    "teksti": "Takissa on oravannahkareunus ja musta nauha. Gowingin mukaan harmaa, samettimainen pinta on oikeasti turkkia.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066418",
+      "title": "Louvre: Portrait de Baldassare Castiglione, INV 611"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Baldassare_Castiglione",
+      "title": "Wikipedia: Portrait of Baldassare Castiglione"
+     },
+     {
+      "url": "https://fineartconnoisseur.com/2017/01/portrait-of-the-week-a-blast-from-the-renaissance-past/",
+      "title": "Tarkistus: doublet with squirrel fur and black ribbon"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-71": [
+   {
+    "x": 0.489,
+    "y": 0.303,
+    "otsikko": "Huvila taustalla",
+    "teksti": "Wikipedian mukaan taustan rakennukset muistuttavat 1500-luvun Venetsian alueen kaupunki- ja huvilatyyliä.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+      "title": "Louvre: Le Concert champêtre, INV 71"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Pastoral_Concert",
+      "title": "Wikipedia: The Pastoral Concert"
+     }
+    ]
+   },
+   {
+    "x": 0.469,
+    "y": 0.642,
+    "otsikko": "Luuttu",
+    "teksti": "Wikipedian mukaan luuttu voidaan lukea jalon lyriikan vertauskuvaksi. Tutkija Joost-Gaugier tunnistaa luutunsoittajan nuoreksi Giorgioneksi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+      "title": "Louvre: Le Concert champêtre, INV 71"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Pastoral_Concert",
+      "title": "Wikipedia: The Pastoral Concert"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Pastoral_Concert",
+      "title": "Tarkistus: luuttu = jalo lyriikka; Joost-Gaugier: nuori Giorgione luutunsoittajana"
+     }
+    ]
+   },
+   {
+    "x": 0.88,
+    "y": 0.56,
+    "otsikko": "Pastoraalin alku",
+    "teksti": "Taustalla paimen ja lauma. Wikipedian mukaan maalausta pidetään pastoraalimaalauksen alkuna; Sannazaron runo kuvasi Arkadian paratiisina.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+      "title": "Louvre: Le Concert champêtre, INV 71"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Pastoral_Concert",
+      "title": "Wikipedia: The Pastoral Concert"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Pastoral_Concert",
+      "title": "Tarkistus: genren alku; Sannazaron Arcadia paratiisina"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-142": [
+   {
+    "x": 0.416,
+    "y": 0.777,
+    "otsikko": "Veronese soittajana",
+    "teksti": "Perinteen mukaan etualan valkoasuinen jousisoittaja on Veronese itse. Tulkinta periytyy 1600-luvun runoilija Boschinilta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+      "title": "Louvre: Les Noces de Cana, INV 142"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Wedding_at_Cana_(Veronese)",
+      "title": "Wikipedia: The Wedding at Cana (Veronese)"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Les_Noces_de_Cana_(Véronèse)",
+      "title": "Tarkistus: Boschinin tulkinta, vähäinen muotokuvallisuus, soitinten vaihtelu"
+     }
+    ]
+   },
+   {
+    "x": 0.568,
+    "y": 0.8,
+    "otsikko": "Tiziano bassoviulussa",
+    "teksti": "Perinteen mukaan punaiseen pukeutunut bassoviulun soittaja on Tiziano. Tintoretto ja Bassano on tulkittu muiksi soittajiksi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+      "title": "Louvre: Les Noces de Cana, INV 142"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Wedding_at_Cana_(Veronese)",
+      "title": "Wikipedia: The Wedding at Cana (Veronese)"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Les_Noces_de_Cana_(Véronèse)",
+      "title": "Tarkistus: Boschini: Titian violone, Bassano cornetto, Tintoretto viola"
+     }
+    ]
+   },
+   {
+    "x": 0.573,
+    "y": 0.272,
+    "otsikko": "Palladion tyyliä",
+    "teksti": "Taustan arkkitehtuuri lainaa piirteitä Palladion rakennuksista. Kuva oli refektoriossa korkealla, katsottavaksi alhaalta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064382",
+      "title": "Louvre: Les Noces de Cana, INV 142"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Wedding_at_Cana_(Veronese)",
+      "title": "Wikipedia: The Wedding at Cana (Veronese)"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Les_Noces_de_Cana_(Véronèse)",
+      "title": "Tarkistus: arkkitehtuurielementit lainattu Palladion rakennuksista; esillä korkealla"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-7300": [
+   {
+    "x": 0.642,
+    "y": 0.26,
+    "otsikko": "Nainen ja Cesin Juno",
+    "teksti": "Wikipedian mukaan nainen on ehkä paimentyttö, ja hänen ryhtinsä mallina oli antiikin Cesi Juno -patsas.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Et_in_Arcadia_ego_(Poussin)",
+      "title": "Wikipedia: Et in Arcadia ego (Poussin)"
+     },
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062528",
+      "title": "Louvre: Les Bergers d'Arcadie, INV 7300 (kommentaari)"
+     }
+    ]
+   },
+   {
+    "x": 0.45,
+    "y": 0.54,
+    "otsikko": "Varjo haudalla",
+    "teksti": "Wikipedian mukaan toinen paimenista tunnistaa toverinsa varjon haudalla. Varjo on myös kuoleman symboli.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Et_in_Arcadia_ego_(Poussin)",
+      "title": "Wikipedia: Et in Arcadia ego (Poussin)"
+     },
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062528",
+      "title": "Louvre: Les Bergers d'Arcadie, INV 7300 (kommentaari)"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Les_Bergers_d'Arcadie",
+      "title": "Tarkistus: sama, lisäksi varjon ääriviivan jäljitys"
+     }
+    ]
+   },
+   {
+    "x": 0.45,
+    "y": 0.4,
+    "otsikko": "Rauhallinen sommitelma",
+    "teksti": "Louvren tietueessa Alain Mérot pitää vuoden 1638 versiota vaakasuorana ja tasapainoisena; liian selvät symbolit on jätetty pois.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062528",
+      "title": "Louvre: Les Bergers d'Arcadie, INV 7300 (kommentaari)"
+     }
+    ]
+   }
+  ],
+  "louvre-rf-1972-8": [
+   {
+    "x": 0.3,
+    "y": 0.3,
+    "otsikko": "Uudelleenmaalattu liivi",
+    "teksti": "Louvren mukaan piian liivi oli alun perin punainen kuten Kimbellin versiossa, mutta se maalattiin tummansinivihreäksi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066276",
+      "title": "Louvre: Le Tricheur à l'as de carreau, RF 1972 8"
+     }
+    ]
+   },
+   {
+    "x": 0.355,
+    "y": 0.45,
+    "otsikko": "Primiera-peli",
+    "teksti": "Louvren mukaan peli on luultavasti primiera, pokerin italialainen esivanhempi. Huijari kokoaa vahvaa korttiyhdistelmää.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066276",
+      "title": "Louvre: Le Tricheur à l'as de carreau, RF 1972 8"
+     }
+    ]
+   },
+   {
+    "x": 0.19,
+    "y": 0.68,
+    "otsikko": "Auki jääneet nauhat",
+    "teksti": "Louvren mukaan huijarin takin nauhat on jätetty auki. Kimbellin versiossa ne on sidottu kiinni.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066276",
+      "title": "Louvre: Le Tricheur à l'as de carreau, RF 1972 8"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Card_Sharp_with_the_Ace_of_Diamonds",
+      "title": "Wikipedia: The Card Sharp with the Ace of Diamonds"
+     }
+    ]
+   }
+  ],
+  "louvre-mi-957": [
+   {
+    "x": 0.13,
+    "y": 0.62,
+    "otsikko": "Jalkaa kuivaava palvelija",
+    "teksti": "Kumartunut palvelijatar kuivaa Batseban jalkaa liinalla. Hänen kasvonsa jäävät lähes kokonaan varjoon.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060453",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_(Rembrandt)",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.292,
+    "y": 0.425,
+    "otsikko": "Kullanhohtoinen kangas",
+    "teksti": "Batseban takana oleva kangas on maalattu ruskein ja okran sävyin. Wikipedian mukaan se antaa tummalle kuvalle kultaista lämpöä.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060453",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_(Rembrandt)",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.652,
+    "y": 0.243,
+    "otsikko": "Batseban katse",
+    "teksti": "Wikipedian mukaan Batseban katse ei kohdistu mihinkään tiettyyn kohteeseen. Siksi ilme näyttää mietteliäältä ja alistuneelta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010060453",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bathsheba_at_Her_Bath_(Rembrandt)",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-8525": [
+   {
+    "x": 0.068,
+    "y": 0.675,
+    "otsikko": "Kullattu vene",
+    "teksti": "Vasemmalla odottaa koristeellinen kullattu vene, jonka yllä on punainen kangaskatos. Pariskunnat valmistautuvat nousemaan siihen.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010061995",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Pilgrimage_to_Cythera",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.165,
+    "y": 0.41,
+    "otsikko": "Lentävät amorit",
+    "teksti": "Ilmassa lentelee pieniä amoreja, jotka Wikipedian mukaan ikään kuin työntävät pareja lähemmäs toisiaan.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010061995",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Pilgrimage_to_Cythera",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.535,
+    "y": 0.55,
+    "otsikko": "Taakseen vilkaiseva nainen",
+    "teksti": "Keltaiseen pukeutunut nainen vilkaisee taakseen kohti jumalattaren lehtoa, vaikka pari on jo lähdössä rinnettä alas.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010061995",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Pilgrimage_to_Cythera",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3197": [
+   {
+    "x": 0.49,
+    "y": 0.1,
+    "otsikko": "Koukussa roikkuva rausku",
+    "teksti": "Rausku riippuu koukusta. Wikipedian mukaan Chardiniin vaikuttivat hollantilaiset asetelmat; kohtausta on verrattu Rembrandtin Teurastettuun härkään.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065938",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ray_(Chardin)",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.26,
+    "y": 0.71,
+    "otsikko": "Avatut osterit",
+    "teksti": "Avatut osterit on aseteltu kuvan vasempaan laitaan. Niiden vaaleat, kiiltävät kuoret erottuvat tummasta pöydänreunasta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065938",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ray_(Chardin)",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.41,
+    "y": 0.78,
+    "otsikko": "Kaksi pienempää kalaa",
+    "teksti": "Rauskun alla pöydän reunalla lepää kaksi pienempää kalaa. Taulu on noin 1,15 metriä korkea ja 1,46 metriä leveä.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065938",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ray_(Chardin)",
+      "title": "Wikipedia"
+     },
+     {
+      "url": "https://utpictura18.univ-amu.fr/en/notice/1166-the-stingray-also-known-as-kitchen-interior-chardin",
+      "title": "Tarkistus: INV 3197, 114 x 146 cm"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3692": [
+   {
+    "x": 0.355,
+    "y": 0.42,
+    "otsikko": "Pylväät ja kaaret",
+    "teksti": "Wikipedian mukaan miesten suorat viivat vastaavat taustan pylväitä, kun taas naisten kaarevat vartalot toistavat kaaria.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.885,
+    "y": 0.63,
+    "otsikko": "Camilla ja Sabina",
+    "teksti": "Oikean reunan naisista Camilla on Horatiusten sisar ja Curiatiuksen morsian, Sabina Curiatiusten sisar ja Horatiuksen vaimo.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.03,
+    "y": 0.945,
+    "otsikko": "Latinankielinen signeeraus",
+    "teksti": "Louvren mukaan vasemmassa alakulmassa lukee latinaksi \"L. David faciebat\", \"David teki\". Perässä ovat paikka ja vuosi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010062239",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Oath_of_the_Horatii",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3699": [
+   {
+    "x": 0.109,
+    "y": 0.327,
+    "otsikko": "Paavin vaakuna",
+    "teksti": "Vasemmalla paavin valtaistuimen takana on Pyhän istuimen vaakuna. Louvren mukaan valtaistuimen yllä on punainen, kultahapsuinen katos.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.93,
+    "y": 0.32,
+    "otsikko": "Alttari ja Pietà",
+    "teksti": "Oikeassa reunassa on Notre-Damen pääalttari. Louvren mukaan sen päällä on Nicolas Coustoun marmorinen Pietà vuodelta 1723.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.935,
+    "y": 0.975,
+    "otsikko": "Signeeraus",
+    "teksti": "Louvren mukaan oikeassa alakulmassa on signeeraus \"L. David f.\" eli faciebat, \"teki\". Vasemmassa alakulmassa on vuosiluvut 1806 ja 1807.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065720",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-rf-1158": [
+   {
+    "x": 0.18,
+    "y": 0.19,
+    "otsikko": "Niskaan solmittu turbaani",
+    "teksti": "Louvren mukaan turbaani on solmittu niskaan. Raidalliseen kankaaseen on kiinnitetty kultakoristeita, ja takana riippuu tupsuja.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+      "title": "Louvre, kokoelmatietue"
+     }
+    ]
+   },
+   {
+    "x": 0.78,
+    "y": 0.3,
+    "otsikko": "Sininen verho",
+    "teksti": "Verho on kuvioitu kullanvärisin ja punaisin kukkakoristein. Louvren mukaan se koskettaa naisen jalkaa ja vuodetta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+      "title": "Louvre, kokoelmatietue"
+     }
+    ]
+   },
+   {
+    "x": 0.8,
+    "y": 0.97,
+    "otsikko": "Signeeraus alareunassa",
+    "teksti": "Alareunan signeerauksessa on Louvren mukaan sana \"Pxit\", latinan pinxit eli \"maalasi\". Kirjoitus jatkuu paikalla ja vuodella.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065566",
+      "title": "Louvre, kokoelmatietue"
+     }
+    ]
+   }
+  ],
+  "louvre-rf-129": [
+   {
+    "x": 0.24,
+    "y": 0.325,
+    "otsikko": "Silinterihattuinen mies",
+    "teksti": "Silinterihattuinen mies edustaa porvaristoa. Omakuvaksi häntä ei enää yleensä pidetä; mallina on esitetty mm. Étienne Aragoa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.735,
+    "y": 0.375,
+    "otsikko": "Pistoolipoika",
+    "teksti": "Kaksi pistoolia kantava poika edustaa kaupungin työväkeä. Hänen uskotaan yleisesti innoittaneen Victor Hugon Kurjien Gavrochen.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.875,
+    "y": 0.405,
+    "otsikko": "Notre-Damen tornit",
+    "teksti": "Taustalla savun seasta häämöttävät Notre-Damen tornit, joiden ansiosta taistelu sijoittuu tunnistettavasti Pariisiin.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065872",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Liberty_Leading_the_People",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-rf-2346": [
+   {
+    "x": 0.122,
+    "y": 0.286,
+    "otsikko": "Kultainen kannu ja malja",
+    "teksti": "Sivupöydällä on Wikipedian mukaan koristeellinen kultainen kannu ja malja. Samanlaisia arvoesineitä on ripoteltu pitkin kuvaa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.453,
+    "y": 0.552,
+    "otsikko": "Kullatut norsunpäät",
+    "teksti": "Vuoteen jalustaa koristavat kullatut norsunpäät. Wikipedian mukaan kullan kimmellys johdattaa katsetta pitkin kuvaa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.771,
+    "y": 0.073,
+    "otsikko": "Rakennus savun seassa",
+    "teksti": "Yläoikealla savun seasta erottuu rakennuksen osia. Wikipedian mukaan taustan arkkitehtuuria on vaikea hahmottaa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065757",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Death_of_Sardanapalus",
+      "title": "Wikipedia"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3824": [
+   {
+    "x": 0.365,
+    "y": 0.127,
+    "otsikko": "Lasiesineet seinäsyvennyksessä",
+    "teksti": "Punaisten kaappinovien yläpuolella, seinäsyvennyksessä, on karahveja ja laseja. Ne jatkavat huoneen runsasta koristelua.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065869",
+      "title": "Louvre, kokoelmatietue"
+     }
+    ]
+   },
+   {
+    "x": 0.69,
+    "y": 0.38,
+    "otsikko": "Hiuksiin kiinnitetty kukka",
+    "teksti": "Istuvan naisen tummiin hiuksiin on kiinnitetty vaaleanpunainen kukka. Wikipedian mukaan kolmella naisella on kultakoruja.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065869",
+      "title": "Louvre, kokoelmatietue"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Women_of_Algiers_in_Their_Apartment",
+      "title": "Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.091,
+    "y": 0.576,
+    "otsikko": "Helminauha",
+    "teksti": "Vasemman naisen kaulalla on monirivinen helminauha, jossa riippuu tumma kivi. Hänen sormissaan ja ranteissaan on myös koruja.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065869",
+      "title": "Louvre, kokoelmatietue"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3820": [
+   {
+    "x": 0.068,
+    "y": 0.291,
+    "otsikko": "Tulinen horisontti on Dis",
+    "teksti": "Liekkien kaupunki on Dis, Danten Helvetin muurien ympäröimä kaupunki. Wikipedian mukaan Dante kuulee sieltä huutoa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065871",
+      "title": "Louvre: Dante et Virgile (INV 3820)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Barque_of_Dante",
+      "title": "Wikipedia: The Barque of Dante"
+     }
+    ]
+   },
+   {
+    "x": 0.396,
+    "y": 0.318,
+    "otsikko": "Punahuppuinen Dante",
+    "teksti": "Danten päässä on punainen huppu, ja hän kohottaa kättään. Vieressä seisovalla Vergiliuksella on laakeriseppele.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065871",
+      "title": "Louvre: Dante et Virgile (INV 3820)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Barque_of_Dante",
+      "title": "Wikipedia: The Barque of Dante"
+     }
+    ]
+   },
+   {
+    "x": 0.85,
+    "y": 0.685,
+    "otsikko": "Signeeraus veneessä",
+    "teksti": "Veneen laitaan on maalattu nimi Eug. Delacroix ja vuosiluku. Louvren tietue vahvistaa teoksen signeeratuksi ja päivätyksi.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065871",
+      "title": "Louvre: Dante et Virgile (INV 3820)"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-3823": [
+   {
+    "x": 0.475,
+    "y": 0.15,
+    "otsikko": "Taivas ja Constable",
+    "teksti": "Wikipedian mukaan Delacroix näyttää hylkäävän pilvissä perspektiivin lait. Constablen maalausten nähtyään hän muutti taivasta ja taustaa vapaasti.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065870",
+      "title": "Louvre: Scènes des massacres de Scio (INV 3823)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios",
+      "title": "Wikipedia: The Massacre at Chios"
+     },
+     {
+      "url": "https://bridget-riley.publications.britishart.yale.edu/c-and-d/",
+      "title": "Yale: On Works by Constable and Delacroix"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix",
+      "title": "Tarkistus: Constable/Bonington prompted changes to sky and distant landscape"
+     },
+     {
+      "url": "https://eclecticlight.co/2023/05/19/paintings-of-eugene-delacroix-1-beyond-neoclassicism",
+      "title": "Tarkistus: maalaus työstettiin uusiksi ennen Salonia 1824"
+     }
+    ]
+   },
+   {
+    "x": 0.17,
+    "y": 0.45,
+    "otsikko": "Punalakkinen mies",
+    "teksti": "Louvren tietueen nimi on 'Kreikkalaisperheitä odottamassa kuolemaa tai orjuutta'. Punalakkinen mies huipentaa Wikipedian mukaan vasemman ryhmän.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065870",
+      "title": "Louvre: Scènes des massacres de Scio (INV 3823)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Massacre_at_Chios",
+      "title": "Wikipedia: The Massacre at Chios"
+     }
+    ]
+   },
+   {
+    "x": 0.12,
+    "y": 0.975,
+    "otsikko": "Signeeraus",
+    "teksti": "Signeeraus Eug. Delacroix on vasemmassa alakulmassa kivisen maan päällä. Louvren tietue kirjaa sen näin.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010065870",
+      "title": "Louvre: Scènes des massacres de Scio (INV 3823)"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-4884": [
+   {
+    "x": 0.284,
+    "y": 0.571,
+    "otsikko": "Isä ja kuollut poika",
+    "teksti": "Etualalla vanhus pitää polvillaan kuolleen poikansa ruumista, pää käden varassa. Muut lautalla kurkottavat kohti horisonttia.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "title": "Louvre: Le Radeau de la Méduse (INV 4884)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+      "title": "Wikipedia: The Raft of the Medusa"
+     }
+    ]
+   },
+   {
+    "x": 0.07,
+    "y": 0.35,
+    "otsikko": "Aalto, joka uhkaa",
+    "teksti": "Wikipedian mukaan mastoa seuraava vinoviiva päättyy aaltoon, joka uhkaa nielaista koko lautan.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "title": "Louvre: Le Radeau de la Méduse (INV 4884)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+      "title": "Wikipedia: The Raft of the Medusa"
+     }
+    ]
+   },
+   {
+    "x": 0.708,
+    "y": 0.532,
+    "otsikko": "Tyhjä tynnyri",
+    "teksti": "Mies seisoo tyhjän tynnyrin päällä ja heiluttaa tummanpunaista liinaa. Hänen oletetaan olevan sotilas Jean Charles; mallina oli haitilainen Joseph.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059199",
+      "title": "Louvre: Le Radeau de la Méduse (INV 4884)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+      "title": "Wikipedia: The Raft of the Medusa"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Joseph_(art_model)",
+      "title": "Tarkistus: Joseph mallina hahmolle, jonka oletetaan olevan Jean Charles; Jean Charles sotilas"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-4885": [
+   {
+    "x": 0.339,
+    "y": 0.55,
+    "otsikko": "Pantterinnahkainen satulahuopa",
+    "teksti": "Satulan päällä on pantterin- tai leopardinnahka. Géricault valmisteli maalausta öljyluonnoksilla, joista yksi on Louvressa (RF 210).",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059198",
+      "title": "Louvre: Officier de chasseurs à cheval (INV 4885)"
+     },
+     {
+      "url": "https://onlineonly.christies.com.cn/s/out-office-art-transports/theodore-gericault-rouen-1791-1824-paris-33/86545",
+      "title": "Christie's: Géricault, study of a panther skin"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Officier_de_chasseurs_à_cheval_de_la_garde_impériale_chargeant",
+      "title": "Tarkistus: esitöitä mm. Louvressa ja Bayonnessa"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/officier-de-chasseurs-a-cheval-de-la-garde-imperiale-chargeant-officer-of-the-chasseurs-a-cheval-of-the-garde-imperiale-charging",
+      "title": "Tarkistus: esquisse RF 210 Louvressa, toinen Bayonnessa"
+     }
+    ]
+   },
+   {
+    "x": 0.47,
+    "y": 0.19,
+    "otsikko": "Karvalakki ja sulka",
+    "teksti": "Korkea karvalakki sulkineen kuuluu keisarillisen kaartin ratsujääkärin asuun. Louvren tietueen nimessä upseeri on juuri kaartin ratsujääkäri.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059198",
+      "title": "Louvre: Officier de chasseurs à cheval (INV 4885)"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/officier-de-chasseurs-a-cheval-de-la-garde-imperiale-chargeant-officer-of-the-chasseurs-a-cheval-of-the-garde-imperiale-charging",
+      "title": "Napoleon.org: Officier de chasseurs à cheval de la Garde impériale"
+     }
+    ]
+   },
+   {
+    "x": 0.678,
+    "y": 0.315,
+    "otsikko": "Hevosen esikuva",
+    "teksti": "Wikipedian mukaan ratsastajan ja nousevan hevosen asento on johdettu Rubensin varhaisesta Pyhä Yrjö -maalauksesta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010059198",
+      "title": "Louvre: Officier de chasseurs à cheval (INV 4885)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Charging_Chasseur",
+      "title": "Wikipedia: The Charging Chasseur"
+     }
+    ]
+   }
+  ],
+  "louvre-mi-708": [
+   {
+    "x": 0.172,
+    "y": 0.308,
+    "otsikko": "Tilaustyö",
+    "teksti": "Wikipedian mukaan maalaus tehtiin englantilaisen hevoskauppiaan Adam Elmoren tilauksesta. Louvre luettelee siinä neljä ratsastajaa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064852",
+      "title": "Louvre: Course de chevaux (MI 708)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_1821_Derby_at_Epsom",
+      "title": "Wikipedia: The 1821 Derby at Epsom"
+     }
+    ]
+   },
+   {
+    "x": 0.453,
+    "y": 0.458,
+    "otsikko": "Punavalkoinen ratsastaja",
+    "teksti": "Punavalkoinen lakki ja liivi erottavat tämän ratsastajan muista. Jokaisella neljällä ratsastajalla on omat värinsä.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064852",
+      "title": "Louvre: Course de chevaux (MI 708)"
+     }
+    ]
+   },
+   {
+    "x": 0.928,
+    "y": 0.358,
+    "otsikko": "Tolppa radan reunalla",
+    "teksti": "Oikeassa reunassa seisoo kolmijalkainen tolppa tumman myrskypilven edessä. Toinen, pieni tolppa näkyy kaukana vasemmalla horisontissa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064852",
+      "title": "Louvre: Course de chevaux (MI 708)"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:G%C3%A9ricault_-_Course_de_Chevaux,_dit_traditionnellement_Le_derby_de_1821_%C3%A0_Epsom,_MI_708.jpg",
+      "title": "Tarkistus: kuva: tolppa oikealla, pieni tolppa vasemmalla"
+     }
+    ]
+   }
+  ],
+  "louvre-rf-1938-51": [
+   {
+    "x": 0.414,
+    "y": 0.215,
+    "otsikko": "Taulun kierto",
+    "teksti": "Louvrelle tarjottiin taulua 1866, mutta museo ei ottanut sitä. Maalari Charles Jacque osti sen 1868.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010063587",
+      "title": "Louvre: La folle monomane du jeu (RF 1938 51)"
+     }
+    ]
+   },
+   {
+    "x": 0.49,
+    "y": 0.375,
+    "otsikko": "Monomania",
+    "teksti": "Monomania tarkoitti 1800-luvun psykiatriassa yhteen pakkomielteeseen keskittyvää häiriötä. Nykyään käsitettä pidetään vanhentuneena.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010063587",
+      "title": "Louvre: La folle monomane du jeu (RF 1938 51)"
+     },
+     {
+      "url": "https://www.thecollector.com/why-theodore-gericault-paint-portraits-psychiatric-patients/",
+      "title": "The Collector: Why Géricault painted portraits of psychiatric patients"
+     }
+    ]
+   },
+   {
+    "x": 0.55,
+    "y": 0.62,
+    "otsikko": "Löytyi Baden-Badenista",
+    "teksti": "Taulu oli 1800-luvulla Baden-Badenissa lääkäri Lachèzen omistuksessa. Sarjan viisi maalausta tuli julki 1863.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010063587",
+      "title": "Louvre: La folle monomane du jeu (RF 1938 51)"
+     },
+     {
+      "url": "https://www.finestresullarte.info/en/works-and-artists/portraits-of-the-insane-when-gericault-gave-a-face-to-madness",
+      "title": "Finestre sull'Arte: Portraits of the insane"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-5067": [
+   {
+    "x": 0.656,
+    "y": 0.29,
+    "otsikko": "Kirkko lumessa",
+    "teksti": "Taustalla savuavan kylän kirkko erottuu lumisella tasangolla. Wikipedian mukaan Eylaun taistelu käytiin 7.–8. helmikuuta 1807.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066486",
+      "title": "Louvre: Napoléon sur le champ de bataille d'Eylau (INV 5067)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Napoleon_on_the_Battlefield_of_Eylau",
+      "title": "Wikipedia: Napoleon on the Battlefield of Eylau"
+     },
+     {
+      "url": "https://www.wga.hu/html_m/g/gros/7eylau.html",
+      "title": "Tarkistus: taivas savusta palavasta kylästä"
+     }
+    ]
+   },
+   {
+    "x": 0.38,
+    "y": 0.31,
+    "otsikko": "Sotilasrivit",
+    "teksti": "Taustalla sotilasrivit etenevät lumessa. Wikipedian mukaan tilauksen tarkoitus oli propaganda: kallis voitto piti saada muistiin.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066486",
+      "title": "Louvre: Napoléon sur le champ de bataille d'Eylau (INV 5067)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Napoleon_on_the_Battlefield_of_Eylau",
+      "title": "Wikipedia: Napoleon on the Battlefield of Eylau"
+     }
+    ]
+   },
+   {
+    "x": 0.26,
+    "y": 0.54,
+    "otsikko": "Liettualainen sotilas",
+    "teksti": "Louvren tietueen mukaan liettualainen sotilas puhuu keisarille kirurgi Percyn tukemana. Wikipedian mukaan hän vannoo uskollisuutta.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010066486",
+      "title": "Louvre: Napoléon sur le champ de bataille d'Eylau (INV 5067)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Napoleon_on_the_Battlefield_of_Eylau",
+      "title": "Wikipedia: Napoleon on the Battlefield of Eylau"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-4958": [
+   {
+    "x": 0.536,
+    "y": 0.175,
+    "otsikko": "Kallioon kaiverrettu rivi",
+    "teksti": "Rivi periytyy Jobin kirjasta, jota Chateaubriand mukaili romaaniinsa. Napoleon.orgin mukaan Girodet toisti sen kalliossa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Atala au tombeau (INV 4958)"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/the-entombment-of-atala-also-called-atalas-funeral",
+      "title": "Napoleon.org: The Entombment of Atala"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Burial_of_Atala",
+      "title": "Wikipedia: The Burial of Atala"
+     }
+    ]
+   },
+   {
+    "x": 0.66,
+    "y": 0.93,
+    "otsikko": "Lapio",
+    "teksti": "Maahan jätetty lapio viittaa juuri kaivettuun hautaan. Wikipedian mukaan isä Aubry nostaa Atalan ylävartaloa kohti hautaa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Atala au tombeau (INV 4958)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Burial_of_Atala",
+      "title": "Wikipedia: The Burial of Atala"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/the-entombment-of-atala-also-called-atalas-funeral",
+      "title": "Tarkistus: Jobin kirjan rivi Chateaubriandin muokkaamana kalliossa; lupaus äidille; vastasyvätty haud"
+     }
+    ]
+   },
+   {
+    "x": 0.411,
+    "y": 0.53,
+    "otsikko": "Chactas",
+    "teksti": "Kyyhöttävä nuorukainen on romaanin intiaani Chactas. Atalan äidilleen antama lupaus omistautua uskonnolle esti heidän avioliittonsa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Atala au tombeau (INV 4958)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Burial_of_Atala",
+      "title": "Wikipedia: The Burial of Atala"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/the-entombment-of-atala-also-called-atalas-funeral",
+      "title": "Tarkistus: Jobin kirjan rivi Chateaubriandin muokkaamana kalliossa; lupaus äidille; vastasyvätty haud"
+     }
+    ]
+   }
+  ],
+  "louvre-inv-4935": [
+   {
+    "x": 0.52,
+    "y": 0.23,
+    "otsikko": "Effet de lune",
+    "teksti": "Teos tunnetaan myös nimellä Effet de lune, kuun vaikutus. Wikipedian mukaan sen hajanainen valaistus on tunnelmallisempi kuin antiikin esikuvissa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Girodetin Atala-tietue (mainitsee Endymion-taulun INV 4935 hankinnan)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Anne-Louis_Girodet_de_Roussy-Trioson",
+      "title": "Wikipedia: Girodet"
+     },
+     {
+      "url": "https://smarthistory.org/girodet-the-sleep-of-endymion",
+      "title": "Smarthistory: Girodet, The Sleep of Endymion"
+     }
+    ]
+   },
+   {
+    "x": 0.109,
+    "y": 0.713,
+    "otsikko": "Nukkuva koira",
+    "teksti": "Vasemmassa alakulmassa tummuudessa makaa koira Endymionin jalkojen vieressä. Sen muoto erottuu vain tarkasti katsoen.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Girodetin Atala-tietue (mainitsee Endymion-taulun INV 4935 hankinnan)"
+     },
+     {
+      "url": "https://smarthistory.org/girodet-the-sleep-of-endymion",
+      "title": "Smarthistory: Girodet, The Sleep of Endymion"
+     },
+     {
+      "url": "https://en.galerie-atena.com/engravings-of-endymion-and-venus-from-the-early-19th-century/",
+      "title": "Tarkistus: kaiverruskuvaus: koira ja aseet jaloissa"
+     }
+    ]
+   },
+   {
+    "x": 0.078,
+    "y": 0.896,
+    "otsikko": "Nauhasandaali",
+    "teksti": "Jalassa on nauhasandaali, jonka nilkan kohdalla on koristeellinen metallilevy. Yksityiskohta erottuu hämärästä vasemmassa reunassa.",
+    "lahteet": [
+     {
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010064829",
+      "title": "Louvre: Girodetin Atala-tietue (mainitsee Endymion-taulun INV 4935 hankinnan)"
+     },
+     {
+      "url": "https://smarthistory.org/girodet-the-sleep-of-endymion",
+      "title": "Smarthistory: Girodet, The Sleep of Endymion"
+     },
+     {
+      "url": "https://commons.wikimedia.org/wiki/File:The_Sleep_of_Endymion_-_Girodet_(Louvre_INV_4935).jpg",
+      "title": "Tarkistus: teoksen kuva (tarkistettu zoomaamalla)"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1676": [
+   {
+    "x": 0.22,
+    "y": 0.72,
+    "otsikko": "Argenteuilin pelto",
+    "teksti": "Monet asui maalauksen aikaan Argenteuilissa Pariisin lähellä. Punaiset unikot on maalattu pieninä, erillisinä siveltimenvetoina.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/coquelicots-1010",
+      "title": "Musée d'Orsay: Coquelicots"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Poppy_Field_near_Argenteuil",
+      "title": "The Poppy Field near Argenteuil - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.568,
+    "y": 0.49,
+    "otsikko": "Talo puiden takana",
+    "teksti": "Horisontilla puuriviltä pilkottaa vaalea talo. Monet on maalannut sen muutamalla pienellä siveltimenvedolla ilman yksityiskohtia.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/coquelicots-1010",
+      "title": "Musée d'Orsay: Coquelicots"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Poppy_Field_near_Argenteuil",
+      "title": "The Poppy Field near Argenteuil - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.109,
+    "y": 0.949,
+    "otsikko": "Signeeraus ja omistajat",
+    "teksti": "Nimi on vasemmassa alakulmassa. Taulun ovat ennen lahjoitusta omistaneet muun muassa maalari Ernest Duez ja laulaja Jean-Baptiste Faure.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/coquelicots-1010",
+      "title": "Musée d'Orsay: Coquelicots"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Poppy_Field_near_Argenteuil",
+      "title": "The Poppy Field near Argenteuil - Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1999": [
+   {
+    "x": 0.14,
+    "y": 0.3,
+    "otsikko": "Maalin kuorrute",
+    "teksti": "Taidehistorioitsija Paul Tuckerin mukaan sarjan kankaat ovat kirjaimellisesti maalin kuorruttamia: pinta on rakennettu kerros kerrokselta.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-cathedrale-de-rouen-le-portail-temps-gris-1288",
+      "title": "Musée d'Orsay: La Cathédrale de Rouen. Le Portail, temps gris"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)",
+      "title": "Rouen Cathedral (Monet series) - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.59,
+    "y": 0.32,
+    "otsikko": "Pyöreä ikkuna",
+    "teksti": "Keskellä pääoven kaarevan päätykolmion takana erottuu tumma sinertävä ruusuikkuna. Kivityön tarkat muodot ovat sulaneet maalilaikuiksi.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-cathedrale-de-rouen-le-portail-temps-gris-1288",
+      "title": "Musée d'Orsay: La Cathédrale de Rouen. Le Portail, temps gris"
+     }
+    ]
+   },
+   {
+    "x": 0.53,
+    "y": 0.85,
+    "otsikko": "Kreivi Camondon taulu",
+    "teksti": "Kreivi Isaac de Camondo osti taulun suoraan Monet'lta syyskuussa 1894 ja testamenttasi sen valtiolle vuonna 1911.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-cathedrale-de-rouen-le-portail-temps-gris-1288",
+      "title": "Musée d'Orsay: La Cathédrale de Rouen. Le Portail, temps gris"
+     },
+     {
+      "url": "https://pop.culture.gouv.fr/notice/joconde/000PE003925",
+      "title": "POP (Joconde): La cathédrale de Rouen ; le portail, temps gris ; harmonie grise"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/fr/oeuvres/1288",
+      "title": "Tarkistus: Orsay (hakutuloksen tiivistelmä): 1894-1911 Camondon kokoelmassa, acquis de l'artiste en s"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2775": [
+   {
+    "x": 0.5,
+    "y": 0.11,
+    "otsikko": "Aseman lasikatto",
+    "teksti": "Aseman lasikatto ja sen rautakehikko rajaavat kuvan yläosaan suuren kolmion. Lasipinnat on maalattu vaaleina ja tummina laikkuina.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-gare-saint-lazare-10897",
+      "title": "Musée d'Orsay: La Gare Saint-Lazare"
+     }
+    ]
+   },
+   {
+    "x": 0.479,
+    "y": 0.72,
+    "otsikko": "Veturi höyryn keskellä",
+    "teksti": "Veturi on tumma hahmo höyryn keskellä. Sarjassa osassa maalauksista junat kiitävät raiteella, osassa veturi odottaa lähtöä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-gare-saint-lazare-10897",
+      "title": "Musée d'Orsay: La Gare Saint-Lazare"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Gare_Saint-Lazare_(Monet_series)",
+      "title": "Gare Saint-Lazare (Monet series) - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.84,
+    "y": 0.55,
+    "otsikko": "Pariisin talot",
+    "teksti": "Taustalla Pariisin talot häämöttävät hallin aukosta höyryn takaa vaaleina ja okran sävyisinä pintoina.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-gare-saint-lazare-10897",
+      "title": "Musée d'Orsay: La Gare Saint-Lazare"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2773": [
+   {
+    "x": 0.344,
+    "y": 0.625,
+    "otsikko": "Camille mallina",
+    "teksti": "Wikipedian mukaan Camille Doncieux, Monetin elämänkumppani ja tuleva vaimo, poseerasi kuvan hahmoille.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/femmes-au-jardin-807",
+      "title": "Musée d'Orsay: Femmes au jardin"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Women_in_the_Garden",
+      "title": "Women in the Garden - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.08,
+    "y": 0.55,
+    "otsikko": "Muotilehtien puvut",
+    "teksti": "Wikipedian mukaan Monet käytti naisten muodikkaiden pukujen mallina aikakauslehtien kuvituksia.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/femmes-au-jardin-807",
+      "title": "Musée d'Orsay: Femmes au jardin"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Women_in_the_Garden",
+      "title": "Women in the Garden - Wikipedia"
+     },
+     {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/paintings/women-in-the-garden",
+      "title": "Tarkistus: maalaus luonnosteltu kokonaan ulkona; ristiriita 'viimeisteli sisällä' -väitteen kanssa"
+     }
+    ]
+   },
+   {
+    "x": 0.68,
+    "y": 0.55,
+    "otsikko": "Selin kääntynyt nainen",
+    "teksti": "Oikealla nainen kääntää selkänsä katsojaan ja ojentaa kätensä kohti puunrunkoa. Hänen valkoisessa mekossaan on tummia pilkkuja.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/femmes-au-jardin-807",
+      "title": "Musée d'Orsay: Femmes au jardin"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Women_in_the_Garden",
+      "title": "Women in the Garden - Wikipedia"
+     }
+    ]
+   }
+  ],
+  "marmottan-4014": [
+   {
+    "x": 0.14,
+    "y": 0.93,
+    "otsikko": "Signeeraus ja vuosiluku",
+    "teksti": "Marmottanin tietueen mukaan nimi on signeerattu vasempaan alakulmaan ja vuosiluku 72 lisättiin vasta myöhemmin.",
+    "lahteet": [
+     {
+      "url": "https://www.marmottan.fr/notice/4014",
+      "title": "Musée Marmottan Monet: Impression, soleil levant (inv. 4014)"
+     }
+    ]
+   },
+   {
+    "x": 0.458,
+    "y": 0.705,
+    "otsikko": "Etualan soutuveneet",
+    "teksti": "Marmottanin tietueen mukaan etualan soutuveneet lisättiin vasta kuvan viimeistelyvaiheessa. Koko kuva syntyi muutamassa tunnissa.",
+    "lahteet": [
+     {
+      "url": "https://www.marmottan.fr/notice/4014",
+      "title": "Musée Marmottan Monet: Impression, soleil levant (inv. 4014)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+      "title": "Impression, Sunrise - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.33,
+    "y": 0.3,
+    "otsikko": "Mastot ja savupiiput",
+    "teksti": "Vasemmalla taustalla erottuu purjelaivojen mastoja ja höyrylaivojen savupiippuja. Ne sulautuvat aamusumuun ilman selviä ääriviivoja.",
+    "lahteet": [
+     {
+      "url": "https://www.marmottan.fr/notice/4014",
+      "title": "Musée Marmottan Monet: Impression, soleil levant (inv. 4014)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+      "title": "Impression, Sunrise - Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-644": [
+   {
+    "x": 0.708,
+    "y": 0.235,
+    "otsikko": "Palvelijan malli Laure",
+    "teksti": "Palvelijan mallina oli Wikipedian mukaan Laure. Hän jäi pitkään vähälle huomiolle, mutta nykytutkijat käsittelevät hänen osuuttaan.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/olympia-712",
+      "title": "Musée d'Orsay: Olympia"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+      "title": "Olympia (Manet) - Wikipedia"
+     },
+     {
+      "url": "https://bonjourparis.com/history/spotlight-laure-manets-model-olympia-musee-dorsay/",
+      "title": "Bonjour Paris: Spotlight on Laure, Manet's Other Model in Olympia"
+     }
+    ]
+   },
+   {
+    "x": 0.297,
+    "y": 0.239,
+    "otsikko": "Kukka hiuksissa",
+    "teksti": "Hiuksiin kiinnitetty vaaleanpunainen kukka on Wikipedian mukaan orkidea. Se erottuu tummaa taustaa vasten.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/olympia-712",
+      "title": "Musée d'Orsay: Olympia"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+      "title": "Olympia (Manet) - Wikipedia"
+     },
+     {
+      "url": "https://news.artnet.com/art-world/manet-olympia-3-facts-met-museum-2370384",
+      "title": "Tarkistus: orkidea ja muut vaurauden merkit"
+     }
+    ]
+   },
+   {
+    "x": 0.8,
+    "y": 0.82,
+    "otsikko": "Itämainen huivi",
+    "teksti": "Vuoteen kukkakuvioinen huivi on Wikipedian mukaan itämainen. Sen kukkakuviot ja keltaiset hapsut erottuvat valkoisesta vuodevaatteesta.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/olympia-712",
+      "title": "Musée d'Orsay: Olympia"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Olympia_(Manet)",
+      "title": "Olympia (Manet) - Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1668": [
+   {
+    "x": 0.24,
+    "y": 0.865,
+    "otsikko": "Asetelma etualalla",
+    "teksti": "Etualan hedelmäkori, leipä ja vaatteet on aseteltu esille kuin asetelma. Kori on kaatunut, ja hedelmiä on vierinyt ruohikolle.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-dejeuner-sur-lherbe-904",
+      "title": "Musée d'Orsay: Le Déjeuner sur l'herbe"
+     },
+     {
+      "url": "https://pop.culture.gouv.fr/notice/joconde/000PE003916",
+      "title": "POP (Joconde): Le déjeuner sur l'herbe ; dit autrefois Le bain"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe",
+      "title": "Le Déjeuner sur l'herbe - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.776,
+    "y": 0.46,
+    "otsikko": "Tupsullinen lakki",
+    "teksti": "Oikeanpuoleisen miehen litteä, tupsullinen lakki on tyyppiä, jota yleensä käytettiin sisätiloissa. Mallina on arveltu olleen Manetin veljiä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-dejeuner-sur-lherbe-904",
+      "title": "Musée d'Orsay: Le Déjeuner sur l'herbe"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe",
+      "title": "Le Déjeuner sur l'herbe - Wikipedia"
+     },
+     {
+      "url": "https://www.theartnewspaper.com/2016/11/25/london-version-of-manets-le-dejeuner-sur-lherbe-predates-the-bigger-picture-in-paris",
+      "title": "The Art Newspaper: London version of Manet's Le déjeuner sur l'herbe predates the bigger picture in Paris"
+     }
+    ]
+   },
+   {
+    "x": 0.438,
+    "y": 0.436,
+    "otsikko": "Parrakas mies keskellä",
+    "teksti": "Mallina on arveltu olleen Manetin lanko, hollantilainen kuvanveistäjä Ferdinand Leenhoff.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-dejeuner-sur-lherbe-904",
+      "title": "Musée d'Orsay: Le Déjeuner sur l'herbe"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe",
+      "title": "Le Déjeuner sur l'herbe - Wikipedia"
+     },
+     {
+      "url": "https://histoire-image.org/etudes/dejeuner-herbe",
+      "title": "Histoire par l'image: Le Déjeuner sur l'herbe"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2739": [
+   {
+    "x": 0.3,
+    "y": 0.12,
+    "otsikko": "Pallolamput",
+    "teksti": "Yläreunan valkoiset pallolamput kuuluvat tanssipaikan puutarhan valaistukseen. Ne on maalattu vaaleilla, sinertävillä laikuilla.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/bal-du-moulin-de-la-galette-497",
+      "title": "Musée d'Orsay: Bal du moulin de la Galette"
+     }
+    ]
+   },
+   {
+    "x": 0.875,
+    "y": 0.45,
+    "otsikko": "Renoirin ystäviä pöydässä",
+    "teksti": "Wikipedian mukaan Estellen vieressä istuu Renoirin ystäväporukka: maalarit Franc-Lamy ja Goeneutte sekä Georges Rivière.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/bal-du-moulin-de-la-galette-497",
+      "title": "Musée d'Orsay: Bal du moulin de la Galette"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette",
+      "title": "Bal du moulin de la Galette - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.69,
+    "otsikko": "Pöydän lasit",
+    "teksti": "Pöydällä seisoo karahvi ja laseja, joissa kimmeltää sinertäviä heijastuksia.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/bal-du-moulin-de-la-galette-497",
+      "title": "Musée d'Orsay: Bal du moulin de la Galette"
+     },
+     {
+      "url": "https://www.larousse.fr/encyclopedie/oeuvre/Moulin_de_la_Galette/126778",
+      "title": "Tarkistus: lasit pöydällä"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2738": [
+   {
+    "x": 0.07,
+    "y": 0.6,
+    "otsikko": "Katselija lapsi",
+    "teksti": "Vasemmalla pieni tyttö katsoo ylös ja seuraa keinun luona käytävää keskustelua. Wikipedian mukaan hänen läsnäolonsa jää selittämättä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-balancoire-1096",
+      "title": "Musée d'Orsay: La Balançoire"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Swing_(Renoir)",
+      "title": "The Swing (Renoir) - Wikipedia"
+     },
+     {
+      "url": "https://www.visitparisregion.com/en/musee-de-montmartre-renoir-gardens",
+      "title": "Tarkistus: Renoir-puutarhat 12 rue Cortot, Montmartren museo, keinu maalattiin tässä puutarhassa"
+     }
+    ]
+   },
+   {
+    "x": 0.86,
+    "y": 0.17,
+    "otsikko": "Kävelijät taustalla",
+    "teksti": "Taustalla pieni ryhmä seisoo juttelemassa puutarhassa. Ihmiset on maalattu muutamalla sinisellä ja vaalealla laikulla.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-balancoire-1096",
+      "title": "Musée d'Orsay: La Balançoire"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Swing_(Renoir)",
+      "title": "The Swing (Renoir) - Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.62,
+    "y": 0.8,
+    "otsikko": "Montmartren puutarha",
+    "teksti": "Keinu roikkuu Montmartren puutarhassa, joka on nykyisin Montmartren museon Renoir-puutarha.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-balancoire-1096",
+      "title": "Musée d'Orsay: La Balançoire"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Swing_(Renoir)",
+      "title": "The Swing (Renoir) - Wikipedia"
+     },
+     {
+      "url": "https://www.visitparisregion.com/en/musee-de-montmartre-renoir-gardens",
+      "title": "Visit Paris Region: Musée de Montmartre - Renoir Gardens"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1984": [
+   {
+    "x": 0.25,
+    "y": 0.13,
+    "otsikko": "Kahvila Nouvelle-Athènes",
+    "teksti": "Orsayn mukaan kahvila on Pigalle-aukion Nouvelle-Athènes, taiteilijoiden kokoontumispaikka. Maalaus tehtiin silti ateljeessa.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/L'Absinthe",
+      "title": "L'Absinthe – Wikipedia"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Caf%C3%A9_de_la_Nouvelle_Ath%C3%A8nes",
+      "title": "Café de la Nouvelle Athènes – Wikipedia"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/dans-un-cafe-1147",
+      "title": "Tarkistus: kahvila Nouvelle Athènes; maalattu ateljeessa, ei kahvilassa"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Café_de_la_Nouvelle_Athènes",
+      "title": "Tarkistus: taiteilijoiden kokoontumispaikka; Degas maalasi L'Absinthen mallina Ellen Andrée"
+     }
+    ]
+   },
+   {
+    "x": 0.396,
+    "y": 0.445,
+    "otsikko": "Lasikarahvi",
+    "teksti": "Naisen edessä pöydällä on lasikarahvi tarjottimella. Absinttia laimennettiin vedellä, joka samensi vihreän juoman maitomaiseksi.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Absinthe",
+      "title": "Absinthe – Wikipedia"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/L'Absinthe",
+      "title": "L'Absinthe – Wikipedia"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/dans-un-cafe-1147",
+      "title": "Tarkistus: naisen edessä absinttilasi marmoripöydällä"
+     }
+    ]
+   },
+   {
+    "x": 0.297,
+    "y": 0.941,
+    "otsikko": "Degasin nimikirjoitus",
+    "teksti": "Degasin nimikirjoitus on vasemmassa alakulmassa etualan pöydän pinnassa. Etualan pöydät rajautuvat jyrkästi kuvan reunaan.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/L'Absinthe",
+      "title": "L'Absinthe – Wikipedia"
+     },
+     {
+      "url": "https://www.degas-catalogue.com/en/artworks/au-cafe-ou-l-absinthe-917",
+      "title": "Tarkistus: signé en bas à gauche : Degas; RF 1984"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1976": [
+   {
+    "x": 0.067,
+    "y": 0.93,
+    "otsikko": "Kastelukannu",
+    "teksti": "Kastelukannulla kostutettiin lattiaa. Orsayn mukaan kostea parketti esti tanssijoita liukastumasta.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-classe-de-danse-1151",
+      "title": "Orsay: La Classe de danse"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas,_Mus%C3%A9e_d%27Orsay)",
+      "title": "The Ballet Class (Orsay) – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.955,
+    "y": 0.29,
+    "otsikko": "Äidit takaseinällä",
+    "teksti": "Wikipedian mukaan tanssijoiden äidit seuraavat tuntia takaseinän luota, kauempana tanssijoista.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-classe-de-danse-1151",
+      "title": "Orsay: La Classe de danse"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas,_Mus%C3%A9e_d%27Orsay)",
+      "title": "The Ballet Class (Orsay) – Wikipedia"
+     },
+     {
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/works-of-art/1987.47.1",
+      "title": "Tarkistus: tanssijoita ja heidän äitejään samassa salissa"
+     }
+    ]
+   },
+   {
+    "x": 0.765,
+    "y": 0.46,
+    "otsikko": "Opettaja Jules Perrot",
+    "teksti": "Orsayn mukaan tiukka, keppiin nojaava opettaja on muotokuva Jules Perrot'sta, oikeasta baletinopettajasta.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-classe-de-danse-1151",
+      "title": "Orsay: La Classe de danse"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas,_Mus%C3%A9e_d%27Orsay)",
+      "title": "The Ballet Class (Orsay) – Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-12258": [
+   {
+    "x": 0.53,
+    "y": 0.32,
+    "otsikko": "Kulissien tanssijat",
+    "teksti": "Kulissien lähellä on muita tanssijoita, joiden valkoiset hameet on tehty muutamalla pastellivedolla.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/ballet-2084",
+      "title": "Orsay: Ballet (L'étoile)"
+     }
+    ]
+   },
+   {
+    "x": 0.757,
+    "y": 0.53,
+    "otsikko": "Hameen kukat",
+    "teksti": "Vyötärön ja hameen punaiset ja keltaiset kukat ovat pieniä, nopeasti lisättyjä pastellitäpliä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/ballet-2084",
+      "title": "Orsay: Ballet (L'étoile)"
+     }
+    ]
+   },
+   {
+    "x": 0.102,
+    "y": 0.032,
+    "otsikko": "Degasin nimikirjoitus",
+    "teksti": "Nimikirjoitus on vasemmassa yläkulmassa, oranssinruskeiden vetojen yläpuolella.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/ballet-2084",
+      "title": "Orsay: Ballet (L'étoile)"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2849": [
+   {
+    "x": 0.39,
+    "y": 0.44,
+    "otsikko": "Edma maalarina",
+    "teksti": "Edma oli itsekin maalari, mutta jätti maalaamisen pitkälti avioiduttuaan ja muutettuaan pois Pariisista.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-berceau-1132",
+      "title": "Orsay: Le Berceau"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Edma_Morisot",
+      "title": "Edma Morisot – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.715,
+    "y": 0.69,
+    "otsikko": "Kehdon vauva",
+    "teksti": "Kuvan vauva kasvoi aikuiseksi ja omisti maalauksen itse, ennen kuin Louvre osti sen.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-berceau-1132",
+      "title": "Orsay: Le Berceau"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Cradle_(Morisot)",
+      "title": "The Cradle (Morisot) – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.45,
+    "y": 0.85,
+    "otsikko": "Kehdon kangas",
+    "teksti": "Kehdon valkoinen kangas on maalattu löysin, juoksevin vedoin; kuvan väriskaala on hillitty.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-berceau-1132",
+      "title": "Orsay: Le Berceau"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Cradle_(Morisot)",
+      "title": "The Cradle (Morisot) – Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2735": [
+   {
+    "x": 0.4,
+    "y": 0.18,
+    "otsikko": "Rinteen pellot",
+    "teksti": "Rinteen pellot vaihtuvat ruskeasta vihreään; tausta on rakennettu lyhyistä, vierekkäisistä siveltimenvedoista.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/les-toits-rouges-coin-de-village-effet-dhiver-379",
+      "title": "Orsay: Les Toits rouges / Côte Saint-Denis à Pontoise"
+     }
+    ]
+   },
+   {
+    "x": 0.307,
+    "y": 0.72,
+    "otsikko": "Pieni hahmo",
+    "teksti": "Puiden takana on pieni, tumma hahmo, joka on maalattu vain muutamalla vedolla.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/les-toits-rouges-coin-de-village-effet-dhiver-379",
+      "title": "Orsay: Les Toits rouges / Côte Saint-Denis à Pontoise"
+     }
+    ]
+   },
+   {
+    "x": 0.85,
+    "y": 0.972,
+    "otsikko": "Pissarron nimikirjoitus",
+    "teksti": "Pissarron nimikirjoitus ja vuosiluku ovat oikeassa alakulmassa, lähellä kuvan reunaa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/les-toits-rouges-coin-de-village-effet-dhiver-379",
+      "title": "Orsay: Les Toits rouges / Côte Saint-Denis à Pontoise"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2021": [
+   {
+    "x": 0.286,
+    "y": 0.474,
+    "otsikko": "Seinän kirjoitus",
+    "teksti": "Seinän kirjoitus À St Nicolas näkyy talon yläkerrassa. Orsayn mukaan talo on viinikauppiaan.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-barque-pendant-linondation-port-marly-1107",
+      "title": "Orsay: La Barque pendant l'inondation, Port-Marly"
+     },
+     {
+      "url": "https://mydailyartdisplay.uk/2020/06/16/",
+      "title": "My Daily Art Display: Sisley, Boat in the Flood at Port Marly"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/fr/oeuvres/1107",
+      "title": "Tarkistus: viinikauppiaan talo (maison d'un marchand de vin)"
+     },
+     {
+      "url": "https://www.nga.gov/content/ngaweb/Collection/art-object-page.66436.html",
+      "title": "Tarkistus: saman talon À St Nicolas -kirjoitus vastaavassa maalauksessa"
+     }
+    ]
+   },
+   {
+    "x": 0.766,
+    "y": 0.787,
+    "otsikko": "Kaukainen vene",
+    "teksti": "Kauempana mies seisoo pitkässä veneessä vedestä kohoavien puiden keskellä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-barque-pendant-linondation-port-marly-1107",
+      "title": "Orsay: La Barque pendant l'inondation, Port-Marly"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.22,
+    "otsikko": "Taivas ja pilvet",
+    "teksti": "Sisley asetti talon vinoon ja jätti taivaalle ja vedelle runsaasti tilaa. Pilvet on maalattu nopein, valkoisin vedoin.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-barque-pendant-linondation-port-marly-1107",
+      "title": "Orsay: La Barque pendant l'inondation, Port-Marly"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/fr/oeuvres/1107",
+      "title": "Tarkistus: maison en biais, large place au ciel et à l'eau"
+     },
+     {
+      "url": "https://www.arthistoryproject.com/artists/alfred-sisley/boat-in-the-flood-at-port-marly/",
+      "title": "Tarkistus: vinoon asetettu talo, tilaa taivaalle ja vedelle"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1969": [
+   {
+    "x": 0.72,
+    "y": 0.3,
+    "otsikko": "Sarjan viimeinen",
+    "teksti": "Tämän version katsotaan yleensä päättävän sarjan. Tutkija Meyer Schapiro piti sitä sarjan monumentaalisimpana.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Card_Players",
+      "title": "The Card Players – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.5,
+    "otsikko": "Kortit",
+    "teksti": "Pelaajien kortit ovat vaaleita ja tummia: myös ne muodostavat Cézannen sommitelmassa vastakohtaparin.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Card_Players",
+      "title": "The Card Players – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.37,
+    "y": 0.78,
+    "otsikko": "Vinossa oleva pöytä",
+    "teksti": "Wikipedian mukaan pöytä on kuvattu vinossa kuvatasoon nähden. Etualalla liinan kulmat työntyvät pöydän reunojen yli.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Card_Players",
+      "title": "The Card Players – Wikipedia"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1972": [
+   {
+    "x": 0.48,
+    "y": 0.14,
+    "otsikko": "Appelsiinipyramidi",
+    "teksti": "Jalallisessa kulhossa appelsiinit on kasattu korkeaksi kekoon. Niiden lämmin oranssi hohtaa tummempaa taustaa vasten.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/pommes-et-oranges-1470",
+      "title": "Orsay: Pommes et oranges"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.51,
+    "otsikko": "Yksinäinen omena",
+    "teksti": "Punainen omena lepää liinan poimuilla jalallisen kulhon edessä, hieman muista omenista erillään.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/pommes-et-oranges-1470",
+      "title": "Orsay: Pommes et oranges"
+     }
+    ]
+   },
+   {
+    "x": 0.9,
+    "y": 0.12,
+    "otsikko": "Kuviollinen verho",
+    "teksti": "Oikealla taustalla riippuu kuviollinen verho, jonka vihreät ja vaaleanruskeat kuviot on maalattu pieninä laikkuina.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/pommes-et-oranges-1470",
+      "title": "Orsay: Pommes et oranges"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2449": [
+   {
+    "x": 0.078,
+    "y": 0.43,
+    "otsikko": "Portaiden miehet",
+    "teksti": "Portailla olevien miesten henkilöllisyydestä tutkijat ovat eri mieltä; ehdolla ovat mm. Renoir, Zola ja Sisley.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/latelier-de-bazille-60",
+      "title": "Orsay: L'Atelier de Bazille"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bazille%27s_Studio",
+      "title": "Bazille's Studio – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.447,
+    "y": 0.485,
+    "otsikko": "Teline ja kangas",
+    "teksti": "Telineellä oleva maalaus on tunnistettu Bazillen Kylänäkymäksi. Bazille seisoo sen vieressä paletti kädessä; Manet maalasi hänen hahmonsa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/latelier-de-bazille-60",
+      "title": "Orsay: L'Atelier de Bazille"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bazille%27s_Studio",
+      "title": "Bazille's Studio – Wikipedia"
+     }
+    ]
+   },
+   {
+    "x": 0.927,
+    "y": 0.822,
+    "otsikko": "Kamiina",
+    "teksti": "Rautakamiinan savuputki nousee kattoon, ja kamiinan luukusta hehkuu tulta.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/latelier-de-bazille-60",
+      "title": "Orsay: L'Atelier de Bazille"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2718": [
+   {
+    "x": 0.31,
+    "y": 0.12,
+    "otsikko": "Ikkunan rautaristikko",
+    "teksti": "Ikkunan koristeellinen rautaristikko tuo valon sisään. Huoneen on arveltu olevan Caillebotten ateljee osoitteessa 77 rue de Miromesnil.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/raboteurs-de-parquet-105",
+      "title": "Musée d'Orsay: Les Raboteurs de parquet"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Les_raboteurs_de_parquet",
+      "title": "Wikipedia: Les raboteurs de parquet"
+     }
+    ]
+   },
+   {
+    "x": 0.94,
+    "y": 0.625,
+    "otsikko": "Viinipullo ja lasi",
+    "teksti": "Oikeassa reunassa seisovat viinipullo ja lasi, jossa on tummaa viiniä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/raboteurs-de-parquet-105",
+      "title": "Musée d'Orsay: Les Raboteurs de parquet"
+     },
+     {
+      "url": "https://mydailyartdisplay.uk/2011/08/03/the-floor-scrapers-by-gustave-caillebotte/",
+      "title": "My Daily Art Display: The Floor-scrapers"
+     }
+    ]
+   },
+   {
+    "x": 0.18,
+    "y": 0.576,
+    "otsikko": "Työkalut ja otteet",
+    "teksti": "Orsayn mukaan Caillebotte kuvasi työn eleet, työkalut ja varusteet dokumentaarisen tarkasti. Teos on yksi varhaisia kuvia kaupunkien työväestöstä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/raboteurs-de-parquet-105",
+      "title": "Musée d'Orsay: Les Raboteurs de parquet"
+     },
+     {
+      "url": "https://www.timeout.fr/paris/musee/orsay/gustave-caillebotte/les-raboteurs-de-parquet",
+      "title": "Time Out Paris: Les raboteurs de parquet"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1937-20": [
+   {
+    "x": 0.575,
+    "y": 0.265,
+    "otsikko": "Nainen ulkona",
+    "teksti": "Orsayn mukaan Cassatt kuvasi tavallisesti läheisiään arjen hetkissä; tässä hahmo on poikkeuksellisesti ulkona. Hän oli Degasin ystävä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/jeune-fille-au-jardin-1296",
+      "title": "Musée d'Orsay: Jeune fille au jardin"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/7AH2Wu9DKlIKPQ",
+      "title": "Google Arts & Culture: Girl in the Garden"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/fr/oeuvres/1296",
+      "title": "Tarkistus: figure en plein air = originalité; grande amie de Degas; portraits de proches"
+     }
+    ]
+   },
+   {
+    "x": 0.132,
+    "y": 0.79,
+    "otsikko": "Punaiset kukat",
+    "teksti": "Etualan punaiset kukat ja lehvistö on maalattu löyhin vedoin, jotka sulautuvat hahmoon. Pehmeä valo sitoo koko kuvan yhteen.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/jeune-fille-au-jardin-1296",
+      "title": "Musée d'Orsay: Jeune fille au jardin"
+     },
+     {
+      "url": "https://www.artchive.com/artwork/young-woman-sewing-in-the-garden-mary-cassatt-c-1880-1882/",
+      "title": "Artchive: Young Woman Sewing in the Garden"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2511": [
+   {
+    "x": 0.014,
+    "y": 0.45,
+    "otsikko": "Maalattu sininen reunus",
+    "teksti": "Seurat maalasi tummansinisen reunuksen suoraan kankaaseen. Se jatkuu samansävyiseen litteään kehykseen, joka kuuluu teokseen.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-cirque-542",
+      "title": "Musée d'Orsay: Le Cirque"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Circus_(Seurat)",
+      "title": "Wikipedia: The Circus (Seurat)"
+     }
+    ]
+   },
+   {
+    "x": 0.18,
+    "y": 0.055,
+    "otsikko": "Yleisö penkkiriveissä",
+    "teksti": "Yleisö istuu riveissä. Wikipedian mukaan hienostuneet katsojat ovat lähellä areenaa ja vähävaraisemmat takagalleriassa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-cirque-542",
+      "title": "Musée d'Orsay: Le Cirque"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Circus_(Seurat)",
+      "title": "Wikipedia: The Circus (Seurat)"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/Le_Cirque_(Seurat)",
+      "title": "Tarkistus: katsojien kerrokset yhteiskunnallisen eriarvoisuuden kuvana"
+     }
+    ]
+   },
+   {
+    "x": 0.715,
+    "y": 0.47,
+    "otsikko": "Kuperkeikkaava klovni",
+    "teksti": "Kuperkeikkaa heittävä klovni lentää areenan laidan yli. Kaaret ja spiraalit luovat liikkeen tunnun; paikka on Fernandon sirkus Pariisissa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/le-cirque-542",
+      "title": "Musée d'Orsay: Le Cirque"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Circus_(Seurat)",
+      "title": "Wikipedia: The Circus (Seurat)"
+     },
+     {
+      "url": "https://ibiblio.org/wm/paint/auth/seurat/circus/",
+      "title": "Tarkistus: ympyröitä, spiraaleja, ellipsejä"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-2027": [
+   {
+    "x": 0.275,
+    "y": 0.18,
+    "otsikko": "Keltainen nauha",
+    "teksti": "Keltainen nauha pitää klovnin valkoisen peruukin paikoillaan. Sama sävy toistuu hameessa, ja se yhdistää kuvan.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/clownesse-cha-u-kao-724",
+      "title": "Musée d'Orsay: Clownesse Cha-U-Kao"
+     },
+     {
+      "url": "https://virtualtour.courtauld.ac.uk/gal-hotspot/the-clowness-cha-u-kao/",
+      "title": "Courtauld: The Clowness Cha-U-Kao"
+     }
+    ]
+   },
+   {
+    "x": 0.04,
+    "y": 0.07,
+    "otsikko": "Mies peilissä",
+    "teksti": "Orsayn mukaan pienen pöydän yläpuolella on muotokuva tai peili, jossa näkyy iäkäs mies: ystävä, ihailija tai asiakas.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/clownesse-cha-u-kao-724",
+      "title": "Musée d'Orsay: Clownesse Cha-U-Kao"
+     },
+     {
+      "url": "https://virtualtour.courtauld.ac.uk/gal-hotspot/the-clowness-cha-u-kao/",
+      "title": "Courtauld: The Clowness Cha-U-Kao"
+     },
+     {
+      "url": "https://artsandculture.google.com/asset/the-clown-cha-u-kao/tAEZCE0HugJzAQ?hl=en",
+      "title": "Tarkistus: Orsayn kuvaus: keltainen nauha kiinnittää klovnin valkoisen peruukin (toupee); muotokuva t"
+     }
+    ]
+   },
+   {
+    "x": 0.89,
+    "y": 0.95,
+    "otsikko": "Signeeraus",
+    "teksti": "Orsayn mukaan Maurice Joyant hankki työn todennäköisesti suoraan taiteilijalta vuonna 1895. Signeeraus ja vuosiluku ovat alareunassa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/clownesse-cha-u-kao-724",
+      "title": "Musée d'Orsay: Clownesse Cha-U-Kao"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1975-19": [
+   {
+    "x": 0.58,
+    "y": 0.17,
+    "otsikko": "Otava taivaalla",
+    "teksti": "Taivaalla on Otava, jonka Van Gogh mainitsi kirjeessään. Wikipedian mukaan se ei näkyisi Arlesiin päin katsoessa, joten hän yhdisti kaksi näkymää.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-78696",
+      "title": "Musée d'Orsay: La Nuit étoilée"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne",
+      "title": "Wikipedia: Starry Night Over the Rhône"
+     },
+     {
+      "url": "https://eclecticlight.co/2015/02/27/favourite-paintings-9-vincent-van-gogh-starry-night-over-the-rhone-1888/",
+      "title": "Tarkistus: kirjeet ja Iso Karhu"
+     }
+    ]
+   },
+   {
+    "x": 0.13,
+    "y": 0.37,
+    "otsikko": "Arlesin siluetti",
+    "teksti": "Taustalla häämöttää Arles. Kirjeessään Van Gogh kirjoitti kaupungin olevan sinistä ja violettia.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-78696",
+      "title": "Musée d'Orsay: La Nuit étoilée"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne",
+      "title": "Wikipedia: Starry Night Over the Rhône"
+     }
+    ]
+   },
+   {
+    "x": 0.52,
+    "y": 0.62,
+    "otsikko": "Rantaan sidotut veneet",
+    "teksti": "Rannassa lepäävät veneet kuuluvat näkymään, jonka Van Gogh maalasi vain minuutin tai parin kävelymatkan päässä Keltaisesta talostaan.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-78696",
+      "title": "Musée d'Orsay: La Nuit étoilée"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Starry_Night_Over_the_Rh%C3%B4ne",
+      "title": "Wikipedia: Starry Night Over the Rhône"
+     }
+    ]
+   }
+  ],
+  "orsay-rf-1951-42": [
+   {
+    "x": 0.61,
+    "y": 0.19,
+    "otsikko": "Kirkon kellotorni",
+    "teksti": "Kellotorni kohoaa syvänsinistä taivasta vasten. Van Gogh kuvasi kirjeessään kirkon näyttävän siinä violetinsävyiseltä.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/leglise-dauvers-sur-oise-vue-du-chevet-755",
+      "title": "Musée d'Orsay: L'église d'Auvers-sur-Oise, vue du chevet"
+     },
+     {
+      "url": "https://fr.wikipedia.org/wiki/%C3%89glise_Notre-Dame-de-l%27Assomption_d%27Auvers-sur-Oise",
+      "title": "Wikipedia: Église Notre-Dame-de-l'Assomption d'Auvers-sur-Oise"
+     },
+     {
+      "url": "https://www.musee-orsay.fr/fr/oeuvres/755",
+      "title": "Tarkistus: Orsayn notice (hakutuloksen tiivistelmä): ainoa Van Goghin kirkkomaalaus; monumentti, joka"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/The_Church_at_Auvers",
+      "title": "Tarkistus: kesäkuu 1890; kirje: kirkko violetinsävyinen syvänsinistä taivasta vasten"
+     },
+     {
+      "url": "https://webexhibits.org/vangogh/letter/21/W22.htm",
+      "title": "Tarkistus: Van Goghin kirje Willemienille kesäkuussa 1890"
+     }
+    ]
+   },
+   {
+    "x": 0.19,
+    "y": 0.8,
+    "otsikko": "Polulla kulkeva hahmo",
+    "teksti": "Hahmo polulla on vain hahmoteltu. Orsayn mukaan Van Gogh teki Auversin kirkosta vain tämän yhden maalauksen.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/leglise-dauvers-sur-oise-vue-du-chevet-755",
+      "title": "Musée d'Orsay: L'église d'Auvers-sur-Oise, vue du chevet"
+     }
+    ]
+   },
+   {
+    "x": 0.77,
+    "y": 0.84,
+    "otsikko": "Kaksi polkua",
+    "teksti": "Orsayn mukaan kirkosta tulee monumentti, joka näyttää murtuvan maan ja sitä ympäröivien kahden polun paineessa.",
+    "lahteet": [
+     {
+      "url": "https://www.musee-orsay.fr/en/artworks/leglise-dauvers-sur-oise-vue-du-chevet-755",
+      "title": "Musée d'Orsay: L'église d'Auvers-sur-Oise, vue du chevet"
+     }
+    ]
+   }
+  ]
+ }
+}

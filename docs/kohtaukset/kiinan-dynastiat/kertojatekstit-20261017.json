@@ -1,0 +1,1393 @@
+{
+ "versio": 1,
+ "laatija": "Sisältökirjuri 17.10.2026 (omistajan päätös 01.25)",
+ "huomio": "Kiinan dynastiat -linssin tekstit: 19 avainvuoden kertojariviä, 5 taistelukorttia, 4 keksintöä + Zheng He ja Marco Polo. Kertoja William (ehdotus); ääni vasta luvalla. Numerot kirjoitetaan sanoiksi äänityksessä. Riippumaton tarkistus tehty (rivit: 12 OK, 5 KORJAA korjattu, 2 EPAVARMA pehmennetty; taistelut ja keksinnöt: Sonnet-tutkijat, kaksi lähdettä per väite, Britannica/UNESCO 403 ei kierretty).",
+ "rivit": [
+  {
+   "nro": 1,
+   "vuosi": -221,
+   "dynastia": "Qin",
+   "paakaupunki": "Xianyang",
+   "teksti": "Vuonna 221 ennen ajanlaskun alkua Qin yhdistää taistelevat valtiot, ja ensimmäinen keisari yhtenäistää kirjoituksen, mitat ja rahat. Pääkaupunki on Xianyang.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Qin täydensi valloituksen 221 eaa; Xianyang julistettiin pääkaupungiksi; mitat, rahat ja kirjoitus yhtenäistettiin",
+     "url": "https://en.wikipedia.org/wiki/Qin_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "221 eaa Ying Zheng ottaa Shi Huangdin arvon; Xianyang Qinin pääkaupunki; yhtenäinen rahajärjestelmä",
+     "url": "https://www.worldhistory.org/Qin_Dynasty/",
+     "huom": "Sivu ei mainitse mittoja eikä kirjoitusta"
+    },
+    {
+     "vaite": "Mitat, akselinleveydet ja kirjoitus yhtenäistettiin 221 eaa (mitta-astian säädös vuodelta 221 eaa)",
+     "url": "https://asianart.com/exhibitions/shandong/9.html",
+     "huom": "Asian Art Museum; ei mainitse rahaa. Wikipedian kieliversio ei ole riippumaton toisesta Wikipedia-lähteestä; Wikipedia + WHE + AAM kolme eri julkaisijaa"
+    }
+   ]
+  },
+  {
+   "nro": 2,
+   "vuosi": -200,
+   "dynastia": "Han",
+   "paakaupunki": "Chang'an",
+   "teksti": "Vuonna 200 ennen ajanlaskun alkua Hanin ensimmäinen keisari piiritetään Baidengissa, ja Han maksaa pitkään lahjoja pohjoisen ratsastajille. Pääkaupunki on Chang'an.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Baidengin taistelu 200 eaa, Han-esikunta saarrettu Pingchengin lähellä; heqin-politiikan alku",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Baideng",
+     "huom": ""
+    },
+    {
+     "vaite": "Baideng 200 eaa; heqin-sopimus 198 eaa; Han lähetti silkkiä, ruokaa ja viiniä veroina; Wudi hylkäsi sopimuksen Mayin yrityksen (133 eaa) jälkeen",
+     "url": "https://en.wikipedia.org/wiki/Han_dynasty",
+     "huom": "Sama julkaisija kuin edellinen"
+    },
+    {
+     "vaite": "Gaozu perusti pääkaupungin ensin Luoyangiin, siirsi sen sitten Chang'aniin",
+     "url": "https://www.worldhistory.org/Han_Dynasty/",
+     "huom": "Itsenäinen julkaisija; Baidengia ei käsitellä"
+    },
+    {
+     "vaite": "Heqin-kesto ja tarkat yksityiskohdat",
+     "url": "https://muzi.com/H/EN/HE36.html",
+     "huom": "hakutulos, ei avattu; toissijainen"
+    }
+   ]
+  },
+  {
+   "nro": 3,
+   "vuosi": -100,
+   "dynastia": "Han",
+   "paakaupunki": "Chang'an",
+   "teksti": "Vuonna 100 ennen ajanlaskun alkua keisari Wudi työntää Hanin rajan länteen, ja Hexi-käytävästä tulee Silkkitien portti. Pääkaupunki on yhä Chang'an.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Hexi-käytävä vallattiin 121 eaa; neljä komennuskuntaa 111 eaa",
+     "url": "https://en.wikipedia.org/wiki/Han_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Dunhuangin komennuskunta perustettiin 111 eaa; Hexi Han-vallan alla taisteluiden 121 ja 119 eaa jälkeen; Dunhuang 'portti' sisä-Kiinaan",
+     "url": "https://depts.washington.edu/silkroad/exhibit/religion/buddhism/dunhuang/essay.html",
+     "huom": "University of Washington; itsenäinen"
+    },
+    {
+     "vaite": "Wudi laajensi muuria länteen 117-100 eaa; Silkkitien avaus",
+     "url": "https://www.worldhistory.org/Han_Dynasty/",
+     "huom": ""
+    }
+   ]
+  },
+  {
+   "nro": 4,
+   "vuosi": 140,
+   "dynastia": "Itäinen Han",
+   "paakaupunki": "Luoyang",
+   "teksti": "Vuonna 140 Han on yhä yksi maailman suurimmista valtioista, mutta sen pääkaupunki on siirtynyt itään Luoyangiin.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Guangwu teki Luoyangista pääkaupungin 25 jaa; pysyi sitä Hanin loppuun; Han-alueen laajuus noin 6,5 milj. km2 vuonna 100",
+     "url": "https://en.wikipedia.org/wiki/Han_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Guangwu siirsi pääkaupungin takaisin Luoyangiin Xin-dynastian jälkeen",
+     "url": "https://www.worldhistory.org/Han_Dynasty/",
+     "huom": ""
+    },
+    {
+     "vaite": "Väestö 140-luvun alussa 49 140 220 henkeä (de Crespigny); Seshat 48-50 milj. vuonna 140",
+     "url": "https://seshat-db.com/core/polity/253",
+     "huom": "hakutulos (Seshat); de Crespigny: https://chinesereferenceshelf.brillonline.com/dictionary-han/prelims/sim-208573"
+    }
+   ]
+  },
+  {
+   "nro": 5,
+   "vuosi": 250,
+   "dynastia": "Wei, Shu ja Wu",
+   "paakaupunki": "Luoyang, Chengdu ja Jianye",
+   "teksti": "Vuonna 250 Han on hajonnut kolmeksi kilpailevaksi kuningaskunnaksi: Wein pääkaupunki on Luoyang, Shun Chengdu ja Wun Jianye.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Wun pääkaupunki 250: Jianye (infobox 229-265 ja 266-280)",
+     "url": "https://en.wikipedia.org/wiki/Eastern_Wu",
+     "huom": ""
+    },
+    {
+     "vaite": "Wun pääkaupunki siirrettiin Wuchangista Jianyeen 229 (Nanjingin kaupungin hallinnon sivu)",
+     "url": "https://english.nanjing.gov.cn/ThisisNanjing/WelcometoNanjing/History/202405/t20240510_4663022.html",
+     "huom": "Hallituksen sivu, itsenäinen"
+    },
+    {
+     "vaite": "Cao Wein pääkaupunki Luoyang 226-266",
+     "url": "https://en.wikipedia.org/wiki/Cao_Wei",
+     "huom": ""
+    },
+    {
+     "vaite": "Shu Hanin pääkaupunki Chengdu",
+     "url": "https://en.wikipedia.org/wiki/Shu_Han",
+     "huom": "hakutulos; itsenäinen vahvistus: https://en.wuhouci.net.cn/about (hakutulos, ei avattu)"
+    }
+   ]
+  },
+  {
+   "nro": 6,
+   "vuosi": 440,
+   "dynastia": "Liu Song ja Pohjois-Wei",
+   "paakaupunki": "Jiankang ja Pingcheng",
+   "teksti": "Vuonna 440 aroilta tullut Xianbei-kansa on yhdistänyt Pohjois-Kiinan Pohjois-Wein alle, ja maa on jakautunut etelään ja pohjoiseen. Etelän pääkaupunki on Jiankang, pohjoisen Pingcheng.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Taiwu yhdisti Pohjois-Kiinan 439; Pingchengistä Luoyangiin 493-494; Tuoba-klaani, xianbei",
+     "url": "https://en.wikipedia.org/wiki/Northern_Wei",
+     "huom": ""
+    },
+    {
+     "vaite": "Liu Songin pääkaupunki Jiankang; 439 Pohjois-Wei yhdisti pohjoisen; raja Keltaisella joella",
+     "url": "https://en.wikipedia.org/wiki/Liu_Song_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Jianye nimettiin Jiankangiksi 313; Jiankang oli Liu Songin ja Etelän Qin pääkaupunki",
+     "url": "https://english.nanjing.gov.cn/ThisisNanjing/WelcometoNanjing/History/202405/t20240510_4663022.html",
+     "huom": "Nanjingin hallinnon sivu; sivun lista sisältää epäilyttävän 'Southern Song' -merkinnän, ei vaikuta tähän"
+    },
+    {
+     "vaite": "Pohjois-Wei perusti pääkaupungin Pingchengiin (nyk. Datong)",
+     "url": "https://www.cernuschi.paris.fr/en/collections/chinese-collections/six-dynasties",
+     "huom": "Cernuschi-museo; ei vuotta 398"
+    }
+   ]
+  },
+  {
+   "nro": 7,
+   "vuosi": 500,
+   "dynastia": "Etelän Qi ja Pohjois-Wei",
+   "paakaupunki": "Jiankang ja Luoyang",
+   "teksti": "Vuonna 500 Pohjois-Wei on siirtänyt pääkaupunkinsa Luoyangiin, ja edellinen hallitsija Xiaowen on käskenyt hovin pukeutumaan ja puhumaan kiinalaisittain. Etelässä hallitsee Qi Jiankangista.",
+   "tarkistus": "KORJAA",
+   "lahteet": [
+    {
+     "vaite": "Xiaowen kuoli 26.4.499; siirto päätetty 493, tehty 494; pukeutumis- ja kielikielto 495; sukunimi 496; seuraaja Xuanwu",
+     "url": "https://en.wikipedia.org/wiki/Emperor_Xiaowen_of_Northern_Wei",
+     "huom": ""
+    },
+    {
+     "vaite": "Pingchengistä Luoyangiin 493-494",
+     "url": "https://en.wikipedia.org/wiki/Northern_Wei",
+     "huom": ""
+    },
+    {
+     "vaite": "Xianbei-kielen kielto koski vain hovia ja alle 30-vuotiaita virkamiehiä; Xiaowen kuolema/seuraaja",
+     "url": "https://www.accesson.kr/jnah/assets/pdf/55621/journal-21-1-119.pdf",
+     "huom": "hakutulos, PDF ei avattu; Journal of Northeast Asian History 2024"
+    },
+    {
+     "vaite": "Pääkaupunki Pingchengistä Luoyangiin 494",
+     "url": "https://www.cernuschi.paris.fr/en/collections/chinese-collections/six-dynasties",
+     "huom": "Cernuschi-museo"
+    },
+    {
+     "vaite": "Jiankang Etelän Qin (479-502) pääkaupunki",
+     "url": "https://en.wikipedia.org/wiki/Jiankang",
+     "huom": ""
+    }
+   ]
+  },
+  {
+   "nro": 8,
+   "vuosi": 589,
+   "dynastia": "Sui",
+   "paakaupunki": "Daxing",
+   "teksti": "Vuonna 589 Sui yhdistää etelän ja pohjoisen pitkän jakautumisen jälkeen, ja pian alkaa Suuren kanavan rakennus, jonka pääosa valmistuu keisari Yangin aikana. Pääkaupunki on Daxing.",
+   "tarkistus": "KORJAA",
+   "lahteet": [
+    {
+     "vaite": "Wen aloitti kanavan, Yang laajensi; Bian-kanava valmis 605; kanava valmis 604-609",
+     "url": "https://en.wikipedia.org/wiki/Grand_Canal_(China)",
+     "huom": "Ei anna vuotta Wenin osuudelle"
+    },
+    {
+     "vaite": "Daxing perustettu 582; nimi Chang'an 618",
+     "url": "https://en.wikipedia.org/wiki/Chang%27an",
+     "huom": ""
+    },
+    {
+     "vaite": "Sui valtasi Jiankangin 589; Daxing pääkaupunki 581-605; kanavan kaivu 605-609",
+     "url": "https://en.wikipedia.org/wiki/Sui_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Kanavatyö alkoi Wenin aikana ja valmistui Yangin aikana; 605-610 suuret osat",
+     "url": "https://bau.com.hk/column/col10609323.html",
+     "huom": "hakutulos; heikko lähde, ei avattu. UNESCO/Britannica 403, ei kierretty"
+    }
+   ]
+  },
+  {
+   "nro": 9,
+   "vuosi": 669,
+   "dynastia": "Tang",
+   "paakaupunki": "Chang'an",
+   "teksti": "Vuonna 669 Tang on lähes laajimmillaan: se on juuri kukistanut Goguryeon, ja pääkaupunki Chang'an on yksi maailman suurimmista kaupungeista. Länsinaapuri Tiibetin valtakunta on jo vahva.",
+   "tarkistus": "EPAVARMA",
+   "lahteet": [
+    {
+     "vaite": "Tangin laajuuden huippu 661 (karttateksti)",
+     "url": "https://en.wikipedia.org/wiki/Tang_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Gaozongin aikana Tang 'yksi laajimmista laajuuksistaan' (kartta c. 669)",
+     "url": "https://www.worldhistory.org/image/18873/map-of-the-tang-dynasty-of-china-c-669-ce/",
+     "huom": "Karttakuvaus ei mainitse 669 huipuksi"
+    },
+    {
+     "vaite": "Tiibet voitti Tangin 670 Dafei-joella; Tarim-allas menetettiin; Tuyuhun voitettu 663",
+     "url": "https://en.wikipedia.org/wiki/Tibetan_Empire",
+     "huom": ""
+    },
+    {
+     "vaite": "Chang'an oli maailman suurimpia kaupunkeja; 800 000-1 milj. asukasta",
+     "url": "https://en.wikipedia.org/wiki/Chang%27an",
+     "huom": ""
+    },
+    {
+     "vaite": "Xiong: Chang'an yli miljoona asukasta 700-800-luvuilla, maailman suurin kaupunki",
+     "url": "https://openresearch-repository.anu.edu.au/items/5f37976b-3855-461d-a83f-f6908a991c67",
+     "huom": "hakutulos, ANU-väitöskirja; ei avattu"
+    }
+   ]
+  },
+  {
+   "nro": 10,
+   "vuosi": 790,
+   "dynastia": "Tang",
+   "paakaupunki": "Chang'an",
+   "teksti": "Vuonna 790 Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Hexi-käytävä Tiibetin hallussa An Lushanin jälkeen; Dunhuang n. 770-780-luvulla/786; Zhang Yichao 848",
+     "url": "https://en.wikipedia.org/wiki/Guiyi_Prefecture",
+     "huom": ""
+    },
+    {
+     "vaite": "Dunhuang Tiibetin hallinnassa 'monta vuosikymmentä' Tangin loppuvaiheessa",
+     "url": "https://depts.washington.edu/silkroad/exhibit/religion/buddhism/dunhuang/essay.html",
+     "huom": "University of Washington; ei vuosilukuja"
+    },
+    {
+     "vaite": "Tiibet valloitti Beiting 790",
+     "url": "https://en.wikipedia.org/wiki/Beiting_Protectorate",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "nro": 11,
+   "vuosi": 950,
+   "dynastia": "Viisi dynastiaa ja kymmenen kuningaskuntaa",
+   "paakaupunki": "Kaifeng",
+   "teksti": "Vuonna 950 Kiina on pirstoutunut taas: pohjoisessa Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao on saanut Youzhoun seudun eli nykyisen Pekingin ympäristön vuonna 938.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Myöhempi Han 947-951, pääkaupunki Bian (Kaifeng); Sixteen Prefectures Liaolla",
+     "url": "https://en.wikipedia.org/wiki/Later_Han_(Five_Dynasties)",
+     "huom": ""
+    },
+    {
+     "vaite": "Shi Jingtang luovutti Sixteen Prefectures Liaolle 938; Youzhou (nyk. Peking) Liaon eteläinen pääkaupunki",
+     "url": "https://en.wikipedia.org/wiki/Sixteen_Prefectures",
+     "huom": "Sama julkaisija; Five Dynasties -sivu antaa 936"
+    },
+    {
+     "vaite": "Liao teki Youzhousta toissijaisen pääkaupunkinsa; Liao perustettu 938",
+     "url": "https://english.visitbeijing.com.cn/article/47OMh3w5nd7",
+     "huom": "Pekingin matkailuhallinnon sivu; ei erillistä luovutusvuotta"
+    }
+   ]
+  },
+  {
+   "nro": 12,
+   "vuosi": 1100,
+   "dynastia": "Pohjoinen Song",
+   "paakaupunki": "Kaifeng",
+   "teksti": "Vuonna 1100 Pohjoisen Songin Kiinassa painetaan kirjoja ja käytetään paperirahaa. Pääkaupunki on Kaifeng, mutta pohjoisen ja luoteisen rajan takana hallitsevat Liao ja Länsi-Xia.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Pohjoinen Song 960-1127, Kaifeng; Liao, Länsi-Xia, Jin; jiaozi ja liikkuva kirjasin 1000-luvulla",
+     "url": "https://en.wikipedia.org/wiki/Song_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Bi Sheng keksi liikkuvan kirjasimen 1041-1048; puupainanta huipussaan",
+     "url": "https://education.asianart.org/resources/the-invention-of-woodblock-printing-in-the-tang-and-song-dynasties",
+     "huom": "Asian Art Museum; ei mainitse paperirahaa"
+    },
+    {
+     "vaite": "Valtio otti jiaozin haltuun 1023-1024 Chengdussa",
+     "url": "https://en.wikipedia.org/wiki/Jiaozi_(currency)",
+     "huom": "hakutulos; tukena deepchina.substack/muut hakutulokset, heikompia"
+    }
+   ]
+  },
+  {
+   "nro": 13,
+   "vuosi": 1142,
+   "dynastia": "Eteläinen Song",
+   "paakaupunki": "Lin'an",
+   "teksti": "Vuonna 1142 jurchenien Jin on vallannut Kaifengin jo vuonna 1127, ja Song jatkaa etelässä Lin'anista eli Hangzhousta käsin.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Jingkang 1127; Etelä-Song 1127-1279, pääkaupunki Lin'an (Hangzhou) 1138-1276",
+     "url": "https://en.wikipedia.org/wiki/Song_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Shaoxingin rauha 1141, ratifioitu 11.10.1142; Song luopui Kaifengista",
+     "url": "https://en.wikipedia.org/wiki/Treaty_of_Shaoxing",
+     "huom": "Sama julkaisija"
+    },
+    {
+     "vaite": "Lin'an de facto -pääkaupunki 1138 (Sinica IHP); Lin'an tarkoittaa 'väliaikainen rauha'",
+     "url": "https://www1.ihp.sinica.edu.tw/en/Publications/Bulletin/1038/Article/1989",
+     "huom": "hakutulos, abstrakti"
+    },
+    {
+     "vaite": "Jin valloitti Bianjingin 20.3.1127; Gaozong perusti Etelä-Songin",
+     "url": "https://en.wikipedia.org/wiki/Emperor_Qinzong",
+     "huom": "hakutulos; Wikipedia"
+    }
+   ]
+  },
+  {
+   "nro": 14,
+   "vuosi": 1280,
+   "dynastia": "Yuan",
+   "paakaupunki": "Dadu",
+   "teksti": "Vuonna 1280 Kublai-kaani hallitsee Yuan-dynastian keisarina koko Kiinaa, kun Song on kukistettu vuonna 1279. Pääkaupunki on Dadu, nykyisen Pekingin paikalla.",
+   "tarkistus": "KORJAA",
+   "lahteet": [
+    {
+     "vaite": "Dadun rakennus alkoi n. 1266-67, pääkaupunki 1273; Yuan perustettu 1271; Yamen 19.3.1279 'valloitus valmis'; Kublai ensimmäinen ei-kiinalainen koko maan hallitsija",
+     "url": "https://www.worldhistory.org/Kublai_Khan/",
+     "huom": ""
+    },
+    {
+     "vaite": "Khubilai perusti talvipääkaupungin Dadun 1260; Song kukistui 1279; Khubilai julistautui yhtenäisen Kiinan keisariksi",
+     "url": "https://countrystudies.us/mongolia/18.htm",
+     "huom": "Library of Congress Country Studies; antaa Yuanille 1279 (vs. 1271)"
+    },
+    {
+     "vaite": "Yuan perustettu 1271, Song kukistettu 1279 (Yamen)",
+     "url": "https://en.wikipedia.org/wiki/Song_dynasty",
+     "huom": "Sama julkaisija kuin muut Wikipedia-lähteet; älä laske itsenäiseksi"
+    }
+   ]
+  },
+  {
+   "nro": 15,
+   "vuosi": 1421,
+   "dynastia": "Ming",
+   "paakaupunki": "Peking",
+   "teksti": "Vuonna 1421 keisari Yongle siirtää Mingin pääkaupungin Nankingista Pekingiin lähemmäs pohjoista rajaa, ja Kielletty kaupunki on valmistunut vuonna 1420.",
+   "tarkistus": "KORJAA",
+   "lahteet": [
+    {
+     "vaite": "Yongle: viisi Mongolia-retkeä 1410-1424, 'saavuttivat vähän'; Peking pääkaupungiksi 28.10.1420, ministeriöt 1421; palo 1421",
+     "url": "https://en.wikipedia.org/wiki/Yongle_Emperor",
+     "huom": ""
+    },
+    {
+     "vaite": "Siirto 1421 Nankingista Pekingiin; mongolien uhka; 'campaigns achieved little because Mongols retreated'",
+     "url": "https://www.worldhistory.org/Yongle_Emperor/",
+     "huom": ""
+    },
+    {
+     "vaite": "Kielletty kaupunki rakennettu 1406-1420",
+     "url": "https://en.wikipedia.org/wiki/Forbidden_City",
+     "huom": "Sama julkaisija kuin ensimmäinen; Palace Museum -sivu antoi 502 ja Britannica/UNESCO 403, ei kierretty; 1420 myös WHE:n Yongle-sivulla (rakennus 1407-1421 ~14 v)"
+    },
+    {
+     "vaite": "Peking päämajaksi 28.10.1420, ministeriöt 1421",
+     "url": "https://www.worldhistory.org/Yongle_Emperor/",
+     "huom": "sama WHE-sivu"
+    }
+   ]
+  },
+  {
+   "nro": 16,
+   "vuosi": 1644,
+   "dynastia": "Qing",
+   "paakaupunki": "Peking",
+   "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu. Mantšut pääsevät Shanhain solan kautta muurin läpi, ja Qing hallitsee Pekingistä seuraavat 268 vuotta.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Li Zicheng valtasi Pekingin huhtikuussa 1644; Wu Sangui pyysi Dorgonin apua; Shanhai 27.5.1644; Dorgon Pekingiin 5.6.; Shunzhi kruunattu marraskuussa",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Shanhai_Pass",
+     "huom": ""
+    },
+    {
+     "vaite": "Rebel Li Zicheng otti Pekingin 25.4.1644; Wu Sangui valitsi mantšut; Dorgon Pekingiin 6.6.1644",
+     "url": "https://www.ebsco.com/research-starters/history/manchus-seize-beijing/",
+     "huom": "EBSCO; ei sano suoraan että Peking tuli pääkaupungiksi"
+    },
+    {
+     "vaite": "Qing 1636/1644-1912; täysi valloitus 1683; Xuantong luopui 12.2.1912",
+     "url": "https://en.wikipedia.org/wiki/Qing_dynasty",
+     "huom": "Sama julkaisija kuin ensimmäinen"
+    },
+    {
+     "vaite": "Etelä-Ming jatkui erillisenä; Shun menetti Pekingin kesäkuussa 1644",
+     "url": "https://en.wikipedia.org/wiki/Shun_dynasty",
+     "huom": ""
+    }
+   ]
+  },
+  {
+   "nro": 17,
+   "vuosi": 1760,
+   "dynastia": "Qing",
+   "paakaupunki": "Peking",
+   "teksti": "Vuonna 1760 Qing on laajentanut valtakuntaansa roimasti länteen ja luoteeseen: nykyisen Xinjiangin alue on liitetty siihen vuoteen 1759 mennessä. Pääkaupunki on Peking.",
+   "tarkistus": "EPAVARMA",
+   "lahteet": [
+    {
+     "vaite": "Qingin alue 8,8 milj. km2 (1700), 14,7 milj. km2 (1790); Qianlongin Ten Great Campaigns",
+     "url": "https://en.wikipedia.org/wiki/Qing_dynasty",
+     "huom": ""
+    },
+    {
+     "vaite": "Tarim-allas valloitettu 1759; Dzungaria 1755-; Ili-kenraalikuvernööri 1762",
+     "url": "https://en.wikipedia.org/wiki/Timeline_of_Xinjiang_under_Qing_rule",
+     "huom": ""
+    },
+    {
+     "vaite": "Nimi 'Xiyu Xinjiang' / 'Xinjiang' ('uusi raja-alue'); virallinen nimi 1878, maakunta 1884",
+     "url": "https://en.wikipedia.org/wiki/Xinjiang",
+     "huom": "Sama julkaisija kuin edellinen; lisäksi Takatan PDF (Kyoto): alue nimettiin 'Xinjiangiksi' Tarimin rauhoittamisen (1759-1760) jälkeen: https://www.zinbun.kyoto-u.ac.jp/hub/~takata/QianlongtuEng.pdf (hakutulos)"
+    }
+   ]
+  },
+  {
+   "nro": 18,
+   "vuosi": 1873,
+   "dynastia": "Qing",
+   "paakaupunki": "Peking",
+   "teksti": "Vuonna 1873, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kantonin satamassa käydään vilkasta kauppaa.",
+   "tarkistus": "OK",
+   "lahteet": [
+    {
+     "vaite": "Regentti päättyi 23.2.1873, henkilökohtainen hallinto alkoi; Tongzhi syntyi 1856; regentti palautettiin 1874",
+     "url": "https://en.wikipedia.org/wiki/Tongzhi_Emperor",
+     "huom": ""
+    },
+    {
+     "vaite": "Regentti päättyi 23.2.1873 ja Tongzhi aloitti oman vallan; regentti palautettiin 18.12.1874",
+     "url": "https://ebsco.com/research-starters/history/cixis-coup",
+     "huom": "EBSCO; itsenäinen. Britannica 403, ei kierretty"
+    },
+    {
+     "vaite": "Kanton oli 1870-1890-luvuilla toiseksi suurin kauppasatama Shanghain jälkeen",
+     "url": "https://perlego.com/index/history/guangzhou",
+     "huom": "hakutulos; heikko lähde, ei avattu"
+    }
+   ]
+  },
+  {
+   "nro": 19,
+   "vuosi": 1912,
+   "dynastia": "Kiinan tasavalta",
+   "paakaupunki": "Peking",
+   "teksti": "Vuonna 1912 kuusivuotias Puyi luopuu vallasta, ja yli kahden vuosituhannen keisarikunta päättyy. Tasavalta on julistettu Nanjingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking.",
+   "tarkistus": "KORJAA",
+   "lahteet": [
+    {
+     "vaite": "Tasavalta julistettu Nanjingissa 1.1.1912; Yuan Shikai valittu 10.3.1912; hallitus siirtyi Pekingiin (infobox 10.3.1912)",
+     "url": "https://en.wikipedia.org/wiki/Provisional_government_of_the_Republic_of_China_(1912%E2%80%931913)",
+     "huom": ""
+    },
+    {
+     "vaite": "Kansalliskokous päätti huhtikuussa 1912 siirtää hallituksen Pekingiin",
+     "url": "https://en.wikipedia.org/wiki/Beiyang_government",
+     "huom": "Sama julkaisija; ristiriita (10.3. vs. huhtikuu) -> 'keväällä'"
+    },
+    {
+     "vaite": "Tasavalta Nanjingissa 1.1.1912; Puyi luopui 12.2.1912; Yuan 10.3.1912 siirsi pääkaupungin Nanjingista Pekingiin",
+     "url": "https://omniatlas.com/maps/eastasia/19120310",
+     "huom": "OmniAtlas; itsenäinen"
+    },
+    {
+     "vaite": "Puyi s. 7.2.1906, luopui 12.2.1912 noin 6-vuotiaana",
+     "url": "https://en.wikipedia.org/wiki/Puyi",
+     "huom": "Wikipedian kieliversio ei riippumaton; lisäksi hakutulos: https://www.goodreads.com/author_blog_posts/20956899-february-12-1912-2-000-years-of-imperial-rule-ends-in-china (heikko)"
+    }
+   ]
+  }
+ ],
+ "taistelut": [
+  {
+   "id": "changping-260eaa",
+   "nimi": "Changping 260 eaa",
+   "teksti": "Vuonna 260 ennen ajanlaskun alkua Qin voitti Zhaon Changpingin taistelussa nykyisen Shanxin maakunnan Gaopingin seudulla. Zhao ei toipunut, ja tämä avasi Qinille tien Kiinan yhdistämiseen vuonna 221.",
+   "vuosi": -260,
+   "lat": 35.8,
+   "lon": 112.92,
+   "paikka_varmuus": "EPÄVARMA",
+   "ajankohta": "Kampanja huhtikuu 262 - heinäkuu 260 eaa.; ratkaiseva saarto heinä-syyskuu 260 eaa. (vain Wikipedia + kiinalaiset lähteet; päivää ei kortissa)",
+   "miksi_ratkaiseva": "Qin murskasi Zhaon, vahvimman idän valtion, joka oli estänyt Qinin etenemisen; Zhao ei enää toipunut sotilaallisesti. Taistelu on yleisesti pidetty käänteenä, joka avasi tien Qinin vuoden 221 eaa. yhdistämiseen.",
+   "tulos": "Qinin ratkaiseva voitto; Zhaon armeija antautui. Zhao säilyi vielä noin 30 vuotta, mutta Qinin sotilaallinen ylivoima oli vakiintunut. Qin ei kuitenkaan yhdistänyt Kiinaa heti: myöhempi Handanin piiritys epäonnistui ja Qinin laajentuminen pysähtyi lähes kolmeksi vuosikymmeneksi (Wikipedia; ChinaKnowledge kirjoittaa Handanin 'valloitetuksi', ristiriita).",
+   "lahteet": [
+    {
+     "vaite": "Aika (262-260 eaa.), Qin vs Zhao, Qinin voitto, paikka luoteeseen nykyisestä Gaopingista Shanxissa (koordinaatit ~35.80N 112.92E; tarkka paikka epävarma), Zhao ei toipunut, Qin yhdisti Kiinan 221 eaa.",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Changping",
+     "huom": "Wikipedia (luettu); artikkeli itse merkitty lähdeviitteitä vaativaksi; koordinaatti vastaa käytännössä Gaopingin kaupungin keskustaa (OSM 35.798N 112.923E), ei tarkkaa taistelupaikkaa"
+    },
+    {
+     "vaite": "Qinin Bai Qi voitti Zhaon Changpingissa vuonna 260; Zhao ei enää kyennyt vastarintaan; Zhaon armeija 'decimated' (Yan harkitsi hyökkäystä 251)",
+     "url": "http://www.chinaknowledge.de/History/Zhou/rulers-zhao.html",
+     "huom": "ChinaKnowledge (Ulrich Theobald), luettu curlilla; EROAA Wikipediasta: sivu sanoo Zhao Kuon 'antautuneen', Wikipedia sanoo hänen kuolleen läpimurtoyrityksessä; sivu mainitsee 400 000 elävänä haudattua 'allegedly'"
+    },
+    {
+     "vaite": "Qinin kampanjat itään; Bai Qi voitti Zhaon Changpingissa 260 eaa.; Handan vuotta myöhemmin (lähde kirjoittaa 'conquered' - Wikipedian mukaan piiritys epäonnistui, ristiriita; korttiin ei oteta)",
+     "url": "http://www.chinaknowledge.de/History/Zhou/rulers-qin.html",
+     "huom": "ChinaKnowledge, luettu; sama julkaisija kuin edellinen, joten EI itsenäinen suhteessa edelliseen ChinaKnowledge-lähteeseen"
+    },
+    {
+     "vaite": "Paikka: Yonglun kylä, Gaopingin kaupunki, Jincheng, Shanxi (joukkohauta-alue 1995-); taistelun yhteys Qinin yhdistämiseen",
+     "url": "https://baike.baidu.com/en/item/Battle%20of%20Changping%20Site%20-%20Yonglu%20No.%201%20Warring%20States%20Period%20Mass%20Grave/884766",
+     "huom": "Baidu Baike (englanti; käyttäjäkirjoitettu, heikompi lähde); itsenäinen Wikipediasta mutta ei akateeminen; antaa vain kylän, ei koordinaatteja; hautapaikan yhteys taisteluun on tulkinta"
+    },
+    {
+     "vaite": "Taistelualue Gaopingin kaupungin pohjoispuolella Dan-joen laaksossa, Shanxi; Yonglun hautakuoppa; luvut 400 000 vs 200 000 vaihtelevat lähteittäin",
+     "url": "https://www.sunzistudies.com/m_shownews.asp?id=809",
+     "huom": "Haku-tiivistelmä (hakutulos), sivua ei avattu; Sun Tzu Studies Society Shandong"
+    },
+    {
+     "vaite": "Uhriluvut (450 000 / 400 000 / 200 000) tulevat yhdestä, yli sata vuotta myöhemmästä lähteestä (Shiji) ja ovat kiistanalaisia; joukkohautaa ei ole varmistettu",
+     "url": "https://www.newhistorian.com/2018/11/02/the-battle-of-changping-the-decisive-battle-of-the-warring-states/",
+     "huom": "New Historian; kirjoittajaton, heikko lähde; käytetty vain tukemaan päätöstä jättää luvut pois"
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "OK",
+    "perustelu": "Vuosi 260 eaa., osapuolet (Qin voitti Zhaon), paikka (Gaopingin seutu, Shanxi) ja seuraus (Qin yhdisti Kiinan 221 eaa.) vahvistuvat. Zhaon menetykset olivat ratkaisevat; Qin yhdisti Kiinan vuonna 221.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Changping",
+      "mita_vahvistaa": "Taistelu 262-260 eaa., Qin voitti, kenttä Gaopingista luoteeseen Shanxissa (35.798, 112.924), Zhao ei toipunut, Qin yhdisti Kiinan 221 eaa."
+     },
+     {
+      "url": "https://www.historynewsnetwork.org/article/139439",
+      "mita_vahvistaa": "Xinhua-raportti: taistelukenttä Gaopingin kaupungin liepeillä, noin 10 x 30 km"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Gaoping",
+      "mita_vahvistaa": "Gaopingin seutu tunnettiin muinoin nimellä Changping"
+     }
+    ],
+    "koordinaatit": {
+     "lat": 35.8,
+     "lon": 112.92,
+     "tarkkuus_km": 5,
+     "huom": "Vastaa Wikipedian koordinaatteja (35.798, 112.924). Taistelukenttä on laaja (noin 10 x 30 km) ja sijaitsee Gaopingista luoteeseen; piste on hyväksyttävä. Ei merkittävää kiistaa paikasta."
+    }
+   }
+  },
+  {
+   "id": "chibi-208",
+   "nimi": "Punainen kallio (Chibi) 208",
+   "teksti": "Vuonna 208 Jangtse-joella Hubein maakunnassa Sun Quanin ja Liu Bein liittoutuneet joukot torjuivat Cao Caon hyökkäyksen. Cao Cao ei saanut koko Kiinaa haltuunsa, ja maa jakautui myöhemmin kolmeen valtakuntaan.",
+   "vuosi": 208,
+   "lat": 29.87,
+   "lon": 113.62,
+   "paikka_varmuus": "EPÄVARMA",
+   "ajankohta": "Talvi 208 (Jian'anin 13. vuosi); kuukautta ja päivää ei tiedetä varmasti, osa kirjoittajista siirtää loppuun 208/alkuun 209; ei kortissa",
+   "miksi_ratkaiseva": "Cao Cao ei päässyt Jangtsen yli eikä saanut etelää haltuunsa, joten koko Kiinan yhdistäminen hänen johdollaan estyi. Liu Bei sai Jingzhoun alueen ja Sun Quanin valta etelässä vahvistui.",
+   "tulos": "Liittolaisten voitto; Cao Caon laivasto menetettiin. Pohjoisen ja eteläisen vallan jako vakiintui, ja tämän pohjalta syntyivät myöhemmin Wei (220), Shu ja Wu (kolme valtakuntaa). Muodollinen Kolmen valtakunnan aika alkoi vasta noin 12-21 vuotta myöhemmin.",
+   "lahteet": [
+    {
+     "vaite": "Talvi 208; sijainti epävarma (Chibi/Puqi, Jiayu, Wuhan); liittolaisten voitto, Cao Cao ei saanut jalansijaa Jangtsen eteläpuolella; Liu Bei sai Jingzhoun; lähteet Sanguozhi ja Zizhi Tongjian ovat osin ristiriidassa; joukkokoot kiistanalaisia",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Red_Cliffs",
+     "huom": "Wikipedia (luettu); paikka ei koskaan lopullisesti varmistettu, pääkoordinaatti ei ole tietty ehdokas"
+    },
+    {
+     "vaite": "Taistelu 208 oli käänne: Cao Cao kukistettiin ja ajettiin pohjoiseen, mikä päätti hänen yhdistämisunelmansa; Kolme valtakuntaa pysyivät erillään vuoteen 280; joukkokoot (800 000 Cao Caon oma arvio) liioiteltuja",
+     "url": "https://www.worldhistory.org/Battle_of_Red_Cliffs/",
+     "huom": "World History Encyclopedia (Joshua J. Mark), luettu curlilla; sivu erottaa romaanin ja historian: 'novel = historical fiction' -> romaani ≠ historia"
+    },
+    {
+     "vaite": "Taistelu 208, 'close to Puqi 蒲圻, Hubei'; Cao Caon joukot torjuttiin, Jangtse-alue menetettiin; Sunin ja Liu Bein yhdistetty armeija tuhosi Cao Caon laivaston",
+     "url": "http://www.chinaknowledge.de/History/Division/wu.html",
+     "huom": "ChinaKnowledge (Theobald), luettu curlilla; antaa vain suuntaa-antavan sijainnin Puqi (nyk. Chibi)"
+    },
+    {
+     "vaite": "Cao Caon koko laivasto tuhottiin Punaisessa kalliossa 208",
+     "url": "http://www.chinaknowledge.de/History/Division/sanguo-military.html",
+     "huom": "ChinaKnowledge, sama julkaisija kuin edellinen, EI itsenäinen sen suhteen"
+    },
+    {
+     "vaite": "Paikkaa on kiistelty vuosisatoja; vähintään seitsemän ehdotettua paikkaa (Puqi, Huangzhou, Zhongxiang, Wuchang, Hanyang, Hanchuan, Jiayu); alkuyhteenotto ehkä Wuhanin lounaispuolella (Chiji), takaa-ajon loppu Wulin",
+     "url": "https://link.springer.com/article/10.1007/s11462-006-0003-3",
+     "huom": "Hakutulos (vain hakutiivistelmä; Springer-sivu ohjautui kirjautumiseen, ei kierretty); Frontiers of History in China 2006 -artikkeli 'Ancient Red Cliff battlefield: a historical-geographic study'"
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "OK",
+    "perustelu": "Vuosi 208 (talvi 208-209), Sun Quanin ja Liu Bein liittouma torjui Cao Caon, Jangtse, Hubei, myöhempi kolmen valtakunnan jako vahvistuvat. Tarkka paikka on kiistanalainen, mutta teksti sanoo vain Jangtse ja Hubei.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Red_Cliffs",
+      "mita_vahvistaa": "Koordinaatit 29.870, 113.620; vuosi 208/209; liittouman voitto; seuraukset (Shu Han, Itä-Wu); ehdokaspaikat Chibin kaupunki, Jiayu, Wuhan, Huangzhou"
+     },
+     {
+      "url": "https://warhistory.org/ja/article/the-battle-of-red-cliffs",
+      "mita_vahvistaa": "Cao Cao vastaan Sun Quan ja Liu Bei 208; Jangtse, Hubei; tarkka paikka kiistanalainen"
+     },
+     {
+      "url": "https://thecollector.com/battle-red-cliffs/",
+      "mita_vahvistaa": "Taistelun kulku ja osapuolet, kolmen valtakunnan kausi"
+     }
+    ],
+    "koordinaatit": {
+     "lat": 29.87,
+     "lon": 113.62,
+     "tarkkuus_km": 30,
+     "huom": "Piste (Chibin kaupungin Chibi-kallion seutu, Hubei) vastaa Wikipedian koordinaatteja. Paikka on kiistanalainen: vaihtoehtoja ovat Jiayun piirikunta (Xianning, n. 30 km alavirtaan), Wuhanin seutu ja Huangzhoun Chibi (sitä pidetään yleisesti virheellisenä). Piste on silti paras yleisesti hyväksytty ehdokas; todellinen virhemarginaali jopa 30 km, Wuhan-vaihtoehdolla yli 80 km."
+    }
+   }
+  },
+  {
+   "id": "fei-joki-383",
+   "nimi": "Fei-joki 383",
+   "teksti": "Vuonna 383 Fei-joen luona, nykyisen Anhuin maakunnan Shoun seudulla, Itä-Jinin pienempi armeija voitti pohjoisen Aiemman Qinin suuren sotajoukon. Qin alkoi hajota, ja Etelä-Kiina säilyi itsenäisenä.",
+   "vuosi": 383,
+   "lat": 32.58,
+   "lon": 116.78,
+   "paikka_varmuus": "EPÄVARMA",
+   "ajankohta": "Syksy / loppuvuosi 383; Wikipedian infolaatikko 30.11.383 (muu lähde: Chronograph 30.11.383-9.1.384, hakutulos; kiinalaisessa haussa 'elokuu'-alkuisia kampanjakuvauksia; jos kuukausi kortissa, EPÄVARMA; korttiin vain vuosi)",
+   "miksi_ratkaiseva": "Itä-Jinin voitto pysäytti Aiemman Qinin yritykset yhdistää Kiina. Aiempi Qin hajosi kapinoihin, ja Etelä-Kiina säilyi itsenäisenä.",
+   "tulos": "Aiemman Qinin romahdus (kapinat 384, Chang'an 385, valtio olemassa vielä 394 asti) ja Itä-Jinin säilyminen; Etelä-Kiina pysyi itsenäisenä vuoteen 589. Voiton mittakaava on todennäköisesti liioiteltu lähteissä.",
+   "lahteet": [
+    {
+     "vaite": "Loppuvuosi 383 (30.11.383), paikka lähellä nyk. Lu'ania Anhuissa, koordinaatit ~31.74N 116.52E, joen kulku epävarma; Jinin voitto; Qin romahti, Itä-Jin säilyi, Etelä-Kiina itsenäinen 589 asti; joukkomäärä 870 000 pidetään liioiteltuna; 2012 tutkimus: mittakaava 'dramatically exaggerated'",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Fei_River",
+     "huom": "Wikipedia (luettu); koordinaatti poikkeaa Shoun piirikunnan sijainnista n. 95 km luoteeseen -> paikka EPÄVARMA (Shou kuului aiemmin Lu'anin alueeseen)"
+    },
+    {
+     "vaite": "Fu Jian aloitti 383 suurkampanjan neuvonantajien varoituksista huolimatta; Feishuilla (淝水) hän kärsi raskaan tappion ja Qinin 'grande armée' hajosi; heimot kapinoivat, valtio hajosi nopeasti",
+     "url": "http://www.chinaknowledge.de/History/Division/rulers-qianqin.html",
+     "huom": "ChinaKnowledge (Theobald), luettu curlilla"
+    },
+    {
+     "vaite": "Taistelu 383 käytiin 'Bagongshanin juurella, Shouyangin kaupungin alla' (八公山麓，寿阳城下); koko kuva: pienempi Itä-Jin voitti Qinin, Qin romahti pian",
+     "url": "https://www.shouxian.gov.cn/lyzn/y/7847321.html",
+     "huom": "Shoun piirikunnan hallituksen matkailusivu (Kiina), luettu; antaa paikan nimellä, ei koordinaatteja; sivun luvut (90 000/80 000) ovat liioiteltuja, ei käytetty"
+    },
+    {
+     "vaite": "Itä-Jin ('Dong Jin') torjui pohjoisten hyökkääjien armeijat Fei-joella 383",
+     "url": "https://www.britannica.com/topic/Jin-dynasty-China-AD-265-316-317-317-420",
+     "huom": "Hakutulos (vain hakutiivistelmä; Britannica antoi 403, ei kierretty)"
+    },
+    {
+     "vaite": "Shoun piirikunnan koordinaatit (32.55N 116.79E) ja Bagongshan (32.60N 116.78E)",
+     "url": "https://nominatim.openstreetmap.org/search?q=Shou+County,+Anhui&format=json",
+     "huom": "OpenStreetMap Nominatim (haettu); hallintoalueen keskus, ei taistelupaikka; haarukka lat 31.7-32.6, lon 116.5-116.8"
+    },
+    {
+     "vaite": "Kirjallisuus: 1968 tutkimus epäili tapahtumaa, hylätty; 2012 tutkimus vahvisti taistelun mutta mittakaava liioiteltu",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Fei_River",
+     "huom": "Sama Wikipedia-artikkeli kuin ylhäällä; EI itsenäinen; alkuperäistutkimuksia ei avattu"
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "KORJAA",
+    "perustelu": "Voittaja, vuosi ja paikka (Shouyangin eli Shoun seutu, Anhui) pitävät, mutta 'Qin hajosi' on liian nopea: Aiempi Qin romahti vähitellen 384-394 (Murong Chuin kapina 384, Chang'an 385, loppu 394). Pehmennetty muotoilu 'alkoi hajota' on tarkempi.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Fei_River",
+      "mita_vahvistaa": "383, Jin voitti ylivoimaisen Qinin, Qin romahti 384-394, Etelä-Kiina pysyi itsenäisenä vuoteen 589; Fei-joki ei ole enää olemassa, arvioitu Lu'anin seudulle; koordinaatit 31.736, 116.520"
+     },
+     {
+      "url": "https://en.5000yan.com/chinese-idioms/sigh-wind-crane.html",
+      "mita_vahvistaa": "Fu Jian kokosi joukot Fei-joen varrelle Shouyangin itäpuolella (nyk. Shoun piirikunta, Anhui)"
+     },
+     {
+      "url": "https://en.5000yan.com/chinese-idioms/every-bush-tree-enemy.html",
+      "mita_vahvistaa": "Bagong-vuoret ja Jinin leiri Shouyangin lähellä (kertova lähde, ei tieteellinen)"
+     },
+     {
+      "url": "https://www.Wikipedia.org/wiki/Fu_Rong",
+      "mita_vahvistaa": "Fu Rong valtasi Shouyangin 383; Shouyang = nyk. Lu'anin/Shoun alue"
+     }
+    ],
+    "koordinaatit": {
+     "lat": 32.58,
+     "lon": 116.78,
+     "tarkkuus_km": 30,
+     "huom": "Paikka kiistanalainen: Fei-jokea ei enää ole. Wikipedia antaa koordinaatiksi 31.74 N, 116.52 E (Lu'anin seutu), noin 100 km nykyistä pistettä etelään. Perinteinen tulkinta (Shouyang = Shoun piirikunta, Bagong-vuoret, Luojian lähellä Huainania) tukee nykyistä pistettä Shoun kaupungissa; piste on kelvollinen seudun tunnisteeksi mutta ei tarkka taistelupaikka. Suositus: pidä piste, merkitse tarkkuus noin 30 km."
+    }
+   }
+  },
+  {
+   "id": "yamen-1279",
+   "nimi": "Yamen 1279",
+   "teksti": "Maaliskuussa 1279 Song-dynastian viimeinen laivasto kohtasi Yuanin joukot Yamenin salmessa Guangdongissa. Song-dynastian viimeinen vastarinta päättyi, ja mongolien Yuan hallitsi koko Kiinaa.",
+   "vuosi": 1279,
+   "lat": 22.27,
+   "lon": 113.08,
+   "paikka_varmuus": "V",
+   "ajankohta": "19.3.1279 (Wikipedia ja World History Encyclopedia; kaksi itsenäistä lähdettä)",
+   "miksi_ratkaiseva": "Taistelu päätti Song-dynastian viimeisen vastarinnan, kun viimeinen Song-keisari kuoli. Yuanin mongolivalta ulottui koko Kiinaan, ensimmäistä kertaa 800-luvun jälkeen.",
+   "tulos": "Song-dynastian loppu ja Yuanin hallinto koko Kiinassa (Yuan kesti vuoteen 1368). Etelä-Songin pääkaupunki oli kaatunut jo 1276, joten Yamen oli viimeinen vastarinta, ei ensimmäinen ratkaisu.",
+   "lahteet": [
+    {
+     "vaite": "19.3.1279; Yamen, Xinhui, lähellä Jiangmenia, Guangdong (~22.27N 113.08E); Yuanin voitto, Zhao Bing viimeinen Song-keisari, Song päättyi, Yuan hallitsi koko Kiinaa; Zhang Shijien kuolema epävarma",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
+     "huom": "Wikipedia (luettu)"
+    },
+    {
+     "vaite": "19.3.1279 meritaistelu Yaishanissa: mongolien Kiinan valloitus valmis; ensimmäinen kerta kun Kiina yhdistettiin 800-luvun jälkeen; Yuanin alkamisvuosi vaihtelee (1260/1271/1276/1279)",
+     "url": "https://www.worldhistory.org/Yuan_Dynasty/",
+     "huom": "World History Encyclopedia, luettu curlilla; kirjoittaa paikan 'lähellä nyk. Macaota', mikä on epätarkka -> ei käytetty koordinaatteihin"
+    },
+    {
+     "vaite": "Zhao Bing (hallitsi 1278-1279) valtaistuimelle saarella Yaishanissa lähellä Xinhuita, Guangdong; 1279 Yuan valtasi saaren ja Lu Xiufu hukuttautui keisarin kanssa",
+     "url": "http://www.chinaknowledge.de/History/Song/song-event.html",
+     "huom": "ChinaKnowledge, luettu curlilla; kortissa ei kuvata keisarin kuolemaa"
+    },
+    {
+     "vaite": "Yamenin kaupunki (崖门镇), Xinhuin piiri, Jiangmen: 22.30N 113.05E",
+     "url": "https://nominatim.openstreetmap.org/search?q=Yamen+Xinhui+Jiangmen&format=json",
+     "huom": "OpenStreetMap Nominatim (haettu); asutuskeskus, taistelupaikka salmessa muutaman km päässä; haarukka lat 22.2-22.3, lon 113.0-113.1"
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "OK",
+    "perustelu": "19.3.1279, Songin viimeinen laivasto (Zhang Shijie, Lu Xiufu) vastaan Yuanin Zhang Hongfan, Yamen Xinhuissa, Jiangmenissa, Guangdongissa; Song päättyi ja Yuan hallitsi koko Kiinaa. Kaikki vahvistuvat.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Yamen",
+      "mita_vahvistaa": "19.3.1279, osapuolet, Yuanin voitto, Songin loppu, Yuan hallitsi koko Kiinaa; koordinaatit 22 16 N, 113 05 E"
+     },
+     {
+      "url": "https://www.usni.org/magazines/naval-history-magazine/2021/august/clash-fleets-dynastys-end",
+      "mita_vahvistaa": "Laivastotaistelu, Songin viimeinen vastarinta"
+     },
+     {
+      "url": "https://mail.songyuan.org/empathy/thread/2LKQSE6QKEBLJEYLWGHLO2QEC2D7OGTM",
+      "mita_vahvistaa": "Yashan oli silloin saari Pearl-joen suulla, nykyään liittynyt mantereeseen (Gujingin kaupunki, Xinhui)"
+     },
+     {
+      "url": "https://jeremiahjenne.com/the-archives/2019/3/18/the-battle-of-yamen-and-the-end-of-the-song-dynasty",
+      "mita_vahvistaa": "Taistelun kulku ja Songin loppu"
+     }
+    ],
+    "koordinaatit": {
+     "lat": 22.27,
+     "lon": 113.08,
+     "tarkkuus_km": 10,
+     "huom": "Vastaa Wikipedian koordinaatteja (22.267, 113.083). Historiallinen Yashan-saari on maatunut osaksi Pearl-joen suistoa, joten täsmällinen vesialue on muuttunut; 10 km riittää."
+    }
+   }
+  },
+  {
+   "id": "shanhain-sola-1644",
+   "nimi": "Shanhain sola 1644",
+   "teksti": "Toukokuussa 1644 Shanhain solalla Suuren muurin itäpäässä Hebein maakunnassa Mingin kenraali Wu Sangui ja Qingin Dorgon voittivat Li Zichengin joukot. Qing pääsi Pekingiin ja alkoi hallita Kiinaa.",
+   "vuosi": 1644,
+   "lat": 39.98,
+   "lon": 119.77,
+   "paikka_varmuus": "V",
+   "ajankohta": "Toukokuu 1644; päivämäärä 27.5.1644 (kiinalaisen kalenterin 4. kuun 22. päivä) tulee Wikipediasta ja kiinalaisista populaarilähteistä; luotettavat lähteet eivät sitä vahvista (EBSCO: ei päivää, Li lähti Pekingistä 18.5.) -> päivä EPÄVARMA, korttiin vain kuukausi",
+   "miksi_ratkaiseva": "Wu Sangui avasi solan manchuille, ja Li Zichengin Shun-armeija voitettiin. Tämä antoi Qingille tien Pekingiin ja alun koko Kiinan valloitukselle.",
+   "tulos": "Li perääntyi Pekingiin ja pakeni; Dorgonin joukot tulivat Pekingiin kesäkuun alussa (5.-6.6., lähteet eroavat). Koko Kiinan valloitus kesti vielä vuosikymmeniä (Wu Sangui itse kapinoi myöhemmin Qingia vastaan; kapina kukistettiin 1681 mennessä, EBSCO/Britannica-hakutulos).",
+   "lahteet": [
+    {
+     "vaite": "27.5.1644, Shanhai-sola, Hebei (39.979N 119.776E); Dorgon + Wu Sangui voittivat Li Zichengin; Beijing 5.6.; Shunzhi valtaistuimelle 8.11.; joukkokoot kiistanalaisia; päivämäärä itse merkitty lähdeviitteitä vaativaksi",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Shanhai_Pass",
+     "huom": "Wikipedia (luettu); päivämäärä ja luvut heikosti viitattu"
+    },
+    {
+     "vaite": "Li Zicheng otti Pekingin 25.4.1644; Wu Sangui piti Shanhai-solaa ja valitsi mantšut; Dorgon sitoi joukkonsa vasta kun Wu oli voitolla; Li pakeni pienen joukon kanssa; Dorgon Pekingiin 6.6.1644; Qing kukisti myöhemmin Wun ja muut läänitykset",
+     "url": "https://www.ebsco.com/research-starters/history/manchus-seize-beijing/",
+     "huom": "EBSCO Research Starters, luettu; EI anna taistelun päivää; Pekingin saapumispäivä 6.6. vs. Wikipedian 5.6. -> lähteet eroavat"
+    },
+    {
+     "vaite": "Taistelu toukokuussa 1644 Yipianshissa Shanhaiguanin lähellä, Li Zichengin Shun-armeija hävisi; Qing perääntyvän armeijan takaa-ajo yli 40 li",
+     "url": "https://www.sohu.com/a/777955088_120245787",
+     "huom": "Sohu (kiinalainen populaarisivusto; heikko lähde, vain tukeva)"
+    },
+    {
+     "vaite": "Päivä 27.5. (Shunzhi 1, 4. kuu, 22. päivä) ja kampanjan vaiheet",
+     "url": "https://www.81.cn/gfbmap/content/2022-03/17/content_311495.htm",
+     "huom": "Hakutulos (vain hakutiivistelmä; sivu ei avautunut sisältöineen, ei kierretty); kiinalainen sotilaslehti (中国国防报)"
+    },
+    {
+     "vaite": "Wu Sangui, Li Zicheng, Dorgon ja ratkaisu; 'Wu Sangui' ja Qingin loppuvaihe; Pekingin saapumispäivät vaihtelevat (5.6. / 6.6.)",
+     "url": "https://www.ebsco.com/research-starters/history/dorgon",
+     "huom": "Hakutulos (vain hakutiivistelmä); EBSCO eri merkintä; samaa julkaisijaa kuin edellinen EBSCO -> EI itsenäinen sille"
+    },
+    {
+     "vaite": "Shanhaiguanin piirin koordinaatit 39.9988N 119.7564E / 39.9772N 119.7700E",
+     "url": "https://nominatim.openstreetmap.org/search?q=Shanhaiguan+District+Qinhuangdao&format=json",
+     "huom": "OpenStreetMap Nominatim (haettu); taistelu ulottui myös Yipianshiin (n. 20-25 km pohjoiseen, Liaoningin rajan tuntumassa)"
+    },
+    {
+     "vaite": "Hiekkamyrsky ja Dorgonin ratsuväen isku Lin vasempaan siipeen: vain Wikipedia (+ Dark Atlas -hakutulos, ei luotettava); ei kahta lähdettä -> EI kortissa",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Shanhai_Pass",
+     "huom": "ei vahvistettu; mainittu vain rajauksena"
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "OK",
+    "perustelu": "27.5.1644 (yksi lähde 28.5.), Wu Sangui ja Dorgon vastaan Li Zichengin Shun-joukot, Shanhaiguan Hebeissä; Qing astui Pekingiin 5.-6.6. Toukokuu, osapuolet ja seuraus pitävät.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Shanhai_Pass",
+      "mita_vahvistaa": "27.5.1644, Qing + Wu Sangui voitti Li Zichengin, Qing saapui Pekingiin 5.6.; koordinaatit 39.979, 119.776"
+     },
+     {
+      "url": "https://www.ebsco.com/research-starters/history/manchus-seize-beijing/",
+      "mita_vahvistaa": "Mantšut valtasivat Pekingin 1644 Shanhain voiton jälkeen"
+     },
+     {
+      "url": "https://weaponsandwarfare.com/?p=16988",
+      "mita_vahvistaa": "Taistelun kulku, päiväys 28.5. (poikkeava)"
+     }
+    ],
+    "koordinaatit": {
+     "lat": 39.98,
+     "lon": 119.77,
+     "tarkkuus_km": 3,
+     "huom": "Vastaa Wikipedian koordinaatteja (39.979, 119.776). Shanhain solan sijainti Suuren muurin itäpäässä on kiistaton."
+    }
+   }
+  }
+ ],
+ "keksinnot": [
+  {
+   "id": "paperi",
+   "nimi": "Paperi",
+   "teksti": "Kiinassa tunnetaan paperia jo Han-ajalta, ja perinteisesti keksijäksi mainitaan Cai Lun vuonna 105. Islamilaisessa maailmassa paperia alettiin valmistaa Bagdadissa 790-luvulla, ja se levisi Egyptiin ja Espanjaan. Italiassa paperia tehtiin Fabrianossa 1200-luvun lopulla, ja Nürnbergin paperimylly aloitti 1390.",
+   "reitti": [
+    {
+     "vaihe": "Kiina: varhaisimmat paperilöydöt (Fangmatan, myös Dunhuang ja Yumenguan 1. vuosisadalla eaa.)",
+     "vuosi": "noin 179-141 eaa. (Fangmatan; ajoitus ja 'paperi'-luokitus kiistelty)",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Kiina: Cai Lunin perinteinen keksijävuosi, valmistuksen kehitys",
+     "vuosi": "105 jaa. (perinne)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Keski-Aasia (Samarkand): paperi käytössä 700-luvulla, Talas 751 -tarina (kiinalaiset vangit opettivat Samarkandin asukkaita) on myöhäisen kirjoittajan (al-Thaalibi, 1000-luku) kertoma legenda; Bloom pitää sitä epätodennäköisenä, koska paperia käytettiin Keski-Aasiassa jo ennen vuotta 751",
+     "vuosi": "700-luku (ennen 751)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Bagdad: paperia valmistettiin ja käytettiin kalifi Harun al-Rashidin aikana (786-809)",
+     "vuosi": "793-795 (lähteet 786-809)",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Egypti: paperi yleistyi",
+     "vuosi": "800-luvun alku (Aramco), tallennettu 900 (Wikipedia); 985-986 yksi suurista tuotteista",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Sisilia ja Espanja: paperi islamilaisen maailman kautta kristittyjen maihin; Sisiliassa käyttö 1000-luvun lopussa (Aramco)",
+     "vuosi": "1000-luvun loppu",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Espanja, Xativa (Jativa): ensimmäinen kirjattu paperimylly Iberian niemimaalla. EPÄVARMA: Wikipedia ja Aramco World 1056; Vanderbiltin näyttely 1151; osa lähteistä 1150",
+     "vuosi": "1056 tai noin 1150 (EPÄVARMA)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Italia, Fabriano: keskeinen paperikeskus syntyi, Aramco 'after 1276', Vanderbilt 1276. (Fabrianon oman yhtiön sivun 1264-vuosi on yhtiön väite, ei vahvistettu)",
+     "vuosi": "1200-luvun loppu (1276)",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Ranska: Troyes (viimeistään 1348); Saksa: Nürnbergin paperimylly, Alppien pohjoispuolen ensimmäinen (Ulman Stromer)",
+     "vuosi": "1348 (Ranska, vain Wikipedia); 1390 (Nürnberg, 3 lähdettä)",
+     "varmuus": "V"
+    }
+   ],
+   "kiistat": "Siirtyminen Kiinasta Eurooppaan: TODENNETTU laajasti (paperi on kiinalaista alkuperää; islamilaisen maailman välitys Bagdadin, Egyptin ja Espanjan kautta on dokumentoitu). Kiistanalaista: (1) Talas 751 -tarina on legenda, ei arkeologinen tosiasia: ei aikalaisia arabilähteitä taistelusta, paperia käytettiin Samarkandissa ja Keski-Aasiassa ennen 751, eikä Du Huanin kuvaamien vankien joukossa mainita paperinvalmistajia (Wikipedia/Bloom; Aramco World: tarina ei välttämättä ole kirjaimellinen; Bloom ei kuitenkaan hylkää tarinaa kokonaan). (2) Cai Lun 105 on perinne; arkeologiset löydöt (Fangmatan jne.) ovat vanhempia. (3) Xativan myllyn vuosi: 1056 vs. 1151/1150; vesivoimaisuus kiistelty (aikaisin vesivoimainen 1282 Wikipedian mukaan). (4) Fabrianon 1264 on yhtiön oma väite (hakutulos), tutkijalähteet 1276 ja 1200-luvun loppu. Kiinan ja Euroopan välillä välittäjä oli aina islamilainen maailma, ei suora kiinalainen vaikutus.",
+   "lahteet": [
+    {
+     "vaite": "Fangmatan: varhaisin paperinpala noin 179-141 eaa.; Cai Lun 105 on perinne, arkeologia on vanhempaa; Talas 751 epäuskottava; Samarkand 700-luku; Bagdad 793; Egypti 900; Xativa 1056 / 1150 / 1282; Nürnberg 1390",
+     "url": "https://en.wikipedia.org/wiki/History_of_paper",
+     "huom": "Wikipedia; yksi lähde. Luettu vain tekstin 0-100000 merkkiä."
+    },
+    {
+     "vaite": "Talas 751 -tarinan lähde on al-Thaalibi (1000-luku) ja se ei ole välttämättä kirjaimellinen; Bagdad Harun al-Rashidin aikana (786-809); Egypti 800-luvun alusta, 985-986 suuri tuote; Sisilia 1000-luvun lopussa; Xativa 1056; Italia/Fabriano 1276; Nürnberg",
+     "url": "https://archive.aramcoworld.com/issue/199903/revolution.by.the.ream-a.history.of.paper.htm",
+     "huom": "Saudi Aramco World 1999; riippumaton Wikipediasta. Huom: ei mainitse Cai Lunia."
+    },
+    {
+     "vaite": "Fangmatan: pala löytyi 1986, tutkittiin 2012; Li Xiaocen: Länsi-Han, noin 250 vuotta ennen Cai Lunia; 'paper-pouring' -tekniikka; kiista siitä, onko pala paperia",
+     "url": "http://www.xinhuanet.com//english/2016-11/29/c_135867579.htm",
+     "huom": "Xinhua 2016; uutinen, ei vertaisarvioitu. Riippumaton Wikipediasta."
+    },
+    {
+     "vaite": "Bloomin Paper Before Print: Muslim-teknikot omaksuivat paperin ja veivät sen länteen; paperi kristityssä Euroopassa 1000-luvun jälkipuoliskolla",
+     "url": "https://www.timeshighereducation.com/node/85800",
+     "huom": "Times Higher Education -arvostelu; ei mainitse Talasia."
+    },
+    {
+     "vaite": "Xativa 1151, Fabriano 1276, Nürnberg 1390 (ensimmäinen myllyn Alppien pohjoispuolella)",
+     "url": "https://exhibitions.library.vanderbilt.edu/papermaking/section/papermills/",
+     "huom": "Vanderbiltin yliopiston kirjaston verkkonäyttely."
+    },
+    {
+     "vaite": "Talas 751 -legenda kiistanalainen; Bloom: paperia jo Samarkandissa ennen 751; Mount Mug -arkisto (722-723); Du Huanin vangeissa ei paperinvalmistajia",
+     "url": "https://www.historyofinformation.com/detail.php?id=5028",
+     "huom": "HAKUTULOS: sivua ei saatu auki (vain hakutiivistelmä). Ei käytetty todisteena yksin."
+    },
+    {
+     "vaite": "Fabrianon paperintuotanto 1264 (pergamenttiasiakirja Matelicassa)",
+     "url": "https://fabriano.com/en/history",
+     "huom": "HAKUTULOS ja yhtiön oma sivu (kaupallinen); EI käytetä korttiin."
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "KORJAA",
+    "perustelu": "Pääväitteet pitävät (Cai Lun 105, Bagdad 794-795, Fabriano 1276, Nürnberg 1390), mutta 'Saksan ensimmäinen paperimylly' on epävarma (Ravensburgin mylly kiistanalaisin päiväyksin; Stromerin mylly on ensimmäinen luotettavasti dokumentoitu pysyvä mylly Alppien pohjoispuolella), ja 'Islamilaisen maailman kautta ... Bagdadiin' on sekava, koska Bagdad itse on islamilaista maailmaa. Italian 1200-luvun loppu sopii Fabrianoon (1276) mutta ilmaisu täsmennetään.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Paper",
+      "mita_vahvistaa": "Cai Lun 105, aiemmat löydöt 100-luvulta eaa., paperia valmistettiin Bagdadissa 700-luvun lopulla"
+     },
+     {
+      "url": "https://craftsofiraq.uvic.ca/baghdad-paper-makers/",
+      "mita_vahvistaa": "Bagdadin paperinvalmistus 794/795"
+     },
+     {
+      "url": "https://www.csmc.uni-hamburg.de/news/2024-08-13-smc-31.html",
+      "mita_vahvistaa": "Drege: paperin historia Kiinassa, Cai Lun vs. aiemmat löydöt"
+     },
+     {
+      "url": "https://www.historyofinformation.com/detail.php?id=2547",
+      "mita_vahvistaa": "Fabrianon ensimmäiset paperimyllyt Italiassa, 1276"
+     },
+     {
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Paper",
+      "mita_vahvistaa": "Xativa 1100-luvun puolivälissä, Fabriano 1276"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Ulman_Stromer",
+      "mita_vahvistaa": "Stromerin mylly Nürnbergissä 1390, ensimmäinen pysyvä mylly Alppien pohjoispuolella"
+     },
+     {
+      "url": "https://www.cepi.org/14th-century-european-papermakers-continue-the-innovation/",
+      "mita_vahvistaa": "Stromerin mylly 1390, italialaiset paperinvalmistajat"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kirjapaino",
+   "nimi": "Kirjapaino",
+   "teksti": "Kiinassa painettiin puulaatoilla jo ennen vuotta 868, jolta on vanhin päivätty painettu kirja, ja Bi Sheng teki savikirjasimet 1040-luvulla. Koreassa kehitettiin metallikirjasimet; vanhin säilynyt kirja on vuodelta 1377. Yhteyttä Eurooppaan ei ole todistettu: Gutenberg rakensi kirjapainonsa Mainzissa noin vuonna 1450.",
+   "reitti": [
+    {
+     "vaihe": "Kiina: puulaattapaino (Timanttisuutra, Dunhuang, 868)",
+     "vuosi": "868",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Kiina: Bi Sheng, savikirjasimet (Shen Kuon kuvaus)",
+     "vuosi": "1041-1048 (Wikipedian mukaan noin 1040; SmartHistory: 'varhainen 1000-luku')",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Korea: metallikirjasin (Jikji)",
+     "vuosi": "1377 (aiempia, kadonneita: 1234, mahdollisesti 1239)",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Mahdolliset väylät länteen: mongolivalta 1200-1300-luvuilla, uiguurit ja Persian ilkhanit; EI todistettu. Wikipedia: 'ei ratkaisevaa näyttöä' siitä, että kiinalainen painotekniikka olisi saapunut Eurooppaan; McDermott: varhaisin todiste eurooppalaisten tiedosta Kiinan kirjapainosta vasta 1500-luvun alussa",
+     "vuosi": "1200-1300-luku (spekulaatio)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Eurooppa: puupainanta tekstiileille keskellä 1300-lukua, kuvat arkeille 1300-luvun lopussa; lohkokirjat Saksassa noin 1400",
+     "vuosi": "1300-luvun puoliväli - 1400",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Mainz, Saksa: Gutenbergin kirjapaino (metallikirjasimet, öljypohjainen muste, puristin) noin 1440-1450; 42-rivinen Raamattu 1454/1455",
+     "vuosi": "noin 1440-1450; Raamattu 1454/1455",
+     "varmuus": "V"
+    }
+   ],
+   "kiistat": "Puupainanta: siirtyminen Kiinasta Eurooppaan KIISTANALAINEN; ei ratkaisevaa näyttöä (Wikipedia: History of printing). Joillakin on esitetty mongoliajan siirtoa (Tsien) tai romanien kautta tulleita vaikutteita (Richardson), McDermott pitää yhtäläisyyksiä yhtä hyvin rinnakkaiskehityksenä. Liikkuva kirjasin: Gutenbergin keksintö on TODENNÄKÖISESTI riippumaton eurooppalainen kehitys: McDermott: 'mikään teksti ei osoita tietoa aasialaisesta liikkuvasta kirjasimesta' Euroopassa ennen 1450; Gutenbergin menetelmä (valumuotti, metalliseos, puristin) ei vastaa mitään aiempaa kiinalaista kuvausta. Vastakkaisen kannan edustajat (Gies, Hudson) pitävät siirtymistä todennäköisenä tai uskovat todistustaakan olevan itsenäistä keksintöä väittävillä; he eivät esitä dokumentoitua reittiä. Henri-Jean Martin: korealainen metallipaino 'erittäin samanlainen' kuin Gutenbergin, mutta materiaalit ja menetelmät erosivat. Panfilo Castaldi / Marco Polo -tarina on legenda (Yule epäili). Rehellinen luokitus: 'siirtyminen todistamaton; eurooppalainen keksintö todennäköisesti itsenäinen; kysymys on kiistanalainen'.",
+   "lahteet": [
+    {
+     "vaite": "Bi Sheng, Qingli-kausi 1041-1048; Shen Kuon Unelma-lampi -esseet; ensimmäinen liikkuvan kirjasimen järjestelmä, noin 400 vuotta ennen Gutenbergia",
+     "url": "https://www.berkshirepublishing.com/ecph-china/2017/12/21/bi-sheng-990-1052/",
+     "huom": "Berkshire Encyclopedia of China -blogisivu; ei mainitse Wang Zhenia."
+    },
+    {
+     "vaite": "Bi Sheng noin 1040; Korean Jikji 1377; 1234 kadonnut metallikirjasinkirja, 1239 mahdollinen; Gutenberg valukäsityö 1436-1450, Raamattu 1455; kiista: Gies vs McDermott ('mikään teksti ei osoita tietoa aasialaisesta liikkuvasta kirjasimesta' ennen 1450); Martin; Castaldi-legenda",
+     "url": "https://en.wikipedia.org/wiki/Movable_type",
+     "huom": "Wikipedia; yksi lähde. Luettu 0-100000 merkkiä."
+    },
+    {
+     "vaite": "Puupainanta Euroopassa: tekstiileille keskellä 1300-lukua, arkeille 1300-luvun lopussa, lohkokirjat noin 1400; 'ei ratkaisevaa näyttöä' siirtymisestä; Tsien, Richardson, McDermott; Gutenberg noin 1440",
+     "url": "https://en.wikipedia.org/wiki/History_of_printing",
+     "huom": "Wikipedia; sama julkaisija kuin edellinen, EI riippumaton. Luettu 0-100000 merkkiä."
+    },
+    {
+     "vaite": "Gutenbergin Raamattu Mainzissa 1454/1455 (Gutenberg ja Fust); 6.11.1455 asiakirja mainitsee Gutenbergin",
+     "url": "https://guides.loc.gov/gutenberg",
+     "huom": "Library of Congress; riippumaton Wikipediasta."
+    },
+    {
+     "vaite": "Jikji: tulostettu liikkuvalla metallikirjasimella heinäkuussa 1377 Cheongjussa; 'vanhin saatavilla oleva todiste'; aiempia metallipainantoja mainitaan vanhoissa korealaisissa kirjoissa",
+     "url": "https://www.unesco.org/en/memory-world/baegun-hwasang-chorok-buljo-jikji-simche-yojeol-volii-second-volume-anthology-great-buddhist-priests",
+     "huom": "UNESCO Memory of the World."
+    },
+    {
+     "vaite": "Jikji 1377 edelsi Gutenbergin Raamattua 77 vuodella; Timanttisuutra painettu puulaatoilla Kiinassa 868; kehys: rinnakkaiskehitys eri aikoina ja paikoissa (hankkeen oma kehystys, ei todiste); ei käsittele siirtymistä",
+     "url": "https://blogs.loc.gov/preservation/2023/05/jikji-gutenberg/",
+     "huom": "Library of Congress -blogi; kehys 'rinnakkaiset linjat' ei ole tutkimustulos."
+    },
+    {
+     "vaite": "Timanttisuutra: 11.5.868, puulaattapainettu rulla, Wang Jie; 'vanhin säilynyt päivätty painettu kirja', mutta vanhempaa painantaa on",
+     "url": "https://en.wikipedia.org/wiki/Diamond_Sutra",
+     "huom": "Wikipedia; British Library -sivut (bl.uk, idp.bl.uk) antoivat 403, vahvistus vain hakutuloksena (IDP/BL: 'vanhin täydellinen säilynyt päivätty painettu kirja')."
+    },
+    {
+     "vaite": "Gutenberg: eurooppalainen yhdistelmä (kirjasin, muste, puristin) ja kiista; Aasian liikkuva kirjasin vanhempi; mongoliselitys 'mahdollinen, ei vakiintunut' (Atwood: 'vaikea kuvitella ilman mongoleja')",
+     "url": "https://lithub.com/so-gutenberg-didnt-actually-invent-the-printing-press/",
+     "huom": "Literary Hub -essee; kirjoittajan kehystys, siirtymä esitetään mahdollisena, ei todennettuna; käytä vain tukilähteenä."
+    },
+    {
+     "vaite": "Puupainanta Tang-dynastian ajalta; Bi Sheng 'varhainen 1000-luku'; Euroopan kuvapainanta 1300-luvun lopun Saksasta; ei esitä suoraa siirtoa Kiinasta Eurooppaan",
+     "url": "https://human.libretexts.org/Bookshelves/Art/SmartHistory_of_Art/07:_Europe_1300_-_1800/7.03:_Printmaking_in_Europe_c._14001800",
+     "huom": "SmartHistory / LibreTexts -oppikirja."
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "KORJAA",
+    "perustelu": "'Kiinassa painettiin puulaatoilla vuonna 868' antaa vaikutelman, että puupainanta alkoi silloin; 868 on vanhimman päivätyn painetun kirjan (Timanttisuutra) vuosi, puulaattapainantaa on varhemmalta ajalta (varhaisimmat arkit Tang-ajalta, 600-luvulta). Muut väitteet (Bi Sheng 1040-luku, Jikji 1377, Gutenberg n. 1450, yhteys todistamaton) pitävät.",
+    "lahteet": [
+     {
+      "url": "https://idp.bl.uk/?p=8757",
+      "mita_vahvistaa": "Timanttisuutra, päivätty 11.5.868, British Library"
+     },
+     {
+      "url": "https://www.thecollector.com/what-is-the-diamond-sutra/",
+      "mita_vahvistaa": "Vanhin päivätty painettu kirja; puulaattapainantaa on 600-luvulta"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Bi_Sheng",
+      "mita_vahvistaa": "Bi Sheng savikirjasimet Qingli-kaudella 1041-1048 (Shen Kuon Dream Pool Essays)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Jikji",
+      "mita_vahvistaa": "Jikji 1377 vanhin säilynyt metallikirjasimilla painettu kirja; 1234 aiempi kirja ei säily"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Movable_type",
+      "mita_vahvistaa": "Itä-Aasian ja Euroopan yhteys todistamatta; Gutenberg n. 1450"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kompassi",
+   "nimi": "Kompassi",
+   "teksti": "Kiinassa magneettikiveä käytettiin ennustamiseen jo Han-ajalla, ja Shen Kuo kuvasi magnetoidun neulan noin vuonna 1088. Laivoilla sitä käytettiin 1100-luvun alussa. Reitti Eurooppaan on epävarma, ja eurooppalainen maininta on noin vuodelta 1190.",
+   "reitti": [
+    {
+     "vaihe": "Kiina: magneettikivi ennustamisessa/geomantiassa (Han); ei merenkulkua",
+     "vuosi": "noin 2. vuosisata eaa. - 1. vuosisata jaa. (kiistelty)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Kiina: maakäyttö (Wujing Zongyao), Shen Kuo (magnetoitu neula), Zhu Yu (merenkulku)",
+     "vuosi": "1040-1044; 1086/1088; 1111-1117",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Persia/islamilainen maailma: ensimmäinen maininta Jawami ul-Hikayat -kokoelmassa (kalanmuotoinen rautalehti, Punainen meri/Persianlahti); myöhemmin Baylak al-Qibjaqi (kirjoitettu 1282, matka 1242)",
+     "vuosi": "1232 (arabilähteet ovat Euroopan lähteitä nuorempia)",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Eurooppa: Alexander Neckam kuvaa merimiesten magnetoidun neulan (De naturis rerum; Wikipedia noin 1190, thonyc 1187-1202, NHMFL De utensilibus 1180). Neckam kuvaa sen tunnettuna käytäntönä, ei uutuutena",
+     "vuosi": "noin 1180-1202 (EPÄVARMA: lähteet vaihtelevat)",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Eurooppa: Petrus Peregrinus, Epistola de magnete (kuiva neula, pivotoitu)",
+     "vuosi": "1269",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Tarina Flavio Giojasta (Amalfi) kuivakompassin kehittäjänä",
+     "vuosi": "1295-1302 (perinne)",
+     "varmuus": "kiistanalainen"
+    }
+   ],
+   "kiistat": "Siirtyminen Kiinasta Eurooppaan: KIISTANALAINEN. Joidenkin historioitsijoiden mukaan arabit toivat kompassin Kiinasta Eurooppaan (Needham pitää siirtymistä Aasiasta avoimena mahdollisuutena), mutta vanhimmat islamilaiset maininnat (1232) ovat nuorempia kuin vanhimmat eurooppalaiset (noin 1180-1200), joten tavallinen 'Kiina-Arabit-Eurooppa' -reitti ei ole dokumentoitu. Muita ehdotuksia: Intian valtameren reitti, ristiretkeläiset, ja eurooppalainen itsenäinen uudelleenkeksintö (rinnakkain painotekniikan kanssa). Kirjallista todistetta siirrosta ei ole. Hirthin väite, että arabit ja persialaiset käyttivät kompassia ennen kiinalaisia, on Needhamin mukaan harhaanjohtava (virheellinen käännös). Intialainen 'rautakala öljykulhossa' 300-luvulla: todisteet 'hyvin heikkoja'. Rehellinen luokitus: 'siirtyminen kiistanalainen; mahdollinen mutta ei todennettu'.",
+   "lahteet": [
+    {
+     "vaite": "Han-lusikka (Lunheng, 70-80 jaa.; ei löydetty hautaa; ei nimenomaan magnetismia); Wujing Zongyao 1040-44; Shen Kuo 1088 ensimmäinen kiistaton; Zhu Yu 1111-1117; Neckam noin 1190 (1187-1202); Jawami ul-Hikayat 1232; Needham, Hirth, Kreutz ja itsenäinen keksintö; Gioja 1295-1302 perinne; Peregrinus 1269",
+     "url": "https://en.wikipedia.org/wiki/History_of_the_compass",
+     "huom": "Wikipedia; yksi lähde."
+    },
+    {
+     "vaite": "Shen Kua 1086 kuvaa kompassin merenkulussa (NHMFL); Neckam 1180 'De utensilibus' vanhin eurooppalainen kuvaus; Peregrinus 1269",
+     "url": "https://nationalmaglab.org/magnet-academy/history-of-electricity-magnetism/timeline/600-bc-1599/",
+     "huom": "Florida State University / National MagLab; vuodet poikkeavat Wikipediasta (1086 vs 1088; 1180 vs 1190). EPÄVARMA."
+    },
+    {
+     "vaite": "Vanhin kompassi geomantiaan 2. vuosisata eaa. - 1. vuosisata jaa.; Shen Kuo 1088; maakäyttö ennen 1044; Zhu Yu 1111-1117; Neckam 1187-1202; Thomas of Cantimpre noin 1240; Jawami ul-Hikayat 1232 Kiina-tyyppinen kalarauta; ehdotus eurooppalaisesta itsenäisestä uudelleenkeksinnästä",
+     "url": "https://thonyc.wordpress.com/2023/09/06/magnetic-variations-i-setting-the-scene/",
+     "huom": "Blogi (tieteenhistorioitsija Thony Christie); EI ainoa lähde; vahvistaa Wikipedian linjaa."
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "OK",
+    "perustelu": "Han-ajan magneettikiviennustus, Shen Kuon Dream Pool Essays (1088, magnetoitu neula), Zhu Yu merenkulkumaininta (1111-1117, kirja julk. 1119) ja Neckamin maininta n. 1190 vahvistuvat. 'Laivoilla 1100-luvun alussa' sopii Zhu Yu kuvaukseen. Epävarma reitti Eurooppaan on kuvattu oikein.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/History_of_the_compass",
+      "mita_vahvistaa": "Han-ajan lodestone-kompassit ennustukseen; Shen Kuo 1088; Zhu Yu 1111-1117 ensimmäinen merenkulkumaininta; Neckam n. 1190"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Zhu_Yu_(author)",
+      "mita_vahvistaa": "Pingzhou Ketan, magneettineula merenkulussa, julkaisu 1119"
+     },
+     {
+      "url": "https://compasscollector.com/about/compass-history",
+      "mita_vahvistaa": "Kompassin historia, Shen Kuo ja Neckam"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ruuti",
+   "nimi": "Ruuti",
+   "teksti": "Kiinassa taolaiset alkemistit kehittivät ruudin 800-luvulla etsiessään kuolemattomuuden eliksiiriä, ja varhaisimmat säilyneet ruutireseptit ovat sotakäsikirjassa vuodelta 1044. Ruuti levisi länteen, mutta reitistä, mongoleista tai arabeista, ei ole varmuutta. Euroopassa Roger Bacon kuvasi räjähtävää seosta noin 1267, ja ensimmäiset tykkimaininnat ovat 1320-luvulta.",
+   "reitti": [
+    {
+     "vaihe": "Kiina: alkemistien seokset, ensimmäinen sotilaskäyttö, 1044 ruutireseptit",
+     "vuosi": "noin 808 / 800-luku; 900-luku; 1044",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Kiina: tuliheitin ja käsitykki (1132, 1288, 1298)",
+     "vuosi": "1132-1298",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Keski-Aasia/mongolit: mongoliselitys. Mohi 1241: mahdollinen ruudinkäyttö, mutta lähde epäselvä, reittiä ei tunneta; Timothy May: ei konkreettista näyttöä säännöllisestä käytöstä Kiinan ulkopuolella; Kate Raphael epäilee mongolien roolia; Andrade ja Haw perustelevat sitä",
+     "vuosi": "1200-luku",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Islamilainen maailma: Hasan al-Rammahin ruutireseptit ('Kiinan lumi' = salpietari). Al-Hassan väittää ruudin olleen yleinen Syyriassa ja Egyptissä jo 1100-luvun lopulla tai 1200-luvun alussa; Ain Jalut 1260 'ensimmäinen tykki' on kiistelty (naft = nafta vai ruuti)",
+     "vuosi": "1240-1280 (Wikipedia); al-Hassan: aiemmin",
+     "varmuus": "todennäköinen"
+    },
+    {
+     "vaihe": "Eurooppa: Roger Bacon, Opus Majus ja Opus Tertium noin 1267-1268: 'peukalon kokoisen välineen' räjähdysääni, ainesosina salpietari, rikki ja pajuhiili. Tulkinta kiistelty (ks. kiistat); Liber ignium (Marcus Graecus) vanhimmat mannereurooppalaiset reseptit",
+     "vuosi": "1267 (Bacon); 1280-1300 (Liber ignium)",
+     "varmuus": "kiistanalainen"
+    },
+    {
+     "vaihe": "Eurooppa: ensimmäinen tykin kuva (Walter de Milemete) ja ensimmäinen virallinen maininta tykistä (Firenze)",
+     "vuosi": "1326",
+     "varmuus": "V"
+    },
+    {
+     "vaihe": "Eurooppa: tykit laajasti käytössä",
+     "vuosi": "1300-luvun puoliväli",
+     "varmuus": "V"
+    }
+   ],
+   "kiistat": "Ruudin KIINALAINEN ALKUPERÄ on laajasti hyväksytty (EBSCO: 'todennäköisesti kiinalainen keksintö'; Wikipedia: alkuperä Kiinassa hyväksytty). Siirtymisen REITTI länteen on KIISTANALAINEN: yleinen 'lineaarinen' malli (Kiina -> mongolit -> islamilaiset valtiot -> Eurooppa) vastaan itsenäisen keksimisen malli (jokainen alue omien alkemistiensa kautta; Eurooppa Marcus Graecuksen ja Baconin kautta). Rehellinen luokitus: 'siirtyminen Kiinasta TODENNÄKÖINEN; reitti (mongolit/islam) kiistanalainen; itsenäinen eurooppalainen keksintö ei poissuljettu'. Roger Bacon: Opus Majus (kirjoitettu 1267) ja Opus Tertium (1267) sisältävät ruutia muistuttavan seoksen kuvauksen (lasten 'ilotulitus'); vanha väite 'Baconin salaisesta ruutireseptistä' perustuu Epistola de secretis operibus -kirjeeseen, jonka aitoutta epäillään ('todennäköisesti väärennös'), ja Himen 1900-luvun alun salakirjoitusteoria on hylätty (Thorndike, Sarton, Steele, Needham): saatu suhde 7:5:5 ei toimi edes ilotulitteena. Partington ym.: Bacon näki todennäköisesti ainakin yhden kiinalaisen pamauttimen esittelyn, ehkä fransiskaanien kautta, jotka olivat käyneet mongolivallassa (Wilhelm Rubruck palasi 1256/1257) - tämä on päätelmä, ei todiste. Encyclopedia.com antaa Baconin käsikirjoitukselle vuoden 1242; tämä on ristiriidassa Wikipedian ja Stanfordin kanssa (1267-1268), EPÄVARMA, ei käytetty.",
+   "lahteet": [
+    {
+     "vaite": "Noin 808 ensimmäinen vahvistettu kaava; 904 sotilaskäyttö; 1044 Wujing Zongyao; 1132 tuliheitin; 1288 Heilongjiang; 1298 Xanadu; Hasan al-Rammah 1240-1280; Ain Jalut 1260 kiistelty; Mohi 1241 epäselvä; Bacon 1267; Liber ignium 1280-1300; Milemete 1326",
+     "url": "https://en.wikipedia.org/wiki/Gunpowder",
+     "huom": "Wikipedia; yksi lähde. Luettu 0-100000 merkkiä; 100000-200000 osa ei sisältänyt leviämisosiota."
+    },
+    {
+     "vaite": "Varhainen 800-luku 'proto-ruuti'; 800-luvun jälkipuolisko räjähtäviä seoksia; 900-luku huo yao; 919 liekinheittimen sytytin; 1044 ensimmäinen kaavakirja; 1200-luku putkesta metalliputkeksi (Needham); 'todennäköisesti kiinalainen keksintö'; 'ruuti ilmestyi länteen vasta 1200-luvun lopussa'; aseiden alkuperä kiistelty (Kiina/Eurooppa/arabit)",
+     "url": "https://www.ebsco.com/research-starters/history/invention-gunpowder-and-guns/",
+     "huom": "EBSCO Research Starters; riippumaton Wikipediasta. Ei mainitse Baconia."
+    },
+    {
+     "vaite": "Ruuti Kiinasta, noin 900-luku; Baconin käsikirjoitus (annettu 1242, ristiriita) voisi sisältää kaavan; Bacon ehkä arabialaisista kirjoituksista; Gent-Englanti 1314; Firenze 1326 ensimmäinen virallinen tykkimaininta; kaksi näkemystä (oppiminen vs itsenäinen keksintö)",
+     "url": "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/invention-gunpowder-and-its-introduction-europe",
+     "huom": "Encyclopedia.com; Baconin vuosi 1242 ristiriidassa muiden kanssa; ei käytetä Baconin ajoitukseen."
+    },
+    {
+     "vaite": "Opus Majus ja Opus Tertium lähetetty paavi Klemens IV:lle noin 1267-68; Epistola de secretis operibus luetteloituna 1260-luvun töihin (aitoutta ei käsitellä); ei mainitse ruutia näkyvässä tekstissä",
+     "url": "https://plato.stanford.edu/entries/roger-bacon/",
+     "huom": "Stanford Encyclopedia of Philosophy; vain ajoitus."
+    },
+    {
+     "vaite": "Baconin Opus Majus ruutia muistuttava seos; Epistola 'todennäköisesti väärennös'; Hime hylätty; Partington: kiinalainen pamautin, mahdollisesti fransiskaanien kautta (Rubruck)",
+     "url": "https://en.wikipedia.org/wiki/Roger_Bacon",
+     "huom": "Wikipedia; sama julkaisija kuin Gunpowder, EI riippumaton; käytetty vain Baconin kiistan tarkentamiseen."
+    }
+   ],
+   "riippumaton_tarkistus_20261017": {
+    "tuomio": "KORJAA",
+    "perustelu": "Wujing Zongyao (1044) on sotakäsikirja, ei 'ruutireseptikirja'; se sisältää varhaisimmat säilyneet kirjalliset ruutireseptit (säilynyt kopio vasta vuodelta 1510). 'Löysivät ruudin 800-luvulla' on yksinkertaistus: Tang-ajan alkemistit kokeilivat salpietaria ja rikkiä kuolemattomuuden eliksiiriä etsiessään, ja tekstit (Zhenyuan miaodao yaolue n. 850) ovat varoituksia. Tykin kuvaus 1326: Milemeten käsikirjoitus on päivätty 1326 tai 1327 ja Firenzen asiakirja 1326, joten 'noin 1320-luvulla' on varmempi.",
+    "lahteet": [
+     {
+      "url": "https://en.wikipedia.org/wiki/History_of_gunpowder",
+      "mita_vahvistaa": "9. vuosisadan taolaiset alkemistit; Wujing Zongyao 1044 varhaisin säilynyt kaava (kopio 1510); Bacon 1267; levintäreitti epävarma (mongolit vai muut)"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Zhenyuan_Miaodao_Yaolue",
+      "mita_vahvistaa": "Taolainen teksti n. 850-950 varoitus rikin ja salpietarin seoksesta"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Gunpowder_artillery_in_the_Middle_Ages",
+      "mita_vahvistaa": "Firenzen asiakirja 1326 ensimmäinen eurooppalainen tykkimaininta; Milemete n. 1326-27 ensimmäinen kuva"
+     },
+     {
+      "url": "https://en.wikipedia.org/wiki/Walter_de_Milemete",
+      "mita_vahvistaa": "Milemeten tutkielma 1326, pot-de-fer-kuva, päiväys 1326/1327"
+     },
+     {
+      "url": "https://www.timeshighereducation.com/features/flight-of-fancy-reveals-truth-of-first-big-shot/152480.article",
+      "mita_vahvistaa": "Milemeten kuva ja sen tulkinnanvaraisuus"
+     }
+    ]
+   }
+  }
+ ],
+ "muut": [
+  {
+   "id": "zheng-he",
+   "nimi": "Zheng He",
+   "teksti": "Kiinassa Mingin amiraali Zheng He johti vuosina 1405-1433 seitsemää merimatkaa Intian valtamerelle; ensimmäisellä oli lähteiden mukaan noin 300 laivaa. Matkat ulottuivat Itä-Afrikan rannikolle. Ne päättyivät 1430-luvulla kustannusten ja virkamiesten vastustuksen vuoksi.",
+   "faktat": [
+    "Seitsemän retkeä 1405-1433 (Wikipedia: 'between 1405 and 1433', ensimmäinen lähti heinäkuussa 1405; Cambridge, Journal of Chinese History: 'voyages between 1405 and 1433'). Seitsemäs retki 1431-1433; Zheng He kuoli todennäköisesti 1433 retken aikana tai sen jälkeen, mahdollisesti Calicutin lähellä (muiden mukaan 1435 Nankingissa). EPÄVARMA: World History Encyclopedia -sivun omat vuosiluvut (1404, 1408, 1409, 1413, 1417, 1421, 1431) poikkeavat toisistaan.",
+    "Laivaston koko EPÄVARMA, lähteet vaihtelevat: ensimmäinen retki noin 317 laivaa ja noin 28 000 miestä (Wikipedia); World History Encyclopedia: 317 laivaa, joista 62 'baochuan'-aarrelaivaa, ja 20 000-32 000 henkeä (haarukka). Wikipedia: myöhempien retkien koosta ei tarkkaa tietoa. Käytä korttiin 'noin 300' tai 'satoja' -muotoa.",
+    "Aarrelaivojen pituudet kiistanalaisia: 127 metriä on peräisin Luo Maodengin romaanista 1597 (Dreyer: ei sovellu historialliseksi todisteeksi); monet tutkijat arvioivat 60-75 metriä (Nankingin telakan kaivauksissa allas 421 m pitkä mutta enintään 41 m leveä; Wikipedia).",
+    "Kauimmaiset paikat, Itä-Afrikka: Swahilirannikko, Malindi (kirahvi tuotiin Malindista; Wikipedia), Mogadishu, Malindi ja Mombasa retkillä 5-7 (World History Encyclopedia: 'first attested Chinese visitor to the Swahili coast'; mingdynastyhistory.com: Mogadishu ja Malindi 5. retkellä). Zanzibar vain yhdestä lähteestä, ei käytetä.",
+    "Kauimmaiset paikat, Arabian niemimaa: Hormuz, Aden ja Jeddah (World History Encyclopedia mainitsee ne 4. retkelle; muut lähteet seitsemännelle, EPÄVARMA retki). Zheng He ei itse tehnyt haj-matkaa; osa merimiehistä lähetettiin Meccaan viimeisellä retkellä (Wikipedia; WHE: 'ei sano, että Zheng He itse meni'). Älä väitä, että laivasto kävi Meccassa.",
+    "Tarkoitus: Mingin vallan ja tributaarikaupan laajentaminen Intian valtamerellä; Wikipedia: ensimmäinen retki mahdollisesti liittyi karanneen Jianwen-keisarin etsintään ('History of Ming' perusteella pääteltynä, spekulaatiota); retket vahvistivat ruhtinaiden kunnianosoituksia (tribuutti) ja taistelivat merirosvoja vastaan (Chen Zuyi). Wikipedian ja WHE: siirtomaa-tulkinta 'ei laajalti hyväksytty'. Liberating Narratives: retket tähtäsivät ensisijaisesti tributaarijärjestelmän laajentamiseen, eivät kauppaan (ei kauppiaita mukana).",
+    "Retkien loppu: Hongxin keisari pysäytti retket 1424 (Wikipedia); Xuande tilasi seitsemännen 1430-1431 (Wikipedia ja WHE); Xuande päätti retket 1433 jälkeen: tavoitteet saavutettu ja kustannukset liian suuret (Liberating Narratives); Cambridge: yleisimmin kustannukset, lisäksi poliittiset ja aatteelliset syyt, painopisteen siirto pohjoiseen Mongolien rajaan; kirjoittajan oma kanta: keisarin ja virkamiesten verotuskilpailu. Wikipedia: Konfutselaisten virkamiesten vastustus, kustannukset, Mongolien torjunta (1449 Tumun katastrofin jälkeen Muurin laajennus).",
+    "Kiistanalaista: väite, että hovi määräsi merikirjat poltettaviksi ja suurten laivojen rakentamisen kielletyksi, on suosittu mutta heikko: Wikipedia: viralliset historiat vähättelivät retkiä, osa pitää tätä tahallisena, toiset katsovat, että asiakirjat hajaantuivat osastoille; Wikipedia ei käytä sanaa 'poltettu'. WHE: Xuande kielsi merenkulkualusten rakentamisen, mutta tätä ei vahvisteta toisesta tutkimuslähteestä - EPÄVARMA, ei kortissa. Cambridge: hovi lopetti retket 'äkillisesti vuoden 1436 jälkeen' (abstraktin sanamuoto; poikkeaa vuodesta 1433)."
+   ],
+   "lahteet": [
+    {
+     "vaite": "Seitsemän retkeä 1405-1433; 317 laivaa ja noin 28 000 miestä ensimmäisellä; Itä-Afrikka/Malindi; Mecca-merimiehet; Hongxi 1424; Xuande seitsemäs; Konfutselaiset ja kustannukset; Mongolit; ei 'polttoa'; aarrelaivojen koko kiistelty",
+     "url": "https://en.wikipedia.org/wiki/Zheng_He",
+     "huom": "Wikipedia; yksi lähde. Luettu 0-100000 merkkiä."
+    },
+    {
+     "vaite": "317 laivaa (62 aarrelaivaa); 20 000-32 000 henkeä; Mogadishu, Malindi, Mombasa; Hormuz, Aden, Jeddah; Xuande lopetti, kustannukset ja Mongolit mahdollisia syitä; siirtomaatulkinta ei laajalti hyväksytty; vuosiluvut sisäisesti ristiriitaisia",
+     "url": "https://www.worldhistory.org/article/1334/the-seven-voyages-of-zheng-he/",
+     "huom": "World History Encyclopedia; riippumaton Wikipediasta; vuodet epäyhtenäisiä."
+    },
+    {
+     "vaite": "Retket 1405-1433 'intensiivisesti tutkittu'; päättäminen yleisimmin kustannusten takia; vaihtoehtoiset syyt: Mongolit, aate; fiskaalinen kilpailu keisarin ja virkamiesten välillä; 'äkillisesti vuoden 1436 jälkeen'",
+     "url": "https://www.cambridge.org/core/journals/journal-of-chinese-history/article/cessation-of-zheng-hes-voyages-and-the-beginning-of-private-sailings-fiscal-competition-between-emperors-and-bureaucrats/8FE45F3210A4DF174A4EC2B30868D433",
+     "huom": "Cambridge University Press, Journal of Chinese History (tutkimusartikkeli); vain abstrakti ja johdanto luettu."
+    },
+    {
+     "vaite": "Seitsemäs retki päättyi 1433; Xuande lopetti, koska alkuperäiset tavoitteet oli saavutettu ja kustannukset liian suuret; retket laajensivat tributaarijärjestelmää, eivät kauppaa",
+     "url": "https://www.liberatingnarratives.com/stepping-out/",
+     "huom": "Liberating Narratives -oppimateriaali (tutkijatyö); ei anna laivaston lukuja."
+    },
+    {
+     "vaite": "Retkitaulukko: 4. retki Hormuz, 5. retki Mogadishu ja Malindi, 7. retki Punainen meri ja Itä-Afrikka; 'yli 200 laivaa'",
+     "url": "https://mingdynastyhistory.com/zheng-he-7-voyages-timeline/",
+     "huom": "Toissijainen sivusto; lukuja ristiriitaisia; ei käytetä todisteena yksin, vain ristiintarkistukseen."
+    }
+   ]
+  },
+  {
+   "id": "marco-polo",
+   "nimi": "Marco Polo",
+   "teksti": "Venetsialainen Marco Polo lähti idän matkalle 1271 ja palasi 1295. Kirjansa mukaan hän eli Kublai-kaanin Kiinassa; useimmat tutkijat pitävät sitä todennäköisenä, mutta virka-asemasta ei ole varmuutta. Genovan vankilassa 1298 hän kertoi matkansa, ja syntyi Il Milione.",
+   "faktat": [
+    "Syntyi noin 1254 Venetsiassa (tarkka paikka ja päivä arkistoissa tuntemattomia), kuoli 8.1.1324 (Wikipedia). Matka-aika: lähti Venetsiasta 1271 isänsä Niccolòn ja setänsä Maffeon kanssa 17-vuotiaana, palasi 1295 (Wikipedia, Encyclopedia.com). Matka itään kesti yli kolme vuotta. Lähtö merimatkalle Persiaan 1291 tai 1292, EPÄVARMA vuosi (lähteet 1291/1292).",
+    "Genovassa vangiksi 1298 (Venetsian ja Genovan sota; yksi lähde antaa 1296); sanelu pisalaiselle Rustichellolle; kirjan kirjoitusvuosi noin 1298-1299 (Wikipedia/Latham; Jackson: 700-vuotisjuhla 1998 -> 1298). Alkuperäistä käsikirjoitusta ei ole säilynyt; kirjan nimi 'Le devisement dou monde' / 'Il Milione' (Wikipedia: 'The Book of the Marvels of the World, Il Milione'; Encyclopedia.com: nimet vaihtelevat). Kirja on useina erilaisina käsikirjoituksina; fantastiset osat tulevat esiin vasta 1500-luvun painoksissa (hakutulos).",
+    "Oliko Kiinassa? Tutkijoiden valtavirta: kyllä (Rong Xinjiang, Sixth Tone: 'mainstream view in academia is that Marco Polo did indeed visit China'; Vogel 2012 'Marco Polo Was in China' perustelee seteleiden ja suolan yksityiskohdilla; ScienceDaily 2012). Vastaväite: Frances Wood 1995: hän tuskin pääsi pidemmälle kuin Mustanmeren kauppa-asemille ja Konstantinopoliin, luotti persialaisiin lähteisiin; de Rachewiltz ja Haw kumosivat suurimman osan (Wikipedia, ANU-abstrakti).",
+    "Hoitiko virkaa? EPÄVARMA/KIISTANALAINEN: kirja sanoo hallinneensa Yangzhoun kaupunkia kolme vuotta (Wikipedia; Encyclopedia.com: 1282 alkaen), mutta yksikään kiinalainen lähde ei mainitse Polo-nimistä henkilöä (David Morgan; Herbert Franke: 'Po-lo' esiintyy Yuan-teksteissä vain mongolialaisista tai turkkilaisista). Peng Hain ehdotus 'Boluo'-hovimiehestä kiistelty. Pelliot: ehkä suolamonopolin virkamies Yangzhoussa. Rong Xinjiang (Cai Meibiaon mukaan): ei virallista virkaa vaan 'ortoq' (etuoikeutettu kauppias), josta ei jää virkanimitysasiakirjoihin merkintöjä. Kiinalaisessa lähteessä ei konkreettista todistetta virasta ('conclusive evidence has not been found').",
+    "Todisteita matkasta: Polon seteli- ja suolakuvaukset ovat poikkeuksellisen tarkkoja ja Yuan-ajan asiakirjojen kanssa yhteneviä, vaikka Vogelin mukaan nämä lähteet eivät olleet julkisia silloin; kristillisten kirkkojen mainitseminen Zhenjiangissa vahvistettu 1300-luvun kiinalaisessa tekstissä; prinsessa Kököchinin matka Persiaan vahvistettu persialaisissa ja kiinalaisissa lähteissä (ei mainitse Poloa); Yongle Dadian -muistio kolmesta Ilkhanaattiin lähetetystä lähettiläästä (Yang Zhijiu 1941).",
+    "Puutteet ja virheet: ei mainitse Kiinan muuria (Haw: nykyinen muuri Ming-ajalta), teetä, kiinalaisia merkkejä, syömäpuikkoja, jalkojen sitomista; Xiangyangin piiritys (päättyi 1273) väite on mahdoton, koska Polo ei ollut vielä Kiinassa (Wikipedia; Jackson: tahallinen valhe); Marco Polo -sillan kaaret väärin; viisimastoiset laivat (kaivauksissa kolme mastoa). Rong: kirjassa 'monia liioiteltuja ja jopa fantastisia aineksia'.",
+    "Ei suoraan kiinalaisista lähteistä: Polon tai hänen isänsä ja setänsä nimi ei esiinny missään kiinalaisessa asiakirjassa, mutta ScienceDaily/Vogel: poissaolo todistaa vähän. Jackson 1998 ('Marco Polo and His Travels', BSOAS): ei yksiselitteistä kantaa, teosta pitää arvioida kokonaisuutena; kysymys 'Just where did Polo go?'.",
+    "Korttiin: kerro 'oleskeli Kublai-kaanin Kiinassa' vain kirjan väitteenä; ÄLÄ sano varmasti hoitaneensa virkaa. Kortti sanoo, että tutkijat pitävät matkaa todennäköisenä ja virka-asemasta ei ole varmuutta."
+   ],
+   "lahteet": [
+    {
+     "vaite": "Syntynyt noin 1254, kuollut 8.1.1324; matka 1271-1295; Rustichello, Genova; kirjan kirjoitus 1298-1299; Yangzhou-väite ja kiinalaisten lähteiden hiljaisuus; Wood 1995, Haw, Jackson; suolamonopoli (Pelliot); Xiangyang 1273; puutteet ja todisteet",
+     "url": "https://en.wikipedia.org/wiki/Marco_Polo",
+     "huom": "Wikipedia; yksi lähde. Luettu 0-100000 merkkiä."
+    },
+    {
+     "vaite": "Valtavirta: Polo kävi Kiinassa; Chinese lähteissä ei virkaa koskevaa 'conclusive evidence'; Yongle Dadian -muistio (Yang Zhijiu 1941); ortoq-selitys (Cai Meibiao); Vogelin 2012 kirja; kirjassa liioiteltuja ja fantastisia aineksia",
+     "url": "https://www.sixthtone.com/news/1015007/the-scholar-bringing-marco-polo-back-to-china",
+     "huom": "Sixth Tone -haastattelu (Rong Xinjiang, historioitsija); toimituksellinen, ei vertaisarvioitu; riippumaton Wikipediasta."
+    },
+    {
+     "vaite": "Wood väittää, ettei Polo 'probably never travelled much further than the family's trading post on the Black Sea and in Constantinople'; de Rachewiltz'n arvio: monet väitteet nousseet jo 1800-luvulta mutta eivät ottaneet vakavasti",
+     "url": "https://openresearch-repository.anu.edu.au/items/e70f6bcf-b65a-457e-a871-56eacb668e19",
+     "huom": "ANU Open Research; abstrakti, de Rachewiltzin arvostelu Woodin kirjasta."
+    },
+    {
+     "vaite": "Vogelin tutkimus: runsaasti näyttöä siitä, että Polo kävi Kiinassa; setelit ja suola; virkarooli perustuu epäsuoraan näyttöön; ei Polon nimeä missään kiinalaisessa asiakirjassa",
+     "url": "https://www.sciencedaily.com/releases/2012/04/120416100439.htm",
+     "huom": "ScienceDaily (Tübingenin yliopiston tiedote 2012); lehdistötiedote, ei vertaisarvioitu."
+    },
+    {
+     "vaite": "Jackson: kirja 'Le devisament dou monde', sepitetty noin 1298; Woodin kanta; Jackson: Suuri muuri -vastaväite hylättävä, Xiangyangin piiritys 'deliberate falsehood'; 'take the work as a whole'",
+     "url": "https://www.medievalists.net/2010/03/marco-polo-and-his-travels/",
+     "huom": "Medievalists.net -uusintajulkaisu Peter Jacksonin artikkelista (BSOAS 1998); matka-aikoja ei käsitelty."
+    },
+    {
+     "vaite": "Lähtö 1271 17-vuotiaana; paluu 1295; Genovan vankeus 1298; Rustichello; Yangzhoun kuvernööri 1282 alkaen (lähteiden mukaan); epäilyt: ei Kiinan muuria, jalkojen sitomista",
+     "url": "https://www.encyclopedia.com/people/history/explorers-travelers-and-conquerors-biographies/marco-polo",
+     "huom": "Encyclopedia.com; riippumaton Wikipediasta; luettu 0-100000 merkkiä; viranhoidon kuvaus ristiriitaista lähteiden kesken."
+    }
+   ]
+  }
+ ],
+ "huomiot": [
+  "Britannica, British Library (bl.uk, idp.bl.uk), Iranica, Library of Congress -vihjesivut, Met ja Project MUSE antoivat 403/429/ei-luettavaa; ei kierretty. Niiden sisältö on mukana vain, jos ilmoitettu 'hakutulos'.",
+  "Wikipedia-artikkelit ovat yksi lähde (sama julkaisija) kaikissa kohdissa, vaikka artikkelit ovat eri. Jokaiselle keskeiselle väitteelle on pyritty toiseen Wikipediasta riippumattomaan lähteeseen (Aramco World, EBSCO, Xinhua, LOC, UNESCO, Cambridge, ANU, Sixth Tone, ScienceDaily, Encyclopedia.com, Vanderbilt, Berkshire).",
+  "EPÄVARMA: Xativan paperimyllyn vuosi (1056 Wikipedia ja Aramco vs. 1151 Vanderbilt vs. noin 1150 hakutulokset); korttiin ei ole kirjoitettu tarkkaa vuotta, vain 'Espanjaan'.",
+  "EPÄVARMA: Neckam (1180/1187-1202/1190), Shen Kuo (1086/1088), Zhu Yu (1111-1117/1119): lähteet vaihtelevat; kortissa 1088 ja 'noin 1190' ja 'epävarma'. Xu Jing (1117-1123) ei vahvistettu lähteistä, ei kortissa.",
+  "EPÄVARMA: Baconin vuosi (Opus Majus 1267; Encyclopedia.com 1242 ristiriidassa). Kortti sanoo 'noin 1267'. Baconin salaisen ruutireseptin salakirjoitus on hylätty; Opus Majuksen räjähdyskuvaus (lasten 'ilotulite') on hyväksytty, mutta sen tarkka ruutiluonne on tulkintaa. Heikko kohta: väite nojaa Wikipediaan ja Encyclopedia.comiin; SEP vahvistaa vain teoksen vuoden. Harkitse korttiin sanamuotoa 'kuvasi räjähtävän seoksen' (nykyinen) tai Baconin poistoa kokonaan.",
+  "EPÄVARMA: ruudin 1288 Heilongjiang ja 1298 Xanadu ovat vain Wikipediassa (yksi lähde); ne eivät ole korttitekstissä.",
+  "Paperin 1264 Fabriano -vuosi on yhtiön omaa tietoa (hakutulos); korttiin 'Italia 1200-luvulla'. Kaksi Talas-lähdettä (Wikipedia/Bloom ja Aramco) pitävät sitä legendana tai epäuskottavana; Mount Mug ja Du Huan -yksityiskohdat vain hakutuloksena.",
+  "Zheng He: Cambridge-abstraktin 'after 1436' poikkeaa vuodesta 1433; WHE:n retkivuodet ovat sisäisesti epäyhtenäisiä. Zanzibar vain yhdessä lähteessä; Mecca: laivasto ei kuulu varmasti, vain osa merimiehistä (retki 7). Jeddah-retken numero (4 vs. 7) EPÄVARMA.",
+  "Kortit: kunkin 'kortin_merkkeja' on laskettu ohjelmallisesti Pythonin len():llä (Unicode-merkit). Korteissa ei ole lyhenteitä (eaa., jaa. jne.). Korttien 'päätä Eurooppaan' -sääntö toteutuu paperi-, kirjapaino-, kompassi- ja ruutikorteissa (viimeinen virke Euroopasta tai eurooppalaisesta kohdasta). Zheng Hen ja Marco Polon korteissa sääntö ei koske.",
+  "Marco Polon kortti ei väitä varmaa Kiina-oleskelua eikä virkaa; Kiinassa oleskelu esitetään kirjan väitteenä ja tutkijoiden valtavirran näkemyksenä, virka-asema kiistanalaisena.",
+  "Kiinan 'ei Euroopan keksintö' -viestit: pelin linssissä käytä sanoja 'siirtyminen todennettu' vain paperille (reitti islamilaisen maailman kautta), 'todennäköinen' ruudille ja 'kiistanalainen' kompassille ja kirjapainolle (puupainanta: ei ratkaisevaa näyttöä; Gutenberg: todennäköisesti itsenäinen).",
+  "Riippumainen tarkistus 17.10.2026 (Sonnet, omat haut): 9 korttia, 5 OK, 4 KORJAA (Fei-joki, paperi, kirjapaino, ruuti), korjaukset tehty; lähteet ja koordinaattitarkkuudet kentässä riippumaton_tarkistus_20261017. Chibin piste ±30 km (paikka kiistanalainen), Fei-joen piste ±30 km (Shou; Wikipedia 31.74,116.52)."
+ ]
+}

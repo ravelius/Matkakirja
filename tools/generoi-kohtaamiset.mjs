@@ -19,6 +19,7 @@
  * allowlist" -virhe tulee omasta putkesta vaikka verkko on auki.
  */
 
+import { kieliFi } from './elevenlabs-kieli.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -126,7 +127,7 @@ for (const id of kaupungit) {
       {
         method: 'POST',
         headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ inputs, model_id: MALLI, settings: { stability: STABILITY } }),
+        body: JSON.stringify({ inputs, model_id: MALLI, ...kieliFi(MALLI), settings: { stability: STABILITY } }),
         signal: AbortSignal.timeout(180000),
       },
     );

@@ -1,0 +1,299 @@
+{
+ "kaupunki": "yellowstone",
+ "kaupunkiQ": "Q351",
+ "kohteet": [
+  {
+   "q": "Q858794",
+   "nimi": "Old Faithful",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 44.46047,
+   "lon": -110.82814,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yellowstone National Park (WY, USA), Old Faithful Geyser -- 2022 -- 2599.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowstone_National_Park_(WY%2C_USA)%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park_(WY%2C_USA)%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg",
+     "selite": "Old Faithful -geysir purkautuu säännöllisin väliajoin ja on Yellowstonen tunnetuin nähtävyys.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": ".00 2003 Yellowstone National Park - The Old Faithful Geyser.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/.00_2003_Yellowstone_National_Park_-_The_Old_Faithful_Geyser.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:.00_2003_Yellowstone_National_Park_-_The_Old_Faithful_Geyser.jpg",
+     "selite": "Höyry- ja vesisuihku kohoaa kymmeniä metrejä taivaalle.",
+     "leveys": 1331,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "- panoramio - trukdotcom (46).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-_panoramio_-_trukdotcom_(46).jpg?width=1280",
+     "tekija": "trukdotcom",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-_panoramio_-_trukdotcom_(46).jpg",
+     "selite": "Old Faithfulin viereen kohoaa Old Faithful Inn -hotelli.",
+     "leveys": 1200,
+     "korkeus": 961,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1422831",
+   "nimi": "Grand Prismatic Spring",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 44.525,
+   "lon": -110.83806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Prismatic Spring and Midway Geyser Basin from above.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg?width=1280",
+     "tekija": "Brocken Inaglory",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg",
+     "selite": "Grand Prismatic Spring on Yhdysvaltain suurin kuuma lähde, jonka reunoilla loistavat bakteerimattojen värit.",
+     "leveys": 2200,
+     "korkeus": 1449,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "160909 Grand Prismatic Spring B 3867.CR2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/160909_Grand_Prismatic_Spring_B_3867.CR2.jpg?width=1280",
+     "tekija": "Karel Stipek Austria",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:160909_Grand_Prismatic_Spring_B_3867.CR2.jpg",
+     "selite": "Höyry nousee lähteen sinisestä keskustasta oranssin ja ruskean reunuksen yli.",
+     "leveys": 4664,
+     "korkeus": 3109,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A corner of Grand Prismatic Spring-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_corner_of_Grand_Prismatic_Spring-1.jpg?width=1280",
+     "tekija": "Tigerzeng",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_corner_of_Grand_Prismatic_Spring-1.jpg",
+     "selite": "Lähteen reunan värikkäät bakteerimatot muodostavat sateenkaaren värejä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q923693",
+   "nimi": "Yellowstone-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": 44.46667,
+   "lon": -110.36667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2006-07-29 - 04 - Road Trip - Day 06 - United States - Wyoming - Yellowstone National Park - Dr Seus 4888659661.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006-07-29_-_04_-_Road_Trip_-_Day_06_-_United_States_-_Wyoming_-_Yellowstone_National_Park_-_Dr_Seus_4888659661.jpg?width=1280",
+     "tekija": "CGP Grey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2006-07-29_-_04_-_Road_Trip_-_Day_06_-_United_States_-_Wyoming_-_Yellowstone_National_Park_-_Dr_Seus_4888659661.jpg",
+     "selite": "Yellowstone-järvi on Pohjois-Amerikan suurimpia korkealla sijaitsevia järviä.",
+     "leveys": 2481,
+     "korkeus": 1653,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014 Yellowstone Lake 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Yellowstone_Lake_02.JPG?width=1280",
+     "tekija": "Miguel Hermoso Cuesta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Yellowstone_Lake_02.JPG",
+     "selite": "Metsäiset rannat ja kirkas vesi ympäröivät järveä, jonka taustalla häämöttävät vuoret.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1030911",
+   "nimi": "Yellowstonen putoukset",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 44.71799,
+   "lon": -110.49604,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Canyon of Yellowstone and Lower falls, Wyoming, United States.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_of_Yellowstone_and_Lower_falls%2C_Wyoming%2C_United_States.jpg?width=1280",
+     "tekija": "Erik Whalen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_of_Yellowstone_and_Lower_falls%2C_Wyoming%2C_United_States.jpg",
+     "selite": "Lower Falls syöksyy keltaisten kallioseinämien reunustamaan Yellowstonen kanjoniin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Artist Point view of Yellowstone Canyon 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artist_Point_view_of_Yellowstone_Canyon_14.jpg?width=1280",
+     "tekija": "Dirtsc",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artist_Point_view_of_Yellowstone_Canyon_14.jpg",
+     "selite": "Lower Falls on Yellowstonen suurin putous.",
+     "leveys": 3394,
+     "korkeus": 5091,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Artist Point view of Yellowstone Canyon 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artist_Point_view_of_Yellowstone_Canyon_03.jpg?width=1280",
+     "tekija": "Dirtsc",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artist_Point_view_of_Yellowstone_Canyon_03.jpg",
+     "selite": "Yellowstone-joki on kaivanut kanjonin, jonka seinämien keltainen kallio on kuumien lähteiden muuttamaa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1153990",
+   "nimi": "Morning Glory Pool",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 44.47506,
+   "lon": -110.84353,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Morning Glory - Yellowstone - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morning_Glory_-_Yellowstone_-_panoramio.jpg?width=1280",
+     "tekija": "Pavel Špindler",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morning_Glory_-_Yellowstone_-_panoramio.jpg",
+     "selite": "Morning Glory Pool on kuuma lähde, jonka kirkkaan sinisen keskustan ympärillä on vihreää ja keltaista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Morning Glory Pool & runoff channels (late afternoon, 31 May 2013).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morning_Glory_Pool_%26_runoff_channels_(late_afternoon%2C_31_May_2013).jpg?width=1280",
+     "tekija": "James St. John",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morning_Glory_Pool_%26_runoff_channels_(late_afternoon%2C_31_May_2013).jpg",
+     "selite": "Lähteen reunan värit syntyvät vedessä eläneistä bakteereista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q650836",
+   "nimi": "Yellowstonen kaldera",
+   "peruste": "sitelinks",
+   "koko_m": 50000,
+   "lat": 44.4,
+   "lon": -110.7,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yellowstone River in Hayden Valley.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowstone_River_in_Hayden_Valley.jpg?width=1280",
+     "tekija": "Ed Austin/Herb Jones",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowstone_River_in_Hayden_Valley.jpg",
+     "selite": "Yellowstone-joki mutkittelee Haydenin laaksossa vanhan supertulivuoren kalderan sisällä.",
+     "leveys": 1999,
+     "korkeus": 1316,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yellowstone Paint Pots.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowstone_Paint_Pots.JPG?width=1280",
+     "tekija": "Sarah Afshar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowstone_Paint_Pots.JPG",
+     "selite": "Kalderan alla oleva kuuma magma lämmittää kuumat lähteet ja mutakeitaat.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Grand Loop Road through Golden Gate (35375950120).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Loop_Road_through_Golden_Gate_(35375950120).jpg?width=1280",
+   "tekija": "Yellowstone National Park",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Loop_Road_through_Golden_Gate_(35375950120).jpg",
+   "selite": "Grand Loop Road kiertää Yellowstonen kansallispuiston rinteitä Golden Gaten kohdalla.",
+   "leveys": 6852,
+   "korkeus": 4568,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Yellowstone Park bison herd grazing at Firehole River in Fountain Flats, Wyoming, US.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowstone_Park_bison_herd_grazing_at_Firehole_River_in_Fountain_Flats%2C_Wyoming%2C_US.jpg?width=1280",
+   "tekija": "Clyde Charles Brown",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowstone_Park_bison_herd_grazing_at_Firehole_River_in_Fountain_Flats%2C_Wyoming%2C_US.jpg",
+   "selite": "Biisonilauma laiduntaa Firehole-joen rannalla Yellowstonen laaksossa.",
+   "leveys": 6240,
+   "korkeus": 4160,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q956110",
+   "nimi": "West Yellowstone",
+   "peruste": "sitelinks",
+   "lat": 44.66222,
+   "lon": -111.105,
+   "syy": "ei sopivaa kaupunkikuvaa (vain linja-autoja ja katukuvaa)"
+  }
+ ]
+}

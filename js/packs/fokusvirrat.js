@@ -41,6 +41,17 @@ import { FOKUSVIRTA_LJUBLJANA } from './fokusvirta-ljubljana.js';
 import { FOKUSVIRTA_KOSICE } from './fokusvirta-kosice.js';
 import { FOKUSVIRTA_LUXEMBURG } from './fokusvirta-luxemburg.js';
 import { FOKUSVIRTA_VALLETTA } from './fokusvirta-valletta.js';
+import { FOKUSVIRTA_TIRANA } from './fokusvirta-tirana.js';
+import { FOKUSVIRTA_MINSK } from './fokusvirta-minsk.js';
+import { FOKUSVIRTA_ZAGREB } from './fokusvirta-zagreb.js';
+import { FOKUSVIRTA_VADUZ } from './fokusvirta-vaduz.js';
+import { FOKUSVIRTA_MONACO } from './fokusvirta-monaco.js';
+import { FOKUSVIRTA_CHISINAU } from './fokusvirta-chisinau.js';
+import { FOKUSVIRTA_SKOPJE } from './fokusvirta-skopje.js';
+import { FOKUSVIRTA_BELGRAD } from './fokusvirta-belgrad.js';
+import { FOKUSVIRTA_BERN } from './fokusvirta-bern.js';
+import { FOKUSVIRTA_BRATISLAVA } from './fokusvirta-bratislava.js';
+import { FOKUSVIRTA_PODGORICA } from './fokusvirta-podgorica.js';
 import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
 import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
@@ -95,6 +106,10 @@ import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
 export const KEVYET_FOKUSVIRRAT = new Set([
   'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel',
   'ljubljana', 'kosice', 'luxemburg', 'valletta',
+  // Juna 193 (PT 15.10.2026: kahdeksan Euroopan pääkaupunkia laudan pysäkeiksi, Sisältökirjurin kevyet pakit).
+  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad',
+  // Juna 193b (PT 15.10.2026: Bern, Bratislava ja Podgorica laudan pysäkeiksi, siirrettyinä oman maan sisällä).
+  'bern', 'bratislava', 'podgorica',
 ]);
 
 export const FOKUSVIRRAT = {
@@ -297,6 +312,25 @@ export const FOKUSVIRRAT = {
    * heti, täysi pino on oma sisältöerä.
    */
   valletta: FOKUSVIRTA_VALLETTA,
+  /*
+   * JUNA 193 (PT 15.10.2026: Tirana, Minsk, Zagreb, Vaduz, Monaco, Chișinău,
+   * Skopje ja Belgrad kevyistä pääkaupunkipisteistä laudan pysäkeiksi;
+   * Karttaseppä tuo kaupungit ja reitit). Kevyet pakit samasta syystä kuin
+   * Luxemburg ja Valletta: matkakirja ja pulun kupla heti, täysi pino on
+   * oma sisältöerä.
+   */
+  tirana: FOKUSVIRTA_TIRANA,
+  minsk: FOKUSVIRTA_MINSK,
+  zagreb: FOKUSVIRTA_ZAGREB,
+  vaduz: FOKUSVIRTA_VADUZ,
+  monaco: FOKUSVIRTA_MONACO,
+  chisinau: FOKUSVIRTA_CHISINAU,
+  skopje: FOKUSVIRTA_SKOPJE,
+  belgrad: FOKUSVIRTA_BELGRAD,
+  // Juna 193b (PT 15.10.2026): Bern, Bratislava ja Podgorica samalla kevyellä kaavalla.
+  bern: FOKUSVIRTA_BERN,
+  bratislava: FOKUSVIRTA_BRATISLAVA,
+  podgorica: FOKUSVIRTA_PODGORICA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

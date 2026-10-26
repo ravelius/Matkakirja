@@ -153,6 +153,7 @@ export const HAHMOTELMA_CHE = [
   },
   {
     id: 'hahmotelma-lavaux',
+    nimio: 'Lavaux',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/che-nosto-lavaux-cdc09343.jpg',
       lyhyt: "Lavaux'n viinitarhapenkereet kiertyvät rinteessä Genevenjärven yllä.",
@@ -293,7 +294,7 @@ export const HAHMOTELMA_CHE = [
     teksti: 'Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla '
       + 'saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti '
       + 'kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan '
-      + 'sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa '
+      + 'sanoista ”vapaa” ja ”linnoitus”. Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa '
       + '1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja '
       + 'nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin '
       + 'parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.',
@@ -651,6 +652,7 @@ export const HAHMOTELMA_CHE = [
   },
   {
     id: 'hahmotelma-grande-dixence',
+    nimio: 'Grande Dixence',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/che-nosto-grande-dixence-e4c37b63.jpg',
       lyhyt: 'Grande Dixencen pato ja tekojärvi vuorten keskellä.',

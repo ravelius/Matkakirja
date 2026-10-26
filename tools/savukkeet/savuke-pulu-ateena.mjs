@@ -35,10 +35,7 @@
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 /*
@@ -85,8 +82,7 @@ const KUPLA2 = 'Tervetuloa Ateenaan. Kuunnellaan, mitä isoisä on kirjoittanut 
 const KUPLA3 = 'Kantsuu klikata Ateenaa kartalta, jos meinaat löytää aarteen.';
 const VINKKI = 'Etsi lehdestä aarrekysymys.';
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 const ctx = await selain.newContext({

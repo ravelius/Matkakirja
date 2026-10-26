@@ -1,0 +1,199 @@
+{
+ "kaupunki": "tshadjarvi",
+ "kaupunkiQ": "Q125309",
+ "kohteet": [
+  {
+   "q": "Q135477",
+   "nimi": "Chari-joki",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 8.57016,
+   "lon": 19.05647,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fleuve chari, vu de Kousseri, qui se jette au lac Tchad.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fleuve_chari%2C_vu_de_Kousseri%2C_qui_se_jette_au_lac_Tchad.jpg?width=1280",
+     "tekija": "Nelson_djoub",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fleuve_chari%2C_vu_de_Kousseri%2C_qui_se_jette_au_lac_Tchad.jpg",
+     "selite": "Chari tuo vettä Tšad-järveen, ja se on alueen tärkein joki.",
+     "leveys": 4864,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q128665",
+   "nimi": "Kukawa",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 12.92472,
+   "lon": 13.56611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Barth 1857 Dendal in Kukawa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barth_1857_Dendal_in_Kukawa.jpg?width=1280",
+     "tekija": "Drawn by Martin Bernatz (1802–1878) after a sketch by Heinrich Barth (1821-1865). The lithograph was produced and printed by M. & N. Hanhart",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barth_1857_Dendal_in_Kukawa.jpg",
+     "selite": "Kukawa oli Bornun valtakunnan pääkaupunki, jonka kadulla saksalainen tutkija Heinrich Barth vieraili.",
+     "leveys": 3270,
+     "korkeus": 2059,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kukawa in 1891.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kukawa_in_1891.jpg?width=1280",
+     "tekija": "Monteil, P.-L. (Parfait-Louis)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kukawa_in_1891.jpg",
+     "selite": "Vanha piirros näyttää Kukawan savimuurien ympäröimän kaupungin ja sen edessä marssivat joukot.",
+     "leveys": 2805,
+     "korkeus": 1723,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1786045",
+   "nimi": "Maon kuninkaanlinna",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 14.11944,
+   "lon": 15.31333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Le palais royale de Mao.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_palais_royale_de_Mao.jpg?width=1280",
+     "tekija": "Mahmoud Sabir97",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_palais_royale_de_Mao.jpg",
+     "selite": "Mao oli Kanemin sulttaanikunnan keskus, ja savirakenteinen palatsi kohoaa kaupungin hiekkaisen kadun varrella.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q697662",
+   "nimi": "Kousséri",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 12.08333,
+   "lon": 15.03333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bruecke ueber den Schari-Fluss.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruecke_ueber_den_Schari-Fluss.jpg?width=1280",
+     "tekija": "Rüdiger Nassauer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bruecke_ueber_den_Schari-Fluss.jpg",
+     "selite": "Kousséri sijaitsee Chari-joen rannalla, ja silta yhdistää Kamerunin kaupungin Tšadin puolelle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11973440",
+   "nimi": "Baga",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 13.11881,
+   "lon": 13.85658,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fragment wioski - Baga - 001281s.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fragment_wioski_-_Baga_-_001281s.jpg?width=1280",
+     "tekija": "Ryszard Vorbrich",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fragment_wioski_-_Baga_-_001281s.jpg",
+     "selite": "Baga on kalastajakylä Tšad-järven rannalla, jossa talot ovat ruokokattoisia.",
+     "leveys": 1920,
+     "korkeus": 1293,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Drewniane łóżko w wiosce nad Jeziorem Czad - Baga - 001282s.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drewniane_%C5%82%C3%B3%C5%BCko_w_wiosce_nad_Jeziorem_Czad_-_Baga_-_001282s.jpg?width=1280",
+     "tekija": "Ryszard Vorbrich",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drewniane_%C5%82%C3%B3%C5%BCko_w_wiosce_nad_Jeziorem_Czad_-_Baga_-_001282s.jpg",
+     "selite": "Tšad-järven rantakylissä puiset sängyt ja ruokokatokset suojaavat paahtavalta auringolta.",
+     "leveys": 1920,
+     "korkeus": 1293,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q645191",
+   "nimi": "Logone-joki",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 12.10611,
+   "lon": 15.03528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berge d'hippopotames depuis Bidim Cameroun.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berge_d'hippopotames_depuis_Bidim_Cameroun.jpg?width=1280",
+     "tekija": "ESSOMBA ETOA Marcien",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berge_d'hippopotames_depuis_Bidim_Cameroun.jpg",
+     "selite": "Logone virtaa Kamerunin ja Tšadin rajalla ja yhtyy Chariin ennen Tšad-järveä.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lake Chad (MODIS 2024-03-03).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Chad_(MODIS_2024-03-03).jpg?width=1280",
+   "tekija": "MODIS Land Rapid Response Team, NASA GSFC",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Chad_(MODIS_2024-03-03).jpg",
+   "selite": "Satelliittikuvassa Tšad-järvi näkyy kapeana sinisenä vesialueena vihreiden kosteikkojen ja hiekan keskellä.",
+   "leveys": 1235,
+   "korkeus": 930,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lake chad shore (detilt).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_chad_shore_(detilt).jpg?width=1280",
+   "tekija": "File:Lake chad shore.jpg: Coolthoom1 Detilt: Hike395",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_chad_shore_(detilt).jpg",
+   "selite": "Tšad-järven matalaa rantaa reunustavat ruohikko ja puut.",
+   "leveys": 3608,
+   "korkeus": 2233,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

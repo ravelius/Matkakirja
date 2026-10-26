@@ -1,0 +1,375 @@
+{
+ "kaupunki": "sanmarino",
+ "kaupunkiQ": "Q1848",
+ "kohteet": [
+  {
+   "q": "Q15613336",
+   "nimi": "San Marinon historiallinen keskusta ja Titano-vuori",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 43.93278,
+   "lon": 12.45194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Marino - Contrada Omagnano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Marino_-_Contrada_Omagnano.jpg?width=1280",
+     "tekija": "Cezar Suceveanu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Marino_-_Contrada_Omagnano.jpg",
+     "selite": "Vanhan kaupungin kapeat kivikadut kiemurtelevat Titano-vuoren rinteellä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "RSM-San Marino061.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RSM-San_Marino061.jpg?width=1280",
+     "tekija": "Szeder László",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RSM-San_Marino061.jpg",
+     "selite": "Keskiaikaisen keskustan kujilla kivitalot muodostavat holvattuja kulkuväyliä.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2711604",
+   "nimi": "Guaitan torni",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 43.9354,
+   "lon": 12.4496,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torre Guaita, San Marino, 2022-09-20, DD 40.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Guaita%2C_San_Marino%2C_2022-09-20%2C_DD_40.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_Guaita%2C_San_Marino%2C_2022-09-20%2C_DD_40.jpg",
+     "selite": "Guaita on San Marinon vanhin ja tunnetuin linnoitus jyrkän kallion huipulla.",
+     "leveys": 8007,
+     "korkeus": 5338,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castillo La Rocca o Guaita, San Marino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_La_Rocca_o_Guaita%2C_San_Marino.jpg?width=1280",
+     "tekija": "♣ ℓ u m i è r e ♣",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_La_Rocca_o_Guaita%2C_San_Marino.jpg",
+     "selite": "Guaitan torni nousee linnoituksen muurien yläpuolelle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fortress of Guaita - First Tower (San Marino).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortress_of_Guaita_-_First_Tower_(San_Marino).jpg?width=1280",
+     "tekija": "Commonists",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fortress_of_Guaita_-_First_Tower_(San_Marino).jpg",
+     "selite": "Ensimmäinen torni hallitsee Titano-vuoren harjannetta ja ympäröivää maisemaa.",
+     "leveys": 6336,
+     "korkeus": 7908,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1705125",
+   "nimi": "Palazzo Pubblico",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 43.93679,
+   "lon": 12.44644,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palazzo-pubblico-San-Marino-sunset-2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo-pubblico-San-Marino-sunset-2009.jpg?width=1280",
+     "tekija": "Acediscovery",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo-pubblico-San-Marino-sunset-2009.jpg",
+     "selite": "Palazzo Pubblico on San Marinon tasavallan hallintopalatsi ja kaupungintalo.",
+     "leveys": 3264,
+     "korkeus": 2381,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Liberty statue and exterior of Palazzo Pubblico (San Marino).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Liberty_statue_and_exterior_of_Palazzo_Pubblico_(San_Marino).jpg?width=1280",
+     "tekija": "Terragio67",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Liberty_statue_and_exterior_of_Palazzo_Pubblico_(San_Marino).jpg",
+     "selite": "Vapauden patsas seisoo Libertà-aukiolla hallintopalatsin edessä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palazzo Pubblico at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo_Pubblico_at_night.jpg?width=1280",
+     "tekija": "Fiat 500e",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palazzo_Pubblico_at_night.jpg",
+     "selite": "Palatsin kellotorni valaistaan iltaisin.",
+     "leveys": 4668,
+     "korkeus": 8125,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q810102",
+   "nimi": "Pyhän Marinuksen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 70,
+   "lat": 43.93722,
+   "lon": 12.44694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica di San Marino - 2019-05-07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Marino_-_2019-05-07.jpg?width=1280",
+     "tekija": "Eleassar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Marino_-_2019-05-07.jpg",
+     "selite": "Uusklassinen basilika on omistettu tasavallan perustajalle Pyhälle Marinukselle.",
+     "leveys": 3140,
+     "korkeus": 2231,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "San marino, citta di sm, basilica di san marino 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_marino%2C_citta_di_sm%2C_basilica_di_san_marino_02.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_marino%2C_citta_di_sm%2C_basilica_di_san_marino_02.jpg",
+     "selite": "Kirkon pylväsportiikki ja kellotorni kohoavat vanhankaupungin ylle.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basilica di San Marino (2).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Marino_(2).JPG?width=1280",
+     "tekija": "Adam91",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Marino_(2).JPG",
+     "selite": "Pylväsportiikki antaa basilikalle temppelimäisen ilmeen.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2592701",
+   "nimi": "Cestan torni",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 43.9328,
+   "lon": 12.4515,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torre Cesta - San Marino - GT 01 - 2024 04 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Cesta_-_San_Marino_-_GT_01_-_2024_04_30.jpg?width=1280",
+     "tekija": "Terragio67",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_Cesta_-_San_Marino_-_GT_01_-_2024_04_30.jpg",
+     "selite": "Cesta on Titano-vuoren toinen torni, joka seisoo kallion korkeimmalla kohdalla.",
+     "leveys": 9427,
+     "korkeus": 11431,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Republika Sv. Marin 10. prosinca 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Republika_Sv._Marin_10._prosinca_2025.jpg?width=1280",
+     "tekija": "August Dominus",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Republika_Sv._Marin_10._prosinca_2025.jpg",
+     "selite": "Torni seisoo kalliojyrkänteen laella.",
+     "leveys": 4080,
+     "korkeus": 3060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Second Tower in San Marino and Paragliding.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Second_Tower_in_San_Marino_and_Paragliding.jpg?width=1280",
+     "tekija": "Commonists",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Second_Tower_in_San_Marino_and_Paragliding.jpg",
+     "selite": "Cestan tornin yllä liitelevät usein riippuliitäjät.",
+     "leveys": 7174,
+     "korkeus": 6222,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q158526",
+   "nimi": "Monte Titano",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 43.92833,
+   "lon": 12.45222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San marino, veduta del monte titano 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_marino%2C_veduta_del_monte_titano_02.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_marino%2C_veduta_del_monte_titano_02.jpg",
+     "selite": "Titano-vuori kohoaa Apenniinien juurella ja kantaa San Marinon vanhaa kaupunkia.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Panoramio San Marino 2008 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramio_San_Marino_2008_-_panoramio.jpg?width=1280",
+     "tekija": "Zoran Kurelić Rabko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramio_San_Marino_2008_-_panoramio.jpg",
+     "selite": "Vuoren jyrkät kalliot toimivat luonnollisena suojamuurina vuosisatojen ajan.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2224877",
+   "nimi": "Montalen torni",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 43.9301,
+   "lon": 12.4526,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montale Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montale_Tower.jpg?width=1280",
+     "tekija": "Commonists",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montale_Tower.jpg",
+     "selite": "Montale on Titanon kolmas torni, ja se on pienin ja syrjäisin linnoitus.",
+     "leveys": 6336,
+     "korkeus": 5364,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montale Tower - San Marino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montale_Tower_-_San_Marino.jpg?width=1280",
+     "tekija": "Commonists",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montale_Tower_-_San_Marino.jpg",
+     "selite": "Torni seisoo yksinään kalliokielekkeellä vuoren eteläpuolella.",
+     "leveys": 6224,
+     "korkeus": 5408,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q201368",
+   "nimi": "Borgo Maggiore",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 43.94722,
+   "lon": 12.44972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Borgo Maggiore seen from San Marino - June 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Borgo_Maggiore_seen_from_San_Marino_-_June_2016.jpg?width=1280",
+     "tekija": "Mx. Granger",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Borgo_Maggiore_seen_from_San_Marino_-_June_2016.jpg",
+     "selite": "Borgo Maggiore on Titano-vuoren juurella oleva San Marinon vanha kauppapaikka.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Borgo maggiore - San Marino.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Borgo_maggiore_-_San_Marino.jpg?width=1280",
+     "tekija": "Messapi",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Borgo_maggiore_-_San_Marino.jpg",
+     "selite": "Punakattoiset talot levittäytyvät vuoren rinteen alapuolelle.",
+     "leveys": 7857,
+     "korkeus": 5006,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "San Marino dal Monte San Paolo al tramonto.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Marino_dal_Monte_San_Paolo_al_tramonto.jpg?width=1280",
+   "tekija": "Naioli",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Marino_dal_Monte_San_Paolo_al_tramonto.jpg",
+   "selite": "San Marino kohoaa Titano-vuorella Adrianmeren ja Apenniinien välissä.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Guaita Fortress and San Marino (2023).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guaita_Fortress_and_San_Marino_(2023).jpg?width=1280",
+   "tekija": "Terragio67",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guaita_Fortress_and_San_Marino_(2023).jpg",
+   "selite": "Vanha kaupunki ja Guaitan linnoitus kuvattuna ilmasta.",
+   "leveys": 14226,
+   "korkeus": 5863,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

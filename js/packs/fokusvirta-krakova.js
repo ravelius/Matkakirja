@@ -1469,26 +1469,4 @@ export const FOKUSVIRTA_KRAKOVA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Rafaelin kadonnut
-   * muotokuva (js/packs/paikallisaarteet.js, POL). Merkintä aukeaa, kun
-   * aarre löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * MERKINTÄ EI NIMEÄ TAULUA EIKÄ KERRO SEN KOHTALOA, JA SE ON
-   * TARKOITUS. Isoisä kirjoittaa vuonna 1873 eikä voi tietää vuodesta
-   * 1945; oppitunti kertoo koko tarinan, merkintä aavistaa vain.
-   * Merkinnän ajoituksesta ks. oppituntilohkon "AJOITUSKYSYMYS".
-   */
-  aarremerkinta: {
-    teksti: 'Ruhtinaan kokoelma on paennut viime sotaa Pariisiin, ja '
-      + 'siellä näin keväällä muotokuvan, jonka edessä unohdin '
-      + 'hengittää: nuori mies turkiskauluksessa, ja katse joka seuraa '
-      + 'huoneen poikki. Mestarin käsialaa Roomasta, sanoi hoitaja, eikä '
-      + 'maailmassa ole montaa sen vertaista. Täällä sanotaan, että '
-      + 'kokoelma palaa pian kotiin. Kirjoitan tämän muistiin siksi, '
-      + 'että sellaisilla tauluilla on tapana lähteä liikkeelle, kun '
-      + 'ajat huononevat — ja pysyä kateissa kauan.',
-  },
 };

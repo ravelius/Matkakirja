@@ -47,16 +47,17 @@ import { fokuskohteet } from './fokuskohteet-grc.js';
  * siihen.
  */
 const NIKE_VISA = {
-  kysymys: 'Miksi Athena Niken patsaalta oli myöhempien '
-    + 'ateenalaisten selityksen mukaan riisuttu siivet?',
+  kysymys: 'Miksi Athena Niken patsas oli myöhempien '
+    + 'ateenalaisten selityksen mukaan siivetön?',
   vaihtoehdot: [
     'Jotta Voitto ei voisi koskaan lentää pois kaupungista',
     'Kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',
     'Patsas kuvasi alun perin miestä eikä jumalatarta',
   ],
   oikea: 0,
-  fakta: 'Athena Niken temppeli on Akropoliin pienin — ja ainoa, '
-    + 'jonka patsaalta puuttuvat siivet tarkoituksella, tarinan mukaan.',
+  fakta: 'Athena Niken temppeli on Akropoliin pienin, ja sen '
+    + 'jumalatar-patsas oli tarinan mukaan tehty siivettömäksi, jotta '
+    + 'Voitto pysyisi kaupungissa.',
 };
 
 /*
@@ -195,9 +196,9 @@ export const FOKUSVIRTA_ATEENA = {
     kuva: {
       tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
       lyhyt: 'Sophia Schliemann koruissaan Priamoksen aarteen löydön jälkeen; kulta oli Euroopan puheenaihe.',
-      selite: 'Sophia Schliemann kantaa "Priamoksen aarteen" koruja. '
-        + 'Kuva otettiin pian löydön jälkeen, ja juuri se teki '
-        + 'kullasta puheenaiheen kaikkialla Euroopassa.',
+      selite: 'Sophia Schliemann kantaa ”Priamoksen aarteen” koruja. '
+        + 'Kuva otettiin joulun 1873 tienoilla, ja se levisi '
+        + 'myöhemmin lehdissä ympäri maailmaa.',
       lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
     },
   },
@@ -293,15 +294,17 @@ export const FOKUSVIRTA_ATEENA = {
   takyt: [
     {
       id: 'nike',
-      nappi: 'Temppeli, jolta leikattiin siivet',
+      nappi: 'Temppeli, jonka Voitolla ei ole siipiä',
       otsikko: 'Athena Niken pyhäkkö',
       teksti: 'Kiipeä Propylaian ohi Akropoliin lounaiskulmaan, niin '
         + 'löydät pienimmän mutta ehkä ovelimman temppelin: Athena Niken '
-        + 'pyhäkön. Sen kaidetta koristi aikoinaan marmoripatsas '
-        + 'voitonjumalattaresta — mutta kuvanveistäjä oli jättänyt siltä '
-        + 'siivet pois. Myöhemmät ateenalaiset selittivät asian omalla '
-        + 'tavallaan: Voitto ei koskaan saisi lentää pois heidän '
-        + 'kaupungistaan, joten sen siivet piti riisua. Isoisäsi ei taida '
+        + 'pyhäkön. Sen sisällä seisoi puinen jumalatar-patsas ilman '
+        + 'siipiä — ateenalaiset kutsuivat sitä siivettömäksi Voitoksi, '
+        + 'Nike Apterokseksi — vaikka temppelin kaiteen kuvissa Voitot '
+        + 'lentävät siivet levällään. Myöhemmät ateenalaiset selittivät '
+        + 'asian omalla tavallaan: Voitto ei koskaan saisi lentää pois '
+        + 'heidän kaupungistaan, joten patsas tehtiin siivettömäksi. '
+        + 'Isoisäsi ei taida '
         + 'mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista '
         + 'kuin temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän '
         + 'kulmaan hetkeksi.',
@@ -332,8 +335,8 @@ export const FOKUSVIRTA_ATEENA = {
         + 'mukavuuksista eikä katoista. Kun eräs nuorukainen kerran rikkoi '
         + 'hänen astiansa, ateenalaiset eivät suuttuneet vaan hankkivat '
         + 'uuden tilalle — omituista kunnioitusta miehelle, joka kulki '
-        + 'päivällä lyhty kädessä ja väitti etsivänsä "rehellistä '
-        + 'ihmistä", ikään kuin kirkkainkaan valo ei siihen riittäisi. '
+        + 'päivällä lyhty kädessä ja väitti etsivänsä ”ihmistä”, '
+        + 'ikään kuin kirkkainkaan valo ei siihen riittäisi. '
         + 'Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin olisi '
         + 'kävellyt Diogeneen astian ohi tietämättään.',
       lahde: 'en-Wikipedia "Diogenes". Tarkistettu 1.9.2026.',
@@ -347,9 +350,10 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
-        lyhyt: 'Myöhäisroomalainen viljanastia Ateenasta, samaa lajia kuin Diogeneen asuma astia, ei se itse.',
+        lyhyt: 'Myöhäisroomalainen viljanastia Ateenan lentokentän arkeologisesta kokoelmasta, samaa lajia kuin Diogeneen astia, ei se itse.',
         selite: 'Tällaisessa viljanastiassa Diogenes majaili: '
-          + 'myöhäisroomalainen pithos Ateenasta. Astia on samaa lajia '
+          + 'myöhäisroomalainen pithos Ateenan lentokentän arkeologisesta '
+          + 'kokoelmasta. Astia on samaa lajia '
           + 'kuin filosofin asumus, ei se itse.',
         lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
       },
@@ -362,7 +366,7 @@ export const FOKUSVIRTA_ATEENA = {
           'Puista paimensauvaa',
         ],
         oikea: 1,
-        fakta: 'Diogenes väitti etsivänsä lyhdyllään "rehellistä ihmistä" '
+        fakta: 'Diogenes väitti etsivänsä lyhdyllään ”ihmistä” '
           + '— vihjaten, ettei sellaista löytynyt edes kirkkaassa '
           + 'päivänvalossa.',
       },
@@ -386,13 +390,15 @@ export const FOKUSVIRTA_ATEENA = {
       otsikko: 'Iliou Melathron',
       teksti: 'Muistatko isoisäsi torikohtauksen — puheet miehestä, joka '
         + 'löysi Troijan kullan? Se mies oli Heinrich Schliemann. '
-        + 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, hän löysi '
-        + 'Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen '
+        + 'Kevään ja kesän 1873 taitteessa, kaivauskauden loppupuolella, '
+        + 'hän löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen '
         + 'aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti tänne kadun '
         + 'varteen komean palatsin, Iliou Melathronin — Troijan palatsin. '
         + 'Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja '
-        + 'kolikoita, sillä se on numismaattinen museo, ja sen friisissä '
-        + 'Schliemann kaivaa ikuisesti, lapio kädessä.',
+        + 'kolikoita, sillä se on numismaattinen museo. Seinillä on '
+        + 'pompeijilaistyylisiä maalauksia, ja lattioiden mosaiikit '
+        + 'esittävät Schliemannin kaivauslöytöjä tai niiden innoittamia '
+        + 'aiheita.',
       lahde: 'en-Wikipedia "Heinrich Schliemann". Tarkistettu 1.9.2026.',
       /*
        * Commons 24.8.2026: 1920×3166, CC0, athenswalk, kuvaus "The main
@@ -410,16 +416,17 @@ export const FOKUSVIRTA_ATEENA = {
         lahde: 'athenswalk, Wikimedia Commons (CC0)',
       },
       visa: {
-        kysymys: 'Missä rakennuksessa Ateenassa Schliemannin oma '
-          + 'kaivaustyö on yhä nähtävissä kuvattuna seinäkoristeissa?',
+        kysymys: 'Mitä Schliemannin entisen kotipalatsin, nykyisen '
+          + 'numismaattisen museon, lattiamosaiikit esittävät?',
         vaihtoehdot: [
-          'Kansalliskirjaston lukusalissa',
-          'Ateenan yliopiston pääjuhlasalissa',
-          'Hänen entisessä kotipalatsissaan, nykyisessä numismaattisessa museossa',
+          'Ateenan ja Spartan välisten sotien taistelukohtauksia',
+          'Olympialaisten kisalajeja',
+          'Schliemannin kaivauslöytöjä tai niiden innoittamia aiheita',
         ],
         oikea: 2,
-        fakta: 'Iliou Melathron toimii nykyään numismaattisena museona, '
-          + 'ja sen friisissä Schliemann on kuvattuna itse kaivamassa.',
+        fakta: 'Iliou Melathronin lattioiden mosaiikit esittävät '
+          + 'Schliemannin kaivauslöytöjä tai niiden innoittamia aiheita. '
+          + 'Talo toimii nykyään numismaattisena museona.',
       },
     },
   ],
@@ -542,37 +549,6 @@ export const FOKUSVIRTA_ATEENA = {
       maailmankartta: { x: 6624.2, y: 1881.9 },
       europe: { x: 666.7, y: 894.9 },
     },
-  },
-
-  /*
-   * ISOISÄN AARREMERKINTÄ — matkakirjan myöhempi sivu (omistaja
-   * 25.8.2026).
-   *
-   * Kun MAAN AARRE LÖYTYY, tämä teksti aukeaa SAMAAN perinteiseen
-   * matkakirjakorttiin kuin saapumismerkintä, ja vasta sen jälkeen
-   * pöllö kuittaa löydön (js/fokusvirta.js, ks. AARREMERKINTÄ).
-   * Paikkarivi tulee koodista muodossa "Isoisän merkintä · Ateena":
-   * tämä ei ole saapumispäivän havainto eikä siinä siksi ole
-   * päivämäärää eikä ilmanpuntaria.
-   *
-   * TEKSTI ON KAANONIA EIKÄ SITÄ SAA MUOTOILLA UUSIKSI (Fable
-   * 25.8.2026). Se sitoo Ateenan kaaren umpeen: saapumismerkinnässä
-   * isoisä kuuli torilla miehestä, joka löysi kullan mutta jota kukaan
-   * ei nähnyt kaivamassa — tässä hän myöntää seisseensa itse saman
-   * kysymyksen äärellä ja jättäneensä kaivamatta.
-   *
-   * MUOTO ON OLIO EIKÄ MERKKIJONO (v1301). Moottori on aina kelpuuttanut
-   * molemmat (js/fokusvirta.js aarremerkinnanTeksti kääntää merkkijonon
-   * olioksi), mutta Ateena oli viimeinen paikka, jossa vanha muoto
-   * eli — jokainen muu kaupunki kirjoittaa `{ teksti }`. Yksi muoto
-   * riittää: näin uusi lauta ei joudu arvaamaan kumpaa kopioida, eikä
-   * kukaan lukija tarvitse haaraa. TEKSTI ON SAMA SANASTA SANAAN.
-   */
-  aarremerkinta: {
-    teksti: 'Seisoin samalla kalliolla enkä uskaltanut kaivaa '
-      + 'vartijan nähden — piirsin vain ristin luettelon reunaan. Jos '
-      + 'sinä pitelet nyt sitä, mitä minä vain katselin, olemme '
-      + 'molemmat löytäneet omamme.',
   },
 
   /*

@@ -64,9 +64,11 @@ test('terävä kärki on pyöristetty', () => {
   assert.match(vakasikoninSvg(), /stroke-linejoin="round"/);
 });
 
-test('väkäset vain kelluvassa napissa; linssin yläpalkissa hampurilainen (omistaja 21.9.2026)', () => {
+test('kelluva nappi on tavallinen hampurilainen (omistaja 2.10.2026 klo 23.08); linssin yläpalkissa hampurilainen', () => {
+  // "väkäshampurilaisen voi vaihtaa samalla normaaliksi hampurilaiseksi": väkäsiä ei enää päävalikon napissa.
   assert.match(VAAKA, /from '\.\/vakasikoni\.js'/);
-  assert.match(VAAKA, /vakasikoninSvg\(\)/);
+  assert.match(VAAKA, /hampurilaisenSvg\(\)/);
+  assert.equal(VAAKA.includes('vakasikoninSvg'), false, 'kelluvassa napissa on yhä väkäset');
   assert.match(LINSSI, /HAMPURILAISEN_POLKU/);
   assert.equal(LINSSI.includes('VAKASIKONIN_POLUT'), false, 'linssin yläpalkissa on yhä väkäset');
 });
@@ -94,7 +96,7 @@ test('päävalikon nappi on alkuperäinen kolmen viivan hampurilainen', () => {
   assert.equal(/ [Ll]\d/.test(nappi), false, 'päävalikon napissa on murtoviivoja');
 });
 
-test('väkäsnappi näkyy vain kun yläpalkki on piilossa', () => {
+test('kelluva hampurilainen näkyy vain kun yläpalkkia ei ole', () => {
   // Sama media-kysely piilottaa palkin ja näyttää väkäsnapin: jos ne
   // eriytyisivät, kartalle jäisi nappi ilman palkkia tai päinvastoin.
   const CSS = lue('../css/styles.css');
@@ -113,5 +115,7 @@ test('väkäsnappi näkyy vain kun yläpalkki on piilossa', () => {
   assert.equal(/\(pointer: coarse\) and \(min-width: 700px\)/.test(kysely), false,
     'pysty-iPadin ehto on yhä lohkossa');
   assert.match(kysely, /\.ylapalkki-nappi \{\s+display: grid;/);
-  assert.match(kysely, /\.topbar \{[\s\S]*?transform: translateY\(-100%\);/);
+  // Vaakatilassa ei yläpalkkia (omistaja 2.10.2026 klo 23.07): nollakorkuinen ja näkymätön, vain päävalikon isäntä.
+  assert.match(kysely, /\.topbar \{[\s\S]*?height: 0;[\s\S]*?visibility: hidden;/);
+  assert.equal(/\.topbar \{[^}]*transform/.test(kysely), false, 'palkissa on transform: kiinteä paneeli asemoituisi palkkiin');
 });

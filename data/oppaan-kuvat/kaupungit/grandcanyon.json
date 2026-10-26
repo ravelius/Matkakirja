@@ -1,0 +1,287 @@
+{
+ "kaupunki": "grandcanyon",
+ "kaupunkiQ": "Q118841",
+ "kohteet": [
+  {
+   "q": "Q220289",
+   "nimi": "Grand Canyonin kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 30000,
+   "lat": 36.0553,
+   "lon": -112.122,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 5964.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_5964.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_5964.jpg",
+     "selite": "Coloradojoki on kaivanut Grand Canyonin kerroksellisiin kallioihin yli kilometrin syvyyteen.",
+     "leveys": 4999,
+     "korkeus": 3333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0070 Grand Canyon Mather Point Landmark Dedication 10 25 2010 (5122569236).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0070_Grand_Canyon_Mather_Point_Landmark_Dedication_10_25_2010_(5122569236).jpg?width=1280",
+     "tekija": "Grand Canyon National Park",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0070_Grand_Canyon_Mather_Point_Landmark_Dedication_10_25_2010_(5122569236).jpg",
+     "selite": "Mather Pointin näköalapaikalta avautuu etelälaidan tunnetuin kanjonimaisema.",
+     "leveys": 3000,
+     "korkeus": 1950,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Grand Canyon South Rim at Sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_South_Rim_at_Sunset.jpg?width=1280",
+     "tekija": "Mgimelfarb",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_South_Rim_at_Sunset.jpg",
+     "selite": "Auringonlaskun valo värjää kanjonin kalliokerrokset oransseiksi ja punaisiksi.",
+     "leveys": 7600,
+     "korkeus": 2426,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Grand Canyon Winter Sunset at Mather Point D2543 (4667239826).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_Winter_Sunset_at_Mather_Point_D2543_(4667239826).jpg?width=1280",
+     "tekija": "Grand Canyon National Park",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Winter_Sunset_at_Mather_Point_D2543_(4667239826).jpg",
+     "selite": "Talvella kanjonin reunaa peittää lumi, ja iltataivas värjäytyy vaaleanpunaiseksi.",
+     "leveys": 1800,
+     "korkeus": 1350,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1265",
+   "nimi": "Coloradojoki",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 40.4722,
+   "lon": -105.8261,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Canyon National Park, Colorado River Nankoweap Granaries 3516 - Flickr - Grand Canyon NPS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_National_Park%2C_Colorado_River_Nankoweap_Granaries_3516_-_Flickr_-_Grand_Canyon_NPS.jpg?width=1280",
+     "tekija": "Grand Canyon National Park",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park%2C_Colorado_River_Nankoweap_Granaries_3516_-_Flickr_-_Grand_Canyon_NPS.jpg",
+     "selite": "Coloradojoki kulkee kanjonin pohjalla, ja kallioseinämän kolot ovat muinaisia viljavarastoja.",
+     "leveys": 3040,
+     "korkeus": 1980,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Canyon, Colorado River (3467675993).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon%2C_Colorado_River_(3467675993).jpg?width=1280",
+     "tekija": "Alex Proimos from Sydney, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon%2C_Colorado_River_(3467675993).jpg",
+     "selite": "Joki kiemurtelee kauas syvällä kanjonin pohjalla.",
+     "leveys": 2711,
+     "korkeus": 1807,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q182273",
+   "nimi": "Grand Canyon Village",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 36.05333,
+   "lon": -112.13944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Canyon Village-Grand Canyon Railroad Station-1901-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg?width=1280",
+     "tekija": "Marine 69-71",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+     "selite": "Grand Canyon Villagen puuasema on kanjonin etelälaidan matkailun perinteinen portti.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5683183",
+   "nimi": "Havasu Falls",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 36.255,
+   "lon": -112.69778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New havasu falls.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_havasu_falls.JPG?width=1280",
+     "tekija": "Gonzo fan2007",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_havasu_falls.JPG",
+     "selite": "Havasu Falls syöksyy turkoosiin altaaseen punaisten kallioiden keskellä Havasupai-heimon maalla.",
+     "leveys": 2472,
+     "korkeus": 3296,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1530724",
+   "nimi": "Glen Canyonin pato",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 36.9375,
+   "lon": -111.48444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Glen Canyon Dam from downstream, Page, Arizona - April 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glen_Canyon_Dam_from_downstream%2C_Page%2C_Arizona_-_April_2026.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glen_Canyon_Dam_from_downstream%2C_Page%2C_Arizona_-_April_2026.jpg",
+     "selite": "Glen Canyonin pato sulkee Coloradojoen punaisten kalliorotkojen väliin Pagen lähellä.",
+     "leveys": 12907,
+     "korkeus": 7260,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(ARIZONA-A-0030) Glen Canyon Dam.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(ARIZONA-A-0030)_Glen_Canyon_Dam.jpg?width=1280",
+     "tekija": "waterarchives",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(ARIZONA-A-0030)_Glen_Canyon_Dam.jpg",
+     "selite": "Patoon nojaa Powellinjärvi, joka on yksi Yhdysvaltain suurimmista tekojärvistä.",
+     "leveys": 1448,
+     "korkeus": 1030,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q667507",
+   "nimi": "Powellinjärvi",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 36.93611,
+   "lon": -111.48417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lake Powell.Staudamm.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Powell.Staudamm.jpg?width=1280",
+     "tekija": "Symbiosus 16:22, 28. Mär. 2007 (CEST)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Powell.Staudamm.jpg",
+     "selite": "Powellinjärvi kietoutuu punaisten hiekkakivikallioiden väliin Arizonan ja Utahin rajalla.",
+     "leveys": 1800,
+     "korkeus": 1215,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 588 Lake Powell in Arizona, USA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_588_Lake_Powell_in_Arizona%2C_USA.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_588_Lake_Powell_in_Arizona%2C_USA.jpg",
+     "selite": "Järvi on suosittu veneilykohde keskellä aavikkomaisemaa.",
+     "leveys": 2382,
+     "korkeus": 1440,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q308926",
+   "nimi": "Antelope Canyon",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 36.85778,
+   "lon": -111.37222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "USA Antelope-Canyon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/USA_Antelope-Canyon.jpg?width=1280",
+     "tekija": "Lucas Löffler",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:USA_Antelope-Canyon.jpg",
+     "selite": "Antelope Canyon on kapea hiekkakivirotko, jossa auringonvalo laskeutuu aaltoilevien seinien väliin.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "06082013 - Antelope Canyon (9638159123).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/06082013_-_Antelope_Canyon_(9638159123).jpg?width=1280",
+     "tekija": "WiLPrZ from Rabat, Maroc",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:06082013_-_Antelope_Canyon_(9638159123).jpg",
+     "selite": "Veden hioma hiekkakivi muodostaa rotkon pehmeästi virtaavia muotoja.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 5942.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_5942.jpg?width=1280",
+   "tekija": "Dietmar Rabich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_5942.jpg",
+   "selite": "Grand Canyonin syvät rotkot ja porrasmaiset kallioseinämät ilmasta nähtynä.",
+   "leveys": 5058,
+   "korkeus": 3372,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 6009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_6009.jpg?width=1280",
+   "tekija": "Dietmar Rabich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_6009.jpg",
+   "selite": "Kanjonin kerroksellinen kallio kohoaa jyrkkinä seinämänä aavikkotasangon halki.",
+   "leveys": 5133,
+   "korkeus": 3422,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

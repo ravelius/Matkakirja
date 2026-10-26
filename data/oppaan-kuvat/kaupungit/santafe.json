@@ -1,0 +1,274 @@
+{
+ "kaupunki": "santafe",
+ "kaupunkiQ": "Q38555",
+ "kohteet": [
+  {
+   "q": "Q3663700",
+   "nimi": "Pyhän Franciscuksen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.6865,
+   "lon": -105.936,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santa Fe, New Mexico, USA 5-2024 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Fe%2C_New_Mexico%2C_USA_5-2024_22.jpg?width=1280",
+     "tekija": "dconvertini",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Fe%2C_New_Mexico%2C_USA_5-2024_22.jpg",
+     "selite": "Hiekkakivinen romaaninen katedraali kaksine kellotorneineen hallitsee kaupungin keskustaa.",
+     "leveys": 5400,
+     "korkeus": 3600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Santa Fe, New Mexico in October 2011 - The Cathedral Basilica of Saint Francis of Assisi.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Fe%2C_New_Mexico_in_October_2011_-_The_Cathedral_Basilica_of_Saint_Francis_of_Assisi.JPG?width=1280",
+     "tekija": "Daniel Mayer (Mav)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Fe%2C_New_Mexico_in_October_2011_-_The_Cathedral_Basilica_of_Saint_Francis_of_Assisi.JPG",
+     "selite": "Katedraalin keltaruskea julkisivu eroaa kaupungin muista savitiilirakennuksista.",
+     "leveys": 2683,
+     "korkeus": 2196,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Saint Francis Cathedral, Santa Fe, New Mexico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Francis_Cathedral%2C_Santa_Fe%2C_New_Mexico.jpg?width=1280",
+     "tekija": "Ken Lund",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Francis_Cathedral%2C_Santa_Fe%2C_New_Mexico.jpg",
+     "selite": "Pronssioven reliefit kertovat kaupungin kirkon vaiheista.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2956557",
+   "nimi": "Loreton kappeli",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.6856,
+   "lon": -105.938,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Backroads Santa Fe (14184251729).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Backroads_Santa_Fe_(14184251729).jpg?width=1280",
+     "tekija": "Christopher Michel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Backroads_Santa_Fe_(14184251729).jpg",
+     "selite": "Gotiikkaa jäljittelevä kappeli on harvinaisuus savitiilen ja adoben kaupungissa.",
+     "leveys": 1600,
+     "korkeus": 1069,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Loretto Chapel exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Loretto_Chapel_exterior.jpg?width=1280",
+     "tekija": "karol m from arizona, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Loretto_Chapel_exterior.jpg",
+     "selite": "Kappelin terävä päätykolmio ja ruusuikkuna ovat peräisin ranskalaisesta gotiikasta.",
+     "leveys": 1567,
+     "korkeus": 2270,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1985568",
+   "nimi": "San Miguelin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.6834,
+   "lon": -105.938,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "16 21 2688 san miguel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16_21_2688_san_miguel.jpg?width=1280",
+     "tekija": "Dsdugan",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:16_21_2688_san_miguel.jpg",
+     "selite": "Paksuseinäinen adobekirkko on yksi Yhdysvaltain vanhimmista kirkkorakennuksista.",
+     "leveys": 1360,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Backroads Santa Fe (14184251269).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Backroads_Santa_Fe_(14184251269).jpg?width=1280",
+     "tekija": "Christopher Michel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Backroads_Santa_Fe_(14184251269).jpg",
+     "selite": "Kellotorni kohoaa savitiiliseinän yläpuolelle sinistä taivasta vasten.",
+     "leveys": 1600,
+     "korkeus": 1069,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q559229",
+   "nimi": "New Mexicon taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.6881,
+   "lon": -105.939,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Newmexico museumofart.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Newmexico_museumofart.jpg?width=1280",
+     "tekija": "PerryPlanet",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Newmexico_museumofart.jpg",
+     "selite": "Museo on rakennettu pueblotyyliin, ja sen savenvärinen julkisivu sopii kaupungin ilmeeseen.",
+     "leveys": 2009,
+     "korkeus": 1092,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrance to Museum (3597674185).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_Museum_(3597674185).jpg?width=1280",
+     "tekija": "John Fowler from Placitas, NM, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_Museum_(3597674185).jpg",
+     "selite": "Portaikko ja puiset kattopalkit viitoittavat tien museon sisäänkäynnille.",
+     "leveys": 2872,
+     "korkeus": 2196,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1509304",
+   "nimi": "Georgia O'Keeffen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.68916,
+   "lon": -105.94133,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Georgia O'Keeffe Museum, Santa Fe NM.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Georgia_O'Keeffe_Museum%2C_Santa_Fe_NM.jpg?width=1280",
+     "tekija": "John Phelan",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Georgia_O'Keeffe_Museum%2C_Santa_Fe_NM.jpg",
+     "selite": "Matala savenvärinen museorakennus esittelee Georgia O'Keeffen maalauksia.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3694507",
+   "nimi": "New Mexicon osavaltiotalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 35.6823,
+   "lon": -105.94,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New Mexico State Capitol.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Mexico_State_Capitol.jpg?width=1280",
+     "tekija": "Jim Bowen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Mexico_State_Capitol.jpg",
+     "selite": "Pyöreä osavaltiotalo muistuttaa ylhäältä katsottuna alkuperäisasukkaiden Zia-symbolia.",
+     "leveys": 4016,
+     "korkeus": 1947,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "New Mexico State Capitol 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Mexico_State_Capitol_2.jpg?width=1280",
+     "tekija": "F McGady",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Mexico_State_Capitol_2.jpg",
+     "selite": "Pääsisäänkäynnin edessä on veistos, ja rakennus kaareutuu pyöreänä sen ympärille.",
+     "leveys": 3792,
+     "korkeus": 2846,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6940891",
+   "nimi": "Kansantaiteen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.6641,
+   "lon": -105.926,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of International Folk Art, Santa Fe NM.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_International_Folk_Art%2C_Santa_Fe_NM.jpg?width=1280",
+     "tekija": "John Phelan",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_International_Folk_Art%2C_Santa_Fe_NM.jpg",
+     "selite": "Museorakennuksen sininen sisäänkäynti avautuu Museum Hillin pihalle.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Santa Fe downtown.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Fe_downtown.jpg?width=1280",
+   "tekija": "Daniel Schwen",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Fe_downtown.jpg",
+   "selite": "Savenväriset talot reunustavat Santa Fen keskustan katua vuorten edessä.",
+   "leveys": 3280,
+   "korkeus": 2200,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panoramic view of downtown Santa Fe, New Mexico.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_downtown_Santa_Fe%2C_New_Mexico.jpg?width=1280",
+   "tekija": "Road Travel America",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_downtown_Santa_Fe%2C_New_Mexico.jpg",
+   "selite": "Katot ja kirkontornit levittäytyvät Santa Fen vanhankaupungin ylle.",
+   "leveys": 8642,
+   "korkeus": 2332,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

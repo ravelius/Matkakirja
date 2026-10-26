@@ -49,6 +49,7 @@ import { TAKY_PALKKIO } from '../../js/fokusvirta.js';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
@@ -62,9 +63,6 @@ const KAUPUNKI = 'sevilla';
 const MITAT = { lahi: [1536, 1024], kauko: [1536, 1024], lehti: [1024, 1536] };
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KAAPPAUKSET = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset/historian-hetket';
@@ -166,7 +164,7 @@ const PIKSELI = Buffer.from(
 
 /* ==================== PELI PYSTYYN ==================== */
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /** Pelitallenne: Fogg seisoo annetussa kaupungissa. */
 function tallenne(id) {

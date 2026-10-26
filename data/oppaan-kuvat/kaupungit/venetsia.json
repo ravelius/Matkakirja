@@ -1,0 +1,539 @@
+{
+ "kaupunki": "venetsia",
+ "kaupunkiQ": "Q641",
+ "kohteet": [
+  {
+   "q": "Q217527",
+   "nimi": "Pyhän Markuksen tori",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 45.434,
+   "lon": 12.338,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Piazza San Marco 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_San_Marco_2019.jpg?width=1280",
+     "tekija": "Ramagliolo9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_San_Marco_2019.jpg",
+     "selite": "Pyhän Markuksen tori on Venetsian pääaukio, jota reunustavat kellotorni ja basilika.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Piazza San Marco (Venice) at night-msu-2021-6449-.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piazza_San_Marco_(Venice)_at_night-msu-2021-6449-.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Piazza_San_Marco_(Venice)_at_night-msu-2021-6449-.jpg",
+     "selite": "Illalla arkadit ja kellotorni valaistaan, ja tori saa aivan oman tunnelmansa.",
+     "leveys": 4984,
+     "korkeus": 3584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Un altro San Marco - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Un_altro_San_Marco_-_panoramio.jpg?width=1280",
+     "tekija": "Schölla Schwarz",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Un_altro_San_Marco_-_panoramio.jpg",
+     "selite": "Aukion pitkät arkadirivit johtavat katseen kohti basilikaa.",
+     "leveys": 6871,
+     "korkeus": 4536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q309243",
+   "nimi": "Canal Grande",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 45.44222,
+   "lon": 12.32639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Panorama of Canal Grande and Ponte di Rialto, Venice - September 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
+     "selite": "Canal Grande on Venetsian pääkatu, jonka varrella kohoavat vanhat kauppiaspalatsit.",
+     "leveys": 5387,
+     "korkeus": 2394,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gondola crossing Canal Grande.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gondola_crossing_Canal_Grande.jpg?width=1280",
+     "tekija": "Barbara-Ingeborg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gondola_crossing_Canal_Grande.jpg",
+     "selite": "Gondolit ja vesibussit kulkevat kanavalla päivittäin.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Grand Canal (15272025058).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Canal_(15272025058).jpg?width=1280",
+     "tekija": "Iain Cameron",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canal_(15272025058).jpg",
+     "selite": "Kanava mutkittelee S-kirjaimen muotoisena läpi koko kaupungin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q189883",
+   "nimi": "Dogen palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 45.43367,
+   "lon": 12.34042,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "(Venice) Doge's Palace facing the sea.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Venice)_Doge's_Palace_facing_the_sea.jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Doge's_Palace_facing_the_sea.jpg",
+     "selite": "Dogen palatsi oli Venetsian tasavallan hallinnon ja ylimmän hallitsijan asuinpaikka.",
+     "leveys": 8280,
+     "korkeus": 5064,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(Venice) Doge's Palace and campanile of St. Mark's Basilica facing the sea.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Venice)_Doge's_Palace_and_campanile_of_St._Mark's_Basilica_facing_the_sea.jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Doge's_Palace_and_campanile_of_St._Mark's_Basilica_facing_the_sea.jpg",
+     "selite": "Palatsin goottilaiset kaarigalleriat avautuvat merelle päin Markuksen kellotornin vieressä.",
+     "leveys": 12096,
+     "korkeus": 8352,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q172988",
+   "nimi": "Pyhän Markuksen basilika",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.43444,
+   "lon": 12.33972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Venice - St. Marc's Basilica 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venice_-_St._Marc's_Basilica_01.jpg?width=1280",
+     "tekija": "Nino Barbieri",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venice_-_St._Marc's_Basilica_01.jpg",
+     "selite": "Pyhän Markuksen basilika on Venetsian pääkirkko, jonka julkisivua koristavat kupolit ja kultaiset mosaiikit.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Venezia - basilica di San Marco - 2026-09-02 16-52-14 001.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venezia_-_basilica_di_San_Marco_-_2026-09-02_16-52-14_001.jpeg?width=1280",
+     "tekija": "Michael_Burgholzer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Venezia_-_basilica_di_San_Marco_-_2026-09-02_16-52-14_001.jpeg",
+     "selite": "Sisällä kupolit ja seinät peittyvät kultamosaiikkeihin.",
+     "leveys": 2765,
+     "korkeus": 3800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52505",
+   "nimi": "Rialton silta",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 45.43801,
+   "lon": 12.33564,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rialto 2025 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rialto_2025_4.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rialto_2025_4.jpg",
+     "selite": "Rialton silta oli pitkään ainoa kiviholvisilta Canal Granden yli.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "PontediRialto-msu-2021--5703.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PontediRialto-msu-2021--5703.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PontediRialto-msu-2021--5703.jpg",
+     "selite": "Illalla sillan kaaret ja kaide valaistaan lyhtyjen valossa.",
+     "leveys": 6240,
+     "korkeus": 4064,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-09-25 Venedig - Canal Grande 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-09-25_Venedig_-_Canal_Grande_05.jpg?width=1280",
+     "tekija": "Triplec85",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-09-25_Venedig_-_Canal_Grande_05.jpg",
+     "selite": "Sillan alta kulkee tiheä vesiliikenne.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52531",
+   "nimi": "Santa Maria della Salute",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 45.43057,
+   "lon": 12.33473,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santa Maria della Salute from Hotel Monaco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Maria_della_Salute_from_Hotel_Monaco.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Salute_from_Hotel_Monaco.jpg",
+     "selite": "Santa Maria della Salute on barokkikirkko, joka rakennettiin kiitokseksi ruttoepidemian päättymisestä.",
+     "leveys": 3973,
+     "korkeus": 5965,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1991-04-XX Italien Venedig Bacino di San Marco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1991-04-XX_Italien_Venedig_Bacino_di_San_Marco.jpg?width=1280",
+     "tekija": "Lothar Weber",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1991-04-XX_Italien_Venedig_Bacino_di_San_Marco.jpg",
+     "selite": "Kirkon valtava kupoli hallitsee Canal Granden suuta.",
+     "leveys": 3288,
+     "korkeus": 2125,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52517",
+   "nimi": "Huokausten silta",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 45.43406,
+   "lon": 12.34086,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antonio Contin - Ponte dei sospiri (Venice).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Contin_-_Ponte_dei_sospiri_(Venice).jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Contin_-_Ponte_dei_sospiri_(Venice).jpg",
+     "selite": "Huokausten silta yhdistää Dogen palatsin vankilaan kanavan yli.",
+     "leveys": 5958,
+     "korkeus": 3801,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bridge of Sighs (50427172598).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_of_Sighs_(50427172598).jpg?width=1280",
+     "tekija": "Kent Wang from Barcelona, Spain",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bridge_of_Sighs_(50427172598).jpg",
+     "selite": "Umpinainen kalkkikivisilta sai nimensä vankien huokauksista.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q754194",
+   "nimi": "Pyhän Markuksen kellotorni",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 45.43403,
+   "lon": 12.33903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Campanile of St. Mark's Basilica - remote view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanile_of_St._Mark's_Basilica_-_remote_view.jpg?width=1280",
+     "tekija": "Orlando Paride",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Campanile_of_St._Mark's_Basilica_-_remote_view.jpg",
+     "selite": "Noin 99 metriä korkea kellotorni on Venetsian kaukaa erottuva maamerkki.",
+     "leveys": 5889,
+     "korkeus": 9178,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Campanile of St Mark's Basilica Aug 2020 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanile_of_St_Mark's_Basilica_Aug_2020_1.jpg?width=1280",
+     "tekija": "Kasa Fue",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Campanile_of_St_Mark's_Basilica_Aug_2020_1.jpg",
+     "selite": "Tornista avautuu näkymä punaisten kattojen yli laguunille.",
+     "leveys": 5464,
+     "korkeus": 3640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q713558",
+   "nimi": "San Giorgio Maggiore",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 45.4293,
+   "lon": 12.3433,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica di San Giorgio Maggiore (Venice) - 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Giorgio_Maggiore_(Venice)_-_2022.jpg?width=1280",
+     "tekija": "dconvertini",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Giorgio_Maggiore_(Venice)_-_2022.jpg",
+     "selite": "Palladion suunnittelema kirkko ja punatiilinen kellotorni kohoavat omalla saarellaan Markuksen torin vastapäätä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica di San Giorgio Maggiore (Venice).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Giorgio_Maggiore_(Venice).jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Giorgio_Maggiore_(Venice).jpg",
+     "selite": "Valkoinen julkisivu heijastuu laguunin tyyneen veteen.",
+     "leveys": 2587,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basilica di San Giorgio Maggiore © 2013 Irin Acassi (CC-BY-SA-4.0).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Giorgio_Maggiore_%C2%A9_2013_Irin_Acassi_(CC-BY-SA-4.0).jpg?width=1280",
+     "tekija": "Irin Acassi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Giorgio_Maggiore_%C2%A9_2013_Irin_Acassi_(CC-BY-SA-4.0).jpg",
+     "selite": "Auringonlaskussa saari piirtyy selvänä siluettina taivasta vasten.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52437",
+   "nimi": "Murano",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 45.4575,
+   "lon": 12.35361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial photographs of Venice 2013, Anton Nossik, 009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photographs_of_Venice_2013%2C_Anton_Nossik%2C_009.jpg?width=1280",
+     "tekija": "Anton Nosik",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_Venice_2013%2C_Anton_Nossik%2C_009.jpg",
+     "selite": "Murano on laguunin saariryhmä, joka tunnetaan vuosisatojen lasinvalmistuksesta.",
+     "leveys": 2048,
+     "korkeus": 1367,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q223942",
+   "nimi": "La Fenicen oopperatalo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 45.4337,
+   "lon": 12.3339,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro La Fenice (Venice) - Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_La_Fenice_(Venice)_-_Facade.jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_La_Fenice_(Venice)_-_Facade.jpg",
+     "selite": "La Fenice on Venetsian kuuluisin oopperatalo, joka on noussut tuhkasta useammin kuin kerran.",
+     "leveys": 6556,
+     "korkeus": 6228,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1262248",
+   "nimi": "Arsenaali",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 45.43528,
+   "lon": 12.35306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arsenal - Venice, Italy - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arsenal_-_Venice%2C_Italy_-_panoramio.jpg?width=1280",
+     "tekija": "Sergey Ashmarin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_-_Venice%2C_Italy_-_panoramio.jpg",
+     "selite": "Arsenaali oli Venetsian tasavallan laivatelakka, jonka porttia vartioivat kaksi tornia.",
+     "leveys": 2599,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q820872",
+   "nimi": "Ca' d'Oro",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 45.44056,
+   "lon": 12.33389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ca' d'Oro facciata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ca'_d'Oro_facciata.jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ca'_d'Oro_facciata.jpg",
+     "selite": "Ca' d'Oro on goottilainen palatsi Canal Granden varrella, jonka julkisivu koristeltiin aikanaan kullalla.",
+     "leveys": 4272,
+     "korkeus": 3750,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q830807",
+   "nimi": "Il Redentore",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 45.42499,
+   "lon": 12.33245,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chiesa del Redentore (Venice).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chiesa_del_Redentore_(Venice).jpg?width=1280",
+     "tekija": "Didier Descouens",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chiesa_del_Redentore_(Venice).jpg",
+     "selite": "Palladion Il Redentore -kirkko rakennettiin kiitokseksi 1500-luvun ruttoepidemian päättymisestä.",
+     "leveys": 4246,
+     "korkeus": 3291,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica di Redentore © 2013 Irin Acassi (CC-BY-SA-4.0).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_Redentore_%C2%A9_2013_Irin_Acassi_(CC-BY-SA-4.0).jpg?width=1280",
+     "tekija": "Irin Acassi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_di_Redentore_%C2%A9_2013_Irin_Acassi_(CC-BY-SA-4.0).jpg",
+     "selite": "Kirkko kohoaa Giudeccan saarelle laguunin rannalle.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial photographs of Venice 2013, Anton Nossik, 045.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photographs_of_Venice_2013%2C_Anton_Nossik%2C_045.jpg?width=1280",
+   "tekija": "Anton Nosik",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_Venice_2013%2C_Anton_Nossik%2C_045.jpg",
+   "selite": "Venetsian kaupunkiryhmä Pyhän Markuksen tori etualalla näkyy ylhäältä punaisten kattojen merenä.",
+   "leveys": 2048,
+   "korkeus": 1367,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "0 Venise, Sestiere Castello et quartier de l'Arsenal vus du campanile de San Giorgio Maggiore.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0_Venise%2C_Sestiere_Castello_et_quartier_de_l'Arsenal_vus_du_campanile_de_San_Giorgio_Maggiore.JPG?width=1280",
+   "tekija": "Jean-Pol GRANDMONT",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0_Venise%2C_Sestiere_Castello_et_quartier_de_l'Arsenal_vus_du_campanile_de_San_Giorgio_Maggiore.JPG",
+   "selite": "Venetsia rakentui laguunin saarille, ja sen siluetti avautuu veden yli.",
+   "leveys": 2496,
+   "korkeus": 1664,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

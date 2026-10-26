@@ -4,8 +4,8 @@ import { execFileSync } from 'node:child_process';
 import { SATELLIITTI_KOHTEET } from '../js/linssit/satelliitti-data.js';
 import { ASTRONAUTIN_KYSYMYKSET, haeAstronautinKysymykset, haeAstronautinVastaus } from '../js/linssit/astronaut-kysymykset.js';
 
-test('all 64 camera targets have exactly two current-card-compatible questions and grounded answers', () => {
-  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
+test('every camera target has exactly two current-card-compatible questions and grounded answers', () => {
+  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, SATELLIITTI_KOHTEET.length);
   for (const target of SATELLIITTI_KOHTEET) {
     const questions = haeAstronautinKysymykset(target.tunnus);
     assert.equal(questions.length, 2, target.tunnus);

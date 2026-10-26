@@ -328,7 +328,7 @@ export const MAASTOKOHTEET_GHA = [
       + 'Burkina Fason puolelle — heille yhteinen esivanhemmuus merkitsee enemmän kuin '
       + 'kansallisuus. Perimätiedon mukaan Pagan perusti noin 1400 nuori mies nimeltä Naveh, '
       + 'jonka krokotiili pelasti metsästysretkellä; paikan nähdessään hän huudahti '
-      + '"Ayipaga", silmäni on kiinnittynyt tähän maahan, ja siitä nimi lyheni.',
+      + '”Ayipaga”, silmäni on kiinnittynyt tähän maahan, ja siitä nimi lyheni.',
     lahde: 'en-Wikipedia "Paga, Ghana", johdanto-osa sekä osiot "Overview" ja "Foundation" '
       + '(tarkistettu 6.9.2026).',
   },

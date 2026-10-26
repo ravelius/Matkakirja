@@ -1536,6 +1536,7 @@ export const HAHMOTELMA_BGR = [
   },
   {
     id: 'hahmotelma-cherven',
+    nimio: 'Cherven',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bgr-nosto-cherven-8438ba6a.jpg',
       lyhyt: 'Chervenin keskiaikaisen linnoituksen kivirakenteita kalliokukkulalla.',

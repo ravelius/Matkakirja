@@ -1,0 +1,467 @@
+{
+ "kaupunki": "nizza",
+ "kaupunkiQ": "Q33959",
+ "kohteet": [
+  {
+   "q": "Q1849491",
+   "nimi": "Promenade des Anglais",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 43.69111,
+   "lon": 7.2475,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Promenade des Anglais (Nice), France.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Promenade_des_Anglais_(Nice)%2C_France.jpg?width=1280",
+     "tekija": "Uhooep",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Promenade_des_Anglais_(Nice)%2C_France.jpg",
+     "selite": "Englantilaisten kävelykatu kulkee Nizzan kaarevan merenlahden rantaa pitkin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Promenade des Anglais Nice IMG 1255.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Promenade_des_Anglais_Nice_IMG_1255.jpg?width=1280",
+     "tekija": "Alexander Migl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Promenade_des_Anglais_Nice_IMG_1255.jpg",
+     "selite": "Rantakatu on ollut Rivieran talvikävijöiden suosikkikävelyreitti 1800-luvulta.",
+     "leveys": 5311,
+     "korkeus": 3541,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3558059",
+   "nimi": "Nizzan vanha kaupunki",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 600,
+   "lat": 43.69673,
+   "lon": 7.27589,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vue du Vieux-Nice.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vue_du_Vieux-Nice.jpg?width=1280",
+     "tekija": "Baptiste Rossi",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vue_du_Vieux-Nice.jpg",
+     "selite": "Vanhan kaupungin punaiset kattoryppäät ja barokkikirkot kohoavat linnavuoren juurella.",
+     "leveys": 2576,
+     "korkeus": 1932,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cote d'Azur Sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cote_d'Azur_Sunset.jpg?width=1280",
+     "tekija": "miketnorton",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cote_d'Azur_Sunset.jpg",
+     "selite": "Vanhan kaupungin talot ovat väriltään keltaisia, okran- ja oranssinsävyisiä.",
+     "leveys": 4368,
+     "korkeus": 2912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Immeuble-Vieux-Nice.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Immeuble-Vieux-Nice.jpg?width=1280",
+     "tekija": "Baptiste Rossi",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Immeuble-Vieux-Nice.jpg",
+     "selite": "Vanhan kaupungin kapeat kujat ovat täynnä värikkäitä, ikkunaluukuin varustettuja taloja.",
+     "leveys": 2576,
+     "korkeus": 1932,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2970127",
+   "nimi": "Linnavuori",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 43.696,
+   "lon": 7.27968,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La colline du chateau de Nice depuis les hauteurs de Cimiez - 2016-08-23- P1540461.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_colline_du_chateau_de_Nice_depuis_les_hauteurs_de_Cimiez_-_2016-08-23-_P1540461.jpg?width=1280",
+     "tekija": "Esby",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_colline_du_chateau_de_Nice_depuis_les_hauteurs_de_Cimiez_-_2016-08-23-_P1540461.jpg",
+     "selite": "Metsäinen linnavuori kohoaa meren ja vanhan kaupungin välissä, ja sen huipulta avautuu näkymä lahdelle.",
+     "leveys": 4616,
+     "korkeus": 3464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nice Parc du Château de Nice 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_Parc_du_Ch%C3%A2teau_de_Nice_1.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_Parc_du_Ch%C3%A2teau_de_Nice_1.jpg",
+     "selite": "Vuoren puistossa on keinotekoinen vesiputous, joka valuu kalliolta alas.",
+     "leveys": 4504,
+     "korkeus": 3330,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3389982",
+   "nimi": "Place Masséna",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 250,
+   "lat": 43.6973,
+   "lon": 7.27014,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nizza-Place Masséna of Nice-4070873.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nizza-Place_Mass%C3%A9na_of_Nice-4070873.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nizza-Place_Mass%C3%A9na_of_Nice-4070873.jpg",
+     "selite": "Nizzan pääaukiota reunustavat punaiset arkadirakennukset ja ruutukuvioitu kivetys.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flickr - …trialsanderrors - Place Masséna, Nice, France, ca. 1895.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_%E2%80%A6trialsanderrors_-_Place_Mass%C3%A9na%2C_Nice%2C_France%2C_ca._1895.jpg?width=1280",
+     "tekija": "…trialsanderrors",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_Place_Mass%C3%A9na%2C_Nice%2C_France%2C_ca._1895.jpg",
+     "selite": "Vanhassa värivalokuvassa aukio on hevosvaunujen aikaan, 1800-luvun lopulla.",
+     "leveys": 3286,
+     "korkeus": 2384,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2205594",
+   "nimi": "Nizzan venäläinen ortodoksikatedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 43.70389,
+   "lon": 7.25389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathédrale ortodoxe russe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_ortodoxe_russe.jpg?width=1280",
+     "tekija": "Montgomery06",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_ortodoxe_russe.jpg",
+     "selite": "Pyhän Nikolain katedraali valmistui 1912 venäläisen kirkkoarkkitehtuurin tyyliin Rivieralle.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedrale russe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedrale_russe.jpg?width=1280",
+     "tekija": "Leogs",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedrale_russe.jpg",
+     "selite": "Katedraalin sipulikupolit ja värikkäät laatat näyttävät erikoisilta Välimeren kaupungissa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathédrale orthodoxe de Nice 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_orthodoxe_de_Nice_01.jpg?width=1280",
+     "tekija": "Hélène Grenier",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_orthodoxe_de_Nice_01.jpg",
+     "selite": "Kupolien vihreä ja sininen keraaminen pinta kiiltää etelän auringossa.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q743147",
+   "nimi": "Hôtel Négresco",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 43.69449,
+   "lon": 7.25838,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Negresco in Nizza by night 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Negresco_in_Nizza_by_night_2014.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Negresco_in_Nizza_by_night_2014.jpg",
+     "selite": "Vaaleanpunainen kupolihotelli on rantakadun tunnetuin rakennus ja valmistui vuonna 1913.",
+     "leveys": 7500,
+     "korkeus": 5063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nice Hôtel Negresco Extérieur 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_H%C3%B4tel_Negresco_Ext%C3%A9rieur_11.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_H%C3%B4tel_Negresco_Ext%C3%A9rieur_11.jpg",
+     "selite": "Belle Époque -tyylisen hotellin julkisivu hohtaa valkoisena palmujen takana.",
+     "leveys": 4566,
+     "korkeus": 3414,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3001353",
+   "nimi": "Cours Saleya",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 200,
+   "lat": 43.6956,
+   "lon": 7.27504,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nice - Cours Saleya - Rue Louis Gassin - View NE.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_-_Cours_Saleya_-_Rue_Louis_Gassin_-_View_NE.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_-_Cours_Saleya_-_Rue_Louis_Gassin_-_View_NE.jpg",
+     "selite": "Vanhan kaupungin keskeisellä kävelykadulla pidetään kukka- ja torikauppaa.",
+     "leveys": 3915,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nice Cours Saleya 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_Cours_Saleya_05.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_Cours_Saleya_05.jpg",
+     "selite": "Kadun varrella kohoavat keltaiset ja oranssit italialaistyyliset talot.",
+     "leveys": 4582,
+     "korkeus": 3242,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3398372",
+   "nimi": "Lympian satama",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 43.6942,
+   "lon": 7.28492,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nice port.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_port.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_port.jpg",
+     "selite": "Vanhassa satamassa lepäävät perinteiset värikkäät kalastajaveneet ja huvipurjeet.",
+     "leveys": 4203,
+     "korkeus": 2790,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nice Harbor from Castle Hill 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_Harbor_from_Castle_Hill_01.jpg?width=1280",
+     "tekija": "Spike",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_Harbor_from_Castle_Hill_01.jpg",
+     "selite": "Lympian satama sijaitsee vanhan kaupungin itäpuolella linnavuoren juurella.",
+     "leveys": 12689,
+     "korkeus": 5226,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2886962",
+   "nimi": "Notre-Dame de Nice",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 43.70319,
+   "lon": 7.26579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica de notre-dame-niza-2009.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_de_notre-dame-niza-2009.JPG?width=1280",
+     "tekija": "Alberto-g-rovi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_de_notre-dame-niza-2009.JPG",
+     "selite": "Neogoottilainen basilika rakennettiin 1800-luvun lopulla Nizzan suurimmaksi kirkoksi.",
+     "leveys": 2376,
+     "korkeus": 3693,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilique Notre-Dame (Nice) en mars 2022 (2).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique_Notre-Dame_(Nice)_en_mars_2022_(2).JPG?width=1280",
+     "tekija": "Benoît Prieur",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilique_Notre-Dame_(Nice)_en_mars_2022_(2).JPG",
+     "selite": "Kirkon kaksitorninen vaalea julkisivu on mallinnettu pohjoisranskalaisten katedraalien mukaan.",
+     "leveys": 2408,
+     "korkeus": 4016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1084011",
+   "nimi": "Sainte-Réparaten katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 43.69722,
+   "lon": 7.27583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedrale Sainte-Reparate Nice.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedrale_Sainte-Reparate_Nice.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedrale_Sainte-Reparate_Nice.jpg",
+     "selite": "Barokkikatedraali kohoaa vanhan kaupungin aukion laidalla kellotornin vierellä.",
+     "leveys": 2484,
+     "korkeus": 3286,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathédrale Sainte-Réparate de Nice, vielle ville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Sainte-R%C3%A9parate_de_Nice%2C_vielle_ville.jpg?width=1280",
+     "tekija": "Florent Abel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Sainte-R%C3%A9parate_de_Nice%2C_vielle_ville.jpg",
+     "selite": "Katedraalin värikäs laattakupoli erottuu vanhan kaupungin kattojen yllä.",
+     "leveys": 3024,
+     "korkeus": 1701,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2866137",
+   "nimi": "Cimiezin roomalainen amfiteatteri",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 43.71999,
+   "lon": 7.27532,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nice, France, Arènes romaines de Cimiez.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice%2C_France%2C_Ar%C3%A8nes_romaines_de_Cimiez.jpg?width=1280",
+     "tekija": "Eric Coffinet",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice%2C_France%2C_Ar%C3%A8nes_romaines_de_Cimiez.jpg",
+     "selite": "Kukkulalla Cimiezin kaupunginosassa on jäänteitä roomalaisesta Cemenelumin kaupungista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amphitheater Nizza.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphitheater_Nizza.JPG?width=1280",
+     "tekija": "HJunghans",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amphitheater_Nizza.JPG",
+     "selite": "Pieni roomalainen amfiteatteri rakennettiin 200-luvulla ajanlaskun mukaan.",
+     "leveys": 4000,
+     "korkeus": 2333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q608423",
+   "nimi": "Nizzan ooppera",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 43.69544,
+   "lon": 7.27255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gmach Opery w Nicei.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gmach_Opery_w_Nicei.jpg?width=1280",
+     "tekija": "Taktoperz77",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gmach_Opery_w_Nicei.jpg",
+     "selite": "Oopperatalo valmistui 1885 uudelleenrakennuksen jälkeen ja seisoo rantakadun tuntumassa.",
+     "leveys": 3867,
+     "korkeus": 2901,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nice from Castle Hill 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nice_from_Castle_Hill_01.jpg?width=1280",
+   "tekija": "Spike",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nice_from_Castle_Hill_01.jpg",
+   "selite": "Nizza levittäytyy sinisen Enkelten lahden rannalle, ja vanhan kaupungin punakattoiset talot ovat etualalla.",
+   "leveys": 12365,
+   "korkeus": 4182,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

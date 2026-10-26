@@ -193,6 +193,7 @@ for (const tyo of tyot) {
         body: JSON.stringify({
           inputs: [{ text: tyo.luenta + LOPPUTAUKO, voice_id: AANI }],
           model_id: 'eleven_v3',
+          language_code: 'fi',   // suomi pakotettuna (omistaja 6.10.)
           settings: { stability: 0.5 },
         }),
       },

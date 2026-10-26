@@ -711,7 +711,7 @@ export const FOKUSVIRTA_FIRENZE = {
       + 'kieltäytyi niin päättäväisesti, että luut piilotettiin '
       + 'kerran luostarin valeseinään. Karkotusvuosinaan hän '
       + 'kirjoitti runoelman, jonka nimeksi hän pani vain Commedia. '
-      + 'Sana "jumalainen" ei ole hänen: sen liitti nimeen ensimmäisen '
+      + 'Sana ”jumalainen” ei ole hänen: sen liitti nimeen ensimmäisen '
       + 'kerran Giovanni Boccaccio noin kolmekymmentä vuotta hänen '
       + 'kuolemansa jälkeen, ja vasta vuoden 1555 laitoksessa se '
       + 'painettiin kanteen asti. Tärkeämpää oli se, millä kielellä '
@@ -908,19 +908,4 @@ export const FOKUSVIRTA_FIRENZE = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: PIHVI_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Caravaggion
-   * kadonnut maalaus. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Taidekauppias kertoi minulle maalarista, joka pakeni miekka '
-      + 'kädessä kaupungista toiseen ja jätti jälkeensä tauluja, joista '
-      + 'kaikkia ei ole koskaan laskettu. Yksi niistä on hänen mukaansa '
-      + 'yhä väärässä huoneessa, väärän nimen alla, eikä kukaan ole '
-      + 'katsonut sitä kunnolla kahteensataan vuoteen. Pimeästä ne '
-      + 'hänen taulunsa syntyivät — pimeään ne osaavat myös kadota.',
-  },
 };

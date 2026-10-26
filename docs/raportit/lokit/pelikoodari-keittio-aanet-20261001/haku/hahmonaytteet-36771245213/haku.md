@@ -1,0 +1,353 @@
+# Ääniehdokkaat
+
+## Omat äänet
+
+- Roger - Laid-Back, Casual, Resonant `CwhRBWXzGAHq8TQ4Fs17` male middle_aged american — Easy going and perfect for casual conversations.
+- Sarah - Mature, Reassuring, Confident `EXAVITQu4vr4xnSDxMaL` female young american — Young adult woman with a confident and warm, mature quality and a reassuring, professional
+- Laura - Enthusiast, Quirky Attitude `FGY2WhTYpPnrIDTdsKH5` female young american — This young adult female voice delivers sunny enthusiasm with a quirky attitude.
+- Charlie - Deep, Confident, Energetic `IKne3meq5aSn9XLyUdCD` male young australian — A young Australian male with a confident and energetic voice.
+- George - Warm, Captivating Storyteller `JBFqnCBsd6RMkjVDRZzb` male middle_aged british — Warm resonance that instantly captivates listeners.
+- Callum - Husky Trickster `N2lVS1w4EtoT3dr4eOWO` male middle_aged american — Deceptively gravelly, yet unsettling edge.
+- River - Relaxed, Neutral, Informative `SAz9YHcvj6GT2YYXdXww` neutral middle_aged american — A relaxed, neutral voice ready for narrations or conversational projects.
+- Harry - Fierce Warrior `SOYHLrjzK2X1ezoPC6cr` male young american — An animated warrior ready to charge forward.
+- Liam - Energetic, Social Media Creator `TX3LPaxmHKxFdv7VOQHJ` male young american — A young adult with energy and warmth - suitable for reels and shorts.
+- Alice - Clear, Engaging Educator `Xb7hH8MSUJpSbSDYk0k2` female middle_aged british — Clear and engaging, friendly woman with a British accent suitable for e-learning.
+- Matilda - Knowledgable, Professional `XrExE9yKIg1WjnnlVkGX` female middle_aged american — A professional woman with a pleasing alto pitch. Suitable for many use cases.
+- Will - Relaxed Optimist `bIHbv24MWmeRgasZH58o` male young american — Conversational and laid back.
+- Jessica - Playful, Bright, Warm `cgSgspJ2msm6clMCkdW9` female young american — Young and popular, this playful American female voice is perfect for trendy content.
+- Eric - Smooth, Trustworthy `cjVigY5qzO86Huf0OWal` male middle_aged american — A smooth tenor pitch from a man in his 40s - perfect for agentic use cases.
+- Bella - Professional, Bright, Warm `hpp4J3VqNfWAUOO0d1Us` female middle_aged american — This voice is warm, bright, and professional, characterized by a Standard American accent 
+- Chris - Charming, Down-to-Earth `iP95p4xoKVk53GoZ742B` male middle_aged american — Natural and real, this down-to-earth voice is great across many use-cases.
+- Brian - Deep, Resonant and Comforting `nPczCjzI2devNBz1zQrb` male middle_aged american — Middle-aged man with a resonant and comforting tone. Great for narrations and advertisemen
+- Daniel - Steady Broadcaster `onwK4e9ZLuTAKqWW03F9` male middle_aged british — A strong voice perfect for delivering a professional broadcast or news story.
+- Lily - Velvety Actress `pFZP5JQG7iQjIQuC4Bku` female middle_aged british — Velvety British female voice delivers news and narrations with warmth and clarity.
+- Adam - Dominant, Firm `pNInz6obpgDQGcFmaJgB` male middle_aged american — A bright tenor pitch that immediately cuts through. The delivery is brash and openly confi
+- Bill - Wise, Mature, Balanced `pqHfZKP75CvOlQylNhV4` male old american — Friendly and comforting voice ready to narrate your stories.
+- Ale - Happy & Lovely `n4x17EKVqyxfey8QMqvy` female young latin american — A cheerful and vibrant young Latin American woman, with a natural, warm, and engaging tone
+- Adam - Classic English Narrator `Gsndh0O5AnuI2Hj3YUlA` male old british — A steady, methodical narrator with a rich, lower-register tone. Ideal for audiobooks, myst
+- Adam - Classic Scottish Storyteller `U5UjeJMsOvyhYhXfZdvZ` male old scottish — A deep, gravelly, and seasoned Scottish male voice. Robert sounds like a wise historian or
+- Adam Stone - Late Night Radio `NFG5qt843uXKj4pFvR7C` male middle_aged british — A middle aged 'Brit' with a velvety laid back, late night talk show host timbre.
+-  Anika - Soothing Customer Care Agent `RXe6OFmxoC0nlSWpuCDy` female young standard — Anika is a calm, empathetic, and listener-first voice, specially crafted for customer serv
+- Adam - Distinct, Deep and Engaging `bfGb7JTLUnZebZRiFYyq` male middle_aged american — Distinct tone, deep pitch, engaging long-form voice-over and narration.
+- A Serak - Deep, hoarse. `LxiqOV1uxBCgYTeitAHf` male old standard — A hoarse, deep voice. To create a frightening and menacing impression. But it can also be 
+- Aapo - Friendly and approachable `ESapivUCtGNuYKDCwzcI` male middle_aged standard — A warm, down-to-earth voice of a Finnish male. He speaks with a gentle, welcoming cadence 
+- Aja - Sexy Female Villain Voice `eVItLK1UvXctxuaRV2Oq` female young american — A seductive and dangerous femme fatale, this female voice drips with the sexy allure of a 
+- Admiral Action - Military Man `GLSWsaquVBsIPLPPRi2s` male middle_aged american — War-torn. Tough. Commanding. A boots-on-the-ground voice with the edge of a sergeant and t
+- Amelia - Enthusiastic and Expressive `ZF6FPAbjXT4488VcRRnw` female young british — A young British English woman's voice, clear and easy to understand. Expressive and enthus
+- Aiden - Happy Video Host `dyTPmGzuLaJM15vpN3DS` male middle_aged american — An excited voice for Youtube, Instagram, and Tiktok videos! I'm a professional voice actor
+- Amy - Natural and Sweet `OZxMHsGaBmV5pjMIDIn0` female middle_aged american — Down-to-earth and conversational, this voice is perfect for situations that call for a rea
+- Andy Pieroux `oHPNP4GrtGdxNG4BouwV` male middle_aged british — Professional male voice, considered, with a touch of dry wit. UK English (Southern, lightl
+- Anika - Insurance Customer Care Agent for Renewals & Support `jUjRbhZWoMK4aDciW36V` female young standard — Anika delivers a clear, warm, and professional tone tailored for the insurance sector—perf
+- Anika - Animated, Friendly and Engaging `Sm1seazb4gs7RSlUVw7c` female young standard — Anika is a trusted friend - expressive, clear, and effortlessly engaging. Perfect for anim
+- Alexandra - Conversational and Real `kdmDKE6EkgrWrrykO9Qt` female young american — Youthful and authentic, with a conversational tone that's relatable and down-to-earth. 
+- Anika - Interactive E Learning Bot Voice `FiIgWdzVKAalJyAgg8Pg` female young standard — A clear, friendly voice built for guiding users through interactive learning in real time.
+- Anika - Warm & Intimate Voice `CoQByuTrT9gbKYx6QFL6` female young indian — A velvety, intimate voice that feels like a whisper meant just for you. Smooth, warm, and 
+- Annie - Whispering British Girl `bjoUrk7s2fY9cu2u67KF` female young british — British, young female voice whispering down a highly sensitive microphone. Versatile use, 
+- Anika – Gentle & Warm Medical Support `zEvjs17jNQ2fH5FxAat2` female young standard — Anika delivers a polite, warm, and compassionate tone designed for medical customer care a
+- Anika - Sweet and Lively `ecp3DWciuUyW7BYM7II1` female young indian — A fun, expressive voice for social media content, reels, and upbeat storytelling. Anika’s 
+- Anika – Expressive & High Energy  `UbB19hYD8fvYxwJAVTY5` female young standard — Anika brings sweet, expressive, and high-energy hinglish delivery that instantly grabs att
+- Anika – Sweet & Lively Hindi Social Media Voice `RABOvaPec1ymXz02oDQi` female young standard — Voice crafted for engaging Hindi social media content, brand messaging, and influencer com
+- Aria - Sultry Villain `TC0Zp7WVFzhA8zpTlRqV` female young american — A voice like dark velvet for a female villain or seductress. Her low, sultry tones are per
+- Beezle Wheezelby `BBfN7Spa3cqLPH1xAS22` male old british — Wise old British narrator or fantasy character, distinctive soft and wizened voice suitabl
+- Arturo - Old aged, Narrator  `N2HSRirbsHTZ8DE2WqjB` male old latin american — Voice of an old man, perfect for interesting narratives full of magic and suspense
+- Axel - ruhig, erzählend, leicht rauh `CD5xyRjkR74P5qby9tmm` male old standard — This slightly rough male voice delivers the text naturally and calmly. It is suitable for 
+- Bello Buff - Excited Dog  `22a7Gh6Zmscuaq9cfG65` neutral young standard — Bello Buff sounds like a young, enthusiastic adventure dog with endless energy in his voic
+- Aurora `YSabzCJMvEHDduIDMdwV` female young standard — Young Finnish friendly and professional voice. Perfect for conversations and narration.
+- Arabella `Z3R5wn05IrDiVCyEkUrK` female young american — A young, mature female narrator with a mysterious and emotive tone, perfect for fantasy, r
+- Beth - Western Female Narrator `y3UNfL9XC5Bb5htg8B0q` female young american — Beth is a bold, assertive female voice with a smoky, fearless edge — perfect for tough bra
+- Bill Adams - Wise and Motivational American Storyteller `V2bPluzT7MuirpucVAKH` male old american — A deep, wise, and gritty male voice with an unmistakable American accent. Frank sounds lik
+- Bibi Blume -  Warm and Soft `7Nj1UduP6iY6hWpEDibS` neutral young standard — Childishly cheeky, warm-hearted, and witty. A lively cartoon voice, character voice for fa
+- Bogdan `jn6ifzU1eO5tfUZ2ZJVg` male old standard — A deep Ukrainian baritone radiating warmth and a subtle melodic cadence. Perfect for story
+- Blondie - Intense Woman `si0svtk05vPEuvwAW93c` female young british — Powerful British female voice with dramatic flair—ideal for strong characters and bold mes
+- Brittney - Meditation Voice - Soothing, Calm & Relaxing `pjcYQlDFKMbcOUp6F5GD` female young american — A calm and relaxing female voice, ideal for meditation and self-reflection. The tone is sm
+- Blackwood — Posh British Villain `agL69Vji082CshT65Tcy` male middle_aged british — A sinister British snob with a posh, aristocratic, ironic drawl — calm, charming and quiet
+- Boses Anime na Girl - Ang pinaka cute na boses ng anime pero Pinoy `0OteN0TNg6Kyaflk2DY8` female young standard — “Boses Anime” is the ultimate cute Filipino anime voice — bright, bubbly, and irresistibly
+- Burt Reynolds™ - Masculine Iconic Storyteller `iWP0zWXsAkUmG0R4IMeO` male old american — Burt Reynolds' deep and authoritative voice is the perfect iconic narrator for your Eleven
+- Burt Reynolds™ `4YYIPFl9wE5c4L2eu2Gb` male middle_aged american — Burt Reynolds™ - ElevenLabs' Iconic Voice
+- Cam Hong - HCM Local `x4KAhuXs2G8TfK9Zr7Q4` female young southern — Cẩm Hồng was born and raised in Ho Chi Minh City, and she carries that Southern warmth the
+- Bunty - Funny Best Friend `7b9mYhmnp0y2qSH1FnBL` male young standard — Bunty’s voice is full of charm, wit, and best-friend energy—ideal for funny reels, roast-s
+- Candy - Girly and Sweet `Nggzl2QAXh3OijoXD116` female young american — Youthful, cute, sassy, energetic, bubbly, expressive, high pitched, excited, happy, sparkl
+- Brittney - Social Media Voice - Fun, Youthful & Informative `kPzsL2i3teMYv0FxEYQ6` female young american — A young, vibrant female voice that is perfect for celebrity news, hot topics, and fun conv
+- Bill for Books `8Es4wFxsDlHBmFWAOWRS` male middle_aged american — Experience the rich, reassuring depth of a neutral US English voice, perfect for engaging 
+- Carla - relaxing meditation `l32B8XDoylOsZKiSdfhE` female young american — A naturally calming voice for meditation, affirmations, yoga, and relaxed narration/audiob
+- Cameo - Calm and Soothing American Narrator for Explainers & Audiobooks `Rm14i2uPTqCL0k0wW7KI` female middle_aged american — A smooth, captivating female voice with a rich, slightly deep tone and a confident, intima
+- Cherry Twinkle – Adorable Cartoon Girl `XJ2fW4ybq7HouelYYGcL` female young american — A bright, bubbly, and utterly sweet animated voice inspired by classic popular kids charac
+- Chutki - Cute Kids Cartoon Character `Jr72SE8p9OcJmr8hyX0D` female young indian — Bubbly, giggly, and endlessly energetic — Chutki sounds like she's five seconds from burst
+- Carmelo -  Mysterious & Deep `5egO01tkUjEzu7xSSE8M` male middle_aged peninsular — Mature, wise, smooth and deep storytelling Spanish voice. The voice of experience from a p
+- Christoffer Satu `3OArekHEkHv5XvmZirVD` male middle_aged standard — Adult Finnish male reading a children's story.
+- Bogdan, voce radio/tv `OlBp4oyr3FBAGEAtJOnU` male middle_aged standard — A calm and low Romanian male voice, deep tone. Perfect for narratives, audiobooks, and gen
+- Cowboy Bob™ - VF `KTPVrSVAEUSJRClDzBw7` male middle_aged american — Rich voice with rugged warmth, perfect for tales filled with character. 
+- Creature - Goblin Mythical Monster `Z7RrOqZFTyLpIlzCgfsp` male middle_aged american — A goblin creature with a high-pitched voice. Great for animation, video games, and charact
+- Cat - Droll and Dry `54Cze5LrTSyLgbO6Fhlc` female young american — Perfect for animation or audiobooks, the vibe of this voice is “whatever.” Sarcastic, drol
+- David - British Storyteller `BNgbHR0DNeZixGQVzloa` male old british — An old British male with a deep Voice. Perfect for Storytelling & Narration.
+- Claus  Christensen `KLwMtB9otYg9CFf7AUWc` male middle_aged standard — 62-year-old male voice in neutral Danish. Rich baritone with crisp diction—great for guide
+- Dallin - Storyteller `alFofuDn3cOwyoz1i44T` male middle_aged american — Adult American Male Voice. Calming, Deep, Warm. Perfect for stories.
+- Declan Graves – Haunted Rasps and Old World Dread `1BfrkuYXmEwp8AWqSLWk` male old irish — A scary, ancient voice like it’s speaking from a peat-dark cottage at the edge of the worl
+- Devi - Encouraging and Motivating `MF4J4IDTRo0AxOO4dpFR` female young standard — Devi is the pen name of a young Indian female artist with clear Hindi instructions. She or
+- David Clean `M336tBVZHWWiWb4R54ui` male middle_aged standard — My voice has a deep, soothing tone that radiates kindness and sincerity. It isn’t forceful
+- Ditzy Younger Princess, Spoiled Brat `U09MtJ2GfKEZSsIvMw9i` female young american — Ditzy Younger Princess and Spoiled Brat.
+- Declan Sage - Wise, Deliberate, Captivating `kqVT88a5QfII1HNAEPTJ` male middle_aged american — A deep, resonant male voice with a standard American accent and a slight husky and raspy q
+- David - Authoritative, Calm, Deep `YyxM4BUeTuddnbjmhWcd` male middle_aged american — Narrative voice that works well for both fiction and non-fiction.
+- Dominic - British, Dark, Brooding, Intense `yhf80q1381zd2JJQ4tM7` male middle_aged british — A strong, commanding voice with gravitas and shadow. Serious, sensual, and evocative — per
+- Curt - Cosmic Storyteller `hU1ratPhBTZNviWitzAh` male middle_aged american — Young American Man. A voice perfect for point-and-click video games, sci-fi animations, co
+- Dr. Von - Quirky, Mad Scientist `yjJ45q8TVCrtMhEKurxY` male middle_aged american — Energetic, quirky voice ideal for eccentric characters and inventive narration. 
+- Elise – Warm, Natural and Engaging `EST9Ui6982FZPSi7gCHi` female young american — An easy, conversational tone suited to narrations, explainers, podcasts, and editorial con
+- Eldrin - Wise Epic Fantasy Narration Storyteller `LvmvHEBEmMJBJw9UuhwO` male old british — A deep, resonant, and warm voice infused with centuries of wisdom and subtle magic. Charac
+- Ellen `BIvP0GN1cAtSRTxNHnWS` female young german — Calm female voice with international accent
+- Ember - Energetic Confident Protagonist `WtA85syCrJwasGeHGH2p` female young american — 
+- Emmaline - young British girl `nDJIICjR9zfJExIFeSCN` female young british — Emmaline's youthful British voice instantly brings to mind the charming and precocious Her
+- Emma - Adorable and Upbeat `pPdl9cQBQq4p6mRkZy2Z` female young american — An adorable voice perfect for animation projects.
+- Esko - Energetic and bright `GRCSWm7RbZK1krJbYsOq` male middle_aged standard — A vibrant, high-energy voice of a Finnish male. He speaks with an enthusiastic, upbeat rhy
+- Edward - Reserved, Calm and Wise `jXkeB46JcPXXUSxzn3MD` male old american — An old Native male American with a Husky Voice. Suitable for Characters & Animation.
+- Energetic Cartoon Character Voice | YouTube, Gaming, Minecraft, Roblox `emSmWzY0c0xtx5IFMCVv` neutral young american — A young, fun, gender neutral voice, Believable and real-sounding. Ideal for Characters & A
+- Evil Villain Voice – Deep, Menacing, Cinematic Male Villain Character `pHD4qotPFeOAuU1YsFjv` male middle_aged american — A deep, menacing evil villain voice perfect for cinematic narration, dark characters, supe
+- Eve - Authentic, Energetic and Happy `BZgkqPqms7Kj9ulSkVzn` female young american — Great for V3, conversation, energetic, happy
+- Fenna - Natural and warm `p4efl2GlWK0o6sAQEEkp` female young standard — A smooth, engaging voice of a female, perfect for clear and authentic content.
+- El Faraon 4 - Narración & Audio Libros `8mBRP99B2Ng2QwsJMFQl` male old latin american — Deep male voice, ideal for audiobooks, stories, narrations, and documentaries.
+- Finley -  Articulate Anchor `fnYMz3F5gMEDGMWcH1ex` male old british — Crisp, clear, and unflappable. This rhythmic British voice provides a sense of authority a
+- Flicker - Cheerful Fairy & Sparkly Sweetness `piI8Kku0DcvcL6TTSeQt` female young british — Professional Fairy Voice - Flicker is a tiny, sweet fairy. She is cheerful, smart, and cha
+- Fena - Girly, Young and Sassy Hero `BlgEcC0TfWpBak7FmvHW` female young american — Young, sassy girl character.
+- Freddie Flip - Sweet and Friendly `U0W3edavfdI8ibPeeteQ` neutral young standard — With its extremely sweet speech impediment, Freddie Flip is a funny little frog with a gen
+- Frederick - Deep and Historical `uVKHymY7OYMd6OailpG5` male old standard — Listen to the rugged tales, this grizzled baritone tells. This gnarly, well-seasoned voice
+- Girish – Immersive Documentary Narrator `be5BqjdCBGa7uaJYeTl5` male young standard — Girish delivers documentary narration with quiet authority & complete neutrality. Straight
+- Grandfather Joe - a Gentle, Warm and Wise Grandad `0lp4RIz96WD1RUtvEu3Q` male old british — A warm, conversational old-age British voice with the timeless charm of a nature documenta
+- GERALD - Exciting Older Voice (NEW) `fGIZlgPQ75MMlvQ6WxgY` male old british — Eccentric, raspy and colourful British voice with plenty of character! When you need a pun
+- Gigi - Cute, Peppy, Energetic `n7Wi4g1bhpw4Bs8HK5ph` female young american — She's a peppy and cute character who is ready to kick some butt. Great for video games!
+- Freya - Valley Girl `TxGi1N29NQoCaYD4fcU5` female young american — Like, um, she's totally your quintessential valley girl! Like, O. M. G. totally!
+- Guillaume - Narration and voiceover `ohItIVrXTBI80RrUECOD` male middle_aged standard — 
+- Gungun – Kids Show Character `nfMYisZqs1GOjTFllho3` female young standard — Expressive, playful, and built for the kind of storytelling that pulls children completely
+- Gudiya – Innocent Kid Narrator `e3FEEanj39p8QCSMe8iV` female young indian — Cute, bubbly, and full of wonder — Gudiya narrates a story the way a genuinely curious chi
+- Gi's - polished, subtle European accent `eGDQZlTw1MO652KwplSb` female young american — Polished, clear, expressive, International English character voice.
+- Gifu - Strong finnish Accent `dlbXHgJnwobU5JdZ8F5M` male young standard — Finnish young male voice with a hilariously strong accent! This simple Finnish man deliver
+- Gözde `rtnDjO8siSxeTEeTVczO` female young central — The voice of a young Turkish woman, an actress and voice artist. A fun, energetic, and emo
+- Hope - soothing narrator `iCrDUkL56s3C8sCRl7wb` female young american — A warm, soothing, and captivating voice, ideal for audiobook narrations, meditation script
+- Hope - Natural, Clear and Calm `OYTbf65OHHFELVut7v2H` female young american — 
+- Harrison Gale – The Velvet Voice: deep, resonant, powerful, smooth, rich, storytelling, narrator `fCxG8OHm4STbIsWe4aT9` male middle_aged american — A voice imbued with a deep, velvety richness that commands attention and soothes the liste
+- Hope - upbeat and clear `tnSpp4vdxKPjI9w0GnoV` female young american — 
+- Hansi the Gentle - Kind Swedish grandpa `RcEmXcISaHUgHOU4uNTz` male old swedish — Hansi the Gentle is a warm, soft‑spoken 67‑year‑old male voice with a light Swedish accent
+- Haldor Instruktør Stavanger BM `GC1txXxPYDcfgO0KfuXm` male middle_aged standard — Older man, calm and clear.
+- Ivanna - Sensual & Intimate `tQ4MEZFJOzsahSEEZtHK` female young american — A luxuriously soft female voice in American English, with a seductive, whispery tone—perfe
+- Horatius Brash `qXpMhyvQqiRxWQs4qSSB` neutral young american — Over the Top, Precocious and Self-Assured. The Captain of your next explorers adventure or
+- Anika - Interactive E Learning Bot Voice `9FTUWXd0yHJL1ZiZ71RK` female young indian — Voice designed to make e-learning bots interactive, engaging, and informative. Anika’s fri
+- Horpyna - Village Witch and Trickster `upV1WVQQOkwfYxJITYqG` female young kiev — A Ukrainian female character voice with a sharp tongue and folk temper: teasing one moment
+- Illya - Soft and neutral `CnV6BQOHeZCIv4McSXDH` female young american — A young American raspy and light female voice. Soft and weak in some cases. Works well for
+- James - Husky & Engaging `EkK5I93UQWFDigLMpZcX` male middle_aged american — A slightly husky and bassy voice with a standard American accent. Modulated, controlled, a
+- Jaakko `JMfkzZiSsox62UXcXUqM` male young standard — Jaakko - Serious Finnish audio book male voice.
+- Jase - Rough Intense British Cinematic `kTSNDDkx34wKsrujmdm1` male middle_aged british — A deep British baritone voice featuring a clear Estuary London accent. Audio output target
+- Jen Frankie - Entitled & Spoiled `a5zfmqTslZJBP0jutmVY` female young american — Reality TV wife. Gossip and drama. Small town glamorous. She'd be a real sweetheart if she
+- Jerry B. - Military Commander | Gruff, Gritty Authority `TxWZERZ5Hc6h9dGxVmXa` male middle_aged american — A gruff, gritty, and authoritative military commander voice ideal for video games, trailer
+- Jack Angel `klOYed7ULfdFRLhrPHYE` male middle_aged american — Upbeat and cheerful. 
+- Jeremy Scot - Pleasant Reading Voice `wQxN11oaHx0XpMA3irzg` male middle_aged american — Middle-aged Narrator.
+- Jay Wayne Pro `8Ln42OXYupYsag45MAUy` male middle_aged american — A confident, semi-deep, middle-aged male voice with a natural Texas tone. Warm, grounded, 
+- Jessica - Sexy, Intimate, & Seductive `LEnmbrrxYsUYS7vsRRwD` female young american —  intimate, and seductive American female voice perfect for ASMR, romantic audio, flirty vo
+- John Doe Deep `EiNlNiXeDU1pqqOPrYMO` male middle_aged american — Middle aged American male with a very deep voice. Perfect for audiobooks.
+- John Doe Intimate `7fbQ7yJuEo56rYjrYaEh` male middle_aged american — Middle aged American male accent. Voice is Intimate and warm. Perfect for audiobooks.
+- Jessica Anne Bogart - Character and Animation `flHkNRp1BlvT73UL6gyz` female middle_aged american — The Villain! Wickedly eloquent. Calculating. Cruel and calm.
+- Jukka Uusitalo (Finnish) `GdUwr3tVJwSb22ROvLCr` male middle_aged standard — Deep male voice that has a story to tell. In the voice you can hear the experience of life
+- John of the North - Warm Northerner `7rQX8r6PVq3gfJ8rZzyE` male middle_aged british — Warm, bluff Northern character voice — a direct, down-to-earth Northern Englishman: warm, 
+- Juniper - Grounded and Professional `aMSt68OGf4xUZAnLpTU8` female middle_aged american — A grounded female professional, great for podcasts or ConvoAI.
+- Jeroen Hamerland `4ClinlRko5CbUgYm5jsb` male old standard — Jeroen has a voice with quiet authority and emotional intelligence. He knows how to convey
+- Josef Hammer – Deep & Expressive `AFtA63zAzQAlNDuzSRKy` male middle_aged british — A mature, resonant voice with a warm, slightly smoky character and strong emotional depth.
+- Jyri `BlAlpGV1KY8jfuqWubtQ` male young turku — A calmly informative style with a monotone, modern, and “cool” tone. The speech is clear a
+- Kaisa - Strong and authoritative `2Yg0KQ858zsEJOsoPmT2` female middle_aged standard — A powerful, resonant voice of a middle-aged Finnish woman. She speaks with a commanding, s
+- Kavya – Expressive Kid Narrator `uyv82ARGSiPieXDxTMOc` female young standard — Innocent, bubbly, and full of wonder — Kavya narrates stories the way a genuinely curious 
+- Kate 7  - Playful Latina Storyteller `U9tZtg3uJtVgXPkvosWR` female young latin american — A playful, expressive and warm Latina storyteller voice. Perfect for kids content, animati
+- Katie - Soft Whisper Voice `jdrqQ2ZMWENd1cuRByWG` female old canadian — A soothing whisper, feels like a friend is whispering in your ear!
+- Keshavi – Over The Top Character Voice `6v2RZdJ2lFrnhKGGffBi` female young standard — Keshavi is loud, funny, and completely over the top — & that's exactly the point. Her dram
+- Jessa - Authentic, friendly and grounded - perfect for explainers and social media `yj30vwTGJxSHezdAGsv9` female young american — A natural, effortless, and relatable female voice with a casual, off-the-cuff style that f
+- Kriti – Sad & Emotional Character `wTn2tNEDmIQImAkXnJLK` female young standard — Quiet, raw, and unmistakably real — Kriti carries grief the way it actually sounds, restra
+- Kano - Cute & Anime `OSwaPSNdfituxkWcjlkR` female young kanto — Energetic, cheerful, female anime voice.
+- Kiran – Very Young Adorable Storyteller `o80picuztV1xYiPeIrpa` female young indian — Kiran brings a sweet, cute, and warmly engaging tone to story narration. Her young, gentle
+- Knox Dark - Deep voice of a middle aged man, serious in read  `dPah2VEoifKnZT37774q` male middle_aged american — A serious older man reads in a slow methodical and particular way.
+- Kira X - Video Game, Bold & Cinematic `W3C2vBPukr5b5jvoXhPK` female young american — A bold, cinematic voice built for video game characters, animation, and interactive storyt
+- Laloosh - Upbeat Arabic Reels Voice `zAHOVUiYXuxggpSljiCQ` female young levantine — Laloosh brings a warm, upbeat Arabic voice that makes social media content instantly engag
+- Luk Balcer `ppGIZI01uUlIWI734dUU` male middle_aged flemish — A senior voice from Belgium, Limburg. Age 55 - Limburg accent. 
+- Lulu Lollipop – Sweet & Bubbly Girl `ocZQ262SsZb9RIxcQBOj` female young american — Bright, playful and irresistibly cute animated cartoon girl inspired by popular kids chara
+- LIAM DALE (British Male 60's) `w2ZdKT3ghAOcMRbpjC3u` male old british — Mature, native British male voice. World-leading English language documentary narrator, sp
+- Lamarina  `XdflFrQO8wbGpWMNZHFr` female young american — A young sounding female, with a playfully arrogant tone to her voice, akin to that of a di
+- Mardi - Geschichtenerzähler zwischen zwei Welten `k0SrkBhoclG2PVu0EFbv` male old standard — Perfect for wise narrator roles that bridge cultures and generations. A deep, calm voice w
+- Lumi – Tiny & Sweet  `AVYJxaX5Uon5HKPfdVo9` neutral young standard — Lumi brings playful charm, joy, and quirky energy to life. Perfect for Real-Time gaming, N
+- Malakai - Shadowed and Gruff `7squ7rvxEIZ2rYy7KYPP` male middle_aged american — A low, gravelly voice of a male character that sits just above a whisper. He speaks with a
+- Lily - Soft, Cute and Sweet `Pt5YrLNyu6d2s3s4CVMg` female young american — A young female voice with a soft and cute tone. Perfect for animated characters and storyt
+- Mark's voice for Tony `3xMy7cgC9vbdbPrSrXTt` male young american — Deep, real, and sincere.
+- Matias - Kind and youthful `lOPf5yCKGVCTYSpGXgQr` male young standard — A pleasant, bright voice of a young Finnish male. He has a naturally polite, easygoing ton
+- Martin Dupont Intime `a5n9pJUnAhX4fn7lx3uo` male middle_aged standard — Middle aged male with a warm and intimate voice. Perfect for audiobooks and other formats.
+- Kawaii Aerisita `vGQNBgLaiM3EdZtxIiuY` female young american — Young, American female with an adorable and youthful voice. Perfect for anime, video games
+- Mathias - Storyteller `ygiXC2Oa1BiHksD3WkJZ` male middle_aged jutlandic — Rich Danish male baritone soothes with warmth, captivates with clarity, perfect for immers
+- Matthew Schmitz - Rich,Old Storyteller `B52raBK48m23qWYbwchQ` male old american — An old grizzled Storyteller, rich resonant depth, exuding warmth. It has a commanding yet 
+- Monika Sogam `2zRM7PkgwBPiau2jvVXc` female young indian — Indian English accent voice for social media videos and audiobooks
+- Milly Mouse - excited Mouse  `M5t0724ORuAGCh3p3DUR` neutral young en-british — Miffy Mice is an energetic and adventurous young character with a bright, playful voice. A
+- Matthew Schmitz - Warm Mountain Man `Q4oILuo4P8VeXtE6FMLI` male old american — A warm, gravelly, weathered voice, slow and measured, like a man who’s seen too many winte
+- Matthew Schmitz - Ancient Sage Dragon Wizard `HAvvFKatz0uu0Fv55Riy` male old british — Fantasy character voice rife with wisdom and old age. Underlying rasp and venom. Great for
+- Michael Danisch `87AwpS6yC86wa2WglbsK` male old standard — For voice over, audiobooks, etc.
+- Lutz - Chuckling, Giggly and Cheerful `9yzdeviXkFddZ4Oz8Mok` male young american — Young American male voice cheerfully cracking up. Perfect for humorous dialogues and happy
+- Minnie - high pitch cartoon character `eppqEXVumQ3CfdndcIBd` female young american — High energy comic cartoon character inspired by Minnie Mouse. Perfect for hilarious, spont
+- Monika Sogam – Sinister Creepy Voice `6aO1exAR9bDruq155LzQ` female young indian — Monika Sogam's slow, eerie delivery creeps in gradually — building discomfort until you're
+- Mortimer - Ruhig & Geheimnisvoll `Lx8FLpMdqPr5gyGNDtNf` male old standard — A deep, calm voice with a slightly nasal, raspy tone and a neutral accent. The clear, conf
+- Mr. Doppelgänger | The Clerk & Snarky Bureaucrat `5EuW3ornwqE66qGtnlMI` male middle_aged standard — Deadpan bureaucratic baritone with a nasal voice dripping with irony. This Kafkaesque absu
+- Niki 3 - native Greek female `GKXCdIjjORefHK29tFTY` female young standard — A young native Greek female voice, vibrant and expressive. Her lively tone brings characte
+- Mei - Friendly, Clear and Soft `Raa94hHxcH2itBN60mKp` female young standard — A soft, gentle, and kind Japanese female voice. Also supports bright and lively animation 
+- Myrrdin - Wise and Magical Narrator `oR4uRy4fHDUGGISL0Rev` male old german — Myrddin: The definitive (800+ years old) wizard voice for any true magical narration. This
+- Nichalia Schwartz - Friendly, Bright 20s-30s `XfNU2rGpBa01ckF309OY` female young american — Friendly, intelligent, engaging 20s-30s female American. Ideal for audiobooks, long-form n
+- Obsidian - Animated, Gaming, Wily `G9mW0YfLl5FDeeGAfU3o` male middle_aged american — Dark, animated, wily voice with playful menace—perfect for gaming narrations, villain mono
+- Paula Paw - Energetic and Adventurous  `iukn3a1vSSNFmdi5NZS4` female young american — A bright, energetic cartoon animal voice full of excitement and heart. Sounds like a loyal
+- Olivia- Story-telling, Conversational `MJw0jtAmgm4D71m0HUJU` female young american — Conversational, warm and resonant, full-bodied, podcast/narration.
+- Opa Johann – gentle & wise `R3XXDwKMU2YHwBcuYUH3` male old standard — Kind, calm and old male storyteller voice. Warm, gentle, loving, heartfelt, comforting gra
+- Parasyte - Whispers from the Deep Dark `1KFdM0QCwQn4rmn5nn9C` male old british — A twisted creature voice balancing feral madness with childlike vulnerability. Features Go
+- Rai `Cx1u6YPIa1SPiAbYj3gJ` male young american — Dry, flat, quietly exhausted young-adult male. Deadpan delivery, minimal pitch movement. N
+- Rob - Tough, Calloused, British `2ajXGJNYBR0iNHpS4VZb` male middle_aged british — A tough British man. Gritty, Experienced, Strong.
+- Richard `MltcMkX8tlDeUdYq1uCd` male old american — A professional narrator with a mature voice for audiobooks, instruction, and presentations
+- Pipi - Cute & Anime `n7534fCgBXcPEM82JQYu` female young standard — This is a cute Japanese female character voice that is easy to use for any purpose.
+- Oliver - Clean, British and Steady `L1aJrPa7pLJEyYlh3Ilq` male old british — A mature voice which is warm and kind with just a hint of whimsical humor wrapped in a dis
+- Rusty Malone `507tTFX0IPtqFzGd1CAL` male old american — A deep, raspy, grumbling character voice with a rough, textured tone and a grounded presen
+- Rupert - Your Proper Gentleman `89gcX1AeMGgcsN8ypHLu` male middle_aged standard — Refined, precise and impeccably controlled, delivering clarity, discipline and understated
+- Sandra Squirrel - Quirky Explorer `iwP1PxYYSTdHA1qXlwFe` female young standard — A lively, nerdy traveler, drifting through deep space all by herself. Driven by hope, curi
+- Scott W - Low, soft, calm for narration `6Xb9dRSSm1t1OLWvzT1T` male old us midwest — American baby boomer with a low soft voice great for documentaries, narration and stories.
+- Serafina - Flirty Sensual Temptress `4tRn1lSkEn13EVTuqb0g` female young american — A deep, smooth American woman's voice that is rich, velvety, and irresistibly captivating,
+- Russel - Raw Cowboy `Av4Fi2idMFuA8kTbVZgv` male old american — Delivers a rough, timeworn growl, perfect for grizzled cowboys, tough grandfathers, battle
+- Sia - Excited & Enthusiastic Creator `m8xuPUrPnV7Qel198nAA` female young standard — Sia is the voice of your most excited best friend — the one who can't wait to tell you eve
+- Ruby Roo `b8gbDO0ybjX1VA89pBdX` female young australian — Sweet, sunny Australian voice delivering cheery character-driven narration perfect for chi
+- Silas - Weathered Villain `WzVKtqQpTUUQ2JNx8YxI` male middle_aged american — A weathered villain voice, low and unhurried, with a hoarse edge that never bothers to sho
+- Shawn `mB6ZkFrKfGXPm8AMkuVl` male middle_aged us southern — Deep and Calm.
+- Silver  – Gritty Pirate Voice `6VgigPFWF0sNZy1BthVg` male middle_aged british — A deep, gritty pirate voice perfect for games, trailers, roleplay, and nautical characters
+- Sofia - Natural Conversations `eZxqQzb5CuYo3Kl6EXfZ` female young peninsular — Natural young-adult female voice in Spanish from Spain (Español Peninsular). Features a so
+- Squirrel -  young `yc78AF88G0Spj3TBg3cb` male young brazilian — My own natural voice is brought into the digital world with an authentic, familiar, and ge
+- Ralf Eisend `A9evEp8yGjv4c3WsIKuY` male old german — An international audio book speaker with clear and deep voice, ideal for audio books and a
+- Seyfullah Kartal `mF7tIc9VLrznhGooGjaT` male old istanbul — A professional voice with a full and effective Turkish, Istanbul accent. With its natural 
+- Thendral - Cheerful & Interactive  `dOQi5SePW2oLH7pdyeq3` female young standard — A cheerful, lively, and naturally interactive Tamil voice designed to make conversations f
+- Thirafi - Narative & Character `RGPjVF1MbsFytGJEldTj` male young indonesian — A raspy, playful character voice with an expressive and versatile delivery, ideal for voic
+- Tilly - Bright, Spirited, Naive, Scrappy `MkTSSXNgnBULS6ek4pon` female young american — Young, high-pitched voice with sweet, naive charm and an underdog spirit. Perfect for vide
+- TravisT `QPHPVQ3GBpK8RfHieGoG` male middle_aged american — Use for announcements, stories, or commercial.
+- The Doc `yE92kjHV7JLsMwRaRjeg` male old american — Deep, older, authoritative baritone US Midwestern accent.
+- Viisas Kertoja - Calm, Warm and Rich `Sz0tRTEpybtDJ9ru2kgD` male middle_aged standard — Viisas Kertoja - Mature, male Finnish-language voice with a clear, medium-low pitch and a 
+- Victor - Deep, Malevolent and Ancient `cPoqAvGWCPfCfyPMwe4z` male old american — A deep ancient malevolence voice. Great for character & Animations.
+- Vilhelm `uNijH7qDIRQQ2u6S2c21` neutral young standard — A young-sounding, clear Finnish voice with a calm and natural tone. Neutral in style, with
+- Vaino - Peaceful & Soulful `Gp43kq9FsSlavD7esRtx` male old standard — An older, low and soulful male voice, whose calm narration is well-suited for audiobooks a
+- Ville - kolmekymppinen mies `XFCwH7g0WlOZiFnelted` male middle_aged western — Finnish male in his 30's. Calm, rational, steady storytelling. Great for news, podcasts, s
+- Vinan `pQ7aOU0H31SmMd2WShoD` female young american — Female, Young, Playful, English, Turkish
+- Sully `wAGzRVkxKEs8La0lmdrE` male old american — Deep mature American male
+- Willem - Warm British Narrator `MmQAnDAp0dcTNc35QhwG` male middle_aged british — Warm, relaxed British male narrator with a subtle, hard-to-place lilt. Natural and easy to
+- William Warmread - हिंदी आवाज़ `oae6GCCzwoEbfc5FHdEu` male old standard — This is a gentle bedtime narrator voice, made for falling asleep. It’s warm, calm, and qui
+- Soili `RiWFFlzYFZuu4lPMig3i` female middle_aged standard — A Finnish woman with a calm voice.
+- Wolf Spencer - Rough and Deep `2OcnG4mH3jIMtWz3vKus` male old standard — A deep, bassy male voice in the style of classic film legends. Warm. Deep. Confident. Remi
+- Will – Grounded Narrator `zL8BUx7dljdEZMmcSu8V` male middle_aged american — A grounded, professional male narration voice designed for audiobooks, documentaries, and 
+- PETER BAKER - Senior Deep British Narration `Ix8C14HEHgIQkJswik2o` male old british — Peter Baker is a highly experienced professional voice talent based in the UK. He has a de
+- Zara – The Warm, Real-World Conversationalist `jqcCZkN6Knx8BJ5TBdYR` female young american — Zara is a female voice, 20s–30s, blends warmth, clarity, and confident expression. Ideal f
+- ismail Dağarslan `v6FR4zL4HtUQMrRsNmRm` male middle_aged istanbul — Ideal for characters.
+- Zibby – Quirky, Nerdy & Dorky Sidekick `wIzYfKZE8c87XZD7bDLH` female young american — Zibby is a quirky, nerdy female character voice with lovable dorky energy, playful humor, 
+- Yuna – A cute female & fantastic Voice `GSFvrPXzdN7bQvY4mEAd` female young standard — A cute, sweet, and charming Japanese anime-style female voice with a bright, youthful pers
+- kuon - Anime Cute Voice `B8gJV1IhpuegLxdpXFOE` female young standard — Acute female & fantastic voice.
+- Yuna - Cheerful, Clear and Natural `xi3rF0t7dg7uN2M0WUhr` female young standard — Young Korean female voice with soft/cheerful voice specialized in narrative and storytelli
+- Xena Alexander `Ob9cCXvjEXdG9xUhXK4i` female young american — Southern Woman, Sarcastic.
+
+## Kokki (page_size=25&gender=male&age=old&use_cases=characters_animation&sort=cloned_by_count)
+
+- Victor - Deep, Malevolent and Ancient `cPoqAvGWCPfCfyPMwe4z` male old american en characters_animation — A deep ancient malevolence voice. Great for character & Animations.
+- Cornelius `6sFKzaJr574YWVu4UuJF` male old british en characters_animation — A wise old sage wizard, with tales to spin for you!
+- Helmut - Distinctive and Authentic `5KvpaGteYkNayiswuX2h` male old standard de characters_animation — Distinctive, authentic, and unmistakable – a voice with the power of great productions. Ro
+- British Football Announcer `gU0LNdkMOQCOrPrwtbee` male old british en characters_animation — Energetic, fast-paced, crisp British accent; rising intonation, dramatic pauses, thrilling
+- Declan - Horror, Narrator `1BfrkuYXmEwp8AWqSLWk` male old irish en characters_animation — A scary, ancient voice like it’s speaking from a peat-dark cottage at the edge of the worl
+- Countdown Casey - Radio DJ `mKoqwDP2laxTdq1gEgU6` male old american en characters_animation — Vintage FM radio disc jockey character. Old school, throwback, parody content. Comedy, ani
+- Grampa Werthers - Old & Cranky `MKlLqCItoCkvdhrxgtLv` male old american en characters_animation — Sometimes sweet, always honest. American old timer who remembers how the world used to be.
+- Jerry B - Jolly Santa Claus `MDLAMJ0jxkpYkjXbmG4t` male old american en characters_animation — Bring holiday magic to life! Cheerful, jolly, and warm, this voice is perfect for the holi
+- El Abuelo Charlie - Wise-sounding, Calm `Yb8JGzcZyW5YYzenhRCm` male old latin american es characters_animation — Warm, calm voice of an older man with classic style.
+- Beezle Wheezelby `BBfN7Spa3cqLPH1xAS22` male old british en characters_animation — Wise old British narrator or fantasy character, distinctive soft and wizened voice suitabl
+- Matthew Schmitz - Ancient Sage Dragon Wizard `HAvvFKatz0uu0Fv55Riy` male old british en characters_animation — Fantasy character voice rife with wisdom and old age. Underlying rasp and venom. Great for
+- Georg - Funny and Emotional `LRpNiUBlcqgIsKUzcrlN` male old standard de characters_animation — Old German male voice, spoken by a grandfather over 90 years of age, quavering, crackly, a
+- Bowo - Intimidating and Hoarse `LxiqOV1uxBCgYTeitAHf` male old standard id characters_animation — A hoarse, deep voice. To create a frightening and menacing impression. But it can also be 
+- Wolf Spencer - Rough and Deep `2OcnG4mH3jIMtWz3vKus` male old standard de characters_animation — A deep, bassy male voice in the style of classic film legends. Warm. Deep. Confident. Remi
+- Jang Ho - Serious, Husky and Measured `UmYoqGlufKxhJ6NCx5Mv` male old standard ko characters_animation — Husky and wild male voice
+- Frederick - Deep and Historical `uVKHymY7OYMd6OailpG5` male old standard de characters_animation — Listen to the rugged tales, this grizzled baritone tells. This gnarly, well-seasoned voice
+- David - Deep, Southern, Cowboy `0hh7H4ZVAtaGpm1VZyEN` male old us southern en characters_animation — Premium, gritty Southern Cowboy voice with an authentic, weathered drawl. Recorded in a tr
+- Olivier - Eccentric and Aged `GFj5Qf6cNQ3Lgp8VKBwc` male old standard fr characters_animation — Professional French Actor. Cartoon Voice of an old male character.
+- Matthew Schmitz - Rich,Old Storyteller `B52raBK48m23qWYbwchQ` male old american en characters_animation — An old grizzled Storyteller, rich resonant depth, exuding warmth. It has a commanding yet 
+- Cave Monster - Deep Terrifying Monster `HASaEuIpR5CVuLzDK1E1` male old standard fil characters_animation — A deep, hoarse, and terrifying voice that seemed to be gushing from inside a jar. Each utt
+- Grimblewood Thornwhisker - Snarky Gnome & Magical Maintainer `ouL9IsyrSnUkCmfnD02u` male old british en characters_animation — Professional British character voice - high-pitched, raspy gnome with snarky comedic timin
+- Gravel Midnight – Deep Grit Character Voice `M5E055lOUxMi0kJpGyE9` male old british en characters_animation — A deep, rough character voice with heavy texture, natural rasp and strong low-end presence
+- Myrrdin - Wise and Magical Narrator `oR4uRy4fHDUGGISL0Rev` male old german en characters_animation — Myrddin: The definitive (800+ years old) wizard voice for any true magical narration. This
+- Claus - Cheerful, Festive and Friendly `Gqe8GJJLg3haJkTwYj2L` male old american en characters_animation — Your favorite Christmas icon, now available for you to use all year round!
+- Sergio - Friendly and Encouraging `RGbeQtiShYRDVCrd9b9w` male old brazilian pt characters_animation — A goofy and grumpy Brazilian old man, ideal for humorist characters and funny situations.
+
+## Kokki2 (page_size=25&gender=male&age=middle_aged&use_cases=characters_animation&sort=cloned_by_count)
+
+- Adam - American, Dark and Tough `IRHApOXLvnW57QJPQH2P` male middle_aged american en characters_animation — A tough hero, weathered by years of experience. American accent.
+- Edward - British, Dark, Seductive, Low `goT3UYdM9bhm0n2lmKQx` male middle_aged british en characters_animation — A deep, low, seductive strong British man. 
+- Austin - Deep, Raspy and Authentic `Bj9UqZbhQsanLzgalpEG` male middle_aged us southern en characters_animation — Good ol' boy, goes to the state fair every year, low, deep gravelly voice, proud of his st
+- Oxley - Evil Character `2gPFXx8pN3Avh27Dw5Ma` male middle_aged american en characters_animation — This evil character presages ominous events! His voice is clear, understandable, and terri
+- Xavier - Dominating, Metalic Announcer `YOq2y2Up4RgXP2HyXjE5` male middle_aged american en characters_animation — The 'Unreal Tonemanagement 2003' voice, originally voiced by Christian Plasa, is a retro-f
+- B. Hardscrabble Oxley `zQzvQBubVkDWYuqJYMFn` male middle_aged american en characters_animation — Intimate baritone of a weathered man whose soul has been sculpted by challenge and hardshi
+- Martin Osborne - Polished and Intense `z3kTTwYbQrmL7ckdGcJi` male middle_aged peninsular es characters_animation — Middle aged man with a Spanish-Castillian voice. Perfect for Suspense & Intense Characters
+- Rob - Tough & Calloused `2ajXGJNYBR0iNHpS4VZb` male middle_aged british en characters_animation — A tough British man. Gritty, Experienced, Strong.
+- Edward - Loud, Confident and Cocky `zYcjlYFOd3taleS0gkk3` male middle_aged american en characters_animation — A smug and charismatic male voice oozing with confidence and wicked charm. He’s the kind o
+- Carter - Rich, Smooth and Rugged `qNkzaJoHLLdpvgh5tISm` male middle_aged american en characters_animation — Middle-aged American male. Voice is rich, smooth, & rugged. Each syllable lingers on the p
+- Brock - Commanding and Loud Sergeant `DGzg6RaUqxGRTHSBjfgF` male middle_aged american en characters_animation — Harsh, barking tone; clipped, commanding cadence; loud, relentless, and full of authority.
+- W. Clint Oxley `fbIG6gEosVIM95R5qOna` male middle_aged american en characters_animation — A baritone voice with an intimate and serious demeanor. He has a raspy voice born from his
+- Clyde - Vintage and Warm Radio Announcer `QMJTqaMXmGnG8TCm8WQG` male middle_aged american en characters_animation — A vintage male announcer - think old timey radio!
+- Johnny Dynamite - Vintage Radio DJ `CeNX9CMwmxDxUF5Q2Inm` male middle_aged american en characters_animation — Funny FM disc jockey character. Vintage 1950s or 1980s announcer. Top 40, Rock or Oldies o
+- Tarquin - Posh & English RP `7cOBG34AiHrAzs842Rdi` male middle_aged british en characters_animation — A posh British man from the Home Counties. Landed gentry. Received Pronunciation.
+- Leónidas - Legendary Spartan Warrior `YKrm0N1EAM9Bw27j8kuD` male middle_aged peninsular es characters_animation — Ideal for trailers, videogames, battle cries, or heroic monologues where strength, defianc
+- Egor Gadzhiyev - Clear and Commanding `6A9D8WSMm4rFsg2DWFeE` male middle_aged moscow ru characters_animation — Middle-aged male voice. Great for video games.
+- Brad - Eyewitness Bystander  `MYiFAKeVwcvm4z9VsFAR` male middle_aged american en characters_animation — Man on the street interview. Handheld microphone. Character voice that thinks out loud as 
+- Poe - Angry and Irritable Villain `KLZOWyG48RjZkAAjuM89` male middle_aged american en characters_animation — Angry, irritable, some say downright evil. If there was ever a male Karen, this guy is it 
+- Zadok - Serious and Confident `efGTHf4ukBiG4n8lptfp` male middle_aged standard hi characters_animation — Middle aged man, Hindi Language, Indian accent, good for serious character voice, villain,
+- Dominic - British, Brooding & Intense `yhf80q1381zd2JJQ4tM7` male middle_aged british en characters_animation — A strong, commanding voice with gravitas and shadow. Serious, sensual, and evocative — per
+- Nester Surovy - Gravely yet Refined `pM78bgjPVk0JXtaEnFoj` male middle_aged standard ru characters_animation — Deep and powerfully expressive, it carries the calm authority of a seasoned commander and 
+- Ed - Late Night Announcer `dHd5gvgSOzSfduK4CvEg` male middle_aged american en characters_animation — Comedy show introduction voice. Over the top cheesy American male. For live radio audience
+- Toby - Little Mythical Monster `Z7RrOqZFTyLpIlzCgfsp` male middle_aged american en characters_animation — A goblin creature with a high-pitched voice. Great for animation, video games, and charact
+- Matthew Schmitz - Hissing and Sinister `xYWUvKNK6zWCgsdAK7Wi` male middle_aged arabic en characters_animation — Deep, reptilian voice with wet, hissing textures and sinister tone. Ideal for horror, dark
+
+## Vesipoika (page_size=25&gender=male&age=young&use_cases=characters_animation&sort=cloned_by_count)
+
+- Bunty - Funny Best Friend `7b9mYhmnp0y2qSH1FnBL` male young standard hi characters_animation — Bunty’s voice is full of charm, wit, and best-friend energy—ideal for funny reels, roast-s
+- Otto - Intimidating and Aggressive `ycxdm1PRMs962FxyyuJ0` male young brazilian pt characters_animation — A young and epic voice. Perfect and excited to record videos talking about anime.
+- Mark - Cartoonish, Funny and Cheerful `DUnzBkwtjRWXPr6wRbmL` male young standard tr characters_animation — Great for game characters, cartoons, animations, stories for children, Fits perfectly for 
+- Northern Terry `wo6udizrrtpIxWGp2qJk` male young british en characters_animation — Eccentric & husky character from the North of England. Perfect for games, animation or qui
+- Marshal - Exciting, Dynamic and Lispy `lE5ZJB6jGeeuvSNxOvs2` male young american en characters_animation — This Marshal is a classic Toon meant to provide a voice fun characters. He speaks with exc
+- Jerry B - California Surfer Dude `rHWSYoq8UlV0YIBKMryp` male young american en characters_animation — Authentic California Surfer Dude voice with a relaxed, laid-back, conversational delivery 
+- Jett - Gritty and Spunky Young Hero `6IwYbsNENZgAB1dtBZDp` male young american en characters_animation — A young hero with a bit of an edge to him. He could fight demons or host your podcast!
+- Kavish - Clear, Expressive and Admiring `r21m7BAbXjtux814CeJE` male young standard hi characters_animation — Kavish is a young and talented actor and voice artist. His voice carries a wide range of e
+- Efrayn - Breathy, Serene and Expressive `1MxuWc12WPRxDkgfT3kj` male young peninsular es characters_animation — Young male voice in Spanish with Peninsular accent for narration, dialogues or cartoons.
+- Little Dude II - Cartoon Character `fBD19tfE58bkETeiwUoC` male young american en characters_animation — A high-pitched, energetic cartoon-style voice with a playful, mischievous edge. The delive
+- Gappu – Kids Cartoon Character Voice `psk8YLODv4ETdKheNwwz` male young standard hi characters_animation — Gappu is loud, funny, and impossible to ignore — a talkative animated character voice burs
+- Omar J - Energetic,Engaging and Animated `srEfhy4AF67Mw9SpTVFd` male young standard hi characters_animation — Omar J’s voice is young, bright, and filled with energy - perfect for animated shows, chil
+- Lutz - Chuckling, Giggly and Cheerful `9yzdeviXkFddZ4Oz8Mok` male young american en characters_animation — Young American male voice cheerfully cracking up. Perfect for humorous dialogues and happy
+- Thorthugo - Playful, High-pitched Friend `WOY6pnQ1WCg0mrOZ54lM` male young latin american es characters_animation — Characterized voice of a Japanese turtle living in the Gulf of Mexico, with a friendly and
+- Hopsi – Crazy & Funny Bunny `ygoBNrnmTEdu5NtDTmAY` male young standard de characters_animation — Crazy, cute, clumsy bunny with playful lisp and irresistible charm. Perfect Osterhase / Ea
+- Lukas - Excited youthful young man `wSqOdjeNqDrHcoK0zorF` male young american en characters_animation — Young man with a lot of passion and excitement in tone, happy, hopeful and confident. Good
+- Ziggy - Goofy Coyote `87n4zM8Wuy87vFILuKvE` male young american en characters_animation — High-pitch Cartoonish Voice
+- Ritsuto - Anime Prince Voice `A4AyGcPAjb1pHgflyZZp` male young standard ja characters_animation — Anime-style voice, male prince, fantastic.
+- Omar J – Very Young Storyteller `S7IsvAvEoDfui6GSZK3A` male young indian en characters_animation — Omar delivers a young, innocent, and wise storytelling style that feels cute, warm, and em
+- Akira - Charismatic Japanese Male `DOL4zlUH4vnnX1hByxsw` male young kanto ja characters_animation — A smooth and captivating Japanese male voice from Tokyo. Perfect for anime dubbing, game n
+- Amit - Children Cartoon Character `NbvR1eY6Q8ivACdEO8PV` male young standard hi characters_animation — Playful, animated, and impossible to ignore. Amit brings cartoon characters to life with n
+- Austin - Timid and Casual `Xb3zeLrTi6F4ziIcXdwk` male young american en characters_animation — A young American timid orphan boy. Tone is soft. Voice works well for characters & Animati
+- Sawaro - Japanese Actor Voice `EbuvaInXUGWtpYRUnKLQ` male young standard ja characters_animation — Japanese voice actor. Ranked #1 in the podcast voice actor category. Has appeared in numer
+- Harish - Energetic, Serious and Agitated `LQqGm0gT4pft0DECaryn` male young standard hi characters_animation — Most realistic voice of a young indian energetic male. Best for story narration and explai
+- Barnaby Bunny  - Funny Easter Character `DsJNFaZXbVnwO9Nycgo3` male young standard de characters_animation — Easter Bunny Barnaby is a fresh, funny, and high-fidelity voice, designed for modern anima
+
+## Apulainen (page_size=25&gender=male&age=young&use_cases=conversational&sort=cloned_by_count)
+
+- Mark - Natural Conversations `UgBBYS2sOqTuMpoF3BR0` male young american en conversational — A casual, young-adult speaking in a natural manner. Perfect for Conversational AI.
+- Adam - Engaging, Friendly and Bright `s3TPKV1kjDlVtZbl4Ksh` male young american en conversational — Adam is a male voice, 20s–30s, blends clarity, and confident expression. Ideal for creator
+- Bunty – Friendly & Fun Customer Agent `7qBNUtXRGP0jPi0H4r8k` male young standard hi conversational — Bunty delivers an energetic, youthful, and friendly delivery that feels approachable and u
+- Viraj - Warm, Energetic and Lively `iWNf11sz1GrUE4ppxTOL` male young standard hi conversational — A friendly, upbeat voice designed to make every customer feel heard and reassured. Viraj’s
+- Hale - Expressive, Deep and Emotive `wWWn96OtTHu1sn8SRGEr` male young american en conversational — A voice trained for more dynamic audio, with lots of expression, and trained with v3 in Mi
+- Finn - Youthful, Eager and Energetic `vBKc2FfBKJfcZNyEt1n6` male young american en conversational — A well-connected, young conversational male that's perfect for podcasting or casual conver
+- Victor - Casual and Conversational `GPAQQPp9dazaB2bl4zg9` male young standard fr conversational — Young French male voice. Perfect for casual conversations.
+- Jerry - Calm, Expressive and Narrative `XA2bIQ92TabjGbpO2xRr` male young american en conversational — A warm, calm, and confident baritone voice that feels both friendly and knowledgeable.
+- Antonio - Confident, Gentle and Clear `htFfPSZGJwjBv1CL0aMD` male young latin american es conversational — With a confident yet gentle delivery, Antonio excels at creating trust, clarity, and natur
+- Bunty – Smart Friendly Assistant `ibbx9zDYGvLgtYzRbqqG` male young standard hi conversational — Bunty brings a friendly, fun, and relatable tone that makes interactions feel natural and 
+- Mario - Animated and chatty `tomkxGQGz4b1kE0EM722` male young latin american es conversational — Spanish voice with an animated tone, perfect for any conversation or promotional video. Gi
+- Manav - Charming, Husky and Warm `6MoEUz34rbRrmmyxgRm4` male young standard hi conversational — A rich, husky voice with effortless charm—perfect for engaging narrations, voice assistant
+- Ninh Đôn – Deep & Warm `aN7cv9yXNrfIR87bDmyD` male young northern vi conversational — Young conversational male voice.
+- Ben - Effortless and Casual `aTTiK3YzK3dXETpuDE2h` male young standard de conversational — A young male German voice that can effortlessly switch from an animated, upbeat tone while
+- Jamahal - Young, Vibrant, and Natural `DTKMou8ccj1ZaWGBiotd` male young us northeast en conversational — A stylish, young urban male perfect for chill podcasts and natural conversations.
+- Mark - Dynamic, Balanced and Emotional `3jR9BuQAOPMWUjWpi0ll` male young american en conversational — Created for v3 optimization - this voice is more dynamic and varied for audio tags.
+- Sohaib Jasra - Neutral and Clear `kLuXkg0zRFuSas1JFmMT` male young standard hi conversational — Young Hindi male with a Pleasant voice. Great for conversations.
+- Raju - Warm and Professional `eyVoIoi3vo6sJoHOKgAc` male young standard hi conversational — Raju's voice is already loved by more than 100k users and has been widely used for various
+- Viraj – Recovery Agent FINAL BOSS `czQ9pLzjRaF61EAYjcPC` male young standard hi conversational — Viraj is built for moments when being polite no longer works. Blunt, firm, and emotionally
+- Abysa - Encouraging, Neutral and Breathy `WXmGNP5rvPWuO0RYTqfP` male young standard id conversational — Young male voice. This voice has the familiar warmth and approachability of a regular Indo
+- Shyam - Honest, Friendly and Warm `qSV5UqvHBC0Widy71Esh` male young standard hi conversational — A conversational voice that feels real, rooted, and genuinely kind. Shyam’s tone is honest
+- Josh - Warm, Smooth and Steady `ZoiZ8fuDWInAcwPXaVeq` male young american en conversational — A friendly, conversational voice designed for natural back-and-forth dialogue. It balances
+- Ryan - Product Reviewer `4e32WqNVWRquDa1OcRYZ` male young american en conversational — Sounds like a real friend giving you the honest take on a product. Medium pitch and relaxe
+- Aidan - Social Media Influencer `EOVAuWqgSZN2Oel78Psj` male young american en conversational — A smooth, clear, and versatile voice perfect for YouTube narration, TikTok voiceovers, pod
+- Raju - Natural Conversationalist `pzxut4zZz4GImZNlqQ3H` male young indian en conversational — Raju's voice is already loved by more than 100k users and has been widely used for various

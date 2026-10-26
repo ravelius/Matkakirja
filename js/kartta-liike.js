@@ -49,12 +49,12 @@ export const SAVYT = {
 /** Bodyn luokat, joiden aikana lauta ei ole levossa. */
 export const LEVON_ESTEET = [
   'linssi-paalla', 'nosto-popup-auki', 'lento-kesken', 'flight-active',
-  'aikajana-paalla', 'maataulu-auki', 'laukku-auki', 'animaatio-kaynnissa',
+  'aikajana-paalla', 'maataulu-auki', 'pilleri-auki', 'animaatio-kaynnissa',
   'kartta-raahaus', 'zoom-kaynnissa', 'luenta-huntu', 'aloitusverho-paalla',
   'aloitusnakyma', 'pallolauta-lennossa',
 ];
-/** Kortit, joiden ollessa näkyvissä pulu ei lennä. */
-export const KORTTIVALITSIN = 'dialog[open], .fokuskohde-popup, .fokusnosto-kerros';
+/** Kortit, joiden ollessa näkyvissä pulu ei lennä (kohdekortti on NOSTOKORTTI-pohjalla 2.10.2026: .tk-nostokortti:not(.tk-piilossa)). */
+export const KORTTIVALITSIN = 'dialog[open], .fokuskohde-popup, .tk-nostokortti:not(.tk-piilossa), .fokusnosto-kerros';
 
 let liikeMuisti = null;
 

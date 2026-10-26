@@ -39,6 +39,7 @@ const {
 } = await import('../js/pallolauta/lauta.js');
 const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
 const { Game } = await import('../js/game.js');
+const { FLIGHT_PRICE } = await import('../js/rules.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
 const { MERKIN_KORKEUS } = await import('../js/pallolauta/merkit.js');
@@ -210,8 +211,17 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   const muun = kaupunkipisteenVari({ kayty: false, alku: false });
   assert.ok(kaydyn !== muun && alun !== muun && kaydyn !== alun);
   // Käymätön piste on vaalea ruskea, ei musta (omistaja 8.9.2026:
-  // "mustat pisteet saisivat näkyä selvästi vaaleampina").
-  const luma = (hex) => { const n = parseInt(hex.slice(1), 16); return (0.2126 * (n >> 16) + 0.7152 * ((n >> 8) & 255) + 0.0722 * (n & 255)); };
+  // "mustat pisteet saisivat näkyä selvästi vaaleampina"; 29.9.2026
+  // rannan muste 0,75:n peitolla). Läpikuultava väri luetaan pergamentin päällä.
+  const PAPERI = [235, 222, 190];
+  const luma = (vari) => {
+    let [r, g, b, a] = [0, 0, 0, 1];
+    if (vari.startsWith('#')) { const n = parseInt(vari.slice(1), 16); [r, g, b] = [n >> 16, (n >> 8) & 255, n & 255]; }
+    else [r, g, b, a = 1] = vari.match(/[\d.]+/g).map(Number);
+    const k = (x, p) => a * x + (1 - a) * p;
+    return 0.2126 * k(r, PAPERI[0]) + 0.7152 * k(g, PAPERI[1]) + 0.0722 * k(b, PAPERI[2]);
+  };
+  assert.notEqual(kaupunkipisteenVari({ kayty: false, alku: false }, true), muun, 'pelaajan oma kaupunki pitää entisen seepiansa');
   assert.ok(luma(muun) >= 100, `käymättömän pisteen luminanssi ${luma(muun).toFixed(0)} — musta täplä palasi`);
   assert.ok(luma(muun) < luma(alun) && luma(alun) < luma(kaydyn), 'käymätön on kolmesta tummin');
   // Kaikki liike animoitua, reduced motion kunnioitetaan.
@@ -1199,6 +1209,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
    * kaupunkirajaus lukee näytettävät merkit.
    */
   kaupunkiin('berliini');
+  peli.player.money = FLIGHT_PRICE; // juna 183: alkuraha 300 ei riitä lentoon (350)
   const berliininLennot = peli.airportDestinations();
   assert.ok(berliininLennot.length > 0, 'Berliinistä pitää olla lentoja mitattavaksi');
   const lentonakymaUi = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'berliini' });

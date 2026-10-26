@@ -1,0 +1,103 @@
+[
+  {
+    "id": "pietari",
+    "esittely": "Kartan alue on Pietarin vanha ydin Nevan molemmin puolin. Pietari-Paavalin linnoitus perustettiin 27. toukokuuta 1703 Jänissaarelle. Talvipalatsissa toimii Eremitaaši-museo. Kazanin katedraalin rakennustyöt alkoivat 1801 Nevski prospektin varrella. Gribojedovin kanava kaivettiin 1739 Krivuša-joen uomaan.\n\nVerikirkko rakennettiin 1883–1907 paikalle, jossa keisari Aleksanteri II sai surmansa 1881. Senaatintorilla on Vaskiratsastaja, Falconetin tekemä Pietari Suuren ratsastajapatsas, joka paljastettiin 1782. Mariinski-teatteri avattiin 1860. Dmitri Mendelejev julkaisi alkuaineiden jaksollisen järjestelmän 1869, kun hän opetti Pietarin yliopistossa. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 707,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Peter_and_Paul_Fortress",
+        "title": "Wikipedia: Peter and Paul Fortress",
+        "tukee": "perustettu 27.5.1703 Jänissaarelle"
+      },
+      {
+        "url": "https://www.inyourpocket.com/russia/st-petersburg-en/articles/Peter-and-Paul-Fortress",
+        "title": "In Your Pocket: Peter and Paul Fortress (hakutulos)",
+        "tukee": "linnoitus perustettu 27.5.1703 Zayachy-saarelle"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Winter_Palace",
+        "title": "Wikipedia: Winter Palace",
+        "tukee": "Talvipalatsissa toimii Eremitaaši-museo"
+      },
+      {
+        "url": "https://www.finestresullarte.info/en/museums/the-hermitage-in-st-petersburg-five-buildings-one-of-the-world-s-largest-art-collections",
+        "title": "Finestre sull'Arte: The Hermitage (hakutulos)",
+        "tukee": "Talvipalatsi osa Eremitaaši-kompleksia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Kazan_Cathedral,_Saint_Petersburg",
+        "title": "Wikipedia: Kazan Cathedral, Saint Petersburg",
+        "tukee": "rakennustyöt alkoivat 1801"
+      },
+      {
+        "url": "https://visit-petersburg.ru/en/leisure/places/tp-194707-kazanskiy-kafedralnyy-sobor/",
+        "title": "Visit Petersburg: Kazan Cathedral (hakutulos)",
+        "tukee": "peruskivi 1801, julkisivu Nevski prospektille"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Griboyedov_Canal",
+        "title": "Wikipedia: Griboyedov Canal (hakutulos)",
+        "tukee": "kaivettu 1739 Krivuša-joen uomaan"
+      },
+      {
+        "url": "https://encspb.ru/object/2804019128?lc=en",
+        "title": "Encyclopaedia of St Petersburg: Griboedov Canal (hakutulos)",
+        "tukee": "Krivuša/Glukhaja-joki yhdistettiin Moikaan 1739"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Church_of_the_Savior_on_Blood",
+        "title": "Wikipedia: Church of the Savior on Blood",
+        "tukee": "rakennettu 1883-1907 Aleksanteri II:n murhapaikalle 1881"
+      },
+      {
+        "url": "https://aviewoncities.com/st-petersburg/church-of-the-savior-on-spilled-blood",
+        "title": "A View on Cities: Church of the Savior on Spilled Blood (hakutulos)",
+        "tukee": "1881 murha Gribojedovin kanavalla, rakennus 1883-1907"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Bronze_Horseman",
+        "title": "Wikipedia: Bronze Horseman",
+        "tukee": "Falconet; paljastettu 1782 Senaatintorilla"
+      },
+      {
+        "url": "https://prlib.ru/en/news/1301131",
+        "title": "Presidential Library: Bronze Horseman (hakutulos)",
+        "tukee": "paljastettu elokuussa 1782"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mariinsky_Theatre",
+        "title": "Wikipedia: Mariinsky Theatre",
+        "tukee": "avattu 1860"
+      },
+      {
+        "url": "https://www.mariinsky.ru/en/about/",
+        "title": "Mariinsky Theatre: About (hakutulos)",
+        "tukee": "teatteri avattiin 2.10.1860"
+      },
+      {
+        "url": "https://www.aip.org/library/a-look-at-the-first-published-periodic-table",
+        "title": "AIP: A look at the first published periodic table (hakutulos)",
+        "tukee": "Mendelejev 1869, Pietarin yliopiston professori"
+      },
+      {
+        "url": "https://iypt2019.org/news/where-is-the-oldest-periodic-table/",
+        "title": "IYPT 2019: Where is the oldest periodic table (hakutulos)",
+        "tukee": "jaksollinen järjestelmä 1869, Pietarin yliopisto"
+      }
+    ],
+    "pudotetut": [
+      "Entinen teksti: linnoitus \"kaupungin ensimmäinen rakennus\" ja \"tähdenmuotoinen saari\": lähteet erimielisiä (kirkko vs. linnoitus ensimmäisenä), jätetty pois",
+      "Entinen teksti: kanavat \"kaivettiin alun perin ojiksi soisen maan kuivaamiseen\": lähteiden mukaan Gribojedovin kanava kaivettiin Krivuša-joen uomaan 1739 ja Moika ja Fontanka olivat jokia; väite jätetty pois",
+      "Talvipalatsin huoneiden määrä ja rakennusvuodet: ristiriitaisia, jätetty pois",
+      "Nevski prospektin pituus: ei toista lähdettä, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Talvipalatsin huoneluku 460 / 1 050-1 084 / 1 500: ei käytetä",
+      "Talvipalatsin rakennusaika (1754-1762, 1754-1764, 1732 alkaen): ei käytetä",
+      "Kazanin katedraalin valmistuminen 1811 vs. 1818: käytetty vain rakennustöiden alku 1801",
+      "Gribojedovin kanavan nimenmuutos 1923 vs. 1932: ei mainita"
+    ],
+    "muutos_sk": "Alkua ja järjestystä muutettu. Säilytetty: Pietari-Paavalin linnoitus 1703 Jänissaarella, Talvipalatsi/Eremitaaši, Verikirkko, Kazanin katedraali, Vaskiratsastaja, Mariinski. Poistettu virheellinen väite että kanavat kaivettiin ojiksi, sekä Moika ja Fontanka. Lisätty: tarkat vuosiluvut (1739, 1801, 1883-1907, 1881, 1782, 1860) ja Mendelejev 1869."
+  }
+]

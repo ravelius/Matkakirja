@@ -65,6 +65,21 @@ export function avaaTietajagalleria(pisteet = 0) {
   ylarivi.appendChild(selitys);
   ylarivi.appendChild(nykyinen);
 
+  const ruudukko = tietajaRuudukko(pisteet);
+
+  return avaaMinipopup({
+    otsikko: 'Tietäjän tie',
+    sisalto: [ylarivi, ruudukko],
+    luokka: 'tietaja-popup',
+  });
+}
+
+/**
+ * Kaikki tasot ruudukkona (kuva, nimi ja raja; nykyinen korostettu, saavuttamattomat himmeinä). Sama ruudukko
+ * minipopupissa ja valikon tasonäkymässä (js/ui.js renderValikkoTaso, omistaja 2.10.2026 klo 14.4x).
+ */
+export function tietajaRuudukko(pisteet = 0) {
+  const nyt = tietajataso(pisteet);
   const ruudukko = html('ul', 'tietaja-galleria');
   for (const taso of TIETAJATASOT) {
     const kohta = html('li', 'tietaja-galleria-kohta');
@@ -96,9 +111,5 @@ export function avaaTietajagalleria(pisteet = 0) {
     ruudukko.appendChild(kohta);
   }
 
-  return avaaMinipopup({
-    otsikko: 'Tietäjän tie',
-    sisalto: [ylarivi, ruudukko],
-    luokka: 'tietaja-popup',
-  });
+  return ruudukko;
 }

@@ -241,7 +241,7 @@ export const MAASTOKOHTEET_SLE = [
       + 'pääkaupunki. Kaupunki on menden kansan tärkein keskus, ja siellä on Njalan '
       + 'yliopisto, maan toiseksi suurin. Perimätiedon mukaan nimi kertoo anteliaisuudesta: '
       + 'kun metsästäjä oli kaatanut norsun, ympäröivien kylien väki tuli hakemaan osansa, ja '
-      + 'lihaa oli niin paljon, että jakaminen kesti päiviä — metsästäjä toisti "Bi-woo", '
+      + 'lihaa oli niin paljon, että jakaminen kesti päiviä — metsästäjä toisti ”Bi-woo”, '
       + 'menden kielellä tämä on sinun, niin monta kertaa että siitä tuli paikan nimi. '
       + 'Valtionrautatie lakkautettiin 1974.',
     lahde: 'en-Wikipedia "Bo, Sierra Leone", johdanto-osa sekä osiot "History" ja "Etymology" '

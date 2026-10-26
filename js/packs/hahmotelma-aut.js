@@ -198,7 +198,7 @@ export const HAHMOTELMA_AUT = [
       + 'on syvempi ja suurempi. Järven pohjoispäässä on Gmunden ja eteläpäässä Ebensee, ja '
       + 'sitä ympäröivät vuoret, joihin kuuluu Traunstein. Järven nähtävyyksiin kuuluu '
       + 'keskiaikainen Schloss Ort -linna. Paikallinen legenda kertoo vesihevosesta, joka '
-      + 'asuu järvessä, ja paikalliset kutsuvat sitä nimellä "Lungy".',
+      + 'asuu järvessä, ja paikalliset kutsuvat sitä nimellä ”Lungy”.',
     lahde: 'en-Wikipedia "Traunsee", koko artikkeli (tarkistettu 19.9.2026).',
     visa: {
       kysymys: 'Mikä olento paikallisen legendan mukaan asuu Traunjärvessä?',
@@ -489,6 +489,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-heiligenkreuz',
+    nimio: 'Heiligenkreuz',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-heiligenkreuz-c8491d1c.jpg',
       lyhyt: 'Heiligenkreuzin luostari noin vuoden 1830 kivipiirroksessa.',
@@ -538,6 +539,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-kremsmuenster',
+    nimio: 'Kremsmünster',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-kremsmuenster-26fcbe8d.jpg',
       lyhyt: 'Ilmakuva Kremsmünsterin luostarista ja sen sisäpihoista.',
@@ -872,7 +874,7 @@ export const HAHMOTELMA_AUT = [
       + 'sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna '
       + '1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku '
       + 'vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, '
-      + 'kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi '
+      + 'kronometrien, koneiden ja muiden ”ihmeiden” säilytyspaikka, ja aarrekammioon pääsi '
       + 'vain salaisen käytävän kautta.',
     lahde: 'en-Wikipedia "Forchtenstein Castle", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
@@ -1466,6 +1468,7 @@ export const HAHMOTELMA_AUT = [
   },
   {
     id: 'hahmotelma-st-anton',
+    nimio: 'Sankt Anton',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-st-anton-08b90bb2.jpg',
       lyhyt: 'Näkymä St. Antonin kylään Galzig-gondolin yli.',

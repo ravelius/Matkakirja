@@ -1,0 +1,201 @@
+{
+  "versio": 3,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Kokoelma \"alueellisetpiilotukset\": Kreikan valtion muistomerkkien kuvat, havainnekuvat ja 3D-opas piilotetaan vain Kreikan App Storessa (GRC), PT/omistaja 12.10.2026, Raamattu #4493. Päälista (laajennettu 12.10.: fokuskohteet-grc, europe-puzzles, maa-kategoriat, maakartat, kohtaamiset/ihmeet, karttanostot GRC, intron Ateena). Harkinnanvaraiset kohteet erillisessä tiedostossa ja raportissa. PT 12.10.: laki koskee kuvia, ei tekstiä, joten tehtävä ateena:aikajana (ei kuvia) ei ole listalla ja Kolme veljestä valmistuu GRC:ssäkin. PÄIVITYS 12.10. 17.5x (PT): 12 kansi- ja avauskuvaa saa korvaavan monumentittoman Commons-kuvan ({\"tunnus\",\"korvaava\"}), ja Ateenan 8 monumenttia esittävää karttaminiatyyriä (kuva:miniatyyrit/ateena-…) lisättiin listalle. PÄIVITYS 12.10. 19.4x (PT): Ateenan 8 piilotetulle karttaminiatyyrille korvaajaksi pelin yleinen kategoriasymboli (assets/kartat/symbolit/sym-<kategoria>.webp: historia, urheilu, kulttuuri), jotta kohteet näkyvät ja ovat napautettavissa GRC:ssä.",
+  "alkiot": [
+    {
+      "maa": "GRC",
+      "kohteet": [
+        "opas:ateena",
+        "opas:kreeta",
+        "pallokierros:ateena",
+        "maamerkki:ateena",
+        "tehtava:ateena:katso",
+    "tehtava:kreeta:katso",
+        {
+          "tunnus": "kuva:herokoe/hero-ateena-akropoliskallio",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Zeas_-_panoramio.jpg?width=1600",
+          "tekija": "Mister No",
+          "lisenssi": "CC BY 3.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Marina_Zeas_-_panoramio.jpg"
+        },
+        {
+          "tunnus": "kuva:herokoe/hero-ateena-aamu",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Mikrolimano_(3792336834).jpg?width=1600",
+          "tekija": "Francisco Restivo from Porto, Portugal",
+          "lisenssi": "CC BY 2.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Mikrolimano_%283792336834%29.jpg"
+        },
+        {
+          "tunnus": "kuva:herokoe/hero-ateena-keskipaiva",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Vouliagmeni_beach.JPG?width=1600",
+          "tekija": "C messier",
+          "lisenssi": "CC0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Vouliagmeni_beach.JPG"
+        },
+        {
+          "tunnus": "kuva:herokoe/hero-ateena-ilta",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Harbour_Sunset_(53812534106).jpg?width=1600",
+          "tekija": "Mustang Joe",
+          "lisenssi": "CC0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Piraeus_Harbour_Sunset_%2853812534106%29.jpg"
+        },
+        {
+          "tunnus": "kuva:Atenas,_03",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Lazaraki_Street_in_Glyfada_city_Athenian_Riviera.jpg?width=1600",
+          "tekija": "Cypkipras55",
+          "lisenssi": "CC0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Lazaraki_Street_in_Glyfada_city_Athenian_Riviera.jpg"
+        },
+        {
+          "tunnus": "kuva:The_Acropolis_from_Mount_Hymettus_on_February_9,_2020",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Garden_of_Athens%2C_20240531_1540_9794.jpg?width=1600",
+          "tekija": "Jakub Hałun",
+          "lisenssi": "CC BY 4.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:National_Garden_of_Athens%2C_20240531_1540_9794.jpg"
+        },
+        {
+          "tunnus": "kuva:Athens_at_night_on_September_28,_2022",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Piraeus_Harbour_Sunset_(53812534106).jpg?width=1600",
+          "tekija": "Mustang Joe",
+          "lisenssi": "CC0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Piraeus_Harbour_Sunset_%2853812534106%29.jpg"
+        },
+        {
+          "tunnus": "kuva:The_West_Facade_of_the_Parthenon_on_May_19,_2020",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Tram_TA20049_at_Syntagma_Square.jpg?width=1600",
+          "tekija": "Sv1xv",
+          "lisenssi": "CC BY 4.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Tram_TA20049_at_Syntagma_Square.jpg"
+        },
+        {
+          "tunnus": "kuva:Odeon_of_Herodes_Atticus_2019",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Zeas_-_panoramio.jpg?width=1600",
+          "tekija": "Mister No",
+          "lisenssi": "CC BY 3.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Marina_Zeas_-_panoramio.jpg"
+        },
+        {
+          "tunnus": "kuva:The_Panathenaic_Stadium_in_Athens_on_2_October_2018",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Mikrolimano_(3792336834).jpg?width=1600",
+          "tekija": "Francisco Restivo from Porto, Portugal",
+          "lisenssi": "CC BY 2.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Mikrolimano_%283792336834%29.jpg"
+        },
+        "kuva:Athènes._L'_Acropole_et_le_Temple_de_Thesée_LCCN2017658103",
+        "kuva:The_Acropolis_of_Athens_with_the_Parthenon,_the_Erecththeion_and_the_Mycenean_Fountain_from_Monastiraki_Square_on_March_11,_2020",
+        "kuva:Caryatids_from_the_Erechtheion_on_the_Acropolis,_Acropolis_Museum,_Athens_(13889706087)",
+        "kuva:The_Upper_Part_of_the_Tower_of_the_Winds_(Horologion_of_Andronikos_Kyrrhestes)",
+        "kuva:Tower_of_the_Winds,_Athens,_20240531_0912_9419",
+        "kuva:The_olive_tree_on_the_Acropolis_of_Athens,_28_April_2021",
+        "kuva:Acròpoli_d'Atenes_-_Temple_de_Nike_Àptera",
+        "kuva:Atenes_-_Temple_de_Nike_Àptera",
+        "kuva:Terracotta_Pipes_from_an_Aqueduct_-_Syntagma_Metro_Station_Archaeological_Collection_by_Joy_of_Museum",
+        "kuva:Athens_Acropolis_Propylaea_(28411780906)",
+        "kuva:Acropolis,_Athens-13",
+        "kuva:Erechtheum_Acropolis_Athens",
+        "kuva:Panathenaic_stadium_panorama",
+        "kuva:Parthenon_from_south",
+        "kuva:1011_Temple_of_Olympian_Zeus_in_Athens_Photo_by_Giles_Laurent",
+        "kuva:Temple_of_Olympian_Zeus,_Athens_-_panoramio",
+        "kuva:Bema,_Pnyx",
+        {
+          "tunnus": "kuva:herokoe/hero-kreeta-keskipaiva",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Greece_Crete_Elafonisi_Beach_The_Sun_Holidays.jpg?width=1600",
+          "tekija": "jarekgrafik",
+          "lisenssi": "CC0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Greece_Crete_Elafonisi_Beach_The_Sun_Holidays.jpg"
+        },
+        {
+          "tunnus": "kuva:herokoe/hero-kreeta-ilta",
+          "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Palm_beach_Preveli_on_Crete%2C_Greece.jpg?width=1600",
+          "tekija": "dronepicr",
+          "lisenssi": "CC BY 2.0",
+          "lahde": "https://commons.wikimedia.org/wiki/File:Palm_beach_Preveli_on_Crete%2C_Greece.jpg"
+        },
+        "kuva:Ruins_of_the_Minoan_Palace_in_Knossos",
+        "kuva:Cnossus_-_room_of_(?),_columns_-_north_entrance_-_DPLA_-_156faa906e3d69e9b9c71702853f1b8a",
+        "kuva:Bull_leaping_minoan_fresco_archmus_Heraklion",
+        "kuva:Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums",
+        "kuva:Venetian_Fortress_of_Koules_in_Heraklion,_Crete_003",
+        "kuva:\"Als_Mittelpunkt_der_Welt\"_galt_Delphi_für_die_Menschen_der_Antike._01",
+        "kuva:2007_Greece_Epidavros_theater",
+        "kuva:Ancient_Olympia_Stadium_in_Greece_(51224128585)",
+        "kuva:Armon_Knossos_P1050997",
+        "kuva:Marathon_Tomb_of_the_Athenians_1",
+        "kuva:Mechanism_of_Antikythera,_150-100_BC,_NAMA,_191434",
+        "kuva:The_Parthenon_in_Athens",
+        "kuva:Olympieion_(Athènes)_(30776483926)",
+        "kuva:Temple_of_Hephaestus_from_ancient_agora_Athens",
+        "kuva:Rotunda_mit_Minarett,_Thessaloniki_1995",
+        "kuva:Parthenon_(30276156187)",
+        "kuva:A_Corinthian_capital_(Temple_of_Olympian_Zeus)_on_August_10,_2022",
+        "kuva:Caryatid_-_Flickr_-_George_M._Groutas",
+        "kuva:Meteora,_Greece_(2016)",
+        "kuva:Sunset_over_Athens,_viewed_from_the_Propylaea,_2024",
+        "kuva:View_of_the_Acropolis_of_Athens_from_the_Panathenaic_Stadium,_20240601_1007_0049",
+        "kuva:Panathenaic_Stadium,_Athens,_20240601_1013_0058",
+        "kuva:Panathenaic_stadium,_Pangrati_borrough,_from_Acropolis,_Athens,_Greece",
+        "kuva:kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2",
+        "kuva:kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2",
+        "kuva:kohtaamiset/ihmeet/ihme-korintin-apollon-temppeli-loistoaika",
+        "kuva:kohtaamiset/ihmeet/ihme-heraion-loistoaika",
+        "kuva:karttanostot/20260920/grc-nosto-bassae",
+        "kuva:karttanostot/20260920/grc-nosto-delos",
+        "kuva:karttanostot/20260920/grc-nosto-heraion",
+        "kuva:karttanostot/20260920/grc-nosto-pella",
+        "kuva:karttanostot/20260920/grc-nosto-philippi",
+        "kuva:karttanostot/20260920/grc-nosto-vergina",
+        "kuva:karttanostot/20260920/grc-nosto-sounion",
+        "kuva:karttanostot/20260920/grc-nosto-thermopylae",
+        "kuva:karttanostot/20260920/grc-nosto-samothrace",
+        "kuva:karttanostot/20260920/grc-nosto-meteora",
+        "kuva:karttanostot/20260920/grc-nosto-arta",
+        "kuva:karttanostot/20260920/grc-nosto-monemvasia",
+        "kuva:karttanostot/20260920/grc-nosto-navarino",
+        "kuva:karttanostot/20260921/grc-nosto-korintin-apollon-temppeli",
+        "kuva:saapumisintro/ateena/",
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-antiikin-agora",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-historia.webp",
+          "huom": "yleinen kategoriasymboli (historia), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-akropolis",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-historia.webp",
+          "huom": "yleinen kategoriasymboli (historia), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-zeuksen-temppeli",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-historia.webp",
+          "huom": "yleinen kategoriasymboli (historia), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-kallimarmaro",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-urheilu.webp",
+          "huom": "yleinen kategoriasymboli (urheilu), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-akropolis-museo",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-kulttuuri.webp",
+          "huom": "yleinen kategoriasymboli (kulttuuri), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-niken-temppeli",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-historia.webp",
+          "huom": "yleinen kategoriasymboli (historia), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-iliou-melathron",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-historia.webp",
+          "huom": "yleinen kategoriasymboli (historia), pelin oma kaiverruskuva"
+        },
+        {
+          "tunnus": "kuva:miniatyyrit/ateena-elginin-marmorit",
+          "korvaava": "https://matkakirja.app/assets/kartat/symbolit/sym-kulttuuri.webp",
+          "huom": "yleinen kategoriasymboli (kulttuuri), pelin oma kaiverruskuva"
+        }
+      ]
+    }
+  ]
+}

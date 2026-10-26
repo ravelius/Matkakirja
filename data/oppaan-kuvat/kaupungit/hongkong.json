@@ -1,0 +1,683 @@
+{
+ "kaupunki": "hongkong",
+ "kaupunkiQ": "Q8646",
+ "kohteet": [
+  {
+   "q": "Q17541",
+   "nimi": "Victoria Peak",
+   "peruste": "pelin nosto",
+   "koko_m": 900,
+   "lat": 22.27547,
+   "lon": 114.14383,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "High West and Victoria Peak from Victoria Gap (crop1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/High_West_and_Victoria_Peak_from_Victoria_Gap_(crop1).jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:High_West_and_Victoria_Peak_from_Victoria_Gap_(crop1).jpg",
+     "selite": "Victoria Peak on Hongkongin saaren korkein huippu ja kaupungin tunnetuin näköalapaikka.",
+     "leveys": 3600,
+     "korkeus": 2700,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "DSC 0179 (3760463694).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DSC_0179_(3760463694).jpg?width=1280",
+     "tekija": "indri",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DSC_0179_(3760463694).jpg",
+     "selite": "Peakin rinteet nousevat tiheästi rakennettujen asuintornien takaa.",
+     "leveys": 3060,
+     "korkeus": 2032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q155643",
+   "nimi": "Victoria-satama",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 22.29,
+   "lon": 114.17,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HK YTM 西九龍文化區 West Kowloon Cultural District M+ Plus Museum 天台花園 roof garden view Victoria Harbour July 2022 Px3 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK_YTM_%E8%A5%BF%E4%B9%9D%E9%BE%8D%E6%96%87%E5%8C%96%E5%8D%80_West_Kowloon_Cultural_District_M%2B_Plus_Museum_%E5%A4%A9%E5%8F%B0%E8%8A%B1%E5%9C%92_roof_garden_view_Victoria_Harbour_July_2022_Px3_13.jpg?width=1280",
+     "tekija": "Bkemaoe HOMA",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HK_YTM_%E8%A5%BF%E4%B9%9D%E9%BE%8D%E6%96%87%E5%8C%96%E5%8D%80_West_Kowloon_Cultural_District_M%2B_Plus_Museum_%E5%A4%A9%E5%8F%B0%E8%8A%B1%E5%9C%92_roof_garden_view_Victoria_Harbour_July_2022_Px3_13.jpg",
+     "selite": "Victoria-satama erottaa Hongkongin saaren Kowloonin niemimaasta, ja sen rannoilla kohoaa pilvenpiirtäjien rivi.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Silver Star\" Ferry HK. (51005082072).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Silver_Star%22_Ferry_HK._(51005082072).jpg?width=1280",
+     "tekija": "Bernard Spragg. NZ from Christchurch, New Zealand",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Silver_Star%22_Ferry_HK._(51005082072).jpg",
+     "selite": "Vihreä Star Ferry -lautta ylittää satamaa kaupungin pilvenpiirtäjien edessä.",
+     "leveys": 2400,
+     "korkeus": 1558,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Admiralty, Hong Kong - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Admiralty%2C_Hong_Kong_-_panoramio_(1).jpg?width=1280",
+     "tekija": "swithland",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Admiralty%2C_Hong_Kong_-_panoramio_(1).jpg",
+     "selite": "Admiraltyn rantatornit ja Victoria Peak taustalla satamasta katsottuna.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1652985",
+   "nimi": "Peak Tram",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 22.27204,
+   "lon": 114.15487,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Peak Tram(Green light) 10-09-2022(2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peak_Tram(Green_light)_10-09-2022(2).jpg?width=1280",
+     "tekija": "LN9267",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peak_Tram(Green_light)_10-09-2022(2).jpg",
+     "selite": "Vuodesta 1888 kulkenut Peak Tram on vaunurata, joka kiipeää Centralista Victoria Peakille.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A Peak Tram arriving at the Peak Station (Hong Kong).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Peak_Tram_arriving_at_the_Peak_Station_(Hong_Kong).jpg?width=1280",
+     "tekija": "Mk2010",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Peak_Tram_arriving_at_the_Peak_Station_(Hong_Kong).jpg",
+     "selite": "Vaunu saapuu Peakin yläasemalle.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20251024 Peak Tram at Central Terminus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20251024_Peak_Tram_at_Central_Terminus.jpg?width=1280",
+     "tekija": "Windmemories",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20251024_Peak_Tram_at_Central_Terminus.jpg",
+     "selite": "Peak Tramin alapää on keskustan rinteessä Centralissa.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214855",
+   "nimi": "Bank of China Tower",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 22.27917,
+   "lon": 114.16139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hong Kong Bank of China Tower 14-04-2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Bank_of_China_Tower_14-04-2026.jpg?width=1280",
+     "tekija": "LN9267",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Bank_of_China_Tower_14-04-2026.jpg",
+     "selite": "Bank of China Tower on kolmionmuotoisten kulmikkaiden pintojen muodostama pilvenpiirtäjä Centralissa.",
+     "leveys": 8064,
+     "korkeus": 6048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bank of China Tower, Admiralty, Hong Kong (3515453408).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_China_Tower%2C_Admiralty%2C_Hong_Kong_(3515453408).jpg?width=1280",
+     "tekija": "Sylvain Kalache from San Francisco, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bank_of_China_Tower%2C_Admiralty%2C_Hong_Kong_(3515453408).jpg",
+     "selite": "Tornin terävät, timanttimaiset pinnat heijastavat taivasta.",
+     "leveys": 2008,
+     "korkeus": 3008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q317034",
+   "nimi": "International Commerce Centre",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 22.30339,
+   "lon": 114.16017,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "International Commerce Centre 200911.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/International_Commerce_Centre_200911.jpg?width=1280",
+     "tekija": "Baycrest",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:International_Commerce_Centre_200911.jpg",
+     "selite": "ICC on Kowloonin rannalla kohoava pilvenpiirtäjä, Hongkongin korkein rakennus.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hong Kong skyline (14371949904).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_skyline_(14371949904).jpg?width=1280",
+     "tekija": "cloud.shepherd",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_skyline_(14371949904).jpg",
+     "selite": "ICC nousee Kowloonin siluetin yllä auringonlaskun väreissä.",
+     "leveys": 7360,
+     "korkeus": 4656,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q843981",
+   "nimi": "Star Ferryn laituri",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 22.28722,
+   "lon": 114.15917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Star Ferry Pier at Hong Kong Central - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Star_Ferry_Pier_at_Hong_Kong_Central_-_panoramio.jpg?width=1280",
+     "tekija": "Tuderna",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Star_Ferry_Pier_at_Hong_Kong_Central_-_panoramio.jpg",
+     "selite": "Central Pier on lauttalaituri Victoria-sataman rannalla keskustan pilvenpiirtäjien juurella.",
+     "leveys": 1752,
+     "korkeus": 1168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Star ferry Day star.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Star_ferry_Day_star.jpg?width=1280",
+     "tekija": "Thehistorianisaac",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Star_ferry_Day_star.jpg",
+     "selite": "Valaistu laituri illalla Victoria-sataman rannalla.",
+     "leveys": 4000,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "HK Central Pier Clock Tower 4 ferry.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK_Central_Pier_Clock_Tower_4_ferry.JPG?width=1280",
+     "tekija": "No machine-readable author provided. OLAMB assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HK_Central_Pier_Clock_Tower_4_ferry.JPG",
+     "selite": "Central Pierin kellotorni ja vanhan tyylin laiturirakennus.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q692288",
+   "nimi": "Tsim Sha Tsuin kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.29358,
+   "lon": 114.16955,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Former Kowloon-Canton Railway Clock Tower, Tsim Sha Tsui (Hong Kong).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Kowloon-Canton_Railway_Clock_Tower%2C_Tsim_Sha_Tsui_(Hong_Kong).jpg?width=1280",
+     "tekija": "Mk2010",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Former_Kowloon-Canton_Railway_Clock_Tower%2C_Tsim_Sha_Tsui_(Hong_Kong).jpg",
+     "selite": "Tiilinen kellotorni on jäljellä Kowloonin vanhasta rautatieasemasta Tsim Sha Tsuin rannalla.",
+     "leveys": 4816,
+     "korkeus": 3211,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hong Kong Clock Tower Night View 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Clock_Tower_Night_View_2013.jpg?width=1280",
+     "tekija": "Iswzo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Clock_Tower_Night_View_2013.jpg",
+     "selite": "Valaistu kellotorni palmujen ja Kulttuurikeskuksen vieressä illalla.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tsim Sha Tsui Clock Tower.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsim_Sha_Tsui_Clock_Tower.JPG?width=1280",
+     "tekija": "David's baby",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tsim_Sha_Tsui_Clock_Tower.JPG",
+     "selite": "Kellotornin katto ja kellotaulu valaistuina yötaivasta vasten.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q528079",
+   "nimi": "Tian Tan -Buddha",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 22.25411,
+   "lon": 113.90514,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tian Tan Buddha by Beria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tian_Tan_Buddha_by_Beria.jpg?width=1280",
+     "tekija": "Béria Lima de Rodríguez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tian_Tan_Buddha_by_Beria.jpg",
+     "selite": "Tian Tan -Buddha on pronssinen istuva Buddha-patsas Lantaun saaren vuorenhuipulla.",
+     "leveys": 3000,
+     "korkeus": 1993,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20091002 Hong Kong Tian Tan Buddha 6352.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20091002_Hong_Kong_Tian_Tan_Buddha_6352.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20091002_Hong_Kong_Tian_Tan_Buddha_6352.jpg",
+     "selite": "Patsaan nostettu käsi ja kukkaistuin kohoavat alapuolelta katsottuna.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Big Buda Hong Kong.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Buda_Hong_Kong.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Buda_Hong_Kong.jpg",
+     "selite": "Lippujen reunustamat portaat johtavat Buddhan luo.",
+     "leveys": 3903,
+     "korkeus": 2384,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942473",
+   "nimi": "Pyhän Johanneksen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.27885,
+   "lon": 114.15956,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HK St John s Cathedral 60401 6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK_St_John_s_Cathedral_60401_6.jpg?width=1280",
+     "tekija": "No machine-readable author provided. CH6041 assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HK_St_John_s_Cathedral_60401_6.jpg",
+     "selite": "Pyhän Johanneksen katedraali on Hongkongin vanhin anglikaaninen kirkko Centralin pilvenpiirtäjien keskellä.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "HK StJohnsCathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK_StJohnsCathedral.jpg?width=1280",
+     "tekija": "Chong Fat",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HK_StJohnsCathedral.jpg",
+     "selite": "Gotiikkatyylinen katedraali ja sen kaarimaiset ikkunat.",
+     "leveys": 1424,
+     "korkeus": 1068,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q717524",
+   "nimi": "Man Mo -temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 22.284,
+   "lon": 114.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Man Mo Temple Compound.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Man_Mo_Temple_Compound.jpg?width=1280",
+     "tekija": "Baycrest",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Man_Mo_Temple_Compound.jpg",
+     "selite": "Man Mo -temppeli Hollywood Roadilla on omistettu kirjallisuuden ja sodan jumalille.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Burning incense coils in the Man Mo temple (Hong Kong).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burning_incense_coils_in_the_Man_Mo_temple_(Hong_Kong).jpg?width=1280",
+     "tekija": "Aethelfirth",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burning_incense_coils_in_the_Man_Mo_temple_(Hong_Kong).jpg",
+     "selite": "Katosta riippuvat suitsukekierukat palavat temppelin sisällä viikkokausia.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10871919",
+   "nimi": "Tai Kwun",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 22.28126,
+   "lon": 114.15404,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tai Kwun Parade Ground 201806.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tai_Kwun_Parade_Ground_201806.jpg?width=1280",
+     "tekija": "Wpcpey",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tai_Kwun_Parade_Ground_201806.jpg",
+     "selite": "Entisen keskuspoliisiaseman ja vankilan pihaan on syntynyt kulttuurikeskus.",
+     "leveys": 2736,
+     "korkeus": 1824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tai Kwun Police Headquarters Block 201806.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tai_Kwun_Police_Headquarters_Block_201806.jpg?width=1280",
+     "tekija": "Wpcpey",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tai_Kwun_Police_Headquarters_Block_201806.jpg",
+     "selite": "Entisen poliisiaseman päärakennus on myös tunnistettava siirtomaa-ajan julkisivu.",
+     "leveys": 2130,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3052497",
+   "nimi": "Western Market",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 22.28735,
+   "lon": 114.15037,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Western Market Overview 201008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Western_Market_Overview_201008.jpg?width=1280",
+     "tekija": "WiNG",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Western_Market_Overview_201008.jpg",
+     "selite": "Western Market on punatiilinen Edwardin ajan toritalo Sheung Wanissa, nykyään kauppakeskus.",
+     "leveys": 2368,
+     "korkeus": 1776,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4929255",
+   "nimi": "Sininen talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 22.2739,
+   "lon": 114.174,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blue House, Hong Kong.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_House%2C_Hong_Kong.jpg?width=1280",
+     "tekija": "Prosperity Horizons",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_House%2C_Hong_Kong.jpg",
+     "selite": "Sininen talo Wan Chaissa on vanha kerrostalo, jonka parvekkeet ovat kirkkaansinisiä.",
+     "leveys": 5953,
+     "korkeus": 3941,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Exterior of Blue House.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_Blue_House.jpg?width=1280",
+     "tekija": "Asatsuyu2022",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_Blue_House.jpg",
+     "selite": "Talo erottuu muiden värikkäiden naapurirakennusten joukosta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q605959",
+   "nimi": "Hongkongin Disneyland",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 22.31333,
+   "lon": 114.04333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20201019 Castle of Magical Dreams.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20201019_Castle_of_Magical_Dreams.jpg?width=1280",
+     "tekija": "Ngchikit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20201019_Castle_of_Magical_Dreams.jpg",
+     "selite": "Disneylandin Castle of Magical Dreams -linna hallitsee huvipuiston keskiosaa Lantaun saarella.",
+     "leveys": 1500,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1372014",
+   "nimi": "HSBC-rakennus",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 22.28027,
+   "lon": 114.15953,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HK Central Des Voeux Road Central HSBC HQ Bank of China Building Statue Square Garden June 2022 Px3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HK_Central_Des_Voeux_Road_Central_HSBC_HQ_Bank_of_China_Building_Statue_Square_Garden_June_2022_Px3.jpg?width=1280",
+     "tekija": "RATSUEKWAU PTAMG 380",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HK_Central_Des_Voeux_Road_Central_HSBC_HQ_Bank_of_China_Building_Statue_Square_Garden_June_2022_Px3.jpg",
+     "selite": "HSBC:n päätoimisto Centralissa on teräsrunkoinen pilvenpiirtäjä, joka sijaitsee Statue Squaren vieressä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14226100",
+   "nimi": "Two International Finance Centre",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 22.28538,
+   "lon": 114.15914,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "IFC HKSAR.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IFC_HKSAR.JPG?width=1280",
+     "tekija": "Calvin yeung",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:IFC_HKSAR.JPG",
+     "selite": "Two IFC on kapea, vaalea pilvenpiirtäjä Victoria-sataman rannalla Centralissa.",
+     "leveys": 2016,
+     "korkeus": 3040,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16396",
+   "nimi": "Tsing Ma -silta",
+   "peruste": "sitelinks",
+   "koko_m": 2200,
+   "lat": 22.35139,
+   "lon": 114.07417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bridge in Hong Kong (14184936337).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_in_Hong_Kong_(14184936337).jpg?width=1280",
+     "tekija": "cloud.shepherd",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bridge_in_Hong_Kong_(14184936337).jpg",
+     "selite": "Tsing Ma -riippusilta yhdistää Tsing Yin ja Ma Wanin saaret Lantaulle johtavassa tieyhteydessä.",
+     "leveys": 3594,
+     "korkeus": 2079,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2180716",
+   "nimi": "Chi Lin -nunnaluostari",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 22.3407,
+   "lon": 114.205,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hong Kong - Chi Lin Nunnery main building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_-_Chi_Lin_Nunnery_main_building.jpg?width=1280",
+     "tekija": "Kroisenbrunner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_-_Chi_Lin_Nunnery_main_building.jpg",
+     "selite": "Chi Lin on Tang-kauden tyyliin puusta rakennettu buddhalainen luostari Diamond Hillissä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chi Lin Nunnery (2037672635).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chi_Lin_Nunnery_(2037672635).jpg?width=1280",
+     "tekija": "Rob Young from United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chi_Lin_Nunnery_(2037672635).jpg",
+     "selite": "Luostarin pihalla kasvavat leikatut bonsaipuut ja pihan takana näkyy päärakennus.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Hong Kong Island Skyline 2009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong_Kong_Island_Skyline_2009.jpg?width=1280",
+   "tekija": "WiNG",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Island_Skyline_2009.jpg",
+   "selite": "Hongkongin saaren siluetti Victoria-sataman yli katsottuna.",
+   "leveys": 2256,
+   "korkeus": 1269,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vista del Puerto de Victoria desde Sky100, Hong Kong, 2013-08-09, DD 10.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_del_Puerto_de_Victoria_desde_Sky100%2C_Hong_Kong%2C_2013-08-09%2C_DD_10.JPG?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_del_Puerto_de_Victoria_desde_Sky100%2C_Hong_Kong%2C_2013-08-09%2C_DD_10.JPG",
+   "selite": "Victoria-satama ja kaupungin valot illalla ilmasta katsottuna.",
+   "leveys": 5011,
+   "korkeus": 3326,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

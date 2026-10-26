@@ -7,7 +7,21 @@
  *   node tools/maasto/tee-maasto.mjs [--dem <glo30>] [--dem90 <glo90>] --ulos <kansio>
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
- *        [--luettelo] [--lista]
+ *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
+ *        [--naytetaso 15] [--dem-normaalit] [--jatka]
+ *
+ * TASAN NÄYTTEET (Karttaseppä 12.10.2026, LS2:n vuoristopilotti 3): `--naytetaso Z` näytteistää
+ * jokaisen tason z < Z samalla välillä kuin taso Z (ruudukko (n−1)·2^(Z−z)+1, esim. z13 257, z14 129,
+ * z15 65). Muuten karkea taso näytteistää jyrkänteen 2–4 kertaa harvemmin, sen reuna poikkeaa
+ * tarkemman naapurin reunasta Geirangerissa jopa 75 m, ja cesium-nativen helma (5 × tasovirhe,
+ * z15 12 m) ei peitä rakoa: pelissä näkyy porras. Tasan näytteillä tasojen välinen rako on
+ * enintään noin virheraja (mitattu ≤ 7 m). RTIN harventaa tasaisen maan entiseen tapaan.
+ *
+ * VUORISTOKERROS (Karttaseppä 12.10.2026, PT erä 184): `--mapterhorn` lukee
+ * Mapterhornin laserkeilatun maanpinnan raakalaatoista (mapterhorn.mjs) ja
+ * käyttää Copernicusta varalla. `--vanhempi ../2026-09-24-maailma/` kirjoittaa
+ * layer.jsoniin parentUrl:n, jolloin kerros sisältää vain syvät tasot
+ * (esim. --tasot 13-15) ja Cesium hakee matalammat maailmanmaastosta.
  *
  * --maailma Z (korjaus 23.9.2026): tasot 0…Z tehdään koko maailmalle
  * (DEM:n ulkopuolella 0 m), jotta Cesium ei ylinäytteistä alueen
@@ -49,13 +63,14 @@
  * Tulos: <ulos>/<z>/<x>/<y>.terrain (gzip) ja <ulos>/layer.json.
  * Ämpäriin: Content-Type application/vnd.quantized-mesh, Content-Encoding gzip.
  */
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { gzipSync } from 'node:zlib';
+import { gunzipSync, gzipSync } from 'node:zlib';
 
 import { avaaGeotiff } from './geotiff.mjs';
 import { rtinVerkko, rtinVirheet } from './rtin.mjs';
 import { koodaaLaatta } from './quantized-mesh.mjs';
+import { mapterhornLahde, MAPTERHORN_MAININTA } from './mapterhorn.mjs';
 
 export const CESIUM_TASO0_VIRHE = (6378137 * 2 * Math.PI * 0.25) / (65 * 2);
 const MAAN_SADE = 6371008.8;
@@ -234,7 +249,46 @@ export function kaksiLahdetta({ glo30 = null, glo90 = null, kynnys = GLO30_KYNNY
 }
 
 /** Yksi laatta tavuiksi (gzip). */
-export function teeLaatta(dem, z, x, y, n = 65) {
+/**
+ * Ruudukko tasolle z, kun näyteväli on tason `naytetaso` (null = sama ruudukko kaikille). Yläraja
+ * RUUDUKKO_MAX (2049, z10 tasolla 15): pilotti 4:n diagnoosi (LS2 12.10.) näytti, että myös z10–z11
+ * leijuivat vuonon yllä satoja metrejä, joten tasaus ulotetaan karkeille tasoille; z9:llä väli on 2 × z10.
+ */
+export const RUUDUKKO_MAX = 2049;
+export function ruudukkoTasolle(n, z, naytetaso = null) {
+  if (naytetaso === null || z >= naytetaso) return n;
+  return Math.min(RUUDUKKO_MAX, (n - 1) * 2 ** (naytetaso - z) + 1);
+}
+
+/*
+ * NORMAALIT KORKEUSMALLISTA (Karttaseppä 12.10.2026, LS2:n vuoristopilotti, Lauterbrunnenin sauma):
+ * kolmioista laskettu normaali on laattarajalla yksipuolinen, ja naapurilaatan normaali on eri, joten
+ * rajalle tulee varjostussauma. Tässä normaali lasketaan näyteruudukon keskeisdifferensseistä yhden
+ * näytteen reunuksella laatan ulkopuolelta, jolloin vierekkäiset laatat saavat rajalla saman normaalin.
+ */
+export function ruudukonNormaalit(dem, a, n, vali, h, pisteet = null) {
+  // pisteet = [[i, j], …] laskee vain verkon pisteille (ruudukko 2049² olisi muuten 4 M vektoria).
+  const reunus = (i, j) => (i >= 0 && i < n && j >= 0 && j < n ? h[j * n + i] : dem.korkeus(a.west + i * vali, a.north - j * vali, vali));
+  const r = Math.PI / 180; const R = 6371008.8; const dN = vali * r * R;
+  const normaali = (i, j) => {
+    const lat = (a.north - j * vali) * r; const sf = Math.sin(lat); const cf = Math.cos(lat); const dE = dN * cf;
+    const lon = (a.west + i * vali) * r; const sl = Math.sin(lon); const cl = Math.cos(lon);
+    const gE = (reunus(i + 1, j) - reunus(i - 1, j)) / (2 * dE);
+    const gN = (reunus(i, j - 1) - reunus(i, j + 1)) / (2 * dN);
+    // ENU (−gE, −gN, 1) → ECEF
+    const ex = -gE * -sl + -gN * -sf * cl + cf * cl;
+    const ey = -gE * cl + -gN * -sf * sl + cf * sl;
+    const ez = -gN * cf + sf;
+    const l = Math.hypot(ex, ey, ez);
+    return [ex / l, ey / l, ez / l];
+  };
+  if (pisteet) return pisteet.map(([i, j]) => normaali(i, j));
+  const out = new Array(n * n);
+  for (let j = 0; j < n; j += 1) for (let i = 0; i < n; i += 1) out[j * n + i] = normaali(i, j);
+  return out;
+}
+
+export function teeLaatta(dem, z, x, y, n = 65, virhekerroin = 0.5, { demNormaalit = false } = {}) {
   const a = laatanAlue(z, x, y);
   const vali = (a.east - a.west) / (n - 1);
   const h = new Float32Array(n * n);
@@ -242,7 +296,8 @@ export function teeLaatta(dem, z, x, y, n = 65) {
     const lat = a.north - j * vali;
     for (let i = 0; i < n; i += 1) h[j * n + i] = dem.korkeus(a.west + i * vali, lat, vali);
   }
-  const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * 0.5);
+  // Virheraja: oletuksena puolet Cesiumin tasovirheestä; --virhekerroin harventaa (vuoristokerros 12.10.2026).
+  const kynnys = Math.max(0.5, (CESIUM_TASO0_VIRHE / 2 ** z) * virhekerroin);
   // Ruutupiste (i, j) → (lon, lat); kaarevuus virheeseen (ks. rtin.mjs).
   const kaarevuus = (ax, ay, bx, by) => janteenPainuma(a.west + ax * vali, a.north - ay * vali, a.west + bx * vali, a.north - by * vali);
   const { pisteet, kolmiot } = rtinVerkko(h, n, kynnys, rtinVirheet(h, n, kaarevuus));
@@ -252,8 +307,9 @@ export function teeLaatta(dem, z, x, y, n = 65) {
     const [ax, ay] = P[p]; const [bx, by] = P[q]; const [cx, cy] = P[r];
     return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax) >= 0 ? [p, q, r] : [p, r, q];
   });
-  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T });
-  return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: Math.max(...h) };
+  const G = demNormaalit ? ruudukonNormaalit(dem, a, n, vali, h, pisteet) : null;
+  const raaka = koodaaLaatta({ alue: a, pisteet: P, kolmiot: T, pisteNormaalit: G });
+  return { tavut: gzipSync(raaka, { level: 9 }), pisteita: P.length, kolmioita: T.length, hMax: h.reduce((m, v) => (v > m ? v : m), -Infinity) };
 }
 
 /** layer.json (Cesium CesiumTerrainProvider). */
@@ -322,6 +378,14 @@ export function* tasonLaatatJarjestyksessa(suunnitelma, onRuutu, osa = 0, osia =
   }
 }
 
+/** Listan laatat samassa järjestyksessä ja osajaossa kuin tasonLaatatJarjestyksessa. */
+export function* listanLaatatJarjestyksessa(laatat, z, osa = 0, osia = 1) {
+  const r = sarakeRyhma(z);
+  const valitut = laatat.filter(([x]) => osia <= 1 || Math.floor(x / r) % osia === osa);
+  valitut.sort((p, q) => Math.floor(p[0] / r) - Math.floor(q[0] / r) || p[1] - q[1] || p[0] - q[0]);
+  yield* valitut;
+}
+
 /**
  * Tason `available`-suorakulmiot. Vain-maa-tasolla rivin maalaattojen
  * ajot yhdistetään pystysuunnassa: ajo [a, b] jatkaa edellisen rivin
@@ -355,12 +419,50 @@ export function tasonSaatavuus(suunnitelma, onRuutu) {
   return valmiit.sort((p, q) => p.startY - q.startY || p.startX - q.startX);
 }
 
+/**
+ * LAATTALISTA (vuoristokerros 12.10.2026): `--laatat <tiedosto>` rivit "z x y".
+ * Harvennettu poltto: z13 koko alueelle, z14 vain jyrkkään maastoon, z15 vain
+ * kohokohtiin (T7 vesimaski/vuoristo-suunnitelma.py). Palauttaa Map z → [[x, y]].
+ */
+export function lueLaattalista(teksti) {
+  const m = new Map();
+  for (const rivi of teksti.split('\n')) {
+    const t = rivi.trim().split(/\s+/).map(Number);
+    if (t.length !== 3 || t.some(Number.isNaN)) continue;
+    if (!m.has(t[0])) m.set(t[0], []);
+    m.get(t[0]).push([t[1], t[2]]);
+  }
+  return m;
+}
+
+/** Listan laatat `available`-suorakulmioiksi (rivin ajot, pystysuunnassa yhdistetyt). */
+export function saatavuusListasta(laatat) {
+  const rivit = new Map();
+  for (const [x, y] of laatat) { if (!rivit.has(y)) rivit.set(y, []); rivit.get(y).push(x); }
+  const valmiit = []; let auki = new Map(); let edellinen = null;
+  for (const y of [...rivit.keys()].sort((a, b) => a - b)) {
+    if (edellinen !== null && y !== edellinen + 1) { valmiit.push(...auki.values()); auki = new Map(); }
+    const xs = [...new Set(rivit.get(y))].sort((a, b) => a - b);
+    const uudet = new Map();
+    for (let i = 0; i < xs.length;) {
+      let j = i; while (j + 1 < xs.length && xs[j + 1] === xs[j] + 1) j += 1;
+      const avain = `${xs[i]},${xs[j]}`; const r = auki.get(avain);
+      if (r) { r.endY = y; auki.delete(avain); uudet.set(avain, r); } else uudet.set(avain, { startX: xs[i], startY: y, endX: xs[j], endY: y });
+      i = j + 1;
+    }
+    valmiit.push(...auki.values()); auki = uudet; edellinen = y;
+  }
+  valmiit.push(...auki.values());
+  return valmiit.sort((p, q) => p.startY - q.startY || p.startX - q.startX);
+}
+
 export function kerroksenKuvaus({
-  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA,
+  tasot, alue, versio, maailma = -1, vainMaaAlkaen = Infinity, onRuutu = null, n = 65, maininta = LAHDEMAININTA, vanhempi = null, lista = null,
 }) {
   const available = [];
   for (let z = 0; z <= tasot[1]; z += 1) {
     if (z < tasot[0]) { available.push([]); continue; }
+    if (lista) { available.push(saatavuusListasta(lista.get(z) ?? [])); continue; }
     const s = tasonSuunnitelma(z, { alue, maailma, vainMaaAlkaen, n });
     if (s.vainMaa && !onRuutu) throw new Error('vain-maa-luettelo tarvitsee DEM-ruudut (--dem/--dem90)');
     available.push(tasonSaatavuus(s, onRuutu));
@@ -370,6 +472,12 @@ export function kerroksenKuvaus({
     scheme: 'tms', tiles: [`{z}/{x}/{y}.terrain?v=${versio}`], projection: 'EPSG:4326',
     bounds: [-180, -90, 180, 90], minzoom: 0, maxzoom: tasot[1], extensions: ['octvertexnormals'],
     attribution: maininta, available,
+    /*
+     * VANHEMPI KERROS (vuoristokerros 12.10.2026): tasot alle tasot[0] ovat
+     * tyhjiä, ja Cesium (cesium-native LayerJsonTerrainLoader) hakee ne
+     * parentUrl-kerroksesta. Polku suhteellisena layer.jsoniin nähden.
+     */
+    ...(vanhempi ? { parentUrl: vanhempi } : {}),
   };
 }
 
@@ -397,8 +505,15 @@ export function lueAsetukset(argv) {
     maailma: Number(arvo('maailma', -1)),
     vainMaaAlkaen: Number(arvo('vain-maa-alkaen', Infinity)),
     kynnys: Number(arvo('glo30-kynnys', GLO30_KYNNYS)),
+    mapterhornKansio: arvo('mapterhorn'),
+    laatat: arvo('laatat'),
+    virhekerroin: Number(arvo('virhekerroin', 0.5)),
+    naytetaso: arvo('naytetaso') === undefined ? null : Number(arvo('naytetaso')),
+    demNormaalit: argv.includes('--dem-normaalit'),
+    vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
+    jatka: argv.includes('--jatka'),
   };
 }
 
@@ -406,14 +521,30 @@ export function lueAsetukset(argv) {
  * DEM-lähde asetuksista. Ilman --dem90:tä pelkkä GLO-30-hakemisto kuten
  * Ranska-ajossa (sama koodipolku, tavu tavulta sama tulos).
  */
-export function avaaLahteet({ demKansio, dem90Kansio, kynnys }) {
+export function avaaLahteet({ demKansio, dem90Kansio, kynnys, mapterhornKansio }) {
   const glo30 = demKansio ? demHakemisto(demKansio, avaaGeotiff, { tunnus: '10' }) : null;
-  if (!dem90Kansio) return { dem: glo30, maininta: LAHDEMAININTA };
-  const glo90 = demHakemisto(dem90Kansio, avaaGeotiff, { tunnus: '30' });
-  return {
-    dem: kaksiLahdetta({ glo30, glo90, kynnys }),
-    maininta: glo30 ? `${LAHDEMAININTA} ${LAHDEMAININTA_90}` : LAHDEMAININTA_90,
-  };
+  let tulos;
+  if (!dem90Kansio) tulos = { dem: glo30, maininta: LAHDEMAININTA };
+  else {
+    const glo90 = demHakemisto(dem90Kansio, avaaGeotiff, { tunnus: '30' });
+    tulos = {
+      dem: kaksiLahdetta({ glo30, glo90, kynnys }),
+      maininta: glo30 ? `${LAHDEMAININTA} ${LAHDEMAININTA_90}` : LAHDEMAININTA_90,
+    };
+  }
+  /*
+   * Mapterhorn ensin, Copernicus varalla (mapterhorn.mjs). Kansiossa voi olla
+   * useita tasoja (13/, 14/): tarkin taso ensin, sitten karkeampi, sitten
+   * Copernicus. Harvennetussa poltossa z13-raakadata kattaa koko alueen ja
+   * z14 vain jyrkän maaston, joten sama koordinaatti saa aina saman lähteen.
+   */
+  if (mapterhornKansio) {
+    const tasot = readdirSync(mapterhornKansio).filter((d) => /^\d+$/.test(d)).map(Number).sort((p, q) => p - q);
+    let dem = tulos.dem;
+    for (const z of tasot) dem = mapterhornLahde(mapterhornKansio, { z, vara: dem });
+    tulos = { dem, maininta: `${MAPTERHORN_MAININTA} ${tulos.maininta}` };
+  }
+  return tulos;
 }
 
 /** Koko ajo (komentorivi ja testit). Palauttaa tehtyjen laattojen määrät tasoittain. */
@@ -421,9 +552,10 @@ export async function aja(argv, loki = console.log) {
   const a = lueAsetukset(argv);
   const { tasot, alue, n, osa, osia, versio, maailma, vainMaaAlkaen, kynnys } = a;
   if ((!a.demKansio && !a.dem90Kansio) || (!a.ulos && !a.lista)) {
-    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--luettelo | --lista]');
+    throw new Error('käyttö: [--dem <glo30>] [--dem90 <glo90>] [--mapterhorn <raakakansio>] --ulos <kansio> [--alue] [--tasot 0-11] [--osa i/n] [--maailma Z] [--vain-maa-alkaen Z] [--vanhempi <url>] [--laatat <lista>] [--virhekerroin 0.5] [--naytetaso 15] [--dem-normaalit] [--luettelo | --lista]');
   }
   const { dem, maininta } = avaaLahteet(a);
+  const lista = a.laatat ? lueLaattalista(readFileSync(a.laatat, 'utf8')) : null;
   const suunnitelmat = [];
   for (let z = tasot[0]; z <= tasot[1]; z += 1) suunnitelmat.push(tasonSuunnitelma(z, { alue, maailma, vainMaaAlkaen, n, kynnys }));
   const maarat = {};
@@ -453,7 +585,7 @@ export async function aja(argv, loki = console.log) {
 
   mkdirSync(a.ulos, { recursive: true });
   if (a.luettelo) {
-    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta });
+    const k = kerroksenKuvaus({ tasot, alue, versio, maailma, vainMaaAlkaen, onRuutu: dem.onRuutu, n, maininta, vanhempi: a.vanhempi, lista });
     writeFileSync(join(a.ulos, 'layer.json'), kerrosTekstiksi(k));
     loki(`layer.json: tasot ${tasot.join('–')}, alue ${alue.join(',')}`);
     dem.sulje();
@@ -467,10 +599,13 @@ export async function aja(argv, loki = console.log) {
     dem.asetaLru(s.z <= 6 ? 96 : 12);
     const tz = Date.now(); let tasolla = 0;
     const kansiot = new Set();
-    for (const [x, y] of tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
+    for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
-      const l = teeLaatta(dem, s.z, x, y, n);
-      writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
+      const polku = join(a.ulos, String(s.z), String(x), `${y}.terrain`);
+      // --jatka: keskeytyneen ajon ehjät laatat (gzip purkautuu) jätetään; vajaa tai puuttuva lasketaan uudelleen.
+      if (a.jatka && existsSync(polku)) { try { gunzipSync(readFileSync(polku)); laattoja += 1; tasolla += 1; continue; } catch { /* lasketaan uudelleen */ } }
+      const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin, { demNormaalit: a.demNormaalit });
+      writeFileSync(polku, l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }
     maarat[s.z] = tasolla;

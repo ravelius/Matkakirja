@@ -135,6 +135,7 @@
  */
 import { AANI_JUURI, aaniUrl } from './media.js';
 import { sfx } from './sound.js';
+import { KARTTA_VAIN_KAUPUNKI } from './kaupunkimusiikki.js';
 // Musiikin oma kytkin (Raamattu, VIAT v1672): matkan ja linssin raidat
 // ovat musiikkia, joten ne vaikenevat siitä — äänimaisema ei. Samasta
 // moduulista tulee myös KAIKEN musiikin yhteinen kerroin: matkan ja
@@ -360,6 +361,8 @@ function vapautaRaita(audio) {
  */
 export function aloitaSiirtymamusiikki(laji) {
   const raita = RAIDAT[laji];
+  // Matkan siirtymäraidat pois kartalta (KARTTA_VAIN_KAUPUNKI, omistaja 10.10.); linssien raidat soivat kuten ennen.
+  if (KARTTA_VAIN_KAUPUNKI && raita?.ryhma === 'siirtyma') return;
   if (!raita || !sfx.enabled || !musiikkiPaalla() || puuttuvatRaidat.has(laji)) return;
   if (soiva?.laji === laji) return;
   // Toinen laji soimassa (esim. lento kesken maamatkan): pois pehmeästi.

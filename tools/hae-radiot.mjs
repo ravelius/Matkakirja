@@ -78,6 +78,27 @@ const ISO2 = {
   SLE: 'SL', SOM: 'SO', SWE: 'SE', SYR: 'SY', TCD: 'TD', THA: 'TH', TUN: 'TN',
   TUR: 'TR', TWN: 'TW', TZA: 'TZ', UGA: 'UG', UKR: 'UA', UZB: 'UZ', VNM: 'VN',
   YEM: 'YE', ZAF: 'ZA', ZWE: 'ZW',
+
+  /*
+   * Radioiden maailmanlaajennus (omistaja 28.9.2026, Linssiseppä 2):
+   * loput YK:n 193 jäsentä + Vatikaani, Palestiina, Kosovo. Eurooppa-
+   * rajaus (VAIN EUROOPPA) koskee vain karttaa ja sisältöä, ei linssejä.
+   */
+  BEN: 'BJ', BWA: 'BW', BFA: 'BF', BDI: 'BI', CPV: 'CV', CAF: 'CF', COM: 'KM',
+  COG: 'CG', CIV: 'CI', DJI: 'DJ', GNQ: 'GQ', ERI: 'ER', SWZ: 'SZ', GAB: 'GA',
+  GMB: 'GM', GIN: 'GN', GNB: 'GW', LSO: 'LS', MWI: 'MW', MRT: 'MR', MUS: 'MU',
+  NER: 'NE', RWA: 'RW', STP: 'ST', SYC: 'SC', TGO: 'TG', ZMB: 'ZM',
+  ARM: 'AM', AZE: 'AZ', BHR: 'BH', BGD: 'BD', BTN: 'BT', BRN: 'BN', KHM: 'KH',
+  GEO: 'GE', ISR: 'IL', KGZ: 'KG', LAO: 'LA', LBN: 'LB', MYS: 'MY', MDV: 'MV',
+  PRK: 'KP', TJK: 'TJ', TKM: 'TM', PSE: 'PS',
+  ALB: 'AL', AND: 'AD', BLR: 'BY', BEL: 'BE', LIE: 'LI', LUX: 'LU', MLT: 'MT',
+  MDA: 'MD', MCO: 'MC', MNE: 'ME', MKD: 'MK', SMR: 'SM', SRB: 'RS', SVK: 'SK',
+  SVN: 'SI', VAT: 'VA', XKX: 'XK',
+  BLZ: 'BZ', CRI: 'CR', SLV: 'SV', HND: 'HN', ATG: 'AG', BHS: 'BS', BRB: 'BB',
+  DMA: 'DM', DOM: 'DO', GRD: 'GD', HTI: 'HT', JAM: 'JM', KNA: 'KN', LCA: 'LC',
+  VCT: 'VC', TTO: 'TT', GUY: 'GY', PRY: 'PY', SUR: 'SR', URY: 'UY',
+  KIR: 'KI', MHL: 'MH', FSM: 'FM', NRU: 'NR', PLW: 'PW', WSM: 'WS', TON: 'TO',
+  TUV: 'TV',
 };
 
 /*
@@ -205,6 +226,62 @@ const YKKOSRADIO = {
   PHL: /radyo pilipinas|\bdzrh\b|\bdzbb\b/i,
   SGP: /938now|cna938|capital 95/i,
   SHN: /saint helena|\bsams\b/i,
+
+  /*
+   * Radioiden maailmanlaajennus (28.9.2026). Nimet on kirjattu sillä
+   * varmuudella kuin yleistiedosta löytyy; epävarmoille maille ei ole
+   * omaa riviä, ja haku valitsee silloin äänestetyimmän puheeksi
+   * merkityn aseman (pisteet-funktio).
+   */
+  BEL: /vrt radio 1|la première|\bvrt\b/i,
+  SRB: /radio beograd|радио београд/i,
+  SVK: /slovensko\b|slovenský rozhlas/i,
+  SVN: /radio slovenija|\bval 202\b/i,
+  MKD: /\bmrt\b|радио скопје|makedonsko radio/i,
+  MNE: /radio crne gore|rtcg/i,
+  MDA: /radio moldova/i,
+  ALB: /radio tirana/i,
+  BLR: /беларускае радыё|belaruskaje radyjo|radio belarus/i,
+  LUX: /\brtl\b|100,7|radio 100/i,
+  MLT: /radio malta|\bpbs\b/i,
+  SMR: /san marino rtv|\bsmrtv\b/i,
+  AND: /radio nacional d'andorra|\brna\b/i,
+  MCO: /radio monaco/i,
+  VAT: /radio vaticana|vatican radio/i,
+  XKX: /radio kosova|radio televizioni i kosovës|\brtk\b/i,
+  ISR: /\bkan\b|reshet bet|רשת ב|כאן/i,
+  LBN: /radio liban|إذاعة لبنان/i,
+  MYS: /\brtm\b|radio televisyen malaysia|nasional fm/i,
+  BGD: /bangladesh betar|বাংলাদেশ বেতার/i,
+  BTN: /\bbbs\b|kuensel|bhutan broadcasting/i,
+  BRN: /\brtb\b|radio televisyen brunei/i,
+  KHM: /\brnk\b|radio national.{0,4}kampuchea/i,
+  GEO: /radio 1|საზოგადოებრივი რადიო|pirveli radio/i,
+  ARM: /հանրային ռադիո|hanrayin radio|public radio of armenia/i,
+  AZE: /ictimai radio|azerbaijan radio/i,
+  KGZ: /kyrgyz radio|кыргыз радиосу/i,
+  LAO: /lao national radio|ลาว|ວິທະຍຸ/i,
+  MDV: /voice of maldives|dhivehi raajjeyge adu/i,
+  TJK: /tajik radio|радиои тоҷик/i,
+  PSE: /palestine radio|إذاعة فلسطين|voice of palestine/i,
+  BLZ: /love fm|belize broadcasting/i,
+  CRI: /radio nacional|\bsinart\b/i,
+  SLV: /radio nacional de el salvador/i,
+  HND: /radio nacional de honduras|\bhrn\b/i,
+  BHS: /\bzns\b/i,
+  BRB: /cbc radio|starcom network/i,
+  DMA: /\bdbs radio\b/i,
+  DOM: /radio televisión dominicana|\brtvd\b/i,
+  JAM: /\brjr\b|radio jamaica|\bjbc\b/i,
+  TTO: /\bnbs radio\b|radio 610/i,
+  GUY: /voice of guyana|\bncn\b/i,
+  PRY: /radio nacional del paraguay/i,
+  SUR: /\bsrs\b|stichting radio suriname/i,
+  URY: /\bsodre\b|radio nacional/i,
+  KIR: /radio kiribati/i,
+  WSM: /\b2ap\b|radio 2ap|samoa broadcasting/i,
+  TON: /radio tonga|a3z/i,
+  TUV: /radio tuvalu/i,
 };
 
 /*

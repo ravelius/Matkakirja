@@ -1,0 +1,411 @@
+{
+ "kaupunki": "mandalay",
+ "kaupunkiQ": "Q185518",
+ "kohteet": [
+  {
+   "q": "Q2655670",
+   "nimi": "Mandalayn palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 1000,
+   "lat": 21.99294,
+   "lon": 96.09591,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mandalay Palace, Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Palace%2C_Myanmar.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Palace%2C_Myanmar.jpg",
+     "selite": "Mandalayn palatsi oli Burman viimeisen kuninkaan asuinpaikka, ja nykyinen rakennus on jäljennös.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mandalay Palace 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Palace_4.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Palace_4.jpg",
+     "selite": "Palatsin muuria ympäröi leveä vallihauta, jonka yli näkyy palatsin torni.",
+     "leveys": 3759,
+     "korkeus": 2428,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mandalay Palace 2, Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Palace_2%2C_Myanmar.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Palace_2%2C_Myanmar.jpg",
+     "selite": "Palatsin kultainen kattotorni erottuu punaisten kattojen yllä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Mandalay, Mandalay Palace, Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay%2C_Mandalay_Palace%2C_Myanmar.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay%2C_Mandalay_Palace%2C_Myanmar.jpg",
+     "selite": "Palatsin pitkät salit ja torni kohoavat avoimen nurmikon takaa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3285419",
+   "nimi": "Mandalay-kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 22.01364,
+   "lon": 96.10822,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mandalay Hill Ansicht.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Hill_Ansicht.jpg?width=1280",
+     "tekija": "Myrmux",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Hill_Ansicht.jpg",
+     "selite": "Mandalay-kukkula kohoaa kaupungin yllä ja sen rinteitä pitkin kulkee pagodien kiertämä portaikko.",
+     "leveys": 4608,
+     "korkeus": 2827,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mandalay Hill, Myanmar.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Hill%2C_Myanmar.JPG?width=1280",
+     "tekija": "en:User:Wagaung",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Hill%2C_Myanmar.JPG",
+     "selite": "Palatsin vallihaudan yli näkyy kukkula taustalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q949750",
+   "nimi": "Kuthodaw-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 22.0046,
+   "lon": 96.1128,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kuthodaw Pagoda Mandalay 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuthodaw_Pagoda_Mandalay_1.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuthodaw_Pagoda_Mandalay_1.jpg",
+     "selite": "Kuthodaw-pagodin valkoisten pienten stupien alle on kaiverrettu buddhalaisen kaanonin teksti marmorilaattoihin.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuthodaw Phaya 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuthodaw_Phaya_1.jpg?width=1280",
+     "tekija": "Htanaungg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuthodaw_Phaya_1.jpg",
+     "selite": "Pagodin kultainen päästupa ja sen eteen rakennettu avoin sali.",
+     "leveys": 3536,
+     "korkeus": 2732,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kuthodaw Inscription Shrines, Kuthodaw Pagoda, Mandalay, Myanmar - 20141206-05.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuthodaw_Inscription_Shrines%2C_Kuthodaw_Pagoda%2C_Mandalay%2C_Myanmar_-_20141206-05.JPG?width=1280",
+     "tekija": "Jacklee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuthodaw_Inscription_Shrines%2C_Kuthodaw_Pagoda%2C_Mandalay%2C_Myanmar_-_20141206-05.JPG",
+     "selite": "Valkoiset laattapyhäköt jatkuvat riveissä pagodin pihalla.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3320246",
+   "nimi": "Shwenandaw-luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.00068,
+   "lon": 96.11372,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shwenandaw Monastery, Mandalay c57.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shwenandaw_Monastery%2C_Mandalay_c57.jpg?width=1280",
+     "tekija": "Michael Gunther",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shwenandaw_Monastery%2C_Mandalay_c57.jpg",
+     "selite": "Shwenandaw on tiikistä veistetty luostari, ja se oli ennen kuningas Mindonin palatsin osa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mandalay-Shwenandaw-06-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay-Shwenandaw-06-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay-Shwenandaw-06-gje.jpg",
+     "selite": "Luostarin kerrostettu katto on koristeltu kaiverretuin harjoin.",
+     "leveys": 2804,
+     "korkeus": 1955,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mandalay-Shwenandaw-36-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay-Shwenandaw-36-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay-Shwenandaw-36-gje.jpg",
+     "selite": "Portaikko johtaa luostarin tummaan puurakennukseen.",
+     "leveys": 2365,
+     "korkeus": 3600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13062180",
+   "nimi": "Kyauktawgyi-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 22.00447,
+   "lon": 96.10658,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyauktawgyi Buddha Temple (Mandalay).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyauktawgyi_Buddha_Temple_(Mandalay).jpg?width=1280",
+     "tekija": "Mayor mt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyauktawgyi_Buddha_Temple_(Mandalay).jpg",
+     "selite": "Kyauktawgyin temppelin kultainen julkisivu ja pylväskäytävät kuuluvat Mandalay-kukkulan juurelle.",
+     "leveys": 1440,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kyauktawgyi Buddha Image Mandlay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyauktawgyi_Buddha_Image_Mandlay.jpg?width=1280",
+     "tekija": "Thutaa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyauktawgyi_Buddha_Image_Mandlay.jpg",
+     "selite": "Temppelin suuri marmorinen Buddha-patsas on veistetty yhdestä kivilohkareesta.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19702014",
+   "nimi": "Sandamuni-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 22.00347,
+   "lon": 96.10976,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sandamuni Pagoda 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandamuni_Pagoda_01.jpg?width=1280",
+     "tekija": "Christophe95",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sandamuni_Pagoda_01.jpg",
+     "selite": "Sandamuni-pagodin kultainen stupa nousee porrastettuna keskelle valkoisten pienten stupien kenttää.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20160729 Nanmyaebonthar Sannandawya Sandamuni Pagoda 5914.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160729_Nanmyaebonthar_Sannandawya_Sandamuni_Pagoda_5914.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160729_Nanmyaebonthar_Sannandawya_Sandamuni_Pagoda_5914.jpg",
+     "selite": "Valkoisia laattapyhäkköjä on pagodin ympärillä, ja taustalla kohoaa Mandalay-kukkula.",
+     "leveys": 4574,
+     "korkeus": 3029,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q946518",
+   "nimi": "Mahamuni-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 21.95188,
+   "lon": 96.07863,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mahamuni Buddha Temple 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahamuni_Buddha_Temple_2.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mahamuni_Buddha_Temple_2.jpg",
+     "selite": "Mahamunin temppelin kerrostettu kattotorni kohoaa taivasta vasten.",
+     "leveys": 2238,
+     "korkeus": 3799,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mahamuni Buddha Temple 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahamuni_Buddha_Temple_3.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mahamuni_Buddha_Temple_3.jpg",
+     "selite": "Mahamunin Buddha-patsas on paksusti kullattu, ja sen kasvot ovat temppelin tunnetuin kuva.",
+     "leveys": 2592,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q418134",
+   "nimi": "Zegyo-tori",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 21.9811,
+   "lon": 96.0769,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Around Mandalay 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Around_Mandalay_08.jpg?width=1280",
+     "tekija": "Go-Myanmar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Around_Mandalay_08.jpg",
+     "selite": "Zegyon torin kellotorni on Mandalayn keskustan tunnettu maamerkki.",
+     "leveys": 1536,
+     "korkeus": 1094,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mandalay-Zeigyo-Markt-08-Textil-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay-Zeigyo-Markt-08-Textil-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay-Zeigyo-Markt-08-Textil-gje.jpg",
+     "selite": "Torilla myydään värikkäitä kankaita, jotka ovat Mandalayn tunnettuja kauppatavaroita.",
+     "leveys": 2552,
+     "korkeus": 1660,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20992077",
+   "nimi": "Setkyathiha-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 21.9768,
+   "lon": 96.075,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Setkyathiha Pagoda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Setkyathiha_Pagoda.jpg?width=1280",
+     "tekija": "Mejillon095",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Setkyathiha_Pagoda.jpg",
+     "selite": "Setkyathiha-pagodi on pieni kullattu pyhäkkö Mandalayn kaupunkikeskustassa.",
+     "leveys": 3840,
+     "korkeus": 2160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "02f-Setkyathiha Paya (NgnL)-10416.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02f-Setkyathiha_Paya_(NgnL)-10416.jpg?width=1280",
+     "tekija": "No(0)GoodNamesLeft",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02f-Setkyathiha_Paya_(NgnL)-10416.jpg",
+     "selite": "Pagodin kultaiset kattokoristeet erottuvat sinistä taivasta vasten.",
+     "leveys": 4933,
+     "korkeus": 3289,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Mandalay Cityscape.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mandalay_Cityscape.jpg?width=1280",
+   "tekija": "Mrsoethuaung",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mandalay_Cityscape.jpg",
+   "selite": "Mandalay-kukkulan rinteiltä näkyy kaupunki ja Kuthodaw-pagodin valkoinen laattakenttä.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "City wall, Mandalay, Myanmar.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_wall%2C_Mandalay%2C_Myanmar.jpg?width=1280",
+   "tekija": "Ekyaw",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_wall%2C_Mandalay%2C_Myanmar.jpg",
+   "selite": "Mandalayn palatsin punainen muuri ja vallihauta rajaavat kaupungin keskustaa.",
+   "leveys": 2592,
+   "korkeus": 1944,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

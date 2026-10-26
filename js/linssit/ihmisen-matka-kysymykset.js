@@ -44,7 +44,7 @@ export const IHMISEN_MATKAN_KYSYMYKSET = {
     kysymykset: [
       'Miksi luiden ikää oli aluksi vaikea määrittää?',
       'Mitä tuhkakerros luiden yläpuolella paljasti vuonna 2022?',
-      'Miksi Omo I:n ikä ilmoitetaan "vähintään" eikä tarkkana lukuna?',
+      'Miksi Omo I:n ikä ilmoitetaan ”vähintään” eikä tarkkana lukuna?',
     ],
     vastaukset: [
       {
@@ -58,7 +58,7 @@ export const IHMISEN_MATKAN_KYSYMYKSET = {
         lahteet: [{ url: 'https://en.wikipedia.org/wiki/Omo_remains', title: 'en-Wikipedia: Omo remains' }],
       },
       {
-        kysymys: 'Miksi Omo I:n ikä ilmoitetaan "vähintään" eikä tarkkana lukuna?',
+        kysymys: 'Miksi Omo I:n ikä ilmoitetaan ”vähintään” eikä tarkkana lukuna?',
         vastaus: 'Kahden luvun ero on mittaustapa eikä riita: alapuolisen kerroksen ajoitus kertoo, milloin maa oli valmiina, yläpuolisen tuhkan ajoitus taas sen, milloin se peitettiin. Kumpikaan ei siis anna luun omaa syntyhetkeä, vaan haarukan, jonka sisällä se on.',
         lahteet: [{ url: 'https://en.wikipedia.org/wiki/Omo_remains', title: 'en-Wikipedia: Omo remains' }],
       },
@@ -299,21 +299,21 @@ export const IHMISEN_MATKAN_KYSYMYKSET = {
       },
       {
         kysymys: 'Miten Tianyuanin luola liittyy toiseen kuuluisaan löytöön lähistöllä?',
-        vastaus: 'Tianyuanin luola on muutaman kilometrin päässä Zhoukoudianista, jossa löydettiin aikoinaan paljon vanhempi "Pekingin ihminen", Homo erectus. Tianyuanin mies sen sijaan on nykyihminen ja eli vasta 42 000–39 000 vuotta sitten.',
+        vastaus: 'Tianyuanin luola on muutaman kilometrin päässä Zhoukoudianista, jossa löydettiin aikoinaan paljon vanhempi ”Pekingin ihminen”, Homo erectus. Tianyuanin mies sen sijaan on nykyihminen ja eli vasta 42 000–39 000 vuotta sitten.',
         lahteet: [{ url: 'https://en.wikipedia.org/wiki/Tianyuan_man', title: 'en-Wikipedia: Tianyuan man' }],
       },
     ],
   },
   niah: {
     kysymykset: [
-      'Miten "syvä kallo" löydettiin ja mistä syvyydestä?',
+      'Miten ”syvä kallo” löydettiin ja mistä syvyydestä?',
       'Miksi kallon ajoitusta epäiltiin vuosikymmenten ajan?',
       'Mitä löydöt kertovat siitä, miten ihmiset osasivat elää sademetsässä?',
     ],
     vastaukset: [
       {
-        kysymys: 'Miten "syvä kallo" löydettiin ja mistä syvyydestä?',
-        vastaus: 'Barbara Harrisson löysi helmikuussa 1958 kuumaksi ristityn "Hell Trench" -kaivauskuopan pohjalta osittaisen kallon lähes kolmen metrin syvyydestä. Löytö oli kauan Kaakkois-Aasian vanhin tunnettu nykyihmisen jäänne.',
+        kysymys: 'Miten ”syvä kallo” löydettiin ja mistä syvyydestä?',
+        vastaus: 'Barbara Harrisson löysi helmikuussa 1958 kuumaksi ristityn ”Hell Trench” -kaivauskuopan pohjalta osittaisen kallon lähes kolmen metrin syvyydestä. Löytö oli kauan Kaakkois-Aasian vanhin tunnettu nykyihmisen jäänne.',
         lahteet: [{ url: 'https://en.wikipedia.org/wiki/Niah_National_Park', title: 'en-Wikipedia: Niah National Park' }],
       },
       {
@@ -366,7 +366,7 @@ export const IHMISEN_MATKAN_KYSYMYKSET = {
       },
       {
         kysymys: 'Mitä perimä paljasti kahden nuoren miehen hampaista vuonna 2019?',
-        vastaus: 'Hampaista saatu perimä osoittautui kokonaan uudeksi väestöksi, "muinaisiksi pohjois-siperialaisiksi". Heidän jälkeläisensä sekoittuivat myöhemmin idästä tulleisiin ryhmiin, ja tuosta sekoituksesta syntyi lopulta se väestö, joka siirtyi Amerikkaan.',
+        vastaus: 'Hampaista saatu perimä osoittautui kokonaan uudeksi väestöksi, ”muinaisiksi pohjois-siperialaisiksi”. Heidän jälkeläisensä sekoittuivat myöhemmin idästä tulleisiin ryhmiin, ja tuosta sekoituksesta syntyi lopulta se väestö, joka siirtyi Amerikkaan.',
         lahteet: [{ url: 'https://en.wikipedia.org/wiki/Yana_Rhinoceros_Horn_Site', title: 'en-Wikipedia: Yana Rhinoceros Horn Site' }],
       },
       {

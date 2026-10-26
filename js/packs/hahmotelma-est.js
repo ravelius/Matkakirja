@@ -76,6 +76,7 @@ export const HAHMOTELMA_EST = [
   ...EUROOPAN_KADONNEET.EST,
   {
     id: 'hahmotelma-soomaa',
+    nimio: 'Soomaa',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-soomaa-63ffb84a.jpg',
       lyhyt: 'Tulvan peittämä tie Soomaalla, etualalla koverretun kanootin keula.',
@@ -138,7 +139,7 @@ export const HAHMOTELMA_EST = [
     lahde: 'en-Wikipedia "Soomaa National Park", johdanto-osa ja osiot "Geography", "Floods" '
       + 'ja "Traditional culture" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mitä Soomaalla tarkoitetaan "viidennellä vuodenajalla"?',
+      kysymys: 'Mitä Soomaalla tarkoitetaan ”viidennellä vuodenajalla”?',
       vaihtoehdot: [
         'Pitkää sumuista syysjaksoa',
         'Jäätyneiden soiden hiihtokautta',
@@ -153,6 +154,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-vilsandi',
+    nimio: 'Vilsandi',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-vilsandi-46292358.jpg',
       lyhyt: 'Iltataivas punertaa merenlahden yllä, kaukana Vilsandin majakan siluetti.',
@@ -228,6 +230,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-endla',
+    nimio: 'Endla',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-endla-5166bcd5.jpg',
       lyhyt: 'Näkötornista nähty lankkupolku, joka halkoo suolampia Endlan alueella.',
@@ -549,7 +552,7 @@ export const HAHMOTELMA_EST = [
       europe: { x: 719.9, y: 366.6 },
     },
     teksti: 'Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa '
-      + 'on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja '
+      + 'on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa ”Otin päätä”, ja '
       + 'ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset '
       + 'ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne '
       + 'Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin '
@@ -589,7 +592,7 @@ export const HAHMOTELMA_EST = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-viljandi-1a51337f.jpg',
         lyhyt: 'Viljandin (Fellin) linnan rauniot värillisessä postikortissa 1910-luvulta.',
         selite: 'Vanha postikortti esittää linnamäen rauniomuureja, joiden takaa nousee tornin '
-          + 'huippu. Kortin saksankielinen teksti on "Fellin, Schlosshof", eli Viljandin '
+          + 'huippu. Kortin saksankielinen teksti on ”Fellin, Schlosshof”, eli Viljandin '
           + 'linnanpiha.',
         lahde: 'Valokuva: Tuntematon (kustantaja Ernst Ring), Wikimedia Commons (Public domain).',
         tekija: 'Tuntematon (kustantaja Ernst Ring)',
@@ -692,11 +695,11 @@ export const HAHMOTELMA_EST = [
     },
     teksti: 'Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden '
       + 'rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, '
-      + '"ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle '
+      + '”ruissaarten lahti”. Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle '
       + 'uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan '
       + 'kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman '
       + 'jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi '
-      + 'satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai '
+      + 'satamalle vuonna 1762 nimen Baltiiski Port, ”Itämeren satama”. Kaupunki sai '
       + 'kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta '
       + 'Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa '
       + 'Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.',
@@ -916,6 +919,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-kuremae',
+    nimio: 'Pühtitsa',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-kuremae-b478fa87.jpg',
       lyhyt: 'Pühtitsan luostarin pääkirkko tummine kupoleineen.',
@@ -1137,7 +1141,7 @@ export const HAHMOTELMA_EST = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-setomaa-3867fe22.jpg',
         lyhyt: 'Peko-hahmon puinen veistos Setomaan talomuseossa Värskassa.',
         selite: 'Peko on setojen jumalhahmo, ja sen nimeä kantaa Kuningaskunnan päivänä '
-          + 'valittavan "kuningaskunnan" hoitaja. Pöydällä hahmon vieressä on '
+          + 'valittavan ”kuningaskunnan” hoitaja. Pöydällä hahmon vieressä on '
           + 'lasipurkeissa viljanäytteitä.',
         lahde: 'Valokuva: Klarqa, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Klarqa',
@@ -1151,7 +1155,7 @@ export const HAHMOTELMA_EST = [
     lahi: true,
     kysymykset: [
       'Miksi setojen laulutapa leelo on niin erityinen, että UNESCO otti sen aineettoman kulttuuriperinnön luetteloonsa?',
-      'Mitä ihmettä on Setomaan "kuningaskunta", ja kuka on kuningas Peko?',
+      'Mitä ihmettä on Setomaan ”kuningaskunta”, ja kuka on kuningas Peko?',
     ],
     korostukset: ['leelo|leelo', 'Peko|Pekon'],
     nappi: 'Setot vapautettiin maaorjuudesta vasta 1861–1866; Jakob Hurt kirjasi nimen '
@@ -1182,7 +1186,7 @@ export const HAHMOTELMA_EST = [
       ],
       oikea: 2,
       fakta: 'Leelo esitetään yleensä naisvoimin perinteisissä kansanpuvuissa. Kuningaskunnan '
-        + 'päivänä parhaan leelo-ryhmän johtolaulaja saa arvonimen "Laulun äiti".',
+        + 'päivänä parhaan leelo-ryhmän johtolaulaja saa arvonimen ”Laulun äiti”.',
     },
   },
   {
@@ -1318,7 +1322,7 @@ export const HAHMOTELMA_EST = [
       + 'Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon '
       + 'ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna '
       + '1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen '
-      + '"Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. '
+      + '”Suuren Juhanan” paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. '
       + '1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen '
       + 'keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin '
       + 'myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa '
@@ -1386,7 +1390,7 @@ export const HAHMOTELMA_EST = [
       + 'ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren '
       + 'asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta '
       + 'siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa '
-      + '"Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että '
+      + '”Ormin saarta” tai ”käärmesaarta”, ja siitä ovat johdettuja sekä viron- että '
       + 'saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, '
       + 'jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin '
       + 'saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja '
@@ -1751,6 +1755,7 @@ export const HAHMOTELMA_EST = [
   },
   {
     id: 'hahmotelma-dominikaaniluostari',
+    nimio: 'Dominikaanit',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/est-nosto-dominikaaniluostari-fe5c240c.jpg',
       lyhyt: 'Katariina käik, ahdas keskiaikainen käytävä Tallinnan vanhassakaupungissa.',

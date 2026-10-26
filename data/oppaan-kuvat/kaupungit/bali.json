@@ -1,0 +1,539 @@
+{
+ "kaupunki": "bali",
+ "kaupunkiQ": "Q4648",
+ "kohteet": [
+  {
+   "q": "Q515253",
+   "nimi": "Tanah Lot",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -8.62114,
+   "lon": 115.08675,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bali - Pura Tanah Lot, 20220827 1005 1141.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bali_-_Pura_Tanah_Lot%2C_20220827_1005_1141.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bali_-_Pura_Tanah_Lot%2C_20220827_1005_1141.jpg",
+     "selite": "Tanah Lotin temppeli seisoo meren ympäröimällä kalliolla, jonne pääsee vain laskuveden aikaan.",
+     "leveys": 3090,
+     "korkeus": 2063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "TanahLot 2014.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TanahLot_2014.JPG?width=1280",
+     "tekija": "Grayswoodsurrey",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TanahLot_2014.JPG",
+     "selite": "Aallot iskeytyvät Tanah Lotin kalliolle, jolla temppeli on ollut satoja vuosia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "008 Pura Enjung Galuh, The Tanah Lot Area, Tabanan, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/008_Pura_Enjung_Galuh%2C_The_Tanah_Lot_Area%2C_Tabanan%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:008_Pura_Enjung_Galuh%2C_The_Tanah_Lot_Area%2C_Tabanan%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Tanah Lotin alueen temppeleiden portit ja pienet pyhäköt on veistetty mustasta kivestä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q829418",
+   "nimi": "Besakihin temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -8.3741,
+   "lon": 115.45222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "003 Seven-Tiered Temple, Pura Besikih, Mount Agung, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/003_Seven-Tiered_Temple%2C_Pura_Besikih%2C_Mount_Agung%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:003_Seven-Tiered_Temple%2C_Pura_Besikih%2C_Mount_Agung%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Besakihin temppelialueen monikatoksiset meru-tornit ovat Balin pyhimmän temppelin tunnusmerkki.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "004 Temple and Wall, Pura Besikih, Mount Agung, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/004_Temple_and_Wall%2C_Pura_Besikih%2C_Mount_Agung%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:004_Temple_and_Wall%2C_Pura_Besikih%2C_Mount_Agung%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Besakih on Balin tärkein temppeli, ja sen portit ja muurit johtavat ylös Agung-tulivuoren rinteelle.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1381933",
+   "nimi": "Uluwatun temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -8.82939,
+   "lon": 115.08441,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Uluwatu Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uluwatu_Temple.jpg?width=1280",
+     "tekija": "GeoffClarke",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uluwatu_Temple.jpg",
+     "selite": "Uluwatun temppeli seisoo jyrkän kalliojyrkänteen reunalla korkealla Intian valtameren yllä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "010 Uluwatu Temple Courtyard, Pura Uluwatu, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/010_Uluwatu_Temple_Courtyard%2C_Pura_Uluwatu%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:010_Uluwatu_Temple_Courtyard%2C_Pura_Uluwatu%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Temppelin sisäpiha ja portit johtavat kohti merta Balin eteläkärjessä.",
+     "leveys": 5426,
+     "korkeus": 3617,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "014 Gateway, Pura Uluwatu, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/014_Gateway%2C_Pura_Uluwatu%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:014_Gateway%2C_Pura_Uluwatu%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Halkaistu portti avautuu kohti merta, ja sen vartijapatsaat suojaavat temppeliä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q210654",
+   "nimi": "Ubud",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": -8.507,
+   "lon": 115.262,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ubud Palace (2022).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud_Palace_(2022).jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ubud_Palace_(2022).jpg",
+     "selite": "Ubudin palatsin koristeellinen portti ja punakattoiset paviljongit ovat kaupungin kulttuurikeskuksen sydämessä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "030 Saraswati Temple in Background, Ubud Palaces, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/030_Saraswati_Temple_in_Background%2C_Ubud_Palaces%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:030_Saraswati_Temple_in_Background%2C_Ubud_Palaces%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Saraswatin temppeli ja sen lippumaiset koristeet kuuluvat Ubudin keskustan kuvaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q43876",
+   "nimi": "Batur-tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -8.24194,
+   "lon": 115.375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Batur2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Batur2.JPG?width=1280",
+     "tekija": "Jnpet",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Batur2.JPG",
+     "selite": "Batur-tulivuoren laavakenttä ja kraatterin rinteet kohoavat Balin pohjoisosan vehreyden yläpuolella.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bangli Mount Batur.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangli_Mount_Batur.jpg?width=1280",
+     "tekija": "Bxuser",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangli_Mount_Batur.jpg",
+     "selite": "Batur-tulivuoren rinteet laskeutuvat laaksoon, jonka takana siintää kraatterijärvi.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q158470",
+   "nimi": "Agung-tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -8.34194,
+   "lon": 115.50778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sunset Gunung Agung Rinjani-Lombok 2017-08-07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_Gunung_Agung_Rinjani-Lombok_2017-08-07.jpg?width=1280",
+     "tekija": "Toni Wöhrl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_Gunung_Agung_Rinjani-Lombok_2017-08-07.jpg",
+     "selite": "Agung-tulivuori on Balin korkein huippu ja saaren hindujen pyhä vuori, tässä auringonlaskussa pilvien yllä.",
+     "leveys": 2054,
+     "korkeus": 1371,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount Agung, November 2017 eruption - 27 Nov 2017 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Agung%2C_November_2017_eruption_-_27_Nov_2017_03.jpg?width=1280",
+     "tekija": "Michael W. Ishak (www.myreefsdiary.com)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Agung%2C_November_2017_eruption_-_27_Nov_2017_03.jpg",
+     "selite": "Agung purkautui viimeksi vuonna 2017 ja lähetti tuhkapilven taivaalle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2220851",
+   "nimi": "Pura Ulun Danu Bratan",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -8.27061,
+   "lon": 115.16658,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brantan Bali Pura-Ulun-Danu-Bratan-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg",
+     "selite": "Ulun Danu Bratanin temppelin meru-tornit kohoavat järven rannalla ja heijastuvat tyyneen veteen.",
+     "leveys": 5097,
+     "korkeus": 3398,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "006 Temple with Golden Doors, Pura Ulun Danu Beratan, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/006_Temple_with_Golden_Doors%2C_Pura_Ulun_Danu_Beratan%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:006_Temple_with_Golden_Doors%2C_Pura_Ulun_Danu_Beratan%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Temppeli on omistettu järven vedenjumalattarelle, ja sen koristeelliset ovet johtavat sisäpihoille.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1028566",
+   "nimi": "Pura Taman Ayun",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": -8.54161,
+   "lon": 115.1726,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pura Taman Ayun terletak di Mengwi, Bali.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pura_Taman_Ayun_terletak_di_Mengwi%2C_Bali.jpg?width=1280",
+     "tekija": "Cindi CGJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pura_Taman_Ayun_terletak_di_Mengwi%2C_Bali.jpg",
+     "selite": "Taman Ayunin kuninkaallisen temppelin monikatoksiset tornit kohoavat vesiaiheiden ja puutarhan ympäröiminä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "005 Gateway leading to Temple, Taman Ayun Temple, Mengwi, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/005_Gateway_leading_to_Temple%2C_Taman_Ayun_Temple%2C_Mengwi%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:005_Gateway_leading_to_Temple%2C_Taman_Ayun_Temple%2C_Mengwi%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Halkaistu portti johtaa Taman Ayunin temppelin sisimpään pihaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17134727",
+   "nimi": "Balin kulttuurimaisema",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -8.25917,
+   "lon": 115.40278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bali- Jatiluwih rice terraces - 50281829456.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bali-_Jatiluwih_rice_terraces_-_50281829456.jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bali-_Jatiluwih_rice_terraces_-_50281829456.jpg",
+     "selite": "Jatiluwihin porrastetut riisiviljelmät kuuluvat Balin subak-kastelujärjestelmään, joka on maailmanperintökohde.",
+     "leveys": 4486,
+     "korkeus": 2692,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jatiluwih rice terraces.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jatiluwih_rice_terraces.jpg?width=1280",
+     "tekija": "Imacim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jatiluwih_rice_terraces.jpg",
+     "selite": "Riisiterassit levittäytyvät vuorten juurelle, ja niiden vesi jaetaan yhteisten sääntöjen mukaan.",
+     "leveys": 3067,
+     "korkeus": 1195,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7809287",
+   "nimi": "Tirta Empul",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -8.41639,
+   "lon": 115.315,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pura Tirta Empul, Bali.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pura_Tirta_Empul%2C_Bali.JPG?width=1280",
+     "tekija": "Saranabhi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pura_Tirta_Empul%2C_Bali.JPG",
+     "selite": "Tirta Empulin temppelin pyhäköt ja pyhät lähdealtaat ovat tulleet tunnetuksi puhdistautumisrituaaleistaan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2037360",
+   "nimi": "Goa Gajah",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -8.52339,
+   "lon": 115.28633,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Goa Gajah Front.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Goa_Gajah_Front.JPG?width=1280",
+     "tekija": "DerGenaue Allrounder",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Goa_Gajah_Front.JPG",
+     "selite": "Goa Gajahin luolan sisäänkäynti on veistetty hirviönaamaksi, joka suojelee pyhää paikkaa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "001 View of Sacred Fountains, Goa Gajah, Gyanyar, Bali, photograph by Anandajoti Bhikkhu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/001_View_of_Sacred_Fountains%2C_Goa_Gajah%2C_Gyanyar%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg?width=1280",
+     "tekija": "Anandajoti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:001_View_of_Sacred_Fountains%2C_Goa_Gajah%2C_Gyanyar%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg",
+     "selite": "Pyhän lähdealtaan patsaista virtaa vettä, ja ne ovat osa Goa Gajahin luolatemppelin kokonaisuutta.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4200637",
+   "nimi": "Tegallalang",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -8.43333,
+   "lon": 115.28333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tegallalang rice terraces SF0001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tegallalang_rice_terraces_SF0001.jpg?width=1280",
+     "tekija": "Stefan Fussan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tegallalang_rice_terraces_SF0001.jpg",
+     "selite": "Tegallalangin porrastetut riisiviljelmät laskeutuvat portaittain rinteitä alas Ubudin pohjoispuolella.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tegallalang Rice Terraces Bali.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tegallalang_Rice_Terraces_Bali.jpg?width=1280",
+     "tekija": "Philip Nalangan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tegallalang_Rice_Terraces_Bali.jpg",
+     "selite": "Palmujen reunustamat riisiterassit ovat yksi Balin tunnetuimpia maisemia.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1520301",
+   "nimi": "Nusa Penida",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -8.73333,
+   "lon": 115.53333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kelingking Beach (T-Rex Bay) of Nusa Penida, Bali (2025) - img 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kelingking_Beach_(T-Rex_Bay)_of_Nusa_Penida%2C_Bali_(2025)_-_img_11.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kelingking_Beach_(T-Rex_Bay)_of_Nusa_Penida%2C_Bali_(2025)_-_img_11.jpg",
+     "selite": "Kelingking Beachin jyrkkä kallioniemi muistuttaa dinosauruksen päätä ja laskeutuu turkoosille hiekkarannalle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q994499",
+   "nimi": "Kuta",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -8.72349,
+   "lon": 115.17127,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sunset, Kuta, Bali, Indonesia, 20220825 1755 0879.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%2C_Kuta%2C_Bali%2C_Indonesia%2C_20220825_1755_0879.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset%2C_Kuta%2C_Bali%2C_Indonesia%2C_20220825_1755_0879.jpg",
+     "selite": "Kutan pitkä hiekkaranta on Balin tunnetuin surffi- ja auringonlaskupaikka.",
+     "leveys": 5253,
+     "korkeus": 3507,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kuta Beach, Bali, 20220825 1336 0840.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuta_Beach%2C_Bali%2C_20220825_1336_0840.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kuta_Beach%2C_Bali%2C_20220825_1336_0840.jpg",
+     "selite": "Kutan rantaviivaa reunustavat kivimuurit ja laaja hiekkaranta Balin eteläosassa.",
+     "leveys": 5464,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bali beaches (16703033410).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bali_beaches_(16703033410).jpg?width=1280",
+   "tekija": "Jorge Láscar from Melbourne, Australia",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bali_beaches_(16703033410).jpg",
+   "selite": "Ilmasta Balin rannikko on kapea hiekkaranta, riuttavyöhyke ja tiheä rakennuskaista.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Drone view of rice plantation on bali island with path to walk around and palms. (46229046541).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._(46229046541).jpg?width=1280",
+   "tekija": "Artem Beliaikin from Moscow, Russia",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drone_view_of_rice_plantation_on_bali_island_with_path_to_walk_around_and_palms._(46229046541).jpg",
+   "selite": "Balin sisämaassa riisipellot ja palmut peittävät vehreät laaksot.",
+   "leveys": 4048,
+   "korkeus": 3032,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

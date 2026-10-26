@@ -256,6 +256,9 @@ test('resepti 2026-09-25: D2 + C-reliefi, ei rantamustetta eikä meren käyriä'
   for (const sana of r.pohjaliput) assert.doesNotMatch(sana, /\s/);
   assert.deepEqual(r.palloliput, ['--suodatin', 'laatikko', '--jpeg-laatu', '90', '--jpeg-444']);
   assert.equal(r.palloTasot, '0-9');
+  // Nostotaso ilman nimiöitä kuten tuotannossa (omistajan löydös 25.9.2026:
+  // ilman lippua koepyramidin nostoja ei voinut napauttaa).
+  assert.deepEqual(r.nostoliput, ['--nostot-ilman-nimioita']);
   assert.ok(Object.isFrozen(RESEPTIT));
 });
 
@@ -455,4 +458,13 @@ test('vanha resepti (23a) piirtää z6-laatan tavulleen entisenä', { skip: ohit
   } finally {
     rmSync(k, { recursive: true, force: true });
   }
+});
+
+test('resepti 2026-09-26 = 2026-09-25 + litistys 1 ja syvyyskontrasti 1,35 (löydös 129)', () => {
+  const a = RESEPTIT['2026-09-25']; const b = RESEPTIT['2026-09-26'];
+  for (const k of Object.keys(a)) if (!['kuvaus', 'pohjaliput'].includes(k)) assert.deepEqual(b[k], a[k], k);
+  assert.ok(b.pohjaliput.includes('{"syvyys":{"litistys":1}}'));
+  assert.deepEqual(b.pohjaliput.slice(-2), ['--syvyyskontrasti', '1.35']);
+  assert.equal(b.pohjaliput[b.pohjaliput.indexOf('--reseptinimi') + 1], '2026-09-26');
+  assert.ok(a.pohjaliput.includes('{"syvyys":{"litistys":0.8}}'), '25 ennallaan');
 });

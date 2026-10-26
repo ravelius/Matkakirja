@@ -99,7 +99,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 
 const selain = await (MOOTTORI === 'webkit'
   ? moottori.launch()
-  : moottori.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage'] }));
+  : moottori.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage', '--mute-audio'] }));
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },
   hasTouch: true,

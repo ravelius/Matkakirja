@@ -1,0 +1,379 @@
+{
+ "kaupunki": "denver",
+ "kaupunkiQ": "Q16554",
+ "kohteet": [
+  {
+   "q": "Q1111402",
+   "nimi": "Coloradon osavaltion kapitolium",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 39.73909,
+   "lon": -104.9849,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "04 Colorado State Capitol Exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04_Colorado_State_Capitol_Exterior.jpg?width=1280",
+     "tekija": "NateBergin",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04_Colorado_State_Capitol_Exterior.jpg",
+     "selite": "Coloradon osavaltion kapitoliumin kullattu kupoli kohoaa Denverin keskustan ylle graniittisen rakennuksen päältä.",
+     "leveys": 5329,
+     "korkeus": 3997,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "13th steps marker.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/13th_steps_marker.jpg?width=1280",
+     "tekija": "みょん大帝",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:13th_steps_marker.jpg",
+     "selite": "Kapitoliumin portaalla pronssinen merkki kertoo, että paikka on tasan mailin korkeudessa merenpinnasta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942873",
+   "nimi": "Immaculate Conceptionin katedraalibasilika",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 39.7403,
+   "lon": -104.982,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CIMDenver.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CIMDenver.jpg?width=1280",
+     "tekija": "Original uploader was Vertigo700 at en.wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CIMDenver.jpg",
+     "selite": "Katedraalibasilikan kaksi korkeaa tornia ja goottilainen julkisivu on veistetty vaaleasta kalkkikivestä.",
+     "leveys": 1403,
+     "korkeus": 2091,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1129916",
+   "nimi": "Coors Field",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 39.75611,
+   "lon": -104.99417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coors field 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coors_field_1.JPG?width=1280",
+     "tekija": "Matt Kozlowski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coors_field_1.JPG",
+     "selite": "Coors Field on Colorado Rockiesin baseball-stadion ja Denverin keskustan laidalla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blue Moon Brewing Co. at The SandLot Brewery, Coors Field.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Moon_Brewing_Co._at_The_SandLot_Brewery%2C_Coors_Field.jpg?width=1280",
+     "tekija": "Xnatedawgx",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Moon_Brewing_Co._at_The_SandLot_Brewery%2C_Coors_Field.jpg",
+     "selite": "Stadionin punatiilinen ulkoseinä liittyy vanhoihin varastorakennuksiin Lower Downtownissa.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1189960",
+   "nimi": "Denverin taidemuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 39.73719,
+   "lon": -104.98935,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Denver Art Museum (54940696014).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denver_Art_Museum_(54940696014).jpg?width=1280",
+     "tekija": "Daniel Hartwig",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denver_Art_Museum_(54940696014).jpg",
+     "selite": "Denverin taidemuseon uusi lasinen Sie-vastaanottorakennus kaartuu aukion laidalle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Art Museum before DNC (2804644170).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art_Museum_before_DNC_(2804644170).jpg?width=1280",
+     "tekija": "freewheelinbiker",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Art_Museum_before_DNC_(2804644170).jpg",
+     "selite": "Museon kulmikas katto ja suihkulähteet täydentävät Civic Centerin kulttuurikorttelia.",
+     "leveys": 2142,
+     "korkeus": 2285,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q991069",
+   "nimi": "Brown Palace -hotelli",
+   "peruste": "pelin nosto",
+   "koko_m": 90,
+   "lat": 39.7441,
+   "lon": -104.9878,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brownpalace1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brownpalace1.JPG?width=1280",
+     "tekija": "Onetwo1 at English Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brownpalace1.JPG",
+     "selite": "Brown Palace on vuonna 1892 avattu historiallinen hotelli Denverin keskustassa.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brown Palace Hotel Exterior Flat Iron Corner Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brown_Palace_Hotel_Exterior_Flat_Iron_Corner_Facade.jpg?width=1280",
+     "tekija": "Anne Ruthmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brown_Palace_Hotel_Exterior_Flat_Iron_Corner_Facade.jpg",
+     "selite": "Hotellin kapea kolmiomainen kulma kohoaa keskustan katujen risteykseen.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046135",
+   "nimi": "Empower Field at Mile High",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 39.74389,
+   "lon": -105.02,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SAF at Mile High AFC Championship interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SAF_at_Mile_High_AFC_Championship_interior.jpg?width=1280",
+     "tekija": "Thelastcanadian",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SAF_at_Mile_High_AFC_Championship_interior.jpg",
+     "selite": "Empower Field at Mile High on Denver Broncosin jättimäinen jalkapallostadion.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q795470",
+   "nimi": "Ball Arena",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 39.74861,
+   "lon": -105.0075,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ball Arena exterior 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ball_Arena_exterior_2022.jpg?width=1280",
+     "tekija": "Troutfarm27",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ball_Arena_exterior_2022.jpg",
+     "selite": "Ball Arena on Denverin keskustan monitoimihalli, jossa pelaavat Avalanche ja Nuggets.",
+     "leveys": 4032,
+     "korkeus": 2370,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ball Arena during a game between the Colorado Avalanche and Florida Panthers during the 2025-26 season.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ball_Arena_during_a_game_between_the_Colorado_Avalanche_and_Florida_Panthers_during_the_2025-26_season.jpg?width=1280",
+     "tekija": "Gatorfan252525",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ball_Arena_during_a_game_between_the_Colorado_Avalanche_and_Florida_Panthers_during_the_2025-26_season.jpg",
+     "selite": "Jääkiekko-ottelun aikana hallin suuri videotaulu ja katsomot täyttyvät.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3003810",
+   "nimi": "Denver Botanic Gardens",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 39.7325,
+   "lon": -104.96083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Denver japanese garden.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denver_japanese_garden.JPG?width=1280",
+     "tekija": "Laurascudder",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denver_japanese_garden.JPG",
+     "selite": "Denver Botanic Gardensin japanilainen puutarha tuo mäntyjä ja kiviä keskelle kaupunkia.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20000826 08 Denver Botanic Garden (7173776598).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20000826_08_Denver_Botanic_Garden_(7173776598).jpg?width=1280",
+     "tekija": "David Wilson from Oak Park, Illinois, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20000826_08_Denver_Botanic_Garden_(7173776598).jpg",
+     "selite": "Kasvitieteellisen puutarhan kukkapenkit loistavat kesällä keltaisen ja oranssin sävyissä.",
+     "leveys": 1758,
+     "korkeus": 1105,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3023372",
+   "nimi": "Denver Performing Arts Complex",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 39.7444,
+   "lon": -104.997,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Denver Performing Arts Complex.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denver_Performing_Arts_Complex.jpg?width=1280",
+     "tekija": "Onetwo1 at en.wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denver_Performing_Arts_Complex.jpg",
+     "selite": "Esittävän taiteen keskuksen suuri lasikatos kokoaa teatterit ja konserttisalit saman katon alle.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Denverperformingartscomplexoutside.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denverperformingartscomplexoutside.JPG?width=1280",
+     "tekija": "Onetwo1 (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denverperformingartscomplexoutside.JPG",
+     "selite": "Kompleksin ulkoseinä ja kaarevasti kohoava lasikatto reunustavat Curtis Streetiä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6896531",
+   "nimi": "Molly Brown House",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 39.73722,
+   "lon": -104.98028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Exterior with Sign.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_with_Sign.jpg?width=1280",
+     "tekija": "Eejjmm8888",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_with_Sign.jpg",
+     "selite": "Molly Brown House on Titanicilta pelastautuneen Molly Brownin entinen koti Capitol Hillillä.",
+     "leveys": 2728,
+     "korkeus": 2728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q901770",
+   "nimi": "Daniels & Fisherin torni",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 39.74833,
+   "lon": -104.99528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Birds-eye view of Denver and the Rockies as viewed from the tower of the Daniels and Fisher Stores Co. - DPLA - 37476cb8d9503f5245c8ee298c64255c (page 2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Birds-eye_view_of_Denver_and_the_Rockies_as_viewed_from_the_tower_of_the_Daniels_and_Fisher_Stores_Co._-_DPLA_-_37476cb8d9503f5245c8ee298c64255c_(page_2).jpg?width=1280",
+     "tekija": "Clason Map Co",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Birds-eye_view_of_Denver_and_the_Rockies_as_viewed_from_the_tower_of_the_Daniels_and_Fisher_Stores_Co._-_DPLA_-_37476cb8d9503f5245c8ee298c64255c_(page_2).jpg",
+     "selite": "Vanhassa panoraamakuvassa Daniels & Fisherin torni nousee Denverin kattojen yläpuolelle ja taustalla näkyvät Kalliovuoret.",
+     "leveys": 12000,
+     "korkeus": 5339,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Downtown Denver, Colorado.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Denver%2C_Colorado.jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Denver%2C_Colorado.jpg",
+   "selite": "Denverin pilvenpiirtäjät kohoavat ilmakuvassa tasaisen kaupungin keskelle.",
+   "leveys": 12004,
+   "korkeus": 7202,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Denver Downtown Aerial, December 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denver_Downtown_Aerial%2C_December_2025.jpg?width=1280",
+   "tekija": "Spicypepper999",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denver_Downtown_Aerial%2C_December_2025.jpg",
+   "selite": "Denverin keskusta ja takana avautuvat Kalliovuoret erottuvat toisistaan.",
+   "leveys": 2560,
+   "korkeus": 1440,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

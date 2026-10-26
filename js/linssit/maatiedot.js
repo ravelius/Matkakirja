@@ -51,6 +51,7 @@ export const LINSSI = {
    */
   kesken: true,
   lyhyt: 'Napauta kartalta mitä tahansa maata ja lue sen oma lehti — ei tarvitse matkustaa perille.',
+  esittely: 'Napauta kartalta mitä tahansa maata ja lue sen oma lehti — ei tarvitse matkustaa perille.',
   // Avoin kirja ja i-kirjain: hakuteos, ei karttakerros.
   ikoni: '<path d="M4 6.2c2.6-1.1 5.2-1.1 8 0v12c-2.8-1.1-5.4-1.1-8 0Z"/>'
     + '<path d="M20 6.2c-2.6-1.1-5.2-1.1-8 0v12c2.8-1.1 5.4-1.1 8 0Z"/>'

@@ -1,0 +1,3939 @@
+{
+ "_meta": {
+  "kuvaus": "ISS-skanneri B1 erä 2: 164 vanhaa kohdetta (kuvauspaikat 25, pääkaupungit 118, taivas 21) uudessa rakenteessa. Rivit \"laskettu\" ovat pelin laskemia. Lähteet vain krediittitiedostoon. Faktat tarkistettu riippumattomilla Sonnet-tarkistajilla verkosta 19.10.2026.",
+  "rajat": "aloitus ≤ 45, luonne ≤ 110, nimike ≤ 18, rivin arvo ≤ 24 merkkiä"
+ },
+ "kohteet": [
+  {
+   "tunnus": "taivas-kuu",
+   "nimi": "kuu",
+   "aloitus": "Maan ainoa luonnollinen kuu",
+   "luonne": "Vuorovesivoima on lukinnut sen pyörimisen, joten Maahan näkyy aina sama kraatterien peittämä puoli.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Halkaisija",
+     "n. 3 475 km"
+    ],
+    [
+     "Kiertoaika",
+     "27,3 vrk"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Moon"
+   ]
+  },
+  {
+   "tunnus": "taivas-merkurius",
+   "nimi": "merkurius",
+   "aloitus": "Aurinkokunnan pienin planeetta",
+   "luonne": "Auringon lähin planeetta: kraatterien peittämä, lähes ilmakehätön ja kuuton. Päivä kestää 176 vrk.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Halkaisija",
+     "4 879 km"
+    ],
+    [
+     "Vuosi",
+     "88 vrk"
+    ],
+    [
+     "Lämpötila",
+     "n. −170…+430 °C"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mercury_(planet)"
+   ]
+  },
+  {
+   "tunnus": "taivas-venus",
+   "nimi": "venus",
+   "aloitus": "Aamu- ja iltataivaan kirkas planeetta",
+   "luonne": "Kasvihuoneilmiön polttama, noin 465-asteinen pilvimaailma, joka pyörii hitaasti taaksepäin.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Kansannimi",
+     "Kointähti, Iltatähti"
+    ],
+    [
+     "Pyörähdys",
+     "243 vrk"
+    ],
+    [
+     "Vuosi",
+     "225 vrk"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Venus",
+    "https://www.utupub.fi/bitstreams/f16db3c5-32c8-4532-94a2-4ac2f6a052d9/download"
+   ]
+  },
+  {
+   "tunnus": "taivas-mars",
+   "nimi": "mars",
+   "aloitus": "Aurinkokunnan punainen planeetta",
+   "luonne": "Pinnan rautaoksidi antaa ruosteenpunaisen värin; planeetalla on aurinkokunnan korkein tulivuori, Olympus Mons.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Halkaisija",
+     "6 779 km"
+    ],
+    [
+     "Päivä",
+     "24 h 39 min"
+    ],
+    [
+     "Kuut",
+     "2 (Phobos, Deimos)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mars"
+   ]
+  },
+  {
+   "tunnus": "taivas-jupiter",
+   "nimi": "jupiter",
+   "aloitus": "Aurinkokunnan suurin planeetta",
+   "luonne": "Massaa on 2,5 kertaa muiden planeettojen yhteensä; Suuri punainen pilkku on vuosisatoja riehunut jättimyrsky.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Halkaisija",
+     "n. 143 000 km"
+    ],
+    [
+     "Päivä",
+     "n. 9,9 tuntia"
+    ],
+    [
+     "Vuosi",
+     "n. 11,9 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jupiter"
+   ]
+  },
+  {
+   "tunnus": "taivas-saturnus",
+   "nimi": "saturnus",
+   "aloitus": "Näyttävien renkaiden planeetta",
+   "luonne": "Keskitiheys on pienempi kuin veden. Renkaat ovat jäähiukkasia ja tyypillisesti vain n. 10 m paksut.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "laskettu"
+    ],
+    [
+     "Halkaisija",
+     "n. 120 500 km"
+    ],
+    [
+     "Päivä",
+     "n. 10,6 tuntia"
+    ],
+    [
+     "Vuosi",
+     "29,4 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Saturn",
+    "https://en.wikipedia.org/wiki/Rings_of_Saturn"
+   ]
+  },
+  {
+   "tunnus": "taivas-sirius",
+   "nimi": "sirius",
+   "aloitus": "Yötaivaan kirkkain tähti",
+   "luonne": "Sirius A:n seuralaisena kiertää Sirius B, Maan kokoinen mutta Auringon painoinen valkoinen kääpiö.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "8,6 vv"
+    ],
+    [
+     "Kirkkaus",
+     "−1,46 mag"
+    ],
+    [
+     "Lämpötila",
+     "n. 9 900 K"
+    ],
+    [
+     "Parin kiertoaika",
+     "50 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sirius"
+   ]
+  },
+  {
+   "tunnus": "taivas-pohjantahti",
+   "nimi": "pohjantahti",
+   "aloitus": "Pohjoisen taivaan kiintopiste",
+   "luonne": "Taivas näyttää kiertävän sen ympäri; suomalaisille se oli Pohjannaula, taivaan pyörimisen tappi.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 430–450 vv"
+    ],
+    [
+     "Kirkkaus",
+     "2,0 mag"
+    ],
+    [
+     "Tyyppi",
+     "Kolmoistähti"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Polaris",
+    "https://fi.wikipedia.org/wiki/Pohjant%C3%A4hti",
+    "https://www.utupub.fi/bitstreams/f16db3c5-32c8-4532-94a2-4ac2f6a052d9/download"
+   ]
+  },
+  {
+   "tunnus": "taivas-vega",
+   "nimi": "vega",
+   "aloitus": "Lyyran kirkkain tähti",
+   "luonne": "Pyörii niin nopeasti, että pullistuu; maapallon akselin siirryttyä siitä tulee Pohjantähti.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "25 vv"
+    ],
+    [
+     "Kirkkaus",
+     "0,03 mag"
+    ],
+    [
+     "Pohjantähtenä",
+     "n. v. 13 700"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vega"
+   ]
+  },
+  {
+   "tunnus": "taivas-arcturus",
+   "nimi": "arcturus",
+   "aloitus": "Pohjoisen taivaan kirkkain tähti",
+   "luonne": "Löytyy seuraamalla Otavan vartta kaarena; tähti on vanha jättiläinen ja liikkuu taivaalla nopeasti.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "36,7 vv"
+    ],
+    [
+     "Kirkkaus",
+     "−0,05 mag"
+    ],
+    [
+     "Tyyppi",
+     "Punainen jättiläinen"
+    ],
+    [
+     "Lämpötila",
+     "n. 4 300 K"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Arcturus"
+   ]
+  },
+  {
+   "tunnus": "taivas-betelgeuze",
+   "nimi": "betelgeuze",
+   "aloitus": "Orionin kirkas punainen tähti",
+   "luonne": "Himmeni voimakkaasti 2019–2020 tähden luoman pölyn takia; räjähtää joskus supernovana, ei lähiaikoina.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 550 vv"
+    ],
+    [
+     "Tyyppi",
+     "Punainen ylijättiläinen"
+    ],
+    [
+     "Säde",
+     "n. 640–760 × Aurinko"
+    ],
+    [
+     "Lämpötila",
+     "n. 3 800 K"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Betelgeuse"
+   ]
+  },
+  {
+   "tunnus": "taivas-capella",
+   "nimi": "capella",
+   "aloitus": "Ajomiehen kirkkain tähti",
+   "luonne": "Näyttää yhdeltä tähdeltä: kaksi keltaista jättiläistä kiertää toisiaan 104 vrk:ssa, kauempana kääpiöpari.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 43 vv"
+    ],
+    [
+     "Kirkkaus",
+     "0,08 mag"
+    ],
+    [
+     "Tyyppi",
+     "Nelinkertainen tähti"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Capella"
+   ]
+  },
+  {
+   "tunnus": "taivas-otava",
+   "nimi": "otava",
+   "aloitus": "Ison karhun seitsemän tähden kuvio",
+   "luonne": "Näkyy Suomessa ympäri vuoden; kuvion kaksi tähteä osoittaa Pohjantähden luo.",
+   "rivit": [
+    [
+     "Tähtiä",
+     "7"
+    ],
+    [
+     "Etäisyys",
+     "n. 80–125 vv"
+    ],
+    [
+     "Nimen taru",
+     "Kalaverkko (otava)"
+    ],
+    [
+     "Kansannimi",
+     "Seitsentähtinen"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Otava_(t%C3%A4hdist%C3%B6)",
+    "https://en.wikipedia.org/wiki/Big_Dipper"
+   ]
+  },
+  {
+   "tunnus": "taivas-orion",
+   "nimi": "orion",
+   "aloitus": "Talvitaivaan metsästäjätähdistö",
+   "luonne": "Näkyy lähes koko maapallolta; kirkkaimmat tähdet ovat sininen Rigel ja punainen Betelgeuze.",
+   "rivit": [
+    [
+     "Päätähtiä",
+     "7"
+    ],
+    [
+     "Koko",
+     "594 neliöastetta"
+    ],
+    [
+     "Paras aika",
+     "tammikuu"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Orion_(constellation)",
+    "https://fi.wikipedia.org/wiki/Orion_(t%C3%A4hdist%C3%B6)"
+   ]
+  },
+  {
+   "tunnus": "taivas-kalevanmiekka",
+   "nimi": "kalevanmiekka",
+   "aloitus": "Orionin vyön kolme tähteä",
+   "luonne": "Suomalaisessa perinteessä vyö on nähty Kalevan miekkana tai osana Väinämöisen viikatetta.",
+   "rivit": [
+    [
+     "Tähtiä",
+     "3 jonossa"
+    ],
+    [
+     "Toinen nimi",
+     "Väinämöisen vyö"
+    ],
+    [
+     "Etäisyys",
+     "n. 1 200–1 260 vv"
+    ],
+    [
+     "Kirkkaus",
+     "1,7–2,2 mag"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Orion%27s_Belt",
+    "https://fi.wikipedia.org/wiki/Orionin_vy%C3%B6",
+    "https://www.utupub.fi/bitstreams/f16db3c5-32c8-4532-94a2-4ac2f6a052d9/download"
+   ]
+  },
+  {
+   "tunnus": "taivas-seulaset",
+   "nimi": "seulaset",
+   "aloitus": "Kirkas tähtijoukko Härän tähdistössä",
+   "luonne": "Nuorten sinisten tähtien joukko, jota Japanissa kutsutaan nimellä Subaru ja Kreikassa seitsemäksi sisareksi.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 440 vv"
+    ],
+    [
+     "Paljain silmin",
+     "6–7, jopa 14 tähteä"
+    ],
+    [
+     "Ikä",
+     "n. 100 milj. vuotta"
+    ],
+    [
+     "Tunnus",
+     "M45"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Seulaset",
+    "https://en.wikipedia.org/wiki/Pleiades"
+   ]
+  },
+  {
+   "tunnus": "taivas-linnunrata",
+   "nimi": "linnunrata",
+   "aloitus": "Oma galaksimme",
+   "luonne": "Yötaivaan vaalea juova, jonka keskusta on Jousimiehen suunnassa.",
+   "rivit": [
+    [
+     "Matka keskustaan",
+     "n. 26 000 vv"
+    ],
+    [
+     "Tähtiä",
+     "100–400 miljardia"
+    ],
+    [
+     "Tyyppi",
+     "Sauvaspiraaligalaksi"
+    ],
+    [
+     "Nimen taru",
+     "Tie Lintukotoon"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Linnunrata"
+   ]
+  },
+  {
+   "tunnus": "taivas-andromeda",
+   "nimi": "andromeda",
+   "aloitus": "Lähin suuri galaksi",
+   "luonne": "Pimeällä taivaalla paljain silmin näkyvä vaalea tahra, joka lähestyy hitaasti Linnunrataa.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 2,5 milj. vv"
+    ],
+    [
+     "Kirkkaus",
+     "3,4 mag"
+    ],
+    [
+     "Tyyppi",
+     "Spiraaligalaksi"
+    ],
+    [
+     "Tunnus",
+     "M31"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Andromedan_galaksi",
+    "https://en.wikipedia.org/wiki/Andromeda_Galaxy"
+   ]
+  },
+  {
+   "tunnus": "taivas-orioninsumu",
+   "nimi": "orioninsumu",
+   "aloitus": "Orionin kirkas kaasusumu",
+   "luonne": "Lähin massiivisten tähtien syntyalue; uusimmat tähdet ovat alle 300 000 vuoden ikäisiä.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 1 300 vv"
+    ],
+    [
+     "Kirkkaus",
+     "4,0 mag"
+    ],
+    [
+     "Tyyppi",
+     "Kaasusumu"
+    ],
+    [
+     "Tunnus",
+     "M42"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Orion_Nebula",
+    "https://fi.wikipedia.org/wiki/Orionin_sumu"
+   ]
+  },
+  {
+   "tunnus": "taivas-magellan",
+   "nimi": "magellan",
+   "aloitus": "Linnunradan satelliittigalaksi",
+   "luonne": "Tähtiä syntyy vilkkaasti: galaksissa on Tarantulasumu ja vuoden 1987 supernova.",
+   "rivit": [
+    [
+     "Etäisyys",
+     "n. 160 000 vv"
+    ],
+    [
+     "Tyyppi",
+     "Kääpiögalaksi"
+    ],
+    [
+     "Tähtiä",
+     "n. 20 miljardia"
+    ],
+    [
+     "Näkyy",
+     "Etelätaivaalla"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"
+   ]
+  },
+  {
+   "tunnus": "taivas-revontulet",
+   "nimi": "revontulet",
+   "aloitus": "Hehkuva valoilmiö napa-alueilla",
+   "luonne": "Aurinkotuulen hiukkaset sytyttävät yläilmakehän hohtamaan; ISS:ltä niitä katsotaan ylhäältä tai sivusta.",
+   "rivit": [
+    [
+     "Korkeus",
+     "n. 100–300 km"
+    ],
+    [
+     "Vihreä",
+     "happi, n. 100–200 km"
+    ],
+    [
+     "Punainen",
+     "happi, yli 200 km"
+    ],
+    [
+     "Syy",
+     "aurinkotuuli"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Aurora",
+    "https://science.nasa.gov/sun/auroras",
+    "https://science.nasa.gov/sun/auroras"
+   ]
+  },
+  {
+   "tunnus": "amsterdam",
+   "nimi": "Amsterdam",
+   "aloitus": "Alankomaiden pääkaupunki",
+   "luonne": "Amstel-joen padon ympärille kasvanut kanavakaupunki; kanavavyöhyke on Unescon kohde vuodesta 2010.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 940 000 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "219 km²"
+    ],
+    [
+     "Ensimaininta",
+     "1275"
+    ],
+    [
+     "Korkeus",
+     "n. −2 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Amsterdam"
+   ]
+  },
+  {
+   "tunnus": "ateena",
+   "nimi": "Ateena",
+   "aloitus": "Kreikan pääkaupunki",
+   "luonne": "Länsimaisen sivistyksen kehtona pidetty kaupunki, asuttu vähintään 5 000 vuotta; Akropolis hallitsee maisemaa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "643 452 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "39 km²"
+    ],
+    [
+     "Olympialaiset",
+     "1896 ja 2004"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Athens"
+   ]
+  },
+  {
+   "tunnus": "barcelona",
+   "nimi": "Barcelona",
+   "aloitus": "Katalonian pääkaupunki",
+   "luonne": "Gaudín arkkitehtuurin ja Välimeren rannan kaupunki; Sagrada Família on yhä keskeneräinen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,7 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "101 km²"
+    ],
+    [
+     "Sagrada Família",
+     "rakennus alkoi 1882"
+    ],
+    [
+     "Jeesuksen torni",
+     "172,5 m (2026)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Barcelona",
+    "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+    "https://bcnroc.ajuntament.barcelona.cat/jspui/handle/11703/140971"
+   ]
+  },
+  {
+   "tunnus": "berliini",
+   "nimi": "Berliini",
+   "aloitus": "Saksan pääkaupunki ja osavaltio",
+   "luonne": "Jaettu kaupunki, jonka muuri murtui 9.11.1989; Museosaari on Unescon kohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,6 milj. (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "891 km²"
+    ],
+    [
+     "Perustettu",
+     "1237"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Berlin"
+   ]
+  },
+  {
+   "tunnus": "budapest",
+   "nimi": "Budapest",
+   "aloitus": "Unkarin pääkaupunki",
+   "luonne": "Tonava jakaa kaupungin Budaan ja Pestiin, jotka yhdistettiin 1873; Tonavan rannat ovat Unescon kohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,69 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "525 km²"
+    ],
+    [
+     "Lämpölähteitä",
+     "yli 100"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Budapest"
+   ]
+  },
+  {
+   "tunnus": "dubrovnik",
+   "nimi": "Dubrovnik",
+   "aloitus": "Kroatian Adrianmeren helmi",
+   "luonne": "Muurien ympäröimä vanhakaupunki on Unescon kohde vuodesta 1979; kaupunkia piiritettiin 1991–92.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "41 562 (2021)"
+    ],
+    [
+     "Kaupunginmuuri",
+     "n. 1 940 m"
+    ],
+    [
+     "Ragusan tasavalta",
+     "1300-luvulta 1808"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dubrovnik",
+    "https://en.wikipedia.org/wiki/Walls_of_Dubrovnik"
+   ]
+  },
+  {
+   "tunnus": "etna",
+   "nimi": "Etna",
+   "aloitus": "Euroopan aktiivisin tulivuori",
+   "luonne": "Sisilian itärannikon tulivuori on lähes jatkuvasti toiminnassa; tuhka sulkee toisinaan Catanian lentokentän.",
+   "rivit": [
+    [
+     "Korkeus",
+     "n. 3 403 m (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 1 190 km²"
+    ],
+    [
+     "Ympärysmitta",
+     "n. 140 km"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2013"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Etna"
+   ]
+  },
+  {
+   "tunnus": "helsinki",
+   "nimi": "Helsinki",
+   "aloitus": "Suomen pääkaupunki",
+   "luonne": "Merelle avautuva kaupunki, josta tuli pääkaupunki 1812; Suomenlinnan merilinnoitus on Unescon kohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 695 000 (2025)"
+    ],
+    [
+     "Maapinta-ala",
+     "214 km²"
+    ],
+    [
+     "Perustettu",
+     "1550"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Helsinki",
+    "https://www.hel.fi/static/kanslia/Kaupunkitieto/26_6_24_Tilastotietoa_helsingista_2026_taskutilasto.pdf"
+   ]
+  },
+  {
+   "tunnus": "istanbul-bosporus",
+   "nimi": "Istanbul ja Bosporinsalmi",
+   "aloitus": "Kaksi mannerta yhdistävä suurkaupunki",
+   "luonne": "Entinen Konstantinopol, Rooman, Bysantin ja Osmanien pääkaupunki; vanhakaupunki on Unescon kohde.",
+   "rivit": [
+    [
+     "Suur-Istanbul",
+     "n. 15,8 milj. (2025)"
+    ],
+    [
+     "Bosporin pituus",
+     "n. 30 km"
+    ],
+    [
+     "Bosporin leveys",
+     "n. 0,7–3,7 km"
+    ],
+    [
+     "Perustettu",
+     "n. 660 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Istanbul",
+    "https://en.wikipedia.org/wiki/Bosporus"
+   ]
+  },
+  {
+   "tunnus": "kopenhamina-juutinrauma",
+   "nimi": "Kööpenhamina ja Juutinrauma",
+   "aloitus": "Tanskan pääkaupunki Juutinrauman rannalla",
+   "luonne": "Absalonin linnoituksesta 1167 kasvanut kaupunki; tie- ja rautatiesilta yhdistää sen Ruotsiin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 672 000 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "90 km²"
+    ],
+    [
+     "Juutinrauman silta",
+     "7 845 m (2000)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Copenhagen",
+    "https://en.wikipedia.org/wiki/%C3%98resund_Bridge"
+   ]
+  },
+  {
+   "tunnus": "lissabon",
+   "nimi": "Lissabon",
+   "aloitus": "Portugalin pääkaupunki",
+   "luonne": "Tejon suulla pääkaupunkina vuodesta 1255; vuoden 1755 maanjäristys tuhosi suurimman osan rakennuksista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 658 000 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "100 km²"
+    ],
+    [
+     "Maanjäristys",
+     "1.11.1755"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lisbon",
+    "https://www.ine.pt/documentos/municipios/1106_2025.pdf",
+    "https://www.pordata.pt/en/municipalities/summary+table/lisboa-827577"
+   ]
+  },
+  {
+   "tunnus": "lontoo",
+   "nimi": "Lontoo",
+   "aloitus": "Yhdistyneen kuningaskunnan pääkaupunki",
+   "luonne": "Rooman Londiniumina n. 47 jKr. perustettu kaupunki; ydinalue City on säilyttänyt keskiaikaiset rajansa.",
+   "rivit": [
+    [
+     "Suur-Lontoon väki",
+     "n. 9,1 milj. (2024)"
+    ],
+    [
+     "Suur-Lontoon ala",
+     "1 572 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/London",
+    "https://citypopulation.de/en/uk/london/admin/"
+   ]
+  },
+  {
+   "tunnus": "mont-blanc",
+   "nimi": "Mont Blanc",
+   "aloitus": "Alppien ja Länsi-Euroopan korkein vuori",
+   "luonne": "Ranskan ja Italian rajan jäätiköitynyt jättiläinen; huipun lumi- ja jääkorkki vaihtelee vuosittain.",
+   "rivit": [
+    [
+     "Korkeus",
+     "n. 4 807 m (2026)"
+    ],
+    [
+     "Kalliohuippu",
+     "n. 4 792 m"
+    ],
+    [
+     "Ensinousu",
+     "1786"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mont_Blanc",
+    "https://www.euronews.com/2026/10/14/mont-blanc-new-french-measurements-summit-grows-to-4807m"
+   ]
+  },
+  {
+   "tunnus": "napoli-vesuvius",
+   "nimi": "Napoli ja Vesuvius",
+   "aloitus": "Etelä-Italian kaupunki tulivuoren juurella",
+   "luonne": "Kreikkalaisten Neapolis ja pizzan kotikaupunki; Vesuvius hautasi Pompeijin vuonna 79.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 905 000 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "119 km²"
+    ],
+    [
+     "Vesuviuksen huippu",
+     "1 281 m"
+    ],
+    [
+     "Viime purkaus",
+     "maaliskuu 1944"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Naples",
+    "https://en.wikipedia.org/wiki/Mount_Vesuvius"
+   ]
+  },
+  {
+   "tunnus": "olavinlinna-saimaa",
+   "nimi": "Olavinlinna ja Saimaa",
+   "aloitus": "Linna Suomen suurimmalla järvellä",
+   "luonne": "Pohjoisin säilynyt keskiaikainen kivilinna ja oopperajuhlien näyttämö; Saimaalla elää uhanalainen norppa.",
+   "rivit": [
+    [
+     "Saimaan ala",
+     "n. 4 280 km²"
+    ],
+    [
+     "Suurin syvyys",
+     "n. 86 m"
+    ],
+    [
+     "Linna perustettu",
+     "1475"
+    ],
+    [
+     "Saimaannorppia",
+     "n. 530 (2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://fi.wikipedia.org/wiki/Saimaa",
+    "https://en.wikipedia.org/wiki/Olavinlinna",
+    "https://www.verkkouutiset.fi/a/saimaannorppia-on-nyt-enemman-kuin-vuosiin/"
+   ]
+  },
+  {
+   "tunnus": "oslo",
+   "nimi": "Oslo",
+   "aloitus": "Norjan pääkaupunki",
+   "luonne": "Kristianiana tunnettu kaupunki sai nimekseen Oslo 1925; Nobelin rauhanpalkinto jaetaan kaupungintalossa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 724 000 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 480 km²"
+    ],
+    [
+     "Perustettu",
+     "1048"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Oslo",
+    "https://www.visitoslo.com/event/the-awarding-of-the-nobel-peace-prize"
+   ]
+  },
+  {
+   "tunnus": "pariisi",
+   "nimi": "Pariisi",
+   "aloitus": "Ranskan pääkaupunki",
+   "luonne": "Seinen varrella sijaitseva Louvren ja Notre-Damen kaupunki; nimi tulee kelttiläisestä parisii-heimosta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,1 milj. (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "105 km²"
+    ],
+    [
+     "Eiffel-torni",
+     "330 m (1887–1889)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Paris",
+    "https://en.wikipedia.org/wiki/Eiffel_Tower",
+    "https://www.bien-dans-ma-ville.fr/paris-75056/"
+   ]
+  },
+  {
+   "tunnus": "praha",
+   "nimi": "Praha",
+   "aloitus": "Tšekin pääkaupunki",
+   "luonne": "Linnan ja Kaarlen sillan kaupunki; historiallinen keskusta on Unescon kohde vuodesta 1992.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,41 milj. (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "496 km²"
+    ],
+    [
+     "Tähtitiet. kello",
+     "vuodelta 1410"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Prague"
+   ]
+  },
+  {
+   "tunnus": "reykjavik",
+   "nimi": "Reykjavík",
+   "aloitus": "Islannin pääkaupunki",
+   "luonne": "Pohjoisin itsenäisen valtion pääkaupunki; nimi ’savuinen lahti’ viittaa kuumien lähteiden höyryyn.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 140 000 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "244 km²"
+    ],
+    [
+     "Asutus alkoi",
+     "n. 874"
+    ],
+    [
+     "Islanti, geoterm.",
+     "n. 90 % kodeista"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Reykjav%C3%ADk",
+    "https://samorka.is/en/?p=1324"
+   ]
+  },
+  {
+   "tunnus": "rooma",
+   "nimi": "Rooma",
+   "aloitus": "Italian pääkaupunki",
+   "luonne": "Ikuisena kaupunkina tunnettu pääkaupunki, jonka sisällä on Vatikaanivaltio.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,75 milj. (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "1 287 km²"
+    ],
+    [
+     "Perustettu",
+     "753 eaa. (perimätieto)"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1980"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rome"
+   ]
+  },
+  {
+   "tunnus": "santorini",
+   "nimi": "Santorini",
+   "aloitus": "Kreikan tulivuorisaari Egeanmerellä",
+   "luonne": "Muinainen purkaus n. 1600 eaa. jätti kalderan, jonka reunalla valkoiset kylät kohoavat.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 15 500 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 73 km²"
+    ],
+    [
+     "Kalderan seinämä",
+     "yli 300 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Santorini"
+   ]
+  },
+  {
+   "tunnus": "sognefjord",
+   "nimi": "Sognefjord",
+   "aloitus": "Norjan pisin ja syvin vuono",
+   "luonne": "Jyrkät vuoriseinämät kohoavat vedestä jopa yli kilometrin; sivuhaara Nærøyfjord on Unescon kohde.",
+   "rivit": [
+    [
+     "Suurin syvyys",
+     "1 308 m"
+    ],
+    [
+     "Pituus",
+     "205 km"
+    ],
+    [
+     "Leveys",
+     "yleensä alle 5 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sognefjord"
+   ]
+  },
+  {
+   "tunnus": "tukholma",
+   "nimi": "Tukholma",
+   "aloitus": "Ruotsin pääkaupunki",
+   "luonne": "Mälaren-järven ja Itämeren yhtymäkohdan saarikaupunki, jossa pidetään Nobel-juhlat.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 996 000 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "188 km²"
+    ],
+    [
+     "Ensimaininta",
+     "1252"
+    ],
+    [
+     "Keskusta",
+     "14 saarella"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Stockholm"
+   ]
+  },
+  {
+   "tunnus": "venetsia",
+   "nimi": "Venetsia",
+   "aloitus": "Laguunille rakennettu kaupunki",
+   "luonne": "Kanavien kaupunki ilman autoja; syksystä alkukevääseen nousuvesi eli acqua alta tulvii kaduille.",
+   "rivit": [
+    [
+     "Asukasluku (kunta)",
+     "n. 249 000 (2026)"
+    ],
+    [
+     "Vanhakaupunki",
+     "lähes 50 000 asukasta"
+    ],
+    [
+     "Saaria",
+     "n. 120"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1987"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Venice"
+   ]
+  },
+  {
+   "tunnus": "wien",
+   "nimi": "Wien",
+   "aloitus": "Itävallan pääkaupunki ja osavaltio",
+   "luonne": "Habsburgien keisarikaupunki, jossa asuivat Mozart ja Beethoven; vanha keskusta on Unescon kohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,03 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "415 km²"
+    ],
+    [
+     "Vindobona",
+     "roomalaisleiri 1. vs."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vienna"
+   ]
+  },
+  {
+   "tunnus": "pk-abudhabi",
+   "nimi": "Abu Dhabi",
+   "aloitus": "Arabiemiraattien pääkaupunki",
+   "luonne": "Persianlahden T-muotoisella saarella; öljyvarat ovat tehneet siitä varakkaan hallinto- ja kauppakeskuksen.",
+   "rivit": [
+    [
+     "Emiraatin väkiluku",
+     "4,1 milj. (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "972 km²"
+    ],
+    [
+     "Mantereelle",
+     "alle 250 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Abu_Dhabi",
+    "https://scad.gov.ae/w/abu-dhabi-population-in-2024-grows-7-5-to-reach-4-14m"
+   ]
+  },
+  {
+   "tunnus": "pk-abuja",
+   "nimi": "Abuja",
+   "aloitus": "Nigerian pääkaupunki",
+   "luonne": "Tarkoitusta varten rakennettu pääkaupunki, jonka maamerkki on Aso-kallio, veden hioma monoliitti.",
+   "rivit": [
+    [
+     "Pääkaupunki",
+     "vuodesta 1991"
+    ],
+    [
+     "Korkeus",
+     "360 m"
+    ],
+    [
+     "Taajama",
+     "n. 3,8 milj. (2022)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Abuja"
+   ]
+  },
+  {
+   "tunnus": "pk-accra",
+   "nimi": "Accra",
+   "aloitus": "Ghanan pääkaupunki",
+   "luonne": "Syntyi englantilais-, hollantilais- ja tanskalaislinnojen ympärille kasvaneista asutuksista rannikolla.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 1,8 milj. (2021)"
+    ],
+    [
+     "Alueen pinta-ala",
+     "n. 199 km²"
+    ],
+    [
+     "Korkeus",
+     "61 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Accra"
+   ]
+  },
+  {
+   "tunnus": "pk-alger",
+   "nimi": "Alger",
+   "aloitus": "Algerian pääkaupunki",
+   "luonne": "Nimi tarkoittaa saaria; ottomaanien ja ranskalaisten jäljet näkyvät Välimeren rinnekaupungissa.",
+   "rivit": [
+    [
+     "Perustettu",
+     "900-luvulla"
+    ],
+    [
+     "Casbah",
+     "UNESCO-kohde 1992"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Algiers",
+    "https://en.wikipedia.org/wiki/Casbah_of_Algiers",
+    "https://en.wikipedia.org/wiki/Buluggin_ibn_Ziri"
+   ]
+  },
+  {
+   "tunnus": "pk-amman",
+   "nimi": "Amman",
+   "aloitus": "Jordanian pääkaupunki",
+   "luonne": "Alun perin seitsemälle kukkulalle rakennettu kaupunki, joka tunnettiin antiikissa nimellä Philadelphia.",
+   "rivit": [
+    [
+     "Kuvernementti",
+     "n. 4,9 milj. (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "1 680 km²"
+    ],
+    [
+     "Korkeus",
+     "700–1 100 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Amman"
+   ]
+  },
+  {
+   "tunnus": "pk-andorralavella",
+   "nimi": "Andorra la Vella",
+   "aloitus": "Euroopan korkein pääkaupunki",
+   "luonne": "Pyreneiden ruhtinaskunnan keskus; Casa de la Vall -talo oli maan parlamentin koti 1702–2011.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli 23 000 (2022)"
+    ],
+    [
+     "Korkeus",
+     "1 023 m"
+    ],
+    [
+     "Kaupunkiseutu",
+     "yli 40 000"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Andorra_la_Vella",
+    "https://en.wikipedia.org/wiki/Casa_de_la_Vall",
+    "https://ca.wikipedia.org/wiki/Andorra_la_Vella"
+   ]
+  },
+  {
+   "tunnus": "pk-antananarivo",
+   "nimi": "Antananarivo",
+   "aloitus": "Madagaskarin pääkaupunki",
+   "luonne": "Merina-kuninkaiden kukkulakaupunki; nimi tarkoittaa ’tuhannen kaupunkia’, huipulla on Rova-linna.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,27 milj. (2018)"
+    ],
+    [
+     "Korkeus",
+     "1 276 m"
+    ],
+    [
+     "Perustettu",
+     "n. 1610"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Antananarivo"
+   ]
+  },
+  {
+   "tunnus": "pk-apia",
+   "nimi": "Apia",
+   "aloitus": "Samoan pääkaupunki",
+   "luonne": "Upolun pohjarannikon kaupunki; Robert Louis Stevensonin entinen koti Vailimassa on nykyään museo.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "35 974 (2021)"
+    ],
+    [
+     "Perustettu",
+     "1850-luvulla"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Apia"
+   ]
+  },
+  {
+   "tunnus": "pk-asgabat",
+   "nimi": "Ašgabat",
+   "aloitus": "Turkmenistanin pääkaupunki",
+   "luonne": "Karakumin ja Kopetdagin välissä; vuoden 1948 maanjäristyksen jälkeen jälleenrakennettu valkoisella marmorilla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 030 063 (2022)"
+    ],
+    [
+     "Perustettu",
+     "1881"
+    ],
+    [
+     "Iranin rajalle",
+     "n. 50 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ashgabat"
+   ]
+  },
+  {
+   "tunnus": "pk-asmara",
+   "nimi": "Asmara",
+   "aloitus": "Eritrean pääkaupunki",
+   "luonne": "Italialaisajan modernistisen arkkitehtuurin kaupunki, jonka UNESCO nimesi maailmanperinnöksi 2017.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1 milj. (arvio 2023)"
+    ],
+    [
+     "Korkeus",
+     "2 325 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1897"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Asmara"
+   ]
+  },
+  {
+   "tunnus": "pk-baku",
+   "nimi": "Baku",
+   "aloitus": "Azerbaidžanin pääkaupunki",
+   "luonne": "Kaspianmeren tuulten kaupunki; Vanhakaupunki, Shirvanshahien palatsi ja Neitotorni ovat maailmanperintöä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "2 344 900 (2024)"
+    ],
+    [
+     "Korkeus",
+     "−28 m (matalin)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 2 140 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Baku"
+   ]
+  },
+  {
+   "tunnus": "pk-bamako",
+   "nimi": "Bamako",
+   "aloitus": "Malin pääkaupunki",
+   "luonne": "Niger-joen koskien tuntumassa; ranskalaiset perustivat linnakkeen 1883, nyt Malin suurin kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "4 227 569 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "245 km²"
+    ],
+    [
+     "Korkeus",
+     "350 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bamako"
+   ]
+  },
+  {
+   "tunnus": "pk-bandarseribegawan",
+   "nimi": "Bandar Seri Begawan",
+   "aloitus": "Brunein pääkaupunki",
+   "luonne": "Vesikylä Kampong Ayerin ja maailman suurimman asuinpalatsin, Istana Nurul Imanin, kaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 72 100 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 100 km²"
+    ],
+    [
+     "Entinen nimi",
+     "Brunei Town"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bandar_Seri_Begawan"
+   ]
+  },
+  {
+   "tunnus": "pk-bangui",
+   "nimi": "Bangui",
+   "aloitus": "Keski-Afrikan tasavallan pääkaupunki",
+   "luonne": "Ubangi-joen pohjoisrannalla koskien kohdalla, jossa Brazzavillesta alkanut purjehduskelpoinen vesi päättyi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 812 000 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 67 km²"
+    ],
+    [
+     "Perustettu",
+     "1889"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bangui"
+   ]
+  },
+  {
+   "tunnus": "pk-banjul",
+   "nimi": "Banjul",
+   "aloitus": "Gambian pääkaupunki",
+   "luonne": "Gambia-joen suulla saarella; kaupungin nimi oli vuoteen 1973 saakka Bathurst.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "26 461 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 12 km²"
+    ],
+    [
+     "Suur-Banjul",
+     "405 809 (2024)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Banjul"
+   ]
+  },
+  {
+   "tunnus": "pk-basseterre",
+   "nimi": "Basseterre",
+   "aloitus": "Saint Kittsin ja Nevisin pääkaupunki",
+   "luonne": "Ranskalaisten perustama satamakaupunki; nimi tarkoittaa ’matalaa maata’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 14 000 (2018)"
+    ],
+    [
+     "Perustettu",
+     "1627"
+    ],
+    [
+     "Korkeus",
+     "15 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Basseterre"
+   ]
+  },
+  {
+   "tunnus": "pk-beirut",
+   "nimi": "Beirut",
+   "aloitus": "Libanonin pääkaupunki",
+   "luonne": "Yli 5 000 vuotta asuttu satamakaupunki, jonka roomalainen lakikoulu oli antiikin tunnetuimpia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 433 000 (2017)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 19 km²"
+    ],
+    [
+     "Suur-Beirut",
+     "n. 2,4 milj. (2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Beirut"
+   ]
+  },
+  {
+   "tunnus": "pk-belgrad",
+   "nimi": "Belgrad",
+   "aloitus": "Serbian pääkaupunki",
+   "luonne": "Sävan ja Tonavan yhtymäkohdassa; nimi tarkoittaa valkoista kaupunkia, ja asutus on Euroopan vanhimpia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 197 714 (2022)"
+    ],
+    [
+     "Taajama",
+     "1 298 661 (2022)"
+    ],
+    [
+     "Korkeus",
+     "117 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Belgrade"
+   ]
+  },
+  {
+   "tunnus": "pk-belmopan",
+   "nimi": "Belmopan",
+   "aloitus": "Belizen pääkaupunki",
+   "luonne": "Hurrikaani Hattien 1961 tuhoaman Belize Cityn tilalle rakennettu, Amerikan manner-osan pienin pääkaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "20 754 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 33 km²"
+    ],
+    [
+     "Perustettu",
+     "1970"
+    ],
+    [
+     "Korkeus",
+     "76 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Belmopan"
+   ]
+  },
+  {
+   "tunnus": "pk-bern",
+   "nimi": "Bern",
+   "aloitus": "Sveitsin liittokaupunki",
+   "luonne": "Keskiaikainen vanhakaupunki on UNESCOn maailmanperintöä; nimen taru liittyy karhuun.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 146 000 (2024)"
+    ],
+    [
+     "Perustettu",
+     "1191"
+    ],
+    [
+     "Liittokaupunki",
+     "vuodesta 1848"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bern"
+   ]
+  },
+  {
+   "tunnus": "pk-biskek",
+   "nimi": "Biškek",
+   "aloitus": "Kirgisian pääkaupunki",
+   "luonne": "Tian Shanin Kirgiz Ala-Too -vuoriston juurella; nimi oli Frunze vuosina 1926–1991.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli miljoona"
+    ],
+    [
+     "Korkeus",
+     "n. 800 m"
+    ],
+    [
+     "Perustettu",
+     "1825"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bishkek"
+   ]
+  },
+  {
+   "tunnus": "pk-bissau",
+   "nimi": "Bissau",
+   "aloitus": "Guinea-Bissaun pääkaupunki",
+   "luonne": "Geba-joen suistossa sijaitseva satamakaupunki, joka syntyi portugalilaisena kauppa-asemana.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "492 004 (2015)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 77,5 km²"
+    ],
+    [
+     "Perustettu",
+     "1687"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bissau"
+   ]
+  },
+  {
+   "tunnus": "pk-brasilia",
+   "nimi": "Brasília",
+   "aloitus": "Brasilian pääkaupunki",
+   "luonne": "Suunniteltu kaupunki: Lúcio Costa ja Oscar Niemeyer loivat modernistisen ilmeen, jota UNESCO suojelee.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,8 milj. (2022)"
+    ],
+    [
+     "Pinta-ala (DF)",
+     "5 802 km²"
+    ],
+    [
+     "Perustettu",
+     "1960"
+    ],
+    [
+     "Korkeus",
+     "n. 1 170 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bras%C3%ADlia"
+   ]
+  },
+  {
+   "tunnus": "pk-bratislava",
+   "nimi": "Bratislava",
+   "aloitus": "Slovakian pääkaupunki",
+   "luonne": "Ainoa pääkaupunki, joka rajoittuu kahteen vieraaseen valtioon; Unkarin kuninkaita kruunattiin täällä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 479 000 (2024)"
+    ],
+    [
+     "Wieniin",
+     "n. 50 km"
+    ],
+    [
+     "Ensi maininta",
+     "907"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bratislava"
+   ]
+  },
+  {
+   "tunnus": "pk-brazzaville",
+   "nimi": "Brazzaville",
+   "aloitus": "Kongon tasavallan pääkaupunki",
+   "luonne": "Kongo-joen rannalla Kinshasaa vastapäätä; Vapaan Ranskan pääkaupunki sodan aikana ja UNESCOn musiikkikaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,1 milj. (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "588 km²"
+    ],
+    [
+     "Perustettu",
+     "1883"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Brazzaville"
+   ]
+  },
+  {
+   "tunnus": "pk-bridgetown",
+   "nimi": "Bridgetown",
+   "aloitus": "Barbadosin pääkaupunki",
+   "luonne": "Mutkittelevat kadut muistuttavat englantilaista keskiaikaista kauppakaupunkia; kanava halkoo keskustaa.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 110 000 (2014)"
+    ],
+    [
+     "Perustettu",
+     "1628"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2011"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bridgetown"
+   ]
+  },
+  {
+   "tunnus": "pk-canberra",
+   "nimi": "Canberra",
+   "aloitus": "Australian pääkaupunki",
+   "luonne": "Suunniteltu puistokaupunki: Griffinien kaavan akselit osoittavat Black Mountainille ja Mount Ainsliella.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 485 000 (2025)"
+    ],
+    [
+     "Korkeus",
+     "n. 580 m"
+    ],
+    [
+     "Nimetty",
+     "1913"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Canberra"
+   ]
+  },
+  {
+   "tunnus": "pk-castries",
+   "nimi": "Castries",
+   "aloitus": "Saint Lucian pääkaupunki",
+   "luonne": "Suojaisan sataman ympärille kasvanut kaupunki; Nobel-kirjailija Derek Walcott syntyi täällä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 20 000 (2013)"
+    ],
+    [
+     "Perustettu",
+     "1650"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Castries"
+   ]
+  },
+  {
+   "tunnus": "pk-chisinau",
+   "nimi": "Chișinău",
+   "aloitus": "Moldovan pääkaupunki",
+   "luonne": "Viinimaan keskus, jossa pidetään lokakuussa kansallinen viinijuhla; rakennuksissa on sosialistista realismia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 567 000 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "123 km²"
+    ],
+    [
+     "Ensi maininta",
+     "1436"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Chi%C8%99in%C4%83u"
+   ]
+  },
+  {
+   "tunnus": "pk-ciudaddelapaz",
+   "nimi": "Ciudad de la Paz",
+   "aloitus": "Päiväntasaajan Guinean uusi pääkaupunki",
+   "luonne": "Sisämaahan rakennettava suunnittelukaupunki, jonka rakentamista oppositio on arvostellut.",
+   "rivit": [
+    [
+     "Asukkaita",
+     "enintään 2 000 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 81,5 km²"
+    ],
+    [
+     "Tavoite",
+     "160 000–200 000"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ciudad_de_la_Paz"
+   ]
+  },
+  {
+   "tunnus": "pk-conakry",
+   "nimi": "Conakry",
+   "aloitus": "Guinean pääkaupunki ja suurin kaupunki",
+   "luonne": "Tombon saarelta Kaloumin niemimaalle levinnyt satamakaupunki; täällä on Sandervalian kansallismuseo.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,4 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 500 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Conakry",
+    "https://citypopulation.de/en/guinea/conakry/"
+   ]
+  },
+  {
+   "tunnus": "pk-dhaka",
+   "nimi": "Dhaka",
+   "aloitus": "Bangladeshin pääkaupunki",
+   "luonne": "Mughal-ajan kauppakaupunki; Armanitolan kaupunginosan nimi muistaa armenialaiskauppiaita.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 10,3 milj. (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 300 km²"
+    ],
+    [
+     "Kaupunkiseutu",
+     "n. 36,6 milj. (YK 2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dhaka",
+    "https://citypopulation.de/en/bangladesh/dhaka/",
+    "https://en.prothomalo.com/bangladesh/city/fzkq4hv4k7",
+    "https://thefinancialexpress.com.bd/home/with-366m-residents-dhaka-now-worlds-second-largest-city-un-report"
+   ]
+  },
+  {
+   "tunnus": "pk-djibouti",
+   "nimi": "Djibouti",
+   "aloitus": "Djiboutin pääkaupunki",
+   "luonne": "Ranskalaisten 1888 perustama satamakaupunki Tadjourahin lahdella; Etiopian rautatie kasvatti sitä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 770 000 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 173 km²"
+    ],
+    [
+     "Maan väestöstä",
+     "yli 70 %"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Djibouti_City",
+    "https://citypopulation.de/en/djibouti/city/admin/"
+   ]
+  },
+  {
+   "tunnus": "pk-dodoma",
+   "nimi": "Dodoma",
+   "aloitus": "Tansanian pääkaupunki",
+   "luonne": "Saksalaisten rautatietyömaasta 1907 kasvanut; pääkaupungiksi päätettiin 1970-luvulla, parlamentti muutti 1996.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "765 179 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "2 576 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 1 120 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dodoma"
+   ]
+  },
+  {
+   "tunnus": "pk-dusanbe",
+   "nimi": "Dušanbe",
+   "aloitus": "Tadžikistanin pääkaupunki",
+   "luonne": "Nimi tulee maanantaina pidetystä torista; vuosina 1929–1961 kaupungin nimi oli Stalinabad.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,23 milj. (2024)"
+    ],
+    [
+     "Korkeus",
+     "750–930 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dushanbe"
+   ]
+  },
+  {
+   "tunnus": "pk-freetown",
+   "nimi": "Freetown",
+   "aloitus": "Sierra Leonen pääkaupunki",
+   "luonne": "Vapautettujen orjien siirtokunnaksi syntynyt satamakaupunki; yleiskieli on krio.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,06 milj. (2015)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 82 km²"
+    ],
+    [
+     "Perustettu",
+     "1792"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Freetown",
+    "https://citypopulation.de/en/sierraleone/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-funafuti",
+   "nimi": "Funafuti",
+   "aloitus": "Tuvalun pääkaupunki koralliatollilla",
+   "luonne": "Koko atolli on pääkaupunki: kapeita saarekkeita laguunin ympärillä, ja merenpinnan nousu uhkaa niitä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "6 602 (2022)"
+    ],
+    [
+     "Maapinta-ala",
+     "n. 2,8 km²"
+    ],
+    [
+     "Korkeus",
+     "keskimäärin n. 2 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Funafuti",
+    "https://earthobservatory.nasa.gov/images/153047/funafuti-atoll-tuvalu"
+   ]
+  },
+  {
+   "tunnus": "pk-gaborone",
+   "nimi": "Gaborone",
+   "aloitus": "Botswanan pääkaupunki",
+   "luonne": "Nimi muistaa tlokwa-päällikkö Gaboronea; kaupunki rakennettiin pääkaupungiksi itsenäistyvälle maalle.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "246 325 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "169 km²"
+    ],
+    [
+     "Korkeus",
+     "1 014 m"
+    ],
+    [
+     "Perustettu",
+     "1964"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gaborone"
+   ]
+  },
+  {
+   "tunnus": "pk-georgetown",
+   "nimi": "Georgetown",
+   "aloitus": "Guyanan pääkaupunki",
+   "luonne": "Puisia siirtomaarakennuksia ja kanavia; kasvitieteellisessä puutarhassa elää manaatteja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "125 683 (2022)"
+    ],
+    [
+     "Maanpinta",
+     "nousuveden alapuolella"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+    "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens"
+   ]
+  },
+  {
+   "tunnus": "pk-gitega",
+   "nimi": "Gitega",
+   "aloitus": "Burundin poliittinen pääkaupunki",
+   "luonne": "Kuninkaiden entinen pääkaupunki; täällä on kansallismuseo, lähellä karyenda-rumpujen pyhäkkö Gishora.",
+   "rivit": [
+    [
+     "Kaupunkiväestö",
+     "n. 213 000 (2024)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 500 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 2019"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gitega",
+    "https://citypopulation.de/en/burundi/admin/5__gitega/"
+   ]
+  },
+  {
+   "tunnus": "pk-harare",
+   "nimi": "Harare",
+   "aloitus": "Zimbabwen pääkaupunki",
+   "luonne": "Vuonna 1890 Fort Salisburynä perustettu ylänköpääkaupunki; nimi vaihtui Harareksi 1982.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,85 milj. (2022)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 490 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Harare"
+   ]
+  },
+  {
+   "tunnus": "pk-islamabad",
+   "nimi": "Islamabad",
+   "aloitus": "Pakistanin pääkaupunki",
+   "luonne": "Margalla-vuorten juurelle 1960-luvulla rakennettu kaupunki, jonka maamerkki on Faisalin moskeija.",
+   "rivit": [
+    [
+     "Pääkaupunkialue",
+     "2,36 milj. (2023)"
+    ],
+    [
+     "Rawalpindin kanssa",
+     "n. 5,7 milj. (2023)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Islamabad",
+    "https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_1_islamabad.pdf"
+   ]
+  },
+  {
+   "tunnus": "pk-jerevan",
+   "nimi": "Jerevan",
+   "aloitus": "Armenian pääkaupunki",
+   "luonne": "Yksi maailman vanhimpia jatkuvasti asuttuja kaupunkeja; Erebunin linnoitus perustettiin 782 eaa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,09 milj. (2022)"
+    ],
+    [
+     "Korkeus",
+     "865–1 390 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1918"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yerevan",
+    "https://arka.am/en/news/society/armenia_s_permanent_population_stood_at_2_932_731_in_2022/"
+   ]
+  },
+  {
+   "tunnus": "pk-juba",
+   "nimi": "Juba",
+   "aloitus": "Etelä-Sudanin pääkaupunki",
+   "luonne": "Valkoisen Niilin rannalla lähetysasemasta kasvanut kaupunki; pääkaupunki itsenäistymisestä 2011.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 526 000 (arvio 2017)"
+    ],
+    [
+     "Pinta-ala",
+     "52 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Juba",
+    "https://citypopulation.de/en/southsudan/",
+    "https://en.wikipedia.org/wiki/Juba"
+   ]
+  },
+  {
+   "tunnus": "pk-kampala",
+   "nimi": "Kampala",
+   "aloitus": "Ugandan pääkaupunki",
+   "luonne": "Nimi tulee ’impalojen kukkulasta’; Old Kampala oli Bugandan kuninkaan metsästysmaata.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 797 722 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "189 km²"
+    ],
+    [
+     "Kaupunkiseutu",
+     "n. 6,7 milj. (2019)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kampala"
+   ]
+  },
+  {
+   "tunnus": "pk-khartum",
+   "nimi": "Khartum",
+   "aloitus": "Sudanin pääkaupunki",
+   "luonne": "Valkoinen ja Sininen Niili yhtyvät täällä; kaupunki kärsi pahoin vuonna 2023 alkaneesta sodasta.",
+   "rivit": [
+    [
+     "Perustettu",
+     "1821"
+    ],
+    [
+     "Korkeus",
+     "n. 380 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1956"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Khartoum",
+    "https://en.wikipedia.org/wiki/Battle_of_Khartoum_(2023%E2%80%932025)"
+   ]
+  },
+  {
+   "tunnus": "pk-kigali",
+   "nimi": "Kigali",
+   "aloitus": "Ruandan pääkaupunki",
+   "luonne": "Saksalaisten 1907 perustama hallintoasema, joka on levinnyt kukkuloiden harjanteille ja laaksoihin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 745 555 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "730 km²"
+    ],
+    [
+     "Keskikorkeus",
+     "n. 1 570 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kigali"
+   ]
+  },
+  {
+   "tunnus": "pk-kingston",
+   "nimi": "Kingston",
+   "aloitus": "Jamaikan pääkaupunki",
+   "luonne": "Palisadoes-hiekkakannas suojaa luonnonsatamaa; kaupunki perustettiin Port Royalin tuhon jälkeen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 89 000 (2011)"
+    ],
+    [
+     "Kingstonin seutu",
+     "n. 585 000 (2011)"
+    ],
+    [
+     "Perustettu",
+     "1692"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kingston,_Jamaica",
+    "https://statinja.gov.jm/maps/kmacommunitiesandpopulation.html"
+   ]
+  },
+  {
+   "tunnus": "pk-kingstown",
+   "nimi": "Kingstown",
+   "aloitus": "Saint Vincentin ja Grenadiinien pääkaupunki",
+   "luonne": "Lempinimi ’kaarten kaupunki’ viittaa rakennusten kaariin; ranskalaiset perustivat sen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 13 000 (2012)"
+    ],
+    [
+     "Perustettu",
+     "pian 1722 jälkeen"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kingstown",
+    "https://www.afar.com/travel-tips/historic-st-vincent"
+   ]
+  },
+  {
+   "tunnus": "pk-kinshasa",
+   "nimi": "Kinshasa",
+   "aloitus": "Kongon demokraattisen tasavallan pääkaupunki",
+   "luonne": "Kongojoen Malebo-altaan rannalla; entinen Léopoldville sai nykyisen nimensä 1966.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli 17 milj. (arvio)"
+    ],
+    [
+     "Pinta-ala (prov.)",
+     "9 965 km²"
+    ],
+    [
+     "Perustettu",
+     "1881"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kinshasa",
+    "https://nextisafrica.com/outsize-numbers"
+   ]
+  },
+  {
+   "tunnus": "pk-kualalumpur",
+   "nimi": "Kuala Lumpur",
+   "aloitus": "Malesian pääkaupunki",
+   "luonne": "Tinakaivosten kauppapaikasta 1857 kasvanut suurkaupunki, jossa Petronas-tornit kohoavat.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,1 milj. (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "243 km²"
+    ],
+    [
+     "Klang Valley",
+     "n. 8,1 milj. (2020)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kuala_Lumpur"
+   ]
+  },
+  {
+   "tunnus": "pk-lapaz",
+   "nimi": "La Paz",
+   "aloitus": "Bolivian hallituksen pääkaupunki",
+   "luonne": "Altiplanon kanjoniin perustettu kaupunki, jota Illimanin lumihuippu vartioi; köysiratoja El Altoon.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 757 000 (2024)"
+    ],
+    [
+     "Korkeus",
+     "n. 3 650 m"
+    ],
+    [
+     "Perustettu",
+     "1548"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/La_Paz",
+    "https://www.citypopulation.de/en/bolivia/admin/la_paz/020101__la_paz/"
+   ]
+  },
+  {
+   "tunnus": "pk-libreville",
+   "nimi": "Libreville",
+   "aloitus": "Gabonin pääkaupunki",
+   "luonne": "Nimi tarkoittaa ’vapaata kaupunkia’: asutus syntyi 1849 orjalaivalta vapautetuille.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "703 904 (2013)"
+    ],
+    [
+     "Perustettu",
+     "1849"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Libreville",
+    "https://www.britannica.com/place/Libreville"
+   ]
+  },
+  {
+   "tunnus": "pk-lilongwe",
+   "nimi": "Lilongwe",
+   "aloitus": "Malawin pääkaupunki",
+   "luonne": "Kauppakeskuksesta kasvanut kaupunki, josta tuli pääkaupunki 1975 Zomban tilalle; nimi tulee joesta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "989 318 (2018)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 050 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1975"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lilongwe"
+   ]
+  },
+  {
+   "tunnus": "pk-lome",
+   "nimi": "Lomé",
+   "aloitus": "Togon pääkaupunki",
+   "luonne": "Guineanlahden satamakaupunki, jonka länsiraja on Ghanan raja; saksalaisen Togolandin pääkaupunki 1897.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,3 milj. (2022)"
+    ],
+    [
+     "Suur-Lomé",
+     "n. 2,19 milj. (2022)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lom%C3%A9",
+    "https://citypopulation.de/en/togo/lome/admin/"
+   ]
+  },
+  {
+   "tunnus": "pk-luanda",
+   "nimi": "Luanda",
+   "aloitus": "Angolan pääkaupunki",
+   "luonne": "Portugalilaisten perustama vanha siirtomaakaupunki ja orjakaupan keskus; São Miguelin linnake vuodelta 1576.",
+   "rivit": [
+    [
+     "Asukasluku (prov.)",
+     "n. 8,8 milj. (2024)"
+    ],
+    [
+     "Perustettu",
+     "1576"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Luanda",
+    "https://forbesafricalusofona.com/?p=165500"
+   ]
+  },
+  {
+   "tunnus": "pk-lusaka",
+   "nimi": "Lusaka",
+   "aloitus": "Zambian pääkaupunki",
+   "luonne": "Rautatien vesipysäkistä kasvanut kauppa- ja hallintokeskus; nimi tulee lenje-päällikkö Lusaakasta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,2 milj. (2022)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 280 m"
+    ],
+    [
+     "Perustettu",
+     "1905"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lusaka"
+   ]
+  },
+  {
+   "tunnus": "pk-majuro",
+   "nimi": "Majuro",
+   "aloitus": "Marshallsaarten pääkaupunki",
+   "luonne": "Kapea koralliatolli laguunin ympärillä; sodan aikana yhdysvaltalaisten suuri laivastotukikohta.",
+   "rivit": [
+    [
+     "Atollin asukasluku",
+     "23 156 (2021)"
+    ],
+    [
+     "Atollin saaria",
+     "64"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Majuro",
+    "https://citypopulation.de/en/marshall/"
+   ]
+  },
+  {
+   "tunnus": "pk-male",
+   "nimi": "Malé",
+   "aloitus": "Malediivien pääkaupunki",
+   "luonne": "Entinen kuninkaiden saari, jolla on koralliklopista tehty Hukuru Miskiy -moskeija 1600-luvulta.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 212 000 (2022)"
+    ],
+    [
+     "Korkeus",
+     "n. 2 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mal%C3%A9"
+   ]
+  },
+  {
+   "tunnus": "pk-manama",
+   "nimi": "Manama",
+   "aloitus": "Bahrainin pääkaupunki",
+   "luonne": "Persianlahden vanha kauppa- ja helmenkalastussatama, nykyään rahoituskeskus.",
+   "rivit": [
+    [
+     "Pääkaupunkialue",
+     "n. 548 000 (2020)"
+    ],
+    [
+     "Ensi maininta",
+     "1300-luku"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Manama",
+    "https://citypopulation.de/en/bahrain/",
+    "https://en.wikipedia.org/wiki/Capital_Governorate,_Bahrain"
+   ]
+  },
+  {
+   "tunnus": "pk-maputo",
+   "nimi": "Maputo",
+   "aloitus": "Mosambikin pääkaupunki ja satamakaupunki",
+   "luonne": "Entinen Lourenço Marques (vuoteen 1976); tunnettu vilkkaasta kulttuurielämästä ja kirjavasta arkkitehtuurista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,09 milj. (2017)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 348 km²"
+    ],
+    [
+     "Perustettu",
+     "1781 (linnoitus)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Maputo"
+   ]
+  },
+  {
+   "tunnus": "pk-maseru",
+   "nimi": "Maseru",
+   "aloitus": "Lesothon pääkaupunki Etelä-Afrikan rajalla",
+   "luonne": "Nimi tarkoittaa punaista hiekkakiveä; kaupunki syntyi 1869 poliisileirinä Mohokare-joen rannalle.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "330 760 (2016)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 138 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 1 550–1 600 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Maseru"
+   ]
+  },
+  {
+   "tunnus": "pk-mbabane",
+   "nimi": "Mbabane",
+   "aloitus": "Eswatinin pääkaupunki Mdzimban vuorilla",
+   "luonne": "Kaupungin tuntumassa kohoaa Sibeben graniittikallio, yksi maailman suurimmista yhtenäisistä kallioista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 60 700 (2017)"
+    ],
+    [
+     "Korkeus",
+     "1 243 m"
+    ],
+    [
+     "Perustettu",
+     "1902"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mbabane",
+    "https://www.citypopulation.de/en/eswatini/cities/",
+    "https://en.wikipedia.org/wiki/Sibebe",
+    "https://www.britannica.com/place/Mbabane"
+   ]
+  },
+  {
+   "tunnus": "pk-minsk",
+   "nimi": "Minsk",
+   "aloitus": "Valko-Venäjän pääkaupunki",
+   "luonne": "Mainittu ensi kerran 1067; sodassa tuhoutuneen keskustan tilalle nousi leveitä stalinistisia katuja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,0 milj. (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 410 km²"
+    ],
+    [
+     "Kaupunkioikeudet",
+     "1499"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Minsk"
+   ]
+  },
+  {
+   "tunnus": "pk-mogadishu",
+   "nimi": "Mogadishu",
+   "aloitus": "Somalian pääkaupunki valtameren rannalla",
+   "luonne": "Intian valtameren kultakauppaa hallinnut satamakaupunki; aikanaan Itä-Afrikan rannikon rikkain.",
+   "rivit": [
+    [
+     "Paikallinen nimi",
+     "Xamar"
+    ],
+    [
+     "Rikkaimmillaan",
+     "1300–1400-luvuilla"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mogadishu",
+    "https://www.worldometers.info/world-population/somalia-population/"
+   ]
+  },
+  {
+   "tunnus": "pk-monaco",
+   "nimi": "Monaco",
+   "aloitus": "Maailman toiseksi pienin valtio",
+   "luonne": "Grimaldien ruhtinassuvun hallitsema vuodesta 1297; kasino ja Formula 1 -kisa ovat tehneet siitä kuuluisan.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 38 400 (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "2,08 km²"
+    ],
+    [
+     "Rantaviiva",
+     "3,83 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Monaco",
+    "https://monentreprise.gouv.mc/en/news/monaco-statistics-imsee-publishes-its-2023-census-report"
+   ]
+  },
+  {
+   "tunnus": "pk-monrovia",
+   "nimi": "Monrovia",
+   "aloitus": "Liberian pääkaupunki Atlantin rannalla",
+   "luonne": "Vapautettujen mustien amerikkalaisten perustama; nimetty Yhdysvaltain presidentin James Monroen mukaan.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 761 032 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 194 km²"
+    ],
+    [
+     "Perustettu",
+     "1822"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Monrovia"
+   ]
+  },
+  {
+   "tunnus": "pk-moroni",
+   "nimi": "Moroni",
+   "aloitus": "Komorien pääkaupunki Ngazidjan saarella",
+   "luonne": "Taustalla kohoaa Karthala-tulivuori; Badjanani-moskeijan alkuperä on vuodelta 1427.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 74 700 (2017)"
+    ],
+    [
+     "Nimen merkitys",
+     "’joella’"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Moroni,_Comoros",
+    "https://www.citypopulation.de/en/comoros/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-nassau",
+   "nimi": "Nassau",
+   "aloitus": "Bahaman pääkaupunki New Providencella",
+   "luonne": "Merirosvotasavalta 1700-luvun alussa; nimetty Oranian-Nassaun Vilhelm III:n mukaan.",
+   "rivit": [
+    [
+     "Asukkaita (saari)",
+     "n. 297 000 (2022)"
+    ],
+    [
+     "Saaren pinta-ala",
+     "n. 207 km²"
+    ],
+    [
+     "Perustettu",
+     "1670 (Charles Town)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nassau,_Bahamas"
+   ]
+  },
+  {
+   "tunnus": "pk-naypyidaw",
+   "nimi": "Naypyidaw",
+   "aloitus": "Myanmarin suunniteltu pääkaupunki",
+   "luonne": "Tyhjästä rakennettu kaupunki, jossa on Shwedagonin kokoinen Uppatasanti-pagodi ja paljon tyhjää tilaa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 359 000 (2024)"
+    ],
+    [
+     "Alueen pinta-ala",
+     "n. 7 050 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 2005"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Naypyidaw",
+    "https://www.citypopulation.de/en/myanmar/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-ndjamena",
+   "nimi": "N'Djamena",
+   "aloitus": "Tšadin pääkaupunki Chari-joen rannalla",
+   "luonne": "Chari- ja Logone-jokien yhtymäkohdassa; ranskalaisten sotilasasemasta kasvanut maan keskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 951 000 (2009)"
+    ],
+    [
+     "Korkeus",
+     "n. 298 m"
+    ],
+    [
+     "Entinen nimi",
+     "Fort-Lamy (–1973)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/N%27Djamena",
+    "https://www.citypopulation.de/en/chad/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-ngerulmud",
+   "nimi": "Ngerulmud",
+   "aloitus": "Palaun pääkaupunki Babeldaobin saarella",
+   "luonne": "Osin Taiwanin lainalla rakennettu uusi pääkaupunki, jossa ovat parlamentin ja tuomioistuimen talot.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "ei vakituisia (2020)"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 2006"
+    ],
+    [
+     "Etäisyys Kororista",
+     "n. 20 km"
+    ],
+    [
+     "Rakennuskustannus",
+     "yli 45 milj. USD"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ngerulmud",
+    "https://www.citypopulation.de/en/palau/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-niamey",
+   "nimi": "Niamey",
+   "aloitus": "Nigerin pääkaupunki Niger-joen varrella",
+   "luonne": "Ranskalaisten sotilasasemasta kasvanut monietninen talouskeskus joen vasemmalla rannalla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,03 milj. (2012)"
+    ],
+    [
+     "Sotilasasema",
+     "1901"
+    ],
+    [
+     "Kennedyn silta",
+     "avattu 1970"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Niamey",
+    "https://www.citypopulation.de/en/niger/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-nouakchott",
+   "nimi": "Nouakchott",
+   "aloitus": "Mauritanian pääkaupunki Saharan reunalla",
+   "luonne": "Pienen kalastajakylän paikalle rakennettu; nimen sanotaan tarkoittavan ’tuulten paikkaa’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 446 761 (2023)"
+    ],
+    [
+     "Rakennus alkoi",
+     "1958"
+    ],
+    [
+     "Suunniteltu koko",
+     "15 000 asukasta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nouakchott",
+    "https://www.worldatlas.com/articles/what-is-the-capital-of-mauritania.html"
+   ]
+  },
+  {
+   "tunnus": "pk-nukualofa",
+   "nimi": "Nukuʻalofa",
+   "aloitus": "Tongan pääkaupunki Tongatapun saarella",
+   "luonne": "Kuninkaan palatsin ja parlamentin kaupunki; parlamenttitalon tuhosi Gita-sykloni 2018.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "21 185 (2021)"
+    ],
+    [
+     "Korkeus",
+     "n. 3 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nuku%CA%BBalofa",
+    "https://www.citypopulation.de/en/tonga/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-ottawa",
+   "nimi": "Ottawa",
+   "aloitus": "Kanadan pääkaupunki",
+   "luonne": "Parlamenttikukkulan ja Rideau-kanavan kaupunki; nimi tulee algonkinien sanasta ’kaupata’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 017 449 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 2 790 km²"
+    ],
+    [
+     "Perustettu",
+     "1826 (Bytown)"
+    ],
+    [
+     "Nimi Ottawa",
+     "vuodesta 1855"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ottawa",
+    "https://www.thecanadianencyclopedia.ca/article/ottawa-ont-emc"
+   ]
+  },
+  {
+   "tunnus": "pk-ouagadougou",
+   "nimi": "Ouagadougou",
+   "aloitus": "Burkina Fason pääkaupunki",
+   "luonne": "Afrikkalaisen elokuvan FESPACO-festivaalin kaupunki; mossien Moro-Naba-kuninkaan palatsi on yhä keskustassa.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "2 415 266 (2019)"
+    ],
+    [
+     "FESPACO",
+     "joka toinen vuosi"
+    ],
+    [
+     "Korkeus",
+     "n. 305 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ouagadougou",
+    "https://en.wikipedia.org/wiki/FESPACO"
+   ]
+  },
+  {
+   "tunnus": "pk-palikir",
+   "nimi": "Palikir",
+   "aloitus": "Mikronesian liittovaltion pääkaupunki",
+   "luonne": "Pohnpein saarella, joka on yksi maailman sateisimmista paikoista ja jolla elää omia lintulajeja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 5 000 (2010)"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1989"
+    ],
+    [
+     "Sateet rannikolla",
+     "n. 4 800 mm/v"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Palikir",
+    "https://en.wikipedia.org/wiki/Pohnpei",
+    "https://www.citypopulation.de/en/micronesia/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-paramaribo",
+   "nimi": "Paramaribo",
+   "aloitus": "Surinamen pääkaupunki Surinam-joen rannalla",
+   "luonne": "Hollantilaisen siirtomaakaupungin vanha keskusta on Unescon perintökohde; Fort Zeelandia vartioi jokea.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 241 000 (2012)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 182 km²"
+    ],
+    [
+     "Perustettu",
+     "1613"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Paramaribo",
+    "https://www.citypopulation.de/en/suriname/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-phnompenh",
+   "nimi": "Phnom Penh",
+   "aloitus": "Kambodžan pääkaupunki Mekongin rannalla",
+   "luonne": "Wat Phnom -temppelin ja Penh-rouvan mukaan nimetty ’Aasian helmi’, jonka Punaiset khmerit tyhjensivät 1975.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 2,35 milj. (2019)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 679 km²"
+    ],
+    [
+     "Perustettu",
+     "1372"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Phnom_Penh"
+   ]
+  },
+  {
+   "tunnus": "pk-pjongjang",
+   "nimi": "Pjongjang",
+   "aloitus": "Pohjois-Korean pääkaupunki",
+   "luonne": "Muinaisen Goguryeon pääkaupunki; Korean sodan tuhojen jälkeen rakennettu uudelleen Neuvostoliiton avulla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,3 milj. (2008)"
+    ],
+    [
+     "Perustamistaru",
+     "1122 eaa."
+    ],
+    [
+     "Joki",
+     "Taedong"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pyongyang"
+   ]
+  },
+  {
+   "tunnus": "pk-podgorica",
+   "nimi": "Podgorica",
+   "aloitus": "Montenegron pääkaupunki",
+   "luonne": "Morača- ja Ribnica-jokien yhtymäkohdassa; nimeltään Titograd vuosina 1946–1992.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 173 000 (2023)"
+    ],
+    [
+     "Asukkaita (kunta)",
+     "179 505 (2023)"
+    ],
+    [
+     "Korkeus",
+     "n. 40 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Podgorica",
+    "https://www.citypopulation.de/en/montenegro/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-portauprince",
+   "nimi": "Port-au-Prince",
+   "aloitus": "Haitin pääkaupunki",
+   "luonne": "Ranskalaisten rakentama satamakaupunki, jossa on Rautatori; vuoden 2010 maanjäristys tuhosi suuren osan.",
+   "rivit": [
+    [
+     "Asukasluku (arvio)",
+     "n. 1,2 milj. (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 36 km²"
+    ],
+    [
+     "Perustettu",
+     "1749"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Port-au-Prince"
+   ]
+  },
+  {
+   "tunnus": "pk-portlouis",
+   "nimi": "Port Louis",
+   "aloitus": "Mauritiuksen pääkaupunki ja suurin kaupunki",
+   "luonne": "Nimetty Ludvig XV:n mukaan; Aapravasi Ghatiin saapui lähes puoli miljoonaa intialaista sopimustyöläistä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 140 400 (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 47 km²"
+    ],
+    [
+     "Aapravasi Ghat",
+     "Unesco-kohde 2006"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Port_Louis",
+    "https://en.wikipedia.org/wiki/Aapravasi_Ghat"
+   ]
+  },
+  {
+   "tunnus": "pk-portofspain",
+   "nimi": "Port of Spain",
+   "aloitus": "Trinidadin ja Tobagon pääkaupunki",
+   "luonne": "Espanjalaisten perustama Puerto de España; tunnettu karnevaalista ja Magnificent Seven -huviloista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "37 074 (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 12 km²"
+    ],
+    [
+     "Saaren pääkaupunki",
+     "vuodesta 1757"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Port_of_Spain"
+   ]
+  },
+  {
+   "tunnus": "pk-portonovo",
+   "nimi": "Porto-Novo",
+   "aloitus": "Beninin virallinen pääkaupunki",
+   "luonne": "Portugalilaisten orjakaupan satama; Brasiliasta palanneet toivat tänne brasilialaisen rakennustyylin ja ruoan.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "264 320 (2013)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 52 km²"
+    ],
+    [
+     "Nimi portugaliksi",
+     "’uusi satama’"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Porto-Novo"
+   ]
+  },
+  {
+   "tunnus": "pk-praia",
+   "nimi": "Praia",
+   "aloitus": "Kap Verden pääkaupunki Santiagon saarella",
+   "luonne": "Tasanteelle rakennettu kaupunki, joka syrjäytti vanhan Cidade Velhan; nimi tarkoittaa rantaa.",
+   "rivit": [
+    [
+     "Asukkaita (kunta)",
+     "141 219 (2021)"
+    ],
+    [
+     "Pinta-ala (kunta)",
+     "n. 103 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1770"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Praia"
+   ]
+  },
+  {
+   "tunnus": "pk-rabat",
+   "nimi": "Rabat",
+   "aloitus": "Marokon pääkaupunki Atlantin rannalla",
+   "luonne": "Almohadit perustivat sen 1100-luvulla; 1600-luvulla merirosvojen tukikohta; vanha kaupunki on Unescon kohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "515 619 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 117 km²"
+    ],
+    [
+     "Suurkaupunkialue",
+     "n. 2,1 milj. (2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rabat"
+   ]
+  },
+  {
+   "tunnus": "pk-ramallah",
+   "nimi": "Ramallah",
+   "aloitus": "Palestiinan hallinnon keskus Länsirannalla",
+   "luonne": "Nimi tarkoittaa ’Jumalan korkeutta’; museoita, kulttuurikeskuksia ja presidentin Mukataa-asuinpaikka.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 39 000 (2017)"
+    ],
+    [
+     "Pinta-ala",
+     "16,3 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 870 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ramallah",
+    "https://www.citypopulation.de/en/palestine/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-reykjavik",
+   "nimi": "Reykjavík",
+   "aloitus": "Maailman pohjoisin valtion pääkaupunki",
+   "luonne": "Koko kaupunki lämmitetään maan kuumalla vedellä; Ingólfur Arnarson asettui tänne 874.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 139 000 (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "244 km²"
+    ],
+    [
+     "Pääkaupunkiseutu",
+     "n. 252 000 (2026)"
+    ],
+    [
+     "Kaupunki vuodesta",
+     "1786"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Reykjav%C3%ADk"
+   ]
+  },
+  {
+   "tunnus": "pk-roseau",
+   "nimi": "Roseau",
+   "aloitus": "Dominican pääkaupunki",
+   "luonne": "Kalinagojen Sairi-kylän paikalle noussut satamakaupunki; nimi tulee joenvarren ruo’oista (ransk. roseaux).",
+   "rivit": [
+    [
+     "Asukasluku",
+     "14 725 (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "5,4 km²"
+    ],
+    [
+     "Korkeus",
+     "43 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Roseau"
+   ]
+  },
+  {
+   "tunnus": "pk-saintjohns",
+   "nimi": "Saint John's",
+   "aloitus": "Antiguan ja Barbudan pääkaupunki",
+   "luonne": "Satamakaupunki, jonka valkotornisen katedraalin kivikuoren sisällä on mäntypuinen sisätila.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "22 219 (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "10 km²"
+    ],
+    [
+     "Katedraali",
+     "vihitty 1848"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/St._John%27s,_Antigua_and_Barbuda",
+    "https://en.wikipedia.org/wiki/St._John%27s_Cathedral_(Antigua_and_Barbuda)"
+   ]
+  },
+  {
+   "tunnus": "pk-sanjose",
+   "nimi": "San José",
+   "aloitus": "Costa Rican pääkaupunki",
+   "luonne": "Pyhän Joosefin mukaan nimetty kahvikulta-ajan kaupunki; kansallisteatteri ja kultamuseo ovat tunnetuimpia.",
+   "rivit": [
+    [
+     "Asukasluku (kunta)",
+     "352 381 (2022)"
+    ],
+    [
+     "Pinta-ala (kunta)",
+     "44,6 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1823"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/San_Jos%C3%A9,_Costa_Rica",
+    "https://crhoy.com/san-jose-y-alajuela-tienen-la-mayor-concentracion-poblacional/"
+   ]
+  },
+  {
+   "tunnus": "pk-sanmarino",
+   "nimi": "San Marino",
+   "aloitus": "San Marinon pääkaupunki",
+   "luonne": "Titano-vuoren rinteen keskiaikainen kaupunki, jota vartioivat kolme tornia: Guaita, Cesta ja Montale.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "4 158 (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "7,09 km²"
+    ],
+    [
+     "Perustettu",
+     "301 (perimätieto)"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2008"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/City_of_San_Marino",
+    "https://www.citypopulation.de/en/sanmarino/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-sansalvador",
+   "nimi": "San Salvador",
+   "aloitus": "El Salvadorin pääkaupunki",
+   "luonne": "Tulivuorten ympäröimässä laaksossa; vuoden 1986 maanjäristys tuhosi suuren osan julkisista rakennuksista.",
+   "rivit": [
+    [
+     "Asukasluku (piiri)",
+     "330 543 (2024)"
+    ],
+    [
+     "Perustettu",
+     "1525"
+    ],
+    [
+     "Korkeus",
+     "n. 660 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/San_Salvador",
+    "https://diario.elmundo.sv/economia/esta-es-la-poblacion-por-distrito-de-el-salvador-segun-el-censo-2024"
+   ]
+  },
+  {
+   "tunnus": "pk-santiagodechile",
+   "nimi": "Santiago de Chile",
+   "aloitus": "Chilen pääkaupunki",
+   "luonne": "Andien ja rannikkovuorten välisessä laaksossa; presidentin palatsi La Moneda oli alun perin rahapaja.",
+   "rivit": [
+    [
+     "Asukasluku (kunta)",
+     "438 856 (2024)"
+    ],
+    [
+     "Suur-Santiago",
+     "n. 6,3 milj. (2017)"
+    ],
+    [
+     "Perustettu",
+     "1541"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Santiago",
+    "https://www.bcn.cl/siit/reportescomunales/comunas_v.html"
+   ]
+  },
+  {
+   "tunnus": "pk-santodomingo",
+   "nimi": "Santo Domingo",
+   "aloitus": "Dominikaanisen tasavallan pääkaupunki",
+   "luonne": "Amerikan vanhin yhtäjaksoisesti asuttu eurooppalaiskaupunki; sen Zona Colonial on Unescon perintökohde.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "1 029 110 (2022)"
+    ],
+    [
+     "Perustettu",
+     "1496 (virall. 1498)"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1990"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Santo_Domingo",
+    "https://www.one.gob.do/media/eooffxsf/tcm-región-ozama-santo-domingo-de-guzmán-2026.pdf"
+   ]
+  },
+  {
+   "tunnus": "pk-saotome",
+   "nimi": "São Tomé",
+   "aloitus": "São Tomé ja Príncipen pääkaupunki",
+   "luonne": "Ana Chaves -lahden rannalle portugalilaisten perustama kaupunki; Fort São Sebastião on nykyisin museo.",
+   "rivit": [
+    [
+     "Asukkaita (piiri)",
+     "n. 80 600 (2024)"
+    ],
+    [
+     "Linnake",
+     "1566–1575"
+    ],
+    [
+     "Itsenäistyi",
+     "1975"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9",
+    "https://www.citypopulation.de/en/saotome/admin/centro_oeste/21__água_grande/",
+    "https://en.wikipedia.org/wiki/S%C3%A3o_Sebasti%C3%A3o_Museum"
+   ]
+  },
+  {
+   "tunnus": "pk-skopje",
+   "nimi": "Skopje",
+   "aloitus": "Pohjois-Makedonian pääkaupunki",
+   "luonne": "Vardar-joen kaupunki, jonka kivisilta on symboli; vuoden 1963 maanjäristys tuhosi suurimman osan siitä.",
+   "rivit": [
+    [
+     "Asukkaita (kunta)",
+     "526 502 (2021)"
+    ],
+    [
+     "Pinta-ala (kunta)",
+     "571 km²"
+    ],
+    [
+     "Jälleenrakennus",
+     "apua 78 maasta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Skopje",
+    "https://en.wikipedia.org/wiki/1963_Skopje_earthquake"
+   ]
+  },
+  {
+   "tunnus": "pk-southtarawa",
+   "nimi": "South Tarawa",
+   "aloitus": "Kiribatin pääkaupunkialue",
+   "luonne": "Matala korallisaarten ketju, jossa makea vesi on koralliperän alla; merenpinnan nousu uhkaa rantoja.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "63 439 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "15,8 km²"
+    ],
+    [
+     "Korkein kohta",
+     "n. 3 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/South_Tarawa"
+   ]
+  },
+  {
+   "tunnus": "pk-srijayawardenepurakotte",
+   "nimi": "Sri Jayawardenepura Kotte",
+   "aloitus": "Sri Lankan hallinnollinen pääkaupunki",
+   "luonne": "Kotten kuningaskunnan pääkaupunki 1400-luvulla; parlamentti sijaitsee tekojärven saarella.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "107 925 (2012)"
+    ],
+    [
+     "Pinta-ala",
+     "17 km²"
+    ],
+    [
+     "Parlamentti",
+     "vihitty 1982"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sri_Jayawardenepura_Kotte"
+   ]
+  },
+  {
+   "tunnus": "pk-stgeorges",
+   "nimi": "St. George's",
+   "aloitus": "Grenadan pääkaupunki",
+   "luonne": "Hevosenkengän muotoisen sataman ympärille ranskalaisten 1650 perustama kaupunki; Ivan runteli sitä 2004.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "2 681 (2022)"
+    ],
+    [
+     "Sendallin tunneli",
+     "n. 104 m, 1894–95"
+    ],
+    [
+     "Fort George",
+     "valmistui 1710"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Saint_George%27s,_Grenada",
+    "https://www.citypopulation.de/en/grenada/cities/",
+    "https://historyarchives.org/ohlhous/grenada83/Sendal Tunnel.htm"
+   ]
+  },
+  {
+   "tunnus": "pk-taskent",
+   "nimi": "Taškent",
+   "aloitus": "Uzbekistanin pääkaupunki",
+   "luonne": "Silkkitien kauppakaupunki, jonka nimi tarkoittaa kivikaupunkia; maanjäristys tuhosi sen vanhan osan 1966.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,2 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 435 km²"
+    ],
+    [
+     "Kirjattu historia",
+     "2 200 v (2009)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tashkent",
+    "https://shayxontohur.tashkent.uz/en/city"
+   ]
+  },
+  {
+   "tunnus": "pk-tbilisi",
+   "nimi": "Tbilisi",
+   "aloitus": "Georgian pääkaupunki",
+   "luonne": "Kura-joen laakson vanha kaupunki; nimi viittaa lämpimiin rikkilähteisiin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 1,33 milj. (2024)"
+    ],
+    [
+     "Perustettu",
+     "400-luvulla"
+    ],
+    [
+     "Korkeus",
+     "380–770 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tbilisi",
+    "https://1tv.ge/lang/en/news/geostat-tbilisi-counts-one-third-of-georgias-total-population/"
+   ]
+  },
+  {
+   "tunnus": "pk-tegucigalpa",
+   "nimi": "Tegucigalpa",
+   "aloitus": "Hondurasin pääkaupunki",
+   "luonne": "Hopeakaivoskaupungiksi syntynyt; Choluteca-joki erottaa sen kaksoiskaupungista Comayagüelasta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 1,34 milj. (2024)"
+    ],
+    [
+     "Perustettu",
+     "1578"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1880"
+    ],
+    [
+     "Korkeus",
+     "n. 990 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tegucigalpa",
+    "https://www.elheraldo.hn/tegucigalpa/distrito-central-municipio-mas-poblado-honduras-centroamerica-nc18389510"
+   ]
+  },
+  {
+   "tunnus": "pk-thimphu",
+   "nimi": "Thimphu",
+   "aloitus": "Bhutanin pääkaupunki",
+   "luonne": "Wang Chhu -joen laakson kaupunki; Tashichho Dzong -linnaluostari valmistui nykyasuunsa 1968.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "114 551 (2017)"
+    ],
+    [
+     "Korkeus",
+     "n. 2 320 m"
+    ],
+    [
+     "Pinta-ala",
+     "n. 26 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Thimphu"
+   ]
+  },
+  {
+   "tunnus": "pk-tirana",
+   "nimi": "Tirana",
+   "aloitus": "Albanian pääkaupunki",
+   "luonne": "Kirkkain värein maalattuja taloja; Hoxhan entinen pyramidi on nykyisin teknologiakeskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "389 323 (2023)"
+    ],
+    [
+     "Perustettu",
+     "1614"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1920"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tirana",
+    "https://en.wikipedia.org/wiki/Pyramid_of_Tirana",
+    "https://citypopulation.de/en/albania/mun/admin/tiranë/11215__tiranë"
+   ]
+  },
+  {
+   "tunnus": "pk-tunis",
+   "nimi": "Tunis",
+   "aloitus": "Tunisian pääkaupunki",
+   "luonne": "Välimeren rannan kaupunki muinaisen Karthagon vieressä; vanha medina on täynnä moskeijoita ja kujia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "604 599 (2024)"
+    ],
+    [
+     "Suur-Tunis",
+     "n. 2,9 milj. (2024)"
+    ],
+    [
+     "Medina UNESCO:ssa",
+     "vuodesta 1979"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tunis",
+    "https://citypopulation.de/en/tunisia/mun/admin/tunis/1111__tunis"
+   ]
+  },
+  {
+   "tunnus": "pk-vaduz",
+   "nimi": "Vaduz",
+   "aloitus": "Liechtensteinin pääkaupunki",
+   "luonne": "Ruhtinaan linnan alla Reinin laaksossa; nimi tulee latinan sanasta aquaeductus (vesijohto).",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 6 000 (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "17,3 km²"
+    ],
+    [
+     "Korkeus",
+     "455 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vaduz",
+    "https://www.statistikportal.li/de/publikation/bevoelkerungsstand-vorlaeufige-ergebnisse-31-dezember-2024/2024/02/v-2/p31582/pdf"
+   ]
+  },
+  {
+   "tunnus": "pk-vatikaanivaltio",
+   "nimi": "Vatikaanivaltio",
+   "aloitus": "Maailman pienin valtio",
+   "luonne": "Katolisen kirkon keskus Rooman sisällä: Pietarinkirkko, Sikstuksen kappeli ja Vatikaanin museot.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 0,5 km²"
+    ],
+    [
+     "Syntyi",
+     "11.2.1929"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1984"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vatican_City"
+   ]
+  },
+  {
+   "tunnus": "pk-victoria",
+   "nimi": "Victoria",
+   "aloitus": "Seychellien pääkaupunki",
+   "luonne": "Mahén saaren pieni satamakaupunki; Lorloz-kellotorni on Lontoon Little Benin jäljitelmä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 30 000 (2022)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 20 km²"
+    ],
+    [
+     "Nimetty",
+     "Victoriaksi 1841"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Victoria,_Seychelles",
+    "https://citypopulation.de/en/seychelles/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-vientiane",
+   "nimi": "Vientiane",
+   "aloitus": "Laosin pääkaupunki",
+   "luonne": "Mekongin rannalla; Lan Xangin kuningaskunnan pääkaupunki 1500-luvulta, symbolinaan Pha That Luang -stupa.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 821 000 (2015)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "3 920 km²"
+    ],
+    [
+     "Pha That Luang",
+     "n. 45 m, 1566"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Vientiane"
+   ]
+  },
+  {
+   "tunnus": "pk-washington",
+   "nimi": "Washington",
+   "aloitus": "Yhdysvaltain pääkaupunki",
+   "luonne": "L’Enfantin 1791 laatima kaupunkisuunnitelma; asukkaat eivät saa äänivaltaista edustajaa kongressiin.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "689 545 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "177 km²"
+    ],
+    [
+     "Pääkaupunkilaki",
+     "16.7.1790"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Washington,_D.C."
+   ]
+  },
+  {
+   "tunnus": "pk-windhoek",
+   "nimi": "Windhoek",
+   "aloitus": "Namibian pääkaupunki",
+   "luonne": "Kuuman lähteen paikalle noussut kaupunki; jätevesi puhdistetaan juomavedeksi vuodesta 1968.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "486 186 (2023)"
+    ],
+    [
+     "Pinta-ala",
+     "5 133 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 1 650 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Windhoek",
+    "https://www.cwea.org/news/namibias-capitol-city-pioneers-dpr-for-the-world/"
+   ]
+  },
+  {
+   "tunnus": "pk-yamoussoukro",
+   "nimi": "Yamoussoukro",
+   "aloitus": "Norsunluurannikon virallinen pääkaupunki",
+   "luonne": "Presidentti Houphouët-Boignyn kotikaupunki, jonne rakennettiin jättimäinen Rauhan Neitsyen basilika.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "422 072 (2021)"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1983"
+    ],
+    [
+     "Basilikan korkeus",
+     "n. 158 m"
+    ],
+    [
+     "Basilika vihitty",
+     "10.9.1990"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yamoussoukro",
+    "https://en.wikipedia.org/wiki/Basilica_of_Our_Lady_of_Peace"
+   ]
+  },
+  {
+   "tunnus": "pk-yaounde",
+   "nimi": "Yaoundé",
+   "aloitus": "Kamerunin pääkaupunki",
+   "luonne": "Sisämaan kukkuloille rakennettu ’seitsemän kukkulan kaupunki’, jonka saksalaiset perustivat 1880-luvulla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,8 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 180 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 750 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yaound%C3%A9",
+    "https://citypopulation.de/en/cameroon/cities/"
+   ]
+  },
+  {
+   "tunnus": "pk-yaren",
+   "nimi": "Yaren",
+   "aloitus": "Naurun tosiasiallinen pääkaupunki",
+   "luonne": "Parlamentti, lentokenttä ja Moqua-kaivon maanalainen järvi ovat tässä pienessä piirissä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "803 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "1,5 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yaren_District",
+    "https://geo-ref.net/en/nru.htm"
+   ]
+  },
+  {
+   "tunnus": "pk-zagreb",
+   "nimi": "Zagreb",
+   "aloitus": "Kroatian pääkaupunki",
+   "luonne": "Kaptolin ja Gradecin kukkuloista yhdistynyt kaupunki; katedraalin tornit nousivat 1880 järistyksen jälkeen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "767 131 (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 641 km²"
+    ],
+    [
+     "Piispankaupunki",
+     "vuodesta 1094"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zagreb",
+    "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+{
+ "kaupunki": "ahaggar",
+ "kaupunkiQ": "Q26399",
+ "kohteet": [
+  {
+   "q": "Q822326",
+   "nimi": "Tahat",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": 23.28889,
+   "lon": 5.53361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tahat - Hoggar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tahat_-_Hoggar.jpg?width=1280",
+     "tekija": "Yshak6.9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tahat_-_Hoggar.jpg",
+     "selite": "Tahat on Algerian korkein vuori ja Ahaggarin vuoriston kruunu.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q23823515",
+   "nimi": "Assekrem",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "aliakset": [
+    "Q23823514"
+   ],
+   "lat": 23.2854,
+   "lon": 5.609,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "اسكرام 2 - تمنراست.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D8%B3%D9%83%D8%B1%D8%A7%D9%85_2_-_%D8%AA%D9%85%D9%86%D8%B1%D8%A7%D8%B3%D8%AA.jpg?width=1280",
+     "tekija": "Mohammed Amri",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D8%B3%D9%83%D8%B1%D8%A7%D9%85_2_-_%D8%AA%D9%85%D9%86%D8%B1%D8%A7%D8%B3%D8%AA.jpg",
+     "selite": "Assekremin tasangolta avautuvat tulivuorten kallioneulat kultaisessa valossa.",
+     "leveys": 3395,
+     "korkeus": 2266,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eremitage Foucauld (1991).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eremitage_Foucauld_(1991).jpg?width=1280",
+     "tekija": "Albert Backer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eremitage_Foucauld_(1991).jpg",
+     "selite": "Charles de Foucauldin kivinen erakkomaja Assekremin laella.",
+     "leveys": 2376,
+     "korkeus": 1335,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "AssekremTamanrasset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AssekremTamanrasset.jpg?width=1280",
+     "tekija": "Btsrbss",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AssekremTamanrasset.jpg",
+     "selite": "Assekremin rinteet ja kalliopiikit Tamanrassetin pohjoispuolella.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q753212",
+   "nimi": "Atakor",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": 23.28889,
+   "lon": 5.53361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adrian Massif, Hoggar National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adrian_Massif%2C_Hoggar_National_Park.jpg?width=1280",
+     "tekija": "Abderrehmann H. Dribat",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adrian_Massif%2C_Hoggar_National_Park.jpg",
+     "selite": "Vanhan tulivuoren kovettunut laavatulppa kohoaa kivierämaan yllä Atakorin alueella.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sunrise Over the Assekrem Peaks — Hoggar Mountains, Algeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise_Over_the_Assekrem_Peaks_%E2%80%94_Hoggar_Mountains%2C_Algeria.jpg?width=1280",
+     "tekija": "Rachid Hamatou",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunrise_Over_the_Assekrem_Peaks_%E2%80%94_Hoggar_Mountains%2C_Algeria.jpg",
+     "selite": "Aamu valkenee Atakorin tulivuorten kallionippujen takana.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q205792",
+   "nimi": "Tamanrasset",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 22.785,
+   "lon": 5.52278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bordj of Tamanrasset 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bordj_of_Tamanrasset_10.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bordj_of_Tamanrasset_10.jpg",
+     "selite": "Tamanrassetin savitiilinen linnoitustalo sisäpihoineen on aavikkokaupungin vanhaa perinnettä.",
+     "leveys": 3664,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bordj of Tamanrasset 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bordj_of_Tamanrasset_09.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bordj_of_Tamanrasset_09.jpg",
+     "selite": "Rakennuksen sisäpiha ja kaivo, jonka ympäri savimuurit kohoavat.",
+     "leveys": 4032,
+     "korkeus": 2880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Rue de tamanrasset 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rue_de_tamanrasset_01.jpg?width=1280",
+     "tekija": "W. Robrecht",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rue_de_tamanrasset_01.jpg",
+     "selite": "Tamanrassetin katu ja kauppakadun rakennukset.",
+     "leveys": 1409,
+     "korkeus": 1057,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3531165",
+   "nimi": "Tin Hinanin hauta",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 22.881,
+   "lon": 4.8681,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tin Hinan Tomb 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tin_Hinan_Tomb_09.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tin_Hinan_Tomb_09.jpg",
+     "selite": "Tin Hinanin haudaksi tulkittu kivikumpu on tuaregien tarun kantaäidin muistomerkki.",
+     "leveys": 3662,
+     "korkeus": 2441,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tin Hinan Tomb 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tin_Hinan_Tomb_11.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tin_Hinan_Tomb_11.jpg",
+     "selite": "Haudan kivimuurit ja sisäosan kammiot Abalessan lähellä.",
+     "leveys": 3708,
+     "korkeus": 2472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1650305",
+   "nimi": "Tazrouk",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 23.42028,
+   "lon": 6.26556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tazrouk , The highest twon in Algeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tazrouk_%2C_The_highest_twon_in_Algeria.jpg?width=1280",
+     "tekija": "Moussa Bentayeb",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tazrouk_%2C_The_highest_twon_in_Algeria.jpg",
+     "selite": "Tazroukin matalat talot ja vihreät keitaat Ahaggarin vuorten juurella.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "La porte du Hogar.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_porte_du_Hogar.jpg?width=1280",
+   "tekija": "Bouslah Lotfi",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_porte_du_Hogar.jpg",
+   "selite": "Ahaggarin vuoriston tulivuorikalliot kohoavat hiekkaisen autiomaan yllä.",
+   "leveys": 3888,
+   "korkeus": 2692,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Garet el Djenoun Teffedest Algeria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garet_el_Djenoun_Teffedest_Algeria.jpg?width=1280",
+   "tekija": "Linus Wolf",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garet_el_Djenoun_Teffedest_Algeria.jpg",
+   "selite": "Teffedestin vuoriston jylhä huippu sinisen taivaan alla pohjoisessa.",
+   "leveys": 2434,
+   "korkeus": 1975,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,182 @@
+{
+  "kaupunki": "koopenhamina",
+  "versio": 1,
+  "kuvaus": "Kööpenhaminan historiaosiot pallokierroksen lentojen ajaksi (Sisältökirjuri 13.10.2026, riippumattoman tarkistajan korjaama). Kertoja William. kesto_s on arvio (sanamäärä x 0,70 s, Pariisin osioiden mitattu keskiarvo); korvataan äänityksen todellisella kestolla. sha lisätään äänityksen jälkeen. kuva on lisäkenttä (Commons, PD; lisenssit tarkistettu Commons API:lla 13.10.2026).",
+  "osiot": [
+    {
+      "tunnus": "koopenhamina-historia-absalon",
+      "otsikko": "Absalonin linna",
+      "teksti": "Kööpenhaminan syntyvuotena pidetään perinteisesti vuotta 1167, jolloin piispa Absalon rakennutti pienelle saarelle Havn-nimisen satamapaikan edustalle linnan. Se suojasi kaupankäyntiä merirosvoilta, ja sen muuri tehtiin valkoisesta kalkkikivestä, joka tuotiin laivoilla Stevnsin kalkkikalliolta. Linna purettiin vuonna 1369, mutta sen jäännökset ovat yhä maan alla Christiansborgin palatsin alla.",
+      "kesto_s": 31.5,
+      "lahteet": [
+        "https://lex.dk/K%C3%B8benhavn_-_historie",
+        "https://denkongeligesamling.dk/en/christiansborg-palace/interior-and-objects/absalons-castle/",
+        "https://denkongeligesamling.dk/en/christiansborg-palace/interior-and-objects/the-ruins-under-christiansborg-palace/",
+        "https://en.wikipedia.org/wiki/Absalon's_Castle",
+        "https://en.wikipedia.org/wiki/Slotsholmen"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Det Kongelig Slot i Kiøbenhafn som det Å. 1679 er befunden.jpg",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Det_Kongelig_Slot_i_Ki%C3%B8benhafn_som_det_%C3%85._1679_er_befunden.jpg",
+        "tekija": "Peder Hansen Resen (1625-1688), Det Kongelige Bibliotek",
+        "lisenssi": "Public domain",
+        "leveys_px": 5720,
+        "korkeus_px": 4683,
+        "kuvaus": "Peder Hansen Resenin kuparipiirroslevy vuodelta 1679: Københavns Slot etelästä ja pohjoisesta sekä linnan pohjapiirros. Linna seisoi Slotsholmenilla Absalonin linnan jäännösten päällä. Levyssä on useita pienkuvia; rajaa tarvittaessa ylärivi."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-rundetarn",
+      "otsikko": "Tsaari ratsain torniin",
+      "teksti": "Pyöreässä tornissa ei ole portaita vaan ramppi, joka kiertää tornin ytimen seitsemän ja puoli kierrosta. Kristian IV:n torni valmistui vuonna 1642 tähtitieteilijöiden observatorioksi, ja se on Euroopan vanhimpia yhä toimivia observatoriorakennuksia. Vuonna 1716 tsaari Pietari Suuri ratsasti kerrotun mukaan tätä ramppia ylös, ja hänen vaimonsa Katariina seurasi vaunuissa.",
+      "kesto_s": 33.6,
+      "lahteet": [
+        "https://www.rundetaarn.dk/en/article/the-tsar-on-horseback/",
+        "https://www.rundetaarn.dk/en/intro/the-spiral-ramp/",
+        "https://www.rundetaarn.dk/en/intro/the-observatory/",
+        "https://www.visitcopenhagen.com/copenhagen/planning/the-round-tower-gdk410741",
+        "https://en.wikipedia.org/wiki/Rundetaarn"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Hafnia Hodierna Tab XC Rundetaarn.jpg",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Hafnia_Hodierna_Tab_XC_Rundetaarn.jpg",
+        "tekija": "Laurids de Thurah (1706-1759), Hafnia Hodierna 1748; skannaus Ib Rasmussen",
+        "lisenssi": "Public domain",
+        "leveys_px": 3334,
+        "korkeus_px": 2831,
+        "kuvaus": "Rundetårnin julkisivupiirros Laurids de Thurahin kuvateoksesta Hafnia Hodierna (1748); tornin pinnassa vuosiluku 1642."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-palo1728",
+      "otsikko": "Kolme yötä tulessa",
+      "teksti": "Lokakuun 20. päivän iltana 1728 Kööpenhaminassa syttyi palo, jota voimakas lounaistuuli levitti kadulta toiselle. Se riehui aamuun 23. päivänä ja tuhosi noin kolmasosan kaupungista. Yliopiston kirjastosta paloi noin 35 000 nidettä. Islantilaisten käsikirjoitusten keräilijän Árni Magnússonin talo paloi myös, mutta hän ystävineen pelasti suurimman osan käsikirjoituksistaan, ja ne ovat yhä tallessa. Kaupunki rakennettiin nopeasti uudelleen.",
+      "kesto_s": 38.5,
+      "lahteet": [
+        "https://en.wikipedia.org/wiki/Copenhagen_Fire_of_1728",
+        "https://uniavisen.dk/en/university-of-copenhagen-history-the-fire-of-1728/",
+        "https://www.germanicmythology.com/original/CopenhagenFire.html",
+        "https://en.wikipedia.org/wiki/%C3%81rni_Magn%C3%BAsson",
+        "https://lex.dk/K%C3%B8benhavn_-_historie"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Prospekt fra Københavns brand i 1728.png",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Prospekt_fra_K%C3%B8benhavns_brand_i_1728.png",
+        "tekija": "tuntematon (n. 1728)",
+        "lisenssi": "Public domain",
+        "leveys_px": 2000,
+        "korkeus_px": 1120,
+        "kuvaus": "Käsinvärjätty kaiverrus Kööpenhaminan palosta 1728: savupilvi nousee kaupungin yllä, edustalla purjelaivoja."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-pommitus1807",
+      "otsikko": "Yö, jona kirkon torni paloi",
+      "teksti": "Syyskuussa 1807 brittien laivasto pommitti Kööpenhaminaa kolme yötä. Tuomiokirkko Vor Frue Kirken torniin osui polttoraketti, ja torni romahti seuraavana aamuna. Kaupunki antautui, ja britit purjehtivat pois koko Tanskan kotimaan sotalaivaston mukana. Kirkko rakennettiin uudelleen C. F. Hansenin suunnitelmien mukaan ja vihittiin käyttöön vuonna 1829, ja sen koristeeksi Bertel Thorvaldsen veisti Kristuksen ja kahdentoista apostolin patsaat.",
+      "kesto_s": 38.5,
+      "lahteet": [
+        "https://lex.dk/K%C3%B8benhavns_bombardement",
+        "https://lex.dk/Engl%C3%A6nderkrigene",
+        "https://lex.dk/Vor_Frue_Kirke_(K%C3%B8benhavns_Domkirke)",
+        "https://domkirken.dk/english",
+        "https://en.wikipedia.org/wiki/Second_Battle_of_Copenhagen"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Gerhard Ludvig Lahde - Vor Frue Taarns Brand Natten mellem 4. og 5. Sept. 1807, seet fra Landemærket.png",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Gerhard_Ludvig_Lahde_-_Vor_Frue_Taarns_Brand_Natten_mellem_4._og_5._Sept._1807,_seet_fra_Landem%C3%A6rket.png",
+        "tekija": "Christoffer Wilhelm Eckersberg (1783-1853, maalaus) / Gerhard Ludvig Lahde (kaiverrus)",
+        "lisenssi": "Public domain",
+        "leveys_px": 1905,
+        "korkeus_px": 2721,
+        "kuvaus": "Vor Frue Kirken tornin palo yöllä Landemærketilta nähtynä; kuvan oman otsikon mukaan yöllä 4.-5.9.1807, rakettien jäljet taivaalla, pakenevia kaupunkilaisia."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-tivoli",
+      "otsikko": "Carstensenin puutarha",
+      "teksti": "Georg Carstensen oli entinen kuninkaan henkijääkärikunnan luutnantti ja lehtimies. Hän sai kuninkaalta viiden vuoden luvan huvipuiston perustamiseen, ja Tivoli avattiin elokuussa 1843 vanhalle linnoitusmaalle aivan Länsiportin ulkopuolelle. Luvan päätyttyä sitä ei uusittu, ja Carstensen jäi pois puiston johdosta.",
+      "kesto_s": 26.6,
+      "lahteet": [
+        "https://biografiskleksikon.lex.dk/Georg_Carstensen",
+        "https://en.wikipedia.org/wiki/Georg_Carstensen",
+        "https://en.wikipedia.org/wiki/Tivoli_Gardens",
+        "https://lex.dk/Tivoli"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Wilhelm Marstrand - Georg Carstensen - 1844.png",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Wilhelm_Marstrand_-_Georg_Carstensen_-_1844.png",
+        "tekija": "Wilhelm Marstrand (1810-1873)",
+        "lisenssi": "Public domain",
+        "leveys_px": 1448,
+        "korkeus_px": 1758,
+        "kuvaus": "Wilhelm Marstrandin muotokuva Georg Carstensenista 1844: kahdeksankulmaiset silmälasit, kiharat hiukset."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-portit",
+      "otsikko": "Portit puretaan",
+      "teksti": "Kristian IV:n uudistamat vallit portteineen ympäröivät Kööpenhaminaa yli kaksisataa vuotta. Kaupunki oli kasvanut niiden sisällä ahtaaksi, ja 1850-luvulla portit purettiin. 1860-luvun lopulla vallit lakkautettiin puolustuslaitoksena, ja kaupunki sai ottaa maat haltuunsa. Suuri osa niistä muuttui puistoiksi, ja Kastellet ja Christianshavnin valli ovat säilyneet ehjinä.",
+      "kesto_s": 30.8,
+      "lahteet": [
+        "https://lex.dk/K%C3%B8benhavns_bastion%C3%A6re_bef%C3%A6stning",
+        "https://en.wikipedia.org/wiki/Fortification_Ring,_Copenhagen",
+        "https://en.wikipedia.org/wiki/Fortifications_of_Copenhagen_(17th_century)",
+        "https://en.wikipedia.org/wiki/Copenhagen"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:H.G.F. Holm - Vesterports nedbrydning - 1859.png",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:H.G.F._Holm_-_Vesterports_nedbrydning_-_1859.png",
+        "tekija": "Heinrich Gustav Ferdinand Holm (1803-1861)",
+        "lisenssi": "Public domain",
+        "leveys_px": 2379,
+        "korkeus_px": 1571,
+        "kuvaus": "H. G. F. Holmin lavea piirros 1859: Vesterport eli Länsiportti puretaan, työmiehiä vallilla ja kaupunkilaisia katselemassa."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-nyhavn",
+      "otsikko": "Andersen Nyhavnissa",
+      "teksti": "Nyhavnin kanavan kaivoi 1670-luvulla kuningas Kristian V:n käskystä, ja työtä tekivät tanskalaiset sotilaat ja ruotsalaiset sotavangit. Vuonna 1834 sen varrelle, taloon numero 20, muutti nuori kirjailija Hans Christian Andersen. Siellä hän kirjoitti ensimmäiset satunsa, ja ne ilmestyivät pienenä vihkona vuonna 1835.",
+      "kesto_s": 28.7,
+      "lahteet": [
+        "https://en.wikipedia.org/wiki/Nyhavn",
+        "https://scandification.com/?p=1813",
+        "https://en.wikipedia.org/wiki/Nyhavn_20",
+        "https://www.routesnorth.com/denmark/copenhagen/hans-christian-andersen-sights-in-copenhagen/",
+        "https://andersen.sdu.dk/rundtom/faq/index_e.html?emne=bogudg",
+        "https://www.kb.dk/en/inspiration/book-festival-royal-danish-library/fairy-tale-author-hans-christian-andersen"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:Peter Tom-Petersen - Parti fra Nyhavn en solrig dag.png",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:Peter_Tom-Petersen_-_Parti_fra_Nyhavn_en_solrig_dag.png",
+        "tekija": "Peter Tom-Petersen",
+        "lisenssi": "Public domain",
+        "leveys_px": 3844,
+        "korkeus_px": 2882,
+        "kuvaus": "Peter Tom-Petersenin maalaus Nyhavnista Nyhavnin sillalta Kongens Nytorvia kohti; purjelaivoja kanavassa. Maalattu 1879-1926 (1800-luvun lopulta tai 1900-luvun alusta)."
+      }
+    },
+    {
+      "tunnus": "koopenhamina-historia-carlsberg",
+      "otsikko": "Panimo Valbyn mäellä",
+      "teksti": "Vuonna 1847 panimomestari J. C. Jacobsen rakennutti Kööpenhaminan ulkopuolelle Valbyn mäelle uuden panimon ja nimesi sen viisivuotiaan poikansa Carlin mukaan: Carl ja tanskan sana vuori. Hän halusi valmistaa hienompaa baijerilaista pohjahiivaolutta. Vuonna 1875 hän perusti panimon yhteyteen laboratorion, jossa Emil Chr. Hansen kehitti menetelmän oluen hiivan pitämiseksi puhtaana.",
+      "kesto_s": 33.6,
+      "lahteet": [
+        "https://en.wikipedia.org/wiki/Carlsberg_Group",
+        "https://lex.dk/Carlsberg",
+        "https://carlsberggroup.com/175-years/a-history-of-brewing/j-c-jacobsen/",
+        "https://cphpost.dk/2017-09-03/business-education/king-of-the-hill-elephants-elegance-and-170-years-of-carlsberg/",
+        "https://www.carlsberggroup.com/pursuit-of-better/scientific-discoveries/purifying-yeast/"
+      ],
+      "kuva": {
+        "commons_tiedosto": "File:JC Jacobsen 1886 by August Jerndorff.jpg",
+        "lahde_url": "https://commons.wikimedia.org/wiki/File:JC_Jacobsen_1886_by_August_Jerndorff.jpg",
+        "tekija": "August Jerndorff (1846-1906); Frederiksborgin museo",
+        "lisenssi": "Public domain",
+        "leveys_px": 1566,
+        "korkeus_px": 2362,
+        "kuvaus": "August Jerndorffin muotokuva panimomestari J. C. Jacobsenista 1886; pöydällä mikroskooppi ja laboratoriolaseja. Sama maalaus kuin aiemmin, nyt suuremmassa tarkkuudessa."
+      }
+    }
+  ]
+}

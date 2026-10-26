@@ -85,6 +85,7 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-etelanapa-asema',
+    nimio: 'Etelänapa-asema',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-etelanapa-asema-79c32f72a13f.jpg',
       lyhyt: 'Amundsen–Scottin tutkimusasema etelänavalla.',
@@ -166,6 +167,7 @@ export const MAASTOKOHTEET_ATA = [
    */
   {
     id: 'ata-kuivat-laaksot',
+    nimio: 'Kuivat laaksot',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/ata-maasto-ata-kuivat-laaksot-66c828ccee37.jpg',
       lyhyt: 'McMurdon kuivat laaksot ilmasta nähtynä.',

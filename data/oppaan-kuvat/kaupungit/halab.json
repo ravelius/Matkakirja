@@ -1,0 +1,495 @@
+{
+ "kaupunki": "halab",
+ "kaupunkiQ": "Q41183",
+ "kohteet": [
+  {
+   "q": "Q206231",
+   "nimi": "Aleppon linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 36.19917,
+   "lon": 37.1625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Citadel of Aleppo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadel_of_Aleppo.jpg?width=1280",
+     "tekija": "Memorino",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Citadel_of_Aleppo.jpg",
+     "selite": "Aleppon linnoitus kohoaa keinotekoisen kummun päällä vanhankaupungin keskellä.",
+     "leveys": 1709,
+     "korkeus": 836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Citadel of Aleppo, Aleppo, Syria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadel_of_Aleppo%2C_Aleppo%2C_Syria.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Citadel_of_Aleppo%2C_Aleppo%2C_Syria.jpg",
+     "selite": "Linnoituksen sisäänkäyntiin johtaa kaareva kivisilta, jonka yli kuljetaan massiiviseen porttitorniin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "15.8 Aleppo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/15.8_Aleppo.jpg?width=1280",
+     "tekija": "Haubi|Gerhard Haubold",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:15.8_Aleppo.jpg",
+     "selite": "Linnoituksen portti on rakennettu varustukseksi, jossa on useita mutkaisia ja puolustettuja vaiheita.",
+     "leveys": 4860,
+     "korkeus": 3132,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Aleppo Citadel 05 - Inner gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Citadel_05_-_Inner_gate.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Citadel_05_-_Inner_gate.jpg",
+     "selite": "Linnoituksen sisäportti kuuluu mamelukkiajan vahvistuksiin.",
+     "leveys": 2950,
+     "korkeus": 2420,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 5,
+     "tiedosto": "Aleppo Citadel 10 - Mosque of Abraham.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Citadel_10_-_Mosque_of_Abraham.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Citadel_10_-_Mosque_of_Abraham.jpg",
+     "selite": "Linnoituksen sisällä on moskeija ja raunioituneita palatsirakennuksia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4115349",
+   "nimi": "Aleppon vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 36.18333,
+   "lon": 37.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aleppo 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_03.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_03.jpg",
+     "selite": "Aleppon vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1986.",
+     "leveys": 3456,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo 0253.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_0253.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_0253.jpg",
+     "selite": "Vanhankaupungin kapeat kivikujat kiertävät moskeijoita, khaneja ja asuintaloja.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aleppo - next to castle (7684670086).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_-_next_to_castle_(7684670086).jpg?width=1280",
+     "tekija": "Beshr Abdulhadi from Gaziantep, Turkey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_-_next_to_castle_(7684670086).jpg",
+     "selite": "Vanhankaupungin ottomaanikauden talojen puiset ulkonevat ikkunaritilät suojaavat kadulle avautuvia huoneita.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Aleppo - Ancient City of Aleppo - 20110326181828.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_-_Ancient_City_of_Aleppo_-_20110326181828.jpg?width=1280",
+     "tekija": "KevForkan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_-_Ancient_City_of_Aleppo_-_20110326181828.jpg",
+     "selite": "Katetut basaarikadut jatkuvat vanhankaupungin halki valaistuina myös iltaisin.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1481968",
+   "nimi": "Aleppon suurmoskeija",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 36.19949,
+   "lon": 37.15691,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Mosque of Aleppo, Panoramic view 2, Aleppo, Syria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_Aleppo%2C_Panoramic_view_2%2C_Aleppo%2C_Syria.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_Aleppo%2C_Panoramic_view_2%2C_Aleppo%2C_Syria.jpg",
+     "selite": "Aleppon suurmoskeijan eli Umayyadien moskeijan minareetti hallitsee vanhankaupungin kattomaisemaa.",
+     "leveys": 4000,
+     "korkeus": 2248,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo great mosque aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_great_mosque_aerial_view.jpg?width=1280",
+     "tekija": "Lazhar Neftien",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_great_mosque_aerial_view.jpg",
+     "selite": "Moskeija sijaitsee keskellä vanhaakaupunkia basaarien ja asuinkortteleiden ympäröimänä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aleppo Great mosque2 Alp.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Great_mosque2_Alp.jpg?width=1280",
+     "tekija": "Preacher lad",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Great_mosque2_Alp.jpg",
+     "selite": "Moskeijan seljuk-ajan minareetti on rakennettu 1090-luvulla.",
+     "leveys": 2809,
+     "korkeus": 2098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "AleppoGreatMosqueDetail.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AleppoGreatMosqueDetail.jpg?width=1280",
+     "tekija": "Obersachse",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AleppoGreatMosqueDetail.jpg",
+     "selite": "Moskeijan pihaa koristavat suihkulähde ja kuviolliset kaiteet.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4837211",
+   "nimi": "Antiokian portti",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 36.19868,
+   "lon": 37.15146,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aleppo Bab Antakya 9064.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Bab_Antakya_9064.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Bab_Antakya_9064.jpg",
+     "selite": "Antiokian portti on yksi vanhankaupungin muurin vanhoista porteista, ja muuri jatkuu kadun varrella.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo Bab Antakya 9067.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Bab_Antakya_9067.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Bab_Antakya_9067.jpg",
+     "selite": "Portin holvikäytävä avautuu muurin läpi vanhaankaupunkiin.",
+     "leveys": 2832,
+     "korkeus": 4256,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4837220",
+   "nimi": "Qinnesrinin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 36.19444,
+   "lon": 37.15556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bab Qinnasrin2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Qinnasrin2010.jpg?width=1280",
+     "tekija": "Nicholas Johnson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Qinnasrin2010.jpg",
+     "selite": "Qinnesrinin portti on kaupungin muurin eteläportti, jonka kivipinnassa vuorottelevat vaaleat ja tummat kerrokset.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4022689",
+   "nimi": "Khusrawiyyan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 36.19694,
+   "lon": 37.16069,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Khusruwiyah Mosque, Aleppo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khusruwiyah_Mosque%2C_Aleppo.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khusruwiyah_Mosque%2C_Aleppo.jpg",
+     "selite": "Khusrawiyyan moskeija on 1500-luvun ottomaanikauden rakennus, jota on pidetty Sinanin varhaisena työnä.",
+     "leveys": 3351,
+     "korkeus": 2399,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo Al Khosrowiye madrasa 9782.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Al_Khosrowiye_madrasa_9782.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Al_Khosrowiye_madrasa_9782.jpg",
+     "selite": "Moskeijaan kuuluu madrasa, jonka pihaa kiertää pylväiden kannattama kaarikäytävä.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aleppo Al Khosrowiye madrasa 9788.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Al_Khosrowiye_madrasa_9788.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Al_Khosrowiye_madrasa_9788.jpg",
+     "selite": "Moskeijan kupolin sisäpuolta koristavat vuorottelevat tummat ja vaaleat kivikerrokset.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15195789",
+   "nimi": "Bab al-Farajin kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 36.20402,
+   "lon": 37.15275,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aleppo Bab al-Faraj Clock Tower 8936.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Bab_al-Faraj_Clock_Tower_8936.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Bab_al-Faraj_Clock_Tower_8936.jpg",
+     "selite": "Bab al-Farajin kellotorni valmistui ottomaanien aikana 1890-luvun lopulla uuden kaupunginosan aukion laidalle.",
+     "leveys": 2832,
+     "korkeus": 4256,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo - Ancient City of Aleppo - 20110326202017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_-_Ancient_City_of_Aleppo_-_20110326202017.jpg?width=1280",
+     "tekija": "KevForkan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_-_Ancient_City_of_Aleppo_-_20110326202017.jpg",
+     "selite": "Kellotorni valaistuna illalla Bab al-Farajin vilkkaan liikenneaukion reunalla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aleppo Bab al-Faraj Clock Tower 8938.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_Bab_al-Faraj_Clock_Tower_8938.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_Bab_al-Faraj_Clock_Tower_8938.jpg",
+     "selite": "Tornin muotoilu muistuttaa vanhoja minareetteja.",
+     "leveys": 2832,
+     "korkeus": 4256,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2365332",
+   "nimi": "Al-Madinan basaari",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 36.2,
+   "lon": 37.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aleppo trziste 2001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_trziste_2001.JPG?width=1280",
+     "tekija": "Krokodyl",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_trziste_2001.JPG",
+     "selite": "Al-Madinan basaari on vanhankaupungin kilometrien pituinen katettu kauppakatujen verkosto.",
+     "leveys": 1200,
+     "korkeus": 814,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1164599",
+   "nimi": "Aleppon kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 36.205,
+   "lon": 37.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrance of the National Museum Aleppo Syria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_of_the_National_Museum_Aleppo_Syria.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Xvlun~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_of_the_National_Museum_Aleppo_Syria.jpg",
+     "selite": "Museon sisäänkäyntiä vartioivat jättimäiset basalttiveistokset Tell Halafin muinaiskaupungista.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo National Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_National_Museum.jpg?width=1280",
+     "tekija": "Shahdddddddd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_National_Museum.jpg",
+     "selite": "Museon puutarhassa on esillä muinaisia kiviveistoksia.",
+     "leveys": 4080,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5472979",
+   "nimi": "Neljänkymmenen marttyyrin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 36.20619,
+   "lon": 37.15531,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Forty Martyrs Cathedral of Aleppo, the belfry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forty_Martyrs_Cathedral_of_Aleppo%2C_the_belfry.jpg?width=1280",
+     "tekija": "Kevorkmail (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Forty_Martyrs_Cathedral_of_Aleppo%2C_the_belfry.jpg",
+     "selite": "Armenialaisen apostolisen kirkon katedraalin kellotorni kohoaa Jdeidehin kristityn kaupunginosan yllä.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aleppo (Halab), Eingang zur Armenischen Kirche, beim Abendspaziergang (24834288558).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_(Halab)%2C_Eingang_zur_Armenischen_Kirche%2C_beim_Abendspaziergang_(24834288558).jpg?width=1280",
+     "tekija": "Herbert Frank from Wien (Vienna), AT",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_(Halab)%2C_Eingang_zur_Armenischen_Kirche%2C_beim_Abendspaziergang_(24834288558).jpg",
+     "selite": "Katedraalin sisäpiha ja kellotorni sijaitsevat kaupungin vanhan kristityn kaupunginosan sydämessä.",
+     "leveys": 1645,
+     "korkeus": 1884,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aleppo skyline, Syria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_skyline%2C_Syria.jpg?width=1280",
+   "tekija": "Vyacheslav Argenberg",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_skyline%2C_Syria.jpg",
+   "selite": "Aleppon vanhakaupunki levittäytyy matalien talojen, kupolien ja minareettien mereksi.",
+   "leveys": 4000,
+   "korkeus": 2248,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aleppo skyline 2011-01-08 (02).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleppo_skyline_2011-01-08_(02).jpg?width=1280",
+   "tekija": "Preacher lad",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aleppo_skyline_2011-01-08_(02).jpg",
+   "selite": "Linnoituksen muurilta näkyy basaarikatujen ja vanhankaupungin kattojen verkko.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q12184769",
+   "nimi": "Arghunin sairaala",
+   "peruste": "pelin nosto",
+   "lat": 36.19673,
+   "lon": 37.15688,
+   "syy": "ei vapaata kuvaa kohteesta, vain nimikyltti"
+  }
+ ]
+}

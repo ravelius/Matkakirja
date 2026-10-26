@@ -24,10 +24,8 @@
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -52,7 +50,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 /*
  * TYÖPÖYDÄN RUUTU, EI PUHELIMEN. Puhelimella (ja kertojan luennan
  * aikana) pulun kupla ALOITTAA suljettuna — js/ui-apurit.js

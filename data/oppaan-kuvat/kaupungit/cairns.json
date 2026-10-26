@@ -1,0 +1,532 @@
+{
+ "kaupunki": "cairns",
+ "kaupunkiQ": "Q189133",
+ "kohteet": [
+  {
+   "q": "Q7343",
+   "nimi": "Iso Valliriutta",
+   "peruste": "UNESCO",
+   "koko_m": 5000,
+   "lat": -16.4,
+   "lon": 145.8,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial View of Great Barrier Reef (Ank Kumar) 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_View_of_Great_Barrier_Reef_(Ank_Kumar)_04.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Great_Barrier_Reef_(Ank_Kumar)_04.jpg",
+     "selite": "Ilmasta riutta on turkoosi laikkukuvio, jossa hiekkasärkät kohoavat vedenpinnan yläpuolelle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial View of Great Barrier Reef, Queensland (Ank Kumar) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_View_of_Great_Barrier_Reef%2C_Queensland_(Ank_Kumar)_02.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Great_Barrier_Reef%2C_Queensland_(Ank_Kumar)_02.jpg",
+     "selite": "Riutan ulkoreunalla matala korallivyöhyke vaihtuu äkkiä tummansiniseen syvänteeseen.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Coral Reef at Green Island QUT-7257-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coral_Reef_at_Green_Island_QUT-7257-1.jpg?width=1280",
+     "tekija": "Jack Bain",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coral_Reef_at_Green_Island_QUT-7257-1.jpg",
+     "selite": "Green Islandin korallisaari on matkailijoiden tavallisin riuttakohde Cairnsin edustalla.",
+     "leveys": 5000,
+     "korkeus": 3352,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Great Barrier Reef Corals.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Barrier_Reef_Corals.jpg?width=1280",
+     "tekija": "Gökhan Tolun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Barrier_Reef_Corals.jpg",
+     "selite": "Riutan korallipuutarhassa kasvavat rinnakkain haarakorallit ja pehmytkorallit.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1135808",
+   "nimi": "Queenslandin tropiikki",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -17.2,
+   "lon": 145.8,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Daintree National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daintree_National_Park.jpg?width=1280",
+     "tekija": "User:Diliff",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daintree_National_Park.jpg",
+     "selite": "Maailmanperintöalueen sademetsä on Maan vanhimpia, ja sen purot virtaavat sammaleisten kivien lomitse.",
+     "leveys": 1536,
+     "korkeus": 936,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Angiopteris-evecta-lamb-range1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angiopteris-evecta-lamb-range1.jpg?width=1280",
+     "tekija": "Steve Fitzgerald",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angiopteris-evecta-lamb-range1.jpg",
+     "selite": "Lamb Rangen sademetsässä jättimäiset saniaiset reunustavat tietä.",
+     "leveys": 1382,
+     "korkeus": 1037,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5209517",
+   "nimi": "Daintreen sademetsä",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -16.2,
+   "lon": 145.4,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Complex mesophyll vine forest Daintree National Park Queensland 1986 IMG 0040.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Complex_mesophyll_vine_forest_Daintree_National_Park_Queensland_1986_IMG_0040.jpg?width=1280",
+     "tekija": "John Robert McPherson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Complex_mesophyll_vine_forest_Daintree_National_Park_Queensland_1986_IMG_0040.jpg",
+     "selite": "Daintreen vuoristoiset rinteet ovat tiheän sademetsän peitossa aina rantaan asti.",
+     "leveys": 6400,
+     "korkeus": 4336,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20160923113050 - One of the many rivers in the Daintree (29917413112).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160923113050_-_One_of_the_many_rivers_in_the_Daintree_(29917413112).jpg?width=1280",
+     "tekija": "Felix Dance",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160923113050_-_One_of_the_many_rivers_in_the_Daintree_(29917413112).jpg",
+     "selite": "Daintreen metsän halki virtaa lukuisia jokia, joiden rannoilla kasvaa mangrovea.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Daintree Rainforest 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daintree_Rainforest_2.jpg?width=1280",
+     "tekija": "Killerscene",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daintree_Rainforest_2.jpg",
+     "selite": "Sademetsän kuuma ja kostea kasvusto on yli 100 miljoonaa vuotta vanhaa metsätyyppiä.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q176118",
+   "nimi": "Cape Tribulation",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -16.06667,
+   "lon": 145.46667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cape tribulation.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_tribulation.jpg?width=1280",
+     "tekija": "Mwarnes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_tribulation.jpg",
+     "selite": "Cape Tribulationissa sademetsä kasvaa suoraan rantahiekkaan, riutta alkaa vain kilometrien päästä.",
+     "leveys": 4829,
+     "korkeus": 3219,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cape Tribulation (3610978311).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Tribulation_(3610978311).jpg?width=1280",
+     "tekija": "Paul Holloway from Birmingham, United Kingdom",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Tribulation_(3610978311).jpg",
+     "selite": "Pitkä hiekkaranta kaartuu vehreiden vuorten juurella Korallimeren rannalla.",
+     "leveys": 3142,
+     "korkeus": 2095,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A palm on Cape Tribulation beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_palm_on_Cape_Tribulation_beach.jpg?width=1280",
+     "tekija": "Emily Cox",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_palm_on_Cape_Tribulation_beach.jpg",
+     "selite": "Kookospalmu nojaa rannalla, taustalla Korallimeren pieni saari.",
+     "leveys": 2441,
+     "korkeus": 3341,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38531",
+   "nimi": "Barron Falls",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -16.83444,
+   "lon": 145.64361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Barron Falls - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barron_Falls_-_panoramio.jpg?width=1280",
+     "tekija": "Korkut Tas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barron_Falls_-_panoramio.jpg",
+     "selite": "Barron Falls putoaa Kurandan rotkoon, ja kuivakaudella kallioseinämät ovat lähes paljaat.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barron Falls 5 - Cairns, Queensland, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barron_Falls_5_-_Cairns%2C_Queensland%2C_Australia.jpg?width=1280",
+     "tekija": "Rob and Stephanie Levy from Townsville, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barron_Falls_5_-_Cairns%2C_Queensland%2C_Australia.jpg",
+     "selite": "Sadekaudella Barron-joki syöksyy rotkoon ruskeana kuohuna.",
+     "leveys": 1600,
+     "korkeus": 1204,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Barron Falls 1 - Cairns, Queensland, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barron_Falls_1_-_Cairns%2C_Queensland%2C_Australia.jpg?width=1280",
+     "tekija": "Rob and Stephanie Levy from Townsville, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barron_Falls_1_-_Cairns%2C_Queensland%2C_Australia.jpg",
+     "selite": "Joki laskeutuu portaittain kalliokynnysten yli ennen suurta pudotusta.",
+     "leveys": 1600,
+     "korkeus": 1204,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3048580",
+   "nimi": "Kuranda Scenic Railway",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -16.8849,
+   "lon": 145.702,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AUS Kuranda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Kuranda.jpg?width=1280",
+     "tekija": "Bgabel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Kuranda.jpg",
+     "selite": "Rata kiipeää Cairnsin tasangolta Kurandan ylängölle jyrkkien rotkojen reunoja pitkin.",
+     "leveys": 1611,
+     "korkeus": 1151,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Building Stoney Creek Bridge for the Cairns to Kuranda Railway, 1890.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_Stoney_Creek_Bridge_for_the_Cairns_to_Kuranda_Railway%2C_1890.jpg?width=1280",
+     "tekija": "Queensland State Archives",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_Stoney_Creek_Bridge_for_the_Cairns_to_Kuranda_Railway%2C_1890.jpg",
+     "selite": "Stoney Creekin ristikkosiltaa pystytettiin vuonna 1890 kallionseinämän ja putouksen viereen.",
+     "leveys": 3000,
+     "korkeus": 2283,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q755509",
+   "nimi": "Atherton Tableland",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -17.16667,
+   "lon": 145.53333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AthertonTableland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AthertonTableland.jpg?width=1280",
+     "tekija": "Mike Lehmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AthertonTableland.jpg",
+     "selite": "Atherton Tableland on viileä, hedelmällinen ylänkö Cairnsin takana, laaja laidunten ja metsien mosaiikki.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Atherton Tableland (2049556279).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atherton_Tableland_(2049556279).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atherton_Tableland_(2049556279).jpg",
+     "selite": "Ylängön putouksissa joet putoavat vulkaanisten kallioiden yli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Atherton Tableland (2050341646).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atherton_Tableland_(2050341646).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atherton_Tableland_(2050341646).jpg",
+     "selite": "Millaa Millaa Falls on ylängön kuvatuimpia putouksia, ja sen allas kutsuu uimaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q23931613",
+   "nimi": "St Monican vanha katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -16.9171,
+   "lon": 145.7721,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Monica's Old Cathedral, Cairns, 2025, 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Monica's_Old_Cathedral%2C_Cairns%2C_2025%2C_01.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Monica's_Old_Cathedral%2C_Cairns%2C_2025%2C_01.jpg",
+     "selite": "Keltainen katedraali edustaa Cairnsin 1920-luvun art deco -arkkitehtuuria.",
+     "leveys": 3954,
+     "korkeus": 2966,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Monica's Old Cathedral, Cairns, 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Monica's_Old_Cathedral%2C_Cairns%2C_2025.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Monica's_Old_Cathedral%2C_Cairns%2C_2025.jpg",
+     "selite": "Illalla valaistu julkisivu hohtaa keltaisena Cairnsin keskustassa.",
+     "leveys": 3942,
+     "korkeus": 2956,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5017724",
+   "nimi": "Cairnsin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -16.9257,
+   "lon": 145.7712,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cairns Railway Station, Queensland, Jan 2013.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_Railway_Station%2C_Queensland%2C_Jan_2013.JPG?width=1280",
+     "tekija": "TravellerQLD",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_Railway_Station%2C_Queensland%2C_Jan_2013.JPG",
+     "selite": "Cairnsin asemarakennus on Kuranda Scenic Railwayn lähtöpaikka.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairns Railway Station, c.1950s.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_Railway_Station%2C_c.1950s.jpg?width=1280",
+     "tekija": "Queensland State Archives",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_Railway_Station%2C_c.1950s.jpg",
+     "selite": "Cairnsin asema 1950-luvulla: matala moderni asemarakennus palveli Kuranda-rataa ja pohjoisen junaliikennettä.",
+     "leveys": 3690,
+     "korkeus": 2954,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24190646",
+   "nimi": "Cairnsin oikeustalojen kortteli",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -16.9213,
+   "lon": 145.7777,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Former Cairns Court House, 2025, 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_Cairns_Court_House%2C_2025%2C_02.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Former_Cairns_Court_House%2C_2025%2C_02.jpg",
+     "selite": "Vuonna 1921 valmistunut oikeustalo toimii nykyään galleriana, jonka takana kohoaa hotellitorni.",
+     "leveys": 7852,
+     "korkeus": 5889,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Front facade Cairns Court House, 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_facade_Cairns_Court_House%2C_2025.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_facade_Cairns_Court_House%2C_2025.jpg",
+     "selite": "Valaistu oikeustalo ja sen pyöreä nurmikko hohtavat yöllä Cairnsin keskustassa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24190607",
+   "nimi": "Kaupunginvaltuuston talo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -16.9204,
+   "lon": 145.7752,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "City Library, Cairns, North Queensland, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_Library%2C_Cairns%2C_North_Queensland%2C_Australia.jpg?width=1280",
+     "tekija": "Paul Walter",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_Library%2C_Cairns%2C_North_Queensland%2C_Australia.jpg",
+     "selite": "Valtuuston talon klassinen pylväsjulkisivu on yksi Cairnsin keskustan edustavimmista rakennuksista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairns City Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_City_Library.jpg?width=1280",
+     "tekija": "Neal Jennings",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_City_Library.jpg",
+     "selite": "Rakennus ja sen puutarha toimivat nykyään kaupungin kirjastona.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24190599",
+   "nimi": "Cairnsin tullitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": -16.9235,
+   "lon": 145.7791,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cairns Customs House, 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_Customs_House%2C_2025.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_Customs_House%2C_2025.jpg",
+     "selite": "Vanha tullitalo on satamakaupungin vaaleansävyinen art deco -rakennus.",
+     "leveys": 4689,
+     "korkeus": 5090,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Cairns (Queensland).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_(Queensland).jpg?width=1280",
+   "tekija": "Bernard Gagnon",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_(Queensland).jpg",
+   "selite": "Cairnsin matala keskusta on kapealla rantakaistaleella, takana nousevat Suuren vedenjakajavuoriston vihreät huiput.",
+   "leveys": 4776,
+   "korkeus": 3184,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Cairns City from the air - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairns_City_from_the_air_-_panoramio.jpg?width=1280",
+   "tekija": "Alex Monckton",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairns_City_from_the_air_-_panoramio.jpg",
+   "selite": "Ilmasta näkyy Trinity Bayn turkoosi lahti ja Cairnsin kaupunki sen reunalla.",
+   "leveys": 1919,
+   "korkeus": 1080,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

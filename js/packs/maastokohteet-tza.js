@@ -166,7 +166,7 @@ export const MAASTOKOHTEET_TZA = [
       + 'kulkee maailman suurin vuotuinen eläinvaellus: yli 1,5 miljoonaa valkopartagnuuta ja '
       + '250 000 seepraa, mukana 400 000–500 000 thomsoningasellia ja pienempiä eland-laumoja. '
       + 'Puistossa elää myös Afrikan suurin leijonakanta, yli 3 000 yksilöä. Nimi johdetaan usein '
-      + 'maasaiden sanasta siringet, "maa, joka jatkuu loputtomiin", vaikka sanaa ei löydy kielen '
+      + 'maasaiden sanasta siringet, ”maa, joka jatkuu loputtomiin”, vaikka sanaa ei löydy kielen '
       + 'sanakirjoista. Alue tuli kansallispuistoksi 1940, ja 1959 sen itäosasta erotettiin '
       + 'Ngorongoron suojelualue, jotta maasait saivat jatkaa siellä maankäyttöään. Puisto tuli '
       + 'tunnetuksi 1959, kun Bernhard ja Michael Grzimek julkaisivat kirjan ja elokuvan '
@@ -178,6 +178,7 @@ export const MAASTOKOHTEET_TZA = [
   {
     id: 'kondoa',
     nimi: 'Kondoan kalliotaide',
+    nimio: 'Kondoa',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka maalasi Kondoan kuvat?',
@@ -247,7 +248,7 @@ export const MAASTOKOHTEET_TZA = [
       maailmankartta: { x: 7130.1, y: 3426.6 },
     },
     teksti: 'Bagamoyo oli 1800-luvun lopulla Itä-Afrikan tärkein kauppasatama. Nimi merkitsee '
-      + 'swahiliksi "laske sydämesi maahan", ja siitä kiistellään yhä: tarkoittiko se kantajaa, '
+      + 'swahiliksi ”laske sydämesi maahan”, ja siitä kiistellään yhä: tarkoittiko se kantajaa, '
       + 'joka sai vihdoin laskea kuormansa kuljetettuaan kolmisenkymmentä kiloa norsunluuta '
       + 'sisämaasta, vai orjaa, joka sai luopua toivosta. Arkistotutkimus viittaa siihen, että '
       + 'päävientitavara oli norsunluu ja että moni kantaja oli palkkatyöläinen — mutta '
@@ -279,9 +280,9 @@ export const MAASTOKOHTEET_TZA = [
       + 'vallan alla. Richard Burton ja John Speke saapuivat täällä ensimmäisinä '
       + 'eurooppalaisina Tanganjikajärven rannalle 1858. Kuuluisimman hetkensä kaupunki koki 10. '
       + 'marraskuuta 1871, kun Henry Stanley löysi David Livingstonen, jonka moni oli jo '
-      + 'luullut kuolleeksi, ja lausui kertoman mukaan sanat "Tohtori Livingstone, oletan?" '
+      + 'luullut kuolleeksi, ja lausui kertoman mukaan sanat ”Tohtori Livingstone, oletan?” '
       + 'Livingstone itse kirjoitti, että hänen palvelijansa Susi tuli juosten huutaen '
-      + '"englantilainen, minä näen hänet!" ja että karavaanin kärjessä liehunut Yhdysvaltain '
+      + '”englantilainen, minä näen hänet!” ja että karavaanin kärjessä liehunut Yhdysvaltain '
       + 'lippu kertoi tulijan kansallisuuden. Tapaamisen paikalla on nyt muistomerkki ja pieni '
       + 'museo, ja torin lähellä kulkee entinen orjatie. Lontoon lähetysseura perusti '
       + 'ensimmäisen Tanganjikan rannan asemansa Ujijiin 1878.',

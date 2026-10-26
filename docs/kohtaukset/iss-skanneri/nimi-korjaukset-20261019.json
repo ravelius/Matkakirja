@@ -1,0 +1,229 @@
+{
+ "_meta": "Nimien kirjoitusvirheiden korjaus (PT 19.10.); tunnus ei muutu, vain nimi",
+ "korjaukset": {
+  "v-ouro-preto": {
+   "vanha": "Ouro preto",
+   "uusi": "Ouro Preto"
+  },
+  "v-alice-springs": {
+   "vanha": "Alice springs",
+   "uusi": "Alice Springs"
+  },
+  "v-mount-isa": {
+   "vanha": "Mount isa",
+   "uusi": "Mount Isa"
+  },
+  "v-coober-pedy": {
+   "vanha": "Coober pedy",
+   "uusi": "Coober Pedy"
+  },
+  "v-al-kufra": {
+   "vanha": "Al kufra",
+   "uusi": "Al-Kufra"
+  },
+  "v-dinaariset-alpit": {
+   "vanha": "Dinaariset alpit",
+   "uusi": "Dinaariset Alpit"
+  },
+  "v-grand-canyon": {
+   "vanha": "Grand canyon",
+   "uusi": "Grand Canyon"
+  },
+  "v-japanin-alpit": {
+   "vanha": "Japanin alpit",
+   "uusi": "Japanin Alpit"
+  },
+  "v-kaakkois-australian-ylangot": {
+   "vanha": "Kaakkois-australian ylängöt",
+   "uusi": "Kaakkois-Australian ylängöt"
+  },
+  "v-lansi-ghatit": {
+   "vanha": "Länsi-ghatit",
+   "uusi": "Länsi-Ghatit"
+  },
+  "v-machu-picchu": {
+   "vanha": "Machu picchu",
+   "uusi": "Machu Picchu"
+  },
+  "v-milford-sound": {
+   "vanha": "Milford sound",
+   "uusi": "Milford Sound"
+  },
+  "v-rub-al-khali": {
+   "vanha": "Rub al-khali",
+   "uusi": "Rub al-Khali"
+  },
+  "v-sierra-madre-occidental": {
+   "vanha": "Sierra madre occidental",
+   "uusi": "Sierra Madre Occidental"
+  },
+  "v-sierra-madre-oriental": {
+   "vanha": "Sierra madre oriental",
+   "uusi": "Sierra Madre Oriental"
+  },
+  "v-sierra-nevada": {
+   "vanha": "Sierra nevada",
+   "uusi": "Sierra Nevada"
+  },
+  "v-uuden-guinean-ylangot": {
+   "vanha": "Uuden-guinean ylängöt",
+   "uusi": "Uuden-Guinean ylängöt"
+  },
+  "v-uuden-seelannin-alpit": {
+   "vanha": "Uuden-seelannin alpit",
+   "uusi": "Uuden-Seelannin Alpit"
+  },
+  "k-santa-cruz": {
+   "vanha": "Santa Cruz",
+   "uusi": "Santa Cruz de la Sierra"
+  },
+  "k-sana": {
+   "vanha": "Sana",
+   "uusi": "Sanaa"
+  },
+  "k-shenyeng": {
+   "vanha": "Shenyeng",
+   "uusi": "Shenyang"
+  },
+  "k-riyadh": {
+   "vanha": "Riyadh",
+   "uusi": "Riad"
+  },
+  "k-luan": {
+   "vanha": "Luan",
+   "uusi": "Lu’an"
+  },
+  "k-yingkow": {
+   "vanha": "Yingkow",
+   "uusi": "Yingkou"
+  },
+  "k-jian": {
+   "vanha": "Jian",
+   "uusi": "Ji’an"
+  },
+  "k-jinxi": {
+   "vanha": "Jinxi",
+   "uusi": "Huludao"
+  },
+  "k-jianmen": {
+   "vanha": "Jianmen",
+   "uusi": "Jingmen"
+  },
+  "k-vishakhapatnam": {
+   "vanha": "Vishakhapatnam",
+   "uusi": "Visakhapatnam"
+  },
+  "k-nasik": {
+   "vanha": "Nasik",
+   "uusi": "Nashik"
+  },
+  "k-xiangtai": {
+   "vanha": "Xiangtai",
+   "uusi": "Xingtai"
+  },
+  "k-panama": {
+   "vanha": "Panama",
+   "uusi": "Panama City"
+  },
+  "k-taian": {
+   "vanha": "Taian",
+   "uusi": "Tai’an"
+  },
+  "k-allahabad": {
+   "vanha": "Allahabad",
+   "uusi": "Prayagraj"
+  },
+  "k-port-elizabeth": {
+   "vanha": "Port Elizabeth",
+   "uusi": "Gqeberha"
+  },
+  "k-ft-worth": {
+   "vanha": "Ft. Worth",
+   "uusi": "Fort Worth"
+  },
+  "k-huaiyin": {
+   "vanha": "Huaiyin",
+   "uusi": "Huai’an"
+  },
+  "k-mudangiang": {
+   "vanha": "Mudangiang",
+   "uusi": "Mudanjiang"
+  },
+  "k-banghazi": {
+   "vanha": "Banghazi",
+   "uusi": "Bengasi"
+  },
+  "k-sholapur": {
+   "vanha": "Sholapur",
+   "uusi": "Solapur"
+  },
+  "k-hamhung": {
+   "vanha": "Hamhung",
+   "uusi": "Hamhŭng"
+  },
+  "k-bur-said": {
+   "vanha": "Bur Said",
+   "uusi": "Port Said"
+  },
+  "k-bandjarmasin": {
+   "vanha": "Bandjarmasin",
+   "uusi": "Banjarmasin"
+  },
+  "k-qui-nhon": {
+   "vanha": "Qui Nhon",
+   "uusi": "Quy Nhon"
+  },
+  "k-malacca": {
+   "vanha": "Malacca",
+   "uusi": "Malakka"
+  },
+  "k-dehra-dun": {
+   "vanha": "Dehra Dun",
+   "uusi": "Dehradun"
+  },
+  "k-raurkela": {
+   "vanha": "Raurkela",
+   "uusi": "Rourkela"
+  },
+  "k-el-mansura": {
+   "vanha": "El Mansura",
+   "uusi": "Mansoura"
+  },
+  "k-tarabulus": {
+   "vanha": "Tarabulus",
+   "uusi": "Tripoli (Libanon)"
+  },
+  "k-gaza-city": {
+   "vanha": "Gaza City",
+   "uusi": "Gaza"
+  },
+  "k-kota-baharu": {
+   "vanha": "Kota Baharu",
+   "uusi": "Kota Bharu"
+  },
+  "k-davangere": {
+   "vanha": "Davangere",
+   "uusi": "Davanagere"
+  },
+  "k-zhaotang": {
+   "vanha": "Zhaotang",
+   "uusi": "Zhaotong"
+  },
+  "k-fargona": {
+   "vanha": "Fargona",
+   "uusi": "Fergana"
+  },
+  "k-damanhur": {
+   "vanha": "Damanhûr",
+   "uusi": "Damanhur"
+  },
+  "k-el-minya": {
+   "vanha": "El Minya",
+   "uusi": "Minya"
+  },
+  "k-saidu": {
+   "vanha": "Saidu",
+   "uusi": "Saidu Sharif"
+  }
+ }
+}

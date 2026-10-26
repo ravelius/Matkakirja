@@ -163,8 +163,8 @@ export const FOKUSKOHTEET_EGY = [
       maailmankartta: { x: 6830.6, y: 2136.9 },
     },
     teksti: 'Aleksandrian kirjasto oli antiikin suurimpia, ja se kuului '
-      + 'laajempaan tutkimuslaitokseen nimeltä Mouseion — "muusien '
-      + 'talo". Ajatus kaikki maailman kirjat kokoavasta kirjastosta '
+      + 'laajempaan tutkimuslaitokseen nimeltä Mouseion — ”muusien '
+      + 'talo”. Ajatus kaikki maailman kirjat kokoavasta kirjastosta '
       + 'esitettiin Ptolemaios ensimmäiselle, mutta rakennettu se '
       + 'todennäköisesti vasta hänen poikansa aikana. Papyruskääröjä '
       + 'kertyi nopeasti, sillä kuninkaat ostivat ja takavarikoivat '
@@ -268,7 +268,7 @@ export const FOKUSKOHTEET_EGY = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Kivenhioja viimeistelee saumaa: 2,3 miljoonaa lohkaretta vaati valtavan määrän työtä ja käsiä.',
-      selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
+      selite: 'Kuvan kivenhioja tunnustelee sauman sileyttä samalla kun '
         + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '
         + 'ihmisen kokoiseksi: 2,3 miljoonaa lohkaretta on tarkoittanut '
         + 'lukemattomia työvuoroja, aterioita, loukkaantumisia ja '

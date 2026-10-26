@@ -14,7 +14,7 @@
 import { hiljennaAmbienssi } from './ambience-stream.js';
 import {
   asetaEhdotusAvain, ehdotusAika, ehdotusAvain, ehdotusKaytossa,
-  ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
+  avainOtsakkeet, ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
   paataProProfiili, proKuvaOsoite,
 } from './ehdotukset.js';
 import { fokusVisanKehys } from './fokustehtavat.js';
@@ -29,6 +29,7 @@ import {
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { kaupunkilehdenSivuNostoineen } from './lehtinostot.js';
 import { aloitaLivianLehtikierros, reagoiLivianLehtisivuun } from './livia-lehtireaktiot.js';
 // Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
 import {
@@ -72,7 +73,7 @@ import {
   onRaamatunMuutos, piirraRaamatunKentta, piirraRaamatunLahetys,
 } from './tyohuone-raamattu-muokkaus.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
-import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
+import { raamatunTaulusivut, tilastoSivut } from './tyohuone-tilastot.js';
 import {
   cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva,
   piirraLeipateksti, shortIntro,
@@ -96,6 +97,11 @@ import {
  * hakukielet (WIKI_LANGS: fi ja en) — Colosseumin kaltaiset paikat
  * ratkeavat englanninkieliseen artikkeliin.
  */
+import { osiohakemisto, piirraOsiohakemisto } from './lehtiosiot.js';
+
+/** Kaupunkilehden etusivun radiorivi (pois 27.9.2026: radio on kartussissa). */
+export const RADIO_KAUPUNKILEHDESSA = false;
+
 export function renderArticle(ui, container, text) {
   const hanta = /^(katso myös|lähteet|viitteet|lähteet ja viitteet|kirjallisuutta?|aiheesta muualla|ulkoiset linkit|kuvia|kuvagalleria|galleria|huomautukset|aiheeseen liittyvää|see also|references|notes|footnotes|citations|sources|bibliography|further reading|external links|gallery)$/i;
   container.textContent = '';
@@ -232,7 +238,15 @@ export function rakennaSivut(ui, cityId) {
   }
   // Maa-etusivun kuvanosto ei kuulu etusivun maaosastoon.
   ui.arrivalMaa.querySelector(':scope > .maa-etusivu-nosto')?.remove();
-  const kategoriat = cityId ? [...(KULTTUURI_KATEGORIAT[cityId] ?? [])] : [];
+  /*
+   * KARTALLE SIIRTYNEET JUTUT TAKAISIN SIVULLE (omistaja 12.10.2026):
+   * sivu, jonka omat nostot tyhjennettiin karttauudistuksessa, saa ne
+   * kartan lähteistä samassa nostomuodossa (js/lehtinostot.js). Sama
+   * reitti vie ne natiiviin (tools/vienti/lehdet.mjs).
+   */
+  const kategoriat = cityId
+    ? (KULTTUURI_KATEGORIAT[cityId] ?? []).map((sivu) => kaupunkilehdenSivuNostoineen(cityId, sivu))
+    : [];
   const kaupunginOmia = kategoriat.length;
   /*
    * Kaupungit, joilla ei ole kategorioita mutta on litteä nostolista,
@@ -547,17 +561,36 @@ export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) 
    * etusivulle. Ennen v926 osio piirrettiin vain kartan mukana, joten
    * aluelehden matkailijalle-kenttä jäi näkymättömiin kokonaan.
    */
-  const matkailijalleEtusivulla = Boolean(etusivu
+  /*
+   * TURISTI-INFO EI OLE ENÄÄ LEHDESSÄ (omistaja 27.9.2026 klo 23.4x): se
+   * on kaupungin avauskortissa (js/kaupunkinosto.js avaaAvauskortti).
+   * Kaupunkilehden etusivun alle tulee sen sijaan OSIOHAKEMISTO
+   * (js/lehtiosiot.js): lehden osiot ja kaupungin nostot aiheittain,
+   * jutunotsikot ja kuva osiota kohden. Aluelehdillä (ei kaupunkia)
+   * Matkailijalle-osio jää ennalleen.
+   */
+  const kaupunkiEtusivu = etusivu && ui.lehtitila.tutkiTila === 'kaupunki'
+    && Boolean(ui.lehtitila.arrivalShownFor);
+  const matkailijalleEtusivulla = Boolean(etusivu && !kaupunkiEtusivu
     && ui.lehtitila.tutkiTila !== 'maa'
     && ui.lehtitila.tutkiKansi?.matkailijalle?.kappale);
-  ui.arrivalKaupunkiKartta.hidden = !(karttaEtusivulla || matkailijalleEtusivulla);
   ui.arrivalKaupunkiKartta.replaceChildren();
   if (karttaEtusivulla) piirraKaupunkiKartta(ui, ui.arrivalKaupunkiKartta);
-  if (karttaEtusivulla || matkailijalleEtusivulla) {
-    // Matkailijalle-osio kartan JÄLKEEN (omistajan sijoituspäätös
-    // 15.8.2026: "se voisi olla itseasissa kartan jälkeen").
-    piirraMatkailijalle(ui, ui.arrivalKaupunkiKartta);
+  if (matkailijalleEtusivulla) piirraMatkailijalle(ui, ui.arrivalKaupunkiKartta);
+  let hakemisto = null;
+  if (kaupunkiEtusivu) {
+    const cityId = ui.lehtitila.arrivalShownFor;
+    hakemisto = piirraOsiohakemisto(ui, ui.arrivalKaupunkiKartta, {
+      osiot: osiohakemisto({
+        sivut: ui.lehtitila.tutkiSivut ?? [],
+        nostot: ui.pallolauta?.nostot?.kaupunginNostoRivit?.(cityId) ?? [],
+        iso: ui.game?.pack?.map?.cityCountry?.[cityId] ?? null,
+        cityId,
+      }),
+      avaaSivu: (sivu) => naytaTutkiSivu(ui, sivu, { suunta: 1 }),
+    });
   }
+  ui.arrivalKaupunkiKartta.hidden = !(karttaEtusivulla || matkailijalleEtusivulla || hakemisto);
 
   /*
    * Kaupunkilehden radiorivi asuu palstojen ulkopuolella kohdekartan
@@ -567,8 +600,9 @@ export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) 
    * Sisällön täyttää paivitaMediarivit ennen tätä; maalehdessä rivi
    * ei näy, koska siellä radio on maaosaston omalla rivillä.
    */
+  // RADIO EI OLE ENÄÄ KAUPUNKILEHDESSÄ (omistaja 27.9.2026 klo 23.2x): radio on kartussissa.
   if (ui.arrivalMediaKaupunki) {
-    ui.arrivalMediaKaupunki.hidden = ui.lehtitila.tutkiTila === 'maa' || !etusivu
+    ui.arrivalMediaKaupunki.hidden = !RADIO_KAUPUNKILEHDESSA || ui.lehtitila.tutkiTila === 'maa' || !etusivu
       || !ui.arrivalMediaKaupunki.childElementCount;
   }
 
@@ -981,8 +1015,7 @@ export function avaaRaamattuLehti(ui) {
      * lasketun taulusivun (siirretty poistetulta työhuonesivustolta
      * 18.8.2026 — se liitti samat taulut samoihin osioihin).
      */
-    const taulu = raamatunTaulusivu(osio, i);
-    return taulu ? [sivu, taulu] : [sivu];
+    return [sivu, ...raamatunTaulusivut(osio, i)];
   })];
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
 }
@@ -1453,7 +1486,8 @@ function proSivut(ui, tuottajat, avain) {
       },
       ...(t.profiili?.kuva ? [{
         otsikko: 'Profiilikuva',
-        kuvaUrl: proKuvaOsoite(t.tekijaId, avain),
+        kuvaUrl: proKuvaOsoite(t.tekijaId),
+        kuvaOtsakkeet: avainOtsakkeet(avain),
         selite: t.profiili.kuva.tiedosto,
         teksti: '',
       }] : []),
@@ -1637,7 +1671,8 @@ function lukijoiltaSivut(ehdotukset, avain) {
       { otsikko: e.sivu || 'Ehdotus', teksti: lukijoiltaTiedot(e) },
       ...(e.kuvat ?? []).map((kuva, j) => ({
         otsikko: `Kuva ${j + 1}`,
-        kuvaUrl: ehdotusKuvaOsoite(e.kansio, kuva.tiedosto, avain),
+        kuvaUrl: ehdotusKuvaOsoite(e.kansio, kuva.tiedosto),
+        kuvaOtsakkeet: avainOtsakkeet(avain),
         selite: kuva.tiedosto,
         teksti: '',
       })),

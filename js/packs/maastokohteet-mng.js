@@ -46,7 +46,7 @@ export const MAASTOKOHTEET_MNG = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Hüiten orgil, "Kylmä huippu", kohoaa 4 356 metriin ja on sekä Mongolian että koko '
+    teksti: 'Hüiten orgil, ”Kylmä huippu”, kohoaa 4 356 metriin ja on sekä Mongolian että koko '
       + 'Altain vuoriston korkein kohta. Mongolian ja Kiinan raja kulkee suoraan sen huipun '
       + 'yli, ja lumi ei sula siltä koskaan. Huippu on yksi Tavan Bogdin viidestä huipusta; '
       + 'parin kilometrin päässä toinen niistä merkitsee Venäjän, Mongolian ja Kiinan '
@@ -186,7 +186,7 @@ export const MAASTOKOHTEET_MNG = [
       + 'yhdysvaltalainen paleontologi Roy Chapman Andrews, joka kävi paikalla 1920-luvulla '
       + 'ja tarkoitti sillä hiekkakivijyrkänteiden punaista tai oranssia väriä, joka hehkuu '
       + 'erityisesti auringonlaskussa. Mongoliankielinen nimi Bayanzag tarkoittaa '
-      + '"saksaulista rikasta", ja toinen mongoliankielinen nimi on Ulaan Ereg, punaiset '
+      + '”saksaulista rikasta”, ja toinen mongoliankielinen nimi on Ulaan Ereg, punaiset '
       + 'kalliot. Kuuluisimman löytönsä paikka teki, kun sieltä löydettiin ensimmäisen '
       + 'kerran dinosauruksenmunia; sen jälkeen alueelta on kaivettu esiin muun muassa '
       + 'velociraptoreja ja varhaisia nisäkkäitä. Fossiilien vieminen alueelta ilman lupaa '

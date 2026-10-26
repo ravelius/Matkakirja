@@ -1,0 +1,415 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 440,
+ "hila": {
+  "lon0": 97,
+  "lon1": 124,
+  "lat0": 18,
+  "lat1": 43,
+  "askel": 0.1,
+  "leveys": 270,
+  "korkeus": 250,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-440.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 98.8,
+  "p99": 48.4,
+  "summa_milj": 34.26,
+  "arvio": true,
+  "korotus": 1.406
+ },
+ "omistus": {
+  "tiedosto": "omistus-440.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 440
+ },
+ "dynastiat": [
+  {
+   "avain": "liu-song",
+   "nimi": "Liu Song",
+   "vari": "#b0573a",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "xianbei",
+   "nimi": "Pohjois-Wei",
+   "vari": "#3f7f7a",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "entinen-qin",
+   "nimi": "entinen-qin",
+   "vari": "#7a6a5e",
+   "tyyppi": "kiina",
+   "alueeton": true
+  },
+  {
+   "avain": "jin",
+   "nimi": "jin",
+   "vari": "#7a6a5e",
+   "tyyppi": "kiina",
+   "alueeton": true
+  }
+ ],
+ "vakiluku_milj": 30.0,
+ "aluejako": "jako2",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-440.geojson (Matkakirja, CC0)",
+  "armeijat": "Zizhi Tongjian 104-105, Jin shu 114 (Wikisource); Wikipedia: Battle of Fei River, Former Qin; Diefenbach 2012 (ZDMG 162/2) tiivistelmä. Kaikki luvut arvioita."
+ },
+ "hetki": {
+  "nimi": "Fei-joki",
+  "vuosi": 383,
+  "rajat_vuosi": 440,
+  "huom": "Omistusvärit linssin pysäkiltä 440 (Jin ja Entinen Qin ovat jo kadonneet, rajat eivät vastaa vuotta 383). Fein uoma on kadonnut (arvio Shouxian / Lu'an). Perinneluvut (870 000 vs 80 000) ovat liioiteltuja; luvut ovat visuaalisia arvioita.",
+  "armeijat": [
+   {
+    "avain": "fu-rong-etujoukko",
+    "nimi": "Fu Rongin etujoukko (Entinen Qin)",
+    "dynastia": "entinen-qin",
+    "miehia": 250000,
+    "miehia_vali": [
+     100000,
+     300000
+    ],
+    "arvio": true,
+    "huom": "250 000 lähtiessä (ZZTJ, Jin shu), 300 000 toisaalla. Alaraja 100 000: tutkijoiden (Diefenbach 2012) mukaan mittakaava liioiteltu. Murong Chuin joukot sisältyvät (ei erillistä armeijaa).",
+    "keraus": [
+     {
+      "lon": 108.95,
+      "lat": 34.27,
+      "sade_km": 160,
+      "osuus": 0.55
+     },
+     {
+      "lon": 112.45,
+      "lat": 34.65,
+      "sade_km": 140,
+      "osuus": 0.2
+     },
+     {
+      "lon": 114.4,
+      "lat": 36.3,
+      "sade_km": 200,
+      "osuus": 0.25
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.1,
+      "lon": 108.95,
+      "lat": 34.27,
+      "paikka": "Chang'an"
+     },
+     {
+      "t": 0.22,
+      "lon": 112.45,
+      "lat": 34.65,
+      "paikka": "Luoyang"
+     },
+     {
+      "t": 0.33,
+      "lon": 114.3,
+      "lat": 33.8,
+      "paikka": "Yingchuan-seutu"
+     },
+     {
+      "t": 0.42,
+      "lon": 116.2,
+      "lat": 32.65,
+      "paikka": "Yingkou (±30 km)"
+     },
+     {
+      "t": 0.46,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Shouyang / Shouchun"
+     }
+    ]
+   },
+   {
+    "avain": "fu-jian-paajoukko",
+    "nimi": "Fu Jianin pääjoukko (Entinen Qin)",
+    "dynastia": "entinen-qin",
+    "miehia": 200000,
+    "miehia_vali": [
+     50000,
+     600000
+    ],
+    "arvio": true,
+    "huom": "Perinne 600 000 jalka + 270 000 ratsu koko Qinille (kiistelty). 200 000 on visuaalinen valinta, EI lähdettä. Fu Jian jätti pääjoukon Xiangchengiin ja kävi Shouyangissa ~8 000 ratsulla; Liangzhoun ja Sichuanin joukot myöhästyivät.",
+    "keraus": [
+     {
+      "lon": 108.95,
+      "lat": 34.27,
+      "sade_km": 170,
+      "osuus": 0.5
+     },
+     {
+      "lon": 112.45,
+      "lat": 34.65,
+      "sade_km": 140,
+      "osuus": 0.2
+     },
+     {
+      "lon": 114.4,
+      "lat": 36.3,
+      "sade_km": 200,
+      "osuus": 0.25
+     },
+     {
+      "lon": 102.64,
+      "lat": 37.93,
+      "sade_km": 250,
+      "osuus": 0.05
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.12,
+      "lon": 108.95,
+      "lat": 34.27,
+      "paikka": "Chang'an"
+     },
+     {
+      "t": 0.22,
+      "lon": 112.45,
+      "lat": 34.65,
+      "paikka": "Luoyang"
+     },
+     {
+      "t": 0.38,
+      "lon": 114.9,
+      "lat": 33.45,
+      "paikka": "Xiangcheng (±30 km)"
+     },
+     {
+      "t": 0.5,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Shouyang"
+     }
+    ]
+   },
+   {
+    "avain": "xie-beifu",
+    "nimi": "Xie Shin ja Xie Xuanin Jin-armeija (Beifu)",
+    "dynastia": "jin",
+    "miehia": 80000,
+    "miehia_vali": [
+     8000,
+     80000
+    ],
+    "arvio": true,
+    "huom": "Perinne ~80 000 (ZZTJ 105, Jin shu). Alaraja 8 000: vain valiojoukko ylitti Fein (zh-wiki). Beifu koottiin Jingkoun ja Guangling alueella; Liu Laozhi johti 5 000:n valioiskua Luojianissa. Keräysosuudet arvioita.",
+    "keraus": [
+     {
+      "lon": 119.45,
+      "lat": 32.2,
+      "sade_km": 45,
+      "osuus": 0.4
+     },
+     {
+      "lon": 119.4,
+      "lat": 32.4,
+      "sade_km": 50,
+      "osuus": 0.35
+     },
+     {
+      "lon": 118.78,
+      "lat": 32.05,
+      "sade_km": 70,
+      "osuus": 0.25
+     }
+    ],
+    "reitti": [
+     {
+      "t": 0.12,
+      "lon": 118.78,
+      "lat": 32.05,
+      "paikka": "Jiankang"
+     },
+     {
+      "t": 0.2,
+      "lon": 119.4,
+      "lat": 32.4,
+      "paikka": "Guangling"
+     },
+     {
+      "t": 0.28,
+      "lon": 119.02,
+      "lat": 33.55,
+      "paikka": "Huaiyin"
+     },
+     {
+      "t": 0.37,
+      "lon": 117.55,
+      "lat": 32.87,
+      "paikka": "Huai-virta (reitti tulkittu)"
+     },
+     {
+      "t": 0.44,
+      "lon": 117.0,
+      "lat": 32.65,
+      "paikka": "Luojian (±25 km)"
+     },
+     {
+      "t": 0.49,
+      "lon": 116.9,
+      "lat": 32.6,
+      "paikka": "leiri Fein lähellä"
+     }
+    ]
+   }
+  ],
+  "lyonnit": [
+   {
+    "t": 0.52,
+    "lon": 117.0,
+    "lat": 32.65,
+    "voittaja": "xie-beifu",
+    "havio": "fu-rong-etujoukko",
+    "voima": 0.35,
+    "huom": "Luojian: Liu Laozhi ~5 000 vs Liang Cheng ~50 000; Qinin tappio ~15 000 (ZZTJ, kiistelty). Ajoitus epävarma."
+   },
+   {
+    "t": 0.57,
+    "lon": 116.78,
+    "lat": 32.58,
+    "voittaja": "xie-beifu",
+    "havio": "fu-rong-etujoukko",
+    "voima": 1.0,
+    "huom": "Fei-joki (arvio): Qinin peräytyminen muuttui paoksi, Fu Rong kaatui. Mittakaava ja tappiot kiisteltyjä (870 000 liioiteltu)."
+   },
+   {
+    "t": 0.58,
+    "lon": 116.78,
+    "lat": 32.58,
+    "voittaja": "xie-beifu",
+    "havio": "fu-jian-paajoukko",
+    "voima": 0.7,
+    "huom": "Pääjoukko hajoaa etujoukon romahtaessa; Fu Jian haavoittui nuoleen. Luku ja kulku arvioita."
+   }
+  ],
+  "jalkeen": [
+   {
+    "armeija": "fu-rong-etujoukko",
+    "t0": 0.57,
+    "t1": 0.8,
+    "miehia": 100000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.57,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Fei-joki"
+     },
+     {
+      "t": 0.6,
+      "lon": 116.6,
+      "lat": 32.9,
+      "paikka": "Qinggang"
+     },
+     {
+      "t": 0.68,
+      "lon": 115.8,
+      "lat": 33.4,
+      "paikka": "Huai-joen pohjoispuoli"
+     },
+     {
+      "t": 0.8,
+      "lon": 112.45,
+      "lat": 34.65,
+      "paikka": "Luoyang"
+     }
+    ],
+    "huom": "ZZTJ: \"yli 100 000\" kerääntyi Luoyangiin, Murong Chuin 30 000 ehjänä. Kuvan mittasuhde, ei tappioluku (kiistelty)."
+   },
+   {
+    "armeija": "fu-jian-paajoukko",
+    "t0": 0.57,
+    "t1": 0.85,
+    "miehia": 50000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.57,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Shouyang"
+     },
+     {
+      "t": 0.7,
+      "lon": 114.9,
+      "lat": 33.45,
+      "paikka": "Xiangcheng"
+     },
+     {
+      "t": 0.8,
+      "lon": 112.45,
+      "lat": 34.65,
+      "paikka": "Luoyang"
+     },
+     {
+      "t": 0.85,
+      "lon": 108.95,
+      "lat": 34.27,
+      "paikka": "Chang'an (paluu, ei vahvistettu)"
+     }
+    ],
+    "huom": "Paluu Chang'aniin on vahvistamaton. Murong Chui kapinoi 384, Chang'an kaatui 385. Kuvan mittasuhde, ei tappioluku."
+   },
+   {
+    "armeija": "xie-beifu",
+    "t0": 0.57,
+    "t1": 0.75,
+    "miehia": 80000,
+    "arvio": true,
+    "visuaalinen": true,
+    "reitti": [
+     {
+      "t": 0.57,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Fei (voitto)"
+     },
+     {
+      "t": 0.6,
+      "lon": 116.6,
+      "lat": 32.9,
+      "paikka": "Qinggang"
+     },
+     {
+      "t": 0.65,
+      "lon": 116.78,
+      "lat": 32.58,
+      "paikka": "Shouyang"
+     },
+     {
+      "t": 0.75,
+      "lon": 117.2,
+      "lat": 34.27,
+      "paikka": "Pengcheng-suunta (384; tulkinta)"
+     }
+    ],
+    "huom": "Jin työnsi Keltaisen joen eteläpuolelle (en-wiki). 384:n liikkeet tulkintaa; lyhyt työntyminen pohjoiseen, sitten hajoaminen."
+   }
+  ],
+  "toipuminen": {
+   "t0": 0.8,
+   "t1": 1.0,
+   "huom": "Väestövaikutuksesta ei ole lukuja. Lähteet kertovat vain Qinin hajoamisesta 384-385. Huai-alue ja Pohjois-Kiinan keräysalueet palaavat pinnaksi visuaalisesti."
+  },
+  "lahteet": "Zizhi Tongjian 104-105, Jin shu 114 (Wikisource); Wikipedia: Battle of Fei River, Former Qin; Diefenbach 2012 (ZDMG 162/2) tiivistelmä. Kaikki luvut arvioita."
+ }
+}

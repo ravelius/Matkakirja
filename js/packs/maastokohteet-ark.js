@@ -140,7 +140,7 @@ export const MAASTOKOHTEET_ARK = [
       + 'Nansen päätti käyttää sitä kyydikseen. Hän rakennutti pyöreäpohjaisen laivan, jonka jää '
       + 'nostaa puristuksen sijasta ylös, ja ajoi sen tahallaan jäähän Uusien Siperiansaarten '
       + 'pohjoispuolella: 5. lokakuuta 1893 Fram oli paikassa 78°49′ N, 132°53′ E ja miehistö '
-      + 'kirjasi laivan "kunnolla kiinnitetyksi talveksi". Puolentoista vuoden kuluttua Nansen ja '
+      + 'kirjasi laivan ”kunnolla kiinnitetyksi talveksi”. Puolentoista vuoden kuluttua Nansen ja '
       + 'Hjalmar Johansen lähtivät koirineen kohti napaa, mutta kääntyivät 7. huhtikuuta 1895 '
       + 'leveyspiirillä 86°13,6′ N — lähempänä napaa kuin kukaan aiemmin — ja pakenivat Frans '
       + 'Josefin maalle. Fram itse ajelehti kolme vuotta miehistöineen ja nousi jäistä ehjänä '
@@ -325,8 +325,8 @@ export const MAASTOKOHTEET_ARK = [
     // en-Wikipedia "Maud (ship)"
     asteet: { lat: 69.1167, lon: -105.0583 },
     teksti: 'Roald Amundsen rakennutti Maudin toista arktista retkeään varten ja kastoi sen '
-      + 'samppanjapullon sijasta jääpalalla, jonka hän murskasi keulaa vasten: "Jäätä varten '
-      + 'sinut on rakennettu, ja jäässä sinä vietät suurimman osan elämääsi." Lupaus piti '
+      + 'samppanjapullon sijasta jääpalalla, jonka hän murskasi keulaa vasten: ”Jäätä varten '
+      + 'sinut on rakennettu, ja jäässä sinä vietät suurimman osan elämääsi.” Lupaus piti '
       + 'kirjaimellisesti. Laiva purjehti Koillisväylän läpi, mutta matka ei sujunut suunnitelman '
       + 'mukaan ja kesti kuusi vuotta, 1918–1924. Lopulta Maud päätyi Nomeen Alaskaan, ja '
       + 'elokuussa 1925 se myytiin Amundsenin velkojien lukuun Seattlessa. Ostaja oli Hudson\'s '
@@ -427,8 +427,8 @@ export const MAASTOKOHTEET_ARK = [
       + 'käyneensä navalla jo edellisenä vuonna. Pearyn kertomus voitti aikanaan kiistan, mutta '
       + 'vuonna 1989 brittitutkija Wally Herbert päätyi siihen, ettei Peary luultavasti '
       + 'saavuttanut napaa — hän saattoi jäädä siitä sadan kilometrin päähän. Sen sijaan Henson, '
-      + 'joka oli mukana jokaisella Pearyn retkellä, tokaisi kulkeneensa edellä: "Taidan olla '
-      + 'ensimmäinen mies, joka istuu maailman huipulla."',
+      + 'joka oli mukana jokaisella Pearyn retkellä, tokaisi kulkeneensa edellä: ”Taidan olla '
+      + 'ensimmäinen mies, joka istuu maailman huipulla.”',
     lahde: 'en-Wikipedia "Robert Peary", johdanto-osa sekä osiot "1908–1909 expedition" ja '
       + '"Controversy" (tarkistettu 11.9.2026).',
   },
@@ -468,6 +468,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-nautilus',
     nimi: 'Nautilus navan alla',
+    nimio: 'Nautilus',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miksi sukellusvene meni navan ali?',
@@ -698,7 +699,7 @@ export const MAASTOKOHTEET_ARK = [
     // 73°42′ N / 54°30′ E — Suhoi Nosin koealue Severnyjn saarella;
     // en-Wikipedia "Novaya Zemlya" ja "Tsar Bomba"
     asteet: { lat: 73.7, lon: 54.5 },
-    teksti: 'Novaja Zemlja eli "uusi maa" on kaksiosainen saaristo Barentsinmeren ja Karanmeren '
+    teksti: 'Novaja Zemlja eli ”uusi maa” on kaksiosainen saaristo Barentsinmeren ja Karanmeren '
       + 'välissä; saaret erottaa toisistaan kapea Matotškinin salmi. Novgorodilaiset metsästäjät '
       + 'tunsivat sen jo 1000-luvulla, ja hollantilainen Willem Barentsz saapui länsirannikolle '
       + '1594 etsiessään koillista merireittiä. Kylmän sodan aikana saaristosta tuli '
@@ -741,7 +742,7 @@ export const MAASTOKOHTEET_ARK = [
       + 'kääntyneet takaisin napamatkaltaan, he talvehtivat Jacksonin saarella kivistä ja '
       + 'mursunnahoista kyhätyssä majassa kahdeksan kuukautta ja söivät karhua, mursua ja '
       + 'hyljettä. 17. kesäkuuta 1896 Nansen kuuli koiran haukkuvan ja käveli vastaan englantilaisen '
-      + 'Frederick Jacksonin, joka kysyi: "Tehän olette Nansen?"',
+      + 'Frederick Jacksonin, joka kysyi: ”Tehän olette Nansen?”',
     lahde: 'en-Wikipedia "Franz Josef Land", johdanto-osa ja osio "History", sekä "Nansen\'s Fram '
       + 'expedition", osio "To Cape Flora" (tarkistettu 11.9.2026).',
   },
@@ -813,6 +814,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
+    nimio: 'Mannerjäätikkö',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksua jää on?',
@@ -876,6 +878,7 @@ export const MAASTOKOHTEET_ARK = [
   {
     id: 'ark-ilulissat',
     nimi: 'Ilulissatin jäävuono',
+    nimio: 'Ilulissat',
     tyyppi: 'meri',
     kysymykset: [
       'Kuinka nopeasti jäätikkö liikkuu?',
@@ -988,7 +991,7 @@ export const MAASTOKOHTEET_ARK = [
       + 'niemimaiden välissä. Vuoden 2021 laskennassa heitä oli 49 646, ja he asuvat enimmäkseen '
       + 'Jamalin Nenetsian, Nenetsian ja Taimyrin alueilla. Kieliä on kaksi, tundra- ja '
       + 'metsänenetsi. Vanha venäläinen nimitys samojedit jäi pois käytöstä 1900-luvun alussa; '
-      + 'kansa kutsuu itseään sanalla, joka tarkoittaa "oikeita ihmisiä". Elanto tulee '
+      + 'kansa kutsuu itseään sanalla, joka tarkoittaa ”oikeita ihmisiä”. Elanto tulee '
       + 'metsästyksestä ja poronhoidosta, ja koska poro kelpaa myös vetojuhdaksi ympäri vuoden, '
       + 'matkat ovat pitkiä. Laajamittainen poropaimentolaisuus syntyi 1700-luvulla. Nenetsit '
       + 'jalostivat samojedikoiran auttamaan porojen paimennuksessa ja vetämään rekiä — juuri '
@@ -1172,7 +1175,7 @@ export const MAASTOKOHTEET_ARK = [
     asteet: { lat: 71.2906, lon: -156.7886 },
     teksti: 'Yhdysvaltain pohjoisin kaupunki on ollut iñupiatien asuinpaikka yli 1 500 vuotta. '
       + 'Iñupiaqinkielinen nimi tarkoittaa paikkaa, josta kerätään villejä juuria, ja se '
-      + 'kirjattiin ensimmäisen kerran muistiin 1853 muodossa "Ot-ki-a-wing". Ulkopuoliset '
+      + 'kirjattiin ensimmäisen kerran muistiin 1853 muodossa ”Ot-ki-a-wing”. Ulkopuoliset '
       + 'käyttivät vuosikymmeniä nimeä Barrow, joka tuli läheiseltä Point Barrow\'lta ja oli '
       + 'heille helpompi lausua; postitoimisto avattiin sillä nimellä 1901. Lokakuun 6. päivänä '
       + '2016 asukkaat äänestivät, ja joulukuun alusta kaupunki on virallisesti Utqiaġvik — '

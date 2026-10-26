@@ -1,0 +1,45 @@
+/*
+ * KORTTI (tyylikirja.json pohjat.KORTTI).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── KORTTI: keskitetty max 420 pt (minipopup 320), himmennys, napit oikealle ───────────────── */
+
+.tk-kortti-tausta {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tk-vali-l);
+  background: var(--tk-himmennys-tumma);
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+}
+.tk-kortti-tausta.tk-piilossa { opacity: 0; pointer-events: none; transition-duration: var(--tk-kesto-sulku); }
+.tk-kortti {
+  width: 100%;
+  max-width: var(--tk-leveys-kortti);
+  max-height: calc(100dvh - var(--tk-vali-xl) * 2);
+  overflow-y: auto;
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 10px 30px var(--tk-himmennys-kevyt);
+  transition: transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+.tk-kortti--mini { max-width: var(--tk-leveys-minipopup); }
+.tk-kortti-tausta.tk-piilossa .tk-kortti { transform: scale(0.96); }
+.tk-kortti .tk-otsikko { padding-bottom: var(--tk-vali-xs); border-bottom: 1px solid var(--tk-reunus); }
+/* Otsikon alaviiva riittää: kuvaton kortti ei saa toista viivaa. */
+.tk-kortti .tk-viiva { display: none; }
+.tk-kortti .tk-napit {
+  justify-content: flex-end;
+  margin-top: var(--tk-vali-m);
+}
+.tk-kortti .tk-nappi { flex: 0 1 auto; }
+.tk-kortti .tk-napit--pysty { flex-direction: column; align-items: stretch; }
+.tk-kortti .tk-napit--pysty .tk-nappi { flex: none; text-align: left; font-family: var(--font-luku); font-size: var(--tk-koko-leipa); }

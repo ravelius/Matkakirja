@@ -1,0 +1,473 @@
+{
+ "kaupunki": "samarkand",
+ "kaupunkiQ": "Q5753",
+ "kohteet": [
+  {
+   "q": "Q1373583",
+   "nimi": "Registan",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 39.65472,
+   "lon": 66.97556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Registan 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registan_01.jpg",
+     "selite": "Registanin aukiota reunustavat kolme kaakeloitua medresaa, Samarkandin tunnetuin näkymä.",
+     "leveys": 4812,
+     "korkeus": 2144,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Registan square Samarkand, Uzbekistan, at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan_square_Samarkand%2C_Uzbekistan%2C_at_night.jpg?width=1280",
+     "tekija": "Benjamin Goetzinger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registan_square_Samarkand%2C_Uzbekistan%2C_at_night.jpg",
+     "selite": "Illalla medresojen julkisivut valaistaan, ja aukio hohtaa kultaisena.",
+     "leveys": 5177,
+     "korkeus": 3266,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Registan square at night Samarkand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan_square_at_night_Samarkand.jpg?width=1280",
+     "tekija": "Գարվիք",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registan_square_at_night_Samarkand.jpg",
+     "selite": "Hämärässä aukion kolme medresaa kohoavat sinisinä taivasta vasten.",
+     "leveys": 4912,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1256223",
+   "nimi": "Gur-Emir",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 39.64833,
+   "lon": 66.96889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Вечерний Гур-Эмир.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B9_%D0%93%D1%83%D1%80-%D0%AD%D0%BC%D0%B8%D1%80.jpg?width=1280",
+     "tekija": "Arina Pan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B9_%D0%93%D1%83%D1%80-%D0%AD%D0%BC%D0%B8%D1%80.jpg",
+     "selite": "Gur-Emir on Timurin ja hänen jälkeläistensä hautamausoleumi turkoosin kupolin alla.",
+     "leveys": 6048,
+     "korkeus": 4024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gur-e Amir 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gur-e_Amir_01.jpg?width=1280",
+     "tekija": "Bgag",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gur-e_Amir_01.jpg",
+     "selite": "Mausoleumin kupoli ja minareetit kohoavat vanhan hautausalueen yllä.",
+     "leveys": 3908,
+     "korkeus": 2247,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arches in Gur-e Amir, Samarkand (Amir Temur maqbarasi, Гур-Эмир).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arches_in_Gur-e_Amir%2C_Samarkand_(Amir_Temur_maqbarasi%2C_%D0%93%D1%83%D1%80-%D0%AD%D0%BC%D0%B8%D1%80).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arches_in_Gur-e_Amir%2C_Samarkand_(Amir_Temur_maqbarasi%2C_%D0%93%D1%83%D1%80-%D0%AD%D0%BC%D0%B8%D1%80).jpg",
+     "selite": "Kaakeloidun portin holvikaaresta avautuu näkymä mausoleumin sisäänkäynnille.",
+     "leveys": 3328,
+     "korkeus": 4496,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q679218",
+   "nimi": "Bibi-Khanymin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 39.66056,
+   "lon": 66.97972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Western iwan of Bibi-Khanym Mosque 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Western_iwan_of_Bibi-Khanym_Mosque_01.jpg?width=1280",
+     "tekija": "Bgag",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Western_iwan_of_Bibi-Khanym_Mosque_01.jpg",
+     "selite": "Bibi-Khanymin moskeija oli Timurin ajan suurimpia, ja sen portti on yhä valtava.",
+     "leveys": 3841,
+     "korkeus": 2612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bibi-Khanym Mosque, Samarkand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bibi-Khanym_Mosque%2C_Samarkand.jpg?width=1280",
+     "tekija": "Bgag",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bibi-Khanym_Mosque%2C_Samarkand.jpg",
+     "selite": "Moskeijan sisäpihan kupolit ja rauniot kohoavat suurten porttien lomassa.",
+     "leveys": 7044,
+     "korkeus": 3862,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bibi-Khanym Mosque interior, Samarkand (мечеть Биби-Ханум, Северный зал мечети).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bibi-Khanym_Mosque_interior%2C_Samarkand_(%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%91%D0%B8%D0%B1%D0%B8-%D0%A5%D0%B0%D0%BD%D1%83%D0%BC%2C_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BB_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D0%B8).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bibi-Khanym_Mosque_interior%2C_Samarkand_(%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%91%D0%B8%D0%B1%D0%B8-%D0%A5%D0%B0%D0%BD%D1%83%D0%BC%2C_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BB_%D0%BC%D0%B5%D1%87%D0%B5%D1%82%D0%B8).jpg",
+     "selite": "Pohjoisen salin sinivihreä kupoli kohoaa pihan tiilirakenteiden yläpuolella.",
+     "leveys": 4384,
+     "korkeus": 3448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q671935",
+   "nimi": "Shah-i-Zinda",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 39.66262,
+   "lon": 66.98788,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shah-i-Zinda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shah-i-Zinda.jpg?width=1280",
+     "tekija": "Vaurien",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shah-i-Zinda.jpg",
+     "selite": "Shah-i-Zinda on rinteeseen rakennettu mausoleumien ketju, jonka kupolit hohtavat sinisinä.",
+     "leveys": 3200,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shah-i-Zinda geometrik koshin naqshi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shah-i-Zinda_geometrik_koshin_naqshi.jpg?width=1280",
+     "tekija": "AIDEPCUL",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shah-i-Zinda_geometrik_koshin_naqshi.jpg",
+     "selite": "Mausoleumien seinien geometriset kaakelikuviot ovat Samarkandin kaakelitaiteen huippua.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q608580",
+   "nimi": "Ulugbekin observatorio",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 39.67472,
+   "lon": 67.00556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20230613 Samarkand280.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20230613_Samarkand280.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20230613_Samarkand280.jpg",
+     "selite": "Ulugbekin observatorion perustukset ja kaakeloitu sisäänkäynti ovat 1400-luvun tähtitieteen jäänteitä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20230613 Samarkand260.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20230613_Samarkand260.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20230613_Samarkand260.jpg",
+     "selite": "Rakennuksen vierestä alkaa kaareva kaivanto, johon valtava mittauskaari oli rakennettu.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20230613 Samarkand287.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20230613_Samarkand287.jpg?width=1280",
+     "tekija": "Jean Housen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20230613_Samarkand287.jpg",
+     "selite": "Maahan kaivettu kaareva käytävä on jäljellä jättimäisen sekstantin uurteesta.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2167520",
+   "nimi": "Afrasiyab",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 39.67133,
+   "lon": 66.98771,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Afrosiyab ancient site 150.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afrosiyab_ancient_site_150.jpg?width=1280",
+     "tekija": "BeshevI",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afrosiyab_ancient_site_150.jpg",
+     "selite": "Afrasiyabin kumpu on muinaisen Marakandan, Samarkandin esikaupungin, arkeologinen alue.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Afrosiyab ancient site 151.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afrosiyab_ancient_site_151.jpg?width=1280",
+     "tekija": "BeshevI",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afrosiyab_ancient_site_151.jpg",
+     "selite": "Vihreän kummun rinteet kätkevät antiikin ajan kaupungin jäänteitä.",
+     "leveys": 4032,
+     "korkeus": 1816,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1661582",
+   "nimi": "Khoja Doniyorin mausoleumi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 39.67331,
+   "lon": 66.99451,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Мазар Ходжи-Данияра.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B0%D0%B7%D0%B0%D1%80_%D0%A5%D0%BE%D0%B4%D0%B6%D0%B8-%D0%94%D0%B0%D0%BD%D0%B8%D1%8F%D1%80%D0%B0.JPG?width=1280",
+     "tekija": "Alexandronikos",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%B7%D0%B0%D1%80_%D0%A5%D0%BE%D0%B4%D0%B6%D0%B8-%D0%94%D0%B0%D0%BD%D0%B8%D1%8F%D1%80%D0%B0.JPG",
+     "selite": "Khoja Doniyorin mausoleumi on Afrasiyabin kukkulan rinteessä oleva pyhiinvaelluskohde.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Khodja-Doniyor-Mausoleum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khodja-Doniyor-Mausoleum.jpg?width=1280",
+     "tekija": "Vaurien",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khodja-Doniyor-Mausoleum.jpg",
+     "selite": "Mausoleumin sisällä on pitkä hautakumpu, jota peittää kirjailtu kangas.",
+     "leveys": 3200,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2278212",
+   "nimi": "Sherdorin medrese",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 39.65488,
+   "lon": 66.97634,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Registon majmuasi (Sherdor madrasasi) 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registon_majmuasi_(Sherdor_madrasasi)_09.jpg?width=1280",
+     "tekija": "Jamshid Nurkulov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registon_majmuasi_(Sherdor_madrasasi)_09.jpg",
+     "selite": "Sherdorin medresen portaalissa on tiikereitä ja auringon kasvot, harvinainen aihe islamilaisessa taiteessa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Samarkand, Registan, Sher Dor Medressa (6237690265).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samarkand%2C_Registan%2C_Sher_Dor_Medressa_(6237690265).jpg?width=1280",
+     "tekija": "Arian Zwegers",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samarkand%2C_Registan%2C_Sher_Dor_Medressa_(6237690265).jpg",
+     "selite": "Medresen julkisivu ja minareetit kohoavat Registanin aukion laidalla.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Registan, Sherdor madrasa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan%2C_Sherdor_madrasa.jpg?width=1280",
+     "tekija": "Azamat Samatov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registan%2C_Sherdor_madrasa.jpg",
+     "selite": "Medresen sisäpihaa kehystävät kaaret ja kaakeloidut kupolit.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1713936",
+   "nimi": "Tillakarin medrese",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 39.65576,
+   "lon": 66.97509,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tilya-Kori Madrasa 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tilya-Kori_Madrasa_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tilya-Kori_Madrasa_01.jpg",
+     "selite": "Tillakarin medrese on Registanin keskimmäinen rakennus, jossa on myös kaupungin pääkaupunkimoskeija.",
+     "leveys": 4227,
+     "korkeus": 2734,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome of the Tilla-Kori madrasah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_the_Tilla-Kori_madrasah.jpg?width=1280",
+     "tekija": "Игорь Улитин",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_the_Tilla-Kori_madrasah.jpg",
+     "selite": "Medresen turkoosi kupoli erottuu Registanin rakennusten joukosta.",
+     "leveys": 5034,
+     "korkeus": 3356,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mosaic on the dome of the Tilla-Kori madrasa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosaic_on_the_dome_of_the_Tilla-Kori_madrasa.jpg?width=1280",
+     "tekija": "Игорь Улитин",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosaic_on_the_dome_of_the_Tilla-Kori_madrasa.jpg",
+     "selite": "Moskeijasalin kupolin sisäpuoli on kullattu ja koristeltu runsaasti.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q492144",
+   "nimi": "Ulugbekin medrese",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 39.65472,
+   "lon": 66.97467,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Registan, Ulughbek madrasa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Registan%2C_Ulughbek_madrasa.jpg?width=1280",
+     "tekija": "Azamat Samatov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Registan%2C_Ulughbek_madrasa.jpg",
+     "selite": "Ulugbekin medrese on Registanin vanhin rakennus ja valmistui 1400-luvun alussa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ulugh-beg Madrassa courtyard.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulugh-beg_Madrassa_courtyard.JPG?width=1280",
+     "tekija": "Alaexis",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulugh-beg_Madrassa_courtyard.JPG",
+     "selite": "Sisäpihaa ympäröivät kaakeloidut kaaret ja pienet puut.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Samarkand, Bibi-Khanym.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samarkand%2C_Bibi-Khanym.jpg?width=1280",
+   "tekija": "MiroJP",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samarkand%2C_Bibi-Khanym.jpg",
+   "selite": "Samarkandin matalien rakennusten yllä kohoavat Bibi-Khanymin moskeijan kupolit ja portit.",
+   "leveys": 5898,
+   "korkeus": 3932,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Самарканд. Площадь-Регистан.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD.jpg?width=1280",
+   "tekija": "Kraftabbas",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%BA%D0%B0%D0%BD%D0%B4._%D0%9F%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%A0%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D0%B0%D0%BD.jpg",
+   "selite": "Registanin aukio hohtaa sinisenä Samarkandin keskustassa.",
+   "leveys": 4814,
+   "korkeus": 2856,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

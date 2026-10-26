@@ -138,6 +138,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Branin linna Transilvanian ja Valakian välisen vuoristosolan '
         + 'yllä. Rakennuslupa on vuodelta 1377.',
       lahde: 'Dobre Cezar, Wikimedia Commons (CC BY-SA 3.0 ro)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castelul_Bran2.jpg',
+      lisenssi: 'CC BY-SA 3.0 ro',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en',
     },
   },
   {
@@ -180,6 +183,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Vlad Draculin talo Sighișoaran vanhassakaupungissa. '
         + 'Vanhakaupunki on ollut Unescon listalla vuodesta 1999.',
       lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Casa_Vlad_Dracul_din_Sighisoara4.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Minä vuonna Sighișoaran vanhakaupunki tuli Unescon listalle?',
@@ -232,6 +238,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Peleșin linna Sinaiassa. Peruskivi laskettiin 22. elokuuta '
         + '1873, ja linna valmistui lopullisesti vasta 1914.',
       lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:01_Chateau_Peles.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -282,6 +291,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Transfăgărășanin pohjoisosan mutkia Bâlea-järven alapuolella. '
         + 'Tien korkein kohta on 2 042 metrissä.',
       lahde: 'Horia Varlan, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wide_view_over_the_northern_Transfagarasan.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
   },
   {
@@ -327,6 +339,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Pelikaaniparvi Tonavan suistossa. Yli puolet koko Euraasian '
         + 'pelikaanikannasta pesii täällä.',
       lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_Delta_2024-09-25_-_47_-_flock_of_Great_white_pelicans.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -360,12 +375,6 @@ export const FOKUSKOHTEET_ROU = [
       + 'tulleet aineiston haussa mukaan — keksittyä käännöstä ei tehdä.',
     // Category:Cimitirul Vesel. Commons 25.8.2026: 3024×4235, CC BY-SA 4.0,
     // Chainwit., kuvattu 13.4.2023, kuvaus "Merry Cemetery, Maramures".
-    kuva: {
-      tiedosto: 'Cimitirul Vesel, Săpânța, Maramureș - (2023) - IMG 18.jpg',
-      selite: 'Iloisen hautausmaan maalattuja puuristejä Săpânțassa. '
-        + 'Tammiristejä on kertynyt yli 800.',
-      lahde: 'Chainwit., Wikimedia Commons (CC BY-SA 4.0)',
-    },
   },
   {
     id: 'moldoveanu',
@@ -400,6 +409,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Moldoveanu Făgărașin vuoristossa. Huippu on Romanian korkein, '
         + '2 545 metriä.',
       lahde: 'MIHAIL, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Moldoveanu_Peak_(Romania).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -423,7 +435,7 @@ export const FOKUSKOHTEET_ROU = [
     teksti: 'Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, '
       + 'ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat '
       + 'paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä '
-      + 'kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi '
+      + 'kalauz, ”opas”. Vielä 1900-luvulla laivat vedettiin kanavan läpi '
       + 'veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta '
       + 'nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen '
       + 'turkkilainen erillisalue, moskeija ja tuhat kujaa.',
@@ -441,6 +453,7 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Ada Kalehin saari 1800-luvun lopulla. Se jäi patoaltaan alle, '
         + 'kun vedenpinta nousi 35 metriä.',
       lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ada-Kaleh.jpg',
     },
   },
   {
@@ -463,8 +476,8 @@ export const FOKUSKOHTEET_ROU = [
       + 'kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. '
       + 'keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti '
       + 'elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan '
-      + 'Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan '
-      + 'runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". '
+      + 'Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli ”sodan '
+      + 'runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla”. '
       + 'Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; '
       + 'Romanialle se siirtyi vasta 1878.',
     lahde: 'en-Wikipedia "Constanța", johdanto-osa sekä osiot "Ancient '
@@ -478,6 +491,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Ovidiuksen patsas Constanțan vanhassakaupungissa, taustalla '
         + 'kansallinen historiamuseo.',
       lahde: 'Alexandru Pănoiu, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Statue_of_Ovid_and_National_History_Museum_in_Constantza.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -523,6 +539,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Suuri pyöreä pyhäkkö Sarmizegetusa Regian pyhällä alueella. '
         + 'Sitä kutsutaan usein kalenteriksi.',
       lahde: 'Calin Jorza, Wikimedia Commons (CC BY-SA 3.0 ro)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sarmizegetusa_Regia_-_Sanctuarul_mare_circular._(Zona_sacra).jpg',
+      lisenssi: 'CC BY-SA 3.0 ro',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en',
     },
   },
   {
@@ -567,10 +586,12 @@ export const FOKUSKOHTEET_ROU = [
     // 2017 — maanalainen järvi ja katosta riippuvat valaistut rakennelmat,
     // eli täsmälleen se, mistä teksti kertoo.
     kuva: {
-      tiedosto: 'UFO-shaped constructions in the underground lake, Mina Terezia, Turda salt mine, Turda, 2017.jpg',
-      selite: 'Maanalainen järvi ja valaistuja rakennelmia Turdan '
-        + 'suolakaivoksen Terezia-kuilussa.',
-      lahde: 'DimiTalen, Wikimedia Commons (CC0)',
+      tiedosto: "Interior Salina Turda 03.jpg",
+      selite: "Suolalohkareita täynnä oleva kaivosvaunu kiskoillaan suolaseinän edessä Turdan suolakaivoksen Rudolf-kuilussa.",
+      lahde: "Pomptidom, Wikimedia Commons (CC BY-SA 4.0)",
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:UFO-shaped_constructions_in_the_underground_lake,_Mina_Terezia,_Turda_salt_mine,_Turda,_2017.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -612,7 +633,7 @@ export const FOKUSKOHTEET_ROU = [
       + 'tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. '
       + 'Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa '
       + 'pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi '
-      + '"Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon '
+      + '”Romanian seitsemästä ihmeestä”. Nykyinen asu ei silti ole keskiaikainen: tulipalon '
       + 'ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi '
       + 'siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että '
       + 'Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram '
@@ -626,6 +647,9 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Corvinin linna Hunedoarassa. Se on yksi Euroopan '
         + 'suurimmista linnoista.',
       lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castle_of_Hunedoara_2019_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   /*
@@ -688,6 +712,7 @@ export const FOKUSKOHTEET_ROU = [
       selite: 'Nadia Comăneci Montrealin olympialaisissa 1976.',
       lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
         + 'Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nadia_Com%C4%83neci_1976.jpg',
     },
     visa: {
       kysymys: 'Minkä yhtiön tulostaulu ei osannut näyttää täyttä kymppiä?',

@@ -566,7 +566,7 @@ export const SKANDAALIT = {
         + 'vaakunakirjan, joka todisti sukunsa aateluuden. Aatelisarvon hän sai '
         + '1594.\n\n'
         + 'Kirja sekoitti aitoja myöhäiskeskiaikaisia vaakunoita keksittyihin ja '
-        + 'kokosi niistä \'Illyrian valtakunnan\', jonka rajat sattuivat käymään '
+        + 'kokosi niistä ’Illyrian valtakunnan’, jonka rajat sattuivat käymään '
         + 'yksiin Espanjan etupiirin kanssa. Osa tunnuksista oli lainattu Virgil '
         + 'Solisin vuoden 1555 vaakunakirjasta, jossa ne olivat jo valmiiksi '
         + 'kuviteltuja. Alkuperäinen on kadonnut; vanhin kappale on vuoden 1595 '
@@ -685,7 +685,7 @@ export const SKANDAALIT = {
      */
     {
       id: 'anna-goldin-tapaus',
-      otsikko: 'Anna Göldi — Euroopan viimeinen \'noita\'',
+      otsikko: 'Anna Göldi — Euroopan viimeinen ’noita’',
       nimio: 'Anna Göldi',
       vuosi: '1782 (maineenpalautus 2008)',
       paikka: 'Anna Göldi -museo, Ennenda (Glarus)',
@@ -863,7 +863,7 @@ export const SKANDAALIT = {
         },
       ],
       visa: {
-        kysymys: 'Mikä Scheuchzerin \'vedenpaisumuksen todistaja\' todellisuudessa '
+        kysymys: 'Mikä Scheuchzerin ’vedenpaisumuksen todistaja’ todellisuudessa '
           + 'oli?',
         vaihtoehdot: [
           'Jättiläissalamanterin fossiili',
@@ -1143,7 +1143,7 @@ export const SKANDAALIT = {
         },
       ],
       visa: {
-        kysymys: 'Ketkä olivat kätkeneet väärennetyt \'fossiilit\' Beringerin '
+        kysymys: 'Ketkä olivat kätkeneet väärennetyt ’fossiilit’ Beringerin '
           + 'löydettäviksi?',
         vaihtoehdot: [
           'Hänen opiskelijansa kostoksi hylätyistä tenteistä',
@@ -1210,7 +1210,7 @@ export const SKANDAALIT = {
         },
       ],
       visa: {
-        kysymys: 'Mihin \'Köpenickin kapteenin\' vallankäyttö perustui?',
+        kysymys: 'Mihin ’Köpenickin kapteenin’ vallankäyttö perustui?',
         vaihtoehdot: [
           'Väärennettyyn keisarin valtakirjaan',
           'Pelkkään preussilaisen upseerin univormuun',
@@ -1234,7 +1234,7 @@ export const SKANDAALIT = {
         + 'valmistettu ennen kuin niiden kirjoittaja oli jo kuollut. Tekninen '
         + 'tarkistus tilattiin vasta lehdistötilaisuuden jälkeen — järjestys, '
         + 'jota toimitusopit eivät suosittele. Väärentäjä istui tuomionsa ja '
-        + 'jatkoi sitten uraa myymällä \'aitoja Kujau-väärennöksiä\'.',
+        + 'jatkoi sitten uraa myymällä ’aitoja Kujau-väärennöksiä’.',
       teksti: 'Konrad Kujau kirjoitti kuusikymmentä nidettä vuosina 1981–1983 '
         + 'halvalla Itä-Berliinistä ostettuihin muistikirjoihin. Muste oli '
         + 'sekoitettu kahdesta Pelikan-pullosta ja vedestä, sivuille oli ripoteltu '
@@ -1506,7 +1506,7 @@ export const SKANDAALIT = {
       vuosi: '1595–1682',
       paikka: 'Sacromonten luostari, Granada',
       lat: 37.1822, lon: -3.5697,
-      kortti: 'Lyijylevyille kaiverretut \'muinaiset\' kirjat kertoivat juuri sen, '
+      kortti: 'Lyijylevyille kaiverretut ’muinaiset’ kirjat kertoivat juuri sen, '
         + 'mitä Granadassa haluttiin kuulla — ja siksi niitä haluttiin uskoa '
         + 'lähes sata vuotta. Rooma tarvitsi neljä vuosikymmentä ja yhden '
         + 'inkvisition todetakseen ilmeisen. Väärennös oli huono, mutta toive '
@@ -1552,7 +1552,7 @@ export const SKANDAALIT = {
         },
       ],
       visa: {
-        kysymys: 'Mistä materiaalista Sacromonten \'muinaiset kirjat\' oli tehty?',
+        kysymys: 'Mistä materiaalista Sacromonten ’muinaiset kirjat’ oli tehty?',
         vaihtoehdot: [
           'Lyijylevyistä',
           'Pergamentista',
@@ -1616,7 +1616,7 @@ export const SKANDAALIT = {
         },
       ],
       visa: {
-        kysymys: 'Miten Baldomera Larran \'talletuskassa\' maksoi luvatut suuret '
+        kysymys: 'Miten Baldomera Larran ’talletuskassa’ maksoi luvatut suuret '
           + 'korot?',
         vaihtoehdot: [
           'Kultakaivosten osingoilla',
@@ -1718,7 +1718,7 @@ export const SKANDAALIT = {
       lat: 59.4446, lon: 24.8135,
       kortti: 'Sadat ihmiset istuivat viikkoja rantakalliolla katsomassa '
         + 'horisonttiin, jossa valkean laivan piti milloin tahansa näkyä. Laiva '
-        + 'ei tullut, mutta tarina jäi: \'valkea laiva\' tarkoittaa yhä toivoa, '
+        + 'ei tullut, mutta tarina jäi: ’valkea laiva’ tarkoittaa yhä toivoa, '
         + 'joka on liian kaunis saapuakseen. Profeetta itse palasi lopulta '
         + 'arkisempaan ammattiin — kaupankäyntiin.',
       teksti: 'Juhan Leinberg syntyi 1812 Järvamaalla ja oli ehtinyt olla '
@@ -2235,7 +2235,7 @@ export const SKANDAALIT = {
         + 'Tammikuussa 1785 Rohan osti kaulanauhan maksuerissä ja luovutti sen '
         + 'Jeannen talossa miehelle, jota piti kuningattaren palvelijana. Timantit '
         + 'purettiin heti ja myytiin Pariisin ja Lontoon mustilla markkinoilla. '
-        + 'Ostomääräyksen allekirjoitus kuului "Marie Antoinette de France" — '
+        + 'Ostomääräyksen allekirjoitus kuului ”Marie Antoinette de France” — '
         + 'Ranskan kuninkaalliset allekirjoittivat pelkällä etunimellä, mutta sitä '
         + 'kardinaali ei muistanut.\n\n'
         + 'Rohan pidätettiin peilisalissa 15. elokuuta 1785 ja vapautettiin '
@@ -2286,8 +2286,7 @@ export const SKANDAALIT = {
       paikka: 'Institut de France (tiedeakatemia), Pariisi',
       lat: 48.8573, lon: 2.3372,
       kortti: 'Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle '
-        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja '
-        + 'perään 27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan '
+        + 'paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään kymmeniätuhansia muita. Kansallisylpeys teki ostajasta sokean: olihan '
         + 'kirjeissä todiste, että painovoima keksittiin Ranskassa. '
         + 'Tiedeakatemia ei ollut aivan yhtä ilahtunut.',
       teksti: 'Denis Vrain-Lucas oli lakikirjuriksi kouluttautunut ranskalainen, '
@@ -2314,9 +2313,16 @@ export const SKANDAALIT = {
         + 'löytyneen kirjeen, jonka Vrain-Lucas oli muka kirjoittanut vankilasta '
         + 'Chaslesille 1871 — sekin oli sepite.',
       lahde: 'en-Wikipedia "Denis Vrain-Lucas". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Denis Vrain-Lucas.jpg',
+        lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
+        selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
+          + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
+        lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+      },
       visa: {
-        kysymys: 'Mikä paljasti järkevälle lukijalle Vrain-Lucasin \'Kleopatran '
-          + 'kirjeet\' väärennöksiksi?',
+        kysymys: 'Mikä paljasti järkevälle lukijalle Vrain-Lucasin ’Kleopatran '
+          + 'kirjeet’ väärennöksiksi?',
         vaihtoehdot: [
           'Muste oli kemiallisesti uutta',
           'Kirjeet oli sinetöity väärin',
@@ -2338,7 +2344,7 @@ export const SKANDAALIT = {
       vuosi: '1912–1953',
       paikka: 'Piltdown, East Sussex (löytöpaikka)',
       lat: 50.9878, lon: 0.0628,
-      kortti: 'Sorakuopasta nousi 1912 \'ihmiskunnan puuttuva rengas\': ihmisen kallo '
+      kortti: 'Sorakuopasta nousi 1912 ’ihmiskunnan puuttuva rengas’: ihmisen kallo '
         + 'ja apinan leuka samassa paketissa. Tiedemaailma nielaisi syötin '
         + 'neljäksikymmeneksi vuodeksi — kukaan ei tullut kysyneeksi, miksi '
         + 'luut oli värjätty. Löytäjä halusi kuuluisaksi, ja tulikin: '
@@ -2406,14 +2412,14 @@ export const SKANDAALIT = {
      */
     {
       id: 'etelameren-kupla',
-      otsikko: 'Etelämeren kupla — pörssiromahdus joka opetti sanan \'bubble\'',
+      otsikko: 'Etelämeren kupla — pörssiromahdus joka opetti sanan ’bubble’',
       nimio: 'Etelämeren kupla',
       vuosi: '1720',
       paikka: 'South Sea House, Threadneedle Street, Lontoo',
       lat: 51.5146, lon: -0.0837,
       kortti: 'Yhtiöllä oli yksinoikeus kauppaan, jota ei voinut käydä, ja osake, '
         + 'joka vain nousi — kunnes ei enää noussut. Lontoo oppi vuonna 1720 '
-        + 'sanan \'kupla\' kalleimmalla mahdollisella tavalla. '
+        + 'sanan ’kupla’ kalleimmalla mahdollisella tavalla. '
         + 'Konttorirakennuksen nimi seisoo yhä Threadneedle Streetin kulmassa.',
       teksti: 'South Sea Company perustettiin tammikuussa 1711 hoitamaan '
         + 'Britannian valtionvelkaa: velkojat luovuttivat saatavansa yhtiölle ja '
@@ -2620,7 +2626,7 @@ export const SKANDAALIT = {
       vuosi: '1820–1890',
       paikka: 'Symin saari, Egeanmeri',
       lat: 36.6158, lon: 27.8388,
-      kortti: 'Simonides myi \'muinaisia\' käsikirjoituksia kuninkaille ja museoille, '
+      kortti: 'Simonides myi ’muinaisia’ käsikirjoituksia kuninkaille ja museoille, '
         + 'ja kun eräs aito ikivanha Raamatun koodeksi löytyi, hän ilmoitti '
         + 'tehneensä senkin itse. Mies väärensi urallaan niin paljon, että '
         + 'väärensi lopulta oman kuolemansakin. Paleografia sai hänestä sekä '
@@ -3041,8 +3047,8 @@ export const SKANDAALIT = {
         + '\n\nPicassoihin tulivat lisäksi Matisse, Modigliani ja Renoir. Kun '
         + 'galleristit alkoivat epäillä, hän vaihtoi nimeä — Louis Cassou, Joseph '
         + 'Dory, E. Raynal — ja siirtyi myymään postitse. 1950-luvun puolivälissä hän '
-        + 'myi \'Matissen\' Harvardin Fogg-museolle ja tarjosi perään \'Modiglianin\' '
-        + 'ja \'Renoirin\'. Museon intendentti huomasi kolmessa piirroksessa saman '
+        + 'myi ’Matissen’ Harvardin Fogg-museolle ja tarjosi perään ’Modiglianin’ '
+        + 'ja ’Renoirin’. Museon intendentti huomasi kolmessa piirroksessa saman '
         + 'käden, kieltäytyi ostamasta ja alkoi kysellä muista museoista. Kauppiaana '
         + 'toiminut Fernand Legros otti myynnistä ensin 40, sitten 50 prosenttia ja '
         + 'maksoi de Horylle 400 dollaria kuussa Ibizalla. Texasilainen öljymies Algur '
@@ -3058,6 +3064,14 @@ export const SKANDAALIT = {
         + 'ei ole rikos — vasta nimikirjoitus tekee taulusta väärennöksen. Nimet '
         + 'saattoi vetää Legros.',
       lahde: 'en-Wikipedia "Elmyr de Hory". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Elmyr de Hory 1974.png',
+        lyhyt: 'Elmyr de Hory marraskuussa 1974 Ibizalla, kaksi vuotta ennen kuolemaansa.',
+        selite: 'Elmyr de Hory marraskuussa 1974 Ibizalla, kaksi vuotta ennen '
+          + 'kuolemaansa — saarella hän eli väärennystensä tuomista tuloista ja '
+          + 'rakensi legendaa itsestään.',
+        lahde: 'Kitetoa 1974, Wikimedia Commons (CC BY-SA 4.0)',
+      },
       visa: {
         kysymys: 'Minkä taiteilijoiden tyyliin Elmyr de Hory erityisesti väärensi '
           + 'teoksia?',
@@ -3109,11 +3123,20 @@ export const SKANDAALIT = {
         + 'kansallismuseossa pysyvästi esillä vuodesta 2019. Scotland Yardin tutkinta '
         + 'esineiden alkuperästä on yhä avoinna.',
       lahde: 'en-Wikipedia "Seuso Treasure". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Vadásztál.jpg',
+        lyhyt: 'Seuson aarteen metsästyslautanen, jonka kaiverrus Pelso todisti hopeiden unkarilaisen alkuperän.',
+        selite: 'Seuson aarteen niin sanottu metsästyslautanen — 70,5 cm '
+          + 'läpimitaltaan ja lähes 9 kiloa painava hopealautanen, jonka reunaan '
+          + 'kaiverrettu nimi Pelso (Balaton) todisti aarteen unkarilaisen '
+          + 'alkuperän.',
+        lahde: 'Elekes Andor 2017, Wikimedia Commons (CC BY-SA 4.0)',
+      },
       visa: {
         kysymys: 'Mikä kaiverrus tuki Unkarin väitettä Seuson aarteen alkuperästä?',
         vaihtoehdot: [
-          '\'Pelso\' — Balaton-järven roomalainen nimi',
-          '\'Pannonia\' — Rooman maakunnan nimi',
+          '’Pelso’ — Balaton-järven roomalainen nimi',
+          '’Pannonia’ — Rooman maakunnan nimi',
           'Omistajan sukuvaakuna',
         ],
         oikea: 0,
@@ -3290,6 +3313,16 @@ export const SKANDAALIT = {
         + 'neljäänkymmeneen; jäsenillä oli laivan arvonimet, ja joukossa istuivat '
         + 'aikanaan Arthur Guinness ja John Jameson.',
       lahde: 'en-Wikipedia "Ouzel Galley". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-ouzel-galleyn-mysteeri-photo-v1.jpg`,
+          lyhyt: 'Kolmimastoinen kauppagalleija palaa hämärässä satamaan, laituriväki katselee hiljaa.',
+          selite: 'Ouzel palaa Liffeytä ylös hämärässä lasti täynnä, ja laiturille '
+            + 'kerääntynyt väki katselee laivaa, jonka he olivat jo julistaneet '
+            + 'kadonneeksi vuosia sitten.',
+          lahde: 'Matkakirjan havainnekuva.',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Ouzel Galleyn ylimääräiselle saalisrahalle tehtiin, kun '
           + 'omistajat ja vakuuttajat oli hyvitetty?',
@@ -3313,7 +3346,10 @@ export const SKANDAALIT = {
       nimio: 'Koirapäiväkuningas',
       vuosi: '1809',
       paikka: 'Stjórnarráðshúsið (hallituksen talo), Reykjavík',
-      lat: 64.1475, lon: -21.933,
+      // Ei omaa karttapistettä (SK 12.10.2026, PT:n sääntö: kartalle vain kahdella lähteellä; Stjórnarráðshúsiä
+      // ei mainita lähteissä) → piste = Islannin laudan oma piste (maailmankartta-pallopisteet.js), joten nosto ankkuroituu
+      // kaupungin laattaan ja jää lehteen eikä mene kohdekartalle.
+      lat: 64.15, lon: -21.82,
       kortti: 'Mies astui maihin kauppalaivasta, pidätti kuvernöörin ja julisti '
         + 'saarivaltion itsenäiseksi — kaikki tämä yhden kesän aikana. Kahden '
         + 'kuukauden päästä kuningaskunta oli ohi ja kuningas vankina laivassa. '
@@ -3355,8 +3391,8 @@ export const SKANDAALIT = {
         lisenssi: 'Matkakirjan oma havainnekuva',
       },
       visa: {
-        kysymys: 'Miksi islantilaiset kutsuvat Jørgen Jørgenseniä \'koirapäivien '
-          + 'kuninkaaksi\'?',
+        kysymys: 'Miksi islantilaiset kutsuvat Jørgen Jørgenseniä ’koirapäivien '
+          + 'kuninkaaksi’?',
         vaihtoehdot: [
           'Hän kulki kaikkialla koiralaumansa kanssa',
           'Hänen lyhyt valtakautensa osui kesän koirapäiviin',
@@ -3466,6 +3502,14 @@ export const SKANDAALIT = {
         + 'ensin ja tapettiin sitten.',
       lahde: 'en-Wikipedia "Slaying of the Basques", johdanto-osa sekä osiot '
         + '"Background" ja "Massacre". Tarkistettu 11.9.2026.',
+      kuva: {
+        tiedosto: 'Reykjanes, Ísafjarðardjúp, Aug. 2022 04.jpg',
+        lyhyt: 'Ísafjarðardjúpin ranta Reykjanesin niemeltä — samalta vuonolta, jolla baskilaiset valaanpyytäjät tapettiin 1615.',
+        selite: 'Ísafjarðardjúpin ranta Reykjanesin niemeltä — samalta vuonolta, '
+          + 'jonka rannoille myrsky ajoi baskilaiset valaanpyytäjät syksyllä 1615 '
+          + 'ja jossa heidät sittemmin tapettiin.',
+        lahde: 'Hornstrandir1 2022, Wikimedia Commons (CC BY-SA 4.0)',
+      },
       visa: {
         kysymys: 'Mikä laukaisi ensimmäisen verityön Þingeyrissä?',
         vaihtoehdot: [
@@ -3528,7 +3572,7 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Amedeo Modigliani". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Millä työkalulla opiskelijat paljastivat veistäneensä yhden '
-          + 'Livornon kanavasta löytyneistä \'Modiglianin päistä\'?',
+          + 'Livornon kanavasta löytyneistä ’Modiglianin päistä’?',
         vaihtoehdot: [
           'Taltalla ja nuijalla',
           'Porakoneella',
@@ -3575,6 +3619,14 @@ export const SKANDAALIT = {
         + 'purki Banca Romanan ja jätti setelinanto-oikeuden uudelle Banca '
         + 'd\'Italialle sekä kahdelle eteläiselle pankille.',
       lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Bernardo Tanlongo.jpg',
+        lyhyt: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa vuodelta 1894.',
+        selite: 'Banca Romanan pääjohtaja Bernardo Tanlongo aikalaispiirroksessa '
+          + 'vuodelta 1894 — mies, jonka pankki painoi seteleitä kahteen kertaan '
+          + 'samoilla sarjanumeroilla.',
+        lahde: 'Illustrazione Italiana 1894, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Mikä instituutio perustettiin Banca Romanan skandaalin '
           + 'seurauksena?',
@@ -3617,7 +3669,7 @@ export const SKANDAALIT = {
         + 'hakkasi miehen maahan ja lähti kullan kanssa. Messinassa hän otti enonsa '
         + 'sukunimen ja muuttui kreivi Alessandro Cagliostroksi.'
         + '\n\nVaimonsa Lorenza Felicianin kanssa hän kiersi Euroopan hoveja '
-        + 'parannusjuomien ja \'egyptiläisen vapaamuurariuden\' kanssa, jonka '
+        + 'parannusjuomien ja ’egyptiläisen vapaamuurariuden’ kanssa, jonka '
         + 'suurmestariksi hän nimitti itsensä. Katariina Suuren henkilääkäri tutki '
         + 'hänen valmisteensa ja totesi ne hyödyttömiksi. Kuurinmaalla kreivitär Elisa '
         + 'von der Recke paljasti hänet julkisesti. Strasbourgissa hän sai ystäväkseen '
@@ -3636,7 +3688,7 @@ export const SKANDAALIT = {
         + 'poikansa lähdöstä.',
       lahde: 'en-Wikipedia "Alessandro Cagliostro". Tarkistettu 2.9.2026.',
       visa: {
-        kysymys: 'Mikä oli \'kreivi Cagliostrona\' esiintyneen huijarin oikea nimi?',
+        kysymys: 'Mikä oli ’kreivi Cagliostrona’ esiintyneen huijarin oikea nimi?',
         vaihtoehdot: [
           'Vincenzo Peruggia',
           'Bernardo Tanlongo',
@@ -3684,6 +3736,14 @@ export const SKANDAALIT = {
         + 'valtakunnanomena mukanaan. Esineet katosivat toisessa maailmansodassa — ja '
         + 'löytyivät uudelleen katedraalin kryptasta joulukuussa 2024.',
       lahde: 'en-Wikipedia "Barbara Radziwiłł". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Barbara Radziwiłł.jpg',
+        lyhyt: 'Barbora Radvilaitėn muotokuva noin vuodelta 1550, samoihin aikoihin kun hänen salainen avioliittonsa jakoi Puola-Liettuan.',
+        selite: 'Barbora Radvilaitėn muotokuva noin vuodelta 1550, maalattu Lucas '
+          + 'Cranach nuoremman piirissä — samoihin vuosiin, jolloin hänen salainen '
+          + 'avioliittonsa Sigismund Augustin kanssa jakoi koko Puola-Liettuan.',
+        lahde: 'Lucas Cranach nuoremman piiri n. 1550, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Kuka vastusti kiivaimmin Sigismund Augustin ja Barbora Radvilaitėn '
           + 'avioliittoa?',
@@ -3790,10 +3850,18 @@ export const SKANDAALIT = {
         + 'liittyivät Lubomirskin nousuun, jonka vaatimuksiin kuului palkanmaksun '
         + 'lopettaminen boratynkoina.'
         + '\n\nLyönti loppui 1668, mutta kolikot kiersivät vielä 1700-luvun alussa. '
-        + 'Puolan kielessä epäluotettava tuttu tunnetaan yhä \'kuin huono szeląg\', ja '
+        + 'Puolan kielessä epäluotettava tuttu tunnetaan yhä ’kuin huono szeląg’, ja '
         + 'arvottomasta asiasta sanotaan, ettei se ole katkenneen szelągin väärtti.',
       lahde: 'pl-Wikipedia "Boratynka" ja en-Wikipedia "Boratynka". Tarkistettu '
         + '2.9.2026.',
+      kuva: {
+        tiedosto: 'Boratynka litewska 1666 Kowno.jpg',
+        lyhyt: 'Liettuan Kaunaan rahapajassa vuonna 1666 lyöty boratynka-kuparikolikko.',
+        selite: 'Liettuan Kaunaan rahapajassa vuonna 1666 lyöty '
+          + 'boratynka-kuparikolikko — pieni raha, jolle annettiin keinotekoisesti '
+          + 'hopeisen szelągin arvo.',
+        lahde: 'Damian Marciniak 2019, Wikimedia Commons (CC BY-SA 4.0)',
+      },
       visa: {
         kysymys: 'Mistä boratynka-kolikko sai nimensä?',
         vaihtoehdot: [
@@ -3802,6 +3870,127 @@ export const SKANDAALIT = {
           'Puolan sanasta, joka tarkoittaa halpaa',
         ],
         oikea: 1,
+      },
+    },
+  ],
+  LUX: [
+    /*
+     * Suurherttuallinen palatsi, Luxemburg (luopumisen ilmoituspaikka).
+     * Lähde: en.wikipedia.org: Marie-Adélaïde, Grand Duchess of Luxembourg
+     */
+    {
+      id: 'marie-adelaiden-luopuminen-1919',
+      otsikko: 'Suurherttuatar, joka tapasi keisarin väärään aikaan',
+      nimio: 'Luopuminen 1919',
+      vuosi: '1919',
+      paikka: 'Suurherttuallinen palatsi, Luxemburg',
+      lat: 49.6109, lon: 6.1328,
+      kortti: 'Kaksikymmentäneljävuotias suurherttuatar tapasi Saksan '
+        + 'keisarin ja päästi tämän joukot maansa läpi — sodan jälkeen '
+        + 'liittoutuneet ja oma parlamentti vaativat hänet pois valtaistuimelta '
+        + 'yhdeksän kuukauden sisällä. Ystävällisyydestä tuli petoksen näköinen '
+        + 'heti kun sota päättyi väärälle puolelle.',
+      teksti: 'Marie-Adélaïde nousi Luxemburgin suurherttuattareksi '
+        + 'vuonna 1912 vain kahdeksantoistavuotiaana. Kun Saksa hyökkäsi '
+        + 'Luxemburgiin elokuussa 1914 matkalla Ranskaan, suurherttuatar '
+        + 'ei vastustanut miehitystä; myöhemmin hän myös tapasi Saksan '
+        + 'keisari Vilhelm II:n vierailulla ja osallistui saksalaisten '
+        + 'järjestämiin tilaisuuksiin sodan aikana.'
+        + '\n\n'
+        + 'Luxemburg oli sopimuksin sitoutunut pysymään puolueettomana, '
+        + 'eikä suurherttuatar tehnyt mitään estääkseen rajan '
+        + 'ylityksen — hallituksen mukaan vastarinta olisi silti '
+        + 'ollut turhaa yhden pienen maan armeijalla suurvaltaa '
+        + 'vastaan.'
+        + '\n\n'
+        + 'Liittoutuneiden silmissä käytös näytti myötäilyltä. Sodan '
+        + 'päätyttyä 1918 Ranska vaati suurherttuattaren erottamista '
+        + 'ehtona sille, että Luxemburgin itsenäisyys ylipäätään '
+        + 'säilyisi, ja maan oma parlamentti äänesti tammikuussa 1919 '
+        + 'epäluottamuksesta hallitsijaansa kohtaan. Vasemmisto '
+        + 'vaati suorastaan tasavaltaa, kun taas suurin osa väestöstä '
+        + 'halusi säilyttää monarkian mutta uudella hallitsijalla.'
+        + '\n\n'
+        + 'Marie-Adélaïde luopui valtaistuimesta 14. tammikuuta 1919 '
+        + 'sisarensa Charlotten hyväksi. Syyskuussa samana vuonna '
+        + 'kansanäänestys vahvisti sekä monarkian jatkumisen että '
+        + 'Charlotten aseman ylivoimaisella enemmistöllä — ratkaisu, '
+        + 'joka rauhoitti kriisin ja antoi Charlottelle valtakauden, '
+        + 'joka kesti lähes neljäkymmentä vuotta. Marie-Adélaïde itse '
+        + 'vetäytyi luostariin ja kuoli espanjantautiin jo 1924, '
+        + 'kahdeksankymmentä vuotta ennen kuin historioitsijat '
+        + 'arvioivat hänen käytöksensä olleen enemmän kokemattomuutta '
+        + 'kuin tietoista petosta.',
+      lahde: 'en-Wikipedia "Marie-Adélaïde, Grand Duchess of Luxembourg". '
+        + 'Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi Marie-Adélaïde joutui luopumaan vallasta 1919?',
+        vaihtoehdot: [
+          'Hän oli myötäillyt Saksan miehitystä sodan aikana',
+          'Hän oli hävinnyt kansanäänestyksen sisarelleen',
+          'Ranska halusi liittää Luxemburgin osaksi omaa aluettaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Junglinsterin lähetinasema, Luxemburg.
+     * Lähde: en.wikipedia.org: Radio Luxembourg
+     */
+    {
+      id: 'radio-luxembourg-1933',
+      otsikko: 'Radioasema, jota BBC ei saanut vaiennettua',
+      nimio: 'Radio Luxembourg',
+      vuosi: '1933–',
+      paikka: 'Junglinsterin lähetinasema, Luxemburg',
+      lat: 49.6803, lon: 6.2536,
+      kortti: 'Pieni suurherttuakunta rakensi Euroopan tehokkaimman '
+        + 'radiolähettimen ja alkoi lähettää englanninkielistä '
+        + 'mainosradiota suoraan Britanniaan — ilmaiseksi ja ilman '
+        + 'BBC:n lupaa. Lontoo yritti vaientaa aseman diplomatialla '
+        + 'ja kansainvälisillä sopimuksilla vuosikymmenen ajan, '
+        + 'turhaan.',
+      teksti: 'Radio Luxembourg aloitti kaupallisen lähetystoiminnan '
+        + 'vuonna 1933 Junglinsterin uudesta, poikkeuksellisen '
+        + 'tehokkaasta pitkäaaltolähettimestä. Ison-Britannian BBC:llä '
+        + 'oli tuolloin lähetysmonopoli eikä se sallinut mainoksia '
+        + 'ollenkaan, joten Radio Luxembourg täytti markkinaraon: se '
+        + 'lähetti englanninkielistä viihdettä ja musiikkia, jonka '
+        + 'brittiläiset yritykset maksoivat suoraan.'
+        + '\n\n'
+        + 'Britannian hallitus piti asemaa laittomana kiertotienä ja '
+        + 'yritti hiljentää sen kansainvälisen radiotaajuussopimuksen '
+        + '(Luzernin sopimus 1933) kautta, mutta Luxemburg ei '
+        + 'allekirjoittanut sopimusta eikä ollut sidottu siihen. '
+        + 'Postivirasto uhkaili kuuntelijoita ja BBC kieltäytyi '
+        + 'julkaisemasta aseman ohjelmatietoja lehdissään toivoen, '
+        + 'että pimeys sammuttaisi kiinnostuksen — mainostajat ja '
+        + 'kuuntelijat eivät siitä silti välittäneet.'
+        + '\n\n'
+        + 'Yhtiön omistivat ranskalais-luxemburgilaiset sijoittajat, '
+        + 'ja sen ohjelmat tehtiin Lontoossa mutta lähetettiin '
+        + 'Junglinsterin mastosta niin voimakkaalla teholla, että '
+        + 'signaali kuului selvästi koko Etelä-Englannin yli — '
+        + 'kuuntelijamäärät kasvoivat siitä huolimatta koko '
+        + '1930-luvun ajan, eikä yksikään Britannian viranomainen '
+        + 'pystynyt sulkemaan lähetystä pois ilmasta.'
+        + '\n\n'
+        + 'Asema selvisi sodan jälkeenkin ja kasvoi 1950–60-luvuilla '
+        + 'Euroopan kuunnelluimmaksi kaupalliseksi radioksi — sen '
+        + 'kautta löysivät yleisönsä lukuisat myöhemmät BBC-juontajat '
+        + 'ja pop-artistit, joille kotimaan oma radio ei vielä '
+        + 'antanut tilaa. Vasta 1973 BBC sai oman kaupallisen '
+        + 'kilpailijansa Britanniaan, neljäkymmentä vuotta '
+        + 'Luxemburgin ensilähetyksen jälkeen.',
+      lahde: 'en-Wikipedia "Radio Luxembourg". Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi Britannian BBC ei voinut estää Radio Luxembourgia lähettämästä?',
+        vaihtoehdot: [
+          'Asema toimi Luxemburgista eikä ollut BBC:n tai Britannian lain alainen',
+          'BBC omisti osan asemasta eikä halunnut sulkea sitä',
+          'Kansainliitto myönsi asemalle erityisluvan',
+        ],
+        oikea: 0,
       },
     },
   ],
@@ -3904,6 +4093,14 @@ export const SKANDAALIT = {
         + 'sillä ehdolla, että johtajat luovutetaan. Giese ja Brinken kidutettiin ja '
         + 'mestattiin 2. elokuuta 1589. Riika sai pitää vanhan kalenterin.',
       lahde: 'en-Wikipedia "Calendar riots in Riga". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Riga, Latvia (1600); a closer view.jpg',
+        lyhyt: 'Käsin väritetty kaiverrus Riiasta 1500-luvun lopulta, kalenterikahakoiden näyttämöltä.',
+        selite: 'Käsin väritetty kaiverrus Riiasta 1500-luvun lopulta: kuvassa '
+          + 'erottuvat Pyhän Jaakobin kirkko, raatihuone ja Pyhän Pietarin kirkko '
+          + 'Väinäjoen rannalla — juuri ne paikat, joilla kalenterikahakat käytiin.',
+        lahde: 'Sebastian Münster n. 1581–1600, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Milloin Riika lopulta siirtyi gregoriaaniseen kalenteriin?',
         vaihtoehdot: [
@@ -3912,6 +4109,115 @@ export const SKANDAALIT = {
           'Vasta vuonna 1919',
         ],
         oikea: 2,
+      },
+    },
+  ],
+  MLT: [
+    /*
+     * Pyhän Angelon linnoitus, Birgu (Vittoriosa) — vankilan paikka.
+     * Lähde: en.wikipedia.org: Caravaggio
+     */
+    {
+      id: 'caravaggion-karkotus-1608',
+      otsikko: 'Ritarikunta erottaa oman kuuluisimman maalarinsa',
+      nimio: 'Caravaggion pako',
+      vuosi: '1608',
+      paikka: 'Pyhän Angelon linnoitus, Birgu',
+      lat: 35.8904, lon: 14.5225,
+      kortti: 'Maalari, joka oli juuri saanut ritarikunnalta kunnianosoituksen '
+        + 'elämästään komeimmasta teoksesta, istui neljä kuukautta myöhemmin '
+        + 'kalliovankilassa toista ritaria vastaan tehdyn hyökkäyksen takia. '
+        + 'Ritarikunta ei antanut anteeksi: se erotti hänet muodollisesti '
+        + '”mätänevänä jäsenenä” ja julisti hänet karkotetuksi.',
+      teksti: 'Michelangelo Merisi da Caravaggio pakeni Roomasta 1607 '
+        + 'tapettuaan miehen kaksintaistelussa. Maltalla suurmestari '
+        + 'Alof de Wignacourt otti hänet vastaan tunnustuksena hänen '
+        + 'maineestaan maalarina, ja heinäkuussa 1608 ritarikunta '
+        + 'nosti hänet ritariksi tavallisen tulokoehuolen ohittaen — '
+        + 'harvinainen kunnia ei-aatelissyntyiselle taiteilijalle.'
+        + '\n\n'
+        + 'Kiitokseksi Caravaggio maalasi katedraalin oratorioon '
+        + '”Johannes Kastajan mestauksen”, jonka suurmestari tilasi '
+        + 'henkilökohtaisesti ja joka on edelleen taiteilijan '
+        + 'ainoa allekirjoitettu teos. Menestys ei kuitenkaan '
+        + 'muuttanut hänen luonnettaan: hänellä oli Roomasta asti '
+        + 'maine tulisena riitapukarina, ja sama toistui Maltalla.'
+        + '\n\n'
+        + 'Elokuun 1608 lopulla Caravaggio joutui tappeluun ja '
+        + 'haavoitti vanhempaa ritaria, Fra Giovanni Rodomonte Roeroa. '
+        + 'Hänet vangittiin ja teljettiin kallioon hakattuun selliin '
+        + 'Pyhän Angelon linnoituksessa Birgussa — vankilaan, josta '
+        + 'kukaan ei ollut aiemmin paennut. Caravaggio kuitenkin '
+        + 'pakeni köysien avulla ja purjehti Sisiliaan vain '
+        + 'kuukausia sen jälkeen, kun hänen maalauksensa oli '
+        + 'paljastettu juhlallisesti samassa kaupungissa.'
+        + '\n\n'
+        + 'Ritarikunnan kokous erotti hänet muodollisesti joulukuussa '
+        + '1608 lauseella ”tamquam membrum putridum et foetidum” — '
+        + '”kuin mätänevä ja löyhkäävä jäsen”. Caravaggio ei koskaan '
+        + 'palannut Maltalle eikä nähnyt oratoriomaalaustaan enää; '
+        + 'hän kuoli kaksi vuotta myöhemmin paossa Italian rannikolla.',
+      lahde: 'en-Wikipedia "Caravaggio". Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Miksi ritarikunta erotti Caravaggion Maltalta 1608?',
+        vaihtoehdot: [
+          'Hän hyökkäsi tappelussa toista ritaria vastaan ja pakeni vankilasta',
+          'Hän kieltäytyi maalaamasta tilattua alttaritaulua',
+          'Hänet paljastettiin väärentämästä ritarikunnan sinettiä',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Suurmestarin palatsi, Valletta — ritarikunnan aarrekammio.
+     * Lähde: en.wikipedia.org: French occupation of Malta (1798–1800)
+     */
+    {
+      id: 'napoleonin-kirkkohopean-ryosto-1798',
+      otsikko: 'Vapauttaja, joka ryösti kirkkojen hopeat',
+      nimio: 'Kirkkohopea 1798',
+      vuosi: '1798',
+      paikka: 'Suurmestarin palatsi, Valletta',
+      lat: 35.8989, lon: 14.5146,
+      kortti: 'Napoleon lupasi maltalaisille vapauden ritarikunnan '
+        + 'vallasta, mutta hänen joukkonsa tyhjensivät saman tien '
+        + 'kirkkojen ja ritarikunnan aarrekammion hopean ja kullan '
+        + 'matkakassaksi Egyptin-retkelle. Vapautuksesta tuli '
+        + 'ryöstöksi koettu kokemus viikkojen sisällä.',
+      teksti: 'Napoleonin laivasto pysähtyi Maltalle kesäkuussa 1798 '
+        + 'matkalla Egyptiin, ja ritarikunta antautui käytännössä '
+        + 'taisteluitta — sen omat säännöt kielsivät ritareita '
+        + 'taistelemasta toisia kristittyjä vastaan, mikä teki '
+        + 'todellisesta puolustuksesta lähes mahdotonta. '
+        + 'Ranskalaiset lupasivat maltalaisille uuden, valistuksen '
+        + 'ihanteiden mukaisen hallinnon ja lakkauttivat muun muassa '
+        + 'orjuuden ja aateliston erioikeudet.'
+        + '\n\n'
+        + 'Rahoittaakseen jatkomatkaa Egyptiin ranskalaiskomentajat '
+        + 'takavarikoivat ritarikunnan aarrekammion hopeaesineet sekä '
+        + 'saaren kirkkojen ja katedraalin hopeiset alttarikoristeet '
+        + 'ja astiat, ja suuri osa niistä sulatettiin laivaston '
+        + 'kassaksi vielä ennen kuin laivasto ehti lähteä satamasta. '
+        + 'Uskonnolliselle väestölle kirkkojen hopean menetys oli '
+        + 'paljon herkempi asia kuin ritarikunnan oman omaisuuden '
+        + 'takavarikointi, sillä moni esine oli ollut suvuittain '
+        + 'lahjoitettu paikallisille kirkoille sukupolvien ajan.'
+        + '\n\n'
+        + 'Ryöstö yhdessä muiden ranskalaisten uudistusten kanssa '
+        + 'kääntyi kansaa vastaan hyvin nopeasti: jo syyskuussa 1798 '
+        + 'maltalaiset nousivat kapinaan varuskuntaa vastaan, ja '
+        + 'brittien tuella ranskalaiset saarrettiin lopulta '
+        + 'Vallettaan kahdeksi vuodeksi ennen antautumistaan 1800.',
+      lahde: 'en-Wikipedia "French occupation of Malta (1798-1800)". '
+        + 'Tarkistettu 27.9.2026.',
+      visa: {
+        kysymys: 'Mihin ranskalaiset käyttivät Maltalta takavarikoimansa kirkkohopean?',
+        vaihtoehdot: [
+          'Rahoittamaan laivaston jatkomatkaa Egyptiin',
+          'Lähettämään sen Pariisin vallankumousmuseoon',
+          'Sulattamaan sen ranskalaisiksi mitaleiksi Maltan valloituksesta',
+        ],
+        oikea: 0,
       },
     },
   ],
@@ -4000,7 +4306,7 @@ export const SKANDAALIT = {
         + 'Vermeerin mestariteos. Rembrandt-seura osti sen 520 000 guldenilla ja '
         + 'lahjoitti Rotterdamin Boijmans-museolle, jossa siitä tuli suuren näyttelyn '
         + 'keskus.'
-        + '\n\nGöring vaihtoi 137 ryöstettyä maalausta \'Vermeeriin\' nimeltä Kristus '
+        + '\n\nGöring vaihtoi 137 ryöstettyä maalausta ’Vermeeriin’ nimeltä Kristus '
         + 'ja aviorikkoja. Liittoutuneiden sotilaat löysivät sen itävaltalaisesta '
         + 'suolakaivoksesta 17. toukokuuta 1945 ja jäljittivät sen van Meegereniin, '
         + 'joka pidätettiin 29. toukokuuta kansallisomaisuuden myymisestä viholliselle '
@@ -4023,7 +4329,7 @@ export const SKANDAALIT = {
         lisenssi: 'Matkakirjan oma havainnekuva',
       },
       visa: {
-        kysymys: 'Miksi van Meegeren tunnusti väärentäneensä \'Vermeerinsä\'?',
+        kysymys: 'Miksi van Meegeren tunnusti väärentäneensä ’Vermeerinsä’?',
         vaihtoehdot: [
           'Röntgenkuvaus paljasti maalikerrosten alta luonnoksen',
           'Häntä syytettiin kansallisaarteen myymisestä natseille, mistä '
@@ -4075,6 +4381,14 @@ export const SKANDAALIT = {
         + '1998–2016 puhuvat häntä vastaan; osa jälkeläisistä kiistää näytteiden '
         + 'aitouden.',
       lahde: 'en-Wikipedia "Karl Wilhelm Naundorff". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Karl Wilhelm Naundorff Charles Louis Duc de Normandie Edward Scriven 1836.jpg',
+        lyhyt: 'Karl Wilhelm Naundorffin muotokuva vuodelta 1836, kaiverrettu nimellä Charles Louis, Duc de Normandie.',
+        selite: 'Karl Wilhelm Naundorffin muotokuva vuodelta 1836, kaiverrettu '
+          + 'nimellä ’Charles Louis, Duc de Normandie’ — nimi, jolla hän vaati '
+          + 'Ranskan kruunua.',
+        lahde: 'Edward Scriven 1836, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Kuka Karl Wilhelm Naundorff väitti olevansa?',
         vaihtoehdot: [
@@ -4185,6 +4499,14 @@ export const SKANDAALIT = {
         + 'vaurioin kuin oli pelätty. Vuonna 2018 koomikkoduo Ylvis teki vuoden 1994 '
         + 'varkaudesta musikaalin, jossa esiintyi Enger itse.',
       lahde: 'en-Wikipedia "The Scream". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Edvard Munch, 1893, The Scream, oil, tempera and pastel on cardboard, 91 x 73 cm, National Gallery of Norway.jpg',
+        lyhyt: 'Munchin Huuto (1893) — juuri tämä maalaus varastettiin Oslon kansallisgalleriasta 1994.',
+        selite: 'Edvard Munchin Huuto (1893) — juuri tämä maalaus varastettiin Oslon '
+          + 'kansallisgalleriasta olympia-aamuna helmikuussa 1994 ja saatiin takaisin '
+          + 'vahingoittumattomana kolme kuukautta myöhemmin.',
+        lahde: 'Edvard Munch 1893, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Mitä Huudon varastaneet miehet jättivät jälkeensä vuonna 1994?',
         vaihtoehdot: [
@@ -4240,6 +4562,14 @@ export const SKANDAALIT = {
         + '1910.',
       lahde: 'no-Wikipedia "Fra Kristiania-Bohêmen" ja en-Wikipedia "Hans Jæger". '
         + 'Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Edvard Munch - Hans Jæger - IMG 9768 - Nasjonalmuseet, Oslo.jpg',
+        lyhyt: 'Edvard Munchin vuonna 1889 maalaama muotokuva Hans Jægeristä, Kristianian boheemipiirin johtohahmosta.',
+        selite: 'Edvard Munchin vuonna 1889 maalaama muotokuva Hans Jægeristä, '
+          + 'Kristianian boheemipiirin johtohahmosta, jonka romaani Fra '
+          + 'Kristiania-Bohêmen takavarikoitiin heti ilmestyttyään joulukuussa 1885.',
+        lahde: 'Edvard Munch 1889, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Mitä kirjailija Hans Jægerille tapahtui romaanin Fra '
           + 'Kristiania-Bohêmen ilmestyttyä?',
@@ -4267,7 +4597,7 @@ export const SKANDAALIT = {
       kortti: 'Kokonainen kuningaskunnan aarrekammio katosi maailmalle, ja jäljelle '
         + 'jäi yksi miekka — sekin myytiin välillä väärällä nimilapulla. '
         + 'Pariisin maailmannäyttelyssä 1878 puolalaiset kävijät tuijottivat '
-        + '\'saksalaista miekkaa\' ja kuiskivat, että tuohan näyttää '
+        + '’saksalaista miekkaa’ ja kuiskivat, että tuohan näyttää '
         + 'epäilyttävästi omalta kruunajaismiekalta. He olivat oikeassa; '
         + 'paluumatka kesti silti vielä viisikymmentä vuotta.',
       teksti: 'Vuonna 1795 preussilaiset joukot tyhjensivät Wawelin aarrekammion '
@@ -4292,6 +4622,14 @@ export const SKANDAALIT = {
         + 'uppoaisi, kruunajaismiekka ainakin kelluisi. Se päätyi Kanadaan ja palasi '
         + 'Krakovaan vasta 1959.',
       lahde: 'en-Wikipedia "Szczerbiec". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Szczerbiec Polish coronation sword.jpg',
+        lyhyt: 'Szczerbiec, Puolan kruunajaismiekka, kahvan latinankielisine kaiverruksineen.',
+        selite: 'Szczerbiec, Puolan kruunajaismiekka, jonka kahvassa näkyvät '
+          + 'latinankieliset kaiverrukset — sama miekka, joka kiersi Euroopan '
+          + 'aarrekammioita ja huutokauppoja 133 vuotta ennen paluutaan Wawelille.',
+        lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Miten kruunajaismiekka Szczerbiec palasi Puolaan vuonna 1928?',
         vaihtoehdot: [
@@ -4320,7 +4658,7 @@ export const SKANDAALIT = {
       otsikko: 'Wałbrzychin kultajuna — aarre jota ei ollut',
       nimio: 'Kultajuna',
       vuosi: '1945 (legenda), 2015–2016 (kaivaukset)',
-      paikka: 'Wrocław–Wałbrzych-radan \'kilometri 65\', Wałbrzych',
+      paikka: 'Wrocław–Wałbrzych-radan ’kilometri 65’, Wałbrzych',
       lat: 50.8222, lon: 16.3067,
       kortti: 'Maatutka näytti vuonna 2015 jotain junanmuotoista, ja pian puoli '
         + 'maailmaa tiesi tarkalleen, missä natsien kultajuna makaa. '
@@ -4398,7 +4736,7 @@ export const SKANDAALIT = {
         + 'löydy niistä virkaluetteloista, joihin hänen pitäisi kuulua. Kronikka voi '
         + 'siis olla jotain muuta kuin 1700-luvun väärennös — ehkä Morawskin oma '
         + 'seurapiirivitsi juuri ennen vuotta 1825, jota ei koskaan peruttu. Muinaista '
-        + '\'Suur-Lechiaa\' koskevassa salaliittoteoriassa sitä siteerataan yhä.',
+        + '’Suur-Lechiaa’ koskevassa salaliittoteoriassa sitä siteerataan yhä.',
       lahde: 'pl-Wikipedia "Kronika Prokosza". Tarkistettu 2.9.2026.',
       kuvat: [
         {
@@ -4465,6 +4803,14 @@ export const SKANDAALIT = {
         + 'Portugalin keskuspankki voitti Waterlowia vastaan käydyn jutun lordien '
         + 'huoneessa 1932, eikä painotalo toipunut siitä koskaan täysin.',
       lahde: 'en-Wikipedia "Alves dos Reis". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Alves dos Reis.png',
+        lyhyt: 'Artur Alves dos Reis noin vuonna 1925, ennen huijauksen paljastumista.',
+        selite: 'Artur Alves dos Reis muotokuvassa noin vuonna 1925 — samoihin '
+          + 'aikoihin kun hänen suunnitelmansa aidoista mutta luvattomista Banco de '
+          + 'Portugalin seteleistä oli vielä paljastumatta.',
+        lahde: 'Tuntematon valokuvaaja n. 1925, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Miksi Alves dos Reisin huijausseteleitä oli lähes mahdoton '
           + 'tunnistaa vääriksi?',
@@ -4508,7 +4854,7 @@ export const SKANDAALIT = {
         + 'juuri se oli suuri osa niiden vetovoimaa. Ensimmäisenä vuonna otettiin '
         + 'viisi painosta ja saman vuosisadan aikana yli neljäkymmentä. Ennen vuoden '
         + 'loppua sama kustantaja julkaisi seitsemän uutta kirjettä toisen '
-        + '\'portugalilaisen naisen\' nimissä.'
+        + '’portugalilaisen naisen’ nimissä.'
         + '\n\nKölnissä painettu laitos nimesi jo 1669 vastaanottajan: markiisi de '
         + 'Chamilly, joka oli tullut Portugaliin sotimaan restauraatiosodassa. '
         + 'Kirjoittaja jäi nimettömäksi. Vasta 1810 hänelle annettiin nimi — Mariana '
@@ -4526,7 +4872,7 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Letters of a Portuguese Nun". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Kuka useimpien tutkijoiden mukaan todella kirjoitti '
-          + '\'portugalilaisen nunnan\' kuuluisat rakkauskirjeet?',
+          + '’portugalilaisen nunnan’ kuuluisat rakkauskirjeet?',
         vaihtoehdot: [
           'Nunna Mariana Alcoforado itse',
           'Markiisi de Chamilly',
@@ -4574,8 +4920,17 @@ export const SKANDAALIT = {
         + 'vuotta myöhemmin lokakuun 5. päivän vallankumoukseen 1910, joka lopetti '
         + 'Portugalin monarkian.',
       lahde: 'en-Wikipedia "1890 British Ultimatum". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Mapa Cor-de-Rosa.jpg',
+        lyhyt: 'Portugalin vuoden 1886 ”vaaleanpunainen kartta” Angolan ja Mosambikin välisestä vyöhykkeestä.',
+        selite: 'Portugalin ulkoministeriön ja Sociedade de Geografia de Lisboan '
+          + 'vuonna 1886 piirtämä ’vaaleanpunainen kartta’, joka väritti Angolan '
+          + 'ja Mosambikin välisen vyöhykkeen Portugalin omaksi — Britannian '
+          + 'ultimaatumi pakotti luopumaan vaatimuksesta jo vuonna 1890.',
+        lahde: 'Sociedade de Geografia de Lisboa 1886, Wikimedia Commons (PD)',
+      },
       visa: {
-        kysymys: 'Mitä Portugalin \'vaaleanpunainen kartta\' esitti?',
+        kysymys: 'Mitä Portugalin ’vaaleanpunainen kartta’ esitti?',
         vaihtoehdot: [
           'Rautatietä Lissabonista Intiaan',
           'Portugalin vaatimaa yhtenäistä siirtomaa-aluetta Angolasta '
@@ -4656,7 +5011,7 @@ export const SKANDAALIT = {
      */
     {
       id: 'kultakanan-ryosto-1875',
-      otsikko: '\'Kultakana poikasineen\' — Pietroaselen aarteen ryöstö',
+      otsikko: '’Kultakana poikasineen’ — Pietroaselen aarteen ryöstö',
       nimio: 'Kultakana',
       vuosi: 'löytö 1837, ryöstö 1875',
       paikka: 'Romanian kansallishistorian museo, Bukarest (aarre esillä)',
@@ -4690,6 +5045,13 @@ export const SKANDAALIT = {
         + 'Joulukuussa 1916 aarre lähetettiin Moskovaan ja palautettiin vasta 1956.',
       lahde: 'en-Wikipedia "Pietroasele Treasure", ro-Wikipedia "Tezaurul de la '
         + 'Pietroasa" ja en-Wikipedia "Ring of Pietroassa". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Closca cu puii de aur IMG 1664.JPG',
+        lyhyt: 'Lähikuva Pietroaselen aarteen kultaisista lintukoruista, ”Kultakana poikasineen”.',
+        selite: 'Lähikuva Pietroaselen aarteen kultaisista lintukoruista — '
+          + '’Kultakana poikasineen’, jonka varas hakkasi palasiksi vuonna 1875.',
+        lahde: 'CristianChirita 2014, Wikimedia Commons (CC BY-SA 3.0)',
+      },
       visa: {
         kysymys: 'Miksi Pietroaselen aarteen riimukirjoitus voitiin rekonstruoida '
           + 'vuoden 1875 ryöstön jälkeen?',
@@ -4742,8 +5104,17 @@ export const SKANDAALIT = {
         + 'kiinnittynyt Dosifea-nimiseen sisareen, joka eli moskovalaisessa '
         + 'luostarissa 1785–1810.',
       lahde: 'en-Wikipedia "Princess Tarakanova". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Tarakanova.jpg',
+        lyhyt: 'Konstantin Flavitskyn maalaus, jossa prinsessa Tarakanova hukkuu selliinsä tulvassa.',
+        selite: 'Konstantin Flavitskyn vuoden 1864 maalaus, jossa prinsessa '
+          + 'Tarakanova hukkuu selliinsä tulvassa — kuuluisa taulu, joka maalattiin '
+          + 'vasta hänen kuolemansa jälkeen ja kuvaa tapahtumaa, joka ei koskaan '
+          + 'sattunut.',
+        lahde: 'Konstantin Flavitski 1864, Wikimedia Commons (PD)',
+      },
       visa: {
-        kysymys: 'Miten \'prinsessa Tarakanova\' saatiin kiinni?',
+        kysymys: 'Miten ’prinsessa Tarakanova’ saatiin kiinni?',
         vaihtoehdot: [
           'Amiraali Orlov vietteli hänet ja houkutteli laivalleen '
             + 'Livornossa',
@@ -4783,7 +5154,7 @@ export const SKANDAALIT = {
         + '1682 lähetetty Kremlin salakäytävään ja löytänyt huoneen täynnä arkkuja; '
         + 'kun hän ilmoitti asiasta, ruhtinatar Sofia kielsi käytävään menon.'
         + '\n\n1800-luvun alussa professori Dabelov löysi Pärnun arkistosta luettelon '
-        + 'nimeltä \'Tsaarin hallussa olevat käsikirjoitukset\', noin kahdeksansataa '
+        + 'nimeltä ’Tsaarin hallussa olevat käsikirjoitukset’, noin kahdeksansataa '
         + 'nimikettä. Hän lähti hakemaan kollegaansa todistajaksi, ja palatessaan '
         + 'asiakirja oli poissa. Jäljellä on vain se, minkä hän oli ehtinyt kopioida.'
         + '\n\nProfessori Thraemer asui Moskovassa kuukausia 1891. Zabelin päätteli '
@@ -4792,6 +5163,15 @@ export const SKANDAALIT = {
         + 'Arkeologi Stelletski etsi kirjastoa vuosikymmeniä eikä löytänyt. Pietari '
         + 'Suuri oli etsinyt sitä ennen häntä, sotiensa rahoitusta ajatellen.',
       lahde: 'en-Wikipedia "Lost Library of Ivan the Terrible". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Galerie Tretiakov - Viktor Vasnetsov - Tsar Ivan Vassilyevich, le Terrible (1897).jpg',
+        lyhyt: 'Viktor Vasnetsovin maalaus tsaari Iivana Julmasta, jonka legendaarista kirjastoa on etsitty vuosisatoja.',
+        selite: 'Viktor Vasnetsovin vuoden 1897 maalaus tsaari Iivana Julmasta '
+          + 'Tretjakovin galleriassa Moskovassa — saman hallitsijan, jonka '
+          + 'legendaarista kirjastoa etsijät ovat kaivaneet Kremlin alta '
+          + 'viisisataa vuotta.',
+        lahde: 'Viktor Vasnetsov 1897 (valokuva Gzen92), Wikimedia Commons (CC BY-SA 4.0)',
+      },
       visa: {
         kysymys: 'Mistä Iivana Julman kirjaston arvokkaimpien käsikirjoitusten '
           + 'kerrotaan tulleen Moskovaan?',
@@ -4834,7 +5214,7 @@ export const SKANDAALIT = {
         + 'aamulla 43 000 ruplan käteisen ja arvopapereiden kanssa. Elokuussa 1885 hän '
         + 'jätti Petrovkan liikkeeseen vakuudeksi harmaahapsisen isän ja '
         + 'lastenhoitajan sylissä olevan pikkutytön ja lähti 22 300 ruplan koruilla. '
-        + 'Poliisi selvitti, että \'sukulaiset\' oli palkattu Hitrovkan torilta '
+        + 'Poliisi selvitti, että ’sukulaiset’ oli palkattu Hitrovkan torilta '
         + 'lehti-ilmoituksella.'
         + '\n\nHän päätyi Sahalinin rangaistussiirtolaan. Tšehov tapasi hänet siellä '
         + '1890 eristyssellissä jalkaraudoissa — hän oli paennut saarelta sotilaaksi '
@@ -4860,7 +5240,7 @@ export const SKANDAALIT = {
           + 'jalokivikauppiasta 1883?',
         vaihtoehdot: [
           'Hän vaihtoi korut kopioihin sovituskopissa',
-          'Hän esitti psykiatrin vaimoa ja jätti kauppiaan \'potilaaksi\'',
+          'Hän esitti psykiatrin vaimoa ja jätti kauppiaan ’potilaaksi’',
           'Hän nukutti kauppiaan teellä',
         ],
         oikea: 1,
@@ -4910,6 +5290,15 @@ export const SKANDAALIT = {
         + 'ennen seuraavaa vuosisataa.',
       lahde: 'en-Wikipedia "Stockholms Banco" ja en-Wikipedia "Johan Palmstruch". '
         + 'Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Sweden-Credityf-Zedels.jpg',
+        lyhyt: 'Stockholms Bancon seteli vuodelta 1666 — sata hopeataaleria.',
+        selite: 'Stockholms Bancon seteli vuodelta 1666 — sata hopeataaleria '
+          + '(daler silvermynt), käsin allekirjoitettuna ja sinetöitynä. Pankki '
+          + 'antoi Euroopan ensimmäiset setelit jo 1661, ja Johan Palmstruchin '
+          + 'keksintö vei sen lopulta konkurssiin.',
+        lahde: 'Tuntematon tekijä 1666, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Miksi Stockholms Banco, Euroopan ensimmäinen setelipankki, kaatui?',
         vaihtoehdot: [
@@ -4937,7 +5326,7 @@ export const SKANDAALIT = {
         + 'naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. '
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
-        + 'perustuslakikriisin.',
+        + 'holhoojahallituksen.',
       teksti: 'Kustaa III saapui oopperataloon 16. maaliskuuta 1792 hyvissä ajoin '
         + 'illastamaan ystäviensä kanssa. Illallisella hänelle ojennettiin nimetön '
         + 'ranskankielinen kirje, jossa pyydettiin peruuttamaan tanssiaiset: rosvot '
@@ -4950,7 +5339,7 @@ export const SKANDAALIT = {
         + 'viha oli kasvanut kuninkaan vallankaappauksesta ja Venäjän-sodasta asti. '
         + 'Keskiyöllä he asettuivat hänen taakseen väkijoukkoon. Laukaus osui '
         + 'kolmannen lannenikaman kohdalta.'
-        + '\n\nKuningas ei kaatunut. Hän sanoi ranskaksi vain \'aï, je suis blessé\'. '
+        + '\n\nKuningas ei kaatunut. Hän sanoi ranskaksi vain ’aï, je suis blessé’. '
         + 'Anckarström pudotti pistoolin ja veitsen ja huusi tulipaloa. Uloskäynnit '
         + 'suljettiin, ja hänet pidätettiin seuraavana aamuna. Ampumisen hän tunnusti '
         + 'heti, salaliiton kiisti — kunnes kuuli, että Horn ja Ribbing olivat '
@@ -4961,6 +5350,14 @@ export const SKANDAALIT = {
         + 'jäi elämään Verdin Un ballo in maschera, jossa sensuurin vaatimuksesta '
         + 'tapahtumat oli siirretty Bostoniin.',
       lahde: 'en-Wikipedia "Gustav III". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Ankarstroem shooting the king of Sweden.jpg',
+        lyhyt: 'Aikalaiskaiverrus vuodelta 1792: Anckarström ampuu Kustaa III:a Tukholman oopperan naamiaisissa.',
+        selite: 'Aikalaiskaiverrus vuodelta 1792 kuvaa hetkeä, jolloin Anckarström '
+          + 'ampuu Kustaa III:a Tukholman oopperan naamiaisissa — kuningas vielä '
+          + 'naamio kädessään.',
+        lahde: 'Robert Sayer 1792, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Missä kuningas Kustaa III ammuttiin vuonna 1792?',
         vaihtoehdot: [
@@ -4990,7 +5387,7 @@ export const SKANDAALIT = {
         + 'tulivat — ennen kuin kevät 1932 vastasi kysymykseen kaikkien '
         + 'puolesta.',
       teksti: 'Ivar Kreuger aloitti ruotsalaisista tulitikkutehtaista ja päätyi '
-        + 'hallitsemaan kahdesta kolmasosasta kolmeen neljäsosaan maailman '
+        + 'hallitsemaan yli puolta, huipussaan jopa kahta kolmasosaa maailman '
         + 'tulitikkutuotannosta. Menetelmä oli helppo selittää: hän lainasi valtiolle '
         + 'rahaa ja pyysi vastineeksi maan tulitikkumonopolin. Kaupan tekivät muun '
         + 'muassa Puola, Romania, Turkki, Latvia, Liettua, Viro, Bolivia, Guatemala ja '
@@ -5009,12 +5406,19 @@ export const SKANDAALIT = {
         + 'löydettiin kuolleena asuntonsa vuoteesta, pistooli vieressä ja kirje, jossa '
         + 'luki hänen sotkeneen asiat niin pahoin, että tämä tuntui kaikkien kannalta '
         + 'parhaalta ratkaisulta.'
-        + '\n\nPrice Waterhouse kävi kirjanpidon läpi ja totesi, että manipulaatiot '
-        + 'olivat niin lapsellisia, että alkeellisinkin kirjanpidon tuntemus olisi '
-        + 'paljastanut kirjojen olevan väärennettyjä. Tuhannet ruotsalaiset menettivät '
+        + '\n\nPrice Waterhouse kävi kirjanpidon läpi ja totesi sen väärennetyksi. '
+        + 'Tuhannet ruotsalaiset menettivät '
         + 'säästönsä. Yhdysvallat kirjoitti arvopaperilakinsa uusiksi 1933 ja 1934 — '
         + 'pitkälti Kreugerin takia.',
       lahde: 'en-Wikipedia "Ivar Kreuger". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Ivar Kreuger-TIME-1929.jpg',
+        lyhyt: 'Ivar Kreuger Time-lehden kannessa lokakuussa 1929, valtansa huipulla.',
+        selite: 'Ivar Kreuger Time-lehden kannessa lokakuussa 1929 — maailman '
+          + 'tulitikkukuninkaan valta oli silloin huipussaan, kaksi ja puoli vuotta '
+          + 'ennen romahdusta ja itsemurhaa Pariisissa.',
+        lahde: 'Time Magazine 1929, Wikimedia Commons (PD)',
+      },
       visa: {
         kysymys: 'Mitä Ivar Kreuger pyysi valtioilta vastineeksi lainoistaan?',
         vaihtoehdot: [
@@ -5065,6 +5469,14 @@ export const SKANDAALIT = {
         + 'hän oli silloin 27-vuotias ja Letizia Bonaparte 48, eikä upseeri mainitse '
         + 'kolmiosaisissa muistelmissaan timanttia sanallakaan.',
       lahde: 'en-Wikipedia "Spoonmaker\'s Diamond". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Spoonmaker\'s Diamond, Topkapi Palace, Istanbul 2023.jpg',
+        lyhyt: '86-karaattinen Lusikantekijän timantti vitriinissään Topkapın aarrekammiossa.',
+        selite: '86-karaattinen Lusikantekijän timantti vitriinissään Topkapın '
+          + 'aarrekammiossa — kivi, jonka alkuperästä ei ole varmuutta, vain '
+          + 'tarinoita.',
+        lahde: 'Karakalem 2023, Wikimedia Commons (CC BY 4.0)',
+      },
       visa: {
         kysymys: 'Mihin hintaan legendan köyhä löytäjä luopui myöhemmin '
           + 'Lusikantekijän timanttina tunnetusta kivestä?',
@@ -5120,6 +5532,14 @@ export const SKANDAALIT = {
         + 'viimeisen erän 25. toukokuuta 1954.',
       lahde: 'en-Wikipedia "Ottoman Public Debt Administration" ja en-Wikipedia '
         + '"Ottoman public debt". Tarkistettu 2.9.2026.',
+      kuva: {
+        tiedosto: 'Istanbul Erkek Lisesi.jpg',
+        lyhyt: 'Osmanien valtionvelan hallinnon talo Cağaloğlussa, nykyään İstanbul Erkek Lisesi.',
+        selite: 'Osmanien valtionvelan hallinnon komea talo Cağaloğlussa — '
+          + 'nykyään İstanbul Erkek Lisesi — jossa velkojien oma virasto keräsi '
+          + 'imperiumin verot vuodesta 1881 alkaen.',
+        lahde: 'Eusebius 2011, Wikimedia Commons (CC BY 3.0)',
+      },
       visa: {
         kysymys: 'Mitä eurooppalaisten velkojien johtama OPDA sai tehdä '
           + 'Osmanivaltiossa vuodesta 1881?',
@@ -5312,7 +5732,7 @@ export const SKANDAALIT = {
       ],
       visa: {
         kysymys: 'Miten kultaseppä Rouhomovski todisti Louvrelle tehneensä '
-          + '\'muinaisen\' tiaaran?',
+          + '’muinaisen’ tiaaran?',
         vaihtoehdot: [
           'Hän esitti tilauskuitin kauppiailta',
           'Hänen nimikirjaimensa löytyivät tiaaran sisältä',
@@ -5327,7 +5747,7 @@ export const SKANDAALIT = {
      */
     {
       id: 'velesin-kirja',
-      otsikko: 'Velesin kirja — \'muinaisslaavilainen\' väärennös puulaudoilla',
+      otsikko: 'Velesin kirja — ’muinaisslaavilainen’ väärennös puulaudoilla',
       nimio: 'Velesin kirja',
       vuosi: 'väitetty löytö 1919, julkaisu 1957–1959',
       paikka: 'Velykyi Burluk, Harkovan alue (väitetty löytöpaikka)',
@@ -5981,7 +6401,7 @@ export const SKANDAALIT = {
         + 'neljä rosvoa ja kymmeniä panttivankeja hotellissa, ympärillä aseistettu '
         + 'piiritys. Aamulla ulos käveli mies, jonka päällä oli auran teristä taottu '
         + 'rautapuku.',
-      teksti: 'Edward "Ned" Kelly syntyi joulukuussa 1854 Victorian maaseudulla '
+      teksti: 'Edward ”Ned” Kelly syntyi joulukuussa 1854 Victorian maaseudulla '
         + 'irlantilaisten vanhempien kolmantena lapsena. Isä oli pakkosiirretty vanki, ja '
         + 'perhe koki olevansa suurmaanomistajien poljettavana ja Victorian poliisin '
         + 'vainoama. Kelly ehti istua kaksi vankeustuomiota jo teini-ikäisenä.\n\n'
@@ -6809,7 +7229,7 @@ export const SKANDAALIT = {
         + '\n\nVuonna 1854 syttyi sisällissota Granadaan tukeutuneiden legitimistien ja '
         + 'Leóniin tukeutuneiden demokraattien välillä. Demokraatit pyysivät apua William '
         + 'Walkerilta, joka kiersi Yhdysvaltain neutraliteettilait sopimalla presidentti '
-        + 'Francisco Castellónin kanssa "siirtolaisten" tuomisesta maahan. Walker purjehti '
+        + 'Francisco Castellónin kanssa ”siirtolaisten” tuomisesta maahan. Walker purjehti '
         + 'San Franciscosta 3. toukokuuta 1855, ja perillä joukkoon liittyi 110 paikallista.'
         + '\n\nEnsimmäinen hyökkäys Rivasiin torjuttiin — opettaja Enmanuel Mongalo y Rubio '
         + 'poltti hyökkääjien esikunnan — mutta lokakuussa 1855 Walker valtasi Granadan. '
@@ -6818,12 +7238,12 @@ export const SKANDAALIT = {
         + 'orjuus oli lakkautettu.'
         + '\n\nCosta Rican johtama liittouma löi hänet. Joulukuussa 1856 Walkerin kenraali '
         + 'Charles Frederick Henningsen poltti Granadan paetessaan, ja jäljelle jäivät '
-        + 'raunioihin kirjoitetut sanat "Aqui Fue Granada", täällä oli Granada. Walker '
+        + 'raunioihin kirjoitetut sanat ”Aqui Fue Granada”, täällä oli Granada. Walker '
         + 'luopui presidenttiydestä 1. toukokuuta 1857 ja teloitettiin Hondurasissa 1860.',
       lahde: 'en-Wikipedia "William Walker (filibuster)", johdanto-osa sekä osiot '
         + '"Nicaragua" ja "President of Nicaragua". Tarkistettu 6.9.2026.',
       visa: {
-        kysymys: 'Mitä sanat "Aqui fue Granada" tarkoittavat?',
+        kysymys: 'Mitä sanat ”Aqui fue Granada” tarkoittavat?',
         vaihtoehdot: [
           'Täällä oli Granada',
           'Granada antautuu',
@@ -7030,8 +7450,8 @@ export const SKANDAALIT = {
       vuosi: '1860',
       paikka: 'Rangkasbitung, Lebakin alue, Jaava',
       lat: -6.35556, lon: 106.25111,
-      kortti: 'Kirja alkaa kuin pilkka: "Olen kahvinvälittäjä ja asun '
-        + 'Lauriergrachtilla numerossa 37." Sen jälkeen se kertoo, mitä '
+      kortti: 'Kirja alkaa kuin pilkka: ”Olen kahvinvälittäjä ja asun '
+        + 'Lauriergrachtilla numerossa 37.” Sen jälkeen se kertoo, mitä '
         + 'kahvinvälittäjän kupin takana tapahtuu Jaavalla. Amsterdamissa '
         + 'kirjoitettu romaani muutti sen, miten Alankomaat hallitsi Itä-Intiaa.',
       teksti: 'Max Havelaar eli Alankomaiden kauppayhtiön kahvihuutokaupat on '
@@ -7106,7 +7526,7 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Bre-X", johdanto ja osio "History". '
         + 'Tarkistettu 6.9.2026.',
       visa: {
-        kysymys: 'Mitä näytteiden "suolaaminen" tarkoitti Bre-X:n tapauksessa?',
+        kysymys: 'Mitä näytteiden ”suolaaminen” tarkoitti Bre-X:n tapauksessa?',
         vaihtoehdot: [
           'Näytteet säilöttiin suolaliuokseen kuljetusta varten',
           'Poranäytteisiin lisättiin kultaa jälkikäteen',
@@ -7507,8 +7927,8 @@ export const SKANDAALIT = {
         + 'terästornin päässä. Komentopaikka oli kuudentoista kilometrin päässä, ja '
         + 'räjähdyksen vaikutuksia tutkittiin sijoittamalla kalustoa eri etäisyyksille; '
         + 'lentokoneet keräsivät näytteitä pilvestä. Toimittajia ei päästetty paikalle, '
-        + 'vaan lehdistölle annettiin silminnäkijäkuvaus: "autiomaa syttyi valtavaan '
-        + 'välähdykseen, jota seurasi 45 sekunnin kuluttua tuntuva paineaalto".'
+        + 'vaan lehdistölle annettiin silminnäkijäkuvaus: ”autiomaa syttyi valtavaan '
+        + 'välähdykseen, jota seurasi 45 sekunnin kuluttua tuntuva paineaalto”.'
         + '\n\nKokeen nimi tulee hyppyrotasta, gerboise, ja sininen väri Ranskan lipun '
         + 'ensimmäisestä väristä. Säteilyä mitattiin kilometrin päässä kymmenen radia '
         + 'tunnissa ja vielä 570 kilometrin päässä kolme radia tunnissa. Asiakirjat '
@@ -7594,7 +8014,7 @@ export const SKANDAALIT = {
       kortti: 'Lehti lähetti kirjeenvaihtajan tutkimaan huhua: viedäänkö Angolasta yhä '
         + 'orjia São Tomén kaakaoviljelmille? Neljänsadanviidenkymmenen mailin matkan '
         + 'jälkeen hän seurasi kahleisiin pantujen ihmisten jälkiä rannikolle — ja näki, '
-        + 'kuinka viranomaiset "vapauttivat" heidät ja kirjasivat vapaaehtoisiksi '
+        + 'kuinka viranomaiset ”vapauttivat” heidät ja kirjasivat vapaaehtoisiksi '
         + 'työntekijöiksi.',
       teksti: 'Henry Woodd Nevinson oli englantilainen kirjeenvaihtaja, joka oli '
         + 'raportoinut buurisodasta ja Kreikan ja Turkin sodasta. Harper’s Monthly '
@@ -7604,7 +8024,7 @@ export const SKANDAALIT = {
         + '\n\nNevinson matkasi sisämaahan noin 450 mailia ja löysi ketjun, jossa ihmisiä '
         + 'luovutettiin velkojen kuittaamiseksi tai portugalilaisten asiamiesten '
         + 'ottamina ja vietiin kahleissa rannikon kaupunkeihin. Siellä hän raivostui '
-        + 'siitä, mitä näki: viranomaiset "vapauttivat" saapuneet ja muuttivat heidän '
+        + 'siitä, mitä näki: viranomaiset ”vapauttivat” saapuneet ja muuttivat heidän '
         + 'asemansa vapaaehtoisiksi työntekijöiksi, jotka olivat muka suostuneet '
         + 'lähtemään São Toméen viideksi vuodeksi.'
         + '\n\nNevinson seurasi matkaa perille asti, vaikka hänen terveytensä oli niin '
@@ -7901,8 +8321,8 @@ export const SKANDAALIT = {
         + 'kauppavaltakuntansa hallitsi suurta osaa Bahr el Ghazalista sekä alueita '
         + 'nykyisen Tšadin ja Keski-Afrikan tasavallan puolella.'
         + '\n\nVuonna 1871 saksalainen tutkimusmatkailija Georg Schweinfurth vieraili '
-        + 'hänen päämajassaan Deim Zubeirissa ja kuvasi orjakauppiaan hovia "vähintäänkin '
-        + 'ruhtinaalliseksi".'
+        + 'hänen päämajassaan Deim Zubeirissa ja kuvasi orjakauppiaan hovia ”vähintäänkin '
+        + 'ruhtinaalliseksi”.'
         + '\n\nEgyptin kediivi Isma\'il Pasha halusi alueen hallintaansa ja lähetti sitä '
         + 'vastaan palkka-armeijan, mutta Rahma voitti sen. Niinpä kediivi liitti alueen '
         + 'valtakuntaansa toisella tavalla: hän tunnusti 1873 Rahman vallan ja nimitti '
@@ -7911,7 +8331,7 @@ export const SKANDAALIT = {
         + 'eteläisiä joukkoja, ja häntä kutsuttiin mustaksi pashaksi.'
         + '\n\nKun kenraali Charles Gordon saapui 1877 Sudanin kuvernööriksi, hänestä ja '
         + 'Rahmasta tuli vastustajia. Britanniassa Rahma sai lähes myyttisen maineen '
-        + 'Gordonin arkkivihollisena: häntä sanottiin "rikkaimmaksi ja pahimmaksi" ja '
+        + 'Gordonin arkkivihollisena: häntä sanottiin ”rikkaimmaksi ja pahimmaksi” ja '
         + 'kerrottiin, että hänen saattueeseensa kuului kahlehdittuja leijonia.',
       lahde: 'en-Wikipedia "Al-Zubayr Rahma Mansur", johdanto sekä osiot "Background" ja '
         + '"Opposition to Gordon". Tarkistettu 6.9.2026.',
@@ -8549,6 +8969,14 @@ export const SKANDAALIT = {
         + 'lainhalveksuntansa että käytöksensä takia.',
       lahde: 'en-Wikipedia "Luigi Palma di Cesnola", osio "Post war", ja en-Wikipedia '
         + '"Kourion", osio "History of excavations". Tarkistettu 6.9.2026.',
+      kuva: {
+        tiedosto: 'Luigi Palma di Cesnola MET 188453.jpg',
+        lyhyt: 'Muotokuva Luigi Palma di Cesnolasta vuodelta 1865, samana vuonna kun hän aloitti konsulina Larnakassa.',
+        selite: 'Muotokuva Luigi Palma di Cesnolasta vuodelta 1865 — samana vuonna '
+          + 'hän aloitti Yhdysvaltain konsulina Larnakassa ja alkoi kaivattaa '
+          + 'Kyproksen hautoja ja pyhäköitä tyhjiksi.',
+        lahde: 'Jacob D. Blondel 1865, Wikimedia Commons (CC0)',
+      },
       visa: {
         kysymys: 'Mitä Cesnolan kokoelmalle tapahtui?',
         vaihtoehdot: [
@@ -8597,6 +9025,14 @@ export const SKANDAALIT = {
         + 'kolmensadan vuoden kausi.',
       lahde: 'en-Wikipedia "Cyprus in the Middle Ages", osiot "Crusades–Lusignan period '
         + '1095–1489" ja "Guy of Lusignan". Tarkistettu 6.9.2026.',
+      kuva: {
+        tiedosto: 'Isaac Komnenos van Cyprus ligt geknield voor Richard Leeuwenhart, RP-P-1896-A-19368-422.jpg',
+        lyhyt: 'Vuoden 1683 kuvitus: Kyproksen hallitsija Isaakios Komnenos polvistuu antautuneena Rikhard Leijonamielen eteen.',
+        selite: 'Vuoden 1683 kuvitus, jossa Kyproksen hallitsija Isaakios Komnenos '
+          + 'polvistuu antautuneena Rikhard Leijonamielen eteen — hetki, joka '
+          + 'päätti saaren lyhyen mutta kalliiksi käyneen valtauksen.',
+        lahde: 'Jan Luyken 1683, Wikimedia Commons (CC0)',
+      },
       visa: {
         kysymys: 'Miksi temppeliherrat myivät Kyproksen eteenpäin?',
         vaihtoehdot: [
@@ -9412,9 +9848,9 @@ export const SKANDAALIT = {
         + 'virkamiehille.'
         + '\n\nVuonna 1893 Rassam haastoi museon intendentin E. A. Wallis Budgen '
         + 'brittituomioistuimeen sekä herjauksesta että kunnianloukkauksesta. '
-        + 'Budge oli kirjoittanut, että Rassam oli käyttänyt "sukulaisiaan" '
+        + 'Budge oli kirjoittanut, että Rassam oli käyttänyt ”sukulaisiaan” '
         + 'salakuljettamaan muinaisesineitä Ninivestä ja lähettänyt British '
-        + 'Museumille vain "roskaa". Syytökset loukkasivat iäkästä Rassamia '
+        + 'Museumille vain ”roskaa”. Syytökset loukkasivat iäkästä Rassamia '
         + 'syvästi.'
         + '\n\nOikeudessa Budge esitti osittaisen anteeksipyynnön, jota myöhempi '
         + 'oikeusaste piti epäherrasmiesmäisenä. Tuomioistuimet asettuivat '
@@ -9657,7 +10093,7 @@ export const SKANDAALIT = {
         + 'sotilaallista apua. Teksti kirjoitettiin sekä amharaksi että '
         + 'italiaksi, ja artikla 19 määräsi, että kumpikin versio kertoo saman '
         + 'asian.'
-        + '\n\nArtikla 17 ei kertonut. Amharaksi keisari "voi käyttää" Italian '
+        + '\n\nArtikla 17 ei kertonut. Amharaksi keisari ”voi käyttää” Italian '
         + 'hallitusta asioidessaan muiden valtojen kanssa — se oli oikeus, ei '
         + 'velvollisuus. Italiaksi hänen oli hoidettava kaikki ulkosuhteensa '
         + 'Italian kautta, mikä tekisi Etiopiasta protektoraatin. Italialaisten '
@@ -9709,8 +10145,8 @@ export const SKANDAALIT = {
         + '\n\nJoukkoon luettiin muun muassa lordi Delamere, Karen Blixen ja '
         + 'hänen miehensä Bror von Blixen-Finecke, Denys Finch Hatton, lady '
         + 'Idina Sackville, Alice de Janzé sekä Josslyn Hay, Errollin 22. '
-        + 'kreivi. Elämäkerturi Ulf Aschanin sanoin he olivat "sukkelia, '
-        + 'viehättäviä, hyvin kasvatettuja ja lukeneita" ja hellittämättömiä '
+        + 'kreivi. Elämäkerturi Ulf Aschanin sanoin he olivat ”sukkelia, '
+        + 'viehättäviä, hyvin kasvatettuja ja lukeneita” ja hellittämättömiä '
         + 'huvittelussaan, joka saavutettiin useimmiten juomalla, huumeilla ja '
         + 'seksillä. Vuoden 1929 pörssiromahdus tyrehdytti uusien tulokkaiden '
         + 'virran, mutta 1939 Keniassa asui jo 21 000 eurooppalaista.'
@@ -9762,8 +10198,8 @@ export const SKANDAALIT = {
         + 'hännänpäähän 2,95 metriä, ja raatoa kantamaan tarvittiin kahdeksan '
         + 'miestä. Toinen kaatui kaksikymmentä päivää myöhemmin. Britannian '
         + 'pääministeri lordi Salisbury selosti asiaa ylähuoneelle: työt olivat '
-        + 'pysähtyneet, koska leijonapari oli saanut "mitä valitettavimman '
-        + 'mieltymyksen työmiehiimme".'
+        + 'pysähtyneet, koska leijonapari oli saanut ”mitä valitettavimman '
+        + 'mieltymyksen työmiehiimme”.'
         + '\n\nPatterson kirjoitti retkestään kirjan ja antoi uhrimääristä '
         + 'useita lukuja, korkeimpana 135. Oltuaan 25 vuotta hänen '
         + 'lattiamattoinaan nahat myytiin 1924 Chicagon Field Museumille 5 000 '
@@ -9862,7 +10298,7 @@ export const SKANDAALIT = {
         + 'huoltohallintoalue. Elintarvikeministeri John Strachey innostui, ja '
         + 'kolmen kuukauden tutkimusmatka suositteli syyskuussa 1946 3,21 '
         + 'miljoonan eekkerin viljelyä vuoteen 1952 mennessä. Hallitus hyväksyi '
-        + 'suunnitelman tammikuussa 1947. "Maapähkinäarmeijan" 1 200 paikkaan '
+        + 'suunnitelman tammikuussa 1947. ”Maapähkinäarmeijan” 1 200 paikkaan '
         + 'ilmoittautui 100 000 entistä sotilasta.'
         + '\n\nEtujoukko leiriytyi Kongwaan lähelle Dodomaa ja piti maata '
         + 'sopivana savisuudesta ja vedenpuutteesta huolimatta. Paikalle kasvoi '
@@ -10428,7 +10864,7 @@ export const SKANDAALIT = {
         + '100 000 tynnyriä ydinjätettä.'
         + '\n\nTaot ovat vastustaneet varastoa ja 1990-luvun alusta lähtien '
         + 'osoittaneet mieltään päästäkseen eroon ydinjätteen '
-        + '"pahoista hengistä". Suuria mielenosoituksia oli 2002 ja 2012, '
+        + '”pahoista hengistä”. Suuria mielenosoituksia oli 2002 ja 2012, '
         + 'ja niissä vaadittiin Taipoweria viemään jäte pois saarelta.',
       lahde: 'en-Wikipedia "Orchid Island", johdanto-osa sekä osiot '
         + '"Imperial Japan" ja "Republic of China". Tarkistettu 6.9.2026.',
@@ -10527,7 +10963,7 @@ export const SKANDAALIT = {
         + 'mukanaan tulivat työttömyys ja köyhyys, ja seutu on pahoin '
         + 'saastunut, mistä on seurannut vakavia terveysongelmia. YK:n '
         + 'pääsihteeri Ban Ki-moon kutsui järven kuivumista vuonna 2011 '
-        + '"yhdeksi maapallon pahimmista ympäristökatastrofeista".'
+        + '”yhdeksi maapallon pahimmista ympäristökatastrofeista”.'
         + '\n\nPohjoisosaa on yritetty pelastaa. Kokaralin pato valmistui '
         + '2005, ja vuoteen 2008 mennessä vedenpinta oli noussut '
         + 'kaksitoista metriä vuoden 2003 tasosta. Vuoteen 2013 mennessä '
@@ -10968,7 +11404,7 @@ export const SKANDAALIT = {
         + 'vasta 2018.',
       teksti: 'Balangigan kirkko vihittiin 1854 roomalaiselle marttyyrille San Lorenzolle. '
         + 'Vanhin kello valettiin noin 1853, ja siinä on fransiskaanien vaakuna ja '
-        + 'kirjoitus "R. San Francisco Año El 1853"; suuaukon halkaisija on 79 senttimetriä '
+        + 'kirjoitus ”R. San Francisco Año El 1853”; suuaukon halkaisija on 79 senttimetriä '
         + 'ja korkeus 76. Toinen kello valettiin 1889 kirkkoherra Agustín Delgadon '
         + 'aloitteesta, ja kolmas ja pienin hankittiin ilmeisesti 1895.'
         + '\n\nKellot vietiin Yhdysvaltoihin sotasaaliina Filippiinien–Yhdysvaltain sodan '
@@ -11176,12 +11612,12 @@ export const SKANDAALIT = {
       vuosi: '1883–1885',
       paikka: 'Toamasina (Tamatave)',
       lat: -18.155, lon: 49.41,
-      kortti: 'Sopimuksen mukana kulki "selittävä kirje", jonka oli määrä kertoa mitä '
+      kortti: 'Sopimuksen mukana kulki ”selittävä kirje”, jonka oli määrä kertoa mitä '
         + 'teksti oikeastaan tarkoitti. Ranskan parlamentille sitä ei näytetty, kun se '
         + 'äänesti sopimuksen hyväksymisestä.',
       teksti: 'Ranskan ja Merinan kuningaskunnan sodat olivat kaksi Ranskan sotaretkeä '
         + 'Madagaskarille vuosina 1883–1896. Ne kaatoivat saarta hallinneen kuningashuoneen '
-        + 'ja tekivät Madagaskarista Ranskan siirtomaan. Sana "hova" tarkoitti merinojen '
+        + 'ja tekivät Madagaskarista Ranskan siirtomaan. Sana ”hova” tarkoitti merinojen '
         + 'yhteiskuntaluokkaa, ja siitä tuli sotien nimi eurooppalaisissa lähteissä.'
         + '\n\nSyy sotaan oli vanha myönnytys. Kuningatar Ranavalona I:n kuoltua 1861 hänen '
         + 'poikansa Radama II nousi valtaan; jo prinssinä hän oli antanut ranskalaiselle '
@@ -11191,7 +11627,7 @@ export const SKANDAALIT = {
         + '\n\nSota päättyi Tamatavessa 17. joulukuuta 1885 allekirjoitettuun '
         + 'rauhansopimukseen. Madagaskar luovutti Antsirananan eli Diego-Suarezin '
         + 'pohjoisrannikolta Ranskalle ja maksoi kymmenen miljoonan frangin sakon.'
-        + '\n\nSopimukseen kuului myös "selittävä kirje", jonka piti täsmentää tekstin '
+        + '\n\nSopimukseen kuului myös ”selittävä kirje”, jonka piti täsmentää tekstin '
         + 'tulkinta. Sitä ei koskaan esitetty Ranskan parlamentille, kun se äänesti '
         + 'sopimuksen ratifioinnista. Käytännössä sopimus siirsi Madagaskarin ulkopolitiikan '
         + 'Ranskan käsiin, ja Ranska käytti sitä kiristääkseen otettaan alueesta — vaikka '
@@ -11270,8 +11706,8 @@ export const SKANDAALIT = {
         + 'lehdistössä, ja niin hänet lähetettiin maanpakoon seitsemän vaimonsa kanssa.',
       teksti: 'Ngungunyane, jota lähteissä kutsutaan myös nimillä Gungunhana ja Mdungazwe '
         + 'Ngungunyane Nxumalo, oli Gazan valtakunnan kuningas ja Portugalin vasalli, joka '
-        + 'nousi kapinaan. Hän hallitsi noin vuodesta 1884 ja sai lisänimen "Gazan '
-        + 'leijona".'
+        + 'nousi kapinaan. Hän hallitsi noin vuodesta 1884 ja sai lisänimen ”Gazan '
+        + 'leijona”.'
         + '\n\nGazan valtakunnan oli perustanut hänen isoisänsä Soshangane, joka johti '
         + 'nguninkielisen sotajoukon pohjoiseen Zululandista. Isä Mzila hallitsi 1861–1884, '
         + 'ja pääkaupunki siirtyi Limpopon laaksosta Mossurizeen Save-joen pohjoispuolelle. '
@@ -11424,7 +11860,7 @@ export const SKANDAALIT = {
         + '\n\nSopimuksen harhaanjohtavan nimen keksi entinen liittokansleri Otto von '
         + 'Bismarck hyökätäkseen halveksimaansa seuraajaa Leo von Caprivia vastaan. Nimi '
         + 'antoi ymmärtää, että Saksa oli vaihtanut afrikkalaisen valtakunnan pikkuruiseen '
-        + 'Helgolandiin — "housut napista". Imperialistit ottivat sanonnan omakseen ja '
+        + 'Helgolandiin — ”housut napista”. Imperialistit ottivat sanonnan omakseen ja '
         + 'huusivat maanpetoksesta.',
       lahde: 'en-Wikipedia "Caprivi Strip", johdanto-osa, ja "Heligoland–Zanzibar Treaty", '
         + 'johdanto-osa sekä osiot "Terms" ja "Aftermath". Tarkistettu 6.9.2026.',
@@ -11503,17 +11939,17 @@ export const SKANDAALIT = {
         + 'osoittamisen sormella.'
         + '\n\n1900-luvun alussa Mopanen alueen maanviljelijäsuku Van Graanit kuulivat '
         + 'tarinan valkoisesta miehestä, joka oli elänyt erakkona Limpopon rantaluolassa ja '
-        + '"noussut pyhälle kukkulalle ja löytänyt sieltä asioita". Vuosien etsinnän jälkeen '
+        + '”noussut pyhälle kukkulalle ja löytänyt sieltä asioita”. Vuosien etsinnän jälkeen '
         + 'he pakottivat 1933 nimettömäksi jääneen paikallisen oppaan mukaansa; arkeologin '
-        + '1937 kirjoittaman kuvauksen mukaan opas "vapisi kirjaimellisesti pelosta, ja '
-        + 'häntä oli pideltävä paikallaan" ennen kuin hän näytti salaisen polun.'
+        + '1937 kirjoittaman kuvauksen mukaan opas ”vapisi kirjaimellisesti pelosta, ja '
+        + 'häntä oli pideltävä paikallaan” ennen kuin hän näytti salaisen polun.'
         + '\n\nRyhmä kaivoi esiin keramiikan sirpaleita sekä kupari-, lasi- ja kultaesineitä '
         + 'ja runsaasti koristellun hautauksen. Kaikkea ei ilmoitettu. Nuorempi Van Graan, '
         + 'entinen Pretorian yliopiston opiskelija, kertoi löydöstä yliopiston arkeologille.'
         + '\n\nPretorian yliopisto, tuolloin yksinomaan afrikaaneri-instituutio, sai oikeudet '
         + 'aarteeseen, ja Hertzogin hallitus otti alueen monopolikseen. Löytö oli '
         + 'hankala: se kumosi valkoisen ylivallan myytin takapajuisesta Afrikasta, ja aivan '
-        + 'kuten Suuren Zimbabwen kohdalla hallitus yritti salata, vähätellä ja "suojella" '
+        + 'kuten Suuren Zimbabwen kohdalla hallitus yritti salata, vähätellä ja ”suojella” '
         + 'paikkaa. Vuonna 1933 kaivetut luut haudattiin takaisin kukkulalle vasta 20. '
         + 'marraskuuta 2007.',
       lahde: 'en-Wikipedia "Kingdom of Mapungubwe", johdanto-osa sekä osiot "Burials" ja '
@@ -11557,8 +11993,8 @@ export const SKANDAALIT = {
         + '\n\nRhodes tiesi, että lupaus tuhannesta kivääristä otettaisiin Etelä-Afrikassa '
         + 'huonosti vastaan, ja Rudd valmisteli asiakirjasta version, josta ne oli jätetty '
         + 'pois. Cape Times ja Cape Argus julkaisivat sen 24. marraskuuta 1888: hinnaksi '
-        + 'kerrottiin "suuri kuukausittainen käteismaksu, tykkivene puolustustarkoituksiin '
-        + 'Sambesille ja muita palveluksia".'
+        + 'kerrottiin ”suuri kuukausittainen käteismaksu, tykkivene puolustustarkoituksiin '
+        + 'Sambesille ja muita palveluksia”.'
         + '\n\nLobengula yritti perua sopimuksen vedoten siihen, että ehtoja oli suullisesti '
         + 'rajattu, ja lähetti lähettiläitä kuningatar Victorian puheille Windsoriin. Yritykset '
         + 'kaatuivat. Myönnytys tuotti Rhodesin yhtiölle kuninkaallisen peruskirjan '
@@ -11776,8 +12212,8 @@ export const SKANDAALIT = {
         + 'maallisuuden.'
         + '\n\nRanska tunnusti hänet Cayorin dameliksi 1870, ja liitto kesti '
         + 'vuoteen 1883, jolloin hän aloitti kapinan rautatietä vastaan. '
-        + 'Kuvernööri Servatiukselle hänen kerrotaan sanoneen: "Niin kauan '
-        + 'kuin elän, vastustan kaikin voimin tämän radan rakentamista." '
+        + 'Kuvernööri Servatiukselle hänen kerrotaan sanoneen: ”Niin kauan '
+        + 'kuin elän, vastustan kaikin voimin tämän radan rakentamista.” '
         + 'Ranskalaiset panivat hänen tilalleen veljenpojan Samba Lawbe '
         + 'Fallin, ja Lat Jor kävi kolme vuotta sissisotaa pienen joukon '
         + 'kanssa.'
@@ -11870,8 +12306,8 @@ export const SKANDAALIT = {
         + 'Hippokratesta ja Avicennaa ja kopioivat kahdenkymmenenkahdeksan '
         + 'niteen arabialaisen sanakirjan. Paikalliset kirjoittivat itse '
         + 'historiaa, uskontoa, lakia, filosofiaa ja runoutta. Kronikoitsija '
-        + 'Mahmud Kati merkitsi muistiin elokuun 1583 tähdenlennot: "tähdet '
-        + 'lensivät kuin koko taivas olisi syttynyt tuleen". Käsikirjoitukset '
+        + 'Mahmud Kati merkitsi muistiin elokuun 1583 tähdenlennot: ”tähdet '
+        + 'lensivät kuin koko taivas olisi syttynyt tuleen”. Käsikirjoitukset '
         + 'periytyivät suvuittain, ja useimmat ovat huonossa kunnossa; '
         + 'kokonaismäärää ei tiedetä.'
         + '\n\nMalin sodan aikana 2012–2013 Ansar Dinen taistelijat polttivat '
@@ -11983,8 +12419,8 @@ export const SKANDAALIT = {
         + '25 miljoonan dollarin laina varmisti yritysvallan.'
         + '\n\nIstutusten raivaus siirsi ihmisiä. Harbelin asukkaat joutuivat '
         + 'muuttamaan naapurimaakuntaan, eikä menetyksistä maksettu riittävää '
-        + 'korvausta; uuden kylän nimi on bassaksi Queezahn, "valkoinen, '
-        + 'lähde pois tästä paikasta". Vuonna 1929 Liberian lakiasäätävä '
+        + 'korvausta; uuden kylän nimi on bassaksi Queezahn, ”valkoinen, '
+        + 'lähde pois tästä paikasta”. Vuonna 1929 Liberian lakiasäätävä '
         + 'kokous sai kuningas Maya Gedebeolta valituksen, jonka mukaan hanke '
         + 'oli tuhonnut yhdeksän kylää ja pannut ihmiset valitsemaan '
         + 'pakkotyön ja maastamuuton väliltä.',
@@ -12039,7 +12475,7 @@ export const SKANDAALIT = {
         + 'viedyn pakkotyön järjestelyihin tuli ilmi. Raportin mukaan '
         + 'virkamiehet olivat hyväksyneet pakkotyön teiden rakentamiseen ja '
         + 'tavaran laivaamiseen sekä päälliköiden nöyryyttämiseen, ja '
-        + '"törkeän pelottelun ja tukahduttamisen politiikkaa" oli vuosien '
+        + '”törkeän pelottelun ja tukahduttamisen politiikkaa” oli vuosien '
         + 'ajan järjestelmällisesti ylläpidetty. King ja Yancy erosivat.',
       lahde: 'en-Wikipedia "Charles D. B. King", osiot "Presidential election of '
         + '1927" ja "Forced labor and slavery scandal" sekä en-Wikipedia '
@@ -12362,9 +12798,9 @@ export const SKANDAALIT = {
         + 'Toros-Menallan kaivauspaikalta luita, joista tuli maailmankuulut. Michel '
         + 'Brunet työtovereineen kuvasi löydön 2002 uutena sukuna ja lajina, '
         + 'Sahelanthropus tchadensis. Tšadin presidentti antoi kallolle lempinimen '
-        + 'Toumaï, joka merkitsee paikallisella dazan kielellä "elämän toivoa".'
+        + 'Toumaï, joka merkitsee paikallisella dazan kielellä ”elämän toivoa”.'
         + '\n\nBrunet ilmoitti löydöstä N\'Djamenassa ulkoministeriön ja televisioyleisön '
-        + 'edessä: "Ihmiskunnan esi-isä on tšadilainen." Tutkimusryhmä sanoi nimenomaan, '
+        + 'edessä: ”Ihmiskunnan esi-isä on tšadilainen.” Tutkimusryhmä sanoi nimenomaan, '
         + 'ettei kallon yhteydestä ollut löytynyt yhtään raajanluuta — juuri sellainen '
         + 'luu olisi voinut todistaa tai kumota heidän päätelmänsä kaksijalkaisuudesta.'
         + '\n\nToumaïn kanssa oli kuitenkin löytynyt reisiluu. Se pakattiin eläinluiden '
@@ -12601,11 +13037,11 @@ export const SKANDAALIT = {
       paikka: 'Berbera, Adeninlahden rannikko',
       lat: 11.6, lon: 45.3,
       kortti: 'Berbera oli 1800-luvulla Somalian niemimaan tärkein satama ja vuonna 1856 '
-        + '"maailman vapain satama". Sopimussarja 1884–1886 teki rannikosta Britannian '
+        + '”maailman vapain satama”. Sopimussarja 1884–1886 teki rannikosta Britannian '
         + 'protektoraatin — jota Winston Churchill kehotti vuonna 1907 hylkäämään.',
       teksti: 'Berbera oli 1700- ja 1800-luvuilla Somalian niemimaan tärkein satama. '
         + 'Vuosittainen markkina, joka kesti lokakuusta huhtikuuhun, oli Mordechai Abirin '
-        + 'mukaan "Itä-Afrikan itärannikon merkittävimpiä kaupallisia tapahtumia": paikalle '
+        + 'mukaan ”Itä-Afrikan itärannikon merkittävimpiä kaupallisia tapahtumia”: paikalle '
         + 'kokoontuivat Isaaqin alaklaanit, karavaanit Hararista ja sisämaasta sekä '
         + 'banjaanikauppiaat Porbandarista, Mangaloresta ja Mumbaista. Kaupankäynnin '
         + 'yksityiskohdat pidettiin salassa eurooppalaisilta kauppiailta.'
@@ -12613,8 +13049,8 @@ export const SKANDAALIT = {
         + 'ja yhtenä päivänä sisämaasta saapui yli kuusituhatta tavaralla lastattua '
         + 'kamelia. Vietäviä olivat karja, kahvi, suitsuke, mirha, akasiakumi, sahrami, '
         + 'höyhenet, vaha, voisula, vuodat, kulta ja norsunluu. Vuonna 1856 ilmestynyt '
-        + 'kauppalehti kutsui Berberaa "maailman vapaimmaksi satamaksi ja koko lahden '
-        + 'tärkeimmäksi kauppapaikaksi".'
+        + 'kauppalehti kutsui Berberaa ”maailman vapaimmaksi satamaksi ja koko lahden '
+        + 'tärkeimmäksi kauppapaikaksi”.'
         + '\n\nVuosina 1884–1886 britit tekivät peräkkäisiä sopimuksia pohjoisen '
         + 'somalirannikon klaanien kanssa ja perustivat alueelle protektoraatin, '
         + 'Britannian Somalimaan. Sitä miehitettiin Adenista ja hallittiin Brittiläisestä '
@@ -13280,7 +13716,7 @@ export const SKANDAALIT = {
         + 'palkan viiteen dollariin päivässä; meksikolaisille jäi enintään kolme.'
         + '\n\nKorotuksen voimaantulopäivänä 1. kesäkuuta 1906 meksikolaiset kaivosmiehet '
         + 'jättivät työnsä. Jopa kaksituhatta miestä kokoontui poliisipäällikön toimiston '
-        + 'eteen huutamaan "cinco pesos, ocho horas" — viisi pesoa, kahdeksan tuntia. '
+        + 'eteen huutamaan ”cinco pesos, ocho horas” — viisi pesoa, kahdeksan tuntia. '
         + 'Vaatimuksiin kuului myös se, että kolme neljäsosaa työpaikoista varattaisiin '
         + 'meksikolaisille.'
         + '\n\nIltapäivällä kulkue ohitti puutavaravaraston, jonka johtaja käänsi paloletkun '
@@ -13293,9 +13729,9 @@ export const SKANDAALIT = {
       visa: {
         kysymys: 'Mitä lakkolaiset huusivat poliisipäällikön toimiston edessä?',
         vaihtoehdot: [
-          '"Tierra y libertad"',
-          '"Cinco pesos, ocho horas"',
-          '"Viva Cananea"',
+          '”Tierra y libertad”',
+          '”Cinco pesos, ocho horas”',
+          '”Viva Cananea”',
         ],
         oikea: 1,
       },
@@ -13334,7 +13770,7 @@ export const SKANDAALIT = {
       teksti: 'Kiinapuun kuoresta saatiin kiniini, pitkään ainoa tehoava malarialääke. '
         + 'Munkki Antonio de La Calancha mainitsi quina-kuoren 1638 puuna, joka kasvaa '
         + 'Lojassa, ja kertoi että kahden kolikon painoinen jauhe sekoitettiin veteen ja '
-        + 'juotiin kuumeeseen. Jesuiittaisä Bernabé Cobo kirjoitti "kuumepuusta" 1653.'
+        + 'juotiin kuumeeseen. Jesuiittaisä Bernabé Cobo kirjoitti ”kuumepuusta” 1653.'
         + '\n\nTarkan kuvauksen teki vasta tähtitieteilijä Charles Marie de La Condamine, '
         + 'joka tuli Quitoon 1735 mittaamaan meridiaanin kaarta; hänen kuvaamansa laji '
         + 'Cinchona officinalis osoittautui kuitenkin hoidollisesti vähäarvoiseksi.'
@@ -13421,7 +13857,7 @@ export const SKANDAALIT = {
       vuosi: '1864–1866',
       paikka: 'Callaon satama',
       lat: -12.0522, lon: -77.1392,
-      kortti: 'Espanja lähetti "tieteellisen retkikunnan" Etelä-Amerikan vesille ja valtasi '
+      kortti: 'Espanja lähetti ”tieteellisen retkikunnan” Etelä-Amerikan vesille ja valtasi '
         + 'Perun tärkeimmän tulonlähteen: guanolla lastatut Chinchan saaret. Sota levisi '
         + 'neljään entiseen siirtomaahan ja toi mukanaan panssarilaivat.',
       teksti: 'Chinchan saarten sota eli Espanjan ja Etelä-Amerikan sota oli sarja rannikko- '
@@ -13433,8 +13869,8 @@ export const SKANDAALIT = {
         + 'maa nousi maailman neljänneksi suurimmaksi merivallaksi. 1850- ja 1860-luvuilla se '
         + 'toimi siirtomaahankkeissa muun muassa Marokossa, Filippiineillä, Meksikossa ja '
         + 'Dominikaanisessa tasavallassa.'
-        + '\n\nVuoden 1862 lopulla Espanja lähetti Etelä-Amerikan vesille "tieteellisen '
-        + 'retkikunnan", jonka salainen tarkoitus oli tukea Amerikassa asuvien Espanjan '
+        + '\n\nVuoden 1862 lopulla Espanja lähetti Etelä-Amerikan vesille ”tieteellisen '
+        + 'retkikunnan”, jonka salainen tarkoitus oli tukea Amerikassa asuvien Espanjan '
         + 'kansalaisten rahallisia ja oikeudellisia vaatimuksia. Amiraali Luis '
         + 'Hernández-Pinzón Álvarezin laivue koostui neljästä sota-aluksesta. Laivat saapuivat '
         + 'Valparaísoon huhtikuussa 1863 ja sieltä Peruun, jonka itsenäisyyttä Espanja ei '
@@ -13578,7 +14014,7 @@ export const SKANDAALIT = {
         + 'maareittiä, joka yhdistäisi Tyynenmeren ja Atlantin.'
         + '\n\nTakaajat tiesivät, että Vasco Núñez de Balboa oli nähnyt Tyynenmeren '
         + 'ensimmäisenä eurooppalaisena juuri Dariénin kannaksen ylitettyään. Retkikunta '
-        + 'julisti 1698 hallitsevansa myös "Rapusaarta" eli nykyistä Viequesia Puerto '
+        + 'julisti 1698 hallitsevansa myös ”Rapusaarta” eli nykyistä Viequesia Puerto '
         + 'Ricossa, mutta valta jäi lyhyeksi.'
         + '\n\nHanke epäonnistui. Yli kahdeksankymmentä prosenttia osallistujista kuoli '
         + 'vuoden kuluessa, ja siirtokunta hylättiin kahdesti. Syitä on esitetty monia: huono '

@@ -157,7 +157,7 @@ export const VUORISTONIMET = [
     huippu: 'Jengish Chokusu',
     korkeus: 7439,
     wiki: 'Tienšan',
-    selitys: '"Taivaan vuoret" erottavat Kiinan Tarimin altaan Keski-Aasian aroista. '
+    selitys: '”Taivaan vuoret” erottavat Kiinan Tarimin altaan Keski-Aasian aroista. '
       + 'Silkkitie jakautui niiden juurella pohjoiseen ja eteläiseen haaraan, ja '
       + 'karavaanikaupungit elivät siitä, kummasta päästä kauppias kiersi.',
   },
@@ -489,7 +489,7 @@ export const VUORISTONIMET = [
     huippu: 'Ras Dashen',
     korkeus: 4550,
     wiki: 'Etiopian ylänkö',
-    selitys: '"Afrikan katto": mantereen laajin ylänkö, jonka korkeus ja jyrkät '
+    selitys: '”Afrikan katto”: mantereen laajin ylänkö, jonka korkeus ja jyrkät '
       + 'rotkot auttoivat Etiopiaa säilyttämään itsenäisyytensä koko siirtomaakauden. '
       + 'Siniseltä Niililtä tulee kaksi kolmasosaa Egyptin vedestä, ja kahvipensas on '
       + 'kotoisin näiltä rinteiltä.',

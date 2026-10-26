@@ -6,17 +6,17 @@
   "tavoiteLufs": -30,
   "haivytysS": 0.25,
   "leikkaaHiljaisuus": false,
-  "poisTagit": ["music", "song", "speech", "voice"],
-  "lahteet": ["freesound", "commons"],
+  "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"],
+  "lahteet": ["freesound"],
   "tehosteet": [
     {
       "tunnus": "savanni",
       "peliavain": "maisema.savanni",
       "kuvaus": "Savanni: heinäsirkat, kaukainen tuuli ja linnut (Afrikka, Jebel Irhoud, siirtymä Itä-Afrikkaan)",
       "hakusanat": [
-        "savanna grassland crickets wind",
-        "african savanna ambience insects",
-        "dry grassland birds distant wind"
+        "savanna",
+        "savannah ambience",
+        "africa ambience birds"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
@@ -40,22 +40,23 @@
       "peliavain": "maisema.meren-ranta",
       "kuvaus": "Meren ranta: aallot ja lokit (Pinnacle Point, Blombos)",
       "hakusanat": [
-        "ocean waves shore seagulls",
+        "ocean waves beach seagulls field recording",
         "sea shore waves gulls ambience",
-        "calm beach waves ambience"
+        "calm beach waves field recording"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "people", "kids", "children", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "vuoristotuuli",
       "peliavain": "maisema.vuoristotuuli",
       "kuvaus": "Vuoristo ja tuuli kalliolla (Karmelvuori, Skhul ja Qafzeh)",
       "hakusanat": [
-        "mountain wind ambience",
-        "wind on rocky hillside",
-        "highland wind gusts ambience"
+        "mountain wind field recording",
+        "wind mountain ridge outdoor recording",
+        "highland wind gusts field recording"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
@@ -66,9 +67,9 @@
       "peliavain": "maisema.ruohikko-jarvi",
       "kuvaus": "Kevyt tuuli ruohikossa ja järven liplatus (vihertynyt Arabia, Al Wusta)",
       "hakusanat": [
-        "lake shore wind reeds",
-        "gentle wind grass lake ambience",
-        "calm lake water lapping birds"
+        "lake ambience birds",
+        "reeds wind",
+        "lake shore ambience"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
@@ -79,13 +80,14 @@
       "peliavain": "maisema.sademetsa",
       "kuvaus": "Sademetsä: sirkutus, hyönteiset ja sade (Sumatra, Lida Ajer)",
       "hakusanat": [
-        "rainforest ambience insects birds",
-        "jungle rain ambience",
-        "tropical forest crickets rain"
+        "rainforest ambience insects birds field recording",
+        "borneo rainforest ambience",
+        "tropical rainforest dawn chorus insects"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "bat", "bats", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "rannikkomeri",
@@ -118,13 +120,14 @@
       "peliavain": "maisema.arktinen-tuuli",
       "kuvaus": "Arktinen tuuli lumen yllä (Jana, napapiirin takana)",
       "hakusanat": [
-        "arctic wind ambience",
-        "cold wind snow blizzard distant",
-        "icy wind howling ambience"
+        "blizzard",
+        "arctic wind",
+        "snow storm wind"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "inside", "house", "window", "door", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "tundratuuli",
@@ -144,13 +147,14 @@
       "peliavain": "maisema.metsasade",
       "kuvaus": "Sade metsässä, tippuvat lehdet (Monte Verde)",
       "hakusanat": [
-        "rain in forest ambience",
-        "rain on leaves forest",
-        "forest rain dripping ambience"
+        "forest rain",
+        "rain leaves",
+        "rain woodland"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album", "dark", "scape", "drone", "horror", "cinematic"]
     },
     {
       "tunnus": "kylma-tuuli",
@@ -183,22 +187,23 @@
       "peliavain": "maisema.rantalinnut",
       "kuvaus": "Ranta ja linnut (Aotearoa, Uusi-Seelanti)",
       "hakusanat": [
-        "beach birds waves ambience",
-        "shore birds ambience",
-        "coastal birds waves morning"
+        "seabirds colony waves field recording",
+        "shorebirds calls waves beach",
+        "oystercatcher shore waves ambience"
       ],
       "kestoMin": 30,
       "kestoMax": 120,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": ["Creative Commons 0", "Attribution"],
+      "poisTagit": ["music", "song", "speech", "voice", "talking", "synth", "synthesized", "artificial", "mars", "rover", "traffic", "suburb", "motor", "engine", "airplane", "aircraft", "helicopter", "urban", "crowd", "indoor", "interior", "boat", "siren", "sirens", "firetruck", "police", "ambulance", "city", "album"]
     },
     {
       "tunnus": "hiljainen-tuuli",
       "peliavain": "maisema.hiljainen-tuuli",
       "kuvaus": "Hiljainen tuuli: loppusanat, kartta jää pelaajalle",
       "hakusanat": [
-        "quiet gentle wind ambience",
-        "soft breeze ambience",
-        "calm wind field ambience"
+        "gentle wind grass field recording",
+        "soft breeze meadow ambience",
+        "calm wind dry grass field"
       ],
       "kestoMin": 30,
       "kestoMax": 120,

@@ -1,0 +1,201 @@
+/*
+ * PINTA: pillerivalikko PANEELI-pohjalla (js/pilleri-paneeli.js).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── PANEELI puettuna pillerivalikkoon (#paavalikko, js/pilleri-paneeli.js; peruttava ?paneeli=vanha) ─────────── */
+
+/* Paikka pohjan omalla kiinteällä asemoinnilla: yläpalkin toimintorivin alla oikeassa reunassa (js asettaa ankkurin). */
+.paavalikko.tk-paneeli--paikallaan {
+  z-index: 60;
+  display: block;
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  /* Vanhat alinäkymät (tiedot, Aarteet, Linssit) lukevat kehyksen muuttujia: paperin arvot pohjan tokeneista. */
+  --ink: var(--tk-muste);
+  --muted: var(--tk-muste-pehmea);
+  --line: var(--tk-reunus);
+  --panel: var(--tk-pinta);
+}
+.paavalikko.tk-paneeli--paikallaan[hidden] { display: none; }
+.tk-paneeli--paikallaan .pilleri-alanakyma, .tk-paneeli--paikallaan #pilleri-paanakyma { display: block; }
+.tk-paneeli--paikallaan .pilleri-alanakyma[hidden], .tk-paneeli--paikallaan #pilleri-paanakyma[hidden] { display: none; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhmaotsikko:first-child { margin-top: 0 !important; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__ryhma,
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__erotin + .tk-paneeli__ryhma { margin-top: var(--tk-vali-m); }
+/* Vanhan kytkimen tila (aria-checked) ajaa päällä-asun samoin kuin pohjan oma kytkin. */
+.tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.tk-paneeli-rivi--kytkin[aria-checked="true"] .tk-paneeli-rivi__tila { color: var(--tk-korostus); font-weight: 700; }
+/* Kolme kytkintä vierekkäin: väri kertoo tilan, PÄÄLLÄ/POIS-sana ei mahdu kolmanneksen levyiseen soluun. */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { gap: var(--tk-vali-xs); padding: 0 var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+/* Natiivin tapa (Natiivi-UI): nimi pienenee yhden portaan (14 → 12), ja koska Äänimaisema ei silti mahdu
+   puhelimen kolmanneksen soluun, ikoni ja nimi menevät kahdelle riville (ikoni jää aina, nimeä ei lyhennetä). */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { flex-direction: column; gap: 0; padding-top: var(--tk-vali-xs); padding-bottom: var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__nimi { flex: none; font-size: var(--tk-koko-kapiteeli); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin[aria-checked="true"] + .tk-paneeli-rivi { border-left-color: var(--tk-toiminto); }
+/* Säädin: vanha rivi (nimi, liuku, arvo) kahdelle riville kuten pohjan SÄÄDIN. */
+.aanivoima.tk-paneeli-rivi--saadin {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nimi arvo" "liuku liuku";
+  row-gap: var(--tk-vali-xs);
+  min-height: 0;
+}
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-nimi { grid-area: nimi; color: var(--tk-muste); font: inherit; }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-liuku { grid-area: liuku; width: 100%; margin: 0; accent-color: var(--tk-toiminto); }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-arvo {
+  grid-area: arvo;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.tk-paneeli--paikallaan .tk-paneeli__alarivi { align-items: center; }
+.tk-paneeli--paikallaan .tk-paneeli__alarivi button { color: inherit; font-size: var(--tk-koko-kapiteeli); }
+/* Vanha `.paavalikko button` (0,1,1) nollaisi reunuksen, kulman ja välit: pohjan rivi samalla tarkkuudella. */
+.paavalikko.tk-paneeli .tk-paneeli-rivi {
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+}
+.paavalikko.tk-paneeli .tk-paneeli-rivi--toiminto { border-color: var(--tk-muste-pehmea); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--saadin { padding: var(--tk-vali-s) var(--tk-vali-m); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi:hover:not([aria-checked="true"]) { background: transparent; }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi { padding: 0 var(--tk-vali-xs); border: 0; border-radius: 0; }
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi { border-left: 1px solid var(--tk-muste-pehmea); }
+/* Alinäkymän otsikko on kapiteeli (vanha h2-sääntö teki siitä kultaisen). */
+.paavalikko.tk-paneeli .tk-paneeli__yla .tk-kapiteeli {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Matka-alinäkymä: otsikko on jo ylärivillä, joten tietojen oma Matka-nimiö ja yläviiva jäävät pois. */
+#pilleri-matka-nakyma .pilleri-tiedot { margin-top: 0; padding-top: 0; border-top: 0; }
+#pilleri-matka-nakyma .pilleri-tiedot > .passport-count:first-child { display: none; }
+
+/* ── VALIKKO V2 (vedos ?valikko=v2, omistaja 2.10.2026 klo 14.0x; js/pilleri-paneeli.js valikkoV2) ───────────────
+ * ÄÄNET: kevyt kytkinrivi ilman yhteistä kehystä ja väliviivoja; ikoni ja nimi samalla rivillä samaa kokoa; päällä =
+ * pehmeä pergamenttitäyttö ilman tummaa reunaa. MATKA ja PELI: luettelorivit (ikoni, nimi yhdellä koolla, nuoli),
+ * ei väliviivoja (20.2x). Uusi peli hillittynä tekstinappina alimpana. Ei kapseleita (EI OVAALEJA 2.10.). */
+/* Kapeampi valikko (omistaja 15.0x): minipopupin leveys; puhelimella ilmaa molemmille reunoille. */
+.paavalikko.tk-paneeli--v2.tk-paneeli--paikallaan { width: min(var(--tk-leveys-minipopup), 100vw - 2 * var(--tk-vali-xl)); }
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain { gap: var(--tk-vali-xs); border: 0; border-radius: 0; overflow: visible; }
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi,
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi {
+  flex-direction: row;
+  gap: var(--tk-vali-xs);
+  padding: 0 var(--tk-vali-xs);
+  border: 0;
+  border-radius: var(--tk-kulma-nappi);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 400;
+}
+.paavalikko.tk-paneeli--v2 .tk-paneeli-ikoni svg { width: 1.15em; height: 1.15em; }
+.paavalikko.tk-paneeli--v2 .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+.paavalikko.tk-paneeli--v2 .tk-paneeli-rivi--kytkin[aria-checked="true"] { border-color: transparent; background: var(--tk-pergamentti); }
+.paavalikko.tk-paneeli--v2 .tk-paneeli-rivi--kytkin[aria-checked="false"],
+.paavalikko.tk-paneeli--v2 .tk-paneeli-rivi--kytkin[aria-checked="false"] .tk-paneeli-ikoni { color: var(--tk-muste-pehmea); }
+
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--luettelo { gap: 0; }
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--luettelo .tk-paneeli-rivi {
+  padding: 0 var(--tk-vali-xs);
+  border: 0;
+  border-radius: 0;
+  font-size: var(--tk-koko-leipa);
+  font-weight: 400;
+}
+/* Ei väliviivoja luettelossa (omistaja 2.10.2026 klo 20.2x): vain alin viiva Uusi peli -rivin yläpuolella jää. */
+
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma + .tk-paneeli__ryhma { margin-top: var(--tk-vali-xs); }
+
+/* Tasorivi (ilman otsikkoa): avatar ympyränä nimen edessä. */
+.paavalikko.tk-paneeli--v2 .valikko-tasorivi-avatar {
+  flex: none;
+  width: calc(var(--tk-koko-leipa) * 2);
+  height: calc(var(--tk-koko-leipa) * 2);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Alarivi yhdellä rivillä: Uusi peli vasemmalla, ↻ ja versio oikealla (omistaja 14.37). */
+.paavalikko.tk-paneeli--v2 .tk-paneeli__alarivi { justify-content: flex-end; gap: var(--tk-vali-s); }
+.paavalikko.tk-paneeli--v2 .tk-paneeli__alarivi .valikko-alarivi-uusi {
+  width: auto;
+  min-height: var(--tk-nappi-osuma);
+  margin-right: auto;
+  padding: 0 var(--tk-vali-xs);
+  border: 0;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Tasorivi: avatar, "Untuvikko (80 tp)", etenemispalkki ja › samalla rivillä (omistaja 14.4x). */
+.paavalikko.tk-paneeli--v2 .valikko-tasorivi .tk-paneeli-rivi__nimi { flex: 0 1 auto; }
+.valikko-tasorivi-palkki {
+  flex: 1 1 auto;
+  min-width: var(--tk-vali-xl);
+  height: var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-pieni);
+  background: var(--tk-reunus);
+  overflow: hidden;
+}
+.valikko-tasorivi-palkki[hidden] { display: none; }
+.valikko-tasorivi-tayte { display: block; height: 100%; background: var(--tk-toiminto); }
+
+/* Tasonäkymä (tasorivistä): nykyinen avatar isona ylhäällä ja sen alla kaikki tasot, nykyinen ympyröity (14.4x).
+   Sijainti, kukkaro, nimi-pisteet-sivu ja tilastot poissa. */
+.paavalikko.tk-paneeli--v2 .pilleri-tiedot > .passport-count,
+.paavalikko.tk-paneeli--v2 .pilleri-tiedot .laukku-lohko { display: none; }
+.valikko-taso-avatar {
+  display: block;
+  width: calc(var(--tk-nappi-osuma) * 2.5);
+  height: calc(var(--tk-nappi-osuma) * 2.5);
+  margin: var(--tk-vali-s) auto var(--tk-vali-l);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.valikko-tasot .tietaja-galleria-kohta.nykyinen { border-color: transparent; background: transparent; }
+.valikko-tasot .tietaja-galleria-kohta.nykyinen .tietaja-galleria-kuva {
+  outline: 2px solid var(--tk-toiminto);
+  outline-offset: 2px;
+}
+
+/* Tasolaatta (omistaja 20.2x: "untuvikko ja päivä riveille yhteinen pohja"): ÄÄNET-kytkimen päällä-täyttö ja kulma,
+   valikon levyisenä; ei uutta tyyliä. */
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma.valikko-tasolaatta {
+  margin-top: var(--tk-vali-s);
+  padding: 0 var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--tk-pergamentti);
+}
+
+/* Päivärivi tasorivin alla (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · £400" ja oikeassa reunassa punaisena
+   päivän kulut. Tietorivi, ei nappi. */
+.valikko-paivarivi {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--tk-vali-s);
+  margin: 0;
+  padding: var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-vali-s);
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+}
+.valikko-paivarivi-kulu { color: var(--tk-tila-virhe); white-space: nowrap; }

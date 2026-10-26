@@ -266,9 +266,9 @@ const NA_AIR_ROUTES = [
 
 export const NORTHAMERICA = {
   id: 'northamerica',
-  name: 'Montezuman aarre',
+  name: 'Montezuman turkoosinaamio',
   boardLabel: 'Pohjois-Amerikka',
-  tagline: 'Etsi Montezuman kadonnut aarre Kalliovuorilta, preerialta, Karibian saarilta ja Alaskan tundralta.',
+  tagline: 'Etsi Montezuman kadonnut turkoosinaamio Kalliovuorilta, preerialta, Karibian saarilta ja Alaskan tundralta.',
   ariaLabel: 'Pohjois-Amerikan aarrekartta',
 
   /*
@@ -303,11 +303,12 @@ export const NORTHAMERICA = {
     // kymmeniätuhansia onnenonkijoita Yukonin jokilaaksoon.
     types: themedTokenTypes({
       star: {
-        name: 'Montezuman aarre',
-        fakta: 'Kun espanjalaiset pakenivat Tenochtitlanista \'surullisena '
-          + 'yönä\' 1520, suuri osa Montezuman kullasta upposi järveen — '
-          + 'sitä etsitään yhä.',
-        kuva: 'assets/aarteet/aarre-northamerica-star.jpg',
+        name: 'Montezuman turkoosinaamio',
+        fakta: 'Atsteekit tekivät turkoosikivistä mosaiikkinaamioita. '
+          + 'Kun espanjalaiset pakenivat atsteekkien Tenochtitlan-kaupungista '
+          + '1520 (“surullinen yö”), osa Montezuman aarteesta katosi. '
+          + 'Sitä etsitään yhä.',
+        kuva: 'assets/aarteet/aarre-northamerica-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Kultaryntäyksen hippu', color: '#e0b02a',
@@ -375,20 +376,20 @@ export const NORTHAMERICA = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää Montezuman aarre ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
-    starFound: '◈ {name} löysi MONTEZUMAN AARTEEN kaupungista {city}!',
-    starToast: 'MONTEZUMAN AARRE!',
+    intro: 'Peli alkaa! Etsikää Montezuman turkoosinaamio ja palatkaa New Yorkiin, San Franciscoon tai Los Angelesiin.',
+    starFound: '◈ {name} löysi MONTEZUMAN TURKOOSINAAMION kaupungista {city}!',
+    starToast: 'MONTEZUMAN TURKOOSINAAMIO!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Montezuman aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi Montezuman aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Montezuman turkoosinaamion turvallisesti kotiin',
+    winnerStar: '{name} toi Montezuman turkoosinaamion kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
       'Siirtokunnat ovat pärjänneet ilman meitä hämmentävän hyvin. Päätin olla ottamatta teekutsuja puheeksi.',
       'Isoisä odotti täältä siirtokuntia ja sai vastaansa kaksi liittovaltiota, jotka pärjäävät hämmentävän hyvin ilman meitä. Päätin olla ottamatta teekutsuja puheeksi.',
-      '"Manner on tyhjä lännestä itään", kirjoitti isoisä ja tarkoitti sitä kohteliaisuutena. Täällä oli satoja kansoja, kieliä ja kaupunkeja ennen ensimmäistäkään purjetta. Tyhjyys oli hänen kartassaan, ei maassa.',
+      '”Manner on tyhjä lännestä itään”, kirjoitti isoisä ja tarkoitti sitä kohteliaisuutena. Täällä oli satoja kansoja, kieliä ja kaupunkeja ennen ensimmäistäkään purjetta. Tyhjyys oli hänen kartassaan, ei maassa.',
       'Isoisä laski, että mantereen ylitys vaunuilla kestää viisi kuukautta. Juna vie sen nyt kolmessa vuorokaudessa ja lentokone kuudessa tunnissa. Hän ehti nähdä ensimmäisen näistä ja piti sitä lopullisena.',
-      '"Kulta loppuu ja kaupungit katoavat", ennusti isoisä kaivoskaupungeista. Osa katosi ja osa on nyt miljoonakaupunkeja. Hän oli oikeassa puolet ajasta, mikä on ennustajalle kunniallinen tulos.',
+      '”Kulta loppuu ja kaupungit katoavat”, ennusti isoisä kaivoskaupungeista. Osa katosi ja osa on nyt miljoonakaupunkeja. Hän oli oikeassa puolet ajasta, mikä on ennustajalle kunniallinen tulos.',
       'Isoisän kartassa raja kulkee suorana viivana länteen. Suora viiva on yhä siellä, ja se leikkaa yhä läpi jokia, vuoria ja kansoja, jotka olivat paikalla ennen viivan piirtäjää.',
     ],
   },

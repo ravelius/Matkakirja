@@ -12,7 +12,9 @@
         "Kuka nousi Mont Blancille ensimmäisenä?",
         "Kummalle maalle huippu oikeastaan kuuluu?"
       ],
-      "korostukset": ["Alpit|Alpeilla"],
+      "korostukset": [
+        "Alpit|Alpeilla"
+      ],
       "teksti": "Mont Blanc kohoaa Alpeilla 4 807 metriin ja on Kaukasuksen ulkopuolisen Euroopan korkein vuori. Huippu on täsmälleen Ranskan ja Italian rajalla, ja se on myös maailman yhdenneksitoista topografisesti hallitsevin vuori. Isoisän matkan aikaan huipulle nousu oli jo vakiintunut urheilulaji: alppikiipeily oli syntynyt Chamonix'n laaksossa vuoren juurella.",
       "lahde": "en-Wikipedia \"Mont Blanc\", johdanto-osa (tarkistettu 29.8.2026)."
     },
@@ -42,7 +44,9 @@
         "Kuinka kapea Gibraltarinsalmi todella on?",
         "Miksi Välimeri on niin suolainen?"
       ],
-      "korostukset": ["Gibraltarinsalmi|Gibraltarinsalmen"],
+      "korostukset": [
+        "Gibraltarinsalmi|Gibraltarinsalmen"
+      ],
       "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Idässä Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle — jälkimmäinen oli isoisän matkan aikaan aivan uusi, avattu 1869.",
       "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 29.8.2026)."
     },
@@ -58,6 +62,19 @@
       ],
       "teksti": "Biskajanlahti on Koillis-Atlantin lahti Kelttienmeren eteläpuolella. Se ulottuu Espanjan pohjoisrannikkoa pitkin Ranskan rajalta Ortegalinniemelle ja Ranskan länsirannikkoa pitkin Penmarc'hinniemeltä etelään Espanjan rajalle asti. Purjelaivojen aikaan lahti oli merimiesten pelätyimpiä paikkoja Euroopassa.",
       "lahde": "en-Wikipedia \"Bay of Biscay\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Lioninlahti",
+      "lon": 4,
+      "lat": 42.8,
+      "lahdeKoordinaatti": "lahden ulappa Languedocin rannikon edustalla, Sètesta etelään",
+      "nappi": "Mistralin ja tramontanen lahti",
+      "kysymykset": [
+        "Mikä on mistral-tuuli?",
+        "Mikä Camargue on?"
+      ],
+      "teksti": "Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla; se ulottuu lännessä Espanjan Katalonian rannikolle ja idässä Toulonin tienoille. Alue tunnetaan kylmistä, puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.",
+      "lahde": "en-Wikipedia \"Gulf of Lion\", johdanto-osa ja Etymology-osio; Store norske leksikon \"Løvebukta\" (tarkistettu 16.10.2026)."
     }
   ],
   "joet": [
@@ -84,7 +101,9 @@
         "Mikä Camargue on?",
         "Miten Rhône muuttuu Genevenjärvessä?"
       ],
-      "korostukset": ["Camargue|Camargue-alueen"],
+      "korostukset": [
+        "Camargue|Camargue-alueen"
+      ],
       "teksti": "Rhône saa alkunsa Alpeilta, virtaa Genevenjärven läpi ja kääntyy Kaakkois-Ranskan halki etelään Välimerelle. Arles'n kohdalla lähellä suistoa joki jakautuu kahdeksi haaraksi, Suureksi ja Pieneksi Rhôneksi, ja niiden väliin jäävä suistomaa on Camargue-alueen kosteikko. Se on Ranskan ja Sveitsin yhteinen joki: alkulähde on Sveitsin puolella.",
       "lahde": "en-Wikipedia \"Rhône\", johdanto-osa (tarkistettu 29.8.2026)."
     }

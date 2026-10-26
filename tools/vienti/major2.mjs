@@ -32,7 +32,7 @@ export const SKEEMAVERSIO_2 = '2.0';
 export const NATIIVIN_MODUULIT = [
   /^js\/(aani-ehdokkaat|fokusnosto-symbolit|fokustehtavat|karttatyokalu-maakunnat|lahteet|ui-tekstit)\.js$/,
   /^js\/tyohuone-(musiikki|pelit|raamattu|tilanne)\.js$/,
-  /^js\/linssit\/(astronaut-kysymykset|ihmisen-matka|ihmisen-matka-data|ihmisen-matka-kertomus|ihmisen-matka-kysymykset|keksinnot|maatiedot|radio|satelliitti-data|vertailu|vesistot)\.js$/,
+  /^js\/linssit\/(astro-kysymykset|astronaut-kysymykset|ihmisen-matka|ihmisen-matka-data|ihmisen-matka-kertomus|ihmisen-matka-kysymykset|keksinnot|maatiedot|museo-kysymykset|radio|satelliitti-data|vertailu|vesistot)\.js$/,
   /^js\/packs\/(maailmankartta|maailmankartta-maasto|maailmankartta-nimet|maakunnat-luonnehdinnat|maakunnat-pulu|nimisto-1873|pollo-poiminnat|radiot|saatiedot|syvennyspaikat|uutislahteet|vanhat-aanet|viritysaanet)\.js$/,
   // NostoSisalto: <tiedosto>-<iso>.js maittain.
   /^js\/packs\/(fokuskohteet|maastokohteet|hahmotelma|nakyvat-kaupungit)-[a-z]{3}\.js$/,
@@ -62,7 +62,8 @@ export function johdaMajor2(tiedostot) {
   for (const [polku, teksti] of tiedostot) {
     if (polku === 'manifest.json' || pois.has(polku)) continue;
     let uusi = teksti;
-    if (polku.startsWith('kokoelmat/')) {
+    // Asetukset (skeema 1.59) on tavallinen objekti, ei kokoelma: sellaisenaan (ei data-kenttiä, ei alkioita).
+    if (polku.startsWith('kokoelmat/') && polku !== manifest.asetukset?.tiedosto) {
       const k = JSON.parse(teksti);
       k.alkiot = k.alkiot.map(({ data, ...a }) => a);
       if (k.nimi === 'laatat') {

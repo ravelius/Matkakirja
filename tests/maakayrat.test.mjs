@@ -47,7 +47,11 @@ test('pilottimaat ovat mukana', () => {
  */
 test('pelin jokaiselle maalle löytyy tilastosarjat', async () => {
   const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
-  const puuttuu = Object.keys(MAAILMANKARTTA.map.countryShapes).filter((m) => !data.maat[m]);
+  // Vatikaani (10.10.2026): UN WPP ja Maailmanpankki eivät julkaise sarjoja
+  // Pyhälle istuimelle, eikä minivaltiolla ole maalehteä (kevyt sisältö),
+  // joten "Maa numeroina" -käyriä ei piirretä.
+  const ILMAN_SARJOJA = new Set(['VAT']);
+  const puuttuu = Object.keys(MAAILMANKARTTA.map.countryShapes).filter((m) => !data.maat[m] && !ILMAN_SARJOJA.has(m));
   assert.deepEqual(puuttuu, [], 'pelin maita ilman maakayrat-dataa');
 });
 

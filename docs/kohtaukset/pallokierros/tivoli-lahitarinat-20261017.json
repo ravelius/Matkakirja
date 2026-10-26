@@ -1,0 +1,67 @@
+{
+ "versio": 1,
+ "laatija": "Sisältökirjuri 17.10.2026",
+ "huomio": "Tivolin vapaan lennon 6 lähitarinaa (vaihe 8, PT 17.10.) + Pulun kutsu. Ääntä ei ole tehty; tekstit menevät omistajalle Tekstit-osastoon tarkistuksen jälkeen. Isoisän ääni vain järvelle (1873), muut William. Ei Gyldne Tårnin korkeutta, ei puiston pinta-alaa, ei Pantomiimiteatterin 2024 verhoa. Riippumaton tarkistus 17.10. (3 tarkistajaa): korjaukset viety (lyhdyt pois, puisista vuoristoradoista, Lebech 'johti rakentamista', karuselli ketjuin, Taivaslaiva 'suomeksi', Nimbin perhe, torni pisteillä).",
+ "lahitarinat": [
+  {
+   "tunnus": "tivoli-lahitarina-jarvi",
+   "kertoja": "isoisä (1873)",
+   "otsikko": "Järven vesi ja lyhdyt",
+   "teksti": "Tämä musta vesi on kaupungin vanhaa vallihautaa, vaikkeivät vallit enää suojele ketään. Juhla-iltoina puutarhassa palaa värillisiä lamppuja, ja ilotulitus nousee pimeään.",
+   "puhuttu": "Tämä musta vesi on kaupungin vanhaa vallihautaa, vaikkeivät vallit enää suojele ketään. Juhla-iltoina puutarhassa palaa värillisiä lamppuja, ja ilotulitus nousee pimeään.",
+   "sanoja": 21,
+   "merkkeja": 170
+  },
+  {
+   "tunnus": "tivoli-lahitarina-torni",
+   "kertoja": "William",
+   "otsikko": "Japanilainen torni",
+   "teksti": "Japanilainen torni. Yli sata vuotta sitä kutsuttiin Kiinalaiseksi torniksi. Tivolin johtaja Knud Arne Petersen piirsi sen vuonna 1900 valaisemaan puistoa illalla. Tornissa on noin 2 800 värillistä lamppua.",
+   "puhuttu": "Japanilainen torni. Yli sata vuotta sitä kutsuttiin Kiinalaiseksi torniksi. Tivolin johtaja Knud Arne Petersen piirsi sen vuonna tuhat yhdeksänsataa valaisemaan puistoa illalla. Tornissa on noin kaksituhatta kahdeksansataa värillistä lamppua.",
+   "sanoja": 28,
+   "merkkeja": 205
+  },
+  {
+   "tunnus": "tivoli-lahitarina-teatteri",
+   "kertoja": "William",
+   "otsikko": "Pantomiimiteatteri",
+   "teksti": "Pantomiimiteatteri on Tivolin vanhin säilynyt rakennus, valmistunut vuonna 1874. Vilhelm Dahlerup suunnitteli sen kiinalaistyyliseksi, pääosin puusta tehdyksi rakennukseksi. Lavalla Pierrot, Harlekiini ja Columbine kertovat tarinoita ilman sanoja.",
+   "puhuttu": "Pantomiimiteatteri on Tivolin vanhin säilynyt rakennus, valmistunut vuonna tuhat kahdeksansataa seitsemänkymmentäneljä. Vilhelm Dahlerup suunnitteli sen kiinalaistyyliseksi, pääosin puusta tehdyksi rakennukseksi. Lavalla Pierrot, Harlekiini ja Columbine kertovat tarinoita ilman sanoja.",
+   "sanoja": 27,
+   "merkkeja": 247
+  },
+  {
+   "tunnus": "tivoli-lahitarina-nimb",
+   "kertoja": "William",
+   "otsikko": "Nimb",
+   "teksti": "Nimb on maurilaistyylinen palatsi, joka vihittiin käyttöön vuonna 1909. Tivolin johtaja Knud Arne Petersen suunnitteli sen. Nimi tulee Nimbin ravintoloitsijaperheestä, ja nykyään talossa on ravintoloita ja hotelli.",
+   "puhuttu": "Nimb on maurilaistyylinen palatsi, joka vihittiin käyttöön vuonna tuhat yhdeksänsataa yhdeksän. Tivolin johtaja Knud Arne Petersen suunnitteli sen. Nimi tulee Nimbin ravintoloitsijaperheestä, ja nykyään talossa on ravintoloita ja hotelli.",
+   "sanoja": 27,
+   "merkkeja": 214
+  },
+  {
+   "tunnus": "tivoli-lahitarina-rutschebanen",
+   "kertoja": "William",
+   "otsikko": "Rutschebanen",
+   "teksti": "Rutschebanen avattiin vuonna 1914, ja se on yksi maailman vanhimmista yhä toimivista puisista vuoristoradoista. Sen rakentamista johti puuseppämestari Valdemar Lebech. Joka junassa istuu jarrumies.",
+   "puhuttu": "Rutschebanen avattiin vuonna tuhat yhdeksänsataa neljätoista, ja se on yksi maailman vanhimmista yhä toimivista puisista vuoristoradoista. Sen rakentamista johti puuseppämestari Valdemar Lebech. Joka junassa istuu jarrumies.",
+   "sanoja": 24,
+   "merkkeja": 197
+  },
+  {
+   "tunnus": "tivoli-lahitarina-himmelskibet",
+   "kertoja": "William",
+   "otsikko": "Himmelskibet",
+   "teksti": "Himmelskibet, suomeksi Taivaslaiva, on 80 metriä korkea karuselli, jossa istuimet lentävät ketjujen varassa. Tivoli avasi sen vuonna 2006. Sen koristeet ovat kunnianosoitus tanskalaiselle tähtitieteilijälle Tycho Brahelle.",
+   "puhuttu": "Himmelskibet, suomeksi Taivaslaiva, on kahdeksankymmentä metriä korkea karuselli, jossa istuimet lentävät ketjujen varassa. Tivoli avasi sen vuonna kaksituhatta kuusi. Sen koristeet ovat kunnianosoitus tanskalaiselle tähtitieteilijälle Tycho Brahelle.",
+   "sanoja": 26,
+   "merkkeja": 222
+  }
+ ],
+ "pulu_kutsu": {
+  "tunnus": "pulu-vapaalento-kutsu-koopenhamina",
+  "kertoja": "Pulu",
+  "otsikko": "Pulun kutsu vapaaseen lentoon",
+  "teksti": "Kööpenhamina on nyt sinun, ja ohjaimet ovat kädessäsi. Paina Mikä tämä on -nappia ja napauta rakennusta, niin kerron, mitä tiedän siitä."
+ }
+}

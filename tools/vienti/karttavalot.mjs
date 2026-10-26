@@ -39,12 +39,25 @@ import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
 import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
 import { elaintakyKarttarivit } from '../../js/elaintaky-rivit.js';
 import { napanostonRivi } from '../../js/pallolauta/nostot.js';
+import { lukittuAnkkuri } from '../../js/pallolauta/nostoankkurit.js';
 import { MAASTOKOHTEET_ATA } from '../../js/packs/maastokohteet-ata.js';
 import { MAASTOKOHTEET_ARK } from '../../js/packs/maastokohteet-ark.js';
 import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 
 const pyorista = (a) => (a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null);
+/*
+ * Karttavalon maa pisteen mukaan (kartan kokonaistarkistus 10.10.2026, A3).
+ * Kohde, jonka nimi on poltettu lehden kuvaan, ei voi siirtyä: piste pysyy
+ * siellä, minne nimi on latottu, ja maa vaihdetaan pisteen maaksi.
+ * Avain `<pakan maa>|<kohteen tunnus>`. Alkuperäinen maa säilyy liitettyjen
+ * täkynostojen liitoksessa (ALKU_ISO), jotta nostot löytävät kohteen.
+ */
+const MAA_PISTEEN_MUKAAN = new Map([
+  ['BGR|tonava', 'ROU'], // Tonavan suisto (45,22 N / 29,76 E) on Romaniassa, ei Bulgariassa
+]);
+const ALKU_ISO = new Map();
+
 const asteiksi = (lauta, x, y) => (Number.isFinite(x) && Number.isFinite(y) ? pyorista(laudaltaAsteiksi(lauta, x, y)) : null);
 
 /*
@@ -134,7 +147,9 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const [paikka, paikkaLahde] = rivi.paikka ? [rivi.paikka, rivi.lahde === 'napakohde' ? 'alue' : 'data']
       : kaupunkiNimet.has(rivi.kaupunkiAvain) ? [kaupunkiNimet.get(rivi.kaupunkiAvain), 'kaupunki']
         : maaNimi(rivi.maa) ? [maaNimi(rivi.maa), 'maa'] : [null, null];
-    rivit.push({ ...rivi, id, paikka, paikkaLahde });
+    const { _iso: alkuIso, ...loput } = rivi;
+    if (alkuIso && alkuIso !== rivi.maa) ALKU_ISO.set(id, alkuIso);
+    rivit.push({ ankkuri: null, puoli: null, ...loput, id, paikka, paikkaLahde });
   };
   const kaupunkiKohteelle = (k) => (tarkeydet.has(k?.kaupunki) ? k.kaupunki : (tarkeydet.has(k?.id) ? k.id : null));
   /*
@@ -162,9 +177,19 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       if (!oma) continue;
       const kaupunki = lahde === 'fokuskohde' ? kaupunkiKohteelle(kohde) : null;
       pallolla.add(m.id);
+      /*
+       * Skeema 1.39 (Natiivi-UI, löydös 50 C): webin merkin paikka ja kylki.
+       * Web piirtää noston maan lukittuun ankkuriin (js/pallolauta/nostot.js:
+       * lukittuAnkkuri(`nosto:<id>`, iso), js/packs/nostoankkurit-<iso>.js),
+       * jos sellainen on; muuten se levittää merkit ruudulla `ladottu`-
+       * pisteestä. Nimiön kylki on väistön poltettu päätös (maanKohdemerkit
+       * `puoli`: oikea/vasen/yla/ala) tai null = web kokeilee oikea ensin.
+       */
+      const lukko = lukittuAnkkuri(`nosto:${m.id}`, iso);
       lisaa({
-        id, tunnus: m.id, aihe, kategoria: m.kategoria, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
-        ladottu: asteiksi(P.id, m.x, m.y), maa: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
+        id, tunnus: m.id, aihe, kategoria: m.kategoria, laji: m.laji ?? null, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
+        ladottu: asteiksi(P.id, m.x, m.y), maa: MAA_PISTEEN_MUKAAN.get(`${iso}|${m.id}`) ?? iso, _iso: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
+        ankkuri: lukko ? { lat: lukko.lat, lon: lukko.lng } : null, puoli: m.puoli ?? null,
         tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (kohde.taso ?? 1),
         taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
         lahizoom: Boolean(kohde.lahi), paakartalla: true, kohdekartta: kk?.kaupunki ?? null,
@@ -178,7 +203,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const oma = Number.isFinite(d.lat) && Number.isFinite(d.lon) ? { lat: d.lat, lon: d.lon } : asteiksi(P.id, t.x, t.y);
     if (!oma) continue;
     lisaa({
-      id: `elaintaky:${t.iso}`, tunnus: t.tunnus, aihe: 'elaimet', kategoria: 'elain', nimi: d.elain ?? d.otsikko ?? t.nimio,
+      id: `elaintaky:${t.iso}`, tunnus: t.tunnus, aihe: 'elaimet', kategoria: 'elain', laji: 'elain', nimi: d.elain ?? d.otsikko ?? t.nimio,
       nimio: t.nimio || null,
       ...oma, ladottu: asteiksi(P.id, t.x, t.y), maa: t.iso, kaupunki: null, kaupunkiAvain: null, tarkeys: 1, taso: 2,
       lahizoom: false, paakartalla: true, kohdekartta: null, paikka: null, lahde: 'elaintaky',
@@ -191,7 +216,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       const r = napanostonRivi(tynka, kohde, { avain: `${napa.toLowerCase()}:${kohde.id}` });
       if (!r?.aihe) continue;
       lisaa({
-        id: `kohde:${kohde.id}`, tunnus: kohde.id, aihe: r.aihe, kategoria: r.kategoria, nimi: kohde.nimi || r.nimi,
+        id: `kohde:${kohde.id}`, tunnus: kohde.id, aihe: r.aihe, kategoria: r.kategoria, laji: r.symLaji ?? null, nimi: kohde.nimi || r.nimi,
         nimio: r.nimi || null,
         ...pyorista({ lat: r.lat, lon: r.lng }), ladottu: null, maa: kohde.iso ?? (napa === 'ATA' ? 'ATA' : null),
         kaupunki: null, kaupunkiAvain: null, tarkeys: kohde.taso ?? 1, taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
@@ -211,7 +236,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const { lahde, id } = luokittele(tunnus, kohdeIdt);
     const maa = P.map.cityCountry?.[kk.kaupunki] ?? null;
     lisaa({
-      id, tunnus, aihe, kategoria, nimi: kohde.nimi || kohde.nimio || tunnus, nimio: null, ...pyorista({ lat: kk.lat, lon: kk.lng }),
+      id, tunnus, aihe, kategoria, laji: kohde.tyyppi ?? null, nimi: kohde.nimi || kohde.nimio || tunnus, nimio: null, ...pyorista({ lat: kk.lat, lon: kk.lng }),
       ladottu: null, maa, kaupunki: lahde === 'fokuskohde' ? kaupunkiKohteelle(kohde) : null, kaupunkiAvain: kk.kaupunki,
       tarkeys: kohde.taso ?? 1, taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
       lahizoom: false, paakartalla: false, kohdekartta: kk.kaupunki, paikka: lahdePaikka(tunnus, kohde), lahde,
@@ -220,10 +245,15 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
   const k = taulukko('js/pallolauta/nostot.js keraa (maanKohdemerkit + eläintäyt + navat) + kohdekartanNostopaikat',
     'Karttavalot pallolle: sama joukko kuin webin pallon nostokerros, pelin omilla funktioilla (skeema 1.24). aihe = valon '
       + 'aihe (kaupungit, luonto, elaimet, historia, ihmeet, hetket, kulttuuri, kauppa, skandaalit; js/karttavalot.js '
-      + 'KARTTAVALO_AIHEET) = nostosymPaakategoria(kategoria), kategoria = merkin symbolikategoria, nimi = kohteen nimi, '
+      + 'KARTTAVALO_AIHEET) = nostosymPaakategoria(kategoria), kategoria = merkin symbolikategoria, laji = webin symLaji (skeema 1.44: kohteen tyyppi, esim. vuori, saari, jarvi, meri, joki, ruoka, tekniikka; eläintäky elain; null = ei lajia; kuvamerkki NOSTOSYM_KUVAMERKIT[laji] ?? [kategoria]), nimi = kohteen nimi, '
       + 'nimio = kartan nimiö (null = web ei näytä nimeä), paikka = paikan nimi, aina täytetty (paikkaLahde: data = noston tai kortin oma paikka, alue = napa-alue, kaupunki = kaupunkijäsenyyden kaupunki, maa = maan nimi), '
       + 'lat/lon = noston oma paikka (kohdekartan piste, jos nosto on kohdekartalla, muuten laudan datapiste asteina), ladottu = '
-      + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu), maa (ISO3), tunnus = pelin '
+      + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu, tai kun piirtopiste karkasi yli '
+      + `${KARKAAVA_KM} km tai toiseen maahan: silloin myös ankkuri ja nimio null, PT 10.10.2026; nimio null myös, kun sama `
+      + `nimiö on jo alle ${KAKSOISNIMI_KM} km:n päässä samassa maassa), `
+      + 'ankkuri = { lat, lon } webin lukittu ankkuri (skeema 1.39; js/packs/nostoankkurit-<iso>.js, web piirtää merkin '
+      + 'tähän; null = maalla ei lukittua ankkuria ja web levittää merkit ruudulla ladotusta pisteestä), puoli = nimiön '
+      + 'kylki poltetusta väistöstä (oikea, vasen, yla, ala; null = web kokeilee oikea ensin), maa (ISO3), tunnus = pelin '
       + 'noston tunnus. lahde: fokuskohde, skandaalit, historianHetket, syvennys, takynosto, maalehtinosto, elaintaky, napakohde. '
       + 'paakartalla = piirtyykö pallon pääkartalle; false = nosto on vain kaupunkilehden kohdekartalla (kohdekartta = kaupunki; '
       + 'web karsii sen pääkartalta, js/fokuskohteet.js karsiKaupunkikartanNostot). lahizoom = näkyy vasta lähizoomissa (Ranskan '
@@ -232,6 +262,97 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       + 'tai kohdekartan kaupunki). Sama maastokohde voi olla usean maan valona (id ~2, ~3), kuten webissä maittain.',
     { kaupunki: 'kaupungit', kaupunkiAvain: 'kaupungit', kohdekartta: 'kohdekartat' }, rivit);
   return { kokoelma: k, haeKohde, luokittele: (t) => luokittele(t, kohdeIdt), ratkeamatta };
+}
+
+/*
+ * KARKAAVA NIMI (Päätoimittaja 10.10.2026, Karttasepän tarkistus v656 A2: "nimien ladonta siirtää 88
+ * karttavaloa yli 25 km, osin toiseen maahan" — Maltan kohteet Sisiliassa, Versailles'n nostot 110–130 km
+ * Pariisista). Natiivi piirtää merkin ja nimen piirtopisteeseen ankkuri → ladottu → oma lat/lon
+ * (NostoSaannot.Piirtopiste). Webin nippusarake ja lukitut ankkurit vievät ahtaan maan merkit kauas
+ * (web piirtää yhdysviivan, natiivi ei). Linjaus: "mieluummin pienempi tai piilotettu nimi kuin väärä
+ * paikka". Jos piirtopiste on yli KARKAAVA_KM:n päässä noston omasta pisteestä tai toisen maan sisällä
+ * (maarajat, parillisuussääntö), ankkuri ja ladottu nollataan (merkki omaan pisteeseensä) ja nimiö
+ * piilotetaan (nimio null; kortin nimi säilyy). Laajat luontokohteet (meri, joki, järvi, lahti, salmi)
+ * ohi: niiden nimi kuuluu kauas datapisteestä.
+ */
+export const KARKAAVA_KM = 25;
+const LAAJAT_LAJIT = new Set(['meri', 'joki', 'jarvi', 'lahti', 'salmi']);
+
+function etaisyysKm(a, b) {
+  const r = Math.PI / 180;
+  const h = Math.sin(((b.lat - a.lat) * r) / 2) ** 2
+    + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(((b.lon - a.lon) * r) / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+
+function maanSisalla(maa, p) {
+  if (!maa?.renkaat) return false;
+  const [w, s, e, n] = maa.bbox ?? [-Infinity, -Infinity, Infinity, Infinity];
+  if (p.lon < w || p.lon > e || p.lat < s || p.lat > n) return false;
+  let sisalla = false;
+  for (const rengas of maa.renkaat) {
+    for (let i = 0, j = rengas.length - 1; i < rengas.length; j = i, i += 1) {
+      const [xi, yi] = rengas[i]; const [xj, yj] = rengas[j];
+      if ((yi > p.lat) !== (yj > p.lat) && p.lon < ((xj - xi) * (p.lat - yi)) / (yj - yi) + xi) sisalla = !sisalla;
+    }
+  }
+  return sisalla;
+}
+
+/** Piirtopisteen syy rajata (null = kunnossa): 'matka' (> KARKAAVA_KM) tai 'maa' (toisen maan sisällä). */
+export function karkaavaPiirtopiste(valo, maarajat) {
+  if (LAAJAT_LAJIT.has(valo.laji) || !Number.isFinite(valo.lat)) return null;
+  const piste = valo.ankkuri ?? valo.ladottu;
+  if (!piste) return null;
+  if (etaisyysKm(valo, piste) > KARKAAVA_KM) return 'matka';
+  const oma = maarajat.get(valo.maa);
+  if (!oma || maanSisalla(oma, piste) || !maanSisalla(oma, valo)) return null;
+  for (const [iso, maa] of maarajat) if (iso !== valo.maa && maanSisalla(maa, piste)) return 'maa';
+  return null;
+}
+
+/** Rajaa karkaavat piirtopisteet (ks. KARKAAVA NIMI); palauttaa rajattujen määrän syittäin. */
+export function rajaaKarkaavatNimet(valot, maarajaAlkiot) {
+  const maarajat = new Map(maarajaAlkiot.map((m) => [m.id, m]));
+  const maara = { matka: 0, maa: 0 };
+  for (const v of valot) {
+    const syy = karkaavaPiirtopiste(v, maarajat);
+    if (!syy) continue;
+    maara[syy] += 1;
+    v.ankkuri = null; v.ladottu = null; v.nimio = null;
+  }
+  return maara;
+}
+
+/*
+ * KAKSOISNIMI (PT 10.10.2026, Karttasepän tarkistus v656 B2): sama nimiö kahdesti pääkartalla alle
+ * KAKSOISNIMI_KM:n päässä samassa maassa (kohde + täky-, maalehti- tai syvennysnosto, esim. Toruń, Newgrange).
+ * Nimi jää yhdelle: fokuskohde ennen nostoa, sitten pienempi taso (tärkeämpi), sitten rivijärjestys; muilta
+ * nimio = null (merkki ja kortti säilyvät). Etäisyys noston omista pisteistä: sama paikka, vaikka ladonta olisi jo
+ * erottanut merkit (natiivi näyttäisi saman nimen kahdesti vierekkäin).
+ */
+export const KAKSOISNIMI_KM = 2;
+
+/** Piilottaa toistuvat nimiöt (ks. KAKSOISNIMI); palauttaa piilotettujen määrän. */
+export function piilotaKaksoisnimet(valot) {
+  const ryhmat = new Map();
+  valot.forEach((v, i) => {
+    if (!v.paakartalla || !v.nimio) return;
+    const avain = `${v.maa}|${v.nimio}`;
+    if (!ryhmat.has(avain)) ryhmat.set(avain, []);
+    ryhmat.get(avain).push([v, i]);
+  });
+  const ensin = ([a, i], [b, j]) => ((a.lahde === 'fokuskohde' ? 0 : 1) - (b.lahde === 'fokuskohde' ? 0 : 1))
+    || ((a.taso ?? 2) - (b.taso ?? 2)) || (i - j);
+  let piilotettu = 0;
+  for (const ryhma of ryhmat.values()) {
+    if (ryhma.length < 2) continue;
+    const pidetyt = [];
+    for (const [v] of ryhma.sort(ensin)) {
+      if (pidetyt.some((p) => etaisyysKm(p, v) < KAKSOISNIMI_KM)) { v.nimio = null; piilotettu += 1; } else pidetyt.push(v);
+    }
+  }
+  return piilotettu;
 }
 
 /*
@@ -335,7 +456,7 @@ export function takynostoKokoelma(ns, R, taulukko, karttavalot) {
   for (const v of karttavalot.alkiot) {
     const oma = v.tunnus?.startsWith('nosto-') ? v.tunnus.slice(6) : null;
     v.takynosto = oma && idt.has(oma) ? oma : null;
-    v.liitetytNostot = liitetyt.get(`${v.maa}|${v.tunnus}`) ?? [];
+    v.liitetytNostot = liitetyt.get(`${ALKU_ISO.get(v.id) ?? v.maa}|${v.tunnus}`) ?? [];
   }
   karttavalot.viittaukset.takynosto = 'takynostot';
   karttavalot.viittaukset.liitetytNostot = 'takynostot';

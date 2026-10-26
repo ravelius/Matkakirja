@@ -12,7 +12,9 @@
         "Miksi tornia ei koskaan saatu valmiiksi?",
         "Millainen on Vidzemen ylänkö?"
       ],
-      "korostukset": ["Vidzeme|Vidzemen"],
+      "korostukset": [
+        "Vidzeme|Vidzemen"
+      ],
       "teksti": "Gaiziņkalns on 312 metriä merenpinnasta ja Latvian korkein kohta. Se on Vidzemen ylängöllä lyhyen matkan päässä Madonan kaupungista länteen. Naapurimaan Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi, ja kilpailu siitä johti tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin turvallisuussyistä ja purettiin joulukuussa 2012.",
       "lahde": "en-Wikipedia \"Gaiziņkalns\", johdanto-osa (tarkistettu 29.8.2026)."
     }
@@ -20,17 +22,32 @@
   "meret": [
     {
       "nimi": "Itämeri",
-      "lon": 21.0,
-      "lat": 57.0,
+      "lon": 21,
+      "lat": 57,
       "lahdeKoordinaatti": "ulappa Kuurinmaan rannikon edustalla; artikkelin oma keskipiste on 20 / 58",
       "nappi": "Maailman suurin murtovesiallas",
       "kysymykset": [
         "Miksi Itämeren vesi on murtovettä?",
         "Miksi Riianlahti on erillinen?"
       ],
-      "korostukset": ["murtovesi|murtovesiallas"],
+      "korostukset": [
+        "murtovesi|murtovesiallas"
+      ],
       "teksti": "Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.",
       "lahde": "en-Wikipedia \"Baltic Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Riianlahti",
+      "lon": 23.5,
+      "lat": 57.6,
+      "lahdeKoordinaatti": "lahden keskiosa Latvian Kuurinmaan ja Viron Ruhnun saaren välissä",
+      "nappi": "Itämeren sisäinen lahti",
+      "kysymykset": [
+        "Mikä Irbensalmi on?",
+        "Mikä joki tuo eniten vettä Riianlahteen?"
+      ],
+      "teksti": "Riianlahti on Itämeren lahti Latvian ja Viron välissä, ja sen läntistä reunaa rajaa Saarenmaa. Pinta-ala on noin 18 000 neliökilometriä, mutta keskisyvyys vain noin 26 metriä. Suurimpia lahteen laskevia jokia on Väinäjoki eli Daugava, joka päättyy mereen Riiassa. Ankarina talvina koko lahti voi jäätyä umpeen.",
+      "lahde": "en-Wikipedia \"Gulf of Riga\", johdanto-osa ja hydrologia; Store norske leksikon \"Rigabukta\"; fi-Wikipedia \"Riianlahti\" (tarkistettu 16.10.2026)."
     }
   ],
   "joet": [
@@ -44,7 +61,9 @@
         "Miksi joella on kolme eri nimeä?",
         "Missä Väinäjoen lähde on?"
       ],
-      "korostukset": ["Valdai|Valdain"],
+      "korostukset": [
+        "Valdai|Valdain"
+      ],
       "teksti": "Väinäjoki, jota kutsutaan myös Länsi-Dvinaksi ja latviaksi Daugavaksi, nousee Valdain kukkuloilta Venäjältä ja virtaa Valko-Venäjän ja Latvian halki Itämeren Riianlahteen. Pituutta sillä on 1 020 kilometriä, josta 352 kilometriä Latviassa ja 325 Venäjällä. Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.",
       "lahde": "en-Wikipedia \"Daugava\", johdanto-osa (tarkistettu 29.8.2026)."
     }

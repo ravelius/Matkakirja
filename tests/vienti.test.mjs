@@ -20,10 +20,11 @@
  * Packien ulkopuoliset nimetyt exportit (tools/vienti/lahteet.mjs)
  * tarkistetaan samoin kohdissa 1 ja 2.
  */
+import { gunzipSync } from 'node:zlib';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { JUURI, kokoaVienti, peitaSahkopostit } from '../tools/vienti/vie-sisalto.mjs';
@@ -180,6 +181,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
     maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
     aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
+    reitit1873: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/reitit1873.json.gz'))).toString('utf8')).reitit.length,
     merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
     'muutosloki-natiivi': JSON.parse(readFileSync(join(JUURI, 'tools/vienti/muutosloki-natiivi.json'), 'utf8')).rivit.length,
@@ -188,10 +190,13 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     aanitaulut: P.cities.length + 4 + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length + 2 + ns('viritysaanet.js').VIRITYSAANET.length + new Set([...ns('js/sound.js').AANITEHOSTEET, ...Object.keys(ns('js/sound.js').REAL_SAMPLES)]).size
       + ns('js/sound.js').AMBIENCE_TYPES.length + Object.keys(ns('js/sound.js').PULUN_TEHOSTEET).length
       + Object.keys(ns('js/siirtymamusiikki.js').RAIDAT).length + Object.keys(ns('js/musiikkivalitsin.js').TILARAIDAT).length
-      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length,
+      + Object.keys(ns('js/musiikkivalitsin.js').PAIKKARAIDAT).length + 1 + P.cities.length
+      // Skeema 1.50: musiikkiaiheet (matkan aiheet + saapumistunnukset maanosittain).
+      + Object.keys(ns('js/ui.js').MATKAN_AIHEET).length + Object.keys(ns('js/kaupunkimusiikki.js').SAAPUMISTUNNUKSET).length,
     kuvakysymykset: P.cities.filter((c) => !ns('js/sisaltotaulut.js').EI_VALOKUVAKYSYMYKSEEN.has(c.id)
       && (ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.uusi?.tiedosto || ns('js/sisaltotaulut.js').KAIKKI_VALOKUVAT[c.id]?.tiedosto)).length,
     lippumaat: Object.values(P.map.countryShapes).filter((m) => m.lippu && m.nimi).length,
+    paakaupungit: ns('paakaupungit.js').PAAKAUPUNKIPISTEET.length, // skeema 1.60
     pulmaaineisto: 7,
     maastonimet: ['vuoret', 'jarvet', 'joet'].reduce((a, l) => a + ns('maailmankartta-nimet.js').MAAILMANKARTAN_NIMET[l].length, 0),
     karttavalot: kokoelma('karttavalot').alkiot.length,
@@ -205,7 +210,7 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     karttamerkit: readdirSync(join(JUURI, 'assets/nostotyypit')).filter((f) => /^merkki-.+\.png$/.test(f)).length,
     livianpuhe: Object.keys(ns('js/livia-pilotti-cuet.js').LIVIAN_LUENTA_CUET).length,
     livianrepliikit: avaimia(ns('js/liviapuhe.js').LIVIAN_AANITETYT),
-    maakuntarajat: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json'), 'utf8')).alueet.length,
+    maakuntarajat: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/maakuntarajat.json.gz'))).toString('utf8')).alueet.length,
     luennat: 2 + Object.values(ns('fokusvirrat.js').FOKUSVIRRAT).filter((v) => v?.matkakirja?.aanite).length,
     saapuminen: P.cities.length,
     esilasketut: ns('historian-hetket.js').HISTORIAN_HETKET.length + avaimia(ns('elaintakyt.js').ELAINTAKYT)
@@ -242,6 +247,30 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     assert.equal(c.maa, P.map.cityCountry[c.id] ?? null, `${c.id}: maa`);
     if (c.maa !== null) assert.match(c.maa, /^[A-Z]{3}$/, `${c.id}: maa`);
   }
+});
+
+test('pääkaupunkipisteen lehti ja kohdekartta: kaupunki null, maa pisteestä (PT 11.10.2026)', () => {
+  /*
+   * Pääkaupunkipiste (js/packs/paakaupungit.js) ei ole laudan kaupunki, joten sen lehden ja kohdekartan
+   * kaupunki-viittaus on null (eheysvartija laskisi muun orvoksi) ja maa tulee pisteestä. Natiivi hakee
+   * lehden kokoelmat/kaupunkilehdet/<pisteen id> (Natiivi-UI 3447a1d2f).
+   */
+  const { PAAKAUPUNKIPISTEET } = eka.nimiavaruudet.get('js/packs/paakaupungit.js');
+  const lehdet = new Map(JSON.parse(tiedostot.get('kokoelmat/kaupunkilehdet.json')).alkiot.map((a) => [a.id, a]));
+  const kartat = new Map(JSON.parse(tiedostot.get('kokoelmat/kohdekartat.json')).alkiot.map((a) => [a.id, a]));
+  let lehtia = 0;
+  for (const p of PAAKAUPUNKIPISTEET) {
+    const lehti = lehdet.get(p.id);
+    if (!lehti) continue;
+    lehtia += 1;
+    assert.equal(lehti.kaupunki, null, `${p.id}: kaupunki`);
+    assert.equal(lehti.maa, p.maa, `${p.id}: maa`);
+    assert.equal(lehti.laji, 'lehti', `${p.id}: laji`);
+    assert.ok(lehti.kansi, `${p.id}: kansi`);
+    const kartta = kartat.get(p.id);
+    if (kartta) assert.equal(kartta.kaupunki, null, `${p.id}: kartan kaupunki`);
+  }
+  assert.ok(lehtia >= 14, `pääkaupunkipisteiden lehtiä ${lehtia}`);
 });
 
 test('mediaviitteet osoittavat vientiin ja ämpärilajeilla on ämpärin osoite', () => {
@@ -298,6 +327,14 @@ test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
     { versio: '1.0.0 (9)', paiva: '2026-09-24', teksti: 'b' },
   ]);
   assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
+  // Omistaja 30.9.2026: kiinteä versio 1.1 + ordinaali-build on uudempi kuin saman päivän 1.0.72 (aikaleima).
+  assert.deepEqual(tarkistaMuutosloki([{ ...hyva, versio: '1.1 (73)' }]), []);
+  const k = jarjesta([
+    { versio: '1.0.72 (202609301134)', paiva: '2026-09-30', teksti: 'a' },
+    { versio: '1.1 (73)', paiva: '2026-09-30', teksti: 'b' },
+    { versio: '1.1 (74)', paiva: '2026-09-30', teksti: 'c' },
+  ]);
+  assert.deepEqual(k.map((r) => r.versio), ['1.1 (74)', '1.1 (73)', '1.0.72 (202609301134)']);
 });
 
 test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () => {
@@ -311,4 +348,73 @@ test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () 
   const hae = async (url) => (url in ampari ? { tila: 200, koko: ampari[url] } : { tila: 404, koko: NaN });
   const v = await tarkistaAmpari('x/', [{ polku: 'a.json', koko: 10 }, { polku: 'bä.json', koko: 6 }, { polku: 'c.json' }], { hae });
   assert.deepEqual(v, ['bä.json: koko 5 ≠ 6', 'c.json: 404']);
+});
+
+test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löydös 161)', async () => {
+  const { tarkistaMuoto } = await import('../tools/vienti/vie-sisalto.mjs');
+  const { NIMETYT_LISATIEDOSTOT } = await import('../tools/vienti/lahteet.mjs');
+  tarkistaMuoto('iso3-lonlat', { GRC: [26.3, 41.1] }, 'koe');
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: [41.1] }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { GRC: { lon: 26, lat: 41 } }, 'koe'), /lon, lat/);
+  assert.throws(() => tarkistaMuoto('iso3-lonlat', { gr: [26, 41] }, 'koe'), /lon, lat/);
+  for (const { lahde, tiedosto } of NIMETYT_LISATIEDOSTOT) {
+    const rivi = manifest.lisatiedostot.find((t) => t.tiedosto === tiedosto);
+    if (!existsSync(join(JUURI, lahde))) { assert.equal(rivi, undefined, tiedosto); continue; }
+    assert.equal(rivi?.lahde, lahde, tiedosto);
+    assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
+  }
+});
+
+test('eheysvartija: laattavälit, yhteenveto ja työnkulku ilman puhetta', async () => {
+  const { laatat, yhteenveto } = await import('../tools/vienti/eheysvartija.mjs');
+  assert.deepEqual(laatat(10, [[1, 2, 2, 2], [5, 3, 5, 3]]), ['10/1/2', '10/2/2', '10/5/3']);
+  assert.deepEqual(laatat(9, [0, 0, 1, 0]), ['9/0/0', '9/1/0']);
+  assert.deepEqual(yhteenveto({ puuttuvat: [], orvot: [], lehdetPuuttuu: [], ylitykset: [] }), []);
+  const v = yhteenveto({ puuttuvat: [{ laji: 'pieni' }, { laji: 'pieni' }], orvot: [{}], lehdetPuuttuu: [], ylitykset: [{ iso: 'FRA' }] });
+  assert.equal(v.join('; '), '2 puuttuu (pieni 2); 1 orpoa viittausta; maakatto ylittyy: FRA');
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../tools/vienti/eheysvartija.mjs', import.meta.url), 'utf8');
+  // Fable 27.9.: vartija ei koskaan pyydä puhetta workerilta (maksullinen generointi).
+  assert.ok(!/pollo|workers\.dev|\/puhe\b|tehtava/.test(koodi.replace(/^ \*.*$/gm, '')), 'ei puheworkeria');
+  const tyonkulku = readFileSync(new URL('../.github/workflows/eheysvartija.yml', import.meta.url), 'utf8');
+  assert.match(tyonkulku, /workflows: \['Vie sisältöpaketti ämpäriin'\]/);
+  assert.match(tyonkulku, /cron:/);
+});
+
+test('offline: maasto samasta sarjasta kuin natiivin kohtaus, koot-tiedosto tiivis (Siirtoseppä 28.9.2026)', async () => {
+  const { OFFLINE_LAHTEET, lueKoot, kootTekstina } = await import('../tools/vienti/offline.mjs');
+  const koot = lueKoot();
+  // Natiivi lataa laatat kohtauksen maastosarjasta offline.jsonin väleillä: välit on laskettava samasta sarjasta.
+  assert.equal(koot.maasto.poltto, OFFLINE_LAHTEET.maasto.layer.split('/').at(-2));
+  assert.ok(OFFLINE_LAHTEET.maasto.url.includes(`/${koot.maasto.poltto}/`));
+  const teksti = kootTekstina(koot);
+  assert.deepEqual(JSON.parse(teksti), koot);
+  assert.equal(teksti, readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8'));
+  assert.ok(teksti.split('\n').length < 400, 'available yksi taso ja kerrokset yksi maa per rivi');
+});
+
+test('offline 1.56: kerma, reliefi ja yövalot sekä levykoko (Fable 28.9.2026, E2E-offline Tanska + Kroatia)', async () => {
+  const { OFFLINE_KERROKSET, kerrosOsoitteet, kermanValit, lueKoot, lohkoina, LOHKO } = await import('../tools/vienti/offline.mjs');
+  // Globaali: kerma _maailma z3–z5, reliefi kahdesta sarjasta z0–z5, yövalot z0–z5 (koko pallo).
+  const g = kerrosOsoitteet(null);
+  const koko = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => 4 ** (a + i)).reduce((s, n) => s + n, 0);
+  assert.equal(g.kerma.length, koko(3, 5));
+  assert.equal(g.reliefi.length, 2 * koko(0, 5));
+  assert.equal(g.yovalot.length, koko(0, 5));
+  assert.ok(g.kerma.every((u) => u.includes('/_maailma/') && u.endsWith('.webp')));
+  // Maa: oma kermasarja maat.*.kerma-väleillä, muut rasterin väleillä z6–z8 (yövalot z6).
+  const m = { rasteri: { 6: [34, 19, 34, 19], 7: [68, 38, 69, 39], 8: [136, 77, 137, 78], 9: [[272, 154, 272, 154]] },
+    kerma: kermanValit([5.2, 52, 15.6, 60.1]) };
+  const o = kerrosOsoitteet(m, 'DNK');
+  assert.equal(o.yovalot.length, 1);
+  assert.equal(o.reliefi.length, 2 * (1 + 4 + 4));
+  assert.ok(o.kerma.some((u) => u.includes('/DNK/3/')) && o.kerma.some((u) => u.includes('/_maailma/8/')));
+  assert.ok(!o.kerma.some((u) => u.includes('/9/')), 'kaupunkitaso z9 ei kerroksiin');
+  assert.deepEqual(Object.keys(m.kerma).map(Number), [3, 4, 5, 6, 7, 8]);
+  assert.equal(OFFLINE_KERROKSET.kerma.maittainTasot[1], 8);
+  // Koot: kaikille mitatuille maille kerrokset ja levy; lohkot 4 kt.
+  const k = lueKoot().kerrokset;
+  assert.ok(k && Object.keys(k.maat).length > 100 && k.globaali.levy > 0);
+  assert.ok(Object.values(k.maat).every((v) => v.levy >= v.kerma + v.reliefi + v.yovalot));
+  assert.equal(lohkoina(1), LOHKO); assert.equal(lohkoina(LOHKO + 1), 2 * LOHKO); assert.equal(lohkoina(0), 0);
 });

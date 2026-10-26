@@ -73,7 +73,7 @@ test('lehtipalstaKotelo käärii vain pitkän tekstin', async () => {
 });
 
 test('kaikki karttakortit latovat leipätekstin lehtipalstaKotelon kautta', () => {
-  for (const polku of ['js/fokuskohteet.js', 'js/elaintaky.js', 'js/historian-hetket.js',
+  for (const polku of ['js/elaintaky.js', 'js/historian-hetket.js',
     'js/syvennys.js', 'js/fokusnosto.js']) {
     const src = lue(polku);
     assert.match(src, /lehtipalstaKotelo\(teksti, [a-z]+\.teksti\)/,

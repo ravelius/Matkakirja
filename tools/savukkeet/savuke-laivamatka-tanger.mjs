@@ -47,6 +47,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { findMoves } from '../../js/rules.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -69,9 +70,7 @@ const KAIKKI_SELAIMET = [
   {
     nimi: 'chromium',
     latauskatto: 60000,
-    avaa: () => paketti.chromium.launch({
-      executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-    }),
+    avaa: () => avaaChromium({}),
   },
 ];
 const SELAIMET = process.env.SAVUKE_SELAIN

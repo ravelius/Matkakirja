@@ -1,0 +1,481 @@
+[
+ {
+  "kysymys": "Miksi Syyrian rannikkoa kutsutaan Levantiksi?",
+  "vastaus": "Nimi tulee ranskan sanasta levant, \"nouseva\", ja viittaa auringonnousuun eli itään. Taustalla on latinan levare, \"nostaa\". Eurooppalaisille Levantti oli Välimeren itäpuolen maat, joihin Syyrian rannikko kuuluu. Sama ajatus on sanassa orientti, joka tulee latinan sanasta \"nouseva\": itä on suunta, josta aurinko nousee. Sana on siis suuntanimi, ei varsinainen paikannimi.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Levant",
+    "title": "Levant - Wikipedia"
+   },
+   {
+    "url": "https://en.wiktionary.org/wiki/Levant",
+    "title": "Levant - Wiktionary (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Sana tulee ranskan sanasta levant, \"nouseva\", auringonnousu eli itä",
+    "lahde1": "Wikipedia, Levant: etymologia, ranskan levant, latinan levare",
+    "lahde2": "Wiktionary (hakutulos): englannin sana lainattu ranskasta levant, \"rising\", verbistä lever",
+    "huom": "Vuosilukua (englannissa 1497) ei käytetty, koska toista lähdettä ei vahvistettu."
+   },
+   {
+    "vaite": "Levantti tarkoittaa Välimeren itäosan maita, mukaan lukien Syyria",
+    "lahde1": "Wikipedia, Levant: nykykäytössä Syyria, Libanon, Israel, Jordania, Palestiina, Kypros",
+    "lahde2": "Hakutulos (Wikipedia-peilit): sama määritelmä",
+    "huom": "Rajaus vaihtelee suppeasta laajaan, siksi vastaus sanoo vain \"Välimeren itäpuolen maat\"."
+   },
+   {
+    "vaite": "Orientti tulee latinan sanasta oriens, \"nouseva\"",
+    "lahde1": "Wikipedia, Levant: rinnakkaistermi Orient",
+    "lahde2": "Hakutulos (Wiktionary/etymologiasivut): latinan oriens, orior \"nousta\"",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "syr/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Välimerta ympäröi maa lähes joka suunnalta?",
+  "vastaus": "Välimeri on jäänne muinaisesta Tethys-merestä, jonka Afrikan ja Euraasian mannerlaatat puristivat kasaan. Törmäys on kestänyt kymmeniä miljoonia vuosia, ja meri jäi lähes maan sulkemaksi. Valtamereen pääsee vain Gibraltarinsalmen kautta, joka on noin 14 kilometriä leveä. Mannerten liike muokkaa merta yhä. Salmi on siis meren ainoa luonnollinen ovi valtamerelle.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+    "title": "Mediterranean Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+    "title": "Strait of Gibraltar - Wikipedia"
+   },
+   {
+    "url": "https://Geosociety.org/gsatoday/archive/5/11/pdf/i1052-5173-5-11-sci.pdf",
+    "title": "GSA Today, Mediterranean geology (hakutulos)"
+   },
+   {
+    "url": "https://www.taylorfrancis.com/books/9780203390078/chapters/10.4324/9780203390078-3",
+    "title": "Taylor & Francis, Mediterranean chapter (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Välimeri on Tethys-meren jäänne, jonka Afrikan ja Euraasian törmäys sulki",
+    "lahde1": "GSA Today (hakutulos): viimeinen jäänne muinaisesta Tethys-merestä, kapeni nykyiseen lähes sisämeren asemaan mannerlaattojen törmätessä",
+    "lahde2": "Hakutulos (EGU 2022 -tiivistelmä, Springer): itäisen Välimeren kuoriaines on Neo-Tethysin sulkeutumisen jäännös",
+    "huom": "Ajankohdasta (\"noin 30 milj. vuotta\") lähteet vaihtelevat; vastaus sanoo vain \"kymmeniä miljoonia vuosia\"."
+   },
+   {
+    "vaite": "Maa ympäröi meren lähes kokonaan",
+    "lahde1": "Wikipedia, Mediterranean Sea: lähes täysin maan sulkema",
+    "lahde2": "Hakutulos (Taylor & Francis): salmi on ainoa luonnollinen yhteys Atlanttiin",
+    "huom": ""
+   },
+   {
+    "vaite": "Gibraltarinsalmi noin 14 km leveä",
+    "lahde1": "Wikipedia, Strait of Gibraltar: kapeimmillaan 14,2 km; Mediterranean Sea: 14 km",
+    "lahde2": "Taylor & Francis (hakutulos): 14 km",
+    "huom": "Joissakin lähteissä 13 km; käytetty \"noin 14\"."
+   }
+  ],
+  "kohteet": [
+   "tun/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Mitä reittiä Välimereltä pääsee valtamerelle?",
+  "vastaus": "Gibraltarinsalmen kautta Atlantille, Välimeren länsipäässä. Salmi erottaa Espanjan ja Marokon, ja kapeimmillaan se on noin 14 kilometriä leveä. Vuoteen 1869 asti se oli ainoa meriyhteys Välimereltä valtamerelle. Suezin kanava avasi sen jälkeen reitin Punaiselle merelle, mutta Gibraltar on edelleen ainoa luonnollinen yhteys. Euroopan ja Afrikan välinen matka on siellä lyhyt.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+    "title": "Strait of Gibraltar - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+    "title": "Mediterranean Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.taylorfrancis.com/books/9780203390078/chapters/10.4324/9780203390078-3",
+    "title": "Taylor & Francis, Mediterranean chapter (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Gibraltarinsalmi yhdistää Välimeren Atlanttiin, erottaa Espanjan ja Marokon, noin 14 km",
+    "lahde1": "Wikipedia, Strait of Gibraltar: 14,2 km kapeimmillaan, erottaa Euroopan ja Afrikan",
+    "lahde2": "Wikipedia, Mediterranean Sea (14 km, Iberian niemimaa ja Marokko) ja Taylor & Francis (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Suezin kanava avattiin 1869 ja yhdistää Punaiseen mereen",
+    "lahde1": "Wikipedia, Mediterranean Sea: kanava avattu 1869, 163 km",
+    "lahde2": "Hakutulos: ennen Suezin kanavaa vuonna 1869 Gibraltar oli ainoa merellinen kulkureitti",
+    "huom": "Punainenmeri johtaa Intian valtamerelle; vastaus ei väitä kanavan olevan valtamerireitti."
+   },
+   {
+    "vaite": "Gibraltar on ainoa luonnollinen yhteys",
+    "lahde1": "Hakutulos (Taylor & Francis): ainoa luonnollinen yhteys",
+    "lahde2": "Wikipedia, Mediterranean Sea: Gibraltar yhdistää Atlanttiin",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "tun/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Bosporinsalmi on niin tärkeä?",
+  "vastaus": "Se on Mustanmeren ainoa meriyhteys Marmaranmerelle ja sitä kautta Välimerelle. Salmi on noin 30 kilometriä pitkä ja kapeimmillaan vain noin 700 metriä leveä, ja Istanbul sijaitsee sen molemmilla rannoilla. Siitä kulkee yli 40 000 alusta vuodessa, joten pieni salmi on yksi maailman vilkkaimmista vesiväylistä. Kulkua säätelee vuoden 1936 Montreux’n sopimus.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bosporus",
+    "title": "Bosporus - Wikipedia"
+   },
+   {
+    "url": "https://www.worldatlas.com/articles/what-and-where-is-the-bosporus.html",
+    "title": "What and Where Is The Bosporus? - WorldAtlas"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Sea_of_Marmara",
+    "title": "Sea of Marmara - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Pituus noin 30 km, kapeimmillaan noin 700 m",
+    "lahde1": "Wikipedia, Bosporus: 30–31 km, kapeimmillaan 700 m (infolaatikossa 750 m)",
+    "lahde2": "WorldAtlas: 17 meripeninkulmaa, kapeimmillaan 0,38 meripeninkulmaa (noin 700 m)",
+    "huom": ""
+   },
+   {
+    "vaite": "Yli 40 000 alusta vuodessa",
+    "lahde1": "WorldAtlas: noin 48 000 alusta vuodessa",
+    "lahde2": "Hakutulos (Wikipedia: keskimäärin 48 000; matkaoppaat 40 000–56 000)",
+    "huom": "Luvut vaihtelevat 38 000–56 000; käytetty varovaista \"yli 40 000\"."
+   },
+   {
+    "vaite": "Yhdistää Mustanmeren Marmaranmereen, Istanbul molemmilla rannoilla, ainoa meriyhteys Mustaltamereltä Välimerelle",
+    "lahde1": "Wikipedia, Bosporus ja Sea of Marmara",
+    "lahde2": "WorldAtlas: ainoa merireitti Välimeren ja Mustanmeren välillä",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "tur/marmaranmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Dardanellit on?",
+  "vastaus": "Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 kilometriä pitkä ja 1,2–6 kilometriä leveä. Antiikissa sitä kutsuttiin Hellespontokseksi. Salmen rannoilla käytiin vuonna 1915 Gallipolin taistelut ensimmäisessä maailmansodassa. Salmen eteläisellä Aasian rannalla on Çanakkalen kaupunki. Bosporin kanssa se muodostaa Mustanmeren meritien Välimerelle.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Dardanelles",
+    "title": "Dardanelles - Wikipedia"
+   },
+   {
+    "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/dardanelles",
+    "title": "Dardanelles - Encyclopedia.com"
+   },
+   {
+    "url": "https://anzacportal.dva.gov.au/wars-and-missions/ww1/where-australians-served/gallipoli/dardanelles-strategy",
+    "title": "Dardanelles strategy and naval operations 1914 to 1915 - Anzac Portal (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Pituus noin 61 km, leveys 1,2–6 km",
+    "lahde1": "Wikipedia, Dardanelles: 61 km, 1,2–6 km",
+    "lahde2": "Encyclopedia.com: noin 61 km, 1,2–6 km",
+    "huom": ""
+   },
+   {
+    "vaite": "Yhdistää Egeanmeren ja Marmaranmeren; antiikin nimi Hellespontos",
+    "lahde1": "Wikipedia, Dardanelles",
+    "lahde2": "Encyclopedia.com",
+    "huom": ""
+   },
+   {
+    "vaite": "Gallipolin taistelut 1915",
+    "lahde1": "Wikipedia, Dardanelles: kampanja 1915, liittoutuneet vetäytyivät joulukuussa 1915",
+    "lahde2": "Encyclopedia.com: epäonnistunut liittoutuneiden hyökkäys ensimmäisessä maailmansodassa; Anzac Portal (hakutulos)",
+    "huom": "Joissakin lähteissä viimeiset joukot lähtivät tammikuussa 1916; vastaus mainitsee vain vuoden 1915 taistelut."
+   }
+  ],
+  "kohteet": [
+   "tur/marmaranmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Anatolian etelärannikkoa kutsutaan Turkoosiksi rannikoksi?",
+  "vastaus": "Nimi viittaa veden väriin: rannikon vesi näyttää kirkkaan turkoosin sinivihreältä. Turkoosi rannikko sijaitsee Turkin lounaisosassa, karkeasti Bodrumista Antalyaan. Sana turkoosi tulee ranskan ilmauksesta \"turkkilainen kivi\", koska jalokivi tuli Eurooppaan Turkin kautta. Nimi viittaa siis sekä veden väriin että maahan. Se on suosittu kansanomainen nimitys, jota käytetään myös englanniksi.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Turkish_Riviera",
+    "title": "Turkish Riviera - Wikipedia"
+   },
+   {
+    "url": "https://www.propertyturkey.com/en/about-turkey/turkish-turquoise-coast",
+    "title": "Turquoise Coast of Turkey - Property Turkey"
+   },
+   {
+    "url": "https://fethiyetimes.com/the-turquoise-coast-as-stunning-as-its-name-suggests/",
+    "title": "The Turquoise Coast - Fethiye Times (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Nimi tulee veden väristä",
+    "lahde1": "Property Turkey: nimi tulee veden väristä",
+    "lahde2": "Fethiye Times (hakutulos): nimi tulee veden väristä",
+    "huom": "Wikipedia (Turkish Riviera) kertoo vain, että rannikkoa kutsutaan Turkoosiksi rannikoksi, nimen alkuperää ei selitetä. Wikipedia kuvaa nimeä suosituksi (popular) nimitykseksi."
+   },
+   {
+    "vaite": "Sijainti Bodrumista Antalyaan, Turkin lounaisosassa",
+    "lahde1": "Property Turkey: Bodrumista Teken niemimaan ympäri Antalyaan",
+    "lahde2": "Wikipedia, Turkish Riviera: lounaisessa Turkissa, Antalya, Muğla ja muita provinsseja",
+    "huom": "Rajaus vaihtelee lähteittäin (Antalya–Marmaris, Bodrum–Antalya); käytetty \"karkeasti\". Pituutta ei mainittu."
+   },
+   {
+    "vaite": "Turkoosi tulee ranskan \"turkkilaisesta kivestä\"",
+    "lahde1": "Property Turkey: turkoosi ranskan \"Turkish stone\"",
+    "lahde2": "Fethiye Times (hakutulos): ranskan pierre turquoise, \"turkkilainen kivi\"",
+    "huom": "Kivi tuli Eurooppaan kaupan kautta Turkista; yksityiskohdat (Marco Polo vai basaarit) vaihtelevat, vastaus ei niitä mainitse."
+   }
+  ],
+  "kohteet": [
+   "tur/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Mustanmeren syvyys on hapeton?",
+  "vastaus": "Syvä vesi on hapetonta, koska meren kerrokset eivät sekoitu. Joet tuovat pinnalle kevyttä makeaa vettä, ja Bosporin kautta pohjalle valuu raskaampaa, suolaisempaa Välimeren vettä. Noin 100–200 metrin alapuolella happi on loppunut, ja lähes 90 prosenttia syvästä vedestä on hapetonta. Pohjalla on hapen sijaan rikkivetyä. Siksi vain pintakerroksessa on happea.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Black_Sea",
+    "title": "Black Sea - Wikipedia"
+   },
+   {
+    "url": "https://nap.nationalacademies.org/read/4769/chapter/180",
+    "title": "National Academies, Black Sea chapter (hakutulos)"
+   },
+   {
+    "url": "https://www.reflexions.uliege.be/cms/c_423483/en/the-black-sea-has-lost-more-than-a-third-of-its-habitable-volume",
+    "title": "The Black Sea has lost more than a third of its habitable volume - Université de Liège (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Syvä vesi on hapetonta, lähes 90 % syvän veden tilavuudesta",
+    "lahde1": "Wikipedia, Black Sea: yli 90 % syvemmästä vesimäärästä anoksista",
+    "lahde2": "National Academies (hakutulos): pysyvä hapettomuus lähes 90 %:ssa tilavuudesta",
+    "huom": "Lähteet antavat 80–90 %; käytetty muotoa \"lähes 90 prosenttia\"."
+   },
+   {
+    "vaite": "Raja noin 100–200 m syvyydessä",
+    "lahde1": "Wikipedia, Black Sea: pyknokliini noin 100–200 m",
+    "lahde2": "Hakutulokset (Shtereva-esitys, kemiallisen kerrostuman tutkimukset): happikerros noin 100–200 m",
+    "huom": "Raja vaihtelee paikan ja vuoden mukaan; siksi väli."
+   },
+   {
+    "vaite": "Syy: makea pintavesi ja Bosporin kautta tuleva suolainen syvävesi estävät sekoittumisen",
+    "lahde1": "Wikipedia, Black Sea: suolakiila-estuaari, kerrostuneisuus",
+    "lahde2": "National Academies (hakutulos): halokliini estää hapen kulun syvään veteen",
+    "huom": "Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m."
+   }
+  ],
+  "kohteet": [
+   "rou/mustameri"
+  ]
+ },
+ {
+  "kysymys": "Mistä meri sai nimensä?",
+  "vastaus": "Varmaa vastausta ei ole. Antiikin kreikkalaiset kutsuivat merta ensin nimellä, joka tarkoitti vieraanvaraisuudetonta, ja sitten nimellä \"vieraanvarainen\". Alkuperäinen sana johdetaan usein iranilaisesta sanasta \"tumma\". Toisen teorian mukaan musta tarkoitti pohjoista. Suosittu selitys veden tummuudesta on mahdollinen, mutta kiistelty. Kielitieteilijät eivät ole yhtä mieltä, joten nimen alkuperää ei voi pitää ratkaistuna.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Black_Sea",
+    "title": "Black Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.etymonline.com/word/Euxine",
+    "title": "Euxine - Etymonline (hakutulos)"
+   },
+   {
+    "url": "https://halshs.archives-ouvertes.fr/halshs-02435545",
+    "title": "Anca Dan: Du pont à la mer majeure (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kreikan Axeinos (\"vieraanvaraisuudeton\") muuttui nimeksi Euxeinos (\"vieraanvarainen\")",
+    "lahde1": "Wikipedia, Black Sea: Póntos Áxeinos, eufemismi Eúxeinos Póntos",
+    "lahde2": "Etymonline (hakutulos): Euxine kreikan \"vieraanvarainen\", eufemismi sanalle Axenos",
+    "huom": ""
+   },
+   {
+    "vaite": "Axeinos johdetaan usein iranilaisesta \"tumma\"-sanasta",
+    "lahde1": "Wikipedia, Black Sea: yleensä johdettu iranilaisesta sanasta \"tummanvärinen\"",
+    "lahde2": "Etymonline (hakutulos): vanhapersian akhshaena \"tumma\"",
+    "huom": "Teoria, ei varmaa tietoa."
+   },
+   {
+    "vaite": "Mustan värin yhteys pohjoiseen",
+    "lahde1": "Wikipedia, Black Sea: tulkinta turkkilaisesta väri-ilmansuunta-järjestelmästä, kiistetty",
+    "lahde2": "Anca Dan (hakutulos): musta = pohjoinen akhemeniditason väri-ilmansuuntajärjestelmässä",
+    "huom": "Nimen alkuperä on kiistanalainen; vastaus kertoo sen eikä ota kantaa."
+   }
+  ],
+  "kohteet": [
+   "rou/mustameri",
+   "ukr/mustameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Mustameren syvyys on hapeton?",
+  "vastaus": "Syvä vesi on hapetonta, koska meren kerrokset eivät sekoitu. Joet tuovat pinnalle kevyttä makeaa vettä, ja Bosporin kautta pohjalle valuu raskaampaa, suolaisempaa Välimeren vettä. Noin 100–200 metrin alapuolella happi on loppunut, ja lähes 90 prosenttia syvästä vedestä on hapetonta. Pohjalla on hapen sijaan rikkivetyä. Siksi vain pintakerroksessa on happea.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Black_Sea",
+    "title": "Black Sea - Wikipedia"
+   },
+   {
+    "url": "https://nap.nationalacademies.org/read/4769/chapter/180",
+    "title": "National Academies, Black Sea chapter (hakutulos)"
+   },
+   {
+    "url": "https://www.reflexions.uliege.be/cms/c_423483/en/the-black-sea-has-lost-more-than-a-third-of-its-habitable-volume",
+    "title": "The Black Sea has lost more than a third of its habitable volume - Université de Liège (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Syvä vesi on hapetonta, lähes 90 % syvän veden tilavuudesta",
+    "lahde1": "Wikipedia, Black Sea: yli 90 % syvemmästä vesimäärästä anoksista",
+    "lahde2": "National Academies (hakutulos): pysyvä hapettomuus lähes 90 %:ssa tilavuudesta",
+    "huom": "Lähteet antavat 80–90 %; käytetty muotoa \"lähes 90 prosenttia\"."
+   },
+   {
+    "vaite": "Raja noin 100–200 m syvyydessä",
+    "lahde1": "Wikipedia, Black Sea: pyknokliini noin 100–200 m",
+    "lahde2": "Hakutulokset (Shtereva-esitys, kemiallisen kerrostuman tutkimukset): happikerros noin 100–200 m",
+    "huom": "Raja vaihtelee paikan ja vuoden mukaan; siksi väli."
+   },
+   {
+    "vaite": "Syy: makea pintavesi ja Bosporin kautta tuleva suolainen syvävesi estävät sekoittumisen",
+    "lahde1": "Wikipedia, Black Sea: suolakiila-estuaari, kerrostuneisuus",
+    "lahde2": "National Academies (hakutulos): halokliini estää hapen kulun syvään veteen",
+    "huom": "Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m."
+   },
+   {
+    "vaite": "Kysymyksen kirjoitusasu",
+    "lahde1": "",
+    "lahde2": "",
+    "huom": "Kysymys on kirjoitettu \"Mustameren\" (kirjoitusvirhe, oikein Mustanmeren); vastaus sama kuin Mustanmeren hapettomuuskysymykseen."
+   }
+  ],
+  "kohteet": [
+   "ukr/mustameri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Kertšinsalmi on?",
+  "vastaus": "Kertšinsalmi on kapea salmi, joka yhdistää Mustanmeren ja Asovanmeren. Se on kapeimmillaan noin kolme kilometriä leveä ja korkeintaan noin 18 metriä syvä. Kapea ja matala salmi rajoittaa veden vaihtumista, ja Asovanmeren vesi on vähäsuolaista: noin kolmasosa valtameren suolaisuudesta. Se on myös Asovanmeren ainoa yhteys Mustaanmereen.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kerch_Strait",
+    "title": "Kerch Strait - Wikipedia"
+   },
+   {
+    "url": "https://os.copernicus.org/articles/16/15/2020/",
+    "title": "Ocean Science 16, 2020 (Copernicus), Sea of Azov and Kerch Strait"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Sea_of_Azov",
+    "title": "Sea of Azov - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Salmi yhdistää Mustanmeren ja Asovanmeren",
+    "lahde1": "Wikipedia, Kerch Strait",
+    "lahde2": "Ocean Science (Copernicus)",
+    "huom": ""
+   },
+   {
+    "vaite": "Kapeimmillaan noin 3 km",
+    "lahde1": "Wikipedia, Kerch Strait: 3,1 km",
+    "lahde2": "Ocean Science (Copernicus): keskiosa noin 3 km, pohjoisosa 4–5 km",
+    "huom": "Hakutulos antoi myös \"noin 4 km\"; käytetty \"noin kolme\"."
+   },
+   {
+    "vaite": "Syvyys korkeintaan noin 18 m",
+    "lahde1": "Wikipedia, Kerch Strait: enintään 18 m",
+    "lahde2": "Hakutulos (Ocean Science -esijulkaisu): keskiosa 3–5 m, päät 10–20 m",
+    "huom": "Salmen pituudesta lähteet ovat ristiriidassa (35 vs 45 km), joten pituutta ei mainittu."
+   },
+   {
+    "vaite": "Asovanmeren suolaisuus noin kolmannes valtamerestä, salmen rajoittama vaihto",
+    "lahde1": "Wikipedia, Sea of Azov: suolaisuus 10–12, noin kolmannes valtamerestä",
+    "lahde2": "Hakutulos (Ocean Science, Copernicus): rajoitettu vaihto salmen kautta pitää suolaisuuden matalana",
+    "huom": "Joet (Don, Kuban) tuovat myös makeaa vettä; vastaus ei väitä salmea ainoaksi syyksi."
+   }
+  ],
+  "kohteet": [
+   "ukr/asovanmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Asovanmeri on niin matala?",
+  "vastaus": "Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin 14 metriä syvä ja keskimäärin noin 7 metriä, joten sitä pidetään maailman matalimpana merenä. Don ja Kuban tuovat siihen suurimman osan jokivedestä sekä hiekkaa ja savea. Syvyys vähenee edelleen. Pohja on tasainen, ja syvyys kasvaa keskustaa kohti vain hitaasti.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Sea_of_Azov",
+    "title": "Sea of Azov - Wikipedia"
+   },
+   {
+    "url": "https://os.copernicus.org/articles/16/15/2020/",
+    "title": "Ocean Science 16, 2020 (Copernicus), Sea of Azov"
+   },
+   {
+    "url": "https://www.encyclopediaofukraine.com/pages/A/Z/AzovSeaof.htm",
+    "title": "Azov, Sea of - Encyclopedia of Ukraine"
+   },
+   {
+    "url": "https://www.britannica.com/place/Sea-of-Azov",
+    "title": "Sea of Azov - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Suurin syvyys noin 14 m, keskisyvyys noin 7 m",
+    "lahde1": "Wikipedia, Sea of Azov: keskimäärin 7 m, enintään 14 m",
+    "lahde2": "Ocean Science (Copernicus): keskimäärin 7 m, enintään 14,4 m; Encyclopedia of Ukraine: keskimäärin 8 m, enintään 14,5 m",
+    "huom": "Keskisyvyys 7–8 m lähteestä riippuen."
+   },
+   {
+    "vaite": "Don ja Kuban tuovat yli 90 % vedestä",
+    "lahde1": "Wikipedia, Sea of Azov: yli 90 % sisäänvirtauksesta",
+    "lahde2": "Ocean Science (Copernicus): Don noin 65 % ja Kuban noin 30 % makeasta vesivirtaamasta",
+    "huom": ""
+   },
+   {
+    "vaite": "Jokien sedimentti madaltaa merta",
+    "lahde1": "Wikipedia, Sea of Azov: joet tuovat hiekkaa, savea ja kuoria, syvyys vähenee",
+    "lahde2": "Hakutulos (Britannica-tiivistelmä): savi tekee Taganrogin lahden enintään metrin syväksi",
+    "huom": "Syy-yhteys perustuu pääosin Wikipediaan; Encyclopedia of Ukraine ei selitä syytä. Maailman matalimpana merenä pitäminen perustuu Wikipediaan ja Britannicaan (hakutulos)."
+   }
+  ],
+  "kohteet": [
+   "ukr/asovanmeri"
+  ]
+ }
+]

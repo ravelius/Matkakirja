@@ -152,6 +152,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'murchison',
     nimi: 'Murchisonin putoukset',
+    nimio: 'Murchison',
     tyyppi: 'joki',
     kysymykset: [
       'Kuinka kapeasta raosta Niili puristuu?',
@@ -179,6 +180,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'queenelizabeth',
     nimi: 'Queen Elizabethin puisto',
+    nimio: 'Queen Elizabeth',
     tyyppi: 'elain',
     kysymykset: [
       'Mistä puisto sai nimensä?',
@@ -207,6 +209,7 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'kibale',
     nimi: 'Kibalen kansallispuisto',
+    nimio: 'Kibale',
     tyyppi: 'elain',
     kysymykset: [
       'Montako kädellislajia Kibalessa elää?',
@@ -234,10 +237,11 @@ export const MAASTOKOHTEET_UGA = [
   {
     id: 'nyero',
     nimi: 'Nyeron kalliomaalaukset',
+    nimio: 'Nyero',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Millaisia kuvioita Nyerossa on maalattu?',
-      'Mikä on "tasku"?',
+      'Mikä on ”tasku”?',
     ],
     korostukset: ['samankeskinen|samankeskiset'],
     nappi: 'Kuusi kalliosuojaa ja punaiset kehät',
@@ -248,13 +252,13 @@ export const MAASTOKOHTEET_UGA = [
     },
     teksti: 'Itä-Ugandassa Kumin piirissä on kuusi kalliosuojaa, joiden seiniin on maalattu ennen '
       + 'vuotta 1250. Kuviot ovat lähes kokonaan geometrisia — hallitsevana samankeskiset kehät, '
-      + 'lisäksi "akasianpalko"-muotoja, joita on kutsuttu myös kanooteiksi. Maalaukset kuuluvat '
+      + 'lisäksi ”akasianpalko”-muotoja, joita on kutsuttu myös kanooteiksi. Maalaukset kuuluvat '
       + 'yhtenäiseen punaisen pigmentin perinteeseen, joka leviää itäisen, keskisen ja osin '
       + 'eteläisen Afrikan yli myöhäisen kivikauden metsästäjä-keräilijöiden alueella, ja ne '
       + 'liitetään yleensä twa-metsästäjiin. Päägroto Nyero 2:ssa on kymmenmetrinen pystysuora '
       + 'takaseinä ja sen suojana kallionlohkare, jonka painoksi arvioidaan ainakin 20 000 '
       + 'tonnia; sieltä on tunnistettu yli neljäkymmentä eri kuvaa. Lohkareiden välistä pääsee '
-      + 'pieneen pimeään suojaan, jossa on kolo nimeltä "tasku": sinne jätettiin lahjoja '
+      + 'pieneen pimeään suojaan, jossa on kolo nimeltä ”tasku”: sinne jätettiin lahjoja '
       + 'jumalille, ja tapa jatkuu yhä — nykyään koloon pannaan rahaa.',
     lahde: 'en-Wikipedia "Nyero rock paintings", johdanto-osa sekä osiot "History" ja '
       + '"Description" (tarkistettu 6.9.2026).',
@@ -307,8 +311,8 @@ export const MAASTOKOHTEET_UGA = [
       + 'linnake. Baker oli tuolloin Egyptin khedivin palveluksessa Ekvatoriaaliprovinssin '
       + 'kuvernöörinä. Kun hän lähti, linnaketta käyttivät hänen seuraajansa samassa virassa: '
       + 'Charles Gordon ja Emin Pasha. Keskellä linnaketta seisoo yhä viljavaraston seinä, ja '
-      + 'siihen kiinnitetyssä laatassa lukee "Fatiko 1872–88, perustanut Sir Samuel Baker, '
-      + 'asuttaneet Emin ja Gordon". Rauniot ovat Ajulun kylässä Patikon alapiirissä Gulun '
+      + 'siihen kiinnitetyssä laatassa lukee ”Fatiko 1872–88, perustanut Sir Samuel Baker, '
+      + 'asuttaneet Emin ja Gordon”. Rauniot ovat Ajulun kylässä Patikon alapiirissä Gulun '
       + 'piirikunnassa, ja niihin pääsee tutustumaan pientä maksua vastaan; Ugandan hallitus on '
       + 'suunnitellut niiden nostamista viralliseksi matkailukohteeksi.',
     lahde: 'en-Wikipedia "Fort Patiko", koko artikkeli (tarkistettu 6.9.2026).',
@@ -330,7 +334,7 @@ export const MAASTOKOHTEET_UGA = [
     },
     teksti: 'Jinja on Victorianjärven pohjoisrannalla Valkoisen Niilin lähteen tuntumassa. Nimi '
       + 'tulee sanasta ejjinja, kivi: sekä länsipuolen bagandat että itäpuolen basogat kutsuivat '
-      + 'paikkaa "kiviksi" niiden litteiden kallioiden mukaan, jotka olivat joen suulla. '
+      + 'paikkaa ”kiviksi” niiden litteiden kallioiden mukaan, jotka olivat joen suulla. '
       + 'John Hanning Speke oli ensimmäinen eurooppalainen, joka näki Niilin lähteen, ja hän '
       + 'kuvasi Ripon-putoukset noin neljän metrin korkuisiksi ja satojen metrien levyisiksi ja '
       + 'kirjoitti tuhansista kaloista, jotka hyppäsivät putouksia vastaan kalastajien '

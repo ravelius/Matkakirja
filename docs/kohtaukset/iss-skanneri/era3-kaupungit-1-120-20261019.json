@@ -1,0 +1,2587 @@
+{
+ "_meta": {
+  "kuvaus": "ISS-skanneri B1 erä 3: 120 suurinta kaupunkia (väkiluvun mukaan, karkea arvio) uudessa rakenteessa. Lähteet vain krediittitiedostoon. Faktat tarkistettu riippumattomilla Sonnet-tarkistajilla verkosta 19.10.2026.",
+  "rajat": "aloitus ≤ 45, luonne ≤ 110, nimike ≤ 18, rivin arvo ≤ 24 merkkiä"
+ },
+ "kohteet": [
+  {
+   "tunnus": "k-chongqing",
+   "nimi": "Chongqing",
+   "aloitus": "Lounais-Kiinan Jangtsen suurkaupunki",
+   "luonne": "Vuoristoon rakennettu kaupunki, jossa Jialing-joki yhtyy Jangtseen; tunnettu tulisesta hot pot -ruoastaan.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "32,1 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 82 400 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Chongqing",
+    "https://www.citypopulation.de/en/china/chongqing/admin/"
+   ]
+  },
+  {
+   "tunnus": "k-peking",
+   "nimi": "Peking",
+   "aloitus": "Kiinan pääkaupunki",
+   "luonne": "Keisarillisten palatsien ja temppelien kaupunki: Kielletty kaupunki, Taivaan temppeli ja Kesäpalatsi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "21,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 16 400 km²"
+    ],
+    [
+     "Olympialaiset",
+     "kesä 2008, talvi 2022"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Beijing"
+   ]
+  },
+  {
+   "tunnus": "k-chengdu",
+   "nimi": "Chengdu",
+   "aloitus": "Lounais-Kiinan Sichuanin suurkaupunki",
+   "luonne": "Jättiläispandojen kaupunki ja tulisen Sichuan-keittiön keskus; UNESCO nimesi sen gastronomian kaupungiksi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "20,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "yli 14 300 km²"
+    ],
+    [
+     "Perustettu",
+     "300-luvulla eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Chengdu"
+   ]
+  },
+  {
+   "tunnus": "k-delhi",
+   "nimi": "Delhi",
+   "aloitus": "Intian pääkaupunkialue",
+   "luonne": "Vanha ja Uusi Delhi rinnakkain: Punainen linna, Qutb Minar, Humayunin hauta ja Intian portti.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "16,8 milj. (2011)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "1 484 km²"
+    ],
+    [
+     "Mogulipääkaupunki",
+     "siirrettiin 1648"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Delhi",
+    "https://www.britannica.com/biography/Shah-Jahan"
+   ]
+  },
+  {
+   "tunnus": "k-karachi",
+   "nimi": "Karachi",
+   "aloitus": "Pakistanin suurin kaupunki",
+   "luonne": "Arabianmeren rannalla linnoitetusta kylästä (Kolachi) kasvanut satamakaupunki, maan entinen pääkaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "20,4 milj. (2023)"
+    ],
+    [
+     "Perustettu",
+     "1729"
+    ],
+    [
+     "Pääkaupunki",
+     "1947–1959"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Karachi"
+   ]
+  },
+  {
+   "tunnus": "k-kanton",
+   "nimi": "Kanton",
+   "aloitus": "Etelä-Kiinan Guangdongin pääkaupunki",
+   "luonne": "Meri-Silkkitien päätepiste; kantonilainen keittiö ja kahdesti vuodessa pidettävät Kantonin messut.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "18,7 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "7 434 km²"
+    ],
+    [
+     "Ikä",
+     "yli 2 200 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Guangzhou"
+   ]
+  },
+  {
+   "tunnus": "k-tokio",
+   "nimi": "Tokio",
+   "aloitus": "Japanin pääkaupunki",
+   "luonne": "Entinen Edo, shogunien kaupunki vuodesta 1603; Tokyo Skytree on maailman korkein torni.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "14,3 milj. (2025)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "2 194 km²"
+    ],
+    [
+     "Edon perustus",
+     "1457"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tokyo"
+   ]
+  },
+  {
+   "tunnus": "k-tianjin",
+   "nimi": "Tianjin",
+   "aloitus": "Pohjois-Kiinan suuri satamakaupunki",
+   "luonne": "Haihe-joen kaupunki, jossa on eurooppalaistyylisiä taloja entisiltä ulkomaisilta vuokra-alueilta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "13,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 11 900 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tianjin"
+   ]
+  },
+  {
+   "tunnus": "k-moskova",
+   "nimi": "Moskova",
+   "aloitus": "Venäjän pääkaupunki ja suurin kaupunki",
+   "luonne": "Kremlin, Punaisen torin ja Vasili Autuaan katedraalin kaupunki Moskova-joen varrella.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "13,0 milj. (2021)"
+    ],
+    [
+     "Ensimaininta",
+     "1147"
+    ],
+    [
+     "Pinta-ala",
+     "yli 2 500 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Moscow"
+   ]
+  },
+  {
+   "tunnus": "k-wuhan",
+   "nimi": "Wuhan",
+   "aloitus": "Keski-Kiinan Jangtse-joen suurkaupunki",
+   "luonne": "Jangtsen ja Han-joen yhtymäkohdassa kolmesta kaupungista yhdistynyt; vuoden 1911 kapina alkoi täällä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "13,7 milj. (2022)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 8 500 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Wuhan"
+   ]
+  },
+  {
+   "tunnus": "k-bengaluru",
+   "nimi": "Bengaluru",
+   "aloitus": "Etelä-Intian suurkaupunki ylängöllä",
+   "luonne": "Puutarhakaupunkina tunnettu IT-keskus, jota sanotaan Intian Piilaaksoksi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "8,4 milj. (2011)"
+    ],
+    [
+     "Korkeus",
+     "n. 920 m"
+    ],
+    [
+     "Perustettu",
+     "1537"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bengaluru"
+   ]
+  },
+  {
+   "tunnus": "k-lahore",
+   "nimi": "Lahore",
+   "aloitus": "Pakistanin toiseksi suurin kaupunki",
+   "luonne": "Mogulien entinen pääkaupunki, jonka vanhassa kaupungissa kohoavat Badshahin moskeija ja Lahoren linna.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "13,0 milj. (2023)"
+    ],
+    [
+     "UNESCO-perintö",
+     "linna ja Shalimar (1981)"
+    ],
+    [
+     "Mogulipääkaupunki",
+     "1586–1598"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lahore",
+    "https://whc.unesco.org/en/list/171/"
+   ]
+  },
+  {
+   "tunnus": "k-suzhou-kiina",
+   "nimi": "Suzhou",
+   "aloitus": "Itä-Kiinan puutarhojen kaupunki",
+   "luonne": "Silkistä, Kunqu-oopperasta ja klassisista puutarhoista tunnettu kulttuurikaupunki Suuren kanavan varrella.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "12,7 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "8 657 km²"
+    ],
+    [
+     "Perustettu",
+     "514 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Suzhou"
+   ]
+  },
+  {
+   "tunnus": "k-zhengzhou",
+   "nimi": "Zhengzhou",
+   "aloitus": "Keski-Kiinan Henanin pääkaupunki",
+   "luonne": "Shang-dynastian muinainen pääkaupunki ja nykyään yksi Kiinan tärkeimmistä rautatiesolmuista.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "12,6 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "7 567 km²"
+    ],
+    [
+     "Shang-kaupunki",
+     "1500-luvulta eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zhengzhou"
+   ]
+  },
+  {
+   "tunnus": "k-mumbai",
+   "nimi": "Mumbai",
+   "aloitus": "Intian rahoituspääkaupunki",
+   "luonne": "Seitsemän saaren muodostama satamakaupunki ja Bollywood-elokuvateollisuuden keskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "12,4 milj. (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "603 km²"
+    ],
+    [
+     "Entinen nimi",
+     "Bombay (1995 asti)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mumbai"
+   ]
+  },
+  {
+   "tunnus": "k-xi-an",
+   "nimi": "Xi’an",
+   "aloitus": "Kiinan muinaisen Chang’anin kaupunki",
+   "luonne": "Terrakottasotilaiden kotiseutu: ensimmäisen keisarin hautakompleksi ja Ming-ajan kaupunginmuuri.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "13,0 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "yli 10 000 km²"
+    ],
+    [
+     "Kaupunginmuuri",
+     "rakennettu 1370–1378"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Xi'an"
+   ]
+  },
+  {
+   "tunnus": "k-sao-paulo",
+   "nimi": "São Paulo",
+   "aloitus": "Brasilian suurin kaupunki",
+   "luonne": "Amerikkojen väkirikkain kaupunki sekä Brasilian talouden, kulttuurin ja ruokakulttuurin keskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "11,9 milj. (2025)"
+    ],
+    [
+     "Perustettu",
+     "1554 (jesuiitat)"
+    ],
+    [
+     "Pinta-ala",
+     "1 521 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 760 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/São_Paulo"
+   ]
+  },
+  {
+   "tunnus": "k-hangzhou",
+   "nimi": "Hangzhou",
+   "aloitus": "Itä-Kiinan Zhejiangin pääkaupunki",
+   "luonne": "Länsijärven kaupunki, Etelä-Song-dynastian entinen pääkaupunki ja Alibaban kotipaikka.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "11,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "yli 16 800 km²"
+    ],
+    [
+     "UNESCO-kohteita",
+     "3"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hangzhou"
+   ]
+  },
+  {
+   "tunnus": "k-shijiazhuang",
+   "nimi": "Shijiazhuang",
+   "aloitus": "Pohjois-Kiinan Hebein pääkaupunki",
+   "luonne": "Nimi ’Shin suvun kylä’ yleistyi rautatieaseman myötä; teollinen kaupunki kasvoi nopeasti vuoden 1949 jälkeen.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "11,2 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "yli 14 000 km²"
+    ],
+    [
+     "Kaupungiksi",
+     "1925"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Shijiazhuang"
+   ]
+  },
+  {
+   "tunnus": "k-linyi",
+   "nimi": "Linyi",
+   "aloitus": "Shandongin eteläosan suuri kaupunki",
+   "luonne": "Nimi tarkoittaa ’Yi-joen lähellä’; Shandongin laajin ja väkirikkain kaupunki Yimeng-vuorten kupeessa.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "11,0 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 17 200 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Linyi"
+   ]
+  },
+  {
+   "tunnus": "k-jakarta",
+   "nimi": "Jakarta",
+   "aloitus": "Indonesian pääkaupunki Jaavan saarella",
+   "luonne": "Entinen Batavia; Indonesia valmistelee pääkaupungin siirtoa Nusantaraan Borneolle.",
+   "rivit": [
+    [
+     "Asukasluku (alue)",
+     "10,6 milj. (2020)"
+    ],
+    [
+     "Perustettu",
+     "1527 (Jayakarta)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 660 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jakarta"
+   ]
+  },
+  {
+   "tunnus": "k-kairo",
+   "nimi": "Kairo",
+   "aloitus": "Egyptin pääkaupunki Niilin rannalla",
+   "luonne": "’Tuhannen minareetin kaupunki’; lähellä kohoavat Gizan pyramidit, kaupungissa keskiaikainen Citadelli.",
+   "rivit": [
+    [
+     "Asukasluku (alue)",
+     "9,5 milj. (2017)"
+    ],
+    [
+     "Perustettu",
+     "969"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cairo",
+    "https://www.citypopulation.de/en/egypt/cities/"
+   ]
+  },
+  {
+   "tunnus": "k-bangkok",
+   "nimi": "Bangkok",
+   "aloitus": "Thaimaan pääkaupunki",
+   "luonne": "Chao Phraya -joen suiston kaupunki; thaiksi Krung Thep Maha Nakhon, ’enkelten suuri kaupunki’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "yli 8 milj. (2010)"
+    ],
+    [
+     "Pinta-ala",
+     "1 569 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1782"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bangkok"
+   ]
+  },
+  {
+   "tunnus": "k-hyderabad",
+   "nimi": "Hyderabad",
+   "aloitus": "Etelä-Intian Telanganan pääkaupunki",
+   "luonne": "Deccanin ylängön kaupunki: Charminar-torni, Golcondan linnoitus ja nykyaikainen HITEC City -teknologialue.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "6,8 milj. (2011)"
+    ],
+    [
+     "Perustettu",
+     "1591"
+    ],
+    [
+     "Korkeus",
+     "n. 536 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hyderabad"
+   ]
+  },
+  {
+   "tunnus": "k-dongguan",
+   "nimi": "Dongguan",
+   "aloitus": "Etelä-Kiinan teollisuuskaupunki",
+   "luonne": "Pearl-joen suiston tehdaskaupunki, jossa on yksi maailman suurimmista kauppakeskuksista.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "10,5 milj. (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "2 465 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dongguan",
+    "https://www.citypopulation.de/en/china/guangdong/admin/"
+   ]
+  },
+  {
+   "tunnus": "k-harbin",
+   "nimi": "Harbin",
+   "aloitus": "Koillis-Kiinan Heilongjiangin pääkaupunki",
+   "luonne": "Talvinen ’Jääkaupunki’ ja jääveistosfestivaali; syntyi 1898 venäläisten rakentaman rautatien myötä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "10,0 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "53 068 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 150 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Harbin"
+   ]
+  },
+  {
+   "tunnus": "k-qingdao",
+   "nimi": "Qingdao",
+   "aloitus": "Shandongin niemimaan satamakaupunki",
+   "luonne": "Satama- ja laivastokaupunki; saksalaistyylinen arkkitehtuuri ja Tsingtao-olut ovat saksalaisajan perintöä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "10,1 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 11 300 km²"
+    ],
+    [
+     "Saksan vuokra-aika",
+     "1898–1914"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Qingdao"
+   ]
+  },
+  {
+   "tunnus": "k-changsha",
+   "nimi": "Changsha",
+   "aloitus": "Keski-Kiinan Hunanin pääkaupunki",
+   "luonne": "Xiang-joen varrella; Tang-ajan Tongguanin pajoissa kehitettiin varhaista lasitteenalaista maalauskoristetta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "10,0 milj. (2020)"
+    ],
+    [
+     "Kaupunkihistoria",
+     "yli 2 400 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Changsha"
+   ]
+  },
+  {
+   "tunnus": "k-lima",
+   "nimi": "Lima",
+   "aloitus": "Perun pääkaupunki ja suurin kaupunki",
+   "luonne": "Tyynenmeren rannan aavikkokaupunki Rímac-joen laaksossa; Francisco Pizarro perusti sen.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "9,6 milj. (2025)"
+    ],
+    [
+     "Perustettu",
+     "1535"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lima",
+    "https://www.gob.pe/institucion/inei/noticias/1417313-censos-nacionales-2025-lima-metropolitana-continua-siendo-la-provincia-mas-poblada",
+    "https://www.infobae.com/peru/2026/07/10/censo-nacional-2025-lima-metropolitana-concentra-el-mayor-crecimiento-poblacional/"
+   ]
+  },
+  {
+   "tunnus": "k-nanyang",
+   "nimi": "Nanyang",
+   "aloitus": "Henanin eteläosan suuri kaupunki",
+   "luonne": "Tiedemies Zhang Hengin, lääkäri Zhang Zhongjingin ja strategi Zhuge Liangin kotiseutu.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,7 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "yli 26 500 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nanyang,_Henan"
+   ]
+  },
+  {
+   "tunnus": "k-nanjing",
+   "nimi": "Nanjing",
+   "aloitus": "Itä-Kiinan muinainen pääkaupunki",
+   "luonne": "Useiden dynastioiden pääkaupunki; Sun Yat-senin mausoleumi ja Jangtse-joen suuri sisämaasatama.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,3 milj. (2020)"
+    ],
+    [
+     "Nimen merkitys",
+     "’eteläinen pääkaupunki’"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "6 587 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nanjing"
+   ]
+  },
+  {
+   "tunnus": "k-hefei",
+   "nimi": "Hefei",
+   "aloitus": "Anhuin pääkaupunki Itä-Kiinassa",
+   "luonne": "Chao-järven pohjoispuolella; tiedekaupunki, jossa on Kiinan tiede- ja teknologiayliopisto.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 9,4 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 37 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hefei"
+   ]
+  },
+  {
+   "tunnus": "k-ningbo",
+   "nimi": "Ningbo",
+   "aloitus": "Itä-Kiinan satamakaupunki",
+   "luonne": "Ningbo–Zhoushanin satama on rahtimäärältään maailman vilkkain; Jangtsen suiston eteläinen talouskeskus.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 9,6 milj. (2022)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 9 816 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ningbo"
+   ]
+  },
+  {
+   "tunnus": "k-soul",
+   "nimi": "Soul",
+   "aloitus": "Etelä-Korean pääkaupunki",
+   "luonne": "Joseon-ajan viiden palatsin kaupunki Han-joella; suurkaupunkiseudulla asuu yli puolet eteläkorealaisista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 9,6 milj. (2026)"
+    ],
+    [
+     "Pinta-ala",
+     "605 km²"
+    ],
+    [
+     "Rakennus alkoi",
+     "1394"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Seoul"
+   ]
+  },
+  {
+   "tunnus": "k-mexico-city",
+   "nimi": "Mexico City",
+   "aloitus": "Meksikon pääkaupunki",
+   "luonne": "Atsteekkien Tenochtitlan Texcoco-järven saarilla; lähes tuhoutui 1521 ja rakennettiin espanjalaisittain.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "9 209 944 (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "1 485 km²"
+    ],
+    [
+     "Korkeus",
+     "2 240 m"
+    ],
+    [
+     "Perustettu",
+     "n. 1325"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mexico_City"
+   ]
+  },
+  {
+   "tunnus": "k-lagos",
+   "nimi": "Lagos",
+   "aloitus": "Nigerian suurin kaupunki",
+   "luonne": "Laguunin ja Atlantin satamakaupunki, yksi maailman nopeimmin kasvavista suurkaupungeista.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "arv. 17–21 milj. (2025)"
+    ],
+    [
+     "Pääkaupunki",
+     "vuoteen 1991"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lagos",
+    "https://www.worldometers.info/world-population/nigeria-population/"
+   ]
+  },
+  {
+   "tunnus": "k-teheran",
+   "nimi": "Teheran",
+   "aloitus": "Iranin pääkaupunki",
+   "luonne": "Alborz-vuorten juurella; Qajar-shaahi valitsi sen pääkaupungiksi, maamerkkeinä Azadi- ja Milad-tornit.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "8 693 706 (2016)"
+    ],
+    [
+     "Korkeus",
+     "1 040–2 040 m"
+    ],
+    [
+     "Pääkaupunki",
+     "vuodesta 1786"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tehran"
+   ]
+  },
+  {
+   "tunnus": "k-ho-chi-minh-city",
+   "nimi": "Ho Chi Minh City",
+   "aloitus": "Vietnamin väkirikkain kaupunki",
+   "luonne": "Entinen Saigon, Etelä-Vietnamin pääkaupunki; sen maamerkkejä ovat Notre-Dame ja Itsenäisyyspalatsi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 14 milj. (2025)"
+    ],
+    [
+     "Vietnamin hallinta",
+     "vuodesta 1698"
+    ],
+    [
+     "Nykyinen nimi",
+     "vuodesta 1976"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
+   ]
+  },
+  {
+   "tunnus": "k-shenyeng",
+   "nimi": "Shenyang",
+   "aloitus": "Liaoningin pääkaupunki Koillis-Kiinassa",
+   "luonne": "Entinen Mukden: Qing-dynastian varhainen pääkaupunki, jonka keisarillinen palatsi on Unescon kohde.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,1 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 55 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Shenyang"
+   ]
+  },
+  {
+   "tunnus": "k-changchun",
+   "nimi": "Changchun",
+   "aloitus": "Jilinin pääkaupunki Koillis-Kiinassa",
+   "luonne": "Autoteollisuuden keskus; Japanin nukkevaltio Manchukuon pääkaupunki Hsinking vuodesta 1932.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,1 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 222 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Changchun"
+   ]
+  },
+  {
+   "tunnus": "k-jinan",
+   "nimi": "Jinan",
+   "aloitus": "Shandongin pääkaupunki",
+   "luonne": "Lähteiden kaupunki: 72 arteesista lähdettä, joiden joukossa on Baotu-lähde.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,2 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 23 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jinan"
+   ]
+  },
+  {
+   "tunnus": "k-wenzhou",
+   "nimi": "Wenzhou",
+   "aloitus": "Itä-Kiinan rannikkokaupunki Ou-joella",
+   "luonne": "Ou-joen suistossa vuorten ja meren välissä; Wenzhou-nimi on ollut käytössä vuodesta 675.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,6 milj. (2020)"
+    ],
+    [
+     "Entinen nimi",
+     "Yongjia"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Wenzhou"
+   ]
+  },
+  {
+   "tunnus": "k-xuzhou",
+   "nimi": "Xuzhou",
+   "aloitus": "Han-keisarisuvun kotiseutu",
+   "luonne": "Muinainen Pengcheng: Han-ajan terrakottasotilaat ja hautareliefit; entinen kaivoskaupunki ja rautatiesolmu.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "9,1 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 11 259 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Xuzhou"
+   ]
+  },
+  {
+   "tunnus": "k-nanning",
+   "nimi": "Nanning",
+   "aloitus": "Guangxin alueen pääkaupunki",
+   "luonne": "’Vihreä kaupunki’ subtrooppisen kasvillisuutensa vuoksi; portti Kiinan ja ASEAN-maiden yhteistyöhön.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "8,7 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "22 189 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nanning"
+   ]
+  },
+  {
+   "tunnus": "k-kunming",
+   "nimi": "Kunming",
+   "aloitus": "Yunnanin pääkaupunki Lounais-Kiinassa",
+   "luonne": "’Ikuisen kevään kaupunki’ Dian-järven rannalla; toisessa maailmansodassa Burman tien päätepiste.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "8,5 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 892 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kunming"
+   ]
+  },
+  {
+   "tunnus": "k-new-york",
+   "nimi": "New York",
+   "aloitus": "Yhdysvaltain väkirikkain kaupunki",
+   "luonne": "Viiden kaupunginosan satamakaupunki; Vapaudenpatsas ja YK:n pääkonttori ovat täällä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "8 804 190 (2020)"
+    ],
+    [
+     "Pinta-ala (maa)",
+     "n. 778 km²"
+    ],
+    [
+     "Asutus alkoi",
+     "1624"
+    ],
+    [
+     "Nykyinen nimi",
+     "vuodesta 1664"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/New_York_City"
+   ]
+  },
+  {
+   "tunnus": "k-hanoi",
+   "nimi": "Hanoi",
+   "aloitus": "Vietnamin pääkaupunki",
+   "luonne": "Thăng Longin keisarillinen linnoitus, Hoàn Kiếm -järvi ja ranskalaisajan rakennukset kuuluvat kaupunkiin.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 8,9 milj. (2025)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 3 360 km²"
+    ],
+    [
+     "Pääkaupunki",
+     "ensi kerran 1010"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hanoi"
+   ]
+  },
+  {
+   "tunnus": "k-fuzhou",
+   "nimi": "Fuzhou",
+   "aloitus": "Fujianin pääkaupunki",
+   "luonne": "’Banyan-kaupunki’ Min-joen suulla; Sanfang Qixiang -kortteli juontuu Jin-ajalta, asettelu Tangin ajalta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "8,3 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 12 232 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Fuzhou",
+    "https://www.fujian.gov.cn/english/cultureandtravel/attractions/202501/t20250107_6619442.htm"
+   ]
+  },
+  {
+   "tunnus": "k-bagdad",
+   "nimi": "Bagdad",
+   "aloitus": "Irakin pääkaupunki",
+   "luonne": "Abbasidien pyöreäksi suunniteltu kalifikaupunki Tigris-joella, Viisauden talon kultakauden keskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 7,8 milj. (2024)"
+    ],
+    [
+     "Perustettu",
+     "762"
+    ],
+    [
+     "Korkeus",
+     "n. 34 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Baghdad"
+   ]
+  },
+  {
+   "tunnus": "k-ahmedabad",
+   "nimi": "Ahmedabad",
+   "aloitus": "Gujaratin väkirikkain kaupunki",
+   "luonne": "Sabarmati-joen varrella; Gandhin ashram, puuvillateollisuus ja lempinimi ’Intian Manchester’.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 5,6 milj. (2011)"
+    ],
+    [
+     "Perustettu",
+     "1411"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2017"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ahmedabad"
+   ]
+  },
+  {
+   "tunnus": "k-bogota",
+   "nimi": "Bogotá",
+   "aloitus": "Kolumbian pääkaupunki",
+   "luonne": "Andien tasangolla; vanha La Candelaria, Kultamuseo ja Monserrate-vuoren pyhäkkö.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "7 412 566 (2018)"
+    ],
+    [
+     "Korkeus",
+     "2 640 m"
+    ],
+    [
+     "Perustettu",
+     "1538"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bogot%C3%A1",
+    "https://www.eltiempo.com/economia/sectores/esta-es-la-poblacion-de-las-ciudades-capitales-de-colombia-en-el-censo-2018-424112"
+   ]
+  },
+  {
+   "tunnus": "k-shangqiu",
+   "nimi": "Shangqiu",
+   "aloitus": "Keski-Kiinan muinainen kaupunki",
+   "luonne": "Shang-dynastian kotiseutu, ’Shangin kukkula’; rautatiesolmu, jossa on vanhoja kaupunginmuureja.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,8 milj. (2020)"
+    ],
+    [
+     "Ikä",
+     "yli 3 000 vuotta"
+    ],
+    [
+     "Korkeus",
+     "n. 50 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Shangqiu"
+   ]
+  },
+  {
+   "tunnus": "k-tangshan",
+   "nimi": "Tangshan",
+   "aloitus": "Pohjois-Kiinan teollisuuskaupunki",
+   "luonne": "Kiinan teollistumisen kehto: ensimmäinen normaaliraiteinen rautatie ja höyryveturi; teräs- ja satamakaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,7 milj. (2020)"
+    ],
+    [
+     "Järistys 1976",
+     "magnitudi n. 7,6"
+    ],
+    [
+     "Kuolleita",
+     "n. 242 000 (virall.)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tangshan",
+    "https://www.britannica.com/event/Tangshan-earthquake-of-1976"
+   ]
+  },
+  {
+   "tunnus": "k-riyadh",
+   "nimi": "Riad",
+   "aloitus": "Saudi-Arabian pääkaupunki",
+   "luonne": "Najdin ylängöllä aavikolla kasvanut Arabian niemimaan suurin kaupunki; Expo 2030:n isäntä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 7,0 milj. (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 1 973 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 612 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Riyadh"
+   ]
+  },
+  {
+   "tunnus": "k-dalian",
+   "nimi": "Dalian",
+   "aloitus": "Liaodongin niemimaan satamakaupunki",
+   "luonne": "Entinen Dalniy ja Dairen; Lüshunkou-kaupunginosa tunnettiin ennen Port Arthurina.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,5 milj. (2020)"
+    ],
+    [
+     "Perustettu",
+     "1898–1899"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dalian"
+   ]
+  },
+  {
+   "tunnus": "k-wuxi",
+   "nimi": "Wuxi",
+   "aloitus": "Tai-järven rannan kaupunki",
+   "luonne": "Perimätiedon mukaan Wu-valtion ensimmäinen pääkaupunki; Lingshanin 88 metrin Buddha-patsas ja Lihu-puisto.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 7,5 milj. (2024)"
+    ],
+    [
+     "Nimen merkitys",
+     "’ilman tinaa’"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 4 627 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Wuxi"
+   ]
+  },
+  {
+   "tunnus": "k-hongkong",
+   "nimi": "Hongkong",
+   "aloitus": "Yksi maailman suurista rahoituskeskuksista",
+   "luonne": "Britannian siirtomaa 1841–1997; pilvenpiirtäjät, satama ja vuoret ovat tiiviisti vierekkäin.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 7,5 milj. (2023)"
+    ],
+    [
+     "Pinta-ala (maa)",
+     "1 114 km²"
+    ],
+    [
+     "Korkein kohta",
+     "Tai Mo Shan 957 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hong_Kong"
+   ]
+  },
+  {
+   "tunnus": "k-cangzhou",
+   "nimi": "Cangzhou",
+   "aloitus": "Hebein rannikkokaupunki Bohain lahdella",
+   "luonne": "’Leijonakaupunki’, jonka kerrotaan syntyneen Pohjoisten ja Eteläisten dynastioiden aikana 400–500-luvuilla.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,3 milj. (2020)"
+    ],
+    [
+     "Kaupunkialue",
+     "n. 1,4 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 13 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cangzhou"
+   ]
+  },
+  {
+   "tunnus": "k-yantai",
+   "nimi": "Yantai",
+   "aloitus": "Shandongin niemimaan satamakaupunki",
+   "luonne": "Nimi ’savutorni’ tulee 1398 rakennetuista vartiotorneista; Changyu (1892) on Kiinan vanhin iso viinitila.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,1 milj. (2020)"
+    ],
+    [
+     "Kauppasatama",
+     "vuodesta 1861"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yantai",
+    "https://en.wikipedia.org/wiki/Changyu_Pioneer_Wine"
+   ]
+  },
+  {
+   "tunnus": "k-chennai",
+   "nimi": "Chennai",
+   "aloitus": "Tamil Nadun pääkaupunki Intian kaakossa",
+   "luonne": "Entinen Madras; britit rakensivat tänne Intian ensimmäisen linnoituksensa, Fort St. Georgen.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 8,7 milj. (2011)"
+    ],
+    [
+     "Fort St. George",
+     "rakennettu 1639–44"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Chennai",
+    "https://citypopulation.de/en/india/cities/",
+    "https://en.wikipedia.org/wiki/Fort_St._George"
+   ]
+  },
+  {
+   "tunnus": "k-pune",
+   "nimi": "Pune",
+   "aloitus": "Länsi-Intian koulutus- ja teollisuuskaupunki",
+   "luonne": "Deccanin ylängön entinen peshwojen valtakeskus, jota kutsutaan ’Idän Oxfordiksi’.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 5,1 milj. (2011)"
+    ],
+    [
+     "Korkeus",
+     "n. 570 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pune",
+    "https://citypopulation.de/en/india/cities/"
+   ]
+  },
+  {
+   "tunnus": "k-surat",
+   "nimi": "Surat",
+   "aloitus": "Gujaratin kauppa- ja tekstiilikaupunki",
+   "luonne": "Tapti-joen varrella oleva entinen merisatama, jossa hiotaan arviolta 90 % maailman timanteista.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 4,6 milj. (2011)"
+    ],
+    [
+     "Tie Mumbaihin",
+     "n. 290 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Surat",
+    "https://citypopulation.de/en/india/cities/"
+   ]
+  },
+  {
+   "tunnus": "k-luoyang",
+   "nimi": "Luoyang",
+   "aloitus": "Henanin muinainen pääkaupunki Kiinassa",
+   "luonne": "Yksi Kiinan neljästä muinaisesta pääkaupungista; Longmenin luolissa on kymmeniä tuhansia buddhapatsaita.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "7,1 milj. (2020)"
+    ],
+    [
+     "Longmen UNESCO",
+     "vuodesta 2000"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Luoyang",
+    "https://en.wikipedia.org/wiki/Longmen_Grottoes"
+   ]
+  },
+  {
+   "tunnus": "k-rio-de-janeiro",
+   "nimi": "Rio de Janeiro",
+   "aloitus": "Brasilian toiseksi suurin kaupunki",
+   "luonne": "Vuorten ja Atlantin väliin puristuva entinen pääkaupunki, jota Kristus Vapahtaja -patsas vartioi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "6,2 milj. (2022)"
+    ],
+    [
+     "Perustettu",
+     "1565"
+    ],
+    [
+     "Kristus-patsas",
+     "30 m (1931)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+    "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
+   ]
+  },
+  {
+   "tunnus": "k-nanchang",
+   "nimi": "Nanchang",
+   "aloitus": "Kaakkois-Kiinan Jiangxin pääkaupunki",
+   "luonne": "Gan-joen kaupunki, jota kutsutaan Kiinan kansanarmeijan syntypaikaksi vuoden 1927 Nanchangin kapinan vuoksi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "6,3 milj. (2020)"
+    ],
+    [
+     "Tengwang",
+     "paviljonki, rak. 653"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nanchang"
+   ]
+  },
+  {
+   "tunnus": "k-abidjan",
+   "nimi": "Abidjan",
+   "aloitus": "Norsunluurannikon suurin kaupunki",
+   "luonne": "Maan talouskeskus, jonka merisatama syntyi vasta Vridin kanavan avauduttua 1950–1951.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "6,3 milj. (2021)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 2 100 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Abidjan",
+    "https://citypopulation.de/en/ivorycoast/cities/",
+    "https://www.britannica.com/place/Vridi-Canal"
+   ]
+  },
+  {
+   "tunnus": "k-guiyang",
+   "nimi": "Guiyang",
+   "aloitus": "Guizhoun pääkaupunki Lounais-Kiinassa",
+   "luonne": "Vuorten ympäröimä ylänkökaupunki, jossa asuu paljon miao- ja buyi-vähemmistöjä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "6,0 milj. (2020)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 100 m"
+    ],
+    [
+     "Jiaxiu-paviljonki",
+     "ensin rakennettu 1598"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Guiyang"
+   ]
+  },
+  {
+   "tunnus": "k-johannesburg",
+   "nimi": "Johannesburg",
+   "aloitus": "Etelä-Afrikan suurin kaupunki",
+   "luonne": "Kultalöydöstä syntynyt talouskeskus; Soweto oli vuoden 1976 oppilaskapinan näyttämö.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,8 milj. (2022)"
+    ],
+    [
+     "Perustettu",
+     "1886"
+    ],
+    [
+     "Korkeus",
+     "1 753 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Johannesburg",
+    "https://citypopulation.de/en/southafrica/admin/"
+   ]
+  },
+  {
+   "tunnus": "k-singapore",
+   "nimi": "Singapore",
+   "aloitus": "Kaupunkivaltio Kaakkois-Aasiassa",
+   "luonne": "Raffles perusti brittien kauppa-aseman 1819; nykyään rahoituksen ja merenkulun keskus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "6,1 milj. (2025)"
+    ],
+    [
+     "Pinta-ala",
+     "744 km²"
+    ],
+    [
+     "Itsenäistyi",
+     "1965"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Singapore"
+   ]
+  },
+  {
+   "tunnus": "k-ankara",
+   "nimi": "Ankara",
+   "aloitus": "Turkin pääkaupunki",
+   "luonne": "Muinaisen Ancyran perillinen; tasavalta julistettiin 1923 ja pääkaupunki siirrettiin Istanbulista tänne.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 5,9 milj. (2025)"
+    ],
+    [
+     "Korkeus",
+     "938 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ankara"
+   ]
+  },
+  {
+   "tunnus": "k-pietari",
+   "nimi": "Pietari",
+   "aloitus": "Venäjän toiseksi suurin kaupunki",
+   "luonne": "Pietari Suuri perusti sen Nevan suistoon 1703; Venäjän keisarikunnan entinen pääkaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "5,6 milj. (2021)"
+    ],
+    [
+     "Pinta-ala",
+     "1 439 km²"
+    ],
+    [
+     "Miljoonakaupunki",
+     "maailman pohjoisin"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Saint_Petersburg"
+   ]
+  },
+  {
+   "tunnus": "k-nanchong",
+   "nimi": "Nanchong",
+   "aloitus": "Sichuanin toiseksi väkirikkain kaupunki",
+   "luonne": "Jialing-joen silkkikaupunki; Kolmen kuningaskunnan historioitsija Chen Shou kuului seutuun.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,6 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 12 480 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nanchong",
+    "https://www.britannica.com/place/Nanchong"
+   ]
+  },
+  {
+   "tunnus": "k-yangon",
+   "nimi": "Yangon",
+   "aloitus": "Myanmarin suurin kaupunki",
+   "luonne": "Entinen pääkaupunki, jonka siluetissa kohoaa kullattu Shwedagon-pagodi ja siirtomaa-ajan rakennuksia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "5,2 milj. (2014)"
+    ],
+    [
+     "Shwedagon",
+     "99 m (ilman huippua)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yangon",
+    "https://en.wikipedia.org/wiki/Shwedagon_Pagoda"
+   ]
+  },
+  {
+   "tunnus": "k-alexandria",
+   "nimi": "Alexandria",
+   "aloitus": "Egyptin suurin Välimeren satamakaupunki",
+   "luonne": "Antiikin tiedon ja oppineiden keskus; nykyisin uusi Bibliotheca Alexandrina muistuttaa vanhasta kirjastosta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 5,5 milj. (2023)"
+    ],
+    [
+     "Perustettu",
+     "331 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Alexandria",
+    "https://citypopulation.de/en/egypt/admin/"
+   ]
+  },
+  {
+   "tunnus": "k-dar-es-salaam",
+   "nimi": "Dar es Salaam",
+   "aloitus": "Tansanian suurin kaupunki",
+   "luonne": "Nimi tarkoittaa arabiaksi ’rauhan kotia’; entinen pääkaupunki ja maan talouskeskus Intian valtameren rannalla.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,4 milj. (2022)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "1 393 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dar_es_Salaam",
+    "https://citypopulation.de/en/tanzania/cities/"
+   ]
+  },
+  {
+   "tunnus": "k-sydney",
+   "nimi": "Sydney",
+   "aloitus": "Australian suurin kaupunki",
+   "luonne": "Sataman ympärille levittäytynyt metropoli, jonka seutu on ollut asuttu yli 30 000 vuotta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,6 milj. (2025)"
+    ],
+    [
+     "Perustettu",
+     "1788"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sydney"
+   ]
+  },
+  {
+   "tunnus": "k-taiyuan",
+   "nimi": "Taiyuan",
+   "aloitus": "Shanxin pääkaupunki Pohjois-Kiinassa",
+   "luonne": "Fen-joen kaupunki, jota kutsutaan ’lohikäärmeen kaupungiksi’; energia- ja raskaan teollisuuden keskus.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,3 milj. (2020)"
+    ],
+    [
+     "Jinyang perustettu",
+     "497 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Taiyuan"
+   ]
+  },
+  {
+   "tunnus": "k-xiamen",
+   "nimi": "Xiamen",
+   "aloitus": "Fujianin satamakaupunki Taiwanin salmella",
+   "luonne": "Vanhalta nimeltään Amoy; 1980-luvulla se oli yksi Kiinan ensimmäisistä erityistalousvyöhykkeistä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "5,2 milj. (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "1 701 km²"
+    ],
+    [
+     "Kulangsu UNESCO",
+     "vuodesta 2017"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Xiamen"
+   ]
+  },
+  {
+   "tunnus": "k-suzhou",
+   "nimi": "Suzhou",
+   "aloitus": "Pohjois-Anhuin kaupunki Itä-Kiinassa",
+   "luonne": "Eri kaupunki kuin Jiangsun Suzhou; Lingbin seutu tunnetaan koristekivistä, joita kerätään oppineiden pöydille.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,3 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 9 940 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Suzhou,_Anhui"
+   ]
+  },
+  {
+   "tunnus": "k-shaoxing",
+   "nimi": "Shaoxing",
+   "aloitus": "Kaupunki Hangzhoun lahden etelärannalla",
+   "luonne": "Shaoxing-riisiviinin ja kirjailija Lu Xunin kotiseutu; kaupunki täytti 2 500 vuotta 2010.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,3 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 8 280 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Shaoxing"
+   ]
+  },
+  {
+   "tunnus": "k-melbourne",
+   "nimi": "Melbourne",
+   "aloitus": "Australian toiseksi suurin kaupunki",
+   "luonne": "Port Phillipin lahden rannalla oleva kaupunki, jota pidetään maailman eteläisimpänä miljoonakaupunkina.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,4 milj. (2025)"
+    ],
+    [
+     "Perustettu",
+     "1835"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Melbourne"
+   ]
+  },
+  {
+   "tunnus": "k-zhangzhou",
+   "nimi": "Zhangzhou",
+   "aloitus": "Kaakkois-Kiinan Fujianin kaupunki",
+   "luonne": "Seudun savirakenteiset tulou-asuinlinnat ovat UNESCOn maailmanperintöä; kaupungin kukka on narsissi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,1 milj. (2020)"
+    ],
+    [
+     "Nykyinen nimi",
+     "vuodesta 686"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zhangzhou",
+    "https://www.britannica.com/place/Zhangzhou"
+   ]
+  },
+  {
+   "tunnus": "k-lianyungang",
+   "nimi": "Lianyungang",
+   "aloitus": "Jiangsun satamakaupunki Keltaisella merellä",
+   "luonne": "Nimi tarkoittaa ’pilviä yhdistävää satamaa’; Uuden Euraasian maasillan itäpääte.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,6 milj. (2020)"
+    ],
+    [
+     "Yuntai-vuori",
+     "Jiangsun korkein huippu"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lianyungang"
+   ]
+  },
+  {
+   "tunnus": "k-jingzhou",
+   "nimi": "Jingzhou",
+   "aloitus": "Muinainen kaupunki Jangtsen rannalla",
+   "luonne": "Kolmen kuningaskunnan ajan kiistelty linnoituskaupunki, jonka vanha muuri on yhä pystyssä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,2 milj. (2020)"
+    ],
+    [
+     "Kaupunginmuuri",
+     "yli 10 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jingzhou",
+    "https://en.wikipedia.org/wiki/Jingzhou_Ancient_City"
+   ]
+  },
+  {
+   "tunnus": "k-kabul",
+   "nimi": "Kabul",
+   "aloitus": "Afganistanin pääkaupunki",
+   "luonne": "Hindukushin kapeassa laaksossa, Silkkitien risteyksessä; arviolta yli 3 500 vuotta vanha.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 5–6 milj. (2025)"
+    ],
+    [
+     "Korkeus",
+     "1 791 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kabul"
+   ]
+  },
+  {
+   "tunnus": "k-cape-town",
+   "nimi": "Cape Town",
+   "aloitus": "Etelä-Afrikan lainsäädäntöpääkaupunki",
+   "luonne": "Maan vanhin kaupunki; Pöytävuoren kansallispuisto ja Kirstenboschin puutarha kuuluvat siihen.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,8 milj. (2022)"
+    ],
+    [
+     "Perustettu",
+     "1652"
+    ],
+    [
+     "Pöytävuori",
+     "n. 1 085 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cape_Town",
+    "https://en.wikipedia.org/wiki/Table_Mountain"
+   ]
+  },
+  {
+   "tunnus": "k-jiangmen",
+   "nimi": "Jiangmen",
+   "aloitus": "Guangdongin kaupunki Etelä-Kiinassa",
+   "luonne": "Noin neljän miljoonan ulkomaankiinalaisen sukujuurten seutu, jonka Kaipingin tornitalot tunnetaan maailmalla.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,8 milj. (2020)"
+    ],
+    [
+     "Kaipingin tornit",
+     "n. 1 800"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2007"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jiangmen"
+   ]
+  },
+  {
+   "tunnus": "k-zibo",
+   "nimi": "Zibo",
+   "aloitus": "Shandongin teollisuuskaupunki Kiinassa",
+   "luonne": "Muinaisen Qi-valtion keskus: sen pääkaupunki Linzi oli aikanaan Kiinan väkirikkain kaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,7 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "5 965 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zibo",
+    "https://wh.zibo.gov.cn/art/2017/6/6/art_260_1606498.html"
+   ]
+  },
+  {
+   "tunnus": "k-jeddah",
+   "nimi": "Jeddah",
+   "aloitus": "Saudi-Arabian satama Punaisellamerellä",
+   "luonne": "Mekan portti: pyhiinvaeltajien satama vuodesta 647; vanha Al-Balad on UNESCOn maailmanperintöä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,7 milj. (2022)"
+    ],
+    [
+     "Suihkulähde",
+     "312 m, maailman korkein"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jeddah",
+    "https://en.wikipedia.org/wiki/King_Fahd%27s_Fountain",
+    "https://citypopulation.de/en/saudiarabia/cities/"
+   ]
+  },
+  {
+   "tunnus": "k-jiujiang",
+   "nimi": "Jiujiang",
+   "aloitus": "Kaupunki Jangtse-joen varrella Jiangxissa",
+   "luonne": "Jangtsen satamakaupunki Lushan-vuoren ja Poyang-järven tuntumassa; avattiin ulkomaankaupalle 1862.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,6 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "18 823 km²"
+    ],
+    [
+     "Lushan UNESCOssa",
+     "vuodesta 1996"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jiujiang"
+   ]
+  },
+  {
+   "tunnus": "k-yangzhou",
+   "nimi": "Yangzhou",
+   "aloitus": "Puutarhoistaan tunnettu kaupunki Jiangsussa",
+   "luonne": "Ming- ja Qing-ajan rikas kauppakaupunki, jonka kauppatavaroita olivat suola, riisi ja silkki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,56 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 6 600 km²"
+    ],
+    [
+     "Han-kanava",
+     "valmis 486 eaa. mennessä"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yangzhou"
+   ]
+  },
+  {
+   "tunnus": "k-kolkata",
+   "nimi": "Kolkata",
+   "aloitus": "Länsi-Bengalin pääkaupunki Intiassa",
+   "luonne": "Brittiläisen Intian pääkaupunki vuoteen 1911; Howrah-silta ja Victoria Memorial ovat tunnetuimpia maamerkkejä.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "4,5 milj. (2011)"
+    ],
+    [
+     "Asukkaita (alue)",
+     "n. 14,1 milj. (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "206 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kolkata"
+   ]
+  },
+  {
+   "tunnus": "k-taizhou",
+   "nimi": "Taizhou",
+   "aloitus": "Kaupunki Jangtse-joen pohjarannalla",
+   "luonne": "Suolantuotannon ja -hallinnon keskus jo Tang-ajalta; lähistöllä on Père Davidin peuran suojelualue.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,5 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 5 800 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Taizhou,_Jiangsu"
+   ]
+  },
+  {
+   "tunnus": "k-jian",
+   "nimi": "Ji’an",
+   "aloitus": "Kaupunki Gan-joen varrella Jiangxissa",
+   "luonne": "Alueella ovat Jinggang-vuoret, ja täältä oli kotoisin Song-ajan vastarintasankari Wen Tianxiang.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,5 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 25 300 km²"
+    ],
+    [
+     "Luling perustettu",
+     "211 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ji%27an",
+    "https://en.wikipedia.org/wiki/Wen_Tianxiang"
+   ]
+  },
+  {
+   "tunnus": "k-nairobi",
+   "nimi": "Nairobi",
+   "aloitus": "Kenian pääkaupunki",
+   "luonne": "Itä-Afrikan talouskeskus; ainoa pääkaupunki, jonka rajojen sisällä on kansallispuisto.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "4,4 milj. (2019)"
+    ],
+    [
+     "Korkeus",
+     "1 795 m"
+    ],
+    [
+     "Rautatie saapui",
+     "1899"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nairobi"
+   ]
+  },
+  {
+   "tunnus": "k-izmir",
+   "nimi": "Izmir",
+   "aloitus": "Turkin kolmanneksi suurin kaupunki",
+   "luonne": "Egeanmeren satamakaupunki, antiikin Smyrna, jonka väitetään olleen Homeroksen syntymäkaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 4,5 milj. (2025)"
+    ],
+    [
+     "Smyrnan synty",
+     "n. 1000 eaa."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/%C4%B0zmir"
+   ]
+  },
+  {
+   "tunnus": "k-lanzhou",
+   "nimi": "Lanzhou",
+   "aloitus": "Keltaisen joen kaupunki Gansussa",
+   "luonne": "Silkkitien varrella kasvanut teollisuuskaupunki, joka tunnetaan naudanlihanuudeleistaan.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,36 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 13 100 km²"
+    ],
+    [
+     "Korkeus",
+     "n. 1 600 m"
+    ],
+    [
+     "Zhongshan-silta",
+     "valmis 1909"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lanzhou"
+   ]
+  },
+  {
+   "tunnus": "k-anqing",
+   "nimi": "Anqing",
+   "aloitus": "Kaupunki Jangtsen pohjoisrannalla Anhuissa",
+   "luonne": "Anhuin entinen pääkaupunki, Huangmei-oopperan syntysija ja puoluejohtaja Chen Duxiun kotikaupunki.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,2 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 13 500 km²"
+    ],
+    [
+     "Zhenfeng-pagodi",
+     "rakennettu 1570"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Anqing"
+   ]
+  },
+  {
+   "tunnus": "k-kano",
+   "nimi": "Kano",
+   "aloitus": "Pohjois-Nigerian suurkaupunki",
+   "luonne": "Saharan ylittävän kaupan eteläinen päätepiste; vanhassakaupungissa on yhä käytössä värjäysaltaita.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 4,1 milj. (2022)"
+    ],
+    [
+     "Kaupunginmuuri",
+     "alkoi 1100-luvulla"
+    ],
+    [
+     "Suurmoskeija",
+     "alun perin 1400-luku"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kano_(city)",
+    "https://en.wikipedia.org/wiki/Great_Mosque_of_Kano",
+    "https://en.wikipedia.org/wiki/Kano"
+   ]
+  },
+  {
+   "tunnus": "k-sana",
+   "nimi": "Sanaa",
+   "aloitus": "Jemenin pääkaupunki",
+   "luonne": "Vuoristokaupunki, jonka vanhassakaupungissa on korkeita tornitaloja; houthit hallitsevat sitä syyskuusta 2014.",
+   "rivit": [
+    [
+     "Asukasluku (arvio)",
+     "n. 3,4 milj. (2024)"
+    ],
+    [
+     "Korkeus",
+     "yli 2 200 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1986"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sanaa"
+   ]
+  },
+  {
+   "tunnus": "k-urumqi",
+   "nimi": "Ürümqi",
+   "aloitus": "Xinjiangin pääkaupunki Luoteis-Kiinassa",
+   "luonne": "Guinnessin mukaan maailman kauimpana merestä oleva suurkaupunki, Tian Shan -vuorten juurella.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,05 milj. (2020)"
+    ],
+    [
+     "Matkaa merelle",
+     "n. 2 500 km"
+    ],
+    [
+     "Perustettu",
+     "648 (Luntai)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/%C3%9Cr%C3%BCmqi"
+   ]
+  },
+  {
+   "tunnus": "k-jaipur",
+   "nimi": "Jaipur",
+   "aloitus": "Rajasthanin pääkaupunki Intiassa",
+   "luonne": "’Vaaleanpunainen kaupunki’: vanhankaupungin talot maalattiin 1876 prinssin vierailun kunniaksi.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "3,05 milj. (2011)"
+    ],
+    [
+     "Perustettu",
+     "1727"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2019"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jaipur"
+   ]
+  },
+  {
+   "tunnus": "k-jilin",
+   "nimi": "Jilin",
+   "aloitus": "Songhua-joen kaupunki Koillis-Kiinassa",
+   "luonne": "Joen lämmin vesi saa puut huurtumaan talvella; kaupunkia kutsutaan ’jokikaupungiksi’.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,6 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 27 200 km²"
+    ],
+    [
+     "Linnoituskaupunki",
+     "perustettu 1673"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Jilin_City",
+    "https://news.cgtn.com/news/2024-01-31/Riverside-rime-scenery-charms-residents-in-NE-China-1qOiWQM6QXm/p.html"
+   ]
+  },
+  {
+   "tunnus": "k-luan",
+   "nimi": "Lu’an",
+   "aloitus": "Kaupunki Dabie-vuorten juurella Anhuissa",
+   "luonne": "Tunnettu Lu’an Guapian -vihreästä teestä, jota pidetään yhtenä Kiinan kymmenestä kuuluisimmasta teestä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "4,4 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 15 400 km²"
+    ],
+    [
+     "Nykyinen kaupunki",
+     "perustettu 2000"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lu%27an"
+   ]
+  },
+  {
+   "tunnus": "k-qingyuan",
+   "nimi": "Qingyuan",
+   "aloitus": "Kaupunki Beijiang-joen varrella Guangdongissa",
+   "luonne": "Pinta-alaltaan Guangdongin laajin kaupunkialue, jonka nähtävyyksiin kuuluu Feilai-temppeli.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,97 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 19 000 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Qingyuan"
+   ]
+  },
+  {
+   "tunnus": "k-los-angeles",
+   "nimi": "Los Angeles",
+   "aloitus": "Yhdysvaltain toiseksi suurin kaupunki",
+   "luonne": "Elokuvateollisuuden Hollywood kuuluu kaupunkiin; kesäolympialaiset on pidetty täällä 1932 ja 1984.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "3,9 milj. (2020)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 1 300 km²"
+    ],
+    [
+     "Perustettu",
+     "1781"
+    ],
+    [
+     "Seuraava olympia",
+     "2028"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Los_Angeles"
+   ]
+  },
+  {
+   "tunnus": "k-zaozhuang",
+   "nimi": "Zaozhuang",
+   "aloitus": "Hiilen ja kanavan kaupunki Shandongissa",
+   "luonne": "Taierzhuangin taistelun paikka vuodelta 1938; nykyään tunnettu litiumakkujen valmistuksesta.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,86 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "4 563 km²"
+    ],
+    [
+     "Kanavaosuus",
+     "kaivettu 1604"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zaozhuang"
+   ]
+  },
+  {
+   "tunnus": "k-baoji",
+   "nimi": "Baoji",
+   "aloitus": "Kaupunki Wei-joen varrella Shaanxissa",
+   "luonne": "Pronssimuseossa on yli 120 000 esinettä, enimmäkseen Zhou-ajalta; Famen-temppelissä Buddhan sormenluu.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,3 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "18 159 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Baoji"
+   ]
+  },
+  {
+   "tunnus": "k-durban",
+   "nimi": "Durban",
+   "aloitus": "Etelä-Afrikan vilkkain satamakaupunki",
+   "luonne": "Zuluksi eThekwini; MM-2010-kaupunki ja Afrikan ensimmäinen UNESCOn kirjallisuuskaupunki.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 595 000 (2011)"
+    ],
+    [
+     "Asukkaita (alue)",
+     "n. 4,2 milj. (2022)"
+    ],
+    [
+     "Pinta-ala",
+     "226 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Durban"
+   ]
+  },
+  {
+   "tunnus": "k-faisalabad",
+   "nimi": "Faisalabad",
+   "aloitus": "Pakistanin kolmanneksi suurin kaupunki",
+   "luonne": "Tekstiiliteollisuuden keskus, ’Pakistanin Manchester’; keskustan kellotornista lähtee kahdeksan basaaria.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,7 milj. (2023)"
+    ],
+    [
+     "Perustettu",
+     "n. 1890"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Faisalabad"
+   ]
+  },
+  {
+   "tunnus": "k-changzhou",
+   "nimi": "Changzhou",
+   "aloitus": "Kaupunki Jangtsen eteläpuolella Jiangsussa",
+   "luonne": "Suuren kanavan varrella kukoistanut kaupunki; dinosauruspuisto ja Tianning-temppelin 154 m:n pagodi.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "5,28 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 4 400 km²"
+    ],
+    [
+     "Asutus",
+     "yli 6 000 vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Changzhou",
+    "https://en.wikipedia.org/wiki/Tianning_Temple_(Changzhou)"
+   ]
+  },
+  {
+   "tunnus": "k-puyang",
+   "nimi": "Puyang",
+   "aloitus": "Kaupunki Keltaisen joen rannalla Henanissa",
+   "luonne": "Öljykaupunki, jonka läheltä löytyi 6 400 vuotta vanha simpukoista asetettu lohikäärmekuvio.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,77 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "4 188 km²"
+    ],
+    [
+     "Lohikäärmelöytö",
+     "1987"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Puyang"
+   ]
+  },
+  {
+   "tunnus": "k-dubai",
+   "nimi": "Dubai",
+   "aloitus": "Arabiemiraattien suurin kaupunki",
+   "luonne": "Pienestä helmenkalastajakylästä kasvanut kauppa- ja matkailukeskus, jossa on maailman korkein rakennus.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 3,9 milj. (2025)"
+    ],
+    [
+     "Burj Khalifa",
+     "828 m"
+    ],
+    [
+     "Vapaasatama",
+     "vuodesta 1901"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dubai",
+    "https://en.wikipedia.org/wiki/Burj_Khalifa"
+   ]
+  },
+  {
+   "tunnus": "k-addis-abeba",
+   "nimi": "Addis Abeba",
+   "aloitus": "Etiopian pääkaupunki",
+   "luonne": "Afrikan unionin pääkonttorin kaupunki Entoto-vuorten juurella; nimi tarkoittaa amharaksi ’uutta kukkaa’.",
+   "rivit": [
+    [
+     "Asukasluku (arvio)",
+     "n. 6,3 milj. (2025)"
+    ],
+    [
+     "Korkeus",
+     "2 355 m"
+    ],
+    [
+     "Perustettu",
+     "1886"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Addis_Ababa"
+   ]
+  },
+  {
+   "tunnus": "k-casablanca",
+   "nimi": "Casablanca",
+   "aloitus": "Marokon suurin kaupunki",
+   "luonne": "Maan talouskeskus ja yksi Afrikan suurimmista tekosatamista; Hassan II -moskeija on meren rannalla.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "3,2 milj. (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "n. 380 km²"
+    ],
+    [
+     "Minareetti",
+     "210 m (Hassan II)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Casablanca",
+    "https://en.wikipedia.org/wiki/Hassan_II_Mosque"
+   ]
+  },
+  {
+   "tunnus": "k-lucknow",
+   "nimi": "Lucknow",
+   "aloitus": "Uttar Pradeshin pääkaupunki Intiassa",
+   "luonne": "Awadhin nawabien entinen pääkaupunki, tunnettu chikan-kirjonnasta ja Bara Imambaran holvihallista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "2,9 milj. (2011)"
+    ],
+    [
+     "Pinta-ala",
+     "631 km²"
+    ],
+    [
+     "Bara Imambara",
+     "valmis 1784"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lucknow",
+    "https://en.wikipedia.org/wiki/Bara_Imambara"
+   ]
+  },
+  {
+   "tunnus": "k-ibadan",
+   "nimi": "Ibadan",
+   "aloitus": "Lounais-Nigerian jorubakaupunki",
+   "luonne": "Pinta-alaltaan Nigerian laajin kaupunki; Cocoa House oli Länsi-Afrikan ensimmäinen pilvenpiirtäjä.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "n. 3,9 milj. (2025)"
+    ],
+    [
+     "Perustettu",
+     "1829"
+    ],
+    [
+     "Yliopisto",
+     "perustettu 1948"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ibadan",
+    "https://en.wikipedia.org/wiki/Cocoa_House"
+   ]
+  },
+  {
+   "tunnus": "k-hohhot",
+   "nimi": "Hohhot",
+   "aloitus": "Sisä-Mongolian pääkaupunki",
+   "luonne": "Mongoliaksi ’Sininen kaupunki’; Altan-kaani aloitti Dazhao-temppelin rakentamisen 1557.",
+   "rivit": [
+    [
+     "Asukkaita (alue)",
+     "3,45 milj. (2020)"
+    ],
+    [
+     "Pinta-ala (alue)",
+     "n. 17 200 km²"
+    ],
+    [
+     "Maitopääkaupunki",
+     "nimetty 2005"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hohhot",
+    "https://en.wikipedia.org/wiki/Dazhao_Temple_(Hohhot)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "kaupunki": "sierraleone",
+ "kaupunkiQ": "Q1044",
+ "kohteet": [
+  {
+   "q": "Q3780",
+   "nimi": "Freetown",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 8.48722,
+   "lon": -13.23556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freetown-aerialview.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freetown-aerialview.jpg?width=1280",
+     "tekija": "David Hond",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freetown-aerialview.jpg",
+     "selite": "Freetown levittyy vihreiden vuorten ja Sierra Leone -joen suiston väliselle niemelle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1004939",
+   "nimi": "Buncen saari",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 8.56987,
+   "lon": -13.04027,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The slave fort on Bunce Island, at the mouth of the Sierra Leone River in West Africa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_slave_fort_on_Bunce_Island%2C_at_the_mouth_of_the_Sierra_Leone_River_in_West_Africa.jpg?width=1280",
+     "tekija": "Joseph Corry",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_slave_fort_on_Bunce_Island%2C_at_the_mouth_of_the_Sierra_Leone_River_in_West_Africa.jpg",
+     "selite": "Vanha maalaus näyttää Buncen saaren orjalinnoituksen Sierra Leone -joen suulla.",
+     "leveys": 1323,
+     "korkeus": 928,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bunce Island Fortress Wall 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bunce_Island_Fortress_Wall_01.jpg?width=1280",
+     "tekija": "Pierre Chrzanowski",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bunce_Island_Fortress_Wall_01.jpg",
+     "selite": "Linnoituksen raunioseinät ovat jääneet kasvillisuuden valtaamina Länsi-Afrikan orjakaupan muistoksi.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q602200",
+   "nimi": "Puuvillapuu (Cotton Tree)",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 8.48722,
+   "lon": -13.23556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cotton Tree (Sierra Leone).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_Tree_(Sierra_Leone).jpg?width=1280",
+     "tekija": "Christian Trede",
+     "lisenssi": "CC BY-SA 2.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cotton_Tree_(Sierra_Leone).jpg",
+     "selite": "Puuvillapuu on Freetownin keskustan tunnetuin maamerkki, ja sen alle vapautetut orjat sanotaan asettuneen.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cotton tree in Freetown, SL - Mapillary (yIBZ74r6IsUFOaWtAPwhWw).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_tree_in_Freetown%2C_SL_-_Mapillary_(yIBZ74r6IsUFOaWtAPwhWw).jpg?width=1280",
+     "tekija": "danbjoseph @ Mapillary.com",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cotton_tree_in_Freetown%2C_SL_-_Mapillary_(yIBZ74r6IsUFOaWtAPwhWw).jpg",
+     "selite": "Valtava puu kohoaa kaupungin kadun yllä rakennusten välissä.",
+     "leveys": 1882,
+     "korkeus": 1284,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1506926",
+   "nimi": "Fourah Bay College",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 8.49222,
+   "lon": -13.20944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old building of Fourah Bay College. Cline Town, Freetown, Sierra Leone.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_building_of_Fourah_Bay_College._Cline_Town%2C_Freetown%2C_Sierra_Leone.jpg?width=1280",
+     "tekija": "Jared & Melanie & Huxley Ponchot",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_building_of_Fourah_Bay_College._Cline_Town%2C_Freetown%2C_Sierra_Leone.jpg",
+     "selite": "Fourah Bay Collegen vanha päärakennus on Länsi-Afrikan vanhimpia korkeakouluja.",
+     "leveys": 1528,
+     "korkeus": 976,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "SierraLeoneHofstra2.2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SierraLeoneHofstra2.2.jpg?width=1280",
+     "tekija": "Unknown photographer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SierraLeoneHofstra2.2.jpg",
+     "selite": "Vanha mustavalkokuva näyttää kollegin parvekkein koristetun kivirakennuksen.",
+     "leveys": 1632,
+     "korkeus": 1052,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1868712",
+   "nimi": "Loma-vuoristo",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 9.17,
+   "lon": -11.12,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mountain Bintunami.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_Bintunami.jpg?width=1280",
+     "tekija": "Rokaso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mountain_Bintunami.jpg",
+     "selite": "Bintumani on Sierra Leonen korkein huippu, ja sen kalliot nousevat ruohoisten rinteiden yläpuolelle.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount Bintumani 1992 or 93.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Bintumani_1992_or_93.jpg?width=1280",
+     "tekija": "sierra-leone143",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Bintumani_1992_or_93.jpg",
+     "selite": "Vuoristo kohoaa Pohjois-Sierra Leonen tasangon reunalla.",
+     "leveys": 3095,
+     "korkeus": 2039,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q634698",
+   "nimi": "Kenema",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 7.88333,
+   "lon": -11.18333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sierra Leone - Kenema.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sierra_Leone_-_Kenema.jpg?width=1280",
+     "tekija": "Chris parkes photo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_-_Kenema.jpg",
+     "selite": "Kenema on Sierra Leonen itäosan suuri kaupunki, jota ympäröivät metsäiset kukkulat.",
+     "leveys": 3530,
+     "korkeus": 1983,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kenema.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenema.jpg?width=1280",
+     "tekija": "dorothy.voorhees",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kenema.jpg",
+     "selite": "Kaupungin pääkatu kulkee punaisen maaperän halki matalien rakennusten välissä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Hodroj Houssein-Tokey Beach (IMG 2218).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hodroj_Houssein-Tokey_Beach_(IMG_2218).jpg?width=1280",
+   "tekija": "Hodroj Houssein",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hodroj_Houssein-Tokey_Beach_(IMG_2218).jpg",
+   "selite": "Sierra Leonen rannikko on pitkää hiekkarantaa Atlantin rannalla ja palmut reunustavat sitä.",
+   "leveys": 5472,
+   "korkeus": 2984,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Sierra Leone River No 2 sunset.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sierra_Leone_River_No_2_sunset.jpg?width=1280",
+   "tekija": "Niroshan",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_River_No_2_sunset.jpg",
+   "selite": "Aurinko laskee Sierra Leone -joen suistossa palmujen takana.",
+   "leveys": 1536,
+   "korkeus": 2048,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

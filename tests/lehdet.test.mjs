@@ -11,6 +11,9 @@ import assert from 'node:assert/strict';
 import { Game } from '../js/game.js';
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
+import {
+  KAUPUNKILEHDEN_SIIRTYNEET, kaupunkilehdenSiirtyneetNostot, kaupunkilehdenSivuNostoineen,
+} from '../js/lehtinostot.js';
 
 /** Minitehtävän ja kulttuurivisan yhteiset muotovaatimukset. */
 function tarkistaTehtava(t, missa) {
@@ -199,9 +202,11 @@ test('kulttuurivisan vastaus löytyy kaupungin omasta lähdejutusta', async () =
  * ja johdanto jäi lupaamaan valssia ja satuoopperaa, joita sivulla ei
  * enää ole. Loput 13 kirjoitettiin samalla mallilla 14.9.2026.
  *
- * Fablen päätös 14.9.2026: johdanto ohjaa lukijan kartalle — se on
- * uudistuksen koko idea. Tämä vartio pitää lupauksen voimassa: jos
- * johdanto sanoo "kartalla", jutut on oikeasti löydyttävä sieltä.
+ * Fablen päätös 14.9.2026: johdanto ohjasi lukijan kartalle. OMISTAJA
+ * PALAUTTI 12.10.2026 alkuperäiset johdannot (nostot takaisin aihesivulle
+ * natiivissa; ne löytyvät myös kartalta): tämä vartio vaatii nyt, että
+ * johdanto on alkuperäinen vanha virke, ja pitää edelleen voimassa, että
+ * johdannon lupaamat jutut ovat oikeasti kohdekartalla.
  *
  * LISTA ON TÄYSI: kaikki 14 tyhjentynyttä sivua ovat mukana. Lista
  * mitattiin koneellisesti vertaamalla eraa 5 edeltävää versiota
@@ -222,149 +227,12 @@ test('kartalle ohjaava johdanto pitää lupauksensa', async () => {
   const { SYVENNYSPAIKAT } = await import('../js/packs/syvennyspaikat.js');
 
   /*
-   * Sivut, joiden johdanto on päivitetty kartalle ohjaavaksi.
-   *
-   *   vanhaVirke   johdannon vanha teksti sanatarkasti (ilman loppupistettä,
-   *                jos jatke liittyy ajatusviivalla) — kaanonia ei saa
-   *                kirjoittaa uusiksi, perään lisätään vain reitti.
-   *   kohdekartta  nosto-tunnukset, joiden on oltava kaupungin kohdekartan
-   *                pisteinä (js/packs/maakartat.js KAUPUNKIKARTAT).
-   *   pooli        ne kohdekartan tunnuksista, jotka ovat myös kaupungin
-   *                täkynostoja (js/packs/fokusvirrat.js takynostot).
-   *   paakartta    jutut, jotka ovat pääkartan merkkeinä: tunnuksen on
-   *                löydyttävä joko SYVENNYSPAIKAT- tai takynostotaulusta
-   *                ja kannettava `kattoVapaa`-lippu.
+   * Sivut, joiden nostot siirtyivät kartalle, ja jutut, jotka johdanto
+   * lupaa. Lista asuu js/lehtinostot.js:ssä (KAUPUNKILEHDEN_SIIRTYNEET),
+   * koska sama lista tuo jutut takaisin sivulle webissä ja natiivissa
+   * (omistaja 12.10.2026). Kenttien merkitys on kuvattu siellä.
    */
-  const OHJAAVAT = [
-    {
-      kaupunki: 'wien',
-      sivu: 'musiikki',
-      // Vanha virke on tallella sanatarkasti: kaanonia ei kirjoitettu
-      // uusiksi, perään lisättiin vain reitti kartalle.
-      vanhaVirke: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, '
-        + 'joka kirjoitettiin esikaupungin puiselle näyttämölle',
-      kohdekartta: ['nosto-tonava-kaunoinen', 'nosto-taikahuilu-wiedenissa'],
-      pooli: ['nosto-tonava-kaunoinen', 'nosto-taikahuilu-wiedenissa'],
-    },
-    {
-      kaupunki: 'lontoo',
-      sivu: 'nykytaide',
-      vanhaVirke: 'Lontoossa nykytaide ei pysy museon seinällä: sitä maalataan '
-        + 'junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja '
-        + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille.',
-      kohdekartta: ['nosto-leake-streetin-tunneli', 'nosto-neljas-jalusta',
-        'nosto-tate-modernin-turbiinihalli', 'nosto-orbitin-liukumaki'],
-      pooli: ['nosto-leake-streetin-tunneli', 'nosto-neljas-jalusta',
-        'nosto-tate-modernin-turbiinihalli', 'nosto-orbitin-liukumaki'],
-    },
-    {
-      kaupunki: 'lontoo',
-      sivu: 'luonto',
-      vanhaVirke: 'Thames on vuorovesijoki, ja laskuveden aikaan sen kivinen '
-        + 'ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on '
-        + 'toinen maailma: aidattu puisto, jossa kulkee vapaana lauma hirviä.',
-      kohdekartta: ['syvennys-lontoo-vuorovesi'],
-      paakartta: ['hirvet'],
-    },
-    {
-      kaupunki: 'wien',
-      sivu: 'tiede',
-      vanhaVirke: 'Isoisän matkavuonna Wien avasi maailmannäyttelyn ja '
-        + 'vuoristovesijohdon. Näyttelyhallissa sattui myös vahinko, joka '
-        + 'muutti tehtaat: kone pyörähti väärään suuntaan.',
-      kohdekartta: ['syvennys-wien-vesijohto'],
-      paakartta: ['sahko', 'maailmannayttely-1873'],
-    },
-    {
-      kaupunki: 'wien',
-      sivu: 'luonto',
-      vanhaVirke: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista '
-        + 'vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi '
-        + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän',
-      paakartta: ['kauriit', 'kirahvimuoti'],
-    },
-    {
-      kaupunki: 'madrid',
-      sivu: 'urheilu',
-      vanhaVirke: 'Kaupungissa on kaksi suurta jalkapalloseuraa, ja kummallakin '
-        + 'on oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan',
-      kohdekartta: ['nosto-madridin-kaksi-joukkuetta'],
-      pooli: ['nosto-madridin-kaksi-joukkuetta'],
-    },
-    {
-      kaupunki: 'madrid',
-      sivu: 'rakennukset',
-      vanhaVirke: 'Kaupungin läpi murrettiin katu hopeisella hakulla, ja '
-        + 'palaneen linnan tilalle rakennettiin sellainen, joka ei voisi palaa.',
-      kohdekartta: ['nosto-gran-vian-murto', 'nosto-palamaton-linna'],
-      pooli: ['nosto-gran-vian-murto', 'nosto-palamaton-linna'],
-    },
-    {
-      kaupunki: 'berliini',
-      sivu: 'rakennukset',
-      vanhaVirke: 'Syksyllä 1969 Alexanderplatzille valmistui neljän päivän '
-        + 'välein kaksi asiaa: kello, joka näyttää maailman ajat, ja torni, '
-        + 'joka näkyy kaikkialle kaupunkiin',
-      kohdekartta: ['nosto-paavin-kosto', 'nosto-maailmankello'],
-      pooli: ['nosto-paavin-kosto', 'nosto-maailmankello'],
-    },
-    {
-      kaupunki: 'berliini',
-      sivu: 'historia',
-      vanhaVirke: 'Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta '
-        + '1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta '
-        + 'museo maksoi 20 000 kultamarkkaa.',
-      kohdekartta: ['brandenburgin-portti', 'syvennys-berliini-karhu',
-        'nosto-archaeopteryx'],
-      pooli: ['nosto-archaeopteryx'],
-      paakartta: ['kopenickin-kapteeni'],
-    },
-    {
-      kaupunki: 'pariisi',
-      sivu: 'musiikki',
-      vanhaVirke: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin '
-        + 'laidan asuntovaunuleiriltä — ja yksi ooppera kaatui täällä '
-        + 'ensi-illassaan ennen kuin se nousi maineeseen muualla.',
-      kohdekartta: ['nosto-pariisi-soi', 'nosto-carmenin-ensi-ilta'],
-      pooli: ['nosto-pariisi-soi', 'nosto-carmenin-ensi-ilta'],
-    },
-    {
-      kaupunki: 'pariisi',
-      sivu: 'historia',
-      vanhaVirke: 'Isoisän matkavuoden Pariisi oli yhä piirityksen ja palon '
-        + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
-        + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
-        + 'pilkkaa.',
-      kohdekartta: ['syvennys-pariisi-kyyhkyposti', 'syvennys-pariisi-tuileriat',
-        'syvennys-pariisi-impressionistit'],
-    },
-    {
-      kaupunki: 'amsterdam',
-      sivu: 'taide',
-      vanhaVirke: 'Kaksi maalausta samassa museossa: toisesta sahattiin palat '
-        + 'pois, toisen alta löytyi tavaroita, jotka maalari itse peitti.',
-      kohdekartta: ['nosto-amsterdamin-yovartio', 'nosto-amsterdamin-maitotytto'],
-      pooli: ['nosto-amsterdamin-yovartio', 'nosto-amsterdamin-maitotytto'],
-    },
-    {
-      kaupunki: 'rooma',
-      sivu: 'arki',
-      vanhaVirke: 'Roomassa vesi ei ole koskaan loppunut kesken: sama vuorilta '
-        + 'tuleva virta, joka täytti keisarien kylpylät, tulee yhä ilmaiseksi '
-        + 'kadunkulman rautapylväästä',
-      kohdekartta: ['nosto-aqua-virgo', 'nosto-rooman-nasone'],
-      pooli: ['nosto-aqua-virgo', 'nosto-rooman-nasone'],
-    },
-    {
-      kaupunki: 'rooma',
-      sivu: 'historia',
-      vanhaVirke: 'Paavi jäi Vatikaaniin vangiksi kolme vuotta ennen isoisän '
-        + 'käyntiä, Aventinuksella katsotaan avaimenreiästä kolmen valtion '
-        + 'läpi, ja Caesarin murhapaikalla asuu kissalauma.',
-      kohdekartta: ['syvennys-rooma-vatikaani', 'syvennys-rooma-kissat'],
-      paakartta: ['avaimenreika'],
-    },
-  ];
+  const OHJAAVAT = KAUPUNKILEHDEN_SIIRTYNEET;
 
   // Erien 5 ja 10 tyhjentämät sivut mitattiin koneellisesti (ks. yllä).
   // Jos luku muuttuu, listaa on täydennettävä — muuten uusi tyhjentynyt
@@ -394,10 +262,11 @@ test('kartalle ohjaava johdanto pitää lupauksensa', async () => {
       `${missa}: sivulla on taas omia juttuja — johdanto kannattaa tarkistaa`);
     assert.ok(osasto.johdanto?.includes(vanhaVirke),
       `${missa}: johdannon vanha virke ei ole enää sanatarkasti tallella`);
-    assert.match(osasto.johdanto, /kartal/i,
-      `${missa}: tyhjentynyt sivu ei ohjaa lukijaa kartalle`);
-    assert.ok(osasto.johdanto.length > vanhaVirke.length,
-      `${missa}: johdantoon ei ole lisätty mitään vanhan virkkeen perään`);
+    // Omistaja 12.10.2026: johdannot on palautettu alkuperäisiksi (nostot
+    // näytetään sivulla ja löytyvät myös kartalta), joten kartalle ohjaavaa
+    // jatketta ei enää vaadita eikä sallita: johdanto on vanha virke.
+    assert.equal(osasto.johdanto.replace(/[.\s]+$/, ''), vanhaVirke.replace(/[.\s]+$/, ''),
+      `${missa}: johdanto ei ole alkuperäinen (vanha virke ilman lisäyksiä)`);
     assert.ok(kohdekartta.length + paakartta.length > 0,
       `${missa}: vartio ei nimeä yhtäkään juttua, jonka johdanto lupaa`);
 
@@ -426,6 +295,64 @@ test('kartalle ohjaava johdanto pitää lupauksensa', async () => {
   }
 });
 
+/*
+ * KARTALLE SIIRTYNEET JUTUT OVAT TAAS SIVULLA (omistaja 12.10.2026).
+ *
+ * Jokainen yllä olevan listan sivu saa nostonsa kartan lähteistä
+ * (js/lehtinostot.js) vanhassa nostomuodossa: otsikko, teksti ja kuva.
+ * Webin lehti (js/lehti.js rakennaSivut) ja natiivin vienti
+ * (tools/vienti/lehdet.mjs) lukevat saman funktion, joten jos tunnus
+ * katoaa lähteestä, juttu putoaa molemmista — ja tämä vartio kaatuu.
+ */
+test('kartalle siirtyneet jutut palaavat aihesivulle', () => {
+  for (const kohta of KAUPUNKILEHDEN_SIIRTYNEET) {
+    const missa = `${kohta.kaupunki}/${kohta.sivu}`;
+    const tunnukset = [...(kohta.kohdekartta ?? []), ...(kohta.paakartta ?? [])];
+    if (kohta.jarjestys) {
+      assert.deepEqual([...kohta.jarjestys].sort(), [...tunnukset].sort(),
+        `${missa}: jarjestys-listassa on oltava täsmälleen kohdekartan ja pääkartan jutut`);
+    }
+    const nostot = kaupunkilehdenSiirtyneetNostot(kohta.kaupunki, kohta.sivu);
+    assert.equal(nostot.length, tunnukset.length,
+      `${missa}: kaikki jutut eivät ratkenneet lähteestään (${nostot.length}/${tunnukset.length})`);
+    for (const n of nostot) {
+      assert.ok(n.otsikko, `${missa}: nostolta puuttuu otsikko`);
+      assert.ok(n.teksti?.length > 100, `${missa}/${n.otsikko}: nostolta puuttuu teksti`);
+      assert.ok(n.tiedosto || n.osoite || n.ampari, `${missa}/${n.otsikko}: nostolta puuttuu kuva`);
+      assert.ok(n.lahde, `${missa}/${n.otsikko}: kuvan lähderivi puuttuu`);
+      const kohde = n.karttaKohde ?? n.paakartta;
+      assert.ok(tunnukset.includes(kohde), `${missa}/${n.otsikko}: karttatunnus ${kohde} ei ole sivun listalla`);
+      assert.equal(Boolean(n.paakartta), (kohta.paakartta ?? []).includes(kohde),
+        `${missa}/${n.otsikko}: pääkartan jutulla paakartta, kohdekartan jutulla karttaKohde`);
+    }
+  }
+
+  // Amsterdamin taidesivu sanatarkasti kuten ennen 13.9.2026.
+  const [yovartio, maitotytto] = kaupunkilehdenSiirtyneetNostot('amsterdam', 'taide');
+  assert.equal(yovartio.otsikko, 'Yövartiosta sahattiin palat pois');
+  assert.equal(yovartio.karttaKohde, 'nosto-amsterdamin-yovartio');
+  assert.equal(yovartio.tiedosto, 'The Night Watch - cropped.jpg');
+  assert.equal(yovartio.galleria?.[0]?.tiedosto, 'Lundens - Nachtwache-Kopie.jpg');
+  assert.match(yovartio.teksti, /^Rembrandt maalasi vuonna 1642 /);
+  assert.equal(maitotytto.otsikko, 'Vermeer peitti omat esineensä maalilla');
+  assert.equal(maitotytto.karttaKohde, 'nosto-amsterdamin-maitotytto');
+  assert.equal(maitotytto.tiedosto, 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg');
+  assert.match(maitotytto.teksti, /^Maitotyttö on pienempi kuin useimmat kuvittelevat/);
+
+  // Sisältöpakettiin ei kosketa: sivun omat nostot pysyvät tyhjinä, ja
+  // täytetty sivu on vakaa kopio.
+  const sivu = KULTTUURI_KATEGORIAT.amsterdam.find((s) => s.id === 'taide');
+  assert.equal(sivu.nostot.length, 0);
+  const taytetty = kaupunkilehdenSivuNostoineen('amsterdam', sivu);
+  assert.notEqual(taytetty, sivu);
+  assert.equal(taytetty, kaupunkilehdenSivuNostoineen('amsterdam', sivu));
+  assert.equal(taytetty.nostot.length, 2);
+  assert.equal(taytetty.tehtava, sivu.tehtava, 'aarteen avaus / tehtävä pysyy sivun lopussa ennallaan');
+  // Sivu, jolla on omat nostot, palautuu sellaisenaan.
+  const oma = KULTTUURI_KATEGORIAT.amsterdam.find((s) => (s.nostot ?? []).length);
+  assert.equal(kaupunkilehdenSivuNostoineen('amsterdam', oma), oma);
+});
+
 test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () => {
   /*
    * MIKSI TÄMÄ ON OLEMASSA. ui.js hakee kohdekartan
@@ -443,7 +370,13 @@ test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () =>
    */
   const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
   const { PACKS } = await import('../js/pack.js');
+  const { PAAKAUPUNKIPISTEET } = await import('../js/packs/paakaupungit.js');
   const idt = new Set(PACKS.flatMap((p) => (p.cities ?? []).map((c) => c.id)));
+  // Pääkaupunkipisteen kartta avaimistetaan pisteen id:llä (PT 11.10.2026); se ei ole pysäkki.
+  for (const p of PAAKAUPUNKIPISTEET) idt.add(p.id);
+  // Juna 193 (KS cfb95e0b8): Reykjavíkin kevyt piste poistui, koska laudan islanti ON Reykjavík; piirtäjän avain reykjavik on
+  // saman kartan alias (KAUPUNKIKARTAT.islanti = KAUPUNKIKARTAT.reykjavik), joten se renderöityy laudan islannille.
+  for (const [avain, kartta] of Object.entries(KAUPUNKIKARTAT)) if ([...idt].some((id) => KAUPUNKIKARTAT[id] === kartta)) idt.add(avain);
   for (const avain of Object.keys(KAUPUNKIKARTAT)) {
     assert.ok(idt.has(avain),
       `kohdekartta "${avain}" ei vastaa yhdenkään laudan kaupunki-id:tä — `

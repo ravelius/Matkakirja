@@ -12,14 +12,11 @@ export const EUROPE_VALOKUVAT = {
   venetsia: {
     lisat: [
       {
-        tiedosto: 'Vaporetto Canal Grande stazione Santa Lucia Venezia.jpg',
+        tiedosto: "0 Venise, Vaporetto naviguant sur le Grand Canal .JPG",
         vuosi: '2016',
-        lahde: 'CC BY-SA 3.0 (Wolfgang Moroder, Commons)',
-        lyhyt: 'Vaporetto Canal Grandella Venetsiassa vuonna 2016.',
-        selite: 'Vaporetto eli vesibussi Canal Grandella Santa Lucian '
-          + 'rautatieaseman kohdalla. Venetsiassa julkinen liikenne kulkee '
-          + 'vettä pitkin, ja matkustajat seisovat keulassa kuten '
-          + 'päiväkirjassa.',
+        lahde: "Jean-Pol GRANDMONT, Wikimedia Commons (CC BY 4.0)",
+        lyhyt: "Vaporetto Canal Grandella, Venetsia",
+        selite: "Vaporetto eli vesibussi Canal Grandella vanhojen palatsien reunustamalla vesiväylällä. Venetsiassa julkinen liikenne kulkee vettä pitkin.",
       },
       {
         tiedosto: '(Venice) Palazzo Emo alla Maddalena - Facade on Canal Grande.jpg',
@@ -248,9 +245,9 @@ export const EUROPE_VALOKUVAT = {
         lahde: 'CC BY-SA 4.0 (Buiobuione, Commons)',
 
         lyhyt: 'Ferhadijan kadun kulttuurienrajamerkki Sarajevossa vuonna 2018.',
-        selite: 'Ferhadijan kävelykadulle upotettu merkki "Sarajevo Meeting of '
+        selite: 'Ferhadijan kävelykadulle upotettu merkki ”Sarajevo Meeting of '
 
-          + 'Cultures". Siitä eteenpäin katukuva vaihtuu ottomaanien '
+          + 'Cultures”. Siitä eteenpäin katukuva vaihtuu ottomaanien '
 
           + 'basaarista keskieurooppalaiseksi — tämän rajan päiväkirja '
 
@@ -468,8 +465,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Akropolis ja Hefaistoksen temppeli Ateenassa 1890-luvulla.',
     selite: 'Akropolis ja etualalla Hefaistoksen temppeli '
       + 'käsinvärittynä photochrom-vedoksena. Kaupunki oli tuolloin '
-      + 'pieni: Ateenassa asui noin 100 000 ihmistä, ja temppelien '
-      + 'ympärillä oli peltoa.',
+      + 'pieni, ja temppelien ympärillä oli peltoa.',
     uusi: {
       tiedosto: 'The Acropolis of Athens with the Parthenon, the Erecththeion and the Mycenean Fountain from Monastiraki Square on March 11, 2020.jpg',
       lahde: 'George E, Commons (CC BY-SA 4.0)',
@@ -542,33 +538,7 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
 
-        tiedosto: 'Knossos fresco of dolphins in queen\'s palace.JPG',
-        vuosi: 'noin 1600–1450 eaa. (kuvattu 2015)',
-        lahde: 'Paginazero, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa Kreetalla.',
-        selite: 'Delfiinifresko Knossoksen palatsin kuningattaren huoneessa. '
-          + 'Siniset delfiinit ui pienten kalojen seassa, ja alareunassa '
-          + 'kiertää kiehkurakuvio.',
-      },
-
-      {
-
-        tiedosto: 'Grand Staircase Knossos 2015.JPG',
-
-        vuosi: '2015',
-
-        lahde: 'CC0 (Stefan Bellini, Commons)',
-
-        lyhyt: 'Knossoksen suuri portaikko Kreetalla vuonna 2015.',
-        selite: 'Knossoksen suuri portaikko, joka yhdisti palatsin itäsiiven '
-
-          + 'kerroksia. Samasta kohdasta pääsee sekä ylös että alas, mikä '
-
-          + 'tekee palatsista helposti eksyttävän.',
-
-      },
 
     ],
     tiedosto: 'Cnossus - room of (?), columns - north entrance - DPLA - 156faa906e3d69e9b9c71702853f1b8a.jpg',
@@ -578,14 +548,6 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Knossoksen pohjoinen sisäänkäynti kaivausten aikaan. Arthur '
       + 'Evans alkoi kaivaa palatsia 1900 ja rakensi osan siitä '
       + 'uudelleen betonista — tapa, jota arkeologit yhä kiistelevät.',
-    uusi: {
-      tiedosto: 'Knossos North entrance bull fresco.jpg',
-      lahde: 'Jebulon, Commons (CC0)',
-      lyhyt: 'Knossoksen palatsin pohjoinen sisäänkäynti pylväineen ja härkäfreskon jäljennöksineen.',
-      selite: 'Knossoksen palatsin pohjoinen sisäänkäynti. Punaiset pylväät on '
-        + 'pystytetty uudelleen, ja seinällä on jäljennös härkäfreskosta, '
-        + 'jonka alkuperäinen on Herakleionin museossa.',
-    },
   },
 
   sisilia: {
@@ -728,7 +690,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Ragusa eli Dubrovnik Itävalta-Unkarin aikaan 1890-luvulla.',
     selite: 'Ragusa — Dubrovnikin vanha nimi — Itävalta-Unkarin aikaan. '
       + 'Kaupunki oli menettänyt itsenäisyytensä 1808, ja vedoksen '
-      + 'kyljessä lukee siksi "Austro-Hungary".',
+      + 'kyljessä lukee siksi ”Austro-Hungary”.',
     uusi: {
       tiedosto: 'Steep coast near the city wall in the Old Town of Dubrovnik, Croatia (48613191222).jpg',
       lahde: 'dronepicr, Commons (CC BY 2.0)',
@@ -802,7 +764,7 @@ export const EUROPE_VALOKUVAT = {
     lahde: 'Wikimedia Commons (PD)',
     lyhyt: 'Banya Bashin moskeija Sofiassa noin vuonna 1900.',
     selite: 'Banya Bashin moskeija noin vuonna 1900. Se rakennettiin '
-      + '1566 kuumien lähteiden päälle — nimi tarkoittaa "monta kylpyä". '
+      + '1566 kuumien lähteiden päälle — nimi tarkoittaa ”monta kylpyä”. '
       + 'Bulgaria oli vasta itsenäistynyt, ja Sofiasta tehtiin '
       + 'pääkaupunki 1879.',
     uusi: {
@@ -1340,9 +1302,9 @@ export const EUROPE_VALOKUVAT = {
 
           + 'kyltti on katalaaniksi (Carrer del Hostal d\'En Sol), vanha '
 
-          + 'kivikyltti samassa kulmassa taas espanjaksi: \'Calle del Correo '
+          + 'kivikyltti samassa kulmassa taas espanjaksi: ’Calle del Correo '
 
-          + 'Viejo\'.',
+          + 'Viejo’.',
 
       },
 
@@ -1413,8 +1375,8 @@ export const EUROPE_VALOKUVAT = {
 
         lahde: 'Ben van Meerendonk / AHF, kokoelma IISG, Commons (CC BY-SA 2.0)',
 
-        lyhyt: 'Katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa vuonna 1951.',
-        selite: 'Perleen katu-urku \'de Arabier\' Museumpleinilla Amsterdamissa '
+        lyhyt: 'Katu-urku ’de Arabier’ Museumpleinilla Amsterdamissa vuonna 1951.',
+        selite: 'Perleen katu-urku ’de Arabier’ Museumpleinilla Amsterdamissa '
 
           + '15. lokakuuta 1951; lihakaupan poika on pysähtynyt katsomaan. '
 
@@ -1759,16 +1721,14 @@ export const EUROPE_VALOKUVAT = {
 
       {
 
-        tiedosto: 'CH-NB Photoglob-Wehrli EAD-WEHR-13555a-B.tif',
+        tiedosto: 'Cow with Eiger, Mönch, Jungfrau.jpg',
 
-        vuosi: 'noin 1910',
+        lahde: 'Leif Söderlund, Wikimedia Commons (CC BY-SA 4.0)',
 
-        lahde: 'Photoglob-Wehrli, Sveitsin kansalliskirjasto, Commons (public domain)',
+        lyhyt: 'Lehmä laitumella Eigerin, Mönchin ja Jungfraun edessä.',
+        selite: 'Lehmä laitumella Eigerin, Mönchin ja Jungfraun edessä. Karja '
 
-        lyhyt: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin 1910.',
-        selite: 'Lehmiä ja alppimaja Eigerin, Mönchin ja Jungfraun edessä noin '
-
-          + 'vuonna 1910. Karja vietiin kesäksi ylös laitumelle ja haettiin '
+          + 'vietiin perinteisesti kesäksi ylös laitumelle ja haettiin '
 
           + 'syksyllä alas — juuri näiltä rinteiltä kellojen ääni kantautui '
 
@@ -2007,7 +1967,7 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Vanhankaupungin tori torimyyntipäivänä 1890-luvulla, '
               + 'käsinvärittynä photochrom-vedoksena. Kojujen katokset '
               + 'täyttävät koko aukion. Alkuperäisessä kuvatekstissä lukee '
-              + '"Varsova, Venäjä" — kaupunki kuului tuolloin Venäjän '
+              + '”Varsova, Venäjä” — kaupunki kuului tuolloin Venäjän '
               + 'keisarikuntaan.',
     uusi: {
       tiedosto: '2018-07-08 Old Town Market Square in Warsaw.jpg',
@@ -2026,24 +1986,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 57.jpg',
-
-        vuosi: '2016',
-
-        lahde: 'CC BY-SA 4.0 (Diego Delso, Commons)',
-
-        lyhyt: 'Unirii-bulevardi ja parlamenttitalo Bukarestissa vuonna 2016.',
-        selite: 'Unirii-bulevardi suihkulähteineen ja sen päässä kohoava '
-
-          + 'parlamenttitalo, päiväkirjan "maailman painavin rakennus". '
-
-          + 'Bulevardi ja palatsi rakennettiin 1980-luvulla vanhan '
-
-          + 'kaupunginosan tilalle.',
-
-      },
 
       {
 
@@ -2097,7 +2039,7 @@ export const EUROPE_VALOKUVAT = {
     selite: 'Romanian Ateneum ja sen puutarha käsinvärittynä postikorttina '
               + '1900-luvun taitteessa. Konserttitalo vihittiin vuonna 1888, ja '
               + 'osa rakennusrahoista kerättiin kansalaiskeräyksellä, jonka '
-              + 'tunnuslause oli "Dați un leu pentru Ateneu" — antakaa yksi leu '
+              + 'tunnuslause oli ”Dați un leu pentru Ateneu” — antakaa yksi leu '
               + 'Ateneumille.',
     uusi: {
       tiedosto: 'Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg',
@@ -2114,16 +2056,6 @@ export const EUROPE_VALOKUVAT = {
 
     lisat: [
 
-      {
-
-        tiedosto: 'Arsenalna station. Kyiv metro.jpg',
-        vuosi: '2012',
-        lahde: 'Ahernar, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Arsenalnan metroaseman laiturihalli Kiovassa vuonna 2012.',
-        selite: 'Arsenalnan aseman laiturihalli Kiovassa. Marmoripilarit ja '
-          + 'matala holvi ovat 105 metrin syvyydessä maan alla, ja halli on '
-          + 'poikkeuksellisen lyhyt.',
-      },
 
       {
 
@@ -2244,24 +2176,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Komsomolskaya-KL MosMetro station 02-2015 platform.jpg',
-
-        vuosi: '2015',
-
-        lahde: 'A. Savin, Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Komsomolskajan metroasema Moskovassa vuonna 2015.',
-        selite: 'Komsomolskajan asema Moskovan metron kehälinjalla. Pylväsrivit '
-
-          + 'kannattavat holvia, katossa on mosaiikkeja ja rivi '
-
-          + 'kattokruunuja — tällaiselta asemalta päiväkirjan kirjoittaja '
-
-          + 'unohti nousta pois.',
-
-      },
 
     ],
     tiedosto: 'Church of St. Basil, Red Square Moscow LCCN2017660946.jpg',
@@ -2435,22 +2349,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Latvian Song festival 2008.jpg',
-
-        vuosi: '2008',
-
-        lahde: 'Laima Gūtmane (simka), Commons (CC BY-SA 3.0)',
-
-        lyhyt: 'Latvian laulujuhla Riian Mežaparksin laulukentällä vuonna 2008.',
-        selite: 'Latvian laulujuhla Riian Mežaparksin suurella laulukentällä '
-
-          + 'vuonna 2008. Ensimmäiset yleiset latvialaiset laulujuhlat '
-
-          + 'pidettiin Riiassa kesällä 1873, ja perinne jatkuu yhä.',
-
-      },
 
       {
         tiedosto: 'Latvia Riga Cathedral weather cock.jpg',
@@ -2506,24 +2404,6 @@ export const EUROPE_VALOKUVAT = {
 
       },
 
-      {
-
-        tiedosto: 'Mermaid of Užupis.jpg',
-
-        vuosi: '2024',
-
-        lahde: 'Michał Derela, Commons (CC BY-SA 4.0)',
-
-        lyhyt: 'Užupiksen merenneitopatsas Vilnia-joen rannassa vuonna 2024.',
-        selite: 'Užupiksen merenneito istuu muurin kolossa Vilnia-joen rannassa, '
-
-          + 'aivan sillan vieressä. Pronssiveistos on kaupunginosan '
-
-          + 'tunnetuin maamerkki, ja se on siinä samassa kohdassa, jonka '
-
-          + 'päiväkirja mainitsee.',
-
-      },
 
     ],
     tiedosto: 'Vilnia, Vostraja Brama. Вільня, Вострая Брама (S. Fleury, 1900).jpg',
@@ -2696,7 +2576,7 @@ export const EUROPE_VALOKUVAT = {
     lyhyt: 'Senaatintori ja Nikolainkirkko Helsingissä 1890-luvulla.',
     selite: 'Senaatintori ja Nikolainkirkko käsinvärittynä '
               + 'photochrom-vedoksena. Kirkko valmistui 1852 Carl Ludvig '
-              + 'Engelin piirustusten mukaan. Vedoksen kyljessä lukee "Russia": '
+              + 'Engelin piirustusten mukaan. Vedoksen kyljessä lukee ”Russia”: '
               + 'Suomi oli tuolloin Venäjän suuriruhtinaskunta.',
     uusi: {
       tiedosto: 'Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg',
@@ -2754,13 +2634,10 @@ export const EUROPE_VALOKUVAT = {
       + 'lakit päässä, ja kosken takana avautuu Hämeenkatu kivitaloineen. '
       + 'Oikealla puistossa on koristeellinen puinen paviljonki.',
     uusi: {
-      tiedosto: 'Hämeensilta 2021.jpg',
-      lahde: 'Tiia Monto, Commons (CC BY-SA 4.0)',
-      lyhyt: 'Sama silta tänään: vuoden 1929 kivisilta korvattiin 2019 uudella, graniitilla verhoiltuna.',
-      selite: 'Sama silta tänään. Vuoden 1929 kivisilta korvattiin 2019 '
-        + 'uudella, joka rakennettiin vanhan näköiseksi ja verhoiltiin '
-        + 'punertavalla graniitilla. Kaiteella seisoo yhä yksi Wäinö '
-        + 'Aaltosen neljästä pronssiveistoksesta.',
+      tiedosto: "Hämeensilta bridge in Tampere, Finland, 2024 July.jpg",
+      lahde: "Pete, Wikimedia Commons (CC BY 2.0)",
+      lyhyt: "Hämeensilta ylittää Tammerkosken Tampereen keskustassa.",
+      selite: "Hämeensilta kaartuu Tammerkosken yli Tampereen keskustassa; etualalla on joen kirkas vesi ja pohjakasvillisuutta.",
     },
   },
 
@@ -2973,7 +2850,7 @@ export const EUROPE_VALOKUVAT = {
         lahde: 'Panek, Wikimedia Commons (CC BY-SA 4.0)',
         lyhyt: 'Arno-tulvan 1966 muistolaatta Firenzen talon seinässä vuonna 2013.',
         selite: 'Marmorilaatta talon seinässä kolmen metrin korkeudella: '
-          + '"IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI" — tähän asti '
+          + '”IL 4 NOVEMBRE 1966 L\'ACQUA DELL\'ARNO ARRIVÒ QUI” — tähän asti '
           + 'Arnon vesi nousi. Vastaavia laattoja on ympäri keskustaa.',
       },
       {
@@ -3256,5 +3133,959 @@ export const EUROPE_VALOKUVAT = {
                 + '1960 valmistunut Tromssan silta. Asukkaita on nyt noin 80 '
                 + '000.',
     },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    tiedosto: 'Belgrade – Kalemegdan (2021) 02.jpg',
+    vuosi: '2021',
+    lahde: 'Imeao, Commons (CC0)',
+    lyhyt: 'Belgradin linnoitus on kaupungin vanhin osa.',
+    selite: 'Linnoituksen edustan kentältä alettiin muotoilla Kalemegdanin puistoa 1860-luvun lopulla, ja sen näköalat avautuvat Savan ja Tonavan yhtymäkohtaan.',
+  },
+  bratislava: {
+    tiedosto: 'Bratislava Castle (view from Slavín), Slovakia.JPG',
+    vuosi: 'nykyisin',
+    lahde: 'Kiwiev, Commons (CC0)',
+    lyhyt: 'Bratislavan linna kohoaa vanhan kaupungin yläpuolella kukkulalla.',
+    selite: 'Linna paloi raunioksi 1811 ja oli yhä raunio isoisän matkavuonna 1873, ja sitä kunnostettiin 1950-luvulta alkaen.',
+  },
+  chisinau: {
+    tiedosto: 'Arco del triunfo, Chisináu, Moldavia, 2023-11-03, DD 27.jpg',
+    vuosi: '2023',
+    lahde: 'Diego Delso, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Riemukaari valmistui 1840-luvulla muistoksi Venäjän voitosta Turkin sodassa.',
+    selite: 'Arkkitehti Luka Zaushkevichin suunnittelema kaari on 13 metriä korkea ja kaksikerroksinen.',
+  },
+  minsk: {
+    tiedosto: 'Svislach river in Minsk.jpg',
+    vuosi: '2018',
+    lahde: 'Viktar Palstsiuk, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Svislač on 327 kilometriä pitkä Berezinan sivujoki, ja se virtaa Minskin halki.',
+    selite: 'Svislač on Minskin halki virtaava joki, jonka varrella kaupunki sijaitsee Minskin kukkuloiden kaakkoisrinteellä.',
+  },
+  podgorica: {
+    tiedosto: 'View of Hram Hristovog Vaskrsenja in Podgorica.jpg',
+    lahde: 'Vux33, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Katedraali pyhitettiin vuonna 2013 kahden vuosikymmenen rakennustyön jälkeen.',
+    selite: 'Kristuksen ylösnousemuksen katedraalin rakennus alkoi vuonna 1993, ja se pyhitettiin vuonna 2013. Se on Montenegron ja Rannikon metropoliitan kirkko.',
+  },
+  skopje: {
+    tiedosto: 'Stone Bridge (44229534855).jpg',
+    vuosi: '2018',
+    lahde: 'jjmusgrove from Glen Allen, VA, United States, Commons (CC BY 2.0)',
+    lyhyt: 'Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe.',
+    selite: 'Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe. Se valmistui 1400-luvulla, viimeistään 1469, ja yhdistää Makedonia-aukion Vanhaan basaariin.',
+  },
+  tirana: {
+    tiedosto: 'Clock Tower and Mosque of Tirana (night).jpg',
+    vuosi: '2015',
+    lahde: 'Liridon, Commons (CC0)',
+    lyhyt: 'Et\'hem Beyn moskeija ja kellotorni muodostavat Skanderbeg-aukion historiallisen kulmauksen.',
+    selite: 'Moskeija valmistui 1819 tai 1821 ja kellotorni 1822 tai 1830, joten molemmat seisoivat jo isoisän matkavuonna 1873.',
+  },
+  zagreb: {
+    tiedosto: 'Kamenita vrata 29102016-002.jpg',
+    vuosi: '2016',
+    lahde: 'Yamen, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Kivinen portti on Gradecin muurien ainoa säilynyt kaupunginportti.',
+    selite: 'Kivinen portti rakennettiin 1200-luvulla osana Gradecin muureja, ja sen holvin alla on Neitsyt Marian maalaus, joka säilyi vuoden 1731 tulipalossa.',
+  },
+  andorralavella: {
+    tiedosto: 'Casa de la Vall. 1580. Andorra 149.jpg',
+    vuosi: '2013',
+    lahde: 'Luis Miguel Bugallo Sánchez (Lmbuga), Commons (CC BY-SA 3.0)',
+    lyhyt: 'Casa de la Vall oli Andorran parlamentin paikka vuoteen 2011.',
+    selite: 'Casa de la Vall rakennettiin Busquetsin suvun kartanoksi, ja talon vaakunassa on vuosiluku 1580. Andorran yleiskokous osti sen 1700-luvun alussa, ja se toimi parlamenttitalona vuoteen 2011.',
+  },
+  bern: {
+    tiedosto: 'Bear pit, Berne, Switzerland-LCCN2001701111.jpg',
+    vuosi: 'noin 1890–1900',
+    lahde: 'Photochrom Print Collection, Commons (PD)',
+    lyhyt: 'Bärengraben, Bernin karhukuoppa, jonka neljäs versio avattiin 1857.',
+    selite: 'Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä: nykyinen, neljäs kuoppa avattiin 1857.',
+  },
+  monaco: {
+    tiedosto: 'Monaco Rocher de Monaco Vue sur le Port Hercule 01.jpg',
+    vuosi: '2021',
+    lahde: 'Zairon, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Port Hercule on Monacon ainoa syvänmeren satama, ja sitä on käytetty antiikista asti.',
+    selite: 'Sataman nimi viittaa Herkuleeseen, jonka palvonnasta Monoikoksen siirtokunta sai nimensä.',
+  },
+  reykjavik: {
+    tiedosto: 'Austurvöllur 2023.jpg',
+    vuosi: '2023',
+    lahde: 'APK, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Austurvöllur on Reykjavíkin keskustan aukio, jonka laidalla ovat tuomiokirkko ja Alþingin talo.',
+    selite: 'Austurvöllur oli 1700-luvun alussa paljon nykyistä suurempi. Nykyään aukion ympärillä on kahviloita ja baareja.',
+  },
+  sanmarino: {
+    tiedosto: 'Guaita Fortress and San Marino (2023).jpg',
+    vuosi: '2023',
+    lahde: 'Terragio67, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Guaitan linnake on yksi Monte Titanon kolmesta tornista.',
+    selite: 'Linnake on kuvattu San Marinon lipussa ja vaakunassa, ja sitä on vahvistettu useasti vuosisatojen aikana.',
+  },
+  vaduz: {
+    tiedosto: 'Schloss Vaduz. Ansicht von Westen. 2015-10-03 17-52-32.jpg',
+    vuosi: '2015',
+    lahde: 'Shesmax, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Vaduzin linna on Liechtensteinin ruhtinaan palatsi ja kaupungin tunnetuin maamerkki.',
+    selite: 'Linnan vanhimmat osat ovat 1100-luvulta, ja ruhtinasperheen vakituinen asuinpaikka se on ollut vuodesta 1938.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    tiedosto: 'Qasr al Hosn.jpg',
+    lahde: 'Darthjipsu, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus ja nykyään museo.',
+    selite: 'Qasr Al Hosn on Abu Dhabin vanhin kivirakennus. Linnake oli emiirin palatsi ja hallituspaikka vuoteen 1966, ja nykyään se on museo ja kulttuurikohde.',
+  },
+  amman: {
+    tiedosto: 'Amman Odeum c 1900.jpg',
+    vuosi: 'noin 1900',
+    lahde: 'American Colony (Jerusalem), Commons (PD)',
+    lyhyt: 'Roomalaisajan raunio Ammanissa noin vuonna 1900.',
+    selite: 'Noin vuonna 1900 Amman oli pieni tšerkessien asuttama kylä, jossa seisoi yhä roomalaisajan raunioita.',
+  },
+  baku: {
+    tiedosto: 'Baku, 1861.jpg',
+    vuosi: '1861',
+    lahde: 'Alexander Ulsky (1837–1868), Commons (PD)',
+    lyhyt: 'Baku vuonna 1861: muurien ympäröity kaupunki Bakunlahden rannalla.',
+    selite: 'Baku oli tuolloin Venäjän keisarikunnan lääninpääkaupunki, ja muurien sisäpuolinen kaupunki erottui muurien ulkopuolisesta.',
+  },
+  beirut: {
+    tiedosto: 'View of Beirut, looking towards body of water) - Bonfils LCCN2004668094.jpg',
+    vuosi: 'noin 1867',
+    lahde: 'Maison Bonfils (Beirut, Lebanon), photographer, Commons (PD)',
+    lyhyt: 'Beirut 1800-luvulla, kasvava satama- ja kauppakaupunki.',
+    selite: 'Beirut oli 1800-luvulla kasvava satama- ja kauppakaupunki, jolla oli tiiviit yhteydet Eurooppaan.',
+  },
+  jerevan: {
+    tiedosto: 'Caucase. Mosquée Géhu. Erivan - (mission) de Baye ; (photogr.) de Baye ; (photogr. reprod. par) Molteni (pour la conférence donnée par) de Baye - btv1b53251410k.jpg',
+    vuosi: '1898',
+    lahde: 'Baye, Joseph de (1853-1931), Commons (PD)',
+    lyhyt: 'Sininen moskeija Erivanissa ranskalaisen Joseph de Bayen retkikunnan vedoksessa 1898.',
+    selite: 'Vedoksessa näkyy moskeijan laatoitettu kupoli puiden takana ja ihmisiä pihalla. Moskeija rakennettiin 1765–66 Erivanin kaanin Hoseyn Ali Khanin tilauksesta, ja vedoksen tekijä on ranskalainen Joseph de Baye.',
+  },
+  manama: {
+    tiedosto: 'Portuguese Fort Bahrain 1870.jpg',
+    vuosi: 'noin 1870',
+    lahde: 'Unknown / Anonymous photographer, Commons (PD)',
+    lyhyt: 'Vanha linnake Bahrainissa noin vuonna 1870, muutamaa vuotta ennen isoisän matkavuotta.',
+    selite: 'Vanha valokuva linnakkeesta Bahrainissa noin vuodelta 1870. Kuvan tarkkaa kohdetta ei ole varmistettu.',
+    uusi: {
+      tiedosto: 'Bahrain Fort March 2015.JPG',
+      lahde: 'Martin Falbisoner, Commons (CC BY-SA 4.0)',
+      lyhyt: 'Qal\'at al-Bahrain nykyään: UNESCOn maailmanperintökohde noin kuuden kilometrin päässä Manamasta.',
+      selite: 'Qal\'at al-Bahrainin linnake on osittain kaivettu esiin ja nimetty UNESCOn maailmanperintökohteeksi. Se sijaitsee noin kuuden kilometrin päässä Manamasta länteen.',
+    },
+  },
+  tbilisi: {
+    tiedosto: 'Tbilisi XIXc 04.jpg',
+    vuosi: '1800-luvun loppu',
+    lahde: 'Dmitri Yermakov, Commons (PD)',
+    lyhyt: 'Tiflisin katunäkymä 1800-luvun lopulta, ajalta ennen sähköraitiotietä.',
+    selite: 'Tiflisin katunäkymä 1800-luvun lopulta. Kaupungissa liikennöi hevosraitiotie 1800-luvun lopulta, ja sähköraitiotie avattiin vasta 1900-luvun alussa.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    tiedosto: 'A bride\'s arrival before the house of her bridegroom - a wedding, Ramallah, Palestine - DPLA - 3b81a2b05b83c9447910b7487c7606e8 (page 1).jpg',
+    vuosi: '1900',
+    lahde: 'Underwood & Underwood, Commons (PD)',
+    lyhyt: 'Häät Ramallahissa noin vuonna 1900: väkijoukko kokoontuu, kun morsian saapuu sulhasen talolle.',
+    selite: 'Kuva on Underwood & Underwoodin stereokuva, jossa kyläläisiä seisoo puun ja kivimuurin luona morsiamen saapuessa. Isoisän matkavuonna 1873 Ramallah oli vielä kivitalojen kylä, jonka asukkaat olivat enimmäkseen kreikkalaisen riituksen kristittyjä.',
+    uusi: {
+      tiedosto: '2010-08 Ramallah 43.jpg',
+      lahde: 'Ralf Lotys (Sicherlich), Commons (CC BY 3.0)',
+      lyhyt: 'Moskeija ja kerrostaloja Ramallahin rinteillä nykyään.',
+      selite: 'Kivitalojen kylästä on kasvanut kerrostalojen täyttämä kaupunki: Ramallahin kaupungissa asui vuonna 2017 noin 39 000 ihmistä.',
+    },
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Valokuva (vain dataa: ei pysäkkiä, ei kuluttajaa vielä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
+  alger: {
+    tiedosto: 'Botanical garden in Algiers.jpg',
+    lyhyt: 'Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.',
+    selite: 'Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.',
+    lahde: 'Red amine, Commons (CC BY-SA 3.0)',
+    vuosi: '2014',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg',
+    suora: true,
+  },
+  banjul: {
+    tiedosto: 'Gambia (9383667592).jpg',
+    lyhyt: 'Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.',
+    selite: 'Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.',
+    lahde: 'Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)',
+    vuosi: '2013',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/photo-f2a793d1ec66e9601ddf.jpg',
+    suora: true,
+  },
+  bissau: {},
+  conakry: {
+    tiedosto: 'Conakrybak3.jpg',
+    lyhyt: 'Conakryn Ratoman rantakallioilla vuonna 2021.',
+    selite: 'Conakryn Ratoman ja Taouyan rantakalliot vuoden 2021 valokuvassa kuuluvat kaupungin meriympäristöön.',
+    lahde: 'Bakayoko Malal, Commons (CC BY-SA 4.0)',
+    vuosi: '2021',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/photo-80060729c816f638e96f.jpg',
+    suora: true,
+  },
+  monrovia: {
+    tiedosto: 'Liberia, Africa - panoramio (270).jpg',
+    lyhyt: 'Palmut ja Atlantti Monroviassa vuonna 2013.',
+    selite: 'Monrovian rannikon palmut ja Atlantin meri vuoden 2013 valokuvassa muodostavat kaupungin luontomaisemaa.',
+    lahde: 'blk24ga, Commons (CC BY 3.0)',
+    vuosi: '2013',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/photo-c151f0bf12330eec597f.jpg',
+    suora: true,
+  },
+  nouakchott: {
+    tiedosto: 'Mauritania periferia della capitale.jpg',
+    lyhyt: 'Aurinkopaneelilla varustettuja valaisinpylväitä Nouakchottin kadulla.',
+    selite: 'Katu kulkee hiekkaisten pihojen ja matalien rakennusten välissä. Sen reunoilla on valaisinpylväitä, joiden yläosassa näkyy aurinkopaneeli.',
+    lahde: 'Cooperazione, Commons (CC BY-SA 4.0)',
+    vuosi: '2020',
+  },
+  praia: {
+    tiedosto: 'Praia-Plage de Gamboa (5).jpg',
+    lyhyt: 'Gamboan ranta ja Plateau Praiassa vuonna2012.',
+    selite: 'Gamboan ranta ja Plateau Praiassa vuonna2012.',
+    lahde: 'Ji-Elle, Commons (CC BY-SA 3.0)',
+    vuosi: '2012',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg',
+    suora: true,
+  },
+  rabat: {
+    tiedosto: 'Chellah-Storks.jpg',
+    lyhyt: 'Chellahin puissa pesii haikaroita.',
+    selite: 'Chellahin haikarayhdyskunnan pesiä on raunioalueen puissa, joten arkeologinen käyntipaikka on myös lintujen elinympäristö.',
+    lahde: 'Steven C. Price, Commons (CC BY-SA 4.0)',
+    vuosi: '2007',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/photo-94f135d13d027ffbba61.jpg',
+    suora: true,
+  },
+  tunis: {
+    tiedosto: 'View over the Medina of Tunis 02.jpg',
+    lyhyt: 'Tunisin medinan kattojen kokonaisuus vuonna 2019.',
+    selite: 'Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.',
+    lahde: 'Kritzolina, Commons (CC BY-SA 4.0)',
+    vuosi: '2019',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/photo-fc208a7a51424245a6c2.jpg',
+    suora: true,
+  },
+  abuja: {
+    tiedosto: 'Abuja landscape view.jpg',
+    lyhyt: 'Abujan kallioista maisemaa ja kaupunkiväylää.',
+    selite: 'Abujan kallioista maisemaa ja kaupunkiväylää.',
+    lahde: 'Umasoyee, Commons (CC BY-SA 4.0)',
+    vuosi: '2023',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/photo-89d3b11177592bb5b491.jpg',
+    suora: true,
+  },
+  accra: {
+    tiedosto: 'Accra, korle gonno.jpg',
+    lyhyt: 'Accra on Guineanlahden rannikkokaupunki.',
+    selite: 'Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.',
+    lahde: 'Elijah Johnson, Commons (CC BY-SA 4.0)',
+    vuosi: '2020-luku',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/photo-79d9743236d4672b1520.jpg',
+    suora: true,
+  },
+  bamako: {
+    tiedosto: 'Bamako night hills may 2007.jpg',
+    lyhyt: 'Bamako yömaisemassa vuonna 2007.',
+    selite: 'Bamako yömaisemassa vuonna 2007.',
+    lahde: 'https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)',
+    vuosi: '2007',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/photo-9ad63c42d2d2461e0811.jpg',
+    suora: true,
+  },
+  lome: {
+    tiedosto: 'Aboukey Mangrove5.jpg',
+    lyhyt: 'Mangrovekasvillisuutta Loméssa.',
+    selite: 'Mangrovekasvillisuutta Loméssa.',
+    lahde: 'Aboukey, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/lome/photo-0bd321e7faeadfe5720c.jpg',
+    suora: true,
+  },
+  ndjamena: {
+    tiedosto: 'ISS021-E-26414 - View of Chad.jpg',
+    lyhyt: 'N’Djamenan seutua avaruudesta kuvattuna.',
+    selite: 'N’Djamenan seutua avaruudesta kuvattuna.',
+    lahde: 'Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)',
+    vuosi: '2009',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/photo-ca89f597113701392129.jpg',
+    suora: true,
+  },
+  niamey: {
+    tiedosto: 'Niamey from the sky.jpg',
+    lyhyt: 'Niameyn asuinkortteleita ilmasta nähtynä.',
+    selite: 'Niameyn asuinkortteleita ilmasta nähtynä.',
+    lahde: 'Jean Rebiffé, Commons (CC BY 3.0)',
+    vuosi: '2011',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/niamey/photo-5c9036251b9fee0a7ad1.jpg',
+    suora: true,
+  },
+  ouagadougou: {
+    tiedosto: 'Crocodile BangrWeoogoPark.JPG',
+    lyhyt: 'Krokotiili Bangr Weogon puistossa Ouagadougoussa.',
+    selite: 'Krokotiili Bangr Weogon puistossa Ouagadougoussa.',
+    lahde: 'Yann Fauché & Alma Mulalic, Commons (CC BY-SA 3.0)',
+    vuosi: '2011',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/photo-c68992f5c95e4712a1b8.jpg',
+    suora: true,
+  },
+  portonovo: {
+    tiedosto: 'IROKO au CAEB.jpg',
+    lyhyt: 'Kaupungin puustoa Porto-Novossa.',
+    selite: 'Kaupungin puustoa Porto-Novossa.',
+    lahde: 'Thepipha12, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/photo-97c82d3d0131e3d1e6d7.jpg',
+    suora: true,
+  },
+  yamoussoukro: {
+    tiedosto: '20240521 - Agama agama.jpg',
+    lyhyt: 'Lisko Yamoussoukrossa.',
+    selite: 'Lisko Yamoussoukrossa.',
+    lahde: 'Fabricio Cardenas, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/photo-fd0034461890b1eefb39.jpg',
+    suora: true,
+  },
+  yaounde: {
+    tiedosto: 'Clouds surround hill.jpg',
+    lyhyt: 'Yaoundén kukkulamaisemaa pilvien keskellä.',
+    selite: 'Yaoundén kukkulamaisemaa pilvien keskellä.',
+    lahde: 'Thetaxiphotographer, Commons (CC BY-SA 4.0)',
+    vuosi: '2020',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yaounde/photo-5ec5250f4484d91e19d2.jpg',
+    suora: true,
+  },
+  bangui: {
+    tiedosto: 'Berge Zongo vue de Bangui 02.jpg',
+    lyhyt: 'Ubangi kuuluu Banguin jokimaisemaan.',
+    selite: 'Ubangi kuuluu Banguin jokimaisemaan.',
+    lahde: 'Imoini22, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/bangui/photo-5c1dd97d388c0f591c71.jpg',
+    suora: true,
+  },
+  brazzaville: {
+    tiedosto: 'Chutes de Djoué.jpg',
+    lyhyt: 'Djouén ympäristö kuuluu Brazzavilleen.',
+    selite: 'Djouén ympäristö kuuluu Brazzavilleen.',
+    lahde: 'Detsed1, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/brazzaville/photo-8a10347ba8a3cdbe9f59.jpg',
+    suora: true,
+  },
+  ciudaddelapaz: {
+    tiedosto: 'Dschungel bei Oyala.JPG',
+    lyhyt: 'Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.',
+    selite: 'Ciudad de la Pazin ympäristöön kuuluu trooppista kasvillisuutta.',
+    lahde: 'Mehlauge, Commons (CC BY-SA 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/ciudaddelapaz/photo-81779b596e9efa426b6c.jpg',
+    suora: true,
+  },
+  gitega: {
+    tiedosto: 'Flowers in Gitega Burundi -Dave Proffer.jpg',
+    lyhyt: 'Gitegassa kuvattuja kukkia.',
+    selite: 'Gitegassa kuvattuja kukkia.',
+    lahde: 'Dave Proffer, Commons (CC BY 2.0)',
+    vuosi: '2007',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/gitega/photo-22acf96f809d00e84615.jpg',
+    suora: true,
+  },
+  kigali: {
+    tiedosto: 'Nyabarongo River Scene with Bugesera Marshes - Outside Kigali - Rwanda - 01.jpg',
+    lyhyt: 'Nyabarongon jokimaisema kuuluu Kigalin lähialueisiin.',
+    selite: 'Nyabarongon jokimaisema kuuluu Kigalin lähialueisiin.',
+    lahde: 'Adam Jones, Ph.D., Commons (CC BY-SA 3.0)',
+    vuosi: '2012',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kigali/photo-559e05e942c3712bc464.jpg',
+    suora: true,
+  },
+  kinshasa: {
+    tiedosto: 'Forest near Kinshasa.jpg',
+    lyhyt: 'Metsää ja vettä Kinshasan lähistöllä.',
+    selite: 'Metsää ja vettä Kinshasan lähistöllä.',
+    lahde: 'David Tansey, Commons (CC BY 2.0)',
+    vuosi: '2012',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/kinshasa/photo-d5ff66f962055c9aa088.jpg',
+    suora: true,
+  },
+  libreville: {
+    tiedosto: 'Les cocos de Libreville.jpg',
+    lyhyt: 'Librevillen rannalla kasvaa kookospalmuja.',
+    selite: 'Librevillen rannalla kasvaa kookospalmuja.',
+    lahde: 'ArnoBOUJIKA, Commons (CC0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/libreville/photo-10875faa34f31b149bbc.jpg',
+    suora: true,
+  },
+  luanda: {
+    tiedosto: 'Luanda, Angola.jpg',
+    lyhyt: 'Luandan rannikon maastomuodot erottuvat avaruudesta.',
+    selite: 'Luandan rannikkoa astronautin kuvaamana: kaupungin ympäristöön kuuluvat lahti ja pitkät hiekkakaistaleet.',
+    lahde: 'NASA, Commons (PD)',
+    vuosi: '2000-luku',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/photo-4fa85743624649509c92.jpg',
+    suora: true,
+  },
+  saotome: {
+    tiedosto: 'Cours d\'eau à São Tomé.jpg',
+    lyhyt: 'Vesiuoma São Tomén kaupungin pohjoisosassa.',
+    selite: 'Vesiuoma São Tomén kaupungin pohjoisosassa.',
+    lahde: 'Ji-Elle, Commons (CC BY-SA 4.0)',
+    vuosi: '2019',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/photo-dc25ed5ff954b0c4921e.jpg',
+    suora: true,
+  },
+  asmara: {
+    tiedosto: 'Asmara aerial view 1981 02.jpg',
+    lyhyt: 'Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.',
+    selite: 'Asmaran keskustaa ja Ruusukon kirkon ympäristöä ilmasta kuvattuna.',
+    lahde: 'Л.П. Джепко (Leonid Dzhepko), Commons (CC BY-SA 3.0)',
+    vuosi: '1981',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/photo-24381624b6b5a84c9ea2.jpg',
+    suora: true,
+  },
+  djibouti: {
+    tiedosto: 'Dingy in Djibouti harbor - panoramio.jpg',
+    lyhyt: 'Pieni moottorivene Djiboutin satama-alueella.',
+    selite: 'Pieni moottorivene Djiboutin satama-alueella.',
+    lahde: 'delrinian, Commons (CC BY-SA 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/djibouti/photo-e06768832f22dde9406a.jpg',
+    suora: true,
+  },
+  dodoma: {
+    tiedosto: 'Iyumbu ward landscape, Dodoma City.jpg',
+    lyhyt: 'Maastoa Iyumbun alueella Dodomassa.',
+    selite: 'Maastoa Iyumbun alueella Dodomassa.',
+    lahde: 'Mangapwani, Commons (CC BY-SA 4.0)',
+    vuosi: '2022',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/dodoma/photo-126aeef047cb02de4476.jpg',
+    suora: true,
+  },
+  juba: {
+    tiedosto: 'ISS-30 Juba - South Sudan.jpg',
+    lyhyt: 'Juban ja Niilin seutua avaruusasemalta kuvattuna.',
+    selite: 'Juban ja Niilin seutua avaruusasemalta kuvattuna.',
+    lahde: 'NASA, Commons (PD)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/juba/photo-71010fb06803f4ad3d14.jpg',
+    suora: true,
+  },
+  kampala: {
+    tiedosto: 'A local small forest in Kampala Uganda.jpg',
+    lyhyt: 'Paikallista metsämaisemaa Kampalasta.',
+    selite: 'Paikallista metsämaisemaa Kampalasta.',
+    lahde: 'Gratypius, Commons (CC BY-SA 4.0)',
+    vuosi: '2026',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg',
+    suora: true,
+  },
+  khartum: {
+    tiedosto: 'Iss070e002191.jpg',
+    lyhyt: 'Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.',
+    selite: 'Khartumin ja Omdurmanin jokiseutu avaruusasemalta kuvattuna.',
+    lahde: 'NASA Johnson Space Center, Commons (PD)',
+    vuosi: '2023',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/photo-a02c95213a6b69ddb899.jpg',
+    suora: true,
+  },
+  lilongwe: {
+    tiedosto: 'Kanengo, Lilongwe, Malawi - panoramio (2).jpg',
+    lyhyt: 'Nosturi Kanengon alueella Lilongwessa.',
+    selite: 'Nosturi Kanengon alueella Lilongwessa.',
+    lahde: 'Timon Zingg, Commons (CC BY-SA 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lilongwe/photo-249675ed384d2637bd3f.jpg',
+    suora: true,
+  },
+  lusaka: {
+    tiedosto: 'Lusaka Jun 1 2023 001.jpg',
+    lyhyt: 'Kukka kuvattuna Lusakassa.',
+    selite: 'Kukka kuvattuna Lusakassa.',
+    lahde: 'Jae zambia, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/lusaka/photo-5435d99b97dc36d60fdc.jpg',
+    suora: true,
+  },
+  mogadishu: {
+    tiedosto: 'Mogadishu Sea Port.jpg',
+    lyhyt: 'Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.',
+    selite: 'Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.',
+    lahde: 'Atmis Somalia, Commons (CC0)',
+    vuosi: '2022',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/mogadishu/photo-acd0e70ee72f496f6509.jpg',
+    suora: true,
+  },
+  antananarivo: {
+    tiedosto: 'Ambanivohitra ao Antananarivo.jpg',
+    lyhyt: 'Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.',
+    selite: 'Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.',
+    lahde: 'Raveloaritiana Mamisoa, Commons (CC0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg',
+    suora: true,
+  },
+  gaborone: {
+    tiedosto: 'Gaborone dam.jpg',
+    lyhyt: 'Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.',
+    selite: 'Gaboronen padon allas näkyy Kgale Hilliltä kaupungin eteläpuolella.',
+    lahde: 'Mothusi Sekhomba, Commons (CC BY-SA 4.0)',
+    vuosi: '2020',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/photo-357b78329f45872e8936.jpg',
+    suora: true,
+  },
+  harare: {
+    tiedosto: 'Harare 2024 1.jpg',
+    lyhyt: 'Hararen puukujanteet ovat osa sen kaupunkimaisemaa.',
+    selite: 'Hararen puukujanteet ovat osa sen kaupunkimaisemaa.',
+    lahde: 'Peter in s, Commons (CC BY-SA 4.0)',
+    vuosi: '2024',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/photo-e1b4c4940ca8fe2170ab.jpg',
+    suora: true,
+  },
+  maputo: {
+    tiedosto: 'Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg',
+    lyhyt: 'Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.',
+    selite: 'Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.',
+    lahde: 'Salazar Sérgio, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maputo/photo-9f519ada75c1a4ad5e1d.jpg',
+    suora: true,
+  },
+  maseru: {
+    tiedosto: 'ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg',
+    lyhyt: 'Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.',
+    selite: 'Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.',
+    lahde: 'Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/maseru/photo-362d6f05a0163bbb38ee.jpg',
+    suora: true,
+  },
+  mbabane: {
+    tiedosto: 'Mbabane (6035476964).jpg',
+    lyhyt: 'Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.',
+    selite: 'Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.',
+    lahde: 'Athena Lao from Bulgaria, Commons (CC BY 2.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/photo-4a257150d4b31ab4a142.jpg',
+    suora: true,
+  },
+  moroni: {
+    tiedosto: 'Moroni sunset palm trees.jpg',
+    lyhyt: 'Palmut ja auringonlasku Moronin rannikolla, 2019.',
+    selite: 'Palmut ja auringonlasku Moronin rannikolla, 2019.',
+    lahde: 'Radosław Botev, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/photo-d4eaf30a13ce56acca1e.jpg',
+    suora: true,
+  },
+  portlouis: {
+    tiedosto: 'Port Louis, Mauritius, Bulk Sugar Terminal Quay.jpg',
+    lyhyt: 'Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.',
+    selite: 'Port Louis’n sataman Bulk Sugar Terminal -laituri, 2025.',
+    lahde: 'Richard N Horne, Commons (CC BY 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/photo-2a7ca8a38ce01da8f60d.jpg',
+    suora: true,
+  },
+  victoria: {
+    tiedosto: 'Sey Botanical Garden Entrance.JPG',
+    lyhyt: 'Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.',
+    selite: 'Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.',
+    lahde: 'Marek Gehrmann, Commons (CC BY-SA 3.0)',
+    vuosi: '2009',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/photo-0bc499a145e05f20392f.jpg',
+    suora: true,
+  },
+  windhoek: {
+    tiedosto: 'A big shaped rock in the Avis dam vicinity.jpg',
+    lyhyt: 'Kivistä ylänkömaisemaa Avis-padon lähellä Windhoekin tuntumassa.',
+    selite: 'Kivistä ylänkömaisemaa Avis-padon lähellä Windhoekin tuntumassa.',
+    lahde: 'Pekondjelo Himufe, Commons (CC BY-SA 4.0)',
+    vuosi: '2023',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/photo-7d6315ffa81325566e3b.jpg',
+    suora: true,
+  },
+  asgabat: {
+    tiedosto: 'Architectural pieces from old Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan.jpg',
+    lyhyt: 'Vanhan Nisan antiikin rakennusosia museossa.',
+    selite: 'Vanhan Nisan rakennusosia 100-luvulta eaa. Turkmenistanin kansallisessa historiamuseossa Ašgabatissa.',
+    lahde: 'Richard Mortel, Commons (CC BY 2.0)',
+    vuosi: '2023',
+  },
+  biskek: {
+    tiedosto: 'Бишкек, Карагачевая роща, крапива.jpg',
+    lyhyt: 'Nokkosia Biškekin Karagach-lehdossa.',
+    selite: 'Nokkosia Biškekin Karagach-lehdossa.',
+    lahde: 'Екатерина Борисова, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg',
+    suora: true,
+  },
+  dhaka: {
+    tiedosto: 'Chandrima Uddayan Trees.jpg',
+    lyhyt: 'Puita Dhakan Chandrima Uddayan -puistossa.',
+    selite: 'Puita Dhakan Chandrima Uddayan -puistossa.',
+    lahde: 'Hopeoflight, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/photo-af36001cd5945354a9f0.jpg',
+    suora: true,
+  },
+  dusanbe: {
+    tiedosto: 'Tulip of Dushanbe.jpg',
+    lyhyt: 'Valkoisia ja oransseja tulppaaneja Dušanbessa.',
+    selite: 'Valkoisia ja oransseja tulppaaneja Dušanbessa.',
+    lahde: 'Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)',
+    vuosi: '2026',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/photo-c17fd8d06802c1ff465d.jpg',
+    suora: true,
+  },
+  islamabad: {
+    tiedosto: 'Flowers red one - Islamabad spring blooms.jpg',
+    lyhyt: 'Punaisia kukkia Islamabadissa.',
+    selite: 'Punaisia kukkia Islamabadissa.',
+    lahde: 'Mubashirkhan111, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg',
+    suora: true,
+  },
+  taskent: {
+    tiedosto: 'Ant on a leaf.jpg',
+    lyhyt: 'Muurahainen kasvin lehdellä Taškentissa.',
+    selite: 'Muurahainen kasvin lehdellä Taškentissa.',
+    lahde: 'Tahrirchiqiz, Commons (CC BY 4.0)',
+    vuosi: '2024',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg',
+    suora: true,
+  },
+  thimphu: {
+    tiedosto: 'Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg',
+    lyhyt: 'Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.',
+    selite: 'Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.',
+    lahde: 'Nabin K. Sapkota, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg',
+    suora: true,
+  },
+  bandarseribegawan: {
+    tiedosto: 'Tasek Lama Recreational Park.jpg',
+    lyhyt: 'Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.',
+    selite: 'Tasek Laman vesiputous kuuluu Bandar Seri Begawanin virkistysympäristöön.',
+    lahde: 'Uhooep, Commons (CC BY-SA 4.0)',
+    vuosi: '2017',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/bandarseribegawan/photo-11565ef2c616a1338c89.jpg',
+    suora: true,
+  },
+  kualalumpur: {
+    tiedosto: '2024-09 Kuala Lumpur station 00.jpg',
+    lyhyt: 'Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.',
+    selite: 'Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.',
+    lahde: 'Ariyanto, Commons (CC BY-SA 4.0)',
+    vuosi: '2024',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/photo-26ca0e84bba3e74997fb.jpg',
+    suora: true,
+  },
+  male: {
+    tiedosto: 'Sunset Male Harbor (5949065012).jpg',
+    lahde: '╚ DD╔ from Male, Maldives, Commons (CC BY-SA 2.0)',
+    lyhyt: 'Malén satama palvelee Malediivien pääkaupungin meriliikennettä.',
+    selite: 'Malén satama palvelee Malediivien pääkaupungin meriliikennettä.',
+    vuosi: '2011',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/male/photo-9e06cd6c9c57793475b6.jpg',
+    suora: true,
+  },
+  naypyidaw: {
+    tiedosto: 'Junger Papayabaum (Carica papaya).jpg',
+    lyhyt: 'Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.',
+    selite: 'Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.',
+    lahde: 'Myrmux, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg',
+    suora: true,
+  },
+  phnompenh: {
+    tiedosto: '2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg',
+    lyhyt: 'Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.',
+    selite: 'Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.',
+    lahde: 'Marcin Konsek, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg',
+    suora: true,
+  },
+  pjongjang: {
+    tiedosto: 'Moranbong Park - 02.jpg',
+    lyhyt: 'Moran-kukkulan puistoaluetta Pjongjangissa heinäkuussa 2019.',
+    selite: 'Moran-kukkulan puistoaluetta Pjongjangissa heinäkuussa 2019.',
+    lahde: 'Jan Engelhardt, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/photo-e29f697b1e459be99ecd.jpg',
+    suora: true,
+  },
+  vientiane: {
+    tiedosto: 'Mekong in Vientiane 2.jpg',
+    lahde: 'Christophe95, Commons (CC BY-SA 4.0)',
+    lyhyt: 'Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.',
+    selite: 'Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/photo-39579ab3932313097974.jpg',
+    suora: true,
+  },
+  belmopan: {
+    tiedosto: 'St. Herman\'s Blue Hole.jpg',
+    lyhyt: 'St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.',
+    selite: 'St. Hermanin Blue Hole on Belmopanin lähiseudun metsäinen luontoretkikohde.',
+    lahde: 'Haakon S. Krohn, Commons (CC BY-SA 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/belmopan/photo-d3956640dc812975a1fe.jpg',
+    suora: true,
+  },
+  kingston: {
+    tiedosto: 'Jamaica Palisadoes Kingston; Harbor View Photo Katinka Zuchowicz Photography DSC 8572-2(2).jpg',
+    lyhyt: 'Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.',
+    selite: 'Kingstonin Palisadoesin rantaa ja Harbor Viewn suunta toukokuussa 2009.',
+    lahde: 'Katinka Zuchowicz Photography, Commons (CC BY-SA 3.0)',
+    vuosi: '2009',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/kingston/photo-a4dd2aa111218028028f.jpg',
+    suora: true,
+  },
+  ottawa: {
+    tiedosto: 'The Rideau Falls.JPG',
+    lyhyt: 'Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.',
+    selite: 'Rideau-putoukset laskevat Rideau-joen vedet Ottawa-jokeen.',
+    lahde: 'Óðinn, Commons (CC BY-SA 2.5 ca)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/photo-6981989cbef5f6c26c2b.jpg',
+    suora: true,
+  },
+  portauprince: {
+    tiedosto: 'Aerial view of PAP 2010-01-26 2.JPG',
+    lyhyt: 'Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26.',
+    selite: 'Toussaint Louverturen kansainvälisen lentoaseman kiitotie Port-au-Princessä 26. tammikuuta 2010. Historiallinen ilmakuva.',
+    lahde: 'Tech. Sgt. James L. Harper , USAF, Commons (PD)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/portauprince/photo-89ec8957c2f38bb69614.jpg',
+    suora: true,
+  },
+  sanjose: {
+    tiedosto: 'King Swallowtail (Papilio thoas nealces) (9564832228).jpg',
+    lyhyt: 'Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.',
+    selite: 'Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.',
+    lahde: 'Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)',
+    vuosi: '2006',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sanjose/photo-f7fdf359c2b814c28bae.jpg',
+    suora: true,
+  },
+  sansalvador: {
+    tiedosto: 'Volcán de San Salvador, El Salvador.jpg',
+    lyhyt: 'San Salvadorin tulivuori ja kaupunkiseutua vuonna 2024.',
+    selite: 'San Salvadorin tulivuori ja kaupunkiseutua vuonna 2024.',
+    lahde: 'Albergleiva, Commons (CC0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/photo-8e0272329c5d1892c177.jpg',
+    suora: true,
+  },
+  santodomingo: {
+    tiedosto: '',
+    lyhyt: '',
+    selite: '',
+    lahde: '',
+  },
+  tegucigalpa: {
+    tiedosto: 'LA TIGRA, JlMurillo.jpg',
+    lyhyt: 'La Tigran metsää Tegucigalpan seudulla vuonna 2013.',
+    selite: 'La Tigran metsää Tegucigalpan seudulla vuonna 2013.',
+    lahde: 'Jorge Luis Murillo Palma, Commons (CC BY-SA 3.0)',
+    vuosi: '2013',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/tegucigalpa/photo-2d52c08b14dc94be6173.jpg',
+    suora: true,
+  },
+  washington: {
+    tiedosto: 'C&O Canal - Georgetown.jpg',
+    lyhyt: 'C&O-kanavan Georgetown-osuus kuuluu Washingtonin vanhan satamakaupunginosan historiaan.',
+    selite: 'C&O-kanavan Georgetown-osuus kuuluu Washingtonin vanhan satamakaupunginosan historiaan.',
+    lahde: 'AgnosticPreachersKid, Commons (CC BY-SA 3.0)',
+    vuosi: '2008',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/photo-b94c1bf0f71415608542.jpg',
+    suora: true,
+  },
+  basseterre: {
+    tiedosto: 'Basseterre from sea.JPG',
+    lyhyt: 'Basseterre mereltä nähtynä heinäkuussa 2014.',
+    selite: 'Basseterre mereltä nähtynä heinäkuussa 2014.',
+    lahde: 'Gertjan R., Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/basseterre/photo-dbbb17bcbf414111613f.jpg',
+    suora: true,
+  },
+  bridgetown: {
+    tiedosto: 'Bridgetown beach.jpg',
+    lyhyt: 'Bridgetownin rantaa vuonna 2010.',
+    selite: 'Bridgetownin rantaa vuonna 2010.',
+    lahde: 'WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg',
+    suora: true,
+  },
+  castries: {
+    tiedosto: 'Coast at the Baghaws Studios - panoramio.jpg',
+    lyhyt: 'Castriesin rannikon luonnonmaisemaa vuonna 2012.',
+    selite: 'Castriesin rannikon luonnonmaisemaa vuonna 2012.',
+    lahde: 'Edgar El, Commons (CC BY 3.0)',
+    vuosi: '2012',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/castries/photo-ea848a9c1a77fe7d592b.jpg',
+    suora: true,
+  },
+  kingstown: {
+    tiedosto: 'St. Vincent, Karibik - Botanical Garden of Kingstown - Eucalyptus tree - panoramio.jpg',
+    lyhyt: 'Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.',
+    selite: 'Puu Kingstownin kasvitieteellisessä puutarhassa, kuva vuodelta 2012.',
+    lahde: 'giggel, Commons (CC BY 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/photo-09fd3fa86f4815c4535e.jpg',
+    suora: true,
+  },
+  nassau: {
+    tiedosto: 'Nassau - conch shells.jpg',
+    lyhyt: 'Conch-merikotiloiden kuoria Nassaussa.',
+    selite: 'Conch-merikotiloiden kuoria Nassaussa.',
+    lahde: 'P. Hughes, Commons (CC BY 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/nassau/photo-5968eab004a92702dc02.jpg',
+    suora: true,
+  },
+  portofspain: {
+    tiedosto: 'Overview of Port of Spain.jpg',
+    lyhyt: 'Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.',
+    selite: 'Port of Spainin maisemaa kukkulalta, valokuva vuodelta 2006.',
+    lahde: 'Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg',
+    suora: true,
+  },
+  roseau: {
+    tiedosto: 'Anolis oculatus at Roseau-a01.jpg',
+    lyhyt: 'Dominican anolislisko kukalla Roseaun kasvitieteellisessä puutarhassa vuonna 2009.',
+    selite: 'Dominican anolislisko kukalla Roseaun kasvitieteellisessä puutarhassa vuonna 2009.',
+    lahde: 'Postdlf, Commons (CC BY-SA 3.0)',
+    vuosi: '2009',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/photo-c03e62e0a477c13808af.jpg',
+    suora: true,
+  },
+  saintjohns: {
+    tiedosto: 'AG-Stjohns-fort-james.jpg',
+    lyhyt: 'Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.',
+    selite: 'Saint John’sin Deepwater Harbourin merimaisemaa vuonna 2015.',
+    lahde: 'Balou46, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg',
+    suora: true,
+  },
+  stgeorges: {
+    tiedosto: 'Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg',
+    lyhyt: 'Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.',
+    selite: 'Aquarium Beachin luonnonrantaa Grenadalla vuonna 2003.',
+    lahde: 'Stefan_und_Bille, Commons (CC BY-SA 3.0)',
+    vuosi: '2003',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/stgeorges/photo-58deca4ffd888f7000c7.jpg',
+    suora: true,
+  },
+  brasilia: {
+    tiedosto: 'Paranoa-Island-Brasilia.JPG',
+    lyhyt: 'Paranoá-järvi kuuluu Brasílian maisemaan.',
+    selite: 'Paranoá-järvi kuuluu Brasílian maisemaan.',
+    lahde: 'EliasTheHorse, Commons (PD)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/photo-b9cb9c8f84f63a72a308.jpg',
+    suora: true,
+  },
+  georgetown: {
+    tiedosto: 'Manatees - Guyana Botanical Gardens (23024335793).jpg',
+    lyhyt: 'Georgetownin puistoissa pidetään manaatteja.',
+    selite: 'Georgetownin puistoissa pidetään manaatteja.',
+    lahde: 'Dan Sloan, Commons (CC BY-SA 2.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg',
+    suora: true,
+  },
+  lapaz: {
+    tiedosto: 'La Paz Panoramic View from Killi Killi Lookout.jpg',
+    lyhyt: 'La Paz Killi Killin näköalapaikalta.',
+    selite: 'La Pazin panoraama Killi Killin näköalapaikalta vuonna 2015.',
+    lahde: 'Edgar Claure, Commons (CC BY-SA 4.0)',
+    vuosi: '2015',
+  },
+  paramaribo: {
+    tiedosto: 'Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg',
+    lyhyt: 'Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.',
+    selite: 'Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.',
+    lahde: 'NullAspect, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/photo-db713574036433a12c06.jpg',
+    suora: true,
+  },
+  santiagodechile: {
+    tiedosto: 'Around Santiago (16778744737).jpg',
+    lyhyt: 'Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.',
+    selite: 'Santiagossa kuvattu puun rungon yksityiskohta, maaliskuu 2015.',
+    lahde: 'She Paused 4 Thought, Commons (CC BY 2.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/santiagodechile/photo-afcc89f35623f93067d7.jpg',
+    suora: true,
+  },
+  apia: {
+    tiedosto: 'Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg',
+    lyhyt: 'Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.',
+    selite: 'Vailiman puutarhan vesipaikka Apian lähialueella vuonna 2007.',
+    lahde: 'Peter Gill / UK, Commons (CC BY 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg',
+    suora: true,
+  },
+  canberra: {
+    tiedosto: 'AUS Canberra, Central, Lake Burley Griffin 001.jpg',
+    lyhyt: 'Lake Burley Griffin on Canberran keskustan rakennettu järvi.',
+    selite: 'Lake Burley Griffin on Canberran keskustan rakennettu järvi.',
+    lahde: '-wuppertaler, Commons (CC BY 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/photo-e1bf429bd125e3f4db80.jpg',
+    suora: true,
+  },
+  funafuti: {
+    tiedosto: 'Northern Funafuti.jpg',
+    lyhyt: 'Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.',
+    selite: 'Funafutin pohjoisosan kapea maakaistale laguunin ja avomeren välissä vuonna 2011.',
+    lahde: 'Davidarfonjones, Commons (CC BY-SA 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg',
+    suora: true,
+  },
+  majuro: {
+    tiedosto: 'Eneko Islet 01.jpg',
+    lyhyt: 'Eneko-saarekkeen rantaa Majuron atollilla.',
+    selite: 'Eneko-saarekkeen rantaa Majuron atollilla.',
+    lahde: 'Cliff Hansen, Commons (CC BY-SA 4.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/photo-4e5ad2943f7b683f08df.jpg',
+    suora: true,
+  },
+  ngerulmud: {
+    tiedosto: 'Ngerulmud 06.jpg',
+    lyhyt: 'Näkymä Ngerulmudista, vuodelta 2026.',
+    selite: 'Näkymä Ngerulmudista, vuodelta 2026.',
+    lahde: 'Zykasaa, Commons (CC BY 4.0)',
+    vuosi: '2026',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/ngerulmud/photo-b7dee5b6946476556f11.jpg',
+    suora: true,
+  },
+  nukualofa: {
+    tiedosto: 'Nuku\'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg',
+    lyhyt: 'Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.',
+    selite: 'Nukuʻalofan satamaa Tongatapun pohjoisrannikolla lokakuussa 2014.',
+    lahde: 'David Broad, Commons (CC BY 3.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg',
+    suora: true,
+  },
+  palikir: {
+    tiedosto: 'Lithuanian and Micronesian flags in Palikir.jpg',
+    lyhyt: 'Liettuan ja Mikronesian liput Palikirissa.',
+    selite: 'Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.',
+    lahde: 'Zykasaa, Commons (CC BY-SA 4.0)',
+    vuosi: '2025',
+  },
+  southtarawa: {
+    tiedosto: '',
+    lyhyt: '',
+    selite: '',
+    lahde: '',
+  },
+  yaren: {
+    tiedosto: 'Waves crash against the wall at the end of Nauru International Airprot\'s runway. Rising sea levels pose a serious risk coastal erosion for small Pacific island countries, 4 June 2013. Photo- Matt Robertson - DFAT (12045534665).jpg',
+    lyhyt: 'Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.',
+    selite: 'Aallot Naurun lentoaseman rantamuurilla Yarenin lähialueella kesäkuussa 2013.',
+    lahde: 'Department of Foreign Affairs and Trade, Commons (CC BY 2.0)',
+    osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/yaren/photo-e50906e443d4cd1faa68.jpg',
+    suora: true,
   },
 };

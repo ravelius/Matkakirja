@@ -1,0 +1,58 @@
+{
+ "$skeema": "matkakirja-linssi/kiinan-dynastiat/vaestopinta/1",
+ "lisenssi": "CC0-1.0",
+ "vuosi": 589,
+ "hila": {
+  "lon0": 73,
+  "lon1": 124,
+  "lat0": 18,
+  "lat1": 54,
+  "askel": 0.15,
+  "leveys": 340,
+  "korkeus": 240,
+  "rivi0": "pohjoinen",
+  "solu": "keskipiste lon0 + (c + 0,5)·askel, lat1 − (r + 0,5)·askel"
+ },
+ "tiheys": {
+  "tiedosto": "vaestopinta-589.bytes",
+  "tyyppi": "uint16 LE",
+  "yksikko": "henkeä/km² × 10",
+  "max": 155.9,
+  "p99": 47.0,
+  "summa_milj": 44.89,
+  "arvio": true,
+  "korotus": 1.439
+ },
+ "omistus": {
+  "tiedosto": "omistus-589.bytes",
+  "tyyppi": "uint8",
+  "arvot": "0 = ei kenenkään, i = dynastiat[i − 1]",
+  "rajat_vuosi": 589
+ },
+ "dynastiat": [
+  {
+   "avain": "sui",
+   "nimi": "Sui",
+   "vari": "#c25a2c",
+   "tyyppi": "kiina"
+  },
+  {
+   "avain": "turkit",
+   "nimi": "Itäturkit",
+   "vari": "#61808f",
+   "tyyppi": "ulkoinen"
+  },
+  {
+   "avain": "turkit-lansi",
+   "nimi": "Länsiturkit",
+   "vari": "#7f98a5",
+   "tyyppi": "ulkoinen"
+  }
+ ],
+ "vakiluku_milj": 40.0,
+ "aluejako": "sui",
+ "lahteet": {
+  "tiheys": "ARVIO: ytimen väki kerrokset_data.VAESTO (väestölaskennat ja arviot, välivuodet lineaarisesti), alueosuudet OSUUDET, reuna-alueet vaestopinta_data.REUNAT (arvio: Wikipedia (Population history of China, Han dynasty, Demographics of Taiwan, Manchuria), omat arviot; heikko luottamus); painotus matalikoille Copernicus GLO-90 (© DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, ESA, vapaa käyttö) ja jokilaaksoihin Natural Earth 50 m (PD). Korvataan HYDE 3.2.1 (CC0) / 3.3 (CC BY 4.0) -ruudukolla, kun aineisto on ladattu.",
+  "omistus": "rajat-589.geojson (Matkakirja, CC0)"
+ }
+}

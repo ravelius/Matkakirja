@@ -66,6 +66,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -77,7 +78,7 @@ const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
  * vartioitu kerma ei siis ole vartioitu kerma.
  */
 const MOOTTORI = process.argv.includes('--webkit') ? 'webkit' : 'chromium';
-const chromium = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
+const moottori = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -215,9 +216,8 @@ peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
 const selain = await (MOOTTORI === 'webkit'
-  ? chromium.launch()
-  : chromium.launch({
-    executablePath: process.env.CHROMIUM || undefined,
+  ? moottori.launch()
+  : avaaChromium({
     args: ['--disable-dev-shm-usage'],
   }));
 

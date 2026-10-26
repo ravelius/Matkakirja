@@ -1,0 +1,156 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävien kokeilu aloituskaupungeissa (omistaja 12.10.: \"Joo\"). Kehityslipun taakse; ei pelissä ennen omistajan hyväksyntää. Tehtävä a = KATSO JA LÖYDÄ, tehtävä b = yksi kolmesta (aikajana / arvio / salakirjoitus). Henkilö ei tunnista Horatiota (kaanon 7.9.). Etäisyydet linnuntietä saapumispisteen (kohtaamispisteen) arviokoordinaateista; kohteiden koordinaatit ovat kohdekarttojen (KAUPUNKIKARTAT) omia.",
+  "kaupungit": [
+    {
+      "kaupunki": "ateena",
+      "nimi": "Ateena",
+      "hahmo": "Marmorikonservaattori Dafni",
+      "saapumispiste": {
+        "nimi": "Akropolis (Dafnin työmaa)",
+        "lat": 37.9715,
+        "lon": 23.7266
+      },
+      "a": {
+        "vihjelause": "Yhden temppelin pylväs makaa yhä maassa, sillä myrsky kaatoi sen vuonna 1852. Etsi se temppeli.",
+        "kohde": {
+          "nimi": "Zeuksen temppeli",
+          "lat": 37.9694,
+          "lon": 23.7331,
+          "etaisyys_saapumispisteesta_m": 620
+        },
+        "vihje_vaarin": "Ei se. Katso kalliolta kaakkoon: isot pylväät seisovat tasaisella maalla, korkeampina kuin Parthenonilla.",
+        "tiesitko": "Zeuksen temppelin rakentaminen alkoi 500-luvulla eaa. ja valmistui yli 600 vuotta myöhemmin, keisari Hadrianuksen aikana. Yksi pylväs kaatui 1852."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "kysymys": "Missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Parthenon valmistuu Akropoliille",
+            "vuosi": "438 eaa."
+          },
+          {
+            "teksti": "Zeuksen temppeli valmistuu Hadrianuksen aikana",
+            "vuosi": "n. 131 jaa."
+          },
+          {
+            "teksti": "Ensimmäiset nykyajan olympialaiset pidetään Kallimarmaron stadionilla",
+            "vuosi": "1896"
+          }
+        ],
+        "vihje_vaarin": "Marmori muistaa: Parthenon on vanhin, ja nykyajan olympialaiset tulivat vasta, kun kivi oli ollut paikallaan kaksi tuhatta vuotta.",
+        "tiesitko": "Kallimarmaro on maailman ainoa kokonaan marmorinen stadion; se rakennettiin marmoriseksi 144 jaa. ja kunnostettiin ensimmäisiä nykyajan olympialaisia varten 1896."
+      },
+      "pala": {
+        "nro": 1,
+        "rivi": "Ensimmäinen veli nukkuu kivessä, jonka mittaaja tuntee.",
+        "kuvapala": "vasen kaistale"
+      }
+    },
+    {
+      "kaupunki": "pariisi",
+      "nimi": "Pariisi",
+      "hahmo": "Bukinisti Colette",
+      "saapumispiste": {
+        "nimi": "Quai de Montebellon kirjalaatikot",
+        "lat": 48.85194,
+        "lon": 2.34944
+      },
+      "a": {
+        "vihjelause": "Laatikoideni toisella puolella Seineä kohoaa kirkko, jonka kärkitorni romahti vuonna 2019. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Notre-Dame",
+          "lat": 48.853,
+          "lon": 2.3499,
+          "etaisyys_saapumispisteesta_m": 120
+        },
+        "vihje_vaarin": "Ei se. Katso saarta Seinen keskellä: kirkko seisoo Île de la Citéllä, josta kaupunki aikoinaan lähti kasvamaan.",
+        "tiesitko": "Notre-Damen rakentaminen alkoi 1163 ja valmistui 1345, eli kesti 182 vuotta. Kärkitorni romahti tulipalossa 2019, ja kirkko avattiin uudelleen joulukuussa 2024."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "kysymys": "Kuinka monta vihreää kirjalaatikkoa bukinistit pitävät Seinen rannoilla?",
+        "liukusaadin": {
+          "min": 100,
+          "max": 2000,
+          "askel": 50
+        },
+        "oikea": 900,
+        "hyvaksyttava_vali": [
+          700,
+          1100
+        ],
+        "vihje_vaarin": "Laatikoita on kolmen–neljän metrin välein, ja rantaa riittää yli kolme kilometriä. Laske, montako laatikkoa siihen mahtuu.",
+        "tiesitko": "Seinen rannoilla on noin 900–1 000 vihreää kirjalaatikkoa yli kolmen kilometrin matkalla, ja myyjiä on parisataa."
+      },
+      "pala": {
+        "nro": 2,
+        "rivi": "Toinen veli kulkee sivulta sivulle, kunnes joku avaa sen oikeasta kohdasta.",
+        "kuvapala": "keskikaistale"
+      }
+    },
+    {
+      "kaupunki": "tukholma",
+      "nimi": "Tukholma",
+      "hahmo": "Lyhdynsytyttäjä Astrid",
+      "saapumispiste": {
+        "nimi": "Skeppsbronin laituri",
+        "lat": 59.32361,
+        "lon": 18.07528
+      },
+      "a": {
+        "vihjelause": "Luukkuni on linnan varjossa: etsi linna, joka nousi vuonna 1697 palaneen Tre Kronorin paikalle.",
+        "kohde": {
+          "nimi": "Kuninkaanlinna",
+          "lat": 59.3268,
+          "lon": 18.0717,
+          "etaisyys_saapumispisteesta_m": 410
+        },
+        "vihje_vaarin": "Ei se. Linna on kuninkaan virallinen residenssi ja seisoo vanhankaupungin saarella, lähellä Skeppsbronia.",
+        "tiesitko": "Vanha Kolmen kruunun linna, Tre Kronor, paloi 7. toukokuuta 1697. Nykyinen palatsi nousi sen paikalle Nicodemus Tessin nuoremman piirustusten mukaan."
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "kysymys": "Isoisän merkintä: \"Kirjoitin sanan luukkuun siirtämällä jokaista kirjainta eteenpäin niin monta askelta kuin Tre Kronor paloi toukokuun päivänä.\" Pura sana.",
+        "salattu": "CHZH",
+        "avain": 7,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "VASA",
+        "vihje_vaarin": "Isoisän avain on päivä, jona Tre Kronor paloi toukokuussa. Siirrä jokaista kirjainta niin monta askelta taaksepäin.",
+        "tiesitko": "Vasa upposi neitsytmatkallaan 10. elokuuta 1628 vain noin 1 300 metrin päässä satamasta, ja se nostettiin merestä 1961."
+      },
+      "pala": {
+        "nro": 3,
+        "rivi": "Kolmas veli odottaa luukun takana, ja vastaus tulee vasta, kun kysyt.",
+        "kuvapala": "oikea kaistale"
+      }
+    }
+  ],
+  "kerantyva_arvoitus": {
+    "kuvaus": "Jokainen ratkaistu kaupunki antaa palan isoisän arvoitukseen: kolmikaistainen sivu, jossa Foggin kynäpiirros Kolme veljestä -riipuksesta (Codexin luonnos) ja yksi arvoitusrivi. Kaikki kolme palaa yhdessä: kuva täydentyy ja loppuarvoitus aukeaa.",
+    "palat": [
+      {
+        "kaupunki": "ateena",
+        "nro": 1,
+        "rivi": "Ensimmäinen veli nukkuu kivessä, jonka mittaaja tuntee.",
+        "kuvapala": "vasen kaistale"
+      },
+      {
+        "kaupunki": "pariisi",
+        "nro": 2,
+        "rivi": "Toinen veli kulkee sivulta sivulle, kunnes joku avaa sen oikeasta kohdasta.",
+        "kuvapala": "keskikaistale"
+      },
+      {
+        "kaupunki": "tukholma",
+        "nro": 3,
+        "rivi": "Kolmas veli odottaa luukun takana, ja vastaus tulee vasta, kun kysyt.",
+        "kuvapala": "oikea kaistale"
+      }
+    ],
+    "loppu": "Kolme kulmaa, yksi sydän. Kun veljet kohtaavat, keskellä loistaa se, mitä ei ole kukaan kantanut yli kolmeensataan vuoteen."
+  }
+}

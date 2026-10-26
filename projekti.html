@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matkakirja ja unohdettu aarre — projekti</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Matkakirja ja unohdettu aarre: suomenkielinen seikkailupeli, jossa oppii maailmasta. Kehityksen tilanne, linssit, pelit, kartta, sisältö ja iOS-sovellus.">
+<!--
+  Julkinen projektisivu (linkillä, ei hakukoneisiin). Korvaa erilliset
+  linssikatalogi.html- ja pelikatalogi.html-sivut, jotka ohjaavat tänne.
+  Rakenne: projekti/paa.js (reititys), projekti/tilanne.js, projekti/linssit.js,
+  projekti/pelit.js, tyyli projekti/projekti.css. Luvut: projekti-data.js
+  (tools/tee-projekti-data.mjs). Pages kopioi tiedostot (pages.yml).
+-->
+<script>
+  // Teema ennen piirtoa, ettei yötila välähdä päivätilana.
+  try { const t = localStorage.getItem('matkakirja-teema'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch {}
+</script>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="projekti/projekti.css">
+</head>
+<body>
+<button type="button" class="teemakytkin" id="teemakytkin">Yötila</button>
+
+<div class="sivu">
+  <header class="otsake">
+    <div class="yla">Suomenkielinen seikkailupeli · 13+ ja aikuiset</div>
+    <h1>Matkakirja ja unohdettu aarre</h1>
+    <p class="johdanto">Nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa ympäri maailmaa ja oppii matkalla historiaa, maantietoa ja kulttuuria. Tällä sivulla näet, missä pelin kehitys on nyt.</p>
+  </header>
+
+  <nav class="paavalilehdet" id="paavalilehdet" aria-label="Projektisivun osiot">
+    <a class="paa-nappi" href="#tilanne" data-paa="tilanne" aria-selected="true"><span class="pitka">Tilanne</span><span class="lyhyt">Tilanne</span></a>
+    <a class="paa-nappi" href="#linssit" data-paa="linssit"><span class="pitka">Linssit</span><span class="lyhyt">Linssit</span></a>
+    <a class="paa-nappi" href="#pelit" data-paa="pelit"><span class="pitka">Pelit</span><span class="lyhyt">Pelit</span></a>
+    <a class="paa-nappi" href="#kartta" data-paa="kartta"><span class="pitka">Kartta ja maailma</span><span class="lyhyt">Kartta</span></a>
+    <a class="paa-nappi" href="#sisalto" data-paa="sisalto"><span class="pitka">Sisältö ja oppiminen</span><span class="lyhyt">Sisältö</span></a>
+    <a class="paa-nappi" href="#natiivi" data-paa="natiivi"><span class="pitka">Natiivi iOS</span><span class="lyhyt">iOS</span></a>
+  </nav>
+
+  <main>
+    <div class="paaosio" id="osio-tilanne"></div>
+    <div class="paaosio lk" id="osio-linssit" hidden></div>
+    <div class="paaosio pk" id="osio-pelit" hidden></div>
+    <div class="paaosio" id="osio-kartta" hidden></div>
+    <div class="paaosio" id="osio-sisalto" hidden></div>
+    <div class="paaosio" id="osio-natiivi" hidden></div>
+    <noscript><p>Sivu tarvitsee JavaScriptin. Lähdeaineisto: <a href="docs/tilannekatsaus.md">tilannekatsaus</a>, <a href="docs/linssikatalogi.md">linssikatalogi</a>, <a href="docs/pelikatalogi.md">pelikatalogi</a>.</p></noscript>
+  </main>
+
+  <footer class="sivun-alatunniste" id="alatunniste"></footer>
+</div>
+
+<script src="linssikatalogi-data.js"></script>
+<script src="pelikatalogi-data.js"></script>
+<script src="projekti-data.js"></script>
+<script type="module" src="projekti/paa.js"></script>
+</body>
+</html>

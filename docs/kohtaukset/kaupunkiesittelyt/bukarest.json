@@ -1,0 +1,86 @@
+[
+  {
+    "id": "bukarest",
+    "esittely": "Kartan alue on Bukarestin keskusta Dâmbovița-joen molemmin puolin. Vanhassakaupungissa on Vanha ruhtinaanhovi, ja Vlad III mainitsi linnansa ruhtinaanasunnokseen asiakirjassa vuonna 1459. Stavropoleoksen luostarikirkko valmistui 1724 Brâncoveanun tyyliin. Cișmigiun puutarha perustettiin 1800-luvun puolivälissä.\n\nRomanian ateneum avattiin 1888, ja Albert Galleronin suunnittelema konserttitalo on George Enescu -filharmonikkojen koti. Antipan luonnontieteellinen museo perustettiin 1834, ja nykyinen rakennus avattiin 1908. Parlamenttipalatsin rakentaminen alkoi 1984, ja sen tieltä purettiin suuri osa Uranuksen kaupunginosaa. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 682,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Curtea_Veche",
+        "title": "Wikipedia: Curtea Veche",
+        "tukee": "Vlad III:n palatsi 1459, asiakirja 20.9.1459 mainitsee 'linnoituksen' ruhtinaan residenssinä"
+      },
+      {
+        "url": "https://www.basilica.ro/en/bucharest-marks-563-years-since-its-first-documentary-attestation/",
+        "title": "Basilica.ro: Bucharest marks 563 years since first documentary attestation (hakutulos)",
+        "tukee": "asiakirja 20.9.1459 Vladin kanslian"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Stavropoleos_Monastery",
+        "title": "Wikipedia: Stavropoleos Monastery",
+        "tukee": "valmistui 30.10.1724, Brâncovenesc-tyyli"
+      },
+      {
+        "url": "https://www.radissonhotels.com/en-us/destination/romania/bucharest/stavropoleos-church",
+        "title": "Radisson: Stavropoleos Church (hakutulos, matkailusivu, heikko)",
+        "tukee": "1724, Ioanichie Stratonikeas, Brâncovenesc-tyyli"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ci%C8%99migiu_Gardens",
+        "title": "Wikipedia: Cișmigiu Gardens",
+        "tukee": "avattu 1847 (Wikipedia)"
+      },
+      {
+        "url": "https://hekint.org/2025/08/04/the-cismigiu-gardens-in-bucharest/",
+        "title": "Hektoen International: The Cișmigiu Gardens in Bucharest (hakutulos)",
+        "tukee": "avattu 1847-1854, yleisölle 1860"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Romanian_Athenaeum",
+        "title": "Wikipedia: Romanian Athenaeum",
+        "tukee": "avattu 1888, Albert Galleron, George Enescu -filharmonikot"
+      },
+      {
+        "url": "https://romania.infocons.ro/tablouri/ateneul-roman/",
+        "title": "Infocons: Ateneul Român (hakutulos)",
+        "tukee": "1888, Galleron"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grigore_Antipa_National_Museum_of_Natural_History",
+        "title": "Wikipedia: Grigore Antipa National Museum",
+        "tukee": "perustettu 1834, nykyinen rakennus 1908"
+      },
+      {
+        "url": "https://rri.ro/en/features-and-reports/rri-encyclopaedia/the-grigore-antipa-museum-of-natural-history-id164483.html",
+        "title": "Radio Romania International: Grigore Antipa Museum (hakutulos)",
+        "tukee": "1834, rakennus avattu 1908"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament",
+        "title": "Wikipedia: Palace of the Parliament",
+        "tukee": "rakentaminen alkoi 25.6.1984; Uranus-Izvor-kaupunginosa purettiin"
+      },
+      {
+        "url": "https://www.rri.ro/en?p=131668",
+        "title": "Radio Romania International: Uranus demolitions (hakutulos)",
+        "tukee": "noin 90 % Uranuksen alueesta purettiin"
+      }
+    ],
+    "pudotetut": [
+      "Yliopiston aukio 1857: vain Wikipedia, jätetty pois",
+      "Parlamenttipalatsin koko ja paino: luvut ristiriitaisia (365 000 vs. 340 000 m2; painoväite), jätetty pois",
+      "Cișmigiu 'kaupungin vanhin puisto' (entinen teksti): Wikipedia sanoo vain keskustan vanhin, Goethe-Institut mainitsee Kiseleff-puiston vanhempana, jätetty pois",
+      "Szathmári (Romanian valokuvauksen perustaja): vahvistettu, mutta studion avaamisvuosi epäselvä (1843-44 / 1850), jätetty pois tilan vuoksi",
+      "Colțean torni ja Kultakana: ei tarkistettavaa lähdettä, jätetty pois",
+      "Vanhan ruhtinaanhovin rauniot / kaivaukset 1953: lähde vain Wikipedia, jätetty pois",
+      "'Kainalokartassa on Antipan museo kilometrin päässä pohjoisessa' (entinen teksti): etäisyyttä ei tarkistettu, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Cișmigiun avaaminen: 23.9.1847 (Wikipedia) vs. 1847-1854 / 1860 -> '1800-luvun puolivälissä'",
+      "Bukarestin ensimmäinen asiakirja: latinankielinen 13.6.1458 vs. slaavilainen 20.9.1459 -> teksti sanoo vain, että 1459 asiakirja mainitsee linnan ruhtinaan asuntona",
+      "Parlamenttipalatsin valmistuminen 1989 (Guinness) vs. 1997 -> mainitaan vain rakentamisen alku 1984; purettu ala 7 km2 vs. 'viidennes' -> ei lukuja",
+      "Ateneumin rakentaminen 1885/1886-1888, työt jatkuivat 1897 asti -> käytetty vain avajaisvuotta 1888"
+    ],
+    "muutos_sk": "Poistettu Yliopiston aukio, Cișmigiun 'vanhin puisto', Valakian ruhtinaiden linna -muotoilu ja Kainalokartta-maininta. Lisätty Vlad III:n asiakirja 1459, Stavropoleos 1724, Cișmigiu 1800-luvun puolivälissä, ateneum 1888 ja Galleron, Antipan museo 1834/1908 ja Parlamenttipalatsin alku 1984 sekä Uranuksen purku."
+  }
+]

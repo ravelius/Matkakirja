@@ -1,0 +1,640 @@
+[
+ {
+  "kysymys": "Mihin Saimaan vedet laskevat?",
+  "vastaus": "Saimaan vedet laskevat Vuoksi-jokea pitkin Laatokkaan. Laivoille on rakennettu lisäksi oma reitti, Saimaan kanava, joka on noin 43 kilometriä pitkä ja avattiin vuonna 1856. Kanava yhdistää Saimaan Suomenlahteen Viipurin lähellä, ja sitä pitkin kulkevat laivat. Vuoksi on siis järven luonnollinen laskujoki, kanava ihmisen tekemä oikotie mereen.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lake_Saimaa",
+    "title": "Lake Saimaa - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Saimaa_Canal",
+    "title": "Saimaa Canal - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Vuoksi",
+    "title": "Vuoksi - Wikipedia"
+   },
+   {
+    "url": "https://prlib.ru/en/history/619520",
+    "title": "Saimaa Canal inaugurated - Presidential Library (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Vuoksi virtaa Saimaasta Laatokkaan",
+    "lahde1": "Wikipedia: Lake Saimaa (WebFetch)",
+    "lahde2": "Wikipedia: Vuoksi / hakutulos (Saimaa, Vuoksi 150-162 km Saimaalta Laatokkaan)",
+    "huom": "Vuoksen pituus jätetty pois (150 km tai 162 km haarasta riippuen)."
+   },
+   {
+    "vaite": "Saimaan kanava noin 43 km",
+    "lahde1": "Wikipedia: Lake Saimaa (WebFetch): 43 km",
+    "lahde2": "Wikipedia: Saimaa Canal / hakutulos: 42,9 km",
+    "huom": "Alkuperäinen kanava oli pidempi (vanhemmat lähteet noin 58 km), nykyinen pituus noin 43 km."
+   },
+   {
+    "vaite": "Kanava avattiin vuonna 1856",
+    "lahde1": "Wikipedia: Saimaa Canal / hakutulos: 7.9.1856",
+    "lahde2": "Presidentin kirjasto (prlib.ru) / hakutulos: vihkiäiset 1856",
+    "huom": "Lähteet tiivistelmiä hakutuloksesta."
+   }
+  ],
+  "kohteet": [
+   "fin/saimaa"
+  ]
+ },
+ {
+  "kysymys": "Mikä Kuurinkynnäs on?",
+  "vastaus": "Kuurinkynnäs on kapea, kaareva hiekkaniemi, joka erottaa Kuurinlahden Itämerestä. Se on noin 98 kilometriä pitkä ja vain 0,4–3,8 kilometriä leveä. Niemi jakautuu Liettuan ja Venäjän kesken, ja korkeimmat dyynit nousevat noin 60 metriin. UNESCO otti sen maailmanperintöluetteloon vuonna 2000. Se on esimerkki maisemasta, jota tuuli muokkaa jatkuvasti.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Curonian_Spit",
+    "title": "Curonian Spit - Wikipedia"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/994",
+    "title": "Curonian Spit - UNESCO World Heritage Centre (hakutulos)"
+   },
+   {
+    "url": "https://nerija.lrv.lt/en/unesco/about-the-unesco-status-of-the-curonian-spit/",
+    "title": "UNESCO status of Curonian Spit - Neringa/LRV (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Pituus noin 98 km, leveys 0,4-3,8 km",
+    "lahde1": "Wikipedia: Curonian Spit (WebFetch): 98 km, 400-3 800 m",
+    "lahde2": "UNESCO (hakutulos): 98 km, 0,4-4 km (historiaosassa 0,4-3,8 km)",
+    "huom": ""
+   },
+   {
+    "vaite": "Dyynit korkeimmillaan noin 60 m",
+    "lahde1": "Wikipedia: Curonian Spit (WebFetch): keskikorkeus 35 m, osa 60 m",
+    "lahde2": "Matkaopas (hakutulos): korkeimmat jopa 60 m",
+    "huom": "UNESCO-aineistosta lukua ei löytynyt; toinen lähde on toissijainen. Teksti sanoo \"korkeimmat noin 60 m\"."
+   },
+   {
+    "vaite": "Maailmanperintö 2000, Liettua ja Venäjä",
+    "lahde1": "Wikipedia: Curonian Spit (WebFetch): 2000",
+    "lahde2": "UNESCO (hakutulos): 2.12.2000, kriteeri v",
+    "huom": ""
+   },
+   {
+    "vaite": "Erottaa lagunin merestä",
+    "lahde1": "Wikipedia: Curonian Spit (WebFetch)",
+    "lahde2": "UNESCO (hakutulos)",
+    "huom": "Suomenkielinen nimi Kuurinlahti on käännös englannin Curonian Lagoon -nimestä."
+   }
+  ],
+  "kohteet": [
+   "ltu/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Riianlahti on erillinen?",
+  "vastaus": "Riianlahti on Itämeren oma sivumeri, koska sen yhteydet avomerelle ovat ahtaat: pääyhteys on Irbensalmi, ja pohjoisessa ovat Moonsundin matalat salmet. Lahti on noin 18 000 neliökilometriä ja keskimäärin 26 metriä syvä. Väinäjoki tuo siihen runsaasti makeaa vettä, joten vesi on etelässä selvästi vähäsuolaisempaa kuin Irbensalmessa. Lahden vesi vaihtuu hitaasti.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Riga",
+    "title": "Gulf of Riga - Wikipedia"
+   },
+   {
+    "url": "https://bg.copernicus.org/preprints/bg-2021-160/bg-2021-160.pdf",
+    "title": "Gulf of Riga water exchange and salinity - Biogeosciences preprint (hakutulos)"
+   },
+   {
+    "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2023.1244643/pdf",
+    "title": "Gulf of Riga study - Frontiers in Marine Science (hakutulos)"
+   },
+   {
+    "url": "https://www.smhi.se/publikationer/observations-of-water-exchange-currents-sea-levels-and-nutrients-in-the-gulf-of-riga-1.7151",
+    "title": "Water exchange in the Gulf of Riga - SMHI (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Pääyhteys Irbensalmi, pohjoisessa Moonsundin salmet",
+    "lahde1": "Wikipedia: Gulf of Riga (WebFetch): Irbe Strait main connection",
+    "lahde2": "Tiedejulkaisut (hakutulos): Irbe ja Moonsund/Suur-salmi; suurin osa vedenvaihdosta Irbessä",
+    "huom": ""
+   },
+   {
+    "vaite": "Pinta-ala noin 18 000 km2, keskisyvyys 26 m",
+    "lahde1": "Wikipedia: Gulf of Riga (WebFetch)",
+    "lahde2": "Ei toista lähdettä (hakutulos ei vahvistanut)",
+    "huom": "Yhden lähteen luvut; kirjoitettu \"noin\". Harkitse poistoa jos halutaan tiukka kahden lähteen sääntö."
+   },
+   {
+    "vaite": "Väinäjoki (Daugava) tuo runsaasti makeaa vettä; suolaisuus laskee etelään päin",
+    "lahde1": "Wikipedia: Gulf of Riga (WebFetch): Daugava päävirtaamia",
+    "lahde2": "Tiedejulkaisu (hakutulos): Daugava noin 70 % jokivirtaamasta, suolaisuus Irbessä 6 PSU, jokisuilla alle 2 PSU",
+    "huom": "Prosenttia ja suolaisuusarvoja ei käytetty tekstissä."
+   }
+  ],
+  "kohteet": [
+   "lva/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Norjan rannikko pysyy sulana talvella?",
+  "vastaus": "Norjan rannikkoa lämmittää Pohjois-Atlantin virta, Golfvirran jatke, joka tuo lämmintä ja suolaista vettä pohjoiseen. Siksi Norjanmeri on jäätön ympäri vuoden, toisin kuin arktiset meret. Jopa pohjoisessa, 70. leveyspiirin tienoilla, satamat pysyvät auki koko talven. Tutkijoiden mukaan merialueen suuri vesimäärä myös varastoi lämpöä ja pehmentää talvea.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Sea",
+    "title": "Norwegian Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Current",
+    "title": "Norwegian Current - Wikipedia (hakutulos)"
+   },
+   {
+    "url": "https://glossary.ametsoc.org/wiki/norwegian-current/",
+    "title": "Norwegian Current - AMS Glossary of Meteorology (hakutulos)"
+   },
+   {
+    "url": "https://www.uib.no/en/gfi/101098/warm-water-governs-winter-ice",
+    "title": "Warm water governs winter ice - Bergenin yliopisto (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Norjanmeri jäätön ympäri vuoden Pohjois-Atlantin virran ansiosta",
+    "lahde1": "Wikipedia: Norwegian Sea (WebFetch): \"ice-free year round\", lämmin North Atlantic Current",
+    "lahde2": "AMS Glossary (hakutulos): virran vuoksi 70 N satamat jäättömiä",
+    "huom": ""
+   },
+   {
+    "vaite": "Satamat 70. leveyspiirillä auki talvella",
+    "lahde1": "AMS Glossary of Meteorology (hakutulos)",
+    "lahde2": "Wikipedia: Norwegian Current (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Meren suuri vesimäärä varastoi lämpöä (ei vain Golfvirta)",
+    "lahde1": "Bergenin yliopisto, UiB (hakutulos)",
+    "lahde2": "Wikipedia: Norwegian Current (hakutulos)",
+    "huom": "Tutkimustulos; muotoiltu varovasti (\"tutkijoiden mukaan\"). Golfvirran osuudesta tutkijat ovat osin eri mieltä."
+   }
+  ],
+  "kohteet": [
+   "nor/norjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Jan Mayenin harjanne on?",
+  "vastaus": "Jan Mayenin harjanne on vedenalainen kohouma Islannin koillispuolella, Islanninmeren alueella. Se ei ole tavallista merenpohjaa, vaan yli 400 kilometriä pitkä mantereen kuoren palanen. Se kuului ennen Grönlantiin, kunnes merenpohjan leviäminen irrotti sen kymmeniä miljoonia vuosia sitten. Siksi sitä kutsutaan mikromantereeksi, eli pieneksi irronneeksi mantereen osaksi.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jan_Mayen_Microcontinent",
+    "title": "Jan Mayen Microcontinent - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Sea",
+    "title": "Norwegian Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.usgs.gov/publications/geology-and-assessment-undiscovered-oil-and-gas-resources-jan-mayen-microcontinent",
+    "title": "Geology and assessment of the Jan Mayen Microcontinent - USGS (hakutulos)"
+   },
+   {
+    "url": "https://www.ngu.no/taxonomy/term/624",
+    "title": "Jan Mayen microcontinent - Norges geologiske undersøkelse (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Erottaa Norjanmeren Grönlanninmerestä",
+    "lahde1": "Wikipedia: Jan Mayen Microcontinent (WebFetch)",
+    "lahde2": "Wikipedia: Norwegian Sea (WebFetch): \"to the north, Jan Mayen Ridge separates it from Greenland Sea\"",
+    "huom": "Kortin teksti on tämän kanssa yhtäpitävä."
+   },
+   {
+    "vaite": "Mantereen kuoren palanen (mikromanner), yli 400 km pitkä",
+    "lahde1": "Wikipedia: Jan Mayen Microcontinent (WebFetch): noin 500 km",
+    "lahde2": "NGU / hakutulos: 400-450 km pitkä",
+    "huom": "Lähteet antavat 400-500 km; teksti sanoo \"yli 400\"."
+   },
+   {
+    "vaite": "Irtosi Grönlannista kymmeniä miljoonia vuosia sitten",
+    "lahde1": "USGS (hakutulos): oligoseeni-varhaismioseeni",
+    "lahde2": "NGU (hakutulos): n. 30-20 Ma",
+    "huom": "Tarkkaa ajankohtaa ei annettu, lähteet eroavat."
+   }
+  ],
+  "kohteet": [
+   "nor/norjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Kuka Willem Barentsz oli?",
+  "vastaus": "Willem Barentsz oli hollantilainen merenkulkija, joka etsi koillisväylää Euroopasta Aasiaan. Hän teki kolme retkeä: vuosina 1594, 1595 ja 1596–1597. Viimeisellä retkellä laiva juuttui jäähän Novaja Zemljan luona, ja miehistö talvehti saarella. Barentsz kuoli kesäkuussa 1597 avoveneillä tehdyllä paluumatkalla. Hänen mukaansa on nimetty Barentsinmeri, ja hänen retkiään muistetaan pohjoisten merireittien etsinnästä.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Willem_Barentsz",
+    "title": "Willem Barentsz - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/print/article/53182",
+    "title": "Willem Barents - Encyclopaedia Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kolme retkeä 1594, 1595, 1596-1597",
+    "lahde1": "Wikipedia: Willem Barentsz (WebFetch)",
+    "lahde2": "Britannica (hakutulos): 1594, 1595, 1596",
+    "huom": ""
+   },
+   {
+    "vaite": "Talvehtiminen Novaja Zemljalla, kuolema 20.6.1597",
+    "lahde1": "Wikipedia: Willem Barentsz (WebFetch): 20.6.1597",
+    "lahde2": "Britannica (hakutulos): kuoli 20.6.1597, selvisi viikon avoveneissä",
+    "huom": "Vuoden 1911 Britannica antaa 30.6.; teksti sanoo vain \"kesäkuussa 1597\"."
+   },
+   {
+    "vaite": "Tavoite: koillisväylä",
+    "lahde1": "Wikipedia: Willem Barentsz (WebFetch)",
+    "lahde2": "Britannica (hakutulos): northeast passage Europe to Asia",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "nor/barentsinmeri",
+   "rus/barentsinmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi merta kutsuttiin ennen Murmanskinmereksi?",
+  "vastaus": "Venäläiset kutsuivat Kolan niemimaan pohjoisrannikkoa Murmaniksi, ja meri nimettiin sen mukaan. Nimi Murmanskinmeri esiintyy jo 1500-luvun kartoissa, esimerkiksi Mercatorin Arktiksen kartassa vuodelta 1595. Nykyisen nimen meri sai myöhemmin hollantilaisen Barentszin kunniaksi. Sanan Murman alkuperä on kiistanalainen: se voi tulla saamesta tai norjalaisista, eivätkä lähteet ole yksimielisiä.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Barents_Sea",
+    "title": "Barents Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Murman_Coast",
+    "title": "Murman Coast - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Murmansk",
+    "title": "Murmansk - Wikipedia"
+   },
+   {
+    "url": "https://nwcartographic.com/products/antique-sea-chart-barents-sea-russia-1715",
+    "title": "Antique sea chart Barents Sea 1715 - NW Cartographic (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Meri oli 1500-luvun kartoissa Murmanskoye more, mm. Mercator 1595",
+    "lahde1": "Wikipedia: Barents Sea (WebFetch)",
+    "lahde2": "Karttakauppiaan kuvaus (hakutulos), toissijainen",
+    "huom": "Mercator-yksityiskohta toisessa lähteessä vain kauppiaan sivulla."
+   },
+   {
+    "vaite": "Murman = Kolan niemimaan pohjoisrannikko; meri nimetty rannikon mukaan",
+    "lahde1": "Wikipedia: Murman Coast (WebFetch): rannikko Barentsinmeren eteläpuolella",
+    "lahde2": "Wikipedia: Barents Sea (WebFetch): \"Murman Sea\" -nimi",
+    "huom": "Päätelmä \"nimetty rannikon mukaan\" on johdettu; yksi venäläinen artikkeli (hakutulos) väittää nimen tulevan kaupungista, mikä on anakronismi (kaupunki 1900-luvulla). Varovaisempi muotoilu mahdollinen."
+   },
+   {
+    "vaite": "Sanan Murman alkuperä kiistanalainen (saame / norjalaiset)",
+    "lahde1": "Wikipedia: Murman Coast (WebFetch): saamen \"maan reuna\"",
+    "lahde2": "Wikipedia: Murmansk / Britannica (hakutulos): norðmaðr-teoria ja saamelaisteoria",
+    "huom": "Lähteet ovat ristiriidassa, siksi teksti kertoo vain että alkuperä on kiistanalainen."
+   },
+   {
+    "vaite": "Nykyinen nimi Barentszin kunniaksi",
+    "lahde1": "Wikipedia: Barents Sea (WebFetch)",
+    "lahde2": "Britannica / hakutulokset",
+    "huom": "Vuosilukua (1853) ei käytetty, koska se jäi vahvistamatta."
+   }
+  ],
+  "kohteet": [
+   "nor/barentsinmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Itämerellä ei ole vuorovettä?",
+  "vastaus": "Itämerellä on vuorovettä vain muutaman sentin verran, joten sillä ei ole käytännössä merkitystä. Meri yhtyy valtamereen vain kapeiden ja matalien Tanskan salmien kautta, jotka vaimentavat vuorovesiaallon. Vedenkorkeutta muuttavat paljon enemmän tuuli ja ilmanpaine: yhden hehtopascalin muutos vastaa noin senttiä, ja tavalliset vaihtelut voivat olla kymmeniä senttejä.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.ilmatieteenlaitos.fi/sea-level-variations",
+    "title": "Sea Level Variations on the Finnish Coast - Ilmatieteen laitos (hakutulos)"
+   },
+   {
+    "url": "https://itameri.fi/en/nature-and-how-it-changes/characteristics-of-water/hydrology/",
+    "title": "Hydrology - Itämeri.fi (hakutulos)"
+   },
+   {
+    "url": "https://old.iopan.pl/oceanologia/431wrobl.pdf",
+    "title": "Baltic sea level and tides - Oceanologia, Puolan tiedeakatemia (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+    "title": "Baltic Sea - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Vuorovesi vain muutama cm",
+    "lahde1": "Ilmatieteen laitos (hakutulos): \"only a few centimetres\" Suomen rannikolla",
+    "lahde2": "Itämeri.fi (hakutulos): vuorovesi merkityksetön",
+    "huom": ""
+   },
+   {
+    "vaite": "Tanskan salmet vaimentavat vuorovesiaallon",
+    "lahde1": "Oceanologia / tiedejulkaisu (hakutulos): salmet suodattavat, Jyllannin rannikolla 12-30 cm, Puolan rannikolla 1-2 cm",
+    "lahde2": "Wikipedia: Baltic Sea (WebFetch): vähäinen vedenvaihto, matalat kynnykset",
+    "huom": "Cm-lukuja ei käytetty."
+   },
+   {
+    "vaite": "Tuuli ja ilmanpaine ohjaavat vedenkorkeutta; 1 hPa = noin 1 cm",
+    "lahde1": "Ilmatieteen laitos (hakutulos)",
+    "lahde2": "Tiedejulkaisut (hakutulos)",
+    "huom": "Toinen lähde yleisluonteinen; 1 hPa = 1 cm löytyi vain Ilmatieteen laitoksen tiivistelmästä."
+   }
+  ],
+  "kohteet": [
+   "pol/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Murmansk ei jäädy talvella?",
+  "vastaus": "Murmanskin satama pysyy sulana, koska lämmin Pohjois-Atlantin virta tuo Barentsinmeren lounaisosaan lämmintä vettä. Murmansk on Venäjän pohjoisen tärkein ympärivuoden sula satama, ja siksi se kasvoi tärkeäksi pohjoiseksi satamakaupungiksi. Kaupunki itse ei pysy lämpimänä: talvella ilma on kylmää ja lunta on paljon, vain satamavesi pysyy auki.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Murmansk",
+    "title": "Murmansk - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Barents_Sea",
+    "title": "Barents Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.thebarentsobserver.com/industry-and-energy/murmansk-transport-hub-gets-status-as-strategic-important/139795",
+    "title": "Murmansk transport hub - The Barents Observer (hakutulos)"
+   },
+   {
+    "url": "https://www.worldatlas.com/articles/the-arctic-ports-of-russia.html",
+    "title": "The Arctic Ports of Russia - WorldAtlas (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Satama jäätön lämpimän Pohjois-Atlantin virran ansiosta",
+    "lahde1": "Wikipedia: Murmansk (WebFetch): \"ice-free year round due to the warm North Atlantic Current\"",
+    "lahde2": "Wikipedia: Barents Sea (WebFetch) ja Barents Observer (hakutulos)",
+    "huom": "WorldAtlas (hakutulos) sanoo \"suurimman osan vuodesta\" - teksti sanoo \"pysyy sulana\"."
+   },
+   {
+    "vaite": "Ainoa ympärivuotisesti jäätön satama Euroopan Venäjällä",
+    "lahde1": "Barents Observer (hakutulos)",
+    "lahde2": "Wikipedia: Murmansk (WebFetch)",
+    "huom": "Muotoilu \"ainoa\" peräisin yhdestä toimituksellisesta lähteestä; hakutulos."
+   },
+   {
+    "vaite": "Kaupungissa kylmä talvi ja paljon lunta",
+    "lahde1": "Yleistieto / hakutulos",
+    "lahde2": "-",
+    "huom": "Ei erikseen lähteistetty luku; yleinen toteamus, ei lukuja."
+   }
+  ],
+  "kohteet": [
+   "rus/barentsinmeri"
+  ]
+ },
+ {
+  "kysymys": "Kuinka paksua Jäämeren jää on?",
+  "vastaus": "Jäämeren jää on yleensä parin–kolmen metrin paksuista. NASAn mukaan yhden talven aikana kasvanut jää yltää tavallisesti noin kahteen metriin, ja useamman kesän yli säilynyt vanha jää on keskimäärin noin kolme metriä. Paksuus vaihtelee siis alueen ja vuodenajan mukaan. Talvella jää kasvaa ja kesällä sulaa, joten peittoala vaihtelee vuoden mittaan.",
+  "sanoja": 38,
+  "lahteet": [
+   {
+    "url": "https://svs.gsfc.nasa.gov/3593",
+    "title": "NASA Scientific Visualization Studio: sea ice thickness"
+   },
+   {
+    "url": "https://www.meereisportal.de/en/news-overview/news-detail-view/winter-2017-18-sea-ice-thickness-analysis-with-observations-from-cryosat-2",
+    "title": "Winter 2017/18 sea ice thickness analysis from CryoSat-2 - Alfred Wegener Institute (hakutulos)"
+   },
+   {
+    "url": "https://visuals.earth.esa.int/data/sea-ice-thickness",
+    "title": "Sea-ice thickness - ESA (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Yksivuotinen jää noin 2 m, monivuotinen noin 3 m",
+    "lahde1": "NASA SVS (WebFetch): seasonal about 2 m, multiyear averages 3 m",
+    "lahde2": "ESA (hakutulos): ensimmäisen vuoden jää enintään noin 2 m; NSIDC (hakutulos): Lincolnin meri 2-3,4 m",
+    "huom": "NASA-luvut ovat vuodelta 2009 (ICESat). NOAA-aineisto antaa monivuotiselle 2-4 m."
+   },
+   {
+    "vaite": "Keskiosan huhtikuun keskipaksuus 2018 noin 2,1 m",
+    "lahde1": "AWI / CryoSat-2 (hakutulos): 2,14 m (huhtikuu 2018)",
+    "lahde2": "CPOM/EOCIS (hakutulos): joulukuu 2024 keskimäärin 1,3 m",
+    "huom": "Vain talvimittaukset; kesällä ei mitata. Luvut vaihtelevat vuosittain."
+   }
+  ],
+  "kohteet": [
+   "rus/jaameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi jotkut kutsuvat sitä Atlantin suistoksi?",
+  "vastaus": "Joidenkin tutkijoiden mielestä Jäämeri on kuin Atlantin suisto, koska sen tärkein vesilähde on Atlantti. Fram-salmen kautta Atlantin vettä virtaa Jäämereen noin kymmenen kertaa enemmän kuin Tyyneltä mereltä Beringinsalmen kautta. Vesi muuttuu matkalla jäähtymisen ja jään jäätymisen sekä sulamisen vaikutuksesta. Nimitys on tutkijoiden vertaus eikä virallinen nimi.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Arctic_Ocean",
+    "title": "Arctic Ocean - Wikipedia"
+   },
+   {
+    "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2019.00528/pdf",
+    "title": "Arctic Mediterranean review - Frontiers in Marine Science (hakutulos)"
+   },
+   {
+    "url": "https://www.cordis.europa.eu/article/id/84647-effect-of-atlantic-water-on-the-arctic-ocean",
+    "title": "Effect of Atlantic water on the Arctic Ocean - CORDIS (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Jäämerta on kuvattu \"Atlantin suistoksi\"",
+    "lahde1": "Wikipedia: Arctic Ocean (WebFetch): \"estuary of the Atlantic Ocean\"",
+    "lahde2": "Tiedekatsaus (hakutulos): Arctic Mediterranean on \"double estuary\"",
+    "huom": "Täsmälleen sanaa \"estuary of the Atlantic\" ei löytynyt toisesta lähteestä, vain vastaava \"double estuary\" -käsite."
+   },
+   {
+    "vaite": "Atlantin sisäänvirtaus Fram-salmen kautta noin 10 kertaa Tyynenmeren sisäänvirtaus",
+    "lahde1": "Wikipedia: Arctic Ocean (WebFetch): noin 10-kertainen",
+    "lahde2": "Tiedekatsaus/CORDIS (hakutulos): Atlantin vesi pääasiallinen tilavuuden, suolan ja lämmön lähde, 10-kertainen",
+    "huom": "Jokivesi (Ob, Jenisei, Lena) jätetty pois vastauksesta, koska sille ei löytynyt kahta lähdettä."
+   }
+  ],
+  "kohteet": [
+   "rus/jaameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Gotlanti oli kauppareittien risteys?",
+  "vastaus": "Gotlanti on keskellä Itämerta, joten kauppareitit kulkivat luontevasti sen kautta idästä länteen. Viikinkiaikaan saarelle kertyi hopeaa: vuonna 1999 löytynyt Spillingsin aarre sisälsi yli 14 000 hopeakolikkoa. Keskiajalla saaren Visby oli Hansan tärkeimpiä kauppakaupunkeja Itämerellä. Sen keskiaikainen kaupunginmuuri on säilynyt, ja UNESCO otti kaupungin maailmanperintöön vuonna 1995, koska se on niin hyvin säilynyt.",
+  "sanoja": 52,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gotland",
+    "title": "Gotland - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Visby",
+    "title": "Visby - Wikipedia"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/731",
+    "title": "Hanseatic Town of Visby - UNESCO World Heritage Centre (hakutulos)"
+   },
+   {
+    "url": "https://archaeology.org/issues/january-february-2017/features/sweden-gotland-viking-wealth/",
+    "title": "Hoards of the Vikings - Archaeology magazine (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Gotlanti Itämeren keskellä",
+    "lahde1": "Wikipedia: Gotland (WebFetch): \"strategic location at the center of the Baltic Sea\"",
+    "lahde2": "Matkakertomus (hakutulos): keskellä Itämerta",
+    "huom": ""
+   },
+   {
+    "vaite": "Spillingsin aarre 1999, yli 14 000 kolikkoa",
+    "lahde1": "Wikipedia: Gotland (WebFetch): noin 14 000",
+    "lahde2": "Archaeology magazine (hakutulos): yli 14 300 kolikkoa",
+    "huom": ""
+   },
+   {
+    "vaite": "Visby Hansan tärkeimpiä kaupunkeja Itämerellä",
+    "lahde1": "Wikipedia: Gotland (WebFetch): \"most important Hanseatic city in the Baltic Sea\"",
+    "lahde2": "UNESCO (hakutulos): Hansan pääkeskus Itämerellä 1100-1300-luvuilla",
+    "huom": ""
+   },
+   {
+    "vaite": "UNESCO-asema 1995, kaupunginmuuri säilynyt",
+    "lahde1": "Wikipedia: Visby (WebFetch): 1995, muuri \"largely intact\"",
+    "lahde2": "UNESCO (hakutulos): inscribed 1995, 13th-century ramparts",
+    "huom": "Yli 700 hopea-aarretta (Archaeology) jätetty pois: yksi lähde."
+   }
+  ],
+  "kohteet": [
+   "swe/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Pohjanlahden rannat nousevat?",
+  "vastaus": "Rannat nousevat, koska maa kohoaa vapauduttuaan jääkauden mannerjään painosta. Jää oli paksuimmillaan jopa noin kolme kilometriä, ja sen paino painoi maankuorta alas. Kohoaminen jatkuu yhä: Merenkurkussa noin 9 millimetriä vuodessa, ja Ruotsin Korkealla rannikolla maa on noussut jääkauden jälkeen noin 286 metriä. Tuhansien vuosien päästä pohjoinen Pohjanlahti voi erota omaksi järvekseen.",
+  "sanoja": 51,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Bothnia",
+    "title": "Gulf of Bothnia - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/High_Coast",
+    "title": "High Coast - Wikipedia"
+   },
+   {
+    "url": "https://science.nasa.gov/earth/earth-observatory/uplift-underway-in-finlands-kvarken-archipelago-153740/",
+    "title": "Uplift underway in Finland's Kvarken Archipelago - NASA Earth Observatory (hakutulos)"
+   },
+   {
+    "url": "https://worldheritageoutlook.iucn.org/node/1113",
+    "title": "High Coast / Kvarken Archipelago - IUCN World Heritage Outlook (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Maa nousee jääkauden jälkeen (jälkijäänteinen kohoaminen)",
+    "lahde1": "Wikipedia: Gulf of Bothnia (WebFetch)",
+    "lahde2": "NASA Earth Observatory (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Kohoaminen Merenkurkussa noin 9 mm/vuosi",
+    "lahde1": "NASA Earth Observatory (hakutulos): noin 9 mm/v",
+    "lahde2": "Wikipedia: Gulf of Bothnia (WebFetch): lähes 10 mm/v; tiedejulkaisu (hakutulos): lähes 9 mm/v",
+    "huom": "Kortin \"80 cm vuosisadassa\" on yhtäpitävä (Wikipedia)."
+   },
+   {
+    "vaite": "Korkea rannikko noussut noin 286 m",
+    "lahde1": "NASA Earth Observatory (hakutulos): vähintään 286 m",
+    "lahde2": "Wikipedia: High Coast (WebFetch): noin 285 m (johdannossa 300 m)",
+    "huom": "Lähteiden luvut vaihtelevat 285-300 m; käytetty NASAn lukua."
+   },
+   {
+    "vaite": "Mannerjää jopa noin 3 km paksu",
+    "lahde1": "NASA Earth Observatory (hakutulos): jopa 3 000 m",
+    "lahde2": "Tiedejulkaisu (hakutulos): 2 500-3 000 m",
+    "huom": "Maksimiarvio; teksti sanoo \"jopa\"."
+   },
+   {
+    "vaite": "Pohjoinen Pohjanlahti voi tulevaisuudessa erota järveksi",
+    "lahde1": "Wikipedia: Gulf of Bothnia (WebFetch): noin 2 000 vuoden kuluttua",
+    "lahde2": "NASA (hakutulos): vuosituhansien kuluttua",
+    "huom": "Teksti sanoo vain \"tuhansien vuosien päästä\"."
+   }
+  ],
+  "kohteet": [
+   "swe/pohjanlahti"
+  ]
+ },
+ {
+  "kysymys": "Miksi järvessä elää merieläimiä?",
+  "vastaus": "Vänernissä elää pikemminkin meren jäänteitä kuin varsinaisia merieläimiä. Jääkauden jälkeen alue oli yhteydessä Itämeren edeltäjään, ja kun maa kohosi, Vänern katkesi merestä. Järveen jäi sieltä tulleita lajeja, esimerkiksi kuusi perinteisesti luetteloitua jääkauden jäänneravun lajia. Vänern ja Vättern ovat ainoat ruotsalaisjärvet, joista kaikki kuusi on löydetty.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Vänern",
+    "title": "Vänern - Wikipedia"
+   },
+   {
+    "url": "https://sv.wikipedia.org/wiki/Vänern",
+    "title": "Vänern - Wikipedia (ruotsi)"
+   },
+   {
+    "url": "https://vattern.org/wp-content/uploads/Fakta_2-2018_TGA-Glacialrelikta-kraftdjur-i-Vanern-Vattern-och-Malaren-2017.pdf",
+    "title": "Glacialrelikta kräftdjur i Vänern, Vättern och Mälaren - Vätternvårdsförbundet (hakutulos)"
+   },
+   {
+    "url": "https://www.lansstyrelsen.se/download/18.68fbc90d193243b379e47e20/1732525834455/Glacialrelikta%20kr%C3%A4ftdjur.pdf",
+    "title": "Glacialrelikta kräftdjur - Länsstyrelsen (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Vänern katkesi merestä maan kohotessa; järvessä lajeja, jotka ovat peräisin merestä",
+    "lahde1": "Wikipedia (en): Vänern (WebFetch): Ancylus-järvi, \"cut off from the Baltic by uplifting\"; Monoporeia affinis",
+    "lahde2": "Wikipedia (sv): Vänern (WebFetch): aiempi merellinen yhteys selittää lajit",
+    "huom": ""
+   },
+   {
+    "vaite": "Kuusi jäännerapulajia, Vänern ja Vättern ainoat joissa kaikki kuusi",
+    "lahde1": "Vätternvårdsförbundet / TGA (hakutulos): kuusi lajia, vain Vänern ja Vättern",
+    "lahde2": "Länsstyrelsen (hakutulos): glacialrelikta kräftdjur",
+    "huom": "Mysis relicta on myöhemmin jaettu kahdeksi lajiksi, jolloin lajeja on seitsemän; teksti sanoo \"perinteisesti luetteloitua kuusi\"."
+   }
+  ],
+  "huom": "Kysymyksen oletus on osittain virheellinen: Vänernissä ei elä merieläimiä vaan jääkauden jäänteitä (glasiaalirelikteja), jotka ovat polveutuneet murtovesi- ja merilajeista. Vastaus oikaisee oletuksen.",
+  "kohteet": [
+   "swe/vanern"
+  ]
+ }
+]

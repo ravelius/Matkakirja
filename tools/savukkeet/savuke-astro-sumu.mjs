@@ -31,6 +31,18 @@ import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { PILVIEN_LEVEYS, PILVIEN_KORKEUS } from '../../js/linssit/astro-sumu.js';
+import { avaaChromium } from '../selain.mjs';
+
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
@@ -75,14 +87,7 @@ const palvelin = createServer((req, res) => {
 const PORTTI = Number(process.env.PORTTI) || 8835;
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js')]) {
-  if (!polku) continue;
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -293,6 +298,7 @@ async function ajo(sumuPaalla) {
     serviceWorkers: 'block',
     reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   const virheet = [];
   s.on('pageerror', (e) => virheet.push(String(e)));

@@ -228,6 +228,9 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pakotus kirjataan (tests/karttanimet.test.mjs vertaa arvot).
   const tulos = karttanimienLadonta(MAAILMANKARTTA, 1.88);
   // Jokainen kaupunki saa merkkinsä: nimi on oma tai maastoparin (Alpit).
+  // 274 → 277 (15.10.2026, juna 193b): Bern, Bratislava ja Podgorica laudan pysäkeiksi (Karttaseppä, PT).
+  // 266 → 274 (14.10.2026, juna 193): kahdeksan pääkaupunkia laudan pysäkeiksi (Minsk, Chișinău,
+  // Belgrad, Vaduz, Monaco, Skopje, Tirana, Zagreb; Karttaseppä, PT).
   // 264 → 266 (21.9.2026): Luxemburg ja Valletta liittyivät
   // maailmankartalle (omistajan päätös 21.9.2026: Kypros, Luxemburg ja
   // Malta saavat pelikaupungin).
@@ -237,12 +240,12 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pelikaupunki, omistajan päätös 19.9.2026).
   // 261 → 262 (19.9.2026): Bryssel liittyi maailmankartalle (omistajan
   // päätös, Belgian pelikaupunki, pilotti).
-  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 266);
+  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 277);
   assert.equal(typeof tulos.pakotettu, 'number');
   // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
   const nimet = lue('../js/pallolauta/nimet.js');
   assert.match(nimet, /teksti\.style\.fontFamily = KARTTANIMI_FONTTI;/);
-  assert.match(nimet, /'karttanimi karttanimi-kaupunki'/);
+  assert.match(nimet, /`karttanimi karttanimi-kaupunki\$\{d\.oma \? ' karttanimi-oma' : ''\}`/);
   assert.match(lue('../css/styles.css'), /\.pallolauta-nimi-siirto \{ transition: transform 250ms ease-in-out; \}/);
 });
 
@@ -538,4 +541,51 @@ test('nimi ei leikkaudu ruudun reunasta: ulkopuoli on este', () => {
   // Nimi ei katoa vaan siirtyy: valtaosa säilyy, kun reuna on este.
   assert.ok(kanssa.nimiot.length >= ilman.nimiot.length - yli(ilman),
     `nimiä ${kanssa.nimiot.length} vs ${ilman.nimiot.length}`);
+});
+
+/*
+ * NIMI ON LÄHIMPÄNÄ OMAA PISTETTÄÄN (PT 10.10.2026, js/karttanimet.js
+ * ladoRuutunimet): mitattu Jerusalemin lähinäkymästä (1400 × 900, kotelon
+ * pikseleinä). Ramallahin piste osui pelinappulan laatikkoon, ja nimi latoutui
+ * Jerusalemin nimen alle: 61 px Jerusalemin pisteestä, 92 px omastaan.
+ */
+const etaisyys = (r, px, py) => Math.hypot(Math.max(r.x0 - px, 0, px - r.x1), Math.max(r.y0 - py, 0, py - r.y1));
+const lahinOma = (nimiot) => nimiot.every((n) => {
+  const oma = etaisyys(n.r, n.x, n.y);
+  return nimiot.every((m) => m === n || etaisyys(n.r, m.x, m.y) >= oma - 2);
+});
+
+test('ruutuladonta: nimi ei latoudu toisen pisteen viereen (Jerusalem ja Ramallah)', () => {
+  const kaupunki = (id, nimi, iso) => ({ id, nimi, iso, la: 'start', lx: 0, ly: 0, tarkeys: 0, aste: 0 });
+  const e = [
+    { c: kaupunki('jerusalem', 'Jerusalem', true), x: 602, y: 631 },
+    { c: kaupunki('pk:ramallah', 'Ramallah', false), x: 598, y: 600 },
+    { c: kaupunki('pk:amman', 'Amman', false), x: 765, y: 586 },
+  ];
+  const pinot = [{ x0: 590, y0: 583, x1: 622, y1: 619 }];
+  const { nimiot } = ladoRuutunimet(e, {
+    pinot, katto: 40, kokoKerroin: 4.2, ruutu: { w: 1378, h: 820 },
+  });
+  const paikat = nimiot.map((n) => ({ ...n, x: e.find((k) => k.c === n.c).x, y: e.find((k) => k.c === n.c).y }));
+  assert.ok(paikat.some((n) => n.c.id === 'jerusalem'), 'oma kaupunki saa nimensä');
+  assert.ok(lahinOma(paikat), paikat.map((n) => `${n.c.nimi} ${Math.round(n.r.x0)},${Math.round(n.r.y0)}`).join(' | '));
+  const ramallah = paikat.find((n) => n.c.id === 'pk:ramallah');
+  if (ramallah) {
+    assert.ok(etaisyys(ramallah.r, 598, 600) <= etaisyys(ramallah.r, 602, 631) + 2, 'Ramallahin nimi on lähempänä omaa pistettään');
+  }
+});
+
+test('ruutuladonta: jokainen nimi on lähempänä omaa pistettään kuin muiden nimettyjen pisteitä', () => {
+  const nakymat = [
+    { px: 390 / 240, keskus: ateena, w: 390, h: 844 },
+    { px: 390 / 2000, keskus: lontoo, w: 390, h: 844 },
+    { px: 834 / 12000, keskus: lontoo, w: 834, h: 1112 },
+  ];
+  for (const n of nakymat) {
+    const e = ehdokkaat(n.px, n.keskus, n.w, n.h);
+    const { nimiot } = ladoRuutunimet(e, { katto: NIMIEN_KATTO });
+    const paikat = nimiot.map((m) => ({ ...m, x: e.find((k) => k.c === m.c).x, y: e.find((k) => k.c === m.c).y }));
+    assert.ok(lahinOma(paikat), `px ${n.px.toFixed(3)}`);
+    assert.ok(nimiot.length >= Math.min(NIMIEN_KATTO, e.length) * 0.6, `liian moni pudotettu: ${nimiot.length}/${e.length}`);
+  }
 });

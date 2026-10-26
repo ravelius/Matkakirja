@@ -1,0 +1,704 @@
+{
+ "kaupunki": "Tirana",
+ "id": "tirana",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Tiranaan. Ylhäältä kaupunki levittyy laakealle tasangolle, jota idässä rajaa jyrkkä Dajti-vuori ja jonka luoteispuolella avautuu laakso kohti Adrianmerta. Keskustassa erottuu suuri avoin Skanderbegin aukio, josta leveä bulevardi johtaa etelään. Adrianmeren suunnalta käy tuuli, ja se kuljettaa koriamme hitaasti kohti kaupungin sydäntä. Kierros alkaa Skanderbegin aukiolta, jonka eteläpäässä seisoo ratsastajapatsas ja jonka laidalla kohoavat moskeija ja kellotorni."
+ },
+ "kierros": [
+  "Q609528",
+  "Q798610",
+  "Q2474224",
+  "Q195228",
+  "Q177335",
+  "Q1106373",
+  "Q18715177",
+  "Q1630016"
+ ],
+ "kohteet": [
+  {
+   "id": "Q609528",
+   "nimi": "Skanderbegin aukio",
+   "kuvaus": "Tiranan pääaukio ja jalankulkualue",
+   "luokka": "aukio",
+   "koko_m": 330,
+   "teksti": "Skanderbegin aukio levittyy ylhäältä katsottuna kaupungin sydämeen laajana kivetyksenä, jonka keskialue kohoaa matalaksi pyramidiksi. Aukio on nimetty Albanian kansallissankarin Skanderbegin mukaan, ja sen eteläpäässä seisoo hänen 11-metrinen ratsastajapatsaansa, joka pystytettiin vuonna 1968. Aukio uudistettiin jalankulkualueeksi, ja se avattiin kesäkuussa 2017. Belgialaisen 51N4E-toimiston suunnittelemassa kivetyksessä käytettiin kiveä eri puolilta Albaniaa. Uudistus palkittiin vuonna 2018 Euroopan julkisen kaupunkitilan palkinnolla.",
+   "lyhyt": "Aukion ympärillä kiertää kahdentoista puutarhan vyö, jossa kasvaa paikallisia lajeja, ja autot siirrettiin aukion alle rakennettuun pysäköintihalliin. Aukion laidoilla ovat muun muassa kansallisooppera ja kansallismuseo.",
+   "syventava": "Miksi aukion kivet tuotiin eri puolilta Albaniaa?",
+   "kysymykset": [
+    "Kuka oli Skanderbeg?",
+    "Mitä rakennuksia aukion ympärillä on?",
+    "Milloin Tirana tuli Albanian pääkaupungiksi?",
+    "Kuka suunnitteli aukion uudistuksen?",
+    "Minne autot siirrettiin aukion uudistuksessa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio on nimetty kansallissankari Skanderbegin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Aukio on nimetty kansallissankari Skanderbegin mukaan.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Skanderbegin 11 metrin ratsastajapatsas pystytettiin 1968 aukion eteläpäähän Stalinin monumentin tilalle.",
+     "url": "https://www.metalocus.es/en/news/renovation-skanderbeg-square-51n4e-winner-european-prize-public-space-2018"
+    },
+    {
+     "vaite": "Skanderbegin 11 metrin ratsastajapatsas pystytettiin 1968 aukion eteläpäähän Stalinin monumentin tilalle.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Stalinin patsas oli paikalla, jossa Skanderbegin monumentti nyt on.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Keskialue on matala pyramidi.",
+     "url": "https://www.metalocus.es/en/news/renovation-skanderbeg-square-51n4e-winner-european-prize-public-space-2018"
+    },
+    {
+     "vaite": "Keskialue on matala pyramidi.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Aukio avattiin yleisölle uudistettuna kesäkuussa 2017 jalankulkualueena.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Aukio avattiin yleisölle uudistettuna kesäkuussa 2017 jalankulkualueena.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Uudistuksen suunnitteli brysseliläinen 51N4E; paikallinen kivi kaikkialta Albaniasta.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Uudistuksen suunnitteli brysseliläinen 51N4E; paikallinen kivi kaikkialta Albaniasta.",
+     "url": "https://www.metalocus.es/en/news/renovation-skanderbeg-square-51n4e-winner-european-prize-public-space-2018"
+    },
+    {
+     "vaite": "Uudistus voitti 2018 Euroopan julkisen kaupunkitilan palkinnon.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Uudistus voitti 2018 Euroopan julkisen kaupunkitilan palkinnon.",
+     "url": "https://www.metalocus.es/en/news/renovation-skanderbeg-square-51n4e-winner-european-prize-public-space-2018"
+    },
+    {
+     "vaite": "Aukiota kiertää 12 puutarhan vyö paikallisilla lajeilla.",
+     "url": "https://www.51n4e.com/projects/skanderbeg-square"
+    },
+    {
+     "vaite": "Aukiota kiertää 12 puutarhan vyö paikallisilla lajeilla.",
+     "url": "https://www.metalocus.es/en/news/renovation-skanderbeg-square-51n4e-winner-european-prize-public-space-2018"
+    },
+    {
+     "vaite": "Autot siirrettiin maanalaiseen pysäköintihalliin.",
+     "url": "https://www.51n4e.com/projects/skanderbeg-square"
+    },
+    {
+     "vaite": "Autot siirrettiin maanalaiseen pysäköintihalliin.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Aukion laidalla on kansallisooppera ja kansallismuseo.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg_Square"
+    },
+    {
+     "vaite": "Aukion laidalla on kansallisooppera ja kansallismuseo.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Skanderbeg (n. 1405-1468) on Albanian kansallissankari ja ottomaanien vastarinnan johtaja.",
+     "url": "https://en.wikipedia.org/wiki/Skanderbeg"
+    },
+    {
+     "vaite": "Skanderbeg (n. 1405-1468) on Albanian kansallissankari ja ottomaanien vastarinnan johtaja.",
+     "url": "https://akt.gov.al/skanderbeg-monument-and-square/"
+    },
+    {
+     "vaite": "Tirana julistettiin väliaikaiseksi pääkaupungiksi 1920 ja pysyväksi 1925.",
+     "url": "https://en.wikipedia.org/wiki/Tirana"
+    },
+    {
+     "vaite": "Tirana julistettiin väliaikaiseksi pääkaupungiksi 1920 ja pysyväksi 1925.",
+     "url": "https://ambasadat.gov.al/usa/en/?p=960"
+    }
+   ]
+  },
+  {
+   "id": "Q798610",
+   "nimi": "Et’hem Beyn moskeija",
+   "kuvaus": "Ottomaanikautinen moskeija pääaukiolla",
+   "luokka": "moskeija",
+   "koko_m": 25,
+   "teksti": "Et’hem Beyn moskeija seisoo Skanderbegin aukion laidalla kupolikattoisena rukoushuoneena, jota kiertää kuisti. Sen rakentaminen alkoi 1700-luvun lopulla Molla Beyn johdolla, ja hänen poikansa Haxhi Et’hem Bey sai työn päätökseen myöhemmin. Moskeijan seinillä ja kuistilla on maalauksia, joissa on puita, vesiputouksia ja siltoja, mikä on islamilaisessa taiteessa harvinaista. Kommunistisen hallinnon aikana moskeija oli suljettu. Tammikuussa 1991 noin 10 000 ihmistä kokoontui rukoilemaan siellä viranomaisten vastustuksesta huolimatta, eikä poliisi puuttunut asiaan. Tapahtumaa pidetään uskonnonvapauden palautumisen merkkipaaluna.",
+   "lyhyt": "Vierailijat voivat tutustua moskeijaan rukousaikojen ulkopuolella, ja sisälle astutaan kengät jalasta riisuttuina. Moskeijan vieressä seisova kellotorni muodostaa sen kanssa yhtenäisen rakennuskokonaisuuden, joka on osa Skanderbegin aukion ilmettä.",
+   "syventava": "Miksi moskeijan maalauksissa on maisemia?",
+   "kysymykset": [
+    "Kuka oli Haxhi Et’hem Bey?",
+    "Millaisia maalauksia moskeijan kuistilla on?",
+    "Mikä rakennus seisoo moskeijan vieressä?",
+    "Miksi moskeija oli kommunismin aikana suljettu?",
+    "Mitä vierailijan tulee tehdä ennen sisään astumista?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakentaminen alkoi 1790-luvulla (1791 tai 1794) Molla Beyn toimesta; poika Haxhi Et’hem Bey viimeisteli.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1790-luvulla (1791 tai 1794) Molla Beyn toimesta; poika Haxhi Et’hem Bey viimeisteli.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Ethem-Bey-Mosque"
+    },
+    {
+     "vaite": "Moskeijan seinillä ja kuistilla on puita, vesiputouksia ja siltoja esittäviä maalauksia.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Moskeijan seinillä ja kuistilla on puita, vesiputouksia ja siltoja esittäviä maalauksia; aiheet ovat harvinaisia islamilaisessa taiteessa.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Ethem-Bey-Mosque"
+    },
+    {
+     "vaite": "Moskeija suljettiin kommunistisen hallinnon aikana.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Moskeija suljettiin kommunistisen hallinnon aikana.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Ethem-Bey-Mosque"
+    },
+    {
+     "vaite": "Tammikuussa 1991 noin 10 000 ihmistä rukoili moskeijassa, poliisi ei puuttunut; uskonnonvapauden palautumisen merkkipaalu.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Tammikuussa 1991 noin 10 000 ihmistä rukoili moskeijassa, poliisi ei puuttunut; uskonnonvapauden palautumisen merkkipaalu.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Ethem-Bey-Mosque"
+    },
+    {
+     "vaite": "Vierailu rukousaikojen ulkopuolella, kengät riisutaan sisälle mentäessä.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Vierailu rukousaikojen ulkopuolella, kengät riisutaan sisälle mentäessä.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Ethem-Bey-Mosque"
+    },
+    {
+     "vaite": "Moskeija ja kellotorni muodostavat yhden rakennuskokonaisuuden.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Moskeija ja kellotorni muodostavat yhden rakennuskokonaisuuden.",
+     "url": "https://akt.gov.al/clock-tower/"
+    },
+    {
+     "vaite": "Haxhi Et’hem Bey oli runoilija ja Molla Beyn poika.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Haxhi Et’hem Bey oli runoilija ja Molla Beyn poika.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Clock-Tower"
+    }
+   ]
+  },
+  {
+   "id": "Q2474224",
+   "nimi": "Tiranan kellotorni",
+   "kuvaus": "Moskeijan viereinen kellotorni (1822)",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 35,
+   "teksti": "Kellotorni kohoaa Skanderbegin aukion laidalla suoraan Et’hem Beyn moskeijan vieressä. Sen rakentaminen alkoi vuonna 1822, ja sen rakennutti runoilija Haxhi Et’hem Bey, joka viimeisteli myös moskeijan. Yhdessä moskeijan kanssa torni muodostaa yhtenäisen rakennuskokonaisuuden, ja se on suojeltu kulttuurimonumentti. Torni on yli kaksisataa vuotta vanha. Vuonna 1928 tornia kunnostettiin ja siihen asennettiin saksalainen kellokoneisto. Torni kuuluu Tiranan keskustan tunnetuimpiin maamerkkeihin.",
+   "lyhyt": "Tornin huipulle johtaa 90 askelmaa, ja ylhäältä avautuu näkymä pääaukiolle. Tornin kello on vuosien mittaan vaihdettu useita kertoja, ja nykyinen kellokoneisto on kiinalainen. Perusteellinen kunnostus valmistui vuonna 2010, ja samalla korjattiin sekä kellokoneisto että kello.",
+   "syventava": "Miksi tornin kellokoneisto on vaihdettu useita kertoja?",
+   "kysymykset": [
+    "Kuka oli runoilija Haxhi Et’hem Bey?",
+    "Montako askelmaa tornin huipulle on?",
+    "Mitä tornin huipulta näkee?",
+    "Mikä rakennus seisoo tornin vieressä?",
+    "Milloin tornin täysremontti valmistui?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni valmistui 1822 ja sen rakennutti Haxhi Et’hem Bey moskeijan viereen.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Torni valmistui 1822 ja sen rakennutti Haxhi Et’hem Bey moskeijan viereen.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Clock-Tower"
+    },
+    {
+     "vaite": "Torni on moskeijan vieressä ja muodostaa sen kanssa kokonaisuuden; kello on näyttänyt aikaa Tiranassa vuodesta 1822.",
+     "url": "https://akt.gov.al/clock-tower/"
+    },
+    {
+     "vaite": "Tornissa on 90 askelmaa ja huipulta näkee pääaukion.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Clock-Tower"
+    },
+    {
+     "vaite": "Tornissa on 90 askelmaa ja huipulta näkee pääaukion.",
+     "url": "https://akt.gov.al/clock-tower/"
+    },
+    {
+     "vaite": "Vuonna 1928 torni kunnostettiin ja siihen asennettiin saksalainen kellokoneisto.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Vuonna 1928 torni kunnostettiin ja siihen asennettiin saksalainen kellokoneisto.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Clock-Tower"
+    },
+    {
+     "vaite": "Nykyinen kellokoneisto on kiinalainen; se on tornin historian neljäs kello.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Nykyinen kellokoneisto on kiinalainen; se on tornin historian neljäs kello.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Clock-Tower"
+    },
+    {
+     "vaite": "Täysremontti valmistui 2010; kellokone ja kello korjattiin.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Täysremontti valmistui 2010; kellokone ja kello korjattiin.",
+     "url": "https://www.tiranatimes.com/tiranas-clock-tower-restored_108950/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Torni on kulttuurimonumentti.",
+     "url": "https://en.wikipedia.org/wiki/Tirana_Clock_Tower"
+    },
+    {
+     "vaite": "Torni ja moskeija muodostavat yhden rakennuskokonaisuuden.",
+     "url": "https://en.wikipedia.org/wiki/Et%27hem_Bey_Mosque"
+    },
+    {
+     "vaite": "Torni on kulttuurimonumentti.",
+     "url": "https://akt.gov.al/clock-tower/"
+    }
+   ]
+  },
+  {
+   "id": "Q195228",
+   "nimi": "Rinian puisto",
+   "kuvaus": "Tiranan keskuspuisto",
+   "luokka": "puisto",
+   "koko_m": 220,
+   "teksti": "Rinia-puisto, jonka nimi tarkoittaa Nuorisopuistoa, on Tiranan keskuspuisto, ja ylhäältä se erottuu vihreänä alueena tiiviin kaupunkirakenteen keskellä. Puisto rakennettiin toisen maailmansodan jälkeisessä kaupunkirakentamisessa perhepuistoksi, jonne tiranalaiset veivät lapsensa iltaisin ja viikonloppuisin. Kommunismin kaatumisen jälkeen 1990-luvulla puiston ympärille nousi luvattomia kioskeja, baareja ja ravintoloita. Vuoden 2000 siivouksessa purettiin noin 130 rakennusta, ja puisto istutettiin uudelleen.",
+   "lyhyt": "Puiston länsilaidalla on valkoinen, portaittain nouseva Taiwan-keskus, joka erottuu ylhäältä monitasoisena rakennuksena. Siellä on kahviloita, ravintoloita ja suihkulähteitä, ja kellarissa on keilarata.",
+   "syventava": "Miksi puisto istutettiin uudelleen vuonna 2000?",
+   "kysymykset": [
+    "Mikä Taiwan-keskus on ja mitä siellä on?",
+    "Millaisia rakennuksia puiston viereen nousi 1990-luvulla?",
+    "Mitä puistolle tehtiin vuonna 2000?",
+    "Mitä sana Rinia tarkoittaa?",
+    "Millainen puisto Rinia oli alun perin?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rinia-puisto (Nuorisopuisto) on Tiranan keskuspuisto.",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Rinia-puisto (Nuorisopuisto) on Tiranan keskuspuisto.",
+     "url": "https://akt.gov.al/?p=4084"
+    },
+    {
+     "vaite": "Puisto rakennettiin toisen maailmansodan jälkeisessä kaupunkirakentamisessa perhepuistoksi.",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Puisto rakennettiin perhepuistoksi, jossa asukkaat viettivät iltoja ja viikonloppuja lasten kanssa.",
+     "url": "https://akt.gov.al/?p=4084"
+    },
+    {
+     "vaite": "Kommunismin jälkeen 1990-luvulla puiston ympärille nousi luvattomia rakennuksia (kioskeja, baareja, ravintoloita).",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Kommunismin jälkeen 1990-luvulla puiston ympärille nousi luvattomia rakennuksia.",
+     "url": "https://www.visit-tirana.com/news/the-story-behind-rinia-park-or-taiwan-in-tirana/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Vuoden 2000 siivouksessa purettiin noin 130 rakennusta ja puisto istutettiin uudelleen.",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Vuoden 2000 siivouksessa purettiin yli 130 rakennusta ja puisto kylvettiin nurmelle.",
+     "url": "https://akt.gov.al/?p=4084"
+    },
+    {
+     "vaite": "Puistoa ja sen kompleksia kutsutaan lempinimellä Taiwan.",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Puistoa ja sen kompleksia kutsutaan lempinimellä Taiwan.",
+     "url": "https://akt.gov.al/?p=4084"
+    },
+    {
+     "vaite": "Länsilaidalla on valkoinen portaittainen Taivani-keskus, jossa kahviloita, ravintoloita, suihkulähteitä ja kellarissa keilarata.",
+     "url": "https://en.wikipedia.org/wiki/Rinia_Park"
+    },
+    {
+     "vaite": "Länsilaidalla on valkoinen portaittainen kompleksi, jossa kahviloita, ravintoloita, suihkulähteitä ja kellarissa keila- ja biljardikeskus; nimi tulee puiston vanhasta lempinimestä.",
+     "url": "https://akt.gov.al/?p=4084"
+    }
+   ]
+  },
+  {
+   "id": "Q177335",
+   "nimi": "Tiranan pyramidi",
+   "kuvaus": "Hoxhan entinen museo, nykyään nuorisokeskus",
+   "luokka": "rakennus",
+   "koko_m": 100,
+   "korkeus_m": 23,
+   "teksti": "Tiranan pyramidi on betoninen, kaltevasivuinen rakennus, joka avattiin vuonna 1988 Enver Hoxhan museona. Hoxha oli Albanian kommunistijohtaja, joka oli kuollut kolme vuotta aiemmin. Rakennuksen suunnitteluun osallistuivat muun muassa Hoxhan tytär Pranvera Hoxha sekä Klement Kolaneci, Pirro Vaso ja Vladimir Bregu. Sen sanotaan olleen kallein yksittäinen rakennus, joka Albaniassa oli tehty. Museo sulkeutui kommunismin kaaduttua, ja talossa toimi myöhemmin muun muassa konferenssikeskus. Kosovon sodan aikana 1999 siellä oli Naton tukikohta. Purkamista ehdotettiin useasti, mutta vuonna 2017 päätettiin kunnostaa se.",
+   "lyhyt": "Kunnostuksessa MVRDV-toimisto säilytti alkuperäisen betonirungon ja lisäsi sivuille portaat, joita pitkin pääsee katolle. Rakennuksen sisälle ja ympärille tuli värikkäitä laatikkomaisia tiloja, joissa on opetustiloja, kahviloita ja työhuoneita. TUMO opettaa siellä nuorille teknologiaa maksutta.",
+   "syventava": "Miksi pyramidia ei purettu, vaikka sitä ehdotettiin?",
+   "kysymykset": [
+    "Kuka oli Enver Hoxha?",
+    "Mikä TUMO on?",
+    "Miten pyramidin katolle pääsee nykyään?",
+    "Mitä Nato teki pyramidissa vuonna 1999?",
+    "Mikä toimisto suunnitteli pyramidin kunnostuksen?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennus avattiin 1988 Enver Hoxhan museona.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "Rakennus avattiin 1988 Enver Hoxhan museona.",
+     "url": "https://mvrdv.com/news/4449/the-people-reclaim-the-monument-mvrdvs-pyramid-of-tirana-inaugurated"
+    },
+    {
+     "vaite": "Suunnittelijoihin kuuluivat Pranvera Hoxha, Klement Kolaneci, Pirro Vaso ja Vladimir Bregu.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "Suunnittelijoihin kuuluivat Pranvera Hoxha, Klement Kolaneci, Pirro Vaso ja Vladimir Bregu.",
+     "url": "https://architectuul.com/architecture/the-tirana-pyramid"
+    },
+    {
+     "vaite": "Rakennuksen sanotaan olleen kallein yksittäinen rakennus Albaniassa.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "MVRDV:n Winy Maasin mukaan kommunistivaltion kallein rakennus.",
+     "url": "https://mvrdv.com/news/4449/the-people-reclaim-the-monument-mvrdvs-pyramid-of-tirana-inaugurated"
+    },
+    {
+     "vaite": "Museona toimittiin 1988-1991; sen jälkeen konferenssikeskus ja muuta käyttöä.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "Museona toimittiin 1988-1991; sen jälkeen näyttely- ja messuhalli ja kulttuurikeskus.",
+     "url": "https://architectuul.com/architecture/the-tirana-pyramid"
+    },
+    {
+     "vaite": "Vuonna 1999 Kosovon sodan aikana rakennus oli Naton tukikohta.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "Vuonna 1999 Kosovon sodan aikana rakennus oli Naton tukikohta.",
+     "url": "https://mvrdv.com/news/4449/the-people-reclaim-the-monument-mvrdvs-pyramid-of-tirana-inaugurated"
+    },
+    {
+     "vaite": "Purkamista ehdotettiin useasti; 2017 ilmoitettiin kunnostuksesta purkamisen sijaan.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "Vuonna 2017 hallitus ilmoitti muuttavansa rakennuksen purkamisen sijaan.",
+     "url": "https://mvrdv.com/news/4449/the-people-reclaim-the-monument-mvrdvs-pyramid-of-tirana-inaugurated"
+    },
+    {
+     "vaite": "MVRDV säilytti betonirungon ja lisäsi portaat sivuille; värikkäitä laatikkotiloja.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    },
+    {
+     "vaite": "MVRDV säilytti betonirungon ja lisäsi portaat sivuille; värikkäitä laatikkotiloja.",
+     "url": "https://www.archdaily.com/1008619/pyramid-of-tirana-mvrdv"
+    },
+    {
+     "vaite": "TUMO tarjoaa nuorille maksutonta teknologiaopetusta rakennuksessa.",
+     "url": "https://mvrdv.com/news/4449/the-people-reclaim-the-monument-mvrdvs-pyramid-of-tirana-inaugurated"
+    },
+    {
+     "vaite": "TUMO tarjoaa nuorille maksutonta teknologiaopetusta rakennuksessa.",
+     "url": "https://www.archdaily.com/1008619/pyramid-of-tirana-mvrdv"
+    },
+    {
+     "vaite": "Enver Hoxha oli Albanian kommunistijohtaja, kuoli 1985.",
+     "url": "https://en.wikipedia.org/wiki/Pyramid_of_Tirana"
+    }
+   ]
+  },
+  {
+   "id": "Q1106373",
+   "nimi": "Tiranan linnoitus",
+   "kuvaus": "Tiranan vanha linnoitus ja basaari",
+   "luokka": "linnoitus",
+   "koko_m": 120,
+   "teksti": "Tiranan linnoitus eli Kalaja e Tiranës sijaitsee kaupungin keskustassa Murat Toptanin kävelykadun varrella. Sitä kutsutaan myös Justinianuksen linnoitukseksi, koska sen arvellaan olevan yksi keisari Justinianus I:n 500-luvulla rakennuttamista tai kunnostamista linnoista. Nykyisen noin kuuden metrin korkuisen muurin rakennutti perimätiedon mukaan 1700-luvulla Ahmet Pasha Bargjini vanhemman linnan jäänteiden päälle. Noin vuonna 1800 linna siirtyi Krujasta tulleelle Toptani-suvulle. Muurien paljastuneet perustukset on liitetty osaksi kävelykatua.",
+   "lyhyt": "Joulukuussa 2018 linnoituksen sisään avattiin perinteinen basaari, jossa on käsityöliikkeitä, matkamuistomyymälöitä ja perinteistä ruokaa tarjoavia ravintoloita. Alue on avoinna vierailijoille, ja sen kulkuväylille pääsee vapaasti.",
+   "syventava": "Kuka rakensi ensimmäisen linnoituksen Tiranaan?",
+   "kysymykset": [
+    "Kuka oli keisari Justinianus I?",
+    "Mikä suku omisti linnan 1800-luvun alussa?",
+    "Mitä Murat Toptanin kadulla on nykyään?",
+    "Millainen on linnoituksen nykyinen muuri?",
+    "Mitä Kalaja e Tiranës tarkoittaa suomeksi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linnoitusta kutsutaan Justinianuksen linnoitukseksi; sen arvellaan olevan yksi Justinianus I:n 500-luvulla rakennuttamista tai kunnostamista linnoista.",
+     "url": "https://albaniatravelguide.net/tirana/castle"
+    },
+    {
+     "vaite": "Linnoitus voi vastata Justinianus I:n aikaisia Epirus Novan linnoituksia; myöhäisantiikin muuraustekniikkaa.",
+     "url": "https://www.visit-tirana.com/?p=15733"
+    },
+    {
+     "vaite": "Linnoitus kuuluu Tiranan keskustaan ja on yli 15 vuosisadan historian paikka.",
+     "url": "https://ryo.co/en/destinations/albania/places/tirana-castle/"
+    },
+    {
+     "vaite": "Jäljellä oleva muuri on noin 6 metriä korkea.",
+     "url": "https://en.wikipedia.org/wiki/Fortress_of_Justinian"
+    },
+    {
+     "vaite": "Jäljellä oleva muuri on noin 6 metriä korkea.",
+     "url": "https://akt.gov.al/tirana-castle-justinian-fortress/"
+    },
+    {
+     "vaite": "Nykyisen muurin rakennutti 1700-luvulla Ahmet Pasha Bargjini vanhan linnan jäänteiden päälle.",
+     "url": "https://albaniatravelguide.net/tirana/castle"
+    },
+    {
+     "vaite": "Linna on perimätiedon mukaan rakennettu 1700-luvulla Ahmet Pasha Bargjinin toimesta.",
+     "url": "https://www.visit-tirana.com/?p=15733"
+    },
+    {
+     "vaite": "Toptani-suku Krujasta otti linnan haltuunsa 1798 (n. 1800).",
+     "url": "https://albaniatravelguide.net/tirana/castle"
+    },
+    {
+     "vaite": "Toptani-suku Krujasta otti linnan haltuunsa noin 1800.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Tirana-Castle"
+    },
+    {
+     "vaite": "Paljastuneet perustukset on liitetty Murat Toptanin kävelykatuun.",
+     "url": "https://en.wikipedia.org/wiki/Fortress_of_Justinian"
+    },
+    {
+     "vaite": "Paljastuneet perustukset on liitetty Murat Toptanin kävelykatuun.",
+     "url": "https://akt.gov.al/tirana-castle-justinian-fortress/"
+    },
+    {
+     "vaite": "Joulukuussa 2018 linnoituksen sisään avattiin perinteinen basaari käsityökauppoineen ja ravintoloineen.",
+     "url": "https://en.wikipedia.org/wiki/Fortress_of_Justinian"
+    },
+    {
+     "vaite": "Linnoitus avoinna vierailijoille joulukuusta 2018; basaarissa käsityö- ja matkamuistomyymälöitä.",
+     "url": "https://akt.gov.al/tirana-castle-justinian-fortress/"
+    },
+    {
+     "vaite": "Alue kunnostettiin 2018 avoimeksi kokonaisuudeksi, jossa ravintoloita ja kauppoja; kulkuväylille pääsee vapaasti.",
+     "url": "https://ryo.co/en/destinations/albania/places/tirana-castle/"
+    },
+    {
+     "vaite": "Kalaja e Tiranës = Tiranan linna.",
+     "url": "https://en.wikipedia.org/wiki/Fortress_of_Justinian"
+    }
+   ]
+  },
+  {
+   "id": "Q18715177",
+   "nimi": "Tiranan suuri moskeija",
+   "kuvaus": "Balkanin suurimpia moskeijoita",
+   "luokka": "moskeija",
+   "koko_m": 105,
+   "teksti": "Tiranan suuri moskeija, jonka albaniankielinen nimi on Xhamia e Namazgjasë, erottuu ylhäältä neljästä minareetistaan. Jokainen minareetti on 50 metriä korkea, ja keskuskupoli kohoaa 30 metriin. Moskeijan muotokieli perustuu klassiseen osmanien arkkitehtuuriin. Se avattiin virallisesti 10.10.2024, ja siihen mahtuu yhteensä noin 10 000 rukoilijaa sisällä ja ulkona. Moskeija on yksi Balkanin suurimmista, ja se sijaitsee lähellä Albanian parlamenttitaloa. Rakentaminen kesti noin kymmenen vuotta, joten moskeija on kaupungin uusimpia suuria rakennuksia.",
+   "lyhyt": "Moskeijan alakerrassa on kulttuurikeskus ja muita tiloja, ja rukoilijoita mahtuu sekä sisätiloihin että ulkoalueelle. Rakennuksen kustannukset olivat noin 30 miljoonaa euroa, ja se rakennettiin noin 10 000 neliömetrin tontille.",
+   "syventava": "Miksi moskeijaa kutsutaan Namazgjan moskeijaksi?",
+   "kysymykset": [
+    "Mitä alakerran kulttuurikeskuksessa on?",
+    "Mihin tyyliin moskeijan arkkitehtuuri perustuu?",
+    "Kuinka paljon moskeijan rakentaminen maksoi?",
+    "Kuinka monta ihmistä moskeijaan mahtuu?",
+    "Missä päin kaupunkia moskeija sijaitsee?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Neljä minareettia, kukin 50 metriä korkea; keskuskupoli 30 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Neljä minareettia, kukin 50 metriä korkea; keskuskupoli 30 metriä.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Muotokieli perustuu klassiseen osmanien arkkitehtuuriin.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Muotokieli perustuu klassiseen osmanien arkkitehtuuriin.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Virallinen avaus 10.10.2024.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Virallinen avaus 10.10.2024.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Kapasiteetti yhteensä noin 10 000 rukoilijaa sisällä ja ulkona; Balkanin suurin moskeija.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Kapasiteetti yhteensä noin 10 000 rukoilijaa sisällä ja ulkona; Balkanin suurin moskeija.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 2015 ja moskeija avattiin 2024 (noin kymmenen vuotta).",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin kymmenen vuotta.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Kustannus noin 30 miljoonaa euroa.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Kustannus noin 30 miljoonaa euroa.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Alakerrassa kulttuurikeskus; noin 10 000 m2 tontti parlamenttitalon lähellä.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    },
+    {
+     "vaite": "Alakerrassa kulttuurikeskus; noin 10 000 m2 tontti parlamenttitalon vieressä.",
+     "url": "https://www.visit-tirana.com/news/the-largest-mosque-in-balkans-opens-in-tirana/"
+    },
+    {
+     "vaite": "Namazgah = rukousaukion moskeija; suuri moskeija.",
+     "url": "https://en.wikipedia.org/wiki/Namazgah_Mosque"
+    }
+   ]
+  },
+  {
+   "id": "Q1630016",
+   "nimi": "Tabakkien silta",
+   "kuvaus": "Ottomaanien aikainen kävelysilta",
+   "luokka": "silta",
+   "koko_m": 20,
+   "teksti": "Tabakkien silta eli Ura e Tabakëve on 1700-luvulla ottomaanien aikana rakennettu kivinen kävelysilta. Nimi tulee sanasta tabakë, joka tarkoittaa nahkureita: silta sijaitsi alueella, jossa nahkurit ja teurastajat työskentelivät. Silta ylitti Lana-joen, mutta joki ei enää virtaa sen alta. Se oli osa vanhaa tietä, jota pitkin maanviljelijät toivat tuotteita ja karjaa itäisiltä ylängöiltä kaupunkiin. Silta kunnostettiin myöhemmin, ja nykyään sitä käyttävät vain jalankulkijat. Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.",
+   "lyhyt": "Sillan ylittänyt tie johti Tiranasta Dibërin suuntaan, ja se oli osa vanhaa karavaanireittiä. Lana ohjattiin pois vanhalta uomaltaan 1930-luvulla, minkä jälkeen silta jäi rappeutumaan, kunnes se kunnostettiin jalankulkijoiden käyttöön.",
+   "syventava": "Miksi Lana-joki ohjattiin pois sillan alta?",
+   "kysymykset": [
+    "Mitä sana tabakë tarkoittaa?",
+    "Minne sillan kautta kulkenut tie johti?",
+    "Mitä Lana tarkoittaa Tiranalle?",
+    "Mitä sillan kautta tuotiin kaupunkiin?",
+    "Kuka sillalla nykyään saa kulkea?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta on 1700-luvun ottomaanikauden kivinen kävelysilta.",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Silta on 1700-luvun ottomaanikauden kivinen kävelysilta.",
+     "url": "https://albaniatravelguide.net/?p=4540"
+    },
+    {
+     "vaite": "Nimi viittaa nahkureihin (tabakë); alueella nahkureita ja teurastajia.",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Nimi viittaa nahkureihin; alueella nahkureita ja teurastajia.",
+     "url": "https://albaniatravelguide.net/?p=4540"
+    },
+    {
+     "vaite": "Nimi viittaa nahkureihin; alueella nahkureita ja nylkijöitä.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Tanners-Bridge"
+    },
+    {
+     "vaite": "Silta ylitti Lana-joen; joki ohjattiin pois sillan alta (1930-luvulla).",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Silta ylitti Lana-joen; joki ohjattiin pois sillan alta (1930-luvulla).",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Tanners-Bridge"
+    },
+    {
+     "vaite": "Silta on kunnostettu ja on nykyään vain jalankulkijoiden käytössä.",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Silta on kunnostettu ja on nykyään vain jalankulkijoiden käytössä.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Tanners-Bridge"
+    },
+    {
+     "vaite": "Kaupunki pitää siltaa yhtenä tärkeimmistä kulttuuriperintökohteistaan.",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Silta oli osa tietä Tiranasta itäisiin ylänköihin; karjaa ja tuotteita tuotiin kaupunkiin.",
+     "url": "https://en.wikipedia.org/wiki/Tanners%27_Bridge"
+    },
+    {
+     "vaite": "Silta oli osa tietä Tiranasta itäisiin ylänköihin ja Dibërin suuntaan; karjaa ja tuotteita tuotiin kaupunkiin.",
+     "url": "https://www.inyourpocket.com/albania/tirana/venues/Tanners-Bridge"
+    },
+    {
+     "vaite": "Silta oli osa karavaanitietä kohti Dibëriä.",
+     "url": "https://albaniatravelguide.net/?p=4540"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Tiranan linnoitus: Wikipedian väite 'ajoittuu ennen vuotta 1300, bysanttilaisajalta' pudotettu, koska muut lähteet arvioivat alkuperän 300-500-luvulle ja Justinianus-yhteyden epävarmaksi; käytetty varovasti 'arvellaan' ja 'perimätiedon mukaan'. Perustuu myös aiempaan pudotukseen kaupunkiesittelyissä.",
+  "Linnoituksen 1832 purku ja 1817 piiritys (vain hakutuloksen tiivistelmä, ei vahvistettu sivulla): pudotettu.",
+  "Linnoituksen arkeologi Dashin 2001 löytämä neliömäinen torni (seinät 2,90 m): vain yksi sivu (visit-tirana), pudotettu.",
+  "Linnoituksen kulttuurimonumenttistatus 10.6.1973: vain Wikipedia, pudotettu.",
+  "Rinian puiston perustamisvuosi 1949 (akt.gov.al) vs. 1950 (Wikipedia) ja pinta-ala 2,98 ha vs. 29 ha: pudotettu, käytetty 'toisen maailmansodan jälkeen'.",
+  "Rinian puiston lempinimen Taiwan alkuperä (Wikipedia: ironinen vertaus; matkailusivut: huhu Taiwanin tunnustamisesta): ei vahvistettu, jätetty selittämättä.",
+  "Kellotornin korkeus (Wikipedia 32,5 m vs. IYP/tirana.al/Tirana Times 35 m): pudotettu tekstistä (kohdelistan korkeus_m 35 kopioitu sellaisenaan kenttään).",
+  "Kellotornin kello valettu Triestessä 1838 ja alkuperäisen mekanismin ryöstö 1. maailmansodassa, torni valaistu 1930-luvulla, Edward Learin maalaukset 1848: vain Wikipedia, pudotettu. Kellotorni 'kaupungin korkein rakennus 1970 asti' ja 'osa kaupungin vaakunaa': vain yksi lähde, pudotettu.",
+  "Et'hem Beyn moskeijan valmistumisvuosi (1819/1821/1823) ja 'kapasiteetti 60 hengelle', kupolin ja Süleymaniye-kuvan yksityiskohdat, Sulejman Pashan moskeija 1614: vain yksi lähde tai vaihtelee, pudotettu.",
+  "Skanderbegin aukion koko (40 000 m2 / 97 344 m2 / 28 000 m2 kivi / 90 000 m2 kävelyalue) ja pyramidin korkeus (2 m vs. 1,80 m): vaihtelee, pudotettu; 'Balkanin suurin jalankulkualue' vain Wikipedia + pormestarin lausunto, pudotettu. Suihkulähteiden määrä (yli 100): vain akt.gov.al, pudotettu. Aukion kustannus 13 vs. 16 milj. EUR: vaihtelee, pudotettu.",
+  "Pyramidin korkeus 21 m (vain Architectuul), pyramidin hissi länsisivulla ja TUMOn puolikas tila (MVRDV + hakutuloksen tiivistelmä, ei toista luettua sivua), TUMOn perustamisvuosi: pudotettu. Pyramidi 'rakennettu 1985' vs. 'suunniteltu 1988' (Architectuul): ei käytetty.",
+  "Suuren moskeijan sisäkapasiteetti (8 000 Wikipedia/Visit Tirana vs. 5 000 matkaopas): jätetty pois, vain kokonaiskapasiteetti noin 10 000. Rakennusaloitusvuosi 2015 ja ensimmäisen kiven laskeminen 1992: ei toista vahvistusta, pudotettu. Rahoituksen lähde (Turkin uskontovirasto) ja avajaispuhujat: jätetty pois poliittisen arkaluonteisuuden vuoksi. 'Korvaa Et'hem Beyn pääasiallisena moskeijana' sekä 28 moskeijaa 1967 -> 8: vain Wikipedia, pudotettu.",
+  "Tabakkien sillan mitat (8 m x 2,5 m x 3,5 m / 7,5 m / Wikidata 35 m) ja kolme kaarta (vain IYP): pudotettu. Kunnostusvuosi 1990-luku (vain Wikipedia): kirjattu 'myöhemmin'.",
+  "Tirana-sivusto Kupi.com (tekoälyteksti) ja Wikipedian Skanderbeg-monumentti -sivu (404) ei käytetty."
+ ],
+ "ristiriidat": [
+  "Linnoituksen muurin ajoitus: Wikipedia 'ottomaanikautinen', akt.gov.al 'bysanttilainen jäänne', albaniatravelguide/visit-tirana 1700-luvun Bargjini; tekstissä 'perimätiedon mukaan 1700-luvulla'; Toptani 1798 (ATG) vs. noin 1800 (IYP) -> 'noin vuonna 1800'.",
+  "Kellotornin rakennusaika: valmistui 1822 (Wikipedian riimikirjoitus, akt.gov.al, IYP) vs. Wikipedian toinen lähde 1822-1830; käytetty 1822. Kellokoneiston vaihtoja: IYP 'nykyinen kiinalainen on neljäs', Wikipedia 1974 kiinalainen sähkökone; tekstissä vain 'useita kertoja' ja 'kiinalainen'.",
+  "Kellotornin täysremontin valmistumispäivä: Wikipedia 11.2.2010, Tirana Times viittaa avajaiseen maaliskuussa 2010; tekstissä vain vuosi 2010. Remontin toinen lähde on hakutulos.",
+  "Skanderbegin patsaan vuosi 1968: Wikipedian infolaatikko, metalocus, akt.gov.al/visit-tirana (viimeksi mainitut kaksi ovat toisiaan lähellä olevia viranomaissivuja). Aukion avajaispäivä 10.6.2017 (akt.gov.al) vs. kesäkuu 2017 (Wikipedia); käytetty 'kesäkuussa 2017'.",
+  "Et'hem Beyn moskeijan rakennusvuodet 1791/1793/1794 -> 1790-luku; moskeijan vuoden 1991 tapahtuma: Wikipedia 18.1.1991, IYP 'tammikuu 1991'.",
+  "Rinian puiston lähteet: Wikipedia 'rakennettu 1950, 2,98 ha' vs. akt.gov.al '1949, 29 ha'; teksti käyttää vain 'toisen maailmansodan jälkeen'. Rinian 'toinen lähde 1990-luvun luvattomille rakennuksille' on visit-tirana-hakutulos (matkailusivu).",
+  "Pyramidi: sulkeutumisvuosi 1991 (Wikipedia + Architectuul 1988-1991), tekstissä vain 'museo sulkeutui kommunismin kaaduttua'. Tekstin kohta 'purkamista ehdotettiin useasti' pohjautuu Wikipediaan, MVRDV mainitsee vain vuoden 2015 tutkimuksen ja 2017 päätöksen.",
+  "Suuren moskeijan nimi: kohdelistassa 'Tiranan suuri moskeija' (Namazgjahin moskeija, Q18715177), korvaa kohdekartan Kokonozin moskeijan; Kokonozin moskeijaa ei käsitelty."
+ ]
+}

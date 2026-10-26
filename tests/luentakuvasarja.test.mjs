@@ -282,6 +282,7 @@ const {
   naytaLuentakuvasarja, paataLuentakuvasarja, piilotaLuentakuva,
   naytaPulunKuvapakka, LUENTAKUVAPAKKA_KARTALLA,
   ISON_KUVAN_VAIHTO_MS, ISON_KUVAN_LOPPU_MS, LUENTAKUVAN_VAIHTO_MS,
+  suljeMuutAvoimetLaput,
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
 const { sfx } = await import('../js/sound.js');
@@ -384,8 +385,16 @@ test('isoisän kuva pysyy suurena koko luennan ajan', (t) => {
   assert.equal(paneelit().length, 0, 'kartalle ei nouse mitään sarjan aikana');
   assert.equal(isot()[0].querySelectorAll('.pulucam-merkki').length, 0,
     'isoisän kuvassa ei ole PULU-CAM-sinettiä');
-  assert.ok(isot()[0].querySelector('.fokusvirta-isokuva-teksti'),
-    'lyhyt kuvateksti kiinni kuvan alalaidassa');
+  /*
+   * EI ENÄÄ ERILLISTÄ KUVATEKSTIPAPERIA (29.9.2026, löydös 138 / build
+   * 16, Siirtosepän pariteettikatsaus: "kehys ja kuvateksti pois,
+   * pelkkä kuva"). Lyhyt teksti on yhä kuvan alt-attribuutissa, ks.
+   * ylinKuva() alempana.
+   */
+  assert.equal(isot()[0].querySelector('.fokusvirta-isokuva-teksti'), null,
+    'ei erillistä kuvatekstipaperia kuvan alla');
+  assert.ok(isot()[0].querySelector('.fokusvirta-isokuva-kuva')?.alt,
+    'lyhyt kuvateksti on kuvan alt-attribuutissa');
 
   /*
    * NELJÄ SEKUNTIA EI ENÄÄ VAIHDA MITÄÄN (omistaja 11.9.2026 klo 14.35:
@@ -609,9 +618,9 @@ test('toinen kuva vaihtuu 9 s kohdalla, kuvateksti mukana', (t) => {
     assert.notEqual(ylinKuva(), KUVA2.lyhyt, 'ei vaihdu etuajassa');
 
     t.mock.timers.tick(600);
-    assert.equal(ylinKuva(), KUVA2.lyhyt, 'puolivälissä kuva 2');
-    assert.equal(isot().at(-1).querySelector('.fokusvirta-isokuva-teksti').textContent,
-      KUVA2.lyhyt, 'kuvateksti vaihtui kuvan mukana');
+    // ylinKuva() lukee kuvan alt-attribuutin: kuvateksti vaihtuu kuvan
+    // mukana, koska paperia ei enää ole (29.9.2026, löydös 138).
+    assert.equal(ylinKuva(), KUVA2.lyhyt, 'puolivälissä kuva 2, kuvateksti vaihtui mukana');
     assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 0,
       'isoisän kakkoskuva ei ole PuluCam-kuva');
 
@@ -1001,6 +1010,90 @@ test('iso päällys ladotaan .stageen, ei rungon lapseksi', (t) => {
   } finally {
     asiakirja.querySelector = vanha;
     stage.remove();
+    t.mock.timers.reset();
+  }
+});
+
+/* ---------------------------------------------------------------- */
+/* 10. Vain yksi lappu kerrallaan (Siirtosepän pariteettikatsaus     */
+/*     29.9.2026, rivi 5)                                            */
+/* ---------------------------------------------------------------- */
+
+/*
+ * VALOKUVAKORTTI EI SAA AVAUTUA AUKI OLEVAN MAAKORTIN TAI
+ * KAUPUNKILEHDEN PÄÄLLE. `suljeMuutAvoimetLaput` (js/fokusvirta.js)
+ * suljee molemmat NIIDEN OMILLA sulkufunktioilla (maapaneelin
+ * `suljeValikko`, `suljeKaupunkipopup` ja `ui.closeArrival`) ennen
+ * kuin fokusvirran tai fokusnoston oma lappu nousee kartalle. Tässä
+ * mitataan suoraan apurin oma sopimus — ei koko selainta.
+ */
+test('suljeMuutAvoimetLaput sulkee auki olevan maakortin', () => {
+  let suljettu = false;
+  const ui = {
+    pallolauta: { maapaneeli: { suljeValikko: () => { suljettu = true; } } },
+  };
+  suljeMuutAvoimetLaput(ui);
+  assert.equal(suljettu, true, 'maapaneelin suljeValikko kutsuttiin');
+});
+
+test('suljeMuutAvoimetLaput sulkee auki olevan kaupunkipopupin', () => {
+  let purettu = false;
+  const ui = { kaupunkipopupAuki: { purku: () => { purettu = true; } } };
+  suljeMuutAvoimetLaput(ui);
+  assert.equal(purettu, true, 'kaupunkipopupin purku kutsuttiin');
+  assert.equal(ui.kaupunkipopupAuki, null, 'kaupunkipopupAuki nollattiin');
+});
+
+test('suljeMuutAvoimetLaput sulkee auki olevan kaupunkilehden (arrivalDialog)', () => {
+  let suljettu = false;
+  const ui = {
+    arrivalDialog: { open: true },
+    closeArrival: () => { suljettu = true; },
+  };
+  suljeMuutAvoimetLaput(ui);
+  assert.equal(suljettu, true, 'ui.closeArrival kutsuttiin, kun arrivalDialog oli auki');
+});
+
+test('suljeMuutAvoimetLaput ei kutsu closeArrivalia, jos kaupunkilehti ei ollut auki', () => {
+  // suljeValikko ja suljeKaupunkipopup ovat turvallisia kutsua aina
+  // (ne tarkistavat oman tilansa itse); vain closeArrival on tässä
+  // apurissa ehdollinen (`ui.arrivalDialog?.open`).
+  let closeArrivalKutsuttu = false;
+  const ui = {
+    pallolauta: { maapaneeli: { suljeValikko: () => {} } },
+    kaupunkipopupAuki: null,
+    arrivalDialog: { open: false },
+    closeArrival: () => { closeArrivalKutsuttu = true; },
+  };
+  assert.doesNotThrow(() => suljeMuutAvoimetLaput(ui));
+  assert.equal(closeArrivalKutsuttu, false,
+    'closeArrival ei saa kutsua, kun arrivalDialog ei ollut auki');
+});
+
+test('suljeMuutAvoimetLaput ei kaadu, jos ui:lla ei ole mitään näistä kentistä', () => {
+  assert.doesNotThrow(() => suljeMuutAvoimetLaput({}));
+  assert.doesNotThrow(() => suljeMuutAvoimetLaput(null));
+});
+
+test('valokuvakortin avaus sulkee auki olevan maakortin ja kaupunkilehden', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  let valikkoSuljettu = false;
+  let popupSuljettu = false;
+  let arrivalSuljettu = false;
+  ui.pallolauta = { maapaneeli: { suljeValikko: () => { valikkoSuljettu = true; } } };
+  ui.kaupunkipopupAuki = { purku: () => { popupSuljettu = true; } };
+  ui.arrivalDialog = { open: true };
+  ui.closeArrival = () => { arrivalSuljettu = true; ui.arrivalDialog.open = false; };
+  try {
+    naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+    t.mock.timers.tick(60);
+    assert.equal(valikkoSuljettu, true, 'maakortti suljettiin ennen valokuvakortin avausta');
+    assert.equal(popupSuljettu, true, 'kaupunkipopup suljettiin ennen valokuvakortin avausta');
+    assert.equal(arrivalSuljettu, true, 'kaupunkilehti (arrivalDialog) suljettiin');
+    assert.equal(isot().length, 1, 'valokuvakortti avautui silti normaalisti');
+    siivoa(ui);
+  } finally {
     t.mock.timers.reset();
   }
 });

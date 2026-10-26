@@ -505,6 +505,7 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'solovetskin-luostari',
+    nimio: 'Solovetski',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-solovetskin-luostari-b816d38e.jpg',
       lyhyt: 'Solovetskin luostarin muurit ja kirkot heijastuvat järven pintaan.',
@@ -842,6 +843,66 @@ export const MAASTOKOHTEET_RUS = [
       + 'jossa on hänen koristelematon hautansa.',
     lahde: 'en-Wikipedia "Yasnaya Polyana", johdanto-osa sekä osiot "Early history" ja '
       + '"Leo Tolstoy at Yasnaya Polyana" (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'kaliningradin-tuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/rus-nosto-kaliningradin-tuomiokirkko-0d7455ee.jpg',
+      lyhyt: 'Punatiilinen goottilainen tuomiokirkko, jonka torni kohoaa nurmikon yllä.',
+      selite: 'Kaliningradin tuomiokirkko sivulta kuvattuna: pitkä punatiilinen kirkkosali jyrkkine tummine kattoineen ja teräväkärkinen kellotorni.',
+      lahde: 'Valokuva: Perituss, Wikimedia Commons (CC0).',
+      tekija: 'Perituss',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Konigsberg_Cathedral_2012_1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    nimi: 'Kaliningradin tuomiokirkko',
+    nimio: 'Tuomiokirkko',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Missä filosofi Immanuel Kant lepää?',
+      'Miten kirkon uusi torni saatiin paikalleen vuonna 1994?',
+    ],
+    korostukset: ['Kantin|Kantin'],
+    nappi: 'Kantin hauta Pregolja-joen saarella',
+    // 20.5117 E / 54.7064 N — en-Wikipedia "Königsberg Cathedral", osiot "Kant's Tomb", "Restoration" ja "Museum and current use"
+    laudat: {
+      maailmankartta: { x: 6517.1, y: 1179.4 },
+    },
+    teksti: 'Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen '
+      + 'alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin '
+      + 'vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen '
+      + 'mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. '
+      + 'Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja '
+      + 'kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla '
+      + 'vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, '
+      + 'ja siellä pidetään konsertteja.',
+    lahde: 'en-Wikipedia "Königsberg Cathedral", osiot "Kant\'s Tomb", "Restoration" ja "Museum '
+      + 'and current use" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'vienanmeri',
+    nimi: 'Vienanmeri',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä Solovetskin saaristo on?',
+      'Mikä Vienanmeren kanava on?',
+    ],
+    nappi: 'Valkoinen meri pohjoisessa',
+    // 38 E / 65.5 N — meren keskiosa Solovetskin saarten ja Arkangelin Dvinanlahden välissä
+    laudat: {
+      maailmankartta: { x: 7100, y: 639 },
+      europe: { x: 940.8, y: 171 },
+    },
+    teksti: 'Vienanmeri on Barentsinmeren etelään työntyvä lahti Venäjän luoteisrannikolla, ja sitä '
+      + 'rajaa vain Venäjä. Pinta-ala on noin 90 000 neliökilometriä, keskisyvyys 60-70 metriä '
+      + 'ja syvin kohta yli 300 metriä. Meri jäätyy talveksi, mutta jäänmurtajat pitävät väylät '
+      + 'auki. Venäjäksi se on Valkoinen meri.',
+    lahde: 'en-Wikipedia "White Sea", johdanto-osa; Store norske leksikon "Kvitsjøen"; '
+      + 'fi-Wikipedia "Vienanmeri" (tarkistettu 16.10.2026).',
   },
 ];
 

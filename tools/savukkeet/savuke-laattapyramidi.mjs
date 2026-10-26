@@ -39,12 +39,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -85,7 +83,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
 /** Laattavastausten viive millisekunteina (P7e asettaa, muut eivät). */
 let laattaViive = 0;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /**
  * Avaa pelin ja ajaa sen Ateenaan. Palauttaa sivun ja pyyntölokin.

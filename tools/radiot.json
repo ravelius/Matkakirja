@@ -4,769 +4,1820 @@
   "asema": "Yle Radio 1 Hifi",
   "kieli": "finnish",
   "virallinen": true,
-  "pisteet": 464
+  "pisteet": 464,
+  "kaupunki": "Helsinki",
+  "lat": 60.17,
+  "lon": 24.94
  },
  "GBR": {
   "url": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_east_asia",
   "asema": "BBC World Service",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Lontoo",
+  "lat": 51.51,
+  "lon": -0.13
  },
  "TUR": {
   "url": "https://trt.radyotvonline.net/trt1",
   "asema": "TRT Radyo 1",
   "kieli": "turkish",
   "virallinen": true,
-  "pisteet": 572
+  "pisteet": 572,
+  "kaupunki": "Ankara",
+  "lat": 39.94,
+  "lon": 32.84
  },
  "FRA": {
   "url": "https://icecast.radiofrance.fr/franceinter-hifi.aac",
   "asema": "France Inter",
   "kieli": "french",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Pariisi",
+  "lat": 48.86,
+  "lon": 2.35
  },
  "EGY": {
   "url": "https://9090streaming.mobtada.com/9090FMEGYPT",
   "asema": "Radio 9090 / 90.90 FM Radio Egypt (Kairo) – puhe ja ajankohtaisohjelmat",
   "kieli": "arabia (egyptin murre)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kairo",
+  "lat": 30.04,
+  "lon": 31.24
  },
  "IND": {
   "url": "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837",
   "asema": "aakashvani",
   "kieli": "hindi",
   "virallinen": true,
-  "pisteet": 570
+  "pisteet": 570,
+  "kaupunki": "New Delhi",
+  "lat": 28.61,
+  "lon": 77.21
  },
  "AFG": {
   "url": "https://s5.radio.co/se6264cb34/listen",
   "asema": "Radio Begum (Kabul)",
   "kieli": "dari (myös pašto)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kabul",
+  "lat": 34.53,
+  "lon": 69.17
  },
  "AGO": {
   "url": "https://stream.zeno.fm/vyu630hfy4zuv",
   "asema": "Rádio Luanda (RNA)",
   "kieli": "portugali",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Luanda",
+  "lat": -8.84,
+  "lon": 13.23
  },
  "ARE": {
   "url": "https://l3.itworkscdn.net/smcradiolive/smcradiolive/icecast.audio",
   "asema": "Sharjah FM 94.4 (إذاعة الشارقة) – Sharjah Broadcasting Authority",
   "kieli": "arabia (emiraattimurre)",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Abu Dhabi",
+  "lat": 24.45,
+  "lon": 54.4
  },
  "AUT": {
   "url": "https://orf-live.ors-shoutcast.at/oe1-q2a",
   "asema": "Ö1 | ORF | HQ",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 548
+  "pisteet": 548,
+  "kaupunki": "Wien",
+  "lat": 48.21,
+  "lon": 16.37
  },
  "BGR": {
   "url": "https://play.global.audio/testb.aac?dist=RADIOPLAY",
   "asema": "BNR Horizont",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 571
+  "pisteet": 571,
+  "kaupunki": "Sofia",
+  "lat": 42.7,
+  "lon": 23.32
  },
  "BIH": {
   "url": "https://s2.free-shoutcast.com/stream/18170",
   "asema": "Federalni radio (RTVFBiH)",
   "kieli": "bosnia",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Sarajevo",
+  "lat": 43.86,
+  "lon": 18.41
  },
  "CHE": {
   "url": "https://stream.srg-ssr.ch/m/la-1ere/mp3_128",
   "asema": "RTS La Première",
   "kieli": "french",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "Bern",
+  "lat": 46.95,
+  "lon": 7.45
  },
  "CHN": {
   "url": "https://lhttp.qtfm.cn/live/15318317/64k.mp3",
   "asema": "CNR-1 中国之声",
   "kieli": "chinese",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Peking",
+  "lat": 39.9,
+  "lon": 116.41
  },
  "CMR": {
   "url": "https://stream.zeno.fm/43q33pgvbphvv",
   "asema": "Radio Bafung",
   "kieli": "ranska",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Yaoundé",
+  "lat": 3.86,
+  "lon": 11.52
  },
  "COD": {
   "url": "https://mpbradio.ice.infomaniak.ch/topcongo3-128.mp3",
   "asema": "Top Congo FM 88.4 (Kinshasa)",
   "kieli": "ranska, lingala",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kinshasa",
+  "lat": -4.32,
+  "lon": 15.31
  },
  "CYP": {
   "url": "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio",
   "asema": "ΡΙΚ Πρώτο Πρόγραμμα (CyBC)",
   "kieli": "kreikka",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Nikosia",
+  "lat": 35.17,
+  "lon": 33.37
  },
  "CZE": {
   "url": "https://rozhlas.stream/radiozurnal_sport_high.aac",
   "asema": "ČRO Radiožurnál Sport",
   "kieli": "czech",
   "virallinen": true,
-  "pisteet": 630
+  "pisteet": 630,
+  "kaupunki": "Praha",
+  "lat": 50.09,
+  "lon": 14.42
  },
  "DEU": {
   "url": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web",
   "asema": "Deutschlandfunk | DLF | MP3 128k",
   "kieli": "german",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Berliini",
+  "lat": 52.52,
+  "lon": 13.38
  },
  "DNK": {
   "url": "https://live-icy.gss.dr.dk/A/A03H.mp3",
   "asema": "DR P1",
   "kieli": "danish",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "Kööpenhamina",
+  "lat": 55.68,
+  "lon": 12.57
  },
  "DZA": {
   "url": "https://radiochaine1.ice.infomaniak.ch/chaine1.mp3",
   "asema": "Algérie Chaine 1",
   "kieli": "arabic",
   "virallinen": true,
-  "pisteet": 572
+  "pisteet": 572,
+  "kaupunki": "Alger",
+  "lat": 36.78,
+  "lon": 3.06
  },
  "ESP": {
   "url": "https://d131.rndfnk.com/star/crtve/rne5/main/mp3/128/stream.mp3?aggregator=tunein&cid=01GEP4MW5CAHPYP1EXHVKWFJ8W&sid=2OeE42hivuba6dTGvjnMGjKByQe&token=cdczXcnimVx4AY4iamqYbTMdu3cK7oBxmS2UQN9cWc0&tvf=pdPcDBxuVxdkMTMxLnJuZGZuay5jb20",
   "asema": "Radio Nacional de España - Radio 5 Todo noticias",
   "kieli": "castellano. español",
   "virallinen": true,
-  "pisteet": 634
+  "pisteet": 634,
+  "kaupunki": "Madrid",
+  "lat": 40.42,
+  "lon": -3.7
  },
  "EST": {
   "url": "https://icecast.err.ee/vikerraadio.mp3",
   "asema": "Vikerraadio",
   "kieli": "estonian",
   "virallinen": true,
-  "pisteet": 600
+  "pisteet": 600,
+  "kaupunki": "Tallinna",
+  "lat": 59.44,
+  "lon": 24.75
  },
  "ETH": {
   "url": "https://stream-25.zeno.fm/2xguamap7yzuv",
   "asema": "EBC Radio 104.7 Addis Abeba",
   "kieli": "arabic",
   "virallinen": true,
-  "pisteet": 575
+  "pisteet": 575,
+  "kaupunki": "Addis Abeba",
+  "lat": 9.04,
+  "lon": 38.75
  },
  "GHA": {
   "url": "https://node-27.zeno.fm/ey34mac27vzuv?rj-ttl=5&rj-tok=AAABdyidjk4ACEJncwCTuO-dTg",
   "asema": "Info Radio Ghana",
   "kieli": "akan",
   "virallinen": true,
-  "pisteet": 622
+  "pisteet": 622,
+  "kaupunki": "Accra",
+  "lat": 5.56,
+  "lon": -0.2
  },
  "GRC": {
   "url": "https://radiostreaming.ert.gr/ert-proto",
   "asema": "ΕΡΤ Πρώτο Πρόγραμμα",
   "kieli": "greek",
   "virallinen": true,
-  "pisteet": 632
+  "pisteet": 632,
+  "kaupunki": "Ateena",
+  "lat": 37.98,
+  "lon": 23.73
  },
  "HKG": {
   "url": "https://stm1.rthk.hk/radio1",
   "asema": "RTHK Radio 1",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "Hongkong",
+  "lat": 22.28,
+  "lon": 114.16
  },
  "HRV": {
   "url": "https://27863.live.streamtheworld.com/PROGRAM1AAC_SC",
   "asema": "HRT HR 1 - Prvi program",
   "kieli": "croatian",
   "virallinen": true,
-  "pisteet": 550
+  "pisteet": 550,
+  "kaupunki": "Zagreb",
+  "lat": 45.81,
+  "lon": 15.98
  },
  "HUN": {
   "url": "https://icast.connectmedia.hu/4736/mr1.mp3",
   "asema": "Kossuth",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Budapest",
+  "lat": 47.5,
+  "lon": 19.04
  },
  "IDN": {
   "url": "https://stream-node0.rri.co.id/streaming/14/9014/kbrn.mp3",
   "asema": "RRI Pro 3 KBRN",
   "kieli": "bahasa indonesia",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Jakarta",
+  "lat": -6.18,
+  "lon": 106.83
  },
  "IRL": {
   "url": "https://icecast.rte.ie/radio1",
   "asema": "RTÉ Radio 1",
   "kieli": "english",
   "virallinen": true,
-  "pisteet": 603
+  "pisteet": 603,
+  "kaupunki": "Dublin",
+  "lat": 53.35,
+  "lon": -6.26
  },
  "IRN": {
   "url": "https://radio.iraninternational.app/iintl_c",
   "asema": "Radio Iran International",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 575
+  "pisteet": 575,
+  "kaupunki": "Teheran",
+  "lat": 35.69,
+  "lon": 51.39
  },
  "IRQ": {
   "url": "https://radio.shafaq.com/radio",
   "asema": "Radio Shafaq (Shafaq News)",
   "kieli": "arabia",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Bagdad",
+  "lat": 33.32,
+  "lon": 44.37
  },
  "ISL": {
   "url": "https://stream.utvarpsaga.is/Hljodver",
   "asema": "Útvarp Saga",
   "kieli": "islanti",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Reykjavík",
+  "lat": 64.15,
+  "lon": -21.93
  },
  "ITA": {
   "url": "https://icestreaming.rai.it/1.mp3",
   "asema": "Rai Radio 1",
   "kieli": "italian",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "Rooma",
+  "lat": 41.89,
+  "lon": 12.48
  },
  "JOR": {
   "url": "https://dc1.serverse.com/proxy/kjxwtpdt/stream",
   "asema": "Hayat FM (Amman) – puhe-, keskustelu- ja perheohjelmat",
   "kieli": "arabia",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Amman",
+  "lat": 31.93,
+  "lon": 35.93
  },
  "JPN": {
   "url": "https://fmsetagaya834.out.airtime.pro/fmsetagaya834_a",
   "asema": "エフエム世田谷 (FM Setagaya 83.4 MHz, Tokio)",
   "kieli": "japani",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Tokio",
+  "lat": 35.69,
+  "lon": 139.69
  },
  "KAZ": {
   "url": "https://radio-streams.kaztrk.kz/qazradio/qazradio/icecast.audio",
   "asema": "Qazaq radiosy",
   "kieli": "kazakh",
   "virallinen": true,
-  "pisteet": 575
+  "pisteet": 575,
+  "kaupunki": "Astana",
+  "lat": 51.13,
+  "lon": 71.43
  },
  "KEN": {
   "url": "https://stream.zeno.fm/ud2u96xst5quv",
   "asema": "KBC",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 469
+  "pisteet": 469,
+  "kaupunki": "Nairobi",
+  "lat": -1.29,
+  "lon": 36.82
  },
  "KOR": {
   "url": "https://wbsradio.kr/wbs-seoul",
   "asema": "WBS 원음방송 서울 (Won-Buddhism Broadcasting System, Soul FM 89.7)",
   "kieli": "korea",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Soul",
+  "lat": 37.56,
+  "lon": 126.99
  },
  "KWT": {
   "url": "https://listen.radioking.com/radio/280804/stream/326527",
   "asema": "moja (مُوجَة), Kuwait City – arabiankielinen puhe/huumori/musiikki",
   "kieli": "arabia (kuwaitin murre)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kuwait",
+  "lat": 29.38,
+  "lon": 47.98
  },
  "LBR": {
   "url": "https://stream.zeno.fm/xxmnohwx4zyuv",
   "asema": "LBS Radio (Liberia Broadcasting System)",
   "kieli": "englanti",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Monrovia",
+  "lat": 6.31,
+  "lon": -10.8
  },
  "LBY": {
   "url": "https://stream.zeno.fm/z9wfrdpmgg0uv",
   "asema": "Radio Funun Tripoli (راديو فنون طرابلس) – kulttuuri- ja puheohjelmat",
   "kieli": "arabia (libyan murre)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Tripoli",
+  "lat": 32.89,
+  "lon": 13.19
  },
  "LKA": {
   "url": "https://stream-32.zeno.fm/xekhrn4zetzuv?zs=KXT1gTNYSemcxyslV6-vdA",
   "asema": "SLBC Tamil National Service",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 575
+  "pisteet": 575,
+  "kaupunki": "Colombo",
+  "lat": 6.93,
+  "lon": 79.86
  },
  "LTU": {
   "url": "https://netradio.ziniur.lt/ziniur.mp3",
   "asema": "Žinių radijas",
   "kieli": "liettua",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Vilna",
+  "lat": 54.69,
+  "lon": 25.28
  },
  "LVA": {
   "url": "https://live.radioswh.lv/plusmp3",
   "asema": "Radio SWH+",
   "kieli": "latvia",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Riika",
+  "lat": 56.95,
+  "lon": 24.11
  },
  "MAR": {
   "url": "https://stream.zeno.fm/une3a02mb",
   "asema": "MA:-Hit Radio Maroc",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 495
+  "pisteet": 495,
+  "kaupunki": "Rabat",
+  "lat": 34.02,
+  "lon": -6.84
  },
  "MDG": {
   "url": "https://direct.radiomadagasikara.com/listen/rnm/radio.mp3",
   "asema": "RNM",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 574
+  "pisteet": 574,
+  "kaupunki": "Antananarivo",
+  "lat": -18.91,
+  "lon": 47.53
  },
  "MLI": {
   "url": "https://stream-157.zeno.fm/yerp85sughwtv?zs=bzqHawb1Rha3gGg97iW8xg",
   "asema": "Radio Malijet",
   "kieli": "bambara",
   "virallinen": true,
-  "pisteet": 575
+  "pisteet": 575,
+  "kaupunki": "Bamako",
+  "lat": 12.65,
+  "lon": -7.99
  },
  "MMR": {
   "url": "https://listen.radioking.com/radio/681745/stream/746185",
   "asema": "Shwe FM (valtakunnallinen FM-verkko, Yangon)",
   "kieli": "burma",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Naypyidaw",
+  "lat": 19.75,
+  "lon": 96.12
  },
  "MNG": {
   "url": "https://c2.radioboss.fm/stream/394",
   "asema": "Гэр бүлийн радио 104.5 (Family Radio, Ulaanbaatar)",
   "kieli": "mongoli",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Ulan Bator",
+  "lat": 47.92,
+  "lon": 106.91
  },
  "MOZ": {
   "url": "https://stream.zeno.fm/tskpv4vscv8uv",
   "asema": "Rádio Moçambique",
   "kieli": "portugali",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Maputo",
+  "lat": -25.97,
+  "lon": 32.57
  },
  "NAM": {
   "url": "https://edge.iono.fm/xice/193_high.aac",
   "asema": "Omulunga Radio 100.9 (Windhoek)",
   "kieli": "oshiwambo",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Windhoek",
+  "lat": -22.57,
+  "lon": 17.08
  },
  "NGA": {
   "url": "https://mega-public-relay.deathsmack-a51.workers.dev/",
   "asema": "ZamRock Radio Nigeria Relay",
   "kieli": "english",
   "virallinen": true,
-  "pisteet": 563
+  "pisteet": 563,
+  "kaupunki": "Abuja",
+  "lat": 9.06,
+  "lon": 7.49
  },
  "NLD": {
   "url": "https://icecast.omroep.nl/radio1-bb-mp3",
   "asema": "NPO Radio 1",
   "kieli": "dutch",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "Amsterdam",
+  "lat": 52.37,
+  "lon": 4.88
  },
  "NOR": {
   "url": "https://lyd.nrk.no/icecast/aac/high/s0w7hwn47m/p1_dk4",
   "asema": "NRK P1 Nordland",
   "kieli": "norsk",
   "virallinen": true,
-  "pisteet": 625
+  "pisteet": 625,
+  "kaupunki": "Oslo",
+  "lat": 59.91,
+  "lon": 10.75
  },
  "NPL": {
   "url": "https://stream1.radionepal.gov.np/live/",
   "asema": "Radio Nepal",
   "kieli": "nepali",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Kathmandu",
+  "lat": 27.71,
+  "lon": 85.32
  },
  "OMN": {
   "url": "https://stream.zeno.fm/84652g7meg8uv",
   "asema": "Al Wisal (الوصال), Muscat – Omanin suosituin arabiankielinen puhe-/musiikkiasema",
   "kieli": "arabia (omanin murre)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Masqat",
+  "lat": 23.61,
+  "lon": 58.59
  },
  "PHL": {
   "url": "https://azura.dzrh.com.ph/listen/dzrh_manila/radio.mp3",
   "asema": "DZRH",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 569
+  "pisteet": 569,
+  "kaupunki": "Manila",
+  "lat": 14.6,
+  "lon": 120.98
  },
  "POL": {
   "url": "https://radiostream.pl/tuba10-1.mp3",
   "asema": "TOK FM",
   "kieli": "puola",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Varsova",
+  "lat": 52.23,
+  "lon": 21.01
  },
  "PRT": {
   "url": "https://radiocast.rtp.pt/rdpint80a.mp3",
   "asema": "RDP Internacional - Main",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 565
+  "pisteet": 565,
+  "kaupunki": "Lissabon",
+  "lat": 38.71,
+  "lon": -9.14
  },
  "QAT": {
   "url": "https://l3.itworkscdn.net/alarabyradiolive/alarabyradio_audio/icecast.audio",
   "asema": "Al Araby Radio (Doha/Lusail) – uutis- ja keskustelukanava",
   "kieli": "arabia",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Doha",
+  "lat": 25.29,
+  "lon": 51.53
  },
  "RUS": {
   "url": "https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps",
   "asema": "Вести ФМ",
   "kieli": "russian",
   "virallinen": true,
-  "pisteet": 573
+  "pisteet": 573,
+  "kaupunki": "Moskova",
+  "lat": 55.75,
+  "lon": 37.62
  },
  "SAU": {
   "url": "https://stream-154.zeno.fm/pdeizhgrtrstv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZGVpemhncnRyc3R2IiwiaG9zdCI6InN0cmVhbS0xNTQuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Im9vbng2V1J3UXJ5Q0k5TVV0N01heEEiLCJpYXQiOjE3MjgyMjQ1MTYsImV4cCI6MTcyODIyNDU3Nn0.gpUIWkDBFNNFjqCg2R-xQN4LXT4z8_Ivs7d2UkeFE_8",
   "asema": "SBA Riyadh Radio 91.5 FM",
   "kieli": "arabic",
   "virallinen": true,
-  "pisteet": 572
+  "pisteet": 572,
+  "kaupunki": "Riad",
+  "lat": 24.65,
+  "lon": 46.71
  },
  "SDN": {
   "url": "https://a13.asurahosting.com/listen/al_masaa_fm_101/radio.mp3",
   "asema": "Al Masaa FM 101 (Khartum)",
   "kieli": "arabia",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Khartum",
+  "lat": 15.6,
+  "lon": 32.53
  },
  "SDS": {
   "url": "https://stream.zeno.fm/w3lic6qp9eouv",
   "asema": "Freedom FM",
   "kieli": "englanti (+ juba-arabia)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Juba",
+  "lat": 4.85,
+  "lon": 31.58
  },
  "SEN": {
   "url": "https://stream.zeno.fm/kxud8vhqt1duv",
   "asema": "RTS Matam 89.1",
   "kieli": "french",
   "virallinen": true,
-  "pisteet": 574
+  "pisteet": 574,
+  "kaupunki": "Dakar",
+  "lat": 14.67,
+  "lon": -17.43
  },
  "SGP": {
   "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/CAPITAL958FM_PREM.aac",
   "asema": "CAPITAL 958",
   "kieli": "chinese",
   "virallinen": true,
-  "pisteet": 570
+  "pisteet": 570,
+  "kaupunki": "Singapore",
+  "lat": 1.3,
+  "lon": 103.8
  },
  "SHN": {
   "url": "https://s2.radio.co/s418cc827e/listen",
   "asema": "SAMS Radio 1 (South Atlantic Media Services, Jamestown)",
   "kieli": "englanti",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Jamestown",
+  "lat": -15.93,
+  "lon": -5.72
  },
  "SLE": {
   "url": "https://stream.zeno.fm/jetj7igyezmtv",
   "asema": "Culture Radio FM 104.5 (Freetown)",
   "kieli": "englanti / krio",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Freetown",
+  "lat": 8.49,
+  "lon": -13.24
  },
  "SOM": {
   "url": "https://stream.zeno.fm/m7p996vfec9uv",
   "asema": "Radio Shabelle 101.5 (Mogadishu)",
   "kieli": "somali",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Mogadishu",
+  "lat": 2.04,
+  "lon": 45.34
  },
  "SWE": {
   "url": "https://live1.sr.se/p1-aac-32",
   "asema": "Sveriges Radio P1",
   "kieli": "swedish",
   "virallinen": true,
-  "pisteet": 629
+  "pisteet": 629,
+  "kaupunki": "Tukholma",
+  "lat": 59.33,
+  "lon": 18.07
  },
  "SYR": {
   "url": "https://asima.out.airtime.pro/asima_a",
   "asema": "Al Asemeh FM / العاصمة إف إم (Damaskos) – yhteiskunta- ja keskusteluohjelmat",
   "kieli": "arabia (syyrian murre)",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Damaskos",
+  "lat": 33.51,
+  "lon": 36.29
  },
  "TCD": {
   "url": "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio",
   "asema": "Radiodiffusion Nationale Tchadienne (ONAMA / Radio Tchad)",
   "kieli": "ranska, tsadinarabia",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "N’Djamena",
+  "lat": 12.11,
+  "lon": 15.05
  },
  "THA": {
   "url": "https://radio12.plathong.net/7234/;stream.mp3",
   "asema": "วิทยุเสียงอิสลาม",
   "kieli": "thai",
   "virallinen": true,
-  "pisteet": 569
+  "pisteet": 569,
+  "kaupunki": "Bangkok",
+  "lat": 13.75,
+  "lon": 100.52
  },
  "TUN": {
   "url": "https://radio.radiotunisienne.tn/nationale",
   "asema": "Radio Nationale (Etablissement de la Radio Tunisienne)",
   "kieli": "arabia (tunisianarabia)",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Tunis",
+  "lat": 36.8,
+  "lon": 10.18
  },
  "TWN": {
   "url": "https://n03.rcs.revma.com/78fm9wyy2tzuv",
   "asema": "中廣新聞網",
   "kieli": "chinese",
   "virallinen": true,
-  "pisteet": 630
+  "pisteet": 630,
+  "kaupunki": "Taipei",
+  "lat": 25.04,
+  "lon": 121.56
  },
  "TZA": {
   "url": "https://a7.asurahosting.com/listen/tbc_taifa/radio.mp3",
   "asema": "TBC Taifa",
   "kieli": "swahili",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Dodoma",
+  "lat": -6.18,
+  "lon": 35.75
  },
  "UGA": {
   "url": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa",
   "asema": "107.3 BBC Radio Uganda",
   "kieli": "english",
   "virallinen": true,
-  "pisteet": 634
+  "pisteet": 634,
+  "kaupunki": "Kampala",
+  "lat": 0.31,
+  "lon": 32.58
  },
  "UKR": {
   "url": "https://online-news.radioplayer.ua/RadioNews",
   "asema": "Єдині новини (Radio News)",
   "kieli": "ukraina",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kiova",
+  "lat": 50.45,
+  "lon": 30.52
  },
  "UZB": {
   "url": "https://live.qalbimnavosi.uz/qalbimnavosi",
   "asema": "Qalbim navosi",
   "kieli": "uzbekki",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Taškent",
+  "lat": 41.31,
+  "lon": 69.28
  },
  "VNM": {
   "url": "https://rfienvietnamien64k.ice.infomaniak.ch/rfienvietnamien-64.mp3",
   "asema": "RFI Tiếng Việt",
   "kieli": "",
   "virallinen": false,
-  "pisteet": 135
+  "pisteet": 135,
+  "kaupunki": "Hanoi",
+  "lat": 21.02,
+  "lon": 105.84
  },
  "YEM": {
   "url": "https://dc5.serverse.com/proxy/pbmhbvxs/stream",
   "asema": "Sana'a Radio (إذاعة صنعاء) – Jemenin valtiollinen yleisradio",
   "kieli": "arabia (jemenin murre)",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Sanaa",
+  "lat": 15.35,
+  "lon": 44.2
  },
  "ZAF": {
   "url": "https://25643.live.streamtheworld.com/UKHOZIFMAAC_SC",
   "asema": "Ukhozi FM (SABC)",
   "kieli": "isizulu",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Kapkaupunki",
+  "lat": -33.93,
+  "lon": 18.42
  },
  "ZWE": {
   "url": "https://edge.iono.fm/xice/159_high.aac",
   "asema": "Star FM 89.7 (Harare)",
   "kieli": "shona, englanti",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Harare",
+  "lat": -17.83,
+  "lon": 31.05
  },
  "PAK": {
   "url": "https://samaakhi107-itelservices.radioca.st/stream",
   "asema": "MERA FM 107.4 (Karachin lähetin, valtakunnallinen FM-verkko)",
   "kieli": "urdu",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Islamabad",
+  "lat": 33.7,
+  "lon": 73.04
  },
  "ROU": {
   "url": "https://edge76.rcs-rds.ro/digifm/digi24fm.mp3",
   "asema": "Digi24 FM",
   "kieli": "romania",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Bukarest",
+  "lat": 44.41,
+  "lon": 26.1
  },
  "ARG": {
   "url": "https://sa.mp3.icecast.magma.edge-access.net/sc_rad1",
   "asema": "LRA1 Radio Nacional Argentina",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 630
+  "pisteet": 630,
+  "kaupunki": "Buenos Aires",
+  "lat": -34.6,
+  "lon": -58.38
  },
  "AUS": {
   "url": "https://abc.streamguys1.com/live/rnnsw/icecast.audio",
   "asema": "ABC Radio National",
   "kieli": "englanti",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Canberra",
+  "lat": -35.29,
+  "lon": 149.13
  },
  "BOL": {
   "url": "https://stream.zeno.fm/pnwpbyfambruv",
   "asema": "Radio Panamericana",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 610
+  "pisteet": 610,
+  "kaupunki": "La Paz",
+  "lat": -16.5,
+  "lon": -68.13
  },
  "BRA": {
   "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC_SC",
   "asema": "BandNews FM",
   "kieli": "portuguese",
   "virallinen": true,
-  "pisteet": 633
+  "pisteet": 633,
+  "kaupunki": "Brasília",
+  "lat": -15.79,
+  "lon": -47.88
  },
  "CAN": {
   "url": "https://26733.live.streamtheworld.com/CBLAFM_CBC_SC",
   "asema": "CBC Radio One - Toronto, ON (MP3 stream)",
   "kieli": "english",
   "virallinen": true,
-  "pisteet": 628
+  "pisteet": 628,
+  "kaupunki": "Ottawa",
+  "lat": 45.42,
+  "lon": -75.69
  },
  "CHL": {
   "url": "https://unlimited3-cl.dps.live/biobiotemuco/aac/icecast.audio",
   "asema": "Radio Bio Bio Temuco",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 625
+  "pisteet": 625,
+  "kaupunki": "Santiago de Chile",
+  "lat": -33.44,
+  "lon": -70.65
  },
  "COL": {
   "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/CARACOL_RADIOAAC.aac",
   "asema": "Caracol Radio (Bogotá) - 100.9 FM / 810 AM - HJGL / HJCY - PRISA Radio - Bogotá, Colombia",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Bogotá",
+  "lat": 4.61,
+  "lon": -74.08
  },
  "CUB": {
   "url": "https://securestreams7.autopo.st/?uri=https://icecast.teveo.cu/kHKL7tWd",
   "asema": "Radio Rebelde 1180 AM",
   "kieli": "espanja",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Havanna",
+  "lat": 23.14,
+  "lon": -82.36
  },
  "ECU": {
   "url": "https://icecast.radiopichincha.com/radiopichincha",
   "asema": "Radio Pichincha",
   "kieli": "esapa",
   "virallinen": false,
-  "pisteet": 126
+  "pisteet": 126,
+  "kaupunki": "Quito",
+  "lat": -0.22,
+  "lon": -78.51
  },
  "FJI": {
   "url": "https://icecast1.sere.plus/RFOne",
   "asema": "Radio Fiji One (FBC, fidžin kieli)",
   "kieli": "fidzi",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Suva",
+  "lat": -18.13,
+  "lon": 178.43
  },
  "GRL": {
   "url": "https://getnanoq.retro-radio.dk/Nanoq-TX-1",
   "asema": "Nanoq FM (Nuuk)",
   "kieli": "gronlanti",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Nuuk",
+  "lat": 64.18,
+  "lon": -51.73
  },
  "GTM": {
   "url": "https://stream.zenolive.com/z96sq8tndseuv",
   "asema": "Emisoras Unidas 89.7",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Guatemala",
+  "lat": 14.64,
+  "lon": -90.51
  },
  "MEX": {
   "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/W_RADIOAAC.aac",
   "asema": "W Radio Ciudad de México - 96.9 FM / 900 AM - XEW-FM / XEW-AM - Radiópolis - Ciudad de México",
   "kieli": "spanish",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Mexico",
+  "lat": 19.35,
+  "lon": -99.14
  },
  "NIC": {
   "url": "https://stream.zeno.fm/cbd1wweamzzuv",
   "asema": "La Voz del Norte",
   "kieli": "spanish",
   "virallinen": false,
-  "pisteet": 133
+  "pisteet": 133,
+  "kaupunki": "Managua",
+  "lat": 12.15,
+  "lon": -86.27
  },
  "NZL": {
   "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_41AAC.aac",
   "asema": "Newstalk ZB",
   "kieli": "",
   "virallinen": false,
-  "pisteet": 129
+  "pisteet": 129,
+  "kaupunki": "Wellington",
+  "lat": -41.29,
+  "lon": 174.78
  },
  "PAN": {
   "url": "https://stream.zeno.fm/nvpr0uec8e9uv",
   "asema": "La Exitosa Panamá",
   "kieli": "espanja",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Panamá",
+  "lat": 8.97,
+  "lon": -79.53
  },
  "PER": {
   "url": "https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/icecast.audio",
   "asema": "Radio RPP Noticias",
   "kieli": "",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Lima",
+  "lat": -12.06,
+  "lon": -77.04
  },
  "PNG": {
   "url": "https://stream.rcs.revma.com/n5vb288kmbpwv",
   "asema": "Yumi FM (tok pisin, Port Moresby)",
   "kieli": "tok pisin",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Port Moresby",
+  "lat": -9.48,
+  "lon": 147.15
  },
  "SLB": {
   "url": "https://listen.mixlr.com/e1e2be07dfce2a18e8ee3cdd0dd2d437",
   "asema": "SIBC Solomon Islands Broadcasting (Honiara)",
   "kieli": "pijin",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Honiara",
+  "lat": -9.43,
+  "lon": 159.95
  },
  "TLS": {
   "url": "https://streaming.kalohan.net/proxy/raliber?mp=/stream",
   "asema": "Rádio Liberdade Dili",
   "kieli": "tetum",
   "virallinen": false,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Dili",
+  "lat": -8.55,
+  "lon": 125.58
  },
  "USA": {
   "url": "https://fm939.wnyc.org/wnycfm",
   "asema": "WNYC-FM 93.9 New York Public Radio",
   "kieli": "english",
   "virallinen": true,
-  "pisteet": 635
+  "pisteet": 635,
+  "kaupunki": "Washington",
+  "lat": 38.9,
+  "lon": -77.04
  },
  "VEN": {
   "url": "https://guri.tepuyserver.net/8048/stream",
   "asema": "Radio Nacional de Venezuela - Informativa",
   "kieli": "español - latinoamerica",
   "virallinen": true,
-  "pisteet": 563
+  "pisteet": 563,
+  "kaupunki": "Caracas",
+  "lat": 10.51,
+  "lon": -66.91
  },
  "VUT": {
   "url": "https://radio.vbtc.vu/paradisefm",
   "asema": "Paradise 98FM (VBTC, Port Vila)",
   "kieli": "bislama",
   "virallinen": true,
-  "tutkittu": true
+  "tutkittu": true,
+  "kaupunki": "Port Vila",
+  "lat": -17.73,
+  "lon": 168.32
+ },
+ "BEN": {
+  "url": "https://listen.radioking.com/radio/47608/stream/84430",
+  "asema": "ORTB Radio Bénin",
+  "kieli": "french",
+  "virallinen": false,
+  "pisteet": 131,
+  "kaupunki": "Porto-Novo",
+  "lat": 6.48,
+  "lon": 2.62
+ },
+ "BFA": {
+  "url": "https://sonic.mediacp.eu/8040/;",
+  "asema": "Radio Bizi Inter",
+  "kieli": "french",
+  "virallinen": false,
+  "pisteet": 74,
+  "kaupunki": "Ouagadougou",
+  "lat": 12.37,
+  "lon": -1.53
+ },
+ "BDI": {
+  "url": "https://stream.zeno.fm/eequgfw72hhvv",
+  "asema": "Heaven FM Radio (Burundi)",
+  "kieli": "",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Gitega",
+  "lat": -3.43,
+  "lon": 29.93
+ },
+ "CPV": {
+  "url": "https://listen.radioking.com/radio/281506/stream/327253",
+  "asema": "Caboradio",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 73,
+  "kaupunki": "Praia",
+  "lat": 14.92,
+  "lon": -23.51
+ },
+ "CAF": {
+  "url": "https://stream.radiondekeluka.org/ndekeluka",
+  "asema": "Radio Ndeke Luka",
+  "kieli": "french",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Bangui",
+  "lat": 4.37,
+  "lon": 18.56
+ },
+ "COG": {
+  "url": "https://dreamsiteradiocp2.com/proxy/rmrepdemcongo?mp=/stream",
+  "asema": "Radio Maria Democratic Rep. Congo",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 72,
+  "kaupunki": "Brazzaville",
+  "lat": -4.27,
+  "lon": 15.27
+ },
+ "CIV": {
+  "url": "https://dreamsiteradiocp6.com/proxy/rmcosta?mp=/stream",
+  "asema": "Radio Maria Ivory Coast",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 72,
+  "kaupunki": "Yamoussoukro",
+  "lat": 6.82,
+  "lon": -5.27
+ },
+ "GNQ": {
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/XHPSFMAAC.aac",
+  "asema": "Exa FM",
+  "kieli": "spanish",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Malabo",
+  "lat": 3.75,
+  "lon": 8.78
+ },
+ "ERI": {
+  "url": "https://linuxfreelancer.com:8443/test.mp3",
+  "asema": "Eritrean/Ethiopian music",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 72,
+  "kaupunki": "Asmara",
+  "lat": 15.33,
+  "lon": 38.92
+ },
+ "GIN": {
+  "url": "https://stream.zeno.fm/xirmzwnnpintv",
+  "asema": "LGF TALK GUINEE",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 120,
+  "kaupunki": "Conakry",
+  "lat": 9.51,
+  "lon": -13.71
+ },
+ "GNB": {
+  "url": "https://stream-179.surfernetwork.com/iwioelqe6qwtv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJpd2lvZWxxZTZxd3R2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IlI3bmhuQURWVDV5RUFITVF5UC14ekEiLCJpYXQiOjE3OTA0MzEyNjcsImV4cCI6MTc5MDQzMTMyN30.kl8JlD55r3VyDon3KHBIxwW6U6zElfwyWE5xdBXPYj4",
+  "asema": "Rádio Voz da Guiné",
+  "kieli": "portuguese",
+  "virallinen": false,
+  "pisteet": 74,
+  "kaupunki": "Bissau",
+  "lat": 11.86,
+  "lon": -15.58
+ },
+ "MWI": {
+  "url": "https://ice31.securenetsystems.net/0079",
+  "asema": "ZBS Zodiak FM",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 135,
+  "kaupunki": "Lilongwe",
+  "lat": -13.99,
+  "lon": 33.77
+ },
+ "MUS": {
+  "url": "https://stream.radioplus.mu:8000/radio.mp3",
+  "asema": "Radio Plus Mauritius",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 135,
+  "kaupunki": "Port Louis",
+  "lat": -20.16,
+  "lon": 57.5
+ },
+ "NER": {
+  "url": "https://stream.zeno.fm/1y2c3qbgbchvv",
+  "asema": "Wadata Radio 107.4 Niamey",
+  "kieli": "french",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Niamey",
+  "lat": 13.52,
+  "lon": 2.12
+ },
+ "RWA": {
+  "url": "https://stream.zeno.fm/k5rq7qwkggauv",
+  "asema": "MENYA FM",
+  "kieli": "",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Kigali",
+  "lat": -1.95,
+  "lon": 30.12
+ },
+ "TGO": {
+  "url": "https://stream.zeno.fm/vkhv6gl43g5tv",
+  "asema": "Radio Victoire 96.3 Lomé",
+  "kieli": "french",
+  "virallinen": false,
+  "pisteet": 75,
+  "kaupunki": "Lomé",
+  "lat": 6.13,
+  "lon": 1.22
+ },
+ "ZMB": {
+  "url": "https://edge.iono.fm/xice/57_medium.aac?ref=https%3A%2F%2Fhot1027.co.za%2F&adToken=",
+  "asema": "Hot 102.7FM",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 72,
+  "kaupunki": "Lusaka",
+  "lat": -15.42,
+  "lon": 28.28
+ },
+ "ARM": {
+  "url": "https://streams.radio.co/sa0bf8ec29/listen?sid=1",
+  "asema": "Armenian Christian Radio - Bashde Radio",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 74,
+  "kaupunki": "Jerevan",
+  "lat": 40.18,
+  "lon": 44.51
+ },
+ "AZE": {
+  "url": "https://icecast.livetv.az/yurdfm",
+  "asema": "Yurd FM",
+  "kieli": "azerbaijani",
+  "virallinen": false,
+  "pisteet": 75,
+  "kaupunki": "Baku",
+  "lat": 40.37,
+  "lon": 49.84
+ },
+ "BHR": {
+  "url": "https://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3",
+  "asema": "Monte Carlo Doualiya",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 73,
+  "kaupunki": "Manama",
+  "lat": 26.22,
+  "lon": 50.58
+ },
+ "BGD": {
+  "url": "https://stream-157.zeno.fm/eabgu655puquv",
+  "asema": "Radio Shadhin",
+  "kieli": "bangla",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Dhaka",
+  "lat": 23.73,
+  "lon": 90.39
+ },
+ "BRN": {
+  "url": "https://play.thestreamtech.com:7038/",
+  "asema": "Kristal FM",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 71,
+  "kaupunki": "Bandar Seri Begawan",
+  "lat": 4.92,
+  "lon": 114.92
+ },
+ "KHM": {
+  "url": "https://streaming.radio.co/sd48fd711d/listen",
+  "asema": "LDP Radio",
+  "kieli": "khmer",
+  "virallinen": false,
+  "pisteet": 123,
+  "kaupunki": "Phnom Penh",
+  "lat": 11.57,
+  "lon": 104.92
+ },
+ "GEO": {
+  "url": "https://listen.radioking.com/radio/282820/stream/328621",
+  "asema": "Mutant Radio",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 121,
+  "kaupunki": "Tbilisi",
+  "lat": 41.72,
+  "lon": 44.79
+ },
+ "ISR": {
+  "url": "https://28563.live.streamtheworld.com/KAN_BET.mp3",
+  "asema": "Kan Bet",
+  "kieli": "hebrew",
+  "virallinen": true,
+  "pisteet": 629,
+  "kaupunki": "Jerusalem",
+  "lat": 31.78,
+  "lon": 35.23
+ },
+ "KGZ": {
+  "url": "https://liveradio.utrk.kg/1radio",
+  "asema": "Birinchi Radio (UTRK)",
+  "kieli": "kyrgyz",
+  "virallinen": true,
+  "tutkittu": true,
+  "kaupunki": "Biškek",
+  "lat": 42.87,
+  "lon": 74.57
+ },
+ "LAO": {
+  "url": "https://radio.lnr.org.la/fm103",
+  "asema": "Lao National Radio 103.7",
+  "kieli": "",
+  "virallinen": true,
+  "pisteet": 569,
+  "kaupunki": "Vientiane",
+  "lat": 17.98,
+  "lon": 102.63
+ },
+ "LBN": {
+  "url": "https://edge.mixlr.com/channel/qtqeb",
+  "asema": "Radio Liban Libre",
+  "kieli": "arabic",
+  "virallinen": true,
+  "pisteet": 635,
+  "kaupunki": "Beirut",
+  "lat": 33.89,
+  "lon": 35.51
+ },
+ "MYS": {
+  "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NASIONAL_FM.mp3",
+  "asema": "Nasional FM 88,5 MHz",
+  "kieli": "malay",
+  "virallinen": true,
+  "pisteet": 549,
+  "kaupunki": "Kuala Lumpur",
+  "lat": 3.15,
+  "lon": 101.7
+ },
+ "MDV": {
+  "url": "https://radio.psm.mv/draair",
+  "asema": "Dhivehi Raajjeyge Adu",
+  "kieli": "dhivehi",
+  "virallinen": true,
+  "pisteet": 567,
+  "kaupunki": "Malé",
+  "lat": 4.18,
+  "lon": 73.51
+ },
+ "PRK": {
+  "url": "https://listen7.myradio24.com/69366",
+  "asema": "Pyongyang Radio FM",
+  "kieli": "spanish",
+  "virallinen": true,
+  "pisteet": 132,
+  "tutkittu": true,
+  "kaupunki": "Pjongjang",
+  "lat": 39.02,
+  "lon": 125.75
+ },
+ "PSE": {
+  "url": "https://cdna.streamgates.net/RadioNas/Live-Audio/icecast.audio",
+  "asema": "راديو الناس",
+  "kieli": "العربية",
+  "virallinen": false,
+  "pisteet": 135,
+  "kaupunki": "Ramallah",
+  "lat": 31.9,
+  "lon": 35.2
+ },
+ "ALB": {
+  "url": "https://cp1.sednastream.com/proxy/radioone94?mp=/stream",
+  "asema": "RadioOne",
+  "kieli": "albanian",
+  "virallinen": false,
+  "pisteet": 135,
+  "kaupunki": "Tirana",
+  "lat": 41.33,
+  "lon": 19.82
+ },
+ "AND": {
+  "url": "https://streaming.giraweb.com/8020/stream",
+  "asema": "Flaix FM Andorra",
+  "kieli": "catalan",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Andorra la Vella",
+  "lat": 42.51,
+  "lon": 1.52
+ },
+ "BLR": {
+  "url": "https://myradio24.org/3355",
+  "asema": "Love Is Radio Belarus",
+  "kieli": "russian",
+  "virallinen": true,
+  "pisteet": 575,
+  "kaupunki": "Minsk",
+  "lat": 53.9,
+  "lon": 27.56
+ },
+ "BEL": {
+  "url": "https://radios.rtbf.be/laprem1ere-64.aac",
+  "asema": "RTBF La Première",
+  "kieli": "french",
+  "virallinen": true,
+  "pisteet": 635,
+  "kaupunki": "Bryssel",
+  "lat": 50.85,
+  "lon": 4.35
+ },
+ "LIE": {
+  "url": "https://radiostream.radiobutler.com/7e9d5eb6-9249-4c7a-9f1c-6d4b9c7a48a8",
+  "asema": "Radio Vaterland",
+  "kieli": "german",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Vaduz",
+  "lat": 47.14,
+  "lon": 9.52
+ },
+ "LUX": {
+  "url": "https://stream.100komma7.lu/100komma7/live/mp3/128/stream.mp3",
+  "asema": "Radio 100komma7",
+  "kieli": "french",
+  "virallinen": true,
+  "pisteet": 568,
+  "kaupunki": "Luxemburg",
+  "lat": 49.61,
+  "lon": 6.13
+ },
+ "MLT": {
+  "url": "https://s4.radio.co/sf3aa4c25a/listen",
+  "asema": "Calypso Radio",
+  "kieli": "maltese",
+  "virallinen": false,
+  "pisteet": 134,
+  "kaupunki": "Valletta",
+  "lat": 35.9,
+  "lon": 14.51
+ },
+ "MDA": {
+  "url": "https://stream.noroc.tv/radiovb_aac",
+  "asema": "Vocea Basarabiei",
+  "kieli": "romanian",
+  "virallinen": false,
+  "pisteet": 115,
+  "kaupunki": "Chișinău",
+  "lat": 47.02,
+  "lon": 28.84
+ },
+ "MCO": {
+  "url": "https://radiomonaco.ice.infomaniak.ch/radiomonaco-128.mp3",
+  "asema": "Radio Monaco 98.2",
+  "kieli": "french",
+  "virallinen": true,
+  "pisteet": 470,
+  "kaupunki": "Monaco",
+  "lat": 43.73,
+  "lon": 7.42
+ },
+ "MNE": {
+  "url": "https://stream.radios.rs:9008/;",
+  "asema": "Radio S1 Crna Gora",
+  "kieli": "montenegro",
+  "virallinen": false,
+  "pisteet": 70,
+  "kaupunki": "Podgorica",
+  "lat": 42.44,
+  "lon": 19.26
+ },
+ "MKD": {
+  "url": "https://liderfm.ipradio.mk/",
+  "asema": "Lider FM 107,4",
+  "kieli": "macedonian",
+  "virallinen": false,
+  "pisteet": 130,
+  "kaupunki": "Skopje",
+  "lat": 42,
+  "lon": 21.43
+ },
+ "SMR": {
+  "url": "https://usmaradio.out.airtime.pro:8000/usmaradio_a",
+  "asema": "USMARADIO",
+  "kieli": "italian",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "San Marino",
+  "lat": 43.93,
+  "lon": 12.45
+ },
+ "SRB": {
+  "url": "https://stream.redradio.rs/sid=1",
+  "asema": "Red radio Beograd",
+  "kieli": "serbian",
+  "virallinen": true,
+  "pisteet": 568,
+  "kaupunki": "Belgrad",
+  "lat": 44.82,
+  "lon": 20.46
+ },
+ "SVK": {
+  "url": "https://icecast.stv.livebox.sk/slovensko_128.mp3",
+  "asema": "Rádio Slovensko",
+  "kieli": "slovak",
+  "virallinen": true,
+  "pisteet": 627,
+  "kaupunki": "Bratislava",
+  "lat": 48.15,
+  "lon": 17.11
+ },
+ "SVN": {
+  "url": "https://mp3.rtvslo.si/val202",
+  "asema": "Val 202",
+  "kieli": "slovenian",
+  "virallinen": true,
+  "pisteet": 610,
+  "kaupunki": "Ljubljana",
+  "lat": 46.05,
+  "lon": 14.51
+ },
+ "VAT": {
+  "url": "https://radio.vaticannews.va/stream-en",
+  "asema": "Radio Vaticana English",
+  "kieli": "english",
+  "virallinen": true,
+  "pisteet": 632,
+  "kaupunki": "Vatikaani",
+  "lat": 41.9,
+  "lon": 12.45
+ },
+ "XKX": {
+  "url": "https://stream.glamradio.fm:8443/glamradio",
+  "asema": "GlamRADIO",
+  "kieli": "albanian",
+  "virallinen": false,
+  "pisteet": 71,
+  "kaupunki": "Pristina",
+  "lat": 42.67,
+  "lon": 21.17
+ },
+ "BLZ": {
+  "url": "https://stream.zeno.fm/nw7xmuzasyduv",
+  "asema": "Riddim Radio",
+  "kieli": "english",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "Belmopan",
+  "lat": 17.25,
+  "lon": -88.77
+ },
+ "CRI": {
+  "url": "https://stream.zeno.fm/ftcx2988uwzuv",
+  "asema": "Radio Revolución",
+  "kieli": "spanish",
+  "virallinen": false,
+  "pisteet": 130,
+  "kaupunki": "San José",
+  "lat": 9.93,
+  "lon": -84.08
+ },
+ "SLV": {
+  "url": "https://centova.playerfullhd.com/proxy/brfrtxcf/stream",
+  "asema": "Radio Mercado Metapan",
+  "kieli": "español internacional",
+  "virallinen": false,
+  "pisteet": 128,
+  "kaupunki": "San Salvador",
+  "lat": 13.7,
+  "lon": -89.19
+ },
+ "HND": {
+  "url": "https://securestreams7.autopo.st/?uri=http://216.152.154.134/HRN?=hrn670khz",
+  "asema": "hrn 670 KHz",
+  "kieli": "english",
+  "virallinen": true,
+  "pisteet": 558,
+  "kaupunki": "Tegucigalpa",
+  "lat": 14.11,
+  "lon": -87.2
+ },
+ "ATG": {
+  "url": "https://testvibz-silcomwireless.radioca.st/stream.mp3",
+  "asema": "Vibz FM",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 68,
+  "kaupunki": "St. John’s",
+  "lat": 17.12,
+  "lon": -61.84
+ },
+ "BHS": {
+  "url": "https://s2.reliastream.com/proxy/rumcayme?mp=/stream",
+  "asema": "Bahamian or Nuttin",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 70,
+  "kaupunki": "Nassau",
+  "lat": 25.08,
+  "lon": -77.34
+ },
+ "BRB": {
+  "url": "https://ice66.securenetsystems.net:80/VOB929",
+  "asema": "VOB 92.9 FM",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 135,
+  "kaupunki": "Bridgetown",
+  "lat": 13.1,
+  "lon": -59.62
+ },
+ "DMA": {
+  "url": "https://stream.dbcradio.net:8005/live",
+  "asema": "DBS Radio",
+  "kieli": "",
+  "virallinen": true,
+  "pisteet": 565,
+  "kaupunki": "Roseau",
+  "lat": 15.3,
+  "lon": -61.38
+ },
+ "DOM": {
+  "url": "https://node-08.zeno.fm/8wgv914262quv",
+  "asema": "Radio Dial 670 AM (RD)",
+  "kieli": "spanish",
+  "virallinen": false,
+  "pisteet": 129,
+  "kaupunki": "Santo Domingo",
+  "lat": 18.46,
+  "lon": -69.94
+ },
+ "GRD": {
+  "url": "https://starchild.radioca.st/",
+  "asema": "Star FM 101.9",
+  "kieli": "english",
+  "virallinen": false,
+  "tutkittu": true,
+  "kaupunki": "St. George’s",
+  "lat": 12.05,
+  "lon": -61.75
+ },
+ "HTI": {
+  "url": "https://rfimonde-96k.ice.infomaniak.ch/rfimonde-96k.mp3",
+  "asema": "RFI",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 129,
+  "kaupunki": "Port-au-Prince",
+  "lat": 18.55,
+  "lon": -72.34
+ },
+ "JAM": {
+  "url": "https://stream.zeno.fm/cub84trbgy5tv",
+  "asema": "Radio Jamaica 94FM",
+  "kieli": "english",
+  "virallinen": true,
+  "pisteet": 635,
+  "kaupunki": "Kingston",
+  "lat": 17.97,
+  "lon": -76.79
+ },
+ "KNA": {
+  "url": "https://media.slactech.com:8014/stream",
+  "asema": "ZIZ Radio",
+  "kieli": "english",
+  "virallinen": true,
+  "tutkittu": true,
+  "kaupunki": "Basseterre",
+  "lat": 17.3,
+  "lon": -62.73
+ },
+ "LCA": {
+  "url": "https://streams.radio.co/s5f11a7ef9/listen",
+  "asema": "BLAZIN 99.3FM",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 67,
+  "kaupunki": "Castries",
+  "lat": 14.01,
+  "lon": -60.99
+ },
+ "VCT": {
+  "url": "https://video1.getstreamhosting.com:2000/stream/8260",
+  "asema": "WE FM 99.9 SVG",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 120,
+  "kaupunki": "Kingstown",
+  "lat": 13.16,
+  "lon": -61.23
+ },
+ "TTO": {
+  "url": "https://media.streambrothers.com:8450/stream",
+  "asema": "Talk City 91.1 FM",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 125,
+  "kaupunki": "Port of Spain",
+  "lat": 10.67,
+  "lon": -61.52
+ },
+ "GUY": {
+  "url": "https://cast4.asurahosting.com/proxy/ncn1025/stream",
+  "asema": "102.5 FM Voice of Guyana",
+  "kieli": "",
+  "virallinen": true,
+  "pisteet": 568,
+  "kaupunki": "Georgetown",
+  "lat": 6.81,
+  "lon": -58.15
+ },
+ "PRY": {
+  "url": "https://1000noticias.live:8000/radio.mp3",
+  "asema": "Radio 1000 AM",
+  "kieli": "spanish",
+  "virallinen": false,
+  "pisteet": 121,
+  "kaupunki": "Asunción",
+  "lat": -25.28,
+  "lon": -57.63
+ },
+ "SUR": {
+  "url": "https://s5.radio.co/s85a633f73/listen",
+  "asema": "Radio 10 Magic FM",
+  "kieli": "dutch",
+  "virallinen": false,
+  "pisteet": 75,
+  "kaupunki": "Paramaribo",
+  "lat": 5.87,
+  "lon": -55.17
+ },
+ "URY": {
+  "url": "https://stream.rcast.net/73479",
+  "asema": "CX 30 Radio Nacional (La Treinta)",
+  "kieli": "spanish",
+  "virallinen": true,
+  "pisteet": 620,
+  "kaupunki": "Montevideo",
+  "lat": -34.91,
+  "lon": -56.19
+ },
+ "KIR": {
+  "url": "https://streamer5.rightclickitservices.com:19790/stream",
+  "asema": "Radio Kiribati 1440 kHz",
+  "kieli": "",
+  "virallinen": true,
+  "pisteet": 624,
+  "kaupunki": "South Tarawa",
+  "lat": 1.33,
+  "lon": 172.97
+ },
+ "PLW": {
+  "url": "https://live.upbeat.pw/",
+  "asema": "UpBeat.pw",
+  "kieli": "",
+  "virallinen": false,
+  "pisteet": 64,
+  "kaupunki": "Ngerulmud",
+  "lat": 7.5,
+  "lon": 134.62
+ },
+ "TON": {
+  "url": "https://stream.zeno.fm/wnd22q3485quv",
+  "asema": "Letio Tonga",
+  "kieli": "english",
+  "virallinen": false,
+  "pisteet": 120,
+  "kaupunki": "Nukuʻalofa",
+  "lat": -21.13,
+  "lon": -175.2
  }
 }

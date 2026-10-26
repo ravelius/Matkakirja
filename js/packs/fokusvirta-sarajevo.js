@@ -859,15 +859,4 @@ export const FOKUSVIRTA_SARAJEVO = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy. Kaanon: tähän maahan ei tule vaanijaa.
-   */
-  aarremerkinta: {
-    teksti: 'Kätkö oli sillan kolmannen kaaren alla, käden ulottuvilla — '
-      + 'mutta joki tuli syksystä paksuna enkä uinut. Piirsin kaaren niin '
-      + 'tarkasti, että sinä löydät sen kuivin jaloin.',
-  },
 };

@@ -1,0 +1,313 @@
+{
+ "kaupunki": "jerevan",
+ "kaupunkiQ": "Q1953",
+ "kohteet": [
+  {
+   "q": "Q733610",
+   "nimi": "Erebunin linnoitus",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 40.14065,
+   "lon": 44.53795,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2014 Erywań, Erebuni, Ruiny twierdzy (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(02).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(02).jpg",
+     "selite": "Erebunin linnoituksen basalttimuurit kohoavat kukkulalla, jonne Urartun kuningas perusti linnan vuonna 782 eaa.",
+     "leveys": 4498,
+     "korkeus": 2995,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014 Erywań, Erebuni, Ruiny twierdzy (10).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(10).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(10).jpg",
+     "selite": "Linnoituksen kukkulalta näkyy yli Araratin tasangon pylväänjalustojen ja muurinjuurien jäänteitä.",
+     "leveys": 4367,
+     "korkeus": 2909,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2014 Erywań, Erebuni, Ruiny twierdzy (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(01).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Erywa%C5%84%2C_Erebuni%2C_Ruiny_twierdzy_(01).jpg",
+     "selite": "Erebuni on Jerevanin vanhin tunnettu muinaiskaupungin perusta.",
+     "leveys": 4223,
+     "korkeus": 2378,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2584192",
+   "nimi": "Tasavallan aukio",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 40.17753,
+   "lon": 44.51257,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yerevan, Government House, Government of Armenia, Republic Square, Armenia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan%2C_Government_House%2C_Government_of_Armenia%2C_Republic_Square%2C_Armenia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yerevan%2C_Government_House%2C_Government_of_Armenia%2C_Republic_Square%2C_Armenia.jpg",
+     "selite": "Tasavallan aukion hallitusrakennus on rakennettu vaaleanpunaisesta tuffikivestä Aleksandr Tamanjanin suunnitelman mukaan.",
+     "leveys": 4912,
+     "korkeus": 2763,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yerevan, Republic Square of Yerevan 2, Armenia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan%2C_Republic_Square_of_Yerevan_2%2C_Armenia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yerevan%2C_Republic_Square_of_Yerevan_2%2C_Armenia.jpg",
+     "selite": "Soikea aukio on Jerevanin keskus, jota kehystävät tuffikivipalatsit.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Yerevan at night, Republic Square, Yerevan, Armenia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_at_night%2C_Republic_Square%2C_Yerevan%2C_Armenia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yerevan_at_night%2C_Republic_Square%2C_Yerevan%2C_Armenia.jpg",
+     "selite": "Iltaisin aukion laulavat suihkulähteet ja valaistut julkisivut loistavat.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1979112",
+   "nimi": "Sininen moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 40.1781,
+   "lon": 44.5056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yerevan Blue mosque 2023 aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_Blue_mosque_2023_aerial.jpg?width=1280",
+     "tekija": "Yerevantsi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yerevan_Blue_mosque_2023_aerial.jpg",
+     "selite": "Sininen moskeija on 1700-luvulla rakennettu Jerevanin ainoa jäljellä oleva moskeija.",
+     "leveys": 2960,
+     "korkeus": 2066,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Blue Mosque (Yerevan, Armenia) (28281235152).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Mosque_(Yerevan%2C_Armenia)_(28281235152).jpg?width=1280",
+     "tekija": "Sasha India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Mosque_(Yerevan%2C_Armenia)_(28281235152).jpg",
+     "selite": "Moskeijan sinisin laatoin koristeltu kupoli kohoaa sisäpihan altaan yläpuolelle.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Blue Mosque (Yerevan, Armenia) (27769527963).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Mosque_(Yerevan%2C_Armenia)_(27769527963).jpg?width=1280",
+     "tekija": "Sasha India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Mosque_(Yerevan%2C_Armenia)_(27769527963).jpg",
+     "selite": "Portaalin kuviolaatat ovat persialaista rakennustaidetta.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2373326",
+   "nimi": "Armenian oopperateatteri",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 40.1858,
+   "lon": 44.515,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerewan-Oper-msu-wlm-2435.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerewan-Oper-msu-wlm-2435.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerewan-Oper-msu-wlm-2435.jpg",
+     "selite": "Jerevanin oopperatalo on pyöreä tuffikivirakennus, joka kuuluu kaupungin keskustan tunnetuimpiin maamerkkeihin.",
+     "leveys": 5400,
+     "korkeus": 3566,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Armenian National Opera and Ballet Theatre named after Alexander Spendiaryan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Armenian_National_Opera_and_Ballet_Theatre_named_after_Alexander_Spendiaryan.jpg?width=1280",
+     "tekija": "Elena Arakelova",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Armenian_National_Opera_and_Ballet_Theatre_named_after_Alexander_Spendiaryan.jpg",
+     "selite": "Teatterin pyöreä rakennus sijaitsee kaupungin keskuspuiston laidalla.",
+     "leveys": 5104,
+     "korkeus": 3532,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3849046",
+   "nimi": "Pyhän Sargiksen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 40.17698,
+   "lon": 44.50215,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "9+ (208)1s.Sargis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/9%2B_(208)1s.Sargis.jpg?width=1280",
+     "tekija": "X.narine",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:9%2B_(208)1s.Sargis.jpg",
+     "selite": "Pyhän Sargiksen katedraali on Armenian apostolisen kirkon jerevanilainen kirkko 1800-luvulta.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13053205",
+   "nimi": "Katoghiken kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 40.18437,
+   "lon": 44.51898,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "+Kentron Astvatsatsin church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BKentron_Astvatsatsin_church.jpg?width=1280",
+     "tekija": "Soghomon Matevosyan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BKentron_Astvatsatsin_church.jpg",
+     "selite": "Katoghiken pieni kirkko on Jerevanin vanhimpia säilyneitä kirkkoja, ja sen vieressä on myöhempi Pyhän Annan kirkko.",
+     "leveys": 7152,
+     "korkeus": 5368,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church Katoghike Yerevan 07-10-22v3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_Katoghike_Yerevan_07-10-22v3.jpg?width=1280",
+     "tekija": "Hayastan Mkrtchyan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_Katoghike_Yerevan_07-10-22v3.jpg",
+     "selite": "Vanha Katoghike on pieni tiilestä ja tuffista tehty kirkko keskustan kupeessa.",
+     "leveys": 2648,
+     "korkeus": 3920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1195993",
+   "nimi": "Karmir Blurin muinaiskaupunki",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 40.15389,
+   "lon": 44.45111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karmir Blur Hill.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karmir_Blur_Hill.JPG?width=1280",
+     "tekija": "Liveon001 ©Travis Witt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karmir_Blur_Hill.JPG",
+     "selite": "Karmir Blur eli Punainen kukkula kätkee urartulaisen Teišebainin linnakaupungin rauniot.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Karmir Blur Above.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karmir_Blur_Above.JPG?width=1280",
+     "tekija": "Liveon001 ©Travis Witt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karmir_Blur_Above.JPG",
+     "selite": "Kaivaukset ovat paljastaneet kukkulan rinteillä urartulaisia kellareita ja varastotiloja Jerevanin laidalla.",
+     "leveys": 1945,
+     "korkeus": 1461,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Mount Ararat and the Yerevan skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Ararat_and_the_Yerevan_skyline.jpg?width=1280",
+   "tekija": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline.jpg",
+   "selite": "Jerevanin yllä kohoaa lumihuippuinen Ararat, Armenian kansallinen vuori.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mount Ararat and the Yerevan skyline in spring.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg?width=1280",
+   "tekija": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring.jpg",
+   "selite": "Keväällä Ararat näkyy kirkkaana Jerevanin keskustan yli.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

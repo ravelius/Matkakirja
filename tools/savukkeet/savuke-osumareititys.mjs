@@ -18,7 +18,7 @@
  *
  * ── VARTIOT (kummallekin kaupungille, KAHDELLA ZOOMILLA) ──────────
  *
- *   1. PISTE ON KARTALLA ja auki (kaksi ratkaistua nostotehtävää).
+ *   1. PISTE ON KARTALLA ja auki (kynnys: yksi ratkaistu nostotehtävä, löydös 145).
  *   2. PISTE EROTTUU KAUPUNGIN MERKISTÄ: ruutuero ≥ VAHIN_ERO_PX.
  *   3. PISTEEN NAPAUTUS AVAA VIHJEEN eikä kaupungin tietoruutua.
  *   4. KAUPUNGIN NAPAUTUS AVAA YHÄ KAUPUNGIN TIETORUUDUN (vastavartio:
@@ -48,10 +48,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -72,7 +69,7 @@ const KAUPUNGIT = [
  */
 const VAHIN_ERO_PX = 14;
 /** Kynnys, jolla piste on auki (js/fokusvirta.js NOSTOTEHTAVIA_AARREPISTEESEEN). */
-const RATKAISTUJA = 2;
+const RATKAISTUJA = 1;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -132,7 +129,7 @@ function tallenne(cityId) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** Yksi selainkonteksti valmiiksi ladattuna kaupungin palloon. */
 async function avaaPeli(cityId) {

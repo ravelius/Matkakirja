@@ -1,0 +1,81 @@
+[
+  {
+    "id": "edinburgh",
+    "esittely": "Kartan alue on Edinburghin vanhakaupunki ja uusikaupunki. Edinburghin linna seisoo Castle Rockilla, sammuneen tulivuoren kaulalla, jonka ikä on noin 340–350 miljoonaa vuotta. Jäätikkö jätti kallion itäpuolelle pitkän loivan rinteen, jota pitkin kulkee Royal Mile, noin mailin pituinen katu linnalta Holyroodin palatsille.\n\nNor Loch -tekojärvi tehtiin 1460 kaupungin puolustukseksi, ja sen länsipää kuivattiin 1813–1820; paikalla on nyt Princes Street Gardens -puisto. Uuden kaupungin suunnittelukilpailu ratkaistiin 1766, ja rakentaminen alkoi 1767. St Gilesin katedraalin kruunutorni on 1400-luvulta. Scott-monumentti on 61 metriä korkea. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 693,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Castle_Rock,_Edinburgh",
+        "title": "Wikipedia: Castle Rock (Edinburgh)",
+        "tukee": "tulivuoren kaula, noin 350 milj. v; crag and tail"
+      },
+      {
+        "url": "https://edinburghgeolsoc.org/geological-site/castle-rock/",
+        "title": "Edinburgh Geological Society: Castle Rock (hakutulos)",
+        "tukee": "ikä 340 milj. v; jäätikkö ja crag and tail"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Royal_Mile",
+        "title": "Wikipedia: Royal Mile",
+        "tukee": "linnalta Holyroodin palatsille; noin mailin pituinen"
+      },
+      {
+        "url": "https://www.scottish-places.info/features/featurefirst999.html",
+        "title": "Gazetteer for Scotland: The Royal Mile (hakutulos)",
+        "tukee": "noin yksi Skotlannin maili; linnalta palatsille"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Nor_Loch",
+        "title": "Wikipedia: Nor Loch",
+        "tukee": "tehty 1460 puolustukseksi; länsipää kuivattu 1813-1820; Princes Street Gardens"
+      },
+      {
+        "url": "https://www.scotsman.com/arts-and-culture/lost-edinburgh-nor-loch-1546742",
+        "title": "The Scotsman: Lost Edinburgh: The Nor' Loch (hakutulos)",
+        "tukee": "1460 James III; länsipää 1813-1820"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/New_Town,_Edinburgh",
+        "title": "Wikipedia: New Town, Edinburgh",
+        "tukee": "kilpailu 1766 (James Craig), rakentaminen alkoi 1767"
+      },
+      {
+        "url": "https://www.edinburghguide.com/new-town/history",
+        "title": "Edinburgh Guide: New Town history (hakutulos)",
+        "tukee": "kilpailu 1766, rakentaminen 1767"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St_Giles%27_Cathedral",
+        "title": "Wikipedia: St Giles' Cathedral",
+        "tukee": "kruunutorni dendrokronologisesti 1460-1467"
+      },
+      {
+        "url": "https://victorianweb.org/art/architecture/churches/25.html",
+        "title": "Victorian Web: St Giles' Cathedral (hakutulos)",
+        "tukee": "kruunutorni 1400-luvulta"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Scott_Monument",
+        "title": "Wikipedia: Scott Monument",
+        "tukee": "61,11 m, 287 askelmaa"
+      },
+      {
+        "url": "https://www.edinburghguide.com/venue/scottmonument",
+        "title": "Edinburgh Guide: Scott Monument (hakutulos)",
+        "tukee": "200 ft 6 in; 287 askelmaa"
+      }
+    ],
+    "pudotetut": [
+      "Entinen teksti: \"Nor Loch laskettiin kuiviin 1700-luvun lopulla\": lähteet antavat kuivatukseksi länsipäässä 1813-1820, korvattu",
+      "Entinen teksti: \"vanhankaupungin ainoa pääkatu\" ja \"vain yhtä tietä\": ei tarkistettu, jätetty pois",
+      "Greyfriars Bobbyn vuodet (kuolema 1872, patsas 1872/1873): jätetty pois, ei toista lähdettä"
+    ],
+    "ristiriidat": [
+      "Castle Rockin ikä 340 vs. 350 milj. vuotta: käytetty vaihteluväli 340-350",
+      "Nor Lochin itäpään kuivatus 1759 / 1763: ei mainita",
+      "Kruunutornin ajoitus 1460-1467 (dendro) / 1495 / 1500: käytetty \"1400-luvulta\""
+    ],
+    "muutos_sk": "Säilytetty: tulivuoren kaula, jäätikkö ja loiva rinne, Royal Mile, Nor Loch, uusikaupunki 1766-1767. Korjattu: Nor Lochin kuivatuksen ajoitus (länsipää 1813-1820). Lisätty: St Gilesin kruunutorni, Scott-monumentti 61 m, Princes Street Gardens. Poistettu: \"vanhankaupungin ainoa pääkatu\" ja muut tarkistamattomat."
+  }
+]

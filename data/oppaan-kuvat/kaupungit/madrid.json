@@ -1,0 +1,640 @@
+{
+ "kaupunki": "madrid",
+ "kaupunkiQ": "Q2807",
+ "kohteet": [
+  {
+   "q": "Q171517",
+   "nimi": "Kuninkaanlinna",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 40.41795,
+   "lon": -3.71431,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Madrid Palacio Real 078.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madrid_Palacio_Real_078.jpg?width=1280",
+     "tekija": "GFreihalter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madrid_Palacio_Real_078.jpg",
+     "selite": "Madridin kuninkaanlinna on Espanjan kuninkaan virallinen residenssi, vaikka kuningasperhe ei asu siellä.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Real de Madrid Julio 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real_de_Madrid_Julio_2016.jpg?width=1280",
+     "tekija": "Tim Adams",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Madrid_Julio_2016.jpg",
+     "selite": "Valtava linna sijaitsee Manzanares-joen rinteellä aivan Almudenan katedraalin vieressä.",
+     "leveys": 4040,
+     "korkeus": 3125,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio Real, Madrid 8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real%2C_Madrid_8.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Gryffindor assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Real%2C_Madrid_8.jpg",
+     "selite": "Palatsin pääaukio Plaza de la Armería avautuu linnan eteläpuolella.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q160112",
+   "nimi": "Prado-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 40.41389,
+   "lon": -3.69222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo del Prado 2016 (25185969599).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_del_Prado_2016_(25185969599).jpg?width=1280",
+     "tekija": "Emilio J. Rodríguez Posada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_2016_(25185969599).jpg",
+     "selite": "Prado on yksi maailman tärkeimmistä taidemuseoista, ja sen edessä seisoo Velázquezin patsas.",
+     "leveys": 4045,
+     "korkeus": 3021,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museo del Prado (September 2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_del_Prado_(September_2025).jpg?width=1280",
+     "tekija": "Imaginepascal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_(September_2025).jpg",
+     "selite": "Klassistinen museorakennus sijaitsee Paseo del Pradon varrella taidekolmion kärjessä.",
+     "leveys": 7582,
+     "korkeus": 4629,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1123493",
+   "nimi": "Plaza Mayor",
+   "peruste": "pelin nosto",
+   "koko_m": 130,
+   "lat": 40.41546,
+   "lon": -3.70738,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza Mayor de Madrid - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Mayor_de_Madrid_-_01.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor_de_Madrid_-_01.jpg",
+     "selite": "Plaza Mayor on suljettu 1600-luvun aukio, jonka keskellä on Filip III:n ratsastajapatsas.",
+     "leveys": 3888,
+     "korkeus": 2916,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Plaza Mayor, Madrid 20180720.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Mayor%2C_Madrid_20180720.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor%2C_Madrid_20180720.jpg",
+     "selite": "Punaiset arkadirakennukset ympäröivät aukiota joka puolelta.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casa de la Panadería, Plaza Mayor, Madrid, Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_la_Panader%C3%ADa%2C_Plaza_Mayor%2C_Madrid%2C_Spain.jpg?width=1280",
+     "tekija": "Artem Vynohradov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Panader%C3%ADa%2C_Plaza_Mayor%2C_Madrid%2C_Spain.jpg",
+     "selite": "Iltavalaistuksessa Casa de la Panadería hehkuu aukion pohjoisreunalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1131807",
+   "nimi": "Retiron puisto",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 40.415,
+   "lon": -3.68389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Spain-11 - Retiro Park (2218753550).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Spain-11_-_Retiro_Park_(2218753550).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Spain-11_-_Retiro_Park_(2218753550).jpg",
+     "selite": "Retiron puiston suuri lampi ja Alfonso XII:n muistomerkki ovat madridilaisten suosittu soutupaikka.",
+     "leveys": 6845,
+     "korkeus": 4566,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Retiro-020116.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Retiro-020116.jpg?width=1280",
+     "tekija": "FDV",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Retiro-020116.jpg",
+     "selite": "Puiston keskellä soudetaan veneillä muistomerkin kupeessa.",
+     "leveys": 4000,
+     "korkeus": 1635,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio de Cristal - 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Cristal_-_02.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Cristal_-_02.jpg",
+     "selite": "Lasinen Kristallipalatsi seisoo lammen rannalla ja syksyllä sitä ympäröivät ruskaiset suosypressit.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q427163",
+   "nimi": "Puerta del Sol",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 40.41694,
+   "lon": -3.70361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2026-09-03 - Puerta del Sol in Madrid Spain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2026-09-03_-_Puerta_del_Sol_in_Madrid_Spain.jpg?width=1280",
+     "tekija": "Matt Joseph",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2026-09-03_-_Puerta_del_Sol_in_Madrid_Spain.jpg",
+     "selite": "Puerta del Sol on Madridin keskusaukio, jonka reunalla kellotornillinen Real Casa de Correos sijaitsee.",
+     "leveys": 14204,
+     "korkeus": 10652,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puerta del Sol (Madrid) 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_del_Sol_(Madrid)_03.jpg?width=1280",
+     "tekija": "tnarik from Spain",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_del_Sol_(Madrid)_03.jpg",
+     "selite": "Aukio on Espanjan teiden nollapiste ja vilkas liikenteen solmukohta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1324163",
+   "nimi": "Gran Vía",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 40.42,
+   "lon": -3.70361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gran Vía (Madrid) 42.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_V%C3%ADa_(Madrid)_42.jpg?width=1280",
+     "tekija": "Felipe Gabaldón from Spain",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_V%C3%ADa_(Madrid)_42.jpg",
+     "selite": "Gran Vía on Madridin pääkatu, jonka varrella on 1900-luvun alun upeita toimistopalatseja.",
+     "leveys": 3930,
+     "korkeus": 2616,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gran Vía - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_V%C3%ADa_-_01.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_V%C3%ADa_-_01.jpg",
+     "selite": "Ylhäältä katsottuna katu halkoo keskustaa kaarevana bulevardina.",
+     "leveys": 2542,
+     "korkeus": 3813,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1537446",
+   "nimi": "Cibeleen aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 40.41917,
+   "lon": -3.69306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fountain of Cybele at Plaza de Cibeles, Madrid, Spain (Ank Kumar, Infosys Limited ) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_of_Cybele_at_Plaza_de_Cibeles%2C_Madrid%2C_Spain_(Ank_Kumar%2C_Infosys_Limited_)_02.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountain_of_Cybele_at_Plaza_de_Cibeles%2C_Madrid%2C_Spain_(Ank_Kumar%2C_Infosys_Limited_)_02.jpg",
+     "selite": "Cibeleen aukio on Madridin tunnetuimpia: keskellä on hedelmällisyyden jumalatar Kybelen suihkulähde.",
+     "leveys": 4575,
+     "korkeus": 3050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fuente de Cibeles, Plaza de Cibeles, Madrid, España, 2017-05-18, DD 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuente_de_Cibeles%2C_Plaza_de_Cibeles%2C_Madrid%2C_Espa%C3%B1a%2C_2017-05-18%2C_DD_10.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuente_de_Cibeles%2C_Plaza_de_Cibeles%2C_Madrid%2C_Espa%C3%B1a%2C_2017-05-18%2C_DD_10.jpg",
+     "selite": "Jumalatar ajaa leijonien vetämillä vaunuilla entisen postipalatsin edessä.",
+     "leveys": 8123,
+     "korkeus": 4369,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q849711",
+   "nimi": "Almudenan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 40.41556,
+   "lon": -3.71444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral de la Almudena y Palacio Real - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_la_Almudena_y_Palacio_Real_-_01.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Almudena_y_Palacio_Real_-_01.jpg",
+     "selite": "Almudenan katedraali kohoaa kuninkaanlinnan vieressä, ja sen valmistuminen kesti yli sata vuotta.",
+     "leveys": 3200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de la Almudena, Madrid, España, 2014-12-27, DD 23.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_la_Almudena%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_23.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Almudena%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_23.JPG",
+     "selite": "Katedraali ja linna hallitsevat Madridin länsilaidan siluettia.",
+     "leveys": 5554,
+     "korkeus": 2777,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Catedral de la Almudena - 130826 211731.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_la_Almudena_-_130826_211731.jpg?width=1280",
+     "tekija": "Barcex",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Almudena_-_130826_211731.jpg",
+     "selite": "Iltavalaistuksessa julkisivun tornit loistavat aukion yllä.",
+     "leveys": 3555,
+     "korkeus": 5332,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q164027",
+   "nimi": "Santiago Bernabéun stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 40.45306,
+   "lon": -3.68835,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Real Madrid's Santiago Bernabéu Stadium, Madrid, Spain (Ank Kumar) 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Madrid's_Santiago_Bernab%C3%A9u_Stadium%2C_Madrid%2C_Spain_(Ank_Kumar)_07.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Madrid's_Santiago_Bernab%C3%A9u_Stadium%2C_Madrid%2C_Spain_(Ank_Kumar)_07.jpg",
+     "selite": "Bernabéu on Real Madridin kotistadion Madridin Chamartínin kaupunginosassa.",
+     "leveys": 3443,
+     "korkeus": 2295,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Santiagobernabeupanoramav45.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santiagobernabeupanoramav45.JPG?width=1280",
+     "tekija": "لا روسا",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santiagobernabeupanoramav45.JPG",
+     "selite": "Stadion on yksi maailman tunnetuimmista jalkapallokentistä.",
+     "leveys": 4400,
+     "korkeus": 2920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140634",
+   "nimi": "Alcalán portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 40.42002,
+   "lon": -3.68873,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puerta de Alcalá, Madrid, España, 2017-05-18, DD 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_de_Alcal%C3%A1%2C_Madrid%2C_Espa%C3%B1a%2C_2017-05-18%2C_DD_14.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_de_Alcal%C3%A1%2C_Madrid%2C_Espa%C3%B1a%2C_2017-05-18%2C_DD_14.jpg",
+     "selite": "Alcalán portti on 1700-luvun uusklassinen riemukaari Independencian aukion laidalla.",
+     "leveys": 5923,
+     "korkeus": 3851,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Madrid - Puerta Alcala 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madrid_-_Puerta_Alcala_01.jpg?width=1280",
+     "tekija": "Selbymay",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madrid_-_Puerta_Alcala_01.jpg",
+     "selite": "Viisi aukkoa kaarimaisessa portissa ovat aikoinaan päästäneet kuninkaalliset kulkueet kaupunkiin.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Puerta de Alcalá - 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_de_Alcal%C3%A1_-_05.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_de_Alcal%C3%A1_-_05.jpg",
+     "selite": "Joulun aikaan portin kaaret ja ympäröivä puistokatu valaistaan.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140249",
+   "nimi": "Debodin temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 40.42405,
+   "lon": -3.71778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Templo de Debod, Madrid, España, 2014-12-27, DD 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_02.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_02.JPG",
+     "selite": "Debodin temppeli on muinainen egyptiläinen temppeli, joka siirrettiin Madridiin 1960-luvulla.",
+     "leveys": 5188,
+     "korkeus": 3459,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Templo de Debod, Madrid, España, 2014-12-27, DD 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_03.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2014-12-27%2C_DD_03.JPG",
+     "selite": "Temppelin peilautuva vesiallas on suosittu auringonlaskun katselupaikka.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Templo de Debod, Madrid, España, 2023-01-03, DD 89-91 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2023-01-03%2C_DD_89-91_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_de_Debod%2C_Madrid%2C_Espa%C3%B1a%2C_2023-01-03%2C_DD_89-91_HDR.jpg",
+     "selite": "Hämärässä valaistut portit loistavat puiston keskellä.",
+     "leveys": 7784,
+     "korkeus": 5189,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q460889",
+   "nimi": "Reina Sofían museo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 40.40857,
+   "lon": -3.694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MNCARS 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MNCARS_05.jpg?width=1280",
+     "tekija": "Luis García (Zaqarbal)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MNCARS_05.jpg",
+     "selite": "Reina Sofía on Espanjan kansallinen nykytaidemuseo, jonka julkisivua koristavat lasiset hissitornit.",
+     "leveys": 4320,
+     "korkeus": 3160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q756621",
+   "nimi": "Las Ventasin härkätaisteluareena",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 40.43208,
+   "lon": -3.66328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de Toros de Las Ventas (Madrid) 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Toros_de_Las_Ventas_(Madrid)_04.jpg?width=1280",
+     "tekija": "Luis García (Zaqarbal)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Toros_de_Las_Ventas_(Madrid)_04.jpg",
+     "selite": "Las Ventas on Espanjan merkittävin härkätaisteluareena, rakennettu mauriarkkitehtuurin tyyliin.",
+     "leveys": 3744,
+     "korkeus": 2194,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Plaza de Toros de Las Ventas - Madrid 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Toros_de_Las_Ventas_-_Madrid_01.jpg?width=1280",
+     "tekija": "Javier Perez Montes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Toros_de_Las_Ventas_-_Madrid_01.jpg",
+     "selite": "Punatiilinen sisäänkäynti koristeellisine hevosenkenkäkaarineen on areenan tunnusmerkki.",
+     "leveys": 3656,
+     "korkeus": 5484,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1326261",
+   "nimi": "Plaza de España",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 40.42339,
+   "lon": -3.71223,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de España de Madrid - 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Espa%C3%B1a_de_Madrid_-_02.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Espa%C3%B1a_de_Madrid_-_02.jpg",
+     "selite": "Plaza de España on suuri puistoaukio, jonka keskellä on Cervantesin muistomerkki.",
+     "leveys": 3752,
+     "korkeus": 2501,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Madrid - Plaza de España, Edificio España y Torre de Madrid.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madrid_-_Plaza_de_Espa%C3%B1a%2C_Edificio_Espa%C3%B1a_y_Torre_de_Madrid.jpg?width=1280",
+     "tekija": "Zarateman",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madrid_-_Plaza_de_Espa%C3%B1a%2C_Edificio_Espa%C3%B1a_y_Torre_de_Madrid.jpg",
+     "selite": "Aukion laidalla kohoavat Edificio España ja Torre de Madrid -pilvenpiirtäjät.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q503109",
+   "nimi": "Cuatro Torres Business Area",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 40.47778,
+   "lon": -3.68778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cuatro Torres Business Area desde Paracuellos, Madrid, España, 2016 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuatro_Torres_Business_Area_desde_Paracuellos%2C_Madrid%2C_Espa%C3%B1a%2C_2016_06.jpg?width=1280",
+     "tekija": "Benjamín Núñez González",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cuatro_Torres_Business_Area_desde_Paracuellos%2C_Madrid%2C_Espa%C3%B1a%2C_2016_06.jpg",
+     "selite": "Neljä pilvenpiirtäjää Madridin pohjoisosassa ovat Espanjan korkeimpia rakennuksia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cuatro Torres Business Area desde Paracuellos, Madrid, España, 2016 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuatro_Torres_Business_Area_desde_Paracuellos%2C_Madrid%2C_Espa%C3%B1a%2C_2016_07.jpg?width=1280",
+     "tekija": "Benjamín Núñez González",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cuatro_Torres_Business_Area_desde_Paracuellos%2C_Madrid%2C_Espa%C3%B1a%2C_2016_07.jpg",
+     "selite": "Auringonlaskussa tornit piirtyvät terävinä siluetteina horisonttia vasten.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Madrid cathedral 2020 - view from the dome.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madrid_cathedral_2020_-_view_from_the_dome.jpg?width=1280",
+   "tekija": "Fernando Pascullo",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madrid_cathedral_2020_-_view_from_the_dome.jpg",
+   "selite": "Madridin keskustan kattojen yllä näkyy Almudenan katedraalin tornit.",
+   "leveys": 15000,
+   "korkeus": 5000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Madrid - Madrid skyline - 140314 195825.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madrid_-_Madrid_skyline_-_140314_195825.jpg?width=1280",
+   "tekija": "Barcex",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madrid_-_Madrid_skyline_-_140314_195825.jpg",
+   "selite": "Madrid on Espanjan pääkaupunki ja kuvassa sen valot syttyvät illansuussa.",
+   "leveys": 5438,
+   "korkeus": 2719,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

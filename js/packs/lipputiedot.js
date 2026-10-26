@@ -222,7 +222,7 @@ export const LIPPUTIEDOT = {
         + 'värit sitomaan Norjan molempiin naapureihinsa ja samalla '
         + 'vapaiden kansojen trikoloreihin.',
       'Ruotsin-unionin aikana lipussa kannettiin unionimerkkiä. '
-        + '"Puhtaan lipun" vaatimuksesta tuli itsenäisyysliikkeen '
+        + '”Puhtaan lipun” vaatimuksesta tuli itsenäisyysliikkeen '
         + 'tunnus, ja merkki poistettiin kauppalipusta 1899 — kuusi '
         + 'vuotta ennen unionin purkautumista 1905.',
     ],
@@ -265,7 +265,7 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/dnk-vaakuna.png',
         selite: 'Kolme sinistä leijonaa ja punaisia sydämiä '
           + 'kultakentällä. Sinetteihin 1190-luvulla piirretty tunnus '
-          + 'on Euroopan vanhimpia; "sydämet" ovat alkuaan '
+          + 'on Euroopan vanhimpia; ”sydämet” ovat alkuaan '
           + 'järvenlehtiä.',
       },
     ],
@@ -334,7 +334,7 @@ export const LIPPUTIEDOT = {
     symboliikka: [
       {
         osa: 'Karmiininpunainen',
-        selite: '"Latvian punainen" — tummempi kuin tavallinen '
+        selite: '”Latvian punainen” — tummempi kuin tavallinen '
           + 'lipunpunainen.',
       },
       { osa: 'Valkoinen juova', selite: 'legendan valkoinen liina.' },
@@ -474,7 +474,7 @@ export const LIPPUTIEDOT = {
       },
     ],
     kappaleet: [
-      'Oranssi-valko-sininen "prinssinlippu" oli kapinan tunnus '
+      'Oranssi-valko-sininen ”prinssinlippu” oli kapinan tunnus '
         + 'Espanjan valtaa vastaan 1500-luvulla. Oranssi vaihtui '
         + 'punaiseen 1600-luvulla — väri haalistui merellä ja '
         + 'punainen erottui kauemmas.',
@@ -488,7 +488,7 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/nld-vaakuna.png',
         selite: 'Kruunattu kultaleijona kantaa miekkaa ja seitsemän '
           + 'nuolen kimppua — muisto tasavallan seitsemästä '
-          + 'maakunnasta. Nauhassa Je maintiendrai, "minä pysyn".',
+          + 'maakunnasta. Nauhassa Je maintiendrai, ”minä pysyn”.',
       },
     ],
     lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Sodacan / '
@@ -499,7 +499,7 @@ export const LIPPUTIEDOT = {
     symboliikka: [
       {
         osa: 'Punainen ja keltainen',
-        selite: '"rojigualda" — valittu 1785 näkyvyyden takia '
+        selite: '”rojigualda” — valittu 1785 näkyvyyden takia '
           + 'merellä.',
       },
       {
@@ -522,7 +522,7 @@ export const LIPPUTIEDOT = {
         selite: 'Kilvessä Kastilian linna, Leónin leijona, Aragonian '
           + 'raidat, Navarran kahleet ja Granadan granaattiomena; '
           + 'keskellä Bourbonien liljat. Herkuleen pylväiden nauhassa '
-          + 'Plus Ultra — "yhä edemmäs".',
+          + 'Plus Ultra — ”yhä edemmäs”.',
       },
     ],
     lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Heralder / '
@@ -806,7 +806,7 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/bgr-vaakuna.png',
         selite: 'Kolme kruunattua kultaleijonaa: yksi kilvessä ja '
           + 'kaksi kilvenkannattajina. Nauhassa tunnuslause '
-          + '"Yhtenäisyys tekee voiman".',
+          + '”Yhtenäisyys tekee voiman”.',
       },
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
@@ -818,7 +818,7 @@ export const LIPPUTIEDOT = {
       { osa: 'Risti', selite: 'ortodoksinen kristinusko.' },
       {
         osa: 'Yhdeksän raitaa',
-        selite: 'tarun mukaan vapaushuudon "Vapaus tai kuolema" '
+        selite: 'tarun mukaan vapaushuudon ”Vapaus tai kuolema” '
           + 'yhdeksän tavua.',
       },
     ],
@@ -851,7 +851,7 @@ export const LIPPUTIEDOT = {
       'Kolmiväri juontaa 1830-luvun autonomiseen ruhtinaskuntaan; '
         + 'nykyinen vaakunallinen asu vahvistettiin 2000-luvulla.',
       'Vaakunan neljä tulusrautaa luetaan kyrillisinä S-kirjaimina: '
-        + '"Samo sloga Srbina spasava" — vain yksimielisyys pelastaa '
+        + '”Samo sloga Srbina spasava” — vain yksimielisyys pelastaa '
         + 'serbin.',
     ],
     tunnukset: [
@@ -1057,7 +1057,7 @@ export const LIPPUTIEDOT = {
         nimi: 'Azerbaidžanin tunnus',
         polku: 'assets/liput/tunnukset/aze-vaakuna.png',
         selite: 'Kahdeksansakarainen tähti, jonka sydämessä palaa '
-          + 'liekki — "tulen maan" ikivanha tunnus. Alla '
+          + 'liekki — ”tulen maan” ikivanha tunnus. Alla '
           + 'tammenlehvät ja tähkät.',
       },
     ],
@@ -1069,7 +1069,7 @@ export const LIPPUTIEDOT = {
       {
         osa: 'Punainen ympyrä',
         selite: 'nouseva aurinko — lipun nimi on hinomaru, '
-          + '"auringon kiekko".',
+          + '”auringon kiekko”.',
       },
       { osa: 'Valkoinen', selite: 'puhtaus ja vilpittömyys.' },
     ],
@@ -1171,8 +1171,8 @@ export const LIPPUTIEDOT = {
         nimi: 'Ashokan leijonat',
         polku: 'assets/liput/tunnukset/ind-vaakuna.png',
         selite: 'Sarnathin pylvään neljä leijonaa selät vastakkain; '
-          + 'alla tunnuslause Satyameva Jayate — "totuus yksin '
-          + 'voittaa".',
+          + 'alla tunnuslause Satyameva Jayate — ”totuus yksin '
+          + 'voittaa”.',
       },
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
@@ -1289,7 +1289,7 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/pak-vaakuna.png',
         selite: 'Kilvessä maan neljä satoa: puuvilla, vehnä, tee ja '
           + 'juutti; ympärillä jasmiiniseppele ja nauhassa '
-          + 'tunnuslause "Usko, yhtenäisyys, kuri".',
+          + 'tunnuslause ”Usko, yhtenäisyys, kuri”.',
       },
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
@@ -1310,7 +1310,7 @@ export const LIPPUTIEDOT = {
       },
       {
         osa: 'Reunuskirjoitus',
-        selite: '"Allahu akbar" toistuu kufi-kirjoituksella 22 kertaa '
+        selite: '”Allahu akbar” toistuu kufi-kirjoituksella 22 kertaa '
           + 'nauhoina vihreän ja punaisen raidan reunassa.',
       },
     ],
@@ -1343,7 +1343,7 @@ export const LIPPUTIEDOT = {
       { osa: 'Musta', selite: 'islamin varhaiset liput ja menneet sorron ajat.' },
       {
         osa: 'Vihreä kirjoitus',
-        selite: '"Allahu akbar" kufi-kirjoituksella valkoisella '
+        selite: '”Allahu akbar” kufi-kirjoituksella valkoisella '
           + 'raidalla.',
       },
     ],
@@ -1362,7 +1362,7 @@ export const LIPPUTIEDOT = {
         nimi: 'Irakin vaakuna',
         polku: 'assets/liput/tunnukset/irq-vaakuna.png',
         selite: 'Saladinin kotka kantaa rinnassaan lipun värejä ja '
-          + 'seisoo nauhalla, jossa lukee "Irakin tasavalta". Kotka '
+          + 'seisoo nauhalla, jossa lukee ”Irakin tasavalta”. Kotka '
           + 'viittaa Saladiniin, joka syntyi Tikritissä.',
       },
     ],
@@ -1374,8 +1374,8 @@ export const LIPPUTIEDOT = {
       { osa: 'Vihreä', selite: 'islam — profeetan viitan väri.' },
       {
         osa: 'Kirjoitus',
-        selite: 'šahada eli uskontunnustus: "Ei ole muuta jumalaa kuin '
-          + 'Jumala, ja Muhammad on hänen lähettiläänsä."',
+        selite: 'šahada eli uskontunnustus: ”Ei ole muuta jumalaa kuin '
+          + 'Jumala, ja Muhammad on hänen lähettiläänsä.”',
       },
       { osa: 'Miekka', selite: 'oikeudenmukaisuus ja kuningaskunnan perustajan valloitukset.' },
     ],
@@ -1423,8 +1423,8 @@ export const LIPPUTIEDOT = {
         nimi: 'Egyptin vaakuna',
         polku: 'assets/liput/tunnukset/egy-vaakuna.png',
         selite: 'Saladinin kultainen kotka katsoo vasemmalle ja kantaa '
-          + 'rinnassaan lipun värejä; nauhassa lukee "Egyptin '
-          + 'arabitasavalta".',
+          + 'rinnassaan lipun värejä; nauhassa lukee ”Egyptin '
+          + 'arabitasavalta”.',
       },
     ],
     lahde: 'Liput ja vaakunat: Wikimedia Commons (PD)',
@@ -1620,7 +1620,7 @@ export const LIPPUTIEDOT = {
         + 'säilytetään yhä kansallisaarteena.',
       'Lippu on lähes sama kuin Monacon — vain mittasuhde eroaa — '
         + 'ja Puolan lippu ylösalaisin. Nimeltään se on Sang Saka '
-        + 'Merah-Putih, "ylevä puna-valkoinen".',
+        + 'Merah-Putih, ”ylevä puna-valkoinen”.',
     ],
     tunnukset: [
       {
@@ -1654,7 +1654,7 @@ export const LIPPUTIEDOT = {
         + 'arkkitehti Mohamed Hamzah. Raidat kasvoivat yhdestätoista '
         + 'neljääntoista 1963, kun Malesian liittovaltio '
         + 'perustettiin.',
-      'Lippu tunnetaan nimellä Jalur Gemilang, "loiston raidat". '
+      'Lippu tunnetaan nimellä Jalur Gemilang, ”loiston raidat”. '
         + 'Raitakuvio tuo monelle mieleen Yhdysvaltain lipun, mutta '
         + 'sinisessä kentässä on puolikuu ja monisakarainen tähti — '
         + 'islamin ja liittovaltion merkit.',
@@ -1695,7 +1695,7 @@ export const LIPPUTIEDOT = {
         nimi: 'Singaporen vaakuna',
         polku: 'assets/liput/tunnukset/sgp-vaakuna.png',
         selite: 'Leijona ja tiikeri kannattelevat lipun kuvioista '
-          + 'tehtyä kilpeä: leijona on Singapore eli "leijonakaupunki", '
+          + 'tehtyä kilpeä: leijona on Singapore eli ”leijonakaupunki”, '
           + 'tiikeri muistuttaa siteestä Malaijan niemimaahan. Nauhassa '
           + 'lukee Majulah Singapura — eteenpäin, Singapore.',
       },
@@ -1891,8 +1891,8 @@ export const LIPPUTIEDOT = {
     ],
     kappaleet: [
       'Mannermaakongressi päätti lipusta kesäkuussa 1777: '
-        + 'kolmetoista raitaa ja kolmetoista tähteä "uutena '
-        + 'tähtikuviona". Päätös ei kertonut, miten tähdet '
+        + 'kolmetoista raitaa ja kolmetoista tähteä ”uutena '
+        + 'tähtikuviona”. Päätös ei kertonut, miten tähdet '
         + 'sommitellaan, joten jokainen ompelija asetteli ne '
         + 'omalla tavallaan — riveihin, kaareen tai ympyrään. '
         + 'Tarina siitä, että Betsy Ross olisi ommellut '
@@ -1926,7 +1926,7 @@ export const LIPPUTIEDOT = {
           + 'kynnessä on kolmetoista nuolta, toisessa oliivinoksa — '
           + 'sota ja rauha — ja kotkan katse on käännetty '
           + 'oliivinoksaan päin. Nokassa on nauha, jossa lukee E '
-          + 'pluribus unum, "monesta yksi". Luku kolmetoista '
+          + 'pluribus unum, ”monesta yksi”. Luku kolmetoista '
           + 'toistuu sinetissä yhä uudelleen.',
       },
     ],
@@ -1950,8 +1950,8 @@ export const LIPPUTIEDOT = {
       {
         osa: 'Keskisarake',
         selite: 'valkoinen kenttä on puolet lipun leveydestä. '
-          + 'Heraldiikassa muoto sai tästä lipusta nimen "Canadian '
-          + 'pale".',
+          + 'Heraldiikassa muoto sai tästä lipusta nimen ”Canadian '
+          + 'pale”.',
       },
     ],
     kappaleet: [
@@ -1963,7 +1963,7 @@ export const LIPPUTIEDOT = {
         + 'kokenut Suezin kriisissä 1956, että Egypti vastusti '
         + 'kanadalaisia rauhanturvaajia, koska näiden lipussa oli '
         + 'sotaa käyvän maan lippu.',
-      'Vuoden 1964 "suuri lippukiista" kesti kuusi viikkoa ja 308 '
+      'Vuoden 1964 ”suuri lippukiista” kesti kuusi viikkoa ja 308 '
         + 'puheenvuoroa. Voittajaksi tuli historioitsija George '
         + 'Stanleyn ehdotus, joka pohjautui Kingstonin '
         + 'sotilasakatemian lippuun; komitea äänesti sen puolesta '
@@ -2064,7 +2064,7 @@ export const LIPPUTIEDOT = {
       },
     ],
     kappaleet: [
-      'Erfalasorput, "meidän lippumme", on ainoa pohjoismainen '
+      'Erfalasorput, ”meidän lippumme”, on ainoa pohjoismainen '
         + 'lippu ilman ristiä. Sen suunnitteli grönlantilainen '
         + 'poliitikko ja opettaja Thue Christiansen, ja lippu '
         + 'hyväksyttiin 21. kesäkuuta 1985 — täpärästi, äänin '
@@ -2308,7 +2308,7 @@ export const LIPPUTIEDOT = {
           + 'Amerikan vanhin yhä käytössä oleva vaakuna. Keskellä '
           + 'on Jumalan Karitsa kirjan päällä, reunoilla Kastilian '
           + 'linnat ja Leónin leijonat. Nauhassa lukee Joannes est '
-          + 'nomen ejus — "Johannes on hänen nimensä", muisto '
+          + 'nomen ejus — ”Johannes on hänen nimensä”, muisto '
           + 'saaren vanhasta nimestä San Juan Bautista.',
       },
     ],
@@ -2351,8 +2351,8 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/bmu-vaakuna.png',
         selite: 'Punainen leijona istuu vihreällä kummulla ja '
           + 'pitelee kilpeä, jossa Sea Venture murtuu riuttaan. '
-          + 'Nauhassa lukee Quo Fata Ferunt — "minne kohtalot '
-          + 'kantavat".',
+          + 'Nauhassa lukee Quo Fata Ferunt — ”minne kohtalot '
+          + 'kantavat”.',
       },
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
@@ -2381,8 +2381,8 @@ export const LIPPUTIEDOT = {
       },
       {
         osa: 'Valkoinen nauha',
-        selite: 'tunnuslause ORDEM E PROGRESSO — "järjestys ja '
-          + 'edistys".',
+        selite: 'tunnuslause ORDEM E PROGRESSO — ”järjestys ja '
+          + 'edistys”.',
       },
     ],
     kappaleet: [
@@ -2397,8 +2397,8 @@ export const LIPPUTIEDOT = {
         + 'jatkumolta. Niinpä vihreä kenttä ja keltainen vinoneliö '
         + 'jäivät ja keisarillisen vaakunan tilalle tuli '
         + 'tähtitaivas. Tunnuslause on lyhennelmä Auguste Comten '
-        + 'positivismin iskulauseesta "rakkaus periaatteena, '
-        + 'järjestys perustana, edistys päämääränä".',
+        + 'positivismin iskulauseesta ”rakkaus periaatteena, '
+        + 'järjestys perustana, edistys päämääränä”.',
       'Tähtiä oli aluksi 21; niitä on lisätty sitä mukaa kuin '
         + 'osavaltioita on perustettu, ja vuodesta 1992 niitä on '
         + 'ollut 27. Tuttu selitys, jonka mukaan vihreä on '
@@ -2482,8 +2482,8 @@ export const LIPPUTIEDOT = {
           + 'punainen friikkalakki: kädet ovat yhtenäisyys, '
           + 'keihäs valta ja lakki vapaus. Yllä on toukokuun '
           + 'aurinko ja ympärillä laakeriseppele. Tunnuslause on '
-          + 'en unión y libertad, "yhtenäisyydessä ja '
-          + 'vapaudessa".',
+          + 'en unión y libertad, ”yhtenäisyydessä ja '
+          + 'vapaudessa”.',
       },
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
@@ -2506,8 +2506,8 @@ export const LIPPUTIEDOT = {
     ],
     kappaleet: [
       'Nykyinen lippu vahvistettiin 18. lokakuuta 1817, ja sitä '
-        + 'kutsutaan nimellä La Estrella Solitaria, "yksinäinen '
-        + 'tähti". Sitä ennen käytössä oli Patria Vieja -lippu '
+        + 'kutsutaan nimellä La Estrella Solitaria, ”yksinäinen '
+        + 'tähti”. Sitä ennen käytössä oli Patria Vieja -lippu '
         + 'vuodelta 1812: sinivalkokeltainen kolmiraita, jonka '
         + 'perimätiedon mukaan ompeli Javiera Carrera. Tähden toi '
         + 'lippuun Bernardo O\'Higgins.',
@@ -2534,7 +2534,7 @@ export const LIPPUTIEDOT = {
           + 'valkoinen tähti. Kannattajina ovat Andien kondori ja '
           + 'huemul, vain Chilessä elävä hirvi; molemmilla on '
           + 'kultainen laivastokruunu. Nauhassa lukee Por la '
-          + 'Razón o la Fuerza — "järjellä tai voimalla".',
+          + 'Razón o la Fuerza — ”järjellä tai voimalla”.',
       },
     ],
     lahde: 'Liput ja vaakuna: Wikimedia Commons (PD)',
@@ -2857,7 +2857,7 @@ export const LIPPUTIEDOT = {
         osa: 'Takasivun tunnus',
         selite: 'valtiovarain sinetti: keltainen leijona, sen '
           + 'takana tanko ja punainen friikkalakki, ja kaaressa '
-          + 'teksti PAZ Y JUSTICIA — "rauha ja oikeus".',
+          + 'teksti PAZ Y JUSTICIA — ”rauha ja oikeus”.',
       },
     ],
     kappaleet: [
@@ -2981,7 +2981,7 @@ export const LIPPUTIEDOT = {
       {
         osa: 'Tunnuslause',
         selite: 'Desire the Right — sanaleikki laivan nimestä: '
-          + '"tavoittele oikeaa".',
+          + '”tavoittele oikeaa”.',
       },
     ],
     kappaleet: [
@@ -3078,8 +3078,8 @@ export const LIPPUTIEDOT = {
           + 'takana vuorijono ja ylinnä sinisellä taivaalla säteilevä '
           + 'aurinko; vuoret on totuttu lukemaan Atlasvuoriksi. '
           + 'Kilpeä kannattavat kaksi leijonaa, ylinnä on '
-          + 'kuninkaallinen kruunu ja nauhassa Koraanin jae: "Jos te '
-          + 'autatte Jumalaa, Hän auttaa teitä." Vaakuna otettiin '
+          + 'kuninkaallinen kruunu ja nauhassa Koraanin jae: ”Jos te '
+          + 'autatte Jumalaa, Hän auttaa teitä.” Vaakuna otettiin '
           + 'käyttöön 14. elokuuta 1957.',
       },
     ],
@@ -3177,7 +3177,7 @@ export const LIPPUTIEDOT = {
           + 'vapauden merkkinä. Alaosa on jaettu kahtia: vasemmalla '
           + 'musta vaaka on oikeus, oikealla musta leijona käyrine '
           + 'miekkoineen järjestys. Nauhassa lukee arabiaksi maan '
-          + 'tunnuslause "vapaus, järjestys, oikeus", ja ylinnä on '
+          + 'tunnuslause ”vapaus, järjestys, oikeus”, ja ylinnä on '
           + 'valkoinen kiekko lipun puolikuineen ja tähtineen. '
           + 'Nykyinen järjestys palautettiin lailla 2. syyskuuta '
           + '1989.',
@@ -3303,8 +3303,8 @@ export const LIPPUTIEDOT = {
           + 'sitä kansantarujen korppikotkaksi, toiset lukevat sen '
           + 'rauhan kyyhkyksi. Moskeijan kummallakin puolella on '
           + 'jousi ja nuoli, alla nouseva aurinko. Kehällä lukee '
-          + 'maan nimi ja tunnuslause "yksi kansa, yksi päämäärä, '
-          + 'yksi usko" — sama kuin Senegalilla.',
+          + 'maan nimi ja tunnuslause ”yksi kansa, yksi päämäärä, '
+          + 'yksi usko” — sama kuin Senegalilla.',
       },
     ],
     lahde: 'Liput ja sinetti: Wikimedia Commons (PD)',
@@ -3355,7 +3355,7 @@ export const LIPPUTIEDOT = {
           + 'kultainen leijona, kultaisella kentällä baobab ja sen '
           + 'alla vihreä aaltoviiva eli Senegal-joki. Ylinnä on lipun '
           + 'vihreä tähti, ympärillä palmunlehvät ja nauha, jossa '
-          + 'lukee "Un peuple, un but, une foi" — yksi kansa, yksi '
+          + 'lukee ”Un peuple, un but, une foi” — yksi kansa, yksi '
           + 'päämäärä, yksi usko. Alla riippuu Leijonan kansallisen '
           + 'ritarikunnan tähti. Vaakunan piirsi pariisilainen '
           + 'heraldikko Suzanne Gauthier 1965.',
@@ -3449,8 +3449,8 @@ export const LIPPUTIEDOT = {
           + 'on laiva, joka toi tulijat Yhdysvalloista. Aura ja '
           + 'lapio ovat työn arvo, nouseva aurinko kansakunnan '
           + 'synty, palmu vauraus ja valkoinen kyyhky kirjekäärö '
-          + 'kynsissään rauhan sanoma. Ylänauhassa lukee "The Love '
-          + 'of Liberty Brought Us Here" — rakkaus vapauteen toi '
+          + 'kynsissään rauhan sanoma. Ylänauhassa lukee ”The Love '
+          + 'of Liberty Brought Us Here” — rakkaus vapauteen toi '
           + 'meidät tänne. Vuonna 1974 asetettu komissio esitti '
           + 'tunnuslauseen vaihtamista, koska se jättää maan '
           + 'alkuperäisväestön ulkopuolelle; muutosta ei tehty.',
@@ -3558,9 +3558,9 @@ export const LIPPUTIEDOT = {
           + 'kannattavat kaksi valkoista hevosta arvokkuutta ja '
           + 'ylinnä kotka voimaa. Jalustan punaiset kukat ovat '
           + 'Costus spectabilis, maan kansalliskukka. Nauhassa lukee '
-          + 'vuoden 1978 tunnuslause "Unity and Faith, Peace and '
-          + 'Progress", joka korvasi aiemman "Peace, Unity, '
-          + 'Freedom".',
+          + 'vuoden 1978 tunnuslause ”Unity and Faith, Peace and '
+          + 'Progress”, joka korvasi aiemman ”Peace, Unity, '
+          + 'Freedom”.',
       },
     ],
     lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Lumia1234 / '
@@ -3926,8 +3926,8 @@ export const LIPPUTIEDOT = {
           + 'nuija merkkinä rauhasta, ylinnä kuninkaanprotea, '
           + 'sihteerihaukka ja nouseva aurinko, sivuilla '
           + 'norsunsyöksyhampaat ja vehnäntähkät. Nauhassa on '
-          + 'sukupuuttoon kuolleella ǀxam-kielellä lause "ǃke e꞉ '
-          + 'ǀxarra ǁke" eli "erilaiset ihmiset yhdistyvät". '
+          + 'sukupuuttoon kuolleella ǀxam-kielellä lause ”ǃke e꞉ '
+          + 'ǀxarra ǁke” eli ”erilaiset ihmiset yhdistyvät”. '
           + 'Vaakunan piirsi Iaan Bekker ja se otettiin käyttöön '
           + 'vapaudenpäivänä 27. huhtikuuta 2000; sitä ennen '
           + 'tunnuslause oli latinaksi Ex Unitate Vires.',
@@ -3974,8 +3974,8 @@ export const LIPPUTIEDOT = {
         + 'valkoisen vähemmistön hallitus otti käyttöön '
         + 'vihreä-valkoinen-vihreän lipun vaakunoineen. Vuonna 1979 '
         + 'maa oli hetken Zimbabwe Rhodesia ja sai neljännen lipun — '
-        + 'mustanationalistit kutsuivat sitä "lipuksi, jolla on kaksi '
-        + 'nimeä".',
+        + 'mustanationalistit kutsuivat sitä ”lipuksi, jolla on kaksi '
+        + 'nimeä”.',
       'Isoisän matkavuonna 1873 alueella ei ollut lippua: sitä '
         + 'hallitsi ndebelejen kuningas Lobengula, ja Cecil Rhodesin '
         + 'yhtiö otti maan haltuunsa vasta 1890. Nykylipusta on '
@@ -4039,8 +4039,8 @@ export const LIPPUTIEDOT = {
     ],
     kappaleet: [
       'Mosambikin lippu on maailman ainoa valtiolippu, jossa on '
-        + 'nykyaikainen tuliase. Perustuslaki puhuu vain "kuokasta '
-        + 'ja aseesta", mutta piirroksessa se on rynnäkkökivääri '
+        + 'nykyaikainen tuliase. Perustuslaki puhuu vain ”kuokasta '
+        + 'ja aseesta”, mutta piirroksessa se on rynnäkkökivääri '
         + 'pistimineen. Nykyinen asu vahvistettiin 1. toukokuuta '
         + '1983.',
       'Itsenäisyys tuli 25. kesäkuuta 1975 ja ensimmäinen lippu oli '
@@ -4111,9 +4111,9 @@ export const LIPPUTIEDOT = {
         + 'itsenäistymistä Ranskasta 26. kesäkuuta 1960.',
       'Väreille ei alun perin annettu merkityksiä. Vasta '
         + 'käyttöönottopäivänä perustuslakia säätävän kokouksen '
-        + 'edustaja Barinia Tsara sanoi: "Valkoinen on puhtaus, '
+        + 'edustaja Barinia Tsara sanoi: ”Valkoinen on puhtaus, '
         + 'punainen suvereenisuus. Ja vihreä, hyvät herrat, on '
-        + 'toivo."',
+        + 'toivo.”',
       'Lippua myös arvosteltiin. Punainen ja valkoinen olivat '
         + 'merinojen kuningaskunnan värit, eivätkä kaikki pitäneet '
         + 'siitä, että enemmistökansan hallitsijasuvun värit tulivat '
@@ -4260,7 +4260,7 @@ export const LIPPUTIEDOT = {
           + 'työn tahdosta ja uuden päivän koitosta. Alla on Kenia-'
           + 'vuoren siluetti ja sen juurella kahvia, pyretriä, '
           + 'sisalia, teetä, maissia ja ananasta. Nauhassa lukee '
-          + 'swahiliksi Harambee, "vetäkäämme yhdessä".',
+          + 'swahiliksi Harambee, ”vetäkäämme yhdessä”.',
       },
     ],
     lahde: 'Liput: Wikimedia Commons (PD). Vaakuna: Ashiriz / '
@@ -4511,7 +4511,7 @@ export const LIPPUTIEDOT = {
         polku: 'assets/liput/tunnukset/sdn-vaakuna.png',
         selite: 'Sihteerihaukka kantaa kilpeä, joka on peräisin '
           + 'mahdi Muhammad Ahmadin ajalta 1800-luvulta. Ylemmässä '
-          + 'nauhassa lukee arabiaksi "voitto on meidän" ja '
+          + 'nauhassa lukee arabiaksi ”voitto on meidän” ja '
           + 'alemmassa Sudanin tasavalta. Sihteerihaukka valittiin '
           + 'nimenomaan sudanilaiseksi vastineeksi muiden arabimaiden '
           + 'Saladinin kotkalle ja Quraishin haukalle. Tunnus on '
@@ -5584,7 +5584,7 @@ export const LIPPUTIEDOT = {
       'Uusi-Kaledonia on Ranskan merentakainen alue, ja vuoteen 2010 '
         + 'asti sen ainoa virallinen lippu oli Ranskan trikolori. '
         + 'Vuoden 1998 Nouméan sopimus lupasi alueelle viisi '
-        + '"identiteetin merkkiä": kansallislaulun, tunnuslauseen, '
+        + '”identiteetin merkkiä”: kansallislaulun, tunnuslauseen, '
         + 'omat kuviot rahoihin, lipun ja mahdollisen uuden nimen.',
       'Heinäkuussa 2010 aluekongressi äänesti siitä, että molempia '
         + 'lippuja liehutetaan rinnakkain, ja pääministeri François '

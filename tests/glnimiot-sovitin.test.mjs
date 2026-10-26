@@ -122,7 +122,9 @@ test('vaiheen 1 runko (aseta/poista) kelpaa myös', () => {
   assert.deepEqual([...asetetut.keys()], ['nimi:pariisi', 'nimi:marseille']);
   assert.equal(asetetut.get('nimi:pariisi').rasteri.avain, 'nimi|Pariisi');
   s.nimet([DATUMIT[0]]);
-  assert.deepEqual([...asetetut.keys()], ['nimi:pariisi']);
+  // Poistuva nimi häipyy paikallaan (28.9.2026): häipyvä kopio on mukana, varsinainen nimi poissa.
+  assert.deepEqual([...asetetut.keys()].filter((t) => !t.endsWith('#nimi-vanha')), ['nimi:pariisi']);
+  assert.equal(asetetut.get('nimi:marseille#nimi-vanha')?.haivytys?.mihin ?? 0, 0);
 });
 
 test('puhtaat apurit', () => {
@@ -220,10 +222,12 @@ test('nimiön piilotus ja merkin piilotus ovat peittoja; lunastettu on haalea', 
   s.nostot([NOSTO({ nimioNakyy: false })]);
   assert.equal(kerros.lista[0].opacity, 1);
   assert.equal(kerros.lista[1].opacity, 0);
+  // Tavoitepeitto: häivytyksessä olevan instanssin loppuarvo (piilossa ollut nimiö palaa häivyttäen, 28.9.2026).
+  const tavoite = (i) => (i.haivytys ? i.haivytys.mihin : i.opacity);
   s.nostot([NOSTO({ piiloListanAlla: true })]);
-  assert.deepEqual(kerros.lista.map((i) => i.opacity), [0, 0]);
+  assert.deepEqual(kerros.lista.map(tavoite), [0, 0]);
   s.nostot([NOSTO({ lunastettu: true })]);
-  assert.deepEqual(kerros.lista.map((i) => i.opacity), [0.55, 0.55]);
+  assert.deepEqual(kerros.lista.map(tavoite), [0.55, 0.55]);
   assert.equal(glNostonPeitto(NOSTO({ piiloLiuskanAlla: true })), 0);
   assert.equal(glNostoKelpaa(NOSTO({ avattu: true })), false);
 });
@@ -276,7 +280,34 @@ test('nimet ja nostot ovat yksi lista rungolle: kumpikin jako säilyttää toise
   s.nostot([NOSTO()]);
   assert.equal(kerros.lista.length, 4);
   s.nimet([DATUMIT[0]]);
-  assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nimi:pariisi', 'nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+  assert.deepEqual(kerros.lista.map((i) => i.tunnus).filter((t) => !t.endsWith('#nimi-vanha')),
+    ['nimi:pariisi', 'nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
+  assert.ok(kerros.lista.some((i) => i.tunnus === 'nimi:marseille#nimi-vanha'), 'poistuva nimi häipyy');
+});
+
+test('paikannimen tulo ja lähtö häivytetään, ensimmäinen jako suoraan (28.9.2026)', () => {
+  const kerros = teeKerros();
+  let hetki = 5000;
+  const alkuperainen = globalThis.performance.now;
+  globalThis.performance.now = () => hetki;
+  try {
+    const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: teeLahde(new Set(['pariisi', 'marseille'])), ajasta: (f) => f() });
+    s.nimet([DATUMIT[0]]);
+    assert.equal(kerros.lista[0].opacity, 1, 'ensimmäinen jako ilman häivytystä');
+    assert.ok(!kerros.lista[0].haivytys);
+    hetki += 1000;
+    s.nimet(DATUMIT);
+    const tuli = kerros.lista.find((i) => i.tunnus === 'nimi:marseille');
+    assert.equal(tuli.opacity, 0);
+    assert.deepEqual(tuli.haivytys, { alku: 6000, kestoMs: NOSTON_HAIVYTYS_MS, mista: 0, mihin: 1 });
+    hetki += 1000;
+    s.nimet([DATUMIT[1]]);
+    const lahti = kerros.lista.find((i) => i.tunnus === 'nimi:pariisi#nimi-vanha');
+    assert.deepEqual(lahti?.haivytys, { alku: 7000, kestoMs: NOSTON_HAIVYTYS_MS, mista: 1, mihin: 0 });
+    assert.ok(!kerros.lista.some((i) => i.tunnus === 'nimi:pariisi'));
+  } finally {
+    globalThis.performance.now = alkuperainen;
+  }
 });
 
 /* ---- Pelin merkit (vaihe 4) ---------------------------------------- */
@@ -489,6 +520,34 @@ test('GPU-häivytys: instanssit kantavat häivytyksen, ei peittokutsuja, poisto 
     s.nostot([NOSTO({ puoli: 'vasen', dx: -5 })]);
     assert.deepEqual(kerros.lista.map((i) => i.tunnus), ['nosto:lascaux#ikoni', 'nosto:lascaux#nimio']);
     assert.equal(peittoja, 0);
+  } finally {
+    globalThis.performance.now = alkuperainen;
+  }
+});
+
+test('piilotus ja paluu häivytetään (omistaja 28.9.2026: pehmeästi, ei hyppyä)', () => {
+  const kerros = teeKerros();
+  let hetki = 1000;
+  const alkuperainen = globalThis.performance.now;
+  globalThis.performance.now = () => hetki;
+  try {
+    const s = luoGlNimiosovitin({ kerros: () => kerros, rasterilahde: teeNostolahde(), ajasta: (f) => f() });
+    s.nostot([NOSTO()]);
+    assert.equal(kerros.lista[1].opacity, 1);
+    hetki += 1000;
+    s.nostot([NOSTO({ nimioNakyy: false })]);
+    const vanha = kerros.lista.find((i) => i.tunnus === 'nosto:lascaux#nimio-vanha');
+    assert.ok(vanha, 'piiloutuva nimiö häipyy paikallaan');
+    assert.deepEqual(vanha.haivytys, { alku: 2000, kestoMs: NOSTON_HAIVYTYS_MS, mista: 1, mihin: 0 });
+    assert.equal(kerros.lista.find((i) => i.tunnus === 'nosto:lascaux#nimio').opacity, 0);
+    hetki += NOSTON_HAIVYTYS_MS + 50;
+    s.nostot([NOSTO({ nimioNakyy: false })]);
+    hetki += 1000;
+    s.nostot([NOSTO()]);
+    const tuli = kerros.lista.find((i) => i.tunnus === 'nosto:lascaux#nimio');
+    assert.equal(tuli.opacity, 0, 'palaava alkaa näkymättömänä');
+    assert.equal(tuli.haivytys.mihin, 1);
+    assert.equal(NOSTON_HAIVYTYS_MS >= 200 && NOSTON_HAIVYTYS_MS <= 250, true);
   } finally {
     globalThis.performance.now = alkuperainen;
   }

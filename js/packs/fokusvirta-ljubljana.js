@@ -17,8 +17,9 @@
  * js/fokusvirta.js kuvanOsoite). Lisenssi tarkistettu Commonsin
  * imageinfo/extmetadata-rajapinnasta 20.9.2026: Jakub Hałun, CC BY 4.0.
  *
- * ÄÄNITETTÄ EI VIELÄ OLE — puuttuva tiedosto on hiljainen (js/luenta.js
- * playDiaryVoice), samoin kuin muilla kevyillä pakeilla.
+ * ÄÄNITE (Äänittäjä 11.10.2026): isoisän luenta on generoitu tästä
+ * luenta-kentästä ja viety ämpäriin polkuun audio/puhe-fokus-matkakirja-ljubljana.mp3
+ * (aikaleimat assets/aikaleimat/). Kesto ja polku: js/media.js HORATIO_TUOTANTO.
  */
 export const FOKUSVIRTA_LJUBLJANA = {
   kaupunki: 'ljubljana',
@@ -42,6 +43,9 @@ export const FOKUSVIRTA_LJUBLJANA = {
       + 'kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat '
       + 'nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; '
       + 'isoisäni aikaan matka kesti viikon.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääni generoitu 11.10.2026 tästä tekstistä). */
+    luenta: "[curious] Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. [softly] Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. [warmly] Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.",
+    aanite: 'assets/audio/puhe-fokus-matkakirja-ljubljana.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
@@ -49,7 +53,7 @@ export const FOKUSVIRTA_LJUBLJANA = {
     /* KUPLAT: Sonnetin kirjoittamat, ei kaanonia — Livian nykypäivän ääni. */
     kommentti: [
       'Lohikäärme on yhä Ljubljanan tunnus: se on linnan tornissa, vaakunassa ja sillalla, jota isoisäsi ei ehtinyt nähdä.',
-      'Tänään Ljubljana on Slovenian pääkaupunki. Isoisäsi aikana se oli Krainin pääkaupunki, ja saksaksi Laibach.',
+      'Nykyään Ljubljana on Slovenian pääkaupunki. Isoisäsi aikana se oli Krainin pääkaupunki, ja saksaksi Laibach.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

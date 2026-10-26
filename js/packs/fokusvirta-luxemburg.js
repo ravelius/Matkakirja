@@ -18,8 +18,9 @@
  * js/fokusvirta.js kuvanOsoite). Lisenssi tarkistettu Commonsin
  * imageinfo/extmetadata-rajapinnasta 21.9.2026: P. Hughes, CC BY-SA 4.0.
  *
- * ÄÄNITETTÄ EI VIELÄ OLE — puuttuva tiedosto on hiljainen (js/luenta.js
- * playDiaryVoice), samoin kuin muilla kevyillä pakeilla.
+ * ÄÄNITE (Äänittäjä 11.10.2026): isoisän luenta on generoitu tästä
+ * luenta-kentästä ja viety ämpäriin polkuun audio/puhe-fokus-matkakirja-luxemburg.mp3
+ * (aikaleimat assets/aikaleimat/). Kesto ja polku: js/media.js HORATIO_TUOTANTO.
  */
 export const FOKUSVIRTA_LUXEMBURG = {
   kaupunki: 'luxemburg',
@@ -43,6 +44,9 @@ export const FOKUSVIRTA_LUXEMBURG = {
       + 'aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee '
       + 'täältä käsin, mutta asuu Haagissa — en ole vielä tavannut '
       + 'ketään, joka olisi nähnyt hänet täällä.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääni generoitu 11.10.2026 tästä tekstistä). */
+    luenta: "[curious] Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. [softly] Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.",
+    aanite: 'assets/audio/puhe-fokus-matkakirja-luxemburg.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

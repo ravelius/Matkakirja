@@ -1,0 +1,313 @@
+{
+  "versio": 2,
+  "kaupunki": "kosice",
+  "teksti": "Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille; kivi on kulunut, mutta tornit seisovat. Pääkatu on leveä kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, jonka kaupunki selätti. Kapakassa juodaan tokajia ja puhutaan kolmea kieltä samassa lauseessa.",
+  "tekstiSha256": "7ea0bf88ddcd8f6c0ba498a770feab1bdffac2b94225462dd9502805e4ddfaa5",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kosice-v3.mp3",
+    "versio": 2,
+    "tavut": 1033865,
+    "sha256": "da01945d4a772f75a074469ad3de6b30832d170d0a277e776c1f5cd1c4d0e7b3"
+  },
+  "kesto": 43020,
+  "sanat": [
+    {
+      "sana": "Kassa",
+      "alku": 1200,
+      "loppu": 1980
+    },
+    {
+      "sana": "Košice",
+      "alku": 2280,
+      "loppu": 3040
+    },
+    {
+      "sana": "lokakuussa",
+      "alku": 3820,
+      "loppu": 4480
+    },
+    {
+      "sana": "1873",
+      "alku": 4560,
+      "loppu": 6720
+    },
+    {
+      "sana": "Juna",
+      "alku": 7840,
+      "loppu": 9120
+    },
+    {
+      "sana": "toi",
+      "alku": 9180,
+      "loppu": 9360
+    },
+    {
+      "sana": "minut",
+      "alku": 9400,
+      "loppu": 9600
+    },
+    {
+      "sana": "Krakovasta",
+      "alku": 9640,
+      "loppu": 10240
+    },
+    {
+      "sana": "vuorten",
+      "alku": 10300,
+      "loppu": 10720
+    },
+    {
+      "sana": "läpi",
+      "alku": 10780,
+      "loppu": 11040
+    },
+    {
+      "sana": "ja",
+      "alku": 11580,
+      "loppu": 11680
+    },
+    {
+      "sana": "Karpaatit",
+      "alku": 11740,
+      "loppu": 12240
+    },
+    {
+      "sana": "jäivät",
+      "alku": 12300,
+      "loppu": 12640
+    },
+    {
+      "sana": "taakse",
+      "alku": 12700,
+      "loppu": 13040
+    },
+    {
+      "sana": "kuin",
+      "alku": 13100,
+      "loppu": 13360
+    },
+    {
+      "sana": "kynnys",
+      "alku": 13440,
+      "loppu": 14000
+    },
+    {
+      "sana": "Pyhän",
+      "alku": 15120,
+      "loppu": 15840
+    },
+    {
+      "sana": "Elisabetin",
+      "alku": 15880,
+      "loppu": 16400
+    },
+    {
+      "sana": "tuomiokirkko",
+      "alku": 16460,
+      "loppu": 17200
+    },
+    {
+      "sana": "on",
+      "alku": 17260,
+      "loppu": 17360
+    },
+    {
+      "sana": "niin",
+      "alku": 17420,
+      "loppu": 17600
+    },
+    {
+      "sana": "suuri",
+      "alku": 17680,
+      "loppu": 18000
+    },
+    {
+      "sana": "että",
+      "alku": 18440,
+      "loppu": 18640
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 18660,
+      "loppu": 19120
+    },
+    {
+      "sana": "tuntuu",
+      "alku": 19160,
+      "loppu": 19520
+    },
+    {
+      "sana": "rakennetun",
+      "alku": 19580,
+      "loppu": 20080
+    },
+    {
+      "sana": "sen",
+      "alku": 20140,
+      "loppu": 20320
+    },
+    {
+      "sana": "ympärille",
+      "alku": 20400,
+      "loppu": 20960
+    },
+    {
+      "sana": "kivi",
+      "alku": 22040,
+      "loppu": 22720
+    },
+    {
+      "sana": "on",
+      "alku": 22780,
+      "loppu": 22880
+    },
+    {
+      "sana": "kulunut",
+      "alku": 22940,
+      "loppu": 23440
+    },
+    {
+      "sana": "mutta",
+      "alku": 23980,
+      "loppu": 24240
+    },
+    {
+      "sana": "tornit",
+      "alku": 24320,
+      "loppu": 24800
+    },
+    {
+      "sana": "seisovat",
+      "alku": 24880,
+      "loppu": 25520
+    },
+    {
+      "sana": "Pääkatu",
+      "alku": 27840,
+      "loppu": 28320
+    },
+    {
+      "sana": "on",
+      "alku": 28380,
+      "loppu": 28480
+    },
+    {
+      "sana": "leveä",
+      "alku": 28540,
+      "loppu": 28880
+    },
+    {
+      "sana": "kuin",
+      "alku": 28940,
+      "loppu": 29200
+    },
+    {
+      "sana": "tori",
+      "alku": 29260,
+      "loppu": 29600
+    },
+    {
+      "sana": "ja",
+      "alku": 30380,
+      "loppu": 30480
+    },
+    {
+      "sana": "sen",
+      "alku": 30520,
+      "loppu": 30640
+    },
+    {
+      "sana": "keskellä",
+      "alku": 30700,
+      "loppu": 31200
+    },
+    {
+      "sana": "kultainen",
+      "alku": 31280,
+      "loppu": 31920
+    },
+    {
+      "sana": "Immaculata",
+      "alku": 32020,
+      "loppu": 32960
+    },
+    {
+      "sana": "muistuttaa",
+      "alku": 33140,
+      "loppu": 34080
+    },
+    {
+      "sana": "rutosta",
+      "alku": 34140,
+      "loppu": 34560
+    },
+    {
+      "sana": "jonka",
+      "alku": 34680,
+      "loppu": 34880
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 34940,
+      "loppu": 35480
+    },
+    {
+      "sana": "selätti",
+      "alku": 35520,
+      "loppu": 36000
+    },
+    {
+      "sana": "Kapakassa",
+      "alku": 38300,
+      "loppu": 38720
+    },
+    {
+      "sana": "juodaan",
+      "alku": 38740,
+      "loppu": 39040
+    },
+    {
+      "sana": "tokajia",
+      "alku": 39120,
+      "loppu": 39680
+    },
+    {
+      "sana": "ja",
+      "alku": 39740,
+      "loppu": 39840
+    },
+    {
+      "sana": "puhutaan",
+      "alku": 39880,
+      "loppu": 40320
+    },
+    {
+      "sana": "kolmea",
+      "alku": 40380,
+      "loppu": 40800
+    },
+    {
+      "sana": "kieltä",
+      "alku": 40880,
+      "loppu": 41320
+    },
+    {
+      "sana": "samassa",
+      "alku": 41360,
+      "loppu": 41600
+    },
+    {
+      "sana": "lauseessa",
+      "alku": 41660,
+      "loppu": 42320
+    }
+  ],
+  "lauseet": [
+    1200,
+    7840,
+    15120,
+    27840,
+    38300
+  ],
+  "luotu": "2026-10-15T12:57:37.000Z"
+}

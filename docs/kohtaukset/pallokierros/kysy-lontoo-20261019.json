@@ -1,0 +1,86 @@
+{
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-v5/lontoo.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä. Tarkistettu 19.10. klo ~12.15 tekstiä vasten: vastaukset, jotka löytyivät jo kohteen tekstistä, vaihdettu uusiin.",
+ "kaupunki": "lontoo",
+ "kohteet": {
+  "Q62408": [
+   "Onko Big Benin kellossa halkeama?",
+   "Miksi heilurin päällä on kolikoita?",
+   "Miksi taulut maalattiin aikanaan mustiksi?",
+   "Mikä osa palatsista selvisi palosta?",
+   "Miksi Big Ben vaikeni vuonna 2017?",
+   "Mitä tornin huipun lamppu kertoo?",
+   "Kuinka korkea Elizabeth Tower on?",
+   "Kuinka paljon Big Ben painaa?"
+  ],
+  "Q5933": [
+   "Mikä on kirkon kruunajaistuoli?",
+   "Miksi tornit ovat paljon kirkkoa nuoremmat?",
+   "Mikä on Runoilijain nurkka?",
+   "Mikä on viuhkaholvi?",
+   "Pidetäänkö kirkossa yhä jumalanpalveluksia?",
+   "Ketkä vihittiin kirkossa vuonna 2011?",
+   "Ketä muita kirkkoon on haudattu?",
+   "Miksi hallitsijat kruunataan juuri täällä?"
+  ],
+  "Q42182": [
+   "Mitä vartijoiden vaihdossa tapahtuu?",
+   "Kuinka monta huonetta palatsissa on?",
+   "Miksi palatsi avattiin yleisölle 1993?",
+   "Mikä on palatsin kuuluisa parveke?",
+   "Kuinka suuri palatsin puutarha on?",
+   "Mitä lippu palatsin katolla kertoo?",
+   "Mikä on The Mall?",
+   "Onko palatsin puutarhassa mehiläispesiä?"
+  ],
+  "Q129143": [
+   "Mitä Nelson menetti ennen Trafalgaria?",
+   "Missä Trafalgarin taistelu käytiin?",
+   "Mitä neljännellä jalustalla on nähty?",
+   "Mikä kuuluisa museo on aukion laidalla?",
+   "Miksi leijonat tulivat paikalleen myöhemmin?",
+   "Kuinka korkea Nelsonin pylväs on?",
+   "Mitä vanhoja mittoja aukiolla on esillä?",
+   "Mihin aukion kulman lyhtypylvästä käytettiin?"
+  ],
+  "Q173882": [
+   "Mitä kupolin huipulla on?",
+   "Kenen hautajaiset täällä pidettiin 1965?",
+   "Miten kuiskausgalleria toimii?",
+   "Kuinka monta askelmaa kupoliin on?",
+   "Mikä muu Wren oli kuin arkkitehti?",
+   "Kuinka kauan rakentaminen kesti?",
+   "Miten katedraali selvisi sodan pommituksista?",
+   "Mikä rakennus ohitti kupolin korkeudessa?"
+  ],
+  "Q62378": [
+   "Miksi Vilhelm rakennutti Towerin?",
+   "Miksi Valkoinen torni on vaalea?",
+   "Mistä Cullinan-timantti on peräisin?",
+   "Mikä on kruunajaislusikka?",
+   "Millaisia eläimiä Towerissa pidettiin?",
+   "Oliko Towerissa myös rahapaja?",
+   "Ketä Towerissa on pidetty vankina?",
+   "Keitä ovat Towerin punaviittaiset vartijat?"
+  ],
+  "Q83125": [
+   "Millä voimalla silta alun perin nousi?",
+   "Minkä värinen silta oli alun perin?",
+   "Ovatko tornit oikeasti kivirakenteita?",
+   "Kuinka paljon sillan siipi painaa?",
+   "Miksi kävelysillat suljettiin vuonna 1910?",
+   "Kuinka usein silta nousee nykyään?",
+   "Miksi silta sekoitetaan London Bridgeen?",
+   "Mitä kävelysiltaan pääsee nykyään katsomaan?"
+  ],
+  "Q192988": [
+   "Kuka keksi tarkan merikellon?",
+   "Mitä tarkoittaa GMT?",
+   "Mitä observatorion katolta loistaa yöllä?",
+   "Mitä eläimiä Greenwichin puistossa elää?",
+   "Miksi nollapiiri valittiin Greenwichiin?",
+   "Voiko nollapiirin ylittää jalan?",
+   "Miksi Ranska pitäytyi Pariisin nollapiirissä?",
+   "Kuka oli Flamsteed?"
+  ]
+ }
+}

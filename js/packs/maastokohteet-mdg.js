@@ -179,7 +179,7 @@ export const MAASTOKOHTEET_MDG = [
       + 'Maisema on neulanmuotoista kalkkikiveä, joka kohoaa Manambolo-joen jyrkänteiden '
       + 'yläpuolelle. Kivi on niin terävää, että se leikkaa varusteet ja ihon, ja siksi '
       + 'muodostumien yli kulkeminen on äärimmäisen vaikeaa: sana tsingy tulee paikallisesta '
-      + 'ilmauksesta, joka tarkoittaa "paikkaa, jossa ei voi kävellä paljain jaloin". '
+      + 'ilmauksesta, joka tarkoittaa ”paikkaa, jossa ei voi kävellä paljain jaloin”. '
       + 'Suojelualueen eteläosasta tehtiin 1997 kansallispuisto, pohjoisosa on yhä tiukka '
       + 'luonnonpuisto.',
     lahde: 'en-Wikipedia "Tsingy de Bemaraha Strict Nature Reserve", johdanto-osa ja osio '
@@ -204,7 +204,7 @@ export const MAASTOKOHTEET_MDG = [
       + 'Menaben alueella Länsi-Madagaskarilla. Tien 260 metrin pätkällä kasvaa 20–25 puuta, '
       + 'ja lisäksi noin 25 saman lajin puuta seisoo läheisillä riisipelloilla ja niityillä '
       + 'neljän hehtaarin alalla. Paikallisesti puita kutsutaan nimellä renala, malagassiksi '
-      + '"metsän äiti". Ne eivät alun perin kohonneet yksinään: ne olivat osa tiheää '
+      + '”metsän äiti”. Ne eivät alun perin kohonneet yksinään: ne olivat osa tiheää '
       + 'trooppista metsää, joka raivattiin pelloiksi väestön kasvaessa, ja vain baobabit '
       + 'jätettiin pystyyn ruoan ja rakennusaineen takia. Ympäristöministeriö antoi paikalle '
       + 'väliaikaisen suojelun heinäkuussa 2007.',
@@ -281,7 +281,7 @@ export const MAASTOKOHTEET_MDG = [
       + 'kultabamburilemurin (Hapalemur aureus). Puisto suojelee yli 41 600 hehtaaria '
       + 'trooppista sademetsää 800–1 200 metrin korkeudella Haute Matsiatran ja Vatovavyn '
       + 'alueilla. Korkeusero synnyttää monenlaista metsää alavasta sademetsästä sumumetsään. '
-      + 'Nimi tulee malagassin sanoista rano mafana, "kuuma vesi", lähikylän kuumien lähteiden '
+      + 'Nimi tulee malagassin sanoista rano mafana, ”kuuma vesi”, lähikylän kuumien lähteiden '
       + 'mukaan.',
     lahde: 'en-Wikipedia "Ranomafana National Park", johdanto-osa ja osio "Flora and fauna" '
       + '(tarkistettu 6.9.2026).',
@@ -289,6 +289,7 @@ export const MAASTOKOHTEET_MDG = [
   {
     id: 'merirosvojen-hautausmaa',
     nimi: 'Merirosvojen hautausmaa',
+    nimio: 'Sainte-Marie',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi merirosvot valitsivat juuri tämän saaren?',
@@ -309,7 +310,7 @@ export const MAASTOKOHTEET_MDG = [
       + 'lahdella, ja monet heistä haudattiin saaren hautausmaille — jäänteitä ei ole '
       + 'kuitenkaan koskaan tunnistettu. Vuonna 2015 saaren rannikolta nostettiin 55 kilon '
       + 'harkko, jota pidettiin hopeana ja osana Kiddin aarretta; Unescon tutkimus totesi sen '
-      + '95-prosenttisesti lyijyksi ja "katkenneeksi osaksi Sainte-Marien satamarakenteita".',
+      + '95-prosenttisesti lyijyksi ja ”katkenneeksi osaksi Sainte-Marien satamarakenteita”.',
     lahde: 'en-Wikipedia "Nosy Boraha", johdanto-osa ja osio "History" (tarkistettu '
       + '6.9.2026).',
   },

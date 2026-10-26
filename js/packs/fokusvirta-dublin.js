@@ -375,8 +375,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai '
         + 'osittain molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä '
         + 'vasikannahkaa ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin '
-        + 'annaaleihin kirjattiin, että "Columkillen suuri evankeliumikirja, '
-        + 'läntisen maailman päämuistoesine" varastettiin yöllä kivikirkon '
+        + 'annaaleihin kirjattiin, että ”Columkillen suuri evankeliumikirja, '
+        + 'läntisen maailman päämuistoesine” varastettiin yöllä kivikirkon '
         + 'läntisestä sakaristosta — ja syy sanotaan merkinnässä suoraan: '
         + 'sen taotun kotelon tähden. Kirja löytyi muutamaa kuukautta '
         + 'myöhemmin turpeen alta. Kotelo oli poissa, kulta ja jalokivet '
@@ -743,10 +743,10 @@ export const FOKUSVIRTA_DUBLIN = {
       + 'Silti hän on täällä joka päivä samalla kohdalla kuin '
       + 'isoisoisänsä, kukkaro vyöllä ja vastaus valmiina siihen ainoaan '
       + 'kysymykseen, jonka jokainen ohikulkija ehtii esittää. Sukunsa '
-      + 'tarinaa hän ei usko. "Se on satua", hän sanoo ja kääntelee '
-      + 'kukkaroa kämmenellään, "mutta kukkaro on tässä, ja siinä on yksi '
+      + 'tarinaa hän ei usko. ”Se on satua”, hän sanoo ja kääntelee '
+      + 'kukkaroa kämmenellään, ”mutta kukkaro on tässä, ja siinä on yksi '
       + 'lantti, jota en ole neljäänkymmeneen vuoteen saanut käytettyä. '
-      + 'Selitä sinä se, jos osaat." Ennen kuin hän avaa '
+      + 'Selitä sinä se, jos osaat.” Ennen kuin hän avaa '
       + 'kukkaron, hän haluaa tietää, tunteeko vieras tämän joen siltä '
       + 'ajalta, jolloin siltaa ei vielä ollut.',
     vihjeOsio: 'kaupunki',
@@ -1203,26 +1203,4 @@ export const FOKUSVIRTA_DUBLIN = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable 29.8.2026) — teksti sellaisenaan. Iso aarre: Irlannin
-   * kruununjalokivet. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   *
-   * VUOSILUKUKURI (ks. tiedoston alku): isoisä on Dublinissa vuonna
-   * 1873 ja jalokivet varastetaan vasta heinäkuussa 1907. Merkintä ei
-   * siksi tiedä varkaudesta mitään — se panee muistiin vartijan
-   * huolettoman lauseen ja toteaa, etteivät sellaiset lauseet vanhene
-   * hyvin. Varkaus kerrotaan pelaajalle vasta aarteen omassa
-   * faktarivissä (js/packs/paikallisaarteet.js, IRL isoAarre), eli
-   * täsmälleen silloin kun merkinnän viimeinen virke lunastuu.
-   */
-  aarremerkinta: {
-    teksti: 'Linnassa säilytetään jalokiviä, joilla ritarikunta '
-      + 'koristautuu juhlissaan. Näin ne lasin takana: tähti ja käädyt, '
-      + 'timantteja ja smaragdeja. Vartija kehui, ettei niitä vahdi öisin '
-      + 'kukaan, sillä kuka nyt linnasta varastaisi. Kirjoitan tämän '
-      + 'muistiin, koska sellainen lause ei yleensä vanhene hyvin.',
-  },
 };

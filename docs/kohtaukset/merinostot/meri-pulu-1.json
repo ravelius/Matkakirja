@@ -1,0 +1,746 @@
+[
+ {
+  "kysymys": "Mikä Vattimeri on?",
+  "vastaus": "Vattimeri on Pohjanmeren kaakkoisrannan matala vuorovesialue Alankomaiden, Saksan ja Tanskan edustalla. Se ulottuu yli 400 kilometrin matkalla, ja pinta-alaa on yli 10 000 neliökilometriä. Unesco kuvaa sitä maailman laajimmaksi yhtenäiseksi vuorovesihiekan ja -mudan alueeksi. Se on tärkeä levähdyspaikka muuttolinnuille, ja laskuveden aikaan sen pohja paljastuu.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Wadden_Sea",
+    "title": "Wadden Sea - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Vattimeri",
+    "title": "Vattimeri - Wikipedia"
+   },
+   {
+    "url": "https://slks.dk/english/work-areas/cultural-heritage/sites-and-monuments/world-heritage-sites/the-wadden-sea",
+    "title": "The Wadden Sea - Danish Agency for Culture and Palaces (Slots- og Kulturstyrelsen)"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/1314",
+    "title": "Wadden Sea - UNESCO World Heritage Centre (hakutulos)"
+   },
+   {
+    "url": "https://www.guinnessworldrecords.com/world-records/100829-largest-unbroken-intertidal-mudflats",
+    "title": "Largest contiguous intertidal mudflats - Guinness World Records (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Vuorovesialue Pohjanmeren kaakkoisosassa; Alankomaat, Saksa, Tanskan edustalla",
+    "lahde1": "fi.wikipedia Vattimeri + en.wikipedia Wadden Sea",
+    "lahde2": "Slots- og Kulturstyrelsen (Tanskan viranomainen)",
+    "huom": ""
+   },
+   {
+    "vaite": "Pituus yli 400 km; pinta-ala yli 10 000 km2",
+    "lahde1": "en.wikipedia: noin 500 km (Den Helder - Skallingen), noin 10 000 km2",
+    "lahde2": "Guinness (hakutulos): noin 450 km, noin 11 400 km2",
+    "huom": "Lähteet antavat 450 ja 500 km sekä 10 000 ja 11 400 km2, joten vastauksessa käytetään vain alarajoja ('yli')."
+   },
+   {
+    "vaite": "Unescon mukaan maailman laajin yhtenäinen vuorovesihiekan ja -mudan alue",
+    "lahde1": "Slots- og Kulturstyrelsen: 'largest unbroken system of intertidal sand and mud flats in the world'",
+    "lahde2": "UNESCO World Heritage Centre (hakutulos)",
+    "huom": "Sivun whc.unesco.org WebFetch antoi 403, joten UNESCOn lause on vain hakutuloksen tiivistelmästä."
+   },
+   {
+    "vaite": "Tärkeä muuttolintujen levähdyspaikka; pohja paljastuu laskuveden aikaan (vuorovesialue)",
+    "lahde1": "en.wikipedia: tärkeä lintujen pesintä- ja muuttoalue; intertidal zone",
+    "lahde2": "UNESCO / IUCN (hakutulos): yksi tärkeimmistä muuttolintujen välilaskupaikoista",
+    "huom": "Lintujen lukumääriä (10-12 miljoonaa) ei käytetä, vain yksi lähde."
+   },
+   {
+    "vaite": "Nimi 'Vattimeri' on suomalainen vakiintunut nimi Wadden Sea -alueelle",
+    "lahde1": "fi.wikipedia Vattimeri",
+    "lahde2": "-",
+    "huom": "Kysymyksessä oleva nimi 'Vattimeri' vastaa Wadden Seaa (hollanniksi Waddenzee)."
+   }
+  ],
+  "kohteet": [
+   "dnk/pohjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Jyllannin länsirannikko on niin suora?",
+  "vastaus": "Meri on tehnyt sen suoraksi. Länsiranta on hiekkaista ja avoinna Pohjanmeren länsituulille ja aalloille. Jäätikön jättämä irtonainen maa ei vastustanut aaltoja, ja ne kuluttivat kukkuloita ja rakensivat särkkiä lahtien eteen. Skagenista Skallingeniin kulkee lähes yhtenäinen dyynivyö, satoja kilometrejä pitkä. Rannikon muoto ei siis johdu maaston alkuperäisestä muodosta vaan aaltojen työstä.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://tidsskrift.dk/geografisktidsskrift/article/download/46469/57392?inline=1",
+    "title": "Geografisk Tidsskrift, Bind 59 (1960) - Det Kgl. Danske Geografiske Selskab"
+   },
+   {
+    "url": "https://coastalwiki.org/wiki/Sand_dune_-_Country_Report,_Denmark",
+    "title": "Sand dune - Country Report, Denmark - CoastalWiki"
+   },
+   {
+    "url": "https://www.marinespecies.org/introduced/wiki/Sand_dune_-_Country_Report,_Denmark",
+    "title": "Sand dune - Country Report, Denmark - WoRMS/CoastalWiki (peili)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Jutland",
+    "title": "Jutland - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Rannikon suoruus johtuu meren voimista: aallot leikkasivat kukkuloita ja rakensivat särkkiä lahtien poikki; ranta on aaltoaltis länsituulille",
+    "lahde1": "Geografisk Tidsskrift 1960 (WebFetch): 'direction of the coastline ... due to the forces of the sea', pitkä NW-aallokkoetäisyys, jäätikön aineksella vähän vastusta",
+    "lahde2": "CoastalWiki: länsituulten aallot, hiekka peräisin merenpohjan jäätikköaineksesta, dyynit rannan takana",
+    "huom": "Yksikään lähde ei sano suoraan 'suora koska X' kuin vuoden 1960 artikkeli; CoastalWiki tukee mekanismia (aallot, hiekan kuljetus, dyynit). Heikommin tuettu kuin muut."
+   },
+   {
+    "vaite": "Lähes yhtenäinen dyynivyö Skagenista Skallingeniin, noin 300 km",
+    "lahde1": "CoastalWiki: 'unbroken chain ... about 300 km'",
+    "lahde2": "Geografisk Tidsskrift 1960: 'almost uninterrupted zone of dune landscapes' (ilman lukua)",
+    "huom": "300 km vain yhdestä lähteestä, siksi 'noin'."
+   },
+   {
+    "vaite": "Hiekka on peräisin merenpohjan jäätikköaineksesta",
+    "lahde1": "CoastalWiki",
+    "lahde2": "-",
+    "huom": "Jätetty pois vastauksesta, koska vain yksi lähde."
+   }
+  ],
+  "kohteet": [
+   "dnk/pohjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Itämeren vesi on murtovettä?",
+  "vastaus": "Koska mereen virtaa paljon makeaa jokivettä, mutta suolaista vettä pääsee sisään vain kapeiden ja matalien Tanskan salmien kautta. Itämeren suolaisuus on noin 7 promillea eli noin viidesosa valtamerten 35 promillesta. Salmien kynnykset ovat alle 20 metriä syviä. Murtovesi on siis suolaisempaa kuin järvivesi mutta paljon vähemmän suolaista kuin valtameri. Pohjoisissa lahdissa vesi on lähes makeaa.",
+  "sanoja": 55,
+  "lahteet": [
+   {
+    "url": "https://itameri.fi/en/nature-and-how-it-changes/the-baltic-sea-in-numbers/",
+    "title": "The Baltic Sea in numbers - Itameri.fi (Suomen ympäristökeskus ym.)"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Itämeri",
+    "title": "Itämeri - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+    "title": "Baltic Sea - Wikipedia"
+   },
+   {
+    "url": "https://epic.awi.de/6167/1/Mei2003a.pdf",
+    "title": "Meier ja Kauker 2003, Baltic Sea salinity (hakutulos)"
+   },
+   {
+    "url": "https://hydrophysics.spbrc.ru/jour/article/download/1445/755",
+    "title": "Baltic Sea Danish Straits sill depths (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Suolaisuus noin 7 promillea, noin viidesosa valtamerten suolaisuudesta (35 promillea)",
+    "lahde1": "Itameri.fi (ympäristöhallinto): noin 7 per mille, noin viidesosa valtamerien",
+    "lahde2": "fi.wikipedia Itämeri: noin 7 promillea, valtamerissä noin 35",
+    "huom": "Meier & Kauker (hakutulos) antaa 7,4 promillea; sopii."
+   },
+   {
+    "vaite": "Makeaa jokivettä tulee paljon; suolaista vettä vain kapeiden ja matalien Tanskan salmien kautta",
+    "lahde1": "fi.wikipedia: makean veden ylijäämä; yhteys Tanskan salmien kautta",
+    "lahde2": "en.wikipedia: rajoitettu vedenvaihto, joet, Drogden- ja Darss-kynnykset (hakutulos: tutkimuksia, jotka sanovat 'large fresh water surplus and very limited exchange')",
+    "huom": ""
+   },
+   {
+    "vaite": "Kynnykset alle 20 metriä",
+    "lahde1": "en.wikipedia: Drogden noin 7 m, Darss noin 18 m",
+    "lahde2": "hydrophysics-artikkeli (hakutulos): Drogden 8 m, Darss 19 m",
+    "huom": "Lähteet eroavat metrillä, siksi 'alle 20 m' eikä tarkkoja lukuja."
+   },
+   {
+    "vaite": "Pohjoisissa lahdissa vesi lähes makeaa",
+    "lahde1": "fi.wikipedia: Pohjanlahden ja Suomenlahden perukoilla noin 0-3 promillea",
+    "lahde2": "Itameri.fi: suolaisuus vähenee Pohjanlahden ja Suomenlahden pohjukoissa",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "dnk/itameri",
+   "est/itameri",
+   "ltu/itameri",
+   "lva/itameri",
+   "pol/itameri",
+   "swe/itameri"
+  ]
+ },
+ {
+  "kysymys": "Mitkä salmet yhdistävät Itämeren Pohjanmereen?",
+  "vastaus": "Tanskan salmet: Juutinrauma eli Öresund sekä Iso-Belt ja Vähä-Belt. Ne johtavat Itämereltä Kattegatin kautta Pohjanmerelle. Juutinrauman kapein kohta on Helsingørin ja Helsingborgin välillä, vain noin neljä kilometriä leveä. Juutinrauman kynnys on vain noin 8 metriä syvä. Siksi suolaista vettä pääsee Itämereen vain vähän ja harvakseltaan.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Baltic_Sea",
+    "title": "Baltic Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/%C3%98resund",
+    "title": "Øresund - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Itämeri",
+    "title": "Itämeri - Wikipedia"
+   },
+   {
+    "url": "https://www.smhi.se/publikationer-fran-smhi/sok-publikationer/1978-08-20-a-numerical-model-of-the-circulation-in-oresund.-evaluation-of-the-effect-of-a-tunnel-between-helsingor-and-helsingborg",
+    "title": "A numerical model of the circulation in Öresund - SMHI (hakutulos)"
+   },
+   {
+    "url": "https://hydrophysics.spbrc.ru/jour/article/download/1445/755",
+    "title": "Baltic Sea Danish Straits sill depths (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Yhteys Itämereltä Pohjanmerelle kulkee kolmen salmen (Öresund, Iso-Belt, Vähä-Belt) ja Kattegatin kautta",
+    "lahde1": "en.wikipedia Baltic Sea",
+    "lahde2": "fi.wikipedia Itämeri (Tanskan salmet, Kattegat, Juutinrauma, Iso-Belt, Vähä-Belt)",
+    "huom": ""
+   },
+   {
+    "vaite": "Öresundin kapein kohta Helsingør-Helsingborg, noin 4 km",
+    "lahde1": "en.wikipedia Øresund",
+    "lahde2": "Hakutulokset (Helsingørin satamasivu, matkaoppaat): noin 4 km",
+    "huom": "Toinen lähde on hakutulosten tiivistelmä."
+   },
+   {
+    "vaite": "Juutinrauman kynnys noin 8 m",
+    "lahde1": "SMHI 1978 (hakutulos): Öresundin kynnys noin 8 m",
+    "lahde2": "hydrophysics-artikkeli (hakutulos): Drogden 8 m; en.wikipedia Baltic Sea: noin 7 m",
+    "huom": "Eri lähteet 7 ja 8 m, siksi 'noin 8'."
+   },
+   {
+    "vaite": "Suolaista vettä pääsee sisään vähän ja harvakseltaan (suolapulssit)",
+    "lahde1": "fi.wikipedia Itämeri: ajoittaiset suolapulssit",
+    "lahde2": "hakutulos: major Baltic inflows",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "dnk/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Viron saaret ovat niin matalia?",
+  "vastaus": "Ne ovat nousseet merestä vasta jääkauden jälkeen ja lepäävät tasaisen kalkkikiven päällä. Saarenmaan korkein kohta, Raunamägi, on vain 54 metriä, ja Hiidenmaankin korkein kohta vain 68. Maa kohoaa täällä yhä noin 2–3 millimetriä vuodessa, joten meri vetäytyy ja saaret kasvavat hitaasti. Matala maisema kertoo jäätiköiden painaman maan palautuvan yhä.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Saaremaa",
+    "title": "Saaremaa - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Hiiumaa",
+    "title": "Hiiumaa - Wikipedia"
+   },
+   {
+    "url": "https://www.visitestonia.com/en/rauna-observation-tower-and-resting-place",
+    "title": "Rauna observation tower and resting place - Visit Estonia (hakutulos)"
+   },
+   {
+    "url": "https://dspace.emu.ee/items/201cef77-b7ca-4205-9bb5-58aba68eefa7/full",
+    "title": "Vertical Crustal Movements Based on Precise Levellings in Estonia - Eesti Maaülikool (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Saarenmaan korkein kohta 54 m (Raunamägi)",
+    "lahde1": "en.wikipedia Saaremaa: 54 m",
+    "lahde2": "Visit Estonia / Loodusega Koos (hakutulos): Raunamägi 54 m",
+    "huom": "PeakVisor antaa 65 m; kaksi lähdettä sanoo 54 m, käytetään sitä."
+   },
+   {
+    "vaite": "Saaret lepäävät kalkkikivellä",
+    "lahde1": "en.wikipedia Saaremaa: tasangot kalkkikiven päällä",
+    "lahde2": "en.wikipedia Hiiumaa: paleotsooinen kalkkikivi, jäätikköperäisten sedimenttien peitossa",
+    "huom": "Molemmat Wikipedian artikkeleita; riippumatonta toista lähdettä ei hakutuloksissa."
+   },
+   {
+    "vaite": "Maa kohoaa noin 2-3 mm vuodessa",
+    "lahde1": "en.wikipedia Saaremaa: noin 2 mm/v",
+    "lahde2": "Eesti Maaülikooli tasoitustutkimus (hakutulos): Hiiumaalla jopa noin 2,8 mm/v",
+    "huom": "Vaihteluväli 2-3 mm eri paikoissa."
+   },
+   {
+    "vaite": "Saaret nousseet merestä jääkauden jälkeen",
+    "lahde1": "en.wikipedia Saaremaa: ensimmäiset osat yli 10 000 vuotta sitten",
+    "lahde2": "en.wikipedia Hiiumaa: noin 8 500 vuotta sitten",
+    "huom": "Vuosilukuja ei käytetä vastauksessa, koska saaret nousivat eri aikoina."
+   }
+  ],
+  "kohteet": [
+   "est/itameri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Tallinnasta tuli hansakaupunki?",
+  "vastaus": "Koska se sijaitsi Suomenlahden rannalla keskeisellä kauppareitillä Novgorodin ja Länsi-Euroopan välillä. Kaupunki sai Lyypekin kaupunkioikeudet vuonna 1248, mikä sitoi sen saksalaisten kauppakaupunkien verkostoon, ja liittyi Hansaan 1200-luvun lopulla. Hansakaupunkina Tallinna varakastui, ja sen kauppiaat rakensivat puutalonsa uudelleen kivestä. Vanhakaupunki on Unescon maailmanperintökohde, ja se kertoo keskiaikaisesta kauppakaupungista.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Tallinn",
+    "title": "Tallinn - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/L%C3%BCbeck_law",
+    "title": "Lübeck law - Wikipedia (hakutulos)"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/822",
+    "title": "Historic Centre (Old Town) of Tallinn - UNESCO World Heritage Centre (hakutulos)"
+   },
+   {
+    "url": "https://worldatlas.com/articles/historic-city-of-tallinn-estonia.html",
+    "title": "Historic City Of Tallinn, Estonia - WorldAtlas (hakutulos)"
+   },
+   {
+    "url": "https://kupi.com/en/explore/estonia/tallinn/history",
+    "title": "Tallinn history - Kupi (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Sijainti Suomenlahden rannalla keskeisellä kauppareitillä Novgorodin ja Länsi-Euroopan välillä",
+    "lahde1": "en.wikipedia Tallinn: strateginen sijainti, reitti Novgorodin ja Länsi-Euroopan välillä, Suomenlahden merkittävin keskiaikainen satama",
+    "lahde2": "UNESCO / Kupi / WorldAtlas (hakutulos): kauppareittien risteyskohta Länsi-Euroopan, Pohjois-Euroopan ja Venäjän välillä",
+    "huom": ""
+   },
+   {
+    "vaite": "Lyypekin kaupunkioikeudet vuonna 1248",
+    "lahde1": "en.wikipedia Tallinn: 1248",
+    "lahde2": "Lübeck law / Kupi (hakutulos): 1248",
+    "huom": ""
+   },
+   {
+    "vaite": "Liittyi Hansaan 1200-luvun lopulla",
+    "lahde1": "en.wikipedia Tallinn: 1285",
+    "lahde2": "WorldAtlas (hakutulos): 1285; Kupi: 'late 13th century'",
+    "huom": "Hakutulokset eroavat täsmällisestä vuodesta (osa antaa 1248), joten vastauksessa vain 'lopulla'. Vuosi 1285 on kirjattu vain Wikipediaan ja WorldAtlasiin."
+   },
+   {
+    "vaite": "Vanhakaupunki Unescon maailmanperintökohde",
+    "lahde1": "en.wikipedia Tallinn: 1997",
+    "lahde2": "UNESCO (hakutulos)",
+    "huom": "UNESCOn sivun WebFetch antoi 403."
+   },
+   {
+    "vaite": "Lyypekin oikeudet sitoivat kaupungin saksalaisten kauppakaupunkien verkostoon; kauppiaat rakensivat puutalot uudelleen kivestä 1400-luvulla",
+    "lahde1": "en.wikipedia Tallinn: Lyypekin oikeudet 1248, sitoi saksalaiseen kauppiasverkostoon",
+    "lahde2": "UNESCO / WorldAtlas (hakutulos): kauppiaiden puutalot uudelleen kivestä, uusi kaupungintalo",
+    "huom": "Kivestä rakentaminen 1400-luvulla vain hakutuloksessa (WorldAtlas); vastauksessa ei mainita vuosisataa."
+   }
+  ],
+  "kohteet": [
+   "est/suomenlahti"
+  ]
+ },
+ {
+  "kysymys": "Kuinka syvä Suomenlahti on?",
+  "vastaus": "Keskimäärin noin 38 metriä ja syvimmillään 123 metriä. Itämeren keskisyvyys on 54 metriä ja syvin kohta 459 metriä, joten Suomenlahti on verrattain matala. Lahti on Itämeren itäisin haara ja pinta-alaltaan noin 29 500 neliökilometriä. Matalaan lahteen kertyy ravinteita herkästi, siksi sen tila heijastaa koko meren ongelmia.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://itameri.fi/en/nature-and-how-it-changes/the-baltic-sea-in-numbers/",
+    "title": "The Baltic Sea in numbers - Itameri.fi (Suomen ympäristökeskus ym.)"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Suomenlahti",
+    "title": "Suomenlahti - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Finland",
+    "title": "Gulf of Finland - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Keskisyvyys noin 38 m (37-38)",
+    "lahde1": "Itameri.fi: keskisyvyys 37 m",
+    "lahde2": "fi.wikipedia / en.wikipedia Suomenlahti: 38 m",
+    "huom": "Lähteet 37 ja 38; 'noin 38'."
+   },
+   {
+    "vaite": "Syvin kohta 123 m",
+    "lahde1": "Itameri.fi: 123 m",
+    "lahde2": "fi.wikipedia Suomenlahti: 123 m",
+    "huom": "en.wikipedia antaa 115 m, mutta kaksi lähdettä (mukaan lukien viranomaisen Itameri.fi) antaa 123 m."
+   },
+   {
+    "vaite": "Itämeren keskisyvyys 54 m ja syvin kohta 459 m",
+    "lahde1": "Itameri.fi",
+    "lahde2": "-",
+    "huom": "Vain Itameri.fi; luvut ovat laajalti tunnettuja (Landsortin syvänne 459 m)."
+   },
+   {
+    "vaite": "Pinta-ala noin 29 500 km2",
+    "lahde1": "Itameri.fi: 29 498 km2",
+    "lahde2": "fi.wikipedia: noin 29 500 km2; en.wikipedia: 30 000 km2",
+    "huom": ""
+   },
+   {
+    "vaite": "Itämeren itäisin haara",
+    "lahde1": "fi.wikipedia Suomenlahti",
+    "lahde2": "Nostokortin teksti ja en.wikipedia",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "est/suomenlahti"
+  ]
+ },
+ {
+  "kysymys": "Mitä järven jäällä tapahtui vuonna 1242?",
+  "vastaus": "Novgorodin ja Vladimir-Suzdalin joukot voittivat Liivinmaan ritarikunnan ja Tartun piispan joukot 5. huhtikuuta 1242. Novgorodilaisia johti ruhtinas Aleksanteri Nevski. Voitto pysäytti ritarikunnan etenemisen itään. Tarina ritareista, jotka hukkuivat jään murtuessa, ei löydy varhaisimmista kronikoista, ja historioitsijat epäilevät sitä. Tarkka taistelupaikka tiedetään huonosti, koska esineitä ei ole löydetty.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Battle_on_the_Ice",
+    "title": "Battle on the Ice - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Peipsijärvi",
+    "title": "Peipsijärvi - Wikipedia"
+   },
+   {
+    "url": "https://warhistory.org/%40msw/article/battle-of-lake-peipus-5-april-1242",
+    "title": "Battle of Lake Peipus, 5 April 1242 - Warhistory.org (hakutulos)"
+   },
+   {
+    "url": "https://www.prlib.ru/en/node/619144",
+    "title": "The Battle on Lake Peipus - Presidential Library, Russia (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Päivämäärä 5. huhtikuuta 1242; osapuolet Novgorod ja Vladimir-Suzdal vs. Liivinmaan ritarikunta ja Tartun piispakunta; johtaja Aleksanteri Nevski",
+    "lahde1": "en.wikipedia Battle on the Ice",
+    "lahde2": "Warhistory.org ja prlib.ru (hakutulos)",
+    "huom": "Päivämäärä on vanhan ajanlaskun mukaan; Venäjän kirjaston mukaan gregoriaanisessa 12. huhtikuuta."
+   },
+   {
+    "vaite": "Novgorodin voitto; pysäytti ritarikunnan etenemisen itään",
+    "lahde1": "en.wikipedia: Novgorod-Vladimir-voitto, ritarikunnan laajentuminen pysähtyi",
+    "lahde2": "fi.wikipedia Peipsijärvi: taistelu pysäytti saksalaisen ritarikunnan etenemisen Novgorodin alueelle",
+    "huom": ""
+   },
+   {
+    "vaite": "Jään murtumisen tarina ei ole varhaisimmissa kronikoissa; historioitsijat epäilevät",
+    "lahde1": "en.wikipedia: ei ensisijaista lähdettä; kronikat kertovat kaatuneiden makaavan ruohikolla; Ostrowski",
+    "lahde2": "Warhistory.org (hakutulos): taistelun merkitys on 1900-luvun tuotetta; hakutulos: kronikka kertoi rannan ohuen jään pettävän",
+    "huom": "Aihe on kiistanalainen: vanhin kronikka tuntee jään pettämisen yksityiskohdan, mutta historioitsijat epäilevät koko ritarien hukkumiskuvaa; vastauksessa sanamuoto 'epäilevät'. Taistelupaikka on epävarma (1958-59 vedenalaiset haut eivät löytäneet esineitä)."
+   },
+   {
+    "vaite": "Tarkka taistelupaikka tiedetään huonosti; esineitä ei löydetty",
+    "lahde1": "en.wikipedia Battle on the Ice: 1958-59 vedenalaiset haut Peipsin pohjoisosassa eivät löytäneet esineitä; vanhimmat kronikat sanovat vain 'järven luona'",
+    "lahde2": "-",
+    "huom": "Vain yksi lähde; muotoiltu varovasti ('tiedetään huonosti')."
+   }
+  ],
+  "kohteet": [
+   "est/peipsi"
+  ]
+ },
+ {
+  "kysymys": "Mihin Peipsin vedet lopulta laskevat?",
+  "vastaus": "Suomenlahteen, Narvajoen kautta. Joki on noin 77 kilometriä pitkä, ja se alkaa Peipsin koillispäästä lähellä Vasknarvaa ja laskee Narvanlahteen. Narvajoki on Viron suurin joki virtaamaltaan, ja siitä on tullut myös osa Viron ja Venäjän rajaa. Peipsi kuuluu siis Narvan vesistöön, ja sen vedet päätyvät lopulta Itämereen.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Narva_(river)",
+    "title": "Narva (river) - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Peipsijärvi",
+    "title": "Peipsijärvi - Wikipedia"
+   },
+   {
+    "url": "https://www.encyclopedia.com/places/commonwealth-independent-states-and-baltic-nations/cis-and-baltic-physical-geography/narva",
+    "title": "Narva - Encyclopedia.com (hakutulos)"
+   },
+   {
+    "url": "https://lake.peipsi.org/trade/dealings?lang=en",
+    "title": "Trade and Communications in the Region of the Pskov-Peipsi Lake (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Peipsin vedet laskevat Narvajoen kautta Suomenlahteen",
+    "lahde1": "en.wikipedia Narva (river)",
+    "lahde2": "fi.wikipedia Peipsijärvi: Narvajoki laskee Suomenlahteen",
+    "huom": "Nostokortin teksti sanoo samaa."
+   },
+   {
+    "vaite": "Narvajoen pituus noin 77 km; alkaa Vasknarvan seudulta; laskee Narvanlahteen",
+    "lahde1": "en.wikipedia Narva (river): 77 km",
+    "lahde2": "Encyclopedia.com (hakutulos): noin 50 mailia (80 km)",
+    "huom": ""
+   },
+   {
+    "vaite": "Viron suurin joki virtaamaltaan; muodostaa Viron ja Venäjän rajan",
+    "lahde1": "en.wikipedia Narva (river)",
+    "lahde2": "fi.wikipedia Peipsijärvi: valtionraja kulkee osittain Narvajoen syvänneuraa pitkin",
+    "huom": "Raja kulkee järven keskellä ja Narvajoella."
+   }
+  ],
+  "kohteet": [
+   "est/peipsi"
+  ]
+ },
+ {
+  "kysymys": "Mikä Merenkurkku on?",
+  "vastaus": "Merenkurkku on Pohjanlahden kapein kohta Suomen ja Ruotsin välissä. Se erottaa pohjoisen Perämeren eteläisestä Selkämerestä. Mantereiden väli on noin 80 kilometriä, mutta ulkosaarten välillä vain noin 25. Merenkurkun saaristo on Unescon maailmanperintökohde vuodesta 2006, yhdessä Ruotsin Korkean rannikon kanssa, koska maa kohoaa siellä erityisen nopeasti.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kvarken",
+    "title": "Kvarken - Wikipedia"
+   },
+   {
+    "url": "https://www.metsa.fi/en/lands-and-waters/protected-areas/nature-reserves/kvarken-archipelago-world-heritage-site/",
+    "title": "Kvarken Archipelago World Heritage Site - Metsähallitus"
+   },
+   {
+    "url": "https://www.kvarken.org/en/history/",
+    "title": "Kvarken Council (hakutulos)"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Maankohoaminen",
+    "title": "Maankohoaminen - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kapein kohta Pohjanlahdella; erottaa Perämeren ja Selkämeren",
+    "lahde1": "en.wikipedia Kvarken",
+    "lahde2": "Kvarken Council / Vaasa (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Mantereiden väli noin 80 km, ulkosaarten väli noin 25 km",
+    "lahde1": "en.wikipedia Kvarken: noin 80 km ja noin 25 km",
+    "lahde2": "Kvarken Council (hakutulos): noin 80 km ja 25 km",
+    "huom": "Muita lukuja (60-70 km) esiintyy tietyille ylityspaikoille, siksi 'noin'."
+   },
+   {
+    "vaite": "Unescon maailmanperintökohde vuodesta 2006 yhdessä Ruotsin Korkean rannikon kanssa",
+    "lahde1": "Metsähallitus: 2006, yhdessä Korkean rannikon kanssa",
+    "lahde2": "en.wikipedia Kvarken: Suomen osa 2000, laajennus 2006",
+    "huom": "en.wikipedia antaa 2000, mutta Metsähallitus ja hakutulokset (Unescon kuvaus) 2006; käytetty 2006. Muutos: jos tarkkuutta halutaan, voi jättää vuoden pois."
+   },
+   {
+    "vaite": "Maa kohoaa erityisen nopeasti",
+    "lahde1": "en.wikipedia Kvarken: lähes 1 cm/v",
+    "lahde2": "fi.wikipedia Maankohoaminen: Oulu-Kemi noin 9 mm/v",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "fin/pohjanlahti",
+   "swe/pohjanlahti"
+  ]
+ },
+ {
+  "kysymys": "Miksi Pohjanlahden rannat nousevat yhä?",
+  "vastaus": "Koska jääkauden mannerjää painoi maankuoren alas, eikä se ole vielä palautunut. Jää oli täällä noin kolme kilometriä paksu. Pohjanlahdella maa kohoaa yhä noin 8–9 millimetriä vuodessa, eli lähes metrin sadassa vuodessa. Merenkurkun saaristo kasvaa vuosi vuodelta uutta maata. Maankuori joustaa siis vielä tuhansia vuosia jään poistumisen jälkeen.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://science.nasa.gov/earth/earth-observatory/uplift-underway-in-finlands-kvarken-archipelago-153740/",
+    "title": "Uplift Underway in Finland's Kvarken Archipelago - NASA Earth Observatory (hakutulos)"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Maankohoaminen",
+    "title": "Maankohoaminen - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Kvarken",
+    "title": "Kvarken - Wikipedia"
+   },
+   {
+    "url": "https://archive.geophysica.fi/pdf/geophysica_2015_50_2_049_poutanen.pdf",
+    "title": "Poutanen, Geophysica 2015 (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Syy: mannerjään paino painoi maankuorta alas; kuori palautuu hitaasti",
+    "lahde1": "fi.wikipedia Maankohoaminen",
+    "lahde2": "NASA Earth Observatory (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Jää oli noin 3 km paksu",
+    "lahde1": "NASA Earth Observatory (hakutulos): noin 3 000 m",
+    "lahde2": "Vaasan alueen tutkimus (hakutulos): noin 3 000 m",
+    "huom": "Nostokortin teksti sanoo maan painuneen 'lähes kilometrin', mikä ei vastaa NASAn arviota (yli 500 m alas Itämeren alla); tätä lukua ei käytetä. Korttitekstin lukua kannattaa tarkistaa."
+   },
+   {
+    "vaite": "Nousu noin 8-9 mm/v, lähes metri sadassa vuodessa; Merenkurkun alue kasvaa noin 1 km2 vuodessa",
+    "lahde1": "fi.wikipedia Maankohoaminen: Oulu-Kemi noin 9 mm/v; Merenkurkku kasvaa noin 1 km2/v",
+    "lahde2": "Metsähallitus (hakutulos) 8 mm/v; NASA (hakutulos) 9 mm/v",
+    "huom": "Eri lähteet 8-10 mm/v, siksi 'noin 8-9 mm'. 'Lähes metri sadassa vuodessa' on laskettu (9 mm x 100 = 90 cm). Nostokortin '80 cm vuosisadassa' vastaa 8 mm:ää."
+   }
+  ],
+  "kohteet": [
+   "fin/pohjanlahti"
+  ]
+ },
+ {
+  "kysymys": "Mikä joki laskee Suomenlahden pohjukkaan?",
+  "vastaus": "Neva. Se on vain 74 kilometriä pitkä, mutta virtaamaltaan yksi Euroopan suurimmista joista. Neva lähtee Laatokasta, virtaa Pietarin läpi ja laskee Nevanlahteen Suomenlahden itäpäähän. Keskivirtaama on noin 2 500 kuutiometriä sekunnissa. Se tuo lahteen niin paljon makeaa vettä, että Nevanlahden vesi on lähes makeaa. Pietari on rakennettu Nevan suistoon.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Neva",
+    "title": "Neva - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Nevajoki",
+    "title": "Nevajoki - Wikipedia"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Suomenlahti",
+    "title": "Suomenlahti - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Gulf_of_Finland",
+    "title": "Gulf of Finland - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Neva on 74 km pitkä, lähtee Laatokasta ja laskee Pietarissa Suomenlahteen",
+    "lahde1": "en.wikipedia Neva: 74 km",
+    "lahde2": "fi.wikipedia Nevajoki: 74 km",
+    "huom": ""
+   },
+   {
+    "vaite": "Virtaama noin 2 500 m3/s; Euroopan neljänneksi suurin joki virtaaman mukaan",
+    "lahde1": "en.wikipedia Neva: 2 628 (infolaatikko) / 2 500 (teksti); neljäs Volgan, Tonavan ja Reinin jälkeen",
+    "lahde2": "fi.wikipedia Nevajoki: 2 504; Euroopan neljänneksi suurin",
+    "huom": ""
+   },
+   {
+    "vaite": "Suomenlahden itäosan vesi on lähes makeaa",
+    "lahde1": "en.wikipedia Gulf of Finland: Neva noin 2/3 valumasta; pintasuolaisuus 0,2-0,3 promillea (kyseinen kappale koskee itäosaa)",
+    "lahde2": "fi.wikipedia Suomenlahti: vesi on makeampaa idässä Nevan, Kymijoen, Narvan ja Lugan tuodessa vettä",
+    "huom": "en.wikipedia lukuja ei käytetä; 'lähes makeaa' on tulkinta Nevanlahden ja itäosan suolaisuudesta."
+   }
+  ],
+  "kohteet": [
+   "fin/suomenlahti"
+  ]
+ },
+ {
+  "kysymys": "Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?",
+  "vastaus": "Koska Suomenlahti on matala, ja sen vesi vaihtuu hitaasti, mutta rannoilta ja Nevasta tulee paljon ravinteita. Keskisyvyys on vain noin 38 metriä. Ravinteet rehevöittävät vettä, ja pohjaan aiemmin kertyneet ravinteet pitävät rehevöitymistä yllä vielä nytkin. Siksi kesäisin lahdessa on runsaasti sinilevää. Suomenlahti on yksi Itämeren rehevöityneimmistä osista.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://fi.wikipedia.org/wiki/Suomenlahti",
+    "title": "Suomenlahti - Wikipedia"
+   },
+   {
+    "url": "https://www.sttinfo.fi/tiedote/70452235/meriympariston-tila-arvio-suomen-merialueiden-tilassa-pienia-parannuksia-kokonaiskuva-edelleen-heikko?lang=fi",
+    "title": "Meriympäristön tila-arvio 2024 - Suomen ympäristökeskus (Syke), tiedote"
+   },
+   {
+    "url": "https://itameri.fi/en/nature-and-how-it-changes/the-baltic-sea-in-numbers/",
+    "title": "The Baltic Sea in numbers - Itameri.fi"
+   },
+   {
+    "url": "https://www.helsinki.fi/fi/uutiset/elaimet/rehevoityminen-ja-oljypaastot-kurittavat-suomenlahden-silakkaa",
+    "title": "Rehevöityminen ja öljypäästöt kurittavat Suomenlahden silakkaa - Helsingin yliopisto"
+   },
+   {
+    "url": "https://journal.fi/tt/article/download/534/451/2246",
+    "title": "Tieteessä tapahtuu 5/2008 (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Lahti on matala (keskisyvyys noin 38 m)",
+    "lahde1": "fi.wikipedia Suomenlahti: 38 m",
+    "lahde2": "Itameri.fi: 37 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Suomenlahti on Itämeren rehevöitynein osa / ravinnekuormitetuin",
+    "lahde1": "fi.wikipedia Suomenlahti: Itämeren ravinnekuormitetuin osa, kesäiset leväkukinnat, Venäjän osuus suurin",
+    "lahde2": "Hakutulokset (Syke-tiedote ja tutkimus): rehevöitynein vesiallas",
+    "huom": "Syken tiedote sanoo, että Suomenlahdella pohjaan varastoituneet ravinteet pitävät rehevyyttä yllä."
+   },
+   {
+    "vaite": "Menneinä vuosina mereen päätyneet ravinteet pitävät rehevöitymistä yllä",
+    "lahde1": "Syke 2024 -tiedote (sttinfo)",
+    "lahde2": "Hakutulos (Helsingin yliopisto / Syke-yhteenveto): sisäinen kuormitus Suomenlahdella",
+    "huom": ""
+   },
+   {
+    "vaite": "Vesi vaihtuu hitaasti; Neva ja Pietari tuovat ravinteita",
+    "lahde1": "fi.wikipedia Suomenlahti: Venäjän osuus ravinnekuormasta suurin; Neva",
+    "lahde2": "Hakutulos: Pietari ja Neva suurimpia ulkoisia lähteitä (puolet fosforista), Tieteessä tapahtuu: Itämeren viipymä jopa 25 vuotta",
+    "huom": "Fosforiosuutta (puolet) ei käytetä vastauksessa: yksi hakutulos ilman suoraa vahvistusta. 'Vesi vaihtuu hitaasti' on Itämeren yleisestä viipymästä, ei Suomenlahden erillisestä luvusta."
+   }
+  ],
+  "kohteet": [
+   "fin/suomenlahti"
+  ]
+ },
+ {
+  "kysymys": "Miksi saimaannorppa elää vain täällä?",
+  "vastaus": "Koska se jäi eristyksiin Saimaalle jääkauden jälkeen. Maa kohosi, ja norppa jäi järveen yli 9 000 vuotta sitten. Siitä on kehittynyt omanlaisensa norppa, joka elää nykyään vain Saimaalla: yksilöitä on noin 500. Norppa synnyttää poikasensa rannoille kinostuneisiin lumikinoksiin, joten lumi ja jää ovat sen tulevaisuudelle ratkaisevia.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Saimaa_ringed_seal",
+    "title": "Saimaa ringed seal - Wikipedia"
+   },
+   {
+    "url": "https://julkaisut.metsa.fi/assets/pdf/lp/Muut/Saimaannorppa_tietopaketti_2022.pdf",
+    "title": "Saimaannorppa tietopaketti 2022 - Metsähallitus (hakutulos)"
+   },
+   {
+    "url": "https://www.verkkouutiset.fi/a/saimaannorppia-on-nyt-enemman-kuin-vuosiin/",
+    "title": "Saimaannorppia on nyt enemmän kuin vuosiin - Verkkouutiset (Metsähallituksen kanta-arvio 2025, hakutulos)"
+   },
+   {
+    "url": "https://fi.wikipedia.org/wiki/Maankohoaminen",
+    "title": "Maankohoaminen - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Norppa jäi eristyksiin maankohoamisen seurauksena jääkauden jälkeen, yli 9 000 vuotta sitten",
+    "lahde1": "en.wikipedia Saimaa ringed seal: noin 9 500 vuotta, maankohoaminen",
+    "lahde2": "Metsähallituksen tietopaketti 2022 (hakutulos): yli 9 000 vuotta sitten maankohoamisen seurauksena",
+    "huom": "Metsähallituksen mukaan norppa erosi Laatokan norpista; Wikipedian mukaan muista norpakannoista. Vastauksessa vain 'jäi eristyksiin'. Laatokannorppa (Pusa hispida ladogensis) elää Laatokalla, joten 'vain Saimaalla' koskee nimenomaan saimaannorppaa."
+   },
+   {
+    "vaite": "Kanta noin 500 yksilöä",
+    "lahde1": "en.wikipedia: noin 500",
+    "lahde2": "Metsähallituksen kanta-arvio 2025 (hakutulos, Verkkouutiset): 530",
+    "huom": "Luku vaihtelee vuosittain; 'noin 500'."
+   },
+   {
+    "vaite": "Pesii lumikinoksiin rannoilla; lumi ja jää ratkaisevia",
+    "lahde1": "en.wikipedia: snow lairs, ilmastonmuutos vähentää lunta ja jäätä",
+    "lahde2": "Metsähallituksen tiedot (hakutulos): ilmastonmuutoksen aiheuttama pesintäolosuhteiden heikkeneminen suurin uhka",
+    "huom": ""
+   },
+   {
+    "vaite": "Elää vain Saimaalla",
+    "lahde1": "en.wikipedia: vain Saimaalla",
+    "lahde2": "Metsähallitus (hakutulos): esiintyy vain Saimaan järvialtaassa",
+    "huom": "Vuonna 2025 on esitetty luokittelua omaksi lajikseen (Pusa saimensis), vain Wikipedia; ei käytetty."
+   }
+  ],
+  "kohteet": [
+   "fin/saimaa"
+  ]
+ }
+]

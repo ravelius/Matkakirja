@@ -3,7 +3,10 @@
  * voimassa oleva linjaus, päätöshistoria on sanatarkasti kansiossa
  * docs/raamattu-loki/. Nämä vartiot pitävät jaon koossa:
  *   1. jokainen Raamatun "Loki: docs/raamattu-loki/<tiedosto> #<otsikko>"
- *      -viite osoittaa olemassa olevaan tiedostoon ja otsikkoon;
+ *      -viite osoittaa olemassa olevaan tiedostoon ja otsikkoon, ja
+ *      jokainen docs/raamattu-loki/-polku olemassa olevaan tiedostoon
+ *      (jäsennys 14 lukuun 19.10.2026: "Loki:"-listat poistuivat
+ *      Raamatusta, historia on vain lokissa; määrävaatimusta ei ole);
  *   2. lokitiedostojen otsikot ovat ## -tasolla ja koodin viittaamat
  *      PAATOKSET-sarjat löytyvät lokista (viittaukset eivät katkea);
  *   3. tools/raamattu-kirjaa.mjs kirjoittaa kohdan sovitussa muodossa
@@ -17,7 +20,7 @@ import { existsSync, mkdtempSync, mkdirSync, readFileSync, statSync, writeFileSy
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { RAAMATTU } from '../js/tyohuone-raamattu.js';
-import { LOKI, kirjaa, lokikohta, suomenAika } from '../tools/raamattu-kirjaa.mjs';
+import { kirjaa, lokikohta, lokipolku, rivita, suomenAika } from '../tools/raamattu-kirjaa.mjs';
 
 const JUURI = new URL('../', import.meta.url);
 const LOKIKANSIO = new URL('docs/raamattu-loki/', JUURI);
@@ -45,7 +48,14 @@ test('jokainen Raamatun lokiviite osoittaa olemassa olevaan tiedostoon ja otsikk
       }
     }
   }
-  assert.ok(viitteita >= 300, `lokiviitteitä vain ${viitteita} — jako näyttää puretulta`);
+  // Jäsennys 19.10.2026: määrää ei vaadita, mutta jokainen polku on elossa.
+  const kaikki = RAAMATTU.osiot.flatMap((o) => o.kohdat).join('\n') + RAAMATTU.johdanto;
+  const polut = [...kaikki.matchAll(/docs\/raamattu-loki\/([\w.-]+\.md)/g)].map((m) => m[1]);
+  assert.ok(kaikki.includes('docs/raamattu-loki/'), 'Raamattu ei viittaa päätöslokiin');
+  for (const p of new Set(polut)) {
+    assert.ok(existsSync(new URL(p, LOKIKANSIO)), `Raamattu viittaa lokiin ${p}, jota ei ole`);
+  }
+  assert.ok(viitteita >= 0);
 });
 
 test('koodin viittaamat KARTTAUUDISTUKSEN PAATOKSET -sarjat löytyvät lokista', () => {
@@ -79,10 +89,25 @@ test('raamattu-kirjaa kirjoittaa kohdan sovitussa muodossa lokin loppuun', () =>
   assert.throws(() => lokikohta('', 'teksti'));
   const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
   mkdirSync(join(juuri, 'docs/raamattu-loki'), { recursive: true });
+  const LOKI = lokipolku(new Date('2026-09-20T15:05:00Z'));
+  assert.equal(LOKI, 'docs/raamattu-loki/paatokset-2026-09.md');
   writeFileSync(join(juuri, LOKI), 'Alkurivi.\n');
   const rivi = kirjaa('KOE 2', 'toinen', { juuri, nyt: new Date('2026-09-20T15:05:00Z') });
   assert.equal(rivi, '## KOE 2 (20.9.2026 klo 18.05)');
   assert.equal(readFileSync(join(juuri, LOKI), 'utf8'), 'Alkurivi.\n\n## KOE 2 (20.9.2026 klo 18.05)\n\ntoinen\n');
+});
+
+test('raamattu-kirjaa luo puuttuvan kuukausitiedoston ja rivittää pitkän tekstin', () => {
+  assert.equal(lokipolku(new Date('2026-10-31T23:30:00Z')), 'docs/raamattu-loki/paatokset-2026-11.md');
+  const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
+  const pitka = Array.from({ length: 400 }, (_, i) => `sana${i}`).join(' ');
+  kirjaa('PITKA', pitka, { juuri, nyt: new Date('2026-10-15T10:00:00Z') });
+  const sisalto = readFileSync(join(juuri, 'docs/raamattu-loki/paatokset-2026-10.md'), 'utf8');
+  const rivit = sisalto.split('\n');
+  assert.ok(rivit.filter((l) => l.startsWith('## ')).length === 1, 'yksi kirjaus');
+  assert.ok(Math.max(...rivit.map((l) => l.length)) <= 200, 'rivit enintään 200 merkkiä');
+  assert.equal(rivit.filter((l) => l.startsWith('sana')).join(' '), pitka, 'sisältö säilyy');
+  assert.equal(rivita('lyhyt teksti'), 'lyhyt teksti');
 });
 
 test('Raamattu pysyy linjauksena, ei lokina (koko)', () => {

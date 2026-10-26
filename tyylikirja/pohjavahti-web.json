@@ -1,0 +1,69 @@
+{
+ "_ohje": "Web-pohjavahdin lähtötaso (tools/pohjavahti.mjs). Määrät saavat vain pienentyä; kasvu = pinta pohjien ohi → Päätoimittajalle (omistaja). --kirjaa vain omistajan päätöksellä tai siirron jälkeen.",
+ "tiedostot": {
+  "css/aikajana.css": {
+   "vari": 280,
+   "siirtyma": 49
+  },
+  "css/fokuskohteet.css": {
+   "vari": 99,
+   "siirtyma": 4
+  },
+  "css/fokusnosto.css": {
+   "vari": 79,
+   "siirtyma": 0
+  },
+  "css/fokusvirta.css": {
+   "vari": 190,
+   "siirtyma": 11
+  },
+  "css/ihmisen-tutkimus.css": {
+   "vari": 60,
+   "siirtyma": 6
+  },
+  "css/kaupunkinosto.css": {
+   "vari": 33,
+   "siirtyma": 0
+  },
+  "css/kohtaamiskuvat.css": {
+   "vari": 53,
+   "siirtyma": 1
+  },
+  "css/kuvasarja.css": {
+   "vari": 6,
+   "siirtyma": 0
+  },
+  "css/linssikehys.css": {
+   "vari": 0,
+   "siirtyma": 2
+  },
+  "css/nostokuva.css": {
+   "vari": 13,
+   "siirtyma": 0
+  },
+  "css/pohjat.css": {
+   "vari": 0,
+   "siirtyma": 0
+  },
+  "css/radio.css": {
+   "vari": 230,
+   "siirtyma": 3
+  },
+  "css/saapumistraileri.css": {
+   "vari": 14,
+   "siirtyma": 3
+  },
+  "css/sahke.css": {
+   "vari": 32,
+   "siirtyma": 2
+  },
+  "css/satelliitti.css": {
+   "vari": 98,
+   "siirtyma": 3
+  },
+  "css/styles.css": {
+   "vari": 1689,
+   "siirtyma": 90
+  }
+ }
+}

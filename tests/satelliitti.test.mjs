@@ -169,13 +169,20 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
    * valokuvanäkymässä ja Livian astronauttiasun leijunta ovat kumpikin
    * loputtomia, mutta molemmat ovat pelkkä transform pallon PÄÄLLÄ
    * olevassa kerroksessa — ei pallon piirrossa eikä pisteissä. Muut
-   * loputtomat animaatiot ovat yhä kiellettyjä, ja tämä mitta on se,
-   * joka pitää listan lyhyenä: uusi infinite ei mene läpi ilman että
-   * se kirjataan tähän.
+   * loputtomat animaatiot ovat yhä kiellettyjä. Robottikäden versiossa
+   * leijunnan korvaa Pulun oma hento keinunta kiinteän jalkatuen päällä;
+   * se ei liikuta palloa, varren kerrosta eikä pisteitä.
+   *
+   * ISS:N KYYTI (omistaja 28.9.2026, LIVE-merkki; Linssisepän suositus
+   * luku 6): LIVE-pillerin punainen piste sykkii 0,9 s:n välein ja
+   * Cupolan ulko-osat ja heijastus huojuvat hitaasti — kaikki kolme vain
+   * kyydin omassa kerroksessa (.iss-kyyti), eivät pisteissä.
    */
   const ilmanLeijuntaa = tyyli
     .replace(/animation:\s*satelliitti-pulu-leijuu[^;]*infinite/g, '')
-    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '');
+    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '')
+    .replace(/animation:\s*livia-eva-jalkatuessa[^;]*infinite/g, '')
+    .replace(/animation:\s*iss-kyyti-(live|ulko|heijastus)\b[^;]*infinite[^;]*/g, '');
   assert.ok(!/animation:[^;]*infinite/.test(ilmanLeijuntaa), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
   assert.match(tyyli, /prefers-reduced-motion[\s\S]*satelliitti-piste \{ animation: none/);
@@ -472,7 +479,8 @@ test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*position: fixed;[\s\S]*inset: 0/);
   // Oma kuvasuhde säilyy, loppu ruudusta tummaa.
   assert.match(tyyli, /\.satelliitti-kuva \{[\s\S]*max-width: 100%;[\s\S]*max-height: 100%/);
-  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
+  // Kuvaselain (omistaja 27.9.2026): läpikuultava, jotta pallo näkyy kuvan takana.
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: rgba\(4, 9, 7, 0\.7\)/);
 });
 
 test('✕ ja pienoiskuvat on kiinnitetty RUUTUUN, ei kuvaelementtiin', () => {
@@ -525,7 +533,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, pulukulma\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -554,7 +562,9 @@ test('selitetekstin napautus kelaa tekstin ylös, väkänen avaa lisätiedot', (
    */
   assert.match(lahde, /selite\.classList\.toggle\('satelliitti-selite-kiinni', kiinni\)/);
   assert.match(lahde, /selite\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); kelaaSelite\(\); \}\)/);
-  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: max-height 250ms/);
+  // Koko liukuu laatikon FLIP-animaationa (js/tiivistys.js, omistaja 28.9.2026); runko häivyttää.
+  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: opacity 250ms/);
+  assert.match(lahde, /animoiKoko\(selite, \(\) => \{/);
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{[\s\S]*max-height: 0/);
   // Otsikkorivi EI ole rungossa, joten se jää aina näkyviin.
   assert.match(lahde, /selite\.append\(seliteOtsikko, seliteRunko\)/);
@@ -737,9 +747,9 @@ test('galleria: hyvin pienet pikkukuvat, EI laskuria, nuolia eikä Vertaa-nappia
   assert.match(lahde, /satelliitti-nauha/);
   // Pikkukuvanauha lataa pienen tiedoston, ei koko ruudun kuvaa uudestaan.
   assert.match(lahde, /pikku\.src = toinen\.pikku \?\? toinen\.kuva/);
-  // Nuolinäppäimet toimivat yhä ilman nappeja.
-  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) nayta\(indeksi \+ 1\);/);
-  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) nayta\(indeksi - 1\);/);
+  // Nuolinäppäimet selaavat kuten pyyhkäisy (kuvaselain: galleria jatkuu naapurikohteeseen).
+  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) selaa\(1\);/);
+  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) selaa\(-1\);/);
   // Pikkukuvat ovat hyvin pieniä (aiempi 72×48 → 38×26).
   assert.match(tyyli, /\.satelliitti-pikku \{[\s\S]*width: 38px;[\s\S]*height: 26px/);
 });
@@ -798,9 +808,12 @@ test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
       const nasaKuva = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/;
       const nasaPikku = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/;
       const omaAmpari = /^https:\/\/media\.matkakirja\.app\/linssit\/astronautin-kamera\/.*~(large|small)\.jpg$/;
-      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva), `${h.id}: outo kuva-osoite`);
-      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku), `${h.id}: outo pikku-osoite`);
-      assert.match(h.sivu, /^https:\/\/images\.nasa\.gov\/details\//);
+      // Gatewayn kuvat (Pelikoodari 4.10.2026, tools/astronaut/gateway.mjs): eol.jsc.nasa.gov ja kuvasivu photo.pl.
+      const gwKuva = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/large|ISD\/highres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      const gwPikku = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/small|ISD\/lowres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva) || gwKuva.test(h.kuva), `${h.id}: outo kuva-osoite`);
+      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku) || gwPikku.test(h.pikku), `${h.id}: outo pikku-osoite`);
+      assert.match(h.sivu, /^https:\/\/(images\.nasa\.gov\/details\/|eol\.jsc\.nasa\.gov\/SearchPhotos\/photo\.pl\?)/);
       assert.ok(h.kuvaustapa, `${h.id}: kuvaustapa puuttuu`);
       // KUVATEKSTI ON TÄRKEIN: se on ainoa teksti, jonka pelaaja näkee.
       assert.ok(typeof h.teksti === 'string' && h.teksti.length >= 80,
@@ -828,6 +841,7 @@ test('kohteet ja kuvatekstit ovat työkalun käsin katsotussa luettelossa', () =
   assert.equal(tyokalu.siistiAika('2013-10-23T18:42:00Z'), '2013-10-23T18:42:00Z');
   assert.equal(tyokalu.kuvaustapa('iss074e0459342'), 'Kansainväliseltä avaruusasemalta');
   assert.equal(tyokalu.retkikunta('iss005e19024'), 'Retkikunta 5');
+  assert.equal(tyokalu.retkikunta('ISS026-E-26514'), 'Retkikunta 26');
   // Työkalu tarkistaa jokaisen osoitteen eikä arvaa niitä.
   assert.match(tyokalunLahde, /kuvaVastaa\(kuva\)/);
 });
@@ -1083,22 +1097,34 @@ test('linssin ikoni on kamera + Maan kaari, ei enää entinen piirros', () => {
   assert.match(LINSSI.ikoni, /<path d="M2 21c3.6-3.4 16.4-3.4 20 0"\/>/);
 });
 
-test('matkalaukun linssivalikko: oma varustekuva ja oma varasolu, ei jaettua taikalasia', () => {
+test('matkalaukun linssivalikko: oma varustekuva, vektorikuvake infrastruktuuri säilyy', () => {
   /*
    * Omistaja 15.9.2026: *"tee astronauttilinssille oma kuvake
-   * matkalaukkuun ... SVG inline"* → varasolu on oma vektorityyppi
+   * matkalaukkuun ... SVG inline"* → varasolu oli oma vektorityyppi
    * 'linssi-satelliitti', ei yleinen 'linssi'-taikalasi.
    * Omistaja 20.9.2026 klo 14.50: *"tee astronautin kameralle uusi
    * kuvake, missä on astronautti ja kamera"* → Fable valitsi
    * ehdokkaan 3 ja assets/varusteet/varuste-satelliitti.jpg on nyt
-   * olemassa, joten linssiLiuska pyytää kuvan kuten muillekin;
-   * vektorikuvake jää varasoluksi kuvan puuttuessa.
+   * olemassa.
+   *
+   * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): Linssit-
+   * näkymä piirtää rivit nyt js/kokoelmanakyma.js:n kautta (js/ui.js
+   * linssiRivi), joka pyytää samaa varustekuvaa tunnuksesta riippumatta
+   * eikä enää erottele satelliittia (aarreIkoni-pohjainen
+   * onSatelliitti-erikoiskäsittely ja sen automaattinen SVG-varasolu
+   * KUVAN LATAUSVIRHEESSÄ poistuivat yksinkertaistuksessa — kuva on
+   * paikallinen resurssi eikä riipu verkosta, joten latausvirhe on
+   * epätodennäköinen). Vektorikuvake (LINSSIN_IKONI, mapart.js
+   * 'linssi-satelliitti', .icon-satelliitti-kamera) jää silti
+   * infrastruktuuriin, koska muut kutsupaikat (esim. paivitaLinssiNappi)
+   * käyttävät yhä `linssi.ikoni`-kenttää suoraan.
    */
+  assert.match(LINSSI.ikoni, /<rect [^>]*rx="2.2"/, 'linssin oma ikoni säilyy');
+
   const ui = lue('../js/ui.js');
-  assert.match(ui, /onSatelliitti \? 'linssi-satelliitti' : 'linssi'/);
   // Varustekuva on linssin oma; hiomassa-linssi (21.9.2026) saa rekisterin
-  // ikonipaikan tai yhteisen hiomassa-kuvan (js/ui.js linssiLiuska).
-  assert.match(ui, /: `assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`;\s*const tiedot = \{ kuva, name: nimi \};/);
+  // ikonipaikan tai yhteisen hiomassa-kuvan (js/ui.js linssiRivi).
+  assert.match(ui, /`assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`/);
   assert.ok(existsSync(new URL('../assets/varusteet/varuste-satelliitti.jpg', import.meta.url)),
     'varuste-satelliitti.jpg puuttuu');
 
@@ -1195,8 +1221,12 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa astronautti-Pulun rinnalla'
    * oikeassa alareunassa näkyvillä"*. Minipulu on kortin oma opas,
    * vaikka pelin Pulu näkyy samalla kartalla astronauttiasussa.
    */
-  assert.match(lahde, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
-  assert.match(lahde, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
+  // Minipulu ja chatti ovat PULU-pohja (js/pohjat/pulu.js, Päätoimittaja 2.10.2026); satelliitti antaa etuliitteen.
+  const pulu = lue('../js/pohjat/pulu.js');
+  assert.match(lahde, /import \{ luoPohjaPulu \} from '\.\.\/pohjat\/pulu\.js'/);
+  assert.match(lahde, /luoPohjaPulu\(\{ luokka: 'satelliitti', aihe: kohde\.nimi, kysymykset: haeAstronautinKysymykset\(kohde\.tunnus\) \}\)/);
+  assert.match(pulu, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
+  assert.match(pulu, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
   assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
   /*
    * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
@@ -1215,7 +1245,8 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa astronautti-Pulun rinnalla'
   // Pienoiskuvat ovat vasemmassa alakulmassa ja enintään puolet leveydestä.
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*max-width: 50%/);
   // Hahmo puretaan kortin mukana: rAF ja kuuntelijat eivät jää elämään.
-  assert.match(lahde, /minipulu\?\.tuhoa\?\.\(\)/);
+  assert.match(pulu, /minipulu\?\.tuhoa\?\.\(\)/);
+  assert.match(lahde, /pulu\.tuhoa\(\);/);
 });
 
 test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () => {
@@ -1224,7 +1255,7 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
   for (const kohde of SATELLIITTI_KOHTEET) {
     assert.equal(haeAstronautinKysymykset(kohde.tunnus).length, 2, kohde.tunnus);
   }
-  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
+  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, SATELLIITTI_KOHTEET.length);
   /*
    * OMISTAJA 17.9.2026 klo 21.30 Suomen aikaa (Raamattu ASTRONAUTIN KAMERA
    * LISAYS 14): *"ainoastaan kysymykset ovat etukäteen mietittyjä, mutta
@@ -1235,23 +1266,24 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
    * ole enää satelliitti.js:n käytössä).
    */
   assert.doesNotMatch(lahde, /haeAstronautinVastaus/);
-  assert.match(lahde, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
-  assert.match(lahde, /lahetaKysymys\(pulunKentta\.value\)/);
+  const pulu = lue('../js/pohjat/pulu.js');
+  assert.match(pulu, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
+  assert.match(pulu, /lahetaKysymys\(pulunKentta\.value\)/);
   // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
-  assert.match(lahde, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
+  assert.match(pulu, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
   // Vapaa kenttä + lähetysnappi, ja kysymys menee SAMAA reittiä kuin kartalla.
-  assert.match(lahde, /html\('input', 'satelliitti-pulu-kentta'\)/);
-  assert.match(lahde, /polloUlkoinenKysymys\(teksti, \{/);
-  assert.match(lahde, /pulunSyote\.addEventListener\('submit'/);
+  assert.match(pulu, /html\('input', `\$\{L\}-pulu-kentta`\)/);
+  assert.match(pulu, /polloUlkoinenKysymys\(teksti, \{/);
+  assert.match(pulu, /pulunSyote\.addEventListener\('submit'/);
   // Striimin palat kirjoittuvat samaan kuplaan, ja hahmo reagoi.
-  assert.match(lahde, /onPala: \(kertynyt\) => \{/);
-  assert.match(lahde, /minipulu\?\.reagoi\?\.\(\)/);
+  assert.match(pulu, /onPala: \(kertynyt\) => \{/);
+  assert.match(pulu, /minipulu\?\.reagoi\?\.\(\)/);
   // Yksi pyyntö kerrallaan: lähetysnappi on lukossa vastauksen ajan.
-  assert.match(lahde, /pulunLaheta\.disabled = true;/);
+  assert.match(pulu, /pulunLaheta\.disabled = true;/);
   const kysymys = haeAstronautinKysymykset('etna')[0];
   assert.ok(haeAstronautinVastaus('etna', kysymys).vastaus.length > 0);
   // Kortti sulkeutuu X:stä ja kohteen vaihdosta (koko näkymä puretaan).
-  assert.match(lahde, /pulunSulku\.addEventListener\('click'/);
+  assert.match(pulu, /pulunSulku\.addEventListener\('click'/);
   assert.match(tyyli, /\.satelliitti-pulukortti\[hidden\] \{ display: none; \}/);
   // Chatti on tummalla pohjalla ja kentän fontti 16 px (iOS ei zoomaa).
   assert.match(tyyli, /\.satelliitti-pulu-kentta \{[\s\S]*font-size: 16px/);
@@ -1315,11 +1347,11 @@ test('selite avautuu pienennettynä ja vinkkaa kerran kohdetta kohti', () => {
   assert.match(lahde, /globalThis\.sessionStorage\?\.getItem\(VINKIN_AVAIN\) === '1'/);
   assert.match(lahde, /globalThis\.sessionStorage\?\.setItem\(VINKIN_AVAIN, '1'\)/);
   // Liikkeenvähennys: ei vinkkiavausta lainkaan.
-  assert.match(lahde, /if \(!vinkkiNahty && !liikePois\) \{/);
+  assert.match(lahde, /if \(!vinkkiNahty && !liikePois && !autoPaalla\(\)\) \{/);
   // Pelaajan ele voittaa vinkin ja JÄTTÄÄ selitteen auki.
   assert.match(lahde, /if \(lopetaVinkki\(\)\) \{ asetaSelite\(false\); return; \}/);
   // Ajastin ei jää elämään suljetun näkymän yli.
-  assert.match(lahde, /minipulu = null;\n    \/\* Vinkkiajastin ei saa herätä suljetun näkymän päälle\. \*\/\n    lopetaVinkki\(\);/);
+  assert.match(lahde, /pulu\.tuhoa\(\);\n    \/\* Vinkkiajastin ei saa herätä suljetun näkymän päälle\. \*\/\n    lopetaVinkki\(\);/);
 });
 
 test('selitteen otsikkorivi on linssin vihreä, maa-osa harmaa', () => {
@@ -1361,4 +1393,21 @@ test('kohdepisteet asetetaan uudestaan, kunnes ne näkyvät DOMissa', () => {
   assert.match(lahde, /avaruus\?\.pakotaKehys\?\.\(\)/);
   // Kello siivotaan purkaessa, eikä se jää kuluttamaan taustalla.
   assert.match(lahde, /pura: \(\) => \{[\s\S]*?lopetaPisteUusinta\(\)/);
+});
+
+test('AUTO hiljaa (omistaja 21.3x): napit häipyvät, napautus palauttaa ilman pysäytystä, ei siirtolappua', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /luoAutoSiirto/, 'Seuraava/Pysäytä-lappu ei kuulu AUTOon');
+  assert.match(lahde, /const AUTO_HILJAA_MS = 4000;/);
+  assert.match(lahde, /if \(hiljaa\(\)\) \{\n\s*asetaHiljaa\(false\);\n\s*ajastaHiljaa\(\);\n\s*nielaiseKlikki = true;/);
+  assert.match(lahde, /siirtoAjastin = setTimeout\([\s\S]{0,120}POHJA_AUTO_SIIRTO_MS\);/);
+  assert.match(tyyli, /\.satelliitti-auto-hiljaa :is\(\.satelliitti-kulma, \.satelliitti-kohteet, \.satelliitti-pulukulma\),\nbody\.satelliitti-auto-hiljaa \.pollo-nappi \{\n\s*opacity: 0;\n\s*pointer-events: none;\n\s*transition: opacity var\(--tk-kesto-sulku\)/);
+});
+
+test('kohteiden nimissä ei ole sanaa "yöllä" (omistaja 17.10.2026 00.32: Bagdad yöllä → Bagdad)', () => {
+  for (const p of ['../js/linssit/satelliitti-data.js', '../tools/hae-satelliittihavainnot.mjs']) {
+    const t = readFileSync(new URL(p, import.meta.url), 'utf8');
+    assert.doesNotMatch(t, /["']?nimi["']?: ["'][^"'\n]* yöllä["']/, p);
+  }
 });

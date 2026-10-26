@@ -297,6 +297,7 @@ export const MAASTOKOHTEET_ECU = [
   {
     id: 'valdivian-kulttuuri',
     nimi: 'Valdivian kulttuuri',
+    nimio: 'Valdivia',
     tyyppi: 'historia',
     kysymykset: [
       'Kuinka vanhaa Valdivian keramiikka on?',

@@ -1,0 +1,385 @@
+{
+ "kaupunki": "dubrovnik",
+ "kaupunkiQ": "Q1722",
+ "kohteet": [
+  {
+   "q": "Q910661",
+   "nimi": "Dubrovnikin vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 42.6409,
+   "lon": 18.1091,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of the Old Town of Dubrovnik - Croatia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_Old_Town_of_Dubrovnik_-_Croatia.jpg?width=1280",
+     "tekija": "Akira Takiguchi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Old_Town_of_Dubrovnik_-_Croatia.jpg",
+     "selite": "Dubrovnikin vanhakaupunki on kivimuurien ympäröimä keskiaikainen kaupunki Adrianmeren rannalla.",
+     "leveys": 4704,
+     "korkeus": 3136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Pile Gate in the Old Town of Dubrovnik, Croatia (48613177617).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Pile_Gate_in_the_Old_Town_of_Dubrovnik%2C_Croatia_(48613177617).jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Pile_Gate_in_the_Old_Town_of_Dubrovnik%2C_Croatia_(48613177617).jpg",
+     "selite": "Ylhäältä näkyvät punaiset tiilikatot ja kapeat kujat kaupungin muurien sisällä.",
+     "leveys": 5464,
+     "korkeus": 3640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q931733",
+   "nimi": "Dubrovnikin kaupunginmuurit",
+   "peruste": "sitelinks",
+   "koko_m": 1900,
+   "lat": 42.64,
+   "lon": 18.108,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "City walls of Dubrovnik 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_walls_of_Dubrovnik_05.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_walls_of_Dubrovnik_05.jpg",
+     "selite": "Kaupunginmuurit kiertävät koko vanhankaupungin, ja niiden päällä voi kävellä merelle päin.",
+     "leveys": 4931,
+     "korkeus": 3287,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "City walls of Dubrovnik 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_walls_of_Dubrovnik_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_walls_of_Dubrovnik_04.jpg",
+     "selite": "Muurien tornit ja vartiotilat suojasivat kaupunkia merirosvoilta ja vihollisilta.",
+     "leveys": 4102,
+     "korkeus": 2735,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1818100",
+   "nimi": "Stradun",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 42.6414,
+   "lon": 18.1081,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Main street-Dubrovnik-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_street-Dubrovnik-1.jpg?width=1280",
+     "tekija": "László Szalai (Beyond silence)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_street-Dubrovnik-1.jpg",
+     "selite": "Stradun on Dubrovnikin vanhankaupungin pääkatu, jota reunustavat kiviset kivipäällysteiset talot.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main street-Dubrovnik-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_street-Dubrovnik-2.jpg?width=1280",
+     "tekija": "László Szalai (Beyond silence)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_street-Dubrovnik-2.jpg",
+     "selite": "Ylhäältä katsottuna katu halkoo kaupunkia suorana kivipäällysteisenä kävelykatuna.",
+     "leveys": 1488,
+     "korkeus": 2026,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dubrovnik - Stradun gradska vrata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_-_Stradun_gradska_vrata.jpg?width=1280",
+     "tekija": "Miroslav.vajdic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubrovnik_-_Stradun_gradska_vrata.jpg",
+     "selite": "Katu päättyy kaupunginportille, josta nähdään vanhan kaupungin siluetti.",
+     "leveys": 2000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3509061",
+   "nimi": "Pilen portti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 42.64174,
+   "lon": 18.10685,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pile Gate, Dubrovnik 02 (js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pile_Gate%2C_Dubrovnik_02_(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pile_Gate%2C_Dubrovnik_02_(js).jpg",
+     "selite": "Pilen portti on vanhankaupungin pääsisäänkäynti, jonne kuljetaan kivisen sillan yli.",
+     "leveys": 5596,
+     "korkeus": 3662,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pile Gate, Dubrovnik 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pile_Gate%2C_Dubrovnik_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pile_Gate%2C_Dubrovnik_01.jpg",
+     "selite": "Portin pyöreä torni ja Pyhän Blasiuksen patsas kuuluvat kaupungin tunnetuimpiin kuviin.",
+     "leveys": 4484,
+     "korkeus": 2989,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3396134",
+   "nimi": "Lovrijenacin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 42.64073,
+   "lon": 18.10441,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort Lovrijenac In Dubrovnik.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Lovrijenac_In_Dubrovnik.jpg?width=1280",
+     "tekija": "Sumitsurai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Lovrijenac_In_Dubrovnik.jpg",
+     "selite": "Lovrijenacin linnake kohoaa jyrkällä kalliolla vanhankaupungin länsipuolella.",
+     "leveys": 5000,
+     "korkeus": 3118,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort Lovrijenac - Dubrovnik.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Lovrijenac_-_Dubrovnik.jpg?width=1280",
+     "tekija": "Sumitsurai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Lovrijenac_-_Dubrovnik.jpg",
+     "selite": "Linnake vartioi kaupungin lähestymistä merelle ja maalle.",
+     "leveys": 5000,
+     "korkeus": 3111,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fort Lovrijenac,Dubrovnik,Croatia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Lovrijenac%2CDubrovnik%2CCroatia.jpg?width=1280",
+     "tekija": "Pufacz",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Lovrijenac%2CDubrovnik%2CCroatia.jpg",
+     "selite": "Paksut kivimuurit nousevat suoraan kalliosta ja linnaketta kutsutaan Dubrovnikin Gibraltariksi.",
+     "leveys": 1251,
+     "korkeus": 1014,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2986276",
+   "nimi": "Sponzan palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 42.64111,
+   "lon": 18.11056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sponza Palace, Dubrovnik 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sponza_Palace%2C_Dubrovnik_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sponza_Palace%2C_Dubrovnik_01.jpg",
+     "selite": "Sponzan palatsi on goottilaisen ja renessanssin tyylien yhdistelmä, jossa toimi aikanaan tulli ja rahapaja.",
+     "leveys": 3582,
+     "korkeus": 2559,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2011 Dubrownik, Pałac Sponza (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Dubrownik%2C_Pa%C5%82ac_Sponza_(02).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Dubrownik%2C_Pa%C5%82ac_Sponza_(02).jpg",
+     "selite": "Julkisivun koristeelliset ikkunat ovat tunnistettava piirre Stradunin päässä.",
+     "leveys": 3022,
+     "korkeus": 2549,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2497590",
+   "nimi": "Rehtorin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.64028,
+   "lon": 18.11083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rector's Palace, Dubrovnik, Croatia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rector's_Palace%2C_Dubrovnik%2C_Croatia.jpg?width=1280",
+     "tekija": "Neoneo13",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rector's_Palace%2C_Dubrovnik%2C_Croatia.jpg",
+     "selite": "Rehtorin palatsi oli Dubrovnikin tasavallan hallitsijan virka-asunto ja nykyään kulttuurihistoriallinen museo.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rector's Palace Dubrovnik.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rector's_Palace_Dubrovnik.jpg?width=1280",
+     "tekija": "László Szalai (Beyond silence)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rector's_Palace_Dubrovnik.jpg",
+     "selite": "Palatsin arkadikäytävät yhdistävät goottilaisen ja renessanssin rakennustaidetta.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q584428",
+   "nimi": "Dubrovnikin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 42.6399,
+   "lon": 18.1104,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral of the Assumption, Dubrovnik 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_the_Assumption%2C_Dubrovnik_06.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_the_Assumption%2C_Dubrovnik_06.jpg",
+     "selite": "Marian taivaaseenastumisen katedraali on barokkityylinen kirkko, jonka kupoli näkyy kaupungin siluetissa.",
+     "leveys": 4751,
+     "korkeus": 3167,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedral of the Assumption, Dubrovnik 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_the_Assumption%2C_Dubrovnik_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_the_Assumption%2C_Dubrovnik_04.jpg",
+     "selite": "Kirkon kupoli nousee vanhankaupungin kattojen yläpuolelle.",
+     "leveys": 3456,
+     "korkeus": 4838,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q277389",
+   "nimi": "Lokrum",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 42.62722,
+   "lon": 18.11944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lokrum Island, Croatia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lokrum_Island%2C_Croatia.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lokrum_Island%2C_Croatia.jpg",
+     "selite": "Lokrum on metsäinen saari Dubrovnikin edustalla, jonne pääsee lyhyellä venematkalla.",
+     "leveys": 4800,
+     "korkeus": 3200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boats - Lokrum island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boats_-_Lokrum_island.jpg?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boats_-_Lokrum_island.jpg",
+     "selite": "Saaren rannat ja kalliot ovat suosittuja uimapaikkoja.",
+     "leveys": 2549,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Steep coast near the city wall in the Old Town of Dubrovnik, Croatia (48613191222).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Steep_coast_near_the_city_wall_in_the_Old_Town_of_Dubrovnik%2C_Croatia_(48613191222).jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Steep_coast_near_the_city_wall_in_the_Old_Town_of_Dubrovnik%2C_Croatia_(48613191222).jpg",
+   "selite": "Dubrovnik sijaitsee jyrkän rannikon niemellä, jota ympäröi Adrianmeri.",
+   "leveys": 5111,
+   "korkeus": 2872,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Dubrovnik and Otok Lokrum as seen from Mount Srđ.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_and_Otok_Lokrum_as_seen_from_Mount_Sr%C4%91.jpg?width=1280",
+   "tekija": "Jeegfullcrum",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubrovnik_and_Otok_Lokrum_as_seen_from_Mount_Sr%C4%91.jpg",
+   "selite": "Srđ-vuorelta näkee vanhankaupungin punaiset katot ja Lokrumin saaren.",
+   "leveys": 1600,
+   "korkeus": 777,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

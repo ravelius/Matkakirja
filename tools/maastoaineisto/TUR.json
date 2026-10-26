@@ -3,7 +3,7 @@
   "meret": [
     {
       "nimi": "Marmaranmeri",
-      "lon": 28.0,
+      "lon": 28,
       "lat": 40.6667,
       "lahdeKoordinaatti": "en-Wikipedia \"Sea of Marmara\"",
       "nappi": "Maailman pienin meri",
@@ -11,13 +11,16 @@
         "Miksi Bosporinsalmi on niin tärkeä?",
         "Mikä Dardanellit on?"
       ],
-      "korostukset": ["Bosporinsalmi|Bosporin", "Dardanellit|Dardanellien"],
+      "korostukset": [
+        "Bosporinsalmi|Bosporin",
+        "Dardanellit|Dardanellien"
+      ],
       "teksti": "Marmaranmeri on pieni sisämeri kokonaan Turkin rajojen sisällä. Se yhdistää Mustanmeren ja Egeanmeren Bosporin ja Dardanellien salmien kautta ja erottaa samalla Turkin Euroopan- ja Aasian-puoleiset osat toisistaan. Pinta-alaa sillä on 11 350 neliökilometriä ja mittoja noin 280 kertaa 80 kilometriä, joten sitä pidetään maailman pienimpänä merenä; syvimmillään se on 1 370 metriä.",
       "lahde": "en-Wikipedia \"Sea of Marmara\", johdanto-osa (tarkistettu 29.8.2026)."
     },
     {
       "nimi": "Välimeri",
-      "lon": 31.0,
+      "lon": 31,
       "lat": 35.6,
       "lahdeKoordinaatti": "ulappa Anatolian etelärannikon edustalla; artikkelin oma keskipiste on 18 / 35",
       "nappi": "Meri kolmen maanosan välissä",
@@ -25,9 +28,37 @@
         "Kuinka kapea Gibraltarinsalmi todella on?",
         "Miksi Anatolian etelärannikkoa kutsutaan Turkoosiksi rannikoksi?"
       ],
-      "korostukset": ["Gibraltarinsalmi|Gibraltarinsalmen"],
+      "korostukset": [
+        "Gibraltarinsalmi|Gibraltarinsalmen"
+      ],
       "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Idässä sitä rajaavat Levantti ja pohjoisessa Anatolia, eli Turkin rannikko on sen pohjoisreuna. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, koillisessa Bosporinsalmi vie Mustallemerelle ja kaakossa Suezin kanava Punaisellemerelle.",
       "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Bosporinsalmi",
+      "lon": 29.06,
+      "lat": 41.1,
+      "lahdeKoordinaatti": "salmen keskiosa Istanbulin kohdalla",
+      "nappi": "Istanbulin halki kulkeva salmi",
+      "kysymykset": [
+        "Montako siltaa ja tunnelia Bosporin ylittää?",
+        "Miksi Bosporissa vesi virtaa kahteen suuntaan?"
+      ],
+      "teksti": "Bosporinsalmi on Turkin salmi, joka yhdistää Mustanmeren Marmaranmereen ja kulkee Istanbulin halki Euroopan ja Aasian välistä. Se on noin 30 kilometriä pitkä ja kapeimmillaan vain noin 700–750 metriä leveä. Salmen yli on rakennettu kolme siltaa, joista vanhin avattiin vuonna 1973, ja sen alitse kulkee kaksi tunnelia. Nimi tulee kreikasta, ja kreikkalaiset tulkitsivat sen tarkoittavan härän kulkuväylää.",
+      "lahde": "en-Wikipedia \"Bosporus\", johdanto-osa ja Geography-osa; New World Encyclopedia \"Bosporus\"; Britannica \"Bosporus\" (hakutulos); CNN Style / KTVZ 26.12.2022 (tarkistettu 16.10.2026)."
+    },
+    {
+      "nimi": "Dardanellit",
+      "lon": 26.4,
+      "lat": 40.2,
+      "lahdeKoordinaatti": "salmen keskiosa Çanakkalen kohdalla",
+      "nappi": "Muinainen Hellespontos",
+      "kysymykset": [
+        "Mitä Gallipolin sotaretkellä tapahtui?",
+        "Miten Kserkes ylitti Hellespontoksen?"
+      ],
+      "teksti": "Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 kilometriä pitkä, noin 1,2–6 kilometriä leveä ja syvimmillään noin 100 metriä. Pohjoispuolella on Gallipolin niemimaa, jonka mukaan salmea kutsutaan myös Gallipolin salmeksi. Muinaiset kreikkalaiset kutsuivat sitä Hellespontokseksi. Maaliskuussa 2022 salmen ylitse avattiin 1915 Çanakkalen silta.",
+      "lahde": "en-Wikipedia \"Dardanelles\", johdanto-osa (tarkistettu 16.10.2026); WorldAtlas \"Dardanelles Strait\"; CNN Style / KTVZ 26.12.2022."
     }
   ],
   "joet": [
@@ -41,7 +72,9 @@
         "Mikä Mesopotamia oli?",
         "Missä Eufrat ja Tigris yhtyvät?"
       ],
-      "korostukset": ["Mesopotamia|Mesopotamian"],
+      "korostukset": [
+        "Mesopotamia|Mesopotamian"
+      ],
       "teksti": "Fırat eli Eufrat on Länsi-Aasian pisin ja historiallisesti merkittävimpiä jokia. Yhdessä Tigriksen kanssa se on toinen Mesopotamian kahdesta määrittävästä joesta. Se saa alkunsa Turkista ja virtaa Syyrian ja Irakin halki, kunnes yhtyy Tigrikseen Shatt al-Arabissa ja laskee siitä Persianlahteen.",
       "lahde": "en-Wikipedia \"Euphrates\", johdanto-osa (tarkistettu 29.8.2026)."
     }

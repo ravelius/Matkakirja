@@ -1,0 +1,56 @@
+# TestFlight-ryhmien tila, VAIN LUKU (Julkaisija 10.10.2026, omistaja 08.0x: live-tekoäly vain 18+ → julkisen linkin
+# testaajamäärä ja ulkoisen ryhmän buildit tarkistettava). Ei muuta mitään App Store Connectissa.
+name: ASC-tila (vain luku)
+
+on:
+  workflow_dispatch:
+    inputs:
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  tila:
+    name: Ryhmät, julkinen linkki ja testaajat
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Ryhmien tila
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 tools/testflight/ryhmien-tila.py --bundle-id "${{ inputs.bundle_id }}" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

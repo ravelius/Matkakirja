@@ -203,7 +203,7 @@ export const MAASTOKOHTEET_MOZ = [
     teksti: 'Inhambane on kaupunki Etelä-Mosambikissa syvän lahden rannalla, jonne pieni '
       + 'Mutamba-joki laskee; kaksi hiekkaniemekettä suojaavat satamaa. Se on yksi '
       + 'Mosambikin itärannikon vanhimmista asutuksista, ja se tunnetaan myös nimellä Terra '
-      + 'de Boa Gente, "hyvien ihmisten maa". Kaupunkivaltio alistui vuorollaan Kilwan '
+      + 'de Boa Gente, ”hyvien ihmisten maa”. Kaupunkivaltio alistui vuorollaan Kilwan '
       + 'sulttaanikunnalle, Gazan valtakunnalle ja lopulta Portugalille. Dhow-purjelaivat '
       + 'kävivät täällä kauppaa jo 1000-luvulla, ja ensimmäiset meritse tulleet ulkopuoliset '
       + 'olivat muslimi- ja persialaiskauppiaat, jotka ostivat helmiä ja ambraa. Seutu '
@@ -241,7 +241,7 @@ export const MAASTOKOHTEET_MOZ = [
     tyyppi: 'kaupunki',
     kysymykset: [
       'Kuka päätti tänne mantereen ylityksensä?',
-      'Mistä joen nimi "hyvien merkkien joki" tulee?',
+      'Mistä joen nimi ”hyvien merkkien joki” tulee?',
     ],
     korostukset: ['Livingstone|Livingstone'],
     nappi: 'Hyvien merkkien joen satama',
@@ -251,7 +251,7 @@ export const MAASTOKOHTEET_MOZ = [
     },
     teksti: 'Quelimane on satamakaupunki Mosambikissa, Zambezian maakunnan pääkaupunki ja '
       + 'sen suurin kaupunki. Se sijaitsee 25 kilometriä Rio dos Bons Sinais -joen suulta; '
-      + 'joen nimi tarkoittaa "hyvien merkkien jokea", ja sen antoi Vasco da Gama, joka '
+      + 'joen nimi tarkoittaa ”hyvien merkkien jokea”, ja sen antoi Vasco da Gama, joka '
       + 'Intiaan matkallaan näki täällä merkit siitä, että hän oli oikealla reitillä. '
       + 'Kaupunki syntyi swahilikauppapaikkana, jonka muslimikauppiaat perustivat, ja se '
       + 'kasvoi Intian valtameren orjakaupan markkinapaikaksi — se on yksi seudun '

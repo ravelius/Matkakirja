@@ -1,0 +1,56 @@
+[
+ {
+  "kysymys": "Näkevätkö astronautit revontulet ylhäältä vai alhaalta päin?",
+  "vastaus": "Yleensä ylhäältä päin. Asema kiertää Maata noin 400 kilometrin korkeudessa, mutta suurin osa revontulista hehkuu 80–250 kilometrin korkeudessa, eli selvästi aseman alapuolella. Astronautit katsovat revontulia siis alaspäin, ilmakehän ylimmissä kerroksissa hehkuvaa valoa. Revontulet syntyvät, kun aurinkotuulen varautuneet hiukkaset osuvat ilmakehään.",
+  "lahteet": [
+   {
+    "url": "https://fi.wikipedia.org/wiki/Revontulet",
+    "title": "Revontulet - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Aurora",
+    "title": "Aurora - Wikipedia"
+   },
+   {
+    "url": "https://www.nasa.gov/?p=414148",
+    "title": "Aurora Borealis from the ISS, Expedition 30 - NASA (asema noin 240 mailin korkeudessa)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+    "title": "International Space Station - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Suurin osa revontulista on noin 80–250 km:n korkeudessa",
+    "lahde1": "fi.wikipedia Revontulet: suurin osa 80–250 km (koko vaihteluväli 80–600 km)",
+    "lahde2": "en.wikipedia Aurora (Størmer, yli 12 000 revontulta): ei yhtään alle 70 km, maksimi noin 100 km, vain 6,5 % yli 150 km; revontulet ilmakehässä yli 80 km",
+    "huom": "Sama väite tarkistettu jo taivas-tarkistus.json:ssa (taivas-revontulet, OK). 'Suurin osa', koska ylin reuna ulottuu 600 km:iin."
+   },
+   {
+    "vaite": "Asema kiertää noin 400 km:n korkeudessa",
+    "lahde1": "NASA tammikuun 2012 kuvateksti: noin 240 mailia (= noin 386 km)",
+    "lahde2": "en.wikipedia International Space Station: kiertoradan korkeus noin 370–460 km; NASA-kuvateksti 2025: 269 mailia (= noin 433 km)",
+    "huom": "Aseman korkeus vaihtelee; 'noin 400 km' sopii molempiin."
+   },
+   {
+    "vaite": "Astronautit katsovat revontulia alaspäin (asema yläpuolella)",
+    "lahde1": "Päätelty: asema noin 400 km, revontulet pääosin 80–250 km (kohdat yllä)",
+    "lahde2": "NASA-kuvatekstit (2012, 2025): kuvat otettu asemalta revontulien ylä- ja sivupuolelta; 'revontulet hehkuvat yleensä ISS:n alapuolella' hyväksytty jo ISS-yötaivas-tarkistuksessa",
+    "huom": "'Yleensä', koska ylimmät revontulet (jopa 600 km) voivat yltää aseman korkeudelle. Vastaus ei väitä paljaan silmän havaintoa."
+   },
+   {
+    "vaite": "Revontulet syntyvät, kun aurinkotuulen hiukkaset osuvat ilmakehään",
+    "lahde1": "fi.wikipedia Revontulet: aurinkotuulen varautuneet hiukkaset osuvat ilmakehään",
+    "lahde2": "NASA Space Place (spaceplace.nasa.gov/aurora): aurinkotuuli ja auringon myrskyt, hiukkaset magneettikentän kautta napojen ilmakehään",
+    "huom": "Sama kuin taivas-tarkistus.json (OK)."
+   },
+   {
+    "vaite": "(PT 16.10.) Kesäkuun 2025 NASA-kuvalause pudotettu",
+    "lahde1": "vain NASA-kuvasivu",
+    "lahde2": "-",
+    "huom": "Yhden lähteen väite poistettu PT:n ohjeesta."
+   }
+  ]
+ }
+]

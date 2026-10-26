@@ -30,6 +30,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve, dirname, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const TYYPIT = {
@@ -61,9 +62,7 @@ const palvelin = createServer(async (pyynto, vastaus) => {
 await new Promise((valmis) => palvelin.listen(0, '127.0.0.1', valmis));
 const portti = palvelin.address().port;
 
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 let virheita = 0;
 for (const lauta of LAUDAT) {

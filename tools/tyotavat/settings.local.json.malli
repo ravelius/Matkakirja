@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws s3 sync:*)",
+      "Bash(aws s3 cp:*)",
+      "Bash(aws s3 ls:*)",
+      "Bash(source:*)",
+      "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
+      "Bash(python3 -)",
+      "Bash(osascript:*)",
+      "Bash(screencapture:*)",
+      "Bash(sleep:*)",
+      "mcp__ccd_session_mgmt__set_session_effort"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "SendMessage|mcp__ccd_session_mgmt__send_message",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f /Users/Shared/Claude/hooks/pt-taulu-muistutus.py ] && python3 -I /Users/Shared/Claude/hooks/pt-taulu-muistutus.py || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f /Users/Shared/Claude/hooks/pt-taulu-muistutus.py ] && python3 -I /Users/Shared/Claude/hooks/pt-taulu-muistutus.py || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

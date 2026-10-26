@@ -545,7 +545,7 @@ const HISTORIA_KAUPUNGIT = [
     alkaen: 1300, asti: 1475,
     varmuus: 'karkea',
     lahde: 'Wikipedia (en) "Azov", koordinaatti Wikipedian API:sta 3.8.2026',
-    selite: 'Venetsian kauppapaikka Donin suulla. Firenzeläinen Pegolotti kirjoitti 1340-luvulla ohjeen, jonka mukaan matka täältä Pekingiin kesti noin kahdeksan kuukautta ja oli "täysin turvallinen" — mikä kertoo enemmän mongolirauhasta kuin tiestä.',
+    selite: 'Venetsian kauppapaikka Donin suulla. Firenzeläinen Pegolotti kirjoitti 1340-luvulla ohjeen, jonka mukaan matka täältä Pekingiin kesti noin kahdeksan kuukautta ja oli ”täysin turvallinen” — mikä kertoo enemmän mongolirauhasta kuin tiestä.',
   },
   {
     avain: 'bursa',
@@ -1023,7 +1023,7 @@ const HISTORIA_VALTAKUNNAT = [
     aikavali: 'noin 100 jaa.',
     varmuus: 'epavarma',
     lahde: 'Wikipedia (en) "Protectorate of the Western Regions"; Britannica "Ban Chao". Keitaiden koordinaatit ks. kaupungit.',
-    selite: 'Tämä ei ollut valtakunnan osa vaan kymmenkunta omaa kuningastaan tottelevaa keidasvaltiota, jotka maksoivat Hanille ja pitivät sen varuskuntia. "Raja" on tässä oikeasti rengas keitaita autiomaan ympärillä — allas itse oli tyhjä. Piirrä mieluummin katkoviivalla kuin täyttönä.',
+    selite: 'Tämä ei ollut valtakunnan osa vaan kymmenkunta omaa kuningastaan tottelevaa keidasvaltiota, jotka maksoivat Hanille ja pitivät sen varuskuntia. ”Raja” on tässä oikeasti rengas keitaita autiomaan ympärillä — allas itse oli tyhjä. Piirrä mieluummin katkoviivalla kuin täyttönä.',
     aariviivat: [[
       [76.0, 39.5], [80.3, 41.2], [82.9, 41.7], [86.6, 42.1], [89.2, 43.0],
       [93.5, 42.8], [90.6, 40.2], [88.9, 39.2], [85.5, 38.1], [82.7, 38.0],

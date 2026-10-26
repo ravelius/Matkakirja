@@ -24,12 +24,11 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
 const { packById } = await import(`${JUURI}/js/pack.js`);
-const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = pw.chromium ?? pw.default?.chromium;
 const NAKYMA = process.env.NAKYMA ?? 'puhelin';
 const ULOS = process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/glnimiot-nimet';
 mkdirSync(ULOS, { recursive: true });
@@ -53,7 +52,7 @@ const ampari = (url) => {
 };
 const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: 'marseille' }], pack: packById('maailmankartta'), seed: 5 });
 peli.phase = 'action'; peli.tokens.delete('marseille');
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: [] });
+const selain = await avaaChromium({ args: [] });
 const virheet = [];
 const ctx = await selain.newContext({ ...NAKYMAT[NAKYMA], serviceWorkers: 'block' });
 await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, JSON.stringify(peli.toJSON()));

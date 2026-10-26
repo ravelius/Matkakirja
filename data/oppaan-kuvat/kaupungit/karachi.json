@@ -1,0 +1,483 @@
+{
+ "kaupunki": "karachi",
+ "kaupunkiQ": "Q8660",
+ "kohteet": [
+  {
+   "q": "Q2571455",
+   "nimi": "Mazar-e-Quaid",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 24.87528,
+   "lon": 67.04083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fantastic Architecture of Mazar e Quaid.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fantastic_Architecture_of_Mazar_e_Quaid.jpg?width=1280",
+     "tekija": "Ibrahim Janjua",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fantastic_Architecture_of_Mazar_e_Quaid.jpg",
+     "selite": "Mazar-e-Quaid on Pakistanin perustajan Muhammad Ali Jinnahin valkomarmorinen mausoleumi.",
+     "leveys": 4859,
+     "korkeus": 2733,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Heart of Karachi - Mazar-e-Quaid.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Heart_of_Karachi_-_Mazar-e-Quaid.jpg?width=1280",
+     "tekija": "Ibrahim Janjua",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Heart_of_Karachi_-_Mazar-e-Quaid.jpg",
+     "selite": "Mausoleumi kohoaa terasseilla ja portailla korotetulla alustalla Karachin keskellä.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jinnah Mausoleum (cropped).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinnah_Mausoleum_(cropped).JPG?width=1280",
+     "tekija": "M.irfan44",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jinnah_Mausoleum_(cropped).JPG",
+     "selite": "Kupolin alla olevan kuution kaarevat portit avautuvat neljään suuntaan.",
+     "leveys": 4000,
+     "korkeus": 2300,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3456819",
+   "nimi": "Mohatta Palace",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 24.86,
+   "lon": 67.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A view from the flower garden - Mohatta Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_from_the_flower_garden_-_Mohatta_Palace.jpg?width=1280",
+     "tekija": "Marizz16",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_from_the_flower_garden_-_Mohatta_Palace.jpg",
+     "selite": "Mohatta Palace on vaaleanpunaisesta kivestä rakennettu 1920-luvun palatsi, nykyään museo.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "347b.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/347b.JPG?width=1280",
+     "tekija": "M.sohailtariq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:347b.JPG",
+     "selite": "Palatsin sisäänkäynnin koristeellinen portti on veistettyä kiveä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A minaret of the Mohatta Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_minaret_of_the_Mohatta_Palace.jpg?width=1280",
+     "tekija": "Ibrahim Janjua",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_minaret_of_the_Mohatta_Palace.jpg",
+     "selite": "Palatsin kulmatorni kuuluu Rajasthanin ja Sindhin rakennustyylin yhdistelmään.",
+     "leveys": 2988,
+     "korkeus": 5312,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3924620",
+   "nimi": "Frere Hall",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 24.8475,
+   "lon": 67.03278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bautiful view of Frere Hall, Karachi, Pakistan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bautiful_view_of_Frere_Hall%2C_Karachi%2C_Pakistan.jpg?width=1280",
+     "tekija": "Furqanlw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bautiful_view_of_Frere_Hall%2C_Karachi%2C_Pakistan.jpg",
+     "selite": "Frere Hall on 1860-luvun venetsialaisgoottilainen kaupungintalo, joka ei koskaan toiminut sellaisena.",
+     "leveys": 8504,
+     "korkeus": 5616,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beautiful Frere Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_Frere_Hall.jpg?width=1280",
+     "tekija": "Rizwan Muhammad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beautiful_Frere_Hall.jpg",
+     "selite": "Rakennus on nimetty Sindhin komissaarin Bartle Frere mukaan.",
+     "leveys": 4096,
+     "korkeus": 2730,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Back facade - Frere Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Back_facade_-_Frere_Hall.jpg?width=1280",
+     "tekija": "Sara Yaqoob Siddiqui (s.Y.s)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Back_facade_-_Frere_Hall.jpg",
+     "selite": "Salin arkadit ja hoikka torni ovat keltaisen kiven ja puistojen ympäröimiä.",
+     "leveys": 2158,
+     "korkeus": 1455,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5374577",
+   "nimi": "Empress Market",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 24.8625,
+   "lon": 67.02944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Empress Market - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empress_Market_-_1.jpg?width=1280",
+     "tekija": "Nabeelak85",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empress_Market_-_1.jpg",
+     "selite": "Empress Market on kuningatar Victorian mukaan nimetty siirtomaa-ajan kauppahalli ja sen torni on kaupungin maamerkki.",
+     "leveys": 2841,
+     "korkeus": 2368,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Emprees Market - panoramio - khadim-un-nabi Rao.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Emprees_Market_-_panoramio_-_khadim-un-nabi_Rao.jpg?width=1280",
+     "tekija": "khadim-un-nabi Rao",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Emprees_Market_-_panoramio_-_khadim-un-nabi_Rao.jpg",
+     "selite": "Hallin kellotorni kohoaa vilkkaan basaarialueen yllä.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10383774",
+   "nimi": "Merewetherin kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 24.84893,
+   "lon": 66.99742,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Merewether Clock Tower 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Merewether_Clock_Tower_01.jpg?width=1280",
+     "tekija": "Fahad Saeed",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Merewether_Clock_Tower_01.jpg",
+     "selite": "Merewetherin kellotorni on hiekkakivestä rakennettu goottilainen torni Karachin keskustassa.",
+     "leveys": 1662,
+     "korkeus": 2502,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clock Tower Karachi Merewether.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_Karachi_Merewether.JPG?width=1280",
+     "tekija": "Wajahatali001",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_Karachi_Merewether.JPG",
+     "selite": "Torni on nimetty Sindhin komissaarin William Merewetherin mukaan.",
+     "leveys": 4759,
+     "korkeus": 3173,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4189952",
+   "nimi": "Karachin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 24.86,
+   "lon": 67.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karachi Municipal Corporation (KMC) Head Office at M.A Jinnah Road - Photo By Aliraza Khatri.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Municipal_Corporation_(KMC)_Head_Office_at_M.A_Jinnah_Road_-_Photo_By_Aliraza_Khatri.jpg?width=1280",
+     "tekija": "Aliraza Khatri",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Municipal_Corporation_(KMC)_Head_Office_at_M.A_Jinnah_Road_-_Photo_By_Aliraza_Khatri.jpg",
+     "selite": "Kaupungin hallintorakennus on keltaisesta kivestä tehty kupolirakennus Jinnah-tien varrella.",
+     "leveys": 4704,
+     "korkeus": 3093,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Karachi Municipal Corporation (KMC).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Municipal_Corporation_(KMC).jpg?width=1280",
+     "tekija": "Furqanlw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Municipal_Corporation_(KMC).jpg",
+     "selite": "Kellotorni ja kupolit hallitsevat rakennuksen julkisivua.",
+     "leveys": 8688,
+     "korkeus": 5792,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Karachi Municipal Corporation (KMC) Pakistan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Municipal_Corporation_(KMC)_Pakistan.jpg?width=1280",
+     "tekija": "Sam4u1w",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Municipal_Corporation_(KMC)_Pakistan.jpg",
+     "selite": "Iltavalossa hiekkakiven sävyt hehkuvat kadun varrella.",
+     "leveys": 3376,
+     "korkeus": 2391,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38250948",
+   "nimi": "Karachin satamahallinnon talo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 24.84738,
+   "lon": 66.99327,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "KPTKarachi1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KPTKarachi1.jpg?width=1280",
+     "tekija": "Ali Shaikh Abbas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KPTKarachi1.jpg",
+     "selite": "Karachi Port Trustin päärakennus kupoleineen on sataman hallinnon keltainen kivipalatsi.",
+     "leveys": 1975,
+     "korkeus": 2275,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Karachi Port Trust (KPT) Head Office Building Karachi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Port_Trust_(KPT)_Head_Office_Building_Karachi.jpg?width=1280",
+     "tekija": "Furqanlw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Port_Trust_(KPT)_Head_Office_Building_Karachi.jpg",
+     "selite": "Rakennuksen kaareva julkisivu sijaitsee kukkaistutusten takana.",
+     "leveys": 7400,
+     "korkeus": 4282,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Karachi Port Trust (KPT).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Port_Trust_(KPT).jpg?width=1280",
+     "tekija": "Furqanlw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Port_Trust_(KPT).jpg",
+     "selite": "Kupoli kohoaa rakennuksen yläpuolelle pilvisenä päivänä.",
+     "leveys": 8688,
+     "korkeus": 5792,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5259344",
+   "nimi": "Denso Hall",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 24.853,
+   "lon": 67.0041,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Denso front.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denso_front.JPG?width=1280",
+     "tekija": "Sanaullah Sasoli",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denso_front.JPG",
+     "selite": "Denso Hall on gotiikkavaikutteinen kirjastorakennus Jinnah-tien varrella.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Denso Hall Front.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Denso_Hall_Front.JPG?width=1280",
+     "tekija": "Sanaullah Sasoli",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Denso_Hall_Front.JPG",
+     "selite": "Julkisivun kellotaulu ja teräväkaariset ikkunat kuuluvat 1800-luvun siirtomaa-ajan tyyliin.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7976938",
+   "nimi": "Wazir Mansion",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 24.8508,
+   "lon": 66.9975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Quaid-e-Azam Muhammad Ali Jinnah Birth home.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quaid-e-Azam_Muhammad_Ali_Jinnah_Birth_home.JPG?width=1280",
+     "tekija": "Sanaullah Sasoli",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quaid-e-Azam_Muhammad_Ali_Jinnah_Birth_home.JPG",
+     "selite": "Wazir Mansion on Pakistanin perustajan Jinnahin syntymäkoti Kharadarin vanhassa korttelissa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Quaid-e-Azam Muhammad Ali Jinnah Birth Place Kharadar Karachi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quaid-e-Azam_Muhammad_Ali_Jinnah_Birth_Place_Kharadar_Karachi.jpg?width=1280",
+     "tekija": "Miansari66",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quaid-e-Azam_Muhammad_Ali_Jinnah_Birth_Place_Kharadar_Karachi.jpg",
+     "selite": "Talon punaiset puuparvekkeet kuuluvat vanhan Karachin kaupunkikuvaan.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1967486",
+   "nimi": "Pakistanin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 24.85261,
+   "lon": 67.01791,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Museum of Pakistan, Karachi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Pakistan%2C_Karachi.jpg?width=1280",
+     "tekija": "Siddiqi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Pakistan%2C_Karachi.jpg",
+     "selite": "Pakistanin kansallismuseo esittelee Indus-kulttuurin ja Gandharan taidetta Karachin keskustassa.",
+     "leveys": 2788,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "National Museum Front, Karachi, Pakistan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_Front%2C_Karachi%2C_Pakistan.jpg?width=1280",
+     "tekija": "Muhammad Lashari",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_Front%2C_Karachi%2C_Pakistan.jpg",
+     "selite": "Museon edustalla on palmuin ja kukkaistutuksin koristeltu puisto.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1842361",
+   "nimi": "Karachin satama",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 24.84,
+   "lon": 66.98,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Camera photos 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camera_photos_02.jpg?width=1280",
+     "tekija": "Salman jaliawala",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Camera_photos_02.jpg",
+     "selite": "Karachin satama on Pakistanin suurin ja vilkkain, ja konttinosturit ja värikkäät rekat kuuluvat sen arkeen.",
+     "leveys": 1280,
+     "korkeus": 720,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Karachi Skyline 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Skyline_2025.jpg?width=1280",
+   "tekija": "Ktownboy103",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Skyline_2025.jpg",
+   "selite": "Ilmakuvassa Karachin korkeat asuin- ja toimistotornit tiiviin kaupunkirakenteen yllä.",
+   "leveys": 2758,
+   "korkeus": 1047,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Karachi Skyline 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karachi_Skyline_1.jpg?width=1280",
+   "tekija": "Ktownboy103",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karachi_Skyline_1.jpg",
+   "selite": "Merenrannalta katsottuna Karachin siluetti piirtyy Arabianmeren horisonttiin.",
+   "leveys": 7600,
+   "korkeus": 1440,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

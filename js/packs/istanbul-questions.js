@@ -308,7 +308,7 @@ export const ISTANBUL_QUESTIONS = {
       q: 'Mikä on lokum?',
       options: ['hyytelömäinen sokerimakeinen', 'suolainen keksi', 'jäätelölaji', 'kova karamelli'],
       correct: 0,
-      fact: 'Lokumia eli "turkkilaista iloa" on tehty Istanbulissa 1700-luvulta asti, usein ruusuvedellä ja pistaasilla maustettuna.',
+      fact: 'Lokumia eli ”turkkilaista iloa” on tehty Istanbulissa 1700-luvulta asti, usein ruusuvedellä ja pistaasilla maustettuna.',
       hint: 'Pehmeät palat pyöritellään tomusokerissa.',
     },
     {
@@ -490,7 +490,7 @@ export const ISTANBUL_QUESTIONS = {
       options: ['kuusi', 'yksi', 'kaksi', 'kymmenen'],
       correct: 0,
       level: 3,
-      fact: 'Määrä oli aikanaan kohu: yhtä monta kuin Mekan suurella moskeijalla, joten Mekkaan rakennettiin seitsemäs.',
+      fact: 'Määrä oli aikanaan kohu: yhtä monta kuin Mekan suurella moskeijalla. Tarinan mukaan Mekkaan rakennettiin tämän vuoksi seitsemäs minareetti, mutta historiallinen näyttö tästä on epävarma.',
       hint: 'Määrä herätti kohua, koska se oli sama kuin Mekassa.',
     },
     {
@@ -560,8 +560,8 @@ export const ISTANBUL_QUESTIONS = {
       options: ['Mimar Sinan', 'Le Corbusier', 'Antoni Gaudí', 'Filippo Brunelleschi'],
       correct: 0,
       level: 3,
-      fact: 'Osmanien pääarkkitehti suunnitteli satoja rakennuksia, joista useita juuri tähän kaupunginosaan. Hänen tunnetuin työnsä on Selimiye Edirnessä.',
-      hint: 'Arkkitehdin tunnetuin työ on Edirnen suuri moskeija.',
+      fact: 'Osmanien pääarkkitehti suunnitteli satoja rakennuksia, joista useita juuri tähän kaupunginosaan. Hän itse piti mestariteoksenaan Selimiyeä Edirnessä.',
+      hint: 'Arkkitehdin oma mestariteos on Edirnen suuri moskeija.',
     },
   ],
 
@@ -620,7 +620,7 @@ export const ISTANBUL_QUESTIONS = {
       options: ['Khalkedon', 'Troija', 'Sparta', 'Karthago'],
       correct: 0,
       level: 3,
-      fact: 'Khalkedonia kutsuttiin "sokeain maaksi": sen asukkaat eivät muka huomanneet vastarannan parempaa paikkaa.',
+      fact: 'Khalkedonia kutsuttiin ”sokeain maaksi”: sen asukkaat eivät muka huomanneet vastarannan parempaa paikkaa.',
       hint: 'Asukkaita sanottiin sokeiksi, koska he eivät valinneet vastarannan parempaa paikkaa.',
     },
     {
@@ -709,7 +709,7 @@ export const ISTANBUL_QUESTIONS = {
       q: 'Kuinka monta ihmistä Istanbulissa asuu?',
       options: ['yli 15 miljoonaa', 'noin miljoona', 'noin satatuhatta', 'yli 50 miljoonaa'],
       correct: 0,
-      fact: 'Istanbul on Euroopan suurin kaupunki — asukkaita on enemmän kuin monessa valtiossa.',
+      fact: 'Istanbul on asukasluvultaan yksi Euroopan suurimmista kaupungeista — asukkaita on enemmän kuin monessa valtiossa.',
       hint: 'Enemmän kuin Suomessa ja Ruotsissa yhteensä.',
     },
     {
@@ -889,7 +889,7 @@ export const ISTANBUL_FACTS = {
     },
   ],
   balat: [
-    'Balatin värikkäät talot ovat suosituimpia valokuvauspaikkoja koko kaupungissa.',
+    'Balatin värikkäät talot ovat yksi kaupungin suosituimmista valokuvauspaikoista.',
     'Naapurikorttelissa Fenerissä toimii yhä ekumeeninen patriarkaatti, ortodoksisen kirkon vanha keskus.',
     {
       text: 'Yhdessä korttelissa on synagoga, kirkko ja moskeija, ja kujat ovat niin jyrkkiä että hevonen kieltäytyy. Asukkaat pitävät tätä tavallisena; minä kirjoitan siitä kolme sivua.',
@@ -898,7 +898,7 @@ export const ISTANBUL_FACTS = {
   ],
   maustebasaari: [
     'Maustebasaari rakennettiin 1660-luvulla, ja sen tuotot ylläpitivät viereistä Uutta moskeijaa.',
-    'Basaarin kujilla myydään myös lokumia, kuivattuja hedelmiä ja sata lajia juustoa.',
+    'Basaarin kujilla myydään myös lokumia, kuivattuja hedelmiä ja monenlaisia juustoja.',
     {
       text: 'Basaarissa myydään yrttejä lääkkeeksi ja mausteita, joiden nimiä en osaa kirjoittaa. Ostin jotain kurkkukipuun ja se auttoi, mistä en aio kertoa lääkärilleni.',
       voice: 'isoisa',
@@ -953,7 +953,7 @@ export const ISTANBUL_FACTS = {
     },
   ],
   kadikoy: [
-    'Kadıköyn paikalla oli antiikin Khalkedon, jota kutsuttiin "sokeain maaksi".',
+    'Kadıköyn paikalla oli antiikin Khalkedon, jota kutsuttiin ”sokeain maaksi”.',
     'Kadıköyn kalatorilla ja kahviloissa sykkii Aasian puolen arki — ja seinät ovat täynnä katutaidetta.',
     {
       text: 'Aasian puolen tori on täynnä kalaa ja vihanneksia, ja hinnat ovat kolmanneksen halvemmat kuin vastarannalla. Antiikin kirjoittaja kutsui tämän paikan perustajia sokeiksi; hän ei ilmeisesti käynyt torilla.',

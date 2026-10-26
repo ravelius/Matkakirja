@@ -38,6 +38,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MALLI = process.env.VARUSTE_MALLI ?? 'gemini-3-pro-image';
@@ -272,8 +273,7 @@ mkdirSync(ULOS ? resolve(JUURI, ULOS) : resolve(JUURI, 'assets/varusteet'), { re
  * haeta verkosta, PNG menee sisään data-URL:na.
  */
 async function avaaPienentaja() {
-  const { chromium } = await import('playwright');
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const sivu = await selain.newPage();
   return {
     async pienenna(png) {

@@ -1,0 +1,14 @@
+/*
+ * MOLDOVAN HAHMOTELMANOSTOT — ensimmäinen karttanosto tälle maalle.
+ *
+ * Fablen tilaus 28.9.2026: Matkakirjan ihme -kohde (js/packs/
+ * monumentit-eurooppa.js EUROOPAN_KADONNEET.MDA), jotta pelin
+ * "historian hetket" -kohtaus saa maalle karttapaikan ja maalehden.
+ * Maalla ei ollut ennestään yhtään karttanostoa (VAIN EUROOPPA
+ * -karttatyö on vielä kesken tälle maalle) — loput kohteet lisätään
+ * myöhemmissä erissä samalla mallilla kuin muiden Euroopan maiden
+ * hahmotelmapakit.
+ */
+import { EUROOPAN_KADONNEET } from './monumentit-eurooppa.js';
+
+export const HAHMOTELMA_MDA = [...EUROOPAN_KADONNEET.MDA];

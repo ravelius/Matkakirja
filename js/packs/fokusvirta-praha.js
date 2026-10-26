@@ -852,17 +852,4 @@ export const FOKUSVIRTA_PRAHA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Rudolf II:n
-   * kabinetin helmi. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Linnan vanha palvelija vannoi, että Rudolfin kabinetista jäi '
-      + 'laatikko, jota ruotsalaiset eivät 1648 löytäneet. Ovi, jonka hän '
-      + 'näytti, oli muurattu umpeen — koputin siihen ja kuulin ontton '
-      + 'vastauksen, mutta muuria en käynyt purkamaan.',
-  },
 };

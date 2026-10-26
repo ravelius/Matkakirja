@@ -1064,6 +1064,7 @@ export const FOKUSVIRTA_ROOMA = {
     },
     {
       id: 'aqua-virgo',
+      wiki: 'Rooman akveduktit',
       nimio: 'Aqua Virgo',
       otsikko: 'Vesi kulkee yhä',
       symboli: 'tekniikka',
@@ -1138,6 +1139,7 @@ export const FOKUSVIRTA_ROOMA = {
        */
       galleria: [
         {
+          otsikko: 'Vanha nasone Pantheonin vieressä',
           tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
           selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
             + 'Piazza della Rotondalla.',
@@ -1171,21 +1173,4 @@ export const FOKUSVIRTA_ROOMA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka
-   * aukeaa kun aarre löytyy.
-   *
-   * TWIST-SIEMEN: merkintä EI paljasta, miksi isoisä käänsi ympäri.
-   * Se on kaaren avoin kysymys nro 4 (jättikö hän aarteita
-   * tarkoituksella), ja kaanon kieltää vastaamasta siihen tässä.
-   * "Kupoli avaimenreiästä" on todellinen näkymä (takyt-rooma.md,
-   * täky 12) ja sama paikka kuin kohtaamispiste yllä.
-   */
-  aarremerkinta: {
-    teksti: 'Rooman aarre oli ainoa, jota en yrittänytkään. Seisoin '
-      + 'avaimenreiän edessä, näin kupolin rajautuvan lehtien väliin — '
-      + 'ja käänsin ympäri. Jonain päivänä ymmärrät miksi.',
-  },
 };

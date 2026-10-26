@@ -1,0 +1,230 @@
+{
+ "kaupunki": "mosul",
+ "kaupunkiQ": "Q83317",
+ "jarjestys": [
+  "Q5680",
+  "Q5599605",
+  "Q387292",
+  "Q12204304",
+  "Q19968534",
+  "Q12204298",
+  "Q2743336"
+ ],
+ "kohteet": [
+  {
+   "q": "Q5680",
+   "nimi": "Ninive",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 36.36667,
+   "lon": 43.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosul Wall-Nineveh 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosul_Wall-Nineveh_02.jpg?width=1280",
+     "tekija": "Abdulsalam Al Dabbagh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosul_Wall-Nineveh_02.jpg",
+     "selite": "Assyrian pääkaupunki Ninive sijaitsi Tigrisin itärannalla, ja sen muuria on rakennettu osin uudelleen.",
+     "leveys": 4000,
+     "korkeus": 2252,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosul Wall-Nineveh 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosul_Wall-Nineveh_01.jpg?width=1280",
+     "tekija": "Abdulsalam Al Dabbagh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosul_Wall-Nineveh_01.jpg",
+     "selite": "Niniven muurin kalkkikivestä rakennetut tornit ja ammukset on kunnostettu näkyviksi.",
+     "leveys": 2996,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5599605",
+   "nimi": "Al-Nurin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 36.34319,
+   "lon": 43.12687,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Mosque of al-Nuri Feb 2025 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_al-Nuri_Feb_2025_2.jpg?width=1280",
+     "tekija": "الدبوني",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_al-Nuri_Feb_2025_2.jpg",
+     "selite": "Al-Nurin moskeijan Al-Hadba-minareetti kallistui ja nousi uudelleen jälleenrakennuksessa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Hadba Minaret Mosul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Hadba_Minaret_Mosul.jpg?width=1280",
+     "tekija": "الدبوني",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Hadba_Minaret_Mosul.jpg",
+     "selite": "Al-Hadba, Mosulin kallistunut minareetti, oli kaupungin tunnetuin maamerkki.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Great Mosque of al-Nuri (Mosul), 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Mosque_of_al-Nuri_(Mosul)%2C_2020.jpg?width=1280",
+     "tekija": "Ennolenze",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Mosque_of_al-Nuri_(Mosul)%2C_2020.jpg",
+     "selite": "Moskeijan kupoli ja kaakeloidut seinät kuuluvat Mosulin vanhaan keskustaan.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q387292",
+   "nimi": "Mosulin museo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 36.33786,
+   "lon": 43.1394,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosul Cultural Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosul_Cultural_Museum.jpg?width=1280",
+     "tekija": "maybe Mohammed Makiya",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosul_Cultural_Museum.jpg",
+     "selite": "Mosulin museo säilytti Ninivestä ja Hatrasta löydettyjä assyrialaisia ja parttilaisia esineitä.",
+     "leveys": 1500,
+     "korkeus": 1129,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19968534",
+   "nimi": "Bash Tapian linna",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 36.3554,
+   "lon": 43.1216,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bashtabiya Castle Sign Mosul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bashtabiya_Castle_Sign_Mosul.jpg?width=1280",
+     "tekija": "الدبوني",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bashtabiya_Castle_Sign_Mosul.jpg",
+     "selite": "Bash Tapian linna on Tigrisin rannalla sijaitseva Mosulin muinainen linnoitus.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12204298",
+   "nimi": "Al-Nabi Jirjisin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 36.34453,
+   "lon": 43.1305,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "جامع النبي جرجيس 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D9%86%D8%A8%D9%8A_%D8%AC%D8%B1%D8%AC%D9%8A%D8%B3_01.jpg?width=1280",
+     "tekija": "Ali.tinbo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D9%86%D8%A8%D9%8A_%D8%AC%D8%B1%D8%AC%D9%8A%D8%B3_01.jpg",
+     "selite": "Al-Nabi Jirjisin moskeija on vanhankaupungin pyhäkkö, jonka rakennus on uudistettu.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2743336",
+   "nimi": "Mosulin yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 36.37648,
+   "lon": 43.14219,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Main Gate (Bab al-Ri'asah) University of Mosul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Gate_(Bab_al-Ri'asah)_University_of_Mosul.jpg?width=1280",
+     "tekija": "الدبوني",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_Gate_(Bab_al-Ri'asah)_University_of_Mosul.jpg",
+     "selite": "Mosulin yliopisto on yksi Irakin suurimmista, ja sen pääportti avaa kampuksen Tigrisin rannalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Views of the old city of Mosul along the river Tiger, in summer of 2019 after war with the Islamic State 08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Views_of_the_old_city_of_Mosul_along_the_river_Tiger%2C_in_summer_of_2019_after_war_with_the_Islamic_State_08.jpg?width=1280",
+   "tekija": "Levi Clancy",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Views_of_the_old_city_of_Mosul_along_the_river_Tiger%2C_in_summer_of_2019_after_war_with_the_Islamic_State_08.jpg",
+   "selite": "Mosul on Tigrisin kaupunki, jossa vanha kaupunki ja sillat levittäytyvät molemmin puolin jokea.",
+   "leveys": 6240,
+   "korkeus": 4160,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "The Old Bridge and The Tigris River-Mosul 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Old_Bridge_and_The_Tigris_River-Mosul_02.jpg?width=1280",
+   "tekija": "Abdulsalam Al Dabbagh",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Old_Bridge_and_The_Tigris_River-Mosul_02.jpg",
+   "selite": "Tigris halkoo Mosulin, ja joen yli on rakennettu useita siltoja.",
+   "leveys": 3264,
+   "korkeus": 1836,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q12204304",
+   "nimi": "Nabi Yunusin moskeija",
+   "peruste": "sitelinks",
+   "lat": 36.34795,
+   "lon": 43.15953,
+   "syy": "tuhottu 2014, ei kelvollista nykykuvaa pystyssä olevasta rakennuksesta"
+  }
+ ]
+}

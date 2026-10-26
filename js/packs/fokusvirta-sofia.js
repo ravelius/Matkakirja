@@ -558,6 +558,14 @@ export const FOKUSVIRTA_SOFIA = {
        * kuvaus "Old Turkish dungeon where Vasil Levski was kept prisoner,
        * late XIX". Valokuva on isoisän omalta vuosikymmeneltä, ja selite
        * sanoo täsmälleen sen, minkä lähde sanoo — ei enempää.
+       *
+       * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+       * #3434): tämä on ainoa löytynyt aikalaisvalokuva itse tyrmästä.
+       * Haku Commonsista ei löytänyt suurempaa versiota eikä muuta
+       * 1800-luvun kuvaa samasta paikasta — Levskin muistomerkistä
+       * (nykytila) sen sijaan on runsaasti isoja kuvia, mutta ne
+       * kuvaisivat eri asiaa kuin tämän noston teksti (vankila, ei
+       * muistomerkki).
        */
       kuva: {
         tiedosto: 'Sofia Dungeon.jpg',
@@ -664,11 +672,11 @@ export const FOKUSVIRTA_SOFIA = {
        * Category:Statue of Sofia ei ole olemassa.
        */
       kuva: {
-        tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
-        lyhyt: 'Sofia-patsas Nezavisimost-aukiolla on kahdeksan metriä korkea kuparihahmo 16 metrin jalustalla.',
-        selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on '
-          + 'kahdeksan metriä korkea ja seisoo 16 metrin jalustalla.',
-        lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        tiedosto: "Bulgaria-02926 - Saint Sofia Church (11047630053).jpg",
+        lyhyt: 'Pyhän Sofian kirkko, jonka mukaan Sofia on saanut nimensä.',
+        selite: 'Pyhän Sofian kirkko Sofiassa. Kaupunki on saanut nimensä '
+          + 'kirkon mukaan.',
+        lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
       },
       visa: {
         kysymys: 'Kuka seisoi Nezavisimost-aukion jalustalla ennen kuin '
@@ -1080,16 +1088,4 @@ export const FOKUSVIRTA_SOFIA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * Kaanon, kohta 5 — teksti sellaisenaan. Isoisän merkintä, joka aukeaa
-   * kun aarre löytyy.
-   */
-  aarremerkinta: {
-    teksti: 'Konakin varjossa punnitsin lapion ostamista, mutta torilla '
-      + 'kysyttiin jo, kuka on se muukalainen joka utelee vanhoista '
-      + 'kätköistä. Lähdin aamulla — jotkut aarteet saavat odottaa '
-      + 'rohkeampaa.',
-  },
 };

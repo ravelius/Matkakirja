@@ -68,6 +68,7 @@ export const MAASTOKOHTEET_BRA = [
   {
     id: 'fernandodenoronha',
     nimi: 'Fernando de Noronha',
+    nimio: 'Noronha',
     tyyppi: 'saari',
     kysymykset: [
       'Kuinka kaukana saaristo on mantereesta?',
@@ -210,6 +211,7 @@ export const MAASTOKOHTEET_BRA = [
   {
     id: 'saomigueldasmissoes',
     nimi: 'São Miguel das Missões',
+    nimio: 'São Miguel',
     tyyppi: 'historia',
     kysymykset: [
       'Mikä oli guaraní-lähetysasema?',
@@ -266,6 +268,7 @@ export const MAASTOKOHTEET_BRA = [
   {
     id: 'congonhas',
     nimi: 'Congonhasin profeetat',
+    nimio: 'Congonhas',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka Aleijadinho oli?',
@@ -323,6 +326,7 @@ export const MAASTOKOHTEET_BRA = [
   {
     id: 'lencoismaranhenses',
     nimi: 'Lençóis Maranhenses',
+    nimio: 'Lençóis',
     tyyppi: 'vuori',
     kysymykset: [
       'Miksi dyynien väliin syntyy järviä?',

@@ -1,0 +1,15 @@
+Kirjoitat suomeksi uusia merinostoja pelille "Matkakirja ja unohdettu aarre" (kohderyhmä 13+ ja aikuiset), VAIN Euroopan merenosia. Checkout: /Users/Shared/Claude/Matkakirja-sisaltokirjuri (älä vaihda haaraa, älä commitoi, älä muokkaa muita tiedostoja kuin omaa tulostiedostoasi).
+
+Tausta: kartalla meren/salmen nimi avaa nostokortin: lyhyt teksti, napin selite ja 2 kysymystä, joita pelaaja voi kysyä Pulu-kyyhkyltä. Sinun merillesi ei ole vielä nostoa. Tee jokaiselle:
+(A) NOSTO samaan muotoon kuin olemassa olevat. Mallit: tools/maastoaineisto/DNK.json (taulukko "meret": nimi, lon, lat, lahdeKoordinaatti, nappi, kysymykset, teksti, lahde; lue Pohjanmeri ja Itämeri) ja js/packs/maastokohteet-gbr.js, -dnk.js, -tur.js (kortin tyyli). Kysymykset-listan kaksi kysymystä eivät saa olla jo muissa nostoissa: tarkista /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-sisaltokirjuri/e4d40983-1026-4ca3-9eea-b31ec14dd17b/scratchpad/meri-kys-kaikki.json (kentät "kysymys"); kysy mieluummin jotain uutta ja kiinnostavaa.
+  - teksti: 280–480 merkkiä, 3–4 virkettä; ensimmäinen virke kertoo mikä meri/salmi on ja mitkä maat sitä rajaavat; sitten 1–2 konkreettista, tarkistettua faktaa (mitta, syvyys, nimi, historia). Ei markkinointikieltä, ei sanatarkkoja lainauksia.
+  - nappi: 2–6 sanaa, houkutteleva mutta tosi ("Pohjanmeren ja Itämeren portti").
+  - kysymykset: tasan 2.
+  - lahde: muoto 'en-Wikipedia "X", johdanto-osa (tarkistettu 16.10.2026).' tai vastaava; vähintään kaksi riippumatonta lähdettä jokaiselle faktaväitteelle (WebSearch + WebFetch; Wikipedia + viranomainen/tutkimus/museo/tietosanakirja). Kirjaa kaikki käyttämäsi lähteet lahteet-kenttään.
+(B) PULUN VASTAUS kummallekin kysymykselle: 45–60 sanaa (noin 300–420 merkkiä), alussa suora vastaus, sitten 1–2 tarkistettua faktaa, lopuksi mitä se kertoo. Samat faktasäännöt: kaksi lähdettä, ristiriitaiset/yhden lähteen luvut pois tai "noin"/vuosikymmen; jos WebFetch antaa 403/404 ja luet vain hakutuloksen tiivistelmän, merkitse title-kenttään "(hakutulos)". Älä keksi.
+
+Merien tiedot (sijainti on annettu, älä muuta): __MERET__
+
+TULOS: kirjoita (Write) tiedosto docs/kohtaukset/merinostot/__TULOS__ : JSON-taulukko, alkio per meri: {"id","maa","nimi","lon","lat","lahdeKoordinaatti","nappi","kysymykset":[q1,q2],"teksti","lahde","lahteet":[{"url","title"}],"tarkistus":[{"vaite","lahde1","lahde2","huom"}],"vastaukset":[{"kysymys","vastaus","sanoja","lahteet":[{"url","title"}],"tarkistus":[{"vaite","lahde1","lahde2","huom"}]}]}. Tarkista node:lla: JSON parsiutuu, teksti 280–480 merkkiä, vastaus 45–60 sanaa.
+
+VASTAUS minulle: enintään 6 riviä: mitkä merit tehtiin ja mitkä faktat ovat heikosti tuettuja tai pudotettiin.

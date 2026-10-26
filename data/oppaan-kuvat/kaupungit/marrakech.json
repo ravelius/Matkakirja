@@ -1,0 +1,663 @@
+{
+ "kaupunki": "marrakech",
+ "kaupunkiQ": "Q101625",
+ "kohteet": [
+  {
+   "q": "Q1137533",
+   "nimi": "Koutoubian moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 31.62412,
+   "lon": -7.99354,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosquée de la Koutoubia - marakesh.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg?width=1280",
+     "tekija": "Baca12",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg",
+     "selite": "Koutoubian minareetti on Marrakechin korkein maamerkki ja näkyy kauas kaupungin ylle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1158 wurde die Koutoubia-Moschee in Marrakesch eröfnet. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1158_wurde_die_Koutoubia-Moschee_in_Marrakesch_er%C3%B6fnet._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1158_wurde_die_Koutoubia-Moschee_in_Marrakesch_er%C3%B6fnet._02.jpg",
+     "selite": "Moskeijan torni kohoaa kaupungin vanhan muurin ja palmujen takaa.",
+     "leveys": 5906,
+     "korkeus": 3297,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1158 wurde die Koutoubia-Moschee in Marrakesch eröfnet. 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1158_wurde_die_Koutoubia-Moschee_in_Marrakesch_er%C3%B6fnet._07.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1158_wurde_die_Koutoubia-Moschee_in_Marrakesch_er%C3%B6fnet._07.jpg",
+     "selite": "Puutarhat ympäröivät 1100-luvun moskeijaa.",
+     "leveys": 5906,
+     "korkeus": 3427,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q258348",
+   "nimi": "Jemaa el-Fnaa",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 31.62597,
+   "lon": -7.9891,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MoroccoMarrakech DjemaaElFna..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MoroccoMarrakech_DjemaaElFna..jpg?width=1280",
+     "tekija": "Dániel Csörföly",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MoroccoMarrakech_DjemaaElFna..jpg",
+     "selite": "Jemaa el-Fnaa on Marrakechin vanhankaupungin keskeinen tori, jolla on kojuja ja esiintyjiä.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jemaa el-Fnaa Marrakech at sunset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jemaa_el-Fnaa_Marrakech_at_sunset.jpg?width=1280",
+     "tekija": "Herokk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jemaa_el-Fnaa_Marrakech_at_sunset.jpg",
+     "selite": "Auringonlaskun aikaan torille ilmestyvät ruokakojut, ja Koutoubian torni erottuu taustalla.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jemaa el-Fnaa at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jemaa_el-Fnaa_at_night.jpg?width=1280",
+     "tekija": "procsilas",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jemaa_el-Fnaa_at_night.jpg",
+     "selite": "Illalla tori täyttyy valoista, savusta ja ruokakojuista.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1395431",
+   "nimi": "Majorellen puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 31.6415,
+   "lon": -8.0029,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Le jardin des majorelle 16.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_jardin_des_majorelle_16.JPG?width=1280",
+     "tekija": "Viault",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_jardin_des_majorelle_16.JPG",
+     "selite": "Majorellen puutarhan kirkkaansininen huvila ja kaktukset ovat Marrakechin tunnetuimpia näkymiä.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1000 vista's (11277802294).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1000_vista's_(11277802294).jpg?width=1280",
+     "tekija": "Mzximvs VdB from Brussels, belgium",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1000_vista's_(11277802294).jpg",
+     "selite": "Puutarhan lammikko ja palmut tarjoavat varjoisaa viileyttä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1560540",
+   "nimi": "Ben Youssefin medresa",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 31.632,
+   "lon": -7.986,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Medersa-Ben-Youssef-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Medersa-Ben-Youssef-01.jpg?width=1280",
+     "tekija": "Lundeux",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Medersa-Ben-Youssef-01.jpg",
+     "selite": "Ben Youssefin medresa oli Pohjois-Afrikan suurimpia islamilaisia oppilaitoksia.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ben Jusufova medresa, Marrákeš, 2025 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ben_Jusufova_medresa%2C_Marr%C3%A1ke%C5%A1%2C_2025_(01).jpg?width=1280",
+     "tekija": "Draceane",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ben_Jusufova_medresa%2C_Marr%C3%A1ke%C5%A1%2C_2025_(01).jpg",
+     "selite": "Oppilaitoksen ulkoseinät ovat punaista savitiiltä vanhan kaupungin kujilla.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1920259",
+   "nimi": "Menaran puutarhat",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 31.6167,
+   "lon": -8.02424,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jardins de la Ménara.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jardins_de_la_M%C3%A9nara.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jardins_de_la_M%C3%A9nara.jpg",
+     "selite": "Menaran puutarhojen paviljonki heijastuu laajaan altaaseen oliivilehtojen keskellä.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Menara garden (219101779).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Menara_garden_(219101779).jpg?width=1280",
+     "tekija": "Jean-Marc Astesana from Voisins le Bretonneux, France",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Menara_garden_(219101779).jpg",
+     "selite": "Vihreä kattoinen paviljonki on puutarhan tunnetuin rakennus.",
+     "leveys": 2956,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1277747",
+   "nimi": "El Badin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 31.61833,
+   "lon": -7.98583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Badi, palác, Marrákeš, 2025 (10).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Badi%2C_pal%C3%A1c%2C_Marr%C3%A1ke%C5%A1%2C_2025_(10).jpg?width=1280",
+     "tekija": "Draceane",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Badi%2C_pal%C3%A1c%2C_Marr%C3%A1ke%C5%A1%2C_2025_(10).jpg",
+     "selite": "El Badin palatsin punaiset muurit ovat jäljellä saadilaisten 1500-luvun palatsista.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A prelude of life (49917073818).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_prelude_of_life_(49917073818).jpg?width=1280",
+     "tekija": "Pedro from Maia (Porto), Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_prelude_of_life_(49917073818).jpg",
+     "selite": "Palatsin sisäpihalla on suuri vesiallas ja appelsiinipuita.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A Moroccan postcard (49917887697).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Moroccan_postcard_(49917887697).jpg?width=1280",
+     "tekija": "Pedro from Maia (Porto), Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Moroccan_postcard_(49917887697).jpg",
+     "selite": "Muurien päällä pesii haikaroita.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4837210",
+   "nimi": "Bab Agnaou",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 31.61761,
+   "lon": -7.99067,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Agnaou Door - Marrakech.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agnaou_Door_-_Marrakech.JPG?width=1280",
+     "tekija": "Safia Shutterbug",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agnaou_Door_-_Marrakech.JPG",
+     "selite": "Bab Agnaou on koristeellinen 1100-luvun portti Marrakechin vanhankaupungin muurissa.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bab Agnaou.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Agnaou.jpg?width=1280",
+     "tekija": "John Doyle doyler79",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Agnaou.jpg",
+     "selite": "Portin kaareva hiekkakiviveistos on almohadien taidetta.",
+     "leveys": 2429,
+     "korkeus": 1681,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2465115",
+   "nimi": "Bahian palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 31.62159,
+   "lon": -7.98223,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bahia Palace large court.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahia_Palace_large_court.jpg?width=1280",
+     "tekija": "Val Traveler",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahia_Palace_large_court.jpg",
+     "selite": "Bahian palatsi rakennettiin 1800-luvun lopulla, ja sen laattapihat ovat marokkolaisen koristetaiteen huippua.",
+     "leveys": 4873,
+     "korkeus": 3253,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Die Atmosphäre im Bahia Palast ist einzigartig\". 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Die_Atmosph%C3%A4re_im_Bahia_Palast_ist_einzigartig%22._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Die_Atmosph%C3%A4re_im_Bahia_Palast_ist_einzigartig%22._02.jpg",
+     "selite": "Palatsin käytävät avautuvat sisäpihoille taivaan alle.",
+     "leveys": 3997,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2152745",
+   "nimi": "Saadilaisten haudat",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 31.61722,
+   "lon": -7.98861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "0049 Saadier-Gräber, Marrakesch (37200277501).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0049_Saadier-Gr%C3%A4ber%2C_Marrakesch_(37200277501).jpg?width=1280",
+     "tekija": "Heribert Bechen .. thanks for 2.6 mio. visits from Bergisch Gladbach, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0049_Saadier-Gr%C3%A4ber%2C_Marrakesch_(37200277501).jpg",
+     "selite": "Saadilaisten haudat ovat 1500-luvun hallitsijoiden hautapaikka laattakoristeineen.",
+     "leveys": 1400,
+     "korkeus": 933,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saadian Tombs 1044-HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saadian_Tombs_1044-HDR.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saadian_Tombs_1044-HDR.jpg",
+     "selite": "Hautakammion pylväät ja kaiverrukset on koristeltu aivan viimeistellysti.",
+     "leveys": 3431,
+     "korkeus": 4574,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3412514",
+   "nimi": "Almoravidien koubba",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 31.6315,
+   "lon": -7.9872,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Almoravid Koubba in Marrakech.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Almoravid_Koubba_in_Marrakech.jpg?width=1280",
+     "tekija": "Adam Harangozó",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Almoravid_Koubba_in_Marrakech.jpg",
+     "selite": "Almoravidien koubba on pieni 1100-luvun kupolirakennus ja yksi Marrakechin vanhimpia säilyneitä.",
+     "leveys": 5953,
+     "korkeus": 3969,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Almoravid Koubba P4010196 (25926056703).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Almoravid_Koubba_P4010196_(25926056703).jpg?width=1280",
+     "tekija": "t_y_l",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Almoravid_Koubba_P4010196_(25926056703).jpg",
+     "selite": "Rakennus on kaivettu esiin vanhan kaupungin keskeltä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q392057",
+   "nimi": "Agdalin puutarhat",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 31.60611,
+   "lon": -7.97972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Altlas.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altlas.JPG?width=1280",
+     "tekija": "Belbaraka",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altlas.JPG",
+     "selite": "Agdalin puutarhojen suuri vesiallas on Atlas-vuoriston lumihuippujen edessä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marrakech, Agdal Gardens, 2007-08-01 retouched.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marrakech%2C_Agdal_Gardens%2C_2007-08-01_retouched.jpg?width=1280",
+     "tekija": "Marrakech,_Agdal_Gardens,_2007-08-01.jpg: Patrice derivative work: Teofilo (talk)",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marrakech%2C_Agdal_Gardens%2C_2007-08-01_retouched.jpg",
+     "selite": "Puutarhat ovat laaja oliivi- ja hedelmäpuulehto kaupungin eteläpuolella.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Agdale (retouched).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agdale_(retouched).jpg?width=1280",
+     "tekija": "user:Anaslaassibi (retouched by user:Robert Prazeres",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agdale_(retouched).jpg",
+     "selite": "Puutarhojen tekoallasta ympäröivät puuriviot.",
+     "leveys": 2992,
+     "korkeus": 1216,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4886745",
+   "nimi": "Ibn Yusufin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 31.63192,
+   "lon": -7.98716,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A23 - Marrakech, minaret Ben Youssef.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A23_-_Marrakech%2C_minaret_Ben_Youssef.jpg?width=1280",
+     "tekija": "Misa.stefanovic.07",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A23_-_Marrakech%2C_minaret_Ben_Youssef.jpg",
+     "selite": "Ibn Yusufin moskeijan minareetti kohoaa vanhankaupungin kattojen yläpuolelle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0197 MEDERSA ben YOUSSEF (26187205449).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0197_MEDERSA_ben_YOUSSEF_(26187205449).jpg?width=1280",
+     "tekija": "Heribert Bechen .. thanks for 2.6 mio. visits from Bergisch Gladbach, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0197_MEDERSA_ben_YOUSSEF_(26187205449).jpg",
+     "selite": "Moskeijan vihreät tiilikatot ja torni erottuvat kaupungin punaisen savirakentamisen keskellä.",
+     "leveys": 1400,
+     "korkeus": 933,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3090631",
+   "nimi": "Marrakechin museo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 31.63121,
+   "lon": -7.98677,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo de Marrakech 06.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_Marrakech_06.JPG?width=1280",
+     "tekija": "Yastay",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_de_Marrakech_06.JPG",
+     "selite": "Marrakechin museo toimii palatsissa, jonka sisäpihaa hallitsee suuri riippuvalaisin.",
+     "leveys": 1200,
+     "korkeus": 797,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2010-06-18 Marrakesch - Marrakesch Museum - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-06-18_Marrakesch_-_Marrakesch_Museum_-_panoramio.jpg?width=1280",
+     "tekija": "giggel",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-06-18_Marrakesch_-_Marrakesch_Museum_-_panoramio.jpg",
+     "selite": "Sisäpihan lattia on peitetty marokkolaisilla laattakuvioilla.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q966780",
+   "nimi": "Marrakechin medina",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 31.63139,
+   "lon": -7.98667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "0105 Riad AZZAR, Marrakesch - Blick zum Atlas (37358887756).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0105_Riad_AZZAR%2C_Marrakesch_-_Blick_zum_Atlas_(37358887756).jpg?width=1280",
+     "tekija": "Heribert Bechen .. thanks for 2.6 mio. visits from Bergisch Gladbach, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0105_Riad_AZZAR%2C_Marrakesch_-_Blick_zum_Atlas_(37358887756).jpg",
+     "selite": "Marrakechin vanhankaupungin katoilta näkyy lumipeitteinen Atlas-vuoristo.",
+     "leveys": 1400,
+     "korkeus": 933,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0161 Marrakesch (37066024703).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0161_Marrakesch_(37066024703).jpg?width=1280",
+     "tekija": "Heribert Bechen .. thanks for 2.6 mio. visits from Bergisch Gladbach, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0161_Marrakesch_(37066024703).jpg",
+     "selite": "Vanhankaupungin kujat ovat punaisen sävyisiä ja kapeita.",
+     "leveys": 1400,
+     "korkeus": 933,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3329122",
+   "nimi": "Dar Si Saidin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 31.62333,
+   "lon": -7.98361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dar Si Said 1465.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_Si_Said_1465.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_Si_Said_1465.jpg",
+     "selite": "Dar Si Said -palatsi esittelee marokkolaista käsityötä, huonekaluja ja koristeellisia puuveistoksia.",
+     "leveys": 4549,
+     "korkeus": 3412,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Around the courtyard IV (49931384112).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Around_the_courtyard_IV_(49931384112).jpg?width=1280",
+     "tekija": "Pedro from Maia (Porto), Portugal",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Around_the_courtyard_IV_(49931384112).jpg",
+     "selite": "Palatsin sisäpiha on laatoitettu ja koristeltu suihkulähteellä.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q59956159",
+   "nimi": "Dar el Bacha",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 31.63159,
+   "lon": -7.99219,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dar El Bacha.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_El_Bacha.jpg?width=1280",
+     "tekija": "YassirZek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_El_Bacha.jpg",
+     "selite": "Dar el Bacha oli pashan palatsi ja on nykyään museo, jonka sisäpihoilla kasvaa sitruspuita.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dar al Bacha Marrakesh DSCF8510.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_al_Bacha_Marrakesh_DSCF8510.jpg?width=1280",
+     "tekija": "R Prazeres",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_al_Bacha_Marrakesh_DSCF8510.jpg",
+     "selite": "Palatsin puutarhapihaa kehystävät koristeelliset kaaret.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "0152 Riad AZZAR, Marrakesch (37445698282).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0152_Riad_AZZAR%2C_Marrakesch_(37445698282).jpg?width=1280",
+   "tekija": "Heribert Bechen .. thanks for 2.6 mio. visits from Bergisch Gladbach, Germany",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0152_Riad_AZZAR%2C_Marrakesch_(37445698282).jpg",
+   "selite": "Marrakechin vanhankaupungin katoilta avautuu näkymä Atlas-vuoristolle.",
+   "leveys": 1400,
+   "korkeus": 933,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "01 Marrakech Medina Rooftops.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01_Marrakech_Medina_Rooftops.jpg?width=1280",
+   "tekija": "Misa.stefanovic.07",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01_Marrakech_Medina_Rooftops.jpg",
+   "selite": "Marrakechin vanhankaupungin tasakatot ja minareetit muodostavat kaupungin siluetin.",
+   "leveys": 6000,
+   "korkeus": 2000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

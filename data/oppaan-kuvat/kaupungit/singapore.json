@@ -1,0 +1,871 @@
+{
+ "kaupunki": "singapore",
+ "kaupunkiQ": "Q334",
+ "kohteet": [
+  {
+   "q": "Q630135",
+   "nimi": "Gardens by the Bay",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 1.28332,
+   "lon": 103.86527,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singapore (SG), Gardens by the Bay, Supertree Grove -- 2019 -- 4752.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Gardens_by_the_Bay%2C_Supertree_Grove_--_2019_--_4752.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Gardens_by_the_Bay%2C_Supertree_Grove_--_2019_--_4752.jpg",
+     "selite": "Gardens by the Bayn Supertree-puut ovat tekopuita, joiden runkoihin on istutettu kasveja.",
+     "leveys": 6508,
+     "korkeus": 4339,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Supertree Grove, Gardens by the Bay, Singapore1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore1.jpg?width=1280",
+     "tekija": "Mustang Joe",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore1.jpg",
+     "selite": "Ilmasta Supertree-lehto erottuu Marina Bayn rannan puutarhan keskellä.",
+     "leveys": 6016,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Singapore (SG), Gardens By The Bay -- 2019 -- 4759.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Gardens_By_The_Bay_--_2019_--_4759.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Gardens_By_The_Bay_--_2019_--_4759.jpg",
+     "selite": "Puutarhan lammet ja suihkulähteet avautuvat kohti Singapore Flyeria.",
+     "leveys": 6677,
+     "korkeus": 4451,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Singapore (SG), Gardens By The Bay -- 2019 -- 4831.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Gardens_By_The_Bay_--_2019_--_4831.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Gardens_By_The_Bay_--_2019_--_4831.jpg",
+     "selite": "Illalla Supertree-puut valaistaan ja niiden latvat hohtavat.",
+     "leveys": 4171,
+     "korkeus": 6257,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q548679",
+   "nimi": "Marina Bay Sands",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 1.2825,
+   "lon": 103.86,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cricket match and Marina Bay Sands Hotel in Singapore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cricket_match_and_Marina_Bay_Sands_Hotel_in_Singapore.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cricket_match_and_Marina_Bay_Sands_Hotel_in_Singapore.jpg",
+     "selite": "Marina Bay Sandsin kolme tornia kantavat yläosassaan laivaa muistuttavaa SkyParkia.",
+     "leveys": 5703,
+     "korkeus": 3802,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puente Helix, museo ArtScience y hotel Marina Bay Sands, Marina Bay, Singapur, 2023-08-17, DD 67-69 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_Helix%2C_museo_ArtScience_y_hotel_Marina_Bay_Sands%2C_Marina_Bay%2C_Singapur%2C_2023-08-17%2C_DD_67-69_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_Helix%2C_museo_ArtScience_y_hotel_Marina_Bay_Sands%2C_Marina_Bay%2C_Singapur%2C_2023-08-17%2C_DD_67-69_HDR.jpg",
+     "selite": "Hotelli, Helix-silta ja ArtScience-museo muodostavat Marina Bayn tunnetuimman rantanäkymän.",
+     "leveys": 7533,
+     "korkeus": 4279,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Marina Bay Sands and illuminated polyhedral building Louis Vuitton over the water at blue hour with pink clouds in Singapore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Sands_and_illuminated_polyhedral_building_Louis_Vuitton_over_the_water_at_blue_hour_with_pink_clouds_in_Singapore.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands_and_illuminated_polyhedral_building_Louis_Vuitton_over_the_water_at_blue_hour_with_pink_clouds_in_Singapore.jpg",
+     "selite": "Hotelli kohoaa Marina Bayn rannalla sinisen hetken valossa.",
+     "leveys": 5629,
+     "korkeus": 3234,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208760",
+   "nimi": "Merlion",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 1.28681,
+   "lon": 103.8545,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singapore (SG), Merlion -- 2019 -- 4496.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Merlion_--_2019_--_4496.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Merlion_--_2019_--_4496.jpg",
+     "selite": "Merlion, puoliksi leijona ja puoliksi kala, on Singaporen tunnetuin symboli.",
+     "leveys": 5133,
+     "korkeus": 3422,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Merlión, Marina Bay, Singapur, 2023-08-18, DD 45-47 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Merli%C3%B3n%2C_Marina_Bay%2C_Singapur%2C_2023-08-18%2C_DD_45-47_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Merli%C3%B3n%2C_Marina_Bay%2C_Singapur%2C_2023-08-18%2C_DD_45-47_HDR.jpg",
+     "selite": "Merlion suihkuttaa vettä Marina Bayhin pilvenpiirtäjien edustalla.",
+     "leveys": 6513,
+     "korkeus": 5325,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Singapore Merlion-at-Marina-Bay-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Merlion-at-Marina-Bay-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_Merlion-at-Marina-Bay-01.jpg",
+     "selite": "Patsas seisoo Merlion-puistossa suiston rannalla.",
+     "leveys": 5748,
+     "korkeus": 3832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1538837",
+   "nimi": "Raffles-hotelli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 1.29489,
+   "lon": 103.85448,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hotel Raffles, Singapur, 2023-08-16, DD 153-155 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotel_Raffles%2C_Singapur%2C_2023-08-16%2C_DD_153-155_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotel_Raffles%2C_Singapur%2C_2023-08-16%2C_DD_153-155_HDR.jpg",
+     "selite": "Raffles-hotelli on Singaporen siirtomaa-ajan vaikuttavin hotelli, avattu 1887.",
+     "leveys": 7341,
+     "korkeus": 4894,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Raffles Hotel in Singapore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raffles_Hotel_in_Singapore.jpg?width=1280",
+     "tekija": "Edogang1",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Raffles_Hotel_in_Singapore.jpg",
+     "selite": "Hotellin valkoiset julkisivut ja palmut ovat tuttu näky Beach Roadilla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al-fresco area of Raffles Hotel, Singapore 2005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-fresco_area_of_Raffles_Hotel%2C_Singapore_2005.jpg?width=1280",
+     "tekija": "mailer_diablo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-fresco_area_of_Raffles_Hotel%2C_Singapore_2005.jpg",
+     "selite": "Hotellin sisäpiha avautuu palmujen ja kaarikäytävien ympäröimänä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1907146",
+   "nimi": "Sultan-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 1.30214,
+   "lon": 103.859,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sultan Mosque, Singapore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Mosque%2C_Singapore.jpg?width=1280",
+     "tekija": "Johan Jönsson (Julle)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Mosque%2C_Singapore.jpg",
+     "selite": "Sultan-moskeijan kultainen kupoli on Kampong Glamin tunnetuin maamerkki.",
+     "leveys": 4624,
+     "korkeus": 3468,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masjid Sultan, Singapore (2023 June) - img 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Sultan%2C_Singapore_(2023_June)_-_img_07.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Sultan%2C_Singapore_(2023_June)_-_img_07.jpg",
+     "selite": "Moskeija näkyy kujan päässä Kampong Glamin kaupunginosassa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masjid Sultan, Singapore (2023 June) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Sultan%2C_Singapore_(2023_June)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Sultan%2C_Singapore_(2023_June)_-_img_01.jpg",
+     "selite": "Moskeijan sivusiipi kaariaukkoineen ja koristeellisine pylväineen.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2428845",
+   "nimi": "Sri Mariamman -temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 1.28261,
+   "lon": 103.845,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gopuram monumental ornate tower at the entrance of Sri Mariamman Temple with sculptures of Hindu deities Chinatown Singapore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gopuram_monumental_ornate_tower_at_the_entrance_of_Sri_Mariamman_Temple_with_sculptures_of_Hindu_deities_Chinatown_Singapore.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gopuram_monumental_ornate_tower_at_the_entrance_of_Sri_Mariamman_Temple_with_sculptures_of_Hindu_deities_Chinatown_Singapore.jpg",
+     "selite": "Sri Mariammanin gopuram-torni on täynnä värikkäitä hindujumalten veistoksia.",
+     "leveys": 3584,
+     "korkeus": 4779,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sri Mariamman Temple, Singapore, 20240122 0843 2947.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Mariamman_Temple%2C_Singapore%2C_20240122_0843_2947.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sri_Mariamman_Temple%2C_Singapore%2C_20240122_0843_2947.jpg",
+     "selite": "Temppelin katolla on jumalhahmoja, leijonia ja pyhiä härkiä.",
+     "leveys": 5328,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Singapur, Chinatown, Świątynia Sri Mariamman (04).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Singapur%2C_Chinatown%2C_%C5%9Awi%C4%85tynia_Sri_Mariamman_(04).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur%2C_Chinatown%2C_%C5%9Awi%C4%85tynia_Sri_Mariamman_(04).jpg",
+     "selite": "Pyhä Nandi-härkä vartioi temppelin kattokoristeita.",
+     "leveys": 4596,
+     "korkeus": 3467,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2158122",
+   "nimi": "Thian Hock Keng -temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 1.28106,
+   "lon": 103.84753,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singapore (SG), China Town, Thian Hock Keng -- 2019 -- 4528.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_China_Town%2C_Thian_Hock_Keng_--_2019_--_4528.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_China_Town%2C_Thian_Hock_Keng_--_2019_--_4528.jpg",
+     "selite": "Thian Hock Keng on Singaporen vanhimpia kiinalaistemppeleitä, omistettu merenkulkijoiden suojelijalle Mazulle.",
+     "leveys": 6603,
+     "korkeus": 4402,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Singapore (SG), China Town, Thian Hock Keng -- 2019 -- 4532.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_China_Town%2C_Thian_Hock_Keng_--_2019_--_4532.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_China_Town%2C_Thian_Hock_Keng_--_2019_--_4532.jpg",
+     "selite": "Temppelin julkisivu Telok Ayer Streetillä Chinatownissa.",
+     "leveys": 6720,
+     "korkeus": 3780,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1438470",
+   "nimi": "Fort Canningin kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 1.29444,
+   "lon": 103.847,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fort Canning Centre, Fort Canning Park - 2022-07-26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Canning_Centre%2C_Fort_Canning_Park_-_2022-07-26.jpg?width=1280",
+     "tekija": "Wzhkevin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Canning_Centre%2C_Fort_Canning_Park_-_2022-07-26.jpg",
+     "selite": "Fort Canningin kukkulalla on historiallisia rakennuksia nurmikkojen ympäröiminä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort Canning Lighthouse, Fort Canning Park - 2022-07-25.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Canning_Lighthouse%2C_Fort_Canning_Park_-_2022-07-25.jpg?width=1280",
+     "tekija": "Wzhkevin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_Canning_Lighthouse%2C_Fort_Canning_Park_-_2022-07-25.jpg",
+     "selite": "Kukkulan majakka kohoaa puiden yläpuolelle.",
+     "leveys": 2268,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1095828",
+   "nimi": "Clarke Quay",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 1.29002,
+   "lon": 103.846,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Clarke Quay at night, Singapore, 20240205 1946 6060.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clarke_Quay_at_night%2C_Singapore%2C_20240205_1946_6060.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clarke_Quay_at_night%2C_Singapore%2C_20240205_1946_6060.jpg",
+     "selite": "Clarke Quayn entiset varastot ovat nykyään ravintola- ja huvikortteli Singapore-joen rannalla.",
+     "leveys": 5260,
+     "korkeus": 3511,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clarke Quay at night, Singapore, 20240205 1947 6061.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clarke_Quay_at_night%2C_Singapore%2C_20240205_1947_6061.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clarke_Quay_at_night%2C_Singapore%2C_20240205_1947_6061.jpg",
+     "selite": "Iltaisin Clarke Quayn väriloisteiset katokset heijastuvat joen pintaan.",
+     "leveys": 5220,
+     "korkeus": 3485,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4931498",
+   "nimi": "Boat Quay",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 1.28685,
+   "lon": 103.85,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of Boat Quay, Singapore (2023)-L1003669.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Boat_Quay%2C_Singapore_(2023)-L1003669.jpg?width=1280",
+     "tekija": "Frank Schulenburg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Boat_Quay%2C_Singapore_(2023)-L1003669.jpg",
+     "selite": "Boat Quayn matalat kauppahuoneet seisovat pilvenpiirtäjien juurella Singapore-joen rannalla.",
+     "leveys": 9528,
+     "korkeus": 6328,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boat quay sct.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boat_quay_sct.JPG?width=1280",
+     "tekija": "chensiyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boat_quay_sct.JPG",
+     "selite": "Ylhäältä Boat Quayn kaarteessa näkyy tiivis rivi vanhoja kauppahuoneita.",
+     "leveys": 3264,
+     "korkeus": 1840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5374581",
+   "nimi": "Empress Place",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 1.28722,
+   "lon": 103.852,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Empress Place Building, Singapore - 20140723.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Empress_Place_Building%2C_Singapore_-_20140723.jpg?width=1280",
+     "tekija": "Lobster1",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Empress_Place_Building%2C_Singapore_-_20140723.jpg",
+     "selite": "Empress Place -rakennus on siirtomaa-ajan hallintorakennus Singapore-joen rannalla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Planters on stairs, Empress Place Building, Singapore - 20151114-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Planters_on_stairs%2C_Empress_Place_Building%2C_Singapore_-_20151114-01.jpg?width=1280",
+     "tekija": "Jacklee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Planters_on_stairs%2C_Empress_Place_Building%2C_Singapore_-_20151114-01.jpg",
+     "selite": "Rakennuksen kuistit ja portaat avautuvat joen puolelle.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3046409",
+   "nimi": "Singaporen kasvitieteellinen puutarha",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 1.3151,
+   "lon": 103.8162,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bandstand and green trees a sunny afternoon with blue sky at Singapore Botanic Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bandstand_and_green_trees_a_sunny_afternoon_with_blue_sky_at_Singapore_Botanic_Gardens.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bandstand_and_green_trees_a_sunny_afternoon_with_blue_sky_at_Singapore_Botanic_Gardens.jpg",
+     "selite": "Kasvitieteellisen puutarhan soittolava on siirtomaa-ajan perua ja puiston tunnetuimpia maamerkkejä.",
+     "leveys": 5755,
+     "korkeus": 3597,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Branches of a Ficus kurzii reflecting in the water at Singapore Botanic Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Branches_of_a_Ficus_kurzii_reflecting_in_the_water_at_Singapore_Botanic_Gardens.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Branches_of_a_Ficus_kurzii_reflecting_in_the_water_at_Singapore_Botanic_Gardens.jpg",
+     "selite": "Puutarhan viidakkomaiset osat näyttävät sademetsää kaupungin keskellä.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Front view of a wooden outdoor bench in Singapore Botanic Gardens with plants in sunshine and blue sky.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_a_wooden_outdoor_bench_in_Singapore_Botanic_Gardens_with_plants_in_sunshine_and_blue_sky.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_a_wooden_outdoor_bench_in_Singapore_Botanic_Gardens_with_plants_in_sunshine_and_blue_sky.jpg",
+     "selite": "Puutarhan polut ja penkit johtavat kasvilajien ja puistojen halki.",
+     "leveys": 5268,
+     "korkeus": 3230,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q752407",
+   "nimi": "Singapore Flyer",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 1.28939,
+   "lon": 103.86322,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singapore (SG), Singapore Flyer -- 2019 -- 4753.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Singapore_Flyer_--_2019_--_4753.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Singapore_Flyer_--_2019_--_4753.jpg",
+     "selite": "Singapore Flyer on jättipyörä Marina Bayn rannalla, rakennettu 2008.",
+     "leveys": 6663,
+     "korkeus": 4442,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Singapore (SG), View from Marina Bay Sands, Singapore Flyer -- 2019 -- 4720.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_View_from_Marina_Bay_Sands%2C_Singapore_Flyer_--_2019_--_4720.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_View_from_Marina_Bay_Sands%2C_Singapore_Flyer_--_2019_--_4720.jpg",
+     "selite": "Ylhäältä pyörä ja sen vieressä Marina Bayn kilparata erottuvat kaupungin laidalla.",
+     "leveys": 5973,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2681107",
+   "nimi": "Helix-silta",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 1.28762,
+   "lon": 103.861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Puente Helix, Marina Bay, Singapur, 2023-08-16, DD 144-146 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puente_Helix%2C_Marina_Bay%2C_Singapur%2C_2023-08-16%2C_DD_144-146_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puente_Helix%2C_Marina_Bay%2C_Singapur%2C_2023-08-16%2C_DD_144-146_HDR.jpg",
+     "selite": "Helix-silta on kaksoiskierteen muotoinen kävelysilta Marina Bayn yli.",
+     "leveys": 8291,
+     "korkeus": 4868,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Singapore (SG), Helix Bridge -- 2019 -- 4466.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Helix_Bridge_--_2019_--_4466.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Helix_Bridge_--_2019_--_4466.jpg",
+     "selite": "Sillan terässäleikkö kiertyy ArtScience-museon ja Marina Bay Sandsin viereen.",
+     "leveys": 5973,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1318670",
+   "nimi": "Chinatown",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 1.28361,
+   "lon": 103.84417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Singapore (SG), China Town, Pagoda Street -- 2019 -- 4515.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4515.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4515.jpg",
+     "selite": "Chinatownin värikkäät kauppakadut ovat täynnä entisiä kauppahuoneita.",
+     "leveys": 5996,
+     "korkeus": 3982,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Singapore (SG), China Town, Pagoda Street -- 2019 -- 4507.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4507.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4507.jpg",
+     "selite": "Vanhojen kauppahuoneiden pastelliset julkisivut ja vihreät ikkunaluukut.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Singapore (SG), China Town, Pagoda Street -- 2019 -- 4505.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4505.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_China_Town%2C_Pagoda_Street_--_2019_--_4505.jpg",
+     "selite": "Julkisivujen koristeelliset ikkunat ja kaiverrukset kuuluvat Chinatownin ilmeeseen.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2709506",
+   "nimi": "Singaporen eläintarha",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 1.40471,
+   "lon": 103.79105,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "White tiger at Singapore Zoo, 20240206 0831 6134.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/White_tiger_at_Singapore_Zoo%2C_20240206_0831_6134.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:White_tiger_at_Singapore_Zoo%2C_20240206_0831_6134.jpg",
+     "selite": "Singaporen eläintarhan valkoiset tiikerit kuuluvat tarhan tunnetuimpiin asukkaisiin.",
+     "leveys": 3028,
+     "korkeus": 2021,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Elephas maximus in Singapore Zoo, 20240206 0857 6202.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elephas_maximus_in_Singapore_Zoo%2C_20240206_0857_6202.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elephas_maximus_in_Singapore_Zoo%2C_20240206_0857_6202.jpg",
+     "selite": "Aasianelefantit elävät avoimessa, sademetsämäisessä tarhassa.",
+     "leveys": 4501,
+     "korkeus": 3005,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2392844",
+   "nimi": "Little India",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 1.30778,
+   "lon": 103.8525,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Singapur, Little India, Ulica Serangoon, Domy-sklepy (09).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(09).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(09).jpg",
+     "selite": "Little Indian värikkäät kauppakadut ovat intialaisen yhteisön keskusta Singaporessa.",
+     "leveys": 4800,
+     "korkeus": 3364,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Singapur, Little India, Ulica Serangoon, Domy-sklepy (07).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(07).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(07).jpg",
+     "selite": "Serangoon Roadin varrella on kirkkaita kauppahuoneita ja liikkeitä.",
+     "leveys": 4955,
+     "korkeus": 3303,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Singapur, Little India, Ulica Serangoon, Domy-sklepy (06).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(06).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur%2C_Little_India%2C_Ulica_Serangoon%2C_Domy-sklepy_(06).jpg",
+     "selite": "Kaupunginosan matalat kauppahuoneet ovat tyypillistä siirtomaa-ajan Singaporea.",
+     "leveys": 4940,
+     "korkeus": 3293,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q559113",
+   "nimi": "Esplanade – Theatres on the Bay",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 1.28972,
+   "lon": 103.85528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Esplanade Theatres on the Bay Singapore at blue hour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esplanade_Theatres_on_the_Bay_Singapore_at_blue_hour.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esplanade_Theatres_on_the_Bay_Singapore_at_blue_hour.jpg",
+     "selite": "Esplanade-teatterien piikikäs kupoli muistuttaa kuvaannollisesti durian-hedelmää.",
+     "leveys": 5402,
+     "korkeus": 3601,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Singapur, Downtown Core, Esplanade – Theatres on the Bay (06).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Singapur%2C_Downtown_Core%2C_Esplanade_%E2%80%93_Theatres_on_the_Bay_(06).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur%2C_Downtown_Core%2C_Esplanade_%E2%80%93_Theatres_on_the_Bay_(06).jpg",
+     "selite": "Taidekeskus seisoo Marina Bayn rannalla joen suun vieressä.",
+     "leveys": 4994,
+     "korkeus": 3329,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Singapore (SG), Esplanade - Theatres on the Bay -- 2019 -- 4570.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_(SG)%2C_Esplanade_-_Theatres_on_the_Bay_--_2019_--_4570.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG)%2C_Esplanade_-_Theatres_on_the_Bay_--_2019_--_4570.jpg",
+     "selite": "Kaksi kupolia erottuvat Marina Bayn rannan iltavalossa.",
+     "leveys": 6720,
+     "korkeus": 4200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6970475",
+   "nimi": "Singaporen kansallisgalleria",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 1.29049,
+   "lon": 103.85186,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of the Civic District, Singapore - 20110224.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_Civic_District%2C_Singapore_-_20110224.jpg?width=1280",
+     "tekija": "William Cho.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Civic_District%2C_Singapore_-_20110224.jpg",
+     "selite": "Kansallisgalleria toimii entisissä korkeimman oikeuden ja kaupungintalon rakennuksissa Civic Districtillä.",
+     "leveys": 1693,
+     "korkeus": 1124,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Singapore Supreme Court and City Hall aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Singapore_Supreme_Court_and_City_Hall_aerial_view.jpg?width=1280",
+     "tekija": "Cmglee.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Singapore_Supreme_Court_and_City_Hall_aerial_view.jpg",
+     "selite": "Kaksi uusklassista rakennusta yhdistettiin taidemuseoksi, joka avattiin 2015.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Marina Bay Singapore-3499.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Bay_Singapore-3499.jpg?width=1280",
+   "tekija": "Bijay Chaurasia",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Singapore-3499.jpg",
+   "selite": "Singaporen keskustan pilvenpiirtäjät loistavat Marina Bayn yllä yöllä.",
+   "leveys": 6131,
+   "korkeus": 4087,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skylines of the Central Business District, Singapore at dusk.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skylines_of_the_Central_Business_District%2C_Singapore_at_dusk.jpg?width=1280",
+   "tekija": "Basile Morin",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skylines_of_the_Central_Business_District%2C_Singapore_at_dusk.jpg",
+   "selite": "Singapore on kaupunkivaltio, jonka keskusta kiertää Marina Bayn lahtea.",
+   "leveys": 5106,
+   "korkeus": 3404,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q2735712",
+   "nimi": "Orchard Road",
+   "peruste": "sitelinks",
+   "lat": 1.30508,
+   "lon": 103.83191,
+   "syy": "ei vapaata ulkokuvaa ilman ihmispääosaa; vain ostoskeskuksia ja väkijoukkoja"
+  }
+ ]
+}

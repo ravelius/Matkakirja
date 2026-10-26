@@ -155,7 +155,7 @@ const APPELSIINI_VISA = {
   oikea: 1,
   fakta: 'Katkerassa appelsiinissa on enemmän pektiiniä kuin makeassa, '
     + 'joten hillo hyytyy paremmin. Varhaisin tunnettu resepti '
-    + '"marmelet of oranges" on vuodelta 1677 — ja saman hedelmän kuorta '
+    + '”marmelet of oranges” on vuodelta 1677 — ja saman hedelmän kuorta '
     + 'jauhetaan suomalaiseen mämmiin.',
 };
 
@@ -1215,19 +1215,4 @@ export const FOKUSVIRTA_SEVILLA = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: Vigon lahden hopealasti. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta), samaan matkakirja-
-   * korttiin kuin saapumismerkintä.
-   */
-  aarremerkinta: {
-    teksti: 'Satamassa vanha luotsi kertoi, että lahden pohjassa '
-      + 'pohjoisessa lepää laivasto, joka upposi hopea lasteinaan. Moni '
-      + 'on sukeltanut, kukaan ei ole noussut rikkaana. Hopea odottaa '
-      + 'sitä, joka tietää mihin katsoa — ei sitä, joka kaivaa '
-      + 'kovimmin.',
-  },
 };

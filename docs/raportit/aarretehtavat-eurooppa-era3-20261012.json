@@ -1,0 +1,531 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävät, erä 3 (PT 12.10.): Granada, Sevilla, Islanti (Reykjavik), Firenze, Sisilia (Palermo), Venetsia, Luxemburg, Valletta, Kassa (Košice), Ljubljana. Palkkiot (Katso/Valinta/Etsi 25, Kuuntele 30, Aikajana 30, Vanha kartta 35, Arvio 40, Salakirjoitus 50); vihje ei muuta aarremekaniikkaa, ei bonuksia. Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty. muistomerkki: true Firenzen ja Sisilian ja Venetsian a-tehtävissä (Italia) ja Firenzen b:ssä; muualla false. ESP käyttää Barcelonan Vigo-vihjettä, ITA mallierän Sisilia/Palermo-vihjettä; ISL, LUX, MLT, SVK, SVN uudet vihjeet tässä.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "granada",
+      "nimi": "Granada",
+      "maa": "ESP",
+      "hahmo": "Puutarhuri Inés (Generalifen puutarhat)",
+      "saapumispiste": {
+        "nimi": "Generalifen puutarhat, Alhambran kukkulalla (arvio Generalifen koordinaatista)",
+        "lat": 37.1769,
+        "lon": -3.5851
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Kastelen näitä terasseja ja näen kaukana alhaalla kaupungin keskellä suuren kirkon, jonka julkisivulla kohoaa vain yksi torni. Etsi se.",
+        "kohde": {
+          "nimi": "Granadan katedraali",
+          "lat": 37.1765,
+          "lon": -3.5992,
+          "etaisyys_saapumispisteesta_m": 1250
+        },
+        "vihje_vaarin": "Ei se. Katso länteen, alas kukkulalta: kaupungin keskellä seisoo suuri kivikirkko, jonka julkisivulla kohoaa vain yksi korkea torni.",
+        "tiesitko": "Ensimmäinen kivi laskettiin 1523, ja katedraali valmistui 1704. Se rakennettiin kaupungin suuren moskeijan paikalle.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "kysymys": "Kuuntele isoisän merkintä. Mitä hän poimi Alhambran jätekasasta?",
+        "vaihtoehdot": [
+          "Kullatun soljen",
+          "Rikkinäisen lampun",
+          "Sinisen kaakelinpalan",
+          "Pienen marmoripylvään"
+        ],
+        "oikea_indeksi": 2,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-granada.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-granada.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele alku uudelleen: palatsista vietiin koristeita, ja jätekasasta poimittiin seinän koristeen sirpale, ei metallia eikä kiveä.",
+        "tiesitko": "Alhambran seinillä on kaakelimosaiikkia, joka on koottu pienistä, tarkasti leikatuista lasitetuista paloista. Tekniikan nimi on alicatado.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "sevilla",
+      "nimi": "Sevilla",
+      "maa": "ESP",
+      "hahmo": "Laattamaalari Rocío (Trianan keramiikkaverstas)",
+      "saapumispiste": {
+        "nimi": "Trianan sillan Triana-pää (arvio sillan koordinaatista)",
+        "lat": 37.3862,
+        "lon": -6.0023
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Katso kaakkoon pitkin jokea. Rannalla on vanha vartiotorni, joka vartioi Sevillan satamaa jo 1200-luvulta. Etsi se.",
+        "kohde": {
+          "nimi": "Torre del Oro",
+          "lat": 37.3824,
+          "lon": -5.9965,
+          "etaisyys_saapumispisteesta_m": 664
+        },
+        "vihje_vaarin": "Ei se. Seuraa jokea alavirtaan, vastarannalla: kolmikerroksinen torni seisoo aivan rannassa, ja ylin kerros on pyöreä ja kupolikattoinen.",
+        "tiesitko": "Tornin alin kerros on kaksitoistasivuinen. Almohad-kuvernööri rakennutti sen vuosina 1220–1221 vartioimaan jokea.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "kysymys": "Rocío salasi tuotteensa nimen siirtämällä kirjaimia eteenpäin niin monta askelta kuin tornin alimmalla kerroksella on sivuja. Pura espanjankielinen sana.",
+        "salattu": "MLGXQVA",
+        "avain": 12,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "AZULEJO",
+        "vihje_vaarin": "Avain on tornin sivujen määrä. Siirrä jokaista kirjainta niin monta askelta taaksepäin. Sana on lasitettu laatta, jolla koristan seiniä.",
+        "tiesitko": "Sana tulee arabiasta ja tarkoittaa kiillotettua kiveä. Sevillan laattojen ja keramiikan keskus oli Triana, jossa pajat toimivat vuosisatoja.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "islanti",
+      "nimi": "Islanti",
+      "maa": "ISL",
+      "hahmo": "Opas Einar, Haukadalurin retkien opas",
+      "saapumispiste": {
+        "nimi": "BSÍ-linja-autoasema (Einarin retkien lähtöpaikka)",
+        "lat": 64.13749,
+        "lon": -21.93451
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Turistit kysyvät, onko tämä viikinkikirkko. Ei ole! Sen 74,5 metrin torni on kuulemma saanut mallinsa Islannin basalttipylväistä. Etsi se kirkko.",
+        "kohde": {
+          "nimi": "Hallgrímskirkja",
+          "lat": 64.14194,
+          "lon": -21.92694,
+          "etaisyys_saapumispisteesta_m": 616
+        },
+        "vihje_vaarin": "Ei se. Etsi kaupungin korkein kirkko: se seisoo kukkulalla keskustan yllä, ja sen portaittainen torni näkyy lähes joka suunnasta.",
+        "tiesitko": "Tornissa on kolme suurta kelloa: Hallgrímur, Guðríður ja Steinunn. Ne on nimetty runoilijapapin, hänen vaimonsa ja heidän tyttärensä mukaan."
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "muistomerkki": false,
+        "kysymys": "Einar jättää ryhmälle salasanan. Hän siirsi jokaista kirjainta eteenpäin niin monta askelta kuin kirkon tornissa on suurta kelloa. Pura sana.",
+        "salattu": "JHBVLU",
+        "avain": 3,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "GEYSIR",
+        "vihje_vaarin": "Laske vain kirkon SUURET kellot, ei kellopelin pieniä. Siirrä jokaista kirjainta niin monta askelta taaksepäin.",
+        "tiesitko": "Sana geysir tulee islannin verbistä, joka tarkoittaa purskuttaa. Haukadalurin Geysir antoi nimen kaikille maailman geysireille."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "firenze",
+      "nimi": "Firenze",
+      "maa": "ITA",
+      "hahmo": "Vihanneskauppias Paola (San Lorenzon kauppahalli)",
+      "saapumispiste": {
+        "nimi": "Mercato Centrale, San Lorenzon kauppahalli",
+        "lat": 43.7766,
+        "lon": 11.2532
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Kun kojuni hiljenee, katson kaakkoon: kattojen yli nousee punainen kupoli, suurempi kuin yksikään muu muurattu. Etsi se kirkko kaupungista.",
+        "kohde": {
+          "nimi": "Duomo",
+          "lat": 43.7731,
+          "lon": 11.256,
+          "etaisyys_saapumispisteesta_m": 449
+        },
+        "vihje_vaarin": "Ei se. Kulje halilta kaakkoon muutama katu: etsimäsi kirkon kupoli on punainen, ja sen vieressä seisoo oma kellotorni.",
+        "tiesitko": "Kupoli valmistui vuonna 1436, ja se on yhä suurin koskaan rakennettu muurattu kupoli. Sen suunnitteli Filippo Brunelleschi.",
+        "muistomerkki": true
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "kysymys": "Paola osoittaa kaupungintalon tornia: 'Se kurkottaa kaikkien kattojen yli!' Kuinka monta metriä korkea Palazzo Vecchion torni on? Arvioi kaupungista.",
+        "liukusaadin": {
+          "min": 20,
+          "max": 200,
+          "askel": 2
+        },
+        "oikea": 94,
+        "hyvaksyttava_vali": [
+          88,
+          100
+        ],
+        "vihje_vaarin": "Ei vielä. Torni nousee reilusti keskustan talojen yli; kuvittele talot päällekkäin, niin saat suuruusluokan.",
+        "tiesitko": "Palatsin suunnittelu alkoi 1299 Arnolfo di Cambion johdolla. Torni on noin 94-95 metriä, ja palatsi on yhä Firenzen kaupungintalo.",
+        "muistomerkki": true
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "sisilia",
+      "nimi": "Sisilia",
+      "maa": "ITA",
+      "hahmo": "Nukketeatterin mestari Rosalia",
+      "saapumispiste": {
+        "nimi": "Nukkemuseo Pasqualinon näyttämö, Piazza Marinan vieressä (Palermo)",
+        "lat": 38.11854,
+        "lon": 13.37056
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": true,
+        "vihjelause": "Minun nukkeni esiintyvät pienellä lavalla. Katso länteen: Italian suurimmassa oopperatalossa on leveät portaat ja temppelimäinen pylväsjulkisivu.",
+        "kohde": {
+          "nimi": "Teatro Massimo",
+          "lat": 38.12028,
+          "lon": 13.35722,
+          "etaisyys_saapumispisteesta_m": 1183
+        },
+        "vihje_vaarin": "Ei se. Kävele länteen, sitten pohjoiseen leveää katua: iso ooppera seisoo aukion laidalla, portaat ja pylväät edessään.",
+        "tiesitko": "Teatro Massimo avattiin 1897, 22 vuotta peruskiven muurauksen jälkeen. Avattaessa se oli Euroopan kolmanneksi suurin oopperatalo."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Vanhan kartan sydämessä kaksi pääkatua risteää: Corso Vittorio Emanuele ja Via Maqueda. Napauta niiden risteystä.",
+        "kuva": {
+          "commons_tiedosto": "Plans of the most important cities and towns of continental Europe accompanying the special edition of Bradshw's continental railway, steam transit, &c. - btv1b55011210h (28 of 31).jpg",
+          "tekija": "S. Bradshaw (kaivertaja; BnF/Gallica digitoinut), Palermon kaupunkikartta noin 1880",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Plans_of_the_most_important_cities_and_towns_of_continental_Europe_accompanying_the_special_edition_of_Bradshw%27s_continental_railway,_steam_transit,_%26c._-_btv1b55011210h_(28_of_31).jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1433
+        },
+        "oikea_piste_px": [
+          741,
+          832
+        ],
+        "toleranssi_px": 40,
+        "vihje_vaarin": "Ei tuo. Seuraa pitkää Corso Vittorio Emanuele -katua, kunnes Via Maqueda leikkaa sen pienellä kahdeksankulmaisella aukiolla.",
+        "tiesitko": "Risteystä sanotaan Quattro Cantiksi. Sen kulmissa on barokkijulkisivut, joissa on suihkulähteitä, Espanjan kuninkaita ja suojeluspyhimyksiä."
+      },
+      "maa_vihje_viittaus": "Ei uutta: käytetään mallierän ITA-vihjettä (Sisilia/Palermo, Caravaggion kadonnut maalaus), tiedosto aarretehtavat-eurooppa-malli-20261012.json"
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "venetsia",
+      "nimi": "Venetsia",
+      "maa": "ITA",
+      "hahmo": "Naamiontekijä Lucia",
+      "saapumispiste": {
+        "nimi": "Luician naamiopaja, Campo San Polo",
+        "lat": 45.4375,
+        "lon": 12.3299
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": true,
+        "vihjelause": "Naamio kätkee kasvot, mutta tämä talo näyttää omansa: vaaleanpunaista ja valkoista kuviota, avoimet kaaristot. Siellä päätti ennen Venetsian tasavalta.",
+        "kohde": {
+          "nimi": "Dogen palatsi",
+          "lat": 45.4337,
+          "lon": 12.3405,
+          "etaisyys_saapumispisteesta_m": 929
+        },
+        "vihje_vaarin": "Ei se. Kävele itään kohti Pyhän Markuksen toria: palatsin yläseinä on vaaleanpunaista ja valkoista, ja sen alla ovat avoimet kaaret.",
+        "tiesitko": "Palatsi oli doogin koti ja tasavallan hallinnon keskus. Sen vieressä Huokausten silta, 1600-luvun alusta, johtaa entiseen vankilaan."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Venetsia rakensi laivansa suljetulla telakalla, jonka altaat näkyvät vanhalla kartalla (noin 1870). Napauta telakkaa.",
+        "kuva": {
+          "commons_tiedosto": "Nuova pianta di Venezia = Neuer plan von Venedig (28004024885).jpg",
+          "tekija": "Ernst Wilhelm Leberecht (kaivertaja, k. 1889); julkaisija H. F. & M. Münster, 1870; Norman B. Leventhal Map Center, Boston Public Library",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Nuova_pianta_di_Venezia_%3D_Neuer_plan_von_Venedig_(28004024885).jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1515
+        },
+        "oikea_piste_px": [
+          1560,
+          740
+        ],
+        "toleranssi_px": 80,
+        "vihje_vaarin": "Ei tuo. Etsi kartan itäpäästä pitkät vesialtaat ja vaaleanpunertavat telakkarakennukset; niiden yläpuolella lukee Arsenale.",
+        "tiesitko": "Arsenaalin vanhimpien rakennusten arvellaan olevan vuodelta 1104. Parhaimmillaan siellä työskenteli noin 16 000 ihmistä."
+      },
+      "maa_vihje_viittaus": "Ei uutta: käytetään mallierän ITA-vihjettä (Sisilia/Palermo, Caravaggion kadonnut maalaus), tiedosto aarretehtavat-eurooppa-malli-20261012.json; kirjoitettu Sisilian luonnokseen"
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "luxemburg",
+      "nimi": "Luxemburg",
+      "maa": "LUX",
+      "hahmo": "Kivenhakkaaja Nic",
+      "saapumispiste": {
+        "nimi": "Bockin kallion muuri (Nicin työmaa)",
+        "lat": 49.6116,
+        "lon": 6.1366
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Kallion kaupungissa kaikki lepää kivellä. Etsi länsipuolelta kivisilta, jonka kaksi suurta kaarta ylittävät syvän laakson. Se valmistui 1903.",
+        "kohde": {
+          "nimi": "Adolphe-silta",
+          "lat": 49.6083,
+          "lon": 6.127,
+          "etaisyys_saapumispisteesta_m": 783
+        },
+        "vihje_vaarin": "Ei se. Kävele länteen vanhan kaupungin reunalle: silta kulkee Pétrussen laakson yli, ja sen kaaria on kaksi rinnakkain.",
+        "tiesitko": "Sillan keskikaarien jänneväli on 84,65 metriä. Valmistuessaan se oli maailman suurimpia kivikaarisiltoja."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Nic näyttää vuoden 1878 kaupunkikarttaa. Napauta Grundin alakaupungin vieressä olevaa kalliotasannetta, jota Alzette kiertää ja jolla oli kasarmeja.",
+        "kuva": {
+          "commons_tiedosto": "Plan de la Ville de Luxembourg en 1878. Echelle de 1 à 5. 000 - Dressé par J.P. Biermann, dess - btv1b8493171w.jpg",
+          "tekija": "J. P. Biermann (piirtäjä), Lith. Munier, Nancy; Bibliothèque nationale de France, Gallica",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Plan_de_la_Ville_de_Luxembourg_en_1878._Echelle_de_1_%C3%A0_5._000_-_Dress%C3%A9_par_J.P._Biermann,_dess_-_btv1b8493171w.jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1891
+        },
+        "oikea_piste_px": [
+          1255,
+          955
+        ],
+        "toleranssi_px": 70,
+        "vihje_vaarin": "Ei tuo. Etsi kartalta nimi Plateau du Rham: se on Alzette-joen mutkan sisällä, Grundin alakaupungin kaakkoispuolella.",
+        "tiesitko": "Rhamin kasarmit rakennettiin 1600-luvun lopulla. Linnoituksen purun jälkeen niissä toimi mm. orpokoti ja köyhien vanhainkoti."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "valletta",
+      "nimi": "Valletta",
+      "maa": "MLT",
+      "hahmo": "Teatterin lipunmyyjä Rita",
+      "saapumispiste": {
+        "nimi": "Pjazza Teatru Rjal (Ritan lippukoppi)",
+        "lat": 35.8965,
+        "lon": 14.5103
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Turistit kysyvät usein tietä rakennukseen, joka vie kokonaisen korttelin. Ritarikunnan päämies asui siinä. Se on täältä koilliseen, alle puoli kilometriä.",
+        "kohde": {
+          "nimi": "Suurmestarin palatsi",
+          "lat": 35.898611,
+          "lon": 14.514167,
+          "etaisyys_saapumispisteesta_m": 420
+        },
+        "vihje_vaarin": "Ei se. Kävele koilliseen kaupungin sydämeen: etsi rakennus, joka ei ole yksi talo muiden joukossa vaan vie kokonaisen korttelin.",
+        "tiesitko": "Palatsi rakennettiin 1500-luvun lopulla suurmestarin asunnoksi. Nykyään siellä on Maltan presidentin toimisto sekä museo, jossa on ritarien panssareita."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Rita kertoo kaupungin tapahtumista. Missä järjestyksessä nämä sattuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Suurmestari de Valette laskee Valletan peruskiven",
+            "vuosi": "1566"
+          },
+          {
+            "teksti": "Kuninkaallisen oopperatalon sisätilat tuhoutuvat tulipalossa",
+            "vuosi": "1873"
+          },
+          {
+            "teksti": "Valletta toimii Euroopan kulttuuripääkaupunkina",
+            "vuosi": "2018"
+          }
+        ],
+        "vihje_vaarin": "Kaupunki perustettiin ensin. Oopperatalon palo sattui 1800-luvulla, kauan ennen kuin Valletta sai kulttuuripääkaupungin arvonimen.",
+        "tiesitko": "Oopperatalo avattiin 1866, ja sen sisätilat paloivat 25.5.1873. Talo avattiin uudelleen 1877 Verdin Aidalla."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "kosice",
+      "nimi": "Kassa",
+      "maa": "SVK",
+      "hahmo": "Lennätinvirkailija Zuzana, rautatieaseman lennätinhuoneessa",
+      "saapumispiste": {
+        "nimi": "Košicen rautatieasema (Zuzanan lennätinhuone)",
+        "lat": 48.7225,
+        "lon": 21.26806
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Seuraa kiskoja kaupungin sydämeen. Aukion keskellä seisoo Slovakian suurin kirkko, ja sen alttarissa on 48 maalattua taulua. Katso sitä.",
+        "kohde": {
+          "nimi": "Pyhän Elisabetin tuomiokirkko",
+          "lat": 48.72027,
+          "lon": 21.2582,
+          "etaisyys_saapumispisteesta_m": 765
+        },
+        "vihje_vaarin": "Ei se. Kävele asemalta kohti vanhaa kaupunkia: aukion keskellä seisoo goottilainen kirkko, jonka pohjoinen torni nousee lähes 60 metriin.",
+        "tiesitko": "Kirkon pääalttarissa on 48 goottilaista taulua vuosilta 1474–1477. Se on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottikatedraaleista."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Zuzana lajittelee vanhoja asiakirjoja. Missä järjestyksessä nämä Kassan tapahtumat tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Kuningas Ludvig Suuri antaa Kassalle oman vaakunakirjan",
+            "vuosi": "1369"
+          },
+          {
+            "teksti": "Hlavná-kadulle pystytetään Immaculata-pylväs ruton päättymisen kiitokseksi",
+            "vuosi": "1723"
+          },
+          {
+            "teksti": "Kassa–Bohumín-rata valmistuu koko pituudeltaan",
+            "vuosi": "1872"
+          }
+        ],
+        "vihje_vaarin": "Vaakuna on keskiajalta ja rata uusin. Ruttopylväs seisoi Hlavná-kadulla jo kauan ennen kuin Kassaan tuli ensimmäinen juna.",
+        "tiesitko": "Rata yhdisti Kassan Sleesian teollisuusalueeseen. Vaakunakirja on kaupungin arkiston arvokkain asiakirja, ja Kassan päivä juhlii sitä."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "ljubljana",
+      "nimi": "Ljubljana",
+      "maa": "SVN",
+      "hahmo": "Kukkakauppias Vesna, Kolmisillan torilla",
+      "saapumispiste": {
+        "nimi": "Kolmisilta (Vesnan kukkastandi)",
+        "lat": 46.0511,
+        "lon": 14.50621
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Katso ylös vanhan kaupungin yli. Metsäisen mäen päällä seisoo linna, jonka näkötornista näkee koko kaupungin. Sinne pääsee kävellen tai köysiradalla.",
+        "kohde": {
+          "nimi": "Ljubljanan linna",
+          "lat": 46.04885,
+          "lon": 14.50857,
+          "etaisyys_saapumispisteesta_m": 309
+        },
+        "vihje_vaarin": "Ei se. Käännä katse joen yli ja ylös: mäen laella on kivinen linna, jota ympäröi muuri. Köysirata lähtee sinne torin vierestä.",
+        "tiesitko": "Linna rakennettiin 1400-luvulla lähes kokonaan uudelleen puolustamaan ottomaanien hyökkäyksiä vastaan. Muurien sisällä on Pyhän Yrjön kappeli."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Vesna kysyy: missä järjestyksessä nämä Ljubljanan tapahtumat tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Keisari Fredrik III perustaa Ljubljanan hiippakunnan",
+            "vuosi": "1461"
+          },
+          {
+            "teksti": "Rautatie ulottuu Ljubljanaan, ja ensimmäinen juna saapuu kaupunkiin",
+            "vuosi": "1849"
+          },
+          {
+            "teksti": "Maanjäristys vahingoittaa tai tuhoaa noin kymmenesosan Ljubljanan taloista",
+            "vuosi": "1895"
+          }
+        ],
+        "vihje_vaarin": "Hiippakunta on keskiajalta, juna tuli höyryn aikaan ja maanjäristys on viimeinen. Rata Triesteen valmistui vasta 1857, siis junan tulon jälkeen.",
+        "tiesitko": "Maanjäristyksen jälkeen kaupunkia rakennettiin uudelleen, ja keskustaan nousi paljon jugendtaloja."
+      }
+    }
+  ],
+  "maa_vihjeet": [
+    {
+      "iso3": "ISL",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Mosfellsdalur (Mosfell, Egilin tila)",
+        "lat": 64.1803,
+        "lon": -21.6189
+      },
+      "vihjeet": [
+        "Saagan skaldi sai Englannin kuninkaalta kaksi arkullista hopeaa. Vanhana hän vei ne illalla kätköön, eikä niitä enää nähty.",
+        "Saagan mukaan orjat eivät palanneet, eikä hän kertonut kenellekään, minne hopea jäi. Hän sairastui seuraavana syksynä, ja arvuuteltavaa on riittänyt.",
+        "Mosfellsdalur: tarun mukaan Egilin hopea on jossain täällä, ehkä rotkossa tai suon pohjassa, mutta arkkuja ei ole löydetty."
+      ]
+    },
+    {
+      "iso3": "LUX",
+      "kaupunki": "luxemburg",
+      "vihjeet": [
+        "Muistiinpano: etelän maan alla on rautakiveä, minettea. Sen fosfori pilaa teräksen, joten hyvää terästä siitä ei vielä saa.",
+        "Eschiin nousi 1871 sulattamo. Mene Luxemburgin kaupunkiin, jossa kivenhakkaajat purkavat linnoitusta, ja kysy heiltä maan kivistä."
+      ]
+    },
+    {
+      "iso3": "MLT",
+      "kaupunki": "valletta",
+      "vihjeet": [
+        "Maltan etelärannan kalliolla seisoo suuria kivilohkareita. Taru kertoo jättiläisten pystyttäneen ne. Insinööri Vance tutki paikkaa 1839.",
+        "Mene Vallettaan, saaren pääkaupunkiin, ja kysy sieltä, missä Maltan muinaiset kivitemppelit seisovat."
+      ]
+    },
+    {
+      "iso3": "SVK",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Banská Štiavnica (Selmecbánya, Schemnitz), hopeakaivosten kaupunki",
+        "lat": 48.45806,
+        "lon": 18.89639
+      },
+      "vihjeet": [
+        "Unkarin vuoristossa on hopeakaupunki, joka oli keskiajalla kuningaskunnan tärkeä hopean ja kullan lähde. Sen kaivoksessa räjäytettiin ruutia jo 1627.",
+        "Unkarilaiset sanovat kaupunkia Selmecbányaksi, saksalaiset Schemnitziksi. Mene sinne ja etsi hopeakaivosten kätköä."
+      ]
+    },
+    {
+      "iso3": "SVN",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Idrija (Idria), elohopeakaivosten kaupunki",
+        "lat": 46.0025,
+        "lon": 14.0275
+      },
+      "vihjeet": [
+        "Tarun mukaan saavinvalmistaja huomasi 1400-luvun lopulla lähteessä nestemäistä elohopeaa. Tarkkaa vuotta ei tiedä kukaan.",
+        "Siellä vuoren sisässä elohopeaa on sekä nesteenä että punaisena sinooperikivenä.",
+        "Paikka on Idrijan eli saksaksi Idrian kaivoskaupunki Carniolassa. Mene sinne ja etsi kaivoksen kätköä."
+      ]
+    }
+  ]
+}

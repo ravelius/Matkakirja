@@ -1,0 +1,74 @@
+[
+  {
+    "id": "luxemburg",
+    "esittely": "Kartan alue on Luxemburgin vanhakaupunki jokirotkojen reunustamalla kalliolla. Kaupungin alkuna pidetään linnaa, jonka kreivi Siegfried hankki Bock-kalliolta vuonna 963. Espanjalaiset alkoivat louhia kallioon puolustuskäytäviä, kasematteja, vuonna 1644. Lontoon sopimus vuonna 1867 määräsi linnoitukset purettaviksi, ja vanhakaupunki on Unescon maailmanperintökohde vuodesta 1994.\n\nNotre-Damen katedraali rakennettiin jesuiittojen kirkoksi vuosina 1613–1621, ja se sai katedraalin aseman 1870. Suurherttuallinen palatsi oli kaupungintalo vuosina 1572–1795 ja suurherttuan asuinpaikka vuodesta 1890. Adolphe-silta on 153 metriä pitkä, ja se avattiin 1903. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 708,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/City_of_Luxembourg",
+        "title": "Wikipedia: City of Luxembourg",
+        "tukee": "963 Siegfried ja Bock-kallio; Lontoon sopimus 1867 määräsi linnoitukset purettaviksi; espanjalaiset tunnelit alkaen 1644"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Old_City_of_Luxembourg",
+        "title": "Wikipedia: Old City of Luxembourg",
+        "tukee": "Unesco-kohde 1994"
+      },
+      {
+        "url": "https://www.worldheritagesite.org/list/id/699",
+        "title": "Luxembourg City: its Old Quarters and Fortifications (hakutulos)",
+        "tukee": "Unesco 1994; suurin osa linnoituksista purettu 1867 jälkeen"
+      },
+      {
+        "url": "https://luxtoday.lu/en/knowledge/luxembourg-casemates",
+        "title": "Luxtoday: Luxembourg casemates (hakutulos)",
+        "tukee": "Bock-kasemattien rakentaminen alkoi espanjalaisaikana 1644; Unesco 1994"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Notre-Dame_Cathedral,_Luxembourg",
+        "title": "Wikipedia: Notre-Dame Cathedral, Luxembourg",
+        "tukee": "peruskivi 1613, vihkiminen 1621, jesuiittakirkko, katedraali 1870"
+      },
+      {
+        "url": "https://luxembourg.public.lu/en/visit/arts-and-culture/cathedral-notre-dame-luxembourg.html",
+        "title": "luxembourg.public.lu: Cathedral Notre-Dame",
+        "tukee": "1613, 1621, jesuiittakirkko, katedraali 1870"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grand_Ducal_Palace,_Luxembourg",
+        "title": "Wikipedia: Grand Ducal Palace, Luxembourg",
+        "tukee": "kaupungintalo 1572-1795; suurherttuan käyttöön 1890"
+      },
+      {
+        "url": "https://monarchie.lu/en/head-state/residences",
+        "title": "monarchie.lu: Grand Ducal Palace (hakutulos)",
+        "tukee": "rakennus kaupungintalona 1572-, suurherttuan virallinen asuinpaikka 1890"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Adolphe_Bridge",
+        "title": "Wikipedia: Adolphe Bridge",
+        "tukee": "avattu 24.7.1903, pituus 153 m"
+      },
+      {
+        "url": "https://www.visitluxembourg.com/place/adolphe-bridge",
+        "title": "Visit Luxembourg: Adolphe Bridge",
+        "tukee": "rakennettu 1900-1903, pituus 153 m"
+      }
+    ],
+    "pudotetut": [
+      "Pohjoisen Gibraltar -lempinimi (entinen teksti): ei vahvistettu kahdesta lähteestä",
+      "Kasemattien pituus: lähteet 17 km / 23 km / 14 mailia, jätetty pois",
+      "Kasemattien valmistuminen itävaltalaisaikana 1737-1746: vain yksi hakutulos, jätetty pois",
+      "Chemin de la Corniche (1600-luvun muurit, Batty Weberin 'Euroopan kaunein parveke'): vahvistettu Visit Luxembourgista ja Expedia-hakutuloksesta, jätetty pois tilan vuoksi",
+      "Guillaume II:n aukio: ei tarkistettavaa tietoa, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Linnoitusten purkaminen: Lontoon sopimus 1867 (päätös) vs. pintalinnoitusten purku 1875 / 16 vuotta kestänyt purku -> käytetty vain sopimusvuotta 1867",
+      "Notre-Dame-nimen vakiintuminen: 1844 vs. 1848 -> ei mainita",
+      "Palatsin uudelleenrakennus: alkoi 1572, valmistui 1573 tai 1570-luvulla -> käytetty 'kaupungintalo 1572-1795' Wikipedian mukaan",
+      "Adolphe-sillan korkeus 42 m vs. 45 m -> korkeutta ei mainita"
+    ],
+    "muutos_sk": "Poistettu Pohjoisen Gibraltar ja 'Isoisän matkan aikaan' -näkökulma (1873). Lisätty Bock 963, kasemattien alku 1644, Lontoon sopimus 1867, Unesco 1994, Notre-Damen vuodet 1613-1621 ja 1870, palatsi 1572-1795 ja 1890, Adolphe-silta 153 m ja 1903. Poistettu Guillaume II:n aukion kuvaus (ei tarkistettavissa) ja Corniche (tilan vuoksi)."
+  }
+]

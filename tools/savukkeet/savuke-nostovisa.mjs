@@ -52,10 +52,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { FOKUSVIRTA_PARIISI } from '../../js/packs/fokusvirta-pariisi.js';
-
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -63,7 +60,7 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 
 /** Palkkio on koodin vakio (js/fokusnosto.js NOSTON_VISA_PALKKIO). */
 const PALKKIO = 25;
-/** Pariisin nostot; kysymys on kiintiön mukaan joka kolmannessa. */
+/** Pariisin nostot; kysymys on kiintiön mukaan vähintään joka kolmannessa. */
 const NOSTOT = FOKUSVIRTA_PARIISI.takynostot;
 const VISALLISET = NOSTOT.filter((n) => n.visa);
 const KOE = VISALLISET[0];
@@ -125,7 +122,7 @@ function tallenne({ ilmanLaskuria = false } = {}) {
   return JSON.stringify(data);
 }
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** Yksi selainkonteksti valmiiksi ladattuna Pariisin palloon. */
 async function avaaPeli(data) {
@@ -330,10 +327,22 @@ const luvut = (sivu) => sivu.evaluate(() => ({
   laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
 }));
 
-/* ---------- DATAN KIINTIÖ (ei tarvitse selainta) ---------- */
+/*
+ * ---------- DATAN KIINTIÖ (ei tarvitse selainta) ----------
+ *
+ * VÄHINTÄÄN KOLMASOSA, EI TÄSMÄLLEEN (nostostandardin kohta 3, Raamattu-
+ * loki docs/raamattu-loki/paatokset-2026-09.md: *"Pelikoodarin
+ * visa-kolmannes-era perutaan; nostostandardin kohta 3 korjattu - visoja
+ * lisataan sisaltotyona joka maahan vahintaan kolmasosaan."*). Tämä
+ * vartio vaati alun perin (v1845) TÄSMÄLLEEN yhden kolmasosan, mutta
+ * maalehden nostot (v1894 alkaen, js/packs/fokusvirta-pariisi.js) toivat
+ * Pariisiin kysymyksiä yli sen — 27 nostoa, 15 visallista, reilusti yli
+ * kolmasosan, kuten standardi sallii/vaatii. Täsmällinen osuma ei siis
+ * ole enää oikea väite; kynnys on ALARAJA, ei tarkka luku.
+ */
 tieto('Pariisin nostot', NOSTOT.map((n) => `${n.id}${n.visa ? ' *' : ''}`).join(', '));
-vaadi('0. kiintiö: joka kolmannessa nostossa on kysymys',
-  VISALLISET.length === Math.floor(NOSTOT.length / 3)
+vaadi('0. kiintiö: vähintään joka kolmannessa nostossa on kysymys',
+  VISALLISET.length >= Math.ceil(NOSTOT.length / 3)
     && NOSTOT.indexOf(KOE) === 2,
   `nostoja ${NOSTOT.length}, kysymyksiä ${VISALLISET.length}, `
   + `ensimmäinen indeksissä ${NOSTOT.indexOf(KOE)}`);

@@ -66,6 +66,7 @@ import { NAKYVAT_KAUPUNGIT_FRA } from '../../js/packs/nakyvat-kaupungit-fra.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
 import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -200,9 +201,6 @@ if ((await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`))?.status !== 200
   lopeta();
 }
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const tallenne = (aloitus) => {
   const peli = new Game({
@@ -215,11 +213,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch(
-  // Konttiympäristössä selain on /opt/pw-browsers/chromium; Macilla polku
-  // tulee CHROMIUM-ympäristömuuttujasta (CLAUDE.md, Mac Studio -työympäristö).
-  { executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium' },
-);
+const selain = await avaaChromium();
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {

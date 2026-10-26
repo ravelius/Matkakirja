@@ -34,12 +34,11 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? '';
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const LAHTOKAUPUNKI = 'marseille';
@@ -71,6 +70,12 @@ const vaadi = (nimi, ehto, lisa = '') => {
   kaikki += 1;
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
+/*
+ * Aikavartio vain suorituskykysarjassa (omistaja 20.9.2026: aikaa mittaavat
+ * vartiot eivät ole PR-portissa). 26.9.2026 ladonnan mediaani oli 65 rinnakkaisen
+ * savukkeen kuormassa 12,10 ms rajalla 12 (ajo 36230676227), 1400 px:llä 8,8 ms.
+ */
+const vaadiAika = suorituskykyVaatija(vaadi);
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
 const AMPARI = 'https://media.matkakirja.app/';
@@ -95,9 +100,7 @@ const PALLON_PACK = packById('maailmankartta');
 const MAA = PALLON_PACK.map.cityCountry;
 const KOHDEMAA = MAA[LAHTOKAUPUNKI];
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+const selain = await avaaChromium();
 
 
 /** Nostot, nimet, Välimeri ja rantaviiva yhdestä hetkestä. */
@@ -270,7 +273,7 @@ for (const ruutu of RUUDUT) {
   }
   vaadi(`${tunnus}: 4a. saapumisnäkymässä yksikään elävä nimiö ei ylitä reunaa`,
     saapuminen.yli.length === 0, JSON.stringify(saapuminen.yli));
-  vaadi(`${tunnus}: 5. ladonta pysyy nopeana (mediaani ≤ 12 ms)`,
+  vaadiAika(`${tunnus}: 5. ladonta pysyy nopeana (mediaani ≤ 12 ms)`,
     saapuminen.ladontaMs <= 12, `${saapuminen.ladontaMs.toFixed(2)} ms`);
 
   for (const osuus of [0.5, 0.25]) {

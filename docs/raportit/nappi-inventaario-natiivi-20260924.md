@@ -42,7 +42,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | Kulkutapaliuska: Liftaus/Bussilla/Laivalla/Lentäen | Sama liuska alarivillä (peukalo/bussi/laiva/lento), testattu tänään | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Heitä noppa" | Sama, testattu tänään ("Noppa 4" -kortti nopanheiton jälkeen) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Nopanheiton jälkeiset kohteet: web = renkaat kartalla, ei listaa | **KORJATTU JA VAHVISTETTU (testi/b9-ui ae76378, iPhone 17 + iPad).** Listakortti poistettu, natiivi näyttää nyt PELKÄT renkaat tavoitettavissa olevilla kaupungeilla + pöllön valintavihjeen ("Napauta korostettua kohdetta kartalla, niin matka jatkuu.") — sama kuin web. | SAMA (korjattu) | **KYLLÄ** (kuvapari `noppa-kartalle-web-20260924/natiivi-valintavihje-iphone.png` vs. web-kuva samasta kansiosta) |
-| "Tutki" (tutkinta-nappi) | Ei testattu tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| "Tutki" (tutkinta-nappi) | Testattu (`peli:tutki`, build 10, iPhone): avaa kohtaamiskortin ("Ateena · kohtaaminen · yritys 1/2", muotokuva, "Aloita peli" -nappi) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Maiden lehdet -nappi (maailmanradio-nappi vastine) | Karttaselite/linssit-valikossa vastaava toiminto olemassa | EI TARKISTETTU tarkka vastaavuus | EI (rakennevertailu, ei pikselimitattu) |
 | Top-bar: logo/lähteet-nappi | Ei vastaavaa löydetty natiivin yläpalkista tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | Top-bar: raha/päivä-pilleri (avaa laukun) | Sama pilleri "300£ 1/80", avaa laukun | SAMA | EI (rakennevertailu, ei pikselimitattu) |
@@ -53,10 +53,10 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 
 | Web-nappi/toiminto | Natiivi | Tila | Mitattu webistä (px/zoomikynnys) |
 |---|---|---|---|
-| Laukku avautuu raha-pilleristä | Sama, testattu (rivi 20/32 pariteetti-doc, PASS tilaerolla selitettynä) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| "Matkan tilastot" -laajennin | Sama tieto näkyy (Sijainti/Kukkaro/Untuvikko + tilastot) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Julisterivi (poster-galleria) | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
-| Aarnin luettelo -infonappi | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| Laukku avautuu raha-pilleristä | Sama, testattu (rivi 20/32 pariteetti-doc, PASS tilaerolla selitettynä); **uudelleenvahvistettu oikealla kosketuksella** (iPhone 18 Pro, build 10) ja **mitattu** web-kuvaparilla (`openPassport()` vs. rahapilleri-napautus) — sama MATKA/Sijainti/Kukkaro/Untuvikko-rakenne, sama VARUSTEET-ruudukko (glasses+5 linssikuvaketta samassa järjestyksessä). Kuvapari `web-laukku-iphone.jpg` / vastaava natiivikuva. | SAMA | **KYLLÄ** (kuvapari) |
+| "Matkan tilastot" -laajennin | Sama tieto näkyy (Sijainti/Kukkaro/Untuvikko + tilastot); **oikealla kosketuksella laajennettuna näkyy myös Avatut aarteet/Käydyt kaupungit/maat, Aarnin luettelo ja Julisteet-rivi** | SAMA | EI (rakennevertailu, ei pikselimitattu) |
+| Julisterivi (poster-galleria) | **SELVITETTY (Natiivi-UI, 25.9.):** rivin kosketusalue (`mk-laukku__julisteet`, kerros 40) on ehjä nykyisessä masterissa — testattu b12j:llä (bcc46ef) iPhone 17:llä, osui koordinaattiin (180, 480). Laitetestaajan 1572C658-yrityksissä (24.9. klo 23.5x, 5 epäonnistunutta tap-yritystä) oli todennäköisesti vanhempi asennettu build ja/tai 402 pt -näytöllä osuma rivin ohi. **Natiivi-UI löysi ja korjasi samalla oikean vian**: galleria ja laukun vedokset olivat TYHJIÄ, koska julisteen kuva-URL kaksinkertaistui (`…/julisteet/https://…` → 404) — korjaus `natiivi-ui/juliste-url` (de8852b), tulossa build 12:een. | PASS (nappi), kuvat olivat VIKA → korjattu de8852b | EI (rakennevertailu, ei pikselimitattu) |
+| Aarnin luettelo -infonappi | Näkyy laukun "Matkan tilastot" -laajennettuna näkymänä ("AARNIN LUETTELO ⓘ Kateissa 7") oikealla kosketuksella — itse (i)-kuvakkeen napautus ei osunut tällä kierroksella (pieni kohde) | EI TARKISTETTU (info-popupin sisältö), mutta rivi näkyy oikein | EI (rakennevertailu, ei pikselimitattu) |
 | Varusteet (linssi-ruudukko) | Sama ruudukko, harmaat/ei-vielä-löydetyt linssit näkyvät erikseen (rivi 32) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Aktivoi"/"Ota pois" (linssin aktivointi) | Ei testattu erikseen tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 
@@ -70,7 +70,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | "uusi peli" (vahvistusdialogi + palautus porttiin) | Sama, PASS tänään (SHA 24c9194 ja f6de924): vahvistuskysely, palautus aloitusporttiin | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "ehdota sisältöä" / palautelomake | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | RETKIKUNTA-osio (sähke-toiminnot) | Natiivissa oma "Sähke"-toiminto (ks. osio 10), löytyi ☰-valikosta aiemmalla kierroksella | SAMA rakenteeltaan | EI (rakennevertailu, ei pikselimitattu) |
-| "Mitä uutta" / versiotieto | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| "Mitä uutta" / versiotieto | **KORJAUS**: alun perin merkitty SAMA, mutta web-lähteestä (js/main.js) löytyy vain APP_VERSION-numero + "Peli päivittyi" -minimi-ilmoitus (`ui mitauutta paivittyi`), EI täyttä muutoslokia. Natiivi näyttää build 10:llä kokonaisen, moniriviesen muutoslokin (sisältö 66, v1.0.0-rivit selityksineen per build) — natiivi on selvästi rikkaampi kuin web. | ERI (natiivi rikkaampi) | EI (rakennevertailu, ei pikselimitattu) |
 | Kehittäjän hammasratasvalikko | Natiivissa vastaava KOKEET-valikko, molemmat kehittäjärajattuja — ei App Storeen | SAMA (molemmat piilossa tuotannossa) | EI (rakennevertailu, ei pikselimitattu) |
 
 ## 5. Asetukset
@@ -87,7 +87,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 |---|---|---|---|
 | Edellinen/Seuraava-sivunappi | Sama, testattu useaan otteeseen tänään (esim. Ateena/Marseille aihesivut) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Sisällys-nappi (alapalkki + ylä-hampurilainen pitkällä sivulla) | Sisällys korjattu ja vahvistettu (rivi 8, PASS): korttilista kuvineen, samat otsikot | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Sisällys-paneelin sulkeminen / "Takaisin" | Ei testattu erikseen tänään | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| Sisällys-paneelin sulkeminen / "Takaisin" | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10): "← Palaa kartalle" -nappi sulkee sisällyksen JA koko lehden, palaa suoraan kartalle. X-kuvake ylhäällä ei reagoinut napautukseen tällä kierroksella (pieni kohde, ei toistettu). **MITATTU**: web-kuvapari (`avaaSisallysvalikko()`) näyttää saman korttilistan (Etusivu/Ateena pintaa syvemmältä/Arki ja tavat/Historia/Historian hetki/Menovinkit) ja saman "← Palaa kartalle" -napin. Kuvapari `web-sisallys-iphone.jpg` / vastaava natiivikuva. | SAMA ("Palaa kartalle"), EI TARKISTETTU (X-kuvake) | **KYLLÄ** (kuvapari) |
 | Maalehti-liite-linkki (kaupunkilehden viimeiseltä sivulta) | Ei testattu erikseen tänään, `ui maalehti <ISO>` -komento toimii suoraan | EI TARKISTETTU polku lehdestä | EI (rakennevertailu, ei pikselimitattu) |
 | Maalehden kansi: PERUSTIEDOT-lohko + kartta, iPad-leveys | **MITATTU, VAHVISTETTU ERO.** Web (834×1194, `maalehti-kansi-834x1194.png`): kaksipalstainen, PERUSTIEDOT vasemmalla ≈601 px (36 %), kartta oikealla ≈685 px (41 %), rinnakkain. Natiivi (iPad, `9-maalehti.png`): yksipalstainen pino, kartta koko leveydeltä ≈1571 px (94 %) ylhäällä, PERUSTIEDOT koko leveydeltä alla — sama asettelu kuin iPhonella, ei mukaudu iPadin leveyteen. | ERI (mitattu) | **KYLLÄ** (px mitattu molemmista, ks. pariteetti-natiivi-20260924.md rivi 9) |
 | Saapumisdialogi: "Lue lisää" / "Lue lisää maasta" | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
@@ -102,15 +102,15 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | Web-nappi/toiminto | Natiivi | Tila | Mitattu webistä (px/zoomikynnys) |
 |---|---|---|---|
 | Linssivalitsin (lista + kuvaukset) | Sama, testattu tänään sekä iPhonella että iPadilla | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Topografialinssi | **KORJAUS: rivi 30:n aiempi PASS oli väärä** — kuvassa LINSSIT-lista oli yhä auki, itse linssi ei koskaan avautunut iPadilla (kosketus ei rekisteröitynyt). EI vielä uudelleentestattu oikealla kosketuksella. | EI TARKISTETTU (peruttu) | EI (linssi ei ollut edes auki) |
-| Isoisän linssi 1873 | Listassa näkyy, ei testattu sisältöä tänään | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| Topografialinssi | **UUDELLEENTESTATTU JA VAHVISTETTU** (Laitetestaaja, 24.9. klo 23.4x, oikealla `linssi topografia` -komennolla, EI `ui linssi`-esimerkillä joka aiheutti Pelikoodarin löytämän desyncin): topo-reliefikartta + "TOPOGRAFIALINSSI"-otsikkochippi + sulkunappi + ☰-valikko, sama asettelu kuin webissä. Kuvapari `natiivi-topografialinssi-iphone.png` vs. olemassa oleva `linssi-topografia-393x852.png`. | SAMA (korjattu, mitattu) | **KYLLÄ** (kuvapari, ks. proto-3d/lokit/pariteetti-web-2026-09-24/) |
+| Isoisän linssi 1873 | **TESTATTU** (`linssi isoisa-1873`, 24.9. klo 23.4x): avautuu, näyttää 1873-aikakauden kartan vanhoilla maa-/aluenimillä (esim. "RANSKA" vanhoilla maakuntarajoilla) ja "ISOISÄN LINSSI 1873" -otsikkochipin, sulkunapin ja ☰-valikon kuten muutkin linssit. Web-kuvaparia ei otettu tälle kierrokselle (ei WEB ON MALLI -mitattu). | SAMA (rakenteeltaan, ei mitattu) | EI (rakennevertailu, ei pikselimitattu — kuva natiivi-isoisa1873-iphone.png) |
 | Vesistölinssi | Sama jokiviivat, testattu useaan otteeseen (rivi 31, PASS + tämän kierroksen web-korjaus vahvistettu) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Keksintölinssi (karuselli) | Sama pallo+vuosi+Tauko-rakenne (rivi 11/40); web ja natiivi pysähtyvät eri vuoteen (odotettua) | SAMA (rakenne) | EI (rakennevertailu, ei pikselimitattu) |
 | Ihmisen matka -linssi | **OTSIKKOBUGI KORJATTU JA VAHVISTETTU OIKEALLA KOSKETUKSELLA (build 8, f6de924).** Aiempi epäily: KEKSINNÖT-otsikko jäisi näkyviin linssin vaihdossa. Testattu aidosti: avattiin Keksintölinssi (peli käynnissä), avattiin linssivalitsin PÄÄLLE (ei komennolla), napautettiin "Ihmisen matka" -riviä, sitten "Käynnistä". Otsikko vaihtui oikein "IHMISEN MATKA / 300 000 v. sitten" — EI jäänyt lukemaan "KEKSINNÖT EUROOPASSA". | SAMA (korjattu, vahvistettu kosketuksella) | EI (rakennevertailu natiivin sisäinen, ei web-kuvaparia tälle täsmävaiheelle) |
 | Astronautin kamera | Ei testattu tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
 | Maailmanradio (viritin) | Sama retro-dial, sama asemaverkosto, todennettu AITO VU-mittari (epäsymmetrinen neula) tänään | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| Vertailulinssi | Ei testattu tässä kierroksessa | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
-| Maatiedot-linssi | Aiemmin molemmat tyhjiä (rivi 41, työkaluvika epäilty) — ei uusittu | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| Vertailulinssi | **MITATTU**: web (`aktivoiLinssi('vertailu')`) ja natiivi (`ui linssi vertailu`) näyttävät molemmat samat valintachipit (esim. Suomi) + "Vertaa"-napin samassa kohdassa ruutua. Kuvapari `web-linssi-vertailu-iphone.jpg` / `natiivi-linssi-vertailu-iphone.jpg`. | SAMA | **KYLLÄ** (kuvapari samasta tilasta) |
+| Maatiedot-linssi | **PÄIVITYS**: testattu uudelleen (`ui linssi maa`, build 10) — nyt näkyy sisältöä (🇮🇹 ITALIA + "Lue lehti ›"), EI enää tyhjä kuten aiemmin rivillä 41 raportoitiin. Näkymä oli kuitenkin sekoittunut auki jääneen vertailulinssin kanssa (Italia/Japani-chipit näkyivät samalla), joten en vahvista puhdasta ulkoasua — Linssisepän kannattaa tarkistaa oikealla kosketuksella. | EI TARKISTETTU (puhdas näkymä), mutta EI ENÄÄ TYHJÄ | EI (rakennevertailu, ei pikselimitattu) |
 | Linssin selite (per-linssi kuvauskortti) | Sama, uusittu ja vahvistettu (rivi 12/12b) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 
 ## 8. Kysymys/kortit
@@ -121,8 +121,8 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | "50:50" | Sama nappi näkyy kortilla | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Vihje" | Sama nappi näkyy kortilla | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | "Jatka" | Testattu epäsuorasti kysymysvirrassa | SAMA | EI (rakennevertailu, ei pikselimitattu) |
-| "Aloita peli" | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
-| Kohtaamisen muotokuva → suurennos | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| "Aloita peli" | Testattu (`peli:aloita`, build 10): vie tervehdyssivulta suoraan kysymykseen (A-D, tiimalasi-ajastin, 50:50-nappi) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
+| Kohtaamisen muotokuva → suurennos | Muotokuva näkyy pienenä (kysymyskortin vasen yläkulma), suurennosta ei testattu — ei tarkkaa napautuskoordinaattia tälle kierrokselle | EI TARKISTETTU (suurennos) | EI (rakennevertailu, ei pikselimitattu) |
 | "Lisää" (nostokortti/skandaali/eläintäky/syvennys) | Sama nappi, testattu (rivit 25-28, PASS) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 | Kaupunkikortti (lippu+maa, kuva, kuvateksti, leipäteksti, Lisää) | Sama rakenne, testattu tänään (Lyon/Ateena) | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 
@@ -154,7 +154,7 @@ ENNEN hyväksyntää — muistista tai rakennekuvasta arvaaminen ei riitä.
 | Tekstikenttä + lähetä | Sama nappirivi näkyy (näppäimistö-ikoni) | SAMA (näkyvyys) | EI (rakennevertailu, ei pikselimitattu) |
 | Kaiutin-kytkin | Sama nappirivi näkyy | SAMA (näkyvyys) | EI (rakennevertailu, ei pikselimitattu) |
 | Mikki-kytkin | Sama nappirivi näkyy | SAMA (näkyvyys) | EI (rakennevertailu, ei pikselimitattu) |
-| Ehdotuskysymykset (chip-rivit) | Ei testattu erikseen | EI TARKISTETTU | EI (rakennevertailu, ei pikselimitattu) |
+| Ehdotuskysymykset (chip-rivit) | **OIKEALLA KOSKETUKSELLA vahvistettu** (iPhone 18 Pro, build 10): kaksi ehdotuskysymystä näkyy kupla-alueen yläosassa ennen ensimmäistä viestiä (esim. "Kuka Heinrich Schliemann oikeasti oli..."), lisäksi "Näytä puhekuplat" / "Ehdota sisältöä" -napit chatin yläreunassa | SAMA | EI (rakennevertailu, ei pikselimitattu) |
 
 ## 12. Radio (kaupunki-/maalehden mediarivi)
 
@@ -190,3 +190,79 @@ VAHVISTETTU ERO reititetty Natiivi-UI:lle. Suuri osa osioista 3, 5
 tällä kierroksella — ei tiedossa olevia bugeja, mutta ei myöskään
 positiivista vahvistusta. Jatketaan build 8 -rivien (5/13/23) jälkeen,
 mitat mukaan (WEB ON MALLI).
+
+**PÄIVITYS (Laitetestaaja, build 10, 24.9. klo 19.4x):** seitsemän
+EI TARKISTETTU -riviä käyty läpi dokumentoiduilla `ui`/`peli`-komennoilla
+(ei koordinaattiarvauksia): Tutki-nappi, Aloita peli, Vertailulinssi,
+Julisterivi ja Mitä uutta kaikki SAMA/toimivat. Maatiedot-linssi EI ENÄÄ
+TYHJÄ (aiempi rivi 41 -havainto vanhentunut) — Linssisepälle tarkistus.
+Kohtaamisen muotokuvan suurennos jäi auki (ei napautuskoordinaattia).
+Astro-linssi EI Laitetestaajan alue (Linssisepän oma). Loput ~24 riviä
+(laukun osa, lukija-dialogi, sisällyspaneelin sulku, saapumisdialogin
+napit, sähkeen toiminta, pöllön ehdotukset, ym.) yhä EI TARKISTETTU —
+osa vaatii oikean kosketuksen (ui napauta -koordinaatit epäluotettavia
+tässä kierroksessa), osa jäi ajanpuutteen vuoksi.
+
+**PÄIVITYS 2 (Laitetestaaja, build 10 f02376b, 24.9. klo 19.4x–20.0x,
+oikea kosketus iPhone 18 Pro / 1572C658):** vielä 5 EI TARKISTETTU -riviä
+vahvistettu OIKEALLA KOSKETUKSELLA (ei komentoriviä): Julisterivi,
+Sisällys-paneelin "Palaa kartalle" -sulkeminen, Ehdotuskysymykset
+(chip-rivit), Laukku raha-pilleristä ja Matkan tilastot -laajennin.
+Aarnin luettelon (i)-kuvake ja Sisällyksen X-kuvake jäivät osumatta
+(liian pieniä kohteita tälle kierrokselle). **Havainto**: iPhone 18 Pro
+-simulaattori (1572C658) oli hetken myös toisen, ei-näkyvän session
+("Matkakirja-3d-selvittaja", ilmeisesti eri Mac-käyttäjätunnus)
+käytössä samaan aikaan (uninstall/install-silmukka satelliittikuvia
+varten) — sovellus kaatui kerran kesken lennon. Ei enää ristiriitaa
+tarkistushetkellä, mutta jaettua laitetta kannattaa käyttää varoen.
+Web-kuvapareja ei ehditty ottaa näille riveille — mitat puuttuvat yhä
+WEB ON MALLI -vaatimuksen mukaisesti.
+
+**PÄIVITYS 3 (Laitetestaaja, 24.9. klo 20.1x–20.3x):** web-kuvaparit
+otettu kolmelle riville (Vertailulinssi, Laukku+Varusteet, Sisällys+
+"Palaa kartalle") — kaikki MITATTU/SAMA. Tutki-napin ja Julisterivin
+web-vastineita ei saatu auki suoralla funktiokutsulla eikä synteettisellä
+klikkauksella tässä kierroksessa (`avaaKohtaamistesti`/`avaaJulisteGalleria`
+eivät reagoineet odotetusti) — natiivipuoli on silti vahvistettu
+komennolla/kosketuksella, vain web-mitta puuttuu näiltä kahdelta.
+
+**PÄIVITYS 4 (Laitetestaaja, uusi sessio 24.9. klo 23.2x–23.5x):**
+Pelikoodari korjasi pariteetti-ajo.mjs:n desync-bugin (b12g-1:n rivi 39
+-löydöksestä, ks. edellisen session luovutus) ja ajaa toisen kierroksen
+(b12-2) omilla simulaattoreillaan — ei enää tarvitse minun simejäni,
+odotetaan valmistumisilmoitusta ennen Build 11/12 -mittaustilauksen
+jatkoa. Sillä välin: **Topografialinssi uudelleentestattu ja
+VAHVISTETTU** (rivi päivitetty yllä) oikealla `linssi topografia`
+-komennolla (ei `ui linssi`-esimerkkikomennolla, joka aiheutti aiemman
+desyncin) — kuvapari täsmää. **Pelikoodarilta saadut vastaukset (24.9.
+klo 23.5x)**: 1) web:n "löytökortti" (Ateenan "Kahviraha kelpasi..."
+-postikortti) EI tule oman kaupungin napautuksesta — se on isoisän
+saapumiskerronnan luentakuvasarja (`fokusvirta.js` avaaIsoisanSarja),
+jonka natiivivastine (Luentakuvasarja) on jo olemassa ja katettu
+löydöksessä 45; ei uutta riviä tarvita. 2) Webin pallolla ei ole
+Tutki-nappia lainkaan (poistui 24.8.) — kohtaaminen avautuu vain
+kaupungin LAATAN (aarrepisteen) napautuksesta, kun `tehtavaTarjolla`
+on tosi; tuoreessa pelissä ilman aarrepistettä sitä ei siis pidäkään
+löytyä pallonapautuksella. Rivi "Tutki" pysyy SAMA-tilassa (natiivin
+`tutki`-komento vastaa samaa ehtoa peli-tila.json:n tehtavaNapin
+kautta).
+
+**Julisterivi-löydös TARKENTUI TUTKIMALLA (ei bugi, kalibrointivirhe
+epäiltiin ensin)**: kolme peräkkäistä `tap`-yritystä samaan JULISTEET-
+riviin ei avannut galleriaa, mutta rinnakkaiskoe paljasti, että myös
+ISOISÄN LINSSI 1873:n sulkunappi (×) epäonnistui täsmälleen samalla
+lasketulla koordinaatilla (px/3-muunnos) kahdesti ja onnistui vasta
+2-6 pisteen siirrolla — eli tool-koordinaattien pyöristys osuu pienten
+pyöreiden nappien reunoille. JULISTEET-riviä kokeiltiin tämän jälkeen
+VIIDESTI eri x/y:llä RIVIN SISÄLLÄ (koko rivin leveydeltä, myös pitkä
+painallus) ilman yhtäkään avautumista, kun taas ☰-valikko, rahapilleri
+ja linssin sulkunappi (kalibroituna) toimivat samalla kierroksella —
+**tämä EI selity enää pelkällä koordinaattivirheellä, koska koko rivin
+leveys kokeiltiin**. Rivi merkitty yllä EI TARKISTETTU (aiempi
+"PÄIVITYS 2" SAMA-väite kumottu, sillä sitäkään ei tuolloin vahvistettu
+kuvatodisteella). Reititetty Natiivi-UI:lle tarkistettavaksi build-
+tasolla (ks. viesti alla) — ei vielä varmistettu tuotantobugiksi, koska
+buildia/laitetta ei ehditty vaihtaa eron rajaamiseksi.
+
+Ei ehditty muihin ~19 EI TARKISTETTU -riviin tällä kierroksella
+(konteksti käytetty tutkimiseen).

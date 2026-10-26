@@ -121,7 +121,7 @@ export const MAASTOKOHTEET_CAN = [
     },
     teksti: 'Baffininsaari on Kanadan suurin ja maailman viidenneksi suurin saari, ja sillä '
       + 'asuu noin 13 000 ihmistä eli 0,026 asukasta neliökilometriä kohti. Inuktitutiksi se '
-      + 'on Qikiqtaaluk, "hyvin suuri saari", ja viikinkien uskotaan kutsuneen sitä nimellä '
+      + 'on Qikiqtaaluk, ”hyvin suuri saari”, ja viikinkien uskotaan kutsuneen sitä nimellä '
       + 'Helluland, kivimaa. Martin Frobisher nousi maihin 1576 ja nimesi saaren Kuningatar '
       + 'Elisabetin niemimaaksi; nykyinen nimi tulee William Baffinilta, joka kartoitti '
       + 'Baffininlahden 1616, ja sen antoi Edward Parry vasta 1821. Saarta on asuttu '
@@ -237,7 +237,7 @@ export const MAASTOKOHTEET_CAN = [
       + 'Tasankojen alkuperäiskansat ajoivat biisoneja yksitoistametrisen jyrkänteen yli '
       + '5 500 vuoden ajan. Ennen hevosia mustajalat ajoivat lauman laidunmaalta noin kolmen '
       + 'kilometrin päästä ajokujille, joita reunustivat sadat kiviröykkiöt, ja pukeutuivat '
-      + 'kojooteiksi ja susiksi; erityisesti koulutetut nuoret miehet, "biisonijuoksijat", '
+      + 'kojooteiksi ja susiksi; erityisesti koulutetut nuoret miehet, ”biisonijuoksijat”, '
       + 'ohjasivat eläimet kujaan. Luukerrostuma jyrkänteen alla on kaksitoista metriä paksu. '
       + 'Nimi tulee tarinasta pojasta, joka halusi katsoa syöksyä alhaalta ja jäi eläinten '
       + 'alle. Paikka on Unescon maailmanperintökohde.',
@@ -247,6 +247,7 @@ export const MAASTOKOHTEET_CAN = [
   {
     id: 'dinosaur-provincial-park',
     nimi: 'Dinosaur Provincial Park',
+    nimio: 'Dinosaur Park',
     tyyppi: 'elain',
     kysymykset: [
       'Mikä on badland-maasto?',
@@ -301,6 +302,7 @@ export const MAASTOKOHTEET_CAN = [
   {
     id: 'louisbourgin-linnoitus',
     nimi: 'Louisbourgin linnoitus',
+    nimio: 'Louisbourg',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi linnoitus oli heikko maan puolelta?',

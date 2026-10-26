@@ -88,7 +88,7 @@ import {
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { piirraVisanVastaukset } from './fokustehtavat.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -131,12 +131,13 @@ import { FOKUSVIRTA_VILNA } from './packs/fokusvirta-vilna.js';
 import { FOKUSVIRTA_KIOVA } from './packs/fokusvirta-kiova.js';
 import { FOKUSVIRTA_KRAKOVA } from './packs/fokusvirta-krakova.js';
 import { FOKUSVIRTA_PIETARI } from './packs/fokusvirta-pietari.js';
-import { fokusvirtaSisalto } from './fokusvirta.js';
+import { fokusvirtaSisalto, suljeMuutAvoimetLaput } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 /** Kuvan tekijä- tai lisenssirivi (ei tekstin lähde). */
 const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY|0)|public domain/i;
 
@@ -252,7 +253,7 @@ export const NOSTO_MAAT = {
       // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi —
       // ja nimen on oltava sen paikan nimi, jossa merkki seisoo.
       nimio: 'Mykene',
-      otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
+      otsikko: 'Aarre vietiin salaa Kreikkaan — ja rouva poseerasi valokuvassa Troijan koruissa',
       /*
        * LÖÖPPITAITTO, PILOTTI (omistaja 3.9.2026): tämä nosto taitetaan
        * lehden muotoon — nimiö, päiväysrivi, pääotsikko isolla, ingressi,
@@ -263,13 +264,15 @@ export const NOSTO_MAAT = {
        */
       taitto: 'lehti',
       paivays: 'Ateena · Mykene · 1873–1876',
-      ingressi: 'Kun Sofia Schliemann asettui valokuvaajan eteen kullassa, '
-        + 'jonka piti olla yhä Troijan maassa, Ottomaanien viranomaiset '
-        + 'tiesivät vihdoin, minne Priamoksen aarre oli kadonnut.',
+      ingressi: 'Schliemann julkisti löydön, ja kun Sofia asettui '
+        + 'valokuvaajan eteen kullassa, jonka piti olla yhä Troijan '
+        + 'maassa, Ottomaanien viranomaiset saivat tietää, minne '
+        + 'Priamoksen aarre oli kadonnut.',
       teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
-        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisille asia '
-        + 'paljastui vasta, kun hänen vaimonsa Sofia esiintyi julkisesti '
-        + 'yllään "Helenan korut" — kultainen otsapanta ja kaulakorut. '
+        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisten tietoon '
+        + 'asia tuli, kun Schliemann julkaisi löydön ja hänen vaimonsa '
+        + 'Sofia esiintyi kuvissa yllään "Helenan korut" — kultainen '
+        + 'otsapanta ja kaulakorut. '
         + 'Tarinan kuuluisin kohta on silti keksitty: Schliemann kertoi '
         + 'yhä uudelleen, että Sofia oli kantanut kullan pois '
         + 'kaivaukselta huivissaan, ja myönsi myöhemmin sepittäneensä '
@@ -278,11 +281,12 @@ export const NOSTO_MAAT = {
         + 'Seuraukset osuivat muihin. Kaivausta valvomaan määrätty '
         + 'ottomaanivirkamies Amin Effendi sai vankeustuomion, '
         + 'Schliemannin kaivauslupa peruttiin ja Ottomaanien hallitus '
-        + 'haastoi hänet oikeuteen osuudestaan kultaan. Schliemann '
-        + 'siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
+        + 'haastoi hänet oikeuteen osuudestaan kultaan. Myöhemmin '
+        + 'Schliemann siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
         + 'hänen peräänsä oman miehensä valvomaan, mitä maasta nousee. '
-        + 'Aarre itse on nykyään Moskovassa Puškin-museossa, joka '
-        + 'myönsi omistavansa sen vasta vuonna 1994.',
+        + 'Aarteen suurin osa on nykyään Moskovassa Puškin-museossa, '
+        + 'joka myönsi omistavansa sen vasta 1990-luvulla; osa on '
+        + 'Istanbulissa.',
       lahde: 'en-Wikipedia "Priam\'s Treasure", osiot "Art collection" ja '
         + '"Authenticity", sekä "Heinrich Schliemann", osio Troijan '
         + 'kaivauksista (tarkistettu 1.9.2026); pisteen paikka '
@@ -308,8 +312,9 @@ export const NOSTO_MAAT = {
       },
       kuva: {
         tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
-        selite: 'Sofia Schliemann "Helenan koruissa". Juuri tämä kuva '
-          + 'kertoi viranomaisille, missä Troijan kulta oli.',
+        selite: 'Sofia Schliemann "Helenan koruissa". Kuva otettiin joulun '
+          + '1873 tienoilla, kun Priamoksen aarteen löytö oli jo '
+          + 'Euroopan puheenaihe.',
         lahde: 'Tuntematon kuvaaja n. 1873, Wikimedia Commons (public domain)',
       },
     },
@@ -331,13 +336,13 @@ export const NOSTO_MAAT = {
       otsikko: 'Kokonainen kylä istui oraakkelin päällä — eikä lähtenyt '
         + 'ennen kuin maa järisi',
       teksti: 'Kun ranskalaiset halusivat kaivaa Delfoin pyhäkön esiin, '
-        + 'sen päällä seisoi Kastrin kylä: noin sata taloa ja 200 asukasta, '
-        + 'jotka olivat louhineet antiikin kiviä omiin seiniinsä siitä '
+        + 'sen päällä seisoi Kastrin kylä, jonka asukkaat olivat '
+        + 'louhineet antiikin kiviä omiin seiniinsä siitä '
         + 'asti kun paikka tuhottiin 300-luvulla.\n\n'
         + 'Kylä olisi pitänyt siirtää ennen kaivauksia, mutta asukkaat '
         + 'kieltäytyivät. Tilaisuus tuli vasta kun maanjäristys vaurioitti '
         + 'kylää pahoin: asukkaille tarjottiin kokonaan uusi kylä vanhan '
-        + 'paikan tilalle, ja 1893 Ranskan arkeologinen koulu kuori pois '
+        + 'paikan tilalle, ja vuodesta 1892 alkaen Ranskan arkeologinen koulu kuori pois '
         + 'maanvyöryjen massat ja paljasti Apollonin pyhäkön.',
       lahde: 'en-Wikipedia "Delphi", osio "Archaeology of the precinct" '
         + '(tarkistettu 28.8.2026).',
@@ -629,7 +634,7 @@ const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
  * työvaiheen hallussa. Yhden tiedoston versiossa erillistä linkkiä ei
  * ole, koska tyylit ovat jo sivun <style>-lohkossa.
  */
-function nostoLataaTyyli() {
+export function nostoLataaTyyli() {
   if (typeof document === 'undefined') return;
   if (document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
@@ -1117,6 +1122,13 @@ function avaaNostonKortti(ui, nosto) {
   if (linssiEstaa()) return false;
   nostoLataaTyyli();
   suljeNostonKortti(ui);
+  /*
+   * VAIN YKSI LAPPU KERRALLAAN (Siirtosepän pariteettikatsaus
+   * 29.9.2026, rivi 5): nostokortti ei saa avautua jo auki olevan
+   * maakortin tai kaupunkilehden päälle. Ks. js/fokusvirta.js
+   * suljeMuutAvoimetLaput.
+   */
+  suljeMuutAvoimetLaput(ui);
 
   const kerros = html('div', 'fokusnosto-kerros');
   const kortti = html('div', 'fokusnosto-kortti');
@@ -1178,7 +1190,11 @@ function avaaNostonKortti(ui, nosto) {
     onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoNosto(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoNosto(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
@@ -1233,6 +1249,7 @@ function avaaNostonKortti(ui, nosto) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');
+  animoiAvaus(kortti);
   sfx.play('paper');
   return true;
 }
@@ -1277,8 +1294,8 @@ export function suljeNostonKortti(ui) {
     for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) {
       // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
       // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
-      vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
-      vanha.remove();
+      vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
+      suljeKerrosAnimoiden(vanha, '.fokusnosto-kortti', ['fokusnosto-kerros', 'fokusnosto-kortti-auki']);
     }
   }
 }
@@ -1563,7 +1580,7 @@ const NOSTON_VISA_KAUPUNKI = 'nosto';
 
 /** Laatikon otsake ja vihjerivi, kun data ei anna omaansa. */
 const NOSTON_VISA_OTSAKE = 'LUKIJAN KYSYMYS';
-const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +${NOSTON_VISA_PALKKIO} puntaa`;
+const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +£${NOSTON_VISA_PALKKIO}`;
 
 /**
  * Onko tässä nostossa kelvollinen minikysymys?
@@ -1650,7 +1667,7 @@ function piirraNostonVisa(ui, sisalto, nosto) {
         const box = ui.buildToast?.({
           kind: 'stamp',
           icon: 'kukkaro',
-          text: `+${NOSTON_VISA_PALKKIO} puntaa`,
+          text: `+£${NOSTON_VISA_PALKKIO}`,
           sub: 'Lukijan kysymys ratkesi',
         });
         if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
@@ -1714,6 +1731,13 @@ export function nostonIso(nosto) {
   return nostonIsoHakemisto.get(nosto.id) ?? null;
 }
 
+/** Noston otsikko ja teksti pulun kontekstiin (js/pollo.js kokoaKonteksti kohde). */
+export function nostonAihe(nosto) {
+  if (!nosto?.otsikko) return null;
+  const teksti = [nosto.ingressi, nosto.teksti].filter(Boolean).join(' ');
+  return { otsake: 'Kortti, josta pelaaja kysyy', nimi: nosto.otsikko, tyyppi: null, teksti: teksti || null };
+}
+
 function piirraNostonKysymykset(ui, sisalto, nosto) {
   const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
@@ -1739,7 +1763,9 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
       suljeNostonKortti(ui);
-      polloKysy(kysymys);
+      // Kortti sulkeutuu ennen kysymystä: aihe kulkee kysymyksen mukana
+      // (js/pollo.js lueNakyma aihe; omistajan löydös 30.9.2026).
+      polloKysy(kysymys, { aihe: nostonAihe(nosto) });
     });
     rivi.appendChild(nappi);
   }

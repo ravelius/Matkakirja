@@ -118,7 +118,7 @@ export const HAHMOTELMA_SVN = [
     taso: 1,
     lahi: true,
     kysymykset: [
-      'Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?',
+      'Miksi Triglavin nimi tarkoittaa kirjaimellisesti ”kolmipäistä”?',
       'Mitä lumottu vuorikauris Zlatorog vartioi vanhassa kansantarussa?',
     ],
     korostukset: ['Zlatorog|Zlatorog', 'Sigmund Zois|Sigmund Zoisin'],
@@ -469,7 +469,7 @@ export const HAHMOTELMA_SVN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/svn-nosto-postojna-39709fe1.jpg',
         lyhyt: 'Vanha postikortti, jossa Adelsbergin luolan suuaukko ja puinen aitaus.',
-        selite: 'Kortin saksankielinen teksti on "Gruss aus Adelsberg". Adelsberg on Postojnan '
+        selite: 'Kortin saksankielinen teksti on ”Gruss aus Adelsberg”. Adelsberg on Postojnan '
           + 'saksalainen nimi, ja luolan sisäänkäynti tunnettiin nimellä Adelsberger '
           + 'Grotte.',
         lahde: 'Valokuva: Tuntematon tekijä, Wikimedia Commons (Public domain).',
@@ -704,7 +704,7 @@ export const HAHMOTELMA_SVN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/svn-nosto-skofja-loka-71e7caa0.jpg',
         lyhyt: 'Matthäus Merianin vanha kaiverrus Škofja Lokasta muurien ja linnan '
           + 'ympäröimänä.',
-        selite: 'Kaupunki ja linna näkyvät vuorten edessä, ja kuvan otsikko on "Lack". '
+        selite: 'Kaupunki ja linna näkyvät vuorten edessä, ja kuvan otsikko on ”Lack”. '
           + 'Kaupunkia ympäröi muuri.',
         lahde: 'Valokuva: Matthäus Merian, Wikimedia Commons (Public domain).',
         tekija: 'Matthäus Merian',
@@ -950,6 +950,7 @@ export const HAHMOTELMA_SVN = [
   },
   {
     id: 'hahmotelma-kostanjevica',
+    nimio: 'Kostanjevica',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svn-nosto-kostanjevica-bff369df.jpg',
       lyhyt: 'Krka-joki Kostanjevican kohdalla ja kirkon torni puiden takana.',
@@ -1004,7 +1005,7 @@ export const HAHMOTELMA_SVN = [
     teksti: 'Kostanjevica na Krki on pieni kaupunki Etelä-Slovenian historiallisessa '
       + 'Ala-Krainissa, Gorjancin kukkuloiden pohjoisjuurella lähellä Kroatian rajaa. '
       + 'Keskusta sijaitsee Krka-joen saarella, minkä vuoksi paikkaa mainostetaan nimellä '
-      + '"Ala-Krainin Venetsia". Se mainittiin kaupunkina ensimmäisen kerran vuonna 1210, '
+      + '”Ala-Krainin Venetsia”. Se mainittiin kaupunkina ensimmäisen kerran vuonna 1210, '
       + 'ja sitä pidetään alueen vanhimpana kaupunkina. 1200-luvun alussa herttua Bernhard '
       + 'von Spanheim perusti paikalle sistersiläisluostarin, jonka varhaisgoottilainen '
       + 'kirkko on rakennettu vuonna 1234. Luostari laajennettiin barokkityyliin '
@@ -1088,7 +1089,7 @@ export const HAHMOTELMA_SVN = [
         'Claudio Monteverdi',
       ],
       oikea: 1,
-      fakta: 'Piranin nimen arvellaan tulevan kreikan sanasta pyrrhos, "punainen", kaupungin '
+      fakta: 'Piranin nimen arvellaan tulevan kreikan sanasta pyrrhos, ”punainen”, kaupungin '
         + 'seudulla yleisten punertavien flyysikivien mukaan. Ensimmäinen Slovenian '
         + 'johdinautolinja avattiin Piranissa 24. lokakuuta 1909.',
     },
@@ -1590,8 +1591,8 @@ export const HAHMOTELMA_SVN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/svn-nosto-ravne-43fcb792.jpg',
         lyhyt: 'Postikortti vuodelta 1899: teräsvalimo Gutensteinin lähellä Kärntenissä.',
         selite: 'Vuoden 1899 postikortissa savuavat tehdaspiiput kohoavat niityn takaa. Kortin '
-          + 'saksankielinen teksti on suunnilleen \'Terveiset Streitebenistä, teräsvalimo '
-          + 'Gutensteinin luona Kärntenissä\'.',
+          + 'saksankielinen teksti on suunnilleen ’Terveiset Streitebenistä, teräsvalimo '
+          + 'Gutensteinin luona Kärntenissä’.',
         lahde: 'Valokuva: Tuntematon tekijä, Wikimedia Commons (Public domain).',
         tekija: 'Tuntematon tekijä',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Postcard_of_Ravne_na_Koroškem_1899.jpg',
@@ -1912,8 +1913,8 @@ export const HAHMOTELMA_SVN = [
         lyhyt: 'Vanha postikortti vuodelta 1904: silta ja sen takana Ljubljanan linna '
           + 'kukkulalla.',
         selite: 'Mustavalkoisessa postikortissa kaareva kivisilta ylittää joen, ja '
-          + 'taustalla kohoaa linna kukkulan päällä. Kortin teksti on saksaksi "Franz '
-          + 'Josefsbrücke und Burg", sillan alkuperäinen juhlanimi keisari Frans Joosefin '
+          + 'taustalla kohoaa linna kukkulan päällä. Kortin teksti on saksaksi ”Franz '
+          + 'Josefsbrücke und Burg”, sillan alkuperäinen juhlanimi keisari Frans Joosefin '
           + 'mukaan.',
         lahde: 'Valokuva: Stengel & Co., Wikimedia Commons (Public domain).',
         tekija: 'Stengel & Co.',

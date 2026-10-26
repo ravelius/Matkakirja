@@ -109,20 +109,23 @@
  * silmukka (js/maatummennus.js `puraMaa`).
  */
 
+// Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
+import { krimUkrainalleAdmin0 } from './krim-ukrainalle.mjs';
+import { ADMIN0_URL, ADMIN0_TIEDOSTO } from './worldview.mjs';
 import {
   readFileSync, writeFileSync, existsSync, mkdirSync,
 } from 'node:fs';
 import { laudanProjektio } from './fokuskartta/piirto.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 
-const LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
-  + '/master/geojson/ne_10m_admin_0_countries.geojson';
+// Worldview Suomen kannan mukaan: Natural Earthin _swe-näkökulma (tools/worldview.mjs, Päätoimittaja 7.10.2026).
+const LAHDE = ADMIN0_URL;
 /*
  * Noudon välimuisti, EI repon aineistoa (.gitignore `.nevalimuisti/`).
  * Ks. tiedoston alku: 13 megatavun lähdettä ei säilytetä repossa, mutta
  * toleranssikokeiluja ei myöskään ajeta kymmentä latausta.
  */
-const PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_admin_0_countries.geojson',
+const PAIKALLINEN = new URL(`../.nevalimuisti/${ADMIN0_TIEDOSTO}`,
   import.meta.url);
 /*
  * ═══ RANNIKON NAULAUS JO LÄHTEESSÄ (Fablen päätös 20.9.2026) ═══════
@@ -196,6 +199,32 @@ const PROJEKTIO = { tyyppi: 'miller', leveys: LEVEYS, lon0: -175, pohjoinen: 76 
 const TOLERANSSI = 0.2;
 /** Tätä pienemmät saaret pudotetaan (rajauslaatikon suurempi sivu). */
 const MIN_KOKO = 3;
+/*
+ * PIENET SAARET (kartan kokonaistarkistus A5, PT 10.10.2026): MIN_KOKO
+ * pudotti 2–10 km:n saaret (Kihnu, Heimaey, Stromboli, Bandasaaret,
+ * Fidžin ja Salomonsaarten kohteet), joten niiden karttavalot jäivät
+ * maarajojen ulkopuolelle. PIENI_KOKO…MIN_KOKO-saaret pidetään, ja jos
+ * yksinkertaistus litistää ne säleeksi, tilalle tulee MINIVALTIOIDEN
+ * vinoneliö. assets/data/maapolygonit.json:iin nämä renkaat LISÄTTIIN
+ * vanhojen perään (631 rengasta, +1 %); muut renkaat ovat tavulleen
+ * ennallaan, koska koko uudelleenajo siirtäisi 43 maan rannikkoa.
+ */
+const PIENI_KOKO = 0.6;
+
+/*
+ * NATURAL EARTHISTA PUUTTUVAT SAARET (kartan kokonaistarkistus, PT 10.10.2026,
+ * vain Eurooppa): NE 10m ei tunne näitä saaria lainkaan, joten niiden
+ * karttavalot jäivät 17–29 km:n päähän maasta. Rengas otetaan tarkasta
+ * rantaviivasta (--meri, GSHHG full): se GSHHG-rengas, joka sisältää pisteen,
+ * tai lähin alle 1 km:n päässä. Käsittely kuten PIENET SAARET. Vaatii --meri;
+ * ilman sitä saaret jäävät pois kuten ennenkin.
+ */
+const LISASAARET = [
+  { iso: 'IRL', nimi: 'Skellig Michael', lat: 51.771, lon: -10.54 },
+  { iso: 'ISL', nimi: 'Flatey (Breiðafjörður)', lat: 65.3759, lon: -22.912 },
+  { iso: 'ISL', nimi: 'Eldey', lat: 63.7409, lon: -22.9576 },
+  { iso: 'SWE', nimi: 'Marstrand', lat: 57.8828, lon: 11.582 },
+];
 /** Talletustarkkuus: kymmenesosa lautayksikköä eli noin 330 metriä. */
 const TARKKUUS = 10;
 
@@ -205,6 +234,20 @@ const TARKKUUS = 10;
  * Natural Earthissa ISO-standardin SSD.
  */
 const NIMIVASTAAVUUS = { SDS: 'SSD' };
+
+/*
+ * MINIVALTIOT (omistaja PT:n kautta 10.10.2026: "eurooppaan voisi ottaa ne
+ * minivaltiot mukaan ja tehdä niille kevyt sisältö"). Vatikaani on laudalla
+ * noin 0,1 ja Monaco 0,6 yksikköä — MIN_KOKO ja säleraja pudottaisivat ne,
+ * ja maa ilman rengasta jäisi tummentamatta ja kaatuisi testiin. Niille
+ * pienempi toleranssi, ei kokokarsintaa, ja jos talletustarkkuus litistää
+ * muodon säleeksi, tilalle pienin näkyvä vinoneliö (0,3 yksikön säde, noin
+ * 1 km) maan keskipisteeseen: raja on silloin merkki, ei mittaus.
+ */
+// Malediivit, Marshallinsaaret, Nauru ja Tuvalu (kaikki maat 10.10.2026): atollit
+// ovat minivaltioiden kokoluokkaa.
+const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'MDV', 'MHL', 'NRU', 'TUV']);
+const MINI_TOLERANSSI = 0.03;
 
 /* ------------------------------------------------------- projektion todennus */
 
@@ -236,6 +279,34 @@ function todennaProjektio(p) {
 /* ---------------------------------------------------------------- aineisto */
 
 async function lueLahde() {
+  const k = await lueLahdeRaaka();
+  const r = krimUkrainalleAdmin0(k);
+  console.log(`Krim → UKR: ${r.siirretty ? `siirretty (${r.karkia} kärkeä)` : 'ei muutosta'}`);
+  console.log(`Ahvenanmaa → FIN: ${ahvenanmaaSuomelle(k)} monikulmiota`);
+  return k;
+}
+
+/*
+ * AHVENANMAA SUOMELLE (Karttasepän kartan tarkistus 10.10.2026, v656):
+ * Natural Earth antaa Ahvenanmaan omana admin-0-yksikkönään (ADM0_A3 ALD,
+ * suvereeni FI1), joten Suomen rengas päättyi Turun saaristoon eikä
+ * Ahvenanmaalla ollut maata lainkaan (Maarianhamina ja Bomarsund
+ * maarajojen ulkopuolella). Saaret liitetään FIN:n monikulmioihin;
+ * maayhteyttä ei ole, joten ompelua ei tarvita.
+ */
+function ahvenanmaaSuomelle(ne) {
+  const iso = (f) => f.properties.ADM0_A3 ?? f.properties.adm0_a3;
+  const ald = ne.features.find((f) => iso(f) === 'ALD');
+  const fin = ne.features.find((f) => iso(f) === 'FIN');
+  if (!ald || !fin) return 0;
+  const mk = (g) => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates);
+  const lisa = mk(ald.geometry);
+  fin.geometry = { type: 'MultiPolygon', coordinates: [...mk(fin.geometry), ...lisa] };
+  ne.features.splice(ne.features.indexOf(ald), 1);
+  return lisa.length;
+}
+
+async function lueLahdeRaaka() {
   if (existsSync(PAIKALLINEN)) {
     console.log(`Lähde: ${PAIKALLINEN.pathname} (välimuisti)`);
     return JSON.parse(readFileSync(PAIKALLINEN, 'utf8'));
@@ -664,11 +735,20 @@ for (const iso of pelimaat) {
     ompeleenKarkia += ommel.lisatyt;
     const kehä = ommel.rengas;
     const laudalla = puraRengas(kehä, projektio);
-    if (koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
-    const kevyt = yksinkertaista(laudalla, TOLERANSSI)
+    const mini = MINIVALTIOT.has(iso);
+    const kk = koko(laudalla);
+    if (!mini && kk < PIENI_KOKO) { pudonneet++; continue; }
+    const pieni = !mini && kk < MIN_KOKO;
+    let kevyt = yksinkertaista(laudalla, mini ? MINI_TOLERANSSI : TOLERANSSI)
       // Talletustarkkuuteen JO TÄSSÄ: kiertosuunta ja pinta-ala
       // katsotaan samoista luvuista, jotka tiedostoon menevät.
       .map(([x, y]) => [Math.round(x * TARKKUUS) / TARKKUUS, Math.round(y * TARKKUUS) / TARKKUUS]);
+    if ((mini || pieni) && (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05)) {
+      const kx = laudalla.reduce((t, [x]) => t + x, 0) / laudalla.length;
+      const ky = laudalla.reduce((t, [, y]) => t + y, 0) / laudalla.length;
+      const r = (v) => Math.round(v * TARKKUUS) / TARKKUUS;
+      kevyt = [[r(kx), r(ky - 0.3)], [r(kx + 0.3), r(ky)], [r(kx), r(ky + 0.3)], [r(kx - 0.3), r(ky)], [r(kx), r(ky - 0.3)]];
+    }
     // Kolmiota pienempi jäännös ei ole muoto vaan viiva.
     if (kevyt.length < 4) { pudonneet++; continue; }
     /*
@@ -677,12 +757,44 @@ for (const iso of pelimaat) {
      * kiertosuunta on pyöristyksen arpaa (mitattu 21.9.2026: USA, 6
      * kärkeä, ala −0,09 yksikköä²). Se putoaa kuten sirpaleet.
      */
-    if (Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
+    if (!mini && !pieni && Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
     renkaat.push(koodaa(suunnista(kevyt)));
     renkaita++;
     pisteita += kevyt.length;
   }
   if (renkaat.length) maat[iso] = renkaat;
+}
+
+for (const s of LISASAARET) {
+  if (!tarkka) break;
+  const sisalla = (r) => {
+    let on = false;
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      if ((r[i][1] > s.lat) !== (r[j][1] > s.lat)
+        && s.lon < ((r[j][0] - r[i][0]) * (s.lat - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) on = !on;
+    }
+    return on;
+  };
+  const lahin = (r) => Math.min(...r.map(([lon, lat]) => Math.hypot((lon - s.lon) * Math.cos(s.lat * Math.PI / 180), lat - s.lat)));
+  const ehdokkaat = tarkka.renkaat.filter((r) => {
+    let [w, so, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
+    for (const [lon, lat] of r) { w = Math.min(w, lon); e = Math.max(e, lon); so = Math.min(so, lat); n = Math.max(n, lat); }
+    return e - w < 0.5 && w - 0.02 < s.lon && s.lon < e + 0.02 && so - 0.02 < s.lat && s.lat < n + 0.02;
+  });
+  const rengas = ehdokkaat.find(sisalla) ?? ehdokkaat.filter((r) => lahin(r) < 0.009).sort((a, b) => lahin(a) - lahin(b))[0];
+  if (!rengas) throw new Error(`LISASAARET: ${s.nimi} ei löydy tarkasta rantaviivasta`);
+  const laudalla = puraRengas(rengas, projektio);
+  const r = (v) => Math.round(v * TARKKUUS) / TARKKUUS;
+  let kevyt = yksinkertaista(laudalla, TOLERANSSI).map(([x, y]) => [r(x), r(y)]);
+  if (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05) {
+    const kx = laudalla.reduce((t, [x]) => t + x, 0) / laudalla.length;
+    const ky = laudalla.reduce((t, [, y]) => t + y, 0) / laudalla.length;
+    kevyt = [[r(kx), r(ky - 0.3)], [r(kx + 0.3), r(ky)], [r(kx), r(ky + 0.3)], [r(kx - 0.3), r(ky)], [r(kx), r(ky - 0.3)]];
+  }
+  (maat[s.iso] ??= []).push(koodaa(suunnista(kevyt)));
+  renkaita++;
+  pisteita += kevyt.length;
+  console.log(`Lisäsaari ${s.nimi} (${s.iso}): ${rengas.length} kärkeä → ${kevyt.length}`);
 }
 
 const ulos = {

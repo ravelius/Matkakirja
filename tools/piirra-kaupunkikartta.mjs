@@ -60,6 +60,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -173,6 +174,7 @@ const KAUPUNGIT = {
     // ja Retiron puisto tuo itälaitaan ison vihreän vastapainon
     // ruutukaavalle.
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   tukholma: {
     // Kaupungintalolta Skansenille: Gamla stanin saari keskellä,
@@ -191,8 +193,16 @@ const KAUPUNGIT = {
     // OSM:ssä vesirelaatioita — ja niiden sisärenkaat (Kungsholmen,
     // Södermalm) tulevat vasta 9.8.2026 tehdyn reikäkorjauksen
     // jälkeen oikein. Ennen sitä puoli kaupunkia oli veden alla.
+    //
+    // KORJATTU 11.10.2026 (Karttaseppä, Euroopan karttatarkistus): Saltsjö,
+    // Strömmen ja Nybroviken jäivät paperin värisiksi, eli ne näyttivät
+    // maalta, vaikka Tukholma on aloituskaupunki. meri: true + meriHaku:
+    // rantaviiva haetaan 0,05° (N/S) ja 0,1° (I/L) laajemmalta alueelta,
+    // jolloin Djurgårdenin ranta sulkeutuu saareksi eikä täyttö upota sitä.
     rajat: { pohjoinen: 59.342, etela: 59.313, lansi: 18.03, ita: 18.11 },
     laajennus: 1.6,
+    meri: true,
+    meriHaku: 0.05,
   },
   venetsia: {
     /*
@@ -209,7 +219,16 @@ const KAUPUNGIT = {
     // Arsenaali) osuvat alueelle. Muut Venetsian kartat ovat tästä
     // poikkeus siinä, että kohteiden väliset "kadut" ovat kujia ja
     // kanavia — ks. KADUT-taulun kommentti jalankulkuluokista.
+    //
+    // LAGUUNI VEDEKSI 11.10.2026 (Karttaseppä): laguuni on OSM:ssä
+    // vesirelaatio (water=lagoon), jonka sisärenkaissa EI ole kaupungin
+    // saaria, eikä niillä ole rantaviivaa tai place=island-rajaa. Siksi
+    // täyttö upotti kaupungin 9.8. ja vahti piirsi rantaviivan.
+    // laguuniMaa: laguuni täytetään ja maa piirretään katuverkosta
+    // leveällä vedolla (px 1600 px:n kuvassa; 22 px ≈ 40 m).
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    laguuniMaa: 22,
   },
   praha: {
     // Vltavan mutka: Petřínin kukkula ja Hradčany lännessä,
@@ -262,10 +281,11 @@ const KAUPUNGIT = {
     // kohteita. Kainalo ottaa mukaan myös Városligetin ja Széchenyin
     // kylpylän, eli lehden kolmas koillinen kohde näkyy sekin.
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, suunta: '3 km koilliseen',
+        x: 62.5, y: 20.625, leveys: 17.5, suunta: '3 km koilliseen',
       },
     ],
   },
@@ -326,6 +346,7 @@ const KAUPUNGIT = {
     // vaikka se on lehden kansikuva. Sisään ottaminen olisi työntänyt
     // Guinnessin kuvan reunaan. Croke Park on 634 m pohjoiseen.
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   ateena: {
     // Ateenassa ei ole jokea eikä rantaa, joten kuvan selkäranka on
@@ -333,6 +354,9 @@ const KAUPUNGIT = {
     // Kansallispuutarha ja Lykavittós. Pireus on 8 km lounaaseen eikä
     // mahdu millään ydinkeskustarajauksella.
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    laajennus: 1.6,
   },
   helsinki: {
     // Kuvan pääpiirre on NIEMI: ydinkeskusta on kolmelta sivulta veden
@@ -372,6 +396,8 @@ const KAUPUNGIT = {
     // reunuksella, jossa se ei syö kuvan ydintä.
     rajat: { pohjoinen: 60.1877, etela: 60.1508, lansi: 24.9076, ita: 24.9919 },
     laajennus: 1.6,
+    // Reunuksella täyttö kääntyi väärin päin (maa vedeksi) → laajempi rantahaku kuten Bergenissä.
+    meriHaku: 0.05,
     meri: true,
     kainalot: [
       {
@@ -415,6 +441,7 @@ const KAUPUNGIT = {
     // mutta kainalo keskelle avomerta näyttäisi oudolta, ja saari on
     // niin pieni ettei siitä tulisi tunnistettavaa minikarttaa.
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   edinburgh: {
@@ -430,6 +457,7 @@ const KAUPUNGIT = {
     //
     // Ei meri: true — rajaus ei ulotu Forthin lahdelle asti.
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   lissabon: {
     // Baixan ruudukko keskellä, Alfama oikealla ja Bairro Alto
@@ -442,6 +470,7 @@ const KAUPUNGIT = {
     // ja mukaan ottaminen vaatisi 9 km leveän kuvan. Kumpikin on
     // lehden kohde, joten se on kerrottava lehden puolella.
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   barcelona: {
@@ -455,7 +484,8 @@ const KAUPUNGIT = {
     // Rajaus on neliö, koska ruudukko on itse 45 asteen kulmassa.
     // Park Güell jää 630 m pohjoisrajan yläpuolelle: mukaan ottaminen
     // liimaisi sen ja Kolumbuksen patsaan kumpikin omaan laitaansa.
-    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   granada: {
@@ -464,13 +494,14 @@ const KAUPUNGIT = {
     // joka erottaa Albaicínin ja Alhambran kukkulat toisistaan. Genil
     // kulkee alalaidassa.
     //
-    // Darron kaupunkiosuus on OSM:ssä tunnel=culvert mutta piirtyy
-    // avoimena jokena. Se jätettiin tahallaan: se selittää miksi
-    // Reyes Católicos kaartaa juuri noin, ja ilman sitä Granadalta
-    // katoaisi yksi harvoista tunnistettavista piirteistä.
+    // Darron kaupunkiosuus on OSM:ssä tunnel=culvert (katettu Reyes
+    // Católicosin alle), joten se EI piirry (PT 12.10.2026: maanalaiset
+    // vedet pois kaikissa kaupungeissa). Avoin osa Paseo de los Tristesillä
+    // jää näkyviin.
     //
     // Ei merta — Granada on 60 km sisämaassa.
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   istanbul: {
     /*
@@ -572,6 +603,7 @@ const KAUPUNGIT = {
     //
     // Auschwitz on 65 km länteen eikä ole kaupunkikartan kohde.
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   varsova: {
     // Veiksel tulee ylhäältä ja poistuu oikeasta alanurkasta vinona
@@ -592,6 +624,7 @@ const KAUPUNGIT = {
     // vasemman reunan yli. Łazienki, POLIN ja kansannousun museo
     // osoittavat kolmeen muuhun suuntaan.
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   oslo: {
     // Vuonon peruka ja sen ympärille kiertyvä keskusta: kuninkaanlinna
@@ -605,6 +638,7 @@ const KAUPUNGIT = {
     // kolminkertaistaisi rajauksen. Lehden laivaosasto kertoo niistä,
     // ja kartan esittely sanoo, mihin suuntaan ne jäävät.
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   sevilla: {
@@ -635,6 +669,7 @@ const KAUPUNGIT = {
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
     },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   tampere: {
     /*
@@ -691,6 +726,26 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  sisilia: {
+    /*
+     * Palermon vanhakaupunki (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3, pelin kaupunki "Sisilia").
+     * Quattro Canti keskellä, katedraali ja Normannien palatsi lännessä, Teatro Massimo pohjoisessa,
+     * Piazza Marina ja La Kalsa idässä meren rannalla. 2,3 × 2,0 km; meri (Palermonlahti) itälaidalla.
+     */
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    laajennus: 1.6,
+    meri: true,
+    meriHaku: 0.05,
+  },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4).
+     * Kemijoen ja Ounasjoen yhtymäkohta: keskusta niemellä, Arktikum pohjoisessa, Jätkänkynttilä-silta
+     * idässä Kemijoen yli, Aallon keskus (kaupungintalo, Lappia-talo) ja kirkko etelässä. 2,4 × 2,4 km.
+     */
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    laajennus: 1.6,
+  },
   valletta: {
     /*
      * Vallettan koko ydinniemi (21.9.2026; omistajan päätös
@@ -707,6 +762,10 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
     laajennus: 1.6,
+    // Grand Harbour ja Marsamxett jäivät paperin värisiksi (Euroopan
+    // meritarkistus 11.10.2026: 2 % GSHHG:n merestä näkyi vetenä).
+    meri: true,
+    meriHaku: 0.05,
   },
   luxemburg: {
     /*
@@ -774,6 +833,7 @@ const KAUPUNGIT = {
     // `footway` (jota ei). Stradun näkyy siksi kuvassa leveänä
     // suorana, ja siitä lähtevät portaikot kylkiluina.
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   riika: {
@@ -787,6 +847,7 @@ const KAUPUNGIT = {
     // jolloin vanhakaupungin kujat sulaisivat yhdeksi täpläksi.
     // Kartan juoni on vanhakaupunki, kuten lehdenkin.
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   vilna: {
     // Vanhakaupunki kahden joen kainalossa: Neris ylhäällä, Vilnia
@@ -805,6 +866,7 @@ const KAUPUNGIT = {
     // Eteläreuna 54.6705 eikä 54.6725: Aamuportin numeroympyrä jäi
     // muuten kiinni kuvan alareunaan (mitattu selaimessa).
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     palvelutiet: true,
   },
   tromssa: {
@@ -825,6 +887,9 @@ const KAUPUNGIT = {
     // Tarkistettu vesitarkistimella (tools/tarkista-karttapisteet.mjs),
     // ettei täyttö valu kummankaan rannan päälle.
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    // Reunuksella täyttö kääntyi väärin päin (maa vedeksi) → laajempi rantahaku kuten Bergenissä.
+    meriHaku: 0.05,
     meri: 'maa',
   },
   tallinna: {
@@ -863,6 +928,7 @@ const KAUPUNGIT = {
     // ei ole katuverkkoa, on paperia. Jos laulukenttä halutaan kartalle,
     // se vaatii työkaluun rakennusten piirron — ei uutta rajausta.
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   sofia: {
@@ -889,6 +955,7 @@ const KAUPUNGIT = {
     // katuverkkoa, eli ruudusta tulisi tyhjä paperi kuten Tallinnan
     // laulukentästä.
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bukarest: {
     // Kaksi juonta samassa kuvassa. Dâmbovița kulkee halki
@@ -909,10 +976,11 @@ const KAUPUNGIT = {
     // Unirii-bulevardin suihkulähdealtaat natural=water-monikulmioina —
     // juuri ne tekevät bulevardista kuvassa katkoviivamaisen ketjun.
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, suunta: '1 km pohjoiseen',
+        x: 20.625, y: 24.375, leveys: 16.25, suunta: '1 km pohjoiseen',
       },
     ],
   },
@@ -947,6 +1015,7 @@ const KAUPUNGIT = {
     // Bobirata jää 1,47 km kaakkoon ja ylös vuorelle, Bijela tabija
     // 98,5 %:n kohdalle eli käytännössä ulos.
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   kiova: {
     // Kaksikerroksinen kaupunki, ei joki: Kiovan maamerkit ovat jonossa
@@ -981,6 +1050,7 @@ const KAUPUNGIT = {
     // 30.549–30.567 ajettiin: 222 elementtiä ja lähes tyhjä paperi.
     // Lavran kujat ovat footway ja patsas seisoo museopuistossa.
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   pietari: {
     // Kanavakaaret ovat kuvan juoni: Moika, Gribojedovin kanava ja
@@ -1004,7 +1074,8 @@ const KAUPUNGIT = {
     // 59.944–59.953 / 30.385–30.406 ajettiin: 242 elementtiä, Nevan
     // mutka ja pari katua, itse katedraali on rakennus jota ei piirretä.
     // Lisäksi Pietarissa ei ole tyhjää nurkkaa mihin ruutu sopisi.
-    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   moskova: {
     // TÄMÄ RAJAUS ON TAHALLAAN ISOMPI KUIN PITÄISI, ja syy on mitattu.
@@ -1015,12 +1086,9 @@ const KAUPUNGIT = {
     // 0,292 ja joki piirtyy yhtenäisenä täytettynä nauhana.
     // ÄLÄ PIENENNÄ RAJAUSTA. Isompi on tässä parempi kartta.
     //
-    // Kremlin ympäri kiertävä vesijuova EI ole vallihauta vaan
-    // Neglinnaja-joki, joka on OSM:ssä tunnel=culvert mutta piirtyy
-    // avoimena kahtena haarana (läntinen Aleksanterin puutarhan
-    // kohdalla, itäinen Kremlin itämuurin ohi Zarjadjeen eli vanhan
-    // Alevizin vallihaudan reittiä). Jätetty tahallaan, sama ratkaisu
-    // kuin Granadan Darrolla — se selittää Kremlin muodon.
+    // Neglinnaja-joki kiertää Kremlin putkessa (OSM tunnel=culvert), joten
+    // se EI piirry (PT 12.10.2026: maanalaiset vedet pois kaikissa
+    // kaupungeissa; ennen tätä se piirtyi avoimena juovana Kremlin ympäri).
     //
     // EI meri-lippua: nolla rantaviivapolkua.
     //
@@ -1028,6 +1096,7 @@ const KAUPUNGIT = {
     // yliopisto (8 km) ja VDNH (9 km) ovat liian kaukana ja puiston
     // keskellä. Kaikki kolme ovat lehden juttuja, ei kartan kohteita.
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   odessa: {
     // Kolmiosainen kuva: oikea kolmannes merta, yläreunassa satama
@@ -1051,6 +1120,7 @@ const KAUPUNGIT = {
     // satama piirtyy nurinpäin: altaat täyttyvät ja laiturit jäävät
     // paperiksi. Pinta-alavaroitusta ei tule.
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
   dubai: {
@@ -5132,7 +5202,10 @@ const KAUPUNGIT = {
      * lippua kuvan koko keskiosa olisi paperin värinen.
      */
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
+    // Reunuksella täyttö peitti 132 % (rantaviiva katkeaa laatikkoon) → laajempi rantahaku.
+    meriHaku: 0.05,
   },
   tanger: {
     /*
@@ -6069,6 +6142,526 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02): rajat sisalto.json:n kohdekartasta (kohteet + n. 300 m).
+   * Monaco ja Reykjavík rannalla: meri-lippu.
+   */
+  belgrad: {
+    rajat: { pohjoinen: 44.8343, etela: 44.7937, lansi: 20.4318, ita: 20.4725 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  bratislava: {
+    rajat: { pohjoinen: 48.1523, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  chisinau: {
+    rajat: { pohjoinen: 47.0288, etela: 47.0099, lansi: 28.8241, ita: 28.8508 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  minsk: {
+    rajat: { pohjoinen: 53.9126, etela: 53.893, lansi: 27.543, ita: 27.579 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  podgorica: {
+    rajat: { pohjoinen: 42.4484, etela: 42.43286, lansi: 19.24465, ita: 19.2664 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  skopje: {
+    rajat: { pohjoinen: 42.0058, etela: 41.99342, lansi: 21.42807, ita: 21.44059 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  tirana: {
+    rajat: { pohjoinen: 41.3328, etela: 41.3204, lansi: 19.8145, ita: 19.8297 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  zagreb: {
+    rajat: { pohjoinen: 45.8186, etela: 45.8045, lansi: 15.9691, ita: 15.9836 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  andorralavella: {
+    // Etelä- ja länsireunaa laskettu (Karttaseppä 11.10.): Santa Coloma osui mittakaavajanan päälle.
+    rajat: { pohjoinen: 42.5185, etela: 42.4882, lansi: 1.4906, ita: 1.5405 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  bern: {
+    rajat: { pohjoinen: 46.951, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  monaco: {
+    rajat: { pohjoinen: 43.7427, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    meri: true,
+  },
+  reykjavik: {
+    rajat: { pohjoinen: 64.153, etela: 64.1265, lansi: -21.9487, ita: -21.9005 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+    meri: true,
+  },
+  sanmarino: {
+    rajat: { pohjoinen: 43.9396, etela: 43.9274, lansi: 12.443, ita: 12.4563 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  vaduz: {
+    rajat: { pohjoinen: 47.145, etela: 47.131, lansi: 9.4985, ita: 9.53 }, // PT 12.10.2026: länteen Reinille ja Sevelenin sillalle, linna rinteessä (oli 47.1421/47.1335/9.5185/9.5284)
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
+   */
+  abudhabi: {
+    rajat: { pohjoinen: 24.493, etela: 24.4522, lansi: 54.3, ita: 54.361 },
+    meri: true,
+  },
+  amman: {
+    rajat: { pohjoinen: 31.9582, etela: 31.947, lansi: 35.9302, ita: 35.9431 },
+  },
+  baku: {
+    rajat: { pohjoinen: 40.37464, etela: 40.3573, lansi: 49.82789, ita: 49.8407 },
+    meri: true,
+  },
+  beirut: {
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5228 },
+    meri: true,
+  },
+  jerevan: {
+    rajat: { pohjoinen: 40.1959, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
+  },
+  manama: {
+    rajat: { pohjoinen: 26.2459, etela: 26.2146, lansi: 50.5703, ita: 50.6013 },
+    meri: true,
+  },
+  tbilisi: {
+    rajat: { pohjoinen: 41.6983, etela: 41.6834, lansi: 44.798, ita: 44.8147 },
+  },
+  // e03b (Päätoimittaja 11.10.2026): Ramallah, sisalto.json:n kohdekartan rajat.
+  ramallah: {
+    rajat: { pohjoinen: 31.9104, etela: 31.8812, lansi: 35.1877, ita: 35.2196 },
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  abuja: {
+    rajat: { pohjoinen: 9.0767, etela: 9.0413, lansi: 7.4833, ita: 7.5249 },
+  },
+  alger: {
+    rajat: { pohjoinen: 36.7916, etela: 36.7684, lansi: 3.0512, ita: 3.0679 },
+    meri: true,
+  },
+  antananarivo: {
+    rajat: { pohjoinen: -18.9077, etela: -18.9356, lansi: 47.5187, ita: 47.5363 },
+  },
+  asmara: {
+    rajat: { pohjoinen: 15.3441, etela: 15.3242, lansi: 38.9219, ita: 38.9485 },
+  },
+  bamako: {
+    rajat: { pohjoinen: 12.668, etela: 12.6125, lansi: -8.0154, ita: -7.9832 },
+  },
+  bangui: {
+    rajat: { pohjoinen: 4.4053, etela: 4.3538, lansi: 18.5527, ita: 18.5826 },
+  },
+  bissau: {
+    rajat: { pohjoinen: 11.8671, etela: 11.8533, lansi: -15.5893, ita: -15.5754 },
+    meri: true,
+  },
+  brazzaville: {
+    rajat: { pohjoinen: -4.2548, etela: -4.2892, lansi: 15.2395, ita: 15.2981 },
+  },
+  djibouti: {
+    rajat: { pohjoinen: 11.6084, etela: 11.588, lansi: 43.136, ita: 43.1545 },
+    meri: true,
+  },
+  freetown: {
+    rajat: { pohjoinen: 8.5039, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
+    meri: true,
+  },
+  gaborone: {
+    rajat: { pohjoinen: -24.6495, etela: -24.7089, lansi: 25.861, ita: 25.9517 },
+  },
+  harare: {
+    rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
+  },
+  juba: {
+    rajat: { pohjoinen: 4.8513, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
+  },
+  kampala: {
+    rajat: { pohjoinen: 0.3453, etela: 0.2912, lansi: 32.5439, ita: 32.5984 },
+  },
+  khartum: {
+    rajat: { pohjoinen: 15.6222, etela: 15.597, lansi: 32.5025, ita: 32.5307 },
+  },
+  kigali: {
+    rajat: { pohjoinen: -1.8689, etela: -1.9881, lansi: 29.9876, ita: 30.1582 },
+  },
+  kinshasa: {
+    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+  },
+  libreville: {
+    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    meri: true,
+  },
+  lilongwe: {
+    rajat: { pohjoinen: -13.9359, etela: -13.9907, lansi: 33.7452, ita: 33.7971 },
+  },
+  lome: {
+    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    meri: true,
+  },
+  lusaka: {
+    rajat: { pohjoinen: -15.4052, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
+  },
+  maputo: {
+    rajat: { pohjoinen: -25.9603, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
+    meri: true,
+  },
+  maseru: {
+    rajat: { pohjoinen: -29.3057, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
+  },
+  ndjamena: {
+    rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
+  },
+  niamey: {
+    rajat: { pohjoinen: 13.5251, etela: 13.4863, lansi: 2.0554, ita: 2.1213 },
+  },
+  nouakchott: {
+    rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
+    meri: true,
+  },
+  ouagadougou: {
+    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+  },
+  portlouis: {
+    rajat: { pohjoinen: -20.1551, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
+    meri: true,
+  },
+  portonovo: {
+    rajat: { pohjoinen: 6.4788, etela: 6.4655, lansi: 2.6135, ita: 2.6313 },
+    meri: true,
+  },
+  praia: {
+    rajat: { pohjoinen: 14.9247, etela: 14.8986, lansi: -23.5208, ita: -23.504 },
+    meri: true,
+  },
+  rabat: {
+    rajat: { pohjoinen: 34.0371, etela: 33.992, lansi: -6.8465, ita: -6.8157 },
+    meri: true,
+  },
+  tunis: {
+    rajat: { pohjoinen: 36.8138, etela: 36.7899, lansi: 10.1638, ita: 10.1891 },
+    meri: true,
+  },
+  victoria: {
+    rajat: { pohjoinen: -4.6183, etela: -4.6399, lansi: 55.4451, ita: 55.475 },
+    meri: true,
+  },
+  windhoek: {
+    rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
+  },
+  yaounde: {
+    rajat: { pohjoinen: 3.9322, etela: 3.8107, lansi: 11.4322, ita: 11.531 },
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
+  vatikaanivaltio: {
+    rajat: { pohjoinen: 41.9082, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  banjul: {
+    rajat: { pohjoinen: 13.4776, etela: 13.4081, lansi: -16.6206, ita: -16.5633 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  conakry: {
+    // meri: 'maa' (Karttaseppä 13.10.2026): Codexin kohteisiin kuuluvat Îles de Losin saaret, joten ruutu on 18 × 11 km
+    // ja enimmäkseen merta; vesipuolen täyttö varoitti 93–98 % ja piirsi pelkän rantanauhan (meri paperin värinen).
+    rajat: { pohjoinen: 9.5617, etela: 9.4386, lansi: -13.845, ita: -13.6744 },
+    meri: 'maa',
+    meriHaku: 0.05,
+    meriMax: 0.98,
+  },
+  // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
+  monrovia: {
+    rajat: { pohjoinen: 6.3641, etela: 6.2896, lansi: -10.814, ita: -10.7412 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e05 (Codex, kohdekartat.mjs)
+  accra: {
+    rajat: { pohjoinen: 5.5796, etela: 5.5176, lansi: -0.2251, ita: -0.1339 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
+  luanda: {
+    rajat: { pohjoinen: -8.7687, etela: -8.8421, lansi: 13.2076, ita: 13.2603 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
+  saotome: {
+    rajat: { pohjoinen: 0.4134, etela: 0.3319, lansi: 6.6983, ita: 6.7562 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e07 (Codex, kohdekartat.mjs)
+  mogadishu: {
+    rajat: { pohjoinen: 2.0467, etela: 2.0282, lansi: 45.336, ita: 45.3667 },
+    meri: true,
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
+  ottawa: {
+    rajat: { pohjoinen: 45.4502, etela: 45.3867, lansi: -75.7319, ita: -75.6677 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
+  washington: {
+    rajat: { pohjoinen: 38.9122, etela: 38.8814, lansi: -77.0646, ita: -77.0006 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  castries: {
+    rajat: { pohjoinen: 14.0157, etela: 13.9859, lansi: -61.0013, ita: -60.9794 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  nassau: {
+    rajat: { pohjoinen: 25.0829, etela: 25.0682, lansi: -77.3616, ita: -77.3347 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
+  saintjohns: {
+    rajat: { pohjoinen: 17.1335, etela: 17.1177, lansi: -61.8665, ita: -61.8391 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs)
+  georgetown: {
+    rajat: { pohjoinen: 6.827, etela: 6.8015, lansi: -58.1697, ita: -58.1427 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs)
+  santiagodechile: {
+    rajat: { pohjoinen: -33.4307, etela: -33.446, lansi: -70.6574, ita: -70.6405 },
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs)
+  canberra: {
+    rajat: { pohjoinen: -35.2231, etela: -35.3023, lansi: 149.0945, ita: 149.1861 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  bandarseribegawan: {
+    rajat: { pohjoinen: 4.9218, etela: 4.8772, lansi: 114.9116, ita: 114.9482 },
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  lapaz: {
+    rajat: { pohjoinen: -16.4918, etela: -16.5005, lansi: -68.1411, ita: -68.1298 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  kualalumpur: {
+    rajat: { pohjoinen: 3.1558, etela: 3.1364, lansi: 101.6903, ita: 101.7055 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  kingstown: {
+    rajat: { pohjoinen: 13.1698, etela: 13.1522, lansi: -61.2452, ita: -61.224 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  paramaribo: {
+    rajat: { pohjoinen: 5.8583, etela: 5.8154, lansi: -55.2078, ita: -55.1458 },
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  asgabat: {
+    rajat: { pohjoinen: 38.0095, etela: 37.9071, lansi: 58.1811, ita: 58.3959 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  male: {
+    rajat: { pohjoinen: 4.181, etela: 4.1723, lansi: 73.5051, ita: 73.516 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  yaren: {
+    rajat: { pohjoinen: -0.5427, etela: -0.5513, lansi: 166.9149, ita: 166.9257 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  biskek: {
+    rajat: { pohjoinen: 42.878, etela: 42.864, lansi: 74.5612, ita: 74.5759 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  naypyidaw: {
+    rajat: { pohjoinen: 19.7529, etela: 19.7442, lansi: 96.105, ita: 96.1179 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  sansalvador: {
+    rajat: { pohjoinen: 13.7492, etela: 13.6799, lansi: -89.3015, ita: -89.1834 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  portofspain: {
+    rajat: { pohjoinen: 10.678, etela: 10.664, lansi: -61.5204, ita: -61.5094 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  apia: {
+    rajat: { pohjoinen: -13.8268, etela: -13.8735, lansi: -171.8388, ita: -171.7694 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  dhaka: {
+    rajat: { pohjoinen: 23.7324, etela: 23.7095, lansi: 90.3848, ita: 90.4054 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  phnompenh: {
+    rajat: { pohjoinen: 11.5723, etela: 11.5628, lansi: 104.9182, ita: 104.932 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  santodomingo: {
+    rajat: { pohjoinen: 18.4864, etela: 18.4495, lansi: -69.9402, ita: -69.8761 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  roseau: {
+    rajat: { pohjoinen: 15.3043, etela: 15.2937, lansi: -61.3902, ita: -61.3789 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  pjongjang: {
+    rajat: { pohjoinen: 39.0445, etela: 39.014, lansi: 125.7392, ita: 125.7672 },
+  },
+  // PÄÄKAUPUNKI e08 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  mbabane: {
+    rajat: { pohjoinen: -26.2523, etela: -26.325, lansi: 31.1215, ita: 31.1796 },
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  islamabad: {
+    rajat: { pohjoinen: 33.7662, etela: 33.6619, lansi: 72.9233, ita: 73.1308 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  vientiane: {
+    rajat: { pohjoinen: 17.9844, etela: 17.9588, lansi: 102.6085, ita: 102.6335 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  stgeorges: {
+    rajat: { pohjoinen: 12.0552, etela: 12.0462, lansi: -61.7588, ita: -61.7478 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e08 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  // Grande Comore on rajausta isompi saari: 0,05°:n haulla rantaviiva ei sulkeutunut ja täyttö maalasi Karthalan rinteet
+  // mereksi (PT 14.10.: "lähes pelkkää merta"). 0,4° kattaa koko saaren (Karttaseppä 14.10.).
+  moroni: {
+    rajat: { pohjoinen: -11.6931, etela: -11.7772, lansi: 43.2438, ita: 43.3606 },
+    meri: true,
+    meriHaku: 0.4,
+    meriMax: 0.97,   // täyttö lasketaan hakulaatikossa, jossa saari on vain ~6 %
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  taskent: {
+    rajat: { pohjoinen: 41.3295, etela: 41.3053, lansi: 69.231, ita: 69.2834 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  belmopan: {
+    rajat: { pohjoinen: 17.2672, etela: 17.2465, lansi: -88.789, ita: -88.7644 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  basseterre: {
+    rajat: { pohjoinen: 17.3022, etela: 17.2919, lansi: -62.737, ita: -62.7193 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  brasilia: {
+    rajat: { pohjoinen: -15.7277, etela: -15.8039, lansi: -47.9341, ita: -47.8149 },
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  ngerulmud: {
+    rajat: { pohjoinen: 7.5155, etela: 7.4968, lansi: 134.6006, ita: 134.6269 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  thimphu: {
+    rajat: { pohjoinen: 27.477, etela: 27.432, lansi: 89.6274, ita: 89.6728 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  bridgetown: {
+    rajat: { pohjoinen: 13.1026, etela: 13.0939, lansi: -59.6207, ita: -59.6097 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  palikir: {
+    rajat: { pohjoinen: 6.9287, etela: 6.9069, lansi: 158.1714, ita: 158.1986 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  portauprince: {
+    rajat: { pohjoinen: 18.5578, etela: 18.536, lansi: -72.3545, ita: -72.3261 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  southtarawa: {
+    rajat: { pohjoinen: 1.3514, etela: 1.3152, lansi: 172.9397, ita: 172.9937 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.98,   // atolli: meri yli 85 % ruudusta
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  sanjose: {
+    rajat: { pohjoinen: 9.9413, etela: 9.9241, lansi: -84.0905, ita: -84.0687 },
+  },
+  // PÄÄKAUPUNKI e06: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  ciudaddelapaz: {
+    rajat: { pohjoinen: 1.6056, etela: 1.5784, lansi: 10.804, ita: 10.84 },
+  },
+  // PÄÄKAUPUNKI e07: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  dodoma: {
+    rajat: { pohjoinen: -6.1594, etela: -6.1866, lansi: 35.7239, ita: 35.7601 },
+  },
+  // PÄÄKAUPUNKI e06: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  gitega: {
+    rajat: { pohjoinen: -3.4174, etela: -3.4392, lansi: 29.9115, ita: 29.9385 },
+  },
+  // PÄÄKAUPUNKI e09: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  dusanbe: {
+    rajat: { pohjoinen: 38.584, etela: 38.5622, lansi: 68.7692, ita: 68.8036 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  tegucigalpa: {
+    rajat: { pohjoinen: 14.1144, etela: 14.0972, lansi: -87.2158, ita: -87.1936 },
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  // Rajaus Fongafalen Vaiakuun (Karttaseppä 14.10.): SK:n pallopiste -8,5048/179,1174 on atollin keskellä laguunissa.
+  // Atolli: meri aidosti yli 85 % ruudusta (Funafutissa 99 %) → meriMax 0.995.
+  funafuti: {
+    rajat: { pohjoinen: -8.503, etela: -8.5392, lansi: 179.183, ita: 179.2102 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.995,   // kapea Fongafale: meri 99 % rajauksesta
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  majuro: {
+    rajat: { pohjoinen: 7.1054, etela: 7.0782, lansi: 171.3621, ita: 171.3983 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.98,   // atolli: meri yli 85 % ruudusta
+  },
+  // PÄÄKAUPUNKI e05: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  yamoussoukro: {
+    rajat: { pohjoinen: 6.8342, etela: 6.798, lansi: -5.2968, ita: -5.2516 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  kingston: {
+    rajat: { pohjoinen: 17.9823, etela: 17.9605, lansi: -76.8073, ita: -76.7789 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  nukualofa: {
+    rajat: { pohjoinen: -21.1234, etela: -21.1452, lansi: -175.2162, ita: -175.1874 },
+    meri: true,
+    meriHaku: 0.05,
+  },
 };
 
 /*
@@ -6717,16 +7310,33 @@ function piirretytRajat({ rajat, laajennus = 1 }) {
  * kainalokartat — kainalossa vain x ja y osoittavat pieneen ruutuun
  * pääkuvan sisällä.
  */
-function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
+let PIDA_MAANALAISET = false;
+function kokoaKerrokset(elementit, x, y, rajat, meri = false, rantaLaaja = null, laguuniMaa = 0, meriMax = 0.85) {
   const pisteet = (geom) => geom.map((p) => `${x(p.lon)},${y(p.lat)}`).join(' ');
   const kerrokset = {
     meri: [], saaret: [], puistot: [], vedet: [], joet: [], radat: [], muurit: [],
-    rauniot: [], raunioviivat: [],
+    rauniot: [], raunioviivat: [], maaveto: [], maavetoLeveys: laguuniMaa,
     kadut: KADUT.map(() => []),
   };
   const rantaviivat = [];
+  const katuViivat = [];
+  let laguuniTaytetty = false;
   const laatikonAla = (rajat.ita - rajat.lansi) * (rajat.pohjoinen - rajat.etela);
+  let maanalaisiaPois = 0;
   for (const e of elementit) {
+    /*
+     * MAANALAISET VEDET POIS (PT 12.10.2026, erä 184; LS2:n löydös Pariisin
+     * katetusta Canal Saint-Martinista). Vesi, jolla on tunnel (ei no),
+     * covered=yes tai location=underground, ei näy kaupungissa, joten sitä ei
+     * piirretä. Poikkeus kaupunkikohtaisella lipulla maanalaisetVedet: true
+     * (PT 12.10.: ei yhtään poikkeusta; Darro ja Neglinnaja samaan sääntöön).
+     */
+    const tg = e.tags ?? {};
+    if (!PIDA_MAANALAISET && (tg.waterway || tg.natural === 'water' || tg.water)
+      && ((tg.tunnel && tg.tunnel !== 'no') || tg.covered === 'yes' || tg.location === 'underground')) {
+      maanalaisiaPois += 1;
+      continue;
+    }
     /*
      * Vesirelaatio TÄYTETÄÄN, ei piirretä nauhana. Aiemmin jäsenpolut
      * työnnettiin joet-listaan, jolloin Marseillen Vanhasatama —
@@ -6791,6 +7401,20 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
          * rajaa sen näkymättömän osan pois ilman reunaviivaa.
          */
         const nakyva = renkaanAla(leikkaaLaatikkoon(rengas, rajat)) / laatikonAla;
+        if (nakyva > 0.5 && laguuniMaa && !laguuniTaytetty) {
+          /*
+           * LAGUUNI, JONKA SAARIA EI OLE RAJATTU (Karttaseppä 11.10.2026,
+           * Venetsia). Laguunin vesirelaatiossa kaupungin saaret eivät ole
+           * sisärenkaina, eikä niillä ole rantaviivaa tai place=island-
+           * rajaa. Laguuni täytetään, ja maa piirretään sen päälle
+           * katuverkosta leveällä paperinvärisellä vedolla (maaveto-
+           * kerros); kanavat ja vedet piirtyvät tämän päälle kuten ennen.
+           */
+          console.log(`  laguuni ${Math.round(nakyva * 100)} %: täytetään, maa katuverkosta (${laguuniMaa} px)`);
+          kerrokset.meri.push(`<path fill-rule="evenodd" d="${polku([rengas, ...sisa])}"/>`);
+          laguuniTaytetty = true;
+          break; // relaation muut renkaat ovat saman laguunin kopioita (kuten vanhassa haarassa)
+        }
         if (nakyva > 0.5) {
           console.log(`  vesirelaatio peittäisi ${Math.round(nakyva * 100)} % —`
             + ' piirretään rantaviivana');
@@ -6810,6 +7434,7 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
     if (t.highway) {
       const i = KADUT.findIndex((k) => k.luokat.includes(t.highway));
       if (i >= 0) kerrokset.kadut[i].push(`<polyline points="${pisteet(e.geometry)}"/>`);
+      katuViivat.push(e.geometry);
     } else if (t.waterway) {
       kerrokset.joet.push(`<polyline points="${pisteet(e.geometry)}"/>`);
     } else if (t.natural === 'coastline') {
@@ -6880,7 +7505,16 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
     if (!meri) {
       nauhaksi();
     } else {
-      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaviivat), rajat,
+      /*
+       * MERIHAKU (Karttaseppä 11.10.2026, Tukholman Saltsjö): kun
+       * rantaviiva on haettu piirtoalaa laajemmalta alueelta, täyttö
+       * tehdään siinä laatikossa. Saaret, joiden ranta poistuu
+       * piirtoalasta (Djurgården), sulkeutuvat silloin renkaiksi, ja
+       * laatikon reunasulut osuvat kauas kuvan ulkopuolelle. SVG leikkaa
+       * ylimenevän osan kuvan reunaan.
+       */
+      const tayttoRajat = rantaLaaja?.rajat ?? rajat;
+      const { renkaat, saaret } = merenTaytto(ketjutaSuunnassa(rantaLaaja?.viivat ?? rantaviivat), tayttoRajat,
         meri === 'maa' ? 'maa' : 'vesi');
       /*
        * Näkyvä vesi = meri miinus saaret. Ero on olennainen
@@ -6889,9 +7523,11 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
        */
       const pintaAla = renkaat.reduce((summa, rengas) => summa + renkaanAla(rengas), 0)
         - saaret.reduce((summa, saari) => summa + renkaanAla(saari), 0);
-      if (!renkaat.length || pintaAla > laatikonAla * 0.85) {
+      const tayttoAla = (tayttoRajat.ita - tayttoRajat.lansi) * (tayttoRajat.pohjoinen - tayttoRajat.etela);
+      // meriMax (Karttaseppä 13.10.2026, Conakry): saaristoruudussa meri on aidosti yli 85 % — raja kaupunkikohtaisesti.
+      if (!renkaat.length || pintaAla > tayttoAla * meriMax) {
         if (renkaat.length) {
-          console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / laatikonAla) * 100)} %`
+          console.log(`  VAROITUS: meri peittäisi ${Math.round((pintaAla / tayttoAla) * 100)} %`
             + ' rajauksesta — piirretään rantanauha. Tarkista rajaus.');
         }
         nauhaksi();
@@ -6901,6 +7537,8 @@ function kokoaKerrokset(elementit, x, y, rajat, meri = false) {
       }
     }
   }
+  if (laguuniTaytetty) for (const geom of katuViivat) kerrokset.maaveto.push(`<polyline points="${pisteet(geom)}"/>`);
+  if (maanalaisiaPois) console.log(`  maanalaisia vesiä pois: ${maanalaisiaPois}`);
   return kerrokset;
 }
 
@@ -6941,6 +7579,8 @@ function kerrosKuvaus(kerrokset, mitta = 1, rauniokaupunki = false) {
        katoaisivat veden alle. -->
   <g fill="${VESI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.meri.join('')}</g>
   <g fill="${PAPERI}" stroke="${VESIREUNA}" stroke-width="${v(1.4)}">${kerrokset.saaret.join('')}</g>
+  <g fill="none" stroke="${PAPERI}" stroke-width="${v(kerrokset.maavetoLeveys || 0)}" stroke-linecap="round"
+     stroke-linejoin="round">${kerrokset.maaveto.join('')}</g>
   <g fill="${PUISTO}" stroke="none">${kerrokset.puistot.join('')}</g>
   <g fill="${RAUNIO}" stroke="${raunioReuna}" stroke-width="${v(raunioViiva)}">${kerrokset.rauniot.join('')}</g>
   <g fill="none" stroke="${raunioReuna}" stroke-width="${v(raunioViiva + 0.4)}"
@@ -7039,10 +7679,11 @@ function piirraKainalo(kainalo, elementit, W, H, ydinW, rauniokaupunki = false) 
   ${teksti}`;
 }
 
-function piirra(kaupunki, elementit, kainaloAineistot = []) {
+function piirra(kaupunki, elementit, kainaloAineistot = [], rantaLaaja = null) {
   const {
-    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false,
+    kainalot = [], meri = false, laajennus = 1, rauniokaupunki = false, laguuniMaa = 0, maanalaisetVedet = false, meriMax = 0.85,
   } = KAUPUNGIT[kaupunki];
+  PIDA_MAANALAISET = maanalaisetVedet;
   const rajat = piirretytRajat(KAUPUNGIT[kaupunki]);
   // Ydinrajaus pysyy 1600 pikselinä myös laajennetussa kuvassa, ks.
   // tiedoston alun kommentti.
@@ -7050,7 +7691,7 @@ function piirra(kaupunki, elementit, kainaloAineistot = []) {
   const H = Math.round(W / kuvasuhde(rajat));
   const x = (lon) => (((lon - rajat.lansi) / (rajat.ita - rajat.lansi)) * W).toFixed(1);
   const y = (lat) => (((rajat.pohjoinen - lat) / (rajat.pohjoinen - rajat.etela)) * H).toFixed(1);
-  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri);
+  const kerrokset = kokoaKerrokset(elementit, x, y, rajat, meri, rantaLaaja, laguuniMaa, meriMax);
   const kainaloKuvat = kainalot
     .map((k, i) => piirraKainalo(k, kainaloAineistot[i] ?? [], W, H, W / laajennus, rauniokaupunki))
     .join('\n');
@@ -7088,7 +7729,37 @@ for (const [i, kainalo] of (KAUPUNGIT[kaupunki].kainalot ?? []).entries()) {
   console.log(`  ${osat.length} elementtiä.`);
   kainaloAineistot.push(osat);
 }
-const svg = piirra(kaupunki, elementit, kainaloAineistot);
+/*
+ * MERIHAKU: `meriHaku: <asteita>` hakee rantaviivan (natural=coastline)
+ * piirtoalaa sen verran laajemmalta alueelta joka suuntaan, ja meri
+ * täytetään siinä laatikossa (ks. kokoaKerrokset). Tukholma 11.10.2026.
+ */
+let rantaLaaja = null;
+if (KAUPUNGIT[kaupunki].meriHaku) {
+  const r0 = piirretytRajat(KAUPUNGIT[kaupunki]);
+  const m = KAUPUNGIT[kaupunki].meriHaku;
+  const laaja = { pohjoinen: r0.pohjoinen + m, etela: r0.etela - m, lansi: r0.lansi - m * 2, ita: r0.ita + m * 2 };
+  await new Promise((r) => setTimeout(r, 4000));
+  console.log('Haetaan rantaviiva laajemmalta alueelta (meriHaku)…');
+  const kysely = `[out:json][timeout:120];way["natural"="coastline"](${laaja.etela},${laaja.lansi},${laaja.pohjoinen},${laaja.ita});out geom;`;
+  let viivat = null;
+  for (let i = 1; !viivat; i++) {
+    const palvelin = OVERPASS_PALVELIMET[(i - 1) % OVERPASS_PALVELIMET.length];
+    try {
+      const v = await fetch(palvelin, { method: 'POST', headers: { 'User-Agent': 'matkakirja/1.0 (opetuspeli)' },
+        body: new URLSearchParams({ data: kysely }), signal: AbortSignal.timeout(180000) });
+      if (!v.ok) throw new Error(`Overpass ${v.status}`);
+      viivat = ((await v.json()).elements ?? []).filter((e) => e.geometry?.length).map((e) => e.geometry);
+    } catch (virhe) {
+      if (i >= 10) throw virhe;
+      console.log(`  ${virhe.message} — uusi yritys ${15 * i} s kuluttua…`);
+      await new Promise((r) => setTimeout(r, 15000 * i));
+    }
+  }
+  console.log(`  ${viivat.length} rantaviivaa.`);
+  rantaLaaja = { viivat, rajat: laaja };
+}
+const svg = piirra(kaupunki, elementit, kainaloAineistot, rantaLaaja);
 mkdirSync(resolve(JUURI, 'assets/kartat'), { recursive: true });
 /*
  * Värinäyte EI korvaa julistetta vaan menee omaan tiedostoonsa
@@ -7102,35 +7773,20 @@ writeFileSync(svgPolku, svg);
 // Rasterointi PNG:ksi pelin Chromiumilla: SVG:n koko katuverkko on
 // selaimelle raskas joka avauksella — PNG piirtyy heti.
 const pngPolku = resolve(JUURI, `assets/kartat/${tiedosto}.png`);
-const skripti = `
-const { chromium } = require('playwright');
-(async () => {
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+// Rasterointi samassa prosessissa (Pelikoodari 11.10.2026): #3636 vaihtoi alihaun node -e -skriptin chromium.launchin
+// tools/selain.mjs:n avaaChromiumiin, mutta node -e ei näe tämän moduulin tuontia ("avaaChromium is not defined").
+{
+  const selain = await avaaChromium({});
   const sivu = await (await selain.newContext({ viewport: { width: 10, height: 10 } })).newPage();
-  await sivu.goto('file://${svgPolku}');
+  await sivu.goto(`file://${svgPolku}`);
   const koko = await sivu.evaluate(() => {
     const s = document.querySelector('svg');
     return { w: Number(s.getAttribute('width')), h: Number(s.getAttribute('height')) };
   });
   await sivu.setViewportSize({ width: koko.w, height: koko.h });
-  await sivu.screenshot({ path: '${pngPolku}' });
+  await sivu.screenshot({ path: pngPolku });
   await selain.close();
-})();`;
-/*
- * NODE_PATH mukaan, koska playwright ei ole pelin riippuvuus vaan
- * ympäristön: kontissa se on /opt/node22/lib/node_modules. Ilman tätä
- * rasterointi kaatui "Cannot find module 'playwright-core'" -virheeseen
- * vasta SVG:n valmistuttua, eli työ oli jo tehty kun se kaatui.
- */
-execFileSync('node', ['-e', skripti], {
-  cwd: JUURI,
-  stdio: 'inherit',
-  env: {
-    ...process.env,
-    NODE_PATH: [process.env.NODE_PATH, '/opt/node22/lib/node_modules']
-      .filter(Boolean).join(':'),
-  },
-});
+}
 const rajat = KAUPUNGIT[kaupunki].rajat;
 const piirto = piirretytRajat(KAUPUNGIT[kaupunki]);
 console.log(`Valmis: assets/kartat/${tiedosto}.png`);

@@ -135,11 +135,9 @@ import { puraMaanRenkaat } from '../../js/maanaariviivat.js';
 import { KARTTANIMI_KOOT } from '../../js/karttanimet.js';
 import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 import { projisoiLaudalle } from '../../js/fokusmitat.js';
+import { avaaChromium } from '../selain.mjs';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -519,7 +517,7 @@ peliGRC.phase = 'action';
 peliGRC.tokens.delete('ateena');
 const tallenneGRC = JSON.stringify(peliGRC.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /** Yksi ajo: konteksti, peli Pariisissa, 9 s lepoa (ks. tiedoston alku). */
 async function avaaPeli({ leveys, korkeus, dpr = 1, lepo = true, save = tallenne }) {

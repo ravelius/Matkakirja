@@ -1,0 +1,712 @@
+{
+ "kaupunki": "havanna",
+ "kaupunkiQ": "Q1563",
+ "kohteet": [
+  {
+   "q": "Q1352908",
+   "nimi": "El Capitolio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 23.13528,
+   "lon": -82.35944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Capitolio full.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capitolio_full.jpg?width=1280",
+     "tekija": "Yomangani",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capitolio_full.jpg",
+     "selite": "El Capitolio kohoaa Havannan keskustassa kupoleineen entisenä parlamenttitalona.",
+     "leveys": 2160,
+     "korkeus": 1440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2012-03-03 03 Capitol Havana anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-03-03_03_Capitol_Havana_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012-03-03_03_Capitol_Havana_anagoria.JPG",
+     "selite": "Kansallinen Capitolio valmistui 1929, ja sen pitkä pylvässivu avautuu palmuille ja vanhoille amerikanautoille.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "09423 - Havanna Capitol E facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/09423_-_Havanna_Capitol_E_facade.jpg?width=1280",
+     "tekija": "Virtual-Pano",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:09423_-_Havanna_Capitol_E_facade.jpg",
+     "selite": "Illan valaistuksessa Capitolion kupoli ja pylväsportaikko erottuvat kirkkaina pimeää taivasta vasten.",
+     "leveys": 6000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Capitol Building 2 (3204210939).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capitol_Building_2_(3204210939).jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capitol_Building_2_(3204210939).jpg",
+     "selite": "Capitolio on yksi Havannan tunnetuimmista rakennuksista ja vastaa ulkoasultaan Washingtonin kongressitaloa.",
+     "leveys": 4752,
+     "korkeus": 2862,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1165566",
+   "nimi": "Vanha-Havanna",
+   "peruste": "UNESCO",
+   "koko_m": 1200,
+   "lat": 23.13594,
+   "lon": -82.35833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Habana Vieja de noche.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habana_Vieja_de_noche.jpg?width=1280",
+     "tekija": "Gabriel Rodríguez",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Habana_Vieja_de_noche.jpg",
+     "selite": "Vanha-Havannan siluetti ja Capitolion kupoli kohoavat illan valoissa sataman toiselle puolelle.",
+     "leveys": 3008,
+     "korkeus": 1151,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Square, Havana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Square%2C_Havana.jpg?width=1280",
+     "tekija": "Brian Snelson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Square%2C_Havana.jpg",
+     "selite": "Vanhan kaupungin aukiota ympäröivät värikkäät siirtomaa-ajan talot ja holvikäytävät.",
+     "leveys": 3504,
+     "korkeus": 2336,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q635199",
+   "nimi": "Morron linnake",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 23.15042,
+   "lon": -82.35667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Moro Havanna Cuba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Moro_Havanna_Cuba.jpg?width=1280",
+     "tekija": "Dr. Anthony R. Picciolo, NOAA NODC",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Moro_Havanna_Cuba.jpg",
+     "selite": "Morron linnake vartioi Havannan satamansuuta majakkineen kalliolla.",
+     "leveys": 1702,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baluard Austria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baluard_Austria.JPG?width=1280",
+     "tekija": "Mmoyaq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baluard_Austria.JPG",
+     "selite": "Morron valleilta avautuu näkymä majakalle ja lahden toiselle puolelle kaupunkiin.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12597",
+   "nimi": "Malecón",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 23.14167,
+   "lon": -82.36806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Malecón (3031744036).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Malec%C3%B3n_(3031744036).jpg?width=1280",
+     "tekija": "Martin Abegglen from Bern, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Malec%C3%B3n_(3031744036).jpg",
+     "selite": "Malecón on Havannan rantaa pitkin kulkeva meriseinä ja kaupunkilaisten suosittu kävelytie.",
+     "leveys": 4600,
+     "korkeus": 3068,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 Malecon Havana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Malecon_Havana.jpg?width=1280",
+     "tekija": "PLBechly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_Malecon_Havana.jpg",
+     "selite": "Malecónin muuri seuraa merenrantaa kohti Hotel Nacionalin tornia.",
+     "leveys": 2533,
+     "korkeus": 1893,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20240214 Malecon de Habana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20240214_Malecon_de_Habana.jpg?width=1280",
+     "tekija": "Matthias Bethke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20240214_Malecon_de_Habana.jpg",
+     "selite": "Myrskyaallot iskevät Malecónin muuriin ja lentävät yli tien.",
+     "leveys": 4190,
+     "korkeus": 2794,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15043487",
+   "nimi": "Havannan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 23.14138,
+   "lon": -82.35192,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Havane cathedrale face.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Havane_cathedrale_face.JPG?width=1280",
+     "tekija": "Velvet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Havane_cathedrale_face.JPG",
+     "selite": "Havannan katedraalin barokkijulkisivu ja epäsymmetriset tornit ovat Kuuban vaikuttavimpia.",
+     "leveys": 2800,
+     "korkeus": 1872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A room with a view (39507313162).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_room_with_a_view_(39507313162).jpg?width=1280",
+     "tekija": "Rob Oo from NL",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_room_with_a_view_(39507313162).jpg",
+     "selite": "Ikkunan kehystämänä katedraalin julkisivu erottuu aukion yläpuolella.",
+     "leveys": 5098,
+     "korkeus": 3399,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7203695",
+   "nimi": "Katedraaliaukio",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 23.14089,
+   "lon": -82.35163,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de la Catedral of Havana (Jan 2014).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_la_Catedral_of_Havana_(Jan_2014).jpg?width=1280",
+     "tekija": "Gorupdebesanez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_la_Catedral_of_Havana_(Jan_2014).jpg",
+     "selite": "Katedraaliaukio avautuu Havannan katedraalin ja Marqués de Arcosin palatsin väliin.",
+     "leveys": 2976,
+     "korkeus": 1661,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2012-Museo de Arte Colonial anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-Museo_de_Arte_Colonial_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012-Museo_de_Arte_Colonial_anagoria.JPG",
+     "selite": "Aukion laidalla seisova siirtomaa-ajan palatsi on nykyisin Siirtomaa-ajan taiteen museo.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Habana 01 2014 7607.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habana_01_2014_7607.JPG?width=1280",
+     "tekija": "Mariordo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Habana_01_2014_7607.JPG",
+     "selite": "Katedraaliaukion kapea tila kehystyy palatsien ja katedraalin julkisivujen väliin.",
+     "leveys": 8828,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1757628",
+   "nimi": "La Cabañan linnake",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 23.14722,
+   "lon": -82.35,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Habana 01 2014 Fortaleza de San Carlos de la Cabaña 7509.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habana_01_2014_Fortaleza_de_San_Carlos_de_la_Caba%C3%B1a_7509.JPG?width=1280",
+     "tekija": "Mariordo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Habana_01_2014_Fortaleza_de_San_Carlos_de_la_Caba%C3%B1a_7509.JPG",
+     "selite": "La Cabañan linnoitus kohoaa Havannan sataman itärannalla vallien takana.",
+     "leveys": 4067,
+     "korkeus": 1050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bateria Fortalessa de San Carlos de la Cabaña.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bateria_Fortalessa_de_San_Carlos_de_la_Caba%C3%B1a.JPG?width=1280",
+     "tekija": "Mmoyaq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bateria_Fortalessa_de_San_Carlos_de_la_Caba%C3%B1a.JPG",
+     "selite": "La Cabañan vallilta kanuunat tähtäävät yli lahden kaupunkia kohti.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4499680",
+   "nimi": "Plaza Vieja",
+   "peruste": "pelin nosto",
+   "koko_m": 110,
+   "lat": 23.13608,
+   "lon": -82.35006,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza Vieja in Havana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Vieja_in_Havana.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Vieja_in_Havana.jpg",
+     "selite": "Plaza Viejan väriloisto syntyy restauroiduista siirtomaa-ajan pylväskäytävätaloista.",
+     "leveys": 5259,
+     "korkeus": 2961,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2012 Plaza Vieja Havanna anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012_Plaza_Vieja_Havanna_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012_Plaza_Vieja_Havanna_anagoria.JPG",
+     "selite": "Plaza Viejan aukiota ympäröivät palatsit ja pastellinsävyiset julkisivut.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2012-Plaza Vieja Havanna anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-Plaza_Vieja_Havanna_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012-Plaza_Vieja_Havanna_anagoria.JPG",
+     "selite": "Aukion keskellä nykytaide on tuonut uutta ilmettä vanhaan kauppatoriin.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q11942010",
+   "nimi": "Plaza de Armas",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 23.14016,
+   "lon": -82.34952,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Detroit Photographic Company (0979).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Detroit_Photographic_Company_(0979).jpg?width=1280",
+     "tekija": "Detroit Publishing Company",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0979).jpg",
+     "selite": "Plaza de Armas on Havannan vanhin aukio, ja sen keskellä puistoa reunustaa vanha kuvernöörinpalatsi.",
+     "leveys": 1536,
+     "korkeus": 1193,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1049302",
+   "nimi": "Castillo de la Real Fuerza",
+   "peruste": "sitelinks",
+   "koko_m": 160,
+   "lat": 23.141,
+   "lon": -82.3498,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castillo de la Real Fuerza - 2008 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_la_Real_Fuerza_-_2008_-_panoramio.jpg?width=1280",
+     "tekija": "Maxim Nedashkovskiy",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_la_Real_Fuerza_-_2008_-_panoramio.jpg",
+     "selite": "Real Fuerzan vallihaudan ympäröimä linnoitus on Amerikan vanhimpia kivilinnoja.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castillo de la Real Fuerza (Jan 2014).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_la_Real_Fuerza_(Jan_2014).jpg?width=1280",
+     "tekija": "Gorupdebesanez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_la_Real_Fuerza_(Jan_2014).jpg",
+     "selite": "Linnoituksen vallit ja kulmatornit seisovat Plaza de Armasin laidalla.",
+     "leveys": 3008,
+     "korkeus": 1285,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castell de la Real Fuerza.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell_de_la_Real_Fuerza.JPG?width=1280",
+     "tekija": "Mmoyaq",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castell_de_la_Real_Fuerza.JPG",
+     "selite": "Satamasta katsoen vanhakaupungin rannalla erottuu Real Fuerzan matala linnoitus.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1461939",
+   "nimi": "Havannan suuri teatteri",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 23.13683,
+   "lon": -82.3596,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Great Theatre of Havana (Gran Teatro de La Habana).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Theatre_of_Havana_(Gran_Teatro_de_La_Habana).jpg?width=1280",
+     "tekija": "Brian Snelson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Theatre_of_Havana_(Gran_Teatro_de_La_Habana).jpg",
+     "selite": "Gran Teatro de La Habanan koristeellinen neobarokkijulkisivu hallitsee Parque Centralin kulmaa.",
+     "leveys": 2048,
+     "korkeus": 1542,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Capitolio (3030146722).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capitolio_(3030146722).jpg?width=1280",
+     "tekija": "Martin Abegglen from Bern, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capitolio_(3030146722).jpg",
+     "selite": "Capitolion vieressä Gran Teatron kulmikas pylväsrakennus ja kupolit erottuvat kadun toisella puolella.",
+     "leveys": 4600,
+     "korkeus": 3068,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2915936",
+   "nimi": "Hotel Nacional de Cuba",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 23.14306,
+   "lon": -82.38056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hotelnacionale.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotelnacionale.jpg?width=1280",
+     "tekija": "Jongleur100",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotelnacionale.jpg",
+     "selite": "Hotel Nacionalin tornit ja palmukuja reunustaa tunnettu 1930-luvun hotelli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cam-Photo-Havana-2009-HNC.PNG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cam-Photo-Havana-2009-HNC.PNG?width=1280",
+     "tekija": "Camilo O. Rojas",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cam-Photo-Havana-2009-HNC.PNG",
+     "selite": "Ilmasta katsoen Hotel Nacional seisoo Malecónin äärellä kukkulalla meren rannalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1781364",
+   "nimi": "Vallankumousmuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 23.14167,
+   "lon": -82.35667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of Revolution Cuba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Revolution_Cuba.jpg?width=1280",
+     "tekija": "Paul Mannix",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Revolution_Cuba.jpg",
+     "selite": "Vallankumousmuseo toimii entisessä presidentinpalatsissa, ja sen eteen on pystytetty panssarivaunu.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museum of the Revolution, Centro Habana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_the_Revolution%2C_Centro_Habana.jpg?width=1280",
+     "tekija": "Tony Hisget",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Revolution%2C_Centro_Habana.jpg",
+     "selite": "Entisen presidentinpalatsin runsaasti koristeltu julkisivu avautuu Havannan keskustassa.",
+     "leveys": 4488,
+     "korkeus": 2958,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Museo de la Revoluciòn 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_la_Revoluci%C3%B2n_01.jpg?width=1280",
+     "tekija": "Gorupdebesanez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_de_la_Revoluci%C3%B2n_01.jpg",
+     "selite": "Puiden takaa avautuu pitkä näkymä palatsin kupolilliseen pääjulkisivuun.",
+     "leveys": 3004,
+     "korkeus": 1825,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4703397",
+   "nimi": "San Franciscon basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.13694,
+   "lon": -82.34833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica Menor de San Francisco de Asis (Havana).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_Menor_de_San_Francisco_de_Asis_(Havana).jpg?width=1280",
+     "tekija": "Dudva",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_Menor_de_San_Francisco_de_Asis_(Havana).jpg",
+     "selite": "San Franciscon luostarikirkon kellotorni kohoaa Plaza de San Franciscon laidalla.",
+     "leveys": 2100,
+     "korkeus": 1575,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica Menor de San Francisco de Asis in Havana 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_Menor_de_San_Francisco_de_Asis_in_Havana_2016.jpg?width=1280",
+     "tekija": "Eric Weingart",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_Menor_de_San_Francisco_de_Asis_in_Havana_2016.jpg",
+     "selite": "Entisen luostarikirkon korkea kellotorni näkyy kauas Vanhan-Havannan kattojen yli.",
+     "leveys": 4024,
+     "korkeus": 3304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1053319",
+   "nimi": "Colónin hautausmaa",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 23.12306,
+   "lon": -82.39861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Porton de entrada Cementerio de Colon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Porton_de_entrada_Cementerio_de_Colon.jpg?width=1280",
+     "tekija": "Ivan2010",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Porton_de_entrada_Cementerio_de_Colon.jpg",
+     "selite": "Colónin hautausmaan juhlallinen sisäänkäyntiportti avaa tien suureen patsas- ja kappelikaupunkiin.",
+     "leveys": 2252,
+     "korkeus": 1668,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8773463",
+   "nimi": "El Templete",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 23.14049,
+   "lon": -82.34903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2012-El Templete Havanna anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012-El_Templete_Havanna_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012-El_Templete_Havanna_anagoria.JPG",
+     "selite": "El Templeten pieni pylvästemppeli merkitsee paikkaa, josta Havannan nykyisen sijainnin sanotaan alkaneen.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "El Templete.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Templete.jpg?width=1280",
+     "tekija": "Angelo Lucia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Templete.jpg",
+     "selite": "Temppelin ja sen vieressä kasvavan puun ympärille on rakennettu muistoaita.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4838596",
+   "nimi": "Bacardí-talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 23.1389,
+   "lon": -82.3571,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bacardi building 4 (3209478372).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bacardi_building_4_(3209478372).jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bacardi_building_4_(3209478372).jpg",
+     "selite": "Bacardín entinen pääkonttori on art decon tornitalo Havannan vanhankaupungin liepeillä.",
+     "leveys": 3168,
+     "korkeus": 4752,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bacardi building 2 (3209460628).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bacardi_building_2_(3209460628).jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bacardi_building_2_(3209460628).jpg",
+     "selite": "Bacardí-talon koristeellinen tornin huippu ja tiilikuvioidut seinät erottuvat taivasta vasten.",
+     "leveys": 3168,
+     "korkeus": 4752,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline Malecon Havanna.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_Malecon_Havanna.jpg?width=1280",
+   "tekija": "Herbert wie",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_Malecon_Havanna.jpg",
+   "selite": "Havannan siluetti avautuu Malecónin yli ja Capitolion kupoli nousee kaupungin keskellä.",
+   "leveys": 3089,
+   "korkeus": 2048,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Havana aerial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Havana_aerial.jpg?width=1280",
+   "tekija": "This photo was taken by Anton Zelenov. Please credit this with : Photo : Anton Zelenov in the immediate vicinity of the image. If you use one of my photos, please email me (account needed) or leave me a short message on my discussion page. It would be greatly appreciated. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me to negotiate terms.",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Havana_aerial.jpg",
+   "selite": "Ilmasta katsoen Havanna levittyy leveiden katujen ja puistojen ympärille.",
+   "leveys": 2126,
+   "korkeus": 1417,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

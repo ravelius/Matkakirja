@@ -266,9 +266,9 @@ export const HAHMOTELMA_ITA = [
       kysymys: 'Mistä Gardajärven nykyinen nimi on peräisin?',
       vaihtoehdot: [
         'Roomalaisen jumalan Benacuksen nimestä',
-        'Kreikkalaisesta sanasta \'vesi\'',
-        'Kelttiläisestä sanasta \'sininen\'',
-        'Germaanien sanasta \'vartiopaikka\'',
+        'Kreikkalaisesta sanasta ’vesi’',
+        'Kelttiläisestä sanasta ’sininen’',
+        'Germaanien sanasta ’vartiopaikka’',
       ],
       oikea: 3,
       fakta: 'Gardajärven rantaa jakavat keskenään Brescian, Veronan ja Trenton maakunnat.',
@@ -501,6 +501,7 @@ export const HAHMOTELMA_ITA = [
   },
   {
     id: 'hahmotelma-agrigento',
+    nimio: 'Agrigento',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-agrigento-88e3396b.jpg',
       lyhyt: 'Concordian temppeli valaistuna iltahämärässä Agrigentossa.',
@@ -840,7 +841,7 @@ export const HAHMOTELMA_ITA = [
     teksti: 'Val d\'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte '
       + 'Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita '
       + 'rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti '
-      + 'uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi '
+      + 'uudelleen ”ihannekaupungiksi” 1400-luvulla, Radicofanissa asui rosvosankariksi '
       + 'kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia '
       + 'viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista '
       + 'nykyvalokuvaan. UNESCO merkitsi Val d\'Orcian maailmanperintökohteeksi vuonna 2004.',
@@ -1174,6 +1175,7 @@ export const HAHMOTELMA_ITA = [
   },
   {
     id: 'hahmotelma-carrara',
+    nimio: 'Carrara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-carrara-55725472.jpg',
       lyhyt: 'Carraran marmorilouhosten rinteet ja serpentiinitie ylhäältä nähtynä.',
@@ -1435,7 +1437,7 @@ export const HAHMOTELMA_ITA = [
       + 'hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin '
       + 'suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin '
       + 'pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja '
-      + 'myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" '
+      + 'myöhemmin tietokoneita. Olivetti-alue ”Industrial City of the 20th Century” '
       + 'merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös '
       + 'karnevaalistaan ja sen Appelsiinitaistelusta.',
     lahde: 'en-Wikipedia "Ivrea", johdanto-osa (tarkistettu 19.9.2026).',
@@ -1525,7 +1527,7 @@ export const HAHMOTELMA_ITA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-cannae-1028149a.jpg',
         lyhyt: 'Vanha kaiverrus Cannaen taistelukentän tasangosta ja mutkittelevasta joesta.',
-        selite: 'Vanha kirjankuvitus "Punti storici d\'Italia" esittää Cannaen taistelukentän maisemaa: kivenlohkareita etualalla ja laaja joen halkoma tasanko taustalla.',
+        selite: 'Vanha kirjankuvitus ”Punti storici d\'Italia” esittää Cannaen taistelukentän maisemaa: kivenlohkareita etualalla ja laaja joen halkoma tasanko taustalla.',
         lahde: 'Kaiverrus: Gustav Adolf Closs, Wikimedia Commons (public domain).',
         tekija: 'Gustav Adolf Closs',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Punti_storici_d’Italia_campo_della_battaglia_di_Canne.jpg',

@@ -46,11 +46,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -94,8 +90,7 @@ else tieto('kirjasto ämpäristä', `${kirjasto.length} tavua`);
  */
 const NAYTOLLA = Boolean(process.env.DISPLAY);
 if (!NAYTOLLA) console.log('HUOM  DISPLAY puuttuu — ajetaan headlessinä, jossa vierityspalkki ei vie tilaa');
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   headless: !NAYTOLLA,
   args: NAYTOLLA ? ['--disable-features=OverlayScrollbar', '--no-sandbox'] : [],
 });

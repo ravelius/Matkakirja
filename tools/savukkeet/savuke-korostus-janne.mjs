@@ -60,10 +60,8 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -142,8 +140,7 @@ peli.phase = 'action';
 peli.tokens.delete('marseille');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM || undefined,
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 const ctx = await selain.newContext({

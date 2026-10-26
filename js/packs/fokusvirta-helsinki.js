@@ -463,7 +463,7 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'itse viimeisen osan, jonka nimi oli Suomi herää. Se kiihotti '
         + 'kuulijoita niin, että kappaletta soitettiin sen jälkeen '
         + 'vaihtuvilla nimillä — yksi niistä oli pelkkä Impromptu, joka '
-        + 'tarkoittaa suunnilleen "jotain, mitä nyt sattui syntymään". '
+        + 'tarkoittaa suunnilleen ”jotain, mitä nyt sattui syntymään”. '
         + 'Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin '
         + 'kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, mitä '
         + 'yksikään puhe ei olisi saanut tehdä ääneen.',
@@ -766,17 +766,4 @@ export const FOKUSVIRTA_HELSINKI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Ivalojoen
-   * kultahippu. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Kuulin Ivalojoen kullasta jo laivalla: kolme vuotta sitten '
-      + 'joelta alkoi löytyä hippuja, ja pohjoiseen kulkee nyt miehiä lapio '
-      + 'selässä. Lappi oli minulle liian kaukana — merkitsin joen '
-      + 'luetteloon ja jätin sen sinulle.',
-  },
 };

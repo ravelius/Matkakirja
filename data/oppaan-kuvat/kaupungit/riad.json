@@ -1,0 +1,443 @@
+{
+ "kaupunki": "riad",
+ "kaupunkiQ": "Q3692",
+ "kohteet": [
+  {
+   "q": "Q751987",
+   "nimi": "Masmakin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 24.6311,
+   "lon": 46.7133,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Masmak Fort (221650667).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masmak_Fort_(221650667).jpeg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masmak_Fort_(221650667).jpeg",
+     "selite": "Masmakin savitiililinnoitus on Riadin vanhankaupungin keskellä, ja sen kulmatorni on kaupungin tunnetuimpia maamerkkejä.",
+     "leveys": 2048,
+     "korkeus": 1362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masmak castle.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masmak_castle.jpg?width=1280",
+     "tekija": "Baptiste Marcel",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masmak_castle.jpg",
+     "selite": "Linnoituksen paksut savimuurit suojasivat vanhaa muurikaupunkia.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masmak Citadel, Riyadh (14372839641).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masmak_Citadel%2C_Riyadh_(14372839641).jpg?width=1280",
+     "tekija": "Rick McCharles from Calgary, Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masmak_Citadel%2C_Riyadh_(14372839641).jpg",
+     "selite": "Linnoituksen sisäpihaa kiertävät massiivisten pylväiden kannattamat katokset.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q656743",
+   "nimi": "Kingdom Centre",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 24.71139,
+   "lon": 46.67444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kingdomcentreinriyadhsaudiarabia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kingdomcentreinriyadhsaudiarabia.JPG?width=1280",
+     "tekija": "King Eliot",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kingdomcentreinriyadhsaudiarabia.JPG",
+     "selite": "Kingdom Centren pilvenpiirtäjä tunnistetaan huipun suuresta aukosta, ja se on Riadin tunnetuin siluetti.",
+     "leveys": 1506,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beautiful Kingdom Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_Kingdom_Tower.jpg?width=1280",
+     "tekija": "Ibuz4u",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beautiful_Kingdom_Tower.jpg",
+     "selite": "Torni kohoaa Olayan liikekeskustan yläpuolelle kaupungin pilvenpiirtäjien keskellä.",
+     "leveys": 4697,
+     "korkeus": 7189,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Blue Kingdom Tower.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Kingdom_Tower.JPG?width=1280",
+     "tekija": "ignacio malapitan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Kingdom_Tower.JPG",
+     "selite": "Tornin teräksinen pinta heijastaa taivasta, ja huipun aukkoon on rakennettu kävelysilta.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2303314",
+   "nimi": "Al Faisaliah -torni",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 24.69028,
+   "lon": 46.68528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Faisaliah Tower (xiquinhosilva) - Flickr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Faisaliah_Tower_(xiquinhosilva)_-_Flickr.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Faisaliah_Tower_(xiquinhosilva)_-_Flickr.jpg",
+     "selite": "Al Faisaliah -tornin kapeneva kärki päättyy kultaiseen palloon, jossa on ravintola.",
+     "leveys": 2000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al Faisaliah Hotel Riyadh, 2023.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Faisaliah_Hotel_Riyadh%2C_2023.jpeg?width=1280",
+     "tekija": "Hamza A. Durrani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Faisaliah_Hotel_Riyadh%2C_2023.jpeg",
+     "selite": "Tornin juurella on hotelli ja ostoskeskus.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al faisliyah center (458038211).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_faisliyah_center_(458038211).jpg?width=1280",
+     "tekija": "Jon Rawlinson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_faisliyah_center_(458038211).jpg",
+     "selite": "Torni kohoaa Olayan pääkadun varrelle.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16250443",
+   "nimi": "Murabban palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 24.6465,
+   "lon": 46.7093,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1قصر المربع.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D9%85%D8%B1%D8%A8%D8%B9.jpg?width=1280",
+     "tekija": "Heritage Commission",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1%D9%82%D8%B5%D8%B1_%D8%A7%D9%84%D9%85%D8%B1%D8%A8%D8%B9.jpg",
+     "selite": "Murabban palatsin valkoiset sisäpihat ja palmu kuuluvat kuningas Abdulazizin vanhaan asuinpalatsiin.",
+     "leveys": 4496,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Murabba Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murabba_Palace.jpg?width=1280",
+     "tekija": "saudipics",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Murabba_Palace.jpg",
+     "selite": "Palatsin pihaa kiertävät kaarikäytävät, jotka valaistaan iltaisin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Murabba Palace2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murabba_Palace2.jpg?width=1280",
+     "tekija": "saudipics",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Murabba_Palace2.jpg",
+     "selite": "Palatsin ovet ja savirakenteet edustavat najdilaista rakennusperinnettä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55614335",
+   "nimi": "Imam Turkin suurmoskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 24.63056,
+   "lon": 46.71056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Deera Square and Imam Turki bin Abdullah Mosque (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deera_Square_and_Imam_Turki_bin_Abdullah_Mosque_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deera_Square_and_Imam_Turki_bin_Abdullah_Mosque_(1).jpg",
+     "selite": "Imam Turkin suurmoskeija seisoo Deeran aukion laidalla, Riadin vanhankaupungin sydämessä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q22932999",
+   "nimi": "Riadin vesitorni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 24.645,
+   "lon": 46.71222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Riyadh Water Tower (xiquinhosilva) - Flickr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riyadh_Water_Tower_(xiquinhosilva)_-_Flickr.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riyadh_Water_Tower_(xiquinhosilva)_-_Flickr.jpg",
+     "selite": "Riadin vesitorni on kaupungin tunnettu sienenmuotoinen maamerkki.",
+     "leveys": 2120,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q763077",
+   "nimi": "Kuningas Fahdin urheilukaupunki",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 24.78821,
+   "lon": 46.83924,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "King Fahd International Stadium 2020s.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/King_Fahd_International_Stadium_2020s.jpg?width=1280",
+     "tekija": "Meshari Alawfi",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:King_Fahd_International_Stadium_2020s.jpg",
+     "selite": "Kuningas Fahdin stadionin telttamainen katto on Riadin tunnistettavimpia rakennuksia.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "King Fahad Stadium (4055869088).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/King_Fahad_Stadium_(4055869088).jpg?width=1280",
+     "tekija": "Jadi from Iran",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:King_Fahad_Stadium_(4055869088).jpg",
+     "selite": "Katon valkoiset kangaskärjet muistuttavat beduiiniteltta-aavikkoa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "King Fahd Int, Stadium . Night.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/King_Fahd_Int%2C_Stadium_._Night.JPG?width=1280",
+     "tekija": "على المزارقه",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:King_Fahd_Int%2C_Stadium_._Night.JPG",
+     "selite": "Stadion valaistaan iltaisin.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1752043",
+   "nimi": "Kuningas Saudin yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 24.722,
+   "lon": 46.627,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "King Saud University Entrance Gate, Riyadh.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/King_Saud_University_Entrance_Gate%2C_Riyadh.jpg?width=1280",
+     "tekija": "Dr. Basil Al Bayati",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:King_Saud_University_Entrance_Gate%2C_Riyadh.jpg",
+     "selite": "Kuningas Saudin yliopisto on Saudi-Arabian vanhimpia yliopistoja, ja sen kampus on laaja.",
+     "leveys": 6850,
+     "korkeus": 6378,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Palm Mosque at King Saud University, Riyadh by Dr. Basil Al Bayati.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Palm_Mosque_at_King_Saud_University%2C_Riyadh_by_Dr._Basil_Al_Bayati.jpg?width=1280",
+     "tekija": "Basil Al Bayati",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Palm_Mosque_at_King_Saud_University%2C_Riyadh_by_Dr._Basil_Al_Bayati.jpg",
+     "selite": "Kampuksen moskeijaa ympäröivät palmut.",
+     "leveys": 4099,
+     "korkeus": 3169,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28714997",
+   "nimi": "KAFD:n metroasema",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 24.76759,
+   "lon": 46.64304,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "KAFD metro station 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KAFD_metro_station_2025.jpg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KAFD_metro_station_2025.jpg",
+     "selite": "KAFD:n metroaseman aaltoileva teräskatto on arkkitehti Zaha Hadidin suunnittelema.",
+     "leveys": 5753,
+     "korkeus": 3918,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "KAFD Station - Riyadh Metro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KAFD_Station_-_Riyadh_Metro.jpg?width=1280",
+     "tekija": "Ali Lajami",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KAFD_Station_-_Riyadh_Metro.jpg",
+     "selite": "Asema palvelee Riadin uutta rahoituskeskusta.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "KAFD 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KAFD_1.jpg?width=1280",
+     "tekija": "Kolaiel",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KAFD_1.jpg",
+     "selite": "Aseman katto on kuvioitu kennomaiseksi.",
+     "leveys": 3072,
+     "korkeus": 4096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q123412407",
+   "nimi": "Kingdom Arena",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 24.77817,
+   "lon": 46.60531,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kingdom Arena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kingdom_Arena.jpg?width=1280",
+     "tekija": "بندر الساري",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kingdom_Arena.jpg",
+     "selite": "Kingdom Arena on Riadin uusi jalkapallostadion.",
+     "leveys": 1280,
+     "korkeus": 720,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Riyadh Skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riyadh_Skyline.jpg?width=1280",
+   "tekija": "B.alotaby",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riyadh_Skyline.jpg",
+   "selite": "Riadin pilvenpiirtäjät erottuvat iltataivasta vasten aavikon keskellä.",
+   "leveys": 4109,
+   "korkeus": 2311,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Riyadh North Skyline .jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riyadh_North_Skyline_.jpg?width=1280",
+   "tekija": "B.alotaby",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riyadh_North_Skyline_.jpg",
+   "selite": "Kingdom Centre hallitsee kaupungin siluettia aamun valossa.",
+   "leveys": 1600,
+   "korkeus": 1067,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q47157",
+   "nimi": "Kuningas Khalidin kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "lat": 24.9576,
+   "lon": 46.6988,
+   "syy": "ei sopivaa vapaata kuvaa, vain henkilökuvia"
+  }
+ ]
+}

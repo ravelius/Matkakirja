@@ -227,6 +227,7 @@ export const MAASTOKOHTEET_SLB = [
   {
     id: 'uuden-georgian-salmi',
     nimi: 'Uuden-Georgian salmi',
+    nimio: 'Uusi-Georgia',
     tyyppi: 'meri',
     kysymykset: [
       'Millä lempinimellä liittoutuneet kutsuivat salmea?',
@@ -316,7 +317,7 @@ export const MAASTOKOHTEET_SLB = [
       + 'Álvaro de Mendaña astui maihin 7. helmikuuta 1568 ja merkitsi saaren kartalle '
       + 'nimellä Santa Isabel de la Estrella. Espanjalaiset perustivat asutuksen ja '
       + 'rakensivat pienen prikantiinin, jolla he mittasivat ympäröiviä meriä ja saaria — '
-      + 'noilla retkillä he "löysivät" muun muassa Malaitan, Guadalcanalin, Savon, '
+      + 'noilla retkillä he ”löysivät” muun muassa Malaitan, Guadalcanalin, Savon, '
       + 'Choiseulin ja Makiran. Kohtaaminen saarelaisten kanssa alkoi sovinnollisesti, mutta '
       + 'retkikunnan jatkuva tarve saada tuoretta ruokaa ja vettä kiristi välit nopeasti: '
       + 'saarelaisten omavaraistalous ei kyennyt ruokkimaan vieraita loputtomiin. Kun '

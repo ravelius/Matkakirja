@@ -57,6 +57,7 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { inflateSync } from 'node:zlib';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
@@ -127,9 +128,8 @@ const MOOTTORI = process.argv.includes('--webkit') ? 'webkit' : 'chromium';
 const chromium = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
 if (!chromium) throw new Error(`selainmoottoria ${MOOTTORI} ei ole Playwrightissa`);
 const selain = await (MOOTTORI === 'webkit'
-  ? chromium.launch(process.env.WEBKIT ? { executablePath: process.env.WEBKIT } : {})
-  : chromium.launch({
-    executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+  ? avaaChromium(process.env.WEBKIT ? { executablePath: process.env.WEBKIT } : {})
+  : avaaChromium({
     /*
      * Ilman tätä Chromium ei päästä isoisän luentaa soimaan ilman elettä,
      * eikä luennan tila (pulun pluskupla, luentakuvapakka) synny lainkaan

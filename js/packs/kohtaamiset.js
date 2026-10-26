@@ -97,22 +97,22 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Leila vertaa kirjaasi puhelimensa '
         + 'kuvaan:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä on sama kulma. '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä on sama kulma. '
         + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'näytän mistä suunnasta sitä katsotaan."' },
+        + 'näytän mistä suunnasta sitä katsotaan.”' },
     ],
-    loyto: 'Leila kuvaa rasian ennen kuin ojentaa sen: "Minä etsin tähän '
-      + 'valoa. Sinä löysit jotain muuta." — "Ja minä olen jo myöhässä!"',
+    loyto: 'Leila kuvaa rasian ennen kuin ojentaa sen: ”Minä etsin tähän '
+      + 'valoa. Sinä löysit jotain muuta.” — ”Ja minä olen jo myöhässä!”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Leila kuvaa rasian ennen kuin ojentaa '
         + 'sen:' },
-      { rooli: 'hahmo', teksti: '[softly] "Minä etsin tähän valoa. Sinä '
-        + 'löysit jotain muuta." [excited] "Ja minä olen jo myöhässä!"' },
+      { rooli: 'hahmo', teksti: '[softly] ”Minä etsin tähän valoa. Sinä '
+        + 'löysit jotain muuta.” [excited] ”Ja minä olen jo myöhässä!”' },
     ],
     tyhja: 'Leila kurkistaa syvennykseen: "Tyhjä. Tässä kulmassa kulkee '
       + 'tuhat ihmistä tunnissa — joku ehti ensin."',
-    vaarin: 'Leila kääntää puhelimen takaisin itseensä päin: "Ei vielä. '
-      + 'Minäkin palasin tähän kolmesti ennen kuin sain valon oikein."',
+    vaarin: 'Leila kääntää puhelimen takaisin itseensä päin: ”Ei vielä. '
+      + 'Minäkin palasin tähän kolmesti ennen kuin sain valon oikein.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Leila vertaa
      * kuvakulmia eikä kerro isoisästä: "Tämä on sama kulma" on
@@ -157,12 +157,12 @@ export const KOHTAAMISET = {
     tervehdys: 'Mara kiertää kajakin köyden ranteensa ympäri ja katsoo '
       + 'kirjaasi. "Se on piirretty mereltä. Näytä että tunnet maailmaa '
       + 'kuten piirtäjä — niin viedään sinut samaan kohtaan."',
-    loyto: 'Mara nostaa rasian melansa varteen: "Luulin meidän etsivän '
-      + 'vain rantaa."',
+    loyto: 'Mara nostaa rasian melansa varteen: ”Luulin meidän etsivän '
+      + 'vain rantaa.”',
     tyhja: 'Mara kääntää kiven takaisin paikalleen: "Tyhjä. Meri siirtää '
       + 'täällä kaiken, mikä ei ole kiinni kalliossa."',
-    vaarin: 'Mara työntää kajakin irti kivestä: "Ei tänään. Ranta on '
-      + 'huomennakin samassa paikassa."',
+    vaarin: 'Mara työntää kajakin irti kivestä: ”Ei tänään. Ranta on '
+      + 'huomennakin samassa paikassa.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Se on piirretty
      * mereltä … niin viedään sinut samaan kohtaan" — mereltä piirretty kuva
@@ -185,12 +185,12 @@ export const KOHTAAMISET = {
     tervehdys: 'Iryna pyyhkii kätensä esiliinaan ja ottaa kirjan '
       + 'varovasti kuin munakennon. "Vanhaa paperia. Näytä että tunnet '
       + 'maailmaa kuten sen kirjoittaja — niin luen mitä tässä lukee."',
-    loyto: 'Iryna työntää rasian tiskin yli: "Solomiia, kirjoita ylös. '
-      + 'Tämä ei ole päivän oudoin kauppa, mutta lähellä."',
+    loyto: 'Iryna työntää rasian tiskin yli: ”Solomiia, kirjoita ylös. '
+      + 'Tämä ei ole päivän oudoin kauppa, mutta lähellä.”',
     tyhja: 'Iryna laskee kynnyskiven takaisin: "Tyhjä. Tori on vanha, ja '
       + 'täällä on siivottu monta kertaa."',
-    vaarin: 'Iryna kääntää kuitin oikein päin: "Ei vielä. Paperi ei mene '
-      + 'mihinkään, ja minä olen tässä huomennakin."',
+    vaarin: 'Iryna kääntää kuitin oikein päin: ”Ei vielä. Paperi ei mene '
+      + 'mihinkään, ja minä olen tässä huomennakin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Vanhaa paperia" ja
      * kirja käsissä "varovasti kuin munakenno" — oletusarvo osuu (rekisterin
@@ -215,12 +215,12 @@ export const KOHTAAMISET = {
       + 'puodissamme ennenkin — isäni myi sen omistajalle kartan, '
       + 'jota ei ollut muilla. Näytä että tunnet maailmaa kuten hän, '
       + 'niin kerron minne kartta johti."',
-    loyto: 'Faruk levittää kellastuneen kartan tiskille: "Isoisäsi '
-      + 'merkitsi tämän itse — katso, mitä hän jätti sinulle."',
+    loyto: 'Faruk levittää kellastuneen kartan tiskille: ”Isoisäsi '
+      + 'merkitsi tämän itse — katso, mitä hän jätti sinulle.”',
     tyhja: 'Faruk pudistaa päätään: "Joku on käynyt ennen sinua. '
       + 'Mutta basaarissa mikään ei katoa lopullisesti."',
-    vaarin: 'Faruk sulkee kirjansa pehmeästi: "Ei vielä, ystäväni. '
-      + 'Tee odottaa silloinkin."',
+    vaarin: 'Faruk sulkee kirjansa pehmeästi: ”Ei vielä, ystäväni. '
+      + 'Tee odottaa silloinkin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: ainoa tervehdys,
      * joka nimeää isoisän kirjan ja "kartan, jota ei ollut muilla"
@@ -245,14 +245,14 @@ export const KOHTAAMISET = {
       + 'omistaja matkusti tällä laivalla. Isoisäni muisti hänet: '
       + 'mies kysyi koneesta enemmän kuin maisemasta. Näytä että '
       + 'tunnet maailmaa kuten hän — kerron, mihin saareen hän jäi."',
-    loyto: 'Elsa nostaa penkin alta pellisen öljykannun: "Tämä on '
+    loyto: 'Elsa nostaa penkin alta pellisen öljykannun: ”Tämä on '
       + 'ollut laivalla kauemmin kuin minä. Katso, mitä pohjaan on '
-      + 'raapustettu."',
+      + 'raapustettu.”',
     tyhja: 'Elsa katsoo tyhjää lokeroa: "Joku ehti ensin. Meri '
       + 'liikuttaa tavaraa, ei vain vettä — tule takaisin, kun laiva '
       + 'palaa."',
-    vaarin: 'Elsa naurahtaa: "Ei vielä. Koneen kanssa on sama '
-      + 'juttu: opettele ensin, painele vasta sitten."',
+    vaarin: 'Elsa naurahtaa: ”Ei vielä. Koneen kanssa on sama '
+      + 'juttu: opettele ensin, painele vasta sitten.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "mies kysyi koneesta
      * enemmän kuin maisemasta" — konemestari arvostaa asiantuntijaa
@@ -310,12 +310,12 @@ export const KOHTAAMISET = {
     tervehdys: 'Pilar pyyhkii öljyn sormistaan ja nostaa kämmenensä '
       + 'pystyyn. "Odota. Ensin kerrot, mistä sait tuon kirjan. Näytä '
       + 'että tunnet maailmaa kuten sen piirtäjä — sitten puhutaan."',
-    loyto: 'Pilar ojentaa rasian koneiston takaa: "Tämä on ollut täällä '
-      + 'kauemmin kuin minä. Ja minä olen ollut kauan."',
+    loyto: 'Pilar ojentaa rasian koneiston takaa: ”Tämä on ollut täällä '
+      + 'kauemmin kuin minä. Ja minä olen ollut kauan.”',
     tyhja: 'Pilar sulkee huoltoluukun: "Tyhjä. Tässä tornissa käydään '
       + 'joka viikko, ja on käyty kauan."',
-    vaarin: 'Pilar kääntyy takaisin koneiston puoleen: "Ei vielä. Kello '
-      + 'ei kiirehdi, enkä minäkään."',
+    vaarin: 'Pilar kääntyy takaisin koneiston puoleen: ”Ei vielä. Kello '
+      + 'ei kiirehdi, enkä minäkään.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: "Odota. Ensin
      * kerrot, mistä sait tuon kirjan." — epäluulo, ei lämpö (rekisterin
@@ -339,12 +339,12 @@ export const KOHTAAMISET = {
       + 'liidun sormistaan. "Vieraita tulee yleensä vain karnevaaleina. '
       + 'Näytä että tunnet maailmaa kuten kirjasi piirtäjä — niin avaan '
       + 'tilauskirjan."',
-    loyto: 'Lucia työntää rasian pöydän yli kahdella sormella: "Tämä '
-      + 'palautettiin pajaan. Kukaan ei sanonut kenen se on."',
+    loyto: 'Lucia työntää rasian pöydän yli kahdella sormella: ”Tämä '
+      + 'palautettiin pajaan. Kukaan ei sanonut kenen se on.”',
     tyhja: 'Lucia kääntää tyhjän laatikon ylösalaisin: "Ei mitään. Vesi '
       + 'käy täällä kaikessa, myös kätköissä."',
-    vaarin: 'Lucia palaa naamionsa ääreen: "Ei tänään. Cartapesta kuivuu '
-      + 'hitaasti, ja niin kuivuu tietokin."',
+    vaarin: 'Lucia palaa naamionsa ääreen: ”Ei tänään. Cartapesta kuivuu '
+      + 'hitaasti, ja niin kuivuu tietokin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Venetsia on Livian
      * rakkauskohtaus; matalampi kuin albumissa, koska kohtaaminen on eri
@@ -371,12 +371,12 @@ export const KOHTAAMISET = {
       + 'että tunnet maailmaa kuten hän — kerron, minne häntä '
       + 'neuvottiin."',
     loyto: 'Otto avaa posetiivin takaa pienen nuottirullaluukun: '
-      + '"Tämä on odottanut kauan. Isoisäsi jätti sen soittajan '
-      + 'haltuun — katso itse."',
+      + '”Tämä on odottanut kauan. Isoisäsi jätti sen soittajan '
+      + 'haltuun — katso itse.”',
     tyhja: 'Otto sulkee luukun: "Tyhjä. Tätä kaupunkia on purettu '
       + 'ja rakennettu niin monesti, että kätköt vaihtavat paikkaa."',
-    vaarin: 'Otto tarttuu kampeen: "Ei vielä, nuori ystävä. '
-      + 'Laatikkokin oppi sävelensä rulla kerrallaan."',
+    vaarin: 'Otto tarttuu kampeen: ”Ei vielä, nuori ystävä. '
+      + 'Laatikkokin oppi sävelensä rulla kerrallaan.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: posetiivi ja isoisän
      * muisto samassa repliikissä — lämpimin tervehdys (rekisterin poikkeus).
@@ -411,22 +411,22 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Colette lukitsee laatikkonsa '
         + 'kaiteeseen:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan nämä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan nämä '
         + 'raahattiin pois joka ilta. [warmly] Näytä että tunnet '
-        + 'maailmaa kuten piirtäjä — niin kerron mikä odottaa."' },
+        + 'maailmaa kuten piirtäjä — niin kerron mikä odottaa.”' },
     ],
-    loyto: 'Colette nostaa rasian pinon alta: "Tämä lojui väärän '
-      + 'kirjan takana vuosia. Kukaan ei koskaan ostanut sitä kirjaa."',
+    loyto: 'Colette nostaa rasian pinon alta: ”Tämä lojui väärän '
+      + 'kirjan takana vuosia. Kukaan ei koskaan ostanut sitä kirjaa.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Colette nostaa rasian pinon alta:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä lojui väärän kirjan '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä lojui väärän kirjan '
         + 'takana vuosia. [warmly] Kukaan ei koskaan ostanut sitä '
-        + 'kirjaa."' },
+        + 'kirjaa.”' },
     ],
     tyhja: 'Colette käy laatikon läpi kahdesti: "Tyhjä. Seine tulvii '
       + 'täällä keväisin — se vie muistot mukanaan."',
-    vaarin: 'Colette latoo kirjat takaisin pinoon: "Ei tänään. Katso '
-      + 'tarkemmin, niin kannen alle näkee."',
+    vaarin: 'Colette latoo kirjat takaisin pinoon: ”Ei tänään. Katso '
+      + 'tarkemmin, niin kannen alle näkee.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Colette
      * arvioi tulijaa ja kirjaa, ei vielä lämmin (rekisterin
@@ -462,23 +462,23 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Fabrizio vilkaisee kirjaasi '
         + 'ketjuöljyisin käsin:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tuo aukko takana on '
+      { rooli: 'hahmo', teksti: '[curious] ”Tuo aukko takana on '
         + 'vuodelta 1870. [warmly] Näytä että tunnet maailmaa kuten '
-        + 'isoisäsi — niin kerron, mistä se näkyy parhaiten."' },
+        + 'isoisäsi — niin kerron, mistä se näkyy parhaiten.”' },
     ],
     loyto: 'Fabrizio pyyhkii rasian liinalla ennen kuin ojentaa sen: '
-      + '"Tämä oli jumissa kuin vanha lukko. Nyt se aukeaa — eteenpäin!"',
+      + '”Tämä oli jumissa kuin vanha lukko. Nyt se aukeaa — eteenpäin!”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Fabrizio pyyhkii rasian liinalla '
         + 'ennen kuin ojentaa sen:' },
-      { rooli: 'hahmo', teksti: '[warmly] "Tämä oli jumissa kuin vanha '
-        + 'lukko. [excited] Nyt se aukeaa — eteenpäin!"' },
+      { rooli: 'hahmo', teksti: '[warmly] ”Tämä oli jumissa kuin vanha '
+        + 'lukko. [excited] Nyt se aukeaa — eteenpäin!”' },
     ],
     tyhja: 'Fabrizio kurottaa syvennykseen käsivarrellaan ja pudistaa '
       + 'päätään: "Tyhjä. Täällä remontoidaan usein — joku ehti jo '
       + 'ennen meitä."',
-    vaarin: 'Fabrizio laskee jakoavaimen pöydälle: "Ei vielä. Ketju ei '
-      + 'irtoa väkisin, eikä tämäkään."',
+    vaarin: 'Fabrizio laskee jakoavaimen pöydälle: ”Ei vielä. Ketju ei '
+      + 'irtoa väkisin, eikä tämäkään.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
      * oletukset — Fabrizio kiinnostuu kirjasta ja vanhasta aukosta
@@ -513,27 +513,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Anton nostaa kynttilän kirjaasi '
         + 'kohti pimenevässä käytävässä.' },
-      { rooli: 'hahmo', teksti: '[gravely] "Isoisäsi taisi ihailla '
+      { rooli: 'hahmo', teksti: '[gravely] ”Isoisäsi taisi ihailla '
         + 'näyttelyn ihmeitä, samana kesänä kun kolera kulki '
         + 'kaupungilla nopeammin kuin sana siitä. [warmly] Näytä että '
         + 'tunnet maailmaa kuten piirtäjä — niin näytän, minne '
-        + 'historia täällä oikeasti katosi."' },
+        + 'historia täällä oikeasti katosi.”' },
     ],
-    loyto: 'Anton harjaa pölyn esineeltä kynttilänvalossa: "Tämä ei '
+    loyto: 'Anton harjaa pölyn esineeltä kynttilänvalossa: ”Tämä ei '
       + 'kuulu tähän holviin. Joku toi sen tänne aikoja sitten, '
-      + 'piiloon."',
+      + 'piiloon.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Anton harjaa pölyn esineeltä '
         + 'kynttilänvalossa:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä ei kuulu tähän '
-        + 'holviin. Joku toi sen tänne aikoja sitten, piiloon."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä ei kuulu tähän '
+        + 'holviin. Joku toi sen tänne aikoja sitten, piiloon.”' },
     ],
     tyhja: 'Anton siirtää kynttilää syvemmälle koloon: "Tyhjä. Nämä '
       + 'holvit ovat vaihtaneet omistajaa monta kertaa vuosisatojen '
       + 'varrella."',
-    vaarin: 'Anton pudistaa päätään, kynttilä yhä pystyssä: "Ei tuo. '
+    vaarin: 'Anton pudistaa päätään, kynttilä yhä pystyssä: ”Ei tuo. '
       + 'Täällä alhaalla vastaukset odottavat, kunnes joku katsoo '
-      + 'tarkemmin."',
+      + 'tarkemmin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Anton ei
      * tervehdi lämpimästi vaan totisesti — kolera-viittaus on
@@ -567,23 +567,23 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Saana nostaa hitsausvisiirin ja '
         + 'vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[proud] "Höyrylaiva Tähti '
+      { rooli: 'hahmo', teksti: '[proud] ”Höyrylaiva Tähti '
         + 'rakennettiin tässä telakassa 1873. [curious] Näytä että '
         + 'tunnet maailmaa kuten piirtäjä — niin kerron, minne se '
-        + 'vanha laiva päätyi."' },
+        + 'vanha laiva päätyi.”' },
     ],
-    loyto: 'Saana kaivaa rasian telakan arkistolaatikosta: "Tämä on '
-      + 'odottanut täällä pidempään kuin minun jäänmurtajani."',
+    loyto: 'Saana kaivaa rasian telakan arkistolaatikosta: ”Tämä on '
+      + 'odottanut täällä pidempään kuin minun jäänmurtajani.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Saana kaivaa rasian telakan '
         + 'arkistolaatikosta:' },
-      { rooli: 'hahmo', teksti: '[warmly] "Tämä on odottanut täällä '
-        + 'pidempään kuin minun jäänmurtajani."' },
+      { rooli: 'hahmo', teksti: '[warmly] ”Tämä on odottanut täällä '
+        + 'pidempään kuin minun jäänmurtajani.”' },
     ],
     tyhja: 'Saana katsoo tyhjää koloa laiturin alta: "Ei mitään. Tätä '
       + 'telakkaa on revitty ja rakennettu niin monesti."',
-    vaarin: 'Saana tarttuu takaisin hitsauspoltittimeen: "Ei vielä. '
-      + 'Sekin laiva vaati minulta monta yritystä."',
+    vaarin: 'Saana tarttuu takaisin hitsauspoltittimeen: ”Ei vielä. '
+      + 'Sekin laiva vaati minulta monta yritystä.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: poikkeus
      * rekisterin oletuksesta (utelias) — Saana on ensisijaisesti
@@ -616,23 +616,23 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Kemal pyyhkii lakkaa penkiltä '
         + 'ennen iltavuoroa:' },
-      { rooli: 'hahmo', teksti: '[thoughtfully] "Isoisäsi näki '
+      { rooli: 'hahmo', teksti: '[thoughtfully] ”Isoisäsi näki '
         + 'hevosvaunun uutena tammikuussa 1873. Tämä on sen kaukainen '
         + 'perillinen. [warmly] Näytä että tunnet maailmaa kuten hän '
-        + '— niin kerron mitä kellon sisään jäi."' },
+        + '— niin kerron mitä kellon sisään jäi.”' },
     ],
     loyto: 'Kemal kolkuttaa kellon kylkeä ja irrottaa rasian sisältä: '
-      + '"Tämä on kolissut vuosia. Kukaan ei osannut sanoa miksi."',
+      + '”Tämä on kolissut vuosia. Kukaan ei osannut sanoa miksi.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Kemal kolkuttaa kellon kylkeä ja '
         + 'irrottaa rasian sisältä:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä on kolissut vuosia. '
-        + '[thoughtfully] Kukaan ei osannut sanoa miksi."' },
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä on kolissut vuosia. '
+        + '[thoughtfully] Kukaan ei osannut sanoa miksi.”' },
     ],
     tyhja: 'Kemal avaa penkin alla olevan lokeron: "Tyhjä. Tämä vaunu '
       + 'on purettu ja koottu niin monta kertaa, että kätköt katoavat."',
-    vaarin: 'Kemal palaa viilaamaan penkkiä: "Ei tänään. Lakka kuivuu '
-      + 'hitaasti, ja niin kuivuu tietokin."',
+    vaarin: 'Kemal palaa viilaamaan penkkiä: ”Ei tänään. Lakka kuivuu '
+      + 'hitaasti, ja niin kuivuu tietokin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: isoisän
      * muisto (hevosvaunu 1873) kudottu suoraan repliikkiin, sama
@@ -669,22 +669,22 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Yara nojaa kärryyn ja vilkaisee '
         + 'kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Pääty on yhä yhtä kapea '
+      { rooli: 'hahmo', teksti: '[curious] ”Pääty on yhä yhtä kapea '
         + 'kuin sata viisikymmentä vuotta sitten. [warmly] Näytä että '
-        + 'tunnet mitat kuten minä, niin kerron mistä koukku löytyy."' },
+        + 'tunnet mitat kuten minä, niin kerron mistä koukku löytyy.”' },
     ],
     loyto: 'Yara nostaa rasian kämmenelleen ja hihkaisee yläkertaan: '
-      + '"Löytyi! Ei tänään lipu ovesta, mutta pääty piti paikkansa."',
+      + '”Löytyi! Ei tänään lipu ovesta, mutta pääty piti paikkansa.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Yara nostaa rasian kämmenelleen ja '
         + 'hihkaisee yläkertaan:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Löytyi! [pleased] Ei '
-        + 'tänään lipu ovesta, mutta pääty piti paikkansa."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Löytyi! [pleased] Ei '
+        + 'tänään lipu ovesta, mutta pääty piti paikkansa.”' },
     ],
     tyhja: 'Yara koputtaa koukun kohdalle ja pudistaa päätään: "Tyhjä. '
       + 'Tässä päädyssä vaihtuu tavaraa useammin kuin luulisi."',
-    vaarin: 'Yara laskee köyden hetkeksi: "Ei ihan. Minäkin luin nuo '
-      + 'mitat väärin, kunnes joku opetti katsomaan koukusta asti."',
+    vaarin: 'Yara laskee köyden hetkeksi: ”Ei ihan. Minäkin luin nuo '
+      + 'mitat väärin, kunnes joku opetti katsomaan koukusta asti.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: uteliaisuus
      * kohdistuu kirjan mittoihin, ei lämpöön (rekisterin poikkeus).
@@ -719,26 +719,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Iason pysäyttää sekuntikellonsa '
         + 'portailla:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan täällä ei '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan täällä ei '
         + 'ollut edes marmoria, saati maalilinjaa. [warmly] Näytä '
         + 'että tunnet maailmaa kuten piirtäjä — niin kerron, mitä '
-        + 'hän ei vielä nähnyt."' },
+        + 'hän ei vielä nähnyt.”' },
     ],
     loyto: 'Iason nostaa rasian portaan raosta pysäyttämättä kelloa: '
-      + '"Tämä on ollut täällä pidempään kuin ratani. Löytö voittaa '
-      + 'hyvän ajan."',
+      + '”Tämä on ollut täällä pidempään kuin ratani. Löytö voittaa '
+      + 'hyvän ajan.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Iason nostaa rasian portaan raosta '
         + 'pysäyttämättä kelloa:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä on ollut täällä '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä on ollut täällä '
         + 'pidempään kuin ratani. [excited] Löytö voittaa hyvän '
-        + 'ajan."' },
+        + 'ajan.”' },
     ],
     tyhja: 'Iason koputtaa porrasta kengällään: "Tyhjä. Nämä kivet on '
       + 'nostettu ja siirretty niin monesti, ettei mikään pysy '
       + 'paikoillaan."',
-    vaarin: 'Iason katsoo kelloaan: "Ei vielä. Kierrä radan verran ja '
-      + 'mieti uudestaan."',
+    vaarin: 'Iason katsoo kelloaan: ”Ei vielä. Kierrä radan verran ja '
+      + 'mieti uudestaan.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
      * oletukset — Iason kiinnostuu vanhasta kirjasta kesken
@@ -772,24 +772,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Márta nojaa Széchenyin kylpylän '
         + 'porttiin sulkemisaikaan, kädet puuskassa:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi kirja puhuu '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi kirja puhuu '
         + 'varmaan Budasta ja Pestistä kahtena eri kaupunkina. '
         + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'kerron, milloin niistä tuli yksi."' },
+        + 'kerron, milloin niistä tuli yksi.”' },
     ],
-    loyto: 'Márta ojentaa rasian höyryn läpi: "Tämä lojui kylpylän '
+    loyto: 'Márta ojentaa rasian höyryn läpi: ”Tämä lojui kylpylän '
       + 'kellarissa vuosikymmeniä. Kolme kaupunkia, yksi rasia — '
-      + 'sopivaa, eikö?"',
+      + 'sopivaa, eikö?”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Márta ojentaa rasian höyryn läpi:' },
-      { rooli: 'hahmo', teksti: '[warmly] "Tämä lojui kylpylän '
+      { rooli: 'hahmo', teksti: '[warmly] ”Tämä lojui kylpylän '
         + 'kellarissa vuosikymmeniä. [excited] Kolme kaupunkia, yksi '
-        + 'rasia — sopivaa, eikö?"' },
+        + 'rasia — sopivaa, eikö?”' },
     ],
     tyhja: 'Márta pudistaa päätään altaan reunalla: "Tyhjä. Kylpylää '
       + 'on remontoitu niin monesti, ettei mikään pysy paikallaan."',
-    vaarin: 'Márta virnistää ja ravistaa vettä käsistään: "Ei vielä. '
-      + 'Höyry hämärtää näön — kokeile toista kulmaa."',
+    vaarin: 'Márta virnistää ja ravistaa vettä käsistään: ”Ei vielä. '
+      + 'Höyry hämärtää näön — kokeile toista kulmaa.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Márta testaa
      * tulijaa kädet puuskassa ja virnistäen — sama uteliaan haastava
@@ -824,25 +824,25 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Ilaria nostaa katseensa '
         + 'suurennuslasin takaa:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki kaupungin, '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi näki kaupungin, '
         + 'joka oli juuri menettänyt pääkaupungin arvonsa Roomalle — '
         + 'puoli kaupunkia oli vielä muutosta poissa tolaltaan. '
         + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'kerron, mikä ikkunan takana ei ole muuttunut."' },
+        + 'kerron, mikä ikkunan takana ei ole muuttunut.”' },
     ],
     loyto: 'Ilaria pyyhkii rasian liinalla ennen kuin ojentaa sen: '
-      + '"Tämä on ollut lukossa kauemmin kuin minä olen elänyt. Nyt '
-      + 'se aukeaa!"',
+      + '”Tämä on ollut lukossa kauemmin kuin minä olen elänyt. Nyt '
+      + 'se aukeaa!”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Ilaria pyyhkii rasian liinalla '
         + 'ennen kuin ojentaa sen:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on ollut lukossa '
-        + 'kauemmin kuin minä olen elänyt. [excited] Nyt se aukeaa!"' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on ollut lukossa '
+        + 'kauemmin kuin minä olen elänyt. [excited] Nyt se aukeaa!”' },
     ],
     tyhja: 'Ilaria kääntää vanhan laatikon ylösalaisin: "Tyhjä. Tässä '
       + 'työpajassa on siivottu satakunta kertaa isoisäni jälkeen."',
-    vaarin: 'Ilaria laskee suurennuslasin pöydälle: "Ei vielä. Kulta '
-      + 'ei paljasta itseään kiireessä, eikä tämäkään."',
+    vaarin: 'Ilaria laskee suurennuslasin pöydälle: ”Ei vielä. Kulta '
+      + 'ei paljasta itseään kiireessä, eikä tämäkään.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
      * oletukset — Ilaria on kiinnostunut kirjasta ja sen
@@ -874,23 +874,23 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Inês nostaa laatan '
         + 'kuivaustelineeltä ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan täällä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan täällä '
         + 'kuljettiin vielä jalan — hevosraitiovaunu avattiin vasta '
         + 'saman syksyn marraskuussa. [warmly] Näytä että tunnet '
-        + 'maailmaa kuten piirtäjä, niin kerron mistä laatta löytyy."' },
+        + 'maailmaa kuten piirtäjä, niin kerron mistä laatta löytyy.”' },
     ],
-    loyto: 'Inês nostaa rasian uunin vierestä: "Tämä oli laatan alla '
-      + 'vuosia. Kukaan ei koskaan kysynyt, miksi se kuvio oli vino."',
+    loyto: 'Inês nostaa rasian uunin vierestä: ”Tämä oli laatan alla '
+      + 'vuosia. Kukaan ei koskaan kysynyt, miksi se kuvio oli vino.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Inês nostaa rasian uunin vierestä:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä oli laatan alla '
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä oli laatan alla '
         + 'vuosia. [amused] Kukaan ei koskaan kysynyt, miksi se kuvio '
-        + 'oli vino."' },
+        + 'oli vino.”' },
     ],
     tyhja: 'Inês pyyhkii hyllyn tyhjäksi: "Ei mitään. Pajaa on '
       + 'siirretty kahdesti tulipalon jälkeen."',
-    vaarin: 'Inês kääntää laatan takaisin telineelle: "Ei vielä. Savi '
-      + 'kuivuu hitaasti, ja niin kuivuu tietokin."',
+    vaarin: 'Inês kääntää laatan takaisin telineelle: ”Ei vielä. Savi '
+      + 'kuivuu hitaasti, ja niin kuivuu tietokin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Kaikki neljä rekisterin
      * oletukset — Inês toteaa historiallisen faktan ja esittää
@@ -927,23 +927,23 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Nadia laskee kauhansa altaan '
         + 'reunalle ja vilkaisee vihkoasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä vesi kupli täällä jo '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä vesi kupli täällä jo '
         + 'isoisäsi aikaan, kun kaupunki kuului vielä toiselle '
         + 'valtakunnalle. [warmly] Näytä että tunnet maailmaa kuten '
-        + 'piirtäjä — niin kerron, mitä lähde muistaa."' },
+        + 'piirtäjä — niin kerron, mitä lähde muistaa.”' },
     ],
-    loyto: 'Nadia nostaa rasian kauhan vierestä: "Tämä on täyttynyt '
-      + 'höyryssä vuosia. Kukaan ei tullut hakemaan sitä."',
+    loyto: 'Nadia nostaa rasian kauhan vierestä: ”Tämä on täyttynyt '
+      + 'höyryssä vuosia. Kukaan ei tullut hakemaan sitä.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Nadia nostaa rasian kauhan '
         + 'vierestä:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on täyttynyt höyryssä '
-        + 'vuosia. [surprised] Kukaan ei tullut hakemaan sitä."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on täyttynyt höyryssä '
+        + 'vuosia. [surprised] Kukaan ei tullut hakemaan sitä.”' },
     ],
     tyhja: 'Nadia kääntää tyhjän kauhan ylösalaisin: "Ei mitään. '
       + 'Höyry vie täältä yhtä paljon kuin vesi tuo."',
-    vaarin: 'Nadia täyttää kannun uudelleen: "Ei vielä. Lähde ei '
-      + 'ehdy — voit tulla kysymään huomennakin."',
+    vaarin: 'Nadia täyttää kannun uudelleen: ”Ei vielä. Lähde ei '
+      + 'ehdy — voit tulla kysymään huomennakin.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Nadia on
      * lämmin heti alusta, sama linja kuin kaaren omassa
@@ -980,24 +980,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Sofie pyyhkii rasvaiset kädet '
         + 'farkkuihin ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[amused] "Isoisäsi aikaan tuollainen '
+      { rooli: 'hahmo', teksti: '[amused] ”Isoisäsi aikaan tuollainen '
         + 'kahden pyörän härveli oli kallis muotileikki harvoille '
         + 'herroille. [warmly] Nyt koko kaupunki kulkee näillä. '
         + '[curious] Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'katson mitä rungosta löytyy."' },
+        + 'katson mitä rungosta löytyy.”' },
     ],
-    loyto: 'Sofie kaivaa rasian satulatuesta ja hymyilee: "Tämä on '
-      + 'odottanut täällä kauemmin kuin yksikään rengas kestää."',
+    loyto: 'Sofie kaivaa rasian satulatuesta ja hymyilee: ”Tämä on '
+      + 'odottanut täällä kauemmin kuin yksikään rengas kestää.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Sofie kaivaa rasian satulatuesta '
         + 'ja hymyilee:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä on odottanut '
-        + 'täällä kauemmin kuin yksikään rengas kestää."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä on odottanut '
+        + 'täällä kauemmin kuin yksikään rengas kestää.”' },
     ],
     tyhja: 'Sofie koputtaa runkoa ja pudistaa päätään: "Tyhjä. Tätä '
       + 'pyörää on korjattu ja osista koottu niin monesti."',
-    vaarin: 'Sofie kiristää pultin uudelleen: "Ei ihan. Minäkin '
-      + 'arvasin väärin, ennen kuin opin katsomaan runkonumerosta."',
+    vaarin: 'Sofie kiristää pultin uudelleen: ”Ei ihan. Minäkin '
+      + 'arvasin väärin, ennen kuin opin katsomaan runkonumerosta.”',
     /*
      * Tunnetagit (docs/pulu-reaktiot.md E2). Tervehdys: Sofie ei ole
      * vain utelias kirjasta vaan lämpimän huvittunut vanhan ja
@@ -1030,24 +1030,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Radu laskee viulun sylistään, kun '
         + 'Ateneumin ovet sammuvat viimeisen kerran illaksi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tätä taloa '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan tätä taloa '
         + 'ei ollut edes suunniteltu — keräsivät leun kerrallaan. '
         + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'soitan kappaleen, jota he eivät vielä osanneet toivoa."' },
+        + 'soitan kappaleen, jota he eivät vielä osanneet toivoa.”' },
     ],
     loyto: 'Radu avaa rasian viulunkotelon päällä koskematta kieliin: '
-      + '"Löysit sen ennen minua. Tämän kadun kolot kaikuvat isoisäsi '
-      + 'askelia."',
+      + '”Löysit sen ennen minua. Tämän kadun kolot kaikuvat isoisäsi '
+      + 'askelia.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Radu avaa rasian viulunkotelon '
         + 'päällä koskematta kieliin:' },
-      { rooli: 'hahmo', teksti: '[softly] "Löysit sen ennen minua. '
-        + '[warmly] Tämän kadun kolot kaikuvat isoisäsi askelia."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Löysit sen ennen minua. '
+        + '[warmly] Tämän kadun kolot kaikuvat isoisäsi askelia.”' },
     ],
     tyhja: 'Radu koputtaa penkin alle katsomatta: "Tyhjä. Täällä käy '
       + 'iltaisin enemmän väkeä kuin luulisi — joku ehti ensin."',
-    vaarin: 'Radu virittää kieltä kuuntelematta vastausta: "Ei vielä. '
-      + 'Sävelkin löytyy vasta kolmannella yrityksellä."',
+    vaarin: 'Radu virittää kieltä kuuntelematta vastausta: ”Ei vielä. '
+      + 'Sävelkin löytyy vasta kolmannella yrityksellä.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1072,26 +1072,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Halvor pyörittää lyijykirjainta '
         + 'sormissaan:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä laatikko on ladottu '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä laatikko on ladottu '
         + 'vielä C:llä — Christiania. Kukaan ei enää käytä sitä '
         + 'nimeä painossa. [warmly] Näytä että tunnet maailmaa kuten '
-        + 'piirtäjä — niin kerron, mistä laatikko oikein tuli."' },
+        + 'piirtäjä — niin kerron, mistä laatikko oikein tuli.”' },
     ],
     loyto: 'Halvor nostaa rasian pöydän alta, sormet mustina '
-      + 'musteesta: "Tämä on maannut täällä kauemmin kuin olen '
-      + 'ladonnut yhtään lehteä."',
+      + 'musteesta: ”Tämä on maannut täällä kauemmin kuin olen '
+      + 'ladonnut yhtään lehteä.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Halvor nostaa rasian pöydän alta, '
         + 'sormet mustina musteesta:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on maannut täällä '
-        + 'kauemmin kuin olen ladonnut yhtään lehteä."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on maannut täällä '
+        + 'kauemmin kuin olen ladonnut yhtään lehteä.”' },
     ],
     tyhja: 'Halvor pyyhkii kätensä rätillä: "Tyhjä. Painoa on '
       + 'siivottu niin monta kertaa, ettei mikään pysy hyllyssä '
       + 'vuosikymmentä."',
-    vaarin: 'Halvor asettaa kirjaimen takaisin laatikkoon: "Ei vielä. '
+    vaarin: 'Halvor asettaa kirjaimen takaisin laatikkoon: ”Ei vielä. '
       + 'Latojakin erehtyy täällä joka päivä — kokeile toista '
-      + 'riviä."',
+      + 'riviä.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1115,26 +1115,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Aatu pitää kättä junan ovella ja '
         + 'vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi matkan aikaan '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi matkan aikaan '
         + 'tätä asemaa ei ollut olemassakaan — rata avattiin vasta '
         + 'kolme vuotta myöhemmin. [warmly] Näytä että tunnet '
         + 'maailmaa kuten piirtäjä — niin kerron, mistä hän oikeasti '
-        + 'pääsi tänne."' },
+        + 'pääsi tänne.”' },
     ],
-    loyto: 'Aatu kaivaa rasian aseman vanhasta kaapista: "Tämä on '
+    loyto: 'Aatu kaivaa rasian aseman vanhasta kaapista: ”Tämä on '
       + 'lojunut täällä kauemmin kuin rautatie itse. Nyt se löysi '
-      + 'omistajan."',
+      + 'omistajan.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Aatu kaivaa rasian aseman '
         + 'vanhasta kaapista:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä on lojunut täällä '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä on lojunut täällä '
         + 'kauemmin kuin rautatie itse. [excited] Nyt se löysi '
-        + 'omistajan."' },
+        + 'omistajan.”' },
     ],
     tyhja: 'Aatu avaa tyhjän kaapin: "Tyhjä. Asemaa on remontoitu '
       + 'niin monesti, ettei mikään pysy paikallaan."',
-    vaarin: 'Aatu vilkaisee kelloa: "Ei vielä. Juna ei lähde ilman '
-      + 'minua — sinulla on aikaa."',
+    vaarin: 'Aatu vilkaisee kelloa: ”Ei vielä. Juna ei lähde ilman '
+      + 'minua — sinulla on aikaa.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1162,26 +1162,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Niamh nousee avonaisesta '
         + 'kaivannosta ja pyyhkii kädet housuihinsa:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan putki '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan putki '
         + 'oli uusi — kanavavesi vaihtui Wicklow’n vuorten veteen '
         + '1860-luvulla. [warmly] Näytä että tunnet maailmaa kuten '
-        + 'piirtäjä — niin kerron, mistä se tulee."' },
+        + 'piirtäjä — niin kerron, mistä se tulee.”' },
     ],
-    loyto: 'Niamh nostaa rasian putkikaivannon reunalta: "Tämä on '
+    loyto: 'Niamh nostaa rasian putkikaivannon reunalta: ”Tämä on '
       + 'maannut syvemmällä kuin yksikään putki, jota olen '
-      + 'vaihtanut."',
+      + 'vaihtanut.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Niamh nostaa rasian '
         + 'putkikaivannon reunalta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä on maannut '
-        + 'syvemmällä kuin yksikään putki, jota olen vaihtanut."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä on maannut '
+        + 'syvemmällä kuin yksikään putki, jota olen vaihtanut.”' },
     ],
     tyhja: 'Niamh kolauttaa kaivannon seinää lapiolla: "Tyhjä. Tätä '
       + 'katua on kaivettu auki niin monesti, ettei mikään pysy '
       + 'paikallaan."',
-    vaarin: 'Niamh nojaa lapioon ja pyyhkii otsaansa: "Ei vielä. '
+    vaarin: 'Niamh nojaa lapioon ja pyyhkii otsaansa: ”Ei vielä. '
       + 'Kaivanto odottaa huomennakin — putket eivät ole minnekään '
-      + 'menossa."',
+      + 'menossa.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1209,26 +1209,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Pastora lakaisee luolan kynnystä '
         + 'ja pysäyttää harjan:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi vuonna '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi vuonna '
         + 'Espanjassa oli tasavalta alle kaksi vuotta — mutta '
         + 'zambra soi täällä joka ilta silloinkin. [warmly] Näytä '
         + 'että tunnet maailmaa kuten piirtäjä — niin päästän sinut '
-        + 'kuulemaan, mitä hän ei osannut kirjoittaa."' },
+        + 'kuulemaan, mitä hän ei osannut kirjoittaa.”' },
     ],
-    loyto: 'Pastora nostaa rasian kitarakotelon alta: "Tämä on '
+    loyto: 'Pastora nostaa rasian kitarakotelon alta: ”Tämä on '
       + 'täällä pidempään kuin zambrani. Isoäitini olisi tanssinut '
-      + 'tälle illalle."',
+      + 'tälle illalle.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Pastora nostaa rasian '
         + 'kitarakotelon alta:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on täällä pidempään '
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on täällä pidempään '
         + 'kuin zambrani. [warmly] Isoäitini olisi tanssinut tälle '
-        + 'illalle."' },
+        + 'illalle.”' },
     ],
     tyhja: 'Pastora koputtaa kalkittua seinää: "Tyhjä. Nämä seinät '
       + 'on maalattu niin monesti, ettei mikään pysy piilossa."',
-    vaarin: 'Pastora pudistaa päätään hymyillen: "Ei vielä. '
-      + 'Kuuntele kitaraa vielä hetki ja mieti uudestaan."',
+    vaarin: 'Pastora pudistaa päätään hymyillen: ”Ei vielä. '
+      + 'Kuuntele kitaraa vielä hetki ja mieti uudestaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1254,27 +1254,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Larisa nousee ruusupenkereeltä '
         + 'patsaan juurella ja pyyhkii mullan käsistään:' },
-      { rooli: 'hahmo', teksti: '[curious] "Keisarinna sai '
+      { rooli: 'hahmo', teksti: '[curious] ”Keisarinna sai '
         + 'jalustansa vasta tänä syksynä — koko puisto ympärillä on '
         + 'yhtä tuore kuin pensaani. [warmly] Näytä että tunnet '
         + 'maailmaa kuten piirtäjä — niin kerron, mikä ruusuista ei '
-        + 'kestä ensi pakkasta."' },
+        + 'kestä ensi pakkasta.”' },
     ],
-    loyto: 'Larisa kaivaa rasian penkereen juuresta: "Arvasin, ettei '
+    loyto: 'Larisa kaivaa rasian penkereen juuresta: ”Arvasin, ettei '
       + 'pensas kasvanut vinoon ilman syytä. Hyvä, etten repinyt '
-      + 'sitä pois."',
+      + 'sitä pois.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Larisa kaivaa rasian penkereen '
         + 'juuresta:' },
-      { rooli: 'hahmo', teksti: '[softly] "Arvasin, ettei pensas '
+      { rooli: 'hahmo', teksti: '[softly] ”Arvasin, ettei pensas '
         + 'kasvanut vinoon ilman syytä. [amused] Hyvä, etten '
-        + 'repinyt sitä pois."' },
+        + 'repinyt sitä pois.”' },
     ],
     tyhja: 'Larisa pudistaa multaa penkereeltä: "Tyhjä. Puutarha '
       + 'kaivetaan täällä joka kevät uusiksi — mikään ei pysy '
       + 'paikoillaan pitkään."',
-    vaarin: 'Larisa nojaa lapioon: "Ei vielä. Ruusut eivät kerro '
-      + 'salaisuuksiaan kiireiselle — palaa huomenna."',
+    vaarin: 'Larisa nojaa lapioon: ”Ei vielä. Ruusut eivät kerro '
+      + 'salaisuuksiaan kiireiselle — palaa huomenna.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1300,27 +1300,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Miina nojaa tikapuihin ja sytyttää '
         + 'kaasulyhdyn liekin:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan nämä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan nämä '
         + 'paloivat vasta kahdeksatta vuotta — ennen sitä täällä oli '
         + 'vain öljyä ja pimeää. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin kerron, montako lyhtyä minä sytytän '
-        + 'joka ilta."' },
+        + 'joka ilta.”' },
     ],
-    loyto: 'Miina nostaa rasian lyhdyn juuresta valon kajossa: "Tämä '
+    loyto: 'Miina nostaa rasian lyhdyn juuresta valon kajossa: ”Tämä '
       + 'on maannut pimeässä kauemmin kuin yksikään lyhtyni on '
-      + 'palanut."',
+      + 'palanut.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Miina nostaa rasian lyhdyn '
         + 'juuresta valon kajossa:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä on maannut '
-        + 'pimeässä kauemmin kuin yksikään lyhtyni on palanut."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä on maannut '
+        + 'pimeässä kauemmin kuin yksikään lyhtyni on palanut.”' },
     ],
     tyhja: 'Miina valaisee kolon lyhdyllään: "Tyhjä. Tätä katua on '
       + 'siivottu niin monta kertaa, ettei mikään pysy kivien '
       + 'välissä."',
-    vaarin: 'Miina jatkaa tikkailla seuraavaan lyhtyyn: "Ei vielä. '
+    vaarin: 'Miina jatkaa tikkailla seuraavaan lyhtyyn: ”Ei vielä. '
       + 'Minä ehdin kadun päähän ennen kuin sinä löydät oikean '
-      + 'vastauksen."',
+      + 'vastauksen.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1346,27 +1346,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Aldona kääntää tuoretta '
         + 'kirjankantta valoon:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämän alla on toinen '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämän alla on toinen '
         + 'kirja — vain minä tiedän, mikä. Juuri isoisäsi matkan '
         + 'vuonna kiellettiin tuomasta tänne gootilaisinkin kirjaimin '
         + 'painettuja. [warmly] Näytä että tunnet maailmaa kuten '
-        + 'piirtäjä — niin näytän, mitä kannen alla oikeasti on."' },
+        + 'piirtäjä — niin näytän, mitä kannen alla oikeasti on.”' },
     ],
-    loyto: 'Aldona nostaa rasian kirjapinon alta: "Tämä ei ole '
+    loyto: 'Aldona nostaa rasian kirjapinon alta: ”Tämä ei ole '
       + 'yhtään kirjaa, jonka olen sitonut — mutta joku on halunnut '
-      + 'piilottaa senkin."',
+      + 'piilottaa senkin.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Aldona nostaa rasian kirjapinon '
         + 'alta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole yhtään '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole yhtään '
         + 'kirjaa, jonka olen sitonut — mutta joku on halunnut '
-        + 'piilottaa senkin."' },
+        + 'piilottaa senkin.”' },
     ],
     tyhja: 'Aldona pyyhkäisee kädellä hyllyn taakse: "Tyhjä. Täällä '
       + 'on käyty ennen sinua — kannen alla ei ole muuta kuin '
       + 'pölyä."',
-    vaarin: 'Aldona laskee sidontaveitsen kädestään: "Ei vielä. '
-      + 'Luetaan selkämys uudestaan — kiire ei auta sidontatyössä."',
+    vaarin: 'Aldona laskee sidontaveitsen kädestään: ”Ei vielä. '
+      + 'Luetaan selkämys uudestaan — kiire ei auta sidontatyössä.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1391,24 +1391,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Pau puhaltaa kivipölyn pois '
         + 'vanhasta piirustuksesta:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä julkisivu on '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä julkisivu on '
         + 'piirretty jo 1408, mutta isoisäsi näki vielä paljaan '
         + 'kiven. [warmly] Näytä että tunnet maailmaa kuten piirtäjä '
         + '— niin näytän kiven, jota hän ei koskaan nähnyt '
-        + 'valmiina."' },
+        + 'valmiina.”' },
     ],
-    loyto: 'Pau nostaa rasian irtokivien joukosta: "Viisisataa '
-      + 'vuotta piirustusta odottaneena — tämä ehti perille ensin."',
+    loyto: 'Pau nostaa rasian irtokivien joukosta: ”Viisisataa '
+      + 'vuotta piirustusta odottaneena — tämä ehti perille ensin.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Pau nostaa rasian irtokivien '
         + 'joukosta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Viisisataa vuotta '
-        + 'piirustusta odottaneena — tämä ehti perille ensin."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Viisisataa vuotta '
+        + 'piirustusta odottaneena — tämä ehti perille ensin.”' },
     ],
     tyhja: 'Pau koputtaa uutta kiveä: "Tyhjä. Telineet vaihtavat '
       + 'paikkaa täällä useammin kuin luulisi."',
     vaarin: 'Pau puhaltaa pölyä piirustukselta katsomatta ylös: '
-      + '"Ei vielä. Kivikin odottaa satoja vuosia — ehdit sinäkin."',
+      + '”Ei vielä. Kivikin odottaa satoja vuosia — ehdit sinäkin.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1433,24 +1433,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Věra pysäyttää käyntipyörän ja '
         + 'katsoo kirjaasi tornin ikkunasta:' },
-      { rooli: 'hahmo', teksti: '[curious] "Apostolit tuolla '
+      { rooli: 'hahmo', teksti: '[curious] ”Apostolit tuolla '
         + 'ylhäällä ovat vasta seitsemän vuotta vanhoja — näin '
         + 'jokaisen paikoilleen. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin päästän sinut katsomaan koneistoa '
-        + 'sisältä."' },
+        + 'sisältä.”' },
     ],
-    loyto: 'Věra nostaa rasian hammasrattaiden välistä: "Tämä on '
-      + 'piiloutunut koneistoon kauemmin kuin olen sitä huoltanut."',
+    loyto: 'Věra nostaa rasian hammasrattaiden välistä: ”Tämä on '
+      + 'piiloutunut koneistoon kauemmin kuin olen sitä huoltanut.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Věra nostaa rasian '
         + 'hammasrattaiden välistä:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on piiloutunut '
-        + 'koneistoon kauemmin kuin olen sitä huoltanut."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on piiloutunut '
+        + 'koneistoon kauemmin kuin olen sitä huoltanut.”' },
     ],
     tyhja: 'Věra sulkee tornin luukun: "Tyhjä. Koneistoa on '
       + 'korjattu niin monesti, ettei mikään pysy paikallaan."',
-    vaarin: 'Věra pysäyttää käden vipuun tarttumasta: "Ei vielä. '
-      + 'Kello käy huomennakin — ehdit yrittää uudelleen."',
+    vaarin: 'Věra pysäyttää käden vipuun tarttumasta: ”Ei vielä. '
+      + 'Kello käy huomennakin — ehdit yrittää uudelleen.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1475,26 +1475,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Stepan kääntää vanhaa lukkoa '
         + 'valoon puotinsa nykyisissä seinissä:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki tässä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi näki tässä '
         + 'Bovén rakentaman rivistön vuodelta 1815 — tämä uusi '
         + 'avattiin vasta 1893. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin avaan sinulle lukon, joka on '
-        + 'vanhempi kuin talo ympärilläni."' },
+        + 'vanhempi kuin talo ympärilläni.”' },
     ],
     loyto: 'Stepan kaivaa rasian puodin lattian alta vanhalla '
-      + 'avaimella: "Tämä lukko oli minulle tuttu — isäni teki sen '
-      + 'aikoinaan."',
+      + 'avaimella: ”Tämä lukko oli minulle tuttu — isäni teki sen '
+      + 'aikoinaan.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Stepan kaivaa rasian puodin '
         + 'lattian alta vanhalla avaimella:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä lukko oli minulle '
-        + 'tuttu — isäni teki sen aikoinaan."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä lukko oli minulle '
+        + 'tuttu — isäni teki sen aikoinaan.”' },
     ],
     tyhja: 'Stepan koputtaa tyhjää koloa: "Tyhjä. Puotia on '
       + 'siivottu niin monta kertaa, ettei mikään pysy paikallaan."',
-    vaarin: 'Stepan asettaa avaimen takaisin naulaan: "Ei vielä. '
+    vaarin: 'Stepan asettaa avaimen takaisin naulaan: ”Ei vielä. '
       + 'Lukko avautuu vain oikealla vastauksella — yritä '
-      + 'uudestaan."',
+      + 'uudestaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1518,26 +1518,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Vesna sitoo kukkakimppua sillan '
         + 'kupeessa ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tässä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan tässä '
         + 'oli vain yksi silta, ei kolmea — kaksi vierussiltaa '
         + 'tulivat vasta vuosikymmeniä myöhemmin. [warmly] Näytä '
         + 'että tunnet maailmaa kuten piirtäjä — niin kerron, mistä '
-        + 'ne kaksi oikein ilmestyivät."' },
+        + 'ne kaksi oikein ilmestyivät.”' },
     ],
     loyto: 'Vesna nostaa rasian ämpärin alta ja pyyhkii kädet '
-      + 'esiliinaan: "Tämä on maannut täällä kauemmin kuin yksikään '
-      + 'kukka tiskilläni."',
+      + 'esiliinaan: ”Tämä on maannut täällä kauemmin kuin yksikään '
+      + 'kukka tiskilläni.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Vesna nostaa rasian ämpärin '
         + 'alta ja pyyhkii kädet esiliinaan:' },
-      { rooli: 'hahmo', teksti: '[softly] "Tämä on maannut täällä '
-        + 'kauemmin kuin yksikään kukka tiskilläni."' },
+      { rooli: 'hahmo', teksti: '[softly] ”Tämä on maannut täällä '
+        + 'kauemmin kuin yksikään kukka tiskilläni.”' },
     ],
     tyhja: 'Vesna tyhjentää ämpärin pohjaa katsomatta: "Tyhjä. '
       + 'Tämä tori vaihtaa käsiä joka aamu — joku ehti jo ennen '
       + 'sinua."',
     vaarin: 'Vesna sitoo uutta kimppua kuuntelematta tarkkaan: '
-      + '"Ei vielä. Kukatkin erehtyvät väristä ennen aukeamista."',
+      + '”Ei vielä. Kukatkin erehtyvät väristä ennen aukeamista.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1562,26 +1562,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Zuzana pysäyttää sormensa '
         + 'lennätinavaimella ja katsoo junaa asemalle saapumassa:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä rata pohjoiseen '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä rata pohjoiseen '
         + 'valmistui vasta viime vuonna — ennen sitä tänne ei tullut '
         + 'yhtään junaa. [warmly] Näytä että tunnet maailmaa kuten '
         + 'piirtäjä — niin näpäytän sinulle viestin, joka kulkee nyt '
-        + 'minuutissa."' },
+        + 'minuutissa.”' },
     ],
     loyto: 'Zuzana nostaa rasian lennätinpöydän alta ja pysäyttää '
-      + 'avaimen: "Tämä viesti ei tullut yhdeltäkään asemalta, jonka '
-      + 'tunnen."',
+      + 'avaimen: ”Tämä viesti ei tullut yhdeltäkään asemalta, jonka '
+      + 'tunnen.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Zuzana nostaa rasian '
         + 'lennätinpöydän alta ja pysäyttää avaimen:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä viesti ei tullut '
-        + 'yhdeltäkään asemalta, jonka tunnen."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä viesti ei tullut '
+        + 'yhdeltäkään asemalta, jonka tunnen.”' },
     ],
     tyhja: 'Zuzana koputtaa tyhjää laatikkoa asemalattian alla: '
       + '"Tyhjä. Tätä asemaa on siivottu niin monta kertaa uuden '
       + 'radan jälkeen."',
-    vaarin: 'Zuzana pysäyttää avaimen kesken viestin: "Ei vielä. '
-      + 'Lennätin odottaa oikeaa merkkiä — yritä uudestaan."',
+    vaarin: 'Zuzana pysäyttää avaimen kesken viestin: ”Ei vielä. '
+      + 'Lennätin odottaa oikeaa merkkiä — yritä uudestaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1605,26 +1605,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Ingrid pitää matkustajalistaa '
         + 'kirjaasi vasten laiturilla:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan '
         + 'yhtiömme oli parikymmentä vuotta vanha, laivoja vain '
         + 'kourallinen — vuonna 1875 niitä oli täsmälleen viisi. '
         + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — '
-        + 'niin merkitsen nimesi tähän listaan itse."' },
+        + 'niin merkitsen nimesi tähän listaan itse.”' },
     ],
-    loyto: 'Ingrid nostaa rasian laiturin kivien raosta: "Tämä ei '
+    loyto: 'Ingrid nostaa rasian laiturin kivien raosta: ”Tämä ei '
       + 'ole minkään matkustajan tavaraa — mutta kirjaan senkin '
-      + 'ylös."',
+      + 'ylös.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Ingrid nostaa rasian laiturin '
         + 'kivien raosta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minkään '
-        + 'matkustajan tavaraa — mutta kirjaan senkin ylös."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole minkään '
+        + 'matkustajan tavaraa — mutta kirjaan senkin ylös.”' },
     ],
     tyhja: 'Ingrid tarkistaa raon tyhjänä ja pudistaa päätään: '
       + '"Tyhjä. Täältä kävelee sata ihmistä päivässä — joku ehti jo '
       + 'ennen sinua."',
-    vaarin: 'Ingrid laskee kynän listan viereen: "Ei vielä. Laiva '
-      + 'lähtee vasta illalla — ehdit yrittää uudelleen."',
+    vaarin: 'Ingrid laskee kynän listan viereen: ”Ei vielä. Laiva '
+      + 'lähtee vasta illalla — ehdit yrittää uudelleen.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1649,27 +1649,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Fiona maalaa viimeistä kirjainta '
         + 'uuteen katukylttiin:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tämä katu ei ollut '
+      { rooli: 'hahmo', teksti: '[curious] ”Tämä katu ei ollut '
         + 'olemassa, kun isoisäsi kulki täällä — se rakennettiin '
         + 'vasta äsken vanhojen kujien paikalle. [warmly] Näytä '
         + 'että tunnet maailmaa kuten piirtäjä — niin näytän, mikä '
-        + 'kuja tässä ennen oli."' },
+        + 'kuja tässä ennen oli.”' },
     ],
-    loyto: 'Fiona nostaa rasian puretun kujan kivistä: "Tämä ei ole '
+    loyto: 'Fiona nostaa rasian puretun kujan kivistä: ”Tämä ei ole '
       + 'maalia eikä kylttiä — tämä on jonkun, joka asui täällä '
-      + 'ennen minua."',
+      + 'ennen minua.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Fiona nostaa rasian puretun '
         + 'kujan kivistä:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole maalia '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole maalia '
         + 'eikä kylttiä — tämä on jonkun, joka asui täällä ennen '
-        + 'minua."' },
+        + 'minua.”' },
     ],
     tyhja: 'Fiona koputtaa siveltimellä tyhjää kiveä: "Tyhjä. Tätä '
       + 'kujaa on purettu ja siivottu niin moneen kertaan."',
-    vaarin: 'Fiona pyyhkii maalin pois kirjaimelta: "Ei vielä. '
+    vaarin: 'Fiona pyyhkii maalin pois kirjaimelta: ”Ei vielä. '
       + 'Uusikin kyltti vaatii useamman siveltimenvedon ennen kuin '
-      + 'se on oikein."',
+      + 'se on oikein.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1694,27 +1694,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Tadeusz kääntää meripihkahelmiä '
         + 'valoon kaariholvien alla:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan näitä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan näitä '
         + 'kaaria ei vielä ollut — koko halli sai tämän asunsa '
         + 'vasta muutama vuosi hänen käyntinsä jälkeen. [warmly] '
         + 'Näytä että tunnet maailmaa kuten piirtäjä — niin kerron, '
-        + 'mitä täällä myytiin ennen minua."' },
+        + 'mitä täällä myytiin ennen minua.”' },
     ],
-    loyto: 'Tadeusz vetää rasian esiin vanhan tiskin alta: "Tämä on '
+    loyto: 'Tadeusz vetää rasian esiin vanhan tiskin alta: ”Tämä on '
       + 'maannut täällä kauemmin kuin yksikään meripihkani '
-      + 'hallussani."',
+      + 'hallussani.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Tadeusz vetää rasian esiin '
         + 'vanhan tiskin alta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä on maannut '
-        + 'täällä kauemmin kuin yksikään meripihkani hallussani."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä on maannut '
+        + 'täällä kauemmin kuin yksikään meripihkani hallussani.”' },
     ],
     tyhja: 'Tadeusz koputtaa tyhjää laatikkoa: "Tyhjä. Tätä hallia '
       + 'on uudistettu niin monta kertaa, ettei mikään vanha pysy '
       + 'paikallaan."',
-    vaarin: 'Tadeusz laskee helmet takaisin laatikkoon: "Ei vielä. '
+    vaarin: 'Tadeusz laskee helmet takaisin laatikkoon: ”Ei vielä. '
       + 'Meripihkakin vaatii vuosia ennen kuin sen arvon näkee '
-      + 'oikein."',
+      + 'oikein.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1741,24 +1741,24 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Wiktor pyyhkii kaakaonpölyn '
         + 'käsistään ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi vuosi? Silloin '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi vuosi? Silloin '
         + 'puoti oli jo vanha. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin annan maistiaisen, josta et kerro '
-        + 'kenellekään."' },
+        + 'kenellekään.”' },
     ],
-    loyto: 'Wiktor löytää rasian kaakaosäkkien takaa: "En tiennyt, '
-      + 'että täällä on tilaa muullekin — isäni ei uskoisi tätä."',
+    loyto: 'Wiktor löytää rasian kaakaosäkkien takaa: ”En tiennyt, '
+      + 'että täällä on tilaa muullekin — isäni ei uskoisi tätä.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Wiktor löytää rasian '
         + 'kaakaosäkkien takaa:' },
-      { rooli: 'hahmo', teksti: '[surprised] "En tiennyt, että '
+      { rooli: 'hahmo', teksti: '[surprised] ”En tiennyt, että '
         + 'täällä on tilaa muullekin — [laughing] isäni ei uskoisi '
-        + 'tätä."' },
+        + 'tätä.”' },
     ],
     tyhja: 'Wiktor koputtaa tyhjää hyllyä: "Tässä ei ole mitään. '
       + 'Täältä siivotaan joka aamu, ennen kuin ovi avataan."',
-    vaarin: 'Wiktor pudistaa päätään hymyillen: "Ei vielä. Puoti on '
-      + 'auki huomennakin — tule takaisin kaakaonhajuun."',
+    vaarin: 'Wiktor pudistaa päätään hymyillen: ”Ei vielä. Puoti on '
+      + 'auki huomennakin — tule takaisin kaakaonhajuun.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1785,26 +1785,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Amra pingottaa uutta satulaa '
         + 'penkin yli ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Rautatie ei yltänyt '
+      { rooli: 'hahmo', teksti: '[curious] ”Rautatie ei yltänyt '
         + 'tänne vielä yhdeksään vuoteen — isoisäsi laukku kulki '
         + 'vuorten yli juuri tällaisen satulan selässä. [warmly] '
         + 'Näytä että tunnet maailmaa kuten piirtäjä — niin ompelen '
-        + 'sinulle oman hihnan matkaan."' },
+        + 'sinulle oman hihnan matkaan.”' },
     ],
-    loyto: 'Amra löytää rasian satulapinon alta: "Tämä ei ole '
+    loyto: 'Amra löytää rasian satulapinon alta: ”Tämä ei ole '
       + 'minun ompelujälkeäni — mutta joku on halunnut piilottaa '
-      + 'sen juuri tänne."',
+      + 'sen juuri tänne.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Amra löytää rasian satulapinon '
         + 'alta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minun '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole minun '
         + 'ompelujälkeäni — mutta joku on halunnut piilottaa sen '
-        + 'juuri tänne."' },
+        + 'juuri tänne.”' },
     ],
     tyhja: 'Amra pyyhkii pölyn hyllyltä: "Tyhjä. Kuja vaihtaa '
       + 'käsiä joka päivä — joku ehti jo aiemmin."',
-    vaarin: 'Amra jatkaa ompelua katsomatta ylös: "Ei vielä. '
-      + 'Hihnakin pettää, jos sitä kiirehtii liikaa."',
+    vaarin: 'Amra jatkaa ompelua katsomatta ylös: ”Ei vielä. '
+      + 'Hihnakin pettää, jos sitä kiirehtii liikaa.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1829,26 +1829,26 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Remedios katsoo kirjaasi '
         + 'savenvärisin sormin siveltimen yllä:' },
-      { rooli: 'hahmo', teksti: '[curious] "Pomomme — se '
+      { rooli: 'hahmo', teksti: '[curious] ”Pomomme — se '
         + 'englantilainen, joka osti luostarin saviastioiksi — sai '
         + 'juuri markiisin arvonimen kuninkaalta. [warmly] Näytä '
         + 'että tunnet maailmaa kuten piirtäjä — niin maalaan '
-        + 'sinulle kuvion, jota kukaan muu ei saa."' },
+        + 'sinulle kuvion, jota kukaan muu ei saa.”' },
     ],
-    loyto: 'Remedios löytää rasian glaseerisäkkien takaa: "Tämä ei '
+    loyto: 'Remedios löytää rasian glaseerisäkkien takaa: ”Tämä ei '
       + 'ole savea eikä lasitetta — jätän sen tähän muiden '
-      + 'aarteiden joukkoon."',
+      + 'aarteiden joukkoon.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Remedios löytää rasian '
         + 'glaseerisäkkien takaa:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole savea '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole savea '
         + 'eikä lasitetta — jätän sen tähän muiden aarteiden '
-        + 'joukkoon."' },
+        + 'joukkoon.”' },
     ],
     tyhja: 'Remedios pyyhkii hyllyn tyhjäksi: "Tyhjä. Työpaja '
       + 'siivotaan joka ilta ennen uunien sammuttamista."',
-    vaarin: 'Remedios kääntää lautasen takaisin pöydälle: "Ei '
-      + 'vielä. Kuvio vaatii monta kertaa ennen kuin se on oikein."',
+    vaarin: 'Remedios kääntää lautasen takaisin pöydälle: ”Ei '
+      + 'vielä. Kuvio vaatii monta kertaa ennen kuin se on oikein.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1871,28 +1871,28 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Aline pyyhkii kivipölyn '
         + 'hihaansa ja vilkaisee kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi näki tämän '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi näki tämän '
         + 'vielä telineiden takana — sali avataan juhlallisesti '
         + 'vasta joulun alla, puoli vuotta hänen käyntinsä '
         + 'jälkeen. [warmly] Näytä että tunnet maailmaa kuten '
         + 'piirtäjä — niin näytän, mikä kuvista on minun '
-        + 'käsialaani."' },
+        + 'käsialaani.”' },
     ],
-    loyto: 'Aline nostaa rasian kivilastujen alta: "Tämä ei ole '
+    loyto: 'Aline nostaa rasian kivilastujen alta: ”Tämä ei ole '
       + 'minun taltallani tehty — mutta kivipölyn alle mahtuu moni '
-      + 'salaisuus."',
+      + 'salaisuus.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Aline nostaa rasian '
         + 'kivilastujen alta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minun '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole minun '
         + 'taltallani tehty — mutta kivipölyn alle mahtuu moni '
-        + 'salaisuus."' },
+        + 'salaisuus.”' },
     ],
     tyhja: 'Aline koputtaa tyhjää koloa telineen takana: "Tyhjä. '
       + 'Työmaalla kulkee liikaa käsiä joka päivä — joku ehti '
       + 'ensin."',
-    vaarin: 'Aline pyyhkii pölyn taltaltaan: "Ei vielä. Kivi ei '
-      + 'anna periksi ensimmäisellä iskulla — yritä uudestaan."',
+    vaarin: 'Aline pyyhkii pölyn taltaltaan: ”Ei vielä. Kivi ei '
+      + 'anna periksi ensimmäisellä iskulla — yritä uudestaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1919,25 +1919,25 @@ export const KOHTAAMISET = {
       { rooli: 'kertoja', teksti: 'Rosine maalaa hiuksenohuella '
         + 'siveltimellä savihahmon kasvoja pöydällä täynnä muita '
         + 'keskeneräisiä:' },
-      { rooli: 'hahmo', teksti: '[curious] "Marraskuun torille '
+      { rooli: 'hahmo', teksti: '[curious] ”Marraskuun torille '
         + 'tarvitaan vielä satoja näitä, ennen kuin yksikään '
         + 'myydään. [warmly] Näytä että tunnet maailmaa kuten '
         + 'piirtäjä — niin annan sinulle yhden, jota kukaan muu ei '
-        + 'saa."' },
+        + 'saa.”' },
     ],
     loyto: 'Rosine löytää rasian keskeneräisten hahmojen joukosta: '
-      + '"Tämä ei ole savea eikä maalia — tämä on jonkun toisen '
-      + 'käsialaa."',
+      + '”Tämä ei ole savea eikä maalia — tämä on jonkun toisen '
+      + 'käsialaa.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Rosine löytää rasian '
         + 'keskeneräisten hahmojen joukosta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole savea '
-        + 'eikä maalia — tämä on jonkun toisen käsialaa."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole savea '
+        + 'eikä maalia — tämä on jonkun toisen käsialaa.”' },
     ],
     tyhja: 'Rosine pyyhkii pölyn tyhjältä hyllyltä: "Tyhjä. Tätä '
       + 'verstasta siivotaan ennen jokaista syksyn toria."',
-    vaarin: 'Rosine jatkaa maalaamista katsomatta ylös: "Ei vielä. '
-      + 'Yksikään hahmo ei synny ensimmäisellä siveltimenvedolla."',
+    vaarin: 'Rosine jatkaa maalaamista katsomatta ylös: ”Ei vielä. '
+      + 'Yksikään hahmo ei synny ensimmäisellä siveltimenvedolla.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -1963,28 +1963,28 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Oksana laskee ketjun renkaita '
         + 'vasten vartijakirjaa Dneprin sillalla:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi aikaan tämä '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi aikaan tämä '
         + 'oli koko Euroopan suurin riippusilta — hän kulki juuri '
         + 'näiden ketjujen alla kaupunkiin. [warmly] Näytä että '
         + 'tunnet maailmaa kuten piirtäjä — niin lasken sinullekin, '
-        + 'monesko rengas pettää ensin."' },
+        + 'monesko rengas pettää ensin.”' },
     ],
-    loyto: 'Oksana nostaa rasian ketjupylvään juurelta: "Tämä ei '
+    loyto: 'Oksana nostaa rasian ketjupylvään juurelta: ”Tämä ei '
       + 'ole minun laskukirjani väliin pudonnut — mutta merkitsen '
-      + 'senkin ylös."',
+      + 'senkin ylös.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Oksana nostaa rasian '
         + 'ketjupylvään juurelta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole minun '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole minun '
         + 'laskukirjani väliin pudonnut — mutta merkitsen senkin '
-        + 'ylös."' },
+        + 'ylös.”' },
     ],
     tyhja: 'Oksana koputtaa tyhjää pylvästä: "Tyhjä. Silta '
       + 'tärisee satojen askelten alla joka päivä — jokin siirtyy '
       + 'täällä aina."',
-    vaarin: 'Oksana katsoo listaansa uudelleen: "Ei vielä. '
+    vaarin: 'Oksana katsoo listaansa uudelleen: ”Ei vielä. '
       + 'Ketjukin lasketaan kolmesti ennen kuin luku kirjataan '
-      + 'oikein."',
+      + 'oikein.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -2008,25 +2008,25 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Nic pysäyttää talttansa ja '
         + 'osoittaa muurinrippeitä ympärillään:' },
-      { rooli: 'hahmo', teksti: '[curious] "Nämä vallit purettiin '
+      { rooli: 'hahmo', teksti: '[curious] ”Nämä vallit purettiin '
         + 'kuusi vuotta sitten — kymmenen jää vielä, ennen kuin '
         + 'koko linnoitus on poissa. [warmly] Näytä että tunnet '
         + 'maailmaa kuten piirtäjä — niin annan sinulle kiven, joka '
-        + 'piti sitä pystyssä vuosisatoja."' },
+        + 'piti sitä pystyssä vuosisatoja.”' },
     ],
-    loyto: 'Nic nostaa rasian irtokiven takaa: "Tämä ei ole '
-      + 'purkujätettä — joku on kätkenyt tämän tänne ennen minua."',
+    loyto: 'Nic nostaa rasian irtokiven takaa: ”Tämä ei ole '
+      + 'purkujätettä — joku on kätkenyt tämän tänne ennen minua.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Nic nostaa rasian irtokiven '
         + 'takaa:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole '
         + 'purkujätettä — joku on kätkenyt tämän tänne ennen '
-        + 'minua."' },
+        + 'minua.”' },
     ],
     tyhja: 'Nic potkaisee soraa syrjään: "Tyhjä. Täältä on '
       + 'kannettu kiveä pois joka päivä kuusi vuotta."',
-    vaarin: 'Nic jatkaa talttausta katsomatta ylös: "Ei vielä. '
-      + 'Kivi ei liiku, ennen kuin isku osuu oikeaan kohtaan."',
+    vaarin: 'Nic jatkaa talttausta katsomatta ylös: ”Ei vielä. '
+      + 'Kivi ei liiku, ennen kuin isku osuu oikeaan kohtaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -2055,27 +2055,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Valdis pysäyttää '
         + 'rahastuslaatikkonsa kannen:' },
-      { rooli: 'hahmo', teksti: '[curious] "Tuo rautasilta kantoi '
+      { rooli: 'hahmo', teksti: '[curious] ”Tuo rautasilta kantoi '
         + 'ensimmäisen junansa vasta äskettäin — minun siltani on '
         + 'kannattanut kärryjä jo isäni isän ajoista. [warmly] '
         + 'Näytä että tunnet maailmaa kuten piirtäjä — niin '
-        + 'näytän, mikä laudan alle on jäänyt vuosikausiksi."' },
+        + 'näytän, mikä laudan alle on jäänyt vuosikausiksi.”' },
     ],
-    loyto: 'Valdis nostaa rasian sillan lautojen raosta: "Tämä ei '
+    loyto: 'Valdis nostaa rasian sillan lautojen raosta: ”Tämä ei '
       + 'ole tullimaksu eikä hukkunut nappi — tämä on jäänyt '
-      + 'tänne tahallaan."',
+      + 'tänne tahallaan.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Valdis nostaa rasian sillan '
         + 'lautojen raosta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole '
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole '
         + 'tullimaksu eikä hukkunut nappi — tämä on jäänyt tänne '
-        + 'tahallaan."' },
+        + 'tahallaan.”' },
     ],
     tyhja: 'Valdis koputtaa tyhjää lautarakoa: "Tyhjä. Silta '
       + 'puretaan joka syksy jäiden tieltä — kaikki irtonainen '
       + 'katoaa silloin."',
-    vaarin: 'Valdis laskee kolikot takaisin laatikkoon: "Ei '
-      + 'vielä. Silta kestää vain, kun luku on laskettu oikein."',
+    vaarin: 'Valdis laskee kolikot takaisin laatikkoon: ”Ei '
+      + 'vielä. Silta kestää vain, kun luku on laskettu oikein.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -2102,27 +2102,27 @@ export const KOHTAAMISET = {
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Kirsten kääntyy urkujen luota ja '
         + 'katsoo kirjaasi:' },
-      { rooli: 'hahmo', teksti: '[curious] "Nämä pillit soivat tässä '
+      { rooli: 'hahmo', teksti: '[curious] ”Nämä pillit soivat tässä '
         + 'puukirkossa vasta kymmenen vuotta — minä olen soittanut '
         + 'niitä koko sen ajan. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin soitan sinulle sävelen, jota kukaan '
-        + 'muu ei kuule tänä vuonna."' },
+        + 'muu ei kuule tänä vuonna.”' },
     ],
-    loyto: 'Kirsten nostaa rasian urkupenkin alta: "Tämä ei ole '
+    loyto: 'Kirsten nostaa rasian urkupenkin alta: ”Tämä ei ole '
       + 'ilmapiirin osa eikä pilli — joku on jättänyt tänne oman '
-      + 'sävelensä."',
+      + 'sävelensä.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Kirsten nostaa rasian urkupenkin '
         + 'alta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole ilmapiirin '
-        + 'osa eikä pilli — joku on jättänyt tänne oman sävelensä."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole ilmapiirin '
+        + 'osa eikä pilli — joku on jättänyt tänne oman sävelensä.”' },
     ],
     tyhja: 'Kirsten koputtaa tyhjää urkulaatikkoa: "Tyhjä. Puukirkko '
       + 'notkuu ja elää — mikä tahansa irtonainen liikkuu täällä ajan '
       + 'myötä."',
-    vaarin: 'Kirsten painaa koskettimen hiljaa alas: "Ei vielä. '
+    vaarin: 'Kirsten painaa koskettimen hiljaa alas: ”Ei vielä. '
       + 'Sävel ei synny ensimmäisellä yrityksellä — kokeile '
-      + 'uudestaan."',
+      + 'uudestaan.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },
@@ -2142,31 +2142,31 @@ export const KOHTAAMISET = {
     frame: 'Rita avaa lippukopin luukun ja kysyy',
     tervehdys: 'Rita nojaa lippukoppiin vanhan oopperatalon paikalla: '
       + '"Isoisäsi käyntivuonna talo oli juuri palanut sisältä '
-      + 'tyhjäksi — se pysyi kiinni lähes viisi vuotta. Näytä että '
+      + 'tyhjäksi — se pysyi kiinni yli neljä vuotta. Näytä että '
       + 'tunnet maailmaa kuten piirtäjä — niin kerron, mistä liekit '
       + 'silloin lähtivät."',
     tervehdysLuenta: [
       { rooli: 'kertoja', teksti: 'Rita nojaa lippukoppiin vanhan '
         + 'oopperatalon paikalla:' },
-      { rooli: 'hahmo', teksti: '[curious] "Isoisäsi käyntivuonna '
+      { rooli: 'hahmo', teksti: '[curious] ”Isoisäsi käyntivuonna '
         + 'talo oli juuri palanut sisältä tyhjäksi — se pysyi kiinni '
-        + 'lähes viisi vuotta. [warmly] Näytä että tunnet maailmaa '
+        + 'yli neljä vuotta. [warmly] Näytä että tunnet maailmaa '
         + 'kuten piirtäjä — niin kerron, mistä liekit silloin '
-        + 'lähtivät."' },
+        + 'lähtivät.”' },
     ],
-    loyto: 'Rita nostaa rasian lippukopin lattian raosta: "Tämä ei '
+    loyto: 'Rita nostaa rasian lippukopin lattian raosta: ”Tämä ei '
       + 'ole palon jälkeä. Joku on piilottanut tämän paljon '
-      + 'myöhemmin."',
+      + 'myöhemmin.”',
     loytoLuenta: [
       { rooli: 'kertoja', teksti: 'Rita nostaa rasian lippukopin '
         + 'lattian raosta:' },
-      { rooli: 'hahmo', teksti: '[surprised] "Tämä ei ole palon '
-        + 'jälkeä. Joku on piilottanut tämän paljon myöhemmin."' },
+      { rooli: 'hahmo', teksti: '[surprised] ”Tämä ei ole palon '
+        + 'jälkeä. Joku on piilottanut tämän paljon myöhemmin.”' },
     ],
     tyhja: 'Rita koputtaa tyhjää rakoa vanhassa muurissa: "Tyhjä. '
       + 'Tätä paikkaa on rakennettu uudelleen niin monta kertaa."',
-    vaarin: 'Rita sulkee luukun hetkeksi: "Ei vielä. Esitys alkaa '
-      + 'vasta illalla — ehdit yrittää uudelleen."',
+    vaarin: 'Rita sulkee luukun hetkeksi: ”Ei vielä. Esitys alkaa '
+      + 'vasta illalla — ehdit yrittää uudelleen.”',
     tunneTervehdys: { tunne: 'utelias', voimakkuus: 0.5 },
     tunneLoyto: { tunne: 'ilo', voimakkuus: 0.7 },
     tunneTyhja: { tunne: 'miettiva', voimakkuus: 0.45 },

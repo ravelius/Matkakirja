@@ -19,8 +19,9 @@
  * tarkistettu Commonsin imageinfo/extmetadata-rajapinnasta 20.9.2026:
  * Maros M r a z, CC BY-SA 3.0.
  *
- * ÄÄNITETTÄ EI VIELÄ OLE — puuttuva tiedosto on hiljainen (js/luenta.js
- * playDiaryVoice), samoin kuin muilla kevyillä pakeilla.
+ * ÄÄNITE (Äänittäjä 11.10.2026): isoisän luenta on generoitu tästä
+ * luenta-kentästä ja viety ämpäriin polkuun audio/puhe-fokus-matkakirja-kosice.mp3
+ * (aikaleimat assets/aikaleimat/). Kesto ja polku: js/media.js HORATIO_TUOTANTO.
  */
 export const FOKUSVIRTA_KOSICE = {
   kaupunki: 'kosice',
@@ -41,6 +42,9 @@ export const FOKUSVIRTA_KOSICE = {
       + 'kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, '
       + 'jonka kaupunki selätti. Kapakassa juodaan tokajia ja puhutaan kolmea '
       + 'kieltä samassa lauseessa.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääni generoitu 11.10.2026 tästä tekstistä). */
+    luenta: "[curious] Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille; kivi on kulunut, mutta tornit seisovat. [softly] Pääkatu on leveä kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, jonka kaupunki selätti. [warmly] Kapakassa juodaan tokajia ja puhutaan kolmea kieltä samassa lauseessa.",
+    aanite: 'assets/audio/puhe-fokus-matkakirja-kosice.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
@@ -48,7 +52,7 @@ export const FOKUSVIRTA_KOSICE = {
     /* KUPLAT: Sonnetin kirjoittamat, ei kaanonia — Livian nykypäivän ääni. */
     kommentti: [
       'Tuo tuomiokirkko on yhä Slovakian suurin kirkko. Isoisäsi aikana se kuului Unkarin kuningaskuntaan, ja kaupunki oli Kassa.',
-      'Košice on nykyään Slovakian toiseksi suurin kaupunki, ja Hlavná-kadun kiviä kuljetaan yhä samaa linssinmuotoista rengasta.',
+      'Košice on nykyään Slovakian toiseksi suurin kaupunki. Sen pääkatu Hlavná levenee yhä linssinmuotoiseksi toriksi.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

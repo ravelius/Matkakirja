@@ -1,0 +1,323 @@
+{
+ "kaupunki": "irkutsk",
+ "kaupunkiQ": "Q6576",
+ "kohteet": [
+  {
+   "q": "Q2467422",
+   "nimi": "Epifanian katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 52.29219,
+   "lon": 104.28257,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral of St Epiphany (Theophany), Irkutsk.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_St_Epiphany_(Theophany)%2C_Irkutsk.JPG?width=1280",
+     "tekija": "Książę der Estken",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St_Epiphany_(Theophany)%2C_Irkutsk.JPG",
+     "selite": "Epifanian katedraali on 1700-luvun puolivälin siperialaista barokkia, ja sen kellotorni kohoaa Angaran rannalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "193 Иркутск. Вид на церковь с набережной.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/193_%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D1%81_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg?width=1280",
+     "tekija": "A. L. (loading)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:193_%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA._%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D1%81_%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%BE%D0%B9.jpg",
+     "selite": "Kirkon valkoiset ja punaiset koristeet erottuvat rantapuiston takaa Angaran vasemmalla rannalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2660287",
+   "nimi": "Znamenskin luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 52.30067,
+   "lon": 104.29456,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Знаменский монастырь. Иркутск..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%97%D0%BD%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C._%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA..jpg?width=1280",
+     "tekija": "Алексей Задонский",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%97%D0%BD%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C._%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA..jpg",
+     "selite": "Znamenskin luostarin portti ja vihreäkattoinen kellotorni avautuvat kadulle Ušakovka-joen läheltä.",
+     "leveys": 2000,
+     "korkeus": 1385,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monastery of the Theotokos of the Sign in Irkutsk (September 2025) - 0 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monastery_of_the_Theotokos_of_the_Sign_in_Irkutsk_(September_2025)_-_0_11.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monastery_of_the_Theotokos_of_the_Sign_in_Irkutsk_(September_2025)_-_0_11.jpg",
+     "selite": "Luostarin valkoisen portin yllä kohoavat tornit ja kupolit syksyisen puiston yli.",
+     "leveys": 3310,
+     "korkeus": 3602,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2102455",
+   "nimi": "Taivaaseenastumisen kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 52.29042,
+   "lon": 104.28258,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kostel in Irkutsk (September 2025) - 0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kostel_in_Irkutsk_(September_2025)_-_0.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kostel_in_Irkutsk_(September_2025)_-_0.jpg",
+     "selite": "Punatiilinen uusgoottilainen kirkko on Irkutskin katolinen kirkko, ja sen terävä torni näkyy kauas.",
+     "leveys": 3348,
+     "korkeus": 4098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temple of the Roman Catholic.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_the_Roman_Catholic.jpg?width=1280",
+     "tekija": "Ghosterz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Roman_Catholic.jpg",
+     "selite": "Kirkon pystysuorat tornit ja ruusuikkuna tekevät siitä erilaisen kuin kaupungin ortodoksikirkot.",
+     "leveys": 2868,
+     "korkeus": 4276,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4240386",
+   "nimi": "Ristin ylentämisen kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 52.2764,
+   "lon": 104.288,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cerkiew Podwyższenia Krzyża Pańskiego w Irkucku 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerkiew_Podwy%C5%BCszenia_Krzy%C5%BCa_Pa%C5%84skiego_w_Irkucku_01.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerkiew_Podwy%C5%BCszenia_Krzy%C5%BCa_Pa%C5%84skiego_w_Irkucku_01.JPG",
+     "selite": "Ristin ylentämisen kirkon vihreät ja siniset kupolit nousevat punavalkoisen koristelun yläpuolelle.",
+     "leveys": 3118,
+     "korkeus": 2162,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cerkiew Podwyższenia Krzyża Pańskiego w Irkucku 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerkiew_Podwy%C5%BCszenia_Krzy%C5%BCa_Pa%C5%84skiego_w_Irkucku_02.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerkiew_Podwy%C5%BCszenia_Krzy%C5%BCa_Pa%C5%84skiego_w_Irkucku_02.JPG",
+     "selite": "Kirkon punavalkoinen aita ja koristeelliset ikkunat ovat tyypillistä siperialaista barokkia.",
+     "leveys": 3429,
+     "korkeus": 2286,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4028698",
+   "nimi": "130. kortteli",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 52.275,
+   "lon": 104.29167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Иркутск. 130-й квартал 9.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA._130-%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_9.JPG?width=1280",
+     "tekija": "Fanzuga",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA._130-%D0%B9_%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB_9.JPG",
+     "selite": "Kortteli numero 130 on entisöity puutalokortteli, jossa hirsirakennuksissa toimii nykyään kahviloita ja kauppoja.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "130 block of Irkutsk № 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/130_block_of_Irkutsk_%E2%84%96_1.JPG?width=1280",
+     "tekija": "Bogdanov-62",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:130_block_of_Irkutsk_%E2%84%96_1.JPG",
+     "selite": "Veistetyt puukoristeet ja kaksikerroksiset hirsitalot kuvaavat Irkutskin vanhaa puukaupunkia.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4065039",
+   "nimi": "Jäänmurtaja Angara",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 52.25,
+   "lon": 104.34389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Angara Museum ship in Irkutsk (September 2025) - 0 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angara_Museum_ship_in_Irkutsk_(September_2025)_-_0_10.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angara_Museum_ship_in_Irkutsk_(September_2025)_-_0_10.jpg",
+     "selite": "Jäänmurtaja Angara toimii museona Angaran rannalla, ja sillä liikennöitiin aikanaan Baikalin yli.",
+     "leveys": 3836,
+     "korkeus": 2068,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Angara Museum ship in Irkutsk (September 2025) - 0 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angara_Museum_ship_in_Irkutsk_(September_2025)_-_0_1.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angara_Museum_ship_in_Irkutsk_(September_2025)_-_0_1.jpg",
+     "selite": "Laivan punamusta runko ja kaksi savupiippua erottuvat joen rannasta.",
+     "leveys": 5866,
+     "korkeus": 2972,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4203274",
+   "nimi": "Irkutskin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 52.28306,
+   "lon": 104.25972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Irkutsk station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Irkutsk_station.jpg?width=1280",
+     "tekija": "No machine-readable author provided. InvictaHOG~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Irkutsk_station.jpg",
+     "selite": "Irkutskin asema on Transsiperian radan tärkeä pysäkki, ja sen pääsisäänkäynnin yllä lukee kaupungin nimi.",
+     "leveys": 1986,
+     "korkeus": 1305,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Russia - Irkutsk Station (4660333167).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Russia_-_Irkutsk_Station_(4660333167).jpg?width=1280",
+     "tekija": "Luxury Train Club",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Russia_-_Irkutsk_Station_(4660333167).jpg",
+     "selite": "Asemarakennuksen koristeellinen julkisivu on vaalea ja torneilla varustettu.",
+     "leveys": 3069,
+     "korkeus": 1024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q670649",
+   "nimi": "Irkutskin valtionyliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 52.2767,
+   "lon": 104.278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Irkutsk State University main building 2023-08-04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Irkutsk_State_University_main_building_2023-08-04.jpg?width=1280",
+     "tekija": "Maxinvestigator",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Irkutsk_State_University_main_building_2023-08-04.jpg",
+     "selite": "Yliopiston päärakennus on vaalea ja symmetrinen, ja se sijaitsee Angaran rannan lähellä.",
+     "leveys": 2857,
+     "korkeus": 2959,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Irkutsk State University 2019-08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Irkutsk_State_University_2019-08.jpg?width=1280",
+     "tekija": "Maxinvestigator",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Irkutsk_State_University_2019-08.jpg",
+     "selite": "Irkutskin valtionyliopisto on Itä-Siperian vanhimpia yliopistoja.",
+     "leveys": 2140,
+     "korkeus": 2591,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Irkutsk, Russia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Irkutsk%2C_Russia.jpg?width=1280",
+   "tekija": "Vyacheslav Argenberg",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Irkutsk%2C_Russia.jpg",
+   "selite": "Angaran vasemmalla rannalla kohoavat Epifanian katedraalin kellotorni ja kaupungin keskustan kerrostalot.",
+   "leveys": 4912,
+   "korkeus": 2763,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Angara River in Irkutsk (September 2025) - 0 7.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angara_River_in_Irkutsk_(September_2025)_-_0_7.jpg?width=1280",
+   "tekija": "Vyacheslav Bukharov",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Angara_River_in_Irkutsk_(September_2025)_-_0_7.jpg",
+   "selite": "Angara virtaa Irkutskin läpi Baikalista ja kaupungin rantakatu on suosittu kävelyreitti.",
+   "leveys": 5983,
+   "korkeus": 2533,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

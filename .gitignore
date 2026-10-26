@@ -99,3 +99,4 @@ ne-data/
 # vie kuvat polkuun matkakirja/linssit/.
 pallo-topografia-ulos/
 .claude/settings.local.json
+__pycache__/

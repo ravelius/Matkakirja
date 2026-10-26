@@ -1,0 +1,71 @@
+# Blue Marble NG -kuukausikuvat ämpäriin (Julkaisija 28.9.2026; Linssisepän
+# ISS-realismi, kohdat 2 ja 4a, docs/raportit/iss-realismi-suunnitelma-20260928.md).
+#
+# KERTALUONTOINEN, vain käsin. tools/iss-pilvet.mjs --bmng hakee NASA Visible
+# Earthin BMNG 2004 -kuukausikuvat (PD, world-sarja 5400 × 2700) ja skaalaa ne
+# 4096 × 2048 JPEGeiksi ämpäriin data/bmng/<kk>-4096.jpg. Pilvityö
+# (iss-pilvet.yml) vertaa eilisen VIIRS-kuvaa saman kuukauden kuvaan.
+# Ajokone on GitHubin ubuntu, ei omistajan Mac.
+
+name: BMNG-kuukausikuvat ämpäriin
+
+on:
+  workflow_dispatch:
+    inputs:
+      kuukaudet:
+        description: 'Kuukaudet pilkulla (tyhjä = kaikki 01–12)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iss-bmng
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Asenna sharp ja skaalaa kuukausikuvat
+        env:
+          KUUKAUDET: ${{ inputs.kuukaudet }}
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit sharp
+          node tools/iss-pilvet.mjs --bmng bmng ${KUUKAUDET:+--kuukaudet "$KUUKAUDET"}
+          ls -la bmng
+
+      - name: Vie ämpäriin
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          for f in bmng/*-4096.jpg; do
+            aws s3 cp "$f" "s3://$R2_AMPARI/data/$f" \
+              --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+              --content-type 'image/jpeg' \
+              --cache-control 'public, max-age=86400' --no-progress
+          done
+
+      - name: Tarkista julkinen osoite
+        run: |
+          set -euo pipefail
+          for f in bmng/*-4096.jpg; do
+            curl -fsS -o /dev/null -w "$f %{http_code} %{size_download}\n" "https://media.matkakirja.app/data/$f?t=$(date +%s)"
+          done

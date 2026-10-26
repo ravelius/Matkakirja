@@ -285,6 +285,39 @@ const WORLD_CITIES = [
       { pack: 'maailmankartta', city: 'tanger', label: 'Koko maailma' },
     ],
   },
+  {
+    /*
+     * TUKHOLMA (omistaja 10.10.2026): uusi lähtövalinnan kohde
+     * (js/ui-apurit.js ETUSIVUN_KOHTEET), Pohjolan portti.
+     *
+     * KOORDINAATIT: 59,329° N, 18,069° E stereografisella
+     * pallonpuoliskoprojektiolla (tools/hemispheres.mjs, Afro-Euraasian
+     * ympyrä lon0 70°, cx 862, cy 400, r 270) antaa 779,5 / 223,3;
+     * piste on nostettu 4 yksikköä pohjoiseen (779,5 / 219,3), koska
+     * laudan tyylitelty rantaviiva jättää tarkan pisteen Itämereen.
+     * Nimi yläpuolelle, koska Lontoon nimi on lännessä samalla korkeudella.
+     */
+    id: 'tukholma', name: 'Tukholma', x: 779.5, y: 219.3, airport: true, la: 'middle', lx: 0, ly: -14,
+    links: [
+      { pack: 'maailmankartta', city: 'tukholma', label: 'Koko maailma' },
+    ],
+  },
+  {
+    /*
+     * PARIISI (omistaja 11.10.2026): lähtövalinnan kohde Ateenan ja
+     * Tukholman rinnalla (js/ui-apurit.js ETUSIVUN_KOHTEET).
+     *
+     * KOORDINAATIT: 48,857° N, 2,352° E samalla projektiolla kuin
+     * Tukholma antaa 730,6 / 237,4, vain 12 yksikköä Lontoon (731,7 /
+     * 225,9) eteläpuolelle. Piste on siirretty 9 yksikköä etelään
+     * (730,6 / 246,2), jotta laudan minCityDistance 20 täyttyy.
+     * Nimi länteen, koska idässä se osuisi Tukholman laattaan.
+     */
+    id: 'pariisi', name: 'Pariisi', x: 730.6, y: 246.2, airport: true, la: 'end', lx: -14, ly: 8,
+    links: [
+      { pack: 'maailmankartta', city: 'pariisi', label: 'Koko maailma' },
+    ],
+  },
 ];
 
 // steps = kuinka monta silmälukua reitin kulkeminen vaatii.
@@ -302,6 +335,10 @@ const WORLD_EDGES = [
    */
   { a: 'sanfrancisco', b: 'losangeles', steps: 2 },
   { a: 'ateena', b: 'istanbul', steps: 2 },
+  // Tukholma 10.10.2026: Pohjanmeren ja Skagerrakin kautta Itämeren reitin pisteillä.
+  { a: 'lontoo', b: 'tukholma', steps: 3, type: 'sea', via: [[742.9, 222.3], [764.1, 225]] },
+  // Pariisi 11.10.2026: Kanaalin yli suoraan.
+  { a: 'lontoo', b: 'pariisi', steps: 2, type: 'sea' },
 
   // Valtamerten laivareitit
   { a: 'lontoo', b: 'newyork', steps: 5, type: 'sea', via: [[443.9, 213.6], [412.1, 259]] },
@@ -443,7 +480,9 @@ export const MAAILMA = {
     // nousi 14:stä 7.9.2026, kun Istanbul ja San Francisco tulivat
     // laudalle lähtövalinnan kohteiksi; lisäys meni pieniin aarteisiin,
     // koska tällä laudalla ei pelata eikä jako näy pelaajalle.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 9 },
+    // 17 kaupunkia 10.10.2026 (Tukholma) ja 18 11.10.2026 (Pariisi),
+    // lisäykset pieniin aarteisiin.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 11 },
   },
 
   questions: MAAILMA_QUESTIONS,
@@ -509,7 +548,7 @@ export const MAAILMA = {
       newyork: [
         'Kaartaessa nousee näkyviin saari, jolle on ladottu kaupunki pystysuoraan: tornit alkavat vedestä! Turvavyö jäi kiinnittämättä, koska en saanut katsettani irti.',
         'Kirjaan on liimattu laivayhtiön kuitti taitettuna neljään. Isoisä ylitti saman meren reilussa viikossa ja piti sitä huimana — minä ehdin päivälliselle, ja huimaa yhä.',
-        'Kirjan välistä putosi liuska, jonka ainoa rivi kuuluu: "lännessä, kolme korttelia satamasta". En tiedä mistä satamasta on kyse, ja juuri se saa minut hykertelemään.',
+        'Kirjan välistä putosi liuska, jonka ainoa rivi kuuluu: ”lännessä, kolme korttelia satamasta”. En tiedä mistä satamasta on kyse, ja juuri se saa minut hykertelemään.',
       ],
       kairo: [
         'Ikkunasta näkyy, miten vihreä nauha halkoo hiekkaa ja levenee lopussa kolmioksi. Koko maa mahtuu tuohon nauhaan; koko maa, yhdellä silmäyksellä.',
@@ -524,12 +563,12 @@ export const MAAILMA = {
       mumbai: [
         'Rannikko avautuu kaarena, ja kaupunki työntyy merelle kapeana kielekkeenä. Lahden yli kaartaa silta valkoisena vinoköysinauhana, ja unohdan hengittää.',
         'Lännessä seisoo monsuunipilvi kuin seinä, ja kone kiertää sen alitse. Alla vilkkuu kattoja niin tiheässä, etten erota katuja lainkaan — en yhtäkään katua!',
-        'Kirjan välissä on kuivunut lehti ja sen alla rivi: "sade tulee kesäkuussa, laivat sen jälkeen". Isoisä oli kerrankin aikataulussa, ja siitä nostan hänelle hattua.',
+        'Kirjan välissä on kuivunut lehti ja sen alla rivi: ”sade tulee kesäkuussa, laivat sen jälkeen”. Isoisä oli kerrankin aikataulussa, ja siitä nostan hänelle hattua.',
       ],
       peking: [
         'Kuiva ylätasanko vaihtuu alla vihreiksi kukkuloiksi, joiden harjaa pitkin kulkee muuri. Sitten kaupunki alkaa kuin viivalla vedettynä; tuoltako se ylhäältä näyttää.',
         'Isoisä on merkinnyt tämän kohdan kahdella ristillä, vaikka muualla riittää yksi. Täällä oli siis jotain, mikä jäi häneltä näkemättä — ja minä näen sen.',
-        'Isoisän käsiala pienenee tällä sivulla, kuin hän olisi kirjoittanut salaa. Neljä sanaa vain: "muurin eteläpuolella, portin takana", ja luen ne jo kolmatta kertaa.',
+        'Isoisän käsiala pienenee tällä sivulla, kuin hän olisi kirjoittanut salaa. Neljä sanaa vain: ”muurin eteläpuolella, portin takana”, ja luen ne jo kolmatta kertaa.',
       ],
       sydney: [
         'Kone tulee sisään mereltä, ja alla satama levittäytyy sormina moneen suuntaan. Silta ja oopperatalo ovat pienet kuin koristeet, ja osoittelen niitä kuin viisivuotias.',
@@ -548,7 +587,7 @@ export const MAAILMA = {
       ],
       singapore: [
         'Alla on merta täynnä laivoja, jotka seisovat paikallaan riveissä ja odottavat vuoroaan satamaan. Aloin laskea, luovutin kahdenkymmenen kohdalla ja aloitin alusta.',
-        'Päiväkirjaan on vedetty kapea salmi ja sen reunaan nuoli, jonka päässä ei lue mitään. Se on isoisän tapa sanoa "en käynyt", ja nyt käyn minä.',
+        'Päiväkirjaan on vedetty kapea salmi ja sen reunaan nuoli, jonka päässä ei lue mitään. Se on isoisän tapa sanoa ”en käynyt”, ja nyt käyn minä.',
         'Kirjan sivut aaltoilevat kuin olisivat joskus kastuneet ja kuivuneet uudelleen. Teksti on yhä luettavissa, ja se kertoo säästä!',
       ],
       kapkaupunki: [
@@ -564,7 +603,7 @@ export const MAAILMA = {
       ateena: [
         'Saaria näkyy kymmenittäin, valkoisia reunoja sinisessä. Kukkulalla on suorakaide, joka on seissyt siinä yli kaksi vuosituhatta — ja se vilahtaa nyt siivenkärjen alta.',
         'Egeanmeren yli tullaan matalalla, ja ruskeat rinteet nousevat heti vesirajasta ilman rantatasankoa. Vihreää vain laaksojen pohjilla, ja sitäkin tuijotan pitkään.',
-        'Päiväkirjassa lukee tämän kohdalla vain: "satamaan tuli lastia, laiva lähti". Rivin alle on myöhemmin lisätty yksi sana: "harmittaa", enkä aio kirjoittaa samaa.',
+        'Päiväkirjassa lukee tämän kohdalla vain: ”satamaan tuli lastia, laiva lähti”. Rivin alle on myöhemmin lisätty yksi sana: ”harmittaa”, enkä aio kirjoittaa samaa.',
       ],
       tanger: [
         'Salmi on alla kapea kuin joki: toisella rannalla Eurooppa, toisella Afrikka, ja väliä nelisentoista kilometriä. Ylitämme sen minuutissa, tuskin ehdin kääntää päätäni.',
@@ -622,9 +661,9 @@ export const MAAILMA = {
     diaries: [
       'Isoisä kiersi tämän pallon kahdeksassakymmenessä päivässä ja piti sitä saavutuksena. Nykyään sen tekee vuorokaudessa kuka tahansa, jolla on varaa lippuun. Minä aion käyttää aikaa — katsoakseni, mitä hän ei ehtinyt nähdä.',
       'Isoisän kartassa kolmannes maailmasta on väritetty samalla punaisella. Nykyisessä kartassa siinä tilassa on yli viisikymmentä itsenäistä valtiota, joilla kaikilla on oma lippu ja oma mielipide meistä. Päätin olla ottamatta asiaa puheeksi ensimmäisenä iltana.',
-      '"Matkalla tarvitaan kolme asiaa: kello, kartta ja kärsivällisyyttä", isoisä kirjoitti. Minulla on puhelin, joka on kaikki kolme, ja silti eksyn lentokentällä. Hänen listassaan taisi olla neljäs kohta, jota en osaa lukea.',
+      '”Matkalla tarvitaan kolme asiaa: kello, kartta ja kärsivällisyyttä”, isoisä kirjoitti. Minulla on puhelin, joka on kaikki kolme, ja silti eksyn lentokentällä. Hänen listassaan taisi olla neljäs kohta, jota en osaa lukea.',
       'Isoisä laski matkansa hinnaksi kaksituhatta puntaa ja piti sitä ruhtinaallisena. Sama summa riittää nykyään yhteen lentolippuun ja kohtuulliseen aamiaiseen. Rahassa mitattuna maailma on kutistunut; kaikessa muussa se on kasvanut.',
-      'Ensimmäisellä sivulla lukee: "Lähden selvittämään, onko maailma niin suuri kuin sanotaan." Viimeisellä sivulla lukee: "On." Väliin mahtuu kaksisataa sivua, joista aion tarkistaa jokaisen.',
+      'Ensimmäisellä sivulla lukee: ”Lähden selvittämään, onko maailma niin suuri kuin sanotaan.” Viimeisellä sivulla lukee: ”On.” Väliin mahtuu kaksisataa sivua, joista aion tarkistaa jokaisen.',
     ],
   },
 

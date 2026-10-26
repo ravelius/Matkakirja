@@ -1,0 +1,313 @@
+{
+ "kaupunki": "andorralavella",
+ "kaupunkiQ": "Q1863",
+ "kohteet": [
+  {
+   "q": "Q1046548",
+   "nimi": "Casa de la Vall",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.50667,
+   "lon": 1.52056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_01.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_01.JPG",
+     "selite": "Kivinen Casa de la Vall oli vuosisatoja Andorran yleisneuvoston kokouspaikka.",
+     "leveys": 5006,
+     "korkeus": 3337,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "064 Casa de la Vall (Andorra la Vella), façana sud.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/064_Casa_de_la_Vall_(Andorra_la_Vella)%2C_fa%C3%A7ana_sud.JPG?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:064_Casa_de_la_Vall_(Andorra_la_Vella)%2C_fa%C3%A7ana_sud.JPG",
+     "selite": "Talo rakennettiin 1500-luvulla alun perin varakkaan perheen kartanoksi.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 04.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_04.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_04.JPG",
+     "selite": "Rakennuksen kulmatorni ja jyrkkä vuorimaisema kuuluvat pienen ruhtinaskunnan symboleihin.",
+     "leveys": 4073,
+     "korkeus": 2916,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q332800",
+   "nimi": "Madriu-Perafita-Claror'in laakso",
+   "peruste": "UNESCO",
+   "koko_m": 5000,
+   "lat": 42.49215,
+   "lon": 1.59443,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vall del Madriu-Perafita-Claror - 52.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vall_del_Madriu-Perafita-Claror_-_52.jpg?width=1280",
+     "tekija": "Ferran Llorens",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vall_del_Madriu-Perafita-Claror_-_52.jpg",
+     "selite": "Madriun laakso on Pyreneiden korkea jäätikkölaakso ja Andorran ainoa maailmanperintökohde.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vall del Madriu 07.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vall_del_Madriu_07.JPG?width=1280",
+     "tekija": "Isidro Jabato",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vall_del_Madriu_07.JPG",
+     "selite": "Laakson ylänköniityillä ja kivikoissa on laiduntettu karjaa vuosisatojen ajan.",
+     "leveys": 4912,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3780675",
+   "nimi": "Santa Colomán kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.4942,
+   "lon": 1.4976,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santa Coloma (Santa Coloma d'Andorra).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santa_Coloma_(Santa_Coloma_d'Andorra).jpg?width=1280",
+     "tekija": "Simonjoan (changes by Rabanus Flavus)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santa_Coloma_(Santa_Coloma_d'Andorra).jpg",
+     "selite": "Santa Colomán esiromaaninen kirkko tunnetaan pyöreästä kellotornistaan.",
+     "leveys": 1397,
+     "korkeus": 1193,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "102 Santa Coloma (Andorra la Vella).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/102_Santa_Coloma_(Andorra_la_Vella).JPG?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:102_Santa_Coloma_(Andorra_la_Vella).JPG",
+     "selite": "Pyöreä kellotorni kohoaa muinaisen kirkon yllä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "104 Santa Coloma (Andorra la Vella), porxo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/104_Santa_Coloma_(Andorra_la_Vella)%2C_porxo.JPG?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:104_Santa_Coloma_(Andorra_la_Vella)%2C_porxo.JPG",
+     "selite": "Kirkon edessä on puupilarein tuettu kuisti.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3215332",
+   "nimi": "Engolastersin järvi",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 42.5197,
+   "lon": 1.56861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estany d'Engolasters - 19.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estany_d'Engolasters_-_19.jpg?width=1280",
+     "tekija": "Angela Llop",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estany_d'Engolasters_-_19.jpg",
+     "selite": "Engolastersin tekoallas on suosittu retkikohde metsäisessä vuoristolaaksossa.",
+     "leveys": 4236,
+     "korkeus": 2831,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Radio Andorre Lac d'Engolasters.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Radio_Andorre_Lac_d'Engolasters.JPG?width=1280",
+     "tekija": "Occitandu34",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Radio_Andorre_Lac_d'Engolasters.JPG",
+     "selite": "Järven rannalla on vanhan Radio Andorran lähetinmastoja.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Engolasters.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Engolasters.JPG?width=1280",
+     "tekija": "Shachar Geva",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Engolasters.JPG",
+     "selite": "Metsäiset rinteet heijastuvat järven pintaan.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q62467",
+   "nimi": "Coma Pedrosa",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 42.59181,
+   "lon": 1.44365,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basses de l'Estany Negre - 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basses_de_l'Estany_Negre_-_2020.jpg?width=1280",
+     "tekija": "Austral Lights",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basses_de_l'Estany_Negre_-_2020.jpg",
+     "selite": "Coma Pedrosa on Andorran korkein vuori, noin 2 900 metriä merenpinnan yläpuolella.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cataperdis4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cataperdis4.jpg?width=1280",
+     "tekija": "Simonjoan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cataperdis4.jpg",
+     "selite": "Vuoren ympärillä kohoavat Pyreneiden rosoiset huiput.",
+     "leveys": 5280,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Comapedrosa01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Comapedrosa01.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Jlmoncada assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Comapedrosa01.jpg",
+     "selite": "Vuorta ympäröivät jyrkät laaksot kuuluvat luonnonpuistoon.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3137862",
+   "nimi": "Pont de la Margineda",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.48417,
+   "lon": 1.49194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Margineda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Margineda.jpg?width=1280",
+     "tekija": "Joan Simon",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Margineda.jpg",
+     "selite": "Pont de la Margineda on keskiaikainen kivisilta Valira-joen yllä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pont de la Margineda (Santa Coloma) - 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont_de_la_Margineda_(Santa_Coloma)_-_10.jpg?width=1280",
+     "tekija": "jqmj (Queralt)",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pont_de_la_Margineda_(Santa_Coloma)_-_10.jpg",
+     "selite": "Sillan jyrkkä kaari on Andorran tunnetuimpia rakennusperinnön kohteita.",
+     "leveys": 3627,
+     "korkeus": 2575,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1050185",
+   "nimi": "Les Escaldes",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 42.50916,
+   "lon": 1.53983,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Escaldes-Engordany.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escaldes-Engordany.JPG?width=1280",
+     "tekija": "Gertjan R.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Escaldes-Engordany.JPG",
+     "selite": "Les Escaldes on Andorran pääkaupungin viereinen kuumien lähteiden kaupunki.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Andorra la Vella - view.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andorra_la_Vella_-_view.jpg?width=1280",
+   "tekija": "Tiia Monto",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andorra_la_Vella_-_view.jpg",
+   "selite": "Andorra la Vella sijaitsee Pyreneiden vuorten ympäröimässä laaksossa.",
+   "leveys": 4576,
+   "korkeus": 2504,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

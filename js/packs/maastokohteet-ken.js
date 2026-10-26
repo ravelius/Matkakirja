@@ -140,8 +140,8 @@ export const MAASTOKOHTEET_KEN = [
       maailmankartta: { x: 7196.7, y: 3287.2 },
     },
     teksti: 'Lamu on Kenian vanhin yhtäjaksoisesti asuttu kaupunki: se uskotaan perustetun 1370, '
-      + 'ja Unescon luettelossa se on "Itä-Afrikan vanhin ja parhaiten säilynyt '
-      + 'swahiliasutus". Portugalin laivasto saartoi sen 1506 ja pakotti kaupungin veroa '
+      + 'ja Unescon luettelossa se on ”Itä-Afrikan vanhin ja parhaiten säilynyt '
+      + 'swahiliasutus”. Portugalin laivasto saartoi sen 1506 ja pakotti kaupungin veroa '
       + 'maksavaksi, mutta 1600-luvun lopulta 1800-luvun alkuun Lamu eli Omanin suojeluksessa '
       + 'kultakauttaan: sitä hallitsi vanhinten neuvosto Yumbe, ja kaupungista tuli runouden, '
       + 'käsityön ja oppineisuuden keskus. Runoilija Mwana Kupona kirjoitti täällä kuuluisan '
@@ -186,7 +186,7 @@ export const MAASTOKOHTEET_KEN = [
     tyyppi: 'historia',
     kysymykset: [
       'Milloin Gedi hylättiin?',
-      'Keitä "vanhat" ovat paikallisessa perinteessä?',
+      'Keitä ”vanhat” ovat paikallisessa perinteessä?',
     ],
     korostukset: ['pilarihauta|pilarihaudat'],
     nappi: 'Metsään jäänyt kaupunki',
@@ -201,9 +201,9 @@ export const MAASTOKOHTEET_KEN = [
       + 'Somaliasta Tansanian rajalle, ja sen tavaralöydöt — tuontiastiat, helmet ja kolikot — '
       + 'kertovat vaurastumisesta 1000-luvulta 1600-luvun alkuun, jolloin kaupunki hylättiin. '
       + 'Paikan tunnusomaisia rakenteita ovat pilarihaudat, swahilirannikon oma hautatyyppi. '
-      + 'Siirtomaavallan silmissä rauniot "löytyivät" vasta 1884, kun sansibarilainen Sir John '
+      + 'Siirtomaavallan silmissä rauniot ”löytyivät” vasta 1884, kun sansibarilainen Sir John '
       + 'Kirk kävi paikalla, mutta mijikendat olivat tunteneet ne aina. Giriamat pitävät paikkaa '
-      + 'pyhänä ja kertovat, että sitä vartioivat "vanhat", pappien henget, jotka kiroavat '
+      + 'pyhänä ja kertovat, että sitä vartioivat ”vanhat”, pappien henget, jotka kiroavat '
       + 'raunioiden vahingoittajan. Kaivaukset alkoivat James Kirkmanin johdolla 1948.',
     lahde: 'en-Wikipedia "Ruins of Gedi", johdanto-osa sekä osio "History of discovery and '
       + 'excavation" alaosioineen (tarkistettu 6.9.2026).',
@@ -242,7 +242,7 @@ export const MAASTOKOHTEET_KEN = [
     tyyppi: 'historia',
     kysymykset: [
       'Mitä nimi Koobi Fora tarkoittaa?',
-      'Mikä oli "hominidijengi"?',
+      'Mikä oli ”hominidijengi”?',
     ],
     korostukset: ['fossiili|fossiileja'],
     nappi: 'Turkanan luukenttä',
@@ -255,7 +255,7 @@ export const MAASTOKOHTEET_KEN = [
       + 'ovat täynnä fossiileja. Gabbran kielellä koobi fora tarkoittaa paikkaa, jossa kasvaa '
       + 'mirhapensas. Richard Leakey perusti tukikohdan järveen työntyvälle hiekkasärkälle 1968, '
       + 'ja Kenia rauhoitti alueen 1973 Sibiloin kansallispuistoksi. Leakey kokosi ja koulutti '
-      + 'kenialaisen etsijäryhmän, joka tunnettiin nimellä "hominidijengi" ja jota johti Kamoya '
+      + 'kenialaisen etsijäryhmän, joka tunnettiin nimellä ”hominidijengi” ja jota johti Kamoya '
       + 'Kimeu; se löysi valtaosan alueen yli kahdestasadasta ihmisen sukulaisen fossiilista. '
       + 'Kuuluisin niistä on kallo KNM-ER 1470, jonka Bernard Ngeneo löysi 1972 ja jonka Meave '
       + 'Leakey kokosi paloista. Samalta alueelta on löytynyt runsaasti kivityökaluja, '
@@ -309,8 +309,8 @@ export const MAASTOKOHTEET_KEN = [
       maailmankartta: { x: 7074.9, y: 3299.6 },
     },
     teksti: 'Amboseli on 392 neliökilometrin puisto keskellä 8 000 neliökilometrin ekosysteemiä, '
-      + 'joka jatkuu Tansanian puolelle. Maasait kutsuivat seutua nimellä Empusel, "suolainen, '
-      + 'pölyinen paikka", ja juuri se on maisemassa erikoista: kuivunut jääkautinen järvenpohja '
+      + 'joka jatkuu Tansanian puolelle. Maasait kutsuivat seutua nimellä Empusel, ”suolainen, '
+      + 'pölyinen paikka”, ja juuri se on maisemassa erikoista: kuivunut jääkautinen järvenpohja '
       + 'ja sen keskellä vihreät suot. Alue erotettiin maasaiden eteläiseksi reservaatiksi 1906, '
       + 'palautettiin paikalliseen hallintaan riistasuojeluna 1948 ja tuli kansallispuistoksi '
       + '1974. Puisto tunnetaan norsuistaan: amerikkalainen käyttäytymistutkija Cynthia Moss on '

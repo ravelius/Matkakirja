@@ -1,0 +1,447 @@
+{
+ "kaupunki": "vladivostok",
+ "kaupunkiQ": "Q959",
+ "kohteet": [
+  {
+   "q": "Q209832",
+   "nimi": "Kultaisen sarven silta",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 43.10861,
+   "lon": 131.89611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zolotoy Bridge (October 2024)-0 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zolotoy_Bridge_(October_2024)-0_16.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zolotoy_Bridge_(October_2024)-0_16.jpg",
+     "selite": "Kultaisen sarven silta ylittää Vladivostokin satamalahden vinoköysisiltana.",
+     "leveys": 5954,
+     "korkeus": 2562,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "004 - Wladiwostok 2015 (24058644249).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/004_-_Wladiwostok_2015_(24058644249).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:004_-_Wladiwostok_2015_(24058644249).jpg",
+     "selite": "Sillan korkeat pylonit kohoavat lahden ja satamarantojen yläpuolelle.",
+     "leveys": 4492,
+     "korkeus": 2975,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "041 - Wladiwostok 2015 (23797746544).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/041_-_Wladiwostok_2015_(23797746544).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:041_-_Wladiwostok_2015_(23797746544).jpg",
+     "selite": "Silta näkyy lahden toiselta rannalta kaupungin ja laivojen yli.",
+     "leveys": 4084,
+     "korkeus": 2705,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q209710",
+   "nimi": "Russkin silta",
+   "peruste": "sitelinks",
+   "koko_m": 3100,
+   "lat": 43.06361,
+   "lon": 131.90806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "100 2066 Eastern Bosphorus bridge and Russky Island, Vladivostok (22203434566).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/100_2066_Eastern_Bosphorus_bridge_and_Russky_Island%2C_Vladivostok_(22203434566).jpg?width=1280",
+     "tekija": "Martin Boswell",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:100_2066_Eastern_Bosphorus_bridge_and_Russky_Island%2C_Vladivostok_(22203434566).jpg",
+     "selite": "Russkin silta yhdistää Vladivostokin mantereen Russkin saareen Itäisen Bosporinsalmen yli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Russky Bridge (October 2024)-0 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Russky_Bridge_(October_2024)-0_2.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Russky_Bridge_(October_2024)-0_2.jpg",
+     "selite": "Vinoköysisillan jänneväli on maailman pisimpiä.",
+     "leveys": 5884,
+     "korkeus": 1964,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Russian bridge\" in Vladivostok city.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Russian_bridge%22_in_Vladivostok_city.jpg?width=1280",
+     "tekija": "Баяков Алексей Александрович",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Russian_bridge%22_in_Vladivostok_city.jpg",
+     "selite": "Illalla sillan pylonit ja vaijerit valaistaan.",
+     "leveys": 2745,
+     "korkeus": 1732,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4112949",
+   "nimi": "Vladivostokin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 43.11116,
+   "lon": 131.88155,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "008 Владивосток. Ж-д вокзал.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/008_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA._%D0%96-%D0%B4_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB.jpg?width=1280",
+     "tekija": "LxAndrew",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:008_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA._%D0%96-%D0%B4_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB.jpg",
+     "selite": "Vladivostokin asema on Transsiperian radan itäinen pääte.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Exteriors of the Vladivostok railway station (October 2024)-0 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exteriors_of_the_Vladivostok_railway_station_(October_2024)-0_2.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exteriors_of_the_Vladivostok_railway_station_(October_2024)-0_2.jpg",
+     "selite": "Laiturit avautuvat kohti lahtea ja kaupungin keskustaa.",
+     "leveys": 5990,
+     "korkeus": 2759,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "001 - Wladiwostok 2015 (24426503615).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/001_-_Wladiwostok_2015_(24426503615).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:001_-_Wladiwostok_2015_(24426503615).jpg",
+     "selite": "Aseman edustalta näkyy satama ja Kultaisen sarven silta.",
+     "leveys": 4553,
+     "korkeus": 2787,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1254559",
+   "nimi": "Sukellusvene S-56",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 43.11342,
+   "lon": 131.89122,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "053 - Wladiwostok 2015 (24130179580).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/053_-_Wladiwostok_2015_(24130179580).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:053_-_Wladiwostok_2015_(24130179580).jpg",
+     "selite": "Neuvostoliiton sukellusvene S-56 on museona rantabulevardilla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "056 - Wladiwostok 2015 (24399542046).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/056_-_Wladiwostok_2015_(24399542046).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:056_-_Wladiwostok_2015_(24399542046).jpg",
+     "selite": "Vihreäpohjainen sukellusvene seisoo muistomerkkinä laiturin vierellä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "058 - Wladiwostok 2015 (23798929693).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/058_-_Wladiwostok_2015_(23798929693).jpg?width=1280",
+     "tekija": "Uwe Brodrecht",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:058_-_Wladiwostok_2015_(23798929693).jpg",
+     "selite": "Tornissa lukee C-56, ja kannella on tykki.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4336568",
+   "nimi": "Kotkanpesän kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 43.12094,
+   "lon": 131.89653,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20220816 City view from the Eagle's nest hill - 52460648323.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220816_City_view_from_the_Eagle's_nest_hill_-_52460648323.jpg?width=1280",
+     "tekija": "travelling_eidolon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220816_City_view_from_the_Eagle's_nest_hill_-_52460648323.jpg",
+     "selite": "Kotkanpesän kukkulalta avautuu näkymä Vladivostokin kaupunkiin ja satamaan.",
+     "leveys": 2010,
+     "korkeus": 1339,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20220816 City view from the Eagle's nest hill.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220816_City_view_from_the_Eagle's_nest_hill.jpg?width=1280",
+     "tekija": "travelling_eidolon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220816_City_view_from_the_Eagle's_nest_hill.jpg",
+     "selite": "Rinteiden talojen takana siintävät lahdet ja vuoret.",
+     "leveys": 1868,
+     "korkeus": 1245,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q60594126",
+   "nimi": "GUM-tavaratalo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 43.11561,
+   "lon": 131.88734,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ул Светланская ГУМ - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A3%D0%BB_%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A3%D0%9C_-_panoramio.jpg?width=1280",
+     "tekija": "Serg kosma",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%A3%D0%BB_%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%93%D0%A3%D0%9C_-_panoramio.jpg",
+     "selite": "GUM on Svetlanskajan vanha koristeellinen kauppatalo Vladivostokin keskustassa.",
+     "leveys": 3648,
+     "korkeus": 2056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GUM Department Store, Vladivostok.JPEG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GUM_Department_Store%2C_Vladivostok.JPEG?width=1280",
+     "tekija": "CDR Alan Dooley",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GUM_Department_Store%2C_Vladivostok.JPEG",
+     "selite": "Rakennuksen koristeelliset julkisivut ja tornit ovat kaupunkikuvan tuttu tunnus.",
+     "leveys": 2810,
+     "korkeus": 1850,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4112958",
+   "nimi": "Vladivostokin linnoitusmuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 43.1224,
+   "lon": 131.8766,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Novosiltsevskaya battery (October 2024)-0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novosiltsevskaya_battery_(October_2024)-0.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novosiltsevskaya_battery_(October_2024)-0.jpg",
+     "selite": "Vladivostokin linnoituksen patteri valvoo salmea ja Russkin siltaa.",
+     "leveys": 5912,
+     "korkeus": 3326,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Laika ac Fort No.7 (6451262147).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laika_ac_Fort_No.7_(6451262147).jpg?width=1280",
+     "tekija": "Laika ac from USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Laika_ac_Fort_No.7_(6451262147).jpg",
+     "selite": "Linnake nro 7 on osa kaupunkia ympäröinyttä vanhaa linnoitusvyöhykettä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4378712",
+   "nimi": "Arsenjevin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 43.11637,
+   "lon": 131.88213,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Svetlanskaya Street 20, Vladivostok (October 2024)-0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Svetlanskaya_Street_20%2C_Vladivostok_(October_2024)-0.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Svetlanskaya_Street_20%2C_Vladivostok_(October_2024)-0.jpg",
+     "selite": "Arsenjevin museo esittelee Kaukoidän historiaa kauppakadun vanhassa kivitalossa.",
+     "leveys": 5045,
+     "korkeus": 3148,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q494924",
+   "nimi": "Russkin saari",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": 43,
+   "lon": 131.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20220812 Vladivostok Russky island coastline.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220812_Vladivostok_Russky_island_coastline.jpg?width=1280",
+     "tekija": "travelling_eidolon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220812_Vladivostok_Russky_island_coastline.jpg",
+     "selite": "Russkin saaren rannikko on jyrkkää kalliota ja vihreitä niemiä Pietari Suuren lahdella.",
+     "leveys": 1781,
+     "korkeus": 1187,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20220812 Tobizin cape Russky Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220812_Tobizin_cape_Russky_Island.jpg?width=1280",
+     "tekija": "travelling_eidolon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220812_Tobizin_cape_Russky_Island.jpg",
+     "selite": "Tobizinin niemi työntyy kallioisena merelle Russkin saaren eteläosassa.",
+     "leveys": 1674,
+     "korkeus": 1005,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20220812 Rock formation (Tobizin cape).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20220812_Rock_formation_(Tobizin_cape).jpg?width=1280",
+     "tekija": "travelling_eidolon",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20220812_Rock_formation_(Tobizin_cape).jpg",
+     "selite": "Rapautuneet kalliojyrkänteet putoavat suoraan mereen.",
+     "leveys": 1711,
+     "korkeus": 1140,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4112971",
+   "nimi": "Vladivostokin funikulaari",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 43.11661,
+   "lon": 131.90054,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cars of the Vladivostok funicular.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cars_of_the_Vladivostok_funicular.jpg?width=1280",
+     "tekija": "Chakat Rimm",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cars_of_the_Vladivostok_funicular.jpg",
+     "selite": "Funikulaarin punainen ja sininen vaunu kulkevat rinteessä kaupungin keskustassa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vladivostok Funicular (October 2024)-0 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladivostok_Funicular_(October_2024)-0_5.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vladivostok_Funicular_(October_2024)-0_5.jpg",
+     "selite": "Köysirata nousee mäkeä pitkin Kotkanpesän kukkulan suuntaan.",
+     "leveys": 3185,
+     "korkeus": 3381,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Golden Horn bay and Egersheld peninsula.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Horn_bay_and_Egersheld_peninsula.jpg?width=1280",
+   "tekija": "Russian.dissident",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Horn_bay_and_Egersheld_peninsula.jpg",
+   "selite": "Vladivostok levittäytyy Kultaisen sarven lahden ympärille ja Egersheldin niemelle.",
+   "leveys": 4368,
+   "korkeus": 2912,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Egersheld peninsula and Vladivostok container terminal.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egersheld_peninsula_and_Vladivostok_container_terminal.jpg?width=1280",
+   "tekija": "Russian.dissident",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Egersheld_peninsula_and_Vladivostok_container_terminal.jpg",
+   "selite": "Ilmasta näkyvät Vladivostokin satama ja niemimaan kaupunginosat.",
+   "leveys": 4368,
+   "korkeus": 2912,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

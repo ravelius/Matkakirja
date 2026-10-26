@@ -163,7 +163,7 @@ export const NORTHAMERICA_MAATIEDOT = {
       sija: '106./172',
       linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MEX',
       selitys: 'Meksikon perustuslaki on vuodelta 1917, ja sen kantava periaate on '
-        + '"ei uudelleenvalintaa": presidentti valitaan yhdeksi kuuden vuoden '
+        + '”ei uudelleenvalintaa”: presidentti valitaan yhdeksi kuuden vuoden '
         + 'kaudeksi eikä voi enää koskaan palata virkaan. Yksi puolue, PRI, '
         + 'hallitsi silti käytännössä koko 1900-luvun, ja ensimmäinen '
         + 'oppositiopresidentti astui virkaan vasta vuonna 2000. Vaalit '
@@ -279,4 +279,22 @@ export const NORTHAMERICA_MAATIEDOT = {
       { teksti: '你好', kieli: 'kiina', lippu: 'Flag of the People\'s Republic of China.svg', osuus: '1 %' },
     ],
   },
+  // Kaikki maat -projekti (PT 10.10.2026): vain väkiluku ja pinta-ala
+  // Sisältökirjurin faktoista (amerikat: kansalliset tilastot ja Maailmanpankki). Ei sijoja.
+  ATG: { vakiluku: '94 000', pintaAla: '440 km²' },
+  BHS: { vakiluku: '398 000', pintaAla: '13 900 km²' },
+  BLZ: { vakiluku: '397 000', pintaAla: '23 000 km²' },
+  BRB: { vakiluku: '269 000', pintaAla: '431 km²' },
+  CRI: { vakiluku: '5,0 milj.', pintaAla: '51 100 km²' },
+  DMA: { vakiluku: '66 000', pintaAla: '751 km²' },
+  DOM: { vakiluku: '12 milj.', pintaAla: '48 700 km²' },
+  GRD: { vakiluku: '117 000', pintaAla: '344 km²' },
+  HND: { vakiluku: '11 milj.', pintaAla: '112 000 km²' },
+  HTI: { vakiluku: '12 milj.', pintaAla: '27 800 km²' },
+  JAM: { vakiluku: '2,8 milj.', pintaAla: '11 000 km²' },
+  KNA: { vakiluku: '51 000', pintaAla: '261 km²' },
+  LCA: { vakiluku: '173 000', pintaAla: '616 km²' },
+  SLV: { vakiluku: '6,0 milj.', pintaAla: '21 000 km²' },
+  TTO: { vakiluku: '1,4 milj.', pintaAla: '5 100 km²' },
+  VCT: { vakiluku: '100 000', pintaAla: '389 km²' },
 };

@@ -39,7 +39,9 @@
  * docs/moduulit/karttapallo.md.
  */
 
+import { laattaMuuttunut } from './deltasarja.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
@@ -120,7 +122,31 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-23a-pohja';
+/*
+ * PERUSKARTTA 2026-09-25 (omistaja 25.9.2026: "vaihda", kuvakokeilu
+ * koelipulla ?pyramidi=2026-09-25). Resepti D2 + C-reliefi + vektorirannat;
+ * sarja on poltettu ILMAN viivatasoa (sama sarja kuin natiivilla), joten
+ * liikkuvassa pallossa ei ole poltettuja rajoja — levossa rajat, joet ja
+ * nostot tulevat pyramidin lepokerroksesta. laatat.json: viivat null,
+ * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
+ * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
+ */
+/*
+ * PERUSKARTTA 2026-09-27 (omistaja 29.9.2026 klo 05.0x kortilla: "Katsoin,
+ * vaihda"): GSHHG-järvet ja matalan veden viileys (0,5), pintatasoitus ja
+ * merireittien maaosuus maareitin tyylillä (PR #3436). Sama resepti muuten
+ * kuin 2026-09-26: sarja ILMAN viivatasoa, rantaa tai nostoja — levossa
+ * rajat, joet ja nostot tulevat pyramidin lepokerroksesta kuten ennen.
+ */
+/*
+ * PERUSKARTTA 2026-09-30 (omistaja 1.10.2026 klo 12.41 "KARTTA OK", vienti
+ * klo 12.01 "VIE"): raeton patina (omistajan valinta A 29.9.), GEOGLOWS-joet
+ * pohjaan ja viivatasolle koe-d-säännöin (ohut valumasta, hierarkia,
+ * järvileikkaus), Perekop pois. Sarja on DELTASARJA 27-sarjaa vasten
+ * (js/deltasarja.js; raeton muutti tällä kertaa kaikki laatat, joten
+ * kartta on täysi, mutta seuraava poltto vertautuu 30:een).
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-30-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -190,14 +216,23 @@ export const PALLO_LAATTAVERSIO = '2026-09-23a-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260923a';
+export const PALLO_LAATTATUNNISTE = '20260930';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
  * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
  */
 export const PALLO_SARJASSA_NOSTOT = false;
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+/*
+ * KOEPYRAMIDI (?pyramidi=<sarja>, js/media.js pyramidiKoe): pallo lukee
+ * saman sarjan laatat kuin koeluettelo, koska lepokerros vaatii pallon
+ * sarjan ja pyramidin luettelon version täsmäävän (js/pallolaatat.js
+ * lepokerroksenKerrokset) — muuten kerros sammuisi kokeessa.
+ */
+const KOEPYRAMIDI = pyramidiKoe();
+/** Tuotannon kansio (sw.js LAATTAKANSIO on sama). */
+export const TUOTANNON_PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
+export const PALLO_LAATTAKANSIO = KOEPYRAMIDI ? koepyramidinPallokansio(KOEPYRAMIDI) : TUOTANNON_PALLO_LAATTAKANSIO;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
@@ -222,9 +257,28 @@ export const PALLO_LAATTATASO_MAX = 8;
  * ilman koodimuutosta.
  */
 export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
+/**
+ * Deltasarjan perussarjan kansio (js/deltasarja.js): sama arvo kuin
+ * tuotannon laatat.json:n `delta.perus`, ja sw.js:n LAATTAKANSIO_PERUS
+ * kaksoiskappaleena (activate ei siivoa perussarjan laattoja). null =
+ * tuotantosarja on täysi sarja.
+ */
+export const PALLO_LAATTAPERUS = '2026-09-27-pohja-20260927';
 export const PALLO_SYVA_TASO = 0;
-/** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
-export const pallonLaatta = (x, y, l) => `${PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO ? PALLO_LAATAT_SYVA : PALLO_LAATAT}${l}/${x}/${y}.jpg`;
+/**
+ * Laatan osoite laattamoottorille (slippy map -koordinaatit).
+ *
+ * DELTASARJA (js/deltasarja.js, 29.9.2026): kun laatat.json kantaa
+ * `delta`-kentän, muuttumaton laatta haetaan perussarjan kansiosta —
+ * sama osoite kuin ennen, joten selaimen ja palvelutyöntekijän kori
+ * pysyy lämpimänä versionvaihdon yli.
+ */
+export const pallonLaatta = (x, y, l) => {
+  if (PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO) return `${PALLO_LAATAT_SYVA}${l}/${x}/${y}.jpg`;
+  const d = laattaluettelo?.delta;
+  const kansio = d && !laattaMuuttunut(d, l, x, y, 2 ** l) ? `${R2}julisteet/pallo/laatat/${d.perus}/` : PALLO_LAATAT;
+  return `${kansio}${l}/${x}/${y}.jpg`;
+};
 
 let laatatLupaus = null;
 /** Pallon laattaluettelo (laatat.json), kun se on saatu; muuten null. */
@@ -1752,7 +1806,16 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     const piiloon = eiPohjaa || (pohjanPiilotus && kerrosKaytossa && kerros.peittaaKokonaan());
     if (piiloon === moottori.pohjaPiilossa) return;
     moottori.pohjaPiilossa = piiloon;
-    moottori.visible = !piiloon;
+    /*
+     * KIRJASTON OMA SULKU VOITTAA (savuke-astro-pallo 43/47b, 26.9.2026).
+     * Astronautin kamera sulkee moottorin `globeTileEngineUrl(null)`:lla
+     * (js/linssit/satelliitti-avaruus.js) ja piilottaa kerroksen; silloin
+     * `peittaaKokonaan` kääntyy epätodeksi ja palautus kirjoitti
+     * `visible = true` suljetun moottorin päälle — pelin z2-laatat ja
+     * napakansi piirtyivät linssin reliefipallon päälle. Palautetaan vain,
+     * jos kirjastolla on laattaosoite.
+     */
+    moottori.visible = !piiloon && Boolean(pallo.globeTileEngineUrl?.());
   };
   const kehyspurku = kerros
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {

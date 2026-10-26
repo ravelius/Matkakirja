@@ -784,6 +784,7 @@ test('puuttuva aikaleimatiedosto (404) on hiljainen null eikä virhe', async (t)
   assert.match(aikaleimojenOsoite(polku), /puhe-fokus-matkakirja-testikaupunki\.aikaleimat\.json/);
   assert.equal(kaupunkiOsoitteesta(polku), 'testikaupunki');
   assert.equal(kaupunkiOsoitteesta('assets/audio/intro-puhe.mp3'), null);
+  assert.equal(kaupunkiOsoitteesta('https://media.matkakirja.app/audio/puhe-fokus-matkakirja-bryssel-v3.mp3?v=2'), 'bryssel');
 });
 
 test('rikkinäinen tai tyhjä aikaleimatiedosto ei kaada luentaa', async (t) => {

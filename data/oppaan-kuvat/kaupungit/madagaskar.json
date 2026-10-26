@@ -1,0 +1,522 @@
+{
+ "kaupunki": "madagaskar",
+ "kaupunkiQ": "Q1019",
+ "kohteet": [
+  {
+   "q": "Q1405154",
+   "nimi": "Tsingy de Bemarahan luonnonsuojelualue",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -18.66667,
+   "lon": 44.75,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Big Tsingy, Madagascar (24082669822).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Tsingy%2C_Madagascar_(24082669822).jpg?width=1280",
+     "tekija": "Rod Waddington",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Tsingy%2C_Madagascar_(24082669822).jpg",
+     "selite": "Tsingy on terävien kalkkikivipylväiden metsä, joka on syntynyt veden kuluttaessa kiveä vuosimiljoonia.",
+     "leveys": 4123,
+     "korkeus": 2843,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Big Tsingy, Madagascar (23822944469).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Tsingy%2C_Madagascar_(23822944469).jpg?width=1280",
+     "tekija": "Rod Waddington",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Tsingy%2C_Madagascar_(23822944469).jpg",
+     "selite": "Kalkkikiven hammaslaitamaiset huiput ovat niin teräviä, että niille on annettu nimi, joka tarkoittaa varpaillaan kävelyä.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Big Tsingy, Madagascar (20915441580).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Tsingy%2C_Madagascar_(20915441580).jpg?width=1280",
+     "tekija": "Rod Waddington from Kergunyah, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Tsingy%2C_Madagascar_(20915441580).jpg",
+     "selite": "Kallioiden väliin syöpyneet kapeat rotkot kätkevät oman pienen sademetsänsä.",
+     "leveys": 4512,
+     "korkeus": 6761,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q788084",
+   "nimi": "Baobabien alleekuja",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -20.25083,
+   "lon": 44.41833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baobab Avenue Morondava Madagascar - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baobab_Avenue_Morondava_Madagascar_-_panoramio.jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baobab_Avenue_Morondava_Madagascar_-_panoramio.jpg",
+     "selite": "Jättiläismäiset baobabit reunustavat hiekkatietä Morondavan lähellä, ja ne ovat jäänteitä ammoin kadonneesta metsästä.",
+     "leveys": 2240,
+     "korkeus": 1680,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Avenue of the Baobabs in Madagascar near the city of Morondava at sunrise (34).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Avenue_of_the_Baobabs_in_Madagascar_near_the_city_of_Morondava_at_sunrise_(34).jpg?width=1280",
+     "tekija": "Hanay",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Avenue_of_the_Baobabs_in_Madagascar_near_the_city_of_Morondava_at_sunrise_(34).jpg",
+     "selite": "Baobabien siluetit loistavat aamuauringossa Morondavan lähellä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Adansonia grandidieri Morondava - 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adansonia_grandidieri_Morondava_-_08.jpg?width=1280",
+     "tekija": "Olivier Lejade",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adansonia_grandidieri_Morondava_-_08.jpg",
+     "selite": "Yksinäinen baobab kohoaa kosteikon yllä, ja sen latvus näyttää juurakolta.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Adansonia grandidieri Morondava - 29.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adansonia_grandidieri_Morondava_-_29.jpg?width=1280",
+     "tekija": "Olivier Lejade",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adansonia_grandidieri_Morondava_-_29.jpg",
+     "selite": "Baobab piirtyy auringonlaskua vasten Madagaskarin länsirannikolla.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1290337",
+   "nimi": "Antananarivon Rova",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -18.92361,
+   "lon": 47.53222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palais royal Rova Manjakamiadana 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_royal_Rova_Manjakamiadana_2.jpg?width=1280",
+     "tekija": "Dalbergiaada",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_royal_Rova_Manjakamiadana_2.jpg",
+     "selite": "Rovan kuninkaanpalatsi kohoaa Antananarivon kukkulan laella, ja sen on suunnitellut skotlantilainen James Cameron.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "All royal tombs at the Rova of Antananarivo royal palace in Madagascar.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/All_royal_tombs_at_the_Rova_of_Antananarivo_royal_palace_in_Madagascar.JPG?width=1280",
+     "tekija": "Lemurbaby",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:All_royal_tombs_at_the_Rova_of_Antananarivo_royal_palace_in_Madagascar.JPG",
+     "selite": "Rovan alueella ovat Merinan kuninkaiden hautarakennukset.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ancien portail au sein du Palais de la Reine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancien_portail_au_sein_du_Palais_de_la_Reine.jpg?width=1280",
+     "tekija": "Anai171",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancien_portail_au_sein_du_Palais_de_la_Reine.jpg",
+     "selite": "Kivinen portti johtaa kuningattaren palatsin pihalle.",
+     "leveys": 4012,
+     "korkeus": 4013,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q458167",
+   "nimi": "Ambohimangan kuninkaallinen kukkula",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": -18.75917,
+   "lon": 47.56278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ambohimanga 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambohimanga_14.jpg?width=1280",
+     "tekija": "Olivier Lejade",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ambohimanga_14.jpg",
+     "selite": "Ambohimangan kuninkaallisen kukkulan muuri ja portti ovat hallitsijoiden pyhän kaupungin ytimessä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ambatomiatendro Ambohimanga.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambatomiatendro_Ambohimanga.jpg?width=1280",
+     "tekija": "Gaël RALANTONIRINA",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ambatomiatendro_Ambohimanga.jpg",
+     "selite": "Ambohimangan kukkulan laelta avautuu laaja näkymä ylängön viljelymaille.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q120414",
+   "nimi": "Isalon kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -22.4351,
+   "lon": 45.2884,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "IsaloRock.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IsaloRock.jpg?width=1280",
+     "tekija": "Zigomar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:IsaloRock.jpg",
+     "selite": "Isalon hiekkakivipaasi hehkuu kultaisena aavikkomaisen ruohotasangon keskellä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\" Isalo Window \" (9590120678).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22_Isalo_Window_%22_(9590120678).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22_Isalo_Window_%22_(9590120678).jpg",
+     "selite": "Tuuli ja sade ovat syövyttäneet hiekkakiveen luonnollisen kallioikkunan.",
+     "leveys": 3144,
+     "korkeus": 2031,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arc en ciel sur le parc de l'Isalo, Madagascar (25455298663).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_en_ciel_sur_le_parc_de_l'Isalo%2C_Madagascar_(25455298663).jpg?width=1280",
+     "tekija": "krishna naudin",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arc_en_ciel_sur_le_parc_de_l'Isalo%2C_Madagascar_(25455298663).jpg",
+     "selite": "Sateenkaari kaartuu Isalon vuorijonon ja ruohotasangon ylle.",
+     "leveys": 3072,
+     "korkeus": 2104,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "\" Canyon des Singes \" and \" Canyon des Rats \" (9585043286).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22_Canyon_des_Singes_%22_and_%22_Canyon_des_Rats_%22_(9585043286).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22_Canyon_des_Singes_%22_and_%22_Canyon_des_Rats_%22_(9585043286).jpg",
+     "selite": "Isalon jyrkät hiekkakivijyrkänteet nousevat tasangon yläpuolelle.",
+     "leveys": 3229,
+     "korkeus": 2018,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1498242",
+   "nimi": "Ranomafanan kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -21.22,
+   "lon": 47.43,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chute d'eau à Ranomafana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chute_d'eau_%C3%A0_Ranomafana.jpg?width=1280",
+     "tekija": "Anai171",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chute_d'eau_%C3%A0_Ranomafana.jpg",
+     "selite": "Vesiputous syöksyy kallioiden välistä Ranomafanan vuoristosademetsässä.",
+     "leveys": 3072,
+     "korkeus": 4096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ranomafana - Andriamamovoka falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ranomafana_-_Andriamamovoka_falls.jpg?width=1280",
+     "tekija": "User:Hardscarf",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ranomafana_-_Andriamamovoka_falls.jpg",
+     "selite": "Andriamamovokan putous on osa Ranomafanan vuoristosademetsän jokiverkostoa.",
+     "leveys": 2430,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1330558",
+   "nimi": "Nosy Be",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -13.315,
+   "lon": 48.2675,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nosy Be.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nosy_Be.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nosy_Be.jpg",
+     "selite": "Nosy Be on Madagaskarin luoteisrannikon suurin saari ja tunnettu matkailukohde.",
+     "leveys": 1463,
+     "korkeus": 1048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A lone fisherman in Nosey Be.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_lone_fisherman_in_Nosey_Be.jpg?width=1280",
+     "tekija": "Jokromberg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_lone_fisherman_in_Nosey_Be.jpg",
+     "selite": "Kirkkaassa vedessä kelluva kalastusvene kuvaa saaren perinteistä elämää.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Nosy Be beach (3186856441).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nosy_Be_beach_(3186856441).jpg?width=1280",
+     "tekija": "mwanasimba from La Réunion",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nosy_Be_beach_(3186856441).jpg",
+     "selite": "Nosy Ben hiekkarannat reunustavat saaren rantaviivaa.",
+     "leveys": 1798,
+     "korkeus": 1199,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2306524",
+   "nimi": "Ankaranan erityissuojelualue",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -13.07278,
+   "lon": 48.91472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tsingy Ankarana Madagascar 16-07-2004.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsingy_Ankarana_Madagascar_16-07-2004.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Stooof assumed (based on copyright claims).",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tsingy_Ankarana_Madagascar_16-07-2004.JPG",
+     "selite": "Ankaranan harmaat tsingy-kalkkikivimuodostelmat kohoavat metsäisten kukkuloiden edessä.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Les tsingy de l'Ankarana 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Les_tsingy_de_l'Ankarana_04.jpg?width=1280",
+     "tekija": "Ariarymadachoix",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Les_tsingy_de_l'Ankarana_04.jpg",
+     "selite": "Ankaranan kalkkikiveen on kulunut syviä railoja ja teräviä harjanteita.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1968934",
+   "nimi": "Montagne d'Ambren kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -12.595,
+   "lon": 49.155,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Waterfall Montagne d Ambre MS5563.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall_Montagne_d_Ambre_MS5563.jpg?width=1280",
+     "tekija": "Marco Schmidt [1]",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waterfall_Montagne_d_Ambre_MS5563.jpg",
+     "selite": "Montagne d'Ambren vuoristosademetsän vesiputous syöksyy lehtevän viidakon läpi.",
+     "leveys": 2848,
+     "korkeus": 4272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cascade d'Antakarana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cascade_d'Antakarana.jpg?width=1280",
+     "tekija": "HYL56",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cascade_d'Antakarana.jpg",
+     "selite": "Antakaranan putous valuu vehreän rotkon kallioseinämää alas.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1321311",
+   "nimi": "Nosy Boraha (Sainte-Marie)",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -16.9,
+   "lon": 49.9,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beache of La Crique Sainte Marie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beache_of_La_Crique_Sainte_Marie.jpg?width=1280",
+     "tekija": "M worm",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beache_of_La_Crique_Sainte_Marie.jpg",
+     "selite": "Sainte-Marien saaren metsäiset rannat ja lahdet ovat entisiä merirosvojen suojapaikkoja.",
+     "leveys": 2896,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beach, Île Sainte-Marie (3957816273).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beach%2C_%C3%8Ele_Sainte-Marie_(3957816273).jpg?width=1280",
+     "tekija": "Antony Stanley from Gloucester, UK",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beach%2C_%C3%8Ele_Sainte-Marie_(3957816273).jpg",
+     "selite": "Palmujen varjostama hiekkaranta Nosy Borahalla.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q181663",
+   "nimi": "Andafiavaratran palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -18.92082,
+   "lon": 47.533,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palais d'Andafiavaratra 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_d'Andafiavaratra_01.jpg?width=1280",
+     "tekija": "Maky (Alex Dunkel)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_d'Andafiavaratra_01.jpg",
+     "selite": "Andafiavaratran punavalkoinen palatsi oli Madagaskarin pääministerin virka-asunto Antananarivossa.",
+     "leveys": 3072,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Andafiavaratra Palace Antananarivo2 2019-10-02 .jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andafiavaratra_Palace_Antananarivo2_2019-10-02_.jpg?width=1280",
+     "tekija": "Z thomas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andafiavaratra_Palace_Antananarivo2_2019-10-02_.jpg",
+     "selite": "Palatsin tornit kohoavat kukkulan rinteen yllä Antananarivossa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Highlands, Madagascar (22741639463).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Highlands%2C_Madagascar_(22741639463).jpg?width=1280",
+   "tekija": "Rod Waddington",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Highlands%2C_Madagascar_(22741639463).jpg",
+   "selite": "Madagaskarin ylängön punaiset viljelymaat ja vuorijono levittäytyvät laajalle.",
+   "leveys": 7360,
+   "korkeus": 3904,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "JNB-MRU 22.08.2009 13-15-14.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JNB-MRU_22.08.2009_13-15-14.jpg?width=1280",
+   "tekija": "Simisa (talk · contribs)",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JNB-MRU_22.08.2009_13-15-14.jpg",
+   "selite": "Madagaskarin länsirannikon riutat ja hiekkasärkät ilmasta nähtynä.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

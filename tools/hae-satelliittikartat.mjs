@@ -101,6 +101,7 @@ import { readFileSync, writeFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
   const ajo = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {
@@ -208,9 +209,8 @@ function komposoi(pohja, ruudut, leveys, korkeus, kohde) {
       + `#pohja>img{display:block}</style>`
       + `<div id="pohja"><img src="file://${pohjaPolku}" style="width:100%;height:100%">${palat}</div>`);
     const skripti = `
-const { chromium } = require('playwright');
 (async () => {
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const sivu = await (await selain.newContext({
     viewport: { width: ${leveys}, height: ${korkeus} }, deviceScaleFactor: 1,
   })).newPage();

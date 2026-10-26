@@ -1,0 +1,78 @@
+[
+ {
+  "id": "izmir",
+  "esittely": "Kartan alue on İzmirin vanha keskusta lahden pohjukassa. Kemeraltın basaari syntyi 1600-luvulla, kun lahden matalimpia osia täytettiin maaksi, ja se on siitä asti ollut kaupungin kauppakeskus. Sen kujien varrella ovat Hisarin moskeija ja Salepçioğlun moskeija; kartalla on lisäksi Sulu Han.\n\nSmyrnan agora on hellenistisen ajan tori. Maanjäristys vahingoitti sitä vuonna 178, ja keisari Marcus Aurelius tuki uudelleenrakennusta; pohjoisen pylväshallin basilika on 165 metriä pitkä. Lännessä Konakin aukion kellotorni on 25 metriä korkea ja valmistui 1901 sulttaani Abdülhamid II:n valtaannousun 25-vuotisjuhlaksi. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 667,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Kemeralt%C4%B1",
+    "title": "Wikipedia: Kemeraltı",
+    "tukee": "lahden matalat osat täytettiin 1650-1670 (1600-luku); Hisarin nimi = linnoitus; Hisar ja Salepçioğlu Kemeraltın moskeijoita"
+   },
+   {
+    "url": "https://www.visitizmir.org/en/Content/179",
+    "title": "Visit İzmir: Kemeraltı",
+    "tukee": "basaari muodostettu meren täytöllä, kauppakeskus 1600-luvulta; Salepçioğlu Kemeraltissa"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Agora_of_Smyrna",
+    "title": "Wikipedia: Agora of Smyrna",
+    "tukee": "hellenistinen (kreikkalaisten rakentama), maanjäristys 178, Marcus Aurelius"
+   },
+   {
+    "url": "https://izmir.ktb.gov.tr/EN-240781/izmir-agora.html",
+    "title": "İzmir Provincial Directorate of Culture and Tourism: İzmir Agora",
+    "tukee": "hellenistinen perustus, jälleenrakennus 178 jälkeen Marcus Aureliuksen tuella, basilika 165 x 28 m, ristiholvit säilyneet"
+   },
+   {
+    "url": "https://turkisharchaeonews.net/node/1189",
+    "title": "Turkish Archaeo News: Agora of Smyrna",
+    "tukee": "basilika 165 x 28 m, 178 maanjäristys, Marcus Aurelius tuki rahallisesti"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Hisar_Mosque",
+    "title": "Wikipedia: Hisar Mosque",
+    "tukee": "rakennuttaja Aydınoğlu Yakup Bey, 1592-1598 (hakutulos); nimi = linnoitus"
+   },
+   {
+    "url": "https://izmir.ktb.gov.tr/EN-242257/historical-mosques.html",
+    "title": "İzmir Provincial Directorate of Culture and Tourism: Historical mosques",
+    "tukee": "Hisar: Yakup Bey, 1597-1598; hisar = linnake; Salepçioğlu Kemeraltin moskeija"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/%C4%B0zmir_Clock_Tower",
+    "title": "Wikipedia: İzmir Clock Tower",
+    "tukee": "25 m, valmistui 1901, Abdülhamid II:n valtaannousun 25-vuotisjuhla"
+   },
+   {
+    "url": "https://izmir.ktb.gov.tr/EN-239241/clock-tower.html",
+    "title": "İzmir Provincial Directorate of Culture and Tourism: Clock Tower",
+    "tukee": "1901, 25 m, neljä kerrosta, Abdülhamid II:n 25-vuotisjuhla"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Salep%C3%A7io%C4%9Flu_Mosque",
+    "title": "Wikipedia: Salepçioğlu Mosque",
+    "tukee": "moskeija Kemeraltissa, 1900-luvun alku (1905; ktb 1897-1907, visitizmir 1906)"
+   }
+  ],
+  "pudotetut": [
+   "Sulu Han: ei yhtään lähdettä İzmirin Sulu Hanille (haut löysivät vain Tokatin Sulu Hanin); rakennusaika, sisäpiha ja kaikki muut tiedot pudotettu, kartan kohde mainitaan vain nimeltä",
+   "Hisarin moskeijan valmistumisvuosi (Wikipedia 1592, İzmirin kulttuuri- ja matkailutoimisto 1597-1598, Evliya Çelebi 1591-92) -> ei vuotta tekstissä",
+   "Hisarin nimen yhteys genovalaiseen San Pietron linnaan (Wikipedia ja yksi matkasivu; toista riippumatonta lähdettä ei) -> vain 'tarkoittaa linnoitusta'",
+   "Salepçioğlun moskeijan tarkka valmistumisvuosi (Wikipedia 1905, visitizmir 1906, ktb 1897-1907) -> ei vuotta; hoikka erillinen minareetti ja korjaukset 1927 ja 1974 (vain Wikipedia)",
+   "Kellotornin suunnittelija Raymond Charles Péré ja Wilhelm II:n lahjoittama kello: ktb-sivulla kello mainitaan, Wikipedia ei; arkkitehti vain Wikipediassa ja hakuyhteenvedossa -> ei tekstissä",
+   "Smyrnan agoran maanjäristyksen 'tuhosi' -> kirjoitettu 'vahingoitti' (ktb ja turkisharchaeonews: rakennettiin uudelleen; Wikipedia: ruined); kaivausten alkuvuosi (Wikipedia 1933, ktb 1933-1941, turkisharchaeonews 1932) -> ei tekstissä",
+   "Kemeraltın moskeijoiden, synagogien ja hanien määrät sekä Kızlarağası Han 1744 -> eivät kartan kohteita, ei tekstissä"
+  ],
+  "ristiriidat": [
+   "Vanha esittely: basaari kasvoi 'antiikin sataman päälle' kun poukama kasvoi umpeen; Wikipedia ja visitizmir kertovat, että lahden matalia osia täytettiin 1600-luvulla (1650-1670) -> uusi teksti sanoo 'täytettiin maaksi'. Vanha lause 'agoran holvit kannattivat torin lattiaa' vastaa pelin tekstiä (nahtavyysjutut.js), ja ktb mainitsee säilyneet ristiholvit, mutta holvit jätetty pois; Kemeraltin 'kasvoi umpeen' -> 'täytettiin'; Konakin aukio mainitaan tekstissä vain kellotornin yhteydessä.",
+   "Peli (nahtavyysjutut.js): Hisar valmistui 1598, Wikipedia: 1592; ktb: 1597-1598 -> ei vuotta tekstissä.",
+   "Peli: Salepçioğlu valmistui 1905 (Wikipedia samoin), visitizmir 1906, ktb 'rakennettu 1897-1907' -> ei vuotta tekstissä.",
+   "Peli: Smyrnan agora tuhoutui 178 järistyksessä; lähteet: vahingoittui/rakennettiin uudelleen -> käytetty 'vahingoitti'.",
+   "Peli: kellotorni 25 m ja 1901, ristiriidaton. Peli ja Wikipedia: agora 300-luvulla eaa.; ktb vain 'hellenistinen kausi' -> tekstissä vain 'hellenistiseltä kaudelta'.",
+   "ESTO: atlasobscura.com 403; izmir.ktb.gov.tr kellotornisivu ei mainitse arkkitehtia."
+  ],
+  "muutos_sk": "Poistettu agoran 300-luvun eaa. -väite (vain yksi lähde), basilikan leveys ja Hisarin 1500-luvun maininta pituusrajan vuoksi."
+ }
+]

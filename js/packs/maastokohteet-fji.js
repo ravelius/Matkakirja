@@ -130,6 +130,7 @@ export const MAASTOKOHTEET_FJI = [
   {
     id: 'sri-siva-subramaniya',
     nimi: 'Sri Siva Subramaniya',
+    nimio: 'Sri Siva',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuinka suuri temppeli on?',
@@ -360,7 +361,7 @@ export const MAASTOKOHTEET_FJI = [
       + 'vanhin tunnettu maininta on rautakauden Intiasta noin 1200 eaa., ja se on ollut '
       + 'siirtymäriitti, voiman ja rohkeuden koe sekä uskon koettelu. Beqan seremonia oli jo '
       + 'nähtävyys vuonna 1902, jolloin sitä tutkittiin ja siitä kirjoitettiin selvitys '
-      + 'otsikolla "arvattava selitys arvoitukseen". Nykyfysiikka on selittänyt ilmiön: '
+      + 'otsikolla ”arvattava selitys arvoitukseen”. Nykyfysiikka on selittänyt ilmiön: '
       + 'jalka ei kosketa kuumaa pintaa tarpeeksi kauan palaakseen, ja hiillos johtaa '
       + 'lämpöä huonosti.',
     lahde: 'en-Wikipedia "Beqa", johdanto-osa ja osio "Tradition", sekä en-Wikipedia '

@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
   AANI_JUURI, HORATIO_TUOTANTO, VERSIOIDUT_HORATIO_AANET,
@@ -65,11 +66,25 @@ const ODOTETUT = [
   ['wien', '6e3a07e879bb', 'horatio-9c5b6e4dd75608cdbe8e', 24.529],
 ];
 
+/*
+ * 11.10.2026: Äänittäjän viisi suoraan ämpärin juureen viemää luentaa
+ * (ei versions-alikansiota eikä tuotantokuittia). Kesto = äänitteen todellinen kesto
+ * (afinfo, kuten kuitillisilla; PT 11.10.), aikaleimojen kesto ≤ 0,05 s lyhyempi.
+ */
+const VERSIOIMATTOMAT = [
+  // 15.10.2026: eleven_v3-uusinta (Äänittäjä), ämpärissä -v3-nimellä; kesto sis. 0,7 s hännän.
+  ['bryssel', 39.549],
+  ['kosice', 43.050],
+  ['ljubljana', 38.426],
+  ['luxemburg', 41.691],
+  ['valletta', 36.571],
+];
+
 test('Horatio-runtime on exact 45/45 completed-kuittien final-avaimissa ja kestoissa', () => {
   assert.equal(ODOTETUT.length, 45);
   assert.equal(new Set(ODOTETUT.map(([id]) => id)).size, 45);
-  assert.equal(Object.keys(HORATIO_TUOTANTO).length, 45);
-  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45);
+  assert.equal(Object.keys(HORATIO_TUOTANTO).length, 45 + VERSIOIMATTOMAT.length);
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45 + VERSIOIMATTOMAT.length);
 
   for (const [id, commit, batch, kesto] of ODOTETUT) {
     const nimi = `puhe-fokus-matkakirja-${id}.mp3`;
@@ -80,6 +95,22 @@ test('Horatio-runtime on exact 45/45 completed-kuittien final-avaimissa ja kesto
     assert.equal(horatioAanenKesto(`assets/audio/${nimi}`), kesto, id);
     assert.equal(horatioAanenKesto(`${AANI_JUURI}${polku}`), kesto, id);
     assert.equal(FOKUSVIRRAT[id]?.matkakirja?.aanite, `assets/audio/${nimi}`, id);
+  }
+});
+
+test('versioimattomat luennat: tavallinen audio/-polku (-v3), kesto aikaleimoista ja pakissa aanite', () => {
+  for (const [id, kesto] of VERSIOIMATTOMAT) {
+    const nimi = `puhe-fokus-matkakirja-${id}.mp3`;
+    const polku = `audio/puhe-fokus-matkakirja-${id}-v3.mp3`;
+    assert.deepEqual(HORATIO_TUOTANTO[nimi], { polku, kesto }, id);
+    assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, id);
+    assert.equal(horatioAanenKesto(`assets/audio/${nimi}`), kesto, id);
+    assert.equal(FOKUSVIRRAT[id]?.matkakirja?.aanite, `assets/audio/${nimi}`, id);
+    const aikaleimat = JSON.parse(readFileSync(
+      new URL(`../assets/aikaleimat/puhe-fokus-matkakirja-${id}.aikaleimat.json`, import.meta.url), 'utf8'));
+    assert.equal(aikaleimat.aani.nimi, `puhe-fokus-matkakirja-${id}-v3.mp3`, id);
+    assert.ok(kesto - aikaleimat.kesto / 1000 >= 0 && kesto - aikaleimat.kesto / 1000 < 0.05, id);
+    assert.equal(aikaleimat.teksti, FOKUSVIRRAT[id].matkakirja.teksti, id);
   }
 });
 

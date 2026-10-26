@@ -544,7 +544,7 @@
   min-height: 44px;
   margin-top: 0.2rem;
   padding: 0.62rem 2.1rem;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   border: 1.5px solid rgba(214, 168, 84, 0.92);
   background: linear-gradient(180deg, rgba(74, 51, 22, 0.94), rgba(44, 28, 10, 0.96));
   box-shadow:

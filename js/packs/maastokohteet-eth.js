@@ -153,7 +153,7 @@ export const MAASTOKOHTEET_ETH = [
       + 'valeovia ja valeikkunoita kuin monikerroksiseen taloon. Suurin niistä, 33-metrinen '
       + 'Suuri steela, kaatui todennäköisesti jo pystytettäessä. Kaupungin kirkko Mariam '
       + 'Seyon on Etiopian vanhin, ja perinne kertoo sen kappelissa säilytettävän liitonarkkia; '
-      + 'keisarit kruunattiin siellä katkaisemalla naru, jota "Aksumin tyttäret" pitivät. '
+      + 'keisarit kruunattiin siellä katkaisemalla naru, jota ”Aksumin tyttäret” pitivät. '
       + 'Yhteydet Bysanttiin katkesivat, kaupunki köyhtyi, ja 800-luvun lopulla se oli jo '
       + 'suurelta osin hylätty ja raunioina. Unesco otti Aksumin maailmanperintöluetteloon '
       + '1980. Brittiläinen Augustus Wylde kertoi 1897, että jokaisen rankkasateen jälkeen '
@@ -205,11 +205,11 @@ export const MAASTOKOHTEET_ETH = [
       maailmankartta: { x: 7237.6, y: 2900.2 },
     },
     teksti: 'Harar on muurien ympäröimä kaupunki Itä-Etiopian ylängöllä, ja Unescon mukaan sitä '
-      + '"pidetään islamin neljäntenä pyhänä kaupunkina": muurien sisällä on 82 moskeijaa, '
+      + '”pidetään islamin neljäntenä pyhänä kaupunkina”: muurien sisällä on 82 moskeijaa, '
       + 'joista kolme on 900-luvulta, ja 102 pyhäkköä. Muurin rakennutti emiiri Nur ibn '
       + 'Mujahid 1500-luvulla oromoiden hyökkäysten jälkeen, ja se toimi. Kaupungilla oli oma '
       + 'kieli ja oma raha, ja se löi omia kolikoitaan viimeistään 1789. Richard Francis Burton '
-      + 'kuvasi sen 1855 "kahvikaupan keskukseksi ja chat-kasvin syntysijaksi". Egypti valtasi '
+      + 'kuvasi sen 1855 ”kahvikaupan keskukseksi ja chat-kasvin syntysijaksi”. Egypti valtasi '
       + 'kaupungin 1875 ja jätti sen 1884; egyptiläisaikana ranskalainen runoilija Arthur '
       + 'Rimbaud asui siellä kauppahuoneiden asiamiehenä ja palasi 1888 käymään kauppaa '
       + 'kahvilla, myskillä ja nahoilla. Vanha kaupunki Harar Jugol on ollut maailmanperintöä '
@@ -238,7 +238,7 @@ export const MAASTOKOHTEET_ETH = [
       + '1400-luvun välille, ja ne merkitsevät todennäköisesti laajaa hautausmaata; kaivauksissa '
       + 'on löytynyt hautoja. Tiya on yksi Guragen alueen yhdeksästä megaliittipaikasta, joilla '
       + 'oli 1997 mennessä laskettu 118 kiveä. Paikalliset kutsuvat niitä nimellä Yegragn '
-      + 'Dingay, "Granin kivi", ja arvelivat niitä 1500-luvun valloittajan Ahmad ibn Ibrahimin '
+      + 'Dingay, ”Granin kivi”, ja arvelivat niitä 1500-luvun valloittajan Ahmad ibn Ibrahimin '
       + 'jäljiksi — mutta kivet ovat vuosisatoja vanhempia, ja yhdistelmä syntyi vain terien '
       + 'samannäköisyydestä. Unescon maailmanperintökohde 1980.',
     lahde: 'en-Wikipedia "Tiya (archaeological site)", johdanto-osa sekä osiot "Overview" ja '
@@ -250,7 +250,7 @@ export const MAASTOKOHTEET_ETH = [
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Miten luostariin päästään?',
-      'Mitä ovat "apinanpäät" aksumilaisessa rakennustavassa?',
+      'Mitä ovat ”apinanpäät” aksumilaisessa rakennustavassa?',
     ],
     korostukset: ['köysi|köyttä'],
     nappi: 'Luostari köyden päässä',
@@ -321,9 +321,9 @@ export const MAASTOKOHTEET_ETH = [
       + 'miljoonaa vuotta. Marraskuussa 1974 antropologi Donald Johanson huomasi rotkossa '
       + 'kyynärluun, sitten takaraivoluun, reisiluun, kylkiluita, lantion ja alaleuan; kahdessa '
       + 'viikossa koossa oli lähes 40 prosenttia yhdestä luurangosta. Se sai nimekseen Lucy — '
-      + 'leiriradiosta soi silloin Beatlesin "Lucy in the Sky with Diamonds" — ja lajinimekseen '
+      + 'leiriradiosta soi silloin Beatlesin ”Lucy in the Sky with Diamonds” — ja lajinimekseen '
       + 'Australopithecus afarensis. Seuraavana vuonna samasta paikasta löytyi 216 luuta noin '
-      + 'seitsemäntoista yksilöstä; löytöä kutsutaan nimellä "ensimmäinen perhe". Kolmisenkymmentä '
+      + 'seitsemäntoista yksilöstä; löytöä kutsutaan nimellä ”ensimmäinen perhe”. Kolmisenkymmentä '
       + 'vuotta myöhemmin joen toiselta puolelta Dikikasta löytyi kolmivuotiaan tytön luuranko, '
       + 'jolle annettiin nimi Selam, amharaksi rauha.',
     lahde: 'en-Wikipedia "Hadar, Ethiopia", johdanto-osa sekä osio "Paleontology" alaosioineen '
@@ -332,6 +332,7 @@ export const MAASTOKOHTEET_ETH = [
   {
     id: 'balenpuisto',
     nimi: 'Balen kansallispuisto',
+    nimio: 'Bale',
     tyyppi: 'elain',
     kysymykset: [
       'Mikä eläin on etiopiansusi?',

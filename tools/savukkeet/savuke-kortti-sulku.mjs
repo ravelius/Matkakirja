@@ -22,6 +22,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -76,7 +77,7 @@ const RUUDUT = [
   { nimi: '390', viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
   { nimi: 'iPad', viewport: { width: 1024, height: 1366 }, deviceScaleFactor: 2, hasTouch: true },
 ];
-const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 for (const ruutu of RUUDUT) {
   const ctx = await selain.newContext({ ...ruutu, nimi: undefined, serviceWorkers: 'block' });
   await ctx.addInitScript((d) => {

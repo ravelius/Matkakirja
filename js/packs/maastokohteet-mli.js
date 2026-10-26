@@ -234,7 +234,7 @@ export const MAASTOKOHTEET_MLI = [
       + '1800-luvun puolivälissä nimeä kantoi neljä kylää noin kahdentoista kilometrin '
       + 'matkalla; nykyinen kaupunki on niistä alimmalla, Ségou-Sikoron paikalla. Noin 1650 '
       + 'Kaladian Coulibaly kaatoi Koitan suvun vallasta ja perusti kuningaskunnan, ja hänen '
-      + 'lapsenlapsenlapsensa Mamary "Bitòn" Coulibaly kasvatti siitä 1700-luvun alussa '
+      + 'lapsenlapsenlapsensa Mamary ”Bitòn” Coulibaly kasvatti siitä 1700-luvun alussa '
       + 'bambaravaltakunnan, jonka pääkaupunki Ségou oli ja jolle Timbuktukin maksoi veroa. '
       + 'Vuonna 1766 entinen orja ja soturi Ngolo Diarra otti vallan ja aloitti vaurauden '
       + 'ajan; hänen sukunsa hallitsi 1800-luvun puoliväliin asti. Skotlantilainen Mungo Park '

@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- BETA-LINKKI (Natiiviseppä 12.10.2026; omistaja 17.4x/17.5x): omistaja lähettää beta-testaajille osoitteen matkakirja.app/beta,
+     koska matkakirja://-skeema ei ole napautettava kaikissa viestisovelluksissa. Sivu avaa skeeman matkakirja://beta, jonka natiivi
+     (juna 184, UI/Jakelu.cs) käsittelee: apurahasivu piiloon, apurahanapin ja testaajakoodin linssit ja vapaa liikkuminen pois;
+     ansaitut linssit ja matka säilyvät. Jos sovellusta ei ole, selain näyttää ohjeen. -->
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Matkakirja – beta</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+         background: #f3ead8; color: #2b2116; font: 18px/1.5 Georgia, "Times New Roman", serif; }
+  main { max-width: 32em; padding: 2em 1.5em; text-align: center; }
+  a { display: inline-block; margin-top: 1em; padding: .6em 1.4em; border: 1px solid #2b2116; border-radius: .4em;
+      color: #2b2116; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <p>Avataan Matkakirja… Jos mitään ei tapahdu, avaa tämä sivu iPhonella tai iPadilla, jossa Matkakirjan TestFlight-versio on asennettu.</p>
+  <a href="matkakirja://beta">Avaa Matkakirja</a>
+</main>
+<script>
+  // Heti sovellukseen; jos sovellusta ei ole, sivu ja ohje jäävät näkyviin.
+  window.location.href = 'matkakirja://beta';
+</script>
+</body>
+</html>

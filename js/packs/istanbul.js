@@ -213,9 +213,9 @@ export const ISTANBUL = {
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän karttaan on painettu Konstantinopoli. Kaupunki on sittemmin ehtinyt vaihtaa nimeä, valtakuntaa ja rakentaa sillan mantereiden välille. Minä olen vaihtanut hattua.',
-      '"Tämä on ainoa kaupunki, joka seisoo kahdella mantereella yhtä aikaa", isoisä kirjoitti, ja lisäsi ettei uskonut sitä ennen kuin näki. Väite pitää yhä. Nykyään mantereiden väli ylitetään metrolla, tunnelissa, salmen alta.',
+      '”Tämä on ainoa kaupunki, joka seisoo kahdella mantereella yhtä aikaa”, isoisä kirjoitti, ja lisäsi ettei uskonut sitä ennen kuin näki. Väite pitää yhä. Nykyään mantereiden väli ylitetään metrolla, tunnelissa, salmen alta.',
       'Isoisä laski kaupungissa olleen miljoona asukasta ja piti lukua käsittämättömänä. Nykyään heitä on toistakymmentä miljoonaa, ja jokainen heistä näyttää olevan matkalla samaan suuntaan kuin minä.',
-      '"Basaarissa on neljätuhatta puotia ja jokaisessa sama hinta kolmella eri tavalla sanottuna", isoisä valitti. Tinkiminen jatkuu ennallaan. Ainoa muutos on, että vaihtorahat annetaan puhelimella.',
+      '”Basaarissa on neljätuhatta puotia ja jokaisessa sama hinta kolmella eri tavalla sanottuna”, isoisä valitti. Tinkiminen jatkuu ennallaan. Ainoa muutos on, että vaihtorahat annetaan puhelimella.',
       'Isoisä nousi laivaan Kultaisen sarven suulla ja kirjoitti, että kalanhaju seuraa matkustajaa Wieniin asti. Sama laituri, sama haju, sama kala leivän välissä. Jotkin asiat eivät kaipaa parannusta.',
     ],
   },

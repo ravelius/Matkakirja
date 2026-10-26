@@ -598,8 +598,15 @@ export function jaaAlku(arvo) {
 // Poistetut ehdokkaat: väärin nimetty tai lisenssiä ei voi enää varmistaa
 // (esim. lataaja poistanut tilinsä). Vanha tallennettu valinta ohjataan
 // takaisin oletukseen, ettei peli jää soittamaan tuntematonta raitaa.
+// Perusosoitteina ilman #-merkintöjä (8.10.2026: vertailu tehdään jaaAlku(arvo).url:lla,
+// joten #voima-merkitty rivi ei aiemmin osunut koskaan).
 const POISTETUT = new Set([
-  'https://cdn.freesound.org/previews/160/160461_1-lq.mp3#voima=0.17',
+  'https://cdn.freesound.org/previews/160/160461_1-lq.mp3',
+  // CC BY-NC 4.0 (Freesound-API 8.10.2026; olivat vain oletuskoreissa ilman ehdokasriviä, joten lisenssiportti ei tuntenut niitä):
+  // basaari ja kaupunki (rucisko, cairo night out), meri (Benson_Arizona, Shore), savanni (tim.kahn, South African Thunderstorm)
+  'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3',
+  'https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3',
+  'https://cdn.freesound.org/previews/411/411996_7037-lq.mp3',
 ]);
 
 /*
@@ -649,7 +656,6 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/433/433002_138-lq.mp3#voima=2.69',
   ],
   basaari: [
-    'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
     'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23',
   ],
   aavikko: [
@@ -660,7 +666,6 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27',
   ],
   meri: [
-    'https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3#voima=0.82',
     'https://cdn.freesound.org/previews/635/635103_10065335-lq.mp3#voima=0.15',
     'https://cdn.freesound.org/previews/411/411509_1661766-lq.mp3#voima=0.15',
     'https://cdn.freesound.org/previews/573/573187_97550-lq.mp3#voima=0.54',
@@ -680,13 +685,11 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/504/504694_778707-lq.mp3#voima=2.4',
     'https://cdn.freesound.org/previews/612/612318_13563349-lq.mp3#voima=0.3',
     'https://cdn.freesound.org/previews/764/764981_15688695-lq.mp3#voima=0.86',
-    'https://cdn.freesound.org/previews/411/411996_7037-lq.mp3#alku=52&voima=0.92',
   ],
   ylanko: [
     'https://cdn.freesound.org/previews/543/543449_3377875-lq.mp3#voima=0.22',
   ],
   kaupunki: [
-    'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55',
     'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47',
     'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23',
   ],

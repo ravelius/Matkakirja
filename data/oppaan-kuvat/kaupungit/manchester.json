@@ -1,0 +1,343 @@
+{
+ "kaupunki": "manchester",
+ "kaupunkiQ": "Q18125",
+ "kohteet": [
+  {
+   "q": "Q2578415",
+   "nimi": "Manchesterin kaupungintalo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.47917,
+   "lon": -2.24417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manchester Town Hall from Lloyd St.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Town_Hall_from_Lloyd_St.jpg?width=1280",
+     "tekija": "Mark Andrew.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Town_Hall_from_Lloyd_St.jpg",
+     "selite": "Neogoottilainen kaupungintalo kellotorneineen on viktoriaanisen Manchesterin vauraudesta kertova maamerkki.",
+     "leveys": 1500,
+     "korkeus": 1095,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Manchester Town Hall windows.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Town_Hall_windows.JPG?width=1280",
+     "tekija": "J3Mrs",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Town_Hall_windows.JPG",
+     "selite": "Kaupungintalon julkisivua koristavat korkeat suippokaariset ikkunat ja tornit.",
+     "leveys": 2416,
+     "korkeus": 1907,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q971811",
+   "nimi": "Manchesterin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 53.48528,
+   "lon": -2.24472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manchester Cathedral 20140314.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Cathedral_20140314.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Cathedral_20140314.jpg",
+     "selite": "Myöhäiskeskiaikainen katedraali on Manchesterin vanhimpia rakennuksia.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Manchester Cathedral - Aerial - 2024-06-16 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Cathedral_-_Aerial_-_2024-06-16_02.jpg?width=1280",
+     "tekija": "瑞丽江的河水",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Cathedral_-_Aerial_-_2024-06-16_02.jpg",
+     "selite": "Ilmasta näkyy katedraalin torni ja sen ympärillä olevat kadut ja puutarhat.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1236267",
+   "nimi": "John Rylandsin kirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 53.4803,
+   "lon": -2.2487,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2025-06-07 John Rylands Library 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-06-07_John_Rylands_Library_01.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025-06-07_John_Rylands_Library_01.jpg",
+     "selite": "Punahiekkakivinen uusgoottilainen kirjasto valmistui Deansgatelle vuonna 1900.",
+     "leveys": 5800,
+     "korkeus": 5070,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2901355",
+   "nimi": "Chethamin kirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 53.48604,
+   "lon": -2.24337,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chetham's Library 2015 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chetham's_Library_2015_1.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chetham's_Library_2015_1.jpg",
+     "selite": "Keskiaikaisen kollegion pihaa ympäröivät hiekkakivirakennukset ja siisti puutarha.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chetham's Library - geograph.org.uk - 5445835.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chetham's_Library_-_geograph.org.uk_-_5445835.jpg?width=1280",
+     "tekija": "Anthony O'Neil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chetham's_Library_-_geograph.org.uk_-_5445835.jpg",
+     "selite": "Chethamin kirjasto on Britannian vanhimpia julkisia kirjastoja.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2638817",
+   "nimi": "Manchesterin taidegalleria",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 53.47861,
+   "lon": -2.24139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manchester Art Gallery - geograph.org.uk - 1748756.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Art_Gallery_-_geograph.org.uk_-_1748756.jpg?width=1280",
+     "tekija": "David Dixon",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Art_Gallery_-_geograph.org.uk_-_1748756.jpg",
+     "selite": "Klassisistinen taidegalleria on arkkitehti Charles Barryn 1820-luvulla suunnittelema.",
+     "leveys": 2638,
+     "korkeus": 1979,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Manchester 2009 084.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Manchester_2009_084.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Manchester_2009_084.jpg",
+     "selite": "Gallerian pylväsjulkisivu avautuu katukuvaan keskustassa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2087619",
+   "nimi": "Manchesterin museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.46639,
+   "lon": -2.23444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Manchester Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Manchester_Museum.jpg?width=1280",
+     "tekija": "DrPhoenix",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Manchester_Museum.jpg",
+     "selite": "Museorakennus on osa yliopiston viktoriaanista kampusta Oxford Roadin varrella.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1859573",
+   "nimi": "Manchester Victorian rautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.48742,
+   "lon": -2.24453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manchester Victoria station 19-10-2009 12-11-47kopie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Victoria_station_19-10-2009_12-11-47kopie.jpg?width=1280",
+     "tekija": "Paul Hermans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Victoria_station_19-10-2009_12-11-47kopie.jpg",
+     "selite": "Aseman koristeellinen julkisivu muistuttaa rautatieaikakauden Manchesterista.",
+     "leveys": 3423,
+     "korkeus": 2489,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3285343",
+   "nimi": "Manchesterin keskuskirjasto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 53.4781,
+   "lon": -2.24472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Central Library, St. Peter's Square, Manchester - geograph.org.uk - 8129704.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Library%2C_St._Peter's_Square%2C_Manchester_-_geograph.org.uk_-_8129704.jpg?width=1280",
+     "tekija": "habiloid",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Library%2C_St._Peter's_Square%2C_Manchester_-_geograph.org.uk_-_8129704.jpg",
+     "selite": "Pyöreä, kupolikattoinen kirjasto hallitsee St Peter’s Squarea.",
+     "leveys": 3943,
+     "korkeus": 2782,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2308772",
+   "nimi": "Castlefield",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 53.475,
+   "lon": -2.255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castlefield Basin - geograph.org.uk - 6441981.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castlefield_Basin_-_geograph.org.uk_-_6441981.jpg?width=1280",
+     "tekija": "habiloid",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castlefield_Basin_-_geograph.org.uk_-_6441981.jpg",
+     "selite": "Castlefieldin kanava-allas ja tiilinen teollisuusperintö ovat keskustan rauhallinen kolkka.",
+     "leveys": 2000,
+     "korkeus": 1492,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castlefield Viaduct at Deansgate Locks (8292100108).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castlefield_Viaduct_at_Deansgate_Locks_(8292100108).jpg?width=1280",
+     "tekija": "Tim Green from Bradford",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castlefield_Viaduct_at_Deansgate_Locks_(8292100108).jpg",
+     "selite": "Tiilinen rautatieviadukti kaartuu Deansgate Locksin ylitse.",
+     "leveys": 2420,
+     "korkeus": 1519,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q801156",
+   "nimi": "Liverpool Roadin rautatieasema",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 53.4772,
+   "lon": -2.2583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Liverpool Road.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Liverpool_Road.jpg?width=1280",
+     "tekija": "The original uploader was Pit-yacker at English Wikipedia.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Liverpool_Road.jpg",
+     "selite": "Vuonna 1830 avattu tiilinen asema on yksi maailman vanhimmista säilyneistä matkustaja-asemista.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019 at Manchester Liverpool Road - an exterior view.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_at_Manchester_Liverpool_Road_-_an_exterior_view.JPG?width=1280",
+     "tekija": "Geof Sheppard",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_at_Manchester_Liverpool_Road_-_an_exterior_view.JPG",
+     "selite": "Asemarakennus on nykyisin osa Tiede- ja teollisuusmuseota.",
+     "leveys": 1366,
+     "korkeus": 820,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Manchester from the Sky, 2008.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_from_the_Sky%2C_2008.jpg?width=1280",
+   "tekija": "Daniel Nisbet from Manchester, United Kingdom",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_from_the_Sky%2C_2008.jpg",
+   "selite": "Manchesterin tiiviisti rakennettu keskusta levittyy tasangolle.",
+   "leveys": 5616,
+   "korkeus": 3744,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Manchester Town Hall October 2010.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manchester_Town_Hall_October_2010.jpg?width=1280",
+   "tekija": "David Dixon",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manchester_Town_Hall_October_2010.jpg",
+   "selite": "Kaupungintalon torni kohoaa keskustan katujen yllä.",
+   "leveys": 1600,
+   "korkeus": 1200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -25,6 +25,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -77,7 +78,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 for (const nimi of (process.env.SELAIMET ?? 'webkit,chromium').split(',')) {
   const selain = nimi === 'webkit'
     ? await paketti.webkit.launch()
-    : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+    : await avaaChromium();
   const ctx = await selain.newContext({
     viewport: { width: 390, height: 844 }, deviceScaleFactor: 3, hasTouch: true, isMobile: nimi !== 'webkit' ? true : undefined,
     serviceWorkers: 'block',

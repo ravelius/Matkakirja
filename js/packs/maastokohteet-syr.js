@@ -149,7 +149,7 @@ export const MAASTOKOHTEET_SYR = [
       + 'linnasta konsentrisen eli kaksinkertaisen kehämuurin linnan, joka on yhä sen nykyinen '
       + 'muoto. Parhaimmillaan varuskunta oli noin 2 000 miestä, ja se pystyi perimään veroa '
       + 'laajalta alueelta; unkarin kuningas Andreas II kutsui linnaa vuonna 1218 '
-      + '"kristittyjen maiden avaimeksi". Mamelukkisulttaani Baibars valtasi sen vuonna 1271 '
+      + '”kristittyjen maiden avaimeksi”. Mamelukkisulttaani Baibars valtasi sen vuonna 1271 '
       + '36 päivän piirityksen jälkeen — kertoman mukaan väärennetyllä kirjeellä, joka näytti '
       + 'tulevan ritarikunnan suurmestarilta ja käski antautua. Linna ja Salah ed-Dinin linna '
       + 'ovat olleet maailmanperintökohteita vuodesta 2006.',

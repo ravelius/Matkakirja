@@ -211,7 +211,7 @@ export const FOKUSKOHTEET_GRC = [
     teksti: 'Kaupungin perusti makedonialainen kuningas Kassandros vuonna '
       + '315 eaa. ja nimesi sen vaimonsa Thessaloniken mukaan — tämä oli '
       + 'Aleksanteri Suuren sisarpuoli. Bysantin aikana kaupunkia '
-      + 'kutsuttiin "kanssapääkaupungiksi" (Symprotevousa) Konstantinopolin '
+      + 'kutsuttiin ”kanssapääkaupungiksi” (Symprotevousa) Konstantinopolin '
       + 'rinnalla. Ottomaanivallan 1430–1912 aikana täällä asui rinnakkain '
       + 'kristittyjä, muslimeja ja juutalaisia, ja 1500–1900-luvuilla se oli '
       + 'Euroopan ainoa juutalaisenemmistöinen kaupunki.',
@@ -226,6 +226,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Thessalonikin Rotunda ja sen viereen ottomaanien aikana '
         + 'pystytetty minareetti, kuvattuna 1995.',
       lahde: 'Fleur de Sel, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rotunda_mit_Minarett,_Thessaloniki_1995.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -259,6 +262,9 @@ export const FOKUSKOHTEET_GRC = [
       tiedosto: 'Marché à Patras.jpg',
       selite: 'Laïki eli katutori Agiou Nikolaoun kadulla Patrasissa.',
       lahde: 'Hélène Arnault, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:March%C3%A9_%C3%A0_Patras.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -296,6 +302,9 @@ export const FOKUSKOHTEET_GRC = [
       tiedosto: 'Ioannina, Greece.jpg',
       selite: 'Ali-pashan entinen palatsi Ioánninassa.',
       lahde: 'DJ Manos, Wikimedia Commons (CC BY 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ioannina,_Greece.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
     },
   },
   {
@@ -336,6 +345,7 @@ export const FOKUSKOHTEET_GRC = [
         + 'Kuvalaatta Étienne Reyn matkakirjasta, joka kertoo vuosien '
         + '1843–1844 matkasta.',
       lahde: 'Étienne Rey 1867, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maison_de_Capo_d\'Istria_sous_les_murs_de_Tirynthe_Nauplie_dans_le_golfe_d\'Argos_-_Rey_Etienne_-_1867.jpg',
     },
   },
   {
@@ -372,6 +382,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Knossoksen minolaisen palatsin raunioita Kreetalla, '
         + 'Iraklionin kupeessa.',
       lahde: 'Deror avi, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Armon_Knossos_P1050997.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -405,6 +418,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Olympoksen huippualuetta. Massiivissa on 52 huippua, joista '
         + 'korkein on Mytikas.',
       lahde: 'Dimitrios Smyrnaios, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Around_the_summit,_Mount_Olympus.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -437,6 +453,9 @@ export const FOKUSKOHTEET_GRC = [
       tiedosto: 'Mount Parnassus from Chalaxidi.JPG',
       selite: 'Parnassos Galaxidin suunnasta katsottuna.',
       lahde: 'Matthiasberlin, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mount_Parnassus_from_Chalaxidi.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -464,7 +483,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja '
       + 'kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin '
       + 'mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös '
-      + 'nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias '
+      + 'nimellä Pentadaktylos, ”viisisormi”. Korkein huippu, Profitis Ilias '
       + '(2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee '
       + 'yhä Spartan ja Kalamatan kaupunkien taivasrajaa.',
     lahde: 'en-Wikipedia "Taygetus", johdanto-osa sekä osiot '
@@ -479,6 +498,7 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Taygetos Spartasta katsottuna. Kuvalaatta Ranskan '
         + 'Morea-retkikunnan julkaisusta (1831–1838).',
       lahde: 'Guillaume Abel Blouet 1831, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_Tayg%C3%A8te_Vue_prise_de_Sparte_-_Blouet_Guillaume-abel_-_1831.jpg',
     },
   },
   {
@@ -519,8 +539,8 @@ export const FOKUSKOHTEET_GRC = [
       europe: { x: 621.1, y: 854.8 },
     },
     teksti: 'Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään '
-      + 'pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan '
-      + 'selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke '
+      + 'pitkin Kreikan mannerta ja tunnetaan puhekielessä ”Kreikan '
+      + 'selkärankana”. Vuoristo on geologisesti Dinaaristen Alppien jatke '
       + 'ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. '
       + 'Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa '
       + 'perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.',
@@ -532,6 +552,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Eteläisen Pindoksen harjanteita Katafidin huipulta '
         + 'Tzoumerkassa nähtynä.',
       lahde: 'Deyan Vasilev (Dido3), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Southern_Pindus_IMG_3592.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   /*
@@ -588,7 +611,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'jonka maankuoren liike on nostanut yli kahden kilometrin '
       + 'korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä '
       + 'vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni '
-      + 'vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen '
+      + 'vuoristojärvi Drakolímni eli ”lohikäärmejärvi”: paikallisen '
       + 'tarun mukaan järvien lohikäärmeet tappelivat heittelemällä '
       + 'toisiaan männyillä ja kivillä ja muotoilivat siinä koko '
       + 'maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa '
@@ -607,6 +630,9 @@ export const FOKUSKOHTEET_GRC = [
         + 'yläpuolella metsä loppuu ja jäljelle jää ruohoa ja kalliota; '
         + 'etualan puut ovat balkaninmäntyjä.',
       lahde: 'Deyan Vasilev (Dido3), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Smolikas_IMG_0118.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   /*
@@ -668,6 +694,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Psilorítis on Kreetan korkein huippu, 2 456 metriä, ja sen '
         + 'kyljessä noin 1 500 metrin korkeudessa aukeaa Idan luola.',
       lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Psiloritis_view_from_Thronos_01.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -700,6 +729,7 @@ export const FOKUSKOHTEET_GRC = [
       tiedosto: 'BoatGreecewaters.JPG',
       selite: 'Egeanmerta laivan kannelta katsottuna.',
       lahde: 'CuteHappyBrute, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:BoatGreecewaters.JPG',
     },
   },
   {
@@ -738,6 +768,7 @@ export const FOKUSKOHTEET_GRC = [
         + '(1888).',
       lahde: 'Emil Jakob Schindler 1888, Österreichische Galerie Belvedere, '
         + 'Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Emil_Jakob_Schindler_-_Das_Ionische_Meer_bei_Korfu_-_4020_-_%C3%96sterreichische_Galerie_Belvedere.jpg',
     },
   },
   /*
@@ -784,6 +815,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Kreetanmeren rantaa Chanián luona Kreetan pohjoisrannikolla. '
         + 'Saaren eteläpuolella alkaa jo toinen meri, Libyanmeri.',
       lahde: 'Ввласенко, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_coast_of_Crete_Sea_near_Chania._Crete,_Greece.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -822,6 +856,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Samothraki kohoaa Traakianmeren takaa, Dikellan rannalta '
         + 'Traakian mantereelta nähtynä.',
       lahde: 'ROFI44WIK, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Samothraki_view_from_Dikella_beach.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   /*
@@ -903,6 +940,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Venetikos yhtyy Aliákmonaaseen kallioisessa uomassa. '
         + 'Venetikos on joen suurimpia sivujokia.',
       lahde: 'TSB GR, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ven_to_Aliakmon.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -917,20 +957,20 @@ export const FOKUSKOHTEET_GRC = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Joki, jota purjehdittiin sisämaahan',
     /*
-     * 23,1655 E / 41,8012 N — piste, johon lehti latoi nimen
-     * "Strymónas". Kohta on Bulgarian puolella lähellä Kresnan
-     * solaa, koska siellä on uoman pisin yhtenäinen pätkä lehden
-     * laatikossa (ks. erän kommentti yllä). Lähin naapurikohde on
-     * Thessaloniki 46,8 lautayksikön päässä.
+     * 23,17 E / 41,21 N — Kerkinin tekojärven kohta Kreikan puolella.
+     * Karttavalon piste ei saa olla toisen maan alueella (kartan
+     * kokonaistarkistus 10.10.2026, kohta A3): aiempi piste 23,1655 E /
+     * 41,8012 N oli Bulgarian puolella lähellä Kresnan solaa, ja
+     * karttavalon maa oli GRC.
      */
     laudat: {
-      maailmankartta: { x: 6605.5, y: 1731.5 },
-      europe: { x: 656.0, y: 794.2 },
+      maailmankartta: { x: 6605.7, y: 1755.1 },
+      europe: { x: 656.1, y: 809.8 },
     },
     teksti: 'Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee '
       + '415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi '
       + 'on traakialaista perua ja juontuu kantaindoeurooppalaisesta '
-      + 'sanasta srew-, "virrata" — samasta juuresta tulee englannin sana '
+      + 'sanasta srew-, ”virrata” — samasta juuresta tulee englannin sana '
       + 'stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan '
       + 'Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden '
       + 'ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; '
@@ -952,6 +992,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Strymónas Serresin tasangolla. Taustalla kohoaa Belles- eli '
         + 'Kerkinivuoristo, jonka harjanteella kulkee Bulgarian raja.',
       lahde: 'Makedonas62, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%CE%A3%CF%84%CF%81%CF%85%CE%BC%CF%8C%CE%BD%CE%B1%CF%82_-_%CE%9C%CF%80%CE%AD%CE%BB%CE%BB%CE%B5%CF%82.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -979,7 +1022,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa '
       + 'alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on '
       + 'Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla '
-      + 'eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli '
+      + 'eaa.; se tarkoitti ”leveää”, ja traakian kielessä siitä tuli '
       + 'Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja '
       + 'Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta '
       + 'pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. '
@@ -1004,6 +1047,9 @@ export const FOKUSKOHTEET_GRC = [
         + 'kivisilta kahdellatoista holvillaan; se valmistui 1843, '
         + 'kolmisenkymmentä vuotta ennen isoisän matkaa.',
       lahde: 'Hamdigumus, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Meri%C3%A7_Nehri_ve_Meri%C3%A7_K%C3%B6pr%C3%BCs%C3%BC_2015.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -1057,6 +1103,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Korintin kanavan kapea vesitie ja sen yli kaartuva silta. '
         + 'Kannaksen läpi kaivettu ura on kuusi kilometriä pitkä.',
       lahde: 'JTE Dimandix, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Corinth_Canal_in_2019.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -1094,6 +1143,9 @@ export const FOKUSKOHTEET_GRC = [
         + 'saariryhmän keskellä. Satelliittikuva 7.1.2023.',
       lahde: 'Sentinel Hub / Copernicus Sentinel -aineisto, Wikimedia '
         + 'Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Santorini_(Thira),_site_of_the_Minoan_eruption,_Greece_-_7_January_2023_-_Flickr_-_SentinelHub.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
   },
   {
@@ -1116,7 +1168,7 @@ export const FOKUSKOHTEET_GRC = [
       europe: { x: 643.2, y: 881.5 },
     },
     teksti: 'Muinaiset kreikkalaiset pitivät Delfoita koko maailman '
-      + 'keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". '
+      + 'keskipisteenä — paikkaa merkitsi Omfalos-kivi, ”maailman napa”. '
       + 'Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä '
       + 'päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi '
       + 'juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. '
@@ -1131,6 +1183,9 @@ export const FOKUSKOHTEET_GRC = [
       tiedosto: '"Als Mittelpunkt der Welt" galt Delphi für die Menschen der Antike. 01.jpg',
       selite: 'Delfoin pyhäkköalueen raunioita Parnassoksen rinteellä.',
       lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%22Als_Mittelpunkt_der_Welt%22_galt_Delphi_f%C3%BCr_die_Menschen_der_Antike._01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa), maailman erä 27.8.2026 —
@@ -1152,7 +1207,7 @@ export const FOKUSKOHTEET_GRC = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Nuori lähettiläs odottaa Pythian vastausta tiellä, jota reunustavat aarreaitat ja pronssipatsaat.',
-      selite: 'Kuvituksen nuori lähettiläs toistaa mielessään kotikaupunkinsa '
+      selite: 'Kuvan nuori lähettiläs toistaa mielessään kotikaupunkinsa '
         + 'kysymystä, sillä Pythian vastausta ei saa pyytää uudelleen vain '
         + 'siksi, ettei siitä pidä. Pyhää tietä reunustavat aarreaitat, '
         + 'pronssipatsaat ja sotasaaliista annetut lahjat muistuttavat häntä '
@@ -1214,6 +1269,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Parthenon Akropoliin kalliolla — temppeli valmistui '
         + 'vuonna 432 eaa.',
       lahde: 'Steve Swayne, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
@@ -1301,6 +1359,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Erekhtheionin alkuperäisiä karyatideja Akropolis-museon '
         + 'salissa.',
       lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Caryatids_from_the_Erechtheion_on_the_Acropolis,_Acropolis_Museum,_Athens_(13889706087).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
     /*
      * KIERROKSET POISTETTU (omistaja 26.8.2026 ilta: "Jos ei
@@ -1375,6 +1436,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Olympian antiikin stadion. Kentän pituudesta tuli '
         + 'mittayksikkö stadion.',
       lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ancient_Olympia_Stadium_in_Greece_(51224128585).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). Kohde on OLYMPIA,
@@ -1438,6 +1502,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Kalamata-oliiveja. Tummanvioletti hedelmä poimitaan '
         + 'käsin, jotta se ei kolhiinnu.',
       lahde: 'Michael Fielitz, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalamataolives.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -1477,6 +1544,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Ermoupoli nousee satamasta rinteelle Syroksen saarella. '
         + 'Kaupunki oli 1800-luvulla Kreikan pääsatama.',
       lahde: 'Hans Peter Schaefer, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Syros_ermoupolis_140707.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -1518,6 +1588,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Epidauroksen teatterin katsomo. Kalkkikiviset istuinrivit '
         + 'ovat osa sen kuuluisaa akustiikkaa.',
       lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2007_Greece_Epidavros_theater.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -1543,7 +1616,7 @@ export const FOKUSKOHTEET_GRC = [
       + 'Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan '
       + 'voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla '
       + 'nimensä. Itse paikannimi on arkisempi: se tulee fenkolia '
-      + 'tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". '
+      + 'tarkoittavasta kreikan sanasta ja merkitsee ”fenkolien paikkaa”. '
       + 'Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille '
       + '192 ateenalaiselle.',
     lahde: 'en-Wikipedia "Marathon, Greece", johdanto, osio "History" ja '
@@ -1560,6 +1633,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Soros, kaatuneiden ateenalaisten kumpuhauta Marathonin '
         + 'tasangolla.',
       lahde: 'Tomisti, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Marathon_Tomb_of_the_Athenians_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -1611,6 +1687,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Antikytheran mekanismin kappaleita Ateenan kansallisessa '
         + 'arkeologisessa museossa.',
       lahde: 'Zde, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mechanism_of_Antikythera,_150-100_BC,_NAMA,_191434.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   /*
@@ -1708,6 +1787,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Pikkupöllö Samoksella. Laji on osittain päiväaktiivinen ja '
         + 'istuu usein näkyvillä keskellä päivää.',
       lahde: 'Hobbyfotowiki, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Little_owl_(Athene_noctua),.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -1772,6 +1854,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Reunuskilpikonna Euboian saarella. Raajojen etupuolta '
         + 'peittävät suuret suomut, ja aikuisen kilpi on lähes musta.',
       lahde: 'kernpanik, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Testudo_marginata_on_Evia_(Euboea)_island,_Greece.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   /*
@@ -1905,14 +1990,17 @@ export const FOKUSKOHTEET_GRC = [
      * 27.8.2026: CC0, Jebulon, 4315×2872, Restrictions tyhjä; kuva
      * katsottu silmin.
      */
+    // SUOJATARKASTUS 11.10.2026: pohjoisen sisäänkäynnin härkäfreskon
+    // jäljennös (Gilliéron/de Jong, suojattu) vaihdettu raunionäkymään.
     kuva: {
-      tiedosto: 'Knossos North entrance bull fresco.jpg',
-      lyhyt: 'Knossoksen pohjoinen sisäänkäynti: Arthur Evans pystytti punaiset pylväät uudelleen betonista.',
-      selite: 'Palatsin pohjoinen sisäänkäynti kaivettiin esiin '
-        + '1900-luvun alussa. Arthur Evans pystytti sen punaiset pylväät '
-        + 'uudelleen betonista ja teetti seinään jäljennöksen '
-        + 'härkäfreskosta, jonka alkuperäinen on Iraklionin museossa.',
-      lahde: 'Jebulon, Wikimedia Commons (CC0)',
+      tiedosto: 'Ruins of the Minoan Palace in Knossos.jpg',
+      lyhyt: 'Knossoksen minolaisen palatsin rauniot Kreetalla.',
+      selite: 'Knossoksen minolaisen palatsin rauniot Kreetan pohjoisrannikon '
+        + 'lähellä.',
+      lahde: 'Annatsach, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ruins_of_the_Minoan_Palace_in_Knossos.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
@@ -1988,6 +2076,9 @@ export const FOKUSKOHTEET_GRC = [
         + '-kukkulalla antiikin torin laidalla. Kaivetulta agorakentältä '
         + 'nousee sen alapuolella yhä rivi pylväänkantoja.',
       lahde: 'Jebulon, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Temple_of_Hephaestus_from_ancient_agora_Athens.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
     /*
      * MATKAKIRJAN IHME (ks. lohko tiedoston alussa). `kadonnut: false`:
@@ -2084,6 +2175,9 @@ export const FOKUSKOHTEET_GRC = [
       selite: 'Olympieionin pystyssä olevat pylväät ja niiden takana '
         + 'Akropolis.',
       lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:L\'Olympieion_(Ath%C3%A8nes)_(30776483926).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt tämän tiedoston
@@ -2097,7 +2191,7 @@ export const FOKUSKOHTEET_GRC = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Isä nostaa tyttärensä laskemaan pylväitä: 104 korinttilaista pylvästä todistaa temppelin valmiiksi.',
-      selite: 'Kuvituksen isä nostaa tyttärensä kivelle, jotta tämä voisi '
+      selite: 'Kuvan isä nostaa tyttärensä kivelle, jotta tämä voisi '
         + 'laskea pylväitä — tehtävä käy mahdottomaksi jo kauan ennen sataa. '
         + 'Lapselle metsä näyttää jatkuvan loputtomiin; aikuisille 104 '
         + 'korinttilaista pylvästä todistavat, että vuosisatoja kesken ollut '

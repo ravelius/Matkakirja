@@ -2,6 +2,841 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (210)",
+   "paiva": "2026-10-25",
+   "teksti": "Juoksupeli Viimeinen keisari – karkuteillä sai uuden ilmeen: uusi grafiikka ja logo sekä elävämpi alkulento. Kielletyn kaupungin kujia on levennetty ja kujaporttien ovet korjattu. Kartan saapumislento on aiempaa sulavampi."
+  },
+  {
+   "versio": "1.1 (209)",
+   "paiva": "2026-10-21",
+   "teksti": "Juoksupelissä on aurinkoinen päivä, muurien kivisokkelit ja lähempi kamera, joka nousee keisarin jäädessä talojen taakse. Vihreät pinnat eivät värise, käännökset kaartuvat sulavasti ja peli alkaa nykäyksittä. Lentopelin voi pysäyttää ☰-valikosta, ja raketti vie vähemmän muistia."
+  },
+  {
+   "versio": "1.1 (208)",
+   "paiva": "2026-10-20",
+   "teksti": "Juoksupeli alkaa Kielletyn kaupungin keskeltä: kamera lentää Meridiaaniportin läpi, ja Majesteetti-huudot kaikuvat. Pyyhkäisy kääntää joka kohdassa, esteet eivät ota kiinni, ja avauksen voi ohittaa. Louvren kyltit ja valot ovat kuin oikeassa museossa, ja ISS:n revontulet elävät."
+  },
+  {
+   "versio": "1.1 (207)",
+   "paiva": "2026-10-20",
+   "teksti": "Juoksupelissä on hurraahuudot, uudet äänet ja rikkoutuvia aarteita sirpaleineen ja pölyineen, ja iPadin nykäys poistui. Mona Lisan luo lähestytään yhtenä liikkeenä, ja museon valikot uudistuivat. Karttanostoissa on Auto-kuva ja värilliset pisteet, ISS:llä hehkuvat revontulet."
+  },
+  {
+   "versio": "1.1 (206)",
+   "paiva": "2026-10-20",
+   "teksti": "Kielletyn kaupungin juoksupeli on nyt iso sokkelo: juokse kapeilla kujilla, käänny risteyksissä ja väistä sivukujilta tulevia vartijoita, kunnes jäät kiinni. Palatsin yllä on pilvitaivas ja usva, ja horisontissa näkyvät katot ja Jingshan. Pelin alussa logo ei enää välähdä."
+  },
+  {
+   "versio": "1.1 (205)",
+   "paiva": "2026-10-19",
+   "teksti": "Pelien keskeneräisissä on Kielletyn kaupungin juoksupeli: juokse, liu'u ja hyppää palatsin läpi, ja Puyi huudahtaa jokaisesta rikkoutuvasta aarteesta. Kartan nimet väistävät Pulua, kutsua ja avointa korttia, ja iPhonen nostopalkki pysyy rivillä kortin ollessa auki."
+  },
+  {
+   "versio": "1.1 (204)",
+   "paiva": "2026-10-19",
+   "teksti": "ISS:n nopeusvipu kulkee myös taaksepäin, ja kuva otetaan ympyräikkunaan. Valikossa on Aarnin luettelo, Mona Lisan luo kävellään sujuvasti ja Pululta voi kysyä enemmän. Kamera liikkuu pehmeämmin, tekstitys on ⚙:ssa ja kuvien lähteet avautuvat linkkeinä."
+  },
+  {
+   "versio": "1.1 (203)",
+   "paiva": "2026-10-18",
+   "teksti": "ISS:n ohjaus tarkentui: kaasuvipu tarttuu siitä, mihin kosket, ikkuna kääntyy vedon suuntaan ja vedon pituuden mukaan, ja pikkumaapallo kääntyy rauhallisemmin. Kohteeseen lennetään pimeän kautta, ja tulossa olevat ilmiöt on merkitty. Louvren penkit ja kattoikkuna uudistuivat."
+  },
+  {
+   "versio": "1.1 (202)",
+   "paiva": "2026-10-18",
+   "teksti": "Peli näyttää logon heti käynnistyessä. Louvren saleissa on päivänvaloa ja ihmisiä, ja kultakehykset saivat syvyyttä. Kartalla linssikaupungit ovat pienoismalleja, uusina Grimetonin radioasema ja Big Ben, Kiinan taistelut kohoavat kumpuina ja ISS:ltä näkyy taas maa."
+  },
+  {
+   "versio": "1.1 (201)",
+   "paiva": "2026-10-18",
+   "teksti": "ISS:llä on uusi ohjauspöytä, kohdevalikko näkymän päällä, omat kuvat koko ruudulla nipistäen ja minipallossa vain näkyvät kohteet. Museossa katse seuraa sormea, tauluilla on kultakehykset ja Mona Lisan luo kävellään suoraan. Kiinan linssi tarkentui ja museon alku säästää akkua."
+  },
+  {
+   "versio": "1.1 (200)",
+   "paiva": "2026-10-17",
+   "teksti": "Louvre avautuu Pariisin kartalta Rodinin, Niken, Venuksen ja van Goghin kera, ja yöllä pyramidi hehkuu. ISS:llä on uusi ohjauspöytä, ja raketin alla aaltoilee elävä meri. Lontoossa, Prahassa ja Ateenassa kuuluvat kaupungin äänet, ja Kööpenhaminan Tivolista on kuvat."
+  },
+  {
+   "versio": "1.1 (199)",
+   "paiva": "2026-10-17",
+   "teksti": "Peli alkaa suoraan matkasta ilman isoisän unta, ja Kiinan dynastiat -linssi avautuu kaikille. Louvressa on Samothraken Nike ja Milon Venus, ja kaikki maalehdet luetaan ääneen. Kartta on taas seepiaa, ja ISS:n skanneri piirtää kaupungin oikean maaston."
+  },
+  {
+   "versio": "1.1 (198)",
+   "paiva": "2026-10-17",
+   "teksti": "Peli alkaa isoisän unella kadonneista aarteista. ISS:ltä näkyy Linnunrata, pienoispallossa kulkee aseman reitti ja kohdeluettelo on ruudukkona, ja raketissa Pulu liukuu narun varaan. Kertoja lukee painetun nimen, museon ympyrät ovat kevyemmät ja aloitusvihjeillä on pehmeä varjo."
+  },
+  {
+   "versio": "1.1 (197)",
+   "paiva": "2026-10-17",
+   "teksti": "Taidemuseon korteista on poistettu kehys ja niihin on lisätty kaiutin, ja kamera katsoo tauluja niiden keskikorkeudelta suoraan edestä. Linssi tai peli avautuu hiljaa, eikä lukijalla ole enää ääni- tai nopeusvalintaa. Intron kuvat liukuvat tasaisesti, ja Louvre sai uuden valon."
+  },
+  {
+   "versio": "1.1 (196)",
+   "paiva": "2026-10-16",
+   "teksti": "Raketti laukeaa yöllä elokuvamaisesti, ja ISS:ltä näkyvät salamat, tähdenlennot, revontulet ja auringonnousu. Prahan ja Ateenan kierrokset on hiottu, ja pallon köydet on sidottu korin nahkareunaan. Pulu kertoo merien ja revontulten tarinat ääneen, ja aloitusvihjeillä on varjot."
+  },
+  {
+   "versio": "1.1 (195)",
+   "paiva": "2026-10-15",
+   "teksti": "Pallo piirtyy nyt ilman ruutuja, ja Lontoon ja Ateenan kierroksilla historia kerrotaan äänellä. Pulu esittelee napautetun rakennuksen ”Mikä tämä on?” -napista ja kutsuu vapaalennolle Lontoossa, Prahassa ja Ateenassa. ISS-valikossa on kuvat, raketin savu ja valas uudistuivat."
+  },
+  {
+   "versio": "1.1 (194)",
+   "paiva": "2026-10-15",
+   "teksti": "Prahan ja Ateenan kuumailmapallokierrokset avautuvat kertojan äänin. ISS-nousussa maasto näkyy tarkkana 150 km:n päähän ja meri jatkuu horisonttiin. Kööpenhaminan maanpinta tarkentui, ja museon salilista aukeaa heti pyyhkäisyn jälkeen."
+  },
+  {
+   "versio": "1.1 (193)",
+   "paiva": "2026-10-15",
+   "teksti": "Ranskan taidemuseossa kertoja kertoo 51 teoksesta lähikuvin. Laudalle tulevat Bern, Bratislava ja Podgorica, ja kortit saavat lasipohjan. ISS:n skanneri kirjoittaa mekaanisella äänellä, Kuuta voi kuvata teleobjektiivilla, valas taipuu hypyssä ja Prahan vesi kimmeltää."
+  },
+  {
+   "versio": "1.1 (192)",
+   "paiva": "2026-10-15",
+   "teksti": "ISS-lennolla lähtö kaartaa S-käyränä, Sojuz-radio soi, valas hyppää äänineen ja lokit kaartelevat. Cupolassa on aseman skanneri, vuorokauden- ja vuodenaika sekä lasipohjaiset paneelit. Lontoossa lyö Big Ben, laudalla on 8 uutta pysäkkiä ja museo zoomaa kertojan kohtiin."
+  },
+  {
+   "versio": "1.1 (191)",
+   "paiva": "2026-10-14",
+   "teksti": "Cupolassa on nyt kohdelista ja Palaa maanpinnalle -nappi, paikannimet pysyvät pystyssä ja pienoispallo seisoo telineessä. Lontoossa on uusi pallokierros Greenwichiin, ja Prahan ja Ateenan kierrokset uudistuivat. Kartan tekstit ovat luettavampia ja raketti erottuu vastavalossa."
+  },
+  {
+   "versio": "1.1 (190)",
+   "paiva": "2026-10-14",
+   "teksti": "ISS-lento uudistui: raketti näkyy koko matkan, Max Q jysähtää, Andøyan meressä hyppää valas ja Cupolasta näkyvät yövalot ja Kuu. Taidemuseoon tuli Auto Zoom, lipuilla on varjot ja isoisä kertoo Kolmesta veljeksestä. Uusi peli alkaa puhtaalta pöydältä."
+  },
+  {
+   "versio": "1.1 (189)",
+   "paiva": "2026-10-14",
+   "teksti": "Raketti Andøyan oikealta alustalta: uusi lento, savu, valo ja avaruusasema; ISS-kupoli: oikea paikka, kertoja ja ylilennot. Ranskan taidemuseo kertojineen, teokset oikean värisinä; museoon tauko, nuolet ja uusi valikko. Rijksmuseum kartalla, ja Tavlin ja Myllyn tavoite ääneen."
+  },
+  {
+   "versio": "1.1 (188)",
+   "paiva": "2026-10-13",
+   "teksti": "Uutta:\n– saapumiseen kaupunkien näköalat ja kulkuneuvot\n– museo: napautus aloittaa kerronnan, i-merkki kehyksellä, saliin ovelta, Vermeer ei ylivalotu\n– ISS:n Pulu siluettina, napautus tuo ikkunaan\n– vesi ilman laikkuja 6 kaupungissa\n– Tukholman maasto tarkempi"
+  },
+  {
+   "versio": "1.1 (187)",
+   "paiva": "2026-10-13",
+   "teksti": "Olavinlinnassa voi kulkea keittiössä, porttikäytävässä, pikkupihalla, linnantuvassa ja voudin salissa. Kööpenhaminaan tuli kuumailmapallokierros, ja aarretehtäviä on nyt 63 kaupungissa. Lisäksi uusi sävykäsittely, liikennettä useisiin kaupunkeihin, museon i-kohdat ja shakkikello."
+  },
+  {
+   "versio": "1.1 (186)",
+   "paiva": "2026-10-13",
+   "teksti": "Wienin kahvilassa pelataan shakkia 3D-laudalla, ja taidemuseossa on uudet salit, salikuvat ja vapaa kävely. Kipin metrokarttaa voi selata sormella, ja pallokisa päättyy kaikille, kun ensimmäinen on maalissa. Olavinlinnan asut on viimeistelty."
+  },
+  {
+   "versio": "1.1 (185)",
+   "paiva": "2026-10-12",
+   "teksti": "Kipin pallokisassa on omat kuvakkeet, eikä kartalle jää enää aukkoja kipistä palatessa. Muiden maiden eläinmerkit eivät enää näy väärässä paikassa, ja pallon valikosta voi valita Googlen 3D-laatat."
+  },
+  {
+   "versio": "1.1 (184)",
+   "paiva": "2026-10-12",
+   "teksti": "Kuumailmapallolla kilpaillaan nyt muita pelaajia vastaan: valikosta Aloita kisa, ja Pulu selostaa. Uutta myös pallokierrokset Lontoossa ja Prahassa, aarretehtävät kymmeneen kaupunkiin ja Pulu raketissa uusissa asennoissa. ISS-ohjaamosta pääsee aina pois Puluun napauttamalla."
+  },
+  {
+   "versio": "1.1 (183)",
+   "paiva": "2026-10-12",
+   "teksti": "Matka alkaa Euroopasta, ensimmäinen aarre on Kolme veljestä -riipus ja alkuraha on £300. ISS:lle lennetään raketilla Andøyasta Pulu kyljessä. Uutta myös aarretehtävät, lautapelien opastus, taidehalli ja yhtenäiset kohdekartat, ja kaupunkiin saapuminen on sujuvampi."
+  },
+  {
+   "versio": "1.1 (182)",
+   "paiva": "2026-10-11",
+   "teksti": "Matka alkaa Ateenasta, Pariisista tai Tukholmasta uudella introlla, ja Pulu opastaa alussa. Olavinlinnaa pääsee pelaamaan nostokortista, ja kukkaro näyttää rahan muutokset. Taidemuseossa teokset näkyvät läheltä, ja uusia linssejä löytyy viidestä kaupungista."
+  },
+  {
+   "versio": "1.1 (181)",
+   "paiva": "2026-10-11",
+   "teksti": "Olavinlinnassa kävellään laiturilta linnaan ja tyrmästä pääsee pois, ja taidemuseossa on 64 teosta ja uusi kertoja. Pariisi alkaa isoisän puheella ja kippi toimii pystyssä. Kaupungeissa on puita, maakortista avautuu 14 pääkaupungin lehti ja iPad lämpenee hitaammin."
+  },
+  {
+   "versio": "1.1 (180)",
+   "paiva": "2026-10-10",
+   "teksti": "Pariisi alkaa uudella esittelyllä nykykuvin ja musiikilla, kierroksella on kippikompassi ja maan kortissa pääkaupungin kuvia. Olavinlinnassa liikutaan kelluvalla tapilla ja vene on kuiva, ja taidemuseon lattia heijastaa. Latausruudulla soi musiikki, ja Pulu tuntee 40 maata."
+  },
+  {
+   "versio": "1.1 (179)",
+   "paiva": "2026-10-10",
+   "teksti": "Pariisi alkaa esittelyllä nykykuvin ja omalla musiikilla, ja uusi taidemuseo näyttää Alankomaiden mestarit. Maan kortissa on pääkaupunki, latauspallo liikkuu tuulessa ja kaupungeissa on ilmaperspektiivi. Olavinlinna on viimeistelty, ja Pulu tuntee Norjan, Slovakian ja Slovenian."
+  },
+  {
+   "versio": "1.1 (178)",
+   "paiva": "2026-10-10",
+   "teksti": "Kohdemerkit pysyvät pallolla pyöriessä, kehittäjän kaupunkivalinta toimii ja kaupunkipallo avaa Pariisin. Pariisin harmaa kappale poistui, eikä Pulu nouse yläpalkkiin. Kartalla ovat Euroopan puuttuneet pääkaupungit ja minivaltiot, ja Olavinlinnan reitti ja tähtilinssi korjattiin."
+  },
+  {
+   "versio": "1.1 (177)",
+   "paiva": "2026-10-10",
+   "teksti": "Korjattu: pallon latauskuva liikkuu ja siinä on Poistu-nappi, saapumispaperi ulottuu ruudun yläreunaan ja Pariisin pallon esittely toimii. Olavinlinnan esittely näyttää linnan vaiheet kertojan kanssa, ja pilvet ja vedet ovat kauniimmat. Ikärajan voi tiukentaa Asetuksista."
+  },
+  {
+   "versio": "1.1 (176)",
+   "paiva": "2026-10-10",
+   "teksti": "Peli toimii nyt Unity 6.7 -pelimoottorilla. Olavinlinnan esittely näyttää linnan nykyasussa kartiokattoineen, ja Pulu tuntee 25 maata. Pariisin ja Tukholman yöhön syttyvät maamerkkien ja ikkunoiden valot, ja kahviloista ja pyöristä kuuluu ääniä."
+  },
+  {
+   "versio": "1.1 (175)",
+   "paiva": "2026-10-10",
+   "teksti": "Peli toimii nyt Unity 6.7 -pelimoottorilla. Olavinlinnan esittely näyttää linnan nykyasussa kartiokattoineen, ja Pulu tuntee 25 maata. Pariisin ja Tukholman yöhön syttyvät maamerkkien ja ikkunoiden valot, ja kahviloista ja pyöristä kuuluu ääniä."
+  },
+  {
+   "versio": "1.1 (174)",
+   "paiva": "2026-10-10",
+   "teksti": "Pallolennolla poltin kuuluu ja kori keinahtaa lähtiessä, ja Pariisin ja Tukholman yövaloissa näkyvät oikeat katuvalot. Olavinlinnan tornit ovat vuoden 1499 asussa, ja huoneissa kuuluvat omat äänet. Pulun keskustelun voi kiinnittää yläreunaan, ja loppumusiikki jatkuu katkotta."
+  },
+  {
+   "versio": "1.1 (173)",
+   "paiva": "2026-10-10",
+   "teksti": "Pariisi alkaa nykyajan introlla, ja Pariisissa ja Tukholmassa kuuluvat kirkonkellot, suihkulähteet ja satamavesi. Olavinlinnan historiassa linna rakentuu vuosi vuodelta, ja linnan väki puhuu kasvotusten. Varustekuvat ovat valokuvamaisia, eikä peli enää kaadu iPadilla Pariisissa."
+  },
+  {
+   "versio": "1.1 (172)",
+   "paiva": "2026-10-09",
+   "teksti": "Olavinlinna: historia elokuvana, uusia esineitä, aukeavat ovet ja äänet. Pallo: sadekuurot, märät kadut, salamat, iltaikkunat, Pariisin jokilaivat ja saapumismusiikki, tarkemmat Notre-Dame ja Kuninkaanlinna. Uudet varustekuvat, iPhone pystyssä ja nimi on nyt Matkakirja."
+  },
+  {
+   "versio": "1.1 (171)",
+   "paiva": "2026-10-09",
+   "teksti": "Korjattu kaatuminen pallon tauolla, ja pallossa kaupunkien äänimaisema, omat 3D-mallit kaupungin valossa ja lyhyempi laivojen vana. Olavinlinna: alussa valinta pelin ja linnan historian välillä, historia myös valikosta. Lautapeleihin uudet äänet."
+  },
+  {
+   "versio": "1.1 (170)",
+   "paiva": "2026-10-09",
+   "teksti": "Kuumailmapallo: vapaa lento ja paluu kierrokselle, vaihtuva sää (kuurot, märät kadut), sininen hetki ja kaupungin valot, linnut, lentokoneet, laivojen vanat, kompassi, elokuvamainen sävy ja omia 3D-malleja. Olavinlinna: harhautusheitto lentää katseen suuntaan."
+  },
+  {
+   "versio": "1.1 (169)",
+   "paiva": "2026-10-09",
+   "teksti": "Olavinlinna aukeaa taas, kertoja ei puhu pelin päälle ja linnan pinnat ja vaatteet ovat tarkemmat. Kuumailmapallo lentää matalammin ja rauhallisemmin, kertoo jo lennon aikana ja kiertää kohteita. Kuvat tulevat reunalle, yöllä valikot ovat tummat ja mikseri löytyy pallosta."
+  },
+  {
+   "versio": "1.1 (168)",
+   "paiva": "2026-10-09",
+   "teksti": "Kuumailmapallo lentää matalammin ja pehmeämmin, ja käsiohjaus on rauhallisempi. Pariisin ja Tukholman pallot näkyvät taas kartalla, Seinellä liikkuu jokilaivoja ja taivas on ilman raitoja. Sää- ja aikavalikko sopii vaakanäyttöön, ja Olavinlinnassa on tarkemmat pinnat."
+  },
+  {
+   "versio": "1.1 (167)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinnan 10 huonetta ovat pelattavissa kehittäjätilassa: liekit heittävät varjoja, sade kastelee pinnat ja jalat osuvat portaisiin. Pallon korista näkee ylös kupuun, Tukholman ja Pariisin vedet heijastavat taivasta, muut kaupungit ovat harmaina ja äänet säätyvät Mikseristä."
+  },
+  {
+   "versio": "1.1 (166)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinna on nyt vuoden 1499 asussa. Kuumailmapallo lentää pehmeämmin ja ohittaa sumennetut kohteet korkeammalta, ja sade, lumi ja utu näkyvät selvemmin ja ukkonen kuuluu. Latauskuva lähentyy hitaasti."
+  },
+  {
+   "versio": "1.1 (165)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinnan kappelissa ratkaistaan valoarvoitus ja esineitä käännetään vetämällä. Kuumailmapallo lipuu kohti seuraavaa kohdetta, ja ☾-napista valitaan päivä tai yö ja sää tai LIVE eli kaupungin todellinen aika ja sää. Latauskuva täyttää ruudun myös laitetta käännettäessä."
+  },
+  {
+   "versio": "1.1 (164)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinnan ensimmäinen pelattava pala: hiivi omin silmin veneestä kappeliin ja vältä vartijat, tai päädyt tyrmään. Kuumailmapallo lentää ja laskeutuu pehmeästi, ja kuvien tekijät ovat uudella Lähteet-sivulla. ISS-kyydissä on Euroopan kevään satelliittikuvat."
+  },
+  {
+   "versio": "1.1 (163)",
+   "paiva": "2026-10-07",
+   "teksti": "Korjauksia edelliseen: kuumailmapallon kori ja köydet näkyvät koko oppaan ajan, ja kaupungin kerronta alkaa vasta latauksen jälkeen. Rakennukset tarkentuvat pysähdyksissä, kirkonkello lyö oikein ja yksityiskohtakuvien tekstit ja asettelu on korjattu."
+  },
+  {
+   "versio": "1.1 (162)",
+   "paiva": "2026-10-07",
+   "teksti": "Kuumailmapallo on valmis: kaupunkiin siirryttäessä näkyy latauskuva, kerronnassa yksityiskohtakuvia ja 31 kaupungissa äänetön esitys. Aloituslento alkaa pehmeästi ilman yöpuolta, ja ISS-kyydissä Eurooppa näkyy syksyn värein. Apurahakortissa on kuvat ja Valmiit linssit -nappi."
+  },
+  {
+   "versio": "1.1 (161)",
+   "paiva": "2026-10-07",
+   "teksti": "Kuumailmapalloja voi taas napauttaa kosketuksella ja Macilla, ja niitä näkyy vain nykyisessä maassa. Introssa kuuluu kirjoituskone, ja metrolinja on vasemmassa yläreunassa. Macilla kuva ei repeile ja peli lepää taustalla; kehittäjä- ja testaajatila avautuvat koodilla."
+  },
+  {
+   "versio": "1.1 (160)",
+   "paiva": "2026-10-07",
+   "teksti": "Kaupungeissa kuuluu nyt oma äänimaisema, ja kirkonkellot lyövät tasatunnein. Elävän oppaan nimi on nyt Kuumailmapallo, ja apurahakortti kertoo hankkeesta ja kuvien tekijöistä. ISS-ohjaamon näytössä paikannimet ovat suomeksi, ja iPadin vaakanäkymässä paneeli seisoo jalan päällä."
+  },
+  {
+   "versio": "1.1 (159)",
+   "paiva": "2026-10-07",
+   "teksti": "Kartalla on kuumailmapallo jokaisessa kaupungissa, josta on tarkka 3D-näkymä. Napauta palloa, niin opas avaa suoraan sen kaupungin. Kaupungissa opas liikkuu vain kaupungin sisällä, eikä valikossa ole Vaihda kohde -kohtaa."
+  },
+  {
+   "versio": "1.1 (158)",
+   "paiva": "2026-10-07",
+   "teksti": "Oppaalta voi nyt pyytää kohdetta toisesta kaupungista, ja se lentää suoraan perille. Kuvakortti vaihtuu kaupungin mukana. Varsova jäi pois, koska sen 3D-kartasta puuttuu paloja."
+  },
+  {
+   "versio": "1.1 (157)",
+   "paiva": "2026-10-07",
+   "teksti": "Elävä opas vie nyt vain kaupunkeihin, joissa on tarkka 3D-malli, ja paikan valinta näyttää ne Euroopan maittain. Suosikeissa on vain näiden kaupunkien kohteita. Jos pyydät muuhun kaupunkiin, opas kertoo, ettei paikkaa ole vielä kuvattu tarpeeksi tarkasti."
+  },
+  {
+   "versio": "1.1 (156)",
+   "paiva": "2026-10-07",
+   "teksti": "Linnan hahmot elehtivät puheen tahdissa, ja kuulijat nyökkäävät. Oppaassa on Seuraava-nappi, latauksen ajan näkyy kuva, iPadin ohjaimet ovat lähempänä peukaloita ja lennot ovat pehmeämmät. Eiffel-torni ja muut korkeat kohteet näkyvät kokonaan, ja illalla kaupunki valaistuu."
+  },
+  {
+   "versio": "1.1 (155)",
+   "paiva": "2026-10-07",
+   "teksti": "Kiinnitetyn noston luenta jatkuu nyt oikeasta kohdasta, ja kiinnitetty palkki näyttää koko otsikon suurennuslasin vieressä. Noston yläriville tuli kategoriarivi ja etenemispalkki koko nostolle. Avaruudesta katsottuna pilvet ja merisumu ovat pehmeämmät."
+  },
+  {
+   "versio": "1.1 (154)",
+   "paiva": "2026-10-06",
+   "teksti": "Linssivalikossa on nyt kuvat, ja kaupunkinäkymän sävy seuraa paikallista vuorokaudenaikaa. Oppaan nappirivi piiloutuu väkäsen alle, kuvanappi on pienempi ja noston ylärivi on selkeämpi. Opas puhuu ilman katkoja, ja ISS-ikkunan meri on yhtenäisen sininen."
+  },
+  {
+   "versio": "1.1 (153)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas vastaa nyt kysymyksiin ja löytää kohteet kaikissa kaupungeissa; uutena ”Mikä tämä on?” ja vuorokausinappi. Kaupunki näkyy saapuessa nopeasti ja tarkentuu, eikä karttalähteiden rivi enää välähdä. Peli alkaa mustalla ruudulla ilman ylisuurta logoa."
+  },
+  {
+   "versio": "1.1 (152)",
+   "paiva": "2026-10-06",
+   "teksti": "ISS-kameran juliste on uudistettu: uusi ikkunakehys, logo avaruudessa, pilvet sivuilla ja sinisemmät sävyt. iPadin ohjaamon ikkunassa näkyy enemmän kehystä, ja satelliittikuvien virheitä on korjattu. Opas lataa kaupunkikuvan uudelleen, jos Googlen palvelu ruuhkautuu."
+  },
+  {
+   "versio": "1.1 (151)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas puhuu loppuun asti, näyttää kohteet lähempää ja keskeyttää kierroksen vastatakseen kysymykseesi; kierroksen voi jatkaa tai lopettaa. Peli alkaa mustalla ruudulla ja logolla. Maakunnat avautuvat nostokorttina, ja kuvien tekijät näkyvät korteissa."
+  },
+  {
+   "versio": "1.1 (150)",
+   "paiva": "2026-10-06",
+   "teksti": "Peli saa suurilla iPadeilla käyttöönsä enemmän muistia, mikä vähentää kaatumisia raskaissa näkymissä."
+  },
+  {
+   "versio": "1.1 (149)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas käyttää suurilla iPadeilla selvästi vähemmän muistia. Nostojen Kysy avaa Pulun chatin matalana kohteen omiin kysymyksiin, pin nostaa chatin yläreunaan, ja Pulun luennan voi pysäyttää. Noston tekstiä voi napauttaa ilman, että kortti sulkeutuu."
+  },
+  {
+   "versio": "1.1 (148)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävän oppaan kanssa voi nyt jutella puhumalla tai kirjoittamalla, ja toiseen kaupunkiin siirrytään latausruudun kautta. Kysy tarjoaa valmiita kysymyksiä, ja Liiku näyttää kaupungin tärkeimmät kohteet ja kaupunkikierroksen. ISS-ohjaamossa on uusi paneeli ja portaaton nopeus."
+  },
+  {
+   "versio": "1.1 (146)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas tarjoaa kohteita heti, sanoo nimet Williamin äänellä, lentää nopeammin ja pysähtyy tauolle. Kohteista on useita kuvia, kaupunki vaihtuu yhdellä napautuksella, eikä kartalle jää tummaa vyötä. Pin kiinnittää luennan, nimikyltit häviävät, ja ISS-sauva ei vedä vasemmalle."
+  },
+  {
+   "versio": "1.1 (145)",
+   "paiva": "2026-10-05",
+   "teksti": "Elävää opasta ohjataan nyt ruudun kulmien ohjaimilla: kierrä kohdetta, nouse tai tule lähemmäs. Kohde korostuu renkaalla tai reitillä. Olavinlinnan kappelissa puhujan kasvot näkyvät ja hahmot elehtivät, ja ISS-kuvissa on oikeat pilvet."
+  },
+  {
+   "versio": "1.1 (144)",
+   "paiva": "2026-10-05",
+   "teksti": "Uutta: elävä opas, joka esittelee kaupunkeja kaikkialla maailmassa reaaliajassa, ensimmäisenä Kööpenhaminan. Ohjaa sitä vastausnapeilla tai puheella. ISS-ohjaamo on uudistettu, lukijana on William ja Olavinlinna latautuu latauspalkin kanssa."
+  },
+  {
+   "versio": "1.1 (143)",
+   "paiva": "2026-10-05",
+   "teksti": "Uusi minipeli Tavli kolmella laudalla. Olavinlinna latautuu nopeammin, kertoja ja äänet soivat ilman katkoja, ja valaistus ja rantametsä ovat uudet. Linssivalikko on selkeämpi, ja auringon kiilto näkyy vain vedessä."
+  },
+  {
+   "versio": "1.1 (142)",
+   "paiva": "2026-10-05",
+   "teksti": "Jatka matkaa -napin jälkeen Pulu ei enää lue, ja lukijan äänen voi vaihtaa kesken lukemisen. ISS-kameraan tuli 15 eurooppalaista kohdetta, ja suuret kuvat avautuvat luotettavasti. Olavinlinnan kamera liikkuu pehmeästi, kertoja kuuluu selvästi ja Myllyssä on äänet."
+  },
+  {
+   "versio": "1.1 (141)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna aukeaa iPhonella vaakana. Huoneiden nimilaput ja kortit ovat nyt keskiaikaisia käsikirjoituksia: laput tulevat näkyviin kohteiden kohdalle sitä mukaa kuin lähestyt, ja kortti avautuu selitettävän kohteen viereen. Huoneet-valikko mahtuu vaakaruudulle."
+  },
+  {
+   "versio": "1.1 (140)",
+   "paiva": "2026-10-04",
+   "teksti": "Pelit-välilehti linssinapin alla: pelatut minipelit avautuvat sieltä. Ajattelijoiden päät näkyvät vain heidän omassa maassaan, ja astronauttien kuvissa AUTO ei aloita luentaa alusta. Olavinlinna lataa päivityksissä vain muuttuneet tiedostot."
+  },
+  {
+   "versio": "1.1 (139)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna: huoneen ensimmäinen repliikki ei enää ala kahdesti, Huoneet-valikon napautus ei enää avaa alla olevaa huonetta, ja nimiruudun otsikko pysyy paikallaan. Cupola: Maa näkyy terävänä heti mustan ruudun jälkeen myös ensimmäisellä avauksella."
+  },
+  {
+   "versio": "1.1 (138)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna latautuu valmiiksi ennen esittelyä: nimiruudussa kerrotaan, että linna latautuu. Kun olet Suomessa tai linnan merkki on näkyvissä, linna ladataan valmiiksi taustalla, ja se aukeaa muutamassa sekunnissa."
+  },
+  {
+   "versio": "1.1 (137)",
+   "paiva": "2026-10-04",
+   "teksti": "Jatka matkaa -napin jälkeen peli on hiljaa, kunnes kosket ruutuun. ISS-linssissä on Pulun valikko ja Kysy Pululta -kysymykset, ja Cupola avautuu suoraan mustan ISS-ruudun kautta, ja kohteen valinta säilyttää katseen suunnan. Olavinlinna nousee sumusta vasta latauduttuaan."
+  },
+  {
+   "versio": "1.1 (136)",
+   "paiva": "2026-10-04",
+   "teksti": "Jatka matkaa ei enää käynnistä Pulun luentaa, vaan matka jatkuu kuin Ohita olisi painettu. Linssin avaaminen katkaisee nyt kaiken äänen, eikä luenta jatku linssin sulkeuduttua."
+  },
+  {
+   "versio": "1.1 (135)",
+   "paiva": "2026-10-04",
+   "teksti": "Ajattelijoissa intron leikkaukset osuvat nyt musiikin iskuihin, taustarivit ovat luettavia, savu on pehmeä ja kaikukuvat selkeitä hahmoja. ISS-kameran minipallo pysyy paikallaan, kuvaa voi zoomata 8× ja Cupolan nopea käännös ei enää välähdä. Tekijätiedoissa on Ajattelijat-osio."
+  },
+  {
+   "versio": "1.1 (134)",
+   "paiva": "2026-10-04",
+   "teksti": "Astronautin kameran minipallo pyörii sormella ja selaa kohteita tuntuvin napsahduksin. Ohjausnapit yhtenäisiksi neliöiksi koko pelissä. Kermakartan turhat haut pois."
+  },
+  {
+   "versio": "1.1 (133)",
+   "paiva": "2026-10-03",
+   "teksti": "Ajattelijat: Sokrates ja Marcus Aurelius uudella mystisellä alulla (kehittäjätila). Myllyyn kolme aikakauden lautaa ja uudet äänet; iPadille Pulu ja vaakavalikko. Natriumoranssit yövalot, linssien hampurilaisvalikko ja linnan puheiden latauskorjaus."
+  },
+  {
+   "versio": "1.1 (132)",
+   "paiva": "2026-10-03",
+   "teksti": "Ajattelijoiden alkukuvat ovat varjopuolelta, alussa kuuluu uusi kytkinääni, ja ✕ tulee esiin napautuksesta. Sokrateella ja Marcuksella on kolme kierrosta, ja kaikukuvat ovat oikein päin. Pulu on vaakatilassa alempana eikä peitä ISS:n lukemaa."
+  },
+  {
+   "versio": "1.1 (131)",
+   "paiva": "2026-10-03",
+   "teksti": "Vaakatilassa yläpalkkia ei enää ole, vaan ☰ avaa valikon, ja pystyssä palkki on matalampi. Julisteet ja Aarteet aukeavat omaan näkymäänsä, ja Topografian valikossa ovat korkeustasot. Astronautin kamerassa maapallo on suurempi, ja Pulu kulkee robottikädessä."
+  },
+  {
+   "versio": "1.1 (129)",
+   "paiva": "2026-10-02",
+   "teksti": "Yläpalkki on ommeltu, ja päivä ja rahat ovat samalla rivillä. Nostojen selaus mahtuu yhdelle riville, pelivalikko on siistimpi ja kaupunkien nimet pysyvät paikallaan."
+  },
+  {
+   "versio": "1.1 (128)",
+   "paiva": "2026-10-02",
+   "teksti": "Olavinlinnalla on uusi valikko ja pienoiskartta, ja napit ovat yhtenäisiä neliöitä. Kartalla on Linssit-nappi ja uusi pelivalikko, ja julisteet aukeavat omaan galleriaansa."
+  },
+  {
+   "versio": "1.1 (126)",
+   "paiva": "2026-10-02",
+   "teksti": "Ajattelijoiden kipsipäät kartalla, ja Pulu väistää niitä. Rahat ovat nyt punnissa (£), ja Olavinlinnan puhe ei enää katkaise luentoa."
+  },
+  {
+   "versio": "1.1 (124)",
+   "paiva": "2026-10-02",
+   "teksti": "Nostojen selausrivi ja AUTO ovat samalla rivillä, eikä puuttuva kuva jätä nostoon harmaata laatikkoa."
+  },
+  {
+   "versio": "1.1 (123)",
+   "paiva": "2026-10-02",
+   "teksti": "Linnassa kuuluu yksi puhe kerrallaan, eikä ääneen luettu repliikki näy tekstinä. Sulkunapit ovat taas harmaita, meren kiilto hehkuu ilmakehän läpi, ja Olavinlinna latautuu entistä sujuvammin."
+  },
+  {
+   "versio": "1.1 (120)",
+   "paiva": "2026-10-02",
+   "teksti": "Astronautin kameran kilpi kertoo, miksi kuvaa ei voi ottaa, esimerkiksi meren yllä. Pulun keskustelu on yhtenäisessä lasiasussa, ja Olavinlinna latautuu sujuvammin."
+  },
+  {
+   "versio": "1.1 (118)",
+   "paiva": "2026-10-02",
+   "teksti": "Astronautin kamerassa ISS:n napautus vie suoraan Cupolan ikkunaan, ja Pulun taulusta pääsee takaisin Cupolaan. Myllyssä on paperinen paneeli ja pehmennetty tausta."
+  },
+  {
+   "versio": "1.1 (116)",
+   "paiva": "2026-10-02",
+   "teksti": "Kortit, valikot ja asetukset yhtenäisessä paperiasussa, ja uusi Mylly-lautapeli. Astronautin kamerassa otat oman kuvan Euroopasta ISS:n Cupola-ikkunasta, uusi paneeli, vuodenaika ja yövalot. Lehti avaa Livian leikekirjan, ja kartalla on uusin pohjakuva."
+  },
+  {
+   "versio": "1.1 (95)",
+   "paiva": "2026-10-01",
+   "teksti": "Ihmisen matkan nostokortissa kaksi kuvaa ja teksti kiertää kuvan ympäri; tekstitys pysyy kortin takana."
+  },
+  {
+   "versio": "1.1 (94)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan kertoja ei enää vaihda jaksoa kesken isoisän puheen, ja iPadilla kuvia mahtuu muistiin enemmän."
+  },
+  {
+   "versio": "1.1 (93)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan ympäristön puut näyttävät todellisemmilta: lajeilla on muunnelmia ja valo varjostaa lehvästöä."
+  },
+  {
+   "versio": "1.1 (92)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan ympäristö latautuu nopeammin — kevyt kuori ja maasto ensin, tarkempi taso taustalla."
+  },
+  {
+   "versio": "1.1 (91)",
+   "paiva": "2026-10-01",
+   "teksti": "Pulu pysyy linnassa näkyvillä myös puhelin vaakatasossa."
+  },
+  {
+   "versio": "1.1 (90)",
+   "paiva": "2026-10-01",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.1 (89)",
+   "paiva": "2026-10-01",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.1 (88)",
+   "paiva": "2026-10-01",
+   "teksti": "Pulun kanssa voi jutella samassa ikkunassa kaikkialla, ja maakuntakortin kysymykset avaavat keskustelun."
+  },
+  {
+   "versio": "1.1 (87)",
+   "paiva": "2026-10-01",
+   "teksti": "Olavinlinnan ympärillä on nyt kimalteleva järvi ja iltataivas, ja Macilla zoomaus on pehmeämpi."
+  },
+  {
+   "versio": "1.1 (86)",
+   "paiva": "2026-10-01",
+   "teksti": "Astronautin kameran kuvissa on uusi pehmeä tausta ja sijaintipallo, joka näyttää kohteen paikan maapallolla."
+  },
+  {
+   "versio": "1.1 (85)",
+   "paiva": "2026-10-01",
+   "teksti": "Ohita näkyy koko luennon ajan, ja luennon jälkeen matkakirjan kortti pienenee lapuksi."
+  },
+  {
+   "versio": "1.1 (84)",
+   "paiva": "2026-10-01",
+   "teksti": "Avaruusasemalla kuuluu nyt aseman humina ja Cupolassa avaruuskävelyn radio, ja Pulu pukeutuu avaruuspukuun."
+  },
+  {
+   "versio": "1.1 (82)",
+   "paiva": "2026-09-30",
+   "teksti": "Macilla ohjauslevyn veto liukuu luontevasti, ja lehteä voi selata nuolinäppäimillä."
+  },
+  {
+   "versio": "1.1 (81)",
+   "paiva": "2026-09-30",
+   "teksti": "Pulu vastaa kysymyksiin kortin aiheesta, eikä pelikello peitä linssiä tai Tietoja-korttia."
+  },
+  {
+   "versio": "1.1 (79)",
+   "paiva": "2026-09-30",
+   "teksti": "ISS:n ikkunasta näkyy nyt Maan kaareva horisontti, ja ohjauspaneeli on uusittu."
+  },
+  {
+   "versio": "1.1 (78)",
+   "paiva": "2026-09-30",
+   "teksti": "Päivälaskuri ei enää peitä linssin sulkunappia."
+  },
+  {
+   "versio": "1.1 (77)",
+   "paiva": "2026-09-30",
+   "teksti": "Olavinlinnan keittiössä kuunnelma tekstitettynä, ja Kuuntele-napilla sen voi toistaa."
+  },
+  {
+   "versio": "1.1 (76)",
+   "paiva": "2026-09-30",
+   "teksti": "Luennan kuvat ja Ohita-nappi poistuvat, kun luenta päättyy."
+  },
+  {
+   "versio": "1.1 (75)",
+   "paiva": "2026-09-30",
+   "teksti": "Azorit, Madeira ja Kanariansaaret kartalle, taustamusiikki soi kerran läpi ja viisumi pienentää matkakirjan lapuksi."
+  },
+  {
+   "versio": "1.1 (74)",
+   "paiva": "2026-09-30",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.1 (73)",
+   "paiva": "2026-09-30",
+   "teksti": "Maakunnan tiedot aukeavat kartan napautuksesta, ja matkakirja pysyy auki koko luennan ajan."
+  },
+  {
+   "versio": "1.0.72 (202609301134)",
+   "paiva": "2026-09-30",
+   "teksti": "Aloitusnäkymässä on apurahan arvioijan esittelykortti, ja matkakirja pysyy auki koko luennan ajan."
+  },
+  {
+   "versio": "1.0.71 (202609301053)",
+   "paiva": "2026-09-30",
+   "teksti": "Uusi yläpalkki, selkeämmät kaupunkien nimet, kaupunkilehden säärivit mahtuvat sivulle ja ISS-kyydissä on uusi kytkinpöytä."
+  },
+  {
+   "versio": "1.0.70 (202609301007)",
+   "paiva": "2026-09-30",
+   "teksti": "Laivat eivät enää seilaa maalla, ja luentakuva ja matkakirja eivät peitä karttaa."
+  },
+  {
+   "versio": "1.0.69 (202609300924)",
+   "paiva": "2026-09-30",
+   "teksti": "Pienennetty matkakirja on nyt kapea kaistale, ja kuvat löytyvät kortin lopusta."
+  },
+  {
+   "versio": "1.0.68 (202609300835)",
+   "paiva": "2026-09-30",
+   "teksti": "Lippu väistää matkakirjaa, ja isoisän luennan alkuun on tehty korjaus."
+  },
+  {
+   "versio": "1.0.67 (202609300748)",
+   "paiva": "2026-09-30",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.0.66 (202609300646)",
+   "paiva": "2026-09-30",
+   "teksti": "Isoisän matkakirja pienenee ja avautuu pehmeästi."
+  },
+  {
+   "versio": "1.0.65 (202609300437)",
+   "paiva": "2026-09-30",
+   "teksti": "Isoisän matkakirjan sivut on uudistettu."
+  },
+  {
+   "versio": "1.0.64 (202609300202)",
+   "paiva": "2026-09-30",
+   "teksti": "Visan kätkökuvat avautuvat nyt ilman kehystä."
+  },
+  {
+   "versio": "1.0.63 (202609300142)",
+   "paiva": "2026-09-30",
+   "teksti": "Valikko avautuu sujuvammin, ja astronautin kameran Cupola-näkymä on kevyempi laitteelle."
+  },
+  {
+   "versio": "1.0.62 (202609300107)",
+   "paiva": "2026-09-30",
+   "teksti": "Valikko on uudistettu: napit ovat tiiviisti, äänet ylimpänä ja linsseillä on oma esikatselu."
+  },
+  {
+   "versio": "1.0.61 (202609292327)",
+   "paiva": "2026-09-30",
+   "teksti": "Lehden kuvat latautuvat nyt valmiiksi, joten lehti avautuu nopeammin."
+  },
+  {
+   "versio": "1.0.60 (202609292204)",
+   "paiva": "2026-09-30",
+   "teksti": "Tähtitaivas näkyy nyt ilman kartan painikkeita ja ilmansuuntia."
+  },
+  {
+   "versio": "1.0.59 (202609292137)",
+   "paiva": "2026-09-30",
+   "teksti": "Kartan nostot näkyvät taas kuvina, ja isoisän luenta alkaa alusta."
+  },
+  {
+   "versio": "1.0.58 (202609292100)",
+   "paiva": "2026-09-30",
+   "teksti": "Kartta ei enää hyppää taustalta palatessa, ja maailmaa voi selata hunnun kanssa."
+  },
+  {
+   "versio": "1.0.57 (202609292010)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartta ei enää katoa, kun peliin palaa toisesta sovelluksesta tai lukituksen jälkeen."
+  },
+  {
+   "versio": "1.0.56 (202609291937)",
+   "paiva": "2026-09-29",
+   "teksti": "Radio on nyt alempana eikä peitä karttaa, ja valikkojen nimet mahtuvat näkyviin."
+  },
+  {
+   "versio": "1.0.55 (202609291906)",
+   "paiva": "2026-09-29",
+   "teksti": "Luenta alkaa oikeasta kohdasta, valikot ovat pergamentilla, ja radiossa on kartta koko maapallosta."
+  },
+  {
+   "versio": "1.0.54 (202609291824)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartalla maiden rajat ja rannat saarineen näkyvät selkeämmin. iPadin yläpalkki on nyt nahkaa, ja radio ja linssilista on uudistettu."
+  },
+  {
+   "versio": "1.0.53 (202609291722)",
+   "paiva": "2026-09-29",
+   "teksti": "Astronautin kamera seuraa ISS:ää, ja Pulu on hiljaa ISS-kohtauksessa."
+  },
+  {
+   "versio": "1.0.52 (202609291625)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartan kaupungit ja niiden nimet nyt ruskealla sepiamusteella."
+  },
+  {
+   "versio": "1.0.51 (202609291446)",
+   "paiva": "2026-09-29",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.0.50 (202609291251)",
+   "paiva": "2026-09-29",
+   "teksti": "Puhelimen yläpalkki on nyt nahkainen kuin vanha matkalaukku."
+  },
+  {
+   "versio": "1.0.49 (202609291132)",
+   "paiva": "2026-09-29",
+   "teksti": "Uusi yläpalkki: pilleriä napauttamalla avautuu valikko."
+  },
+  {
+   "versio": "1.0.48 (202609291001)",
+   "paiva": "2026-09-29",
+   "teksti": "Uusi avaruuskävely: astu ISS:n ulkopuolelle Pulun kanssa ja ota kuva maapallosta. Pulu toivottaa tervetulleeksi ensimmäisellä ISS-kyydillä ja kuuluu Kertoja-asetuksen mukaan. Kartuscha avautuu ja sulkeutuu pehmeästi."
+  },
+  {
+   "versio": "1.0.44 (202609290609)",
+   "paiva": "2026-09-29",
+   "teksti": "Laput, kortit ja valikot avautuvat ja sulkeutuvat pehmeästi, ja maakunnan kysymyskortti sulkeutuu ✕:stä. Luennan ja kaupungin nimen alku kuuluu nyt kokonaan. Astronautin kuvissa näkyy vain pieni Pulu."
+  },
+  {
+   "versio": "1.0.43 (202609290510)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartalla näkyvät nyt järvet ja pienet saaret, ja rannikko on tarkempi. Astronautin kamerassa Pulun napautus avaa taulun, josta vaihdat näkymää, ja kuvan napautus pienentää selitteen."
+  },
+  {
+   "versio": "1.0.42 (202609290319)",
+   "paiva": "2026-09-29",
+   "teksti": "Radio uudistui: uusi radiolaite, hohtavat mastot ja asemat kaikista maailman maista. ISS-kyydissä on uusi ohjauspaneeli, josta valitaan nopeus, kohde ja olosuhteet. Astronautin kuvan selite avautuu pehmeästi, ja kertoja lukee sen ääneen."
+  },
+  {
+   "versio": "1.0.41 (202609282344)",
+   "paiva": "2026-09-29",
+   "teksti": "ISS:n Cupola-ikkuna uudistui: ohjaamo on pyöreä, eikä maa enää kuulla metallin läpi. Maakuntakortti on nostokortin kokoinen ja kuva aukeaa koko ruutuun. Mallien nimiöt näkyvät nyt myös Visbyssä ja Krumlovissa."
+  },
+  {
+   "versio": "1.0.40 (202609281959)",
+   "paiva": "2026-09-28",
+   "teksti": "Luenta jatkuu oikeasta kohdasta, eikä nostokortin kaiutin tai kuva enää sulje korttia. ISS-kyydin pilvet ovat terävät, Cupolassa on vähemmän sumennusta ja nostomerkit eivät jää linssin päälle. Offline-kartta ei hae laattoja verkosta, ja aloituslento alkaa päivänvalossa."
+  },
+  {
+   "versio": "1.0.39 (202609281745)",
+   "paiva": "2026-09-28",
+   "teksti": "Nostojen luenta ei enää pysähdy kesken, ja Pulu vaikenee, kun chat suljetaan."
+  },
+  {
+   "versio": "1.0.38 (202609281624)",
+   "paiva": "2026-09-28",
+   "teksti": "Maakuntakartta: valitse maakunta kartalta. Avaruuskyydissä nopeutus ja oikeat tähdet."
+  },
+  {
+   "versio": "1.0.37 (202609281346)",
+   "paiva": "2026-09-28",
+   "teksti": "Avaruuskyydissä nyt pilvet, kaupunkien valot, revontulet ja oikeat tähdet. Pulu vastaa nopeammin."
+  },
+  {
+   "versio": "1.0.36 (202609281118)",
+   "paiva": "2026-09-28",
+   "teksti": "Pulun kanssa voi nyt jutella ääneen – kysy, niin Pulu vastaa puhumalla. Lisäksi uusi aloituslento, lukijan valikko, välkynnän korjaus sekä Islannin ja Luxemburgin nostot kartalla."
+  },
+  {
+   "versio": "1.0.34 (202609272058)",
+   "paiva": "2026-09-28",
+   "teksti": "Build 34: Pulun ja nostojen luenta käyttää äänitageja, joten puhe painottuu ja taukoaa luontevammin."
+  },
+  {
+   "versio": "1.0.33 (202609272009)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 33: luenta ei enää hypi eikä pidä taukoa otsikon jälkeen, kuvakortti ei välky ja lukijan äänen vaihto toimii. Rahasummat muodossa 400 £, uudet erikoismallit Český Krumlov, Malbork ja Pannonhalma sekä Kreikan salaisuudet tavallisina nostoina."
+  },
+  {
+   "versio": "1.0.32 (202609271721)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 32: offline-kartat ja -media pienennettyinä, kuvien tekijämerkinnät, sujuvampi vieritys (120 Hz) ja maitomaisempi pohjakartta. Livian avaus kerran ja ohitettavissa, meren loput seitsemän alusta tarkempina ja elämäpalkin uudet värit."
+  },
+  {
+   "versio": "1.0.31 (202609271444)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 31: kaupungit tarkentuvat pallolla nyt Z10-tasolle asti, rahattomuuden elämäpalkki kartan yläreunassa ja luenta kuuluu pyynnöstä myös äänet pois -tilassa. Aloitusvalinnassa näkyvät aina Lontoo ja valittavat kohteet."
+  },
+  {
+   "versio": "1.0.30 (202609271221)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 30: talous (päiväkulut, kassa, rahat loppu ja matkan loppukortti), pelistreak armopäivineen, uusi avauskortti ja Tiger Moth -lento. Puhe alkaa taas heti paloina, meren laivat ovat tarkempia ja maakuntien nimet poistuivat kartalta."
+  },
+  {
+   "versio": "1.0.29 (202609270957)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 29b: kuten build 29, mutta synteesipuhe soi taas laitteella (striimaus pois päältä). Koko maailma auki, nostot täytenä heti, meren koristeet ja uudet pienoismallit Matterhorn, Hohensalzburg ja Bruggen kellotorni."
+  },
+  {
+   "versio": "1.0.29 (202609270926)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 29: koko maailma auki ja nostot täytenä heti, meren koristeet (kymmenen lajia, kuten valas ja delfiinit) ja uudet pienoismallit Matterhorn, Hohensalzburg ja Bruggen kellotorni. Nostokortin luennassa ratas nopeudelle ja äänelle sekä jatko samasta kohdasta."
+  },
+  {
+   "versio": "1.0.28 (202609270611)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 28: uusia yksityiskohtaisia pienoismalleja, kuten Mont-Saint-Michel, Stonehenge, Colosseum, Kinderdijkin tuulimyllyt, Brandenburgin portti ja Segovian akvedukti, ja kaikki kartan symbolit muuttuivat pienoismalleiksi entisten kuvakkeiden sijaan."
+  },
+  {
+   "versio": "1.0.27 (202609262244)",
+   "paiva": "2026-09-27",
+   "teksti": "Build 27: Lontoon maailmanpyörä, Venetsian gondolit ja Thamesin höyrylaiva uusina eloisina kohteina, kartan pienoismallit näkyvät nyt myös suoraan ylhäältä katsottuna, uusi peli tyhjentää vanhat tiedot kunnolla, ja maakuntapaneeli siistitty kapeammaksi."
+  },
+  {
+   "versio": "1.0.26 (202609261921)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 26: Pariisiin ilmapallo ja aidosti liikkuva avaruusasema-linssi, maiden liput pienenevät ja piiloutuvat kaukaa katsottuna, kartan lipputangot ja pienoismallit ilmestyvät oikeaan aikaan, ja pöllö väistää sormen kosketuksen kartalla."
+  },
+  {
+   "versio": "1.0.25 (202609261542)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 25: useampi kartan kohde näkyy nyt pienoismallina myös vähemmän tärkeissä paikoissa, majakan ja Meteoran kalliomuodostelmien ulkonäköä hienosäädetty, ja käynnistyksen tekstivalmistelu entistä sulavampi."
+  },
+  {
+   "versio": "1.0.24 (202609261451)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 24: eloisat maisemakohteet asettuvat nyt oikein maaston mukaan ja saivat lisää valoja, fontit valmistellaan etukäteen niin ettei tekstien ilmestyminen nykäise kuvaa, ja käynnistysverho pysyy näkyvissä kunnes peli on todella valmis."
+  },
+  {
+   "versio": "1.0.23 (202609261424)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 23: lisää eloisia maisemakohteita, kuten Tivolin karuselli, eloisat kohteet lepäävät ja liikkuvat nyt vaihtelevasti todentuntuisemmin, näkyvä osa kartasta latautuu ensin, ja kaupunkimerkit seisovat oikein maan pinnalla."
+  },
+  {
+   "versio": "1.0.22 (202609261331)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 22: ensimmäinen eloisa maisemakohde, Zaandamin tuulimyllyt liikkuvine siipineen, maailmanhypyn ja käynnistyksen lataukset nopeutuivat, kartan nimet väistävät käyttöliittymän osia, ja peli toimii paremmin ilman verkkoa tallennetun sisällön ansiosta."
+  },
+  {
+   "versio": "1.0.21 (202609261142)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 21: löytämättömät kohteet näkyvät nyt musteen jälkinä koon mukaan, ensimmäiset pienoismallikohteet kartalla (muun muassa Delfoi ja Meteora), liput heiluvat oikeana kankaana, iPadin vaakanäkymä parannettu, ja musiikkiin maanosien omia sävelmiä."
+  },
+  {
+   "versio": "1.0.20 (202609260759)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 20: kuljettu reitti näkyy kartalla tummanpunaisena viivana, linnut, sadekuurot ja juna erottuvat nyt paremmin, maakunnan valinta ja etäisyyden mukainen usva uusiksi, ja peliin ensimmäinen musiikkivaihe lennon ja saapumisen sävelmineen."
+  },
+  {
+   "versio": "1.0.20 (202609260541)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 20: kuljettu reitti näkyy kartalla tummanpunaisena viivana, linnut, sadekuurot ja juna erottuvat nyt paremmin, maakunnan valinta ja etäisyyden mukainen usva uusiksi, ja peliin ensimmäinen musiikkivaihe lennon ja saapumisen sävelmineen."
+  },
+  {
+   "versio": "1.0.19 (202609260528)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 19: saapuminen uuteen maahan paljastaa kartan sumun ja herättää maakunnan, kaupunkilehdet ja linssien sisältö latautuvat vasta tarvittaessa eli käynnistys nopeutui, Ihmisen matka -linssiin toisto-ohjaimet, ja yölaatat sekä maiden rajaviivat mukana."
+  },
+  {
+   "versio": "1.0.18 (202609260152)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 18: nostokuvat avautuvat kokoruutuun ilman kehystä, liput liehuvat tuulessa, radiosta voi esikuunnella seuraavan aseman, Ihmisen matka -linssi sai uuden jakson äänimaisemineen, ja sisältöpaketit päivittyvät nyt taustalla pelin aikana."
+  },
+  {
+   "versio": "1.0.17 (202609260103)",
+   "paiva": "2026-09-26",
+   "teksti": "Build 17: maiden ja maakuntien rajaviivat siistimmäksi, uudet nostomerkit kartalla, Ihmisen matka -linssiin toisto-ohjaimet ja hitaasti liikkuvat kuvat, pitkät maannimet rivittyvät oikein, ja linsseille omat äänitehosteet, kuten keksintölinssin kilahdus."
+  },
+  {
+   "versio": "1.0.16 (202609251814)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 16: peli säästää nyt akkua ja pysyy viileämpänä, kun kartta ei liiku eikä ruutu vaadi päivitystä, Ihmisen matka -linssiin uusia hetkiä (aamunkoitto, lumi, soihtujen liekehdintä, äänimaisemat), ja aloituslento kestää nyt 12 sekuntia."
+  },
+  {
+   "versio": "1.0.15 (202609251449)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 15: kaikkien maiden maakuntatiedot mukana, kohdekartan kokoruutunäkymä ja nostojen kuvien suurennos uusiksi, isoisän luentakuvat oikean kokoisina, mustan verhon Ohita-nappi toimii aina, ja karttojen sumuefekti päivitetty uudelta pohjakartalta."
+  },
+  {
+   "versio": "1.0.14 (202609251332)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 14: etusivulla uusi lentoanimaatio, aloituslennon aikana ei ylä-palkkia eikä pöllöä, maakuntalista näyttää vain oman maan maakunnat, matkakirjan ilmoitusväri korjattu, avoin linssi ei enää sumene kerronnan kuvista, ja avaruuslinssin pallo tummuu käytön ajaksi."
+  },
+  {
+   "versio": "1.0.13 (202609251020)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 13: uusi aloitusruutu, maiden rajat kartalla, kaupunkien nimet ja yöllä syttyvät valot, matkustustavan ja liikkumisen käyttöliittymä uusiksi, kohdekartan tyylit ja pöllön keskustelu webin mukaisiksi, ja isopuhelinten yläpalkki paremmin sovitettu."
+  },
+  {
+   "versio": "1.0.12 (202609250125)",
+   "paiva": "2026-09-25",
+   "teksti": "Build 12: saapumisnäkymä ja kaupunkien nimet aiempaa siistimmin, radion sulkeutuminen pehmeämmin, peli soi nyt ääntä oikein (aiempi äänetön virhe korjattu), rannikkoviivat tarkemmin ja käyttöliittymän tekstit paremmin asemoituna."
+  },
+  {
    "versio": "1.0.11 (202609241848)",
    "paiva": "2026-09-24",
    "teksti": "Build 11: lennon uusi kamerareitti (kone läheltä, loittonus, kierto kohteen ympäri), iPhonen matalampi yläpalkki, Liiku piilossa kerronnan ajan, iPadin lehti leveämpi, radiolinssin korjaukset (kaikki maat näkyvissä), leveä nostokortti, kartan nimet uudella fontilla."

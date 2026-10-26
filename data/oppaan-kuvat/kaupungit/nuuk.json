@@ -1,0 +1,306 @@
+{
+ "kaupunki": "nuuk",
+ "kaupunkiQ": "Q226",
+ "kohteet": [
+  {
+   "q": "Q1355805",
+   "nimi": "Nuukin tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 64.17972,
+   "lon": -51.74417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedrale Nuuk 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedrale_Nuuk_2023.jpg?width=1280",
+     "tekija": "Snoopy 31",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedrale_Nuuk_2023.jpg",
+     "selite": "Punainen puukirkko seisoo kukkulalla Nuukin vanhan siirtokunnan keskellä.",
+     "leveys": 5285,
+     "korkeus": 3523,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Annaassisitta-Oqaluffia-old-nuuk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Annaassisitta-Oqaluffia-old-nuuk.jpg?width=1280",
+     "tekija": "Algkalv (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Annaassisitta-Oqaluffia-old-nuuk.jpg",
+     "selite": "Kirkon torni kohoaa Nuukin värikkäiden talojen yläpuolelle.",
+     "leveys": 3872,
+     "korkeus": 2176,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Annaassisitta-Oqaluffia-nuuk-cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Annaassisitta-Oqaluffia-nuuk-cathedral.jpg?width=1280",
+     "tekija": "Algkalv (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Annaassisitta-Oqaluffia-nuuk-cathedral.jpg",
+     "selite": "Kirkon pääty ja kellotorni portaineen edestä katsottuna.",
+     "leveys": 2176,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3117388",
+   "nimi": "Grönlannin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 64.1772,
+   "lon": -51.7462,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "B-1859 in Nuuk (Kenny McFly).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B-1859_in_Nuuk_(Kenny_McFly).jpg?width=1280",
+     "tekija": "Kenny McFly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B-1859_in_Nuuk_(Kenny_McFly).jpg",
+     "selite": "Kansallismuseo toimii vanhoissa siirtokuntarakennuksissa Nuukin satamassa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "B-66 in Nuuk (Kenny McFly).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B-66_in_Nuuk_(Kenny_McFly).jpg?width=1280",
+     "tekija": "Kenny McFly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B-66_in_Nuuk_(Kenny_McFly).jpg",
+     "selite": "Museon vanhat puutalot muistuttavat Nuukin siirtokuntaajasta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2745935",
+   "nimi": "Katuaq",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 64.1775,
+   "lon": -51.73917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Katuaq2008.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Katuaq2008.JPG?width=1280",
+     "tekija": "Alankomaat",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Katuaq2008.JPG",
+     "selite": "Katuaq on Nuukin kulttuurikeskus, jonka aaltoileva puujulkisivu muistuttaa revontulia.",
+     "leveys": 1850,
+     "korkeus": 1387,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Katuaq 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Katuaq_2023.jpg?width=1280",
+     "tekija": "ThatGuyOnline",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Katuaq_2023.jpg",
+     "selite": "Kulttuurikeskuksen kaareva julkisivu kohoaa Nuukin keskustan kadun varrella.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2038090",
+   "nimi": "Sermitsiaq",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 64.3,
+   "lon": -51.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Industridalen Nuuk.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Industridalen_Nuuk.JPG?width=1280",
+     "tekija": "Nanopixi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Industridalen_Nuuk.JPG",
+     "selite": "Sermitsiaq-vuori kohoaa Nuukin sataman ja teollisuusalueen yläpuolelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nuuk city below Sermitsiaq.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuuk_city_below_Sermitsiaq.JPG?width=1280",
+     "tekija": "Oliver Schauf",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nuuk_city_below_Sermitsiaq.JPG",
+     "selite": "Lumihuippuinen Sermitsiaq hallitsee Nuukin kaupunkimaisemaa.",
+     "leveys": 2272,
+     "korkeus": 1119,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1257966",
+   "nimi": "Inatsisartut",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 64.17833,
+   "lon": -51.74056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Inatsisartut (1) (Kenny McFly).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inatsisartut_(1)_(Kenny_McFly).jpg?width=1280",
+     "tekija": "Kenny McFly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inatsisartut_(1)_(Kenny_McFly).jpg",
+     "selite": "Inatsisartut on Grönlannin parlamentti, ja se kokoontuu Nuukissa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q627607",
+   "nimi": "Grönlannin kansalliskirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 64.17556,
+   "lon": -51.73917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nunatta-Atuagaateqarfia-national-library-of-greenland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nunatta-Atuagaateqarfia-national-library-of-greenland.jpg?width=1280",
+     "tekija": "Algkalv (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nunatta-Atuagaateqarfia-national-library-of-greenland.jpg",
+     "selite": "Kansalliskirjasto toimii värikkäässä puurakennuksessa Nuukin keskustassa.",
+     "leveys": 3872,
+     "korkeus": 2176,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5649958",
+   "nimi": "Hans Egeden talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 64.1782,
+   "lon": -51.7448,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hans Egedes Hus in Nuuk (Kenny McFly).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Egedes_Hus_in_Nuuk_(Kenny_McFly).jpg?width=1280",
+     "tekija": "Kenny McFly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hans_Egedes_Hus_in_Nuuk_(Kenny_McFly).jpg",
+     "selite": "Hans Egeden talo on yksi Nuukin vanhimmista rakennuksista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3305271",
+   "nimi": "Nuukin taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 64.1779,
+   "lon": -51.7293,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nuuk kunstmuseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuuk_kunstmuseum.jpg?width=1280",
+     "tekija": "C.rosing.nuuk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nuuk_kunstmuseum.jpg",
+     "selite": "Taidemuseo toimii vihreissä puutaloissa lähellä Nuukin keskustaa.",
+     "leveys": 2016,
+     "korkeus": 1134,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Nuuk Art Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Nuuk_Art_Museum.jpg?width=1280",
+     "tekija": "Peter Løvstrøm",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Nuuk_Art_Museum.jpg",
+     "selite": "Talvella museon puutalot ovat lumen peitossa.",
+     "leveys": 1589,
+     "korkeus": 1050,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nuuk, Greenland skyline aerial view.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuuk%2C_Greenland_skyline_aerial_view.jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nuuk%2C_Greenland_skyline_aerial_view.jpg",
+   "selite": "Nuuk levittäytyy niemelle vuorten ja merenlahden välissä.",
+   "leveys": 5712,
+   "korkeus": 3750,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Very colorful houses along coast Nuuk Greenland.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Very_colorful_houses_along_coast_Nuuk_Greenland.jpg?width=1280",
+   "tekija": "amanderson2",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Very_colorful_houses_along_coast_Nuuk_Greenland.jpg",
+   "selite": "Värikkäät talot nousevat Nuukin rantakallioille Sermitsiaq-vuoren edessä.",
+   "leveys": 5184,
+   "korkeus": 3888,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q6349986",
+   "nimi": "Kalaaliaraq-tori",
+   "peruste": "pelin nosto",
+   "lat": 64.1786,
+   "lon": -51.7425,
+   "syy": "vain ihmis- ja lihakuvia, ei kelvollista ulkonäkymää"
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "versio": 1,
+ "kortit": [
+  {
+   "id": "kyronsalmi",
+   "numero": 1,
+   "otsikko": "Kyrönsalmi ja saapuminen",
+   "teksti": "Linna seisoo jyrkällä kallioluodolla Kyrönsalmessa. Haapavedeltä vesi virtaa Pihlajavedelle kolmen kapean salmen kautta. Kyrönsalmi on niistä itäisin ja virtaisin. Virta piti veden sulana talvellakin, joten linnan luo ei päässyt jäätä pitkin. Paikka valittiin puolustuksen vuoksi. Nykyiset sillat ja rantapuistot ovat paljon myöhempiä.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     1
+    ]
+   },
+   "varmuus": "V",
+   "lahteet": [
+    {
+     "url": "https://www.kansallismuseo.fi/en/olavinlinna/historiaa",
+     "kuvaus": "jyrkkä kallioluoto voimakkaassa virrassa, valittu puolustuksen vuoksi"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "virta pitää veden sulana, hyökkäys jäätä pitkin estyi"
+    },
+    {
+     "url": "https://www.rky.fi/read/asp/r_kohde_det.aspx?KOHDE_ID=1116",
+     "kuvaus": "linna Kyrönsalmessa Haapaveden ja Pihlajaveden välissä, nopea virta"
+    },
+    {
+     "url": "https://dev4.gutenberg.org/ebooks/65639.kindle.images",
+     "kuvaus": "Aspelin: Savonlinna 1475–1875; Haapavesi laskee kolmen kapean salmen kautta Pihlajaveteen, Kyrönsalmi itäisin ja virtaisin"
+    }
+   ]
+  },
+  {
+   "id": "paalinna-ja-portti",
+   "numero": 2,
+   "otsikko": "Päälinna ja portti",
+   "teksti": "Keskiajan päälinna kohosi luodon korkeimmalle, läntiselle osalle. Kolmea tornia yhdisti kehämuuri, ja idässä oli matalampi esilinna. Arkeologisen selvityksen mukaan pääportti oli päälinnan läntisessä kehämuurissa, länsirannalla. Linnaa muutettiin ja vahvistettiin myöhemmin monta kertaa, 1500-luvulta 1700-luvulle. Siksi keskiaikaisen portin tarkkaa ulkoasua ei tunneta. Pelin portti on tulkinta.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     2
+    ]
+   },
+   "varmuus": "päälinnan ja esilinnan sijainti sekä myöhemmät muutokset V; pääportin paikka 1L (Senaatti 2019, kolme kohtaa samassa lähteessä; vahvistettu lähdetarkistuksessa 7.10.); keskiaikainen ulkoasu EPÄVARMA (ei tunneta).",
+   "lahteet": [
+    {
+     "url": "https://www.kyppi.fi/palveluikkuna/rapea/read/asp/r_kohde_det.aspx?KOHDE_ID=200076",
+     "kuvaus": "päälinna saaren länsiosassa, kolme tornia ja kehämuuri, matalampi esilinna idässä; muutokset 1500–1700-luvuilla"
+    },
+    {
+     "url": "https://www.kyppi.fi/palveluikkuna/mjreki/read/asp/r_kohde_det.aspx?KOHDE_ID=1000019735",
+     "kuvaus": "päälinna saaren korkeimmalla, läntisellä osalla"
+    },
+    {
+     "url": "https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf",
+     "kuvaus": "pääportin paikka: s. 33 \"Linnan pääportti sijaitsi läntisessä kehämuurissa\", s. 211 \"Länsirannalla on sijainnut linnan pääportti ja Tallisaaresta johtanut silta jo keskiajalla\", s. 60 porttikäytävän koillispää on keskiaikaista läntistä kehämuuria; luettu 7.10."
+    }
+   ]
+  },
+  {
+   "id": "pikkupiha-ja-perustamistaulu",
+   "numero": 3,
+   "otsikko": "Pikkupiha ja perustamistaulu",
+   "teksti": "Pikkupiha on päälinnan pieni sisäpiha. Linnan salin ulkoseinään perustaja pani kivitaulun. Siinä luki suunnilleen näin: \"Herran vuonna 1475 rakennutin minä, Eerik Akselinpoika, Lagnön ritari, tämän linnan Jumalan kunniaksi ja pyhän kristinuskon vahvistukseksi.\" Kirjoituksen alla olivat Tottin ja Sturen sukujen vaakunat. Taulu tuhoutui myöhemmin linnanpalossa, mutta sanamuoto on säilynyt.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     3
+    ]
+   },
+   "varmuus": "taulu, kirjoitus, vaakunat (Sture ja Tott) ja tuho 1631 V (Härö 1997 + Aspelin 1875; tarkistettu 7.10.). Korjaus: vaakunat ovat Sturen ja Tottin, eivät \"Tottin ja puolison\". Taulun tarkka paikka (Kuninkaansalin ulkoseinä vs. käytävän seinä) 1L, Härön mukaan \"oletettavasti\".",
+   "lahteet": [
+    {
+     "url": "https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/",
+     "kuvaus": "kivitaulu salin ulkoseinässä, kirjoituksen sisältö, vaakunat kirjoituksen alla"
+    },
+    {
+     "url": "https://www.kansallismuseo.fi/fi/olavinlinna/historiaa",
+     "kuvaus": "perustaja ja vuosi 1475; palasi samoissa hakutuloksissa"
+    },
+    {
+     "url": "https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830",
+     "kuvaus": "Härö 1997 s. 43, alaviite 9: teksti tuhoutui 1631 palossa, sanamuoto säilyneestä muistiinpanosta, vaakunat Sture ja Tott; s. 34: laatat 8–11 Kuninkaansalin ulkoseinällä oletettavasti tämä taulu; luettu 7.10."
+    },
+    {
+     "url": "https://www.gutenberg.org/cache/epub/65639/pg65639.txt",
+     "kuvaus": "Aspelin 1875: taulu \"ennen suurta linnanpaloa kesäkuun 2. p. 1631\" käytävän seinässä Kuninkaansalin kohdalla; kirjoitus ja Sturen ja Tottin vaakunat"
+    }
+   ]
+  },
+  {
+   "id": "keittio-ja-ruoka",
+   "numero": 4,
+   "otsikko": "Keittiö ja ruoka",
+   "teksti": "Linnassa laitettiin ruokaa vuosisatojen mittaan monessa paikassa. Varsinainen keittiö oli pienellä linnanpihalla. Ruokaa laitettiin avotulella isoissa padoissa, ja kalaa halstrattiin. Kalaa ja kasviksia syötiin paljon, sillä kalapäiviä oli vuodessa yli sata. Arkeologisen selvityksen mukaan päälinnan eteläsiivessä oli keittiöksi tulkittu rakennus, joka purettiin 1720-luvulla.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     3
+    ]
+   },
+   "varmuus": "keittiö pihalla, padat ja kalapäivät 1L (Yle; kalapäivien luku vaihtelee lähteittäin, ks. faktapohja E7); keittiöksi tulkittu eteläsiipi ja purku 1720-luvulla 1L (Senaatti 2019 s. 33–34, vahvistettu 7.10.). Tulisijan perustus poistettu kortista: sitä ei mainita Senaatin selvityksessä eikä Aspelinissa, vain Ylessä.",
+   "lahteet": [
+    {
+     "url": "https://yle.fi/a/3-6618420",
+     "kuvaus": "Olavinlinnan keittiöhistoria avotulesta automaattiuuneihin: ruokaa monessa paikassa, keittiö pienellä linnanpihalla, tulisijan perustus, padat ja kattilat, kala ja kasvikset, noin 200 kalapäivää"
+    },
+    {
+     "url": "https://www.apu.fi/artikkelit/suomen-keskiaikaiset-kivilinnat-66-olavinlinna",
+     "kuvaus": "palasi samassa haussa keittiöaiheesta; sisältöä ei näkynyt tiivistelmässä"
+    },
+    {
+     "url": "https://www.senaatti.fi/app/uploads/2019/12/978-952-7062-85-2_2019_Arkkitehtitoimisto-Hanna-Lyytinen_Olavinlinnan-arkeologinen-selvitys_s.pdf",
+     "kuvaus": "s. 33: päälinnan eteläsiipi G 102 purettiin 1720-luvulla; s. 34: Maconin kaivauksissa 1924 \"keittiöksi tulkittu rakennus (G 102)\"; luettu 7.10."
+    }
+   ]
+  },
+  {
+   "id": "kirkkotorni-ja-tottin-kamari",
+   "numero": 5,
+   "otsikko": "Kirkkotorni ja Tottin kamari",
+   "teksti": "Kirkkotornin nimi on myöhempi. Kansallismuseon mukaan torni tunnettiin keskiajalla Pyhän Olavin tornina. Toisen lähteen mukaan tornien alkuperäisistä nimistä ei ole varmaa tietoa. Tornin ensimmäisen kerroksen huone on nimeltään Tottin kamari linnan perustajan mukaan. Se oli ehkä kivilinnan ensimmäinen asuttava huone. Huoneessa on takka, ja sieltä on ovi Linnantupaan. Tarinan mukaan huoneessa kummittelee harmaapukuinen herra.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     4
+    ]
+   },
+   "varmuus": "Tottin kamari, takka ja ovi V; kummitustarina V (tarina, ei fakta); Pyhän Olavin torni ristiriita (Kansallismuseo vs. fi.wikipedia), kortti kertoo molemmat. Takan laastiin piirretyt kilvet poistettiin (vain Härö 1997 / opas 1923 ehdotuksen mukaan, ei löytynyt haussa). \"Ensimmäinen kerros\" ja Finnan \"pohjakerros\" tarkoittavat samaa huonetta.",
+   "lahteet": [
+    {
+     "url": "https://www.kansallismuseo.fi/fi/olavinlinna/kirkkotornin-1-kerroksen-huone",
+     "kuvaus": "Tottin kamari, nimi perustajan mukaan, mahdollisesti ensimmäinen asuttava huone"
+    },
+    {
+     "url": "https://www.kansallismuseo.fi/fi/olavinlinna/pyha-olavi",
+     "kuvaus": "Kirkkotorni keskiajalla Pyhän Olavin torni"
+    },
+    {
+     "url": "https://fi.m.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "nimet Kirkkotorni ja Kellotorni myöhempiä, alkuperäisistä nimistä ei varmaa tietoa"
+    },
+    {
+     "url": "https://www.finna.fi/Record/musketti.M012:HK10000:5089",
+     "kuvaus": "takka Kirkkotornin pohjakerroksessa"
+    },
+    {
+     "url": "https://finna.fi/Record/museovirasto.F4D7E48DBA62F50DA21EBFCB9CAE377A/Details",
+     "kuvaus": "ovi Kirkkotornin pohjakerroksesta Linnantupaan"
+    }
+   ]
+  },
+  {
+   "id": "kappeli",
+   "numero": 6,
+   "otsikko": "Kappeli",
+   "teksti": "Kappeli on Kirkkotornin kolmannessa kerroksessa, ja siellä pidetään yhä toimituksia. Seiniä kiertää kaksitoista vihkiristiä. Kappelissa on kolme alttaria ja harvinainen hagioskooppi. Sen pienestä aukosta sairaat tai syntisiksi katsotut seurasivat messua viereisestä kammiosta. Holvissa näkyy maalausten jäänteitä: lehtiä, kukkia ja vaakunoita. Ikkunana on vain ahdas, rautaluukulla suljettava aukko, joten valo tuli kynttilöistä. Kappeli mainitaan vuonna 1499. Yksi lähde sijoittaa sen kuitenkin Kellotorniin.",
+   "avautuu": {
+    "tyyppi": "huone",
+    "huoneet": [
+     5
+    ]
+   },
+   "varmuus": "V (sijainti Kirkkotornissa, ristit, alttarit, hagioskooppi, maalaukset); maininta 1499 1L; sijainti ristiriita (Savon historia: Kellotorni); ikkuna ja kynttilävalo 1L (Aspelin 1875). Kappeli ei ole ikkunaton (korjaus faktapohjan \"ikkunaton\"-sanaan). Kahdeksan aukon ampumakäytävä jää pois (ei lähdettä).",
+   "lahteet": [
+    {
+     "url": "https://www.kansallismuseo.fi/fi/olavinlinna/pyha-olavi",
+     "kuvaus": "Kirkkotorni, 12 vihkiristiä, kolme alttaria, hagioskooppi, maalaukset, käyttö nykyään"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "kolmas kerros, maalausten jäänteet, hagioskooppi"
+    },
+    {
+     "url": "https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/",
+     "kuvaus": "mainitaan 1499; sijoittaa kappelin Kellotornin kolmanteen kerrokseen"
+    },
+    {
+     "url": "https://www.gutenberg.org/cache/epub/65639/pg65639.txt",
+     "kuvaus": "Aspelin 1875: \"ahtaasta rautaisella luukulla varustetusta akkunasta kappelin koillisessa muurissa päivän säde niukasti pyhää huonetta valaisi. Kappeli siis näkyy olleen kokonaan kynttilöiden valaistava\"; luettu 7.10."
+    }
+   ]
+  },
+  {
+   "id": "perustaminen-ja-tott",
+   "numero": 7,
+   "otsikko": "Linnan perustaminen ja Erik Akselinpoika Tott",
+   "teksti": "Linnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott. Hän oli Viipurin linnan käskynhaltija ja vastasi itärajasta. Linnan nimi oli Pyhän Olavin linna. Hänen puolisonsa Elin Kustaantytär oli Sturen sukua. Tott kuoli vuonna 1481, ja hänen veljensä Lauri jatkoi Viipurissa. Kolmitorninen päälinna valmistui 1480-luvulla, ja esilinna sen jälkeen 1400-luvun loppuun mennessä.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "perustaminen, Tott, nimi, puoliso, kuolema ja Lauri V; valmistumisvuodet 1L (en.wikipedia; Kyppi puhuu vaiheesta, joka jatkui 1490-luvulle). Ehdotuksen \"1483 mennessä\" ei näkynyt haussa, joten vuosiluku vaihdettiin vuosikymmeneksi. Lisätieto: ruotsinkielinen Wikipedia (https://sv.wikipedia.org/wiki/Olofsborg) kertoo, että linna rakennettiin ensin puusta ja kiveen siirryttiin 1477; se jätettiin kortista pois (1L).",
+   "lahteet": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Erik_Axelsson_Tott",
+     "kuvaus": "synty Skånessa, kuolema 1481, veli Lauri jatkoi Viipurissa"
+    },
+    {
+     "url": "https://www.kansallismuseo.fi/en/olavinlinna/historiaa",
+     "kuvaus": "perustettu 1475, tanskalainen ritari, Viipurin käskynhaltija"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "Sankt Olofsborg; kolmitorninen päälinna valmis 1485, ulkomuurit 1495"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Elin_Gustavsdotter",
+     "kuvaus": "puoliso Elin Kustaantytär Sturen suvusta; Tott itäisten rajamaakuntien käskynhaltijana"
+    },
+    {
+     "url": "https://www.kyppi.fi/palveluikkuna/rapea/read/asp/r_kohde_det.aspx?KOHDE_ID=200076",
+     "kuvaus": "ensimmäinen rakennusvaihe 1490-luvulle, päälinna ja esilinna valmiit"
+    }
+   ]
+  },
+  {
+   "id": "hyokkays-1495",
+   "numero": 8,
+   "otsikko": "Hyökkäys vuonna 1495 ja vouti Pietari Kylliäinen",
+   "teksti": "Sota Ruotsin ja Moskovan suuriruhtinaskunnan välillä toi hyökkääjät linnalle vuonna 1495. Linnan voutina oli Pietari Kylliäinen. Hän puolusti linnaa linnaväen ja talonpoikaisen nostoväen turvin. Hyökkäys torjuttiin ilman suuria tappioita. Vuonna 1496 linnaa piiritettiin uudelleen, mutta se kesti. Kylliäinen teki myös oman vastahyökkäyksensä rajan taakse.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "V. Huom.: Wikipedia käyttää nimeä Pietari Niilonpoika Kylliäinen. Sävy: hyökkääjiä ei kuvata, ja vastahyökkäyksen yksityiskohdat (poltetut talot) jätettiin tarkoituksella pois.",
+   "lahteet": [
+    {
+     "url": "https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/",
+     "kuvaus": "Kylliäinen johti puolustusta, 150 nihtiä ja talonpoikaa; uusi hyökkäys kesällä 1496"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Pietari_Niilonpoika_Kylli%C3%A4inen",
+     "kuvaus": "torjui hyökkäyksen 1495 ilman suurempaa mieshukkaa; vastahyökkäys"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "piiritykset 1495 ja 1496, linna kesti"
+    }
+   ]
+  },
+  {
+   "id": "vuosi-1499-ja-bielke",
+   "numero": 9,
+   "otsikko": "Vuosi 1499 ja Erik Turesson Bielke",
+   "teksti": "Kesällä 1499 linnalla oli uusi herra. Erik Turesson Bielke sai Viipurin ja Olavinlinnan käskynhaltijuuden ja vastasi koko itärajasta. Syksyllä 1499 venäläiset katkaisivat välirauhan ja hyökkäsivät linnan edustalle, ja seuraavana vuonna he yrittivät asettaa rajapyykkejä niin, että linna jäisi Venäjän puolelle. Bielken puoliso oli Gunilla Bese. Miehensä kuoltua vuonna 1511 hän hoiti Viipurin linnaa itse kaksi vuotta.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "Gunilla Bese V (en.wikipedia + SKBL); Bielken käskynhaltijuus 1499 1L (en.wikipedia); elokuun 1499 rajapyykit 1L (en.wikipedia; ehdotuksen faktataulukko mainitsee saman). Pelin vouti on nimetön, eikä kortti nimeä vuoden 1499 voutia.",
+   "lahteet": [
+    {
+     "url": "https://en.wikipedia.org/wiki/Erik_Turesson_Bielke",
+     "kuvaus": "käskynhaltijuus kesällä 1499"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/Olavinlinna",
+     "kuvaus": "elokuun 1499 hälyttävät tiedot ja rajapyykit"
+    },
+    {
+     "url": "https://skbl.se/en/article/GunillaJohansdotterBese",
+     "kuvaus": "puoliso; Viipurin linnan hoitaja 1511–1513"
+    }
+   ]
+  },
+  {
+   "id": "vaakunalaatat-ja-komerot",
+   "numero": 10,
+   "otsikko": "Vaakunalaatat ja umpeen muuratut komerot",
+   "teksti": "Linnan muureissa on poikkeuksellisen paljon vaakunalaattoja, kolmetoista, joista kolmessa vaakuna vielä erottuu. Ne veistettiin paikallisesta amfiboliittiliuskeesta linnan työmaalla noin 1475–1483, ja kaikki tunnistetut laatat liittyvät Tottin sukuun. Kirkkotornin ulkomuurissa on Tottin vaakuna ja Kellotornissa Tottin ja Sturen liittovaakuna. Erään tutkimuksen mukaan kummassakin tornissa on laattojen välissä komero, joka oli muurattu umpeen tiilillä. Tiilet poistettiin restauroinnissa.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "laattojen määrä (13, joista 3 tunnistettavaa), amfiboliittiliuske, ajoitus, Tott-yhteys ja umpeen muuratut komerot 1L (Härö 1997, luettu kokonaisuudessaan 7.10.; vahvistettu); Kirkkotornin ja Kellotornin vaakunat V (Finna + Savon historia + Härö). Komeron käyttötarkoitusta ei väitetä (Härö s. 36: ei tiedetä). Härön tekstissä komeron laattanumerot ovat keskenään ristiriitaiset, siksi \"laattojen välissä\" ilman numeroita.",
+   "lahteet": [
+    {
+     "url": "https://journal.fi/fennoscandiaarchaeologica/article/download/126668/76486/265830",
+     "kuvaus": "Härö 1997, Fennoscandia archaeologica XIV, luettu 7.10.: s. 31 liuske, työmaa noin 1475–1483, kaikki tunnistetut laatat Tottin sukuun; s. 33–35 laattaluettelo 1–13, vain 1–3 tunnistettavia; s. 35–36 tummanharmaa liuske = amfiboliitti; s. 34–35 ja Abb. 5 komerot: Kellotornissa 195×85×56 cm, tiilillä umpeen muurattu, tiilet poistettu restauroinnissa; Kirkkotornissa laattojen 4 ja 5 välissä, tiilet poistettu 1966; s. 36 komeron tarkoitusta ei tiedetä"
+    },
+    {
+     "url": "https://savonhistoria.fi/vuoteen-1533/16-olavinlinnan-suojassa/",
+     "kuvaus": "Sturen ja Tottin vaakunalaatta Kellotornin seinässä; hakutiivistelmän mukaan"
+    }
+   ]
+  },
+  {
+   "id": "aarnivalkea-kansanuskossa",
+   "numero": 11,
+   "otsikko": "Aarnivalkea kansanuskossa",
+   "teksti": "Aarnivalkea on kansanuskon liekki, joka paloi vanhan aarteen kätköpaikan päällä. Valoja uskottiin näkyvän erityisesti juhannusyönä. Aarteen kätköä, aarnihautaa, saattoivat vartioida henget tai eläimet. Juhannusyönä kukkivan sananjalan siemen teki etsijän näkymättömäksi aarteen vartijoille. Oikeasti sananjalka ei kuki lainkaan, koska se lisääntyy itiöillä. Aarnin luettelon nimikään ei ole sattumaa.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "V. Viimeinen virke on pelin oma kytkentä kaanoniin (docs/tarina.md), ei historiallinen väite.",
+   "lahteet": [
+    {
+     "url": "https://yle.fi/a/20-132524",
+     "kuvaus": "Yle: Vanha kansa uskoi sananjalan kukkivan juhannusyönä — aarnivalkea, vartijat henkiä ja eläimiä, sananjalan siemen teki näkymättömäksi, sananjalka on itiökasvi eikä kuki"
+    },
+    {
+     "url": "https://fi.wikipedia.org/wiki/Virvatuli",
+     "kuvaus": "aarnivalkea virvatulen nimenä, aarteen merkki, paloi erityisesti juhannusöinä"
+    }
+   ]
+  },
+  {
+   "id": "mika-oli-keksittya",
+   "numero": 12,
+   "otsikko": "Mikä oli keksittyä?",
+   "teksti": "Keksittyä oli paljon. Kappelin kalkin ja linnan hopean kätkeminen vuonna 1495 on fiktiota. Samoin keksittyjä ovat liuskekiven kuva, arkun kilpilukko, uuden herran inventaario ja voudin etsintä. Soutajan näkemä aarnivalkea, tarjotin, tyrmä kellarissa, kiipeilyreitti ja köysi ovat pelin keksintöjä. Pelin vouti on nimetön keksitty hahmo. Totta ovat vaakunalaatat, niiden väliset komerot ja kappeli. Fogg ja Pulu eivät tietenkään olleet paikalla.",
+   "avautuu": {
+    "tyyppi": "loppu"
+   },
+   "varmuus": "ei koske (fiktion luettelo).",
+   "lahteet": []
+  }
+ ]
+}

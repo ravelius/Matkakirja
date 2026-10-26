@@ -172,6 +172,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Ban Josip Jelačićin aukio ja hänen ratsastajapatsaansa '
         + 'Zagrebin keskustassa.',
       lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zagreb_Trg_Ban_Jelacic_market.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Miksi Zagrebin erästä katua kutsutaan yhä Veriseksi sillaksi?',
@@ -219,6 +222,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Peristyyli, Diocletianuksen palatsin pylväiköity '
         + 'keskuspiha, jonka ympärillä kaupunki yhä elää.',
       lahde: 'TimeTravelRome, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peristyle_of_Diocletian\'s_Palace_-_Split_-_51389330950.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
   },
   {
@@ -253,6 +259,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Rijeka ja Kvarnerinlahti ylhäältä Veprinacista '
         + 'katsottuna.',
       lahde: 'RijekaPhotos, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_over_Rijeka_city.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -289,6 +298,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Zadarin roomalainen forum ja sen takana pyöreä Pyhän '
         + 'Donatuksen kirkko.',
       lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_forum,_Zadar_(P1080975).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -321,6 +333,9 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Tvrđa, Osijek 02.jpg',
       selite: 'Tvrđa, Osijekin barokkilinnoitus Dravan rannalla.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tvr%C4%91a,_Osijek_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -355,6 +370,9 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Mountaineering at Dinara -Croatia- in 2010.jpg',
       selite: 'Retkeilijöitä nousemassa Dinaran huipulle.',
       lahde: 'Ponor, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mountaineering_at_Dinara_-Croatia-_in_2010.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Minkä vuoriston nimen Dinara antoi koko rannikon vuorijonolle?',
@@ -402,6 +420,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Sveti Juren huippu Biokovolla. Kalliolla seisova masto on '
         + 'nykyinen lähetinasema.',
       lahde: 'SKas, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_highest_peak_Sv_Jure_(1762_m)_in_Biokovo_Nature_Park.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -435,6 +456,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Vaganski vrh etelästä nähtynä Paklenican kansallispuiston '
         + 'majalta.',
       lahde: 'Javier Sánchez Portero, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vaganski_vrh.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -469,6 +493,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Ćunina glavan huippu Risnjakin kansallispuistossa; '
         + 'Risnjak itse on saman metsäselänteen takana.',
       lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C4%86unina_glava,_Risnjak_National_Park,_Croatia.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -502,6 +529,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Näkymä Vojakin huipulta itään Rijekaa ja '
         + 'Kvarnerinlahtea kohti.',
       lahde: 'Dguendel, Wikimedia Commons (CC BY 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vojak_(mountain),_view_to_Rijeka.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
     },
   },
 
@@ -544,6 +574,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Kornatien saaristo — paljasta kalkkikiveä keskellä '
         + 'Adrianmerta.',
       lahde: 'Miroslav.vajdic, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nacionalni_park_Kornati_3.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Miksi Adrianmerellä on yli tuhat saarta?',
@@ -597,6 +630,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Sava Slavonski Brodin kohdalla, jossa joki on Kroatian '
         + 'ja Bosnian raja.',
       lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sava_River_at_Brod_-_Slavonski_Brod_(Republika_Srpska_-_Croatia_border).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Mihin jokeen Sava lopulta laskee?',
@@ -648,6 +684,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Drava Donji Miholjacin kohdalla Kroatian ja Unkarin '
         + 'rajalla.',
       lahde: 'Plamen, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Drava,_Donji_Miholjac_04.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -688,6 +727,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Stari Gradin tasanko Hvarilla — kreikkalaisten '
         + 'siirtolaisten peltojako yhä näkyvissä.',
       lahde: 'Carsten Steger, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Stari_Grad_Plain_(view_from_the_southwest).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -724,6 +766,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Korčulan vanhakaupunki niemellään — kadut haarautuvat '
         + 'pääkadusta kalanruodon tapaan.',
       lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kor%C4%8Dula_Old_Town,_Croatia_(2024).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
   },
   {
@@ -764,6 +809,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Veliko ja Malo jezero Mljetin länsipäässä — merivettä '
         + 'saaren sisällä.',
       lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_lakes_Veliko_Jezero_and_Malo_Jezero_on_Mljet,_Croatia_(48612923586).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
   },
 
@@ -805,6 +853,9 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Plitvice lakes waterfalls from top.jpg',
       selite: 'Plitvicen järvien putouksia ylhäältä katsottuna.',
       lahde: 'Naval S, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Plitvice_lakes_waterfalls_from_top.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
     visa: {
       kysymys: 'Kuinka nopeasti Plitvicen järvien travertiinipadot kasvavat?',
@@ -852,6 +903,9 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Pulan areena ulkoa — koko kolmikerroksinen ulkomuuri on '
         + 'yhä pystyssä.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Anfiteatro_de_Pula,_Croacia,_2017-04-17,_DD_13-18_HDR_PAN.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -887,6 +941,9 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Croatia-02147 - Walls of Ston (10091720635).jpg',
       selite: 'Stonin muuri nousemassa rinnettä ylös kannaksen poikki.',
       lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Croatia-02147_-_Walls_of_Ston_(10091720635).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
 ];

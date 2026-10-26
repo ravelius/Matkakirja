@@ -1,0 +1,284 @@
+{
+ "kaupunki": "chisinau",
+ "kaupunkiQ": "Q21197",
+ "kohteet": [
+  {
+   "q": "Q5813126",
+   "nimi": "Kristuksen syntymän katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 47.02606,
+   "lon": 28.83453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nativity Cathedral, Chișinău.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nativity_Cathedral%2C_Chi%C8%99in%C4%83u.jpg?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nativity_Cathedral%2C_Chi%C8%99in%C4%83u.jpg",
+     "selite": "Valkoinen uusklassinen katedraali kupoleineen on Chișinăun tärkein ortodoksinen kirkko.",
+     "leveys": 2900,
+     "korkeus": 2098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nativity Cathedral, Chișinău - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nativity_Cathedral%2C_Chi%C8%99in%C4%83u_-_panoramio.jpg?width=1280",
+     "tekija": "Alexey Komarov",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nativity_Cathedral%2C_Chi%C8%99in%C4%83u_-_panoramio.jpg",
+     "selite": "Katedraalin erillinen kellotorni kohoaa katedraalipuiston yllä.",
+     "leveys": 4345,
+     "korkeus": 2867,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7844583",
+   "nimi": "Riemukaari",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 47.02472,
+   "lon": 28.8325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Triumphal arch, Chișinău 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Triumphal_arch%2C_Chi%C8%99in%C4%83u_01.jpg?width=1280",
+     "tekija": "Tomasz Bladyniec",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Triumphal_arch%2C_Chi%C8%99in%C4%83u_01.jpg",
+     "selite": "Riemukaari pystytettiin 1800-luvulla Venäjän sotavoiton muistoksi, ja sen takana näkyy katedraali.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arch of Triumph, Chisinau, Republic of Moldova (51160304626 cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arch_of_Triumph%2C_Chisinau%2C_Republic_of_Moldova_(51160304626_cropped).jpg?width=1280",
+     "tekija": "Photobank MD from Chisinau, Moldova",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arch_of_Triumph%2C_Chisinau%2C_Republic_of_Moldova_(51160304626_cropped).jpg",
+     "selite": "Kaari on nykyään Chișinăun keskusaukion tunnetuin maamerkki.",
+     "leveys": 1600,
+     "korkeus": 941,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4343360",
+   "nimi": "Tapani Suuren patsas",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 47.0255,
+   "lon": 28.8303,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monumentul a lui Stefan cel Mare, Chisinau Stefan the Great Monument, Chisinau, Moldova (49601054843).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumentul_a_lui_Stefan_cel_Mare%2C_Chisinau_Stefan_the_Great_Monument%2C_Chisinau%2C_Moldova_(49601054843).jpg?width=1280",
+     "tekija": "Photobank MD from Chisinau, Moldova",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumentul_a_lui_Stefan_cel_Mare%2C_Chisinau_Stefan_the_Great_Monument%2C_Chisinau%2C_Moldova_(49601054843).jpg",
+     "selite": "Moldovan keskiaikaisen ruhtinaan Tapani Suuren patsas seisoo kaupungin keskuspuiston portilla.",
+     "leveys": 5562,
+     "korkeus": 3705,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chisinau Stefan cel Mare monument.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chisinau_Stefan_cel_Mare_monument.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chisinau_Stefan_cel_Mare_monument.jpg",
+     "selite": "Patsas pystytettiin 1920-luvulla, ja se on Moldovan kansallisen identiteetin symboli.",
+     "leveys": 2620,
+     "korkeus": 3782,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8082598",
+   "nimi": "Tapani Suuren keskuspuisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 47.025,
+   "lon": 28.828,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chisinau Stefan cel Mare park fountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chisinau_Stefan_cel_Mare_park_fountain.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chisinau_Stefan_cel_Mare_park_fountain.jpg",
+     "selite": "Keskuspuiston suihkulähde on kaupunkilaisten suosittu kokoontumispaikka.",
+     "leveys": 4159,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ștefan cel Mare Central Park 2021 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%C8%98tefan_cel_Mare_Central_Park_2021_01.jpg?width=1280",
+     "tekija": "Tomasz Bladyniec",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%C8%98tefan_cel_Mare_Central_Park_2021_01.jpg",
+     "selite": "Vanha puisto tarjoaa varjoisia kävelyteitä Chișinăun ydinkeskustassa.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12736098",
+   "nimi": "Moldovan kansallinen historiamuseo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 47.02259,
+   "lon": 28.82808,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of History (AP4L0086 1PS) (28922487610).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_History_(AP4L0086_1PS)_(28922487610).jpg?width=1280",
+     "tekija": "Alexandru Panoiu from Bucharest, Romania",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_History_(AP4L0086_1PS)_(28922487610).jpg",
+     "selite": "Historiamuseon uusklassinen rakennus esittelee Moldovan vaiheita esihistoriasta nykypäivään.",
+     "leveys": 3475,
+     "korkeus": 2606,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1968696",
+   "nimi": "Kansallinen etnografia- ja luonnonhistoriamuseo",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 47.0234,
+   "lon": 28.8201,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo nacional de etnografía e historia natural, Chisináu, Moldavia, 2023-11-03, DD 57.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_nacional_de_etnograf%C3%ADa_e_historia_natural%2C_Chisin%C3%A1u%2C_Moldavia%2C_2023-11-03%2C_DD_57.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_nacional_de_etnograf%C3%ADa_e_historia_natural%2C_Chisin%C3%A1u%2C_Moldavia%2C_2023-11-03%2C_DD_57.jpg",
+     "selite": "Maurilaistyylinen julkisivu on yksi Chișinăun erikoisimmista 1900-luvun alun rakennuksista.",
+     "leveys": 7257,
+     "korkeus": 4470,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2091959",
+   "nimi": "Pyhän Teodora Sihlalaisen kirkko",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 47.02086,
+   "lon": 28.83041,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kapella jenskoi gimnazii bernardazzi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kapella_jenskoi_gimnazii_bernardazzi.jpg?width=1280",
+     "tekija": "User:Zserghei",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kapella_jenskoi_gimnazii_bernardazzi.jpg",
+     "selite": "Arkkitehti Bernardazzin suunnittelema kirkko on raidallisine tiilipintoineen tyylikäs 1800-luvun lopun rakennus.",
+     "leveys": 2811,
+     "korkeus": 2275,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Capela Gimnaziului de Fete.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capela_Gimnaziului_de_Fete.jpg?width=1280",
+     "tekija": "Gikü",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capela_Gimnaziului_de_Fete.jpg",
+     "selite": "Kirkon siniset kupolit ja koristeelliset kaaret rikastuttavat kaupunkikuvaa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6974468",
+   "nimi": "Kansallinen taidemuseo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 47.02833,
+   "lon": 28.82556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo nacional de bellas artes, Chisináu, Moldavia, 2023-11-03, DD 71-73 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_nacional_de_bellas_artes%2C_Chisin%C3%A1u%2C_Moldavia%2C_2023-11-03%2C_DD_71-73_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_nacional_de_bellas_artes%2C_Chisin%C3%A1u%2C_Moldavia%2C_2023-11-03%2C_DD_71-73_HDR.jpg",
+     "selite": "Taidemuseo toimii koristeellisessa 1800-luvun lopun kaupunkipalatsissa.",
+     "leveys": 5553,
+     "korkeus": 7692,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Triumph Ark and Cathedral in Chsinau.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Triumph_Ark_and_Cathedral_in_Chsinau.JPG?width=1280",
+   "tekija": "Bagriton",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Triumph_Ark_and_Cathedral_in_Chsinau.JPG",
+   "selite": "Chișinăun keskusta: riemukaari ja katedraali valaistuina yöllä.",
+   "leveys": 3488,
+   "korkeus": 2616,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Chisinau lac Valea Morilor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chisinau_lac_Valea_Morilor.jpg?width=1280",
+   "tekija": "Myrabella",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chisinau_lac_Valea_Morilor.jpg",
+   "selite": "Valea Morilorin järvi ympäröivine metsäisine rinteineen on kaupungin suosittu virkistysalue.",
+   "leveys": 3605,
+   "korkeus": 2704,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

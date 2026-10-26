@@ -1793,7 +1793,8 @@ export function luoEsitys({ ajo }) {
     tila.pitoMin = Math.min(tila.pitoMin, arvo);
     const paikka = ajo.asteikko.paikka?.(arvo) ?? arvo;
     ajo.tila = { ...ajo.tila, vuosi: paikka };
-    ajo.naytaVuosi(paikka, reduced);
+    // Esitys käy: rullat sumenevat vauhdin mukaan kuten keksintökellossa (aikajana.js sumennaKello).
+    ajo.naytaVuosi(paikka, reduced, { kay: true });
   };
 
   /**

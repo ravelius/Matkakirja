@@ -34,12 +34,21 @@
  *      "generoi kunnes kelpaa" -silmukkaa.
  *   3. Ajon loppuun tulostuu generointien määrä ja kustannusarvio.
  *
+ * TYYLISÄÄNTÖ (Fable 25.9.2026, omistajan löydös 95 "piirretty tausta on
+ * väärin"): miniatyyri on LEIKATTU KOHDE, EI KOHTAUS. Kuvassa on yksi
+ * kohde (rakennus, esine, henkilö tai pieni ryhmä) tasaisella
+ * paperitaustalla, joka leikataan pois (tools/leikkaa-miniatyyrit.mjs);
+ * maalattua taustaa, taivasta, maisemaa tai huonetta kohteen ympärillä
+ * ei ole. Sama koskee karttanostojen kuvia. Vartija:
+ * tests/miniatyyrit-leikkaus.test.mjs (täyttö < 0,6, reuna <= 0,35).
+ *
  * API-avainta EI koskaan repoon eikä lokiin.
  */
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 /*
@@ -1978,8 +1987,7 @@ mkdirSync(resolve(JUURI, 'assets/kartat/miniatyyrit'), { recursive: true });
 /* Pienennys 1024 → 512 ja JPEG-pakkaus Chromiumin kanvaasilla — sama
  * kuin tools/generoi-varustekuvat.mjs. */
 async function avaaPienentaja() {
-  const { chromium } = await import('playwright');
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const sivu = await selain.newPage();
   return {
     async pienenna(png) {

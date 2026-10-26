@@ -1,0 +1,17 @@
+# Vertailu A: Kartta kaupungissa (web vs. natiivi)
+
+WEB ON MALLI. Vain ei-sallitut, silmin havaittavat erot alla. Sallitut erot (docs/raamattu-loki, ks. sallitut.md) on jätetty pois: mm. iPhonen matalampi/logoton yläpalkki, natiivin suora pallo-aloitus ilman web-porttia, kaupunkikortin pieni herokuva, KOKEET-valikko TF-buildeissa.
+
+| # | Näkymä | Ero (web vs natiivi, concrete) | Suunta | Vakavuus | Korjaaja | Kuvat |
+|---|--------|-------------------------------|--------|----------|----------|-------|
+| 1 | Yläpalkki: raha/päivä-pilleri | Web (w03) näyttää pillerissä "400 ⛁ · Päivä 1, aamu" (raha + päivä + vuorokaudenaika sanallisesti). Natiivissa pilleri näyttää "400 ⛁ 1/80" (raha + päivälaskuri muodossa X/80) — tekstiä "Päivä"/"aamu"/"ilta" ei näy lainkaan. | natiivi eri | keski | Natiivi-UI | w03, video-t1, video-t5, video-t11, cl1-iphone-3-tavallinen |
+| 2 | Kartan oikea yläkulma: näkymäpainikkeet | w03:ssa on vain yksi pyöreä nappi ylhäällä oikealla (karttaselite, n. 8 % näytön leveydestä, y ≈ 15 %). Natiivissa saman napin alapuolella (y ≈ 23–25 %) on toinen, silmä-ikoninen nappi, jolle web-kuvassa ei ole vastinetta. (epävarma — saattaa olla tilariippuvainen, esim. näkyy vain maakuntalinssin/muun tilan kanssa, jota web-kuvasarjassa ei ole) | natiivi eri | matala | Natiivi-UI / Karttaseppä | w03, video-t1 |
+| 3 | Paikkapilleri (kaupungin nimi + kuukausi) | Web (w03) näyttää aina täyden tekstin "Ateena, elokuussa 1873". Natiivin kuvista osassa (video-t1, video-t5, cl1-iphone-3-tavallinen) pillerissä lukee pelkkä "Ateena" ilman kuukausi/vuosi-osaa, kun taas video-t11:ssä (sama sarja, myöhempi kehys) teksti on täysi "Ateena, elokuussa 1873". (epävarma — voi olla ohimenevä laajenemis/pienenemisanimaatio saapumisen yhteydessä, ei pysyvä puute) | natiivi eri | matala | Natiivi-UI | w03, video-t1, video-t5, video-t11, cl1-iphone-3-tavallinen |
+
+## Ei vertailukelpoista kuvaa
+
+- **Auki oleva maa-kartuscha (w12: KREIKKA-tietokortti tilastoineen ja aihelinkkeineen)** — natiivikuvista ei löytynyt vastaavaa näkymää. k60-alku.png ja ipad-tila.png näyttävät eri elementin (kokoruudun "LISÄÄ"-nostokortin, historiallinen valokuva + kuvateksti + LISÄÄ-nappi), ei maan tietokorttia. Ei voitu verrata.
+- **Aloituskaupungin valinta pallolla (w01: pallo, 4 korostettua kaupunkia Moskova/Istanbul/Ateena/Kairo)** — natiivista ei ollut vastaavaa "valitse aloituskaupunki"-kuvaa. e0-alku.png esittää eri, ilmeisesti myöhemmän vaiheen "Maapallon tila" -näkymän (kymmeniä vihreitä pisteitä ympäri maailmaa, sallittu vain natiivissa), ei suoraan verrattavissa w01:een.
+- **Aloitusruutu (w02: "Aloita seikkailu" + äänikytkin)** — sallitun eron mukaan natiivi menee suoraan palloon ilman web'n porttia, joten suoraa kuvaparia ei odotetakaan. Natiivin k60-alku.png/ipad-tila.png näyttävät sen sijaan eri pelitilan ("Jatka matkaa" / "Uusi matka", Osa II, tallennetun pelin jatko) — ei sama tila kuin w02, joten tyylivertailu jäi vajaaksi.
+- **Yläpalkin mustaksi peitetty alue** (video-t1/t5/t11, cl1-iphone-3-tavallinen, k60-alku, ipad-tila) — todennäköisesti TF-buildin KOKEET-valikko (sallittu ero), mutta peitteen takia asetukset (gear) -napin tarkkaa sijaintia/ulkoasua natiivissa ei voitu varmistaa eikä verrata web'n gear-nappiin.
+- **Kelluva valokuva-kortti sekä Liiku/Ohita-painikkeet** (video-t1/t5/t11: kallistettu kahvila-valokuva kartan päällä, "Ohita" ja "Liiku" -napit) — web-kuvasarjassa (w03) ei ole vastaavaa saapumisanimaation tilaa, joten ei voitu arvioida vastaako natiivin toteutus web-mallia.

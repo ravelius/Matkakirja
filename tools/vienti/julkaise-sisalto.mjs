@@ -35,10 +35,12 @@
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
+import { brotliCompressSync, constants as zlibVakiot } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import { SKEEMAVERSIO, SKEEMAVERSIO_TARKKA, JUURI } from './vie-sisalto.mjs';
 import { tarkistaSopimus } from './skeemasopimus.mjs';
 import { validoiNimella } from './validoi.mjs';
+import { validoiAsetukset } from './asetukset.mjs';
 
 export const MIN_SOVELLUS = { ios: 1, web: null };
 export const MAJOR = SKEEMAVERSIO.split('/').pop();
@@ -49,6 +51,13 @@ const sha = (s) => createHash('sha256').update(s).digest('hex');
 export function paketinTiiviste(tiedostot) {
   const rivit = [...tiedostot.keys()].sort().map((p) => `${p}\t${sha(tiedostot.get(p))}\n`);
   return sha(rivit.join(''));
+}
+
+/** Asetustiedoston validointi (tools/vienti/asetukset.mjs): virheet palautetaan, varoitukset tulostetaan. */
+function validoiAsetuksetPaketista(lue, polku) {
+  const { virheet, varoitukset } = validoiAsetukset(lue(polku));
+  for (const v of varoitukset) console.warn(`${polku}: ${v}`);
+  return virheet.map((v) => `${polku}: ${v}`);
 }
 
 /**
@@ -71,6 +80,8 @@ export function tarkistaPaketti(tiedostot) {
       ));
     }
   }
+  // Skeema 1.59: asetukset on tavallinen objekti (ei kokoelmaskeemaa); oma validointi, rikkinäinen ei pääse osoittimeen.
+  if (manifest.asetukset) virheet.push(...validoiAsetuksetPaketista(lue, manifest.asetukset.tiedosto));
   if (manifest.offline) {
     virheet.push(...validoiNimella(lue(manifest.offline.tiedosto), 'offline.schema.json', { polku: manifest.offline.tiedosto }));
   }
@@ -105,16 +116,40 @@ const MUUTOSNIMET = {
   luennat: 'luentoa', elaintayt: 'eläinjuttua', kulttuurivisat: 'kulttuurivisaa', lehtitehtavat: 'lehtitehtävää',
   miniatyyrit: 'pienoismallia', paikallisaarteet: 'paikallisaarretta', historianHetket: 'historian hetkeä',
 };
-export function muutosRivi(edelliset, nykyiset, julkaistu) {
+/*
+ * PÄIVITETYT KOKOELMAT (Natiivi-UI 28.9.2026, omistajan toive Fablen kautta: "Peli päivittyi" -lappu kertoo oikeat
+ * muutokset). Useimmat versiot muuttavat sisältöä lisäämättä alkioita, jolloin rivi oli pelkkä "Sisältöä päivitettiin."
+ * (natiivi jättää sen pois). Osoitin kantaa nyt kokoelmien tiivisteet (kokoelmaSha, 12 merkkiä), ja seuraava versio
+ * nimeää muuttuneet. Nimettävät kokoelmat ja offline-kartat alla; muut (säännöt, esilasketut, moduulit) eivät nouse riville.
+ */
+const PAIVITETTYNIMET = {
+  kaupunkilehdet: 'kaupunkilehdet', maalehdet: 'maalehdet', nahtavyydet: 'nähtävyydet', kysymykset: 'kysymykset',
+  kohtaamiset: 'kohtaamiset', julisteet: 'julisteet', radiot: 'radioasemat', kohdekartat: 'kohdekartat', luennat: 'luennot',
+  elaintayt: 'eläinjutut', kulttuurivisat: 'kulttuurivisat', lehtitehtavat: 'lehtitehtävät', miniatyyrit: 'pienoismallit',
+  paikallisaarteet: 'paikallisaarteet', historianHetket: 'historian hetket', karttavalot: 'karttanostot',
+  maakuntarajat: 'maakunnat', tarinakaari: 'tarina', saapumispuheet: 'saapumispuheet', livianpuhe: 'Livian puheet',
+  kaupungit: 'kaupungit', reitit: 'reitit', pulmat: 'pulmat', kuvakysymykset: 'kuvakysymykset', offline: 'offline-kartat',
+};
+const luettelo = (l) => (l.length < 2 ? l.join('') : `${l.slice(0, -1).join(', ')} ja ${l.at(-1)}`);
+
+export function muutosRivi(edelliset, nykyiset, julkaistu, edSha = null, nySha = null) {
   const paiva = julkaistu.slice(0, 10);
   if (!edelliset) return { paiva, teksti: 'Sisältö päivittyi.' };
-  const uudet = Object.entries(MUUTOSNIMET)
-    .map(([nimi, sana]) => [nykyiset[nimi] - (edelliset[nimi] ?? 0), sana])
+  const kasvaneet = Object.entries(MUUTOSNIMET)
+    .map(([nimi, sana]) => [nykyiset[nimi] - (edelliset[nimi] ?? 0), sana, nimi])
     .filter(([n]) => n > 0).sort((a, b) => b[0] - a[0]).slice(0, 3);
-  return {
-    paiva,
-    teksti: uudet.length ? `Sisältö päivittyi: ${uudet.map(([n, sana]) => `${n} uutta ${sana}`).join(', ')}.` : 'Sisältöä päivitettiin.',
-  };
+  const osat = [];
+  if (kasvaneet.length) osat.push(`Sisältö päivittyi: ${kasvaneet.map(([n, sana]) => `${n} uutta ${sana}`).join(', ')}.`);
+  if (edSha && nySha) {
+    const lasketut = new Set(kasvaneet.map(([, , nimi]) => nimi));
+    const muuttuneet = Object.keys(PAIVITETTYNIMET)
+      .filter((nimi) => !lasketut.has(nimi) && edSha[nimi] && nySha[nimi] && edSha[nimi] !== nySha[nimi]).map((nimi) => PAIVITETTYNIMET[nimi]);
+    if (muuttuneet.length) {
+      const nakyvat = muuttuneet.length > 4 ? [...muuttuneet.slice(0, 4), 'muuta'] : muuttuneet;
+      osat.push(`Päivitetty: ${luettelo(nakyvat)}.`);
+    }
+  }
+  return { paiva, teksti: osat.length ? osat.join(' ') : 'Sisältöä päivitettiin.' };
 }
 
 /*
@@ -126,6 +161,9 @@ export function tarkistaMajor2(tiedostot) {
   const virheet = [];
   const manifest = JSON.parse(tiedostot.get('manifest.json'));
   if (manifest.$skeema !== 'matkakirja-vienti/2/manifest') virheet.push(`manifest: $skeema ${manifest.$skeema}`);
+  if (manifest.asetukset && tiedostot.has(manifest.asetukset.tiedosto)) {
+    virheet.push(...validoiAsetuksetPaketista((p) => JSON.parse(tiedostot.get(p)), manifest.asetukset.tiedosto));
+  }
   for (const arvo of Object.values(manifest)) {
     for (const e of Array.isArray(arvo) ? arvo : [arvo]) {
       if (!e || typeof e !== 'object' || typeof e.tiedosto !== 'string') continue;
@@ -135,9 +173,39 @@ export function tarkistaMajor2(tiedostot) {
   }
   for (const [polku, teksti] of tiedostot) {
     if (teksti.includes('matkakirja-vienti/1/')) virheet.push(`${polku}: 1.x-tunniste`);
-    if (polku.startsWith('kokoelmat/') && JSON.parse(teksti).alkiot.some((a) => 'data' in a)) virheet.push(`${polku}: data-kenttä`);
+    if (polku.startsWith('kokoelmat/') && polku !== manifest.asetukset?.tiedosto && JSON.parse(teksti).alkiot.some((a) => 'data' in a)) virheet.push(`${polku}: data-kenttä`);
   }
   return virheet.slice(0, 20);
+}
+
+/*
+ * HAKEMISTO (taustapäivitys vaihe 1, docs/raportit/paketin-taustapaivitys-suunnitelma-20260925.md):
+ * jokaisen paketin tiedoston { polku, sha256, tavuja, siirto } aakkosjärjestyksessä. siirto = brotli
+ * (taso 5) -arvio siirtokoosta. Natiivi vertaa sha256:ia levyn tiedostovarastoon ja lataa vain
+ * puuttuvat. osoitin.sha256 = paketinTiiviste lasketaan samoista riveistä, joten natiivi voi tarkistaa
+ * sen. hakemisto.json ei itse kuulu tiivisteeseen, vaan sen oma sha256 on osoittimessa.
+ */
+export const HAKEMISTO = 'hakemisto.json';
+export function kokoaHakemisto(tiedostot) {
+  const rivit = [...tiedostot.keys()].sort().map((polku) => {
+    const puskuri = Buffer.from(tiedostot.get(polku), 'utf8');
+    const siirto = brotliCompressSync(puskuri, { params: { [zlibVakiot.BROTLI_PARAM_QUALITY]: 5 } }).length;
+    return { polku, sha256: createHash('sha256').update(puskuri).digest('hex'), tavuja: puskuri.length, siirto };
+  });
+  const teksti = `${JSON.stringify({ $skeema: 'matkakirja-vienti/hakemisto', tiedostot: rivit })}\n`;
+  const summa = (k) => rivit.reduce((a, r) => a + r[k], 0);
+  return { teksti, sha256: sha(teksti), tavuja: Buffer.byteLength(teksti), pakettiTavuja: summa('tavuja'), pakettiSiirto: summa('siirto') };
+}
+
+/*
+ * TASOITTAIN: uusin versio, jonka kukin natiivin sisältötaso osaa lukea. Periytyy edellisestä
+ * osoittimesta; tämä versio kirjataan tasolle MIN_SOVELLUS.ios. Kun taso nousee, vanha taso jää
+ * osoittamaan viimeiseen sille kelpaavaan versioon.
+ */
+export function kokoaTasoittain(edellinen, versio, min = MIN_SOVELLUS) {
+  const ios = { ...(edellinen?.tasoittain?.ios ?? {}) };
+  if (min.ios != null) ios[String(min.ios)] = versio;
+  return { ios };
 }
 
 export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit, appVersion = null, julkaistu, major = MAJOR }) {
@@ -160,13 +228,21 @@ export function kokoaJulkaisu({ tiedostot, edellinen = null, suurin = 0, commit,
     appVersion,
     julkaistu,
   };
+  const hakemisto = kokoaHakemisto(tiedostot);
+  osoitin.hakemisto = { polku: HAKEMISTO, sha256: hakemisto.sha256, tavuja: hakemisto.tavuja };
+  osoitin.tavuja = hakemisto.pakettiTavuja;
+  osoitin.siirto = hakemisto.pakettiSiirto;
+  osoitin.tasoittain = kokoaTasoittain(edellinen, versio);
   const manifest = tiedostot.has('manifest.json') ? JSON.parse(tiedostot.get('manifest.json')) : null;
   if (manifest?.kokoelmat) {
     osoitin.kokoelmaLkm = Object.fromEntries(manifest.kokoelmat.map((k) => [k.nimi, k.lkm]));
-    osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu);
+    osoitin.kokoelmaSha = Object.fromEntries([...manifest.kokoelmat.map((k) => [k.nimi, k.sha256?.slice(0, 12)]),
+      ...(manifest.offline?.sha256 ? [['offline', manifest.offline.sha256.slice(0, 12)]] : [])].filter(([, v]) => v));
+    osoitin.muutos = muutosRivi(edellinen?.kokoelmaLkm ?? null, osoitin.kokoelmaLkm, julkaistu,
+      edellinen?.kokoelmaSha ?? null, osoitin.kokoelmaSha);
   }
   if (!kakkonen) virheet.push(...validoiNimella(osoitin, 'osoitin.schema.json', { polku: 'uusin.json' }));
-  return { muuttui: true, versio, osoitin, virheet };
+  return { muuttui: true, versio, osoitin, hakemisto, virheet };
 }
 
 function lueKansio(kansio) {
@@ -207,6 +283,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       mkdirSync(dirname(kohde), { recursive: true });
       writeFileSync(kohde, teksti);
     }
+    writeFileSync(join(ulos, `v${j.versio}`, HAKEMISTO), j.hakemisto.teksti);
     const osoitinTeksti = `${JSON.stringify(j.osoitin, null, 1)}\n`;
     writeFileSync(join(ulos, `v${j.versio}`, 'osoitin.json'), osoitinTeksti);
     writeFileSync(join(ulos, 'uusin.json'), osoitinTeksti);

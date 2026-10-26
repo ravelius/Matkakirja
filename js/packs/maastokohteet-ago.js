@@ -72,7 +72,7 @@ export const MAASTOKOHTEET_AGO = [
     tyyppi: 'meri',
     kysymykset: [
       'Miksi Etelä-Atlantti on lämmin ympäri vuoden?',
-      'Mitä \'vanha\' ja \'uusi maailma\' tarkoittavat?',
+      'Mitä ’vanha’ ja ’uusi maailma’ tarkoittavat?',
     ],
     nappi: 'Maailman toiseksi suurin valtameri',
     // 12 E / -10.5 N — ulappa Angolan rannikon edustalla Luandan eteläpuolella; en-Wikipedia "Atlantic Ocean" antaa koko valtameren keskipisteeksi -25 / 0
@@ -82,8 +82,8 @@ export const MAASTOKOHTEET_AGO = [
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
     teksti: 'Atlantti on maailman toiseksi suurin valtameri: se peittää noin 17 prosenttia '
-      + 'maapallon pinnasta. Löytöretkien aikana sen ajateltiin erottavan Amerikan \'uuden '
-      + 'maailman\' Afrikan, Aasian ja Euroopan \'vanhasta maailmasta\'. Angolan kohdalla '
+      + 'maapallon pinnasta. Löytöretkien aikana sen ajateltiin erottavan Amerikan ’uuden '
+      + 'maailman’ Afrikan, Aasian ja Euroopan ’vanhasta maailmasta’. Angolan kohdalla '
       + 'levittäytyvä Etelä-Atlantti pysyy lämpimänä ympäri vuoden, sillä sitä reunustavat maat '
       + 'ovat tropiikissa.',
     lahde: 'en-Wikipedia "Atlantic Ocean", johdanto-osa (tarkistettu 30.8.2026).',

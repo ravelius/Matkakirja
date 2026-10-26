@@ -1,0 +1,468 @@
+{
+ "kaupunki": "ankara",
+ "kaupunkiQ": "Q3640",
+ "jarjestys": [
+  "Q615404",
+  "Q754322",
+  "Q206225",
+  "Q853935",
+  "Q1640233",
+  "Q769575",
+  "Q753230",
+  "Q7361597",
+  "Q4533056",
+  "Q800389",
+  "Q6033876",
+  "Q4818221"
+ ],
+ "kohteet": [
+  {
+   "q": "Q615404",
+   "nimi": "Anıtkabir",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 39.925,
+   "lon": 32.83694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ataturk's Mausoleum (6225341313).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ataturk's_Mausoleum_(6225341313).jpg?width=1280",
+     "tekija": "William Neuheisel from DC, US",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ataturk's_Mausoleum_(6225341313).jpg",
+     "selite": "Anıtkabir on Atatürkin mausoleumi, ja sen pylväikkö kohoaa Ankaran kukkulalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anıtkabir in November 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An%C4%B1tkabir_in_November_2025.jpg?width=1280",
+     "tekija": "Mehman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An%C4%B1tkabir_in_November_2025.jpg",
+     "selite": "Mausoleumin portaat ja valtava aukio ovat Turkin tasavallan tärkeimpiä muistopaikkoja.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Anıtkabir gün batımı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An%C4%B1tkabir_g%C3%BCn_bat%C4%B1m%C4%B1.jpg?width=1280",
+     "tekija": "LordReco",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An%C4%B1tkabir_g%C3%BCn_bat%C4%B1m%C4%B1.jpg",
+     "selite": "Laskevan auringon valo värjää mausoleumin kalkkikiven kullanruskeaksi.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q754322",
+   "nimi": "Anatolian sivilisaatioiden museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 39.93833,
+   "lon": 32.86194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of Anatolian Civilizations001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Anatolian_Civilizations001.jpg?width=1280",
+     "tekija": "Georges Jansoone (JoJan)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Anatolian_Civilizations001.jpg",
+     "selite": "Anatolian sivilisaatioiden museo toimii entisessä ottomaanien ajan basaarirakennuksessa linnan juurella.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anadolu Medeniyetleri Müzesi Güneş Kursu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anadolu_Medeniyetleri_M%C3%BCzesi_G%C3%BCne%C5%9F_Kursu.jpg?width=1280",
+     "tekija": "Dursun Sülük",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anadolu_Medeniyetleri_M%C3%BCzesi_G%C3%BCne%C5%9F_Kursu.jpg",
+     "selite": "Museon kokoelmiin kuuluvat muun muassa heettiläisten ja frygialaisten esineet.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q206225",
+   "nimi": "Ankaran linna",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 39.94167,
+   "lon": 32.865,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ankara Castle.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Castle.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Castle.jpg",
+     "selite": "Ankaran linna kohoaa kaupunkia hallitsevalla kukkulalla vanhankaupungin yllä.",
+     "leveys": 4767,
+     "korkeus": 3039,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ankara Castle walls.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Castle_walls.JPG?width=1280",
+     "tekija": "Peace01234 (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Castle_walls.JPG",
+     "selite": "Linnan muurien tornit on rakennettu eri aikojen kivestä ja uusiokäytetyistä rakennusosista.",
+     "leveys": 2034,
+     "korkeus": 1096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Muralla del castillo de Ankara, Ankara, Turquía, 2024-10-02, DD 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muralla_del_castillo_de_Ankara%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-02%2C_DD_03.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muralla_del_castillo_de_Ankara%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-02%2C_DD_03.jpg",
+     "selite": "Muurin kiviset tornit ja portaat johtavat linnan sisälle.",
+     "leveys": 5814,
+     "korkeus": 5170,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q853935",
+   "nimi": "Kocatepen moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 39.91667,
+   "lon": 32.86056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kocatepe Camii Ankara.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kocatepe_Camii_Ankara.JPG?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kocatepe_Camii_Ankara.JPG",
+     "selite": "Kocatepen moskeija on Ankaran suurin moskeija, jonka neljä minareettia näkyvät kauas.",
+     "leveys": 2580,
+     "korkeus": 1646,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kocatepe camisı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kocatepe_camis%C4%B1.jpg?width=1280",
+     "tekija": "Uğurgüler06",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kocatepe_camis%C4%B1.jpg",
+     "selite": "Moskeijan kupoli ja minareetit erottuvat Ankaran nykyaikaisten rakennusten keskeltä.",
+     "leveys": 2592,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1640233",
+   "nimi": "Augustuksen temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 39.94434,
+   "lon": 32.85827,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monumento de Ancira, Ankara, Turquía, 2024-10-03, DD 48.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumento_de_Ancira%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-03%2C_DD_48.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumento_de_Ancira%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-03%2C_DD_48.jpg",
+     "selite": "Augustuksen ja Rooman temppelin marmoriseinä on yksi Ankaran vanhimmista roomalaisista rakennuksista.",
+     "leveys": 7071,
+     "korkeus": 4714,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ankara Temple of Augustus and Rome view of west side and Kale in distance in 2011 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Temple_of_Augustus_and_Rome_view_of_west_side_and_Kale_in_distance_in_2011_01.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Temple_of_Augustus_and_Rome_view_of_west_side_and_Kale_in_distance_in_2011_01.jpg",
+     "selite": "Temppelin raunioiden taustalla näkyy linnan kukkula.",
+     "leveys": 2802,
+     "korkeus": 4203,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q769575",
+   "nimi": "Hacı Bayramin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 39.94444,
+   "lon": 32.85778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hacı Bayram-ı Veli Camii ve Türbesi, Augustus Tapınağı.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hac%C4%B1_Bayram-%C4%B1_Veli_Camii_ve_T%C3%BCrbesi%2C_Augustus_Tap%C4%B1na%C4%9F%C4%B1.jpg?width=1280",
+     "tekija": "Dursun Sülük",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hac%C4%B1_Bayram-%C4%B1_Veli_Camii_ve_T%C3%BCrbesi%2C_Augustus_Tap%C4%B1na%C4%9F%C4%B1.jpg",
+     "selite": "Hacı Bayramin moskeija seisoo Augustuksen temppelin vieressä Ankaran vanhassa keskustassa.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Haci Bayram Mosque 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Haci_Bayram_Mosque_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Haci_Bayram_Mosque_02.jpg",
+     "selite": "Moskeijan minareetti ja aukio ovat pyhiinvaeltajien suosima kohde.",
+     "leveys": 4668,
+     "korkeus": 3267,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q753230",
+   "nimi": "Atakule",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 39.88611,
+   "lon": 32.85611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ankara Atakule in 2006 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Atakule_in_2006_24.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Atakule_in_2006_24.jpg",
+     "selite": "Atakule on Ankaran näkötorni, jonka yläosassa on ravintola ja näköalatasanne.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ankara Atakule in 2006 23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Atakule_in_2006_23.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Atakule_in_2006_23.jpg",
+     "selite": "Torni näkyy Ankaran asuinkortteleiden yläpuolelle Çankayan kukkulalla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7361597",
+   "nimi": "Roomalainen kylpylä",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 39.9465,
+   "lon": 32.853,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Baños romanos, Ankara, Turquía, 2024-10-03, DD 40-44 PAN.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C3%B1os_romanos%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-03%2C_DD_40-44_PAN.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ba%C3%B1os_romanos%2C_Ankara%2C_Turqu%C3%ADa%2C_2024-10-03%2C_DD_40-44_PAN.jpg",
+     "selite": "Caracallan kylpylän lämmitysjärjestelmän pienet pylväät ovat vielä näkyvissä Ulusin kaupunginosassa.",
+     "leveys": 12251,
+     "korkeus": 3953,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ankara Baths of Caracalla Look at point north of bath itself in 2012 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Baths_of_Caracalla_Look_at_point_north_of_bath_itself_in_2012_01.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Baths_of_Caracalla_Look_at_point_north_of_bath_itself_in_2012_01.jpg",
+     "selite": "Roomalaisen kylpylän kaivausalue sijaitsee kaupungin keskustassa.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4533056",
+   "nimi": "Ankaran etnografinen museo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 39.93267,
+   "lon": 32.85489,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ethnography Museum of Ankara.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethnography_Museum_of_Ankara.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethnography_Museum_of_Ankara.jpg",
+     "selite": "Etnografinen museo toimii marmorirakennuksessa, jossa Atatürk oli aluksi haudattuna.",
+     "leveys": 4909,
+     "korkeus": 3273,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q800389",
+   "nimi": "Ankaran rautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 39.936,
+   "lon": 32.84352,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ankara Tren Garı - 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Tren_Gar%C4%B1_-_2015.jpg?width=1280",
+     "tekija": "SAİT71",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Tren_Gar%C4%B1_-_2015.jpg",
+     "selite": "Ankaran rautatieasema on 1930-luvulla valmistunut tasavallan ajan rakennus Ulusin tuntumassa.",
+     "leveys": 1479,
+     "korkeus": 1066,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6033876",
+   "nimi": "Aslanhanen moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 39.93667,
+   "lon": 32.86528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arslanhane Camii, 2023 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arslanhane_Camii%2C_2023_01.jpg?width=1280",
+     "tekija": "Gargarapalvin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arslanhane_Camii%2C_2023_01.jpg",
+     "selite": "Aslanhanen moskeija on 1200-luvun seldžukkien moskeija Ankaran linnan juurella.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ankara Aslanhane Camii Mihrab in 2014 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Aslanhane_Camii_Mihrab_in_2014_08.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Aslanhane_Camii_Mihrab_in_2014_08.jpg",
+     "selite": "Moskeijan mihrabin sinivihreät laatat ovat seldžukkitaiteen tunnettu esimerkki.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4818221",
+   "nimi": "Ankaran maalaus- ja kuvanveistomuseo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 39.93306,
+   "lon": 32.85583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrance of the Ankara Painting and Sculpture Museum 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_of_the_Ankara_Painting_and_Sculpture_Museum_02.jpg?width=1280",
+     "tekija": "Derbrauni",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_of_the_Ankara_Painting_and_Sculpture_Museum_02.jpg",
+     "selite": "Maalaus- ja kuvanveistomuseo toimii entisessä Türk Ocağı -yhdistyksen rakennuksessa Ulusissa.",
+     "leveys": 2986,
+     "korkeus": 1576,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ankara skyline, April 17 2017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_skyline%2C_April_17_2017.jpg?width=1280",
+   "tekija": "Mark Lowen",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_skyline%2C_April_17_2017.jpg",
+   "selite": "Ankara on Turkin pääkaupunki, jonka kerrostalot ja tornit leviävät Anatolian ylängölle.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Ankara Skyline (6225862196).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ankara_Skyline_(6225862196).jpg?width=1280",
+   "tekija": "William Neuheisel from DC, US",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ankara_Skyline_(6225862196).jpg",
+   "selite": "Kaupunki levittäytyy kukkuloiden väliseen laaksoon keskellä Anatoliaa.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

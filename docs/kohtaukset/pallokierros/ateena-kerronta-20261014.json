@@ -1,0 +1,718 @@
+{
+ "versio": 1,
+ "laatija": "Sisältökirjuri 14.10.2026",
+ "kaupunki": "ateena",
+ "huomio": "Ateenan pallokierros (PT 14.10.2026; omistaja: Lontoo, Praha ja Ateena kehityskaupungeiksi). Pysähdykset ja järjestys: Karttaseppä 14.10. (itä→länsi, avausnäkymän kohde Akropolis Q131013; Tuulten torni on oppaan seitsemän kohteen lisäksi valittu kahdeksas kohde ja kierroksella kolmas). Akropolis-museota ei ole mukana (PT 14.10.). Kaikki sisältö piilotetaan Kreikan App Storessa piilotuslistalla. Ei isoisäviittausta: isoisän Ateena-merkintä kertoo vain kahvilasta, Schliemannista ja Troijan kullasta (ei kierroksen kohteista). Ääni vasta PT:n hyväksynnän jälkeen, Äänittäjä.",
+ "muistettavat": [
+  "Ateena kasvoi Akropolis-kallion ympärille: kierros kulkee idästä länteen ja nousee lopuksi kalliolle.",
+  "Antiikin Ateenassa syntyivät demokratia ja filosofia: kansankokous kokoontui Pnyxillä ja neuvosto Agoralla, ja Sokrates tuomittiin vuonna 399 eaa.",
+  "Ateenassa on monta aikaa samassa kuvassa: 400-luvun eaa. temppelit, Hadrianuksen aikainen Olympieion ja vuoden 1896 olympialaisten stadion."
+ ],
+ "avaus": {
+  "virkkeet": [
+   "Tervetuloa Ateenaan.",
+   "Ylhäältä kaupunki levittäytyy Akropolis-kallion ympärille kattojen ja kapeiden katujen verkkona, ja kallion laella näkyy Parthenon.",
+   "Kierros alkaa idästä Kallimarmaron stadionilta ja etenee kohti kalliota."
+  ],
+  "kerronta": "Tervetuloa Ateenaan. Ylhäältä kaupunki levittäytyy Akropolis-kallion ympärille kattojen ja kapeiden katujen verkkona, ja kallion laella näkyy Parthenon. Kierros alkaa idästä Kallimarmaron stadionilta ja etenee kohti kalliota."
+ },
+ "loppu": {
+  "kerronta": "Kierros päättyy Parthenoniin, jonka rakentaminen alkoi yli 2 400 vuotta sitten, ja alhaalla kaupunki jatkuu joka suuntaan."
+ },
+ "metrokartta": [
+  {
+   "nro": 1,
+   "nimi": "Kallimarmaro / Panathinaikon stadion",
+   "selite": "Kallimarmaro on noin 204 metriä pitkä hevosenkengän muotoinen stadion, jonka valkoiset istuinrivit nousevat Pangratin kaupunginosassa kahden kukkulan välisen painanteen rinteille"
+  },
+  {
+   "nro": 2,
+   "nimi": "Olympoksen Zeuksen temppeli",
+   "selite": "Olympoksen Zeuksen temppelissä on pystyssä viisitoista valtavaa korinttilaista pylvästä, jotka kohoavat pentelikonmarmorista noin 17 metrin korkeuteen ja ovat yli puolitoista metriä paksut"
+  },
+  {
+   "nro": 3,
+   "nimi": "Tuulten torni",
+   "selite": "Tuulten torni on noin kaksitoista metriä korkea kahdeksankulmainen marmoritorni Ateenan roomalaisella torilla, ja sen jokaisen sivun yläosassa on tuulijumalan reliefi"
+  },
+  {
+   "nro": 4,
+   "nimi": "Antiikin agora",
+   "selite": "Antiikin agoran raunioalueella erottuvat kukkulalla kohoava Hefaistoksen temppeli ja pitkä kaksikerroksinen Attaloksen stoa"
+  },
+  {
+   "nro": 5,
+   "nimi": "Hefaistoksen temppeli",
+   "selite": "Hefaistoksen temppeli seisoo kukkulalla Ateenan agoran laidalla, ja sen 34 doorilaista pylvästä ovat yhä paikoillaan"
+  },
+  {
+   "nro": 6,
+   "nimi": "Akropolis ja Propylaia",
+   "selite": "Akropolis kohoaa Ateenan keskustan yllä kalliokukkulana, jonka länsipäässä seisoo marmorinen porttirakennus Propylaia"
+  },
+  {
+   "nro": 7,
+   "nimi": "Erekhtheion",
+   "selite": "Erekhtheion seisoo Akropoliksen pohjoislaidalla, ja sen eteläkuistin kattoa kantaa kuusi naispatsasta, jotka seisovat matalan muurin päällä"
+  },
+  {
+   "nro": 8,
+   "nimi": "Parthenon",
+   "selite": "Parthenon täyttää Akropoliksen laen: pitkä doorilainen marmoritemppeli, jonka päädyissä on kahdeksan ja pitkillä sivuilla seitsemäntoista pylvästä"
+  }
+ ],
+ "reitti": [
+  {
+   "mista": "Kallimarmaro / Panathinaikon stadion",
+   "mihin": "Olympoksen Zeuksen temppeli",
+   "matka_m": 714,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Olympoksen Zeuksen temppeli",
+   "mihin": "Tuulten torni",
+   "matka_m": 745,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Tuulten torni",
+   "mihin": "Antiikin agora",
+   "matka_m": 422,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Antiikin agora",
+   "mihin": "Hefaistoksen temppeli",
+   "matka_m": 119,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Hefaistoksen temppeli",
+   "mihin": "Akropolis ja Propylaia",
+   "matka_m": 602,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Akropolis ja Propylaia",
+   "mihin": "Erekhtheion",
+   "matka_m": 58,
+   "tyyppi": "lento"
+  },
+  {
+   "mista": "Erekhtheion",
+   "mihin": "Parthenon",
+   "matka_m": 61,
+   "tyyppi": "lento"
+  }
+ ],
+ "pysahdykset": [
+  {
+   "nro": 1,
+   "nimi": "Kallimarmaro / Panathinaikon stadion",
+   "q": "Q208811",
+   "lat": 37.96833,
+   "lon": 23.74111,
+   "H_m": 204.0,
+   "H_lahteet": [
+    "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+    "https://attiki.travelfind.gr/en/info/spot/panathenaic-stadium",
+    "https://aviewoncities.com/athens/panathenaic-stadium"
+   ],
+   "kerronta": "Kallimarmaro on noin 204 metriä pitkä hevosenkengän muotoinen stadion, jonka valkoiset istuinrivit nousevat Pangratin kaupunginosassa kahden kukkulan välisen painanteen rinteille. Nimi tarkoittaa kaunista marmoria: rakennus on pentelikonmarmoria, samaa marmoria kuin Parthenon. Se rakennettiin 1890-luvulla uudelleen antiikin stadionin mallin mukaan Georgios Averoffin lahjoituksella, ja sen marmoriasu valmistui vasta vuonna 1906. Stadionin sisäänkäynnillä seisoo Averoffin marmoripatsas.",
+   "virkkeet": [
+    "Kallimarmaro on noin 204 metriä pitkä hevosenkengän muotoinen stadion, jonka valkoiset istuinrivit nousevat Pangratin kaupunginosassa kahden kukkulan välisen painanteen rinteille.",
+    "Nimi tarkoittaa kaunista marmoria: rakennus on pentelikonmarmoria, samaa marmoria kuin Parthenon.",
+    "Se rakennettiin 1890-luvulla uudelleen antiikin stadionin mallin mukaan Georgios Averoffin lahjoituksella, ja sen marmoriasu valmistui vasta vuonna 1906.",
+    "Stadionin sisäänkäynnillä seisoo Averoffin marmoripatsas."
+   ],
+   "faktat": [
+    {
+     "vaite": "Stadionin pituus on noin 204 m (Wikipedia: kilparadan pituus 204 m; travelfind: 204,07 m; aviewoncities: 204 x 83 m)",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://attiki.travelfind.gr/en/info/spot/panathenaic-stadium"
+    },
+    {
+     "vaite": "Stadion on hevosenkengän (U:n) muotoinen",
+     "lahde1": "https://stonenews.eu/?p=37953",
+     "lahde2": "https://famous-historic-buildings.org.uk/panathenaic-olympic-stadium-athens.html"
+    },
+    {
+     "vaite": "Stadion on Pangratin kaupunginosassa Agran ja Ardettoksen kukkuloiden välisessä painanteessa (ravine/dell)",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://livetheworld.com/post/the-panathenaic-stadium-in-athens-vo9l"
+    },
+    {
+     "vaite": "Nimi Kallimarmaro tarkoittaa kaunista/hienoa marmoria (aviewoncities: 'beautifully marbled'; greeka: 'made of fine marble'). Teksti sanoo 'kaunista marmoria'",
+     "lahde1": "https://aviewoncities.com/athens/panathenaic-stadium",
+     "lahde2": "https://www.greeka.com/attica/athens/sightseeing/athens-roman-stadium/"
+    },
+    {
+     "vaite": "Rakennus on pentelikonmarmoria, samaa marmoria kuin Akropolis",
+     "lahde1": "https://stonenews.eu/?p=37953",
+     "lahde2": "https://whyathens.com/the-panathenaic-stadium/"
+    },
+    {
+     "vaite": "Stadion on maailman ainoa kokonaan marmorista rakennettu stadion",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://stonenews.eu/?p=37953"
+    },
+    {
+     "vaite": "Stadion rakennettiin uudelleen 1890-luvulla (työt alkoivat 1895; Wikipedia: suunnitelma 1890-luvun puolivälissä) antiikin stadionin mallin mukaan",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://www.greeka.com/attica/athens/sightseeing/athens-roman-stadium/"
+    },
+    {
+     "vaite": "Uudelleenrakennus noudatti Herodes Attikoksen 100-luvun jaa. stadionin mittoja ja mallia",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://famous-historic-buildings.org.uk/panathenaic-olympic-stadium-athens.html"
+    },
+    {
+     "vaite": "Uudelleenrakennuksen rahoitti kreikkalainen hyväntekijä Georgios Averoff",
+     "lahde1": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+     "lahde2": "https://stonenews.eu/?p=37953"
+    },
+    {
+     "vaite": "Stadionin marmoriasu valmistui vasta 1906 (1896 olympialaisten aikaan ei vielä täysin valmis)",
+     "lahde1": "https://www.aroundgreece.net/athens/attractions/panathenaic-stadium",
+     "lahde2": "https://www.fhw.gr/Olympics/modern/en/heroes/1896a1.html"
+    },
+    {
+     "vaite": "Averoffin marmoripatsas seisoo sisäänkäynnillä",
+     "lahde1": "https://livetheworld.com/post/the-panathenaic-stadium-in-athens-vo9l",
+     "lahde2": "https://famous-historic-buildings.org.uk/panathenaic-olympic-stadium-athens.html"
+    }
+   ],
+   "huomiot": [
+    "H_m = 204,0 on stadionin pituus (ei korkeus; stadion on matala, istuinrivit nousevat rinteeseen). Wikipedia ja travelfind antavat radan pituudeksi 204 m (travelfind 204,07 m), aviewoncities 204 x 83 m. Leveys vaihtelee lähteissä (33 m rata vs 83 m koko), siksi vain pituus. Kameralle: koko ~204 m, leveys <= 83 m.",
+    "1896: ei väitetä valmistuneen. Wikipedia/Olympics.com: valmis olympialaisiin vain osittain; FHW: 1896 vain alimmat rivit marmoria, yläosat puuta (maalattu valkoiseksi), nykyasu 1906 mennessä; aroundgreece: täysin valmis vasta 1906. Siksi teksti sanoo 'uudelleen 1890-luvulla' ja 'marmoriasu valmistui vasta 1906', ei '1895–96 valmistui'. Työt alkoivat 1895 (greeka, stonenews).",
+    "'Ainoa kokonaan marmorista rakennettu stadion': Wikipedia (Darling 2004) ja stonenews sanovat; whyathens ja famous-historic samoin. Superlatiivi siis neljällä lähteellä.",
+    "Olympialaiset 1896 ja Herodes Attikos / Lykurgos jätetty pois (historiaosio). Averoffin lahjoitussumma jätetty pois (Wikipedia 920 000 dr, FHW 585 000 dr, ristiriita). Arkkitehti Metaxas/Ziller jätetty pois tilan vuoksi.",
+    "Ei kuvauskieltoa tekstissä; Kreikan kulttuuriperintölaki (docs/raportit/kreikka-kulttuuriperintolaki-20261012.md) koskee kuvia, ei kerrontaa.",
+    "Nimen merkitys: aviewoncities 'beautifully marbled', greeka 'fine marble'; olympics.com (hakutuloksen mukaan) 'beautiful marble'. Suora olympics.com-sivu ei auennut (timeout)."
+   ],
+   "sanoja": 54,
+   "merkkeja": 538,
+   "kesto_s": 37.8
+  },
+  {
+   "nro": 2,
+   "nimi": "Olympoksen Zeuksen temppeli",
+   "q": "Q1123019",
+   "lat": 37.96937,
+   "lon": 23.73308,
+   "H_m": 17.25,
+   "H_lahteet": [
+    "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+    "https://aviewoncities.com/athens/temple-of-zeus",
+    "https://www.worldhistory.org/article/815/temple-of-olympian-zeus-athens/"
+   ],
+   "kerronta": "Olympoksen Zeuksen temppelissä on pystyssä viisitoista valtavaa korinttilaista pylvästä, jotka kohoavat pentelikonmarmorista noin 17 metrin korkeuteen ja ovat yli puolitoista metriä paksut. Pylväitä oli alun perin 104, joten kokonaisuudesta on jäljellä alle viidesosa. Yksi pylväs kaatui myrskyssä vuonna 1852, ja se makaa siinä, mihin se putosi. Temppeli on Akropoliksen kaakkoispuolella, ja sen luoteispuolella seisoo Hadrianuksen portti.",
+   "virkkeet": [
+    "Olympoksen Zeuksen temppelissä on pystyssä viisitoista valtavaa korinttilaista pylvästä, jotka kohoavat pentelikonmarmorista noin 17 metrin korkeuteen ja ovat yli puolitoista metriä paksut.",
+    "Pylväitä oli alun perin 104, joten kokonaisuudesta on jäljellä alle viidesosa.",
+    "Yksi pylväs kaatui myrskyssä vuonna 1852, ja se makaa siinä, mihin se putosi.",
+    "Temppeli on Akropoliksen kaakkoispuolella, ja sen luoteispuolella seisoo Hadrianuksen portti."
+   ],
+   "faktat": [
+    {
+     "vaite": "Pystyssä on 15 pylvästä",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Pylväitä oli alun perin 104",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Kuudestoista pylväs kaatui myrskyssä 1852 ja jäi makaamaan siihen, mihin kaatui",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Pylväät ovat korinttilaista tyyliä",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://athensguide.com/temple-of-olympian-zeus"
+    },
+    {
+     "vaite": "Pylväät ovat pentelikonmarmoria",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Pylvään korkeus 17,25 m (teksti: noin 17 metriä)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Pylvään läpimitta: 1,70 m alaosassa (Wikipedia), noin 2 m (aviewoncities); teksti: yli puolitoista metriä",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    },
+    {
+     "vaite": "Temppeli on noin 500 m Akropolilta kaakkoon",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://www.worldhistory.org/article/815/temple-of-olympian-zeus-athens/"
+    },
+    {
+     "vaite": "Hadrianuksen portti on temppelialueen luoteiskulmassa",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+     "lahde2": "https://aviewoncities.com/athens/temple-of-zeus"
+    }
+   ],
+   "huomiot": [
+    "H_m = 17,25: pylvään korkeus (Wikipedia 17,25 m; aviewoncities 17,25 m; worldhistory.org 17,25 m). Pylväiden huippu on rakennuksen korkein kohta; temppelin pohja Wikipedia 110,35 x 43,68 m (yksi lähde, ei käytetty). Kameralle: kohde on matala ja leveä, 17,25 on korkeus, laajuus ~110 x 44 m.",
+    "Pystyssä olevat: 15 (Wikipedia, aviewoncities, athensguide); hsc.edu laskee 16 mukaan lukien kaatunut. Kaatumisen syy: Wikipedia ja athensguide myrsky, hsc ukonilma, jotkut salama. Teksti sanoo vain 'myrskyssä'.",
+    "'Alle viidesosa' on laskettu (15/104 = 14 %; 16/104 = 15 %).",
+    "Etäisyys Akropolilta (500 m): Wikipedia ja worldhistory.org (hakutulosote); aroundgreece mainitsee saman.",
+    "Hadrianuksen portti: Wikipedia ja aviewoncities sanovat luoteeseen; athensguide 'lähellä'. Portin korkeus (18 m, aviewoncities) ja vuosi (131 vs 132) jätetty pois, koska lähteet eroavat eikä rakennushistoria kuulu tähän. Portin virallinen nimi voi olla 'Hadrianuksen kaari'; 'portti' on tehtävänannon sanamuoto ja lähteissä 'gate/arch'.",
+    "Pylväiden jakauma (13 kaakkoiskulmassa + 2 lounaassa, 20 x 8 asettelu) vain yhdessä lähteessä, jätetty pois. Rakennushistoria (6. vuosisata eaa. – Hadrianus 130-luvulla), Sulla ja kaatunut pylväs 'tyylitelty tarina' jätetty pois (historiaosio)."
+   ],
+   "sanoja": 56,
+   "merkkeja": 455,
+   "kesto_s": 39.2
+  },
+  {
+   "nro": 3,
+   "nimi": "Tuulten torni",
+   "q": "Q372717",
+   "lat": 37.97418,
+   "lon": 23.727,
+   "H_m": 12.0,
+   "H_lahteet": [
+    "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+    "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds",
+    "https://aroundgreece.net/athens/attractions/tower-of-the-winds"
+   ],
+   "kerronta": "Tuulten torni on noin kaksitoista metriä korkea kahdeksankulmainen marmoritorni Ateenan roomalaisella torilla, ja sen jokaisen sivun yläosassa on tuulijumalan reliefi. Kahdeksan jumalaa vastaavat kahdeksaa ilmansuuntaa, ja tornin ulkoseinillä on lisäksi aurinkokelloja, jotka näyttivät aikaa päivän valossa. Tornin tekijäksi mainitaan tähtitieteilijä Andronikos Kyrrhestes, ja torni valmistui viimeistään noin vuonna 50 eaa., vaikka tarkka ajoitus on epävarma. Sisällä oli vesikello, joka näytti aikaa silloinkin, kun aurinko ei paistanut.",
+   "virkkeet": [
+    "Tuulten torni on noin kaksitoista metriä korkea kahdeksankulmainen marmoritorni Ateenan roomalaisella torilla, ja sen jokaisen sivun yläosassa on tuulijumalan reliefi.",
+    "Kahdeksan jumalaa vastaavat kahdeksaa ilmansuuntaa, ja tornin ulkoseinillä on lisäksi aurinkokelloja, jotka näyttivät aikaa päivän valossa.",
+    "Tornin tekijäksi mainitaan tähtitieteilijä Andronikos Kyrrhestes, ja torni valmistui viimeistään noin vuonna 50 eaa., vaikka tarkka ajoitus on epävarma.",
+    "Sisällä oli vesikello, joka näytti aikaa silloinkin, kun aurinko ei paistanut."
+   ],
+   "faktat": [
+    {
+     "vaite": "Torni on kahdeksankulmainen ja rakennettu pentelikonmarmorista",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds"
+    },
+    {
+     "vaite": "Tornin sivuilla on kahdeksan tuulijumalan reliefiä (Boreas, Kaikias, Apeliotes, Eurus, Notos, Lips/Libs, Zefyros, Skiron), yksi kutakin ilmansuuntaa kohden",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds"
+    },
+    {
+     "vaite": "Ulkoseinillä on aurinkokelloja (Wikipedia: kahdeksan sivuilla ja yhdeksäs takaosan lisäkkeessä; lukumäärää ei käytetty tekstissä)",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.coronet.org/new-1minute-reads/the-tower-of-the-winds"
+    },
+    {
+     "vaite": "Sisällä oli vesikello (klepsydra), joka toimi myös ilman auringonvaloa",
+     "lahde1": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds",
+     "lahde2": "https://www.amusingplanet.com/2018/07/tower-of-winds-worlds-first-weather.html"
+    },
+    {
+     "vaite": "Rakentajaksi mainitaan tähtitieteilijä Andronikos Kyrrhestes (nimi Vitruviukselta)",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds"
+    },
+    {
+     "vaite": "Ajoitus: 1. vuosisadan eaa. alkupuoliskolla (VisitGreece); Wikipedia: valmis viimeistään n. 50 eaa. (Varro mainitsee n. 37 eaa.) ja ajoitus epävarma; vaihtoehtoisia ajoituksia 2. vuosisadalle eaa.; teksti sanoo vain 'alkupuoliskolla' ja 'epävarma'",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds"
+    },
+    {
+     "vaite": "Torni sijaitsee Ateenan roomalaisella torilla (Roman Agora)",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.wikidata.org/wiki/Q372717"
+    },
+    {
+     "vaite": "Korkeus noin 12 m",
+     "lahde1": "https://en.wikipedia.org/wiki/Tower_of_the_Winds",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/tower-of-the-winds"
+    }
+   ],
+   "huomiot": [
+    "H_m = 12,0: Wikipedia, VisitGreece ja aroundgreece.net antavat 12 m; coronet.org ja buffaloah.com 42 jalkaa (12,8 m), halkaisija 7,9-8 m. Lisäksi ylhäällä oli pronssinen Triton-tuulilippu, joka on kadonnut; 12 m on rakennus ilman sitä. Kameralle riittää 12 m.",
+    "Plakan laitaa ei mainittu tekstissä: väite jäi pois, koska kahta lähdettä ei tarkistettu. Tekstissä 'Ateenan roomalaisella torilla' (Wikipedia + Wikidata).",
+    "Ajoitus ei ole varma (2. vuosisata eaa. – n. 50 eaa.), siksi teksti ei anna vuosilukua.",
+    "Tuulijumalien nimet vaihtelevat lähteissä (Eurus/Apeliotes E/SE, Libs/Lips/Livas), siksi nimiä ei käytetty tekstissä.",
+    "Rakentaja: antiikin tiedot Vitruviukselta; sanamuoto 'mainitaan tekijäksi'.",
+    "Kerrontaan ei ole otettu: ottomaanikäyttö (dervissien tekke 1749–1751), 2014–2016 konservointi, Triton-tuulilippu (ei kahta tarkistettua lähdettä tässä ajossa tai ei tarpeen).",
+    "Verkkohaut: Britannica/Ministry of Culture (odysseus) eivät auenneet; kolmas lähde tarvittaessa: ASCSA/Greek Ministry."
+   ],
+   "sanoja": 66,
+   "merkkeja": 532,
+   "kesto_s": 46.2
+  },
+  {
+   "nro": 4,
+   "nimi": "Antiikin agora",
+   "q": "Q395367",
+   "lat": 37.975,
+   "lon": 23.7225,
+   "H_m": 115.0,
+   "H_lahteet": [
+    "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+    "https://madainproject.com/stoa_of_attalos",
+    "https://aviewoncities.com/athens/ancient-agora"
+   ],
+   "kerronta": "Antiikin agoran raunioalueella erottuvat kukkulalla kohoava Hefaistoksen temppeli ja pitkä kaksikerroksinen Attaloksen stoa. Temppeli on 400-luvulta eaa. Stoa on noin 115 metriä pitkä pylväikkö, jonka Pergamonin kuningas Attalos II rakennutti noin vuonna 150 eaa. Se on jälleenrakennus: Amerikkalainen klassisten opintojen koulu rakensi sen alkuperäisille perustuksille 1950-luvulla, ja sen sisällä toimii Agora-museo.",
+   "virkkeet": [
+    "Antiikin agoran raunioalueella erottuvat kukkulalla kohoava Hefaistoksen temppeli ja pitkä kaksikerroksinen Attaloksen stoa.",
+    "Temppeli on 400-luvulta eaa.",
+    "Stoa on noin 115 metriä pitkä pylväikkö, jonka Pergamonin kuningas Attalos II rakennutti noin vuonna 150 eaa.",
+    "Se on jälleenrakennus: Amerikkalainen klassisten opintojen koulu rakensi sen alkuperäisille perustuksille 1950-luvulla, ja sen sisällä toimii Agora-museo."
+   ],
+   "faktat": [
+    {
+     "vaite": "Hefaistoksen temppeli seisoo Agoraios Kolonos -kukkulalla agoran yläpuolella",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://aviewoncities.com/athens/ancient-agora"
+    },
+    {
+     "vaite": "Temppeli on 400-luvulta eaa. (rakennus aloitettu 449 eaa.)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://aviewoncities.com/athens/ancient-agora"
+    },
+    {
+     "vaite": "Temppelistä tuli myöhemmin kirkko (7. vuosisadalla jaa.)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://aviewoncities.com/athens/ancient-agora"
+    },
+    {
+     "vaite": "Temppeli ja stoa ovat agoran kaksi pääosin ehjää rakennusta",
+     "lahde1": "https://aviewoncities.com/athens/ancient-agora",
+     "lahde2": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus"
+    },
+    {
+     "vaite": "Attaloksen stoa on kaksikerroksinen",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://madainproject.com/stoa_of_attalos"
+    },
+    {
+     "vaite": "Stoan pituus noin 115 m (Wikipedia 115 x 20 m; madainproject 115 x 20 m; aviewoncities 116,5 x 19,5 m)",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://madainproject.com/stoa_of_attalos"
+    },
+    {
+     "vaite": "Pergamonin kuningas Attalos II rakennutti stoan; käytössä noin 150 eaa. (kuningas hallitsi 159–138 eaa.)",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://madainproject.com/stoa_of_attalos"
+    },
+    {
+     "vaite": "Stoa on jälleenrakennus alkuperäisillä perustuksilla",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://aviewoncities.com/athens/ancient-agora"
+    },
+    {
+     "vaite": "Amerikkalainen Klassisten tutkimusten koulu (ASCSA) rakensi stoan uudelleen 1950-luvulla (1952/53–1956)",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://www.historyhit.com/locations/the-agora-museum-athens/"
+    },
+    {
+     "vaite": "Jälleenrakennetussa stoassa toimii Antiikin agoran museo (Agora-museo)",
+     "lahde1": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+     "lahde2": "https://www.historyhit.com/locations/the-agora-museum-athens/"
+    }
+   ],
+   "huomiot": [
+    "H_m = 115,0 on Attaloksen stoan pituus (agorassa ei ole yhtä 'korkeutta'; stoa on alueen suurin rakennus). Wikipedia ja madainproject 115 m (aviewoncities 116,5 m); Hefaistoksen temppeli on 31,78 x 13,71 m (yksi lähde). Agoran alueen kokoa ei saatu kahdesta lähteestä. Jos kamera tarvitsee koko alueen mitan, ehdota Karttasepältä; 115 m kehystää stoan ja temppelin.",
+    "Jälleenrakennusvuodet: Wikipedia 1952–56 (lupa kesäkuu 1953, vihkiäiset 3.9.1956); madainproject ja aviewoncities 1953–56; historyhit 1952–56; siksi tekstissä '1950-luvulla'. Rockefeller-rahoitus ja 'Agora-museon avaus 1957' (historyhit) jätetty pois: kumpikin vain yhdessä lähteessä tai ristiriitainen.",
+    "'Kokonaisena seisovaa': stoa on jälleenrakennus, mikä sanotaan neljännessä virkkeessä; temppeli 'largely intact' (Wikipedia, aviewoncities).",
+    "Kaivausten alku 1931 (Wikipedia) ja Heruli-tuho 267 jaa. (aviewoncities) jätetty pois: yksi lähde / historiaosio. Ei superlatiiveja ('parhaiten säilynyt kreikkalainen temppeli' vain aviewoncities).",
+    "Hefaistoksen temppelin rakennusvuosi 449 eaa. on Wikipedian aloitusvuosi (valmistuminen 415 eaa. tai pitempi); teksti käyttää vain '400-luvulta eaa.'."
+   ],
+   "sanoja": 51,
+   "merkkeja": 493,
+   "kesto_s": 35.7
+  },
+  {
+   "nro": 5,
+   "nimi": "Hefaistoksen temppeli",
+   "q": "Q756824",
+   "lat": 37.97562,
+   "lon": 23.72139,
+   "H_m": 10.0,
+   "H_lahteet": [
+    "https://www.athenskey.com/temple-of-hephaestos.html",
+    "Perseus (pylvään korkeus 5,71 m) ja spokenpast.com (pylväs n. 5,9 m): vain uskottavuustarkistus, ei kokonaiskorkeutta"
+   ],
+   "kerronta": "Hefaistoksen temppeli seisoo kukkulalla Ateenan agoran laidalla, ja sen 34 doorilaista pylvästä ovat yhä paikoillaan. Temppeli on rakennettu Penteli-vuoren marmorista, samasta kivestä kuin Parthenon, ja työ alkoi noin vuonna 449 eaa. Luultavasti 600-luvulla se muutettiin Pyhän Yrjön kirkoksi, joka toimi 1830-luvulle asti. Kirkkokäyttö suojasi rakennuksen kivenotolta, joka tuhosi monta muuta agoran rakennusta, ja siksi temppeli on yksi parhaiten säilyneistä antiikin temppeleistä.",
+   "virkkeet": [
+    "Hefaistoksen temppeli seisoo kukkulalla Ateenan agoran laidalla, ja sen 34 doorilaista pylvästä ovat yhä paikoillaan.",
+    "Temppeli on rakennettu Penteli-vuoren marmorista, samasta kivestä kuin Parthenon, ja työ alkoi noin vuonna 449 eaa.",
+    "Luultavasti 600-luvulla se muutettiin Pyhän Yrjön kirkoksi, joka toimi 1830-luvulle asti.",
+    "Kirkkokäyttö suojasi rakennuksen kivenotolta, joka tuhosi monta muuta agoran rakennusta, ja siksi temppeli on yksi parhaiten säilyneistä antiikin temppeleistä."
+   ],
+   "faktat": [
+    {
+     "vaite": "Doorilainen peripteros: kuusi pylvästä päädyissä, kolmetoista pitkillä sivuilla, yhteensä 34 ulkopylvästä",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://aviewoncities.com/athens/ancient-agora"
+    },
+    {
+     "vaite": "Temppeli sijaitsee Ateenan agoran laidalla Agoraios Kolonos -kukkulalla",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://www.athenskey.com/temple-of-hephaestos.html"
+    },
+    {
+     "vaite": "Rakennettu Pentelikon-vuoren marmorista; sama marmori kuin Parthenonissa (Pentelikon)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://www.athenskey.com/temple-of-hephaestos.html"
+    },
+    {
+     "vaite": "Rakentaminen alkoi vuonna 449 eaa. (valmistumisvuosi 415 eaa. jätetty tekstistä pois)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://www.thearchaeologist.org/blog/ancient-greek-temples-the-temple-of-hephaestus-in-athens"
+    },
+    {
+     "vaite": "Muutettiin kirkoksi (Pyhä Yrjö Akamates) todennäköisesti 600-luvulla",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://ancient-greece.org/?p=3953"
+    },
+    {
+     "vaite": "Kirkkokäyttö päättyi 1830-luvulla (viimeinen liturgia 1833, kirkkona 1834 asti)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Hephaestus",
+     "lahde2": "https://www.thearchaeologist.org/blog/ancient-greek-temples-the-temple-of-hephaestus-in-athens"
+    },
+    {
+     "vaite": "Kirkkokäyttö suojasi rakennuksen kivenotolta, joka tuhosi muita agoran rakennuksia",
+     "lahde1": "https://ancient-greece.org/?p=3953",
+     "lahde2": "https://www.thearchaeologist.org/blog/ancient-greek-temples-the-temple-of-hephaestus-in-athens"
+    },
+    {
+     "vaite": "Yksi parhaiten säilyneistä antiikin temppeleistä / yksi ehjimmistä doorilaisista temppeleistä (ei superlatiivia)",
+     "lahde1": "https://www.athenskey.com/temple-of-hephaestos.html",
+     "lahde2": "https://ancient-greece.org/?p=3953"
+    }
+   ],
+   "huomiot": [
+    "H_m = 10,0: vain athenskey.com sanoo 'height 10 m' (pituus 31 m). Wikipedia, ancient-greece.org, historyhit, thearchaeologist, Wikidata, ES/EL-Wikipedia, Lonely Planet, structuresinsider, sacred-destinations eivät anna kokonaiskorkeutta. Perseuksen mukaan ulkopylvään korkeus 5,71 m ja spokenpast.com n. 5,9 m, joten 10 m on uskottava (pylväs + arkkitraavi + päätykolmio) mutta TOISTA LÄHDETTÄ EI LÖYTYNYT. Kameralle riittää; tarkenna Dinsmoorista tai ASCSA:n Agora-oppaasta jos tarkkuus tarvitaan.",
+    "Tekstistä jätetty pois: 'Theseion'-nimi (virheellinen nimitys, lähteet kahden kesken epäselvät), tarkka valmistumisvuosi (415 eaa.; osa tutkijoista pitää myöhempänä), temppelin korkeus (yksi lähde), veistokset ja metoopit. Kirkkokäytön päättymisvuosi 1833/1834 vaihtelee, siksi '1830-luvulle'.",
+    "Muutosajoitus 'luultavasti 600-luvulla': Wikipedia 'probably', EL-Wikipedia 'ehkä 600-luvulta', Lonely Planet 1300 (hylätty).",
+    "Pysäkki 6 jatkaa saman agoran jälkeen kalliolle nousulla: tähän ei ole otettu rakennusvuosien lisäksi Akropoliin tietoja."
+   ],
+   "sanoja": 61,
+   "merkkeja": 478,
+   "kesto_s": 42.7
+  },
+  {
+   "nro": 6,
+   "nimi": "Akropolis ja Propylaia",
+   "q": "Q131013",
+   "lat": 37.97167,
+   "lon": 23.72611,
+   "H_m": 12.0,
+   "H_lahteet": [
+    "EI KAHTA LÄHDETTÄ: arvio. Länsikuistin doorilainen pylväs 8,81 m (Dooge 1908, https://digi.ub.uni-heidelberg.de/diglit/dooge1908/0208) + arkkitraavi ja päätykolmio; yksi kuvatietokanta antaa 21,2 m (epäselvä, hylätty)"
+   ],
+   "kerronta": "Akropolis kohoaa Ateenan keskustan yllä kalliokukkulana, jonka länsipäässä seisoo marmorinen porttirakennus Propylaia. Sen julkisivussa on kuusi doorilaista pylvästä, ja sisällä kulkutietä reunustavat ionilaiset pylväät. Viidestä ovesta keskimmäinen on muita leveämpi. Arkkitehti Mnesikles aloitti portin rakentamisen Perikleen rakennusohjelman osana vuonna 437 eaa. Peloponnesoksen sota keskeytti työn, mutta suunnitelman pääosat ehtivät valmistua. Sisään tullessa oikealle jää Niken temppeli, ja portin takana kallion laella ovat Erekhtheion ja Parthenon.",
+   "virkkeet": [
+    "Akropolis kohoaa Ateenan keskustan yllä kalliokukkulana, jonka länsipäässä seisoo marmorinen porttirakennus Propylaia.",
+    "Sen julkisivussa on kuusi doorilaista pylvästä, ja sisällä kulkutietä reunustavat ionilaiset pylväät.",
+    "Viidestä ovesta keskimmäinen on muita leveämpi.",
+    "Arkkitehti Mnesikles aloitti portin rakentamisen Perikleen rakennusohjelman osana vuonna 437 eaa.",
+    "Peloponnesoksen sota keskeytti työn, mutta suunnitelman pääosat ehtivät valmistua.",
+    "Sisään tullessa oikealle jää Niken temppeli, ja portin takana kallion laella ovat Erekhtheion ja Parthenon."
+   ],
+   "faktat": [
+    {
+     "vaite": "Akropolis on kalliokukkula Ateenan keskustan yllä",
+     "lahde1": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/acropolis-of-athens",
+     "lahde2": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+    },
+    {
+     "vaite": "Propylaia on Akropoliin monumentaalinen portti kallion länsipäässä",
+     "lahde1": "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+     "lahde2": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Propylaia&object=Building"
+    },
+    {
+     "vaite": "Propylaia on valkoista Pentelikon-marmoria",
+     "lahde1": "https://www.worldhistory.org/Propylaea/",
+     "lahde2": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+    },
+    {
+     "vaite": "Keskirakennuksen kummassakin päässä doorilainen kuuden pylvään kuisti (heksastyyli); keskikäytävän sivuilla ionilaisia pylväitä (3+3)",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Propylaia&object=Building",
+     "lahde2": "https://www.worldhistory.org/Propylaea/"
+    },
+    {
+     "vaite": "Propylaiassa on viisi ovea, keskimmäinen leveämpi kuin muut",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Propylaia&object=Building",
+     "lahde2": "https://www.worldhistory.org/Propylaea/"
+    },
+    {
+     "vaite": "Arkkitehti Mnesikles; rakentaminen alkoi 437 eaa.",
+     "lahde1": "https://en.wikipedia.org/wiki/Propylaea",
+     "lahde2": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Propylaia&object=Building"
+    },
+    {
+     "vaite": "Peloponnesoksen sota keskeytti työn, mutta suunnitelman pääosat valmistuivat",
+     "lahde1": "https://en.wikipedia.org/wiki/Propylaea",
+     "lahde2": "https://www.worldhistory.org/Propylaea/"
+    },
+    {
+     "vaite": "Portin takana kallion laella ovat Erekhtheion ja Parthenon",
+     "lahde1": "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/acropolis-of-athens"
+    },
+    {
+     "vaite": "Rakentaminen osana Perikleen rakennusohjelmaa",
+     "lahde1": "https://en.wikipedia.org/wiki/Propylaea",
+     "lahde2": "https://www.worldhistory.org/Propylaea/"
+    },
+    {
+     "vaite": "Niken temppeli on Propylaian oikealla puolella sisään tullessa (lounaisbastionilla)",
+     "lahde1": "https://en.wikipedia.org/wiki/Temple_of_Athena_Nike",
+     "lahde2": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/acropolis-of-athens"
+    }
+   ],
+   "huomiot": [
+    "H_m = 12,0 on ARVIO, ei kahden lähteen luku: Propylaian kokonaiskorkeutta ei löytynyt (WorldHistory, Wikipedia, Perseus antavat vain leveyden 48 m ja keskirakennuksen 18 × 25 m; länsikuistin doorilainen pylväs 8,81 m vain Dooge 1908). Kameralle riittää (pysäkki on kallio + portti; kamerakorkeus voi seurata myös Parthenonin arvoa 13,72 m). Tekstissä ei korkeutta. Propylaian leveys 48 m ja keskirakennus 18 × 25 m ovat vain Perseuksessa, siksi ei tekstissä. Kallion korkeus: Wikipedia 150 m merenpinnasta, WorldHistory 70 m (kaupungista), ei sovittua lukua, siksi ei tekstissä.",
+    "Rakennusvuosi 437 eaa. (Wikipedia, Perseus, WorldHistory samoin); päätösvuosi 432 eaa. jätetty historiaosiolle. 'Doorilainen' julkisivu: Perseus ja WorldHistory (heksastyyli, kuusi pylvästä) sekä Wikipedia Acropolis (Doric columns).",
+    "Niken temppeli otettu mukaan, koska kaksi lähdettä (Wikipedia Nike + VisitGreece) sijoittaa sen portin oikealle puolelle. Temppelin ionilaisuus, mitat ja vuodet jätetty pois (ei kahta riippumatonta). Akropolis-museota ei mainita.",
+    "Pysäkit 6–8 täydentävät toisiaan: 6 = portti ja sisäänkäynti, 7 = Erekhtheion ja kuisti, 8 = Parthenon ja se mitä on jäljellä. Pylväsmäärät: 6:ssa kuusi doorilaista (portti), 7:ssä kuusi naispatsasta, 8:ssa kahdeksan + seitsemäntoista; samoja lukuja ei toisteta.",
+    "Beulén portti, Pinakotheke/Polygnotos ja rampin pituus (80 m; vain WorldHistory) jätetty pois."
+   ],
+   "sanoja": 65,
+   "merkkeja": 562,
+   "kesto_s": 45.5
+  },
+  {
+   "nro": 7,
+   "nimi": "Erekhtheion",
+   "q": "Q242741",
+   "lat": 37.97208,
+   "lon": 23.72653,
+   "H_m": 9.3,
+   "H_lahteet": [
+    "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building (pohjoiskuistin pylväs 7,64 m + arkkitraavi 1,68 m = 9,32 m)",
+    "https://www.worldhistory.org/Erechtheion/ (pylväs 7,63 m)"
+   ],
+   "kerronta": "Erekhtheion seisoo Akropoliksen pohjoislaidalla, ja sen eteläkuistin kattoa kantaa kuusi naispatsasta, jotka seisovat matalan muurin päällä. Patsaat ovat kopioita: viisi alkuperäistä on viety suojaan ilmansaasteilta, ja kuudes on Lontoossa. Ionilainen temppeli rakennettiin kallion epätasaiselle pinnalle vuosina 421–406 eaa., ja sen länsiosan lattia on noin kolme metriä itäosaa alempana. Pohjoisen kuistin pylväät ovat yli seitsemän metriä korkeita, itäpäädyn pylväät noin 6,6 metriä.",
+   "virkkeet": [
+    "Erekhtheion seisoo Akropoliksen pohjoislaidalla, ja sen eteläkuistin kattoa kantaa kuusi naispatsasta, jotka seisovat matalan muurin päällä.",
+    "Patsaat ovat kopioita: viisi alkuperäistä on viety suojaan ilmansaasteilta, ja kuudes on Lontoossa.",
+    "Ionilainen temppeli rakennettiin kallion epätasaiselle pinnalle vuosina 421–406 eaa., ja sen länsiosan lattia on noin kolme metriä itäosaa alempana.",
+    "Pohjoisen kuistin pylväät ovat yli seitsemän metriä korkeita, itäpäädyn pylväät noin 6,6 metriä."
+   ],
+   "faktat": [
+    {
+     "vaite": "Erekhtheion sijaitsee Akropoliin pohjoispuolella",
+     "lahde1": "https://en.wikipedia.org/wiki/Erechtheion",
+     "lahde2": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building"
+    },
+    {
+     "vaite": "Eteläkuistilla (Neitojen kuisti) kuusi naispatsasta (karyatidia) toimii katon tukina",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building",
+     "lahde2": "https://en.wikipedia.org/wiki/Erechtheion"
+    },
+    {
+     "vaite": "Kuistin patsaat ovat kopioita; viisi alkuperäistä viety museoon suojaan (1979, ilmansaasteet), kuudes Lontoossa",
+     "lahde1": "https://www.worldhistory.org/Erechtheion/",
+     "lahde2": "https://www.thecollector.com/missing-caryatid-british-museum-story/"
+    },
+    {
+     "vaite": "Ionilainen temppeli, rakennettu 421–406 eaa.",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building",
+     "lahde2": "https://www.worldhistory.org/Erechtheion/"
+    },
+    {
+     "vaite": "Länsiosan lattia noin 3 m itäosaa alempana; epäsymmetria johtuu osin paikan epätasaisuudesta",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building",
+     "lahde2": "https://en.wikipedia.org/wiki/Erechtheion"
+    },
+    {
+     "vaite": "Kuusi naispatsasta seisoo matalan muurin päällä",
+     "lahde1": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building",
+     "lahde2": "https://en.wikipedia.org/wiki/Erechtheion"
+    },
+    {
+     "vaite": "Itäpäädyn kuuden ionilaisen pylvään korkeus 6,58–6,59 m",
+     "lahde1": "https://www.worldhistory.org/Erechtheion/",
+     "lahde2": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building"
+    },
+    {
+     "vaite": "Pohjoiskuistilla kuusi ionilaista pylvästä, korkeus 7,63–7,64 m",
+     "lahde1": "https://www.worldhistory.org/Erechtheion/",
+     "lahde2": "http://www.perseus.tufts.edu/hopper/artifact?name=Athens%2C+Erechtheion&object=Building"
+    }
+   ],
+   "huomiot": [
+    "H_m = 9,3 on johdettu: Perseuksen pohjoiskuistin pylväs 7,64 m + arkkitraavi 1,68 m = 9,32 m (WorldHistory pylväs 7,63 m). Rakennuksen kokonaiskorkeutta (ml. päätykolmio ja katto, länsiosan matalampi lattia) ei löytynyt kahdelta lähteeltä, joten 9,3 m on alaraja; todellinen harjakorkeus on todennäköisesti 10–12 m. Kameralle riittää (matalat: kattojen + 10 m).",
+    "Karyatidit: kaikki kuusi patsasta kuistilla ovat kopioita (WorldHistory, TheCollector, AroundGreece). Alkuperäisistä viisi siirrettiin 1979 suojaan, yksi (Elginin vuonna 1801 irrottama) on Lontoossa. Teksti sanoo omistajan ohjeen mukaan vain 'alkuperäiset on viety suojaan' eikä nimeä museoita; sanamuoto on kuitenkin täsmällinen vain kun otetaan huomioon, että yksi patsaista on viety ulkomaille (voidaan tarkentaa: 'viety pois').",
+    "Pois jätetty: arkkitehti (tuntematon), Athena Polias / Pandrosoksen oliivipuu (tutkijat epävarmoja), kirkko- ja haaremikäyttö (6./7. vuosisata, lähteet eroavat), Elgin, karyatidien pituus (2,0–2,28 m; lähteet eroavat).",
+    "Rakennusvuodet 421–406 eaa.: Perseus, WorldHistory, Wikipedia samat (viimeistely 395 eaa. mainittu vain WorldHistoryssa, ei tekstissä). Wikipedia huomauttaa, että tuoreen tutkimuksen mukaan aloitus voisi olla jo 430-luvulla; vuodet ovat 'perinteiset'.",
+    "Pysäkki 7 ei toista pysäkin 6 pylväsmääriä eikä pysäkin 8 doorilaisia lukuja; kontrasti ionilainen vs. doorilainen jää pysäkille 8 ('doorilainen')."
+   ],
+   "sanoja": 61,
+   "merkkeja": 482,
+   "kesto_s": 42.7
+  },
+  {
+   "nro": 8,
+   "nimi": "Parthenon",
+   "q": "Q10288",
+   "lat": 37.97153,
+   "lon": 23.7266,
+   "H_m": 13.72,
+   "H_lahteet": [
+    "https://en.wikipedia.org/wiki/Parthenon (korkeus 13,72 m)",
+    "https://www.worldhistory.org/Parthenon/ (leveys 30,88 m ja rakennuksen korkeus:leveys = 4:9, joten 13,72 m johdettuna)"
+   ],
+   "kerronta": "Parthenon täyttää Akropoliksen laen: pitkä doorilainen marmoritemppeli, jonka päädyissä on kahdeksan ja pitkillä sivuilla seitsemäntoista pylvästä. Se oli Athenan temppeli, ja sen sisällä seisoi kullasta ja norsunluusta tehty jumalattaren patsas. Myöhemmin rakennus toimi kirkkona ja moskeijana. Vuonna 1687 venetsialaisten kranaatti osui turkkilaisten ruutivarastoon temppelin sisällä, ja räjähdys tuhosi sen keskiosan. Monet veistokset vietiin pois 1800-luvun alussa. Ulkopylväistä osa seisoo yhä.",
+   "virkkeet": [
+    "Parthenon täyttää Akropoliksen laen: pitkä doorilainen marmoritemppeli, jonka päädyissä on kahdeksan ja pitkillä sivuilla seitsemäntoista pylvästä.",
+    "Se oli Athenan temppeli, ja sen sisällä seisoi kullasta ja norsunluusta tehty jumalattaren patsas.",
+    "Myöhemmin rakennus toimi kirkkona ja moskeijana.",
+    "Vuonna 1687 venetsialaisten kranaatti osui turkkilaisten ruutivarastoon temppelin sisällä, ja räjähdys tuhosi sen keskiosan.",
+    "Monet veistokset vietiin pois 1800-luvun alussa.",
+    "Ulkopylväistä osa seisoo yhä."
+   ],
+   "faktat": [
+    {
+     "vaite": "Doorilainen marmoritemppeli (Pentelikon-marmori), kahdeksan pylvästä päädyissä ja seitsemäntoista sivuilla",
+     "lahde1": "https://en.wikipedia.org/wiki/Parthenon",
+     "lahde2": "https://www.worldhistory.org/Parthenon/"
+    },
+    {
+     "vaite": "Temppeli oli omistettu Athenalle; sisällä kulta-norsunluu-patsas (Athena Parthenos)",
+     "lahde1": "https://en.wikipedia.org/wiki/Parthenon",
+     "lahde2": "https://www.worldhistory.org/Parthenon/"
+    },
+    {
+     "vaite": "Myöhemmin kirkko ja moskeija",
+     "lahde1": "https://en.wikipedia.org/wiki/Parthenon",
+     "lahde2": "https://www.worldhistory.org/Parthenon/"
+    },
+    {
+     "vaite": "26.9.1687 venetsialainen kranaatti osui ruutivarastoon Parthenonin sisällä; räjähdys tuhosi keskiosan",
+     "lahde1": "https://en.wikipedia.org/wiki/Parthenon",
+     "lahde2": "https://www.worldhistory.org/Parthenon/"
+    },
+    {
+     "vaite": "Elgin irrotti veistoksia 1800–1803 (tekstissä '1800-luvun alussa')",
+     "lahde1": "https://en.wikipedia.org/wiki/Parthenon",
+     "lahde2": "https://www.worldhistory.org/Parthenon/"
+    },
+    {
+     "vaite": "Ulkopylväistä osa seisoo yhä; pohjois- ja eteläsivun pylväitä romahti räjähdyksessä",
+     "lahde1": "https://www.worldhistory.org/Parthenon/",
+     "lahde2": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+    }
+   ],
+   "huomiot": [
+    "H_m = 13,72: Wikipedia antaa 13,72 m (infobox). Toinen lähde on johdettu: WorldHistory kertoo rakennuksen korkeuden suhteeksi leveyteen 4:9 ja leveydeksi 30,88 m, mikä antaa 13,72 m. Suoraa toista lukua ei löytynyt (Perseus-sivu ei auennut, 503). Kameralle riittää.",
+    "Rakennusvuosia (447–432 eaa.), arkkitehteja (Iktinos, Kallikrates) ja Feidiasta ei ole tekstissä, koska historiaosio kattaa ne. Kirkon vihkimisvuosi (5./6. vuosisata, lähteet eroavat) ja moskeijan vuosi 1458 jätetty pois.",
+    "Mitä jäljellä: tekstissä 'keskiosan tuhoutuminen' ja 'osa ulkopylväistä seisoo'. Mittoja (69,5 × 30,9 m) ei ole tekstissä. Veistokset: museoita ei nimetä (Akropolis-museota ei mainita). 'Siirretty suojaan' jätetty pois, koska veistokset on pääosin viety muualle.",
+    "Pylväslukuja 8 ja 17: Wikipedia, WorldHistory ja VisitGreece (octastyle, 17 sivuilla).",
+    "Pysäkki 8 on kierroksen finaali; teksti ei tee loppulausetta (loppu-kerronta kuuluu kierrokselle erikseen)."
+   ],
+   "sanoja": 60,
+   "merkkeja": 503,
+   "kesto_s": 42.0
+  }
+ ]
+}

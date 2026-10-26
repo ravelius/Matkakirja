@@ -1,0 +1,40 @@
+[
+  {
+    "id": "kobenhavn",
+    "esittely": "Kartan alue on vanha Kööpenhamina Sjællandin saarella ja sen vastarannalla Amager. Nimi tarkoittaa kauppiaiden satamaa. Christiansborgin linna on Slotsholmenin saarella, ja nykyinen, kolmas linna valmistui 1928; kaksi aiempaa paloi 1794 ja 1884. Rundetårn valmistui 1642 Kristian IV:n tilaamana tähtitorniksi. Nyhavnin kanavan kaivatti 1670-luvulla Kristian V.\n\nRosenborgin linnan rakentaminen alkoi 1606. Amalienborgin palatsit rakennettiin 1750–1760, ja kruunu osti ne 1794 Christiansborgin palon jälkeen. Tivoli avattiin 1843, ja Pieni merenneito paljastettiin Langeliniella 1913. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 637,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Copenhagen", "title": "Wikipedia: Copenhagen", "tukee": "nimi 'kauppiaiden satama'; kaupunki Sjællandilla ja Amagerilla; Christiansborg Slotsholmenilla"},
+      {"url": "https://en.wikipedia.org/wiki/Christiansborg_Palace", "title": "Wikipedia: Christiansborg Palace", "tukee": "Slotsholmen; kolmas linna 1907–1928; ensimmäinen paloi 1794, toinen 1884"},
+      {"url": "https://da.wikipedia.org/wiki/Christiansborg_Slot", "title": "Wikipedia (da): Christiansborg Slot", "tukee": "kolmas linna 1906–1928; paloi 1794 ja 1884; Slotsholmen"},
+      {"url": "https://en.wikipedia.org/wiki/Rundet%C3%A5rn", "title": "Wikipedia: Rundetårn", "tukee": "työ 1637–1642; Kristian IV tilasi; observatorio"},
+      {"url": "https://thehiddennorth.com/climbing-through-time-a-visitors-guide-to-copenhagens-round-tower/", "title": "The Hidden North: Copenhagen's Round Tower", "tukee": "Kristian IV tilasi; valmis 1642"},
+      {"url": "https://www.stromma.com/de-dk/copenhagen/sehenswurdigkeiten/attractions/the-round-tower/", "title": "Strömma: The Round Tower", "tukee": "rakennettu 1600-luvulla Kristian IV:n aikana tähtitorniksi (ei tarkkoja vuosia)"},
+      {"url": "https://en.wikipedia.org/wiki/Nyhavn", "title": "Wikipedia: Nyhavn", "tukee": "Christian V:n kaivattama noin 1670–1675"},
+      {"url": "https://da.wikipedia.org/wiki/Nyhavn", "title": "Wikipedia (da): Nyhavn", "tukee": "kaivettu noin 1670–1675 Christian V:n aikana"},
+      {"url": "https://en.wikipedia.org/wiki/Rosenborg_Castle", "title": "Wikipedia: Rosenborg Castle", "tukee": "rakentaminen alkoi 1606, Kristian IV"},
+      {"url": "https://da.wikipedia.org/wiki/Rosenborg_Slot", "title": "Wikipedia (da): Rosenborg Slot", "tukee": "Kristian IV rakennutti 1606-alkaen"},
+      {"url": "https://en.wikipedia.org/wiki/Amalienborg", "title": "Wikipedia: Amalienborg", "tukee": "rakennettu 1750–1760; kuninkaallinen perhe osti 1794 Christiansborgin palon jälkeen"},
+      {"url": "https://da.wikipedia.org/wiki/Amalienborg", "title": "Wikipedia (da): Amalienborg", "tukee": "rakentaminen alkoi 1750, valmis 1760; kruunu otti haltuun 1794 Christiansborgin palon jälkeen"},
+      {"url": "https://www.tivoli.dk/en/om/about/history", "title": "Tivoli: The History of Tivoli Gardens", "tukee": "avattu 15.8.1843, Georg Carstensen"},
+      {"url": "https://en.wikipedia.org/wiki/Tivoli_Gardens", "title": "Wikipedia: Tivoli Gardens", "tukee": "avattiin 15.8.1843"},
+      {"url": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)", "title": "Wikipedia: The Little Mermaid (statue)", "tukee": "paljastettu 23.8.1913 Langeliniella"},
+      {"url": "https://da.wikipedia.org/wiki/Den_lille_Havfrue_(statue)", "title": "Wikipedia (da): Den lille Havfrue", "tukee": "paljastettu 23.8.1913 Langeliniella"}
+    ],
+    "pudotetut": [
+      "'Asukkaita yli satatuhatta' ja 'muurit juuri purettu' (entinen teksti): vanhan ajan näkökulma ja tarkistamatta, poistettu",
+      "Vallihautojen muuttuminen järviksi: en-Wikipedia ei vahvista, jätetty pois",
+      "Christianshavnin perustamisvuosi (1618 vs 1639): ristiriita, koko Christianshavn-kuvaus jätetty pois",
+      "Kastellet ja sen aloitusvuosi (1626 vs 1664): ristiriita, jätetty pois",
+      "Entinen kuvaus 'kanavia kaivettu missä tarvittiin': ei lähteitä, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Rosenborgin valmistuminen: 1624 (en-Wikipedia) vs 1633 (da-Wikipedia) -> mainittu vain aloitus 1606, jonka molemmat vahvistavat",
+      "Nyhavnin kaivuvuodet: 1670–1675, 1671–1673 ja 1673 -> käytetty '1670-luvulla'",
+      "Christiansborgin kolmannen linnan aloitus: 1906 (da) vs 1907 (en) -> mainittu vain valmistuminen 1928",
+      "Rundetårnin aloitus: 1637 (en-Wikipedia) ja Leidenin vertailu epäjohdonmukainen toisessa lähteessä -> käytetty vain valmistumisvuotta 1642 (en-Wikipedia, Hidden North)"
+    ],
+    "muutos_sk": "Kirjoitettu uudelleen 809 -> 637 merkkiin ja jaettu kahteen kappaleeseen. Säilytetty: Sjælland/Amager, nimen merkitys, Christiansborg, Rundetårn, Nyhavn, Rosenborg, Amalienborg, Tivoli, Pieni merenneito. Lisätty tarkistetut vuodet (1928, 1794/1884, 1642, 1670-luku, 1606, 1750–1760, 1843, 1913). Poistettu: asukasluku, muurien purku, vallihautajärvet, Christianshavn, Kastellet."
+  }
+]

@@ -226,7 +226,7 @@ export const LOHKO = {
       'Miksi Krišjānis Barons rakensi lapuille oman kaapin?',
       'Mitä sklandrausis-piirakan sisällä on?',
       'Keitä Mustapäiden veljeskuntaan kuului?',
-      'Kuinka vanhoja Riian Kolme veljestä ovat?',
+      'Kuinka vanhoja Riian Kolme veljestä -talot ovat?',
     ],
   },
 

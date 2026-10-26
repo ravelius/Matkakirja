@@ -51,6 +51,7 @@ export const LINSSI = {
    */
   kesken: true,
   lyhyt: 'Valitse kartalta enintään kolme maata Suomen rinnalle ja vertaa niitä samoilla asteikoilla.',
+  esittely: 'Valitse kartalta enintään kolme maata Suomen rinnalle ja vertaa niitä samoilla asteikoilla.',
   // Kaksi käyrää samassa kehyksessä ja yhteinen pohjaviiva.
   ikoni: '<path d="M3 19.2h18"/>'
     + '<path d="M3 16.4c4.4-1.2 8.2-5.6 13-11.2"/>'

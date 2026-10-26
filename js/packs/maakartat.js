@@ -1,3 +1,5 @@
+import { HISTORIAN_HETKET_ID } from './historian-hetket.js';
+
 // Maa-osioiden aloitussivujen isot kartat (omistajan toive 7.8.2026:
 // "maaosion aloitussivu voisi alkaa isolla maan kartalla johon
 // merkitty tärkeimmät kaupungit ja maastonmuodot").
@@ -1281,7 +1283,6 @@ export const MAAKARTAT = {
     // Kuva silmätarkistettu 480 ja 900 px:ssä 8.8.2026.
     nosto: {
       otsikko: 'Kivikasvot vartioivat Tonavan solaa',
-      tiedosto: 'Rock sculpture of Decebalus5.jpg',
       teksti: 'Romanian lounaisnurkassa Tonava kaivautuu Karpaattien '
         + 'ja Balkanvuorten väliin. Solaa sanotaan Rautaportiksi, ja '
         + 'se on 134 kilometriä pitkä. Ahtain kohta on Suuri Kazan: '
@@ -1294,11 +1295,6 @@ export const MAAKARTAT = {
         + 'uuden vartijan: kallioon hakattiin daakialaisten viimeisen '
         + 'kuninkaan Decebaluksen kasvot, jotka ovat yli neljäkymmentä '
         + 'metriä korkeat.',
-      lyhyt: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen Tonavan yläpuolella.',
-      selite: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen '
-        + 'Tonavan yläpuolella; leuan alla lukee latinaksi '
-        + '"DECEBALUS REX".',
-      lahde: 'Sadko, Wikimedia Commons (CC BY-SA 4.0)',
       wiki: 'Rautaportti',
     },
   },
@@ -2732,8 +2728,8 @@ export const MAAKARTAT = {
       teksti: 'São Francisco saa alkunsa Canastra-vuorilta Minas Geraisin '
         + 'ylängöltä ja kiertää lähes kolmetuhatta kilometriä koilliseen '
         + 'ennen kuin laskee Atlanttiin. Brasilialaiset kutsuvat sitä '
-        + 'nimellä Velho Chico, Vanha Chico, ja "kansallisen '
-        + 'yhdistymisen joeksi": se on ainoa suuri vesireitti, joka '
+        + 'nimellä Velho Chico, Vanha Chico, ja ”kansallisen '
+        + 'yhdistymisen joeksi”: se on ainoa suuri vesireitti, joka '
         + 'yhdistää etelän ja koillisen ja tuo vettä puolikuivalle '
         + 'sertãolle. Amerigo Vespucci näki joen 4. lokakuuta 1501, '
         + 'Franciscus Assisilaisen muistopäivänä, ja siitä tuli nimi. '
@@ -3052,10 +3048,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325,
     },
-    esittely: 'Kartan alue on Gaon ydinkeskusta Nigerjoen rannalla. '
-      + 'Askian mausoleumi, savesta rakennettu pyramidinmuotoinen '
-      + 'hautamonumentti, kohoaa yhä keskustassa; se on Gaon suurin '
-      + 'esikolonialistinen rakennus ja Unescon maailmanperintökohde.',
+    esittely: 'Kartan alue on Gaon keskusta Nigerjoen rannalla, kaupungissa, josta tuli Songhain '
+      + 'valtakunnan pääkaupunki. Keskustan kaksi kohdetta ovat noin kilometrin päässä '
+      + 'toisistaan: pohjoisessa Askian mausoleumi ja sen eteläpuolella Gaon suurmoskeija.\n\n'
+      + 'Askian mausoleumi rakennettiin noin 1495 hallitsija Askia Muhammadin '
+      + 'hautamonumentiksi. Pyramidimainen savirakennus on noin 17 metriä korkea, ja sen '
+      + 'ympärillä ovat kaksi moskeijaa, hautausmaa ja ulkoilmakokoontumispaikka. Unesco '
+      + 'liitti kohteen maailmanperintöluetteloon 2004. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Askian mausoleumi', lat: 16.2894, lon: -0.0445,
@@ -3085,11 +3085,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326,
     },
-    esittely: 'Kartan alue on Cayennen vanha kaupunki kapealla '
-      + 'niemellä. Cépéroun kukkulalle nousi 1643 linnoitus, jonka '
-      + 'juurelle koko kaupunki kasvoi; kaupungin puolustusmuurin '
-      + 'paikalle raivattiin 1810-luvulla kuningaspalmuaukio, joka on '
-      + 'yhä keskustan tärkein kohtaamispaikka.',
+    esittely: 'Kartan alue on Cayennen vanha keskusta Cayenne-saarella, jossa Cayenne-joki laskee '
+      + 'Atlantin valtamereen. Ranskalaiset hankkivat kukkulan kalina-intiaanien päälliköltä '
+      + 'Cépéroulta ja perustivat sinne vuonna 1643 linnoituksen, jonka juurelle kaupunki '
+      + 'kasvoi.\n\n'
+      + 'Fort Cépérou seisoo yhä kukkulalla kartan länsiosassa ja kantaa päällikön nimeä. Sen '
+      + 'koillispuolella on Place des Palmistes -aukio, joka raivattiin 1800-luvun alussa, '
+      + 'kun kaupunkia ympäröinyt puolustusmuuri purettiin. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Fort Cépérou', lat: 4.9377244, lon: -52.3368014,
@@ -3101,7 +3104,7 @@ export const KAUPUNKIKARTAT = {
           + '1600-luvun lopulla.',
       },
       {
-        nimi: 'Place des Palmistes', lat: 4.9395938, lon: -52.3338290,
+        nimi: 'Place des Palmistes', tyyppi: 'aukio', lat: 4.9395938, lon: -52.3338290,
         teksti: 'Kun Cayennea ympäröinyt puolustusmuuri purettiin '
           + '1810-luvulla, sen paikalle raivattiin aukio ja istutettiin '
           + 'komeita kuningaspalmuja. Aukiosta tuli nopeasti '
@@ -3121,11 +3124,15 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037,
     },
-    esittely: 'Kartan alue kattaa Macapán vanhan linnoituksen ja '
-      + 'Marco Zero -muistomerkin, jotka sijaitsevat kaupungin eri '
-      + 'laidoilla Amazon-joen suiston partaalla. Macapá on ainoa '
-      + 'Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja '
-      + 'kulkee.',
+    esittely: 'Kartan alue on Macapá, Amapán osavaltion pääkaupunki Amazonjoen suiston '
+      + 'pohjoisrannalla. Portugalilaiset perustivat kaupungin 1758 suojaamaan suiston suuta. '
+      + 'Päiväntasaaja kulkee kaupungin halki, ja Macapá on Brasilian ainoa osavaltion '
+      + 'pääkaupunki, jonka se jakaa kahtia.\n\n'
+      + 'Kartan kaksi kohdetta ovat kaupungin eri laidoilla. Fortaleza de São José de Macapá '
+      + 'rakennettiin 1764–1782 puolustamaan Amazonin suuta ulkomaisilta tunkeutujilta, ja se '
+      + 'on ollut kansallisesti suojeltu vuodesta 1950. Marco Zero -muistomerkki avattiin '
+      + '1987: obeliski toimii aurinkokellona ja merkitsee päiväntasaajan linjaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Fortaleza de São José de Macapá', lat: 0.0310513, lon: -51.0487588,
@@ -3140,7 +3147,7 @@ export const KAUPUNKIKARTAT = {
         teksti: 'Vuonna 1987 avattu 30-metrinen betoniobeliski merkitsee '
           + 'tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa '
           + 'pohjoisella ja eteläisellä pallonpuoliskolla. Tästä '
-          + 'Macapá tunnetaan lempinimellä "Keskimaailman pääkaupunki".',
+          + 'Macapá tunnetaan lempinimellä ”Keskimaailman pääkaupunki”.',
       },
     ],
   },
@@ -3156,10 +3163,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876,
     },
-    esittely: 'Kartan alue on João Pessoan historiallinen keskusta '
-      + 'Paraíban joen mutkan yllä — Brasilian kolmanneksi vanhin '
-      + 'kaupunki, perustettu 1585. São Franciscon luostari ja Teatro '
-      + 'Santa Roza ovat molemmat vanhan kaupungin ydinalueella.',
+    esittely: 'Kartan alue on João Pessoan historiallinen keskusta Brasilian itärannikolla. '
+      + 'Kaupunki perustettiin 5. elokuuta 1585, ja se tunnettiin pitkään nimellä Parahyba. '
+      + 'Asutus syntyi Sanhauá-joen rannalle, ja kaupungin Ponta do Seixas on Amerikan '
+      + 'mantereen itäisin kohta.\n\n'
+      + 'Vanha keskusta on kukkulalla, jolla ovat São Franciscon luostari ja Teatro Santa '
+      + 'Roza. Fransiskaanit aloittivat luostarikokonaisuuden rakentamisen 1589, ja se '
+      + 'valmistui vasta 1700-luvun lopulla. Teatteri on vanhan pääaukion lähellä, ylämäessä '
+      + 'rautatieaseman takana. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'São Franciscon luostari', lat: -7.1145883, lon: -34.8825453,
@@ -3188,14 +3199,17 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705,
     },
-    esittely: 'Kartan alue on Santarémin vanha keskusta siinä kohtaa, '
-      + 'jossa tumma Tapajós-joki ja sameanruskea Amazon virtaavat '
-      + 'vierekkäin sekoittumatta — ilmiö tunnetaan nimellä Vesien '
-      + 'kohtaaminen. Rantaraitilta avautuu paras näköala ilmiöön; '
-      + 'lähellä on kaupungin vanha keskusaukio.',
+    esittely: 'Kartan alue on Santarémin vanha keskusta Brasilian Pará-osavaltiossa, Tapajós-joen '
+      + 'ja Amazonin yhtymäkohdassa. Jesuiitta João Felipe Bettendorff perusti paikalle '
+      + 'lähetysaseman 22. kesäkuuta 1661.\n\n'
+      + 'Rantaraitilta näkyy Vesien kohtaaminen, jossa Tapajósin tumma ja Amazonin '
+      + 'sameanruskea vesi virtaavat rinnakkain useita kilometrejä sekoittumatta heti. '
+      + 'Lähellä ovat Praça Tiradentes, Nossa Senhora da Conceição -katedraali ja Museu Dica '
+      + 'Frazão, joka esittelee kasvikuiduista tehtyjä vaatteita. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       {
-        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', lat: -2.4179024, lon: -54.7172252,
+        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', tyyppi: 'luonto', lat: -2.4179024, lon: -54.7172252,
         teksti: 'Santarémin edustalla Amazonin sameanruskea vesi kohtaa '
           + 'Tapajós-joen tumman, kirkkaan veden, ja kaksi väriä virtaa '
           + 'vierekkäin kilometrien matkan sekoittumatta juuri lainkaan. '
@@ -3203,12 +3217,32 @@ export const KAUPUNKIKARTAT = {
           + 'sen näkee parhaiten.',
       },
       {
-        nimi: 'Praça Tiradentes', lat: -2.4194012, lon: -54.7235362,
+        nimi: 'Praça Tiradentes', tyyppi: 'aukio', lat: -2.4194012, lon: -54.7235362,
         teksti: 'Santarémin vanhan kaupunginosan keskusaukio lähellä '
           + 'paikkaa, jossa jesuiittapappi João Felipe Bettendorff '
           + 'perusti lähetysaseman 1661 — kaupungin virallisen '
           + 'syntyhetken. Ympäröivät talot on perinteisesti '
           + 'päällystetty portugalilaistyylisillä atsulejo-kaakeleilla.',
+      },
+      /*
+       * LÖYDÖS 178 (26.9.2026): kaupungilla ei ollut yhtään rakennus-
+       * kohdetta poiston jälkeen, joten lisättiin kaksi todennettua.
+       */
+      {
+        nimi: 'Nossa Senhora da Conceição -katedraali', lat: -2.4174, lon: -54.7151,
+        teksti: 'Santarémin vanhin kirkko sai alkunsa 1661 pienenä '
+          + 'kappelina, mutta nykyinen rakennus nousi vasta 1761 alkaen '
+          + 'ja vihittiin käyttöön 1819. Kirkosta tuli katedraali 1903, '
+          + 'kun Santarémiin perustettiin oma katolinen prelatuuri.',
+      },
+      {
+        nimi: 'Museu Dica Frazão', lat: -2.418109, lon: -54.712523,
+        teksti: 'Muotisuunnittelija Dica Frazãon entiseen ompelimoon on '
+          + 'sisustettu museo, joka esittelee hänen sademetsän raaka-'
+          + 'aineista — puunkuoresta, buriti-palmun kuidusta, siemenistä '
+          + 'ja juurista — valmistamiaan vaatteita. Hänen luomuksiaan on '
+          + 'kantanut muun muassa Belgian kuningatar Fabiola ja paavi '
+          + 'Johannes Paavali II.',
       },
     ],
   },
@@ -3222,10 +3256,15 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -8.75, etela: -8.7785, lansi: -63.924, ita: -63.889,
     },
-    esittely: 'Kartan alue on Porto Velhon vanha keskusta Rio Madeiran '
-      + 'rannalla. Kaupunki syntyi 1907 kuolonuhreja vaatineen Madeira-'
-      + 'Mamoré-rautatien leirinä; vanha rautatieasema seisoo yhä joen '
-      + 'varrella, ja lähellä kohoaa kaupungin ensimmäinen kivikirkko.',
+    esittely: 'Kartan alue on Porto Velhon vanha keskusta Madeira-joen rannalla Rondônian '
+      + 'osavaltiossa. Kaupunki syntyi 1900-luvun alussa Madeira-Mamoré-rautatien '
+      + 'rakennusleirinä. Rata rakennettiin kumibuumin aikana 1907–1912 ohittamaan joen '
+      + 'koskia ja viemään bolivialaista kumia markkinoille.\n\n'
+      + 'Rata liitti Porto Velhon Guajará-Mirimiin. Brasilia rakensi sen osin korvaukseksi '
+      + 'Acren alueesta, jonka se sai Boliviasta 1903, ja sen rakentaminen maksoi tuhansien '
+      + 'työläisten hengen. Liikenne loppui 1972. Rautatien vanha asema seisoo yhä joen '
+      + 'varrella, ja kaupungin pääkirkko Sagrado Coração de Jesus -katedraali on lähellä. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Sagrado Coração de Jesus -katedraali', lat: -8.7620468, lon: -63.9040348,
@@ -3255,29 +3294,99 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633,
     },
-    esittely: 'Kartan alue on Broomen ydinkeskusta, joka kasvoi '
-      + '1880-luvulla maailman johtavaksi helmisatamaksi. Bedford '
-      + 'Parkissa muistetaan naisia, jotka pakotettiin sukeltamaan '
-      + 'helmiäissimpukkaa; Chinatownin kapeat kujat syntyivät '
-      + 'aikanaan Aasiasta saapuneiden sukeltajien ja kauppiaiden '
-      + 'korttelina.',
+    esittely: 'Kartan alue on Broomen ydinkeskusta Länsi-Australian luoteisrannikolla Roebuck Bayn '
+      + 'rannalla. Kaupunki perustettiin 1883, ja se kasvoi helmiäisen- ja helmenpyynnin '
+      + 'satamana. Aasiasta tulleet sukeltajat ja kauppiaat asuivat laiturien lähellä '
+      + 'kaupunginosassa, jota kutsutaan yhä Chinatowniksi.\n\n'
+      + 'Chinatownin läheisyydessä Pearl Luggers esittelee helmenpyyntialuksia. Sun Pictures '
+      + 'avasi ovensa 9. joulukuuta 1916, ja sitä pidetään maailman vanhimpana yhä toimivana '
+      + 'ulkoilmaelokuvateatterina. Broome Courthouse valmistui 1889 merenalaisen '
+      + 'sähkösanomakaapelin asemaksi; valtio osti rakennuksen 1921 ja muutti sen '
+      + 'oikeustaloksi. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
-        nimi: 'Women of Pearling -patsas', lat: -17.9628799, lon: 122.2388728,
-        teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
-          + 'odottivat lugger-veneiden palaavan merten takaa, '
-          + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
-          + 'aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka '
-          + 'kädessään — muistomerkki naisille, joita pakotettiin '
-          + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
-      },
-      {
-        nimi: 'Chinatown', lat: -17.9544454, lon: 122.2433213,
+        nimi: 'Chinatown', tyyppi: 'aukio', lat: -17.9544454, lon: 122.2433213,
         teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
           + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
           + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
           + 'nimen Chinatown. Vuoteen 1910 mennessä noin 3 500 kaupungin '
           + '5 000 asukkaasta sai leipänsä helmiteollisuudesta.',
+      },
+      /*
+       * LÖYDÖS 178 (26.9.2026): kaupungilla ei ollut yhtään rakennus-
+       * kohdetta poiston jälkeen, joten lisättiin kolme todennettua.
+       * 'Women of Pearling -patsas' oli ei-paikka (tyyppi taide) eikä
+       * ole enää kartalla; sen kuva ja teksti siirrettiin Pearl
+       * Luggersin kuvagalleriaan, koska molemmat kertovat samasta
+       * helmenpyyntihistoriasta.
+       */
+      {
+        nimi: 'Sun Pictures', lat: -17.95344, lon: 122.24307,
+        teksti: 'Sun Pictures avasi ovensa jouluteatterina 1916, ja '
+          + 'Guinnessin ennätysten kirja tunnusti sen 2004 maailman '
+          + 'vanhimmaksi yhä toimivaksi ulkoilmaelokuvateatteriksi. '
+          + 'Puiset kangastuolit ja hiekkalattia ovat yhä alkuperäisiä, '
+          + 'ja pari kertaa vuodessa nousuvesi tulvii saliin kesken '
+          + 'näytöksen — katsojat nostavat vain jalkansa ilmaan '
+          + 'eivätkä poistu.',
+        kuvat: [
+          {
+            tiedosto: 'Broome - Sun Pictures 01.jpg',
+            selite: 'Sun Picturesin peltikatto ja vanha kyltti seisovat '
+              + 'yhä samalla paikalla, jossa maailman vanhin toimiva '
+              + 'ulkoilmaelokuvateatteri avattiin 1916.',
+            lahde: 'Dan Arndt, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pearl Luggers', lat: -17.9551818, lon: 122.2446502,
+        teksti: 'Pearl Luggers -näyttelyrakennuksessa on esillä kaksi '
+          + 'entisöityä helmenpyyntialusta, muun muassa vihreä-valkoinen '
+          + 'Sam Male, joka on nimetty Streeter & Male -yhtiön '
+          + 'perustajasukuun kuuluneen Broome-pioneerin mukaan. Yhtiö '
+          + 'oli yksi kaupungin ensimmäisistä ja pitkäikäisimmistä '
+          + 'helmenpyyntifirmoista 1880-luvulta lähtien.',
+        kuvat: [
+          {
+            tiedosto: 'Pearling luggers, Broome.jpg',
+            lyhyt: 'Helmenpyyntialuksia Roebuck Bayssä 1900-luvun alussa — samanlaisia luggereita Pearl Luggers esittelee yhä.',
+            selite: 'Helmenpyyntialuksia eli luggereita Roebuck Bayssä '
+              + '1900-luvun alussa. Pearl Luggers -museossa on esillä '
+              + 'kaksi tällaista entisöityä alusta.',
+            lahde: 'Yasukichi Murakami, Wikimedia Commons (Public domain)',
+          },
+          {
+            tiedosto: 'Women of Pearling monument, Bedford Park, Broome, WA, Australia.jpg',
+            lyhyt: 'Bedford Parkissa, paikassa jossa perheet odottivat lugger-veneiden palaavan, on Women of Pearling -patsas vuodelta 2010.',
+            selite: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
+              + 'odottivat lugger-veneiden palaavan merten takaa, '
+              + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
+              + 'aboriginaalinaisesta helmiäissimpukka kädessään — '
+              + 'muistomerkki naisille, joita pakotettiin sukeltamaan '
+              + 'simpukoita 1800-luvulla ilman korvausta.',
+            lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Broome Courthouse', lat: -17.95695, lon: 122.24033,
+        teksti: 'Rakennus valmistui 1889 telegraafikaapelin '
+          + 'maihinnousuasemaksi, joka yhdisti Broomen — ja koko '
+          + 'Australian — ensi kertaa merenalaisen kaapelin kautta '
+          + 'muuhun maailmaan. Hallitus osti aseman 1921 ja muutti sen '
+          + 'oikeustaloksi; se on nykyään Australian vanhin yhä '
+          + 'pystyssä oleva kaapeliasemarakennus, ja sen puistossa '
+          + 'pidetään yhä lauantaitoreja.',
+        kuvat: [
+          {
+            tiedosto: 'Broome Courthouse, 2019 (01).jpg',
+            selite: 'Vuonna 1889 kaapeliasemaksi valmistunut rakennus '
+              + 'toimii nykyään oikeustalona ja on Australian vanhin '
+              + 'yhä pystyssä oleva kaapeliasemarakennus.',
+            lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
       },
     ],
   },
@@ -3297,19 +3406,15 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492,
     },
-    esittely: 'Kartan alue on Kalgoorlien ydinkeskusta, joka kasvoi '
-      + 'kultaryntäyksen mukana 1890-luvulla Hannan Streetin ympärille. '
-      + 'Pääkadulla seisoo Paddy Hannanin patsas, jonka löytö sytytti koko '
-      + 'ryntäyksen; muutaman kilometrin päässä pohjoisessa on Hannans '
-      + 'North, yksi Golden Milen vanhoista kultakaivoksista.',
+    esittely: 'Kartan alue on Kalgoorlien ydinkeskusta Länsi-Australian kultakentillä. Paddy '
+      + 'Hannan, Tom Flanagan ja Dan Shea löysivät kesäkuussa 1893 noin sata unssia kultaa, '
+      + 'ja löydön jälkeinen ryntäys synnytti kaupungin. Kalgoorlie-nimi vahvistettiin '
+      + 'virallisesti 1894.\n\n'
+      + 'Kaupungin pääkatu Hannan Street on nimetty löytäjän mukaan, ja sen varrella seisoo '
+      + 'Paddy Hannanin patsas. Pohjoisempana Hannans North -kaivos oli yksi alueen '
+      + 'ensimmäisistä rekisteröidyistä kaivoksista; nykyään se on avoin kaivosmuseo. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
-      {
-        nimi: 'Paddy Hannanin patsas', lat: -30.7490175, lon: 121.4705657,
-        teksti: 'Paddy Hannanin pronssipatsas seisoo yhä Kalgoorlien '
-          + 'pääkadulla vesileili sylissään ja toimii juomalähteenä. '
-          + 'Hänen hevosensa kengän irtoaminen tällä paikalla kesäkuussa '
-          + '1893 johti kultalöytöön, joka synnytti koko kaupungin.',
-      },
       {
         nimi: 'Hannans North -kaivos', lat: -30.7268005, lon: 121.4716290,
         teksti: 'Hannans North oli yksi kymmenistä kaivoksista Golden '
@@ -3317,6 +3422,23 @@ export const KAUPUNKIKARTAT = {
           + 'kulki yli kolmetuhatta kilometriä käytäviä. Kaivos on '
           + 'nykyään museo: sen nostotornit seisovat yhä punaisella '
           + 'hiekalla.',
+        /*
+         * LÖYDÖS 178 (26.9.2026): 'Paddy Hannanin patsas' oli ei-paikka
+         * (tyyppi taide) eikä ole enää kartalla; sen kuva ja teksti
+         * siirrettiin tähän lähimmän kohteen kuvagalleriaksi.
+         */
+        kuvat: [
+          {
+            tiedosto: 'Paddy Hannan by John McLeod.jpg',
+            lyhyt: 'Kaivoksen löysi Paddy Hannan; pääkadulla seisoo yhä hänen pronssipatsaansa vesileili sylissään.',
+            selite: 'Kalgoorlien pääkadulla seisoo yhä Paddy Hannanin '
+              + 'pronssipatsas vesileili sylissään, toimien juomalähteenä. '
+              + 'Hänen hevosensa kengän irtoaminen samalla paikalla '
+              + 'kesäkuussa 1893 johti kultalöytöön, joka synnytti koko '
+              + 'kaupungin ja tämän kaivoksen.',
+            lahde: 'SurveyorMJF, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
       },
     ],
   },
@@ -3334,11 +3456,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518,
     },
-    esittely: 'Kartan alue on Mount Isan ydinkeskusta Leichhardtin joen '
-      + 'molemmin puolin. Joen länsipuolella kohoavat Mount Isa Minesin '
-      + 'piiput ja louhokset, jotka hallitsevat koko kaupungin '
-      + 'taivaanrantaa; keskustan lounaispuolella oleva City Lookout '
-      + 'tarjoaa parhaan näköalan kaivosalueelle.',
+    esittely: 'Kartan alue on Mount Isan ydinkeskusta Queenslandin sisämaassa Leichhardtin joen '
+      + 'varrella. Kaupunki syntyi malmilöydöstä: John Campbell Miles löysi lyijy- ja '
+      + 'hopeamalmin 1923, ja Mount Isa Mines -yhtiö perustettiin 1924. Kaupunki rakennettiin '
+      + 'joen itäpuolelle, ja joki jakaa sen asuinpuoleen ja kaivospuoleen.\n\n'
+      + 'Mount Isa Minesin kaivoksesta on louhittu lyijyä, hopeaa ja kuparia, ja sen piiput '
+      + 'hallitsevat kaupungin siluettia. City Lookout on kaupungin yläpuolella oleva '
+      + 'kukkula, jolta avautuu näkymä kaivosalueelle. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       {
         nimi: 'Mount Isa Mines', lat: -20.7279113, lon: 139.4830884,
@@ -3350,7 +3475,7 @@ export const KAUPUNKIKARTAT = {
           + 'seisoo yhä kaupungin symbolina.',
       },
       {
-        nimi: 'City Lookout', lat: -20.7235054, lon: 139.4984195,
+        nimi: 'City Lookout', tyyppi: 'luonto', lat: -20.7235054, lon: 139.4984195,
         teksti: 'Kaupungin lounaisreunalla kohoava City Lookout on '
           + 'paikallisten ja matkailijoiden näköalapaikka, josta avautuu '
           + 'näkymä koko Mount Isaan ja sen kaivosalueen piippuihin '
@@ -3369,11 +3494,14 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -28.7548, etela: -28.7977, lansi: 114.5644, ita: 114.6283,
     },
-    esittely: 'Kartan alue on Geraldtonin ydinkeskusta Champion Bayn '
-      + 'rannalla. Länsikärjessä kohoaa Point Mooren majakka, Länsi-'
-      + 'Australian vanhin yhä pystyssä oleva liittovaltion majakka; '
-      + 'kauempana idässä on kaupungin rautatieasema, joka avasi '
-      + 'sisämaan kaivosseudun satamalle 1879.',
+    esittely: 'Kartan alue on Geraldtonin keskusta Champion Bayn rannalla Länsi-Australian '
+      + 'rannikolla. Kaupunki syntyi lahden satamaksi sisämaan lyijykaivosten vientiä varten, '
+      + 'ja kaupunkialue mitattiin vuonna 1850.\n\n'
+      + 'Länsikärjessä on Point Mooren majakka, joka sytytettiin ensimmäisen kerran 19. '
+      + 'maaliskuuta 1878. Se on 34 metriä korkea ja Länsi-Australian vanhin säilynyt '
+      + 'liittovaltion hallinnassa oleva majakka. Idempänä on rautatieasema, jonka kautta '
+      + 'kulki vuonna 1879 avattu rata sisämaan Northamptonin kaivosseudulle. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Point Mooren majakka', lat: -28.7827109, lon: 114.5793925,
@@ -3489,7 +3617,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tokion kansallismuseo', lat: 35.7191, lon: 139.7758 },
       { nimi: 'Ueno Tōshō-gū', lat: 35.7154, lon: 139.7706 },
       { nimi: 'Uenon asema', lat: 35.7134, lon: 139.7767 },
-      { nimi: 'Uenon puisto', lat: 35.7122, lon: 139.7711 },
+      { nimi: 'Uenon puisto', tyyppi: 'luonto', lat: 35.7122, lon: 139.7711 },
       { nimi: 'Shitamachi-museo', lat: 35.7102, lon: 139.7726 },
       { nimi: 'Kyū-Iwasaki-tei', lat: 35.7097, lon: 139.7678 },
     ],
@@ -3557,7 +3685,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Jongmyo', lat: 37.5747, lon: 126.9936, wiki: 'Jongmyo' },
       { nimi: 'Insadong', lat: 37.573, lon: 126.9862 },
       { nimi: 'Jogyesa', lat: 37.5739, lon: 126.9819 },
-      { nimi: 'Tapgol-puisto', lat: 37.5711, lon: 126.9885 },
+      { nimi: 'Tapgol-puisto', tyyppi: 'luonto', lat: 37.5711, lon: 126.9885 },
       { nimi: 'Bosingak', lat: 37.5699, lon: 126.9834 },
     ],
   },
@@ -3622,15 +3750,15 @@ export const KAUPUNKIKARTAT = {
        * puutarhasta ja Nanjing-kadusta ei ole fi-artikkelia, joten
        * ne nojaavat omaan juttuunsa. Ei myöskään kolmesta uudesta.
        */
-      { nimi: 'Bund', lat: 31.238, lon: 121.4861 },
+      { nimi: 'Bund', tyyppi: 'aukio', lat: 31.238, lon: 121.4861 },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
       // sillan keskellä Suzhou-puron päällä, koska juuri se on kohde.
       { nimi: 'Waibaidun silta', lat: 31.2431, lon: 121.49 },
       { nimi: 'Rauhanhotelli', lat: 31.2411, lon: 121.4846 },
-      { nimi: 'Yu-puutarha', lat: 31.2292, lon: 121.4875 },
+      { nimi: 'Yu-puutarha', tyyppi: 'luonto', lat: 31.2292, lon: 121.4875 },
       { nimi: 'Kaupunginjumalan temppeli', lat: 31.2278, lon: 121.4881 },
       { nimi: 'Fuyoun moskeija', lat: 31.2298, lon: 121.4842 },
-      { nimi: 'Nanjing-katu', lat: 31.2347, lon: 121.4744 },
+      { nimi: 'Nanjing-katu', tyyppi: 'aukio', lat: 31.2347, lon: 121.4744 },
       { nimi: 'Shanghain museo', lat: 31.2303, lon: 121.4706 },
       { nimi: 'Dajingin pavilonki', lat: 31.2265, lon: 121.4788 },
     ],
@@ -3719,7 +3847,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Teheranin basaari', lat: 35.675, lon: 51.4194 },
       { nimi: 'Golestanin palatsi', lat: 35.6797, lon: 51.4203 },
       { nimi: 'Dar al-Fonun', lat: 35.6838, lon: 51.4219 },
-      { nimi: 'Toopkhanen aukio', lat: 35.6857, lon: 51.4215 },
+      { nimi: 'Toopkhanen aukio', tyyppi: 'aukio', lat: 35.6857, lon: 51.4215 },
       { nimi: 'Iranin kansallismuseo', lat: 35.687, lon: 51.4146 },
       { nimi: 'Bagh-e Mellin portti', lat: 35.6877, lon: 51.4168 },
       { nimi: 'Masoudiehin talo', lat: 35.689, lon: 51.4281 },
@@ -3910,12 +4038,17 @@ export const KAUPUNKIKARTAT = {
      * esittely kertoo kohteet, ei kartan viivastoja.
      */
     esittely: 'Kartan alue on İzmirin vanha keskusta lahden pohjukassa. '
-      + 'Kemeraltın basaari kasvoi antiikin sataman päälle sen jälkeen, kun '
-      + 'poukama kasvoi umpeen, ja samoilla kujilla ovat Hisarin moskeija, '
-      + 'Sulu Han ja Salepçioğlun moskeija. Idässä on Smyrnan roomalainen '
-      + 'agora, jonka holvit kannattivat torin lattiaa, ja lännessä Konakin '
-      + 'aukio kellotorneineen. Kaikki mahtuvat saman kilometrin sisään. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'Kemeraltın basaari syntyi 1600-luvulla, kun lahden matalimpia osia '
+      + 'täytettiin maaksi, ja se on siitä asti ollut kaupungin '
+      + 'kauppakeskus. Sen kujien varrella ovat Hisarin moskeija ja '
+      + 'Salepçioğlun moskeija; kartalla on lisäksi Sulu Han.\n\n'
+      + 'Smyrnan agora on hellenistisen ajan tori. Maanjäristys vahingoitti '
+      + 'sitä vuonna 178, ja keisari Marcus Aurelius tuki '
+      + 'uudelleenrakennusta; pohjoisen pylväshallin basilika on 165 metriä '
+      + 'pitkä. Lännessä Konakin aukion kellotorni on 25 metriä korkea ja '
+      + 'valmistui 1901 sulttaani Abdülhamid II:n valtaannousun '
+      + '25-vuotisjuhlaksi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       { nimi: 'İzmirin kellotorni', lat: 38.4189, lon: 27.1287 },
       { nimi: 'Kemeraltin basaari', lat: 38.4187, lon: 27.1329 },
@@ -3975,7 +4108,7 @@ export const KAUPUNKIKARTAT = {
        * al-Wazir menee 12–15 % päällekkäin museon ja Mustansiriyan
        * kanssa, mikä on työkalun asteikolla "tavallista".
        */
-      { nimi: 'Mutanabbin katu', lat: 33.3410, lon: 44.3888 },
+      { nimi: 'Mutanabbin katu', tyyppi: 'aukio', lat: 33.3410, lon: 44.3888 },
       { nimi: 'Qushlan kellotorni', lat: 33.3412, lon: 44.3860 },
       { nimi: 'Abbasidipalatsi', lat: 33.3431, lon: 44.3835 },
       { nimi: 'Haydarkhanan moskeija', lat: 33.3425, lon: 44.3894 },
@@ -4052,7 +4185,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al Hamra -torni', lat: 29.3790, lon: 47.9932 },
       { nimi: 'Seifin palatsi', lat: 29.3808, lon: 47.9711 },
       { nimi: 'Kuwaitin suurmoskeija', lat: 29.3789, lon: 47.9747 },
-      { nimi: 'Mubarakiyan tori', lat: 29.3748, lon: 47.9741 },
+      { nimi: 'Mubarakiyan tori', tyyppi: 'aukio', lat: 29.3748, lon: 47.9741 },
       { nimi: 'Sadu House', lat: 29.3744, lon: 47.9672 },
     ],
   },
@@ -4099,6 +4232,11 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Omeryen hamam', lat: 35.1726, lon: 33.3654 },
       { nimi: 'Kyproksen museo', lat: 35.1717, lon: 33.3553 },
       { nimi: 'Leventis-museo', lat: 35.1706, lon: 33.3617 },
+      {
+        nimi: 'Nikosia 1878', tyyppi: 'henkilo', lat: 35.1768, lon: 33.3573,
+        nosto: 'hetki-britannian-lippu-nikosiassa-1878',
+        teksti: HISTORIAN_HETKET_ID.get('britannian-lippu-nikosiassa-1878').teksti,
+      },
     ],
   },
   /*
@@ -4146,7 +4284,7 @@ export const KAUPUNKIKARTAT = {
        * rannalle — se osoittaisi väärään paikkaan.
        */
       { nimi: 'Islamilaisen taiteen museo', lat: 25.2950, lon: 51.5393 },
-      { nimi: 'Corniche', lat: 25.2904, lon: 51.5352 },
+      { nimi: 'Corniche', tyyppi: 'aukio', lat: 25.2904, lon: 51.5352 },
       { nimi: 'Souq Waqif', lat: 25.2882, lon: 51.5332 },
       { nimi: 'Qatarin kansallismuseo', lat: 25.2868, lon: 51.5495 },
       { nimi: 'Al Koot -linnake', lat: 25.2866, lon: 51.5310 },
@@ -4225,7 +4363,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki istanbul).
        */
       {
-        nimi: 'Vararikko 1875', lat: 41.0122, lon: 28.9739,
+        nimi: 'Vararikko 1875', tyyppi: 'henkilo', lat: 41.0122, lon: 28.9739,
         nosto: 'skandaali-osmanien-vararikko-1875',
       },
       {
@@ -4257,7 +4395,7 @@ export const KAUPUNKIKARTAT = {
       // Hagia Sofia, johon 29.5.1453 aamu päättyi; Theodosiuksen muuri on kartan
       // rajauksen länsipuolella.
       {
-        nimi: 'Konstantinopoli 1453', lat: 41.0085, lon: 28.98,
+        nimi: 'Konstantinopoli 1453', tyyppi: 'henkilo', lat: 41.0085, lon: 28.98,
         nosto: 'hetki-konstantinopoli-1453',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4265,39 +4403,41 @@ export const KAUPUNKIKARTAT = {
   },
   lissabon: {
     polku: 'assets/kartat/lissabon-keskusta.png',
+    varikartta: 'assets/kartat/lissabon-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 38.7265, etela: 38.7035, lansi: -9.1505, ita: -9.118 },
+    piirtoRajat: { pohjoinen: 38.7334, etela: 38.6966, lansi: -9.16025, ita: -9.10825 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen '
-      + 'pohjoisrannalla. Joki on tässä kohtaa jo melkein meri, ja '
-      + 'juuri siksi kaupunki on tässä: laivat pääsivät leveään ja '
-      + 'suojaisaan satamaan, mutta avomerelle oli vain noin '
-      + 'viisitoista kilometriä. Rannasta nousee Baixa eli alakaupunki, '
-      + 'joka vedettiin suoraksi ruudukoksi sen jälkeen, kun vanha '
-      + 'keskusta romahti maanjäristyksessä 1. marraskuuta 1755. Sen '
-      + 'molemmin puolin kohoavat vanhat kukkulakaupunginosat, Alfama '
-      + 'linnankukkulalla ja Bairro Alto, ja pohjoiseen lähtee '
-      + 'puistokatu Avenida da Liberdade. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen rannalla. '
+      + 'Maanjäristys, tsunami ja tulipalo 1. marraskuuta 1755 tuhosivat '
+      + 'suuren osan kaupungista. Pombalin markiisin johdolla Baixa '
+      + 'rakennettiin ruudukoksi, ja Praça do Comércio sai Eugénio dos '
+      + 'Santosin suunnittelemana U:n muotoisen asemakaavan.\n\n'
+      + 'Sé-tuomiokirkon rakentaminen alkoi 1147, kun kaupunki oli vallattu '
+      + 'takaisin, ja samana vuonna Afonso Henriques valtasi São Jorgen '
+      + 'linnan. Santa Engrácian kirkon työt alkoivat 1682, ja kupoli '
+      + 'valmistui vasta 1900-luvulla. Rossion aaltokuvioinen kivilaatoitus '
+      + 'tehtiin 1840-luvun lopulla. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
-       * Glórian köysiradasta ja kansallispanteonista ei ole
-       * suomenkielisiä artikkeleita; molemmat jäävät merkeiksi.
+       * Kansallispanteonista ei ole suomenkielistä artikkelia; se jää
+       * merkiksi. Glórian köysirata siirrettiin löydös 178:ssa Rossion
+       * kuvagalleriaan (26.9.2026, ks. js/packs/nahtavyysjutut.js).
        *
        * Karmeliittiluostari on lehden maanjäristysnoston kohde ja
        * olisi ollut vahva ehdokas, mutta se on 183 metriä Rossiosta
        * eli numerot olisivat menneet päällekkäin. Rossio voitti,
        * koska siitä on artikkeli.
        */
-      { nimi: 'Glórian köysirata', lat: 38.7152, lon: -9.1433 },
       { nimi: 'Rossio', lat: 38.7138, lon: -9.1393, wiki: 'Rossio' },
       { nimi: 'São Jorgen linna', lat: 38.7139, lon: -9.1335, wiki: 'Castelo de São Jorge' },
       { nimi: 'Tuomiokirkko', lat: 38.7098, lon: -9.1326, wiki: 'Lissabonin tuomiokirkko' },
-      { nimi: 'Kauppatori', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
+      { nimi: 'Kauppatori', tyyppi: 'aukio', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
       { nimi: 'Kansallispanteoni', lat: 38.715, lon: -9.1247 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -4315,7 +4455,7 @@ export const KAUPUNKIKARTAT = {
       {
         // Nimiö oikealle eikä siirron suuntaan: vasemmalla on Glórian
         // köysiradan nimi, oikealla tyhjää korttelia (kaappaus 2.9.2026).
-        nimi: 'Calçada', lat: 38.7139, lon: -9.1394,
+        nimi: 'Calçada', tyyppi: 'ilmio', lat: 38.7139, lon: -9.1394,
         nosto: 'syvennys-lissabon-calcada', nimiPuoli: 'oikea',
         siirto: { x: -14, y: -22 },
       },
@@ -4336,42 +4476,45 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Alves dos Reis', lat: 38.7085, lon: -9.139,
+        nimi: 'Alves dos Reis', tyyppi: 'henkilo', lat: 38.7085, lon: -9.139,
         nosto: 'skandaali-alves-dos-reis-setelihuijaus',
       },
       {
-        nimi: 'Ultimaatum 1890', lat: 38.716, lon: -9.1414,
+        nimi: 'Ultimaatum 1890', tyyppi: 'henkilo', lat: 38.716, lon: -9.1414,
         nosto: 'skandaali-vaaleanpunainen-kartta-1890',
       },
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026):
       // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
       // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
       {
-        nimi: 'Kolumbus 1484', lat: 38.7066, lon: -9.1352,
+        // Rannalle Kauppatorin itäpuolelle (oli 38.7066/-9.1352 Tejon päällä; Karttaseppä 11.10.2026).
+        nimi: 'Kolumbus 1484', tyyppi: 'henkilo', lat: 38.708, lon: -9.1345,
         nosto: 'hetki-kolumbus-portugali-1484',
       },
     ],
   },
   barcelona: {
     polku: 'assets/kartat/barcelona-keskusta.png',
+    varikartta: 'assets/kartat/barcelona-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 41.4085, etela: 41.37, lansi: 2.147, ita: 2.1984 },
+    rajat: { pohjoinen: 41.4105, etela: 41.37, lansi: 2.147, ita: 2.1984 }, // pohjoisreuna +0,002 (Roviran aukio irti reunasta, Karttaseppä 11.10.2026)
+    piirtoRajat: { pohjoinen: 41.42265, etela: 41.35785, lansi: 2.13158, ita: 2.21382 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta kattaa Barcelonan keskustan kapealla tasangolla '
-      + 'Välimeren ja Collserolan metsäisen harjanteen välissä. '
-      + 'Roomalaiset perustivat Barcinon pienelle kummulle, jonka '
-      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
-      + 'sisässä aina 1850-luvulle asti; muurien paikalta alkaa '
-      + 'vanhankaupungin sokkelo. Sen pohjoispuolelle piirrettiin '
-      + 'tyhjälle kentälle Eixample, jonka korttelit ovat 113 metriä '
-      + 'sivultaan ja joiden joka kulmasta on leikattu 20 metrin '
-      + 'viiste. Ruudukon sisällä seisoo Sagrada Família, ja etelässä '
-      + 'ovat satama ja meri. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Barcelonan keskusta vanhankaupungin ja Eixamplen '
+      + 'alueella. Kaupungin muurit purettiin 1850-luvulla, ja Eixamplen '
+      + 'neliönmuotoiset korttelit ovat noin 113 metriä leveitä ja '
+      + 'kulmistaan viistoja. Sagrada Família aloitettiin 1882, ja sen '
+      + '172,5 metriä korkea keskitorni valmistui rakenteellisesti 2026. '
+      + 'Gaudí uudisti Casa Batllón vuosina 1904–1906.\n\n'
+      + 'Arc de Triomf on punatiilinen, ja se rakennettiin vuoden 1888 '
+      + 'maailmannäyttelyn portiksi. Musiikkipalatsi avattiin 1908, ja sen '
+      + 'konserttisalia valaisee päivisin luonnonvalo. La Boqueria '
+      + 'mainitaan ensimmäisen kerran 1217. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Boquerian kauppahallista ja Kolumbuksen patsaasta ei ole
@@ -4386,7 +4529,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Arc de Triomf', lat: 41.391, lon: 2.1806, wiki: 'Arc de Triomf' },
       { nimi: 'Musiikkipalatsi', lat: 41.3876, lon: 2.1752, wiki: 'Palau de la Música Catalana' },
       { nimi: 'Boquerian kauppahalli', lat: 41.3817, lon: 2.1716 },
-      { nimi: 'Kolumbuksen patsas', lat: 41.3758, lon: 2.1778 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -4401,33 +4543,35 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Font de Canaletes', lat: 41.3853, lon: 2.1701,
+        nimi: 'Font de Canaletes', tyyppi: 'esine', lat: 41.3853, lon: 2.1701,
         nosto: 'syvennys-barcelona-rambla',
       },
       {
-        nimi: 'Roviran aukio', lat: 41.4076, lon: 2.1584,
+        nimi: 'Roviran aukio', tyyppi: 'aukio', lat: 41.4076, lon: 2.1584,
         nosto: 'syvennys-barcelona-kilpailu',
       },
     ],
   },
   granada: {
     polku: 'assets/kartat/granada-keskusta.png',
+    varikartta: 'assets/kartat/granada-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 37.1875, etela: 37.1675, lansi: -3.6045, ita: -3.5795 },
+    piirtoRajat: { pohjoinen: 37.1935, etela: 37.1615, lansi: -3.612, ita: -3.572 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta rajaa Granadan vanhan ytimen Sierra Nevadan '
-      + 'juurella noin 740 metrin korkeudessa. Kaupunki syntyi '
-      + 'kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin; Darro '
-      + 'katettiin 1800-luvun lopulla kadun alle ja virtaa nykyään '
-      + 'talojen alitse. Joen molemmin puolin nousee kaksi kukkulaa '
-      + 'vastakkain: toisella on Alhambran 142 000 neliömetrin '
-      + 'palatsialue, toisella Albaicínin valkoinen kaupunginosa. '
-      + 'Tasaisemmalla maalla lännessä seisoo katedraali. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Granadan vanhan ytimen Sierra Nevadan juurella, missä Darro-joen '
+      + 'vastakkaisilla puolilla kohoavat Alhambran ja Albaicínin kukkulat. Nasrid-dynastia '
+      + 'rakensi Alhambran; sen valtio päättyi vuonna 1492, kun kaupunki luovutettiin '
+      + 'Kastilian ja Aragonian hallitsijoille.\n\n'
+      + 'Alhambran sisällä ovat Leijonain piha ja Irvingin huoneet; Washington Irvingin '
+      + 'Alhambra-kertomukset ilmestyivät 1832. Vastarinteellä ovat Albaicínin näköalapaikka '
+      + 'ja Sacromonten luolat, ja Albaicín liitettiin Alhambran ja Generalifen '
+      + 'maailmanperintökohteeseen 1994. Alempana ovat Granadan katedraali (1523–1704) ja '
+      + 'Alcaicería, joka paloi 1843. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Sacromonten luolista ja Granadan katedraalista ei ole
@@ -4437,7 +4581,7 @@ export const KAUPUNKIKARTAT = {
        * koska talosta ei ole omaa artikkelia — sama ratkaisu kuin
        * Wienin jättirattaalla, joka linkittää Prateriin.
        */
-      { nimi: 'Sacromonten luolat', lat: 37.1831, lon: -3.5843 },
+      { nimi: 'Sacromonten luolat', tyyppi: 'luonto', lat: 37.1831, lon: -3.5843 },
       { nimi: 'Albaicínin näköalapaikka', lat: 37.181, lon: -3.5927, wiki: 'Albayzín' },
       { nimi: 'Generalife', lat: 37.1769, lon: -3.5851, wiki: 'Generalife' },
       { nimi: 'Granadan katedraali', lat: 37.1765, lon: -3.5992 },
@@ -4485,25 +4629,27 @@ export const KAUPUNKIKARTAT = {
   },
   edinburgh: {
     polku: 'assets/kartat/edinburgh-keskusta.png',
+    varikartta: 'assets/kartat/edinburgh-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.9615, etela: 55.9415, lansi: -3.214, ita: -3.162 },
+    piirtoRajat: { pohjoinen: 55.9675, etela: 55.9355, lansi: -3.2296, ita: -3.1464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Edinburgh seisoo sammuneen tulivuoren päällä. Kallio '
-      + 'jähmettyi noin 350 miljoonaa vuotta sitten niin kovaksi, '
-      + 'ettei jäätikkö jaksanut kuluttaa sitä: jää kiersi kallion ja '
-      + 'jätti taakseen pitkän loivan rinteen. Laelle rakennettiin '
-      + 'linna ja rinteelle kaupunki kapealle harjanteelle, jonne '
-      + 'pääsi vain yhtä tietä; vanhankaupungin ainoa pääkatu kulkee '
-      + 'linnalta Holyroodin palatsille. Kun harjanne tuli täyteen, '
-      + 'vuodesta 1767 alettiin rakentaa suorakatuista uuttakaupunkia '
-      + 'notkon toiselle puolelle. Notkossa oli ennen tekojärvi Nor '
-      + 'Loch, joka laskettiin kuiviin 1700-luvun lopulla; nyt siinä '
-      + 'on puisto ja rautatie. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartan alue on Edinburghin vanhakaupunki ja uusikaupunki. '
+      + 'Edinburghin linna seisoo Castle Rockilla, sammuneen tulivuoren '
+      + 'kaulalla, jonka ikä on noin 340–350 miljoonaa vuotta. Jäätikkö '
+      + 'jätti kallion itäpuolelle pitkän loivan rinteen, jota pitkin '
+      + 'kulkee Royal Mile, noin mailin pituinen katu linnalta Holyroodin '
+      + 'palatsille.\n\n'
+      + 'Nor Loch -tekojärvi tehtiin 1460 kaupungin puolustukseksi, ja sen '
+      + 'länsipää kuivattiin 1813–1820; paikalla on nyt Princes Street '
+      + 'Gardens -puisto. Uuden kaupungin suunnittelukilpailu ratkaistiin '
+      + '1766, ja rakentaminen alkoi 1767. St Gilesin katedraalin '
+      + 'kruunutorni on 1400-luvulta. Scott-monumentti on 61 metriä korkea. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Charlotte Squaresta ei ole suomenkielistä artikkelia, joten se
@@ -4511,11 +4657,11 @@ export const KAUPUNKIKARTAT = {
        * piste Uudenkaupungin ruutukaavan puolella — ilman sitä kartan
        * juoni jäisi kertomatta selitelistassa.
        */
-      { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
+      { nimi: 'Charlotte Square', tyyppi: 'aukio', lat: 55.9514, lon: -3.2086 },
       { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
       { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
       {
-        nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
+        nimi: 'Greyfriars Bobby', tyyppi: 'henkilo', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
         nosto: 'syvennys-edinburgh-bobby',
       },
       { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
@@ -4541,25 +4687,26 @@ export const KAUPUNKIKARTAT = {
   },
   marseille: {
     polku: 'assets/kartat/marseille-keskusta.png',
+    varikartta: 'assets/kartat/marseille-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.3065, etela: 43.2765, lansi: 5.345, ita: 5.393 },
+    piirtoRajat: { pohjoinen: 43.3155, etela: 43.2675, lansi: 5.3306, ita: 5.4074 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
-      + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
-      + 'pohjassa on kapea luonnonpoukama, joka on suojassa '
-      + 'mistraalilta, luoteesta syöksyvältä kylmältä tuulelta — juuri '
-      + 'siksi kreikkalaiset purjehtijat pysähtyivät tähän noin 600 '
-      + 'eaa. ja perustivat Massalian. Poukama on Vanhasatama, noin '
-      + '900 metriä pitkä ja 400 metriä leveä allas, jossa on nykyään '
-      + 'huviveneitä: rahtilaivat siirtyivät pohjoisempiin '
-      + 'satama-altaisiin 1800-luvun puolivälissä. Makeaa vettä '
-      + 'kukkuloilla ei ollut juuri lainkaan, ja lopulta se tuotiin 80 '
-      + 'kilometrin päästä kanavaa pitkin, joka valmistui 1849. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Marseillen Vanhasatama ja sen ympäristö. '
+      + 'Foikaialaiset kreikkalaiset perustivat Massalian noin 600 eaa., ja '
+      + 'Marseillea pidetään Ranskan vanhimpana kaupunkina. Saint-Victorin '
+      + 'luostarin alku on 400-luvulla, ja sataman suulla on MuCEM, joka '
+      + 'avattiin 2013. Sen kävelysilta johtaa 1600-luvun Saint-Jeanin '
+      + 'linnakkeeseen.\n\n'
+      + 'Notre-Dame de la Garde -basilikan rakentaminen alkoi 1853, ja se '
+      + 'vihittiin käyttöön 1864. Marseillen uuden katedraalin peruskiven '
+      + 'laski Napoleon III 1852. Saint-Charlesin asema avattiin 1848, ja '
+      + 'sen monumentaaliset portaat vihittiin 1927. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
@@ -4643,19 +4790,19 @@ export const KAUPUNKIKARTAT = {
      * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
      * syntyi juuri tähän.
      */
-    esittely: 'Kartan alue on Vironniemi, jonne koko Helsinki siirrettiin vuonna '
-      + '1640. Kustaa Vaasa oli perustanut kaupungin 1550 Vantaanjoen '
-      + 'suulle Tallinnan kilpailijaksi, mutta satama oli matala, ja '
-      + 'kaupunki muutti runsaat viisi kilometriä etelämmäs. Niemellä on '
-      + 'merta kolmella sivulla, ja edustan saarten ja matalikkojen välistä '
-      + 'laiva pääsee vain kapeita väyliä pitkin — siksi Ruotsi alkoi 1748 '
-      + 'rakentaa väylän suulle Suomenlinnan merilinnoitusta, ja kun '
-      + 'Venäjän keisari valitsi Helsingin pääkaupungiksi vuonna 1812, '
-      + 'linnoitus oli jo valmiina. Alueella ovat Senaatintori '
-      + 'empirekortteleineen, Eteläsatama ja sen perukan Kauppatori, '
-      + 'kaivetun kanavan takana Katajanokka sekä pohjoisessa merenlahti '
-      + 'Töölönlahti ja päärautatieasemalle päättyvä ratapiha. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Helsingin keskusta. Kustaa Vaasa perusti kaupungin '
+      + '1550 Vantaanjoen suulle Tallinnan kilpailijaksi, ja kaupunki '
+      + 'siirrettiin 1640 Vironniemelle, jossa Senaatintorin ympäristö on '
+      + 'kaupungin vanhaa ydintä. Ruotsi aloitti Suomenlinnan '
+      + 'merilinnoituksen rakentamisen 1748, ja se on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1991. Venäjä teki Helsingistä Suomen '
+      + 'pääkaupungin 1812.\n\n'
+      + 'Carl Ludvig Engelin suunnittelema tuomiokirkko valmistui '
+      + 'Senaatintorin laidalle 1852 ja Uspenskin katedraali 1868. Eliel '
+      + 'Saarisen suunnittelema päärautatieasema valmistui 1919. '
+      + 'Temppeliaukion kirkko on louhittu kallioon, ja se vihittiin '
+      + 'käyttöön 1969. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään ja lopuksi etelään. Kauppatori jätettiin pois
@@ -4681,7 +4828,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Linnanmäki', lat: 60.1869, lon: 24.9401, wiki: 'Linnanmäki' },
       { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
-      { nimi: 'Kaisaniemen puisto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
+      { nimi: 'Kaisaniemen puisto', tyyppi: 'luonto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
       { nimi: 'Kallion kirkko', lat: 60.1842, lon: 24.9492, wiki: 'Kallion kirkko' },
       { nimi: 'Tuomiokirkko', lat: 60.1703, lon: 24.9522, wiki: 'Helsingin tuomiokirkko' },
       { nimi: 'Uspenskin katedraali', lat: 60.1683, lon: 24.96, wiki: 'Uspenskin katedraali' },
@@ -4702,11 +4849,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Löyly ja avanto', lat: 60.18647, lon: 24.95728,
+        nimi: 'Löyly ja avanto', tyyppi: 'ilmio', lat: 60.18647, lon: 24.95728,
         nosto: 'syvennys-helsinki-sauna',
       },
       {
-        nimi: 'Kantele', lat: 60.1699, lon: 24.9384,
+        nimi: 'Kantele', tyyppi: 'esine', lat: 60.1699, lon: 24.9384,
         nosto: 'syvennys-helsinki-kantele',
       },
       {
@@ -4714,11 +4861,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-helsinki-finlandia',
       },
       {
-        nimi: 'Pirtukuningas', lat: 60.1676, lon: 24.9547,
+        nimi: 'Pirtukuningas', tyyppi: 'henkilo', lat: 60.1676, lon: 24.9547,
         nosto: 'skandaali-kieltolaki-ja-pirtukuningas',
       },
       {
-        nimi: 'Nurmen kohu', lat: 60.1875, lon: 24.9272,
+        nimi: 'Nurmen kohu', tyyppi: 'henkilo', lat: 60.1875, lon: 24.9272,
         nosto: 'skandaali-nurmen-amatoorikohu',
       },
       /*
@@ -4731,7 +4878,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
       {
-        nimi: 'Suomi herää 1899', lat: 60.16722, lon: 24.94333,
+        nimi: 'Suomi herää 1899', tyyppi: 'henkilo', lat: 60.16722, lon: 24.94333,
         nosto: 'hetki-sibelius-finlandia-1899',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4740,21 +4887,27 @@ export const KAUPUNKIKARTAT = {
   ateena: {
     polku: 'assets/kartat/ateena-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
+    // Värikartta ja 1,6-kertainen reunus kuten Pariisissa ja Tukholmassa
+    // (Karttaseppä 11.10.2026: aloituskaupungit samaan tyyliin).
+    varikartta: 'assets/kartat/ateena-varikartta.png',
     rajat: { pohjoinen: 37.9855, etela: 37.9625, lansi: 23.707, ita: 23.758 },
+    piirtoRajat: { pohjoinen: 37.9924, etela: 37.9556, lansi: 23.6917, ita: 23.7733 },
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Ateena syntyi kallion ympärille. Akropolis kohoaa noin '
-      + '90 metriä ympäröivän tasangon yli ja 156 metrin korkeuteen '
-      + 'merenpinnasta; seinämät ovat jyrkät ja sisään pääsee vain '
-      + 'länsipäästä, joten kukkula kesti pitkänkin piirityksen. Meri '
-      + 'jäi kauas, sillä Pireuksen satama on kahdeksan kilometriä '
-      + 'lounaaseen, eikä keskustan läpi virtaa yhtään jokea. Kartan '
-      + 'alueella ovat Akropoliin rinteet, antiikin kaupungin torit ja '
-      + 'kukkuloiden puistot, ja koillisessa kohoaa vielä Lykavittós, '
-      + '277 metriä korkea ja koko keskustan korkein kohta. Kartan '
+    esittely: 'Kartan alue on Ateenan vanha ydin Akropoliin ympärillä. Akropoliin '
+      + 'lounaiskulmalla on Kallikrateen suunnittelema Niken temppeli '
+      + '400-luvulta eaa., ja kaakkoisrinteellä Akropolis-museo, joka '
+      + 'avattiin kesäkuussa 2009. Antiikin agoralla Attaloksen stoa '
+      + 'rakennettiin uudelleen 1950-luvulla, ja siinä toimii nykyään '
+      + 'agoran museo.\n\n'
+      + 'Olympieionin 104 pylväästä on pystyssä 15, ja Hadrianus sai '
+      + 'temppelin valmiiksi 130-luvun alussa. Marmorinen Kallimarmaro '
+      + 'kunnostettiin ensimmäisiin nykyajan olympialaisiin 1896. Iliou '
+      + 'Melathron rakennettiin Heinrich Schliemannille, ja siinä on '
+      + 'nykyään kolikkomuseo. Lykavittós on 277 metriä korkea. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -4827,7 +4980,7 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331,
         wiki: 'Olympoksen Zeuksen temppeli', nosto: 'olympieion',
       },
-      { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
+      { nimi: 'Sýntagman aukio', tyyppi: 'aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
       { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
@@ -4845,17 +4998,17 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki ateena).
        */
       {
-        nimi: 'Maratonhuijaus', lat: 37.9683, lon: 23.7410,
+        nimi: 'Maratonhuijaus', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7410,
         nosto: 'skandaali-belokas-maratonhuijaus-1896', nimiPuoli: 'vasen',
         siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Elginin marmorit', lat: 37.9715, lon: 23.7267,
+        nimi: 'Elginin marmorit', tyyppi: 'taide', lat: 37.9715, lon: 23.7267,
         nosto: 'skandaali-elginin-marmorit', nimiPuoli: 'oikea',
         siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Diogeneen astia', lat: 37.9750, lon: 23.7233,
+        nimi: 'Diogeneen astia', tyyppi: 'esine', lat: 37.9750, lon: 23.7233,
         nosto: 'syvennys-ateena-diogenes', nimiPuoli: 'oikea',
         siirto: { x: 26, y: 0 },
       },
@@ -4875,7 +5028,7 @@ export const KAUPUNKIKARTAT = {
       // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
       // oikealle.
       {
-        nimi: 'Louis 1896', lat: 37.9683, lon: 23.7411,
+        nimi: 'Louis 1896', tyyppi: 'henkilo', lat: 37.9683, lon: 23.7411,
         nosto: 'hetki-olympia-ateena-1896',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -4896,16 +5049,17 @@ export const KAUPUNKIKARTAT = {
      * poistettu, ja kaupungin oma historia asuu nyt etusivun
      * leipätekstissä (js/packs/europe-artikkelit.js).
      */
-    esittely: 'Kartan alue on Amsterdamin vanha ydin. Amstel-joki '
-      + 'padottiin noin vuonna 1270, ja padon päälle kasvoi kylä '
-      + 'Amstelredam; pato on yhä paikallaan, mutta sen päällä on nyt '
-      + 'Dam-aukio ja kuninkaanpalatsi. Ympärille kaivettiin vuodesta 1613 '
-      + 'alkaen kanavavyöhyke, joka pilkkoo keskustan noin '
-      + 'yhdeksäksikymmeneksi saareksi ja jota yhdistää toistatuhatta '
-      + 'siltaa. Alueella ovat myös Anne Frankin talo, Rembrandtin talo, '
-      + 'Artis-eläintarha ja Rijksmuseum, ja keskusasema rakennettiin '
-      + '1880-luvulla kolmelle tekosaarelle entiseen merenlahteen IJ:hin. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Amsterdamin vanha keskusta. Kanavavyöhykkeen '
+      + 'rakentaminen alkoi 1613, ja Unesco otti sen '
+      + 'maailmanperintölistalle 2010. Keskusasema avattiin 1889 kolmelle '
+      + 'tekosaarelle, ja sen suunnitteli Pierre Cuypers, jonka tekemä '
+      + 'Rijksmuseumin rakennus otettiin käyttöön 1885.\n\n'
+      + 'Dam-aukion kuninkaanpalatsi rakennettiin 1600-luvulla '
+      + 'kaupungintaloksi, ja siitä tuli palatsi 1808. Rembrandt asui '
+      + 'Jodenbreestraatin talossa 1639–1658; se on nykyään museo. Anne '
+      + 'Frank perheineen piileskeli Prinsengracht 263:ssa vuodesta 1942, '
+      + 'ja talo avattiin museoksi 1960. Artis perustettiin 1838. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Rembrandtin talosta ei ole suomenkielistä artikkelia, joten se
@@ -4925,7 +5079,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-amsterdam-haikarat',
       },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
-      { nimi: 'Artis-eläintarha', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
+      { nimi: 'Artis-eläintarha', tyyppi: 'luonto', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
       { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -4941,11 +5095,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Timanttihiomo', lat: 52.3696, lon: 4.904,
+        nimi: 'Timanttihiomo', tyyppi: 'ilmio', lat: 52.3696, lon: 4.904,
         nosto: 'syvennys-amsterdam-timantit',
       },
       {
-        nimi: 'Amsterdam-laiva', lat: 52.3714, lon: 4.9147,
+        nimi: 'Amsterdam-laiva', tyyppi: 'esine', lat: 52.3714, lon: 4.9147,
         nosto: 'syvennys-amsterdam-voc-hylky',
       },
       /*
@@ -4962,12 +5116,12 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-kapein-talo',
       },
       {
-        nimi: 'Maitotyttö', lat: 52.3599, lon: 4.885,
+        nimi: 'Maitotyttö', tyyppi: 'taide', lat: 52.3599, lon: 4.885,
         nosto: 'nosto-amsterdamin-maitotytto',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Kissalaiva', lat: 52.3781, lon: 4.8931,
+        nimi: 'Kissalaiva', tyyppi: 'esine', lat: 52.3781, lon: 4.8931,
         nosto: 'nosto-amsterdamin-kissalaiva',
       },
       {
@@ -4975,7 +5129,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-puupaalut',
       },
       {
-        nimi: 'Yövartio', lat: 52.3731, lon: 4.8913,
+        nimi: 'Yövartio', tyyppi: 'taide', lat: 52.3731, lon: 4.8913,
         nosto: 'nosto-amsterdamin-yovartio',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -4983,26 +5137,27 @@ export const KAUPUNKIKARTAT = {
   },
   dublin: {
     polku: 'assets/kartat/dublin-keskusta.png',
+    varikartta: 'assets/kartat/dublin-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 53.355, etela: 53.335, lansi: -6.294, ita: -6.244 },
+    piirtoRajat: { pohjoinen: 53.361, etela: 53.329, lansi: -6.309, ita: -6.229 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Dublinilla on kaksi nimeä, ja molemmat kertovat vedestä. '
-      + 'Iirinkielinen Baile Átha Cliath tarkoittaa risuista tehdyn '
-      + 'kahlaamon kaupunkia: Liffey-joen yli päästiin kävellen '
-      + 'kohdassa, johon oli ladottu punottuja risuaitoja. '
-      + 'Englanninkielinen Dublin tulee sanoista dubh linn eli musta '
-      + 'lammikko — tumma vuorovesiallas siinä, missä pieni '
-      + 'Poddle-joki laski Liffeyhin. Viikingit perustivat altaan '
-      + 'rannalle tukikohdan vuonna 841 ja pitivät siinä laivojaan; '
-      + 'allas on nykyään Dublinin linnan takapiha. Liffey jakaa '
-      + 'kaupungin pohjoiseen ja eteläiseen puoleen, ja keskustassa '
-      + 'sen ylittää toistakymmentä siltaa, joista kuuluisin on '
-      + 'valurautainen Ha’penny-silta vuodelta 1816. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Dublinin keskusta Liffey-joen varrella. Nimi Dublin '
+      + 'tulee sanoista dubh linn, musta lampi, ja iirinkielinen nimi Baile '
+      + 'Átha Cliath tarkoittaa risuaitojen kahlaamon kaupunkia. Dublinin '
+      + 'linna rakennettiin 1204 kuningas Juhanan käskystä paikalle, jossa '
+      + 'Poddle-joki liittyi Liffeyyn. Trinity College perustettiin 1592, '
+      + 'ja sen kirjastossa säilytetään Kellsin kirjaa.\n\n'
+      + 'Ha’penny-silta avattiin 1816, ja sen valurauta tehtiin Englannissa '
+      + 'Coalbrookdalessa. Patrickin katedraali rakennettiin pääosin '
+      + '1200-luvulla. Guinnessin panimon vuokrasopimus vuodelta 1759 oli 9 '
+      + '000 vuoden mittainen. Spire valmistui O’Connell Streetille 2003, '
+      + 'ja se on 120 metriä korkea. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Dublinin linnasta ja Ha’penny-sillasta ei ole suomenkielistä
@@ -5051,11 +5206,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Kellsin kirja', lat: 53.3444, lon: -6.2577,
+        nimi: 'Kellsin kirja', tyyppi: 'esine', lat: 53.3444, lon: -6.2577,
         nosto: 'syvennys-dublin-kellsinkirja',
       },
       {
-        nimi: 'Ouzel Galley', lat: 53.3485, lon: -6.2531,
+        nimi: 'Ouzel Galley', tyyppi: 'henkilo', lat: 53.3485, lon: -6.2531,
         nosto: 'skandaali-ouzel-galleyn-mysteeri',
       },
     ],
@@ -5093,15 +5248,18 @@ export const KAUPUNKIKARTAT = {
      * saarta, siltoja, tähtiristeystä ja Montmartren sijaintia kuvassa.
      * Jäljelle jäi se, miksi kaupunki syntyi tähän ja mitä alueella on.
      */
-    esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä kaupunkia '
-      + 'kahdeksi kapeaksi uomaksi, ja niiden väliin jää Île de la Cité — '
-      + 'saari, joka on kymmenen katua pitkä ja viisi leveä. Kapeat haarat '
-      + 'oli helppo ylittää ja saari helppo puolustaa, joten kelttiläinen '
-      + 'kalastajakylä ja sen jälkeen roomalaisten Lutetia asettuivat juuri '
-      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen suuri '
-      + 'kaari on yhä sen selkäranka. Kartan alueelle mahtuvat sekä '
-      + 'Eiffel-torni että Montmartren laella oleva Sacré-Cœur, vaikka '
-      + 'niiden väli on lähes viisi kilometriä.',
+    esittely: 'Kartan alue on Pariisin keskusta. Eiffel-torni rakennettiin '
+      + 'vuosina 1887–1889 vuoden 1889 maailmannäyttelyn päänähtävyydeksi, '
+      + 'ja Riemukaaren työt aloitettiin Napoleonin tilauksesta 1806; kaari '
+      + 'vihittiin käyttöön 1836. Louvre sai alkunsa Filip II Augustuksen '
+      + '1100-luvun lopulla rakennuttamasta linnoituksesta ja avattiin '
+      + 'museona 1793.\n\n'
+      + 'Notre-Damen rakentaminen alkoi 1163, tulipalo vaurioitti kirkkoa '
+      + '2019 ja se avattiin uudelleen joulukuussa 2024. Orsayn asema '
+      + 'valmistui maailmannäyttelyn aikaan 1900, ja siitä tuli taidemuseo '
+      + '1986. Montmartren Sacré-Cœurin työt alkoivat 1875, ja basilika '
+      + 'vihittiin 1919. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
@@ -5120,14 +5278,14 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
-      { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
+      { nimi: 'Concorden aukio', tyyppi: 'aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
       {
         nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
         nosto: 'skandaali-mona-lisan-varkaus-1911',
       },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
-      { nimi: 'Luxembourgin puisto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
+      { nimi: 'Luxembourgin puisto', tyyppi: 'luonto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
       { nimi: 'Sacré-Cœur', lat: 48.8868, lon: 2.343, wiki: 'Sacré-Cœur' },
       { nimi: 'Panthéon', lat: 48.8462, lon: 2.3464, wiki: 'Panthéon' },
       { nimi: 'Notre-Dame', lat: 48.853, lon: 2.3499, wiki: 'Notre-Damen katedraali' },
@@ -5147,7 +5305,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
-      { nimi: 'Place des Vosges', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
+      { nimi: 'Place des Vosges', tyyppi: 'aukio', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -5162,27 +5320,27 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
        */
       {
-        nimi: 'Carmenin ensi-ilta', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+        nimi: 'Carmenin ensi-ilta', tyyppi: 'henkilo', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
       },
       {
-        nimi: 'Kirahvin kävelymatka', lat: 48.8447, lon: 2.3597,
+        nimi: 'Kirahvin kävelymatka', tyyppi: 'esine', lat: 48.8447, lon: 2.3597,
         nosto: 'nosto-kirahvin-kavelymatka',
       },
       {
-        nimi: 'Torni romuraudaksi', lat: 48.85822, lon: 2.2945,
+        nimi: 'Torni romuraudaksi', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
         nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
         siirto: { x: -6, y: -25 },
       },
       {
-        nimi: 'Vrain-Lucas', lat: 48.8573, lon: 2.3372,
+        nimi: 'Vrain-Lucas', tyyppi: 'henkilo', lat: 48.8573, lon: 2.3372,
         nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
       },
       {
-        nimi: 'Impressionistit', lat: 48.8705, lon: 2.3280,
+        nimi: 'Impressionistit', tyyppi: 'taide', lat: 48.8705, lon: 2.3280,
         nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
       },
       {
-        nimi: 'Kyyhkyposti', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+        nimi: 'Kyyhkyposti', tyyppi: 'ilmio', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
       /*
        * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
@@ -5226,35 +5384,35 @@ export const KAUPUNKIKARTAT = {
        */
       // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
       {
-        nimi: 'Curie 1898', lat: 48.842, lon: 2.3476,
+        nimi: 'Curie 1898', tyyppi: 'henkilo', lat: 48.842, lon: 2.3476,
         nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
       },
       // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
       {
-        nimi: 'Lavoisier 1780', lat: 48.8503, lon: 2.3635,
+        nimi: 'Lavoisier 1780', tyyppi: 'henkilo', lat: 48.8503, lon: 2.3635,
         nosto: 'hetki-lavoisier-laboratorio-1780',
       },
       // École normale supérieure, rue d'Ulm.
       {
-        nimi: 'Pasteur 1862', lat: 48.8419, lon: 2.3444,
+        nimi: 'Pasteur 1862', tyyppi: 'henkilo', lat: 48.8419, lon: 2.3444,
         nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
       },
       // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
       {
-        nimi: 'Torni 1888', lat: 48.85822, lon: 2.2945,
+        nimi: 'Torni 1888', tyyppi: 'henkilo', lat: 48.85822, lon: 2.2945,
         nosto: 'hetki-eiffel-torni-1888',
         nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
       },
       // sama piste kuin kohde Bastilji: nimiö oikealle.
       {
-        nimi: 'Bastilji 1789', lat: 48.85333, lon: 2.36917,
+        nimi: 'Bastilji 1789', tyyppi: 'henkilo', lat: 48.85333, lon: 2.36917,
         nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
       // nimiö oikealle.
       {
-        nimi: 'Lumière 1895', lat: 48.8703, lon: 2.3294,
+        nimi: 'Lumière 1895', tyyppi: 'henkilo', lat: 48.8703, lon: 2.3294,
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
@@ -5273,7 +5431,7 @@ export const KAUPUNKIKARTAT = {
       // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
       // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
       {
-        nimi: '72 nimeä', lat: 48.85822, lon: 2.2945,
+        nimi: '72 nimeä', tyyppi: 'esine', lat: 48.85822, lon: 2.2945,
         nosto: 'nosto-pariisin-72-nimea',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5285,28 +5443,28 @@ export const KAUPUNKIKARTAT = {
       },
       // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
       {
-        nimi: 'Notre-Damen kukko', lat: 48.853, lon: 2.3499,
+        nimi: 'Notre-Damen kukko', tyyppi: 'esine', lat: 48.853, lon: 2.3499,
         nosto: 'nosto-notre-damen-kukko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
       // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
       {
-        nimi: 'Pariisi soi', lat: 48.8719, lon: 2.3317,
+        nimi: 'Pariisi soi', tyyppi: 'henkilo', lat: 48.8719, lon: 2.3317,
         nosto: 'nosto-pariisi-soi',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
       // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
       // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
       {
-        nimi: 'Paras patonki', lat: 48.8703, lon: 2.3167,
+        nimi: 'Paras patonki', tyyppi: 'ilmio', lat: 48.8703, lon: 2.3167,
         nosto: 'nosto-pariisin-patonki',
       },
       // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
       {
-        nimi: 'Pariisin vuosisadat', lat: 48.8462, lon: 2.3464,
+        nimi: 'Pariisin vuosisadat', tyyppi: 'henkilo', lat: 48.8462, lon: 2.3464,
         nosto: 'nosto-pariisin-vuosisadat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
@@ -5314,8 +5472,10 @@ export const KAUPUNKIKARTAT = {
   },
   budapest: {
     polku: 'assets/kartat/budapest-keskusta.png',
+    varikartta: 'assets/kartat/budapest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    piirtoRajat: { pohjoinen: 47.5215, etela: 47.4735, lansi: 19.001, ita: 19.097 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * Kainalokartta Sankarien aukiosta. Se on lehden kansikuva mutta
      * 3 km koilliseen, ja päärajaukseen ottaminen olisi työntänyt
@@ -5325,20 +5485,22 @@ export const KAUPUNKIKARTAT = {
      */
     kainalot: [
       { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, korkeus: 30.56 },
+        x: 62.5, y: 20.625, leveys: 17.5, korkeus: 19.1 },
     ],
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
     esittely: 'Kartan alue on Budapestin keskusta Tonavan molemmin puolin. '
-      + 'Lännessä ovat Budan kalkkikivikukkulat: Kalastajanlinnake '
-      + 'linnavuorella ja Gellértinvuori, joka kohoaa 140 metriä joen '
-      + 'yläpuolelle. Idässä alkaa Unkarin suuri tasanko, jolla ovat '
-      + 'parlamenttitalo, Pyhän Tapanin kirkko ja suuri kauppahalli. '
-      + 'Rannat yhdisti ensimmäisenä Ketjusilta, joka avattiin '
-      + 'marraskuussa 1849 ja on 375 metriä pitkä; sitä ennen välissä oli '
-      + 'ponttonisilta, joka oli talvella jäiden takia usein poissa '
-      + 'käytöstä. Kainalokartassa on Sankarien aukio Városligetin '
-      + 'laidalla. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'Széchenyin ketjusilta avattiin 20. marraskuuta 1849 Unkarin '
+      + 'ensimmäisenä pysyvänä Tonavan siltana, ja sen pituus on 375 '
+      + 'metriä. Kalastajanlinnake rakennettiin 1895–1902, ja sen seitsemän '
+      + 'tornia viittaavat unkarilaisten seitsemään heimoon. '
+      + 'Gellértinvuoren huipulla oleva Citadella rakennettiin Unkarin '
+      + 'vuosien 1848–1849 kansannousun jälkeen.\n\n'
+      + 'Parlamenttitalossa on 691 huonetta, ja sen kupoli on 96 metriä '
+      + 'korkea. Pyhän Tapanin kirkon kupoli yltää samaan korkeuteen. Suuri '
+      + 'kauppahalli avattiin 15. helmikuuta 1897. Maanalainen rata '
+      + 'avattiin 1896 Andrássy-kadun alle. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kolme kohdetta kummallakin rannalla, jotta kartan juoni —
@@ -5349,11 +5511,11 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kalastajanlinnake', lat: 47.5023, lon: 19.0347, wiki: 'Kalastajanlinnake' },
       { nimi: 'Ketjusilta', lat: 47.499, lon: 19.0436, wiki: 'Széchenyin ketjusilta' },
       { nimi: 'Parlamenttitalo', lat: 47.507, lon: 19.0459, wiki: 'Unkarin parlamenttitalo' },
-      { nimi: 'Gellértinvuori', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
+      { nimi: 'Gellértinvuori', tyyppi: 'luonto', lat: 47.4869, lon: 19.0446, wiki: 'Gellértinvuori' },
       { nimi: 'Pyhän Tapanin kirkko', lat: 47.5008, lon: 19.054, wiki: 'Pyhän Tapanin kirkko (Budapest)' },
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
       // Kainalossa oikeassa ylänurkassa.
-      { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
+      { nimi: 'Sankarien aukio', tyyppi: 'aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -5368,15 +5530,15 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Maanalainen', lat: 47.5057, lon: 19.0631,
+        nimi: 'Maanalainen', tyyppi: 'luonto', lat: 47.5057, lon: 19.0631,
         nosto: 'syvennys-budapest-kisfoldalatti',
       },
       {
-        nimi: 'Elmyr de Hory', lat: 47.4979, lon: 19.0402,
+        nimi: 'Elmyr de Hory', tyyppi: 'henkilo', lat: 47.4979, lon: 19.0402,
         nosto: 'skandaali-elmyr-de-hory-vaarentaja',
       },
       {
-        nimi: 'Seuson hopeat', lat: 47.4912, lon: 19.0625,
+        nimi: 'Seuson hopeat', tyyppi: 'esine', lat: 47.4912, lon: 19.0625,
         nosto: 'skandaali-seuso-aarteen-kiista',
       },
     ],
@@ -5391,17 +5553,18 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/praha-varikartta.png',
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
-    esittely: 'Kartan alue on Prahan vanha ydin Vltavan molemmin puolin. '
-      + 'Joki kaartaa jyrkän kallioharjanteen ympäri, ja harjanteelle '
-      + 'perustettiin 800-luvulla Prahan linna, jota pidetään Guinnessin '
-      + 'mukaan maailman suurimpana muinaislinnana: 570 metriä pitkä. '
-      + 'Vastarannalle syntyi kauppiaiden Vanhakaupunki, jonka maanpinta '
-      + 'nostettiin 1200-luvulla tulvien takia pari metriä ylemmäs, ja '
-      + 'vanhat pohjakerrokset jäivät kellareiksi. Rantoja yhdistää '
-      + 'Kaarlensilta, 516 metriä ja kuusitoista kaarta, joka oli yli '
-      + 'neljäsataa vuotta kaupungin ainoa silta. Alueella ovat myös '
-      + 'Petřínin näkötorni, Vanhauusi synagoga, astronominen kello ja '
-      + 'kansallismuseo.',
+    esittely: 'Kartan alue on Prahan vanha ydin Vltavan molemmin puolin. Prahan '
+      + 'linna on perustettu 800-luvulla, ja Guinnessin mukaan se on '
+      + 'maailman suurin muinaislinna: sen pituus on noin 570 metriä. '
+      + 'Vanhassakaupungissa maanpintaa nostettiin 1200-luvulla tulvien '
+      + 'takia, ja entiset pohjakerrokset jäivät kellareiksi. Kaarlensilta, '
+      + 'jonka rakentaminen alkoi 1357, on 516 metriä pitkä ja siinä on 16 '
+      + 'kaarta; se oli Vltavan ainoa silta vuoteen 1841.\n\n'
+      + 'Vanhauusi synagoga valmistui 1270, ja se on Euroopan vanhin '
+      + 'edelleen toimiva synagoga. Astronomisen kellon vanhin osa on '
+      + 'vuodelta 1410. Petřínin näkötorni valmistui 1891 Eiffel-tornia '
+      + 'mukaillen, ja se on 63,5 metriä korkea. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään: Petřínin kukkulalta Václavin aukion yläpäähän.
@@ -5417,7 +5580,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Prahan linna', lat: 50.0903, lon: 14.401, wiki: 'Prahan linna' },
       { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
-      { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
       /*
        * Kuninkaanhovin käsikirjoitukset (`skandaali-...`) LIITETTIIN
        * TÄHÄN pisteeseen eikä omaksi merkikseen: väärennökset löytyivät
@@ -5461,7 +5623,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Tycho Brahe', lat: 50.0876, lon: 14.4227,
+        nimi: 'Tycho Brahe', tyyppi: 'henkilo', lat: 50.0876, lon: 14.4227,
         nosto: ['syvennys-praha-tycho', 'skandaali-tycho-brahen-kuolinmysteeri'],
       },
     ],
@@ -5493,18 +5655,18 @@ export const KAUPUNKIKARTAT = {
      * mutta asiana eikä kuvan muotona, ja loppuun tuli lyhyt luettelo
      * siitä, mitä kohteita alueella on.
      */
-    esittely: 'Wien seisoo kohdassa, jossa Tonava tulee ulos vuorten '
-      + 'välistä. Lännessä nousee Wienerwald, Alppien viimeinen '
-      + 'kukkulaselänne, ja idässä alkaa tasainen lakeus, joka jatkuu '
-      + 'Unkariin asti. Roomalaiset huomasivat paikan ensin: he perustivat '
-      + 'tänne Vindobonan leirin lähes kaksituhatta vuotta sitten, sillä '
-      + 'Tonava oli heidän valtakuntansa pohjoisraja. Vanhakaupunki ei silti '
-      + 'ole ison joen rannalla vaan sen sivuhaaran, Donaukanalin, varrella '
-      + '— pääuoma suoristettiin nykyiselle paikalleen vasta 1870-luvulla. '
-      + 'Vanhan ytimen kiertää Ring, kaupunginmuurin paikalle 1865 avattu '
-      + 'puistokatu: sen varrella ovat raatihuone, Hofburg ja ooppera, kehän '
-      + 'sisällä Stephansdom ja laidoilla Belvedere sekä Praterin jättiratas, '
-      + 'ja Schönbrunn on omassa kainalokartassaan.',
+    esittely: 'Kartan alue on Wienin vanhakaupunki, Ring ja lähikohteet. '
+      + 'Roomalaiset perustivat Vindobonan leirin noin vuoden 100 '
+      + 'tienoilla. Ring syntyi keisari Frans Joosefin vuoden 1857 käskystä '
+      + 'kaupungin muurien paikalle. Stephansdomin eteläinen torni '
+      + 'valmistui 1433 ja on noin 136 metriä korkea. Hofburg oli '
+      + 'Habsburgien asuinpaikka vuoteen 1918, ja nykyään se on Itävallan '
+      + 'presidentin työpaikka.\n\n'
+      + 'Valtionooppera avattiin 1869 ja Rathaus rakennettiin 1872–1883. '
+      + 'Belvederessä allekirjoitettiin Itävallan valtiosopimus 15. '
+      + 'toukokuuta 1955. Praterin jättiratas valmistui 1897 ja on 64,75 '
+      + 'metriä korkea. Schönbrunn on Unescon maailmanperintökohde vuodesta '
+      + '1996. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään. Belvedere on 89 %:n kohdalla ja jättiratas
@@ -5521,7 +5683,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Valtionooppera', lat: 48.2033, lon: 16.3692, wiki: 'Wienin valtionooppera' },
       { nimi: 'Stephansdom', lat: 48.2085, lon: 16.3731, wiki: 'Stephansdom' },
       { nimi: 'Belvedere', lat: 48.1915, lon: 16.3809, wiki: 'Belvedere' },
-      { nimi: 'Jättiratas', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
+      { nimi: 'Jättiratas', tyyppi: 'luonto', lat: 48.2167, lon: 16.3959, wiki: 'Prater' },
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
@@ -5539,7 +5701,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki wien).
        */
       {
-        nimi: 'Vuoristovesijohto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+        nimi: 'Vuoristovesijohto', tyyppi: 'esine', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -5555,11 +5717,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Klimtin maalaukset', lat: 48.2131, lon: 16.3597,
+        nimi: 'Klimtin maalaukset', tyyppi: 'taide', lat: 48.2131, lon: 16.3597,
         nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
       },
       {
-        nimi: 'Saliera', lat: 48.2036, lon: 16.3619,
+        nimi: 'Saliera', tyyppi: 'esine', lat: 48.2036, lon: 16.3619,
         nosto: 'skandaali-salieran-varkaus',
       },
       /*
@@ -5572,15 +5734,20 @@ export const KAUPUNKIKARTAT = {
        */
       // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
       {
-        nimi: 'Yhdeksäs 1824', lat: 48.2033, lon: 16.3708,
+        nimi: 'Yhdeksäs 1824', tyyppi: 'henkilo', lat: 48.2033, lon: 16.3708,
         nosto: 'hetki-beethoven-yhdeksas-1824',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
       {
-        nimi: 'Figaro 1786', lat: 48.2078, lon: 16.3665,
+        nimi: 'Figaro 1786', tyyppi: 'henkilo', lat: 48.2078, lon: 16.3665,
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Pörssikrahi 1873', tyyppi: 'henkilo', lat: 48.2166, lon: 16.3648,
+        nosto: 'hetki-wienin-porssikrahi-1873',
+        teksti: HISTORIAN_HETKET_ID.get('wienin-porssikrahi-1873').teksti,
       },
       /*
        * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
@@ -5592,21 +5759,21 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Rattaan kulmat', lat: 48.2167, lon: 16.3959,
+        nimi: 'Rattaan kulmat', tyyppi: 'henkilo', lat: 48.2167, lon: 16.3959,
         nosto: 'nosto-praterin-ratas',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Lipizzanit', lat: 48.2064, lon: 16.3657,
+        nimi: 'Lipizzanit', tyyppi: 'esine', lat: 48.2064, lon: 16.3657,
         nosto: 'nosto-lipizzanit',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Taikahuilu', lat: 48.1981, lon: 16.3653,
+        nimi: 'Taikahuilu', tyyppi: 'henkilo', lat: 48.1981, lon: 16.3653,
         nosto: 'nosto-taikahuilu-wiedenissa',
       },
       {
-        nimi: 'Tonava kaunoinen', lat: 48.2046, lon: 16.3793,
+        nimi: 'Tonava kaunoinen', tyyppi: 'ilmio', lat: 48.2046, lon: 16.3793,
         nosto: 'nosto-tonava-kaunoinen',
       },
     ],
@@ -5643,7 +5810,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Kairon torni', lat: 30.0459, lon: 31.2243 },
       { nimi: 'Egyptin museo', lat: 30.0478, lon: 31.2336 },
-      { nimi: 'Tahririn aukio', lat: 30.0444, lon: 31.2357, wiki: 'Tahririn aukio' },
+      { nimi: 'Tahririn aukio', tyyppi: 'aukio', lat: 30.0444, lon: 31.2357, wiki: 'Tahririn aukio' },
       /*
        * Täydennys 6 → 10 kohteeseen (18.8.2026, Kairon lehden
        * viimeistely nykystandardiin): Abdeenin palatsi, Sulttaani
@@ -5661,7 +5828,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Bab Zuweila', lat: 30.0428, lon: 31.2579 },
       { nimi: 'Saladinin linnoitus', lat: 30.0287, lon: 31.2599, wiki: 'Saladinin linnoitus' },
       { nimi: 'Khan el-Khalili', lat: 30.0477, lon: 31.2622, wiki: 'Khan el-Khalili' },
-      { nimi: 'Al-Azhar-puisto', lat: 30.0401, lon: 31.2641 },
+      { nimi: 'Al-Azhar-puisto', tyyppi: 'luonto', lat: 30.0401, lon: 31.2641 },
     ],
   },
   tripoli: {
@@ -5757,14 +5924,14 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
-    esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
-      + 'yhteen: idässä City of London, roomalaisten muurien rajaama '
-      + 'neliökilometri, jossa tehdään rahaa, ja lännessä Westminster, '
-      + 'jossa tehdään päätöksiä. Väliin jäänyt maa täyttyi vähitellen '
-      + 'taloilla.\n\nThames on vuorovesijoki: pinta nousee ja laskee '
-      + 'Lontoon kohdalla noin seitsemän metriä kahdesti päivässä, ja '
-      + 'laskuveden aikaan rannalta löytyy yhä savipiippuja ja '
-      + 'keskiaikaisia nuppineuloja.',
+    esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
+      + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
+      + 'Lontoon silmä; idässä kartta päättyy Tower Bridgeen.\n\n'
+      + 'Pyhän Paavalin katedraali on Christopher Wrenin työ: sen rakentaminen alkoi 1675 ja '
+      + 'valmistui 1710, kun Palo 1666 oli tuhonnut edeltäjän ja yli 13 000 taloa. Tower '
+      + 'Bridge avattiin 30. kesäkuuta 1894. Kartan luoteisosassa Alexander Fleming huomasi '
+      + 'St Mary\'s -sairaalassa 1928 homeen tappavan bakteereja, ja siitä syntyi '
+      + 'penisilliini. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Buckinghamin palatsi',
@@ -5773,7 +5940,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Buckinghamin palatsi',
       },
       {
-        nimi: 'Trafalgar Square',
+        nimi: 'Trafalgar Square', tyyppi: 'aukio',
         lat: 51.508,
         lon: -0.1281,
         wiki: 'Trafalgar Square',
@@ -5829,10 +5996,10 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
        */
       {
-        nimi: 'Etelämeren kupla', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
+        nimi: 'Etelämeren kupla', tyyppi: 'henkilo', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
       },
       {
-        nimi: 'Cheapsiden kätkö', lat: 51.5141, lon: -0.0937,
+        nimi: 'Cheapsiden kätkö', tyyppi: 'esine', lat: 51.5141, lon: -0.0937,
         nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
       },
       {
@@ -5867,28 +6034,28 @@ export const KAUPUNKIKARTAT = {
        */
       // Royal Institution, Albemarle Street.
       {
-        nimi: 'Faraday 1831', lat: 51.5098, lon: -0.1425,
+        nimi: 'Faraday 1831', tyyppi: 'henkilo', lat: 51.5098, lon: -0.1425,
         nosto: 'hetki-faraday-luento-1831',
       },
       // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
       {
-        nimi: 'Fleming 1928', lat: 51.5174, lon: -0.172,
+        nimi: 'Fleming 1928', tyyppi: 'henkilo', lat: 51.5174, lon: -0.172,
         nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
       },
       // Rotherhithen kuilu (Brunel Museum).
       {
-        nimi: 'Tunneli 1827', lat: 51.5031, lon: -0.0544,
+        nimi: 'Tunneli 1827', tyyppi: 'henkilo', lat: 51.5031, lon: -0.0544,
         nosto: 'hetki-brunel-thames-tunnel-1827',
       },
       // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
       // oikealle.
       {
-        nimi: 'Palo 1666', lat: 51.5102, lon: -0.0853,
+        nimi: 'Palo 1666', tyyppi: 'henkilo', lat: 51.5102, lon: -0.0853,
         nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
       },
       // alkuperäisen Globen tontti Southwarkissa.
       {
-        nimi: 'Globe 1599', lat: 51.5067, lon: -0.0947,
+        nimi: 'Globe 1599', tyyppi: 'henkilo', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
       /*
@@ -5901,16 +6068,16 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Metron höyryveturi', lat: 51.5226, lon: -0.1571,
+        nimi: 'Metron höyryveturi', tyyppi: 'esine', lat: 51.5226, lon: -0.1571,
         nosto: 'nosto-lontoon-metro-1863',
       },
       {
-        nimi: 'Exchange Alley', lat: 51.5131, lon: -0.0871,
+        nimi: 'Exchange Alley', tyyppi: 'aukio', lat: 51.5131, lon: -0.0871,
         nosto: 'nosto-exchange-alleyn-kupla',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Canaletto Lontoossa', lat: 51.501, lon: -0.1219,
+        nimi: 'Canaletto Lontoossa', tyyppi: 'taide', lat: 51.501, lon: -0.1219,
         nosto: 'nosto-canaletto-lontoossa',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5919,7 +6086,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-the-george-pubi',
       },
       {
-        nimi: 'Abbey Roadin suojatie', lat: 51.5117, lon: -0.1403,
+        nimi: 'Abbey Roadin suojatie', tyyppi: 'aukio', lat: 51.5117, lon: -0.1403,
         nosto: 'nosto-abbey-roadin-suojatie',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
@@ -5928,7 +6095,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-leake-streetin-tunneli',
       },
       {
-        nimi: 'Neljäs jalusta', lat: 51.508, lon: -0.1281,
+        nimi: 'Neljäs jalusta', tyyppi: 'esine', lat: 51.508, lon: -0.1281,
         nosto: 'nosto-neljas-jalusta',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -5938,7 +6105,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Liukumäkiveistos', lat: 51.504, lon: -0.135,
+        nimi: 'Liukumäkiveistos', tyyppi: 'taide', lat: 51.504, lon: -0.135,
         nosto: 'nosto-orbitin-liukumaki',
       },
     ],
@@ -5992,13 +6159,15 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
     piirtoRajat: { pohjoinen: 52.5677, etela: 52.4573, lansi: 13.28, ita: 13.52 },
-    esittely: 'Berliini on rakennettu veden ja metsän keskelle: siltoja on '
-      + 'noin 1 700 — moninkertaisesti Venetsian verran — ja kolmasosa '
-      + 'kaupungista on puistoa, metsää tai järveä. Vaakunassa seisoo musta '
-      + 'karhu, ja karhupatsaita tulee kaduilla vastaan vähän väliä.\n\n'
-      + 'Kylmän sodan jäljet näkyvät yhä: muurin linja on merkitty '
-      + 'keskustaan katukiveyksen kaksoisrivinä, ja idän ja lännen '
-      + 'katuvalot hohtavat öisin eri sävyissä.',
+    esittely: 'Kartan alue on Berliinin historiallinen keskusta Spree-joen varrella: '
+      + 'Valtiopäivätalosta ja Brandenburgin portilta itään Museosaarelle ja Tv-tornille, '
+      + 'etelässä Checkpoint Charlie ja kaakossa East Side Gallery. Vuosina 1961–1989 raja '
+      + 'kulki juuri tämän alueen läpi.\n\n'
+      + 'Brandenburgin portin suunnitteli Carl Gotthard Langhans, ja se valmistui 1791. '
+      + 'Museosaari kuuluu UNESCOn maailmanperintöön vuodesta 1999. Tv-torni valmistui 1969 '
+      + 'ja on 368 metriä korkea. Muuri 1961 kertoo yöstä 13. elokuuta 1961, jolloin '
+      + 'Itä-Saksa alkoi sulkea rajaa; raja avattiin 9. marraskuuta 1989. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Järjestys on kartan numerointi (omistajan taittopäätös
@@ -6030,10 +6199,10 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki berliini).
        */
       {
-        nimi: 'Lehmän hinnalla', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
+        nimi: 'Lehmän hinnalla', tyyppi: 'esine', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
       },
       {
-        nimi: 'Berliinin karhu', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
+        nimi: 'Berliinin karhu', tyyppi: 'ilmio', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6066,7 +6235,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Bernauer Straße, muurin muistomerkki.
       {
-        nimi: 'Muuri 1961', lat: 52.5375, lon: 13.3933,
+        nimi: 'Muuri 1961', tyyppi: 'henkilo', lat: 52.5375, lon: 13.3933,
         nosto: 'hetki-berliinin-muuri-1961',
       },
       /*
@@ -6079,20 +6248,20 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Hattupäinen ukkeli', lat: 52.505, lon: 13.335,
+        nimi: 'Hattupäinen ukkeli', tyyppi: 'esine', lat: 52.505, lon: 13.335,
         nosto: 'nosto-hattupainen-ukkeli',
       },
       {
-        nimi: 'Gaertnerin Berliini', lat: 52.5175, lon: 13.4022,
+        nimi: 'Gaertnerin Berliini', tyyppi: 'taide', lat: 52.5175, lon: 13.4022,
         nosto: 'nosto-gaertnerin-berliini',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Marlene Dietrich', lat: 52.5075, lon: 13.3728,
+        nimi: 'Marlene Dietrich', tyyppi: 'henkilo', lat: 52.5075, lon: 13.3728,
         nosto: 'nosto-marlene-dietrich',
       },
       {
-        nimi: 'Paavin kosto', lat: 52.5208, lon: 13.4094,
+        nimi: 'Paavin kosto', tyyppi: 'ilmio', lat: 52.5208, lon: 13.4094,
         nosto: 'nosto-paavin-kosto',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6113,23 +6282,27 @@ export const KAUPUNKIKARTAT = {
      * puutarhat lännessä ja niiden välissä Prado-akseli.
      */
     polku: 'assets/kartat/madrid-keskusta.png',
+    varikartta: 'assets/kartat/madrid-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 40.43, etela: 40.406, lansi: -3.72, ita: -3.675 },
+    piirtoRajat: { pohjoinen: 40.4372, etela: 40.3988, lansi: -3.7335, ita: -3.6615 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E2; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta rajaa Madridin vanhan ytimen kuninkaanlinnalta '
-      + 'Retiron portille. Madrid oli pieni linnoituskaupunki, kunnes '
-      + 'kuningas Filip II siirsi hovinsa tänne vuonna 1561, ja sen '
-      + 'jälkeen kaupunki kasvoi ulospäin keskustastaan: vanhat kadut '
-      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja leveinä. '
-      + 'Reitin varrella ovat Plaza Mayor ja Puerta del Sol, jonka '
-      + 'kiveyksessä on kilometri nolla, laatta, josta Espanjan '
-      + 'päätiet mitataan. Idässä on Retiro, entinen kuninkaan '
-      + 'puutarha, joka siirtyi kaupungille ja kaikkien käyttöön vasta '
-      + '1868. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Madridin vanha ydin kuninkaanlinnasta itään. Filip '
+      + 'II siirsi hovinsa Madridiin vuonna 1561. Kuninkaanlinna '
+      + 'rakennettiin Alcázar-linnan tuhoutuneen vuoden 1734 palon jälkeen, '
+      + 'ja siinä on 3 418 huonetta. Plaza Mayor valmistui 1619, ja Puerta '
+      + 'del Solin kiveyksessä on nollakilometrin laatta, josta Espanjan '
+      + 'tiet mitataan.\n\n'
+      + 'Prado-museo avattiin yleisölle 1819 Juan de Villanuevan '
+      + 'suunnittelemassa rakennuksessa. Alcalán portti valmistui 1778, ja '
+      + 'Gran Vían rakentaminen alkoi 1910. Cibeleen suihkulähteellä Real '
+      + 'Madrid juhlii voittojaan. Retiro tuli kaupungin yleiseksi '
+      + 'puistoksi 1868. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään, eli kuninkaanlinnalta Retiron portille.
@@ -6138,9 +6311,9 @@ export const KAUPUNKIKARTAT = {
        * suomenkielistä artikkelia.
        */
       { nimi: 'Kuninkaanlinna', lat: 40.418, lon: -3.7143, wiki: 'Palacio Real de Madrid' },
-      { nimi: 'Plaza Mayor', lat: 40.4155, lon: -3.7074, wiki: 'Plaza Mayor' },
+      { nimi: 'Plaza Mayor', tyyppi: 'aukio', lat: 40.4155, lon: -3.7074, wiki: 'Plaza Mayor' },
       { nimi: 'Puerta del Sol', lat: 40.4169, lon: -3.7033, wiki: 'Puerta del Sol' },
-      { nimi: 'Cibeleen aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
+      { nimi: 'Cibeleen aukio', tyyppi: 'aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
       { nimi: 'Prado-museo', lat: 40.4138, lon: -3.6921, wiki: 'Museo del Prado' },
       { nimi: 'Alcalán portti', lat: 40.42, lon: -3.6889, wiki: 'Puerta de Alcalá' },
       /*
@@ -6157,7 +6330,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki madrid).
        */
       {
-        nimi: 'Tasavallan vuosi', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
+        nimi: 'Tasavallan vuosi', tyyppi: 'henkilo', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -6177,11 +6350,11 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-madrid-casadefieras',
       },
       {
-        nimi: 'Filipin patsas', lat: 40.418538, lon: -3.71224,
+        nimi: 'Filipin patsas', tyyppi: 'taide', lat: 40.418538, lon: -3.71224,
         nosto: 'syvennys-madrid-felipe',
       },
       {
-        nimi: 'Baldomera', lat: 40.4089, lon: -3.7009,
+        nimi: 'Baldomera', tyyppi: 'henkilo', lat: 40.4089, lon: -3.7009,
         nosto: 'skandaali-baldomera-larra-pyramidi',
       },
       /*
@@ -6194,27 +6367,27 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Tapaskierros', lat: 40.4154, lon: -3.7089,
+        nimi: 'Tapaskierros', tyyppi: 'ilmio', lat: 40.4154, lon: -3.7089,
         nosto: 'nosto-madridin-tapaskierros',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Goyan kansankuvat', lat: 40.4138, lon: -3.6921,
+        nimi: 'Goyan kansankuvat', tyyppi: 'taide', lat: 40.4138, lon: -3.6921,
         nosto: 'nosto-goyan-kansankuvat',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Chotis', lat: 40.4172, lon: -3.6968,
+        nimi: 'Chotis', tyyppi: 'ilmio', lat: 40.4172, lon: -3.6968,
         nosto: 'nosto-chotis-laatalla',
         nimiPuoli: 'oikea',
       },
       {
-        nimi: 'Kaksi joukkuetta', lat: 40.4192, lon: -3.6931,
+        nimi: 'Kaksi joukkuetta', tyyppi: 'ilmio', lat: 40.4192, lon: -3.6931,
         nosto: 'nosto-madridin-kaksi-joukkuetta',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Palamaton linna', lat: 40.418, lon: -3.7143,
+        nimi: 'Palamaton linna', tyyppi: 'henkilo', lat: 40.418, lon: -3.7143,
         nosto: 'nosto-palamaton-linna',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6249,14 +6422,16 @@ export const KAUPUNKIKARTAT = {
      * syntyi juuri tähän.
      */
     esittely: 'Kartan alue on Tukholman ydin siinä kohdassa, jossa Mälaren-järvi '
-      + 'purkautuu Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi '
-      + 'on Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri '
-      + 'tämä paikka teki kaupungista tärkeän: 1200-luvulla salmi '
-      + 'suljettiin paaluilla, jotka pysäyttivät vieraat laivat ennen '
-      + 'järveä. Alueella ovat vanhakaupunki Gamla stan kujineen, sen '
-      + 'laidalla kuninkaanlinna ja Riddarholmenin kirkko, kaupungintalo '
-      + 'ja Sergelin tori sekä idässä Djurgården, entinen kuninkaan '
-      + 'metsästyspuisto, jossa ovat nyt Vasa-museo ja Skansen.',
+      + 'laskee Itämereen. Salmessa nimeltä Strömmen saa onkia lohta ilman '
+      + 'erillistä lupaa. Kuninkaanlinna rakennettiin vuonna 1697 palaneen '
+      + 'Kolmen Kruunun linnan paikalle, ja kuninkaallinen perhe muutti '
+      + 'siihen 1754. Riddarholmenin kirkko oli fransiskaanien luostarin '
+      + 'kirkko; viimeinen sinne haudattu kuningas oli Kustaa V vuonna '
+      + '1950.\n\n'
+      + 'Kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta '
+      + 'tiilestä. Vasa-laiva upposi neitsytmatkallaan 1628, nostettiin '
+      + '1961, ja museo avattiin 1990. Skansen perustettiin 1891. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
@@ -6268,7 +6443,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Kaupungintalo', lat: 59.3275, lon: 18.0542, wiki: 'Tukholman kaupungintalo' },
       { nimi: 'Riddarholmenin kirkko', lat: 59.3247, lon: 18.064, wiki: 'Riddarholmskyrkan' },
-      { nimi: 'Sergelin tori', lat: 59.3326, lon: 18.0649, wiki: 'Sergelin tori' },
+      { nimi: 'Sergelin tori', tyyppi: 'aukio', lat: 59.3326, lon: 18.0649, wiki: 'Sergelin tori' },
       { nimi: 'Kuninkaanlinna', lat: 59.3268, lon: 18.0717, wiki: 'Tukholman kuninkaanlinna' },
       { nimi: 'Vasa-museo', lat: 59.328, lon: 18.0915, wiki: 'Vasa-museo' },
       { nimi: 'Skansen', lat: 59.3255, lon: 18.1035, wiki: 'Skansen' },
@@ -6286,8 +6461,9 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki tukholma).
        */
       {
-        nimi: 'Vädersolstavlan', lat: 59.3258, lon: 18.0703,
-        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
+        nimi: 'Vädersolstavlan', tyyppi: 'taide', lat: 59.3258, lon: 18.0703,
+        // Ympyrä irti Kuninkaanlinnasta (15 px; Karttaseppä 11.10.2026).
+        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen', siirto: { x: -16, y: 12 },
       },
       {
         nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
@@ -6306,15 +6482,16 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Setelipankki', lat: 59.3225, lon: 18.0739,
+        nimi: 'Setelipankki', tyyppi: 'henkilo', lat: 59.3225, lon: 18.0739,
         nosto: 'skandaali-palmstruchin-setelipankki',
       },
       {
-        nimi: 'Naamiaislaukaus', lat: 59.3297, lon: 18.0706,
-        nosto: 'skandaali-naamiaisten-laukaus',
+        nimi: 'Naamiaislaukaus', tyyppi: 'henkilo', lat: 59.3297, lon: 18.0706,
+        // Ympyrä irti Norrströmistä (14 px; Karttaseppä 11.10.2026).
+        nosto: 'skandaali-naamiaisten-laukaus', nimiPuoli: 'vasen', siirto: { x: -16, y: -12 },
       },
       {
-        nimi: 'Kreuger', lat: 59.3318, lon: 18.0696,
+        nimi: 'Kreuger', tyyppi: 'henkilo', lat: 59.3318, lon: 18.0696,
         nosto: 'skandaali-kreugerin-romahdus',
       },
     ],
@@ -6330,20 +6507,23 @@ export const KAUPUNKIKARTAT = {
      * yläkulmaan ison tyhjän laguunin.
      */
     polku: 'assets/kartat/venetsia-keskusta.png',
+    varikartta: 'assets/kartat/venetsia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 45.445, etela: 45.4265, lansi: 12.3155, ita: 12.352 },
+    piirtoRajat: { pohjoinen: 45.45055, etela: 45.42095, lansi: 12.30455, ita: 12.36295 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E7 (Raamattu, "TEKSTIEN PAINOPISTE"):
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Venetsia on rakennettu 118 saarelle keskelle matalaa '
-      + 'laguunia, ja talot seisovat miljoonien puupaalujen varassa: '
-      + 'hapettomassa liejussa puu ei lahoa vaan kovettuu. Saaret on '
-      + 'ommeltu yhteen sadoilla silloilla, ja jokainen niistä '
-      + 'ylitetään jalan. Alueen halki kaartaa Canal Grande, kaupungin '
-      + 'lähes neljä kilometriä pitkä pääkatu, jonka yli pääsee kuivin '
-      + 'jaloin vain neljästä kohdasta. Kartan kohteista pääsee '
+    esittely: 'Kartan alue on Venetsian vanha ydin laguunin saarilla: Canal Granden varrelta Pyhän '
+      + 'Markuksen torille ja itään Arsenaalille asti. Kaupunki on rakennettu veden varaan, '
+      + 'ja saaret on yhdistetty toisiinsa silloilla.\n\n'
+      + 'Rialton silta on Antonio da Ponten suunnittelema ja valmistui kivisenä 1591; Canal '
+      + 'Granden yli kulkee nykyään neljä siltaa. Markuksen hevoset tuotiin '
+      + 'Konstantinopolista 1204 neljännen ristiretken jälkeen. Aldon paino julkaisi 1501 '
+      + 'klassikoita pienikokoisina kirjoina ja kursiivilla. La Fenicen oopperatalo avattiin '
+      + '1792, tuhoutui tulipalossa 1996 ja avattiin uudelleen 2003. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -6356,7 +6536,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Canal Grande', lat: 45.4415, lon: 12.3283, wiki: 'Canal Grande' },
       { nimi: 'La Fenicen oopperatalo', lat: 45.4336, lon: 12.3336, wiki: 'La Fenice' },
       { nimi: 'Rialton silta', lat: 45.438, lon: 12.3359, wiki: 'Rialton silta' },
-      { nimi: 'Pyhän Markuksen tori', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
+      { nimi: 'Pyhän Markuksen tori', tyyppi: 'aukio', lat: 45.4341, lon: 12.3387, wiki: 'Pyhän Markuksen tori' },
       { nimi: 'San Giorgio Maggiore', lat: 45.4294, lon: 12.3433, wiki: 'San Giorgio Maggiore' },
       // Portin edusta eikä altaan reuna: entinen piste osui
       // telakka-altaaseen (vesitarkistin 9.8.2026).
@@ -6375,7 +6555,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Markuksen hevoset', lat: 45.4345, lon: 12.3394,
+        nimi: 'Markuksen hevoset', tyyppi: 'taide', lat: 45.4345, lon: 12.3394,
         nosto: 'syvennys-venetsia-hevoset',
       },
       {
@@ -6383,7 +6563,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-venetsia-plebiskiitti',
       },
       {
-        nimi: 'Aldon paino', lat: 45.439, lon: 12.3287,
+        nimi: 'Aldon paino', tyyppi: 'henkilo', lat: 45.439, lon: 12.3287,
         nosto: 'syvennys-venetsia-aldus',
       },
     ],
@@ -6402,16 +6582,18 @@ export const KAUPUNKIKARTAT = {
      * ja mihin menee, kujaverkon sekavuus, suorat kadut). Tilalle tuli
      * lyhyt luettelo siitä, mitä kohteita alueella on.
      */
-    esittely: 'Rooma syntyi Tiberin mutkaan noin 25 kilometriä merestä '
-      + 'ylävirtaan, ja paikan valitsi joki. Keskellä virtaa on saari, Isola '
-      + 'Tiberina, joka jakaa uoman kahdeksi kapeaksi haaraksi. Siinä kohtaa '
-      + 'joen yli pääsi kahlaamalla, eikä toista yhtä helppoa ylityspaikkaa '
-      + 'ollut pitkään matkaan. Kahlaamon ympärillä kohoaa seitsemän '
-      + 'kukkulaa, ja niiden välinen suo kuivattiin viemärillä nimeltä '
-      + 'Cloaca Maxima. Kuivatusta notkosta tuli Forum Romanum, kaupungin '
-      + 'tori. Kartan kohteet ovat joen molemmin puolin: lännessä Vatikaani '
-      + 'ja Castel Sant’Angelo, idässä Espanjalaiset portaat, Trevin '
-      + 'suihkulähde ja Pantheon, ja kaakossa antiikin alue Colosseumeineen.',
+    esittely: 'Kartan alue on Rooman keskusta Tiberin molemmin puolin. Joen '
+      + 'keskellä oleva Isola Tiberina on noin 270 metriä pitkä. Forum '
+      + 'Romanumin notkon kuivatti Cloaca Maxima -viemäri, joka '
+      + 'rakennettiin 500-luvulla eaa. Colosseum rakennettiin 1. '
+      + 'vuosisadalla jKr., ja sen ulkoseinä on noin 48 metriä korkea.\n\n'
+      + 'Pantheonin kupolin sisähalkaisija on 43,3 metriä, ja rakennus '
+      + 'muutettiin kirkoksi vuonna 609. Castel Sant’Angelo rakennettiin '
+      + 'keisari Hadrianuksen hautamonumentiksi, ja se valmistui vuonna '
+      + '139. Trevin suihkulähde valmistui 1762, ja se on Acqua Vergine '
+      + '-vesijohdon päätepiste. Espanjalaisissa portaissa on 135 askelmaa, '
+      + 'ja ne valmistuivat 1725. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi kulkee lännestä itään, eli samassa järjestyksessä
@@ -6425,7 +6607,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pietarinkirkko', lat: 41.9022, lon: 12.4534, wiki: 'Pietarinkirkko' },
       { nimi: 'Castel Sant’Angelo', lat: 41.9031, lon: 12.4664, wiki: 'Castel Sant’Angelo' },
       { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
-      { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
+      { nimi: 'Trevin suihkulähde', tyyppi: 'luonto', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       /*
        * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
@@ -6492,7 +6674,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Banca Romana', lat: 41.9009, lon: 12.4785,
+        nimi: 'Banca Romana', tyyppi: 'henkilo', lat: 41.9009, lon: 12.4785,
         nosto: 'skandaali-banca-romana-1893',
       },
       /*
@@ -6506,7 +6688,7 @@ export const KAUPUNKIKARTAT = {
       // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
       // nimiö vasemmalle.
       {
-        nimi: 'Sikstus 1510', lat: 41.9029, lon: 12.4545,
+        nimi: 'Sikstus 1510', tyyppi: 'henkilo', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6520,12 +6702,12 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js).
        */
       {
-        nimi: 'Kolikko olan yli', lat: 41.9008, lon: 12.4831,
+        nimi: 'Kolikko olan yli', tyyppi: 'henkilo', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-rooman-kolikko',
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Areenan kellari', lat: 41.8902, lon: 12.4922,
+        nimi: 'Areenan kellari', tyyppi: 'esine', lat: 41.8902, lon: 12.4922,
         nosto: 'nosto-colosseumin-kellari',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6535,12 +6717,12 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
       },
       {
-        nimi: 'Aqua Virgo', lat: 41.9008, lon: 12.4831,
+        nimi: 'Aqua Virgo', tyyppi: 'esine', lat: 41.9008, lon: 12.4831,
         nosto: 'nosto-aqua-virgo',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Nasone', lat: 41.8986, lon: 12.4769,
+        nimi: 'Nasone', tyyppi: 'esine', lat: 41.8986, lon: 12.4769,
         nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
@@ -6548,21 +6730,24 @@ export const KAUPUNKIKARTAT = {
   },
   krakova: {
     polku: 'assets/kartat/krakova-keskusta.png',
+    varikartta: 'assets/kartat/krakova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.069, etela: 50.047, lansi: 19.9225, ita: 19.9585 },
+    piirtoRajat: { pohjoinen: 50.0756, etela: 50.0404, lansi: 19.9117, ita: 19.9693 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
-    esittely: 'Kartan alue on Krakovan vanhakaupunki ja sen eteläpuoli. '
-      + 'Kaupunki paloi mongolien hyökkäyksessä vuonna 1241 ja '
-      + 'rakennettiin 1257 uudella kaavalla: suorakulmainen ruudukko, '
-      + 'jonka keskellä on kaksisataa metriä sivultaan oleva tori, yhä '
-      + 'Euroopan suurimpia keskiaikaisia toreja. Torilla ovat kangashalli '
-      + 'Sukiennice ja Mariankirkko, pohjoisessa Barbakaani, ja purettujen '
-      + 'muurien paikalla kiertää 1820-luvulla istutettu puistovyö Planty. '
-      + 'Etelässä kohoaa Wawelin kalkkikivikukkula linnoineen ja '
-      + 'Lohikäärmeen luolineen, ja siitä alkaa Kazimierz, joka oli '
-      + '1300-luvulta 1800-luvun alkuun oma kaupunkinsa. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Krakovan vanhakaupunki ja sen eteläpuoli. Mongolit '
+      + 'tuhosivat kaupungin 1241, ja vuonna 1257 se sai ruutukaavan, jonka '
+      + 'keskellä on noin 200 metriä leveä Rynek Główny -tori. Purettujen '
+      + 'muurien paikalle perustettiin 1800-luvun alussa Planty-puisto. '
+      + 'Muureista säilyi Barbakaani, joka rakennettiin noin 1498.\n\n'
+      + 'Wawelin kukkula on kalkkikiveä, ja sen sisällä on Lohikäärmeen '
+      + 'luola. Kukkulan katedraalissa Puolan kuninkaat kruunattiin ja '
+      + 'haudattiin. Kazimierz perustettiin 1335 kuningas Kasimir III:n '
+      + 'käskystä omaksi kaupungikseen, ja se liitettiin Krakovaan noin '
+      + '1800. Krakovan historiallinen keskusta on Unescon '
+      + 'maailmanperintökohde vuodesta 1978. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: Barbakaanilta Plantyn kehän
@@ -6606,22 +6791,24 @@ export const KAUPUNKIKARTAT = {
   },
   varsova: {
     polku: 'assets/kartat/varsova-keskusta.png',
+    varikartta: 'assets/kartat/varsova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 52.2535, etela: 52.2265, lansi: 20.9995, ita: 21.043 },
+    piirtoRajat: { pohjoinen: 52.2616, etela: 52.2184, lansi: 20.98645, ita: 21.05605 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
-    esittely: 'Kartan alue on Varsovan keskusta Veikselin länsirannalla. '
-      + 'Veiksel on Puolan pisin joki, 1 047 kilometriä, eikä siinä ole '
-      + 'yhtään patoa, joten hiekkasaaret vaihtavat paikkaa. Kaupunki '
-      + 'syntyi tähän kohtaan jyrkän törmän ja sen alla olevan hyvän '
-      + 'lastauspaikan takia, ja vuonna 1596 kuningas siirsi hovinsa '
-      + 'Krakovasta tänne. Pohjoisessa ovat Vanhankaupungin tori ja '
-      + 'Varsovan linna, jotka rakennettiin sodan jälkeen uudelleen '
-      + 'Bernardo Bellotton 1700-luvulla maalaamien kaupunkinäkymien '
-      + 'avulla. Kuninkaantietä etelään ovat Pyhän ristin kirkko, '
-      + 'Kopernikuksen tiedekeskus, kansallismuseo ja vuoden 1955 '
-      + 'Kulttuuri- ja tiedepalatsi. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartan alue on Varsovan keskusta Veikselin länsirannalla. Kuningas '
+      + 'Sigismund III siirsi hovinsa Krakovasta Varsovaan 1596. '
+      + 'Vanhakaupunki tuhoutui lähes kokonaan toisessa maailmansodassa ja '
+      + 'rakennettiin uudelleen muun muassa Bernardo Bellotton 1700-luvun '
+      + 'kaupunkinäkymien avulla; Unesco merkitsi sen '
+      + 'maailmanperintökohteeksi 1980. Varsovan linna rakennettiin '
+      + '1598–1619, ja sen jälleenrakennus valmistui 1984.\n\n'
+      + 'Kuninkaantien varrella on Pyhän ristin kirkko, jonka pilariin on '
+      + 'muurattu Chopinin sydän. Kulttuuri- ja tiedepalatsi on '
+      + 'Neuvostoliiton lahja, ja se valmistui 1955. Kopernikuksen '
+      + 'tiedekeskus avattiin Veikselin rannalla 2010. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, eli Kuninkaantietä pitkin
@@ -6636,7 +6823,7 @@ export const KAUPUNKIKARTAT = {
        * kansallismuseo on olemassa mutta kertoo museoverkostosta eikä
        * tästä rakennuksesta — älä linkitä siihen.
        */
-      { nimi: 'Vanhankaupungin tori', lat: 52.2498, lon: 21.0122 },
+      { nimi: 'Vanhankaupungin tori', tyyppi: 'aukio', lat: 52.2498, lon: 21.0122 },
       {
         nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna',
         nosto: 'syvennys-varsova-canaletto',
@@ -6676,8 +6863,10 @@ export const KAUPUNKIKARTAT = {
   },
   tallinna: {
     polku: 'assets/kartat/tallinna-keskusta.png',
+    varikartta: 'assets/kartat/tallinna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.4505, etela: 59.431, lansi: 24.7275, ita: 24.769 },
+    piirtoRajat: { pohjoinen: 59.45635, etela: 59.42515, lansi: 24.71505, ita: 24.78145 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
@@ -6685,15 +6874,17 @@ export const KAUPUNKIKARTAT = {
      * ilmansuuntien kuvailu on poistettu.
      */
     esittely: 'Kartan alue on Tallinnan vanhakaupunki ja sen satama. '
-      + 'Entinen kaupunginmuuri sulki sisäänsä 35 hehtaaria, ja '
-      + 'muurista on yhä pystyssä 1,85 kilometriä ja 28 tornia. '
-      + 'Pohjoisessa seisovat tykkitorni Paksu Margareeta ja Olevisten '
-      + 'kirkko, keskellä on Raatihuoneentori ja idässä Virun portti. '
-      + 'Lännessä kohoaa Toompean kallio, jonne alakaupungista nousee '
-      + 'vain kaksi katua ja jolla on Aleksanteri Nevskin katedraali. '
-      + 'Pohjoisrannassa on matkustajasatama, josta lähtee lautta '
-      + 'Helsinkiin. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + 'Vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1997. '
+      + 'Raatihuoneentorin goottilainen raatihuone valmistui 1404, ja '
+      + 'Olevisten kirkon torni on noin 123 metriä korkea. Kaupunginmuuria '
+      + 'on säilynyt noin 1,85 kilometriä. Virun portista ovat jäljellä '
+      + 'kulmatornit.\n\n'
+      + 'Paksu Margareeta on 1500-luvun alussa rakennettu puolustustorni, '
+      + 'jossa toimii nykyään Viron merenkulkumuseo. Toompean kukkulalla '
+      + 'seisova Aleksanteri Nevskin katedraali valmistui 1900. '
+      + 'Matkustajasatamasta lähtee lauttoja Helsinkiin, ja e-valtiolla '
+      + 'viitataan Viron sähköisiin palveluihin: e-residenssi käynnistyi '
+      + '2014. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, lopuksi satama.
@@ -6710,7 +6901,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Paksu Margareeta', lat: 59.4426, lon: 24.7496 },
       { nimi: 'Olevisten kirkko', lat: 59.4413, lon: 24.7479, wiki: 'Olevisten kirkko' },
       {
-        nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
+        nimi: 'Raatihuoneentori', tyyppi: 'aukio', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
         nosto: 'syvennys-tallinna-kama',
       },
       {
@@ -6735,7 +6926,7 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'E-valtio', lat: 59.4358, lon: 24.7372,
+        nimi: 'E-valtio', tyyppi: 'ilmio', lat: 59.4358, lon: 24.7372,
         nosto: ['syvennys-tallinna-e-valtio', 'skandaali-rummu-jyri-mestarikarkuri'],
       },
       {
@@ -6743,32 +6934,34 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-tallinna-kaksi-kaupunkia',
       },
       {
-        nimi: 'Pirtulaivat', lat: 59.4433, lon: 24.7511,
+        nimi: 'Pirtulaivat', tyyppi: 'esine', lat: 59.4433, lon: 24.7511,
         nosto: 'skandaali-pirtukauppa-suomenlahdella',
       },
     ],
   },
   sofia: {
     polku: 'assets/kartat/sofia-keskusta.png',
+    varikartta: 'assets/kartat/sofia-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.705, etela: 42.681, lansi: 23.312, ita: 23.345 },
+    piirtoRajat: { pohjoinen: 42.7122, etela: 42.6738, lansi: 23.3021, ita: 23.3549 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
      * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Sofian keskusta, joka syntyi lämpimien '
-      + 'lähteiden ympärille: maan alla on 49 kivennäis- ja '
-      + 'lämpölähdettä, ja roomalaiset rakensivat niiden päälle '
-      + 'Serdican. Lähteiden kohdalla seisoo vuonna 1913 valmistunut '
-      + 'mineraalikylpylä, jossa toimii nyt kaupunginmuseo, ja aivan '
-      + 'sen tuntumassa kaupungin vanhin rakennus eli 300-luvun Pyhän '
-      + 'Yrjön rotunda. Idässä ovat Aleksanteri Nevskin katedraali ja '
-      + 'Sofian yliopisto, joka aloitti 1888. Kaakossa levittäytyy '
-      + 'Borisovan puutarha vuodelta 1884 ja etelässä '
-      + 'Kansalliskulttuuripalatsi. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartan alue on Sofian keskusta, jossa kuumia lähteitä on käytetty '
+      + 'jo antiikin ajoista. Keskusmineraalikylpylä avattiin 1913, ja '
+      + 'vuodesta 2015 siinä on toiminut Sofian historiamuseo. Pyhän Yrjön '
+      + 'rotunda on 300-luvun alusta ja kaupungin vanhin säilynyt rakennus. '
+      + 'Banja Bashin moskeija on 1500-luvulta, ja Serdican areena löytyi '
+      + '2004 hotellin työmaalta.\n\n'
+      + 'Aleksanteri Nevskin katedraali vihittiin 1924, ja sen kultakupoli '
+      + 'on 45 metriä korkea. Sofian yliopisto perustettiin 1888, ja '
+      + 'Borisovan puiston rakentaminen alkoi 1884. '
+      + 'Kansalliskulttuuripalatsi avattiin 1981. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään.
@@ -6834,7 +7027,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Aleksanteri Nevskin katedraali (Sofia)',
       },
       { nimi: 'Sofian yliopisto', lat: 42.69354, lon: 23.33528, wiki: 'Sofian yliopisto' },
-      { nimi: 'Borisovan puutarha', lat: 42.6893, lon: 23.3372 },
+      { nimi: 'Borisovan puutarha', tyyppi: 'luonto', lat: 42.6893, lon: 23.3372 },
       { nimi: 'Kansalliskulttuuripalatsi', lat: 42.68476, lon: 23.31894 },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
@@ -6850,7 +7043,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki sofia).
        */
       {
-        nimi: 'Sofia-patsas', lat: 42.6978, lon: 23.3215,
+        nimi: 'Sofia-patsas', tyyppi: 'taide', lat: 42.6978, lon: 23.3215,
         nosto: 'syvennys-sofia-pollopatsas', nimiPuoli: 'vasen',
         siirto: { x: -25, y: -9 },
       },
@@ -6868,26 +7061,28 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Levski', lat: 42.6967, lon: 23.3353,
+        nimi: 'Levski', tyyppi: 'henkilo', lat: 42.6967, lon: 23.3353,
         nosto: 'syvennys-sofia-levski',
       },
       {
-        nimi: 'Ruhtinaskaappaus', lat: 42.6965, lon: 23.3268,
+        nimi: 'Ruhtinaskaappaus', tyyppi: 'henkilo', lat: 42.6965, lon: 23.3268,
         nosto: 'skandaali-battenbergin-ruhtinaskaappaus',
       },
       {
-        nimi: 'Vihellyskonsertti', lat: 42.6942, lon: 23.3264,
+        nimi: 'Vihellyskonsertti', tyyppi: 'henkilo', lat: 42.6942, lon: 23.3264,
         nosto: 'skandaali-kansallisteatterin-vihellyskohu',
       },
     ],
   },
   bukarest: {
     polku: 'assets/kartat/bukarest-keskusta.png',
+    varikartta: 'assets/kartat/bukarest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    piirtoRajat: { pohjoinen: 44.4508, etela: 44.4172, lansi: 26.0713, ita: 26.1177 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kainalot: [
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, korkeus: 24.86 },
+        x: 20.625, y: 24.375, leveys: 16.25, korkeus: 15.54 },
     ],
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
@@ -6895,18 +7090,17 @@ export const KAUPUNKIKARTAT = {
      * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Bukarestin keskusta Dâmbovița-joen '
-      + 'molemmin puolin. Pohjoisessa on Romanian ateneum, vuonna 1888 '
-      + 'vihitty konserttitalo, ja sen lounaispuolella Cișmigiun '
-      + 'puutarha, kaupungin vanhin puisto vuodelta 1847. Keskellä ovat '
-      + 'Yliopiston aukio vuodelta 1857 ja vanhakaupunki, jossa '
-      + 'seisovat Stavropoleoksen luostarikirkko vuodelta 1724 ja '
-      + 'Vanhan ruhtinaanhovin rauniot — Valakian ruhtinaiden linna '
-      + 'vuodelta 1459. Lounaassa kohoaa Parlamenttipalatsi, jonka '
-      + 'tieltä purettiin kokonainen kaupunginosa. Kainalokartassa on '
-      + 'Antipan luonnontieteellinen museo kilometrin päässä '
-      + 'pohjoisessa. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Bukarestin keskusta Dâmbovița-joen molemmin puolin. '
+      + 'Vanhassakaupungissa on Vanha ruhtinaanhovi, ja Vlad III mainitsi '
+      + 'linnansa ruhtinaanasunnokseen asiakirjassa vuonna 1459. '
+      + 'Stavropoleoksen luostarikirkko valmistui 1724 Brâncoveanun '
+      + 'tyyliin. Cișmigiun puutarha perustettiin 1800-luvun puolivälissä.\n\n'
+      + 'Romanian ateneum avattiin 1888, ja Albert Galleronin suunnittelema '
+      + 'konserttitalo on George Enescu -filharmonikkojen koti. Antipan '
+      + 'luonnontieteellinen museo perustettiin 1834, ja nykyinen rakennus '
+      + 'avattiin 1908. Parlamenttipalatsin rakentaminen alkoi 1984, ja sen '
+      + 'tieltä purettiin suuri osa Uranuksen kaupunginosaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: ateneumilta vanhaankaupunkiin
@@ -6929,8 +7123,8 @@ export const KAUPUNKIKARTAT = {
        * Bukarestin ensimmäinen maininta.
        */
       { nimi: 'Romanian ateneum', lat: 44.44136, lon: 26.09736 },
-      { nimi: 'Cișmigiun puutarha', lat: 44.4372, lon: 26.0906 },
-      { nimi: 'Yliopiston aukio', lat: 44.43497, lon: 26.10088 },
+      { nimi: 'Cișmigiun puutarha', tyyppi: 'luonto', lat: 44.4372, lon: 26.0906 },
+      { nimi: 'Yliopiston aukio', tyyppi: 'aukio', lat: 44.43497, lon: 26.10088 },
       { nimi: 'Stavropoleoksen kirkko', lat: 44.43178, lon: 26.09883 },
       {
         nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III',
@@ -6968,7 +7162,7 @@ export const KAUPUNKIKARTAT = {
        * (kattoVapaa).
        */
       {
-        nimi: 'Szathmárin studio', lat: 44.4305, lon: 26.1010,
+        nimi: 'Szathmárin studio', tyyppi: 'henkilo', lat: 44.4305, lon: 26.1010,
         nosto: 'syvennys-bukarest-szathmari', nimiPuoli: 'vasen',
         siirto: { x: -13, y: -22 },
       },
@@ -6990,33 +7184,34 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-bukarest-coltea',
       },
       {
-        nimi: 'Kultakana', lat: 44.4313, lon: 26.0973,
+        nimi: 'Kultakana', tyyppi: 'esine', lat: 44.4313, lon: 26.0973,
         nosto: 'skandaali-kultakanan-ryosto-1875',
       },
     ],
   },
   sarajevo: {
     polku: 'assets/kartat/sarajevo-keskusta.png',
+    varikartta: 'assets/kartat/sarajevo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 43.8655, etela: 43.8535, lansi: 18.412, ita: 18.445 },
+    piirtoRajat: { pohjoinen: 43.8691, etela: 43.8499, lansi: 18.4021, ita: 18.4549 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
      * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Sarajevon vanha ydin Miljacka-joen '
-      + 'laaksossa, ja se kulkee lännestä itään kuten laaksokin. '
-      + 'Lännessä on Pyhän Sydämen katedraali vuosilta 1884–1889, ja '
-      + 'siitä itään alkaa Baščaršija, vuonna 1462 perustettu basaari, '
-      + 'jossa oli parhaimmillaan tuhansia puoteja. Basaarin laidalla '
-      + 'on Gazi Husrev-begin moskeija vuodelta 1531 ja joen rannassa '
-      + 'maurilaistyylinen kaupungintalo Vijećnica. Latinalaissilta on '
-      + 'nykyisessä asussaan vuosilta 1798–1799, ja sen pohjoispäässä '
-      + 'ammuttiin arkkiherttua Frans Ferdinand vuonna 1914. Idässä '
-      + 'kalliolla seisoo Keltainen linnake, 1700-luvun tykkilinnoitus, '
-      + 'jolta näkyy koko vanhakaupunki. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Sarajevon vanha ydin Miljacka-joen laaksossa. '
+      + 'Baščaršija on 1400-luvulla perustettu basaari, ja sen laidalla on '
+      + 'Gazi Husrev-begin moskeija 1530-luvun alusta. Pyhän Sydämen '
+      + 'katedraalin rakentaminen alkoi 1884, ja se vihittiin käyttöön '
+      + '1889. Maurilaistyylinen kaupungintalo Vijećnica avattiin 1896.\n\n'
+      + 'Vijećnica paloi sodassa 1992 ja avattiin uudelleen 2014. '
+      + 'Latinalaissillan pohjoispäässä ammuttiin arkkiherttua Frans '
+      + 'Ferdinand ja hänen puolisonsa Sophie 28. kesäkuuta 1914. Keltainen '
+      + 'linnake on vuosina 1727–1739 rakennettu tykkilinnake, jolta näkee '
+      + 'vanhankaupungin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi lännestä itään, koska laakso kulkee niin.
@@ -7053,6 +7248,12 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen',
       },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
+      {
+        nimi: 'Latin-silta 1914', tyyppi: 'henkilo', lat: 43.8579, lon: 18.4289,
+        nosto: 'hetki-franz-ferdinandin-salamurha-1914',
+        teksti: HISTORIAN_HETKET_ID.get('franz-ferdinandin-salamurha-1914').teksti,
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -7076,25 +7277,29 @@ export const KAUPUNKIKARTAT = {
   },
   kiova: {
     polku: 'assets/kartat/kiova-keskusta.png',
+    varikartta: 'assets/kartat/kiova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.47, etela: 50.44, lansi: 30.499, ita: 30.539 },
+    piirtoRajat: { pohjoinen: 50.479, etela: 50.431, lansi: 30.487, ita: 30.551 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
      * miksi ne kiinnostavat; kartan viivastojen, rinteiden ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Kiovan vanha ydin Dneprin länsirannalla, '
-      + 'ja se on kahdessa kerroksessa: rannassa alakaupunki Podil, '
-      + 'jyrkän rinteen päällä yläkaupunki. Podilissa on Kontraktovan '
-      + 'aukio, seudun vilkkain kauppapaikka 1800-luvulla. Rinteen '
-      + 'laella seisovat Andreaksen kirkko vuosilta 1747–1754, Pyhän '
-      + 'Mikaelin kultakupolinen luostari ja Pyhän Sofian katedraali, '
-      + 'joka valmistui ilmeisesti vuonna 1037 ja kuuluu Unescon '
-      + 'maailmanperintöön. Etelämpänä ovat Itsenäisyyden aukio ja '
-      + 'Kultainen portti, kaupunginmuurin pääsisäänkäynti '
-      + '1000-luvulta, joka rakennettiin uudelleen 1982. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Kiovan vanha ydin: alakaupunki Podil Dneprin '
+      + 'rannalla ja yläkaupunki kukkuloilla. Podilin Kontraktovan aukio on '
+      + 'saanut nimensä 1700-luvun lopulla Kiovaan siirretystä '
+      + 'kauppamessusta. Yläkaupungissa on Pyhän Sofian katedraali, joka on '
+      + 'rakennettu 1000-luvulla ja kuuluu Unescon maailmanperintöön '
+      + 'vuodesta 1990.\n\n'
+      + 'Pyhän Mikaelin kultakupolinen luostari perustettiin 1100-luvun '
+      + 'alussa, katedraali purettiin 1930-luvulla ja se rakennettiin '
+      + 'uudelleen 1990-luvulla. Rastrellin suunnittelema Andreaksen kirkko '
+      + 'rakennettiin 1700-luvun puolivälissä. Kultainen portti oli yksi '
+      + 'kaupunginmuurin kolmesta pääportista, ja nykyinen rakennus on '
+      + 'vuodelta 1982. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: Podilista rinnettä ylös
@@ -7112,7 +7317,7 @@ export const KAUPUNKIKARTAT = {
        * ilman täsmennettä ohjautuu täsmennyssivulle.
        */
       {
-        nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178,
+        nimi: 'Kontraktovan aukio', tyyppi: 'aukio', lat: 50.4636, lon: 30.5178,
         nosto: 'syvennys-kiova-tsumakit',
       },
       {
@@ -7135,7 +7340,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-sofian-mosaiikit',
       },
       {
-        nimi: 'Itsenäisyyden aukio',
+        nimi: 'Itsenäisyyden aukio', tyyppi: 'aukio',
         lat: 50.45,
         lon: 30.5242,
         wiki: 'Itsenäisyyden aukio (Kiova)',
@@ -7150,23 +7355,26 @@ export const KAUPUNKIKARTAT = {
   },
   pietari: {
     polku: 'assets/kartat/pietari-keskusta.png',
+    varikartta: 'assets/kartat/pietari-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 59.9545, etela: 59.9215, lansi: 30.284, ita: 30.347 },
+    rajat: { pohjoinen: 59.9545, etela: 59.9195, lansi: 30.284, ita: 30.347 }, // eteläreuna −0,002 (Mariinski irti mittakaavajanasta, Karttaseppä 11.10.2026)
+    piirtoRajat: { pohjoinen: 59.965, etela: 59.909, lansi: 30.2651, ita: 30.3659 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kanavien ja katujen viivastoja.
      */
-    esittely: 'Kartan alue on Pietarin vanha ydin Nevan molemmin '
-      + 'puolin. Joessa on tähdenmuotoinen saari, jolla seisoo '
-      + 'Pietari-Paavalin linnoitus, kaupungin ensimmäinen rakennus '
-      + 'vuodelta 1703. Etelärannalla ovat Talvipalatsi eli Eremitaaši, '
-      + 'Verikirkko Gribojedovin kanavan varrella ja Kazanin katedraali '
-      + 'pääkadun Nevski prospektin laidalla. Vaskiratsastaja, Pietari '
-      + 'Suuren ratsastajapatsas, on Senaatintorilla joen rannassa, ja '
-      + 'kartan eteläreunassa on Mariinski-teatteri. Kaupungin läpi '
-      + 'kaartaa kolme kanavaa — Moika, Gribojedovin kanava ja Fontanka '
-      + '— jotka kaivettiin alun perin ojiksi soisen maan kuivaamiseen. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Pietarin vanha ydin Nevan molemmin puolin. '
+      + 'Pietari-Paavalin linnoitus perustettiin 27. toukokuuta 1703 '
+      + 'Jänissaarelle. Talvipalatsissa toimii Eremitaaši-museo. Kazanin '
+      + 'katedraalin rakennustyöt alkoivat 1801 Nevski prospektin varrella. '
+      + 'Gribojedovin kanava kaivettiin 1739 Krivuša-joen uomaan.\n\n'
+      + 'Verikirkko rakennettiin 1883–1907 paikalle, jossa keisari '
+      + 'Aleksanteri II sai surmansa 1881. Senaatintorilla on '
+      + 'Vaskiratsastaja, Falconetin tekemä Pietari Suuren '
+      + 'ratsastajapatsas, joka paljastettiin 1782. Mariinski-teatteri '
+      + 'avattiin 1860. Dmitri Mendelejev julkaisi alkuaineiden jaksollisen '
+      + 'järjestelmän 1869, kun hän opetti Pietarin yliopistossa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Tämä on pelin ainoa
@@ -7197,7 +7405,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Kristuksen ylösnousemuksen katedraali',
       },
       {
-        nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
+        nimi: 'Vaskiratsastaja', tyyppi: 'taide', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
         nosto: 'syvennys-pietari-ukkoskivi',
       },
       { nimi: 'Kazanin katedraali', lat: 59.9343, lon: 30.3245, wiki: 'Kazanin katedraali' },
@@ -7230,36 +7438,39 @@ export const KAUPUNKIKARTAT = {
       // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
       // keskellä.
       {
-        nimi: 'Jänissaari 1703', lat: 59.9515, lon: 30.312,
+        // Saaren länsiosaan (oli 59.9515/30.312 salmessa; Karttaseppä 11.10.2026).
+        nimi: 'Jänissaari 1703', tyyppi: 'henkilo', lat: 59.9505, lon: 30.3135,
         nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
       },
       // Pietarin yliopisto, Vasilinsaari.
       {
-        nimi: 'Mendelejev 1869', lat: 59.942, lon: 30.299,
+        nimi: 'Mendelejev 1869', tyyppi: 'henkilo', lat: 59.942, lon: 30.299,
         nosto: 'hetki-mendelejev-kortit-1869',
       },
     ],
   },
   moskova: {
     polku: 'assets/kartat/moskova-keskusta.png',
+    varikartta: 'assets/kartat/moskova-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 55.7655, etela: 55.7345, lansi: 37.5915, ita: 37.6435 },
+    piirtoRajat: { pohjoinen: 55.7748, etela: 55.7252, lansi: 37.5759, ita: 37.6591 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä värejä.
      */
-    esittely: 'Kartan alue on Moskovan ydin Moskova-joen mutkassa. '
-      + 'Keskellä on Kremlin kolmio, jonka muurien sisällä ovat '
-      + 'palatsit ja katedraalit; sen itäkyljessä avautuu Punainen '
-      + 'tori, ja torin eteläpäässä seisoo Pyhän Vasilin katedraali. '
-      + 'Pohjoisessa on Bolšoi-teatteri, lännessä joen rannalla '
-      + 'Kristus Vapahtajan katedraali ja etelässä joen toisella '
-      + 'puolen Tretjakovin galleria. Kremlin vieritse virtaa '
-      + 'Neglinnaja-joki, joka katettiin 1817–1819 ja kulkee nykyään '
-      + 'kokonaan putkessa maan alla. Keskustaa kiertävät '
-      + 'Bulevardikehä ja Puutarhakehä ovat vanhojen kaupunginmuurien '
-      + 'linjoilla. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Moskovan ydin Moskova-joen mutkassa. Kremlin muuri '
+      + 'on 2 235 metriä pitkä, siinä on 20 tornia, ja sen rakentaminen '
+      + 'alkoi 1400-luvun lopulla. Punaisen torin eteläpäässä seisova Pyhän '
+      + 'Vasilin katedraali rakennettiin 1500-luvun puolivälissä tsaari '
+      + 'Ivan IV:n käskystä Kazanin valtauksen muistoksi.\n\n'
+      + 'Kremlin pohjoispuolella olevan Bolšoi-teatterin nykyinen rakennus '
+      + 'avattiin 1825. Kristus Vapahtajan katedraali vihittiin 1883, '
+      + 'räjäytettiin 1931 ja vihittiin uudelleen 2000. Kauppias Pavel '
+      + 'Tretjakov lahjoitti taidekokoelmansa Moskovan kaupungille 1892, ja '
+      + 'siitä kasvoi Tretjakovin galleria. Perlovin teetalon '
+      + 'kiinalaistyylinen ulkoasu on vuodelta 1896. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään.
@@ -7279,7 +7490,7 @@ export const KAUPUNKIKARTAT = {
        * merkkiä eli pidempi kuin yksikään muu kartan kohde.
        */
       { nimi: 'Bolšoi-teatteri', lat: 55.7603, lon: 37.6186, wiki: 'Bolšoi-teatteri' },
-      { nimi: 'Punainen tori', lat: 55.7542, lon: 37.62, wiki: 'Punainen tori' },
+      { nimi: 'Punainen tori', tyyppi: 'aukio', lat: 55.7542, lon: 37.62, wiki: 'Punainen tori' },
       {
         nimi: 'Pyhän Vasilin katedraali',
         lat: 55.7525,
@@ -7316,7 +7527,7 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki moskova).
        */
       {
-        nimi: 'Näyttely 1872', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
+        nimi: 'Näyttely 1872', tyyppi: 'henkilo', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
       },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -7339,24 +7550,27 @@ export const KAUPUNKIKARTAT = {
   },
   odessa: {
     polku: 'assets/kartat/odessa-keskusta.png',
+    varikartta: 'assets/kartat/odessa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.501, etela: 46.466, lansi: 30.724, ita: 30.776 },
+    piirtoRajat: { pohjoinen: 46.5115, etela: 46.4555, lansi: 30.7084, ita: 30.7916 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä kohteita alueella on ja
      * miksi ne kiinnostavat; kartan viivastojen, ruudukon ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Odessan keskusta ja satama meren äärellä. '
-      + 'Sataman suulla seisoo Vorontsovin majakka, jonka valo vilkkuu '
-      + 'kolme pitkää — morseaakkosten O niin kuin Odessa. Sataman ja '
-      + 'keskustan välillä nousevat Potjomkinin portaat vuosilta '
-      + '1837–1841, ja niiden yläpuolelta alkaa ruutukaava, jonka '
-      + 'ranskalainen insinööri piirsi kerralla valmiiksi. Keskustassa '
-      + 'ovat vuonna 1887 avattu oopperatalo ja Kaupunginpuisto, '
-      + 'kaupungin vanhin puisto vuodelta 1803. Etelämpänä on Privozin '
-      + 'tori vuodelta 1827, Odessan suurin ruokatori. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Odessan keskusta ja satama Mustanmeren rannalla. '
+      + 'Katariina II määräsi vuonna 1794 uuden sataman ja kaupungin '
+      + 'perustettavaksi Hadzibeyn linnoituksen paikalle, ja rakennustyötä '
+      + 'ohjasi pitkälti flaamilaisen insinöörin Franz de Wollantin '
+      + 'suunnitelma. Potjomkinin portaat rakennettiin vuosina 1837–1841; '
+      + 'niissä on nykyään 192 askelmaa ja korkeutta 27 metriä.\n\n'
+      + 'Oopperatalon edeltäjä paloi vuonna 1873, ja wieniläisten Fellnerin '
+      + 'ja Helmerin suunnittelema nykyinen talo avattiin 1887. Sataman '
+      + 'suulla on Vorontsovin majakka. Kaupunginpuisto on perustettu 1803, '
+      + 'ja Privozin tori lasketaan alkaneeksi vuodesta 1827. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: majakalta satamaan, portaita
@@ -7382,8 +7596,8 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
         nosto: 'syvennys-odessa-ooppera',
       },
-      { nimi: 'Kaupunginpuisto', lat: 46.4848, lon: 30.7344 },
-      { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
+      { nimi: 'Kaupunginpuisto', tyyppi: 'luonto', lat: 46.4848, lon: 30.7344 },
+      { nimi: 'Privozin tori', tyyppi: 'aukio', lat: 46.4699, lon: 30.7368 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -7405,26 +7619,27 @@ export const KAUPUNKIKARTAT = {
   },
   oslo: {
     polku: 'assets/kartat/oslo-keskusta.png',
+    varikartta: 'assets/kartat/oslo-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 59.918, etela: 59.901, lansi: 10.7135, ita: 10.761 },
+    piirtoRajat: { pohjoinen: 59.9231, etela: 59.8959, lansi: 10.69925, ita: 10.77525 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
      * PAINOPISTE"): esittelystä poistettiin kartan visuaalinen
      * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
      * syntyi juuri tähän.
      */
-    esittely: 'Kartan alue on Oslon keskusta vuonon pohjukassa, siinä missä vesi '
-      + 'loppuu ja metsäiset kukkulat alkavat. Keskusta rakennettiin '
-      + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki oli '
-      + 'palanut ja Tanskan kuningas Kristian IV käski rakentaa uuden '
-      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään — Christiania, '
-      + 'vuodesta 1877 Kristiania — aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
-      + 'tuomiokirkolle ja rautatieasemalle vievä Karl Johans gate, '
-      + 'kaupungintalo, 1300-luvulta paikallaan seissyt Akershusin '
-      + 'linnoitus sataman kupeessa sekä oopperatalo, jonka katolle voi '
-      + 'kävellä. Lehden laivamuseot eli viikinkilaiva, Fram ja Kon-Tiki '
-      + 'ovat Bygdøyn niemellä kolme ja puoli kilometriä lännessä, kartan '
-      + 'ulkopuolella. Kartan kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Oslon keskusta Oslonvuonon pohjukassa. Vuonna 1624 '
+      + 'tulipalo tuhosi vanhan kaupungin, ja Tanskan kuningas Kristian IV '
+      + 'päätti perustaa uuden kaupungin Akershusin linnoituksen lähelle. '
+      + 'Se nimettiin hänen mukaansa Christianiaksi, ja nimi vaihtui '
+      + 'takaisin Osloksi 1925. Akershusin rakentaminen alkoi kuningas '
+      + 'Haakon V:n aikana 1300-luvun vaihteessa.\n\n'
+      + 'Kuninkaanlinna valmistui 1849, ja sen luo johtava Karl Johans gate '
+      + 'nimettiin 1852 kuningas Kaarle III Juhanan mukaan. Kaupungintalo '
+      + 'vihittiin käyttöön 15. toukokuuta 1950, ja siellä jaetaan Nobelin '
+      + 'rauhanpalkinto. Oopperatalo avattiin 2008, ja sen kaltevalle '
+      + 'katolle voi kävellä. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -7469,17 +7684,17 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Huudon varkaus', lat: 59.9163, lon: 10.7373,
+        nimi: 'Huudon varkaus', tyyppi: 'henkilo', lat: 59.9163, lon: 10.7373,
         nosto: 'skandaali-huudon-varkaus',
       },
       {
-        nimi: 'Boheemikirja', lat: 59.9135, lon: 10.741,
+        nimi: 'Boheemikirja', tyyppi: 'esine', lat: 59.9135, lon: 10.741,
         nosto: 'skandaali-boheemikirjan-takavarikko',
       },
       // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
       // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
       {
-        nimi: 'Fram 1893', lat: 59.9098, lon: 10.7318,
+        nimi: 'Fram 1893', tyyppi: 'henkilo', lat: 59.9098, lon: 10.7318,
         nosto: 'hetki-nansen-fram-1893',
       },
     ],
@@ -7528,30 +7743,31 @@ export const KAUPUNKIKARTAT = {
    */
   sevilla: {
     polku: 'assets/kartat/sevilla-keskusta.png',
+    varikartta: 'assets/kartat/sevilla-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
     },
-    esittely: 'Kartan alue on Sevillan vanhakaupunki Guadalquivirin '
-      + 'itärannalla ja joen toisella puolella Trianan kaupunginosa. '
-      + 'Kaupunki kasvoi jokisatamasta, jota hallitsivat vuorotellen '
-      + 'Rooma, maurien Al-Andalus ja Kastilian kruunu, ja Amerikan-kaupan '
-      + 'yksinoikeus teki siitä 1500-luvulla yhden Euroopan suurimmista. '
-      + 'Alueella ovat katedraali ja sen 104 metriä korkea kellotorni '
-      + 'Giralda, maurien linnoituksesta kuninkaalliseksi palatsiksi '
-      + 'laajennettu Alcázar, joenrannan vartiotorni Torre del Oro, '
-      + 'Maestranzan areena sekä kaakossa Plaza de España. Joen yli vie '
-      + 'Puente de Isabel II, joka valmistui 1852 kaupungin ensimmäisenä '
-      + 'pysyvänä siltana — sitä ennen samalla paikalla oli venesilta, '
-      + 'joka oli palvellut 1170-luvulta asti. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    piirtoRajat: { pohjoinen: 37.4005, etela: 37.3685, lansi: -6.02429, ita: -5.96781 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Sevillan vanhakaupunki Guadalquivir-joen '
+      + 'itärannalla ja Trianan kaupunginosa joen toisella puolella. '
+      + 'Katedraali, Alcázar ja Archivo de Indias ovat Unescon '
+      + 'maailmanperintökohde vuodesta 1987. Katedraali on yksi maailman '
+      + 'suurimmista goottilaisista kirkoista, ja sen kellotorni Giralda '
+      + 'valmistui 1198 almohadien minareettina. Torre del Oro rakennettiin '
+      + 'joen varteen 1220–1221.\n\n'
+      + 'Kruunu perusti Sevillaan 1503 Casa de Contratación -viraston, ja '
+      + 'kaupungista tuli Amerikan-kaupan keskus. Maestranzan areena '
+      + 'valmistui 1881. Puente de Isabel II avattiin 1852 kaupungin '
+      + 'ensimmäisenä kiinteänä siltana, ja sitä ennen joen ylitti '
+      + 'venesilta. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       { nimi: 'Katedraali ja Giralda', lat: 37.3862, lon: -5.9924, wiki: 'Sevillan katedraali' },
       { nimi: 'Alcázar', lat: 37.385, lon: -5.9924, wiki: 'Sevillan Alcázar' },
       { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
       { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983, wiki: 'Maestranza (Seville)' },
       { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023, wiki: 'Puente de Isabel II' },
-      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
+      { nimi: 'Plaza de España', tyyppi: 'aukio', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
@@ -7609,19 +7825,17 @@ export const KAUPUNKIKARTAT = {
      * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
      * syntyi juuri tähän.
      */
-    esittely: 'Kartan alue on vanha Kööpenhamina Sjællandin puolella ja sen '
-      + 'vastarannalla Amager; niiden välissä kulkee satamakanava, jota '
-      + 'pitkin laivat pääsevät kaupungin läpi. Nimi tarkoittaa '
-      + 'kauppasatamaa. Kaupunki on rakennettu veden ehdoilla: kanavia on '
-      + 'kaivettu sinne missä niitä tarvittiin, ja vanhat vallihaudat ovat '
-      + 'nykyään pitkulaisia järviä keskellä kaupunkia. Isoisän matkan '
-      + 'aikaan asukkaita oli jo yli satatuhatta, ja kaupungin ympäriltä '
-      + 'oli juuri purettu muurit, jotka olivat estäneet sitä kasvamasta. '
-      + 'Alueella ovat Christiansborgin linna, Rundetårn, Nyhavn, Tivoli, '
-      + 'Rosenborgin linna, Amalienborg, tähtilinnoitus Kastellet ja sen '
-      + 'takana rannalla istuva Pieni merenneito sekä kanavan itäpuolella '
-      + 'hollantilaiseen tapaan kaivamalla rakennettu Christianshavn. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on vanha Kööpenhamina Sjællandin saarella ja sen '
+      + 'vastarannalla Amager. Nimi tarkoittaa kauppiaiden satamaa. '
+      + 'Christiansborgin linna on Slotsholmenin saarella, ja nykyinen, '
+      + 'kolmas linna valmistui 1928; kaksi aiempaa paloi 1794 ja 1884. '
+      + 'Rundetårn valmistui 1642 Kristian IV:n tilaamana tähtitorniksi. '
+      + 'Nyhavnin kanavan kaivatti 1670-luvulla Kristian V.\n\n'
+      + 'Rosenborgin linnan rakentaminen alkoi 1606. Amalienborgin palatsit '
+      + 'rakennettiin 1750–1760, ja kruunu osti ne 1794 Christiansborgin '
+      + 'palon jälkeen. Tivoli avattiin 1843, ja Pieni merenneito '
+      + 'paljastettiin Langeliniella 1913. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * AMALIENBORG ON ANSA. fi.wikipedian `Amalienborg` EI ole
@@ -7634,14 +7848,19 @@ export const KAUPUNKIKARTAT = {
        */
       // Patsas istuu kivellä vedessä; piste on rantapromenadilla,
       // jotta se osuu maalle (vesitarkistin).
-      { nimi: 'Pieni merenneito', lat: 55.6926, lon: 12.5989, wiki: 'Pieni merenneito (patsas)' },
       { nimi: 'Amalienborg', lat: 55.6841, lon: 12.5934 },
       { nimi: 'Rundetårn', lat: 55.6813, lon: 12.5757, wiki: 'Rundetårn' },
       // Nyhavn on kanava, ja kuuluisa osa on pohjoisen laiturin
       // värikkäät talot — piste on laiturilla eikä vedessä.
       { nimi: 'Nyhavn', lat: 55.6802, lon: 12.59, wiki: 'Nyhavn' },
       { nimi: 'Christiansborgin linna', lat: 55.6761, lon: 12.5797, wiki: 'Christiansborgin linna' },
-      { nimi: 'Tivoli', lat: 55.6737, lon: 12.5681 },
+      {
+        nimi: 'Christiansborg 1884', tyyppi: 'henkilo', lat: 55.6763, lon: 12.5806,
+        nosto: 'hetki-christiansborgin-palo-1884',
+        teksti: HISTORIAN_HETKET_ID.get('christiansborgin-palo-1884').teksti,
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      { nimi: 'Tivoli', tyyppi: 'luonto', lat: 55.6737, lon: 12.5681 },
       /*
        * KOLME LISÄKOHDETTA (paketti K1) — kartan numerointi tulee
        * järjestyksestä, joten nämä tulevat listan loppuun eivätkä
@@ -7696,11 +7915,11 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Vararikko 1813', lat: 55.6756, lon: 12.5839,
+        nimi: 'Vararikko 1813', tyyppi: 'henkilo', lat: 55.6756, lon: 12.5839,
         nosto: 'skandaali-tanskan-valtionvararikko-1813',
       },
       {
-        nimi: 'Alberti', lat: 55.6772, lon: 12.5731,
+        nimi: 'Alberti', tyyppi: 'esine', lat: 55.6772, lon: 12.5731,
         nosto: 'skandaali-alberti-skandaali',
       },
     ],
@@ -7719,19 +7938,17 @@ export const KAUPUNKIKARTAT = {
      * kuvailu. Jäljelle jäi se, mitä alueella on ja miksi kaupunki
      * syntyi juuri tähän.
      */
-    esittely: 'Kartan alue on Tampereen kannas kahden järven välissä: Näsijärvi '
-      + 'on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pintojen '
-      + 'kahdeksantoista metrin korkeusero purkautuu Tammerkoskena. Juuri '
-      + 'se koski on koko kaupungin syy: sen partaalle nousivat '
-      + '1800-luvulla puuvillatehdas, verkatehdas, paperitehdas ja '
-      + 'konepajat, ja kaupunkia alettiin kutsua Pohjolan Manchesteriksi. '
-      + 'Isoisän matkan aikaan Tampereella asui noin kuusi tuhatta ihmistä '
-      + 'ja Finlaysonin tehdas oli Pohjoismaiden suurin työpaikka. Alueella '
-      + 'ovat kosken länsirannalla Finlaysonin punatiilikortteli ja '
-      + 'itärannalla Tampella, jonka verstaassa toimii museokeskus '
-      + 'Vapriikki, pääkatu Hämeenkatu Hämeensiltoineen, lännessä '
-      + 'Pyynikinharjun näkötorni ja pohjoisessa Särkänniemen kärjessä '
-      + 'Näsinneula. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Tampereen keskusta kannaksella Näsijärven ja '
+      + 'Pyhäjärven välissä. Järvien vedenpintojen korkeusero on noin 18 '
+      + 'metriä, ja vesi laskee niiden välillä Tammerkoskena. Kustaa III '
+      + 'perusti kaupungin kosken rannalle 1779. Skotlantilainen James '
+      + 'Finlayson perusti puuvillatehtaansa 1820, ja tekstiiliteollisuuden '
+      + 'vuoksi Tamperetta on kutsuttu Manchesteriksi.\n\n'
+      + 'Tampellan entisessä konepajassa toimii museokeskus Vapriikki, joka '
+      + 'avattiin yleisölle 1996. Pyynikinharjun kivinen näkötorni '
+      + 'valmistui 1929 kaupungin 150-vuotisjuhlaksi. Särkänniemessä on '
+      + '168-metrinen Näsinneula, joka avattiin 1971. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kahdeksan kohdetta, kaikki tarkistettu fi-Wikipedian
@@ -7828,16 +8045,18 @@ export const KAUPUNKIKARTAT = {
     rajat: { pohjoinen: 49.6128, etela: 49.6065, lansi: 6.1245, ita: 6.139 },
     piirtoRajat: { pohjoinen: 49.61469, etela: 49.60461, lansi: 6.12015, ita: 6.14335 },
     varikartta: 'assets/kartat/luxemburg-varikartta.png',
-    esittely: 'Luxemburgin vanhakaupunki seisoo kalliolla, jonka Alzette- '
-      + 'ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — juuri tämä '
-      + 'muoto teki siitä niin vahvan linnoituksen, että sitä kutsuttiin '
-      + 'Pohjoisen Gibraltariksi. Isoisän matkan aikaan linnoitusta '
-      + 'puretaan Lontoon sopimuksen vaatimuksesta: Bock-kallion '
-      + 'kasemattikäytäviä louhitaan auki, ja entiset muurinreunat ovat '
-      + 'juuri muuttumassa kävelyteiksi. Suurherttuallinen palatsi ja '
-      + 'Notre-Damen katedraali ovat kaupungin hallinnollinen ja '
-      + 'hengellinen keskus, ja Guillaume II:n aukio niiden välissä on '
-      + 'kaupungin sydän. Kartan kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Luxemburgin vanhakaupunki jokirotkojen '
+      + 'reunustamalla kalliolla. Kaupungin alkuna pidetään linnaa, jonka '
+      + 'kreivi Siegfried hankki Bock-kalliolta vuonna 963. Espanjalaiset '
+      + 'alkoivat louhia kallioon puolustuskäytäviä, kasematteja, vuonna '
+      + '1644. Lontoon sopimus vuonna 1867 määräsi linnoitukset '
+      + 'purettaviksi, ja vanhakaupunki on Unescon maailmanperintökohde '
+      + 'vuodesta 1994.\n\n'
+      + 'Notre-Damen katedraali rakennettiin jesuiittojen kirkoksi vuosina '
+      + '1613–1621, ja se sai katedraalin aseman 1870. Suurherttuallinen '
+      + 'palatsi oli kaupungintalo vuosina 1572–1795 ja suurherttuan '
+      + 'asuinpaikka vuodesta 1890. Adolphe-silta on 153 metriä pitkä, ja '
+      + 'se avattiin 1903. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       {
@@ -7868,7 +8087,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Guillaume II:n aukio', lat: 49.6108, lon: 6.1303,
+        nimi: 'Guillaume II:n aukio', tyyppi: 'aukio', lat: 49.6108, lon: 6.1303,
         teksti: 'Guillaume II:n aukio eli kansanomaisesti Knuedler on '
           + 'vanhankaupungin pääaukio. Paikalla seisoi keskiajalta asti '
           + 'fransiskaaniluostari, jonka Ranskan vallankumoussotilaat '
@@ -7923,6 +8142,7 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurherttuallinen palatsi', lat: 49.6109, lon: 6.1328,
+        nosto: 'skandaali-marie-adelaiden-luopuminen-1919',
         aika: '1572–',
         teksti: 'Rakennus, joka tunnetaan nykyään Suurherttuallisena '
           + 'palatsina, rakennettiin vuonna 1572 kaupungintaloksi ja '
@@ -7950,7 +8170,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Chemin de la Corniche', lat: 49.6098, lon: 6.1345,
+        nimi: 'Chemin de la Corniche', tyyppi: 'aukio', lat: 49.6098, lon: 6.1345,
         teksti: 'Chemin de la Corniche kulkee entisten muurien harjalla '
           + 'Bock-kalliolta Pyhän Hengen linnoituksen suuntaan, ja siltä '
           + 'avautuu näkymä alas Alzette-joen mutkaan, Grundin '
@@ -7961,7 +8181,7 @@ export const KAUPUNKIKARTAT = {
           + 'kävelytieksi samaa vauhtia kuin muutakin kaupunkia.'
           + '\n\n'
           + 'Myöhemmin, 1900-luvulla, kirjailija Batty Weber antaa '
-          + 'kulkutielle lempinimen "Euroopan kaunein parveke" — isoisän '
+          + 'kulkutielle lempinimen ”Euroopan kaunein parveke” — isoisän '
           + 'matkan aikaan se on vielä tuore, äskettäin avattu näköalapaikka.',
         kuvat: [
           {
@@ -8001,6 +8221,12 @@ export const KAUPUNKIKARTAT = {
           },
         ],
       },
+      // Vuoden 963 tapahtuma avautuu omana historian hetkenään Bockin vieressä.
+      {
+        nimi: 'Bockin kauppa 963', tyyppi: 'henkilo',
+        lat: 49.6118, lon: 6.1358,
+        nosto: 'hetki-siegfried-ostaa-bockin-963',
+      },
     ],
   },
   bryssel: {
@@ -8013,15 +8239,17 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 50.85625, etela: 50.82825, lansi: 4.3318, ita: 4.3862 },
     varikartta: 'assets/kartat/bryssel-varikartta.png',
-    esittely: 'Brysselin sydän on Grand-Place, keskiaikainen kiltatori, jonka '
-      + 'ympärille vanhakaupunki kasvoi. Isoisän matkan aikaan kaupunki on '
-      + 'juuri uudistunut: Senne-joki katettiin vuosina 1867–1871 ja sen '
-      + 'päälle nousivat leveät bulevardit, uusi pörssipalatsi rakennettiin '
-      + 'vuosina 1868–1873 ja valtava Oikeuspalatsi on yhä rakenteilla '
-      + '(1866–1883). Kuninkaanpalatsi seisoo vanhakaupungin itäpuolella '
-      + 'kukkulalla, jonka rinteellä on vielä tiheää vanhaa asutusta: '
-      + 'Mont des Artsin puisto ja museot tulevat vasta 1900-luvulla. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Brysselin vanhakaupunki. Grand-Place sai nykyisen '
+      + 'ilmeensä, kun ranskalaiset pommittivat sen 1695 ja killat '
+      + 'rakensivat talonsa uudelleen. Manneken Pis on vuonna 1619 tilattu '
+      + 'pronssipatsas, joka on noin 55 senttiä korkea. Galeries Royales '
+      + 'Saint-Hubert avattiin 1847 ja sen lasikatto peittää käytävät.\n\n'
+      + 'Pörssipalatsi rakennettiin 1868–1873 ja Oikeuspalatsi 1866–1883 '
+      + 'Joseph Poelaertin suunnitelmien mukaan. Kuninkaanpalatsin paikalla '
+      + 'ollut Coudenbergin linna paloi 1731, ja nykyinen julkisivu on '
+      + '1900-luvun alusta. Mont des Artsin puisto ja kirjasto rakennettiin '
+      + '1950- ja 1960-luvuilla. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
       { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
@@ -8056,7 +8284,7 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Galeries Royales Saint-Hubert',
       },
       {
-        nimi: 'Mont des Arts', lat: 50.84377, lon: 4.3569,
+        nimi: 'Mont des Arts', tyyppi: 'aukio', lat: 50.84377, lon: 4.3569,
         aika: '1910',
         teksti: 'Mont des Arts eli Kunstberg on Brysselin keskustan kukkulaan '
           + 'rakennettu kulttuurikortteli. Isoisän matkan aikaan sitä ei ole '
@@ -8107,18 +8335,21 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 46.05915, etela: 46.04235, lansi: 14.487, ita: 14.519 },
     varikartta: 'assets/kartat/ljubljana-varikartta.png',
-    esittely: 'Ljubljanan vanhakaupunki mahtuu Ljubljanica-joen mutkaan '
-      + 'Linnavuoren juurelle, ja kaupunki on pieni: vielä vuonna 1895 '
-      + 'asukkaita on vasta noin 31 000. Isoisän matkan aikaan, vuonna '
-      + '1873, Wienistä kulkee jo juna (1849), linna toimii läänin '
-      + 'vankilana ja Tromostovje on vasta yksi kivisilta. Prešernin '
-      + 'aukio on suppilomainen katujen risteys eikä Lohikäärmesiltaa '
-      + 'ole vielä lainkaan: moni kartan kohde saa nykyisen ilmeensä '
-      + 'vasta vuoden 1895 maanjäristyksen jälkeen. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Ljubljanan vanhakaupunki Ljubljanica-joen molemmin '
+      + 'puolin. Prešernin aukiolla on runoilija France Prešerenin patsas '
+      + 'vuodelta 1905. Aukiolta joen yli kulkee Tromostovje: keskimmäinen '
+      + 'silta rakennettiin 1842, ja Jože Plečnik lisäsi viereen kaksi '
+      + 'jalankulkusiltaa, jotka valmistuivat 1932. Tuomiokirkon nykyinen '
+      + 'rakennus on barokkia vuosilta 1701–1706.\n\n'
+      + 'Keskustorin hallit on suunnitellut Plečnik. Lohikäärmesilta '
+      + 'avattiin 1901 teräsbetonisiltana. Križanke oli Saksalaisen '
+      + 'ritarikunnan luostari, jonka Plečnik muutti 1952–1956 '
+      + 'ulkoilmateatteriksi. Tivoli-puiston suunnitteli 1813 ranskalainen '
+      + 'insinööri Jean Blanchard. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       {
-        nimi: 'Tivoli-puisto', lat: 46.05404, lon: 14.49574,
+        nimi: 'Tivoli-puisto', tyyppi: 'luonto', lat: 46.05404, lon: 14.49574,
         aika: '1813',
         teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitteli ranskalainen '
           + 'insinööri Jean Blanchard vuonna 1813, kun kaupunki oli Napoleonin '
@@ -8162,7 +8393,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Prešernin aukio', lat: 46.05165, lon: 14.50575,
+        nimi: 'Prešernin aukio', tyyppi: 'aukio', lat: 46.05165, lon: 14.50575,
         aika: '1646–1660',
         teksti: 'Prešernin aukio on Ljubljanan keskeinen aukio. Isoisän aikaan se '
           + 'on vanhankaupungin porttien edessä sijaitseva suppilomainen '
@@ -8191,7 +8422,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ljubljanan tuomiokirkko', lat: 46.05076, lon: 14.50825, wiki: 'Ljubljanan tuomiokirkko' },
       { nimi: 'Ljubljanan linna', lat: 46.04885, lon: 14.50857, wiki: 'Ljubljanan linna' },
       {
-        nimi: 'Keskustori', lat: 46.0512, lon: 14.50966,
+        nimi: 'Keskustori', tyyppi: 'aukio', lat: 46.0512, lon: 14.50966,
         aika: '1940–1942',
         teksti: 'Vodnikin aukiolla ei ole isoisän aikaan toria. Paikalla seisoo '
           + 'vanha luostari, jossa toimii hiippakunnan tyttökoulu. Se tuhoutuu '
@@ -8205,7 +8436,7 @@ export const KAUPUNKIKARTAT = {
           + 'perintönä UNESCOn maailmanperintöön.',
         kuvat: [
           {
-            tiedosto: 'Ljubljana - Central Market.jpg',
+            tiedosto: "Tržni dan na Vodnikovem trgu 1927.jpg",
             lyhyt: 'Keskustorin kojut Plečnikin torihallin edessä ylhäältä nähtynä.',
             selite: 'Ljubljanan keskustori linnan suunnasta katsottuna: kojuja puiden alla ja Plečnikin pitkä torihalli joen rannassa.',
             lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
@@ -8245,14 +8476,17 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 48.7253, etela: 48.7173, lansi: 21.25135, ita: 21.26815 },
     varikartta: 'assets/kartat/kosice-varikartta.png',
-    esittely: 'Košicen vanha ydin kasvaa Hlavná-kadun eli Pääkadun ympärille, '
-      + 'joka on syntynyt keskiaikaisena toriaukiona ja jonka keskellä '
-      + 'seisoo Slovakian suurin kirkko. Isoisän matkan aikaan vuonna 1873 '
-      + 'kaupunki on unkarilaisittain Kassa, ja moni kartan kohde on vielä '
-      + 'vanha: Pyhän Elisabetin tuomiokirkko, Urbanin torni, Immaculata, '
-      + 'Pyövelin bastioni ja Miklušin vankila, joka toimii kaupungin '
-      + 'vankilana vuoteen 1909. Valtionteatteri ja Jakabin palatsi '
-      + 'valmistuvat vasta 1800-luvun lopussa. Kartan kohteista pääsee '
+    esittely: 'Kartan alue on Košicen vanha keskusta. Kaupunki mainitaan ensi '
+      + 'kerran asiakirjassa 1230. Hlavná-katu on keskiaikaisesta '
+      + 'toriaukiosta syntynyt, noin 1,2 kilometrin pituinen kävelykatu. '
+      + 'Sen varrella on Pyhän Elisabetin tuomiokirkko, Slovakian suurin '
+      + 'kirkko, jonka rakentaminen alkoi 1300-luvun lopulla. '
+      + 'Valtionteatterin uusbarokkirakennus valmistui 1899.\n\n'
+      + 'Immaculata on ruttopylväs vuodelta 1723, ja se pystytettiin '
+      + 'kiitokseksi ruton päättymisestä. Jakabin palatsi on '
+      + 'uusgoottilainen ja valmistui 1899. Miklušin vankila oli kaupungin '
+      + 'vankila 1600-luvulta 1900-luvun alkuun, ja Pyövelin bastioni on '
+      + 'nykyisin Itä-Slovakian museon käytössä. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       {
@@ -8280,7 +8514,7 @@ export const KAUPUNKIKARTAT = {
         ],
       },
       {
-        nimi: 'Hlavná-katu', lat: 48.72118, lon: 21.25762,
+        nimi: 'Hlavná-katu', tyyppi: 'aukio', lat: 48.72118, lon: 21.25762,
         teksti: 'Hlavná eli Pääkatu on Košicen keskuskatu, ja lähes koko katu on '
           + 'nykyään kävelyaluetta. Se on syntynyt keskiaikaisena toriaukiona, ja '
           + 'siksi sen pohjapiirros on kara: keskeltä leveä ja päistä kapea. '
@@ -8424,14 +8658,15 @@ export const KAUPUNKIKARTAT = {
     // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta --vari).
     piirtoRajat: { pohjoinen: 35.9068, etela: 35.8892, lansi: 14.5049, ita: 14.5241 },
     varikartta: 'assets/kartat/valletta-varikartta.png',
-    esittely: 'Vallettan koko vanhakaupunki mahtuu kapealle niemelle Grand '
-      + 'Harbourin ja Marsamxett-sataman välissä. Ritarikunta rakensi '
-      + 'kaupungin ruutukaavaan suuren piirityksen 1565 jälkeen, ja '
-      + 'isoisän matkan aikaan vuonna 1873 kaupunki on brittiläisen '
-      + 'Maltan pääkaupunki: paksut kalkkikivimuurit, Suurmestarin '
-      + 'palatsi ja Pyhän Johanneksen konkatedraali ovat yhä samat, '
-      + 'mutta ritarikunnan majataloista on tullut sotilashallinnon '
-      + 'virastoja. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Vallettan vanhakaupunki Sciberrasin niemellä Grand Harbourin ja '
+      + 'Marsamxett-sataman välissä. Johanneksen ritarikunta voitti ottomaanit suuressa '
+      + 'piirityksessä 1565 ja rakensi sen jälkeen uuden, linnoitetun pääkaupungin.\n\n'
+      + 'Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes kuukauden piirityksen jälkeen; '
+      + 'Pyhä Elmo 1565 kertoo siitä. Vallettan peruskiven laski Jean de Valette 28. '
+      + 'maaliskuuta 1566. Keskustassa ovat Pyhän Johanneksen ko-katedraali (rakennettu '
+      + '1572–1577, arkkitehti Girolamo Cassar), Suurmestarin palatsi ja Auberge de Castille. '
+      + 'Piirityskello-muistomerkki vihittiin 1992 toisen maailmansodan uhreille. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Auberge de Castille', lat: 35.895833, lon: 14.511389,
@@ -8463,10 +8698,11 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        nosto: 'skandaali-napoleonin-kirkkohopean-ryosto-1798',
         wiki: 'Suurmestarin palatsi (Valletta)',
       },
       {
-        nimi: 'Yläbarrakan puutarhat', lat: 35.894722, lon: 14.512222,
+        nimi: 'Yläbarrakan puutarhat', tyyppi: 'luonto', lat: 35.894722, lon: 14.512222,
         aika: '1661',
         teksti: 'Yläbarrakan puutarha rakennettiin vuonna 1661 Italian '
           + 'ritarikieliryhmän yksityiseksi puistoksi Grand Harbourin '
@@ -8517,6 +8753,12 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Pyhän Elmon linnake', lat: 35.902, lon: 14.5188,
         wiki: 'Fort Saint Elmo',
       },
+      {
+        nimi: 'Pyhä Elmo 1565', tyyppi: 'henkilo', lat: 35.9017, lon: 14.5179,
+        nosto: 'hetki-pyhan-elmon-linnake-1565',
+        teksti: HISTORIAN_HETKET_ID.get('pyhan-elmon-linnake-1565').teksti,
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   firenze: {
@@ -8532,18 +8774,17 @@ export const KAUPUNKIKARTAT = {
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Firenzen vanhakaupunki mahtuu noin kahden kilometrin '
-      + 'levyiselle alalle, joten kaikki kohteet ovat kävelymatkan '
-      + 'päässä toisistaan. Kaupunki alkoi roomalaisena varuskuntana vuonna 59 '
-      + 'eaa., ja sen suorakulmainen sotilasruutukaava on yhä '
-      + 'nähtävissä keskellä muuten mutkittelevaa kujaverkkoa. '
-      + 'Keskiajalla kaupunki kasvoi villakankaan ja pankkien varassa '
-      + 'niin isoksi, että muurit jouduttiin rakentamaan kolmesti '
-      + 'uudelleen; viimeiset purettiin 1860-luvulla, kun Firenze oli '
-      + 'Italian pääkaupunki. Arno jakaa kaupungin kahtia: '
-      + 'pohjoispuolella ovat Duomo, Signorian aukio ja Uffizi, '
-      + 'eteläpuolella eli Oltrarnossa käsityöläisten korttelit ja '
-      + 'Bobolin puutarha.',
+    esittely: 'Kartan alue on Firenzen keskusta Arnon molemmin puolin. Kaupunki '
+      + 'perustettiin roomalaisena veteraanisiirtokuntana ensimmäisellä '
+      + 'vuosisadalla eaa., ja sen suorakulmainen katuverkko näkyy yhä '
+      + 'keskustassa. Keskiajan muurit purettiin 1860-luvulla, kun Firenze '
+      + 'oli Italian pääkaupunki, ja niiden paikalle rakennettiin kehäkatu.\n\n'
+      + 'Duomon rakentaminen alkoi 1296, ja Brunelleschin kupoli valmistui '
+      + '1436. Palazzo Vecchion työt alkoivat 1299, ja sen torni on noin 94 '
+      + 'metriä korkea. Uffizin rakennus aloitettiin 1560 virastotaloksi. '
+      + 'Ponte Vecchio rakennettiin uudelleen 1345, ja se oli ainoa Arnon '
+      + 'silta, jota ei räjäytetty 1944. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * NELJÄ ANSAA fi.wikipediassa, kaikki tarkistettu
@@ -8574,7 +8815,7 @@ export const KAUPUNKIKARTAT = {
       // Puutarha on iso; piste on sen pohjoispäässä Pitti-palatsin
       // takana, jotta se ei osu kartan vasempaan alanurkkaan
       // mittakaavajanan päälle.
-      { nimi: 'Bobolin puutarha', lat: 43.7645, lon: 11.25 },
+      { nimi: 'Bobolin puutarha', tyyppi: 'luonto', lat: 43.7645, lon: 11.25 },
       // Via Ricasoli 58–60. Piste on rajauksen pohjoisreunan
       // tuntumassa (43,778) mutta reilut sata metriä sen sisällä.
       { nimi: 'Galleria dell\'Accademia', lat: 43.7769, lon: 11.2589 },
@@ -8605,8 +8846,10 @@ export const KAUPUNKIKARTAT = {
   },
   dubrovnik: {
     polku: 'assets/kartat/dubrovnik-keskusta.png',
+    varikartta: 'assets/kartat/dubrovnik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 42.6442, etela: 42.6388, lansi: 18.1035, ita: 18.1148 },
+    piirtoRajat: { pohjoinen: 42.64582, etela: 42.63718, lansi: 18.10011, ita: 18.11819 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -8655,23 +8898,26 @@ export const KAUPUNKIKARTAT = {
   },
   riika: {
     polku: 'assets/kartat/riika-keskusta.png',
+    varikartta: 'assets/kartat/riika-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 56.956, etela: 56.941, lansi: 24.0908, ita: 24.1293 },
+    piirtoRajat: { pohjoinen: 56.9605, etela: 56.9365, lansi: 24.07925, ita: 24.14085 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
      */
-    esittely: 'Kartan alue on Riian vanhakaupunki Väinäjoen '
-      + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
-      + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
-      + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
-      + 'vanhassakaupungissa ovat Kolme veljestä, Riian tuomiokirkko, '
-      + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
-      + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
-      + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
-      + 'kuuluisa, jää runsaan kilometrin päähän pohjoiseen kartan '
-      + 'ulkopuolelle. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Riian vanhakaupunki. Riika perustettiin 1201. '
+      + 'Vapaudenpatsas paljastettiin 1935 itsenäisyystaistelun kaatuneiden '
+      + 'muistoksi, ja se on yli 40 metriä korkea. Tuomiokirkon perustus '
+      + 'laskettiin 1211, ja sitä pidetään Baltian suurimpana '
+      + 'keskiaikaisena kirkkona. Pyhän Pietarin kirkon tornissa on '
+      + 'näköalatasanne 72 metrin korkeudessa.\n\n'
+      + 'Kolme veljestä on Riian vanhin säilynyt asuintalojen ryhmä: vanhin '
+      + 'on 1400-luvun lopulta, keskimmäinen vuodelta 1646. Mustapäiden '
+      + 'talo rakennettiin 1300-luvulla, tuhoutui sodassa ja avattiin '
+      + 'uudelleenrakennettuna 1999. Keskustorin viisi hallia tehtiin '
+      + 'ilmalaivahallien rungoista ja avattiin 1930. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * NELJÄLLÄ KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
@@ -8683,7 +8929,7 @@ export const KAUPUNKIKARTAT = {
        *    Oikea artikkeli on `Mustapäiden talo (Riika)`.
        */
       { nimi: 'Vapaudenpatsas', lat: 56.9512, lon: 24.1132 },
-      { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
+      { nimi: 'Kolme veljestä -talot', lat: 56.9497, lon: 24.103 },
       { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
       { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
       {
@@ -8695,22 +8941,25 @@ export const KAUPUNKIKARTAT = {
   },
   vilna: {
     polku: 'assets/kartat/vilna-keskusta.png',
+    varikartta: 'assets/kartat/vilna-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 54.688, etela: 54.6705, lansi: 25.2695, ita: 25.307 },
+    piirtoRajat: { pohjoinen: 54.69325, etela: 54.66525, lansi: 25.25825, ita: 25.31825 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
      */
-    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka ulottuu '
-      + 'tuomiokirkon aukiolta Aamuportille noin puolentoista '
-      + 'kilometrin matkalla. Jokien väliin jäävällä kukkulalla seisoo '
-      + 'Gediminaksen torni, ja sen juurella ovat Vilnan tuomiokirkko '
-      + 'ja erillinen kellotorni. Etelämpänä ovat punatiilinen Pyhän '
-      + 'Annan kirkko ja Vilnan yliopisto, jonka rakennusten väliin jäi '
-      + 'kolmetoista sisäpihaa. Aamuportti on ainoa jäljellä oleva '
-      + 'yhdeksästä kaupunginportista. Vilnia-joen takana on Užupis, '
-      + 'joka julistautui omaksi tasavallakseen ja kirjoitti itselleen '
-      + 'perustuslain. Kartan kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1994. Gediminaksen torni on '
+      + 'ylälinnan ainoa säilynyt osa, ja siinä on museo ja näköalatasanne. '
+      + 'Tuomiokirkon uusklassinen ulkoasu syntyi Laurynas Gucevičiuksen '
+      + 'suunnitelmien mukaan vuosina 1783–1801. Pyhän Annan kirkko '
+      + 'valmistui noin vuonna 1500, ja sen julkisivussa on 33 eri '
+      + 'tiilityyppiä.\n\n'
+      + 'Vilnan yliopisto sai perustamiskirjansa 1579, ja sen alueella on '
+      + 'kolmetoista sisäpihaa. Aamuportti on kaupunginmuurin ainoa '
+      + 'jäljellä oleva portti. Užupis julistautui tasavallaksi 1. '
+      + 'huhtikuuta 1997. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -8722,7 +8971,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vilnan tuomiokirkko', lat: 54.6858, lon: 25.2874, wiki: 'Vilnan tuomiokirkko' },
       { nimi: 'Pyhän Annan kirkko', lat: 54.6829, lon: 25.2942 },
       { nimi: 'Vilnan yliopisto', lat: 54.6819, lon: 25.2867, wiki: 'Vilnan yliopisto' },
-      { nimi: 'Užupis', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
+      { nimi: 'Užupis', tyyppi: 'aukio', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
       { nimi: 'Aamuportti', lat: 54.6733, lon: 25.2896 },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
@@ -8738,23 +8987,25 @@ export const KAUPUNKIKARTAT = {
        * merkiltä.
        */
       {
-        nimi: 'Kirjankantajat', lat: 54.6825, lon: 25.2872,
+        nimi: 'Kirjankantajat', tyyppi: 'henkilo', lat: 54.6825, lon: 25.2872,
         nosto: 'syvennys-vilna-knygnesiai',
       },
       {
-        nimi: 'Salattu avioliitto', lat: 54.6862, lon: 25.289,
+        nimi: 'Salattu avioliitto', tyyppi: 'henkilo', lat: 54.6862, lon: 25.289,
         nosto: 'skandaali-barbora-salainen-avioliitto',
       },
       {
-        nimi: 'Boratynka', lat: 54.6861, lon: 25.2833,
+        nimi: 'Boratynka', tyyppi: 'esine', lat: 54.6861, lon: 25.2833,
         nosto: 'skandaali-boratynka-kuparikohu',
       },
     ],
   },
   tromssa: {
     polku: 'assets/kartat/tromssa-keskusta.png',
+    varikartta: 'assets/kartat/tromssa-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 69.6575, etela: 69.6365, lansi: 18.937, ita: 19.013 },
+    piirtoRajat: { pohjoinen: 69.6638, etela: 69.6302, lansi: 18.9142, ita: 19.0358 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * TEKSTIREMONTTI 20.8.2026 (erä E8; Raamattu, "TEKSTIEN
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
@@ -8790,7 +9041,6 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tromssan tuomiokirkko', lat: 69.6497, lon: 18.956, wiki: 'Tromssan tuomiokirkko' },
       { nimi: 'Jäämerenkatedraali', lat: 69.6489, lon: 18.9976, wiki: 'Jäämerenkatedraali' },
       { nimi: 'Polaria', lat: 69.6455, lon: 18.9515, wiki: 'Polaria (akvaario)' },
-      { nimi: 'Fjellheisenin köysirata', lat: 69.6395, lon: 18.9958 },
     ],
   },
   dubai: {
@@ -8846,11 +9096,11 @@ export const KAUPUNKIKARTAT = {
        * (25.2671 / 55.3056). Aineiston mukainen laituripiste
        * 25.2664 / 55.3058 jäi noin 50 metriä veden puolelle.
        */
-      { nimi: 'Kultasuuk', lat: 25.2701, lon: 55.2982 },
+      { nimi: 'Kultasuuk', tyyppi: 'aukio', lat: 25.2701, lon: 55.2982 },
       { nimi: 'Dhow-satama', lat: 25.2671, lon: 55.3056, wiki: 'Dhow' },
       { nimi: 'Al Shindagha', lat: 25.2665, lon: 55.289 },
       { nimi: 'Abra-laiturit', lat: 25.265, lon: 55.2953 },
-      { nimi: 'Bastakian kaupunginosa', lat: 25.2639, lon: 55.3 },
+      { nimi: 'Bastakian kaupunginosa', tyyppi: 'aukio', lat: 25.2639, lon: 55.3 },
       { nimi: 'Al Fahidin linnoitus', lat: 25.2632, lon: 55.2972, wiki: 'Dubain museo' },
       /*
        * Neljä lisäkohdetta 18.8.2026 (6 → 10, lehden viimeistely).
@@ -8873,7 +9123,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al Ahmadiyan koulu', lat: 25.2684, lon: 55.2949 },
       { nimi: 'Maustesuuk', lat: 25.2676, lon: 55.2971 },
       { nimi: 'Suuri moskeija', lat: 25.2644, lon: 55.2968 },
-      { nimi: 'Tekstiilisuuk', lat: 25.2635, lon: 55.294 },
+      { nimi: 'Tekstiilisuuk', tyyppi: 'aukio', lat: 25.2635, lon: 55.294 },
     ],
   },
 
@@ -8995,7 +9245,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Qasr al-Bint', lat: 30.3295, lon: 35.4401 },
       { nimi: 'Suuri temppeli', lat: 30.3288, lon: 35.4423 },
       { nimi: 'Teatteri', lat: 30.3248, lon: 35.447 },
-      { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
+      { nimi: 'Siq', tyyppi: 'luonto', lat: 30.3232, lon: 35.4567 },
       /*
        * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
        * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
@@ -9190,7 +9440,7 @@ export const KAUPUNKIKARTAT = {
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Petrassa. */
-      { nimi: 'Jabal al-Nour', lat: 21.4581, lon: 39.8614 },
+      { nimi: 'Jabal al-Nour', tyyppi: 'luonto', lat: 21.4581, lon: 39.8614 },
       { nimi: 'Jannat al-Mu\'alla', lat: 21.4369, lon: 39.8292 },
       { nimi: 'Jinnien moskeija', lat: 21.4334, lon: 39.829 },
       { nimi: 'Mekan kirjasto', lat: 21.425, lon: 39.83 },
@@ -9261,7 +9511,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Al-Bakiriyyan moskeija', lat: 15.35599, lon: 44.21975 },
-      { nimi: 'Suolatori', lat: 15.35496, lon: 44.21584 },
+      { nimi: 'Suolatori', tyyppi: 'aukio', lat: 15.35496, lon: 44.21584 },
       { nimi: 'Talhan moskeija', lat: 15.35399, lon: 44.21238 },
       { nimi: 'Suuri moskeija', lat: 15.35315, lon: 44.2149 },
       { nimi: 'Al-Mahdin moskeija', lat: 15.35308, lon: 44.20922 },
@@ -9339,7 +9589,7 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään; kainalo ensin, kuten Mekassa. */
       { nimi: 'Steamer Point', lat: 12.789904, lon: 44.98151 },
       { nimi: 'Kansallismuseo', lat: 12.77892, lon: 45.04306 },
-      { nimi: 'Craterin tori', lat: 12.77755, lon: 45.03497 },
+      { nimi: 'Craterin tori', tyyppi: 'aukio', lat: 12.77755, lon: 45.03497 },
       { nimi: 'Tawilan altaat', lat: 12.77459, lon: 45.02912 },
     ],
   },
@@ -9400,7 +9650,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Al-Haffan basaari', lat: 17.0029, lon: 54.1025 },
       { nimi: 'Nabi Umranin hauta', lat: 17.0214, lon: 54.1113 },
       { nimi: 'Burj an-Nahda', lat: 17.025, lon: 54.1118 },
-      { nimi: 'Al-Baleedin puisto', lat: 17.0069, lon: 54.1335 },
+      { nimi: 'Al-Baleedin puisto', tyyppi: 'luonto', lat: 17.0069, lon: 54.1335 },
       { nimi: 'Suitsukemuseo', lat: 17.0094, lon: 54.1361 },
     ],
   },
@@ -9480,7 +9730,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Bash Tapian linna', lat: 36.3554, lon: 43.1216 },
       { nimi: 'Qara Saray', lat: 36.3528, lon: 43.1257 },
-      { nimi: 'Nabi Yunusin kumpu', lat: 36.3481, lon: 43.1594 },
+      { nimi: 'Nabi Yunusin kumpu', tyyppi: 'luonto', lat: 36.3481, lon: 43.1594 },
       { nimi: 'Al-Masfin moskeija', lat: 36.3464, lon: 43.1322 },
       { nimi: 'Al-Nabi Jirjisin moskeija', lat: 36.3443, lon: 43.1303 },
       { nimi: 'Al-Nurin moskeija', lat: 36.3431, lon: 43.1267 },
@@ -9536,7 +9786,7 @@ export const KAUPUNKIKARTAT = {
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
       { nimi: 'Sanam Luang', lat: 13.755, lon: 100.4931 },
-      { nimi: 'Wat Saket ja Kultainen vuori', lat: 13.7539, lon: 100.5083 },
+      { nimi: 'Wat Saket ja Kultainen vuori', tyyppi: 'luonto', lat: 13.7539, lon: 100.5083 },
       { nimi: 'Sao Ching Cha', lat: 13.7519, lon: 100.5014 },
       { nimi: 'Wat Phra Kaew', lat: 13.7514, lon: 100.4925 },
       { nimi: 'Suurpalatsi', lat: 13.7501, lon: 100.492 },
@@ -9619,7 +9869,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Yonghe-temppeli', lat: 39.9469, lon: 116.4111 },
       { nimi: 'Nanluoguxiang', lat: 39.9425, lon: 116.3964 },
       { nimi: 'Rumpu- ja kellotorni', lat: 39.9402, lon: 116.3896 },
-      { nimi: 'Jingshanin puisto', lat: 39.9236, lon: 116.3906 },
+      { nimi: 'Jingshanin puisto', tyyppi: 'luonto', lat: 39.9236, lon: 116.3906 },
       { nimi: 'Kielletty kaupunki', lat: 39.9158, lon: 116.3908 },
       { nimi: 'Tiananmen', lat: 39.9073, lon: 116.3911 },
       { nimi: 'Zhengyangmen', lat: 39.8992, lon: 116.3915 },
@@ -9755,9 +10005,9 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään. */
       { nimi: 'Kaupungin sauna', lat: 59.5693, lon: 150.7943 },
       { nimi: 'Severovostokzoloton talo', lat: 59.5658, lon: 150.8101 },
-      { nimi: 'Leninin valtakatu 18', lat: 59.5651, lon: 150.804 },
+      { nimi: 'Leninin valtakatu 18', tyyppi: 'aukio', lat: 59.5651, lon: 150.804 },
       { nimi: 'Kinoteatteri Gornjak', lat: 59.5633, lon: 150.8035 },
-      { nimi: 'Nagajevanlahti', lat: 59.5622, lon: 150.7763 },
+      { nimi: 'Nagajevanlahti', tyyppi: 'luonto', lat: 59.5622, lon: 150.7763 },
       { nimi: 'Urheilupalatsi', lat: 59.561, lon: 150.8071 },
       { nimi: 'Pushkinin kirjasto', lat: 59.5592, lon: 150.8148 },
     ],
@@ -9878,9 +10128,9 @@ export const KAUPUNKIKARTAT = {
       + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
-      { nimi: 'Pokrovskin puisto', lat: 43.1258, lon: 131.8914 },
+      { nimi: 'Pokrovskin puisto', tyyppi: 'luonto', lat: 43.1258, lon: 131.8914 },
       { nimi: 'Linnoitusmuseo', lat: 43.1225, lon: 131.8766 },
-      { nimi: 'Kotkanpesän kukkula', lat: 43.1224, lon: 131.899 },
+      { nimi: 'Kotkanpesän kukkula', tyyppi: 'luonto', lat: 43.1224, lon: 131.899 },
       { nimi: 'Funikulaari', lat: 43.1166, lon: 131.9004 },
       { nimi: 'Arsenjevin museo', lat: 43.1164, lon: 131.8822 },
       { nimi: 'GUM-tavaratalo', lat: 43.1156, lon: 131.8879 },
@@ -9963,7 +10213,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha rautatieasema', lat: 56.85879, lon: 60.60074 },
       { nimi: 'Kharitonovin kartano', lat: 56.84414, lon: 60.60953 },
       { nimi: 'Uralin valtionyliopisto', lat: 56.8404, lon: 60.6168 },
-      { nimi: 'Historiallinen aukio', lat: 56.83805, lon: 60.60453 },
+      { nimi: 'Historiallinen aukio', tyyppi: 'aukio', lat: 56.83805, lon: 60.60453 },
       { nimi: 'Kuvataidemuseo', lat: 56.83513, lon: 60.60324 },
       { nimi: 'Suuri Zlatoust', lat: 56.83466, lon: 60.60052 },
       { nimi: 'Kolminaisuuden katedraali', lat: 56.82733, lon: 60.61437 },
@@ -10111,7 +10361,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Taivaaseenastumisen kirkko', lat: 52.29045, lon: 104.28246 },
       { nimi: 'Rautatieasema', lat: 52.28293, lon: 104.25981 },
       { nimi: 'Ristin ylentämisen kirkko', lat: 52.27636, lon: 104.28837 },
-      { nimi: '130. kortteli', lat: 52.27394, lon: 104.28987 },
+      { nimi: '130. kortteli', tyyppi: 'aukio', lat: 52.27394, lon: 104.28987 },
       /*
        * TÄMÄ PISTE ON VEDESSÄ, JA SE ON OIKEIN.
        * tools/tarkista-karttapisteet.mjs merkitsee sen vedeksi, kuten
@@ -10185,7 +10435,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ginkaku-ji', lat: 35.0267, lon: 135.7983 },
       { nimi: 'Keisarillinen palatsi', lat: 35.0253, lon: 135.7622 },
       { nimi: 'Nijō-linna', lat: 35.0142, lon: 135.7475 },
-      { nimi: 'Nishiki-tori', lat: 35.005, lon: 135.7661 },
+      { nimi: 'Nishiki-tori', tyyppi: 'aukio', lat: 35.005, lon: 135.7661 },
       { nimi: 'Gion', lat: 35.0035, lon: 135.7751 },
       { nimi: 'Kiyomizu-dera', lat: 34.995, lon: 135.785 },
       { nimi: 'Sanjūsangen-dō', lat: 34.9878, lon: 135.7717 },
@@ -10250,12 +10500,12 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Sultan-moskeija', lat: 1.3022, lon: 103.859 },
       { nimi: 'Raffles Hotel', lat: 1.29468, lon: 103.85464 },
-      { nimi: 'Fort Canningin kukkula', lat: 1.29444, lon: 103.84694 },
+      { nimi: 'Fort Canningin kukkula', tyyppi: 'luonto', lat: 1.29444, lon: 103.84694 },
       { nimi: 'Clarke Quay', lat: 1.29002, lon: 103.84609 },
       { nimi: 'Empress Place', lat: 1.28722, lon: 103.85167 },
       { nimi: 'Boat Quay', lat: 1.28685, lon: 103.84951 },
-      { nimi: 'Merlion-puisto', lat: 1.28681, lon: 103.8545 },
-      { nimi: 'Gardens by the Bay', lat: 1.28472, lon: 103.865 },
+      { nimi: 'Merlion-puisto', tyyppi: 'luonto', lat: 1.28681, lon: 103.8545 },
+      { nimi: 'Gardens by the Bay', tyyppi: 'luonto', lat: 1.28472, lon: 103.865 },
       { nimi: 'Sri Mariamman -temppeli', lat: 1.28261, lon: 103.84528 },
       { nimi: 'Thian Hock Keng -temppeli', lat: 1.28106, lon: 103.84753 },
     ],
@@ -10315,7 +10565,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hazrat Khizrin moskeija', lat: 39.66343, lon: 66.98324 },
       { nimi: 'Shah-i-Zindan hautakuja', lat: 39.66306, lon: 66.98778 },
       { nimi: 'Bibi-Khanymin moskeija', lat: 39.66056, lon: 66.97917 },
-      { nimi: 'Registanin aukio', lat: 39.65472, lon: 66.97556 },
+      { nimi: 'Registanin aukio', tyyppi: 'aukio', lat: 39.65472, lon: 66.97556 },
       { nimi: 'Gur-e-Amir', lat: 39.64833, lon: 66.96889 },
       { nimi: 'Ishratkhanan mausoleumi', lat: 39.6431, lon: 66.991 },
     ],
@@ -10396,7 +10646,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri moskeija', lat: 34.26333, lon: 108.93639 },
       { nimi: 'Rumpitorni', lat: 34.26167, lon: 108.93861 },
       { nimi: 'Kellotorni', lat: 34.261, lon: 108.942 },
-      { nimi: 'Steelametsä', lat: 34.25517, lon: 108.94812 },
+      { nimi: 'Steelametsä', tyyppi: 'luonto', lat: 34.25517, lon: 108.94812 },
       { nimi: 'Yongning-portti', lat: 34.2531, lon: 108.94232 },
       { nimi: 'Shaanxin historiallinen museo', lat: 34.22528, lon: 108.95139 },
       { nimi: 'Suuri villihanhipagoda', lat: 34.219842, lon: 108.959354 },
@@ -10474,7 +10724,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Manikarnika Ghat', lat: 25.31087, lon: 83.01409 },
       { nimi: 'Kashi Vishwanath -temppeli', lat: 25.31077, lon: 83.01061 },
       { nimi: 'Dashashwamedh Ghat', lat: 25.30717, lon: 83.01034 },
-      { nimi: 'Assi Ghat', lat: 25.28865, lon: 83.00676 },
+      { nimi: 'Assi Ghat', tyyppi: 'luonto', lat: 25.28865, lon: 83.00676 },
       { nimi: 'Durga Kund -temppeli', lat: 25.28861, lon: 82.99927 },
       { nimi: 'Ramnagarin linnoitus', lat: 25.2697, lon: 83.0245 },
     ],
@@ -10528,11 +10778,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/hanoi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 21.049, etela: 21.0225, lansi: 105.828, ita: 105.865 },
-    esittely: 'Kartan alue on Hanoin vanha ydin: idässä Vanhakaupunki '
-      + 'ja Hoàn Kiếm -järvi, lännessä keisarilinnan alue ja etelässä '
-      + 'Kirjallisuuden temppeli. Koillisnurkassa Long Biênin silta '
-      + 'ylittää Punaisenjoen. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Hanoin vanha ydin. Keisari Lý Thái Tổ siirsi pääkaupungin tänne 1010 '
+      + 'ja nimesi sen Thăng Longiksi; nimi Hanoi tuli käyttöön vuonna 1831. Thăng Longin '
+      + 'keisarilinnan keskiosa kirjattiin Unescon maailmanperintöluetteloon 2010.\n\n'
+      + 'Linnan eteläpuolella on Hanoin lippulinna vuodelta 1812. Yhden pilarin pagodi on '
+      + 'vuodelta 1049 ja Kirjallisuuden temppeli vuodelta 1070. Idässä, Vanhankaupungin '
+      + 'kaduilla, ovat Đồng Xuânin tori, Ngọc Sơnin temppeli ja Pyhän Joosefin katedraali. '
+      + 'Koillisessa Long Biênin silta ylittää Punaisenjoen; se rakennettiin 1899–1902. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Samarkandissa. */
       { nimi: 'Long Biênin silta', lat: 21.04333, lon: 105.85889 },
@@ -10608,7 +10861,7 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Xi'anissa. */
       { nimi: 'Gandantegchinlenin luostari', lat: 47.92306, lon: 106.895 },
       { nimi: 'Mongolian kansallismuseo', lat: 47.9208, lon: 106.9154 },
-      { nimi: 'Sükhbaatarin aukio', lat: 47.91889, lon: 106.9175 },
+      { nimi: 'Sükhbaatarin aukio', tyyppi: 'aukio', lat: 47.91889, lon: 106.9175 },
       { nimi: 'Choijin Laman temppeli', lat: 47.915, lon: 106.91833 },
       { nimi: 'Rautatieasema', lat: 47.90833, lon: 106.88389 },
       { nimi: 'Kansallisstadion', lat: 47.90214, lon: 106.91625 },
@@ -10683,12 +10936,12 @@ export const KAUPUNKIKARTAT = {
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Boudhanath', lat: 27.72139, lon: 85.36194 },
       { nimi: 'Swayambhunath', lat: 27.715, lon: 85.29 },
-      { nimi: 'Unelmien puutarha', lat: 27.71417, lon: 85.31472 },
+      { nimi: 'Unelmien puutarha', tyyppi: 'luonto', lat: 27.71417, lon: 85.31472 },
       { nimi: 'Pashupatinath', lat: 27.7106957, lon: 85.3480682 },
       { nimi: 'Rani Pokhari', lat: 27.707847, lon: 85.315447 },
-      { nimi: 'Kathmandun Durbar-aukio', lat: 27.70415, lon: 85.30647 },
+      { nimi: 'Kathmandun Durbar-aukio', tyyppi: 'aukio', lat: 27.70415, lon: 85.30647 },
       { nimi: 'Dharahara', lat: 27.7007, lon: 85.3119 },
-      { nimi: 'Patanin Durbar-aukio', lat: 27.6734, lon: 85.325 },
+      { nimi: 'Patanin Durbar-aukio', tyyppi: 'aukio', lat: 27.6734, lon: 85.325 },
     ],
   },
   /*
@@ -10752,7 +11005,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Astana Opera', lat: 51.135556, lon: 71.410917 },
       { nimi: 'Khan Shatyr', lat: 51.132222, lon: 71.403889 },
       { nimi: 'Bajterek', lat: 51.128333, lon: 71.430556 },
-      { nimi: 'Nurjol-bulevardi', lat: 51.127208, lon: 71.436947 },
+      { nimi: 'Nurjol-bulevardi', tyyppi: 'aukio', lat: 51.127208, lon: 71.436947 },
       { nimi: 'Akorda', lat: 51.125833, lon: 71.446389 },
       { nimi: 'Hazrat Sultanin moskeija', lat: 51.125, lon: 71.4722 },
       { nimi: 'Rauhan ja sovinnon palatsi', lat: 51.123056, lon: 71.463611 },
@@ -10798,12 +11051,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kanton-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 23.152, etela: 23.097, lansi: 113.2205, ita: 113.2805 },
-    esittely: 'Kartan alue on Kantonin vanha ydin. Pohjoisessa kohoaa '
-      + 'Yuexiun kukkula Zhenhai-torneineen, keskellä ovat kaupungin '
-      + 'vanhat temppelit ja moskeija, ja etelässä virtaa Helmijoki. '
-      + 'Joen rannassa ovat Kolmentoista faktorian entinen paikka ja '
-      + 'Shamianin saari. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Kantonin eli Guangzhoun vanha ydin Helmijoen pohjoisrannalla. Vuonna '
+      + '1380 kaupungin muuria jatkettiin pohjoisessa Yuexiun kukkulalle, ja muuriin '
+      + 'rakennettiin Zhenhai-torni, jossa toimii nykyisin Guangzhoun museo.\n\n'
+      + 'Keskellä ovat Guangxiao-temppeli, jota pidetään kaupungin vanhimpana, '
+      + 'Liurong-temppeli, jonka pagoda valmistui 1097, Huaisheng-moskeija ja graniittinen '
+      + 'Pyhän sydämen katedraali, jonka rakentaminen kesti 1863–1888. Chenin suvun sali '
+      + 'valmistui 1890-luvun alussa. Rannalla ovat Kolmentoista faktorian paikka ja '
+      + 'Shamianin saari, jonka Britannia ja Ranska saivat vuokralle 1859. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Zhenhai-torni', lat: 23.1407, lon: 113.2605 },
@@ -10813,7 +11069,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Huaisheng-moskeija', lat: 23.1253, lon: 113.2536 },
       { nimi: 'Pyhän sydämen katedraali', lat: 23.1173, lon: 113.2548 },
       { nimi: 'Kolmentoista faktorian paikka', lat: 23.109743, lon: 113.251607 },
-      { nimi: 'Shamianin saari', lat: 23.1094, lon: 113.2394 },
+      { nimi: 'Shamianin saari', tyyppi: 'luonto', lat: 23.1094, lon: 113.2394 },
     ],
   },
   /*
@@ -10865,16 +11121,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/yangon-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 16.8165, etela: 16.758, lansi: 96.135, ita: 96.1869 },
-    esittely: 'Kartan yläosassa on Shwedagon-pagodin kukkula ja sen '
-      + 'itäpuolella Kandawgyi-järvi. Alaosan tiheä ruudukko on '
-      + 'Alexander Fraserin 1850-luvulla mittaama keskusta, jonka '
-      + 'eteläreunaa myötäilee Yangon-joki. Kartan kohteista pääsee '
+    esittely: 'Kartan alue ulottuu Yangonin keskustasta pohjoiseen Shwedagon-pagodin kukkulalle. '
+      + 'Pagodi on noin 99 metriä korkea ja seisoo 51 metriä korkealla kukkulalla. Britit '
+      + 'valtasivat kaupungin toisessa Burman sodassa 1852, ja keskusta on suorakulmaista '
+      + 'korttelijakoa.\n\n'
+      + 'Shwedagonin itäpuolella ovat Kandawgyi-järvi ja Karaweik, pohjoisessa Chaukhtatgyin '
+      + 'temppeli. Alaosassa Yangon-joen lähellä ovat Yangonin keskusasema, Bogyoken '
+      + 'markkinat, Sihteeristö, Sule-pagodi, Strand-hotelli ja Botataung-pagodi. Britit '
+      + 'olivat vallanneet kaupungin ensimmäisen kerran jo 1824. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Chaukhtatgyin temppeli', lat: 16.811623, lon: 96.163764 },
       { nimi: 'Shwedagon-pagodi', lat: 16.798354, lon: 96.149705 },
-      { nimi: 'Kandawgyi-järvi ja Karaweik', lat: 16.7986, lon: 96.1657 },
+      { nimi: 'Kandawgyi-järvi ja Karaweik', tyyppi: 'luonto', lat: 16.7986, lon: 96.1657 },
       { nimi: 'Yangonin keskusasema', lat: 16.7817, lon: 96.1611 },
       { nimi: 'Bogyoken markkinat', lat: 16.78038, lon: 96.1556 },
       { nimi: 'Sihteeristö', lat: 16.77556, lon: 96.16583 },
@@ -10930,20 +11190,24 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/mandalay-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 22.024, etela: 21.944, lansi: 96.0513, ita: 96.1375 },
-    esittely: 'Kartan keskellä on palatsin neliö muureineen ja '
-      + 'vallihautoineen, ja sen koillispuolella kohoaa Mandalay-'
-      + 'kukkula pagodeineen. Muurin eteläpuolella on ruutukaavainen '
-      + 'keskusta toreineen, ja lännessä virtaa Irrawaddy. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Mandalay, Myanmarin entinen kuninkaallinen pääkaupunki Irrawaddy-joen '
+      + 'varrella. Kuningas Mindon aloitti palatsinsa rakentamisen 1857 Mandalay-kukkulan '
+      + 'juurella; kukkula kohoaa noin 230 metriä ympäröivää tasankoa korkeammalle. Palatsin '
+      + 'neliö muureineen ja vallihautoineen on kartan keskellä.\n\n'
+      + 'Shwenandaw-luostari on ainoa merkittävä jäljellä oleva osa Mindonin puupalatsista. '
+      + 'Kukkulan juurella ovat Kuthodaw-pagodi, jonka 729 marmorilaattaan on kaiverrettu '
+      + 'buddhalaisen Tipitakan teksti, sekä Kyauktawgyi- ja Sandamuni-pagodit. Etelämpänä '
+      + 'ovat Zegyo-tori ja Setkyathiha-pagodi, ja Mahamuni-temppeli on kartan eteläreunalla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
-      { nimi: 'Mandalay-kukkula', lat: 22.014167, lon: 96.1075 },
+      { nimi: 'Mandalay-kukkula', tyyppi: 'luonto', lat: 22.014167, lon: 96.1075 },
       { nimi: 'Kuthodaw-pagodi', lat: 22.004712, lon: 96.112902 },
       { nimi: 'Kyauktawgyi-pagodi', lat: 22.004474, lon: 96.106582 },
       { nimi: 'Sandamuni-pagodi', lat: 22.00347, lon: 96.109758 },
       { nimi: 'Shwenandaw-luostari', lat: 22.000675, lon: 96.113722 },
       { nimi: 'Mandalayn palatsi', lat: 21.992942, lon: 96.095911 },
-      { nimi: 'Zegyo-tori', lat: 21.9826, lon: 96.0771 },
+      { nimi: 'Zegyo-tori', tyyppi: 'aukio', lat: 21.9826, lon: 96.0771 },
       { nimi: 'Setkyathiha-pagodi', lat: 21.9768, lon: 96.075 },
       { nimi: 'Mahamuni-temppeli', lat: 21.951869, lon: 96.078619 },
     ],
@@ -11016,14 +11280,14 @@ export const KAUPUNKIKARTAT = {
        * koska se on kainalossa eikä pääkuvassa (Bukarestin malli).
        */
       { nimi: 'Baoan-temppeli', lat: 25.073173, lon: 121.515562, wiki: 'Dalongdong Baoan Temple' },
-      { nimi: 'Dihua-katu', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
+      { nimi: 'Dihua-katu', tyyppi: 'aukio', lat: 25.066552, lon: 121.509948, wiki: 'Dihua Street' },
       { nimi: 'Pohjoisportti', lat: 25.04772, lon: 121.51121, wiki: 'Taipei North Gate' },
       { nimi: 'Presidentinlinna', lat: 25.04, lon: 121.511944, wiki: 'Presidential Office Building, Taipei' },
       { nimi: 'Punainen talo', lat: 25.041987, lon: 121.506739, wiki: 'Red House Theater' },
       { nimi: 'Lungshan-temppeli', lat: 25.037222, lon: 121.499444, wiki: 'Longshan Temple (Taipei)' },
-      { nimi: 'Bopiliaon vanha kortteli', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
+      { nimi: 'Bopiliaon vanha kortteli', tyyppi: 'aukio', lat: 25.03693, lon: 121.50214, wiki: 'Bopiliao Historic Block' },
       { nimi: 'Chiang Kai-shek -muistosali', lat: 25.034444, lon: 121.521667, wiki: 'Chiang Kai-shek Memorial Hall' },
-      { nimi: 'Kasvitieteellinen puutarha', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: 25.032286, lon: 121.509519, wiki: 'Taipei Botanical Garden' },
       { nimi: 'Taipei 101', lat: 25.0336, lon: 121.5647, wiki: 'Taipei 101' },
     ],
   },
@@ -11087,12 +11351,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/hongkong-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 22.3015, etela: 22.2665, lansi: 114.1385, ita: 114.1805 },
-    esittely: 'Kartan keskellä on Victoria-satama. Pohjoisrannalla on '
-      + 'Tsim Sha Tsuin kärki kellotorneineen, eteläpuolella '
-      + 'Hongkong-saaren rantakaistale: lännessä Sheung Wanin vanhat '
-      + 'korttelit, keskellä Central ja Star Ferryn laituri, idässä '
-      + 'Wan Chai. Rinne nousee sataman takaa Victoria Peakille. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan keskellä on Victoria-satama. Pohjoisrannalla on Tsim Sha Tsuin kärki, '
+      + 'eteläpuolella Hongkong-saaren rantakaistale, ja rinne nousee sataman takaa Victoria '
+      + 'Peakille.\n\n'
+      + 'Tsim Sha Tsuin kellotorni valmistui 1915 Kowloonin rautatieaseman osana; asema '
+      + 'siirtyi Hung Homiin 1975, ja torni jäi yksin. Vaunuradan alaterminaalista Peak Tram '
+      + 'nousee Peakille, ja rata avattiin 1888. Pyhän Johanneksen katedraalin peruskivi '
+      + 'laskettiin 1847, ja Man Mo -temppeli on ollut Tung Wah -sairaalan hoidossa vuodesta '
+      + '1908. Lisäksi kartalla ovat Western Market, Star Ferryn laituri, Tai Kwun ja Sininen '
+      + 'talo. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Tsim Sha Tsuin kellotorni', lat: 22.29368, lon: 114.16936 },
@@ -11101,7 +11368,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Man Mo -temppeli', lat: 22.283982, lon: 114.150239 },
       { nimi: 'Tai Kwun', lat: 22.2813, lon: 114.154 },
       { nimi: 'Pyhän Johanneksen katedraali', lat: 22.27885, lon: 114.15956 },
-      { nimi: 'Victoria Peak', lat: 22.27556, lon: 114.14389 },
+      { nimi: 'Victoria Peak', tyyppi: 'luonto', lat: 22.27556, lon: 114.14389 },
       { nimi: 'Sininen talo', lat: 22.273897, lon: 114.174146 },
       { nimi: 'Vaunuradan alaterminaali', lat: 22.27204, lon: 114.15487 },
     ],
@@ -11195,7 +11462,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sunda Kelapan satama', lat: -6.125014, lon: 106.809755 },
       { nimi: 'Merenkulkumuseo', lat: -6.126983, lon: 106.8083 },
       { nimi: 'Kota Intanin nostosilta', lat: -6.1312475, lon: 106.8105445 },
-      { nimi: 'Fatahillah-aukio', lat: -6.1347, lon: 106.8133 },
+      { nimi: 'Fatahillah-aukio', tyyppi: 'aukio', lat: -6.1347, lon: 106.8133 },
       { nimi: 'Toko Merah', lat: -6.135955, lon: 106.811285 },
       { nimi: 'Jakarta Kotan asema', lat: -6.137579, lon: 106.814634 },
       { nimi: 'Kim Tek Ie -temppeli', lat: -6.143889, lon: 106.812778 },
@@ -11253,23 +11520,27 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/manila-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 14.6118, etela: 14.5712, lansi: 120.9526, ita: 120.9944 },
-    esittely: 'Kartan keskellä erottuu Intramuroksen muurirengas '
-      + 'Pasig-joen eteläpuolella, ja lännessä avautuu Manilanlahti '
-      + 'satama-altaineen. Joen pohjoispuolella ovat Binondo ja '
-      + 'Escolta, etelässä Rizal-puisto. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan keskellä on Intramuros, muurein ympäröity kaupunki, jonka Miguel López de '
+      + 'Legazpi perusti 1571 Pasig-joen etelärannalle. Joen pohjoispuolella on Binondo, '
+      + 'jonka espanjalaiset perustivat 1594 kristityiksi kääntyneille kiinalaisille.\n\n'
+      + 'Intramuroksessa ovat Fort Santiago, Manilan katedraali, San Agustinin kirkko ja '
+      + 'Baluarte de San Diego. San Agustinin kirkko valmistui 1607, ja katedraali '
+      + 'rakennettiin sodan tuhojen jälkeen uudelleen 1958. Binondossa ovat Binondon kirkko '
+      + 'ja Escolta-katu; Jones-silta, joka avattiin 1921, yhdistää ne Intramurokseen. '
+      + 'Lähellä ovat Quiapon kirkko, Kansallinen taidemuseo ja Rizal-puisto. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Binondon kirkko', lat: 14.60021, lon: 120.9747 },
       { nimi: 'Quiapon kirkko', lat: 14.598782, lon: 120.983783 },
-      { nimi: 'Escolta-katu', lat: 14.59778, lon: 120.97851 },
+      { nimi: 'Escolta-katu', tyyppi: 'aukio', lat: 14.59778, lon: 120.97851 },
       { nimi: 'Jones-silta', lat: 14.595833, lon: 120.977306 },
       { nimi: 'Fort Santiago', lat: 14.595, lon: 120.969444 },
       { nimi: 'Manilan katedraali', lat: 14.59147, lon: 120.97356 },
       { nimi: 'San Agustinin kirkko', lat: 14.588889, lon: 120.975278 },
       { nimi: 'Kansallinen taidemuseo', lat: 14.5869, lon: 120.9812 },
       { nimi: 'Baluarte de San Diego', lat: 14.5854, lon: 120.9756 },
-      { nimi: 'Rizal-puisto', lat: 14.5825, lon: 120.978333 },
+      { nimi: 'Rizal-puisto', tyyppi: 'luonto', lat: 14.5825, lon: 120.978333 },
     ],
   },
   /*
@@ -11322,10 +11593,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kashgar-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 39.4952, etela: 39.45, lansi: 75.97, ita: 76.033 },
-    esittely: 'Kartan alue on Kašgarin keidas: keskellä vanhankaupungin '
-      + 'savitiilikukkula, sen länsipuolella Id Kahin aukio ja idässä '
-      + 'basaarikortteli. Koillisnurkassa on Afaq Khojan mausoleumi. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Kašgarin keidas Tarimin altaassa. Kaupunki oli Silkkitien solmukohta, '
+      + 'ja sen vanhankaupungin ja basaarin sanotaan olevan noin 2 000 vuotta vanhoja. '
+      + 'Vanhakaupunki on tiivis sokkelo kapeita kujia.\n\n'
+      + 'Lännessä Id Kahin moskeijan kerrotaan perustetun 1442, ja se on Xinjiangin suurin '
+      + 'moskeija; sen lähellä on Chini-Bagh. Suuri basaari ja Vanhakaupunki ovat kartan '
+      + 'keskellä. Koillisessa on Afaq Khojan mausoleumi, johon on haudattu 72 suvun jäsentä. '
+      + 'Etelässä ovat Kansanpuisto ja Yusuf Khass Hajibin mausoleumi. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Afaq Khojan mausoleumi', lat: 39.49056, lon: 76.02306 },
@@ -11333,7 +11608,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri basaari', lat: 39.47469, lon: 76.00526 },
       { nimi: 'Id Kahin moskeija', lat: 39.47227, lon: 75.984106 },
       { nimi: 'Vanhakaupunki', lat: 39.46997, lon: 75.99979 },
-      { nimi: 'Kansanpuisto', lat: 39.46335, lon: 75.98988 },
+      { nimi: 'Kansanpuisto', tyyppi: 'luonto', lat: 39.46335, lon: 75.98988 },
       { nimi: 'Yusuf Khass Hajibin mausoleumi', lat: 39.4592, lon: 75.99195 },
     ],
   },
@@ -11386,11 +11661,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lhasa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 29.672, etela: 29.639, lansi: 91.084, ita: 91.142 },
-    esittely: 'Kartan keskellä kohoaa Potala Punaisen kummun päällä, '
-      + 'ja sen kaakkoispuolella alkaa Barkhorin vanhakaupunki '
-      + 'Jokhangin ympärillä. Lännessä on Norbulingkan puisto ja '
-      + 'etelässä virtaa Kyichu. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartan keskellä kohoaa Potala Punaisen kummun päällä, noin 3 700 metrin korkeudessa. '
+      + 'Sen kaakkoispuolella alkaa Barkhorin vanhakaupunki Jokhangin ympärillä, lännessä on '
+      + 'Norbulingkan puisto ja etelässä virtaa Kyichu.\n\n'
+      + 'Viides dalai-lama aloitti Potalan laajan uudelleenrakennuksen 1645, ja palatsi pääsi '
+      + 'Unescon maailmanperintöluetteloon 1994. Jokhang-temppeli on peräisin 600-luvulta, ja '
+      + 'se liitettiin luetteloon 2000. Norbulingka rakennettiin 1700-luvun puolivälissä, ja '
+      + 'se liitettiin luetteloon 2001. Muita kohteita ovat Ramoche-temppeli, Chagpori, '
+      + 'Tiibetin museo ja Lhasan suuri moskeija. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Manilassa. */
       { nimi: 'Ramoche-temppeli', lat: 29.658611, lon: 91.130278 },
@@ -11448,11 +11727,13 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kolkata-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 22.5925, etela: 22.5375, lansi: 88.3175, ita: 88.3775 },
-    esittely: 'Kartan halki virtaa Hooghly, ja sen länsirannalla on '
-      + 'Howrah asemineen. Itärannalla kulkee kaupunki pohjoisen '
-      + 'kirjakortteleista hallintokorttelin kautta Maidanin nurmelle, '
-      + 'jonka eteläpäässä on Victoria Memorial. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan halki virtaa Hooghly. Länsirannalla on Howrah, jonka Howrahin '
+      + 'rautatieasemalta lähti ensimmäinen juna Hooghlyyn 15. elokuuta 1854. Joen yli johtaa '
+      + 'Howrah-silta, 705 metriä pitkä ja avattu 1943 ponttonisillan tilalle.\n\n'
+      + 'Itärannalla pohjoisessa ovat Marble Palace, Nakhodan moskeija ja College Street, '
+      + 'keskustassa Writers’ Building ja St. John’sin kirkko, joka vihittiin 1787. Shaheed '
+      + 'Minar valmistui 1828 Ochterlonyn muistomerkiksi, ja Intian museo perustettiin 1814. '
+      + 'Etelässä on Victoria Memorial. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Howrah-silta', lat: 22.5851, lon: 88.3469 },
@@ -11521,18 +11802,21 @@ export const KAUPUNKIKARTAT = {
       { rajat: { pohjoinen: 34.482, etela: 34.452, lansi: 69.114, ita: 69.157 },
         x: 3, y: 4, leveys: 24, korkeus: 25.24, suunta: '7–9 km lounaaseen' },
     ],
-    esittely: 'Kartan alue on Kabulin vanhakaupunki joen molemmin '
-      + 'puolin, ja etelässä nousee Sher Darwazan harjanne vanhoine '
-      + 'muureineen. Vasemman yläkulman kainalossa ovat Darulamanin '
-      + 'palatsit. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Kabulin vanhakaupunki Kabul-joen molemmin puolin, ja etelässä nousee '
+      + 'Sher Darwazan harjanne vanhoine muureineen. \n\n'
+      + 'Ytimessä ovat Timur Shahin mausoleumi, joka avattiin entisöitynä 2012, Shah-Do '
+      + 'Shamshiran moskeija ja Ka Faroshin lintutori. Baburin puutarhat ovat mogulien '
+      + 'ensimmäisen keisarin hautapaikka 1500-luvulta, ja kunnostus valmistui pääosin 2007. '
+      + 'Darul Amanin palatsin rakennutti Amanullah 1920-luvulla, ja kunnostus valmistui '
+      + 'pääosin 2019. Muita kohteita ovat Bala Hissar, vanha kaupunginmuuri ja Chihil '
+      + 'Sutunin palatsi. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Timur Shahin mausoleumi', lat: 34.516401, lon: 69.175368 },
       { nimi: 'Shah-Do Shamshiran moskeija', lat: 34.515556, lon: 69.171389 },
-      { nimi: 'Ka Faroshin lintutori', lat: 34.514286, lon: 69.179718 },
+      { nimi: 'Ka Faroshin lintutori', tyyppi: 'aukio', lat: 34.514286, lon: 69.179718 },
       { nimi: 'Bala Hissar', lat: 34.505556, lon: 69.191667 },
-      { nimi: 'Baburin puutarhat', lat: 34.503, lon: 69.158 },
+      { nimi: 'Baburin puutarhat', tyyppi: 'luonto', lat: 34.503, lon: 69.158 },
       { nimi: 'Kabulin vanha kaupunginmuuri', lat: 34.501497, lon: 69.172033 },
       { nimi: 'Chihil Sutunin palatsi', lat: 34.468506, lon: 69.152186 },
       { nimi: 'Darul Amanin palatsi', lat: 34.465217, lon: 69.119297 },
@@ -11577,11 +11861,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/chennai-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 13.094, etela: 13.027, lansi: 80.242, ita: 80.303 },
-    esittely: 'Kartan itälaidalla on Bengalinlahti ja sen rannalla '
-      + 'Marina. Pohjoisessa on George Townin hallintokortteli '
-      + 'linnoituksineen, keskellä Egmoren asema ja museokortteli, '
-      + 'etelässä Mylaporen temppelikaupunki. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Chennain vanha ydin Bengalinlahden rannalla. Englantilaiset saivat '
+      + 'rannikolta maa-alueen 1639, ja Francis Day ja Andrew Cogan aloittivat Fort St. '
+      + 'Georgen rakentamisen 1640; linnoituksen ympärille kasvoi Madras, nykyinen Chennai.\n\n'
+      + 'Linnoituksen luona pohjoisessa ovat Madrasin ylin oikeus, joka avattiin 1892, Ripon '
+      + 'Building, joka valmistui 1913, ja Chennai Centralin asema. Keskellä ovat Chennai '
+      + 'Egmoren asema ja Government Museum, joka perustettiin 1851. Chepaukin palatsi '
+      + 'valmistui nawabille 1768, ja rannalla on noin 13 kilometriä pitkä Marina Beach. '
+      + 'Etelässä ovat Kapaleeshwararin temppeli ja San Thomen basilika. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kolkatassa. */
       { nimi: 'Madrasin ylin oikeus', lat: 13.086889, lon: 80.287889 },
@@ -11646,9 +11934,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/mumbai-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 18.9535, etela: 18.9175, lansi: 72.814, ita: 72.852 },
-    esittely: 'Kohteet ovat kaikki eteläisen niemen kärjessä, Crawford '
-      + 'Marketin ja Gateway of Indian välisellä kolmen kilometrin '
-      + 'matkalla. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kohteet ovat kaikki eteläisen niemen kärjessä, Crawford Marketin ja Gateway of '
+      + 'Indian välisellä kolmen kilometrin matkalla. Marine Drive kaartaa länsirannalla '
+      + 'Arabianmerta vasten.\n\n'
+      + 'Pohjoisessa on Chhatrapati Shivaji Maharaj Terminus, entinen Victoria Terminus, joka '
+      + 'valmistui 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Keskellä ovat '
+      + 'viktoriaaniset Town Hall, Bombayn korkein oikeus, St. Thomasin katedraali, David '
+      + 'Sassoonin kirjasto, Prince of Walesin museo ja Rajabain kellotorni. Torni valmistui '
+      + 'marraskuussa 1878, se on 85 metriä korkea, ja sen esikuvana oli Big Ben. Gateway of '
+      + 'India avattiin 1924. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Crawford Market', lat: 18.947414, lon: 72.83471 },
@@ -11717,9 +12011,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/colombo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 6.957, etela: 6.904, lansi: 79.834, ita: 79.8767 },
-    esittely: 'Kohteet ovat rannan suuntaisella neljän kilometrin '
-      + 'nauhalla sataman ja Cinnamon Gardensin välissä. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Colombon vanha keskusta Sri Lankan länsirannikolla Intian valtameren '
+      + 'rannalla. Kaupunki kasvoi satamana: hollantilaiset valtasivat sen 1656 ja britit '
+      + '1796. Fort-kaupunginosa on saanut nimensä portugalilaisten linnoituksesta, ja sen '
+      + 'vieressä on Pettahin kauppa-alue.\n\n'
+      + 'Fortissa ovat Colombon satama, Fortin kellotorni ja rautatieasema. Galle Face Hotel '
+      + 'avattiin 1864 Galle Face Greenin eteläreunalla. Pettahin Punainen moskeija eli Jami '
+      + 'Ul-Alfar valmistui 1909. Wolvendaalin kirkon perustukset laskettiin 1749. '
+      + 'Beira-järven rannalla on Gangaramayan temppeli, ja Colombon kansallismuseo '
+      + 'perustettiin 1877. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Colombon satama', lat: 6.952778, lon: 79.844722 },
@@ -11727,7 +12027,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Punainen moskeija', lat: 6.9385, lon: 79.8518 },
       { nimi: 'Fortin kellotorni', lat: 6.934722, lon: 79.842778 },
       { nimi: 'Fortin rautatieasema', lat: 6.933611, lon: 79.850833 },
-      { nimi: 'Beira-järvi', lat: 6.929434, lon: 79.854182 },
+      { nimi: 'Beira-järvi', tyyppi: 'luonto', lat: 6.929434, lon: 79.854182 },
       { nimi: 'Galle Face Hotel', lat: 6.92, lon: 79.8462 },
       { nimi: 'Gangaramayan temppeli', lat: 6.916389, lon: 79.856389 },
       { nimi: 'Colombon kansallismuseo', lat: 6.91, lon: 79.860833 },
@@ -11780,9 +12080,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/karachi-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 24.87, etela: 24.806, lansi: 66.978, ita: 67.048 },
-    esittely: 'Pohjoisreunassa ovat vanhakaupunki ja Saddar, keskellä '
-      + 'sataman iso allas ja etelässä Clifton. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Karachin keskusta Pakistanin etelärannikolla. Britit valtasivat '
+      + 'kaupungin vuonna 1839, ja siirtomaa-ajan rakennukset muodostavat kartan ytimen, '
+      + 'sataman ja vanhan kaupungin lähellä.\n\n'
+      + 'Empress Market rakennettiin 1884–1889 ja nimettiin kuningatar Victorian mukaan. '
+      + 'Merewetherin kellotornin peruskivi laskettiin 1884 ja torni avattiin 1892. Karachi '
+      + 'Cityn rautatieasemalta avattiin rata Kotriin 1861, Frere Hall valmistui 1865 ja '
+      + 'Pyhän Kolminaisuuden katedraali rakennettiin 1855. Lisäksi kartalla ovat Denso Hall, '
+      + 'Wazir Mansion, Satamahallinnon talo, Karachin kaupungintalo ja Mohatta Palace. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Empress Market', lat: 24.8625, lon: 67.029444 },
@@ -11848,7 +12154,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Amerikan luonnonhistoriallinen museo', lat: 40.78083, lon: -73.97444 },
       { nimi: 'Metropolitan-museo', lat: 40.7794, lon: -73.9631 },
       { nimi: 'Pyhän Patrickin katedraali', lat: 40.75861, lon: -73.97639 },
-      { nimi: 'Times Square', lat: 40.7575, lon: -73.9858 },
+      { nimi: 'Times Square', tyyppi: 'aukio', lat: 40.7575, lon: -73.9858 },
       { nimi: 'New Yorkin pääkirjasto', lat: 40.753333, lon: -73.982222 },
       { nimi: 'Empire State Building', lat: 40.7483, lon: -73.9856 },
       { nimi: 'Flatiron Building', lat: 40.74111, lon: -73.98972 },
@@ -11865,7 +12171,7 @@ export const KAUPUNKIKARTAT = {
        */
       // Brooklyn Bridge, Manhattanin puoleinen torni.
       {
-        nimi: 'Brooklyn 1883', lat: 40.7061, lon: -73.9969,
+        nimi: 'Brooklyn 1883', tyyppi: 'henkilo', lat: 40.7061, lon: -73.9969,
         nosto: 'hetki-brooklyn-bridge-1883',
       },
     ],
@@ -11979,14 +12285,14 @@ export const KAUPUNKIKARTAT = {
        * Aucklandissa ja New Yorkissa. Koordinaatit en-Wikipedian
        * coordinates-rajapinnasta 6.9.2026.
        */
-      { nimi: 'Baldwin Street', lat: -45.84944, lon: 170.53472 },
-      { nimi: 'Kasvitieteellinen puutarha', lat: -45.8575, lon: 170.5225 },
+      { nimi: 'Baldwin Street', tyyppi: 'aukio', lat: -45.84944, lon: 170.53472 },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: -45.8575, lon: 170.5225 },
       { nimi: 'Otagon museo', lat: -45.86568, lon: 170.51084 },
       { nimi: 'Knoxin kirkko', lat: -45.867152, lon: 170.507083 },
       { nimi: 'Otago Boys High School', lat: -45.871597, lon: 170.495051 },
       { nimi: 'Dunedinin rautatieasema', lat: -45.87528, lon: 170.50889 },
       { nimi: 'Speightsin panimo', lat: -45.876374, lon: 170.499959 },
-      { nimi: 'Queens Gardens', lat: -45.87778, lon: 170.50417 },
+      { nimi: 'Queens Gardens', tyyppi: 'luonto', lat: -45.87778, lon: 170.50417 },
     ],
   },
   /*
@@ -12006,10 +12312,12 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/suva-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.418, ita: 178.447 },
-    esittely: 'Kartan alue on Suvan niemen kärki. Lännessä on Suva '
-      + 'Harbour, pohjoisessa kauppakadut ja purosuu, keskellä '
-      + 'siirtomaa-ajan hallintokortteli rantabulevardin varrella ja '
-      + 'etelässä puutarhat ja valtionpäämiehen talo. Kartan kohteista '
+    esittely: 'Kartan alue on Suvan niemen kärki, Fidžin pääkaupungin siirtomaa-ajan keskusta. '
+      + 'Lännessä on Suva Harbour ja sen rantabulevardin varrella Hallintorakennukset, '
+      + 'pohjoisessa kauppakadut ja purosuu ja etelässä puutarhat sekä Valtionpäämiehen talo.\n\n'
+      + 'Pyhän sydämen katedraali valmistui 1902. Thurston Gardensin puutarhassa on Fidžin '
+      + 'museo, joka perustettiin 1904. Katedraali on kartan koillisosassa, ja Thurston '
+      + 'Gardens ja Valtionpäämiehen talo ovat etelässä lähellä toisiaan. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -12020,7 +12328,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Pyhän sydämen katedraali', lat: -18.1416, lon: 178.442 },
       { nimi: 'Hallintorakennukset', lat: -18.145858, lon: 178.424413 },
-      { nimi: 'Thurston Gardens', lat: -18.1491, lon: 178.4247 },
+      { nimi: 'Thurston Gardens', tyyppi: 'luonto', lat: -18.1491, lon: 178.4247 },
       { nimi: 'Valtionpäämiehen talo', lat: -18.151892, lon: 178.42614 },
     ],
   },
@@ -12050,12 +12358,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/cairns-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
-    esittely: 'Kartan alue on Cairnsin vanha keskusta Trinity Bayn ja '
-      + 'Trinity Inletin rannalla. Pohjoisessa ovat katedraali ja '
-      + 'sotamuistomerkki, keskellä ruutukaava kauppakatuineen ja '
-      + 'etelässä rautatieasema ja vanha laiturialue, josta kaupunki '
-      + 'lähti kasvamaan 1876. Idässä avautuu Trinity Bay. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Cairnsin vanha keskusta Trinity Inletin suulla Queenslandin '
+      + 'pohjoisrannikolla. Kaupunki syntyi 1876, kun läheiselle Hodgkinsonin kultakentälle '
+      + 'tarvittiin satama, ja se nimettiin Queenslandin kuvernöörin William Cairnsin mukaan.\n\n'
+      + 'Pohjoisessa ovat St Monican katedraali ja vapaamuurarien temppeli, Esplanadilla '
+      + 'sotamuistomerkki. Abbott Streetin varrella ovat kaupunginvaltuuston talo, '
+      + 'oikeustalojen kortteli ja tullitalo. Nykyinen tullitalo valmistui 1936–1937, '
+      + 'kolmantena samalle paikalle; ensimmäiset tullirakennukset olivat valmiit heinäkuuhun '
+      + '1877 mennessä. Rautatieasema ja vanha satamalaituri ovat etelässä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -12106,12 +12417,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/honiara-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
-    esittely: 'Kartan alue on Honiaran keskusta Ironbottom Soundin '
-      + 'rannalla. Lännessä on Point Cruzin satamaniemi, keskellä '
-      + 'Mendana Avenuen varsi museoineen ja parlamentteineen, idässä '
-      + 'Matanikaujoen laakso ja etelässä kukkulat, joille kaupunki '
-      + 'kiipeää. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Honiaran keskusta Guadalcanal-saarella. Kaupunki kasvoi paikalle, '
+      + 'jonne yhdysvaltalaiset rakensivat tukikohtansa sodan aikana 1942; heidän jättämänsä '
+      + 'tiet ja rakennukset vaikuttivat siihen, että Britannian siirtomaahallinto siirtyi '
+      + 'tuhoutuneesta Tulagista tänne. Nimi Honiara tulee Ghari-kielen ilmauksesta, joka '
+      + 'viittaa tuulen osumispaikkaan.\n\n'
+      + 'Lännessä on Point Cruzin satama. Sen lähellä ovat Salomonsaarten kansallismuseo ja '
+      + 'parlamenttitalo, idässä Holy Crossin katedraali ja etelässä Guadalcanalin '
+      + 'muistomerkki, joka vihittiin 1992 taistelujen 50-vuotispäivänä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
@@ -12120,7 +12434,7 @@ export const KAUPUNKIKARTAT = {
        * osu laiturin päähän vaan niemen keskelle.
        */
       { nimi: 'Salomonsaarten kansallismuseo', lat: -9.431111, lon: 159.954167 },
-      { nimi: 'Point Cruz', lat: -9.433333, lon: 159.950000 },
+      { nimi: 'Point Cruz', tyyppi: 'luonto', lat: -9.433333, lon: 159.950000 },
       { nimi: 'Parlamenttitalo', lat: -9.433611, lon: 159.955833 },
       { nimi: 'Holy Crossin katedraali', lat: -9.436252, lon: 159.963472 },
       { nimi: 'Guadalcanalin muistomerkki', lat: -9.442609, lon: 159.957515 },
@@ -12153,11 +12467,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/portvila-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
-    esittely: 'Kartan alue on Port Vilan keskusta Vilan sataman '
-      + 'itärannalla. Lännessä on satama ja sen edessä Iririkin saari, '
-      + 'keskellä kauppakadut ja Independence Park, etelässä Saralana '
-      + 'Parkin kulttuurikeskus ja parlamentti ja idässä laguuni. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Port Vilan keskusta Efaten saaren länsirannalla, luonnonsataman '
+      + 'rannalla. Britannia ja Ranska hallitsivat Uusia Hebridejä yhdessä, ja järjestely '
+      + 'vahvistettiin 1906 anglo-ranskalaiseksi kondominiumiksi; Vanuatu itsenäistyi 30. '
+      + 'heinäkuuta 1980.\n\n'
+      + 'Keskustassa on Independence Park ja pohjoisempana Pyhän sydämen katedraali, '
+      + 'hiippakunnan päätekirkko. Etelässä Saralana Parkissa ovat Vanuatun kulttuurikeskus '
+      + 'kansallismuseoineen ja sen vastapäätä Vanuatun parlamenttitalo. Idässä on Kormanin '
+      + 'stadion, maan kansallisstadion, jonne mahtuu noin 6 500 katsojaa. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
@@ -12218,7 +12536,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Afroantillilainen museo', lat: 8.963, lon: -79.5392 },
       { nimi: 'Nykytaiteen museo', lat: 8.96092, lon: -79.54304 },
       { nimi: 'Kansallisinstituutti', lat: 8.957583, lon: -79.542944 },
-      { nimi: 'Ancónin kukkula', lat: 8.957278, lon: -79.549444 },
+      { nimi: 'Ancónin kukkula', tyyppi: 'luonto', lat: 8.957278, lon: -79.549444 },
       { nimi: 'Presidentinlinna', lat: 8.953966, lon: -79.534364 },
       { nimi: 'Smithsonianin tutkimuslaitos', lat: 8.9624308, lon: -79.5525621 },
       { nimi: 'Fort Amador', lat: 8.938056, lon: -79.547778 },
@@ -12260,12 +12578,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/portoalegre-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
-    esittely: 'Kartan alue on Porto Alegren vanha keskusta. Luoteessa '
-      + 'ja lännessä on Guaíba, jonka rannalle kaupunki rakennettiin, '
-      + 'keskellä 1700-luvun ruutukaava kukkuloineen ja idässä '
-      + 'Redenção-puiston vihreä laita. Kaupunki mahtuu kapealle '
-      + 'kaistalle veden ja puiston väliin. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Porto Alegren vanha keskusta Guaíba-järven rannalla Brasilian '
+      + 'etelässä. Ensimmäiset asukkaat tulivat Azoreilta 1752, ja kaupungin virallinen '
+      + 'perustamisvuosi on 1772. Vuonna 1773 siitä tuli maakunnan pääkaupunki.\n\n'
+      + 'Theatro São Pedro avattiin 1858. Dores-kirkon peruskivi laskettiin 1807 ja rakennus '
+      + 'valmistui 1904; se on kaupungin vanhin pystyssä oleva kirkko. Otávio Rochan viadukti '
+      + 'luovutettiin liikenteelle 1932. Kartalla ovat myös Vanha kaupungintalo, Rio Grande '
+      + 'do Sulin taidemuseo, Nosso Senhor dos Passosin kappeli, Rio Grande do Sulin '
+      + 'liittovaltionyliopisto ja Joaquim Felizardon museo. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -12316,12 +12637,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/asuncion-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -25.271, etela: -25.3, lansi: -57.665, ita: -57.615 },
-    esittely: 'Kartan alue on Asunciónin vanha keskusta ja sen ranta. '
-      + 'Pohjoisessa avautuu Asunciónin lahti ja Paraguayjoki, '
-      + 'keskellä on siirtomaa-ajan ruutukaava, jonka korttelit '
-      + 'laskeutuvat suorina linjoina rantaan, lännessä stadion ja '
-      + 'kaakossa kansallinen taidemuseo. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Asunciónin vanha keskusta Paraguayjoen itärannalla. Juan de Salazar '
+      + 'perusti kaupungin 15. elokuuta 1537, ja Paraguayn hiippakunta perustettiin 1547; '
+      + 'arkkihiippakunnaksi se korotettiin 1929, ja arkkipiispan istuimena on Asunciónin '
+      + 'katedraali.\n\n'
+      + 'Vanhan keskustan kortteleissa ovat Museo Memoria de la Ciudad, kaupunginteatteri ja '
+      + 'Ateneo Paraguayo. Teatteri avattiin 21. heinäkuuta 1889. Idässä ovat kansallinen '
+      + 'taidemuseo ja Chacaritan stadion, lännessä Defensores del Chacon stadion, joka '
+      + 'avattiin 1917 Olimpian ja Libertadin ottelulla. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * SEITSEMÄN KOHDETTA, numerointi pohjoisesta etelään.
@@ -12377,9 +12701,9 @@ export const KAUPUNKIKARTAT = {
        * coordinates-rajapinnasta 6.9.2026; pienin väli on 257 metriä
        * (Saint-Sulpicen seminaari–Pointe-à-Callière).
        */
-      { nimi: 'Saint-Louis’n aukio', lat: 45.517015, lon: -73.569968 },
+      { nimi: 'Saint-Louis’n aukio', tyyppi: 'aukio', lat: 45.517015, lon: -73.569968 },
       { nimi: 'Château Ramezay', lat: 45.508611, lon: -73.553333 },
-      { nimi: 'Kiinalaiskaupunki', lat: 45.50759, lon: -73.5608 },
+      { nimi: 'Kiinalaiskaupunki', tyyppi: 'aukio', lat: 45.50759, lon: -73.5608 },
       { nimi: 'Saint-Sulpicen seminaari', lat: 45.503889, lon: -73.556944 },
       { nimi: 'Pyhän Patrickin basilika', lat: 45.5035, lon: -73.5647 },
       { nimi: 'Pointe-à-Callièren museo', lat: 45.5026, lon: -73.5542 },
@@ -12446,7 +12770,7 @@ export const KAUPUNKIKARTAT = {
        * Embarcaderon julkisivulla, jossa sisäänkäynti on (Lontoon
        * silmän ja Venetsian Arsenaalin ratkaisu).
        */
-      { nimi: 'Ghirardelli Square', lat: 37.8059, lon: -122.423 },
+      { nimi: 'Ghirardelli Square', tyyppi: 'aukio', lat: 37.8059, lon: -122.423 },
       { nimi: 'Coit Tower', lat: 37.8025, lon: -122.40583 },
       { nimi: 'Ferry Building', lat: 37.7955, lon: -122.3944 },
       { nimi: 'Transamerica Pyramid', lat: 37.7952, lon: -122.4028 },
@@ -12454,7 +12778,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: "Old St. Mary's -katedraali", lat: 37.79265, lon: -122.40575 },
       { nimi: 'Grace Cathedral', lat: 37.7919, lon: -122.413 },
       { nimi: 'Palace Hotel', lat: 37.7884, lon: -122.402 },
-      { nimi: 'Union Square', lat: 37.788056, lon: -122.4075 },
+      { nimi: 'Union Square', tyyppi: 'aukio', lat: 37.788056, lon: -122.4075 },
       { nimi: 'San Franciscon kaupungintalo', lat: 37.77919, lon: -122.41914 },
     ],
   },
@@ -12504,15 +12828,19 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/buenosaires-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -34.5825, etela: -34.618, lansi: -58.4, ita: -58.361 },
-    esittely: 'Kartan alue ulottuu pohjoisen Recoletasta San Telmon '
-      + 'rajalle. Keskellä kulkee ruutukaava, jonka espanjalaiset '
-      + 'mittasivat jo 1580, ja idässä ovat sataman altaat, jotka '
-      + 'kaivettiin vasta isoisän matkan jälkeen. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue ulottuu pohjoisen Recoletasta San Telmon rajalle. Keskellä on vanhan '
+      + 'keskustan ruutukaava, ja idässä ovat Río de la Platan sataman altaat.\n\n'
+      + 'Avenida de Mayon varrella on Café Tortoni, joka avattiin 1858. Palacio Barolo '
+      + 'vihittiin käyttöön 1923, ja se noudattaa Danten Jumalaisen näytelmän rakennetta. '
+      + 'Palacio de Aguas Corrientesin työt alkoivat 1887 ja valmistuivat 1894. Etelässä, '
+      + 'Manzana de las Lucesin korttelissa, jesuiittojen kirkko rakennettiin 1686–1722. '
+      + 'Muita kohteita ovat Pilarin basilika, Plaza San Martín, Museo Mitre, katedraali, '
+      + 'Kongressipalatsi ja Santo Domingon luostari. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Kiotossa. */
       { nimi: 'Pilarin basilika', lat: -34.5873, lon: -58.3911 },
-      { nimi: 'Plaza San Martín', lat: -34.595, lon: -58.375556 },
+      { nimi: 'Plaza San Martín', tyyppi: 'aukio', lat: -34.595, lon: -58.375556 },
       { nimi: 'Palacio de Aguas Corrientes', lat: -34.600556, lon: -58.395 },
       { nimi: 'Museo Mitre', lat: -34.60411, lon: -58.37397 },
       { nimi: 'Buenos Airesin katedraali', lat: -34.607408, lon: -58.373277 },
@@ -12562,11 +12890,13 @@ export const KAUPUNKIKARTAT = {
     rajat: {
       pohjoinen: -33.8455, etela: -33.888, lansi: 151.183, ita: 151.233,
     },
-    esittely: 'Kartan alue ulottuu sataman suuaukolta Hyde Parkin '
-      + 'eteläpäähän. Pohjoisessa on Bennelong Point, jonka kärjessä '
-      + 'seisoi isoisän aikaan Fort Macquarien linnake, idässä '
-      + 'Macquarie Streetin virastorivi ja kasvitieteellinen puutarha, '
-      + 'lännessä Darling Harbour ja etelässä Hyde Park. Kartan '
+    esittely: 'Kartan alue on Sydneyn keskusta Port Jacksonin sataman etelärannalla. Kaupunki '
+      + 'syntyi Sydney Coven rannalle, jonne ensimmäinen eurooppalainen siirtokunta '
+      + 'perustettiin tammikuussa 1788.\n\n'
+      + 'Pohjoisessa Bennelong Pointilla on oopperatalo, joka avattiin 1973, ja Sydney '
+      + 'Harbour Bridge kohoaa sen länsipuolella. Pyrmontin silta Darling Harbourissa on '
+      + 'vuodelta 1902 ja yksi vanhimmista sähköllä toimivista kääntösilloista. Hyde Parkin '
+      + 'laidalla Australian museo, perustettu 1827, on maan ensimmäinen museo. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -12711,7 +13041,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraalibasilika', lat: 39.74028056, lon: -104.98193889 },
       { nimi: 'Denverin taidemuseo', lat: 39.73718806, lon: -104.989345 },
       { nimi: 'Molly Brownin talo', lat: 39.7375, lon: -104.98072222 },
-      { nimi: 'Kasvitieteellinen puutarha', lat: 39.7325, lon: -104.96083333 },
+      { nimi: 'Kasvitieteellinen puutarha', tyyppi: 'luonto', lat: 39.7325, lon: -104.96083333 },
     ],
   },
   /*
@@ -12748,13 +13078,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/houston-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
-    esittely: 'Kartan alue ulottuu Buffalo Bayoun mutkasta '
-      + 'pohjoisessa museokorttelin läpi Hermann Parkiin etelässä. '
-      + 'Yläreunassa kiemurtelee puro, sen oikealla puolella on '
-      + 'keskustan vinoon kääntynyt ruutukaava, ja moottoritiekehä '
-      + 'kiertää sen ympäri. Etelässä erottuu puiston pitkä '
-      + 'heijastusallas. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Houstonin keskusta Buffalo Bayou -puron varrella. Allenin veljekset '
+      + 'ostivat maata puron rannalta vuonna 1836 ja nimesivät kaupungin Texasin tasavallan '
+      + 'presidentin Sam Houstonin mukaan.\n\n'
+      + 'Sam Houstonin puiston maa hankittiin 1899, ja siitä tuli kaupungin ensimmäinen '
+      + 'puisto. Julia Idesonin kirjastotalo avattiin 1926, ja Astrosin stadion, nykyinen '
+      + 'Daikin Park, vuonna 2000 vanhan Union Stationin asemarakennuksen yhteyteen. Menilin '
+      + 'kokoelman rakennuksen suunnitteli Renzo Piano, ja se avattiin 1987. Etelässä Hermann '
+      + 'Parkin maan lahjoitti kaupungille George Hermann 1914. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -12762,9 +13094,9 @@ export const KAUPUNKIKARTAT = {
        * 6.9.2026, ja kaikki välit on mitattu uudelleen: pienin on
        * 300 metriä (Sam Houstonin puisto – Julia Idesonin talo).
        */
-      { nimi: 'Market Squaren puisto', lat: 29.76266, lon: -95.36234 },
-      { nimi: 'Buffalo Bayoun puisto', lat: 29.761, lon: -95.384 },
-      { nimi: 'Sam Houstonin puisto', lat: 29.76, lon: -95.372 },
+      { nimi: 'Market Squaren puisto', tyyppi: 'luonto', lat: 29.76266, lon: -95.36234 },
+      { nimi: 'Buffalo Bayoun puisto', tyyppi: 'luonto', lat: 29.761, lon: -95.384 },
+      { nimi: 'Sam Houstonin puisto', tyyppi: 'luonto', lat: 29.76, lon: -95.372 },
       { nimi: 'Julia Idesonin kirjastotalo', lat: 29.75888889, lon: -95.36916667 },
       { nimi: 'Astrosin stadion', lat: 29.75694444, lon: -95.35555556 },
       { nimi: 'Kongressikeskus', lat: 29.75222222, lon: -95.35777778 },
@@ -12826,7 +13158,7 @@ export const KAUPUNKIKARTAT = {
        * (kaupungintalo – District Six -museo).
        */
       { nimi: 'V&A Waterfront', lat: -33.903056, lon: 18.422778 },
-      { nimi: 'Greenmarket Square', lat: -33.922222, lon: 18.42 },
+      { nimi: 'Greenmarket Square', tyyppi: 'aukio', lat: -33.922222, lon: 18.42 },
       { nimi: 'Iziko Slave Lodge', lat: -33.92506, lon: 18.420393 },
       { nimi: 'Kaupungintalo', lat: -33.925278, lon: 18.423889 },
       { nimi: 'Hyväntoivonlinnoitus', lat: -33.9259, lon: 18.4278 },
@@ -12890,7 +13222,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nairobin arboretum', lat: -1.2743, lon: 36.8131 },
       { nimi: 'Kenian kansallismuseo', lat: -1.273889, lon: 36.815 },
       { nimi: 'Nairobin yliopisto', lat: -1.279722, lon: 36.816667 },
-      { nimi: 'Jeevanjeen puutarha', lat: -1.281014, lon: 36.819476 },
+      { nimi: 'Jeevanjeen puutarha', tyyppi: 'luonto', lat: -1.281014, lon: 36.819476 },
       { nimi: 'Kenian kansallisarkisto', lat: -1.2849, lon: 36.8259 },
       { nimi: 'Nairobi Gallery', lat: -1.286789, lon: 36.817833 },
       { nimi: 'Kenyattan kongressikeskus', lat: -1.288611, lon: 36.823056 },
@@ -12925,12 +13257,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/miami-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 25.8060, etela: 25.7620, lansi: -80.2160, ita: -80.1780 },
-    esittely: 'Kartan alue ulottuu Wynwoodin varastokortteleista '
-      + 'pohjoisessa Miami-joen suulle etelässä. Oikeassa reunassa on '
-      + 'Biscayne Bay, keskellä keskustan ruutukaava ja vasemmalla '
-      + 'moottoritie, joka erottaa keskustan lännen kaupunginosista. '
-      + 'Alaosassa joki mutkittelee lahteen. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Miamin keskusta Biscayne Bayn rannalla Miami-joen pohjoispuolella. '
+      + 'Itäreunaa seuraa lahti, keskellä on keskustan ruutukaava, ja historialliset '
+      + 'rakennukset ovat pääosin 1900-luvun alkupuolelta.\n\n'
+      + 'Vapaudentorni valmistui 1925 sanomalehti Miami Newsin toimitaloksi; vuosina '
+      + '1962–1974 siinä toimi Kuubasta paenneiden vastaanottokeskus. Pérezin taidemuseo '
+      + 'avasi Herzog & de Meuronin suunnitteleman nykyisen rakennuksensa lahden rannalla '
+      + '2013. Esittävän taiteen keskus, Lyric-teatteri, Olympia-teatteri, Bayfront Park ja '
+      + 'piirikunnan oikeustalo täydentävät kohteet. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -12940,7 +13275,6 @@ export const KAUPUNKIKARTAT = {
        * palauta sille koordinaattia. Pienin väli on 462 metriä
        * (Bayfront Park – Olympia-teatteri).
        */
-      { nimi: 'Wynwoodin muraalikorttelit', lat: 25.804, lon: -80.199 },
       { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
       { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
       { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
@@ -12982,12 +13316,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/halifax-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 44.6560, etela: 44.6180, lansi: -63.6000, ita: -63.5580 },
-    esittely: 'Kartan alue kattaa Halifaxin niemimaan koko leveyden: '
-      + 'oikealla on satama, vasemmalla Northwest Armin kapea vuono ja '
-      + 'väliin jää keskustan ruutukaava. Yläreunassa erottuu '
-      + 'linnoituskukkulan tähtimäinen muoto ja alareunassa niemen '
-      + 'metsäinen kärki. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Halifaxin niemimaan keskiosa Nova Scotiassa. Britit perustivat '
+      + 'kaupungin vuonna 1749 Chebuctoon satamaan, ja ensimmäinen puulinnake nousi '
+      + 'kukkulalle kaupungin yläpuolelle.\n\n'
+      + 'Halifaxin linnoitus on kukkulan neljäs linnake, ja se rakennettiin 1828–1856. Vanha '
+      + 'kellotorni oli prinssi Edwardin lahja, ja sen kello alkoi käydä 1803. Pyhän Paavalin '
+      + 'kirkko valmistui 1750 ja on kaupungin vanhin rakennus. Pier 21 toimi 1928–1971 '
+      + 'valtamerilaivojen terminaalina, ja sen kautta kulki noin miljoona maahanmuuttajaa. '
+      + 'Kartalla ovat myös Atlantin merimuseo, Julkinen puutarha, Vanha hautausmaa ja Point '
+      + 'Pleasant Park. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -13000,7 +13337,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanha kellotorni', lat: 44.64722222, lon: -63.5775 },
       { nimi: 'Pyhän Paavalin kirkko', lat: 44.6475, lon: -63.57472222 },
       { nimi: 'Atlantin merimuseo', lat: 44.64769444, lon: -63.57105556 },
-      { nimi: 'Julkinen puutarha', lat: 44.64277778, lon: -63.58222222 },
+      { nimi: 'Julkinen puutarha', tyyppi: 'luonto', lat: 44.64277778, lon: -63.58222222 },
       { nimi: 'Vanha hautausmaa', lat: 44.6434, lon: -63.5728 },
       { nimi: 'Pier 21', lat: 44.63777778, lon: -63.56583333 },
       { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
@@ -13035,12 +13372,16 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/wellington-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -41.2740, etela: -41.3050, lansi: 174.7620, ita: 174.8010 },
-    esittely: 'Kartan alue kattaa koko sen kapean kannaksen, jolle '
-      + 'Wellingtonin keskusta mahtuu: yläreunassa on Thorndon ja '
-      + 'rautatieasema, oikealla satama ja Oriental Bayn kaari, '
-      + 'vasemmalla nousevat Kelburnin ja Mount Cookin rinteet ja '
-      + 'alareunassa on Basin Reserven pyöreä aukio. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue kattaa sen kapean kannaksen, jolle Wellingtonin keskusta mahtuu. '
+      + 'Yläreunassa on Thorndon ja Rautatieasema, oikealla satama ja Oriental Bayn kaari, '
+      + 'vasemmalla nousevat Kelburnin ja Mount Cookin rinteet, ja alareunassa on Basin '
+      + 'Reserven pyöreä kenttä.\n\n'
+      + 'Basin Reserve oli suota, jonka maa kohosi vuoden 1855 maanjäristyksessä; kuivatus '
+      + 'tehtiin 1863, ja ensimmäinen krikettiottelu pelattiin 1868. Bolton Streetin '
+      + 'hautausmaa perustettiin 1840, ja moottoritien tieltä siirrettiin 1968–1971 noin 3 '
+      + '700 hautaa. Nairn Streetin mökki valmistui 1858. Lisäksi kartalla ovat Wellingtonin '
+      + 'museo, Circa-teatteri ja Embassy-teatteri. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -13092,12 +13433,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/christchurch-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -43.5200, etela: -43.5375, lansi: 172.6215, ita: 172.6510 },
-    esittely: 'Kartta näyttää Christchurchin ruutukaavan pohjoisosan: '
-      + 'suorat kadut leikkaavat toisensa suorassa kulmassa, ja niiden '
-      + 'lomassa mutkittelee Avon-joki. Vasemmassa reunassa alkaa '
-      + 'Hagley Parkin nurmi, keskellä on Katedraalitori ja oikeassa '
-      + 'reunassa vanha hautausmaa. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartta kattaa Christchurchin ruutukaavakeskustan pohjoisosan. Kaupungin suunnitteli '
+      + 'Canterbury Association, ja sen ensimmäiset neljä uudisasukaslaivaa saapuivat '
+      + 'Lytteltoniin joulukuussa 1850. Katujen suoruutta rikkoo vain Avon-joen mutkitteleva '
+      + 'uoma.\n\n'
+      + 'Provinssineuvoston talon kivinen istuntosali valmistui 1865, ja sen lähellä ovat '
+      + 'Victorian kellotorni, Taidegalleria ja Canterburyn museo. Keskustassa ovat '
+      + 'Kaupungintalo ja New Regent Street. Muistosilta paljastettiin 11. marraskuuta 1924 '
+      + 'sodissa kuolleiden muistoksi. Barbadoes Streetin hautausmaa avattiin 1851 ja '
+      + 'suljettiin 1885. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -13225,7 +13569,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'St Johnin katedraali', lat: -27.46398, lon: 153.030061 },
       { nimi: 'Spring Hillin vesisäiliöt', lat: -27.4661, lon: 153.0231 },
-      { nimi: 'ANZAC-aukio', lat: -27.4665, lon: 153.0266 },
+      { nimi: 'ANZAC-aukio', tyyppi: 'aukio', lat: -27.4665, lon: 153.0266 },
       { nimi: 'MacArthurin talo', lat: -27.4684, lon: 153.0273 },
       { nimi: 'Wheat Creekin holvi', lat: -27.4689, lon: 153.0245 },
       { nimi: 'Naldham House', lat: -27.4701, lon: 153.0301 },
@@ -13311,7 +13655,7 @@ export const KAUPUNKIKARTAT = {
        * numeroympyrän halkaisija, eikä se muuta kohteen paikkaa
        * korttelin tarkkuudella.
        */
-      { nimi: 'Sun Yat-senin puutarha', lat: 49.2794, lon: -123.1038 },
+      { nimi: 'Sun Yat-senin puutarha', tyyppi: 'luonto', lat: 49.2794, lon: -123.1038 },
     ],
   },
   /*
@@ -13367,7 +13711,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Ontarion kuninkaallinen museo', lat: 43.667679, lon: -79.394809 },
       { nimi: 'University College', lat: 43.66277778, lon: -79.39555556 },
-      { nimi: 'Kensingtonin tori', lat: 43.65477222, lon: -79.40067778 },
+      { nimi: 'Kensingtonin tori', tyyppi: 'aukio', lat: 43.65477222, lon: -79.40067778 },
       { nimi: 'Ontarion taidegalleria', lat: 43.65361111, lon: -79.39277778 },
       { nimi: 'Kaupungintalo', lat: 43.65333333, lon: -79.38388889 },
       { nimi: 'Elgin ja Winter Garden', lat: 43.653056, lon: -79.379167 },
@@ -13414,12 +13758,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/chicago-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
-    esittely: 'Kartta näyttää Loopin ja sen laidat: yläreunassa '
-      + 'Chicago-joen haarat kohtaavat, keskellä on kohoradan '
-      + 'silmukan rajaama ruutukaava, oikeassa reunassa alkaa Grant '
-      + 'Parkin nurmi järveä kohti ja vasemmassa alakulmassa ovat '
-      + 'Near West Siden korttelit joen länsipuolella. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Chicagon keskustan eli Loopin ja sen laidat. Kohteet ulottuvat '
+      + 'työväenliikkeen historiasta pilvenpiirtäjiin.\n\n'
+      + 'Haymarketin aukiolla pidettiin 4. toukokuuta 1886 työväen kokous, jossa poliisien '
+      + 'joukkoon heitettiin pommi. Hull House, Jane Addamsin ja Ellen Gates Starrin vuonna '
+      + '1889 perustama asukastalo, palveli maahanmuuttajia. Marquette Building valmistui '
+      + '1890-luvun puolivälissä ja edustaa Chicagon koulua; Willis Towerin katto on 442 '
+      + 'metrissä. Kartalla ovat myös Merchandise Mart, Chicago Theatre, Kulttuurikeskus ja '
+      + 'Taideinstituutti. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -13430,7 +13776,7 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Merchandise Mart', lat: 41.8884, lon: -87.6355 },
       { nimi: 'Chicago Theatre', lat: 41.88527778, lon: -87.62777778 },
-      { nimi: 'Haymarketin aukio', lat: 41.88488889, lon: -87.64413889 },
+      { nimi: 'Haymarketin aukio', tyyppi: 'aukio', lat: 41.88488889, lon: -87.64413889 },
       { nimi: 'Kulttuurikeskus', lat: 41.88388889, lon: -87.625 },
       { nimi: 'Marquette Building', lat: 41.8795, lon: -87.63006944 },
       { nimi: 'Taideinstituutti', lat: 41.87944444, lon: -87.62388889 },
@@ -13475,11 +13821,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/losangeles-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
-    esittely: 'Kartta kattaa Los Angelesin keskustan ruutukaavan: '
-      + 'yläreunassa on hallintokortteleiden Civic Center, vasemmalla '
-      + 'kohoaa Bunker Hillin rinne, keskellä kulkevat Grand Avenue '
-      + 'ja Hill Street ja alaoikealla jatkuu Broadwayn vanha '
-      + 'liikekatu. Kartan kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Los Angelesin keskusta, joka kasvoi vuonna 1781 perustetun '
+      + 'espanjalaisen pueblon eteläpuolelle ruutukaavana. Pohjoisessa on hallintokortteli '
+      + 'Civic Center, lännessä Bunker Hillin rinne ja alaoikealla vanha Broadway.\n\n'
+      + 'Kaupungintalo valmistui 1928 ja oli kaupungin korkein rakennus vuoteen 1964. Bunker '
+      + 'Hillin rinnettä nousee Angels Flight, vuonna 1901 avattu köysirata, ja Grand '
+      + 'Avenuella on Frank Gehryn suunnittelema Walt Disney -konserttitalo vuodelta 2003. '
+      + 'Pershing Square varattiin julkiseksi aukioksi 1866, ja Eastern Columbian turkoosi '
+      + 'Art Deco -rakennus valmistui 1930. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -13494,7 +13843,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Angels Flight', lat: 34.05133889, lon: -118.25021111 },
       { nimi: 'Pääkirjasto', lat: 34.05027778, lon: -118.255 },
       { nimi: 'Japanilaisamerikkalainen museo', lat: 34.04963889, lon: -118.23858333 },
-      { nimi: 'Pershing Square', lat: 34.04825, lon: -118.25301 },
+      { nimi: 'Pershing Square', tyyppi: 'aukio', lat: 34.04825, lon: -118.25301 },
       { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
     ],
   },
@@ -13527,12 +13876,13 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/montevideo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
-    esittely: 'Kartan vasemmassa reunassa on Ciudad Viejan niemi, jolla '
-      + 'vesi kaartaa kolmelta sivulta: pohjoisessa sataman laiturit, '
-      + 'etelässä Río de la Plata. Niemeltä lähtee itään yksi '
-      + 'yhtenäinen ruutukaava, ja sen keskellä kulkee suorana 18 de '
-      + 'Julio -katu kaupungintalolle asti. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan vasemmassa reunassa on Ciudad Vieja, vanhakaupunki niemellä Río de la Platan '
+      + 'rannalla. Espanjalaiset perustivat Montevideon sotilastukikohdaksi portugalilaisia '
+      + 'vastaan 1720-luvulla, ja niemeltä kaupunki levisi itään.\n\n'
+      + 'Vanhassakaupungissa ovat Montevideon pörssi, Alkuperäiskansojen taiteen museo, joka '
+      + 'avattiin 2004, ja Torres Garcían museo. Estévez-palatsi tilattiin 1873. Itään päin '
+      + 'ovat Lapidon talo, Sodren auditorio, Kaupungintalo ja Keskusasema, joka avattiin '
+      + '1897. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -13602,7 +13952,7 @@ export const KAUPUNKIKARTAT = {
        * palatsi), toiseksi pienin 266 metriä (Baburizzan palatsi –
        * anglikaaninen katedraali).
        */
-      { nimi: 'Plaza Sotomayor', lat: -33.03846667, lon: -71.62876667 },
+      { nimi: 'Plaza Sotomayor', tyyppi: 'aukio', lat: -33.03846667, lon: -71.62876667 },
       { nimi: 'Baburizzan palatsi', lat: -33.0404, lon: -71.6289 },
       { nimi: 'Anglikaaninen katedraali', lat: -33.04234, lon: -71.62723 },
       { nimi: 'Valparaíson yliopisto', lat: -33.04388889, lon: -71.6175 },
@@ -13650,12 +14000,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/neworleans-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
-    esittely: 'Ruutu on pysty, ja Mississippi kaartaa sen oikeassa '
-      + 'reunassa penkereen takana. Yläosassa ovat Ranskan Korttelin '
-      + 'ja Tremén tiheät korttelit, keskeltä kulkee vinosti alas '
-      + 'oikealle leveä Canal Street, ja alaosassa liikekeskustan '
-      + 'korttelit kasvavat suuremmiksi. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa New Orleansin vanhan ytimen Mississippi-joen mutkassa. Jean-Baptiste '
+      + 'Le Moyne de Bienville perusti kaupungin 1718, ja se siirtyi Yhdysvalloille '
+      + 'Louisianan kaupassa 1803.\n\n'
+      + 'Pohjoisessa Ranskalaisen korttelin laidalla ovat St. Augustinen kirkko, Vanha '
+      + 'rahapaja, Gallier House ja Hermann-Griman talo. Canal Streetin tuntumassa on '
+      + 'Saenger-teatteri, joka avattiin 4. helmikuuta 1927. Etelässä, liikekeskustan '
+      + 'suurissa kortteleissa, ovat Puuvillapörssi, Tullitalo ja Gallier Hall. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -13859,7 +14211,7 @@ export const KAUPUNKIKARTAT = {
        * pienin 244 metriä (festivaalikeskus – kuvernöörintalo).
        */
       { nimi: 'St Peterin katedraali', lat: -34.91277778, lon: 138.59805556 },
-      { nimi: 'Eläintarha', lat: -34.91416667, lon: 138.60583333 },
+      { nimi: 'Eläintarha', tyyppi: 'luonto', lat: -34.91416667, lon: 138.60583333 },
       { nimi: 'Festivaalikeskus', lat: -34.91944444, lon: 138.59777778 },
       { nimi: 'Kuvernöörintalo', lat: -34.920126, lon: 138.600321 },
       { nimi: 'Etelä-Australian museo', lat: -34.920783, lon: 138.603017 },
@@ -13901,12 +14253,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/havanna-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
-    esittely: 'Kartan alue on se, jonka sisällä Havanna eli kolmesataa '
-      + 'vuotta muurien takana: oikeassa reunassa on satamalahti, '
-      + 'keskellä vanhankaupungin ahdas ruudukko neljine aukioineen ja '
-      + 'vasemmalla se leveä kaari, jonka muurien purkaminen jätti '
-      + 'jälkeensä — Prado ja Capitolion aukio. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Havannan vanhakaupunki, jota ennen ympäröivät kaupunginmuurit. '
+      + 'Muurien purku alkoi 1863, ja niiden paikalle jäi leveä katukaari. Vanhakaupunki '
+      + 'linnoituksineen merkittiin Unescon maailmanperintöluetteloon 1982.\n\n'
+      + 'Satamalahden tuntumassa vanhankaupungin aukiot muodostavat ryhmän: Katedraaliaukio, '
+      + 'Plaza de Armas ja Plaza Vieja, joiden lähellä ovat San Franciscon basilika ja Pyhän '
+      + 'Hengen kirkko. Länsilaidalla seisoo El Capitolio, jonka rakennustyöt kestivät '
+      + '1926–1929. Sen vieressä ovat Intiaanittaren lähde ja Bacardí-talo. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -13915,11 +14269,11 @@ export const KAUPUNKIKARTAT = {
        * (San Franciscon basilika – Plaza Vieja), toiseksi pienin 249
        * metriä (El Capitolio – Intiaanittaren lähde).
        */
-      { nimi: 'Katedraaliaukio', lat: 23.140892, lon: -82.351628 },
-      { nimi: 'Plaza de Armas', lat: 23.14, lon: -82.349167 },
+      { nimi: 'Katedraaliaukio', tyyppi: 'aukio', lat: 23.140892, lon: -82.351628 },
+      { nimi: 'Plaza de Armas', tyyppi: 'aukio', lat: 23.14, lon: -82.349167 },
       { nimi: 'Bacardí-talo', lat: 23.1389, lon: -82.3571 },
       { nimi: 'San Franciscon basilika', lat: 23.136944, lon: -82.348333 },
-      { nimi: 'Plaza Vieja', lat: 23.136078, lon: -82.350061 },
+      { nimi: 'Plaza Vieja', tyyppi: 'aukio', lat: 23.136078, lon: -82.350061 },
       { nimi: 'El Capitolio', lat: 23.135278, lon: -82.359444 },
       { nimi: 'Intiaanittaren lähde', lat: 23.133272, lon: -82.358361 },
       { nimi: 'Pyhän Hengen kirkko', lat: 23.1325, lon: -82.3504 },
@@ -13957,12 +14311,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/mexico-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 19.445, etela: 19.425, lansi: -99.1475, ita: -99.1265 },
-    esittely: 'Kartta näyttää sen ruutukaavan, jonka espanjalaiset '
-      + 'piirsivät Tenochtitlanin raunioiden päälle: kadut kohtaavat '
-      + 'suorassa kulmassa, ja korttelit ovat lähes samankokoisia. '
-      + 'Oikeassa alakulmassa on Zócalon aukea, keskellä kulkee Madero '
-      + 'ja vasemmassa reunassa alkaa Alameda Centralin puisto. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta näyttää Méxicon historiallisen keskustan, jossa espanjalaiset rakensivat '
+      + 'uuden kaupungin Tenochtitlanin raunioille sen jälkeen, kun Hernán Cortés oli '
+      + 'vallannut atsteekkien pääkaupungin elokuussa 1521. Keskusta liitettiin Unescon '
+      + 'maailmanperintöluetteloon 1987.\n\n'
+      + 'Postipalatsin rakennustyöt alkoivat 1902 ja se vihittiin käyttöön 1907. '
+      + 'Länsilaidalla ovat kaupunginteatteri ja San Franciscon luostarikirkko, etelässä '
+      + 'Vizcaínas-koulu, jonka perustamisesta baskiveljeskunta päätti 1732. Idässä ovat San '
+      + 'Ildefonson kollegio ja Kansojen museo, pohjoisessa Santo Domingon aukio ja Plaza '
+      + 'Garibaldi. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -13971,8 +14328,8 @@ export const KAUPUNKIKARTAT = {
        * luostarikirkko), toiseksi pienin 310 metriä (San Ildefonso –
        * Kansojen museo).
        */
-      { nimi: 'Plaza Garibaldi', lat: 19.441, lon: -99.139 },
-      { nimi: 'Santo Domingon aukio', lat: 19.438378, lon: -99.133717 },
+      { nimi: 'Plaza Garibaldi', tyyppi: 'aukio', lat: 19.441, lon: -99.139 },
+      { nimi: 'Santo Domingon aukio', tyyppi: 'aukio', lat: 19.438378, lon: -99.133717 },
       { nimi: 'Kaupunginteatteri', lat: 19.436561, lon: -99.137267 },
       { nimi: 'San Ildefonson kollegio', lat: 19.43605, lon: -99.130658 },
       { nimi: 'Postipalatsi', lat: 19.435686, lon: -99.1404 },
@@ -14020,12 +14377,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/hobart-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
-    esittely: 'Kartta näyttää Hobartin vanhan ruutukaavan sellaisena '
-      + 'kuin se piirrettiin rinteeseen: kadut laskevat lännen mäiltä '
-      + 'itään satamaan, ja oikeassa reunassa avautuu Sullivans Coven '
-      + 'poukama. Yläreunassa on Queens Domainin nurmi, alareunassa '
-      + 'Battery Pointin niemi. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Hobartin keskusta Sullivans Coven rannalla Etelä-Tasmaniassa. '
+      + 'Kaupunki perustettiin 1804, ja se on Australian toiseksi vanhin kaupunki Sydneyn '
+      + 'jälkeen. Taustalla kohoaa Mount Wellington, paikallisella nimellä kunanyi.\n\n'
+      + 'Parlamenttitalo valmistui 1840 tullitaloksi, ja sen lähellä sataman tuntumassa on '
+      + 'Tasmanian museo. Etelässä on Anglesean kasarmi, jonka paikan kuvernööri Macquarie '
+      + 'valitsi 1811. Pohjoisessa ovat Campbell Streetin vankila ja Hobartin synagoga, '
+      + 'lännessä St Maryn katedraali ja keskellä St Davidin katedraali. Sotamuistomerkki on '
+      + 'idässä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -14082,12 +14441,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/darwin-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
-    esittely: 'Kartta kattaa Darwinin niemen kärjen: vasemmalla ja '
-      + 'ylhäällä on avomeri, oikealla Darwin Harbour ja niiden '
-      + 'välissä kapea törmä, jolle koko keskusta mahtuu. Vasenta '
-      + 'reunaa kulkee Esplanadin puistokaista, keskellä on Smith '
-      + 'Streetin ruutukaava ja alhaalla State Squaren hallintokortteli. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Darwinin niemen kärjen: lännessä ja pohjoisessa on avomeri, idässä '
+      + 'Darwin Harbour, ja niiden välissä kapea törmä, jolle keskusta mahtuu. Kaupunki on '
+      + 'nuori. Japanilaiset pommittivat sitä ensimmäisen kerran 19. helmikuuta 1942, ja '
+      + 'joulupäivänä 1974 hirmumyrsky Tracy vaurioitti tai tuhosi noin neljä viidestä '
+      + 'kodista.\n\n'
+      + 'Pohjoisessa ovat Meren tähden katedraali ja Bicentennial-puisto, lännessä Lameroon '
+      + 'ranta. Keskustassa ovat Vic-hotelli, joka avattiin 1890, Star-teatteri ja Hotel '
+      + 'Darwin, alempana Parlamenttitalo ja Mutamaja. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -14097,10 +14459,10 @@ export const KAUPUNKIKARTAT = {
        * Bicentennial-puisto).
        */
       { nimi: 'Meren tähden katedraali', lat: -12.45913, lon: 130.838199 },
-      { nimi: 'Bicentennial-puisto', lat: -12.460945, lon: 130.837061 },
+      { nimi: 'Bicentennial-puisto', tyyppi: 'luonto', lat: -12.460945, lon: 130.837061 },
       { nimi: 'Vic-hotelli', lat: -12.46199444, lon: 130.84261944 },
       { nimi: 'Star-teatteri', lat: -12.46409, lon: 130.84306 },
-      { nimi: 'Lameroon ranta', lat: -12.4652, lon: 130.8386 },
+      { nimi: 'Lameroon ranta', tyyppi: 'luonto', lat: -12.4652, lon: 130.8386 },
       { nimi: 'Hotel Darwin', lat: -12.465814, lon: 130.840987 },
       { nimi: 'Parlamenttitalo', lat: -12.46666667, lon: 130.84277778 },
       { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
@@ -14137,12 +14499,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lima-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
-    esittely: 'Kartta näyttää Liman vanhankaupungin ruutukaavan '
-      + 'kokonaisuudessaan: yläreunassa mutkittelee Rímac-joki, '
-      + 'keskellä kadut leikkaavat toisensa suorassa kulmassa niin '
-      + 'kuin ne mitattiin 1535, ja alaoikealla kaartaa leveä '
-      + 'valtaväylä, joka kulkee vanhan kaupunginmuurin linjaa. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Liman historiallisen keskustan Rímac-joen eteläpuolella. Francisco '
+      + 'Pizarro perusti kaupungin 18. tammikuuta 1535 nimellä Ciudad de los Reyes, ja '
+      + 'keskusta liitettiin Unescon maailmanperintöluetteloon 1988.\n\n'
+      + 'Idässä on San Franciscon luostari, jonka kirkko avattiin 1672 ja jonka kirjastossa '
+      + 'on noin 25 000 nidettä. Sen lähellä ovat Inkvisition museo ja Torre Taglen palatsi. '
+      + 'Lännessä ovat Santa Rosan ja Las Nazarenasin pyhäkkö, Casa de Osambela sekä Plaza '
+      + 'San Martín, etelässä Casona de San Marcos. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
@@ -14157,7 +14521,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Las Nazarenasin pyhäkkö', lat: -12.04556389, lon: -77.03736694 },
       { nimi: 'Inkvisition museo', lat: -12.04808, lon: -77.02634 },
       { nimi: 'Torre Taglen palatsi', lat: -12.04884, lon: -77.02931 },
-      { nimi: 'Plaza San Martín', lat: -12.0515, lon: -77.0345 },
+      { nimi: 'Plaza San Martín', tyyppi: 'aukio', lat: -12.0515, lon: -77.0345 },
       { nimi: 'Casona de San Marcos', lat: -12.0545, lon: -77.0322 },
     ],
   },
@@ -14190,12 +14554,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/quito-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
-    esittely: 'Kartan yläosassa on Quiton vanhankaupungin tiheä '
-      + 'ruutukaava, joka kallistuu vinoon laakson suunnan mukana. '
-      + 'Alavasemmalla kohoaa Panecillon kukkula omine '
-      + 'korkeuskäyrineen, oikeassa reunassa laskee Machángara-joen '
-      + 'uoma, ja niiden välissä kaupunki loppuu rinteeseen. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Quito on Andien laaksossa noin 2 850 metrin korkeudessa Pichincha-tulivuoren '
+      + 'rinteellä. Vanhakaupunki otettiin Unescon maailmanperintöluetteloon 1978, ja kartan '
+      + 'yläosassa on sen tiheä ruutukaava, joka kallistuu laakson suunnan mukana.\n\n'
+      + 'Voto Nacionalin basilikan rakentaminen alkoi 1892 ranskalaisen Emilio Tarlierin '
+      + 'suunnitelmilla, ja kirkko on yhä keskeneräinen. Vanhankaupungin ytimessä ovat La '
+      + 'Mercedin basilika, San Agustínin luostari, El Sagrarion kirkko, Casa del Alabado ja '
+      + 'Kaupunkimuseo. Alavasemmalla kohoaa El Panecillo, ja etelässä on Vuoden 1909 '
+      + 'näyttelypalatsi. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -14559,14 +14925,18 @@ export const KAUPUNKIKARTAT = {
    */
   bergen: {
     polku: 'assets/kartat/bergen-keskusta.png',
+    varikartta: 'assets/kartat/bergen-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
-    esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
-      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
-      + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
-      + 'Bryggenin laiturit, lahden pohjukassa on tori, oikealla '
-      + 'nousevat Fløyenin rinteen kadut ja oikealla alhaalla on '
-      + 'Lille Lungegårdsvannetin monikulmainen lampi. Kartan '
+    piirtoRajat: { pohjoinen: 60.4058, etela: 60.3802, lansi: 5.28745, ita: 5.34905 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartta kattaa Bergenin vanhan keskustan Vågenin lahden ympärillä. Perimätiedon '
+      + 'mukaan kuningas Olav Kyrre perusti kaupungin vuonna 1070, ja lahden rannalla toimi '
+      + 'myöhemmin Hansaliiton kauppa-asema. Puukaupunki paloi usein, muun muassa 1702.\n\n'
+      + 'Nordnesin niemellä ovat Fredriksbergin linnake ja Munkelivin luostarin paikka. '
+      + 'Luostarin perusti noin 1110 Øystein Magnusson, ja linnake rakennettiin 1660-luvulla '
+      + 'Vågenin meritaistelun jälkeen. Korskirken mainitaan jo 1100-luvun lopulla, ja '
+      + 'Nykirkenin nykyisen kivikirkon suunnitteli Reichborn 1756 palon jälkeen. Permanenten '
+      + 'valmistui 1896, Kaupunginkirjasto 1917 ja Yliopistomuseo perustettiin 1825. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -14627,11 +14997,15 @@ export const KAUPUNKIKARTAT = {
       lansi: -5.828,
       ita: -5.804,
     },
-    esittely: 'Kartan alue kattaa Tangerin vanhan ytimen: oikeassa yläkulmassa '
-      + 'on satama, sen vasemmalla puolella medina, joka nousee rinnettä '
-      + 'kasbahiin, ja vasemmalla Marshanin tasanko meren yllä. '
-      + 'Alareunassa alkavat muurien ulkopuoliset uuden keskustan suorat '
-      + 'kadut. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Tangerin vanha ydin Gibraltarinsalmen rannalla. Portugali valtasi '
+      + 'kaupungin 1471, ja 1661 se siirtyi Englannille myötäjäisinä. Vuoteen 1956 kaupunki '
+      + 'oli kansainvälisen hallinnon alainen.\n\n'
+      + 'Medina nousee rinnettä kasbahiin, jossa Kasbahin palatsi on museo. Medinassa ovat '
+      + 'Tangerin suurmoskeija ja Amerikan lähetystö, jonka Marokon sulttaani lahjoitti '
+      + 'Yhdysvalloille 1821 ja josta tuli sen ensimmäinen ulkomailla hankittu kiinteistö. '
+      + 'Hotelli Continental on sataman puolella, Gran Teatro Cervantes uuden kaupungin '
+      + 'puolella. Marshanin tasangolla ovat Mendoubin residenssi, Pyhän Andreaksen kirkko ja '
+      + 'Café Hafa, joka avattiin 1921. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         /*
@@ -14728,10 +15102,14 @@ export const KAUPUNKIKARTAT = {
       lansi: -7.9965,
       ita: -7.9785,
     },
-    esittely: 'Kartan alue on Marrakechin medina: yläreunassa Ben Youssefin '
-      + 'kortteli, keskellä sukien kujaverkko ja Jemaa el-Fnan aukio, '
-      + 'alareunassa kasbah muureineen. Ruudun vasemmalla laidalla erottuu '
-      + 'medinan muuri ja sen takana suorat uudet kadut. Kartan kohteista '
+    esittely: 'Kartan alue on Marrakechin medina, jonka punaisesta savesta tehdyt muurit ovat '
+      + 'antaneet kaupungille lempinimen Punainen kaupunki. Medina on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1985. Sen sydän on Jemaa el-Fnan aukio.\n\n'
+      + 'Pohjoisessa on Ben Youssefin medresa, jonka nykyinen rakennus valmistui 1564–1565 '
+      + 'saadilaissulttaanin aikana; lähellä ovat Dar el Bacha ja Mouassinen suihkulähde. '
+      + 'Etelässä Bahian palatsin rakentaminen alkoi 1860-luvulla ja sitä laajennettiin '
+      + '1894–1900. Dar Si Said on lähellä, ja kasbahin alueella ovat El Badin palatsi, Bab '
+      + 'Agnaou sekä Saadilaisten haudat, jotka löydettiin uudelleen 1917. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
@@ -14810,11 +15188,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/addisabeba-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 9.0500, etela: 9.0270, lansi: 38.7460, ita: 38.7690 },
-    esittely: 'Kartan alue ulottuu yliopiston kampukselta pohjoisessa '
-      + 'Kolminaisuuden katedraalille etelässä. Keskellä kulkee '
-      + 'Churchill Road, jonka pohjoispäässä on Piazzan tiheä '
-      + 'kortteliverkko, ja idässä levittäytyy Arat Kilon aukioiden '
-      + 'seutu. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Addis Abeban vanha keskusta. Kaupungin perustivat keisari Menelik II '
+      + 'ja keisarinna Taitu vuonna 1886, ja Piazzan seutu on sen vanhaa ydintä.\n\n'
+      + 'Läntisessä osassa ovat Pyhän Yrjön katedraali, Hager Fikir -teatteri ja '
+      + 'Taitu-hotelli, jota pidetään maan vanhimpana hotellina. Menelik II tilasi '
+      + 'katedraalin Adwan voiton muistoksi; se valmistui 1911, ja Haile Selassie kruunattiin '
+      + 'siellä 1930. Pohjoisessa ja idässä ovat Etnologinen museo, Etiopian kansallismuseo, '
+      + 'jossa on noin 3,2 miljoonaa vuotta vanha Lucy, Menelik II:n koulu, Abrehot-kirjasto '
+      + 'ja Kolminaisuuden katedraali, joka valmistui 1942. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -14865,12 +15247,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/guatemala-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
-    esittely: 'Kartan alue kattaa vyöhykkeen 1 eli historiallisen '
-      + 'keskustan: pohjoisessa Carmenin kukkula, keskellä Plaza de '
-      + 'la Constitución ja etelässä 12. kadun postipalatsi. '
-      + 'Ruutukaava on tiheä ja säännöllinen, ja idässä maasto '
-      + 'putoaa rotkoon. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Guatemalan kaupungin vyöhyke 1, historiallinen keskusta. Pääkaupunki '
+      + 'siirrettiin tähän laaksoon vuonna 1776, kun Antigua Guatemala oli tuhoutunut vuoden '
+      + '1773 maanjäristyksissä.\n\n'
+      + 'Pohjoisessa ovat La Recolecciónin kirkko ja Cerrito del Carmenin kukkula, jonka '
+      + 'Neitsyt Marian ermita sai ensimmäisen kappelinsa 1600-luvun alussa. Keskellä on '
+      + 'Kansallispalatsi, joka rakennettiin 1939–1943, sekä Kansalliskirjasto, San Juan de '
+      + 'Diosin sairaala ja Instituto Nacional Central. Etelässä ovat Santo Domingon kirkko '
+      + 'ja Postipalatsi, jonka rakennustyöt alkoivat 1938. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -14929,12 +15314,12 @@ export const KAUPUNKIKARTAT = {
        * metriä (Vapauden puisto – King's College).
        */
       { nimi: 'Lagosin keskusmoskeija', lat: 6.457222, lon: 3.388056 },
-      { nimi: 'Tinubun aukio', lat: 6.4538, lon: 3.3894 },
+      { nimi: 'Tinubun aukio', tyyppi: 'aukio', lat: 6.4538, lon: 3.3894 },
       { nimi: 'Ajelen hautausmaa', lat: 6.4515, lon: 3.3942 },
       { nimi: 'Kristuksen katedraali', lat: 6.4508, lon: 3.3902 },
       { nimi: 'King\'s College', lat: 6.44961, lon: 3.39905 },
-      { nimi: 'Vapauden puisto', lat: 6.4489, lon: 3.3965 },
-      { nimi: 'Tafawa Balewan aukio', lat: 6.447222, lon: 3.401389 },
+      { nimi: 'Vapauden puisto', tyyppi: 'luonto', lat: 6.4489, lon: 3.3965 },
+      { nimi: 'Tafawa Balewan aukio', tyyppi: 'aukio', lat: 6.447222, lon: 3.401389 },
       { nimi: 'Nigerian kansallismuseo', lat: 6.444444, lon: 3.403333 },
     ],
   },
@@ -14980,11 +15365,11 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Vanha apteekki', lat: -6.1584, lon: 39.1926 },
       { nimi: 'Sulttaanin palatsi', lat: -6.1599, lon: 39.1905 },
-      { nimi: 'Darajanin tori', lat: -6.1621, lon: 39.1935 },
+      { nimi: 'Darajanin tori', tyyppi: 'aukio', lat: -6.1621, lon: 39.1935 },
       { nimi: 'Hamamnin kylpylä', lat: -6.1623, lon: 39.1910 },
       { nimi: 'Pyhän Joosefin katedraali', lat: -6.162778, lon: 39.188889 },
       { nimi: 'Tippu Tipin talo', lat: -6.1640, lon: 39.1870 },
-      { nimi: 'Michenzanin korttelit', lat: -6.16526, lon: 39.1988 },
+      { nimi: 'Michenzanin korttelit', tyyppi: 'aukio', lat: -6.16526, lon: 39.1988 },
       { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
     ],
   },
@@ -15102,10 +15487,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pasteur-instituutti', lat: 14.65618, lon: -17.43503 },
       { nimi: 'Théodore Monod -museo', lat: 14.66367, lon: -17.43828 },
       { nimi: 'Dakarin katedraali', lat: 14.66545, lon: -17.43761 },
-      { nimi: 'Riippumattomuuden aukio', lat: 14.66953, lon: -17.43206 },
+      { nimi: 'Riippumattomuuden aukio', tyyppi: 'aukio', lat: 14.66953, lon: -17.43206 },
       { nimi: 'Dakarin rautatieasema', lat: 14.67646, lon: -17.43368 },
       { nimi: 'Suuri moskeija', lat: 14.67821, lon: -17.44246 },
-      { nimi: 'Soumbédiounen käsityökylä', lat: 14.67685, lon: -17.45781 },
+      { nimi: 'Soumbédiounen käsityökylä', tyyppi: 'aukio', lat: 14.67685, lon: -17.45781 },
       { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
     ],
   },
@@ -15142,11 +15527,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/salta-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -24.783, etela: -24.7975, lansi: -65.418, ita: -65.397 },
-    esittely: 'Saltan keskusta on yhä se yhdeksän kertaa viiden '
-      + 'korttelin ruudukko, joka mitattiin 1582. Kartan keskellä on '
-      + 'Plaza 9 de Julio, kaupungin perustamispaikka, ja sen '
-      + 'laidoilla kolme kartan kohdetta. Idässä maasto nousee Cerro '
-      + 'San Bernardoksi. Kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Saltan keskusta Lerman laaksossa Andien itäpuolella. Kaupunki '
+      + 'perustettiin vuonna 1582, ja sen keskus rakentui Plaza 9 de Julio -aukion ympärille.\n\n'
+      + 'Aukion ääressä ovat Saltan katedraali, joka valmistui 1882, Saltan cabildo, vanha '
+      + 'raatihuone, jonka nykyinen rakennus aloitettiin 1700-luvun lopulla, ja Korkean '
+      + 'vuoriston arkeologian museo, joka avattiin 2004. Siellä esitellään yli 500 vuotta '
+      + 'vanhoja inkalasten muumioita Llullaillaco-tulivuorelta. Lähikortteleissa ovat Saltan '
+      + 'kuvataidemuseo, La Merced -kirkko, San Franciscon basilika ja San Bernardon '
+      + 'luostari. Idässä on Güemesin muistomerkki. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
@@ -15198,19 +15586,22 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/antofagasta-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -23.6415, etela: -23.652, lansi: -70.406, ita: -70.3925 },
-    esittely: 'Antofagasta on kapea nauha meren ja aavikon välissä, '
-      + 'ja sen vanhin osa on tässä ruudussa. Pohjoisessa on '
-      + 'historiallinen kortteli laitureineen ja tullitaloineen, '
-      + 'keskellä Colónin aukio kellotorneineen. Länsireuna on merta. '
-      + 'Kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Antofagastan vanhimman osan, kapean rantakaistaleen meren ja Atacaman '
+      + 'aavikon välissä. Kaupunki perustettiin virallisesti 1868 Bolivian satamaksi, ja '
+      + 'Chile miehitti sen 14. helmikuuta 1879; miehitys käynnisti Tyynenmeren sodan.\n\n'
+      + 'Salpietarilaiturin rakennus alkoi 1872, ja se julistettiin kansalliseksi '
+      + 'monumentiksi 1978. Colónin aukiolla on kellotorni, jonka brittiläinen siirtokunta '
+      + 'lahjoitti kaupungille. Muita kohteita ovat Antofagastan museo, Bolivian kauppapankin '
+      + 'talo, Gibbsin talo, Kaupunginteatteri, katedraali ja eteläisimpänä Giménezin talo. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
        */
-      { nimi: 'Salpietarilaituri', lat: -23.6435, lon: -70.3977 },
+      { nimi: 'Salpietarilaituri', tyyppi: 'luonto', lat: -23.6435, lon: -70.3977 },
       { nimi: 'Antofagastan museo', lat: -23.64416667, lon: -70.39777778 },
       { nimi: 'Bolivian kauppapankin talo', lat: -23.64502, lon: -70.397358 },
-      { nimi: 'Colónin aukio', lat: -23.64611111, lon: -70.39777778 },
+      { nimi: 'Colónin aukio', tyyppi: 'aukio', lat: -23.64611111, lon: -70.39777778 },
       { nimi: 'Gibbsin talo', lat: -23.64611111, lon: -70.40055556 },
       { nimi: 'Kaupunginteatteri', lat: -23.64654167, lon: -70.39658333 },
       { nimi: 'Antofagastan katedraali', lat: -23.64716667, lon: -70.39738889 },
@@ -15241,12 +15632,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/nuuk-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 64.1825, etela: 64.173, lansi: -51.751, ita: -51.7245 },
-    esittely: 'Nuuk on maailman pohjoisin pääkaupunki, ja sen vanhin '
-      + 'osa on kilometrin levyinen niemenkärki. Siellä ovat Grönlannin '
-      + 'vanhin talo vuodelta 1728, vuonna 1849 vihitty katedraali ja '
-      + 'maan suurin tuoretori, ja kilometrin päässä idässä on '
-      + 'nykyinen keskusta parlamentteineen ja kulttuuritaloineen. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Nuukin vanha keskusta Grönlannin lounaisrannikolla. Hans Egeden '
+      + 'aloittama siirtokunta siirrettiin tälle paikalle vuonna 1728. Nuuk on nykyään '
+      + 'Grönlannin pääkaupunki ja suurin kaupunki.\n\n'
+      + 'Hans Egeden talo on kaupungin vanhin säilynyt rakennus, ja kukkulalla sen yllä '
+      + 'seisoo Egeden patsas. Lähellä ovat luterilainen katedraali ja Kalaaliaraq-tori. '
+      + 'Idempänä nykyisessä keskustassa ovat parlamentti Inatsisartut, revontulten '
+      + 'innoittama kulttuuritalo Katuaq, kansalliskirjasto ja Nuukin taidemuseo. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
@@ -15272,7 +15665,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Grönlannin kansallismuseo', lat: 64.1772, lon: -51.7462 },
       { nimi: 'Hans Egeden talo', lat: 64.1782, lon: -51.7448 },
       { nimi: 'Nuukin katedraali', lat: 64.17972, lon: -51.74417 },
-      { nimi: 'Kalaaliaraq-tori', lat: 64.17861, lon: -51.7425 },
+      { nimi: 'Kalaaliaraq-tori', tyyppi: 'aukio', lat: 64.17861, lon: -51.7425 },
       { nimi: 'Inatsisartut', lat: 64.1783, lon: -51.7406 },
       { nimi: 'Katuaq', lat: 64.17722, lon: -51.73889 },
       { nimi: 'Grönlannin kansalliskirjasto', lat: 64.17556, lon: -51.73917 },
@@ -15304,13 +15697,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/anchorage-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 61.2245, etela: 61.21, lansi: -149.916, ita: -149.87 },
-    esittely: 'Anchoragen keskusta on yhä se ruutukaava, joka '
-      + 'mitattiin 1915 telttakaupungin eteläpuolelle korkeammalle '
-      + 'maalle. Pohjoisreunalla virtaa Ship Creek, jonka rannalta '
-      + 'kaupunki alkoi, ja eteläreunaa myötäilee Delaney Park Strip '
-      + '— entinen paloaukea, joka oli kaupungin ensimmäinen '
-      + 'lentokenttä. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Anchoragen keskusta Ship Creekin suulta etelään. Kaupunki syntyi '
+      + 'vuonna 1915 telttaleirinä, kun Alaska Railroadin rakennustyöt alkoivat, ja '
+      + 'kaupunkitontit mitattiin leirin eteläpuolelle korkeammalle maalle.\n\n'
+      + 'Anchoragen rautatieasema on pohjoisessa. Varhaisia taloja ovat A.E.C.:n mökki 23, '
+      + 'Wendlerin talo ja Oscar Andersonin talo, joka rakennettiin 1915 tonttihuutokaupan '
+      + 'jälkeen. Delaney Park Strip oli alun perin palokuja vuoden 1917 kaavassa, ja Noel '
+      + 'Wien lensi sieltä kesäkuussa 1924. Lähellä ovat Alaska Center for the Performing '
+      + 'Arts, Anchorage Museum, joka avattiin 1968, ja Anchoragen vanha hautausmaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään ja
@@ -15364,12 +15759,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/puntaarenas-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -53.1478, etela: -53.1670, lansi: -70.9201, ita: -70.8923 },
-    esittely: 'Oikeassa laidassa on Magalhãesinsalmi, ja rantaviiva '
-      + 'kulkee kuvan halki vinosti oikeasta yläkulmasta alas '
-      + 'keskelle. Rannan ja kukkuloiden väliin jää tiivis ruutukaava, '
-      + 'jonka poikki kulkee kolme leveämpää väylää. Vasemmassa '
-      + 'laidassa korttelit harvenevat ja maa nousee. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Punta Arenasin keskusta Magalhãesinsalmen rannalla Etelä-Chilessä. '
+      + 'Chile perusti alueelle Fuerte Bulnesin linnakkeen 1843, ja siviilikaupunki '
+      + 'siirrettiin nykyiselle paikalleen 1848. Lampaankasvatus toi 1800-luvun lopulla '
+      + 'suuria vaurauksia, ja Panaman kanavan avautuminen 1914 heikensi salmen merkitystä.\n\n'
+      + 'Sara Braunin hautausmaa ja Salesiaanien museo ovat pohjoisessa, ja Cerro de la Cruz '
+      + 'kohoaa lännessä. Keskustassa ovat Sagrado Corazónin katedraali ja Braun-Menéndezin '
+      + 'palatsi, joka toimii nykyään museona. Merisotamuseo ja Salmen rantabulevardi '
+      + 'sijaitsevat rannan tuntumassa. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -15378,14 +15775,13 @@ export const KAUPUNKIKARTAT = {
        * pienin on 188 metriä (Braun-Menéndezin palatsi –
        * merisotamuseo), toiseksi pienin 208 metriä.
        */
-      { nimi: 'Lampuripatsas', lat: -53.149764, lon: -70.896575 },
       { nimi: 'Sara Braunin hautausmaa', lat: -53.152999, lon: -70.897648 },
       { nimi: 'Salesiaanien museo', lat: -53.155612, lon: -70.902287 },
-      { nimi: 'Cerro de la Cruz', lat: -53.160112, lon: -70.915813 },
+      { nimi: 'Cerro de la Cruz', tyyppi: 'luonto', lat: -53.160112, lon: -70.915813 },
       { nimi: 'Sagrado Corazónin katedraali', lat: -53.162000, lon: -70.909000 },
       { nimi: 'Braun-Menéndezin palatsi', lat: -53.162177, lon: -70.905893 },
       { nimi: 'Merisotamuseo', lat: -53.163581, lon: -70.904302 },
-      { nimi: 'Salmen rantabulevardi', lat: -53.164567, lon: -70.900459 },
+      { nimi: 'Salmen rantabulevardi', tyyppi: 'luonto', lat: -53.164567, lon: -70.900459 },
     ],
   },
   /*
@@ -15430,11 +15826,11 @@ export const KAUPUNKIKARTAT = {
        * Kaikki 28 väliä on mitattu haversinilla: pienin on 114 metriä
        * (aukio – katedraali), toiseksi pienin 433 metriä.
        */
-      { nimi: 'Avión Pirata', lat: -17.775674, lon: -63.174000 },
+      { nimi: 'Avión Pirata', tyyppi: 'luonto', lat: -17.775674, lon: -63.174000 },
       { nimi: 'Gabriel René Moreno -yliopisto', lat: -17.775749, lon: -63.195902 },
-      { nimi: 'El Arenalin puisto', lat: -17.778800, lon: -63.180600 },
+      { nimi: 'El Arenalin puisto', tyyppi: 'luonto', lat: -17.778800, lon: -63.180600 },
       { nimi: 'Yleinen hautausmaa', lat: -17.781409, lon: -63.172133 },
-      { nimi: 'Plaza 24 de Septiembre', lat: -17.783255, lon: -63.182119 },
+      { nimi: 'Plaza 24 de Septiembre', tyyppi: 'aukio', lat: -17.783255, lon: -63.182119 },
       { nimi: 'San Lorenzon katedraali', lat: -17.784200, lon: -63.181700 },
       { nimi: 'Noel Kempff Mercadon museo', lat: -17.792713, lon: -63.181884 },
       { nimi: 'Tahuichi Aguileran stadion', lat: -17.796100, lon: -63.183900 },
@@ -15467,11 +15863,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/monterrey-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 25.6820, etela: 25.6570, lansi: -100.3470, ita: -100.3040 },
-    esittely: 'Kartan alue ulottuu lännessä Obispadon kukkulalta '
-      + 'idässä Barrio Antiguoon. Alareunassa kaartaa Santa Catarina '
-      + '-joki, joka on pinnalta kuiva suurimman osan vuotta ja jakaa '
-      + 'kaupungin kahtia. Sen pohjoispuolella on tiivis ruutukaava, '
-      + 'jonka itäosassa kadut levenevät Macroplazan aukioksi. Kartan '
+    esittely: 'Kartan alue on Monterreyn vanha keskusta Koillis-Meksikossa. Diego de Montemayor '
+      + 'perusti kaupungin 1596 Santa Lucían lähteiden lähelle. Alareunassa kulkee Santa '
+      + 'Catarina -joki, joka on yleensä pinnalta kuiva ja jakaa kaupungin pohjois- ja '
+      + 'eteläosaan.\n\n'
+      + 'Lännessä kukkulalla on Museo del Obispado, ja Colegio Civil sekä La Purísiman kirkko '
+      + 'ovat sen ja keskustan välissä. Macroplaza on noin 40 hehtaarin aukio, jonka '
+      + 'rakentaminen alkoi 1980-luvun alussa: sen pohjoispäässä on Nuevo Leónin '
+      + 'hallintopalatsi ja reunalla Monterreyn katedraali, jonka rakentaminen alkoi '
+      + '1700-luvulla. Dulces Nombresin kappeli ja Barrio Antiguo ovat kaakossa. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -15525,12 +15925,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/merida-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
-    esittely: 'Kartan alue kattaa koko siirtomaa-ajan Méridan. '
-      + 'Ruutukaava on poikkeuksellisen säännöllinen: parittomat '
-      + 'kadut kulkevat idästä länteen ja parilliset pohjoisesta '
-      + 'etelään, ja keskellä on Plaza Grande. Ainoa vino viiva on '
-      + 'Paseo de Montejo, joka lähtee ruudukosta luoteeseen. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue kattaa Méridan siirtomaa-ajan ytimen. Espanjalaiset perustivat kaupungin '
+      + '1542 muinaisen maya-kaupungin paikalle, ja ruutukaava on yhä säännöllinen. Ainoa '
+      + 'vino viiva on Paseo de Montejo, joka lähtee ruudukosta luoteeseen.\n\n'
+      + 'Pohjoisessa ovat Santa Anan kirkko ja Peón Contrerasin teatteri, joka vihittiin '
+      + 'käyttöön joulukuussa 1908. Keskustassa ovat Casa de los Montejo ja Méridan '
+      + 'kaupunginmuseo. San Juanin kaari pystytettiin 1690, ja vierellä ovat San Juanin '
+      + 'puisto ja Santa Isabelin ermita. Idässä ovat La Mejoradan puisto ja San Cristóbalin '
+      + 'kirkko. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -15543,10 +15945,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Santa Anan kirkko', lat: 20.975846, lon: -89.621209 },
       { nimi: 'Peón Contrerasin teatteri', lat: 20.969489, lon: -89.622476 },
-      { nimi: 'La Mejoradan puisto', lat: 20.968346, lon: -89.616398 },
+      { nimi: 'La Mejoradan puisto', tyyppi: 'luonto', lat: 20.968346, lon: -89.616398 },
       { nimi: 'Casa de los Montejo', lat: 20.966195, lon: -89.624388 },
       { nimi: 'Méridan kaupunginmuseo', lat: 20.964452, lon: -89.621377 },
-      { nimi: 'San Juanin puisto ja kaari', lat: 20.962616, lon: -89.626035 },
+      { nimi: 'San Juanin puisto ja kaari', tyyppi: 'luonto', lat: 20.962616, lon: -89.626035 },
       { nimi: 'San Cristóbalin kirkko', lat: 20.961151, lon: -89.617410 },
       { nimi: 'Santa Isabelin ermita', lat: 20.957247, lon: -89.629632 },
     ],
@@ -15602,7 +16004,7 @@ export const KAUPUNKIKARTAT = {
        * – ihmisoikeusmuseo).
        */
       { nimi: 'Manitoban museo', lat: 49.9, lon: -97.136667 },
-      { nimi: 'Pörssikortteli', lat: 49.8985, lon: -97.1403 },
+      { nimi: 'Pörssikortteli', tyyppi: 'aukio', lat: 49.8985, lon: -97.1403 },
       { nimi: 'Burton Cummings -teatteri', lat: 49.895833, lon: -97.143611 },
       { nimi: 'Manitoba Hydro Place', lat: 49.892397, lon: -97.1464 },
       { nimi: 'Kanadan ihmisoikeusmuseo', lat: 49.890797, lon: -97.130997 },
@@ -15732,8 +16134,8 @@ export const KAUPUNKIKARTAT = {
        * museo – eläintarha), seuraavat 422 ja 447 metriä.
        */
       { nimi: 'Prempeh II:n museo', lat: 6.700639, lon: -1.629194 },
-      { nimi: 'Kumasin eläintarha', lat: 6.701000, lon: -1.626000 },
-      { nimi: 'Kejetian tori', lat: 6.698639, lon: -1.619139 },
+      { nimi: 'Kumasin eläintarha', tyyppi: 'luonto', lat: 6.701000, lon: -1.626000 },
+      { nimi: 'Kejetian tori', tyyppi: 'aukio', lat: 6.698639, lon: -1.619139 },
       { nimi: 'Komfo Anokyen sairaala', lat: 6.697479, lon: -1.631690 },
       /*
        * LINNAKE KANTAA MYÖS KULTAJAKKARAN SODAN KARTTANOSTON
@@ -15755,7 +16157,7 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Ramseyerin muistokirkko', lat: 6.689400, lon: -1.621600 },
       { nimi: 'Baba Yaran stadion', lat: 6.682681, lon: -1.605111 },
-      { nimi: 'Rattrayn puisto', lat: 6.681781, lon: -1.626117 },
+      { nimi: 'Rattrayn puisto', tyyppi: 'luonto', lat: 6.681781, lon: -1.626117 },
     ],
   },
   /*
@@ -15798,12 +16200,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kano-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
-    esittely: 'Vasemmassa yläkulmassa kohoaa Dala-kukkula, ja siitä '
-      + 'kaakkoon levittäytyy vanhankaupungin tiheä kujaverkko. '
-      + 'Kuvan keskellä isot korttelit ovat emiirin palatsin '
-      + 'muurien sisäpuolta, ja oikeassa yläkulmassa kadut '
-      + 'suoristuvat ruudukoksi — se on Sabon Gari. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Kanon vanhakaupunki Pohjois-Nigeriassa. Dala-kukkula on alueen '
+      + 'varhaisin tunnettu asuinpaikka, ja kaupunki kasvoi sen ympärille. Koillisessa Sabon '
+      + 'Garin kadut suoristuvat ruudukoksi: se on uudempi asuinalue, jonne tuli muuttajia '
+      + 'etelästä 1900-luvun alussa rautatien mukana.\n\n'
+      + 'Emiirin palatsi Gidan Rumfa rakennettiin 1400-luvun lopulla, ja emiiri asuu siellä '
+      + 'yhä. Lähellä ovat suurmoskeija, jonka nykyinen rakennus on 1960-luvulta, ja Gidan '
+      + 'Makaman museo 1400-luvulla rakennetussa talossa. Kofar Matan värjäämöjen kuopat '
+      + 'kerrotaan perustetun vuonna 1498. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -15814,9 +16219,9 @@ export const KAUPUNKIKARTAT = {
        * pienin on 335 metriä (suurmoskeija – Gidan Rumfa),
        * toiseksi pienin 357 metriä (Kofar Mata – stadion).
        */
-      { nimi: 'Sabon Garin tori', lat: 12.015400, lon: 8.539900 },
-      { nimi: 'Dala-kukkula', lat: 12.009280, lon: 8.506980 },
-      { nimi: 'Kofar Matan värjäämöt', lat: 12.000853, lon: 8.526099 },
+      { nimi: 'Sabon Garin tori', tyyppi: 'aukio', lat: 12.015400, lon: 8.539900 },
+      { nimi: 'Dala-kukkula', tyyppi: 'luonto', lat: 12.009280, lon: 8.506980 },
+      { nimi: 'Kofar Matan värjäämöt', tyyppi: 'aukio', lat: 12.000853, lon: 8.526099 },
       { nimi: 'Sani Abachan stadion', lat: 11.999722, lon: 8.529167 },
       { nimi: 'Kanon suurmoskeija', lat: 11.994855, lon: 8.517640 },
       { nimi: 'Gidan Rumfa', lat: 11.992300, lon: 8.516000 },
@@ -15925,12 +16330,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/alicesprings-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -23.6925, etela: -23.7085, lansi: 133.8705, ita: 133.8875 },
-    esittely: 'Kartan alue on Alice Springsin keskusta tavallisesti '
-      + 'kuivan Todd-joen länsipuolella. Pohjoisessa kohoaa ANZAC '
-      + 'Hill, keskellä on kaupungin ruutukaava vanhoine taloineen, '
-      + 'lännessä radan varsi ja etelässä joen mutka, jossa ovat '
-      + 'vanha vankila ja kasvitieteellinen puutarha. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Alice Springsin keskusta Australian sisämaassa. Rautatie saapui '
+      + 'kaupunkiin vuonna 1929. Kaupungin nimi oli Stuart, kunnes se muutettiin Alice '
+      + 'Springsiksi vuonna 1933.\n\n'
+      + 'Pohjoisessa kohoaa ANZAC Hill, jonka huipulla oleva muistomerkki paljastettiin '
+      + 'ANZAC-päivänä 1934. Stuart Town Gaol rakennettiin 1907–1909, ja se on yksi kaupungin '
+      + 'vanhimmista säilyneistä rakennuksista. Etelässä on Olive Pinkin puutarha, joka '
+      + 'varattiin kuivien alueiden kasvien suojelualueeksi 1956 ja avattiin yleisölle 1985. '
+      + 'Keskustassa ovat myös Totem-teatteri, Pioneer-teatteri, Kaupunginkirjasto ja '
+      + 'Australian naisten museo. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -15938,14 +16346,14 @@ export const KAUPUNKIKARTAT = {
        * ja kaikki välit on mitattu uudelleen: pienin on 271 metriä
        * (Pioneer-teatteri–kaupunginkirjasto).
        */
-      { nimi: 'ANZAC Hill', lat: -23.694730, lon: 133.882110 },
+      { nimi: 'ANZAC Hill', tyyppi: 'luonto', lat: -23.694730, lon: 133.882110 },
       { nimi: 'Totem-teatteri', lat: -23.694852, lon: 133.885016 },
       { nimi: 'Rautatieasema', lat: -23.697417, lon: 133.873389 },
       { nimi: 'Stuart Town Gaol', lat: -23.698470, lon: 133.881290 },
       { nimi: 'Pioneer-teatteri', lat: -23.699357, lon: 133.883917 },
       { nimi: 'Kaupunginkirjasto', lat: -23.701667, lon: 133.883056 },
       { nimi: 'Australian naisten museo', lat: -23.704100, lon: 133.876900 },
-      { nimi: 'Olive Pinkin puutarha', lat: -23.706400, lon: 133.884900 },
+      { nimi: 'Olive Pinkin puutarha', tyyppi: 'luonto', lat: -23.706400, lon: 133.884900 },
     ],
   },
   /*
@@ -16108,16 +16516,20 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/townsville-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -19.2505, etela: -19.266, lansi: 146.807, ita: 146.826 },
-    esittely: 'Townsvillen keskusta on Ross Creekin mutkan ja Castle '
-      + 'Hillin väliin puristettu ruutukaava, ja sen halki kulkee '
-      + 'Flinders Street, kaupungin vanhin katu. Pohjoisessa on The '
-      + 'Strandin ranta, koillisessa Cleveland Bay. Kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Townsvillen keskustan Ross Creekin suulla Cleveland Bayn rannalla. '
+      + 'Robert Townsin ja John Melton Blackin lähettämä retkikunta löysi paikan huhtikuussa '
+      + '1864, ja kaupunki sai nimensä Townsin mukaan.\n\n'
+      + 'Vanha tullitalo rakennettiin 1900–1902 ja Great Northern Hotel 1900–1901. St James '
+      + '-katedraalin ensimmäinen vaihe vihittiin 1892. Tobruk Memorial Baths nimettiin '
+      + 'Tobrukin piirityksessä taistelleiden mukaan; rakennustyöt alkoivat 1941 ja uimala '
+      + 'avattiin yleisölle 1950. Queens Gardens julistettiin kasvitieteelliseksi puutarhaksi '
+      + '1870. Lähellä ovat Tropiikin museo, Vanha postitalo ja School of Arts. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
        */
-      { nimi: 'Queens Gardens', lat: -19.2531, lon: 146.81 },
+      { nimi: 'Queens Gardens', tyyppi: 'luonto', lat: -19.2531, lon: 146.81 },
       { nimi: 'Tobruk Memorial Baths', lat: -19.2533, lon: 146.8198 },
       { nimi: 'Vanha tullitalo', lat: -19.2556, lon: 146.8219 },
       { nimi: 'St James -katedraali', lat: -19.2555, lon: 146.8167 },
@@ -16163,11 +16575,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/iquitos-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -3.744, etela: -3.757, lansi: -73.253, ita: -73.238 },
-    esittely: 'Iquitosin monumenttivyöhyke on kymmenkunta korttelia '
-      + 'Plaza de Armasin ympärillä, ja se laskeutuu idässä Malecón '
-      + 'Tarapacálle Itaya-joen rantatörmälle. Kumikauden talot ovat '
-      + 'tässä ruudussa lähes kaikki. Kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Iquitosin historiallinen keskusta Perun Amazonin alueella. Kaupunki '
+      + 'sai alkunsa 1700-luvun puolivälissä jesuiittojen lähetysasemana. 1800-luvun lopun '
+      + 'kumibuumi teki siitä rikkaan, ja kaupunkiin pääsee yhä vain joelta tai ilmasta.\n\n'
+      + 'Joen rantatörmällä kulkee Malecón Tarapacá. Hotel Palace rakennettiin 1908–1912. '
+      + 'Casa Morey on kumikauden talo, jollaisia kumiparonit rakennuttivat eurooppalaisista '
+      + 'aineksista. Lähistöllä ovat myös Casa Strassberger, Mercado Central, Plaza 28 de '
+      + 'Julio, Kuvataidekoulu ja Iquitosin katedraali. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -16179,7 +16594,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hotel Palace', lat: -3.750688, lon: -73.243716 },
       { nimi: 'Malecón Tarapacá', lat: -3.7525346, lon: -73.2464037 },
       { nimi: 'Casa Strassberger', lat: -3.7528833, lon: -73.2444139 },
-      { nimi: 'Plaza 28 de Julio', lat: -3.7545969, lon: -73.2493161 },
+      { nimi: 'Plaza 28 de Julio', tyyppi: 'aukio', lat: -3.7545969, lon: -73.2493161 },
     ],
   },
   /*
@@ -16276,7 +16691,7 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Back Bayn hautausmaa', lat: 62.4691, lon: -114.3626 },
       { nimi: 'Wildcat Cafe', lat: 62.46652, lon: -114.34889 },
       { nimi: 'Weaver & Devoren kauppa', lat: 62.46444, lon: -114.35028 },
-      { nimi: 'Ragged Ass Road', lat: 62.46063, lon: -114.35256 },
+      { nimi: 'Ragged Ass Road', tyyppi: 'aukio', lat: 62.46063, lon: -114.35256 },
       { nimi: 'Luoteisterritorioiden parlamenttitalo', lat: 62.45944, lon: -114.38194 },
       { nimi: 'Prince of Walesin pohjoinen perintökeskus', lat: 62.45611, lon: -114.38 },
       { nimi: 'Hirsikoulu', lat: 62.45194, lon: -114.37667 },
@@ -16315,11 +16730,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/iqaluit-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
-    esittely: 'Kartalla näkyy koko Iqaluit. Vasemmalla laskee Sylvia '
-      + 'Grinnellin joki, keskellä on kaupunki Koojesse Inletin '
-      + 'pohjukassa, ja oikeassa alakulmassa erottuu Apexin niemi. '
-      + 'Tiet loppuvat kuvan reunoihin, koska niitä ei ole enempää. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartalla on koko Iqaluit Frobisher-lahden pohjukassa. Asutus kasvoi, kun Yhdysvallat '
+      + 'rakensi alueelle lentotukikohdan 1942. Paikan nimi oli pitkään Frobisher Bay; vuonna '
+      + '1987 palautettiin inuktitutin nimi Iqaluit, ”paljon kaloja”.\n\n'
+      + 'Nunavut perustettiin 1. huhtikuuta 1999, ja Iqaluit oli valittu sen pääkaupungiksi '
+      + 'kansanäänestyksessä 1995. Nunavutin parlamenttitalo avattiin lokakuussa 1999. Pyhän '
+      + 'Juudaksen katedraali, iglun muotoinen kirkko, tuhoutui tulipalossa; uusi rakennus '
+      + 'vihittiin 2012. Tiet loppuvat kartan reunoille; lännessä on Sylvia Grinnellin puisto '
+      + 'ja kaakossa Apex eli Niaqunngut. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi luoteesta kaakkoon.
@@ -16329,7 +16748,7 @@ export const KAUPUNKIKARTAT = {
        * (Inuksuk-lukio – Astro Hill), seuraavat 230 ja 276 metriä.
        */
       { nimi: 'Iqaluitin lentoasema', lat: 63.75667, lon: -68.55611 },
-      { nimi: 'Sylvia Grinnellin puisto', lat: 63.74861, lon: -68.56389 },
+      { nimi: 'Sylvia Grinnellin puisto', tyyppi: 'luonto', lat: 63.74861, lon: -68.56389 },
       { nimi: 'Nunavutin parlamenttitalo', lat: 63.75028, lon: -68.52306 },
       { nimi: 'Inuksuk-lukio', lat: 63.74917, lon: -68.51389 },
       { nimi: 'Pyhän Juudaksen katedraali', lat: 63.7475, lon: -68.51667 },
@@ -16368,12 +16787,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/santafe-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
-    esittely: 'Kartan pohjoisosassa on vanha keskusta aukioineen: '
-      + 'kadut lähtevät siitä säteittäin, kuten vuoden 1573 '
-      + 'kaavoitussäännöt vaativat. Alempana kaartaa Santa Fe -joki, '
-      + 'ja sen eteläpuolelta alkaa Barrio de Analco. Kaakkoiskulmaan '
-      + 'jää Museum Hill. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Santa Fen historiallinen keskusta. Kuvernööri Pedro de Peralta '
+      + 'perusti kaupungin 1610 aukion ympärille, ja espanjalaiset kaavoitussäännöt antoivat '
+      + 'aukion laidalta ensimmäisen tontin kirkolle ja toisen hallinnolle. Pueblo-kansat '
+      + 'hallitsivat kaupunkia 1680–1692, kunnes Diego de Vargas valtasi sen takaisin.\n\n'
+      + 'Aukion lähellä ovat Pyhän Franciscuksen katedraali, Loreton kappeli, San Miguelin '
+      + 'kirkko ja New Mexicon osavaltiotalo. New Mexicon taidemuseon pueblo revival '
+      + '-tyylinen päärakennus valmistui 1917. Luoteessa ovat Guadalupen pyhäkkö ja Georgia '
+      + 'O\'Keeffen museo, kaakossa Museum Hillillä Kansantaiteen museo. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja
@@ -16395,7 +16817,4693 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kansantaiteen museo', lat: 35.66406, lon: -105.92618 },
     ],
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   */
+  belgrad: {
+    polku: 'assets/kartat/belgrad-keskusta.png',
+    varikartta: 'assets/kartat/belgrad-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Belgradin vanha ydin kalliolla, jossa Sava yhtyy Tonaviin. '
+      + 'Linnoituksen paikalla oli roomalaisten legioonan leiri. Kalemegdanin nimi tulee '
+      + 'turkin sanoista kale, linnake, ja megdan, kenttä, ja puisto raivattiin 1800-luvulla. '
+      + 'Nebojšan torni on 1400-luvulta, ja nebojša tarkoittaa serbiaksi pelotonta.\n\n'
+      + 'Pyhän arkkienkeli Mikaelin katedraali rakennettiin 1837–1840. Tasavallan aukion '
+      + 'ratsastajapatsas ruhtinas Mihailosta pystytettiin 1882. Skadarlija sai katunimensä '
+      + '1872. Pyhän Savan temppelin rakentaminen alkoi 1935, ja se on yksi maailman '
+      + 'suurimmista ortodoksikirkoista. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: 44.8343, etela: 44.7937, lansi: 20.4318, ita: 20.4725 },
+    piirtoRajat: { pohjoinen: 44.84648, etela: 44.78152, lansi: 20.41959, ita: 20.48471 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Belgradin linnoitus',
+        lat: 44.82333,
+        lon: 20.45028,
+      },
+      {
+        nimi: 'Kalemegdanin puisto',
+        tyyppi: 'luonto',
+        lat: 44.82259,
+        lon: 20.45307,
+      },
+      {
+        nimi: 'Nebojšan torni',
+        lat: 44.82737,
+        lon: 20.44788,
+      },
+      {
+        nimi: 'Pyhän arkkienkeli Mikaelin katedraali',
+        lat: 44.81806,
+        lon: 20.45216,
+      },
+      {
+        nimi: 'Tasavallan aukio',
+        tyyppi: 'aukio',
+        lat: 44.81644,
+        lon: 20.46011,
+      },
+      {
+        nimi: 'Skadarlija',
+        tyyppi: 'aukio',
+        lat: 44.8178,
+        lon: 20.4643,
+      },
+      {
+        nimi: 'Pyhän Savan temppeli',
+        lat: 44.79806,
+        lon: 20.46854,
+      },
+      {
+        nimi: 'Suuri sotasaari',
+        tyyppi: 'luonto',
+        lat: 44.83163,
+        lon: 20.4358,
+      },
+    ],
+  },
+  bratislava: {
+    polku: 'assets/kartat/bratislava-keskusta.png',
+    varikartta: 'assets/kartat/bratislava-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bratislavan vanha kaupunki Tonavan varrella. Pyhän Martinin '
+      + 'tuomiokirkossa kruunattiin Unkarin hallitsijoita vuosina 1563–1830, ja kirkon torni '
+      + 'on 85 metriä korkea. Bratislavan linna paloi 1811 ja kunnostettiin 1950- ja '
+      + '1960-luvuilla.\n\n'
+      + 'Mikaelin portti on keskiaikaisista kaupunginporteista ainoa säilynyt, ja sen '
+      + 'barokkimuoto on 1750-luvulta. Ödön Lechnerin suunnittelema Sininen kirkko valmistui '
+      + '1913 ja on omistettu Pyhälle Elisabet Unkarilaiselle. Grassalkovichin palatsi '
+      + 'valmistui 1760, ja se on ollut Slovakian presidentin virka-asunto vuodesta 1996. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 48.1523, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+    piirtoRajat: { pohjoinen: 48.15629, etela: 48.13501, lansi: 17.08856, ita: 17.12824 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Bratislavan linna',
+        lat: 48.14222,
+        lon: 17.1,
+      },
+      {
+        nimi: 'Pyhän Martinin tuomiokirkko',
+        lat: 48.14214,
+        lon: 17.10478,
+      },
+      {
+        nimi: 'Mikaelin portti',
+        lat: 48.14515,
+        lon: 17.10667,
+      },
+      {
+        nimi: 'Vanha raatihuone',
+        lat: 48.14389,
+        lon: 17.10911,
+      },
+      {
+        nimi: 'Hviezdoslavin aukio',
+        tyyppi: 'aukio',
+        lat: 48.14167,
+        lon: 17.10833,
+      },
+      {
+        nimi: 'Sininen kirkko',
+        lat: 48.14339,
+        lon: 17.11683,
+      },
+      {
+        nimi: 'Grassalkovichin palatsi',
+        lat: 48.14924,
+        lon: 17.10775,
+      },
+    ],
+  },
+  chisinau: {
+    polku: 'assets/kartat/chisinau-keskusta.png',
+    varikartta: 'assets/kartat/chisinau-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Chișinăun historiallinen keskusta. Kaupunki mainitaan kirjallisissa '
+      + 'lähteissä ensimmäisen kerran 1436, ja Venäjän vallan aikana 1800-luvulla siitä tuli '
+      + 'Bessarabian hallintokeskus. Nykyisen keskustan pääpiirteet syntyivät silloin.\n\n'
+      + 'Kristuksen syntymän katedraali rakennettiin 1830–1836, ja sen lähellä seisoo '
+      + 'Riemukaari 1840-luvun alusta. Kaupungintalo on katedraalin eteläpuolella; Tapani '
+      + 'Suuren keskuspuisto ja Kansallinen historiamuseo ovat länsiosassa. Măzărache-kirkko, '
+      + 'vihitty 1752, on kaupungin vanhin säilynyt rakennus. Itäisin kohde Ciuflea-luostari '
+      + 'rakennettiin kirkoksi 1854–1858. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 47.0288,
+      etela: 47.0099,
+      lansi: 28.8241,
+      ita: 28.8508,
+    },
+    piirtoRajat: { pohjoinen: 47.03447, etela: 47.00423, lansi: 28.81609, ita: 28.85881 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Kristuksen syntymän katedraali',
+        lat: 47.02606,
+        lon: 28.83453,
+      },
+      {
+        nimi: 'Riemukaari',
+        lat: 47.02472,
+        lon: 28.8325,
+      },
+      {
+        nimi: 'Tapani Suuren keskuspuisto',
+        tyyppi: 'luonto',
+        lat: 47.025,
+        lon: 28.828,
+      },
+      {
+        nimi: 'Kaupungintalo',
+        lat: 47.023,
+        lon: 28.8343,
+      },
+      {
+        nimi: 'Măzărache-kirkko',
+        lat: 47.02083,
+        lon: 28.83028,
+      },
+      {
+        nimi: 'Ciuflea-luostari',
+        lat: 47.01263,
+        lon: 28.84691,
+      },
+      {
+        nimi: 'Kansallinen historiamuseo',
+        lat: 47.0225,
+        lon: 28.82806,
+      },
+    ],
+  },
+  minsk: {
+    polku: 'assets/kartat/minsk-keskusta.png',
+    varikartta: 'assets/kartat/minsk-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Minskin historiallinen ydin on Svislač-joen varrella. Kaupunki mainitaan ensimmäisen '
+      + 'kerran vuoden 1067 kronikassa taistelun yhteydessä Niamiha-joella.\n\n'
+      + 'Yläkaupungissa Pyhän Hengen katedraali rakennettiin bernardiinien luostarin kirkoksi '
+      + '1633–1642 ja Neitsyt Marian arkkikatedraali jesuiittojen kirkoksi 1700–1710. '
+      + 'Punainen kirkko valmistui 1905–1910. Svislačin rannalla ovat Kolminaisuuden '
+      + 'esikaupunki ja Kyynelten saari, Afganistanin sodan muistomerkki. Idempänä ovat '
+      + 'Voitonaukio, jonka obeliski paljastettiin 1954, ja Gorki-puisto, joka on perustettu '
+      + '1805. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 53.9126, etela: 53.893, lansi: 27.543, ita: 27.579 },
+    piirtoRajat: { pohjoinen: 53.91848, etela: 53.88712, lansi: 27.5322, ita: 27.5898 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Kolminaisuuden esikaupunki',
+        lat: 53.90854,
+        lon: 27.55598,
+      },
+      {
+        nimi: 'Pyhän Hengen katedraali',
+        lat: 53.905,
+        lon: 27.5562,
+      },
+      {
+        nimi: 'Neitsyt Marian arkkikatedraali',
+        lat: 53.90313,
+        lon: 27.55461,
+      },
+      {
+        nimi: 'Punainen kirkko',
+        lat: 53.89652,
+        lon: 27.54748,
+      },
+      {
+        nimi: 'Kyynelten saari',
+        tyyppi: 'luonto',
+        lat: 53.9099,
+        lon: 27.5547,
+      },
+      {
+        nimi: 'Voitonaukio',
+        tyyppi: 'aukio',
+        lat: 53.90833,
+        lon: 27.57444,
+      },
+      {
+        nimi: 'Gorki-puisto',
+        tyyppi: 'luonto',
+        lat: 53.90417,
+        lon: 27.57139,
+      },
+    ],
+  },
+  podgorica: {
+    polku: 'assets/kartat/podgorica-keskusta.png',
+    varikartta: 'assets/kartat/podgorica-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Podgorican keskusta Ribnican ja Moračan yhtymäkohdassa. Osmanit '
+      + 'valtasivat kaupungin 1474, ja se liitettiin Montenegroon 1878 Berliinin kongressin '
+      + 'päätöksellä. Vuosina 1946–1992 kaupungin nimi oli Titograd Josip Broz Titon mukaan.\n\n'
+      + 'Sahat kula -kellotorni on ottomaanien ajalta ja 19 metriä korkea. Ribnican linnoitus '
+      + 'rakennettiin 1400-luvun lopulla osmanien vallan aikana. Millennium-sillan pylon on '
+      + '57 metriä korkea, ja silta avattiin 13. heinäkuuta 2005. Kristuksen ylösnousemuksen '
+      + 'katedraalin rakentaminen alkoi 1993, ja se vihittiin 2013. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 42.4484,
+      etela: 42.43286,
+      lansi: 19.24465,
+      ita: 19.2664,
+    },
+    piirtoRajat: { pohjoinen: 42.45306, etela: 42.4282, lansi: 19.23812, ita: 19.27293 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Sahat kula -kellotorni',
+        lat: 42.43556,
+        lon: 19.26001,
+      },
+      {
+        nimi: 'Ribnican linnoitus',
+        lat: 42.439,
+        lon: 19.25913,
+      },
+      {
+        nimi: 'Vanha silta Ribnican yli',
+        lat: 42.43951,
+        lon: 19.25921,
+      },
+      {
+        nimi: 'Itsenäisyydenaukio',
+        tyyppi: 'aukio',
+        lat: 42.44126,
+        lon: 19.2628,
+      },
+      {
+        nimi: 'Millennium-silta',
+        lat: 42.4452,
+        lon: 19.2581,
+      },
+      {
+        nimi: 'Kristuksen ylösnousemuksen katedraali',
+        lat: 42.44569,
+        lon: 19.24825,
+      },
+    ],
+  },
+  skopje: {
+    polku: 'assets/kartat/skopje-keskusta.png',
+    varikartta: 'assets/kartat/skopje-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Skopjen historiallinen ydin on Vardar-joen molemmin puolin. Etelärannalla on '
+      + 'Makedonia-aukio, pohjoisrannalla Vanha basaari, ja sen yläpuolella kohoaa '
+      + 'Kale-linnoitus.\n\n'
+      + 'Kivisilta yhdistää aukion basaariin, ja se rakennettiin 1400-luvulla sulttaani '
+      + 'Mehmed II:n aikana. Basaarissa on Mustafa-pasan moskeija, joka valmistui 1492, sekä '
+      + 'Daut-pasan hamam ja Kuršumli An. Viimeksi mainittu oli karavaanisaraina ja vankila, '
+      + 'ja se vaurioitui pahoin vuoden 1963 maanjäristyksessä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 42.0058,
+      etela: 41.99342,
+      lansi: 21.42807,
+      ita: 21.44059,
+    },
+    piirtoRajat: { pohjoinen: 42.00951, etela: 41.98971, lansi: 21.42431, ita: 21.44435 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Kivisilta',
+        lat: 41.99699,
+        lon: 21.43307,
+      },
+      {
+        nimi: 'Makedonia-aukio',
+        tyyppi: 'aukio',
+        lat: 41.99612,
+        lon: 21.4317,
+      },
+      {
+        nimi: 'Skopjen linnoitus (Kale)',
+        lat: 42,
+        lon: 21.43444,
+      },
+      {
+        nimi: 'Vanha basaari',
+        tyyppi: 'aukio',
+        lat: 42.00076,
+        lon: 21.43696,
+      },
+      {
+        nimi: 'Mustafa-pasan moskeija',
+        lat: 42.00194,
+        lon: 21.43542,
+      },
+      {
+        nimi: 'Kuršumli An',
+        lat: 42.0031,
+        lon: 21.4369,
+      },
+      {
+        nimi: 'Daut-pasan hamam',
+        lat: 41.9986,
+        lon: 21.4356,
+      },
+    ],
+  },
+  tirana: {
+    polku: 'assets/kartat/tirana-keskusta.png',
+    varikartta: 'assets/kartat/tirana-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Tiranan keskusta. Kaupungin virallinen perustamisvuosi on 1614, ja '
+      + 'perustajana pidetään paikallista ylimystä Sulejman Bargjinia. Tirana julistettiin '
+      + 'Albanian väliaikaiseksi pääkaupungiksi 1920 ja pysyväksi 1925. Skanderbeg-aukio '
+      + 'uudistettiin jalankulkualueeksi 2017, ja työ palkittiin 2018 Euroopan julkisen '
+      + 'kaupunkitilan palkinnolla.\n\n'
+      + 'Et\'hem Beyn moskeijan rakentaminen alkoi 1700-luvun lopulla, ja viereinen kellotorni '
+      + 'on 1820-luvulta. Tabakkien silta on 1700-luvulta ja nimetty nahkureiden mukaan. '
+      + 'Kokonozin moskeija on 1700-luvun puolivälistä. Tiranan pyramidi avattiin 1988 Enver '
+      + 'Hoxhan museona. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 41.3328,
+      etela: 41.3204,
+      lansi: 19.8145,
+      ita: 19.8297,
+    },
+    piirtoRajat: { pohjoinen: 41.33652, etela: 41.31668, lansi: 19.80994, ita: 19.83426 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Skanderbeg-aukio',
+        tyyppi: 'aukio',
+        lat: 41.32833,
+        lon: 19.81833,
+      },
+      {
+        nimi: 'Et\'hem Beyn moskeija',
+        lat: 41.32778,
+        lon: 19.81917,
+      },
+      {
+        nimi: 'Tiranan kellotorni',
+        lat: 41.32772,
+        lon: 19.81965,
+      },
+      {
+        nimi: 'Tiranan linnoitus',
+        lat: 41.32639,
+        lon: 19.82194,
+      },
+      {
+        nimi: 'Tabakkien silta',
+        lat: 41.32642,
+        lon: 19.82605,
+      },
+      {
+        nimi: 'Kokonozin moskeija',
+        lat: 41.3301,
+        lon: 19.825,
+      },
+      {
+        nimi: 'Tiranan pyramidi',
+        lat: 41.32306,
+        lon: 19.82139,
+      },
+      {
+        nimi: 'Rinian puisto',
+        tyyppi: 'luonto',
+        lat: 41.32472,
+        lon: 19.81806,
+      },
+    ],
+  },
+  zagreb: {
+    polku: 'assets/kartat/zagreb-keskusta.png',
+    varikartta: 'assets/kartat/zagreb-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Zagrebin vanha ydin: Kaptolin ja Yläkaupungin eli Gradecin kukkulat '
+      + 'sekä Alakaupungin puistot. Gradec sai kultaisessa bullassa 1242 vapaan '
+      + 'kuninkaallisen kaupungin aseman. Kaptolin tuomiokirkko rakennettiin uudelleen '
+      + 'uusgoottilaiseksi vuoden 1880 maanjäristyksen jälkeen.\n\n'
+      + 'Lotrščakin tornin nimi viittaa varkaiden kelloon, joka soi ennen porttien sulkua. '
+      + 'Torni on 1200-luvulta, ja kanuuna on ampunut keskipäivän laukauksen joka päivä '
+      + '1.1.1877 lähtien. Kivinen portti on Yläkaupungin ainoa säilynyt portti, ja sen '
+      + 'Marian kuva säilyi vuoden 1731 palossa. Taidepaviljonki tehtiin Budapestin vuoden '
+      + '1896 näyttelyn metallirungon ympärille ja avattiin 1898. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 45.8186,
+      etela: 45.8045,
+      lansi: 15.9691,
+      ita: 15.9836,
+    },
+    piirtoRajat: { pohjoinen: 45.82283, etela: 45.80027, lansi: 15.96475, ita: 15.98795 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Kivinen portti',
+        lat: 45.8158,
+        lon: 15.9753,
+      },
+      {
+        nimi: 'Lotrščakin torni',
+        lat: 45.81472,
+        lon: 15.97306,
+      },
+      {
+        nimi: 'Zagrebin tuomiokirkko',
+        lat: 45.81444,
+        lon: 15.97972,
+        // Zagreb laudan kaupungiksi 14.10.2026: skandaali (Zrinskin ja Frankopanin hauta) kohdekartalle.
+        nosto: 'skandaali-zrinski-frankopan-salaliitto',
+      },
+      {
+        nimi: 'Zrinjevac',
+        lat: 45.81028,
+        lon: 15.97806,
+        tyyppi: 'aukio',
+      },
+      {
+        nimi: 'Taidepaviljonki',
+        lat: 45.80722,
+        lon: 15.97861,
+      },
+    ],
+  },
+  andorralavella: {
+    polku: 'assets/kartat/andorralavella-keskusta.png',
+    varikartta: 'assets/kartat/andorralavella-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Andorra la Vellan vanha keskusta Pyreneillä, yli tuhannen metrin '
+      + 'korkeudessa merenpinnasta. Kaupunki on Euroopan korkeimmalla sijaitseva pääkaupunki, '
+      + 'ja sen vanha ydin kietoutuu Sant Esteven kirkon ja Casa de la Vallin ympärille.\n\n'
+      + 'Casa de la Vallin rakennutti Busquetsin suku 1580 kartanoksi, ja maan neuvosto osti '
+      + 'sen 1702 kokouspaikakseen; parlamentti istui siinä vuoteen 2011. Sant Esteven kirkko '
+      + 'on romaaninen. Santa Coloman kirkko lounaassa on peräisin varhaiskeskiajalta, noin '
+      + '800–900-luvulta. Itäpuolella Escaldes-Engordanin alueella on kylpylä Caldea, joka '
+      + 'avattiin 1994. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 42.5185, etela: 42.4882, lansi: 1.4906, ita: 1.5405 },
+    piirtoRajat: { pohjoinen: 42.52759, etela: 42.47911, lansi: 1.47563, ita: 1.55547 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Casa de la Vall',
+        lat: 42.50667,
+        lon: 1.52056,
+      },
+      {
+        nimi: 'Sant Esteven kirkko',
+        lat: 42.5072,
+        lon: 1.5217,
+      },
+      {
+        nimi: 'Santa Coloman kirkko',
+        lat: 42.4942,
+        lon: 1.4976,
+      },
+      {
+        nimi: 'Caldea',
+        lat: 42.5117,
+        lon: 1.5368,
+      },
+    ],
+  },
+  bern: {
+    polku: 'assets/kartat/bern-keskusta.png',
+    varikartta: 'assets/kartat/bern-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bernin vanhakaupunki, joka sijaitsee Aare-joen mutkan muodostamalla '
+      + 'niemekkeellä; joki ympäröi sitä kolmelta sivulta. Berthold V Zähringeniläisen '
+      + 'kerrotaan perustaneen kaupungin 1191, ja vanhakaupunki on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1983. Zytglogge-torni rakennettiin noin 1218–1220.\n\n'
+      + 'Berner Münsterin rakentaminen alkoi 1421, ja sen torni valmistui vasta 1893. '
+      + 'Liittopalatsin parlamenttirakennus rakennettiin vuosina 1894–1902. Einsteinhausissa '
+      + 'Albert Einstein asui 1903–1905. Aaren rannalla Bärengrabenin vieressä on BärenPark, '
+      + 'joka avattiin 2009. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 46.951, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+    piirtoRajat: { pohjoinen: 46.95316, etela: 46.94164, lansi: 7.43331, ita: 7.47059 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Zytglogge',
+        lat: 46.94806,
+        lon: 7.44778,
+      },
+      {
+        nimi: 'Bernin tuomiokirkko',
+        lat: 46.94722,
+        lon: 7.45139,
+      },
+      {
+        nimi: 'Liittopalatsi',
+        lat: 46.9465,
+        lon: 7.44422,
+      },
+      {
+        nimi: 'Bärengraben ja BärenPark',
+        lat: 46.94802,
+        lon: 7.45963,
+      },
+      {
+        nimi: 'Einsteinhaus',
+        lat: 46.94767,
+        lon: 7.44997,
+      },
+    ],
+  },
+  monaco: {
+    polku: 'assets/kartat/monaco-keskusta.png',
+    varikartta: 'assets/kartat/monaco-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Monacon ruhtinaskunta, jonka vanha kaupunki on kalliolla meren '
+      + 'rannalla. Kalliolle alettiin rakentaa linnoitusta kesäkuussa 1215, ja François '
+      + 'Grimaldi valtasi sen tammikuussa 1297. Katedraali rakennettiin vuosina 1875–1903, ja '
+      + 'sinne on haudattu monia ruhtinassuvun jäseniä.\n\n'
+      + 'Port Hercule -sataman nimi viittaa Herkules-sankariin: antiikin latinassa satamaa '
+      + 'kutsuttiin nimellä Portus Herculis Monoeci. Salle Garnier avattiin 1879, ja sen '
+      + 'suunnitteli Charles Garnier. Ruhtinas Albert I vihki Valtamerimuseon käyttöön 1910, '
+      + 'ja Eksoottinen puutarha avattiin yleisölle 1933. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: { pohjoinen: 43.7427, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    piirtoRajat: { pohjoinen: 43.74726, etela: 43.72294, lansi: 7.40348, ita: 7.43932 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Monte Carlon kasino',
+        lat: 43.73944,
+        lon: 7.42889,
+      },
+      {
+        nimi: 'Salle Garnier',
+        lat: 43.73889,
+        lon: 7.42833,
+      },
+      {
+        nimi: 'Port Hercule',
+        tyyppi: 'aukio',
+        lat: 43.735,
+        lon: 7.426,
+      },
+      {
+        nimi: 'Jardin Exotique',
+        tyyppi: 'luonto',
+        lat: 43.73151,
+        lon: 7.41378,
+      },
+      {
+        nimi: 'Valtamerimuseo',
+        lat: 43.73083,
+        lon: 7.42528,
+      },
+      {
+        nimi: 'Ruhtinaanlinna',
+        lat: 43.73142,
+        lon: 7.42028,
+      },
+      {
+        nimi: 'Monacon katedraali',
+        lat: 43.73021,
+        lon: 7.42266,
+      },
+    ],
+  },
+  reykjavik: {
+    polku: 'assets/kartat/reykjavik-keskusta.png',
+    varikartta: 'assets/kartat/reykjavik-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Reykjavíkin keskusta Seltjarnarnesin niemen pohjoisrannalla. '
+      + 'Pohjoisessa on satama, keskellä Tjörnin-lampi ja Austurvöllur-aukio, ja kukkulat '
+      + 'nousevat kaakossa ja etelässä.\n\n'
+      + 'Hallgrímskirkja on Islannin suurin kirkko, ja se vihittiin käyttöön 1986. '
+      + 'Harpa-konserttitalo avattiin 2011, ja sen julkisivun suunnitteli Ólafur Elíasson '
+      + 'yhdessä Henning Larsen -toimiston kanssa. Höfði-talo valmistui 1909, ja Perlanin '
+      + 'lasikupoli on rakennettu kuumavesisäiliöiden päälle Öskjuhlíðin kukkulalle. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 64.153,
+      etela: 64.1265,
+      lansi: -21.9487,
+      ita: -21.9005,
+    },
+    piirtoRajat: { pohjoinen: 64.16095, etela: 64.11855, lansi: -21.96316, ita: -21.88604 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Hallgrímskirkja',
+        lat: 64.1417,
+        lon: -21.9266,
+      },
+      {
+        nimi: 'Harpa',
+        lat: 64.15028,
+        lon: -21.9325,
+      },
+      {
+        nimi: 'Tjörnin',
+        tyyppi: 'luonto',
+        lat: 64.14444,
+        lon: -21.9425,
+      },
+      {
+        nimi: 'Austurvöllur',
+        tyyppi: 'aukio',
+        lat: 64.1472,
+        lon: -21.9398,
+      },
+      {
+        nimi: 'Perlan',
+        lat: 64.1292,
+        lon: -21.9189,
+      },
+      {
+        nimi: 'Höfði',
+        lat: 64.14639,
+        lon: -21.90667,
+      },
+    ],
+  },
+  sanmarino: {
+    polku: 'assets/kartat/sanmarino-keskusta.png',
+    varikartta: 'assets/kartat/sanmarino-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on San Marinon historiallinen keskusta Monte Titanon harjalla, noin 750 '
+      + 'metrin korkeudessa. Perimätiedon mukaan tasavalta perustettiin 3. syyskuuta 301, kun '
+      + 'kivenhakkaaja Marinus pakeni vainoja vuorelle. Keskusta ja vuori liitettiin UNESCOn '
+      + 'maailmanperintöluetteloon 2008.\n\n'
+      + 'Harjalla on kolme tornia. Guaitan torni on 1000-luvulta ja Cestan torni '
+      + '1200-luvulta; kolmas on Montalen torni. Palazzo Pubblico, nykyisessä muodossaan 1894 '
+      + 'valmistunut hallintorakennus, seisoo Piazza della Libertàlla. Lähellä on San Marinon '
+      + 'basilika. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 43.9396,
+      etela: 43.9274,
+      lansi: 12.443,
+      ita: 12.4563,
+    },
+    piirtoRajat: { pohjoinen: 43.94326, etela: 43.92374, lansi: 12.43901, ita: 12.46029 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Guaitan torni',
+        lat: 43.9354,
+        lon: 12.4496,
+      },
+      {
+        nimi: 'Cestan torni',
+        lat: 43.9328,
+        lon: 12.4515,
+      },
+      {
+        nimi: 'Montalen torni',
+        lat: 43.9301,
+        lon: 12.4526,
+      },
+      {
+        nimi: 'Palazzo Pubblico',
+        lat: 43.93679,
+        lon: 12.44644,
+      },
+      {
+        nimi: 'San Marinon basilika',
+        lat: 43.93722,
+        lon: 12.44694,
+      },
+      {
+        nimi: 'Piazza della Libertà',
+        tyyppi: 'aukio',
+        lat: 43.9365,
+        lon: 12.4467,
+      },
+      {
+        nimi: 'Monte Titano',
+        tyyppi: 'luonto',
+        lat: 43.935,
+        lon: 12.45,
+      },
+    ],
+  },
+  vaduz: {
+    polku: 'assets/kartat/vaduz-keskusta.png',
+    varikartta: 'assets/kartat/vaduz-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Vaduzin keskusta, pienen Liechtensteinin pääkaupungin ydin, jossa '
+      + 'asuu alle kuusi tuhatta ihmistä. Kukkulan rinteellä seisoo linna, joka mainitaan '
+      + 'ensimmäisen kerran vuonna 1322; Liechtensteinin ruhtinaat ostivat sen vuonna 1712, '
+      + 'ja ruhtinasperhe asuu siellä yhä.\n\n'
+      + 'Linnan alapuolella on uusgoottilainen St. Florinin kirkko, jonka arkkitehti '
+      + 'Friedrich von Schmidt suunnitteli ja joka valmistui 1870-luvulla; katedraaliksi se '
+      + 'tuli vasta vuonna 1997, kun Vaduzin arkkihiippakunta perustettiin. Kunstmuseum '
+      + 'Liechtenstein, betonista ja mustasta basaltista rakennettu laatikko, avattiin 12. '
+      + 'marraskuuta 2000. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    // PT 12.10.2026: rajaus länteen Reinille ja Sevelenin sillalle, linna rinteessä
+    // (oli 47.1421 / 47.1335 / 9.5185 / 9.5284).
+    rajat: {
+      pohjoinen: 47.145,
+      etela: 47.131,
+      lansi: 9.4985,
+      ita: 9.53,
+    },
+    piirtoRajat: { pohjoinen: 47.1492, etela: 47.1268, lansi: 9.48905, ita: 9.53945 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    kohteet: [
+      {
+        nimi: 'Vaduzin linna',
+        lat: 47.13944,
+        lon: 9.52444,
+      },
+      {
+        nimi: 'St. Florinin katedraali',
+        lat: 47.1362,
+        lon: 9.5227,
+      },
+      {
+        nimi: 'Liechtensteinin kansallismuseo',
+        lat: 47.13811,
+        lon: 9.52267,
+      },
+      {
+        nimi: 'Kunstmuseum Liechtenstein',
+        lat: 47.13944,
+        lon: 9.5225,
+      },
+    ],
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   */
+  abudhabi: {
+    polku: 'assets/kartat/abudhabi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Abu Dhabin länsiranta, kaupungin vanha ydin saarella Persianlahden '
+      + 'rannikolla. Saarelle rakennettiin vuonna 1761 kartiomainen vartiotorni suojaamaan '
+      + 'makean veden kaivoa, ja kaupunki kasvoi sen ympärille.\n\n'
+      + 'Torni on Qasr Al Hosn -linnakkeen ydin, ja linnake on kartan koillisosassa. '
+      + 'Lounaassa rantakadun varrella ovat presidentinpalatsi Qasr Al Watan, joka avattiin '
+      + 'yleisölle maaliskuussa 2019, hotelli Emirates Palace, joka avattiin 2005, sekä '
+      + 'Etihad Towers, jonka viisi tornia valmistuivat 2011 ja korkein on noin 305 metriä. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 24.493, etela: 24.4522, lansi: 54.3, ita: 54.361 },
+    kohteet: [
+      {
+        nimi: 'Qasr Al Hosn',
+        lat: 24.48239,
+        lon: 54.35482,
+      },
+      {
+        nimi: 'Qasr Al Watan',
+        lat: 24.46225,
+        lon: 54.30551,
+      },
+      {
+        nimi: 'Emirates Palace',
+        lat: 24.46194,
+        lon: 54.31667,
+      },
+      {
+        nimi: 'Etihad Towers',
+        lat: 24.45932,
+        lon: 54.3213,
+      },
+    ],
+  },
+  amman: {
+    polku: 'assets/kartat/amman-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ammanin vanha ydin, jonka muodostavat kukkulalla kohoava linnavuori '
+      + 'ja sen alapuolinen laakso. Rooman aikana laaksoon rakennettiin teatteri ja muita '
+      + 'julkisia rakennuksia, ja linnavuorelle nousi temppeli; myöhemmin samalle kukkulalle '
+      + 'rakennettiin Umaijadien palatsi.\n\n'
+      + 'Suuri temppeli rakennettiin noin vuosina 161–166, ja Umaijadien palatsi on '
+      + '700-luvulta. Rooman teatteri on 100-luvulta ja siihen mahtui noin 6 000 katsojaa; '
+      + 'sen lähellä ovat Odeon ja Nymfaion. Alakaupungissa Suuri Husseinin moskeija '
+      + 'rakennettiin uudelleen 1924, samana vuonna kuin Duke\'s Diwan valmistui. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 31.9582,
+      etela: 31.947,
+      lansi: 35.9302,
+      ita: 35.9431,
+    },
+    kohteet: [
+      {
+        nimi: 'Suuri temppeli',
+        lat: 31.9538,
+        lon: 35.9349,
+      },
+      {
+        nimi: 'Umaijadien palatsi',
+        lat: 31.9555,
+        lon: 35.9342,
+      },
+      {
+        nimi: 'Rooman teatteri',
+        lat: 31.95169,
+        lon: 35.93931,
+      },
+      {
+        nimi: 'Odeon',
+        lat: 31.95233,
+        lon: 35.93989,
+      },
+      {
+        nimi: 'Nymfaion',
+        lat: 31.95033,
+        lon: 35.93617,
+      },
+      {
+        nimi: 'Suuri Husseinin moskeija',
+        lat: 31.9497,
+        lon: 35.9347,
+      },
+      {
+        nimi: 'Duke\'s Diwan',
+        lat: 31.9519,
+        lon: 35.9334,
+      },
+    ],
+  },
+  baku: {
+    polku: 'assets/kartat/baku-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bakun vanhakaupunki Icheri Sheher, jota keskiaikaiset muurit '
+      + 'ympäröivät Bakunlahden rannalla. UNESCO kirjasi sen maailmanperintökohteeksi vuonna '
+      + '2000 yhdessä Neitotornin ja Širvanšahien palatsin kanssa.\n\n'
+      + 'Neitotorni on 1100-luvulta, mahdollisesti vanhempien rakenteiden päältä, ja '
+      + 'Širvanšahien palatsi on 1400-luvun rakennus. Muurien portteihin kuuluu Shemakhan '
+      + 'portti, ja Juma-moskeijan nykyinen rakennus valmistui 1899. Muurien ulkopuolella '
+      + 'Bakun bulevardi seuraa lahden rantaa; se vihittiin käyttöön 1909. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 40.37464,
+      etela: 40.3573,
+      lansi: 49.82789,
+      ita: 49.8407,
+    },
+    kohteet: [
+      {
+        nimi: 'Neitotorni',
+        lat: 40.3661,
+        lon: 49.8372,
+      },
+      {
+        nimi: 'Širvanšahien palatsi',
+        lat: 40.36615,
+        lon: 49.83344,
+      },
+      {
+        nimi: 'Juma-moskeija',
+        lat: 40.3653,
+        lon: 49.8356,
+      },
+      {
+        nimi: 'Vanhankaupungin muurit ja Shemakhan portti',
+        lat: 40.36853,
+        lon: 49.83632,
+      },
+      {
+        nimi: 'Taza Pirin moskeija',
+        lat: 40.37194,
+        lon: 49.83139,
+      },
+      {
+        nimi: 'Bakun bulevardi',
+        tyyppi: 'luonto',
+        lat: 40.3608,
+        lon: 49.835,
+      },
+    ],
+  },
+  beirut: {
+    polku: 'assets/kartat/beirut-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Beirutin keskusta Välimeren rannalla. Nykyisen keskustan ilme on '
+      + 'ranskalaisen mandaatin ajalta: Nejmehin aukio rakennettiin 1920- ja 1930-luvuilla.\n\n'
+      + 'Suuri Serail kohoaa kukkulalla, jonne ottomaanit rakensivat kasarmin 1853; nykyisin '
+      + 'siellä on pääministerin toimisto. Marttyyrien aukion lähellä seisovat vierekkäin '
+      + 'Mohammad Al-Aminin moskeija, joka vihittiin käyttöön 2008, ja Pyhän Yrjänän '
+      + 'maroniittikatedraali, joka vihittiin 1894. Beirutin kansallismuseo avattiin 1942. '
+      + 'Sursock-museo toimii vuonna 1912 valmistuneessa huvilassa, josta tuli museo 1961. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5228 },
+    kohteet: [
+      {
+        nimi: 'Beirutin kansallismuseo',
+        lat: 33.87822,
+        lon: 35.5149,
+      },
+      {
+        nimi: 'Sursock-museo',
+        lat: 33.89294,
+        lon: 35.51623,
+      },
+      {
+        nimi: 'Marttyyrien aukio',
+        tyyppi: 'aukio',
+        lat: 33.89639,
+        lon: 35.50722,
+      },
+      {
+        nimi: 'Mohammad Al-Aminin moskeija',
+        lat: 33.89497,
+        lon: 35.50637,
+      },
+      {
+        nimi: 'Pyhän Yrjänän maroniittikatedraali',
+        lat: 33.89527,
+        lon: 35.50531,
+      },
+      {
+        nimi: 'Nejmehin aukio',
+        tyyppi: 'aukio',
+        lat: 33.89664,
+        lon: 35.50449,
+      },
+      {
+        nimi: 'Suuri Serail',
+        lat: 33.89593,
+        lon: 35.50093,
+      },
+    ],
+  },
+  jerevan: {
+    polku: 'assets/kartat/jerevan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Jerevanin keskusta Hrazdan-joen rotkon tuntumassa. Kaupungin alkuna '
+      + 'pidetään Erebunin linnoitusta, jonka Urartun kuningas Argishti I perusti vuonna 782 '
+      + 'eaa. nykyisen kaupungin alueelle.\n\n'
+      + 'Tasavallan aukion rakennukset suunnitteli Alexander Tamanian, ja ne on rakennettu '
+      + 'tuffikivestä. Aukion länsipuolella ovat Sininen moskeija, joka valmistui 1765–1766, '
+      + 'ja Pyhän Sargiksen katedraali; Zoravorin kirkko on vuodelta 1693–1694. Pohjoisessa '
+      + 'ovat Oopperatalo, Kaskadi ja Matenadaran, jonka rakennus valmistui 1957. '
+      + 'Englantilainen puisto on keskustan eteläreunalla. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: { pohjoinen: 40.1959, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
+    kohteet: [
+      {
+        nimi: 'Tasavallan aukio',
+        tyyppi: 'aukio',
+        lat: 40.17753,
+        lon: 44.51257,
+      },
+      {
+        nimi: 'Sininen moskeija',
+        lat: 40.1781,
+        lon: 44.5056,
+      },
+      {
+        nimi: 'Pyhän Sargiksen katedraali',
+        lat: 40.17698,
+        lon: 44.50215,
+      },
+      {
+        nimi: 'Zoravorin kirkko',
+        lat: 40.1861,
+        lon: 44.5095,
+      },
+      {
+        nimi: 'Oopperatalo',
+        lat: 40.18583,
+        lon: 44.515,
+      },
+      {
+        nimi: 'Kaskadi',
+        lat: 40.19138,
+        lon: 44.51552,
+      },
+      {
+        nimi: 'Matenadaran',
+        lat: 40.19207,
+        lon: 44.52113,
+      },
+      {
+        nimi: 'Englantilainen puisto',
+        tyyppi: 'luonto',
+        lat: 40.17417,
+        lon: 44.50806,
+      },
+    ],
+  },
+  manama: {
+    polku: 'assets/kartat/manama-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Manaman keskusta Bahrainin saarella. Bab Al Bahrain ja Manaman souk '
+      + 'muodostavat vanhan kauppa-alueen. Portin suunnitteli brittineuvonantaja Charles '
+      + 'Belgrave, ja se seisoi alun perin meren rannalla tullilaiturin luona; maantäyttö on '
+      + 'siirtänyt rantaviivaa kauemmas.\n\n'
+      + 'Täytetylle maalle on noussut Bahrain Financial Harbour. Bahrain World Trade Centerin '
+      + 'kaksi 240 metrin tornia yhdistävät sillat, joissa on kolme tuuliturbiinia. '
+      + 'Al-Fatih-suurmoskeijaan mahtuu 7 000 rukoilijaa. Kartalla ovat myös Bahrainin '
+      + 'kansallismuseo ja Beit Al Quran. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: 26.2459, etela: 26.2146, lansi: 50.5703, ita: 50.6013 },
+    kohteet: [
+      {
+        nimi: 'Bab Al Bahrain',
+        lat: 26.23473,
+        lon: 50.57466,
+      },
+      {
+        nimi: 'Manaman souk',
+        tyyppi: 'aukio',
+        lat: 26.23125,
+        lon: 50.57696,
+      },
+      {
+        nimi: 'Bahrain Financial Harbour',
+        lat: 26.23778,
+        lon: 50.57333,
+      },
+      {
+        nimi: 'Bahrain World Trade Center',
+        lat: 26.23917,
+        lon: 50.58139,
+      },
+      {
+        nimi: 'Beit Al Quran',
+        lat: 26.23972,
+        lon: 50.59167,
+      },
+      {
+        nimi: 'Bahrainin kansallismuseo',
+        lat: 26.24056,
+        lon: 50.59833,
+      },
+      {
+        nimi: 'Al-Fatih-suurmoskeija',
+        lat: 26.21889,
+        lon: 50.59806,
+      },
+    ],
+  },
+  tbilisi: {
+    polku: 'assets/kartat/tbilisi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Tbilisin vanhakaupunki Kura-joen eli Mtkvarin rannoilla. Legendan '
+      + 'mukaan kaupungin perusti 400-luvulla kuningas Vahtang Gorgasali, jonka päätökseen '
+      + 'vaikuttivat kuumat rikkilähteet. Kaupunki on ollut Georgian keskus yli viisitoista '
+      + 'vuosisataa.\n\n'
+      + 'Narikalan linnoituksen läheisyydessä ovat Abanotubanin rikkikylpylät. Anchiskhatin '
+      + 'basilika on 500-luvulta ja Tbilisin vanhin kirkko, ja Metekhin kirkko on '
+      + '1200-luvulta. Siionin katedraali, Vapaudenaukio ja Kansallinen kasvitieteellinen '
+      + 'puutarha täydentävät vanhankaupungin kokonaisuutta. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 41.6983,
+      etela: 41.6834,
+      lansi: 44.798,
+      ita: 44.8147,
+    },
+    kohteet: [
+      {
+        nimi: 'Narikalan linnoitus',
+        lat: 41.68778,
+        lon: 44.80861,
+      },
+      {
+        nimi: 'Metekhin kirkko',
+        lat: 41.69,
+        lon: 44.81111,
+      },
+      {
+        nimi: 'Abanotubanin rikkikylpylät',
+        lat: 41.68778,
+        lon: 44.81111,
+      },
+      {
+        nimi: 'Siionin katedraali',
+        lat: 41.6914,
+        lon: 44.8075,
+      },
+      {
+        nimi: 'Anchiskhatin basilika',
+        lat: 41.69556,
+        lon: 44.80694,
+      },
+      {
+        nimi: 'Vapaudenaukio',
+        tyyppi: 'aukio',
+        lat: 41.69333,
+        lon: 44.80167,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 41.68611,
+        lon: 44.8075,
+      },
+    ],
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierä e03b, Ramallah):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03b-ramallah.
+   */
+  ramallah: {
+    polku: 'assets/kartat/ramallah-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartta kattaa Ramallahin ytimen: Al-Manaran aukion ja Al-Kasaba-teatterin, vanhan '
+      + 'kaupungin ja kaupungin lounaisella kukkulalla olevan Kulttuuripalatsin ja Mahmoud '
+      + 'Darwish -museon. Amerikkalaiset kveekarit perustivat Ramallahin Friends-koulut 1869.\n\n'
+      + 'Kaupungin eteläpuolella on Tell en-Nasbehin muinainen kukkula, jonka arvellaan '
+      + 'olevan Raamatun Mispa. William Badè johti sen kaivauksia vuosina 1926–1935. Pyhän '
+      + 'perheen kirkko, Friends-koulut ja Al-Manaran aukio ovat kaupungin tiiviissä '
+      + 'ytimessä, ja Kulttuuripalatsi on lounaassa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: 31.9104, etela: 31.8812, lansi: 35.1877, ita: 35.2196 },
+    kohteet: [
+      {
+        nimi: 'Al-Manaran aukio',
+        tyyppi: 'aukio',
+        lat: 31.905,
+        lon: 35.20444,
+      },
+      {
+        nimi: 'Al-Kasaba-teatteri',
+        lat: 31.90247,
+        lon: 35.20392,
+      },
+      {
+        nimi: 'Pyhän perheen kirkko',
+        lat: 31.905,
+        lon: 35.19972,
+      },
+      {
+        nimi: 'Ramallahin Friends-koulut',
+        lat: 31.9054,
+        lon: 35.2081,
+      },
+      {
+        nimi: 'Kulttuuripalatsi ja Mahmoud Darwish -museo',
+        lat: 31.8917,
+        lon: 35.1909,
+      },
+      {
+        nimi: 'Tell en-Nasbeh',
+        tyyppi: 'luonto',
+        lat: 31.88514,
+        lon: 35.21642,
+      },
+    ],
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
+  bamako: {
+    polku: 'assets/kartat/bamako-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 12.668,
+      etela: 12.6125,
+      lansi: -8.0154,
+      ita: -7.9832,
+    },
+    esittely: 'Kartan alue on Bamakon keskusta Niger-joen rannalla Malin lounaisosassa, koskialueen '
+      + 'kohdalla, joka erottaa joen ylä- ja keskijuoksun. Nimen selitetään bambara-kielestä '
+      + 'krokotiilijoeksi. Ranskalaiset rakensivat paikalle linnakkeen 1. helmikuuta 1883 '
+      + 'saadakseen haltuunsa Nigerin strategisen kohdan.\n\n'
+      + 'Kaupunki oli Ranskan Sudanin siirtomaahallinnon keskus ja kasvoi nopeasti '
+      + 'rautateiden myötä: rata Kaysiin valmistui 1904 ja Dakariin 1923. Malin '
+      + 'kansallismuseo avattiin kaupungissa 14. helmikuuta 1953 Soudanin museona, ja Malin '
+      + 'itsenäistyessä 1960 Bamakossa asui noin 160 000 ihmistä.',
+    kohteet: [
+      {
+        nimi: 'Bamakon suurmoskeija',
+        wiki: 'Grand Mosque of Bamako',
+        lat: 12.64689,
+        lon: -7.99318,
+      },
+      {
+        nimi: 'Pyhän sydämen katedraali',
+        wiki: 'Sacred Heart Cathedral, Bamako',
+        lat: 12.64369,
+        lon: -7.99934,
+      },
+      {
+        nimi: 'Marttyyrien silta',
+        wiki: 'Martyrs Bridge (Bamako)',
+        lat: 12.63028,
+        lon: -7.99192,
+      },
+      {
+        nimi: 'Kuningas Fahdin silta',
+        wiki: 'King Fahd Bridge (Bamako)',
+        lat: 12.62361,
+        lon: -8.00478,
+      },
+      {
+        nimi: 'Malin kansallismuseo',
+        wiki: 'National Museum of Mali',
+        lat: 12.65863,
+        lon: -7.9993,
+      },
+      {
+        nimi: 'Koulouban palatsi',
+        wiki: 'Koulouba Palace',
+        lat: 12.66,
+        lon: -8.00667,
+      },
+    ],
+  },
+  bangui: {
+    polku: 'assets/kartat/bangui-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 4.4053,
+      etela: 4.3538,
+      lansi: 18.5527,
+      ita: 18.5826,
+    },
+    esittely: 'Kartan alue on Bangui, Keski-Afrikan tasavallan pääkaupunki Ubangi-joen '
+      + 'pohjoisrannalla. Ranskalaiset perustivat sinne tukikohdan vuonna 1889 paikkaan, '
+      + 'jossa kosket päättivät joen purjehduskelpoisen osuuden; kaupungin nimi tulee näiden '
+      + 'koskien paikallisesta nimestä.\n\n'
+      + 'Joen vastarannalla on Kongon demokraattisen tasavallan alue. Bangui kehittyi '
+      + 'Ubangi-Shari-siirtomaan keskukseksi, ja se jäi pääkaupungiksi, kun maa itsenäistyi '
+      + 'vuonna 1960. Kaupungin tunnetuimpia rakennuksia ovat Notre-Damen katedraali, '
+      + 'Boganda-museo ja keskustori.',
+    kohteet: [
+      {
+        nimi: 'Notre-Damen katedraali',
+        wiki: 'Cathédrale Notre-Dame (Bangui)',
+        lat: 4.37,
+        lon: 18.57806,
+      },
+      {
+        nimi: 'Boganda-kansallismuseo',
+        wiki: 'Boganda National Museum',
+        lat: 4.36411,
+        lon: 18.57698,
+      },
+      {
+        nimi: 'Barthélemy Boganda -stadion',
+        wiki: 'Barthélemy Boganda Stadium',
+        lat: 4.37442,
+        lon: 18.56439,
+      },
+      {
+        nimi: "Notre-Dame d'Afrique -kirkko",
+        wiki: "Notre Dame D'Afrique, Bangui",
+        lat: 4.39786,
+        lon: 18.55727,
+      },
+    ],
+  },
+  djibouti: {
+    polku: 'assets/kartat/djibouti-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 11.6084,
+      etela: 11.588,
+      lansi: 43.136,
+      ita: 43.1545,
+    },
+    esittely: 'Kartan alue on Djiboutin vanha keskusta niemimaalla Tadjourahinlahden rannalla. '
+      + 'Ranskalaiset perustivat kaupungin vuonna 1888 maalle, jonka he vuokrasivat '
+      + 'paikallisilta somali- ja afar-sulttaaneilta, ja 1890-luvulla siirtomaan hallinto '
+      + 'siirtyi sinne Obokista.\n\n'
+      + 'Kaupungin tehtävä on ollut satama: Etiopia alkoi käyttää Djiboutin satamaa '
+      + 'merireittinään vuonna 1897, ja Addis Abebaan johtava standardiraiteinen rautatie '
+      + 'otettiin käyttöön 2017. Vuonna 1977 Djiboutista tuli itsenäisen tasavallan '
+      + 'pääkaupunki.',
+    kohteet: [
+      {
+        nimi: 'Hamoudin moskeija',
+        wiki: 'Hamoudi Mosque',
+        lat: 11.59231,
+        lon: 43.14612,
+      },
+      {
+        nimi: 'Abdülhamid II:n moskeija',
+        wiki: 'Abdülhamid II Mosque',
+        lat: 11.59315,
+        lon: 43.14191,
+      },
+      {
+        nimi: 'Kansanpalatsi',
+        wiki: "People's Palace, Djibouti City",
+        lat: 11.5995,
+        lon: 43.1473,
+      },
+      {
+        nimi: 'Notre-Dame du Bon-Pasteur -katedraali',
+        wiki: 'Diocese of Djibouti',
+        lat: 11.60009,
+        lon: 43.1513,
+      },
+      {
+        nimi: 'Djiboutin satama',
+        wiki: 'Djiboutin satama',
+        lat: 11.6053,
+        lon: 43.1392,
+      },
+    ],
+  },
+  freetown: {
+    polku: 'assets/kartat/freetown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: { pohjoinen: 8.5039, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
+    kohteet: [
+      {
+        nimi: 'Pyhän Yrjön katedraali',
+        wiki: "St. George's Cathedral, Freetown",
+        lat: 8.49,
+        lon: -13.2356,
+      },
+      {
+        nimi: 'Freetownin keskusmoskeija',
+        wiki: 'Freetown Central Mosque',
+        lat: 8.49194,
+        lon: -13.23278,
+      },
+      {
+        nimi: 'Sierra Leonen rautatiemuseo',
+        wiki: 'Sierra Leone National Railway Museum',
+        lat: 8.48944,
+        lon: -13.20583,
+      },
+      {
+        nimi: 'Fourah Bay College',
+        wiki: 'Fourah Bay College',
+        lat: 8.4779,
+        lon: -13.221,
+      },
+      {
+        nimi: 'Kansallisstadion',
+        wiki: 'National Stadium (Sierra Leone)',
+        lat: 8.47957,
+        lon: -13.24901,
+      },
+    ],
+  },
+  harare: {
+    polku: 'assets/kartat/harare-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -17.7949,
+      etela: -17.8419,
+      lansi: 31.0321,
+      ita: 31.06,
+    },
+    esittely: 'Kartan alue on Hararen keskusta Mashonalandin ylängöllä Zimbabwen koillisosassa. '
+      + 'Brittiläinen Pioneer Column perusti kaupungin vuonna 1890 linnoitukseksi, ja se '
+      + 'tunnettiin Salisburyna, kunnes se nimettiin Harareksi 18. huhtikuuta 1982.\n\n'
+      + 'Africa Unity Square ja Harare Gardens ovat keskustan avoimia tiloja, ja Kopje on '
+      + 'graniittikukkula, jolta näkee yli kaupungin. Mbare Musika on Zimbabwen tärkeä '
+      + 'hedelmä- ja vihannestori sekä maaseutubussien päätepysäkki, jonne tuottajat tuovat '
+      + 'satoaan kaukaakin.',
+    kohteet: [
+      {
+        nimi: 'Pyhän Marian ja Kaikkien Pyhien katedraali',
+        wiki: 'Cathedral of St Mary and All Saints, Harare',
+        lat: -17.828,
+        lon: 31.0512,
+      },
+      {
+        nimi: 'Pyhän Sydämen katedraali',
+        wiki: 'Sacred Heart Cathedral, Harare',
+        lat: -17.821,
+        lon: 31.0532,
+      },
+      {
+        nimi: 'Zimbabwen kansallisgalleria',
+        wiki: 'National Gallery of Zimbabwe',
+        lat: -17.82528,
+        lon: 31.04889,
+      },
+      {
+        nimi: 'Ihmistieteiden museo',
+        wiki: 'Zimbabwe Museum of Human Sciences',
+        lat: -17.8325,
+        lon: 31.03889,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        wiki: 'National Botanic Garden (Zimbabwe)',
+        lat: -17.80167,
+        lon: 31.05083,
+      },
+      {
+        nimi: 'Harare Sports Club',
+        wiki: 'Harare Sports Club',
+        lat: -17.81417,
+        lon: 31.05056,
+      },
+    ],
+  },
+  juba: {
+    polku: 'assets/kartat/juba-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Juba, Etelä-Sudanin pääkaupunki Valkoisen Niilin länsirannalla. '
+      + 'Paikalla oli alun perin pieni baari-kansan kylä, jonka asukkaat siirrettiin '
+      + '1920-luvulla, kun englantilais-egyptiläinen hallinto rakensi sinne Mongallan '
+      + 'provinssin hallintokaupungin. Yksi syy paikan valintaan oli yhteys Niilin '
+      + 'jokiliikenteeseen.\n\n'
+      + 'Kreikkalaisia kauppiaita asettui kaupunkiin samoin 1920-luvulla, ja he rakensivat '
+      + 'keskustaan monia rakennuksia. Vuonna 1947 Jubassa pidettiin konferenssi, jossa '
+      + 'sovittiin Pohjois- ja Etelä-Sudanin pysymisestä yhtenä valtiona. Juba tuli '
+      + 'itsenäisen Etelä-Sudanin pääkaupungiksi 9. heinäkuuta 2011.',
+    rajat: { pohjoinen: 4.8513, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
+    kohteet: [
+      {
+        nimi: 'Nyakuron kulttuurikeskus',
+        wiki: 'Nyakuron Cultural Centre',
+        lat: 4.84562,
+        lon: 31.58477,
+      },
+      {
+        nimi: 'Pyhän Teresan katedraali',
+        wiki: 'St. Theresa Cathedral, Juba',
+        lat: 4.82734,
+        lon: 31.60032,
+      },
+      {
+        nimi: 'Juban Niilin silta',
+        wiki: 'Juba Nile Bridge',
+        lat: 4.823,
+        lon: 31.6086,
+      },
+      {
+        nimi: 'Juban stadion',
+        wiki: 'Juba Stadium',
+        lat: 4.84307,
+        lon: 31.61584,
+      },
+    ],
+  },
+  lusaka: {
+    polku: 'assets/kartat/lusaka-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Lusaka, Sambian pääkaupunki. Kaupunki syntyi vuonna 1905 '
+      + 'vesipysäkkinä rautatielinjan varrelle, ja nimi tulee lenje-kansan päällikkö '
+      + 'Lusaakasta. Seudulla asuivat lenje- ja soli-kansat.\n\n'
+      + 'Siirtomaahallinto valitsi Lusakan Pohjois-Rhodesian pääkaupungiksi Livingstonen '
+      + 'tilalle, ja siirto toteutui virallisesti vuonna 1935. Kaupungin pääkatu Cairo Road '
+      + 'sai nimensä Cecil Rhodesin kaavailemasta Kapkaupungista Kairoon -tiestä ja on '
+      + 'keskustan liike-elämän pääväylä. Pohjois-Rhodesia itsenäistyi Sambiana vuonna 1964, '
+      + 'ja Lusakasta tuli sen pääkaupunki.',
+    rajat: { pohjoinen: -15.4052, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
+    kohteet: [
+      {
+        nimi: 'Cairo Road',
+        tyyppi: 'aukio',
+        wiki: 'Cairo Road',
+        lat: -15.41661,
+        lon: 28.28168,
+      },
+      {
+        nimi: 'Lusakan kansallismuseo',
+        wiki: 'Lusaka National Museum',
+        lat: -15.422,
+        lon: 28.2913,
+      },
+      {
+        nimi: 'FINDECO House',
+        wiki: 'FINDECO House',
+        lat: -15.4243,
+        lon: 28.2838,
+      },
+      {
+        nimi: 'Pyhän Ristin katedraali',
+        wiki: 'Cathedral of the Holy Cross, Lusaka',
+        lat: -15.4188,
+        lon: 28.3037,
+      },
+      {
+        nimi: 'Embassy Parkin presidenttien hautausmaa',
+        tyyppi: 'luonto',
+        wiki: 'Embassy Park Presidential Burial Site',
+        lat: -15.42174,
+        lon: 28.30924,
+      },
+      {
+        nimi: 'Sambian kansallisarkisto',
+        wiki: 'National Archives of Zambia',
+        lat: -15.4264,
+        lon: 28.31098,
+      },
+      {
+        nimi: 'Lapsi Jeesuksen katedraali',
+        wiki: 'Child Jesus Cathedral, Lusaka',
+        lat: -15.41391,
+        lon: 28.3152,
+      },
+    ],
+  },
+  maputo: {
+    polku: 'assets/kartat/maputo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Maputon vanha keskusta Maputo-lahden länsirannalla Mosambikin '
+      + 'eteläosassa. Portugalilaiset rakensivat paikalle linnoituksen 1700-luvun lopulla, ja '
+      + 'kaupunki kasvoi sen ympärille nimellä Lourenço Marques. Se sai kaupunkioikeudet '
+      + 'vuonna 1887 ja tuli Portugalin Mosambikin pääkaupungiksi vuonna 1898.\n\n'
+      + 'Sataman ja Baixan vanhan keskustan läheisyydessä ovat linnoitus, torihalli ja '
+      + 'rautatieasema. Ne kertovat kaupungin eri rakennusvaiheista. Itsenäistymisen jälkeen '
+      + 'kaupunki sai vuonna 1976 nimen Maputo samannimisen joen mukaan.',
+    rajat: { pohjoinen: -25.9603, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
+    kohteet: [
+      {
+        nimi: 'Maputon katedraali',
+        wiki: 'Cathedral of Our Lady of the Immaculate Conception, Maputo',
+        lat: -25.96892,
+        lon: 32.57445,
+      },
+      {
+        nimi: 'Casa de Ferro',
+        wiki: 'Casa de Ferro',
+        lat: -25.97042,
+        lon: 32.57288,
+      },
+      {
+        nimi: 'Maputon rautatieasema',
+        wiki: 'Maputo Central Railway Station',
+        lat: -25.9711,
+        lon: 32.5645,
+      },
+      {
+        nimi: 'Nossa Senhora da Conceição -linnake',
+        wiki: 'Fort Nossa Senhora da Conceição de Lourenço Marques',
+        lat: -25.97502,
+        lon: 32.57073,
+      },
+      {
+        nimi: 'Maputon pääposti',
+        wiki: 'Maputo Post Office Building',
+        lat: -25.97287,
+        lon: 32.57219,
+      },
+      {
+        nimi: 'Maputo–Katemben silta',
+        wiki: 'Maputo–Katembe bridge',
+        lat: -25.97294,
+        lon: 32.55707,
+      },
+      {
+        nimi: 'Ponta Vermelhan palatsi',
+        wiki: 'Palácio da Ponta Vermelha',
+        lat: -25.98039,
+        lon: 32.59023,
+      },
+    ],
+  },
+  maseru: {
+    polku: 'assets/kartat/maseru-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Maserun keskusta Lesothon länsirajalla, Caledon-joen eli Mohokaren '
+      + 'rannalla, jonka toisella puolella on Etelä-Afrikka. Britit perustivat paikalle '
+      + 'pienen poliisileirin vuonna 1869 Free Staten ja basothojen sotien jälkeen. Maseru '
+      + 'pysyi pääkaupunkina, kun Lesotho itsenäistyi vuonna 1966.\n\n'
+      + 'Kingsway on kaupungin keskeinen katu. Thaba Bosiu on retkikohde noin 24 kilometrin '
+      + 'päässä idässä: kuningas Moshoeshoe I asettui tälle tasangolle heinäkuussa 1824, kun '
+      + 'hän oli paennut Butha-Buthesta alueen sotia, ja tasangosta tuli hänen linnakkeensa.',
+    rajat: { pohjoinen: -29.3057, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
+    kohteet: [
+      {
+        nimi: 'Our Lady of Victories -katedraali',
+        wiki: 'Our Lady of Victories Cathedral, Maseru',
+        lat: -29.31688,
+        lon: 27.49487,
+      },
+      {
+        nimi: 'Basotho Hat Shop',
+        wiki: 'Basotho Hat Shop',
+        lat: -29.31301,
+        lon: 27.47842,
+      },
+      {
+        nimi: 'Lesothon parlamenttirakennus',
+        wiki: 'Parliament of Lesotho',
+        lat: -29.32284,
+        lon: 27.49258,
+      },
+      {
+        nimi: 'Setsoton stadion',
+        wiki: 'Setsoto Stadium',
+        lat: -29.31104,
+        lon: 27.50137,
+      },
+      {
+        nimi: 'Lesothon valtionkirjasto ja -arkisto',
+        wiki: 'Lesothon valtionkirjasto ja -arkisto',
+        lat: -29.3147,
+        lon: 27.48506,
+      },
+    ],
+  },
+  // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
+  // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
+  vatikaanivaltio: {
+    polku: 'assets/kartat/vatikaanivaltio-keskusta.png',
+    varikartta: 'assets/kartat/vatikaanivaltio-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: { pohjoinen: 41.9082, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+    piirtoRajat: { pohjoinen: 41.91108, etela: 41.89572, lansi: 12.44256, ita: 12.46464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartta kattaa Vatikaanivaltion, jonka pinta-ala on noin 0,44 neliökilometriä. Valtio '
+      + 'syntyi Lateraanisopimuksella, joka allekirjoitettiin 11. helmikuuta 1929 pyhän '
+      + 'istuimen ja Italian välillä. Puutarhat peittävät siitä noin puolet, ja niiden alku '
+      + 'on paavi Nikolai III:n (1277–1280) ajalta.\n\n'
+      + 'Pietarinkirkon rakennustyö alkoi 1506 ja kirkko vihittiin 1626; Pietarinaukion '
+      + 'obeliski siirrettiin paikalleen 1586. Apostolisen palatsin nykyinen rakennus '
+      + 'aloitettiin 1589, ja siinä on paavin asunto ja Vatikaanin museot, jotka polveutuvat '
+      + 'Julius II:n kokoelmasta. Sikstuksen kappelin katon Michelangelo maalasi 1508–1512. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Pietarinkirkko',
+        wiki: 'Pietarinkirkko',
+        lat: 41.90216,
+        lon: 12.45371,
+      },
+      {
+        nimi: 'Pietarinaukio',
+        tyyppi: 'aukio',
+        wiki: 'Pietarinaukio',
+        lat: 41.90225,
+        lon: 12.45722,
+      },
+      {
+        nimi: 'Sikstuksen kappeli',
+        wiki: 'Sikstuksen kappeli',
+        lat: 41.90298,
+        lon: 12.45448,
+      },
+      {
+        nimi: 'Apostolinen palatsi',
+        wiki: 'Apostolinen palatsi',
+        lat: 41.90361,
+        lon: 12.45639,
+      },
+      {
+        nimi: 'Vatikaanin museot',
+        wiki: 'Vatikaanin museot',
+        lat: 41.90627,
+        lon: 12.45274,
+      },
+      {
+        nimi: 'Vatikaanin puutarhat',
+        tyyppi: 'luonto',
+        wiki: 'Vatican Gardens',
+        lat: 41.90306,
+        lon: 12.45056,
+      },
+    ],
+  },
+  sisilia: {
+    /*
+     * Palermo, pelin kaupunki "Sisilia" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3 tarvitsee
+     * kohdekartan). Kohteet: tehtävän paikat (Teatro Massimo, Quattro Canti, Piazza Marina) ja
+     * vanhankaupungin päänähtävyydet. Wiki-otsikot englanniksi, koska suomenkielisiä artikkeleita ei ole (js/wiki.js kokeilee fi:n ensin); tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/sisilia-keskusta.png',
+    varikartta: 'assets/kartat/sisilia-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    piirtoRajat: { pohjoinen: 38.1309, etela: 38.1021, lansi: 13.3417, ita: 13.3833 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Palermon vanhakaupunki Sisilian pohjoisrannalla. Foinikialaiset '
+      + 'perustivat kaupungin, ja arabivalta alkoi 800-luvulla; normannit sekoittivat '
+      + 'arabialaisen, bysanttilaisen ja romaanisen tyylin. Katedraali ja Normannien palatsi '
+      + 'ovat osa Unescon kohdetta Arab-Norman Palermo, joka hyväksyttiin 2015.\n\n'
+      + 'Quattro Cantilla Via Maqueda ja Corso Vittorio Emanuele risteävät. Normannien '
+      + 'palatsia kutsutaan Euroopan vanhimmaksi kuninkaalliseksi asunnoksi; Roger II tilasi '
+      + 'sen kappelin kruunajaistensa 1130 jälkeen. Teatro Massimo avattiin 16. toukokuuta '
+      + '1897, ja silloin se oli Euroopan kolmanneksi suurin oopperatalo. Piazza Marina on '
+      + 'idässä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Teatro Massimo', lat: 38.12028, lon: 13.35722, wiki: 'Teatro Massimo' },
+      { nimi: 'Quattro Canti', tyyppi: 'aukio', lat: 38.11556, lon: 13.36139, wiki: 'Quattro Canti' },
+      { nimi: 'Palermon katedraali', lat: 38.11417, lon: 13.35611, wiki: 'Palermo Cathedral' },
+      { nimi: 'Normannien palatsi', lat: 38.11083, lon: 13.35306, wiki: 'Palazzo dei Normanni' },
+      { nimi: 'Piazza Marina', tyyppi: 'aukio', lat: 38.1176, lon: 13.3708, wiki: 'Piazza Marina' },
+    ],
+  },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4 tarvitsee
+     * kohdekartan). Koordinaatit OSM:stä (nimi-haku 12.10.2026). Tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/lappi-keskusta.png',
+    varikartta: 'assets/kartat/lappi-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    piirtoRajat: { pohjoinen: 66.5186, etela: 66.4834, lansi: 25.6885, ita: 25.7765 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Rovaniemen keskusta Kemijoen ja Ounasjoen yhtymäkohdassa lähellä '
+      + 'napapiiriä. Saksalaiset polttivat ja räjäyttivät kauppalan Lapin sodassa lokakuussa '
+      + '1944, ja noin 90 prosenttia rakennuksista tuhoutui. Jälleenrakennuksen suunnitteli '
+      + 'Alvar Aalto, ja asemakaava muistuttaa poronsarvia.\n\n'
+      + 'Ounasjoen rannalla on Arktikum ja idässä Jätkänkynttilä-silta, joka valmistui 1989. '
+      + 'Aallon suunnittelemia ovat Rovaniemen kaupungintalo ja Lappia-talo, jonka vaiheet '
+      + 'valmistuivat 1961–1975. Rovaniemen kirkko valmistui 1950 poltetun edeltäjänsä '
+      + 'tilalle. Lordin aukio on aivan keskustassa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      { nimi: 'Arktikum', lat: 66.50754, lon: 25.72598, wiki: 'Arktikum' },
+      { nimi: 'Lordin aukio', tyyppi: 'aukio', lat: 66.50252, lon: 25.7305, wiki: 'Lordin aukio' },
+      { nimi: 'Jätkänkynttilä', lat: 66.5029, lon: 25.74227, wiki: 'Jätkänkynttilä (silta)' },
+      { nimi: 'Rovaniemen kaupungintalo', lat: 66.49642, lon: 25.72501, wiki: 'Rovaniemen kaupungintalo' },
+      { nimi: 'Lappia-talo', lat: 66.49701, lon: 25.72043, wiki: 'Lappia-talo' },
+      { nimi: 'Rovaniemen kirkko', lat: 66.49462, lon: 25.72879, wiki: 'Rovaniemen kirkko' },
+    ],
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs, rajat kohdekartat.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs, rajat kohdekartat.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
+  alger: {
+    polku: 'assets/kartat/alger-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.7916,
+      etela: 36.7684,
+      lansi: 3.0512,
+      ita: 3.0679,
+    },
+    kohteet: [
+      {
+        nimi: 'Casbahin linnoitus',
+        lat: 36.78444,
+        lon: 3.055,
+      },
+      {
+        nimi: 'Ketchaoua-moskeija',
+        lat: 36.785,
+        lon: 3.06056,
+      },
+      {
+        nimi: 'Dar Mustapha Pacha',
+        lat: 36.78566,
+        lon: 3.06084,
+      },
+      {
+        nimi: 'Djamaa el Djedid',
+        lat: 36.7849,
+        lon: 3.06301,
+      },
+      {
+        nimi: 'Djamaa el Kebir',
+        lat: 36.78528,
+        lon: 3.06417,
+      },
+      {
+        nimi: 'Raïsien palatsi',
+        lat: 36.7884,
+        lon: 3.0641,
+      },
+      {
+        nimi: 'Sidi Abderrahmanen mausoleumi',
+        lat: 36.78846,
+        lon: 3.05956,
+      },
+    ],
+    esittely: 'Kartan alue on Algerin Casbah, vanhakaupunki, joka nousee rinteenä Välimeren '
+      + 'rannalta ylös kohti linnoitusta. Casbah sai Unescon maailmanperintömerkinnän vuonna '
+      + '1992.\n\n'
+      + 'Rannan tuntumassa ovat Raïsien palatsi, jonka linnake rakennettiin vuonna 1576, ja '
+      + 'Sidi Abderrahmanen mausoleumi. Keskemmällä ovat Djamaa el Kebir, jonka almoravidit '
+      + 'rakensivat 1000-luvun lopulla, Ketchaoua-moskeija sekä Djamaa el Djedid noin '
+      + 'vuodelta 1660. Dar Mustapha Pacha valmistui 1700-luvun lopulla, ja Casbahin '
+      + 'linnoitus valvoo kaupunkia korkealta. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+  },
+  banjul: {
+    polku: 'assets/kartat/banjul-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Banjul, Gambian pääkaupunki, joka sijaitsee St Mary\'s -saarella '
+      + 'siinä, missä Gambia-joki laskee Atlantin mereen. Britit perustivat kaupungin vuonna '
+      + '1816 Bathurstin nimellä, ja nykyisen nimensä se sai vuonna 1973.\n\n'
+      + 'Albertin tori on saaren vilkas katutori. Gambia-joen suu avautuu saaren ympärillä '
+      + 'leveäksi suistoksi. Saaren länsi- ja lounaispuolella on Tanbin kosteikko, '
+      + 'mangrovemetsän ja vuorovesikanavien vyöhyke, joka erottaa Banjulin Serekundan ja '
+      + 'Bakaun kaupunkialueista. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.4776,
+      etela: 13.4081,
+      lansi: -16.6206,
+      ita: -16.5633,
+    },
+    kohteet: [
+      {
+        nimi: 'Albertin tori',
+        tyyppi: 'aukio',
+        lat: 13.4543,
+        lon: -16.57195,
+      },
+      {
+        nimi: 'Gambia-joen suu',
+        tyyppi: 'luonto',
+        lat: 13.4667,
+        lon: -16.5667,
+      },
+      {
+        nimi: 'Tanbin kosteikko',
+        tyyppi: 'luonto',
+        lat: 13.41667,
+        lon: -16.61667,
+      },
+    ],
+  },
+  bissau: {
+    polku: 'assets/kartat/bissau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 11.8671,
+      etela: 11.8533,
+      lansi: -15.5893,
+      ita: -15.5754,
+    },
+    kohteet: [
+      {
+        nimi: 'Amuran linnoitus',
+        lat: 11.86027,
+        lon: -15.57862,
+      },
+      {
+        nimi: 'Pidjiguitin laituri',
+        lat: 11.85618,
+        lon: -15.57835,
+      },
+      {
+        nimi: 'Tulliaukio',
+        tyyppi: 'aukio',
+        lat: 11.86026,
+        lon: -15.57723,
+      },
+    ],
+    esittely: 'Kartan alue on Bissaun vanha satamakaupunginosa Geba-joen suistossa lähellä Atlantin '
+      + 'rannikkoa. Portugalilaiset perustivat paikalle kauppa-aseman vuonna 1687, ja siitä '
+      + 'kasvoi Guinea-Bissaun pääkaupunki.\n\n'
+      + 'Amuran linnoitus on 1700-luvulta periytyvä nelikulmainen Vauban-tyylinen linnake, '
+      + 'jonka kulmissa on viisikulmaiset bastionit ja jossa on Amílcar Cabralin mausoleumi. '
+      + 'Pidjiguitin laiturilla satamatyöläiset lakkoilivat 3. elokuuta 1959, ja viranomaiset '
+      + 'tukahduttivat lakon väkivalloin. Tulliaukion nimi viittaa tulliin. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+  },
+  conakry: {
+    polku: 'assets/kartat/conakry-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Conakryn vanha keskusta Kaloumin niemimaan kärjessä Guinean '
+      + 'Atlantin-rannikolla. Kaupunki kasvoi Tombon saarelle, jonka Britannia luovutti '
+      + 'Ranskalle vuonna 1887; saari yhdistettiin myöhemmin niemimaahan, ja kaupunki levisi '
+      + 'sitä pitkin koilliseen.\n\n'
+      + 'Kaupungin talous nojaa pitkälti Conakryn satamaan. Camayennen kasvitieteellisessä '
+      + 'puutarhassa kasvaa kapokkipuita. Edustan Los-saaristoon kuuluvat Tamaran, Kassan ja '
+      + 'Roumen saaret: Kassa ja Tamara muodostavat lähes umpeen kiertyvän kaaren keskellä '
+      + 'olevan Roumen ympärille. Saariston nimi tulee portugalin sanoista, jotka '
+      + 'tarkoittavat epäjumalten saaria. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 9.5617,
+      etela: 9.4386,
+      lansi: -13.845,
+      ita: -13.6744,
+    },
+    kohteet: [
+      {
+        nimi: 'Tombon saari',
+        tyyppi: 'luonto',
+        lat: 9.51,
+        lon: -13.71,
+      },
+      {
+        nimi: 'Conakryn satama',
+        lat: 9.5144,
+        lon: -13.7193,
+      },
+      {
+        nimi: 'Camayennen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 9.5307,
+        lon: -13.68592,
+      },
+      {
+        nimi: 'Kassan saari',
+        tyyppi: 'luonto',
+        lat: 9.475,
+        lon: -13.74944,
+      },
+      {
+        nimi: 'Roumen saari',
+        tyyppi: 'luonto',
+        lat: 9.46333,
+        lon: -13.79306,
+      },
+      {
+        nimi: 'Tamaran saari',
+        tyyppi: 'luonto',
+        lat: 9.48547,
+        lon: -13.82338,
+      },
+    ],
+  },
+  monrovia: {
+    polku: 'assets/kartat/monrovia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Monrovian vanha ydin Cape Mesurado -niemellä, jota Atlantti ja '
+      + 'Mesurado-joki rajaavat. Amerikan siirtomaaseura perusti kaupungin vuonna 1822 '
+      + 'vapautetuille mustille amerikkalaisille, ja nimi tulee presidentti James Monroesta.\n\n'
+      + 'Niemellä ovat Providence Baptist Church, jossa Liberian itsenäisyysjulistus '
+      + 'hyväksyttiin vuonna 1847, ja Kansallismuseon vanha oikeustalo, jossa museo on '
+      + 'toiminut vuodesta 1987. Joen suulla on Providence Island, jonne uudisasukkaat '
+      + 'laskeutuivat ensin. Pohjoispuolella ovat Bushrod Island ja jokien väliselle '
+      + 'niemekkeelle kasvanut West Point, ja Mesuradon kosteikkoalueella kasvaa mangrovea. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 6.3641, etela: 6.2896, lansi: -10.814, ita: -10.7412 },
+    kohteet: [
+      {
+        nimi: 'Kansallismuseon vanha oikeustalo',
+        lat: 6.3158,
+        lon: -10.804,
+      },
+      {
+        nimi: 'Providence Baptist Church, historiallinen pyhäkkö',
+        lat: 6.3168,
+        lon: -10.8044,
+      },
+      {
+        nimi: 'Providence Island',
+        lat: 6.32,
+        lon: -10.802,
+      },
+      {
+        nimi: 'Bushrod Island',
+        tyyppi: 'luonto',
+        lat: 6.3575,
+        lon: -10.78556,
+      },
+      {
+        nimi: 'West Point',
+        lat: 6.3273,
+        lon: -10.8064,
+      },
+      {
+        nimi: 'Mesuradon kosteikkoalue',
+        tyyppi: 'luonto',
+        lat: 6.3,
+        lon: -10.75,
+      },
+    ],
+  },
+  nouakchott: {
+    polku: 'assets/kartat/nouakchott-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 18.1109,
+      etela: 18.0681,
+      lansi: -15.9892,
+      ita: -15.9637,
+    },
+    esittely: 'Kartan alue on Nouakchott, Mauritanian pääkaupunki Atlantin rannikolla. Paikalla oli '
+      + 'pieni kalastajakylä ja linnoitettu ksar, kunnes 1950-luvun lopulla alettiin rakentaa '
+      + 'uutta pääkaupunkia. Kaupunki oli pääosin valmis, kun maa itsenäistyi marraskuussa '
+      + '1960.\n\n'
+      + 'Kalastajarannalla pienveneet tuovat saaliin kalatorille. Etelämpänä on Friendship '
+      + 'Port, kiinalaisyhtiön rakentama syväsatama, joka avattiin vuonna 1986; luontaista '
+      + 'satamalahtea ei ollut, joten laivoja suojaa betonilohkoista tehty aallonmurtaja. '
+      + 'Keskustassa ovat Marché Capitale ja Mauritanian kansallismuseo, jonka toiminta alkoi '
+      + '1972. Nouakchottin olympiastadion on pohjoisempana. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Mauritanian kansallismuseo',
+        wiki: 'National Museum of Mauritania',
+        lat: 18.08552,
+        lon: -15.9748,
+      },
+      {
+        nimi: 'Saudien moskeija',
+        wiki: 'Saudi Mosque',
+        lat: 18.09,
+        lon: -15.97556,
+      },
+      {
+        nimi: 'Marché Capitale',
+        tyyppi: 'aukio',
+        wiki: 'Marché Capitale',
+        lat: 18.08611,
+        lon: -15.97944,
+      },
+      {
+        nimi: 'Marokkolaisten tori',
+        tyyppi: 'aukio',
+        wiki: 'Marocaine market',
+        lat: 18.07667,
+        lon: -15.97917,
+      },
+      {
+        nimi: 'Nouakchottin olympiastadion',
+        wiki: 'Nouakchott Olympic Stadium',
+        lat: 18.10472,
+        lon: -15.98528,
+      },
+      {
+        nimi: 'Nouakchottin yliopisto',
+        wiki: 'University of Nouakchott Al Aasriya',
+        lat: 18.08934,
+        lon: -15.96764,
+      },
+    ],
+  },
+  praia: {
+    polku: 'assets/kartat/praia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 14.9247,
+      etela: 14.8986,
+      lansi: -23.5208,
+      ita: -23.504,
+    },
+    kohteet: [
+      {
+        nimi: 'Praça Alexandre Albuquerque -aukio',
+        lat: 14.9177,
+        lon: -23.5091,
+        tyyppi: 'aukio',
+      },
+      {
+        nimi: 'Jaime Motan entinen kasarmi',
+        lat: 14.9162,
+        lon: -23.5088,
+      },
+      {
+        nimi: 'Praian etnografinen museo',
+        lat: 14.9209,
+        lon: -23.5072,
+      },
+      {
+        nimi: 'Maria Pian majakka',
+        lat: 14.90042,
+        lon: -23.50906,
+      },
+      {
+        nimi: 'Santa Marian luoto',
+        lat: 14.90778,
+        lon: -23.5075,
+        tyyppi: 'luonto',
+      },
+    ],
+    esittely: 'Kartan alue on Praian historiallinen keskus Plateau Santiago-saarella. Kaupunki '
+      + 'kasvoi sataman yläpuolella olevalle tasanteelle, jonka korkea sijainti suojasi '
+      + 'merirosvoilta, ja 1800-luvulla alue rakennettiin uudelleen ruutukaavan mukaan.\n\n'
+      + 'Plateaulla ovat Praça Alexandre Albuquerque -aukio, Jaime Motan entinen kasarmi ja '
+      + 'Praian etnografinen museo, joka avattiin vuonna 1997 1800-luvun talossa. Sataman '
+      + 'suulla on Santa Marian luoto, ja Ponta Temerosa -niemellä seisoo Maria Pian majakka, '
+      + 'joka on toiminut vuodesta 1881. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+  },
+  rabat: {
+    polku: 'assets/kartat/rabat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 34.0371,
+      etela: 33.992,
+      lansi: -6.8465,
+      ita: -6.8157,
+    },
+    kohteet: [
+      {
+        nimi: 'Udayan kasbah',
+        lat: 34.03056,
+        lon: -6.83556,
+      },
+      {
+        nimi: 'Bou Regreg -joen suisto',
+        tyyppi: 'luonto',
+        lat: 34.0319,
+        lon: -6.83083,
+      },
+      {
+        nimi: 'Andalusialainen muuri',
+        lat: 34.02414,
+        lon: -6.83311,
+      },
+      {
+        nimi: 'Moulay Slimanen moskeija',
+        lat: 34.02344,
+        lon: -6.83733,
+      },
+      {
+        nimi: 'Bab er-Rouah -portti',
+        lat: 34.01281,
+        lon: -6.83764,
+      },
+      {
+        nimi: 'Chellahin raunioalue',
+        lat: 34.00667,
+        lon: -6.82028,
+      },
+      {
+        nimi: 'Borj Sidi Makhlouf -linnake',
+        lat: 34.02656,
+        lon: -6.82621,
+      },
+    ],
+    esittely: 'Kartan alue on Rabatin vanha ydin joen suulla Atlantin rannalla, vastapäätä Saléa. '
+      + 'Almohadit rakensivat paikalle 1100-luvulla linnoitetun kaupungin, ja Rabat sai '
+      + 'Unescon maailmanperintönimen vuonna 2012.\n\n'
+      + 'Udayan kasbah kohoaa kukkulalla Bou Regreg -joen suiston reunalla; almohadit '
+      + 'rakensivat sen noin 1150. Medinan eteläreunaa rajaa yli 1,4 kilometrin '
+      + 'Andalusialainen muuri, joka rakennettiin 1600-luvun alussa Espanjasta karkotettujen '
+      + 'moriscojen aikaan; sen itäpäässä on Borj Sidi Makhlouf -linnake. Bab er-Rouah '
+      + '-portti valmistui 1197 ja Moulay Slimanen moskeija 1812. Chellahin raunioalueella on '
+      + 'roomalaisen Sala Colonian jäänteitä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+  },
+  tunis: {
+    polku: 'assets/kartat/tunis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 36.8138,
+      etela: 36.7899,
+      lansi: 10.1638,
+      ita: 10.1891,
+    },
+    kohteet: [
+      {
+        nimi: 'Bab el Bhar – Merenportti',
+        lat: 36.79917,
+        lon: 10.17562,
+      },
+      {
+        nimi: 'Zitouna-moskeija',
+        lat: 36.79722,
+        lon: 10.17111,
+      },
+      {
+        nimi: 'Kasbah-moskeija',
+        lat: 36.79667,
+        lon: 10.16778,
+      },
+      {
+        nimi: 'Dar Lasram',
+        lat: 36.80207,
+        lon: 10.16812,
+      },
+      {
+        nimi: 'Dar Othman',
+        lat: 36.79498,
+        lon: 10.17431,
+      },
+      {
+        nimi: 'Dar Hussein',
+        lat: 36.79563,
+        lon: 10.17057,
+      },
+    ],
+    esittely: 'Kartan alue on Tunisin medina, vanha kaupunki, jonka UNESCO otti '
+      + 'maailmanperintölistalle vuonna 1979. UNESCOn mukaan Tunis oli almohadien ja '
+      + 'hafsidien aikana, 1100–1500-luvuilla, yksi islamilaisen maailman suurista ja '
+      + 'rikkaista kaupungeista.\n\n'
+      + 'Medinan keskellä on Zitouna-moskeija, jonka aghlabidit rakensivat uudelleen vuosina '
+      + '864–865; nykyinen minareetti on vuodelta 1894. Kasbah-moskeijan rakennutti '
+      + 'hafsidihallitsija Abu Zakariya Yahya 1230-luvulla ja Dar Othmanin Othman dey noin '
+      + 'vuonna 1595. Dar Hussein on Bab Menaran kaupunginosassa, Dar Lasram pohjoisessa, ja '
+      + 'Bab el Bhar – Merenportti rajaa medinan idässä. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+  },
+  abuja: {
+    polku: 'assets/kartat/abuja-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 9.0767,
+      etela: 9.0413,
+      lansi: 7.4833,
+      ita: 7.5249,
+    },
+    esittely: 'Kartan alue on Abujan reuna, jossa pääkaupunki kohtaa graniittisen maaston. Nigeria '
+      + 'siirsi pääkaupunkinsa Lagosista Abujaan, ja Abuja julistettiin pääkaupungiksi 12. '
+      + 'joulukuuta 1991.\n\n'
+      + 'Itäpuolella kohoaa Aso-kallio, graniittinen yksittäiskallio, joka nousee noin 400 '
+      + 'metriä ympäristöään korkeammaksi; suurin osa kaupungista levittäytyy sen '
+      + 'eteläpuolelle. Länsipuolella on Jabin järvi, patoamalla syntynyt tekojärvi, joka '
+      + 'suunniteltiin alun perin noin 100 000 asukkaan vesilähteeksi. Kun suurempi Lower '
+      + 'Usuman pato valmistui, järvestä tuli kalastus- ja matkailukohde. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Abujan kansallismoskeija',
+        wiki: 'Abuja National Mosque',
+        lat: 9.0602,
+        lon: 7.48964,
+      },
+      {
+        nimi: 'Eagle Square',
+        tyyppi: 'aukio',
+        wiki: 'Eagle Square, Abuja',
+        lat: 9.06095,
+        lon: 7.49982,
+      },
+      {
+        nimi: 'Millennium-puisto',
+        tyyppi: 'luonto',
+        wiki: 'Millennium Park (Abuja)',
+        lat: 9.07156,
+        lon: 7.49947,
+      },
+      {
+        nimi: 'State House (Aso Rock Villa)',
+        wiki: 'The State House (Aso Rock Villa)',
+        lat: 9.06227,
+        lon: 7.51853,
+      },
+      {
+        nimi: 'Kansalliskokouksen rakennus',
+        wiki: 'National Assembly Complex',
+        lat: 9.06912,
+        lon: 7.51013,
+      },
+      {
+        nimi: 'Kansallinen kristillinen keskus',
+        wiki: 'National Christian Centre',
+        lat: 9.0484,
+        lon: 7.49488,
+      },
+    ],
+  },
+  accra: {
+    polku: 'assets/kartat/accra-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Accran vanha rannikkoydin Guineanlahden rannalla. Se kasvoi '
+      + 'eurooppalaisten kauppalinnoitusten ympärille, ja vuonna 1877 Accra korvasi Cape '
+      + 'Coastin Kultarannikon pääkaupunkina.\n\n'
+      + 'Jamesin linnoituksen rakensi brittiläinen Royal African Company vuonna 1673, ja '
+      + 'hollantilaiset rakensivat Ussherin linnoituksen eli Fort Crèvecœurin vuonna 1649. '
+      + 'Osun linna eli Christiansborg on tanskalaisten rakentama, ja se kuuluu Ghanan '
+      + 'linnoitusten UNESCO-listaukseen vuodesta 1979. Korlen laguuni on keskustan '
+      + 'länsipuolella, ja Holy Trinity -katedraali on High Streetillä. Labadin ranta on Osun '
+      + 'ja Teshien välissä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 5.5796,
+      etela: 5.5176,
+      lansi: -0.2251,
+      ita: -0.1339,
+    },
+    kohteet: [
+      {
+        nimi: 'Jamesin linnoitus',
+        lat: 5.5337,
+        lon: -0.2111,
+      },
+      {
+        nimi: 'Ussherin linnoitus',
+        lat: 5.5385,
+        lon: -0.2082,
+      },
+      {
+        nimi: 'Osun linna',
+        lat: 5.54694,
+        lon: -0.1825,
+      },
+      {
+        nimi: 'Holy Trinity -katedraali',
+        lat: 5.5415,
+        lon: -0.2061,
+      },
+      {
+        nimi: 'Korlen laguuni',
+        tyyppi: 'luonto',
+        lat: 5.5344,
+        lon: -0.2196,
+      },
+      {
+        nimi: 'Labadin ranta',
+        tyyppi: 'luonto',
+        lat: 5.56242,
+        lon: -0.13943,
+      },
+    ],
+  },
+  lome: {
+    polku: 'assets/kartat/lome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Lomén meriranta Guineanlahden hiekkarannikolla Togon lounaiskulmassa. '
+      + 'Kaupunki on aivan Ghanan rajan tuntumassa. Sen nimi tulee ewen kielen muodosta '
+      + 'Alomé, joka tarkoittaa suunnilleen alopuiden keskellä, ja Lomésta tuli Saksan '
+      + 'Togolandin pääkaupunki vuonna 1897.\n\n'
+      + 'Lomén keskustan meriranta on kaupungin eteläreuna, jossa kalastajat vetävät '
+      + 'verkkojaan aamun valjetessa ja ihmiset kävelevät rantaa iltaisin. Togo itsenäistyi '
+      + 'vuonna 1960, ja Lomessa on yhä maan iso satama. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    kohteet: [
+      {
+        nimi: 'Itsenäisyysmonumentti',
+        wiki: 'Independence Monument (Togo)',
+        lat: 6.12996,
+        lon: 1.21601,
+      },
+      {
+        nimi: 'Togon kansallismuseo',
+        wiki: 'Togon kansallismuseo',
+        lat: 6.13067,
+        lon: 1.21797,
+      },
+      {
+        nimi: 'Kuvernöörien palatsi',
+        wiki: 'Palace of the Governors, Togo',
+        lat: 6.12036,
+        lon: 1.21222,
+      },
+      {
+        nimi: 'Lomén suuri tori',
+        tyyppi: 'aukio',
+        wiki: 'Lomé Grand Market',
+        lat: 6.12603,
+        lon: 1.2273,
+      },
+    ],
+  },
+  ndjamena: {
+    polku: 'assets/kartat/ndjamena-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 12.1265,
+      etela: 12.0935,
+      lansi: 15.0296,
+      ita: 15.0597,
+    },
+    kohteet: [
+      {
+        nimi: 'Logonen ja Charin yhtymäkohta',
+        lat: 12.10611,
+        lon: 15.03528,
+        tyyppi: 'luonto',
+      },
+    ],
+    esittely: 'Kartan alue on Logonen ja Charin yhtymäkohta, jonka rannalle Tšadin pääkaupunki '
+      + 'N\'Djamena on rakentunut. Ranskalaiset perustivat paikalle vuonna 1900 '
+      + 'sotilasaseman, Fort-Lamyn, joka sai nimensä Kamerunin puolella taistelussa kaatuneen '
+      + 'upseerin Amédée-François Lamyn mukaan. Nykyisen nimensä se sai vuonna 1973.\n\n'
+      + 'Logone laskee N\'Djamenan kohdalla Chariin, joka kuljettaa vetensä Tšadjärveen. '
+      + 'Yhtymäkohta on kaupungin sijainnin perusta, ja Chari-joen toisella rannalla on '
+      + 'Kamerunin Kousséri. Joet ovat kaupungille sekä kulkureitti että valtioiden välinen '
+      + 'raja-alue. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  niamey: {
+    polku: 'assets/kartat/niamey-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Niamey, Nigerin pääkaupunki Nigerjoen vasemmalla rannalla. '
+      + 'Ranskalaiset tekivät paikasta hallintokeskuksen 1900-luvun alussa, ja pääkaupungiksi '
+      + 'Niamey vahvistettiin 28. joulukuuta 1926, kun hallinto palasi Zinderistä.\n\n'
+      + 'Kartan kolme kohdetta ovat luonnonpaikkoja. Nigerjoen saarijono ulottuu Niameysta '
+      + 'ylävirtaan, ja Néini Goungoun saari kuuluu sen suurimpiin; maouri-kansan kertomuksen '
+      + 'mukaan he asuivat saarella ennen kuin asettuivat joen vasemmalle rannalle. Gounti '
+      + 'Yénan suu on vanhan asutuksen kohdalla olevan uoman pää. Trois Sœursin kukkulat '
+      + 'kuuluvat seudun kovettuneiden pintakerrosten maisemaan. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.5251,
+      etela: 13.4863,
+      lansi: 2.0554,
+      ita: 2.1213,
+    },
+    kohteet: [
+      {
+        nimi: 'Gounti Yénan suu',
+        lat: 13.50895,
+        lon: 2.10512,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Néini Goungoun saari',
+        lat: 13.5142,
+        lon: 2.0641,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Trois Sœursin kukkulat',
+        lat: 13.49568,
+        lon: 2.05985,
+        tyyppi: 'luonto',
+      },
+    ],
+  },
+  ouagadougou: {
+    polku: 'assets/kartat/ouagadougou-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ouagadougoun keskusta. Mossi-kansan Wagadugu-kuningaskunta syntyi '
+      + '1400-luvulla, ja Burkina Fason pääkaupunki on sen perua, joten kaupungin ympäristöt '
+      + 'ovat paljon vanhempia kuin siirtomaa-ajan katuverkko.\n\n'
+      + 'Bangr Weogon kaupunkimetsä oli ennen siirtomaa-aikaa mossipäälliköiden pyhänä pitämä '
+      + 'metsä. Ranskalaiset muuttivat sen puistoksi 1930-luvulla, ja tammikuussa 2001 se sai '
+      + 'nykyisen nimensä, joka tarkoittaa tiedon metsää. Toinen kohde on Kansakunnan aukion '
+      + 'vanha markkinapaikka kaupungin keskustassa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+    kohteet: [
+      {
+        nimi: 'Ouagadougoun katedraali',
+        wiki: 'Ouagadougou Cathedral',
+        lat: 12.36197,
+        lon: -1.52701,
+      },
+      {
+        nimi: 'Ouagadougoun suurmoskeija',
+        wiki: 'Grand Mosque of Ouagadougou',
+        lat: 12.36622,
+        lon: -1.52139,
+      },
+      {
+        nimi: 'Maison du peuple',
+        wiki: 'La Maison du peuple (Ouagadougou)',
+        lat: 12.37219,
+        lon: -1.5236,
+      },
+      {
+        nimi: 'Kansallinen musiikkimuseo',
+        wiki: 'National Museum of Music (Burkina Faso)',
+        lat: 12.37351,
+        lon: -1.51683,
+      },
+      {
+        nimi: 'Kunnallisstadion',
+        wiki: 'Stade Dr Issoufou Joseph Conombo',
+        lat: 12.36056,
+        lon: -1.52917,
+      },
+    ],
+  },
+  portonovo: {
+    polku: 'assets/kartat/portonovo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 6.4788,
+      etela: 6.4655,
+      lansi: 2.6135,
+      ita: 2.6313,
+    },
+    kohteet: [
+      {
+        nimi: 'Jardin des plantes et de la nature',
+        lat: 6.47389,
+        lon: 2.615,
+        tyyppi: 'luonto',
+      },
+    ],
+    esittely: 'Kartan alue on Porto-Novon keskusta. Kaupunki on Beninin virallinen pääkaupunki, '
+      + 'vaikka Cotonou on maan taloudellinen keskus. Portugalilainen Eucaristo de Campos '
+      + 'antoi kaupungille vuonna 1730 nimen Porto-Novo, ”uusi satama”; paikalliset kutsuivat '
+      + 'sitä Hogbonuksi.\n\n'
+      + 'Jardin des plantes et de la nature on entisen pyhän metsän jäänne. Metsä kuului '
+      + 'Hogbonoun kuningaskunnan oikeusasioista vastanneelle virkamiehelle, ja siellä kasvaa '
+      + 'yhä vanhoja iroko-puita. Ranskalaiset tekivät osasta metsää koepuutarhan vuonna '
+      + '1895, ja nykyisen nimensä puutarha sai avajaisissa 22. tammikuuta 1999. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  yamoussoukro: {
+    polku: 'assets/kartat/yamoussoukro-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Yamoussoukro, Norsunluurannikon poliittinen ja hallinnollinen '
+      + 'pääkaupunki. Kaupunki sai tämän aseman vuonna 1983, kun presidentti Félix '
+      + 'Houphouët-Boigny, joka oli syntynyt siellä, siirsi hallinnon synnyinkaupunkiinsa. '
+      + 'Abidjan jäi maan talouselämän keskukseksi.\n\n'
+      + 'Kaupungissa on Notre-Dame de la Paix -basilika. Sen rakennustyöt kestivät vuosina '
+      + '1985–1989, ja paavi Johannes Paavali II vihki sen 10. syyskuuta 1990.',
+    rajat: {
+      pohjoinen: 6.8342,
+      etela: 6.798,
+      lansi: -5.2968,
+      ita: -5.2516,
+    },
+    kohteet: [],
+  },
+  yaounde: {
+    polku: 'assets/kartat/yaounde-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Yaoundé, Kamerunin pääkaupunki, joka on rakentunut keskisen ylängön '
+      + 'kukkuloiden ympärille. Kartalla kukkulat kohoavat pohjoisessa ja lounaassa, ja '
+      + 'kaupungin keskiosissa ovat tekojärvi ja eläintarha.\n\n'
+      + 'Pohjoisessa on Mont Fébé, noin tuhannen metrin kukkula, jonka ympäristössä on '
+      + 'benediktiiniluostari, hotelli ja golfkenttä. Lounaassa Mont Eloundem nousee '
+      + 'lähteiden mukaan yli 1 100 metriin. Yaoundén kunnallinen järvi kaivettiin vuosina '
+      + '1951–1952 kreikkalaissyntyisen kauppiaan Georges Kyriakidèsin aloitteesta, ja '
+      + 'Mvog-Betsin zoo-botaaninen puisto perustettiin vuonna 1951. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 3.9322,
+      etela: 3.8107,
+      lansi: 11.4322,
+      ita: 11.531,
+    },
+    kohteet: [
+      {
+        nimi: 'Mont Fébé',
+        lat: 3.91389,
+        lon: 11.48889,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Mont Eloundem',
+        lat: 3.82833,
+        lon: 11.43833,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Yaoundén kunnallinen järvi',
+        lat: 3.86528,
+        lon: 11.51028,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Mvog-Betsin zoo-botaaninen puisto',
+        lat: 3.86472,
+        lon: 11.4875,
+        tyyppi: 'luonto',
+      },
+    ],
+  },
+  brazzaville: {
+    polku: 'assets/kartat/brazzaville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.2548,
+      etela: -4.2892,
+      lansi: 15.2395,
+      ita: 15.2981,
+    },
+    esittely: 'Kartan alue on Brazzavillen länsiosa Kongo-joen pohjoisrannalla, Malebo-lammen '
+      + 'alapuolella ja Kinshasaa vastapäätä. Pierre Savorgnan de Brazza perusti kaupungin '
+      + 'vuonna 1880, ja toisen maailmansodan aikana se oli Vapaan Ranskan pääkaupunki.\n\n'
+      + 'Djoué-joen suu on kartan kohde. Djoué on Kongon oikeanpuoleinen sivujoki, joka '
+      + 'laskee pääjokeen kohdassa, jossa Kongo lähtee Malebo-lammesta ja alkaa Kongon '
+      + 'koskialue. Ympäröivä kosteikko, Congo-Djouén koskialue, otettiin Ramsar-sopimuksen '
+      + 'kansainvälisesti tärkeiden kosteikkojen luetteloon 3. huhtikuuta 2009; sen pinta-ala '
+      + 'on 2 500 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Sainte-Anne-du-Congon basilika',
+        wiki: 'Basilica of Sainte-Anne-du-Congo in Brazzaville',
+        lat: -4.2685,
+        lon: 15.2844,
+      },
+      {
+        nimi: 'Sacré-Cœurin katedraali',
+        wiki: 'Sacred Heart Cathedral, Brazzaville',
+        lat: -4.27034,
+        lon: 15.27399,
+      },
+      {
+        nimi: 'Nabemba-torni',
+        wiki: 'Nabemba Tower',
+        lat: -4.27212,
+        lon: 15.2891,
+      },
+      {
+        nimi: 'Alphonse Massemba-Débat -stadion',
+        wiki: 'Stade Alphonse Massemba-Débat',
+        lat: -4.27353,
+        lon: 15.24842,
+      },
+    ],
+  },
+  ciudaddelapaz: {
+    polku: 'assets/kartat/ciudaddelapaz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ciudad de la Paz, Päiväntasaajan Guinean mantereen puolelle Río Munin '
+      + 'keskiosaan rakennettu suunnittelukaupunki. Malabo on Bioko-saarella, mutta tämä '
+      + 'kaupunki on sisämaassa ekvatoriaalisen metsän keskellä. Se tunnettiin aiemmin '
+      + 'nimellä Oyala, ja nykyisen nimensä, espanjaksi rauhan kaupunki, se sai vuonna 2017.\n\n'
+      + 'Kaupungin suunnitteli portugalilainen arkkitehtitoimisto FAT, jonka nimi avautuu '
+      + 'sanoiksi Future Architecture Thinking. Alueelle on rakennettu muun muassa '
+      + 'golfkenttä, hotelli ja AAUCA eli Keski-Afrikan afroamerikkalainen yliopisto. Vuonna '
+      + '1873 paikalla ei ollut kaupunkia lainkaan.',
+    rajat: {
+      pohjoinen: 1.6056,
+      etela: 1.5784,
+      lansi: 10.804,
+      ita: 10.84,
+    },
+    kohteet: [],
+  },
+  gitega: {
+    polku: 'assets/kartat/gitega-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Gitega, Burundin keskiylängön kaupunki, joka on noin 1 500 metrin '
+      + 'korkeudessa lähellä maan maantieteellistä keskustaa. Gitega oli Burundin '
+      + 'kuningaskunnan keskus, ja kuninkaallinen perintö näkyy kaupungissa yhä.\n\n'
+      + 'Gitegan kansallismuseo säilyttää Burundin historiaan, käsitöihin ja soittimiin '
+      + 'liittyviä kokoelmia. Burundin parlamentti päätti vuonna 2019, että Gitegasta tulee '
+      + 'maan poliittinen pääkaupunki. Bujumbura on silti maan suurin kaupunki ja talouden '
+      + 'keskus, joten valtion tehtävät jakautuvat kahden kaupungin kesken.',
+    rajat: {
+      pohjoinen: -3.4174,
+      etela: -3.4392,
+      lansi: 29.9115,
+      ita: 29.9385,
+    },
+    kohteet: [],
+  },
+  kigali: {
+    polku: 'assets/kartat/kigali-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kigali, Ruandan pääkaupunki, joka levittyy harjanteille ja laaksoihin '
+      + 'maan keskiosassa. Saksalainen Richard Kandt valitsi Nyarugengen kukkulan '
+      + 'hallintokeskukseksi 1900-luvun alussa, ja pääkaupungiksi Kigali tuli '
+      + 'itsenäistymisessä vuonna 1962, jolloin asukkaita oli noin 6 000.\n\n'
+      + 'Kigali-kukkula ja Jali-kukkula kuuluvat kaupunkia ympäröiviin korkeampiin '
+      + 'maastomuotoihin. Nyabugogo saa alkunsa Muhazi-järveltä ja laskee Nyabarongoon, ja '
+      + 'Nyabugogon jokisuu kokoaa laaksojen vedet. Nyandungun kosteikko oli heikentynyt, '
+      + 'mutta se kunnostettiin ja avattiin yleisölle ekopuistona heinäkuussa 2022; alue on '
+      + 'noin 121 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -1.8689,
+      etela: -1.9881,
+      lansi: 29.9876,
+      ita: 30.1582,
+    },
+    kohteet: [
+      {
+        nimi: 'Kigali-kukkula',
+        lat: -1.96694,
+        lon: 30.03833,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Jali-kukkula',
+        lat: -1.88386,
+        lon: 30.0158,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Nyabugogon jokisuu',
+        lat: -1.9494,
+        lon: 29.9984,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Nyandungun kosteikko',
+        lat: -1.954,
+        lon: 30.147,
+        tyyppi: 'luonto',
+      },
+    ],
+  },
+  kinshasa: {
+    polku: 'assets/kartat/kinshasa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kinshasan länsiosa Kongo-joen vasemmalla rannalla, jossa kaupunki sai '
+      + 'alkunsa. Henry Morton Stanley perusti 1800-luvun lopulla Ngalieman lahden rannalle '
+      + 'kauppa-aseman, josta kasvoi Léopoldville, ja lahti on saanut nimensä paikalliselta '
+      + 'päälliköltä Ngaliemalta.\n\n'
+      + 'Gomben kaupunginosassa on Kinshasan kasvitieteellinen puutarha, jonka '
+      + 'siirtomaahallinto perusti vuonna 1933 Parc de Bock -nimiseksi puistoksi. Se '
+      + 'sijaitsee Kasa-Vubu-kadun varrella eläintarhaa vastapäätä, ja sitä hoitaa Kongon '
+      + 'luonnonsuojeluinstituutti ICCN. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+    kohteet: [
+      {
+        nimi: 'Kinshasan keskustori',
+        tyyppi: 'aukio',
+        wiki: 'Kinshasa Central Market',
+        lat: -4.31028,
+        lon: 15.3125,
+      },
+      {
+        nimi: 'Sainte-Annen kirkko',
+        wiki: 'Paroisse de Sainte-Anne',
+        lat: -4.30087,
+        lon: 15.3152,
+      },
+      {
+        nimi: 'Kansakunnan palatsi',
+        wiki: 'Palais de la Nation (Kinshasa)',
+        lat: -4.3025,
+        lon: 15.2801,
+      },
+      {
+        nimi: 'Kongon Neitsyt Marian katedraali',
+        wiki: 'Our Lady of the Congo Cathedral',
+        lat: -4.32383,
+        lon: 15.29444,
+      },
+      {
+        nimi: 'Kansanpalatsi',
+        wiki: 'Palais du Peuple (Kinshasa)',
+        lat: -4.3322,
+        lon: 15.3031,
+      },
+      {
+        nimi: 'Kongon demokraattisen tasavallan kansallismuseo',
+        wiki: 'National Museum of the Democratic Republic of the Congo',
+        lat: -4.3351,
+        lon: 15.2994,
+      },
+    ],
+  },
+  libreville: {
+    polku: 'assets/kartat/libreville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Libreville, Gabonin pääkaupunki Komo-joen suistossa Guineanlahden '
+      + 'rannalla. Kaupungin perustivat vuonna 1848 ranskalaisten orjalaivalta vapauttamat '
+      + 'ihmiset, ja nimi, ”vapaa kaupunki”, otettiin Sierra Leonen Freetownista.\n\n'
+      + 'Mont-Bouët\'n tori on laaja markkina-alue Librevillessä: sadat kojut jakautuvat '
+      + 'usealle korttelille, ja myytävänä on muun muassa kankaita ja vaatteita. Sibangin '
+      + 'arboretum on 1930-luvulla perustettu koemetsä, jonka koealoille on istutettu '
+      + 'tropiikin hyötypuita; sen rajat merkittiin päätöksellä 31. maaliskuuta 1934. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    kohteet: [
+      {
+        nimi: 'Palais du bord de mer',
+        wiki: 'Palais du bord de mer',
+        lat: 0.3924,
+        lon: 9.442,
+      },
+      {
+        nimi: "Mont-Bouët'n tori",
+        tyyppi: 'aukio',
+        wiki: 'Mont-Bouët',
+        lat: 0.3989,
+        lon: 9.4528,
+      },
+      {
+        nimi: 'Omar Bongon stadion',
+        wiki: 'Stade Omar Bongo',
+        lat: 0.39181,
+        lon: 9.45217,
+      },
+      {
+        nimi: 'Librevillen urheiluhalli',
+        wiki: 'Palais des Sports de Libreville',
+        lat: 0.39472,
+        lon: 9.45278,
+      },
+    ],
+  },
+  luanda: {
+    polku: 'assets/kartat/luanda-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Luandan vanha rannikkoydin. Paulo Dias de Novais perusti kaupungin '
+      + 'vuonna 1576 Luandan lahden rannalle, jota Ilha de Luandan hiekkaniemi suojaa '
+      + 'Atlantin aallokolta. Alakaupunki Baixa kasvoi sataman lähelle ja ylempi Cidade Alta '
+      + 'oli hallinnon keskus.\n\n'
+      + 'Cidade Altassa ovat Nossa Senhora dos Remédiosin katedraali ja Jesuiittojen '
+      + 'Jesus-kirkon historiallinen paikka; jesuiittakollegio perustettiin siellä 1600-luvun '
+      + 'alussa. Carmon kirkon ja luostarin rakensivat karmeliitit 1600-luvun '
+      + 'jälkipuoliskolla. Nazarén kirkko on lahden rannalla, ja Nossa Senhora do Cabon '
+      + 'kirkko rakennettiin uudelleen vuonna 1669. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: -8.7687,
+      etela: -8.8421,
+      lansi: 13.2076,
+      ita: 13.2603,
+    },
+    kohteet: [
+      {
+        nimi: 'Nossa Senhora dos Remédiosin katedraali',
+        lat: -8.81361,
+        lon: 13.22972,
+      },
+      {
+        nimi: 'Carmon kirkko ja luostari',
+        lat: -8.81611,
+        lon: 13.2331,
+      },
+      {
+        nimi: 'Nazarén kirkko',
+        lat: -8.80806,
+        lon: 13.23944,
+      },
+      {
+        nimi: 'Jesuiittojen Jesus-kirkon historiallinen paikka',
+        lat: -8.81735,
+        lon: 13.22427,
+      },
+      {
+        nimi: 'Nossa Senhora do Cabon kirkko',
+        lat: -8.78705,
+        lon: 13.23251,
+      },
+      {
+        nimi: 'Ilha de Luandan hiekkaniemi',
+        tyyppi: 'luonto',
+        lat: -8.77861,
+        lon: 13.24361,
+      },
+    ],
+  },
+  saotome: {
+    polku: 'assets/kartat/saotome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on São Tomén pääkaupungin rantavyöhyke saaren koillisosassa '
+      + 'Guineanlahden rannalla. Matala Ana Chavesin lahti ulottuu pohjoisessa Ponta Oque del '
+      + 'Rei -niemeltä etelässä Ponta São Sebastiãoon, ja kaupunki satamineen on asettunut '
+      + 'sen rannalle.\n\n'
+      + 'Ponta São Sebastiãon kärjessä on São Sebastiãon linnake, jonka portugalilaiset '
+      + 'rakensivat vuonna 1566 sataman puolustukseksi; nykyään siellä toimii kansallismuseo. '
+      + 'Noin kahden kilometrin päässä rannikon edustalla on Ilhéu das Cabras, asumaton '
+      + 'saari, jonka majakka rakennettiin vuonna 1890. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 0.4134,
+      etela: 0.3319,
+      lansi: 6.6983,
+      ita: 6.7562,
+    },
+    kohteet: [
+      {
+        nimi: 'São Sebastiãon linnake',
+        lat: 0.34583,
+        lon: 6.73944,
+      },
+      {
+        nimi: 'Ana Chavesin lahti',
+        lat: 0.34778,
+        lon: 6.72833,
+        tyyppi: 'luonto',
+      },
+      {
+        nimi: 'Ilhéu das Cabras',
+        lat: 0.408,
+        lon: 6.715,
+        tyyppi: 'luonto',
+      },
+    ],
+  },
+  asmara: {
+    polku: 'assets/kartat/asmara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 15.3441,
+      etela: 15.3242,
+      lansi: 38.9219,
+      ita: 38.9485,
+    },
+    kohteet: [
+      {
+        nimi: 'Ruusukon Neitsyt Marian kirkko',
+        lat: 15.33675,
+        lon: 38.93789,
+      },
+    ],
+    esittely: 'Kartan alue on Asmaran keskusta Eritrean ylängöllä, yli 2 000 metrin korkeudessa. '
+      + 'Italia miehitti kaupungin vuonna 1889, ja 1890-luvulta alkaen siitä kasvoi '
+      + 'siirtomaan keskus. UNESCO merkitsi sen maailmanperintökohteeksi vuonna 2017 nimellä '
+      + 'Asmara: A Modernist African City.\n\n'
+      + 'Ruusukon Neitsyt Marian kirkko seisoo keskustassa. Oreste Scanavini suunnitteli sen '
+      + 'uusromaaniseen tyyliin, ja se valmistui vuonna 1923. Suurin osa keskustan '
+      + 'modernistisista rakennuksista valmistui vasta vuosina 1935–1941. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+  },
+  dodoma: {
+    polku: 'assets/kartat/dodoma-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dodoma, Tansanian pääkaupunki maan keskiosassa. Paikalla oli ennen '
+      + 'kaupunkia Idodomya-niminen pieni markkinapaikka gogo-väestön seudulla, ja '
+      + 'saksalaiset rakensivat siellä 1900-luvun alussa keskusrataa, jonka varrelle nykyinen '
+      + 'kaupunki syntyi.\n\n'
+      + 'Pääkaupungiksi Dodoma valittiin 1970-luvulla: hallinto päätettiin siirtää Dar es '
+      + 'Salaamista maan keskelle, ja kanadalainen Project Planning Associates voitti '
+      + 'suunnittelukilpailun. Suunnitelma nojasi puutarhakaupungin ajatukseen. Seudulla '
+      + 'kasvatetaan viinirypäleitä, ja Dodoman yliopisto aloitti vuonna 2007.',
+    rajat: {
+      pohjoinen: -6.1594,
+      etela: -6.1866,
+      lansi: 35.7239,
+      ita: 35.7601,
+    },
+    kohteet: [],
+  },
+  kampala: {
+    polku: 'assets/kartat/kampala-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 0.3453,
+      etela: 0.2912,
+      lansi: 32.5439,
+      ita: 32.5984,
+    },
+    kohteet: [
+      {
+        nimi: 'Vanhan Kampalan kukkula',
+        tyyppi: 'luonto',
+        lat: 0.31528,
+        lon: 32.56861,
+      },
+      {
+        nimi: 'Namiremben kukkula',
+        tyyppi: 'luonto',
+        lat: 0.315,
+        lon: 32.55944,
+      },
+      {
+        nimi: 'Lubagan kukkula',
+        tyyppi: 'luonto',
+        lat: 0.30306,
+        lon: 32.55306,
+      },
+      {
+        nimi: 'Nakasero-kukkula',
+        tyyppi: 'luonto',
+        lat: 0.32333,
+        lon: 32.57889,
+      },
+      {
+        nimi: 'Kibulin kukkula',
+        tyyppi: 'luonto',
+        lat: 0.31,
+        lon: 32.595,
+      },
+      {
+        nimi: 'Nsambyan kukkula',
+        tyyppi: 'luonto',
+        lat: 0.29917,
+        lon: 32.58806,
+      },
+      {
+        nimi: 'Makereren kukkula',
+        tyyppi: 'luonto',
+        lat: 0.335,
+        lon: 32.57,
+      },
+    ],
+    esittely: 'Kartan alue on Ugandan pääkaupungin Kampalan vanhat kukkulat. Nimen kerrotaan '
+      + 'tulevan impala-antilooppien kukkulasta, joka oli Bugandan kabakan metsästysmaata. '
+      + 'Frederick Lugard rakensi Vanhan Kampalan kukkulalle linnakkeen vuonna 1890, ja '
+      + 'kaupunki alkoi kasvaa sen ympärille.\n\n'
+      + 'Nakasero-kukkulalle tuli myöhemmin toinen linnake. Namiremben kukkulalla on '
+      + 'anglikaaninen katedraali, jonka nykyinen rakennus vihittiin käyttöön vuonna 1919, ja '
+      + 'Lubagan kukkulalla katolinen katedraali. Kibulin kukkula liittyy prinssi Nuhu Mbogon '
+      + 'muslimiyhteisöön. Nsambyan kukkula on yksi alkuperäisistä, ja Makereren kukkulalla '
+      + 'yliopisto aloitti vuonna 1922. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  khartum: {
+    polku: 'assets/kartat/khartum-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Khartumin keskusta kohdassa, jossa Valkoinen ja Sininen Niili yhtyvät '
+      + 'yhdeksi Niiliksi. Paikkaa kutsutaan nimellä al-Mogran, ja Khartum muodostaa '
+      + 'Omdurmanin ja Bahrin kanssa kolmen kaupungin kokonaisuuden.\n\n'
+      + 'Tutin saari on jokien yhtymäkohdan lähellä oleva viljelysaari, jonka kylä '
+      + 'perustettiin 1400-luvun lopulla ja jonne rakennettiin vuonna 2008 valmistunut '
+      + 'riippusilta. Kansallinen kasvitieteellinen puutarha on Mogranin kaupunginosassa. '
+      + 'Souq al Arabi on keskustan ulkoilmamarkkina Suuren moskeijan tuntumassa, ja siellä '
+      + 'on kultakauppaan keskittynyt osa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 15.6222,
+      etela: 15.597,
+      lansi: 32.5025,
+      ita: 32.5307,
+    },
+    kohteet: [
+      {
+        nimi: 'Tutin saari',
+        tyyppi: 'luonto',
+        lat: 15.61918,
+        lon: 32.5055,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 15.60191,
+        lon: 32.50913,
+      },
+      {
+        nimi: 'Souq al Arabi',
+        tyyppi: 'aukio',
+        lat: 15.601,
+        lon: 32.525,
+      },
+    ],
+  },
+  lilongwe: {
+    polku: 'assets/kartat/lilongwe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -13.9359,
+      etela: -13.9907,
+      lansi: 33.7452,
+      ita: 33.7971,
+    },
+    kohteet: [
+      {
+        nimi: 'Lilongwe Wildlife Centren metsäalue',
+        lat: -13.97221,
+        lon: 33.78386,
+        tyyppi: 'luonto',
+      },
+    ],
+    esittely: 'Kartan alue on Lilongwe, Malawin pääkaupunki, joka on saanut nimensä '
+      + 'Lilongwe-joesta. Pääkaupungiksi se tuli vuonna 1975, kun hallinto siirtyi Zombasta. '
+      + 'Kaupunki suunniteltiin kahtena osana: Old Town on kaupankäynnin keskus ja City '
+      + 'Centre ministeriöiden ja suurlähetystöjen alue.\n\n'
+      + 'Lilongwe Wildlife Centren metsäalue on kahden kaupunginosan välissä Kenyatta Driven '
+      + 'varrella. Keskuksen perustivat vuonna 2007 Lilongwe Wildlife Trust ja Born Free '
+      + '-säätiö. Eläinten kuntoutusalue on suljettu yleisöltä, mutta noin 70 hehtaarin '
+      + 'luonnonsuojelualueella kulkee polkuja Lingadzi-joen varrella. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+  },
+  mogadishu: {
+    polku: 'assets/kartat/mogadishu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Mogadishun vanha rantakaupunki Intian valtameren rannalla, '
+      + 'satamakaupunki, jonka kerrokset ulottuvat keskiajalta Italian siirtomaa-aikaan.\n\n'
+      + 'Shanganin kaupunginosassa on Arba\'a Rukun -moskeija, jonka rukoussyvennyksen '
+      + 'kirjoitus ajoittaa vuosiin 1268–1269. Lähellä ovat Mogadishun katedraalin rauniot: '
+      + 'kirkko rakennettiin 1920-luvulla Antonio Vandonen suunnitelman mukaan Cefalùn '
+      + 'katedraalin esikuvasta, ja se vihittiin 1928. Itäisempi Liidon ranta on nimetty '
+      + 'italian sanasta lido, ja se kehitettiin 1930-luvulla italialaisille siirtolaisille. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 2.0467,
+      etela: 2.0282,
+      lansi: 45.336,
+      ita: 45.3667,
+    },
+    kohteet: [
+      {
+        nimi: 'Arba\'a Rukun -moskeija',
+        lat: 2.0351,
+        lon: 45.3425,
+      },
+      {
+        nimi: 'Mogadishun katedraalin rauniot',
+        lat: 2.03574,
+        lon: 45.34161,
+      },
+      {
+        nimi: 'Liidon ranta',
+        lat: 2.03975,
+        lon: 45.36372,
+        tyyppi: 'luonto',
+      },
+    ],
+  },
+  antananarivo: {
+    polku: 'assets/kartat/antananarivo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -18.9077,
+      etela: -18.9356,
+      lansi: 47.5187,
+      ita: 47.5363,
+    },
+    kohteet: [
+      {
+        nimi: 'Anosy-järvi',
+        tyyppi: 'luonto',
+        lat: -18.9152,
+        lon: 47.5216,
+      },
+    ],
+    esittely: 'Kartan alue on Antananarivon keskusta Madagaskarin keskiylängöllä. Kuningas '
+      + 'Andrianjaka perusti kaupungin Analamanga-kukkulalle noin vuonna 1610 ja rakensi '
+      + 'huipulle kuninkaallisen linnakkeen, Rovan, josta Merina-kuninkaat hallitsivat '
+      + 'vuosisatoja.\n\n'
+      + 'Anosy-järvi on kaupungin keskustan eteläpuolella oleva tekojärvi, joka tehtiin '
+      + 'entiselle suolle kuningas Radama I:n aikana 1800-luvun alussa; työhön osallistui '
+      + 'skotlantilainen lähetyssaarnaaja James Cameron. Järven keskellä olevalla saarella on '
+      + 'ensimmäisessä maailmansodassa kaatuneiden madagaskarilaisten sotilaiden muistomerkki '
+      + 'vuodelta 1927. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  gaborone: {
+    polku: 'assets/kartat/gaborone-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Gaboronen kaupunki Notwane-joen varrella Botswanan kaakkoiskulmassa. '
+      + 'Kaupunki rakennettiin 1960-luvulla uudeksi pääkaupungiksi ennen maan itsenäistymistä '
+      + 'vuonna 1966.\n\n'
+      + 'Kgale Hill on 1 287 metriä korkea kukkula kaupungin reunalla, ja sitä kutsutaan '
+      + 'Nukkuvaksi jättiläiseksi; huipulle johtaa kolme reittiä, ja nousu kestää noin '
+      + 'tunnin. Gaboronen pato rakennettiin Notwane-joelle vuosina 1963–1964, ja se palvelee '
+      + 'Gaboronea ja Lobatsea. Padon seinää korotettiin 1981–1985 kuivuuden vuoksi. '
+      + 'Kansallinen kasvitieteellinen puutarha avattiin 2. marraskuuta 2007, ja sen kuusi '
+      + 'osastoa esittelevät Botswanan ekologisia alueita. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -24.6495,
+      etela: -24.7089,
+      lansi: 25.861,
+      ita: 25.9517,
+    },
+    kohteet: [
+      {
+        nimi: 'Kgale Hill',
+        tyyppi: 'luonto',
+        lat: -24.6957,
+        lon: 25.8678,
+      },
+      {
+        nimi: 'Gaboronen pato',
+        lat: -24.70016,
+        lon: 25.92638,
+      },
+      {
+        nimi: 'Kansallinen kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: -24.66679,
+        lon: 25.94488,
+      },
+    ],
+  },
+  mbabane: {
+    polku: 'assets/kartat/mbabane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue ei ole Mbabanen keskusta vaan luontokohde sen ulkopuolella: Eswatinin '
+      + 'pääkaupungin lähellä, noin kahdeksan tai kymmenen kilometrin päässä, kohoaa Sibeben '
+      + 'graniittikallio. Kallio hallitsee maisemaa Mbuluzi-joen laakson yläpuolella.\n\n'
+      + 'Sibeben kallio on graniittia, ja englanniksi sitä kutsutaan myös nimellä Bald Rock '
+      + 'eli kalju kallio. Matkaoppaat luonnehtivat sitä Uluru-kiven jälkeen maailman '
+      + 'toiseksi suurimmaksi monoliitiksi. Kalliolle noustaan jyrkkää reittiä, ja '
+      + 'matkailijat ottavat yleensä oppaan mukaan vierailukeskuksesta. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -26.2523,
+      etela: -26.325,
+      lansi: 31.1215,
+      ita: 31.1796,
+    },
+    kohteet: [
+      {
+        nimi: 'Sibeben kallio',
+        tyyppi: 'luonto',
+        lat: -26.26262,
+        lon: 31.17252,
+      },
+    ],
+  },
+  moroni: {
+    polku: 'assets/kartat/moroni-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Moroni, Komorien pääkaupunki Grande Comoren eli Ngazidjan saarella. '
+      + 'Kaupunki sijaitsee Karthalan juurella, ja tulivuori hallitsee sen taustamaisemaa.\n\n'
+      + 'Karthala on aktiivinen kilpitulivuori ja Komorien korkein kohta, 2 361 metriä '
+      + 'merenpinnan yläpuolella. Huipulla on noin 4 kilometriä pitkä ja 3 kilometriä leveä '
+      + 'kaldera, jonka seinämät ovat noin 100 metriä korkeat. Tulivuori on purkautunut yli '
+      + 'kymmenen kertaa kahden viime vuosisadan aikana, myös vuosina 2005 ja 2006. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -11.6931,
+      etela: -11.7772,
+      lansi: 43.2438,
+      ita: 43.3606,
+    },
+    kohteet: [
+      {
+        nimi: 'Karthala',
+        tyyppi: 'luonto',
+        lat: -11.76028,
+        lon: 43.35306,
+      },
+    ],
+  },
+  portlouis: {
+    polku: 'assets/kartat/portlouis-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -20.1551,
+      etela: -20.1733,
+      lansi: 57.4941,
+      ita: 57.5134,
+    },
+    kohteet: [
+      {
+        nimi: 'Aapravasi Ghat',
+        lat: -20.15861,
+        lon: 57.50306,
+      },
+      {
+        nimi: 'Champ de Marsin laukkarata',
+        lat: -20.16916,
+        lon: 57.51009,
+      },
+    ],
+    esittely: 'Kartan alue on Port Louisin satama-alue, Mauritiuksen pääkaupungin vanha ydin. '
+      + 'Hollantilaiset käyttivät lahtea vuodesta 1606, ja ranskalaiset kehittivät sataman '
+      + '1730-luvulla kuvernööri Mahé de La Bourdonnaisin johdolla. Britit valtasivat saaren '
+      + 'vuonna 1810.\n\n'
+      + 'Aapravasi Ghat on Trou Fanfaronin lahden rannalla. Sopimustyöläisten '
+      + 'vastaanottoasema rakennettiin vuonna 1849, ja sen kautta kulki lähes puoli miljoonaa '
+      + 'työläistä, enimmäkseen Intiasta. UNESCO merkitsi paikan maailmanperintökohteeksi '
+      + 'vuonna 2006. Mauritius Turf Club avasi Champ de Marsin laukkaradan 25. kesäkuuta '
+      + '1812. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  victoria: {
+    polku: 'assets/kartat/victoria-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.6183,
+      etela: -4.6399,
+      lansi: 55.4451,
+      ita: 55.475,
+    },
+    kohteet: [
+      {
+        nimi: 'Mont Fleurin kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: -4.63074,
+        lon: 55.45299,
+      },
+    ],
+    esittely: 'Kartan alue on Victoria, Seychellien pääkaupunki Mahén saarella. Ranskalaiset '
+      + 'perustivat paikalle asutuksen vuonna 1778 nimellä L\'Établissement, ja britit '
+      + 'antoivat sille nykyisen nimensä kuningatar Viktorian mukaan vuonna 1841.\n\n'
+      + 'Kartan ainoa kohde, Mont Fleurin kasvitieteellinen puutarha, on keskustan '
+      + 'eteläpuolella. Se perustettiin vuonna 1901 maatalouden koeasemaksi, ja '
+      + 'mauritiuslainen Paul Dupont johti sen alkuvaiheita. Noin kuuden hehtaarin '
+      + 'puutarhassa kasvaa coco de mer -palmuja, ja siellä pidetään Aldabran '
+      + 'jättiläiskilpikonnia. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+  },
+  windhoek: {
+    polku: 'assets/kartat/windhoek-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -22.5562,
+      etela: -22.5785,
+      lansi: 17.0776,
+      ita: 17.0957,
+    },
+    kohteet: [
+      {
+        nimi: 'Christuskirche',
+        lat: -22.56778,
+        lon: 17.08722,
+      },
+      {
+        nimi: 'Alte Feste',
+        lat: -22.5694,
+        lon: 17.0883,
+      },
+    ],
+    esittely: 'Kartan alue on Windhoekin historiallinen keskusta, Namibian pääkaupungin vanha ydin, '
+      + 'jossa Saksan siirtomaa-aika näkyy yhä rakennuksissa. Saksalaiset joukot asettuivat '
+      + 'sinne vuonna 1890.\n\n'
+      + 'Alte Feste eli Vanha linnake aloitettiin samana vuonna Curt von Françoisin johdolla '
+      + 'Schutztruppen päämajaksi; vuonna 1915 Etelä-Afrikan joukot ottivat Windhoekin, ja '
+      + 'linnake siirtyi niiden käyttöön. Sen lähellä Robert Mugabe Avenuella on '
+      + 'Christuskirche. Gottlieb Redecker suunnitteli kirkon, sen peruskivi muurattiin '
+      + 'vuonna 1907 ja se vihittiin käyttöön lokakuussa 1910. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+  },
+  asgabat: {
+    polku: 'assets/kartat/asgabat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ašgabatin länsipuoli Köpetdag-vuoriston juurella; kaupungin '
+      + 'pohjoispuolella alkaa Karakumin autiomaa. Alue on maanjäristysherkkää, ja lokakuun '
+      + '1948 maanjäristys tuhosi suuren osan kaupungista.\n\n'
+      + 'Nisa on partialaisten muinainen kaupunki noin 15–18 kilometriä Ašgabatista länteen. '
+      + 'Alueeseen kuuluu kaksi kumpua, Vanha Nisa ja Uusi Nisa, joiden välimatka on noin '
+      + 'puolitoista kilometriä. Vanha Nisa oli kuninkaallinen linnoitus, jonka yhteydessä '
+      + 'mainitaan Mithridates I (171–138 eaa.) ja nimi Mithradatkert. Unesco otti Nisan '
+      + 'maailmanperintöluetteloon vuonna 2007. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 38.0095,
+      etela: 37.9071,
+      lansi: 58.1811,
+      ita: 58.3959,
+    },
+    kohteet: [
+      {
+        nimi: 'Nisa',
+        lat: 37.96667,
+        lon: 58.195,
+      },
+    ],
+  },
+  biskek: {
+    polku: 'assets/kartat/biskek-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Biškekin länsiosa, jossa Osh-tori sijaitsee. Kaupunki on Kirgisian '
+      + 'pääkaupunki Chuin laaksossa. Kokandin khaanikunta rakensi paikalle Pishpekin '
+      + 'linnoituksen vuonna 1825; kaupunki kantoi Frunzen nimeä vuodesta 1926 ja sai '
+      + 'nykyisen nimensä vuonna 1991.\n\n'
+      + 'Osh-torilla myydään ruokaa, vaatteita, kodin tavaroita, matkamuistoja ja soittimia. '
+      + 'Kyyal-osasto, jonka nimi tarkoittaa unelmaa tai mielikuvitusta, on '
+      + 'kansallistuotteiden paikka: siellä on kirgisialaisia kansallisvaatteita, '
+      + 'kaiverrettuja puuarkkuja, vuodevaatteita ja kehtoja. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 42.878,
+      etela: 42.864,
+      lansi: 74.5612,
+      ita: 74.5759,
+    },
+    kohteet: [
+      {
+        nimi: 'Osh-tori',
+        tyyppi: 'aukio',
+        lat: 42.875,
+        lon: 74.57,
+      },
+    ],
+  },
+  dhaka: {
+    polku: 'assets/kartat/dhaka-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dhakan vanha kaupunki Buriganga-joen rannalla Gangesin suistossa. '
+      + 'Mogulien kuvernööri Islam Khan siirsi Bengalin pääkaupungin Dhakaan vuonna 1610 ja '
+      + 'nimesi sen Jahangirnagariksi, mutta kaupunki säilytti vanhan nimensä.\n\n'
+      + 'Lalbaghin linnakkeen rakennutti prinssi Muhammad Azam vuonna 1678 Bengalin '
+      + 'kuvernöörin asuinpaikaksi. Työt jäivät kesken, kun kuvernöörin tytär Pari Bibi kuoli '
+      + 'vuonna 1684, ja alueella ovat mosku, kylpylä ja Pari Bibin hauta. Armenialainen '
+      + 'kirkko valmistui vuonna 1781 Armanitolaan entiselle armenialaiselle hautausmaalle; '
+      + 'kauppiaat kävivät siellä kauppaa juutilla ja nahalla. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 23.7324,
+      etela: 23.7095,
+      lansi: 90.3848,
+      ita: 90.4054,
+    },
+    kohteet: [
+      {
+        nimi: 'Lalbaghin linnake',
+        lat: 23.719,
+        lon: 90.3881,
+      },
+      {
+        nimi: 'Armenialainen kirkko',
+        lat: 23.71249,
+        lon: 90.40209,
+      },
+    ],
+  },
+  dusanbe: {
+    polku: 'assets/kartat/dusanbe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dušanben keskusta Tadžikistanin pääkaupungissa, Hissarin laaksossa. '
+      + 'Nimi tarkoittaa persiaksi maanantaita, ja se tulee maanantaisin pidetystä torista, '
+      + 'jonka ympärille kylä kasvoi. Neuvostoliitto teki paikasta Tadžikistanin autonomisen '
+      + 'tasavallan pääkaupungin vuonna 1924, ja vuosina 1929–1961 kaupunki kantoi nimeä '
+      + 'Stalinabad.\n\n'
+      + 'Rudaki-katu on keskustan pääkatu, ja sen varrella on hallinnon rakennuksia ja '
+      + 'kulttuurilaitoksia. Tadžikistanin kansallismuseo, muinaisesineiden museo ja '
+      + 'Rudaki-puisto kuuluvat tärkeimpiin käyntikohteisiin. Kaupunki suunniteltiin '
+      + 'leveiden, puiden reunustamien katujen varaan.',
+    rajat: {
+      pohjoinen: 38.584,
+      etela: 38.5622,
+      lansi: 68.7692,
+      ita: 68.8036,
+    },
+    kohteet: [],
+  },
+  islamabad: {
+    polku: 'assets/kartat/islamabad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Islamabadin pohjoislaita, jossa Margallan kukkulat nousevat '
+      + 'Pothoharin tasangon reunalla. Pakistan valitsi uuden pääkaupunkinsa paikan vuonna '
+      + '1958, ja kreikkalainen arkkitehti Constantinos Doxiadis laati sille ruutukaavaan '
+      + 'perustuvan yleissuunnitelman, joka avautuu kukkuloita kohti.\n\n'
+      + 'Margallan kansallispuistoon kuuluvat kukkuloiden lisäksi Shakarparianin kulttuuri- '
+      + 'ja urheilualue sekä Rawal-järvi. Rawal-järvi on Korang-joen padottu tekoallas, jonka '
+      + 'presidentti Ayub Khan vihki käyttöön vuonna 1962 ja joka antaa vettä Islamabadille '
+      + 'ja Rawalpindille. Kukkuloilla elää muun muassa leopardeja. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 33.7662,
+      etela: 33.6619,
+      lansi: 72.9233,
+      ita: 73.1308,
+    },
+    kohteet: [
+      {
+        nimi: 'Margallan kansallispuisto',
+        tyyppi: 'luonto',
+        lat: 33.731,
+        lon: 72.937,
+      },
+      {
+        nimi: 'Rawal-järvi',
+        tyyppi: 'luonto',
+        lat: 33.7,
+        lon: 73.117,
+      },
+    ],
+  },
+  taskent: {
+    polku: 'assets/kartat/taskent-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Taškentin vanhakaupunki Chorsun basaarin ympärillä. Chorsu tarkoittaa '
+      + 'persiaksi ”tienristeystä”. Venäjän joukot valtasivat kaupungin toukokuussa 1865, ja '
+      + 'uusi kaupunki rakennettiin vanhan viereen; vuoden 1966 maanjäristys tuhosi suuren '
+      + 'osan vanhakaupungin savitaloista.\n\n'
+      + 'Kukeldashin medresa seisoo basaarin reunalla. Keltaisesta tiilestä rakennettu '
+      + 'oppilaitos valmistui 1500-luvun jälkipuoliskolla, ja sen noin 20 metriä korkean '
+      + 'portaalin sivuilla on kaksi tornia. Rakennus toimi myöhemmin karavaanien '
+      + 'majapaikkana ja linnakkeena, ja nykyään siellä on taas toimiva medresa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 41.3295,
+      etela: 41.3053,
+      lansi: 69.231,
+      ita: 69.2834,
+    },
+    kohteet: [
+      {
+        nimi: 'Kukeldashin medresa',
+        lat: 41.32306,
+        lon: 69.23583,
+      },
+    ],
+  },
+  thimphu: {
+    polku: 'assets/kartat/thimphu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Thimphu, Bhutanin pääkaupunki Wang Chhu -joen laaksossa. Kaupunki '
+      + 'ulottuu pohjois–etelä-suunnassa joen länsirannalla, ja se tuli hallinnon keskukseksi '
+      + '1900-luvun puolivälissä, kun pääkaupunki siirrettiin Punakhasta. Pohjoislaidalla on '
+      + 'Tashichho Dzong, jonka Zhabdrung nimesi uudelleen vuonna 1641.\n\n'
+      + 'Simtokhan dzong seisoo harjanteella noin viisi kilometriä Thimphun eteläpuolella. '
+      + 'Dzong tarkoittaa linnoitusluostaria, jossa hallinto ja uskonto ovat samassa '
+      + 'rakennuksessa. Zhabdrung Ngawang Namgyal rakennutti Simtokhan vuonna 1629, ja '
+      + 'nykyään siellä toimii dzongkhan kielen ja kulttuurin oppilaitos. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 27.477,
+      etela: 27.432,
+      lansi: 89.6274,
+      ita: 89.6728,
+    },
+    kohteet: [
+      {
+        nimi: 'Simtokhan dzong',
+        lat: 27.43806,
+        lon: 89.66944,
+      },
+    ],
+  },
+  bandarseribegawan: {
+    polku: 'assets/kartat/bandarseribegawan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bandar Seri Begawan, Brunein pääkaupunki Brunei-joen varrella Borneon '
+      + 'pohjoisrannikolla. Italialainen Antonio Pigafetta kuvasi vuonna 1521 jokeen '
+      + 'paaluille rakennettua suurta kaupunkia.\n\n'
+      + 'Kampong Ayer on usean kylän muodostama vesiasutus, jossa talot, koulut ja moskeijat '
+      + 'seisovat paalujen päällä ja kävelysillat yhdistävät niitä. Maalla, keskustan '
+      + 'tuntumassa, on Tasek Lama, puisto, jonka tekojärven ja vesiputouksen ympärillä '
+      + 'kulkee polkuja; sen näkötornista näkyy Kampong Ayerin vesiasutus. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 4.9218,
+      etela: 4.8772,
+      lansi: 114.9116,
+      ita: 114.9482,
+    },
+    kohteet: [
+      {
+        nimi: 'Kampong Ayer',
+        lat: 4.8825,
+        lon: 114.9425,
+      },
+      {
+        nimi: 'Tasek Lama',
+        tyyppi: 'luonto',
+        lat: 4.90292,
+        lon: 114.94512,
+      },
+    ],
+  },
+  kualalumpur: {
+    polku: 'assets/kartat/kualalumpur-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kuala Lumpurin keskusta Klang- ja Gombak-jokien yhtymäkohdan lähellä. '
+      + 'Kaupunki syntyi tinakaivosten ympärille noin vuonna 1857, ja sen malaijinkielinen '
+      + 'nimi merkitsee suunnilleen mutaista yhtymäkohtaa.\n\n'
+      + 'Kuala Lumpurin historiallinen rautatieasema on Jalan Sultan Hishamuddinin varrella. '
+      + 'Arthur Benison Hubback suunnitteli sen, ja asema valmistui vuonna 1910; '
+      + 'arkkitehtuuri yhdistää itäisiä ja länsimaisia muotoja. Bukit Nanas on keskustan '
+      + 'sademetsäkumpu, josta rajattiin metsäsuojelualue vuonna 1906. Alue tunnetaan nimellä '
+      + 'KL Forest Eco Park, ja sen juurella seisoo KL Tower. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 3.1558,
+      etela: 3.1364,
+      lansi: 101.6903,
+      ita: 101.7055,
+    },
+    kohteet: [
+      {
+        nimi: 'Kuala Lumpurin historiallinen rautatieasema',
+        lat: 3.13944,
+        lon: 101.69333,
+      },
+      {
+        nimi: 'Bukit Nanas',
+        tyyppi: 'luonto',
+        lat: 3.15278,
+        lon: 101.7025,
+      },
+    ],
+  },
+  male: {
+    polku: 'assets/kartat/male-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Malé, Malediivien pääkaupunki, tiheästi asuttu korallisaari Intian '
+      + 'valtamerellä. Saariston tärkein rakennusmateriaali oli Porites-koralli, jota '
+      + 'nostettiin merestä ja leikattiin rakennuslohkoiksi.\n\n'
+      + 'Hukuru Miskiy, vanha perjantaimoskeija, rakennettiin sulttaani Ibrahim Iskandar I:n '
+      + 'aikana: työt alkoivat vuonna 1656 ja moskeija valmistui 1658 aiemman moskeijan '
+      + 'tilalle. Seinät on tehty toisiinsa sovitetuista korallilohkoista, joihin on '
+      + 'kaiverrettu koristeita, ja yläosa on lakattua puuta. Moskeija lisättiin Unescon '
+      + 'maailmanperintökohteiden ehdokaslistalle vuonna 2008. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 4.181,
+      etela: 4.1723,
+      lansi: 73.5051,
+      ita: 73.516,
+    },
+    kohteet: [
+      {
+        nimi: 'Hukuru Miskiy, vanha perjantaimoskeija',
+        lat: 4.17806,
+        lon: 73.5125,
+      },
+    ],
+  },
+  naypyidaw: {
+    polku: 'assets/kartat/naypyidaw-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Naypyidaw, Myanmarin pääkaupunki, joka rakennettiin tyhjälle alueelle '
+      + 'Pyinmanan lähelle Yangonin pohjoispuolelle. Hallinto siirtyi Yangonista 6. '
+      + 'marraskuuta 2005, ja kaupungin nimi julkistettiin Asevoimien päivänä 27. maaliskuuta '
+      + '2006.\n\n'
+      + 'Kartan kohde National Herbal Park on kasvipuisto Naypyidaw–Taungnyo-tien varrella. '
+      + 'Sinne on koottu yli 20 000 lääke- ja yrttikasvia, noin 700 lajia eri puolilta '
+      + 'Myanmaria. Puiston tarkoitus on suojella kasveja sekä ylläpitää maan perinteistä '
+      + 'lääketiedettä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 19.7529,
+      etela: 19.7442,
+      lansi: 96.105,
+      ita: 96.1179,
+    },
+    kohteet: [
+      {
+        nimi: 'National Herbal Park',
+        tyyppi: 'luonto',
+        lat: 19.74952,
+        lon: 96.10793,
+      },
+    ],
+  },
+  phnompenh: {
+    polku: 'assets/kartat/phnompenh-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Phnom Penhin keskusta Tonlé Sap -joen ja Mekongin yhtymäkohdan '
+      + 'lähellä, jossa Bassac-joki lähtee omalle uralleen. Kaupunki on Kambodžan '
+      + 'pääkaupunki.\n\n'
+      + 'Kambodžan kansallismuseo seisoo Kuninkaanpalatsin pohjoispuolella. George Groslier '
+      + 'suunnitteli rakennuksen khmerien temppeliarkkitehtuurin mallien pohjalta; '
+      + 'rakennustyöt alkoivat vuonna 1917, ja museo vihittiin käyttöön huhtikuussa 1920. '
+      + 'Kokoelmassa on yli 14 000 esinettä muinaisesta ajasta Angkorin jälkeiseen aikaan, ja '
+      + 'se on yksi maailman suurimmista khmertaiteen kokoelmista. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 11.5723,
+      etela: 11.5628,
+      lansi: 104.9182,
+      ita: 104.932,
+    },
+    kohteet: [
+      {
+        nimi: 'Kambodžan kansallismuseo',
+        lat: 11.5658,
+        lon: 104.929,
+      },
+    ],
+  },
+  pjongjang: {
+    polku: 'assets/kartat/pjongjang-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Pjongjangin keskusta Taedong-joen rannalla. Goguryeon kuningas Jangsu '
+      + 'siirsi valtakuntansa pääkaupungin tänne vuonna 427, kun hän lähti Yalu-joen varrelta '
+      + 'ja asetti pääkaupungin Korean niemimaan keskelle, hedelmällisten riisimaiden '
+      + 'äärelle.\n\n'
+      + 'Kartan kohde on Moran-kukkula, jonka nimi tarkoittaa pionikukkulaa. Kukkulan puisto '
+      + 'on keskustan suosittu virkistysalue, ja sen reunalla on jäänteitä Goguryeon ajan '
+      + 'kaupunginmuurista. Taedongin puoleisella rantatörmällä on vanha Pubyok-paviljonki, '
+      + 'jonka nimi tarkoittaa kelluvia muureja. Kukkulalla on myös Pjongjangin '
+      + 'televisiotorni. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 39.0445,
+      etela: 39.014,
+      lansi: 125.7392,
+      ita: 125.7672,
+    },
+    kohteet: [
+      {
+        nimi: 'Moran-kukkula',
+        tyyppi: 'luonto',
+        lat: 39.04028,
+        lon: 125.75833,
+      },
+    ],
+  },
+  vientiane: {
+    polku: 'assets/kartat/vientiane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Vientianen keskusta Mekong-joen rannalla. Kaupunki sijaitsee lähellä '
+      + 'Thaimaan rajaa, ja Laosin pääkaupungin keskustassa on useita buddhalaisia '
+      + 'temppeleitä.\n\n'
+      + 'Wat Si Saket seisoo Lan Xang -kadun ja Setthathirat-kadun kulmassa. Kuningas '
+      + 'Anouvong rakennutti temppelin vuonna 1818, ja sen luostarikäytävän seinien '
+      + 'syvennyksissä on yli kaksi tuhatta pientä keraamista ja hopeista Buddha-kuvaa. Kun '
+      + 'siamilaisjoukot hävittivät kaupungin 1820-luvun lopulla, temppeli säästyi suurelta '
+      + 'osin. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.9844,
+      etela: 17.9588,
+      lansi: 102.6085,
+      ita: 102.6335,
+    },
+    kohteet: [
+      {
+        nimi: 'Wat Si Saket',
+        lat: 17.96306,
+        lon: 102.61167,
+      },
+    ],
+  },
+  belmopan: {
+    polku: 'assets/kartat/belmopan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Belmopanin ympäristö Belizen sisämaassa Cayon piirikunnassa. '
+      + 'Hurrikaani Hattie tuhosi lokakuussa 1961 suuren osan matalalla sijainneesta Belize '
+      + 'Citystä, ja hallitus päätti rakentaa uuden pääkaupungin sisämaahan. Rakennustyöt '
+      + 'alkoivat vuonna 1967, ja hallinto muutti Belmopaniin 1970.\n\n'
+      + 'Guanacasten kansallispuisto on noin 20 hehtaarin kokoinen, ja se sijaitsee Western '
+      + 'Highwayn pohjoispuolella Roaring Creekin sillan vieressä. Puisto nimettiin suuren '
+      + 'guanacaste-puun mukaan, joka säästyi hakkuulta, koska sen runko haarautui kolmeen '
+      + 'osaan. Kansallispuistoksi alue julistettiin 1990, ja sitä hoitaa Belize Audubon '
+      + 'Society. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.2672,
+      etela: 17.2465,
+      lansi: -88.789,
+      ita: -88.7644,
+    },
+    kohteet: [
+      {
+        nimi: 'Guanacasten kansallispuisto',
+        tyyppi: 'luonto',
+        lat: 17.2644,
+        lon: -88.786,
+      },
+    ],
+  },
+  kingston: {
+    polku: 'assets/kartat/kingston-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kingston, Jamaikan pääkaupunki sataman rannalla Liguanean tasangolla '
+      + 'Hope-joen vieressä. Kaupunki perustettiin heinäkuussa 1692, kun kesäkuun '
+      + 'maanjäristys oli tuhonnut Port Royalin sataman vastarannalla.\n\n'
+      + 'Maanmittari John Goffe suunnitteli kaupungille ruutukaavan, jota rajasivat North, '
+      + 'East, West ja Harbour Street; sama katuverkko näkyy kartalla yhä. Kun tulipalo '
+      + 'tuhosi Port Royalin vuonna 1703, suurin osa merikaupasta siirtyi Kingstoniin. '
+      + 'Kingston julistettiin virallisesti Jamaikan pääkaupungiksi vuonna 1872, kun hallinto '
+      + 'siirtyi sinne Spanish Townista.',
+    rajat: {
+      pohjoinen: 17.9823,
+      etela: 17.9605,
+      lansi: -76.8073,
+      ita: -76.7789,
+    },
+    kohteet: [],
+  },
+  ottawa: {
+    polku: 'assets/kartat/ottawa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ottawan keskustan vesimaisema, jossa Rideau-joki laskee Ottawa-jokeen '
+      + 'ja Rideau-kanava kulkee kaupungin halki. Kanava valmistui vuonna 1832, ja sen '
+      + 'rakentamista johti insinööri John By.\n\n'
+      + 'Pohjoisessa Rideau-putoukset jakautuvat Green Islandin ympärillä kahdeksi '
+      + 'putoukseksi, ja ranskalaiset nimesivät ne verhon (rideau) mukaan. Etelässä Dows Lake '
+      + 'syntyi, kun kanavan reitillä oleva suo padottiin; sitä ennen paikka tunnettiin '
+      + 'nimellä Dow\'s Great Swamp. Sen länsipuolella Dominion Arboretumin puuistutukset '
+      + 'alkoivat vuonna 1889. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 45.4502,
+      etela: 45.3867,
+      lansi: -75.7319,
+      ita: -75.6677,
+    },
+    kohteet: [
+      {
+        nimi: 'Rideau-putoukset',
+        tyyppi: 'luonto',
+        lat: 45.44141,
+        lon: -75.69623,
+      },
+      {
+        nimi: 'Dominion Arboretum',
+        tyyppi: 'luonto',
+        lat: 45.3908,
+        lon: -75.7044,
+      },
+      {
+        nimi: 'Dows Lake',
+        tyyppi: 'luonto',
+        lat: 45.39441,
+        lon: -75.70155,
+      },
+    ],
+  },
+  portauprince: {
+    polku: 'assets/kartat/portauprince-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Port-au-Princen vanha ydin Haitin länsirannikolla, Gonâvenlahden '
+      + 'pohjukassa. Ranskalaiset perustivat kaupungin vuonna 1749, ja suojaisa satama teki '
+      + 'siitä alueen merkittävän satamakaupungin.\n\n'
+      + 'Kaupunki nousee satamasta ylös kukkuloille, joiden kupeessa on Pétion-Villen '
+      + 'esikaupunki. Kauppatori Marché en Fer on rautarakennus, jonka presidentti Florvil '
+      + 'Hyppolite osti Pariisissa valmistettuna Haitiin 1890-luvulla; alun perin sen piti '
+      + 'olla rautatieasema Kairoon. Tammikuun 12. päivänä 2010 tapahtunut maanjäristys '
+      + 'tuhosi sen, ja se avattiin uudelleen vuonna 2011.',
+    rajat: {
+      pohjoinen: 18.5578,
+      etela: 18.536,
+      lansi: -72.3545,
+      ita: -72.3261,
+    },
+    kohteet: [],
+  },
+  sanjose: {
+    polku: 'assets/kartat/sanjose-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on San Josén historiallinen keskusta Costa Rican Keskilaaksossa. '
+      + 'Kaupunki on ollut Costa Rican pääkaupunki vuodesta 1823. Vauraus perustui '
+      + 'kahvinvientiin, joka oli 1800-luvulla maan tärkein.\n\n'
+      + 'Kansallisteatteri avattiin 21. lokakuuta 1897 Goethen Faustilla, ja sen rakentaminen '
+      + 'rahoitettiin kahviverolla. Barrio Amón syntyi 1800-luvun lopulla kahvikauppiaiden '
+      + 'varakkaaksi asuinalueeksi, ja Mercado Central on kauppahalli.',
+    rajat: {
+      pohjoinen: 9.9413,
+      etela: 9.9241,
+      lansi: -84.0905,
+      ita: -84.0687,
+    },
+    kohteet: [],
+  },
+  sansalvador: {
+    polku: 'assets/kartat/sansalvador-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on San Salvadorin tulivuori, joka kohoaa pääkaupungin luoteispuolella; '
+      + 'kaupungin länsiosat ulottuvat sen rinteille. Tulivuoren kärki on katkaistu: '
+      + 'Boquerónin kraatteri on noin puolitoista kilometriä leveä ja noin 500 metriä syvä.\n\n'
+      + 'Vanhan kalderan reunalla kohoaa El Picacho, noin 1 960 metriä korkea huippu. '
+      + 'Kraatterin pohjalla oleva pieni Boqueroncito-kartio syntyi kesäkuussa 1917 '
+      + 'alkaneessa purkauksessa, joka korvasi kraatterin järven. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.7492,
+      etela: 13.6799,
+      lansi: -89.3015,
+      ita: -89.1834,
+    },
+    kohteet: [
+      {
+        nimi: 'San Salvadorin tulivuori',
+        tyyppi: 'luonto',
+        lat: 13.734,
+        lon: -89.294,
+      },
+    ],
+  },
+  santodomingo: {
+    polku: 'assets/kartat/santodomingo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Santo Domingon Ciudad Colonial eli vanha kaupunki Ozama-joen '
+      + 'länsirannalla. Unesco merkitsi sen maailmanperintökohteeksi vuonna 1990. Kaupunki on '
+      + 'Dominikaanisen tasavallan pääkaupunki Hispaniolan eteläisellä rannikolla, ja sen '
+      + 'kivirakennukset ovat 1500-luvulta.\n\n'
+      + 'Ozaman linnoitus kohoaa joen rannalla vanhan kaupungin sisäänkäynnillä. '
+      + 'Espanjalaiset rakensivat sen vuosina 1502–1508 kuvernööri Nicolás de Ovandon '
+      + 'johdolla, ja keskellä kohoaa Torre del Homenaje -torni. Santo Domingon katedraali on '
+      + 'goottilaistyylinen ja sen holvit ovat ruodeholveja. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: { pohjoinen: 18.4864, etela: 18.4495, lansi: -69.9402, ita: -69.8761 },
+    kohteet: [
+      {
+        nimi: 'Ozaman linnoitus',
+        lat: 18.4732,
+        lon: -69.88171,
+      },
+      {
+        nimi: 'Santo Domingon katedraali',
+        lat: 18.47278,
+        lon: -69.88389,
+      },
+    ],
+  },
+  tegucigalpa: {
+    polku: 'assets/kartat/tegucigalpa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Tegucigalpan historiallinen keskusta Hondurasin pääkaupungissa, '
+      + 'vuoristoisessa laaksossa. Espanjalaiset perustivat paikalle hopeakaivosasutuksen 29. '
+      + 'syyskuuta 1578, ja nimen uskotaan tarkoittavan hopeakukkuloita. Pääkaupungiksi '
+      + 'Tegucigalpa tuli pysyvästi lokakuussa 1880, kun presidentti Marco Aurelio Soto '
+      + 'siirsi hallituksen Comayaguasta.\n\n'
+      + 'Choluteca-joki erottaa Tegucigalpan Comayagüelasta, ja kaupungit yhdistettiin '
+      + 'yhdeksi keskuspiiriksi 1930-luvun lopulla. Keskuspuiston vieressä seisoo San '
+      + 'Miguelin katedraali, barokkikirkko, jota rakennettiin vuosina 1765–1786.',
+    rajat: {
+      pohjoinen: 14.1144,
+      etela: 14.0972,
+      lansi: -87.2158,
+      ita: -87.1936,
+    },
+    kohteet: [],
+  },
+  washington: {
+    polku: 'assets/kartat/washington-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue ulottuu Georgetownin vanhalta kauppakadulta National Mallille, pitkälle '
+      + 'puistovyöhykkeelle Kapitolin ja Lincoln-muistomerkin välillä, jonka ympärille '
+      + 'Washingtonin museot ja muistomerkit ovat kertyneet.\n\n'
+      + 'Georgetownin vanha kivitalo on M Streetillä ja peräisin vuodelta 1765. Smithsonianin '
+      + 'linna valmistui 1855 punaisesta hiekkakivestä James Renwickin suunnitelmin, ja '
+      + 'Washington-monumentin kivirunko 1884. Thomas Jefferson -kirjastotalo avattiin vuonna '
+      + '1897, ja National Building Museum toimii eläkeviraston talossa, joka valmistui 1887. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 38.9122,
+      etela: 38.8814,
+      lansi: -77.0646,
+      ita: -77.0006,
+    },
+    kohteet: [
+      {
+        nimi: 'Georgetownin vanha kivitalo',
+        lat: 38.90556,
+        lon: -77.06056,
+      },
+      {
+        nimi: 'Smithsonianin linna',
+        lat: 38.88875,
+        lon: -77.026,
+      },
+      {
+        nimi: 'Washington-monumentti',
+        lat: 38.88944,
+        lon: -77.03528,
+      },
+      {
+        nimi: 'National Building Museum',
+        lat: 38.8975,
+        lon: -77.0181,
+      },
+      {
+        nimi: 'Thomas Jefferson -kirjastotalo',
+        lat: 38.8887,
+        lon: -77.0046,
+      },
+      {
+        nimi: 'Kanavanvartijan talo',
+        lat: 38.89193,
+        lon: -77.03975,
+      },
+    ],
+  },
+  basseterre: {
+    polku: 'assets/kartat/basseterre-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Basseterren vanha julkinen keskus Saint Kittsin saarella. '
+      + 'Ranskalaiset perustivat kaupungin vuonna 1627, ja se on ollut itsenäisen Saint '
+      + 'Kittsin ja Nevisin pääkaupunki vuodesta 1983.\n\n'
+      + 'Itsenäisyydenaukio tunnettiin aiemmin nimellä Pall Mall Square, ja nykyisen nimensä '
+      + 'se sai 19. syyskuuta 1983 itsenäistymisen kunniaksi. Aukiosta tuli hallinnon, kaupan '
+      + 'ja seuraelämän keskus, mutta siellä myytiin myös orjuutettuja ihmisiä. Aukion '
+      + 'asettelun on kerrottu muistuttavan Britannian lippua, Union Jackia. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.3022,
+      etela: 17.2919,
+      lansi: -62.737,
+      ita: -62.7193,
+    },
+    kohteet: [
+      {
+        nimi: 'Itsenäisyydenaukio',
+        tyyppi: 'aukio',
+        lat: 17.29612,
+        lon: -62.72227,
+      },
+    ],
+  },
+  bridgetown: {
+    polku: 'assets/kartat/bridgetown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bridgetownin historiallinen keskusta Barbadoksen pääkaupungissa, '
+      + 'jonka keskellä on Careenage eli Constitution-joen satama-allas. Historic Bridgetown '
+      + 'and its Garrison merkittiin UNESCOn maailmanperintölistalle vuonna 2011.\n\n'
+      + 'Parlamenttirakennukset ovat uusgoottilaista tyyliä, ja ne rakennettiin vuosina '
+      + '1870–1874 länsi- ja itäsiiveksi; parlamentti on kokoontunut niissä kesäkuusta 1874. '
+      + 'Nidhe Israelin synagoga on Synagogue Lanella. Se perustettiin 1600-luvulla, ja '
+      + 'hurrikaani tuhosi suuren osan alkuperäisestä rakennuksesta vuonna 1831. Pihapiirin '
+      + 'kaivauksissa löytyi vuonna 2008 rituaalikylpy eli mikveh. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.1026,
+      etela: 13.0939,
+      lansi: -59.6207,
+      ita: -59.6097,
+    },
+    kohteet: [
+      {
+        nimi: 'Nidhe Israelin synagoga',
+        lat: 13.09944,
+        lon: -59.61528,
+      },
+      {
+        nimi: 'Parlamenttirakennukset',
+        lat: 13.09699,
+        lon: -59.61392,
+      },
+    ],
+  },
+  castries: {
+    polku: 'assets/kartat/castries-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Castriesin keskusta ja sen eteläpuolinen kukkula. Saint Lucian '
+      + 'pääkaupunki sijaitsee suojaisan sataman äärellä, ja ranskalaiset ja britit '
+      + 'kiistelivät kukkulasta 1790-luvulla.\n\n'
+      + 'Keskustassa on Castriesin tori, jonka liverpoolilainen Bruce & Still rakensi 1891 ja '
+      + 'joka avattiin 2. heinäkuuta 1894. Lähellä on Derek Walcottin aukio, joka tunnettiin '
+      + 'aiemmin nimillä Place d\'Armes ja Columbus Square ja sai nykyisen nimensä nobelisti '
+      + 'Walcottin mukaan vuonna 1993; sen reunalla ovat katedraali ja keskuskirjasto. '
+      + 'Etelässä kohoaa Morne Fortune, jonka huipulla on ranskalaisten Citadelle, '
+      + 'valmistunut 1784. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 14.0157,
+      etela: 13.9859,
+      lansi: -61.0013,
+      ita: -60.9794,
+    },
+    kohteet: [
+      {
+        nimi: 'Castriesin tori',
+        lat: 14.0118,
+        lon: -60.9894,
+      },
+      {
+        nimi: 'Derek Walcottin aukio',
+        tyyppi: 'aukio',
+        lat: 14.00861,
+        lon: -60.99056,
+      },
+      {
+        nimi: 'Morne Fortune',
+        tyyppi: 'luonto',
+        lat: 13.98886,
+        lon: -60.99137,
+      },
+    ],
+  },
+  kingstown: {
+    polku: 'assets/kartat/kingstown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kingstown, Saint Vincentin ja Grenadiinien pääkaupunki ja pääsatama '
+      + 'saaren lounaisrannikolla. Kaupunkia ympäröivät jyrkät kukkulat.\n\n'
+      + 'Kingstownin kasvitieteellinen puutarha perustettiin vuonna 1765 kuvernööri Robert '
+      + 'Melvillen aloitteesta lääke- ja hyötykasvien viljelyyn. Kapteeni William Bligh toi '
+      + 'sinne leipäpuun taimia vuonna 1793. Berkshire Hillillä on Fort Charlotte: britit '
+      + 'aloittivat sen rakentamisen vuonna 1763, ja se valmistui vuonna 1806. Linnakkeen '
+      + 'tykit suunnattiin sisämaahan, sillä puolustus varautui maitse tulevaan hyökkäykseen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.1698,
+      etela: 13.1522,
+      lansi: -61.2452,
+      ita: -61.224,
+    },
+    kohteet: [
+      {
+        nimi: 'Kingstownin kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 13.16583,
+        lon: -61.22708,
+      },
+      {
+        nimi: 'Fort Charlotte',
+        lat: 13.1579,
+        lon: -61.2421,
+      },
+    ],
+  },
+  nassau: {
+    polku: 'assets/kartat/nassau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Nassaun vanha keskusta New Providencen saarella Bahamalla. '
+      + 'Siirtomaakaudella kuvernöörinä toimi vuosina 1787–1796 lordi Dunmore, joka '
+      + 'rakennutti kaupungin kaksi linnaketta, Fort Fincastlen ja Fort Charlotten.\n\n'
+      + 'Fort Fincastle seisoo Bennet\'s Hill -kukkulalla keskustan yläpuolella, ja sen muoto '
+      + 'muistuttaa siipirataslaivaa. Kuningattaren portaat, 1793–1794 kiinteään kalkkikiveen '
+      + 'louhittu portaikko, yhdistää linnakkeen keskustaan; työn teki noin 600 orjuutettua '
+      + 'ihmistä. Portaita näkyy 65, vaikka niitä sanotaan 66:ksi. Fort Charlotte on '
+      + 'kukkulalla sataman länsipuolella. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 25.0829,
+      etela: 25.0682,
+      lansi: -77.3616,
+      ita: -77.3347,
+    },
+    kohteet: [
+      {
+        nimi: 'Fort Fincastle',
+        lat: 25.07361,
+        lon: -77.33861,
+      },
+      {
+        nimi: 'Kuningattaren portaat',
+        lat: 25.07314,
+        lon: -77.33767,
+      },
+      {
+        nimi: 'Fort Charlotte',
+        lat: 25.07778,
+        lon: -77.35861,
+      },
+    ],
+  },
+  portofspain: {
+    polku: 'assets/kartat/portofspain-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Port of Spainin vihreä ydin, jossa Queen\'s Park Savannah ja sen '
+      + 'pohjoispuolella oleva Royal Botanic Gardens näyttävät kaksi tapaa antaa tilaa '
+      + 'kaupungin vihreydelle. Savannah oli sokeriruokotila, jonka kaupunki osti Peschierin '
+      + 'suvulta vuonna 1817; suvun pieni hautausmaa jäi yksityiseen omistukseen alueen '
+      + 'keskelle.\n\n'
+      + 'Royal Botanic Gardens perustettiin vuonna 1820 kuvernööri Ralph Woodfordin ja '
+      + 'kasvitieteilijä David Lockhartin johdolla, ja puutarha ulottuu Savannahin laidalta '
+      + 'presidentin residenssille asti. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 10.678,
+      etela: 10.664,
+      lansi: -61.5204,
+      ita: -61.5094,
+    },
+    kohteet: [
+      {
+        nimi: 'Queen\'s Park Savannah',
+        tyyppi: 'luonto',
+        lat: 10.6693,
+        lon: -61.51408,
+      },
+      {
+        nimi: 'Royal Botanic Gardens',
+        tyyppi: 'luonto',
+        lat: 10.6744,
+        lon: -61.5143,
+      },
+    ],
+  },
+  roseau: {
+    polku: 'assets/kartat/roseau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Roseaun keskusta Dominican länsirannikolla, Karibianmeren, '
+      + 'Roseau-joen ja Morne Bruce -kukkulan välissä. Kaupunki on Dominican pääkaupunki, ja '
+      + 'siinä näkyy sekä ranskalaisen että englantilaisen siirtomaakauden jälkiä.\n\n'
+      + 'Old Market on Dominican museon takana oleva tori, jolla käytiin siirtomaa-aikana '
+      + 'kauppaa ja myytiin myös orjuutettuja ihmisiä. Dominican kasvitieteellinen puutarha '
+      + 'perustettiin vuonna 1889 entiselle sokeriviljelmälle viljelykasvien kokeiluun ja '
+      + 'taimien tuotantoon. Hurrikaani David kaatoi sen vanhoja puita elokuussa 1979. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 15.3043,
+      etela: 15.2937,
+      lansi: -61.3902,
+      ita: -61.3789,
+    },
+    kohteet: [
+      {
+        nimi: 'Old Market',
+        tyyppi: 'aukio',
+        lat: 15.29667,
+        lon: -61.38722,
+      },
+      {
+        nimi: 'Dominican kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 15.30125,
+        lon: -61.38191,
+      },
+    ],
+  },
+  saintjohns: {
+    polku: 'assets/kartat/saintjohns-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Saint John\'s, Antiguan suurin kaupunki ja Antiguan ja Barbudan '
+      + 'hallintokeskus. Kaupunki kasvoi satamalahden ympärille, ja risteilylaivat '
+      + 'kiinnittyvät Heritage Quayn laiturille. Siirtomaa-ajan kauppa ja puolustus ovat '
+      + 'jättäneet kaupunkiin kirkon, museon ja linnakkeen.\n\n'
+      + 'Saint John’sin katedraalin kaksi barokkitornia hallitsevat keskustan siluettia. '
+      + 'Nykyisen kirkon suunnitteli englantilainen Thomas Fuller, ja katedraali vihittiin '
+      + 'käyttöön 25. heinäkuuta 1848. Antiguan ja Barbudan museo toimii vanhassa '
+      + 'oikeustalossa, ja Fort James vartioi niemeltä sataman suuta. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.1335,
+      etela: 17.1177,
+      lansi: -61.8665,
+      ita: -61.8391,
+    },
+    kohteet: [
+      {
+        nimi: 'Saint John’sin katedraali',
+        lat: 17.1227,
+        lon: -61.8419,
+      },
+      {
+        nimi: 'Antiguan ja Barbudan museo',
+        lat: 17.1222,
+        lon: -61.8439,
+      },
+      {
+        nimi: 'Fort James',
+        lat: 17.13022,
+        lon: -61.86364,
+      },
+    ],
+  },
+  stgeorges: {
+    polku: 'assets/kartat/stgeorges-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on St. George\'s, Grenadan pääkaupunki, joka sijaitsee hevosenkengän '
+      + 'muotoisen sataman ympärillä vanhan tulivuorenkraatterin rinteillä. Ranskalaiset '
+      + 'perustivat kaupungin 1600-luvun puolivälissä, ja Pariisin rauha siirsi saaren '
+      + 'Britannialle vuonna 1763.\n\n'
+      + 'Fort George on sataman yllä olevalla niemekkeellä. Ranskalaiset rakensivat '
+      + 'kivilinnakkeen 1700-luvun alussa ja saivat sen valmiiksi 1710, ja britit nimesivät '
+      + 'sen uudelleen kuningas Yrjö III:n mukaan. Grenadan kansallismuseo on Young Streetin '
+      + 'ja Monckton Streetin kulmassa, ja se perustettiin vuonna 1976 entisten kasarmi-, '
+      + 'vankila- ja hotellirakennusten tiloihin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 12.0552,
+      etela: 12.0462,
+      lansi: -61.7588,
+      ita: -61.7478,
+    },
+    kohteet: [
+      {
+        nimi: 'Fort George',
+        lat: 12.0492,
+        lon: -61.7539,
+      },
+      {
+        nimi: 'Grenadan kansallismuseo',
+        lat: 12.05058,
+        lon: -61.75266,
+      },
+    ],
+  },
+  brasilia: {
+    polku: 'assets/kartat/brasilia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Brasílian luontopuoli. Kaupunki vihittiin käyttöön pääkaupunkina 21. '
+      + 'huhtikuuta 1960; Lúcio Costa laati asemakaavan ja Oscar Niemeyer suunnitteli '
+      + 'suurimman osan julkisista rakennuksista. Unesco hyväksyi kaupungin '
+      + 'maailmanperintökohteeksi vuonna 1987.\n\n'
+      + 'Paranoá-järvi syntyi, kun Paranoá-joki padottiin kaupungin rakentamisen aikana '
+      + 'vuonna 1959; keinotekoisen järven pinta-ala on noin 48 neliökilometriä. Brasílian '
+      + 'kansallispuisto perustettiin marraskuussa 1961, ja sen noin 42 000 hehtaarin '
+      + 'alueella kasvaa cerradoa, savannimaista kasvillisuutta, sekä lähteitä ja puroja. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -15.7277,
+      etela: -15.8039,
+      lansi: -47.9341,
+      ita: -47.8149,
+    },
+    kohteet: [
+      {
+        nimi: 'Brasílian kansallispuisto',
+        tyyppi: 'luonto',
+        lat: -15.73806,
+        lon: -47.92667,
+      },
+      {
+        nimi: 'Paranoá-järvi',
+        tyyppi: 'luonto',
+        lat: -15.78056,
+        lon: -47.8225,
+      },
+    ],
+  },
+  georgetown: {
+    polku: 'assets/kartat/georgetown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Georgetown, Guyanan pääkaupunki Demerara-joen suistossa Atlantin '
+      + 'rannalla. Hollantilaisten aikana asutus kantoi nimeä Stabroek, ja britit nimesivät '
+      + 'sen Georgetowniksi vuonna 1812 kuningas Yrjö III:n mukaan.\n\n'
+      + 'Georgetownin majakka seisoo Water Streetillä; nykyinen torni otettiin käyttöön '
+      + 'vuonna 1830 hollantilaisten vuonna 1817 rakentaman puisen majakan tilalle. Promenade '
+      + 'Gardens on keskustan pieni puisto. Guyana Botanical Gardens on kaupungin itäpuolella '
+      + 'entisen Vlissengenin sokeritilan maalla, ja se perustettiin 1800-luvun lopulla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 6.827,
+      etela: 6.8015,
+      lansi: -58.1697,
+      ita: -58.1427,
+    },
+    kohteet: [
+      {
+        nimi: 'Georgetownin majakka',
+        lat: 6.8237,
+        lon: -58.16436,
+      },
+      {
+        nimi: 'Promenade Gardens',
+        tyyppi: 'luonto',
+        lat: 6.81661,
+        lon: -58.16626,
+      },
+      {
+        nimi: 'Guyana Botanical Gardens',
+        tyyppi: 'luonto',
+        lat: 6.80547,
+        lon: -58.14602,
+      },
+    ],
+  },
+  lapaz: {
+    polku: 'assets/kartat/lapaz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on La Pazin vanha keskusta, Casco Viejo, noin 3 650 metrin korkeudessa. '
+      + 'Espanjalaiset perustivat kaupungin vuonna 1548, ja La Paz on Bolivian hallituksen ja '
+      + 'lainsäädäntöelimen kotipaikka.\n\n'
+      + 'Plaza Murillo suunniteltiin vuonna 1558 kaupungin ruutukaavan osaksi, ja sen '
+      + 'laidalla ovat katedraali ja Palacio Quemado. Aukion länsipuolella on San Franciscon '
+      + 'basilika: ensimmäinen kirkko sortui lumen alle 1600-luvun alussa, ja nykyinen '
+      + 'mestitsibarokkikirkko rakennettiin Viachan kivestä vuodesta 1743 alkaen. Basilikan '
+      + 'arvonimen kirkko sai vuonna 1948. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: -16.4918,
+      etela: -16.5005,
+      lansi: -68.1411,
+      ita: -68.1298,
+    },
+    kohteet: [
+      {
+        nimi: 'San Franciscon basilika',
+        lat: -16.4965,
+        lon: -68.1373,
+      },
+      {
+        nimi: 'Plaza Murillo',
+        tyyppi: 'aukio',
+        lat: -16.4958,
+        lon: -68.1336,
+      },
+    ],
+  },
+  paramaribo: {
+    polku: 'assets/kartat/paramaribo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Paramaribon historiallinen sisäkaupunki Suriname-joen rannalla. '
+      + 'Hollantilaiset valtasivat englantilaisten perustaman kaupungin vuonna 1667, ja '
+      + 'alkuperäinen katuverkko sekä puurakennukset ovat kuuluneet UNESCOn maailmanperintöön '
+      + 'vuodesta 2002.\n\n'
+      + 'Fort Zeelandia rakennettiin ranskalaisten puulinnakkeen paikalle. Englantilaiset '
+      + 'kutsuivat sitä Fort Willoughbyksi, ja hollantilaiset antoivat sille nykyisen nimensä '
+      + 'vuonna 1667. Linnoituksessa toimii Surinamen museo. Palmupuisto on linnoituksen '
+      + 'pohjoispuolella, ja sen korkeat kuningaspalmut ovat puiston tunnusmerkki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 5.8583, etela: 5.8154, lansi: -55.2078, ita: -55.1458 },
+    kohteet: [
+      {
+        nimi: 'Fort Zeelandia',
+        lat: 5.8252,
+        lon: -55.14987,
+      },
+      {
+        nimi: 'Palmupuisto',
+        tyyppi: 'luonto',
+        lat: 5.8282,
+        lon: -55.1502,
+      },
+    ],
+  },
+  santiagodechile: {
+    polku: 'assets/kartat/santiagodechile-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Santiagon keskusta Andien ja rannikkovuoriston välisessä laaksossa. '
+      + 'Pedro de Valdivia perusti kaupungin 12. helmikuuta 1541, ja ruutukaavan keskelle '
+      + 'varattiin Plaza de Armas.\n\n'
+      + 'Aukion laidalla ovat katedraali, keskusposti ja Museo Histórico Nacional. La Moneda, '
+      + 'Joaquín Toescan suunnittelema uusklassinen rakennus, aloitettiin 1780-luvulla '
+      + 'rahapajaksi, ja se palveli hallituksen kotina 1840-luvulta; palatsia pommitettiin '
+      + '11. syyskuuta 1973. Mercado Centralin valurautarunko valmistettiin Glasgow\'ssa, ja '
+      + 'kauppahalli valmistui 1872. Santa Lucían kukkula on 629 metriä merenpinnan '
+      + 'yläpuolella. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -33.4307,
+      etela: -33.446,
+      lansi: -70.6574,
+      ita: -70.6405,
+    },
+    kohteet: [
+      {
+        nimi: 'Plaza de Armas',
+        tyyppi: 'aukio',
+        lat: -33.43791,
+        lon: -70.65036,
+      },
+      {
+        nimi: 'La Moneda',
+        lat: -33.44302,
+        lon: -70.65387,
+      },
+      {
+        nimi: 'Mercado Central',
+        lat: -33.43368,
+        lon: -70.65103,
+      },
+      {
+        nimi: 'Santa Lucían kukkula',
+        tyyppi: 'luonto',
+        lat: -33.44,
+        lon: -70.644,
+      },
+    ],
+  },
+  apia: {
+    polku: 'assets/kartat/apia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Mount Vaea, vuori Apian eteläpuolella Upolun saarella Samoalla. Apia '
+      + 'on Upolun pohjarannikolla, ja vuoren juurella on Vailima, kirjailija Robert Louis '
+      + 'Stevensonin entinen koti, jossa on nykyään hänen museonsa.\n\n'
+      + 'Stevenson kuoli joulukuussa 1894, ja samoalaiset kantoivat hänen arkkunsa vuoren '
+      + 'huipulle, minne hänet haudattiin. Hänen vaimonsa Fanny haudattiin myöhemmin samaan '
+      + 'paikkaan. Hautaan johtaa jyrkkä polku, jota kutsutaan Rakastavien sydänten tieksi. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -13.8268,
+      etela: -13.8735,
+      lansi: -171.8388,
+      ita: -171.7694,
+    },
+    kohteet: [
+      {
+        nimi: 'Mount Vaea',
+        tyyppi: 'luonto',
+        lat: -13.86361,
+        lon: -171.77361,
+      },
+    ],
+  },
+  canberra: {
+    polku: 'assets/kartat/canberra-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Canberran pohjoispuoli, jossa kolme kukkulaa kohoaa kaupungin '
+      + 'yläpuolelle. Ne kuuluvat Canberra Nature Parkiin, ja Ainslie ja Black Mountain ovat '
+      + 'luonnonsuojelualueita, joilla kasvaa uudelleen metsää ja lintuja on paljon.\n\n'
+      + 'Mount Ainslie on 843 metriä korkea ja Walter Burley Griffinin suunnitteleman '
+      + 'maa-akselin pohjoispää: akseli yhdistää kukkulat Parlamenttitaloon asti. Black '
+      + 'Mountain, 812 metriä, on ngunnawal-kansan pyhä kokoontumispaikka nimeltä Galambary. '
+      + 'Mount Majura on 890 metriä korkea ja Canberran kaupunkialueen korkein kohta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -35.2231,
+      etela: -35.3023,
+      lansi: 149.0945,
+      ita: 149.1861,
+    },
+    kohteet: [
+      {
+        nimi: 'Mount Ainslie',
+        tyyppi: 'luonto',
+        lat: -35.27,
+        lon: 149.15833,
+      },
+      {
+        nimi: 'Galambary – Black Mountain',
+        tyyppi: 'luonto',
+        lat: -35.267,
+        lon: 149.1,
+      },
+      {
+        nimi: 'Mount Majura',
+        tyyppi: 'luonto',
+        lat: -35.2375,
+        lon: 149.18056,
+      },
+    ],
+  },
+  funafuti: {
+    polku: 'assets/kartat/funafuti-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Funafuti, Tuvalun pääkaupunki, jossa on ohut soikea maakaistale '
+      + 'laguunin ympärillä. Atollilla asui vuonna 2017 noin 6 300 ihmistä, mikä on noin 60 '
+      + 'prosenttia koko Tuvalun väestöstä.\n\n'
+      + 'Yhteisöpaikat ovat Fongafale-saarella, jonka kapealla maakaistaleella kulkee '
+      + 'lentokentän kiitotie ja pääkatu. Kenttä rakennettiin toisen maailmansodan aikana, ja '
+      + 'sodan jäänteitä on saarella. Laguunin länsipuolella on Funafuti Conservation Area, '
+      + 'riutoille, laguunille ja saarekkeille tarkoitettu suojelualue, jonka pinta-ala on '
+      + 'noin 33 neliökilometriä.',
+    rajat: {
+      pohjoinen: -8.503,
+      etela: -8.5392,
+      lansi: 179.183,
+      ita: 179.2102,
+    },
+    kohteet: [],
+  },
+  majuro: {
+    polku: 'assets/kartat/majuro-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Majuro, Marshallinsaarten pääkaupunki ja Ratak-ketjuun kuuluva atolli '
+      + 'Tyynellämerellä. Atolli on matalien saarten rengas, jonka sisällä on laaja laguuni.\n\n'
+      + 'Kaupunkiydin Delap-Uliga-Djarrit on atollin itäosassa kolmen yhteen liitetyn saaren '
+      + 'kokonaisuutena, ja tie johtaa sieltä länsipäässä olevaan Lauraan, noin 40–50 '
+      + 'kilometrin päähän. Tammikuun lopussa 1944 yhdysvaltalaisjoukot valtasivat atollin '
+      + 'lähes tyhjänä, ja laguunista tuli suuri laivastotukikohta.',
+    rajat: {
+      pohjoinen: 7.1054,
+      etela: 7.0782,
+      lansi: 171.3621,
+      ita: 171.3983,
+    },
+    kohteet: [],
+  },
+  ngerulmud: {
+    polku: 'assets/kartat/ngerulmud-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ngerulmudin ympäristö Palaun Babeldaobin saarella Melekeokin '
+      + 'osavaltiossa. Hallinto siirtyi tänne Kororista lokakuussa 2006, ja uusi pääkaupunki '
+      + 'sijaitsee noin 20 kilometriä Kororista koilliseen.\n\n'
+      + 'Ngardok-järvi on Palaun suurin makean veden järvi. Se liitettiin Ramsar-sopimuksen '
+      + 'kosteikkokohteiden luetteloon 18. lokakuuta 2002, ja suojelualue turvaa järven '
+      + 'vedenlaatua. Järvi ja sen kosteikot ovat suistokrokotiilin lisääntymisaluetta. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 7.5155,
+      etela: 7.4968,
+      lansi: 134.6006,
+      ita: 134.6269,
+    },
+    kohteet: [
+      {
+        nimi: 'Ngardok-järvi',
+        tyyppi: 'luonto',
+        lat: 7.5125,
+        lon: 134.60361,
+      },
+    ],
+  },
+  nukualofa: {
+    polku: 'assets/kartat/nukualofa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Nukuʻalofa, Tongan pääkaupunki Tongatapun pohjarannalla. Kaupungissa '
+      + 'on syvänveden satama, ja kuningas George Tupou I antoi Tongan perustuslain 4. '
+      + 'marraskuuta 1875.\n\n'
+      + 'Kuninkaallinen palatsi, puurakenteinen rakennus, valmistettiin Aucklandin seudulla '
+      + 'ja pystytettiin vuonna 1867 kaupungin luoteisosaan meren rantaan. Se ei ole avoinna '
+      + 'yleisölle, mutta näkyy rannalta. Talamahun markkinoilla myydään muun muassa '
+      + 'paikallisten tekijöiden käsitöitä.',
+    rajat: {
+      pohjoinen: -21.1234,
+      etela: -21.1452,
+      lansi: -175.2162,
+      ita: -175.1874,
+    },
+    kohteet: [],
+  },
+  palikir: {
+    polku: 'assets/kartat/palikir-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Palikir, Mikronesian liittovaltion pääkaupunki Pohnpein saaren '
+      + 'luoteisosassa Sokehsin kunnassa. Pohnpei on Tyynenmeren saari, ja sen suurin '
+      + 'asutuskeskus Kolonia on pohjoisrannikolla.\n\n'
+      + 'Palikirissa ovat liittovaltion rakennukset ja toimistot, ja hallintoaluetta voi '
+      + 'kiertää kävellen. Kolonia on erillinen keskus: se on Pohnpein osavaltion '
+      + 'pääkaupunki, ja suurin osa saaren väestöstä asuu siellä.',
+    rajat: {
+      pohjoinen: 6.9287,
+      etela: 6.9069,
+      lansi: 158.1714,
+      ita: 158.1986,
+    },
+    kohteet: [],
+  },
+  southtarawa: {
+    polku: 'assets/kartat/southtarawa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on South Tarawa, Kiribatin pääkaupunki Tarawan atollin eteläosassa. Se '
+      + 'on jono matalia saaria atollin laguunin ja Tyynenmeren välissä, ja siellä asuu yli '
+      + 'puolet koko maan asukkaista.\n\n'
+      + 'Betio on saariketjun länsipäässä, ja siellä on pääkaupungin satama; Bairikiin johtaa '
+      + 'sieltä pengertie. Marraskuun 20. päivänä 1943 Betiossa alkoi Tarawan taistelu, jossa '
+      + 'Yhdysvaltain merijalkaväki hyökkäsi japanilaisten puolustajien kimppuun ja valtasi '
+      + 'saaren.',
+    rajat: {
+      pohjoinen: 1.3514,
+      etela: 1.3152,
+      lansi: 172.9397,
+      ita: 172.9937,
+    },
+    kohteet: [],
+  },
+  yaren: {
+    polku: 'assets/kartat/yaren-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Yaren, Naurun eteläisen rannikon piirikunta ja saarivaltion '
+      + 'tosiasiallinen pääkaupunki; Naurulla ei ole virallista pääkaupunkia. Nauru on pieni '
+      + 'korallisaari Tyynellämerellä, ja se itsenäistyi vuonna 1968. Parlamenttitalo, '
+      + 'hallinnon toimistot ja saaren ainoa kansainvälinen lentokenttä ovat Yarenissa.\n\n'
+      + 'Moquan maanalainen järvi sijaitsee lentokentän vieressä. Sitä kutsutaan kaivoksi, '
+      + 'koska se oli toisen maailmansodan aikana asukkaiden tärkein juomavesilähde. Lähellä '
+      + 'ovat Moquan luolat. Moqua ja Makwa ovat Yarenin entisiä nimiä. Järven ympärille '
+      + 'rakennettiin aita vuonna 2001. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -0.5427,
+      etela: -0.5513,
+      lansi: 166.9149,
+      ita: 166.9257,
+    },
+    kohteet: [
+      {
+        nimi: 'Moquan maanalainen järvi',
+        tyyppi: 'luonto',
+        lat: -0.5466,
+        lon: 166.92,
+      },
+    ],
+  },
 };
+
+/*
+ * PELIN KAUPUNKI "ISLANTI" = REYKJAVIKIN KARTTA (Karttaseppä 12.10.2026, PT + SK #4523). Laudalla
+ * Islanti on maan niminen kaupunki (js/packs/europe.js id 'islanti'), mutta kohdekartta tehtiin
+ * avaimella reykjavik, jota peli ei käytä: kartta ei näkynyt. Aarretehtävien erä 3 tarvitsee sen.
+ */
+KAUPUNKIKARTAT.islanti = KAUPUNKIKARTAT.reykjavik;
 
 /*
  * Lambertin tasapinta-azimutaalinen projektio (LAEA).
@@ -16524,6 +21632,51 @@ export function mittakaava(kartta) {
       ? `${paras} m`
       : `${String(paras / 1000).replace('.', ',')} km`,
   };
+}
+
+/*
+ * ══ KOHTEEN TYYPPI: VAIN PAIKAT KARTALLA (LÖYDÖS 178, omistaja 26.9.2026) ══
+ *
+ * Nähtävyyskartta on paikkojen kartta. Kohteen `tyyppi` kertoo, mikä se
+ * on (luokittelu docs/raportit/nahtavyydet-ei-rakennukset-20260926.md):
+ *
+ *   (puuttuu) rakennus — oletus, 1331 kohdetta
+ *   aukio     tori, aukio, katu, kortteli    — kartalla, kevyt merkki
+ *   luonto    puisto, ranta, vuori, joki     — kartalla, kevyt merkki
+ *   taide     maalaus tai veistos            — EI kartalla
+ *   esine     laiva, soitin, aarre, vaunu    — EI kartalla
+ *   henkilo   henkilö tai tapahtuma          — EI kartalla
+ *   ilmio     ilmiö                          — EI kartalla
+ *
+ * Ei-paikat EIVÄT OLE KARTALLA. Tarinakohteet (karttanosto) ovat kaupungin nostoissa
+ * (kaupunginTarinakohteet); muut säilyvät datassa, kunnes Sisältökirjuri siirtää ne (museon
+ * juttuun galleriana tai kaupunkilehden tarina-osioon). Kaikki kartan
+ * käyttäjät (piirto, numerointi, liuska, valikko, vienti natiiviin)
+ * lukevat kohteet `kaupunkikartanKohteet`-funktiolla, jotta numero on
+ * sama joka paikassa.
+ */
+export const KOHDETYYPIT = ['rakennus', 'aukio', 'luonto', 'taide', 'esine', 'henkilo', 'ilmio'];
+/** Tyypit, jotka piirretään kaupunkikartalle. */
+export const KARTAN_KOHDETYYPIT = new Set(['rakennus', 'aukio', 'luonto']);
+/** Kartalla kevyemmällä merkillä (ei piirrosta, pienempi piste). */
+export const KEVYET_KOHDETYYPIT = new Set(['aukio', 'luonto']);
+
+/** Kohteen tyyppi; puuttuva kenttä on rakennus. */
+export const kohteenTyyppi = (kohde) => kohde?.tyyppi ?? 'rakennus';
+/** Piirretäänkö kohde kaupunkikartalle (vain paikat). */
+export const kohdeKartalla = (kohde) => KARTAN_KOHDETYYPIT.has(kohteenTyyppi(kohde));
+export function kaupunkikartanKohteet(kartta) {
+  return (kartta?.kohteet ?? []).filter(kohdeKartalla);
+}
+/**
+ * TARINAKOHTEET SUORAAN KAUPUNGIN NOSTOIHIN (omistaja 26.9.2026 klo 22.4x):
+ * ei-paikka, joka kantaa karttanoston (`nosto`: skandaali, historian hetki,
+ * syvennys, nosto), ei ole kartalla vaan kaupunkiliuskassa — kaupungin kortti
+ * kokoaa kaikki kaupungin nostot, joten kaupunkikatto ei enää rajoita.
+ * Ei-paikat ilman nostoa odottavat Sisältökirjuria (museo, tarina-osio).
+ */
+export function kaupunginTarinakohteet(kartta) {
+  return (kartta?.kohteet ?? []).filter((k) => !kohdeKartalla(k) && k.nosto);
 }
 
 export function karttapiste(kartta, lat, lon) {

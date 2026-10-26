@@ -1,0 +1,83 @@
+# TestFlight-kaatumispalautteet (vain luku): testaajien lähettämät kaatumiset,
+# laite, build, kaatumistyyppi ja pino job summaryyn, täydet lokit artefaktiksi.
+# Päätoimittajan pyyntö 6.10.2026 (omistajan iPad Pro kaatui oppaan Prahan
+# linnassa). Ei kirjoita App Store Connectiin mitään.
+# Skripti: tools/testflight/kaatumiset.py.
+
+name: TestFlight-kaatumiset
+
+on:
+  workflow_dispatch:
+    inputs:
+      tunnit:
+        description: 'Aikaikkuna tunteina'
+        type: string
+        default: '24'
+      maara:
+        description: 'Enintään montako palautetta'
+        type: string
+        default: '20'
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-kaatumiset
+  cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527).
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  kaatumiset:
+    name: Kaatumiset
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Hae kaatumispalautteet
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 tools/testflight/kaatumiset.py --bundle-id "${{ inputs.bundle_id }}" \
+            --tunnit "${{ inputs.tunnit }}" --maara "${{ inputs.maara }}" --kansio "$RUNNER_TEMP/kaatumislokit"
+
+      - name: Lokit artefaktiksi
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kaatumislokit
+          path: ${{ runner.temp }}/kaatumislokit
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" "$RUNNER_TEMP/kaatumislokit" || true

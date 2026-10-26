@@ -1,0 +1,645 @@
+[
+ {
+  "kysymys": "Mihin Vänernin vedet laskevat?",
+  "vastaus": "Vänernin vedet laskevat länteen Göta älv -jokea pitkin Kattegatin merelle Göteborgin kohdalla. Järvi on 44 metrin korkeudella merenpinnasta, joten vesi putoaa sen verran matkallaan alas. Joessa on Trollhättanin kohdalla pato, kanavasulkuja ja vesivoimala, ja sulut tekevät siitä laivakulkuväylän. Vänern on siis sisämaan järvi, jolla on suora yhteys mereen.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/V%C3%A4nern",
+    "title": "Vänern - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/G%C3%B6ta_%C3%A4lv",
+    "title": "Göta älv - Wikipedia"
+   },
+   {
+    "url": "https://sv.wikipedia.org/wiki/V%C3%A4nern",
+    "title": "Vänern - Wikipedia (sv)"
+   },
+   {
+    "url": "https://www.britannica.com/place/Lake-Vaner",
+    "title": "Lake Väner - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Vänernin pääpurkuväylä on Göta älv, joka laskee Kattegatiin Göteborgin kohdalla",
+    "lahde1": "Wikipedia: Vänern; Göta älv",
+    "lahde2": "Britannica (hakutulos): lake drains west into the Kattegat via the Göta River; sv.wikipedia: Vänern",
+    "huom": ""
+   },
+   {
+    "vaite": "Järven pinta on 44 m merenpinnan yläpuolella",
+    "lahde1": "Wikipedia: Göta älv / sv.wikipedia: Vänern",
+    "lahde2": "Britannica (hakutulos): surface elevation 44 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Trollhättanin kohdalla pato, kanavasulkuja ja vesivoimala; sulut tekevät joesta kuljettavan",
+    "lahde1": "Wikipedia: Göta älv",
+    "lahde2": "sv.wikipedia: Vänern (Trollhätte kanal laajennettu 1916, laivat pääsevät järvelle)",
+    "huom": "Joen pituutta (93 km) ei käytetty: vain Wikipedia."
+   }
+  ],
+  "kohteet": [
+   "swe/vanern"
+  ]
+ },
+ {
+  "kysymys": "Miksi Pohjanmeri on niin matala?",
+  "vastaus": "Pohjanmeri on matala, koska se lepää Euroopan mannerjalustalla eikä syvän valtamerialtaan päällä. Keskisyvyys on noin 90 metriä, vaikka Norjan edustalla on yli 300 metriä syviä kuiluja. Jääkaudella merenpinta oli yli sata metriä nykyistä alempana, ja eteläosa oli kuivaa maata, Doggerlandia. Dogger Bankin hiekkasärkkä on yhä vain 15–30 metriä veden alla.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/North_Sea",
+    "title": "North Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.ebsco.com/research-starters/geography-and-cartography/north-sea",
+    "title": "North Sea - EBSCO Research Starters"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Doggerland",
+    "title": "Doggerland - Wikipedia"
+   },
+   {
+    "url": "https://archaeology.org/issues/online/collection/doggerland-mesolithic-submerged-landscape/",
+    "title": "Mapping a Vanished Landscape - Archaeology magazine"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Meri lepää Euroopan mannerjalustalla",
+    "lahde1": "Wikipedia: North Sea (\"lies on the European continental shelf\")",
+    "lahde2": "EBSCO: etelä usein alle 40 m syvä, pohjoisosa syvenee kohti Norjanmerta (ei käytä termiä mannerjalusta)",
+    "huom": "Mannerjalusta-termi vain Wikipediassa; nostokortti sanoo saman."
+   },
+   {
+    "vaite": "Keskisyvyys noin 90 metriä",
+    "lahde1": "Wikipedia: infobox 95 m, teksti 90 m",
+    "lahde2": "EBSCO: noin 94 m",
+    "huom": "Lähteet eroavat (90-95 m), siksi \"noin 90 metriä\" (karkea)."
+   },
+   {
+    "vaite": "Norjan edustalla yli 300 m syviä kuiluja (Norjanrinne)",
+    "lahde1": "Wikipedia: Norwegian trench 700-725 m",
+    "lahde2": "EBSCO: Norwegian Trench 300-700 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Jääkaudella merenpinta yli 100 m alempana; etelä oli kuivaa (Doggerland)",
+    "lahde1": "Wikipedia: Doggerland (noin 120 m alempana)",
+    "lahde2": "Archaeology magazine: noin 450 jalkaa (noin 137 m) alempana",
+    "huom": "Lähteet eroavat (120-137 m), käytetty \"yli sata metriä\"."
+   },
+   {
+    "vaite": "Dogger Bank 15-30 m veden alla",
+    "lahde1": "Wikipedia: North Sea (15-30 m)",
+    "lahde2": "EBSCO: 15-30 m",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "gbr/pohjanmeri",
+   "nld/pohjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Milloin Pohjanmereltä löydettiin öljy?",
+  "vastaus": "Pohjanmeren ensimmäinen kaupallinen öljylöytö tehtiin vuonna 1969 Norjan puolella, kun yhdysvaltalainen Phillips Petroleum löysi Ekofiskin kentän. Tuotanto alkoi vuonna 1971, ja öljy lastattiin aluksi suoraan tankkereihin merenpohjan kaivoista. Löytö vahvistui joulukuussa 1969. Pohjanmeri on sen jälkeen ollut yksi Euroopan tärkeimmistä öljyn tuotantoalueista, ja Norja ja Britannia ovat pumpanneet sieltä öljyä vuosikymmenten ajan.",
+  "sanoja": 52,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ekofisk_oil_field",
+    "title": "Ekofisk oil field - Wikipedia"
+   },
+   {
+    "url": "https://geoexpro.com/the-first-commercial-north-sea-oil-discovery/",
+    "title": "The first commercial North Sea oil discovery - GeoExpro"
+   },
+   {
+    "url": "https://conocophillips.com/spiritnow/story/50-years-of-ekofisk",
+    "title": "50 years of Ekofisk - ConocoPhillips (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ekofiskin löytö 1969, Phillips Petroleum, ensimmäinen kaupallinen öljylöytö Pohjanmerellä",
+    "lahde1": "Wikipedia: Ekofisk oil field",
+    "lahde2": "GeoExpro: first commercial North Sea oil discovery, kaivo 2/4-2",
+    "huom": ""
+   },
+   {
+    "vaite": "Geologi Max Melli näki öljyn merkit 25.10.1969",
+    "lahde1": "GeoExpro",
+    "lahde2": "ConocoPhillips (hakutulos): Melli kuvasi näytteitä 25.10.1969",
+    "huom": "Joulukuussa 1969 löytö vahvistettiin/ilmoitettiin viranomaisille; vastauksessa vain lokakuu."
+   },
+   {
+    "vaite": "Tuotanto alkoi 1971 suoraan tankkereihin neljästä merenpohjakaivosta",
+    "lahde1": "Wikipedia: Ekofisk oil field",
+    "lahde2": "ConocoPhillips (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Yli 200 koeporausta, joiden käynnisti Groningenin kaasulöytö",
+    "lahde1": "Wikipedia: Ekofisk oil field",
+    "lahde2": "ei toista erillistä lähdettä",
+    "huom": "Vain yksi lähde; muotoilu pidetty tiiviinä."
+   },
+   {
+    "vaite": "Kaasua löytyi Britannian puolelta jo 1965 (West Sole)",
+    "lahde1": "Wikipedia: West Sole",
+    "lahde2": "ei vahvistettu (ICE 403)",
+    "huom": "Jätetty vastauksesta pois, koska vain yksi lähde. Vastaus rajattu öljyyn."
+   }
+  ],
+  "kohteet": [
+   "gbr/pohjanmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Mansaari on?",
+  "vastaus": "Mansaari on saari keskellä Irlanninmerta, meren toiseksi suurin Anglesey-saaren jälkeen. Se ei kuulu Yhdistyneeseen kuningaskuntaan eikä Euroopan unioniin, vaan on itsehallinnollinen Britannian kruunun alainen alue, jolla on oma parlamentti Tynwald. Kuningas on saaren herra, Lord of Mann. Mansaari kertoo, että Britannian saarilla on useita erilaisia valtiollisia asemia.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Isle_of_Man",
+    "title": "Isle of Man - Wikipedia"
+   },
+   {
+    "url": "https://gov.im/about-the-government/departments/cabinet-office/external-relations/constitution",
+    "title": "Constitution - Isle of Man Government (hakutulos)"
+   },
+   {
+    "url": "https://www.britannica.com/place/Isle-of-Man",
+    "title": "Isle of Man - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Irish_Sea",
+    "title": "Irish Sea - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Irlanninmeren toiseksi suurin saari Angleseyn jälkeen",
+    "lahde1": "Wikipedia: Irish Sea",
+    "lahde2": "Britannica (hakutulos): Isle of Man in the centre of the northern part",
+    "huom": "Järjestys vain Wikipediassa."
+   },
+   {
+    "vaite": "Ei Yhdistyneen kuningaskunnan eikä EU:n osa; itsehallinnollinen kruunun alainen alue; oma parlamentti Tynwald",
+    "lahde1": "Wikipedia: Isle of Man",
+    "lahde2": "gov.im constitution (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Kuningas on Lord of Mann",
+    "lahde1": "Wikipedia: Isle of Man",
+    "lahde2": "gov.im (hakutulos)",
+    "huom": "Pinta-alaa (noin 572 km2), asukaslukua ja Tynwaldin 979-vuotta ei käytetty: yksi lähde / epävarma."
+   }
+  ],
+  "kohteet": [
+   "gbr/irlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi merta kutsutaan joskus Manxinmereksi?",
+  "vastaus": "Manxinmeri on harvinainen sivunimi Irlanninmerelle, eikä se ole vakiintunut. Nimi tulee Mansaaresta: manx tarkoittaa mansaarelaista, ja saaren oma nimi on Mannin. Mansaari on meren keskellä, joten sen mukaan on joskus nimetty koko meri. Nimeä kuulee harvoin, ja lähteistä vain yksi mainitsee sen; tavallinen ja virallinen nimi on Irlanninmeri.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Irish_Sea",
+    "title": "Irish Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Isle_of_Man",
+    "title": "Isle of Man - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/place/Irish-Sea",
+    "title": "Irish Sea - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Nimi Manx Sea esiintyy toisinaan Irlanninmerestä; manksiksi meren nimi on Mooir Vannin",
+    "lahde1": "Wikipedia: Irish Sea (\"The term Manx Sea may occasionally be encountered\")",
+    "lahde2": "ei toista lähdettä (Britannican hakutulos ei mainitse nimeä)",
+    "huom": "HEIKOSTI TUETTU: nimen käytölle vain yksi lähde. Syy \"nimetty saaren mukaan\" on johdettu, ei suoraan lähteessä."
+   },
+   {
+    "vaite": "Mansaari on meren keskellä (pohjoisosassa)",
+    "lahde1": "Britannica (hakutulos): lies in the centre of the northern part",
+    "lahde2": "Wikipedia: Irish Sea",
+    "huom": ""
+   },
+   {
+    "vaite": "Saaren manksinkielinen nimi on Mannin",
+    "lahde1": "Wikipedia: Isle of Man",
+    "lahde2": "Britannica (hakutulos)",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "gbr/irlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Miten meri on muovannut kallioon valtavan kaaren?",
+  "vastaus": "Aallot ovat kuluttaneet Durdle Doorin kaaren rannan suuntaisesta kalliovyöhykkeestä. Durdle Door on Dorsetin Jurassic Coastilla Englannin etelärannikolla. Kova Portlandin kalkkikivi kesti, mutta sen takana oleva pehmeämpi kivi murtui ja huuhtoutui pois, ja aallot puhkaisivat kaaren. Rannikko rapautuu yhä, joten aallot jatkavat työtään ja kaari muuttuu hitaasti edelleen.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Durdle_Door",
+    "title": "Durdle Door - Wikipedia"
+   },
+   {
+    "url": "https://bioone.org/journals/journal-of-coastal-research/volume-33/issue-5/1551-5036-33.5.ii/JURASSIC-COAST-DORSET-ENGLAND/10.2112/1551-5036-33.5.ii.full",
+    "title": "Jurassic Coast, Dorset, England - Journal of Coastal Research (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kaari on kovaa Portlandin kalkkikiveä; sen takana pehmeämpiä, helposti kuluvia kerroksia",
+    "lahde1": "Wikipedia: Durdle Door",
+    "lahde2": "Journal of Coastal Research, Jurassic Coast (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Meri poisti kalkkikiven lähes kaikkialta alueella; kaari syntyi jäljelle jääneen niemen päähän",
+    "lahde1": "Wikipedia: Durdle Door",
+    "lahde2": "Journal of Coastal Research (hakutulos)",
+    "huom": "Kaaren ikää, mittoja ja omistajaa ei käytetty: lähteet ristiriitaisia (140 / 170 milj. vuotta kivi)."
+   },
+   {
+    "vaite": "Rannikko rapautuu yhä",
+    "lahde1": "Wikipedia: Durdle Door",
+    "lahde2": "Journal of Coastal Research (hakutulos): UNESCO seuraa kaaren kuntoa",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "gbr/jurassic-coast-durdle-door"
+  ]
+ },
+ {
+  "kysymys": "Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?",
+  "vastaus": "Jurassic Coastin kallioissa näkyy noin 185 miljoonan vuoden historia. Kerrostumat kuuluvat kolmeen kauteen: triaskauteen, juuraan ja liitukauteen, jotka yhdessä muodostavat Maan keskiaikakauden. Rantajakso on noin 154 kilometriä pitkä Exmouthista Studland Bayhin, ja UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001. Rannalla kävellessä voi siis kulkea ajassa taaksepäin.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Jurassic_Coast",
+    "title": "Jurassic Coast - Wikipedia"
+   },
+   {
+    "url": "https://unesco.org.uk/our-sites/world-heritage-sites/dorset-and-east-devon-coast-the-jurassic-coast",
+    "title": "Dorset and East Devon Coast: The Jurassic Coast - UNESCO UK"
+   },
+   {
+    "url": "https://whc.unesco.org/document/151573",
+    "title": "World Heritage nomination - IUCN technical evaluation, Dorset and East Devon Coast (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Noin 185 miljoonaa vuotta; triaskausi, juura ja liitu",
+    "lahde1": "Wikipedia: Jurassic Coast",
+    "lahde2": "UNESCO UK; UNESCO/IUCN-arvio (hakutulos): lähes koko mesozoinen aikakausi, noin 185 milj. vuotta",
+    "huom": ""
+   },
+   {
+    "vaite": "Pituus noin 154 km (95-96 mailia), Exmouth - Studland Bay",
+    "lahde1": "Wikipedia: Jurassic Coast (154 km)",
+    "lahde2": "UNESCO UK (95 mailia, noin 153 km)",
+    "huom": ""
+   },
+   {
+    "vaite": "UNESCO-maailmanperintö 2001",
+    "lahde1": "Wikipedia: Jurassic Coast",
+    "lahde2": "UNESCO UK",
+    "huom": "\"Maan keskiaikakausi\" = mesozoinen aikakausi; sana selitetty näin."
+   }
+  ],
+  "kohteet": [
+   "gbr/jurassic-coast-durdle-door"
+  ]
+ },
+ {
+  "kysymys": "Mikä Yrjönkanaali on?",
+  "vastaus": "Yrjönkanaali on merikaista Irlannin kaakkoisosan ja Walesin lounaiskärjen välissä. Se yhdistää pohjoisessa olevan Irlanninmeren etelässä olevaan Kelttienmereen. Kapeimmillaan, Carnsore Pointin ja St Davidin niemen välillä, kaista on noin 76 kilometriä leveä. Meriraja kulkee juuri tuota linjaa pitkin. Kanaali on siis ovi, jonka kautta Irlanninmereltä päästään avoimelle Atlantille.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/St_George%27s_Channel",
+    "title": "St George's Channel - Wikipedia"
+   },
+   {
+    "url": "https://britannica.com/print/article/517178",
+    "title": "Saint George's Channel - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://www.worldatlas.com/straits/st-george-s-channel.html",
+    "title": "St George's Channel - WorldAtlas (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Irish_Sea",
+    "title": "Irish Sea - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kaista Irlannin (Wexford) ja Walesin (St Davids) välillä, yhdistää Irlanninmeren ja Kelttienmeren",
+    "lahde1": "Wikipedia: St George's Channel",
+    "lahde2": "Britannica (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Carnsore Point - St David's Head noin 76 km",
+    "lahde1": "Britannica (hakutulos): 47 mailia (76 km)",
+    "lahde2": "WorldAtlas (hakutulos): noin 76 km",
+    "huom": "Lähteet ovat ristiriidassa siitä, onko 76 km kapein vai leveä kohta; Dictionary.com antaa jopa 145 km. Vastauksessa \"kapeimmillaan\" on siis epävarma; pituutta (noin 160 km, vain Britannica) ei käytetty."
+   },
+   {
+    "vaite": "IHO:n 1953 raja kulkee St David's Headin ja Carnsore Pointin välillä",
+    "lahde1": "Wikipedia: St George's Channel",
+    "lahde2": "ei toista lähdettä",
+    "huom": "Heikosti tuettu (yksi lähde); lause \"meriraja kulkee juuri tuota linjaa pitkin\" perustuu Wikipediaan."
+   }
+  ],
+  "kohteet": [
+   "irl/irlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Mansaari on oma alueensa?",
+  "vastaus": "Mansaari on oma alueensa, koska se on Britannian kruunun alainen itsehallintoalue eikä osa Yhdistynyttä kuningaskuntaa. Saarella on oma parlamentti Tynwald, oma hallitus, omat tuomioistuimet ja omat lait. Britannia vastaa puolustuksesta ja ulkosuhteista. Saari ei ole koskaan kuulunut EU:hun. Asetelma on kasvanut historiassa, eikä sitä ole luotu yhdellä päätöksellä.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Isle_of_Man",
+    "title": "Isle of Man - Wikipedia"
+   },
+   {
+    "url": "https://gov.im/about-the-government/departments/cabinet-office/external-relations/constitution",
+    "title": "Constitution - Isle of Man Government (hakutulos)"
+   },
+   {
+    "url": "https://www.britannica.com/place/Isle-of-Man",
+    "title": "Isle of Man - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kruunun alainen itsehallintoalue, ei osa Yhdistynyttä kuningaskuntaa",
+    "lahde1": "Wikipedia: Isle of Man",
+    "lahde2": "gov.im (hakutulos): not, and never has been, part of the UK",
+    "huom": ""
+   },
+   {
+    "vaite": "Oma parlamentti, hallitus, tuomioistuimet ja lait",
+    "lahde1": "gov.im / Tynwald (hakutulos)",
+    "lahde2": "Wikipedia: Isle of Man",
+    "huom": ""
+   },
+   {
+    "vaite": "Britannia vastaa puolustuksesta ja ulkosuhteista; ei koskaan EU:n jäsen",
+    "lahde1": "Wikipedia: Isle of Man",
+    "lahde2": "gov.im (hakutulos)",
+    "huom": "Viimeinen lause (\"kasvanut historiassa\") on yleistys; Britannican kruunuhallinta 1828 ja Tynwaldin 979 jätetty pois (yksi lähde)."
+   }
+  ],
+  "kohteet": [
+   "irl/irlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?",
+  "vastaus": "Siihen ei ole yhtä oikeaa vastausta. Britannica pitää Grönlanninmerta Jäämeren reunaosana, mutta osa lähteistä lukee sen Atlantin osaksi. Merentutkimuksessa se kuuluu Norjanmeren kanssa pohjoisiin meriin. Kansainvälinen merikarttajärjestö IHO on piirtänyt merelle rajat, mutta Jäämeren ja sen sivumerten rajat ovat yleisesti epätarkkoja. Rajat ovat sopimuksia, eivät luonnon viivoja.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Greenland_Sea",
+    "title": "Greenland Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/place/Greenland-Sea",
+    "title": "Greenland Sea - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://www.dictionary.com/browse/greenland%20sea",
+    "title": "Greenland Sea - Dictionary.com (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Sijoitus vaihtelee: Jäämeri tai Atlantti",
+    "lahde1": "Wikipedia: Greenland Sea (usein Jäämeri, joskus Atlantti; määritelmät \"imprecise or arbitrary\")",
+    "lahde2": "Dictionary.com (hakutulos): variously part of Arctic or North Atlantic",
+    "huom": "Kysymys on määritelmäkysymys; vastaus kertoo tämän."
+   },
+   {
+    "vaite": "Britannica pitää sitä Jäämeren reunaosana",
+    "lahde1": "Britannica (hakutulos): outlying portion of the Arctic Ocean",
+    "lahde2": "Wikipedia: Greenland Sea",
+    "huom": ""
+   },
+   {
+    "vaite": "Oseanografiassa Norjanmeren kanssa Nordic Seas",
+    "lahde1": "Wikipedia: Greenland Sea",
+    "lahde2": "Britannica/hakutulos (Nordic Seas)",
+    "huom": "IHO:n tarkkaa määritelmää ei saatu primäärilähteestä; vain Wikipedia kertoo IHO:n rajaavan meren. Pinta-alaa (1,2 milj. km2) ei käytetty (yksi lähde)."
+   }
+  ],
+  "kohteet": [
+   "isl/gronlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Framinsalmi on?",
+  "vastaus": "Framinsalmi on meriväylä Grönlannin ja Huippuvuorten välillä, kaikkiaan noin 450 kilometriä leveä. Se on Jäämeren ainoa syvä yhteys muihin meriin, ja kynnys on yli 2 500 metriä syvä. Lämmin Atlantin vesi virtaa sitä pitkin pohjoiseen, ja noin 90 prosenttia Jäämeren viemästä merijäästä ajautuu etelään. Nimi tulee Nansenin Fram-laivasta.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Fram_Strait",
+    "title": "Fram Strait - Wikipedia"
+   },
+   {
+    "url": "https://epic.awi.de/53574/1/Hossain2021_Article_OpeningOfTheFramStraitLedToThe.pdf",
+    "title": "Opening of the Fram Strait - AWI / Hossain 2021 (hakutulos)"
+   },
+   {
+    "url": "https://asof.awi.de/science/projects/13-monitoring-of-oceanic-fluxes-across-fram-strait/",
+    "title": "Monitoring of oceanic fluxes across Fram Strait - AWI (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Fram_(ship)",
+    "title": "Fram (ship) - Wikipedia (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Grönlannin ja Huippuvuorten välissä, noin 450 km leveä (syvä osa noin 300 km)",
+    "lahde1": "Wikipedia: Fram Strait",
+    "lahde2": "AWI-aineisto (hakutulos): noin 450-500 km",
+    "huom": ""
+   },
+   {
+    "vaite": "Ainoa syvä yhteys Jäämeren ja maailmanmeren välillä; kynnys yli 2 500 m",
+    "lahde1": "Wikipedia: 2 545 m",
+    "lahde2": "AWI / Hossain 2021 (hakutulos): noin 2 600 m",
+    "huom": "Luvut eroavat, siksi \"yli 2 500 metriä\"."
+   },
+   {
+    "vaite": "Lämmin Atlantin vesi pohjoiseen (West Spitsbergen Current), noin 90 % Jäämeren jäänviennistä",
+    "lahde1": "Wikipedia: Fram Strait",
+    "lahde2": "AWI/NPI-seuranta (hakutulos): nearly 90 %",
+    "huom": ""
+   },
+   {
+    "vaite": "Nimi tulee Nansenin Fram-laivasta",
+    "lahde1": "Wikipedia: Fram Strait",
+    "lahde2": "Hakutulos (Dictionary.com, matkakertomukset): nimi liittyy Fram-laivaan, vakiintunut 1970-luvulla",
+    "huom": "Nimi ei ole virallinen; nimen alkuperä venäläisessä tieteellisessä kirjallisuudessa."
+   }
+  ],
+  "kohteet": [
+   "isl/gronlanninmeri"
+  ]
+ },
+ {
+  "kysymys": "Mistä järvi on saanut nimensä?",
+  "vastaus": "Mývatn tarkoittaa islanniksi sääskijärveä: mý on surviaissääski ja vatn järvi. Kesällä järven ympäristö on täynnä näitä pieniä hyönteisiä, joista valtaosa ei pure. Sääskien toukat elävät järven pohjassa, ja ravinteikas lähdevesi pitää ne runsaana. Nimi on siis rehellinen kuvaus, ja sääsket ovat koko järven eliöyhteisön perusta.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/M%C3%BDvatn",
+    "title": "Mývatn - Wikipedia"
+   },
+   {
+    "url": "https://lakescientist.com/?p=6256",
+    "title": "Iceland's Lake Mývatn Supports Thirteen Duck Species, Rare Algae - Lake Scientist"
+   },
+   {
+    "url": "https://whc.unesco.org/en/tentativelists/5586",
+    "title": "Mývatn-Laxá - UNESCO tentative list (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Nimi = mý (surviaissääski) + vatn (järvi)",
+    "lahde1": "Wikipedia: Mývatn",
+    "lahde2": "Lake Scientist: midges give the lake its name",
+    "huom": ""
+   },
+   {
+    "vaite": "Sääsket pääosin pistämättömiä surviaissääskiä; toukat elävät pohjalla",
+    "lahde1": "Hakutulos (Bustravel/Grapevine-pohjainen yhteenveto): non-biting chironomids",
+    "lahde2": "UNESCO tentative list (hakutulos): yli 40 sääskilajia",
+    "huom": "Huom: alueella on myös puraisevia mäkäriä; vastaus sanoo vain \"valtaosa ei pure\". Heikosti tuettu."
+   },
+   {
+    "vaite": "Ravinteikas lähdevesi ruokkii sääskentoukkia",
+    "lahde1": "Wikipedia: Mývatn",
+    "lahde2": "Lake Scientist: shallow eutrophic spring-fed",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "isl/myvatn"
+  ]
+ },
+ {
+  "kysymys": "Miksi sorsia on juuri täällä niin paljon?",
+  "vastaus": "Sorsia on Mývatnilla paljon, koska ravinteikas lähdevesi tuottaa järveen valtavasti sääskentoukkia ja vesikirppuja, joita sorsat syövät. Alueella pesii noin 13–15 sorsalajia, lähteestä riippuen. Vain täällä Euroopassa pesii myös amerikkalainen Barrow'n telkkälaji, jota on noin 2 000 yksilöä ja joka pesii laavan onkaloissa. Runsas ravinto selittää runsaat linnut.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/M%C3%BDvatn",
+    "title": "Mývatn - Wikipedia"
+   },
+   {
+    "url": "https://lakescientist.com/?p=6256",
+    "title": "Iceland's Lake Mývatn Supports Thirteen Duck Species, Rare Algae - Lake Scientist"
+   },
+   {
+    "url": "https://whc.unesco.org/en/tentativelists/5586",
+    "title": "Mývatn-Laxá - UNESCO tentative list (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ravinteikas lähdevesi tuottaa sääskentoukkia ja vesikirppuja ravinnoksi",
+    "lahde1": "Wikipedia: Mývatn",
+    "lahde2": "UNESCO tentative list (hakutulos): ducks feed mainly on chironomid larvae",
+    "huom": ""
+   },
+   {
+    "vaite": "Pesiviä sorsalajeja noin 13-15",
+    "lahde1": "Wikipedia: 15 lajia",
+    "lahde2": "Lake Scientist: 13 lajia; UNESCO (hakutulos): 15 pesii säännöllisesti",
+    "huom": "Lähteet eroavat (13/14/15) -> vaihteluväli; \"enemmän kuin missään muualla Euroopassa\" jätetty pois (vain Wikipedia)."
+   },
+   {
+    "vaite": "Barrow'n telkkä: Euroopan ainoa pesimäalue, noin 2 000 yksilöä, pesii laavaonkaloissa",
+    "lahde1": "Wikipedia: Mývatn",
+    "lahde2": "UNESCO tentative list (hakutulos): only breeding area in Europe",
+    "huom": "Populaatioarvio vaihtelee (\"noin 2 000\" / \"muutama tuhat\")."
+   }
+  ],
+  "kohteet": [
+   "isl/myvatn"
+  ]
+ },
+ {
+  "kysymys": "Miten hollantilaiset ovat vallanneet maata mereltä?",
+  "vastaus": "Hollantilaiset ovat rakentaneet vesialueen ympärille penkereet ja pumpanneet veden pois, jolloin syntyy polderi. Suurin hanke oli Zuiderzeen työt: 32 kilometrin Afsluitdijk-pato sulki lahden vuonna 1932. Sen jälkeen kuivatetut polderit, viimeisenä Etelä-Flevoland 1968, lisäsivät maata noin 1 600 neliökilometriä. Hanke osoittaa, että maata voi tehdä ihmistyöllä.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Land_reclamation_in_the_Netherlands",
+    "title": "Land reclamation in the Netherlands - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Zuiderzee_Works",
+    "title": "Zuiderzee Works - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com:443/print/article/282547",
+    "title": "IJsselmeer Polders - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://www.rijkswaterstaat.nl/water/waterbeheer/bescherming-tegen-het-water/100-jaar-zuiderzeewet",
+    "title": "100 jaar Zuiderzeewerken - Rijkswaterstaat (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Polder",
+    "title": "Polder - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Polderi: vesialue rajataan penkereillä ja vesi pumpataan pois",
+    "lahde1": "Wikipedia: Polder",
+    "lahde2": "Wikipedia: Land reclamation in the Netherlands",
+    "huom": "Molemmat Wikipediassa; yleisesti tunnettu tieto."
+   },
+   {
+    "vaite": "Afsluitdijk 32 km, lahti suljettiin 1932",
+    "lahde1": "Wikipedia: Zuiderzee Works",
+    "lahde2": "Rijkswaterstaat (hakutulos): 32 km, Den Oever - Zurich",
+    "huom": "Suljettu 1932; juhlallisesti avattu 1933."
+   },
+   {
+    "vaite": "Neljä polderia 1930-1968, yhteensä noin 1 600 km2; viimeisenä Etelä-Flevoland 1968",
+    "lahde1": "Wikipedia: Zuiderzee Works (165 000 ha)",
+    "lahde2": "Britannica (hakutulos): 1 620 km2",
+    "huom": "Pienet erot (1 620 / 1 650) -> \"noin 1 600\"."
+   }
+  ],
+  "kohteet": [
+   "nld/pohjanmeri"
+  ]
+ }
+]

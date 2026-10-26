@@ -1,0 +1,107 @@
+[
+ {
+  "id": "ateena",
+  "esittely": "Kartan alue on Ateenan vanha ydin Akropoliin ympärillä. Akropoliin lounaiskulmalla on Kallikrateen suunnittelema Niken temppeli 400-luvulta eaa., ja kaakkoisrinteellä Akropolis-museo, joka avattiin kesäkuussa 2009. Antiikin agoralla Attaloksen stoa rakennettiin uudelleen 1950-luvulla, ja siinä toimii nykyään agoran museo.\n\nOlympieionin 104 pylväästä on pystyssä 15, ja Hadrianus sai temppelin valmiiksi 130-luvun alussa. Marmorinen Kallimarmaro kunnostettiin ensimmäisiin nykyajan olympialaisiin 1896. Iliou Melathron rakennettiin Heinrich Schliemannille, ja siinä on nykyään kolikkomuseo. Lykavittós on 277 metriä korkea. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 678,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Temple_of_Athena_Nike",
+    "title": "Wikipedia: Temple of Athena Nike",
+    "tukee": "arkkitehti Kallikrates, jooninen, Akropoliin lounaiskulmassa, valmistui n. 420 eaa."
+   },
+   {
+    "url": "https://www.theacropolismuseum.gr/en/other-monuments-periklean-building-programme/temple-athena-nike",
+    "title": "Acropolis Museum: Temple of Athena Nike",
+    "tukee": "Kallikrates, jooninen temppeli, rakennettu 426-421 eaa. Akropoliin lounaisreunan bastionille"
+   },
+   {
+    "url": "https://www.visitgreece.gr/en/culture/monuments/temple_of_athena_nike",
+    "title": "Visit Greece: Temple of Athena Nike",
+    "tukee": "pieni jooninen temppeli, bastionin vanhemmat pyhäkkö-jäänteet"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Acropolis_Museum",
+    "title": "Wikipedia: Acropolis Museum",
+    "tukee": "avattu yleisölle 20.6.2009; sijaitsee Akropoliin kaakkoisrinteellä"
+   },
+   {
+    "url": "https://www.theacropolismuseum.gr/en/museum-building",
+    "title": "Acropolis Museum: The museum building",
+    "tukee": "avattu 20.6.2009; noin 300 m Parthenonista kaakkoon"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Stoa_of_Attalos",
+    "title": "Wikipedia: Stoa of Attalos",
+    "tukee": "uudelleenrakennus 1952-1956 (American School of Classical Studies), nykyään Antiikin agoran museo"
+   },
+   {
+    "url": "https://ascsa.edu.gr/excavations/athenian-agora/about-the-excavations",
+    "title": "American School of Classical Studies at Athens: About the Excavations (hakutuloksen yhteenveto)",
+    "tukee": "stoa rakennettu uudelleen 1950-luvulla museoksi (haun yhteenveto, sivu ei auennut suoraan)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens",
+    "title": "Wikipedia: Ancient Agora of Athens",
+    "tukee": "Attaloksen stoa rekonstruoitu 1950-luvulla, toimii museona"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+    "title": "Wikipedia: Temple of Olympian Zeus",
+    "tukee": "104 pylvästä alun perin, 15 pystyssä, Hadrianus sai valmiiksi 131 (vihkiminen 132)"
+   },
+   {
+    "url": "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/the-olympieion-and-the-arch-of-hadrian",
+    "title": "Visit Greece: The Olympieion and the Arch of Hadrian",
+    "tukee": "104 korinttilaista pylvästä, 15 pystyssä, Hadrianus valmistui 131"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+    "title": "Wikipedia: Panathenaic Stadium",
+    "tukee": "marmorinen (Pentelikon), kunnostettu 1896 ensimmäisiin nykyajan olympialaisiin"
+   },
+   {
+    "url": "https://www.nationalgeographic.com/travel/destinations/europe/greece/athens/things-to-do-olympic-panathenaic-stadium/",
+    "title": "National Geographic: Panathenaic Stadium",
+    "tukee": "kunnostettu marmorilla ensimmäisiin nykyajan olympialaisiin; kokonaan marmorista"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Iliou_Melathron",
+    "title": "Wikipedia: Iliou Melathron",
+    "tukee": "Ernst Zillerin suunnittelema asuintalo Heinrich Schliemannille 1878-1880; nykyään Numismatic Museum"
+   },
+   {
+    "url": "https://www.nummus.gr/en/iliou-melathron/",
+    "title": "Numismatic Museum of Athens: Iliou Melathron",
+    "tukee": "Ziller, rakennettu Schliemannin perheen asunnoksi 1878-1879, nykyään Numismatic Museum"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Mount_Lycabettus",
+    "title": "Wikipedia: Mount Lycabettus",
+    "tukee": "korkeus noin 277 m"
+   },
+   {
+    "url": "https://www.thisisathens.org/sights/lycabettus-hill",
+    "title": "This is Athens: Lycabettus Hill",
+    "tukee": "korkeus 277 m"
+   }
+  ],
+  "pudotetut": [
+   "Akropoliin korkeus 156 m ja 90 m tasangon yläpuolella: Wikipedia ja muut lähteet antavat eri lukuja (n. 150 m), toista riippumatonta vahvistusta 156 m:lle ei haettu -> pois",
+   "Pireuksen etäisyys 8 km, joen puuttuminen ja Akropoliin pääsy vain länsipäästä (vanhasta tekstistä): ei tarkistettu kahdesta lähteestä -> pois",
+   "Lykavittós 'keskustan korkein kohta': Wikipedia 'highest point in Central Athens', This is Athens 'downtown Athens highest peak' mutta myös 'toiseksi korkein näköalapaikka laajemmin' -> väite pois, vain 277 m",
+   "Kallimarmaron kapasiteetti (60 000 / 80 000 / 45 000 lähteestä riippuen) ja Averoffin lahjoitus: ei tekstissä",
+   "Niken temppelin pituus-, leveys- ja korkeusmitat, purku 1686/1687 ja uudelleenrakennus 1830-luvulla: lähteet eroavat vuosissa tai vain yksi lähde -> pois",
+   "Syntagman aukio (perustuslaki 1843, nimen merkitys) tarkistettiin Wikipedian ja To Vima -haun mukaan, mutta jätettiin tekstistä pois tilanpuutteen vuoksi (kansannousun päivämäärä 3.9. vanhaa ja 15.9. uutta lukua)",
+   "Akropolis-museon arkkitehti Bernard Tschumi, 14 000 m2 ja salin mitat: ei tekstissä (tilanpuute)"
+  ],
+  "ristiriidat": [
+   "Niken temppelin ajoitus: Wikipedia valmis n. 420 eaa., Acropolis Museum 426-421 eaa., YSMA 427-424 eaa. -> teksti vain '400-luvulta eaa.'",
+   "Olympieionin valmistuminen: 131 (Visit Greece, Wikipedian infolaatikko) vs. vihkiminen 132 -> käytetty 'sai valmiiksi 131'; pylvään korkeus 17 / 17,25 / 18 m -> ei tekstissä",
+   "Iliou Melathronin rakennusvuodet: Wikipedia 1878-1880, nummus.gr 1878-1879 -> ei vuosia tekstissä",
+   "Akropolis-museon kokonaispinta-ala vaihtelee lähteittäin (14 000 / 21 000 / 25 000 m2) -> ei tekstissä",
+   "ESTO: Britannica (Panathenaic Stadium) palautti 403; WebFetch ei hakenut ascsa.edu.gr-sivua (sertifikaattivirhe), joten Attaloksen stoan toinen lähde nojaa hakuyhteenvetoon ja Wikipediaan"
+  ],
+  "muutos_sk": "Poistettu: Akropoliin korkeusluvut, Pireus 8 km, joen puuttuminen, pääsy vain länsipäästä ja 'kesti piirityksen' (ei kahta lähdettä). Lisätty: Niken temppeli, Akropolis-museo 2009, Attaloksen stoa 1950-luvulla, Olympieion 104/15 pylvästä ja 131, Kallimarmaro 1896, Iliou Melathron ja kolikkomuseo, Lykavittós 277 m. Teksti noudattaa nyt kartan kohteita eikä kaupungin maantiedettä. [SK-tarkistus: epävarma tarkka vuosi korvattu vuosikymmenellä/vuosisadalla]"
+ }
+]

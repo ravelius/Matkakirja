@@ -63,6 +63,7 @@ export const HAHMOTELMA_DEU = [
   ...EUROOPAN_KADONNEET.DEU,
   {
     id: 'hahmotelma-saechsische-schweiz',
+    nimio: 'Sächsische Schweiz',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-saechsische-schweiz-721fade7.jpg',
       lyhyt: 'Bastei-silta ylittää syksyisten hiekkakallioiden välisen rotkon.',
@@ -132,6 +133,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-ruegen',
+    nimio: 'Rügen',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-ruegen-fd82b824.jpg',
       lyhyt: 'Rügenin valkoiset liitukalliot kohoavat vihreän lehtimetsän alla turkoosin meren rannalla.',
@@ -645,6 +647,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-hohenzollern',
+    nimio: 'Hohenzollern',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-hohenzollern-44e73237.jpg',
       lyhyt: 'Hohenzollernin linna kohoaa syksyisen metsäisen vuoren huipulla tornien ja muurien ympäröimänä.',
@@ -755,10 +758,11 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-maulbronn',
+    nimio: 'Maulbronn',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-maulbronn-889b430a.jpg',
       lyhyt: 'Maulbronnin luostarin kirkko esipylväikköineen ja viereiset rakennukset kirkkaan sinistä taivasta vasten.',
-      selite: 'Maulbronnin entinen sistersiläisluostari Baden-Württembergissä. Kuvassa näkyy luostarikirkko ja sen eteinen eli "paratiisi" sekä punaharmaasta hiekkakivestä rakennetut luostarirakennukset.',
+      selite: 'Maulbronnin entinen sistersiläisluostari Baden-Württembergissä. Kuvassa näkyy luostarikirkko ja sen eteinen eli ”paratiisi” sekä punaharmaasta hiekkakivestä rakennetut luostarirakennukset.',
       lahde: 'Valokuva: Elke Wetzig (Elya), Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Elke Wetzig (Elya)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kloster_Maulbronn_2009.jpg',
@@ -815,6 +819,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-rothenburg',
+    nimio: 'Rothenburg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-rothenburg-f1a4947f.jpg',
       lyhyt: 'Plönlein Rothenburgissa: ristikkotalo kahden kaupunginportin ja tornin välissä.',
@@ -879,6 +884,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-bayreuth',
+    nimio: 'Bayreuth',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-bayreuth-5a026415.jpg',
       lyhyt: 'Bayreuthin Festspielhaus noin vuonna 1900, puiden ympäröimänä kukkulalla.',
@@ -929,6 +935,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-ruedesheim',
+    nimio: 'Rüdesheim',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-ruedesheim-e13c404a.jpg',
       lyhyt: 'Rüdesheimin yläpuolen laajat viinitarharinteet köysiradan tolppineen.',
@@ -1000,6 +1007,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-bernkastel',
+    nimio: 'Bernkastel',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-bernkastel-30e98692.jpg',
       lyhyt: 'Bernkastel-Kuesin torin ristikkotalot kukkaruukkuineen.',
@@ -1253,6 +1261,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-voelklingen',
+    nimio: 'Völklingen',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-voelklingen-e97372c4.jpg',
       lyhyt: 'Ilmakuva Völklingenin rautatehtaasta etelästä katsottuna.',
@@ -1323,6 +1332,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-freiberg',
+    nimio: 'Freiberg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-freiberg-3949abd9.jpg',
       lyhyt: 'Himmelfahrt Fundgruben malmin rikastamon vanha rakennus heijastuu Freibergin lammikossa.',
@@ -1697,6 +1707,7 @@ export const HAHMOTELMA_DEU = [
   },
   {
     id: 'hahmotelma-rammelsberg',
+    nimio: 'Rammelsberg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-rammelsberg-8ba9db92.jpg',
       lyhyt: 'Rammelsbergin kaivoksen tumma puurakenteinen konepaja-alue nousee rinteeseen.',
@@ -1846,7 +1857,7 @@ export const HAHMOTELMA_DEU = [
       maailmankartta: { x: 6123.9, y: 1415.7 },
       europe: { x: 378.5, y: 594.1 },
     },
-    teksti: 'Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa '
+    teksti: 'Heidelbergin linnan Krautturm eli ”gesprengter Turm” (räjäytetty torni) oli osa '
       + '1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin '
       + 'perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen '
       + 'alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — '

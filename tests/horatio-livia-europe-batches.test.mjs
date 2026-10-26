@@ -7,7 +7,7 @@ import { ERA5_ODOTTAVAT_KAUPUNGIT } from '../js/livia-pilotti-cuet.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { AANI as HORATIO_AANI, MALLI as HORATIO_MALLI, STABILITY as HORATIO_VAKAUS } from '../tools/generoi-luennat.mjs';
 import {
-  PULU_AANI_OLETUS, PULU_MALLI_OLETUS, TAGIT, puhemuoto, tulkitseArgumentit,
+  PULU_AANI_OLETUS, PULU_TAGIMALLIT, TAGIT, puhemuoto, tulkitseArgumentit,
 } from '../tools/generoi-pulu.mjs';
 
 const APPROVED_SOURCE_SHA = '44b3192a64ee18efa1fce43c1729ba4b410440328dcc5b6ce694f6885bf85fbc';
@@ -115,7 +115,9 @@ test('tuotantomanifesti lukitsee hyväksytyt äänet ja luonnollisen tempon', ()
   assert.equal(HORATIO_MALLI, combined.voices.horatio.model);
   assert.equal(HORATIO_VAKAUS, combined.voices.horatio.stability);
   assert.equal(PULU_AANI_OLETUS, combined.voices.livia.id);
-  assert.equal(PULU_MALLI_OLETUS, combined.voices.livia.model);
+  // 14.9. manifesti on v3-aikainen; oletus on 28.9.2026 alkaen v4, ja
+  // kumpikin on tagimalli, jonka kuitit kohdistus hyväksyy.
+  assert.ok(PULU_TAGIMALLIT.includes(combined.voices.livia.model));
   assert.equal(tulkitseArgumentit([]).tempo, combined.voices.livia.tempo);
 });
 

@@ -51,7 +51,10 @@ import { packById } from '../js/pack.js';
  * Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
  * liittyi seitsemänneksi samaan nimettyyn joukkoon.
  */
-const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta'];
+const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta',
+  // Juna 193 (PT 15.10.2026): kahdeksan pääkaupunkia laudan pysäkeiksi kevyillä pakeilla.
+  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad',
+  'bern', 'bratislava', 'podgorica'];
 /*
  * ALUEPAKETIT eivät ole yksittäisiä kaupunkeja eikä niillä ole
  * kohtaamista (22.9.2026). KAUPUNGIT-ryhmä sai kohtaaminen/
@@ -81,9 +84,9 @@ function peliKaupungissa(id, { aarreLoydetty = false } = {}) {
   return game;
 }
 
-test('11 kevyttä kohdetta ovat laudalla eikä yhdelläkään ole aarteen avaavaa lehtitehtävää', () => {
+test('22 kevyttä kohdetta ovat laudalla eikä yhdelläkään ole aarteen avaavaa lehtitehtävää', () => {
   assert.deepEqual([...KEVYET_FOKUSVIRRAT].sort(), [...KEVYET].sort(),
-    'nimetty joukko js/packs/fokusvirrat.js:ssä on yhä nämä 11');
+    'nimetty joukko js/packs/fokusvirrat.js:ssä on yhä nämä 22');
   for (const id of KEVYET) {
     const city = KAUPUNGIT.get(id);
     assert.ok(city, `${id} on maailmankartan laudalla`);

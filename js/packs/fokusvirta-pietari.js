@@ -1073,7 +1073,7 @@ export const FOKUSVIRTA_PIETARI = {
           + 'työn yhdellä kirveellä ja heitti sen valmistuttua järveen: '
           + 'toista samanlaista ei ole eikä tule.',
         'Kirkosta kerrotaan aina sama lause: se on rakennettu ilman '
-          + 'ainuttakaan naulaa. Se on melkein totta, ja "melkein" on '
+          + 'ainuttakaan naulaa. Se on melkein totta, ja ”melkein” on '
           + 'tässä kiinnostavampi kuin väite. Hirsirunko todella on '
           + 'nauloitta: hirret on veistetty kirveellä ja liitetty '
           + 'nurkissa salvoksin, ja koko rakennus lepää kivijalustalla '
@@ -1163,7 +1163,7 @@ export const FOKUSVIRTA_PIETARI = {
        * ainoa, jossa käsky annettiin veden painolle eikä ihmisille.
        */
       id: 'pietarhovin-suihkulahteet',
-      nimio: 'Pietarhovin kaskadi',
+      nimio: 'Pietarhovi',
       otsikko: 'Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua',
       lunastus: [
         'Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, '
@@ -1356,25 +1356,4 @@ export const FOKUSVIRTA_PIETARI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: tsaarin kadonnut pääsiäismuna. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta), samaan
-   * matkakirjakorttiin kuin saapumismerkintä.
-   *
-   * HUOM AJOITUKSESTA: ks. tiedoston alun osio "AARREMERKINTÄ ON ENNE,
-   * EI HISTORIAA". Merkintä on kirjoitettu enteeksi, ja täky `faberge`
-   * kertoo pelaajalle, mitä enteestä lopulta tuli.
-   */
-  aarremerkinta: {
-    teksti: 'Kultasepän liikkeessä Suurella Merikadulla hoidettiin hovin '
-      + 'tilauksia väliverhon takana. Oppipoika kertoi minulle '
-      + 'puoliääneen, että keisarinnalle suunnitellaan lahjaa, jollaista '
-      + 'ei ole ennen tehty — pieni esine, jonka sisään kätketään '
-      + 'toinen. Sellainen esine on tehty katoamaan kauniisti. Merkitsen '
-      + 'tämän ylös: pidä silmällä pieniä esineitä, joiden sisällä on '
-      + 'salaisuus.',
-  },
 };

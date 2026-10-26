@@ -1,0 +1,71 @@
+{
+ "versio": 1,
+ "laatija": "Sisältökirjuri 13.10.2026",
+ "huomio": "Aarretehtävät, erä 6: Kreeta (GRC), viimeinen puuttuva Euroopan kaupunki. Katso (Pyhän Menaksen katedraali, Heraklion: sallitut-3d-alue on Heraklionin keskusta r = 15 km, joten Hania ei kelpaa Katso-kohteeksi) + Vanha kartta (Britannian amiraliteetin Hanian merikartta, PD; hahmo on kotoisin Haniasta). Palkkiot kuten erässä 3 (Katso 25, Kartta 35); vihje ei muuta aarremekaniikkaa, ei bonuksia. muistomerkki: false molemmissa (katedraali on kirkon omistama 1862-1895 rakennettu kirkko, ei antiikin eikä valtion muinaismuistomerkki; kartta ei ole kuva muistomerkistä; ks. md huomio 1). Maa-vihje GRC mukana, koska GRC:llä on paikallisaarrepari (Hymettoksen hunaja + Antikytheran kone) eikä yhdessäkään aiemmassa erässä ole GRC-vihjettä. Faktat kahdesta lähteestä (liite). TARKISTETTU 13.10.2026 (riippumaton Sonnet-tarkistus): korjaukset a.tiesitko, b.kysymys, b.tiesitko, b.oikea_piste_px/toleranssi, GRC-paikan koordinaatti ja vihjerivi 3; ks. tarkistusloki. PT 13.10.: muistomerkki=true tehtävälle a (Pyhän Menaksen katedraali; nollariski Kreikan alueella), false tehtävälle b.",
+ "kaupungit": [
+  {
+   "versio": 1,
+   "laatija": "Sisältökirjuri 13.10.2026",
+   "kaupunki": "kreeta",
+   "nimi": "Kreeta",
+   "maa": "GRC",
+   "hahmo": "Kalastaja Manolis (Heraklionin venetsialaisen sataman laituri; kotoisin Haniasta)",
+   "saapumispiste": {
+    "nimi": "Heraklionin venetsialaisen sataman laituri (arvio sataman koordinaatista)",
+    "lat": 35.3433,
+    "lon": 25.1359
+   },
+   "a": {
+    "laji": "katso",
+    "palkkio": 25,
+    "muistomerkki": true,
+    "vihjelause": "Verkkoni kuivuvat laiturilla, mutta katson aina lounaaseen vanhan kaupungin kattojen yli: siellä kohoaa kirkko, jonka keskellä on kupoli ja jota reunustaa kaksi kellotornia. Etsi se.",
+    "kohde": {
+     "nimi": "Pyhän Menaksen katedraali (Agios Minas)",
+     "lat": 35.3376,
+     "lon": 25.1309,
+     "etaisyys_saapumispisteesta_m": 779
+    },
+    "vihje_vaarin": "Ei se. Lähde laiturilta lounaaseen vanhan kaupungin sisään: etsi suuri kirkko, jonka pohja on ristin muotoinen, keskellä kupoli ja kulmissa kaksi kellotornia.",
+    "tiesitko": "Rakennustyö alkoi 1862, mutta kirkko valmistui vasta 1895. Se on omistettu Heraklionin suojeluspyhimykselle, pyhälle Menakselle (Minas)."
+   },
+   "b": {
+    "tyyppi": "kartta",
+    "palkkio": 35,
+    "muistomerkki": false,
+    "kysymys": "Manolis on kotoisin Haniasta ja levittää laiturille vanhan brittiläisen merikartan sen satamasta. Napauta kohtaa, jossa venetsialaiset vetivät kaleerinsa telakalle: se on satama-altaan etelärannalla, vanhan kaupungin talojen vieressä.",
+    "kuva": {
+     "commons_tiedosto": "Chania Crete Greece 1848.jpg",
+     "tekija": "UK Admiralty (Britannian amiraliteetti; kartoittaja W. Chapman, HMS Beacon), merikartta Hanian satamasta 1800-luvulta",
+     "lisenssi": "Public domain",
+     "lahde_url": "https://commons.wikimedia.org/wiki/File:Chania_Crete_Greece_1848.jpg",
+     "leveys_px": 1920,
+     "korkeus_px": 1449
+    },
+    "oikea_piste_px": [
+     1348,
+     668
+    ],
+    "toleranssi_px": 65,
+    "vihje_vaarin": "Ei tuo. Etsi kartalta sanat Venetian Galleys: niiden alla on rivi pitkiä rinnakkaisia ramppeja, jotka laskeutuvat satama-altaaseen.",
+    "tiesitko": "Venetsialaiset rakensivat Hanian satamaan holvikattoisia telakkahalleja, neoria. Suurin ryhmä, 17 hallia, valmistui vuosina 1526–1599. Niissä korjattiin laivoja etenkin talvisin."
+   }
+  }
+ ],
+ "maa_vihjeet": [
+  {
+   "iso3": "GRC",
+   "kaupunki": null,
+   "paikka": {
+    "nimi": "Antikythera (saari Kreetan ja mantereen välissä)",
+    "lat": 35.8643,
+    "lon": 23.3045
+   },
+   "vihjeet": [
+    "Kauan sitten, noin kaksituhatta vuotta sitten, kauppalaiva kuljetti patsaita ja pronssia. Se ei päässyt perille.",
+    "Lastissa oli myös pronssinen hammasrattaiden kone, joka laski auringon ja kuun kulkua ja ennusti pimennyksiä.",
+    "Antikythera on pieni ja harvaan asuttu saari Kreetan ja mantereen välissä. Hylky makaa sen rannikon edustalla."
+   ]
+  }
+ ]
+}

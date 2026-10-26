@@ -1,0 +1,508 @@
+{
+ "kaupunki": "salvador",
+ "kaupunkiQ": "Q36947",
+ "kohteet": [
+  {
+   "q": "Q5572706",
+   "nimi": "Salvadorin historiallinen keskusta (Pelourinho)",
+   "peruste": "UNESCO",
+   "koko_m": 900,
+   "aliakset": [
+    "Q1928594"
+   ],
+   "lat": -12.9667,
+   "lon": -38.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Centro Histórico Salvador Vista Aérea 2021-0933.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centro_Hist%C3%B3rico_Salvador_Vista_A%C3%A9rea_2021-0933.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_Salvador_Vista_A%C3%A9rea_2021-0933.jpg",
+     "selite": "Salvadorin historiallisen keskustan punakattoiset korttelit ja kirkot levittyvät ilmasta nähtynä lahden rannalle.",
+     "leveys": 5464,
+     "korkeus": 3070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Largo do Pelourinho, Salvador 20150719-DSC05452.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Largo_do_Pelourinho%2C_Salvador_20150719-DSC05452.JPG?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Largo_do_Pelourinho%2C_Salvador_20150719-DSC05452.JPG",
+     "selite": "Largo do Pelourinhon kivetyn aukion ympärillä on värikkäitä siirtomaa-ajan taloja.",
+     "leveys": 3612,
+     "korkeus": 2418,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "01.10.2018 empresários do Pelourinho apoiam Rosemberg (43239997970).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01.10.2018_empres%C3%A1rios_do_Pelourinho_apoiam_Rosemberg_(43239997970).jpg?width=1280",
+     "tekija": "Deputado Rosemberg from Bahia, Brasil",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01.10.2018_empres%C3%A1rios_do_Pelourinho_apoiam_Rosemberg_(43239997970).jpg",
+     "selite": "Pelourinhon kirkko ja värikkäät talot hohtavat valaistuina illan pimetessä.",
+     "leveys": 2592,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Largo de Pelourinho, Salvador (7290648006).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Largo_de_Pelourinho%2C_Salvador_(7290648006).jpg?width=1280",
+     "tekija": "Ben Tavener from Curitiba, Brazil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Largo_de_Pelourinho%2C_Salvador_(7290648006).jpg",
+     "selite": "Rosário dos Pretos -kirkon sininen torni kohoaa Pelourinhon kujien yläpuolelle.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1328348",
+   "nimi": "Elevador Lacerda",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.97422,
+   "lon": -38.51314,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Raul Golinelli Elevador Lacerda Mercado Modelo Salvador Bahia Brasil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Raul_Golinelli_Elevador_Lacerda_Mercado_Modelo_Salvador_Bahia_Brasil.jpg?width=1280",
+     "tekija": "Raul Golinelli",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Raul_Golinelli_Elevador_Lacerda_Mercado_Modelo_Salvador_Bahia_Brasil.jpg",
+     "selite": "Elevador Lacerda nostaa matkustajat alakaupungista ylakaupunkiin, ja sateenkaari kaartuu sen takana lahden päällä.",
+     "leveys": 5042,
+     "korkeus": 3361,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "DSC 0007A.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DSC_0007A.jpg?width=1280",
+     "tekija": "Antenor Gavazza",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DSC_0007A.jpg",
+     "selite": "Hissitornin siltarakenne yhdistää ylakaupungin kallionjyrkänteen alakaupungin satamaan.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Elevador Lacerda (11297577136).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elevador_Lacerda_(11297577136).jpg?width=1280",
+     "tekija": "Luiz Pantoja from São Paulo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elevador_Lacerda_(11297577136).jpg",
+     "selite": "Hissitornin huipulta avautuu näkymä sataman veneisiin ja Baía de Todos os Santosille.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3306262",
+   "nimi": "Mercado Modelo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -12.973,
+   "lon": -38.5141,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fachada Mercado Modelo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_Mercado_Modelo.jpg?width=1280",
+     "tekija": "Deusa do Ébano",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fachada_Mercado_Modelo.jpg",
+     "selite": "Mercado Modelon keltainen rakennus oli entinen tulli ja on nyt käsityötori Salvadorin satamassa.",
+     "leveys": 16320,
+     "korkeus": 12240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cidade bassa, praça Cairu, mercado modelo 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cidade_bassa%2C_pra%C3%A7a_Cairu%2C_mercado_modelo_01.JPG?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cidade_bassa%2C_pra%C3%A7a_Cairu%2C_mercado_modelo_01.JPG",
+     "selite": "Mercado Modelon edustalla Praça Cairun aukio on täynnä kävelijöitä ja kojuja.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q922423",
+   "nimi": "Barran majakka",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -13.01036,
+   "lon": -38.53291,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "-i---i- (45033842485).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(45033842485).jpg?width=1280",
+     "tekija": "Iron Pedreira Alves from Feira de Santana, Bahia, Brasil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(45033842485).jpg",
+     "selite": "Barran majakka seisoo Santo Antônio da Barran linnakkeen kärjessä lahden suulla.",
+     "leveys": 5916,
+     "korkeus": 3944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bahia Barra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahia_Barra.jpg?width=1280",
+     "tekija": "Dlaurini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahia_Barra.jpg",
+     "selite": "Majakka ja linnake kohoavat kallioisella niemellä Atlantin aaltojen yllä.",
+     "leveys": 3513,
+     "korkeus": 2333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1310944",
+   "nimi": "Kaikkien pyhien lahti",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -12.85743,
+   "lon": -38.59201,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Webysther 20150907165153 - Mercado modelo e baia de todos os santos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Webysther_20150907165153_-_Mercado_modelo_e_baia_de_todos_os_santos.jpg?width=1280",
+     "tekija": "Webysther",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Webysther_20150907165153_-_Mercado_modelo_e_baia_de_todos_os_santos.jpg",
+     "selite": "Kaikkien pyhien lahti avautuu Salvadorin alakaupungin edessä, ja Mercado Modelo on sen rannalla.",
+     "leveys": 6227,
+     "korkeus": 3892,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baía de Todos os Santos Salvador Bahia 2018-1760.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C3%ADa_de_Todos_os_Santos_Salvador_Bahia_2018-1760.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_de_Todos_os_Santos_Salvador_Bahia_2018-1760.jpg",
+     "selite": "Lahden vedet ja kaukaiset rannat värjäytyvät illan valossa Salvadorin satamasta katsottuna.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Baía de Todos os Santos em Salvador marina.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C3%ADa_de_Todos_os_Santos_em_Salvador_marina.JPG?width=1280",
+     "tekija": "Beto Floydian",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ba%C3%ADa_de_Todos_os_Santos_em_Salvador_marina.JPG",
+     "selite": "Lahden veneet ja venesatama sijaitsevat Salvadorin vanhan keskustan edessä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3272450",
+   "nimi": "Salvadorin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -12.97283,
+   "lon": -38.51033,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral Basílica de Salvador 2018-0108.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Bas%C3%ADlica_de_Salvador_2018-0108.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Bas%C3%ADlica_de_Salvador_2018-0108.jpg",
+     "selite": "Katedraalin vaalea 1600-luvun jesuiittajulkisivu torneineen hallitsee Terreiro de Jesúsin aukiota.",
+     "leveys": 4941,
+     "korkeus": 3953,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral Basílica de Salvador Facade 2019-9898.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Bas%C3%ADlica_de_Salvador_Facade_2019-9898.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Bas%C3%ADlica_de_Salvador_Facade_2019-9898.jpg",
+     "selite": "Katedraalin symmetrinen julkisivu on koristeltu kiviveistein ja kolmella ovella.",
+     "leveys": 3698,
+     "korkeus": 4622,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q583900",
+   "nimi": "Senhor do Bonfimin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -12.9237,
+   "lon": -38.5081,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bonfim 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bonfim_1.JPG?width=1280",
+     "tekija": "Thaty Naila",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bonfim_1.JPG",
+     "selite": "Senhor do Bonfimin kirkko on Salvadorin tunnetuin pyhiinvaelluskirkko ja sen portailla sidotaan toiveenauhoja.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20150123 172541salvador saude ribeora fev2015 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20150123_172541salvador_saude_ribeora_fev2015_01.jpg?width=1280",
+     "tekija": "NelsonPretto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20150123_172541salvador_saude_ribeora_fev2015_01.jpg",
+     "selite": "Kirkon keltaiset tornit nousevat sinistä taivasta vasten.",
+     "leveys": 4128,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Basílica do Senhor do Bonfim - Foto Tereza Torres - Setur (15656962444).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bas%C3%ADlica_do_Senhor_do_Bonfim_-_Foto_Tereza_Torres_-_Setur_(15656962444).jpg?width=1280",
+     "tekija": "Turismo Bahia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_do_Senhor_do_Bonfim_-_Foto_Tereza_Torres_-_Setur_(15656962444).jpg",
+     "selite": "Kirkko seisoo kukkulan laella ja sivulta näkyy sen pitkä pääsali ja kaksi tornia.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10353389",
+   "nimi": "Praça Tomé de Souza",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -12.97454,
+   "lon": -38.51277,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Praça Tomé de Souza.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pra%C3%A7a_Tom%C3%A9_de_Souza.jpg?width=1280",
+     "tekija": "Portal da Copa/ME (victoria.camara)",
+     "lisenssi": "CC BY 3.0 br",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_Tom%C3%A9_de_Souza.jpg",
+     "selite": "Praça Tomé de Souza on nimetty Salvadorin perustajan mukaan, ja sen laidalla on Rio Brancon palatsi.",
+     "leveys": 2500,
+     "korkeus": 1667,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bahia Fotos 146.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahia_Fotos_146.jpg?width=1280",
+     "tekija": "Antenor Gavazza",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahia_Fotos_146.jpg",
+     "selite": "Aukion terassilta näkyy Rio Brancon palatsi ja Elevador Lacerdan silta.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q66315986",
+   "nimi": "Solar do Unhão",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -12.98263,
+   "lon": -38.52027,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Solar do Unhão - ft.Lazaro Menezes (cropped1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Solar_do_Unh%C3%A3o_-_ft.Lazaro_Menezes_(cropped1).jpg?width=1280",
+     "tekija": "Lazaroagmenezes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Solar_do_Unh%C3%A3o_-_ft.Lazaro_Menezes_(cropped1).jpg",
+     "selite": "Solar do Unhão on 1600-luvun sokeritilan kartano meren rannalla Salvadorin satamassa.",
+     "leveys": 2394,
+     "korkeus": 1345,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Praça\" do Solar do Unhão.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Pra%C3%A7a%22_do_Solar_do_Unh%C3%A3o.jpg?width=1280",
+     "tekija": "purecanesugar from Brooklyn, NY, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Pra%C3%A7a%22_do_Solar_do_Unh%C3%A3o.jpg",
+     "selite": "Kartanon pihalla on kivetty aukio ja valkoinen kappeli.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10286271",
+   "nimi": "Jorge Amadon talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -12.97168,
+   "lon": -38.50853,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa de Jorge Amado Salvador 2019-6483.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_Jorge_Amado_Salvador_2019-6483.jpg?width=1280",
+     "tekija": "Wellington Da Costa Gomez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_Jorge_Amado_Salvador_2019-6483.jpg",
+     "selite": "Jorge Amadon säätiön sininen talo seisoo Pelourinhon keskeisellä aukiolla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa de Jorge Amado Salvador 2018-1837.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_Jorge_Amado_Salvador_2018-1837.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_Jorge_Amado_Salvador_2018-1837.jpg",
+     "selite": "Talon sininen julkisivu valaistaan illalla Pelourinhon aukion laidalla.",
+     "leveys": 4574,
+     "korkeus": 3659,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10378941",
+   "nimi": "Vila Velhan teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -12.98557,
+   "lon": -38.52177,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Vila Velha-12159.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Vila_Velha-12159.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Vila_Velha-12159.jpg",
+     "selite": "Teatro Vila Velha on Salvadorin vanha kulttuuriteatteri, jonka valkoinen julkisivu avautuu Passeio Públicon laidalle.",
+     "leveys": 3673,
+     "korkeus": 2938,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Teatro Vila Velha Salvador Bahia 2018-0134.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Vila_Velha_Salvador_Bahia_2018-0134.jpg?width=1280",
+     "tekija": "Paul R. Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Vila_Velha_Salvador_Bahia_2018-0134.jpg",
+     "selite": "Teatterin katettu sisäänkäynti ja nimikyltti ovat näkyvillä julkisivun yläosassa.",
+     "leveys": 5836,
+     "korkeus": 3891,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista de Salvador da ponta da Barra.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Salvador_da_ponta_da_Barra.jpg?width=1280",
+   "tekija": "Fotos GOVBA from Bahia/Brasil",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Salvador_da_ponta_da_Barra.jpg",
+   "selite": "Salvador levittyy Barran niemelle ja Atlantin rannalle ilmasta nähtynä.",
+   "leveys": 2126,
+   "korkeus": 1417,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama Salvador com Farol da Barra (52620265937).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Salvador_com_Farol_da_Barra_(52620265937).jpg?width=1280",
+   "tekija": "Marinha do Brasil",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Salvador_com_Farol_da_Barra_(52620265937).jpg",
+   "selite": "Barran niemi ja majakka rajaavat Salvadorin lahden suuta.",
+   "leveys": 5935,
+   "korkeus": 2053,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q3029318",
+   "nimi": "Dique do Tororó",
+   "peruste": "pelin nosto",
+   "lat": -12.9844,
+   "lon": -38.5058,
+   "syy": "ei kelvollista vapaata kuvaa (kaikki ehdokkaat ihmispainotteisia mielenosoituskuvia)"
+  }
+ ]
+}

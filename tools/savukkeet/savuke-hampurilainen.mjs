@@ -1,10 +1,11 @@
 /*
- * Savuke: PÄÄVALIKON NAPPI ON ALKUPERÄINEN HAMPURILAINEN — VÄKÄSET
- * VAIN SILLOIN KUN YLÄPALKKI ON PIILOSSA.
+ * Savuke: PÄÄVALIKON NAPPI ON TAVALLINEN HAMPURILAINEN — KARTAN NAPISSA
+ * VAAKATILASSA EI ENÄÄ VÄKÄSIÄ.
  *
- * OMISTAJAN TILAUS 14.9.2026, sanatarkasti: *"Hampurilaisen ikonin voi
- * vaihtaa alkuperaiseen mutta jata nykyinen iPhonen vaaka tilaa varten
- * kayttoon silloin kun Ylapalkki on piilossa"*
+ * OMISTAJAN TILAUS 14.9.2026 (väkäset vain palkin piilossa ollessa) on
+ * KUMOTTU 2.10.2026 klo 23.08, sanatarkasti: *"väkäshampurilaisen voi
+ * vaihtaa samalla normaaliksi hampurilaiseksi"*; klo 23.07 palkki poistui
+ * vaakatilasta kokonaan ja kartan nappi avaa päävalikon suoraan.
  *
  * MITÄ TÄMÄ MITTAA, jota yksikkötesti ei näe: sen KUMPI kuvake on
  * oikeasti ruudulla kussakin ruutukoossa. Yläpalkin piilotus on
@@ -12,22 +13,21 @@
  * selaimessa. Kolme kokoa:
  *
  *   pysty 390 × 844   yläpalkki näkyy → #menu-btn = kolme suoraa viivaa
- *   vaaka 844 × 390   yläpalkki piilossa → kartalla väkäsnappi
+ *   vaaka 844 × 390   ei yläpalkkia → kartan nappi on tavallinen
+ *                     hampurilainen (kolme suoraa viivaa) ja avaa valikon
  *   työpöytä 1400×900 yläpalkki näkyy → kolme suoraa viivaa
  *
  * VASTAKOE kuuluu ajoon: `--vastakoe` pakottaa odotukset päinvastoin
- * (väkäset päävalikossa, suorat viivat kartan napissa), jolloin ajon
- * pitää antaa FAIL-rivejä.
+ * (väkäset kartan napissa ja päävalikossa), jolloin
+ * ajon pitää antaa FAIL-rivejä.
  *
  *   node tools/savukkeet/savuke-hampurilainen.mjs
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const VASTAKOE = process.argv.includes('--vastakoe');
 
@@ -59,9 +59,22 @@ const vaadi = (nimi, ehto, lisa = '') => {
 const onSuoraViiva = (d) => !/[Ll]/.test(d) && /h/.test(d);
 const onVakanen = (d) => (d.match(/L/g) ?? []).length === 2;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({
+  args: (process.env.SAVUKE_CHROMIUM_LIPUT ?? '').split(' ').filter(Boolean),
+});
 
-/** Avaa pelin annetussa ruutukoossa ja palauttaa sivun. */
+/**
+ * Avaa pelin annetussa ruutukoossa ja palauttaa sivun.
+ *
+ * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): tämä savuke
+ * napauttaa nyt #turn-pilliä "pysty"-tapauksessa (hampurilainen on
+ * piilossa kapealla ruudulla), ja pilleri on tyhjä ja `hidden`
+ * PICKSTART-vaiheessa (js/ui.js renderTurnPill: "Etusivulla ja
+ * avauslennolla yläpalkki on tyhjä"). Peli viedään siis väkisin
+ * toimintavaiheeseen samalla kaavalla kuin tools/savuke-mannerlento.mjs
+ * ja tools/savukkeet/savuke-pillerivalikko.mjs — muuten pilleri ei
+ * koskaan näkyisi eikä sitä voisi napauttaa.
+ */
 async function avaaPeli(leveys, korkeus) {
   const ctx = await selain.newContext({
     viewport: { width: leveys, height: korkeus }, serviceWorkers: 'block',
@@ -77,6 +90,21 @@ async function avaaPeli(leveys, korkeus) {
       .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
   });
   await sivu.waitForTimeout(3500);
+  await sivu.evaluate(() => {
+    const mk = window.matkakirja;
+    if (!mk?.ui?.game) return;
+    const { ui } = mk;
+    const g = ui.game;
+    const p = g.player;
+    const kaupunkiId = g.pack.cities?.[0]?.id;
+    if (kaupunkiId) { p.pos = { type: 'city', city: kaupunkiId }; g.world.visited.add(kaupunkiId); }
+    p.money = 2000;
+    g.phase = 'action';
+    ui.render();
+    document.querySelectorAll('dialog[open]').forEach((d) => d.close());
+    document.querySelectorAll('.postikortti, .kulttuuri-suurennos').forEach((e) => e.remove?.());
+  });
+  await sivu.waitForTimeout(500);
   return { ctx, sivu, virheet };
 }
 
@@ -117,7 +145,17 @@ const lueTila = (sivu) => sivu.evaluate(() => {
 
 const kuvat = [];
 
-/* ── 1. PYSTY 390 × 844: yläpalkki näkyy ───────────────────────────── */
+/*
+ * ── 1. PYSTY 390 × 844: yläpalkki näkyy, hampurilainen POIS ─────────
+ *
+ * PÄIVITETTY 29.9.2026 (omistaja, pillerivalikkouudistus, sanatarkasti:
+ * *"poistetaan tuo hampurilaiskuvake kokonaan niin, että siirretään
+ * pilleri oikealle puolelle"*): kapealla ruudulla (≤560px)
+ * .valikko-kotelo (hampurilaisen kotelo) piiloutuu kokonaan, ja
+ * #turn-pill on ainoa valikkonappi — se avaa saman #paavalikon.
+ * Hampurilaisen kolmen viivan kuvaketarkistus jäi pois: napin muoto ei
+ * ole enää mitattavissa, koska nappi ei näy tällä ruutukoolla lainkaan.
+ */
 {
   const { ctx, sivu, virheet } = await avaaPeli(390, 844);
   vaadi('pysty: sivu latautui ilman poikkeuksia', virheet.length === 0,
@@ -125,27 +163,42 @@ const kuvat = [];
   const tila = await lueTila(sivu);
   console.log('      pysty:', JSON.stringify(tila));
   vaadi('pysty: yläpalkki on näkyvissä', tila.palkkiNakyy, JSON.stringify(tila.palkkiLaatikko));
-  vaadi('pysty: päävalikon nappi on näkyvissä', tila.valikkoNappiNakyy);
-  vaadi('pysty: päävalikossa on kolme viivaa',
-    tila.valikkoPolut.length >= 1
-      && tila.valikkoPolut.every(VASTAKOE ? onVakanen : onSuoraViiva)
-      && tila.valikkoPolut.join('').split('M').length - 1 === 3,
-    JSON.stringify(tila.valikkoPolut));
+  vaadi('pysty: päävalikon nappi (hampurilainen) on piilossa', !tila.valikkoNappiNakyy,
+    'pilleri korvaa sen kapealla ruudulla');
   vaadi('pysty: kartan väkäsnappi on piilossa', !tila.karttaNappiNakyy,
     JSON.stringify(tila.karttaLaatikko));
-  await sivu.click('#menu-btn');
+  const pilleriTila = await sivu.evaluate(() => {
+    const p = document.getElementById('turn-pill');
+    const r = p?.getBoundingClientRect();
+    const t = p && getComputedStyle(p);
+    return {
+      nakyy: Boolean(p) && t.display !== 'none' && r.width > 0 && r.height > 0,
+      x: r ? Math.round(r.x) : null, y: r ? Math.round(r.y) : null,
+    };
+  });
+  vaadi('pysty: pilleri on näkyvissä', pilleriTila.nakyy, JSON.stringify(pilleriTila));
+  await sivu.click('#turn-pill');
   await sivu.waitForTimeout(250);
   const auki = await sivu.evaluate(() => {
     const v = document.getElementById('paavalikko');
     return Boolean(v) && !v.hidden && v.getBoundingClientRect().height > 0;
   });
-  vaadi('pysty: nappi avaa päävalikon', auki);
+  vaadi('pysty: pilleri avaa päävalikon', auki);
   await sivu.screenshot({ path: `${JUURI}docs/raportit/kuvat/hampurilainen-pysty.png` });
   kuvat.push('hampurilainen-pysty.png');
   await ctx.close();
 }
 
-/* ── 2. VAAKA 844 × 390: yläpalkki piilossa ────────────────────────── */
+/* ── 2. VAAKA 844 × 390: ei yläpalkkia, tavallinen hampurilainen avaa valikon ──
+ *
+ * PÄIVITETTY 2.10.2026 (omistaja klo 23.07 ja 23.08, sanatarkasti:
+ * *"tajusin että vaakatilassa ei tarvita koko yläpalkkia. nappi voisi
+ * avata suoraan valikon napin päälle ... eli poista palkki kokonaan ja
+ * avaa valikko suoraan napin päälle"* ja *"väkäshampurilaisen voi
+ * vaihtaa samalla normaaliksi hampurilaiseksi"*): kartan napissa ei ole
+ * enää väkäsiä, napin painallus avaa #paavalikko suoraan eikä palkkia
+ * tuoda näkyviin (#menu-btn-klikkausta ei enää ole).
+ */
 {
   const { ctx, sivu, virheet } = await avaaPeli(844, 390);
   vaadi('vaaka: sivu latautui ilman poikkeuksia', virheet.length === 0,
@@ -156,26 +209,25 @@ const kuvat = [];
   vaadi('vaaka: kartan nappi on näkyvissä oikeassa yläkulmassa',
     tila.karttaNappiNakyy && tila.karttaLaatikko.x > 844 * 0.8 && tila.karttaLaatikko.y < 100,
     JSON.stringify(tila.karttaLaatikko));
-  vaadi('vaaka: kartan napissa on väkäset',
-    tila.karttaPolut.length === 3 && tila.karttaPolut.every(VASTAKOE ? onSuoraViiva : onVakanen),
+  // Sama tarkistus kuin työpöytäosan valikkoPolut-väitteessä: kaikki polut
+  // suoria viivoja ja M-alkuisia viivoja kolme (polut-funktio palauttaa
+  // yhden polun, jossa kolme M:ää).
+  vaadi('vaaka: kartan napissa on tavallinen hampurilainen (kolme suoraa viivaa, ei väkäsiä)',
+    tila.karttaPolut.every(VASTAKOE ? onVakanen : onSuoraViiva)
+      && tila.karttaPolut.join('').split('M').length - 1 === 3,
     JSON.stringify(tila.karttaPolut));
   await sivu.screenshot({ path: `${JUURI}docs/raportit/kuvat/hampurilainen-vaaka.png` });
   kuvat.push('hampurilainen-vaaka.png');
   await sivu.click('.ylapalkki-nappi');
-  await sivu.waitForTimeout(350);
-  const palkkiAuki = await lueTila(sivu);
-  vaadi('vaaka: nappi tuo yläpalkin näkyviin', palkkiAuki.palkkiNakyy,
-    JSON.stringify(palkkiAuki.palkkiLaatikko));
-  vaadi('vaaka: esiin tulleessa palkissa on kolme viivaa',
-    palkkiAuki.valikkoPolut.every(VASTAKOE ? onVakanen : onSuoraViiva),
-    JSON.stringify(palkkiAuki.valikkoPolut));
-  await sivu.click('#menu-btn');
-  await sivu.waitForTimeout(250);
+  await sivu.waitForTimeout(450);
   const auki = await sivu.evaluate(() => {
     const v = document.getElementById('paavalikko');
     return Boolean(v) && !v.hidden && v.getBoundingClientRect().height > 0;
   });
-  vaadi('vaaka: nappi avaa päävalikon', auki);
+  vaadi('vaaka: nappi avaa päävalikon suoraan', auki);
+  const jalkeen = await lueTila(sivu);
+  vaadi('vaaka: yläpalkki pysyy piilossa napin painalluksen jälkeen', !jalkeen.palkkiNakyy,
+    JSON.stringify(jalkeen.palkkiLaatikko));
   await ctx.close();
 }
 

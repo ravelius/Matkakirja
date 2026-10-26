@@ -1,0 +1,58 @@
+{
+ "_meta": {
+  "kuvaus": "ISS-skanneri B1 erä 11: Mazatlán ja Natal (Brasilia) korjattujen koordinaattien jälkeen. Faktat tarkistettu riippumattomalla Sonnet-tarkistajalla 19.10.2026.",
+  "rajat": "aloitus ≤ 45, luonne ≤ 110, nimike ≤ 18, rivin arvo ≤ 24 merkkiä"
+ },
+ "kohteet": [
+  {
+   "tunnus": "k-natal-brasilia",
+   "nimi": "Natal",
+   "aloitus": "Rio Grande do Norten pääkaupunki",
+   "luonne": "Dyynien ja rantojen kaupunki, jonka lähellä on Barreira do Infernon raketinlaukaisukeskus (1965).",
+   "rivit": [
+    [
+     "Asukasluku",
+     "751 300 (2022)"
+    ],
+    [
+     "Perustettu",
+     "25.12.1599"
+    ],
+    [
+     "Korkeus",
+     "n. 30 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Natal,_Rio_Grande_do_Norte",
+    "https://www.gov.br/inpe/pt-br/acesso-a-informacao/institucional/historia",
+    "https://revistapesquisa.fapesp.br/en/broken-barriers/"
+   ]
+  },
+  {
+   "tunnus": "k-mazatlan",
+   "nimi": "Mazatlán",
+   "aloitus": "Sinaloan satamakaupunki Meksikossa",
+   "luonne": "Kalastus- ja lomakaupunki Tyynenmeren rannalla, tunnettu karnevaalistaan ja pitkästä rantabulevardista.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "441 975 (2020)"
+    ],
+    [
+     "Asutettu",
+     "1531 (virallinen)"
+    ],
+    [
+     "Majakka",
+     "El Faro (valo 1879)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mazatl%C3%A1n",
+    "https://en.wikipedia.org/wiki/Faro_Mazatl%C3%A1n",
+    "https://www.economia.gob.mx/datamexico/es/profile/geo/mazatlan"
+   ]
+  }
+ ]
+}

@@ -271,9 +271,9 @@ const SA_AIR_ROUTES = [
 
 export const SOUTHAMERICA = {
   id: 'southamerica',
-  name: 'El Dorado',
+  name: 'Mantan smaragdi',
   boardLabel: 'Etelä-Amerikka',
-  tagline: 'Etsi El Doradon kulta Andien huipuilta, Amazonin sademetsästä ja Patagonian tuulilta.',
+  tagline: 'Etsi Mantan smaragdi Andien huipuilta, Amazonin sademetsästä ja Patagonian tuulilta.',
   ariaLabel: 'Etelä-Amerikan aarrekartta',
 
   /*
@@ -308,11 +308,13 @@ export const SOUTHAMERICA = {
   tokens: {
     types: themedTokenTypes({
       star: {
-        name: 'El Doradon aarre',
-        fakta: 'Muiscat upottivat kultaesineitä Guatavitan järveen uuden '
-          + 'hallitsijan riittinä — tarina kullatusta miehestä, El '
-          + 'Doradosta, syntyi juuri tästä.',
-        kuva: 'assets/aarteet/aarre-southamerica-star.jpg',
+        name: 'Mantan smaragdi',
+        fakta: 'Ecuadorin Mantan rannikkokansa palvoi suurta smaragdia, '
+          + 'jonka kronikoitsija Inca Garcilaso de la Vega kuvasi melkein '
+          + 'strutsinmunan kokoiseksi. Espanjalaiset särkivät 1534 muita smaragdeja '
+          + 'vasaralla luullen niitä lasiksi, mutta tämän kiven '
+          + 'paikalliset kätkivät.',
+        kuva: 'assets/aarteet/aarre-southamerica-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Inkojen kultafiguuri', color: '#e0b02a',
@@ -384,20 +386,20 @@ export const SOUTHAMERICA = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää El Doradon aarre ja palatkaa Panamaan, Buenos Airesiin tai Rioon.',
-    starFound: '◈ {name} löysi EL DORADON AARTEEN kaupungista {city}!',
-    starToast: 'EL DORADON AARRE!',
+    intro: 'Peli alkaa! Etsikää Mantan smaragdi ja palatkaa Panamaan, Buenos Airesiin tai Rioon.',
+    starFound: '◈ {name} löysi MANTAN SMARAGDIN kaupungista {city}!',
+    starToast: 'MANTAN SMARAGDI!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi El Doradon aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi El Doradon aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Mantan smaragdin turvallisesti kotiin',
+    winnerStar: '{name} toi Mantan smaragdin kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
       'Esi-isäni tulivat hakemaan El Doradon kultaa ja veivät minkä irti saivat. Minä ostan jääkaappimagneetin ja maksan ylihintaa. Jonkinlaista oikeudenmukaisuutta sekin.',
       'Isoisän kartassa tämä manner on merkitty kahden kuningaskunnan väreillä. Nyt täällä on kaksitoista itsenäistä valtiota, ja niiden vapaussodat käytiin ennen kuin hän ehti pakata laukkunsa.',
-      '"Sademetsä on tyhjä ja kulkukelvoton", kirjoitti isoisä varmana. Metsässä asui miljoonia ihmisiä, jotka olivat parantaneet maaperää niin hyvin, että se on viljavaa vieläkin. Kulkukelvoton oli hänen jalkansa, ei metsä.',
+      '”Sademetsä on tyhjä ja kulkukelvoton”, kirjoitti isoisä varmana. Metsässä asui miljoonia ihmisiä, jotka olivat parantaneet maaperää niin hyvin, että se on viljavaa vieläkin. Kulkukelvoton oli hänen jalkansa, ei metsä.',
       'Isoisä ihasteli Andien korkeutta ja arveli, ettei niiden yli voi kulkea kuin muulilla. Bussi vie nyt solan yli kolmessa tunnissa, ja muuli seisoo tien vieressä katsomassa. Molemmat ovat yhä käytössä.',
-      '"Kahvi, kumi ja hopea — siinä koko manner", tiivisti isoisä talouden. Lisäisin listalle litiumin, soijan, lentokoneet ja sen, että tuotteiden hinnasta päätetään nykyään useammin täällä kuin Lontoossa.',
+      '”Kahvi, kumi ja hopea — siinä koko manner”, tiivisti isoisä talouden. Lisäisin listalle litiumin, soijan, lentokoneet ja sen, että tuotteiden hinnasta päätetään nykyään useammin täällä kuin Lontoossa.',
       'Isoisä merkitsi muistiin, että putoukset ovat vaikuttavat mutta Niagara vaikuttavampi. Seisoin molempien äärellä ja olen eri mieltä. Tämä on ainoa kohta, jossa uskallan sanoa hänen erehtyneen mittasuhteissa.',
     ],
   },

@@ -421,9 +421,9 @@ export const ASIA = {
     diaries: [
       'Klubilla tätä mannerta kutsuttiin Itämaiksi ja odotettiin kameleita. Luotijuna ohitti odotukseni kolmensadan kilometrin tuntinopeudella.',
       'Isoisän kartassa tämä maanosa on väritetty kolmen keisarikunnan väreillä. Nyt tässä on lähes viisikymmentä valtiota, ja useimmat itsenäistyivät hänen kuolemansa jälkeen. Kartta on kaunis ja täysin käyttökelvoton.',
-      '"Matka Bombayhin kestää kolme viikkoa, jos tuuli suosii", kirjoitti isoisä. Nousin koneeseen aamulla ja söin illallisen perillä. Hän olisi pitänyt sitä huijauksena, ja ymmärrän kannan.',
+      '”Matka Bombayhin kestää kolme viikkoa, jos tuuli suosii”, kirjoitti isoisä. Nousin koneeseen aamulla ja söin illallisen perillä. Hän olisi pitänyt sitä huijauksena, ja ymmärrän kannan.',
       'Isoisä merkitsi muistiin, ettei korkeimmille huipuille ole nousuja eikä tule. Everestillä on nykyään jono ja aikataulu. Hän oli oikeassa siinä, ettei vuori siitä miksikään muutu.',
-      '"Kiina valmistaa posliinia ja silkkiä, Britannia koneita", tiivisti isoisä työnjaon. Tarkistin asian: koneet tehdään täällä ja Lontoossa niitä myydään. Työnjako säilyi, suunta vaihtui.',
+      '”Kiina valmistaa posliinia ja silkkiä, Britannia koneita”, tiivisti isoisä työnjaon. Tarkistin asian: koneet tehdään täällä ja Lontoossa niitä myydään. Työnjako säilyi, suunta vaihtui.',
       'Isoisä laski matka-aikoja karavaanipäivissä ja monsuunituulissa. Molemmat ovat yhä olemassa: tuuli kääntyy kesäkuussa ja aavikon poikki menee yhä tie. Vain minun kärsivällisyyteni on kadonnut.',
     ],
   },

@@ -966,20 +966,4 @@ export const FOKUSVIRTA_TAMPERE = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: HAMEENSILTA_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: Ivalojoen kultahippu. Merkintä aukeaa, kun aarre löytyy
-   * (js/fokusvirta.js fokusvirtaAarremerkinta), samaan matkakirja-
-   * korttiin kuin saapumismerkintä.
-   */
-  aarremerkinta: {
-    teksti: 'Tukkilainen kertoi kullasta, jota huuhdotaan Lapin joesta '
-      + 'niin kaukana pohjoisessa, että sinne kävellään viikko '
-      + 'viimeisestä talosta. Hallitus rakensi sinne kruununstationin ja '
-      + 'miehet elävät maakuopissa. Suurin hippu painoi hänen mukaansa '
-      + 'enemmän kuin kirkonkirja — ja joku sen kokoinen on hänen '
-      + 'mukaansa vielä löytämättä.',
-  },
 };

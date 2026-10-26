@@ -1,0 +1,15 @@
+Kirjoitat suomeksi Pulun esikirjoitetut vastaukset merinostojen kysymyksiin pelille "Matkakirja ja unohdettu aarre" (kohderyhmä 13+ ja aikuiset). Checkout: /Users/Shared/Claude/Matkakirja-sisaltokirjuri (älä vaihda haaraa, älä commitoi, älä muokkaa muita tiedostoja kuin omaa tulostiedostoasi).
+
+Tausta: pelin kartalla meren (tai järven) nimi avaa nostokortin, jossa on teksti ja 2 kysymystä, joita pelaaja voi kysyä Pulu-kyyhkyltä. Nyt vastaus tulee elävältä mallilta; nyt halutaan esikirjoitetut, tarkistetut vastaukset. Mallit samassa tyylissä: docs/kohtaukset/iss-yotaivas/iss-pulu-kysymykset.json (5 hyväksyttyä Pulun vastausta; tyyli ja rakenne), mutta tässä vastaus on LYHYEMPI: 45–60 sanaa (noin 300–420 merkkiä).
+
+Syöte: tiedosto __SYOTE__ (JSON-taulukko). Jokainen alkio: {"kysymys","kohteet":[{"maa","id","nimi","teksti" (nostokortin nykyinen teksti),"nappi"}]}. Sama kysymys voi esiintyä usealla kohteella (esim. eri maiden rannikot); kirjoita yksi vastaus per kysymys, joka sopii kaikkiin kohteisiin (älä viittaa vain yhteen maahan, ellei kysymys ole maakohtainen).
+
+Jokaiselle kysymykselle:
+- vastaus 45–60 sanaa, selkeä suomi, ei ammattikieltä selittämättä, ei markkinointikieltä. Alussa suora vastaus, sitten 1–2 konkreettista tarkistettua faktaa (luku, vuosi, nimi) ja lopuksi mitä se kertoo ilmiöstä.
+- Käytä apuna nostokortin tekstiä, mutta TARKISTA jokainen faktaväite (luku, vuosi, nimi) KAHDESTA riippumattomasta lähteestä (WebSearch + WebFetch: Wikipedia + toinen: viranomainen, tutkimuslaitos, museo, tietosanakirja). Jos toista lähdettä ei löydy tai lähteet ovat ristiriidassa, jätä luku pois tai käytä "noin" / vuosikymmentä ja kirjaa tarkistus-kenttään. Älä keksi. Ei sanatarkkoja lainauksia.
+- Jos WebFetch antaa 403/404 ja luet vain hakutuloksen tiivistelmän, merkitse lähteen title-kenttään "(hakutulos)".
+- Jos kysymys sisältää virheellisen oletuksen tai ei ole tosiasiallisesti vastattavissa (esim. nimi on kiistanalainen), vastaa totuudenmukaisesti ja kirjaa huom-kenttään.
+
+TULOS: kirjoita (Write) tiedosto docs/kohtaukset/merinostot/__TULOS__ : JSON-taulukko, alkio {"kysymys","vastaus","sanoja","lahteet":[{"url","title"}],"tarkistus":[{"vaite","lahde1","lahde2","huom"}]} samassa järjestyksessä kuin syötteessä. Laske sanamäärä node:lla (vastaus.split(/\s+/).length) ja varmista että se on 45–60; tarkista että JSON parsiutuu.
+
+VASTAUS minulle: enintään 6 riviä: montako vastausta, mitkä kysymykset ovat heikosti tuettuja tai joiden luvut pudotettiin.

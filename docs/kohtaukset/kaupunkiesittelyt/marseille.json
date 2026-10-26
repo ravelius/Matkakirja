@@ -1,0 +1,83 @@
+[
+ {
+  "id": "marseille",
+  "esittely": "Kartan alue on Marseillen Vanhasatama ja sen ympäristö. Foikaialaiset kreikkalaiset perustivat Massalian noin 600 eaa., ja Marseillea pidetään Ranskan vanhimpana kaupunkina. Saint-Victorin luostarin alku on 400-luvulla, ja sataman suulla on MuCEM, joka avattiin 2013. Sen kävelysilta johtaa 1600-luvun Saint-Jeanin linnakkeeseen.\n\nNotre-Dame de la Garde -basilikan rakentaminen alkoi 1853, ja se vihittiin käyttöön 1864. Marseillen uuden katedraalin peruskiven laski Napoleon III 1852. Saint-Charlesin asema avattiin 1848, ja sen monumentaaliset portaat vihittiin 1927. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 623,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Marseille",
+    "title": "Wikipedia: Marseille",
+    "tukee": "perustettu n. 600 eaa. foikaialaisten kreikkalaisten toimesta; Ranskan vanhin kaupunki"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Massalia",
+    "title": "Wikipedia: Massalia / hakutulos (hakutulos)",
+    "tukee": "Massalia n. 600 eaa. Phokaiasta"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/MuCEM",
+    "title": "Wikipedia: MuCEM",
+    "tukee": "perustettu/avattu 2013; 130 m kävelysilta Fort Saint-Jeaniin; 1600-luvun linnake"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Museum_of_European_and_Mediterranean_Civilisations",
+    "title": "Wikipedia: Museum of European and Mediterranean Civilisations / hakutulos (hakutulos)",
+    "tukee": "avattu kesäkuussa 2013; 130 m silta; 1600-luvun Fort Saint-Jean"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_la_Garde",
+    "title": "Wikipedia: Notre-Dame de la Garde",
+    "tukee": "rakentaminen alkoi 1853; vihitty 1864"
+   },
+   {
+    "url": "https://www.marseille-tourisme.com/en/offers/basilique-notre-dame-de-la-garde-marseille-7eme-en-2799547",
+    "title": "Marseille Tourisme / hakutulos: Notre-Dame de la Garde (hakutulos)",
+    "tukee": "peruskivi 1853, vihkiäiset 1864"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Marseille_Cathedral",
+    "title": "Wikipedia: Marseille Cathedral",
+    "tukee": "Napoleon III laski peruskiven 1852"
+   },
+   {
+    "url": "https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/sites-et-monuments/la-cathedrale-de-la-major/",
+    "title": "Marseille Tourisme / hakutulos: Cathédrale de la Major (hakutulos)",
+    "tukee": "rakentaminen alkoi 1852, Napoleon III laski peruskiven"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Gare_de_Marseille-Saint-Charles",
+    "title": "Wikipedia: Gare de Marseille-Saint-Charles",
+    "tukee": "avattu 8.1.1848; portaat vihitty 24.4.1927"
+   },
+   {
+    "url": "https://archjourney.org/projects/gare-de-marseille-saint-charles/",
+    "title": "Arch Journey / hakutulos: Gare de Marseille-Saint-Charles (hakutulos)",
+    "tukee": "avattu 1848; portaat 1927"
+   },
+   {
+    "url": "https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/the-abbey-of-saint-victor/",
+    "title": "Marseille Tourisme / hakutulos: Abbey of Saint-Victor (hakutulos)",
+    "tukee": "perustettu 400-luvulla"
+   },
+   {
+    "url": "https://provence-alpes-cotedazur.com/en/things-to-do/culture-and-heritage/places/saint-victor-abbey-marseille-7eme-en-2894420/",
+    "title": "Provence-Alpes-Côte d'Azur / hakutulos: Saint-Victor Abbey (hakutulos)",
+    "tukee": "arkeologinen todiste 400-luvun lopulta"
+   }
+  ],
+  "pudotetut": [
+   "Mistral, kalkkikivikulho, Vanhasataman 900 x 400 m ja vesikanava 1849 (entinen teksti): ei vahvistettu kahdesta lähteestä -> pois",
+   "Rahtilaivojen siirto pohjoisiin satamiin 1800-luvulla: ei tarkistettu -> pois",
+   "Notre-Dame de la Garden patsaan korkeus (11,2 m vs 27 ft) ja valmistumisvuosi 1897: lähteet ristiriitaiset -> pois",
+   "Katedraalin mitat 142 m / kupoli 70 m: Wikipedia + hakutulos (sama alkuperä) -> pois"
+  ],
+  "ristiriidat": [
+   "Saint-Victorin perustaja: Cassian \"uskotaan\" vs arkeologia vasta 400-luvun lopulta -> ei mainita perustajaa",
+   "Katedraalin valmistumisvuosi 1893/1896/1897 -> käytetty vain peruskiveä 1852",
+   "Massalian perustamisvuosi noin 600 eaa. (arkeologia: foikaialaiset eivät ehkä olleet ensimmäisiä kreikkalaisia) -> käytetty \"noin\"",
+   "MuCEMin avaus 1.6. vs 7.6.2013 -> käytetty vain vuotta 2013"
+  ],
+  "muutos_sk": "Teksti kirjoitettu kokonaan uusiksi (vanha oli kerrontaa maantieteestä ja tuulesta, ja siinä ei ollut kohteiden faktoja). Mukana Massalia, Saint-Victor, MuCEM 2013 ja silta, Notre-Dame de la Garde, katedraali, Saint-Charles 1848/1927. Mistral, mitat ja vesikanava poistettu tarkistamattomina. [PT 15.10.: sillan pituus pois, lähteet ristiriidassa 115/130/135 m]"
+ }
+]

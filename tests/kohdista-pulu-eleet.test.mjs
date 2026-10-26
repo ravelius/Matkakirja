@@ -55,16 +55,19 @@ function alignmentPuuttuvillaSanoilla(teksti, puuttuvatIndeksit) {
 
 test('liput eivät vie ilman eksplisiittistä --vie-valintaa', () => {
   assert.deepEqual(lueLiput(['--kuiva']), {
-    kuiva: true, vie: false, kaupungit: [], kuitti: null, elava: false,
+    kuiva: true, vie: false, kaupungit: [], kuitti: null, elava: false, pelin: false, ulos: null,
   });
   assert.deepEqual(lueLiput(['--kaupungit', 'marseille,ateena', '--vie']),
-    { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'], kuitti: null, elava: false });
+    { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'], kuitti: null, elava: false, pelin: false, ulos: null });
   assert.deepEqual(lueLiput(['--kuitti', 'valmis.json']),
-    { kuiva: false, vie: false, kaupungit: [], kuitti: 'valmis.json', elava: false });
+    { kuiva: false, vie: false, kaupungit: [], kuitti: 'valmis.json', elava: false, pelin: false, ulos: null });
   assert.deepEqual(lueLiput(['--kuitti', 'valmis.json', '--kaupungit', 'granada']),
-    { kuiva: false, vie: false, kaupungit: ['granada'], kuitti: 'valmis.json', elava: false });
+    { kuiva: false, vie: false, kaupungit: ['granada'], kuitti: 'valmis.json', elava: false, pelin: false, ulos: null });
   assert.deepEqual(lueLiput(['--elava', '--vie']),
-    { kuiva: false, vie: true, kaupungit: [], kuitti: null, elava: true });
+    { kuiva: false, vie: true, kaupungit: [], kuitti: null, elava: true, pelin: false, ulos: null });
+  // --pelin (PT 10.10.2026): pelin soittama v4-mp3 elävänä; --ulos = vientipaketin kansio.
+  assert.deepEqual(lueLiput(['--pelin', '--ulos', 'paketti', 'madrid']),
+    { kuiva: false, vie: false, kaupungit: ['madrid'], kuitti: null, elava: true, pelin: true, ulos: 'paketti' });
   assert.throws(() => lueLiput(['--generoi']), /tuntematon lippu/);
   assert.throws(() => lueLiput(['--elava', '--kuitti', 'valmis.json']), /eivät kelpaa yhdessä/);
 });

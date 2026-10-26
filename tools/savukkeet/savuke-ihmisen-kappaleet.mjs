@@ -104,6 +104,7 @@
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(import.meta.dirname, '..', '..');
 const PORTTI = 8766;
@@ -193,10 +194,7 @@ const ARABIA_ENNEN = {
     + 'palanneet.',
 };
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 

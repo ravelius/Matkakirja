@@ -80,6 +80,7 @@ import {
 } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
 if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
@@ -403,13 +404,10 @@ if (!KOKOA) {
 
   /* ---------- selain ---------- */
 
-  const paketti = await import('playwright')
-    .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-  const chromium = paketti.chromium ?? paketti.default?.chromium;
   const KROMI = process.env.PW_CHROMIUM
     ?? (process.env.GITHUB_ACTIONS ? undefined : '/opt/pw-browsers/chromium');
 
-  const selain = await chromium.launch({
+  const selain = await avaaChromium({
     ...(KROMI ? { executablePath: KROMI } : {}),
     args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
   });

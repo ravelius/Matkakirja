@@ -82,10 +82,9 @@ mkdirSync(ULOS, { recursive: true });
 
 const { Game } = await import(`${JUURI}/js/game.js`);
 const { packById } = await import(`${JUURI}/js/pack.js`);
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 import { decodePng, reunanLeveys, viivanPaksuus, tyhjanOsuus, kuvienEro, pinta, p } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 /* ---------------- palvelin ja ämpäri ---------------- */
 const TYYPIT = {
@@ -125,7 +124,7 @@ const nakyma = { ...NAKYMAT[NAKYMA] };
 // näkyvät jo laitepikselisuhteella 1); oletus on laitteen oma (puhelin 3).
 if (arg('dpr', null)) nakyma.deviceScaleFactor = Number(arg('dpr'));
 const dpr = nakyma.deviceScaleFactor;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
 await ctx.addInitScript((data) => {
   try {

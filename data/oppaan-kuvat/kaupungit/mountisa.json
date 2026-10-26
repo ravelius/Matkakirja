@@ -1,0 +1,160 @@
+{
+ "kaupunki": "mountisa",
+ "kaupunkiQ": "Q606335",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q6921438",
+  "Q635473",
+  "Q203368",
+  "Q664060"
+ ],
+ "kohteet": [
+  {
+   "q": "Q6921438",
+   "nimi": "Mount Isa Mines",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": -20.7161,
+   "lon": 139.476,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Isa Mine - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Isa_Mine_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Lobster1",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Isa_Mine_-_panoramio_(1).jpg",
+     "selite": "Mount Isan kaivoksen savupiiput ja sulatto hallitsevat kaupunkia, joka syntyi malmilöydön ympärille.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mt isa mines qld.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mt_isa_mines_qld.jpg?width=1280",
+     "tekija": "Geomartin",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mt_isa_mines_qld.jpg",
+     "selite": "Kaivosalue ja sulaton piippu erottuvat kaukaa kaupungin takana aavikkomaisemassa.",
+     "leveys": 3029,
+     "korkeus": 713,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q635473",
+   "nimi": "Riversleigh",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -19.03329,
+   "lon": 138.62986,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "D Site, Riversleigh, Australian Fossil Mammal Site.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D_Site%2C_Riversleigh%2C_Australian_Fossil_Mammal_Site.jpg?width=1280",
+     "tekija": "James Fitzgerald",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:D_Site%2C_Riversleigh%2C_Australian_Fossil_Mammal_Site.jpg",
+     "selite": "Riversleighin kalkkikivikukkulat kätkevät yhden maailman rikkaimmista nisäkäsfossiilien löytöpaikoista.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q203368",
+   "nimi": "Boodjamullan kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -18.7014,
+   "lon": 138.488,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lawn Hill Gorge.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lawn_Hill_Gorge.JPG?width=1280",
+     "tekija": "DavidB601",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lawn_Hill_Gorge.JPG",
+     "selite": "Lawn Hill -rotkon punaiset kalliot ja tyyni vesi ovat vihreä keidas kuivassa sisämaassa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Indarri Falls at Lawn Hill National Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Indarri_Falls_at_Lawn_Hill_National_Park.JPG?width=1280",
+     "tekija": "DavidB601",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Indarri_Falls_at_Lawn_Hill_National_Park.JPG",
+     "selite": "Joki kiertää palmujen ja puiden reunustamana kansallispuiston kosteassa keitaassa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q664060",
+   "nimi": "Cloncurry",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -20.70083,
+   "lon": 140.50333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AJ Smith & Co store, Cloncurry, built 1920s.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AJ_Smith_%26_Co_store%2C_Cloncurry%2C_built_1920s.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AJ_Smith_%26_Co_store%2C_Cloncurry%2C_built_1920s.jpg",
+     "selite": "Cloncurryn pääkadun vanhat kauppatalot kertovat kuparikaivoskaupungin menneestä vauraudesta.",
+     "leveys": 1400,
+     "korkeus": 929,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama of Mount Isa, Queensland.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Mount_Isa%2C_Queensland.jpg?width=1280",
+   "tekija": "Tennis expert",
+   "lisenssi": "CC BY-SA 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Mount_Isa%2C_Queensland.jpg",
+   "selite": "Mount Isan kaupunki levittäytyy kukkuloiden ja kaivoksen savupiippujen alle.",
+   "leveys": 3456,
+   "korkeus": 2304,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mount Isa Mine Stack.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Isa_Mine_Stack.JPG?width=1280",
+   "tekija": "Scientificusrex",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Isa_Mine_Stack.JPG",
+   "selite": "Kaivoksen raidallinen piippu kohoaa kaupungin talojen yläpuolelle.",
+   "leveys": 3024,
+   "korkeus": 4032,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -943,7 +943,8 @@ test('hampurilaisvalikossa neljä kohtaa oikeassa järjestyksessä, kytkimet ja 
   assert.ok(valikko, 'linssi jäi ilman valikkoa');
 
   // 1. JÄRJESTYS YLHÄÄLTÄ ALAS ja roolit (kaksi komentoa, kaksi kytkintä).
-  const rivit = valikko.valikko.children;
+  // PANEELI-pohjan erotin (div.tk-paneeli__erotin) ei ole valikon kohta: järjestys luetaan kohdista.
+  const rivit = valikko.valikko.children.filter((r) => r.getAttribute('class')?.includes('aikajana-valikko-kohta'));
   assert.deepEqual(
     rivit.map((r) => r.getAttribute('class').split(' ')
       .find((l) => /^aikajana-valikko-(poistu|alusta|kertoja|musiikki)$/.test(l))),

@@ -53,11 +53,13 @@ export const NOSTOANKKURIT_FRA = {
   'nosto:avignonin-paavinpalatsi': { lat: 43.947819, lng: 4.900965 },
   'nosto:bayeux-seinavaate': { lat: 49.277217, lng: -0.700000 },
   'nosto:biskajanlahti': { lat: 45.199962, lng: -1.142480 },
+  'nosto:camargue': { lat: 43.404340, lng: 4.702746 },
   'nosto:carcassonnen-linnoituskaupunki': { lat: 43.206973, lng: 2.363000 },
   'nosto:carnacin-kivirivit': { lat: 47.647431, lng: -3.064000 },
   'nosto:chambord': { lat: 47.616321, lng: 1.517000 },
   'nosto:chartresin-katedraali': { lat: 48.448295, lng: 1.487000 },
   'nosto:douaumont': { lat: 49.209984, lng: 5.420000 },
+  'nosto:dune-du-pilat': { lat: 44.545575, lng: -1.024466 },
   'nosto:hahmotelma-ajaccio': { lat: 41.926951, lng: 8.738000 },
   'nosto:hahmotelma-amboise': { lat: 47.413047, lng: 0.986000 },
   'nosto:hahmotelma-amiens': { lat: 49.896085, lng: 2.303000 },
@@ -81,6 +83,7 @@ export const NOSTOANKKURIT_FRA = {
   'nosto:hahmotelma-reims': { lat: 49.263311, lng: 4.034000 },
   'nosto:hahmotelma-rocamadour': { lat: 44.800283, lng: 1.619000 },
   'nosto:hahmotelma-rouen': { lat: 49.439289, lng: 1.094000 },
+  'nosto:hahmotelma-saint-cloud': { lat: 49.596056, lng: 2.053655 },
   'nosto:hahmotelma-saint-emilion': { lat: 44.892655, lng: -0.154000 },
   'nosto:hahmotelma-saint-malo': { lat: 48.599254, lng: -2.026000 },
   'nosto:hahmotelma-verdon': { lat: 43.868344, lng: 6.366893 },
@@ -116,4 +119,4 @@ export const NOSTOANKKURIT_FRA = {
 };
 
 /** Vientikehys, jotta raportti kertoo mistä luvut ovat. */
-export const NOSTOANKKURIT_FRA_KEHYS = { ruutu: '390x844', dpr: 2, vietty: '2026-09-18' };
+export const NOSTOANKKURIT_FRA_KEHYS = { ruutu: '390x844', dpr: 2, vietty: '2026-09-25' };

@@ -1056,13 +1056,27 @@ export function luoPallokamera({
    * koodissa, koska se riippuu kuvasuhteesta — KATTO kertoo sen, ja
    * katto luetaan tässä samasta funktiosta kuin saapumisessa.
    */
+  /** Uloszoomauksen katon korkeus: saapuminen tai koko laatikko, kumpi on kauempana. */
+  const maanKatto = (bbox, kerroin) => Math.max(
+    korkeuteenSovitus(bbox, kerroin)?.korkeus ?? 0,
+    pallonKorkeus(bbox, kerroin) ?? 0,
+  );
+
   const uloszoomausRaja = (bbox, kerroin = ULOSZOOMAUKSEN_KERROIN) => {
     if (!laatikkoMahtuu(bbox)) return null;
     // SAMA KAAVA KUIN SAAPUMISELLA (erä 13): katto lasketaan
     // `pallonKorkeus`illa, jotta uloin sallittu näkymä ja
     // saapumisnäkymä ovat kertoimen 1,02 kohdalla sama näkymä.
-    // Korkeuteen sovitetulla ruudulla katto on sama korkeus kuin saapumisella.
-    const tarve = korkeuteenSovitus(bbox, kerroin)?.korkeus ?? pallonKorkeus(bbox, kerroin);
+    /*
+     * KOKO MAA MAHTUU LOITONTAMALLA (omistaja 28.9.2026 klo 17.2x:
+     * *"vaakamuotoisia valtioita ei näe kerralla kokonaan"*; natiivi
+     * Natiivi-UI natiivi-ui/maan-loitonnus). Kapealla ruudulla saapuminen
+     * sovitetaan korkeuteen (PÄÄTÖKSET 17) ja sivut jäävät ruudun ulkopuolelle
+     * — katto oli sama korkeus, joten leveää maata (Ranska puhelimella) ei
+     * saanut näkyviin kokonaan. Katto on nyt suurempi saapumisesta ja koko
+     * laatikon sovituksesta molempiin suuntiin; saapumisnäkymä ei muutu.
+     */
+    const tarve = maanKatto(bbox, kerroin);
     if (!(tarve > 0)) return null;
     const max = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), tarve));
     // Katto ei saa mennä lattian alle: pikkuvaltiossa (Singapore)
@@ -1118,9 +1132,12 @@ export function luoPallokamera({
     const sovitus = korkeuteenSovitus(bbox, ULOSZOOMAUKSEN_KERROIN);
     if (sovitus) {
       const nyt = pallo.pointOfView()?.altitude;
+      // Loitonnus saa jatkua koko maan näkymään asti (maanKatto): silloin
+      // puoli kattaa koko leveyden ja kamera lukittuu maan keskelle.
+      const katto = Math.max(sovitus.korkeus, maanKatto(bbox, ULOSZOOMAUKSEN_KERROIN));
       const puoli = reunanPuoli(
         sovitus.latMin, sovitus.latMax, sovitus.lat,
-        1 + (nyt > 0 ? Math.min(nyt, sovitus.korkeus) : sovitus.korkeus),
+        1 + (nyt > 0 ? Math.min(nyt, katto) : sovitus.korkeus),
       );
       const alaraja = sovitus.lngW + puoli;
       const ylaraja = sovitus.lngE - puoli;

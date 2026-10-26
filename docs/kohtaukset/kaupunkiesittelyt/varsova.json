@@ -1,0 +1,84 @@
+[
+  {
+    "id": "varsova",
+    "esittely": "Kartan alue on Varsovan keskusta Veikselin länsirannalla. Kuningas Sigismund III siirsi hovinsa Krakovasta Varsovaan 1596. Vanhakaupunki tuhoutui lähes kokonaan toisessa maailmansodassa ja rakennettiin uudelleen muun muassa Bernardo Bellotton 1700-luvun kaupunkinäkymien avulla; Unesco merkitsi sen maailmanperintökohteeksi 1980. Varsovan linna rakennettiin 1598–1619, ja sen jälleenrakennus valmistui 1984.\n\nKuninkaantien varrella on Pyhän ristin kirkko, jonka pilariin on muurattu Chopinin sydän. Kulttuuri- ja tiedepalatsi on Neuvostoliiton lahja, ja se valmistui 1955. Kopernikuksen tiedekeskus avattiin Veikselin rannalla 2010. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 686,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Warsaw",
+        "title": "Wikipedia: Warsaw",
+        "tukee": "hovi siirtyi Krakovasta Varsovaan 1596 (Sigismund III); Vanhakaupunki Unesco 1980"
+      },
+      {
+        "url": "https://nbp.pl/wp-content/uploads/2022/11/bankoteka-20-en.pdf",
+        "title": "Narodowy Bank Polski: bankoteka 20 (hakutulos)",
+        "tukee": "Sigismund III siirsi hovin Wawelista Varsovaan 1596"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Warsaw_Old_Town",
+        "title": "Wikipedia: Warsaw Old Town",
+        "tukee": "Unesco 1980; lähes täysin tuhottu; Bellotton näkymät keskeisenä lähteenä jälleenrakennuksessa"
+      },
+      {
+        "url": "https://sah.org/?p=12095",
+        "title": "SAH: Architectural Reproduction vs. Reconstruction in Postwar Warsaw (hakutulos)",
+        "tukee": "Bellotton maalaukset opaskuvina jälleenrakennuksessa; Unesco 1980"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Royal_Castle,_Warsaw",
+        "title": "Wikipedia: Royal Castle, Warsaw",
+        "tukee": "rakennettu 1598-1619; jälleenrakennus -1984"
+      },
+      {
+        "url": "https://www.minimundus.at/en/objekt/the-royal-palace-warsaw/",
+        "title": "Minimundus / hakutulos: Royal Palace Warsaw (hakutulos)",
+        "tukee": "1598-1619 Sigismund III; jälleenrakennus 1971/1974-1984"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Holy_Cross_Church,_Warsaw",
+        "title": "Wikipedia: Holy Cross Church, Warsaw",
+        "tukee": "Chopinin sydän muurattu pilariin; Krakowskie Przedmieście"
+      },
+      {
+        "url": "https://travelcurious.com/poland/warsaw/attractions/holy-cross-church-AX1FSF",
+        "title": "Travelcurious: Holy Cross Church (hakutulos)",
+        "tukee": "Chopinin sydän kirkon pilarissa; Kuninkaantie"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Palace_of_Culture_and_Science",
+        "title": "Wikipedia: Palace of Culture and Science",
+        "tukee": "valmistui 1955; Neuvostoliiton lahja Puolan kansalle"
+      },
+      {
+        "url": "https://livetheworld.com/activities/poland/palace-of-culture-and-science",
+        "title": "Live the World / hakutulos: Palace of Culture and Science (hakutulos)",
+        "tukee": "valmistui 1955; Neuvostoliiton lahja"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Copernicus_Science_Centre",
+        "title": "Wikipedia: Copernicus Science Centre",
+        "tukee": "ensimmäinen rakennusmoduuli avattiin 2010; sijaitsee Veikselin rannalla"
+      },
+      {
+        "url": "https://muzea.waw.pl/en/museums/copernicus-science-centre/",
+        "title": "Muzea Warszawy / hakutulos: Copernicus Science Centre (hakutulos)",
+        "tukee": "avattiin 2010; Veikselin ranta"
+      }
+    ],
+    "pudotetut": [
+      "Veiksel 1 047 km ja \"ei yhtään patoa\" (entinen teksti): ei vahvistettu kahdesta lähteestä, patoväite todennäköisesti virheellinen (Włocławek) -> pois",
+      "Kaupungin syntyminen törmän ja lastauspaikan takia: ei vahvistettu -> pois",
+      "Wienin asema ja kansallismuseo: ei tarkistettu -> pois",
+      "Kulttuuri- ja tiedepalatsin korkeus 237 m: lähteet 230,68/231/237 m -> pois",
+      "Pyhän ristin kirkon rakennusvuodet: vain Wikipedia (1679-1696 vs infoboksi 1682-1757) -> pois"
+    ],
+    "ristiriidat": [
+      "Linnan jälleenrakennuksen alku: 1971 (päätös?) vs 1974 -> käytetty vain valmistumisvuotta 1984",
+      "Kopernikuksen tiedekeskuksen avaus: 5.7.2010 vs 5.11.2010 -> käytetty vain vuotta 2010",
+      "Hovin siirto: virallinen 1596, lopullinen asettuminen 1611 -> käytetty 1596 (kaksi lähdettä)",
+      "Varsovan keskustan \"länsiranta\": Varsova on molemmin puolin jokea; keskusta ja tiedekeskus länsirannalla (vasen ranta)"
+    ],
+    "muutos_sk": "Poistettu Veiksel-luvut ja patoväite sekä tarkistamattomat kohteet (kansallismuseo, Wienin asema). Lisätty hovin siirto 1596, Unesco 1980, Bellotto, linna 1598-1619 ja jälleenrakennus 1984, Chopinin sydän, Kulttuuri- ja tiedepalatsi 1955, Kopernikuksen tiedekeskus 2010."
+  }
+]

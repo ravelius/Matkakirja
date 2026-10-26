@@ -1,0 +1,503 @@
+{
+ "kaupunki": "hobart",
+ "kaupunkiQ": "Q40191",
+ "kohteet": [
+  {
+   "q": "Q204552",
+   "nimi": "kunanyi (Mount Wellington)",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -42.89917,
+   "lon": 147.2325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kunanyi Mt Wellington snowgum 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kunanyi_Mt_Wellington_snowgum_2017.jpg?width=1280",
+     "tekija": "Paris Buttfield-Addison",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kunanyi_Mt_Wellington_snowgum_2017.jpg",
+     "selite": "Kunanyin huipulta avautuu näkymä Hobartin ja Derwentin suiston ylle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "P7110031 kunanyi West Hobart 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P7110031_kunanyi_West_Hobart_2013.jpg?width=1280",
+     "tekija": "Paris Buttfield-Addison",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:P7110031_kunanyi_West_Hobart_2013.jpg",
+     "selite": "Lumihuippuinen kunanyi kohoaa Hobartin kaupunginosien takana.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1015935",
+   "nimi": "Salamanca Place",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -42.88667,
+   "lon": 147.33194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SalamancaPlace2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SalamancaPlace2008.jpg?width=1280",
+     "tekija": "Adam Selwood @ https://www.flickr.com/people/adselwood/",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SalamancaPlace2008.jpg",
+     "selite": "Salamanca Placen hiekkakivimakasiinit seisovat sataman vieressä, ja niissä toimii nykyään ravintoloita ja kauppoja.",
+     "leveys": 3690,
+     "korkeus": 2460,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alley off Salamanca Place, Hobart, Tasmania - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alley_off_Salamanca_Place%2C_Hobart%2C_Tasmania_-_panoramio.jpg?width=1280",
+     "tekija": "gekko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alley_off_Salamanca_Place%2C_Hobart%2C_Tasmania_-_panoramio.jpg",
+     "selite": "Kapea kuja kulkee hiekkakivisten valaanpyyntiajan makasiinien välissä.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5164095",
+   "nimi": "Constitution Dock",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -42.8825,
+   "lon": 147.33306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2021 MACq01 nipaluna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_MACq01_nipaluna.jpg?width=1280",
+     "tekija": "Mairremena",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021_MACq01_nipaluna.jpg",
+     "selite": "Constitution Dockin ympärillä kohoavat värikkäät satamarakennukset Hobartin vanhassa satamassa.",
+     "leveys": 2506,
+     "korkeus": 1630,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Australian Wooden Boat Festival 2009 - 3260106068.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Australian_Wooden_Boat_Festival_2009_-_3260106068.jpg?width=1280",
+     "tekija": "Paul Sayer",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Australian_Wooden_Boat_Festival_2009_-_3260106068.jpg",
+     "selite": "Puiset purjeveneet täyttävät Constitution Dockin Wooden Boat Festivalin aikaan.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2302289",
+   "nimi": "Tasman Bridge",
+   "peruste": "pelin nosto",
+   "koko_m": 1400,
+   "lat": -42.865,
+   "lon": 147.3425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tasman Bridge Hobart1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tasman_Bridge_Hobart1.jpg?width=1280",
+     "tekija": "arctanx.tk",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tasman_Bridge_Hobart1.jpg",
+     "selite": "Tasman Bridge ylittää Derwent-joen ja yhdistää Hobartin keskustan itärantaan.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Connection to the east (8599202113).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Connection_to_the_east_(8599202113).jpg?width=1280",
+     "tekija": "Stephen Edmonds from Melbourne, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Connection_to_the_east_(8599202113).jpg",
+     "selite": "Silta kaartaa Derwentin yli itäisten esikaupunkien kukkularinteille.",
+     "leveys": 1920,
+     "korkeus": 1040,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2353030",
+   "nimi": "MONA, Museum of Old and New Art",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -42.8128,
+   "lon": 147.261,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MONA 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MONA_1.jpg?width=1280",
+     "tekija": "Barrylb",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MONA_1.jpg",
+     "selite": "MONA kohoaa ruosteenvärisine seinineen Berriedalen niemellä Derwent-joen rannalla.",
+     "leveys": 3142,
+     "korkeus": 1023,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2021 MONA nipaluna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_MONA_nipaluna.jpg?width=1280",
+     "tekija": "Mairremena",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021_MONA_nipaluna.jpg",
+     "selite": "Museo erottuu niemen kalliolta joen toiselta rannalta katsottuna.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q999109",
+   "nimi": "Port Arthur",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": -43.15639,
+   "lon": 147.84722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018-02-15 104034 Port Arthur anagoria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-02-15_104034_Port_Arthur_anagoria.jpg?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-02-15_104034_Port_Arthur_anagoria.jpg",
+     "selite": "Port Arthurin entisen siirtovankilan rauniot seisovat nurmikentän takana Tasmanian kaakkoisniemellä.",
+     "leveys": 10624,
+     "korkeus": 3872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-02-15 113308 Port Arthur anagoria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-02-15_113308_Port_Arthur_anagoria.jpg?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-02-15_113308_Port_Arthur_anagoria.jpg",
+     "selite": "Vankilasiirtokunnan rakennukset näkyvät veden toiselta puolelta.",
+     "leveys": 13187,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1046891",
+   "nimi": "Cascades Female Factory",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": -42.8938,
+   "lon": 147.2993,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cascades Female Factory.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cascades_Female_Factory.jpg?width=1280",
+     "tekija": "Barrylb",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cascades_Female_Factory.jpg",
+     "selite": "Naisvankila toimi Hobartin Cascadesin kukkulan juurella, ja sen sisäpihojen muurit ovat yhä pystyssä.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cascades Female Factory Entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cascades_Female_Factory_Entrance.jpg?width=1280",
+     "tekija": "Chuckywingnut",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cascades_Female_Factory_Entrance.jpg",
+     "selite": "Kivinen sisäänkäynti johtaa entiseen siirtovankien naisvankilaan.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20642155",
+   "nimi": "St Maryn katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -42.8811,
+   "lon": 147.319,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Mary's Cathedral, Hobart 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Mary's_Cathedral%2C_Hobart_1.jpg?width=1280",
+     "tekija": "Mx. Granger",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Mary's_Cathedral%2C_Hobart_1.jpg",
+     "selite": "Hobartin katolinen katedraali on keltaista hiekkakiveä ja kohoaa nurmikon takana.",
+     "leveys": 3074,
+     "korkeus": 1749,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Mary's Cathedral, Hobart 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Mary's_Cathedral%2C_Hobart_2.jpg?width=1280",
+     "tekija": "Mx. Granger",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Mary's_Cathedral%2C_Hobart_2.jpg",
+     "selite": "Katedraalin vanha osa ja sen puiden reunustamat ikkunat Harrington Streetin laidalla.",
+     "leveys": 3410,
+     "korkeus": 1877,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7687474",
+   "nimi": "Tasmanian museo ja taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -42.8819,
+   "lon": 147.332,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "TMAG entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TMAG_entrance.jpg?width=1280",
+     "tekija": "JTdale",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TMAG_entrance.jpg",
+     "selite": "Museon sisäänkäynti on historiallisten hiekkakivi- ja tiilirakennusten välissä Sullivans Covella.",
+     "leveys": 1245,
+     "korkeus": 830,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bond Store Hobart 20171118-035.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bond_Store_Hobart_20171118-035.jpg?width=1280",
+     "tekija": "Gary Houston",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bond_Store_Hobart_20171118-035.jpg",
+     "selite": "Tiilinen Bond Store on osa museokorttelia vanhan sataman vieressä.",
+     "leveys": 4008,
+     "korkeus": 3008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7592928",
+   "nimi": "St Davidin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -42.8835,
+   "lon": 147.329,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hobart convict era Church - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobart_convict_era_Church_-_panoramio.jpg?width=1280",
+     "tekija": "Annette Teng",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hobart_convict_era_Church_-_panoramio.jpg",
+     "selite": "Anglikaaninen katedraali kohoaa hiekkakivitornineen keskustan kadun kulmassa.",
+     "leveys": 5032,
+     "korkeus": 3210,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "DSC00011 St David's 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DSC00011_St_David's_2022.jpg?width=1280",
+     "tekija": "Paris Buttfield-Addison",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DSC00011_St_David's_2022.jpg",
+     "selite": "Katedraalin tornin kenttäkivinen huippu nousee sinistä taivasta vasten.",
+     "leveys": 8660,
+     "korkeus": 5784,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7138912",
+   "nimi": "Tasmanian parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -42.8854,
+   "lon": 147.33,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parliament House Hobart Panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_House_Hobart_Panorama.jpg?width=1280",
+     "tekija": "Barrylb",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliament_House_Hobart_Panorama.jpg",
+     "selite": "Parlamenttitalo on hiekkakivinen entinen tullirakennus Salamancan lähellä.",
+     "leveys": 6138,
+     "korkeus": 2362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lascar Parliament House (Hobart) (4551936219).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Parliament_House_(Hobart)_(4551936219).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Parliament_House_(Hobart)_(4551936219).jpg",
+     "selite": "Parlamenttitalon pitkä julkisivu avautuu puistoaukiolle keskustassa.",
+     "leveys": 2588,
+     "korkeus": 1531,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5874758",
+   "nimi": "Hobartin synagoga",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": -42.8799,
+   "lon": 147.328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hobart Synagogue5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobart_Synagogue5.jpg?width=1280",
+     "tekija": "CutOffTies",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hobart_Synagogue5.jpg",
+     "selite": "Egyptiläistyylinen synagoga valmistui 1845 ja on Australian vanhimpia.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hobart Synagogue3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobart_Synagogue3.jpg?width=1280",
+     "tekija": "CutOffTies",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hobart_Synagogue3.jpg",
+     "selite": "Sisäänkäynnin lootuspilarit ja heprealainen kirjoitus kuuluvat synagogan egyptiläistyyliin.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3523488",
+   "nimi": "Theatre Royal",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -42.8796,
+   "lon": 147.331,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Theatre Royal Hobart.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatre_Royal_Hobart.jpg?width=1280",
+     "tekija": "Canley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatre_Royal_Hobart.jpg",
+     "selite": "Vuonna 1837 avattu Theatre Royal on Australian vanhimpia yhä toimivia teattereita.",
+     "leveys": 2704,
+     "korkeus": 2152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Campbell Street Hobart Tasmania Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_Hobart_Tasmania_Australia.jpg?width=1280",
+     "tekija": "TaswegianSchnapps",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Campbell_Street_Hobart_Tasmania_Australia.jpg",
+     "selite": "Teatterin julkisivu ja uusi siipi seisovat Campbell Streetin varrella.",
+     "leveys": 4506,
+     "korkeus": 3004,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Hobart and Mount Wellington 20171120-039.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobart_and_Mount_Wellington_20171120-039.jpg?width=1280",
+   "tekija": "Gary Houston",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hobart_and_Mount_Wellington_20171120-039.jpg",
+   "selite": "Hobartin keskusta Derwent-joen rannalla ja kunanyin selänne kaupungin takana.",
+   "leveys": 4008,
+   "korkeus": 3008,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Hobart seen from Mt Wellington 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobart_seen_from_Mt_Wellington_1.jpg?width=1280",
+   "tekija": "Andrea Schaffer from Sydney, Australia",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hobart_seen_from_Mt_Wellington_1.jpg",
+   "selite": "Hobart ja Derwentin suisto kunanyin rinteeltä katsottuna.",
+   "leveys": 4044,
+   "korkeus": 2696,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

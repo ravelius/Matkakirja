@@ -257,8 +257,8 @@ export const SOUTHAMERICA_MAATIEDOT = {
       sija: '62./172',
       linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PER',
       selitys: 'Peru on yksikkövaltio, jossa presidentti ja kongressi kilpailevat '
-        + 'vallasta. Kongressi voi erottaa presidentin "pysyvän moraalisen '
-        + 'kyvyttömyyden" perusteella, eikä päätöstä juuri voi riitauttaa '
+        + 'vallasta. Kongressi voi erottaa presidentin ”pysyvän moraalisen '
+        + 'kyvyttömyyden” perusteella, eikä päätöstä juuri voi riitauttaa '
         + 'tuomioistuimessa, joten institutionaalinen valta on suurelta osin '
         + 'kongressilla. Demokratia palautettiin 1980, mutta Alberto '
         + 'Fujimorin kausi 1990–2000 katkaisi sen, ja uusi siirtymä tehtiin '
@@ -373,4 +373,8 @@ export const SOUTHAMERICA_MAATIEDOT = {
       { teksti: 'Bom dia', kieli: 'portugali (siirtolaisyhteisöt)', lippu: 'Flag of Portugal.svg', osuus: '0,9 %' },
     ],
   },
+  // Kaikki maat -projekti (PT 10.10.2026): vain väkiluku ja pinta-ala
+  // Sisältökirjurin faktoista (amerikat: kansalliset tilastot ja Maailmanpankki). Ei sijoja.
+  GUY: { vakiluku: '836 000', pintaAla: '215 000 km²' },
+  SUR: { vakiluku: '640 000', pintaAla: '164 000 km²' },
 };

@@ -1,0 +1,229 @@
+{
+ "kaupunki": "churchill",
+ "kaupunkiQ": "Q744553",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q1143671",
+   "nimi": "Prince of Walesin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 58.79716,
+   "lon": -94.21343,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prince of Wales Fort, Churchill, MB.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Fort%2C_Churchill%2C_MB.jpg?width=1280",
+     "tekija": "Peterfitzgerald",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Fort%2C_Churchill%2C_MB.jpg",
+     "selite": "Tähtimäinen kivilinnake lepää lumisella niemellä Churchill-joen suulla.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prince of Wales Fort - Churchill, Manitoba (26426158577).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Fort_-_Churchill%2C_Manitoba_(26426158577).jpg?width=1280",
+     "tekija": "TravelingOtter from Houston, Texas, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Fort_-_Churchill%2C_Manitoba_(26426158577).jpg",
+     "selite": "Linnakkeen paksu kivimuuri kohoaa ruohoisen rinteen yläpuolelle sinistä taivasta vasten.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Prince of Wales Fort - Churchill, Manitoba (40402156465).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Fort_-_Churchill%2C_Manitoba_(40402156465).jpg?width=1280",
+     "tekija": "TravelingOtter from Houston, Texas, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Fort_-_Churchill%2C_Manitoba_(40402156465).jpg",
+     "selite": "Kivimuuri kääntyy kulmaan meren rannalla, josta linnake vartioi jokisuuta.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17154775",
+   "nimi": "Jääkarhuvankila",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 58.75368,
+   "lon": -94.07382,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bear jail (6360643033).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bear_jail_(6360643033).jpg?width=1280",
+     "tekija": "Emma",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bear_jail_(6360643033).jpg",
+     "selite": "Valkoinen kaarihalli toimii vankilana kaupunkiin eksyville jääkarhuille.",
+     "leveys": 4930,
+     "korkeus": 3406,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eingangstür für Eisbären, \"Eisbärengefängnis\", Curchill, Manitoba, Kanada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eingangst%C3%BCr_f%C3%BCr_Eisb%C3%A4ren%2C_%22Eisb%C3%A4rengef%C3%A4ngnis%22%2C_Curchill%2C_Manitoba%2C_Kanada.jpg?width=1280",
+     "tekija": "Seefan 2012",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eingangst%C3%BCr_f%C3%BCr_Eisb%C3%A4ren%2C_%22Eisb%C3%A4rengef%C3%A4ngnis%22%2C_Curchill%2C_Manitoba%2C_Kanada.jpg",
+     "selite": "Siirrettävä teräksinen karhunloukku kuuluu kaupungin jääkarhujen käsittelyyn.",
+     "leveys": 3616,
+     "korkeus": 2712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3318",
+   "nimi": "Churchill-joki",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 56.1061,
+   "lon": -108.2461,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beluga 1 1999-07-03 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beluga_1_1999-07-03_cropped.jpg?width=1280",
+     "tekija": "Ansgar Walk",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beluga_1_1999-07-03_cropped.jpg",
+     "selite": "Valkovalaat nousevat Churchill-joen suulle kesäisin Hudsoninlahdelta.",
+     "leveys": 2630,
+     "korkeus": 1844,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Birds taking flight near the Churchill River (7461041014).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Birds_taking_flight_near_the_Churchill_River_(7461041014).jpg?width=1280",
+     "tekija": "U.S. Embassy and Consulates in Canada",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Birds_taking_flight_near_the_Churchill_River_(7461041014).jpg",
+     "selite": "Linnut lähtevät lentoon tundralla joen rannalla Hudsoninlahden tuntumassa.",
+     "leveys": 1280,
+     "korkeus": 914,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1638019",
+   "nimi": "Wapuskin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 57.7739,
+   "lon": -93.3714,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cape Churchill 2000-11-22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Churchill_2000-11-22.jpg?width=1280",
+     "tekija": "Ansgar Walk",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Churchill_2000-11-22.jpg",
+     "selite": "Cape Churchillin rannikkoa pitkin kaartuu jäätynyt ranta Hudsoninlahden reunalla.",
+     "leveys": 5124,
+     "korkeus": 3228,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bärenmutter & Junges 3 2004-11-17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A4renmutter_%26_Junges_3_2004-11-17.jpg?width=1280",
+     "tekija": "Ansgar Walk",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C3%A4renmutter_%26_Junges_3_2004-11-17.jpg",
+     "selite": "Jääkarhuemo pentuineen seisoo lumisella rannalla odottamassa meren jäätymistä.",
+     "leveys": 2760,
+     "korkeus": 2100,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2875820",
+   "nimi": "Churchillin lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 58.73917,
+   "lon": -94.06639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Churchill Manitoba Airport.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Churchill_Manitoba_Airport.JPG?width=1280",
+     "tekija": "Mitchyyc",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Churchill_Manitoba_Airport.JPG",
+     "selite": "Kiitotie halkoo kosteaa tundraa kaupungin itäpuolella ilmasta nähtynä.",
+     "leveys": 2896,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Churchill Airport (11812003204).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Churchill_Airport_(11812003204).jpg?width=1280",
+     "tekija": "Josh Campbell",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Churchill_Airport_(11812003204).jpg",
+     "selite": "Sini-punainen terminaalirakennus palvelee pohjoisen Manitoban etäisintä lentokenttää.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Town of Churchill aerial view.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Town_of_Churchill_aerial_view.JPG?width=1280",
+   "tekija": "Peterfitzgerald",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Town_of_Churchill_aerial_view.JPG",
+   "selite": "Churchillin pienet talot ja rautatie levittäytyvät lumisena Hudsoninlahden jäisen rannan edessä.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Churchill aerial view3.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Churchill_aerial_view3.JPG?width=1280",
+   "tekija": "anonymous donor",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Churchill_aerial_view3.JPG",
+   "selite": "Ilmakuvassa viljajuna kulkee kaupungin laitaa ja talot ryhmittyvät lumiseen tundraan.",
+   "leveys": 3008,
+   "korkeus": 2000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

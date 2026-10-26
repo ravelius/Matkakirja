@@ -1,0 +1,581 @@
+{
+ "kaupunki": "merida",
+ "kaupunkiQ": "Q165204",
+ "kohteet": [
+  {
+   "q": "Q5859",
+   "nimi": "Chichén Itzá",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 20.68306,
+   "lon": -88.56861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chichen-Itza-Castillo-Seen-From-East.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chichen-Itza-Castillo-Seen-From-East.JPG?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chichen-Itza-Castillo-Seen-From-East.JPG",
+     "selite": "El Castillo on Chichén Itzán porrastettu pääpyramidi, jonka joka sivulla on portaikko.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chichen Itza 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chichen_Itza_3.jpg?width=1280",
+     "tekija": "Daniel Schwen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg",
+     "selite": "Kukulkanin pyramidi nousee aukean nurmikon keskeltä.",
+     "leveys": 9771,
+     "korkeus": 5197,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Temple of the Warriors - Chichen Itza 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_the_Warriors_-_Chichen_Itza_2024.jpg?width=1280",
+     "tekija": "edenpictures",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Warriors_-_Chichen_Itza_2024.jpg",
+     "selite": "Sotureiden temppeli ja sen pylväikkö reunustavat Chichén Itzán suurta aukiota.",
+     "leveys": 4032,
+     "korkeus": 2016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "El Caracol Chichen Itza 03 2011 1488.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Caracol_Chichen_Itza_03_2011_1488.jpg?width=1280",
+     "tekija": "Mariordo (Mario Roberto Durán Ortiz)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Caracol_Chichen_Itza_03_2011_1488.jpg",
+     "selite": "Pyöreä El Caracol -torni toimi mayojen tähtitornina.",
+     "leveys": 2400,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q213232",
+   "nimi": "Uxmal",
+   "peruste": "UNESCO",
+   "koko_m": 1200,
+   "lat": 20.35944,
+   "lon": -89.77139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Panoramica Uxmal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramica_Uxmal.jpg?width=1280",
+     "tekija": "Adrian Hernandez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramica_Uxmal.jpg",
+     "selite": "Uxmalin rakennukset levittäytyvät Puuc-alueen tasangolle, taustalla Velhon pyramidi.",
+     "leveys": 2048,
+     "korkeus": 1229,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Uxmal Pyramid of the Magician (9785167162).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uxmal_Pyramid_of_the_Magician_(9785167162).jpg?width=1280",
+     "tekija": "Gary Todd from Xinzheng, China",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uxmal_Pyramid_of_the_Magician_(9785167162).jpg",
+     "selite": "Velhon pyramidi on soikeaksi pyöristetty temppelipyramidi.",
+     "leveys": 1596,
+     "korkeus": 1125,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Governor's Palace, Uxmal - June 1969.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Governor's_Palace%2C_Uxmal_-_June_1969.jpg?width=1280",
+     "tekija": "Jeff Hart",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Governor's_Palace%2C_Uxmal_-_June_1969.jpg",
+     "selite": "Kuvernöörin palatsin julkisivua koristavat tarkat kivimosaiikit.",
+     "leveys": 1525,
+     "korkeus": 1079,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Chaac Mask at the base of the pyramid stairway ... (49472191437).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaac_Mask_at_the_base_of_the_pyramid_stairway_..._(49472191437).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaac_Mask_at_the_base_of_the_pyramid_stairway_..._(49472191437).jpg",
+     "selite": "Sadejumala Chaacin nenällinen naamio toistuu Uxmalin rakennusten seinillä.",
+     "leveys": 3648,
+     "korkeus": 4907,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1734521",
+   "nimi": "Paseo de Montejo",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 20.9823,
+   "lon": -89.6181,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Avenue of Montejo - Mérida, Yucatán Feb 2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue_of_Montejo_-_M%C3%A9rida%2C_Yucat%C3%A1n_Feb_2012.jpg?width=1280",
+     "tekija": "diaper",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenue_of_Montejo_-_M%C3%A9rida%2C_Yucat%C3%A1n_Feb_2012.jpg",
+     "selite": "Paseo de Montejo on Méridan leveä bulevardi, jota reunustavat henequén-aikakauden kartanot.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mansion on Paseo de Montejo, Mérida, Yucatan - Palacio Canton, Oct 2007jpg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mansion_on_Paseo_de_Montejo%2C_M%C3%A9rida%2C_Yucatan_-_Palacio_Canton%2C_Oct_2007jpg.jpg?width=1280",
+     "tekija": "Randal Sheppard",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mansion_on_Paseo_de_Montejo%2C_M%C3%A9rida%2C_Yucatan_-_Palacio_Canton%2C_Oct_2007jpg.jpg",
+     "selite": "Palacio Cantón on bulevardin komeimpia kartanoita.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Paseo de Montejo Mansion 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo_de_Montejo_Mansion_2.jpg?width=1280",
+     "tekija": "https://www.flickr.com/photos/16989146@N06/15993249190/",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paseo_de_Montejo_Mansion_2.jpg",
+     "selite": "Bulevardin varrella on italialaistyylisiä huviloita.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5695766",
+   "nimi": "Casa de los Montejo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 20.96619,
+   "lon": -89.62439,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2014-01-03 Mérida - Haus des Conquistadors Montejo 02 anagoria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014-01-03_M%C3%A9rida_-_Haus_des_Conquistadors_Montejo_02_anagoria.JPG?width=1280",
+     "tekija": "Anagoria",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014-01-03_M%C3%A9rida_-_Haus_des_Conquistadors_Montejo_02_anagoria.JPG",
+     "selite": "Valloittajan talon koristeellinen portaali on yksi Méridan vanhimpia.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa de Montejo 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_Montejo_1.jpg?width=1280",
+     "tekija": "https://www.flickr.com/photos/pence/",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_Montejo_1.jpg",
+     "selite": "Talo seisoo pääaukion laidalla Méridan vanhassa keskustassa.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1020762",
+   "nimi": "Izamal",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 20.93139,
+   "lon": -89.01778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Convent cloister, Izamal, Yucatan, Mexico, April 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Convent_cloister%2C_Izamal%2C_Yucatan%2C_Mexico%2C_April_2021.jpg?width=1280",
+     "tekija": "Sharon Hahn Darlin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Convent_cloister%2C_Izamal%2C_Yucatan%2C_Mexico%2C_April_2021.jpg",
+     "selite": "Izamalin keltaisen luostarin kaarikäytävä ympäröi laajaa sisäpihaa.",
+     "leveys": 3715,
+     "korkeus": 2682,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q26596",
+   "nimi": "Dzibilchaltún",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 21.091,
+   "lon": -89.5903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CEREMONIAL Dzibichaltún.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CEREMONIAL_Dzibichalt%C3%BAn.JPG?width=1280",
+     "tekija": "Misael 1989",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CEREMONIAL_Dzibichalt%C3%BAn.JPG",
+     "selite": "Dzibilchaltúnin seremoniarakennus kohoaa mayakaupungin pyhällä alueella.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cenote Xlapak.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cenote_Xlapak.jpg?width=1280",
+     "tekija": "PashiX",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cenote_Xlapak.jpg",
+     "selite": "Cenote-lampi ja rauniot kuuluvat Dzibilchaltúnin arkeologiseen puistoon.",
+     "leveys": 5519,
+     "korkeus": 2766,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q325468",
+   "nimi": "Kabah",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 20.24843,
+   "lon": -89.6473,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "0060 Kabah.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0060_Kabah.JPG?width=1280",
+     "tekija": "tato grasso",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0060_Kabah.JPG",
+     "selite": "Kabahin rauniot kuuluvat Puuc-reitin mayakohteisiin Uxmalin eteläpuolella.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0064 Kabah.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0064_Kabah.JPG?width=1280",
+     "tekija": "tato grasso",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0064_Kabah.JPG",
+     "selite": "Kabahin matala rakennus on tehty tarkasti hakatuista kivistä.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "0058 Kabah.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0058_Kabah.JPG?width=1280",
+     "tekija": "tato grasso",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0058_Kabah.JPG",
+     "selite": "Kabahin Chaac-naamioiden peittämä julkisivu on kohteen tunnetuin yksityiskohta.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1522451",
+   "nimi": "Labná",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 20.1725,
+   "lon": -89.579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Labná.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labn%C3%A1.JPG?width=1280",
+     "tekija": "MarcM13",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Labn%C3%A1.JPG",
+     "selite": "Labnán kaari ja El Mirador seisovat vierekkäin mayakaupungin raunioissa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2002.12.29 07 Labná Yucatán México.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2002.12.29_07_Labn%C3%A1_Yucat%C3%A1n_M%C3%A9xico.jpg?width=1280",
+     "tekija": "Hermann Luyken - User: (WT-shared) Hermann Luyken at wts wikivoyage http://www.familie-luyken.de/07Genealogie/13Gen/13064a.htm",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2002.12.29_07_Labn%C3%A1_Yucat%C3%A1n_M%C3%A9xico.jpg",
+     "selite": "Labnán palatsin julkisivu on koristeltu Puuc-tyylisin kuvioin.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "El Mirador en Labná.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Mirador_en_Labn%C3%A1.jpg?width=1280",
+     "tekija": "Alecs Ans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Mirador_en_Labn%C3%A1.jpg",
+     "selite": "El Mirador on temppelipyramidi, jonka huipulla on koristeellinen harjakoriste.",
+     "leveys": 4000,
+     "korkeus": 2248,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1419214",
+   "nimi": "Sayil",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 20.17776,
+   "lon": -89.65218,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2002.12.29 12 Sayil Yucatán México.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2002.12.29_12_Sayil_Yucat%C3%A1n_M%C3%A9xico.jpg?width=1280",
+     "tekija": "Hermann Luyken - User: (WT-shared) Hermann Luyken at wts wikivoyage https://www.familie-luyken.de/07Genealogie/13Gen/13064a.htm",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2002.12.29_12_Sayil_Yucat%C3%A1n_M%C3%A9xico.jpg",
+     "selite": "Sayilin suuri palatsi nousee kolmikerroksisena portaikkoineen.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chaac Mask on the Great Palace facade ... (49474524213).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaac_Mask_on_the_Great_Palace_facade_..._(49474524213).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaac_Mask_on_the_Great_Palace_facade_..._(49474524213).jpg",
+     "selite": "Palatsin julkisivua koristaa Chaac-naamio.",
+     "leveys": 3425,
+     "korkeus": 4446,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q567966",
+   "nimi": "Mayapán",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 20.62944,
+   "lon": -89.46056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chaac Mask ... (49475144328).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaac_Mask_..._(49475144328).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaac_Mask_..._(49475144328).jpg",
+     "selite": "Mayapánin Chaac-naamio on säilynyt rakennuksen seinässä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2009 Yucatan Mayapan Stucco Figures.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2009_Yucatan_Mayapan_Stucco_Figures.jpg?width=1280",
+     "tekija": "cynren",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2009_Yucatan_Mayapan_Stucco_Figures.jpg",
+     "selite": "Stukkikuvat kertovat Mayapánin myöhäisklassisesta ajasta.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6139851",
+   "nimi": "Peón Contrerasin teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 20.96949,
+   "lon": -89.62248,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Peón Contreras, Mérida, Yucatán (01).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Pe%C3%B3n_Contreras%2C_M%C3%A9rida%2C_Yucat%C3%A1n_(01).JPG?width=1280",
+     "tekija": "Inri",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Pe%C3%B3n_Contreras%2C_M%C3%A9rida%2C_Yucat%C3%A1n_(01).JPG",
+     "selite": "Peón Contrerasin teatteri on keltainen uusklassinen rakennus Méridan keskustassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "05986 - Teatro Peón Contreras 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/05986_-_Teatro_Pe%C3%B3n_Contreras_2.JPG?width=1280",
+     "tekija": "Karenimoreno",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:05986_-_Teatro_Pe%C3%B3n_Contreras_2.JPG",
+     "selite": "Teatterin julkisivua koristavat valkoiset pylväät.",
+     "leveys": 2592,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5836312",
+   "nimi": "Santa Isabelin ermita",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 20.95713,
+   "lon": -89.62955,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ermita de Santa Isabel, Mérida, Yucatán (07).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ermita_de_Santa_Isabel%2C_M%C3%A9rida%2C_Yucat%C3%A1n_(07).jpg?width=1280",
+     "tekija": "Inri",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ermita_de_Santa_Isabel%2C_M%C3%A9rida%2C_Yucat%C3%A1n_(07).jpg",
+     "selite": "Keltainen Santa Isabelin ermita seisoo portaiden päässä Méridan eteläosassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ermita de Santa Isabel (Mérida, Yucatán) II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ermita_de_Santa_Isabel_(M%C3%A9rida%2C_Yucat%C3%A1n)_II.jpg?width=1280",
+     "tekija": "Mario Morales Rubí",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ermita_de_Santa_Isabel_(M%C3%A9rida%2C_Yucat%C3%A1n)_II.jpg",
+     "selite": "Ermita on valaistu hämärässä kullankeltaiseksi.",
+     "leveys": 1340,
+     "korkeus": 788,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1917547",
+   "nimi": "Celestún",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 20.85917,
+   "lon": -90.4,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Flamingos, Celestún Mayo 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flamingos%2C_Celest%C3%BAn_Mayo_2014.jpg?width=1280",
+     "tekija": "Gildardo Sánchez",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flamingos%2C_Celest%C3%BAn_Mayo_2014.jpg",
+     "selite": "Celestúnin lagunilla pesii liuta vaaleanpunaisia flamingoja.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flamingos, Celestún 2026 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flamingos%2C_Celest%C3%BAn_2026_02.jpg?width=1280",
+     "tekija": "TSolange",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flamingos%2C_Celest%C3%BAn_2026_02.jpg",
+     "selite": "Flamingot lentävät laguunin yllä Meksikonlahden rannikolla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Monumento a la Patria, Mérida Yucatan Mexico 2018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumento_a_la_Patria%2C_M%C3%A9rida_Yucatan_Mexico_2018.jpg?width=1280",
+   "tekija": "amanderson2",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumento_a_la_Patria%2C_M%C3%A9rida_Yucatan_Mexico_2018.jpg",
+   "selite": "Isänmaan muistomerkki on Méridan keskeisiä maamerkkejä.",
+   "leveys": 5184,
+   "korkeus": 3888,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Plaza Grande, Mérida, Yucatán - Verde.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Grande%2C_M%C3%A9rida%2C_Yucat%C3%A1n_-_Verde.jpg?width=1280",
+   "tekija": "David Cabrera",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Grande%2C_M%C3%A9rida%2C_Yucat%C3%A1n_-_Verde.jpg",
+   "selite": "Plaza Granden laidalla kohoavat Méridan vanhan keskustan julkisivut.",
+   "leveys": 2256,
+   "korkeus": 1504,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,581 @@
+{
+ "kaupunki": "praha",
+ "kaupunkiQ": "Q1085",
+ "kohteet": [
+  {
+   "q": "Q193369",
+   "nimi": "Prahan linna",
+   "lat": 50.09,
+   "lon": 14.4,
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar Pražský hrad (Prague Castle) and St. Vitus Cathedral (4502233528).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Pra%C5%BEsk%C3%BD_hrad_(Prague_Castle)_and_St._Vitus_Cathedral_(4502233528).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Pra%C5%BEsk%C3%BD_hrad_(Prague_Castle)_and_St._Vitus_Cathedral_(4502233528).jpg",
+     "selite": "Prahan linna on laaja linnakompleksi Vltavan yläpuolella, ja siitä on tullut Tšekin valtion symboli.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Praha Hrad sníh 2010 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Hrad_sn%C3%ADh_2010_22.jpg?width=1280",
+     "tekija": "Karelj",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha_Hrad_sn%C3%ADh_2010_22.jpg",
+     "selite": "Linnan pääportin vartiosotilaiden yläpuolella taistelevat jättiläiset ovat tunnettu Prahan maamerkki.",
+     "leveys": 2400,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Prague Castle and surroundings - BugWarp (76).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Castle_and_surroundings_-_BugWarp_(76).jpg?width=1280",
+     "tekija": "BugWarp",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Castle_and_surroundings_-_BugWarp_(76).jpg",
+     "selite": "Linnan sisäpihojen palatsirakennusten takaa kohoavat katedraalin tornit.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q204871",
+   "nimi": "Kaarlensilta",
+   "lat": 50.086388888889,
+   "lon": 14.411944444444,
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Vltava, Charles Bridge, Old Town Bridge Tower and Church of St. Francis of Assisi. Prague, Czech Republic.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Vltava%2C_Charles_Bridge%2C_Old_Town_Bridge_Tower_and_Church_of_St._Francis_of_Assisi._Prague%2C_Czech_Republic.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Vltava%2C_Charles_Bridge%2C_Old_Town_Bridge_Tower_and_Church_of_St._Francis_of_Assisi._Prague%2C_Czech_Republic.jpg",
+     "selite": "Kaarlensilta on keskiaikainen kivisilta Vltavan yli, ja sen reunoilla on rivi pyhimyspatsaita.",
+     "leveys": 5075,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg",
+     "selite": "Silta yhdistää Vanhankaupungin ja Pikku-Kaupungin, ja sen päissä seisovat puolustustornit.",
+     "leveys": 7164,
+     "korkeus": 4030,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Charles Bridge Covid.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Bridge_Covid.jpg?width=1280",
+     "tekija": "Tadeáš Gregor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_Covid.jpg",
+     "selite": "Sillan kiveys ja patsaat tekevät siitä yhden Prahan tunnetuimmista kävelypaikoista.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q421678",
+   "nimi": "Vanhankaupungin aukio",
+   "lat": 50.0875,
+   "lon": 14.421388888889,
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prague, Old Town Square, COVID.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague%2C_Old_Town_Square%2C_COVID.jpg?width=1280",
+     "tekija": "Tadeáš Gregor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague%2C_Old_Town_Square%2C_COVID.jpg",
+     "selite": "Vanhankaupungin aukio on Prahan historiallinen keskusaukio, jota reunustavat värikkäät talot ja goottilaiset tornit.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prague Old Town Square, Czech Republic - Oct 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Old_Town_Square%2C_Czech_Republic_-_Oct_2010.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Old_Town_Square%2C_Czech_Republic_-_Oct_2010.jpg",
+     "selite": "Aukiolla sijaitsevat raatihuone kelloineen sekä Týnin kirkon tornit.",
+     "leveys": 4000,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old Town Square (Prague) 20150902.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Square_(Prague)_20150902.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Square_(Prague)_20150902.jpg",
+     "selite": "Illalla aukion rakennukset ja kirkon tornit valaistaan.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q729370",
+   "nimi": "Prahan astronominen kello",
+   "lat": 50.08699,
+   "lon": 14.4207,
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Czech-2013-Prague-Astronomical clock face.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Czech-2013-Prague-Astronomical_clock_face.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Czech-2013-Prague-Astronomical_clock_face.jpg",
+     "selite": "Prahan astronominen kello on keskiaikainen kello, joka näyttää ajan lisäksi auringon ja kuun kulkua.",
+     "leveys": 5000,
+     "korkeus": 3763,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Praha Astronomical Clock 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Astronomical_Clock_01.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha_Astronomical_Clock_01.jpg",
+     "selite": "Kello on kiinnitetty Vanhankaupungin raatihuoneen seinään, ja sen ympärillä on liikkuvia hahmoja.",
+     "leveys": 5263,
+     "korkeus": 8994,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Prague Town Hall Clock 2021 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Town_Hall_Clock_2021_16.jpg?width=1280",
+     "tekija": "Scotch Mist",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Town_Hall_Clock_2021_16.jpg",
+     "selite": "Kellon alempi kalenteritaulu kuvaa vuoden kulkua kuukausineen.",
+     "leveys": 4346,
+     "korkeus": 2893,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5949",
+   "nimi": "Pyhän Vituksen katedraali",
+   "lat": 50.090833333333336,
+   "lon": 14.400555555555556,
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prague Castle - panoramio (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Castle_-_panoramio_(4).jpg?width=1280",
+     "tekija": "ktanaka",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Castle_-_panoramio_(4).jpg",
+     "selite": "Pyhän Vituksen katedraali on Tšekin tärkein kirkko, ja se sijaitsee Prahan linnan alueella.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Vitus Cathedral - exterior (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vitus_Cathedral_-_exterior_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Vitus_Cathedral_-_exterior_(2).jpg",
+     "selite": "Goottilaisen katedraalin kuoripää ja tornit hallitsevat linnan siluettia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St. Vitus Cathedral - exterior (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vitus_Cathedral_-_exterior_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Vitus_Cathedral_-_exterior_(1).jpg",
+     "selite": "Katedraali rakennettiin vuosisatojen kuluessa, ja se valmistui lopulta 1900-luvulla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12256",
+   "nimi": "Petřínin näkötorni",
+   "lat": 50.083544444444,
+   "lon": 14.39505,
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Petřín tower 05 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pet%C5%99%C3%ADn_tower_05_2018.jpg?width=1280",
+     "tekija": "Suisant7",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_tower_05_2018.jpg",
+     "selite": "Petřínin näkötorni on Eiffel-tornista innoituksensa saanut teräsrakenne Petřínin mäellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q847613",
+   "nimi": "Venceslauksen aukio",
+   "lat": 50.082308,
+   "lon": 14.426141,
+   "peruste": "sitelinks",
+   "koko_m": 750,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wenceslas square Prague.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wenceslas_square_Prague.jpg?width=1280",
+     "tekija": "Szombat78",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wenceslas_square_Prague.jpg",
+     "selite": "Venceslauksen aukio on pitkä bulevardimainen aukio Uudenkaupungin keskustassa.",
+     "leveys": 3468,
+     "korkeus": 4624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wenceslas Square - Prague (51696640813).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wenceslas_Square_-_Prague_(51696640813).jpg?width=1280",
+     "tekija": "Bradley Weber",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wenceslas_Square_-_Prague_(51696640813).jpg",
+     "selite": "Aukion yläpäässä seisoo pyhän Venceslauksen ratsastajapatsas Kansallismuseon edessä.",
+     "leveys": 5616,
+     "korkeus": 3744,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q753289",
+   "nimi": "Malá Strana",
+   "lat": 50.088055555556,
+   "lon": 14.403888888889,
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rooftops in Prague.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rooftops_in_Prague.jpg?width=1280",
+     "tekija": "Jose Huwaidi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rooftops_in_Prague.jpg",
+     "selite": "Malá Strana eli Pikku-Kaupunki on Prahan barokkinen kaupunginosa linnan juurella.",
+     "leveys": 3989,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prague Rooftops (35147212526).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Rooftops_(35147212526).jpg?width=1280",
+     "tekija": "Nan Palmero from San Antonio, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Rooftops_(35147212526).jpg",
+     "selite": "Punaiset tiilikatot ja Pyhän Nikolauksen kirkon kupoli luovat alueelle tunnistettavan siluetin.",
+     "leveys": 4320,
+     "korkeus": 6480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1453427",
+   "nimi": "Týnin Mariankirkko",
+   "lat": 50.08771,
+   "lon": 14.4227,
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de Nuestra Señora ante Týn, Praga, República Checa, 2022-07-02, DD 259-261 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_Nuestra_Se%C3%B1ora_ante_T%C3%BDn%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_259-261_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Nuestra_Se%C3%B1ora_ante_T%C3%BDn%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_259-261_HDR.jpg",
+     "selite": "Týnin kirkon kaksi suippoa tornia hallitsevat Vanhankaupungin aukion siluettia.",
+     "leveys": 5984,
+     "korkeus": 5021,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q443107",
+   "nimi": "Vanhauusi synagoga",
+   "lat": 50.09,
+   "lon": 14.418611111111,
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old New Synagogue 01(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_New_Synagogue_01(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_New_Synagogue_01(js).jpg",
+     "selite": "Vanhauusi synagoga on Euroopan vanhimpia yhä käytössä olevia synagogia, ja se sijaitsee Josefovin juutalaiskorttelissa.",
+     "leveys": 5524,
+     "korkeus": 3954,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q188112",
+   "nimi": "Prahan kansallismuseo",
+   "lat": 50.0798433,
+   "lon": 14.4304172,
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Národní muzeum (National Museum).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A1rodn%C3%AD_muzeum_(National_Museum).jpg?width=1280",
+     "tekija": "Jorge Láscar",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A1rodn%C3%AD_muzeum_(National_Museum).jpg",
+     "selite": "Kansallismuseon uusrenessanssirakennus sulkee Venceslauksen aukion yläpään.",
+     "leveys": 2724,
+     "korkeus": 1809,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prag, Nationalmuseum, Brunnen -- 2019 -- 6841.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prag%2C_Nationalmuseum%2C_Brunnen_--_2019_--_6841.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prag%2C_Nationalmuseum%2C_Brunnen_--_2019_--_6841.jpg",
+     "selite": "Rakennuksen edustalla on suihkulähde, ja julkisivu on runsaasti koristeltu.",
+     "leveys": 4453,
+     "korkeus": 6679,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1100429",
+   "nimi": "Klementinum",
+   "lat": 50.086666666667,
+   "lon": 14.416388888889,
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Klementinum – průčelí z Mariánského náměstí.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klementinum_%E2%80%93_pr%C5%AF%C4%8Del%C3%AD_z_Mari%C3%A1nsk%C3%A9ho_n%C3%A1m%C4%9Bst%C3%AD.jpg?width=1280",
+     "tekija": "Skot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klementinum_%E2%80%93_pr%C5%AF%C4%8Del%C3%AD_z_Mari%C3%A1nsk%C3%A9ho_n%C3%A1m%C4%9Bst%C3%AD.jpg",
+     "selite": "Klementinum on entinen jesuiittakollegio, jossa toimii nykyään kansalliskirjasto.",
+     "leveys": 6000,
+     "korkeus": 3999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Klementinum – Révové nádvoří s kašnou.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg?width=1280",
+     "tekija": "Skot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg",
+     "selite": "Rakennuskompleksin sisäpihat ovat rauhallisia keidasmaisia paikkoja Vanhankaupungin ytimessä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q616334",
+   "nimi": "Vyšehrad",
+   "lat": 50.064427188,
+   "lon": 14.417644214,
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vysehrad as seen over the Vltava from Cisarska louka 732 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vysehrad_as_seen_over_the_Vltava_from_Cisarska_louka_732_cropped.jpg?width=1280",
+     "tekija": "Jirka.h23",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vysehrad_as_seen_over_the_Vltava_from_Cisarska_louka_732_cropped.jpg",
+     "selite": "Vyšehrad on keskiaikainen linnoitusmäki Vltavan rannalla.",
+     "leveys": 1356,
+     "korkeus": 949,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica of St Peter and St Paul - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_of_St_Peter_and_St_Paul_-_panoramio_(1).jpg?width=1280",
+     "tekija": "coroner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_of_St_Peter_and_St_Paul_-_panoramio_(1).jpg",
+     "selite": "Mäen päällä kohoaa Pietarin ja Paavalin basilikan kaksi tornia.",
+     "leveys": 2074,
+     "korkeus": 2785,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q244816",
+   "nimi": "Tanssiva talo",
+   "lat": 50.075555555556,
+   "lon": 14.414166666667,
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Danzante, Praga, República Checa, 2022-07-01, DD 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Danzante%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-01%2C_DD_01.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Danzante%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-01%2C_DD_01.jpg",
+     "selite": "Tanssiva talo on Frank Gehryn ja Vlado Milunićin suunnittelema toimistorakennus Vltavan rannalla.",
+     "leveys": 6819,
+     "korkeus": 4824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prag ginger u fred gehry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prag_ginger_u_fred_gehry.jpg?width=1280",
+     "tekija": "Hans Peter Schaefer, http://www.reserv-a-rt.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prag_ginger_u_fred_gehry.jpg",
+     "selite": "Kaksi kaarevaa tornia muistuttavat tanssivaa paria, jota kutsutaan Fred ja Gingeriksi.",
+     "leveys": 1506,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View from Prague Castle - Hradčany, Prague, Czech Republic - May 17, 2019.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Prague_Castle_-_Hrad%C4%8Dany%2C_Prague%2C_Czech_Republic_-_May_17%2C_2019.jpg?width=1280",
+   "tekija": "Giorgio Galeotti",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_Prague_Castle_-_Hrad%C4%8Dany%2C_Prague%2C_Czech_Republic_-_May_17%2C_2019.jpg",
+   "selite": "Prahan punaiset katot ja tornit levittäytyvät Vltavan molemmin puolin.",
+   "leveys": 5879,
+   "korkeus": 3919,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "View of Prague and St. Vitus Cathedral from Vyšehrad. Czech Republic.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Prague_and_St._Vitus_Cathedral_from_Vy%C5%A1ehrad._Czech_Republic.jpg?width=1280",
+   "tekija": "Ввласенко",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Prague_and_St._Vitus_Cathedral_from_Vy%C5%A1ehrad._Czech_Republic.jpg",
+   "selite": "Vyšehradilta näkee Prahan linnan ja Pyhän Vituksen katedraalin siluetin.",
+   "leveys": 5669,
+   "korkeus": 3775,
+   "tarkistettu": true
+  }
+ ],
+ "jarjestys": [
+  "Q193369",
+  "Q204871",
+  "Q421678",
+  "Q729370",
+  "Q5949",
+  "Q12256",
+  "Q847613",
+  "Q753289",
+  "Q1453427",
+  "Q443107",
+  "Q188112",
+  "Q1100429",
+  "Q616334",
+  "Q244816"
+ ],
+ "eiKuvaa": []
+}

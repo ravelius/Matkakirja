@@ -1,0 +1,352 @@
+{
+ "kaupunki": "kilimandzaro",
+ "kaupunkiQ": "Q7296",
+ "kohteet": [
+  {
+   "q": "Q756790",
+   "nimi": "Kilimandžaron kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 8000,
+   "lat": -3.06667,
+   "lon": 37.36667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Machame Gate, Mt. Kilimanjaro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Machame_Gate%2C_Mt._Kilimanjaro.jpg?width=1280",
+     "tekija": "BerotBurns",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Machame_Gate%2C_Mt._Kilimanjaro.jpg",
+     "selite": "Machamen portti on yksi vuoren pääreittien lähtöpaikoista, ja sateenmetsän usva ympäröi sitä usein.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Giant Groundsels michael peter.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant_Groundsels_michael_peter.jpg?width=1280",
+     "tekija": "Michael Mwakalundwa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giant_Groundsels_michael_peter.jpg",
+     "selite": "Jättiruusukoivut kasvavat vain Itä-Afrikan korkeilla vuorilla ja ovat kansallispuiston tunnusomaisia kasveja.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lobelia deckenii deckenii in Tanzania 252930589.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lobelia_deckenii_deckenii_in_Tanzania_252930589.jpg?width=1280",
+     "tekija": "John Brew",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lobelia_deckenii_deckenii_in_Tanzania_252930589.jpg",
+     "selite": "Jättiloopelian lehtiruusuke suojaa kasvia vuoren ylärinteiden kylmältä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1394606",
+   "nimi": "Kibo",
+   "peruste": "pelin nosto",
+   "koko_m": 8000,
+   "lat": -3.06505,
+   "lon": 37.35903,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ET804.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ET804.jpg?width=1280",
+     "tekija": "User:Ori~",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ET804.jpg",
+     "selite": "Kibon kraatterin laella lepäävät jäätiköt, jotka ovat Afrikan korkeimman vuoren tunnusmerkki.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kibo Summit, Mount Kilimanjaro, Tanzania (30819102678).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kibo_Summit%2C_Mount_Kilimanjaro%2C_Tanzania_(30819102678).jpg?width=1280",
+     "tekija": "Ray in Manila",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kibo_Summit%2C_Mount_Kilimanjaro%2C_Tanzania_(30819102678).jpg",
+     "selite": "Kibo on Kilimandžaron korkein kartio, ja sen lumihuippu erottuu kauas savannin ylle.",
+     "leveys": 7119,
+     "korkeus": 3368,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20727403",
+   "nimi": "Uhuru Peak",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -3.07613,
+   "lon": 37.3535,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kilimanjaro Uhuru Peak Sign.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimanjaro_Uhuru_Peak_Sign.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Arne d assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_Uhuru_Peak_Sign.jpg",
+     "selite": "Uhuru Peak on Kilimandžaron ja koko Afrikan korkein kohta, ja huipulla on kyltti.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Glacier at the peak of Mount Kilimanjaro at sunrise.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glacier_at_the_peak_of_Mount_Kilimanjaro_at_sunrise.jpg?width=1280",
+     "tekija": "Roryjm0",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glacier_at_the_peak_of_Mount_Kilimanjaro_at_sunrise.jpg",
+     "selite": "Huipun jäätikkö hohtaa auringonnousussa Kibon kraatterin reunalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Glacier near Uhuru Peak with Mont Meru in the background (17054512855).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glacier_near_Uhuru_Peak_with_Mont_Meru_in_the_background_(17054512855).jpg?width=1280",
+     "tekija": "Christoph Strässler from Oberdorf BL, Schweiz",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glacier_near_Uhuru_Peak_with_Mont_Meru_in_the_background_(17054512855).jpg",
+     "selite": "Jäätikön jyrkkä reuna kohoaa huipun lähellä, ja taustalla siintää Meru-vuori.",
+     "leveys": 3888,
+     "korkeus": 2187,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1283494",
+   "nimi": "Mawenzi",
+   "peruste": "pelin nosto",
+   "koko_m": 6000,
+   "lat": -3.09544,
+   "lon": 37.45506,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kilifromplane.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilifromplane.jpg?width=1280",
+     "tekija": "Clem23",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilifromplane.jpg",
+     "selite": "Mawenzin rosoinen kartio kohoaa pilvimeren yläpuolelle Kibon itäpuolella.",
+     "leveys": 1608,
+     "korkeus": 801,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kibo Mawenzi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kibo_Mawenzi.jpg?width=1280",
+     "tekija": "Bbb",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kibo_Mawenzi.jpg",
+     "selite": "Mawenzi on Kilimandžaron toiseksi korkein huippu ja jyrkempi sekä vaikeampi kiivetä kuin Kibo.",
+     "leveys": 1416,
+     "korkeus": 952,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kilimanjaro002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimanjaro002.jpg?width=1280",
+     "tekija": "Nannarella",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro002.jpg",
+     "selite": "Ilmasta näkee, miten Kilimandžaron tulivuorikartiot nousevat yksinäisinä tasangon yli.",
+     "leveys": 4224,
+     "korkeus": 2376,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1115929",
+   "nimi": "Furtwänglerin jäätikkö",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -3.07083,
+   "lon": 37.35194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kilimandscharo-Gletscherkrater.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimandscharo-Gletscherkrater.jpg?width=1280",
+     "tekija": "ProfessorX",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilimandscharo-Gletscherkrater.jpg",
+     "selite": "Furtwänglerin jäätikkö on Kibon kraatterin sisällä oleva jäämuodostelma, joka on kutistunut vuosikymmenten aikana.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Furtwanler Glacier Mt. Kilimanjaro.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Furtwanler_Glacier_Mt._Kilimanjaro.JPG?width=1280",
+     "tekija": "User:Chris 73",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Furtwanler_Glacier_Mt._Kilimanjaro.JPG",
+     "selite": "Lumi ja jää peittävät Kibon kraatterin laen, mutta jäätikkö sulaa nopeasti.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q271733",
+   "nimi": "Moshi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -3.33488,
+   "lon": 37.34038,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kilimanjaro Moshi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimanjaro_Moshi.jpg?width=1280",
+     "tekija": "Stig Nygaard from Copenhagen, Denmark",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_Moshi.jpg",
+     "selite": "Moshi on vuoren juurella oleva kaupunki, jonka kadut avautuvat Kilimandžaron lumihuipulle päin.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial Photo of Moshi, Tanzania.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Photo_of_Moshi%2C_Tanzania.jpg?width=1280",
+     "tekija": "Hansbaer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Photo_of_Moshi%2C_Tanzania.jpg",
+     "selite": "Moshi on kahvin ja kiipeilymatkailun keskus Kilimandžaron eteläpuolella.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2014 Old Moshi former german administration building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Old_Moshi_former_german_administration_building.jpg?width=1280",
+     "tekija": "Dr. Wolfgang PFÄFFL",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Old_Moshi_former_german_administration_building.jpg",
+     "selite": "Vanhassa Moshissa on säilynyt saksalaisen siirtomaahallinnon rakennuksia.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1059382",
+   "nimi": "Chala-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -3.31667,
+   "lon": 37.7,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lake Chala Aerial.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Chala_Aerial.jpg?width=1280",
+     "tekija": "Hansbaer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Chala_Aerial.jpg",
+     "selite": "Chala-järvi on kraatterijärvi Kilimandžaron kupeessa Tansanian ja Kenian rajalla.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Chala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Chala.jpg?width=1280",
+     "tekija": "Joachim Huber",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Chala.jpg",
+     "selite": "Kraatterin jyrkät rinteet ympäröivät syvää sinistä vettä.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lake Chala 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Chala_2.jpg?width=1280",
+     "tekija": "Daniel Msirikale",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Chala_2.jpg",
+     "selite": "Kraatterin seinämiä peittää vehreä metsä, joka laskeutuu suoraan järveen.",
+     "leveys": 5188,
+     "korkeus": 2915,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kilimanjaro from Amboseli.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilimanjaro_from_Amboseli.jpg?width=1280",
+   "tekija": "Sergey Pesterev",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_from_Amboseli.jpg",
+   "selite": "Kilimandžaron lumihuippu kohoaa savannin yli, kun Kibo ja Mawenzi erottuvat pilvien yllä.",
+   "leveys": 3043,
+   "korkeus": 2036,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Mount Kilimanjaro,Moshi 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Kilimanjaro%2CMoshi_1.jpg?width=1280",
+   "tekija": "Erasmus Kamugisha",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Kilimanjaro%2CMoshi_1.jpg",
+   "selite": "Vuoren lumihuippu nousee viljelysten ja puiden takaa Moshin seudulla.",
+   "leveys": 2795,
+   "korkeus": 1665,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

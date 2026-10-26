@@ -238,32 +238,49 @@ test('pulun äänite soi pulun omalla liu\'ulla', () => {
 
 /* ── 4. liu'ut hammasratasvalikon Äänentasot-ryhmässä ───────────── */
 
+/*
+ * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): Äänentasot
+ * (viisi liukua) siirtyivät hammasrattaasta #paavalikon Äänet-osioon
+ * (.kertoja-kotelo, #aanivoimat) — ratas on taas kehittäjän oma valikko
+ * eikä pelaajalle enää näy ilman kehittäjätilaa. Kolme tämän tiedoston
+ * testiä, jotka olettivat liukujen asuvan rattaassa, on päivitetty
+ * osoittamaan #paavalikkoon; itse tallennus- ja kytkentälogiikka
+ * (js/main.js AANIVOIMAT) ei muuttunut.
+ */
+
 /** Hammasratasvalikon sisältö index.html:stä. */
 function ratasvalikko(html) {
   const alku = html.indexOf('id="kehittaja-valikko"');
-  const loppu = html.indexOf('id="paavalikko"');
+  const loppu = html.indexOf('<div id="paavalikko"');
   assert.ok(alku > 0 && loppu > alku, 'hammasratasvalikkoa ei löydy');
   return html.slice(alku, loppu);
 }
 
+/** #paavalikon (pillerivalikon) sisältö index.html:stä. */
+function paavalikkoSisalto(html) {
+  const alku = html.indexOf('<div id="paavalikko"');
+  assert.ok(alku > 0, 'paavalikkoa ei löydy');
+  return html.slice(alku);
+}
+
 test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä', () => {
   const html = lue('../index.html');
-  const ratas = ratasvalikko(html);
-  assert.match(ratas, /<p class="valikko-otsikko">Äänentasot<\/p>/,
-    'Äänentasot-otsikko puuttuu rattaasta');
+  const paavalikko = paavalikkoSisalto(html);
+  assert.match(paavalikko, /<p class="valikko-otsikko">Äänet<\/p>/,
+    'Äänet-otsikko puuttuu pillerivalikosta');
   for (const [tunnus, nimi] of [
     ['voima-tehosteet', 'Äänitehosteet'],
     ['voima-pulu', 'Pulun ääni'],
     ['voima-lukija', 'Lukija'],
   ]) {
-    assert.match(ratas, new RegExp(`id="${tunnus}"[\\s\\S]{0,200}type="range"`),
-      `${tunnus} puuttuu hammasratasvalikosta`);
-    assert.match(ratas, new RegExp(`for="${tunnus}">${nimi}<`), `${tunnus}: label puuttuu`);
-    assert.match(ratas, new RegExp(`id="${tunnus}-arvo"`), `${tunnus}: prosenttilukema puuttuu`);
+    assert.match(paavalikko, new RegExp(`id="${tunnus}"[\\s\\S]{0,200}type="range"`),
+      `${tunnus} puuttuu pillerivalikosta`);
+    assert.match(paavalikko, new RegExp(`for="${tunnus}">${nimi}<`), `${tunnus}: label puuttuu`);
+    assert.match(paavalikko, new RegExp(`id="${tunnus}-arvo"`), `${tunnus}: prosenttilukema puuttuu`);
   }
   assert.match(html, /min="0" max="100" step="1" value="90"/, 'lukijan oletus 90 %');
-  // Taustamusiikin liuku tuli samaan ryhmään kehittäjän lohkosta.
-  assert.match(ratas, /id="kehittaja-musiikki-liuku"/, 'taustamusiikin liuku puuttuu');
+  // Taustamusiikin liuku on samassa ryhmässä (entinen kehittäjän lohko).
+  assert.match(paavalikko, /id="kehittaja-musiikki-liuku"/, 'taustamusiikin liuku puuttuu');
 
   const main = lue('../js/main.js');
   assert.match(main, /asetaTehosteVoima\(arvo\);/);
@@ -283,42 +300,39 @@ test('kolme liukua Äänentasot-ryhmässä: nimi, prosenttilukema ja kytkentä',
   assert.match(css, /\.paavalikko \.aanivoima \{/, 'liu\'uilla on dialogin rivien tyyli');
 });
 
-test('ratas näkyy pelaajalle: vain kehittäjäryhmät piiloutuvat', () => {
+test('ratas on taas pelkkä kehittäjän valikko: piiloutuu ilman kehittäjätilaa', () => {
+  /*
+   * OMISTAJA 29.9.2026 (pillerivalikkouudistus): Äänentasot-ryhmä
+   * lähti rattaasta kokonaan #paavalikkoon, joten rattaan alla ei ole
+   * enää mitään pelaajalle aina näkyvää — koko kotelo piiloutuu taas
+   * kehittäjätilan mukana, kuten ennen 11.9.2026. Tämä KUMOAA
+   * 11.9.2026 päätöksen "ratas ei saa enää kadota kehittäjätilan
+   * mukana", koska sen syy (äänentasot rattaassa) ei enää päde.
+   */
   const html = lue('../index.html');
   const ratas = ratasvalikko(html);
-  /*
-   * ÄÄNENTASOT ENSIN, TYÖHUONE POHJALLA (omistaja 11.9.2026:
-   * *"raamattu ja kehittäjälehti saisivat olla alimmaisina listassa"*).
-   * Liu'ut eivät ole kehittäjäryhmässä, vaan ne avaavat valikon ja
-   * näkyvät myös ilman kehittäjätilaa.
-   */
+  assert.ok(!ratas.includes('id="aanivoimat"'), 'äänentasot eivät kuulu enää rattaaseen');
   const tyohuone = ratas.indexOf('id="kehittaja-tyohuone"');
   const vivut = ratas.indexOf('id="kehittaja-vivut"');
-  const aanet = ratas.indexOf('id="aanivoimat"');
-  assert.ok(tyohuone > 0 && vivut > 0 && aanet > 0, 'ryhmät puuttuvat rattaasta');
-  assert.ok(aanet < vivut && vivut < tyohuone,
-    'järjestys on Äänentasot → kehittäjän vivut → Raamattu ja Kehittäjälehti');
+  assert.ok(tyohuone > 0 && vivut > 0, 'ryhmät puuttuvat rattaasta');
+  assert.ok(vivut < tyohuone, 'järjestys on kehittäjän vivut → Raamattu ja Kehittäjälehti');
   assert.match(ratas, /id="kehittaja-tyohuone" class="kehittaja-ryhma" hidden/);
   assert.match(ratas, /id="kehittaja-vivut" class="kehittaja-ryhma" hidden/);
 
   const main = lue('../js/main.js');
-  assert.match(main, /kehittajaValikkoKotelo\.hidden = false;/,
-    'ratas ei saa enää kadota kehittäjätilan mukana');
-  assert.match(main,
-    /for \(const ryhma of kehittajaRyhmat\) ryhma\.hidden = !kehittajaTilaPaalla\(\);/,
-    'kehittäjäryhmät piiloutuvat valikon sisällä');
+  assert.match(main, /kehittajaValikkoKotelo\.hidden = !kehittajaTilaPaalla\(\);/,
+    'ratas piiloutuu taas kehittäjätilan mukana');
 
   const css = lue('../css/styles.css');
   assert.match(css, /\.kehittaja-valikko \.kehittaja-ryhma \{/, 'ryhmällä on oma ladelma');
 });
 
-test('hampurilaisen Äänet-osioon jäivät vain päälle/pois-kytkimet', () => {
+test('pillerivalikon Äänet-osiossa ovat sekä kytkimet että liu\'ut', () => {
   const html = lue('../index.html');
-  const alku = html.indexOf('id="paavalikko"');
-  const paavalikko = html.slice(alku);
+  const paavalikko = paavalikkoSisalto(html);
   for (const tunnus of ['voima-tehosteet', 'voima-pulu', 'voima-lukija', 'aanivoimat']) {
-    assert.ok(!paavalikko.includes(`id="${tunnus}"`),
-      `${tunnus} on yhä hampurilaisvalikossa`);
+    assert.ok(paavalikko.includes(`id="${tunnus}"`),
+      `${tunnus} puuttuu pillerivalikosta (omistaja 29.9.2026: siirto rattaasta)`);
   }
   assert.match(paavalikko, /id="kertoja-valikko"/, 'kertojan kytkinrivit jäivät paikalleen');
 });

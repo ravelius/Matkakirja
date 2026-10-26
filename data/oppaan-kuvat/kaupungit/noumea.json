@@ -1,0 +1,246 @@
+{
+ "kaupunki": "noumea",
+ "kaupunkiQ": "Q9733",
+ "jarjestys": [
+  "Q1330981",
+  "Q292500",
+  "Q1945432",
+  "Q9728",
+  "Q9736",
+  "Q9732"
+ ],
+ "kohteet": [
+  {
+   "q": "Q1330981",
+   "nimi": "Uuden-Kaledonian laguunit",
+   "peruste": "UNESCO",
+   "koko_m": 20000,
+   "lat": -20.41194,
+   "lon": 164.56639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arrecife de Numea1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arrecife_de_Numea1.jpg?width=1280",
+     "tekija": "Breebooks",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arrecife_de_Numea1.jpg",
+     "selite": "Uuden-Kaledonian laguunit ympäröivät saarta maailman pisimpiin kuuluvalla yhtenäisellä suojariutalla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Païta 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pa%C3%AFta_01.jpg?width=1280",
+     "tekija": "J Brew",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pa%C3%AFta_01.jpg",
+     "selite": "Ilmasta riutan turkoosi vyöhyke erottuu syvänsinisestä merestä ja suojaa laguunia aalloilta.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lagoons and Reefs of New Caledonia May 10, 2001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lagoons_and_Reefs_of_New_Caledonia_May_10%2C_2001.jpg?width=1280",
+     "tekija": "the Enhanced Thematic Mapper Plus on NASA’s Landsat 7 satellite, Jesse Allen, Michon Scott.",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lagoons_and_Reefs_of_New_Caledonia_May_10%2C_2001.jpg",
+     "selite": "Satelliittikuvassa riuttojen ja laguunien vyöhyke kehystää koko Uuden-Kaledonian pääsaarta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q292500",
+   "nimi": "Pinssaari",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.61667,
+   "lon": 167.46667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ile des pins new caledonia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ile_des_pins_new_caledonia.jpg?width=1280",
+     "tekija": "Jesiane",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ile_des_pins_new_caledonia.jpg",
+     "selite": "Pinssaaren turkoosissa laguunissa kohoaa sammaleinen kalliosaareke, jollaisia saaren rannikolla on useita.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "09JAN2011 052.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/09JAN2011_052.jpg?width=1280",
+     "tekija": "René Moutouh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:09JAN2011_052.jpg",
+     "selite": "Pylväsmäntyjen reunustama matala laguuni hohtaa vaaleana Pinssaaren rannalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20FEV2011 029.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20FEV2011_029.jpg?width=1280",
+     "tekija": "René Moutouh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20FEV2011_029.jpg",
+     "selite": "Pinssaaren valkohiekkainen ranta jatkuu pitkänä männyistä reunustetun metsän kyljessä.",
+     "leveys": 4144,
+     "korkeus": 2992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1945432",
+   "nimi": "Mont Panié",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -20.58833,
+   "lon": 164.77056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Agathis montana de Laub. 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agathis_montana_de_Laub._2.jpg?width=1280",
+     "tekija": "vanessa hequet/Pl@ntNet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agathis_montana_de_Laub._2.jpg",
+     "selite": "Mont Panién usvainen pilvimetsä kasvaa Uuden-Kaledonian korkeimmalla huipulla, ja moni laji on vain täällä.",
+     "leveys": 1707,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9728",
+   "nimi": "Lifou",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -20.9,
+   "lon": 167.26667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Santal Bay, Lifou, 2007 (3).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Santal_Bay%2C_Lifou%2C_2007_(3).JPG?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Santal_Bay%2C_Lifou%2C_2007_(3).JPG",
+     "selite": "Lifoun Santal Bay on vehreiden kallioiden reunustama lahti Loyauté-saarten suurimmalla saarella.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9736",
+   "nimi": "Ouvéa",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -20.45,
+   "lon": 166.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ouvea vu du ciel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ouvea_vu_du_ciel.jpg?width=1280",
+     "tekija": "Piard Clément",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ouvea_vu_du_ciel.jpg",
+     "selite": "Ouvéan atollin pitkä, valkoinen hiekkaranta jatkuu pitkänä turkoosin laguunin vieressä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9732",
+   "nimi": "Le Mont-Dore",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -22.28333,
+   "lon": 166.58333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MONT-DORE Nouvelle Calédonie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MONT-DORE_Nouvelle_Cal%C3%A9donie.jpg?width=1280",
+     "tekija": "MONT DORE",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MONT-DORE_Nouvelle_Cal%C3%A9donie.jpg",
+     "selite": "Le Mont-Doren venesatama ja kaupunki levittäytyvät vuoriston juurelle Nouméan kaakkoispuolella.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mont dore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mont_dore.jpg?width=1280",
+     "tekija": "Laigle karl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mont_dore.jpg",
+     "selite": "Rannikon edustalla kohoaa pieniä, vehreitä saaria, jotka näkyvät Mont-Doren rannalta.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "NouméaCentre.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Noum%C3%A9aCentre.jpg?width=1280",
+   "tekija": "Torbenbrinker",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Noum%C3%A9aCentre.jpg",
+   "selite": "Nouméan keskusta levittäytyy katedraalin ja Port-de-Francen veneiden ympärille.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "3 ans plus tard - Flickr - uphillblok.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3_ans_plus_tard_-_Flickr_-_uphillblok.jpg?width=1280",
+   "tekija": "gérard from Nouméa, (Nouvelle-Calédonie)",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3_ans_plus_tard_-_Flickr_-_uphillblok.jpg",
+   "selite": "Nouméan rannikon lahtia ja niemiä reunustavat vehreät kukkulat ja turkoosi meri.",
+   "leveys": 4566,
+   "korkeus": 2514,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

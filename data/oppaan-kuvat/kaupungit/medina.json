@@ -1,0 +1,352 @@
+{
+ "kaupunki": "medina",
+ "kaupunkiQ": "Q35484",
+ "kohteet": [
+  {
+   "q": "Q486080",
+   "nimi": "Profeetan moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 24.46833,
+   "lon": 39.61083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Madeena masjid nabavi 12122008230.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madeena_masjid_nabavi_12122008230.jpg?width=1280",
+     "tekija": "Bluemangoa2z at Malayalam Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madeena_masjid_nabavi_12122008230.jpg",
+     "selite": "Profeetan moskeija on islamin toiseksi pyhin moskeija, ja sen vihreä kupoli kohoaa Medinan keskustassa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mezquita del Profeta, Medina, Arabia Saudita, 2025-05-22, DD 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_del_Profeta%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_02.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_del_Profeta%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_02.jpg",
+     "selite": "Moskeijan valtavat sateenvarjomaiset katokset varjostavat sisäpihaa aavikon auringolta.",
+     "leveys": 8035,
+     "korkeus": 5357,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masjid Nabawi. Medina, Saudi Arabia-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Nabawi._Medina%2C_Saudi_Arabia-2.jpg?width=1280",
+     "tekija": "Vago",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Nabawi._Medina%2C_Saudi_Arabia-2.jpg",
+     "selite": "Illalla moskeijan minareetit ja kupolit valaistaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Al-Masjid al-Nabawi 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Masjid_al-Nabawi_05.jpg?width=1280",
+     "tekija": "Mondephile",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Masjid_al-Nabawi_05.jpg",
+     "selite": "Minareetit kohoavat moskeijan laajojen pihojen yläpuolelle.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q276569",
+   "nimi": "Quba-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 24.43917,
+   "lon": 39.61722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Quba Mosque from Afar (2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quba_Mosque_from_Afar_(2024).jpg?width=1280",
+     "tekija": "Kaliper1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quba_Mosque_from_Afar_(2024).jpg",
+     "selite": "Quba-moskeija on islamin vanhimpia moskeijoita, ja sen valkoiset minareetit erottuvat kauas.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masjid al-Quba (6171318123).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_al-Quba_(6171318123).jpg?width=1280",
+     "tekija": "Basheer Olakara",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_al-Quba_(6171318123).jpg",
+     "selite": "Moskeijan korkeat minareetit nousevat palmujen yläpuolelle Medinan eteläreunalla.",
+     "leveys": 3769,
+     "korkeus": 2157,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A Minaret of Quba Mosque in Madinah (2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Minaret_of_Quba_Mosque_in_Madinah_(2025).jpg?width=1280",
+     "tekija": "Saudi Press Agency (SPA)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Minaret_of_Quba_Mosque_in_Madinah_(2025).jpg",
+     "selite": "Minareetin yläosan koristeellinen parveke ja kupoli.",
+     "leveys": 7833,
+     "korkeus": 5222,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2334553",
+   "nimi": "Qiblatayn-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 24.4841,
+   "lon": 39.5789,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mezquita de al-Qiblatayn, Medina, Arabia Saudita, 2025-05-22, DD 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_de_al-Qiblatayn%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_09.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_de_al-Qiblatayn%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_09.jpg",
+     "selite": "Qiblatayn-moskeija on tunnettu siitä, että rukoussuunta kääntyi täällä Jerusalemista Mekkaan.",
+     "leveys": 7320,
+     "korkeus": 5529,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mezquita de al-Qiblatayn, Medina, Arabia Saudita, 2025-05-22, DD 10-12 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_de_al-Qiblatayn%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_10-12_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_de_al-Qiblatayn%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_10-12_HDR.jpg",
+     "selite": "Illan valossa moskeijan kaksi minareettia ja kupolit erottuvat taivasta vasten.",
+     "leveys": 8208,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masjid Qiblatain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Qiblatain.jpg?width=1280",
+     "tekija": "Muhammad Mahdi Karim at English Wikipedia",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Qiblatain.jpg",
+     "selite": "Valkoinen moskeija seisoo palmujen ympäröimänä.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1436040",
+   "nimi": "Uhud-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 24.51028,
+   "lon": 39.61389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Uhud.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Uhud.JPG?width=1280",
+     "tekija": "Adiput (talk)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Uhud.JPG",
+     "selite": "Uhud-vuori kohoaa Medinan pohjoispuolella, ja siellä on käyty tunnettu varhaisen islamin taistelu.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gunung Uhud.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gunung_Uhud.JPG?width=1280",
+     "tekija": "Imam Khairul Annas",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gunung_Uhud.JPG",
+     "selite": "Punertava vuorijono rajaa Medinan pohjoista reunaa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jabal Uhud in KSA 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jabal_Uhud_in_KSA_2024.jpg?width=1280",
+     "tekija": "Rodina alwardat",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jabal_Uhud_in_KSA_2024.jpg",
+     "selite": "Vuoren juurella kaupunki ulottuu lähes rinteelle asti.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q154204",
+   "nimi": "Al-Baqin hautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 24.46694,
+   "lon": 39.61639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Baqi Cemetery 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Baqi_Cemetery_2021.jpg?width=1280",
+     "tekija": "Saleh Al Hussain",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Baqi_Cemetery_2021.jpg",
+     "selite": "Al-Baqin hautausmaa on Medinan vanhin islamilainen hautausmaa Profeetan moskeijan vieressä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Perkuburan Baqi' (Maqbaratu al-Baqi') & Masjid al-Nabawi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perkuburan_Baqi'_(Maqbaratu_al-Baqi')_%26_Masjid_al-Nabawi.jpg?width=1280",
+     "tekija": "Kerina yin",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perkuburan_Baqi'_(Maqbaratu_al-Baqi')_%26_Masjid_al-Nabawi.jpg",
+     "selite": "Hautausmaan takaa kohoavat Profeetan moskeijan minareetit.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12242769",
+   "nimi": "Al-Ghamama-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 24.46583,
+   "lon": 39.60694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mezquita de Al-Ghamama, Medina, Arabia Saudita, 2025-05-22, DD 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_de_Al-Ghamama%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_03.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_de_Al-Ghamama%2C_Medina%2C_Arabia_Saudita%2C_2025-05-22%2C_DD_03.jpg",
+     "selite": "Al-Ghamama-moskeija on tumman kiven rakentama historiallinen moskeija aivan Profeetan moskeijan vieressä.",
+     "leveys": 7838,
+     "korkeus": 5225,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masjid Al-Ghamamah (Umroh Ramadhan 2023)-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Al-Ghamamah_(Umroh_Ramadhan_2023)-1.jpg?width=1280",
+     "tekija": "Indonesiagood",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Al-Ghamamah_(Umroh_Ramadhan_2023)-1.jpg",
+     "selite": "Illalla moskeijan kiviseinät ja pienet kupolit valaistaan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Masjid Al-Ghamamah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Al-Ghamamah.jpg?width=1280",
+     "tekija": "معتز توفيق اغبارية",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Al-Ghamamah.jpg",
+     "selite": "Moskeijan matala rakennus erottuu uusien hotellien keskellä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5701241",
+   "nimi": "Hidžaz-radan asema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 24.4617,
+   "lon": 39.6002,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Madinah Museum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Madinah_Museum.JPG?width=1280",
+     "tekija": "Imam Khairul Annas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Madinah_Museum.JPG",
+     "selite": "Hidžaz-radan asemarakennus valmistui Ottomaanien aikana, ja se toimii nyt museona.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Medina City Streets.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Medina_City_Streets.jpg?width=1280",
+   "tekija": "Kaliper1",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Medina_City_Streets.jpg",
+   "selite": "Medinan keskustan kadut ovat täynnä pilgrimien hotelleja Profeetan moskeijan lähellä.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "ISS-66 Medina, Saudi Arabia at night.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-66_Medina%2C_Saudi_Arabia_at_night.jpg?width=1280",
+   "tekija": "NASA",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-66_Medina%2C_Saudi_Arabia_at_night.jpg",
+   "selite": "Avaruudesta Medinan valoverkko erottuu tummasta aavikosta.",
+   "leveys": 5568,
+   "korkeus": 3712,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

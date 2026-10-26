@@ -45,6 +45,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
@@ -77,9 +78,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** iPadin vaakanäkymä: omistajan oma laite (1180 × 820, dpr 2). */
 const NAKYMA = { viewport: { width: 1180, height: 820 }, deviceScaleFactor: 2 };

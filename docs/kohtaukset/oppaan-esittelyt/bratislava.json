@@ -1,0 +1,933 @@
+{
+ "kaupunki": "Bratislava",
+ "id": "bratislava",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Bratislavaan. Ylhäältä Tonava virtaa leveänä kaupungin läpi Pienten Karpaattien eteläpään ja tasangon välissä: joen pohjoisrannalla kukkulalla seisoo nelitorninen linna, ja vastarannalla levittäytyy Petržalkan suuri elementtitalolähiö. Kaupunki on aivan Itävallan ja Unkarin rajalla. Lännen suunnalta käy tuuli, ja se kuljettaa koriamme hitaasti jokea pitkin kohti vanhaa kaupunkia. Kierros alkaa linnakukkulalta Tonavan pohjoisrannalta, jossa suorakaiteen muotoisen linnan neljä kulmatornia kohoavat joen yläpuolelle."
+ },
+ "kierros": [
+  "Q593311",
+  "Q837291",
+  "Q239560",
+  "Q1639599",
+  "Q439356",
+  "Q1717975",
+  "Q568640",
+  "Q579043"
+ ],
+ "kohteet": [
+  {
+   "id": "Q593311",
+   "nimi": "Bratislavan linna",
+   "kuvaus": "Tonavan yllä kohoava kuninkaallinen linna",
+   "luokka": "linna",
+   "koko_m": 350,
+   "katse_suunta": 0,
+   "katse_kaari": 30,
+   "teksti": "Bratislavan linna kohoaa Tonavan yläpuolelle kallioiselle kukkulalle, ja sen suorakaiteen muotoisen rakennuksen jokaisessa kulmassa on torni. Lounaiskulman Kruununtorni on peräisin 1200-luvulta, ja siinä säilytettiin 1500-luvun puolivälistä 1700-luvun lopulle Unkarin kruununjalokiviä. Kuningas Sigismund rakennutti linnan 1400-luvulla lähes kokonaan uudelleen goottilaiseksi palatsiksi. Maria Teresian aikana 1700-luvulla linna rakennettiin uudelleen barokkityyliin. Linna paloi vuonna 1811 ja jäi pitkäksi aikaa raunioksi, kunnes sitä alettiin kunnostaa 1950-luvulla. Nykyään linnassa toimii Slovakian kansallismuseon historiallinen museo.",
+   "lyhyt": "Linnakukkula oli tärkeä keskus jo Suur-Määrin aikana 800-luvulla, kauan ennen nykyistä rakennusta. Nykyään linnaa käytetään myös valtiollisiin tilaisuuksiin: osa tiloista on Slovakian parlamentin eli kansallisneuvoston käytössä.",
+   "syventava": "Miksi Unkarin kruununjalokiviä säilytettiin juuri Bratislavan linnan tornissa?",
+   "kysymykset": [
+    "Kuka oli kuningas Sigismund ja miksi hän rakennutti linnan uudelleen?",
+    "Mitä Suur-Määrin aikana linnakukkulalla oli?",
+    "Mitä linnassa on esillä nykyään?",
+    "Kuka asui linnassa Maria Teresian aikaan?",
+    "Mitä linnalle tapahtui vuonna 1811?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Linna on suorakaiteen muotoinen rakennus, jonka jokaisessa kulmassa on torni, ja se seisoo kallioisella kukkulalla Tonavan yläpuolella.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Linna on suorakaiteen muotoinen rakennus, jonka jokaisessa kulmassa on torni, ja se seisoo kallioisella kukkulalla Tonavan yläpuolella.",
+     "url": "https://castles.sk/1.html"
+    },
+    {
+     "vaite": "Lounaiskulman Kruununtorni on peräisin 1200-luvulta.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Lounaiskulman Kruununtorni on peräisin 1200-luvulta.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Kruunun jalokiviä säilytettiin Kruununtornissa 1500-luvun puolivälistä 1700-luvun lopulle (lähteissä 1552 ja 1783/1784).",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Kruunun jalokiviä säilytettiin Kruununtornissa 1500-luvun puolivälistä 1700-luvun lopulle (lähteissä 1552 ja 1783/1784).",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Sigismund Luxemburgilainen rakennutti linnan lähes kokonaan uudelleen goottilaiseksi linnoitukseksi 1400-luvulla.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Sigismund Luxemburgilainen rakennutti linnan lähes kokonaan uudelleen goottilaiseksi linnoitukseksi 1400-luvulla.",
+     "url": "https://castles.sk/1.html"
+    },
+    {
+     "vaite": "Sigismund Luxemburgilainen rakennutti linnan lähes kokonaan uudelleen goottilaiseksi linnoitukseksi 1400-luvulla.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Maria Teresian aikana linna rakennettiin uudelleen barokkityyliin.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Maria Teresian aikana linna rakennettiin uudelleen barokkityyliin.",
+     "url": "https://castles.sk/1.html"
+    },
+    {
+     "vaite": "Maria Teresian aikana linna rakennettiin uudelleen barokkityyliin.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Linna paloi vuonna 1811 ja jäi raunioiksi.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Linna paloi vuonna 1811 ja jäi raunioiksi.",
+     "url": "https://castles.sk/1.html"
+    },
+    {
+     "vaite": "Linna paloi vuonna 1811 ja jäi raunioiksi.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Kunnostus alkoi 1950-luvulla (tutkimus 1953, restaurointi 1956-1957).",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Kunnostus alkoi 1950-luvulla (tutkimus 1953, restaurointi 1956-1957).",
+     "url": "https://castles.sk/1.html"
+    },
+    {
+     "vaite": "Linnassa toimii Slovakian kansallismuseon historiallinen museo.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Linnassa toimii Slovakian kansallismuseon historiallinen museo.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Linnakukkula oli tärkeä keskus Suur-Määrin aikana 800-luvulla.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Linnakukkula oli tärkeä keskus Suur-Määrin aikana 800-luvulla.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    },
+    {
+     "vaite": "Osa linnan tiloista on Slovakian parlamentin (kansallisneuvoston) käytössä tai edustustiloina.",
+     "url": "https://en.wikipedia.org/wiki/Bratislava_Castle"
+    },
+    {
+     "vaite": "Osa linnan tiloista on Slovakian parlamentin (kansallisneuvoston) käytössä tai edustustiloina.",
+     "url": "https://www.visitbratislava.com/places/bratislava-castle/"
+    }
+   ]
+  },
+  {
+   "id": "Q837291",
+   "nimi": "Nový most",
+   "kuvaus": "Tonavan ylittävä UFO-silta",
+   "luokka": "silta",
+   "koko_m": 430,
+   "korkeus_m": 85,
+   "teksti": "Nový most, virallisesti Most SNP eli Slovakian kansannousun silta, ylittää Tonavan ylhäältä katsottuna yhdellä ainoalla pylonilla, jonka huipulla on lentävän lautasen muotoinen rakennus. Se on vinoköysisilta, jossa kaikki köydet ovat samassa tasossa, ja sitä pidetään maailman pisimpänä sillana, jossa on yksi pylon ja yksi köysitaso. Pylon on noin 85 metriä korkea ja silta noin 430 metriä pitkä. Rakentaminen alkoi vuonna 1967, ja silta avattiin 26. elokuuta 1972. Paikalliset kutsuvat siltaa myös UFO-sillaksi. Lautasessa on näköalatasanne ja ravintola.",
+   "lyhyt": "Sillan liittymätien tieltä purettiin osa vanhaakaupunkia, myös lähes koko juutalaiskortteli. Pääjänne on 303 metriä pitkä, ja silta julistettiin 16. toukokuuta 2018 kansalliseksi kulttuurimuistomerkiksi. Yläkannella on neljä autokaistaa, ja alakannella kulkevat pyöräilijät ja jalankulkijat.",
+   "syventava": "Miksi sillan huipulle rakennettiin lentävää lautasta muistuttava rakennus?",
+   "kysymykset": [
+    "Mitä lentävän lautasen sisällä on?",
+    "Miksi silta on nimetty Slovakian kansannousun mukaan?",
+    "Mikä on vinoköysisilta?",
+    "Kuinka korkealla Tonavan yläpuolella pylonin huippu on?",
+    "Miten sillan rakentaminen muutti vanhaakaupunkia?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta on vinoköysisilta, jossa on yksi pylon ja yksi köysitaso, ja se on maailman pisin tällainen silta.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Silta on vinoköysisilta, jossa on yksi pylon ja yksi köysitaso, ja se on maailman pisin tällainen silta.",
+     "url": "https://www.filmcommission.sk/579-en/bridge-of-the-slovak-national-uprising-ufo-bridge/"
+    },
+    {
+     "vaite": "Virallinen nimi Most SNP, Slovakian kansannousun silta; paikalliset kutsuvat sitä myös uudeksi sillaksi (Nový most) ja UFO-sillaksi.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Virallinen nimi Most SNP, Slovakian kansannousun silta; paikalliset kutsuvat sitä myös uudeksi sillaksi (Nový most) ja UFO-sillaksi.",
+     "url": "https://www.filmcommission.sk/579-en/bridge-of-the-slovak-national-uprising-ufo-bridge/"
+    },
+    {
+     "vaite": "Pylonin korkeus on noin 85 metriä (84,6 m maanpinnasta).",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Pylonin korkeus on noin 85 metriä (84,6 m maanpinnasta).",
+     "url": "https://www.filmcommission.sk/579-en/bridge-of-the-slovak-national-uprising-ufo-bridge/"
+    },
+    {
+     "vaite": "Sillan pituus on noin 430 metriä (430,8 m; Structurae 431,8 m).",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Sillan pituus on noin 430 metriä (430,8 m; Structurae 431,8 m).",
+     "url": "https://structurae.net/en/structures/new-bridge",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1967 ja silta avattiin 26.8.1972.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1967 ja silta avattiin 26.8.1972.",
+     "url": "https://www.great-towers.com/blog/ufo-bratislava-54-years"
+    },
+    {
+     "vaite": "Pylonin huipulla olevassa lentävän lautasen muotoisessa rakennuksessa on näköalatasanne ja ravintola.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Pylonin huipulla olevassa lentävän lautasen muotoisessa rakennuksessa on näköalatasanne ja ravintola.",
+     "url": "https://www.filmcommission.sk/579-en/bridge-of-the-slovak-national-uprising-ufo-bridge/"
+    },
+    {
+     "vaite": "Pylonin huipulla olevassa lentävän lautasen muotoisessa rakennuksessa on näköalatasanne ja ravintola.",
+     "url": "https://www.great-towers.com/blog/ufo-bratislava-54-years"
+    },
+    {
+     "vaite": "Sillan liittymätien tieltä purettiin osa vanhaakaupunkia, myös lähes koko juutalaiskortteli.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Sillan liittymätien tieltä purettiin osa vanhaakaupunkia, myös lähes koko juutalaiskortteli.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Pääjänne on 303 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Pääjänne on 303 metriä.",
+     "url": "https://structurae.net/en/structures/new-bridge",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Yläkannella on neljä autokaistaa, alakannella pyöräilijät ja jalankulkijat.",
+     "url": "https://en.wikipedia.org/wiki/Most_SNP"
+    },
+    {
+     "vaite": "Yläkannella on neljä autokaistaa, alakannella pyöräilijät ja jalankulkijat.",
+     "url": "https://structurae.net/en/structures/new-bridge",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Silta julistettiin kansalliseksi kulttuurimuistomerkiksi 16.5.2018.",
+     "url": "https://www.filmcommission.sk/579-en/bridge-of-the-slovak-national-uprising-ufo-bridge/"
+    },
+    {
+     "vaite": "Silta julistettiin kansalliseksi kulttuurimuistomerkiksi 16.5.2018.",
+     "url": "https://structurae.net/en/structures/new-bridge",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q239560",
+   "nimi": "Pyhän Martinuksen katedraali",
+   "kuvaus": "Kruunajaiskirkko vanhassakaupungissa",
+   "luokka": "kirkko",
+   "koko_m": 75,
+   "korkeus_m": 85,
+   "katse_suunta": 30,
+   "katse_kaari": 40,
+   "teksti": "Pyhän Martinin tuomiokirkon torni nousee pallokorista katsottuna vanhankaupungin kattojen yläpuolelle 85 metrin korkeuteen. Nykyinen goottilainen kirkko vihittiin käyttöön vuonna 1452 aiemman romaanisen kirkon paikalle. Kirkon sisätila on noin 69 metriä pitkä ja 23 metriä leveä. Kun Bratislava sai kaupunkioikeudet vuonna 1291, kirkko rakennettiin osaksi kaupungin muureja, ja sen torni toimi puolustustornina. Kirkko oli Unkarin kuningaskunnan kruunajaiskirkko vuosina 1563–1830, ja ensimmäisenä siellä kruunattiin Maksimilian II.",
+   "lyhyt": "Tornin huipulla on kullattu jäljitelmä Unkarin kuninkaallisesta kruunusta. Kirkon sisällä on Georg Raphael Donnerin tekemä lyijyinen ratsastajaveistos, jossa Pyhä Martinus jakaa viittansa kerjäläisen kanssa. Veistos on barokkiaikainen.",
+   "syventava": "Miksi kirkon torniin tehtiin kuninkaallisen kruunun jäljitelmä?",
+   "kysymykset": [
+    "Mitä paikalla oli ennen nykyistä goottilaista kirkkoa?",
+    "Kuka oli Maksimilian II?",
+    "Milloin Bratislava sai kaupunkioikeudet?",
+    "Kuka teki Pyhän Martinin ratsastajaveistoksen?",
+    "Mitä Pyhä Martinus jakoi kerjäläisen kanssa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Tornin korkeus on 85 metriä.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Tornin korkeus on 85 metriä.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Kirkko vihittiin 1452 romaanisen kirkon paikalle (aiempi kirkko mainitaan 1221).",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Kirkko vihittiin 1452 romaanisen kirkon paikalle (aiempi kirkko mainitaan 1221).",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Sisätila on 69,37 m pitkä ja 22,85 m leveä.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Sisätila on 69,37 m pitkä ja 22,85 m leveä.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Kirkko oli kruunajaiskirkko 1563-1830.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Kirkko oli kruunajaiskirkko 1563-1830.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Kirkko oli kruunajaiskirkko 1563-1830.",
+     "url": "https://new.visitbratislava.com/sights-attractions/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Ensimmäinen kirkossa kruunattu oli Maksimilian II (8.9.1563).",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Ensimmäinen kirkossa kruunattu oli Maksimilian II (8.9.1563).",
+     "url": "https://new.visitbratislava.com/sights-attractions/old-town-hall/"
+    },
+    {
+     "vaite": "Bratislava sai kaupunkioikeudet 1291, ja kirkko rakennettiin osaksi kaupungin muureja; torni toimi puolustustornina.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Bratislava sai kaupunkioikeudet 1291, ja kirkko rakennettiin osaksi kaupungin muureja; torni toimi puolustustornina.",
+     "url": "https://new.visitbratislava.com/sights-attractions/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Bratislava sai kaupunkioikeudet 1291, ja kirkko rakennettiin osaksi kaupungin muureja; torni toimi puolustustornina.",
+     "url": "https://www.historyhit.com/locations/st-martins-cathedral/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Kirkon tornin huipulla on kullattu jäljitelmä Unkarin kuninkaallisesta kruunusta.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Kirkon tornin huipulla on kullattu jäljitelmä Unkarin kuninkaallisesta kruunusta.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Georg Raphael Donnerin ratsastava Pyhä Martinus -veistos.",
+     "url": "https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava"
+    },
+    {
+     "vaite": "Georg Raphael Donnerin ratsastava Pyhä Martinus -veistos.",
+     "url": "https://www.visitbratislava.com/places/st-martins-cathedral/"
+    },
+    {
+     "vaite": "Georg Raphael Donnerin ratsastava Pyhä Martinus -veistos.",
+     "url": "https://new.visitbratislava.com/sights-attractions/st-martins-cathedral/"
+    }
+   ]
+  },
+  {
+   "id": "Q1639599",
+   "nimi": "Hviezdoslavin aukio",
+   "kuvaus": "Vanhankaupungin kävelyaukio",
+   "luokka": "aukio",
+   "koko_m": 350,
+   "teksti": "Hviezdoslavin aukio levittäytyy vanhankaupungin vihreänä kävelykatuna Nový mostin ja Slovakian kansallisteatterin välillä. Aukio on nimetty slovakialaisen runoilijan Pavol Országh Hviezdoslavin mukaan, ja runoilijan suuri patsas seisoo lähellä teatteria. Aukion päässä on vanha teatterirakennus, jonka suunnittelivat wieniläiset Fellner ja Helmer ja joka valmistui uusrenessanssityylisenä vuonna 1886. Teatterin edessä on Ganymedes-suihkulähde. Pitkin aukiota kulkee kaksi rinnakkaista suihkulähdettä, ja kävelyalue on puiden reunustama.",
+   "lyhyt": "Aukion päässä oleva teatteri avattiin 22. syyskuuta 1886 Ferenc Erkelin oopperalla Bánk bán. Aukion laidalla on myös Reduta, jossa Slovakian filharmonikot esiintyvät. Aukion keskellä on lava, jolla kuullaan kesäisin populaari-, kansan- ja jazzmusiikkia.",
+   "syventava": "Kuka oli runoilija Pavol Országh Hviezdoslav?",
+   "kysymykset": [
+    "Milloin ja millä esityksellä vanha teatteri avattiin?",
+    "Mikä on Reduta?",
+    "Mitä aukio oli ennen kävelykatua?",
+    "Mitä entisiä nimiä aukiolla on ollut?",
+    "Mitä aukiolla järjestetään nykyään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio sijaitsee vanhassakaupungissa Nový mostin ja Slovakian kansallisteatterin välissä.",
+     "url": "https://en.wikipedia.org/wiki/Hviezdoslavovo_n%C3%A1mestie"
+    },
+    {
+     "vaite": "Aukio sijaitsee vanhassakaupungissa Nový mostin ja Slovakian kansallisteatterin välissä.",
+     "url": "https://en.wikipedia.org/wiki/Slovak_National_Theatre"
+    },
+    {
+     "vaite": "Aukio on nimetty runoilija Pavol Országh Hviezdoslavin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Hviezdoslavovo_n%C3%A1mestie"
+    },
+    {
+     "vaite": "Aukio on nimetty runoilija Pavol Országh Hviezdoslavin mukaan.",
+     "url": "https://new.visitbratislava.com/sights-attractions/hviezdoslavovo-square/"
+    },
+    {
+     "vaite": "Runoilijan suuri patsas on lähellä teatteria.",
+     "url": "https://en.wikipedia.org/wiki/Hviezdoslavovo_n%C3%A1mestie"
+    },
+    {
+     "vaite": "Runoilijan suuri patsas on lähellä teatteria.",
+     "url": "https://www.choral-music.sk/en/Bratislava/view/hviezdoslavovo-namestie"
+    },
+    {
+     "vaite": "Teatteri on uusrenessanssia, Fellner ja Helmer, avattu 1886.",
+     "url": "https://dev.visitbratislava.com/sights-attractions/slovak-national-theatre-historical-building/"
+    },
+    {
+     "vaite": "Teatteri on uusrenessanssia, Fellner ja Helmer, avattu 1886.",
+     "url": "https://en.wikipedia.org/wiki/Slovak_National_Theatre"
+    },
+    {
+     "vaite": "Teatteri on uusrenessanssia, Fellner ja Helmer, avattu 1886.",
+     "url": "https://www.explorecarpathia.eu/en/hungary/pozsony-bratislava/former-town-theatre-slovak-national-theatre"
+    },
+    {
+     "vaite": "Ganymedes-suihkulähde teatterin edessä.",
+     "url": "https://dev.visitbratislava.com/sights-attractions/slovak-national-theatre-historical-building/"
+    },
+    {
+     "vaite": "Ganymedes-suihkulähde teatterin edessä.",
+     "url": "https://en.wikipedia.org/wiki/Slovak_National_Theatre"
+    },
+    {
+     "vaite": "Aukiota pitkin kulkee kaksi suihkulähdettä ja puita on riveinä (kävelyalue vehreä).",
+     "url": "https://en.wikipedia.org/wiki/Hviezdoslavovo_n%C3%A1mestie"
+    },
+    {
+     "vaite": "Aukiota pitkin kulkee kaksi suihkulähdettä ja puita on riveinä (kävelyalue vehreä).",
+     "url": "https://new.visitbratislava.com/sights-attractions/hviezdoslavovo-square/"
+    },
+    {
+     "vaite": "Aukiota pitkin kulkee kaksi suihkulähdettä ja puita on riveinä (kävelyalue vehreä).",
+     "url": "https://www.choral-music.sk/en/Bratislava/view/hviezdoslavovo-namestie"
+    },
+    {
+     "vaite": "Teatteri avattiin 22.9.1886 Erkelin oopperalla Bánk bán.",
+     "url": "https://en.wikipedia.org/wiki/Slovak_National_Theatre"
+    },
+    {
+     "vaite": "Teatteri avattiin 22.9.1886 Erkelin oopperalla Bánk bán.",
+     "url": "https://www.explorecarpathia.eu/en/hungary/pozsony-bratislava/former-town-theatre-slovak-national-theatre"
+    },
+    {
+     "vaite": "Reduta, jossa Slovakian filharmonikot esiintyvät, on aukion laidalla.",
+     "url": "https://new.visitbratislava.com/sights-attractions/hviezdoslavovo-square/"
+    },
+    {
+     "vaite": "Reduta, jossa Slovakian filharmonikot esiintyvät, on aukion laidalla.",
+     "url": "https://www.choral-music.sk/en/Bratislava/view/hviezdoslavovo-namestie"
+    },
+    {
+     "vaite": "Aukion keskellä on lava kulttuuritapahtumille (populaari-, kansan- ja jazzmusiikkia).",
+     "url": "https://en.wikipedia.org/wiki/Hviezdoslavovo_n%C3%A1mestie"
+    },
+    {
+     "vaite": "Aukion keskellä on lava kulttuuritapahtumille (populaari-, kansan- ja jazzmusiikkia).",
+     "url": "https://www.choral-music.sk/en/Bratislava/view/hviezdoslavovo-namestie"
+    }
+   ]
+  },
+  {
+   "id": "Q439356",
+   "nimi": "Bratislavan vanha kaupungintalo",
+   "kuvaus": "Keskiaikainen kaupungintalo ja museo",
+   "luokka": "raatihuone",
+   "koko_m": 65,
+   "katse_suunta": 270,
+   "katse_kaari": 30,
+   "teksti": "Vanha raatihuone erottuu Päätorin laidalla korkeasta keskiaikaisesta tornistaan. Rakennuksen vanhin ydin on 1300-luvulta peräisin oleva torniasunto, joka kuului pormestari Jacobille. Sen viereen liitettiin vähitellen muita taloja, ja 1430-luvulla rakennuksesta tuli kaupungin virallinen raatihuone. Nykyisessä rakennuksessa yhdistyvät goottilainen, renessanssi- ja barokkityyli. Seinässä on tykinkuula, joka muistuttaa Napoleonin joukkojen tulituksesta vuonna 1809. Vuodesta 1868 talossa on toiminut Bratislavan kaupunginmuseo.",
+   "lyhyt": "Vuosina 1911–1912 raatihuoneeseen rakennettiin uusi siipi, joka yhdistää sen Primaattipalatsiin, jonka kaupunki oli ostanut kunnan käyttöön. Tornin goottilainen muoto uudistettiin barokkiasuun 1700-luvulla, ja renessanssin aikana rakennuksen julkisivut yhtenäistettiin.",
+   "syventava": "Miksi Napoleonin joukot ampuivat Bratislavaa vuonna 1809?",
+   "kysymykset": [
+    "Kuka oli pormestari Jacob?",
+    "Mitä kaupunginmuseossa on esillä?",
+    "Mikä on Primaattipalatsi?",
+    "Miltä tornista aukeava näkymä näyttää?",
+    "Milloin tornin barokkimuoto syntyi?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Vanhin ydin on pormestari Jacobin 1300-luvun talo, jossa on torni.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Vanhin ydin on pormestari Jacobin 1300-luvun talo, jossa on torni.",
+     "url": "https://new.visitbratislava.com/sights-attractions/old-town-hall/"
+    },
+    {
+     "vaite": "Vanhin ydin on pormestari Jacobin 1300-luvun talo, jossa on torni.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "1400-luvun alussa talosta tuli kaupungin virallinen raatihuone, ja viereisiä taloja liitettiin siihen.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "1400-luvun alussa talosta tuli kaupungin virallinen raatihuone, ja viereisiä taloja liitettiin siihen.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "Rakennus yhdistää goottilaista, renessanssi- ja barokkityyliä.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Rakennus yhdistää goottilaista, renessanssi- ja barokkityyliä.",
+     "url": "https://new.visitbratislava.com/sights-attractions/old-town-hall/"
+    },
+    {
+     "vaite": "Rakennus yhdistää goottilaista, renessanssi- ja barokkityyliä.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "Seinässä on tykinkuula, joka muistuttaa Napoleonin joukkojen tulituksesta 1809.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Seinässä on tykinkuula, joka muistuttaa Napoleonin joukkojen tulituksesta 1809.",
+     "url": "https://new.visitbratislava.com/sights-attractions/old-town-hall/"
+    },
+    {
+     "vaite": "Kaupunginmuseo on toiminut talossa vuodesta 1868.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Kaupunginmuseo on toiminut talossa vuodesta 1868.",
+     "url": "https://new.visitbratislava.com/sights-attractions/old-town-hall/"
+    },
+    {
+     "vaite": "Kaupunginmuseo on toiminut talossa vuodesta 1868.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "Kaupunginmuseo on toiminut talossa vuodesta 1868.",
+     "url": "https://muzeumbratislava.sk/en/node/247"
+    },
+    {
+     "vaite": "Uusi siipi 1911-1912 yhdistää raatihuoneen Primaattipalatsiin.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Uusi siipi 1911-1912 yhdistää raatihuoneen Primaattipalatsiin.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "Tornin goottilainen muoto uudistettiin barokkiasuun 1700-luvulla (1733).",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Tornin goottilainen muoto uudistettiin barokkiasuun 1700-luvulla (1733).",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    },
+    {
+     "vaite": "Julkisivut yhtenäistettiin renessanssityyliin.",
+     "url": "https://en.wikipedia.org/wiki/Old_Town_Hall_(Bratislava)"
+    },
+    {
+     "vaite": "Julkisivut yhtenäistettiin renessanssityyliin.",
+     "url": "https://muzeumbratislava.sk/en/old-town-hall"
+    }
+   ]
+  },
+  {
+   "id": "Q1717975",
+   "nimi": "Mikaelin portti",
+   "kuvaus": "Vanhankaupungin ainoa säilynyt portti",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 51,
+   "katse_suunta": 0,
+   "katse_kaari": 30,
+   "teksti": "Mikaelin portti erottuu ylhäältä kapeana tornina, jonka huipulla seisoo arkkienkeli Mikaelin patsas kukistamassa lohikäärmettä. Portti on ainoa säilynyt Bratislavan keskiaikaisen kaupunkimuurin neljästä portista, ja se on nimetty lähellä sijainneen Pyhän Mikaelin kirkon mukaan. Torni uusittiin nykyiseen barokkiasuunsa vuosina 1753–1758, mutta itse portti on keskiaikainen ja kuului alun perin kaupungin linnoitusmuureihin, jotka suojasivat vanhaakaupunkia. Nykyään torni kuuluu Bratislavan kaupunginmuseoon.",
+   "lyhyt": "Portin alla kadulla on nollakilometrin laatta, josta näkee etäisyyden Euroopan ja maailman pääkaupunkeihin. Tornin sisällä on aseiden ja kaupungin linnoitusjärjestelmän näyttelyt, ja ylhäältä tasanteelta avautuu näkymä vanhankaupungin katoille ja linnalle.",
+   "syventava": "Miksi tornin kärjessä on arkkienkeli Mikaelin patsas?",
+   "kysymykset": [
+    "Mitä muita portteja Bratislavan keskiaikaisessa muurissa oli?",
+    "Mitä nollakilometrin laatta kertoo?",
+    "Mitä tornin museossa on esillä?",
+    "Miltä tornin huipulta näkee?",
+    "Milloin torni sai nykyisen barokkimuotonsa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Mikaelin portti on ainoa säilynyt keskiaikainen kaupunginportti; alun perin portteja oli neljä.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Mikaelin portti on ainoa säilynyt keskiaikainen kaupunginportti; alun perin portteja oli neljä.",
+     "url": "https://www.visitbratislava.com/places/michaels-gate/"
+    },
+    {
+     "vaite": "Mikaelin portti on ainoa säilynyt keskiaikainen kaupunginportti; alun perin portteja oli neljä.",
+     "url": "https://new.visitbratislava.com/sights-attractions/michaels-tower/"
+    },
+    {
+     "vaite": "Mikaelin portti on ainoa säilynyt keskiaikainen kaupunginportti; alun perin portteja oli neljä.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Portti on nimetty läheisen Pyhän Mikaelin kirkon mukaan.",
+     "url": "https://www.visitbratislava.com/places/michaels-gate/"
+    },
+    {
+     "vaite": "Portti on nimetty läheisen Pyhän Mikaelin kirkon mukaan.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Torni kuuluu Bratislavan kaupunginmuseoon.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Torni kuuluu Bratislavan kaupunginmuseoon.",
+     "url": "https://www.slovakia.com/sightseeings-museums/michaels-gate/"
+    },
+    {
+     "vaite": "Torni kuuluu Bratislavan kaupunginmuseoon.",
+     "url": "https://muzeumbratislava.sk/en/node/247"
+    },
+    {
+     "vaite": "Torni on 51 metriä korkea.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Torni on 51 metriä korkea.",
+     "url": "https://new.visitbratislava.com/sights-attractions/michaels-tower/"
+    },
+    {
+     "vaite": "Torni on 51 metriä korkea.",
+     "url": "https://www.slovakia.com/sightseeings-museums/michaels-gate/"
+    },
+    {
+     "vaite": "Torni uusittiin nykyiseen barokkiasuunsa vuosina 1753-1758.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Torni uusittiin nykyiseen barokkiasuunsa vuosina 1753-1758.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Huipulla on arkkienkeli Mikaelin ja lohikäärmeen patsas.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Huipulla on arkkienkeli Mikaelin ja lohikäärmeen patsas.",
+     "url": "https://www.slovakia.com/sightseeings-museums/michaels-gate/"
+    },
+    {
+     "vaite": "Huipulla on arkkienkeli Mikaelin ja lohikäärmeen patsas.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Portti kuului keskiaikaisiin kaupungin linnoitusmuureihin.",
+     "url": "https://new.visitbratislava.com/sights-attractions/michaels-tower/"
+    },
+    {
+     "vaite": "Portti kuului keskiaikaisiin kaupungin linnoitusmuureihin.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Portin alla on nollakilometrin laatta, jossa etäisyyksiä pääkaupunkeihin.",
+     "url": "https://www.visitbratislava.com/places/michaels-gate/"
+    },
+    {
+     "vaite": "Portin alla on nollakilometrin laatta, jossa etäisyyksiä pääkaupunkeihin.",
+     "url": "https://new.visitbratislava.com/sights-attractions/michaels-tower/"
+    },
+    {
+     "vaite": "Portin alla on nollakilometrin laatta, jossa etäisyyksiä pääkaupunkeihin.",
+     "url": "https://www.slovakia.com/sightseeings-museums/michaels-gate/"
+    },
+    {
+     "vaite": "Tornissa on aseiden ja kaupungin linnoituksen näyttely.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Tornissa on aseiden ja kaupungin linnoituksen näyttely.",
+     "url": "https://www.slovakia.com/sightseeings-museums/michaels-gate/"
+    },
+    {
+     "vaite": "Tornissa on aseiden ja kaupungin linnoituksen näyttely.",
+     "url": "https://hunektar.sk/en/records/mihaly-kapu"
+    },
+    {
+     "vaite": "Tornin huipulta tasanteelta näkee vanhankaupungin ja linnan.",
+     "url": "https://en.wikipedia.org/wiki/Michael%27s_Gate"
+    },
+    {
+     "vaite": "Tornin huipulta tasanteelta näkee vanhankaupungin ja linnan.",
+     "url": "https://new.visitbratislava.com/sights-attractions/michaels-tower/"
+    }
+   ]
+  },
+  {
+   "id": "Q568640",
+   "nimi": "Grassalkovichin palatsi",
+   "kuvaus": "Slovakian presidentin rokokoopalatsi",
+   "luokka": "palatsi",
+   "koko_m": 95,
+   "katse_suunta": 0,
+   "katse_kaari": 30,
+   "teksti": "Grassalkovichin palatsi sijaitsee Hodžovo-aukion laidalla, ja sen takana levittäytyy ranskalaistyylinen puutarha. Kreivi Antal Grassalkovich, keisarinna Maria Teresian läheinen uskottu, rakennutti sen kesäpalatsikseen silloisen kaupunginmuurin ulkopuolelle, ja rokokoopalatsi valmistui vuonna 1760. Grassalkovichilla oli oma orkesteri, ja Joseph Haydnin kerrotaan johtaneen konsertteja palatsin puutarhassa. Rakennus on ollut Slovakian presidentin virallinen asuinpaikka 30. syyskuuta 1996 alkaen.",
+   "lyhyt": "Kommunismin aikana palatsi oli lasten ja nuorten harrastuskeskus, Klement Gottwaldin pioneeri- ja nuorisotalo, ja tuo käyttö vahingoitti rakennusta. Palatsin kunnostus 1990-luvulla kesti kolme vuotta. Presidentin puutarha on nykyään avoinna yleisölle ilmaiseksi.",
+   "syventava": "Miksi palatsin rakentaja Grassalkovich oli niin lähellä Maria Teresiaa?",
+   "kysymykset": [
+    "Kuka oli Antal Grassalkovich?",
+    "Milloin Maria Teresia vieraili palatsissa?",
+    "Mitä palatsissa oli kommunismin aikana?",
+    "Miksi palatsi tarvitsi laajan kunnostuksen?",
+    "Minkä tyylinen puutarha palatsin takana on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Palatsi sijaitsee Hodžovo-aukion laidalla vanhassakaupungissa ja sen ympärillä on ranskalaistyylinen puutarha.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsi sijaitsee Hodžovo-aukion laidalla vanhassakaupungissa ja sen ympärillä on ranskalaistyylinen puutarha.",
+     "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/"
+    },
+    {
+     "vaite": "Antal Grassalkovich oli Maria Teresian luotettu ystävä ja rakennutti palatsin kesäpalatsikseen.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Antal Grassalkovich oli Maria Teresian luotettu ystävä ja rakennutti palatsin kesäpalatsikseen.",
+     "url": "http://www.prezident.sk/en/presidential-palace/"
+    },
+    {
+     "vaite": "Palatsi valmistui 1760 rokokoo- eli myöhäisbarokkityyliin.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsi valmistui 1760 rokokoo- eli myöhäisbarokkityyliin.",
+     "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/"
+    },
+    {
+     "vaite": "Haydnin kerrotaan johtaneen konsertteja palatsin puutarhassa; Grassalkovichilla oli oma orkesteri.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Haydnin kerrotaan johtaneen konsertteja palatsin puutarhassa; Grassalkovichilla oli oma orkesteri.",
+     "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/"
+    },
+    {
+     "vaite": "Palatsi on ollut presidentin virallinen asuinpaikka 30.9.1996 alkaen.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsi on ollut presidentin virallinen asuinpaikka 30.9.1996 alkaen.",
+     "url": "http://www.prezident.sk/en/presidential-palace/"
+    },
+    {
+     "vaite": "Palatsi on ollut presidentin virallinen asuinpaikka 30.9.1996 alkaen.",
+     "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/"
+    },
+    {
+     "vaite": "Palatsi oli Klement Gottwaldin pioneeri- ja nuorisotalo, ja lapset vahingoittivat rakennusta.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsi oli Klement Gottwaldin pioneeri- ja nuorisotalo, ja lapset vahingoittivat rakennusta.",
+     "url": "http://www.prezident.sk/en/presidential-palace/"
+    },
+    {
+     "vaite": "Palatsin kunnostus tehtiin 1990-luvulla ja kesti kolme vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsin kunnostus tehtiin 1990-luvulla ja kesti kolme vuotta.",
+     "url": "http://www.prezident.sk/en/presidential-palace/"
+    },
+    {
+     "vaite": "Palatsi rakennettiin kesäpalatsiksi silloisen kaupunginmuurin ulkopuolelle.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Palatsi rakennettiin kesäpalatsiksi silloisen kaupunginmuurin ulkopuolelle.",
+     "url": "http://www.prezident.sk/en/presidential-palace/"
+    },
+    {
+     "vaite": "Puutarha on julkinen puisto, avoinna ilmaiseksi.",
+     "url": "https://en.wikipedia.org/wiki/Grassalkovich_Palace"
+    },
+    {
+     "vaite": "Puutarha on julkinen puisto, avoinna ilmaiseksi.",
+     "url": "https://new.visitbratislava.com/sights-attractions/presidential-palace-and-gardens-grassalkovich-palace/"
+    }
+   ]
+  },
+  {
+   "id": "Q579043",
+   "nimi": "Pyhän Elisabetin kirkko",
+   "kuvaus": "Sinikattoinen secessiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 35,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Sininen kirkko, virallisesti Unkarin Pyhän Elisabetin kirkko, erottuu ylhäältä sinisestä lasitetusta katostaan ja sylinterimäisestä tornistaan. Kirkon suunnitteli unkarilainen arkkitehti Ödön Lechner unkarilaisen secession eli jugendin tyyliin, ja se valmistui vuonna 1913. Torni on 36,8 metriä korkea. Kirkon pohjakaava on soikea: suunniteltu kupoli jäi rakentamatta, ja sen tilalle tehtiin tynnyriholvi, jonka päällä on aumakatto. Julkisivua koristaa sininen majolika. Kirkko on omistettu Elisabet Unkarilaiselle, Unkarin kuninkaan Andreas II:n tyttärelle.",
+   "lyhyt": "Lechner suunnitteli kirkon lisäksi viereisen lukion ja pappilan, ja kirkko kuului alun perin lukioon ja toimi sen koulukappelina. Julkisivu maalattiin ensin vaaleilla pastellisävyillä, ja vasta myöhemmin siitä tuli sininen; siitä kirkko sai lempinimensä.",
+   "syventava": "Miksi kirkko on omistettu juuri Elisabet Unkarilaiselle?",
+   "kysymykset": [
+    "Kuka oli Elisabet Unkarilainen?",
+    "Kuka oli Ödön Lechner?",
+    "Mitä unkarilainen secessio tarkoittaa?",
+    "Millainen kirkon torni on?",
+    "Mihin kirkon lempinimi viittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kirkko on Unkarin Pyhän Elisabetin kirkko, jonka lempinimi on Sininen kirkko.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Kirkko on Unkarin Pyhän Elisabetin kirkko, jonka lempinimi on Sininen kirkko.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Kirkko on Unkarin Pyhän Elisabetin kirkko, jonka lempinimi on Sininen kirkko.",
+     "url": "https://www.visitbratislava.com/places/blue-church/"
+    },
+    {
+     "vaite": "Kirkon suunnitteli Ödön Lechner unkarilaisen secession (jugendin) tyyliin.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Kirkon suunnitteli Ödön Lechner unkarilaisen secession (jugendin) tyyliin.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Kirkko valmistui 1913 (vihkiäiset 11.10.1913).",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Kirkko valmistui 1913 (vihkiäiset 11.10.1913).",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Kirkko valmistui 1913 (vihkiäiset 11.10.1913).",
+     "url": "https://www.visitbratislava.com/places/blue-church/"
+    },
+    {
+     "vaite": "Sylinterimäinen torni on 36,8 metriä korkea.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Sylinterimäinen torni on 36,8 metriä korkea.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Sylinterimäinen torni on 36,8 metriä korkea.",
+     "url": "https://www.visitbratislava.com/places/blue-church/"
+    },
+    {
+     "vaite": "Pohjakaava on soikea; kupoli jäi rakentamatta ja tilalle tehtiin tynnyriholvi ja aumakatto.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Pohjakaava on soikea; kupoli jäi rakentamatta ja tilalle tehtiin tynnyriholvi ja aumakatto.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Katto on sinilasitettu ja koristeena on sininen majolika.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Katto on sinilasitettu ja koristeena on sininen majolika.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Katto on sinilasitettu ja koristeena on sininen majolika.",
+     "url": "https://www.visitbratislava.com/places/blue-church/"
+    },
+    {
+     "vaite": "Kirkko on omistettu Elisabet Unkarilaiselle.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Kirkko on omistettu Elisabet Unkarilaiselle.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Kirkko on omistettu Elisabet Unkarilaiselle.",
+     "url": "https://www.visitbratislava.com/places/blue-church/"
+    },
+    {
+     "vaite": "Kirkko toimi viereisen lukion koulukappelina; Lechner suunnitteli myös lukion ja pappilan.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Kirkko toimi viereisen lukion koulukappelina; Lechner suunnitteli myös lukion ja pappilan.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Elisabet Unkarilainen oli kuningas Andreas II:n tytär.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Elisabet Unkarilainen oli kuningas Andreas II:n tytär.",
+     "url": "https://www.esn.sk/node/187"
+    },
+    {
+     "vaite": "Julkisivu maalattiin ensin vaaleilla pastellisävyillä ja muuttui myöhemmin siniseksi.",
+     "url": "https://en.wikipedia.org/wiki/Blue_Church"
+    },
+    {
+     "vaite": "Julkisivu maalattiin ensin vaaleilla pastellisävyillä ja muuttui myöhemmin siniseksi.",
+     "url": "https://www.esn.sk/node/187"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Kruunattujen määrä: Wikipedia 11 kuningasta/kuningatarta + 8 puolisoa vs. Visit Bratislava 10 + 1 + 7 -> ei mainita",
+  "Tuomiokirkon kruunun paino: Wikipedia 150 kg vs. Visit Bratislava 300 kg -> paino pudotettu",
+  "Linnan kunnostuksen tarkat vuodet (1953/1956/1957 alku, 1964/1968/2011 loppu lähteittäin) -> vain 'alettiin kunnostaa 1950-luvulla'",
+  "Linnan 80 m syvä kaivo ja Kruununtornin 47 m: vain Wikipedia/Structurae (sama data), ei itsenäistä toista lähdettä -> pudotettu",
+  "Linnan neljä tornia 1635-1639 Pálffyn aikaan (castles.sk): vain yksi lähde -> vuosiluku pudotettu",
+  "Albert of Saxe-Teschen ja Albertinan taidekokoelmat (Visit Bratislava): toista lähdettä ei tarkistettu -> pudotettu",
+  "Sillan pylonin korkeus: 84,6 m maasta vs. 95 m Tonavan keskivedestä -> 'noin 85 m'; UFO-näköalatason korkeus pudotettu",
+  "Sillan valmistumisvuosi: Wikipedia 1972 vs. great-towers/u-f-o.sk 1974 (kahvila avattu 1974) -> vain avajaispäivä 26.8.1972",
+  "Sillan pituus 430,8 m vs. Structurae 431,8 m -> 'noin 430 m'",
+  "Nový most -nimen käyttöaika 1993-2012 (Wikipedia): vain yksi lähde -> vuodet pudotettu",
+  "Sillan korkea 'maailman pisin yhden pylonin silta' -väite: Wikipedia ilman lähdettä, filmcommission toistaa -> kirjoitettu 'sitä pidetään'",
+  "Tuomiokirkon kuninkaanristit/krypta (yli 90 hautaa), salama 1760 ja torni 1847: vain Wikipedia -> pudotettu",
+  "Donnerin Pyhä Martinus -veistoksen vuosi: Wikipedia 1744 vs. Visit Bratislava 1734 -> vuosi pudotettu",
+  "Tuomiokirkon synagoga purettu Nový mostin tieltä (Wikipedia, historyhit hakutulos): jätetty pois tilan vuoksi",
+  "Hviezdoslavin aukion pituus: ei löytynyt; puulajit (Visit Bratislava lehmus/kastanja vs. choral-music.sk plataani) ristiriidassa -> vain 'puiden reunustama'",
+  "Aukion entiset nimet (Kossuth Lajos tér, Radetzky tér, Séta tér) ja Kossuthin puhe 17.3.1848: vain Wikipedia -> pudotettu; Bushin puhe 2005 jätetty pois",
+  "Ganymedes-suihkulähteen tekijä ja vuosi (Tilgner 1888): vain Wikipedia -> vuosi pudotettu",
+  "Raatihuoneen tornin ikä (1200-luvun loppu vs. noin 1370) ja 1599 maanjäristys: lähteet ristiriidassa -> vain 'vanhin ydin 1300-luvulta'; 'Slovakian vanhin' pudotettu",
+  "Raatihuoneen vankila- ja rahapajakäyttö: vain Wikipedia (+hakutulosyhteenveto) -> pudotettu; tykinkuulan alkuperä epävarma (Atlas Obscura: asukkaat ovat saattaneet asettaa sen) -> 'muistuttaa tulituksesta'",
+  "Mikaelin portin synty (noin 1300 / 1300-luvun puoliväli / 1300-1400-luvun vaihde), torni 1511-1513 (Hunektar) vs. tuhottu 1529-34 (Wikipedia) -> vain 'keskiaikainen', barokkiasu 1753-1758",
+  "Mikaelin tornin 51 m: Wikipedia, slovakia.com, Visit Bratislava 'torni 51 m' vs. Hunektar 'patsas 51 m korkeudessa' -> 'noin 51 m' (ristiriita kirjattu)",
+  "Mikaelin portin patsaan tekijä (Péter Eller 1757) ja aikalaatikko 1758: yksi lähde kumpikin -> pudotettu; 'Michalská-katu' ja 29 pääkaupunkia nollakilometrilaatassa -> pudotettu",
+  "Grassalkovichin palatsin arkkitehti (Mayerhoffer vs. Hillebrandt): lähteet ristiriidassa -> pudotettu; Maria Teresian vierailu 1775 (prezident.sk) -> vain yksi lähde, pudotettu",
+  "Sinisen kirkon rakennusaika 1908-1913 (Wikipedia) vs. 1909-1913 (esn.sk) -> vain valmistumisvuosi 1913; Visit Bratislavan sivulla arkkitehti virheellisesti 'Edmund Lechner' -> nimi Wikipediasta ja esn.sk:sta",
+  "Elisabet Unkarilaisen kasvaminen Pressburgin linnassa (Wikipedia, esn.sk: sama teksti): ei itsenäistä toista lähdettä -> pudotettu"
+ ],
+ "ristiriidat": [
+  "Kruunattujen määrä 11+8 vs. 10+1+7 (ei mainita)",
+  "Tuomiokirkon kruunun paino 150 vs. 300 kg (ei mainita)",
+  "Sillan pylon 84,6 vs. 95 m ja valmistuminen 1972 vs. 1974 (käytetty noin 85 m ja avajaispäivä)",
+  "Mikaelin tornin 51 m: torni vai patsas (Hunektar) -> käytetty 'noin 51 m', kolme lähdettä tornille",
+  "Aukion puulajit lehmus/kastanja vs. plataani (ei mainita)",
+  "Linnan kunnostuksen vuodet (käytetty vuosikymmentä)"
+ ]
+}

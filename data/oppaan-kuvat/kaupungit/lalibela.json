@@ -1,0 +1,352 @@
+{
+ "kaupunki": "lalibela",
+ "kaupunkiQ": "Q207590",
+ "kohteet": [
+  {
+   "q": "Q7971367",
+   "nimi": "Pyhän Yrjänän kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 12.03163,
+   "lon": 39.04115,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ethiopia - sunset at Church of Saint George, Lalibela 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia_-_sunset_at_Church_of_Saint_George%2C_Lalibela_01.jpg?width=1280",
+     "tekija": "Thomas Fuhrmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethiopia_-_sunset_at_Church_of_Saint_George%2C_Lalibela_01.jpg",
+     "selite": "Ristin muotoinen Pyhän Yrjänän kirkko on kaiverrettu yhdestä kalliosta maanpinnan alapuolelle.",
+     "leveys": 6718,
+     "korkeus": 4478,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bete Giyorgis 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Giyorgis_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Giyorgis_01.jpg",
+     "selite": "Kirkon risti-kattoa ympäröi syvä, kallioon louhittu kuilu.",
+     "leveys": 3297,
+     "korkeus": 2326,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bete Giyorgis 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Giyorgis_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Giyorgis_04.jpg",
+     "selite": "Portaat laskeutuvat kuilun pohjalle kirkon ovelle.",
+     "leveys": 3181,
+     "korkeus": 2539,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Bete Giyorgis 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Giyorgis_06.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Giyorgis_06.jpg",
+     "selite": "Kirkon seinien kolmikerroksinen jäsentely on louhittu suoraan punaiseen tuffiin.",
+     "leveys": 3153,
+     "korkeus": 2471,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 5,
+     "tiedosto": "Lalibela, san giorgio, esterno 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_san_giorgio%2C_esterno_24.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_san_giorgio%2C_esterno_24.jpg",
+     "selite": "Kirkko seisoo kalliokuopassa, jonka reunat kohoavat sen ympärillä.",
+     "leveys": 6748,
+     "korkeus": 5848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2900055",
+   "nimi": "Bete Medhane Alem",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 12.03371,
+   "lon": 39.04381,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lalibela, chiesa di bete medhane alem, esterno 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_16.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_16.jpg",
+     "selite": "Maailman suurimpana pidetty monoliittinen kalliokirkko, jota kehystävät pylväät.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lalibela, chiesa di bete medhane alem, esterno 08,0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_08%2C0.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_medhane_alem%2C_esterno_08%2C0.jpg",
+     "selite": "Pylväikkö kiertää koko kirkkoa, ja suojakatos peittää sen nykyään sateelta.",
+     "leveys": 7031,
+     "korkeus": 4943,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bete Medhane Alem in Lalibela.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Medhane_Alem_in_Lalibela.JPG?width=1280",
+     "tekija": "Jens Klinzing",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Medhane_Alem_in_Lalibela.JPG",
+     "selite": "Kirkko on veistetty irti ympäröivästä kalliosta.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2900053",
+   "nimi": "Bete Maryam",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 12.03369,
+   "lon": 39.04335,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bete Maryam 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Maryam_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Maryam_01.jpg",
+     "selite": "Neitsyt Marian kirkko on Lalibelan vanhimpia kalliokirkkoja.",
+     "leveys": 3040,
+     "korkeus": 2283,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lalibela, chiesa di bete maryam, esterno 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_maryam%2C_esterno_04.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_maryam%2C_esterno_04.jpg",
+     "selite": "Kirkon pihaa ja sen kallioon kaiverrettua esikartanoa suojaa nykyään katos.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lalibela, chiesa di bete maryam, esterno 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_maryam%2C_esterno_10.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_maryam%2C_esterno_10.jpg",
+     "selite": "Esikartanon kaaret on koristeltu kaiverretuilla ristikuvioilla.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2930043",
+   "nimi": "Bete Golgotha Mikael",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 12.0336,
+   "lon": 39.0431,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bete Gologota-Selassié 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Gologota-Selassi%C3%A9_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Gologota-Selassi%C3%A9_01.jpg",
+     "selite": "Kirkon seinän ikkunoita kehystävät kallioon veistetyt koristeet ja ristit.",
+     "leveys": 3161,
+     "korkeus": 2453,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bete Gologota Selassié 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Gologota_Selassi%C3%A9_03.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Gologota_Selassi%C3%A9_03.jpg",
+     "selite": "Kirkon kalliokaiverrukset kuuluvat Etiopian vanhimpiin kristillisiin reliefeihin.",
+     "leveys": 2355,
+     "korkeus": 3251,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2900049",
+   "nimi": "Bete Gabriel-Rufael",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 12.03136,
+   "lon": 39.0448,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bete Gebriel-Rufael.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Gebriel-Rufael.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Gebriel-Rufael.jpg",
+     "selite": "Kirkko muistuttaa linnoitusta, ja siihen pääsee kalliokuilun yli kulkevaa siltaa pitkin.",
+     "leveys": 3145,
+     "korkeus": 2281,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lalibela, bete gabriel-rufael, esterno 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_bete_gabriel-rufael%2C_esterno_05.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_bete_gabriel-rufael%2C_esterno_05.jpg",
+     "selite": "Kaarevat syvennykset koristavat kirkon julkisivua.",
+     "leveys": 6444,
+     "korkeus": 5664,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2900045",
+   "nimi": "Bete Abba Libanos",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 12.03127,
+   "lon": 39.04516,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bete Abba Libanos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bete_Abba_Libanos.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bete_Abba_Libanos.jpg",
+     "selite": "Kirkko on veistetty kallioseinämän onkaloon ja kiinni kallion kattoon.",
+     "leveys": 2633,
+     "korkeus": 1911,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Façade de l'église d'Abba Libanos à Lalibela (Ethiopie), vue de loin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fa%C3%A7ade_de_l'%C3%A9glise_d'Abba_Libanos_%C3%A0_Lalibela_(Ethiopie)%2C_vue_de_loin.jpg?width=1280",
+     "tekija": "https://www.flickr.com/people/ctsnow/",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_de_l'%C3%A9glise_d'Abba_Libanos_%C3%A0_Lalibela_(Ethiopie)%2C_vue_de_loin.jpg",
+     "selite": "Kirkko piilee kallioseinämän juurella syvän kuilun pohjalla.",
+     "leveys": 1536,
+     "korkeus": 1024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3639076",
+   "nimi": "Bete Amanuel",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 12.03369,
+   "lon": 39.04335,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lalibela, chiesa di bete amanuel, esterno 01,0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_amanuel%2C_esterno_01%2C0.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_amanuel%2C_esterno_01%2C0.jpg",
+     "selite": "Bete Amanuelin tarkasti hiotut seinäpinnat viittaavat kuninkaalliseen hovikirkkoon.",
+     "leveys": 5247,
+     "korkeus": 4810,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lalibela, chiesa di bete amanuel, esterno 08,0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela%2C_chiesa_di_bete_amanuel%2C_esterno_08%2C0.jpg?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela%2C_chiesa_di_bete_amanuel%2C_esterno_08%2C0.jpg",
+     "selite": "Kirkko on kaiverrettu yhdestä kalliolohkosta kuten muutkin Lalibelan kirkot.",
+     "leveys": 5595,
+     "korkeus": 5416,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lalibela Ethiopia landscape (5).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela_Ethiopia_landscape_(5).jpg?width=1280",
+   "tekija": "Radosław Botev",
+   "lisenssi": "CC BY 3.0 pl",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela_Ethiopia_landscape_(5).jpg",
+   "selite": "Lalibelan kylä levittäytyy Etiopian ylängön vuorten rinteille.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lalibela Ethiopia landscape (2).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalibela_Ethiopia_landscape_(2).jpg?width=1280",
+   "tekija": "Radosław Botev",
+   "lisenssi": "CC BY 3.0 pl",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalibela_Ethiopia_landscape_(2).jpg",
+   "selite": "Näköala Lalibelan ylle ja ympäröivälle vuoristolle.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

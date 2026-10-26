@@ -310,6 +310,7 @@ export const MAASTOKOHTEET_ESP = [
    * ============================================================== */
   {
     id: 'santiago-de-compostela',
+    nimio: 'Santiago',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-santiago-de-compostela-08aeadff.jpg',
       lyhyt: 'Santiago de Compostelan katedraalin tornit kohoavat vanhankaupungin katojen yläpuolelle.',
@@ -594,6 +595,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'cordoban-moskeijakatedraali',
+    nimio: 'Mezquita',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-cordoban-moskeijakatedraali-4f97b8f7.jpg',
       lyhyt: 'Córdoban moskeijakatedraalin koristeellinen mihrab-kaari.',
@@ -711,6 +713,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'meridan-roomalainen-teatteri',
+    nimio: 'Mérida',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-meridan-roomalainen-teatteri-d0a1dd51.jpg',
       lyhyt: 'Méridan roomalaisen teatterin pylväikköinen näyttämöseinä.',
@@ -766,6 +769,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'salamancan-yliopisto',
+    nimio: 'Salamanca',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-salamancan-yliopisto-9a4973f1.jpg',
       lyhyt: 'Salamancan yliopiston Escuelas Mayores -rakennuksen platereski-julkisivu.',
@@ -818,6 +822,96 @@ export const MAASTOKOHTEET_ESP = [
       + 'oppineita.',
     lahde: 'en-Wikipedia "University of Salamanca", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'teide',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-nosto-teide-01a13907.jpg',
+      lyhyt: 'Teiden tulivuoren kartiomainen huippu kohoaa sinistä taivasta vasten.',
+      selite: 'Kuvassa näkyy Teiden rinteet laavavirtoineen ja köysiradan asema huipun lähellä.',
+      lahde: 'Valokuva: Ireneusz Jerzy Borysiewicz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ireneusz Jerzy Borysiewicz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:El_Teide_Mount.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Teide',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka korkealla Teiden huippu on merenpinnasta?',
+      'Minkä kalderan sisään Teide syntyi?',
+    ],
+    korostukset: ['Las Cañadasin kalderan|Las Cañadasin kalderan'],
+    nappi: 'Espanjan katto meren keskellä',
+    // -16.6394 E / 28.2731 N — en-Wikipedia "Mount Teide", johdanto ja osiot "Geology", "Teide National Park" ja "Cable car"
+    laudat: {
+      maailmankartta: { x: 5278.7, y: 2243.6 },
+    },
+    teksti: 'Teide on Teneriffalla Kanariansaarilla sijaitseva tulivuori ja Espanjan korkein '
+      + 'kohta: 3 715 metriä merenpinnan yläpuolella. Kerrostulivuori syntyi noin 170 000 '
+      + 'vuotta sitten Las Cañadasin kalderan sisään. Köysirata kuljettaa matkustajia lähelle '
+      + 'huippua. Teiden kansallispuisto kirjattiin Unescon maailmanperintöön vuonna 2007.',
+    lahde: 'en-Wikipedia "Mount Teide", johdanto ja osiot "Geology", "Teide National Park" ja '
+      + '"Cable car" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'serra-de-tramuntana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-nosto-serra-de-tramuntana-219a15c5.jpg',
+      lyhyt: 'Metsäisiä vuorenrinteitä ja kaukana korkeampia huippuja Mallorcan pohjoisosassa.',
+      selite: 'Näkymä Puig de Galatzón huipulta Serra de Tramuntanan vuoristoon: männikköisiä harjanteita ja kaukana sinistä merta.',
+      lahde: 'Valokuva: Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Christoph Strässler',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Puig_de_Galatz%C3%B3_along_the_Serra_de_Tramuntana.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    nimi: 'Serra de Tramuntana',
+    nimio: 'Tramuntana',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka korkea on Baleaarien korkein vuori?',
+      'Miksi viljelyterassit ja vesimyllyt tekivät alueesta maailmanperintökohteen?',
+    ],
+    korostukset: ['Puig Major|Puig Major'],
+    nappi: 'Mallorcan vuoristoinen selkäranka',
+    // 2.6947 E / 39.7308 N — en-Wikipedia "Serra de Tramuntana", osiot "Geography", "Environmental protection" ja "Sustainable Tourism"
+    laudat: {
+      maailmankartta: { x: 5923.2, y: 1813.5 },
+    },
+    teksti: 'Serra de Tramuntana on vuoristo Mallorcan pohjoisrannikolla, ja se muodostaa saaren '
+      + 'pohjoisen selkärangan. Korkein huippu Puig Major nousee 1 436 metriin, ja se on '
+      + 'Baleaarien korkein vuori. UNESCO liitti alueen maailmanperintöluetteloon '
+      + 'kulttuurimaisemana vuonna 2011, sillä vuosituhansien maanviljely niukassa '
+      + 'ympäristössä on synnyttänyt viljelyterasseja, vesimyllyjä ja vedenhallinnan '
+      + 'verkoston. Nykyisin alueella kannustetaan kestävään matkailuun: vaeltamiseen, '
+      + 'pyöräilyyn ja lintujen katseluun.',
+    lahde: 'en-Wikipedia "Serra de Tramuntana", osiot "Geography", "Environmental protection" ja '
+      + '"Sustainable Tourism" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'gibraltarinsalmi',
+    nimi: 'Gibraltarinsalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Herkuleen patsaat ovat?',
+      'Mitä Trafalgarin taistelussa tapahtui?',
+    ],
+    nappi: 'Herkuleen patsaiden salmi',
+    // -5.6 E / 35.95 N — salmen keskiosa Tarifan ja Tangerin välissä
+    laudat: {
+      maailmankartta: { x: 5646.7, y: 1959.4 },
+      europe: { x: 103.7, y: 948.1 },
+    },
+    teksti: 'Gibraltarinsalmi yhdistää Atlantin ja Välimeren. Sen pohjoisrannalla ovat Espanja ja '
+      + 'Britannian Gibraltar, eteläpuolella Marokko ja Espanjan Ceuta. Kapeimmillaan salmi on '
+      + 'noin 13–14 kilometriä leveä, ja syvyys vaihtelee noin 300 metristä 900 metriin. '
+      + 'Antiikissa salmen kahta kallioniemeä sanottiin Herkuleen patsaiksi.',
+    lahde: 'en-Wikipedia "Strait of Gibraltar", johdanto-osa ja Geography-osa (tarkistettu '
+      + '16.10.2026); WorldAtlas "Strait of Gibraltar"; Livius "Pillars of Heracles".',
   },
 ];
 

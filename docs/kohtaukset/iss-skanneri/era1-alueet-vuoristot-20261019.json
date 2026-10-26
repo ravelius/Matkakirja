@@ -1,0 +1,2108 @@
+{
+ "_meta": {
+  "kuvaus": "ISS-skanneri B1 erä 1: alueet ja vuoristot (87 kohdetta; näytteen 6 kohdetta ei mukana). Rakenne kuten naytteet-10. Lähteet vain krediittitiedostoon. Faktat tarkistettu riippumattomalla Sonnet-tarkistajalla verkosta 19.10.2026.",
+  "rajat": "aloitus ≤ 45, luonne ≤ 110, nimike ≤ 18, rivin arvo ≤ 24 merkkiä"
+ },
+ "kohteet": [
+  {
+   "tunnus": "k-angola",
+   "nimi": "Angola",
+   "aloitus": "Lounais-Afrikan entinen Portugalin siirtomaa",
+   "luonne": "Korkea savannitasanko hallitsee maata; kapea rannikko on kuivaa ja pohjoisessa kasvaa sademetsää.",
+   "rivit": [
+    [
+     "Pääkaupunki",
+     "Luanda"
+    ],
+    [
+     "Asukasluku",
+     "n. 36,6 milj. (2024)"
+    ],
+    [
+     "Pinta-ala",
+     "1 246 700 km²"
+    ],
+    [
+     "Itsenäistyi",
+     "1975"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Angola",
+    "https://en.wikipedia.org/wiki/Geography_of_Angola"
+   ]
+  },
+  {
+   "tunnus": "k-madagaskar",
+   "nimi": "Madagaskar",
+   "aloitus": "Maailman neljänneksi suurin saari",
+   "luonne": "Eristyksissä kehittynyt luonto: yli 90 % eläimistä, esimerkiksi lemurit, elää vain täällä.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 590 000 km²"
+    ],
+    [
+     "Asukasluku",
+     "n. 32 milj. (2024)"
+    ],
+    [
+     "Korkein kohta",
+     "Maromokotro 2 876 m"
+    ],
+    [
+     "Itsenäistyi",
+     "1960"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Madagascar"
+   ]
+  },
+  {
+   "tunnus": "k-borneo",
+   "nimi": "Borneo",
+   "aloitus": "Maailman kolmanneksi suurin saari",
+   "luonne": "Sademetsä on n. 140 milj. vuotta vanha; täällä elää uhanalainen borneonorangutan.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 748 000 km²"
+    ],
+    [
+     "Valtioita",
+     "3"
+    ],
+    [
+     "Korkein huippu",
+     "Kinabalu 4 095 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Borneo",
+    "https://en.wikipedia.org/wiki/Mount_Kinabalu"
+   ]
+  },
+  {
+   "tunnus": "k-darfur",
+   "nimi": "Darfur",
+   "aloitus": "Länsi-Sudanin sodan koettelema alue",
+   "luonne": "Kuivaa tasankoa ja Jebel Marran vuoristoa; sota alkoi 2003 ja taistelut jatkuvat sisällissodassa yhä.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 493 000 km²"
+    ],
+    [
+     "Asukasluku",
+     "n. 11,8 milj. (2018)"
+    ],
+    [
+     "Korkein kohta",
+     "Jebel Marra n. 3 040 m"
+    ],
+    [
+     "Sota alkoi",
+     "2003"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Darfur"
+   ]
+  },
+  {
+   "tunnus": "k-bali",
+   "nimi": "Bali",
+   "aloitus": "Indonesian hindulainen saari",
+   "luonne": "Temppeleiden, riisiterassien ja tulivuorten saari; perinteinen subak-kastelujärjestelmä on UNESCO-kohde.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 5 583 km²"
+    ],
+    [
+     "Asukasluku",
+     "4,3 milj. (2020)"
+    ],
+    [
+     "Hindujen osuus",
+     "86 % (2024)"
+    ],
+    [
+     "Korkein kohta",
+     "Agung 3 031 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bali",
+    "https://en.wikipedia.org/wiki/Mount_Agung"
+   ]
+  },
+  {
+   "tunnus": "k-labrador",
+   "nimi": "Labrador",
+   "aloitus": "Itä-Kanadan harvaan asuttu erämaa-alue",
+   "luonne": "Metsien ja Torngat-vuorten maa, jossa asuvat innut ja inuitit; rautamalmi ja vesivoima ovat tärkeitä.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 294 000 km²"
+    ],
+    [
+     "Asukasluku",
+     "26 655 (2021)"
+    ],
+    [
+     "Suurin kaupunki",
+     "Happy Valley-Goose Bay"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Labrador"
+   ]
+  },
+  {
+   "tunnus": "k-appalakit",
+   "nimi": "Appalakit",
+   "aloitus": "Itä-Pohjois-Amerikan vanha vuoristo",
+   "luonne": "Vanha vuoristo, jonka keskiosan maisemaa kivihiilen louhinta on muokannut.",
+   "rivit": [
+    [
+     "Pituus",
+     "yli 3 000 km"
+    ],
+    [
+     "Korkein huippu",
+     "Mitchell 2 037 m"
+    ],
+    [
+     "Alkoi muodostua",
+     "n. 480 milj. v. sitten"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Appalachian_Mountains",
+    "https://en.wikipedia.org/wiki/Mount_Mitchell",
+    "https://kids.britannica.com/kids/article/Appalachian-Mountains/346081"
+   ]
+  },
+  {
+   "tunnus": "k-bahr-el-ghazal",
+   "nimi": "Bahr el Ghazal",
+   "aloitus": "Etelä-Sudanin luoteinen alue",
+   "luonne": "Nimi tarkoittaa arabiaksi ’gaselleiden merta’; soista maata, jossa asuvat pääosin dinkat.",
+   "rivit": [
+    [
+     "Kaupunkeja",
+     "Wau ja Aweil"
+    ],
+    [
+     "Osavaltioita",
+     "4 (vuodesta 2020)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bahr_el_Ghazal",
+    "https://en.wikipedia.org/wiki/Northern_Bahr_el_Ghazal",
+    "https://en.wikipedia.org/wiki/Western_Bahr_el_Ghazal",
+    "https://en.wikipedia.org/wiki/Bahr_el_Ghazal_(region_of_South_Sudan)"
+   ]
+  },
+  {
+   "tunnus": "k-iguazu",
+   "nimi": "Iguazú",
+   "aloitus": "Argentiinan ja Brasilian rajan vesiputoukset",
+   "luonne": "Sademetsän halkoma joki putoaa kymmeniksi putouksiksi; Paholaisen kurkku vie puolet virrasta.",
+   "rivit": [
+    [
+     "Putouksia",
+     "n. 275"
+    ],
+    [
+     "Leveys",
+     "n. 2,7 km"
+    ],
+    [
+     "Korkein pudotus",
+     "82 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1984/1986"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Iguazu_Falls"
+   ]
+  },
+  {
+   "tunnus": "k-ilha-do-bananal",
+   "nimi": "Ilha do Bananal",
+   "aloitus": "Yksi maailman suurimmista jokisaarista",
+   "luonne": "Araguaia-joen kahden haaran väliin jäävä kosteikkosaari, jossa asuu vain alkuperäiskansoja.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 19 200 km²"
+    ],
+    [
+     "Osavaltio",
+     "Tocantins (Brasilia)"
+    ],
+    [
+     "Kansallispuisto",
+     "Araguaia, n. 5 600 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Bananal_Island"
+   ]
+  },
+  {
+   "tunnus": "k-kamerun",
+   "nimi": "Kamerun",
+   "aloitus": "Keski-Afrikan rannikkovaltio",
+   "luonne": "Nimi juontuu portugalilaisten ’katkarapujoesta’; maata sanotaan ’Afrikaksi pienoiskoossa’.",
+   "rivit": [
+    [
+     "Pääkaupunki",
+     "Yaoundé"
+    ],
+    [
+     "Suurin kaupunki",
+     "Douala"
+    ],
+    [
+     "Asukasluku",
+     "n. 31 milj. (2025)"
+    ],
+    [
+     "Korkein kohta",
+     "Kamerun-vuori 4 040 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cameroon",
+    "https://en.wikipedia.org/wiki/Mount_Cameroon"
+   ]
+  },
+  {
+   "tunnus": "k-kappadokia",
+   "nimi": "Kappadokia",
+   "aloitus": "Keski-Turkin kivipiippujen maisema",
+   "luonne": "Tulivuorten tuhkakerrostumat ovat rapautuneet kivipiipuiksi, joihin kristityt louhivat kirkkoja ja kaupunkeja.",
+   "rivit": [
+    [
+     "UNESCO-kohde",
+     "vuodesta 1985"
+    ],
+    [
+     "Korkein huippu",
+     "Erciyes 3 916 m"
+    ],
+    [
+     "Göremen kirkkoja",
+     "yli 30"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cappadocia"
+   ]
+  },
+  {
+   "tunnus": "k-kongo",
+   "nimi": "Kongo",
+   "aloitus": "Afrikan vesirikkain joki",
+   "luonne": "Alajuoksun koskijakso estää pääsyn merelle; joen nimi periytyy Kongon valtakunnasta.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 4 700 km"
+    ],
+    [
+     "Virtaama",
+     "n. 41 000 m³/s"
+    ],
+    [
+     "Syvin kohta",
+     "n. 220 m"
+    ],
+    [
+     "Valuma-alue",
+     "n. 4 milj. km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Congo_River",
+    "https://en.wikipedia.org/wiki/Congo_Basin"
+   ]
+  },
+  {
+   "tunnus": "k-mount-rushmore",
+   "nimi": "Mount Rushmore",
+   "aloitus": "Yhdysvaltain presidenttien vuoriveistos",
+   "luonne": "Washington, Jefferson, Roosevelt ja Lincoln veistettiin kallioon 1927–1941; lakotat pitävät vuorta pyhänä.",
+   "rivit": [
+    [
+     "Kasvon korkeus",
+     "18 m"
+    ],
+    [
+     "Veistäjä",
+     "Gutzon Borglum"
+    ],
+    [
+     "Kävijöitä",
+     "n. 2,4 milj. (2022)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Rushmore"
+   ]
+  },
+  {
+   "tunnus": "k-sepik",
+   "nimi": "Sepik",
+   "aloitus": "Uuden-Guinean pisin joki",
+   "luonne": "Suistoton joki kiemurtelee valtavan kosteikon halki; rannoilla on yli sata kylää, enimmäkseen iatmuleja.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 130 km"
+    ],
+    [
+     "Valuma-alue",
+     "n. 80 300 km²"
+    ],
+    [
+     "Laskee",
+     "Bismarckinmereen"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sepik"
+   ]
+  },
+  {
+   "tunnus": "k-tanganjika",
+   "nimi": "Tanganjika",
+   "aloitus": "Maailman toiseksi syvin järvi",
+   "luonne": "Vähintään 9 milj. vuotta vanha muinaisjärvi; lähes kaikki sen kiklidilajit elävät vain täällä.",
+   "rivit": [
+    [
+     "Suurin syvyys",
+     "n. 1 470 m"
+    ],
+    [
+     "Pituus",
+     "n. 673 km"
+    ],
+    [
+     "Pinta-ala",
+     "n. 32 900 km²"
+    ],
+    [
+     "Rantavaltioita",
+     "4"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lake_Tanganyika"
+   ]
+  },
+  {
+   "tunnus": "k-titicaca",
+   "nimi": "Titicaca",
+   "aloitus": "Perun ja Bolivian rajajärvi Andeilla",
+   "luonne": "Inkojen pyhänä pitämä järvi; uru-kansa asuu sen kelluvilla kaislasaarilla.",
+   "rivit": [
+    [
+     "Korkeus merestä",
+     "3 812 m"
+    ],
+    [
+     "Pinta-ala",
+     "8 372 km²"
+    ],
+    [
+     "Suurin syvyys",
+     "n. 280 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lake_Titicaca"
+   ]
+  },
+  {
+   "tunnus": "k-tsad-jarvi",
+   "nimi": "Tšad-järvi",
+   "aloitus": "Saharan eteläreunan kutistunut järvi",
+   "luonne": "Pinta-ala on supistunut 1960-luvulta yli 90 %, mutta kutistuminen on pysähtynyt.",
+   "rivit": [
+    [
+     "Pinta-ala 1960",
+     "n. 25 000 km²"
+    ],
+    [
+     "Pinta-ala 2013–16",
+     "n. 1 900 km²"
+    ],
+    [
+     "Syvyys",
+     "enintään n. 2 m"
+    ],
+    [
+     "Altaan asukkaita",
+     "yli 30 milj."
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lake_Chad"
+   ]
+  },
+  {
+   "tunnus": "k-viktoria-nyanza",
+   "nimi": "Viktoria Nyanza",
+   "aloitus": "Afrikan suurin järvi",
+   "luonne": "Niilin lähdejärvi, jonka satoja kalalajeja nilinahven ja rehevöityminen ovat ajaneet sukupuuttoon.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 59 900 km²"
+    ],
+    [
+     "Suurin syvyys",
+     "n. 81 m"
+    ],
+    [
+     "Rantavaltiot",
+     "Tansania, Uganda, Kenia"
+    ],
+    [
+     "Speke löysi",
+     "1858"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Lake_Victoria"
+   ]
+  },
+  {
+   "tunnus": "k-viktorian-putoukset",
+   "nimi": "Viktorian putoukset",
+   "aloitus": "Sambian ja Zimbabwen rajan putous",
+   "luonne": "Paikallisnimi tarkoittaa ’savua, joka jylisee’; putousten yli kulkee rautatiesilta.",
+   "rivit": [
+    [
+     "Leveys",
+     "1 708 m"
+    ],
+    [
+     "Korkeus",
+     "108 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1989"
+    ],
+    [
+     "Livingstone näki",
+     "1855"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Victoria_Falls"
+   ]
+  },
+  {
+   "tunnus": "k-yellowstone",
+   "nimi": "Yellowstone",
+   "aloitus": "Yhdysvaltain ensimmäinen kansallispuisto",
+   "luonne": "Valtavan tulivuorikalderan päällä: kuumia lähteitä, geysirejä ja vapaasti laiduntavia biisoneja.",
+   "rivit": [
+    [
+     "Perustettu",
+     "1872"
+    ],
+    [
+     "Pinta-ala",
+     "n. 8 983 km²"
+    ],
+    [
+     "Geysirejä",
+     "n. 465 aktiivista"
+    ],
+    [
+     "Kävijöitä",
+     "n. 4,8 milj. (2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Yellowstone_National_Park"
+   ]
+  },
+  {
+   "tunnus": "v-siinai",
+   "nimi": "Siinai",
+   "aloitus": "Mooseksen vuori Siinain niemimaalla",
+   "luonne": "Perimätiedon mukaan Mooses sai täällä käskyt; vieressä kohoaa Egyptin korkein huippu, Katariinavuori.",
+   "rivit": [
+    [
+     "Siinain vuori",
+     "2 285 m"
+    ],
+    [
+     "Katariinavuori",
+     "2 629 m"
+    ],
+    [
+     "Katumusaskelmia",
+     "3 750"
+    ],
+    [
+     "Luostari",
+     "Katariina, 548–565"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Sinai",
+    "https://en.wikipedia.org/wiki/Sinai_Peninsula",
+    "https://en.wikipedia.org/wiki/Saint_Catherine%27s_Monastery"
+   ]
+  },
+  {
+   "tunnus": "v-ouro-preto",
+   "nimi": "Ouro Preto",
+   "aloitus": "Brasilian kultakauden kaupunki",
+   "luonne": "Kultaryntäyksen aikaan rikastunut vuoristokaupunki, jonka barokkikirkoissa on Aleijadinhon veistoksia.",
+   "rivit": [
+    [
+     "Asukasluku",
+     "n. 74 800 (2022)"
+    ],
+    [
+     "Korkeus",
+     "n. 1 150 m"
+    ],
+    [
+     "Asutus alkoi",
+     "1698; Vila Rica 1711"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1980"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ouro_Preto"
+   ]
+  },
+  {
+   "tunnus": "v-ahaggar",
+   "nimi": "Ahaggar",
+   "aloitus": "Saharan sydämen vuoristo Algeriassa",
+   "luonne": "Kuiva ylänkö on Saharan leutoimpia alueita; kalliomaalaukset kertovat asutuksesta jo 6000 eaa.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 550 000 km²"
+    ],
+    [
+     "Suojelualue",
+     "Ahaggar-kulttuuripuisto"
+    ],
+    [
+     "Lähin kaupunki",
+     "Tamanrasset"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ahaggar_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-ahaggar-x",
+   "nimi": "Ahaggar",
+   "aloitus": "Ahaggarin tulivuorinen Atakor-ylänkö",
+   "luonne": "Sammuneiden tulivuorten kalliotornit kohoavat Atakorin ylängöllä; Assekremin huipulla on erakkomaja.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Tahat 2 908 m"
+    ],
+    [
+     "Foucauldin maja",
+     "rakennettu 1911"
+    ],
+    [
+     "Kallioperän ikä",
+     "n. 2 mrd vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ahaggar_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-al-kufra",
+   "nimi": "Al-Kufra",
+   "aloitus": "Libyan keidasryhmä Saharan keskellä",
+   "luonne": "Fossiilisella pohjavedellä kastellut keidas, jossa pyöreät pellot erottuvat avaruuteen asti.",
+   "rivit": [
+    [
+     "Pellon halkaisija",
+     "n. 1 km"
+    ],
+    [
+     "Vesilähde",
+     "Nubian akviferi"
+    ],
+    [
+     "Allas",
+     "n. 50 × 20 km"
+    ],
+    [
+     "Senussien keskus",
+     "vuodesta 1895"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kufra"
+   ]
+  },
+  {
+   "tunnus": "v-alaskan-vuoristo",
+   "nimi": "Alaskan vuoristo",
+   "aloitus": "Pohjois-Amerikan korkeimman vuoren koti",
+   "luonne": "Vuoristo pysäyttää Alaskanlahden kostean ilman; lunta ja jäätiköitä riittää ja sää on maailman ankarimpia.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 970 km"
+    ],
+    [
+     "Korkein huippu",
+     "Denali 6 190 m"
+    ],
+    [
+     "Toiseksi korkein",
+     "Foraker 5 300 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Alaska_Range"
+   ]
+  },
+  {
+   "tunnus": "v-alpit",
+   "nimi": "Alpit",
+   "aloitus": "Sveitsin Alppien suurin jäätikköalue",
+   "luonne": "Jungfraun huippujen ja Aletschin jäätikön maisema; jäätikkö sulaa ja lyhenee vuosi vuodelta.",
+   "rivit": [
+    [
+     "Aletschin jäätikkö",
+     "n. 23 km"
+    ],
+    [
+     "Jungfrau",
+     "4 158 m"
+    ],
+    [
+     "Alueen korkein",
+     "Finsteraarhorn 4 274 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2001"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Aletsch_Glacier",
+    "https://en.wikipedia.org/wiki/Alps",
+    "https://en.wikipedia.org/wiki/Finsteraarhorn"
+   ]
+  },
+  {
+   "tunnus": "v-alpit-x",
+   "nimi": "Alpit",
+   "aloitus": "Itäalppien Ortler ja Stelvion sola",
+   "luonne": "Ortlerin jäätikkövuoret ja Stelvion solan serpentiinit; ensimmäisessä maailmansodassa taisteltiin huipuilla.",
+   "rivit": [
+    [
+     "Ortler",
+     "3 905 m"
+    ],
+    [
+     "Stelvion sola",
+     "2 757 m"
+    ],
+    [
+     "Serpentiinejä",
+     "82 (48 + 34)"
+    ],
+    [
+     "Ortlerin ensinousu",
+     "1804"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ortler",
+    "https://en.wikipedia.org/wiki/Stelvio_Pass",
+    "https://en.wikipedia.org/wiki/Ortler"
+   ]
+  },
+  {
+   "tunnus": "v-altai",
+   "nimi": "Altai",
+   "aloitus": "Neljän valtion rajalla kohoava vuoristo",
+   "luonne": "Siperian ja Keski-Aasian vuoristo, jonka routa on säilyttänyt muinaisten skyyttien hautoja.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 2 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Belukha 4 506 m"
+    ],
+    [
+     "Maailmanperintö",
+     "Kultaiset vuoret 1998"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Altai_Mountains",
+    "https://en.wikipedia.org/wiki/Golden_Mountains_of_Altai"
+   ]
+  },
+  {
+   "tunnus": "v-andit",
+   "nimi": "Andit",
+   "aloitus": "Maailman pisin mannervuoristo",
+   "luonne": "Tämä osa on Atacaman aavikon ja Altiplanon korkean ylätasangon välissä, kuivalla tulivuorten maalla.",
+   "rivit": [
+    [
+     "Pituus",
+     "yli 7 000 km"
+    ],
+    [
+     "Korkein huippu",
+     "Aconcagua 6 961 m"
+    ],
+    [
+     "Valtioita",
+     "7"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Andes"
+   ]
+  },
+  {
+   "tunnus": "v-annamin-ylanko",
+   "nimi": "Annamin ylänkö",
+   "aloitus": "Vietnamin ja Laosin rajavuoristo",
+   "luonne": "Sademetsäinen vuoristo, josta löydettiin 1992 saola, harvinainen antilooppimainen nisäkäs.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 100 km"
+    ],
+    [
+     "Korkein huippu",
+     "Phou Bia 2 819 m"
+    ],
+    [
+     "Saolan kanta",
+     "n. 50–300 (2015)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Annamite_Range",
+    "https://en.wikipedia.org/wiki/Saola"
+   ]
+  },
+  {
+   "tunnus": "v-apenniinit",
+   "nimi": "Apenniinit",
+   "aloitus": "Italian niemimaan selkäranka",
+   "luonne": "Korkeimmissa Abruzzon vuorissa elävät harvinainen marsikanruskeakarhu ja Italian susi.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 200 km"
+    ],
+    [
+     "Korkein huippu",
+     "Corno Grande 2 912 m"
+    ],
+    [
+     "Ainoa jäätikkö",
+     "Calderone"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Apennine_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-appalakit",
+   "nimi": "Appalakit",
+   "aloitus": "Itä-Pohjois-Amerikan vanha vuoristo",
+   "luonne": "Metsäiset, pyöristyneet vuoret ovat syntyneet n. 480 milj. vuotta sitten alkaneessa poimutuksessa.",
+   "rivit": [
+    [
+     "Pituus",
+     "yli 3 000 km"
+    ],
+    [
+     "Korkein huippu",
+     "Mitchell 2 037 m"
+    ],
+    [
+     "Vaellusreitti",
+     "n. 3 500 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Appalachian_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-atlas",
+   "nimi": "Atlas",
+   "aloitus": "Pohjois-Afrikan suuri vuoristo",
+   "luonne": "Berbereiden eli amazigien asuttama vuoristo kulkee Marokosta Algerian kautta Tunisiaan.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 2 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Toubkal 4 167 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Atlas_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-balkanvuoret",
+   "nimi": "Balkanvuoret",
+   "aloitus": "Bulgarian halki kulkeva vuoristo",
+   "luonne": "Vuoristo antoi nimensä koko Balkanin niemimaalle. Šipkan solassa taisteltiin 1877–78.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 560 km"
+    ],
+    [
+     "Korkein huippu",
+     "Botev 2 376 m"
+    ],
+    [
+     "Leveys",
+     "15–50 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Balkan_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-brasilian-ylanko",
+   "nimi": "Brasilian ylänkö",
+   "aloitus": "Brasilian laaja sisämaan ylänkö",
+   "luonne": "Keskiosan cerrado-savannista yli puolet on raivattu pelloiksi ja laitumiksi.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 3 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Pico da Bandeira 2 891 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Brazilian_Highlands"
+   ]
+  },
+  {
+   "tunnus": "v-dinaariset-alpit",
+   "nimi": "Dinaariset Alpit",
+   "aloitus": "Balkanin länsiosan kalkkikivivuoristo",
+   "luonne": "Karstimaisema, jossa vesi on kuluttanut kalkkikiveen luolia, kuoppia ja kanjoneita.",
+   "rivit": [
+    [
+     "Pituus",
+     "645 km"
+    ],
+    [
+     "Korkein huippu",
+     "Maja Jezercë 2 694 m"
+    ],
+    [
+     "Pinta-ala",
+     "n. 200 000 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Dinaric_Alps"
+   ]
+  },
+  {
+   "tunnus": "v-drakensberg",
+   "nimi": "Drakensberg",
+   "aloitus": "Etelä-Afrikan ja Lesothon rajavuoristo",
+   "luonne": "Nimi tarkoittaa ’lohikäärmeiden vuoria’. Kallioseinämien luolissa on tuhansia sanien maalauksia.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 000 km"
+    ],
+    [
+     "Thabana Ntlenyana",
+     "3 482 m"
+    ],
+    [
+     "Tugela-putous",
+     "947 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Drakensberg"
+   ]
+  },
+  {
+   "tunnus": "v-elburz",
+   "nimi": "Elburz",
+   "aloitus": "Kaspianmeren eteläpuolen vuoristo",
+   "luonne": "Pohjarinteillä kasvaa Hyrkanian metsää, ja Teheranin lähellä on laskettelukeskuksia.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Damavand 5 610 m"
+    ],
+    [
+     "Damavandin tyyppi",
+     "lepotilainen tulivuori"
+    ],
+    [
+     "Leveys",
+     "60–130 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Alborz",
+    "https://en.wikipedia.org/wiki/Mount_Damavand"
+   ]
+  },
+  {
+   "tunnus": "v-etiopian-ylangot",
+   "nimi": "Etiopian ylängöt",
+   "aloitus": "Afrikan katoksi kutsuttu ylänkö",
+   "luonne": "Itä-Afrikan hautavajoama halkoo ylängön, ja Tana-järvestä saa alkunsa Sininen Niili.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Ras Dašen 4 550 m"
+    ],
+    [
+     "Simien-vuoret",
+     "UNESCO 1978"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ethiopian_Highlands",
+    "https://en.wikipedia.org/wiki/Simien_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-grand-canyon",
+   "nimi": "Grand Canyon",
+   "aloitus": "Coloradon kuluttama jättiläiskanjoni",
+   "luonne": "Rotkon seinämiin on paljastunut kallioperää lähes kahden miljardin vuoden ajalta.",
+   "rivit": [
+    [
+     "Pituus",
+     "446 km"
+    ],
+    [
+     "Suurin syvyys",
+     "1 857 m"
+    ],
+    [
+     "Suurin leveys",
+     "29 km"
+    ],
+    [
+     "Kansallispuisto",
+     "vuodesta 1919"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Grand_Canyon",
+    "https://en.wikipedia.org/wiki/Grand_Canyon_National_Park"
+   ]
+  },
+  {
+   "tunnus": "v-guyanan-ylanko",
+   "nimi": "Guyanan ylänkö",
+   "aloitus": "Etelä-Amerikan pohjoisosan pöytävuoret",
+   "luonne": "Jyrkkäseinäiset, tasalakiset tepui-vuoret ovat muinaisen pohjakallion jäänteitä.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Pico da Neblina 2 995 m"
+    ],
+    [
+     "Kallioperä",
+     "n. 1,7 mrd vuotta"
+    ],
+    [
+     "Angel-putous",
+     "979 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Guiana_Highlands",
+    "https://en.wikipedia.org/wiki/Angel_Falls"
+   ]
+  },
+  {
+   "tunnus": "v-hindukush",
+   "nimi": "Hindukush",
+   "aloitus": "Afganistanin halki kulkeva vuoristo",
+   "luonne": "Aleksanteri Suuri ylitti vuoret 329 eaa. Nimeä on usein tulkittu ’hindujen tappajaksi’.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 800 km"
+    ],
+    [
+     "Korkein huippu",
+     "Tirich Mir 7 708 m"
+    ],
+    [
+     "Salangin tunneli",
+     "n. 3 400 m korkeudessa"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Hindu_Kush",
+    "https://en.wikipedia.org/wiki/Salang_Tunnel"
+   ]
+  },
+  {
+   "tunnus": "v-japanin-alpit",
+   "nimi": "Japanin Alpit",
+   "aloitus": "Honshun keskiosan korkeat vuoret",
+   "luonne": "Nimen antoi geologi William Gowland, ja lähetyssaarnaaja Walter Weston teki vuoret tunnetuiksi.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 200 km"
+    ],
+    [
+     "Korkein huippu",
+     "Kita 3 193 m"
+    ],
+    [
+     "Kolme osaa",
+     "Hida, Kiso, Akaishi"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Japanese_Alps"
+   ]
+  },
+  {
+   "tunnus": "v-kaakkois-australian-ylangot",
+   "nimi": "Kaakkois-Australian ylängöt",
+   "aloitus": "Manner-Australian korkein vuoristo",
+   "luonne": "Lunta sataa touko–lokakuussa. Aboriginaalit kokoontuivat kesäisin syömään bogong-yökkösiä.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Kosciuszko 2 228 m"
+    ],
+    [
+     "Voimalahanke",
+     "rakennus alkoi 1949"
+    ],
+    [
+     "Kansallispuisto",
+     "vuodesta 1967"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Snowy_Mountains",
+    "https://en.wikipedia.org/wiki/Kosciuszko_National_Park"
+   ]
+  },
+  {
+   "tunnus": "v-kalliovuoret",
+   "nimi": "Kalliovuoret",
+   "aloitus": "Kalliovuorten Wind River -alue Wyomingissa",
+   "luonne": "Täällä kulkee mannerjakaja, joka jakaa vedet Atlantin ja Tyynenmeren valuma-alueisiin.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 4 800 km"
+    ],
+    [
+     "Korkein huippu",
+     "Elbert 4 401 m"
+    ],
+    [
+     "Wyomingin korkein",
+     "Gannett Peak 4 210 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rocky_Mountains",
+    "https://en.wikipedia.org/wiki/Gannett_Peak"
+   ]
+  },
+  {
+   "tunnus": "v-kamerunvuori",
+   "nimi": "Kamerunvuori",
+   "aloitus": "Kamerunin korkein vuori",
+   "luonne": "Afrikan aktiivisimpiin kuuluva tulivuori nousee Guineanlahden rannikolta; vuorelle juostaan Toivon kilpailu.",
+   "rivit": [
+    [
+     "Korkeus",
+     "n. 4 040 m"
+    ],
+    [
+     "Viimeisin purkaus",
+     "2012"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Cameroon"
+   ]
+  },
+  {
+   "tunnus": "v-kamtsatka",
+   "nimi": "Kamtšatka",
+   "aloitus": "Venäjän Kaukoidän tulivuoriniemimaa",
+   "luonne": "Avatšanlahden rannalla oleva Petropavlovsk-Kamtšatski on tulivuorten ympäröimä.",
+   "rivit": [
+    [
+     "Niemimaan pituus",
+     "1 250 km"
+    ],
+    [
+     "Tulivuoria",
+     "n. 160 (29 aktiivista)"
+    ],
+    [
+     "Petropavlovsk",
+     "164 900 as. (2021)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kamchatka_Peninsula",
+    "https://en.wikipedia.org/wiki/Petropavlovsk-Kamchatsky"
+   ]
+  },
+  {
+   "tunnus": "v-kamtsatkan-tulivuoret",
+   "nimi": "Kamtšatkan tulivuoret",
+   "aloitus": "Kamtšatkan tulivuoriketju",
+   "luonne": "Alueen Kljutševskaja Sopka on Euraasian korkein aktiivinen tulivuori ja purkautunut lähes jatkuvasti.",
+   "rivit": [
+    [
+     "Kljutševskaja",
+     "4 754 m"
+    ],
+    [
+     "Kljutševskajan ikä",
+     "n. 7 000 vuotta"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1996"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Klyuchevskaya_Sopka",
+    "https://en.wikipedia.org/wiki/Kamchatka_Peninsula"
+   ]
+  },
+  {
+   "tunnus": "v-kapmaan-taittovuoret",
+   "nimi": "Kapmaan taittovuoret",
+   "aloitus": "Etelä-Afrikan eteläkärjen poimuvuoret",
+   "luonne": "Hiekkakivivuoret ovat poimuttuneet permikaudella. Kapkaupungin Pöytävuori kuuluu niihin.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "2 325 m"
+    ],
+    [
+     "Poimuttuminen",
+     "n. 250–300 milj. vuotta"
+    ],
+    [
+     "Kapin kasvikunta",
+     "UNESCO 2004"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cape_Fold_Mountains",
+    "https://en.wikipedia.org/wiki/Cape_Floral_Region_Protected_Areas"
+   ]
+  },
+  {
+   "tunnus": "v-karakoram",
+   "nimi": "Karakoram",
+   "aloitus": "K2:n vuoristo Pakistanin ja Kiinan rajalla",
+   "luonne": "Jäätiköt peittävät suuren osan vuoristoa, jossa on neljä yli 8 000 metrin huippua.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "K2 8 611 m"
+    ],
+    [
+     "Siachen-jäätikkö",
+     "76 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Karakoram"
+   ]
+  },
+  {
+   "tunnus": "v-karpaatit",
+   "nimi": "Karpaatit",
+   "aloitus": "Keski- ja Itä-Euroopan kaarivuoristo",
+   "luonne": "Karpaattien karhu-, susi- ja ilvespopulaatiot kuuluvat Euroopan suurimpiin.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Gerlach 2 655 m"
+    ],
+    [
+     "Valtioita",
+     "8"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Carpathian_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-kaskadit",
+   "nimi": "Kaskadit",
+   "aloitus": "Tyynenmeren rannikon tulivuoriketju",
+   "luonne": "Tulirenkaan vuoriketju. Mount Hood on Oregonin korkein kohta, 3 429 metriä.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 100 km"
+    ],
+    [
+     "Korkein huippu",
+     "Rainier 4 392 m"
+    ],
+    [
+     "Mount St. Helens",
+     "purkaus 1980"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cascade_Range",
+    "https://en.wikipedia.org/wiki/Mount_Hood"
+   ]
+  },
+  {
+   "tunnus": "v-kaukasus",
+   "nimi": "Kaukasus",
+   "aloitus": "Mustanmeren ja Kaspianmeren välinen vuoristo",
+   "luonne": "Harjannetta pidetään yleensä Euroopan ja Aasian rajana, ja Elbrus on Euroopan korkein huippu.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 200 km"
+    ],
+    [
+     "Elbrus",
+     "5 642 m"
+    ],
+    [
+     "Kazbek",
+     "5 034 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Caucasus_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-kenia-vuori",
+   "nimi": "Kenia-vuori",
+   "aloitus": "Afrikan toiseksi korkein vuori",
+   "luonne": "Sammunut tulivuori on lähellä päiväntasaajaa. Kikuyut kutsuvat sitä nimellä Kirinyaga.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Batian 5 199 m"
+    ],
+    [
+     "Ensinousu",
+     "1899"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Kenya"
+   ]
+  },
+  {
+   "tunnus": "v-kilimanjaro",
+   "nimi": "Kilimanjaro",
+   "aloitus": "Tansanian kolmen kartion tulivuori",
+   "luonne": "Jäätiköt ovat sulaneet lähes 85 % vuosina 1912–2011. Huippukartio Kibo on lepotilainen.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Uhuru 5 895 m"
+    ],
+    [
+     "Kartiot",
+     "Kibo, Mawenzi, Shira"
+    ],
+    [
+     "Ensinousu",
+     "1889"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+   ]
+  },
+  {
+   "tunnus": "v-kunlun",
+   "nimi": "Kunlun",
+   "aloitus": "Taklamakanin ja Tiibetin välinen vuoristo",
+   "luonne": "Kiinalaisessa tarustossa Lännen kuningatar-äidin asuinsija. Joet on nimetty mustaksi ja valkoiseksi jadeksi.",
+   "rivit": [
+    [
+     "Pituus",
+     "yli 3 000 km"
+    ],
+    [
+     "Korkein huippu",
+     "Liushi Shan 7 167 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Kunlun_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-lansi-ghatit",
+   "nimi": "Länsi-Ghatit",
+   "aloitus": "Intian länsirannikon pitkä vuorijono",
+   "luonne": "Monsuunin kastelema sademetsävuoristo, jossa elää lähes kolmannes Intian kasvi- ja eläinlajeista.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 600 km"
+    ],
+    [
+     "Korkein huippu",
+     "Anamudi 2 695 m"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2012"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Western_Ghats"
+   ]
+  },
+  {
+   "tunnus": "v-machu-picchu",
+   "nimi": "Machu Picchu",
+   "aloitus": "Inkojen vuorikaupunki Andeilla",
+   "luonne": "Vuorten ympäröimä 1400-luvun kaupunki, jonka Urubamba-joki kiertää kolmelta puolelta.",
+   "rivit": [
+    [
+     "Korkeus",
+     "2 430 m"
+    ],
+    [
+     "Rakennettu",
+     "n. 1450"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1983"
+    ],
+    [
+     "Kävijöitä",
+     "n. 1,5 milj. (2025)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Machu_Picchu"
+   ]
+  },
+  {
+   "tunnus": "v-madagaskarin-ylanko",
+   "nimi": "Madagaskarin ylänkö",
+   "aloitus": "Madagaskarin sisämaan vuoristoylänkö",
+   "luonne": "Imerinan kuningaskunnan vanha ydinalue, jossa pääkaupunkia Antananarivoa ympäröivät riisipellot.",
+   "rivit": [
+    [
+     "Korkeus",
+     "yli 800 m"
+    ],
+    [
+     "Ankaratran huippu",
+     "Tsiafajavona 2 644 m"
+    ],
+    [
+     "Antananarivo",
+     "n. 1,3 milj. (2018)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Central_Highlands_(Madagascar)",
+    "https://en.wikipedia.org/wiki/Antananarivo",
+    "https://en.wikipedia.org/wiki/Ankaratra"
+   ]
+  },
+  {
+   "tunnus": "v-milford-sound",
+   "nimi": "Milford Sound",
+   "aloitus": "Fiordlandin kuuluisin vuono",
+   "luonne": "Jäätikön muovaama jyrkkäseinäinen vuono, jota hallitsee kolmiomainen Mitre Peak -huippu.",
+   "rivit": [
+    [
+     "Pituus",
+     "15 km"
+    ],
+    [
+     "Mitre Peak",
+     "1 692 m"
+    ],
+    [
+     "Suurin syvyys",
+     "291 m"
+    ],
+    [
+     "Sademäärä",
+     "n. 6 400 mm vuodessa"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Milford_Sound",
+    "https://en.wikipedia.org/wiki/Fiordland"
+   ]
+  },
+  {
+   "tunnus": "v-namib",
+   "nimi": "Namib",
+   "aloitus": "Lounais-Afrikan rannikkoaavikko",
+   "luonne": "Useat dyynit kohoavat yli 300 metriin, ja kosteutta tuo vain Atlantilta saapuva sumu.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 600 km"
+    ],
+    [
+     "Ikä",
+     "n. 55–80 milj. vuotta"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 2013"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Namib"
+   ]
+  },
+  {
+   "tunnus": "v-nullarbor",
+   "nimi": "Nullarbor",
+   "aloitus": "Australian eteläinen kalkkikivitasanko",
+   "luonne": "Puuton entinen merenpohja; nimi tulee latinan sanoista ’ei puuta’.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 200 000 km²"
+    ],
+    [
+     "Leveys",
+     "n. 1 100 km"
+    ],
+    [
+     "Suorin maantie",
+     "146,6 km"
+    ],
+    [
+     "Suorin rautatie",
+     "478 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Nullarbor_Plain"
+   ]
+  },
+  {
+   "tunnus": "v-pamir",
+   "nimi": "Pamir",
+   "aloitus": "Keski-Aasian ’maailman katto’",
+   "luonne": "Usean maan rajamailla kohoava korkea vuoristo, jonka halki kulkee Pamirin valtatie.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Ismoil Somoni 7 495 m"
+    ],
+    [
+     "Pamirin valtatie",
+     "1 252 km"
+    ],
+    [
+     "Tien korkein kohta",
+     "Ak-Baital 4 655 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pamir_Mountains",
+    "https://en.wikipedia.org/wiki/Pamir_Highway",
+    "https://en.wikipedia.org/wiki/Ismoil_Somoni_Peak"
+   ]
+  },
+  {
+   "tunnus": "v-persepolis",
+   "nimi": "Persepolis",
+   "aloitus": "Akhaimenidien seremoniakaupunki",
+   "luonne": "Dareios I:n perustama rauniokaupunki laajalla kivialustalla, jonka Aleksanteri Suuri poltti.",
+   "rivit": [
+    [
+     "Perustettu",
+     "n. 515 eaa."
+    ],
+    [
+     "Palo",
+     "330 eaa."
+    ],
+    [
+     "Kivialusta",
+     "n. 125 000 m²"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1979"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Persepolis"
+   ]
+  },
+  {
+   "tunnus": "v-petra",
+   "nimi": "Petra",
+   "aloitus": "Nabatealaisten kalliokaupunki Jordaniassa",
+   "luonne": "Vaaleanpunaiseen hiekkakiveen veistetty ’ruusukaupunki’, jonka tunnetuin julkisivu on Al-Khazneh.",
+   "rivit": [
+    [
+     "Al-Khazneh",
+     "37 m korkea"
+    ],
+    [
+     "Uudelleenlöytö",
+     "1812"
+    ],
+    [
+     "UNESCO-kohde",
+     "vuodesta 1985"
+    ],
+    [
+     "Kävijöitä",
+     "n. 1,1 milj. (2019)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Petra"
+   ]
+  },
+  {
+   "tunnus": "v-pyreneet",
+   "nimi": "Pyreneet",
+   "aloitus": "Espanjan ja Ranskan rajavuoristo",
+   "luonne": "Atlantilta Välimerelle ulottuva vuorijono, jonka sylissä on Andorran mikrovaltio.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 490 km"
+    ],
+    [
+     "Korkein huippu",
+     "Aneto 3 404 m"
+    ],
+    [
+     "3 000 m:n huippuja",
+     "126"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Pyrenees"
+   ]
+  },
+  {
+   "tunnus": "v-rannikkovuoret",
+   "nimi": "Rannikkovuoret",
+   "aloitus": "Kanadan Tyynenmeren rannikon vuoristo",
+   "luonne": "Jäätikköjen peittämä jyrkkä vuorijono, joka kohoaa suoraan Tyynenmeren rannikolta.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 600 km"
+    ],
+    [
+     "Korkein huippu",
+     "Waddington 4 019 m"
+    ],
+    [
+     "Pinta-ala",
+     "n. 337 000 km²"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Coast_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-rub-al-khali",
+   "nimi": "Rub al-Khali",
+   "aloitus": "Arabian niemimaan hiekka-aavikko",
+   "luonne": "Arabiaksi ’Tyhjä neljännes’; maailman suurin yhtenäinen hiekka-aavikko ja lähes asumaton.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 650 000 km²"
+    ],
+    [
+     "Pituus",
+     "n. 1 000 km"
+    ],
+    [
+     "Korkeimmat dyynit",
+     "n. 250 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rub_al_Khali",
+    "https://earthobservatory.nasa.gov/images/related/9054/empty-quarter"
+   ]
+  },
+  {
+   "tunnus": "v-ruwenzori",
+   "nimi": "Ruwenzori",
+   "aloitus": "Ugandan ja Kongon rajavuoristo",
+   "luonne": "Päiväntasaajan lumihuippuiset vuoret, joita on pidetty antiikin Niilin lähteenä kuvatuilla ’Kuun vuorilla’.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 120 km"
+    ],
+    [
+     "Korkein huippu",
+     "Margherita 5 109 m"
+    ],
+    [
+     "Jäätiköiden ala",
+     "n. 1,5 km² (2005)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Rwenzori_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-sahara",
+   "nimi": "Sahara",
+   "aloitus": "Maailman suurin kuuma aavikko",
+   "luonne": "Dyynimerten, kivikkotasankojen ja vuoristojen aavikko, jonka halki kulkevat vanhat karavaanireitit.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 9,2 milj. km²"
+    ],
+    [
+     "Pituus",
+     "n. 4 800 km"
+    ],
+    [
+     "Osuus Afrikasta",
+     "31 %"
+    ],
+    [
+     "Sademäärä",
+     "alle 20 mm vuodessa"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sahara"
+   ]
+  },
+  {
+   "tunnus": "v-sarawat-vuoret",
+   "nimi": "Sarawat-vuoret",
+   "aloitus": "Arabian niemimaan länsireunan vuoristo",
+   "luonne": "Punaisenmeren suuntainen vuorijono; Jemenin länsiylängöillä sataa enemmän kuin muualla niemimaalla.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Nabi Shuayb 3 666 m"
+    ],
+    [
+     "Saudien korkein",
+     "Soudah n. 3 000 m"
+    ],
+    [
+     "Maat",
+     "Saudi-Arabia ja Jemen"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sarawat_Mountains",
+    "https://en.wikipedia.org/wiki/Jabal_Sawda",
+    "https://en.wikipedia.org/wiki/Jabal_Sawda"
+   ]
+  },
+  {
+   "tunnus": "v-sierra-madre-occidental",
+   "nimi": "Sierra Madre Occidental",
+   "aloitus": "Meksikon läntinen vuoristo",
+   "luonne": "Tyynenmeren puoleinen vuorijono, jonka kanjonit ovat paikoin Grand Canyonia suurempia ja syvempiä.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 500 km"
+    ],
+    [
+     "Leveys",
+     "n. 240 km"
+    ],
+    [
+     "Tarahumaran ylänkö",
+     "keskim. 2 250 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sierra_Madre_Occidental"
+   ]
+  },
+  {
+   "tunnus": "v-sierra-madre-oriental",
+   "nimi": "Sierra Madre Oriental",
+   "aloitus": "Meksikon itäinen vuoristo",
+   "luonne": "Meksikonlahden puoleinen vuorijono, joka erottaa rannikkotasangon Meksikon ylätasangosta.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 000 km"
+    ],
+    [
+     "Korkein huippu",
+     "El Potosí 3 721 m"
+    ],
+    [
+     "Osavaltioita",
+     "7"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sierra_Madre_Oriental"
+   ]
+  },
+  {
+   "tunnus": "v-sierra-nevada",
+   "nimi": "Sierra Nevada",
+   "aloitus": "Kalifornian suuri graniittivuoristo",
+   "luonne": "John Muirin ’valon vuoreksi’ kutsuma vuoristo, jossa ovat Yosemite, jättisekvoiat ja Tahoe-järvi.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 640 km"
+    ],
+    [
+     "Korkein huippu",
+     "Whitney 4 421 m"
+    ],
+    [
+     "Kultakuume",
+     "alkoi 1848"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Sierra_Nevada_(U.S.)"
+   ]
+  },
+  {
+   "tunnus": "v-skandit",
+   "nimi": "Skandit",
+   "aloitus": "Skandinavian pitkä vuoristoselkä",
+   "luonne": "Pohjoisessa Norjan ja Ruotsin rajana toimiva vuoristo, jonka jäätiköt ovat muovanneet vuonoiksi ja laaksoiksi.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 700 km"
+    ],
+    [
+     "Korkein huippu",
+     "Galdhøpiggen 2 469 m"
+    ],
+    [
+     "Ruotsin korkein",
+     "Kebnekaise 2 097 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Scandinavian_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-suuri-vedenjakajavuoristo",
+   "nimi": "Suuri vedenjakajavuoristo",
+   "aloitus": "Australian itärannikon pitkä vuorijono",
+   "luonne": "Rannikon ja sisämaan erottava vedenjakaja, jonka vanhat vuoret syntyivät yli 300 miljoonaa vuotta sitten.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 3 500 km"
+    ],
+    [
+     "Leveys",
+     "160–300 km"
+    ],
+    [
+     "Korkein huippu",
+     "Kosciuszko 2 228 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Great_Dividing_Range"
+   ]
+  },
+  {
+   "tunnus": "v-taurusvuoret",
+   "nimi": "Taurusvuoret",
+   "aloitus": "Turkin eteläinen vuoristo",
+   "luonne": "Välimeren rannikon ja Anatolian ylängön erottava vuoristo, jonka kalkkikivialueilla on suuria luolia.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Demirkazık 3 756 m"
+    ],
+    [
+     "Vuoristosola",
+     "Kilikian portit"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Taurus_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-tibesti",
+   "nimi": "Tibesti",
+   "aloitus": "Tšadin pohjoisen tulivuorivuoristo",
+   "luonne": "Saharan korkein vuoristo, jossa on kaldeeroita ja kuumia lähteitä ja jossa asuvat toubut.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Emi Koussi 3 415 m"
+    ],
+    [
+     "Pituus",
+     "n. 480 km"
+    ],
+    [
+     "Trou au Natron",
+     "8 km, syvyys 768 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tibesti_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-tiensan",
+   "nimi": "Tienšan",
+   "aloitus": "Keski-Aasian ’taivaan vuoret’",
+   "luonne": "Pitkä jäätiköitynyt vuoristo, jonka keskellä on Kirgisian suuri vuoristojärvi Issyk-Kul.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 2 900 km"
+    ],
+    [
+     "Korkein huippu",
+     "Jengish Chokusu 7 439 m"
+    ],
+    [
+     "Khan Tengri",
+     "7 010 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tian_Shan"
+   ]
+  },
+  {
+   "tunnus": "v-tiibetin-ylatasanko",
+   "nimi": "Tiibetin ylätasanko",
+   "aloitus": "Maailman korkein ylätasanko",
+   "luonne": "Jäätiköiden ’kolmas napa’, josta Keltainen joki, Jangtse ja Mekong saavat alkunsa.",
+   "rivit": [
+    [
+     "Pinta-ala",
+     "n. 2,5 milj. km²"
+    ],
+    [
+     "Keskikorkeus",
+     "yli 4 500 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Tibetan_Plateau"
+   ]
+  },
+  {
+   "tunnus": "v-ural",
+   "nimi": "Ural",
+   "aloitus": "Euroopan ja Aasian rajavuoristo",
+   "luonne": "Vanha, kulunut vuoristo, jonka maaperästä on louhittu kultaa, platinaa, malakiittia ja jalokiviä.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 2 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Narodnaja 1 895 m"
+    ],
+    [
+     "Ikä",
+     "n. 250–300 milj. vuotta"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Ural_Mountains"
+   ]
+  },
+  {
+   "tunnus": "v-uuden-guinean-ylangot",
+   "nimi": "Uuden-Guinean ylängöt",
+   "aloitus": "Uuden-Guinean saaren keskivuoristo",
+   "luonne": "Länsimaiset tutkijat saapuivat tänne vasta 1930-luvulla, ja laaksoissa asui jo yli miljoona ihmistä.",
+   "rivit": [
+    [
+     "Korkein huippu",
+     "Puncak Jaya 4 884 m"
+    ],
+    [
+     "Mount Wilhelm",
+     "4 509 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/New_Guinea_Highlands",
+    "https://en.wikipedia.org/wiki/Puncak_Jaya"
+   ]
+  },
+  {
+   "tunnus": "v-uuden-seelannin-alpit",
+   "nimi": "Uuden-Seelannin Alpit",
+   "aloitus": "Etelä-Saaren pitkä vuorijono",
+   "luonne": "Länsirinteiden valtavat sateet ruokkivat tuhansia jäätiköitä; itäpuolella on paljon kuivempaa.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 500 km"
+    ],
+    [
+     "Korkein huippu",
+     "Aoraki 3 724 m"
+    ],
+    [
+     "3 000 m:n huippuja",
+     "17"
+    ],
+    [
+     "Pisin jäätikkö",
+     "Tasman 23,5 km"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Southern_Alps"
+   ]
+  },
+  {
+   "tunnus": "v-verhojanskin-vuoristo",
+   "nimi": "Verhojanskin vuoristo",
+   "aloitus": "Itä-Siperian Jakutian vuoristo",
+   "luonne": "Alueella on maailman kylmimpiä asuttuja paikkoja, ja talvet ovat poikkeuksellisen ankaria.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 100 km"
+    ],
+    [
+     "Pakkasennätys",
+     "−67,8 °C (Verhojansk)"
+    ],
+    [
+     "Lämpöennätys",
+     "38,0 °C (2020)"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Verkhoyansk_Range",
+    "https://en.wikipedia.org/wiki/Verkhoyansk"
+   ]
+  },
+  {
+   "tunnus": "v-zagros",
+   "nimi": "Zagros",
+   "aloitus": "Iranin länsiosan pitkä vuoristo",
+   "luonne": "Tammimetsiä ja paimentolaisten laitumia; Iranin tärkeimmät öljykentät ovat vuoriston länsijuurilla.",
+   "rivit": [
+    [
+     "Pituus",
+     "n. 1 600 km"
+    ],
+    [
+     "Leveys",
+     "n. 240 km"
+    ],
+    [
+     "Korkein huippu",
+     "Dena 4 409 m"
+    ]
+   ],
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Zagros_Mountains"
+   ]
+  }
+ ]
+}

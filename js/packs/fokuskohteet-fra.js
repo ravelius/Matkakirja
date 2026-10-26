@@ -21,7 +21,21 @@
  *
  * MAAILMAN ERÄ (27.8.2026, neljätoista uutta ihmettä) toi listalle
  * toisen kohteen: Bastiljin. Se ei muuta yllä olevaa — lista on yhä
- * pelkkä ihme-erien jalusta, ja varsinainen Ranska-erä on tekemättä.
+ * pelkkä ihme-erien jalusta.
+ *
+ * TÄMÄ TIEDOSTO EI OLE KOKO KUVA (korjattu 23.9.2026, Fablen
+ * tarkistuspyyntö). "Varsinainen Ranska-erä" tuli myöhemmin, mutta
+ * eri tiedostoihin: js/packs/maastokohteet-fra.js (K2-erä 6.9.2026 ja
+ * kuvaerä 19.9.2026, mm. Mont-Saint-Michel, Chambord, Lascaux, Pont du
+ * Gard, Carcassonne, Millaun silta, Camargue, Dune du Pilat) ja
+ * js/packs/hahmotelma-fra.js (mm. Puy de Sancy, Canal du Midi). Kaikki
+ * kolme tiedostoa yhdistyvät samaan KOHDE_MAAT.FRA-taulukkoon
+ * (js/fokuskohteet.js), joten Ranskan TODELLINEN kokonaiskohdemäärä on
+ * KOHDE_MAAT.FRA.length (55 kpl 23.9.2026, enemmän kuin Saksan 53) —
+ * ei tämän tiedoston kahden rivin määrä. Uutta kohdetta lisättäessä
+ * tarkista ensin KOHDE_MAAT.FRA, ettei kohde ole jo maastokohteena tai
+ * hahmotelmana (docs/raportit/viesti-fable-jumi-fokuskohteet-fra-
+ * 20260923.md).
  *
  * ── MIKSI OMA KOHDEPISTE EIKÄ IHME LOUVREN KYLKEEN ─────────────────
  *

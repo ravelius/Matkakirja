@@ -1,0 +1,526 @@
+{
+ "kaupunki": "dublin",
+ "kaupunkiQ": "Q1761",
+ "kohteet": [
+  {
+   "q": "Q258464",
+   "nimi": "Trinity College",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 53.3444,
+   "lon": -6.2577,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Trinity College, Dublin, Ireland (Front Square).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_College%2C_Dublin%2C_Ireland_(Front_Square).jpg?width=1280",
+     "tekija": "The original uploader was Jasonm at English Wikipedia.",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trinity_College%2C_Dublin%2C_Ireland_(Front_Square).jpg",
+     "selite": "Trinity College on Irlannin vanhin yliopisto, joka perustettiin vuonna 1592.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Front Square of Trinity College Dublin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_Square_of_Trinity_College_Dublin.jpg?width=1280",
+     "tekija": "Adam McGrath",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_Square_of_Trinity_College_Dublin.jpg",
+     "selite": "Etupihan keskellä kohoaa 1800-luvun kellotorni, Campanile.",
+     "leveys": 3130,
+     "korkeus": 2075,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Trinity College Dublin Front Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinity_College_Dublin_Front_Square.jpg?width=1280",
+     "tekija": "Patrick Keegan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trinity_College_Dublin_Front_Square.jpg",
+     "selite": "Collegen kivipihat ja nurmikot muodostavat rauhallisen keidas keskustassa.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q261012",
+   "nimi": "Guinness Storehouse",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 53.34187,
+   "lon": -6.28671,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Guinness brewery, Dublin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guinness_brewery%2C_Dublin.jpg?width=1280",
+     "tekija": "Metro Centric",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guinness_brewery%2C_Dublin.jpg",
+     "selite": "St James's Gaten panimoalue on ollut Guinness-oluen kotipaikka vuodesta 1759.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brew (8117292615).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brew_(8117292615).jpg?width=1280",
+     "tekija": "psyberartist",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brew_(8117292615).jpg",
+     "selite": "Storehouse on entinen käymisrakennus, jossa nykyään on olutmuseo.",
+     "leveys": 2834,
+     "korkeus": 2047,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q742767",
+   "nimi": "Dublinin linna",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 53.34311,
+   "lon": -6.26739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dublin Dublin Castle Exterior Great Courtyard 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_Dublin_Castle_Exterior_Great_Courtyard_1.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_Dublin_Castle_Exterior_Great_Courtyard_1.jpg",
+     "selite": "Dublinin linna oli vuosisatoja Britannian hallinnon keskus Irlannissa.",
+     "leveys": 4530,
+     "korkeus": 3362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dublin Dublin Castle Exterior Forecourt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_Dublin_Castle_Exterior_Forecourt.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_Dublin_Castle_Exterior_Forecourt.jpg",
+     "selite": "Linnan punatiiliset siivet ympäröivät sisäpihaa.",
+     "leveys": 4592,
+     "korkeus": 2425,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q846365",
+   "nimi": "Pyhän Patrickin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 53.33944,
+   "lon": -6.27139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Patrick's Cathedral Exterior, Dublin, Ireland - Diliff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Patrick's_Cathedral_Exterior%2C_Dublin%2C_Ireland_-_Diliff.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Patrick's_Cathedral_Exterior%2C_Dublin%2C_Ireland_-_Diliff.jpg",
+     "selite": "Pyhän Patrickin katedraali on Irlannin suurin kirkko, ja sen torni kohoaa puiston yllä.",
+     "leveys": 9000,
+     "korkeus": 5423,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dublin St. Patrick's Cathedral Exterior Facade 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_St._Patrick's_Cathedral_Exterior_Facade_4.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_St._Patrick's_Cathedral_Exterior_Facade_4.jpg",
+     "selite": "Goottilaisen kirkon kivijulkisivu on osittain 1800-luvun entisöintiä.",
+     "leveys": 4356,
+     "korkeus": 3437,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1034624",
+   "nimi": "Ha'penny-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 53.3461,
+   "lon": -6.263,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1HaPenny Bridge12 (8158671221).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1HaPenny_Bridge12_(8158671221).jpg?width=1280",
+     "tekija": "psyberartist",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1HaPenny_Bridge12_(8158671221).jpg",
+     "selite": "Valkoinen rautainen jalankulkusilta ylittää Liffey-joen vuodesta 1816.",
+     "leveys": 3168,
+     "korkeus": 1931,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dubln - River Liffey with Ha'Penny Bridge in distance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubln_-_River_Liffey_with_Ha'Penny_Bridge_in_distance.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubln_-_River_Liffey_with_Ha'Penny_Bridge_in_distance.jpg",
+     "selite": "Sillan nimi tulee ylityksestä aikoinaan perityn puolen pennin maksusta.",
+     "leveys": 5928,
+     "korkeus": 3889,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1067803",
+   "nimi": "Christ Church -katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 53.34306,
+   "lon": -6.27139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dublin Christ Church Cathedral Exterior Choir 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_Christ_Church_Cathedral_Exterior_Choir_4.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_Christ_Church_Cathedral_Exterior_Choir_4.jpg",
+     "selite": "Christ Church on Dublinin vanhimpia kirkkoja, ja sen perustukset ovat viikinkiajalta.",
+     "leveys": 4530,
+     "korkeus": 3362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "01 Christ Church Cathedral, Dublin Exterior.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01_Christ_Church_Cathedral%2C_Dublin_Exterior.png?width=1280",
+     "tekija": "NateBergin",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01_Christ_Church_Cathedral%2C_Dublin_Exterior.png",
+     "selite": "Katedraalin harmaa kivi ja torni hallitsevat vanhaa kaupunginosaa.",
+     "leveys": 2158,
+     "korkeus": 2802,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1134365",
+   "nimi": "Spire",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 53.34972,
+   "lon": -6.26028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dublin - O'Connell Street - 20200305192622.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_-_O'Connell_Street_-_20200305192622.jpg?width=1280",
+     "tekija": "Jonjobaker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_-_O'Connell_Street_-_20200305192622.jpg",
+     "selite": "Spire on yli 120 metriä korkea teräsneula O'Connell Streetin keskellä.",
+     "leveys": 5504,
+     "korkeus": 3669,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Long exposure O'Connell Street Dublin looking towards the Spire.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Long_exposure_O'Connell_Street_Dublin_looking_towards_the_Spire.jpg?width=1280",
+     "tekija": "John Flanagan",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Long_exposure_O'Connell_Street_Dublin_looking_towards_the_Spire.jpg",
+     "selite": "Neula seisoo paikalla, jossa ennen oli Nelsonin pylväs.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1049842",
+   "nimi": "Kilmainhamin vankila",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.34167,
+   "lon": -6.30944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kilmainham Gaol exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kilmainham_Gaol_exterior.jpg?width=1280",
+     "tekija": "GrimsbyT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kilmainham_Gaol_exterior.jpg",
+     "selite": "Kilmainhamin entiseen vankilaan suljettiin Irlannin itsenäisyystaistelun johtajia.",
+     "leveys": 4624,
+     "korkeus": 3472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Detail of Exterior of Kilmainham Gaol - Kilmainham - Dublin - Ireland - 03 (43514479131).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail_of_Exterior_of_Kilmainham_Gaol_-_Kilmainham_-_Dublin_-_Ireland_-_03_(43514479131).jpg?width=1280",
+     "tekija": "Adam Jones from Kelowna, BC, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Detail_of_Exterior_of_Kilmainham_Gaol_-_Kilmainham_-_Dublin_-_Ireland_-_03_(43514479131).jpg",
+     "selite": "Vankilan harmaat kivimuurit ovat nykyään museona.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1339254",
+   "nimi": "Dublinin pääpostitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 53.34933,
+   "lon": -6.26107,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "General Post Office Dublin 20060803.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/General_Post_Office_Dublin_20060803.jpg?width=1280",
+     "tekija": "Copyright © 2006 Kaihsu Tai",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:General_Post_Office_Dublin_20060803.jpg",
+     "selite": "Pääpostitalon pylväsjulkisivu on O'Connell Streetin tunnetuin rakennus.",
+     "leveys": 1444,
+     "korkeus": 1014,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "01 General Post Office, Dublin.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01_General_Post_Office%2C_Dublin.png?width=1280",
+     "tekija": "NateBergin",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01_General_Post_Office%2C_Dublin.png",
+     "selite": "Rakennus oli pääsiäiskapinan päämaja vuonna 1916.",
+     "leveys": 3456,
+     "korkeus": 2140,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1193916",
+   "nimi": "Samuel Beckettin silta",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 53.34694,
+   "lon": -6.24111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Samuel Beckett Bridge, Dublin 20150807 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Beckett_Bridge%2C_Dublin_20150807_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett_Bridge%2C_Dublin_20150807_1.jpg",
+     "selite": "Calatravan suunnittelema silta muistuttaa kelttiläistä harppua.",
+     "leveys": 6458,
+     "korkeus": 4315,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Samuel Beckett Bridge and Sir Rogerson's Quay, Dublin 20150807 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Samuel_Beckett_Bridge_and_Sir_Rogerson's_Quay%2C_Dublin_20150807_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett_Bridge_and_Sir_Rogerson's_Quay%2C_Dublin_20150807_1.jpg",
+     "selite": "Silta kääntyy sivuun, kun laivat kulkevat satama-alueelle.",
+     "leveys": 7246,
+     "korkeus": 4873,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2300561",
+   "nimi": "Custom House",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 53.34854,
+   "lon": -6.25315,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Custom House from the Liffey, Dublin, Ireland, August 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Custom_House_from_the_Liffey%2C_Dublin%2C_Ireland%2C_August_2025.jpg?width=1280",
+     "tekija": "Mathieu Chollet - MChollet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Custom_House_from_the_Liffey%2C_Dublin%2C_Ireland%2C_August_2025.jpg",
+     "selite": "Custom House on klassistinen 1700-luvun tullirakennus Liffeyn rannalla.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dublin Custom House in 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_Custom_House_in_2025.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_Custom_House_in_2025.jpg",
+     "selite": "Vihreä kupoli erottuu valkoisen kivirakennuksen keskeltä.",
+     "leveys": 10148,
+     "korkeus": 5708,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q377937",
+   "nimi": "Phoenix Park",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 53.35579,
+   "lon": -6.32979,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wellington Testimonial, Phoenix Park (48139631368).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wellington_Testimonial%2C_Phoenix_Park_(48139631368).jpg?width=1280",
+     "tekija": "Metro Centric",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wellington_Testimonial%2C_Phoenix_Park_(48139631368).jpg",
+     "selite": "Phoenix Park on Euroopan suurimpia kaupunkipuistoja, ja siellä kohoaa Wellingtonin obeliski.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Deer by papal cross.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deer_by_papal_cross.jpg?width=1280",
+     "tekija": "self",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deer_by_papal_cross.jpg",
+     "selite": "Puiston nurmilla laiduntavat villit kuusipeurat.",
+     "leveys": 1390,
+     "korkeus": 596,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1432605",
+   "nimi": "St Stephen's Green",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 53.33806,
+   "lon": -6.25917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dublin Stephen's Green-44 edit.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dublin_Stephen's_Green-44_edit.jpg?width=1280",
+     "tekija": "Dronepicr (edited by King of Hearts) Edit corrects CA and sharpens image",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dublin_Stephen's_Green-44_edit.jpg",
+     "selite": "St Stephen's Green on viktoriaaninen puisto Dublinin keskustassa, jossa on lampi ja polkuja.",
+     "leveys": 3989,
+     "korkeus": 2989,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q920229",
+   "nimi": "Temple Bar",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 53.34559,
+   "lon": -6.26278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2008-05-23 The Temple Bar, Dublin, Ireland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-05-23_The_Temple_Bar%2C_Dublin%2C_Ireland.jpg?width=1280",
+     "tekija": "Gordon Leggett",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-05-23_The_Temple_Bar%2C_Dublin%2C_Ireland.jpg",
+     "selite": "Temple Bar on Liffeyn eteläpuolella sijaitseva kivetty kortteli, joka tunnetaan pubeistaan ja musiikistaan.",
+     "leveys": 3268,
+     "korkeus": 2248,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial photograph of Dublin 11 October 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photograph_of_Dublin_11_October_2015.jpg?width=1280",
+   "tekija": "Dronepicr",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Dublin_11_October_2015.jpg",
+   "selite": "Dublin levittäytyy Liffey-joen molemmin puolin Irlanninmeren rannalla.",
+   "leveys": 2048,
+   "korkeus": 1535,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "River Liffey and Samuel Beckett Bridge.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_Liffey_and_Samuel_Beckett_Bridge.jpg?width=1280",
+   "tekija": "Christian David",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_Liffey_and_Samuel_Beckett_Bridge.jpg",
+   "selite": "Liffey halkoo kaupungin, ja joen rannat ovat uusia toimisto- ja asuinkortteleita.",
+   "leveys": 6235,
+   "korkeus": 4157,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

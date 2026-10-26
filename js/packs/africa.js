@@ -244,7 +244,7 @@ export const AFRICA = {
   id: 'africa',
   name: 'Afrikan aarrekartta',
   boardLabel: 'Afrikka',
-  tagline: 'Etsi kivilintu, vastaa kysymyksiin, palaa kotiin.',
+  tagline: 'Etsi Kongon kuninkaan kruunu, vastaa kysymyksiin, palaa kotiin.',
   ariaLabel: 'Afrikan aarrekartta',
 
   map: {
@@ -264,10 +264,10 @@ export const AFRICA = {
 
   tokens: {
     /*
-     * Afrikan pääaarre on Suuren Zimbabwen kivilintu: kahdeksan
-     * vuolukivilintua veistettiin 1200–1400-luvulla, ja ne ryöstettiin
-     * 1800-luvun lopulla lähes kaikki pois. Palautukset kestivät yli
-     * sata vuotta, ja yhdestä linnusta puuttuu yhä alaosa.
+     * Afrikan pääaarre on Kongon kuninkaan kruunu (omistaja 19.10.2026;
+     * korvaa Suuren Zimbabwen kivilinnun, jonka kaikki kahdeksan lintua
+     * on löydetty): paavin Garcia II:lle lähettämä hopeinen kruunu, jonka
+     * jäljet katoavat Mbwilan taistelun (1665) jälkeen.
      *
      * Jokaisella laudalla on oma pääaarteensa. Afrikka oli ainoa, joka
      * käytti oletusnimeä — eikä se enää käy: Unohdettu aarre on oma pelinsä,
@@ -275,10 +275,12 @@ export const AFRICA = {
      */
     types: themedTokenTypes({
       star: {
-        name: 'Suuren Zimbabwen kivilintu',
-        fakta: 'Suuren Zimbabwen rauniokaupungista löydettiin kahdeksan '
-          + 'vuolukivilintua — yksi niistä on nykyään Zimbabwen lipussa.',
-        kuva: 'assets/aarteet/aarre-africa-star.jpg',
+        name: 'Kongon kuninkaan kruunu',
+        fakta: 'Paavi Innocentius X lähetti Kongon kuningaskunnan '
+          + 'kuninkaalle Garcia II:lle hopeisen kruunajaiskruunun. '
+          + 'Kun kuningas António I kaatui Mbwilan taistelussa 1665, '
+          + 'kruunun jäljet katoavat.',
+        kuva: 'assets/aarteet/aarre-africa-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Kimberleyn timantti', color: '#bcd6e8',
@@ -393,11 +395,11 @@ export const AFRICA = {
       ],
       lagos: [
         'Laguuni pilkkoo kaupungin saariksi, ja sillat sitovat sen taas yhteen kuin langat. Veneitä on vedellä enemmän kuin autoja rannoilla — ja kaikki liikkuvat.',
-        'Isoisän kirjassa lukee tästä satamasta vain: "Kaupunki, joka ei koskaan nuku." Alhaalla palaa niin monta valoa, että uskon joka sanan.',
+        'Isoisän kirjassa lukee tästä satamasta vain: ”Kaupunki, joka ei koskaan nuku.” Alhaalla palaa niin monta valoa, että uskon joka sanan.',
       ],
       nairobi: [
         'Savanni jatkuu kaupungin rajalle asti, ja rajalla laiduntaa kirahveja — näin ne ikkunasta, ihan totta! Ylängön ilma on niin kirkasta, että näen koneen varjonkin ruohikossa.',
-        'Isoisä tuli tänne junalla, jonka rakentamista hän kutsui "uhkarohkeudeksi kiskoilla". Minä tulen ilmaa pitkin, enkä osaa sanoa, kumpi meistä on rohkeampi.',
+        'Isoisä tuli tänne junalla, jonka rakentamista hän kutsui ”uhkarohkeudeksi kiskoilla”. Minä tulen ilmaa pitkin, enkä osaa sanoa, kumpi meistä on rohkeampi.',
       ],
       kongo: [
         'Tummaa metsää riittää niin kauan, että lakkaan vilkuilemasta kelloa. Lopulta sen halki kaartaa joki, jonka keskivirrassa on kokonaisia saaria.',
@@ -416,17 +418,17 @@ export const AFRICA = {
         'Sivun laidassa on kahvipapu ja kellotaulu vierekkäin: isoisä odotti tunnin ja kirjasi sen ylös. Siitä tunnista minä maksaisin mitä tahansa.',
       ],
     },
-    intro: 'Peli alkaa! Etsikää Suuren Zimbabwen kivilintu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
-    starFound: '◈ {name} löysi SUUREN ZIMBABWEN KIVILINNUN kaupungista {city}!',
-    starToast: 'SUUREN ZIMBABWEN KIVILINTU!',
+    intro: 'Peli alkaa! Etsikää Kongon kuninkaan kruunu ja palatkaa Tangeriin, Kairoon tai Kapkaupunkiin.',
+    starFound: '◈ {name} löysi KONGON KUNINKAAN KRUUNUN kaupungista {city}!',
+    starToast: 'KONGON KUNINKAAN KRUUNU!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Suuren Zimbabwen kivilinnun turvallisesti kotiin',
-    winnerStar: '{name} toi Suuren Zimbabwen kivilinnun kotiin {money} punnan kanssa.',
+    winStar: 'toi Kongon kuninkaan kruunun turvallisesti kotiin',
+    winnerStar: '{name} toi Kongon kuninkaan kruunun kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Isoisän kartassa tämä manner on paikoin väritetty tyhjäksi. Piirtäjä ei ilmeisesti vaivautunut kysymään niiltä miljoonilta, jotka asuivat täällä jo silloin. Tyhjä kohta kartassa kertoo piirtäjästä, ei maasta.',
-      '"Sisämaahan ei pääse", isoisä kirjoitti kolme kertaa eri sivuille, aina yhtä varmasti. Nousin lentokoneeseen ja olin siellä kahdessa tunnissa. Hänen kolme kuukauttaan ovat nyt aamupäivä.',
-      'Isoisä laski manterella olevan "muutama kymmenen heimoa". Nykyään täällä on 54 itsenäistä valtiota ja yli tuhat elävää kieltä, ja jokaisella niistä on oma sanansa vieraalle.',
+      '”Sisämaahan ei pääse”, isoisä kirjoitti kolme kertaa eri sivuille, aina yhtä varmasti. Nousin lentokoneeseen ja olin siellä kahdessa tunnissa. Hänen kolme kuukauttaan ovat nyt aamupäivä.',
+      'Isoisä laski manterella olevan ”muutama kymmenen heimoa”. Nykyään täällä on 54 itsenäistä valtiota ja yli tuhat elävää kieltä, ja jokaisella niistä on oma sanansa vieraalle.',
       'Lentokentältä keskustaan taksi ohitti kolme työmaata, joissa valot paloivat vielä yhdeksältä illalla. Tämän mantereen väestön keski-ikä on alle kaksikymmentä vuotta — nuorin koko maailmassa. Istuin takapenkillä ja tunsin itseni vanhentuneeksi kartaksi.',
       'Niili, Kongo, Niger, Sambesi. Päiväkirjan tarkin sivu on se, jolle isoisä luetteli mantereen suuret joet — jokaisen nimen hän sai oikein. Vedet hän näki; ihmiset hän arvasi.',
     ],
@@ -439,7 +441,7 @@ export const AFRICA = {
       { day: 12, text: 'Isoisä oli Egyptissä ja osti kartan, joka oli hänen omaansa vanhempi. Hän käytti sitä loppumatkan.' },
       { day: 19, text: 'Aikataulu piti, mutta vain koska laiva lähti myöhässä samaan suuntaan kuin hänkin.' },
       { day: 26, text: 'Punaisellamerellä. Isoisä kirjoitti kaipaavansa sadetta, minkä hän myöhemmin yliviivasi.' },
-      { day: 34, text: 'Isoisä kuuli satamassa karavaanireitistä, joka vie kuukaudessa aavikon halki sisämaahan. Hän ei lähtenyt. Sivun reunaan hän kirjoitti: "toiste".' },
+      { day: 34, text: 'Isoisä kuuli satamassa karavaanireitistä, joka vie kuukaudessa aavikon halki sisämaahan. Hän ei lähtenyt. Sivun reunaan hän kirjoitti: ”toiste”.' },
       { day: 42, text: 'Puolimatka. Isoisä laski, että kotiin ehtii, jos mikään ei mene pieleen — ja kirjoitti sen alle, että jokin menee aina.' },
       { day: 50, text: 'Mausteita ostettiin kotiin vietäväksi. Ne loppuivat matkalla, ja päiväkirjassa asiaa selitetään puoli sivua.' },
       { day: 58, text: 'Isoisä kiersi mantereen eteläkärjen ja huomasi olevansa aikataulussa ensimmäistä kertaa koko matkalla.' },

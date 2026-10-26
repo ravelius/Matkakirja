@@ -285,6 +285,7 @@ export const HAHMOTELMA_DNK = [
   },
   {
     id: 'hahmotelma-thy',
+    nimio: 'Thy',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-thy-cae4a3f5.jpg',
       lyhyt: 'Pohjanmeren aallot ja ruohoiset dyynit Nørre Vorupørin rannikolla.',
@@ -618,7 +619,7 @@ export const HAHMOTELMA_DNK = [
       + 'aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä '
       + 'on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren '
       + 'muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa '
-      + 'paikalliselle viikunalajikkeelle \'Bornholmin timantille\'. Saarella on useita '
+      + 'paikalliselle viikunalajikkeelle ’Bornholmin timantille’. Saarella on useita '
       + 'Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, '
       + 'Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi '
       + 'saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja '
@@ -823,6 +824,7 @@ export const HAHMOTELMA_DNK = [
   },
   {
     id: 'hahmotelma-viborg',
+    nimio: 'Viborg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-viborg-1582cc85.jpg',
       lyhyt: 'Viborgin tuomiokirkon kaksi tornia ja katto puiden takaa.',

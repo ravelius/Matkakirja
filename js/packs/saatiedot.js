@@ -45,6 +45,13 @@
  * graafissa: "Open-Meteo (ERA5), 1991–2020" — paitsi riveillä, joilla
  * on oma lahde-kenttä.
  *
+ * SÄÄASEMAN NORMAALIT (Päätoimittaja 11.10.2026): 24.9.2026 lisätyt rivit oli laskettu Open-Meteon
+ * ERA5-ruudusta vain kolmelta otosvuodelta (tools/hae-saaperusdata.mjs), eivätkä ne olleet normaaleja.
+ * Niistä 59 on nyt sääaseman ilmastonormaalit en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs,
+ * asemat ja ehdokasartikkelit tools/saa-asemat.json); lahde-kenttä kertoo aseman ja kauden. Seitsemän
+ * riviä poistettiin, koska kelvollista taulukkoa (kausi otsikossa) ei löytynyt: Al Kufra, Kalgoorlie,
+ * Namib, Ras Hafun, San Ambrosio, St. Helena ja Ouro Preto. Uudet rivit tehdään samalla työkalulla.
+ *
  * Uusi lehtikaupunki tarvitsee vain oman rivinsä tähän — koodia ei
  * tarvitse muuttaa. Ilman riviä lehti näkyy ilman säätä.
  */
@@ -3838,837 +3845,913 @@ export const SAATIEDOT = {
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N2-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain managua,noumea,puertomontt,sanjuan,saoluis.
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N2-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: managua: Managuan lentoasema 1991–2020; noumea:
+   * Nouméa 1991–2020; puertomontt: Puerto Monttin lentoasema 1991–2020;
+   * sanjuan: San Juanin lentoasema 1991–2020; saoluis: São Luís 1991–2020.
    */
   managua: {
     lat: 12.1364,
     lon: -86.2514,
-    keskilampo: [27.3, 27.8, 28.5, 30.1, 29, 27.3, 27.4, 27.7, 27.1, 26.8, 26.8, 27.1],
-    ylin: [32, 33, 34, 36, 34, 31, 30, 31, 31, 30, 30, 31],
-    alin: [23, 23, 23, 24, 24, 24, 24, 24, 23, 24, 24, 23],
-    sade: [3, 5, 4, 6, 151, 143, 75, 80, 160, 167, 135, 22],
-    luonnehdinta: 'Managua on tasaisen kuuma ympäri vuoden, 27–30 '
-      + 'asteen välillä. Kuiva kausi kestää joulukuulta huhtikuulle, '
-      + 'jolloin sadetta tulee tuskin nimeksikään; toukokuusta '
-      + 'lokakuuhun sateet kastelevat kaupunkia yli 130 millimetrillä '
-      + 'kuukaudessa.',
+    keskilampo: [26.5, 27.2, 28.3, 29.3, 28.9, 27.8, 27.5, 27.6, 27.3, 26.9, 26.6, 26.3],
+    ylin: [32, 33, 34, 35, 34, 32, 32, 32, 32, 32, 31, 31],
+    alin: [21, 22, 22, 24, 24, 23, 23, 23, 23, 22, 22, 21],
+    sade: [1, 2, 4, 5, 85, 208, 126, 135, 245, 282, 48, 8],
+    lahde: { nimi: 'sääasema Managuan lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Managua on ympäri vuoden kuuma: keskilämpö vaihtelee '
+      + 'joulukuun 26,3 asteesta huhtikuun 29,3 asteeseen, ja '
+      + 'huhtikuussa ylin lämpötila yltää 35 asteeseen. Joulukuusta '
+      + 'huhtikuuhun sataa korkeintaan 8 millimetriä kuukaudessa, '
+      + 'tammikuussa vain 1. Sateet alkavat toukokuussa, ja lokakuu '
+      + 'on sateisin, 282 millimetriä; vuodessa sataa 1 149 '
+      + 'millimetriä.',
   },
   noumea: {
     lat: -22.2758,
     lon: 166.4581,
-    keskilampo: [25.3, 25.9, 25.1, 23.7, 21.6, 20.3, 19.4, 19.4, 20.3, 21.2, 23.4, 24.2],
-    ylin: [28, 29, 27, 26, 24, 22, 22, 22, 23, 24, 26, 27],
-    alin: [22, 23, 23, 22, 19, 18, 17, 17, 18, 19, 20, 21],
-    sade: [97, 188, 178, 94, 150, 79, 41, 40, 37, 59, 81, 110],
-    luonnehdinta: 'Nouméan vuosi kääntyy eteläisen pallonpuoliskon '
-      + 'mukaan: joulu–maaliskuu on lämpimintä (24–26 astetta) ja '
-      + 'kesä–elokuu viileintä (19–20 astetta). Sadetta kertyy '
-      + 'runsaimmin helmikuussa, kuivin kuukausi on heinäkuu.',
+    keskilampo: [26.5, 26.9, 26.2, 24.7, 22.9, 21.6, 20.6, 20.5, 21.5, 22.9, 24.3, 25.8],
+    ylin: [30, 30, 29, 27, 26, 24, 23, 23, 25, 26, 28, 29],
+    alin: [23, 24, 24, 22, 20, 19, 18, 18, 18, 20, 21, 23],
+    sade: [107, 128, 162, 118, 90, 78, 70, 68, 39, 36, 44, 64],
+    lahde: { nimi: 'sääasema Nouméa, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Nouméan vuosi kääntyy eteläisen pallonpuoliskon mukaan: '
+      + 'helmikuu on lämpimin, keskilämpö 26,9 astetta, ja elokuu '
+      + 'viilein, 20,5 astetta. Sadetta kertyy runsaimmin '
+      + 'maaliskuussa, 162 millimetriä, ja vähiten lokakuussa, 36 '
+      + 'millimetriä. Vuodessa sataa 1 004 millimetriä.',
   },
   puertomontt: {
     lat: -41.4693,
     lon: -72.9424,
-    keskilampo: [14.9, 14.8, 14, 11.7, 9.4, 8.2, 7, 7.6, 8.5, 9.5, 12.1, 13.4],
-    ylin: [18, 18, 17, 15, 12, 10, 9, 10, 12, 13, 15, 17],
-    alin: [12, 11, 11, 9, 7, 6, 5, 5, 5, 6, 9, 10],
-    sade: [118, 152, 146, 189, 233, 311, 272, 214, 173, 213, 104, 198],
+    keskilampo: [14.3, 14.1, 12.6, 10.4, 8.9, 7.1, 6.4, 7.1, 8.1, 9.6, 11.4, 13.1],
+    ylin: [20, 20, 18, 15, 13, 11, 10, 11, 13, 15, 17, 19],
+    alin: [9, 9, 8, 7, 6, 4, 4, 4, 4, 5, 7, 8],
+    sade: [77, 69, 99, 142, 181, 213, 177, 175, 116, 121, 102, 93],
+    lahde: { nimi: 'sääasema Puerto Monttin lentoasema, en-Wikipedia', kausi: '1991–2020' },
     luonnehdinta: 'Puerto Montt on koko vuoden kostea: sadetta kertyy '
-      + 'jokaisena kuukautena vähintään sata millimetriä, kesäkuussa '
-      + 'lähes kolmesataa. Lämpötila pysyy maltillisena, '
-      + 'talvikuukausina (kesä–elokuu) noin seitsemän ja kahdeksan '
-      + 'asteen välillä, kesällä (joulu–helmikuu) reilun '
-      + 'neljäntoista.',
+      + 'jokaisena kuukautena vähintään 69 millimetriä, kesäkuussa '
+      + 'jopa 213. Vuodessa sataa 1 565 millimetriä. Lämpötila '
+      + 'pysyy maltillisena, heinäkuun 6,4 asteesta tammikuun 14,3 '
+      + 'asteeseen.',
   },
   sanjuan: {
     lat: 18.4655,
     lon: -66.1057,
-    keskilampo: [24.2, 24.6, 24.7, 25.8, 26.6, 27.3, 27.3, 27.4, 27.2, 26.7, 25.5, 24.6],
-    ylin: [27, 28, 28, 29, 30, 31, 31, 31, 31, 30, 29, 28],
-    alin: [21, 21, 21, 22, 23, 24, 24, 24, 24, 24, 22, 22],
-    sade: [78, 31, 68, 95, 137, 69, 81, 89, 95, 96, 101, 43],
-    luonnehdinta: 'San Juanissa lämpötila pysyy koko vuoden 24–27 '
-      + 'asteessa, viileimpänä tammikuussa ja lämpimimpänä '
-      + 'heinä–elokuussa. Sadetta riittää jokaisena kuukautena, '
-      + 'mutta touko–marraskuu on selvästi tammi–helmikuuta '
-      + 'sateisempi.',
+    keskilampo: [25.3, 25.4, 25.9, 26.7, 27.6, 28.4, 28.4, 28.6, 28.6, 28.2, 26.9, 26],
+    ylin: [28, 29, 29, 30, 31, 32, 32, 32, 32, 31, 30, 29],
+    alin: [22, 22, 22, 23, 24, 25, 25, 25, 25, 25, 24, 23],
+    sade: [103, 66, 55, 117, 141, 118, 153, 160, 165, 132, 187, 123],
+    lahde: { nimi: 'sääasema San Juanin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'San Juanissa lämpötila pysyy koko vuoden tasaisen '
+      + 'lämpimänä, tammikuun 25,3 asteesta elo- ja syyskuun 28,6 '
+      + 'asteeseen. Sadetta tulee jokaisena kuukautena: marraskuu '
+      + 'on sateisin, 187 millimetriä, ja maaliskuu kuivin, 55 '
+      + 'millimetriä. Vuodessa sataa 1 520 millimetriä.',
   },
   saoluis: {
     lat: -2.5297,
     lon: -44.3028,
-    keskilampo: [26.5, 26.1, 25.8, 26.1, 26.5, 26.7, 26.7, 27.1, 27.4, 27.5, 27.5, 27.6],
-    ylin: [29, 28, 28, 28, 29, 29, 29, 30, 30, 31, 30, 30],
-    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25],
-    sade: [244, 272, 460, 368, 202, 71, 53, 25, 14, 7, 59, 36],
-    luonnehdinta: 'São Luísissa on tasaisen kuuma, 26–28 astetta '
-      + 'ympäri vuoden. Sadekausi tammi–toukokuussa on runsas — '
-      + 'maaliskuu kastelee kaupunkia yli 450 millimetrillä — ja '
-      + 'syys–lokakuu selvästi kuivempaa aikaa.',
+    keskilampo: [27.7, 27.3, 27.1, 27.2, 27.6, 27.5, 27.5, 28.4, 28.4, 28.6, 29.2, 28.6],
+    ylin: [31, 31, 30, 31, 31, 32, 32, 32, 32, 33, 34, 32],
+    alin: [24, 24, 24, 24, 24, 24, 23, 25, 24, 25, 25, 25],
+    sade: [235, 308, 453, 431, 312, 174, 111, 23, 3, 3, 10, 55],
+    lahde: { nimi: 'sääasema São Luís, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'São Luísissa on tasaisen kuuma: keskilämpö vaihtelee '
+      + 'maaliskuun 27,1 asteesta marraskuun 29,2 asteeseen. '
+      + 'Sadekausi on runsas, ja maaliskuussa sataa 453 '
+      + 'millimetriä. Syys- ja lokakuu ovat lähes sateettomia, '
+      + 'kummassakin vain 3 millimetriä. Vuodessa sataa 2 118 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N10-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain boavista,kappalmas,kimberley,labrador,sthelena. Asemat: Sal
-   * Rei (Boa Vista, Kap Verde), Kap Point (Hyväntoivonniemi), Kimberley
-   * (Etelä-Afrikka), Happy Valley-Goose Bay (Labrador), Jamestown
-   * (St. Helena).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N10-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: boavista: Salin lentoasema 1991–2020; kappalmas:
+   * Kapkaupungin lentoasema 1991–2020; kimberley: Kimberley 1991–2020;
+   * labrador: Goose Bayn lentoasema 1991–2020; sthelena: ei riviä (ei
+   * kelvollista ilmastotaulukkoa).
    */
   boavista: {
     lat: 16.1167,
     lon: -22.8333,
-    keskilampo: [21.8, 21.9, 22.1, 22.4, 22.9, 24, 25.1, 26.6, 27.1, 26.5, 25.5, 22.8],
-    ylin: [24, 25, 26, 25, 26, 27, 28, 30, 30, 29, 29, 25],
-    alin: [19, 19, 19, 19, 20, 21, 22, 24, 24, 24, 22, 20],
-    sade: [2, 1, 0, 0, 1, 0, 3, 9, 39, 11, 1, 1],
-    luonnehdinta: 'Boa Vistalla on tasaisen lämmin, 22–27 asteen '
-      + 'aavikkosaaren ilmasto. Sadetta ei käytännössä ole '
-      + 'muulloin kuin syyskuun kostean kauden aikaan.',
+    keskilampo: [22, 21.8, 22, 22.5, 23.4, 24.3, 25.4, 26.9, 27.4, 26.8, 25.2, 23.3],
+    ylin: [25, 25, 25, 26, 26, 27, 28, 30, 30, 30, 28, 26],
+    alin: [19, 19, 19, 20, 21, 22, 23, 24, 25, 24, 23, 21],
+    sade: [3, 1, 1, 1, 1, 0, 2, 13, 35, 16, 1, 3],
+    lahde: { nimi: 'sääasema Salin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Boa Vistan naapurisaarella Salilla on aavikkosaaren '
+      + 'ilmasto: helmikuun keskilämpö on 21,8 astetta ja syyskuun '
+      + '27,4 astetta. Sadetta tulee vuodessa vain 77 millimetriä, '
+      + 'ja siitä suurin osa, 35 millimetriä, syyskuussa. Muina '
+      + 'kuukausina sataa enimmillään 16 millimetriä.',
   },
   kappalmas: {
     lat: -34.3568,
     lon: 18.4740,
-    keskilampo: [20, 20.2, 18.7, 17.1, 15.7, 14.8, 14.2, 13.7, 14.5, 15.8, 17.4, 18.9],
-    ylin: [22, 22, 21, 19, 18, 17, 16, 15, 16, 18, 19, 21],
-    alin: [18, 18, 17, 15, 14, 13, 12, 12, 13, 14, 16, 17],
-    sade: [14, 20, 12, 41, 75, 97, 82, 79, 38, 59, 31, 19],
-    luonnehdinta: 'Hyväntoivonniemellä on Välimeren tapainen '
-      + 'ilmasto: eteläinen kesä (joulu–helmikuu) on lämmin ja '
-      + 'kuiva, talvi (touko–elokuu) leuto mutta selvästi '
-      + 'sateisempi.',
+    keskilampo: [23.1, 22.2, 20.5, 17.9, 15.4, 13.2, 12.7, 13, 14.5, 16.9, 18.6, 20.7],
+    ylin: [27, 27, 26, 24, 21, 18, 18, 18, 20, 22, 24, 26],
+    alin: [17, 17, 15, 12, 10, 8, 7, 8, 9, 12, 13, 16],
+    sade: [9, 10, 13, 40, 61, 92, 85, 72, 44, 28, 25, 13],
+    lahde: { nimi: 'sääasema Kapkaupungin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Kapkaupungissa Hyväntoivonniemen seudulla on Välimeren '
+      + 'tapainen ilmasto: eteläinen kesä on lämmin ja kuiva, '
+      + 'tammikuun keskilämpö on 23,1 astetta ja sataa vain 9 '
+      + 'millimetriä. Talvi on leuto mutta sateisempi, heinäkuun '
+      + 'keskilämpö on 12,7 astetta ja alin päivälämpö 7 astetta, '
+      + 'ja kesäkuussa sataa 92 millimetriä. Vuodessa sadetta '
+      + 'kertyy 492 millimetriä.',
   },
   kimberley: {
     lat: -28.7282,
     lon: 24.7499,
-    keskilampo: [25.9, 24.1, 21.3, 17.8, 12.5, 9.8, 10.6, 11.6, 17.8, 21, 21.9, 25.4],
-    ylin: [33, 30, 29, 24, 20, 18, 18, 19, 26, 29, 29, 33],
-    alin: [19, 18, 14, 11, 5, 2, 3, 4, 9, 13, 15, 17],
-    sade: [54, 109, 42, 38, 7, 9, 4, 31, 2, 27, 73, 43],
-    luonnehdinta: 'Kimberleyssä eteläinen kesä (joulu–helmikuu) '
-      + 'on kuuma, yli 24 astetta, ja talvi (kesä–elokuu) käy '
-      + 'yöllä pakkasen puolella. Sadetta tulee etupäässä kesällä '
-      + 'ja alkusyksyllä.',
+    keskilampo: [25, 24.5, 22.3, 18.1, 14.1, 10.7, 10.5, 13, 17.2, 20.5, 22.4, 24.3],
+    ylin: [33, 32, 29, 26, 23, 20, 20, 22, 27, 29, 31, 33],
+    alin: [17, 17, 15, 10, 6, 2, 1, 4, 8, 12, 14, 16],
+    sade: [73, 67, 62, 39, 15, 9, 3, 4, 10, 31, 39, 52],
+    lahde: { nimi: 'sääasema Kimberley, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Kimberleyssä eteläinen kesä on kuuma: tammikuun keskilämpö '
+      + 'on 25 astetta ja ylin päivälämpö 33 astetta. Talvella yöt '
+      + 'viilenevät lähelle nollaa, sillä heinäkuun alin päivälämpö '
+      + 'on 1 aste ja keskilämpö 10,5 astetta. Sadetta tulee '
+      + 'etupäässä kesällä ja alkusyksyllä, eniten tammikuussa, 73 '
+      + 'millimetriä, ja vuodessa 404 millimetriä.',
   },
   labrador: {
     lat: 53.3017,
     lon: -60.3260,
-    keskilampo: [-15.7, -17.3, -7.9, -1.6, 5.1, 12, 15.3, 14.6, 11, 4.2, -4.4, -10.4],
-    ylin: [-12, -13, -4, 2, 10, 17, 20, 19, 15, 7, -1, -7],
-    alin: [-19, -21, -12, -5, 0, 7, 10, 10, 7, 1, -8, -14],
-    sade: [71, 34, 89, 74, 107, 97, 110, 132, 76, 100, 94, 85],
-    luonnehdinta: 'Labradorissa talvi (joulu–helmikuu) on ankaran '
-      + 'kylmä, yli 15 asteen pakkasessa. Lyhyt kesä (heinäkuu 15 '
-      + 'astetta) tuo mukanaan myös vuoden sateisimmat kuukaudet.',
-  },
-  /*
-   * ST. HELENA: ERA5-ruutu osuu tälle pienelle (n. 16 km) saarelle
-   * enimmäkseen mereen, vaihteluväli painui epäuskottavan kapeaksi
-   * (tools/hae-saanormaalit.mjs merkitsi rivin "TARKISTA"). En-
-   * Wikipediassa ei ole kuukausitaulukkoa, mutta artikkeli antaa
-   * Jamestownin lämpötilahaarukan sanallisesti: "21–28 °C kesällä
-   * (tammi–huhtikuu), 17–24 °C muina kuukausina" (24.9.2026). Sade
-   * ERA5:stä (Jamestown on saaren kuivin ranta, ~105 mm/v — sopii
-   * artikkelin mainitsemaan "very low annual rainfall" -kuvaukseen,
-   * toisin kuin saaren ylängön 750–1000 mm/v).
-   */
-  sthelena: {
-    lat: -15.9387,
-    lon: -5.7178,
-    keskilampo: [24.5, 24.5, 24.5, 24.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5, 20.5],
-    ylin: [28, 28, 28, 28, 24, 24, 24, 24, 24, 24, 24, 24],
-    alin: [21, 21, 21, 21, 17, 17, 17, 17, 17, 17, 17, 17],
-    sade: [8, 10, 9, 14, 7, 11, 8, 11, 9, 6, 7, 5],
-    lahde: { nimi: 'en-Wikipedia, Jamestownin lämpötilakuvaus (sanallinen)', kausi: '1991–2020' },
-    luonnehdinta: 'Jamestownissa kesä (tammi–huhtikuu) on '
-      + 'lämpimin, 21–28 astetta, ja loppuvuosi viilenee '
-      + '17–24 asteeseen. Sadetta on rannalla vähän — saaren '
-      + 'ylängöllä sitä kertyy moninkertaisesti enemmän.',
+    keskilampo: [-17, -16, -9.5, -1.4, 5.6, 11.7, 15.8, 15.6, 10.3, 3.8, -3.6, -11.6],
+    ylin: [-12, -10, -4, 4, 11, 17, 21, 21, 15, 8, 0, -7],
+    alin: [-22, -21, -15, -6, 0, 6, 11, 10, 5, 0, -7, -16],
+    sade: [67, 56, 64, 63, 70, 88, 112, 107, 86, 88, 75, 63],
+    lahde: { nimi: 'sääasema Goose Bayn lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Labradorissa Goose Bayssa talvi on ankaran kylmä: '
+      + 'tammikuun keskilämpö on -17 astetta ja alin päivälämpö -22 '
+      + 'astetta. Lyhyt kesä on viileä, heinäkuussa keskilämpö on '
+      + '15,8 astetta ja ylin päivälämpö 21 astetta, ja samalla '
+      + 'kuukaudella on vuoden sateisin, 112 millimetriä. Vuodessa '
+      + 'sataa 939 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N11-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain ahaggar,gao,kamerun,suakin,viktoria. Asemat: Tamanrasset
-   * (Ahaggar, n. 1400 m), Gao, Buea (Kamerunvuoren juurella), Suakin,
-   * Mwanza (Viktoriajärven ranta).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N11-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: ahaggar: Tamanrasset 1991–2020; gao: Gao
+   * 1950–2000; kamerun: Douala 1991–2020; suakin: Port Sudan 1991–2020;
+   * viktoria: Mwanza 1991–2020.
    */
   ahaggar: {
     lat: 22.7850,
     lon: 5.5228,
-    keskilampo: [11.8, 15.7, 18.8, 23.6, 26.5, 30.1, 29.5, 28.9, 26.7, 23.4, 15.8, 13.8],
-    ylin: [19, 22, 26, 31, 33, 36, 36, 35, 33, 30, 22, 21],
-    alin: [5, 9, 12, 16, 20, 24, 23, 23, 21, 17, 10, 7],
-    sade: [5, 1, 1, 0, 0, 0, 1, 0, 2, 2, 0, 0],
-    luonnehdinta: 'Ahaggarin vuoriston korkeus (n. 1400 metriä) '
-      + 'tekee talvesta viileän, 12 astetta, kun ympäröivä Sahara '
-      + 'on lämpimämpi. Kesäkuussa lämpötila kohoaa 30 asteeseen. '
-      + 'Sadetta ei käytännössä ole.',
+    keskilampo: [12.7, 15, 18.8, 23.3, 27.2, 29.6, 29.8, 29.1, 27.8, 23.6, 18.1, 14.4],
+    ylin: [21, 23, 26, 31, 34, 36, 36, 35, 34, 30, 25, 22],
+    alin: [5, 7, 11, 16, 20, 23, 23, 23, 21, 17, 11, 7],
+    sade: [1, 1, 4, 1, 3, 7, 8, 18, 6, 8, 1, 1],
+    lahde: { nimi: 'sääasema Tamanrasset, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Ahaggarin vuoristossa sijaitsevassa Tamanrassetissa talvi '
+      + 'on viileä: tammikuun keskilämpö on 12,7 astetta ja alin '
+      + 'päivälämpö 5 astetta, vaikka ympäröivä Sahara on '
+      + 'lämpimämpi. Kuumin on heinäkuu, 29,8 astetta, ja ylin '
+      + 'päivälämpö nousee 36 asteeseen. Sadetta kertyy vuodessa '
+      + 'vain noin 60 millimetriä, eniten elokuussa, 18 '
+      + 'millimetriä.',
   },
   gao: {
     lat: 16.2666,
     lon: -0.0500,
-    keskilampo: [22.1, 25.3, 28.6, 32.9, 34.8, 36, 33.1, 31, 32.8, 32.3, 26.6, 24.2],
-    ylin: [30, 33, 37, 41, 43, 42, 39, 36, 39, 39, 34, 32],
-    alin: [15, 18, 20, 25, 27, 30, 27, 26, 27, 26, 19, 16],
-    sade: [2, 0, 0, 0, 2, 2, 23, 53, 8, 1, 0, 0],
-    luonnehdinta: 'Gaossa toukokuu on polttavan kuuma, yli 34 '
-      + 'astetta, ja lämpötila pysyy korkeana läpi vuoden. Sadetta '
-      + 'kertyy vain lyhyen sadekauden aikana heinä–elokuussa.',
+    keskilampo: [22.8, 25.4, 29, 32.7, 35.4, 35.2, 32.6, 31, 32.2, 32.1, 27.9, 23.6],
+    ylin: [31, 34, 37, 41, 43, 42, 39, 37, 38, 39, 36, 31],
+    alin: [15, 17, 21, 25, 28, 29, 27, 25, 26, 25, 20, 16],
+    sade: [0, 0, 0, 2, 8, 23, 64, 84, 34, 5, 0, 0],
+    lahde: { nimi: 'sääasema Gao, en-Wikipedia', kausi: '1950–2000' },
+    luonnehdinta: 'Gaossa toukokuu on polttavan kuuma: keskilämpö on 35,4 '
+      + 'astetta ja ylin päivälämpö 43 astetta. Tammikuussakin '
+      + 'keskilämpö on 22,8 astetta. Sadetta kertyy vuodessa vain '
+      + '220 millimetriä, pääosin heinä–syyskuussa, eniten '
+      + 'elokuussa, 84 millimetriä, ja marraskuusta maaliskuuhun ei '
+      + 'sada lainkaan.',
   },
   kamerun: {
     lat: 4.1553,
     lon: 9.2920,
-    keskilampo: [24, 24.4, 24.2, 24, 23.5, 22.4, 21.2, 21.1, 21.5, 22.4, 23.1, 23.6],
-    ylin: [27, 27, 27, 27, 26, 25, 23, 23, 24, 25, 26, 26],
-    alin: [21, 21, 21, 21, 21, 20, 19, 19, 19, 20, 20, 21],
-    sade: [52, 70, 203, 166, 201, 346, 929, 835, 840, 307, 141, 39],
-    luonnehdinta: 'Kamerunvuoren juurella on maailman '
-      + 'sateisimpia paikkoja: heinäkuu ja elokuu kastelevat '
-      + 'seutua yli 800 millimetrillä, ja koko vuoden kertymä on '
-      + 'moninkertainen Keski-Euroopan lukuihin verrattuna.',
+    keskilampo: [28.5, 28.9, 28.5, 28.1, 27.9, 26.9, 25.9, 25.6, 26.2, 26.8, 27.5, 28.3],
+    ylin: [33, 33, 33, 32, 32, 31, 28, 28, 29, 31, 31, 32],
+    alin: [24, 24, 24, 24, 24, 23, 23, 23, 23, 23, 24, 24],
+    sade: [36, 56, 155, 239, 274, 356, 681, 691, 559, 404, 125, 31],
+    lahde: { nimi: 'sääasema Douala, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Kamerunvuoren seudulla sijaitsevassa Doualassa sataa '
+      + 'vuodessa 3 607 millimetriä, moninkertaisesti '
+      + 'Keski-Euroopan lukuihin verrattuna. Sateisimmat kuukaudet '
+      + 'ovat heinäkuu, 681 millimetriä, ja elokuu, 691 '
+      + 'millimetriä, kun taas joulukuussa sataa vain 31 '
+      + 'millimetriä. Lämpötila pysyy kuumana: helmikuun keskilämpö '
+      + 'on 28,9 astetta ja elokuun 25,6 astetta.',
   },
   suakin: {
     lat: 19.1058,
     lon: 37.3321,
-    keskilampo: [21.6, 21.6, 23.4, 25.7, 29.3, 31.8, 33.3, 34.3, 32.2, 29.2, 25.8, 23.2],
-    ylin: [24, 24, 27, 29, 33, 36, 38, 39, 37, 33, 28, 25],
-    alin: [19, 19, 20, 22, 26, 27, 28, 30, 28, 26, 24, 21],
-    sade: [35, 17, 5, 4, 2, 0, 1, 5, 2, 22, 103, 68],
-    luonnehdinta: 'Suakinissa kesä (kesä–syyskuu) on polttava, '
-      + 'yli 32 astetta, ja sade puuttuu kokonaan. Marraskuu tuo '
-      + 'Punaisenmeren rannikolle vuoden ainoan runsaan sadekauden.',
+    keskilampo: [23.5, 23.5, 24.7, 27.5, 31, 33.7, 36.2, 36.6, 33.6, 30.2, 27.7, 25.1],
+    ylin: [27, 28, 30, 33, 37, 40, 43, 43, 40, 35, 31, 29],
+    alin: [20, 19, 20, 22, 25, 27, 30, 31, 28, 26, 24, 22],
+    sade: [2, 0, 0, 9, 1, 1, 4, 2, 0, 18, 25, 19],
+    lahde: { nimi: 'sääasema Port Sudan, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Suakinin lähellä Port Sudanissa elokuu on polttavin, '
+      + 'keskilämpö 36,6 astetta ja ylin lämpötila 43 astetta, kun '
+      + 'tammikuun keskilämpö on 23,5 astetta. Sadetta tulee vähän: '
+      + 'vuodessa vain 81 millimetriä, eniten marraskuussa, 25 '
+      + 'millimetriä, ja syyskuussa ei lainkaan.',
   },
   viktoria: {
     lat: -2.5164,
     lon: 32.9175,
-    keskilampo: [22.6, 22.8, 22.7, 22.2, 22.3, 22.5, 22.3, 22.3, 22.7, 22.4, 21.6, 21.4],
-    ylin: [25, 25, 25, 25, 25, 26, 26, 25, 26, 25, 24, 23],
-    alin: [20, 20, 20, 20, 20, 19, 19, 19, 20, 20, 19, 19],
-    sade: [130, 155, 208, 204, 91, 31, 7, 44, 91, 219, 297, 294],
-    luonnehdinta: 'Viktoriajärven rannalla lämpötila pysyy '
-      + 'tasaisen leutona, 21–23 astetta ympäri vuoden. Sadetta '
-      + 'kertyy kahdessa kaudessa: maalis–huhtikuussa ja '
-      + 'loka–joulukuussa, heinäkuu on selvästi kuivin.',
+    keskilampo: [22.8, 23.3, 23.2, 23.1, 23.2, 22.7, 22.2, 22.6, 23.4, 23.4, 22.9, 22.8],
+    ylin: [28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 28, 28],
+    alin: [18, 18, 18, 18, 18, 17, 16, 17, 18, 18, 18, 18],
+    sade: [114, 82, 155, 173, 70, 26, 5, 24, 42, 121, 158, 146],
+    lahde: { nimi: 'sääasema Mwanza, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Viktoriajärven rannalla Mwanzassa lämpötila pysyy tasaisen '
+      + 'leutona, heinäkuun 22,2 asteesta lokakuun 23,4 asteeseen. '
+      + 'Sadetta kertyy kahdessa kaudessa: maalis–huhtikuussa '
+      + '(huhtikuu 173 millimetriä) sekä loka–joulukuussa '
+      + '(marraskuu 158 millimetriä). Heinäkuussa sataa vain 5 '
+      + 'millimetriä, ja vuodessa 1 116 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N12-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain cayenne,darfur,mosambik,rashafun,tshadjarvi. Asemat: Cayenne,
-   * El Fasher (Darfur), Mosambikin saari, Ras Hafun, Bol (Tšad-järvi).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N12-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: cayenne: Cayenne 1991–2020; darfur: El Fasher
+   * 1991–2020; mosambik: Pemba 1991–2020; rashafun: ei riviä (ei
+   * kelvollista ilmastotaulukkoa); tshadjarvi: Bol 1961–1990.
    */
   cayenne: {
     lat: 4.9224,
     lon: -52.3135,
-    keskilampo: [25.2, 25.4, 25.7, 25.6, 25.5, 25.2, 25.7, 26.5, 27.1, 27.3, 26, 25.5],
-    ylin: [27, 27, 28, 28, 28, 27, 28, 29, 31, 30, 29, 28],
-    alin: [23, 23, 24, 24, 23, 23, 23, 24, 24, 24, 23, 23],
-    sade: [287, 200, 171, 458, 467, 410, 238, 151, 51, 72, 261, 298],
-    luonnehdinta: 'Cayennessa lämpötila pysyy tasaisen kuumana, '
-      + '25–27 astetta ympäri vuoden. Sadekausi huhti–kesäkuussa '
-      + 'on runsain — toukokuu tuo yli 460 millimetriä — ja '
-      + 'syyskuu selvästi kuivempaa aikaa.',
+    keskilampo: [26.4, 26.4, 26.7, 26.9, 26.8, 26.8, 26.8, 27.2, 27.4, 27.5, 27.2, 26.7],
+    ylin: [29, 29, 30, 30, 30, 31, 31, 32, 32, 33, 32, 30],
+    alin: [23, 24, 24, 24, 24, 23, 23, 23, 23, 22, 23, 23],
+    sade: [399, 335, 315, 443, 600, 392, 262, 135, 63, 55, 135, 352],
+    lahde: { nimi: 'sääasema Cayenne, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Cayennessa lämpötila pysyy tasaisen kuumana, kuukausien '
+      + 'keskilämpö on 26,4–27,5 astetta. Sateisin kuukausi on '
+      + 'toukokuu, jolloin sataa 600 millimetriä, ja kuivin '
+      + 'lokakuu, vain 55 millimetriä. Vuodessa sadetta kertyy 3 '
+      + '486 millimetriä.',
   },
   darfur: {
     lat: 13.6289,
     lon: 25.3494,
-    keskilampo: [19.2, 21, 26.3, 28.6, 30.7, 31.2, 29.5, 25.7, 27.6, 28.6, 23, 19.7],
-    ylin: [27, 30, 35, 37, 39, 38, 35, 30, 33, 35, 30, 28],
-    alin: [11, 12, 18, 20, 23, 24, 24, 21, 22, 22, 16, 11],
-    sade: [0, 0, 0, 0, 1, 2, 28, 133, 31, 2, 0, 0],
-    luonnehdinta: 'Darfurissa sade on käytännössä olematon '
-      + 'lokakuusta kesäkuuhun. Elokuu tuo lyhyen sadekauden '
-      + 'huipun, ja lämpötila on korkeimmillaan touko–kesäkuussa, '
-      + 'yli 30 astetta.',
+    keskilampo: [20.3, 23, 26.3, 29.4, 31.3, 31.7, 30.1, 28.5, 29.4, 28.8, 24.3, 21],
+    ylin: [30, 33, 36, 38, 39, 39, 36, 34, 36, 36, 33, 30],
+    alin: [11, 14, 17, 21, 24, 25, 24, 23, 23, 21, 16, 12],
+    sade: [0, 0, 0, 1, 7, 16, 60, 103, 29, 4, 0, 0],
+    lahde: { nimi: 'sääasema El Fasher, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Darfurin El Fasherissa sade on käytännössä olematon '
+      + 'marraskuusta maaliskuuhun, ja huhtikuussakin sataa vain '
+      + 'millimetri. Sadekauden huippu on elokuussa, 103 '
+      + 'millimetriä, ja vuodessa sataa 220 millimetriä. Kuumin on '
+      + 'kesäkuu, keskilämpö 31,7 astetta ja ylin päivälämpö 39 '
+      + 'astetta, kun tammikuussa keskilämpö on 20,3 astetta.',
   },
   mosambik: {
     lat: -15.0342,
     lon: 40.7358,
-    keskilampo: [27, 27.1, 26.9, 26.4, 25.2, 23.8, 22.8, 23.1, 24.1, 25.6, 27, 27.5],
-    ylin: [29, 30, 29, 29, 28, 26, 26, 26, 27, 29, 30, 30],
-    alin: [25, 25, 24, 24, 23, 21, 20, 20, 21, 23, 24, 25],
-    sade: [258, 170, 157, 78, 18, 17, 30, 10, 8, 10, 68, 123],
-    luonnehdinta: 'Mosambikin saarella on trooppinen '
-      + 'monsuuni-ilmasto: joulu–maaliskuu on lämpimin ja '
-      + 'sateisin, eteläinen talvi (touko–syyskuu) selvästi '
-      + 'kuivempi ja viileämpi.',
-  },
-  rashafun: {
-    lat: 10.4306,
-    lon: 51.2683,
-    keskilampo: [24.6, 24.9, 25.9, 27.6, 28.5, 27.2, 26.1, 25.2, 25.5, 25.7, 25.7, 25.1],
-    ylin: [26, 26, 28, 29, 30, 29, 28, 28, 28, 27, 27, 26],
-    alin: [23, 24, 24, 26, 27, 25, 24, 23, 23, 24, 24, 24],
-    sade: [23, 3, 19, 10, 6, 0, 0, 0, 0, 13, 72, 57],
-    luonnehdinta: 'Ras Hafunin niemellä on kuiva, tasaisen '
-      + 'lämmin rannikkoilmasto, 25–29 astetta. Sadetta tulee '
-      + 'vain marras–joulukuun kaudella, kesäkuukaudet ovat '
-      + 'käytännössä sateettomia.',
+    keskilampo: [27.4, 27.2, 26.2, 26.7, 25.4, 23.9, 23.4, 23.7, 24.7, 25.9, 27.2, 27.7],
+    ylin: [31, 31, 31, 31, 30, 28, 27, 28, 29, 30, 30, 31],
+    alin: [25, 24, 24, 23, 21, 20, 20, 20, 21, 23, 24, 25],
+    sade: [146, 156, 202, 122, 32, 15, 11, 8, 2, 11, 42, 125],
+    lahde: { nimi: 'sääasema Pemba, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Mosambikin pohjoisrannikolla sijaitsevassa Pembassa on '
+      + 'trooppinen ilmasto, jossa sadekausi ja kuiva kausi '
+      + 'vuorottelevat: lämpimin kuukausi on joulukuu, keskilämpö '
+      + '27,7 astetta, ja viileintä on heinäkuussa 23,4 astetta. '
+      + 'Sateisinta on maaliskuussa, 202 millimetriä, kun taas '
+      + 'syyskuussa sataa vain 2 millimetriä. Vuodessa sataa 872 '
+      + 'millimetriä.',
   },
   tshadjarvi: {
     lat: 13.4594,
     lon: 14.7136,
-    keskilampo: [22.3, 24.4, 29.9, 32.8, 34.1, 33.8, 30.2, 28.1, 29.7, 30.9, 25.9, 23],
-    ylin: [29, 32, 38, 40, 41, 40, 35, 31, 33, 37, 32, 30],
-    alin: [15, 17, 22, 25, 27, 28, 26, 25, 26, 25, 19, 16],
-    sade: [0, 0, 0, 0, 4, 6, 45, 112, 47, 1, 0, 0],
-    luonnehdinta: 'Tšad-järven rannalla toukokuu on polttavan '
-      + 'kuuma, yli 34 astetta. Sadekausi heinä–elokuussa tuo '
-      + 'lyhyen helpotuksen, muulloin sadetta ei juuri ole.',
+    keskilampo: [22.2, 24.3, 27.5, 31.5, 31.8, 31.3, 29.3, 27.3, 29.2, 29.2, 23.7, 21.5],
+    ylin: [31, 33, 35, 40, 39, 38, 34, 32, 35, 37, 30, 29],
+    alin: [13, 16, 20, 23, 25, 25, 24, 23, 23, 22, 17, 14],
+    sade: [0, 0, 0, 0, 8, 20, 85, 121, 52, 4, 0, 0],
+    lahde: { nimi: 'sääasema Bol, en-Wikipedia', kausi: '1961–1990' },
+    luonnehdinta: 'Tšad-järven rannalla Bolissa toukokuu on kuumin, '
+      + 'keskilämpö 31,8 astetta, ja huhtikuussa ylin lämpötila '
+      + 'nousee 40 asteeseen. Sadekausi heinä–elokuussa tuo '
+      + 'helpotusta, elokuussa sataa 121 millimetriä; marraskuusta '
+      + 'huhtikuuhun ei sada lainkaan. Vuodessa sataa 290 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N13-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain bahrelghazal,broome,orjarannikko,santarem,sepik. Asemat: Wau
-   * (Bahr el Ghazal), Broome, Ouidah (Orjarannikko), Santarém, Wewak
-   * (Sepik-joki).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N13-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: bahrelghazal: Rumbek 1961–1990; broome: Broomen
+   * lentoasema 1939–2024; orjarannikko: Cotonou 1991–2020; santarem:
+   * Santarém 1991–2020; sepik: Wewak 1973–2007.
    */
   bahrelghazal: {
     lat: 7.7019,
     lon: 27.9928,
-    keskilampo: [28.2, 29.7, 32, 31.4, 29, 27.7, 25.7, 25.2, 25.6, 26.8, 27.9, 28.1],
-    ylin: [35, 36, 39, 37, 34, 32, 30, 29, 30, 32, 33, 35],
-    alin: [22, 23, 25, 26, 24, 23, 22, 22, 22, 22, 23, 21],
-    sade: [1, 3, 15, 46, 94, 94, 184, 183, 173, 105, 16, 0],
-    luonnehdinta: 'Bahr el Ghazalissa maaliskuu on kuumin, yli 32 '
-      + 'astetta. Sadekausi kesäkuusta lokakuuhun tuo vuoden '
-      + 'sateet, heinä–syyskuussa jopa 180 millimetriä '
-      + 'kuukaudessa.',
+    keskilampo: [27.1, 28.9, 30.5, 29.7, 28.5, 27.3, 26.5, 26.5, 27.2, 27.5, 27.4, 26.7],
+    ylin: [35, 37, 38, 36, 35, 33, 32, 32, 33, 34, 34, 35],
+    alin: [19, 21, 23, 23, 23, 22, 21, 21, 22, 21, 20, 19],
+    sade: [0, 2, 18, 62, 117, 135, 144, 160, 130, 68, 12, 0],
+    lahde: { nimi: 'sääasema Rumbek, en-Wikipedia', kausi: '1961–1990' },
+    luonnehdinta: 'Rumbekissa Bahr el Ghazalin seudulla maaliskuu on kuumin: '
+      + 'keskilämpö on 30,5 astetta ja ylin päivälämpö 38 astetta. '
+      + 'Sadekausi kestää toukokuusta lokakuuhun, ja elokuussa '
+      + 'sataa 160 millimetriä, kun taas tammi- ja joulukuussa ei '
+      + 'sada lainkaan. Vuodessa sadetta kertyy 848 millimetriä.',
   },
   broome: {
     lat: -17.9614,
     lon: 122.2359,
-    keskilampo: [28.9, 29.2, 30, 29.3, 26.4, 23.8, 23.1, 24.2, 26.2, 28.1, 29.7, 29.6],
-    ylin: [31, 32, 33, 33, 32, 29, 29, 30, 32, 33, 34, 33],
-    alin: [26, 27, 27, 26, 21, 19, 17, 19, 21, 23, 26, 26],
-    sade: [217, 67, 48, 37, 11, 8, 1, 1, 0, 4, 12, 146],
-    luonnehdinta: 'Broomessa on selkeä trooppinen kuiva-kausi: '
-      + 'kesä–syyskuu on käytännössä sateeton, ja tammikuu on '
-      + 'sekä lämpimin että sateisin, yli 200 millimetrillä.',
+    keskilampo: [29.9, 29.6, 29.8, 28.5, 25, 22.3, 21.4, 22.7, 25.2, 27.8, 29.5, 30.3],
+    ylin: [33, 33, 34, 34, 32, 29, 29, 30, 32, 33, 34, 34],
+    alin: [26, 26, 26, 23, 18, 15, 14, 15, 19, 23, 25, 27],
+    sade: [199, 178, 99, 26, 27, 18, 6, 2, 1, 1, 10, 63],
+    lahde: { nimi: 'sääasema Broomen lentoasema, en-Wikipedia', kausi: '1939–2024' },
+    luonnehdinta: 'Broomessa on selkeä trooppinen kuiva kausi: elo–lokakuussa '
+      + 'sataa vain 1–2 millimetriä kuukaudessa. Joulukuu on '
+      + 'lämpimin, keskilämpö on 30,3 astetta, ja tammikuu '
+      + 'sateisin, 199 millimetriä. Heinäkuussa keskilämpö on 21,4 '
+      + 'astetta ja alin päivälämpö 14 astetta, ja vuodessa sataa '
+      + '630 millimetriä.',
   },
   orjarannikko: {
     lat: 6.3628,
     lon: 2.0852,
-    keskilampo: [26.8, 28, 28.2, 28.1, 27.2, 26, 24.9, 24.4, 25, 26.1, 27.1, 27.4],
-    ylin: [30, 31, 31, 31, 29, 28, 27, 26, 27, 28, 30, 30],
-    alin: [23, 25, 26, 26, 25, 24, 23, 23, 23, 24, 25, 25],
-    sade: [20, 17, 70, 94, 205, 209, 114, 47, 165, 146, 78, 19],
-    luonnehdinta: 'Orjarannikolla toukokuu ja kesäkuu ovat '
-      + 'sateisimmat, yli 200 millimetriä kuukaudessa. Lämpötila '
-      + 'pysyy tasaisen kuumana, 24–28 astetta.',
+    keskilampo: [28, 29.2, 29.6, 29.2, 28.4, 27.1, 26.5, 26.2, 26.7, 27.3, 28.4, 28.4],
+    ylin: [32, 32, 32, 32, 31, 30, 29, 28, 29, 30, 32, 32],
+    alin: [24, 26, 27, 26, 25, 25, 24, 24, 24, 25, 25, 25],
+    sade: [19, 38, 81, 126, 213, 333, 135, 39, 135, 165, 44, 12],
+    lahde: { nimi: 'sääasema Cotonou, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Orjarannikon Cotonoussa kesäkuu on sateisin, 333 '
+      + 'millimetriä, ja toukokuussakin sataa 213 millimetriä; '
+      + 'joulukuussa sataa vain 12. Lämpötila pysyy kuumana, '
+      + 'maaliskuun 29,6 asteesta elokuun 26,2 asteeseen. Vuodessa '
+      + 'sataa 1 340 millimetriä.',
   },
   santarem: {
     lat: -2.4431,
     lon: -54.7083,
-    keskilampo: [26.9, 26.6, 26.4, 26.4, 26.6, 26.8, 27.2, 27.9, 28.7, 29.3, 27.8, 27.5],
-    ylin: [29, 29, 28, 28, 29, 29, 29, 30, 31, 32, 30, 30],
-    alin: [25, 25, 24, 24, 25, 25, 25, 25, 26, 27, 25, 25],
-    sade: [328, 349, 463, 468, 363, 156, 86, 78, 42, 33, 263, 205],
-    luonnehdinta: 'Santarémissä maalis–huhtikuu on Amazonin '
-      + 'sadekauden huippu, yli 460 millimetriä kuukaudessa. '
-      + 'Syys–lokakuu on selvästi kuivempi ja lämpimin, lähes '
-      + '29 astetta.',
+    keskilampo: [27.7, 27.3, 27.4, 27.5, 27.7, 27.6, 27.6, 28.2, 29.1, 29.5, 29.3, 29],
+    ylin: [31, 31, 31, 31, 31, 31, 31, 32, 33, 33, 33, 33],
+    alin: [24, 24, 24, 24, 24, 24, 24, 25, 25, 26, 25, 25],
+    sade: [197, 291, 412, 375, 269, 142, 106, 56, 45, 48, 69, 144],
+    lahde: { nimi: 'sääasema Santarém, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Santarémissä Amazonin sadekauden huippu on maaliskuussa, '
+      + 'jolloin sataa 412 millimetriä, ja huhtikuussakin 375. '
+      + 'Syyskuu on kuivin, vain 45 millimetriä, ja lokakuu '
+      + 'lämpimin, keskilämpö 29,5 astetta. Viileimpänäkin '
+      + 'kuukautena, helmikuussa, keskilämpö on 27,3 astetta. '
+      + 'Vuodessa sataa 2 154 millimetriä.',
   },
   sepik: {
     lat: -3.5533,
     lon: 143.6297,
-    keskilampo: [26.5, 26.5, 26.2, 26.2, 26.3, 26.1, 26, 26, 26.2, 26.3, 26.4, 26.5],
-    ylin: [29, 29, 28, 29, 28, 28, 28, 28, 29, 29, 29, 29],
+    keskilampo: [27.4, 27.2, 27.3, 27.4, 27.6, 27.4, 27, 27, 27.3, 27.4, 27.5, 27.4],
+    ylin: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31],
     alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24],
-    sade: [286, 176, 339, 291, 277, 242, 275, 296, 256, 280, 298, 271],
-    luonnehdinta: 'Sepik-joen varrella lämpötila pysyy '
-      + 'käytännössä muuttumattomana, 26 astetta ympäri vuoden. '
-      + 'Sadetta kertyy runsaasti jokaisena kuukautena, '
-      + 'vähintään 176 millimetriä.',
+    sade: [131, 124, 169, 186, 220, 192, 178, 141, 167, 224, 189, 161],
+    lahde: { nimi: 'sääasema Wewak, en-Wikipedia', kausi: '1973–2007' },
+    luonnehdinta: 'Wewakin rannikolla, Sepik-joen suistosta länteen, '
+      + 'lämpötila pysyy käytännössä muuttumattomana: keskilämpö on '
+      + 'joka kuukausi 27–27,6 astetta, ylin 31 ja alin 24 astetta. '
+      + 'Sadetta kertyy runsaasti jokaisena kuukautena, vähintään '
+      + '124 millimetriä, ja lokakuussa 224. Vuodessa sataa 2 082 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N14-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain bananal,geraldton,joaopessoa,murzuk,nullarbor. Asemat: Ilha
-   * do Bananal, Geraldton, João Pessoa, Murzuk, Eucla (Nullarborin
-   * tasanko).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N14-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: bananal: Palmas 1991–2020; geraldton: Geraldtonin
+   * lentoasema 1981–2020; joaopessoa: Recife 1991–2020; murzuk: Sabha
+   * 1962–1990; nullarbor: Eucla 1991–2020.
    */
   bananal: {
     lat: -11.5,
     lon: -50.2,
-    keskilampo: [26.5, 26.2, 26.5, 26.4, 27.1, 26.9, 27.2, 29.2, 29.6, 27.9, 26.5, 26.2],
-    ylin: [30, 29, 30, 30, 31, 32, 33, 35, 35, 33, 30, 30],
-    alin: [23, 23, 23, 23, 23, 22, 22, 23, 24, 23, 23, 23],
-    sade: [298, 237, 266, 212, 25, 1, 0, 1, 46, 140, 227, 281],
-    luonnehdinta: 'Ilha do Bananalilla syyskuu on kuumin, lähes '
-      + '30 astetta, ja samalla käynnissä on täydellinen '
-      + 'kuiva-kausi — kesä–elokuu on käytännössä sateeton. '
-      + 'Sadekausi joulu–maaliskuussa tuo yli 200 millimetriä '
-      + 'kuukaudessa.',
+    keskilampo: [26.1, 26.1, 26.2, 26.7, 27, 26.5, 26.5, 28.2, 29.5, 28.1, 27, 26.5],
+    ylin: [32, 32, 32, 33, 34, 35, 35, 37, 37, 35, 33, 32],
+    alin: [22, 22, 23, 23, 22, 20, 20, 21, 23, 23, 23, 23],
+    sade: [299, 260, 264, 180, 61, 6, 1, 1, 46, 144, 224, 265],
+    lahde: { nimi: 'sääasema Palmas, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Palmasissa, Bananalin saaren koillispuolella, syyskuu on '
+      + 'kuumin: keskilämpö on 29,5 astetta ja ylin päivälämpö 37 '
+      + 'astetta. Samalla kuiva kausi on lopuillaan, sillä heinä- '
+      + 'ja elokuussa sataa vain millimetrin kuukaudessa. Sadekausi '
+      + 'joulu–maaliskuussa on runsas, tammikuussa 299 millimetriä, '
+      + 'ja vuodessa sataa 1 751 millimetriä.',
   },
   geraldton: {
     lat: -28.7774,
     lon: 114.6150,
-    keskilampo: [24.6, 25.5, 24.6, 21.2, 18.5, 17.1, 15.7, 15.8, 16.8, 19.2, 20.7, 23.9],
-    ylin: [30, 30, 29, 26, 23, 22, 20, 19, 21, 23, 25, 29],
-    alin: [20, 21, 20, 17, 14, 13, 12, 12, 13, 15, 16, 19],
-    sade: [22, 14, 17, 31, 15, 35, 28, 69, 22, 7, 22, 2],
-    luonnehdinta: 'Geraldtonilla on Välimeren tapainen ilmasto: '
-      + 'eteläinen kesä (joulu–helmikuu) on lämmin ja kuiva, '
-      + 'talvi (kesä–elokuu) leuto ja selvästi sateisempi.',
+    keskilampo: [24.8, 26, 24.6, 21.9, 18.9, 16.2, 14.6, 14.6, 15.8, 17.9, 20.8, 22.9],
+    ylin: [32, 33, 31, 28, 25, 21, 20, 20, 22, 25, 28, 30],
+    alin: [18, 19, 18, 16, 13, 11, 10, 9, 9, 11, 14, 16],
+    sade: [6, 5, 11, 19, 20, 65, 83, 88, 64, 34, 16, 10],
+    lahde: { nimi: 'sääasema Geraldtonin lentoasema, en-Wikipedia', kausi: '1981–2020' },
+    luonnehdinta: 'Geraldtonilla on Välimeren tapainen ilmasto: eteläinen '
+      + 'kesä on lämmin ja kuiva, helmikuussa keskilämpö on 26 '
+      + 'astetta ja ylin päivälämpö 33 astetta, mutta sataa vain 5 '
+      + 'millimetriä. Talvi on leuto ja sateisempi, heinäkuussa '
+      + 'keskilämpö on 14,6 astetta ja elokuussa sataa 88 '
+      + 'millimetriä. Vuodessa sadetta kertyy 421 millimetriä.',
   },
   joaopessoa: {
     lat: -7.1195,
     lon: -34.8450,
-    keskilampo: [26.9, 26.8, 26.7, 26.5, 25.8, 24.9, 24.3, 24.3, 24.8, 25.7, 26.2, 26.6],
-    ylin: [29, 29, 29, 29, 28, 27, 26, 26, 27, 28, 29, 29],
-    alin: [24, 24, 25, 24, 24, 23, 22, 22, 23, 23, 24, 24],
-    sade: [44, 92, 125, 129, 132, 124, 101, 57, 42, 28, 41, 28],
-    luonnehdinta: 'João Pessoassa lämpötila pysyy tasaisen '
-      + 'lämpimänä, 24–27 astetta ympäri vuoden. Sadekausi '
-      + 'maalis–kesäkuussa on runsain, syys–lokakuu selvästi '
-      + 'kuivempaa.',
+    keskilampo: [27.1, 27.3, 27.2, 26.6, 25.8, 24.8, 24.2, 24.2, 25.2, 26.1, 26.7, 27.1],
+    ylin: [31, 31, 31, 30, 30, 29, 28, 28, 29, 30, 30, 31],
+    alin: [23, 23, 23, 23, 22, 22, 21, 21, 22, 22, 23, 23],
+    sade: [107, 127, 197, 269, 317, 391, 315, 187, 93, 53, 39, 62],
+    lahde: { nimi: 'sääasema Recife, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Läheisessä Recifessä, João Pessoan eteläpuolella, '
+      + 'lämpötila pysyy tasaisen lämpimänä: kuukausien keskilämpö '
+      + 'on 24,2–27,3 astetta. Sadekausi on runsain maaliskuusta '
+      + 'heinäkuuhun, ja kesäkuussa sataa 391 millimetriä. '
+      + 'Marraskuu on kuivin, 39 millimetriä, ja vuodessa sataa 2 '
+      + '157 millimetriä.',
   },
   murzuk: {
     lat: 25.9164,
     lon: 13.9192,
-    keskilampo: [9.9, 13.4, 18.7, 24.4, 27.7, 31.5, 31.1, 31.6, 28.8, 24, 15.7, 11.4],
-    ylin: [16, 21, 26, 32, 35, 39, 39, 39, 36, 31, 22, 18],
-    alin: [4, 6, 11, 17, 20, 24, 24, 24, 22, 17, 9, 4],
-    sade: [5, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    luonnehdinta: 'Murzukissa elokuu on kuumin, yli 31 astetta, '
-      + 'ja tammikuu selvästi viilein, alle kymmenen astetta. '
-      + 'Sadetta ei käytännössä ole minään kuukautena.',
+    keskilampo: [11.7, 14.4, 18.4, 23.9, 27.9, 31.4, 30.7, 30.4, 28.6, 24.1, 17.8, 12.9],
+    ylin: [19, 22, 26, 32, 36, 39, 38, 38, 36, 31, 25, 20],
+    alin: [5, 7, 11, 16, 20, 24, 23, 23, 21, 17, 11, 6],
+    sade: [1, 1, 1, 1, 0, 1, 0, 0, 0, 2, 1, 1],
+    lahde: { nimi: 'sääasema Sabha, en-Wikipedia', kausi: '1962–1990' },
+    luonnehdinta: 'Murzukin lähellä Sabhassa kesäkuu on kuumin, keskilämpö '
+      + '31,4 astetta ja ylin lämpötila 39 astetta, ja tammikuu '
+      + 'viilein, 11,7 astetta; tammikuun yöt laskevat 5 asteeseen. '
+      + 'Sadetta ei käytännössä ole minään kuukautena, vuodessa '
+      + 'vain 9 millimetriä.',
   },
   nullarbor: {
     lat: -31.6784,
     lon: 128.8830,
-    keskilampo: [21.1, 20.8, 20.6, 18.3, 15.1, 13.2, 12.8, 13.9, 15.4, 17.4, 19.7, 19.6],
-    ylin: [25, 24, 25, 22, 19, 17, 17, 18, 20, 23, 25, 24],
-    alin: [17, 17, 16, 15, 11, 9, 9, 9, 11, 12, 15, 15],
-    sade: [46, 16, 32, 43, 19, 9, 15, 24, 21, 41, 11, 30],
-    luonnehdinta: 'Nullarborin tasangolla kesä (joulu–helmikuu) '
-      + 'on lämmin, noin 20 astetta, ja talvi (kesä–elokuu) '
-      + 'viilenee alle 13 asteeseen. Sadetta tulee vähän mutta '
-      + 'tasaisesti ympäri vuoden.',
+    keskilampo: [22.1, 22.2, 20.9, 19, 16.1, 13.7, 13, 14, 16, 18.2, 19.7, 21.9],
+    ylin: [27, 27, 26, 24, 22, 19, 19, 20, 23, 25, 26, 26],
+    alin: [17, 18, 16, 14, 11, 8, 7, 8, 10, 12, 14, 16],
+    sade: [23, 20, 31, 29, 28, 33, 26, 30, 27, 18, 25, 32],
+    lahde: { nimi: 'sääasema Eucla, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Nullarborin rannikolla sijaitsevassa Euclassa kesä on '
+      + 'lämmin: helmikuun keskilämpö on 22,2 astetta ja ylin '
+      + 'lämpötila 27 astetta. Heinäkuussa keskilämpö laskee 13 '
+      + 'asteeseen ja yöllä 7 asteeseen. Sadetta tulee vähän mutta '
+      + 'tasaisesti, 18–33 millimetriä kuukaudessa, ja vuodessa 322 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N15-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain alkufra,campogrande,exmouth,macapa,sanambrosio. Asemat: Al
-   * Kufra, Campo Grande, Exmouth, Macapá, San Ambrosio (Desventuradas-
-   * saaret).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N15-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: alkufra: ei riviä (ei kelvollista
+   * ilmastotaulukkoa); campogrande: Campo Grande 1981–2010; exmouth:
+   * Learmonthin lentoasema 1945–2025; macapa: Macapá 1991–2020;
+   * sanambrosio: ei riviä (ei kelvollista ilmastotaulukkoa).
    */
-  alkufra: {
-    lat: 24.1747,
-    lon: 23.3161,
-    keskilampo: [11.5, 14.1, 19.6, 24.1, 28.1, 31.6, 31.3, 31.7, 28.5, 24.5, 16.5, 13],
-    ylin: [18, 21, 27, 32, 35, 39, 38, 38, 35, 32, 22, 20],
-    alin: [5, 7, 12, 17, 21, 24, 24, 25, 22, 17, 11, 6],
-    sade: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    luonnehdinta: 'Al Kufran oaasissa elokuu on kuumin, yli 31 '
-      + 'astetta, ja tammikuu selvästi viilein. Sadetta ei '
-      + 'käytännössä ole minään kuukautena.',
-  },
   campogrande: {
     lat: -20.4697,
     lon: -54.6201,
-    keskilampo: [25.4, 25.1, 25.1, 23.5, 20.7, 21.8, 20.8, 22.8, 24.4, 25.4, 25, 25.4],
-    ylin: [29, 29, 29, 28, 25, 26, 26, 28, 30, 30, 30, 29],
-    alin: [22, 21, 21, 19, 16, 18, 16, 17, 19, 21, 20, 22],
-    sade: [241, 172, 160, 109, 65, 36, 10, 28, 105, 154, 151, 188],
-    luonnehdinta: 'Campo Grandessa tammikuu on lämpimin ja '
-      + 'sateisin, yli 240 millimetriä. Heinäkuu on selvästi '
-      + 'kuivin, alle 20 asteen viileydessä ja vain kymmenen '
-      + 'millimetrin sateella.',
+    keskilampo: [25.1, 24.8, 24.7, 23.7, 20.9, 20.1, 20.1, 21.9, 23.2, 24.7, 24.9, 24.9],
+    ylin: [31, 31, 31, 30, 27, 27, 28, 30, 31, 31, 31, 31],
+    alin: [21, 21, 21, 19, 17, 16, 15, 17, 18, 20, 20, 21],
+    sade: [225, 176, 150, 89, 88, 47, 36, 46, 78, 151, 164, 206],
+    lahde: { nimi: 'sääasema Campo Grande, en-Wikipedia', kausi: '1981–2010' },
+    luonnehdinta: 'Campo Grandessa tammikuu on lämpimin ja sateisin: '
+      + 'keskilämpö on 25,1 astetta ja sadetta tulee 225 '
+      + 'millimetriä. Heinäkuu on kuivin, vain 36 millimetriä, ja '
+      + 'viileä, keskilämpö 20,1 astetta ja alin päivälämpö 15 '
+      + 'astetta. Vuodessa sataa 1 456 millimetriä.',
   },
   exmouth: {
     lat: -21.9341,
     lon: 114.1281,
-    keskilampo: [27.3, 27.8, 28.7, 26.9, 23.5, 21.1, 20.7, 21, 22.3, 23.4, 25.1, 26.7],
-    ylin: [31, 31, 32, 30, 27, 23, 24, 24, 26, 28, 29, 31],
-    alin: [23, 24, 25, 23, 20, 19, 17, 18, 18, 19, 21, 22],
-    sade: [16, 20, 39, 17, 97, 36, 0, 6, 3, 0, 0, 1],
-    luonnehdinta: 'Exmouthissa kesä (joulu–maaliskuu) on kuuma, '
-      + 'lähes 29 astetta, ja talvi (heinä–elokuu) selvästi '
-      + 'viileämpi. Sadetta tulee epäsäännöllisesti, toisinaan '
-      + 'runsaastikin tropiikin sääjärjestelmien mukana.',
+    keskilampo: [30.6, 30.9, 29.9, 26.9, 22.4, 19, 17.9, 19.4, 21.8, 24.8, 26.6, 29.1],
+    ylin: [38, 38, 37, 33, 29, 25, 24, 27, 30, 33, 35, 37],
+    alin: [23, 24, 23, 20, 16, 13, 11, 12, 14, 17, 19, 21],
+    sade: [30, 38, 40, 19, 41, 43, 21, 12, 2, 1, 2, 6],
+    lahde: { nimi: 'sääasema Learmonthin lentoasema, en-Wikipedia', kausi: '1945–2025' },
+    luonnehdinta: 'Exmouthin lähellä sijaitsevassa Learmonthissa helmikuu on '
+      + 'kuumin: keskilämpö on 30,9 astetta ja ylin päivälämpö 38 '
+      + 'astetta. Heinäkuu on viilein, 17,9 astetta, ja alin '
+      + 'päivälämpö on 11 astetta. Sadetta tulee epäsäännöllisesti, '
+      + 'vuodessa 255 millimetriä, eniten kesäkuussa, 43 '
+      + 'millimetriä, ja vähiten lokakuussa, vain millimetri.',
   },
   macapa: {
     lat: 0.0389,
     lon: -51.0664,
-    keskilampo: [25.8, 25.5, 25.4, 25.6, 26, 25.8, 26.3, 27, 27.6, 28.2, 27.3, 26.7],
-    ylin: [28, 28, 28, 28, 28, 28, 29, 30, 31, 32, 30, 30],
-    alin: [23, 23, 23, 23, 24, 23, 24, 24, 24, 25, 24, 24],
-    sade: [216, 272, 363, 333, 287, 228, 116, 59, 21, 6, 87, 85],
-    luonnehdinta: 'Macapássa maaliskuu on sateisin, yli 360 '
-      + 'millimetriä, kun Amazonin suun sadekausi on huipussaan. '
-      + 'Loka–marraskuu on selvästi kuivempaa ja hieman '
-      + 'lämpimämpää aikaa.',
-  },
-  /*
-   * SAN AMBROSIO: sama ilmiö kuin Norfolkinsaarella ja St. Helenalla —
-   * pieni, asumaton saari, ERA5-ruutu osuu enimmäkseen mereen (TARKISTA-
-   * merkki, vaihteluväli n. 1 asteen). En-Wikipedian "Desventuradas
-   * Islands" -artikkelissa (24.9.2026) ei ole kuukausitaulukkoa
-   * lainkaan, eikä muuta luotettavaa lähdettä löytynyt tälle
-   * asumattomalle saarelle. Ylin/alin ARVIOITU (ei koneen laskema):
-   * +-3 astetta keskilämmön ympäri, samaa suuruusluokkaa kuin
-   * läheisen Robinson Crusoen (Juan Fernández) mitattu vaihteluväli.
-   */
-  sanambrosio: {
-    lat: -26.3333,
-    lon: -79.8667,
-    keskilampo: [19.6, 20, 20, 19, 18.1, 17.1, 16.2, 15.5, 15.2, 15.5, 16.2, 17.8],
-    ylin: [23, 23, 23, 22, 21, 20, 19, 19, 18, 19, 19, 21],
-    alin: [17, 17, 17, 16, 15, 14, 13, 13, 12, 13, 13, 15],
-    sade: [4, 3, 5, 7, 8, 12, 7, 7, 2, 3, 2, 3],
-    luonnehdinta: 'San Ambrosion saarella merituuli pitää '
-      + 'lämpötilan leutona, 15–20 astetta ympäri vuoden. Sadetta '
-      + 'tulee vähän, hieman enemmän kesä–heinäkuussa.',
+    keskilampo: [26.6, 26.2, 26.4, 26.6, 27, 27.1, 27.2, 27.9, 28.5, 28.8, 28.7, 27.8],
+    ylin: [31, 30, 30, 31, 31, 32, 32, 33, 33, 34, 33, 32],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24],
+    sade: [268, 369, 400, 376, 308, 252, 204, 96, 25, 23, 58, 145],
+    lahde: { nimi: 'sääasema Macapá, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Macapássa maaliskuu on sateisin, 400 millimetriä, kun '
+      + 'Amazonin suun sadekausi on huipussaan. Syys–lokakuu on '
+      + 'selvästi kuivempaa, lokakuussa sataa vain 23 millimetriä, '
+      + 'ja samalla on lämpimintä: keskilämpö on 28,8 astetta ja '
+      + 'ylin päivälämpö 34 astetta. Vuodessa sadetta kertyy 2 524 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N16-kaupungit, VIIMEINEN
-   * ERÄ — kaikki 71 uutta kaupunkia saavat säänsä tämän jälkeen): Open-
-   * Meteon ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko
-   * vuodelta (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-
-   * saanormaalit.mjs --vain birdsville,cooberpedy,kalgoorlie,mountisa,
-   * nome,portovelho.
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N16-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: birdsville: Birdsville 2005–2025; cooberpedy:
+   * Coober Pedy 1994–2024; kalgoorlie: ei riviä (ei kelvollista
+   * ilmastotaulukkoa); mountisa: Mount Isa 1966–2024; nome: Nomen
+   * lentoasema 1991–2020; portovelho: Porto Velho 1991–2020.
    */
   birdsville: {
     lat: -25.8987,
     lon: 139.3487,
-    keskilampo: [33.7, 31.8, 28.5, 24, 17.3, 14.1, 13.8, 16.7, 22.1, 25.1, 29.3, 30.3],
-    ylin: [40, 38, 34, 30, 23, 20, 20, 23, 29, 32, 36, 36],
-    alin: [27, 26, 23, 18, 12, 8, 7, 10, 15, 18, 22, 24],
-    sade: [5, 42, 42, 2, 17, 0, 12, 5, 1, 12, 2, 18],
-    luonnehdinta: 'Birdsvillessä tammikuu on polttava, lähes 34 '
-      + 'astetta, ja heinäkuu selvästi viilein. Sadetta tulee '
-      + 'vähän ja satunnaisesti — helmi–maaliskuu ovat tavallista '
-      + 'sateisempia.',
+    keskilampo: [33.7, 31.9, 29.1, 24.4, 18.7, 14.7, 14.6, 16.9, 21.5, 25.5, 29, 31.7],
+    ylin: [41, 39, 36, 32, 26, 22, 22, 25, 30, 34, 37, 39],
+    alin: [27, 25, 22, 17, 12, 8, 7, 9, 13, 17, 21, 24],
+    sade: [23, 20, 40, 5, 8, 12, 5, 3, 9, 9, 17, 12],
+    lahde: { nimi: 'sääasema Birdsville, en-Wikipedia', kausi: '2005–2025' },
+    luonnehdinta: 'Birdsvillessä tammikuu on polttava: keskilämpö on 33,7 '
+      + 'astetta ja ylin päivälämpö 41 astetta. Heinäkuu on '
+      + 'viilein, 14,6 astetta, ja alin päivälämpö on 7 astetta. '
+      + 'Sadetta tulee vähän, vuodessa 163 millimetriä, eniten '
+      + 'maaliskuussa, 40 millimetriä, ja elokuussa vain 3 '
+      + 'millimetriä.',
   },
   cooberpedy: {
     lat: -29.0135,
     lon: 134.7544,
-    keskilampo: [29.2, 27.5, 25.5, 19.9, 14.4, 11.3, 11.6, 14, 18.2, 20.7, 25.7, 25.4],
-    ylin: [37, 34, 32, 26, 20, 17, 18, 20, 25, 28, 33, 32],
-    alin: [22, 21, 19, 14, 9, 6, 5, 8, 11, 13, 18, 19],
-    sade: [25, 41, 5, 14, 12, 4, 5, 20, 14, 24, 5, 18],
-    luonnehdinta: 'Coober Pedyssä kesä (joulu–helmikuu) on '
-      + 'kuuma, lähes 29 astetta, ja talvi (kesä–heinäkuu) '
-      + 'viilenee reiluun kymmeneen. Sadetta tulee vähän ympäri '
-      + 'vuoden.',
-  },
-  kalgoorlie: {
-    lat: -30.7489,
-    lon: 121.4658,
-    keskilampo: [25.4, 24.5, 22.9, 18.6, 14.7, 12.3, 11.8, 13.3, 15.1, 19.5, 22.7, 24.2],
-    ylin: [32, 31, 29, 23, 20, 17, 17, 18, 21, 26, 30, 31],
-    alin: [19, 18, 16, 14, 9, 8, 7, 8, 10, 13, 16, 17],
-    sade: [34, 46, 44, 19, 26, 17, 6, 42, 24, 14, 10, 15],
-    luonnehdinta: 'Kalgoorliessa eteläinen kesä (joulu–helmikuu) '
-      + 'on lämmin, noin 25 astetta, talvi (kesä–heinäkuu) '
-      + 'viilenee alle 13 asteeseen. Sadetta tulee tasaisesti '
-      + 'ympäri vuoden.',
+    keskilampo: [29.5, 28.6, 25.4, 20.8, 16, 12.7, 12.5, 14.4, 18.5, 21.6, 24.9, 27.3],
+    ylin: [37, 36, 32, 27, 22, 18, 19, 21, 26, 29, 32, 35],
+    alin: [22, 22, 19, 14, 10, 7, 6, 8, 11, 14, 18, 20],
+    sade: [15, 14, 11, 14, 9, 13, 5, 7, 8, 13, 15, 19],
+    lahde: { nimi: 'sääasema Coober Pedy, en-Wikipedia', kausi: '1994–2024' },
+    luonnehdinta: 'Coober Pedyssä tammikuu on kuumin: keskilämpö on 29,5 '
+      + 'astetta ja ylin päivälämpö 37 astetta. Heinäkuu on '
+      + 'viilein, 12,5 astetta, ja alin päivälämpö on 6 astetta. '
+      + 'Sadetta tulee vähän ympäri vuoden, 5–19 millimetriä '
+      + 'kuukaudessa ja vuodessa 143 millimetriä.',
   },
   mountisa: {
     lat: -20.7256,
     lon: 139.4927,
-    keskilampo: [30.8, 29.8, 28.4, 25.5, 19.9, 18, 17.5, 20.6, 24.8, 27.7, 30.8, 30.5],
-    ylin: [37, 35, 33, 30, 25, 24, 24, 27, 31, 34, 38, 36],
-    alin: [25, 25, 24, 21, 14, 12, 11, 14, 19, 21, 24, 25],
-    sade: [127, 74, 96, 76, 15, 0, 1, 1, 8, 6, 1, 42],
-    luonnehdinta: 'Mount Isassa tammikuu ja marras–joulukuu ovat '
-      + 'kuumimmat ja sateisimmat, yli 30 astetta. Kesäkuu ja '
-      + 'heinäkuu ovat käytännössä sateettomia ja selvästi '
-      + 'viileämpiä.',
+    keskilampo: [30.3, 29.4, 28.2, 25.3, 21, 17.5, 16.8, 18.9, 22.9, 26.8, 29.1, 30.3],
+    ylin: [37, 36, 35, 32, 28, 25, 25, 28, 32, 35, 37, 37],
+    alin: [24, 23, 22, 19, 14, 10, 9, 10, 14, 19, 22, 23],
+    sade: [117, 102, 69, 13, 11, 7, 8, 3, 9, 19, 39, 71],
+    lahde: { nimi: 'sääasema Mount Isa, en-Wikipedia', kausi: '1966–2024' },
+    luonnehdinta: 'Mount Isassa joulu- ja tammikuu ovat kuumimmat, keskilämpö '
+      + '30,3 astetta ja ylin lämpötila 37 astetta. Sateisin '
+      + 'kuukausi on tammikuu, 117 millimetriä, kun elokuussa sataa '
+      + 'vain 3 millimetriä. Heinäkuussa keskilämpö laskee 16,8 '
+      + 'asteeseen ja yöt 9 asteeseen. Vuodessa sataa 468 '
+      + 'millimetriä.',
   },
   nome: {
     lat: 64.5011,
     lon: -165.4064,
-    keskilampo: [-18.5, -16, -12.9, -6.6, 1.7, 8.2, 10.8, 10.1, 5.4, 0.3, -6.8, -14.6],
-    ylin: [-16, -13, -10, -4, 5, 11, 13, 12, 7, 2, -5, -12],
-    alin: [-21, -19, -16, -9, -1, 5, 8, 8, 3, -1, -9, -17],
-    sade: [12, 56, 44, 37, 28, 46, 51, 79, 79, 101, 74, 40],
-    luonnehdinta: 'Nomessa talvi (joulu–helmikuu) on ankaran '
-      + 'kylmä, lähes 20 asteen pakkasessa. Lyhyt kesä '
-      + '(heinä–elokuu) nousee vain kymmeneen asteeseen, ja '
-      + 'syksy tuo vuoden sateisimmat kuukaudet.',
+    keskilampo: [-14.7, -12.8, -12.4, -5.2, 2.9, 9.1, 11.1, 10.1, 6.2, -0.9, -7.7, -12.7],
+    ylin: [-10, -8, -8, -1, 6, 13, 14, 13, 9, 2, -4, -9],
+    alin: [-19, -17, -17, -9, -1, 5, 8, 7, 3, -4, -11, -17],
+    sade: [24, 25, 19, 19, 23, 25, 60, 82, 56, 47, 32, 27],
+    lahde: { nimi: 'sääasema Nomen lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Nomessa talvi on ankaran kylmä: tammikuun keskilämpö on '
+      + '-14,7 astetta, ja yöllä pakkanen yltää -19 asteeseen. '
+      + 'Lyhyt kesä on viileä, heinäkuun keskilämpö vain 11,1 '
+      + 'astetta. Sateisin kuukausi on elokuu, 82 millimetriä, ja '
+      + 'vuodessa sataa 439 millimetriä.',
   },
   portovelho: {
     lat: -8.7608,
     lon: -63.8999,
-    keskilampo: [26.1, 25.7, 25.8, 25.5, 25.4, 26.1, 26.1, 27, 27, 27, 26.2, 25.7],
-    ylin: [29, 29, 29, 28, 29, 30, 30, 32, 31, 31, 30, 29],
-    alin: [23, 23, 23, 23, 22, 23, 22, 22, 23, 23, 23, 23],
-    sade: [309, 355, 314, 290, 109, 35, 26, 34, 91, 145, 232, 278],
-    luonnehdinta: 'Porto Velhossa helmikuu on sateisin, yli 350 '
-      + 'millimetriä, kun Amazonin sadekausi on huipussaan. '
-      + 'Kesä–heinäkuu on selvästi kuivempaa, alle 30 '
-      + 'millimetrin sateella.',
+    keskilampo: [26.2, 25.9, 25.9, 26, 25.5, 25.2, 24.7, 25.6, 26, 26.6, 26.4, 25.9],
+    ylin: [32, 31, 32, 32, 32, 33, 33, 35, 34, 34, 32, 32],
+    alin: [23, 23, 23, 22, 22, 20, 20, 20, 21, 23, 23, 23],
+    sade: [321, 316, 274, 251, 127, 49, 24, 36, 120, 193, 225, 319],
+    lahde: { nimi: 'sääasema Porto Velho, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Porto Velhossa Amazonin sadekausi on huipussaan '
+      + 'tammikuussa, jolloin sataa 321 millimetriä, kun '
+      + 'heinäkuussa sataa vain 24. Keskilämpö pysyy tasaisena, '
+      + 'heinäkuun 24,7 asteesta lokakuun 26,6 asteeseen, ja kuivan '
+      + 'kauden päivät ovat kuumimmillaan elokuussa, jolloin ylin '
+      + 'lämpötila on 35 astetta. Vuodessa sataa 2 255 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N4-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain galapagos,kongo,machupicchu,madagaskar,sahara. Asemat: Puerto
-   * Ayora (Galápagos), Kisangani (Kongo-joen keskijuoksu), Machu Picchu,
-   * Antananarivo (Madagaskarin lehti keskittyy Merina-kuningaskunnan
-   * pääkaupunkiin), In Salah (keskinen Sahara, ei sekaannu Ahaggarin
-   * vuoristoon).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N4-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: galapagos: San Cristóbal (Galápagos) 1981–2010;
+   * kongo: Basoko 1971–2000; machupicchu: Machu Picchu 1991–2020;
+   * madagaskar: Antananarivo 1991–2020; sahara: In Salah 1991–2020.
    */
   galapagos: {
     lat: -0.7393,
     lon: -90.3120,
-    keskilampo: [25.3, 26.5, 27.3, 26.5, 25.6, 23.8, 22.8, 22.2, 22.3, 22.8, 23.3, 24.2],
-    ylin: [27, 28, 30, 29, 28, 26, 25, 24, 25, 25, 26, 27],
-    alin: [23, 25, 25, 24, 24, 22, 21, 20, 20, 20, 21, 22],
-    sade: [105, 84, 69, 180, 113, 35, 22, 10, 6, 11, 19, 35],
-    luonnehdinta: 'Galápagossaarilla on lämpimämpää ja sateisempaa '
-      + 'tammi–toukokuussa (23–27 astetta), kun lämmin Panamanvirta '
-      + 'hallitsee. Kesä–marraskuussa kylmä Humboldtin virta jäähdyttää '
-      + 'meren ja saaret, ja tuolloin sataa tuskin nimeksikään.',
+    keskilampo: [26.1, 26.7, 26.7, 26.5, 25.9, 24.7, 23.5, 22.7, 22.8, 23, 23.9, 24.8],
+    ylin: [29, 30, 31, 30, 29, 28, 26, 26, 26, 26, 27, 28],
+    alin: [23, 23, 23, 23, 23, 22, 21, 20, 20, 20, 21, 22],
+    sade: [83, 107, 106, 95, 42, 33, 19, 10, 8, 11, 13, 52],
+    lahde: { nimi: 'sääasema San Cristóbal (Galápagos), en-Wikipedia', kausi: '1981–2010' },
+    luonnehdinta: 'Galápagossaarten San Cristóbalilla on lämpimämpää ja '
+      + 'sateisempaa tammi–huhtikuussa: helmikuussa keskilämpö on '
+      + '26,7 astetta ja sataa 107 millimetriä. Kun Humboldtin '
+      + 'kylmä virta jäähdyttää merta ja saaria, elokuun keskilämpö '
+      + 'laskee 22,7 asteeseen, ja heinä–marraskuussa sataa '
+      + 'enintään 19 millimetriä kuukaudessa. Vuodessa sadetta '
+      + 'kertyy 579 millimetriä.',
   },
   kongo: {
     lat: 0.5165,
     lon: 25.1974,
-    keskilampo: [25.6, 26.4, 26.1, 25.7, 25.2, 24.9, 24.2, 24.3, 24.1, 24.4, 24.1, 25.2],
-    ylin: [30, 31, 31, 29, 28, 28, 28, 28, 27, 28, 27, 29],
-    alin: [22, 22, 21, 22, 22, 21, 21, 21, 21, 21, 21, 22],
-    sade: [72, 84, 148, 126, 121, 106, 89, 118, 175, 193, 161, 64],
-    luonnehdinta: 'Kongon sademetsässä on tasaisen kuuma, 24–26 '
-      + 'astetta ympäri vuoden, ja sadetta kertyy jokaisena '
-      + 'kuukautena vähintään 60 millimetriä. Runsain sadekausi '
-      + 'osuu syyskuulta marraskuulle.',
+    keskilampo: [25.8, 26.2, 26.5, 26.2, 25.9, 25.4, 24.8, 24.9, 25.3, 25.3, 25.3, 25.2],
+    ylin: [31, 32, 32, 31, 31, 30, 29, 29, 30, 30, 30, 30],
+    alin: [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 20],
+    sade: [66, 86, 150, 186, 180, 111, 137, 147, 175, 215, 177, 95],
+    lahde: { nimi: 'sääasema Basoko, en-Wikipedia', kausi: '1971–2000' },
+    luonnehdinta: 'Kongojoen varrella Basokossa, keskellä sademetsää, on '
+      + 'tasaisen kuuma: kuukausien keskilämpö on 24,8–26,5 astetta '
+      + 'ja alin päivälämpö 20–21 astetta. Sadetta kertyy jokaisena '
+      + 'kuukautena vähintään 66 millimetriä, eniten lokakuussa, '
+      + '215 millimetriä, ja vuodessa yhteensä 1 725 millimetriä.',
   },
   machupicchu: {
     lat: -13.1631,
     lon: -72.5450,
-    keskilampo: [14.5, 14.5, 14.6, 14.2, 13.6, 12.8, 12.4, 12.8, 13.4, 14.1, 14.4, 14.4],
-    ylin: [17, 17, 18, 17, 17, 17, 17, 18, 17, 18, 18, 17],
-    alin: [12, 12, 12, 11, 10, 9, 8, 8, 9, 10, 11, 12],
-    sade: [244, 256, 242, 160, 91, 78, 41, 77, 99, 170, 221, 280],
-    luonnehdinta: 'Machu Picchun vuoristoilmasto pysyy tasaisen '
-      + 'viileänä, 12–15 asteessa läpi vuoden. Marraskuusta '
-      + 'maaliskuuhun sataa runsaasti, kun eteläinen kesä tuo '
-      + 'sadekauden; kesä–heinäkuu on selvästi kuivinta aikaa.',
+    keskilampo: [16.2, 16.3, 16.5, 16.6, 16.4, 16, 15.8, 16.6, 17.3, 17.2, 17.4, 16.6],
+    ylin: [21, 21, 21, 22, 22, 22, 22, 23, 23, 23, 23, 21],
+    alin: [12, 12, 12, 12, 11, 10, 9, 10, 11, 12, 12, 12],
+    sade: [341, 325, 341, 184, 73, 51, 54, 61, 76, 163, 173, 275],
+    lahde: { nimi: 'sääasema Machu Picchu, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Machu Picchun vuoristoilmasto pysyy viileän leutona: '
+      + 'kuukauden keskilämpö vaihtelee heinäkuun 15,8 asteesta '
+      + 'marraskuun 17,4 asteeseen, ja heinäkuun yöt laskevat '
+      + 'alimmillaan 9 asteeseen. Tammi- ja maaliskuussa sataa 341 '
+      + 'millimetriä, kun taas kesäkuu on vuoden kuivin, vain 51 '
+      + 'millimetriä. Vuodessa sadetta kertyy 2 117 millimetriä.',
   },
   madagaskar: {
     lat: -18.8792,
     lon: 47.5079,
-    keskilampo: [20.1, 20, 20.2, 18.8, 17.5, 15.2, 13.6, 14.6, 16.3, 18.8, 20.1, 20.2],
-    ylin: [24, 24, 24, 23, 22, 19, 18, 20, 22, 25, 26, 25],
-    alin: [16, 16, 16, 15, 13, 11, 9, 10, 11, 13, 14, 15],
-    sade: [358, 194, 90, 25, 4, 7, 5, 3, 2, 19, 79, 115],
-    luonnehdinta: 'Antananarivon ylängöllä sademäärä vaihtelee '
-      + 'jyrkästi: tammikuu kastelee kaupunkia 358 millimetrillä, '
-      + 'mutta touko–syyskuu on kuiva. Lämpötila laskee eteläisenä '
-      + 'talvena (kesä–elokuu) 13–14 asteeseen, kesällä nousee '
-      + 'kahteenkymmeneen.',
+    keskilampo: [21.9, 21.9, 21.7, 20.7, 18.8, 16.5, 15.6, 16.3, 18, 20.2, 21.5, 22.1],
+    ylin: [26, 26, 26, 26, 24, 21, 20, 22, 24, 26, 27, 27],
+    alin: [17, 18, 17, 16, 14, 12, 11, 11, 12, 14, 16, 17],
+    sade: [312, 237, 156, 45, 15, 6, 6, 5, 8, 39, 117, 226],
+    lahde: { nimi: 'sääasema Antananarivo, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Antananarivon ylängöllä sademäärä vaihtelee jyrkästi: '
+      + 'tammikuussa sataa 312 millimetriä, mutta elokuussa vain 5. '
+      + 'Heinäkuu on vuoden viileintä aikaa, keskilämpö 15,6 '
+      + 'astetta ja yöllä alimmillaan 11 astetta, kun joulukuussa '
+      + 'keskilämpö nousee 22,1 asteeseen. Vuodessa sataa 1 172 '
+      + 'millimetriä.',
   },
   sahara: {
     lat: 27.1939,
     lon: 2.4787,
-    keskilampo: [12.4, 17.3, 21, 26.9, 31.1, 35.2, 37.3, 37, 33.1, 27.6, 19.6, 14.6],
-    ylin: [19, 23, 28, 34, 38, 42, 45, 44, 40, 34, 26, 21],
-    alin: [6, 11, 14, 19, 24, 28, 30, 30, 27, 21, 13, 8],
-    sade: [0, 4, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0],
-    luonnehdinta: 'Keskisessä Saharassa lämpötila heittelehtii '
-      + 'tammikuun 12 asteesta heinäkuun 37 asteeseen, ja päivän ja '
-      + 'yön ero on suurimmillaan yli 30 astetta. Sadetta ei '
-      + 'käytännössä ole minään kuukautena.',
+    keskilampo: [14.4, 17.1, 21.6, 26.2, 31.2, 35.7, 38.2, 37.5, 34.3, 28.1, 20.4, 15.8],
+    ylin: [22, 25, 30, 35, 39, 44, 46, 45, 42, 36, 28, 23],
+    alin: [7, 9, 13, 18, 23, 28, 30, 30, 27, 21, 13, 8],
+    sade: [3, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
+    lahde: { nimi: 'sääasema In Salah, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Keskisessä Saharassa In Salahin kohdalla lämpötila '
+      + 'vaihtelee tammikuun 14,4 asteesta heinäkuun 38,2 '
+      + 'asteeseen. Heinäkuussa ylin lämpötila nousee 46 asteeseen, '
+      + 'ja tammikuun yöt laskevat 7 asteeseen. Sadetta ei '
+      + 'käytännössä ole minään kuukautena, vuodessa vain 13 '
+      + 'millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N5-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain grandcanyon,iguazu,titicaca,uluru,yellowstone. Asemat: Grand
-   * Canyon Village (etelälaidan n. 2100 m), Puerto Iguazú, Puno-puolen
-   * ranta (Titicaca, n. 3800 m), Uluru, Old Faithful -alue (Yellowstone,
-   * n. 2400 m).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N5-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: grandcanyon: Grand Canyon Village 1991–2020;
+   * iguazu: Puerto Iguazún lentoasema 1991–2020; titicaca: Puno 1991–2020;
+   * uluru: Yulara 1991–2020; yellowstone: Yellowstone Lake 1991–2020.
    */
   grandcanyon: {
     lat: 36.0544,
     lon: -112.1401,
-    keskilampo: [-2.1, 1.4, 2.5, 9.8, 15.7, 20.4, 22.2, 21.6, 17.7, 12, 4.1, -2.7],
-    ylin: [3, 7, 8, 17, 23, 28, 29, 28, 24, 19, 10, 2],
-    alin: [-7, -4, -3, 3, 9, 13, 16, 15, 11, 5, -2, -8],
-    sade: [18, 24, 66, 13, 20, 3, 20, 18, 8, 29, 10, 30],
-    luonnehdinta: 'Grand Canyonin etelälaidalla korkeus (n. 2100 '
-      + 'metriä) tekee talvesta ankaran: joulu–tammikuu on '
-      + 'pakkasella. Kesällä (heinäkuu 22 astetta) sää on leudompi, '
-      + 'mutta sadetta tulee vähän ympäri vuoden.',
+    keskilampo: [-0.2, 0.9, 4.1, 7.2, 11.6, 16.9, 19.8, 18.8, 15.4, 9.4, 3.9, -0.8],
+    ylin: [7, 8, 12, 16, 21, 28, 29, 28, 24, 18, 12, 6],
+    alin: [-7, -6, -4, -2, 2, 6, 10, 10, 7, 1, -4, -8],
+    sade: [45, 31, 47, 16, 10, 6, 59, 56, 38, 31, 20, 32],
+    lahde: { nimi: 'sääasema Grand Canyon Village, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Grand Canyonin etelälaidalla korkea sijainti tekee '
+      + 'talvesta kylmän: joulukuun keskilämpö on -0,8 astetta ja '
+      + 'alin päivälämpö -8 astetta. Kesällä sää on leudompi, '
+      + 'heinäkuussa keskilämpö on 19,8 astetta ja ylin päivälämpö '
+      + '29 astetta. Sadetta tulee vuodessa 391 millimetriä, eniten '
+      + 'heinäkuussa, 59 millimetriä, ja vähiten kesäkuussa, 6 '
+      + 'millimetriä.',
   },
   iguazu: {
     lat: -25.5952,
     lon: -54.5734,
-    keskilampo: [26.7, 26.6, 25, 21.6, 18.1, 19.2, 16.9, 18.2, 20.7, 23.9, 24.1, 26.3],
-    ylin: [31, 31, 29, 26, 23, 23, 21, 23, 25, 29, 29, 31],
-    alin: [22, 22, 21, 17, 14, 15, 13, 13, 16, 19, 19, 22],
-    sade: [137, 99, 133, 96, 201, 123, 97, 142, 105, 142, 150, 174],
-    luonnehdinta: 'Iguazússa on lämpimintä joulu–tammikuussa (26–27 '
-      + 'astetta) ja viileintä eteläisenä talvena heinäkuussa (17 '
-      + 'astetta). Sadetta riittää joka kuukausi runsaasti — '
-      + 'putoukset eivät kuivu koskaan.',
+    keskilampo: [25.8, 25.2, 24.3, 21.6, 17.8, 16.5, 15.9, 17.9, 19.9, 22.4, 23.7, 25.2],
+    ylin: [32, 32, 31, 28, 24, 22, 23, 25, 27, 29, 30, 31],
+    alin: [21, 20, 19, 17, 13, 12, 11, 12, 14, 17, 18, 20],
+    sade: [180, 150, 153, 161, 186, 146, 107, 84, 155, 247, 172, 219],
+    lahde: { nimi: 'sääasema Puerto Iguazún lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Iguazún putousten luona Puerto Iguazússa on lämpimintä '
+      + 'tammikuussa, 25,8 astetta, ja viileintä heinäkuussa, 15,9 '
+      + 'astetta, jolloin alin päivälämpö on 11 astetta. Sadetta '
+      + 'riittää joka kuukausi runsaasti, vähintään 84 millimetriä, '
+      + 'eniten lokakuussa, 247 millimetriä. Vuodessa sataa 1 960 '
+      + 'millimetriä, joten putoukset eivät kuivu.',
   },
   titicaca: {
     lat: -15.8402,
     lon: -70.0219,
-    keskilampo: [9.4, 9.7, 9.6, 8.7, 8.3, 7.7, 7.2, 7.9, 8.7, 9.4, 10.7, 10.1],
-    ylin: [14, 14, 14, 14, 15, 15, 15, 15, 16, 15, 17, 15],
-    alin: [5, 5, 5, 3, 2, 0, 0, 0, 1, 3, 4, 5],
-    sade: [240, 192, 131, 64, 12, 7, 4, 23, 46, 73, 65, 161],
-    luonnehdinta: 'Titicaca-järven korkealla ylängöllä (n. 3800 '
-      + 'metriä) päivä ja yö eroavat jyrkästi: päivät pysyvät '
-      + 'viileän leutoina, yöt käyvät touko–syyskuussa pakkasella. '
-      + 'Sadekausi on marraskuusta maaliskuuhun.',
+    keskilampo: [11, 10.8, 10.6, 9.9, 8.4, 7.2, 7.1, 8.1, 9.5, 10, 11.2, 11.4],
+    ylin: [16, 16, 16, 16, 16, 15, 15, 16, 17, 17, 18, 17],
+    alin: [6, 6, 6, 4, 1, 0, -1, 0, 2, 4, 5, 6],
+    sade: [159, 145, 116, 51, 7, 3, 3, 10, 24, 44, 40, 88],
+    lahde: { nimi: 'sääasema Puno, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Titicaca-järven rannalla Punossa, korkealla ylängöllä, '
+      + 'päivä ja yö eroavat jyrkästi: ylin lämpötila on joka '
+      + 'kuukausi 15–18 astetta, mutta heinäkuussa yöt laskevat -1 '
+      + 'asteeseen. Keskilämpö vaihtelee heinäkuun 7,1 asteesta '
+      + 'joulukuun 11,4 asteeseen. Sade keskittyy joulukuusta '
+      + 'maaliskuuhun, tammikuussa sataa 159 millimetriä, kun kesä- '
+      + 'ja heinäkuussa vain 3. Vuodessa sataa 690 millimetriä.',
   },
   uluru: {
     lat: -25.3444,
     lon: 131.0369,
-    keskilampo: [29.3, 28.7, 26.9, 21.5, 14.4, 10.7, 10.8, 14.2, 19.3, 21.4, 27.1, 25.6],
-    ylin: [36, 35, 33, 28, 21, 16, 18, 21, 27, 29, 35, 32],
-    alin: [23, 22, 21, 15, 8, 5, 4, 7, 12, 14, 20, 19],
-    sade: [30, 7, 9, 7, 10, 11, 10, 16, 6, 28, 2, 22],
-    luonnehdinta: 'Uluru on eteläisen kesän (joulu–helmikuu) '
-      + 'polttava, yli 29 asteen keskilämmöllä, ja talvella '
-      + '(kesä–heinäkuu) vain reilun kymmenen asteen. Sadetta tulee '
-      + 'vähän ympäri vuoden, aavikon tapaan.',
+    keskilampo: [30.7, 29.7, 27, 22.4, 16.8, 12.9, 12.7, 14.9, 20, 23.9, 26.8, 28.7],
+    ylin: [38, 37, 35, 30, 24, 20, 21, 24, 29, 33, 35, 36],
+    alin: [23, 22, 20, 15, 9, 6, 5, 6, 11, 15, 19, 21],
+    sade: [30, 41, 29, 16, 11, 17, 17, 5, 8, 23, 34, 47],
+    lahde: { nimi: 'sääasema Yulara, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Ulurun lähellä sijaitsevassa Yularassa tammikuu on '
+      + 'polttava, keskilämpö 30,7 astetta ja ylin lämpötila 38 '
+      + 'astetta, kun heinäkuun keskilämpö on vain 12,7 astetta ja '
+      + 'yöt laskevat 5 asteeseen. Sadetta tulee vähän ympäri '
+      + 'vuoden, aavikon tapaan: eniten joulukuussa, 47 '
+      + 'millimetriä, vähiten elokuussa, 5 millimetriä. Vuodessa '
+      + 'sataa 278 millimetriä.',
   },
   yellowstone: {
     lat: 44.4605,
     lon: -110.8281,
-    keskilampo: [-7.6, -7.4, -3.2, 0.8, 5.6, 11.1, 15.8, 16.4, 10, 2.9, -5, -9],
-    ylin: [-5, -3, 1, 5, 11, 18, 22, 23, 17, 8, -1, -5],
-    alin: [-11, -12, -8, -4, 0, 5, 10, 9, 3, -2, -9, -13],
-    sade: [77, 60, 69, 69, 57, 90, 36, 13, 49, 66, 72, 84],
-    luonnehdinta: 'Yellowstonen korkealla ylängöllä (n. 2400 metriä) '
-      + 'talvi on pitkä ja kylmä, joulu–tammikuu jää reilusti '
-      + 'pakkaselle. Lyhyt kesä (heinä–elokuu) nousee vain 16 '
-      + 'asteeseen, ja sadetta tulee kesäkuussa runsaimmin.',
+    keskilampo: [-10.4, -9.4, -5.1, -0.9, 4.3, 9.2, 13.8, 13.4, 8.7, 2, -4.6, -9.2],
+    ylin: [-5, -3, 2, 5, 10, 16, 22, 22, 16, 8, 0, -5],
+    alin: [-16, -16, -12, -7, -2, 2, 6, 5, 1, -4, -10, -14],
+    sade: [50, 46, 50, 54, 61, 62, 33, 38, 40, 42, 46, 51],
+    lahde: { nimi: 'sääasema Yellowstone Lake, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Yellowstone-järven rannalla korkealla ylängöllä talvi on '
+      + 'pitkä ja kylmä: tammikuun keskilämpö on -10,4 astetta ja '
+      + 'yöt laskevat alimmillaan -16 asteeseen. Lyhyt kesä on '
+      + 'viileä, heinäkuun keskilämpö vain 13,8 astetta ja ylin '
+      + 'lämpötila 22 astetta. Sadetta tulee runsaimmin kesäkuussa, '
+      + '62 millimetriä, ja vuodessa 573 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N6-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain bali,hawaii,milfordsound,mountrushmore,ouropreto. Asemat:
-   * Denpasar (Bali), Honolulu, Milford Sound, Mount Rushmore (Black
-   * Hillsin n. 1600 m), Ouro Preto (n. 1100 m, viilentää tyypillistä
-   * Brasilian rannikkoilmastoa).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N6-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: bali: Denpasarin lentoasema 1991–2020; hawaii:
+   * Honolulun lentoasema 1991–2020; milfordsound: Milford Soundin
+   * lentoasema 1991–2020; mountrushmore: Mount Rushmore 1991–2020;
+   * ouropreto: ei riviä (ei kelvollista ilmastotaulukkoa).
    */
   bali: {
     lat: -8.6705,
     lon: 115.2126,
-    keskilampo: [26.1, 26.1, 26.2, 26.2, 26.2, 25.4, 24.6, 24.4, 24.7, 25.4, 26.1, 25.8],
-    ylin: [28, 28, 28, 28, 28, 27, 26, 26, 26, 27, 28, 28],
-    alin: [24, 24, 24, 24, 24, 24, 23, 23, 23, 23, 24, 24],
-    sade: [325, 273, 303, 200, 146, 59, 37, 44, 63, 95, 170, 382],
-    luonnehdinta: 'Balilla on tasaisen kuuma, 24–26 astetta ympäri '
-      + 'vuoden. Sadekausi marras–maaliskuussa on runsas — '
-      + 'joulukuu kastelee saarta yli 380 millimetrillä — ja '
-      + 'kesä–elokuu selvästi kuivempaa aikaa.',
+    keskilampo: [27.9, 27.9, 28, 28.1, 27.7, 27.1, 26.5, 26.2, 26.7, 27.6, 28.1, 27.9],
+    ylin: [31, 31, 31, 31, 31, 30, 29, 29, 30, 31, 32, 31],
+    alin: [25, 25, 25, 25, 25, 25, 24, 24, 24, 25, 25, 25],
+    sade: [388, 299, 214, 115, 73, 51, 30, 16, 41, 68, 149, 299],
+    lahde: { nimi: 'sääasema Denpasarin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Balilla Denpasarissa on tasaisen kuuma: kuukausien '
+      + 'keskilämpö pysyy 26,2 ja 28,1 asteen välillä. Sadekausi '
+      + 'marras–maaliskuussa on runsas, ja tammikuu kastelee saarta '
+      + '388 millimetrillä, kun taas elokuu on kuivin, vain 16 '
+      + 'millimetriä. Vuodessa sataa 1 743 millimetriä.',
   },
   hawaii: {
     lat: 21.3069,
     lon: -157.8583,
-    keskilampo: [22.8, 22.1, 22.5, 23.2, 23.9, 25.3, 25.6, 26, 25.9, 25.7, 24.7, 23.8],
-    ylin: [24, 24, 24, 25, 26, 27, 27, 28, 28, 28, 26, 26],
-    alin: [21, 20, 21, 21, 22, 23, 24, 24, 24, 24, 23, 22],
-    sade: [25, 42, 104, 28, 33, 12, 18, 13, 22, 51, 73, 62],
-    luonnehdinta: 'Havaijilla lämpötila pysyy koko vuoden 22–26 '
-      + 'asteessa, viileimpänä helmikuussa ja lämpimimpänä '
-      + 'elokuussa. Sateisin kuukausi on maaliskuu, kuivin kesä.',
+    keskilampo: [23.1, 23.2, 23.7, 24.8, 25.7, 26.8, 27.6, 27.9, 27.6, 26.9, 25.6, 24.2],
+    ylin: [27, 27, 27, 28, 29, 31, 31, 32, 31, 31, 29, 28],
+    alin: [19, 19, 20, 21, 22, 23, 24, 24, 24, 23, 22, 21],
+    sade: [47, 49, 60, 20, 21, 13, 13, 21, 22, 38, 57, 55],
+    lahde: { nimi: 'sääasema Honolulun lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Havaijilla Honolulussa lämpötila pysyy koko vuoden 23–28 '
+      + 'asteessa: tammikuun keskilämpö on 23,1 astetta ja elokuun '
+      + '27,9 astetta. Sateisin kuukausi on maaliskuu, 60 '
+      + 'millimetriä, ja kuivimpia ovat kesä- ja heinäkuu, 13 '
+      + 'millimetriä. Vuodessa sataa 416 millimetriä.',
   },
   milfordsound: {
     lat: -44.6414,
     lon: 167.8974,
-    keskilampo: [15.1, 15.1, 12.9, 11.9, 9.7, 7.1, 7, 7.1, 8.6, 10.7, 12.8, 13.8],
-    ylin: [18, 19, 16, 15, 12, 10, 9, 10, 12, 14, 16, 17],
-    alin: [12, 12, 10, 9, 7, 5, 5, 4, 5, 8, 10, 10],
-    sade: [378, 542, 326, 301, 229, 239, 366, 314, 445, 434, 296, 333],
-    luonnehdinta: 'Milford Sound on yksi maailman sateisimmista '
-      + 'asutuista paikoista: joka kuukausi kertyy vähintään 229 '
-      + 'millimetriä, helmikuussa yli 500. Lämpötila pysyy '
-      + 'leutona, kesäkuun seitsemästä asteesta tammikuun '
-      + 'viiteentoista.',
+    keskilampo: [15.1, 15.4, 13.8, 11.4, 8.7, 5.8, 5.4, 6.9, 8.7, 10.4, 12, 14.1],
+    ylin: [20, 20, 19, 16, 13, 9, 9, 11, 13, 15, 16, 19],
+    alin: [11, 11, 9, 7, 5, 2, 2, 3, 4, 6, 8, 10],
+    sade: [667, 467, 571, 528, 645, 440, 468, 457, 541, 617, 558, 585],
+    lahde: { nimi: 'sääasema Milford Soundin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Milford Sound on yksi maailman sateisimmista asutuista '
+      + 'paikoista: vuodessa sataa 6 544 millimetriä, ja '
+      + 'vähäsateisimmassakin kuussa, kesäkuussa, 440 millimetriä. '
+      + 'Tammikuussa sataa jopa 667 millimetriä. Lämpötila pysyy '
+      + 'leutona, heinäkuun 5,4 asteesta helmikuun 15,4 asteeseen.',
   },
   mountrushmore: {
     lat: 43.8791,
     lon: -103.4591,
-    keskilampo: [-1.4, -3.1, 0, 4.9, 10.6, 16.2, 18.8, 18.2, 12.8, 5.5, 0.7, -3.1],
-    ylin: [3, 1, 5, 11, 16, 22, 24, 24, 18, 11, 5, 1],
-    alin: [-6, -8, -5, -2, 5, 11, 13, 13, 7, 0, -4, -8],
-    sade: [12, 25, 66, 73, 96, 120, 133, 76, 50, 37, 22, 14],
-    luonnehdinta: 'Mount Rushmoren ympäristössä talvi on kylmä '
-      + 'ja kuiva, mutta kesä (heinäkuu 19 astetta) on selvästi '
-      + 'sateisin aika — kesäkuun ja heinäkuun ukkoskuurot '
-      + 'kastelevat Black Hillsiä yli 120 millimetrillä.',
-  },
-  ouropreto: {
-    lat: -20.3855,
-    lon: -43.5035,
-    keskilampo: [20.4, 20.6, 19.7, 18.7, 16.7, 15.8, 15.6, 15.9, 17.6, 18.7, 18.7, 19.7],
-    ylin: [24, 24, 23, 22, 21, 20, 20, 21, 22, 23, 22, 23],
-    alin: [17, 17, 16, 15, 13, 11, 11, 11, 13, 15, 16, 17],
-    sade: [302, 163, 183, 107, 45, 10, 15, 33, 108, 200, 296, 299],
-    luonnehdinta: 'Ouro Preto on n. 1100 metrin korkeutensa '
-      + 'ansiosta viileämpi kuin Brasilian rannikko: kesä '
-      + '(joulu–helmikuu) pysyy 20 asteessa, talvi (kesä–heinäkuu) '
-      + 'laskee reiluun viiteentoista. Sadekausi on loka–maaliskuu.',
+    keskilampo: [-2.3, -2.6, 1.6, 5, 10.3, 16.4, 20.5, 19.9, 15.2, 7.7, 2.1, -2.1],
+    ylin: [3, 2, 7, 10, 15, 22, 26, 25, 21, 13, 7, 3],
+    alin: [-7, -8, -4, 0, 5, 11, 15, 14, 10, 3, -3, -7],
+    sade: [12, 19, 34, 67, 122, 91, 91, 58, 45, 46, 15, 13],
+    lahde: { nimi: 'sääasema Mount Rushmore, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Mount Rushmoren ympäristössä talvi on kylmä ja kuiva: '
+      + 'helmikuun keskilämpö on -2,6 astetta, yöt laskevat '
+      + 'alimmillaan -8 asteeseen ja tammikuussa sataa vain 12 '
+      + 'millimetriä. Kesä on lämmin, heinäkuun keskilämpö 20,5 '
+      + 'astetta, ja sateisin kuukausi on toukokuu, 122 '
+      + 'millimetriä. Vuodessa sataa 613 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N8-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain angola,caphorn,namib,norfolk,robinsoncrusoe. Asemat: Luanda
-   * (Angola), Kap Horn, Sesriem (Namib), Norfolkinsaaren Kingston,
-   * San Juan Bautista (Robinson Crusoe / Juan Fernández).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N8-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: angola: Luandan lentoasema 2001–2025; caphorn:
+   * Puerto Williamsin lentoasema 1991–2020; namib: ei riviä (ei
+   * kelvollista ilmastotaulukkoa); norfolk: Norfolkinsaaren lentoasema
+   * 1991–2020; robinsoncrusoe: Juan Fernández -saaret 1991–2020.
    */
   angola: {
     lat: -8.8390,
     lon: 13.2894,
-    keskilampo: [26.7, 27.5, 27.7, 26.7, 25.8, 23.6, 21.2, 21.3, 22.7, 24.6, 25.8, 26],
-    ylin: [31, 32, 32, 30, 30, 28, 26, 26, 27, 28, 29, 29],
-    alin: [23, 23, 24, 24, 22, 19, 17, 17, 19, 21, 22, 23],
-    sade: [46, 63, 32, 106, 3, 0, 0, 2, 3, 12, 57, 28],
-    luonnehdinta: 'Angolan rannikolla Benguelan kylmä virta pitää '
+    keskilampo: [27.3, 27.8, 28.1, 27.8, 26.6, 23.6, 22, 22, 23.5, 25.3, 26.6, 27],
+    ylin: [30, 31, 31, 31, 29, 26, 25, 25, 26, 28, 29, 29],
+    alin: [25, 25, 25, 25, 24, 21, 19, 19, 21, 23, 24, 25],
+    sade: [30, 36, 114, 136, 16, 0, 0, 1, 2, 7, 32, 31],
+    lahde: { nimi: 'sääasema Luandan lentoasema, en-Wikipedia', kausi: '2001–2025' },
+    luonnehdinta: 'Luandassa Angolan rannikolla Benguelan kylmä virta pitää '
       + 'ilman kuivana huolimatta trooppisesta leveysasteesta: '
-      + 'kesä–elokuu on sateeton. Huhtikuu on sateisin, ja '
-      + 'lämpötila pysyy koko vuoden 21–28 asteessa.',
+      + 'vuodessa sataa vain noin 400 millimetriä, eniten '
+      + 'huhtikuussa, 136 millimetriä, ja kesä–elokuussa '
+      + 'korkeintaan millimetrin. Maaliskuu on lämpimin, 28,1 '
+      + 'astetta, ja heinä–elokuussa keskilämpö laskee 22 '
+      + 'asteeseen.',
   },
   caphorn: {
     lat: -55.9833,
     lon: -67.2833,
-    keskilampo: [8.6, 8.5, 8.1, 7.4, 6, 4.2, 4, 4.3, 4.2, 5.6, 6.3, 7.3],
-    ylin: [9, 10, 9, 9, 7, 5, 5, 5, 5, 7, 8, 8],
-    alin: [8, 7, 7, 6, 5, 3, 3, 3, 3, 5, 5, 6],
-    sade: [117, 112, 145, 123, 115, 97, 71, 130, 85, 94, 118, 92],
-    luonnehdinta: 'Kap Hornissa on kylmää ja tuulista ympäri '
-      + 'vuoden, keskilämpö vain 4–9 astetta. Sadetta kertyy '
-      + 'joka kuukausi runsaasti, elokuussa yli 130 millimetriä.',
-  },
-  namib: {
-    lat: -24.5,
-    lon: 15.8,
-    keskilampo: [26.7, 26.3, 25.8, 23.5, 20.3, 17.3, 17.3, 17.2, 22.2, 23.5, 24.7, 25.4],
-    ylin: [34, 34, 33, 31, 28, 25, 25, 26, 31, 32, 33, 34],
-    alin: [19, 19, 18, 16, 12, 10, 9, 9, 13, 15, 16, 16],
-    sade: [19, 32, 4, 19, 5, 0, 1, 0, 1, 1, 2, 1],
-    luonnehdinta: 'Namibin aavikossa kesä (joulu–maaliskuu) on '
-      + 'polttava, yli 26 astetta, ja talvi (kesä–elokuu) laskee '
-      + 'reiluun seitsemääntoista. Sadetta ei käytännössä ole '
-      + 'toukokuusta marraskuuhun.',
+    keskilampo: [10.3, 9.9, 9.4, 6.6, 4, 2, 1.9, 3.4, 4.8, 6.4, 7.6, 9.3],
+    ylin: [15, 15, 15, 11, 9, 6, 6, 8, 10, 11, 13, 14],
+    alin: [5, 5, 4, 2, -1, -2, -2, -1, 0, 1, 2, 4],
+    sade: [52, 53, 48, 40, 38, 45, 34, 36, 32, 30, 40, 48],
+    lahde: { nimi: 'sääasema Puerto Williamsin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Puerto Williamsissa, Kap Hornin pohjoispuolella, on kylmää '
+      + 'ja tuulista ympäri vuoden: tammikuun keskilämpö on 10,3 '
+      + 'astetta, heinäkuun vain 1,9 astetta ja alin päivälämpö -2 '
+      + 'astetta. Sadetta kertyy joka kuukausi, 30–53 millimetriä, '
+      + 'ja vuodessa yhteensä 496 millimetriä.',
   },
   /*
    * NORFOLK: Open-Meteon ERA5-ruutu osuu tälle pienelle (n. 8 km)
@@ -4684,87 +4767,504 @@ export const SAATIEDOT = {
     ylin: [25, 25, 25, 23, 21, 19, 19, 19, 19, 20, 22, 24],
     alin: [20, 20, 20, 18, 17, 15, 14, 14, 14, 15, 16, 18],
     sade: [80, 87, 107, 95, 102, 121, 123, 100, 78, 62, 72, 84],
-    lahde: { nimi: 'en-Wikipedia, Norfolk Island Airport -normaali', kausi: '1991–2020' },
-    luonnehdinta: 'Norfolkinsaarella ilmasto on leuto ympäri '
-      + 'vuoden, 14–25 asteessa. Sadetta riittää joka kuukausi, '
-      + 'runsaimmin touko–heinäkuussa.',
+    lahde: { nimi: 'sääasema Norfolkinsaaren lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Norfolkinsaarella ilmasto on leuto ympäri vuoden: '
+      + 'keskilämpö vaihtelee elokuun 16 asteesta helmikuun 22,8 '
+      + 'asteeseen. Sadetta tulee joka kuukausi, eniten '
+      + 'heinäkuussa, 123 millimetriä, ja vähiten lokakuussa, 62 '
+      + 'millimetriä. Vuodessa sataa 1 111 millimetriä.',
   },
   robinsoncrusoe: {
     lat: -33.6333,
     lon: -78.8333,
-    keskilampo: [17.3, 17.7, 18.1, 16.8, 15.4, 14.4, 13.2, 12.4, 12.2, 12.6, 13.7, 15.9],
-    ylin: [18, 18, 19, 17, 16, 15, 14, 13, 13, 13, 14, 16],
-    alin: [17, 17, 18, 16, 15, 14, 13, 12, 12, 12, 13, 15],
-    sade: [2, 5, 15, 25, 34, 71, 35, 38, 12, 7, 4, 5],
-    luonnehdinta: 'Robinson Crusoen saarella kesä (tammi–maaliskuu) '
-      + 'on lämpimin ja kuivin, 17–18 astetta. Sadetta kertyy '
-      + 'eniten eteläisenä talvena, kesäkuussa yli 70 millimetriä.',
+    keskilampo: [18.8, 19, 18.6, 16.9, 15.4, 13.9, 12.8, 12.5, 12.7, 13.6, 15.2, 17.1],
+    ylin: [21, 22, 21, 19, 18, 16, 15, 15, 15, 16, 18, 20],
+    alin: [16, 17, 16, 14, 13, 12, 11, 10, 10, 11, 13, 15],
+    sade: [29, 33, 55, 84, 151, 184, 131, 114, 80, 50, 36, 25],
+    lahde: { nimi: 'sääasema Juan Fernández -saaret, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Juan Fernández -saarilla, joihin Robinson Crusoen saari '
+      + 'kuuluu, helmikuu on lämpimin, keskilämpö 19 astetta, ja '
+      + 'elokuu viilein, 12,5 astetta. Sadetta kertyy eniten '
+      + 'eteläisenä talvena: kesäkuussa 184 millimetriä, kun '
+      + 'joulukuussa sataa vain 25. Vuodessa sataa 972 millimetriä.',
   },
 
   /*
-   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N9-kaupungit): Open-Meteon
-   * ERA5-arkisto, 1991–2020, otosvuodet 1992/2006/2020 koko vuodelta
-   * (tools/hae-saaperusdata.mjs); ylin/alin: tools/hae-saanormaalit.mjs
-   * --vain appalakit,churchill,karthago,sierraleone,tanganjika. Asemat:
-   * Asheville NC (Appalakit), Churchill (Manitoba), Karthago (Tunisin
-   * lähellä), Freetown (Sierra Leone), Kigoma (Tanganjikajärvi).
+   * SISÄLTÖINVENTAARIO 24.9.2026, erä 1 (sää, N9-kaupungit). KORJATTU
+   * 11.10.2026 (Päätoimittaja): luvut ovat sääaseman ilmastonormaalit
+   * en-Wikipedian ilmastotaulukoista (tools/hae-saa-asemat.mjs, asema ja
+   * kausi lahde-kentässä). Aiemmat luvut tulivat Open-Meteon ERA5-ruudusta
+   * vain kolmelta otosvuodelta (1992/2006/2020), eivätkä ne olleet
+   * normaaleja. Asemat: appalakit: Ashevillen lentoasema 1991–2020;
+   * churchill: Churchillin lentoasema 1991–2020; karthago: Tunis–Carthagen
+   * lentoasema 1991–2020; sierraleone: Freetown 1961–1990; tanganjika:
+   * Kigoma 1991–2020.
    */
   appalakit: {
     lat: 35.5951,
     lon: -82.5515,
-    keskilampo: [4, 4.2, 8, 12.3, 14.8, 19.5, 22.7, 21.5, 17.9, 12.5, 7.9, 3.2],
-    ylin: [9, 9, 14, 19, 20, 25, 28, 26, 22, 18, 13, 8],
-    alin: [-1, -1, 2, 6, 9, 14, 17, 17, 13, 7, 3, -2],
-    sade: [90, 98, 77, 91, 103, 119, 78, 137, 110, 112, 120, 96],
-    luonnehdinta: 'Appalakeilla on selkeät vuodenajat: talvi '
-      + '(joulu–helmikuu) on kylmä, vain muutama aste, ja kesä '
-      + '(heinäkuu 23 astetta) lämmin. Sadetta kertyy tasaisesti '
-      + 'ympäri vuoden, elokuu on sateisin.',
+    keskilampo: [3.7, 5.6, 9.1, 13.9, 18.2, 22.1, 23.9, 23.3, 20.2, 14.4, 8.8, 5.2],
+    ylin: [9, 12, 15, 21, 25, 28, 30, 29, 26, 21, 15, 11],
+    alin: [-2, 0, 3, 7, 12, 16, 18, 18, 14, 8, 2, 0],
+    sade: [105, 88, 97, 106, 105, 122, 119, 128, 105, 86, 94, 106],
+    lahde: { nimi: 'sääasema Ashevillen lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Ashevillen seudulla Appalakeilla on selkeät vuodenajat: '
+      + 'tammikuun keskilämpö on 3,7 astetta ja alin päivälämpö -2 '
+      + 'astetta, kun taas heinäkuussa keskilämpö nousee 23,9 '
+      + 'asteeseen ja ylin päivälämpö 30 asteeseen. Sadetta kertyy '
+      + 'tasaisesti ympäri vuoden, eniten elokuussa, 128 '
+      + 'millimetriä, ja vuodessa yhteensä 1 261 millimetriä.',
   },
   churchill: {
     lat: 58.7684,
     lon: -94.1650,
-    keskilampo: [-22.4, -24.2, -17, -9.1, -1.2, 6.2, 10, 12.1, 6.1, -1.1, -11.6, -19.6],
-    ylin: [-19, -21, -14, -6, 2, 10, 14, 16, 8, 1, -9, -17],
-    alin: [-25, -27, -20, -12, -4, 2, 6, 8, 4, -3, -14, -23],
-    sade: [15, 8, 19, 18, 36, 36, 81, 83, 60, 42, 28, 16],
-    luonnehdinta: 'Churchillissä talvi on ankara: tammi–helmikuu '
-      + 'pysyy yli 20 asteen pakkasessa. Lyhyt kesä (heinä–elokuu) '
-      + 'nousee vain kymmeneen–kahteentoista asteeseen, ja tuolloin '
-      + 'myös sataa enemmän.',
+    keskilampo: [-25.3, -24.3, -18.6, -9.7, -0.9, 7.6, 13, 12.5, 7.1, -0.7, -12, -20.9],
+    ylin: [-21, -20, -14, -5, 3, 13, 18, 17, 10, 2, -8, -17],
+    alin: [-29, -28, -23, -14, -5, 3, 8, 8, 4, -3, -16, -25],
+    sade: [15, 14, 14, 16, 25, 42, 74, 81, 75, 50, 29, 15],
+    lahde: { nimi: 'sääasema Churchillin lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Churchillissä talvi on ankara: tammikuun keskilämpö on '
+      + '-25,3 astetta, helmikuun -24,3 astetta ja alin päivälämpö '
+      + '-29 astetta. Lyhyt kesä on viileä, heinäkuussa keskilämpö '
+      + 'on 13 astetta ja ylin päivälämpö 18 astetta. Sadetta tulee '
+      + 'eniten elokuussa, 81 millimetriä, ja vuodessa 450 '
+      + 'millimetriä.',
   },
   karthago: {
     lat: 36.8531,
     lon: 10.3236,
-    keskilampo: [11.3, 12.1, 13.2, 15.9, 19.5, 22.3, 24.8, 26.3, 23.7, 20.6, 17.3, 13.3],
-    ylin: [14, 15, 16, 19, 23, 26, 28, 30, 27, 24, 20, 16],
-    alin: [9, 9, 10, 13, 16, 19, 21, 22, 21, 17, 15, 11],
-    sade: [58, 32, 41, 57, 29, 6, 10, 1, 48, 25, 60, 60],
-    luonnehdinta: 'Karthagossa on tyypillinen Välimeren ilmasto: '
-      + 'kesä (heinä–elokuu) on kuuma ja käytännössä sateeton, '
-      + 'talvi (marras–helmikuu) leuto ja sateinen.',
+    keskilampo: [12.3, 12.5, 14.6, 17.2, 21, 25.1, 28.1, 28.7, 25.6, 22, 17.2, 13.5],
+    ylin: [16, 17, 19, 22, 27, 31, 34, 35, 31, 27, 22, 18],
+    alin: [8, 8, 10, 12, 15, 19, 22, 23, 21, 17, 13, 9],
+    sade: [59, 55, 46, 38, 22, 13, 4, 15, 58, 55, 53, 68],
+    lahde: { nimi: 'sääasema Tunis–Carthagen lentoasema, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Karthagon naapurissa sijaitsevassa Tunisissa on '
+      + 'tyypillinen Välimeren ilmasto: kesä on kuuma ja kuiva, '
+      + 'elokuun keskilämpö on 28,7 astetta ja ylin päivälämpö 35 '
+      + 'astetta, ja heinäkuussa sataa vain 4 millimetriä. Talvi on '
+      + 'leuto ja sateinen, tammikuun keskilämpö on 12,3 astetta ja '
+      + 'joulukuussa sataa 68 millimetriä. Vuodessa sataa 486 '
+      + 'millimetriä.',
   },
   sierraleone: {
     lat: 8.4657,
     lon: -13.2317,
-    keskilampo: [26.4, 26.3, 26.2, 26.7, 26.4, 25.5, 24.6, 24.3, 24.8, 25.5, 26.3, 26.8],
-    ylin: [28, 28, 27, 28, 28, 27, 26, 26, 26, 27, 28, 28],
-    alin: [25, 25, 25, 25, 25, 24, 23, 23, 24, 24, 25, 25],
-    sade: [7, 11, 14, 92, 251, 339, 648, 721, 396, 292, 98, 41],
-    luonnehdinta: 'Freetownissa lämpötila pysyy koko vuoden '
-      + '24–27 asteessa, mutta sademäärä vaihtelee äärimmäisesti: '
-      + 'elokuu kastelee kaupunkia yli 700 millimetrillä, '
-      + 'tammikuu vain seitsemällä.',
+    keskilampo: [27.3, 27.6, 28.1, 28.5, 28.3, 27.4, 26.3, 25.9, 26.4, 27.1, 27.7, 27.5],
+    ylin: [30, 30, 31, 31, 31, 30, 29, 28, 29, 30, 30, 30],
+    alin: [24, 24, 24, 25, 24, 24, 23, 23, 23, 23, 24, 24],
+    sade: [8, 6, 28, 68, 214, 522, 1190, 1078, 800, 333, 148, 38],
+    lahde: { nimi: 'sääasema Freetown, en-Wikipedia', kausi: '1961–1990' },
+    luonnehdinta: 'Freetownissa lämpötila pysyy koko vuoden tasaisena, '
+      + 'elokuun 25,9 asteesta huhtikuun 28,5 asteeseen, mutta '
+      + 'sademäärä vaihtelee äärimmäisesti: heinäkuu kastelee '
+      + 'kaupunkia 1 190 millimetrillä, helmikuussa sataa vain 6. '
+      + 'Vuodessa sataa 4 433 millimetriä.',
   },
   tanganjika: {
     lat: -4.8769,
     lon: 29.6267,
-    keskilampo: [24.4, 24.7, 24.7, 24, 24.2, 24.2, 23.9, 24.7, 25.5, 25.3, 24, 23.7],
-    ylin: [26, 27, 27, 26, 26, 27, 27, 27, 28, 28, 26, 25],
-    alin: [23, 23, 23, 22, 22, 22, 21, 22, 23, 23, 22, 22],
-    sade: [229, 229, 223, 278, 138, 26, 1, 5, 35, 137, 328, 345],
-    luonnehdinta: 'Tanganjikajärven rannalla on tasaisen lämmin, '
-      + '24–26 astetta ympäri vuoden. Sadekausi marras–huhtikuussa '
-      + 'on runsas, kesä–elokuu käytännössä sateeton.',
+    keskilampo: [24, 24.4, 24.3, 24.5, 24.4, 23.4, 22.9, 24, 25.1, 25, 24, 23.8],
+    ylin: [28, 29, 29, 29, 30, 30, 30, 31, 31, 30, 28, 28],
+    alin: [20, 20, 20, 20, 19, 17, 16, 17, 19, 20, 20, 20],
+    sade: [127, 92, 150, 119, 41, 6, 2, 4, 22, 75, 152, 144],
+    lahde: { nimi: 'sääasema Kigoma, en-Wikipedia', kausi: '1991–2020' },
+    luonnehdinta: 'Kigoman kohdalla Tanganjikajärven rannalla on tasaisen '
+      + 'lämmin: keskilämpö vaihtelee heinäkuun 22,9 asteesta '
+      + 'syyskuun 25,1 asteeseen. Sadekausi marras–huhtikuussa on '
+      + 'runsas, marraskuussa 152 millimetriä, kun taas '
+      + 'kesä–elokuussa sataa korkeintaan 6 millimetriä '
+      + 'kuukaudessa. Vuodessa sataa 934 millimetriä.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e01–e02, tarkistettu 14 kaupunkia 0 virhettä):
+   * Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e01-pilvi ja -e02-pilvi.
+   * Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.
+   */
+  belgrad: {
+    lat: 44.82,
+    lon: 20.46,
+    keskilampo: [1.9, 3.8, 8.3, 13.6, 18.2, 21.9, 23.8, 23.8, 18.5, 13.3, 8.1, 3],
+    ylin: [5, 8, 13, 19, 24, 27, 29, 30, 24, 19, 12, 6],
+    alin: [-1, 1, 4, 9, 13, 17, 18, 19, 14, 9, 5, 1],
+    sade: [48, 44, 49, 52, 72, 96, 67, 55, 59, 55, 50, 55],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Belgradissa tammikuu on kylmin kuukausi, keskilämpö 1,9 astetta, ja heinä- ja elokuu ovat lämpimimmät, 23,8 astetta. Sadetta tulee vuodessa noin 700 millimetriä, eniten kesäkuussa (96 mm) ja vähiten helmikuussa (44 mm).',
+  },
+  bratislava: {
+    lat: 48.15,
+    lon: 17.11,
+    keskilampo: [0.3, 1.9, 6.1, 11.7, 16.2, 20.2, 22, 21.5, 16.2, 10.7, 5.7, 1.1],
+    ylin: [3, 6, 11, 18, 22, 26, 28, 28, 22, 16, 9, 4],
+    alin: [-3, -2, 2, 6, 11, 14, 16, 16, 11, 6, 3, -1],
+    sade: [37, 33, 37, 36, 59, 59, 62, 61, 59, 44, 46, 43],
+    lahde: {
+      nimi: 'sääasema Bratislavan lentoasema, en-Wikipedia',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bratislavassa on lämmin kesä ja nollan tuntumassa pysyttelevä talvi: heinäkuun keskilämpö on 22,0 astetta ja tammikuun 0,3 astetta. Sadetta tulee ympäri vuoden, yhteensä noin 580 millimetriä, eniten heinäkuussa (62 mm) ja vähiten helmikuussa (33 mm).',
+  },
+  chisinau: {
+    lat: 47.02,
+    lon: 28.84,
+    keskilampo: [-1.8, -0.2, 4.5, 11, 16.8, 20.7, 22.9, 22.6, 17, 10.8, 4.8, -0.2],
+    ylin: [1, 3, 9, 16, 22, 26, 28, 28, 22, 16, 8, 3],
+    alin: [-4, -3, 1, 6, 12, 16, 18, 18, 13, 7, 2, -2],
+    sade: [36, 31, 35, 39, 54, 65, 67, 49, 48, 47, 43, 41],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Chișinăun kylmin kuukausi on tammikuu, jolloin keskilämpötila on −1,8 astetta, ja lämpimin heinäkuu 22,9 asteella. Sadetta kertyy vuodessa noin 555 millimetriä, eniten heinä- ja kesäkuussa (67 ja 65 millimetriä) ja vähiten helmikuussa (31 millimetriä).',
+  },
+  minsk: {
+    lat: 53.9,
+    lon: 27.56,
+    keskilampo: [-4.2, -3.6, 0.7, 7.6, 13.4, 17.1, 19.1, 18.2, 12.7, 6.7, 1.4, -2.6],
+    ylin: [-2, -1, 5, 13, 19, 22, 24, 24, 18, 10, 4, -1],
+    alin: [-6, -6, -3, 3, 8, 12, 14, 13, 9, 4, 0, -4],
+    sade: [47, 40, 41, 43, 66, 79, 97, 71, 51, 55, 49, 47],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Minskin kylmin kuukausi on tammikuu, jolloin keskilämpötila on −4,2 astetta, ja lämpimin heinäkuu 19,1 asteella. Sadetta tulee kaikkina kuukausina, vähiten helmikuussa (40 mm) ja eniten heinäkuussa (97 mm), ja vuodessa sitä kertyy noin 690 millimetriä.',
+  },
+  podgorica: {
+    lat: 42.44,
+    lon: 19.26,
+    keskilampo: [6.6, 8, 11.4, 15.3, 20.2, 24.8, 27.8, 28.2, 22.7, 17.6, 12, 7.7],
+    ylin: [11, 13, 16, 21, 26, 31, 34, 35, 28, 23, 17, 12],
+    alin: [2, 3, 6, 10, 15, 19, 22, 22, 17, 12, 7, 4],
+    sade: [165, 164, 164, 136, 98, 60, 36, 54, 147, 176, 261, 232],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Podgoricassa talvi on leuto: tammikuussa päivän ylin lämpötila on keskimäärin 11 astetta ja yön alin 2 astetta. Kesä on kuuma, ja elokuussa päivät lämpenevät keskimäärin 35 asteeseen. Sadetta tulee vuodessa noin 1 700 millimetriä, eniten marraskuussa (261 mm) ja vähiten heinäkuussa (36 mm).',
+  },
+  skopje: {
+    lat: 42,
+    lon: 21.43,
+    keskilampo: [0.2, 3, 7.7, 12.4, 17.2, 21.7, 24.1, 24.1, 19, 13.1, 6.9, 1.8],
+    ylin: [5, 9, 15, 19, 24, 29, 32, 32, 27, 20, 13, 6],
+    alin: [-3, -2, 2, 6, 10, 14, 16, 16, 12, 8, 3, -1],
+    sade: [30, 29, 38, 40, 43, 54, 38, 36, 34, 49, 45, 48],
+    lahde: {
+      nimi: 'sääasema Skopjen lentoasema, en-Wikipedia',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Skopjessa tammikuun keskilämpö on 0,2 astetta ja heinä- ja elokuun 24,1 astetta, joten talvet ovat kylmiä ja kesät kuumia. Sadetta kertyy vuodessa vain noin 480 millimetriä, eniten kesäkuussa (54 mm) ja vähiten helmikuussa (29 mm).',
+  },
+  tirana: {
+    lat: 41.33,
+    lon: 19.82,
+    keskilampo: [6.7, 7.8, 10, 13.4, 18, 21.6, 24, 23.8, 20.7, 16, 11.7, 8.1],
+    ylin: [12, 13, 16, 19, 24, 28, 31, 31, 27, 22, 17, 13],
+    alin: [2, 3, 5, 8, 12, 16, 17, 17, 14, 10, 6, 3],
+    sade: [143, 132, 115, 104, 103, 68, 42, 46, 78, 114, 172, 148],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1961–1990',
+    },
+    luonnehdinta: 'Tiranassa on lämpimintä heinäkuussa, jolloin keskilämpötila on 24,0 astetta, ja kylmintä tammikuussa 6,7 asteessa. Sadetta kertyy eniten marraskuussa, 172 millimetriä, kun heinäkuussa sataa vain 42 millimetriä; vuodessa sitä tulee noin 1 270 millimetriä.',
+  },
+  zagreb: {
+    lat: 45.81,
+    lon: 15.98,
+    keskilampo: [1.4, 3, 7.4, 12.2, 16.7, 20.6, 22.2, 21.8, 16.7, 11.7, 6.8, 1.9],
+    ylin: [5, 8, 13, 18, 22, 26, 28, 28, 23, 17, 11, 5],
+    alin: [-2, -1, 3, 7, 11, 15, 16, 16, 12, 8, 3, -1],
+    sade: [46, 45, 48, 61, 77, 91, 80, 86, 104, 89, 87, 62],
+    lahde: {
+      nimi: 'sääasema Zagreb Maksimir, en-Wikipedia',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Tammikuu on kylmin kuukausi keskilämmöllä 1,4 astetta, ja heinäkuu lämpimin 22,2 asteella. Toukokuusta syyskuuhun keskilämpö on 16,7–22,2 astetta. Sadetta tulee ympäri vuoden, yhteensä noin 880 millimetriä, ja sateisin kuukausi on syyskuu (104 mm).',
+  },
+  andorralavella: {
+    lat: 42.51,
+    lon: 1.52,
+    keskilampo: [2.2, 3.5, 5.8, 7.5, 11.5, 15.4, 18.8, 18.5, 14.9, 10.3, 5.7, 3],
+    ylin: [7, 9, 12, 13, 18, 22, 26, 25, 21, 16, 11, 8],
+    alin: [-2, -2, 0, 2, 5, 9, 11, 11, 9, 5, 1, -1],
+    sade: [53, 38, 41, 71, 90, 84, 61, 86, 81, 72, 68, 68],
+    lahde: {
+      nimi: 'sääasema Roc de Sant Pere, en-Wikipedia',
+      kausi: '1971–2000',
+    },
+    luonnehdinta: 'Andorra la Vellassa tammikuu on kylmin kuukausi, keskilämpö 2,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee vuodessa noin 810 millimetriä, eniten toukokuussa (90 mm) ja vähiten helmikuussa (38 mm).',
+  },
+  bern: {
+    lat: 46.95,
+    lon: 7.45,
+    keskilampo: [0.2, 1.1, 5.2, 9, 13.2, 16.9, 18.8, 18.4, 14.1, 9.5, 4.2, 0.9],
+    ylin: [3, 5, 10, 15, 19, 23, 25, 24, 19, 14, 8, 4],
+    alin: [-3, -3, 0, 3, 8, 11, 13, 13, 9, 6, 1, -2],
+    sade: [60, 56, 65, 78, 112, 102, 108, 112, 87, 87, 77, 79],
+    lahde: {
+      nimi: 'sääasema Bern-Zollikofen, en-Wikipedia',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bernissä tammikuu on kylmin kuukausi, keskilämpö 0,2 astetta, ja heinäkuu lämpimin, 18,8 astetta. Sadetta tulee joka kuukausi: kuivin on helmikuu 56 millimetrillä ja sateisimmat touko- ja elokuu 112 millimetrillä. Vuodessa sataa noin 1 020 millimetriä.',
+  },
+  monaco: {
+    lat: 43.73,
+    lon: 7.42,
+    keskilampo: [10.2, 10.2, 12, 13.8, 17.5, 20.9, 23.8, 24.2, 21.1, 17.9, 13.8, 11.2],
+    ylin: [13, 13, 15, 17, 20, 24, 27, 27, 24, 21, 17, 14],
+    alin: [7, 7, 9, 11, 15, 18, 21, 21, 18, 15, 11, 9],
+    sade: [68, 48, 41, 71, 49, 33, 14, 27, 73, 129, 103, 89],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1981–2010',
+    },
+    luonnehdinta: 'Monacossa kuukauden keskilämpötila on alimmillaan tammi- ja helmikuussa, 10,2 astetta, ja korkeimmillaan elokuussa, 24,2 astetta. Sateisin kuukausi on lokakuu 129 millimetrillä, kun heinäkuussa sataa vain 14 millimetriä. Vuodessa sataa noin 740 millimetriä.',
+  },
+  reykjavik: {
+    lat: 64.15,
+    lon: -21.94,
+    keskilampo: [0.7, 0.5, 1.2, 3.7, 6.7, 9.8, 11.6, 11, 8.5, 4.9, 2.2, 0.8],
+    ylin: [3, 3, 4, 7, 10, 13, 15, 14, 11, 8, 5, 3],
+    alin: [-2, -2, -1, 1, 4, 7, 9, 9, 6, 3, 0, -2],
+    sade: [87, 91, 81, 59, 53, 43, 50, 65, 87, 80, 87, 95],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Kuukausien keskilämpötila pysyy talvella hieman nollan yläpuolella ja nousee lämpimimmillään 11,6 asteeseen heinäkuussa. Sadetta tulee joka kuukausi, yhteensä noin 880 millimetriä: eniten joulukuussa (95 mm) ja vähiten kesäkuussa (43 mm).',
+  },
+  sanmarino: {
+    lat: 43.94,
+    lon: 12.45,
+    keskilampo: [4.2, 4.7, 7.3, 11.6, 15.7, 20.8, 23.5, 22.5, 17.5, 13, 8.6, 5.2],
+    ylin: [6, 7, 10, 15, 20, 25, 27, 26, 21, 16, 11, 7],
+    alin: [2, 3, 5, 9, 12, 17, 20, 19, 15, 11, 7, 3],
+    sade: [50, 64, 65, 59, 70, 54, 40, 41, 75, 70, 99, 61],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '2006–2023',
+    },
+    luonnehdinta: 'Tammikuu on vuoden kylmin kuukausi keskilämmöllä 4,2 astetta, ja lämpimin on heinäkuu 23,5 asteella. Sadetta tulee vuodessa noin 750 millimetriä. Kuivin kuukausi on heinäkuu (40 mm) ja sateisin marraskuu (99 mm).',
+  },
+  vaduz: {
+    lat: 47.14,
+    lon: 9.52,
+    keskilampo: [1.4, 2.7, 6.8, 10.7, 14.7, 17.9, 19.4, 19.1, 15, 11.1, 5.7, 2.2],
+    ylin: [5, 7, 12, 16, 20, 23, 25, 24, 20, 16, 10, 6],
+    alin: [-2, -1, 2, 6, 10, 13, 15, 15, 11, 7, 2, -1],
+    sade: [41, 34, 54, 57, 90, 116, 130, 144, 96, 68, 56, 54],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Tammikuu on kylmin kuukausi, keskilämpö 1,4 astetta, ja heinäkuu lämpimin, 19,4 astetta. Sadetta kertyy joka kuukausi, eniten elokuussa (144 mm) ja vähiten helmikuussa (34 mm), ja vuodessa sitä tulee noin 940 millimetriä.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e03, 7 kaupunkia):
+   * Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e03-pilvi.
+   * Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.
+   */
+  abudhabi: {
+    lat: 24.45,
+    lon: 54.38,
+    keskilampo: [19.1, 20.6, 23.4, 27.7, 31.8, 33.7, 35.5, 35.9, 33.3, 29.7, 25.2, 21.1],
+    ylin: [25, 27, 30, 35, 40, 41, 43, 43, 41, 37, 31, 27],
+    alin: [14, 16, 18, 21, 25, 27, 30, 30, 27, 24, 20, 16],
+    sade: [13, 8, 13, 5, 0, 0, 1, 0, 0, 0, 2, 8],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Abu Dhabissa tammikuun keskilämpötila on noin 19 °C ja elokuun noin 36 °C. Vuodessa sataa vain noin 50 millimetriä, eniten tammi- ja maaliskuussa noin 13 millimetriä kuussa; toukokuusta lokakuuhun sataa korkeintaan millimetrin kuussa.',
+  },
+  amman: {
+    lat: 31.95,
+    lon: 35.93,
+    keskilampo: [8.5, 9.4, 12.4, 17.1, 21.4, 24.6, 26.5, 26.6, 24.6, 21, 15, 10.2],
+    ylin: [13, 14, 18, 24, 28, 31, 33, 33, 31, 27, 20, 15],
+    alin: [4, 5, 8, 11, 15, 19, 21, 21, 19, 15, 10, 6],
+    sade: [61, 58, 31, 8, 3, 0, 0, 0, 0, 5, 21, 47],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1989–2018',
+    },
+    luonnehdinta: 'Ammanissa tammikuun keskilämpötila on noin 8,5 °C ja elokuun noin 27 °C. Vuodessa sataa noin 230 millimetriä, pääosin marraskuusta maaliskuuhun; sateisin on tammikuu noin 60 millimetrillä, ja kesäkuusta syyskuuhun ei sada käytännössä lainkaan.',
+  },
+  baku: {
+    lat: 40.37,
+    lon: 49.84,
+    keskilampo: [4.8, 4.7, 7.3, 11.9, 18, 23.2, 26.1, 26.5, 22, 16.7, 10.9, 6.6],
+    ylin: [7, 8, 11, 17, 23, 28, 31, 31, 26, 20, 13, 9],
+    alin: [3, 3, 5, 9, 15, 20, 23, 23, 19, 13, 8, 5],
+    sade: [32, 30, 18, 17, 15, 9, 4, 8, 29, 33, 44, 35],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bakussa talvikuukausina keskilämpötila on noin 5 °C ja lämpimimpänä kuukautena, elokuussa, noin 27 °C. Vuodessa sataa noin 270 millimetriä; kuivin on heinäkuu alle 5 millimetrillä ja sateisin marraskuu noin 44 millimetrillä.',
+  },
+  jerevan: {
+    lat: 40.18,
+    lon: 44.51,
+    keskilampo: [-3.5, 0, 7, 12.9, 17.7, 23.1, 26.8, 26.7, 21.4, 14, 5.8, -0.8],
+    ylin: [2, 6, 14, 20, 25, 31, 35, 34, 29, 22, 13, 4],
+    alin: [-8, -5, 1, 6, 11, 15, 19, 19, 13, 7, 0, -5],
+    sade: [21, 21, 60, 56, 47, 24, 17, 10, 10, 51, 25, 21],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Jerevanissa tammikuun keskilämpötila on noin −3,5 °C ja heinäkuun noin 27 °C. Vuodessa sataa noin 360 millimetriä; sateisin kuukausi on maaliskuu noin 60 millimetrillä, ja kuivimmat ovat elo- ja syyskuu noin 10 millimetrillä.',
+  },
+  manama: {
+    lat: 26.22,
+    lon: 50.58,
+    keskilampo: [17.5, 18.4, 21.3, 26, 31.1, 34, 35.1, 35.1, 33.2, 29.9, 24.6, 19.7],
+    ylin: [21, 22, 26, 31, 36, 39, 40, 40, 38, 34, 28, 23],
+    alin: [15, 15, 18, 22, 27, 30, 31, 32, 30, 26, 22, 17],
+    sade: [18, 13, 15, 8, 8, 0, 0, 0, 0, 1, 17, 15],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Manamassa tammikuun keskilämpötila on noin 17,5 °C ja heinä- ja elokuun noin 35 °C. Vuodessa sataa noin 95 millimetriä, suurin osa marraskuusta maaliskuuhun, ja kesäkuusta syyskuuhun ei sada lainkaan.',
+  },
+  tbilisi: {
+    lat: 41.72,
+    lon: 44.83,
+    keskilampo: [2.7, 3.8, 7.9, 12.9, 17.8, 22.3, 25.3, 25.4, 20.4, 14.7, 7.9, 3.9],
+    ylin: [7, 8, 13, 19, 24, 29, 32, 32, 26, 20, 13, 8],
+    alin: [-1, 0, 4, 8, 13, 17, 20, 20, 16, 11, 5, 1],
+    sade: [16, 18, 29, 64, 83, 84, 42, 39, 35, 46, 34, 21],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Tbilisissä tammikuun keskilämpötila on noin 3 °C ja elokuun noin 25 °C. Vuodessa sataa noin 510 millimetriä; sateisimmat kuukaudet ovat touko- ja kesäkuu noin 85 millimetrillä kuussa, ja kuivin on tammikuu noin 16 millimetrillä.',
+  },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Säärivit sääaseman normaaleista (tyokalu.mjs saa; asema ja kausi lahde-kentässä). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   * Ilmastotaulukon artikkeli ja luku-päivä: haaran <id>/saa.json tausta.
+   */
+  banjul: {
+    lat: 13.45,
+    lon: -16.58,
+    keskilampo: [25.3, 25.9, 26.3, 26.1, 26.5, 27.5, 27.7, 27.7, 27.9, 28.9, 28.4, 26.6],
+    ylin: [33, 33, 33, 32, 32, 32, 32, 32, 32, 34, 34, 33],
+    alin: [18, 19, 20, 20, 21, 23, 24, 24, 24, 24, 23, 20],
+    sade: [1, 1, 0, 0, 3, 55, 175, 354, 244, 76, 1, 0],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Päivän ylimmät normaalit ovat vuoden mittaan noin 32–34 astetta. Sateet keskittyvät kesä–lokakuuhun, ja elokuu on selvästi sateisin kuukausi. Marraskuusta huhtikuuhun sadetta kertyy normaalitaulukossa vain vähän.',
+  },
+  bissau: {
+    lat: 11.86,
+    lon: -15.58,
+    keskilampo: [25.3, 27.1, 28.2, 28, 28.5, 28.1, 27.2, 26.9, 27.3, 27.9, 27.7, 26],
+    ylin: [32, 35, 36, 35, 35, 33, 31, 30, 31, 32, 33, 33],
+    alin: [18, 19, 20, 21, 22, 23, 23, 23, 23, 24, 23, 19],
+    sade: [0, 0, 0, 0, 11, 140, 371, 468, 364, 167, 11, 0],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Bissaussa alkuvuosi on hyvin kuiva ja sateet painottuvat kesä–lokakuuhun. Keväällä päivän ylimmät normaalit ovat noin 35–36 astetta ja elokuussa noin 30 astetta. Elokuun sademäärä on noin 470 millimetriä.',
+  },
+  conakry: {
+    lat: 9.51,
+    lon: -13.71,
+    keskilampo: [26.9, 27.6, 28.2, 28.4, 28.3, 27, 25.9, 25.7, 26.3, 26.8, 27.7, 27.6],
+    ylin: [32, 32, 32, 32, 32, 30, 29, 28, 30, 30, 31, 32],
+    alin: [22, 23, 24, 25, 25, 24, 23, 23, 23, 23, 24, 23],
+    sade: [3, 1, 3, 18, 113, 434, 1083, 1142, 555, 293, 80, 6],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Kuukausien keskilämpötilat pysyvät noin 26–28 asteessa läpi vuoden. Joulukuusta maaliskuuhun sademäärät ovat pieniä, mutta keskikesän sateet ovat runsaita. Heinä- ja elokuun kuukausisade ylittää kummassakin tuhat millimetriä.',
+  },
+  monrovia: {
+    lat: 6.31,
+    lon: -10.8,
+    keskilampo: [26.9, 27.5, 27.9, 27.5, 26.9, 26.1, 25.3, 25, 25.5, 26.4, 26.7, 27],
+    ylin: [31, 32, 32, 31, 30, 29, 28, 27, 28, 29, 30, 31],
+    alin: [23, 23, 24, 24, 24, 23, 23, 23, 23, 23, 23, 23],
+    sade: [25, 48, 97, 160, 417, 818, 696, 561, 914, 587, 191, 48],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Robertsin lentoaseman seudulla kuukausikeskilämpötilat pysyvät noin 25–28 asteessa. Runsaat sateet painottuvat touko–lokakuuhun, ja syyskuu on sateisin kuukausi. Loppu- ja alkuvuosi ovat kuivempia, mutta silloinkin sataa.',
+  },
+  nouakchott: {
+    keskilampo: [21.6, 23.3, 24.4, 24.6, 25.7, 26.9, 27.4, 28.7, 29.6, 29.2, 25.9, 22.9],
+    sade: [1, 0.1, 0.7, 0, 0, 3.6, 10.2, 46.4, 51.3, 7.9, 1.7, 8.8],
+    lahde: {
+      nimi: 'JMA',
+      kausi: '1991–2020',
+    },
+    lat: 18.1,
+    lon: -15.95,
+  },
+  rabat: {
+    lat: 34.02,
+    lon: -6.84,
+    keskilampo: [12.3, 13, 14.8, 16, 18.5, 20.8, 22.6, 23.1, 21.7, 19.6, 15.9, 13.7],
+    ylin: [17, 18, 20, 21, 24, 26, 27, 28, 27, 25, 21, 19],
+    alin: [7, 8, 10, 11, 13, 16, 18, 18, 17, 14, 11, 9],
+    sade: [81, 61, 63, 42, 18, 4, 0, 1, 14, 55, 94, 90],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Kesä on kuiva: heinäkuun keskimääräinen sademäärä on 0 millimetriä ja elokuun 1 millimetri. Heinä–elokuussa päivän ylimpien lämpötilojen normaalit ovat noin 27–28 astetta, kun tammikuun yön alin on noin 7 astetta. Sateet painottuvat myöhäissyksyyn ja talveen.',
+  },
+  tunis: {
+    lat: 36.81,
+    lon: 10.18,
+    keskilampo: [12.3, 12.5, 14.6, 17.2, 21, 25.1, 28.1, 28.7, 25.6, 22, 17.2, 13.5],
+    ylin: [16, 17, 19, 22, 27, 31, 34, 35, 31, 27, 22, 18],
+    alin: [8, 8, 10, 12, 15, 19, 22, 23, 21, 17, 13, 9],
+    sade: [59, 55, 46, 38, 22, 13, 4, 15, 58, 55, 53, 68],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Talvella kuukausien keskilämpötilat ovat noin 12–14 astetta, keskikesällä noin 28–29. Kesä on talvea kuivempi, ja heinäkuussa sataa vain vähän. Kevät ja syksy ovat keskikesää viileämpiä.',
+  },
+  accra: {
+    lat: 5.56,
+    lon: -0.2,
+    keskilampo: [28.5, 29.2, 29.2, 29, 28.3, 26.8, 25.9, 25.6, 26.5, 27.5, 28.3, 28.6],
+    ylin: [33, 33, 33, 33, 32, 30, 29, 28, 30, 31, 32, 32],
+    alin: [25, 25, 25, 25, 25, 24, 23, 23, 23, 24, 25, 25],
+    sade: [12, 26, 61, 88, 151, 190, 63, 21, 43, 80, 37, 27],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Accrassa on lämmintä ympäri vuoden: kuukausien keskilämpö vaihtelee elokuun 25,6 asteesta helmi–maaliskuun 29,2 asteeseen. Kesäkuu on sateisin kuukausi, noin 190 millimetriä, ja tammikuu kuivin, noin 12 millimetriä. Heinäkuun jälkeen sade vähenee elokuuksi ja lisääntyy taas syksyllä.',
+  },
+  lusaka: {
+    lat: -15.42,
+    lon: 28.28,
+    keskilampo: [22.1, 21.9, 22, 21, 19.2, 17.3, 18.3, 21.3, 23.6, 24.8, 24.4, 22.5],
+    ylin: [27, 27, 27, 27, 25, 24, 26, 30, 32, 32, 30, 28],
+    alin: [17, 17, 17, 15, 13, 11, 11, 13, 16, 18, 18, 18],
+    sade: [210, 169, 88, 21, 3, 0, 0, 0, 0, 11, 78, 179],
+    lahde: {
+      nimi: 'en-Wikipedia, ilmastotaulukko',
+      kausi: '1991–2020',
+    },
+    luonnehdinta: 'Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas vuoden keskivaiheen kuukaudet ovat kuivia. Vuoden keskivaiheen viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista.',
   },
 };

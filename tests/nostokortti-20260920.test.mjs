@@ -33,7 +33,7 @@ test('kortin työpolkulähderivi ei enää piirry, kuvan tekijärivi säilyy', (
   }
 });
 
-test('kuvasarja on yhteinen moduuli: nosto, skandaali ja kohdekortti', () => {
+test('kuvasarja on yhteinen moduuli: nosto ja skandaali', () => {
   const kuvasarja = lue('../js/kuvasarja.js');
   assert.match(kuvasarja, /export function piirraKuvasarja/);
   assert.match(kuvasarja, /nayta\(!valmisKehys\)/);
@@ -41,9 +41,6 @@ test('kuvasarja on yhteinen moduuli: nosto, skandaali ja kohdekortti', () => {
   assert.match(kuvasarja, /addEventListener\('pointerdown'/);
   assert.match(kuvasarja, /e\.key !== 'ArrowLeft' && e\.key !== 'ArrowRight'/);
   assert.match(lue('../js/fokusnosto.js'), /return piirraKuvasarja\(ui, sailio, kuvat, \{/);
-  const kohteet = lue('../js/fokuskohteet.js');
-  assert.match(kohteet, /if \(kuvat\.length >= 2\) \{\s*\n\s*piirraKuvasarja\(ui, sisalto, kuvat, \{/);
-  assert.match(kohteet, /lataa: asetaKohdeKuva,/);
   // Offline-kuori tuntee uuden moduulin.
   assert.match(lue('../sw.js'), /'\.\/js\/kuvasarja\.js'/);
 });

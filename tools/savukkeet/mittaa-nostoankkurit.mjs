@@ -29,10 +29,8 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { NOSTON_MITTA, NOSTON_MITAN_KATTO } from '../../js/pallolauta/nostot.js';
 import { NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -99,7 +97,7 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 async function avaaSivu({ ankkurit = true } = {}) {
   const ctx = await selain.newContext({

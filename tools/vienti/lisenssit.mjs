@@ -12,6 +12,30 @@
  */
 export const AINEISTOT = [
   {
+    id: 'geoglows-tdx-hydro',
+    nimi: 'GEOGLOWS v2 -jokiverkko (NGA TDX-Hydro)',
+    lisenssi: 'CC BY-SA 4.0',
+    lahde: 'https://registry.opendata.aws/geoglows-v2/',
+    attribuutio: 'Contains information from the GEOGLOWS ECMWF Streamflow Service (CC BY 4.0), derived from NGA TDX-Hydro (CC BY-SA 4.0).',
+    kaytto: 'joet vektoreina ämpärissä (julisteet/pallo/vektorit/joet-<pvm>/<ISO>.geojson), tools/tee-joet.mjs',
+  },
+  {
+    id: 'openhistoricalmap',
+    nimi: 'OpenHistoricalMap (rautatiet 1873)',
+    lisenssi: 'CC0 1.0',
+    lahde: 'https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/License',
+    attribuutio: 'Rautatiet 1873: OpenHistoricalMap-yhteisö (CC0).',
+    kaytto: 'kokoelma reitit1873 (rautatiet), tools/tee-reitit1873.mjs',
+  },
+  {
+    id: 'esa-worldcover',
+    nimi: 'ESA WorldCover 10 m 2021 v200',
+    lisenssi: 'CC BY 4.0',
+    lahde: 'https://esa-worldcover.org/en/data-access',
+    attribuutio: '© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium.',
+    kaytto: 'elävien elementtien polut (Canal Grande keskitetty vesiluokalle), tools/tee-elavat-polut.mjs',
+  },
+  {
     id: 'natural-earth',
     nimi: 'Natural Earth 10m (admin-0 ja admin-1)',
     lisenssi: 'public domain',
@@ -49,7 +73,7 @@ export const AINEISTOT = [
     lisenssi: 'LGPL 3+',
     lahde: 'https://www.soest.hawaii.edu/pwessel/gshhg/',
     attribuutio: 'Rantaviivat: GSHHG, Wessel & Smith, LGPL.',
-    kaytto: 'laattoihin poltetut rantaviivat ja pallon vektorit ämpärissä',
+    kaytto: 'laattoihin poltetut rantaviivat, pallon vektorit ja maamaski maittain (tools/tee-maamaski-maittain.mjs) ämpärissä',
   },
   {
     id: 'historical-basemaps',

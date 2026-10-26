@@ -69,13 +69,28 @@ Peli on irrotettu Afrikan tähdestä kokonaan: aarre ei ole tähti missään
 tekstissä, symbolissa eikä nimessä. Tilalla on oma tarusto:
 
 **Tutkimusmatkailija Aarni** kirjasi 1800-luvun alussa luetteloonsa
-maailman kuuluisat kadonneet aarteet — Meripihkahuoneen, El Doradon,
-keisarin jadesinetin, Suuren Zimbabwen kivilinnut ja muut — yhden
+maailman kuuluisat kadonneet aarteet — Kolme veljestä -riipuksen, Mantan smaragdin,
+keisarin jadesinetin, Kongon kuninkaan kruunun ja muut — yhden
 jokaisesta maanosasta. Hän kutsui niitä **unohdetuiksi aarteiksi**:
 aarteiksi, joista kerrotaan tarinoita mutta joita kukaan ei enää etsi.
 Aikalaiset pitivät **Aarnin luetteloa** satukirjana. Nimi ei ole
 sattumaa: kansanperinteessä *aarnivalkea* on liekki, joka palaa kätketyn
 aarteen päällä, ja *aarnihauta* on aarrekumpu.
+
+**Euroopan unohdettu aarre on Kolme veljestä** *(kaanonin muutos, omistaja 11.10.2026; korvaa
+Meripihkahuoneen)*: riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta. Jokainen
+unohdettu aarre on yhden ihmisen kannettavissa: Kongon kuninkaan kruunu käy, kokonainen sali ei.
+Jokainen unohdettu aarre on YHÄ LÖYTYMÄTÖN *(omistaja 19.10.2026)*: sitä ei ole löydetty eikä se ole
+museossa; jos aarre löytyy, se vaihdetaan.
+Euroopan pikkuaarre Itämeren meripihka säilyy. Pelin alussa pelaaja ei vielä tiedä Aarnin
+luettelosta mitään: isoisä kertoo aarteesta, ja luettelo esitellään vasta myöhemmin.
+
+**Aarnin luettelon aarnivalkeat** *(kaanonin lisäys, omistaja 7.10.2026)*: luettelonsa loppuun Aarni
+kirjasi myös aarnivalkeat, eli paikat, joissa kansan mukaan liekki palaa kätketyn aarteen päällä.
+Videopelien historiakohteet (Olavinlinna, Kielletty kaupunki, Gizan pyramidit) ovat aarnivalkeita.
+Luettelossa on paikka, ei tapahtuma: pelaaja astuu videopelissä paikan historialliseen hetkeen, ja
+löydetty aarre kirjataan Aarnin luetteloon ja tuo diplomin. Maanosien unohdetut aarteet pysyvät
+ennallaan, eikä aarnivalkeita rinnasteta niihin pelaajalle näkyvissä teksteissä.
 
 **Isoisä uskoi luetteloon.** Hän lähti 1873 matkalleen Aarnin luettelo
 taskussaan, ja hänen matkansa jäi aarteiden osalta kesken. Matkakirjan
@@ -92,7 +107,7 @@ Sanasto (sitova, myös käännöksiin):
 | Aarnin luettelo | Aarni's Catalogue | tarinan erisnimi aarrekokoelmalle; kirjan koko nimi "Aarnin luettelo unohdetuista aarteista" / "Aarni's Catalogue of Forgotten Treasures" |
 | tutkimusmatkailija Aarni | the explorer Aarni | erisnimi säilyy käännöksessä sellaisenaan |
 
-Laudan omat aarrenimet (kivilintu, jadesinetti, Montezuman aarre…)
+Laudan omat aarrenimet (Kongon kuninkaan kruunu, jadesinetti, Montezuman turkoosinaamio…)
 säilyvät — ne ovat luettelon rivejä. Maailmankartan unohdettua aarretta
 ei nimetä: se on revityn sivun arvoitus. Sanaa "pääaarre" saa käyttää
 koodin sisäisissä kommenteissa, mutta ei pelaajalle näkyvissä teksteissä.
@@ -227,3 +242,11 @@ Omar, Taras, Aslak, Andreas) poistuivat kaanonista.
 - Päiväkirjan laajennus: toinen merkintä, joka avautuu kun laudan
   pääaarre löytyy ("jälkikirjoitus")?
 - Loppuuko matka koskaan — vai onko pointti, ettei lopu?
+
+### Avoimet juonilangat
+
+Pelissä jo avatut langat, jotka tarina lunastaa myöhemmin.
+
+- Livia: "Tiedän isoisästäsi enemmän kuin uskotkaan." (aloituskaupungin
+  valinta, 11.10.2026) → lunastettava myöhemmin tarinassa: mitä Livia
+  tietää isoisästä ja milloin se paljastuu.

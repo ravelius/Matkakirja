@@ -48,12 +48,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -97,7 +95,7 @@ const AMPARI_TOIMII = kirjasto?.status === 200;
 if (!AMPARI_TOIMII) console.log('HUOM  ämpäri ei vastaa — kirjasto ei voi latautua; ajetaan vain varapolkujen vartiot');
 else tieto('kirjasto ämpäristä', `${kirjasto.body.length} tavua`);
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** Uusi sivu Lontoon lehdessä: ämpäri reititetty (tai kirjasto katkaistu). */
 async function avaaLehti({ kirjastoSaa = true, lippu = null, reducedMotion = 'no-preference' } = {}) {

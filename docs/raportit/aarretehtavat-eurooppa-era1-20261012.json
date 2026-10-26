@@ -1,0 +1,538 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävät, erä 1 (10 hyvän 3D:n kaupunkia; PT 12.10.). Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty. muistomerkki-kenttä: false kaikissa (ei Italian eikä Kreikan kohteita). maa_vihjeet: 3 tehtävää/maa → ison paikallisaarteen vihje (kaupunki tai paikka kartalle isoisän merkinnällä). GBR:n yhteinen vihje (Lontoo + Edinburgh) ja ESP:n yhteinen vihje (Barcelona + Madrid) ovat maa_vihjeet-listassa kerran.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "lontoo",
+      "nimi": "Lontoo",
+      "maa": "GBR",
+      "hahmo": "Muotialan opiskelija Leila",
+      "saapumispiste": {
+        "nimi": "Lower Thames Street",
+        "lat": 51.51,
+        "lon": -0.0826
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Tarvitsen kuvaan siltaa, jonka tornien välissä on korkea kävelysilta ja jonka tiekansi nousee auki laivoille. Etsi se.",
+        "kohde": {
+          "nimi": "Tower Bridge",
+          "lat": 51.5055,
+          "lon": -0.0754,
+          "etaisyys_saapumispisteesta_m": 706
+        },
+        "vihje_vaarin": "Ei se. Kävele kaakkoon kohti jokea: silta ylittää Thamesin vanhan linnoituksen vieressä, ja sen tornit on verhottu kivellä.",
+        "tiesitko": "Tower Bridgen rakentaminen kesti kahdeksan vuotta: työ alkoi 1886, ja silta avattiin 30. kesäkuuta 1894.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "kysymys": "Leila kirjoitti kuvauspaikan salasanan siirtämällä jokaista kirjainta eteenpäin niin monta askelta kuin sillan rakentaminen kesti vuosia. Pura sana.",
+        "salattu": "TIAQSIBBW",
+        "avain": 8,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "LASIKATTO",
+        "vihje_vaarin": "Avain on sillan rakennusaika vuosina. Siirrä jokaista kirjainta niin monta askelta taaksepäin. Sana kertoo, miksi tänne tulee valoa.",
+        "tiesitko": "Leadenhall Marketin lasikatto on vuodelta 1881. Sen suunnitteli Horace Jones, joka oli myös Tower Bridgen alkuperäinen suunnittelija.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "edinburgh",
+      "nimi": "Edinburgh",
+      "maa": "GBR",
+      "hahmo": "Tykkimestari Ewan",
+      "saapumispiste": {
+        "nimi": "Edinburghin linnan valli (Mills Mount -patteri; arvio linnan koordinaatista)",
+        "lat": 55.9486,
+        "lon": -3.2008
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Katso linnalta luoteeseen New Townin päähän ja etsi aukio, jonka yhtenäiset kivijulkisivut piirsi Robert Adam.",
+        "kohde": {
+          "nimi": "Charlotte Square",
+          "lat": 55.9514,
+          "lon": -3.2086,
+          "etaisyys_saapumispisteesta_m": 580
+        },
+        "vihje_vaarin": "Ei se. Kävele linnalta luoteeseen: aukio päättää George Streetin länsipään, ja sen talojen julkisivut ovat kuin yksi rakennus.",
+        "tiesitko": "Aukion julkisivut suunnitteli Robert Adam, joka kuoli 1792. Rakentaminen jatkui 1800-luvun alkuun, ja aukio on New Townin yhtenäisin osa.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "kysymys": "Missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Kuningas David I perustaa Holyroodin luostarin",
+            "vuosi": "1128"
+          },
+          {
+            "teksti": "Edinburghin yliopisto perustetaan kuninkaallisella peruskirjalla",
+            "vuosi": "1582"
+          },
+          {
+            "teksti": "Kaupunki julistaa haettavaksi New Townin suunnittelukilpailun",
+            "vuosi": "1766"
+          }
+        ],
+        "vihje_vaarin": "Uusi kaupunginosa on nimensä mukaisesti nuorin. Luostari syntyi ennen yliopistoa, ja yliopisto tuli kauan ennen New Townia.",
+        "tiesitko": "Yliopisto perustettiin 1582 kaupunginvaltuuston alaisuudessa, ja opetus alkoi 1583. Se on yksi Skotlannin neljästä vanhasta yliopistosta.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "kobenhavn",
+      "nimi": "Kööpenhamina",
+      "maa": "DNK",
+      "hahmo": "Karusellinhoitaja Freja",
+      "saapumispiste": {
+        "nimi": "Tivolin musiikkikaruselli (arvio: puiston keskusta)",
+        "lat": 55.6736,
+        "lon": 12.5683
+      },
+      "a": {
+        "laji": "katso",
+        "vihjelause": "Kaupungissa on torni, jonka huipulle ei kiivetä rappusia vaan kävellään yli 200 metrin kaarevaa luiskaa, 7,5 kierrosta. Etsi torni.",
+        "kohde": {
+          "nimi": "Rundetårn",
+          "lat": 55.6813,
+          "lon": 12.5757,
+          "etaisyys_saapumispisteesta_m": 970
+        },
+        "vihje_vaarin": "Ei se. Kävele puistosta pohjoiseen vanhan kaupungin kujille: torni on 1600-luvulta, ja sen huipulla on tähtitorni.",
+        "tiesitko": "Tornin rakennus alkoi 1637, ja se valmistui 1642. Kertomusten mukaan tsaari Pietari Suuri ratsasti luiskaa ylös vuonna 1716.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "kysymys": "Missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Piispa Absalon rakennuttaa kaupungin ensimmäisen linnan",
+            "vuosi": "1167"
+          },
+          {
+            "teksti": "Kööpenhaminan yliopisto vihitään käyttöön",
+            "vuosi": "1479"
+          },
+          {
+            "teksti": "Rundetårn valmistuu yliopiston tähtitorniksi",
+            "vuosi": "1642"
+          }
+        ],
+        "vihje_vaarin": "Torni rakennettiin tähtitorniksi yliopistolle. Mieti, kumpi oli ensin: yliopisto vai piispan linna.",
+        "tiesitko": "Kööpenhaminan yliopisto on Pohjoismaiden toiseksi vanhin; vain Uppsalan yliopisto on vanhempi.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "amsterdam",
+      "nimi": "Amsterdam",
+      "maa": "NLD",
+      "hahmo": "Muuttotyöntekijä Yara",
+      "saapumispiste": {
+        "nimi": "Herengrachtin kanavatalot (Yaran työmaa, Gouden Bocht)",
+        "lat": 52.36556,
+        "lon": 4.89
+      },
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Minä kannan kaappeja, mutta tämä suuri rakennus lepää yli 13 000 puupaalun varassa. Se oli ennen kaupungintalo. Etsi se.",
+        "kohde": {
+          "nimi": "Kuninkaanpalatsi",
+          "lat": 52.3731,
+          "lon": 4.8913,
+          "etaisyys_saapumispisteesta_m": 843
+        },
+        "vihje_vaarin": "Ei se. Kävele pohjoiseen kanavilta kaupungin keskusaukiolle: palatsi on aukion laidalla, Uuden kirkon vieressä.",
+        "tiesitko": "Rakennus otettiin käyttöön kaupungintalona vuonna 1655 ja lepää 13 659 puupaalun varassa. Nykyisin se on kuninkaallinen palatsi."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "muistomerkki": false,
+        "kysymys": "Yara kertoo kanavista ja museoista. Missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Kanavavyöhykkeen rakentaminen alkaa",
+            "vuosi": "1613"
+          },
+          {
+            "teksti": "Rijksmuseum avataan nykyisessä rakennuksessaan",
+            "vuosi": "1885"
+          },
+          {
+            "teksti": "Kanavavyöhyke hyväksytään UNESCOn maailmanperintölistalle",
+            "vuosi": "2010"
+          }
+        ],
+        "vihje_vaarin": "Ensin kaivettiin kanavat, ja talot nousivat niiden varteen. Museo avattiin 1800-luvulla, maailmanperintölista tuli vasta meidän aikanamme.",
+        "tiesitko": "Kanavavyöhykkeen rakennustyöt alkoivat 1613 ja jatkuivat vuosikymmeniä. UNESCO hyväksyi sen maailmanperintökohteeksi elokuussa 2010."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "berliini",
+      "nimi": "Berliini",
+      "maa": "DEU",
+      "hahmo": "Tähtitornin hoitaja Lotte",
+      "saapumispiste": {
+        "nimi": "Vanha tähtitorni, Friedrichstadt (Lotten työpaikka)",
+        "lat": 52.50389,
+        "lon": 13.39417
+      },
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Täällä kulki ennen kaupungin rajalinja. Etsi entinen ylityspaikka, joka nimettiin sotilaiden kirjaintunnuksen mukaan, ei kadun mukaan.",
+        "kohde": {
+          "nimi": "Checkpoint Charlie",
+          "lat": 52.5076,
+          "lon": 13.3904,
+          "etaisyys_saapumispisteesta_m": 485
+        },
+        "vihje_vaarin": "Ei se. Kävele tornilta vähän pohjoiseen Friedrichstraßea pitkin: rajapaikan vartiokoppi seisoo keskellä katua.",
+        "tiesitko": "Nimi tulee NATO-aakkosista: Alpha, Bravo, Charlie. Charlie on siis kolmas kirjain, C. Alkuperäinen vartiokoppi poistettiin 22.6.1990."
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "muistomerkki": false,
+        "kysymys": "Isoisän merkintä: \"Kirjoitin sanan siirtämällä kirjaimia eteenpäin Charlien paikan verran NATO-aakkosissa.\" Pura sana.",
+        "salattu": "NDXNRSXWNL",
+        "avain": 3,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "KAUKOPUTKI",
+        "vihje_vaarin": "Charlie on jonossa Alpha, Bravo, Charlie kolmas. Siirrä jokaista kirjainta kolme askelta taaksepäin: N-kirjaimesta tulee K.",
+        "tiesitko": "Berliinin tähtitornin kaukoputkella löydettiin Neptunus 23.9.1846, noin asteen päässä ennustetusta paikasta."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "budapest",
+      "nimi": "Budapest",
+      "maa": "HUN",
+      "hahmo": "Kylpymestari Márta, kylpylän vanhin kylvettäjä",
+      "saapumispiste": {
+        "nimi": "Rudasin kylpylä (Mártan ovi)",
+        "lat": 47.48909,
+        "lon": 19.04787
+      },
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Ruokani ostan hallista joen toiselta puolelta. Sen katto välkkyy värikkäinä Zsolnay-laattoina, ja se avattiin 1897. Etsi se halli.",
+        "kohde": {
+          "nimi": "Suuri kauppahalli",
+          "lat": 47.4866,
+          "lon": 19.059,
+          "etaisyys_saapumispisteesta_m": 880
+        },
+        "vihje_vaarin": "Ei se. Käänny joen yli Pestin puolelle: halli on pitkä ja matala, katto laattojen peitossa, ja se seisoo sillan Pestin puoleisessa päässä.",
+        "tiesitko": "Suuren kauppahallin suunnitteli Samu Pecz, ja se avattiin 1897. Katon värikkäät laatat ovat Zsolnayn tehtaalta Pécsistä."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "muistomerkki": false,
+        "kysymys": "Márta kysyy: missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Suleiman valtaa Budan, ja kaupunki jää turkkilaisille",
+            "vuosi": "1541"
+          },
+          {
+            "teksti": "Ketjusilta avataan: ensimmäinen kiinteä silta Budan ja Pestin välillä",
+            "vuosi": "1849"
+          },
+          {
+            "teksti": "Manner-Euroopan ensimmäinen sähkömetro alkaa kulkea Andrássy-kadun alla",
+            "vuosi": "1896"
+          }
+        ],
+        "vihje_vaarin": "Metro tarvitsi sähköä, joten se tulee viimeisenä. Silta rakennettiin yli kolme vuosisataa Budan valloituksen jälkeen, englantilaisen insinöörin piirustuksin.",
+        "tiesitko": "Buda, Pest ja Óbuda yhdistettiin Budapestiksi 17.11.1873."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "wien",
+      "nimi": "Wien",
+      "maa": "AUT",
+      "hahmo": "Suntio Anton, holvien kynttilöiden hoitaja",
+      "saapumispiste": {
+        "nimi": "Stephansdomin katakombit (Antonin portaat)",
+        "lat": 48.2085,
+        "lon": 16.373
+      },
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Kynttilöideni yläpuolella kaupunki laulaa. Etsi Ring-kadun varrelta talo, joka avattiin 1869 Mozartin Don Giovannilla.",
+        "kohde": {
+          "nimi": "Valtionooppera",
+          "lat": 48.2033,
+          "lon": 16.3692,
+          "etaisyys_saapumispisteesta_m": 640
+        },
+        "vihje_vaarin": "Ei se. Kävele tuomiokirkolta etelä-lounaaseen kohti Ring-katua: sen kulmassa on neorenessanssitalo, jonka suunnittelijat eivät nähneet avajaisia.",
+        "tiesitko": "Valtionoopperan avajaisissa 25.5.1869 oli keisari Franz Joseph paikalla. Suunnittelijat Sicardsburg ja van der Nüll kuolivat ennen kuin talo valmistui."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "muistomerkki": false,
+        "kysymys": "Antonin kysymys: Stephansdomin etelätornin vartijahuone on noin 72 metrin korkeudessa. Montako askelmaa sinne on kierreportaassa?",
+        "liukusaadin": {
+          "min": 100,
+          "max": 600,
+          "askel": 1
+        },
+        "oikea": 343,
+        "hyvaksyttava_vali": [
+          300,
+          400
+        ],
+        "vihje_vaarin": "Yksi askelma on noin 20 cm korkea. Jaa vartijahuoneen 72 metriä askelman korkeudella, niin pääset lähelle.",
+        "tiesitko": "Etelätornissa on 343 askelmaa vartijahuoneeseen, josta tähystettiin tulipaloja vuosisatojen ajan. Torni itse on 136,4 metriä korkea."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "barcelona",
+      "nimi": "Barcelona",
+      "maa": "ESP",
+      "hahmo": "Kirjansitoja Mercè",
+      "saapumispiste": {
+        "nimi": "Mercèn kirjansitomo, kuja La Ramblan varrella",
+        "lat": 41.3841,
+        "lon": 2.1735
+      },
+      "muistomerkki": false,
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Sant Jordin tarun lohikäärme nukkuu talon katolla: harja on kuin suomuinen selkä ja ristillinen torni keihäs. Etsi se talo.",
+        "kohde": {
+          "nimi": "Casa Batlló",
+          "lat": 41.3915,
+          "lon": 2.1648,
+          "etaisyys_saapumispisteesta_m": 1097
+        },
+        "vihje_vaarin": "Ei se. Kävele Ramblalta luoteeseen Passeig de Gràcialle: yksi talo on kuin aaltoileva lohikäärme, ja sen katto kiiltää suomuina.",
+        "tiesitko": "Gaudí uudisti talon vuosina 1904–1906. Katon tulkitaan usein lohikäärmeeksi, mutta Gaudí ei itse selittänyt sitä."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "muistomerkki": false,
+        "kysymys": "Rambla ulottuu Plaça de Catalunyalta satamassa seisovalle Kolumbuksen muistomerkille. Kuinka monta metriä pitkä se on? Mittaa kartalta.",
+        "liukusaadin": {
+          "min": 300,
+          "max": 3000,
+          "askel": 50
+        },
+        "oikea": 1200,
+        "hyvaksyttava_vali": [
+          1100,
+          1400
+        ],
+        "vihje_vaarin": "Kävelen sen päästä päähän noin viidessätoista minuutissa, ja minuutissa taittuu noin 80 metriä. Laske siitä.",
+        "tiesitko": "La Rambla on noin 1,2–1,3 kilometriä pitkä. Nimi tulee arabian sanasta ramla, hiekka: katu oli ennen sadeveden uoma."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "madrid",
+      "nimi": "Madrid",
+      "maa": "ESP",
+      "hahmo": "Kellomestari Pilar",
+      "saapumispiste": {
+        "nimi": "Puerta del Solin kello (Real Casa de Correos)",
+        "lat": 40.41694,
+        "lon": -3.70356
+      },
+      "muistomerkki": false,
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Kello odottaa, joten katso lähelle: suorakaiteen muotoinen aukio on kokonaan talojen sulkema, ja sen seiniltä avautuu yli kaksisataa parveketta.",
+        "kohde": {
+          "nimi": "Plaza Mayor",
+          "lat": 40.4155,
+          "lon": -3.7074,
+          "etaisyys_saapumispisteesta_m": 362
+        },
+        "vihje_vaarin": "Ei se. Kävele länteen: aukion ympärillä ovat kolmikerroksiset talot, ja sisään pääsee holvikaarien kautta.",
+        "tiesitko": "Plaza Mayor rakennettiin 1617–1619 Filip III:n aikana. Aukio on 129 × 94 metriä, ja sitä ympäröi 237 parveketta."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "muistomerkki": false,
+        "kysymys": "Missä järjestyksessä nämä Madridin tapahtumat sattuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Filip II siirtää hovinsa Madridiin",
+            "vuosi": "1561"
+          },
+          {
+            "teksti": "Puerta del Solin kello vihitään käyttöön",
+            "vuosi": "1866"
+          },
+          {
+            "teksti": "Madridin ensimmäinen metrolinja avataan, ja Sol on sen päätepysäkki",
+            "vuosi": "1919"
+          }
+        ],
+        "vihje_vaarin": "Ajattele ensin kuningasta ja hänen hoviaan, sitten kelloa ja viimeiseksi maan alla kulkevaa junaa. Metro tuli vasta kellon jälkeen.",
+        "tiesitko": "Kellon lahjoitti madridilaisille Lontoossa asunut kelloseppä José Rodríguez Losada. Sen lyönnit säestävät uudenvuoden kahtatoista rypälettä."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "lissabon",
+      "nimi": "Lissabon",
+      "maa": "PRT",
+      "hahmo": "Laattamestari Inês",
+      "saapumispiste": {
+        "nimi": "Inêsin laattapaja, Alfama",
+        "lat": 38.711,
+        "lon": -9.13
+      },
+      "muistomerkki": false,
+      "a": {
+        "laji": "katso",
+        "muistomerkki": false,
+        "vihjelause": "Laatat ovat polttovalmiita, mutta katso alas joelle: U:n muotoinen aukio avautuu vedelle, ja sen paikalla seisoi palatsi ennen vuotta 1755.",
+        "kohde": {
+          "nimi": "Kauppatori",
+          "lat": 38.7076,
+          "lon": -9.1365,
+          "etaisyys_saapumispisteesta_m": 679
+        },
+        "vihje_vaarin": "Ei se. Laskeudu Alfamasta lounaaseen rantaan: leveällä aukiolla kolme sivua on rakennuksia, ja neljäs on avoin Tejo-joelle.",
+        "tiesitko": "Aukion keskellä seisoo kuningas Joosef I:n ratsastajapatsas, joka vihittiin 1775. Aukiota sanotaan yhä myös palatsin aukioksi, Terreiro do Paçoksi."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "muistomerkki": false,
+        "kysymys": "Baixan kattojen yli näkyy rautainen hissitorni, joka nostaa kaupunkilaisia ylös kukkulalle. Kuinka monta metriä korkea se on?",
+        "liukusaadin": {
+          "min": 10,
+          "max": 100,
+          "askel": 1
+        },
+        "oikea": 45,
+        "hyvaksyttava_vali": [
+          40,
+          50
+        ],
+        "vihje_vaarin": "Se on kuin viidentoista kerroksen talo, ja yhden kerroksen korkeus on noin kolme metriä. Laske siitä.",
+        "tiesitko": "Santa Justan hissi avattiin 10. heinäkuuta 1902. Se yhdistää alakaupungin Baixan ylempänä olevaan Carmon aukioon."
+      }
+    }
+  ],
+  "maa_vihjeet": [
+    {
+      "iso3": "GBR",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "The Wash (Washin lahti)",
+        "lat": 52.917,
+        "lon": 0.25
+      },
+      "vihjeet": [
+        "Kronikoiden mukaan kuninkaan kuormasto jäi nousuveden jalkoihin Washin lahdella. Vesi nousi nopeammin kuin vankkurit ehtivät rantaan.",
+        "Se tapahtui lokakuussa 1216 Englannin itärannikolla, ja kuningas kuoli samassa kuussa. Taru kertoo kruununkalleuksista, joita kukaan ei ole löytänyt.",
+        "Washin lahden perukoilla, Lincolnshiren ja Norfolkin välissä: legendan mukaan Juhanan jalokivet ovat yhä siellä, vaikka lahti on vetäytynyt."
+      ]
+    },
+    {
+      "iso3": "DNK",
+      "kaupunki": "kobenhavn",
+      "huom": "vain kaksi riviä: Tanskassa on yksi 3D-kaupunki ja kaksi tehtävää",
+      "vihjeet": [
+        "Kaksi kultasarvea nousi Jyllannin pellosta, toinen 1639 ja toinen 1734. Ne on tehty rautakaudella, ja toisessa on riimuja.",
+        "Kuninkaan taidekammio Kööpenhaminassa säilytti ne, kunnes kultaseppä sulatti ne 1802. Jäljennökset ovat kaupungin Kansallismuseossa."
+      ]
+    },
+    {
+      "iso3": "NLD",
+      "kaupunki": "amsterdam",
+      "vihjeet": [
+        "Yhtiö maksoi mausteita pitkään hopealla, ja hopeaa lähti merten taakse suuria määriä. Kaikki laivat eivät koskaan palanneet kotiin.",
+        "Laivojen mukana lähti hopeakolikoita mausteiden ostoon. Yksi laiva upposi vuonna 1629 Australian edustalla.",
+        "Yhtiön pääkonttori oli Amsterdamissa. Lähde etsimään hopean tarinaa sieltä."
+      ]
+    },
+    {
+      "iso3": "DEU",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Worms (Reinin ranta)",
+        "lat": 49.63194,
+        "lon": 8.36528
+      },
+      "vihjeet": [
+        "Taru kertoo kullasta, jonka sankarin surmaaja upotti virtaan. Hän ei kertonut paikkaa kenellekään.",
+        "Runoelma on noin vuodelta 1200. Taru sijoittaa kullan jokeen, jonka rannalla oli burgundien kuninkaan pääkaupunki.",
+        "Tarun mukaan Nibelungein kulta lepää Reinin pohjassa Wormsin tienoilla. Sitä on etsitty, mutta se on runon aarre eikä arkistojen."
+      ]
+    },
+    {
+      "iso3": "HUN",
+      "kaupunki": "budapest",
+      "vihjeet": [
+        "Gootti Jordanes kirjoitti: hunnien suuri kuningas laskettiin yöllä maahan kolmessa arkussa, kulta-, hopea- ja rautaisessa. Hautaa ei ole löydetty.",
+        "Haudan tekijät surmattiin vaitiolon vuoksi, kertoo Jordanes. Kansantarun mukaan joen uoma käännettiin haudan päälle; Jordanes ei mainitse jokea.",
+        "Taru sijoittaa Attilan linnan Tonavan kuumien lähteiden ylle, ja saksalaiset kutsuivat sitä Etzelburgiksi. Etsi tarun jälkiä Budapestista."
+      ]
+    },
+    {
+      "iso3": "AUT",
+      "kaupunki": "wien",
+      "vihjeet": [
+        "Keltainen kivi, 137 karaatin painoinen: Firenzen Medicit omistivat sen, kunnes heidän sukunsa sammui.",
+        "Medicien viimeisen kuoltua 1737 kivi siirtyi Habsburgeille, ja siitä tuli osa keisarin aarteita.",
+        "Keisarin aarrekammio on Wienin Hofburgissa. Kysy sieltä kivestä, jonka nimi tarkoittaa firenzeläistä."
+      ]
+    },
+    {
+      "iso3": "ESP",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Vigon lahti",
+        "lat": 42.285,
+        "lon": -8.66
+      },
+      "vihjeet": [
+        "Kirjoitan sen muistiin kuultuani: Espanjan luoteisrannikon lahdella tuhoutui lokakuussa 1702 laivasto. Taru väittää hopean yhä nukkuvan pohjassa.",
+        "Englantilaiset ja hollantilaiset rikkoivat sataman puomin. Suuri osa hopeasta oli jo maissa, mutta taru ei suostu uskomaan sitä.",
+        "Vigon lahti Galiciassa: sinne taru sijoittaa hopealastin. Jules Verne antoi kapteeni Nemon nostaa sen hylyistä aarteita."
+      ]
+    },
+    {
+      "iso3": "PRT",
+      "kaupunki": "lissabon",
+      "vihjeet": [
+        "Marraskuun ensimmäisenä 1755 maa vavahti, vesi nousi ja tuli söi kuninkaan kirjaston, arviolta 70 000 nidettä. Kukaan ei tiedä, jäikö yksikään jäljelle.",
+        "Etsi kaupunki Tejo-joen suulta, jonka palatsi ja kirjasto tuhoutuivat 1755: Lissabon. Sen raunioista tarina alkaa."
+      ]
+    }
+  ]
+}

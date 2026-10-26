@@ -13,6 +13,7 @@
 import { writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -117,9 +118,8 @@ const pngFlag = process.argv.indexOf('--png');
 if (pngFlag !== -1) {
   const playwrightPath = process.argv[pngFlag + 1];
   if (!playwrightPath) throw new Error('Anna Playwrightin polku: --png <polku/index.mjs>');
-  const { chromium } = await import(playwrightPath);
   const executablePath = process.env.ICON_CHROMIUM;
-  const browser = await chromium.launch(executablePath ? { executablePath } : {});
+  const browser = await avaaChromium(executablePath ? { executablePath } : {});
   const page = await browser.newPage();
 
   for (const [size, padding, file] of [

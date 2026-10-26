@@ -73,6 +73,7 @@ import {
 import {
   lahinLeveys, lahizoominSyvennys, PALLOLAUDAN_LAHIN_LEVEYS,
 } from '../../js/pallolauta/kamera.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 // Julkaisusarjassa kaappauskansio tulee ajurilta (tools/savukkeet/
@@ -177,7 +178,7 @@ const TALLENNE = JSON.stringify(peli.toJSON());
 const konttiSelain = '/opt/pw-browsers/chromium';
 const selainPolku = process.env.CHROMIUM
   ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
-const selain = await chromium.launch({ executablePath: selainPolku });
+const selain = await avaaChromium({ executablePath: selainPolku });
 
 /**
  * Yksi ruutukoko: siirto Marseillesta ja mittaukset sen ympäriltä.

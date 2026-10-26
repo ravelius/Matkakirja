@@ -1,0 +1,57 @@
+/*
+ * KENTTÄ: lomakekenttä, pohjaosa (tyylikirja.json pohjat.KENTTÄ).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── KENTTÄ (pohjaosa, omistaja 1.10.2026: "lomake ok"; tokenit --tk-kentta-*, js/ui.js pueLomakePohjalle) ─────── */
+
+.tk-kentta, .tk-kortti .tk-kentta {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: var(--tk-kentta-korkeus);
+  margin: 0 0 var(--tk-vali-s);
+  padding: var(--tk-kentta-vali-pysty) var(--tk-kentta-vali-vaaka);
+  border: 1px solid var(--tk-kentta-reunus);
+  border-radius: var(--tk-kentta-kulma);
+  background: var(--tk-kentta-pinta);
+  color: var(--tk-kentta-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: none;
+}
+textarea.tk-kentta, .tk-kortti textarea.tk-kentta { min-height: var(--tk-kentta-alue); resize: vertical; }
+.tk-kentta::placeholder { color: var(--tk-kentta-vihje); font-style: italic; letter-spacing: 0; text-transform: none; opacity: 1; }
+.tk-kentta:focus-visible { outline: 2px solid var(--tk-kentta-fokus); outline-offset: 1px; }
+/* Lomakkeen napit puetussa dialogissa: vanha .dialog button (0,1,1) ja button.primary eivät ohita pohjaa. */
+.tk-kortti .periaate-lomake .tk-nappi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: auto;
+  height: var(--tk-nappi-korkeus);
+  margin: 0 var(--tk-vali-xs) var(--tk-vali-xs) 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+  box-shadow: none;
+  transform: none;
+}
+.tk-kortti .periaate-lomake .tk-nappi--ensisijainen {
+  display: flex;
+  width: 100%;
+  margin: var(--tk-vali-s) 0;
+  border-color: var(--tk-toiminto);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+}

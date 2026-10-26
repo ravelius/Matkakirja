@@ -1,0 +1,93 @@
+[
+ {
+  "id": "lissabon",
+  "esittely": "Kartan alue on Lissabonin keskusta Tejo-joen rannalla. Maanjäristys, tsunami ja tulipalo 1. marraskuuta 1755 tuhosivat suuren osan kaupungista. Pombalin markiisin johdolla Baixa rakennettiin ruudukoksi, ja Praça do Comércio sai Eugénio dos Santosin suunnittelemana U:n muotoisen asemakaavan.\n\nSé-tuomiokirkon rakentaminen alkoi 1147, kun kaupunki oli vallattu takaisin, ja samana vuonna Afonso Henriques valtasi São Jorgen linnan. Santa Engrácian kirkon työt alkoivat 1682, ja kupoli valmistui vasta 1900-luvulla. Rossion aaltokuvioinen kivilaatoitus tehtiin 1840-luvun lopulla. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 632,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake",
+    "title": "Wikipedia: 1755 Lisbon earthquake",
+    "tukee": "1.11.1755 maanjäristys, tsunami ja tulipalo; yli neljä viidesosaa rakennuksista tuhoutui; Pombal ja Baixan uudelleenrakennus"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Pra%C3%A7a_do_Com%C3%A9rcio",
+    "title": "Wikipedia: Praça do Comércio",
+    "tukee": "Ribeira-palatsi tuhoutui 1755; Pombal tilasi Eugénio dos Santosin suunnitteleman U:n muotoisen aukion"
+   },
+   {
+    "url": "https://aviewoncities.com/lisbon/praca-do-comercio",
+    "title": "A View on Cities: Praça do Comércio (hakutulos)",
+    "tukee": "maanjäristys 1.11.1755; Eugénio dos Santos ja Carlos Mardel; U-muotoinen aukio"
+   },
+   {
+    "url": "https://www.britannica.com/place/Baixa",
+    "title": "Britannica: Baixa (hakutulos)",
+    "tukee": "Baixa rakennettiin kokonaan uudelleen 1755 jälkeen Pombalin johdolla; ruudukkokatuverkko"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Lisbon_Baixa",
+    "title": "Wikipedia: Lisbon Baixa (hakutulos)",
+    "tukee": "ruudukko poikkesi aiemmasta kaavasta; varhaisia maanjäristyksenkestäviä rakenteita"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Lisbon_Cathedral",
+    "title": "Wikipedia: Lisbon Cathedral",
+    "tukee": "ensimmäinen rakennus vuodelta 1147 valloituksen jälkeen, entisen moskeijan paikalla"
+   },
+   {
+    "url": "https://www.medievalists.net/2015/10/medieval-lisbon-a-visit-to-lisbon-cathedral/",
+    "title": "Medievalists.net: Lisbon Cathedral (hakutulos)",
+    "tukee": "katedraali perustettu 1147 Afonso Henriquesin valloituksen jälkeen"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Jorge_Castle",
+    "title": "Wikipedia: São Jorge Castle",
+    "tukee": "Afonso Henriques ja pohjoiseurooppalaiset ritarit valtasivat linnan ja kaupungin 1147"
+   },
+   {
+    "url": "https://www.infopedia.pt/artigos/$castelo-de-sao-jorge",
+    "title": "Infopedia: Castelo de São Jorge (hakutulos)",
+    "tukee": "Afonso Henriques valtasi linnan maureilta 1147"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Church_of_Santa_Engr%C3%A1cia",
+    "title": "Wikipedia: Church of Santa Engrácia",
+    "tukee": "nykyisen rakennuksen työt alkoivat 1681-1682; uudelleenvihitty 1966; kupoli 1900-luvulla"
+   },
+   {
+    "url": "https://lisbon.for91days.com/?p=1441",
+    "title": "For91days: The National Pantheon at the Santa Engrácia (hakutulos)",
+    "tukee": "työt 1682, valmis 1966 betonikupolilla"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Portuguese_pavement",
+    "title": "Wikipedia: Portuguese pavement",
+    "tukee": "Rossion aaltokuvio, Eusébio Pinheiro Furtado, 1848"
+   },
+   {
+    "url": "https://getlisbon.com/discovering/origins-of-the-portuguese-pavement/",
+    "title": "Get Lisbon: Calçada Portuguesa (hakutulos)",
+    "tukee": "Rossion aaltokuvio 1848 (osa lähteistä 1849)"
+   }
+  ],
+  "pudotetut": [
+   "Nykyisen tekstin 'noin viisitoista kilometriä avomerelle' ja Tejo 'melkein meri': ei tarkistettu kahdesta lähteestä, ei tekstissä",
+   "Alfama, Bairro Alto ja Avenida da Liberdade (nykyisestä tekstistä): ei tarkistettu tässä ajossa",
+   "Kuolleiden määrä 1755 (30 000-40 000 Lissabonissa, vain Wikipedia)",
+   "Santa Engrácian kansallispanteoni-vuosi: 1916 (Wikipedia) vs 1966 (hakulähde) -> vuotta ei tekstissä",
+   "São Jorgen linnan alkuperä (2. vai 1. vuosisata eaa.), kuninkaanpalatsi 1255/noin 1300/1305, tornien määrä (vain Wikipedia tai ristiriitaiset)",
+   "Praça do Comércion mitat 175 x 175 m (170 m geokätköllä) ja José I:n patsas 1775 (vain Wikipedia)",
+   "Rossion Teatro Nacional D. Maria II (1842-1846 hakulähde, Wikipedia 1840-luvulla), Pedro IV:n pylväs 1870/1874: ei tekstissä",
+   "Kartan muut kohteet (Largo da Severa, Alves dos Reis, Ultimaatum 1890, Kolumbus 1484, Kauppatori-nimitys) jätetty pois tilan vuoksi"
+  ],
+  "ristiriidat": [
+   "Rossion aaltokuvio: Wikipedia 1848, getlisbon 1848, portugalilainen lähde valmis 1849 -> 'vuosikymmenen 1840-luvun lopulla'",
+   "Santa Engrácian aloitus: 1681 (ensimmäinen kivi) vs 1682 -> käytetty 1682",
+   "Santa Engrácia panteoniksi: 1916 vs 1966 -> ei vuotta tekstissä",
+   "Sé-tuomiokirkon valmistuminen 1200-luvun alkuun mennessä; rakennuksen 'aloitus 1147' tukee Wikipedia ja hakutulosten matkasivut -> teksti 'alkoi 1147'",
+   "ESTO: Britannica-sivut ja visitlisboa/pantheon-sivut eivät auenneet; toiset lähteet ovat hakutulosten tiivistelmiä"
+  ],
+  "muutos_sk": "Poistettu 15 km avomerelle -tieto, Alfama, Bairro Alto ja Avenida da Liberdade (ei kahdesta lähteestä). Lisätty Baixan ja Praça do Comércion uudelleenrakennus, Sé 1147, São Jorgen linnan valtaus 1147, Santa Engrácia 1682/1966 ja Rossion laatoitus 1840-luvulla. [SK-tarkistus: epävarma tarkka vuosi korvattu vuosikymmenellä/vuosisadalla]"
+ }
+]

@@ -1,0 +1,935 @@
+{
+ "kaupunki": "Bern",
+ "id": "bern",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Berniin. Ylhäältä vanhakaupunki täyttää kapean niemen, jota Aare-joki kiertää jyrkässä mutkassa vihreän laakson pohjalla, ja kaupungin eteläpuolella kohoaa Gurten-kukkula. Kirkkaalla säällä kaakon taivaanrannassa erottuvat Alppien lumihuiput. Heikko tuuli kuljettaa koriamme hitaasti vanhankaupungin ylle. Kierros alkaa vanhankaupungin pääkadun, Kramgassen, päästä, jossa punakattoinen Zytglogge-torni kohoaa suurine kellotauluineen."
+ },
+ "kierros": [
+  "Q246105",
+  "Q1588585",
+  "Q30911",
+  "Q390003",
+  "Q688315",
+  "Q458115",
+  "Q666040",
+  "Q2167108"
+ ],
+ "kohteet": [
+  {
+   "id": "Q246105",
+   "nimi": "Zytglogge",
+   "kuvaus": "Bernin kelloportti ja tähtitieteellinen kello",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 54.5,
+   "katse_suunta": 270,
+   "katse_kaari": 20,
+   "teksti": "Zytglogge erottuu korkeana kellotornina vanhassakaupungissa. Torni rakennettiin noin vuonna 1218 kaupungin läntiseksi porttitorniksi, mutta kaupungin kasvaessa se menetti puolustustehtävänsä ja toimi myöhemmin vankilana. Vuoden 1405 suuren kaupunkipalon jälkeen torni sai kellotornin tehtävän, ja kellotorni se on ollut siitä lähtien. Nykyisen kellokoneiston rakensi uudelleen lukkoseppä Kaspar Brunner vuosina 1527–1530. Tähtitieteellinen kello on astrolabi, joka näyttää ajan lisäksi viikonpäivän, kuun vaiheen ja eläinratamerkit. Tornin länsisivun maalauksen teki taidemaalari Victor Surbek vuonna 1930.",
+   "lyhyt": "Tornin itäsivun kellopeli on esitys, jonka voi katsoa joka tunti. Esitys alkaa noin neljä minuuttia ennen tasatuntia, ja kukko kiekaisee sen aikana kolme kertaa. Sitten karhut kiertävät kehää ja narri lyö tuntia liian aikaisin, kunnes Chronos kääntää tiimalasiaan ja kullattu Hans von Thann lyö suurta tuntikelloa.",
+   "syventava": "Miksi tornin kello kertoi koko kaupungille oikean ajan?",
+   "kysymykset": [
+    "Mihin tarkoitukseen torni rakennettiin alun perin?",
+    "Kuka rakensi tornin kellokoneiston uudelleen 1500-luvulla?",
+    "Mitä tähtitieteellinen kello näyttää?",
+    "Mitä tapahtuu muutama minuutti ennen tasatuntia?",
+    "Kuka maalasi tornin länsisivun kuvan?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni rakennettiin noin 1218 (Wikipedia: 1218–1220) kaupungin läntiseksi porttitorniksi.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Torni rakennettiin noin 1218 (Wikipedia: 1218–1220) kaupungin läntiseksi porttitorniksi.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Torni rakennettiin noin 1218 (Wikipedia: 1218–1220) kaupungin läntiseksi porttitorniksi.",
+     "url": "https://www.swissinfo.ch/eng/culture/the-medieval-pearl-on-the-aare/7814422"
+    },
+    {
+     "vaite": "Kaupungin laajennuttua torni muutettiin vankilaksi (noin 1344).",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Kaupungin laajennuttua torni muutettiin vankilaksi (noin 1344).",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Vuoden 1405 suuren palon jälkeen torni sai kellotornin tehtävän.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Vuoden 1405 suuren palon jälkeen torni sai kellotornin tehtävän.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Kaspar Brunner rakensi kellokoneiston uudelleen 1527–1530.",
+     "url": "https://hls-dhs-dss.ch/articles/018528"
+    },
+    {
+     "vaite": "Kaspar Brunner rakensi kellokoneiston uudelleen 1527–1530.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Kaspar Brunner rakensi kellokoneiston uudelleen 1527–1530.",
+     "url": "https://www.coronet.org/new-1minute-reads/berns-clock-towerzytglogge"
+    },
+    {
+     "vaite": "Astrolabi näyttää ajan, viikonpäivän, kuun vaiheen ja eläinratamerkit.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Astrolabi näyttää ajan, viikonpäivän, kuun vaiheen ja eläinratamerkit.",
+     "url": "https://www.coronet.org/new-1minute-reads/berns-clock-towerzytglogge"
+    },
+    {
+     "vaite": "Astrolabi näyttää ajan, viikonpäivän, kuun vaiheen ja eläinratamerkit.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Länsisivun maalaus on Victor Surbekin vuodelta 1930.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Länsisivun maalaus on Victor Surbekin vuodelta 1930.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Kukko kiekuu kolme kertaa tunnin aikana.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Kukko kiekuu kolme kertaa tunnin aikana.",
+     "url": "https://www.swissinfo.ch/eng/culture/the-medieval-pearl-on-the-aare/7814422"
+    },
+    {
+     "vaite": "Esityksessä karhut kiertävät, narri lyö tuntia liian aikaisin, Chronos kääntää tiimalasia ja Hans von Thann lyö tuntikelloa.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    },
+    {
+     "vaite": "Esityksessä karhut kiertävät, narri lyö tuntia liian aikaisin, Chronos kääntää tiimalasia ja Hans von Thann lyö tuntikelloa.",
+     "url": "https://www.myswitzerland.com/de-ch/erlebnisse/zeitglockenturm-zytglogge/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Hans von Thann on kullattu kellonlyöjähahmo.",
+     "url": "https://en.wikipedia.org/wiki/Zytglogge"
+    },
+    {
+     "vaite": "Hans von Thann on kullattu kellonlyöjähahmo.",
+     "url": "https://www.bern.ch/politik-und-verwaltung/stadtverwaltung/prd/hochbau-stadt-bern/publikationen/2018/190718-hsb-bauflyer-zytgloggeturm-u02-final-nach.pdf/download"
+    }
+   ]
+  },
+  {
+   "id": "Q1588585",
+   "nimi": "Käfigturm",
+   "kuvaus": "Marktgassen päässä oleva vankilatorni",
+   "luokka": "torni",
+   "koko_m": 20,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Käfigturm kohoaa pallokorista katsottuna Marktgassen läntisessä päässä. Ensimmäinen torni rakennettiin noin vuonna 1256 kaupungin toisen muurinkehän porttitorniksi. Vuoden 1405 palon jälkeen siihen siirrettiin vankila, ja siitä tornin nimi tulee: Käfigturm tarkoittaa häkki- eli vankilatornia. Nykyinen torni rakennettiin vanhan tilalle vuosina 1641–1644, ja sen suunnitteli kaupungin rakennusmestari Joseph Plepp. Torni on noin 49 metriä korkea. Vankilana rakennusta käytettiin vuoteen 1897. Vuodesta 1999 siinä on toiminut valtion Polit-Forum, jossa järjestetään poliittisia näyttelyitä ja tilaisuuksia.",
+   "lyhyt": "Tornin juureen avattiin vuosina 1902–1903 toinen kulkuaukko, ja itäpuolelle rakennettiin portaikko. Täysrestaurointi tehtiin vuosina 1977–1980, ja vuonna 1980 torniin avattiin tiedotuskeskus, joka toimi noin viisitoista vuotta. Sen jälkeen torni on ollut näyttely- ja tapahtumakäytössä.",
+   "syventava": "Miksi vanha torni purettiin ja rakennettiin uudelleen?",
+   "kysymykset": [
+    "Mitä Käfigturm-nimi tarkoittaa?",
+    "Milloin torni on rakennettu uudelleen nykyiseen muotoonsa?",
+    "Kuka suunnitteli nykyisen tornin?",
+    "Mihin käyttöön torni on nykyään?",
+    "Mihin tornia käytettiin sen jälkeen, kun vangit oli siirretty pois?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Ensimmäinen torni rakennettiin noin 1256 kaupungin toisen muurinkehän porttitorniksi.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Ensimmäinen torni rakennettiin noin 1256 kaupungin toisen muurinkehän porttitorniksi.",
+     "url": "https://bauinventar.bern.ch/pdfs/marktgasse_67.pdf"
+    },
+    {
+     "vaite": "Vuoden 1405 palon jälkeen torniin siirrettiin vankila, ja siitä nimi Käfigturm (häkki- tai vankilatorni).",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Vuoden 1405 palon jälkeen torniin siirrettiin vankila, ja siitä nimi Käfigturm (häkki- tai vankilatorni).",
+     "url": "https://www.media.bk.admin.ch/epaper/bk/page136.html"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin 1641–1644 vanhan tilalle.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin 1641–1644 vanhan tilalle.",
+     "url": "https://www.media.bk.admin.ch/epaper/bk/page136.html"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin 1641–1644 vanhan tilalle.",
+     "url": "https://bauinventar.bern.ch/pdfs/marktgasse_67.pdf"
+    },
+    {
+     "vaite": "Nykyinen torni rakennettiin 1641–1644 vanhan tilalle.",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Kaupungin rakennusmestari Joseph Plepp suunnitteli nykyisen tornin.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Kaupungin rakennusmestari Joseph Plepp suunnitteli nykyisen tornin.",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Torni on noin 49 metriä korkea.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Torni on noin 49 metriä korkea.",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Vankilakäyttö jatkui vuoteen 1897.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Vankilakäyttö jatkui vuoteen 1897.",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Vuodesta 1999 tornissa on toiminut Polit-Forum.",
+     "url": "https://www.media.bk.admin.ch/epaper/bk/page136.html"
+    },
+    {
+     "vaite": "Vuodesta 1999 tornissa on toiminut Polit-Forum.",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Marktgassen läntisessä päässä (osoite Marktgasse 67).",
+     "url": "https://www.alpen-guide.de/reisefuehrer/poi/kaefigturm-bern"
+    },
+    {
+     "vaite": "Marktgassen läntisessä päässä (osoite Marktgasse 67).",
+     "url": "https://bauinventar.bern.ch/pdfs/marktgasse_67.pdf"
+    },
+    {
+     "vaite": "Vuosina 1902–1903 tornin juureen tehtiin toinen kulkuaukko ja itäpuolelle portaikko.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Vuosina 1902–1903 tornin juureen tehtiin toinen kulkuaukko ja itäpuolelle portaikko.",
+     "url": "https://bauinventar.bern.ch/pdfs/marktgasse_67.pdf"
+    },
+    {
+     "vaite": "Täysrestaurointi 1977–1980; tiedotuskeskus avattiin 19.4.1980.",
+     "url": "https://bauinventar.bern.ch/pdfs/marktgasse_67.pdf"
+    },
+    {
+     "vaite": "Täysrestaurointi 1977–1980; tiedotuskeskus avattiin 19.4.1980.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Tiedotuskeskus toimi noin 15 vuotta, minkä jälkeen torni on ollut näyttely- ja tapahtumakäytössä.",
+     "url": "https://en.wikipedia.org/wiki/K%C3%A4figturm"
+    },
+    {
+     "vaite": "Tiedotuskeskus toimi noin 15 vuotta, minkä jälkeen torni on ollut näyttely- ja tapahtumakäytössä.",
+     "url": "https://www.media.bk.admin.ch/epaper/bk/page136.html"
+    }
+   ]
+  },
+  {
+   "id": "Q30911",
+   "nimi": "Bundeshaus",
+   "kuvaus": "Sveitsin parlamentin ja hallituksen talo",
+   "luokka": "palatsi",
+   "koko_m": 85,
+   "korkeus_m": 64,
+   "katse_suunta": 0,
+   "katse_kaari": 40,
+   "teksti": "Bundeshaus, Liittopalatsi, on ylhäältä katsottuna laaja rakennuskokonaisuus, jonka keskellä kohoaa kupoli. Parlamenttirakennus tehtiin arkkitehti Hans Wilhelm Auerin suunnitelmien mukaan vuosina 1894–1902, ja se otettiin käyttöön 1.4.1902. Se on länsisiiven (1852–1857) ja itäsiiven (1888–1892) välissä. Kupolin ulkokorkeus on 64 metriä. Kupolisalin kupolissa ovat kantonien vaakunat, ja pääsisäänkäynti avautuu Bundesplatzille. Rakennuksessa kokoontuvat Sveitsin parlamentin kaksi kamaria, kansallisneuvosto ja kantonien neuvosto.",
+   "lyhyt": "Kupolisalissa seisoo James André Vibertin veistämä patsas Kolme valaliittolaista, joka viittaa Rütlin valaan. Rakennukseen käytettiin lähes yksinomaan sveitsiläisiä materiaaleja. Kansallisneuvoston salissa on lisäksi Gertrud Stauffacherin patsas.",
+   "syventava": "Miksi kupolin vaakunoissa on juuri kantonit?",
+   "kysymykset": [
+    "Kuka suunnitteli parlamenttirakennuksen?",
+    "Milloin länsisiipi rakennettiin?",
+    "Ketä Kolme valaliittolaista -patsas esittää?",
+    "Mitkä elimet kokoontuvat parlamenttirakennuksessa?",
+    "Mistä rakennuksen materiaalit tulivat?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Parlamenttirakennus 1894–1902, arkkitehti Hans Wilhelm Auer.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Parlamenttirakennus 1894–1902, arkkitehti Hans Wilhelm Auer.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Parlamenttirakennus otettiin käyttöön 1.4.1902.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Parlamenttirakennus otettiin käyttöön 1.4.1902.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Länsisiipi 1852–1857 ja itäsiipi 1888–1892; parlamenttirakennus on niiden välissä.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Länsisiipi 1852–1857 ja itäsiipi 1888–1892; parlamenttirakennus on niiden välissä.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kupolin ulkokorkeus on 64 metriä.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kupolin ulkokorkeus on 64 metriä.",
+     "url": "https://michelle-meenawong.pixels.com/featured/federal-palace-in-bern-michelle-meenawong.html",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Kupolisalin kupolissa ovat kantonien vaakunat.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Kupolisalin kupolissa ovat kantonien vaakunat.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Pääsisäänkäynti avautuu Bundesplatzille.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Pääsisäänkäynti avautuu Bundesplatzille.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kansallisneuvosto ja kantoneuvosto kokoontuvat parlamenttirakennuksessa.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kansallisneuvosto ja kantoneuvosto kokoontuvat parlamenttirakennuksessa.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Kolme valaliittolaista -patsas on James André Vibertin työ kupolisalissa ja viittaa Rütlin valaan.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kolme valaliittolaista -patsas on James André Vibertin työ kupolisalissa ja viittaa Rütlin valaan.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Rakennusmateriaalit tulivat lähes kokonaan Sveitsistä.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    },
+    {
+     "vaite": "Rakennusmateriaalit tulivat lähes kokonaan Sveitsistä.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kansallisneuvoston salissa on Gertrud Stauffacherin patsas.",
+     "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland"
+    },
+    {
+     "vaite": "Kansallisneuvoston salissa on Gertrud Stauffacherin patsas.",
+     "url": "https://www.parlament.ch/en/%C3%BCber-das-parlament/parliament-building"
+    }
+   ]
+  },
+  {
+   "id": "Q390003",
+   "nimi": "Einsteinhaus",
+   "kuvaus": "Albert Einsteinin Bern-kodin museo",
+   "luokka": "museo",
+   "koko_m": 20,
+   "katse_suunta": 180,
+   "katse_kaari": 20,
+   "teksti": "Einsteinhaus on talo Kramgassella, vanhankaupungin pääkadulla. Albert Einstein asui talon toisen kerroksen asunnossa osoitteessa Kramgasse 49 vuosina 1903–1905 vaimonsa Mileva Marićin ja heidän poikansa kanssa. Hän työskenteli samaan aikaan Bernin patenttivirastossa ja kirjoitti tässä asunnossa fysiikan tutkimuksia. Vuonna 1905 hän julkaisi Annalen der Physik -lehdessä useita merkittäviä artikkeleita, muun muassa erityisen suhteellisuusteorian. Siksi vuotta kutsutaan hänen ihmeiden vuodekseen, latinaksi annus mirabilis. Nykyään talossa on museo, jonka kolmannessa kerroksessa kerrotaan Einsteinin elämästä ja työstä.",
+   "lyhyt": "Talosta tuli museo vuonna 1979. Asunto on kalustettu aikakauden huonekaluilla niin, että perheen arki tulee näkyviin. Vuonna 2005, kun Einsteinin Bernin-vuosista oli kulunut sata vuotta, talo kunnostettiin varovasti ja siihen tehtiin uusi näyttely.",
+   "syventava": "Mitä muuta Einstein julkaisi vuonna 1905 suhteellisuusteorian lisäksi?",
+   "kysymykset": [
+    "Millä kadulla Einsteinhaus sijaitsee?",
+    "Missä Einstein työskenteli Bernissä?",
+    "Missä kerroksessa Einsteinin asunto oli?",
+    "Milloin talosta tuli museo?",
+    "Mitä talon kolmannessa kerroksessa on esillä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Einstein asui talossa (Kramgasse 49) vuosina 1903–1905.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Einstein asui talossa (Kramgasse 49) vuosina 1903–1905.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Einstein asui talossa (Kramgasse 49) vuosina 1903–1905.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    },
+    {
+     "vaite": "Asunto oli toisessa kerroksessa; mukana vaimo Mileva Marić ja poika.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Asunto oli toisessa kerroksessa; mukana vaimo Mileva Marić ja poika.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    },
+    {
+     "vaite": "Asunto oli toisessa kerroksessa; mukana vaimo Mileva Marić ja poika.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Einstein työskenteli samaan aikaan patenttivirastossa.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Einstein työskenteli samaan aikaan patenttivirastossa.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    },
+    {
+     "vaite": "Einsteinin tutkimukset vuodelta 1905 kirjoitettiin talossa (Kramgasse 49).",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Einsteinin tutkimukset vuodelta 1905 kirjoitettiin talossa (Kramgasse 49).",
+     "url": "https://www.swissinfo.ch/eng/culture/the-medieval-pearl-on-the-aare/7814422"
+    },
+    {
+     "vaite": "Vuoden 1905 artikkelit Annalen der Physik -lehdessä, muun muassa erityinen suhteellisuusteoria; vuosi on annus mirabilis.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Vuoden 1905 artikkelit Annalen der Physik -lehdessä, muun muassa erityinen suhteellisuusteoria; vuosi on annus mirabilis.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    },
+    {
+     "vaite": "Kolmannessa kerroksessa esitellään Einsteinin elämäkertaa ja elämäntyötä.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Kolmannessa kerroksessa esitellään Einsteinin elämäkertaa ja elämäntyötä.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Kolmannessa kerroksessa esitellään Einsteinin elämäkertaa ja elämäntyötä.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    },
+    {
+     "vaite": "Talo on ollut museo vuodesta 1979.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Talo on ollut museo vuodesta 1979.",
+     "url": "https://www.theglobeandmail.com/life/where-einsteins-genius-bloomed/article1120696/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Asunto on kalustettu aikakauden huonekaluilla perheen asumisolojen esittelemiseksi.",
+     "url": "https://en.wikipedia.org/wiki/Einstein_House"
+    },
+    {
+     "vaite": "Asunto on kalustettu aikakauden huonekaluilla perheen asumisolojen esittelemiseksi.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Talo kunnostettiin varovasti ja siihen tehtiin näyttely vuonna 2005, satavuotisjuhlan kunniaksi.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html"
+    },
+    {
+     "vaite": "Talo kunnostettiin varovasti ja siihen tehtiin näyttely vuonna 2005, satavuotisjuhlan kunniaksi.",
+     "url": "https://aps.org/funding-recognition/historic-sites/einsteinhaus"
+    }
+   ]
+  },
+  {
+   "id": "Q688315",
+   "nimi": "Berner Münster",
+   "kuvaus": "Bernin myöhäisgoottilainen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 85,
+   "korkeus_m": 100.6,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Bernin tuomiokirkko erottuu pitkänä kirkkona, jonka länsipäässä kohoaa noin 100 metriä korkea torni. Kirkon peruskivi laskettiin 11.3.1421, ja ensimmäiseksi rakennusmestariksi kutsuttiin Strasbourgista Matthäus Ensinger. Rakennustyö kesti vuosisatoja: tornin ylempi kahdeksankulmio ja huippu rakennettiin vasta vuosina 1889–1893. Länsipäädyn pääportaalin veistokset esittävät viimeistä tuomiota, ja niiden tekijä oli mestari Erhart Küng. Veistokset säilyivät uskonpuhdistuksen kuvainraivauksessa, vaikka muu kirkon sisustus menetti paljon. Kirkkoa pidetään Sveitsin tärkeimpänä myöhäisgoottilaisena rakennuksena.",
+   "lyhyt": "Kuoron värilasi-ikkunat ovat 1400-luvun puolivälistä, ja vanhimmat niistä on tehty vuodesta 1441 alkaen. Pääportaalin vapaasti seisovat hahmot on korvattu restauroinnissa kopioilla, ja alkuperäiset ovat nykyään Bernin historiallisessa museossa.",
+   "syventava": "Miksi kirkon torni jäi kesken yli kolmeksi vuosisadaksi?",
+   "kysymykset": [
+    "Kuka oli Matthäus Ensinger?",
+    "Kuinka korkea kirkon torni on?",
+    "Mitä pääportaalin veistokset esittävät?",
+    "Mitä kirkolle tapahtui uskonpuhdistuksessa vuonna 1528?",
+    "Mikä on Münsterplattform?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Peruskivi laskettiin 11.3.1421.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 11.3.1421.",
+     "url": "https://www.swissinfo.ch/eng/history/happy-600th-to-bern-s-cathedral/46410342"
+    },
+    {
+     "vaite": "Peruskivi laskettiin 11.3.1421.",
+     "url": "https://www.bernermuenster.ch/"
+    },
+    {
+     "vaite": "Ensimmäinen rakennusmestari oli Strasbourgista kutsuttu Matthäus Ensinger.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Ensimmäinen rakennusmestari oli Strasbourgista kutsuttu Matthäus Ensinger.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Tornin ylempi kahdeksankulmio ja huippu valmistuivat 1889–1893 (torni valmistui 1893).",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Tornin ylempi kahdeksankulmio ja huippu valmistuivat 1889–1893 (torni valmistui 1893).",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Tornin ylempi kahdeksankulmio ja huippu valmistuivat 1889–1893 (torni valmistui 1893).",
+     "url": "https://www.swissinfo.ch/eng/history/happy-600th-to-bern-s-cathedral/46410342"
+    },
+    {
+     "vaite": "Torni on noin 100 metriä korkea (100,6 m).",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Torni on noin 100 metriä korkea (100,6 m).",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Pääportaalin veistokset esittävät viimeistä tuomiota; Erhart Küng tuotti ne.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Pääportaalin veistokset esittävät viimeistä tuomiota; Erhart Küng tuotti ne.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/hauptportal-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Pääportaalin veistokset esittävät viimeistä tuomiota; Erhart Küng tuotti ne.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Portaalin veistokset säilyivät uskonpuhdistuksen tuhoista.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Portaalin veistokset säilyivät uskonpuhdistuksen tuhoista.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/hauptportal-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Kirkko on Sveitsin tärkein myöhäisgoottilainen rakennus.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Kirkko on Sveitsin tärkein myöhäisgoottilainen rakennus.",
+     "url": "https://www.swissinfo.ch/eng/bern-s-minster-through-the-years/7466220"
+    },
+    {
+     "vaite": "Kuoron ikkunat ovat 1400-luvun puolivälistä, vanhimmat vuodesta 1441.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Kuoron ikkunat ovat 1400-luvun puolivälistä, vanhimmat vuodesta 1441.",
+     "url": "https://www.swissinfo.ch/eng/bern-s-minster-through-the-years/7466220"
+    },
+    {
+     "vaite": "Portaalin vapaasti seisovat hahmot on korvattu kopioilla; alkuperäiset ovat Bernin historiallisessa museossa.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Portaalin vapaasti seisovat hahmot on korvattu kopioilla; alkuperäiset ovat Bernin historiallisessa museossa.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/hauptportal-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Uskonpuhdistus 1528: kirkon kollegiaattikapituli lakkautettiin, messut lopetettiin ja sivualtarit poistettiin.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Uskonpuhdistus 1528: kirkon kollegiaattikapituli lakkautettiin, messut lopetettiin ja sivualtarit poistettiin.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Münsterplattform on kirkon eteläpuolella oleva terassi, joka oli ennen hautausmaa.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    },
+    {
+     "vaite": "Münsterplattform on kirkon eteläpuolella oleva terassi, joka oli ennen hautausmaa.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Torni jäi kesken 1500-luvulta 1800-luvulle.",
+     "url": "https://www.bernermuenster.ch/assets/uploads/Dokumente/Medien/Infoblaetter/architektur-berner-muenster.pdf"
+    },
+    {
+     "vaite": "Torni jäi kesken 1500-luvulta 1800-luvulle.",
+     "url": "https://en.wikipedia.org/wiki/Bern_Minster"
+    }
+   ]
+  },
+  {
+   "id": "Q458115",
+   "nimi": "Nydeggbrücke",
+   "kuvaus": "Aaren ylittävä kolmikaarinen kivisilta",
+   "luokka": "silta",
+   "koko_m": 145,
+   "korkeus_m": 25,
+   "teksti": "Nydeggbrücke ylittää pallokorista katsottuna Aare-joen vanhankaupungin itäpäässä kolmen kaaren varassa. Sillan suunnitteli ja rakensi uurilainen Karl Emanuel Müller vuosina 1840–1844, ja se vihittiin käyttöön 23.11.1844. Silta on noin 190 metriä pitkä ja kohoaa noin 25 metriä joen yläpuolelle. Keskimmäinen kaari on noin 46 metriä leveä, ja rakentamisaikanaan se oli yksi Euroopan suurimmista kivikaarista. Sillan sisus on Merligenin ja Juran kalkkikiveä, ja pinta on sinistä Ostermundigenin hiekkakiveä. Silta täydensi Untertorbrückea, joka oli siihen asti ainoa Aaren ylittävä silta.",
+   "lyhyt": "Sillan päissä perittiin aluksi tullimaksua, kunnes se poistettiin vuonna 1853. Rakentaja Karl Emanuel Müller oli syntynyt Altdorfissa Urin kantonissa vuonna 1804 ja kuoli samassa kaupungissa 1869; hän toimi rakennusyrittäjänä.",
+   "syventava": "Miksi Aaren ylitykseen tarvittiin uusi silta, kun Untertorbrücke oli jo olemassa?",
+   "kysymykset": [
+    "Kuka rakensi Nydeggbrückenin?",
+    "Milloin silta vihittiin käyttöön?",
+    "Kuinka monta kaarta sillassa on?",
+    "Mistä materiaaleista silta on tehty?",
+    "Mikä silta oli Aaren ainoa ylitys ennen Nydeggbrückea?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Silta suunniteltiin ja rakennettiin 1840–1844; suunnittelija Karl Emanuel Müller.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Silta suunniteltiin ja rakennettiin 1840–1844; suunnittelija Karl Emanuel Müller.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Silta suunniteltiin ja rakennettiin 1840–1844; suunnittelija Karl Emanuel Müller.",
+     "url": "https://www.pss-archi.eu/immeubles/CH-0351-40497.html"
+    },
+    {
+     "vaite": "Silta suunniteltiin ja rakennettiin 1840–1844; suunnittelija Karl Emanuel Müller.",
+     "url": "https://hls-dhs-dss.ch/de/articles/004621"
+    },
+    {
+     "vaite": "Silta vihittiin käyttöön 23.11.1844.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Silta vihittiin käyttöön 23.11.1844.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Silta on noin 190 metriä pitkä ja noin 25 metriä joen yläpuolella.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Silta on noin 190 metriä pitkä ja noin 25 metriä joen yläpuolella.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Silta on noin 190 metriä pitkä ja noin 25 metriä joen yläpuolella.",
+     "url": "https://www.pss-archi.eu/immeubles/CH-0351-40497.html"
+    },
+    {
+     "vaite": "Sillassa on kolme kaarta; keskikaari noin 46 metriä, rakentamisaikanaan yksi Euroopan suurimmista.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Sillassa on kolme kaarta; keskikaari noin 46 metriä, rakentamisaikanaan yksi Euroopan suurimmista.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Sillan ytimessä Merligenin ja Juran kalkkikiveä, pinnassa sinistä Ostermundigenin hiekkakiveä.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Sillan ytimessä Merligenin ja Juran kalkkikiveä, pinnassa sinistä Ostermundigenin hiekkakiveä.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Silta rakennettiin Untertorbrückea täydentämään; Untertorbrücke oli siihen asti ainoa Aaren ylitys.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Silta rakennettiin Untertorbrückea täydentämään; Untertorbrücke oli siihen asti ainoa Aaren ylitys.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Siltamaksu poistettiin vuonna 1853.",
+     "url": "https://en.wikipedia.org/wiki/Nydeggbr%C3%BCcke"
+    },
+    {
+     "vaite": "Siltamaksu poistettiin vuonna 1853.",
+     "url": "https://www.routard.com/fr/guide/europe/suisse/canton-de-berne/berne-bern/pont-de-nydegg-nydeggbrucke"
+    },
+    {
+     "vaite": "Karl Emanuel Müller oli rakennusyrittäjä, syntyi Altdorfissa vuonna 1804 ja kuoli siellä 1869.",
+     "url": "https://hls-dhs-dss.ch/de/articles/004621"
+    },
+    {
+     "vaite": "Karl Emanuel Müller oli rakennusyrittäjä, syntyi Altdorfissa vuonna 1804 ja kuoli siellä 1869.",
+     "url": "https://www.deutsche-biographie.de/sfz66648.html"
+    }
+   ]
+  },
+  {
+   "id": "Q666040",
+   "nimi": "Bärengraben",
+   "kuvaus": "Bernin karhutarha ja BärenPark",
+   "luokka": "puisto",
+   "koko_m": 45,
+   "teksti": "Bärengraben on kuoppa Aare-joen rinteessä lähellä Nydeggbrückea, ja sen alapuolella rinne laskeutuu joelle BärenPark-puistona. Karhu on sekä Bernin kaupungin että kantonin vaakunassa. Ensimmäinen karhutarha oli nykyisellä Bärenplatzilla Käfigturmin lähellä, ja vuoden 1513 tiedoissa mainitaan siellä pidetyt karhut. Nykyinen kuoppa, joka on kaupungin neljäs, otettiin käyttöön vuonna 1857. Uusi BärenPark vihittiin käyttöön 22.10.2009 ja avattiin yleisölle kolme päivää myöhemmin. Vanha iso kuoppa on yhä karhujen käytössä.",
+   "lyhyt": "Vanhan kuopan viereen rakennettiin 1920-luvulla pienempi kuoppa pentujen kasvatusta varten. Nykyään pienessä kuopassa on kauppa, ja sitä käytetään myös esityksiin ja vuokrataan tapahtumiin. Rinteessä kulkeva viistohissi, Bärenbähnli, yhdistää yläpuiston Aaren rantatiehen ja tekee alueesta esteettömän.",
+   "syventava": "Miksi karhu on Bernin tunnus?",
+   "kysymykset": [
+    "Milloin Bernissä mainitaan ensimmäisen kerran pidetyt karhut?",
+    "Missä ensimmäinen karhutarha sijaitsi?",
+    "Monesko karhutarha nykyinen kuoppa on?",
+    "Milloin BärenPark avattiin yleisölle?",
+    "Mikä Bärenbähnli on?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Karhu on Bernin kaupungin ja kantonin vaakunassa.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Karhu on Bernin kaupungin ja kantonin vaakunassa.",
+     "url": "https://tierpark-bern.ch/baerenpark/"
+    },
+    {
+     "vaite": "Ensimmäinen karhutarha oli nykyisellä Bärenplatzilla Käfigturmin lähellä.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Ensimmäinen karhutarha oli nykyisellä Bärenplatzilla Käfigturmin lähellä.",
+     "url": "https://stadtrat.bern.ch/de/dokumente/c6acbcfdf9544a32ab948f518e702fc2-332"
+    },
+    {
+     "vaite": "Vuoden 1513 tiedoissa mainitaan karhut.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Vuoden 1513 tiedoissa mainitaan karhut.",
+     "url": "https://stadtrat.bern.ch/de/dokumente/c6acbcfdf9544a32ab948f518e702fc2-332"
+    },
+    {
+     "vaite": "Nykyinen kuoppa on neljäs ja otettiin käyttöön 1857.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Nykyinen kuoppa on neljäs ja otettiin käyttöön 1857.",
+     "url": "https://stadtrat.bern.ch/de/dokumente/c6acbcfdf9544a32ab948f518e702fc2-332"
+    },
+    {
+     "vaite": "Nykyinen kuoppa on neljäs ja otettiin käyttöön 1857.",
+     "url": "https://bauinventar.bern.ch/pdfs/grosser_muristalden_4.pdf"
+    },
+    {
+     "vaite": "BärenPark vihittiin 22.10.2009 ja avattiin yleisölle 25.10.2009.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/baerenpark-bern-4445.html"
+    },
+    {
+     "vaite": "BärenPark vihittiin 22.10.2009 ja avattiin yleisölle 25.10.2009.",
+     "url": "https://stadtrat.bern.ch/de/dokumente/c6acbcfdf9544a32ab948f518e702fc2-332",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "BärenPark vihittiin 22.10.2009 ja avattiin yleisölle 25.10.2009.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4renPark"
+    },
+    {
+     "vaite": "Vanha iso kuoppa on yhä karhujen käytössä.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/baerenpark-bern-4445.html"
+    },
+    {
+     "vaite": "Vanha iso kuoppa on yhä karhujen käytössä.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Pieni kuoppa pentujen kasvatukseen 1920-luvulla; nykyään tapahtumatila ja kauppa.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Pieni kuoppa pentujen kasvatukseen 1920-luvulla; nykyään tapahtumatila ja kauppa.",
+     "url": "https://stadtrat.bern.ch/de/dokumente/c6acbcfdf9544a32ab948f518e702fc2-332"
+    },
+    {
+     "vaite": "Pieni kuoppa pentujen kasvatukseen 1920-luvulla; nykyään tapahtumatila ja kauppa.",
+     "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/baerenpark-bern-4445.html"
+    },
+    {
+     "vaite": "Bärenbähnli-viistohissi yhdistää yläpuiston ja Aaren rantatien ja parantaa esteettömyyttä.",
+     "url": "https://en.wikipedia.org/wiki/B%C3%A4rengraben"
+    },
+    {
+     "vaite": "Bärenbähnli-viistohissi yhdistää yläpuiston ja Aaren rantatien ja parantaa esteettömyyttä.",
+     "url": "https://tierpark-bern.ch/baerenpark/"
+    }
+   ]
+  },
+  {
+   "id": "Q2167108",
+   "nimi": "Rosengarten",
+   "kuvaus": "Näköalapuisto vanhankaupungin yllä",
+   "luokka": "puisto",
+   "koko_m": 275,
+   "teksti": "Rosengarten on pallokorista katsottuna muurin ympäröimä puisto rinteen laella vanhankaupungin yläpuolella. Paikka toimi hautausmaana vuodesta 1765 vuoteen 1877, ja nimi Rosengarten oli käytössä jo silloin. Puistoksi alue muutettiin 1910-luvulla: kaupunginpuutarhuri Emil Albrecht esitti suunnitelmansa vuonna 1914. Hautausmaan muuri ja ristiin kulkeva puukuja, Kreuzallee, ovat säilyneet nykypäivään. Puistosta avautuu hieno näkymä UNESCOn maailmanperintökohteena olevaan vanhaankaupunkiin ja Aaren mutkaan, ja kirkkaalla säällä näkyvät Gurten-kukkula ja usein Alpitkin.",
+   "lyhyt": "Keväällä rinteellä kukkivat japanilaiset koristekirsikkapuut, noin sata Somei Yoshino -puuta, jotka japanilainen maanviljelijä Yoshiyuki Urata lahjoitti Bernille; lahjoitus vihittiin 10.4.1975. Puistosta johtaa jyrkkä polku alas karhupuistoon, ja sen varrella on Einstein-penkki.",
+   "syventava": "Miksi hautausmaata kutsuttiin ruusutarhaksi?",
+   "kysymykset": [
+    "Milloin Rosengarten toimi hautausmaana?",
+    "Mikä on Kreuzallee?",
+    "Kuka suunnitteli puiston 1910-luvulla?",
+    "Kuka lahjoitti japanilaiset kirsikkapuut ja milloin?",
+    "Minne puistosta johtaa polku alas rinnettä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Hautausmaa 1765–1877.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Hautausmaa 1765–1877.",
+     "url": "https://de.wikipedia.org/wiki/Rosengarten_(Bern)"
+    },
+    {
+     "vaite": "Hautausmaa 1765–1877.",
+     "url": "https://www.bern.ch/mediencenter/medienmitteilungen/aktuell_ptk/2012-06-rosenwinkel/downloads/chronologie_rosengarten.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Nimi Rosengarten oli käytössä jo hautausmaan aikana.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Nimi Rosengarten oli käytössä jo hautausmaan aikana.",
+     "url": "https://www.bern.ch/mediencenter/medienmitteilungen/aktuell_ptk/2012-06-rosenwinkel/downloads/chronologie_rosengarten.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Puistoksi alue muutettiin 1910-luvulla (1913–1914).",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Puistoksi alue muutettiin 1910-luvulla (1913–1914).",
+     "url": "https://de.wikipedia.org/wiki/Rosengarten_(Bern)"
+    },
+    {
+     "vaite": "Puistoksi alue muutettiin 1910-luvulla (1913–1914).",
+     "url": "https://bauinventar.bern.ch/pdfs/alter_aargauerstalden_31.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Kaupunginpuutarhuri Emil Albrecht esitti suunnitelmansa 1914.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Kaupunginpuutarhuri Emil Albrecht esitti suunnitelmansa 1914.",
+     "url": "https://bauinventar.bern.ch/pdfs/alter_aargauerstalden_31.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Hautausmaan muuri ja Kreuzallee ovat säilyneet.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Hautausmaan muuri ja Kreuzallee ovat säilyneet.",
+     "url": "https://bern.ch/themen/planen-und-bauen/stadtentwicklung/freiraumentwicklung/entwicklung-rosengarten/ftw-simplelayout-filelistingblock/gutachten-rosengarten-20200706.pdf",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Näkymä UNESCOn vanhaankaupunkiin ja Aaren mutkaan; Gurten ja usein Alpit.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Näkymä UNESCOn vanhaankaupunkiin ja Aaren mutkaan; Gurten ja usein Alpit.",
+     "url": "https://www.myswitzerland.com/en-us/experiences/rose-garden/"
+    },
+    {
+     "vaite": "Näkymä UNESCOn vanhaankaupunkiin ja Aaren mutkaan; Gurten ja usein Alpit.",
+     "url": "https://de.wikipedia.org/wiki/Rosengarten_(Bern)"
+    },
+    {
+     "vaite": "Noin sata Somei Yoshino -kirsikkapuuta Yoshiyuki Urata lahjoitti; vihkiäiset 10.4.1975.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    },
+    {
+     "vaite": "Noin sata Somei Yoshino -kirsikkapuuta Yoshiyuki Urata lahjoitti; vihkiäiset 10.4.1975.",
+     "url": "https://www.swissinfo.ch/eng/society/hanami_swiss-japanese-friendship-continues-to-blossom/44872670"
+    },
+    {
+     "vaite": "Jyrkkä polku johtaa alas karhupuistoon; polun varrella on Einstein-penkki.",
+     "url": "https://www.myswitzerland.com/en-us/experiences/rose-garden/"
+    },
+    {
+     "vaite": "Jyrkkä polku johtaa alas karhupuistoon; polun varrella on Einstein-penkki.",
+     "url": "https://www.bern.ch/themen/freizeit-und-sport/grunanlagen/parkanlagen/rosengarten/downloads-1/rosengarten-brosch.pdf"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Bernin nimen selitys (karhulegenda, Berthold V): Wikipedia pitää selitystä kiistanalaisena; pudotettu.",
+  "Zytgloggen korkeus 54,5 m: vain Wikipedia (tornin korkeus ja kellon vuosi kiistanalaisia), ei käytetty tekstissä.",
+  "Zytgloggen astrolabitaulun ikä (1405 / 1467–83 / 1527–30; kaupungin esite 'varhainen 1400-luku'): lähteet ristiriidassa, ei mainittu.",
+  "Zytgloggen kellopelin alkamisaika: kaupungin esite 'noin kolme minuuttia' ennen tasatuntia, MySwitzerland 'neljä/viisi minuuttia'; kirjoitettu 'muutama minuutti'.",
+  "Zytgloggen iso tuntikello 1405 (Johann Reber, 1400 kg): vain Wikipedia.",
+  "Käfigturmin kello 1643 (sotasaaliskello Vesoulin lähistöltä) ja kellotaulut 1690–91: vain Wikipedia.",
+  "Käfigturmin tyyli (Wikipedia 'varhaisbarokki', alpen-guide 'myöhäisrenessanssi'): ei käytetty.",
+  "Käfigturmin viisi pientä tornia kattolla: vain Wikipedia.",
+  "Käfigturmin seinä- ja sivurakennuksen korotus (Wikipedia 1794–1805, Bauinventar 1806/07): ristiriita, ei käytetty.",
+  "Liittopalatsin koko rakentamisaika (1852/1857–1902) ja itäsiiven alkuvuosi (Wikipedia 1884 vs 1888): käytetty vain 1894–1902 sekä länsi- 1852–1857 ja itäsiipi 1888–1892 (parlament.ch + Wikipedian tekstiosa).",
+  "Liittopalatsin kivilajit ja kantonit (Wikipedia 30 lajia 13 kantonista, parlamentin hanke-esite 11 kantonia, parlament.ch 95 % sveitsiläisiä materiaaleja): luvut pudotettu, jäljellä 'lähes yksinomaan sveitsiläisiä'.",
+  "Liittopalatsin kupolin ikkunamosaiikki vs lasikupoli, Juran vaakunan vuosi (1978 vs 1979): ei käytetty.",
+  "Liittopalatsin kupolin ulkokorkeus 64 m: Wikipedia + vain kuva-arkiston hakutulos (huom hakutulos).",
+  "Einsteinin asunnon kerros (Globe and Mail 3. kerros vs muut 2.): käytetty 2. kerrosta (Wikipedia, APS, museums.ch).",
+  "Einsteinin Bern-vuodet 1902–1909 ja patenttiviraston vuodet: lähteet ristiriidassa tehtävän ja 1903–1905 asumisjakson kanssa, vuosia ei mainittu viraston osalta.",
+  "Einsteinin poika: Wikipedia 'Hans Einstein', museums.ch 'Hans Albert': tekstissä vain 'heidän poikansa'.",
+  "Münsterin tornin korkeus 100,6 m vs 101 m (swissinfo): käytetty 'noin 100 metriä'.",
+  "Münsterin pääportaalin hahmojen määrä (Wikipedia 47+170, swissinfo 234, explorial yli 200): luku pudotettu.",
+  "Münsterin tornin askelmäärä (254/344/312): ristiriitaiset, ei käytetty.",
+  "Münsterin ikkunoiden korkeus (13,15 m vs 12 m) ja vuodet (1441–1450 vs 1441–1455): käytetty vain 'vanhimmat vuodesta 1441'.",
+  "Münsterin 'Sveitsin korkein katedraali' ja 'suurin kirkko': ei käytetty (vain swissinfo / Münsterin oma sivu).",
+  "Münsterin urut, kellot (suurin 1611, 9940 kg vs 10,5 t) ja valmistumisvuosi 1575 vs 1893: ristiriitaisia / yhden lähteen väitteitä, ei käytetty.",
+  "Nydeggbrückenin pituus kohdelistassa 145 m vs lähteissä 190 m: tekstissä lähteiden 190 m.",
+  "Nydeggbrückenin kaaren leveys 45,9 / 46 m ja 'Euroopan suurin kivikaari' (kaupungin asiakirja) vs 'yksi suurimmista' (routard): muotoiltu 'yksi suurimmista'.",
+  "Nydeggbrückenin vartiotalot tullin keruuseen ja ravintola toisessa niistä: vain routard.",
+  "Nydeggbrückenin nimen selitys Nydeggin linnasta: vain routard, ei käytetty.",
+  "Bärengrabenin puiston pinta-ala (museums.ch 6000 m2, tierpark-bern 5000 m2): pudotettu.",
+  "Bärengrabenin karhujen nimet (Finn, Björk): vain kuvatekstit, ei käytetty.",
+  "Bärenbähnlin rakennusvuosi 2015: vain Wikipedia.",
+  "Bärengrabenin kunnostusvuodet 1994–1996 (Wikipedia) vs 1995 (Bauinventar): ei käytetty.",
+  "Rosengartenin puiston avausvuosi (kaupungin esite 1914, de.wikipedia 1913): muotoiltu '1910-luvulla'.",
+  "Rosengartenin kirsikkapuiden määrä (swissinfo ja esite: noin 100; kaupungin tietolehti: 110): käytetty 'noin sata'.",
+  "Rosengartenin ruusulajit ja rhododendronlajit (de.wikipedia 250 / 400 / 28): ristiriitaisia ja hataria, ei käytetty.",
+  "Rosengartenin ruusutarha 1917 (3700 ruusua), Seerosenteich 1919 ja Karl Hännyn veistokset, ravintola 1961: vain kaupungin esite, ei käytetty.",
+  "Bernin perustamisvuosi 1191: lähteet ristiriitaisia (Wikipedia kiistanalainen), jätetty pois kokonaan."
+ ],
+ "ristiriidat": [
+  "Heikot kohdat: avauksen Zytgloggen punainen katto ja Kramgasse-sijainti sekä suuret kellotaulut vain Wikipediasta (avaus ei vaadi lähteitä); teksti ei väitä niitä.",
+  "Zytgloggen kellon ja tähtitaulun ajoitus: 1405 / 1467–83 / 1527–30 (Wikipedia), kaupungin esite 'varhainen 1400-luku', HLS ja Wikipedia: koneisto Kaspar Brunner 1527–1530; tekstissä vain Brunnerin uusinta.",
+  "Zytgloggen vankila: Wikipedia 'naisten vankila 1344–1346', kaupungin esite 'vankila noin 1344', de.wikipedia 'vankila ennen 1405': tekstissä 'toimi myöhemmin vankilana'.",
+  "Zytgloggen rakennusaika: 1218 (kaupungin esite) vs 1218–1220 (Wikipedia, swissinfo): 'noin vuonna 1218'.",
+  "Zytgloggen kukon kiekaisu: swissinfo 'kolme kertaa tunnissa', MySwitzerland esityksen alku 4/5 min ennen: ei tarkkaa minuuttia.",
+  "Käfigturmin rakennusvuosien alku: Wikipedia ensimmäinen torni 1256 vs 'noin 1256' (Bauinventar): käytetty 'noin'.",
+  "Liittopalatsin parlamenttirakennuksen valmistuminen: Wikipedia 'luovutettiin 1.4.1902', parlament.ch 'liittokokouksen vihkimä 1.4.1902': kirjoitettu 'otettiin käyttöön'.",
+  "Münsterin valmistuminen: swissinfo 'rakennustyö 1575 asti' vs 'valmistui 1893': tekstissä vain torni 1889–1893.",
+  "Nydeggbrückenin vihkiäispäivä: Wikipedia ja routard 23.11.1844 (yhtäpitäviä).",
+  "Bärengrabenin ensimmäisen kuopan paikka: Wikipedia 'Bärenplatz', kaupungin asiakirja 'Käfigturmin lähellä' (yhtäpitäviä).",
+  "Rosengarten: hautausmaan sulkeminen 1.1.1877 vs viimeiset hautaukset 1880 (kaupungin esite): käytetty 1765–1877."
+ ]
+}

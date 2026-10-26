@@ -48,6 +48,7 @@ import { fileURLToPath } from 'node:url';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
@@ -72,13 +73,7 @@ const palvelin = createServer((req, res) => {
 await new Promise((r) => palvelin.listen(0, r));
 const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
 
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+const selain = await avaaChromium();
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {

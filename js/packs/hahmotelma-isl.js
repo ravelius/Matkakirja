@@ -166,8 +166,8 @@ export const HAHMOTELMA_ISL = [
       maailmankartta: { x: 5230, y: 629 },
     },
     teksti: 'Akureyri on Pohjois-Islannin suurin kaupunki ja koko maan viidenneksi '
-      + 'väkirikkain kunta, Eyjafjörðurin vuonon perukassa. Sitä kutsutaan usein "Pohjoisen '
-      + 'pääkaupungiksi", ja se on tärkeä satama- ja kalastuskeskus. Alueella asuttiin jo '
+      + 'väkirikkain kunta, Eyjafjörðurin vuonon perukassa. Sitä kutsutaan usein ”Pohjoisen '
+      + 'pääkaupungiksi”, ja se on tärkeä satama- ja kalastuskeskus. Alueella asuttiin jo '
       + '800-luvulla, mutta kauppalaoikeudet Akureyri sai muiden Islannin kauppapaikkojen '
       + 'tapaan vasta 1786; ne menetettiin 1836, koska väkiluku ei nousi kahtatoista henkeä '
       + 'suuremmaksi, ja saatiin takaisin 1862. Suotuisa ilmasto ja jäätön satama ovat '
@@ -515,7 +515,7 @@ export const HAHMOTELMA_ISL = [
       'Minä vuonna ranta valittiin maailman kymmenen kauneimman joukkoon?',
     ],
     korostukset: ['Reynisdrangar|Reynisdrangar', 'Hálsanefshellir|Hálsanefshellir-luola'],
-    nappi: 'Ranta on aina ollut täällä, mutta sana "geopark" ja maailman kauneimpien '
+    nappi: 'Ranta on aina ollut täällä, mutta sana ”geopark” ja maailman kauneimpien '
       + 'rantojen listat ovat vielä kaukana tulevaisuudessa',
     // -19.0474 E / 63.4035 N — en-Wikipedia "Reynisfjara"
     laudat: {
@@ -812,7 +812,7 @@ export const HAHMOTELMA_ISL = [
       + 'rakenne koostuu vuorottelevista pleistoseenikautisista laavakerroksista ja '
       + 'hiekkakivestä, huipulla tuffikiveä. Vuori tunnetaan myös televisiosta: se toimi '
       + 'Game of Thrones -sarjan kuudennen ja seitsemännen tuotantokauden kuvauspaikkana '
-      + '"nuolenpää"-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. '
+      + '”nuolenpää”-vuorena, jonka Koira-niminen hahmo näkee Muurin pohjoispuolella. '
       + 'Kiipeäminen on mahdollista kesällä ja syksyllä noin kolmessa tunnissa, mutta '
       + 'jyrkät kohdat ovat vaarallisia sateella, ja vuorella on sattunut '
       + 'kuolemantapauksia useana vuonna.',

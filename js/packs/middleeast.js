@@ -168,9 +168,9 @@ const ME_AIR_ROUTES = [
 
 export const MIDDLE_EAST = {
   id: 'middleeast',
-  name: 'Sheban kuningattaren aarre',
+  name: 'Sheban kuningattaren suitsukerasia',
   boardLabel: 'Lähi-itä',
-  tagline: 'Etsi Sheban kuningattaren aarre basaarien ja aavikoiden kätköistä.',
+  tagline: 'Etsi Sheban kuningattaren suitsukerasia basaarien ja aavikoiden kätköistä.',
   ariaLabel: 'Lähi-idän aarrekartta',
 
   /*
@@ -210,11 +210,12 @@ export const MIDDLE_EAST = {
   tokens: {
     types: themedTokenTypes({
       star: {
-        name: 'Sheban kuningattaren aarre',
-        fakta: 'Saban kuningatar hallitsi suitsukereittien rikkainta '
-          + 'valtakuntaa nykyisen Jemenin mailla — sen kulta ja pihka '
-          + 'tuoksuivat temppeleissä Roomaa myöten.',
-        kuva: 'assets/aarteet/aarre-middleeast-star.jpg',
+        name: 'Sheban kuningattaren suitsukerasia',
+        fakta: 'Tarun mukaan Sheban kuningatar toi kuningas Salomolle '
+          + 'kultaisen suitsukerasian. Hänen valtakuntansa nykyisen '
+          + 'Jemenin mailla rikastui suitsukekaupalla, ja suitsukkeen '
+          + 'tuoksu tunnettiin temppeleissä Roomaa myöten.',
+        kuva: 'assets/aarteet/aarre-middleeast-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Messinkilamppu', color: '#c88f2b',
@@ -280,20 +281,20 @@ export const MIDDLE_EAST = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää Sheban kuningattaren aarre ja palatkaa Istanbuliin, Kairoon tai Dubaihin.',
-    starFound: '◈ {name} löysi SHEBAN KUNINGATTAREN AARTEEN kaupungista {city}!',
-    starToast: 'SHEBAN AARRE!',
+    intro: 'Peli alkaa! Etsikää Sheban kuningattaren suitsukerasia ja palatkaa Istanbuliin, Kairoon tai Dubaihin.',
+    starFound: '◈ {name} löysi SHEBAN KUNINGATTAREN SUITSUKERASIAN kaupungista {city}!',
+    starToast: 'SHEBAN SUITSUKERASIA!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Sheban kuningattaren aarteen turvallisesti kotiin',
-    winnerStar: '{name} toi Sheban kuningattaren aarteen kotiin {money} punnan kanssa.',
+    winStar: 'toi Sheban kuningattaren suitsukerasian turvallisesti kotiin',
+    winnerStar: '{name} toi Sheban kuningattaren suitsukerasian kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
       'Basaari tuoksuu täsmälleen kirjojeni kuvauksilta. Kauppias ottaa puntani vastaan ystävällisesti — museokappaleita, hän sanoo, ja antaa vaihtorahat sovelluksella.',
       'Isoisän kartassa tämä alue on jaettu kahden keisarikunnan kesken ja loput on merkitty tyhjäksi. Nyt tässä on parikymmentä valtiota, joiden rajat piirsivät pääosin eurooppalaiset virkamiehet viivoittimella. Se näkyy kartassa yhä.',
-      '"Aavikko on este, joka on kierrettävä", kirjoitti isoisä. Karavaanit olivat kulkeneet sen halki tuhat vuotta ennen häntä, ja nyt sen yli lennetään kuudessa tunnissa. Este oli hänen mielikuvituksessaan.',
+      '”Aavikko on este, joka on kierrettävä”, kirjoitti isoisä. Karavaanit olivat kulkeneet sen halki tuhat vuotta ennen häntä, ja nyt sen yli lennetään kuudessa tunnissa. Este oli hänen mielikuvituksessaan.',
       'Isoisä ihaili suitsuketta, silkkiä ja terästä ja piti niitä idän tuotteina. Ne olivat idän keksintöjä, mikä on eri asia, ja sen hän kirjoitti muistiin vasta kolmannella sivulla.',
-      '"Öljyllä ei ole täällä käyttöä", merkitsi isoisä Persianlahden rannalla. Yhden lauseen kohdalla hän oli väärässä perusteellisemmin kuin koko muussa päiväkirjassaan yhteensä.',
+      '”Öljyllä ei ole täällä käyttöä”, merkitsi isoisä Persianlahden rannalla. Yhden lauseen kohdalla hän oli väärässä perusteellisemmin kuin koko muussa päiväkirjassaan yhteensä.',
       'Isoisä kirjasi tarkasti kaupunkien iän ja sai luvut oikein: Damaskos, Aleppo, Jeriko. Sivun alalaidassa hän lisää, että meidän Lontoomme on tähän verrattuna uudisrakennus. Se on hänen rehellisin lauseensa.',
     ],
   },

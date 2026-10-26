@@ -142,8 +142,8 @@ export const MAASTOKOHTEET_DZA = [
       + 'keisarin sukua, loppuosa berberiä: Thamugadi on monikko sanasta tamgut, huippu. Rauniot '
       + 'tunnetaan yhtenä maailman parhaiten säilyneistä esimerkeistä roomalaisesta '
       + 'ruutukaavasta, ja ne otettiin Unescon maailmanperintöluetteloon 1982. Skotlantilainen '
-      + 'James Bruce saapui paikalle 12. joulukuuta 1765 ja kuvasi sen "pieneksi kaupungiksi, '
-      + 'mutta täynnä hienoja rakennuksia"; hänen kirjaansa 1790 ei Britanniassa uskottu ennen '
+      + 'James Bruce saapui paikalle 12. joulukuuta 1765 ja kuvasi sen ”pieneksi kaupungiksi, '
+      + 'mutta täynnä hienoja rakennuksia”; hänen kirjaansa 1790 ei Britanniassa uskottu ennen '
       + 'kuin Algerin konsuli Robert Lambert Playfair kävi paikalla 1875 ja vahvisti kertomuksen.',
     lahde: 'en-Wikipedia "Timgad", johdanto-osa sekä osiot "Name" ja "History" '
       + '(tarkistettu 6.9.2026).',

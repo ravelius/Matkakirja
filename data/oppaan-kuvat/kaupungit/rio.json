@@ -1,0 +1,989 @@
+{
+ "kaupunki": "rio",
+ "kaupunkiQ": "Q8678",
+ "kohteet": [
+  {
+   "q": "Q79961",
+   "nimi": "Rio de Janeiron Kristus-patsas",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": -22.95192,
+   "lon": -43.21046,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christ the Redeemer - Cristo Redentor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ_the_Redeemer_-_Cristo_Redentor.jpg?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg",
+     "selite": "Corcovado-vuoren huipulla kohoava Kristus-patsas on Rio de Janeiron tunnetuin maamerkki.",
+     "leveys": 2497,
+     "korkeus": 3744,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rio2016 Gerais 028 8058 -c-2016 GabrielHeusi HeusiAction(1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio2016_Gerais_028_8058_-c-2016_GabrielHeusi_HeusiAction(1).jpg?width=1280",
+     "tekija": "Gabriel Heusi/Brasil2016.gov.br",
+     "lisenssi": "CC BY 3.0 br",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rio2016_Gerais_028_8058_-c-2016_GabrielHeusi_HeusiAction(1).jpg",
+     "selite": "Patsaan juurelta avautuu näkymä Maracanãn stadionille ja kaupungin yli.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Rio skyline and Cristo Redentor from Sugarloaf Mountain, Brazil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio_skyline_and_Cristo_Redentor_from_Sugarloaf_Mountain%2C_Brazil.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rio_skyline_and_Cristo_Redentor_from_Sugarloaf_Mountain%2C_Brazil.jpg",
+     "selite": "Auringonlaskussa Corcovadon huipun patsas erottuu kaupungin ja lahden yläpuolella.",
+     "leveys": 8025,
+     "korkeus": 4834,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q210722",
+   "nimi": "Sokeritoppa",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": -22.94944,
+   "lon": -43.15667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pão de Açucar - Sugarloaf Mountain - Zuckerhut - 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A3o_de_A%C3%A7ucar_-_Sugarloaf_Mountain_-_Zuckerhut_-_2022.jpg?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A3o_de_A%C3%A7ucar_-_Sugarloaf_Mountain_-_Zuckerhut_-_2022.jpg",
+     "selite": "Sokeritoppa on Guanabaran lahden suulle kohoava graniittivuori, jonne pääsee köysiradalla.",
+     "leveys": 5690,
+     "korkeus": 3201,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Last Sunlight on the Sugarloaf Mountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Last_Sunlight_on_the_Sugarloaf_Mountain.jpg?width=1280",
+     "tekija": "Donatas Dabravolskas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Last_Sunlight_on_the_Sugarloaf_Mountain.jpg",
+     "selite": "Ylhäältä näkyy, miten Botafogon lahti kaartuu vuorten ja kaupungin väliin.",
+     "leveys": 4000,
+     "korkeus": 2670,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2017 fotos Kael 380.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_fotos_Kael_380.jpg?width=1280",
+     "tekija": "Kael Consorte Alves Tenório",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_fotos_Kael_380.jpg",
+     "selite": "Sokeritopan juurella lahdella ankkuroi purjeveneitä ja pieniä aluksia.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q202730",
+   "nimi": "Copacabana",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": -22.96703,
+   "lon": -43.1807,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Copacabana beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Copacabana_beach.jpg?width=1280",
+     "tekija": "Gustavo Facci from Argentina",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Copacabana_beach.jpg",
+     "selite": "Copacabanan pitkä, kaareva hiekkaranta on yksi maailman tunnetuimmista kaupunkirannoista.",
+     "leveys": 2407,
+     "korkeus": 3596,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Altopanzuch1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altopanzuch1.jpg?width=1280",
+     "tekija": "Pnc net at Italian Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altopanzuch1.jpg",
+     "selite": "Rantakaupunginosan pilvenpiirtäjien takana nousevat jyrkät metsäiset vuoret.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q155174",
+   "nimi": "Maracanãn stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -22.91222,
+   "lon": -43.23028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maracana 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maracana_2022.jpg?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maracana_2022.jpg",
+     "selite": "Maracanã on Brasilian legendaarinen jalkapallostadion, joka on isännöinyt kahta maailmanmestaruusfinaalia.",
+     "leveys": 6432,
+     "korkeus": 4290,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Big Game 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Game_2.jpg?width=1280",
+     "tekija": "Donatas Dabravolskas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Game_2.jpg",
+     "selite": "Stadionin ulkokehä erottuu Tijucan vuorten edessä kaupungin pohjoisosassa.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2010-12-15-Maracana-Central.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-12-15-Maracana-Central.jpg?width=1280",
+     "tekija": "Alvoradaking",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-12-15-Maracana-Central.jpg",
+     "selite": "Maracanã sijaitsee tiheästi asutun kaupunginosan sydämessä.",
+     "leveys": 3000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q468540",
+   "nimi": "Ipanema",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": -22.98382,
+   "lon": -43.20453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Av. Vieira Souto, 1746 - Ipanema, Rio de Janeiro - RJ, Brazil - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Av._Vieira_Souto%2C_1746_-_Ipanema%2C_Rio_de_Janeiro_-_RJ%2C_Brazil_-_panoramio.jpg?width=1280",
+     "tekija": "Alex Petrenko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Av._Vieira_Souto%2C_1746_-_Ipanema%2C_Rio_de_Janeiro_-_RJ%2C_Brazil_-_panoramio.jpg",
+     "selite": "Ipanema on Rion eteläisen rannikon hienostoalue, jossa korkeat talot nousevat suoraan rannalta.",
+     "leveys": 1280,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arpoador, Rio de Janeiro - panoramio - Leo Balter.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arpoador%2C_Rio_de_Janeiro_-_panoramio_-_Leo_Balter.jpg?width=1280",
+     "tekija": "Leo Balter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arpoador%2C_Rio_de_Janeiro_-_panoramio_-_Leo_Balter.jpg",
+     "selite": "Arpoadorin kallioilta näkee auringonlaskun Dois Irmãos -vuorten siluetin yllä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arpoador, Rio de Janeiro - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arpoador%2C_Rio_de_Janeiro_-_panoramio.jpg?width=1280",
+     "tekija": "Leo Balter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arpoador%2C_Rio_de_Janeiro_-_panoramio.jpg",
+     "selite": "Rantakaupunginosan päästä avautuu laaja näkymä Atlantille.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14942956",
+   "nimi": "Tijucan metsä",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -22.963,
+   "lon": -43.245,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Floresta da Tijuca 60.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Floresta_da_Tijuca_60.jpg?width=1280",
+     "tekija": "Halley Pacheco de Oliveira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Floresta_da_Tijuca_60.jpg",
+     "selite": "Tijucan metsä on kaupungin keskellä kasvava istutettu sademetsä, joka on osa Unescon maailmanperintöä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alvorada na Pedra da Gávea.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alvorada_na_Pedra_da_G%C3%A1vea.jpg?width=1280",
+     "tekija": "FILIPE STEIN DE ARRUDA BOTELHO",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alvorada_na_Pedra_da_G%C3%A1vea.jpg",
+     "selite": "Pedra da Gávea kohoaa metsäisten vuorten yllä hohtavaa iltataivasta vasten.",
+     "leveys": 2222,
+     "korkeus": 1666,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "8M D7K-4847.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/8M_D7K-4847.jpg?width=1280",
+     "tekija": "Jose Paschenda",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:8M_D7K-4847.jpg",
+     "selite": "Tiheä sademetsä peittää kaupungin vuoristoiset rinteet.",
+     "leveys": 3461,
+     "korkeus": 2310,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1579892",
+   "nimi": "Lapan akvedukti",
+   "peruste": "pelin nosto",
+   "koko_m": 270,
+   "lat": -22.91259,
+   "lon": -43.17985,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018 Rio de Janeiro - Aqueduto da Carioca.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_Rio_de_Janeiro_-_Aqueduto_da_Carioca.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_Rio_de_Janeiro_-_Aqueduto_da_Carioca.jpg",
+     "selite": "Lapan valkoiset kaaret ovat siirtomaa-ajan akvedukti, jonka päällä ajaa nykyään Santa Teresan raitiovaunu.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aqueduto da Carioca (Arcos da Lapa).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aqueduto_da_Carioca_(Arcos_da_Lapa).JPG?width=1280",
+     "tekija": "Ivokory",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aqueduto_da_Carioca_(Arcos_da_Lapa).JPG",
+     "selite": "Kaarien takaa kohoaa katedraalin kartiomainen muoto.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aquadukt - Arcos da Lapa - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquadukt_-_Arcos_da_Lapa_-_panoramio.jpg?width=1280",
+     "tekija": "Pavel Špindler",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aquadukt_-_Arcos_da_Lapa_-_panoramio.jpg",
+     "selite": "Akvedukti kulkee Lapan kaupunginosan yli Centron ja Santa Teresan välillä.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2411716",
+   "nimi": "Rio de Janeiron katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -22.91092,
+   "lon": -43.18071,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral Rio de Janeiro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Rio_de_Janeiro.jpg?width=1280",
+     "tekija": "Haakon S. Krohn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Rio_de_Janeiro.jpg",
+     "selite": "Katedraalin jyrkkä kartiomainen betonirakenne kohoaa keskustan puistoalueella.",
+     "leveys": 3622,
+     "korkeus": 2682,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Rio de Janeiro 2019 433.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Rio_de_Janeiro_2019_433.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Rio_de_Janeiro_2019_433.jpg",
+     "selite": "Modernistinen kirkko muistuttaa muodoltaan muinaista maya-pyramidia.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1968538",
+   "nimi": "Theatro Municipal",
+   "peruste": "sitelinks",
+   "koko_m": 110,
+   "lat": -22.90899,
+   "lon": -43.17667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016theatromunicipalrioDSCN1890.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016theatromunicipalrioDSCN1890.jpg?width=1280",
+     "tekija": "一井 潤一",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016theatromunicipalrioDSCN1890.jpg",
+     "selite": "Theatro Municipal on Rion keskustan oopperatalo, joka seuraa Pariisin Operan esikuvaa.",
+     "leveys": 1341,
+     "korkeus": 982,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Rio de Janeiro 2019 207.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Rio_de_Janeiro_2019_207.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Rio_de_Janeiro_2019_207.jpg",
+     "selite": "Vihreät kupolit ja pylväsjulkisivu erottuvat ympäröivien pilvenpiirtäjien keskellä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Rio de Janeiro 2019 200.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Rio_de_Janeiro_2019_200.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Rio_de_Janeiro_2019_200.jpg",
+     "selite": "Julkisivun koristeet kertovat 1900-luvun alun kulttuurikaupungin kunnianhimosta.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q82312",
+   "nimi": "Candelárian kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 110,
+   "lat": -22.90081,
+   "lon": -43.17789,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Igreja da Candelária.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_da_Candel%C3%A1ria.jpg?width=1280",
+     "tekija": "Halley Pacheco de Oliveira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_da_Candel%C3%A1ria.jpg",
+     "selite": "Candelárian barokkikirkko seisoo keskustan toimistotornien ympäröimänä.",
+     "leveys": 3688,
+     "korkeus": 2950,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Igreja de Nossa Senhora da Candelária - Rio de Janeiro - 20220625120400.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_de_Nossa_Senhora_da_Candel%C3%A1ria_-_Rio_de_Janeiro_-_20220625120400.jpg?width=1280",
+     "tekija": "Rubens Trindade",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_de_Nossa_Senhora_da_Candel%C3%A1ria_-_Rio_de_Janeiro_-_20220625120400.jpg",
+     "selite": "Kaksi tornia ja kupoli hallitsevat kirkon julkisivua.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "3A9A1678.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3A9A1678.jpg?width=1280",
+     "tekija": "Henrique Liberal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3A9A1678.jpg",
+     "selite": "Kirkon sisäkupolia koristavat maalaukset ja marmori.",
+     "leveys": 7680,
+     "korkeus": 5120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q429897",
+   "nimi": "Lagoa Rodrigo de Freitas",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -22.97111,
+   "lon": -43.21167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LagoaRodrigoFreitasRJ10092006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LagoaRodrigoFreitasRJ10092006.jpg?width=1280",
+     "tekija": "Marceloquaglioz at Portuguese Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LagoaRodrigoFreitasRJ10092006.jpg",
+     "selite": "Lagoa on kaupungin eteläosan suuri murtovesilaguuni, jota ympäröivät kallioiset vuoret ja asuinkaupunginosat.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A bela vista do Cristo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_bela_vista_do_Cristo.jpg?width=1280",
+     "tekija": "Ana Carolina do Nascimento Guimarães",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_bela_vista_do_Cristo.jpg",
+     "selite": "Laguunin rannoilla juoksevat ja pyöräilevät kaupunkilaiset ympäri vuoden.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antes de sol ir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antes_de_sol_ir.jpg?width=1280",
+     "tekija": "Priscila Gaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antes_de_sol_ir.jpg",
+     "selite": "Auringonlaskussa vuoret heijastuvat laguunin tyyneen veteen.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q45242",
+   "nimi": "Rio de Janeiron kasvitieteellinen puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -22.9675,
+   "lon": -43.22389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1920x2560 jardim botanico rio de janeiro brasil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1920x2560_jardim_botanico_rio_de_janeiro_brasil.jpg?width=1280",
+     "tekija": "Everythere",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1920x2560_jardim_botanico_rio_de_janeiro_brasil.jpg",
+     "selite": "Kasvitieteellisen puutarhan kuninkaanpalmut kasvavat Corcovadon rinteen juurella.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arcos do Jardim Botânico do Rio..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arcos_do_Jardim_Bot%C3%A2nico_do_Rio..jpg?width=1280",
+     "tekija": "Basalt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arcos_do_Jardim_Bot%C3%A2nico_do_Rio..jpg",
+     "selite": "Puutarhan pergolat kantavat köynnöksiä käytävien yllä.",
+     "leveys": 1232,
+     "korkeus": 816,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A beleza por todos os lados!. (9062506904).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beleza_por_todos_os_lados!._(9062506904).jpg?width=1280",
+     "tekija": "Marinelson Almeida - Traveling through Brazil from Niteroi, Brasil",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_beleza_por_todos_os_lados!._(9062506904).jpg",
+     "selite": "Lampi on täynnä jättimäisiä Amazonin lumpeita.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20048515",
+   "nimi": "Valongon laituri",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": -22.89711,
+   "lon": -43.18739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cais do Valongo e da Imperatriz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cais_do_Valongo_e_da_Imperatriz.jpg?width=1280",
+     "tekija": "Halley Pacheco de Oliveira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cais_do_Valongo_e_da_Imperatriz.jpg",
+     "selite": "Valongon laituri on kaivettu esiin satamasta, jonka kautta suuri osa orjuutetuista afrikkalaisista saapui Brasiliaan.",
+     "leveys": 4583,
+     "korkeus": 3055,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BR-rio-valongo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BR-rio-valongo.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BR-rio-valongo.jpg",
+     "selite": "Muistomerkkialueen kiveykset kertovat satamakaupungin ajasta.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cais do Valongo (11381354915).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cais_do_Valongo_(11381354915).jpg?width=1280",
+     "tekija": "Wagner Tamanaha from Sao Paulo, Brazil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cais_do_Valongo_(11381354915).jpg",
+     "selite": "Laiturin jäännökset ovat nykyään avoin muistopaikka keskellä kaupunkia.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q948882",
+   "nimi": "Brasilian kansalliskirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -22.90972,
+   "lon": -43.1755,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "0200 years Biblioteca Nacional in Rio de Janeiro city.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0200_years_Biblioteca_Nacional_in_Rio_de_Janeiro_city.jpg?width=1280",
+     "tekija": "Foto: André Melo , Ministério da Cultura [Brasil]",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0200_years_Biblioteca_Nacional_in_Rio_de_Janeiro_city.jpg",
+     "selite": "Brasilian kansalliskirjasto on Latinalaisen Amerikan suurimpia kirjastoja, ja sen eklektinen julkisivu hallitsee Avenida Rio Brancoa.",
+     "leveys": 2362,
+     "korkeus": 1559,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Biblioteca nacional rio janeiro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_nacional_rio_janeiro.jpg?width=1280",
+     "tekija": "Halleypo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biblioteca_nacional_rio_janeiro.jpg",
+     "selite": "Rakennus on vuosikymmenien ajan palvellut kansallisena kirjastona keskustassa.",
+     "leveys": 3229,
+     "korkeus": 2153,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Rio de Janeiro 2019 218.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Rio_de_Janeiro_2019_218.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Rio_de_Janeiro_2019_218.jpg",
+     "selite": "Pääsisäänkäynnille johtavat portaat ja pylväikkö kuuluvat rakennuksen ilmeeseen.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2820360",
+   "nimi": "São Benton luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -22.89703,
+   "lon": -43.17805,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosteiro de São Bento 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosteiro_de_S%C3%A3o_Bento_01.jpg?width=1280",
+     "tekija": "Klayton Aurélio de Oliveira",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosteiro_de_S%C3%A3o_Bento_01.jpg",
+     "selite": "São Benton luostari on benediktiinien siirtomaa-ajan kirkko ja luostari kukkulalla Centron kaupunginosassa.",
+     "leveys": 5125,
+     "korkeus": 3417,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosteiro de São Bento do Rio de Janeiro - Fachada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosteiro_de_S%C3%A3o_Bento_do_Rio_de_Janeiro_-_Fachada.jpg?width=1280",
+     "tekija": "Halley Pacheco de Oliveira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosteiro_de_S%C3%A3o_Bento_do_Rio_de_Janeiro_-_Fachada.jpg",
+     "selite": "Valkoisen julkisivun tornit erottuvat kukkulan laella.",
+     "leveys": 4569,
+     "korkeus": 3046,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Igreja de São de Bento.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_de_S%C3%A3o_de_Bento.JPG?width=1280",
+     "tekija": "Rafael.carvalhosa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_de_S%C3%A3o_de_Bento.JPG",
+     "selite": "Kirkon sisätilat on koristeltu runsaalla kullatulla barokkipuuleikkauksella.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5411113",
+   "nimi": "Real Gabinete -kirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -22.90532,
+   "lon": -43.18227,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Real Gabinete Português de Leitura 11-18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Gabinete_Portugu%C3%AAs_de_Leitura_11-18.jpg?width=1280",
+     "tekija": "Stegop",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Gabinete_Portugu%C3%AAs_de_Leitura_11-18.jpg",
+     "selite": "Real Gabinete on portugalilaisten siirtolaisten perustama kirjasto Centron keskustassa.",
+     "leveys": 2048,
+     "korkeus": 1639,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Real Gabinete Português de Leitura - Rio de Janeiro - 20360204033835.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Gabinete_Portugu%C3%AAs_de_Leitura_-_Rio_de_Janeiro_-_20360204033835.JPG?width=1280",
+     "tekija": "Sir Velpertex di Crantx",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Gabinete_Portugu%C3%AAs_de_Leitura_-_Rio_de_Janeiro_-_20360204033835.JPG",
+     "selite": "Sisällä kaarihalli on täynnä korkeita, vanhoja kirjahyllyjä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Real Gabinete Português de Leitura - Rio de Janeiro - 20360204033935.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Real_Gabinete_Portugu%C3%AAs_de_Leitura_-_Rio_de_Janeiro_-_20360204033935.JPG?width=1280",
+     "tekija": "Sir Velpertex di Crantx",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Real_Gabinete_Portugu%C3%AAs_de_Leitura_-_Rio_de_Janeiro_-_20360204033935.JPG",
+     "selite": "Kirjaston salin seinillä riippuvat historialliset muotokuvat.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942273",
+   "nimi": "Vanha katedraali Antiga Sé",
+   "peruste": "pelin nosto",
+   "koko_m": 90,
+   "lat": -22.90333,
+   "lon": -43.17556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Igreja de Nossa Senhora do Carmo - Rio de Janeiro - 20220826180449.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_de_Nossa_Senhora_do_Carmo_-_Rio_de_Janeiro_-_20220826180449.jpg?width=1280",
+     "tekija": "Donatas Dabravolskas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_de_Nossa_Senhora_do_Carmo_-_Rio_de_Janeiro_-_20220826180449.jpg",
+     "selite": "Carmon kirkko toimi aikoinaan Rion katedraalina ja seisoo Praça XV:n vieressä.",
+     "leveys": 4000,
+     "korkeus": 2670,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Igreja de Nossa Senhora do Carmo - Rio de Janeiro - 20220826180100.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_de_Nossa_Senhora_do_Carmo_-_Rio_de_Janeiro_-_20220826180100.jpg?width=1280",
+     "tekija": "Donatas Dabravolskas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_de_Nossa_Senhora_do_Carmo_-_Rio_de_Janeiro_-_20220826180100.jpg",
+     "selite": "Pitkä torni ja barokkijulkisivu nousevat nykyaikaisten pilvenpiirtäjien rinnalle.",
+     "leveys": 4000,
+     "korkeus": 2670,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Igreja de Nossa Senhora do Carmo fundos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_de_Nossa_Senhora_do_Carmo_fundos.jpg?width=1280",
+     "tekija": "Antonio Donioli",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_de_Nossa_Senhora_do_Carmo_fundos.jpg",
+     "selite": "Kirkon torni näkyy tiiviisti rakennetun keskustan yli.",
+     "leveys": 3664,
+     "korkeus": 2748,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1274003",
+   "nimi": "Central do Brasilin asema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -22.90341,
+   "lon": -43.19144,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estação Central do Brasil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esta%C3%A7%C3%A3o_Central_do_Brasil.jpg?width=1280",
+     "tekija": "Halley Pacheco de Oliveira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_Central_do_Brasil.jpg",
+     "selite": "Central do Brasilin asema on Rion keskeinen rautatieasema, jonka Art Deco -kellotorni nousee kaupungin keskustassa.",
+     "leveys": 4178,
+     "korkeus": 2785,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estação Central do Brasil - Rio de Janeiro - 20240518110719.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esta%C3%A7%C3%A3o_Central_do_Brasil_-_Rio_de_Janeiro_-_20240518110719.jpg?width=1280",
+     "tekija": "Estela Neto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_Central_do_Brasil_-_Rio_de_Janeiro_-_20240518110719.jpg",
+     "selite": "Kellotorni erottuu raitiotie- ja sähkölankojen yläpuolella.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Estação Central do Brasil (007A5P4F03-008).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esta%C3%A7%C3%A3o_Central_do_Brasil_(007A5P4F03-008).jpg?width=1280",
+     "tekija": "Núcleo de digitalização / IMS",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_Central_do_Brasil_(007A5P4F03-008).jpg",
+     "selite": "Vanhassa kuvassa näkyy aseman alkuperäinen, matalampi päärakennus.",
+     "leveys": 8915,
+     "korkeus": 6609,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5470982",
+   "nimi": "Copacabanan linnake",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -22.98583,
+   "lon": -43.18528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Forte de Copacabana panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forte_de_Copacabana_panorama.jpg?width=1280",
+     "tekija": "Gabriel Heusi/Brasil2016.gov.br",
+     "lisenssi": "CC BY 3.0 br",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Forte_de_Copacabana_panorama.jpg",
+     "selite": "Copacabanan linnake sijaitsee kallioniemellä Copacabanan rannan eteläpäässä.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1 Forte de Copacabana 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_Forte_de_Copacabana_2014.jpg?width=1280",
+     "tekija": "Chensiyuan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_Forte_de_Copacabana_2014.jpg",
+     "selite": "Linnoitus kohoaa kallioniemelle, jota meri ympäröi kolmelta puolelta.",
+     "leveys": 4104,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Conjunto Copacabana - Rio de Janeiro - 20230911071037.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Conjunto_Copacabana_-_Rio_de_Janeiro_-_20230911071037.jpg?width=1280",
+     "tekija": "Donatas Dabravolskas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Conjunto_Copacabana_-_Rio_de_Janeiro_-_20230911071037.jpg",
+     "selite": "Ilmasta näkyy, kuinka linnoituksen saari työntyy Atlantille rannan päästä.",
+     "leveys": 3920,
+     "korkeus": 2940,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q510993",
+   "nimi": "Kansallinen historiallinen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -22.90591,
+   "lon": -43.16952,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entradamuseu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entradamuseu.jpg?width=1280",
+     "tekija": "Andrevruas",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entradamuseu.jpg",
+     "selite": "Kansallinen historiallinen museo toimii vanhassa linnoituskompleksissa Rion keskustan rannalla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Canhões no Museu Histórico Nacional.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canh%C3%B5es_no_Museu_Hist%C3%B3rico_Nacional.jpg?width=1280",
+     "tekija": "Boaventuravinicius",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canh%C3%B5es_no_Museu_Hist%C3%B3rico_Nacional.jpg",
+     "selite": "Sisäpihalla on esillä siirtomaa-ajan tykkejä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arco no patio dos canhões - Museu Histórico Nacional - Rio de Janeiro - Por AlessandraSantAnna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arco_no_patio_dos_canh%C3%B5es_-_Museu_Hist%C3%B3rico_Nacional_-_Rio_de_Janeiro_-_Por_AlessandraSantAnna.jpg?width=1280",
+     "tekija": "Alessandra de Sant'Anna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arco_no_patio_dos_canh%C3%B5es_-_Museu_Hist%C3%B3rico_Nacional_-_Rio_de_Janeiro_-_Por_AlessandraSantAnna.jpg",
+     "selite": "Pihan kaari johtaa vanhojen linnoitusrakennusten sisäpihalle.",
+     "leveys": 5000,
+     "korkeus": 3333,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Rio de Janeiro coastal skyline at sunset, Brazil.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio_de_Janeiro_coastal_skyline_at_sunset%2C_Brazil.jpg?width=1280",
+   "tekija": "Wilfredor",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_coastal_skyline_at_sunset%2C_Brazil.jpg",
+   "selite": "Rio de Janeiro levittäytyy vuorten ja Atlantin välille, ja kaupungin yllä kohoaa Corcovadon huippu.",
+   "leveys": 7585,
+   "korkeus": 4776,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "High-rise skyline of Rio de Janeiro, Brazil.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/High-rise_skyline_of_Rio_de_Janeiro%2C_Brazil.jpg?width=1280",
+   "tekija": "Wilfredor",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:High-rise_skyline_of_Rio_de_Janeiro%2C_Brazil.jpg",
+   "selite": "Kerrostalot täyttävät Rion eteläisen rannikon kaupunginosat Lagoan ja merenrannan välillä.",
+   "leveys": 7877,
+   "korkeus": 5251,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

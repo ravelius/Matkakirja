@@ -76,6 +76,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'ilulissatin-jaavuono',
     nimi: 'Ilulissatin jäävuono',
+    nimio: 'Ilulissat',
     tyyppi: 'meri',
     kysymykset: [
       'Kuinka nopeasti Sermeq Kujalleq liikkuu?',
@@ -118,7 +119,7 @@ export const MAASTOKOHTEET_GRL = [
     teksti: 'Diskonsaari on suuri saari Baffininlahdella Grönlannin länsirannikon edustalla. '
       + 'Sen pinta-ala on 8 578 neliökilometriä, mikä tekee siitä Grönlannin toiseksi '
       + 'suurimman saaren heti pääsaaren jälkeen ja yhden maailman sadasta suurimmasta '
-      + 'saaresta. Grönlanniksi se on Qeqertarsuaq, "iso saari", sanasta qeqertaq eli saari. '
+      + 'saaresta. Grönlanniksi se on Qeqertarsuaq, ”iso saari”, sanasta qeqertaq eli saari. '
       + 'Hallinnollisesti saari kuuluu Qeqertalikin kuntaan, vaikka se sijaitsee eteläisen '
       + 'Avannaatan kunnan edustalla.',
     lahde: 'en-Wikipedia "Disko Island", johdanto-osa ja osio "Etymology" (tarkistettu '
@@ -196,7 +197,7 @@ export const MAASTOKOHTEET_GRL = [
     laudat: {
       maailmankartta: { x: 4143.7, y: 555 },
     },
-    teksti: 'Kangerlussuaq eli "iso vuono" on länsigrönlantilainen taajama 190 kilometriä '
+    teksti: 'Kangerlussuaq eli ”iso vuono” on länsigrönlantilainen taajama 190 kilometriä '
       + 'pitkän vuonon pohjukassa. Kylä ja sen lentokenttä rakennettiin yhdysvaltalaiseksi '
       + 'tukikohdaksi toisen maailmansodan aikana ja sen jälkeen — ensin nimellä Bluie West-8, '
       + 'sitten Sondrestrom Air Base — ja siirtyivät grönlantilaiseksi taajamaksi 1992. '
@@ -212,6 +213,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'gronlannin-jaatikko',
     nimi: 'Grönlannin jäätikkö',
+    nimio: 'Mannerjäätikkö',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka paksu jäätikkö on paksuimmillaan?',
@@ -252,7 +254,7 @@ export const MAASTOKOHTEET_GRL = [
     },
     teksti: 'Sisimiut on Qeqqatan kunnan pääkaupunki ja Grönlannin toiseksi suurin kaupunki, '
       + 'noin 320 kilometriä Nuukista pohjoiseen Davisinsalmen rannalla. Nimi tarkoittaa '
-      + '"kettureikien luona asuvia". Paikalla on asuttu 4 500 vuotta: ensin Saqqaq-kulttuurin '
+      + '”kettureikien luona asuvia”. Paikalla on asuttu 4 500 vuotta: ensin Saqqaq-kulttuurin '
       + 'väki, sitten Dorset-kulttuuri ja lopulta thulelaiset, joiden inuiittijälkeläisiä '
       + 'nykyasukkaat suurimmaksi osaksi ovat; tanskalaiset tulivat 1720-luvulla lähetyssaarnaaja '
       + 'Hans Egeden johdolla. Kalastus on pääelinkeino, ja kaupunki on maan pohjoisin ympäri '
@@ -304,7 +306,7 @@ export const MAASTOKOHTEET_GRL = [
     },
     teksti: 'Ittoqqortoormiit on Itä-Grönlannin kylä Sermersooqin kunnassa, ja sitä on '
       + 'kuvattu yhdeksi maailman eristyneimmistä asutuksista: asukkaita on 329. Nimi '
-      + 'tarkoittaa itägrönlantilaisittain "ison talon asukkaita", ja vanha nimi Scoresbysund '
+      + 'tarkoittaa itägrönlantilaisittain ”ison talon asukkaita”, ja vanha nimi Scoresbysund '
       + 'tulee englantilaiselta valaanpyytäjältä ja tutkimusmatkailijalta William Scoresbyltä, '
       + 'joka kartoitti seudun ensimmäisenä eurooppalaisena 1822. Kylä sijaitsee Liverpool '
       + 'Landilla Kangertittivaqin vuonon suulla, ja lähin toinen grönlantilainen kylä Kulusuk '
@@ -316,6 +318,7 @@ export const MAASTOKOHTEET_GRL = [
   {
     id: 'koillis-gronlannin-kansallispuisto',
     nimi: 'Koillis-Grönlannin kansallispuisto',
+    nimio: 'Koillis-Grönlanti',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka moni maailman valtio on tätä puistoa pienempi?',

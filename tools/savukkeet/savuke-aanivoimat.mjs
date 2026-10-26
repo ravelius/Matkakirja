@@ -29,11 +29,9 @@
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -117,7 +115,7 @@ window.__soiva = (kaava) => window.__aanet.filter(
 ).pop() ?? null;
 `;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 // serviceWorkers: 'block' — muuten sw sieppaa pyynnöt ja ajo mittaa välimuistia.
 const ctx = await selain.newContext({
   viewport: { width: 1280, height: 900 }, serviceWorkers: 'block',

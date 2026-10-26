@@ -20,9 +20,9 @@ export const AFRICA_SAAPUMISET = {
       + 'satamasta nousee sellainen elämän pauhu, että nauroin ääneen '
       + 'ihan itsekseni. Kahden meren ja kahden mantereen portti avautui '
       + 'juuri minulle!',
-    nosto: 'Isoisän kirjassa on tästä satamasta vain yksi lause: "Täältä '
+    nosto: 'Isoisän kirjassa on tästä satamasta vain yksi lause: ”Täältä '
       + 'Afrikka alkaa, ja täällä sitä on turha yrittää ymmärtää '
-      + 'kiireellä." Nyt vasta tajuan, mitä ukko tarkoitti.',
+      + 'kiireellä.” Nyt vasta tajuan, mitä ukko tarkoitti.',
   },
   /*
    * Kairo uusittiin dekkariksi 7.8.2026 (docs/isoisan-raamattu.md,
@@ -32,10 +32,10 @@ export const AFRICA_SAAPUMISET = {
    */
   kairo: {
     kuvaus: 'Pyramidien juurella opas ojensi minulle käyntikortin: '
-      + '"Eräs herra jätti tämän. Sanoi, että te tulette kyllä." '
+      + '”Eräs herra jätti tämän. Sanoi, että te tulette kyllä.” '
       + 'Kortissa oli vain kaksi kirjainta: E. G.',
-    nosto: 'Isoisä kirjoitti: "Basaarissa minua seurattiin kolmen '
-      + 'kujan verran. Join teeni loppuun silti." Minä join omani '
+    nosto: 'Isoisä kirjoitti: ”Basaarissa minua seurattiin kolmen '
+      + 'kujan verran. Join teeni loppuun silti.” Minä join omani '
       + 'nopeammin.',
     luenta: '[curious] Pyramidien juurella opas ojensi minulle '
       + 'käyntikortin: "Eräs herra jätti tämän. Sanoi, että te '
@@ -49,8 +49,8 @@ export const AFRICA_SAAPUMISET = {
       + 'suunnassa — Karthago! Astuin kivien yli, jotka olivat nähneet '
       + 'Hannibalin norsut, ja jossain alla lepäävät vanhat satama-altaat. '
       + 'Istuin pylvään juurelle enkä sanonut pitkään aikaan mitään.',
-    nosto: 'Isoisä kirjoitti: "Kaksi suurvaltaa rakensi tänne '
-      + 'päällekkäin, ja meri muistaa molemmat." Laskin sormeni kiveen ja '
+    nosto: 'Isoisä kirjoitti: ”Kaksi suurvaltaa rakensi tänne '
+      + 'päällekkäin, ja meri muistaa molemmat.” Laskin sormeni kiveen ja '
       + 'yritin tuntea, kumman aikaa se oli.',
   },
   tshadjarvi: {
@@ -58,8 +58,8 @@ export const AFRICA_SAAPUMISET = {
       + 'järvi, niin matala ja laaja, ettei rantaa ja vettä erottanut '
       + 'toisistaan. Kalastaja työnsi kaislaveneensä vesille ja vilkutti — '
       + 'vilkutin takaisin kuin vanhalle tutulle.',
-    nosto: 'Isoisän kirjassa lukee: "Neljän maan kalastajat jakavat '
-      + 'tämän veden, eikä kukaan heistä kanna karttaa." Katselin veneitä '
+    nosto: 'Isoisän kirjassa lukee: ”Neljän maan kalastajat jakavat '
+      + 'tämän veden, eikä kukaan heistä kanna karttaa.” Katselin veneitä '
       + 'ja ymmärsin: järvellä rajat ovat vain rannalla.',
   },
   viktorianputoukset: {
@@ -68,15 +68,15 @@ export const AFRICA_SAAPUMISET = {
       + 'Seisoin rotkon reunalla läpimärkänä ja nauroin, koska mitään '
       + 'muuta ei voinut tehdä. Mosi-oa-Tunya, jylisevä savu — nimi on '
       + 'täsmälleen oikea.',
-    nosto: 'Isoisä kirjoitti tästä paikasta vain kolme sanaa: "Ei sanoja. '
-      + 'Tulkaa." Nyt tiedän, miksi hän ei edes yrittänyt.',
+    nosto: 'Isoisä kirjoitti tästä paikasta vain kolme sanaa: ”Ei sanoja. '
+      + 'Tulkaa.” Nyt tiedän, miksi hän ei edes yrittänyt.',
   },
   nairobi: {
     kuvaus: 'Ylängön ilma oli niin kirkasta, että henkeä veti syvempään '
       + 'ihan huomaamattaan — ja sitten näin kirahvit kaupungin rajalla! '
       + 'Rautatien kaupunki kasvaa vauhtia, jota kukaan ei ehdi mitata, '
       + 'ja silti savanni alkaa siitä, mihin katu loppuu.',
-    nosto: 'Isoisän kirjassa lukee: "Nairobi on leiri, joka päätti jäädä." '
+    nosto: 'Isoisän kirjassa lukee: ”Nairobi on leiri, joka päätti jäädä.” '
       + 'Hän tuli junalla; minä katselin sen kiskoja ja mietin, kuinka '
       + 'leiristä tuli kaupunki yhden eliniän aikana.',
   },
@@ -85,8 +85,8 @@ export const AFRICA_SAAPUMISET = {
       + 'yksin keskellä kaikkea! Vene laskettiin maihin köysien varassa '
       + 'aallokon tahtiin, ja polvet tutisivat, kun jalka osui viimein '
       + 'kiveen. Saari tuoksui sateelta ja ruoholta keskellä valtamerta.',
-    nosto: 'Isoisä kirjoitti: "Täällä keisari oppi, että maailman voi '
-      + 'omistaa ja silti menettää horisontin." Kävelin Longwoodin '
+    nosto: 'Isoisä kirjoitti: ”Täällä keisari oppi, että maailman voi '
+      + 'omistaa ja silti menettää horisontin.” Kävelin Longwoodin '
       + 'ylängölle ja katsoin merelle — horisonttia riitti joka suuntaan, '
       + 'eikä yhtään laivaa näkynyt.',
   },
@@ -95,8 +95,8 @@ export const AFRICA_SAAPUMISET = {
       + 'punaista savea! Torilta kuului rumpuja ja sadan kojun melu, ja '
       + 'Atlasvuorten lumihuiput kimmelsivät basaarin kattojen yllä. '
       + 'Seisoin keskellä Jemaa el-Fnaa ja pyörähdin ympäri kuin lapsi.',
-    nosto: 'Isoisä kirjoitti kirjaansa: "Tarinankertojan piirissä unohdin '
-      + 'laskea aikaa; hyvä kertoja lopettaa aina kesken." Istuin samaan '
+    nosto: 'Isoisä kirjoitti kirjaansa: ”Tarinankertojan piirissä unohdin '
+      + 'laskea aikaa; hyvä kertoja lopettaa aina kesken.” Istuin samaan '
       + 'piiriin, enkä ymmärtänyt sanaakaan — ja jäin silti kuuntelemaan '
       + 'loppuun asti.',
   },
@@ -105,8 +105,8 @@ export const AFRICA_SAAPUMISET = {
       + 'täynnä väkeä, torit täynnä musiikkia, ja joka kulmalta joku '
       + 'nauraa tai huutaa tai myy jotain. Vene vei minut saarelta '
       + 'toiselle, ja kaupunki vain jatkui ja jatkui.',
-    nosto: 'Isoisän kirjassa lukee: "Lagosin satamassa laskin kanootteja, '
-      + 'kunnes väsyin — kauppa ei lopu, se vain vaihtaa venettä." Laskin '
+    nosto: 'Isoisän kirjassa lukee: ”Lagosin satamassa laskin kanootteja, '
+      + 'kunnes väsyin — kauppa ei lopu, se vain vaihtaa venettä.” Laskin '
       + 'minäkin, ja väsyin minäkin.',
   },
   tripoli: {
@@ -116,8 +116,8 @@ export const AFRICA_SAAPUMISET = {
       + 'karavaanin kellot kilahtivat muurien takana, sydämeni hypähti — '
       + 'tuolta se alkaa, pitkä matka!',
     nosto: 'Isoisä kirjoitti nähneensä täällä, kuinka aavikon karavaanit '
-      + 'purkavat lastinsa suoraan laivoihin — "kaksi maailmaa kättelee '
-      + 'laiturilla", hän merkitsi. Katselin laiturille, ja siellä se '
+      + 'purkavat lastinsa suoraan laivoihin — ”kaksi maailmaa kättelee '
+      + 'laiturilla”, hän merkitsi. Katselin laiturille, ja siellä se '
       + 'kädenpuristus yhä oli.',
   },
   murzuk: {
@@ -125,8 +125,8 @@ export const AFRICA_SAAPUMISET = {
       + 'Murzuk, kourallinen savitaloja hiekkameren laidalla. Hiljaisuus '
       + 'oli niin täydellinen, että kuulin oman sykkeeni — pelkäsin ja '
       + 'ihailin yhtä aikaa, enkä hävennyt kumpaakaan.',
-    nosto: 'Isoisän kirjassa lukee: "Oppaani tietää tien ilman karttaa; '
-      + 'minulla on kartta, enkä tiedä tietä." Ymmärrän lauseen nyt '
+    nosto: 'Isoisän kirjassa lukee: ”Oppaani tietää tien ilman karttaa; '
+      + 'minulla on kartta, enkä tiedä tietä.” Ymmärrän lauseen nyt '
       + 'paremmin kuin kotona ymmärsin.',
   },
   alkufra: {
@@ -134,9 +134,9 @@ export const AFRICA_SAAPUMISET = {
       + 'nousi vihreä saareke: palmuja, varjoa, veden tuoksu! Hieroin '
       + 'silmiäni kuin unesta herännyt, ja vesi maistui paremmalta kuin '
       + 'mikään juoma Lontoossa ikinä.',
-    nosto: 'Isoisä merkitsi keitaasta: "Se ilmestyy hiekan keskelle kuin '
+    nosto: 'Isoisä merkitsi keitaasta: ”Se ilmestyy hiekan keskelle kuin '
       + 'virhe kartassa. Veden määrän tietävät vain ne, jotka ovat asuneet '
-      + 'täällä sukupolvia." Virhe kartassa — ja silti ainoa tosi paikka '
+      + 'täällä sukupolvia.” Virhe kartassa — ja silti ainoa tosi paikka '
       + 'päivien matkalla.',
   },
   sahara: {
@@ -145,8 +145,8 @@ export const AFRICA_SAAPUMISET = {
       + 'hiekalle sanattomana, ja opas kaatoi kolmannen lasillisen teetä '
       + 'ja hymyili kartalleni.',
     nosto: 'Isoisä kirjoitti palelleensa yöllä kahden peiton alla ja '
-      + 'ihmetelleensä kallioon piirrettyjä karjalaumoja: "Joku on siis '
-      + 'paimentanut lehmiä siellä, missä minä en löydä vettä." Sama '
+      + 'ihmetelleensä kallioon piirrettyjä karjalaumoja: ”Joku on siis '
+      + 'paimentanut lehmiä siellä, missä minä en löydä vettä.” Sama '
       + 'ihmetys valtasi minutkin.',
   },
   ahaggar: {
@@ -154,8 +154,8 @@ export const AFRICA_SAAPUMISET = {
       + 'mustat kivitornit nousivat hiekasta yksi kerrallaan kuin '
       + 'uponneen linnan huiput. Henkeni salpautui — keskellä maailman '
       + 'suurinta aavikkoa minä seison vuoristossa ja palelen.',
-    nosto: 'Isoisän sivulla lukee: "Tuaregit tuntevat nämä polut nimeltä; '
-      + 'me nimesimme ne uudelleen ja luulimme sitä löytämiseksi." Se on '
+    nosto: 'Isoisän sivulla lukee: ”Tuaregit tuntevat nämä polut nimeltä; '
+      + 'me nimesimme ne uudelleen ja luulimme sitä löytämiseksi.” Se on '
       + 'rehellisin lause, jonka ukko koskaan kirjoitti.',
   },
   timbuktu: {
@@ -164,8 +164,8 @@ export const AFRICA_SAAPUMISET = {
       + 'kirjastoissa lepää käsikirjoituksia tähdistä ja laista — häpesin '
       + 'hetken sitä, mitä olin uskonut, ja ihastuin sitten kahta '
       + 'kauheammin.',
-    nosto: 'Isoisä kirjoitti täältä: "Enemmän kirjoja kuin monessa '
-      + 'englantilaisessa pikkukaupungissa." Lauseen perään hän oli '
+    nosto: 'Isoisä kirjoitti täältä: ”Enemmän kirjoja kuin monessa '
+      + 'englantilaisessa pikkukaupungissa.” Lauseen perään hän oli '
       + 'piirtänyt huutomerkin — ukolla ei ollut tapana tuhlata niitä.',
   },
   gao: {
@@ -173,9 +173,9 @@ export const AFRICA_SAAPUMISET = {
       + 'Niger, leveä ja hidas, ja vastarannalla hehkuu vaaleanpunainen '
       + 'dyyni! Seisoin rannassa ja tajusin katselevani valtakunnan '
       + 'valtatietä — täältä hallittiin aikoinaan puolta Länsi-Afrikkaa.',
-    nosto: 'Isoisän kirjassa lukee: "Joen rannalla oli valtakunnan '
+    nosto: 'Isoisän kirjassa lukee: ”Joen rannalla oli valtakunnan '
       + 'pääkaupunki silloin, kun Englannissa riideltiin ruusuista. '
-      + 'Savea kannattaa siis olla kunnioittavampi kuin olen ollut." '
+      + 'Savea kannattaa siis olla kunnioittavampi kuin olen ollut.” '
       + 'Katselin Askian hautaa ja nyökkäsin ukolle.',
   },
   dakar: {
@@ -184,7 +184,7 @@ export const AFRICA_SAAPUMISET = {
       + 'läntisimpään kärkeen. Goréen saarella hiljenin — sen kauniiden '
       + 'talojen takana on ovi, joka avautuu suoraan merelle.',
     nosto: 'Isoisä kirjoitti täällä lauseen, jota luen yhä uudelleen: '
-      + '"Sen laivauksen järjesti minun maanosani, ei tämä." Hän ei '
+      + '”Sen laivauksen järjesti minun maanosani, ei tämä.” Hän ei '
       + 'selitellyt, eikä selittele nytkään.',
   },
   sierraleone: {
@@ -192,8 +192,8 @@ export const AFRICA_SAAPUMISET = {
       + 'vuoret nousevat merestä kuin leijonat! Satamassa kannettiin, '
       + 'huudettiin ja naurettiin, ja kaupungin nimi kulki mielessäni '
       + 'koko päivän — vapaudenkaupunki.',
-    nosto: 'Isoisän kirjassa on tästä satamasta tarkka lause: "Nimi on '
-      + 'annettu siksi, että vapaus oli ensin otettu pois." Sitä ei '
+    nosto: 'Isoisän kirjassa on tästä satamasta tarkka lause: ”Nimi on '
+      + 'annettu siksi, että vapaus oli ensin otettu pois.” Sitä ei '
       + 'sanota juhlapuheissa, hän lisäsi — mutta hän kirjoitti sen.',
   },
   kappalmas: {
@@ -201,8 +201,8 @@ export const AFRICA_SAAPUMISET = {
       + 'Kap Palmasin palmut kaartuvat rannalla niin taajaan, että ne '
       + 'näkyvät kannelle asti, kuin manner heiluttaisi vihreää lippua '
       + 'käännöksen merkiksi.',
-    nosto: 'Isoisä merkitsi tähän kohtaan: "Purjehtija tietää sijaintinsa '
-      + 'puista; minä tarvitsin siihen sekstantin ja kaksi tuntia." '
+    nosto: 'Isoisä merkitsi tähän kohtaan: ”Purjehtija tietää sijaintinsa '
+      + 'puista; minä tarvitsin siihen sekstantin ja kaksi tuntia.” '
       + 'Minä tarvitsin peräti kartan, jossa kulma on valmiiksi piirretty.',
   },
   kumasi: {
@@ -210,9 +210,9 @@ export const AFRICA_SAAPUMISET = {
       + 'kultaa, tomaatteja ja puheensorinaa kuin mehiläispesässä. '
       + 'Eksyin neljästi ja nauroin joka kerralla — kuningaskunnan '
       + 'pääkaupunki nöyryyttää vieraansa iloisesti.',
-    nosto: 'Isoisä kirjoitti Ashantin hovista: "Järjestetty tarkemmin '
+    nosto: 'Isoisä kirjoitti Ashantin hovista: ”Järjestetty tarkemmin '
       + 'kuin meidän. Kuninkaan istuinta ei lasketa maahan eikä kukaan '
-      + 'istu sillä." Perään hän lisäsi kuivasti: "Makuasia." Ukossa '
+      + 'istu sillä.” Perään hän lisäsi kuivasti: ”Makuasia.” Ukossa '
       + 'oli huumorintajua, kun tarkkaan lukee.',
   },
   orjarannikko: {
@@ -221,8 +221,8 @@ export const AFRICA_SAAPUMISET = {
       + 'vain meri ja portti, jonka läpi näkyy pelkkää vettä — seisoin '
       + 'kauan paikallani, koska sanoja ei ollut.',
     nosto: 'Isoisän kirjassa on tästä rannikosta ankarin lause, jonka hän '
-      + 'kirjoitti: "Nimi ei kerro alueesta mitään; se kertoo meistä '
-      + 'kaiken." Hän ei piirtänyt nimeä uudelleen — eikä piirrä tämä '
+      + 'kirjoitti: ”Nimi ei kerro alueesta mitään; se kertoo meistä '
+      + 'kaiken.” Hän ei piirtänyt nimeä uudelleen — eikä piirrä tämä '
       + 'kartta minunkaan kädessäni.',
   },
   kano: {
@@ -230,8 +230,8 @@ export const AFRICA_SAAPUMISET = {
       + 'valokuva kehittyisi: ensin savimuurit, sitten portit, sitten '
       + 'kokonainen kaupunki auringossa kuivatusta savesta. Värjäämöiden '
       + 'indigo jäi käsiini päiväkausiksi — kannan sitä ylpeänä!',
-    nosto: 'Isoisä kirjoitti: "Värjäämöt ovat toimineet kauemmin kuin '
-      + 'yksikään tuntemani englantilainen tehdas." Hänenkin kätensä '
+    nosto: 'Isoisä kirjoitti: ”Värjäämöt ovat toimineet kauemmin kuin '
+      + 'yksikään tuntemani englantilainen tehdas.” Hänenkin kätensä '
       + 'olivat viikon siniset. Suku ei kehity.',
   },
   kamerun: {
@@ -239,8 +239,8 @@ export const AFRICA_SAAPUMISET = {
       + 'rinteillä sade ei ole säätila vaan olotila. Sateenvarjoni '
       + 'kääntyi nurin ensimmäisessä puuskassa, ja minä luovuin siitä '
       + 'nauraen — täällä kastutaan arvokkaasti.',
-    nosto: 'Isoisän kirjassa lukee: "Sateenvarjoni kesti kaksi minuuttia. '
-      + 'Vuori on ollut tässä kauemmin." Minun varjoni kesti yhden. '
+    nosto: 'Isoisän kirjassa lukee: ”Sateenvarjoni kesti kaksi minuuttia. '
+      + 'Vuori on ollut tässä kauemmin.” Minun varjoni kesti yhden. '
       + 'Kehitys kulkee suvussa taaksepäin.',
   },
   kongo: {
@@ -248,8 +248,8 @@ export const AFRICA_SAAPUMISET = {
       + 'ympärillä ei ole hetkeäkään hiljaa: se sirisee, kopisee ja '
       + 'huutaa kerroksittain. Ylävirrasta kantautuu koskien jylinä — '
       + 'vesi kuuluu ennen kuin näkyy, ja minua värisytti ihanasti.',
-    nosto: 'Isoisän kartassa tässä kohdassa luki "tuntematon". Hän lisäsi '
-      + 'perään: "Tuntematon meille, ei niille jotka siellä asuvat." Se '
+    nosto: 'Isoisän kartassa tässä kohdassa luki ”tuntematon”. Hän lisäsi '
+      + 'perään: ”Tuntematon meille, ei niille jotka siellä asuvat.” Se '
       + 'yksi lause on koko kirjan arvoinen.',
   },
   angola: {
@@ -258,8 +258,8 @@ export const AFRICA_SAAPUMISET = {
       + 'kuvassa. Astuin mereen ja hätkähdin ääneen — vesi on kylmää '
       + 'keskellä tropiikkia!',
     nosto: 'Isoisä kirjoitti satamasta lauseen, joka ei kaipaa jatkoa: '
-      + '"Laivat lähtivät Brasiliaan kolmensadan vuoden ajan, ja lastina '
-      + 'oli ihmisiä. Muusta ei kannata kiittää ketään." Kylmä vesi '
+      + '”Laivat lähtivät Brasiliaan kolmensadan vuoden ajan, ja lastina '
+      + 'oli ihmisiä. Muusta ei kannata kiittää ketään.” Kylmä vesi '
       + 'tuntui sen jälkeen oikealta.',
   },
   namib: {
@@ -267,9 +267,9 @@ export const AFRICA_SAAPUMISET = {
       + 'ja minä kiipesin harjalle henki salpautuen — joka askeleesta '
       + 'puolet valui takaisin. Ylhäältä näkyi vain lisää hiekkaa, '
       + 'kauniina niin kauas kuin silmä kantoi.',
-    nosto: 'Isoisä kirjoitti rannan hylyistä: "Jokainen niistä oli jonkun '
+    nosto: 'Isoisä kirjoitti rannan hylyistä: ”Jokainen niistä oli jonkun '
       + 'kapteenin varma laskelma. Pidän tämän sivun mielessäni, ennen '
-      + 'kuin taas sanon olevani varma." Luin lauseen dyynin harjalla '
+      + 'kuin taas sanon olevani varma.” Luin lauseen dyynin harjalla '
       + 'kahdesti.',
   },
   kapkaupunki: {
@@ -277,9 +277,9 @@ export const AFRICA_SAAPUMISET = {
       + 'kuin veistetty, ja pilvi valui sen laen yli hitaana '
       + 'vesiputouksena. Seisoin kannella hattu kourassa — täällä kaksi '
       + 'valtamerta kohtaa, ja minä seison niiden saumalla!',
-    nosto: 'Isoisän kirjassa lukee: "Täydennämme vesitynnyrit vuoren '
+    nosto: 'Isoisän kirjassa lukee: ”Täydennämme vesitynnyrit vuoren '
       + 'juurella, kuten kaikki Intiaan menevät ovat tehneet. Kaksi '
-      + 'valtamerta kohtaa tässä, eikä kumpikaan kysy meiltä lupaa." '
+      + 'valtamerta kohtaa tässä, eikä kumpikaan kysy meiltä lupaa.” '
       + 'Ne eivät kysyneet minultakaan.',
   },
   kimberley: {
@@ -287,8 +287,8 @@ export const AFRICA_SAAPUMISET = {
       + 'aukeaa keskellä kaupunkia, puoli kilometriä leveä ja kokonaan '
       + 'lapioilla kaivettu. Huimasi, enkä tiennyt johtuiko se '
       + 'syvyydestä vai ajatuksesta.',
-    nosto: 'Isoisä kirjoitti kuopan reunalta: "Voiton laskee joku, joka '
-      + 'ei ole koskaan seisonut reunalla. Kivet lähetetään Lontooseen." '
+    nosto: 'Isoisä kirjoitti kuopan reunalta: ”Voiton laskee joku, joka '
+      + 'ei ole koskaan seisonut reunalla. Kivet lähetetään Lontooseen.” '
       + 'Hän ei kirjoittanut, mitä reunalla seisominen maksoi. Sen näkee '
       + 'täällä yhä.',
   },
@@ -296,8 +296,8 @@ export const AFRICA_SAAPUMISET = {
     kuvaus: 'Saari lepää salmessa kuin ankkuroitu laiva, ja lautturi '
       + 'lauloi koko ylityksen. Vesi oli niin kirkasta, että kalat '
       + 'näkyivät veneeseen asti — nauroin ja osoittelin kuin koulupoika.',
-    nosto: 'Isoisä merkitsi: "Riutta on niin kirkas, että näen kalat '
-      + 'kannelta." Se on hänen kirjansa iloisin lause, ja se pitää '
+    nosto: 'Isoisä merkitsi: ”Riutta on niin kirkas, että näen kalat '
+      + 'kannelta.” Se on hänen kirjansa iloisin lause, ja se pitää '
       + 'yhä paikkansa.',
   },
   madagaskar: {
@@ -306,7 +306,7 @@ export const AFRICA_SAAPUMISET = {
       + 'punaiset kukkulat, riisiterassit. Metsässä minua katselivat '
       + 'takaisin silmäparit, joita ei näe missään muualla maapallolla.',
     nosto: 'Isoisä päätteli kielestä väärin ja myönsi sen kirjassaan: '
-      + '"He purjehtivat tänne idästä." Ukko osasi olla väärässä '
+      + '”He purjehtivat tänne idästä.” Ukko osasi olla väärässä '
       + 'ääneen — taito, jota opettelen edelleen.',
   },
   sansibar: {
@@ -314,8 +314,8 @@ export const AFRICA_SAAPUMISET = {
       + 'asti, ja sitten valkoinen kivikaupunki nousi aalloista! Kujilla '
       + 'pysähdyin joka toisen veistetyn oven eteen enkä lakannut '
       + 'katselemasta.',
-    nosto: 'Isoisän kirjassa lukee: "Tyyleissä näkyy Oman, Intia ja '
-      + 'swahilirannikko — ei Eurooppa." Hän alleviivasi viimeiset '
+    nosto: 'Isoisän kirjassa lukee: ”Tyyleissä näkyy Oman, Intia ja '
+      + 'swahilirannikko — ei Eurooppa.” Hän alleviivasi viimeiset '
       + 'kaksi sanaa. Ymmärrän täällä miksi.',
   },
   kilimandzaro: {
@@ -323,8 +323,8 @@ export const AFRICA_SAAPUMISET = {
       + 'keskellä Afrikkaa, lähes päiväntasaajalla. Katselin sitä kunnes '
       + 'niska puutui, enkä olisi lakannut sittenkään.',
     nosto: 'Isoisä kirjoitti Lontooseen lumesta ja sai vastauksen neljän '
-      + 'kuukauden päästä: "Ei liene mahdollista." Kirjaansa hän merkitsi: '
-      + '"Lumi ei tiettävästi ole lukenut kirjettä." Se ei ole '
+      + 'kuukauden päästä: ”Ei liene mahdollista.” Kirjaansa hän merkitsi: '
+      + '”Lumi ei tiettävästi ole lukenut kirjettä.” Se ei ole '
       + 'vieläkään.',
   },
   viktoria: {
@@ -332,9 +332,9 @@ export const AFRICA_SAAPUMISET = {
       + 'Nyanza jatkuu horisonttiin asti, eikä toista rantaa näy '
       + 'mistään. Illalla kalastajaveneet lähtivät vesille lyhtyineen '
       + 'kuin tähdet — ja tästä altaasta lähtee liikkeelle itse Niili!',
-    nosto: 'Isoisä merkitsi rannalta: "Nimen antoi maanmieheni '
+    nosto: 'Isoisä merkitsi rannalta: ”Nimen antoi maanmieheni '
       + 'kuningattaren mukaan, vaikka rannoilla oli ollut nimiä jo '
-      + 'pitkään." Kirjoitan tähän molemmat, kuten hänkin teki: '
+      + 'pitkään.” Kirjoitan tähän molemmat, kuten hänkin teki: '
       + 'Viktoria — ja Nyanza, järvi.',
   },
   tanganjika: {
@@ -343,8 +343,8 @@ export const AFRICA_SAAPUMISET = {
       + 'kulki pohjassa syvällä allamme. Kalat välkkyivät värejä, joita '
       + 'en ole nähnyt missään kirjassa — huudahdin ääneen ainakin '
       + 'kolmesti.',
-    nosto: 'Isoisä kirjoitti: "Täällä kaksi maanmiestäni tapasi toisensa '
-      + 'ja kutsui sitä löytöretkeksi." Ukko valitsi sanansa tarkasti — '
+    nosto: 'Isoisä kirjoitti: ”Täällä kaksi maanmiestäni tapasi toisensa '
+      + 'ja kutsui sitä löytöretkeksi.” Ukko valitsi sanansa tarkasti — '
       + 'järvi oli löydetty kauan ennen heitä.',
   },
   bahrelghazal: {
@@ -352,7 +352,7 @@ export const AFRICA_SAAPUMISET = {
       + 'ruohikkoon, ja vene kulkee käytävissä, joiden seinät ovat '
       + 'kaislaa miestä korkeammalta. Kun kenkänokka nousi siivilleen '
       + 'aivan vierestä, sydämeni jätti lyönnin väliin.',
-    nosto: 'Isoisän kirjassa lukee: "Karttani sanoi tässä olevan joki." '
+    nosto: 'Isoisän kirjassa lukee: ”Karttani sanoi tässä olevan joki.” '
       + 'Lauseen kuivuus on ukon mittapuullakin ansiokas. Minun karttani '
       + 'sanoo samaa, ja olemme molemmat yhtä väärässä.',
   },
@@ -361,8 +361,8 @@ export const AFRICA_SAAPUMISET = {
       + 'Jebel Marran rinteillä tuoksuivat appelsiinipuut, kun alhaalla '
       + 'pöly peitti jäljet. Ihmettelin ääneen, ja opas nyökkäsi kuin '
       + 'itsestäänselvyydelle.',
-    nosto: 'Isoisä piti tämän alueen nimestä: "Furien maa — eli sen, '
-      + 'kenen maa se on. Harvinaisen selkeä nimi kartalla." Toivoin '
+    nosto: 'Isoisä piti tämän alueen nimestä: ”Furien maa — eli sen, '
+      + 'kenen maa se on. Harvinaisen selkeä nimi kartalla.” Toivoin '
       + 'hänen kanssaan, että selkeys tarttuisi muihinkin karttoihin.',
   },
   suakin: {
@@ -370,8 +370,8 @@ export const AFRICA_SAAPUMISET = {
       + 'sisus — kokonainen kaupunki merestä nostettua korallia! Istuin '
       + 'kauppiastalon portailla ja kuuntelin satamaa, joka on nähnyt '
       + 'tuhat vuotta laivoja.',
-    nosto: 'Isoisä kirjoitti korallitaloista: "Kekseliäämpää kuin mikään '
-      + 'Lontoon uudisrakennus." Meri antaa täällä rakennuskivetkin — '
+    nosto: 'Isoisä kirjoitti korallitaloista: ”Kekseliäämpää kuin mikään '
+      + 'Lontoon uudisrakennus.” Meri antaa täällä rakennuskivetkin — '
       + 'ukko arvosti sellaista taloudenpitoa.',
   },
   addisabeba: {
@@ -383,8 +383,8 @@ export const AFRICA_SAAPUMISET = {
       + 'lainkaan: se perustettiin vasta kolmetoista vuotta hänen '
       + 'matkansa jälkeen, 1886.',
     nosto: 'Isoisä kirjoitti keisarikunnasta, joka säilytti '
-      + 'itsenäisyytensä: "Se hämmentää klubissani suuresti; minua se '
-      + 'ei enää hämmennä." Minua ei hämmentänyt hetkeäkään.',
+      + 'itsenäisyytensä: ”Se hämmentää klubissani suuresti; minua se '
+      + 'ei enää hämmennä.” Minua ei hämmentänyt hetkeäkään.',
   },
   /*
    * LALIBELA (Fable 8.9.2026, omistajan päätös kortilla: "Kirjoita
@@ -403,8 +403,8 @@ export const AFRICA_SAAPUMISET = {
       + 'on jalkojen tasalla. Valkoisiin pukeutuneet pyhiinvaeltajat '
       + 'kulkevat kirkosta toiseen kalliokäytäviä pitkin. Ohuessa ilmassa '
       + 'minä hengästyin ennen heitä.',
-    nosto: 'Isoisä kirjoitti: "Kirkot on hakattu kallioon alaspäin, ja tarun '
-      + 'mukaan enkelit jatkoivat työtä öisin, kun ihmiset lepäsivät." '
+    nosto: 'Isoisä kirjoitti: ”Kirkot on hakattu kallioon alaspäin, ja tarun '
+      + 'mukaan enkelit jatkoivat työtä öisin, kun ihmiset lepäsivät.” '
       + 'Mittasin hänen tapaansa Pyhän Yrjön syvyyden portaita laskien: '
       + 'kaksitoista metriä alaspäin, eikä enkeleistä näy jälkeäkään — '
       + 'vain taltan.',
@@ -414,9 +414,9 @@ export const AFRICA_SAAPUMISET = {
       + 'on mantereen itäisin kohta, ja seuraava ranta idässä on Intia! '
       + 'Hiekassa kimalsi ruukunsirpale, jonka joku kauppias pudotti '
       + 'ehkä kaksituhatta vuotta sitten.',
-    nosto: 'Isoisä merkitsi: "Purjelaiva pääsee Intiaan ja takaisin saman '
+    nosto: 'Isoisä merkitsi: ”Purjelaiva pääsee Intiaan ja takaisin saman '
       + 'vuoden aikana — tämän tiesivät täällä kaikki ennen kuin '
-      + 'höyrykone keksittiin." Seisoin kärjessä ja annoin saman tuulen '
+      + 'höyrykone keksittiin.” Seisoin kärjessä ja annoin saman tuulen '
       + 'kääntää lehteä.',
   },
 };

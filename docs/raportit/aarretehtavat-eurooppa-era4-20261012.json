@@ -1,0 +1,636 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävät, erä 4 (PT 12.10.): ei-3D-kaupungit, joilla on intro: Sarajevo, Alpit, Lappi, Dubrovnik, Riika, Tromssa, Varsova, Moskova, Pietari, Istanbul, Kiova, Odessa. a = etsi_kartalta (Alpit ja Lappi: valinta, ei kohdekarttaa). Palkkiot (Katso/Valinta/Etsi 25, Kuuntele 30, Aikajana 30, Vanha kartta 35, Arvio 40, Salakirjoitus 50); vihje ei muuta aarremekaniikkaa, ei bonuksia. Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty. muistomerkki false kaikissa. Uudet maa-vihjeet BIH, HRV, LVA, TUR, RUS (Moskova), UKR (Kiova), CHE (Alpit), FIN (Lappi); NOR viittaa Oslon/Bergenin vihjeeseen, POL Krakovan vihjeeseen.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "sarajevo",
+      "nimi": "Sarajevo",
+      "maa": "BIH",
+      "hahmo": "Kupariseppä Adnan",
+      "saapumispiste": {
+        "nimi": "Kazandžiluk, kuparisepänkuja Baščaršijan itäpäässä (OSM way 23784547)",
+        "lat": 43.85924,
+        "lon": 18.43146
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Basaarin länsipuolella kohoaa suuri kirkko, jossa on kaksi tornia ja goottilaistyylinen julkisivu. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Sarajevon katedraali",
+          "lat": 43.85943,
+          "lon": 18.42536,
+          "etaisyys_saapumispisteesta_m": 490
+        },
+        "vihje_vaarin": "Ei se. Kävele basaarista länteen: etsi kirkko, jonka julkisivulla kohoaa kaksi tornia rinnakkain.",
+        "tiesitko": "Katedraali on rakennettu neogoottilaiseen tyyliin ja vihitty 1889. Se on Bosnia ja Hertsegovinan suurin katedraali."
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Kuuntele isoisän merkintä. Mitä isoisä näki nyt, kun hän katsoi kahvipannua kunnolla?",
+        "vaihtoehdot": [
+          "Jokaisen vasaranjäljen",
+          "Kaiverretun nimikirjaimen",
+          "Vuosiluvun pannun pohjassa",
+          "Ruosteen reunoilla"
+        ],
+        "oikea_indeksi": 0,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-sarajevo.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-sarajevo.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele loppu vielä kerran: se kertoo, mitä pannun pinnassa näkyy, kun sitä katsoo kunnolla eikä vain juo siitä.",
+        "tiesitko": "Sana kazandžija, kupariseppä, tulee turkin sanasta kazan, pata. Sarajevon kuparisepät takoivat myös kahvipannuja ja tarjottimia."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "alpit",
+      "nimi": "Alpit",
+      "maa": "CHE",
+      "hahmo": "Luostarinveli Anselm (hospitsin koirien ulkoiluttaja)",
+      "saapumispiste": {
+        "nimi": "Suuren Sankt Bernhardin solan hospitsi (arvio hahmon työpaikasta)",
+        "lat": 45.8688,
+        "lon": 7.1705
+      },
+      "a": {
+        "laji": "valinta",
+        "palkkio": 25,
+        "vihjelause": "Heinäkuu, ja lunta on polviin asti! Koirat painavat tassunsa hankeen eivätkä välitä kalenterista.",
+        "kysymys": "Miksi solassa on lunta keskellä kesää?",
+        "vaihtoehdot": [
+          "Sola on yli 2 400 metrin korkeudessa, missä ilma on kylmää",
+          "Munkit kantavat lunta rinteiltä solaan joka kesä",
+          "Sola on meren rannalla, ja tuuli tuo lunta",
+          "Aurinko ei koskaan paista solaan"
+        ],
+        "oikea_indeksi": 0,
+        "vihje_vaarin": "Ei sitä. Katso, kuinka korkealle olemme nousseet: mitä ylemmäs vuorella kiipeää, sitä kylmemmäksi ilma käy.",
+        "tiesitko": "Suuren Sankt Bernhardin sola on noin 2 470 metrin korkeudessa ja yhdistää Sveitsin ja Italian. Hospitsin koirat tunnetaan lumipelastajina.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "kysymys": "Anselm salasi sanan siirtämällä kirjaimia eteenpäin niin monta askelta kuin Eigerin, Mönchin ja Jungfraun jonossa on huippuja. Mihin koira pysähtyi?",
+        "salattu": "NLQRV",
+        "avain": 3,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "KINOS",
+        "vihje_vaarin": "Huippuja on kolme. Siirrä jokaista kirjainta kolme askelta taaksepäin: N-kirjaimesta tulee K. Sana tarkoittaa lumen kasaumaa.",
+        "tiesitko": "Eiger, Mönch ja Jungfrau kuuluvat Unescon maailmanperintökohteeseen, joka hyväksyttiin listalle vuonna 2001.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "lappi",
+      "nimi": "Lappi",
+      "maa": "FIN",
+      "hahmo": "Poronhoitaja Reetta",
+      "saapumispiste": {
+        "nimi": "Rovaniemen keskusta (arvio; Reetan tokka kulkee talvimetsässä Rovaniemen tienoilla)",
+        "lat": 66.50279,
+        "lon": 25.72848
+      },
+      "a": {
+        "laji": "valinta",
+        "palkkio": 25,
+        "vihjelause": "Katso, hangessa on kuoppia, ja reunoilla on kavion jälkiä. Porot ovat olleet täällä kaivamassa.",
+        "kysymys": "Mitä porot kaivavat esiin näistä kuopista?",
+        "vaihtoehdot": [
+          "Jäkälää, joka on piilossa lumen alla",
+          "Kalaa jäätyneen järven alta",
+          "Tuoreita kuusenkäpyjä puun juurelta",
+          "Kuoriaisten talvipesiä"
+        ],
+        "oikea_indeksi": 0,
+        "vihje_vaarin": "Ei. Mitä talvella kasvaa maassa hangen alla? Se on harmaata ja rapeaa, näyttää vähän sammaleelta, ja poro rakastaa sitä.",
+        "tiesitko": "Jos hangen peittää kova jääkuori, porot eivät pysty kaivamaan sitä läpi. Silloin ne lähtevät hakemaan ruokaa sieltä, missä on vain lunta.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "kysymys": "Reetta vie sormen kartalla Rovaniemeltä pohjoiseen Nordkapiin. Kuinka monta kilometriä linnuntietä on?",
+        "liukusaadin": {
+          "min": 100,
+          "max": 1000,
+          "askel": 10
+        },
+        "oikea": 520,
+        "hyvaksyttava_vali": [
+          450,
+          600
+        ],
+        "yksikko": "km",
+        "vihje_vaarin": "Rovaniemi on noin 66,5 ja Nordkap noin 71,2 astetta pohjoista leveyttä. Yksi aste on noin 111 km. Laske ero.",
+        "tiesitko": "Napapiiri kulkee Rovaniemen pohjoispuolella. Joulupukin Pajakylässä sen kohta on merkitty viivalla keskusaukiolle.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "dubrovnik",
+      "nimi": "Dubrovnik",
+      "maa": "HRV",
+      "hahmo": "Merimelontaopas Mara",
+      "saapumispiste": {
+        "nimi": "Banjen ranta, kajakkien vuokrapaikka kaupungin muurin ulkopuolella (OSM way 171254027)",
+        "lat": 42.64161,
+        "lon": 18.11638
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Kerron ryhmälle aina: kaupungin luoteiskulmassa, ylhäällä, seisoo leveä pyöreä torni. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Minčetan torni",
+          "lat": 42.643,
+          "lon": 18.1082,
+          "etaisyys_saapumispisteesta_m": 687
+        },
+        "vihje_vaarin": "Ei se. Katso muurin luoteiskulmaa, korkealta kohdalta: siellä muurin kulmassa kohoaa leveä pyöreä torni.",
+        "tiesitko": "Neliönmuotoinen torni rakennettiin tähän jo 1319. Nykyinen pyöreä Minčeta valmistui 1464."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Meloja tarvitsee turvallisen sataman. Napauta vuoden 1911 kaupunkikartalta (ylempi kartta) vanhaa satamaa, jota pitkä aallonmurtaja suojaa.",
+        "kuva": {
+          "commons_tiedosto": "Dubrovnik 1911.jpg",
+          "tekija": "Wagner & Debes (karttatekijä); julkaisija Karl Baedeker, 'Austria-Hungary, Including Dalmatia and Bosnia, Handbook for Travelers', 1911",
+          "lisenssi": "Public domain (PD-US-expired, PD-old-70)",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Dubrovnik_1911.jpg",
+          "leveys_px": 1249,
+          "korkeus_px": 1876
+        },
+        "oikea_piste_px": [
+          1010,
+          440
+        ],
+        "toleranssi_px": 80,
+        "vihje_vaarin": "Ei tuo. Etsi kartan oikeasta reunasta satama, jonka sisällä lukee Porto Casson ja jonka keskellä on pitkä suorakaiteen muotoinen aallonmurtaja.",
+        "tiesitko": "Kaše-aallonmurtaja rakennettiin 1400-luvun lopulla suojaamaan satamaa kaakon tuulilta ja aalloilta."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "riika",
+      "nimi": "Riika",
+      "maa": "LVA",
+      "hahmo": "Kultaaja Ilze, tornikukkojen kultaaja",
+      "saapumispiste": {
+        "nimi": "Ilzen kultaamo, Linnantori (Pils laukums), Vanha kaupunki",
+        "lat": 56.9516,
+        "lon": 24.1013
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Kultaan kukkoja tornien huipuille. Etsi kartalta kirkko, jonka yli sadan metrin tornin huipulla pyörii kultainen kukko.",
+        "kohde": {
+          "nimi": "Pyhän Pietarin kirkko",
+          "lat": 56.9475,
+          "lon": 24.1094,
+          "etaisyys_saapumispisteesta_m": 670
+        },
+        "vihje_vaarin": "Ei se. Etsi Vanhasta kaupungista Riian korkein kirkko: sen terävä torni nousee muiden yli, ja kukko pyörii aivan huipulla.",
+        "tiesitko": "Perimätiedon mukaan vanhat kukot olivat toiselta puolelta mustat, toiselta kultaiset: kultapuoli lupasi laivoille hyvää säätä. Nykyinen kukko on vuodelta 1970."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Tämä Riian kartta on vuodelta 1843. Vanha kaupunki on vielä muurien ja vallien sisällä Väinäjoen rannalla. Napauta sitä.",
+        "kuva": {
+          "commons_tiedosto": "Plann goroda Riga... (Plan de la ville de Riga, levé par le colonel d'état-major Novitskoff...) - btv1b8439378p (1 of 2).jpg",
+          "tekija": "Novitskoff (Новицкий), Dépôt topographique militaire, 1843; Bibliothèque nationale de France (Gallica)",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Plann_goroda_Riga..._(Plan_de_la_ville_de_Riga,_lev%C3%A9_par_le_colonel_d%27%C3%A9tat-major_Novitskoff...)_-_btv1b8439378p_(1_of_2).jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1865
+        },
+        "oikea_piste_px": [
+          905,
+          862
+        ],
+        "toleranssi_px": 100,
+        "vihje_vaarin": "Ei tuo. Etsi joen itärannalta tiheä kortteliryhmä, jota ympäröi muuri ja tyhjä vyöhyke; uusi kaupunki alkaa vasta sen takaa.",
+        "tiesitko": "Muurit purettiin 1850-luvulla. Vallihaudasta jäi 3,2 km pitkä kaupunginkanava, joka kiertää vanhaa kaupunkia yhä."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "tromssa",
+      "nimi": "Tromssa",
+      "maa": "NOR",
+      "hahmo": "Venemekaanikko Sigrid, sataman veneiden korjaaja",
+      "saapumispiste": {
+        "nimi": "Sigridin korjaamo, Vervetin ranta, Tromssan satama",
+        "lat": 69.6535,
+        "lon": 18.9625
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Veneet ovat puuta, ja niin on kirkkokin. Etsi kartalta puinen tuomiokirkko, joka valmistui 1861 ja seisoo keskellä kaupunkia.",
+        "kohde": {
+          "nimi": "Tromssan tuomiokirkko",
+          "lat": 69.6497,
+          "lon": 18.956,
+          "etaisyys_saapumispisteesta_m": 492
+        },
+        "vihje_vaarin": "Ei se. Kävele satamasta lounaaseen: saaren keskustassa seisoo 1800-luvun puukirkko, paljon vanhempi kuin sillan takainen kirkko.",
+        "tiesitko": "Kirkon piirsi Christian Heinrich Grosch, joka suunnitteli yli 70 kirkkoa. Tämä oli yksi hänen viimeisistä töistään."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "muistomerkki": false,
+        "kysymys": "Kesällä työvuoroni jatkuu ilman yötä: aurinko ei laske. Kuinka monta vuorokautta keskiyön aurinko paistaa Tromssassa?",
+        "liukusaadin": {
+          "min": 20,
+          "max": 120,
+          "askel": 1
+        },
+        "oikea": 64,
+        "hyvaksyttava_vali": [
+          58,
+          70
+        ],
+        "vihje_vaarin": "Se alkaa toukokuun jälkipuoliskolla ja päättyy heinäkuun jälkipuoliskolla. Kesäkuu on kokonaan mukana; laske päälle reunat.",
+        "tiesitko": "Talven vastine on kaamos: aurinko ei nouse horisontin yläpuolelle noin 27.11.-15.1. Se on noin 50 vuorokautta."
+      },
+      "maa_vihje_viittaus": "NOR: katso oslo-luonnos.json (era2), kenttä maa_vihje (viikinkien hopeakätkö, kirjoitettu kerran Oslon ja Bergenin yhteiseksi)"
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "varsova",
+      "nimi": "Varsova",
+      "maa": "POL",
+      "hahmo": "Antikvaari Zofia (antikvariaatti Vanhankaupungin torin tuntumassa)",
+      "saapumispiste": {
+        "nimi": "Vanhankaupungin tori (Zofian antikvariaatin läheisyys)",
+        "lat": 52.2498,
+        "lon": 21.0122
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "vihjelause": "Torilla kysytään usein: missä lepää säveltäjän sydän? Etsi kartalta kirkko, jonka pylvääseen se on muurattu.",
+        "kohde": {
+          "nimi": "Pyhän ristin kirkko",
+          "lat": 52.2387,
+          "lon": 21.0168,
+          "etaisyys_saapumispisteesta_m": 1273
+        },
+        "vihje_vaarin": "Ei se. Kulje torilta etelään vilkasta katua pitkin yliopiston vastapäätä olevalle barokkikirkolle. Sydän on sen pylväässä.",
+        "tiesitko": "Säveltäjä kuoli Pariisissa 1849, ja hänen sydämensä on kirkon pylväässä. Pylvään teksti on Matteuksen evankeliumin luvusta 6.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "muistomerkki": false,
+        "kysymys": "Zofia salasi varastokirjaan sanan, joka puuttuu pylvään tekstistä: ”Missä … on, siellä on myös sydämesi.” Siirrä kirjaimia taaksepäin evankeliumiluvun verran.",
+        "salattu": "GGXXK",
+        "avain": 6,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "AARRE",
+        "vihje_vaarin": "Matteus, luku kuusi: siirrä jokaista kirjainta kuusi askelta taaksepäin. G-kirjaimesta tulee A.",
+        "tiesitko": "Teksti on Matteuksen sanoja: missä aarteesi on, siellä on myös sydämesi. Se sopii pylvääseen, jonka sisällä Chopinin sydän lepää."
+      },
+      "maa_vihje_viittaus": "POL:n vihje on kirjoitettu Krakovan tiedostoon (era2/krakova-luonnos.json, maa_vihje): Rafaelin kadonnut muotokuva. Varsova ei kirjoita omaa."
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "moskova",
+      "nimi": "Moskova",
+      "maa": "RUS",
+      "hahmo": "Kellonvalajan jälkeläinen Vera",
+      "saapumispiste": {
+        "nimi": "Tsaarinkello, Kremlin Ivan Suuren kellotornin vieressä",
+        "lat": 55.7508,
+        "lon": 37.6183
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Torin laidalla, Kremlin muurin vieressä, seisoo tsaari Ivanin 1500-luvulla rakennuttama kirkko, jolla on monta sipulikupolia. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Pyhän Vasilin katedraali",
+          "lat": 55.7525,
+          "lon": 37.6231,
+          "etaisyys_saapumispisteesta_m": 355
+        },
+        "vihje_vaarin": "Ei se. Kävele Kremlin muurin vierestä Punaiselle torille ja etsi 1500-luvun kirkko, jonka sipulikupolit nousevat tiiviinä ryhmänä.",
+        "tiesitko": "Kirkko valmistui 1561. Se rakennettiin yhdeksänä erillisenä kirkkona yhden perustuksen päälle, ja 1680-luvulla ne yhdistettiin yhdeksi rakennukseksi."
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Kuuntele isoisän merkintä. Pieni käsikello kutsui hänet illalla syömään. Mitä sillä oli enemmän kuin Kremlin suurella kellolla?",
+        "vaihtoehdot": [
+          "Enemmän mainetta",
+          "Kauniimman ja kirkkaamman äänen",
+          "Enemmän vaikutusvaltaa",
+          "Suuremman painon"
+        ],
+        "oikea_indeksi": 2,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-moskova.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-moskova.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele merkinnän viimeinen lause uudelleen. Pieni kello ei ollut kuuluisa, mutta isoisän mielestä sillä oli enemmän jotain muuta kuin maine.",
+        "tiesitko": "Tsaarinkello valettiin 1733–1735, ja se painaa noin 200 tonnia. Kremlin omien sivujen mukaan se on maailman suurin kello."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "pietari",
+      "nimi": "Pietari",
+      "maa": "RUS",
+      "hahmo": "Sellisti Polina",
+      "saapumispiste": {
+        "nimi": "Vitebskin asema (kaanon: kohtaamispaikka vaihtui 12.9.)",
+        "lat": 59.920278,
+        "lon": 30.329444
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Odotan junaa Vitebskin asemalla. Nevski-prospektin varrella pitkä pylväikkö avautuu kadulle; kirkon esikuva oli Rooman Pietarinkirkko. Etsi se.",
+        "kohde": {
+          "nimi": "Kazanin katedraali",
+          "lat": 59.9343,
+          "lon": 30.3245,
+          "etaisyys_saapumispisteesta_m": 1583
+        },
+        "vihje_vaarin": "Ei se. Kulje Nevski-prospektia pitkin ja etsi kirkko, jonka pitkä pylväikkö avautuu kadulle. Se valmistui 1811.",
+        "tiesitko": "Kirkko rakennettiin 1801–1811 arkkitehti Andrei Voronikhinin piirustusten mukaan, ja sen esikuvana oli Pyhän Pietarin kirkko Roomassa."
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "muistomerkki": false,
+        "kysymys": "Polina kysyy: missä järjestyksessä nämä tapahtuivat Pietarissa, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Pietari Suuri perustaa kaupungin Nevan suistoon ja linnoituksen Jänissaarelle",
+            "vuosi": "1703"
+          },
+          {
+            "teksti": "Nevan yli avataan ensimmäinen pysyvä silta",
+            "vuosi": "1850"
+          },
+          {
+            "teksti": "Mendelejevin jaksollinen järjestelmä esitellään Pietarissa",
+            "vuosi": "1869"
+          }
+        ],
+        "vihje_vaarin": "Aloita siitä, mitä ilman kaupunkia ei olisi: sen perustamisesta. Sillan ja kemistin taulukon välillä on vain noin kaksikymmentä vuotta.",
+        "tiesitko": "Sillan suunnitteli puolalainen insinööri Stanisław Kierbedź. Se yhdisti Vasiljevskin saaren kaupungin keskustaan."
+      },
+      "maa_vihje_viittaus": "moskova-luonnos.json (RUS:n yhteinen maa_vihje: Tsaarin kadonnut pääsiäismuna, kaupunki = pietari)"
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "istanbul",
+      "nimi": "Istanbul",
+      "maa": "TUR",
+      "hahmo": "Vedenvartija Emine (Basilica-säiliö, Yerebatan)",
+      "saapumispiste": {
+        "nimi": "Basilica-säiliö (Yerebatan), Sultanahmet",
+        "lat": 41.0081,
+        "lon": 28.9778
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "vihjelause": "Kun nousen säiliöstä, näen etelässä moskeijan, jonka ympärillä kohoaa kuusi minarettia. Etsi se kartalta.",
+        "kohde": {
+          "nimi": "Sininen moskeija",
+          "lat": 41.0054,
+          "lon": 28.9768,
+          "etaisyys_saapumispisteesta_m": 307
+        },
+        "vihje_vaarin": "Ei se. Kulje säiliöstä etelään: etsi moskeija, jolla on kuusi minarettia. Sen sisätila on antanut sille nimen.",
+        "tiesitko": "Moskeija rakennettiin 1600-luvun alussa sulttaani Ahmed I:n käskystä. Sen sinertävä sisätila antoi sille nimen Sininen moskeija.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "kysymys": "Kuuntele isoisän merkintä. Mitä kantaja osoitti, kun isoisä pyysi häntä kiirehtimään?",
+        "vaihtoehdot": [
+          "Uutta siltaa",
+          "Satamalaituria",
+          "Tunnelityömaata",
+          "Moskeijan työmaata"
+        ],
+        "oikea_indeksi": 2,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-istanbul.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-istanbul.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele uudelleen, vieras. Kantaja osoitti työmaata, jonka valmistuttua mäen voisi nousta istualtaan.",
+        "tiesitko": "Galatan Tünel avattiin 1875. Se on maailman toiseksi vanhin maanalainen kaupunkirata Lontoon jälkeen ja kulkee yhä Karaköystä Beyoğluun.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "kiova",
+      "nimi": "Kiova",
+      "maa": "UKR",
+      "hahmo": "Näyttelymestari Danylo, Kultaisen portin museon dokumentoija",
+      "saapumispiste": {
+        "nimi": "Kultaisen portin museo",
+        "lat": 50.44889,
+        "lon": 30.51333
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Erotan täällä vanhat kerrokset uusista. Etsi kartalta kirkko, jonka sisällä on 1000-luvun mosaiikkeja ja jonka ulkoasu on myöhempää barokkia.",
+        "kohde": {
+          "nimi": "Pyhän Sofian katedraali",
+          "lat": 50.4528,
+          "lon": 30.5144,
+          "etaisyys_saapumispisteesta_m": 441
+        },
+        "vihje_vaarin": "Ei se. Kävele portilta pohjoiseen, alle puoli kilometriä: kirkon vieressä kohoaa korkea kellotorni, ja kupoleita on monta.",
+        "tiesitko": "Pyhän Sofian katedraalin seinillä on 1000-luvun mosaiikkeja ja freskoja. Se on Unescon maailmanperintöä, ja alkuperäisiä kupoleita oli 13."
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "muistomerkki": false,
+        "kysymys": "Dokumentoin reittiä portilta mäen kirkolle. Kuinka monta metriä on linnuntietä Kultaisesta portista Andreaksen kirkolle?",
+        "liukusaadin": {
+          "min": 200,
+          "max": 2000,
+          "askel": 50
+        },
+        "oikea": 1150,
+        "hyvaksyttava_vali": [
+          1000,
+          1300
+        ],
+        "vihje_vaarin": "Matkaa on yli kilometri mutta alle puolitoista. Käytä kartan mittakaavaa ja mittaa suoraan, älä katuja pitkin.",
+        "tiesitko": "Andreaksen kirkko rakennettiin 1747–1754 Rastrellin piirustusten mukaan. Perimätiedon mukaan apostoli Andreas pystytti mäelle ristin."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "odessa",
+      "nimi": "Odessa",
+      "maa": "UKR",
+      "hahmo": "Torimyyjä Iryna (tytär Solomiia pitää laatikkoa)",
+      "saapumispiste": {
+        "nimi": "Privozin tori",
+        "lat": 46.4697,
+        "lon": 30.7325
+      },
+      "a": {
+        "laji": "etsi_kartalta",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Myyntikojuni on Privozilla, mutta lepään kaupungin vanhimmassa puistossa. Etsi kartalta se puisto, joka on Deribasivska-kadun päässä.",
+        "kohde": {
+          "nimi": "Kaupunginpuisto",
+          "lat": 46.4848,
+          "lon": 30.7344,
+          "etaisyys_saapumispisteesta_m": 1685
+        },
+        "vihje_vaarin": "Ei se. Kävele Privozilta pohjoiseen kohti keskustaa: vanhin puisto on lähellä Deribasivska-katua, ei satamassa eikä torilla.",
+        "tiesitko": "Odessa perustettiin vuonna 1794 ja Kaupunginpuisto vuonna 1803. Puisto on kaupungin vanhin."
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "muistomerkki": false,
+        "kysymys": "Iryna kirjoitti muistilappuunsa sanan siirtämällä kirjaimia eteenpäin niin monta askelta kuin Odessa oli vanha, kun puisto perustettiin. Pura sana.",
+        "salattu": "EJJTJ",
+        "avain": 9,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "VAAKA",
+        "vihje_vaarin": "Odessa perustettiin 1794 ja puisto 1803. Laske ero ja siirrä jokaista kirjainta niin monta askelta taaksepäin: E-kirjaimesta tulee V.",
+        "tiesitko": "Privozin tori alkoi 1827, kun tavaraa myytiin hevoskärryiltä. Nimi viittaa siihen, että tavara tuotiin torille kärryillä."
+      },
+      "maa_vihje_viittaus": "UKR:n maa_vihje on kirjoitettu Kiovalle (kiova-luonnos.json); Odessalla ei omaa vihjettä."
+    }
+  ],
+  "maa_vihjeet": [
+    {
+      "iso3": "BIH",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Jajce",
+        "lat": 44.3417,
+        "lon": 17.2694
+      },
+      "vihjeet": [
+        "Bosnian viimeinen kuningas sai kruunun, jonka paavi lähetti Roomasta. Hänen valtakuntansa kesti sen jälkeen alle kaksi vuotta.",
+        "Kruunajaiset pidettiin marraskuussa 1461 Pyhän Marian kirkossa. Kruunun myöhemmistä vaiheista en löytänyt yhtään merkintää.",
+        "Pyhän Marian kirkon rauniot ovat Jajcessa, missä Pliva-joki putoaa Vrbas-jokeen. Sieltä kannattaa aloittaa kruunun jäljet."
+      ]
+    },
+    {
+      "iso3": "CHE",
+      "kaupunki": "alpit",
+      "vihjeet": [
+        "Taru kertoo jousimiehestä, joka ampui omenan poikansa päästä. Toisen nuolen hän otti varalle mukaansa.",
+        "Taru kertoo Wilhelm Tellistä. Se kirjattiin 1470-luvulla, ja Schiller teki siitä näytelmän 1804. Asiakirjoista Telliä ei ole löytynyt.",
+        "Tellin varsijousta ei ole löydetty, sillä se on tarun esine. Jos se on missään, se kuuluu Alpeille: mene vuorille."
+      ]
+    },
+    {
+      "iso3": "FIN",
+      "kaupunki": "lappi",
+      "vihjeet": [
+        "Joen hiekka kimaltaa. Huuhtojat pesevät sitä pannulla, ja kruunun asemalla luvat tarkastetaan ja jokainen jyvä punnitaan.",
+        "Kultaa löytyi Ivalojoelta 1860-luvun lopulla, ja kruunu perusti sinne aseman 1870. Suurimmat valtaukset antoivat vain noin kymmenen kiloa vuodessa.",
+        "Jos suuri hippu on olemassa, se lepää Lapissa Ivalojoen hiekassa. Kukaan ei ole sitä minulle näyttänyt, joten se on vain taru ja toive."
+      ]
+    },
+    {
+      "iso3": "HRV",
+      "kaupunki": "dubrovnik",
+      "vihjeet": [
+        "Englannin kielen sana suurelle kauppalaivalle periytyy yhdestä Adrianmeren kaupungista.",
+        "Tuo kaupunki oli itsenäinen tasavalta Napoleonin aikaan asti. Mihin sen kauppiaiden kulta sitten jäi, sitä en tiedä.",
+        "Kaupungin nimi on Ragusa, kroaatiksi Dubrovnik. Jos kultaa on kätketty, etsi sitä sen muurien ja rantojen luota."
+      ]
+    },
+    {
+      "iso3": "LVA",
+      "kaupunki": "riika",
+      "vihjeet": [
+        "Muistiinpano: pieni Kuramaa oli kerran merivalta. Herttua Jaakobilla oli oma laivasto sekä siirtokunnat Tobagolla ja Gambia-joella.",
+        "Vuonna 1658 ruotsalaiset valtasivat Kuramaan ja veivät herttuan vangiksi. Laivasto tuhoutui, ja siirtokunnat joutuivat hollantilaisille.",
+        "Herttua vietiin ensin Riikaan, Väinäjoen rannalle. Aloita etsintä sieltä ja kysele vanhoilta, mitä he muistavat Kuramaan herttuasta."
+      ]
+    },
+    {
+      "iso3": "RUS",
+      "kaupunki": "pietari",
+      "vihjeet": [
+        "Venäjällä pääsiäisenä tervehditään: Kristus nousi kuolleista. Munat keitetään sipulinkuorissa punaruskeiksi. Mietin, millainen muna olisi kultaa ja jalokiviä.",
+        "Kultasepän oppipoika kuiskasi: keisarinnalle suunnitellaan lahjaa, pientä esinettä, jonka sisään kätketään toinen. Sellaiset voivat joskus kadota.",
+        "Etsi jälki Pietarista: Fabergén kultasepänliike on toiminut siellä vuodesta 1842."
+      ]
+    },
+    {
+      "iso3": "TUR",
+      "kaupunki": "istanbul",
+      "vihjeet": [
+        "Kuulin laivalla, että kaivaja löysi tänä vuonna vanhasta kummusta kultakoruja. Huhun mukaan hän ei kertonut löydöstä sulttaanin virkamiehille.",
+        "Hän kutsuu koruja Priamoksen, Troijan tarukuninkaan, aarteeksi. Huhun mukaan hän pelkäsi virkamiesten jakavan kullan ja vei korut salaa pois.",
+        "Sulttaanin virkamiehet asuvat Konstantinopolissa. Mene sinne ja kuuntele, mitä kaupungissa kerrotaan kullasta ja kaivajasta."
+      ]
+    },
+    {
+      "iso3": "UKR",
+      "kaupunki": "kiova",
+      "vihjeet": [
+        "Kerrotaan tarua hetmanista, joka muka lähetti kultaa Lontoon pankkiin ennen vangitsemistaan. Kukaan ei ole nähnyt tilikirjaa.",
+        "Hetmani oli todellinen: Pavlo Polubotok, rikas kasakkaylimys, joka kuoli vankina 1724. Talletuksesta on vain taru, ei todisteita.",
+        "Polubotok kävi koulunsa Kiovan Mohyla-kollegiossa. Etsi tarun jälkiä Kiovasta, vanhasta sivistyksen kaupungista."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+ "huom": "Olavinlinnan ympäristön veden syvyyskartta (tools/dioraama/blender/ymparisto_jalki.py): 2048² 8-bit harmaa, 0 = ranta/maa, arvo × kerroin_m = syvyys (arvio etäisyydestä rantaan, 0,12 m/m, max 30 m; MML:n korkeusmallissa järvi on tasainen). origo = kuvan vasen yläkulma kuoren koordinaatistossa (Blender x itä, y pohjoinen).",
+ "pikseli_m": 1.953125,
+ "kerroin_m": 0.11764705882352941,
+ "origo": [-2000.0, 2000.0]
+}

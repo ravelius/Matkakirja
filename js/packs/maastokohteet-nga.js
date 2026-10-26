@@ -235,7 +235,7 @@ export const MAASTOKOHTEET_NGA = [
       + 'prekambrinen; kallio kohoaa noin 725 metrin korkeuteen. Zuma Rock on kuvattu sadan '
       + 'nairan setelissä, ja gbagyit käyttivät sitä aikoinaan puolustusasemana heimosotien '
       + 'aikana. Kallion löysivät 1400-luvulla Zuban asukkaat, jotka kutsuivat sitä nimellä '
-      + 'zumwa — sen voi kääntää "helmikanojen paikaksi". Kalliosta kerrotaan yhä monenlaisia '
+      + 'zumwa — sen voi kääntää ”helmikanojen paikaksi”. Kalliosta kerrotaan yhä monenlaisia '
       + 'tarinoita, ja 1940-luvulla Abujan piirihallinnon virkamies kävi paikallisten '
       + 'varoituksista huolimatta kallion juurella olevassa kylässä selvittääkseen, mikä '
       + 'tarinoissa oli totta.',
@@ -365,7 +365,7 @@ export const MAASTOKOHTEET_NGA = [
     nimi: 'Badagry',
     tyyppi: 'kaupunki',
     kysymykset: [
-      'Mikä oli "paluun ei ole" -muistomerkki?',
+      'Mikä oli ”paluun ei ole” -muistomerkki?',
       'Miksi laguuni teki kaupungista kauppapaikan?',
     ],
     korostukset: ['laguuni|laguunien'],
@@ -383,7 +383,7 @@ export const MAASTOKOHTEET_NGA = [
       + 'Transatlanttisen orjakaupan aikana kaupunki toimi välikätenä rannikon '
       + 'eurooppalaiskauppiaiden ja sisämaan kauppiaiden välillä, ja se hyötyi 1700-luvun lopun '
       + 'Porto-Novon ja Dahomeyn välisestä kiistasta; kyläsodissa vangitut myytiin Badagryn '
-      + 'huutokaupoissa. Kaupungissa on aiheesta muistomerkki nimeltä "Point of No Return". '
+      + 'huutokaupoissa. Kaupungissa on aiheesta muistomerkki nimeltä ”Point of No Return”. '
       + 'Marinan kadulle rakennettiin 1845 seudun ensimmäinen kaksikerroksinen talo.',
     lahde: 'en-Wikipedia "Badagry", johdanto-osa sekä osiot "Geography" ja "History" '
       + '(tarkistettu 6.9.2026).',

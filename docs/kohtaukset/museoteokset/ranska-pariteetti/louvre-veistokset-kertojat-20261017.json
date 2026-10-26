@@ -1,0 +1,46 @@
+{
+ "huomio": "Louvren Samothraken Niken ja Milon Venuksen kertojan tekstit (rakenne ja pituus kuten rodin-veistokset.json: koukku, tausta, 'Katso ...' -havainto, lopetus). Luvut sanoiksi (puhuttu), puhuttu_merkkeja = lukema merkkimäärä; Rodinin tekstit 468–642 puhuttuna. Riippumaton Sonnet-tarkistus 17.10.2026 (omat haut): Nike kaikki OK; Venuksessa 'vaate vyötäröllä' ja '-andros' korjattu. Ääntä ei ole tehty; ÄÄ äänittää pysyvällä kertojaluvalla PT:n hyväksynnän jälkeen.",
+ "veistokset": {
+  "louvre-ma-2369": {
+   "nimi_fi": "Samothraken Nike",
+   "lahteet": [
+    "https://www.louvre.fr/oeuvre-notices/victoire-de-samothrace",
+    "https://collections.louvre.fr/en/ark:/53355/cl010252531",
+    "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace"
+   ],
+   "epavarmat": [
+    "Ajoitus (Louvre 200–175 eaa.) on hypoteesi; omistuskirjoitusta ei ole; ehdotuksia 306–154 eaa.",
+    "Portaikkoon asennuksen vuosi (1883/1884) jätetty pois",
+    "Patsaan korkeus ristiriitainen, jätetty pois"
+   ],
+   "kertojan_teksti": "Tämä voitonjumalatar saapui Louvreen sirpaleina. Charles Champoiseau löysi sen vuonna 1863 Samothraken saarelta, Suurten jumalien pyhäköstä, yli sadan marmoripalan joukosta; oikean käden kämmen löytyi vasta vuonna 1950. Katso, miten ohut vaate painuu vartaloa vasten ja miten valkoinen marmori seisoo harmaan marmorin päällä, laivan keulaa muistuttavalla jalustalla. Louvre ajoittaa patsaan toisen vuosisadan alkuun eaa., mutta omistuskirjoitusta ei ole löydetty, joten ajoitus on arvio.",
+   "puhuttu": "Tämä voitonjumalatar saapui Louvreen sirpaleina. Charles Champoiseau löysi sen vuonna tuhatkahdeksansataakuusikymmentäkolme Samothraken saarelta, Suurten jumalien pyhäköstä, yli sadan marmoripalan joukosta; oikean käden kämmen löytyi vasta vuonna tuhatyhdeksänsataaviisikymmentä. Katso, miten ohut vaate painuu vartaloa vasten ja miten valkoinen marmori seisoo harmaan marmorin päällä, laivan keulaa muistuttavalla jalustalla. Louvre ajoittaa patsaan toisen vuosisadan alkuun ennen ajanlaskun alkua, mutta omistuskirjoitusta ei ole löydetty, joten ajoitus on arvio.",
+   "puhuttu_merkkeja": 565,
+   "tarkistus": {
+    "tuomio": "OK",
+    "perustelu": "Sonnet-tarkistus: 110 fragmenttia, löytö 1863 (Champoiseau), kämmen 1950, ajoitus -200…-175 (Louvren tietue), Suurten jumalien/Kabeirien pyhäkkö, Paros + Lartos vahvistuivat. 'Katso'-lause kuvaa nähtävää."
+   }
+  },
+  "louvre-ma-399": {
+   "nimi_fi": "Milon Venus",
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Venus_de_Milo",
+    "https://fr.wikipedia.org/wiki/V%C3%A9nus_de_Milo",
+    "https://mini-site.louvre.fr/trimestriel/2021/Dossier_images_Louvre/281/"
+   ],
+   "epavarmat": [
+    "Furtwänglerin vuosi 1893 vain en-Wikipediassa (Louvren sivu mainitsee 1895-julkaisun)",
+    "Löytäjän nimi ja tarkka päivä jätetty pois (huhtikuu/kevät 1820)",
+    "Jalustan palanen: kuuluminen patsaaseen kiistanalainen; 'kadonnut' = kirjoitettu palanen, ei jalusta",
+    "Louvren oma Venus-notice 404, opetusdossier ei luettavissa"
+   ],
+   "kertojan_teksti": "Tämä patsas oli aluksi väärässä ajassa. Kun se löytyi Milos-saarelta keväällä 1820 ja tuli Louvreen vuonna 1821, sitä pidettiin klassisen ajan mestarityönä, mutta Adolf Furtwängler sijoitti sen vuonna 1893 hellenistiseen aikaan. Katso, miten pää kääntyy sivulle ja laskostunut vaate on kiertynyt lantion ympärille. Käsivarret puuttuvat, eikä kukaan tiedä varmasti, miten ne menetettiin. Jalustan kirjoituksesta tunnetaan piirrosten mukaan nimen loppu -andros, mutta alkuperäinen palanen on kadonnut.",
+   "puhuttu": "Tämä patsas oli aluksi väärässä ajassa. Kun se löytyi Milos-saarelta keväällä tuhatkahdeksansataakaksikymmentä ja tuli Louvreen vuonna tuhatkahdeksansataakaksikymmentäyksi, sitä pidettiin klassisen ajan mestarityönä, mutta Adolf Furtwängler sijoitti sen vuonna tuhatkahdeksansataayhdeksänkymmentäkolme hellenistiseen aikaan. Katso, miten pää kääntyy sivulle ja laskostunut vaate on kiertynyt lantion ympärille. Käsivarret puuttuvat, eikä kukaan tiedä varmasti, miten ne menetettiin. Jalustan kirjoituksesta tunnetaan piirrosten mukaan nimen loppu andros, mutta alkuperäinen palanen on kadonnut.",
+   "puhuttu_merkkeja": 594,
+   "tarkistus": {
+    "tuomio": "KORJATTU",
+    "perustelu": "Sonnet-tarkistus: 'vaate pysyy vyötäröllä' → 'kiertynyt lantion ympärille' (fr-Wikipedia); 'tunnetaan vain -andros' → piirrosten mukaan nimen loppu -andros, alkuperäinen palanen kadonnut. Löytö kevät 1820, Louvreen 1821, klassinen käsitys 1800-luvulla ja Furtwängler hellenistinen OK."
+   }
+  }
+ }
+}

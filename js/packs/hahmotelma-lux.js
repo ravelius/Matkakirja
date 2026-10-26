@@ -440,6 +440,7 @@ export const HAHMOTELMA_LUX = [
   },
   {
     id: 'hahmotelma-luxembourg',
+    nimio: 'Luxembourg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/lux-nosto-luxembourg-b0bf8a6f.jpg',
       lyhyt: 'Luxemburgin Grundin alakaupunki ja Alzette-joki Cornichen näkötieltä.',
@@ -992,6 +993,7 @@ export const HAHMOTELMA_LUX = [
   },
   {
     id: 'hahmotelma-altmunster',
+    nimio: 'Altmünster',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/lux-nosto-altmunster-0ae5d4fb.jpg',
       lyhyt: 'Altmünsterin luostarin pyöreä kivitorni puiden keskellä.',

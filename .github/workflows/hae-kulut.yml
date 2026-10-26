@@ -1,0 +1,30 @@
+# Kuluhaku (Anthropic cost/usage_report, OpenAI costs) kustannusseurantaan: ANTHROPIC_ADMIN_KEY ja OPENAI_ADMIN_KEY
+# ovat vain repon secreteissä, joten ajo tehdään täällä (Pelikoodari 8.10.2026, docs/raportit/kustannussuunnitelma-20261008.md).
+# Tulos artifaktina (kulut.json: summat, mallit, avainten nimet; ei avaimia).
+name: Hae kulut
+on:
+  workflow_dispatch:
+    inputs:
+      alku:
+        description: 'Alkupäivä (ISO, esim. 2026-10-01T00:00:00Z)'
+        required: false
+        default: '2026-08-01T00:00:00Z'
+permissions:
+  contents: read
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - env:
+          ANTHROPIC_ADMIN_KEY: ${{ secrets.ANTHROPIC_ADMIN_KEY }}
+          OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
+          ALKU: ${{ inputs.alku }}
+        run: node tools/kulut/hae-kulut.mjs /tmp/kulut "$ALKU"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kulut
+          path: /tmp/kulut/

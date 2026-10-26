@@ -173,6 +173,7 @@ export const MAASTOKOHTEET_CUB = [
   {
     id: 'san-pedro-de-la-roca',
     nimi: 'San Pedro de la Roca',
+    nimio: 'El Morro',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi linnoitus rakennettiin terasseille?',
@@ -215,7 +216,7 @@ export const MAASTOKOHTEET_CUB = [
     },
     teksti: 'Cienfuegos on Kuuban eteläisen rannikon kaupunki noin 250 kilometriä Havannasta '
       + 'ja lempinimeltään La Perla del Sur, etelän helmi. Nimi tarkoittaa kirjaimellisesti '
-      + '"sataa tulta", mutta se ei viittaa voimalaitoksiin vaan Kuuban kenraalikuvernööriin '
+      + '”sataa tulta”, mutta se ei viittaa voimalaitoksiin vaan Kuuban kenraalikuvernööriin '
       + 'José Cienfuegos Jovellanosiin. 1800- ja 1900-luvun vaihteessa kaupunkiin muutti '
       + 'runsaasti espanjalaisia, etenkin katalaaneja ja asturialaisia, jotka rikastuivat '
       + 'muun muassa sokeriteollisuudessa ja rakennuttivat kaupungin tunnetuimmat rakennukset. '

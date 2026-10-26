@@ -145,6 +145,7 @@ export const MAASTOKOHTEET_LKA = [
   {
     id: 'hammastemppeli',
     nimi: 'Kandyn hammastemppeli',
+    nimio: 'Hammastemppeli',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Miksi reliikillä on ollut poliittista merkitystä?',
@@ -224,6 +225,7 @@ export const MAASTOKOHTEET_LKA = [
   {
     id: 'yhdeksan-kaaren-silta',
     nimi: 'Yhdeksän kaaren silta',
+    nimio: 'Kaarisilta',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Mistä huhu teräksettömästä sillasta syntyi?',

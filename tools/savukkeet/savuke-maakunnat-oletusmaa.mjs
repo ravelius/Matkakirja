@@ -21,10 +21,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -67,8 +64,7 @@ const PIKSELI = Buffer.from(
   'base64',
 );
 
-const selain = await chromium.launch(existsSync('/opt/pw-browsers/chromium')
-  ? { executablePath: '/opt/pw-browsers/chromium' } : {});
+const selain = await avaaChromium();
 
 /** Sivu kaupungissa, Maakunnat-välilehti auki; palauttaa sivun. */
 async function avaa(kaupunki) {

@@ -3,8 +3,8 @@
 > **PÄIVITYS 20.9.2026 (sitova):** työnjako on nyt kuusi roolisessiota
 > (Fable, Julkaisija, Karttaseppä, Pelikoodari, Sisältökirjuri,
 > Laitetestaaja). Roolit, worktreet, viestisäännöt Fablelle ja
-> tokenikuri ovat Raamatun Ydinajatus-osion kohdassa 2 "TYÖTAPA JA
-> SESSIOT"; ristiriidassa se voittaa tämän dokumentin vanhat osiot.
+> tokenikuri ovat Raamatun luvussa 7 "Tuotantoputki ja roolit"
+> (jäsennys 19.10.2026); ristiriidassa se voittaa tämän dokumentin vanhat osiot.
 > Julkaisusäännöt-osio alla on yhä voimassa (Julkaisija noudattaa).
 
 Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
@@ -16,7 +16,7 @@ Täsmennys (omistaja 11.9.2026, tekstisession kautta): yllä oleva koskee
 Clauden agentteja. ChatGPT/Codex-sessio ("tekstisessio") saa käyttää Solia,
 Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoivat rajatut
 tehtävät kevyimmälle riittävän kyvykkäälle mallille, kun se säästää
-kokonaiskäyttöä laadusta tinkimättä (Raamattu, Ydinajatus).
+kokonaiskäyttöä laadusta tinkimättä (Raamattu, luku 1 ja luku 7).
 
 # Roolitus: kolme sessiota, yksi peli
 
@@ -139,7 +139,7 @@ ovat ristiriidassa.
 
 Kanava on git-postilaatikko (haara `claude/postilaatikko`): Fable
 kirjoittaa posti/fable-vanha.md:n kärkeen, tekstisessio omaan
-tiedostoonsa. Käytäntö (Raamattu, Ydinajatus: YHTEISKEHITYKSEN KEVENNYS):
+tiedostoonsa. Käytäntö (Raamattu, luku 7: YHTEISKEHITYKSEN KEVENNYS):
 
 1. **Tilannekortti** per yhteinen ominaisuus (esim.
    posti/pulu-luentareaktiot-tila.md, ylläpitäjä Codex): tavoite/rajaus,

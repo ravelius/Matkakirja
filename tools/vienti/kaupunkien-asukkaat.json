@@ -1598,6 +1598,72 @@
    "vuosi": null,
    "wikidata": "Q351",
    "alue": false
+  },
+  "tirana": {
+   "asukkaat": 389323,
+   "vuosi": 2023,
+   "wikidata": "Q19689",
+   "alue": false
+  },
+  "minsk": {
+   "asukkaat": 1995091,
+   "vuosi": 2026,
+   "wikidata": "Q2280",
+   "alue": false
+  },
+  "zagreb": {
+   "asukkaat": 767131,
+   "vuosi": 2021,
+   "wikidata": "Q1435",
+   "alue": false
+  },
+  "vaduz": {
+   "asukkaat": 5668,
+   "vuosi": 2019,
+   "wikidata": "Q1844",
+   "alue": false
+  },
+  "monaco": {
+   "asukkaat": 38857,
+   "vuosi": 2025,
+   "wikidata": "Q235",
+   "alue": true
+  },
+  "chisinau": {
+   "asukkaat": 567038,
+   "vuosi": 2024,
+   "wikidata": "Q21197",
+   "alue": false
+  },
+  "skopje": {
+   "asukkaat": 422540,
+   "vuosi": 2021,
+   "wikidata": "Q384",
+   "alue": false
+  },
+  "belgrad": {
+   "asukkaat": 1197714,
+   "vuosi": 2022,
+   "wikidata": "Q3711",
+   "alue": false
+  },
+  "bern": {
+   "asukkaat": 136988,
+   "vuosi": 2023,
+   "wikidata": "Q70",
+   "alue": false
+  },
+  "bratislava": {
+   "asukkaat": 480902,
+   "vuosi": 2025,
+   "wikidata": "Q1780",
+   "alue": false
+  },
+  "podgorica": {
+   "asukkaat": 150977,
+   "vuosi": 2011,
+   "wikidata": "Q23564",
+   "alue": false
   }
  }
 }

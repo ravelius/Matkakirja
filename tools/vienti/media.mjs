@@ -17,7 +17,7 @@
  * Lajit:
  *   kuva-commons   Commons-tiedostonimi → ämpärin kuvat/<turvanimi>
  *   lippu-commons  Commons-lippu → ämpärin liput/<turvanimi>.png
- *   kuva-flickr    Flickr-kuva, repon kopio (js/packs/valokuvat-flickr.js)
+ *   kuva-flickr    Flickr-kuva: repon kopio assets/valokuvat ämpärissä, Flickr varana (js/packs/valokuvat-flickr.js)
  *   aani-peilattu  Freesound/archive.org → ämpärin aanet/
  *   aani-oma       repon oma ääni assets/audio/... → ämpärin audio/
  *   ampari-avain  valmis ämpärin avain (audio/, aanet/, kuvat/, ...)
@@ -47,7 +47,7 @@ import { KOHTAAMIS_R2_JUURI, kohtaamiskuvat } from '../../js/kohtaamiskuvat-data
 // merkkijonon käynti ei näe — haetaan se datasta tiedostonimellä.
 const KOHTAAMISKANSIO = new Map(kohtaamiskuvat.map((k) => [k.tiedosto, k.kansio ?? null]));
 // Ämpärin avaimen tunnistaa juurikansiosta (js/media.js, peilaa-media.mjs).
-const AMPARIN_KANSIOT = /^(audio|aanet|kuvat|liput|julisteet|kohtaamiset)\//;
+const AMPARIN_KANSIOT = /^(audio|aanet|kuvat|liput|julisteet|kohtaamiset|paakaupungit)\//;
 
 export const PELIN_JUURI = 'https://matkakirja.app/';
 
@@ -166,8 +166,14 @@ export function ratkaiseMedia(arvo, laji) {
       return { avain, url: reitit[0], varat: reitit.slice(1), alkuperainen, ...(suurennos ? { suurennos } : {}) };
     }
     case 'kuva-flickr': {
-      const url = flickrOsoite(arvo);
-      return url ? { url } : {};
+      // Eheystarkistus 27.9.2026: repon oma kopio (assets/valokuvat, 1024 px) ensin kuten webin valokuvaUrl() —
+      // ämpäriin sivuston assettina, Flickr vasta varana. Ennen tätä natiivi haki kuvan suoraan Flickristä, eikä
+      // se ollut ämpärissä (ulkoinen riippuvuus myös offline-latauksessa).
+      const oma = VALOKUVAT_PAIKALLISET.get(arvo);
+      const reitit = [...(oma ? sivustoReitit(`assets/valokuvat/${oma}`) : []), flickrOsoite(arvo)].filter(Boolean);
+      if (!reitit.length) return {};
+      const suurennos = flickrOsoite(arvo, 'h');
+      return { url: reitit[0], ...(reitit.length > 1 ? { varat: reitit.slice(1) } : {}), ...(suurennos ? { suurennos } : {}) };
     }
     case 'aani-peilattu': {
       const avain = peiliAaniPolku(arvo);

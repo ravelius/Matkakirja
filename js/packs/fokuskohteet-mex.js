@@ -85,7 +85,7 @@ export const FOKUSKOHTEET_MEX = [
     teksti: 'Templo Mayor oli mexica-kansan pääpyhäkkö heidän '
       + 'pääkaupungissaan Tenochtitlánissa, joka seisoi saarella '
       + 'keskellä järveä nykyisen Mexico Cityn kohdalla. Nahuatliksi '
-      + 'se oli Huēyi Teōcalli, "suuri jumalanhuone". Portaikkoja oli '
+      + 'se oli Huēyi Teōcalli, ”suuri jumalanhuone”. Portaikkoja oli '
       + 'kaksi, koska pyramidin päällä oli kaksi pyhäkköä: '
       + 'sodanjumala Huitzilopochtlin ja sateen ja maanviljelyn '
       + 'jumalan Tlálocin. Pohjaltaan rakennus oli noin 100 × 80 '
@@ -113,7 +113,7 @@ export const FOKUSKOHTEET_MEX = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg',
       kadonnut: true,
       lyhyt: 'Kukkakauppiaan tytär näkee kaksoispyhäkön ensi kertaa, jonka ovet kuuluvat kahdelle jumalalle.',
-      selite: 'Kuvituksen kukkakauppias pitää tytärtään hartioista, kun tämä '
+      selite: 'Kuvan kukkakauppias pitää tytärtään hartioista, kun tämä '
         + 'näkee kaksoispyhäkön ensimmäisen kerran. Tavalliset '
         + 'kaupunkilaiset pääsevät pyhälle alueelle vain suurina '
         + 'juhlapäivinä; lapsi puristaa kehäkukkia, haistaa kopaalisavun ja '

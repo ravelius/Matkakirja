@@ -42,10 +42,7 @@ import { tmpdir } from 'node:os';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { SAAPUMISPUHEET } from '../../js/packs/saapumispuheet.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KAUPUNKI = 'ateena';
@@ -107,8 +104,7 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   // Ilman tätä Chromium ei päästä <audio>-elementtiä soimaan ilman elettä.
   args: ['--autoplay-policy=no-user-gesture-required'],
 });

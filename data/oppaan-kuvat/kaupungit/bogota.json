@@ -1,0 +1,744 @@
+{
+ "kaupunki": "bogota",
+ "kaupunkiQ": "Q2841",
+ "kohteet": [
+  {
+   "q": "Q152073",
+   "nimi": "Monserrate",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 4.60583,
+   "lon": -74.05639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2017 Bogotá Basílica del Señor Caído de Monserrate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_Bogot%C3%A1_Bas%C3%ADlica_del_Se%C3%B1or_Ca%C3%ADdo_de_Monserrate.jpg",
+     "selite": "Monserraten kukkulan huipulla seisova valkoinen pyhäkkö on yksi Bogotán tärkeimmistä pyhiinvaelluskohteista.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AR277392 monserrate (11646983726).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AR277392_monserrate_(11646983726).jpg?width=1280",
+     "tekija": "Juan Carlos Pachón from Bogotá, Colombia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AR277392_monserrate_(11646983726).jpg",
+     "selite": "Vuori kohoaa kaupungin itäpuolella jyrkkänä taustana kaupungin kerrostaloille.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bogotá-Monserrate 2015 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1-Monserrate_2015_03.JPG?width=1280",
+     "tekija": "Tefita228",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1-Monserrate_2015_03.JPG",
+     "selite": "Huipulta avautuvat näkymät yli korkealla Andien tasangolla sijaitsevan kaupungin.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3090480",
+   "nimi": "Plaza de Bolívar",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 4.59806,
+   "lon": -74.0758,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de Bolívar en Bogotá (Colombia).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Bol%C3%ADvar_en_Bogot%C3%A1_(Colombia).jpg?width=1280",
+     "tekija": "Javierleiva",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Bol%C3%ADvar_en_Bogot%C3%A1_(Colombia).jpg",
+     "selite": "Plaza de Bolívar on Bogotán historiallinen pääaukio, jota reunustavat katedraali ja valtion rakennukset.",
+     "leveys": 3904,
+     "korkeus": 1824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monserrate Aeropuerto 050.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monserrate_Aeropuerto_050.jpg?width=1280",
+     "tekija": "Mr tobi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monserrate_Aeropuerto_050.jpg",
+     "selite": "Ilmasta näkyy aukion rakennusten ympäröimä aukio, jonka toisella laidalla seisoo Capitolio.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Navidad Invierno Plaza Bogota - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navidad_Invierno_Plaza_Bogota_-_panoramio.jpg?width=1280",
+     "tekija": "Ricardo Astrauskas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Navidad_Invierno_Plaza_Bogota_-_panoramio.jpg",
+     "selite": "Joulun aikaan aukion yli kohoaa valaistu kuusi katedraalin edessä.",
+     "leveys": 3264,
+     "korkeus": 2040,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1109031",
+   "nimi": "Kultamuseo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 4.60192,
+   "lon": -74.072,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BOG Museo del Oro.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BOG_Museo_del_Oro.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG",
+     "selite": "Kultamuseo säilyttää maailman suurinta esikolumbiaanisen kultaesineistön kokoelmaa Bogotán keskustassa.",
+     "leveys": 3664,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BOG 04 2012 Museo de Oro 1273.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BOG_04_2012_Museo_de_Oro_1273.JPG?width=1280",
+     "tekija": "Mariordo (Mario Roberto Durán Ortiz)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BOG_04_2012_Museo_de_Oro_1273.JPG",
+     "selite": "Museo sijaitsee Parque de Santanderin vieressä korkeiden toimistotornien ympäröimänä.",
+     "leveys": 2100,
+     "korkeus": 1400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "03 pares de orejeras de oro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03_pares_de_orejeras_de_oro.jpg?width=1280",
+     "tekija": "Banrep cultural",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03_pares_de_orejeras_de_oro.jpg",
+     "selite": "Kultaiset korvakorut ovat esimerkkejä esikolumbiaanisten kulttuurien korkeatasoisesta kultasepäntaidosta.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2651388",
+   "nimi": "La Candelaria",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 4.59172,
+   "lon": -74.07413,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bogota-centro.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogota-centro.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Nelammog assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogota-centro.JPG",
+     "selite": "La Candelaria on Bogotán siirtomaa-ajan vanha keskusta, jonka punakattoiset talot ulottuvat Monserraten juurelle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bogota, Colombia - Flickr - szeke.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogota%2C_Colombia_-_Flickr_-_szeke.jpg?width=1280",
+     "tekija": "Pedro Szekely from Los Angeles, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogota%2C_Colombia_-_Flickr_-_szeke.jpg",
+     "selite": "Kapeat mukulakivikujat ovat täynnä katutaidetta.",
+     "leveys": 4678,
+     "korkeus": 3509,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "00-116 Sector Antiguo de la Ciudad de Bogotá.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00-116_Sector_Antiguo_de_la_Ciudad_de_Bogot%C3%A1.JPG?width=1280",
+     "tekija": "EdgarKhan1",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00-116_Sector_Antiguo_de_la_Ciudad_de_Bogot%C3%A1.JPG",
+     "selite": "Vanha kaupunginosa levittäytyy modernin liikekeskustan juurelle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942872",
+   "nimi": "Bogotán katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 4.59795,
+   "lon": -74.07524,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral primada Bogota fachada 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_primada_Bogota_fachada_2025.jpg?width=1280",
+     "tekija": "Cquiran",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_primada_Bogota_fachada_2025.jpg",
+     "selite": "Primaatin katedraali on Bogotán suurin kirkko, ja sen kaksi tornia katsovat Plaza de Bolívarille.",
+     "leveys": 8395,
+     "korkeus": 8417,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral Primada de Colombia FACHADA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_Primada_de_Colombia_FACHADA.jpg?width=1280",
+     "tekija": "NicolasGrisales",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_Primada_de_Colombia_FACHADA.jpg",
+     "selite": "Julkisivun punertava kivi hehkuu auringossa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2021 Bogotá - Catedral Primada de Colombia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_Bogot%C3%A1_-_Catedral_Primada_de_Colombia.jpg?width=1280",
+     "tekija": "Felipe Restrpo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021_Bogot%C3%A1_-_Catedral_Primada_de_Colombia.jpg",
+     "selite": "Katedraali seisoo Plaza de Bolívarin itälaidalla Capitolion ja oikeuspalatsin vieressä.",
+     "leveys": 3176,
+     "korkeus": 3971,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2940775",
+   "nimi": "Casa de Nariño",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 4.59556,
+   "lon": -74.0775,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa-narino-1-fachada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa-narino-1-fachada.jpg?width=1280",
+     "tekija": "Juanjo70000",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa-narino-1-fachada.jpg",
+     "selite": "Casa de Nariño on Kolumbian presidentin virka-asunto, jonka klassinen julkisivu on Bogotán keskustassa.",
+     "leveys": 1840,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Nacional -patio de armas.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Nacional_-patio_de_armas.JPG?width=1280",
+     "tekija": "Cuauhtemoc sanchez fernandez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Nacional_-patio_de_armas.JPG",
+     "selite": "Presidentin vartio järjestää seremonian palatsin pihalla vesialtaan takana.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3329100",
+   "nimi": "Boteron museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 4.5967,
+   "lon": -74.07337,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 Bogotá - Entrada del Museo Botero.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_Bogot%C3%A1_-_Entrada_del_Museo_Botero.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_Bogot%C3%A1_-_Entrada_del_Museo_Botero.jpg",
+     "selite": "Boteron museo esittelee Fernando Boteron lahjoittamaa taidekokoelmaa vanhassa siirtomaa-ajan talossa La Candelariassa.",
+     "leveys": 4900,
+     "korkeus": 3675,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fachada del Museo Botero, cl 11 con kr 4 Bogota.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fachada_del_Museo_Botero%2C_cl_11_con_kr_4_Bogota.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fachada_del_Museo_Botero%2C_cl_11_con_kr_4_Bogota.JPG",
+     "selite": "Museon pitkä julkisivu on valkoinen ja kellertävä kuten kaupunginosan muutkin vanhat talot.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Museo Botero, Bogota (50077504732).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Botero%2C_Bogota_(50077504732).jpg?width=1280",
+     "tekija": "Pedro Szekely from Los Angeles, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Botero%2C_Bogota_(50077504732).jpg",
+     "selite": "Sisäpihaa kiertävät kaaret ja kasvit tekevät museosta rauhallisen vierailukohteen.",
+     "leveys": 3000,
+     "korkeus": 1992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3120855",
+   "nimi": "Torre Colpatria",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 4.61083,
+   "lon": -74.07028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bogota Monserrate desde la Caracas.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogota_Monserrate_desde_la_Caracas.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogota_Monserrate_desde_la_Caracas.jpg",
+     "selite": "Torre Colpatria on Bogotán keskustan korkea toimistotorni, jonka taustalla näkyy Monserrate.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bogota Colpatria av. 26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogota_Colpatria_av._26.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogota_Colpatria_av._26.jpg",
+     "selite": "Torni kohoaa Avenida 26:n varrella keskustan yllä.",
+     "leveys": 4214,
+     "korkeus": 3161,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Vista aérea Bogotá - 15 - Torre Colpatria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_Bogot%C3%A1_-_15_-_Torre_Colpatria.jpg?width=1280",
+     "tekija": "ProtoplasmaKid",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_Bogot%C3%A1_-_15_-_Torre_Colpatria.jpg",
+     "selite": "Illalla tornin julkisivu valaistaan Kolumbian lipun väreillä.",
+     "leveys": 2250,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q671264",
+   "nimi": "Kolumbian kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 4.6155,
+   "lon": -74.0683,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entrada Principal del Museo Nacional de Colombia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrada_Principal_del_Museo_Nacional_de_Colombia.jpg?width=1280",
+     "tekija": "Peter Angritt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrada_Principal_del_Museo_Nacional_de_Colombia.jpg",
+     "selite": "Kansallismuseo toimii entisessä vankilassa, ja sen rakennus muistuttaa linnoitusta.",
+     "leveys": 1949,
+     "korkeus": 1105,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2025-06-03 Museo nacional de Colombia 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-06-03_Museo_nacional_de_Colombia_07.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025-06-03_Museo_nacional_de_Colombia_07.jpg",
+     "selite": "Rakennuksen pitkät, valkoiset kaarikäytävät kertovat sen entisestä käytöstä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2025-06-03 Museo nacional de Colombia 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025-06-03_Museo_nacional_de_Colombia_06.jpg?width=1280",
+     "tekija": "Ziko van Dijk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025-06-03_Museo_nacional_de_Colombia_06.jpg",
+     "selite": "Museon sisällä vanhat vankilakäytävät johtavat näyttelysaleihin.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2972505",
+   "nimi": "Keskushautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 4.61639,
+   "lon": -74.07528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Avenida 26 Cementerio Central Bogotá.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_26_Cementerio_Central_Bogot%C3%A1.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenida_26_Cementerio_Central_Bogot%C3%A1.JPG",
+     "selite": "Keskushautausmaan pylväikköiset holvihaudat reunustavat Avenida 26:ta.",
+     "leveys": 4158,
+     "korkeus": 2879,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bogotá Cementerio Central.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_Cementerio_Central.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_Cementerio_Central.JPG",
+     "selite": "Hautausmaan muistomerkkien ja kryptojen takana kohoaa nykyaikaisen kaupungin siluetti.",
+     "leveys": 3837,
+     "korkeus": 2878,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bogotá pabellones Cementerio Central.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_pabellones_Cementerio_Central.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_pabellones_Cementerio_Central.JPG",
+     "selite": "Pylväiden kannattamat paviljongit sisältävät kerroksittain sijoitettuja hautapaikkoja.",
+     "leveys": 4214,
+     "korkeus": 3161,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q179027",
+   "nimi": "Estadio El Campín",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 4.64589,
+   "lon": -74.0775,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio El Campin vacío.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_El_Campin_vac%C3%ADo.jpg?width=1280",
+     "tekija": "Futbolero",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_El_Campin_vac%C3%ADo.jpg",
+     "selite": "El Campín on Bogotán suurin jalkapallostadion, jonka takana kohoavat itäiset vuoret.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estadio El Campin costado suroccidental.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_El_Campin_costado_suroccidental.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_El_Campin_costado_suroccidental.JPG",
+     "selite": "Stadionin ulkokehä erottuu sinistä taivasta vasten.",
+     "leveys": 4221,
+     "korkeus": 2814,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "BOG El Campin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BOG_El_Campin.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BOG_El_Campin.jpg",
+     "selite": "Kaupunkia ympäröivät vuoret näkyvät stadionin takana.",
+     "leveys": 3788,
+     "korkeus": 1989,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q640718",
+   "nimi": "Nykytaiteen museo MAMBO",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 4.61022,
+   "lon": -74.06933,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MAMBO Norte.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MAMBO_Norte.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MAMBO_Norte.jpg",
+     "selite": "Nykytaiteen museo on rakennettu raakatiilestä ja muistuttaa pelkistettyä veistosta.",
+     "leveys": 3554,
+     "korkeus": 2666,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museo de Arte Moderno de Bogotá - MAMBO 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_Arte_Moderno_de_Bogot%C3%A1_-_MAMBO_1.jpg?width=1280",
+     "tekija": "Gregorio.Diaz.Fotografo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_de_Arte_Moderno_de_Bogot%C3%A1_-_MAMBO_1.jpg",
+     "selite": "Museon takana kohoaa Bogotán keskustan pilvenpiirtäjiä.",
+     "leveys": 4582,
+     "korkeus": 3055,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bogotá exterior Museo de Arte Moderno MAMBO.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_exterior_Museo_de_Arte_Moderno_MAMBO.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_exterior_Museo_de_Arte_Moderno_MAMBO.JPG",
+     "selite": "Rakennuksen kulmikas, tiilinen massa on Rogelio Salmonan suunnittelema.",
+     "leveys": 4264,
+     "korkeus": 3198,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3361008",
+   "nimi": "Oikeuspalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 4.59889,
+   "lon": -74.0756,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bogota Stadt 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogota_Stadt_05.jpg?width=1280",
+     "tekija": "Burkhard Mücke",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogota_Stadt_05.jpg",
+     "selite": "Oikeuspalatsi seisoo Plaza de Bolívarin pohjoislaidalla ja korvasi vuoden 1985 tulipalossa tuhoutuneen rakennuksen.",
+     "leveys": 5184,
+     "korkeus": 2918,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Justicia de Colombia - BOGOTÁ - COLOMBIA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Justicia_de_Colombia_-_BOGOT%C3%81_-_COLOMBIA.jpg?width=1280",
+     "tekija": "I.D. R.J.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Justicia_de_Colombia_-_BOGOT%C3%81_-_COLOMBIA.jpg",
+     "selite": "Nykyinen kivinen julkisivu on Kolumbian korkeimpien oikeusinstanssien kotipaikka.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1284236",
+   "nimi": "Capitolio Nacional",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 4.5975,
+   "lon": -74.07639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Capitolio Nacional (Bogotá, Colombia) 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Capitolio_Nacional_(Bogot%C3%A1%2C_Colombia)_1.jpg?width=1280",
+     "tekija": "Rikimedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Capitolio_Nacional_(Bogot%C3%A1%2C_Colombia)_1.jpg",
+     "selite": "Capitolio Nacional on Kolumbian kongressin neoklassinen palatsi Plaza de Bolívarin eteläreunalla.",
+     "leveys": 3264,
+     "korkeus": 1832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Capitolio Nacional de Colombia (Bogotá) 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capitolio_Nacional_de_Colombia_(Bogot%C3%A1)_02.JPG?width=1280",
+     "tekija": "Racso (Oscar Fernando Gómez)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capitolio_Nacional_de_Colombia_(Bogot%C3%A1)_02.JPG",
+     "selite": "Pylväsjulkisivu katsoo aukiolle, jonka laitaa kulkee vanhan kaupungin katu.",
+     "leveys": 3226,
+     "korkeus": 2424,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Perspectiva de un parte del Capitolio Nacional.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Perspectiva_de_un_parte_del_Capitolio_Nacional.JPG?width=1280",
+     "tekija": "Kamilokardona",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Perspectiva_de_un_parte_del_Capitolio_Nacional.JPG",
+     "selite": "Korkeat pylväät kantavat rakennuksen pitkää julkisivua.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6445036",
+   "nimi": "Hotel Tequendama",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 4.61278,
+   "lon": -74.07278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bogotá Hotel Tequendama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_Hotel_Tequendama.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_Hotel_Tequendama.jpg",
+     "selite": "Hotel Tequendama on punatiilinen modernistinen hotelli Bogotán keskustassa.",
+     "leveys": 3936,
+     "korkeus": 2953,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bogotá carrera 10 Hotel Tequendama.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1_carrera_10_Hotel_Tequendama.JPG?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_carrera_10_Hotel_Tequendama.JPG",
+     "selite": "Hotelli oli kaupungin tunnetuimpia majapaikkoja ja kuuluu nykyään kansallisiin muistomerkkeihin.",
+     "leveys": 4084,
+     "korkeus": 3062,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tequendama hotel Btá .jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tequendama_hotel_Bt%C3%A1_.jpg?width=1280",
+     "tekija": "EEIM",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tequendama_hotel_Bt%C3%A1_.jpg",
+     "selite": "Ilmasta näkyy hotellin suuri ja kulmikas rakennuskompleksi.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Cerros orientales Bogota.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerros_orientales_Bogota.jpg?width=1280",
+   "tekija": "Elviper",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerros_orientales_Bogota.jpg",
+   "selite": "Bogotá levittäytyy Andien tasangolle, ja sen itäpuolella kohoavat Monserraten ja Guadalupen vuoret.",
+   "leveys": 1516,
+   "korkeus": 1137,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skyline downtown Bogota.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_downtown_Bogota.jpg?width=1280",
+   "tekija": "Tijs Zwinkels",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_downtown_Bogota.jpg",
+   "selite": "Keskustan pilvenpiirtäjät kohoavat vanhojen tiilikattojen yli, ja Torre Colpatria hallitsee siluettia.",
+   "leveys": 3888,
+   "korkeus": 2588,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

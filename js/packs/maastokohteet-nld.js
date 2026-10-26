@@ -500,6 +500,7 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'krollermuller',
+    nimio: 'Kröller-Müller',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-krollermuller-91ec189e.jpg',
       lyhyt: 'Kröller-Müllerin museon rakennus ja ympäröivä puisto Otterlossa.',

@@ -34,7 +34,7 @@ export const ASIA_QUESTIONS = {
       source: 'https://fi.wikipedia.org/wiki/Kioto',
     },
     {
-      q: 'Kuinka monta Kioton rakennusta kuuluu Unescon maailmanperintökohteeseen "muinaisen Kioton historialliset monumentit"?',
+      q: 'Kuinka monta Kioton rakennusta kuuluu Unescon maailmanperintökohteeseen ”muinaisen Kioton historialliset monumentit”?',
       options: ['15', '3', '40', '60'],
       correct: 0,
       level: 3,
@@ -193,7 +193,7 @@ export const ASIA_QUESTIONS = {
       correct: 0,
       level: 3,
       hint: 'Kyseessä oli Itä-Intian kauppakomppania, jonka kotimaa hallitsi myöhemmin Intiaa.',
-      fact: 'Ulkomaiset kauppiaat perustivat joen rantaan "13 tehtaan" alueen. Kauppa sai käydä vain kiinalaisten välikäsien kautta.',
+      fact: 'Ulkomaiset kauppiaat perustivat joen rantaan ”13 tehtaan” alueen. Kauppa sai käydä vain kiinalaisten välikäsien kautta.',
       source: 'https://fi.wikipedia.org/wiki/Kanton',
     },
     {
@@ -979,7 +979,7 @@ export const ASIA_QUESTIONS = {
       hint: 'Rata avattiin jo 1888 ja se kiipeää rinnettä.',
     },
     {
-      q: 'Mitä tarkoittaa periaate "yksi maa, kaksi järjestelmää"?',
+      q: 'Mitä tarkoittaa periaate ”yksi maa, kaksi järjestelmää”?',
       options: [
         'Hongkong on osa Kiinaa mutta sillä on oma talous- ja oikeusjärjestelmä',
         'kaksi valtiota jakaa kaupungin',
@@ -2076,7 +2076,7 @@ export const ASIA_QUESTIONS = {
 export const ASIA_FACTS = {
   kioto: [
     'Kioto oli Japanin hallinnollinen keskus vuodesta 794 vuoteen 1868 eli yli tuhannen vuoden ajan.',
-    'Kaupungin alueelta 15 rakennusta kuuluu Unescon maailmanperintökohteeseen "muinaisen Kioton historialliset monumentit".',
+    'Kaupungin alueelta 15 rakennusta kuuluu Unescon maailmanperintökohteeseen ”muinaisen Kioton historialliset monumentit”.',
     'Kioto on rakennettu allaslaaksoon Kamo- ja Katsurajokien varrelle, ja sen ympärillä kohoavat Tanbavuoret.',
     {
       text: 'Keisari muutti itään viisi vuotta sitten, ja vanha pääkaupunki jäi tähän laaksoon kuin kirja auki jätettynä. Kutojien korttelissa työ jatkuu kuin mitään ei olisi tapahtunut, ja epäilen että se on koko kaupungin salaisuus.',
@@ -2104,7 +2104,7 @@ export const ASIA_FACTS = {
   kanton: [
     'Kanton on Guangdongin maakunnan pääkaupunki Helmijoen varrella, noin 145 kilometriä merestä sisämaahan.',
     'Kaupunki sai nimen Guangzhou vuonna 226; suomen Kanton juontuu portugalilaisten 1500-luvulla käyttämästä maakunnan nimestä.',
-    'Brittien Itä-Intian kauppakomppania avasi kaupunkiin tukikohtansa vuonna 1699, ja joen rantaan syntyi "13 tehtaan" alue.',
+    'Brittien Itä-Intian kauppakomppania avasi kaupunkiin tukikohtansa vuonna 1699, ja joen rantaan syntyi ”13 tehtaan” alue.',
     {
       text: 'Täällä ulkomaalainen sai kauppaa käydä vain kiinalaisen välikäden kautta, ja siitä syntyi ensin kiukku ja sitten sota. Oopiumista ei klubilla puhuta, mutta laivat lastattiin sillä.',
       voice: 'isoisa',

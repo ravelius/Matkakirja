@@ -1,0 +1,611 @@
+{
+ "kaupunki": "shanghai",
+ "kaupunkiQ": "Q8686",
+ "kohteet": [
+  {
+   "q": "Q125474",
+   "nimi": "Bund",
+   "peruste": "pelin nosto",
+   "koko_m": 900,
+   "lat": 31.23803,
+   "lon": 121.48614,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shanghai Bund at night 20260417 (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Bund_at_night_20260417_(4).jpg?width=1280",
+     "tekija": "DvTor8303",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_Bund_at_night_20260417_(4).jpg",
+     "selite": "Bundin rantakatua reunustavat 1900-luvun alun pankki- ja hotellirakennukset Huangpu-joen länsirannalla.",
+     "leveys": 4050,
+     "korkeus": 2960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shanghai Bund 1987 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Bund_1987_(1).jpg?width=1280",
+     "tekija": "Till Niermann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_Bund_1987_(1).jpg",
+     "selite": "Bund kulkee Huangpu-joen ja Suzhou-joen yhtymäkohdassa Waibaidun sillan vieressä.",
+     "leveys": 2500,
+     "korkeus": 1655,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2121198",
+   "nimi": "Waibaidun silta",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 31.24519,
+   "lon": 121.4855,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Waibaidu Bridge Shanghai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waibaidu_Bridge_Shanghai.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waibaidu_Bridge_Shanghai.jpg",
+     "selite": "Waibaidun silta on teräksinen ristikkosilta Suzhou-joen yli Bundin pohjoispäässä.",
+     "leveys": 4500,
+     "korkeus": 2535,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Waibaidu Bridge Sidewalk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waibaidu_Bridge_Sidewalk.jpg?width=1280",
+     "tekija": "Windtrain",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waibaidu_Bridge_Sidewalk.jpg",
+     "selite": "Sillan teräsrakenne valmistui vuonna 1907.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q377875",
+   "nimi": "Rauhanhotelli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 31.2411,
+   "lon": 121.4851,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Peace Hotel Shanghai (20191113200641).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peace_Hotel_Shanghai_(20191113200641).jpg?width=1280",
+     "tekija": "N509FZ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peace_Hotel_Shanghai_(20191113200641).jpg",
+     "selite": "Rauhanhotelli on art deco -rakennus Bundin varrella, jonka vihreä pyramidikatto on tunnettu.",
+     "leveys": 7153,
+     "korkeus": 4769,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Peace Hotel and Bank of China Building Shanghai at night 20260417.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peace_Hotel_and_Bank_of_China_Building_Shanghai_at_night_20260417.jpg?width=1280",
+     "tekija": "DvTor8303",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Peace_Hotel_and_Bank_of_China_Building_Shanghai_at_night_20260417.jpg",
+     "selite": "Hotelli ja viereinen pankkirakennus valaistaan öisin kullankeltaisiksi.",
+     "leveys": 2555,
+     "korkeus": 3236,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1328025",
+   "nimi": "Yu-puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 31.22917,
+   "lon": 121.4875,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shanghai - Yu Garden - 0034.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_-_Yu_Garden_-_0034.jpg?width=1280",
+     "tekija": "Stefan Fussan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_-_Yu_Garden_-_0034.jpg",
+     "selite": "Yu-puutarha on Mingin ajan klassinen kiinalainen puutarha vanhan kaupungin keskellä.",
+     "leveys": 5117,
+     "korkeus": 3271,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shanghai, Yuyuan Garden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai%2C_Yuyuan_Garden.jpg?width=1280",
+     "tekija": "Elizaveta Butryn",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai%2C_Yuyuan_Garden.jpg",
+     "selite": "Lammen, kallioiden ja paviljonkien kokonaisuus kuvastaa kiinalaista puutarhataidetta.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q289901",
+   "nimi": "Kaupunginjumalan temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 31.22778,
+   "lon": 121.48806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "City God Temple of Shanghai 21449-Shanghai (32666145040).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_God_Temple_of_Shanghai_21449-Shanghai_(32666145040).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_God_Temple_of_Shanghai_21449-Shanghai_(32666145040).jpg",
+     "selite": "Kaupunginjumalan temppeli on Shanghain vanhan kaupungin taolainen temppeli.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2024-Apr Shanghai City God Temple 上海城隍廟 - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2024-Apr_Shanghai_City_God_Temple_%E4%B8%8A%E6%B5%B7%E5%9F%8E%E9%9A%8D%E5%BB%9F_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2024-Apr_Shanghai_City_God_Temple_%E4%B8%8A%E6%B5%B7%E5%9F%8E%E9%9A%8D%E5%BB%9F_-_img_01.jpg",
+     "selite": "Temppelin portti avautuu vilkkaalle ostoskadulle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19840123",
+   "nimi": "Fuyoun moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 31.2278,
+   "lon": 121.489,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fuyou Road Mosque.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuyou_Road_Mosque.JPG?width=1280",
+     "tekija": "Chongkian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuyou_Road_Mosque.JPG",
+     "selite": "Fuyoun moskeija on pieni moskeija Shanghain vanhassa kaupungissa.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fuyou Road Mosque, Shanghai (2024) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuyou_Road_Mosque%2C_Shanghai_(2024)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuyou_Road_Mosque%2C_Shanghai_(2024)_-_img_01.jpg",
+     "selite": "Rakennuksen julkisivussa on arabialainen ja kiinalainen kirjoitus.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q579977",
+   "nimi": "Nanjing-katu",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 31.23472,
+   "lon": 121.47444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2014.11.15.184722 East Nanjing Road Pedestrian Zone Shanghai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014.11.15.184722_East_Nanjing_Road_Pedestrian_Zone_Shanghai.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014.11.15.184722_East_Nanjing_Road_Pedestrian_Zone_Shanghai.jpg",
+     "selite": "Nanjing-katu on Shanghain tunnetuin kävelykatu ja ostoskatu.",
+     "leveys": 2736,
+     "korkeus": 1824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014.11.15.184711 East Nanjing Road Pedestrian Zone Shanghai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014.11.15.184711_East_Nanjing_Road_Pedestrian_Zone_Shanghai.jpg?width=1280",
+     "tekija": "Hermann Luyken",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014.11.15.184711_East_Nanjing_Road_Pedestrian_Zone_Shanghai.jpg",
+     "selite": "Kadun varrella on neonvalojen ja vanhojen kauppahuoneiden rakennuksia.",
+     "leveys": 2736,
+     "korkeus": 1824,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1051293",
+   "nimi": "Shanghain museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 31.23028,
+   "lon": 121.47056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2010 Shanghai Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010_Shanghai_Museum.jpg?width=1280",
+     "tekija": "Gary Todd",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010_Shanghai_Museum.jpg",
+     "selite": "Shanghain museo on pyöreä rakennus, jonka muoto muistuttaa muinaista pronssiastiaa.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2008 Shanghai People's Square- Shanghai Museum 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008_Shanghai_People's_Square-_Shanghai_Museum_1.jpg?width=1280",
+     "tekija": "Gary Todd",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008_Shanghai_People's_Square-_Shanghai_Museum_1.jpg",
+     "selite": "Museo sijaitsee Kansan aukiolla Shanghain keskustassa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q223207",
+   "nimi": "Oriental Pearl Tower",
+   "peruste": "sitelinks",
+   "koko_m": 470,
+   "lat": 31.24167,
+   "lon": 121.49472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shanghai Oriental Pearl Tower-20150516-RM-123453.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Oriental_Pearl_Tower-20150516-RM-123453.jpg?width=1280",
+     "tekija": "Ermell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_Oriental_Pearl_Tower-20150516-RM-123453.jpg",
+     "selite": "Oriental Pearl Tower on Pudongin tunnetuin torni ja Shanghain symboli.",
+     "leveys": 3966,
+     "korkeus": 2975,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Oriental Pearl Tower in Shanghai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oriental_Pearl_Tower_in_Shanghai.jpg?width=1280",
+     "tekija": "Dmitry A. Mottl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oriental_Pearl_Tower_in_Shanghai.jpg",
+     "selite": "Tornissa on pallomaisia osia, jotka ovat ripustettu teräspilarien varaan.",
+     "leveys": 2000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18547",
+   "nimi": "Shanghai Tower",
+   "peruste": "sitelinks",
+   "koko_m": 630,
+   "lat": 31.2355,
+   "lon": 121.501,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shanghai - Shanghai Tower - 0003(cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_-_Shanghai_Tower_-_0003(cropped).jpg?width=1280",
+     "tekija": "Stefan Fussan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_-_Shanghai_Tower_-_0003(cropped).jpg",
+     "selite": "Shanghai Tower on Kiinan korkein rakennus ja kierteinen pilvenpiirtäjä.",
+     "leveys": 2406,
+     "korkeus": 4307,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shanghai Tower, Shanghai World Financial Center and Jin Mao Tower 20251126.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_Tower%2C_Shanghai_World_Financial_Center_and_Jin_Mao_Tower_20251126.jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_Tower%2C_Shanghai_World_Financial_Center_and_Jin_Mao_Tower_20251126.jpg",
+     "selite": "Kolme tornia muodostavat Lujiazuin pilvenpiirtäjäkolmikon.",
+     "leveys": 2451,
+     "korkeus": 4358,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q80852",
+   "nimi": "Shanghai World Financial Center",
+   "peruste": "sitelinks",
+   "koko_m": 490,
+   "lat": 31.23667,
+   "lon": 121.50278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shanghai World Financial Center + Jin Mao Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_World_Financial_Center_%2B_Jin_Mao_Tower.jpg?width=1280",
+     "tekija": "Ferox Seneca",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_World_Financial_Center_%2B_Jin_Mao_Tower.jpg",
+     "selite": "Shanghai World Financial Center tunnetaan reiästä tornin huipulla.",
+     "leveys": 2165,
+     "korkeus": 3248,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20090426 5223 Shanghai JinMao SWFC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090426_5223_Shanghai_JinMao_SWFC.jpg?width=1280",
+     "tekija": "Architect (Jin Mao Tower): Adrian SmithArchitect(SWFC): Kohn Pedersen FoxPhotographer:Jakub Hałun",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090426_5223_Shanghai_JinMao_SWFC.jpg",
+     "selite": "Torni sijaitsee Jin Mao -tornin vieressä Lujiazuissa.",
+     "leveys": 1960,
+     "korkeus": 2948,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q80813",
+   "nimi": "Jin Mao Tower",
+   "peruste": "sitelinks",
+   "koko_m": 420,
+   "lat": 31.23722,
+   "lon": 121.50139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jin Mao Tower and Shanghai World Financial Center.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jin_Mao_Tower_and_Shanghai_World_Financial_Center.jpg?width=1280",
+     "tekija": "Architect (Jin Mao Tower): Adrian SmithArchitect(SWFC): Kohn Pedersen FoxPhotographer:Erwin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jin_Mao_Tower_and_Shanghai_World_Financial_Center.jpg",
+     "selite": "Jin Mao Tower on portaittainen pilvenpiirtäjä, jonka muoto muistuttaa pagodia.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jin Mao Tower 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jin_Mao_Tower_2.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jin_Mao_Tower_2.jpg",
+     "selite": "Torni valmistui vuonna 1999 ja oli pitkään Kiinan korkein.",
+     "leveys": 4500,
+     "korkeus": 3030,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q403189",
+   "nimi": "Jing'an-temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 31.225,
+   "lon": 121.44083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jing'an Temple Shanghai 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jing'an_Temple_Shanghai_11.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jing'an_Temple_Shanghai_11.jpg",
+     "selite": "Jing'an-temppeli on buddhalainen temppeli pilvenpiirtäjien ympäröimänä.",
+     "leveys": 4200,
+     "korkeus": 2805,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jing'an Temple Shanghai 6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jing'an_Temple_Shanghai_6.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jing'an_Temple_Shanghai_6.jpg",
+     "selite": "Temppelin kultaiset katot erottuvat modernien rakennusten keskeltä.",
+     "leveys": 4200,
+     "korkeus": 2810,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1194232",
+   "nimi": "Lupu-silta",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 31.19139,
+   "lon": 121.47639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lupu Bridge, Huangpu River.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lupu_Bridge%2C_Huangpu_River.JPG?width=1280",
+     "tekija": "Glabb",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lupu_Bridge%2C_Huangpu_River.JPG",
+     "selite": "Lupu-silta on valkoinen kaarisilta Huangpu-joen yli.",
+     "leveys": 2000,
+     "korkeus": 1491,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lupu Bridge, Shanghai, Chine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lupu_Bridge%2C_Shanghai%2C_Chine.jpg?width=1280",
+     "tekija": "Anon user",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lupu_Bridge%2C_Shanghai%2C_Chine.jpg",
+     "selite": "Silta on maailman pisimpiä teräskaarisiltoja.",
+     "leveys": 4624,
+     "korkeus": 2080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1326515",
+   "nimi": "Xintiandi",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 31.2226,
+   "lon": 121.47,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "新天地 = New Heaven & Earth (6033629189).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E5%A4%A9%E5%9C%B0_%3D_New_Heaven_%26_Earth_(6033629189).jpg?width=1280",
+     "tekija": "Can Pac Swire from Toronto, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%A4%A9%E5%9C%B0_%3D_New_Heaven_%26_Earth_(6033629189).jpg",
+     "selite": "Xintiandi on entisen ranskalaisalueen uudistettu kortteli.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Xintiandi Area (6042357841).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xintiandi_Area_(6042357841).jpg?width=1280",
+     "tekija": "Can Pac Swire from Toronto, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xintiandi_Area_(6042357841).jpg",
+     "selite": "Kortteleissa on entisiä shikumen-taloja, joissa on nyt kahviloita ja ravintoloita.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1078123",
+   "nimi": "Kansan aukio",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 31.2309,
+   "lon": 121.4703,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "People's Square Shanghai November 2017 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/People's_Square_Shanghai_November_2017_001.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:People's_Square_Shanghai_November_2017_001.jpg",
+     "selite": "Kansan aukio on Shanghain keskustan suuri puisto- ja aukioalue.",
+     "leveys": 4900,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "People's Square Shanghai November 2017 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/People's_Square_Shanghai_November_2017_003.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:People's_Square_Shanghai_November_2017_003.jpg",
+     "selite": "Aukio on museoiden ja oopperatalon ympäröimä.",
+     "leveys": 5850,
+     "korkeus": 3900,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Pudong Shanghai November 2017 panorama.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pudong_Shanghai_November_2017_panorama.jpg?width=1280",
+   "tekija": "King of Hearts",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_panorama.jpg",
+   "selite": "Pudongin tornit kohoavat Huangpu-joen itärannalla.",
+   "leveys": 10200,
+   "korkeus": 5100,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Shanghai skyline Pudong.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shanghai_skyline_Pudong.jpg?width=1280",
+   "tekija": "Ernest Jourdier",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shanghai_skyline_Pudong.jpg",
+   "selite": "Shanghai on Kiinan suurin kaupunki ja tärkeä satamakaupunki.",
+   "leveys": 4608,
+   "korkeus": 3072,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

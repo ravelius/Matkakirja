@@ -1,0 +1,105 @@
+{
+ "kaupunki": "kappalmas",
+ "kaupunkiQ": "Q1034489",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q1019486",
+   "nimi": "Harper",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 4.36667,
+   "lon": -7.71667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HEARD(1898) 50 Church of Harper, Cape Palmas.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HEARD(1898)_50_Church_of_Harper%2C_Cape_Palmas.jpg?width=1280",
+     "tekija": "Heard, William H. (William Henry), 1850-1937",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HEARD(1898)_50_Church_of_Harper%2C_Cape_Palmas.jpg",
+     "selite": "Harperin episkopaalikirkon kivinen torni oli kaupungin maamerkki 1800-luvun lopulla.",
+     "leveys": 1290,
+     "korkeus": 1402,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1034462",
+   "nimi": "Kap Palmasin majakka",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 4.36639,
+   "lon": -7.72778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Die Gartenlaube (1885) b 378.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Gartenlaube_(1885)_b_378.jpg?width=1280",
+     "tekija": "various",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1885)_b_378.jpg",
+     "selite": "Kap Palmasin kukkulalla seisova majakka opasti purjehtijoita Liberian rannikolle.",
+     "leveys": 2344,
+     "korkeus": 1132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q627944",
+   "nimi": "Cavalla-joki",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 7.5881,
+   "lon": -8.5007,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cavally.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cavally.jpg?width=1280",
+     "tekija": "Gregor Rom",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cavally.jpg",
+     "selite": "Cavalla on Länsi-Afrikan pitkä joki, joka kulkee Liberian ja Norsunluurannikon rajalla.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Taï, commune de Côte d'Ivoire. Frontière avec le Libéria, point de passage sur le Cavally.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ta%C3%AF%2C_commune_de_C%C3%B4te_d'Ivoire._Fronti%C3%A8re_avec_le_Lib%C3%A9ria%2C_point_de_passage_sur_le_Cavally.JPG?width=1280",
+     "tekija": "Kafougue",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ta%C3%AF%2C_commune_de_C%C3%B4te_d'Ivoire._Fronti%C3%A8re_avec_le_Lib%C3%A9ria%2C_point_de_passage_sur_le_Cavally.JPG",
+     "selite": "Joen rantaa Liberian rajalla, jossa joki on yhä tärkeä kulkureitti.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Cape Palmas etch.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Palmas_etch.jpg?width=1280",
+   "tekija": "Wagner & C., Lith., Philadelphia",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Palmas_etch.jpg",
+   "selite": "Kap Palmasin niemi, palmut ja lahti kuvattuna 1800-luvun litografiassa.",
+   "leveys": 1215,
+   "korkeus": 807,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

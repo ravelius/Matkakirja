@@ -1,0 +1,26 @@
+{
+ "huomio": "Pariisin taidemuseon houkutin- ja avausteksti (Sisältökirjuri 16.10.2026, PT 23.43: Ranskan taidemuseo avataan Pariisista, omistaja 23.35). Malli: Rijksmuseumin lahestyminen.json (otsikko + teksti, 4 virkettä). Liitettäväksi Resources/Museo/ranska/lahestyminen.json:iin (kenttä teksti; luonnos voi vaihtua falseksi, kun PT hyväksyy) ja Houkuttimet.cs:ään uusi rivi. Äänitys: ei vielä (aani tyhjä; sarjan Louvre/Orsay-puheet ovat jo olemassa). PÄIVITYS 17.10. (omistajan päätös 16.10. klo 23.53 PT:n kautta): museon nimi \"Louvre\"; teksti kertoo, että saleissa ovat myös Orsayn impressionistit ja Rodinin veistokset (Marmottan pois tekstistä).",
+ "houkutin": {
+  "id": "pariisi",
+  "laji": "Linssi",
+  "kohde": "Taidemuseo",
+  "huom": "Sama kohde-nimi kuin Amsterdamin houkuttimella; Amsterdamin houkutin pois, kun Ranska avataan Pariisista (jos linssi on vain yhdessä kaupungissa)"
+ },
+ "lahestyminen": {
+  "otsikko": "Louvre",
+  "teksti": "Louvre on Ranskan kansallismuseo Pariisissa ja entinen kuninkaanlinna: Filip II rakennutti paikalle linnoituksen noin vuonna 1190, ja palatsi avattiin kansalle museona 1793. Tunnetuimpia teoksia ovat Leonardon Mona Lisa, Kaanaan häät ja Davidin Horatiusten vala. Pelin saleissa ovat Louvren mestariteosten lisäksi myös Orsayn museon impressionistit, kuten Monet, Renoir, Degas ja Cézanne, sekä Rodinin veistokset.",
+  "merkkeja": 412
+ },
+ "faktat": [
+  "Louvre: Filip II:n linnoitus n. 1190, museo 1793 (Louvren oma historia + Wikipedia Louvre; sama kuin hyväksytty Louvre-puhe)",
+  "Orsay: Victor Laloux, asema 1898–1900 (avattu 1900), museo avattu 1986 (Wikipedia Musée d'Orsay + puhe)",
+  "Louvre: Mona Lisa, Kaanaan häät, Horatiusten vala ovat pelin salin teoksia (louvre-inv-779/142/3692)",
+  "Rodin: Hôtel Biron, museo avattu 1919; pelin salin veistokset (sali v2h tyyli)"
+ ],
+ "lahteet": [
+  "https://en.wikipedia.org/wiki/Louvre",
+  "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay",
+  "https://en.wikipedia.org/wiki/Mus%C3%A9e_Marmottan_Monet",
+  "https://en.wikipedia.org/wiki/Mus%C3%A9e_Rodin"
+ ]
+}

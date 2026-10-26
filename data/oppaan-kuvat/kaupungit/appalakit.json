@@ -1,0 +1,401 @@
+{
+ "kaupunki": "appalakit",
+ "kaupunkiQ": "Q93332",
+ "kohteet": [
+  {
+   "q": "Q464004",
+   "nimi": "Great Smoky Mountainsin kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 25000,
+   "lat": 35.61111,
+   "lon": -83.425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Great Smoky Mountains National Park - 53006586346.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Smoky_Mountains_National_Park_-_53006586346.jpg?width=1280",
+     "tekija": "Roller Coaster Philosophy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Smoky_Mountains_National_Park_-_53006586346.jpg",
+     "selite": "Great Smoky Mountainsin metsäiset rinteet kohoavat Appalakkien vanhimpiin vuoriin kuuluvalla harjanteella.",
+     "leveys": 2736,
+     "korkeus": 1824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Great Smoky Mountains.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Smoky_Mountains.jpg?width=1280",
+     "tekija": "Sumitg2ia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Smoky_Mountains.jpg",
+     "selite": "Kuusimetsää ja usvaisia vuorijonoja Great Smoky Mountainsin kansallispuistossa.",
+     "leveys": 4608,
+     "korkeus": 3041,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Autumn colors - Flickr - pellaea.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Autumn_colors_-_Flickr_-_pellaea.jpg?width=1280",
+     "tekija": "Jason Hollinger",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Autumn_colors_-_Flickr_-_pellaea.jpg",
+     "selite": "Syksyn värit sytyttävät lehtimetsät Smoky Mountainsin rinteillä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Great Smoky Mountains Cades Cove View.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Smoky_Mountains_Cades_Cove_View.jpg?width=1280",
+     "tekija": "Vicpeters",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Great_Smoky_Mountains_Cades_Cove_View.jpg",
+     "selite": "Cades Coven avoin laakso on yksi puiston tunnetuimmista näkymistä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q985289",
+   "nimi": "Harpers Ferry",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 39.3254,
+   "lon": -77.7436,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2010-09-02-Harpers-Ferry-From-Maryland-Heights-Panorama-Crop.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-09-02-Harpers-Ferry-From-Maryland-Heights-Panorama-Crop.jpg?width=1280",
+     "tekija": "Mark Fickett",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-09-02-Harpers-Ferry-From-Maryland-Heights-Panorama-Crop.jpg",
+     "selite": "Harpers Ferry sijaitsee Potomacin ja Shenandoahin jokien yhtymäkohdassa vuorten välissä.",
+     "leveys": 5732,
+     "korkeus": 2559,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial Photo of Harpers Ferry (15646790473).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Photo_of_Harpers_Ferry_(15646790473).jpg?width=1280",
+     "tekija": "HarpersFerryNPS",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Photo_of_Harpers_Ferry_(15646790473).jpg",
+     "selite": "Ilmakuvassa näkyy, kuinka kaupunki on puristunut jokien ja jyrkkien rinteiden väliin.",
+     "leveys": 1487,
+     "korkeus": 1039,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Potomac River Crossing after Hurricane Ida, Harpers Ferry, WV.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Potomac_River_Crossing_after_Hurricane_Ida%2C_Harpers_Ferry%2C_WV.jpg?width=1280",
+     "tekija": "Zeete",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Potomac_River_Crossing_after_Hurricane_Ida%2C_Harpers_Ferry%2C_WV.jpg",
+     "selite": "Potomac virtaa Harpers Ferryn rautatiesiltojen ohi läpi Blue Ridgen harjanteen.",
+     "leveys": 2784,
+     "korkeus": 1566,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q615337",
+   "nimi": "Mount Mitchell",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 35.76472,
+   "lon": -82.26528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016-07-25 15 45 56 View north-northwest from the summit of Mount Mitchell, North Carolina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-07-25_15_45_56_View_north-northwest_from_the_summit_of_Mount_Mitchell%2C_North_Carolina.jpg?width=1280",
+     "tekija": "Famartin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-07-25_15_45_56_View_north-northwest_from_the_summit_of_Mount_Mitchell%2C_North_Carolina.jpg",
+     "selite": "Mount Mitchell on Appalakkien ja koko Yhdysvaltain itäosan korkein huippu.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016-07-25 14 15 11 Fraser Fir trees near the summit of Mount Mitchell in Mount Mitchell State Park, North Carolina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-07-25_14_15_11_Fraser_Fir_trees_near_the_summit_of_Mount_Mitchell_in_Mount_Mitchell_State_Park%2C_North_Carolina.jpg?width=1280",
+     "tekija": "Famartin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-07-25_14_15_11_Fraser_Fir_trees_near_the_summit_of_Mount_Mitchell_in_Mount_Mitchell_State_Park%2C_North_Carolina.jpg",
+     "selite": "Fraserinpihtoja kasvaa vain Appalakkien korkeimmilla huipuilla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1137401",
+   "nimi": "Shenandoahin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": 38.5333,
+   "lon": -78.35,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skyline drive 20050521 123518 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_drive_20050521_123518_2.jpg?width=1280",
+     "tekija": "Image copyright 2005 by user G. Edward Johnson (user Lorax) and released under the terms of the GFDL",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_drive_20050521_123518_2.jpg",
+     "selite": "Skyline Drive -tie kiemurtelee Shenandoahin kansallispuiston harjanteita pitkin.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Naked Creek Overlook looking west Shenandoah National Park VA 2022-06-19 10-00-20.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naked_Creek_Overlook_looking_west_Shenandoah_National_Park_VA_2022-06-19_10-00-20.jpg?width=1280",
+     "tekija": "G. Edward Johnson",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naked_Creek_Overlook_looking_west_Shenandoah_National_Park_VA_2022-06-19_10-00-20.jpg",
+     "selite": "Näköalapaikalta avautuu laaja näkymä Blue Ridgen vuorten yli Shenandoahin laaksoon.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Shenandoah National Park, VA - Skyline Drive lookout.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shenandoah_National_Park%2C_VA_-_Skyline_Drive_lookout.jpg?width=1280",
+     "tekija": "MPSharwood",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shenandoah_National_Park%2C_VA_-_Skyline_Drive_lookout.jpg",
+     "selite": "Kivimuurin reunustama näköalapaikka Skyline Drivella.",
+     "leveys": 3228,
+     "korkeus": 2421,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q620648",
+   "nimi": "Appalakkien reitti",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 37.35175,
+   "lon": -80.38108,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "McAfee's Knob - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/McAfee's_Knob_-_panoramio.jpg?width=1280",
+     "tekija": "Idawriter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:McAfee's_Knob_-_panoramio.jpg",
+     "selite": "McAfee Knobin kalliolieve on Appalakkien reitin kuvatuimpia kohtia Virginiassa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Appalachian-trail-big-bald-tnnc1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Appalachian-trail-big-bald-tnnc1.jpg?width=1280",
+     "tekija": "Brian Stansberry",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Appalachian-trail-big-bald-tnnc1.jpg",
+     "selite": "Appalakkien reitti kulkee Big Baldin avoimen ylängön yli Tennesseen ja Pohjois-Carolinan rajalla.",
+     "leveys": 1835,
+     "korkeus": 934,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q585521",
+   "nimi": "Biltmore Estate",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 35.54,
+   "lon": -82.55194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biltmore House, Biltmore Estate, Asheville, NC (31786184897).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(31786184897).jpg?width=1280",
+     "tekija": "Warren LeMay from Cincinnati, OH, United States",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(31786184897).jpg",
+     "selite": "Biltmoren ranskalaistyylinen kartano valmistui Asheville'in laidalle 1800-luvun lopulla.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Biltmore House, Biltmore Estate, Asheville, NC (46002934294).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(46002934294).jpg?width=1280",
+     "tekija": "Warren LeMay from Cincinnati, OH, United States",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(46002934294).jpg",
+     "selite": "Kartanon torni ja kalkkikivijulkisivu kohoavat Blue Ridgen vuorten kupeessa.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Biltmore House, Biltmore Estate, Asheville, NC (46002932764).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(46002932764).jpg?width=1280",
+     "tekija": "Warren LeMay from Cincinnati, OH, United States",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_(46002932764).jpg",
+     "selite": "Kartanon sisäpihan kaarikäytävä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q685166",
+   "nimi": "Kuwohi (Clingmans Dome)",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 35.56278,
+   "lon": -83.49861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Clingmans Dome observation tower TN2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clingmans_Dome_observation_tower_TN2.jpg?width=1280",
+     "tekija": "Acroterion",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clingmans_Dome_observation_tower_TN2.jpg",
+     "selite": "Kuwohin betoninen näkötorni ja sen kaareva luiska nousevat havumetsän yläpuolelle.",
+     "leveys": 5308,
+     "korkeus": 3645,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clingmans Dome observation tower TN1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clingmans_Dome_observation_tower_TN1.jpg?width=1280",
+     "tekija": "Acroterion",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clingmans_Dome_observation_tower_TN1.jpg",
+     "selite": "Kuwohi on Great Smoky Mountainsin korkein huippu.",
+     "leveys": 5472,
+     "korkeus": 3203,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "View east from Clingman's Dome GSMNP NC1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_east_from_Clingman's_Dome_GSMNP_NC1.jpg?width=1280",
+     "tekija": "Acroterion",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_east_from_Clingman's_Dome_GSMNP_NC1.jpg",
+     "selite": "Huipulta näkyy Appalakkien harjanteita horisonttiin saakka.",
+     "leveys": 5472,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1982908",
+   "nimi": "New River Gorge -silta",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 38.06889,
+   "lon": -81.0825,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "New River Gorge Bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_River_Gorge_Bridge.jpg?width=1280",
+     "tekija": "JaGa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_River_Gorge_Bridge.jpg",
+     "selite": "Teräskaari ylittää syvän New River Gorgen Länsi-Virginiassa.",
+     "leveys": 6000,
+     "korkeus": 2844,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017-09-08 13 59 36 View northwest down the New River towards the New River Gorge Bridge (U.S. Route 19) from the Tunney Hunsaker Bridge (Fayette County Route 82) over the New River between Fayette and South Fayette in Fayette County, West Virginia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-09-08_13_59_36_View_northwest_down_the_New_River_towards_the_New_River_Gorge_Bridge_(U.S._Route_19)_from_the_Tunney_Hunsaker_Bridge_(Fayette_County_Route_82)_over_the_New_River_between_Fayette_and_South_Fayette_in_Fayette_County%2C_West_Virginia.jpg?width=1280",
+     "tekija": "Famartin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-09-08_13_59_36_View_northwest_down_the_New_River_towards_the_New_River_Gorge_Bridge_(U.S._Route_19)_from_the_Tunney_Hunsaker_Bridge_(Fayette_County_Route_82)_over_the_New_River_between_Fayette_and_South_Fayette_in_Fayette_County%2C_West_Virginia.jpg",
+     "selite": "New River virtaa sillan alla metsäisen rotkon pohjalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View of Blue Ridge Mountains from Sassafras Mountain, Pickens County SC 20160701 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Blue_Ridge_Mountains_from_Sassafras_Mountain%2C_Pickens_County_SC_20160701_1.jpg?width=1280",
+   "tekija": "DXR",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Blue_Ridge_Mountains_from_Sassafras_Mountain%2C_Pickens_County_SC_20160701_1.jpg",
+   "selite": "Appalakkien metsäiset harjanteet häviävät siniseen usvaan Blue Ridgen vuorilla.",
+   "leveys": 11329,
+   "korkeus": 4441,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Autumn along Blue Ridge Parkway.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Autumn_along_Blue_Ridge_Parkway.jpg?width=1280",
+   "tekija": "Frankaustx",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Autumn_along_Blue_Ridge_Parkway.jpg",
+   "selite": "Syksyn värit peittävät Appalakkien pyöreät, vanhat vuoret.",
+   "leveys": 4128,
+   "korkeus": 2322,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

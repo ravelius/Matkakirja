@@ -398,7 +398,10 @@ test('10. lattiakertoimella ladottu nimi ei lukitu eikä näy; perillä tuore si
 
   const matka = ymparisto();
   matka.nimet.lado(MAAILMA);
-  assert.ok(matka.nimet.nimetty('pariisi'), 'lattiassa kaupunki pysyy nimettynä (piste jää)');
+  // Tavallinen kaupunki: Pariisi on 11.10.2026 alkaen aloituskaupunki
+  // (start + airport = iso nimi), eikä iso nimi mahdu lattiassa kuten ei
+  // Lontoon tai Tukholmankaan, joten nimettynä pysymisen mittaa Bryssel.
+  assert.ok(matka.nimet.nimetty('bryssel'), 'lattiassa kaupunki pysyy nimettynä (piste jää)');
   assert.equal(matka.sijoitukset().size, 0, 'lattiassa ei yhtään nimeä ruudulle');
   matka.nimet.lado(PERILLA);
 

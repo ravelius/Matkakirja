@@ -1,0 +1,225 @@
+{
+ "kaupunki": "kimberley",
+ "kaupunkiQ": "Q125905",
+ "kohteet": [
+  {
+   "q": "Q19040",
+   "nimi": "Big Hole",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": -28.73889,
+   "lon": 24.75889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Open pit mine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Open_pit_mine.jpg?width=1280",
+     "tekija": "Irene2005",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Open_pit_mine.jpg",
+     "selite": "Big Hole on käsin kaivettu entinen timanttikaivos, jonka pohjalla on nykyään vihreä vesi.",
+     "leveys": 2832,
+     "korkeus": 2128,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Big Hole, Kimberley, Northern Cape, South Africa (20512571296).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Hole%2C_Kimberley%2C_Northern_Cape%2C_South_Africa_(20512571296).jpg?width=1280",
+     "tekija": "South African Tourism from South Africa",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Hole%2C_Kimberley%2C_Northern_Cape%2C_South_Africa_(20512571296).jpg",
+     "selite": "Kaivoskuoppa sijaitsee aivan Kimberleyn keskustan tuntumassa.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Big Hole Kimberley.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Hole_Kimberley.jpg?width=1280",
+     "tekija": "Rudolph Botha",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Hole_Kimberley.jpg",
+     "selite": "Kuopan jyrkät kallioseinämät louhittiin 1870-luvun timanttirynnistyksessä lapioin ja hakuin.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Big Hole Kimberley RSA (JAR) (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Hole_Kimberley_RSA_(JAR)_(2).jpg?width=1280",
+     "tekija": "Lubor Ferenc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Hole_Kimberley_RSA_(JAR)_(2).jpg",
+     "selite": "Kuopan reunalta kaupungin korkeat talot erottuvat horisontissa.",
+     "leveys": 1335,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1388058",
+   "nimi": "Magersfontein",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -28.96944,
+   "lon": 24.69833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Magersfontein Monument,Northern Cape ,South Africa 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Magersfontein_Monument%2CNorthern_Cape_%2CSouth_Africa_03.jpg?width=1280",
+     "tekija": "Pereng051",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Magersfontein_Monument%2CNorthern_Cape_%2CSouth_Africa_03.jpg",
+     "selite": "Magersfonteinin muistomerkki kertoo burien voitosta britteihin joulukuussa 1899.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Magersfontein Monument,Northern Cape ,South Africa 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Magersfontein_Monument%2CNorthern_Cape_%2CSouth_Africa_14.jpg?width=1280",
+     "tekija": "Pereng051",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Magersfontein_Monument%2CNorthern_Cape_%2CSouth_Africa_14.jpg",
+     "selite": "Kolmiomainen betonimuistomerkki ja obeliski taistelukentän keskellä savannilla.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7833229",
+   "nimi": "Kimberleyn raitiovaunut",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -28.7444,
+   "lon": 24.7717,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Historical tramway at Market Square Kimberley.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historical_tramway_at_Market_Square_Kimberley.jpeg?width=1280",
+     "tekija": "Hansm",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historical_tramway_at_Market_Square_Kimberley.jpeg",
+     "selite": "Oranssi museoraitiovaunu seisoo Market Squarella, kaupungin vanhassa keskustassa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Doprava ve městě.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doprava_ve_m%C4%9Bst%C4%9B.jpg?width=1280",
+     "tekija": "Richtr Jan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doprava_ve_m%C4%9Bst%C4%9B.jpg",
+     "selite": "Kimberleyn vanhat raitiovaunut ovat säilyneet museona vanhan rakennuksen edessä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6409865",
+   "nimi": "Kimberleyn rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -28.73528,
+   "lon": 24.76972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Station Kimberley.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Station_Kimberley.JPG?width=1280",
+     "tekija": "Col André Kritzinger",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Station_Kimberley.JPG",
+     "selite": "Aseman pitkä laiturikatos muistuttaa ajasta, jolloin rata toi kaupunkiin timanttiryntääjät.",
+     "leveys": 1280,
+     "korkeus": 932,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7555565",
+   "nimi": "Sol Plaatje -museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -28.746,
+   "lon": 24.7635,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sol Plaatje Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sol_Plaatje_Museum.jpg?width=1280",
+     "tekija": "TwinMosia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sol_Plaatje_Museum.jpg",
+     "selite": "Museo ja kirjasto toimivat kirjailija ja aktivisti Sol Plaatjen entisessä kodissa.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1141523",
+   "nimi": "Kimberleyn lentokenttä",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -28.80167,
+   "lon": 24.76361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wikimania by Rehman - 2018-07-17 - A005 - Precon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wikimania_by_Rehman_-_2018-07-17_-_A005_-_Precon.jpg?width=1280",
+     "tekija": "Rehman Abubakr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wikimania_by_Rehman_-_2018-07-17_-_A005_-_Precon.jpg",
+     "selite": "Kentän kaksi risteävää kiitotietä erottuvat ilmasta kuivalla savannilla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kimberley-001.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kimberley-001.jpg?width=1280",
+   "tekija": "NJR ZA",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kimberley-001.jpg",
+   "selite": "Kimberleyn keskustan horisontti kohoaa Big Holen kaivoskuopan takana.",
+   "leveys": 3888,
+   "korkeus": 2592,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

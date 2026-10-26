@@ -31,6 +31,7 @@ export const LINSSI = {
 
   nimi: 'Karttapallo',
   lyhyt: 'Isoisän juliste pallona: pyöritä maailmaa ja napauta kohtaa, johon haluat sukeltaa.',
+  esittely: 'Isoisän juliste pallona: pyöritä maailmaa ja napauta kohtaa, johon haluat sukeltaa.',
   // Pallo pystyakselilla ja päiväntasaajan ellipsi.
   ikoni: '<circle cx="12" cy="12" r="8"/>'
     + '<path d="M4.4 12h15.2"/>'

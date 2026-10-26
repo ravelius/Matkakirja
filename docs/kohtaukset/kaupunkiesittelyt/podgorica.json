@@ -1,0 +1,101 @@
+[
+  {
+    "id": "podgorica",
+    "esittely": "Kartan alue on Podgorican keskusta Ribnican ja Moračan yhtymäkohdassa. Osmanit valtasivat kaupungin 1474, ja se liitettiin Montenegroon 1878 Berliinin kongressin päätöksellä. Vuosina 1946–1992 kaupungin nimi oli Titograd Josip Broz Titon mukaan.\n\nSahat kula -kellotorni on ottomaanien ajalta ja 19 metriä korkea. Ribnican linnoitus rakennettiin 1400-luvun lopulla osmanien vallan aikana. Millennium-sillan pylon on 57 metriä korkea, ja silta avattiin 13. heinäkuuta 2005. Kristuksen ylösnousemuksen katedraalin rakentaminen alkoi 1993, ja se vihittiin 2013. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 611,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Podgorica",
+        "title": "Wikipedia: Podgorica",
+        "tukee": "Ribnican ja Moračan yhtymäkohta; ottomaanit 1474; liitetty Montenegroon Berliinin kongressin 1878 jälkeen; Titograd 1946, nimi palautettiin 1992"
+      },
+      {
+        "url": "https://www.britannica.com/place/Podgorica",
+        "title": "Britannica: Podgorica (hakutulos, 403)",
+        "tukee": "Ribnican ja Moračan yhtymäkohta; kaupunki joutui turkkilaisille 1474 ja palautui Montenegrolle 1878 (Berliinin kongressi); Titograd 1992 asti"
+      },
+      {
+        "url": "https://www.photomontenegro.me/en/podgorica/",
+        "title": "Photo Montenegro: Podgorica",
+        "tukee": "1474 turkkilainen miehitys; 1878 Berliinin kongressi; 'From 1946 to 1992 ... Titograd in honor of Tito'; turkkilainen kellotorni"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Titograd",
+        "title": "Wikipedia: Titograd",
+        "tukee": "nimetty Titon kunniaksi; 1946; palautettu 1992 (kansanäänestys 2.4.1992)"
+      },
+      {
+        "url": "https://www.spomenikdatabase.org/post/tito-towns-a-history-of-names",
+        "title": "Spomenik Database: Tito Towns",
+        "tukee": "nimenmuutos 13.7.1946; palautus Podgoricaksi 1992 (2.4.1992)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Clock_Tower_(Podgorica)",
+        "title": "Wikipedia: Clock Tower (Podgorica)",
+        "tukee": "ottomaanien aikainen kivinen kellotorni, 19 m"
+      },
+      {
+        "url": "https://www.myguidemontenegro.com/things-to-do/sahat-tower-and-stara-varos",
+        "title": "My Guide Montenegro: Sahat tower",
+        "tukee": "torni 19 m; rakennettu 1600-luvun lopulla; rukousaikojen ilmoittamiseen"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ribnica_(fortress)",
+        "title": "Wikipedia: Ribnica (fortress)",
+        "tukee": "rakennettu 1400-luvun lopulla (noin 1477) osmanien aikana; joenhaarojen yhtymäkohdan yläpuolella"
+      },
+      {
+        "url": "https://montenegro-for.me/2018/04/5-forgotten-fortresses-in-central-montenegro/",
+        "title": "Montenegro For Me: Forgotten fortresses",
+        "tukee": "osmanit rakensivat linnoituksen valloituksensa (1474) jälkeen; Moračan ja Ribnican yhtymäkohdassa"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Millennium_Bridge_(Podgorica)",
+        "title": "Wikipedia: Millennium Bridge (Podgorica)",
+        "tukee": "avattu 13.7.2005; pylon 57 m; kaapeliharustettu silta Moračan yli"
+      },
+      {
+        "url": "https://ponting.si/en/projects/millennium-bridge-40.html",
+        "title": "Ponting (suunnittelutoimisto): Millennium Bridge",
+        "tukee": "pylon 57 m; valmis 2005"
+      },
+      {
+        "url": "https://structurae.net/en/structures/millennium-bridge-2005",
+        "title": "Structurae: Millennium Bridge (hakutulos, 403)",
+        "tukee": "avattu liikenteelle 13.7.2005; pylon 57 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Cathedral_of_the_Resurrection_of_Christ,_Podgorica",
+        "title": "Wikipedia: Cathedral of the Resurrection of Christ, Podgorica",
+        "tukee": "rakentaminen alkoi 1993; vihitty 2013"
+      },
+      {
+        "url": "https://orthodoxartsjournal.org/a-new-cathedral-for-montenegro-thoughts-on-the-architecture/",
+        "title": "Orthodox Arts Journal: A New Cathedral for Montenegro (9.10.2013)",
+        "tukee": "rakentaminen alkoi 1993; katedraali vihittiin lokakuussa 2013"
+      }
+    ],
+    "pudotetut": [
+      "Sahat kulan rakennusvuosisata: Wikipedia 1667 ja My Guide 1600-luvun loppu, mutta Britannica (hakutulos) 'myöhäinen 1700-luku' -> vuosisata pudotettu, jäljellä 'ottomaanien ajalta' ja 19 m; rakentajan nimi (Hadži-paša vs. Mehmed-paša Osmanagić) pudotettu",
+      "Sahat kula -nimen merkitys: ei lähdettä -> pudotettu",
+      "Vanha silta Ribnican yli: 'rakennettu roomalaisaikana' + 'uudistettu 1700-luvulla' vain Wikipedia ja siitä kopioivat/lähteettömät matkasivut; muissa lähteissä ottomaanien 1400-luku -> pudotettu kokonaan",
+      "Ottomaanien toinen valloitus 1484 (vain Wikipedia) -> pudotettu; käytetty 1474 (Wikipedia, Britannica, Photo Montenegro, Montenegro For Me)",
+      "Millennium-sillan pituus: 173 m (Wikipedia, Structurae) vs. 181 m (Ponting) vs. 140 m (jänneväli/matkasivu) -> pudotettu; vanhan tekstin 57 m ja 13.7.2005 säilytetty",
+      "Katedraalin tarkka vihkiäispäivä (4.10.2013 vain yhdessä lähteessä; OAJ:n 'maanantai' ei täsmää) -> vain vuosi 2013; Structurae antaa valmistumisvuodeksi 1999 -> ei mainita valmistumista",
+      "Ribnican linnoituksen rakennusvuosi 1474/1477 sekä 12. vuosisadan Nemanja-perimätieto -> vain '1400-luvun lopulla'; salamaniskun räjähdys 1878 vain Wikipedia -> pudotettu",
+      "Itsenäisyydenaukio: ei todennettua tietoa kahdesta lähteestä -> ei faktamainintaa tekstissä",
+      "Vanhan tekstin 'Montenegro sai kaupungin 1878' muotoiltu 'liitettiin Montenegroon 1878 Berliinin kongressin päätöksellä'; 'Moračan ja Ribnican yhtymäkohta' säilytetty",
+      "Titograd-nimen 13.7.1946 päivämäärä ja 2.4.1992: vahvistettu, mutta lähteet vaihtelevat muodollistamisesta (1948) -> vain vuodet 1946-1992"
+    ],
+    "ristiriidat": [
+      "Ottomaanien valtaus 1474 (kaikki) vs. 'putosi uudelleen 1484' (Wikipedia, yksin) -> käytetty 1474",
+      "Sahat kula: 1667 (Wikipedia) vs. 1600-luvun loppu (My Guide) vs. 1700-luvun loppu (Britannica) -> vuosisata jätetty pois",
+      "Millennium-sillan pituus 173 / 181 / 140 m -> jätetty pois",
+      "Ribnican linnoitus: valtaus 1474 vs. rakennus noin 1477 -> '1400-luvun lopulla'",
+      "Katedraali: Wikipedian vihkiminen 2013 vs. Structuraen valmistuminen 1999 -> käytetty Wikipediaa ja Orthodox Arts Journalia, sanottu 'vihittiin 2013'",
+      "Britannican lasten sivun väite, ettei Montenegroa koskaan hallinnut Osmanien valtakunta, on ristiriidassa Podgorica-artikkelin kanssa -> ei käytetty"
+    ],
+    "muutos_sk": "Säilytetty: Ribnican ja Moračan yhtymäkohta, osmanit 1474, Montenegro 1878, Titograd 1946-1992, Sahat kula, Ribnican linnoitus, Millennium-silta (57 m, 13.7.2005), katedraali (1993/2013). Lisätty: Sahat kulan 19 m, Berliinin kongressi, linnoituksen ajoitus 1400-luvun lopulle, Titon nimimaininta. Poistettu: Sahat kulan '1600-luvulla', Vanha silta (ei todennettu), Itsenäisyydenaukio (ei faktaa), 'Vanha kaupunki / uudempi puoli' -jaottelu ja katedraalin 'vihkiäiset pidettiin' -muotoilu korvattu 'vihittiin 2013'."
+  }
+]

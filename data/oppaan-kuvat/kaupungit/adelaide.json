@@ -1,0 +1,473 @@
+{
+ "kaupunki": "adelaide",
+ "kaupunkiQ": "Q5112",
+ "kohteet": [
+  {
+   "q": "Q2462430",
+   "nimi": "Adelaide Oval",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -34.91556,
+   "lon": 138.59611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide Oval - panoramio (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Oval_-_panoramio_(cropped).jpg?width=1280",
+     "tekija": "Trentino Priori",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Oval_-_panoramio_(cropped).jpg",
+     "selite": "Adelaide Oval on Torrens-joen rannan krikettikenttä ja stadion, jonka katoksia kannattavat valkoiset kaaret.",
+     "leveys": 1251,
+     "korkeus": 782,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20,000 Came for No Game (19258518003).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20%2C000_Came_for_No_Game_(19258518003).jpg?width=1280",
+     "tekija": "Michael Coghlan from Adelaide, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20%2C000_Came_for_No_Game_(19258518003).jpg",
+     "selite": "Stadionin katettu eteläpääty kohoaa kentän yllä Torrens-joen puistovyöhykkeellä.",
+     "leveys": 1598,
+     "korkeus": 1196,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2918618",
+   "nimi": "St Peterin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -34.91278,
+   "lon": 138.59812,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "StPeter 2179.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/StPeter_2179.jpg?width=1280",
+     "tekija": "Mike Lehmann, Mike Switzerland 09:46, 28 February 2007 (UTC)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:StPeter_2179.jpg",
+     "selite": "Anglikaanisen katedraalin kaksi tornia kohoavat North Adelaiden kukkulalla.",
+     "leveys": 1365,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adelaide Cathedral. SA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Cathedral._SA.jpg?width=1280",
+     "tekija": "Amanda Slater",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Cathedral._SA.jpg",
+     "selite": "Gotiikkaa jäljittelevä hiekkakivikatedraali on rakennettu 1800-luvun lopulla.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Adelaide Light Trail HDR (8239025608).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Light_Trail_HDR_(8239025608).jpg?width=1280",
+     "tekija": "Ikhwan Zailani yuslim | honestly lazy from Adelaide, South Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Light_Trail_HDR_(8239025608).jpg",
+     "selite": "Katedraalin tornit erottuvat hämärässä North Adelaiden kadun päässä.",
+     "leveys": 2501,
+     "korkeus": 3558,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q705557",
+   "nimi": "Etelä-Australian taidegalleria",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -34.92056,
+   "lon": 138.60389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Main entrance of the Art Gallery of South Australia (DSCF3673).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_entrance_of_the_Art_Gallery_of_South_Australia_(DSCF3673).jpg?width=1280",
+     "tekija": "Yu Chu Chin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_entrance_of_the_Art_Gallery_of_South_Australia_(DSCF3673).jpg",
+     "selite": "Taidegallerian klassinen pylväsjulkisivu on North Terracen varrella.",
+     "leveys": 7117,
+     "korkeus": 4745,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adelaide - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_-_panoramio.jpg?width=1280",
+     "tekija": "salnig",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_-_panoramio.jpg",
+     "selite": "Galleria on yksi North Terracen kulttuurirakennuksista, ja julkisivu valaistaan juhlien aikaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q251224",
+   "nimi": "Torrens-joki",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -34.91667,
+   "lon": 138.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide-TorrensRiver.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide-TorrensRiver.jpg?width=1280",
+     "tekija": "User:Chuq",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide-TorrensRiver.jpg",
+     "selite": "Torrens-joki on padottu keskustan pohjoispuolella pitkäksi järveksi, jonka rannoilla on puistoja.",
+     "leveys": 1224,
+     "korkeus": 816,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ACC - NYE low res-69.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ACC_-_NYE_low_res-69.jpg?width=1280",
+     "tekija": "Anonymous tapir",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ACC_-_NYE_low_res-69.jpg",
+     "selite": "Torrens Lake kiertää Adelaide Ovalin ja Festival Centren välissä kaupungin sydämessä.",
+     "leveys": 5739,
+     "korkeus": 3472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2546445",
+   "nimi": "Etelä-Australian museo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -34.92049,
+   "lon": 138.60319,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "22042010 SA Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/22042010_SA_Museum.jpg?width=1280",
+     "tekija": "Ozeye",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:22042010_SA_Museum.jpg",
+     "selite": "Luonnonhistoriallinen museo toimii hiekkakivirakennuksessa North Terracella.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "14 Pieces in front of the SA Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/14_Pieces_in_front_of_the_SA_Museum.jpg?width=1280",
+     "tekija": "CatherineSAHistory",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:14_Pieces_in_front_of_the_SA_Museum.jpg",
+     "selite": "Museon edustalla on taidetta aukiolla, jonka reunalla vanha rakennus kohoaa.",
+     "leveys": 3648,
+     "korkeus": 2432,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4681712",
+   "nimi": "Adelaide Festival Centre",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -34.9194,
+   "lon": 138.598,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide Festival Centre at Night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Festival_Centre_at_Night.jpg?width=1280",
+     "tekija": "Keir Gravil",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Festival_Centre_at_Night.jpg",
+     "selite": "Festival Centren valkoiset katot kohoavat Torrens-joen rannalla keskustan pohjoislaidalla.",
+     "leveys": 5984,
+     "korkeus": 2996,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adelaide (39253741064).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_(39253741064).jpg?width=1280",
+     "tekija": "Travellers travel photobook from Melbourne, Australia, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_(39253741064).jpg",
+     "selite": "Festival Centre ja rantahotelli heijastuvat illalla Torrens-joen veteen.",
+     "leveys": 2738,
+     "korkeus": 1825,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4681798",
+   "nimi": "Adelaiden kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -34.9261,
+   "lon": 138.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide Town Hall in July 2026 (028A8353).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Town_Hall_in_July_2026_(028A8353).jpg?width=1280",
+     "tekija": "Yu Chu Chin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Town_Hall_in_July_2026_(028A8353).jpg",
+     "selite": "Kaupungintalon kellotorni kohoaa King William Streetin ja Pirie Streetin kulmassa.",
+     "leveys": 6464,
+     "korkeus": 4310,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4681770",
+   "nimi": "Adelaiden rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -34.92111,
+   "lon": 138.59556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide Railway Station in South Australia, June 2026 (028A7191).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_Railway_Station_in_South_Australia%2C_June_2026_(028A7191).jpg?width=1280",
+     "tekija": "Yu Chu Chin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_Railway_Station_in_South_Australia%2C_June_2026_(028A7191).jpg",
+     "selite": "Rautatieasema on hiekkakivirakennus North Terracen varrella keskustan pohjoisreunalla.",
+     "leveys": 6564,
+     "korkeus": 4376,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3108740",
+   "nimi": "Glenelg",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -34.982,
+   "lon": 138.516,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adelaide - Glenelg Beach (4158746916).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_-_Glenelg_Beach_(4158746916).jpg?width=1280",
+     "tekija": "eyeintim",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_-_Glenelg_Beach_(4158746916).jpg",
+     "selite": "Glenelgin Moseley Squarella kellotorni ja palmut avautuvat rantaa kohti.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "After the Storm HDR (8250220384) (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/After_the_Storm_HDR_(8250220384)_(cropped).jpg?width=1280",
+     "tekija": "Ikhwan Zailani yuslim | honestly lazy from Adelaide, South Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:After_the_Storm_HDR_(8250220384)_(cropped).jpg",
+     "selite": "Glenelgin laituri ja aallonmurtajat suojaavat rantakaupunkia Saint Vincentin lahdella.",
+     "leveys": 3031,
+     "korkeus": 1896,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4681683",
+   "nimi": "Adelaiden kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -34.9175,
+   "lon": 138.6125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palm house, Adelaide Botanic Gardens - oblique.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palm_house%2C_Adelaide_Botanic_Gardens_-_oblique.JPG?width=1280",
+     "tekija": "Peripitus",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palm_house%2C_Adelaide_Botanic_Gardens_-_oblique.JPG",
+     "selite": "Palmuhuone vuodelta 1877 on viktoriaanista rauta- ja lasiarkkitehtuuria puutarhan keskellä.",
+     "leveys": 2964,
+     "korkeus": 1848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adelaide (28221477999).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_(28221477999).jpg?width=1280",
+     "tekija": "Travellers travel photobook from Melbourne, Australia, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_(28221477999).jpg",
+     "selite": "Puutarhan köynnöstunneli on varjoisa kävelyreitti keskustan itälaidalla.",
+     "leveys": 2738,
+     "korkeus": 1825,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1540454",
+   "nimi": "Kuvernöörintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -34.9201,
+   "lon": 138.6,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Government House Adelaide.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Government_House_Adelaide.jpg?width=1280",
+     "tekija": "Peripitus",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Government_House_Adelaide.jpg",
+     "selite": "Etelä-Australian kuvernöörin virka-asunto on vaalea siirtokunta-ajan talo North Terracella.",
+     "leveys": 3000,
+     "korkeus": 2220,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q547709",
+   "nimi": "Hahndorf",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": -35.01667,
+   "lon": 138.81667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HahndorfSA.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HahndorfSA.JPG?width=1280",
+     "tekija": "Yeti Hunter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HahndorfSA.JPG",
+     "selite": "Hahndorfin pääkatu on Australian vanhimman saksalaissiirtokunnan keskus Adelaide Hillsissä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q698920",
+   "nimi": "Barossan laakso",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": -34.53333,
+   "lon": 138.95,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Vineyards in Barossa Valley.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Vineyards_in_Barossa_Valley.jpg?width=1280",
+     "tekija": "Tam",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Vineyards_in_Barossa_Valley.jpg",
+     "selite": "Barossan laakso on viininviljelyaluetta noin 60 km Adelaidesta koilliseen.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tanunda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanunda.jpg?width=1280",
+     "tekija": "No machine-readable author provided. ScottDavis assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tanunda.jpg",
+     "selite": "Viinitarhat levittäytyvät Tanundan ympärillä aukealle laaksolle.",
+     "leveys": 2032,
+     "korkeus": 1107,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Adelaide city centre view crop.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_city_centre_view_crop.jpg?width=1280",
+   "tekija": "Normangerman at English Wikipedia",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_city_centre_view_crop.jpg",
+   "selite": "Adelaiden keskusta lepää ruutukaavan puistovyöhykkeen sisällä, ja Mount Lofty Ranges nousee sen takana.",
+   "leveys": 2929,
+   "korkeus": 2160,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Adelaide skyline, December 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adelaide_skyline%2C_December_2022.jpg?width=1280",
+   "tekija": "Ardash Muradian from Australia",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adelaide_skyline%2C_December_2022.jpg",
+   "selite": "Adelaiden siluetti kohoaa Torrens-joen yli, etualalla Festival Centre.",
+   "leveys": 2048,
+   "korkeus": 983,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q3244627",
+   "nimi": "Adelaiden eläintarha",
+   "peruste": "pelin nosto",
+   "lat": -34.91409,
+   "lon": 138.60579,
+   "syy": "ei kelvollista vapaata kuvaa >= 1200 px (vain vanhoja mustavalkokuvia ja eläinkuvia)"
+  }
+ ]
+}

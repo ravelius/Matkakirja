@@ -52,7 +52,8 @@ export function maamerkkiKokoelma(taulukko, kaupunkiIdt) {
       + 'mallin origo = jalka maan tasolla), suunta (° pohjoisesta myötäpäivään), mallinKorkeus (m), malli { url (GLB: '
       + 'yksi verkko, yksi materiaali, upotettu PNG-atlas), sha256, tavuja }, lisenssi, tekija, lahde. Mallin kehys glTF '
       + '+Y ylös, −Z pohjoinen (natiivissa +Z pohjoinen, +X itä). Rivin puute = ei maamerkkiä. Malli on myös maan '
-      + 'offline-medialistassa (offline.json maat[].media).',
+      + 'offline-medialistassa (offline.json maat[].media). aina (valinnainen, oletus false): näkyy kartalla koko ajan, '
+      + 'ei vain lennon kaupungeissa (ISS-raketti Andøyassa, natiivi 183+; vanhemmat näyttävät sen Tromssan lennoilla).',
     { kaupunki: 'kaupungit' }, rivit.map((r) => ({ ...r })));
 }
 

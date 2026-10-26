@@ -11,6 +11,7 @@
  * Ilman kaupunkeja generoi kaikki. Avain kierrätetään ajon jälkeen,
  * sitä ei tallenneta minnekään.
  *
+ * --osat=kohtaaminen,aarre rajaa generoitavat osat (saapumista ei generoida, jos sille ei tilata luentaa).
  * --mykistetyt generoi VAIN mykistetyt-kenttien osoittamat osat
  * (tekstierän jäljiltä vaienneet luennat) — kaupungin muut, ehjät
  * luennat eivät kulu eivätkä muutu. Tämä on generointierän
@@ -18,6 +19,7 @@
  * tehdään ajon jälkeen käsin, kun tiedostot on tarkistettu.
  */
 
+import { kieliFi } from './elevenlabs-kieli.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -30,12 +32,13 @@ import {
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
-const MALLI = 'eleven_v3';
+const MALLI = process.env.KAARI_MALLI ?? 'eleven_v3';
 const STABILITY = 0.5;
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
 const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
-if (!avain) {
+const KUIVA = process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1';
+if (!avain && !KUIVA) {
   console.error('ELEVEN_API_KEY puuttuu ympäristöstä — luentoja ei voi generoida.');
   process.exit(1);
 }
@@ -63,6 +66,8 @@ const OSAT = [
 ];
 
 const vainMykistetyt = process.argv.includes('--mykistetyt');
+// --osat=kohtaaminen,aarre rajaa generoitavat osat (esim. kun saapuminen ei saa luentaa: 12.10.2026 Euroopan 9 uutta kaarta, 2 luentaa/kaupunki).
+const osaRaja = (process.argv.find((x) => x.startsWith('--osat=')) ?? '').slice(7).split(',').filter(Boolean);
 const pyydetyt = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const kohteet = KAARI_PAKETIT.kohteet.filter((k) => (!pyydetyt.length || pyydetyt.includes(k.id))
   && (!vainMykistetyt || (k.mykistetyt ?? []).length));
@@ -80,6 +85,11 @@ const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
 const kuittirivit = [];
 
 async function generoi(teksti, polku, nimi) {
+  if (KUIVA) {
+    // --kuiva: ei API-kutsua, ei raakavientiä, ei tiedostoja — vain mitä ajo tekisi (PT 12.10.2026: kuiva-ajo generoi aiemmin oikeasti).
+    console.log(`${nimi}: KUIVA — generoitaisiin ${teksti.length} merkkiä → ${polku}`);
+    return false;
+  }
   console.log(`${nimi}: generoidaan (${teksti.length} merkkiä)…`);
   const vastaus = await fetch(
     'https://api.elevenlabs.io/v1/text-to-dialogue?output_format=mp3_44100_128',
@@ -89,6 +99,7 @@ async function generoi(teksti, polku, nimi) {
       body: JSON.stringify({
         inputs: [{ text: teksti + LOPPUTAUKO, voice_id: AANI }],
         model_id: MALLI,
+        ...kieliFi(MALLI),   // suomi pakotettuna (omistaja 6.10.)
         settings: { stability: STABILITY },
       }),
       signal: AbortSignal.timeout(180000),
@@ -125,14 +136,16 @@ async function generoi(teksti, polku, nimi) {
 }
 
 let generoitu = 0;
+let suunniteltu = 0;
 for (const k of kohteet) {
   for (const [osa, luentaKentta, tekstiKentta] of OSAT) {
     if (vainMykistetyt && !(k.mykistetyt ?? []).includes(osa)) continue;
+    if (osaRaja.length && !osaRaja.includes(osa)) continue;
     const teksti = k[luentaKentta] ?? k[tekstiKentta];
     if (!teksti) { console.error(`${k.id}/${osa}: teksti puuttuu — ohitetaan.`); continue; }
     const polku = resolve(JUURI, `assets/audio/puhe-kaari-${osa}-${k.id}.mp3`);
-    await generoi(teksti, polku, `${k.id}/${osa}`);
-    generoitu += 1;
+    if (await generoi(teksti, polku, `${k.id}/${osa}`) !== false) generoitu += 1;
+    else suunniteltu += 1;
   }
 }
 if (kuittirivit.length) {
@@ -145,4 +158,4 @@ if (kuittirivit.length) {
   }), AMPARIN_JUURI);
   console.log(`Kuitti: ${kuitti.objectKey}`);
 }
-console.log(`Valmis — ${generoitu} luentaa.`);
+console.log(KUIVA ? `Kuiva-ajo valmis — ${suunniteltu} luentaa generoitaisiin, ei kutsuja.` : `Valmis — ${generoitu} luentaa.`);

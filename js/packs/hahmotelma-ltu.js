@@ -558,6 +558,7 @@ export const HAHMOTELMA_LTU = [
   },
   {
     id: 'hahmotelma-dzukija',
+    nimio: 'Dzūkija',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-dzukija-53ca0050.jpg',
       lyhyt: 'Čepkeliain suon vetisiä laikkuja ja valkoisia tupsuja.',
@@ -676,8 +677,8 @@ export const HAHMOTELMA_LTU = [
       + 'puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier '
       + '(1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen '
       + 'naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes '
-      + 'myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa '
-      + 'leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko '
+      + 'myrsky nosti sen pilveksi ja kantoi itään. Sanat ”Plate lej”, eli ”sataa '
+      + 'leveästi”, olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko '
       + 'vesimassa vajosi kumpujen väliseen kuoppaan.',
     lahde: 'en-Wikipedia "Plateliai" ja lt-Wikipedia "Plateliai", johdanto-osat (tarkistettu '
       + '19.9.2026).',
@@ -1138,7 +1139,7 @@ export const HAHMOTELMA_LTU = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/ltu-nosto-alytus-f69fa86b.jpg',
         lyhyt: 'Vanha postikortti Alytuksesta: matalia puutaloja ja katuja kukkulalta '
           + 'nähtynä.',
-        selite: 'Kortin yläkulmassa lukee "Olita (russisch)", Alytuksen venäjänkielinen nimi. '
+        selite: 'Kortin yläkulmassa lukee ”Olita (russisch)”, Alytuksen venäjänkielinen nimi. '
           + 'Kuva on noin vuodelta 1915 ja näyttää pienen kaupungin talojen kattoja.',
         lahde: 'Valokuva: Tuntematon, Wikimedia Commons (Public domain).',
         tekija: 'Tuntematon',
@@ -1434,7 +1435,7 @@ export const HAHMOTELMA_LTU = [
     },
     teksti: 'Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin '
       + 'päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen '
-      + 'ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja '
+      + 'ritarikunnan kronikoissa ”suolaisen veden tilana”. Liettuan suuriruhtinaat ja '
       + 'aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä '
       + 'perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista '
       + 'kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja '
@@ -1468,6 +1469,7 @@ export const HAHMOTELMA_LTU = [
    */
   {
     id: 'hahmotelma-trakai-niemekelinna',
+    nimio: 'Trakai',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ltu-nosto-trakai-niemeke-607912e4.jpg',
       lyhyt: 'Trakain niemekelinnan rauniotorni kohoaa puiden keskellä.',

@@ -392,6 +392,7 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'hohensalzburg',
+    nimio: 'Hohensalzburg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-hohensalzburg-5bff5ff5.jpg',
       lyhyt: 'Hohensalzburgin valkoiset linnoitusmuurit ja tornit kohoavat metsäisen kukkulan päällä.',

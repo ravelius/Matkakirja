@@ -138,7 +138,7 @@ export const HAHMOTELMA_RUS = [
     taso: 1,
     lahi: true,
     kysymykset: [
-      'Miksi Peterhofia kutsutaan "Venäjän Versailles\'ksi"?',
+      'Miksi Peterhofia kutsutaan ”Venäjän Versailles\'ksi”?',
       'Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?',
     ],
     korostukset: ['Rastrelli|Rastrellin', 'Suuri kaskadi|Suuri kaskadi'],
@@ -278,6 +278,7 @@ export const HAHMOTELMA_RUS = [
   },
   {
     id: 'hahmotelma-nizni-novgorod',
+    nimio: 'Nižni Novgorod',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/rus-nosto-nizni-novgorod-7b0cc70c.jpg',
       lyhyt: 'Vanha postikortti Nižni Novgorodin messujen päärakennuksesta noin 1903.',
@@ -379,6 +380,7 @@ export const HAHMOTELMA_RUS = [
   },
   {
     id: 'hahmotelma-tsiolkovski',
+    nimio: 'Tsiolkovski',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/rus-nosto-tsiolkovski-8690839d.jpg',
       lyhyt: 'Konstantin Tsiolkovskin muotokuva Kalugassa noin 1908.',
@@ -878,7 +880,7 @@ export const HAHMOTELMA_RUS = [
     lahi: true,
     kysymykset: [
       'Kuka kehitti Vologdan voin valmistustavan ja mistä hän sai idean?',
-      'Miksi voita myytiin aluksi nimellä "Pariisin voi"?',
+      'Miksi voita myytiin aluksi nimellä ”Pariisin voi”?',
     ],
     korostukset: ['Nikolai Vereštšagin|Nikolai Vereštšagin', 'pähkinäinen maku|pähkinäisen maun'],
     nappi: 'Vereštšagin kehittää parhaillaan menetelmäänsä Jedimonovon meijerikoulussa — '

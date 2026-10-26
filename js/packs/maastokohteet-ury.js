@@ -134,6 +134,7 @@ export const MAASTOKOHTEET_URY = [
   {
     id: 'coloniadelsacramento',
     nimi: 'Colonia del Sacramento',
+    nimio: 'Colonia',
     tyyppi: 'historia',
     kysymykset: [
       'Kuka perusti Colonian ja milloin?',
@@ -240,6 +241,7 @@ export const MAASTOKOHTEET_URY = [
   {
     id: 'santateresanlinnoitus',
     nimi: 'Santa Teresan linnoitus',
+    nimio: 'Santa Teresa',
     tyyppi: 'historia',
     kysymykset: [
       'Ketkä alkoivat rakentaa linnoitusta ja milloin?',
@@ -268,6 +270,7 @@ export const MAASTOKOHTEET_URY = [
   {
     id: 'quebradadeloscuervos',
     nimi: 'Quebrada de los Cuervos',
+    nimio: 'Los Cuervos',
     tyyppi: 'vuori',
     kysymykset: [
       'Mitä rotkon nimi tarkoittaa?',

@@ -1142,6 +1142,26 @@ export const JULISTEET = {
       + 'puuvillan vientisatamaksi, ja brittien hallintorakennuksista Frere '
       + 'Hall oli valmistunut 1865.',
   },
+  bergen: {
+    tiedosto: 'tuotanto/tuot-bergen.png',
+    kaupunki: 'Bergen',
+    otsikko: 'Bergen 1873',
+    lyhyt: 'Bergen 1873: Bryggenin puukauppiaskaupunki elää nopean kasvun ja taiteen aikaa.',
+    selite: 'Isoisän matkavuonna 1873 Bergen eli nopean kasvun ja taiteen '
+      + 'aikaa: viulisti Ole Bull oli edellisenä vuonna ostanut Lysøenin '
+      + 'saaren, ja pian sen jälkeen Henrik Ibsen pyysi kaupungista lähtöisin '
+      + 'olevaa Edvard Griegiä säveltämään musiikin Peer Gynt -näytelmäänsä.',
+  },
+  sevilla: {
+    tiedosto: 'tuotanto/tuot-sevilla.png',
+    kaupunki: 'Sevilla',
+    otsikko: 'Sevilla 1873',
+    lyhyt: 'Sevilla 1873: Giraldan torni ja Guadalquivirin uusi rautasilta.',
+    selite: 'Isoisän matkavuonna Sevilla oli juuri saanut ensimmäisen '
+      + 'kiinteän siltansa: vuonna 1852 valmistunut Trianan rautasilta '
+      + 'korvasi lähes seitsemän vuosisataa palvelleen venesillan '
+      + 'Guadalquivir-joen yli.',
+  },
 };
 
 /** Kaupungin juliste tai null. Yksi kysely, jotta tarkistus on samanlainen kaikkialla. */

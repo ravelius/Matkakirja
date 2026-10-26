@@ -35,6 +35,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -127,7 +128,7 @@ function kokoaProfiili(profiili, kehykset, aikaSiirto, raja) {
 const tulokset = [];
 const selain = MOOTTORI === 'webkit'
   ? await paketti.webkit.launch()
-  : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal', '--ignore-gpu-blocklist'] });
+  : await avaaChromium({ args: ['--use-angle=metal', '--ignore-gpu-blocklist'] });
 for (const koe of KOKEET) for (const porras of PORTAAT) {
   const ctx = await selain.newContext({ viewport: VIEWPORT, deviceScaleFactor: DPR, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
   await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d.tallenne); localStorage.removeItem('matkakirja-lauta'); }, { tallenne });

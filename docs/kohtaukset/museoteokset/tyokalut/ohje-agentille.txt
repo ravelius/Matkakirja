@@ -1,0 +1,18 @@
+OHJE: MUSEON i-KORTIN TEOSFAKTAT (Matkakirja, Sisältökirjuri 16.10.2026; omistajan päätös 21.51)
+
+Pelin museossa teosta napautetaan, ja i-kortti näyttää teoksen lyhyet tiedot. Sinä kirjoitat jokaiselle syötetiedoston teokselle 1–2 LYHYTTÄ faktaa suomeksi.
+Syöte: JSON-taulukko (polku annettu). Kentät: id, nimi_fi, nimi_alk/nimi_en, tekija, tekija_elinvuodet, vuosi, tekniikka, mitat_cm_kork_lev, museo, inventaario, museon_tietue (museon oma tietue), kuvateksti_fi (aiempi lyhyt kuvateksti), kertojan_teksti (äänikertojan teksti; jos "(ei saatavilla)", käytä kuvateksti_fi vertailuna), huomio.
+Tehtävä: tutki webistä (WebSearch/WebFetch) ja kirjoita jokaiselle teokselle faktat.
+
+SÄÄNNÖT
+- Faktat: 1–2 kpl, kumpikin yksi lyhyt virke (enintään 110 merkkiä), suomeksi, tosiasia teoksesta tai sen vaiheista (tilaaja, malli, löytö, restaurointi, varkaus, oma aikansa, miksi tunnettu, kuka omisti). Ei tulkintaa, ei mielipiteitä, ei hehkutusta.
+- EI TOISTOA: fakta ei saa toistaa kertojan_teksti- eikä kuvateksti_fi-kentän asiaa (älä käytä samaa lukua, tapahtumaa tai lausetta). Valitse uusi asia. Älä toista myöskään nimeä, tekijää, vuotta, tekniikkaa, kokoa tai museota (ne näytetään korttiin erikseen).
+- Kaksi itsenäistä lähdettä (URL) kullekin faktalle: museon tietue tai muu museo/tutkimus + toinen (Wikipedia, Britannica, Google Arts, toinen museo). Jos vain yksi lähde löytyy, älä käytä faktaa; etsi toinen. Jos teokselle ei löydy kahdella lähteellä varmaa faktaa, palauta tyhjä faktat-lista ja selitä huom-kentässä.
+- Älä arvaa. Luvut, jotka vaihtelevat lähteittäin: jätä pois tai "noin". Älä käytä tekoälysivuja tai blogeja ainoana lähteenä.
+- Tarkista samalla syötteen kentät: jos nimi, tekijä, vuosi, tekniikka, mitat tai museo poikkeaa museon omasta tietueesta, kirjaa se huom-kenttään (älä korjaa itse).
+- Sävy: asiallinen, nuorille (13+) ja aikuisille. Ei väkivallan kuvailua, ei alastomuuden korostusta.
+
+TULOS: kirjoita VAIN omaan tulostiedostoosi (polku annettu) JSON-taulukko, yksi olio per teos samassa järjestyksessä:
+{"id":"<syötteen id>","faktat":["…","…"],"lahteet":["URL1","URL2"],"huom":""}
+lahteet = kaikki käyttämäsi URL:t (vähintään 2, jos faktat ei ole tyhjä). Kirjoita tiedosto 8–10 teoksen paloina (Write-työkalu, ensin koko taulukko ensimmäisille, lisää loput Edit-työkalulla JSON pysyen kelvollisena) ja tarkista lopuksi `python3 -I -c "import json;json.load(open('<polku>'))"`.
+Vastaa lopuksi 3 rivillä: montako teosta valmiina, montako tyhjää, tärkeimmät huomiot. Älä kirjoita repoon.

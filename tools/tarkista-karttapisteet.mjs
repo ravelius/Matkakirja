@@ -81,7 +81,17 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
  * moni pikseli on vettä. Pehmennetty viiva on pari pikseliä leveä
  * eikä koskaan täytä kiekkoa, mutta lahdelma täyttää.
  */
-const VESI = [0xe8, 0xd5, 0xa9];
+const VESI_PAPERI = [0xe8, 0xd5, 0xa9];
+/*
+ * VÄRIKARTTA ENSIN (Karttaseppä 11.10.2026, Euroopan karttatarkistus).
+ * Peli näyttää värikartan aina kun se on olemassa (js/nahtavyydet.js:
+ * `kartta.varikartta ?? kartta.polku`), joten työkalu lukee saman kuvan.
+ * Ennen tätä se luki polku-kuvan, joka kuudessa kaupungissa oli vanha
+ * laajentamaton piirros, ja antoi vääriä vesi-ilmoituksia (Kööpenhaminan
+ * Vapahtajan kirkko "Inderhavnenissa"). Värikartan vesi on #c3d5da
+ * (PALETIT.vari tools/piirra-kaupunkikartta.mjs:ssä).
+ */
+const VESI_VARI = [0xc3, 0xd5, 0xda];
 const RAJA = 30;
 const SADE = 5;        // kiekon säde pikseleinä
 const OSUUS = 0.6;     // näin suuren osan kiekosta oltava vettä
@@ -170,7 +180,10 @@ if (!pisteet.length) {
   process.exit(1);
 }
 
-const kuva = puraPng(`${JUURI}/${kartta.polku}`);
+const kuvaPolku = kartta.varikartta ?? kartta.polku;
+const VESI = kartta.varikartta ? VESI_VARI : VESI_PAPERI;
+console.log(`kuva: ${kuvaPolku}`);
+const kuva = puraPng(`${JUURI}/${kuvaPolku}`);
 const pikseli = (px, py) => {
   const k = (py * kuva.leveys + px) * kuva.kanavat;
   return [kuva.data[k], kuva.data[k + 1], kuva.data[k + 2]];

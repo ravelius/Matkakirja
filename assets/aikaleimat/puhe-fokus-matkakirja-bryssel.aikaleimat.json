@@ -1,0 +1,293 @@
+{
+  "versio": 2,
+  "kaupunki": "bryssel",
+  "teksti": "Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan haissutkaan. Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.",
+  "tekstiSha256": "db61ee4c059df727b0e1d2d24a583bbc4a7773be0872dddf860bc744934036d3",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-bryssel-v3.mp3",
+    "versio": 2,
+    "tavut": 949855,
+    "sha256": "866898afbc90e3c6ad706d3496d3bf843b58c1244608190b531667ba20b2d111"
+  },
+  "kesto": 39500,
+  "sanat": [
+    {
+      "sana": "Bryssel",
+      "alku": 260,
+      "loppu": 640
+    },
+    {
+      "sana": "kesäkuussa",
+      "alku": 1100,
+      "loppu": 1680
+    },
+    {
+      "sana": "1873",
+      "alku": 1760,
+      "loppu": 4080
+    },
+    {
+      "sana": "Kaupunki",
+      "alku": 4720,
+      "loppu": 6240
+    },
+    {
+      "sana": "on",
+      "alku": 6300,
+      "loppu": 6400
+    },
+    {
+      "sana": "juuri",
+      "alku": 6460,
+      "loppu": 6800
+    },
+    {
+      "sana": "haudannut",
+      "alku": 6860,
+      "loppu": 7360
+    },
+    {
+      "sana": "jokensa",
+      "alku": 7400,
+      "loppu": 7920
+    },
+    {
+      "sana": "Senne",
+      "alku": 8420,
+      "loppu": 9520
+    },
+    {
+      "sana": "katettiin",
+      "alku": 9580,
+      "loppu": 10080
+    },
+    {
+      "sana": "kivellä",
+      "alku": 10160,
+      "loppu": 10640
+    },
+    {
+      "sana": "ja",
+      "alku": 10900,
+      "loppu": 11040
+    },
+    {
+      "sana": "päälle",
+      "alku": 11100,
+      "loppu": 11360
+    },
+    {
+      "sana": "vedettiin",
+      "alku": 11400,
+      "loppu": 11840
+    },
+    {
+      "sana": "bulevardi",
+      "alku": 11900,
+      "loppu": 12480
+    },
+    {
+      "sana": "jolla",
+      "alku": 12920,
+      "loppu": 13120
+    },
+    {
+      "sana": "herrasväki",
+      "alku": 13160,
+      "loppu": 13680
+    },
+    {
+      "sana": "kävelee",
+      "alku": 13740,
+      "loppu": 14240
+    },
+    {
+      "sana": "kuin",
+      "alku": 14300,
+      "loppu": 14560
+    },
+    {
+      "sana": "joki",
+      "alku": 14640,
+      "loppu": 14880
+    },
+    {
+      "sana": "ei",
+      "alku": 14940,
+      "loppu": 15040
+    },
+    {
+      "sana": "olisi",
+      "alku": 15100,
+      "loppu": 15360
+    },
+    {
+      "sana": "koskaan",
+      "alku": 15420,
+      "loppu": 15840
+    },
+    {
+      "sana": "haissutkaan",
+      "alku": 15900,
+      "loppu": 16720
+    },
+    {
+      "sana": "Grand-Placen",
+      "alku": 18840,
+      "loppu": 19600
+    },
+    {
+      "sana": "kullatut",
+      "alku": 19640,
+      "loppu": 20160
+    },
+    {
+      "sana": "kiltatalot",
+      "alku": 20200,
+      "loppu": 20960
+    },
+    {
+      "sana": "kiiltävät",
+      "alku": 21040,
+      "loppu": 21680
+    },
+    {
+      "sana": "sateen",
+      "alku": 21720,
+      "loppu": 22080
+    },
+    {
+      "sana": "jälkeen",
+      "alku": 22160,
+      "loppu": 22640
+    },
+    {
+      "sana": "kuin",
+      "alku": 22720,
+      "loppu": 22960
+    },
+    {
+      "sana": "avattu",
+      "alku": 23040,
+      "loppu": 23600
+    },
+    {
+      "sana": "korulipas",
+      "alku": 23660,
+      "loppu": 24400
+    },
+    {
+      "sana": "Kulman",
+      "alku": 26300,
+      "loppu": 26480
+    },
+    {
+      "sana": "takana",
+      "alku": 26540,
+      "loppu": 26880
+    },
+    {
+      "sana": "pronssinen",
+      "alku": 26960,
+      "loppu": 27600
+    },
+    {
+      "sana": "poika",
+      "alku": 27680,
+      "loppu": 28080
+    },
+    {
+      "sana": "tekee",
+      "alku": 28140,
+      "loppu": 28480
+    },
+    {
+      "sana": "tarpeensa",
+      "alku": 28520,
+      "loppu": 28960
+    },
+    {
+      "sana": "suihkulähteeseen",
+      "alku": 29040,
+      "loppu": 30160
+    },
+    {
+      "sana": "ja",
+      "alku": 30920,
+      "loppu": 30960
+    },
+    {
+      "sana": "koko",
+      "alku": 31000,
+      "loppu": 31280
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 31340,
+      "loppu": 31840
+    },
+    {
+      "sana": "pitää",
+      "alku": 31900,
+      "loppu": 32240
+    },
+    {
+      "sana": "sitä",
+      "alku": 32300,
+      "loppu": 32560
+    },
+    {
+      "sana": "pyhänä",
+      "alku": 32620,
+      "loppu": 33040
+    },
+    {
+      "sana": "Ostin",
+      "alku": 34080,
+      "loppu": 35280
+    },
+    {
+      "sana": "pitsiä",
+      "alku": 35360,
+      "loppu": 35840
+    },
+    {
+      "sana": "jota",
+      "alku": 36120,
+      "loppu": 36320
+    },
+    {
+      "sana": "täällä",
+      "alku": 36380,
+      "loppu": 36640
+    },
+    {
+      "sana": "kehrätään",
+      "alku": 36700,
+      "loppu": 37280
+    },
+    {
+      "sana": "kuin",
+      "alku": 37340,
+      "loppu": 37600
+    },
+    {
+      "sana": "hämähäkit",
+      "alku": 37660,
+      "loppu": 38240
+    },
+    {
+      "sana": "kilpaa",
+      "alku": 38300,
+      "loppu": 38800
+    }
+  ],
+  "lauseet": [
+    260,
+    4720,
+    18840,
+    26300,
+    34080
+  ],
+  "luotu": "2026-10-15T12:57:37.000Z"
+}

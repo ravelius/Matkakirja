@@ -1,0 +1,326 @@
+{
+ "kaupunki": "mosambik",
+ "kaupunkiQ": "Q331099",
+ "kohteet": [
+  {
+   "q": "Q1814572",
+   "nimi": "São Sebastiãon linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -15.02892,
+   "lon": 40.7438,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fortaleza de São Sebastião-05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o-05.jpg?width=1280",
+     "tekija": "Erik Cleves Kristensen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o-05.jpg",
+     "selite": "São Sebastiãon linnoituksen paksu kivimuuri kohoaa suoraan merestä saaren pohjoiskärjessä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20 Fortaleza de São Sebastião (36931473391).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20_Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o_(36931473391).jpg?width=1280",
+     "tekija": "Cornelius Kibelka from Berlin, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20_Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o_(36931473391).jpg",
+     "selite": "Linnoituksen muurit ja bastionit on rakennettu korallikivestä merenrannan tuntumaan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "21 View from the fort Blick vom Fort (36676401840).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21_View_from_the_fort_Blick_vom_Fort_(36676401840).jpg?width=1280",
+     "tekija": "Cornelius Kibelka from Berlin, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21_View_from_the_fort_Blick_vom_Fort_(36676401840).jpg",
+     "selite": "Vanha tykki muurin aukossa suuntaa katseen Mosambikinlahdelle ja mantereen rantaan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Fortaleza de São Sebastião - detail.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o_-_detail.jpg?width=1280",
+     "tekija": "F Mira from Lisbon, Portugal",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fortaleza_de_S%C3%A3o_Sebasti%C3%A3o_-_detail.jpg",
+     "selite": "Linnoituksen muurin harjalla kohoaa pieni risti, ja ruskea kivi hehkuu illan valossa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9054638",
+   "nimi": "São Paulon palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -15.03153,
+   "lon": 40.73739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palácio de São Paulo, Ilha de Moçambique.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_de_S%C3%A3o_Paulo%2C_Ilha_de_Mo%C3%A7ambique.jpg?width=1280",
+     "tekija": "Jcornelius",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_de_S%C3%A3o_Paulo%2C_Ilha_de_Mo%C3%A7ambique.jpg",
+     "selite": "Punaisen palatsin ja kirkon edessä seisoo Vasco da Gaman patsas saaren pääaukiolla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Governors Palace - Mozambique Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Governors_Palace_-_Mozambique_Island.jpg?width=1280",
+     "tekija": "USAID U.S. Agency for International Development",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Governors_Palace_-_Mozambique_Island.jpg",
+     "selite": "Entinen jesuiittakollegio toimi myöhemmin Portugalin kuvernöörin palatsina.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palácio de são paulo (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pal%C3%A1cio_de_s%C3%A3o_paulo_(cropped).jpg?width=1280",
+     "tekija": "Rosino",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_de_s%C3%A3o_paulo_(cropped).jpg",
+     "selite": "Palatsin edusta ja aukion aaltokuvioinen kivetys ovat saaren virallisen elämän keskus.",
+     "leveys": 1735,
+     "korkeus": 1750,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4992162",
+   "nimi": "Baluarten kappeli",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -15.0289,
+   "lon": 40.74458,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "22 Nossa Senhora do Baluarte Chapel Kappelle Unserer Jungfrau von Baluarte (36884694616).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/22_Nossa_Senhora_do_Baluarte_Chapel_Kappelle_Unserer_Jungfrau_von_Baluarte_(36884694616).jpg?width=1280",
+     "tekija": "Cornelius Kibelka from Berlin, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:22_Nossa_Senhora_do_Baluarte_Chapel_Kappelle_Unserer_Jungfrau_von_Baluarte_(36884694616).jpg",
+     "selite": "Nossa Senhora do Baluarten kappelia pidetään yhtenä eteläisen pallonpuoliskon vanhimmista säilyneistä eurooppalaisista rakennuksista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chapel of Nossa Senhora de Baluarte.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chapel_of_Nossa_Senhora_de_Baluarte.jpg?width=1280",
+     "tekija": "Stig Nygaard from Copenhagen, Denmark",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chapel_of_Nossa_Senhora_de_Baluarte.jpg",
+     "selite": "Valkoinen renessanssikappeli seisoo linnoituksen muurin kupeessa aivan meren äärellä.",
+     "leveys": 3837,
+     "korkeus": 2558,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Nossa Senhora do Baluarte.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nossa_Senhora_do_Baluarte.jpg?width=1280",
+     "tekija": "Erik Cleves Kristensen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nossa_Senhora_do_Baluarte.jpg",
+     "selite": "Kappelin kaarevat avokäytävät ja tasakatto edustavat saaren varhaista portugalilaista rakennustapaa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q91684251",
+   "nimi": "Vihreä moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -15.03794,
+   "lon": 40.72985,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The green mosque ilha de moçambique (3934264411).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_green_mosque_ilha_de_mo%C3%A7ambique_(3934264411).jpg?width=1280",
+     "tekija": "Rosino",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_green_mosque_ilha_de_mo%C3%A7ambique_(3934264411).jpg",
+     "selite": "Vihreäksi maalattu moskeija seisoo rannalla kalastajien veneiden vieressä.",
+     "leveys": 2776,
+     "korkeus": 1851,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosque tower, Ilha de Moçambique.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosque_tower%2C_Ilha_de_Mo%C3%A7ambique.jpg?width=1280",
+     "tekija": "Jcornelius",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosque_tower%2C_Ilha_de_Mo%C3%A7ambique.jpg",
+     "selite": "Moskeijan vihreä minareetti muistuttaa swahilikauppiaiden ja islamin pitkästä historiasta saarella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mosque, Ilha de Moçambique.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosque%2C_Ilha_de_Mo%C3%A7ambique.jpg?width=1280",
+     "tekija": "Jcornelius",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosque%2C_Ilha_de_Mo%C3%A7ambique.jpg",
+     "selite": "Moskeijan pitkä vihreä seinä reunustaa kapeaa katua kivikaupungin puolella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q34013714",
+   "nimi": "Misericórdian kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -15.03184,
+   "lon": 40.73694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Misericórdia Church - Mozambique Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miseric%C3%B3rdia_Church_-_Mozambique_Island.jpg?width=1280",
+     "tekija": "USAID U.S. Agency for International Development",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miseric%C3%B3rdia_Church_-_Mozambique_Island.jpg",
+     "selite": "Valkoinen Misericórdian kirkko sijaitsee kivikaupungin kapeiden katujen varrella.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Misericórdia Church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miseric%C3%B3rdia_Church.jpg?width=1280",
+     "tekija": "Erik Cleves Kristensen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miseric%C3%B3rdia_Church.jpg",
+     "selite": "Kirkon julkisivun kaarevat päädyt ovat tyypillistä portugalilaista siirtomaa-arkkitehtuuria.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q592923",
+   "nimi": "Santo Antónion kappeli",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -15.04347,
+   "lon": 40.73197,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mozambique n2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambique_n2.jpg?width=1280",
+     "tekija": "Steve Evans from Bangalore, India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mozambique_n2.jpg",
+     "selite": "Santo Antónion valkoinen kappeli seisoo saaren rannalla palmujen ympäröimänä.",
+     "leveys": 1472,
+     "korkeus": 962,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12270178",
+   "nimi": "Mosambikin saaren silta",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -15.04444,
+   "lon": 40.70917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mozambique Island Bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambique_Island_Bridge.jpg?width=1280",
+     "tekija": "Michael Jack",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mozambique_Island_Bridge.jpg",
+     "selite": "Pitkä silta yhdistää saaren mantereeseen, ja sen valmistuminen päätti saaren eristyksen.",
+     "leveys": 3872,
+     "korkeus": 2202,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ilha de Mocambique.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilha_de_Mocambique.jpg?width=1280",
+   "tekija": "Stig Nygaard from Copenhagen, Denmark",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ilha_de_Mocambique.jpg",
+   "selite": "Mosambikin saari on pieni korallisaari, jonka vanha kivikaupunki on Unescon maailmanperintökohde.",
+   "leveys": 3747,
+   "korkeus": 2497,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Island of Mozambique boats.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Island_of_Mozambique_boats.jpg?width=1280",
+   "tekija": "Stig Nygaard",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Island_of_Mozambique_boats.jpg",
+   "selite": "Perinteiset purjeveneet ovat edelleen kalastajien ja saaren asukkaiden tärkein kulkuneuvo.",
+   "leveys": 3816,
+   "korkeus": 2544,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

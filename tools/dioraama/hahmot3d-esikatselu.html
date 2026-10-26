@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dioraaman 3D-hahmojen esikatselu (VÄLIAIKAINEN kehittäjätyökalu)</title>
+<!--
+  DIORAAMAN 3D-PIENOISFIGUURIEN ESIKATSELU (Linnanrakentaja, erä 2b, ali-agentti
+  P4a, 29.9.2026). VÄLIAIKAINEN kehittäjätyökalu vain hahmot3d/*.glb:n mitta-
+  suhteiden ja nivelten saumojen silmämääräiseen tarkistukseen (task-kohta 7,
+  docs/raportit/dioraama-rajapinnat-era2b-20260929.md kohta 4). EI pelaajille,
+  EI service workeriin. ERI tiedosto kuin esikatselu.html (jota toinen agentti
+  P7 laajentaa samaan aikaan) - ei kosketa sitä.
+
+  Piirtologiikka: hahmot3d-esikatselu.mjs. Lataa kolmen henkilön hahmot3d/<id>.glb:t
+  rinnakkain (GLTFLoader, vakio PBR-materiaalit - COLOR_0 R=AO=1/G=lämpö=0
+  hahmoilla, ei tarvitse mukautettua varjostinta kuten esikatselu.mjs:ssä).
+
+  URL-parametrit:
+    paketti  polku dioraamapakettiin, jonka ALLA hahmot3d/ on (oletus ../../dist/dioraama/olavinlinna/)
+    kulma    edesta | 34 (kolme neljäsosaa) | sivu | ylhaalta - oletus edesta
+    koko     canvasin CSS-koko "LEVEYSxKORKEUS", oletus 1200x800
+    henkilo  valinnainen: yhden hahmon id (esim. kokki-1500) - rajaa yhteen
+             hahmoon (sivu/ylhäältä-kuvat OVAT AINA yhden hahmon kuvia, koska
+             rinnakkainasettelu x-akselilla peittäisi hahmot toistensa taakse)
+    pose     testi = OHJEen tarkistuspoosi (oikea käsi hämmennyksessä + jalat
+             kävelyaskeleen keskellä, ks. hahmot3d-esikatselu.mjs:n TESTIPOOSI)
+
+  Esimerkkejä:
+    hahmot3d-esikatselu.html?kulma=34&koko=1200x800
+    hahmot3d-esikatselu.html?henkilo=kokki-1500&kulma=sivu&pose=testi
+-->
+<style>
+  html, body { margin: 0; padding: 0; background: #cfd6d6; overflow: hidden; }
+  canvas { display: block; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<script type="module" src="./hahmot3d-esikatselu.mjs"></script>
+</body>
+</html>

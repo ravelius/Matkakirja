@@ -41,7 +41,7 @@ if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 if ((pack.events ?? []).length) throw new Error('maailmankartalla on tapahtumia: rajaus ei enää päde');
 
 // Koelauta: 266 laattaa kuten maailmankartalla, mutta 20 pääaarretta.
-const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 168 };   // 277 kaupunkia (juna 193: + 8 pääkaupunkia, 193b: + Bern, Bratislava, Podgorica)
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 const KUVAT = pack.cities.filter((_, i) => i % 4 === 0).map((c) => c.id);
 
@@ -54,7 +54,7 @@ const AJOT = [
   { seed: 58, start: 'rio', liput: true, kuvat: true },
   { seed: 404, start: 'praha', liput: true, kuvat: false },
   { seed: 11, start: 'dublin', liput: true, kuvat: true, raha: 40 },
-  { seed: 8, start: 'pariisi', liput: false, kuvat: true, koe: true },
+  { seed: 173, start: 'pariisi', liput: false, kuvat: true, koe: true },
 ];
 
 const pos = (p) => (p.pos.type === 'city' ? `c:${p.pos.city}` : `e:${p.pos.edge}:${p.pos.idx}`);
@@ -226,6 +226,9 @@ for (const ajo of AJOT) {
           tulos = g.answerQuiz(valinta);
         }
       }
+    } else if (g.phase === 'over') {
+      // Talouden vaihe 1 (27.9.2026): rahat loppuivat ja matka päättyi — jälki loppuu tähän.
+      break;
     } else {
       throw new Error(`odottamaton vaihe ${g.phase} (siemen ${seed})`);
     }

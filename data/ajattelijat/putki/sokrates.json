@@ -1,0 +1,23 @@
+{
+ "kuvaus": "Sokrateen ajattelijaputken syötteet (tools/ajattelija-putki.mjs). Polut suhteessa lähdejuureen (proto-3d/_lahteet).",
+ "kertoja": {
+  "tiedosto": "sokrates/kertoja-aanikoe-v4/Iv4-william-oletus.mp3",
+  "ajat": "sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json",
+  "lahde": "Kertoja Iv4 William (ElevenLabs eleven_v4, oletusvakaus, yksi otto); omistaja valitsi 3.10.2026 klo 06.22",
+  "lisenssi": "oma (pelin tilaama puhe)",
+  "toimittaa": "Sisältökirjuri"
+ },
+ "musiikki": {
+  "tiedosto": "sokrates/musiikki-oma/sokrates-oma-koko-vsco-v14.mp3",
+  "lahde": "Linssisepän sävellys (VS Chamber Orchestra 2 CE -näytteet); ks. sokrates/musiikki-oma/LAHTEET.md",
+  "lisenssi": "oma, näytteet CC0",
+  "toimittaa": "Linssiseppä"
+ },
+ "efektit": {
+  "kansio": "sokrates/efektit",
+  "lahde": "Projektorin naksahdus, hallin ovi, malja ja kytkin; ks. sokrates/efektit/LAHTEET.md",
+  "lisenssi": "CC0 ja oma",
+  "toimittaa": "Linnanrakentaja"
+ },
+ "vaimennusDb": -8
+}

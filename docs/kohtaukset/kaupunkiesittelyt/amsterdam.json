@@ -1,0 +1,41 @@
+[
+ {
+  "id": "amsterdam",
+  "esittely": "Kartan alue on Amsterdamin vanha keskusta. Kanavavyöhykkeen rakentaminen alkoi 1613, ja Unesco otti sen maailmanperintölistalle 2010. Keskusasema avattiin 1889 kolmelle tekosaarelle, ja sen suunnitteli Pierre Cuypers, jonka tekemä Rijksmuseumin rakennus otettiin käyttöön 1885.\n\nDam-aukion kuninkaanpalatsi rakennettiin 1600-luvulla kaupungintaloksi, ja siitä tuli palatsi 1808. Rembrandt asui Jodenbreestraatin talossa 1639–1658; se on nykyään museo. Anne Frank perheineen piileskeli Prinsengracht 263:ssa vuodesta 1942, ja talo avattiin museoksi 1960. Artis perustettiin 1838. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 632,
+  "kappaleita": 2,
+  "lahteet": [
+   {"url": "https://en.wikipedia.org/wiki/Canals_of_Amsterdam", "title": "Wikipedia: Canals of Amsterdam", "tukee": "kanavavyöhykkeen luoteisosan rakennus alkoi 1613; Unesco 2010"},
+   {"url": "https://www.amsterdamtourism.org/amsterdam-canal-ring-unesco-story/", "title": "Amsterdam Tourism: Canal ring UNESCO story (hakutulos)", "tukee": "rakennus 1613 alkaen; Unesco 2010"},
+   {"url": "https://en.wikipedia.org/wiki/Amsterdam_Centraal_station", "title": "Wikipedia: Amsterdam Centraal", "tukee": "avattiin 15.10.1889; Pierre Cuypers; kolme tekosaarta IJ:ssä"},
+   {"url": "https://www.frommers.com/destinations/amsterdam/attractions/centraal-station/", "title": "Frommer's: Centraal Station (hakutulos)", "tukee": "rakennettu kolmelle tekosaarelle IJ:ssä; avattiin 1889"},
+   {"url": "https://en.wikipedia.org/wiki/Rijksmuseum", "title": "Wikipedia: Rijksmuseum", "tukee": "nykyinen Cuypersin rakennus otettiin käyttöön 13.7.1885"},
+   {"url": "https://www.codart.nl/?p=861", "title": "CODART: Rijksmuseum (hakutulos)", "tukee": "museo Pierre Cuypersin suunnittelemassa rakennuksessa vuodesta 1885"},
+   {"url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Amsterdam", "title": "Wikipedia: Royal Palace of Amsterdam", "tukee": "rakennettu kaupungintaloksi 1648 alkaen (Jacob van Campen); kuninkaanpalatsi 1808"},
+   {"url": "https://royal-house.nl/topics/royal-palace-amsterdam/history", "title": "Royal House of the Netherlands: Royal Palace Amsterdam history (hakutulos)", "tukee": "Louis Bonaparte otti kaupungintalon 1808 ja muutti palatsiksi 1808-1810"},
+   {"url": "https://en.wikipedia.org/wiki/Rembrandt_House_Museum", "title": "Wikipedia: Rembrandt House Museum", "tukee": "Rembrandt osti talon tammikuussa 1639, huutokauppa 1658; museo 1911; Jodenbreestraat 4"},
+   {"url": "https://www.lonelyplanet.com/the-netherlands/amsterdam/nieuwmarkt/attractions/museum-het-rembrandthuis/a/poi-sig/387535/Jordaan", "title": "Lonely Planet: Museum Het Rembrandthuis (hakutulos)", "tukee": "Rembrandt työskenteli talossa 1639-1658"},
+   {"url": "https://en.wikipedia.org/wiki/Anne_Frank_House", "title": "Wikipedia: Anne Frank House", "tukee": "Prinsengracht 263-267; museo avattiin 3.5.1960; piilossa kaksi vuotta ja kuukausi"},
+   {"url": "https://annefrank.org/en/timeline/20/the-old-hiding-place-becomes-a-museum-the-anne-frank-house", "title": "Anne Frank House: The old hiding place becomes a museum (hakutulos)", "tukee": "piiloon 6.7.1942; Prinsengracht 263; avattiin yleisölle 3.5.1960"},
+   {"url": "https://en.wikipedia.org/wiki/Artis_(zoo)", "title": "Wikipedia: Artis (zoo)", "tukee": "perustettu 1838; Alankomaiden vanhin eläintarha"},
+   {"url": "https://thrillzing.com/zoos-aquariums/artis-amsterdam-royal-zoo-netherlands/", "title": "Thrillzing: Artis Amsterdam Royal Zoo (hakutulos)", "tukee": "Alankomaiden vanhin eläintarha, perustettu 1838"}
+  ],
+  "pudotetut": [
+   "Amstel-joen pato noin 1270, Amstelredam, Dam-aukio padon päällä: ei tarkistettu tässä ajossa kahdesta lähteestä, ei tekstissä",
+   "'Noin yhdeksänkymmentä saarta' ja 'toistatuhatta siltaa' (Wikipedia: noin 90 saarta, noin 1 500 siltaa; toista lähdettä ei haettu) -> ei tekstissä",
+   "Rijksmuseumin perustamisvuosi 1798, uudelleenavaus 13.4.2013, kokoelman koko (Wikipedia + hakutulos osin; jätetty pois tilan vuoksi)",
+   "Dam-palatsin valmistumisvuosi (1655 vs 1665 vs 1656), alkuperäinen pilarimäärä 13 659 -> vain 'rakennettiin 1600-luvulla'",
+   "Keskusaseman paalujen määrä (8 687 vain Wikipedia; muut 'yli 8 000')",
+   "Timanttihiomo, Kapein talo, Maitotyttö, Kissalaiva, Herengracht 537, Yövartio, Amsterdam-laiva: jätetty pois tilan vuoksi tai ei kahdesta lähteestä",
+   "Anne Frankin pidätys elokuussa 1944 (lähteet 4.8.1944 vs ei kuukautta Britannicassa): ei tekstissä"
+  ],
+  "ristiriidat": [
+   "Dam-palatsin valmistuminen: infoboksi 1665, teksti 1656, avaus 29.7.1655 (Wikipedia), Carleton 1665 -> vain '1600-luvulla'",
+   "Rembrandtin talon myynti: Lonely Planet 1656 (konkurssi), Wikipedia 1658 (huutokauppa) -> käytetty asumisaikaa 1639-1658 kuten Wikipedia ja Lonely Planet",
+   "Keskusaseman rakennuksen aloitus: 1881/1882/1884 -> vain avausvuosi 1889",
+   "Kanavavyöhykkeen rakentaminen: 1613 alku vahvistettu (luoteisosa 1613-1625), koko hanke 1613-1660 -> teksti 'rakentaminen alkoi 1613'",
+   "ESTO: Britannica, rijksmuseum.nl ja Unescon sivut eivät auenneet; osa toisista lähteistä on hakutulosten tiivistelmiä"
+  ],
+  "muutos_sk": "Poistettu Amstel-pato noin 1270 ja Amstelredam, 'noin yhdeksänkymmentä saarta', 'toistatuhatta siltaa' sekä keskusaseman 1880-luku -ajoitus (ei kahdesta lähteestä). Lisätty keskusaseman Cuypers-yhteys, Rijksmuseon 1885, Dam-aukion kaupungintalo/palatsi 1808, Rembrandtin talon vuodet, Anne Frankin museo 1960 ja Artis 1838."
+ }
+]

@@ -1,0 +1,525 @@
+{
+ "kaupunki": "fes",
+ "kaupunkiQ": "Q80985",
+ "kohteet": [
+  {
+   "q": "Q378014",
+   "nimi": "Al-Qarawiyyinin moskeija ja yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 34.06444,
+   "lon": -4.97333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Die historisch bedeutendste Moschee Marokkos\" 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Die_historisch_bedeutendste_Moschee_Marokkos%22_01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Die_historisch_bedeutendste_Moschee_Marokkos%22_01.jpg",
+     "selite": "Al-Qarawiyyin on yksi maailman vanhimmista yhä toimivista oppilaitoksista.",
+     "leveys": 3853,
+     "korkeus": 1742,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "29610-Fez (28134041211).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/29610-Fez_(28134041211).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:29610-Fez_(28134041211).jpg",
+     "selite": "Moskeijan vihreät katot erottuvat medinan hiekanvärisestä korttelimerestä.",
+     "leveys": 3000,
+     "korkeus": 1987,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fes-Morocco 20.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fes-Morocco_20.jpg?width=1280",
+     "tekija": "Werner100359",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fes-Morocco_20.jpg",
+     "selite": "Moskeijan kupoli ja kaiverrettu puuräystäs kuuluvat Fèsin tunnetuimpiin yksityiskohtiin.",
+     "leveys": 2639,
+     "korkeus": 3716,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29660",
+   "nimi": "Bou Inanian medresa",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 34.06221,
+   "lon": -4.98273,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bou Inania Madrasa 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bou_Inania_Madrasa_2011.jpg?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bou_Inania_Madrasa_2011.jpg",
+     "selite": "Marinidien 1300-luvun medresan sisäpiha ja minareetti ovat koristeltu kaakelein, stukkiin ja puuhun.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bou Inania Madrasa, Fez, Marocco (المدرسة البوعنانية, ⴰⵙⵉⵏⴰⵏ ⴱⵓ ⵉⵏⴰⵏⵉⵢⴰ).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bou_Inania_Madrasa%2C_Fez%2C_Marocco_(%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D8%A8%D9%88%D8%B9%D9%86%D8%A7%D9%86%D9%8A%D8%A9%2C_%E2%B4%B0%E2%B5%99%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F_%E2%B4%B1%E2%B5%93_%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F%E2%B5%89%E2%B5%A2%E2%B4%B0).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bou_Inania_Madrasa%2C_Fez%2C_Marocco_(%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D8%A8%D9%88%D8%B9%D9%86%D8%A7%D9%86%D9%8A%D8%A9%2C_%E2%B4%B0%E2%B5%99%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F_%E2%B4%B1%E2%B5%93_%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F%E2%B5%89%E2%B5%A2%E2%B4%B0).jpg",
+     "selite": "Kaiverrettu holvikaari kehystää medresan minareettia.",
+     "leveys": 8160,
+     "korkeus": 6120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Doors, Bou Inania Madrasa, Fez, Marocco (المدرسة البوعنانية, ⴰⵙⵉⵏⴰⵏ ⴱⵓ ⵉⵏⴰⵏⵉⵢⴰ).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doors%2C_Bou_Inania_Madrasa%2C_Fez%2C_Marocco_(%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D8%A8%D9%88%D8%B9%D9%86%D8%A7%D9%86%D9%8A%D8%A9%2C_%E2%B4%B0%E2%B5%99%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F_%E2%B4%B1%E2%B5%93_%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F%E2%B5%89%E2%B5%A2%E2%B4%B0).jpg?width=1280",
+     "tekija": "Petar Milošević",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doors%2C_Bou_Inania_Madrasa%2C_Fez%2C_Marocco_(%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9_%D8%A7%D9%84%D8%A8%D9%88%D8%B9%D9%86%D8%A7%D9%86%D9%8A%D8%A9%2C_%E2%B4%B0%E2%B5%99%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F_%E2%B4%B1%E2%B5%93_%E2%B5%89%E2%B5%8F%E2%B4%B0%E2%B5%8F%E2%B5%89%E2%B5%A2%E2%B4%B0).jpg",
+     "selite": "Oven geometrinen kuviointi on esimerkki marokkolaisesta puusepäntaidosta.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q29080943",
+   "nimi": "Fès el-Bali",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "aliakset": [
+    "Q2072102"
+   ],
+   "lat": 34.0625,
+   "lon": -4.9725,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Der älteste ummauerte Teil von Fes\". 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._03.jpg",
+     "selite": "Fès el-Bali on maailman suurimpia autottomia vanhoja kaupunkeja, ja sen muurit kiertävät sitä.",
+     "leveys": 4888,
+     "korkeus": 2438,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Der älteste ummauerte Teil von Fes\". 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._05.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._05.jpg",
+     "selite": "Medinan tiheä kortteliverkko levittäytyy rinteelle minareettien ympärille.",
+     "leveys": 5906,
+     "korkeus": 3938,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Der älteste ummauerte Teil von Fes\". 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._07.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Der_%C3%A4lteste_ummauerte_Teil_von_Fes%22._07.jpg",
+     "selite": "Kaupunginosan jäljet ulottuvat satojen vuosien taakse 800-luvun perustamiseen.",
+     "leveys": 5906,
+     "korkeus": 3936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2881543",
+   "nimi": "Bab Bou Jeloud",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.06169,
+   "lon": -4.98403,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fes Bab Bou Jeloud 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fes_Bab_Bou_Jeloud_2011.jpg?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fes_Bab_Bou_Jeloud_2011.jpg",
+     "selite": "Siniset ja vihreät kaakelit koristavat portin, josta medinaan astutaan.",
+     "leveys": 3088,
+     "korkeus": 2468,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20151118 Morocco 2464 Fez sRGB (24401365321).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20151118_Morocco_2464_Fez_sRGB_(24401365321).jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20151118_Morocco_2464_Fez_sRGB_(24401365321).jpg",
+     "selite": "Portin edustalla kulkijat siirtyvät uudesta kaupungista vanhaan.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Ein Wahrzeichen der Stadt Fes.\" 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Ein_Wahrzeichen_der_Stadt_Fes.%22_03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Ein_Wahrzeichen_der_Stadt_Fes.%22_03.jpg",
+     "selite": "Portin hevosenkenkäkaari kehystää näkymän medinan kujille.",
+     "leveys": 4978,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4702240",
+   "nimi": "Al-Attarinen medresa",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 34.06514,
+   "lon": -4.97361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Ein Juwel islamischer Architektur\". 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Ein_Juwel_islamischer_Architektur%22._05.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Ein_Juwel_islamischer_Architektur%22._05.jpg",
+     "selite": "Al-Attarinen medresan sisäpiha on koristeltu kaakelein ja kaiverretulla stukilla.",
+     "leveys": 4534,
+     "korkeus": 5906,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Ein Juwel islamischer Architektur\". 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Ein_Juwel_islamischer_Architektur%22._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Ein_Juwel_islamischer_Architektur%22._01.jpg",
+     "selite": "Seinien kirjoitusfriisi ja kaakelit ovat marinidikauden taidonnäyte.",
+     "leveys": 5906,
+     "korkeus": 3443,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Ein Juwel islamischer Architektur\". 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Ein_Juwel_islamischer_Architektur%22._07.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Ein_Juwel_islamischer_Architektur%22._07.jpg",
+     "selite": "Kaiverrettu katto ja holvikaaret ympäröivät medresan opiskelijahuoneita.",
+     "leveys": 4053,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12241648",
+   "nimi": "Saffarinin medresa",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.06415,
+   "lon": -4.97257,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saffarin Madrasa rooftop view DSCF2910.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saffarin_Madrasa_rooftop_view_DSCF2910.jpg?width=1280",
+     "tekija": "R Prazeres",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saffarin_Madrasa_rooftop_view_DSCF2910.jpg",
+     "selite": "Saffarinin medresan vihreä kattokaakeli ja minareetti näkyvät naapuritalojen katoilta.",
+     "leveys": 3128,
+     "korkeus": 2202,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Place es Seffarine (588955430).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Place_es_Seffarine_(588955430).jpg?width=1280",
+     "tekija": "Maureen from Buffalo, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Place_es_Seffarine_(588955430).jpg",
+     "selite": "Medresan sisäpiha on valkoinen ja sen puuparvekkeet on koristeltu kaiverruksin.",
+     "leveys": 2000,
+     "korkeus": 3008,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3330322",
+   "nimi": "Dar Batha",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.06058,
+   "lon": -4.98272,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dar Batha (4782503319).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_Batha_(4782503319).jpg?width=1280",
+     "tekija": "Mike Prince from Bangalore, India",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_Batha_(4782503319).jpg",
+     "selite": "Entisessä sulttaanin palatsissa toimii nykyään puu- ja keramiikkataidetta esittelevä museo.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Batha Museum (4317468784).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batha_Museum_(4317468784).jpg?width=1280",
+     "tekija": "Henry Zbyszynski from Capitola California, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Batha_Museum_(4317468784).jpg",
+     "selite": "Palatsin kaakeloitu sisäpiha avautuu holvikäytävien väliin.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dar Batha DSCF2788.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_Batha_DSCF2788.jpg?width=1280",
+     "tekija": "R Prazeres",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_Batha_DSCF2788.jpg",
+     "selite": "Museon puutarha on rauhallinen vastapaino medinan vilinälle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q609167",
+   "nimi": "Nejjarinin funduq",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.06486,
+   "lon": -4.97586,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "\"Eines der wenigen erhaltenen Gebäude seiner Art\". 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Eines_der_wenigen_erhaltenen_Geb%C3%A4ude_seiner_Art%22._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Eines_der_wenigen_erhaltenen_Geb%C3%A4ude_seiner_Art%22._03.jpg",
+     "selite": "Entinen karavaanimajatalo ja sen kaakelikoristeinen suihkulähde kuuluvat medinan kauneimpiin.",
+     "leveys": 4044,
+     "korkeus": 5906,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Eines der wenigen erhaltenen Gebäude seiner Art\". 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Eines_der_wenigen_erhaltenen_Geb%C3%A4ude_seiner_Art%22._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Eines_der_wenigen_erhaltenen_Geb%C3%A4ude_seiner_Art%22._02.jpg",
+     "selite": "Funduqin julkisivun kaiverrettu puuparveke kohoaa aukion yllä.",
+     "leveys": 4125,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8066334",
+   "nimi": "Moulay Idris II:n zawiya",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 34.06485,
+   "lon": -4.97472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zawiya of Moulay Idriss II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zawiya_of_Moulay_Idriss_II.jpg?width=1280",
+     "tekija": "Casual Builder",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zawiya_of_Moulay_Idriss_II.jpg",
+     "selite": "Fèsin perustajaksi kutsutun Idris II:n pyhäkkö on kaupungin tärkeimpiä pyhiinvaelluskohteita.",
+     "leveys": 1683,
+     "korkeus": 1500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Portal to the sanctuary area around the Zawiya of Moulay Idriss II.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portal_to_the_sanctuary_area_around_the_Zawiya_of_Moulay_Idriss_II.jpg?width=1280",
+     "tekija": "Casual Builder",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Portal_to_the_sanctuary_area_around_the_Zawiya_of_Moulay_Idriss_II.jpg",
+     "selite": "Pyhäkköalueen portti on koristeltu kaiverretulla stukilla ja puulla.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9276395",
+   "nimi": "Marinidien haudat",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 34.06977,
+   "lon": -4.97924,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018-12-26 14-02-58 IMG 7662 (46267452324).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-12-26_14-02-58_IMG_7662_(46267452324).jpg?width=1280",
+     "tekija": "Max Dawncat from Russia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-12-26_14-02-58_IMG_7662_(46267452324).jpg",
+     "selite": "Marinidisulttaanien raunioituneet hautatornit kohoavat kukkulalla medinan yläpuolella.",
+     "leveys": 3870,
+     "korkeus": 3364,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Marinid Tombs in April 2016 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marinid_Tombs_in_April_2016_1.jpg?width=1280",
+     "tekija": "Mx. Granger",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marinid_Tombs_in_April_2016_1.jpg",
+     "selite": "Savitiilestä rakennettujen hautojen jäänteet erottuvat kukkulan rinteellä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "29606-Fez (28134035771).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/29606-Fez_(28134035771).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:29606-Fez_(28134035771).jpg",
+     "selite": "Haudat näkyvät laakson reunalla koko medinan taustana.",
+     "leveys": 3000,
+     "korkeus": 1856,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4120596",
+   "nimi": "Ibn Danan -synagoga",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 34.05268,
+   "lon": -4.99169,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ibn Danan Synagogue, April 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ibn_Danan_Synagogue%2C_April_2016.jpg?width=1280",
+     "tekija": "Mx. Granger",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ibn_Danan_Synagogue%2C_April_2016.jpg",
+     "selite": "Fèsin juutalaiskorttelin synagoga muistuttaa kaupungin vuosisatoja kestäneestä juutalaisyhteisöstä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aben Danan synagogue-Fes Morocco 3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aben_Danan_synagogue-Fes_Morocco_3.JPG?width=1280",
+     "tekija": "Hanay",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aben_Danan_synagogue-Fes_Morocco_3.JPG",
+     "selite": "Synagogan sisätila on koristettu puulla ja kaakeleilla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Fes el Bali from nord(js).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fes_el_Bali_from_nord(js).jpg?width=1280",
+   "tekija": "Jerzystrzelecki",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fes_el_Bali_from_nord(js).jpg",
+   "selite": "Fèsin vanhakaupunki levittäytyy muurien sisäpuolelle vihreän kukkulan juurelle.",
+   "leveys": 5514,
+   "korkeus": 3393,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Fes Morocco Medina rooftops Sept 2014 - 1 (15922382065).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fes_Morocco_Medina_rooftops_Sept_2014_-_1_(15922382065).jpg?width=1280",
+   "tekija": "Andrew Nash from Vienna, Austria",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fes_Morocco_Medina_rooftops_Sept_2014_-_1_(15922382065).jpg",
+   "selite": "Medinan hiekanväriset katot ja minareetit muodostavat tiiviin kattomaiseman.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

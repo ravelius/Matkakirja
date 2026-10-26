@@ -8,11 +8,15 @@
  *      ajossa: ensin nykyisella css:lla, sitten vanhat katot
  *      (92vw/78vh) takaisin kirjoittavalla lisatyylilla. Ero on
  *      ENNEN/JALKEEN-luku, ei muistikuva.
- *   2. PAPERI LIMITTYY KUVAN TAAKSE. Paperin (figcaption) ylareuna on
- *      kuvan alareunan YLAPUOLELLA: limitys > 0 px, jolloin sauman
- *      kohdalle ei jaa lapinakyvaa viivaa millaan dpr:lla.
- *   3. KUVATEKSTI ON PAPERIN SISALLA (span figcaptionin laatikossa).
- *   4. OHITA NAKYY KUVAN JA KUVATEKSTIN ALLA.
+ *   2. EI ENAA PAPERIA EIKA KUVATEKSTIA RUUDULLA (29.9.2026, löydös
+ *      138 / build 16, Paatoimittajan paatos: "kehys ja kuvateksti
+ *      pois, pelkka kuva" — natiivi seuraa). Vanha figcaption-paperi
+ *      EI saa enaa olla DOMissa.
+ *   3. KUVATEKSTI ON KUVAN ALT-ATTRIBUUTISSA (ei enaa nakyvana
+ *      tekstina, mutta yha ruudunlukijan saatavilla).
+ *   4. OHITA NAKYY EIKA PEITA KUVAA (Ohitan ylareuna kuvan alareunan
+ *      alapuolella — ilman kuvatekstipaperia paallekkaisyytta ei enaa
+ *      voi syntya, pariteettikatsauksen rivi 4).
  *   5. OHITA PYSAYTTAA LUENNAN: alle 1 s:ssa aani on pysahtynyt, isot
  *      kuvat ovat poissa ja kartta nakyy; pulun sarja ei enaa nouse.
  *   5b. OHITA PYSAYTTAA MYOS PULUN (PAATOKSET 35 TARKENNUS 2 kohta 6).
@@ -21,12 +25,9 @@
  *      vakoitu. Ohitan jalkeen: kaikki <audio> paused/ended 1 s:ssa,
  *      eika 10 s:n kuluessa yhtaan uutta play/start-kutsua, yhtaan
  *      soivaa audiota eika pulun kuplia tai kuvasolmuja.
- *   8. VARJO EI LANKEA KUVATEKSTIN PAPERILLE (TARKENNUS 2 kohta 5).
- *      Paperin pikselit kuvan alareunan alla luetaan KAAPPAUKSESTA
- *      (oma png-purku): kaikkien on oltava paperin varia (#f7f1e2)
- *      +-6. Sama mittaus ajetaan vastakokeena vanhalla tyylilla (varjo
- *      takaisin kuvaan), jolloin saman kaistan on oltava selvasti
- *      tummempi — muuten mittari ei nakisi varjoa lainkaan.
+ *   8. (POISTETTU 29.9.2026.) Mittasi ennen, ettei varjo lankea
+ *      kuvatekstin paperille — paperi poistui kokonaan (kohta 2), joten
+ *      mittaus ei enaa koske mitaan.
  *   6. PIKKUKUVAT MATKAKIRJAN LOPUSSA: auki-tilassa kuvien maara,
  *      pienennetyssa kortissa 0 nakyvaa.
  *   7. PIKKUKUVAN NAPAUTUS AVAA SUURENNOKSEN.
@@ -71,10 +72,9 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const PW = process.env.PLAYWRIGHT_JS ?? 'playwright';
-const paketti = await import(PW).catch(() => import('playwright'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 const CHROME = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -151,70 +151,11 @@ function pngSuorakaide(leveys, korkeus) {
  */
 const VARAKUVA = pngSuorakaide(1500, 1000);
 /*
- * PNG-PURKU KAAPPAUKSESTA. Playwright palauttaa 8-bittisen RGBA-png:n
- * (varityyppi 6, ei lomitusta); tama purkaa sen suodattimineen, jotta
- * varjon kaista voidaan lukea PIKSELEINA eika css-arvoina.
+ * PNG-PURKU KAAPPAUKSESTA POISTUI 29.9.2026 (löydös 138 / build 16):
+ * se luki vain kuvatekstin paperin väriä varjon alta, ja paperi
+ * poistui kokonaan (ks. .fokusvirta-isokuva-kuva css/fokusvirta.css).
+ * `zlib.deflateSync` on yhä käytössä `pngSuorakaide`-apurissa yllä.
  */
-function puraPng(buf) {
-  let i = 8;
-  let leveys = 0; let korkeus = 0; let syvyys = 0; let tyyppi = 0;
-  const palat = [];
-  while (i < buf.length) {
-    const pituus = buf.readUInt32BE(i);
-    const nimi = buf.toString('latin1', i + 4, i + 8);
-    const data = buf.subarray(i + 8, i + 8 + pituus);
-    if (nimi === 'IHDR') {
-      leveys = data.readUInt32BE(0); korkeus = data.readUInt32BE(4);
-      syvyys = data[8]; tyyppi = data[9];
-    } else if (nimi === 'IDAT') palat.push(data);
-    else if (nimi === 'IEND') break;
-    i += 12 + pituus;
-  }
-  if (syvyys !== 8 || (tyyppi !== 6 && tyyppi !== 2)) {
-    throw new Error(`png: syvyys ${syvyys} tyyppi ${tyyppi} ei tuettu`);
-  }
-  const kanavia = tyyppi === 6 ? 4 : 3;
-  const raaka = zlib.inflateSync(Buffer.concat(palat));
-  const rivi = leveys * kanavia;
-  const kuva = Buffer.alloc(rivi * korkeus);
-  const paeth = (a, b, c) => {
-    const pa = Math.abs(b - c); const pb = Math.abs(a - c);
-    const pc = Math.abs(a + b - 2 * c);
-    return (pa <= pb && pa <= pc) ? a : (pb <= pc ? b : c);
-  };
-  for (let y = 0; y < korkeus; y += 1) {
-    const suodatin = raaka[y * (rivi + 1)];
-    const lahde = y * (rivi + 1) + 1;
-    const kohde = y * rivi;
-    for (let x = 0; x < rivi; x += 1) {
-      const raw = raaka[lahde + x];
-      const a = x >= kanavia ? kuva[kohde + x - kanavia] : 0;
-      const b = y > 0 ? kuva[kohde - rivi + x] : 0;
-      const c = (x >= kanavia && y > 0) ? kuva[kohde - rivi + x - kanavia] : 0;
-      let arvo = raw;
-      if (suodatin === 1) arvo = raw + a;
-      else if (suodatin === 2) arvo = raw + b;
-      else if (suodatin === 3) arvo = raw + ((a + b) >> 1);
-      else if (suodatin === 4) arvo = raw + paeth(a, b, c);
-      kuva[kohde + x] = arvo & 0xff;
-    }
-  }
-  return {
-    leveys,
-    korkeus,
-    pikseli: (x, y) => {
-      const xi = Math.round(x); const yi = Math.round(y);
-      if (xi < 0 || yi < 0 || xi >= leveys || yi >= korkeus) return null;
-      const k = yi * rivi + xi * kanavia;
-      return [kuva[k], kuva[k + 1], kuva[k + 2]];
-    },
-  };
-}
-/** Paperin savy (css/fokusvirta.css .fokusvirta-isokuva-teksti). */
-const PAPERI = [0xf7, 0xf1, 0xe2];
-const poikkeama = (p) => (p ? Math.max(
-  Math.abs(p[0] - PAPERI[0]), Math.abs(p[1] - PAPERI[1]), Math.abs(p[2] - PAPERI[2]),
-) : 999);
 
 /* Aanen runko: dekooderi hylkaa sen, jolloin <audio> paatyy virheeseen
    ja `paused` on tosi — riittaa, koska mitattava on OHITA eika toisto. */
@@ -236,7 +177,7 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   executablePath: CHROME,
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
@@ -327,10 +268,11 @@ const laatikot = () => sivu.evaluate(() => {
   }))(el.getBoundingClientRect()) : null);
   const ruutu = [...document.querySelectorAll('.fokusvirta-isokuva-ruutu')].pop();
   const ohitaEl = document.querySelector('.fokusvirta-isokuva-ohita');
+  const kuvaEl = ruutu?.querySelector('.fokusvirta-isokuva-kuva');
   return {
-    kuva: b(ruutu?.querySelector('.fokusvirta-isokuva-kuva')),
+    kuva: b(kuvaEl),
+    kuvanAlt: kuvaEl?.alt ?? null,
     paperi: b(ruutu?.querySelector('.fokusvirta-isokuva-teksti')),
-    selite: b(ruutu?.querySelector('.fokusvirta-isokuva-selite')),
     ohita: b(ohitaEl),
     ohitaNakyy: Boolean(ohitaEl) && getComputedStyle(ohitaEl).visibility !== 'hidden',
   };
@@ -341,117 +283,26 @@ if (KUVAKANSIO) {
   await sivu.screenshot({ path: join(KUVAKANSIO, 'luentakuva-paperi-ohita.png') });
 }
 
-/* 2–4: paperi, kuvateksti, Ohita */
-const limitys = jalkeen.kuva && jalkeen.paperi ? jalkeen.kuva.bottom - jalkeen.paperi.top : null;
+/*
+ * 2–4: EI ENÄÄ PAPERIA EIKÄ KUVATEKSTIÄ, OHITA EI PEITÄ KUVAA
+ * (Siirtosepän pariteettikatsaus 29.9.2026, löydös 138 / build 16,
+ * Päätoimittajan päätös: "kehys ja kuvateksti pois, pelkkä kuva" —
+ * natiivissa saapumisen valokuvakortti on jo pelkkä kuva. Tämä poisti
+ * samalla Ohitan ja kuvatekstin päällekkäisyyden, pariteettikatsauksen
+ * rivi 4). Vanha paperi/kuvateksti-DOM ei saa enää olla olemassa, ja
+ * sama lyhyt teksti on kuvan alt-attribuutissa. Ohita on oma kelluva
+ * solmunsa (PAATOKSET 43 kohta 10) eikä sen kuulu osua kuvan päälle.
+ */
 tieto('kuva (jälkeen)', JSON.stringify(jalkeen.kuva));
-tieto('paperi', JSON.stringify(jalkeen.paperi));
-tieto('limitys px', limitys);
-vaadi('paperin yläreuna on kuvan alareunan yläpuolella (limitys > 0)',
-  limitys !== null && limitys > 0, `limitys ${limitys}`);
-vaadi('paperi on kuvan levyinen (>= 96 % kuvan leveydestä)',
-  Boolean(jalkeen.paperi) && jalkeen.paperi.w >= jalkeen.kuva.w * 0.96,
-  `${jalkeen.paperi?.w} vs ${jalkeen.kuva?.w}`);
-vaadi('kuvateksti on paperin sisällä',
-  Boolean(jalkeen.selite) && jalkeen.selite.top >= jalkeen.paperi.top - 1
-    && jalkeen.selite.bottom <= jalkeen.paperi.bottom + 1,
-  JSON.stringify(jalkeen.selite));
-vaadi('Ohita näkyy kuvan ja kuvatekstin alla',
-  jalkeen.ohitaNakyy && Boolean(jalkeen.ohita) && jalkeen.ohita.top > jalkeen.paperi.bottom,
-  JSON.stringify(jalkeen.ohita));
-
-/*
- * 8: VARJO EI SAA LANGETA KUVATEKSTIN PAPERILLE.
- *
- * Mittapisteet lasketaan paperin OMASSA koordinaatistossa ja
- * kaannetaan ruudulle kortin kiertokulmalla (pakan kortti on
- * kallistettu, mutta kierto on sama kuvalle, paperille ja varjolle).
- * Kaista on kuvan alareunan ALAPUOLELLA ja kuvatekstin YLAPUOLELLA:
- * juuri se ala, jolle kuvan oma varjo lankesi.
- */
-const varjoPisteet = await sivu.evaluate(() => {
-  const ruutu = [...document.querySelectorAll('.fokusvirta-isokuva-ruutu')].pop();
-  const paperi = ruutu?.querySelector('.fokusvirta-isokuva-teksti');
-  const selite = ruutu?.querySelector('.fokusvirta-isokuva-selite');
-  if (!paperi || !selite) return null;
-  const m = new DOMMatrix(getComputedStyle(ruutu).transform);
-  const kulma = Math.atan2(m.b, m.a);
-  const r = paperi.getBoundingClientRect();
-  const cx = r.x + r.width / 2;
-  const cy = r.y + r.height / 2;
-  const w = paperi.offsetWidth;
-  const h = paperi.offsetHeight;
-  const limitys = parseFloat(getComputedStyle(paperi)
-    .getPropertyValue('--isokuva-paperin-limitys')) || 3;
-  const ruudulle = (x, y) => {
-    const dx = x - w / 2;
-    const dy = y - h / 2;
-    return [
-      cx + dx * Math.cos(kulma) - dy * Math.sin(kulma),
-      cy + dx * Math.sin(kulma) + dy * Math.cos(kulma),
-    ];
-  };
-  const pisteet = [];
-  // Kaista kuvan alareunan alla, kuvatekstin ylapuolella.
-  const yAlku = limitys + 2;
-  const yLoppu = Math.max(yAlku + 1, selite.offsetTop - 2);
-  for (let i = 0; i <= 10; i += 1) {
-    const x = w * (0.06 + (0.88 * i) / 10);
-    for (let j = 0; j <= 4; j += 1) {
-      pisteet.push(ruudulle(x, yAlku + ((yLoppu - yAlku) * j) / 4));
-    }
-  }
-  // Sivukaistat: paperin oma pehmuste kuvatekstin vierella.
-  for (let j = 0; j <= 6; j += 1) {
-    const y = yAlku + ((h - 6 - yAlku) * j) / 6;
-    pisteet.push(ruudulle(3, y));
-    pisteet.push(ruudulle(w - 3, y));
-  }
-  return { pisteet, w, h, limitys, kaistaPx: Math.round(yLoppu - yAlku) };
-});
-const lueVarjo = async (nimi) => {
-  const kuva = puraPng(await sivu.screenshot());
-  let pahin = 0;
-  let missa = null;
-  for (const [x, y] of varjoPisteet.pisteet) {
-    const ero = poikkeama(kuva.pikseli(x, y));
-    if (ero > pahin) { pahin = ero; missa = [Math.round(x), Math.round(y)]; }
-  }
-  tieto(`paperin pahin poikkeama (${nimi})`, `${pahin} @ ${JSON.stringify(missa)}`);
-  return pahin;
-};
-vaadi('paperin mittapisteet loytyivat', Boolean(varjoPisteet?.pisteet?.length),
-  JSON.stringify(varjoPisteet));
-tieto('mittakaista px', varjoPisteet?.kaistaPx);
-tieto('mittapisteita', varjoPisteet?.pisteet?.length);
-const varjoNyt = await lueVarjo('nyt');
-vaadi('paperi on tasaisesti paperin väriä kuvan alla (±6)', varjoNyt <= 6,
-  `poikkeama ${varjoNyt}`);
-if (KUVAKANSIO) {
-  await sivu.screenshot({ path: join(KUVAKANSIO, 'luentakuva-paperi-ei-varjoa.png') });
-}
-/*
- * VASTAKOE: vanha tyyli takaisin (varjo kuvassa, ei kotelossa). Jos
- * mittari ei nae varjoa silloinkaan, se ei mittaa mitaan.
- */
-const varjoEnnen = await (async () => {
-  await sivu.evaluate(() => {
-    const t = document.createElement('style');
-    t.id = 'vanha-varjo';
-    t.textContent = `.fokusvirta-isokuva-kotelo{box-shadow:none !important}
-      .fokusvirta-isokuva-kuva{box-shadow:0 10px 26px rgba(20,14,6,0.45) !important}`;
-    document.head.appendChild(t);
-  });
-  await sivu.waitForTimeout(200);
-  if (KUVAKANSIO) {
-    await sivu.screenshot({ path: join(KUVAKANSIO, 'luentakuva-paperi-vanha-varjo.png') });
-  }
-  const arvo = await lueVarjo('vanha varjo kuvassa');
-  await sivu.evaluate(() => document.getElementById('vanha-varjo')?.remove());
-  await sivu.waitForTimeout(200);
-  return arvo;
-})();
-vaadi('vastakoe: vanha kuvan varjo NÄKYY paperilla (mittari toimii)',
-  varjoEnnen > 12, `poikkeama ${varjoEnnen}`);
+tieto('kuvan alt', jalkeen.kuvanAlt);
+vaadi('ei enää erillistä kuvatekstipaperia', jalkeen.paperi === null,
+  JSON.stringify(jalkeen.paperi));
+vaadi('kuvateksti on kuvan alt-attribuutissa', Boolean(jalkeen.kuvanAlt),
+  JSON.stringify(jalkeen.kuvanAlt));
+vaadi('Ohita näkyy eikä peitä kuvaa (Ohitan yläreuna kuvan alareunan alapuolella)',
+  jalkeen.ohitaNakyy && Boolean(jalkeen.ohita) && Boolean(jalkeen.kuva)
+    && jalkeen.ohita.top >= jalkeen.kuva.bottom,
+  JSON.stringify({ ohita: jalkeen.ohita, kuva: jalkeen.kuva }));
 
 /* 1: ENNEN/JÄLKEEN samassa ajossa (vanhat katot takaisin). */
 const ennen = await sivu.evaluate(() => {

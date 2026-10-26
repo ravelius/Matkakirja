@@ -351,8 +351,9 @@ saavat jäädä legendoiksi kaupungin oman aarteen kohdalla.
 - **Euroopan mysteeri on tuntematon kulkija:** joku kiertää
   Eurooppaa ja pitää isoisän jälkiä kunnossa — kiillottaa, täyttää,
   sytyttää, ruokkii. Kevätkulkija-lanka (yllä) on saman mysteerin
-  ydin. Ratkaisu kirjoitetaan Meripihkahuoneen aarteen
-  löytymishetkeen; kulkijan henkilöllisyys päätetään omistajan
+  ydin. Ratkaisu kirjoitetaan Kolme veljestä -riipuksen
+  löytymishetkeen (Euroopan unohdettu aarre 11.10.2026 alkaen);
+  kulkijan henkilöllisyys päätetään omistajan
   kanssa erikseen (sateenvarjolinjaus, ks. Vastavoima-luku) —
   siihen asti kukaan teksti ei nimeä eikä näytä kulkijaa.
 - **Päiväkirjan taitettu sivu** on tarinamotiivi, ei enää
@@ -536,13 +537,18 @@ pääaarre, jota vihjeet kiertävät. Tarina.md:n tärkein sääntö
 korostuu näillä laudoilla: piikki osoittaa AINA Foggiin ja hänen
 vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
 
-- **Afrikka — Suuren Zimbabwen kivilintu.** Uusitaan ensimmäisenä
+- **Afrikka — Kongon kuninkaan kruunu** *(omistaja 19.10.2026; korvaa
+  Suuren Zimbabwen kivilinnun, jonka kaikki kahdeksan lintua on löydetty)*.
+  Paavin lahja kuningas Garcia II:lle 1652. Mbwilan taistelun
+  (29.10.1665) jälkeen kruunu lähetettiin Portugaliin, ja se katosi
+  joko Recifessä tai Lissabonissa. Kuninkaasta, joka kaatui Mbwilan taistelussa,
+  kerrotaan arvokkaasti. Uusitaan ensimmäisenä
   (kaupunkien tekstit ovat jo hyvät — tiivistys + dekkarikoukut
-  harvakseltaan). Motiivilanka: linnun varjo — kivinen siipi,
-  höyhen kirjan välissä, veistäjän jälki. Horatio 1873: höyrylaivat
+  harvakseltaan). Motiivilanka: lähetys, joka ei tullut perille —
+  sinetöity laatikko, satamakirjan tyhjä rivi, hopean välähdys. Horatio 1873: höyrylaivat
   ja karavaanit, Suezin kanava on kaksivuotias. Sävelpaino:
   ihmetys, kunnioitus ja lämpö; jännitys korkeintaan kahdesti.
-- **Lähi-itä — Sheban aarre.** Motiivilanka: suitsukkeen tuoksu ja
+- **Lähi-itä — Sheban kuningattaren suitsukerasia.** Motiivilanka: suitsukkeen tuoksu ja
   tähdet — karavaanireittien suunnistus. Horatio mittaa öitä, ei
   päiviä. Sävelpaino: arvoitus ja lämpö (teelasit, kauppiaat) —
   JA "Imu aikuiselle" -linjauksen mukainen todellinen jännite:
@@ -552,14 +558,22 @@ vanhaan maailmaansa, ei koskaan maihin tai ihmisiin.
   jadesinetti.** Motiivilanka: sinetin jälki vahassa ja paperissa —
   asiakirja, johon isoisä ei koskaan saanut leimaa. Sävelpaino:
   ihmetys ja huumori (Horatio ja byrokratia).
-- **Pohjois-Amerikka — Montezuman aarre.** Motiivilanka: rautatiet
+- **Pohjois-Amerikka — Montezuman turkoosinaamio.** Motiivilanka: rautatiet
   ja sähkösanomat — vuoden 1873 uusin maailma, jossa Horatio on
   ensi kertaa se, joka ihmettelee. Sävelpaino: vauhti ja huumori.
-- **Etelä-Amerikka — El Doradon aarre.** Motiivilanka: kulta joka
-  ei kiillä — joet, sumu ja legendat, joita kukaan ei kartoita.
-  Sävelpaino: ihmetys ja arvoitus; El Dorado on tarina tarinasta.
-- **Oseania — Eteläristin helmi.** Motiivilanka: tähtitaivas, jota
-  Horatio ei tunne — kartanpiirtäjä oppii navigoimaan uudestaan.
+- **Etelä-Amerikka — Mantan smaragdi** *(omistaja 19.10.2026; korvaa
+  El Doradon aarteen ja Muiscojen kultalautan, joka löydettiin 1969)*.
+  Mantan herran palvoma smaragdi, vähän strutsinmunaa pienempi;
+  manteñot kätkivät sen 1534, eikä sitä ole löydetty. Nimi Umiña on
+  myöhemmän kertomuksen (Velasco 1789). Motiivilanka:
+  vihreä valo, jota ei näe — joet, sumu ja kätketty kivi, jota kukaan
+  ei kartoita. Sävelpaino: ihmetys ja arvoitus.
+- **Oseania — Raiatean kuninkaiden höyhenvyö** *(omistaja 19.10.2026;
+  korvaa Eteläristin helmen, joka löydettiin 1883)*. Punahöyheninen
+  maro ʻura, johon jokainen hallitsija lisäsi osan; lähetettiin
+  Lontooseen viimeistään 1822, eikä sen myöhemmistä vaiheista tiedetä. Pyhä esine, josta
+  kerrotaan kunnioittaen. Motiivilanka: punottu muisti ja tähtitaivas,
+  jota Horatio ei tunne — kartanpiirtäjä oppii navigoimaan uudestaan.
   Sävelpaino: meri, valo ja hengähdys; laudan rauhallisin.
 - **Maailmankartta — Magellanin kompassi.** Motiivilanka:
   kompassineula ja suunnat; risteysten lauta, jonka merkinnät

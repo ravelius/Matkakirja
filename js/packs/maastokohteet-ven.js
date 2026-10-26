@@ -188,7 +188,7 @@ export const MAASTOKOHTEET_VEN = [
       + 'ensimmäinen pääkaupunki 1546–1578 ja Etelä-Amerikan ensimmäisen 1531 perustetun '
       + 'hiippakunnan istuin. Kaupunki on Paraguanán niemimaan eteläpuolella rannikkotasangolla, '
       + 'ja sen satama La Vela de Coro on muutaman kilometrin päässä Karibianmeren rannalla. '
-      + 'Hyvin säilyneen siirtomaa-arkkitehtuurin ansiosta "Coro ja sen satama La Vela" '
+      + 'Hyvin säilyneen siirtomaa-arkkitehtuurin ansiosta ”Coro ja sen satama La Vela” '
       + 'liitettiin maailmanperintöluetteloon 1993; vuodesta 2005 kohde on ollut '
       + 'vaarantuneiden maailmanperintökohteiden listalla.',
     lahde: 'en-Wikipedia "Coro, Venezuela", johdanto-osa (tarkistettu 6.9.2026).',

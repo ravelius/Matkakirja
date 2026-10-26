@@ -1,0 +1,17 @@
+{
+ "kuvaus": "Olavinlinnan henkilöt → äänipankin tunnus (ehdotus; omistaja valitsee). Henkilön id = rakennus.json.",
+ "olavinlinna": {
+  "soutaja": "mies-55-karhea-tuulinen",
+  "renki": "mies-25-reipas-avulias",
+  "hoitaja": "mies-55-tarkka-rauhallinen",
+  "kirjuri": "mies-40-kiireinen-virkailija",
+  "vartija": "mies-45-jamakka-karhea",
+  "vartija2": "mies-30-letkea-pelimies",
+  "talonpoika": "mies-70-lempea-muistelija",
+  "kappalainen": "mies-60-syva-juhlallinen",
+  "vouti": "mies-50-jamakka-hajamielinen",
+  "apulainen": "nainen-30-nopea-touhukas",
+  "kokki": "mies-45-aanekas-komentaja",
+  "vesipoika": "mies-18-reipas-nuorukainen"
+ }
+}

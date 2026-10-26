@@ -1,0 +1,516 @@
+{
+ "kaupunki": "auckland",
+ "kaupunkiQ": "Q37100",
+ "kohteet": [
+  {
+   "q": "Q722125",
+   "nimi": "Sky Tower",
+   "peruste": "sitelinks",
+   "koko_m": 330,
+   "lat": -36.84847,
+   "lon": 174.76231,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auckland City Skyline - Flickr - 111 Emergency.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_City_Skyline_-_Flickr_-_111_Emergency.jpg?width=1280",
+     "tekija": "111 Emergency from New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_City_Skyline_-_Flickr_-_111_Emergency.jpg",
+     "selite": "Sky Tower kohoaa Aucklandin keskustan yllä ja on Etelä-Tyynenmeren korkein rakennelma.",
+     "leveys": 1600,
+     "korkeus": 1065,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-i---i- (22418411434).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(22418411434).jpg?width=1280",
+     "tekija": "aLexies© from Quezon City, Philippines",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(22418411434).jpg",
+     "selite": "Illalla torni valaistaan väreillä, ja se näkyy kauas Waitematā-sataman yli.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Auckland skyline (24045221962).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_skyline_(24045221962).jpg?width=1280",
+     "tekija": "Marco Klapper",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_skyline_(24045221962).jpg",
+     "selite": "Tornin valot vaihtuvat juhlapäivien mukaan, ja ne heijastuvat satamaveteen.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1422715",
+   "nimi": "Rangitoto",
+   "peruste": "sitelinks",
+   "koko_m": 5500,
+   "lat": -36.78674,
+   "lon": 174.86012,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rangitoto09f.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rangitoto09f.jpg?width=1280",
+     "tekija": "Bruce Hayward",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rangitoto09f.jpg",
+     "selite": "Rangitoto on Hauraki-lahden nuori tulivuorisaari, jonka rinteitä peittää laavan päälle kasvanut metsä.",
+     "leveys": 3200,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rangitoto from Mount Victoria in Devonport.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rangitoto_from_Mount_Victoria_in_Devonport.jpg?width=1280",
+     "tekija": "russellstreet",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rangitoto_from_Mount_Victoria_in_Devonport.jpg",
+     "selite": "Saaren symmetrinen kartio hallitsee Aucklandin satamanäkymää itäpuolella.",
+     "leveys": 5510,
+     "korkeus": 3539,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q758638",
+   "nimi": "Auckland Harbour Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 1020,
+   "lat": -36.82944,
+   "lon": 174.74639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auckland Bridge from Mount Victoria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_Bridge_from_Mount_Victoria.jpg?width=1280",
+     "tekija": "russellstreet",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_Bridge_from_Mount_Victoria.jpg",
+     "selite": "Teräskaarisilta ylittää Waitematā-sataman ja yhdistää keskustan Pohjoisrantaan.",
+     "leveys": 5616,
+     "korkeus": 3620,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Above Auckland Harbour Bridge looking SW.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Above_Auckland_Harbour_Bridge_looking_SW.jpg?width=1280",
+     "tekija": "Bjankuloski06",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Above_Auckland_Harbour_Bridge_looking_SW.jpg",
+     "selite": "Ylhäältä näkyy silta moottoritiekaistoineen ja sen takana Westhaven-satama.",
+     "leveys": 8192,
+     "korkeus": 6144,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Auckand Harbour Bridge - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckand_Harbour_Bridge_-_panoramio.jpg?width=1280",
+     "tekija": "Николай Максимович",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckand_Harbour_Bridge_-_panoramio.jpg",
+     "selite": "Sillan kaari erottuu matalana sataman yllä.",
+     "leveys": 3984,
+     "korkeus": 2345,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19875408",
+   "nimi": "Maungawhau eli Mount Eden",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -36.87817,
+   "lon": 174.76453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maungawhau in 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maungawhau_in_2009.jpg?width=1280",
+     "tekija": "russellstreet",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maungawhau_in_2009.jpg",
+     "selite": "Maungawhau on tulivuorikartio, jonka rinteillä oli maorien muinaislinnoitus.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flickr - brewbooks - Mount Eden crater and view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_brewbooks_-_Mount_Eden_crater_and_view.jpg?width=1280",
+     "tekija": "brewbooks from near Seattle, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_brewbooks_-_Mount_Eden_crater_and_view.jpg",
+     "selite": "Kraatterin reunalta avautuu näkymä Aucklandin keskustaan.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mount Eden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Eden.jpg?width=1280",
+     "tekija": "Etherbug, Alan Collins",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Eden.jpg",
+     "selite": "Täydellisen pyöreä kraatteri on Aucklandin tulivuorikentän tunnetuin.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q758657",
+   "nimi": "Aucklandin sotamuistomuseo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -36.8606,
+   "lon": 174.7778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auckland War Memorial Museum in 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_War_Memorial_Museum_in_2021.jpg?width=1280",
+     "tekija": "Daan Hoffmann / Auckland War Memorial Museum Tāmaki Paenga Hira",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_War_Memorial_Museum_in_2021.jpg",
+     "selite": "Klassinen pylväsrakennus kohoaa Domain-puiston kukkulalla ja toimii sekä museona että sotamuistomerkkinä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q909136",
+   "nimi": "Waiheke",
+   "peruste": "sitelinks",
+   "koko_m": 19000,
+   "lat": -36.8,
+   "lon": 175.1,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Waiheke Island Vineyard.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waiheke_Island_Vineyard.jpg?width=1280",
+     "tekija": "russellstreet",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waiheke_Island_Vineyard.jpg",
+     "selite": "Waiheke on Hauraki-lahden asuttu saari, jonka rinteillä on viinitiloja.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Waiheke View Marsanne Block.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waiheke_View_Marsanne_Block.jpg?width=1280",
+     "tekija": "Cable Bay Vineyards",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waiheke_View_Marsanne_Block.jpg",
+     "selite": "Viiniköynnösten yli näkyy meri ja lahden pienet saaret.",
+     "leveys": 2000,
+     "korkeus": 1335,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q312411",
+   "nimi": "Eden Park",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -36.87528,
+   "lon": 174.745,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eden Park at Dusk, 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_Park_at_Dusk%2C_2013.jpg?width=1280",
+     "tekija": "This image's author is Kiwi Flickr Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eden_Park_at_Dusk%2C_2013.jpg",
+     "selite": "Eden Park on Uuden-Seelannin suurin stadion, jossa pelataan rugbya ja krikettiä.",
+     "leveys": 7347,
+     "korkeus": 1918,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1950 British Empire Games opening ceremony.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1950_British_Empire_Games_opening_ceremony.jpg?width=1280",
+     "tekija": "Whites Aviation Ltd: Photographs. Ref: WA-23745-G. Alexander Turnbull Library, Wellington, New Zealand.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1950_British_Empire_Games_opening_ceremony.jpg",
+     "selite": "Ilmakuvassa stadion on vuoden 1950 kisoissa asuinkortteleiden ympäröimä.",
+     "leveys": 5281,
+     "korkeus": 3870,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1723186",
+   "nimi": "Maungakiekie eli One Tree Hill",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -36.9,
+   "lon": 174.78306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "One Tree Hill, Auckland, March 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/One_Tree_Hill%2C_Auckland%2C_March_2015.jpg?width=1280",
+     "tekija": "Techno246",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:One_Tree_Hill%2C_Auckland%2C_March_2015.jpg",
+     "selite": "Kukkulan laella on obeliski, ja rinteillä näkyvät muinaiset maorien penkereet.",
+     "leveys": 1611,
+     "korkeus": 916,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Approach to Obelisk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Approach_to_Obelisk.jpg?width=1280",
+     "tekija": "The Bearded Man",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Approach_to_Obelisk.jpg",
+     "selite": "Polku nousee Cornwall Parkin laitumien halki obeliskille.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1391825",
+   "nimi": "Aucklandin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -36.85269,
+   "lon": 174.76349,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 0398 New Zealand - Auckland Town Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0398_New_Zealand_-_Auckland_Town_Hall.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0398_New_Zealand_-_Auckland_Town_Hall.jpg",
+     "selite": "Kellotorni nousee Queen Streetin varrella Edvardin ajan kaupungintalosta.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aotea Square, Auckland Town Hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aotea_Square%2C_Auckland_Town_Hall.jpg?width=1280",
+     "tekija": "maticulous",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aotea_Square%2C_Auckland_Town_Hall.jpg",
+     "selite": "Talo avautuu Aotea-aukiolle, joka on kaupungin tapahtumapaikka.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4819518",
+   "nimi": "Aucklandin lauttaterminaali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -36.843,
+   "lon": 174.767,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "11. AucklandFerryHarbour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/11._AucklandFerryHarbour.jpg?width=1280",
+     "tekija": "Elemaki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:11._AucklandFerryHarbour.jpg",
+     "selite": "Edvardin ajan Ferry Building on satamarannan punatiilinen maamerkki, josta lähtevät saarten lautat.",
+     "leveys": 2952,
+     "korkeus": 2070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Auckland Ferry Building PA01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_Ferry_Building_PA01.jpg?width=1280",
+     "tekija": "Paora",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_Ferry_Building_PA01.jpg",
+     "selite": "Rakennuksen kellotorni ja koristeelliset julkisivut erottuvat lasitornien keskeltä.",
+     "leveys": 4284,
+     "korkeus": 5712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4710966",
+   "nimi": "Albert Park",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -36.8507,
+   "lon": 174.7675,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Albert Park - 15694296414.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Park_-_15694296414.jpg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albert_Park_-_15694296414.jpg",
+     "selite": "Albert Park on viktoriaaninen puisto keskustan ja yliopiston välissä.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Albert Park - View - 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Park_-_View_-_02.jpg?width=1280",
+     "tekija": "Vitz-RS at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albert_Park_-_View_-_02.jpg",
+     "selite": "Puiston kukkapenkkien takaa kohoaa Sky Tower.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3192946",
+   "nimi": "Karangahape Road",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -36.85779,
+   "lon": 174.7597,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karangahape Road 20231207 201312 02 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karangahape_Road_20231207_201312_02_(cropped).jpg?width=1280",
+     "tekija": "Prosperosity",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karangahape_Road_20231207_201312_02_(cropped).jpg",
+     "selite": "K Road on keskustan harjannetta seuraava vanha kauppakatu.",
+     "leveys": 4000,
+     "korkeus": 2577,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "444-472 Karangahape Road.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/444-472_Karangahape_Road.jpg?width=1280",
+     "tekija": "WBPchur",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:444-472_Karangahape_Road.jpg",
+     "selite": "Kadun varrella on säilynyt Edvardin ajan kauppataloja.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4819492",
+   "nimi": "Auckland Art Gallery",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -36.85135,
+   "lon": 174.76624,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auckland Art Gallery Toi o Tāmaki - Joy of Museums - External 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_Art_Gallery_Toi_o_T%C4%81maki_-_Joy_of_Museums_-_External_2.jpg?width=1280",
+     "tekija": "Joyofmuseums",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_Art_Gallery_Toi_o_T%C4%81maki_-_Joy_of_Museums_-_External_2.jpg",
+     "selite": "Taidemuseon vanha ranskalaistyylinen osa on Albert Parkin laidalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Auckland skyline - May 2024.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_skyline_-_May_2024.jpg?width=1280",
+   "tekija": "elpinto007",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_skyline_-_May_2024.jpg",
+   "selite": "Aucklandin keskusta kohoaa Waitematā-sataman rannalla Sky Tower huippunaan.",
+   "leveys": 6240,
+   "korkeus": 4160,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Auckland Cbd (217403753).jpeg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auckland_Cbd_(217403753).jpeg?width=1280",
+   "tekija": "Francisco Anzola",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auckland_Cbd_(217403753).jpeg",
+   "selite": "Ilmasta näkyy keskusta, satama ja kannas, jolla kaupunki sijaitsee.",
+   "leveys": 2048,
+   "korkeus": 1362,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

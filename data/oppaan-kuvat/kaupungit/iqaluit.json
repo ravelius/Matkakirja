@@ -1,0 +1,225 @@
+{
+ "kaupunki": "iqaluit",
+ "kaupunkiQ": "Q2030",
+ "kohteet": [
+  {
+   "q": "Q7589398",
+   "nimi": "Pyhän Juudaksen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 63.7475,
+   "lon": -68.51667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iqaluit St. Jude's Anglican Cathedral 2012.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iqaluit_St._Jude's_Anglican_Cathedral_2012.JPG?width=1280",
+     "tekija": "Cwk36",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iqaluit_St._Jude's_Anglican_Cathedral_2012.JPG",
+     "selite": "Valkoinen kupolikirkko on rakennettu iglun muotoon ja kohoaa Iqaluitin keskustassa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Jude's Cathedral Iqaluit 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Jude's_Cathedral_Iqaluit_2.jpg?width=1280",
+     "tekija": "OhanaUnited",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Jude's_Cathedral_Iqaluit_2.jpg",
+     "selite": "Anglikaanikatedraalin kaareva katto jäljittelee inuiittien lumirakennusta.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2415100",
+   "nimi": "Iqaluitin lentoasema",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 63.7567,
+   "lon": -68.5561,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Airport in Iqaluit.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Airport_in_Iqaluit.jpg?width=1280",
+     "tekija": "US Mission Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Airport_in_Iqaluit.jpg",
+     "selite": "Keltainen terminaalirakennus ja lennonjohtotorni palvelevat Nunavutin tärkeintä lentokenttää.",
+     "leveys": 2880,
+     "korkeus": 2160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A Snow-Equipped Vintage DC-3 Aircraft Greets Secretary Kerry as he Arrives in Iqaluit, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_Snow-Equipped_Vintage_DC-3_Aircraft_Greets_Secretary_Kerry_as_he_Arrives_in_Iqaluit%2C_Canada.jpg?width=1280",
+     "tekija": "U.S. Department of State",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_Snow-Equipped_Vintage_DC-3_Aircraft_Greets_Secretary_Kerry_as_he_Arrives_in_Iqaluit%2C_Canada.jpg",
+     "selite": "Vanha suksilla varustettu DC-3 seisoo lumisella asematasolla Iqaluitin kentällä.",
+     "leveys": 4465,
+     "korkeus": 2970,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q105409707",
+   "nimi": "Nunatta Sunakkutaangit -museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 63.7435,
+   "lon": -68.5138,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nunatta Sunakkutaangit Museum (September 2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nunatta_Sunakkutaangit_Museum_(September_2025).jpg?width=1280",
+     "tekija": "OhanaUnitedTalk page",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nunatta_Sunakkutaangit_Museum_(September_2025).jpg",
+     "selite": "Valkoinen punakattoinen museorakennus esittelee Nunavutin inuiittien kulttuuria ja taidetta.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "IqaluitMuseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/IqaluitMuseum.jpg?width=1280",
+     "tekija": "Torbenbrinker",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:IqaluitMuseum.jpg",
+     "selite": "Matalat rakennusosat levittäytyvät tundran rinteelle museon vanhassa kuvassa.",
+     "leveys": 1393,
+     "korkeus": 1031,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6059290",
+   "nimi": "Inuksuk-lukio",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 63.7492,
+   "lon": -68.5139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Inuksuk High School.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inuksuk_High_School.jpg?width=1280",
+     "tekija": "OhanaUnited",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inuksuk_High_School.jpg",
+     "selite": "Sinertävä holvikattoinen koulurakennus on Iqaluitin lukio.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38273675",
+   "nimi": "Astro Hill",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 63.7476,
+   "lon": -68.5101,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Astro Theatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astro_Theatre.jpg?width=1280",
+     "tekija": "OhanaUnited",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astro_Theatre.jpg",
+     "selite": "Astro Hillin teatteri ja konferenssikeskus ovat osa kaupungin keskustakompleksia.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28233466",
+   "nimi": "Sylvia Grinnellin puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 63.77169,
+   "lon": -69.65562,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "River at Sylvia Grinnell Territorial Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_at_Sylvia_Grinnell_Territorial_Park.JPG?width=1280",
+     "tekija": "Sebastian Kasten",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_at_Sylvia_Grinnell_Territorial_Park.JPG",
+     "selite": "Joki virtaa paljaan arktisen tundran halki Sylvia Grinnellin alueellisessa puistossa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Inukshuk, sylvia grinnell territorial park, Nunavut.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inukshuk%2C_sylvia_grinnell_territorial_park%2C_Nunavut.jpg?width=1280",
+     "tekija": "Films Oiseau de nuit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inukshuk%2C_sylvia_grinnell_territorial_park%2C_Nunavut.jpg",
+     "selite": "Kivistä pinottu inuksuk seisoo lumisella rannalla ja ohjaa kulkijaa.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bayview Iqaluit.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayview_Iqaluit.JPG?width=1280",
+   "tekija": "Sebastian",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bayview_Iqaluit.JPG",
+   "selite": "Iqaluitin värikkäät talot levittäytyvät Frobisherinlahden rannalle tundran keskelle.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Iqlauit waterfront.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iqlauit_waterfront.JPG?width=1280",
+   "tekija": "Sebastian Kasten",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iqlauit_waterfront.JPG",
+   "selite": "Veneet lepäävät tyynessä lahdessa kaupungin rantatalojen edessä.",
+   "leveys": 5184,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

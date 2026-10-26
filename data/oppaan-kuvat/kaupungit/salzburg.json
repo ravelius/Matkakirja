@@ -1,0 +1,356 @@
+{
+ "kaupunki": "salzburg",
+ "kaupunkiQ": "Q34713",
+ "kohteet": [
+  {
+   "q": "Q679292",
+   "nimi": "Hohensalzburgin linnoitus",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 47.795,
+   "lon": 13.0473,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salzburg - Festung Hohensalzburg.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_-_Festung_Hohensalzburg.JPG?width=1280",
+     "tekija": "C.Stadler/Bwag",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_-_Festung_Hohensalzburg.JPG",
+     "selite": "Hohensalzburgin linnoitus kohoaa kallion päällä kaupungin yllä ja kuuluu Euroopan suurimpiin säilyneisiin linnoihin.",
+     "leveys": 5460,
+     "korkeus": 3641,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Festung Hohensalzburg (Salzburg)-msu-2024-3720-3737.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Festung_Hohensalzburg_(Salzburg)-msu-2024-3720-3737.jpg?width=1280",
+     "tekija": "Matthias Süßen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Festung_Hohensalzburg_(Salzburg)-msu-2024-3720-3737.jpg",
+     "selite": "Linnoituksen valkoiset muurit nousevat jyrkän metsärinteen päältä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Festung Hohensalzburg bei Nebel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Festung_Hohensalzburg_bei_Nebel.jpg?width=1280",
+     "tekija": "Boehmt99",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Festung_Hohensalzburg_bei_Nebel.jpg",
+     "selite": "Sumuisessa aamussa linnoituksen siluetti piirtyy vuoriston eteen.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q258908",
+   "nimi": "Salzburgin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 47.79778,
+   "lon": 13.04694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salzburg Dom Fassade 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_Dom_Fassade_01.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_Dom_Fassade_01.jpg",
+     "selite": "Barokkinen tuomiokirkko kaksine torneineen hallitsee Domplatzin aukiota.",
+     "leveys": 7084,
+     "korkeus": 8477,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salzburger Dom quer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburger_Dom_quer.jpg?width=1280",
+     "tekija": "Martin Kraft",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburger_Dom_quer.jpg",
+     "selite": "Vaalean kiven julkisivu avautuu laajalle Domplatzin aukion päähän.",
+     "leveys": 1920,
+     "korkeus": 1280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q688546",
+   "nimi": "Mirabellin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 47.8055,
+   "lon": 13.042,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mirabell, Salzburg (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mirabell%2C_Salzburg_(1).jpg?width=1280",
+     "tekija": "Przemek Pietrak",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mirabell%2C_Salzburg_(1).jpg",
+     "selite": "Mirabellin palatsin edessä levittäytyy säntillinen barokkipuutarha kukkaistutuksineen.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salzburg Mirabellgarten Festung.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_Mirabellgarten_Festung.jpg?width=1280",
+     "tekija": "Isiwal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_Mirabellgarten_Festung.jpg",
+     "selite": "Puutarhan perspektiivi avautuu kohti vuorella kohoavaa linnoitusta.",
+     "leveys": 5805,
+     "korkeus": 3870,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1621046",
+   "nimi": "Salzburgin vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 47.7997,
+   "lon": 13.0486,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SalzburgerAltstadt02b.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SalzburgerAltstadt02b.jpg?width=1280",
+     "tekija": "Thomas Pintaric (= Pintaric)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SalzburgerAltstadt02b.jpg",
+     "selite": "Salzburgin vanhakaupunki on kirjattu UNESCOn maailmanperintöluetteloon barokkiarkkitehtuurinsa vuoksi.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salzburg pano 2659-18-3246-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_pano_2659-18-3246-1.jpg?width=1280",
+     "tekija": "Isiwal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_pano_2659-18-3246-1.jpg",
+     "selite": "Vanhankaupungin kirkonkatot ja torni kohoavat Salzach-joen rannalla linnoituksen alla.",
+     "leveys": 7199,
+     "korkeus": 3246,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q688477",
+   "nimi": "Getreidegasse",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 47.8,
+   "lon": 13.04278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salzburg - Altstadt - Getreidegasse Ansicht - 2026 06 21-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_-_Altstadt_-_Getreidegasse_Ansicht_-_2026_06_21-1.jpg?width=1280",
+     "tekija": "Eweht",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_-_Altstadt_-_Getreidegasse_Ansicht_-_2026_06_21-1.jpg",
+     "selite": "Kapea ostoskatu on vanhankaupungin tunnetuin katu ja sen kilvet ovat kuuluisia.",
+     "leveys": 4640,
+     "korkeus": 6960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3327039",
+   "nimi": "Mozartin syntymäkoti",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 47.8,
+   "lon": 13.04333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salzburg, Getreidegasse 9, Mozarts Geburtshaus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg%2C_Getreidegasse_9%2C_Mozarts_Geburtshaus.jpg?width=1280",
+     "tekija": "Andreas Stiasny",
+     "lisenssi": "CC BY-SA 3.0 at",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg%2C_Getreidegasse_9%2C_Mozarts_Geburtshaus.jpg",
+     "selite": "Keltaisessa talossa Getreidegassella Wolfgang Amadeus Mozart syntyi vuonna 1756.",
+     "leveys": 3328,
+     "korkeus": 6222,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q115593",
+   "nimi": "Hellbrunnin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 47.76222,
+   "lon": 13.06083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hellbrunn2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hellbrunn2.JPG?width=1280",
+     "tekija": "Nicholas Even (own work)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hellbrunn2.JPG",
+     "selite": "Keltainen Hellbrunnin kesäpalatsi rakennettiin 1600-luvulla arkkipiispan huvilaksi.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q693876",
+   "nimi": "Nonnbergin luostari",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 47.79611,
+   "lon": 13.05167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2163 - Salzburg - Stift Nonnberg.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2163_-_Salzburg_-_Stift_Nonnberg.JPG?width=1280",
+     "tekija": "Andrew Bossi",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2163_-_Salzburg_-_Stift_Nonnberg.JPG",
+     "selite": "Nonnbergin benediktiiniluostari on toiminut kallion rinteellä jo yli tuhat vuotta.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Austria-00407 - Stift Nonnberg (19555852208).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Austria-00407_-_Stift_Nonnberg_(19555852208).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Austria-00407_-_Stift_Nonnberg_(19555852208).jpg",
+     "selite": "Luostarikirkon punakupolinen torni nousee vanhankaupungin yläpuolelle.",
+     "leveys": 6136,
+     "korkeus": 4207,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q875404",
+   "nimi": "Salzburgin Residenz",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 47.7983,
+   "lon": 13.0458,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2046 - Salzburg - Residenzplatz - Residenz.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2046_-_Salzburg_-_Residenzplatz_-_Residenz.JPG?width=1280",
+     "tekija": "Andrew Bossi",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2046_-_Salzburg_-_Residenzplatz_-_Residenz.JPG",
+     "selite": "Residenz oli Salzburgin ruhtinasarkkipiispojen palatsi Residenzplatzin laidalla.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Residenzbrunnen at Residenzplatz, Salzburg (Ank Kumar, Infosys Limited) 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Residenzbrunnen_at_Residenzplatz%2C_Salzburg_(Ank_Kumar%2C_Infosys_Limited)_01.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Residenzbrunnen_at_Residenzplatz%2C_Salzburg_(Ank_Kumar%2C_Infosys_Limited)_01.jpg",
+     "selite": "Barokkinen Residenzbrunnen on Euroopan suurimpia kuvanveistokaivoja.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1450274",
+   "nimi": "Fransiskaanikirkko",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 47.7982,
+   "lon": 13.0441,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salzburg Franziskanerkirche 20230607 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_Franziskanerkirche_20230607_02.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_Franziskanerkirche_20230607_02.jpg",
+     "selite": "Fransiskaanikirkon hoikka goottilainen torni erottuu vanhankaupungin kattojen yli.",
+     "leveys": 5333,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salzburg Franziskanerkirche Turm 20230607.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salzburg_Franziskanerkirche_Turm_20230607.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salzburg_Franziskanerkirche_Turm_20230607.jpg",
+     "selite": "Torni nousee Mönchsbergin metsäisen rinteen edessä.",
+     "leveys": 3732,
+     "korkeus": 5598,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kath. Pfarrkirche, Kollegienkirche, Universitätskirche, objekt ID 72032.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kath._Pfarrkirche%2C_Kollegienkirche%2C_Universit%C3%A4tskirche%2C_objekt_ID_72032.jpg?width=1280",
+   "tekija": "Ekaterina Polischuk",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kath._Pfarrkirche%2C_Kollegienkirche%2C_Universit%C3%A4tskirche%2C_objekt_ID_72032.jpg",
+   "selite": "Salzburgin vanhakaupunki ja linnoitus näkyvät Salzach-joen yli.",
+   "leveys": 7685,
+   "korkeus": 3052,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

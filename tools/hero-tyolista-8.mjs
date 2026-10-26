@@ -91,7 +91,7 @@ export const TYOLISTA = [
     ),
     selite: 'Riddarholmenin kirkko on Tukholman vanhimpia rakennuksia '
       + 'ja Ruotsin kuninkaiden hautakirkko 1600-luvulta asti — sen '
-      + 'valurautainen pitsitorni nousi tulipalon jälkeen 1846.',
+      + 'valurautainen pitsitorni nousi 1835 tuhoutuneen tornin tilalle 1838–1840.',
   },
 
   /* ---- BUDAPEST — parlamentti, Kalastajanlinnake, Ketjusilta. */

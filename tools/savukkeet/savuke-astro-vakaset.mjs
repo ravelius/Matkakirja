@@ -21,10 +21,19 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -79,9 +88,9 @@ peli.phase = 'action';
 peli.tokens.delete('lontoo');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch(
+const selain = await avaaChromium(
   process.env.CHROMIUM || existsSync('/opt/pw-browsers/chromium')
-    ? { executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' } : {},
+    ? {} : {},
 );
 
 /** Näkyykö elementti oikeasti (laskettu tyyli + mitta), ei pelkkä luokka. */
@@ -104,6 +113,7 @@ for (const ruutu of RUUDUT) {
   const ctx = await selain.newContext({
     viewport: { width: ruutu.width, height: ruutu.height }, serviceWorkers: 'block',
   });
+  await ctx.addInitScript(PULUN_TERVETULO_KUULTU);
   await ctx.addInitScript((data) => {
     try {
       localStorage.setItem('matkakirja-save-v1', data);

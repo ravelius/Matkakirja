@@ -393,6 +393,25 @@
   font-size: 0.9rem;
   line-height: 1.45;
 }
+/*
+ * Kaksi kuvaa (omistaja 1.10.2026): maisemakuva yksin kuva-alueella koko
+ * leveydeltä, toinen kuva (.kellu) tekstin oikealla puolella, teksti
+ * kiertää sen. flow-root pitää kelluvan kuvan rungon sisällä.
+ */
+.ihmisen-nostokortti-runko {
+  display: flow-root;
+  margin: 0 0 0.5rem;
+}
+.ihmisen-nostokortti-runko .ihmisen-nostokortti-teksti { margin: 0; }
+.ihmisen-nostokortti-kuvakehys.kellu {
+  float: right;
+  width: 38%;
+  margin: 0.3rem 0 0.35rem 0.75rem;
+}
+.ihmisen-nostokortti-kuvakehys.kellu .ihmisen-nostokortti-kuvateksti {
+  white-space: normal;
+  overflow: visible;
+}
 .ihmisen-nostokortti-lahde {
   font-size: 0.72rem;
   color: #9b8b6e;

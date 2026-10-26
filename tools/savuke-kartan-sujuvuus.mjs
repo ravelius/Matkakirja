@@ -61,6 +61,7 @@ const selain = WEBKIT
   })
   : await (paketti.chromium ?? paketti.default?.chromium).launch({
     executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+    args: ['--mute-audio'],
   });
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },

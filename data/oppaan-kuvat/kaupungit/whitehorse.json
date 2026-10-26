@@ -1,0 +1,277 @@
+{
+ "kaupunki": "whitehorse",
+ "kaupunkiQ": "Q2055",
+ "kohteet": [
+  {
+   "q": "Q7393932",
+   "nimi": "SS Klondike",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 60.7135,
+   "lon": -135.0474,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SS Klondike 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SS_Klondike_03.jpg?width=1280",
+     "tekija": "Sloan G. / Gareth Sloan - https://www.flickr.com/people/sloan_g/",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SS_Klondike_03.jpg",
+     "selite": "Valkoinen siipiratashöyrylaiva seisoo kuivalla maalla Yukonjoen rannalla.",
+     "leveys": 2496,
+     "korkeus": 1664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Big end (1189914766).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_end_(1189914766).jpg?width=1280",
+     "tekija": "John Johnston",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_end_(1189914766).jpg",
+     "selite": "Laivan suuri oranssi siipiratas työnsi rahtilaivaa Yukonjoen virtaa vastaan.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bridge Klondike 914.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_Klondike_914.jpg?width=1280",
+     "tekija": "Gillfoto from Juneau, Alaska, United States",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bridge_Klondike_914.jpg",
+     "selite": "Komentosilta ja savupiippu kohoavat laivan yläkannella.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Bow Klondike 920.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bow_Klondike_920.jpg?width=1280",
+     "tekija": "Gillfoto from Juneau, Alaska, United States",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bow_Klondike_920.jpg",
+     "selite": "Laivan keula näkyy edestä kuivatelakan tukien päällä.",
+     "leveys": 2451,
+     "korkeus": 4335,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1882389",
+   "nimi": "MacBride-museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 60.72111,
+   "lon": -135.05167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The MacBride Museum of Yukon History incorporates the original Whitehorse telegraph office (47975838723).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_MacBride_Museum_of_Yukon_History_incorporates_the_original_Whitehorse_telegraph_office_(47975838723).jpg?width=1280",
+     "tekija": "dvs from Vermont, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_MacBride_Museum_of_Yukon_History_incorporates_the_original_Whitehorse_telegraph_office_(47975838723).jpg",
+     "selite": "Museon sisään on jätetty Whitehorsen alkuperäinen hirsinen lennätinasema.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "WTF? (47975885986).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WTF%3F_(47975885986).jpg?width=1280",
+     "tekija": "dvs from Vermont, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:WTF%3F_(47975885986).jpg",
+     "selite": "Museorakennus kätkee hirsisen vanhan lennätinaseman uudemman julkisivun taakse.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8060833",
+   "nimi": "Yukonin parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 60.71694,
+   "lon": -135.04889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Regierungsgebäude des Territoriums in Whitehorse.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Regierungsgeb%C3%A4ude_des_Territoriums_in_Whitehorse.JPG?width=1280",
+     "tekija": "Hans-Jürgen Hübner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Regierungsgeb%C3%A4ude_des_Territoriums_in_Whitehorse.JPG",
+     "selite": "Yukonin territorion hallintorakennus on betonista ja lasista tehty kokonaisuus kaupungin keskustassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yukon Legislature main entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yukon_Legislature_main_entrance.jpg?width=1280",
+     "tekija": "Own work",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yukon_Legislature_main_entrance.jpg",
+     "selite": "Päätulo johtaa taloon, jossa Yukonin lakiasäätävä kokous kokoontuu.",
+     "leveys": 4000,
+     "korkeus": 2709,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q113288883",
+   "nimi": "Yukonin liikennemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 60.7119,
+   "lon": -135.0792,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yukon Transportation Museum (22339148180).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yukon_Transportation_Museum_(22339148180).jpg?width=1280",
+     "tekija": "James Badger from Calgary, Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yukon_Transportation_Museum_(22339148180).jpg",
+     "selite": "Museon julkisivua koristaa pohjoisen liikenteen historiaa esittävä seinämaalaus.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "LeTourneau LCC-1 Sno-Train Whitehorse YK.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LeTourneau_LCC-1_Sno-Train_Whitehorse_YK.jpg?width=1280",
+     "tekija": "ForgottenLords",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LeTourneau_LCC-1_Sno-Train_Whitehorse_YK.jpg",
+     "selite": "Valtavarenkainen Sno-Train vei tavaraa jäätyneen pohjolan halki.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1433251",
+   "nimi": "Erik Nielsen Whitehorsen kansainvälinen lentoasema",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 60.70944,
+   "lon": -135.06722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Whitehorse Airport, Yukon Territory.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Whitehorse_Airport%2C_Yukon_Territory.jpg?width=1280",
+     "tekija": "N727RH",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Whitehorse_Airport%2C_Yukon_Territory.jpg",
+     "selite": "Kiitotie levittäytyy kaupungin laidalla metsäisen laakson ja vuorten välissä.",
+     "leveys": 3468,
+     "korkeus": 2300,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CYXY C-295 and Challenger.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CYXY_C-295_and_Challenger.jpg?width=1280",
+     "tekija": "Samuell",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CYXY_C-295_and_Challenger.jpg",
+     "selite": "Lentokoneet seisovat asematasolla Yukonin avoimessa maisemassa.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1718634",
+   "nimi": "Beringia-keskus",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 60.70861,
+   "lon": -135.07889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Whitehorse entrance Yukon Beringia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Whitehorse_entrance_Yukon_Beringia.JPG?width=1280",
+     "tekija": "Hans-Jürgen Hübner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Whitehorse_entrance_Yukon_Beringia.JPG",
+     "selite": "Puiset kaaret kohoavat sisäänkäynnin yllä keskuksessa, joka kertoo jääkauden Beringiasta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Canoer (15591661483).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canoer_(15591661483).jpg?width=1280",
+     "tekija": "Chris Hunkeler from Carlsbad, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canoer_(15591661483).jpg",
+     "selite": "Kuparinen melojapatsas pihalla muistuttaa alueen alkuperäiskansojen perinteestä.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Downtown Whitehorse (6325219946).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Whitehorse_(6325219946).jpg?width=1280",
+   "tekija": "Anthony DeLorenzo from Whitehorse, Yukon, Canada",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Whitehorse_(6325219946).jpg",
+   "selite": "Whitehorsen keskusta levittäytyy Yukonjoen rannalle lumihuippuisen vuoren juurelle.",
+   "leveys": 4000,
+   "korkeus": 2248,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of Whitehorse and the Yukon River.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Whitehorse_and_the_Yukon_River.jpg?width=1280",
+   "tekija": "grampymoose",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Whitehorse_and_the_Yukon_River.jpg",
+   "selite": "Ilmakuvassa kaupunki asuinalueineen näkyy havumetsän ja lentokentän välissä.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

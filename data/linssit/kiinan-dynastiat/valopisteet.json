@@ -1,0 +1,339 @@
+{
+ "valopisteet": [
+  {
+   "avain": "paperi",
+   "laji": "keksinto",
+   "nimi": "Paperi",
+   "vuosi": 105,
+   "vuosi_arvio": false,
+   "pysakki": 140,
+   "paikka": "Luoyang, Henan (hist. Luoyang, Itä-Hanin pääkaupunki)",
+   "paikka_nyky": "Luoyang, Henan",
+   "paikka_hist": "Luoyang, Itä-Hanin pääkaupunki",
+   "lon": 112.454,
+   "lat": 34.62,
+   "epavarma": false,
+   "eurooppaan": {
+    "vuosi": 1150,
+    "pysakki": 1280,
+    "paikka": "Xàtiva, Valencia, Espanja",
+    "lon": -0.5206,
+    "lat": 38.9906,
+    "vuosi_arvio": true,
+    "lahde": "Wikipedia: Paper; paperi islamilaiseen maailmaan Samarkand 751, Espanjan Xàtivan paperimyllyt 1100-l. (al-Idrisi 1154)"
+   },
+   "lahde": "Wikipedia: Cai Lun, Paper, Fangmatan (haettu Fangmatan)",
+   "luottamus": "korkea (105) / keskitaso (alkuperä)",
+   "huomio": "Hou Hanshu kirjaa vuoden 105: hovivirkamies Cai Lun esitteli parannetun paperin keisarille Luoyangissa. Vanhempia paperilöytöjä on: Fangmatan (Tianshui, Gansu, n. 34.40 N 106.10 E) kartta-fragmentti varhaisen Länsi-Hanin ajalta (n. 2. vuosisata eaa.), joten Cai Lun on parantaja, ei ensimmäinen valmistaja. Piste kuvaa dokumentoitua parannusta."
+  },
+  {
+   "avain": "kompassi",
+   "laji": "keksinto",
+   "nimi": "Kompassi",
+   "vuosi": 1088,
+   "vuosi_arvio": false,
+   "pysakki": 1100,
+   "paikka": "Zhenjiang, Jiangsu (hist. Runzhou (Zhenjiang), Shen Kuon Mengxi Bitan -teoksen kirjoituspaikka)",
+   "paikka_nyky": "Zhenjiang, Jiangsu",
+   "paikka_hist": "Runzhou (Zhenjiang), Shen Kuon Mengxi Bitan -teoksen kirjoituspaikka",
+   "lon": 119.455,
+   "lat": 32.1878,
+   "epavarma": true,
+   "eurooppaan": {
+    "vuosi": 1190,
+    "pysakki": 1280,
+    "paikka": "Eurooppa (Alexander Neckam, De naturis rerum; kirjoituspaikka tuntematon, Pariisi tai Englanti: piste on arvaus, SK 17.10.)",
+    "lon": 2.3522,
+    "lat": 48.8566,
+    "vuosi_arvio": true,
+    "lahde": "Wikipedia: Compass (ensimmäinen eurooppalainen maininta n. 1190, Neckam)"
+   },
+   "vaihtoehtoinen_paikka": {
+    "paikka": "Kaifeng, Henan (Wujing Zongyao 1044)",
+    "lon": 114.3073,
+    "lat": 34.7973
+   },
+   "lahde": "Wikipedia: Compass; Shen Kuo, Mengxi Bitan (1088)",
+   "luottamus": "keskitaso",
+   "huomio": "Han-ajan 'etelään osoittava lusikka' (sinan) on arvelu; lusikkaa ei ole löydetty Han-haudoista, ja Wang Chongin Lunheng (n. 80) mainitsee vain magneetin vetovoiman. Neulakompassin kuvaus: Shen Kuo 1088. Wujing Zongyaossa (1044) on kuvattu lämpömagnetoitu 'kalakompassi' (Kaifeng). Alkuperäinen syntypaikka on tuntematon; sijoitus Zhenjiangiin perustuu kirjoitukseen. Pysäkki on sama (1100) vaikka vuosi olisi 1044 tai 1088."
+  },
+  {
+   "avain": "ruuti",
+   "laji": "keksinto",
+   "nimi": "Ruuti",
+   "vuosi": 1044,
+   "vuosi_arvio": false,
+   "pysakki": 1100,
+   "paikka": "Kaifeng, Henan (hist. Bianjing (Kaifeng), Pohjois-Songin pääkaupunki)",
+   "paikka_nyky": "Kaifeng, Henan",
+   "paikka_hist": "Bianjing (Kaifeng), Pohjois-Songin pääkaupunki",
+   "lon": 114.3073,
+   "lat": 34.7973,
+   "epavarma": true,
+   "eurooppaan": {
+    "vuosi": 1267,
+    "pysakki": 1280,
+    "paikka": "Eurooppa (Roger Bacon, Opus Majus; kirjoituspaikka epävarma, Oxford tai Pariisi: piste on arvaus, SK 17.10.)",
+    "lon": -1.2577,
+    "lat": 51.752,
+    "vuosi_arvio": true,
+    "lahde": "Wikipedia: Gunpowder (Bacon 1267); Oxford oletettu kirjoitusympäristö"
+   },
+   "lahde": "Wikipedia: Gunpowder (Wujing Zongyao 1040-1044; Taishang Shengzu Jindan Mijue 808)",
+   "luottamus": "keskitaso",
+   "huomio": "Alkemistit Tang-ajalla (ensimmäinen varmistettu seos 808, Zhenyuan miaodao yaolüe n. 850) löysivät seoksen todennäköisesti etsiessään kuolemattomuuden eliksiiriä; paikkaa ei tiedetä. Ensimmäinen kirjattu kaava on Wujing Zongyaossa (Zeng Gongliang, 1044), Songin hoviteos, Kaifeng. Kaavat olivat tulenarkoja sytykkeitä, eivät vielä varsinaista räjähdysruutia (alle 50 % salpietaria)."
+  },
+  {
+   "avain": "kirjapaino",
+   "laji": "keksinto",
+   "nimi": "Kirjapaino",
+   "vuosi": 868,
+   "vuosi_arvio": false,
+   "pysakki": 950,
+   "paikka": "Mogaon luolat, Dunhuang, Gansu (hist. Shazhou / Dunhuang (löytöpaikka, painopaikka tuntematon))",
+   "paikka_nyky": "Mogaon luolat, Dunhuang, Gansu",
+   "paikka_hist": "Shazhou / Dunhuang (löytöpaikka, painopaikka tuntematon)",
+   "lon": 94.808,
+   "lat": 40.037,
+   "epavarma": true,
+   "eurooppaan": {
+    "vuosi": 1450,
+    "pysakki": 1421,
+    "paikka": "Mainz, Saksa (Gutenberg)",
+    "lon": 8.2473,
+    "lat": 49.9929,
+    "vuosi_arvio": true,
+    "lahde": "Yleinen tietämys / Wikipedia: Johannes Gutenberg (n. 1450, irtokirjasimet ja painokone)"
+   },
+   "vaihtoehtoinen_paikka": {
+    "paikka": "Huanggang (Yingshan), Hubei - Bi Shengin irtokirjasimet n. 1041-1048, paikka epävarma",
+    "lon": 114.872,
+    "lat": 30.453
+   },
+   "lahde": "Wikipedia: Diamond Sutra; Bi Sheng",
+   "luottamus": "keskitaso",
+   "huomio": "Timanttisutra, puupiirrospaino 11.5.868 (kolofoni), löydetty Mogaon luolakirjastosta 1900; painopaikkaa ei kerrota. Puupiirrospainanta on vanhempaa (Tangin aika), ja irtokirjasimet kehitti Bi Sheng n. 1041-1048 (Shen Kuon kuvaus; Bi Shengin asuinpaikka epävarma, hautakivi Huanggangissa, Hubei). Valopiste kuvaa vanhinta päivättyä painettua kirjaa."
+  },
+  {
+   "avain": "kungfutselaisuus",
+   "laji": "uskonto",
+   "nimi": "Kungfutselaisuus",
+   "vuosi": -500,
+   "vuosi_arvio": true,
+   "pysakki": -221,
+   "paikka": "Qufu, Shandong (hist. Qufu, Lun osavaltion pääkaupunki)",
+   "paikka_nyky": "Qufu, Shandong",
+   "paikka_hist": "Qufu, Lun osavaltion pääkaupunki",
+   "lon": 116.99,
+   "lat": 35.597,
+   "epavarma": false,
+   "lahde": "Wikipedia: Confucius, Confucianism",
+   "luottamus": "korkea",
+   "huomio": "Kungfutse (551-479 eaa.) opetti Lun osavaltiossa Qufussa; ajoitus 'n. 500 eaa.' on keskiarvo hänen opetusvuosistaan. Tapahtuma on ennen ensimmäistä pysäkkiä, joten valo syttyy pysäkillä -221."
+  },
+  {
+   "avain": "taolaisuus",
+   "laji": "uskonto",
+   "nimi": "Taolaisuus",
+   "vuosi": 142,
+   "vuosi_arvio": false,
+   "pysakki": 250,
+   "paikka": "Heming-vuori, Dayin piirikunta, Chengdu, Sichuan (hist. Heming-vuori (Kurkien huuto), Shu / Yizhou)",
+   "paikka_nyky": "Heming-vuori, Dayin piirikunta, Chengdu, Sichuan",
+   "paikka_hist": "Heming-vuori (Kurkien huuto), Shu / Yizhou",
+   "lon": 103.403,
+   "lat": 30.638,
+   "epavarma": true,
+   "vaihtoehtoinen_paikka": {
+    "paikka": "Luyi, Henan (Laozin perinteinen syntymäpaikka, Daodejing-perinne)",
+    "lon": 115.485,
+    "lat": 33.86
+   },
+   "lahde": "Wikipedia: Way of the Celestial Masters (Sichuan, 142); Heming-vuori perinteestä, koordinaatit n. +-0.1 astetta",
+   "luottamus": "matala-keskitaso",
+   "huomio": "Järjestäytynyt taolaisuus alkoi perinteen mukaan 142, kun Zhang Daoling perusti Viiden mitan riisin tien Sichuanissa; Heming-vuori on perinteinen paikka (muita: Qingcheng-vuori). Filosofinen taolaisuus (Laozi, Daodejing, n. 4.-3. vuosisata eaa.) on vanhempi ja paikaltaan epävarma. Tämän vuoksi epavarma = true. Koordinaatteja EI ole varmistettu tässä istunnossa (Wikipedia-sivu ei antanut)."
+  },
+  {
+   "avain": "buddhalaisuus",
+   "laji": "uskonto",
+   "nimi": "Buddhalaisuuden saapuminen",
+   "vuosi": 68,
+   "vuosi_arvio": false,
+   "pysakki": 140,
+   "paikka": "Valkoisen hevosen temppeli, Luoyang, Henan (hist. Baima Si, Luoyang)",
+   "paikka_nyky": "Valkoisen hevosen temppeli, Luoyang, Henan",
+   "paikka_hist": "Baima Si, Luoyang",
+   "lon": 112.5997,
+   "lat": 34.7239,
+   "epavarma": true,
+   "lahde": "Wikipedia: White Horse Temple (perinne 68; temppeli kirjattu vasta 289)",
+   "luottamus": "keskitaso (perinne)",
+   "huomio": "Perinteen mukaan keisari Ming lähetti sanansaattajat länteen ja temppeli perustettiin 68. Tutkijat pitävät tarinaa osin legendana; buddhalaisuus todennäköisesti tuli aiemmin Silkkitietä (kirjallinen todiste Pengchengistä n. 65). Sijainti 17 km:n päässä paperin pisteestä, sama pysäkki (140)."
+  },
+  {
+   "avain": "islam",
+   "laji": "uskonto",
+   "nimi": "Islamin saapuminen",
+   "vuosi": 651,
+   "vuosi_arvio": false,
+   "pysakki": 669,
+   "paikka": "Xi'an, Shaanxi (hist. Chang'an, Tangin pääkaupunki)",
+   "paikka_nyky": "Xi'an, Shaanxi",
+   "paikka_hist": "Chang'an, Tangin pääkaupunki",
+   "lon": 108.9541,
+   "lat": 34.2658,
+   "epavarma": false,
+   "vaihtoehtoinen_paikka": {
+    "paikka": "Guangzhou, Guangdong - Huaishengin moskeija (perinne 627, kiistanalainen)",
+    "lon": 113.2536,
+    "lat": 23.1253
+   },
+   "lahde": "Wikipedia: Islam in China; Huaisheng Mosque (perinne 627, kiistanalainen)",
+   "luottamus": "keskitaso",
+   "huomio": "Tangin kronikat kirjaavat kalifi Uthmanin lähetystön keisari Gaozongin hoviin 651. Merikauppiaat ja Guangzhoun yhteisö voivat olla vanhempia; Huaishengin moskeijan perinteinen perustamisvuosi (n. 627, Sa'd ibn Abi Waqqas) on kiistanalainen, tutkijat sijoittavat varmat rakennukset Songin aikaan. Sama sijainti ja pysäkki kuin kristinuskolla: pisteet pitää siirtää toisistaan renderöinnissä."
+  },
+  {
+   "avain": "kristinusko",
+   "laji": "uskonto",
+   "nimi": "Kristinuskon saapuminen",
+   "vuosi": 635,
+   "vuosi_arvio": false,
+   "pysakki": 669,
+   "paikka": "Xi'an, Shaanxi (hist. Chang'an, Tangin pääkaupunki)",
+   "paikka_nyky": "Xi'an, Shaanxi",
+   "paikka_hist": "Chang'an, Tangin pääkaupunki",
+   "lon": 108.9541,
+   "lat": 34.2658,
+   "epavarma": false,
+   "lahde": "Wikipedia: Nestorian Stele; Church of the East in China",
+   "luottamus": "korkea",
+   "huomio": "Idän kirkon lähetyssaarnaaja Alopen saapui 635 keisari Taizongin hoviin; Xi'anin steela pystytettiin 781 (nyt Beilin-museossa, Xi'an) ja kertoo tapahtumat. Sijainti ja pysäkki (669) sama kuin islamilla."
+  }
+ ],
+ "silkkitie": {
+  "nimi": "Silkkitie",
+  "pisteet": [
+   [
+    108.9541,
+    34.2658,
+    "Chang'an (Xi'an)"
+   ],
+   [
+    105.7249,
+    34.5809,
+    "Tianshui (Qinzhou)"
+   ],
+   [
+    103.8343,
+    36.0611,
+    "Lanzhou"
+   ],
+   [
+    102.638,
+    37.9283,
+    "Wuwei (Liangzhou)"
+   ],
+   [
+    100.4499,
+    38.9259,
+    "Zhangye (Ganzhou)"
+   ],
+   [
+    98.4939,
+    39.7324,
+    "Jiuquan (Suzhou)"
+   ],
+   [
+    98.2147,
+    39.8493,
+    "Jiayuguan"
+   ],
+   [
+    94.6619,
+    40.1421,
+    "Dunhuang (Shazhou)"
+   ],
+   [
+    93.5151,
+    42.8188,
+    "Hami (Yiwu, Kumul)"
+   ],
+   [
+    89.1895,
+    42.9513,
+    "Turpan (Gaochang-Jiaohe)"
+   ],
+   [
+    82.9618,
+    41.7172,
+    "Kuqa (Qiuci)"
+   ],
+   [
+    80.263,
+    41.1707,
+    "Aksu"
+   ],
+   [
+    75.9892,
+    39.4677,
+    "Kashgar (Shule)"
+   ],
+   [
+    72.7985,
+    40.5283,
+    "Osh (Fergana)"
+   ],
+   [
+    69.6163,
+    40.2826,
+    "Khujand"
+   ],
+   [
+    66.9597,
+    39.6542,
+    "Samarkand"
+   ],
+   [
+    64.4286,
+    39.7747,
+    "Bukhara"
+   ],
+   [
+    62.1894,
+    37.6648,
+    "Merv"
+   ],
+   [
+    58.796,
+    36.2133,
+    "Nishapur"
+   ],
+   [
+    51.4333,
+    35.5925,
+    "Rayy (Rey, Teheran)"
+   ],
+   [
+    48.5151,
+    34.7992,
+    "Hamadan (Ecbatana)"
+   ],
+   [
+    44.3661,
+    33.3152,
+    "Bagdad"
+   ],
+   [
+    38.2684,
+    34.5505,
+    "Palmyra"
+   ],
+   [
+    36.1593,
+    36.2021,
+    "Antiokia (Antakya)"
+   ]
+  ],
+  "lahde": "UNESCO: Silk Roads (Chang'an-Tianshan Corridor, 2014; Silk Roads World Heritage); Wikipedia: Silk Road. Reitti kaavamainen: Hexin käytävä, Dunhuang, pohjoinen Tarim-reitti, Kashgar, Fergana, Samarkand, Merv, Persia, Bagdad, Antiokia. Kaupunkien koordinaatit n. kaupunkikeskustoja (+-0.05 astetta)."
+ }
+}

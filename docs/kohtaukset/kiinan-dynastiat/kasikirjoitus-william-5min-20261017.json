@@ -1,0 +1,480 @@
+{
+ "versio": 2,
+ "laatija": "Sisältökirjuri 17.10.2026 (omistajan päätös 11.44, PT:n välittämä; v2: KK:n kolme korjausta)",
+ "huomio": "Williamin Kiinan dynastialinssin käsikirjoitus, noin 5 min. Ääntä EI generoida ilman PT:n hyväksyntää ja KK:n lupaa. Korvaa 30 tekstin kertojatekstit-20261017 -version linssin kertojana. Kesto = puhutun muodon merkit / 14,18 + 0,7 s per klipsi (kalibroitu 19 mitatulla rivillä, tempo 1,10).",
+ "mrk_per_s": 14.18,
+ "pysakit": [
+  {
+   "vuosi": -221,
+   "dynastia": "Qin",
+   "teksti": "Vuonna 221 eaa. Qin yhdistää Kiinan ja yhtenäistää kirjoituksen ja rahat. Tien avasi Changpingin taistelu 260 eaa. Qufun seudulla syntyi noin 551 eaa. Kungfutse.",
+   "mrk_puhuttuna": 283,
+   "sek_arvio": 20.7,
+   "alku_s": 0,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 221 eaa. Qin yhdistää Kiinan ja yhtenäistää kirjoituksen ja rahat.",
+     "puhuttu": "Vuonna kaksisataakaksikymmentäyksi ennen ajanlaskun alkua Qin yhdistää Kiinan ja yhtenäistää kirjoituksen ja rahat.",
+     "mrk": 115,
+     "sek_arvio": 8.1
+    },
+    {
+     "laji": "taistelu",
+     "valo": "changping",
+     "teksti": "Tien avasi Changpingin taistelu 260 eaa.",
+     "puhuttu": "Tien avasi Changpingin taistelu kaksisataakuusikymmentä ennen ajanlaskun alkua",
+     "mrk": 78,
+     "sek_arvio": 5.5
+    },
+    {
+     "laji": "uskonto",
+     "valo": "kungfutselaisuus",
+     "teksti": "Qufun seudulla syntyi noin 551 eaa. Kungfutse.",
+     "puhuttu": "Qufun seudulla syntyi noin viisisataaviisikymmentäyksi ennen ajanlaskun alkua Kungfutse.",
+     "mrk": 88,
+     "sek_arvio": 6.2
+    }
+   ]
+  },
+  {
+   "vuosi": -200,
+   "dynastia": "Han",
+   "teksti": "Vuonna 200 eaa. Hanin ensimmäinen keisari piiritetään Baidengissa, ja Han alkaa pian maksaa pohjoisen ratsastajille lahjoja. Pääkaupunki on Chang'an.",
+   "mrk_puhuttuna": 174,
+   "sek_arvio": 13.0,
+   "alku_s": 20.7,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 200 eaa. Hanin ensimmäinen keisari piiritetään Baidengissa, ja Han alkaa pian maksaa pohjoisen ratsastajille lahjoja. Pääkaupunki on Chang'an.",
+     "puhuttu": "Vuonna kaksisataa ennen ajanlaskun alkua Hanin ensimmäinen keisari piiritetään Baidengissa, ja Han alkaa pian maksaa pohjoisen ratsastajille lahjoja. Pääkaupunki on Chang'an.",
+     "mrk": 174,
+     "sek_arvio": 12.3
+    }
+   ]
+  },
+  {
+   "vuosi": -100,
+   "dynastia": "Han",
+   "teksti": "Vuonna 100 eaa. keisari Wudin Han on työntänyt rajansa länteen, ja Hexi-käytävästä on tullut Silkkitien portti. Pääkaupunki on yhä Chang'an.",
+   "mrk_puhuttuna": 159,
+   "sek_arvio": 11.9,
+   "alku_s": 33.6,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 100 eaa. keisari Wudin Han on työntänyt rajansa länteen, ja Hexi-käytävästä on tullut Silkkitien portti. Pääkaupunki on yhä Chang'an.",
+     "puhuttu": "Vuonna sata ennen ajanlaskun alkua keisari Wudin Han on työntänyt rajansa länteen, ja Hexi-käytävästä on tullut Silkkitien portti. Pääkaupunki on yhä Chang'an.",
+     "mrk": 159,
+     "sek_arvio": 11.2
+    }
+   ]
+  },
+  {
+   "vuosi": 140,
+   "dynastia": "Itäinen Han",
+   "teksti": "Vuonna 140 Itäinen Han on yksi maailman suurimmista valtioista; pääkaupunki on Luoyang. Cai Lun esitteli hovissa parannetun paperin vuonna 105. Perinteen mukaan buddhalaisuus saapui Valkoisen hevosen temppeliin vuonna 68.",
+   "mrk_puhuttuna": 261,
+   "sek_arvio": 19.1,
+   "alku_s": 45.5,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 140 Itäinen Han on yksi maailman suurimmista valtioista; pääkaupunki on Luoyang.",
+     "puhuttu": "Vuonna sataneljäkymmentä Itäinen Han on yksi maailman suurimmista valtioista; pääkaupunki on Luoyang.",
+     "mrk": 101,
+     "sek_arvio": 7.1
+    },
+    {
+     "laji": "keksinto",
+     "valo": "paperi",
+     "teksti": "Cai Lun esitteli hovissa parannetun paperin vuonna 105.",
+     "puhuttu": "Cai Lun esitteli hovissa parannetun paperin vuonna sataviisi.",
+     "mrk": 61,
+     "sek_arvio": 4.3
+    },
+    {
+     "laji": "uskonto",
+     "valo": "buddhalaisuus",
+     "teksti": "Perinteen mukaan buddhalaisuus saapui Valkoisen hevosen temppeliin vuonna 68.",
+     "puhuttu": "Perinteen mukaan buddhalaisuus saapui Valkoisen hevosen temppeliin vuonna kuusikymmentäkahdeksan.",
+     "mrk": 97,
+     "sek_arvio": 6.8
+    }
+   ]
+  },
+  {
+   "vuosi": 250,
+   "dynastia": "Kolme kuningaskuntaa",
+   "teksti": "Vuonna 250 Han on hajonnut kolmeen kuningaskuntaan. Punaisen kallion taistelu vuonna 208 esti Cao Caota saamasta koko Kiinaa. Sichuanissa taolaisuuden Taivaallisten mestarien tie sai perinteen mukaan alkunsa vuonna 142.",
+   "mrk_puhuttuna": 274,
+   "sek_arvio": 20.0,
+   "alku_s": 64.6,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 250 Han on hajonnut kolmeen kuningaskuntaan.",
+     "puhuttu": "Vuonna kaksisataaviisikymmentä Han on hajonnut kolmeen kuningaskuntaan.",
+     "mrk": 71,
+     "sek_arvio": 5.0
+    },
+    {
+     "laji": "taistelu",
+     "valo": "punainen-kallio",
+     "teksti": "Punaisen kallion taistelu vuonna 208 esti Cao Caota saamasta koko Kiinaa.",
+     "puhuttu": "Punaisen kallion taistelu vuonna kaksisataakahdeksan esti Cao Caota saamasta koko Kiinaa.",
+     "mrk": 89,
+     "sek_arvio": 6.3
+    },
+    {
+     "laji": "uskonto",
+     "valo": "taolaisuus",
+     "teksti": "Sichuanissa taolaisuuden Taivaallisten mestarien tie sai perinteen mukaan alkunsa vuonna 142.",
+     "puhuttu": "Sichuanissa taolaisuuden Taivaallisten mestarien tie sai perinteen mukaan alkunsa vuonna sataneljäkymmentäkaksi.",
+     "mrk": 112,
+     "sek_arvio": 7.9
+    }
+   ]
+  },
+  {
+   "vuosi": 440,
+   "dynastia": "Liu Song ja Pohjois-Wei",
+   "teksti": "Vuonna 440 maa on jakautunut: etelässä Liu Song hallitsee Jiankangista ja pohjoisessa aroilta tullut Pohjois-Wei Pingchengistä. Fei-joen taistelu vuonna 383 oli pitänyt Etelä-Kiinan itsenäisenä.",
+   "mrk_puhuttuna": 243,
+   "sek_arvio": 17.8,
+   "alku_s": 84.7,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 440 maa on jakautunut: etelässä Liu Song hallitsee Jiankangista ja pohjoisessa aroilta tullut Pohjois-Wei Pingchengistä.",
+     "puhuttu": "Vuonna neljäsataaneljäkymmentä maa on jakautunut: etelässä Liu Song hallitsee Jiankangista ja pohjoisessa aroilta tullut Pohjois-Wei Pingchengistä.",
+     "mrk": 147,
+     "sek_arvio": 10.4
+    },
+    {
+     "laji": "taistelu",
+     "valo": "fei-joki",
+     "teksti": "Fei-joen taistelu vuonna 383 oli pitänyt Etelä-Kiinan itsenäisenä.",
+     "puhuttu": "Fei-joen taistelu vuonna kolmesataakahdeksankymmentäkolme oli pitänyt Etelä-Kiinan itsenäisenä.",
+     "mrk": 95,
+     "sek_arvio": 6.7
+    }
+   ]
+  },
+  {
+   "vuosi": 500,
+   "dynastia": "Etelän Qi ja Pohjois-Wei",
+   "teksti": "Vuonna 500 Pohjois-Wei on siirtänyt pääkaupunkinsa Luoyangiin, ja hovi pukeutuu ja puhuu kiinalaisittain. Etelässä Qi hallitsee Jiankangista.",
+   "mrk_puhuttuna": 148,
+   "sek_arvio": 11.1,
+   "alku_s": 102.5,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 500 Pohjois-Wei on siirtänyt pääkaupunkinsa Luoyangiin, ja hovi pukeutuu ja puhuu kiinalaisittain. Etelässä Qi hallitsee Jiankangista.",
+     "puhuttu": "Vuonna viisisataa Pohjois-Wei on siirtänyt pääkaupunkinsa Luoyangiin, ja hovi pukeutuu ja puhuu kiinalaisittain. Etelässä Qi hallitsee Jiankangista.",
+     "mrk": 148,
+     "sek_arvio": 10.4
+    }
+   ]
+  },
+  {
+   "vuosi": 589,
+   "dynastia": "Sui",
+   "teksti": "Vuonna 589 Sui yhdistää etelän ja pohjoisen, ja pian alkaa Suuren kanavan rakennus. Pääkaupunki on Daxing.",
+   "mrk_puhuttuna": 138,
+   "sek_arvio": 10.4,
+   "alku_s": 113.6,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 589 Sui yhdistää etelän ja pohjoisen, ja pian alkaa Suuren kanavan rakennus. Pääkaupunki on Daxing.",
+     "puhuttu": "Vuonna viisisataakahdeksankymmentäyhdeksän Sui yhdistää etelän ja pohjoisen, ja pian alkaa Suuren kanavan rakennus. Pääkaupunki on Daxing.",
+     "mrk": 138,
+     "sek_arvio": 9.7
+    }
+   ]
+  },
+  {
+   "vuosi": 669,
+   "dynastia": "Tang",
+   "teksti": "Vuonna 669 Tang on kukistanut Goguryeon ja hallitsee Chang'anista. Steelen mukaan Alopen toi kristinuskon Chang'aniin vuonna 635. Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle 651.",
+   "mrk_puhuttuna": 306,
+   "sek_arvio": 22.3,
+   "alku_s": 124.1,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 669 Tang on kukistanut Goguryeon ja hallitsee Chang'anista.",
+     "puhuttu": "Vuonna kuusisataakuusikymmentäyhdeksän Tang on kukistanut Goguryeon ja hallitsee Chang'anista.",
+     "mrk": 94,
+     "sek_arvio": 6.6
+    },
+    {
+     "laji": "uskonto",
+     "valo": "kristinusko",
+     "teksti": "Steelen mukaan Alopen toi kristinuskon Chang'aniin vuonna 635.",
+     "puhuttu": "Steelen mukaan Alopen toi kristinuskon Chang'aniin vuonna kuusisataakolmekymmentäviisi.",
+     "mrk": 87,
+     "sek_arvio": 6.1
+    },
+    {
+     "laji": "uskonto",
+     "valo": "islam",
+     "teksti": "Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle 651.",
+     "puhuttu": "Islamin tulo Kiinaan liitetään arabien lähetystöön, jonka Tangin aikakirjat kirjaavat vuodelle kuusisataaviisikymmentäyksi.",
+     "mrk": 123,
+     "sek_arvio": 8.7
+    }
+   ]
+  },
+  {
+   "vuosi": 790,
+   "dynastia": "Tang",
+   "teksti": "Vuonna 790 Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen.",
+   "mrk_puhuttuna": 166,
+   "sek_arvio": 12.4,
+   "alku_s": 146.4,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 790 Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen.",
+     "puhuttu": "Vuonna seitsemänsataayhdeksänkymmentä Tangin pääkaupunki on yhä Chang'an, mutta An Lushanin kapinan jälkeen Tiibet on vallannut Hexin, ja Tang on pienempi kuin ennen.",
+     "mrk": 166,
+     "sek_arvio": 11.7
+    }
+   ]
+  },
+  {
+   "vuosi": 950,
+   "dynastia": "Viisi dynastiaa",
+   "teksti": "Vuonna 950 Kiina on pirstoutunut: Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao nykyisen Pekingin seutua. Vuodelta 868 on vanhin päivätty painettu kirja, löydetty Mogaon luolista.",
+   "mrk_puhuttuna": 243,
+   "sek_arvio": 17.8,
+   "alku_s": 158.8,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 950 Kiina on pirstoutunut: Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao nykyisen Pekingin seutua.",
+     "puhuttu": "Vuonna yhdeksänsataaviisikymmentä Kiina on pirstoutunut: Myöhempi Han hallitsee Kaifengista, ja kitaanien Liao nykyisen Pekingin seutua.",
+     "mrk": 136,
+     "sek_arvio": 9.6
+    },
+    {
+     "laji": "keksinto",
+     "valo": "kirjapaino",
+     "teksti": "Vuodelta 868 on vanhin päivätty painettu kirja, löydetty Mogaon luolista.",
+     "puhuttu": "Vuodelta kahdeksansataakuusikymmentäkahdeksan on vanhin päivätty painettu kirja, löydetty Mogaon luolista.",
+     "mrk": 106,
+     "sek_arvio": 7.5
+    }
+   ]
+  },
+  {
+   "vuosi": 1100,
+   "dynastia": "Pohjoinen Song",
+   "teksti": "Vuonna 1100 Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea. Shen Kuo kuvasi kompassin magneettineulan noin vuonna 1088. Songin hovi kirjasi vuonna 1044 vanhimmat tunnetut ruutireseptit.",
+   "mrk_puhuttuna": 266,
+   "sek_arvio": 19.5,
+   "alku_s": 176.6,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1100 Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea.",
+     "puhuttu": "Vuonna tuhatsata Pohjoinen Song hallitsee Kaifengista, ja kirjapaino ja paperiraha ovat arkea.",
+     "mrk": 94,
+     "sek_arvio": 6.6
+    },
+    {
+     "laji": "keksinto",
+     "valo": "kompassi",
+     "teksti": "Shen Kuo kuvasi kompassin magneettineulan noin vuonna 1088.",
+     "puhuttu": "Shen Kuo kuvasi kompassin magneettineulan noin vuonna tuhatkahdeksankymmentäkahdeksan.",
+     "mrk": 86,
+     "sek_arvio": 6.1
+    },
+    {
+     "laji": "keksinto",
+     "valo": "ruuti",
+     "teksti": "Songin hovi kirjasi vuonna 1044 vanhimmat tunnetut ruutireseptit.",
+     "puhuttu": "Songin hovi kirjasi vuonna tuhatneljäkymmentäneljä vanhimmat tunnetut ruutireseptit.",
+     "mrk": 84,
+     "sek_arvio": 5.9
+    }
+   ]
+  },
+  {
+   "vuosi": 1142,
+   "dynastia": "Eteläinen Song",
+   "teksti": "Vuonna 1142 jurchenien Jin on vallannut Kaifengin jo vuonna 1127, ja Song jatkaa etelässä Lin'anista eli Hangzhousta.",
+   "mrk_puhuttuna": 167,
+   "sek_arvio": 12.5,
+   "alku_s": 196.1,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1142 jurchenien Jin on vallannut Kaifengin jo vuonna 1127, ja Song jatkaa etelässä Lin'anista eli Hangzhousta.",
+     "puhuttu": "Vuonna tuhatsataneljäkymmentäkaksi jurchenien Jin on vallannut Kaifengin jo vuonna tuhatsatakaksikymmentäseitsemän, ja Song jatkaa etelässä Lin'anista eli Hangzhousta.",
+     "mrk": 167,
+     "sek_arvio": 11.8
+    }
+   ]
+  },
+  {
+   "vuosi": 1280,
+   "dynastia": "Yuan",
+   "teksti": "Vuonna 1280 Kublai-kaanin Yuan hallitsee koko Kiinaa, pääkaupunkinaan Dadu. Songin viimeinen laivasto kaatui Yamenissa vuonna 1279. Paperi, kompassi ja ruuti kulkevat Eurooppaan; reitit ovat kiistanalaisia.",
+   "mrk_puhuttuna": 270,
+   "sek_arvio": 19.7,
+   "alku_s": 208.5,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1280 Kublai-kaanin Yuan hallitsee koko Kiinaa, pääkaupunkinaan Dadu.",
+     "puhuttu": "Vuonna tuhatkaksisataakahdeksankymmentä Kublai-kaanin Yuan hallitsee koko Kiinaa, pääkaupunkinaan Dadu.",
+     "mrk": 103,
+     "sek_arvio": 7.3
+    },
+    {
+     "laji": "taistelu",
+     "valo": "yamen",
+     "teksti": "Songin viimeinen laivasto kaatui Yamenissa vuonna 1279.",
+     "puhuttu": "Songin viimeinen laivasto kaatui Yamenissa vuonna tuhatkaksisataaseitsemänkymmentäyhdeksän.",
+     "mrk": 91,
+     "sek_arvio": 6.4
+    },
+    {
+     "laji": "silkkitie",
+     "valo": "silkkitie",
+     "teksti": "Paperi, kompassi ja ruuti kulkevat Eurooppaan; reitit ovat kiistanalaisia.",
+     "puhuttu": "Paperi, kompassi ja ruuti kulkevat Eurooppaan; reitit ovat kiistanalaisia.",
+     "mrk": 74,
+     "sek_arvio": 5.2
+    }
+   ]
+  },
+  {
+   "vuosi": 1421,
+   "dynastia": "Ming",
+   "teksti": "Vuonna 1421 Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna 1420. Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+   "mrk_puhuttuna": 281,
+   "sek_arvio": 20.5,
+   "alku_s": 228.3,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1421 Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna 1420.",
+     "puhuttu": "Vuonna tuhatneljäsataakaksikymmentäyksi Mingin pääkaupunki on siirtynyt Nankingista Pekingiin, ja Kielletty kaupunki on valmistunut vuonna tuhatneljäsataakaksikymmentä.",
+     "mrk": 168,
+     "sek_arvio": 11.8
+    },
+    {
+     "laji": "silkkitie",
+     "valo": "kirjapaino-eu",
+     "teksti": "Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+     "puhuttu": "Kolmisenkymmentä vuotta myöhemmin Gutenberg rakentaa Mainzissa kirjapainon – ilman todistettua yhteyttä Kiinaan.",
+     "mrk": 112,
+     "sek_arvio": 7.9
+    }
+   ]
+  },
+  {
+   "vuosi": 1644,
+   "dynastia": "Qing",
+   "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu. Mantšut pääsevät Shanhain solan kautta Pekingiin.",
+   "mrk_puhuttuna": 138,
+   "sek_arvio": 10.4,
+   "alku_s": 248.8,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1644 kapinalliset valtaavat Pekingin ja Ming kaatuu.",
+     "puhuttu": "Vuonna tuhatkuusisataaneljäkymmentäneljä kapinalliset valtaavat Pekingin ja Ming kaatuu.",
+     "mrk": 88,
+     "sek_arvio": 6.2
+    },
+    {
+     "laji": "taistelu",
+     "valo": "shanhain",
+     "teksti": "Mantšut pääsevät Shanhain solan kautta Pekingiin.",
+     "puhuttu": "Mantšut pääsevät Shanhain solan kautta Pekingiin.",
+     "mrk": 49,
+     "sek_arvio": 3.5
+    }
+   ]
+  },
+  {
+   "vuosi": 1760,
+   "dynastia": "Qing",
+   "teksti": "Vuonna 1760 Qing on liittänyt Dzungarian ja Tarimin altaan valtakuntaansa, ja pääkaupunki on Peking.",
+   "mrk_puhuttuna": 128,
+   "sek_arvio": 9.7,
+   "alku_s": 259.2,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1760 Qing on liittänyt Dzungarian ja Tarimin altaan valtakuntaansa, ja pääkaupunki on Peking.",
+     "puhuttu": "Vuonna tuhatseitsemänsataakuusikymmentä Qing on liittänyt Dzungarian ja Tarimin altaan valtakuntaansa, ja pääkaupunki on Peking.",
+     "mrk": 128,
+     "sek_arvio": 9.0
+    }
+   ]
+  },
+  {
+   "vuosi": 1873,
+   "dynastia": "Qing",
+   "teksti": "Vuonna 1873, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kanton on yksi avatuista satamista.",
+   "mrk_puhuttuna": 171,
+   "sek_arvio": 12.8,
+   "alku_s": 269.0,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1873, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kanton on yksi avatuista satamista.",
+     "puhuttu": "Vuonna tuhatkahdeksansataaseitsemänkymmentäkolme, isoisän matkan vuonna, nuori Tongzhi-keisari aloittaa oman hallintonsa Pekingissä, ja Kanton on yksi avatuista satamista.",
+     "mrk": 171,
+     "sek_arvio": 12.1
+    }
+   ]
+  },
+  {
+   "vuosi": 1912,
+   "dynastia": "Kiinan tasavalta",
+   "teksti": "Vuonna 1912 kuusivuotias Puyi luopuu vallasta ja keisarikunta päättyy. Tasavalta julistettiin Nankingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking.",
+   "mrk_puhuttuna": 191,
+   "sek_arvio": 14.2,
+   "alku_s": 281.7,
+   "segmentit": [
+    {
+     "laji": "perus",
+     "valo": null,
+     "teksti": "Vuonna 1912 kuusivuotias Puyi luopuu vallasta ja keisarikunta päättyy. Tasavalta julistettiin Nankingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking.",
+     "puhuttu": "Vuonna tuhatyhdeksänsataakaksitoista kuusivuotias Puyi luopuu vallasta ja keisarikunta päättyy. Tasavalta julistettiin Nankingissa uudenvuodenpäivänä, ja keväällä pääkaupungiksi tulee Peking.",
+     "mrk": 191,
+     "sek_arvio": 13.5
+    }
+   ]
+  }
+ ],
+ "yhteensa_mrk": 4007,
+ "yhteensa_s": 296.0
+}

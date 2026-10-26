@@ -1,0 +1,161 @@
+{
+ "kaupunki": "alkufra",
+ "kaupunkiQ": "Q172114",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q48200",
+   "nimi": "Kufran piirikunta",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 24,
+   "lon": 23,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kufra SPOT 1301.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kufra_SPOT_1301.jpg?width=1280",
+     "tekija": "Cnes - Spot Image",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kufra_SPOT_1301.jpg",
+     "selite": "Kufran keidas ja sen ympärillä kaartuvat kastelukehät ilmakuvassa, lentokenttä kaupungin vieressä.",
+     "leveys": 6000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kufra (aeroview).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kufra_(aeroview).jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kufra_(aeroview).jpg",
+     "selite": "Vanha ilmakuva näyttää Kufran keidaskylän hiekkamerellä keskellä erämaata.",
+     "leveys": 1688,
+     "korkeus": 1132,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "ISS-50 Al-Jawf Oasis in Eastern Libya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-50_Al-Jawf_Oasis_in_Eastern_Libya.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-50_Al-Jawf_Oasis_in_Eastern_Libya.jpg",
+     "selite": "Al Jawfin kastelupellot erottuvat ympyröinä avaruudesta nähtynä.",
+     "leveys": 6144,
+     "korkeus": 4089,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1441442",
+   "nimi": "Jebel Uweinat",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 21.91944,
+   "lon": 24.92222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jebel Uweinat , South Easte of Libya, North Africa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Uweinat_%2C_South_Easte_of_Libya%2C_North_Africa.jpg?width=1280",
+     "tekija": "Mustafa.explore",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Uweinat_%2C_South_Easte_of_Libya%2C_North_Africa.jpg",
+     "selite": "Uweinatin graniittipylväät kohoavat hiekasta, kun retkikunnan maastoautot leiriytyvät niiden juurelle.",
+     "leveys": 2275,
+     "korkeus": 3640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jebel Uweinat (ASTER).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Uweinat_(ASTER).jpg?width=1280",
+     "tekija": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jebel_Uweinat_(ASTER).jpg",
+     "selite": "Jebel Uweinat on Libyan, Egyptin ja Sudanin rajalla kohoava pyöreä vuorimassiivi.",
+     "leveys": 2877,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q136888",
+   "nimi": "Tazirbu",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 25.6643,
+   "lon": 21.0453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "المعبوص تازربو - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D9%85%D8%B9%D8%A8%D9%88%D8%B5_%D8%AA%D8%A7%D8%B2%D8%B1%D8%A8%D9%88_-_panoramio.jpg?width=1280",
+     "tekija": "مجنون هاجر",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D9%85%D8%B9%D8%A8%D9%88%D8%B5_%D8%AA%D8%A7%D8%B2%D8%B1%D8%A8%D9%88_-_panoramio.jpg",
+     "selite": "Tazirbun keidaskylän katot ja palmut erottuvat Libyan erämaassa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Kufra 1930-1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kufra_1930-1.jpg?width=1280",
+   "tekija": "Unknown authorUnknown author",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kufra_1930-1.jpg",
+   "selite": "Savimuurinen linnoitus ja yksinäinen palmu kuvaavat Kufraa vuonna 1930.",
+   "leveys": 1585,
+   "korkeus": 1036,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "AFR V2 D046 The Kufra oasis.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AFR_V2_D046_The_Kufra_oasis.jpg?width=1280",
+   "tekija": "Élisée Reclus",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AFR_V2_D046_The_Kufra_oasis.jpg",
+   "selite": "Vuoden 1891 piirros näyttää Kufran keitaan palmut erämaan keskellä.",
+   "leveys": 2040,
+   "korkeus": 2972,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q41307",
+   "nimi": "Rebianan hiekkameri",
+   "peruste": "pelin nosto",
+   "lat": 25,
+   "lon": 19,
+   "syy": "ei vapaata kuvaa >= 1200 px, jonka kohde on varmistettu Rebianaksi"
+  },
+  {
+   "q": "Q284251",
+   "nimi": "Jaghbub",
+   "peruste": "sitelinks",
+   "lat": 29.7425,
+   "lon": 24.51694,
+   "syy": "ei vapaata kuvaa >= 1200 px (vain elokuvakuvia)"
+  }
+ ]
+}

@@ -109,6 +109,7 @@ import { fileURLToPath } from 'node:url';
 // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta`
 // ohjataan pallolle (tools/savukkeet/vanha-kartta-ohitus.mjs).
 import { vainPallo } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const argi = (nimi) => { const i = process.argv.indexOf(nimi); return i > 0 ? process.argv[i + 1] : null; };
@@ -166,9 +167,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8741, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /** Näkymät: työpöytä on savukkeen vakio, puhelin Ihmisen matkan kuvia varten. */
 const NAKYMAT = {

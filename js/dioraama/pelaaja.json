@@ -1,0 +1,123 @@
+{
+ "huom": "Pelaajahahmo Fogg (Linnanrakentaja 7.10.2026, Siirtosepän E1): Quaternius CC0 (UBC + Fantasy-asu Ranger tummana + UAL), punainen huivi. Liikkeiden toistokerroin = tavoitenopeus / leikkeen mitattu nopeus. Lähde _valmiit/linna-hahmot/pelaaja-v1/pelaaja_skin.py.",
+ "nimi": "fogg",
+ "rooli": "pelaaja",
+ "leikkeet": {
+  "idle": "idle",
+  "kavely": "kavely",
+  "juoksu": "juoksu",
+  "hiipiminen": "hiipiminen",
+  "kyykky_idle": "kyykky_idle",
+  "nousu": "nousu",
+  "puhe": "puhe",
+  "nousu_laiturille": "nousu_laiturille"
+ },
+ "liikkeet": {
+  "kavely": {
+   "kesto_s": 1.333,
+   "nopeus_m_s": 0.955,
+   "sykli_m": 1.273,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 1.4,
+   "toistokerroin": 1.466
+  },
+  "juoksu": {
+   "kesto_s": 0.933,
+   "nopeus_m_s": 5.894,
+   "sykli_m": 5.501,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 3.2,
+   "toistokerroin": 0.543
+  },
+  "hiipiminen": {
+   "kesto_s": 2.0,
+   "nopeus_m_s": 0.586,
+   "sykli_m": 1.172,
+   "lantion_siirto_m": 0.0,
+   "akseli": "y",
+   "tavoite_m_s": 0.9,
+   "toistokerroin": 1.536
+  },
+  "idle": {
+   "kesto_s": 2.5
+  },
+  "kyykky_idle": {
+   "kesto_s": 2.933
+  },
+  "nousu": {
+   "kesto_s": 1.033,
+   "huom": "UAL Sitting_Exit (tuolilta nousu): veneestä nousun varaleike, ei silmukka"
+  },
+  "puhe": {
+   "kesto_s": 2.933
+  },
+  "nousu_laiturille": {
+   "kesto_s": 2.4,
+   "ruutuja": 73,
+   "fps": 30,
+   "silmukka": false,
+   "root_siirto": [
+    0.0,
+    1.28,
+    0.95
+   ],
+   "root_motion": "root-luu (glTF-solmu root, translation 0 -> root_siirto hahmon paikallisessa kehyksessä, kasvot +Z); muut luut idlen suhteen",
+   "natiivi": "soita leike kapseli paikallaan ja törmäys pois päältä; viimeisellä ruudulla siirrä kapseli root_siirto verran ja vaihda idleen (idle alkaa origosta) – tai käytä root motionia root-luusta, jolloin siirto tulee animaatiosta",
+   "ote_y": 1.28,
+   "ote_eteen": 0.66,
+   "ote_sivu": 0.25,
+   "ote_ruudut": {
+    "vasen": [
+     10,
+     40
+    ],
+    "oikea": [
+     10,
+     42
+    ]
+   },
+   "polvi_kannella": {
+    "kohta": [
+     -0.4,
+     1.28,
+     0.68
+    ],
+    "ruudut": [
+     38,
+     56
+    ]
+   },
+   "vasen_jalka_kannella_ruudusta": 56,
+   "geometria": {
+    "kansi_y": 1.28,
+    "reuna_z": 0.55,
+    "otsalauta_m": 0.3,
+    "veneen_pohja_y": 0.0
+   },
+   "huom": "oma työ avainruuduin (lahde/nousu_laiturille.py, IK leivottu). Kaikki paikat hahmon alkukehyksessä metreinä (glTF: y ylös, z eteen, jalat y = 0 = veneen pohja -7,18; kansi y = 1,28 = -5,90). Kämmenet kannella 0,11 m reunasta (kämmenen keskikohta z 0,66), oikea polvi kannelle (sääri reunan yli ilmassa), vasen jalka kannelle, nousu seisomaan. Juuren siirto +Z 0,95 eikä 0,9: idlessä oikea kantapää on 0,38 m juuren takana, 0,9:llä se jäisi 3 cm reunan yli. Alku ja loppu = idle ruutu 0 (ero < 1e-6). Root-polku: y 1,28 valmis ruudulla 38, z enintään 0,25 siihen asti (kapselin etureuna ei mene laiturin alle)."
+  }
+ },
+ "kavely_sykli_m": 1.273,
+ "fps": 30,
+ "kapseli": {
+  "korkeus_m": 1.75,
+  "sade_m": 0.3,
+  "juuri": "jalkojen välissä (origo)",
+  "kasvot": "+Z"
+ },
+ "pituus_m": 1.808,
+ "kasvot_gltf": [
+  -0.014,
+  -0.071,
+  0.141
+ ],
+ "kolmiot": 15031,
+ "kirkkaus": 1.35,
+ "hiusvari": [
+  0.42,
+  0.3,
+  0.2
+ ]
+}

@@ -1,0 +1,583 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Aarretehtävät, erä 2 (PT 12.10.): Dublin, Oslo, Bergen, Tampere, Krakova, Sofia, Bukarest, Vilna, Marseille, Bryssel. Palkkiot × 0,4 (Katso/Valinta/Etsi 25, Kuuntele 30, Aikajana 30, Vanha kartta 35, Arvio 40, Salakirjoitus 50); vihje ei muuta aarremekaniikkaa, ei bonuksia. Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty. muistomerkki: false kaikissa; Kreikan ja Italian kohteita ei ole. NOR:n yhteinen vihje (Oslo + Bergen) ja FIN (Tampere → erän mallin vihje) on kirjattu kerran.",
+  "kaupungit": [
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "dublin",
+      "nimi": "Dublin",
+      "maa": "IRL",
+      "hahmo": "Sillanvartija Molly",
+      "saapumispiste": {
+        "nimi": "Ha’penny-silta",
+        "lat": 53.3463,
+        "lon": -6.2631
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Turistit kysyvät minulta aina tietä Irlannin suurimpaan katedraaliin, jonka tornin päällä on hoikka huippu. Etsi se kaupungista.",
+        "kohde": {
+          "nimi": "Patrickin katedraali",
+          "lat": 53.3395,
+          "lon": -6.2715,
+          "etaisyys_saapumispisteesta_m": 940
+        },
+        "vihje_vaarin": "Ei se. Ylitä silta ja kulje lounaaseen: etsimäsi katedraalin kellotorni on 1300-luvulta, ja sen huippu on lisätty 1700-luvulla.",
+        "tiesitko": "Jonathan Swift, Gulliverin matkojen kirjoittaja, toimi katedraalin dekaanina ja on haudattu sinne.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "kysymys": "Molly salasi sanan siirtämällä kirjaimia eteenpäin 18 askelta, niin moneen osaan sillan rautakaari valettiin. Sana on se, mihin lantit kerätään.",
+        "salattu": "CMCCSJG",
+        "avain": 18,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "KUKKARO",
+        "vihje_vaarin": "Siirrä jokaista kirjainta 18 askelta taaksepäin; A:n jälkeen palataan Z:hen. Sana roikkuu Mollyn vyöllä.",
+        "tiesitko": "Ha’penny-silta avattiin toukokuussa 1816. Yli pääsi puolen pennin maksulla, kunnes maksu poistettiin vuonna 1919.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "oslo",
+      "nimi": "Oslo",
+      "maa": "NOR",
+      "hahmo": "Maisemakuvaaja Liv",
+      "saapumispiste": {
+        "nimi": "Akershusin linnoituksen valli (arvio linnoituksen keskustasta)",
+        "lat": 59.9075,
+        "lon": 10.737
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Kuvaan kaupunkia tältä vallilta. Pohjoisluoteessa, pitkän kävelykadun päässä, kohoaa kukkulalla linna, jonka paikan kuningas Kaarle Johan valitsi itse.",
+        "kohde": {
+          "nimi": "Kuninkaanlinna",
+          "lat": 59.9169,
+          "lon": 10.7275,
+          "etaisyys_saapumispisteesta_m": 1172
+        },
+        "vihje_vaarin": "Ei se. Kävele pohjoiseen kohti Karl Johans gaten päätä: linna nousee puiston keskeltä Bellevuen kukkulalla.",
+        "tiesitko": "Kaarle Johan valitsi linnalle paikan, mutta kuoli 1844. Linna valmistui vasta 1840-luvun lopulla, ja ensimmäisenä siinä asui hänen poikansa Oskar I.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "kysymys": "Kuuntele isoisän merkintä. Mistä asiasta hän sanoo, ettei ole koskaan ollut niin kiitollinen?",
+        "vaihtoehdot": [
+          "Ilmaisesta kyydistä",
+          "Huonosta käytöksestä",
+          "Kohteliaasta tervehdyksestä",
+          "Hyvästä ruoasta"
+        ],
+        "oikea_indeksi": 1,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-oslo.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-oslo.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele merkinnän loppu: mies vastasi hatunnostoon vain nyökkäyksellä, koska kädet olivat täynnä. Isoisä piti sitä hyvänä asiana.",
+        "tiesitko": "Norjan ensimmäinen nitroglyseriinitehdas avattiin Lysakerissa 1865. Yhtiö perustettiin Alfred Nobelin patentin ja osallistumisen turvin.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "bergen",
+      "nimi": "Bergen",
+      "maa": "NOR",
+      "hahmo": "Kalakauppias Solveig (Torgetin kalamyyjä)",
+      "saapumispiste": {
+        "nimi": "Torget eli Fisketorget, Vågenin satamapohjukka",
+        "lat": 60.3947,
+        "lon": 5.3242
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Myyn kalaa täällä satamassa. Kävele kaakkoon: siellä on vanhojen puurakennusten pihapiiri ja puukirkko, jonka seurakunta oli ennen sairaita. Etsi se.",
+        "kohde": {
+          "nimi": "Pyhän Yrjänän kirkko",
+          "lat": 60.39175567,
+          "lon": 5.33271164,
+          "etaisyys_saapumispisteesta_m": 571
+        },
+        "vihje_vaarin": "Ei se. Etsi kaakosta vanhaa puukirkkoa, jonka vieressä on kaksikerroksinen päärakennus. Nykyään sen huoneissa on museo.",
+        "tiesitko": "Hoitola toimi jo 1400-luvulla, viimeiset asukkaat kuolivat 1946. Bergeniläinen lääkäri Armauer Hansen tunnisti lepran bakteerin 1873.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "valinta",
+        "palkkio": 30,
+        "kysymys": "Kuuntele isoisän merkintä. Mitä hän vakuutti oppaalle olevan mukanaan?",
+        "vaihtoehdot": [
+          "Taskukello",
+          "Muistikirja",
+          "Lyijykynä",
+          "Kompassi"
+        ],
+        "oikea_indeksi": 2,
+        "liite": {
+          "tyyppi": "aani",
+          "tiedosto": "puhe-fokus-matkakirja-bergen.mp3",
+          "teksti_lahde": "js/packs/fokusvirta-bergen.js, kenttä matkakirja.teksti"
+        },
+        "vihje_vaarin": "Kuuntele merkinnän loppu: isoisä oli juuri kertonut palvelleensa laivastossa, joten hän vakuutti olevansa vaaraton. Mitä hänellä oli?",
+        "tiesitko": "Vågenin taistelu käytiin 1665: englantilaiset hyökkäsivät hollantilaisen kauppalaivaston kimppuun. Tuomiokirkon seinän kuulan sanotaan olevan sieltä.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "tampere",
+      "nimi": "Tampere",
+      "maa": "FIN",
+      "hahmo": "Kutoja Siiri (Finlaysonin kutomon työntekijä)",
+      "saapumispiste": {
+        "nimi": "Finlaysonin tehdasalue, Tammerkosken ranta (arvio)",
+        "lat": 61.5008,
+        "lon": 23.7585
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Pohjoiseen täältä, kosken varrella, vanha konepaja on muuttunut museoksi, jossa esitellään pelejä ja jääkiekkoa. Etsi se.",
+        "kohde": {
+          "nimi": "Museokeskus Vapriikki",
+          "lat": 61.50306,
+          "lon": 23.76028,
+          "etaisyys_saapumispisteesta_m": 268
+        },
+        "vihje_vaarin": "Ei se. Kävele koskea pitkin pohjoiseen Tampellan alueelle: vanhassa konepajassa on pelimuseo, luonnontieteellinen museo ja jääkiekkomuseo.",
+        "tiesitko": "Vapriikin nimi tulee ruotsin sanasta fabrik, tehdas. Museokeskus avattiin yleisölle 1996 Tampellan vanhan konepajan tiloissa.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "kysymys": "Missä järjestyksessä nämä Tampereen tapahtumat sattuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Kustaa III perustaa Tampereen kaupungin",
+            "vuosi": "1779"
+          },
+          {
+            "teksti": "Finlaysonin kutomosalissa syttyy Pohjoismaiden ensimmäinen sähkövalo",
+            "vuosi": "1882"
+          },
+          {
+            "teksti": "Näsinneulan torni avataan yleisölle",
+            "vuosi": "1971"
+          }
+        ],
+        "vihje_vaarin": "Kaupunki on näistä vanhin. Sähkövalo syttyi kutomosaliin kauan ennen kuin Näsinneula nousi taivaalle.",
+        "tiesitko": "Näsinneula on antennin kärkeen 168 metriä korkea. Torni avattiin yleisölle 28. huhtikuuta 1971.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "krakova",
+      "nimi": "Krakova",
+      "maa": "POL",
+      "hahmo": "Tornintorvensoittaja Stanisław",
+      "saapumispiste": {
+        "nimi": "Mariankirkon torni, Rynek Główny",
+        "lat": 50.0617,
+        "lon": 19.9392
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Soitan torvea torninhuipulta joka tunti. Katso pohjoiseen vanhan kaupungin portin eteen: siellä on pyöreä tiililinnake, jossa on seitsemän pientä tornia.",
+        "kohde": {
+          "nimi": "Barbakaani",
+          "lat": 50.0655,
+          "lon": 19.9417,
+          "etaisyys_saapumispisteesta_m": 459
+        },
+        "vihje_vaarin": "Ei se. Kävele aukiolta pohjoiseen kohti vanhaa kaupunginmuuria: linnake on pyöreä, tiilinen ja vallihaudan ympäröimä, ja sen reunalla on seitsemän tornia.",
+        "tiesitko": "Barbakaani rakennettiin 1498–1499. Se on yksi Euroopan harvoista säilyneistä tämänkaltaisista linnakkeista. Seinät ovat alaosastaan noin kolme metriä paksut."
+      },
+      "b": {
+        "tyyppi": "salakirjoitus",
+        "palkkio": 50,
+        "muistomerkki": false,
+        "kysymys": "Kirjoitin soittamani sävelen nimen salakirjoituksella. Kirjaimia on siirretty eteenpäin niin monta askelta kuin Barbakaanissa on torneja. Pura sana.",
+        "salattu": "OLQUHS",
+        "avain": 7,
+        "suunta": "taaksepain",
+        "aakkosto": "A-Z (ilman Å, Ä, Ö)",
+        "vastaus": "HEJNAL",
+        "vihje_vaarin": "Barbakaanissa on seitsemän tornia. Siirrä jokaista kirjainta seitsemän askelta taaksepäin: O-kirjaimesta tulee H.",
+        "tiesitko": "Hejnał soi tornista joka tasatunti ja katkeaa aina kesken. Tarun mukaan vihollisen hyökkäys keskeytti kerran vartijan soiton."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "sofia",
+      "nimi": "Sofia",
+      "maa": "BGR",
+      "hahmo": "Lähteenvartija Nadia",
+      "saapumispiste": {
+        "nimi": "Keskuskylpylä (Mineraalikylpylä), kuuma lähde",
+        "lat": 42.69923,
+        "lon": 23.3238
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "muistomerkki": false,
+        "vihjelause": "Lähteeni vesi on kuumaa. Katso itään: suuri kupolikirkko, jonka kullattu kupoli kimaltaa, rakennettiin muistoksi sotilaille, jotka vapauttivat maamme.",
+        "kohde": {
+          "nimi": "Sofian katedraali",
+          "lat": 42.69581,
+          "lon": 23.33279,
+          "etaisyys_saapumispisteesta_m": 827
+        },
+        "vihje_vaarin": "Ei se. Kävele itään pitkin leveää katua: suuri kupolikirkko seisoo aukion laidalla, ja sen kullattu kupoli näkyy kauas yli kattojen.",
+        "tiesitko": "Kirkko on pyhitetty Aleksanteri Nevskille ja rakennettu venäläisten sotilaiden muistoksi sodassa 1877–1878. Kupolin korkeus on 45 m."
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "muistomerkki": false,
+        "kysymys": "Kuumat lähteet olivat täällä ennen kaupunkia. Napauta Sofiaa vuonna 1878 esittävältä vanhalta kartalta moskeijaa, joka rakennettiin kuumien lähteiden päälle.",
+        "kuva": {
+          "commons_tiedosto": "@ 1878 @ - btv1b8459839v.jpg",
+          "tekija": "tuntematon (Bibliothèque nationale de France, Gallica; myöhempi piirros, joka esittää Sofiaa vuonna 1878; otsikko: План на София въ 1878 год.)",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:@_1878_@_-_btv1b8459839v.jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1739
+        },
+        "oikea_piste_px": [
+          724,
+          710
+        ],
+        "toleranssi_px": 60,
+        "vihje_vaarin": "Ei tuo. Etsi kartalta nimi Banja Baschi: moskeija seisoo kaupungin keskustan pohjoispuolella, kadunristeyksen vieressä.",
+        "tiesitko": "Banja Bashin moskeija rakennettiin 1500-luvulla luonnollisten kuumien lähteiden päälle. Se on nykyään Sofian ainoa käytössä oleva moskeija."
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "bukarest",
+      "nimi": "Bukarest",
+      "maa": "ROU",
+      "hahmo": "Kellonsoittaja Ana, paimenen kirkon kellon soittaja",
+      "saapumispiste": {
+        "nimi": "Bucurin kirkko eli paimenen kirkko, Radu Vodă -katu",
+        "lat": 44.4235,
+        "lon": 26.1089
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Kirkkoni on paimenen taru. Etsi Bukarestin vanhin kirkko, jonka ruhtinas Mircea Paimen rakennutti, ja sen viereiset rauniot, joissa ruhtinaat ennen asuivat.",
+        "kohde": {
+          "nimi": "Vanha ruhtinaanhovi",
+          "lat": 44.43011,
+          "lon": 26.10131,
+          "etaisyys_saapumispisteesta_m": 950
+        },
+        "vihje_vaarin": "Ei se. Kävele kirkoltani luoteeseen kohti vanhaakaupunkia: etsi hovin kivimuurien rauniot ja kirkko aivan niiden vierestä.",
+        "tiesitko": "Bukarest mainitaan ensi kertaa ruhtinas Vlad III:n asiakirjassa 20.9.1459. Kaupunki juhlii päivää joka syyskuu.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "kysymys": "Ana kuuntelee iltaisin konserttia Ateneumissa. Kuinka monta metriä korkea tuo pyöreä rakennus on kupolin huippuun asti?",
+        "liukusaadin": {
+          "min": 10,
+          "max": 80,
+          "askel": 1
+        },
+        "oikea": 41,
+        "hyvaksyttava_vali": [
+          37,
+          45
+        ],
+        "vihje_vaarin": "Yksi kerros on noin kolme metriä. Kupoli nousee selvästi yli kymmenen kerroksen korkeuden, mutta jää alle viidentoista.",
+        "tiesitko": "Ateneum vihittiin käyttöön helmikuussa 1888. Ranskalainen Albert Galleron suunnitteli sen pyöreäksi, kupolin kruunaamaksi konserttitaloksi.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "vilna",
+      "nimi": "Vilna",
+      "maa": "LTU",
+      "hahmo": "Yövartija Rasa, vanhankaupungin lyhdynkantaja",
+      "saapumispiste": {
+        "nimi": "Gediminasin tornin kivijalka, Rasan kierroksen alku",
+        "lat": 54.6868,
+        "lon": 25.2905
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Lyhtyni valo osuu punatiiliseen kirkkoon, jonka seinässä on 33 eri tiilityyppiä. Tarun mukaan Napoleon halusi viedä sen kämmenellään Pariisiin.",
+        "kohde": {
+          "nimi": "Pyhän Annan kirkko",
+          "lat": 54.6829,
+          "lon": 25.2942,
+          "etaisyys_saapumispisteesta_m": 495
+        },
+        "vihje_vaarin": "Ei se. Kävele tornin juurelta etelä-kaakkoon alas kukkulalta: etsi pienillä torneilla ja koristeaukoilla kirjailtu punatiilikirkko.",
+        "tiesitko": "Kirkko rakennettiin noin 1495-1500, ja sen ulkoasu on pysynyt lähes ennallaan. Se kuuluu Vilnan vanhankaupungin Unescon maailmanperintöön.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "aikajana",
+        "palkkio": 30,
+        "kysymys": "Rasa kertoo kaupungin vuosista. Missä järjestyksessä nämä tapahtuivat, vanhimmasta nuorimpaan?",
+        "tapahtumat_oikeassa_jarjestyksessa": [
+          {
+            "teksti": "Gediminas mainitsee Vilnan kirjeessään ja kutsuu uusia asukkaita maahansa",
+            "vuosi": "1323"
+          },
+          {
+            "teksti": "Vilnan yliopisto perustetaan jesuiittojen opistona",
+            "vuosi": "1579"
+          },
+          {
+            "teksti": "Liettua julistaa itsenäisyytensä palautetuksi, ja päätös tehdään Vilnassa",
+            "vuosi": "1990"
+          }
+        ],
+        "vihje_vaarin": "Yliopisto syntyi renessanssin aikaan, ja kirjeet kirjoitettiin kauan ennen sitä. Itsenäisyyden palautuksen muistavat vielä monet vanhat vilnalaiset.",
+        "tiesitko": "Gediminasin kirjeet ovat Vilnan syntytodistus: kaupunki täytti 700 vuotta 2023. Alkuperäiset katosivat, vain jäljennökset ovat säilyneet.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "marseille",
+      "nimi": "Marseille",
+      "maa": "FRA",
+      "hahmo": "Soutaja Baptiste",
+      "saapumispiste": {
+        "nimi": "Vanhan sataman laituri (Vieux-Port)",
+        "lat": 43.2946,
+        "lon": 5.3693
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Kun lähden soutamaan, katson taakseni korkealle kukkulalle: kirkon kellotornin päällä kimaltaa kultainen Neitsyt Maria. Etsi se kirkko.",
+        "kohde": {
+          "nimi": "Notre-Dame de la Garde",
+          "lat": 43.2839,
+          "lon": 5.3712,
+          "etaisyys_saapumispisteesta_m": 1200
+        },
+        "vihje_vaarin": "Ei se. Katso etelään, Vanhan sataman taakse: korkealla kalliokukkulalla seisoo kirkko, jonka kellotornin päällä kimaltaa kultattu patsas.",
+        "tiesitko": "Kirkko vihittiin 1864, ja marseillelaiset kutsuvat sitä Hyväksi äidiksi. Huipun kultattu Neitsyt Maria on yli yhdeksän metriä korkea.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "arvio",
+        "palkkio": 40,
+        "kysymys": "Baptiste kertoo, että vieraat lähtevät Vanhasta satamasta veneellä Ifin saarelle. Arvioi, montako minuuttia yksisuuntainen matka kestää.",
+        "liukusaadin": {
+          "min": 5,
+          "max": 60,
+          "askel": 5,
+          "yksikko": "min"
+        },
+        "oikea": 20,
+        "hyvaksyttava_vali": [
+          15,
+          25
+        ],
+        "vihje_vaarin": "Ei aivan. Saari on noin 3,5–4 km länteen satamasta, ja matka kestää vartista tuntiin.",
+        "tiesitko": "Ifin linnoituksen rakennutti kuningas Frans I vuodesta 1524. Dumas’n romaanissa (1844) tuleva Monte Criston kreivi, Edmond Dantès, on vankina siellä.",
+        "muistomerkki": false
+      }
+    },
+    {
+      "versio": 1,
+      "laatija": "Sisältökirjuri 12.10.2026 (Sonnet-luonnos)",
+      "kaupunki": "bryssel",
+      "nimi": "Bryssel",
+      "maa": "BEL",
+      "hahmo": "Kivenveistäjä Aline",
+      "saapumispiste": {
+        "nimi": "Pörssitalo (Place de la Bourse)",
+        "lat": 50.848,
+        "lon": 4.3492
+      },
+      "a": {
+        "laji": "katso",
+        "palkkio": 25,
+        "vihjelause": "Etelässä kukkulan reunalla kohoaa valtava kupolirakennus, jossa jaetaan oikeutta. Se hallitsee koko alakaupunkia. Etsi se.",
+        "kohde": {
+          "nimi": "Oikeuspalatsi",
+          "lat": 50.83667,
+          "lon": 4.35162,
+          "etaisyys_saapumispisteesta_m": 1270
+        },
+        "vihje_vaarin": "Ei se. Kävele pörssistä etelään: rakennus seisoo korkealla kukkulan reunalla, ja sen kupoli näkyy kauas yli alakaupungin.",
+        "tiesitko": "Oikeuspalatsi rakennettiin 1866–1883. Sen arkkitehti Joseph Poelaert kuoli ennen valmistumista eikä nähnyt sitä valmiina.",
+        "muistomerkki": false
+      },
+      "b": {
+        "tyyppi": "kartta",
+        "palkkio": 35,
+        "kysymys": "Pörssitalo valmistui 1873. Napauta vuoden 1883 kartalta paikkaa, jossa se seisoo (kartalla Bourse de Commerce).",
+        "kuva": {
+          "commons_tiedosto": "Plan de Bruxelles et des communes limitrophes... - Dessiné et gravé par Louis Van Peteghem, le 1er mai 1883 - btv1b53006625m (1 of 2).jpg",
+          "tekija": "Louis Van Peteghem (BnF/Gallica digitoinut)",
+          "lisenssi": "Public domain",
+          "lahde_url": "https://commons.wikimedia.org/wiki/File:Plan_de_Bruxelles_et_des_communes_limitrophes..._-_Dessin%C3%A9_et_grav%C3%A9_par_Louis_Van_Peteghem%2C_le_1er_mai_1883_-_btv1b53006625m_%281_of_2%29.jpg",
+          "leveys_px": 1920,
+          "korkeus_px": 1519
+        },
+        "oikea_piste_px": [
+          1000,
+          917
+        ],
+        "toleranssi_px": 40,
+        "vihje_vaarin": "Ei tuo. Kartta on käännetty: pohjoinen on vasemmalla. Pörssitalo on musta rakennus Boulevard Anspachin varrella; vieressä lukee Bourse de Commerce.",
+        "tiesitko": "Pörssitalo rakennettiin 1868–1873 arkkitehti Léon Suysin piirustusten mukaan, samaan aikaan kun Senne-joki katettiin.",
+        "muistomerkki": false
+      }
+    }
+  ],
+  "maa_vihjeet": [
+    {
+      "iso3": "IRL",
+      "kaupunki": "dublin",
+      "vihjeet": [
+        "Kuningas Vilhelm IV antoi 1830-luvulla Pyhän Patrickin ritarikunnalle tähden ja merkin, joissa kimaltaa satoja timantteja, rubiineja ja smaragdeja.",
+        "Korujen vartijana on Ulsterin vaakunakuningas, ritarikunnan virkamies, jonka virasto toimii Dublinin linnassa. Mene Dublinin linnaan."
+      ]
+    },
+    {
+      "iso3": "NOR",
+      "kaupunki": "oslo",
+      "vihjeet": [
+        "Muistiinpano: täällä hopeaa punnittiin vaa'alla. Koruja ja kolikoita hakattiin paloiksi, ja arabialaisia rahoja kulki idästä pohjoiseen asti.",
+        "Saagan mukaan kuningas Harald rakennutti vuonon pohjukkaan kauppakaupungin, noin vuoden 1050 tienoilla. Kauppa kävi hopealla, jota punnittiin.",
+        "Mene Christianiaan, vuonon pohjukkaan. Kenties kätkö nukkuu vielä pellon alla, sillä kukaan ei tiedä, montako niitä on."
+      ]
+    },
+    {
+      "iso3": "POL",
+      "kaupunki": "krakova",
+      "vihjeet": [
+        "Ruhtinas Adam Jerzy Czartoryski toi Italiasta vuosisadan vaihteessa nuoren miehen muotokuvan, jonka sanotaan olevan Rafaelin maalaama. Se on suvun aarteita.",
+        "Suku säilyttää kokoelmaansa maanpaossa Pariisissa. Ruhtinas Władysław on päättänyt viedä sen takaisin Puolaan.",
+        "Kokoelma on tulossa Krakovaan. Mene sinne ja etsi nuoren miehen kuvaa, jonka sanotaan olevan Rafaelin maalaama."
+      ]
+    },
+    {
+      "iso3": "BGR",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Panagjurište (seutu)",
+        "lat": 42.5,
+        "lon": 24.183
+      },
+      "vihjeet": [
+        "Kansa, joka jätti jälkeensä vain vähän kirjoitettua, kätki kultaa maahan ja hautoihinsa. Esineet ovat lähes ainoa ääni, jolla se puhuu meille.",
+        "Ne olivat traakialaisia. Etsi heidän kultaansa Panagjurištesta Sofian itäpuolelta: savea kaivavat saattavat osua kultaisiin juoma-astioihin."
+      ]
+    },
+    {
+      "iso3": "ROU",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Sarmizegetusa Regia (daakien linnavuori)",
+        "lat": 45.6219,
+        "lon": 23.3093
+      },
+      "vihjeet": [
+        "Roomalainen Cassius Dio kertoo: kuningas käänsi joen sivuun, kätki kultansa ja hopeansa uoman pohjaan ja päästi veden takaisin.",
+        "Kuningas oli Decebalus, daakien hallitsija. Traianuksen legioonat valtasivat hänen vuorilinnansa 106, ja Dion mukaan vangiksi jäänyt toveri paljasti kätkön.",
+        "Sarmizegetusa Regian rauniot ovat Orăștie-vuorilla Transilvaniassa. Sieltä on kaivettu kultaa jo 1500-luvulta lähtien."
+      ],
+      "faktat": [
+        {
+          "vaite": "Cassius Dion mukaan Decebalus kätki aarteensa Sargetia-joen uomaan, jonka virta käännettiin sivuun työn ajaksi.",
+          "lahde1": "https://en.wikipedia.org/wiki/Decebalus_treasure",
+          "lahde2": "https://www.detecting.org.uk/blog/?p=262"
+        },
+        {
+          "vaite": "Sarmizegetusa Regia, daakien linnavuori Orăștie-vuorilla; koordinaatit 45.6219 N, 23.3093 E.",
+          "lahde1": "https://en.wikipedia.org/wiki/Sarmizegetusa_Regia",
+          "lahde2": "https://wikipedia.com/wiki/Sarmisegetuza"
+        },
+        {
+          "vaite": "Roomalaiset valtasivat daakien maan 106 jKr. (Traianus, toinen daakiensota).",
+          "lahde1": "https://en.wikipedia.org/wiki/Decebalus",
+          "lahde2": "https://en.wikipedia.org/wiki/Sarmizegetusa_Regia"
+        }
+      ],
+      "huom": "Paikka ei ole pelikaupunki, siksi kaupunki=null ja paikka kartalle. Rivit pidetty 1873-äänessä: 1990-luvun ryöstöt ja takavarikot (iso_fakta) jätetty pois, koska 1873-äänessä ei voi kertoa."
+    },
+    {
+      "iso3": "LTU",
+      "kaupunki": "vilna",
+      "vihjeet": [
+        "Vilnan tuomiokirkon aarteita on koottu Liettuan kasteesta asti. Sodat veivät paljon, mutta kullasepän töitä jäi.",
+        "Kun sota lähestyy, viisas kätkee kalleutensa seinän onkaloon ja vaikenee. Kätkö voi levätä pimeässä vuosikymmeniä, jopa ihmisiän.",
+        "Etsi Vilnan tuomiokirkko Liettuasta. Kirkon seinät kätkevät enemmän kuin kiveä, jos tietää, mistä kysyä."
+      ],
+      "faktat": [
+        {
+          "vaite": "Vilnan tuomiokirkon aarteet (kalkit, monstranssit, reliikkirasiat) muurattiin 1939 seinän onkaloon ja löytyivät 1985 korjaustöissä; löydöstä vaiettiin neuvostoaikana.",
+          "lahde1": "https://www.vle.lt/straipsnis/vilniaus-katedros-lobynas/",
+          "lahde2": "https://www.ldkistorija.lt/?p=8228"
+        },
+        {
+          "vaite": "Aarteet esiteltiin yleisölle vasta 1990-luvun lopulta; vuodesta 2009 Kirkkoperinnemuseossa.",
+          "lahde1": "https://www.bpmuziejus.lt/uploads/BPM%20failai/G%20ZUJIENE%20History%20of%20Vilnius%20Cathedral%20Treasury%20Foundation%20and%20Developement%20to%20the%20Present%20Day%20en.pdf",
+          "lahde2": "https://www.finestresullarte.info/en/news/treasure-of-the-rulers-of-lithuania-and-poland-found-it-was-in-the-basement-of-vilnius-cathedral"
+        }
+      ],
+      "huom": "Kaupunki vilna (pelikaupunki). Rivit 1873-yhteensopivia (ei väitä 1939/1985 tapahtumaa), ei fiktiivistä löytöä."
+    },
+    {
+      "iso3": "FRA",
+      "kaupunki": "pariisi",
+      "vihjeet": [
+        "Syyskuun öinä 1792 varkaat kiipesivät ikkunasta kuninkaan esineiden varastoon ja palasivat yö toisensa jälkeen. Kukaan ei huomannut mitään heti.",
+        "Iso osa kivistä saatiin takaisin, mutta kuninkaan sinistä timanttia ei. Vuonna 1812 Lontoossa nähtiin samanvärinen, pienempi kivi. Oliko se sama, ei tiedetä.",
+        "Varasto oli Pariisissa, Concorde-aukion laidalla; nyt siinä on laivastoministeriö. Monen kiven kohtaloa ei tiedetä: ehkä jokin lymyää yhä Pariisissa."
+      ]
+    },
+    {
+      "iso3": "BEL",
+      "kaupunki": null,
+      "paikka": {
+        "nimi": "Antwerpen",
+        "lat": 51.2211,
+        "lon": 4.3997
+      },
+      "vihjeet": [
+        "Kauppiaat kertovat pohjoisesta satamakaupungista, jossa timanteilla on käyty kauppaa jo 1400-luvulta, yli neljäsataa vuotta.",
+        "Kaupunki on Antwerpen, Scheldejoen varrella. Jos kivien kauppa kiinnostaa, sinne kannattaa matkata Brysselistä jatkaen."
+      ]
+    }
+  ]
+}

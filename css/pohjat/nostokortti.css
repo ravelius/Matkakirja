@@ -1,0 +1,82 @@
+/*
+ * NOSTOKORTTI (tyylikirja.json pohjat.NOSTOKORTTI).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── NOSTOKORTTI: KAPEA alareunaan ≤ 45 % (veto ylös 85 %), KESKI/LEVEÄ sivukortti oikealle ────── */
+
+.tk-nostokortti {
+  position: fixed;
+  /* Pulun chatin (41) alla: Kysy avaa chatin kortin päälle, ja kortti paljastuu taas chatin sulkeutuessa. Karttojen
+     merkkien ja kartussin (≤ 10) yllä. */
+  z-index: 40;
+  left: var(--tk-vali-m);
+  right: var(--tk-vali-m);
+  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  /* Kiinnitetyn elementin prosentti on näkymän korkeudesta. */
+  max-height: var(--tk-peitto-max);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 8px 26px var(--tk-himmennys-kevyt);
+  transition:
+    max-height var(--tk-kesto-avaus) var(--liike-sisaan),
+    opacity var(--tk-kesto-avaus) var(--liike-sisaan),
+    transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+.tk-nostokortti.tk-laajennettu { max-height: var(--tk-peitto-laajennettu); }
+.tk-nostokortti.tk-piilossa {
+  opacity: 0;
+  transform: translateY(var(--tk-vali-l));
+  pointer-events: none;
+  transition-duration: var(--tk-kesto-sulku);
+}
+.tk-nostokortti__kahva {
+  flex: none;
+  align-self: center;
+  width: var(--tk-nappi-osuma);
+  height: var(--tk-vali-l);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+.tk-nostokortti__kahva::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 4px;
+  margin: 6px auto 0;
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-reunus);
+}
+.tk-nostokortti__vieritys {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--tk-vali-xs) var(--tk-vali-l) var(--tk-vali-s);
+}
+.tk-nostokortti__napit {
+  flex: none;
+  padding: var(--tk-vali-s) var(--tk-vali-l) var(--tk-vali-m);
+  border-top: 1px solid var(--tk-reunus);
+}
+@media (min-width: 600px) {
+  .tk-nostokortti {
+    left: auto;
+    top: calc(var(--tk-vali-xl) * 3);
+    bottom: auto;
+    width: var(--tk-leveys-sivukortti);
+    max-height: calc(100dvh - var(--tk-vali-xl) * 4);
+  }
+  .tk-nostokortti.tk-laajennettu { max-height: calc(100dvh - var(--tk-vali-xl) * 4); }
+  .tk-nostokortti__kahva { display: none; }
+}

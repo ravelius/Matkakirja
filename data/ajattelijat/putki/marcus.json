@@ -1,0 +1,29 @@
+{
+ "kuvaus": "Marcus Aureliuksen ajattelijaputken syötteet (tools/ajattelija-putki.mjs). Polut suhteessa lähdejuureen (proto-3d/_lahteet).",
+ "kertoja": {
+  "tiedosto": "marcus-aurelius/kertoja-v1/kertoja-v1.mp3",
+  "ajat": "marcus-aurelius/kertoja-v1/ajat.json",
+  "lahde": "Kertoja Iv4 William (Sisältökirjuri 3.10.2026, ElevenLabs eleven_v4, yksi otto)",
+  "lisenssi": "oma (pelin tilaama puhe)",
+  "toimittaa": "Sisältökirjuri"
+ },
+ "musiikki": {
+  "tiedosto": "marcus-aurelius/musiikki-oma/marcus-oma-koko-vsco-v14.mp3",
+  "lahde": "Linssisepän sävellys (VS Chamber Orchestra 2 CE -näytteet); ks. marcus-aurelius/musiikki-oma/LAHTEET.md",
+  "lisenssi": "oma, näytteet CC0",
+  "toimittaa": "Linssiseppä"
+ },
+ "efektit": {
+  "kansio": "sokrates/efektit",
+  "lahde": "Projektorin naksahdus, hallin ovi, malja ja kytkin; ks. sokrates/efektit/LAHTEET.md",
+  "lisenssi": "CC0 ja oma",
+  "toimittaa": "Linnanrakentaja"
+ },
+ "kaiut": {
+  "kansio": "marcus-aurelius/gobot-v13",
+  "lahde": "PAIKKAMERKIT (sadeihme Nico Kokkonen CC BY 3.0, uhri ja kuolinvuode PD); ks. marcus-aurelius/kaiut/LAHTEET.md",
+  "lisenssi": "CC BY 3.0 / Public domain",
+  "toimittaa": "Codex ja Sisältökirjuri"
+ },
+ "vaimennusDb": -8
+}

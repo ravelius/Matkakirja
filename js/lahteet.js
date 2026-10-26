@@ -28,6 +28,23 @@
  */
 
 /** Pelin oma tekijänoikeus. Sanamuodot ovat LICENSE-tiedostosta. */
+import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+
+/*
+ * Lipun tekijä luettavaksi: Commonsin kenttä kantaa lataushistoriaa
+ * ("Original uploader was X at en.wikipedia", johdannaisen lähdetiedostot).
+ * Nimet säilyvät, kulissit pois.
+ */
+function lipunTekija(t) {
+  return String(t)
+    .replace(/[^\s:]+\.(svg|gif|png|jpe?g):\s*\*?/gi, '')
+    .replace(/Original uploader was (.+?) at \S+/gi, '$1')
+    .replace(/\s*derivative work:\s*/gi, ', muokannut ')
+    .replace(/\s+aka\s+/i, ' / ')
+    .replace(/^[\s,]+/, '')
+    .trim();
+}
+
 export const PELI = {
   nimi: 'Matkakirja ja unohdettu aarre',
   englanniksi: 'The Travel Journal and the Forgotten Treasure (ehdotus, vahvistetaan käännösvaiheessa)',
@@ -45,6 +62,8 @@ export const PELI = {
     + 'Kokoaminen peliin ei muuta niiden lisenssejä.',
   johdanto: 'Peli on saanut inspiraationsa Jules Vernen teoksista, mutta se '
     + 'ei jäljittele niitä eikä sillä ole yhteyttä niiden oikeudenhaltijoihin.',
+  // Nimetön kävijälaskuri (omistaja 30.9.2026, js/kaynti.js + tools/pollo/kaynnit.js).
+  yksityisyys: 'Peli laskee nimettömiä käyntikertoja; IP-osoitteita ei tallenneta.',
 };
 
 /*
@@ -65,10 +84,22 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
-        nimi: 'GSHHG — rantaviivat pääkartan laatoissa ja pallon vektoreissa (versio 2.3.7)',
+        nimi: 'GSHHG — rantaviivat ja järvet pääkartan laatoissa, rantaviivat pallon vektoreissa (versio 2.3.7)',
         tekija: 'Wessel & Smith, A Global Self-consistent, Hierarchical, '
           + 'High-resolution Geography Database',
         lisenssi: 'LGPL 3+',
+      },
+      {
+        nimi: 'GEOGLOWS v2 (TDX-Hydro) — jokiverkko natiivin elävään karttaan',
+        tekija: 'GEOGLOWS ECMWF Streamflow Service (BYU, ECMWF); jokiviivat NGA TDX-Hydro',
+        lisenssi: 'CC BY-SA 4.0',
+        huom: 'Contains information from the GEOGLOWS ECMWF Streamflow Service (CC BY 4.0), derived from NGA TDX-Hydro (CC BY-SA 4.0). Johdetut jokiviivat julkaistaan samalla lisenssillä. Tarkistettu 26.9.2026 s3://geoglows-v2/licenses.md.',
+      },
+      {
+        nimi: 'OpenHistoricalMap — vuoden 1873 rautatiet elävään karttaan',
+        tekija: 'OpenHistoricalMap-yhteisö, openhistoricalmap.org',
+        lisenssi: 'CC0 1.0',
+        huom: 'Radat, joiden start_date ≤ 1873 (tools/tee-reitit1873.mjs). Lisenssi tarkistettu 26.9.2026 wiki.openstreetmap.org/wiki/OpenHistoricalMap/License.',
       },
       {
         nimi: 'ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — '
@@ -97,6 +128,46 @@ export const LAHTEET = [
         tekija: 'NASA Earth Observatory / Visible Earth; NASA Goddard Space '
           + 'Flight Center, tutkija Miguel Román, kuvankäsittely Joshua Stevens (SSAI)',
         lisenssi: 'Public domain (NASA), lähteen maininta ehtona',
+      },
+      {
+        nimi: 'IGN LiDAR HD — Pariisin maanpinta ja pintamalli natiivipelissä',
+        tekija: '© IGN (Institut national de l’information géographique et forestière)',
+        lisenssi: 'Licence Ouverte / Open Licence Etalab 2.0',
+        huom: 'Kirjattu 14.10.2026 korkeustiedostojen krediiteistä (kartta/korkeus/v1/maa-pariisi.json, korkeus-pariisi.json).',
+      },
+      {
+        nimi: 'Lantmäteriet Markhöjdmodell — Tukholman maanpinta natiivipelissä',
+        tekija: '© Lantmäteriet',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (kartta/korkeus/v1/maa-tukholma-v3.json).',
+      },
+      {
+        nimi: 'Danmarks Højdemodel (Terræn ja Overflade) — Kööpenhaminan maanpinta ja pintamalli natiivipelissä',
+        tekija: '© Klimadatastyrelsen',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (maa-koopenhamina.json Mapterhornin kautta, korkeus-koopenhamina-v3.json Dataforsyningenin WCS:stä).',
+      },
+      {
+        nimi: 'Environment Agency LIDAR Composite DTM ja First Return DSM 1 m — Lontoon maanpinta ja pintamalli natiivipelissä',
+        tekija: '© Environment Agency copyright and/or database right 2022. All rights reserved.',
+        lisenssi: 'Open Government Licence v3.0',
+        huom: 'Kirjattu 14.10.2026 (maa-lontoo.json Mapterhornin kautta, korkeus-lontoo-v2.json EA:n WCS:stä).',
+      },
+      {
+        nimi: 'ČÚZK DMR 4G ja DMP 1G — Prahan maanpinta ja pintamalli natiivipelissä',
+        tekija: '© ČÚZK (Český úřad zeměměřický a katastrální)',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (maa-praha.json Mapterhornin kautta, korkeus-praha-v2.json ČÚZK:n ImageServeristä). ČÚZK:n avoimet tiedot 1.7.2023 alkaen.',
+      },
+      {
+        nimi: 'Mapterhorn — muiden kaupunkien maanpinta (DTM) natiivipelissä',
+        tekija: 'mapterhorn.com; lähteinä kansalliset korkeusmallit, kaupunkikohtainen tekijä tiedostossa kartta/korkeus/v1/maa-<kaupunki>.json',
+        lisenssi: 'Lähdekohtainen avoin lisenssi (esim. CC BY 4.0, OGL v3.0, CC0), kirjattu kunkin kaupungin tiedostoon',
+      },
+      {
+        nimi: 'ESA WorldCover 2021 — kaupunkien vesialueet natiivipelissä',
+        tekija: '© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium',
+        lisenssi: 'CC BY 4.0',
       },
     ],
   },
@@ -209,6 +280,27 @@ export const LAHTEET = [
         lisenssi: 'Koordinaatit ja vuosiluvut ovat tosiasioita; selitetekstit '
           + 'kirjoitettu itse. Rajaviivat ovat tulkintoja, eivät mittauksia.',
       },
+      {
+        nimi: 'AERONET Version 3, Level 2.0 — kaupunkien ilman utu (aerosoli) natiivipelissä',
+        tekija: 'NASA Goddard Space Flight Center, AERONET-verkosto; asemien vastuututkijat kirjattu kaupungin ilmakeha.json-tiedostoon',
+        lisenssi: 'Vapaa käyttö lähteen ja aseman vastuututkijan maininnalla (AERONET data use policy)',
+        huom: 'Kirjattu 14.10.2026 vientipakettien LAHTEET.md-tiedostoista (ilmakeha/aerosoli-v1).',
+      },
+      {
+        nimi: 'METAR-havainnot, IEM ASOS -arkisto — kaupunkien pilvi-ilmasto natiivipelissä',
+        tekija: 'Iowa Environmental Mesonet, Iowa State University',
+        lisenssi: 'Vapaasti käytettävissä lähteen maininnalla; tilastot laskettu havainnoista',
+      },
+      {
+        nimi: 'SYNOP-havainnot, NOAA Integrated Surface Database (ISD) — kaupunkien pilvi-ilmasto natiivipelissä (pilvet-v4)',
+        tekija: 'NOAA National Centers for Environmental Information; AWS Open Data -kopio noaa-global-hourly-pds',
+        lisenssi: 'NOAA:n avoin data (vapaa käyttö lähteen maininnalla); tilastot laskettu havainnoista',
+      },
+      {
+        nimi: 'Copernicus Sentinel-2 L2A (Earth Search, AWS Open Data) — kaupunkien veden väri natiivipelissä',
+        tekija: 'Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 Earth Search -STAC',
+        lisenssi: 'Copernicus-avoin data (vapaa käyttö lähdemaininnalla)',
+      },
     ],
   },
   {
@@ -216,9 +308,39 @@ export const LAHTEET = [
     johdanto: 'Kuvakortit, kaupunkigalleriat, kulttuurinostot ja maastotekstien kuvat.',
     rivit: [
       {
+        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, sadeihmeen kaiku)',
+        tekija: 'Nico Kokkonen, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
+        lisenssi: 'CC BY 3.0',
+        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md); v14:ssä '
+          + 'kaiku ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png.',
+      },
+      {
+        nimi: 'Ajattelijat-linssin kaikukuvat — Carstens 1788 (Sokrates pelastaa Alkibiadeen), '
+          + 'Marcus Aureliuksen uhrireliefi 176–180 (valokuva Angeli 1908) ja Delacroix 1844',
+        tekija: 'Wikimedia Commons; Delacroix: Musée des Beaux-Arts de Lyon',
+        lisenssi: 'Public domain',
+      },
+      {
+        nimi: 'Ajattelijoiden kipsibystit — Sokrates (KAS635) ja Marcus Aurelius (KAS979), 3D-skannaukset',
+        tekija: 'SMK – Statens Museum for Kunst; skannaus Scan the World / SMK',
+        lisenssi: 'Public Domain Mark 1.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssin kreikkalaiset kirjasimet: Gentium Plus, GFS Didot ja GFS Solomos (Sokrateen taustavirta); '
+          + 'punnan merkin varakirjasin "Matkakirja Punta" on Gentium Plussan osajoukko (vain £)',
+        tekija: 'SIL International (Gentium Plus); Greek Font Society (GFS Didot, GFS Solomos)',
+        lisenssi: 'SIL Open Font License 1.1',
+      },
+      {
+        nimi: 'Kipsin pintakuvio grey_plaster_02 (ajattelijoiden bystit)',
+        tekija: 'Rob Tuytel, Poly Haven',
+        lisenssi: 'CC0',
+      },
+      {
         nimi: 'Wikimedia Commons — pelin valokuvien pääasiallinen lähde',
-        tekija: 'Kuvaajat tiedostokohtaisesti; nimi ja lisenssi näkyvät kuvan '
-          + 'selitteessä pelissä',
+        tekija: 'Kuvaajat kuvakohtaisesti: tekijä, lähde ja lisenssi näkyvät, kun '
+          + 'kuvan avaa isoksi. Jos Commons ei tunne tekijää (vanhat public domain '
+          + '-kuvat), rivillä lukee "tekijä tuntematon".',
         lisenssi: 'Public domain, CC0, CC BY ja CC BY-SA. ND- ja NC-ehtoiset '
           + 'kuvat on rajattu pois.',
       },
@@ -240,11 +362,38 @@ export const LAHTEET = [
       },
       {
         nimi: 'Lippukuvat',
-        tekija: 'Wikimedia Commons; valtaosa valtiontunnuksia. Nimeämistä '
-          + 'vaativat neljä on lueteltu tiedostossa js/packs/lippu-tekijat.js: '
-          + 'Sérgio Horta / Ungoliant MMDCCLXIV, Angelus, Daniele Schirmo '
-          + '(Frankie688) ja Hosmich.',
-        lisenssi: 'Public domain sekä CC BY-SA 2.5 ja 3.0',
+        // Nimeämistä vaativat liput tulevat suoraan datasta (js/packs/lippu-tekijat.js),
+        // jotta luettelo ei vanhene uuden lipun tullessa.
+        tekija: 'Wikimedia Commons; valtaosa valtiontunnuksia. Nimeämistä vaativat: '
+          + `${LIPPU_TEKIJAT.map((l) => lipunTekija(l.tekija)).join('; ')}.`,
+        lisenssi: `Public domain sekä ${[...new Set(LIPPU_TEKIJAT.map((l) => l.lisenssi))].sort().join(', ')}`,
+      },
+      {
+        nimi: 'NASA — astronauttien Maa-kuvat ja satelliittikuvat',
+        tekija: 'NASA (images.nasa.gov, Earth Observatory)',
+        lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'Kaupunkien keskustakartat sekä elävän kaupungin pisteet (äänet: kirkot, suihkulähteet, laiturit, kahvilat, aukiot; katu- ja ikkunavalot)',
+        tekija: '© OpenStreetMap-tekijät (© OpenStreetMap contributors)',
+        lisenssi: 'ODbL (Open Database License)',
+      },
+      {
+        nimi: 'Paikallisaarteiden valokuvat — kymmenen pääkaupunkimaata (Albania, Andorra, Valko-Venäjä, Liechtenstein, Monaco, Moldova, Pohjois-Makedonia, Montenegro, San Marino, Serbia)',
+        tekija: 'Wikimedia Commons ja Metropolitan Museum of Art (Open Access): Antidiskriminator (byrek, PD), Metropolitan Museum of Art (Vrapin aarre, CC0), Kronologiko (trinxat, CC BY-SA 4.0), Zinneke (Casa de la Vall, CC BY-SA 3.0), Tess Mattew (draniki, CC BY-SA 4.0), Jauhienij (Slutskin vyö, PD), Schofför (Ribel, CC BY-SA 3.0), JoachimKohler-HB (Gutenbergin linna, CC BY-SA 4.0), Lemone (barbagiuai, CC BY-SA 4.0), Tangopaso (Sainte-Dévoten reliikki, PD), Endangered Snowdrop (mărțișor, CC BY-SA 4.0), Petru I Mușatin grosi (PD, kolikot), Наташа Величковска (tavče gravče, CC BY-SA 4.0), Dumbarton Oaks (Mikael VIII:n hyperpyron, PD) ja Enrico Dandolon grosso (PD), VitisArchivum (vranac, CC BY-SA 4.0), BuhaM (Doclea, CC BY-SA 4.0), Mooonswimmer (Torta Tre Monti, CC BY 4.0), San Marinon Statuta 1600 (PD), Verica 1966 (ajvar, CC BY-SA 4.0), Miroslavin evankeliumi (PD)',
+        lisenssi: 'Public domain, CC0, CC BY 4.0, CC BY-SA 3.0/4.0 (tekijä nimetään; BY-SA: sama lisenssi jatkossa)',
+      },
+      {
+        nimi: 'Havainnekuvat — tekoälyllä tuotettu kuvitus',
+        tekija: 'Pelin oma tuotanto (Gemini-kuvamallit, jokainen kuva katsottu ennen '
+          + 'käyttöä): nähtävyyksien loistoaikakuvat, kohdekarttojen pienoispiirrokset, '
+          + 'aarrekuvat, kohtaamisten kasvokuvat, eläinten ja historian hetkien kuvat '
+          + 'sekä Viisaan Pöllön muotokuva. Sheban kuningattaren suitsukerasian, '
+          + 'Montezuman turkoosinaamion, Kongon kuninkaan kruunun, Mantan smaragdin ja '
+          + 'Raiatean kuninkaiden höyhenvyön aarrekuvat on tuotettu ChatGPT/Codexin '
+          + 'kuvageneroinnilla (19.10.2026) ja katsottu täysikokoisina ennen käyttöä. '
+          + 'Kuvan tiedoissa tai kuvatekstissä lukee "havainnekuva".',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
       {
         nimi: 'Kartan grafiikka, laattojen kuvakkeet, pulmien piirrokset, '
@@ -252,12 +401,52 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (Sami Reivinen / VVI)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Olavinlinna — fotogrammetriamalli (Poikkileikkaus-linssin ulkokuori)',
+        tekija: 'Senaatti-kiinteistöt – Senate Properties (mittaus Tietoa Finland 2021), Sketchfab',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Muokattu: vesi poistettu, restauroinnin työmaaromu siivottu, laatutasot harvennettu ja halkeamat '
+          + 'umpeutettu, iltahämärä ja lämpimät ikkunat leivottu tekstuuriin (Linnanrakentaja 29.9.2026).',
+      },
+      {
+        nimi: 'Poly Haven — dioraaman pintatekstuurit (kivi, puu, kangas, metalli) leivottuina valoatlaksiin',
+        tekija: 'Poly Haven -yhteisö (polyhaven.com)',
+        lisenssi: 'CC0 1.0',
+      },
     ],
   },
   {
     otsikko: 'Äänet',
     johdanto: 'Kaupunkien äänimaisemat, kielinäytteet, radio ja tehosteet.',
     rivit: [
+      {
+        nimi: 'Olavinlinnan lyhty — kaiut (tilan impulssivasteet)',
+        tekija: 'Kaiut: Aalto Acoustics Lab, OK5 (de las Heras, Meyer-Kahlen, Lokki, Arend), doi 10.5281/zenodo.18622201',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Tarkistettu 12.10.2026 Zenodosta: OK5: Spatial Room Impulse Responses from 25 Spaces in our Work Environment, CC BY 4.0.',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: Also sprach Zarathustra (feat. Richard Strauss) — Sokrates',
+        tekija: 'Sascha Ende, filmmusic.io',
+        lisenssi: 'CC BY 4.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: oma musiikki Sokrateelle ja Marcus Aureliukselle (sävelletty pelille, v14)',
+        tekija: 'Matkakirja (Linssiseppä); soitinnäytteet Versilian Studios VS Chamber Orchestra 2 Community Edition; '
+          + 'salin kaiku Liverpool Philharmonic Hall -impulssivaste (johnnyguitar01, Freesound 423866)',
+        lisenssi: 'Oma teos; näytteet ja impulssivaste CC0',
+        huom: 'Partituuri ja lähteet: proto-3d/_lahteet/sokrates/musiikki-oma/LAHTEET.md ja marcus-aurelius/musiikki-oma/LAHTEET.md.',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: prologin kytkimen napsahdus (Impact Sounds, kaksi iskua kerroksina, oma kaiku)',
+        tekija: 'Kenney (kenney.nl)',
+        lisenssi: 'CC0',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: Beethoven, Sinfonia nro 3 "Eroica", II Marcia funebre — Marcus Aurelius',
+        tekija: 'Czech National Symphony Orchestra / Musopen 2012, Wikimedia Commons',
+        lisenssi: 'CC0',
+      },
       {
         nimi: 'radio aporee ::: maps — kenttä-äänitykset kaupungeista '
           + '(äänimaisemat ja "Kuuntele kieltä")',
@@ -275,23 +464,41 @@ export const LAHTEET = [
        * Kaksi hakuajoa, jotka valitsevat äänensä koneellisesti ja
        * kirjaavat tekijän manifestiin äänen viereen ämpäriin: pulun
        * ääniefektit (tools/hae-freesound.mjs --pulu) ja Ihmisen matka
-       * -linssin äänimaisemat (--maisemat). Nimeltä ei voi luetella
-       * tässä, koska huonon osuman vaihtaminen paremmaksi vaihtaa
-       * tekijän eikä peli saa odottaa julkaisua sen takia — mutta
-       * KOKOELMA ja LISENSSIRAJAUS ovat pysyviä, ja juuri ne lisenssi
-       * vaatii näytettäväksi. Yksittäiset CC BY -nimet ovat manifestissa
-       * ja ajon lokissa; ne lisätään tähän riviin, kun lista on ajettu
-       * ja omistaja on hyväksynyt äänet.
+       * -linssin äänimaisemat (--maisemat). KOKOELMA ja LISENSSIRAJAUS
+       * ovat pysyviä; yksittäiset CC BY -nimet ovat manifestissa ja ajon
+       * lokissa. Fable 25.9.2026: attribuutio kulkee aina aineiston
+       * mukana (Raamattu, lisenssit), joten peliin tulevan listan CC BY
+       * -nimet kirjataan tänne samassa muutoksessa kuin äänet — ei vasta
+       * omistajan kuuntelun jälkeen. Vaihdettu ääni vaihtaa rivin nimen.
        */
       {
-        nimi: 'Freesound — Livian ääniefektit ja linssien nauhoitetut '
-          + 'äänimaisemat (Ihmisen matka: savanni, sademetsä, luola, '
-          + 'arktinen tuuli, meren ranta…)',
+        nimi: 'Freesound — Livian ääniefektit',
         tekija: 'Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id '
-          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/ ja '
-          + 'aanet/tehosteet/ihmisen-matka/)',
+          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/)',
         lisenssi: 'CC0 ja CC BY kohteittain (haku rajaa vain näihin kahteen)',
         huom: 'Haku tools/hae-freesound.mjs, ajo .github/workflows/aanihaku.yml',
+      },
+      {
+        nimi: 'Freesound — Ihmisen matka II -linssin äänimaisemat (15: '
+          + 'savanni, jokilaakso, meren ranta, vuoristotuuli, ruohikko '
+          + 'ja järvi, sademetsä, rannikkomeri, luola, arktinen tuuli, '
+          + 'tundratuuli, metsäsade, kylmä tuuli, avomeri, rantalinnut, '
+          + 'hiljainen tuuli)',
+        tekija: 'CC BY 4.0: "Hluhluwe13_unknown_bird.WAV" — reinsamba '
+          + '(freesound.org/s/58233); "Small Creek & Birds" — KasperAugustTopp '
+          + '(freesound.org/s/328140); "Calm Waves" — nsmusic '
+          + '(freesound.org/s/397358); "Doi bo ambi 02 wind up mountain.wav" — '
+          + 'fundamental_harmonics (freesound.org/s/437514); "Sailing Ambience - '
+          + 'Focus On Cutting Through the Waves" — iainmccurdy '
+          + '(freesound.org/s/645968); "waves and oystercatcher 01 xy90 '
+          + '160717_0917.wav" — klankbeeld (freesound.org/s/355344). '
+          + 'CC0: monotraum, gladkiy, emainta, Sclolex, cobratronik, '
+          + 'dhallcomposer, felix.blume, DBlover, BenHarmSound.',
+        lisenssi: 'CC BY 4.0 (6 äänitystä) ja CC0 (9)',
+        huom: 'Muokattu: lyhennetty, voimakkuus tasattu −30 LUFS:iin ja pakattu '
+          + 'mp3:ksi (luola +11,8 dB). Lisenssit Freesoundista 25.9.2026 '
+          + '(aanihaku-ajo, #3231); tekijä, id ja sivu myös manifestissa '
+          + 'aanet/tehosteet/ihmisen-matka/manifesti.json.',
       },
       {
         nimi: 'Lyhytaaltoäänitteet — maailmanradion viritysäänet',
@@ -364,6 +571,20 @@ export const LAHTEET = [
         lisenssi: 'MIT',
         huom: 'Tarkistettu 5.9.2026 (npm globe.gl 2.46.2, LICENSE). Ämpärissä '
           + 'vendor/globe.gl-2.46.2.min.js.',
+      },
+      {
+        nimi: 'three.js r185 ja GLTFLoader — Ajattelijat-linssin 3D-näkymä',
+        tekija: 'three.js authors, github.com/mrdoob/three.js',
+        lisenssi: 'MIT',
+        huom: 'npm three 0.185.0, koottu tools/vie-three-vendor.mjs:llä. Ämpärissä '
+          + 'vendor/three-gltf-r185.min.js ja vendor/three-LICENSE.txt.',
+      },
+      {
+        nimi: 'MinimalChess (MinimalChessEngine) — shakin säännöt ja vastustajan tekoäly (natiivi)',
+        tekija: 'Thomas Jahn (lithander), github.com/lithander/MinimalChessEngine',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 12.10.2026 repositorion LICENSE-tiedostosta (commit 0f31837). Natiivin '
+          + 'Peli/Pelit/MinimalChess/ ja LICENSE.txt kirjaston rinnalla; muutokset README.md:ssä.',
       },
     ],
   },

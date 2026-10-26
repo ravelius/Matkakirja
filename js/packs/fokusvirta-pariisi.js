@@ -75,7 +75,7 @@ const PIAF_VISA = {
   ],
   oikea: 0,
   fakta: 'Piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
-    + 'Laulaja oli 142 senttiä pitkä, ja tunnetuimman laulunsa La Vie '
+    + 'Laulaja oli alle 150 senttiä pitkä, ja tunnetuimman laulunsa La Vie '
     + 'en rose sanat hän kirjoitti itse.',
 };
 
@@ -90,8 +90,7 @@ const GUIMARD_VISA = {
   oikea: 1,
   fakta: 'Kilpailun 21 ehdotuksesta yksikään ei kelvannut. Guimard '
     + 'piirsi vakio-osia, jotka sopivat yhteen kuin rakennussarja: '
-    + 'sisäänkäyntejä tehtiin 167, ja jäljellä olevat 86 rauhoitettiin '
-    + 'vuonna 1978.',
+    + 'sisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
 };
 
 export const FOKUSVIRTA_PARIISI = {
@@ -297,24 +296,18 @@ export const FOKUSVIRTA_PARIISI = {
       teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
         + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
         + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
-        + 'kommunardit polttivat niin ikään, rakennettiin uudelleen jo '
-        + '1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'kommunardit polttivat niin ikään, rakennettiin uudelleen: työt alkoivat jo 1870-luvulla ja talo vihittiin käyttöön 1882. Tuileriat jäivät sen sijaan paikoilleen '
         + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki '
         + 'tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki '
         + '1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon '
-        + 'lähteneet kommunardit; vastaan olivat muun muassa '
-        + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
-        + 'alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana '
-        + 'vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä '
+        + 'lähteneet kommunardit; vastaan oli muun muassa joukko historioitsijoita. Purku tehtiin 1882–1883, ja viimeiset rauniot hävisivät syksyllä 1883. Sitten palatsi levisi ympäri maailman: yrittäjä '
         + 'Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
-        + 'osista rakennettiin Korsikalle Ajaccion lähelle kokonainen '
-        + 'palatsi, Château de la Punta. Keskuspaviljongin päätykolmio '
+        + 'osista rakennettiin Korsikalle Ajaccion lähelle Château de la Punta. Keskuspaviljongin päätykolmio '
         + 'seisoo Pariisissa Square Georges Cainissa, ja paloja on '
         + 'Louvressa, Trocadéron puutarhassa, Berliinissä, Italian '
         + 'Bordigherassa ja Quiton presidentinpalatsissa asti. '
-        + 'Huonekalut ja maalaukset olivat koko ajan tallessa: ne oli '
-        + 'viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
-        + 'perustettiin komitea, joka esittää palatsin rakentamista '
+        + 'Suuri osa huonekaluista ja maalauksista oli tallessa: ne oli '
+        + 'viety varastoon, kun sota alkoi 1870. 2000-luvun alussa perustettiin komitea, joka esittää palatsin rakentamista '
         + 'takaisin.',
       lahde: 'en-Wikipedia "Tuileries Palace". Tarkistettu 1.9.2026.',
       /*
@@ -400,8 +393,7 @@ export const FOKUSVIRTA_PARIISI = {
         + 'preussilaiset sulkivat Pariisin syyskuussa 1870, viimeiset '
         + 'lennätinlangat katkaistiin 19. päivä ja Seinen pohjassa '
         + 'kulkenut salakaapeli löydettiin ja katkaistiin 27. päivä. '
-        + 'Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt '
-        + 'vietiin ulos kuumailmapalloilla, ja valokuvaaja René Dagron '
+        + 'Kaupunkiin päin ainoa toimiva reitti oli kirjekyyhky. Kyyhkyt vietiin ulos ilmapalloilla, ja valokuvaaja René Dagron '
         + '— mikrofilmin patentin haltija vuodesta 1859 — tarjoutui '
         + 'pienentämään viestit. Sopimus allekirjoitettiin 11. '
         + 'marraskuuta 1870: viisitoista frangia tuhatta merkkiä kohti. '
@@ -459,15 +451,13 @@ export const FOKUSVIRTA_PARIISI = {
         + 'hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi '
         + 'näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan '
         + '1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta '
-        + 'isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, '
-        + 'Cézanne, Berthe Morisot, Degas ja joukko muita perustivat '
-        + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseneksi '
-        + 'liittyvän piti luopua Salonista kokonaan. Ensimmäinen '
+        + 'isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Berthe Morisot, Degas ja joukko muita perustivat '
+        + 'oman yhdistyksen esittääkseen työnsä itse, ja jäseniltä odotettiin Salonista luopumista. Ensimmäinen '
         + 'näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin '
         + 'ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. '
         + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, '
-        + 'soleil levant ja otsikoi juttunsa "Impressionistien '
-        + 'näyttely". Pilkkanimi jäi — ja taiteilijat ottivat sen itse '
+        + 'soleil levant ja otsikoi juttunsa ”Impressionistien '
+        + 'näyttely”. Pilkkanimi jäi — ja taiteilijat ottivat sen itse '
         + 'käyttöön.',
       lahde: 'en-Wikipedia "Impressionism". Tarkistettu 1.9.2026.',
       /*
@@ -493,8 +483,7 @@ export const FOKUSVIRTA_PARIISI = {
         oikea: 2,
         fakta: 'Yhdistyksen oikea nimi oli pitkä ja virallinen. '
           + 'Ensimmäiseen näyttelyyn huhtikuussa 1874 osallistui '
-          + 'kolmekymmentä taiteilijaa, ja jokainen heistä oli luvannut '
-          + 'pysyä poissa Salonista.',
+          + 'kolmekymmentä taiteilijaa.',
       },
     },
   ],
@@ -526,12 +515,11 @@ export const FOKUSVIRTA_PARIISI = {
       + 'yhdeksänsataa kolmen kilometrin matkalla, ja kaupunki päättää '
       + 'säännöt: yksi myyjä saa kahdeksan metriä kaidetta ja enintään '
       + 'neljä laatikkoa, ne on avattava vähintään neljänä päivänä '
-      + 'viikossa, ja maali on aina sama vaunuvihreä kuin ensimmäisen '
-      + 'metron kylteissä. Kauppiaiden nimi on vanha ja se kertoo, mitä '
+      + 'viikossa, ja maali on aina sama vaunuvihreä, jota käytettiin jo ensimmäisessä metrossa. Kauppiaiden nimi on vanha ja se kertoo, mitä '
       + 'laatikoissa on: ranskan sana bouquin tarkoittaa vanhaa kirjaa. '
       + 'Kesällä 2024 laatikot piti purkaa olympialaisten avajaisten '
       + 'tieltä, mutta päätös peruttiin ja ne saivat jäädä. '
-      + 'Myyntipaikat periytyvät jonossa, jota odotetaan vuosia.',
+      + 'Vapautuvat myyntipaikat jakaa kaupunki hakukierroksilla, ja lupa myönnetään viideksi vuodeksi kerrallaan.',
     /*
      * Kuva on pelin omasta Seine-jaksosta (js/packs/
      * kulttuuri-kategoriat.js) eikä uusi tuonti: Commons 28.8.2026
@@ -670,7 +658,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'on arkaluontoinen eikä siitä saa puhua.',
         'Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin '
           + 'liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että '
-          + 'kauppasumman — noin 70 000 frangia. Sitten hän pakeni '
+          + 'kauppasumman. Sitten hän pakeni '
           + 'Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut '
           + 'poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman '
           + 'vuoden puolella tekemään saman tempun uudestaan. Tällä kertaa '
@@ -722,7 +710,7 @@ export const FOKUSVIRTA_PARIISI = {
        * lähde antaa täsmällisenä.
        */
       id: 'kirahvin-kavelymatka',
-      nimio: 'Kirahvin kävelymatka',
+      nimio: 'Kirahvi',
       otsikko: 'Kirahvi käveli 900 kilometriä Marseillesta Pariisiin — '
         + 'takki päällä ja kengät jalassa',
       lunastus: [
@@ -736,7 +724,7 @@ export const FOKUSVIRTA_PARIISI = {
         'Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja '
           + 'Pariisissa kirahvia kävi katsomassa yli 100 000 — joka '
           + 'kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, '
-          + 'kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi '
+          + 'kankaisiin ilmestyi täpliä ja väri nimeltä ”kirahvin vatsa” myi '
           + 'kaiken. Aikalaiset kutsuivat eläintä nimellä la Belle '
           + 'Africaine, ja se eli Jardin des Plantes\'ssa 18 vuotta.',
       ],
@@ -861,8 +849,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'esitetään koomisina ja että lopun kuolema jää kulkueiden, '
           + 'balettien ja riemufanfaarien varjoon. Lupaukset eivät '
           + 'riittäneet, ja de Leuven erosi teatterista alkuvuodesta '
-          + '1874. Nimiroolikin oli vaikea täyttää: Marie Roze '
-          + 'kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.',
+          + '1874. Nimiroolikin oli vaikea täyttää: Marie Roze kieltäytyi roolista (Winton Deanin elämäkerran mukaan siksi, että hänen olisi kuoltava lavalla), ja rooli meni lopulta Célestine Galli-Mariélle.',
         'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
           + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. '
           + 'Ensimmäinen näytös meni hyvin. Toreadorin laulun jälkeen '
@@ -874,8 +861,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla '
           + 'lippuja ilmaiseksi. Bizet kuoli 3. kesäkuuta 1875, '
           + 'kolmannenkymmenennenkolmannen esityksen jälkeen, '
-          + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli '
-          + 'muualta: Wien 1875, Bryssel 1876, Lontoo ja New York 1878 '
+          + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli muualta: ensin Wien 1875, Bryssel 1876, Lontoo ja New York 1878 '
           + '— Pariisiin ooppera palasi vasta 1883. Se sijoittuu '
           + 'Sevillaan, mutta kaikki tämä tapahtui täällä, Place '
           + 'Boïeldieun varrella. Sekin sali paloi 1887; paikalla '
@@ -937,17 +923,17 @@ export const FOKUSVIRTA_PARIISI = {
        * GUIMARD_VISA tiedoston alussa).
        */
       visa: {
-        kysymys: 'Nimiroolia oli vaikea täyttää: laulajatar Marie Roze '
-          + 'kieltäytyi siitä heti. Miksi?',
+        kysymys: 'Carmen sai Pariisin ensi-illassa viileän vastaanoton. '
+          + 'Missä kaupungissa sen maine alkoi ensimmäisenä nousta?',
         vaihtoehdot: [
-          'Hänen olisi pitänyt kuolla lavalla',
-          'Ensi-ilta oli sovittu liian pian',
-          'Ooppera sijoittui Espanjaan',
+          'Wienissä',
+          'Lontoossa',
+          'New Yorkissa',
         ],
         oikea: 0,
-        fakta: 'Rooli meni toiselle laulajattarelle, ja ensi-illan '
-          + 'jälkeen yksi kriitikko kutsui pääosan tulkintaa paheen '
-          + 'ruumiillistumaksi.',
+        fakta: 'Pariisiin ooppera palasi vasta 1883, kun sen maine oli '
+          + 'ehtinyt syntyä muualla. Ensi-illan jälkeen yksi kriitikko '
+          + 'kutsui pääosan tulkintaa paheen ruumiillistumaksi.',
       },
       /*
        * OMAT KOORDINAATIT, JOTTA MERKKI ON OIKEASSA MAASSA JA MAAN VOI
@@ -1015,11 +1001,10 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'tekniikka',
       lunastus: [
         'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-          + 'muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin '
-          + 'korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, '
+          + 'muistomerkki. Ensimmäisen kerroksen parvekkeen alla kiertää nimilista: 18 nimeä tornin jokaisella sivulla, '
           + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet ovat '
           + 'kullattuja ja 60 senttiä korkeita. Nimet peitettiin maalilla '
-          + '1900-luvun alussa ja paljastettiin vasta 1986–1987. Yhtään naista '
+          + '1900-luvun alussa ja tehtiin näkyviin uudelleen 1980-luvun lopulla. Yhtään naista '
           + 'listalla ei ole. Siksi tammikuussa 2026 julkistettiin toinen 72 '
           + 'nimen lista, pelkkiä naistutkijoita, jotka on tarkoitus kaivertaa '
           + 'miesten nimien yläpuolelle vuonna 2027.',
@@ -1030,8 +1015,7 @@ export const FOKUSVIRTA_PARIISI = {
       kuva: {
         tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
         lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-        selite: 'Eiffel-tornin ensimmäisen kerroksen ympäri kiertää 65 metrin '
-          + 'korkeudella 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
+        selite: 'Eiffel-tornin ensimmäisen kerroksen parvekkeen alla kiertää 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
           + 'kullatuin, 60 senttiä korkein kirjaimin.',
         lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
       },
@@ -1060,7 +1044,7 @@ export const FOKUSVIRTA_PARIISI = {
        * 48,8844 N / 2,3382 E.
        */
       id: 'guimardin-metro',
-      nimio: 'Metron sisäänkäynti',
+      nimio: 'Métropolitain',
       otsikko: 'Metron sisäänkäynti koottiin palasista',
       symboli: 'tekniikka',
       lunastus: [
@@ -1071,7 +1055,7 @@ export const FOKUSVIRTA_PARIISI = {
           + 'jotka sopivat yhteen kuin rakennussarja: samoista paloista sai '
           + 'kasattua sopivan sisäänkäynnin mihin tahansa kadunkulmaan. Niitä '
           + 'tehtiin 167. Sitten tyyli meni pois muodista ja puolet purettiin. '
-          + 'Jäljellä olevat 86 rauhoitettiin vuonna 1978.',
+          + 'Jäljellä olevista 88:sta 86 on rauhoitettu, suurin osa vuonna 1978.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Metron '
         + 'sisäänkäynti koottiin palasista" (js/packs/kulttuuri-kategoriat.js). '
@@ -1079,8 +1063,7 @@ export const FOKUSVIRTA_PARIISI = {
         + '13.9.2026.',
       kuva: {
         tiedosto: '01 Guimard\'s Métropolitain.jpg',
-        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevat '
-          + '86 rauhoitettiin vuonna 1978.',
+        selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevista 88:sta 86 on rauhoitettu.',
         lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
       },
       kysymykset: [
@@ -1116,7 +1099,7 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-          + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+          + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
           + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
           + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin '
           + 'sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
@@ -1188,15 +1171,13 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'ruoka',
       lunastus: [
         'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-          + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
-          + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+          + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pituudelle ja painolle on omat rajansa. Mitä '
           + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
           + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
-          + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
-          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
-          + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
-          + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
-          + 'seuraavan vuoden ajan.',
+          + 'vaiheessa pakastaa. Leivät ovat anonyymejä, jottei '
+          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
+          + 'ammattilaisia, toimittajia ja arvottuja tavallisia pariisilaisia. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+          + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Paras patonki '
         + 'valitaan sokkona" (js/packs/kulttuuri-kategoriat.js). Teksti '
@@ -1210,7 +1191,7 @@ export const FOKUSVIRTA_PARIISI = {
         lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
       },
       kysymykset: [
-        'Miksi leivät numeroidaan ennen maistamista?',
+        'Miksi leipien tekijöitä ei kerrota raadille?',
         'Mitä patongissa saa lain mukaan olla?',
         'Mikä velvollisuus voittajalle tulee?',
       ],
@@ -1239,24 +1220,22 @@ export const FOKUSVIRTA_PARIISI = {
        * näissä kolmessa kortissa ei olisi.
        */
       id: 'pariisi-soi',
+      wiki: ['Édith Piaf', 'Django Reinhardt'],
       nimio: 'Pariisi soi',
       otsikko: 'Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen',
       symboli: 'kulttuuri',
       lunastus: [
         'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
           + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
-          + 'lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla ja '
-          + 'pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée '
+          + 'lukee sairaala. Teininä hän lauloi kolikoista Pariisin kaduilla ja pihoissa ystävänsä Simone Berteautin kanssa. Yökerhon omistaja Louis Leplée '
           + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf — '
-          + 'piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja '
-          + 'oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose ilmestyi '
-          + '1946, ja sen sanat hän kirjoitti itse.',
+          + 'piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. Laulaja oli alle 150 senttiä pitkä. Tunnetuin laulu La Vie en rose esitettiin ensi kerran 1946 ja ilmestyi levynä 1947, ja sen sanat hän kirjoitti itse.',
         'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
           + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
-          + 'lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä kaatui '
+          + 'lapsena. Marraskuun 2. päivän yönä 1928 vaunussa syttyi tulipalo: kynttilä kaatui '
           + 'selluloidikukkien päälle. Vasemman käden nimetön ja pikkurilli '
           + 'jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei hän soita '
-          + 'enää. Veli toi sairaalaan kitaran, ja Django opetteli soittamaan '
+          + 'enää. Veli osti hänelle kitaran, ja Django opetteli soittamaan '
           + 'soolot kahdella sormella. Vuonna 1934 hän perusti Pariisissa '
           + 'yhtyeen Quintette du Hot Club de France.',
       ],
@@ -1344,7 +1323,7 @@ export const FOKUSVIRTA_PARIISI = {
        * kirjoitettu 1800-luvun ranskaksi."*
        */
       id: 'pariisin-vuosisadat',
-      nimio: 'Pariisin vuosisadat',
+      nimio: 'Vuosisadat',
       otsikko: 'Pariisin vuosisadat — kaulanauha, joka katosi, ja kirjeet, '
         + 'joita ei ollut',
       symboli: 'historia',
@@ -1355,15 +1334,12 @@ export const FOKUSVIRTA_PARIISI = {
           + '-niminen huijari sai kardinaali de Rohanin uskomaan, että '
           + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina '
           + 'olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles\'n '
-          + 'puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan '
-          + 'osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja '
-          + 'luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin '
+          + 'puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammi–helmikuun vaihteessa 1785 hintaan 1,6 miljoonaa livreä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin '
           + 'Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi '
           + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
           + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti Rohanin '
           + '1786, mutta kuningattaren maine ei toipunut.',
-        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle '
-          + 'noin 27 000 käsin kirjoitettua kirjettä, joiden lähettäjiksi oli '
+        'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel Chasles\'lle kymmeniätuhansia käsin kirjoitettuja kirjeitä, joiden lähettäjiksi oli '
           + 'merkitty muun muassa Julius Caesar, Kleopatra, Aristoteles ja '
           + 'Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun ranskaksi. Chasles '
           + 'maksoi kokoelmasta noin 140 000 frangia ja esitteli 1867 '
@@ -1379,17 +1355,32 @@ export const FOKUSVIRTA_PARIISI = {
         + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
         + 'karttauudistuksen erässä 5, 13.9.2026.',
       /*
-       * KUVATON KORTTI, ja se on rajoite eikä valinta. Lehden kummankin
-       * jutun kuva on R2-ämpärin kuvajonossa
-       * (skandaali-kaulanauhajuttu-1785.jpg ja
-       * skandaali-vrain-lucas-kirjevaarennokset.jpg), eikä nostokortin
-       * kuvakenttä kelpuuta sitä: `osoite` on repon oma tiedosto
-       * (tests/fokusvirta.test.mjs lukee levyn) ja `tiedosto` on
-       * Commons-nimi (js/fokusnosto.js asetaNostonKuva). Kuvaton nosto
-       * aukeaa suoraan tekstikorttina (js/fokusnosto.js:1062), ja samat
-       * kuvat näkyvät yhä skandaalikorteissa. Kirjattu erän raporttiin;
-       * kuvan lisääminen on kuvatyötä eikä tämän erän työtä.
+       * KUVAT LISÄTTY löydös 170:n yhteydessä (26.9.2026). Aiempi
+       * kuvattomuus oli rajoite eikä valinta (lehden oma kuva on
+       * R2-ämpärin kuvajonossa eikä nostokortin kuvakenttä kelpuuta
+       * sitä), mutta kortin `kuva`/`kuvat`-kenttä hyväksyy myös
+       * Commons-nimen (`tiedosto`, js/fokusnosto.js asetaNostonKuva) —
+       * sama mekaniikka kuin naapurikortissa `exchange-alleyn-kupla`
+       * (js/packs/fokusvirta-lontoo.js). Yksi kuva per tarina: Rohan
+       * kaulanauhajutulle, Vrain-Lucas kirjevaarennoksille.
        */
+      kuvat: [
+        {
+          tiedosto: 'Cardinal Rohan2.jpg',
+          lyhyt: 'Kardinaali de Rohan, joka uskoi ostavansa timanttikaulanauhan kuningattarelle.',
+          selite: 'Kardinaali de Rohan 1700-luvun muotokuvassa — mies, joka uskoi '
+            + 'ostavansa timanttikaulanauhan kuningattarelle ja päätyi sen sijaan '
+            + 'Bastiljiin.',
+          lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Denis Vrain-Lucas.jpg',
+          lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
+          selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
+            + 'mies, joka väärensi vuosien varrella kymmeniätuhansia historiallisia kirjeitä ja asiakirjoja.',
+          lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi kardinaali uskoi väärennetyt kirjeet?',
         'Mihin kaulanauhan timantit lopulta päätyivät?',
@@ -1427,15 +1418,4 @@ export const FOKUSVIRTA_PARIISI = {
     // ei muutu.
     ...MAALEHTINOSTOT_FRA,
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: kruununjalokivien
-   * safiiri.
-   */
-  aarremerkinta: {
-    teksti: 'Näin kruunun safiirin lasin läpi ja piirsin sen ääriviivat '
-      + 'luetteloon. Vartija katsoi minua niin pitkään, että jätin '
-      + 'lyijykynänkin taskuun ja tulin ulos hitaasti kuin syytön mies.',
-  },
 };

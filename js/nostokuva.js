@@ -678,6 +678,9 @@ export function nostokuvaAloita({
     kehys.remove();
     sisalto.replaceChildren();
     latoNosto(sisalto, null);
+    kortti.nostokuvaPurku?.();
+    // Tekstikorttina samaan kokoon ja paikkaan (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
     onKuvatta?.();
   };
 
@@ -874,6 +877,135 @@ export function nostokuvaAloita({
   };
 
   return { kehys, vaihe: () => (vaihe === 1 ? 'kuva' : 'nosto'), lisaa: avaaLisaa };
+}
+
+/*
+ * ============ KAIKKI KARTTANOSTOT SAMAAN KOKOON (LÖYDÖS 135) ============
+ *
+ * Fablen päätös 26.9.2026 (omistajan löydös 135): *"Kaikki karttanostot
+ * aukeavat samaan kokoon ja tyyliin; vain skandaaleissa tyyli muuttuu,
+ * koko pysyy."* Kuvallinen nosto (kuva edellä, yllä) oli ainoa, joka
+ * aukesi ruudun keskelle ruudun mittaisena; kuvaton kohde (24 rem
+ * merkin vieressä), kuvaton skandaali (40 rem flex-keskellä) ja
+ * lisäkaupunki (34 rem merkin vieressä) olivat kukin omaa kokoaan.
+ *
+ * KUVATON KORTTI SAA SAMAN LEVEYDEN KUIN KUVALLINEN VAIHEESSA 2 — samasta
+ * kaavasta (nostokuvaKortinVakioleveys), ei kopioidusta luvusta: kapealla
+ * (alle NOSTOKUVA_LEVEA_RAJAn) vaakakuvan vakioleveys katettuna
+ * NOSTOKUVA_KAPEA_KATTOon, leveällä sama pohja katettuna
+ * NOSTOKUVA_LEVEA_KATTOon, ja aina enintään ruutu miinus marginaalit.
+ * Mitattuna 26.9.2026: iPhone 393 → 369 px, iPad 834 → 748 px, iPad
+ * vaaka 1194 → ~970 px — samat kuin kuvallisella kortilla.
+ *
+ * PAIKKA ON SAMA SÄÄNTÖ KUIN KUVA EDELLÄ -KORTIN VAIHEESSA 1:
+ * vaakasuunnassa keskellä, pystysuunnassa keskellä mutta enintään
+ * NOSTOKUVA_YLAVARAn päässä yläreunasta (nostokuvanYlin), korkeuskatto
+ * ruutu miinus marginaalit. Pitkä kortti täyttää siis ruudun
+ * marginaalista marginaaliin kuten kuvallinen vaiheessa 2.
+ *
+ * ASEMOINTI PYSYY AJAN TASALLA ITSE: ResizeObserver (sisältö kasvaa,
+ * kun kuva tai tyylitiedosto latautuu) ja ikkunan koko. Kuuntelijat
+ * purkautuvat itsestään, kun kortti on poistunut DOMista, ja
+ * `nostokuvaPurku` on sama kahva kuin kuva edellä -kortilla.
+ *
+ * RAAHAUS SÄILYY (js/fokuskohteet.js raahausTaiSulku): raahattu kortti
+ * merkitään `nostokuvaVakioLukittu`-lipulla, eikä automaattinen
+ * asemointi siirrä sitä enää.
+ */
+
+/**
+ * Kuvattoman nostokortin leveys ruudulla — sama luku, jonka kuva edellä
+ * -kortti saa vaiheessa 2 (ks. mitoita + jaadytaLeveys yllä). Puhdas
+ * funktio (tests/nostokuva.test.mjs).
+ *
+ * @param {{ruutuLeveys:number, ruutuKorkeus:number, vara?:number}} p
+ *   `vara` on kortin oma vaakasuora tila (reunus, sisennys, vierityskaista).
+ * @returns {number} kortin leveys pikseleinä (0 = ei ruutua)
+ */
+export function nostokuvaKortinVakioleveys({ ruutuLeveys, ruutuKorkeus, vara = 0 } = {}) {
+  if (!(ruutuLeveys > 0) || !(ruutuKorkeus > 0)) return 0;
+  const kapea = ruutuLeveys < NOSTOKUVA_LEVEA_RAJA;
+  const pohja = kapea
+    ? nostokuvanVakioleveys({
+      ruutuLeveys, ruutuKorkeus, enintaanLeveys: NOSTOKUVA_KAPEA_KATTO - NOSTOKUVA_VARA_ARVIO,
+    })
+    : Math.min(
+      nostokuvanVakioleveys({ ruutuLeveys, ruutuKorkeus }),
+      NOSTOKUVA_LEVEA_KATTO - NOSTOKUVA_VARA_ARVIO,
+    );
+  const enintaan = Math.min(
+    Math.max(0, ruutuLeveys - 2 * NOSTOKUVA_MARGINAALI),
+    kapea ? NOSTOKUVA_KAPEA_KATTO : NOSTOKUVA_LEVEA_KATTO,
+  );
+  return Math.round(Math.min(pohja + Math.max(0, vara || 0), enintaan));
+}
+
+/** Elementin vaakasuora oma tila (reunus + sisennys + marginaali). */
+function nostokuvaReunat(elementti) {
+  const tyyli = elementti && globalThis.getComputedStyle?.(elementti);
+  if (!tyyli) return 0;
+  const luku = (arvo) => Number.parseFloat(arvo) || 0;
+  return luku(tyyli.paddingLeft) + luku(tyyli.paddingRight)
+    + luku(tyyli.borderLeftWidth) + luku(tyyli.borderRightWidth)
+    + luku(tyyli.marginLeft) + luku(tyyli.marginRight);
+}
+
+/**
+ * KUVATON KORTTI KUVALLISEN KOKOON JA PAIKKAAN (löydös 135, ks. yllä).
+ * Kutsutaan, kun kortti on DOMissa ja sen sisältö ladottu. Asettaa
+ * kortille `nostokuvaVakioAsemoi`-kahvan, jota kutsujan omat
+ * asemointipolut (asetaKohteenPaikka, asemoiKaupunkipopup) käyttävät.
+ *
+ * @param {{kortti:Element, sisalto?:Element}} p
+ * @returns {(() => void) | null} asemointifunktio
+ */
+export function nostokuvaVakiokortti({ kortti, sisalto = null } = {}) {
+  if (typeof document === 'undefined' || !kortti) return null;
+  nostokuvaLataaTyyli();
+  kortti.classList.add('nostokuva-vakiokortti');
+  kortti.style.position = 'fixed';
+  kortti.style.zIndex = '47';
+  kortti.style.margin = '0';
+  let havainnoija = null;
+  let asemoi = null;
+  const pura = () => {
+    havainnoija?.disconnect();
+    havainnoija = null;
+    globalThis.removeEventListener?.('resize', asemoi);
+    globalThis.removeEventListener?.('orientationchange', asemoi);
+  };
+  asemoi = () => {
+    if (!kortti.isConnected) { pura(); return; }
+    if (kortti.nostokuvaVakioLukittu) return;
+    const ruutu = nostokuvaRuutu();
+    if (!ruutu.leveys || !ruutu.korkeus) return;
+    const kaista = sisalto ? Math.max(0, sisalto.offsetWidth - sisalto.clientWidth) : 0;
+    const vara = nostokuvaReunat(kortti) + nostokuvaReunat(sisalto) + kaista;
+    const leveys = nostokuvaKortinVakioleveys({
+      ruutuLeveys: ruutu.leveys, ruutuKorkeus: ruutu.korkeus, vara,
+    });
+    if (!leveys) return;
+    kortti.style.width = `${leveys}px`;
+    kortti.style.maxWidth = `${leveys}px`;
+    kortti.style.maxHeight = `${Math.max(0, ruutu.korkeus - 2 * NOSTOKUVA_MARGINAALI)}px`;
+    kortti.style.left = `${ruutu.vasen + Math.max(NOSTOKUVA_MARGINAALI, Math.round((ruutu.leveys - leveys) / 2))}px`;
+    const korkeus = kortti.getBoundingClientRect().height;
+    kortti.style.top = `${ruutu.yla + nostokuvanYlin({ korkeus, ruutuKorkeus: ruutu.korkeus })}px`;
+  };
+  kortti.nostokuvaVakioAsemoi = asemoi;
+  kortti.nostokuvaPurku = pura;
+  asemoi();
+  // Tyylitiedosto voi olla vielä matkalla, ja kuvat kasvattavat korttia
+  // latautuessaan: mitta uudelleen aina, kun kortin koko muuttuu.
+  if (typeof ResizeObserver === 'function') {
+    havainnoija = new ResizeObserver(() => asemoi());
+    havainnoija.observe(kortti);
+  }
+  globalThis.requestAnimationFrame?.(asemoi);
+  setTimeout(asemoi, 220);
+  globalThis.addEventListener?.('resize', asemoi);
+  globalThis.addEventListener?.('orientationchange', asemoi);
+  return asemoi;
 }
 
 /** Onko kortti kuvaesittelyn hallussa (asemointi ja raahaus jäävät pois)? */

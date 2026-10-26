@@ -1,0 +1,446 @@
+{
+ "kaupunki": "tbilisi",
+ "kaupunkiQ": "Q994",
+ "kohteet": [
+  {
+   "q": "Q155453",
+   "nimi": "Narikalan linnoitus",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 41.68778,
+   "lon": 44.80861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Narikala, Tiflis, Georgia, 2016-09-29, DD 91.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narikala%2C_Tiflis%2C_Georgia%2C_2016-09-29%2C_DD_91.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narikala%2C_Tiflis%2C_Georgia%2C_2016-09-29%2C_DD_91.jpg",
+     "selite": "Muinainen Narikalan linnoitus kohoaa vanhan kaupungin yllä Kura-joen rinteellä.",
+     "leveys": 8405,
+     "korkeus": 4564,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "081 Tbilissi de nuit Forteresse de Narikala.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/081_Tbilissi_de_nuit_Forteresse_de_Narikala.JPG?width=1280",
+     "tekija": "Moreau.henri",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:081_Tbilissi_de_nuit_Forteresse_de_Narikala.JPG",
+     "selite": "Valaistu linnoitus hallitsee Tbilisin vanhankaupungin iltasiluettia.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "013 Tbilissi Forteresse de Narikala.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/013_Tbilissi_Forteresse_de_Narikala.JPG?width=1280",
+     "tekija": "Moreau.henri",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:013_Tbilissi_Forteresse_de_Narikala.JPG",
+     "selite": "Linnoituksen kalliolle nojaavat muurit ovat peräisin vuosisatojen ajalta.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q445572",
+   "nimi": "Vanha Tbilisi",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 41.69278,
+   "lon": 44.80639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "005 Tbilissi La vieille ville -Dzvéli Kalaki- et la citadelle de Narakala.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/005_Tbilissi_La_vieille_ville_-Dzv%C3%A9li_Kalaki-_et_la_citadelle_de_Narakala.JPG?width=1280",
+     "tekija": "Moreau.henri",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:005_Tbilissi_La_vieille_ville_-Dzv%C3%A9li_Kalaki-_et_la_citadelle_de_Narakala.JPG",
+     "selite": "Vanhankaupungin tiiviit katot ja kujat levittäytyvät Narikalan rinteen alle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-05-31 Old Tbilisi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-05-31_Old_Tbilisi.jpg?width=1280",
+     "tekija": "Alexey Komarov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-05-31_Old_Tbilisi.jpg",
+     "selite": "Vanhankaupungin pihoilla on puisia kuisteja ja kasvien reunustamia portaita.",
+     "leveys": 4569,
+     "korkeus": 3046,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "(Renovated) Old Town, Tbilisi, Georgia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Renovated)_Old_Town%2C_Tbilisi%2C_Georgia.jpg?width=1280",
+     "tekija": "Saskia Heijltjes",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Renovated)_Old_Town%2C_Tbilisi%2C_Georgia.jpg",
+     "selite": "Kunnostetuissa taloissa on koristeellisia lasitettuja parvekkeita.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q248050",
+   "nimi": "Sionin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 41.69134,
+   "lon": 44.80749,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tbilisi Sioni Cathedral 09.23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_Sioni_Cathedral_09.23.jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi_Sioni_Cathedral_09.23.jpg",
+     "selite": "Georgian ortodoksisen kirkon katedraali on Tbilisin vanhankaupungin tärkeimpiä pyhäkköjä.",
+     "leveys": 6462,
+     "korkeus": 5170,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "105 Sioni catherdral Tbilisi (1540622869).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/105_Sioni_catherdral_Tbilisi_(1540622869).jpg?width=1280",
+     "tekija": "DAVID HOLT from London, England",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:105_Sioni_catherdral_Tbilisi_(1540622869).jpg",
+     "selite": "Kivinen kupolikirkko seisoo lähellä Kura-joen rantaa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sionikatedralen (Sioni Cathedral).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sionikatedralen_(Sioni_Cathedral).jpg?width=1280",
+     "tekija": "Aleksander Dragnes from Oslo, Norway",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sionikatedralen_(Sioni_Cathedral).jpg",
+     "selite": "Katedraalin kuusikulmainen kupolirumpu kohoaa harjakattojen yläpuolelle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q36985",
+   "nimi": "Abanotubani",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.68778,
+   "lon": 44.81111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "026A Tbilissi Toits des bains Orbeliani.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/026A_Tbilissi_Toits_des_bains_Orbeliani.JPG?width=1280",
+     "tekija": "Henri MOREAU",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:026A_Tbilissi_Toits_des_bains_Orbeliani.JPG",
+     "selite": "Tbilisin kuumien rikkilähteiden kylpylöiden tiiliset kupolikatot erottuvat vanhankaupungin keskellä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014 Tbilisi, Kopuła łaźni siarkowej.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Tbilisi%2C_Kopu%C5%82a_%C5%82a%C5%BAni_siarkowej.jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi%2C_Kopu%C5%82a_%C5%82a%C5%BAni_siarkowej.jpg",
+     "selite": "Kylpylän tiilikupoli ja taustalla Metekhin kirkko kuuluvat vanhankaupungin tunnuskuviin.",
+     "leveys": 2643,
+     "korkeus": 3965,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2014 Tbilisi, Widoki z Twierdzy Narikala (17).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Tbilisi%2C_Widoki_z_Twierdzy_Narikala_(17).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi%2C_Widoki_z_Twierdzy_Narikala_(17).jpg",
+     "selite": "Narikalan linnoitukselta avautuu näkymä kylpyläkortteleihin ja Kura-joen rotkoon.",
+     "leveys": 4732,
+     "korkeus": 3155,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20577625",
+   "nimi": "Metekhin kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 41.69013,
+   "lon": 44.81125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tbilisi The Metekhi Church of Assumption IMG 8842 1920.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_The_Metekhi_Church_of_Assumption_IMG_8842_1920.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi_The_Metekhi_Church_of_Assumption_IMG_8842_1920.jpg",
+     "selite": "Tiilinen Metekhin kirkko seisoo kalliojyrkänteellä Kura-joen yläpuolella.",
+     "leveys": 2782,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014 Tbilisi, Cerkiew Metechi (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Tbilisi%2C_Cerkiew_Metechi_(01).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi%2C_Cerkiew_Metechi_(01).jpg",
+     "selite": "Kirkon vierestä avautuu näkymä jokilaaksoon ja vanhaan kaupunkiin.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2596393",
+   "nimi": "Tbilisin ooppera- ja balettiteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 41.70108,
+   "lon": 44.79628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Opera House. Tbilisi, Georgia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Opera_House._Tbilisi%2C_Georgia.jpg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Opera_House._Tbilisi%2C_Georgia.jpg",
+     "selite": "Vuonna 1896 avattu teatteri on rakennettu itämaiseen mauritanialaistyyliin raidallisin julkisivuin.",
+     "leveys": 5873,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "073 Tbilissi L'Opéra style orientalisant.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/073_Tbilissi_L'Op%C3%A9ra_style_orientalisant.JPG?width=1280",
+     "tekija": "Moreau.henri",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:073_Tbilissi_L'Op%C3%A9ra_style_orientalisant.JPG",
+     "selite": "Julkisivun ylle kohoavat pienet kupolit ja hevosenkenkäkaaret.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Building in Rustaveli str. TbilisiPastatas Rustaveli gatvėje Tbilisyje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_in_Rustaveli_str._TbilisiPastatas_Rustaveli_gatv%C4%97je_Tbilisyje.jpg?width=1280",
+     "tekija": "Gytis",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_in_Rustaveli_str._TbilisiPastatas_Rustaveli_gatv%C4%97je_Tbilisyje.jpg",
+     "selite": "Iltavalaistu oopperatalo on Rustaveli-kadun varrella keskustassa.",
+     "leveys": 1600,
+     "korkeus": 1062,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1754726",
+   "nimi": "Rustaveli-katu",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.69846,
+   "lon": 44.79826,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rustaveli Avenue, Tbilisi (B).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rustaveli_Avenue%2C_Tbilisi_(B).jpg?width=1280",
+     "tekija": "Kober",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rustaveli_Avenue%2C_Tbilisi_(B).jpg",
+     "selite": "Plataanien reunustama pääkatu kulkee Tbilisin keskustan halki vapauden aukiolta oopperalle.",
+     "leveys": 4000,
+     "korkeus": 2735,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tbilisi, Rustaveli Avenue, Georgia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi%2C_Rustaveli_Avenue%2C_Georgia.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tbilisi%2C_Rustaveli_Avenue%2C_Georgia.jpg",
+     "selite": "Kadun varrella on 1800-luvun lopun ja 1900-luvun alun näyttäviä kortteleita.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1860439",
+   "nimi": "Rustavelin teatteri",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 41.6998,
+   "lon": 44.7979,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rustaveli National Theater in Georgia (Europe), built 19th century in Rococo style.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rustaveli_National_Theater_in_Georgia_(Europe)%2C_built_19th_century_in_Rococo_style.jpg?width=1280",
+     "tekija": "DDohler",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rustaveli_National_Theater_in_Georgia_(Europe)%2C_built_19th_century_in_Rococo_style.jpg",
+     "selite": "Georgian kansallisteatteri on koristeellinen uusbarokkirakennus Rustaveli-kadun varrella.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dzveli Tbilisi, Tbilisi, Georgia - panoramio (114).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dzveli_Tbilisi%2C_Tbilisi%2C_Georgia_-_panoramio_(114).jpg?width=1280",
+     "tekija": "Daibo Taku",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi%2C_Tbilisi%2C_Georgia_-_panoramio_(114).jpg",
+     "selite": "Teatterin pitkä julkisivu kulkee puiden varjostaman kadun mukaan.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dzveli Tbilisi, Tbilisi, Georgia - panoramio (84).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dzveli_Tbilisi%2C_Tbilisi%2C_Georgia_-_panoramio_(84).jpg?width=1280",
+     "tekija": "Daibo Taku",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi%2C_Tbilisi%2C_Georgia_-_panoramio_(84).jpg",
+     "selite": "Teatterin rikkaasti kuvioitu pääjulkisivu on tunnettu tbilisiläinen maamerkki.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q609419",
+   "nimi": "Antšishatin basilika",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 41.69543,
+   "lon": 44.80685,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Church of Anchiskhati.2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Anchiskhati.2.jpg?width=1280",
+     "tekija": "კოლხი",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Anchiskhati.2.jpg",
+     "selite": "Vanhimmaksi säilynyt Tbilisin kirkko on peräisin 500-luvulta.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anchis-Khati basilica, Tbilisi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anchis-Khati_basilica%2C_Tbilisi.jpg?width=1280",
+     "tekija": "Kober",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anchis-Khati_basilica%2C_Tbilisi.jpg",
+     "selite": "Kivinen basilika seisoo Kura-joen rannan lähellä vanhassa kaupungissa.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "20110421 Tbilisi Georgia Panoramic.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20110421_Tbilisi_Georgia_Panoramic.jpg?width=1280",
+   "tekija": "User:Ggia",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20110421_Tbilisi_Georgia_Panoramic.jpg",
+   "selite": "Tbilisi levittäytyy Kura-joen laaksoon vanhojen kirkkojen ja kukkuloiden ympärille.",
+   "leveys": 4000,
+   "korkeus": 1889,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama of Tbilisi, Georgia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Tbilisi%2C_Georgia.jpg?width=1280",
+   "tekija": "GeoO",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Tbilisi%2C_Georgia.jpg",
+   "selite": "Kura-joki halkoo kaupunkia, jonka vanhakaupunki on rinteen alla.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1734896",
+   "nimi": "Kašvetin kirkko",
+   "peruste": "sitelinks",
+   "lat": 41.69795,
+   "lon": 44.79932,
+   "syy": "vain sisätilakuvia tai väkijoukkokuvia, ei vapaata ulkokuvaa"
+  }
+ ]
+}

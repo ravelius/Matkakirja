@@ -1,0 +1,85 @@
+[
+ {
+  "id": "sevilla",
+  "esittely": "Kartan alue on Sevillan vanhakaupunki Guadalquivir-joen itärannalla ja Trianan kaupunginosa joen toisella puolella. Katedraali, Alcázar ja Archivo de Indias ovat Unescon maailmanperintökohde vuodesta 1987. Katedraali on yksi maailman suurimmista goottilaisista kirkoista, ja sen kellotorni Giralda valmistui 1198 almohadien minareettina. Torre del Oro rakennettiin joen varteen 1220–1221.\n\nKruunu perusti Sevillaan 1503 Casa de Contratación -viraston, ja kaupungista tuli Amerikan-kaupan keskus. Maestranzan areena valmistui 1881. Puente de Isabel II avattiin 1852 kaupungin ensimmäisenä kiinteänä siltana, ja sitä ennen joen ylitti venesilta. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 697,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://es.wikipedia.org/wiki/Real_Alc%C3%A1zar_de_Sevilla",
+    "title": "Wikipedia (es): Real Alcázar de Sevilla",
+    "tukee": "Unesco 1987 yhdessä katedraalin ja Archivo de Indiasin kanssa"
+   },
+   {
+    "url": "https://catedraldesevilla.es/en/?p=53300",
+    "title": "Catedral de Sevilla: World Heritage Site",
+    "tukee": "Unesco 1987 (katedraali, Alcázar, Archivo de Indias); suurin goottilainen rakennus Euroopassa; Giralda minareetti, kristittyjen kellotorni 1248 jälkeen; kirkon rakentaminen vanhan moskeijan paikalle, purku alkoi 1401"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Seville_Cathedral",
+    "title": "Wikipedia: Seville Cathedral",
+    "tukee": "suurin goottilainen katedraali; työ alkoi 1402 (osa lähteistä 1433); Giralda minareetti valmis 10.3.1198; Unesco 1987"
+   },
+   {
+    "url": "https://es.wikipedia.org/wiki/Giralda",
+    "title": "Wikipedia (es): Giralda",
+    "tukee": "almohadiminareetti, pronssipallot asetettu 10.3.1198"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Torre_del_Oro",
+    "title": "Wikipedia: Torre del Oro",
+    "tukee": "ensimmäinen kerros rakennettu 1220–1221 (almohadit)"
+   },
+   {
+    "url": "https://es.wikipedia.org/wiki/Torre_del_Oro",
+    "title": "Wikipedia (es): Torre del Oro",
+    "tukee": "rakennettu 1220–1221 almohadien aikana"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Casa_de_Contrataci%C3%B3n",
+    "title": "Wikipedia: Casa de Contratación",
+    "tukee": "perustettu Sevillassa 1503; Sevillan kauppiaskilta hoiti kauppaa"
+   },
+   {
+    "url": "https://www.historytoday.com/archive/casa-de-contratacion-established-seville",
+    "title": "History Today: The Casa de Contratacion Established in Seville (hakutulos)",
+    "tukee": "perustettu 20.1.1503, Sevillalle yksinoikeus Uuden maailman kauppaan"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Maestranza_(Seville)",
+    "title": "Wikipedia: Maestranza (Seville)",
+    "tukee": "areenan rakentaminen valmistui 1881"
+   },
+   {
+    "url": "https://realmaestranza.com/en/history-of-the-construction/",
+    "title": "Real Maestranza: History of the construction",
+    "tukee": "rakennus valmistui 1881, rakennustyö kesti noin 120 vuotta"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Puente_de_Isabel_II",
+    "title": "Wikipedia: Puente de Isabel II",
+    "tukee": "valmistui 1852 Sevillan ensimmäisenä kiinteänä siltana; aiempi venesilta"
+   },
+   {
+    "url": "https://www.ecured.cu/Puente_de_Triana",
+    "title": "EcuRed: Puente de Triana (hakutulos)",
+    "tukee": "vihitty 23.2.1852, Sevillan ensimmäinen kiinteä silta (myös Visit Sevillan sivun hakutulos)"
+   }
+  ],
+  "pudotetut": [
+   "Giralda 104 metriä (entinen teksti): lähteet antavat 104,5 / 94,69 / 97,52 m, korkeutta ei käytetä",
+   "Plaza de España: rakennusvuodet ristiriidassa (en: valmis 1928, es: 1914–1929), jätetty pois",
+   "Alcázarin 1000-luvun alkuperä ja Pedro I:n palatsi 1364: vain es-Wikipedia, jätetty pois",
+   "Alcázar 'Euroopan vanhin käytössä oleva kuninkaanlinna': vain yksi lähde, jätetty pois",
+   "Entinen teksti: Rooma, al-Andalus ja Kastilia vuorotellen, Maestranzan sijainti, venesillan ikä '1170-luvulta': ei vahvistettu kahdesta lähteestä (venesillan aloitusvuosi ristiriidassa, ks. alla)"
+  ],
+  "ristiriidat": [
+   "Giralda korkeus: en-Wikipedia 104,5 m, es-Wikipedia 94,69 m, katedraalin sivu 97,52 m -> lukua ei käytetä",
+   "Katedraalin rakennusaloitus: 1401 (Unesco/katedraalin sivu, purku) vs 1402 (en-Wikipedia) vs 1433 -> vain 'alussa 1400-luvun'",
+   "Venesillan alkuvuosi: 1171 (Historical Soundscapes), 1100-luku (en-Wikipedia), 1000-luku (Barceló) -> vuotta ei mainita",
+   "Plaza de España valmistumisvuosi: 1928 (en) vs 1929 (es) -> poistettu tekstistä",
+   "Maestranzan aloitus: 1749 vs 1760/1761 -> käytetty vain valmistumisvuotta 1881"
+  ],
+  "muutos_sk": "Tiivistetty 763 -> 677 merkkiin ja jaettu kahteen kappaleeseen. Lisätty: Unesco 1987, Giralda 1198, Torre del Oro 1220–1221, Casa de Contratación 1503, Maestranza 1881, Trianan silta 1852. Poistettu tarkistamattomat: Giralda 104 m (lähteet ristiriidassa), Rooma/al-Andalus/Kastilia-jakso, venesillan '1170-luvulta', Plaza de España, Victorian laituri mainitsematta. [SK: väite \"suurin goottilainen\" pehmennetty]"
+ }
+]

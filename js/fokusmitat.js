@@ -54,6 +54,10 @@ import { asetaKuva } from './media.js';
 import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
 import { FOKUS_LAUTAPROJEKTIOT, FOKUS_MAANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 import { MAATIEDOT } from './sisaltotaulut.js';
+import { HALLINNON_PAIKAT, PAAKAUPUNGIT } from './packs/laudan-paakaupungit.js';
+import { PAAKAUPUNKIPISTEET } from './packs/paakaupungit.js';
+import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
+import { PAAKAUPUNKIEN_ARTIKKELIAVAIMET } from './packs/europe-artikkelit.js';
 
 /* ------------------------------------------------------- mittakaava */
 
@@ -401,9 +405,52 @@ export function maanNimi(ui, iso) {
  * pois — tyhjä rivi näyttäisi rikkinäiseltä, ja kaikilla mailla ei ole
  * kaikkia lukuja.
  */
+/**
+ * MAAN PÄÄKAUPUNKI MAAKORTILLE (PT 10.10.2026, linjaus A; natiivi tekee saman):
+ * sama lähde ja järjestys kuin viennin maat.*.paakaupunki (tools/vienti/
+ * kokoelmat.mjs): laudan pääkaupunki, sitten hallinnon paikka (Israel →
+ * Jerusalem), sitten pääkaupunkipiste (Ramallah asemalla "hallinnon paikka").
+ * Null, kun tietoa ei ole tai kaupunki ei ole tämän laudan.
+ *
+ * @returns {{ nimi: string, asema: 'pääkaupunki' | 'hallinnon paikka' } | null}
+ */
+export function maanPaakaupunki(pack, iso) {
+  if (!iso) return null;
+  const laudalta = (id, asema) => {
+    const c = (pack?.cities ?? []).find((k) => k.id === id);
+    return c?.name ? { nimi: c.name, asema } : null;
+  };
+  if (PAAKAUPUNGIT[iso]) return laudalta(PAAKAUPUNGIT[iso], 'pääkaupunki');
+  if (HALLINNON_PAIKAT[iso]) return laudalta(HALLINNON_PAIKAT[iso], 'hallinnon paikka');
+  const piste = PAAKAUPUNKIPISTEET.find((p) => p.maa === iso);
+  if (!piste || pack?.id !== 'maailmankartta') return null;
+  return { nimi: piste.nimi, asema: piste.asema === 'hallinnon paikka' ? 'hallinnon paikka' : 'pääkaupunki' };
+}
+
+/** Pääkaupunkipisteen lehtinapin teksti — sama kuin natiivin Avauskortissa (PT 11.10.2026: natiivi on malli). */
+export const PAAKAUPUNKILEHTI_TEKSTI = 'Lue kaupunkilehti →';
+
+/**
+ * PÄÄKAUPUNKIPISTEEN LEHTI (PT 11.10.2026, pääkaupunkien kytkentä kohta 3; natiivi = Natiivi-UI):
+ * pisteen kaupunki { id, name, wiki }, kun maan pääkaupunki on pääkaupunkipiste ja sillä on
+ * kaupunkilehti (KULTTUURI_KATEGORIAT[id]); muuten null. Laudan pääkaupungin lehti aukeaa
+ * pysäkiltä, joten sille ei tule nappia. Avain on pisteen id (js/packs/paakaupungit.js).
+ */
+export function paakaupunkipisteenLehti(pack, iso) {
+  if (!iso || PAAKAUPUNGIT[iso] || HALLINNON_PAIKAT[iso] || pack?.id !== 'maailmankartta') return null;
+  const piste = PAAKAUPUNKIPISTEET.find((p) => p.maa === iso);
+  if (!piste || !KULTTUURI_KATEGORIAT[piste.id]) return null;
+  return { id: piste.id, name: piste.nimi, wiki: PAAKAUPUNKIEN_ARTIKKELIAVAIMET[piste.id] ?? piste.nimi };
+}
+
 export function maanRivit(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   const rivit = [];
+  // Pääkaupunki ensimmäiseksi riviksi samalla rivipohjalla (sija tyhjä); ilman tietoa ei riviä.
+  const paakaupunki = maanPaakaupunki(ui.game?.pack, iso);
+  if (paakaupunki) {
+    rivit.push([paakaupunki.asema === 'hallinnon paikka' ? 'Hallinnon paikka' : 'Pääkaupunki', paakaupunki.nimi, '']);
+  }
   if (tiedot.vakiluku) rivit.push(['Väkiluku', tiedot.vakiluku, tiedot.vakilukuSija ?? '']);
   if (tiedot.pintaAla) rivit.push(['Pinta-ala', tiedot.pintaAla, tiedot.pintaAlaSija ?? '']);
   if (tiedot.demokratia?.arvo) {
@@ -817,6 +864,25 @@ function taytaMaataulu(ui, iso) {
     const dd = luo('dd', 'fokus-maataulu-arvo', arvo);
     if (lisa) dd.appendChild(luo('span', 'fokus-maataulu-sija', lisa));
     lista.appendChild(dd);
+  }
+  /*
+   * PÄÄKAUPUNKIPISTEEN LEHTI pääkaupunkirivin arvoon (PT 11.10.2026, natiivi on malli: Natiivi-UI:n
+   * "Lue kaupunkilehti →"): lehden oma tekstinappi (.wiki-btn) avaa koko kaupunkilehden samalla
+   * openArrivalilla kuin laudan kaupungin lehti; kohdekartta haetaan arrivalShownFor = pisteen id.
+   * Ei uutta tyyliä.
+   */
+  const pisteenLehti = paakaupunkipisteenLehti(ui.game?.pack, iso);
+  const paakaupunkiArvo = pisteenLehti ? lista.querySelector('dd') : null;
+  if (paakaupunkiArvo) {
+    const nappi = luo('button', 'wiki-btn fokus-maataulu-paakaupunki', PAAKAUPUNKILEHTI_TEKSTI);
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', `Lue kaupunkilehti: ${pisteenLehti.name}`);
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avaaMaataulu(ui, false);
+      ui.openArrival?.(pisteenLehti, { ohitaLehtilukko: true });
+    });
+    paakaupunkiArvo.appendChild(nappi);
   }
   /*
    * KIELET LIPPUINEEN viimeisenä rivinä (omistaja 25.8.2026). Rivi on

@@ -574,17 +574,6 @@ export const ASIA_VALOKUVAT = {
       + 'väri syntyi.',
     lisat: [
       {
-        tiedosto: 'Europe and Asia Divider (7282575194).jpg',
-        vuosi: '2009',
-        lahde: 'Peretz Partensky, Commons (CC BY 2.0)',
-        lyhyt: 'Euroopan ja Aasian rajamerkki Jekaterinburgin länsipuolella vuonna 2009.',
-        selite: 'Euroopan ja Aasian rajamerkki Moskovan-tien varressa '
-          + 'Jekaterinburgin länsipuolella. Kivilaatassa lukee toisella '
-          + 'puolella Aasia ja toisella Eurooppa, ja väliviivan päälle '
-          + 'asetutaan seisomaan. Obeliskeja on Uralilla useita eikä '
-          + 'yksikään ole ainoa oikea.',
-      },
-      {
         tiedosto: 'Volchikha Mountain (September 2023) - 5.jpg',
         vuosi: '2023',
         lahde: 'Vjatšeslav Buharov, Commons (CC BY-SA 4.0)',
@@ -828,24 +817,6 @@ export const ASIA_VALOKUVAT = {
       + 'vasta 35 vuotta myöhemmin.',
     lisat: [
       {
-        tiedosto: 'Kuwait tower at dusk.jpg',
-        vuosi: '2023',
-        lahde: 'Samarstha45, Commons (CC BY-SA 4.0)',
-        lyhyt: 'Kuwait Towers illansuussa vuonna 2023.',
-        selite: 'Kuwait Towers illansuussa. Suurimman tornin alempi pallo on '
-          + 'vesisäiliö, ja koko kolmikko rakennettiin 1970-luvulla osaksi '
-          + 'kaupungin vesijohtoverkkoa eikä näköalapaikaksi.',
-      },
-      {
-        tiedosto: 'Water towerz kuwait (2).jpg',
-        vuosi: '2011',
-        lahde: 'Irvin Calicut, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Kuwaitin sienimäisiä vesitorneja rivissä vuonna 2011.',
-        selite: 'Kuwaitin sienimäisiä vesitorneja rivissä. Niitä rakennettiin '
-          + 'kolmisenkymmentä eri puolille kaupunkia, ja niissä seisova vesi '
-          + 'on tehty merivedestä suolanpoistolaitoksissa.',
-      },
-      {
         tiedosto: 'MarinetimeMKuwaitAlshami.jpg',
         vuosi: '2010',
         lahde: 'Kuwaitsoccer, Commons (CC BY-SA 3.0)',
@@ -973,16 +944,6 @@ export const ASIA_VALOKUVAT = {
       + 'kukkulat. Näistä mökeistä kasvoi Magadan, ja samaan lahteen tuotiin '
       + 'pian laivalastittain väkeä Kolyman kultakentille ja leireille.',
     lisat: [
-      {
-        tiedosto: 'Memorial magadan - panoramio.jpg',
-        vuosi: '2006',
-        lahde: 'granicub, Commons (CC BY-SA 3.0)',
-        lyhyt: 'Surun naamio -muistomerkki Magadanin yläpuolisella kukkulalla vuonna 2006.',
-        selite: 'Surun naamio Magadanin yläpuolisella kukkulalla. Suuret kasvot '
-          + 'on valettu betonista, ja poskella valuvat kyyneleet ovat pieniä '
-          + 'kasvoja. Muistomerkki katsoo alas kaupunkiin ja lahdelle, jonne '
-          + 'ihmiset aikoinaan tuotiin laivoilla.',
-      },
       {
         tiedosto: 'Magadan-port.jpg',
         vuosi: '2014',
@@ -1255,7 +1216,7 @@ export const ASIA_VALOKUVAT = {
         lyhyt: 'Ledran kadun jakolinja Nikosiassa vuonna 2007.',
         selite: 'Ledran kadun pää: peltiaita katkaisee kadun, vieressä on '
           + 'vartiokoppi ja seinässä kyltti, jossa lukee neljällä kielellä '
-          + '"viimeinen jaettu pääkaupunki". Aidan takana katu jatkuu aivan '
+          + '”viimeinen jaettu pääkaupunki”. Aidan takana katu jatkuu aivan '
           + 'samanlaisena, mutta kyltit vaihtuvat kreikasta turkkiin.',
       },
       {
@@ -1909,15 +1870,6 @@ export const ASIA_VALOKUVAT = {
       + 'tuolloin yhä, eikä Moskovasta päässyt vielä koko matkaa Venäjän '
       + 'puolta pitkin.',
     lisat: [
-      {
-        tiedosto: 'Vladivostok distencemonument.JPG',
-        vuosi: '2007',
-        lahde: 'Toen96, Commons (CC BY 3.0)',
-        lyhyt: 'Kilometripylväs 9 288 Vladivostokin aseman laiturilla vuonna 2007.',
-        selite: 'Kilometripylväs 9 288 Vladivostokin aseman laiturilla. Luku '
-          + 'kertoo matkan Moskovaan; ensimmäinen juna pääsi tänne kokonaan '
-          + 'Venäjän puolelta vasta 1916, kun Amurin rata valmistui.',
-      },
       {
         tiedosto: '008 Владивосток. Ж-д вокзал.jpg',
         vuosi: '2007',

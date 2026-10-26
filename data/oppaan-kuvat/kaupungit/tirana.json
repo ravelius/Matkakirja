@@ -1,0 +1,359 @@
+{
+ "kaupunki": "tirana",
+ "kaupunkiQ": "Q19689",
+ "jarjestys": [
+  "Q609528",
+  "Q798610",
+  "Q2474224",
+  "Q1157724",
+  "Q3372379",
+  "Q1630016",
+  "Q1106373",
+  "Q73397"
+ ],
+ "kohteet": [
+  {
+   "q": "Q609528",
+   "nimi": "Skanderbegin aukio",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.32791,
+   "lon": 19.81846,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tirana - Skanderbeg Square (Sheshi Skënderbej) - by Pudelek.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_(Sheshi_Sk%C3%ABnderbej)_-_by_Pudelek.jpg",
+     "selite": "Skanderbegin aukio on Tiranan keskusaukio, jota reunustavat moskeija, kellotorni ja ministeriörakennukset.",
+     "leveys": 2541,
+     "korkeus": 1531,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tirana - Skanderbeg Square by night.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_-_Skanderbeg_Square_by_night.JPG?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_-_Skanderbeg_Square_by_night.JPG",
+     "selite": "Illalla valaistu keskusaukio kokoaa yhteen kaupungin kulttuurirakennukset ja moskeijan minareetin.",
+     "leveys": 2455,
+     "korkeus": 1374,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q798610",
+   "nimi": "Et'hem Beyn moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 41.32781,
+   "lon": 19.81936,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ethem Bey Mosque, Tirana, Albania.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethem_Bey_Mosque%2C_Tirana%2C_Albania.jpg?width=1280",
+     "tekija": "Ravi Dwivedi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ethem_Bey_Mosque%2C_Tirana%2C_Albania.jpg",
+     "selite": "Et'hem Beyn moskeija on 1800-luvun alun ottomaanirakennus, jonka sisätiloja koristavat maalaukset.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Et'hem Bey Mosque 2008 (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Et'hem_Bey_Mosque_2008_(5).jpg?width=1280",
+     "tekija": "Marie Čcheidzeová",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Et'hem_Bey_Mosque_2008_(5).jpg",
+     "selite": "Moskeijan minareetti ja viereinen kellotorni hallitsevat Skanderbegin aukion pohjoispuolta.",
+     "leveys": 2845,
+     "korkeus": 2134,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tirana, Xhamia e Et'hem Beut, 2024-10 CN-03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana%2C_Xhamia_e_Et'hem_Beut%2C_2024-10_CN-03.jpg?width=1280",
+     "tekija": "Steffen Schmitz (more photos)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana%2C_Xhamia_e_Et'hem_Beut%2C_2024-10_CN-03.jpg",
+     "selite": "Moskeijan kuisti on koristeltu kasvikuvioisilla seinämaalauksilla.",
+     "leveys": 4172,
+     "korkeus": 2797,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2474224",
+   "nimi": "Tiranan kellotorni",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 41.32772,
+   "lon": 19.81965,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tirana BunkArt ClockTower (WPWTR16).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_BunkArt_ClockTower_(WPWTR16).JPG?width=1280",
+     "tekija": "Albinfo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_BunkArt_ClockTower_(WPWTR16).JPG",
+     "selite": "Kellotorni valmistui 1800-luvun alussa, ja se on pitkään ollut yksi Tiranan tunnetuimmista maamerkeistä.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Clock Tower and Mosque of Tirana (night).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_and_Mosque_of_Tirana_(night).jpg?width=1280",
+     "tekija": "Liridon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_and_Mosque_of_Tirana_(night).jpg",
+     "selite": "Kellotorni ja moskeija ovat Tiranan vanhan keskustan tunnistettavin yhdistelmä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tirana - Clock Tower (by Pudelek).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_-_Clock_Tower_(by_Pudelek).JPG?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_-_Clock_Tower_(by_Pudelek).JPG",
+     "selite": "Torni kohoaa Skanderbegin aukion laidalla ja näkyy kauas ympäröivien rakennusten yli.",
+     "leveys": 1941,
+     "korkeus": 3043,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1157724",
+   "nimi": "Dajt",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 41.36583,
+   "lon": 19.92556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mali i Dajtit.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mali_i_Dajtit.jpg?width=1280",
+     "tekija": "Edvini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mali_i_Dajtit.jpg",
+     "selite": "Dajt on Tiranan itäpuolella kohoava vuori, jonka rinteille kaupunkilaiset lähtevät retkelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "500px photo (36692990).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/500px_photo_(36692990).jpeg?width=1280",
+     "tekija": "Enklajd Zeneli",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:500px_photo_(36692990).jpeg",
+     "selite": "Vuoren metsäiset rinteet muodostavat kansallispuiston, joka rajaa Tiranan näkymää idästä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3372379",
+   "nimi": "Äiti Teresan aukio",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 250,
+   "lat": 41.31788,
+   "lon": 19.82126,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tirana, palazzo dell'università 08.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana%2C_palazzo_dell'universit%C3%A0_08.JPG?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana%2C_palazzo_dell'universit%C3%A0_08.JPG",
+     "selite": "Aukion ympärillä on 1930-luvun italialaisen kaupunkisuunnittelun vaikutusta heijastavia julkisia rakennuksia.",
+     "leveys": 3288,
+     "korkeus": 2220,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "07Tirana Universität01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07Tirana_Universit%C3%A4t01.jpg?width=1280",
+     "tekija": "Fingalo",
+     "lisenssi": "CC BY-SA 2.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07Tirana_Universit%C3%A4t01.jpg",
+     "selite": "Yliopiston päärakennus edustaa Tiranan 1900-luvun alun monumentaalista arkkitehtuuria.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "0785 July 2017 in Tirana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0785_July_2017_in_Tirana.jpg?width=1280",
+     "tekija": "Rakoon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0785_July_2017_in_Tirana.jpg",
+     "selite": "Leveä aukio ja sen laidalla seisovat vaaleat kivijulkisivut kuuluvat Tiranan keskustan ilmeeseen.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1630016",
+   "nimi": "Nahkurien silta",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 41.32642,
+   "lon": 19.82605,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Most Garbarzy (wrzesień 2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Most_Garbarzy_(wrzesie%C5%84_2024).jpg?width=1280",
+     "tekija": "Cruiser21",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Most_Garbarzy_(wrzesie%C5%84_2024).jpg",
+     "selite": "Nahkurien silta on Tiranan vanhimpia säilyneitä ottomaanien aikaisia kivisiltoja.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bridge of Tabaku.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_of_Tabaku.jpg?width=1280",
+     "tekija": "Afiller329",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bridge_of_Tabaku.jpg",
+     "selite": "Sillan kaarevat kiviholvit kuuluivat aikoinaan vanhan nahkurikortteleiden jokiylitykseen.",
+     "leveys": 4080,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1106373",
+   "nimi": "Tiranan linnoitus",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 120,
+   "lat": 41.32639,
+   "lon": 19.82194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kalaja e Tiranës.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalaja_e_Tiran%C3%ABs.jpg?width=1280",
+     "tekija": "Ardit Ajdini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalaja_e_Tiran%C3%ABs.jpg",
+     "selite": "Tiranan linnoituksen muurit palautuvat myöhäisantiikin ja Justinianuksen aikaan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fortress Walls, Tirana.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortress_Walls%2C_Tirana.JPG?width=1280",
+     "tekija": "Imfishy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fortress_Walls%2C_Tirana.JPG",
+     "selite": "Kivimuurien portit ja holvit ovat osa vanhaa linnoitusaluetta keskustan vieressä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q73397",
+   "nimi": "Tiranan suuri puisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 1500,
+   "lat": 41.3139,
+   "lon": 19.8239,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Artificial Lake, Tirana - 3.jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Artificial_Lake%2C_Tirana_-_3.jpeg?width=1280",
+     "tekija": "DenisaRucaj",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Artificial_Lake%2C_Tirana_-_3.jpeg",
+     "selite": "Tiranan suuri puisto kiertää keinotekoista järveä kaupungin eteläosassa.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tirana from South.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_from_South.jpg?width=1280",
+   "tekija": "Albinfo",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_from_South.jpg",
+   "selite": "Tirana levittyy laaksoon Dajtin vuorten ja keinotekoisen järven välissä.",
+   "leveys": 4774,
+   "korkeus": 3077,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Tirana Skanderbeg Square.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tirana_Skanderbeg_Square.png?width=1280",
+   "tekija": "Albnext",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tirana_Skanderbeg_Square.png",
+   "selite": "Ilta-ajan ilmakuva näyttää Tiranan keskustan ja Skanderbegin aukion ympäristön.",
+   "leveys": 2046,
+   "korkeus": 1414,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

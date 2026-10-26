@@ -38,6 +38,7 @@ import { WIKI_LANGS, summaryUrl, articleUrl } from '../../js/wiki.js';
 import { uutislahde } from '../../js/uutiset.js';
 import { piirraMaaNumerot } from '../../js/maakayrat.js';
 import { vuosiSaaSelite } from '../../js/saa.js';
+import { kaupunkilehdenSivuNostoineen } from '../../js/lehtinostot.js';
 
 const LAUDAN_TUNNUS = 'maailmankartta';
 
@@ -145,6 +146,10 @@ function rakentajat(media, ARTIKKELIT) {
       esikuuntelu,
       linkki: n.linkki ? { url: n.linkki, nimi: n.linkkiNimi ?? null } : null,
       wiki: wiki(n.wiki),
+      // Kartalle siirtynyt juttu (js/lehtinostot.js): kohdekartan pisteen
+      // nosto-tunnus tai pääkartan merkin id — "Näytä kartalla".
+      ...(n.karttaKohde ? { karttaKohde: n.karttaKohde } : {}),
+      ...(n.paakartta ? { paakartta: n.paakartta } : {}),
     };
   };
 
@@ -277,7 +282,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
   const KULTTUURIT = S.KULTTUURIT[LAUDAN_TUNNUS] ?? {};
   const KIELET = S.KIELET[LAUDAN_TUNNUS] ?? {};
   const MAATIEDOT = S.MAATIEDOT[LAUDAN_TUNNUS] ?? {};
-  const maaKaupungille = (id) => P.map.cityCountry?.[id] ?? null;
+  // Pääkaupunkipiste (PAAKAUPUNKIPISTEET, ei laudan pysäkki) saa maansa pisteestä (Pelikoodari 11.10.2026).
+  const pisteenMaa = new Map(hae('js/packs/paakaupungit.js').PAAKAUPUNKIPISTEET.map((p) => [p.id, p.maa]));
+  const maaKaupungille = (id) => P.map.cityCountry?.[id] ?? pisteenMaa.get(id) ?? null;
   const kaupunkiIdt = new Set(P.cities.map((c) => c.id));
 
   // Kaupunkilehti: kansi + aiheet (+ lainattu Menovinkit lehtikaupungille).
@@ -285,7 +292,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
     const maa = maaKaupungille(id);
     const kansiAihe = littea ? null : aiheet.find((a) => a.id === 'kaupunki') ?? null;
     const vinkit = kansiAihe && maa && (MAA_KATEGORIAT[maa] ?? []).some((a) => a.id === 'menovinkit') ? maa : null;
-    const typ = aiheet.map((a) => R.aihe(a, { littea }));
+    // Kartalle siirtyneet jutut takaisin sivulle samalla reitillä kuin
+    // webissä (js/lehti.js rakennaSivut → js/lehtinostot.js).
+    const typ = aiheet.map((a) => R.aihe(littea ? a : kaupunkilehdenSivuNostoineen(id, a), { littea }));
     return {
       laji: littea ? 'elama' : 'lehti',
       maa,
@@ -325,7 +334,9 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
     + 'jaaKappaleiksi; ensimmäisen kappaleen LEIPAN_ALOITUS_SANOJA sanaa lihavoidaan; littea: yksi kappale), kuva, galleria[] '
     + '(lisäteokset noston oman kuvan jälkeen), lahderivi (kuvan alle / littealla nostoon), aani { url, varat, alku s, voima, '
     + 'lahde }, musiikki [{ url, nakyva, otsake }] (Apple Music -linkit), musiikkiNayte { url, varat, alku, voima, nimi }, '
-    + 'esikuuntelu { termi, musiikki, musiikkiNimi } | null, linkki { url, nimi } | null, wiki { otsikko, omaArtikkeli, haut } | null }. '
+    + 'esikuuntelu { termi, musiikki, musiikkiNimi } | null, linkki { url, nimi } | null, wiki { otsikko, omaArtikkeli, haut } | null, '
+    + 'karttaKohde (vain kartalle siirtyneellä jutulla: kohdekartan pisteen nosto-tunnus, Näytä kartalla -napille), paakartta (pääkartan '
+    + 'merkin id, kun juttu ei ole kohdekartan piste; js/lehtinostot.js) }. '
     + 'kuva = { arvo (media.json), url, varat, leveys?, korkeus? (px), lyhyt (sivulla), selite (suurennoksessa), lahde, '
     + 'otsikko?, vuosi?, tekija?, tekijaId?, lisenssi?, lahdeUrl?, lisenssiUrl?, vanha? (harmaasävy) }. LIVE, ei paketissa: '
     + 'esikuuntelu = iTunes: jos termi, https://itunes.apple.com/search?term=<termi>&entity=song&limit=1&country=fi; muuten '
@@ -425,20 +436,23 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
 
   // Skeema 1.17 (Natiivi-UI:n Nähtävyydet-rivi): kaupunkien kohdekartat
   // (js/packs/maakartat.js KAUPUNKIKARTAT, js/nahtavyydet.js piirraKaupunkiKartta).
-  const { KAUPUNKIKARTAT } = hae('js/packs/maakartat.js');
+  const { KAUPUNKIKARTAT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohdeKartalla, kohteenTyyppi } = hae('js/packs/maakartat.js');
   const karttakuva = (polku) => (polku ? media(polku, 'polku') : null);
   const kohdekartat = Object.keys(KAUPUNKIKARTAT).sort().map((kaupunki) => {
     const k = KAUPUNKIKARTAT[kaupunki];
     return {
-      id: kaupunki, kaupunki,
+      // Pääkaupunkipisteen kartta (id = pisteen id) ei viittaa laudan kaupunkiin (eheysvartijan orvot).
+      id: kaupunki, kaupunki: kaupunkiIdt.has(kaupunki) ? kaupunki : null,
       // Web näyttää värikartan, kun sellainen on (omistaja 15.8.2026), muuten julisteen.
       kuva: karttakuva(k.varikartta ?? k.polku), juliste: karttakuva(k.polku), varikartta: karttakuva(k.varikartta),
       lahde: k.lahde ?? null, rajat: k.rajat, piirtoRajat: k.piirtoRajat ?? null, kainalot: k.kainalot ?? [],
       numeroympyrat: k.numeroympyrat ?? [], esittely: k.esittely ?? null,
-      kohteet: k.kohteet.map((kohde) => {
+      // Löydös 178: ensin kartan paikat (rakennus, aukio, luonto) samassa järjestyksessä kuin webissä,
+      // sitten tarinakohteet (kartalla: false), jotka ovat vain kaupungin nostoissa (liuska).
+      kohteet: [...kaupunkikartanKohteet(k), ...kaupunginTarinakohteet(k)].map((kohde) => {
         const { x, y } = karttapiste(k, kohde.lat, kohde.lon);
         return {
-          nimi: kohde.nimi, lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
+          nimi: kohde.nimi, tyyppi: kohteenTyyppi(kohde), kartalla: kohdeKartalla(kohde), lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
           wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
           siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
@@ -586,7 +600,10 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + '{ pohjoinen, etela, lansi, ita }; piirtoRajat = kuvan todellinen alue, jos laajempi. kohteet[].x/y = piste '
       + 'prosentteina kuvasta pelin karttapiste()-funktiolla (kainalot huomioitu). nosto = nähtävyysjutun tunniste '
       + '(nahtavyydet-kokoelma), wiki = Wikipedia-otsikko. teksti/kappaleet/kuvat = kohteen oma juttu, jos on. '
-      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla.',
+      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla. '
+      + 'kohteet[].tyyppi (löydös 178) = rakennus | aukio | luonto | taide | esine | henkilo | ilmio; kartalla = piirretäänkö '
+      + 'kartalle (vain rakennus, aukio, luonto; aukio ja luonto kevyellä merkillä). kartalla: false = tarinakohde, jolla on '
+      + 'karttanosto: se on kaupungin nostoissa (kaupunkiliuska), ei kartalla. Kartan kohteet ensin, joten niiden järjestys = webin numerointi.',
     { kaupunki: 'kaupungit' }, kohdekartat);
   // Skeema 1.24: rakentajat (R.kuva) saapumisteksteille (tools/vienti/saapumiset.mjs).
   return R;

@@ -17,8 +17,9 @@
  * js/fokusvirta.js kuvanOsoite). Lisenssi tarkistettu Commonsin
  * imageinfo/extmetadata-rajapinnasta 19.9.2026: Celuici, CC BY-SA 4.0.
  *
- * ÄÄNITETTÄ EI VIELÄ OLE — puuttuva tiedosto on hiljainen (js/luenta.js
- * playDiaryVoice), samoin kuin muilla kevyillä pakeilla.
+ * ÄÄNITE (Äänittäjä 11.10.2026): isoisän luenta on generoitu tästä
+ * luenta-kentästä ja viety ämpäriin polkuun audio/puhe-fokus-matkakirja-bryssel.mp3
+ * (aikaleimat assets/aikaleimat/). Kesto ja polku: js/media.js HORATIO_TUOTANTO.
  */
 export const FOKUSVIRTA_BRYSSEL = {
   kaupunki: 'bryssel',
@@ -42,6 +43,9 @@ export const FOKUSVIRTA_BRYSSEL = {
       + 'Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja '
       + 'koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään '
       + 'kuin hämähäkit kilpaa.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääni generoitu 11.10.2026 tästä tekstistä). */
+    luenta: "[curious] Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan haissutkaan. [warmly] Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. [excited] Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.",
+    aanite: 'assets/audio/puhe-fokus-matkakirja-bryssel.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

@@ -287,7 +287,7 @@ export const ASIA_LISAT_VALOKUVAT = {
         tiedosto: 'Thap Rua (Tottoise) Tower, Hoan Kiem Lake, Hanoi (1) (38442367376).jpg',
         vuosi: '2017',
         lahde: 'Richard Mortel, Commons (CC BY 2.0)',
-        lyhyt: 'Kilpikonnatorni Hoàn Kiếmin järvellä Hanoissa, "palautetun miekan" tarinassa.',
+        lyhyt: 'Kilpikonnatorni Hoàn Kiếmin järvellä Hanoissa, ”palautetun miekan” tarinassa.',
         selite: 'Kilpikonnatorni Hoàn Kiếmin järven saarekkeella. Järven nimi '
           + 'tarkoittaa palautettua miekkaa ja viittaa tarinaan '
           + 'hallitsijasta, joka voitettuaan sodan antoi taikamiekan takaisin '
@@ -518,8 +518,8 @@ export const ASIA_LISAT_VALOKUVAT = {
     lyhyt: 'Newar-temppeli Kathmandun kuninkaanpalatsin edustalla 1898, Kurt Boeckin kuvaamana.',
     selite: 'Puuleikkauksin koristeltu newar-temppeli kuninkaanpalatsin '
       + 'edustalla Kathmandussa 1898. Saksalainen Kurt Boeck julkaisi kuvan '
-      + 'kirjassa, jonka nimi kuuluu suomeksi \'Intian kautta suljettuun '
-      + 'maahan Nepaliin\' — ulkomaalaisia päästettiin maahan tuolloin '
+      + 'kirjassa, jonka nimi kuuluu suomeksi ’Intian kautta suljettuun '
+      + 'maahan Nepaliin’ — ulkomaalaisia päästettiin maahan tuolloin '
       + 'harvoin.',
     lisat: [
       {

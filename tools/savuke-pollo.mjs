@@ -37,8 +37,8 @@
  * KOLMANNEN ERÄN LISÄYKSET (13.8.2026)
  *  15. KARTAN SUMENNUS: suljettuna ruudulla ei ole yhtään sumentavaa
  *      kerrosta, dialogin avaus sumentaa ja sulku poistaa, pöllöpaneeli
- *      ei sumenna eikä jätä jälkeä — ja ladatun pelin bittikartta on
- *      näkymän tarkkuudessa
+ *      ei sumenna eikä jätä jälkeä (bittikartan tarkkuuskoe poistettu
+ *      11.10.2026: tasokartan rasteria ei enää ladata, ks. osio 13)
  *  16. ALANAPPIRIVI on puhelimella kapea ja keskitetty, ja pöllönappi
  *      palaa riviin myös ladatussa pelissä
  *  17. LATAUSRUUTU näkyy myös kylmäkäynnistyksessä ja väistyy vasta kun
@@ -66,6 +66,7 @@ import { fileURLToPath } from 'node:url';
 // Striimikokeen palvelin käyttää workerin OMIA suodattimia, jottei se
 // mittaisi savukkeen jäljitelmää vaan sitä koodia, joka on tuotannossa.
 import { luoJatkoSuodatin, poimiJatkot } from './pollo/rajat.js';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
@@ -195,10 +196,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8734, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS
-  ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -556,7 +554,9 @@ Object.defineProperty(window.navigator, 'onLine', { configurable: true, get: () 
 `;
 
 /** Avaa pelin, käynnistää sen ja vie pelaajan Lontooseen. */
-async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true } = {}) {
+async function avaaPeli(ctx, {
+  sanelu = true, silta = false, lukijaAani = true, pallo = false,
+} = {}) {
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -587,8 +587,39 @@ async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true }
   // Natiivisilta ruiskutetaan ennen pelin skriptejä, kuten oikea kuorikin.
   if (silta) await sivu.addInitScript(SILTA_MOCK);
   if (!lukijaAani) await sivu.addInitScript(OFFLINE_MOCK);
+  /*
+   * IKÄ ON JO KYSYTTY (js/ikaraja.js, 11.10.2026): ensimmäinen live-kysymys odottaa muuten ikäkyselyä, eikä
+   * savukkeen kysymys lähtisi. Savuke on aikuinen (live-tila); kuratoitu tila vartioidaan workerin testeissä.
+   */
+  await sivu.addInitScript("try { localStorage.setItem('matkakirja-aikuinen', '1'); } catch (e) {}");
   await sivu.route((url) => !/127\.0\.0\.1|localhost|pollo\.testi\.invalid/.test(url.href),
     (route) => route.abort());
+  /*
+   * PALLO PELILAUTANA (pallo: true). Pallo on ainoa pelilauta (v1578
+   * b30cf4b22, 5.9.2026; vanha kartta pois käytöstä 7.9.2026), ja sen
+   * kirjasto (vendor/globe.gl), laatat ja aineistot tulevat ämpäristä
+   * media.matkakirja.app. Katkaistuna pallo kaatuu varapolkuun eikä
+   * kartalla ole yhtään merkkiä. Ämpäri välitetään siksi Noden kautta
+   * CORS-otsakkeen kanssa (sama kaava kuin tools/mittaa-lehtipalstat.mjs);
+   * äänet katkaistaan yhä, jotta ajo ei soita luentoja. Myöhemmin
+   * rekisteröity reitti voittaa yllä olevan katkaisun.
+   */
+  if (pallo) {
+    await sivu.route(/^https:\/\/media\.matkakirja\.app\//, async (route) => {
+      if (/\.(mp3|m4a|wav|ogg)(\?|$)/i.test(route.request().url())) { await route.abort(); return; }
+      try {
+        const v = await fetch(route.request().url());
+        await route.fulfill({
+          status: v.status,
+          body: Buffer.from(await v.arrayBuffer()),
+          headers: {
+            'content-type': v.headers.get('content-type') ?? 'application/octet-stream',
+            'access-control-allow-origin': '*',
+          },
+        });
+      } catch { await route.abort(); }
+    });
+  }
   await sivu.goto('http://127.0.0.1:8734/index.html', { waitUntil: 'load' });
   await sivu.waitForTimeout(2200);
   await sivu.evaluate(() => {
@@ -596,9 +627,15 @@ async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true }
       .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
   });
   await sivu.waitForTimeout(2000);
-  await sivu.evaluate(() => {
+  await sivu.evaluate((portti) => {
     const g = window.matkakirja.game;
-    if (g.phase === 'pickstart') g.actionPickStart('lontoo', null);
+    /*
+     * PORTTI MAAILMANKARTALLE (pallo: true). Ilman porttia peli jää
+     * aloitusnäytön omalle laudalle ('maailma'), jolle palloa ei avata
+     * (js/ui.js pallolautaHalutaan: vain 'maailmankartta'). Pelaajan
+     * oma aloitus kulkee portin kautta (js/ui.js, portti ? 0 : null).
+     */
+    if (g.phase === 'pickstart') g.actionPickStart('lontoo', portti ? 0 : null);
     g.player.money = 2000;
     /*
      * PÖLLÖ ON AARRE (omistajan tilaus 18.8.2026): uudessa pelissä
@@ -610,9 +647,39 @@ async function avaaPeli(ctx, { sanelu = true, silta = false, lukijaAani = true }
     g.polloLoydetty = true;
     window.matkakirja.ui.render();
     window.matkakirjaPollo?.paivitaNakyvyys?.();
-  });
+  }, pallo);
   await sivu.waitForTimeout(900);
+  if (pallo) {
+    await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+      .catch(() => {});
+  }
   return { sivu, virheet };
+}
+
+/**
+ * SAAPUMISLUENNAN OHITUS SILLÄ HETKELLÄ, KUN SE ALKAA (11.10.2026).
+ *
+ * Saapumisluennan kuvasarja nousee kartalle vasta äänen alkaessa
+ * (~8 s avauksesta), ja se sulkee muut auki olevat laput (js/fokusvirta.js
+ * suljeMuutAvoimetLaput, "VAIN YKSI LAPPU KERRALLAAN", v2406 3e6fdcfd3,
+ * 29.9.2026) ja imee pulun kuplat muistiin luennan ajaksi (omistaja
+ * 15.9.2026, "TEKSTIT PIILOON KAIKILLA LAITTEILLA"). Lehteä tai kuplaa
+ * mittaava koe odottaa siksi sarjan ja ohittaa sen pelaajan omalla
+ * Ohita-polulla (ohitaSaapumisluenta).
+ *
+ * EI ENNEN SARJAA: Ohita ennen luennan alkua kaataa myöhemmin
+ * avaaIsoisanSarjan (avaaIsokuvaPaallys palauttaa nullin, ja tulos
+ * puretaan tarkistamatta — "Cannot destructure property 'aja' of
+ * 'tila'"). Löydös on raportoitu erikseen; savuke ei laukaise sitä.
+ */
+async function ohitaSaapumisluentaKunAlkaa(sivu, katto = 15000) {
+  await sivu.waitForFunction(() => Boolean(document.querySelector('.fokusvirta-isokuva')
+    || window.matkakirja?.ui?.luentakuvasarja), null, { timeout: katto }).catch(() => {});
+  await sivu.evaluate(async () => {
+    const { ohitaSaapumisluenta } = await import('/js/fokusvirta.js');
+    ohitaSaapumisluenta(window.matkakirja.ui);
+  });
+  await sivu.waitForTimeout(400);
 }
 
 /* ================================================================== */
@@ -722,9 +789,15 @@ const auki = await sivu.evaluate(async () => {
     peittaaRivin: Math.abs(liuku.getBoundingClientRect().left
       - document.querySelector('.toimintorivi-perus').getBoundingClientRect().left) < 2,
     // Perusnapit väistyvät kaikki, jotta rivissä näkyy vain kolme nappia.
+    // Yksirivisessä asussa (v2551, 2.10.2026) liuska nousee rivin yläpuolelle ja monitoiminappi jää
+    // näkyviin avaimeksi, josta liuska suljetaan (css .rivi-yksi.liuku-auki); muut perusnapit väistyvät.
     perusPiilossa: [...document.querySelectorAll('.toimintorivi-perus > *')]
+      .filter((el) => !(rivi.classList.contains('rivi-yksi') && el.classList.contains('monitoimi-nappi')))
       .every((el) => getComputedStyle(el).visibility === 'hidden'
         || getComputedStyle(el).opacity === '0'),
+    // Diagnostiikka: kunkin perusnapin luokka, näkyvyys ja peittävyys.
+    perusTilat: [...document.querySelectorAll('.toimintorivi-perus > *')]
+      .map((el) => `${el.className}:${getComputedStyle(el).visibility}/${getComputedStyle(el).opacity}/${getComputedStyle(el).display}`),
   };
 });
 vaadi('monitoiminappi avaa liu\'un', auki.luokka === true && auki.aria === 'true',
@@ -1039,8 +1112,16 @@ await sivu.screenshot({ path: join(ULOS, 'pollo-paneeli-390.png') });
  * Sulkeminen ilman rastia: napautus paneelin ulkopuolelle ja Esc.
  * Tämä on nyt ainoa tapa sulkea chat pöllön napin lisäksi, joten se
  * mitataan erikseen molemmilla tavoilla.
+ *
+ * SULKU ANIMOI (v2398 bfcd30591, omistaja 29.9.2026 "avaus ja sulku
+ * animoiden"): js/avausanimaatio.js piilotaAnimoiden asettaa paneelin
+ * hidden-lipun vasta animaation lopussa, SULKU_MS 200 ms (+80 ms
+ * varmistin). 200 ms:n odotus luki paneelin siksi välillä yhä auki
+ * olevaksi, ja seuraava avaa() jätti napin painamatta — odotus on nyt
+ * sulun mittainen.
  */
-const sulkeminen = await sivu.evaluate(async () => {
+const SULKU_ODOTUS_MS = 350;
+const sulkeminen = await sivu.evaluate(async (sulkuMs) => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   const auki = () => !document.querySelector('.pollo-paneeli').hidden;
   const avaa = async () => {
@@ -1057,15 +1138,15 @@ const sulkeminen = await sivu.evaluate(async () => {
   document.getElementById('board').dispatchEvent(
     new PointerEvent('pointerdown', { bubbles: true }),
   );
-  await odota(200);
+  await odota(sulkuMs);
   const ulkoa = auki();
   await avaa();
   document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
-  await odota(200);
+  await odota(sulkuMs);
   const escilla = auki();
   await avaa();
   return { sisalta, ulkoa, escilla, lopuksiAuki: auki() };
-});
+}, SULKU_ODOTUS_MS);
 vaadi('napautus paneelin sisällä ei sulje', sulkeminen.sisalta === true,
   JSON.stringify(sulkeminen));
 vaadi('napautus paneelin ulkopuolelle sulkee', sulkeminen.ulkoa === false,
@@ -1106,8 +1187,10 @@ const alarivi = await sivu.evaluate(() => {
 });
 vaadi('nappirivi on paneelin pohjalla', alarivi.pohjalla === true, JSON.stringify(alarivi));
 vaadi('nappirivi on matala (alle 42 px)', alarivi.korkeus <= 42, `${alarivi.korkeus} px`);
-vaadi('rivillä on kolme nappia järjestyksessä näppäimistö, kaiutin, mikrofoni',
-  alarivi.jarjestys.join(' ') === 'pollo-kirjoita pollo-kaiutin pollo-mikki',
+// Pulun äänikeskustelun koenappi (pollo-realtime-koe, kehittäjätila) saa olla rivin viimeisenä.
+vaadi('rivillä on kolme nappia järjestyksessä näppäimistö, kaiutin, mikrofoni (+ koenappi viimeisenä)',
+  alarivi.jarjestys.filter((n) => !/pollo-realtime-koe/.test(n)).join(' ') === 'pollo-kirjoita pollo-kaiutin pollo-mikki'
+  && alarivi.jarjestys.findIndex((n) => /pollo-realtime-koe/.test(n)) in { '-1': 1, 3: 1 },
   alarivi.jarjestys.join(' '));
 vaadi('mikrofoni on yhä levein, näppäimistö ja kaiutin yhtä leveät',
   Math.abs(alarivi.osuusKirjoita - alarivi.osuusKaiutin) < 0.02
@@ -1758,7 +1841,13 @@ const osuvuus = await sivu.evaluate(async () => {
   return {
     sijainti,
     paikallinen: aja('Milloin Lontoon metro avattiin?'),
-    yleinen: aja('Kuka oli Napoleon?'),
+    /*
+     * Ennen 'Kuka oli Napoleon?', mutta aineistossa on nyt aito osuma:
+     * St. Helenan kaupunkilehden "Napoleon-kadun siirtomaatalo" (N10,
+     * v2160 9b64a4a1d, 24.9.2026) kertoo nimenomaan Napoleonista. Yleis-
+     * kysymykseksi vaihdettiin aihe, josta pelissä ei ole juttua.
+     */
+    yleinen: aja('Mikä on fotosynteesi?'),
     hatara: aja('Kuinka vanha ihmiskunta on?'),
   };
 });
@@ -2742,6 +2831,12 @@ await kylmaCtx.close();
 const elvytysCtx = await selain.newContext({ viewport: { width: 900, height: 900 }, serviceWorkers: 'block' });
 const { sivu: elvytysSivu, virheet: elvytysVirheet } = await avaaPeli(elvytysCtx);
 await kytkeRajapinta(elvytysSivu, []);
+/*
+ * SAAPUMISLUENTA OHI ENNEN LEHTEÄ (ks. ohitaSaapumisluentaKunAlkaa):
+ * ilman ohitusta luennan kuvasarja sulki lehden kesken mittauksen, ja
+ * arkin leveydeksi luettiin 0 px.
+ */
+await ohitaSaapumisluentaKunAlkaa(elvytysSivu);
 await elvytysSivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.board.cityById.get('lontoo'));
@@ -2901,7 +2996,8 @@ const polloSumennus = await sumennusSivu.evaluate(`(async () => {
   const auki = { nakyy: !document.querySelector('.pollo-paneeli').hidden,
     kerroksia: ${SUMENNUSKERROKSET}.length };
   document.body.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
-  await new Promise((r) => setTimeout(r, 250));
+  // Sulku animoi 200 ms (+80 ms varmistin) ennen hidden-lippua (ks. SULKU_ODOTUS_MS).
+  await new Promise((r) => setTimeout(r, ${SULKU_ODOTUS_MS}));
   return { auki, kiinni: { piilossa: document.querySelector('.pollo-paneeli').hidden,
     kerroksia: ${SUMENNUSKERROKSET}.length } };
 })()`);
@@ -2922,9 +3018,22 @@ const rivinLeveys = await sumennusSivu.evaluate(() => {
   const perus = document.querySelector('.toimintorivi-perus');
   const liuku = document.querySelector('.toimintorivi-liuku');
   const r = rivi.getBoundingClientRect();
+  /*
+   * YHDEN NAPIN RIVI ON NÄKYMÄTÖN KAISTA (v1891 09924de68, erä 19:
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 28 kohta 3, omistaja 15.9.2026
+   * "Liiku-nappi alas keskelle ... läpinäkyvä ja pieni"). css
+   * .toimintorivi.rivi-yksi venyttää rivin tarkoituksella koko kaistan
+   * levyiseksi, ja se on läpinäkyvä ja napautuksille läpäisevä; ruudulla
+   * näkyy vain keskitetty LIIKU-sana. "Kapea" mitataan siksi
+   * näkyvästä napista, kahden napin rivillä yhä rivistä.
+   */
+  const yksi = rivi.classList.contains('rivi-yksi');
+  const nakyva = yksi ? perus.querySelector('.monitoimi-nappi')?.getBoundingClientRect() ?? r : r;
   return {
     ruutu: window.innerWidth,
     rivi: Math.round(r.width),
+    nakyva: Math.round(nakyva.width),
+    yksi,
     // Kolme paikkaa, ei paikkojen sisältöä: pöllön paneeli asuu
     // keskimmäisessä paikassa eikä ole rivin nappi.
     napit: [...perus.children].map((b) => Math.round(b.getBoundingClientRect().width)),
@@ -2932,8 +3041,8 @@ const rivinLeveys = await sumennusSivu.evaluate(() => {
     liukuSamalla: Math.abs(liuku.getBoundingClientRect().width - r.width) < 2,
   };
 });
-vaadi('alanappirivi on kapea puhelimella', rivinLeveys.rivi <= rivinLeveys.ruutu * 0.7,
-  `${rivinLeveys.rivi} / ${rivinLeveys.ruutu} px`);
+vaadi('alanappirivi on kapea puhelimella', rivinLeveys.nakyva <= rivinLeveys.ruutu * 0.7,
+  `${rivinLeveys.nakyva} / ${rivinLeveys.ruutu} px (rivi ${rivinLeveys.rivi}, yksi nappi ${rivinLeveys.yksi})`);
 vaadi('alanappirivi on keskitetty', rivinLeveys.keskitetty === true, JSON.stringify(rivinLeveys));
 vaadi('alanapit ovat yhä sormen mittaisia', rivinLeveys.napit.every((w) => w >= 44),
   rivinLeveys.napit.join(' / '));
@@ -2950,7 +3059,12 @@ await sumennusSivu.screenshot({ path: join(ULOS, 'alanapit-kapeat-390.png') });
  * oikea lopputulos kaikissa tiloissa, ja tarkistettava asia on se, että
  * nappi saa myös PELINÄKYMÄN sijainnin (.pollo-kelluu-kartalla) eikä
  * jää lehtinäkymän kulmaan alanappien päälle.
- * Samalla latauksella mitataan rasteroinnin tarkkuus.
+ *
+ * BITTIKARTAN TARKKUUSKOE POISTETTU (11.10.2026). Se luki tasokartan
+ * rasterin skaalaa (ui.taideSkaala), mutta tasokarttaa ei enää ladata
+ * lainkaan: pallo on ainoa pelilauta (v1578 b30cf4b22, 5.9.2026) ja
+ * vanha kartta on pois käytöstä (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA
+ * = false, omistaja 7.9.2026). Mittari palautti siksi aina nullin.
  */
 await sumennusSivu.evaluate(() => {
   localStorage.setItem('matkakirja-save-v1', JSON.stringify(window.matkakirja.game.toJSON()));
@@ -2963,21 +3077,15 @@ await sumennusSivu.waitForTimeout(3000);
 // — sekin odotetaan pois ennen mittausta (ks. odotaTraileriPois).
 await odotaTraileriPois(sumennusSivu);
 const palautettu = await sumennusSivu.evaluate(`(() => {
-  const ui = window.matkakirja?.ui;
-  const nakyva = ui?.nakyvaAlue?.();
   const nappi = document.querySelector('.pollo-nappi');
   return {
     kerroksia: ${SUMENNUSKERROKSET}.length,
     kartalla: nappi?.classList.contains('pollo-kelluu-kartalla') ?? false,
     kelluu: nappi?.classList.contains('pollo-kelluu') ?? null,
-    suhde: nakyva && ui?.taideSkaala ? nakyva.skaala / ui.taideSkaala : null,
   };
 })()`);
 vaadi('päivityksen jälkeen kartalla ei ole sumennusta', palautettu.kerroksia === 0,
   JSON.stringify(palautettu));
-vaadi('kartan bittikartta on näkymän tarkkuudessa',
-  palautettu.suhde !== null && Math.abs(palautettu.suhde - 1) <= 0.02,
-  String(palautettu.suhde));
 vaadi('pöllönappi kelluu kartalla myös ladatussa pelissä',
   palautettu.kelluu === true && palautettu.kartalla === true, JSON.stringify(palautettu));
 vaadi('sumennuskoe ei kirjoita konsoliin', sumennusVirheet.length === 0,
@@ -3458,6 +3566,7 @@ async function paneelinMitat(leveys, korkeus) {
     await odota(900);
     const p = paneeli.getBoundingClientRect();
     const syote = document.querySelector('.pollo-syote').getBoundingClientRect();
+    const pulu = document.querySelector('.pollo-nappi').getBoundingClientRect();
     const mitat = {
       avattuna: Math.round(avattuna),
       kysyttaessa: Math.round(kysyttaessa),
@@ -3473,6 +3582,10 @@ async function paneelinMitat(leveys, korkeus) {
       napitAuki,
       // Positiivinen luku tarkoittaa, että syöterivi jää paneelin sisään.
       syoteMahtuu: Math.round(p.bottom - syote.bottom),
+      // Avoimen chatin Pulu (js/livia-chat-tila.js): napin yläreunan
+      // ja paneelin alareunan väli on Pulun hahmon tila.
+      puluVali: Math.round(pulu.top - p.bottom),
+      puluOikealla: pulu.right > p.right,
       /*
        * Yksikään esivanhempi ei saa luoda containing blockia: transform,
        * filter, backdrop-filter, perspective, will-change ja contain
@@ -3514,16 +3627,31 @@ vaadi('puhelimen paneeli on koko korkeutensa jo ensimmäisestä kysymyksestä',
   JSON.stringify(puhelin.tulos));
 vaadi('puhelimen paneeli on selvästi entistä korkeampi (yli 500 px)',
   puhelin.tulos.vastauksessa > 500, JSON.stringify(puhelin.tulos));
-vaadi('puhelimen paneeli on keskellä: reunavälit yhtä suuret',
-  Math.abs(puhelin.tulos.vasen - puhelin.tulos.oikea) <= 2
-  && puhelin.tulos.vasen > 0, JSON.stringify(puhelin.tulos));
+/*
+ * CHAT JÄTTÄÄ SUUREN PULUN NÄKYVIIN (v1731 def45c369, v1733 9cd162623 ja
+ * v1751 069de8bb5, 10.–11.9.2026; js/livia-chat-tila.js
+ * livianChatAsettelu). Paneelin paikan laskee nyt Pulun asettelu:
+ * oikeaan alanurkkaan jää kaista Pulun hahmolle (42 px + 12 px rako) ja
+ * paneelin alle sen kasvoille (104 px), ja korkeus on enintään 68 %
+ * näkymästä. 13.8.2026:n symmetriset reunavälit, alle 30 px:n alaväli ja
+ * 180 px:n yläväli kuvasivat Pulua edeltävää paneelia, joten ne
+ * korvattiin nykyisen asettelun vartioilla.
+ */
+vaadi('puhelimen paneeli on vasemmassa laidassa ja jättää oikean kaistan Pululle',
+  puhelin.tulos.vasen > 0 && puhelin.tulos.vasen <= 16
+  && puhelin.tulos.oikea > puhelin.tulos.vasen && puhelin.tulos.puluOikealla === true,
+  JSON.stringify(puhelin.tulos));
 // JUURISYYN VARTIO: paneelin fixed-asemoinnin on ankkuroiduttava ruutuun.
 vaadi('yksikään esivanhempi ei kaappaa paneelin fixed-ankkuria',
   puhelin.tulos.ankkurit.length === 0, puhelin.tulos.ankkurit.join(' | '));
 vaadi('kartta näkyy paneelin alta ja sivuilta',
-  puhelin.tulos.ala > 0 && puhelin.tulos.ala < 30, JSON.stringify(puhelin.tulos));
+  puhelin.tulos.ala > 0 && puhelin.tulos.vasen > 0 && puhelin.tulos.oikea > 0,
+  JSON.stringify(puhelin.tulos));
+vaadi('paneelin alle jää tila Pulun hahmolle',
+  puhelin.tulos.puluVali >= 48, JSON.stringify(puhelin.tulos));
+// livianChatAsettelu: yläreuna vähintään 96 px (tai yläpalkki + 12 px).
 vaadi('yläreunaan jää tilaa kartalle ja matkakirjan kaistaleelle',
-  puhelin.tulos.yla > 180, JSON.stringify(puhelin.tulos));
+  puhelin.tulos.yla >= 96, JSON.stringify(puhelin.tulos));
 vaadi('alanappirivi on piilossa keskustelun ajan',
   puhelin.tulos.napitEnnen === true && puhelin.tulos.napitAuki === false,
   JSON.stringify(puhelin.tulos));
@@ -3543,10 +3671,11 @@ vaadi('tabletin paneeli on koko korkeutensa jo ensimmäisestä kysymyksestä',
 vaadi('tabletin paneeli on korkeampi ja leveämpi kuin ennen (432 × 336)',
   tabletti.tulos.vastauksessa > 432 && tabletti.tulos.leveys > 336,
   JSON.stringify(tabletti.tulos));
-// Omistaja 13.8.2026 ilta: "Pöllö saisi olla hieman irti reunasta"
-// — reunaväli on nyt 1.5 rem (24 px), ei enää kiinni laidassa.
+// Omistaja 13.8.2026 ilta: "Pöllö saisi olla hieman irti reunasta".
+// Reunaväli oli 1.5 rem (24 px); v1731:stä (def45c369) lähtien se on
+// Pulun kaista, 42 + 12 = 54 px (js/livia-chat-tila.js).
 vaadi('tabletin paneeli on hieman irti oikeasta reunasta',
-  tabletti.tulos.oikea >= 16 && tabletti.tulos.oikea < 48
+  tabletti.tulos.oikea >= 16 && tabletti.tulos.oikea <= 64
   && tabletti.tulos.vasen > tabletti.tulos.oikea, JSON.stringify(tabletti.tulos));
 vaadi('tabletilla alanapit näkyvät koko ajan',
   tabletti.tulos.napitEnnen === true && tabletti.tulos.napitAuki === true
@@ -3571,11 +3700,35 @@ vaadi('tablettimittaus ei kirjoita konsoliin', tabletti.virheet.length === 0,
  * Vihjeen viive luetaan ja lyhennetään: savukkeen ei tarvitse odottaa
  * viittätoista sekuntia todistaakseen ketjun toimivaksi, mutta oletus
  * tarkistetaan silti.
+ *
+ * iPAD EIKÄ iPHONE (päivitetty 11.10.2026). Puhelimella vihje ei nouse
+ * kuplaksi vaan menee suoraan Pulun muistiin (js/pollo.js lisaaPinoon →
+ * imePuhelimenKuplaan, tekstitPiilossa): omistajan päätös 14.9.2026,
+ * v1891 09924de68, vahvistettu lokissa "VALINTAVIHJE iPHONELLA: AIEMPI
+ * 'WEB-BUGI' KUMOTTU — WEB ON OIKEIN" (24.9.2026): iPhonella pluskuplaan,
+ * iPadilla näkyy. Kupla mitataan siksi iPadin ruudulla.
+ *
+ * PALLOLLA (pallo: true). Kohdemerkit ovat pallon merkkejä: tasokartan
+ * .targets-kerrosta ei enää piirretä (vanha kartta pois 7.9.2026), ja
+ * v2114:stä (ea2cd8303, 22.9.2026) merkit piirtyvät GL-kerrokseen eikä
+ * DOMiin. Valittavat kohteet luetaan siksi pallon omasta listasta
+ * (ui.pallolauta.merkit.kohteet(), sama jota napautuksen osumatesti
+ * käyttää) ja ruutupiste pallon projektiosta.
  */
 const vihjeCtx = await selain.newContext({
-  viewport: { width: 390, height: 844 }, hasTouch: true, serviceWorkers: 'block',
+  viewport: { width: 1024, height: 1366 }, hasTouch: true, serviceWorkers: 'block',
 });
-const { sivu: vihjeSivu, virheet: vihjeVirheet } = await avaaPeli(vihjeCtx);
+const { sivu: vihjeSivu, virheet: vihjeVirheet } = await avaaPeli(vihjeCtx, { pallo: true });
+/*
+ * Saapumisluenta ohi ja pino tyhjäksi ennen mittausta: luennan aikana
+ * pulun repliikit imeytyvät muistiin kaikilla laitteilla (omistaja
+ * 15.9.2026, "TEKSTIT PIILOON KAIKILLA LAITTEILLA"), ja saapumisen
+ * puhekuplat sekoittaisivat .pollo-vihje-valitsimen. Ohitus on
+ * pelaajan oma Ohita-polku.
+ */
+await odotaTraileriPois(vihjeSivu);
+await ohitaSaapumisluentaKunAlkaa(vihjeSivu);
+await vihjeSivu.evaluate(() => window.matkakirjaPollo.tyhjennaPinoHeti());
 
 const ohje = await vihjeSivu.evaluate(async () => {
   const { game, ui } = window.matkakirja;
@@ -3593,7 +3746,9 @@ const ohje = await vihjeSivu.evaluate(async () => {
      * fokusKohdeMerkki). Väite koskee sitä, että valittavat kohteet
      * NÄKYVÄT kartalla — ei sitä, kumpi merkki niistä piirtyy.
      */
-    kohteita: document.querySelectorAll('.targets .target-ring, .targets .target-piste').length,
+    kohteita: ui.pallolauta?.merkit?.kohteet?.().length
+      ?? document.querySelectorAll('.targets .target-ring, .targets .target-piste').length,
+    pallo: Boolean(ui.pallolauta),
     tilarivi: Boolean(document.getElementById('turn-status')),
     ohjerivi: Boolean(document.getElementById('board-hint')),
     // Poistetut kehotukset kokonaisuudessaan: yksikin osuma tarkoittaa,
@@ -3622,6 +3777,15 @@ const kupla = await vihjeSivu.evaluate(async () => {
   const ennenAikojaan = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
   await new Promise((r) => setTimeout(r, 700));
   const vihje = document.querySelector('.pollo-vihje');
+  // Kehys liukuu paikalleen (right/bottom 380 ms, ilmestymisanimaatio): CI:n ohjelmistopiirrossa liuku voi olla kesken
+  // 700 ms:n kohdalla (ajo 38174279579: väli −20 px), joten mitataan vasta, kun paikka pysyy 6 ruutua samana (enint. 3 s).
+  for (let vakaa = 0, edellinen = '', t0 = performance.now(); vihje && vakaa < 6 && performance.now() - t0 < 3000;) {
+    await new Promise((r) => requestAnimationFrame(r));
+    const r = vihje.getBoundingClientRect();
+    const nyt = `${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)},${Math.round(r.height)}`;
+    vakaa = nyt === edellinen ? vakaa + 1 : 0;
+    edellinen = nyt;
+  }
   const nappi = document.querySelector('.pollo-nappi')?.getBoundingClientRect();
   const laatikko = vihje?.getBoundingClientRect();
   return {
@@ -3640,12 +3804,15 @@ vaadi('vihje ei ilmesty ennen viiveen umpeutumista', kupla.ennenAikojaan === fal
 vaadi('vihjekupla ilmestyy hiljaisuuden jälkeen', kupla.nakyy === true, JSON.stringify(kupla));
 vaadi('vihje kehottaa napauttamaan korostettua kohdetta',
   /napauta korostettua kohdetta/i.test(kupla.teksti), kupla.teksti);
+// Väli kasvoi 40 px:llä v1729:stä (21bd90215, 10.9.2026): pino jättää
+// tilan Pulun aktiivikasvolle napin yläpuolelle (js/pollo.js
+// asetaPinonPaikka kasvonYlitys).
 vaadi('kupla on pöllönapin yläpuolella',
-  kupla.valiNappiin !== null && kupla.valiNappiin >= 0 && kupla.valiNappiin < 40,
+  kupla.valiNappiin !== null && kupla.valiNappiin >= 0 && kupla.valiNappiin < 80,
   JSON.stringify(kupla));
 vaadi('kupla pysyy ruudun sisällä', kupla.ruudulla === true, JSON.stringify(kupla));
 
-await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-390.png') });
+await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-ipad.png') });
 
 /*
  * KUPLA OTTAA NAPAUTUKSEN JA HÄIPYY (omistaja 18.8.2026: "Pöllön
@@ -3663,15 +3830,42 @@ await vihjeSivu.screenshot({ path: join(ULOS, 'pollo-vihjekupla-390.png') });
 const kuplanNapautus = await vihjeSivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
   const vihje = document.querySelector('.pollo-vihje');
+  if (!vihje) return { osoitin: null, haipyi: false, uudestaan: false, virhe: 'kuplaa ei ole' };
   const osoitin = getComputedStyle(vihje).pointerEvents;
-  vihje.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 9 }));
+  // Diagnoosi (CI: napautus ei häivytä): kuplien määrä, laji, kuittaus ja pinon tila ennen napautusta.
+  const kaikki = [...document.querySelectorAll('.pollo-vihje')];
+  const tila = {
+    kuplia: kaikki.length,
+    nakyvia: kaikki.filter((k) => !k.hidden).length,
+    laji: vihje.dataset?.laji ?? null,
+    kuittaus: Boolean(vihje.polloKuittaus),
+    poistuu: Boolean(vihje.polloPoistuu),
+    pinossa: Boolean(vihje.closest('.pollo-kuplapino')),
+    luokat: vihje.className,
+  };
+  /*
+   * NAPAUTUS RATKAISTAAN SORMEN NOUSTESSA (omistaja 5.9.2026, "vieritys
+   * ei ole napautus", js/pollo.js sidoKuplanNapautus): pelkkä pointerdown
+   * ei enää sulje kuplaa, joten napautus on pari pointerdown + pointerup
+   * samassa pisteessä.
+   */
+  const r = vihje.getBoundingClientRect();
+  const piste = { bubbles: true, pointerId: 9, clientX: r.left + r.width / 2, clientY: r.top + r.height / 2 };
+  vihje.dispatchEvent(new PointerEvent('pointerdown', piste));
+  vihje.dispatchEvent(new PointerEvent('pointerup', piste));
   /*
    * KUPLAPINO (3.9.2026): kupla ei enää piiloudu vaan POISTUU pinosta
    * 200 ms:n häivytyksen jälkeen, joten häipymistä mitataan siitä,
    * ettei näkyvää kuplaa enää ole — ja odotus on animaation mittainen.
    */
-  await new Promise((r) => setTimeout(r, 400));
-  const haipyi = !document.querySelector('.pollo-vihje:not([hidden])');
+  // Mitataan NAPAUTETTUA kuplaa: se lähtee poistumaan (polloPoistuu, häivytys) tai irtoaa/piiloutuu. Pelkkä "näkyvää
+  // kuplaa ei ole" ei kelpaa, koska valintavihje voi tuoda uuden kuplan tilalle ennen kuin tyhjä hetki ehtii näkyä
+  // (CI-ajot 38177098488 ja 38177589782: pinon vihjekupla, ei kuittausta, mutta uusi kupla heti tilalla).
+  let haipyi = false;
+  for (const t0 = performance.now(); !haipyi && performance.now() - t0 < 1000;) {
+    await new Promise((r) => requestAnimationFrame(r));
+    haipyi = Boolean(vihje.polloPoistuu) || !vihje.isConnected || vihje.hidden;
+  }
   // Sama vuoro alusta: kupla takaisin kartan kosketuskoetta varten.
   ui.valintavihjeVaihe = false;
   ui.paivitaValintavihje();
@@ -3680,6 +3874,7 @@ const kuplanNapautus = await vihjeSivu.evaluate(async () => {
     osoitin,
     haipyi,
     uudestaan: Boolean(document.querySelector('.pollo-vihje:not([hidden])')),
+    tila,
   };
 });
 vaadi('napautus häivyttää kuplan tieltä',
@@ -3701,44 +3896,83 @@ vaadi('napautus häivyttää kuplan tieltä',
  * kohteet eivät kaikissa vuoroissa satu kuplan alle — vuoto ei silti
  * riipu paikasta, vaan tapahtumien järjestyksestä.
  */
-const kohdistus = await vihjeSivu.evaluate(() => {
+const kohdistus = await vihjeSivu.evaluate(async () => {
   const vihje = document.querySelector('.pollo-vihje');
   if (!vihje || vihje.hidden) return { virhe: 'kuplaa ei ole' };
+  // Paikan pitää olla asettunut ennen siirron laskemista ja napautusta (ks. edellinen mittaus; CI-ajo 38174279579:
+  // napautus osui kuplan ohi kartalle, ohi 1, kun kupla liukui vielä).
+  const asettuu = async (el) => {
+    for (let vakaa = 0, edellinen = '', t0 = performance.now(); vakaa < 6 && performance.now() - t0 < 3000;) {
+      await new Promise((r) => requestAnimationFrame(r));
+      const r = el.getBoundingClientRect();
+      const nyt = `${Math.round(r.left)},${Math.round(r.top)}`;
+      vakaa = nyt === edellinen ? vakaa + 1 : 0;
+      edellinen = nyt;
+    }
+  };
+  await asettuu(vihje);
   // Kuplapinon myötä (3.9.2026) yksittäinen kupla ei enää kellu itse:
   // paikan omistaa pinon kehys, joten siirto tehdään sille.
   const kehys = vihje.closest('.pollo-kuplapino-kehys') ?? vihje;
-  const merkit = [...document.querySelectorAll(
-    '.targets .target-hit, .targets .target-ring, .targets .target-piste',
-  )];
-  kehys.hidden = true;
-  const kohde = merkit.map((m) => {
-    const laatikko = m.getBoundingClientRect();
-    const x = Math.round(laatikko.left + laatikko.width / 2);
-    const y = Math.round(laatikko.top + laatikko.height / 2);
-    return { x, y, kelpaa: Boolean(document.elementFromPoint(x, y)?.closest?.('.targets')) };
-  }).find((m) => m.kelpaa);
-  kehys.hidden = false;
+  // Pallon kohteet ruutupisteiksi (GL-merkit, ks. osion alku); esteetön
+  // on piste, jossa pallon oma kotelo ottaa napautuksen.
+  const lauta = window.matkakirja.ui.pallolauta;
+  // Kehystä ei piiloteta mittauksen ajaksi (vanha kaava): piilotus ja
+  // palautus jättivät kuplapinon osumattomaksi. Kuplan alle osuva
+  // merkki ei kelpaa joka tapauksessa (osuma ei ole pallon kotelossa).
+  const kohde = (lauta?.merkit?.kohteet?.() ?? []).map((k) => {
+    const p = lauta.pallo.getScreenCoords(k.lat, k.lng, 0);
+    if (!p) return null;
+    const x = Math.round(p.x);
+    const y = Math.round(p.y);
+    const osuma = document.elementFromPoint(x, y);
+    return { x, y, kelpaa: Boolean(osuma && lauta.kotelo.contains(osuma)) };
+  }).find((m) => m?.kelpaa);
   if (!kohde) return { virhe: 'esteetöntä kohdemerkkiä ei löytynyt' };
+  /*
+   * KUPLA, EI KEHYS, MERKIN PÄÄLLE. Pino piirtyy kattoonsa asti
+   * (.pollo-kuplapino-laaja, omistaja 8.9.2026) ja kupla on sen
+   * alareunassa, joten siirto lasketaan kuplan keskipisteestä. Siirto on
+   * translate eikä top/left: pinon paikka liukuu css-siirtymällä
+   * (asetaPinonPaikka), ja leikkaava pino kulkee näin kuplan mukana.
+   */
   const laatikko = vihje.getBoundingClientRect();
-  kehys.style.bottom = 'auto';
-  kehys.style.top = `${Math.round(kohde.y - laatikko.height / 2)}px`;
-  kehys.style.left = `${Math.round(kohde.x - laatikko.width / 2)}px`;
+  const dx = Math.round(kohde.x - (laatikko.left + laatikko.width / 2));
+  const dy = Math.round(kohde.y - (laatikko.top + laatikko.height / 2));
+  kehys.style.translate = `${dx}px ${dy}px`;
+  await asettuu(vihje);
+  window.__napautettuKupla = vihje;
+  // Diagnoosi (CI): mikä elementti on napautuspisteessä siirron jälkeen.
+  const pisteessa = document.elementFromPoint(kohde.x, kohde.y);
+  const kuplassa = Boolean(pisteessa && vihje.contains(pisteessa));
+  const pisteNimi = pisteessa ? `${pisteessa.tagName.toLowerCase()}.${[...pisteessa.classList].join('.')}` : null;
+  const kr = vihje.getBoundingClientRect();
+  const kuplaRuutu = [Math.round(kr.left), Math.round(kr.top), Math.round(kr.right), Math.round(kr.bottom)];
   // Mittari: pääseekö napautus kuplan ohi dokumenttiin asti.
   window.__kuplanOhi = 0;
   document.addEventListener('click', () => { window.__kuplanOhi += 1; });
-  return { x: kohde.x, y: kohde.y, vaihe: window.matkakirja.game.phase };
+  return { x: kohde.x, y: kohde.y, vaihe: window.matkakirja.game.phase, kuplassa, pisteNimi, kuplaRuutu };
 });
 if (kohdistus.virhe) {
   vaadi('kuplan alle löytyy kohdemerkki', false, kohdistus.virhe);
 } else {
   await vihjeSivu.touchscreen.tap(kohdistus.x, kohdistus.y);
+  // CI:n hitaassa piirrossa napautuksen käsittely voi viipyä yli 600 ms (ajo 38175149983: kupla yhä näkyvissä, ei vuotoa):
+  // odotetaan kuplan katoamista enintään 2,5 s ja sen jälkeen vielä mahdollista vuotavaa clickiä.
+  // Napautettu kupla lähtee poistumaan (polloPoistuu) tai irtoaa; valintavihje voi tuoda uuden kuplan tilalle ennen
+  // loppumittausta (CI-ajot 38176195972–38177589782), joten näkyvien kuplien määrä ei kerro napautuksesta.
+  const katosi = await vihjeSivu.waitForFunction(() => {
+    const k = window.__napautettuKupla;
+    return !k || Boolean(k.polloPoistuu) || !k.isConnected || k.hidden;
+  }, null, { timeout: 2500 }).then(() => true, () => false);
   await vihjeSivu.waitForTimeout(600);
   const vuoto = await vihjeSivu.evaluate(async () => {
     const ui = window.matkakirja.ui;
     const tulos = {
       ohi: window.__kuplanOhi,
-      haipyi: !document.querySelector('.pollo-vihje:not([hidden])'),
       vaihe: window.matkakirja.game.phase,
+      // Diagnoosi: palasiko kupla ennen loppumittausta (napautus ei nollaa vuoron vihjelippua, joten ei pitäisi).
+      lopussaNakyy: Boolean(document.querySelector('.pollo-vihje:not([hidden])')),
     };
     // Sama vuoro alusta seuraavaa mittausta varten.
     ui.valintavihjeVaihe = false;
@@ -3746,15 +3980,35 @@ if (kohdistus.virhe) {
     await new Promise((r) => setTimeout(r, 700));
     return tulos;
   });
+  vuoto.haipyi = katosi;
   vaadi('kuplan napautus ei vuoda kartalle',
     vuoto.ohi === 0 && vuoto.haipyi === true && vuoto.vaihe === kohdistus.vaihe,
-    JSON.stringify({ ...vuoto, alku: kohdistus.vaihe }));
+    JSON.stringify({ ...vuoto, alku: kohdistus.vaihe, piste: [kohdistus.x, kohdistus.y], kuplassa: kohdistus.kuplassa,
+      pisteNimi: kohdistus.pisteNimi, kuplaRuutu: kohdistus.kuplaRuutu }));
 }
 
+/*
+ * KARTAN KOSKETUS ON OIKEA VETO PALLOLLA (11.10.2026). Vanha koe
+ * lähetti .map-panelle synteettisen pointerdownin, jonka tasokartan
+ * panorointi (js/kartta.js → ui.kartallaKosketettu) otti vastaan. Pallon
+ * eleet kuuntelevat omaa kangastaan, ja synteettinen osoitin ilman
+ * aktiivista kosketusta kaataa setPointerCapturen — siksi veto tehdään
+ * oikealla hiirellä kartan tyhjässä kohdassa.
+ */
+{
+  const kotelo = await vihjeSivu.evaluate(() => {
+    const r = window.matkakirja.ui.pallolauta?.kotelo?.getBoundingClientRect();
+    return r ? { x: r.left + r.width * 0.3, y: r.top + r.height * 0.3 } : null;
+  });
+  if (kotelo) {
+    await vihjeSivu.mouse.move(kotelo.x, kotelo.y);
+    await vihjeSivu.mouse.down();
+    await vihjeSivu.mouse.move(kotelo.x + 80, kotelo.y + 40, { steps: 6 });
+    await vihjeSivu.mouse.up();
+  }
+}
 const kuplanKato = await vihjeSivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
-  document.querySelector('.map-pane')
-    .dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, pointerId: 7 }));
   // Kupla häipyy 200 ms:ssa ja poistuu vasta sen jälkeen (kuplapino).
   await new Promise((r) => setTimeout(r, 400));
   const heti = Boolean(document.querySelector('.pollo-vihje:not([hidden])'));
@@ -3790,33 +4044,26 @@ await vihjeCtx.close();
  *
  * Puhelin mitataan samalla: siellä arkki on omistajan tilauksesta koko
  * ruutu, eikä tämä korjaus saa muuttaa sitä.
+ *
+ * VARTIO b POISTETTU (11.10.2026): lehdetöntä kaupunkia ei enää ole.
+ * Kaikki puuttuneet kaupunkilehdet tehtiin (loki "VIRSTANPYLVAS: KAIKKI
+ * 71 PUUTTUVAA KAUPUNKILEHTEA OVAT PR:ISSA (N1–N16 …)", syyskuu 2026),
+ * ja kohdekaupunki avaa aina kaupunkilehden (loki "KOHDEKAUPUNKI AVAA
+ * AINA KAUPUNKILEHDEN"). Mitattu: 0/18 aloituslaudalla ja 0/266
+ * maailmankartalla ilman lehteä. Vartio a mitataan siksi kaupunkilehden
+ * arkista.
  */
 async function tutkiArkinMitat(leveys, korkeus) {
   const oma = await selain.newContext({
     viewport: { width: leveys, height: korkeus }, serviceWorkers: 'block',
   });
   const { sivu: s, virheet: v } = await avaaPeli(oma);
+  // Luennan kuvasarja sulkisi lehden kesken mittauksen (ks. apuri).
+  await ohitaSaapumisluentaKunAlkaa(s);
   const tulos = await s.evaluate(async () => {
     const { game, ui } = window.matkakirja;
-    /*
-     * Etsitään lehdetön kaupunki: sen kortilla on vain otsikko, esittely
-     * ja napit — juuri se kortti, joka jätti iPadille tyhjän hännän.
-     * Lehtikaupungin sivu on aina ruutua pidempi eikä kerro tästä mitään.
-     */
-    let lehdeton = null;
-    for (const c of game.board.cities) {
-      game.actionKehittajaSiirto(c.id);
-      ui.openArrival(game.cityOf());
-      // eslint-disable-next-line no-await-in-loop
-      await new Promise((r) => setTimeout(r, 200));
-      if (!document.getElementById('arrival-dialog').classList.contains('lehti')) {
-        lehdeton = c.id;
-        break;
-      }
-      ui.closeArrival();
-      // eslint-disable-next-line no-await-in-loop
-      await new Promise((r) => setTimeout(r, 80));
-    }
+    const kaupunki = game.cityOf();
+    ui.openArrival(kaupunki);
     // Kortin avausanimaatio kutistaa sitä hetkeksi: mitataan vasta sen jälkeen.
     await new Promise((r) => setTimeout(r, 900));
     const dialogi = document.getElementById('arrival-dialog');
@@ -3829,7 +4076,7 @@ async function tutkiArkinMitat(leveys, korkeus) {
       ruutu: window.innerWidth,
       korkeusRuutu: window.innerHeight,
       lehti: dialogi.classList.contains('lehti'),
-      kaupunki: lehdeton,
+      kaupunki: kaupunki?.id ?? null,
       leveys: Math.round(k.width),
       korkeus: Math.round(k.height),
       // Tyhjä paperi sisällön alla: pelkkä pehmuste on hyväksyttävä.
@@ -3845,22 +4092,12 @@ async function tutkiArkinMitat(leveys, korkeus) {
 const ipad = await tutkiArkinMitat(1024, 1366);
 vaadi('iPadilla Tutki-kortti käyttää ruudun leveyden',
   ipad.tulos.leveys >= ipad.tulos.ruutu * 0.85, JSON.stringify(ipad.tulos));
-vaadi('lehdettömän kaupungin kortti on sisältönsä mittainen',
-  ipad.tulos.lehti === false && ipad.tulos.korkeus < ipad.tulos.korkeusRuutu * 0.8,
-  JSON.stringify(ipad.tulos));
-vaadi('kortin alle ei jää tyhjää pergamenttia',
-  ipad.tulos.hanta < 80, JSON.stringify(ipad.tulos));
-vaadi('lyhyt kortti on pystysuunnassa keskellä',
-  Math.abs(ipad.tulos.ylaVara - ipad.tulos.alaVara) < 40, JSON.stringify(ipad.tulos));
 vaadi('iPad-mittaus ei kirjoita konsoliin', ipad.virheet.length === 0,
   ipad.virheet.slice(0, 3).join(' | '));
 
 const ipadPieni = await tutkiArkinMitat(834, 1194);
 vaadi('pienemmällä iPadilla kortti käyttää ruudun leveyden',
   ipadPieni.tulos.leveys >= ipadPieni.tulos.ruutu * 0.85, JSON.stringify(ipadPieni.tulos));
-vaadi('pienemmällä iPadilla kortti on sisältönsä mittainen',
-  ipadPieni.tulos.korkeus < ipadPieni.tulos.korkeusRuutu * 0.8
-  && ipadPieni.tulos.hanta < 80, JSON.stringify(ipadPieni.tulos));
 
 const puhelinArkki = await tutkiArkinMitat(390, 844);
 vaadi('puhelimella arkki on yhä koko ruutu',

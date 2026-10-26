@@ -21,11 +21,10 @@
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 const JUURI = new URL('../..', import.meta.url).pathname;
 const { Game } = await import(`${JUURI}/js/game.js`);
 const { packById } = await import(`${JUURI}/js/pack.js`);
-const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const paketti = pw.chromium ? pw : pw.default;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json' };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
@@ -42,7 +41,7 @@ const ampari = (url) => {
 };
 const peli = new Game({ players: [{ name: 'Fogg', color: '#c9a227', start: 'pariisi' }], pack: packById('maailmankartta'), seed: 5 });
 peli.phase = 'action'; peli.tokens.delete('pariisi');
-const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const LAUDAT = (process.env.LAUDAT ?? 'pelinakyma').split(',');
 const KURISTUS = Number(process.env.KURISTUS ?? 6);
 /* Rajat: mitattu korjattuna p95 17,8 / 14,5 ms, korjaamattomana 61,6 / 26,7. */

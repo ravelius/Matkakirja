@@ -1,0 +1,69 @@
+# TestFlight-luvut (vain luku): viimeisimpien buildien asennukset, istunnot,
+# kaatumiset, palautteet ja kutsut sekä testiryhmien koot ja julkisen linkin
+# käyttö job summaryyn. Omistajan kysymys 2.10.2026 (Päätoimittaja): näkyykö
+# TestFlight-latausmäärä. Ei kirjoita App Store Connectiin mitään.
+# Skripti: tools/testflight/luvut.py.
+
+name: TestFlight-luvut
+
+on:
+  workflow_dispatch:
+    inputs:
+      buildit:
+        description: 'Montako viimeisintä buildia'
+        type: string
+        default: '10'
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-luvut
+  cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527).
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  luvut:
+    name: Luvut
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Hae luvut
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          python3 tools/testflight/luvut.py --bundle-id "${{ inputs.bundle_id }}" --buildit "${{ inputs.buildit }}"
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

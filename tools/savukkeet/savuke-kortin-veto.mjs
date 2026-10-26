@@ -68,13 +68,11 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { NOSTOKUVA_MARGINAALI, NOSTOKUVA_YLAVARA } from '../../js/nostokuva.js';
+import { avaaChromium } from '../selain.mjs';
 
 /** Kortin yläreunan katto vaiheessa 2 (ks. tiedoston alku). */
 const YLAKATTO = NOSTOKUVA_MARGINAALI + NOSTOKUVA_YLAVARA;
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -132,7 +130,7 @@ const noudaVerkosta = (url) => {
   return valimuisti.get(url);
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 async function avaaSivu(nakyma, kosketus) {
   const ctx = await selain.newContext({

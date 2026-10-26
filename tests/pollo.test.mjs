@@ -47,6 +47,9 @@ import {
   vastauskuvanAihe,
 } from '../js/pollo.js';
 
+/** Järjestelmäkehote tekstinä: välimuistimerkitty lohkolista (28.9.2026) tai vanha merkkijono. */
+const systemTeksti = (s) => (Array.isArray(s) ? s.map((b) => b.text).join('') : String(s ?? ''));
+
 test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
   const pollo=Object.create(Pollo.prototype),ikkuna={innerWidth:390,innerHeight:844};
   const piilossa={getBoundingClientRect:()=>({left:0,top:0,width:0,height:0})};
@@ -59,6 +62,7 @@ test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
+import { nostonAihe } from '../js/fokusnosto.js';
 import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
 // Puheenvuoron jaon testi lukee tekstinsä paketista eikä kopioi sitä
 // tänne. Uuden kulun kaupungeissa repliikit on 7.9.2026 alkaen
@@ -75,6 +79,10 @@ import {
   lueLuku,
   luoJatkoSuodatin,
   paivaAvain,
+  ipTiiviste,
+  tiiviste,
+  opasPaivaAvain,
+  puhePaivaAvain,
   poimiEhdotukset,
   poimiJatkot,
   poimiSahkeTuomio,
@@ -418,11 +426,43 @@ test('lueNakyma astronautin kamerassa: ei kaupunkia, maata eikä matkapäivää'
   assert.ok(!kuvassa.includes('Doha'), kuvassa);
 });
 
+// Avoin linssi näkymärivillä (Päätoimittaja 1.10.2026): Ihmisen matkassa ei enää "kartta".
+test('lueNakyma avoimessa linssissä: "linssi auki: <nimi>", lehti voittaa', () => {
+  const doc = teeDoc({ lehti: teeLehti({ auki: false }) });
+  const ui = { linssiValittu: 'ihmisen-matka', linssiTuki: { kaikki: [{ tunnus: 'ihmisen-matka', nimi: 'Ihmisen matka' }] } };
+  const linssissa = lueNakyma({ game: teeGame(), ui, doc });
+  assert.ok(linssissa.includes('Näkymä: linssi auki: Ihmisen matka'), linssissa);
+  assert.ok(!linssissa.includes('Näkymä: kartta'), linssissa);
+  // Ilman ladattua linssilistaa tunnus kelpaa nimeksi.
+  assert.ok(lueNakyma({ game: teeGame(), ui: { linssiValittu: 'radio' }, doc }).includes('Näkymä: linssi auki: radio'));
+  const lehdessa = lueNakyma({ game: teeGame(), ui, doc: teeDoc({ lehti: teeLehti({ auki: true }) }) });
+  assert.ok(lehdessa.includes('Näkymä: kaupungin lehti auki'), lehdessa);
+});
+
 test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   const kartalla = lueNakyma({ game: teeGame(), doc: teeDoc({ lehti: teeLehti({ auki: false }) }) });
   assert.ok(kartalla.includes('Näkymä: kartta'));
   assert.ok(!kartalla.includes(JUTUN_TEKSTI));
   assert.equal(lueNakyma({ game: null, doc: teeDoc() }), 'Näkymä: kartta');
+});
+
+/*
+ * OMISTAJAN LÖYDÖS 30.9.2026 (TF 1.1 (78)): Segovian akvedukti → "Miten
+ * akveduktin ikä selvitettiin?" → pulu ei tiennyt, mistä akveduktista on
+ * kyse. Kortti antaa aiheensa kysymyksen mukana (polloKysy aihe), koska
+ * täkynoston kortti sulkeutuu ennen kysymystä.
+ */
+test('lueNakyma: kortin aihe kulkee kysymyksen mukana, avoin tietoruutu voittaa', () => {
+  const aihe = nostonAihe({ otsikko: 'Segovian akvedukti', ingressi: 'Roomalainen vesijohto.', teksti: 'Rakennettiin 100-luvulla.' });
+  const k = lueNakyma({ game: teeGame(), doc: teeDoc(), aihe });
+  assert.ok(k.includes('Kortti, josta pelaaja kysyy: Segovian akvedukti'), k);
+  assert.ok(k.includes('Tietoruudun teksti: Roomalainen vesijohto. Rakennettiin 100-luvulla.'), k);
+  assert.ok(k.includes('Näkymä: kartta'));
+  const ui = { fokuskohdeAuki: { kohde: { nimi: 'Alhambra', tyyppi: 'palatsi', teksti: 'Nasridien palatsi.' } } };
+  const auki = lueNakyma({ game: teeGame(), ui, doc: teeDoc(), aihe });
+  assert.ok(auki.includes('Kartalla auki oleva kohdetietoruutu: Alhambra (palatsi)'), auki);
+  assert.ok(!auki.includes('Segovian'));
+  assert.equal(nostonAihe({}), null);
 });
 
 /* ---------------------------------------------------------------- */
@@ -680,8 +720,12 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
     'workerin kehyslajit puuttuvat');
   assert.ok(/KEHYS_LAJIT\.has\(arvo\) \? arvo : 'aloitus'/.test(kehote),
     'tuntematon kehyslaji ei putoa aloitukseen — vanha peli rikkoutuisi');
-  assert.ok(/kehysOhje\(kehysLaji\(runko\?\.kehys\)\)/.test(kehote),
+  // Kehote kootaan pulunKehote-funktiossa (28.9.2026: yhteinen chatille ja
+  // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
+  assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
+  assert.ok(/pulunKehote(?:Osat)?\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+    'chat ei välitä kehyslajia kehotteelle');
 });
 
 /*
@@ -824,15 +868,29 @@ test('päiväraja ja kuukausibudjetti pysäyttävät omilla viesteillään', () 
   assert.equal(tarkistaRajat({ paiva: 99999, paivaraja: 0, kuukausiraja: 0 }).ok, true);
 });
 
-test('päiväavain ei sisällä raakaa IP-osoitetta ja on vakaa vuorokauden ajan', () => {
+test('päiväavain ei sisällä raakaa IP-osoitetta ja on vakaa vuorokauden ajan', async () => {
   const aamu = new Date('2026-08-12T06:00:00Z');
   const ilta = new Date('2026-08-12T23:30:00Z');
   const huomenna = new Date('2026-08-13T06:00:00Z');
-  const a = paivaAvain('203.0.113.7', aamu);
-  assert.ok(!a.includes('203.0.113.7'), 'avaimessa oli raaka IP');
-  assert.equal(a, paivaAvain('203.0.113.7', ilta));
-  assert.notEqual(a, paivaAvain('203.0.113.7', huomenna));
-  assert.notEqual(a, paivaAvain('203.0.113.8', aamu));
+  for (const suola of ['', 'testisuola-1']) {
+    const a = await paivaAvain('203.0.113.7', aamu, suola);
+    assert.ok(!a.includes('203.0.113.7'), 'avaimessa oli raaka IP');
+    assert.equal(a, await paivaAvain('203.0.113.7', ilta, suola));
+    assert.notEqual(a, await paivaAvain('203.0.113.7', huomenna, suola));
+    assert.notEqual(a, await paivaAvain('203.0.113.8', aamu, suola));
+  }
+});
+
+test('IP-tiiviste suolataan salaisuudella (#4326): 8 heksamerkkiä, suola vaihtaa tiivisteen, ilman suolaa vanha FNV-1a', async () => {
+  const ip = '203.0.113.7';
+  assert.equal(await ipTiiviste(ip, ''), tiiviste(ip));
+  const a = await ipTiiviste(ip, 'testisuola-1');
+  assert.match(a, /^[0-9a-f]{8}$/);
+  assert.notEqual(a, tiiviste(ip));
+  assert.equal(a, await ipTiiviste(ip, 'testisuola-1'));
+  assert.notEqual(a, await ipTiiviste(ip, 'testisuola-2'));
+  assert.match(await opasPaivaAvain(ip, new Date('2026-10-10T08:00:00Z'), 'testisuola-1'), /^opas:p3:2026-10-10:[0-9a-f]{8}$/);
+  assert.match(await puhePaivaAvain(ip, new Date('2026-10-10T08:00:00Z'), 'testisuola-1'), /^puhe:p:2026-10-10:[0-9a-f]{8}$/);
 });
 
 test('CORS päästää läpi vain listatut originit', () => {
@@ -1331,6 +1389,28 @@ test('luennalle annetaan vain valmiit virkkeet', () => {
   assert.equal(luettavaRaja('Entä sitten? Kuka'), 'Entä sitten? '.length);
   // Rivin viimeinen virke kelpaa ilman perässä olevaa välilyöntiä.
   assert.equal(luettavaRaja('Valmis virke.'), 'Valmis virke.'.length);
+});
+
+test('ensimmäinen pala lähtee ennen virkkeen loppua: tauko ≥ 3 sanan jälkeen tai 8 sanaa (28.9.2026)', () => {
+  const alku = { alku: true };
+  // Virkkeen raja voittaa aina.
+  assert.equal(luettavaRaja('Tuota niin. Pariisi on', alku), 'Tuota niin. '.length);
+  // Pilkku, jota ennen on ≥ 3 sanaa ja jonka perässä tyhjä.
+  const pilkku = 'Eiffel-torni rakennettiin vuonna 1889, koska Pariisi halusi';
+  assert.equal(pilkku.slice(0, luettavaRaja(pilkku, alku)), 'Eiffel-torni rakennettiin vuonna 1889, ');
+  // Liian aikainen pilkku ei kelpaa; ajatusviiva omana sananaan kelpaa.
+  const viiva = 'No, Pariisi on kaupunki – ja kuinka';
+  assert.equal(viiva.slice(0, luettavaRaja(viiva, alku)), 'No, Pariisi on kaupunki – ');
+  // Kahdeksan kokonaista sanaa; puolikas sana (ei tyhjää perässä) ei lähde.
+  const pitka = 'Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjailijoiden koti';
+  assert.equal(pitka.slice(0, luettavaRaja(pitka, alku)), 'Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjailijoiden ');
+  assert.equal(luettavaRaja('Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjail', alku), 0);
+  // Irrallinen viiva ei ole sana: seitsemän sanaa + viiva ei vielä riitä kahdeksaan.
+  assert.equal(luettavaRaja('yksi kaksi – kolme neljä viisi kuusi seitsemän kah', alku), 0);
+  // Ilman alku-lippua sääntö on ennallaan (vain virkkeet).
+  assert.equal(luettavaRaja(pilkku), 0);
+  // Avoin [[ katkaisee myös ensimmäisen palan.
+  assert.equal(luettavaRaja('Siellä asui [[Wolfgang Amadeus Mozart ja muita', alku), 0);
 });
 
 test('avoin käsitemerkintä pidättää luennan sulkuun asti', () => {
@@ -1902,7 +1982,7 @@ test('injektio ei mene läpi ilman mallia eikä mallin selityksen mukana', async
 
   // Pelaajan teksti kulki kehotteessa DATANA, ei ohjeena, eikä oikea
   // vastaus tullut asiakkaalta: kehote on palvelimen omistama.
-  assert.match(totteleva.pyynto.system, /DATANA/);
+  assert.match(systemTeksti(totteleva.pyynto.system), /DATANA/);
   assert.equal(totteleva.pyynto.messages.length, 1);
   assert.equal(totteleva.pyynto.messages[0].role, 'user');
   assert.match(totteleva.pyynto.messages[0].content, /^<<<VASTAUS>>>/);
@@ -1919,7 +1999,7 @@ test('sähkereitti välittää mallin tiukan tuomion sellaisenaan', async () => 
     '{"kohde_oikein":true,"vuosi_oikein":true}',
   );
   assert.deepEqual(osui.data, { tulkittu: true, kohde: true, vuosi: true });
-  assert.match(osui.pyynto.system, /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
+  assert.match(systemTeksti(osui.pyynto.system), /1974/, 'Sofian oikea vuosi ei mennyt kehotteeseen');
 
   const puolittain = await ajaSahke(
     { id: 'sofia-varna', vastaus: 'Varna, joskus 70-luvulla' },
@@ -2164,15 +2244,23 @@ function malliVastaus(teksti, stop = 'end_turn') {
  *   kertavastaukset (ensimmäinen, sitten uusinta) — tai `kertaVirhe` =
  *   tilakoodi, jolla kertavastaus kaatuu.
  */
-async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} } = {}) {
+async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {}, ctx = {} } = {}) {
   const alkuperainenFetch = globalThis.fetch;
   const alkuperainenLoki = console.log;
   const kutsut = [];
   const lokit = [];
   const kertavastaukset = Array.isArray(kerta) ? [...kerta] : [kerta ?? malliVastaus('')];
   let kertaNro = 0;
+  const taydennykset = [];
   globalThis.fetch = async (osoite, asetukset) => {
     const pyydetty = JSON.parse(asetukset.body);
+    // Jatkokysymysten täydennys (tasan 2, 5.10.2026) on oma pieni kutsunsa: erikseen, ei kuluta kertavastauksia.
+    if (JSON.stringify(pyydetty.system ?? '').includes('Keksi täsmälleen kaksi lyhyttä jatkokysymystä')) {
+      taydennykset.push(pyydetty);
+      return new Response(JSON.stringify(malliVastaus('Mikä täydennys yksi?\nMikä täydennys kaksi?')), {
+        status: 200, headers: { 'content-type': 'application/json' },
+      });
+    }
     kutsut.push(pyydetty);
     if (pyydetty.stream) {
       return new Response(sseVirta(virta ?? []), {
@@ -2188,7 +2276,7 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} 
   };
   console.log = (...osat) => { lokit.push(osat.join(' ')); };
   try {
-    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, {});
+    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, ctx);
     const teksti = await vastaus.text();
     const sse = /event-stream/.test(vastaus.headers.get('content-type') ?? '');
     return {
@@ -2196,7 +2284,9 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} 
       tapahtumat: sse ? lueSse(teksti) : [],
       data: sse ? null : JSON.parse(teksti),
       kutsut,
+      taydennykset,
       lokit,
+      otsakkeet: vastaus.headers,
     };
   } finally {
     globalThis.fetch = alkuperainenFetch;
@@ -2226,6 +2316,25 @@ test('tyhjän syyluokka ratkaisee, yritetäänkö uudelleen', () => {
   }
 });
 
+test('striimi: Server-Timing kertoo rajat/malli, laskurien KV-kirjoitus waitUntilissa (28.9.2026)', async () => {
+  const taustalla = [];
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      { laji: 'content_block_delta', data: { type: 'content_block_delta', delta: { type: 'text_delta', text: 'Tuota niin.' } } },
+      { laji: 'message_stop', data: { type: 'message_stop' } },
+    ],
+    ctx: { waitUntil: (lupaus) => taustalla.push(lupaus) },
+  });
+  assert.equal(ajo.tila, 200);
+  assert.match(ajo.otsakkeet.get('server-timing') ?? '', /^rajat;dur=\d+, malli;dur=\d+$/);
+  assert.match(ajo.otsakkeet.get('access-control-expose-headers') ?? '', /server-timing/);
+  // Laskurit kirjoitetaan mallikutsun rinnalla, eivät ennen sitä.
+  assert.ok(taustalla.length >= 1, 'KV-kirjoitus ei mennyt waitUntiliin');
+  await Promise.all(taustalla);
+});
+
 test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async () => {
   const ajo = await ajaChat({
     runko: { striimi: true },
@@ -2239,12 +2348,13 @@ test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async (
   assert.equal(ajo.kutsut[0].stream, true);
   assert.equal(ajo.kutsut[1].stream, undefined, 'uusinta pitää tehdä kertavastauksena');
   // Sama kehote ja samat viestit: uusinta ei ole uusi kysymys.
-  assert.equal(ajo.kutsut[1].system, ajo.kutsut[0].system);
+  assert.deepEqual(ajo.kutsut[1].system, ajo.kutsut[0].system);
   assert.deepEqual(ajo.kutsut[1].messages, ajo.kutsut[0].messages);
 
   assert.deepEqual(loppu(ajo), {
     vastaus: 'Sparta oli Lakonian kaupunkivaltio.',
-    jatkot: ['Kuka oli Lykurgos?'],
+    // Tasan kaksi jatkoa (5.10.2026): mallin yksi + täydennys.
+    jatkot: ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?'],
     syy: null,
   });
 });
@@ -2303,7 +2413,7 @@ test('kertavastauspolku käsittelee tyhjän samalla tavalla', async () => {
   });
   assert.equal(onnistui.kutsut.length, 2, 'tyhjää kertavastausta ei yritetty uudelleen');
   assert.deepEqual(onnistui.data, {
-    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: [], syy: null,
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?'], syy: null,
   });
 
   // Kaksi tyhjää peräkkäin: rehellinen teksti, ei osaamattomuutta.
@@ -2604,6 +2714,10 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Haiku 5.5 (testimalli, kulut.js): ajattelu pois, muuten 700 tokenin katto kuluu ajatteluun (8.10.2026).
+  assert.deepEqual(ajatteluKentat('claude-haiku-5-5'), { thinking: { type: 'disabled' } });
+  // Sonnet 5.5: `disabled` = 400, pienin tila on ajattelu vain työkalujen välissä.
+  assert.deepEqual(ajatteluKentat('claude-sonnet-5-5'), { thinking: { type: 'between_tools' } });
   // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
   for (const malli of ['claude-fable-5-1', 'claude-mythos-5-1', 'claude-opus-5-5']) {
     assert.deepEqual(ajatteluKentat(malli), { output_config: { effort: 'low' } }, malli);
@@ -2614,7 +2728,7 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   });
   const sonnet = await (async () => {
     const vanha = SAHKE_ENV.POLLO_MALLI;
-    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5';
+    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5-5';
     try {
       return await ajaChat({ runko: { striimi: true }, virta: [palaksi('Sparta.'), pysahdys('end_turn')] });
     } finally {
@@ -2622,8 +2736,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
     }
   })();
   assert.equal(ajo.kutsut[0].thinking, undefined, 'Haiku-oletus ei saa thinking-kenttää');
-  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'disabled' });
-  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5');
+  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'between_tools' });
+  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5-5');
 });
 
 test('kesken sanan katkennut teksti leikataan viimeiseen kokonaiseen virkkeeseen', () => {
@@ -2751,7 +2865,7 @@ test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eik
   const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit', 'opas', 'opaskysy']);
   assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
   for (const tehtava of ['kuva', 'tila']) {
     const v = await pyynto({ tehtava });
@@ -2835,4 +2949,160 @@ test('worker: natiivin chat kuluttaa samaa 30/vrk per IP -rajaa kuin selain', as
   } finally {
     globalThis.fetch = alkuperainen;
   }
+});
+
+test('worker: puhevastaus kertoo moottorin ja lähteen otsakkeissa (xai, varapolku openai)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const alkuperainen = globalThis.fetch;
+  let xaiKaatuu = false;
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('api.x.ai') && xaiKaatuu) return new Response('ei', { status: 500 });
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app', XAI_API_KEY: 'x', OPENAI_API_KEY: 'o' };
+  const pyynto = () => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app' },
+    body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei maailma.', persoona: 'kertoja' }),
+  }), env, {});
+  try {
+    const xai = await pyynto();
+    assert.equal(xai.status, 200);
+    assert.equal(xai.headers.get('x-puhe-moottori'), 'xai');
+    assert.equal(xai.headers.get('x-puhe-lahde'), 'generoitu');
+    assert.match(xai.headers.get('access-control-expose-headers') ?? '', /x-puhe-moottori/);
+    xaiKaatuu = true;
+    const vara = await pyynto();
+    assert.equal(vara.status, 200);
+    assert.equal(vara.headers.get('x-puhe-moottori'), 'openai', 'varapolku kertoo oikean moottorin');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
+test('julkaisun puhemoottoritarkistus: vaatii elevenin (oletus 5.10.2026), uusii kunnes salaisuus on levinnyt', async () => {
+  const { tarkistaPuhemoottori } = await import('../tools/pollo/tarkista-puhemoottori.mjs');
+  const vastaus = (moottori) => new Response(new Uint8Array([1]), { status: 200, headers: { 'x-puhe-moottori': moottori } });
+  const jono = ['xai', 'eleven'];
+  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', undefined, { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
+  assert.equal(ok.ok, true);
+  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'eleven', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('xai') });
+  assert.equal(ei.ok, false);
+  assert.equal(ei.moottori, 'xai', 'xAI-varapolku ei kelpaa julkaisun tarkistukseen');
+});
+
+test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (omistaja 27.9.2026)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const alkuperainen = globalThis.fetch;
+  const aanet = [];
+  globalThis.fetch = async (osoite, init) => {
+    if (String(osoite).includes('api.x.ai')) aanet.push(JSON.parse(init.body).voice_id ?? JSON.parse(init.body).voice);
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app', XAI_API_KEY: 'x', OPENAI_API_KEY: 'o' };
+  const pyynto = (aani) => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app' },
+    body: JSON.stringify({ tehtava: 'puhe', teksti: 'Hei maailma.', persoona: 'kertoja', aani }),
+  }), env, {});
+  try {
+    assert.equal((await pyynto('eve')).status, 200);
+    assert.equal((await pyynto('ei-aani')).status, 200);
+    assert.deepEqual(aanet, ['eve', 'ara'], 'listan ääni kelpaa, tuntematon palaa oletukseen');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
+test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026)', async () => {
+  const { PUHE_PAIVARAJA_OLETUS, PUHE_KUUKAUSIRAJA_OLETUS, tarkistaPuheRajat } = await import('../tools/pollo/rajat.js');
+  assert.equal(PUHE_PAIVARAJA_OLETUS, 400000);
+  assert.equal(PUHE_KUUKAUSIRAJA_OLETUS, 6000000);
+  assert.equal(tarkistaPuheRajat({ paiva: 399999, kuukausi: 0 }).ok, true);
+  assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
+});
+
+test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimuistirajan jälkeen (28.9.2026)', async () => {
+  const { default: worker, LUETTAVAN_ALKU } = await import('../tools/pollo/worker.js');
+  const env = { ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app' };
+  const rungot = [];
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async (_osoite, asetukset) => {
+    rungot.push(JSON.parse(asetukset.body));
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.\nJATKOT:\nMissä Pariisi on?\nKuka asui Pariisissa?' }] }),
+      { status: 200, headers: { 'content-type': 'application/json' } });
+  };
+  try {
+    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 },
+      { kysymys: 'Entä Louvre?', kehys: 'jatko' }]) {
+      const v = await worker.fetch(new Request('https://pollo.example/', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
+        body: JSON.stringify(runko),
+      }), env, {});
+      assert.equal(v.status, 200);
+    }
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+  const [kirjoitettu, luettava, jatko] = rungot.map((r) => r.system);
+  // K3 (8.10.2026): pohja + äänitagit välimuistilohkoina, kehyslaji (ja alkuohje) rajan jälkeen ilman välimuistia.
+  assert.equal(kirjoitettu.length, 3, 'pohja, äänitagit, kehys');
+  assert.deepEqual(kirjoitettu.map((l) => Boolean(l.cache_control)), [true, true, false]);
+  assert.match(kirjoitettu[2].text, /VASTAUKSEN LAJI: UUDEN AIHEEN/);
+  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje kehyksen perässä rajan jälkeen.
+  assert.deepEqual(luettava.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.ok(luettava[2].text.endsWith(LUETTAVAN_ALKU) && !luettava[2].cache_control);
+  // Kehyslajin vaihto (uusi → jatko) ei muuta välimuistilohkoja: ei uutta 14 k:n kirjoitusta.
+  assert.deepEqual(jatko.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.match(jatko[2].text, /VASTAUKSEN LAJI: JATKOKYSYMYS/);
+});
+
+test('Pulun taustatieto: valmis vastaus kontekstiin, ei näytettäväksi (omistaja 5.10.2026 klo 16.4x)', async () => {
+  const ajo = await ajaChat({
+    runko: {
+      kysymys: 'Mikä on Etna?',
+      taustatieto: [{ teksti: 'Etna on Euroopan aktiivisin tulivuori.', lahde: { url: 'https://fi.wikipedia.org/wiki/Etna', title: 'Wikipedia' } },
+        { teksti: 'Toinen', lahde: { url: 'javascript:alert(1)' } }],
+    },
+    kerta: malliVastaus('Etna on Sisilian tulivuori.\nJATKOT:\nKuinka korkea Etna on?\nMilloin Etna purkautui viimeksi?'),
+  });
+  assert.equal(ajo.tila, 200);
+  const konteksti = ajo.kutsut[0].messages[0].content;
+  assert.match(konteksti, /PULUN TAUSTATIETO/);
+  assert.match(konteksti, /Etna on Euroopan aktiivisin tulivuori\./);
+  assert.match(konteksti, /Lähde: Wikipedia, https:\/\/fi\.wikipedia\.org\/wiki\/Etna/);
+  assert.doesNotMatch(konteksti, /javascript:/, 'vain https-lähde kelpaa');
+  assert.equal(ajo.data.vastaus, 'Etna on Sisilian tulivuori.');
+  assert.deepEqual(ajo.data.jatkot, ['Kuinka korkea Etna on?', 'Milloin Etna purkautui viimeksi?']);
+  assert.equal(ajo.taydennykset.length, 0, 'kaksi jatkoa: ei täydennystä');
+});
+
+test('jatkokysymyksiä tasan kaksi: vajaa lohko täydennetään, ylimääräiset karsitaan (5.10.2026)', async () => {
+  const vajaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.\nJATKOT:\nKuka oli Lykurgos?'),
+  });
+  assert.deepEqual(vajaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
+  assert.equal(vajaa.taydennykset.length, 1);
+  const ilman = await ajaChat({ runko: { kysymys: 'Mikä oli Sparta?' }, kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.') });
+  assert.deepEqual(ilman.data.jatkot, ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?']);
+  const liikaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli valtio.\nJATKOT:\nKuka oli Lykurgos?\nMikä oli helootti?\nMissä Sparta oli?'),
+  });
+  assert.deepEqual(liikaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä oli helootti?']);
+  assert.equal(liikaa.taydennykset.length, 0);
+  // Striimissä sama takuu loppu-tapahtumassa.
+  const virta = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?', striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      ...['Sparta oli valtio.\n', 'JATKOT:\n', 'Kuka oli Lykurgos?\n'].map((teksti) => ({
+        laji: 'content_block_delta', data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+      })),
+      { laji: 'message_stop', data: { type: 'message_stop' } },
+    ],
+  });
+  assert.deepEqual(loppu(virta).jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
 });

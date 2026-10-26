@@ -1,0 +1,934 @@
+{
+ "kaupunki": "Zagreb",
+ "id": "zagreb",
+ "versio": 1,
+ "aaneton": true,
+ "tarkistettu": "2026-10-16",
+ "avaus": {
+  "teksti": "Tervetuloa Zagrebiin. Ylhäältä kaupunki levittäytyy Medvednica-vuoren etelärinteiden ja Sava-joen tasangon väliin: vanhat kukkulakaupungit Gradec ja Kaptol nousevat alakaupungin säännöllisen katuverkon pohjoispuolelle, ja vuoren harjalla häämöttää TV-torni. Pohjoisesta, vuoren suunnasta, käy tuuli, ja se kuljettaa koriamme hitaasti kohti kaupungin sydäntä. Kierros alkaa Ban Jelačićin aukiolta, jossa nousee ratsastajapatsas ja itälaidalla on suihkulähde."
+ },
+ "kierros": [
+  "Q377002",
+  "Q312220",
+  "Q603560",
+  "Q1637186",
+  "Q2986837",
+  "Q268151",
+  "Q612619",
+  "Q391613"
+ ],
+ "kohteet": [
+  {
+   "id": "Q377002",
+   "nimi": "Ban Jelačićin aukio",
+   "kuvaus": "Zagrebin pääaukio ja tapaamispaikka",
+   "luokka": "aukio",
+   "koko_m": 230,
+   "teksti": "Ban Jelačićin aukio on Zagrebin pääaukio, ja ylhäältä sen erottaa avoimena tilana, jonka halki kulkevat raitiovaunut. Aukiota kutsuttiin aluksi nimellä Harmica, koska siellä pidettiin markkinoita ja myyjät maksoivat tavaroistaan veroa. Aukio mainitaan markkinapaikkana ensimmäisen kerran vuonna 1641. Vuonna 1848 se sai nykyisen nimensä Kroatian banin Josip Jelačićin mukaan. Aukion keskellä seisoo hänen ratsastajapatsaansa, jonka itävaltalainen kuvanveistäjä Anton Fernkorn teki ja joka pystytettiin vuonna 1866. Kommunistiviranomaiset veivät patsaan pois 1940-luvulla, ja se palasi aukiolle vuonna 1990.",
+   "lyhyt": "Patsas katsoi aluksi pohjoiseen, mutta kun se palasi aukiolle, se käännettiin katsomaan etelään. Aukion itälaidalla on suihkulähde, joka muistuttaa Manduševac-lähteestä. Legendan mukaan sotapäällikkö pyysi tyttöä ammentamaan vettä lähteestä, ja kaupungin nimi syntyi kroatian sanasta zagrabiti, ammentaa.",
+   "syventava": "Kuka oli Josip Jelačić?",
+   "kysymykset": [
+    "Mitä aukion vanha nimi Harmica tarkoitti?",
+    "Kuka teki Jelačićin ratsastajapatsaan?",
+    "Minkä muistoksi aukion itälaidan suihkulähde on tehty?",
+    "Missä patsas säilytettiin, kun se oli poissa aukiolta?",
+    "Mikä oli aukion nimi kommunismin aikana?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Aukio oli markkinapaikka nimeltä Harmica; nimi viittaa markkinoilla perittyyn veroon.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Aukio oli markkinapaikka nimeltä Harmica; nimi viittaa markkinoilla perittyyn veroon.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Vuonna 1641 aukio otettiin kaupungin markkinapaikaksi.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Vuonna 1641 aukio otettiin kaupungin markkinapaikaksi.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Aukio nimettiin uudelleen banin Josip Jelačićin mukaan vuonna 1848.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Aukio nimettiin uudelleen banin Josip Jelačićin mukaan vuonna 1848.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Ratsastajapatsaan teki Anton Fernkorn, ja se pystytettiin vuonna 1866.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Ratsastajapatsaan teki Anton Fernkorn, ja se pystytettiin vuonna 1866.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Ratsastajapatsaan teki Anton Fernkorn, ja se pystytettiin vuonna 1866.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    },
+    {
+     "vaite": "Kommunistiviranomaiset poistivat patsaan 1940-luvulla ja se palautettiin vuonna 1990.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Kommunistiviranomaiset poistivat patsaan 1940-luvulla ja se palautettiin vuonna 1990.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Kommunistiviranomaiset poistivat patsaan 1940-luvulla ja se palautettiin vuonna 1990.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    },
+    {
+     "vaite": "Raitiovaunut kulkevat aukion kautta.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Raitiovaunut kulkevat aukion kautta.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    },
+    {
+     "vaite": "Palatessaan patsas käännettiin katsomaan etelään.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Palatessaan patsas käännettiin katsomaan etelään.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Palatessaan patsas käännettiin katsomaan etelään.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    },
+    {
+     "vaite": "Manduševac-suihkulähde on aukion itälaidalla.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Manduševac-suihkulähde on aukion itälaidalla.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Legenda tytöstä Mandasta, joka ammensi vettä sotapäällikölle, ja kaupungin nimen synty sanasta zagrabiti.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/ban-jelacic-square"
+    },
+    {
+     "vaite": "Legenda tytöstä Mandasta, joka ammensi vettä sotapäällikölle, ja kaupungin nimen synty sanasta zagrabiti.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    },
+    {
+     "vaite": "Patsas säilytettiin Gliptotekan kellarissa poistamisen ajan; aukion nimi oli 1946-1990 Tasavallan aukio.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Patsas säilytettiin Gliptotekan kellarissa poistamisen ajan; aukion nimi oli 1946-1990 Tasavallan aukio.",
+     "url": "https://entercroatia.com/cities/zagreb/ban-jelacic-square/"
+    }
+   ]
+  },
+  {
+   "id": "Q312220",
+   "nimi": "Zagrebin katedraali",
+   "kuvaus": "Kaptolin neogoottilainen tuomiokirkko",
+   "luokka": "kirkko",
+   "koko_m": 85,
+   "korkeus_m": 108,
+   "katse_suunta": 90,
+   "katse_kaari": 30,
+   "teksti": "Zagrebin katedraalin kaksi hoikkaa tornia kohoavat Kaptolin kukkulalla, ja pallokorista ne erottuvat kauas. Kirkko on pyhitetty Neitsyt Marian taivaaseenottamiselle sekä pyhille Tapanille ja Ladislaukselle. Ensimmäinen suuri katedraali valmistui vuonna 1217, mutta mongolit tuhosivat sen vuonna 1242. Myöhemmin Kaptolin ympärille rakennettiin turkkilaisia vastaan muurit ja tornit. Vuonna 1880 maanjäristys romahdutti kirkon päälaivan, ja arkkitehti Hermann Bollé johti jälleenrakennusta uusgoottilaiseen tyyliin. Ennen vuotta 2020 tornit olivat yli sata metriä korkeat.",
+   "lyhyt": "Maaliskuun 22. päivänä 2020 maanjäristys vaurioitti katedraalin torneja, ja eteläisen tornin huippu putosi viereisen arkkipiispanpalatsin katolle. Pohjoisen tornin vaurioitunut yläosa poistettiin turvallisuussyistä 17. huhtikuuta 2020.",
+   "syventava": "Miksi Bollé valitsi jälleenrakennuksessa uusgoottilaisen tyylin?",
+   "kysymykset": [
+    "Milloin katedraalin ensimmäinen suuri versio valmistui?",
+    "Mitä mongolit tekivät katedraalille vuonna 1242?",
+    "Miksi Kaptolin ympärille rakennettiin muureja ja torneja?",
+    "Mitä tapahtui eteläisen tornin huipulle maaliskuussa 2020?",
+    "Kenen kunniaksi katedraali on pyhitetty?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraali on pyhitetty Neitsyt Marian taivaaseenottamiselle sekä pyhille Tapanille ja Ladislaukselle.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Katedraali on pyhitetty Neitsyt Marian taivaaseenottamiselle sekä pyhille Tapanille ja Ladislaukselle.",
+     "url": "https://www.croatiatraveller.com/Zagreb_region/Cathedral.html"
+    },
+    {
+     "vaite": "Ensimmäinen suuri katedraali valmistui 1217 ja mongolit tuhosivat sen 1242.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Ensimmäinen suuri katedraali valmistui 1217 ja mongolit tuhosivat sen 1242.",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Ensimmäinen suuri katedraali valmistui 1217 ja mongolit tuhosivat sen 1242.",
+     "url": "https://www.croatiatraveller.com/Zagreb_region/Cathedral.html"
+    },
+    {
+     "vaite": "Kaptolin ympärille rakennettiin 1400-luvun lopulla ja 1500-luvun alussa muurit ja tornit ottomaanien uhkaa vastaan.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Kaptolin ympärille rakennettiin 1400-luvun lopulla ja 1500-luvun alussa muurit ja tornit ottomaanien uhkaa vastaan.",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Kaptolin ympärille rakennettiin 1400-luvun lopulla ja 1500-luvun alussa muurit ja tornit ottomaanien uhkaa vastaan.",
+     "url": "https://www.croatiatraveller.com/Zagreb_region/Cathedral.html"
+    },
+    {
+     "vaite": "Vuoden 1880 maanjäristys romahdutti päälaivan.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Vuoden 1880 maanjäristys romahdutti päälaivan.",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Hermann Bollé johti jälleenrakennusta uusgoottilaiseen tyyliin.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Hermann Bollé johti jälleenrakennusta uusgoottilaiseen tyyliin.",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Hermann Bollé johti jälleenrakennusta uusgoottilaiseen tyyliin.",
+     "url": "https://www.croatiatraveller.com/Zagreb_region/Cathedral.html"
+    },
+    {
+     "vaite": "Tornit olivat ennen vuotta 2020 yli sata metriä korkeat (noin 105-108 m lähteestä riippuen).",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Tornit olivat ennen vuotta 2020 yli sata metriä korkeat (noin 105-108 m lähteestä riippuen).",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Tornit olivat ennen vuotta 2020 yli sata metriä korkeat (noin 105-108 m lähteestä riippuen).",
+     "url": "https://www.croatiatraveller.com/Zagreb_region/Cathedral.html"
+    },
+    {
+     "vaite": "Maanjäristys 22.3.2020 vaurioitti torneja; eteläisen tornin huippu putosi arkkipiispanpalatsin katolle.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Maanjäristys 22.3.2020 vaurioitti torneja; eteläisen tornin huippu putosi arkkipiispanpalatsin katolle.",
+     "url": "https://dailyartmagazine.com/?p=130302",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Pohjoisen tornin vaurioitunut yläosa poistettiin 17.4.2020.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Pohjoisen tornin vaurioitunut yläosa poistettiin 17.4.2020.",
+     "url": "https://www.timeout.com/croatia/news/save-your-tears-for-the-cathedral-its-promise-is-a-greater-symbol-of-zagreb-than-its-towers-042220"
+    },
+    {
+     "vaite": "Pohjoisen tornin vaurioitunut yläosa poistettiin 17.4.2020.",
+     "url": "https://n1info.hr/english/news/a501517-tip-of-zagreb-cathedraland39s-north-spire-removed-after-being-damaged-in-earthquake/",
+     "huom": "hakutulos"
+    }
+   ]
+  },
+  {
+   "id": "Q603560",
+   "nimi": "Kivinen portti",
+   "kuvaus": "Yläkaupungin ainoa säilynyt portti",
+   "luokka": "portti",
+   "koko_m": 20,
+   "teksti": "Kivinen portti on Yläkaupungin holvikäytävä, jonka läpi vanha katu kulkee. Se on ainoa säilynyt portti Gradecin keskiaikaisesta kaupunginmuurista, ja se rakennettiin 1200-luvulla, kun Gradec oli saanut vapaan kuninkaallisen kaupungin aseman. Vuonna 1731 tulipalo tuhosi suuren osan Yläkaupungista. Raunioista löytyi Neitsyt Marian maalaus vahingoittumattomana, vain sen puinen kehys oli palanut. Leski rakennutti legendan mukaan maalauksen kunniaksi pienen alttarin portin holvin alle. Siellä ihmiset sytyttävät yhä kynttilöitä.",
+   "lyhyt": "Vuonna 1991 portin Jumalanäiti julistettiin Zagrebin suojelijaksi. Portin kapealla on kuvanveistäjä Ivo Kerdićin tekemä Dora Krupićin pronssipatsas. Hän on kirjailija August Šenoan vuonna 1871 julkaiseman historiallisen romaanin kultasepän tytär.",
+   "syventava": "Miksi juuri tämä Marian kuva tuli niin tärkeäksi zagrebilaisille?",
+   "kysymykset": [
+    "Mikä tuhosi suuren osan Yläkaupungista vuonna 1731?",
+    "Mikä osa Marian maalauksesta paloi tulipalossa?",
+    "Mitä Marian maalaus esittää?",
+    "Kuka teki Dora Krupićin patsaan?",
+    "Mikä Gradecin muurin osa on Kivinen portti?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kivinen portti on ainoa säilynyt Gradecin kaupunginportti.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Kivinen portti on ainoa säilynyt Gradecin kaupunginportti.",
+     "url": "https://www.lovezagreb.hr/topics/heartbeat-of-zagreb/spooky-legends-of-zagreb"
+    },
+    {
+     "vaite": "Portti on peräisin 1200-luvulta.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Portti on peräisin 1200-luvulta.",
+     "url": "https://www.spottedbylocals.com/zagreb/?p=3063",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Gradec sai vuonna 1242 kultaisessa bullassa vapaan kuninkaallisen kaupungin aseman.",
+     "url": "https://en.wikipedia.org/wiki/Gornji_grad,_Zagreb"
+    },
+    {
+     "vaite": "Gradec sai vuonna 1242 kultaisessa bullassa vapaan kuninkaallisen kaupungin aseman.",
+     "url": "https://historichotelsofeurope.com/inspire-me/experiences/attractions/zagreb-upper-town/"
+    },
+    {
+     "vaite": "Vuoden 1731 tulipalo tuhosi suuren osan Yläkaupungista; Marian maalaus säilyi vahingoittumattomana ja vain puinen kehys paloi.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Vuoden 1731 tulipalo tuhosi suuren osan Yläkaupungista; Marian maalaus säilyi vahingoittumattomana ja vain puinen kehys paloi.",
+     "url": "https://www.lovezagreb.hr/topics/heartbeat-of-zagreb/spooky-legends-of-zagreb"
+    },
+    {
+     "vaite": "Vuoden 1731 tulipalo tuhosi suuren osan Yläkaupungista; Marian maalaus säilyi vahingoittumattomana ja vain puinen kehys paloi.",
+     "url": "https://www.absolute-croatia.com/travel-magazine/legend-of-the-stone-gate"
+    },
+    {
+     "vaite": "Leski antoi pystyttää alttarin portin holvin alle maalausta varten.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Leski antoi pystyttää alttarin portin holvin alle maalausta varten.",
+     "url": "https://www.absolute-croatia.com/travel-magazine/legend-of-the-stone-gate"
+    },
+    {
+     "vaite": "Portilla sytytetään kynttilöitä.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Portilla sytytetään kynttilöitä.",
+     "url": "https://www.lovezagreb.hr/topics/heartbeat-of-zagreb/spooky-legends-of-zagreb"
+    },
+    {
+     "vaite": "Maalaus esittää Marian ja lapsen.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Maalaus esittää Marian ja lapsen.",
+     "url": "https://www.absolute-croatia.com/travel-magazine/legend-of-the-stone-gate"
+    },
+    {
+     "vaite": "Portin Jumalanäiti julistettiin Zagrebin suojelijaksi vuonna 1991.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Portin Jumalanäiti julistettiin Zagrebin suojelijaksi vuonna 1991.",
+     "url": "https://www.absolute-croatia.com/travel-magazine/legend-of-the-stone-gate"
+    },
+    {
+     "vaite": "Dora Krupićin pronssipatsas on Ivo Kerdićin tekemä ja se on portin kapealla.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Dora Krupićin pronssipatsas on Ivo Kerdićin tekemä ja se on portin kapealla.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/public-monuments/dora-krupic"
+    },
+    {
+     "vaite": "Dora Krupić on August Šenoan romaanin (julkaistu 1871) kultasepän tytär.",
+     "url": "https://en.wikipedia.org/wiki/Stone_Gate"
+    },
+    {
+     "vaite": "Dora Krupić on August Šenoan romaanin (julkaistu 1871) kultasepän tytär.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/public-monuments/dora-krupic"
+    }
+   ]
+  },
+  {
+   "id": "Q1637186",
+   "nimi": "Pyhän Markuksen kirkko",
+   "kuvaus": "Yläkaupungin vaakunakattoinen kirkko",
+   "luokka": "kirkko",
+   "koko_m": 40,
+   "katse_suunta": 60,
+   "katse_kaari": 40,
+   "teksti": "Pyhän Markuksen kirkon värikäs katto erottuu kauas. Monivärisistä lasitetuista laatoista on muodostettu kaksi vaakunaa: toisessa on Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunta, toisessa Gradecin punaisella kilvellä oleva linna. Katto tehtiin 1870-luvun lopun ja 1880-luvun alun kunnostuksessa, jota johtivat wieniläinen Friedrich von Schmidt ja hänen työtoverinsa Hermann Bollé. Kirkon alkuperä on 1200-luvulla: sen etelämuurissa on yhä romaaninen ikkuna. 1300-luvun jälkipuoliskolla kirkko muutettiin kolmilaivaiseksi myöhäisgoottilaiseksi kirkoksi.",
+   "lyhyt": "Kirkon purkamista pohdittiin useaan otteeseen 1700- ja 1800-luvuilla, mutta lopulta se päätettiin korjata. 1900-luvun alkupuolen kunnostuksissa kirkkoon tuli kuvanveistäjä Ivan Meštrovićin töitä. Vuoden 2020 maanjäristys vaurioitti kirkkoa, ja korjauksen jälkeen siellä pidettiin ensimmäinen messu joulukuussa 2023.",
+   "syventava": "Miksi katon Zagrebin vaakuna on punainen, vaikka kaupungin nykyinen vaakuna on sininen?",
+   "kysymykset": [
+    "Mitkä kaksi vaakunaa kirkon katossa on?",
+    "Kuka johti kirkon kunnostusta 1800-luvun lopulla?",
+    "Mikä on kirkon vanhin säilynyt osa?",
+    "Millaiseksi kirkko muutettiin 1300-luvun jälkipuoliskolla?",
+    "Kuka kuvanveistäjä teki kirkkoon töitä 1900-luvun alkupuolella?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katossa on kaksi vaakunaa: Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunnan sekä Gradecin (Zagrebin) linnavaakuna.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Katossa on kaksi vaakunaa: Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunnan sekä Gradecin (Zagrebin) linnavaakuna.",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Katossa on kaksi vaakunaa: Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunnan sekä Gradecin (Zagrebin) linnavaakuna.",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    },
+    {
+     "vaite": "Gradecin vaakunan kilpi on katossa punainen.",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Gradecin vaakunan kilpi on katossa punainen.",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    },
+    {
+     "vaite": "Katto tehtiin kunnostuksessa, jota johtivat Friedrich von Schmidt ja Hermann Bollé (1870-luvun lopulta 1882).",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Katto tehtiin kunnostuksessa, jota johtivat Friedrich von Schmidt ja Hermann Bollé (1870-luvun lopulta 1882).",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Katto tehtiin kunnostuksessa, jota johtivat Friedrich von Schmidt ja Hermann Bollé (1870-luvun lopulta 1882).",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    },
+    {
+     "vaite": "Kirkko on peräisin 1200-luvulta; etelämuurissa on romaaninen ikkuna.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Kirkko on peräisin 1200-luvulta; etelämuurissa on romaaninen ikkuna.",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Kirkko on peräisin 1200-luvulta; etelämuurissa on romaaninen ikkuna.",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    },
+    {
+     "vaite": "1300-luvun jälkipuoliskolla kirkko rakennettiin uudelleen kolmilaivaiseksi myöhäisgoottilaiseksi kirkoksi.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "1300-luvun jälkipuoliskolla kirkko rakennettiin uudelleen kolmilaivaiseksi myöhäisgoottilaiseksi kirkoksi.",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Purkamista pohdittiin 1700- ja 1800-luvuilla, mutta kirkko korjattiin.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Purkamista pohdittiin 1700- ja 1800-luvuilla, mutta kirkko korjattiin.",
+     "url": "https://www.croatiaweek.com/the-story-of-st-marks-churchs-colourful-roof-in-zagreb/"
+    },
+    {
+     "vaite": "Ivan Meštrovićin töitä asennettiin kirkkoon 1900-luvun alkupuolen kunnostuksissa.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Ivan Meštrovićin töitä asennettiin kirkkoon 1900-luvun alkupuolen kunnostuksissa.",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    },
+    {
+     "vaite": "Vuoden 2020 maanjäristys vaurioitti kirkkoa; ensimmäinen messu korjauksen jälkeen joulukuussa 2023.",
+     "url": "https://en.wikipedia.org/wiki/St._Mark%27s_Church,_Zagreb"
+    },
+    {
+     "vaite": "Vuoden 2020 maanjäristys vaurioitti kirkkoa; ensimmäinen messu korjauksen jälkeen joulukuussa 2023.",
+     "url": "https://www.visit-croatia.co.uk/blog/spotlight-on-st-marks-church-zagreb/"
+    }
+   ]
+  },
+  {
+   "id": "Q2986837",
+   "nimi": "Lotrščakin torni",
+   "kuvaus": "Gradecin keskiaikainen vartiotorni",
+   "luokka": "torni",
+   "koko_m": 20,
+   "korkeus_m": 19,
+   "teksti": "Lotrščakin torni seisoo Yläkaupungin eteläreunalla, ja ylhäältä se erottuu kaupunginmuurin vanhana vartiotornina. Se valmistui 1200-luvulla, kun Gradecin muurien rakentaminen oli kestänyt noin kaksikymmentä vuotta. Torni vartioi eteläistä Dverce-porttia, joka purettiin vuonna 1812. Tornin nimi tulee latinan sanoista campana latrunculorum, ja sen kello soi iltaisin ennen kuin kaupungin portit suljettiin. Vuonna 1857 torniin lisättiin kaksi kerrosta ja katolle puinen palovartiotorni. Ylimmästä kerroksesta kuuluu nykyään joka päivä voimakas laukaus.",
+   "lyhyt": "Tornin Grič-kanuuna ampuu joka päivä keskipäivällä, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus antaa kaupungin kirkkojen kellonsoittajille merkin tarkasta puolesta päivästä, jotta kellot voi asettaa oikeaan aikaan. Tornin ylimmästä osasta avautuu näköala yli kaupungin.",
+   "syventava": "Miksi tornin kello soitettiin juuri ennen porttien sulkemista?",
+   "kysymykset": [
+    "Minä vuonna Lotrščakin torni valmistui?",
+    "Minkä portin tornin oli määrä vartioida?",
+    "Mitä tornille tehtiin vuonna 1857?",
+    "Milloin Grič-kanuuna ammuttiin ensimmäisen kerran?",
+    "Mitä latinankielinen nimi campana latrunculorum tarkoittaa?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni valmistui vuonna 1266 Gradecin muurien rakennustöiden päätteeksi.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Torni valmistui vuonna 1266 Gradecin muurien rakennustöiden päätteeksi.",
+     "url": "https://www.visitzagreb.hr/zagreb/lotrscak-tower-gric-cannon/"
+    },
+    {
+     "vaite": "Torni valmistui vuonna 1266 Gradecin muurien rakennustöiden päätteeksi.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/culture/galleries-and-art-collections/the-lotrscak-tower-en"
+    },
+    {
+     "vaite": "Torni vartioi eteläistä Dverce-porttia, joka purettiin 1812.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Torni vartioi eteläistä Dverce-porttia, joka purettiin 1812.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/culture/galleries-and-art-collections/the-lotrscak-tower-en"
+    },
+    {
+     "vaite": "Nimi campana latrunculorum tarkoittaa varkaiden kelloa, joka soi porttien sulkemisen merkiksi.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Nimi campana latrunculorum tarkoittaa varkaiden kelloa, joka soi porttien sulkemisen merkiksi.",
+     "url": "https://www.visitzagreb.hr/zagreb/lotrscak-tower-gric-cannon/"
+    },
+    {
+     "vaite": "Nimi campana latrunculorum tarkoittaa varkaiden kelloa, joka soi porttien sulkemisen merkiksi.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/culture/galleries-and-art-collections/the-lotrscak-tower-en"
+    },
+    {
+     "vaite": "Vuonna 1857 torniin lisättiin kaksi kerrosta ja puinen palovartiotorni.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Vuonna 1857 torniin lisättiin kaksi kerrosta ja puinen palovartiotorni.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/culture/galleries-and-art-collections/the-lotrscak-tower-en"
+    },
+    {
+     "vaite": "Grič-kanuuna ampuu päivittäin keskipäivällä; ensimmäinen laukaus 1.1.1877.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Grič-kanuuna ampuu päivittäin keskipäivällä; ensimmäinen laukaus 1.1.1877.",
+     "url": "https://www.lovezagreb.hr/topics/heartbeat-of-zagreb/once-upon-a-time-a-story-about-an-old-cannon-586bb2bf66776"
+    },
+    {
+     "vaite": "Laukaus antaa kirkkojen kellonsoittajille ajan merkin.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Laukaus antaa kirkkojen kellonsoittajille ajan merkin.",
+     "url": "https://www.lovezagreb.hr/topics/heartbeat-of-zagreb/once-upon-a-time-a-story-about-an-old-cannon-586bb2bf66776"
+    },
+    {
+     "vaite": "Tornin ylimmästä osasta on näköala kaupungin yli.",
+     "url": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+    },
+    {
+     "vaite": "Tornin ylimmästä osasta on näköala kaupungin yli.",
+     "url": "https://www.visitzagreb.hr/zagreb/lotrscak-tower-gric-cannon/"
+    }
+   ]
+  },
+  {
+   "id": "Q268151",
+   "nimi": "Kroatian kansallisteatteri",
+   "kuvaus": "Tasavallan aukion uusbarokkiteatteri",
+   "luokka": "teatteri",
+   "koko_m": 70,
+   "teksti": "Kroatian kansallisteatterin uusbarokkirakennus hallitsee Tasavallan aukion laitaa. Sen suunnittelivat wieniläiset teatteriarkkitehdit Ferdinand Fellner ja Hermann Helmer vuonna 1893. Paikka oli entinen markkina-alue. Rakentaminen kesti noin 16 kuukautta. Keisari Franz Joseph avasi teatterin 14. lokakuuta 1895 lyömällä symbolisen iskun hopeavasaralla, jonka kuvanveistäjä Robert Frangeš Mihanović oli tehnyt. Teatteri muutti uuteen taloon Yläkaupungin vanhasta teatterirakennuksesta. Talossa toimivat nykyään kansallisooppera, baletti ja draamateatteri.",
+   "lyhyt": "Teatterin edessä on Ivan Meštrovićin suihkulähde Elämän lähde, joka asennettiin paikalleen vuonna 1912. Pronssinen friisi kuvaa toisiinsa kietoutuneita alastomia hahmoja, jotka kurottavat vettä altaan reunan yli. Teatterin ensimmäinen koristeverho oli Vlaho Bukovacin maalaama Hrvatski preporod.",
+   "syventava": "Miksi teatteri rakennettiin vanhan markkina-alueen paikalle?",
+   "kysymykset": [
+    "Keitä olivat teatterin arkkitehdit?",
+    "Kuka avasi teatterin vuonna 1895?",
+    "Millä tyylillä teatterirakennus on tehty?",
+    "Kuka teki teatterin edessä olevan Elämän lähteen?",
+    "Minkä nimisen koristeverhon Vlaho Bukovac maalasi teatterille?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat rakennuksen 1893.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat rakennuksen 1893.",
+     "url": "https://hnk.hr/hr/o-nama/o-zgradi/povijest-zgrade"
+    },
+    {
+     "vaite": "Rakennus on tyyliltään uusbarokki.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Rakennus on tyyliltään uusbarokki.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/squares/the-square-of-the-republic-of-croatia"
+    },
+    {
+     "vaite": "Rakennus on tyyliltään uusbarokki.",
+     "url": "https://total-croatia-news.com/destinations/destination-zagreb/see-in-zagreb/the-croatian-national-theatre/"
+    },
+    {
+     "vaite": "Teatteri rakennettiin entiselle markkina-alueelle.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Teatteri rakennettiin entiselle markkina-alueelle.",
+     "url": "https://en.wikipedia.org/wiki/Republic_of_Croatia_Square"
+    },
+    {
+     "vaite": "Teatteri muutti uuteen taloon Yläkaupungin vanhasta teatterirakennuksesta.",
+     "url": "https://en.wikipedia.org/wiki/Republic_of_Croatia_Square"
+    },
+    {
+     "vaite": "Teatteri muutti uuteen taloon Yläkaupungin vanhasta teatterirakennuksesta.",
+     "url": "https://www.hnk.hr/en/about-us/about-building/the-history-of-the-building/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin 16 kuukautta.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Rakentaminen kesti noin 16 kuukautta.",
+     "url": "https://hnk.hr/hr/o-nama/o-zgradi/povijest-zgrade"
+    },
+    {
+     "vaite": "Keisari Franz Joseph avasi teatterin 14.10.1895 hopeavasaralla.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Keisari Franz Joseph avasi teatterin 14.10.1895 hopeavasaralla.",
+     "url": "https://hnk.hr/hr/o-nama/o-zgradi/povijest-zgrade"
+    },
+    {
+     "vaite": "Keisari Franz Joseph avasi teatterin 14.10.1895 hopeavasaralla.",
+     "url": "https://en.wikipedia.org/wiki/Croatian_National_Theatre_in_Zagreb"
+    },
+    {
+     "vaite": "Hopeavasaran teki kuvanveistäjä Robert Frangeš Mihanović.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Hopeavasaran teki kuvanveistäjä Robert Frangeš Mihanović.",
+     "url": "https://www.hnk.hr/en/about-us/about-building/the-history-of-the-building/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Talossa toimivat kansallisooppera, baletti ja draama.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/squares/the-square-of-the-republic-of-croatia"
+    },
+    {
+     "vaite": "Talossa toimivat kansallisooppera, baletti ja draama.",
+     "url": "https://total-croatia-news.com/destinations/destination-zagreb/see-in-zagreb/the-croatian-national-theatre/"
+    },
+    {
+     "vaite": "Meštrovićin Elämän lähde asennettiin teatterin eteen 1912.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/squares/the-square-of-the-republic-of-croatia"
+    },
+    {
+     "vaite": "Meštrovićin Elämän lähde asennettiin teatterin eteen 1912.",
+     "url": "https://en.wikipedia.org/wiki/Republic_of_Croatia_Square"
+    },
+    {
+     "vaite": "Meštrovićin Elämän lähde asennettiin teatterin eteen 1912.",
+     "url": "https://en.wikipedia.org/wiki/Croatian_National_Theatre_in_Zagreb"
+    },
+    {
+     "vaite": "Pronssinen friisi kuvaa kietoutuneita alastomia hahmoja, jotka kurottavat vettä.",
+     "url": "https://infozagreb.hr/en/explore-zagreb/attractions/squares/the-square-of-the-republic-of-croatia"
+    },
+    {
+     "vaite": "Pronssinen friisi kuvaa kietoutuneita alastomia hahmoja, jotka kurottavat vettä.",
+     "url": "https://total-croatia-news.com/destinations/destination-zagreb/see-in-zagreb/the-croatian-national-theatre/",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Ensimmäisen koristeverhon, Hrvatski preporod, maalasi Vlaho Bukovac.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Ensimmäisen koristeverhon, Hrvatski preporod, maalasi Vlaho Bukovac.",
+     "url": "https://hnk.hr/hr/o-nama/o-zgradi/povijest-zgrade"
+    }
+   ]
+  },
+  {
+   "id": "Q612619",
+   "nimi": "Zrinjevac",
+   "kuvaus": "Vihreän hevosenkengän ensimmäinen puisto",
+   "luokka": "puisto",
+   "koko_m": 240,
+   "teksti": "Zrinjevac on Alakaupungin puisto, ja ylhäältä sen erottaa vihreänä nauhana kaupungin rakennusten välistä. Puiston virallinen nimi on Nikola Šubić Zrinskin aukio. Zrinski oli entinen Kroatian ban, joka kuoli vuonna 1566 puolustaessaan Szigetvárin linnoitusta ottomaaneja vastaan. Puisto on Lenucin hevosenkengän eli Vihreän hevosenkengän ensimmäinen osa: Alakaupungin puistoaukioiden ketju kaartuu täältä etelään. Puiston keskellä on rautainen musiikkipaviljonki, jonka liikemies Eduard Prister lahjoitti kaupungille vuonna 1891.",
+   "lyhyt": "Puiston eteläosassa on rintakuvia kroatialaisista historian ja kulttuurin hahmoista. Meteorologinen pylväs on tehty Istrian marmorista, ja sen lahjoitti vuonna 1884 lääkäri Adolf Holzer. Alueella pidettiin ennen puistoa karjamarkkinoita ja muita markkinoita.",
+   "syventava": "Miksi Nikola Šubić Zrinski on Kroatiassa kansallissankari?",
+   "kysymykset": [
+    "Kuka lahjoitti Zrinjevacin musiikkipaviljongin?",
+    "Minä vuonna musiikkipaviljonki valmistui?",
+    "Kenen mukaan puisto on nimetty?",
+    "Mikä on Vihreä hevosenkenkä?",
+    "Kuka lahjoitti puiston meteorologisen pylvään?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puiston virallinen nimi on Nikola Šubić Zrinskin aukio.",
+     "url": "https://en.wikipedia.org/wiki/Zrinjevac_(Zagreb)"
+    },
+    {
+     "vaite": "Puiston virallinen nimi on Nikola Šubić Zrinskin aukio.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Zrinski kuoli 1566 Szigetvárin puolustuksessa ottomaaneja vastaan; hän oli Kroatian ban.",
+     "url": "https://en.wikipedia.org/wiki/Nikola_%C5%A0ubi%C4%87_Zrinski"
+    },
+    {
+     "vaite": "Zrinski kuoli 1566 Szigetvárin puolustuksessa ottomaaneja vastaan; hän oli Kroatian ban.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Zrinjevac on Lenucin hevosenkengän (Vihreän hevosenkengän) ensimmäinen osa, Alakaupungin puistoaukioiden ketju.",
+     "url": "https://en.wikipedia.org/wiki/Zrinjevac_(Zagreb)"
+    },
+    {
+     "vaite": "Zrinjevac on Lenucin hevosenkengän (Vihreän hevosenkengän) ensimmäinen osa, Alakaupungin puistoaukioiden ketju.",
+     "url": "https://en.wikipedia.org/wiki/Lenuci_Horseshoe"
+    },
+    {
+     "vaite": "Zrinjevac on Lenucin hevosenkengän (Vihreän hevosenkengän) ensimmäinen osa, Alakaupungin puistoaukioiden ketju.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Musiikkipaviljonki on Eduard Pristerin lahjoitus vuodelta 1891.",
+     "url": "https://en.wikipedia.org/wiki/Zrinjevac_(Zagreb)"
+    },
+    {
+     "vaite": "Musiikkipaviljonki on Eduard Pristerin lahjoitus vuodelta 1891.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Musiikkipaviljonki on Eduard Pristerin lahjoitus vuodelta 1891.",
+     "url": "https://iwalk-dev.usc.edu/jewish-zagreb/jewish-zagreb-stop3"
+    },
+    {
+     "vaite": "Paviljonki on rautaa.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Paviljonki on rautaa.",
+     "url": "https://www.lonelyplanet.com/croatia/zagreb/attractions/zrinjevac/a/poi-sig/1544264/358800",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Puiston eteläosassa on rintakuvia kroatialaisista merkkihenkilöistä.",
+     "url": "https://en.wikipedia.org/wiki/Zrinjevac_(Zagreb)"
+    },
+    {
+     "vaite": "Puiston eteläosassa on rintakuvia kroatialaisista merkkihenkilöistä.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Meteorologisen pylvään lahjoitti Adolf Holzer 1884; pylväs on Istrian marmoria.",
+     "url": "https://en.wikipedia.org/wiki/Zrinjevac_(Zagreb)"
+    },
+    {
+     "vaite": "Meteorologisen pylvään lahjoitti Adolf Holzer 1884; pylväs on Istrian marmoria.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Meteorologisen pylvään lahjoitti Adolf Holzer 1884; pylväs on Istrian marmoria.",
+     "url": "https://iwalk-dev.usc.edu/jewish-zagreb/jewish-zagreb-stop3"
+    },
+    {
+     "vaite": "Alueella oli markkina- ja karjamarkkinapaikka ennen puistoa.",
+     "url": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+    },
+    {
+     "vaite": "Alueella oli markkina- ja karjamarkkinapaikka ennen puistoa.",
+     "url": "https://www.absolute-croatia.com/zagreb/parks/zrinjevac"
+    },
+    {
+     "vaite": "Alueella oli markkina- ja karjamarkkinapaikka ennen puistoa.",
+     "url": "https://iwalk-dev.usc.edu/jewish-zagreb/jewish-zagreb-stop3"
+    }
+   ]
+  },
+  {
+   "id": "Q391613",
+   "nimi": "Taidepaviljonki",
+   "kuvaus": "Taidepaviljonki Tomislavin aukiolla",
+   "luokka": "museo",
+   "koko_m": 55,
+   "katse_suunta": 0,
+   "katse_kaari": 30,
+   "teksti": "Taidepaviljonki seisoo Kuningas Tomislavin aukion pohjoispäässä, ja ylhäältä sen erottaa lasikatosta. Rakennuksen tarina alkaa Budapestista: vuoden 1896 vuosituhatnäyttelyä varten kroatialaisille taiteilijoille tehtiin esivalmistettu metallirunkoinen paviljonki. Näyttelyn jälkeen runko purettiin ja siirrettiin Zagrebiin. Wieniläiset teatteriarkkitehdit Fellner ja Helmer suunnittelivat siitä pysyvän näyttelytalon, samat arkkitehdit jotka tekivät myös kansallisteatterin. Se avattiin 15. joulukuuta 1898 Kroatian salonki -näyttelyllä, jossa oli paikallisten taiteilijoiden töitä.",
+   "lyhyt": "Rakennus tehtiin suuria näyttelyitä varten. Sen lasikatto ja valaistus uusittiin vuonna 2006, ja laajempi kunnostushanke päättyi vuonna 2013. Maaliskuun 22. päivänä 2020 Zagrebia ravisteli magnitudiltaan 5,3 maanjäristys, joka vaurioitti rakennusta.",
+   "syventava": "Miksi paviljonki tehtiin siirrettävästä rungosta?",
+   "kysymykset": [
+    "Mikä oli Budapestin vuoden 1896 näyttely?",
+    "Keitä olivat Zagrebin paviljongin arkkitehdit?",
+    "Minä päivänä paviljonki avattiin?",
+    "Minkä nimisellä näyttelyllä paviljonki avattiin?",
+    "Mitä paviljongille tapahtui vuoden 2020 maanjäristyksessä?"
+   ],
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Paviljonki on Kuningas Tomislavin aukion pohjoispäässä.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Paviljonki on Kuningas Tomislavin aukion pohjoispäässä.",
+     "url": "https://new.infozagreb.hr/en/explore-zagreb/attractions/squares/king-tomislav-square"
+    },
+    {
+     "vaite": "Lasikatto on osa rakennusta.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Lasikatto on osa rakennusta.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Budapestin vuoden 1896 vuosituhatnäyttelyyn tehtiin esivalmistettu metallirunkoinen paviljonki kroatialaisille taiteilijoille.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Budapestin vuoden 1896 vuosituhatnäyttelyyn tehtiin esivalmistettu metallirunkoinen paviljonki kroatialaisille taiteilijoille.",
+     "url": "https://www.infozagreb.hr/en/news/110-years-of-life-with-art-en"
+    },
+    {
+     "vaite": "Budapestin vuoden 1896 vuosituhatnäyttelyyn tehtiin esivalmistettu metallirunkoinen paviljonki kroatialaisille taiteilijoille.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Rungon siirrettiin näyttelyn jälkeen Zagrebiin.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Rungon siirrettiin näyttelyn jälkeen Zagrebiin.",
+     "url": "https://www.infozagreb.hr/en/news/110-years-of-life-with-art-en"
+    },
+    {
+     "vaite": "Rungon siirrettiin näyttelyn jälkeen Zagrebiin.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat Zagrebin rakennuksen.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat Zagrebin rakennuksen.",
+     "url": "https://www.infozagreb.hr/en/news/110-years-of-life-with-art-en"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat Zagrebin rakennuksen.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat myös kansallisteatterin.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Fellner ja Helmer suunnittelivat myös kansallisteatterin.",
+     "url": "https://www.infozagreb.hr/it/novit/time-machine-130-years-of-the-neo-baroque-building-of-the-croatian-national-theatre"
+    },
+    {
+     "vaite": "Paviljonki avattiin 15.12.1898 Kroatian salonki -näyttelyllä paikallisten taiteilijoiden töillä.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Paviljonki avattiin 15.12.1898 Kroatian salonki -näyttelyllä paikallisten taiteilijoiden töillä.",
+     "url": "https://www.infozagreb.hr/en/news/110-years-of-life-with-art-en"
+    },
+    {
+     "vaite": "Paviljonki avattiin 15.12.1898 Kroatian salonki -näyttelyllä paikallisten taiteilijoiden töillä.",
+     "url": "https://dailyartmagazine.com/?p=130302",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Lasikatto ja valaistus uusittiin 2006; laajempi hanke päättyi 2013.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Lasikatto ja valaistus uusittiin 2006; laajempi hanke päättyi 2013.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Vuoden 2020 maanjäristys (22.3., magnitudi 5,3) vaurioitti rakennusta.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    },
+    {
+     "vaite": "Vuoden 2020 maanjäristys (22.3., magnitudi 5,3) vaurioitti rakennusta.",
+     "url": "https://dailyartmagazine.com/?p=130302",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Vuoden 2020 maanjäristys (22.3., magnitudi 5,3) vaurioitti rakennusta.",
+     "url": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+    },
+    {
+     "vaite": "Rakennus tehtiin suuria näyttelyitä varten.",
+     "url": "https://www.infozagreb.hr/en/news/110-years-of-life-with-art-en"
+    },
+    {
+     "vaite": "Rakennus tehtiin suuria näyttelyitä varten.",
+     "url": "https://umjetnicki-paviljon.hr/en/exhibition/umjetnicki-paviljon-u-zagrebu-europska-poveznica-od-tradicije-do-suvremenosti-multimedijski-projekt-o-obnovi-i-modernizaciji-zgrade-paviljona-2001-2013-2/"
+    },
+    {
+     "vaite": "Esivalmistettu runko mahdollisti siirron Zagrebiin.",
+     "url": "https://dailyartmagazine.com/?p=130302",
+     "huom": "hakutulos"
+    },
+    {
+     "vaite": "Esivalmistettu runko mahdollisti siirron Zagrebiin.",
+     "url": "https://en.wikipedia.org/wiki/Art_Pavilion,_Zagreb"
+    }
+   ]
+  }
+ ],
+ "pudotetut": [
+  "Sljeme-huipun korkeus: kohdelista 1033 m, Wikipedia Medvednica 1035 m -> lukua ei käytetty avauksessa",
+  "Zagrebin katedraalin tornien korkeus: 108,4 m / 108,20 m / 108,16 m (Wikipedia), 105 m (Time Out) ja 108 tai 105 m (Croatia Traveller) -> vain 'yli sata metriä ennen vuotta 2020'",
+  "Katedraalin tornien rakennusvuodet 1889-1899, 1880-1902/1906 jälleenrakennus: vain Wikipedia -> pudotettu",
+  "Katedraalin vihkiminen 1217 kuningas Andreas II:n toimesta ja hiippakunnan perustaminen 1094/1093: ei kahta samaa lähdettä (CT ei mainitse Andreasta, Time Out 1093) -> vain vuosi 1217 ja 'mongolit' käytetty",
+  "Katedraalin muurit: Thuz 1469-1478 (vain Wikipedia) -> käytetty yleistys 1400-luvun loppu/1500-luvun alku",
+  "Stepinacin hauta katedraalissa: vain Wikipedia ja CT, ja aihe poliittisesti kiistanalainen -> pudotettu",
+  "Katedraalin 22.3.2020 -päivä: toisena lähteenä vain DailyArt-hakutulos; pohjoisen tornin poisto 17.4.2020: n1info.hr palautti 404, joten vain hakutulos",
+  "Ban Jelačićin aukion Harmica-nimen alkuperä: vero 'yksi kolmaskymmenesosa' (InfoZagreb) vs 'tulli' (EnterCroatia) -> käytetty vain 'markkinoilla perittävä vero'",
+  "Ban Jelačićin patsaan pystytysvuosi: Wikipedia sisäisesti 1866 ja 1886 (1886 virhe), poistovuosi 1946 vs 1947 -> käytetty 1866 ja '1940-luvulla'",
+  "Raitiovaunut: hevosraitiotie 1891 ja sähköraitiovaunut 1910-1911 (vain Wikipedia) -> pudotettu; vain maininta, että raitiovaunut kulkevat aukion kautta",
+  "Aukion koko: EnterCroatia sanoo pituudeksi 100 m, kohdelistassa 230 m -> lukua ei käytetty",
+  "Kivisen portin rakennusvuosi: 1242-1266 (Wikipedia) vs 1262 (Spotted by Locals, hakutulos) -> vain '1200-luvulla'",
+  "Kivisen portin rautaristikko 1778 (Ivan Korta) ja kultakruunut 1931: vain hakutulos/yksi lähde -> pudotettu",
+  "Kivisen portin tulipalon tarkka päivä 30.-31.5.1731: vain Wikipedia -> käytetty vain vuosi 1731",
+  "Portin alkuperäisten porttien lukumäärä: 4 / 5 / 6 eri lähteissä -> pudotettu",
+  "Wikipedia Stone Gate: 'vuonna 1929 asiantuntijakomissio...' on ristiriidassa 1731:n kanssa -> pudotettu",
+  "Kardinaali Franjo Kuharić julistajana (1991): vain Wikipedia ja AAA-hakutulos -> nimeä ei käytetty, vain 'julistettiin 1991'",
+  "Pyhän Markuksen kirkon katon vuodet: Wikipedia 1878-1882, Croatia Week 1876-1882 -> käytetty '1870-luvun lopun ja 1880-luvun alun'",
+  "Pyhän Markuksen kirkon eteläportaalin 15 hahmoa ja Parlerin työpaja: vain Visit Croatia -> pudotettu",
+  "Pyhän Markuksen kirkon vanhin vaakuna 1499 vs 1409 (Wikipedia sisäisesti) -> pudotettu",
+  "Purkamisen ensimmäinen maininta 1771 ja päätös korjata 1860: vain Croatia Week -> käytetty 'useaan otteeseen 1700- ja 1800-luvuilla'",
+  "Lotrščakin tornin korkeus 30 m: vain Wikipedia, kohdelista 19 m (OSM) -> korkeutta ei mainittu",
+  "Kello ripustettu 1646 ja kanuunan tauot (1. maailmansota, 1927 jatko): vain Wikipedia -> pudotettu",
+  "Kanuunan tarkoitus: Wikipedia ja Love Zagreb 'kellonsoittajien aikamerkki' vs Visit Zagreb 'voitto turkkilaisista muistoksi' -> käytetty vain edellistä (kaksi lähdettä)",
+  "Tornin seinän paksuus 195 cm: vain InfoZagreb -> pudotettu",
+  "Kansallisteatterin peruskiven päivä: 22.5.1894 (Wikipedia) vs 2.5.1894 (HNK, hakutulos) -> ei mainittu",
+  "Kansallisteatterin avajaispäivä: Wikipedia sisäisesti 14.10. ja 14.11.1895; InfoZagreb ja HNK 14.10.1895 -> käytetty 14.10.1895",
+  "Kansallisteatterin avajaisohjelma Slava umjetnosti (Miletić/Zajc) ja katsomon 715 paikkaa: vain Wikipedia -> pudotettu",
+  "Fellner & Helmer -toimiston teatterien lukumäärä (40 / 48): lähteet eroavat -> pudotettu",
+  "Elämän lähteen suunnitteluvuosi 1905: Wikipedia; asennusvuosi 1912 kolmessa lähteessä -> käytetty vain 1912",
+  "Zrinjevacin perustamisvuosi 1873 vs 1892 ja istutettujen plataanien (220 kpl Triestestä 1872-73) tiedot: ristiriita tai yksi lähde -> pudotettu",
+  "Zrinjevacin ensimmäinen julkinen suihkulähde 1878 (Bollé, 'Vrganj'): vain Absolute Croatia -> pudotettu",
+  "Vihreän hevosenkengän luonti 1882 (Wikipedia) vs Lenucin suunnitelma 1878/1889 (muut) ja 'seitsemän' vs 'kahdeksan' aukiota -> lukuja ei käytetty",
+  "Zrinski 'kansallissankari': vain Wikipedia -> pudotettu",
+  "Taidepaviljongin Budapestin rungon suunnittelijat Korb ja Giergl, julkisivun rintakuvat, 600 m2, Bukovacin ehdotus 1895 ja n. 10 000 avajaisvierasta: vain Wikipedia -> pudotettu",
+  "Taidepaviljongin nykytila (suljettu 2020 jälkeen, 'edelleen suljettu 2026'): Wikipedia vs vierailija-arviot -> ei mainittu, vain että maanjäristys vaurioitti",
+  "Taidepaviljongin kunnostushanke 2001-2013 vs Wikipedian 'seitsemän vuotta': käytetty vain 2006 ja 2013"
+ ],
+ "ristiriidat": [
+  "Hakutulos-lähteitä (huom: hakutulos): n1info.hr 404 (pohjoisen tornin poisto), DailyArt (22.3.2020 maanjäristys, avajaisnäyttely), Spotted by Locals (portti 1200-luvulta), Lonely Planet (musiikkipaviljongin rauta), Total Croatia News (friisi), HNK:n englanninkielinen historiasivu (vasaran tekijä; hr-sivu ei mainitse).",
+  "Zrinjevac-puiston raja-arvot: Wikipedia sisäisesti 3 ha vs 12 540 m2 -> pinta-alaa ei käytetty.",
+  "Nimi: kohdelistassa 'Zagrebin katedraali' (nimi_pelissa 'Zagrebin tuomiokirkko'); kenttään nimi kopioitu kohdelistan 'nimi' mukaisesti, tekstissä käytetty 'katedraali'.",
+  "Lotrščakin laukauksen tarkoitus: kaksi eri tulkintaa lähteissä (ks. pudotetut).",
+  "Kroatian kansallisteatterin tyyli uusbarokki: Wikipedia ei nimeä tyyliä, kolme muuta lähdettä kyllä."
+ ]
+}

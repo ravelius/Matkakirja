@@ -45,6 +45,7 @@ import {
   readFileSync, writeFileSync, existsSync, mkdirSync,
 } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * === TÄMÄ SAVUKE AJAA TASOKARTAN, JOKA ON PELISSÄ POIS KÄYTÖSTÄ =====
@@ -73,9 +74,6 @@ const PORTTI_AUKI = [
   'export const VANHA_KARTTA_KAYTOSSA = true;',
 ];
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -169,7 +167,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },
   hasTouch: true,

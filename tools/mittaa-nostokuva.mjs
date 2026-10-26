@@ -35,7 +35,6 @@ import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = fileURLToPath(new URL('..', import.meta.url));
-const SELAIN = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 
 /** Näyttömitat, joilla kortit mitataan. */
 /*
@@ -114,6 +113,7 @@ import { avaaHetki } from '/js/historian-hetket.js';
 import { avaaSyvennys } from '/js/syvennys.js';
 import { avaaElaintaky } from '/js/elaintaky.js';
 import { ELAINTAKYT } from '/js/packs/elaintakyt.js';
+import { avaaChromium } from './selain.mjs';
 
 const kuva = (n) => ({
   osoite: \`/__mittari/kuva\${n}.png\`,
@@ -275,9 +275,7 @@ async function main() {
     ['/__mittari/kuva2.png', teePng(KUVAT[0][1], KUVAT[0][2], [48, 92, 120])],
   ]);
   const palvelin = await kaynnistaPalvelin(kuvat);
-  const paketti = await import('playwright');
-  const chromium = paketti.chromium ?? paketti.default?.chromium;
-  const selain = await chromium.launch({ executablePath: SELAIN });
+  const selain = await avaaChromium();
 
   let virheita = 0;
   for (const [kuvanimi, kuvaLeveys, kuvaKorkeus] of KUVAT) {

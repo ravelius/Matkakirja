@@ -87,6 +87,7 @@ export const LOGIIKKA = {
   [`${P}paivan-kuvat.js#paivanKuva`]: kuollut,
   [`${P}viritysaanet.js#arvoViritysaani`]: saanto('Satunnainen VIRITYSAANET-alkio, ei sama kuin edellinen.'),
   [`${P}viritysaanet.js#viritysPolku`]: saanto("'assets/audio/' + aani.tiedosto"),
+  [`${P}tarinakaari.js#kaariAanite`]: saanto('Kaaren osan (kohtaaminen | aarre) tallenne { polku, kesto } tai null: null, jos kohde puuttuu, luennat === false tai osa on mykistetty; polku assets/audio/puhe-kaari-<osa>-<id>.mp3, uusituille (KAARI_AANITTEET_V3) -v3-pääte ja kesto. Natiivi saa valmiin tuloksen tarinakaari-rivin aanet-kentässä (skeema 1.65).'),
   [`${P}tarinakaari.js#kaariLuentaSoi`]: saanto('Soi, jos kohde on olemassa eikä (kohde.mykistetyt ?? []) sisällä osaa (saapuminen | kohtaaminen | aarre).'),
 
   [`${P}fokuskohteet-bgr.js#bgrFokuskohteet`]: fokusPoiminta,
@@ -110,6 +111,10 @@ export const LOGIIKKA = {
 
   [`${P}maakartat.js#karttaKuvasuhde`]: saanto('venytys = 1 / cos((pohjoinen + etela) / 2 radiaaneina); suhde = (ita - lansi) / ((pohjoinen - etela) * venytys).'),
   [`${P}maakartat.js#karttapiste`]: logiikka('kartta:karttapiste'),
+  [`${P}maakartat.js#kohteenTyyppi`]: saanto('kohde.tyyppi ?? "rakennus" (löydös 178).'),
+  [`${P}maakartat.js#kohdeKartalla`]: esilaskettu('kohdekartat#kohteet'),
+  [`${P}maakartat.js#kaupunkikartanKohteet`]: esilaskettu('kohdekartat#kohteet'),
+  [`${P}maakartat.js#kaupunginTarinakohteet`]: esilaskettu('kohdekartat#kohteet'),
   [`${P}maakartat.js#mittakaava`]: logiikka('kartta:mittakaava'),
   [`${P}maakartat.js#ydinAla`]: saanto('Ydinrajaus (rajat) prosentteina piirtorajauksesta (piirtoRajat ?? rajat): x = (r.lansi - p.lansi) / (p.ita - p.lansi) * 100, y = (p.pohjoinen - r.pohjoinen) / (p.pohjoinen - p.etela) * 100, leveys ja korkeus samoin.'),
 };

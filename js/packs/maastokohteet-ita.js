@@ -28,6 +28,10 @@
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
  * Italian maastokohteet — TÄYDENNYS. Maalla on jo fokuskohteet-ita.js (Vesuvius, Etna, Dolomiitit, Po, Sardinia), joten tässä ovat vain puuttuvat rantameret. Faktat en-Wikipediasta 29.8.2026.
+ *
+ * Messinansalmi lisättiin 25.9.2026 omistajan löydöksestä 108 ("Välimeri ja
+ * Messinansalmi klikattaviksi nostoiksi kuvineen ja teksteineen"); sen
+ * koordinaattirivi on myös tools/maastoaineisto/ITA.json:ssa.
  */
 export const MAASTOKOHTEET_ITA = [
   {
@@ -156,6 +160,306 @@ export const MAASTOKOHTEET_ITA = [
       + 'yli 2 800 metriä Korsikan luoteispuolella.',
     lahde: 'en-Wikipedia "Ligurian Sea", osiot "Geography" ja "Conservation" (tarkistettu '
       + '1.9.2026).',
+  },
+  {
+    id: 'messinansalmi',
+    kuva: {
+      tiedosto: 'Strait of Messina from Dinnammare.jpg',
+      lyhyt: 'Messinansalmi Dinnammare-vuorelta: edessä Messina, salmen takana Calabria.',
+      selite: 'Näkymä Peloritani-vuorten Dinnammarelta salmen yli: etualalla Messina ja sen '
+        + 'sirpinmuotoinen satamaniemi, vasemmalla Torre Faron niemen pylväs ja veden takana '
+        + 'Calabrian rannikko.',
+      lahde: 'Valokuva: Edd48, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Edd48',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Strait_of_Messina_from_Dinnammare.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        tiedosto: 'Scilla - Vista da via Cristoforo Colombo - 5.jpg',
+        lyhyt: 'Scillan kallio, jonka kreikkalaiset tunsivat hirviö Skyllan kotina.',
+        selite: 'Jyrkkä kallioniemeke kohoaa Calabrian Scillan rannan yllä, ja sen laella seisoo '
+          + 'Ruffon linna; tarun mukaan kalliossa asui merihirviö Skylla.',
+        lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Benjamin Smith',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Scilla_-_Vista_da_via_Cristoforo_Colombo_-_5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+      {
+        tiedosto: 'Feluca in the strait of Messina.JPG',
+        lyhyt: 'Miekkakalaa pyytävä felukka-vene Messinansalmessa.',
+        selite: 'Sininen felukka ja sen korkea tähystysmasto, jonka huipulla istuu kalastaja; '
+          + 'taustalla Torre Faron punavalkoinen pylväs ja Calabrian vuoret.',
+        lahde: 'Valokuva: Shifegu, Wikimedia Commons (CC0).',
+        tekija: 'Shifegu',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Feluca_in_the_strait_of_Messina.JPG',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+      {
+        tiedosto: 'Comerio, Luca (1878-1940) - Il Lungomare dopo il terremoto di Messina (dicembre 1908).jpg',
+        lyhyt: 'Messinan rantakatu veden vallassa vuoden 1908 maanjäristyksen jälkeen.',
+        selite: 'Messinan rantabulevardi joulukuussa 1908: kiveys on haljennut ja painunut, vesi '
+          + 'on noussut kadulle, lyhtypylväs on kallellaan ja tynnyrit lojuvat palatsirivin edessä.',
+        lahde: 'Valokuva: Luca Comerio, 1908, Wikimedia Commons (public domain).',
+        tekija: 'Luca Comerio',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Comerio,_Luca_(1878-1940)_-_Il_Lungomare_dopo_il_terremoto_di_Messina_(dicembre_1908).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Messinansalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä oli Kharybdis?',
+      'Miksi salmen yli ei vieläkään kulje siltaa?',
+    ],
+    korostukset: ['Kharybdis|Kharybdis'],
+    nappi: 'Skyllan ja Kharybdiksen salmi',
+    // 15.61 E / 38.2 N — en-Wikipedia "Strait of Messina" — salmen keskikohta Messinan ja
+    // Calabrian rannan välissä (laskettu: node tools/johda-maastokohteet.mjs ITA)
+    laudat: {
+      maailmankartta: { x: 6353.7, y: 1873.1 },
+      europe: { x: 510.9, y: 888.9 },
+    },
+    teksti: 'Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä '
+      + 'leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin '
+      + 'voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset '
+      + 'sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, '
+      + 'Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla '
+      + '7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä '
+      + 'kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai '
+      + 'hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi '
+      + 'päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen '
+      + 'vesillä pyydetään yhä miekkakalaa harppuunalla.',
+    lahde: 'en-Wikipedia "Strait of Messina", johdanto-osa ja osio "Marine life"; '
+      + '"1908 Messina earthquake"; "Strait of Messina Bridge", johdanto-osa; "Between Scylla '
+      + 'and Charybdis"; "Fata Morgana (mirage)"; "Bagnara Calabra", osio "Economy" '
+      + '(tarkistettu 25.9.2026).',
+    visa: {
+      kysymys: 'Kuinka leveä Messinansalmi on kapeimmillaan?',
+      vaihtoehdot: [
+        '3,1 kilometriä',
+        '14 kilometriä',
+        '33 kilometriä',
+        '0,7 kilometriä',
+      ],
+      oikea: 0,
+      fakta: 'Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä.',
+    },
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'aquileia',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-aquileia-fb6febcd.jpg',
+      lyhyt: 'Aquileian patriarkaalisen basilikan kellotorni ja sypressit nurmikon takana.',
+      selite: 'Kuvassa näkyy Aquileian basilikan kivinen ulkopuoli, korkea kellotorni ja rivi sypressejä.',
+      lahde: 'Valokuva: ThePhotografer, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'ThePhotografer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Basilica_Patriarcale_(Aquileia)_-_Exterior.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Aquileia',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi pikkukaupungissa on niin suuri basilika?',
+      'Milloin roomalaiset perustivat Aquileian?',
+    ],
+    korostukset: ['mosaiikkilattia|mosaiikkilattia'],
+    nappi: 'Roomalainen suurkaupunki ja mosaiikit',
+    // 13.3712 E / 45.7697 N — en-Wikipedia "Aquileia", johdanto ja osiot "History", "Demographics" ja "Basilica"
+    laudat: {
+      maailmankartta: { x: 6279, y: 1569.9 },
+    },
+    teksti: 'Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset '
+      + 'perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. '
+      + 'siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. '
+      + 'Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja '
+      + 'patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. '
+      + 'Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti '
+      + 'lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.',
+    lahde: 'en-Wikipedia "Aquileia", johdanto ja osiot "History", "Demographics" ja "Basilica" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'amalfin-rannikko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-amalfin-rannikko-33112cec.jpg',
+      lyhyt: 'Amalfin kaupunki ja jyrkkä vuoristorannikko näkyvät mereltä katsottuna.',
+      selite: 'Kuvassa näkyy Amalfin valkoisten talojen ryhmä jyrkän, terassoidun rinteen juurella sekä rannikon jatkuminen kaukaisuuteen.',
+      lahde: 'Valokuva: Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Wolfgang Moroder',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amalfi_vista_dal_mare_2_Campania.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Amalfin rannikko',
+    nimio: 'Amalfi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mistä limoncellon sitruunat tulevat?',
+      'Kuka ryösti Amalfin vuonna 1137?',
+    ],
+    korostukset: ['sitruunoita|sitruunoita'],
+    nappi: 'Sitruunaterassit meren yllä',
+    // 14.6 E / 40.65 N — en-Wikipedia "Amalfi Coast", johdanto ja osiot "Geography", "History" ja "Agriculture"
+    laudat: {
+      maailmankartta: { x: 6320, y: 1777.3 },
+    },
+    teksti: 'Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon '
+      + 'maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, '
+      + 'Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, '
+      + 'ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato '
+      + 'amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli '
+      + 'vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.',
+    lahde: 'en-Wikipedia "Amalfi Coast", johdanto ja osiot "Geography", "History" ja '
+      + '"Agriculture" (tarkistettu 30.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ C, 30.9.2026 — 4 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'tropea',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-tropea-abe039c8.jpg',
+      lyhyt: 'Santa Maria dell\'Isola kohoaa kalliolla meren edessä.',
+      selite: 'Vaalea, raidallinen kirkkorakennus kellotorneineen seisoo kalliolla ja puiden reunustamana. Taustalla levittäytyy tyyni sininen meri.',
+      lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Benjamin Smith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tropea_-_Santa_Maria_dell\'Isola_-_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Tropea',
+    nimio: 'Tropea',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Millä rannikolla Tropea sijaitsee?',
+      'Millaisella kalliolla Santa Maria dell\'Isola on?',
+    ],
+    korostukset: ['Santa Maria dell\'Isola|Santa Maria dell\'Isola'],
+    nappi: 'Kirkko melkein saarella meren äärellä',
+    // 15.8948 E / 38.6754 N — en-Wikipedia "Tropea", osiot "Main sights" ja "Beaches"
+    laudat: {
+      maailmankartta: { x: 6363.2, y: 1854.7 },
+    },
+    teksti: 'Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, '
+      + 'Sant\'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell\'Isola, '
+      + 'kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka '
+      + 'liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. '
+      + 'Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea '
+      + 'valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien '
+      + 'kylien yhdistykseen.',
+    lahde: 'en-Wikipedia "Tropea", osiot "Main sights" ja "Beaches" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'gerace',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-gerace-b09010cb.jpg',
+      lyhyt: 'Geracen tuomiokirkon keskilaiva pylväsriveineen.',
+      selite: 'Pitkän laivan molemmin puolin kulkee kaaria kannattavia pylväitä, ja katossa näkyvät tummat puupalkit.',
+      lahde: 'Valokuva: Jacopo Werther, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jacopo Werther',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cattedrale_di_Gerace_(Reggio_Calabria)_-_Italy_-_6_June_2009.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Gerace',
+    nimio: 'Gerace',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä Geracen tuomiokirkon 13 pylvästä on peräisin?',
+      'Minkä valloittajan käsiin kaupunki joutui vuonna 1059?',
+    ],
+    korostukset: ['tuomiokirkko|tuomiokirkko'],
+    nappi: 'Vuoristokaupunki ja antiikin pylväät',
+    // 16.217 E / 38.267 N — en-Wikipedia "Gerace", osiot "History" ja "Main sights"
+    laudat: {
+      maailmankartta: { x: 6373.9, y: 1870.5 },
+    },
+    teksti: 'Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen '
+      + 'kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat '
+      + 'vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. '
+      + 'Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on '
+      + 'normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin '
+      + 'rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista '
+      + 'temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää '
+      + 'kokonaisuutta.',
+    lahde: 'en-Wikipedia "Gerace", osiot "History" ja "Main sights" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'saepinum',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-saepinum-b00de52a.jpg',
+      lyhyt: 'Porta Bojanon kaari Saepinumin muurissa.',
+      selite: 'Kiviverhoiltu kaari avautuu muurissa, ja sen läpi jatkuu kivetty tie.',
+      lahde: 'Valokuva: Stapinium, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Stapinium',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:PortaBoiano(Saepinum-Altilia)outside.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    nimi: 'Saepinum (Altilia)',
+    nimio: 'Saepinum',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Minä vuonna roomalaiset valtasivat Saepinumin?',
+      'Millä tekniikalla Saepinumin alakaupungin muurit rakennettiin?',
+    ],
+    korostukset: ['Porta Bojano|Porta Bojano'],
+    nappi: 'Roomalaiskaupunki Molisen sisämaassa',
+    // 14.6167 E / 41.4333 N — en-Wikipedia "Saepinum", osiot "History", "City walls" ja "Excavations"
+    laudat: {
+      maailmankartta: { x: 6320.6, y: 1746.2 },
+    },
+    teksti: 'Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä '
+      + 'Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan '
+      + 'vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla '
+      + 'vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 '
+      + 'säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului '
+      + 'muun muassa teatteri ja foorumi.',
+    lahde: 'en-Wikipedia "Saepinum", osiot "History", "City walls" ja "Excavations" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'termolin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-termolin-linna-99e0dd87.jpg',
+      lyhyt: 'Termolin linnan kivimuurit ja kellotorni sinistä taivasta vasten.',
+      selite: 'Alhaalta kuvattu linna nousee jyrkkään kaltevana kivimuurina, ja sen päällä on kellolla varustettu torni.',
+      lahde: 'Valokuva: C.lapia, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'C.lapia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castello_Svevo_di_Termoli.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Termolin linna',
+    nimio: 'Termolin linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka rakennutti linnan 1000-luvulla?',
+      'Mikä vahingoitti linnaa ennen vuoden 1240 kunnostusta?',
+    ],
+    korostukset: ['Castello Svevo|Castello Svevo'],
+    nappi: 'Adrianmeren rannan vanha linna',
+    // 14.9833 E / 42 N — en-Wikipedia "Termoli", osiot "History" ja "Main sights"
+    laudat: {
+      maailmankartta: { x: 6332.8, y: 1723.6 },
+    },
+    teksti: 'Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan '
+      + 'Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon '
+      + 'kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, '
+      + 'kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki '
+      + 'aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 '
+      + 'turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu '
+      + 'värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.',
+    lahde: 'en-Wikipedia "Termoli", osiot "History" ja "Main sights" (tarkistettu 30.9.2026).',
   },
 ];
 

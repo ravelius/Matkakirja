@@ -58,11 +58,10 @@ kaupunkina ja onko sillä kaaridata; jos ei ole, RAPORTOI äläkä
 rakenna tyhjän päälle. Kohtaamispiste: Latinska ćuprija (43.8578 N,
 18.4289 E — rakentaja laskee laudat ja tarkistaa).
 
-## 5. Aarremerkintä (ei vaanijaa tähän maahan)
+## 5. Aarremerkintä — poistettu
 
-> Kätkö oli sillan kolmannen kaaren alla, käden ulottuvilla — mutta
-> joki tuli syksystä paksuna enkä uinut. Piirsin kaaren niin
-> tarkasti, että sinä löydät sen kuivin jaloin.
+Aarremerkinnät poistettiin pelistä 11.10.2026 (omistaja), eikä niiden tekstejä säilytetä repossa
+(Raamattu, Poistetut ideat).
 
 ## 6. Täkynostopooli (otsikot sitovia)
 

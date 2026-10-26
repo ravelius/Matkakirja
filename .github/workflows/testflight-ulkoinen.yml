@@ -1,0 +1,105 @@
+# Ulkoinen TestFlight-ryhmä (apurahan arvioijien julkinen linkki).
+# Omistaja 30.9.2026 (suora lupa Julkaisijan sessiossa): ulkoinen ryhmä saa
+# AINA uusimman PASS-buildin — build liitetään ryhmään ja lähetetään Applen
+# beta-arvioon. Korvaa 23.9.:n säännön "vain omistajan kortilla".
+# Omistaja 11.10.2026: oma linkki raadille ("Beta-testaajat"), sama build kaikille julkisen linkin ryhmille.
+# Tyhjä build_numero = vain tila ja käyttötilastot (publicLinkUsages,
+# betaTesterUsages) yhteenvetoon. vain_arvio=true (omistaja 14.10.2026): build vain
+# Applen beta-arvioon heti, ryhmäliitos myöhemmin normaalilla ajolla. Skripti: tools/testflight/ulkoinen-ryhma.py.
+
+name: TestFlight ulkoinen ryhmä
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_numero:
+        description: 'Ladatun buildin CFBundleVersion (tyhjä = vain tila ja tilastot)'
+        type: string
+        default: ''
+      ryhma:
+        description: 'Ulkoisten ryhmien nimet pilkuin (tyhjä = kaikki julkisen linkin ryhmät: Arvioijat + Beta-testaajat)'
+        type: string
+        default: ''
+      vanhenna:
+        description: 'Pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin (vain omistajan luvalla)'
+        type: string
+        default: ''
+      luo_ryhma:
+        description: 'Luo ulkoinen ryhmä julkisella linkillä (raja 100) ja samoilla buildeilla, ellei ole (omistajan luvalla)'
+        type: string
+        default: ''
+      poista:
+        description: 'Pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (vain Päätoimittajan/omistajan luvalla)'
+        type: string
+        default: ''
+      vanhenna_vanhemmat:
+        description: 'CFBundleVersion N: vanhenna kaikki N:ää vanhemmat buildit iOS + Mac (omistaja 11.10.: vain uusin ladattavissa)'
+        type: string
+        default: ''
+      vain_arvio:
+        description: 'Vain beta-arvio: lähetä build_numero Applen arvioon heti, ei ryhmäliitosta eikä vanhennuksia (omistaja 14.10.)'
+        type: boolean
+        default: false
+      bundle_id:
+        description: 'Bundle id'
+        type: string
+        default: 'fi.matkakirja.peli'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-ulkoinen
+  cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527).
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  ryhma:
+    name: Ulkoinen ryhmä
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then  # ei putkea: pipefail + grep -q → SIGPIPE (29.9. TF 1.0.57)
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Tila, tilastot ja build ulkoiseen ryhmään
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          BUILD: ${{ inputs.build_numero }}
+          RYHMA: ${{ inputs.ryhma }}
+          VANHENNA: ${{ inputs.vanhenna }}
+          POISTA: ${{ inputs.poista }}
+          VANHENNA_VANHEMMAT: ${{ inputs.vanhenna_vanhemmat }}
+          LUO_RYHMA: ${{ inputs.luo_ryhma }}
+          VAIN_ARVIO: ${{ inputs.vain_arvio }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          VAIN_ARVIO_LIPPU=""
+          if [[ "$VAIN_ARVIO" == "true" ]]; then VAIN_ARVIO_LIPPU="--vain-arvio"; fi
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA" --vanhenna-vanhemmat "$VANHENNA_VANHEMMAT" ${VAIN_ARVIO_LIPPU}
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

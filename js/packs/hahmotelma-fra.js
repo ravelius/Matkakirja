@@ -95,6 +95,7 @@ export const HAHMOTELMA_FRA = [
   ...EUROOPAN_KADONNEET.FRA,
   {
     id: 'hahmotelma-pic-du-midi',
+    nimio: 'Pic du Midi',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pic-du-midi-vuori-85944887.jpg',
       lyhyt: 'Observatorion kupolit Pic du Midin huipulla pilvien yläpuolella.',
@@ -500,7 +501,7 @@ export const HAHMOTELMA_FRA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-etretat-monet-91236112.jpg',
         lyhyt: 'Claude Monet maalasi Étretat\'n kiviportin vuonna 1864.',
-        selite: 'Claude Monet\'n maalaus "Étretat, porte et falaise d\'Aval" vuodelta 1864: kiviportti, kallio ja ranta.',
+        selite: 'Claude Monet\'n maalaus ”Étretat, porte et falaise d\'Aval” vuodelta 1864: kiviportti, kallio ja ranta.',
         lahde: 'Kuva: Claude Monet, Wikimedia Commons (public domain).',
         tekija: 'Claude Monet',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%89tretat,_porte_et_falaise_d%27Aval_(1864)_Claude_Monet_(W_22b).jpg',
@@ -535,6 +536,7 @@ export const HAHMOTELMA_FRA = [
   },
   {
     id: 'hahmotelma-amiens',
+    nimio: 'Amiens',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amiens-lansijulkisivu-f1ce66d9.jpg',
       lyhyt: 'Amiensin tuomiokirkon länsijulkisivu portaaleineen ja ruusuikkunoineen.',
@@ -829,6 +831,7 @@ export const HAHMOTELMA_FRA = [
   {
     id: 'hahmotelma-place-stanislas',
     nimi: 'Nancy, Place Stanislas',
+    nimio: 'Place Stanislas',
     tyyppi: 'kulttuuri',
     lahi: true,
     kuva: {
@@ -932,7 +935,7 @@ export const HAHMOTELMA_FRA = [
     teksti: 'Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä '
       + 'Carpentras\'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu '
       + 'Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; '
-      + 'lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". '
+      + 'lisänimiä ovat ”Provencen peto”, ”Provencen jättiläinen” ja ”Kalju vuori”. '
       + 'Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä '
       + 'ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.',
     lahde: 'en-Wikipedia "Mont Ventoux", johdanto-osa (tarkistettu 18.9.2026).',
@@ -1075,6 +1078,7 @@ export const HAHMOTELMA_FRA = [
   },
   {
     id: 'hahmotelma-rouen',
+    nimio: 'Rouen',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rouen-670ab4d8.jpg',
       lyhyt: 'Tuomiokirkon kolme tornia ja valurautainen torninhuippu.',
@@ -1298,7 +1302,7 @@ export const HAHMOTELMA_FRA = [
     kuvat: [{
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vichy-1f180188.jpg',
       lyhyt: 'Vichyn kylpylälaitokset vuoden 1862 puupiirroksessa.',
-      selite: 'Vichyn kylpylälaitokset, puistokäytävät ja vaunut vuoden 1862 puupiirroksessa "Eaux thermales de Vichy".',
+      selite: 'Vichyn kylpylälaitokset, puistokäytävät ja vaunut vuoden 1862 puupiirroksessa ”Eaux thermales de Vichy”.',
       lahde: 'Kuva: Charles-Émile Jacque (1813–1894), Gallica / Wikimedia Commons (public domain).',
       tekija: 'Charles-Émile Jacque',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vichy_(Allier)_-_btv1b10571602q.jpg',

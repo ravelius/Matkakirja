@@ -15,7 +15,7 @@ import { execFileSync } from 'node:child_process';
 
 import {
   PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, aaniUrl, onPeilista,
-  asetaKuva, peiliPetti, peiliKaytossa, nollaaPeili, peilinLaji, AANI_JUURI,
+  asetaKuva, peiliPetti, peiliToimi, peiliKaytossa, peilinKatkoJaljella, nollaaPeili, peilinLaji, AANI_JUURI,
   KUVAN_YRITYKSET, nollaaKuvajono,
   VERSIOIDUT_HORATIO_AANET,
 } from '../js/media.js';
@@ -135,8 +135,13 @@ test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä'
 });
 
 test('hyväksytyt 45 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
-  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45);
-  for (const [nimi, polku] of Object.entries(VERSIOIDUT_HORATIO_AANET)) {
+  // Versioimattomat rivit (11.10.2026: bryssel, kosice, ljubljana, luxemburg,
+  // valletta) ovat suoraan audio/-juuressa; ne tarkistetaan horatio-runtime-audio.test.mjs:ssä.
+  const versioidut = Object.entries(VERSIOIDUT_HORATIO_AANET)
+    .filter(([, polku]) => polku.startsWith('audio/versions/'));
+  assert.equal(versioidut.length, 45);
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 50);
+  for (const [nimi, polku] of versioidut) {
     assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, nimi);
     assert.match(polku,
       /^audio\/versions\/horatio\/[0-9a-f]{12}\/horatio-[0-9a-f]{20}\/puhe-fokus-matkakirja-.+\.mp3$/);
@@ -728,4 +733,54 @@ test('laattojen katkaisija: oma laji, kolme virhettä sulkee 20 sekunniksi, jäl
   assert.equal(peiliKaytossa('kuvat'), true);
   nollaaPeili();
   assert.equal(peiliKaytossa('laatat'), true);
+});
+
+/* ── Katkaisija laskee PERÄKKÄISET virheet (28.9.2026, laattojen katkot) ── */
+
+test('onnistunut haku nollaa laskurin: hajanaiset virheet eivät laukaise katkaisijaa', () => {
+  nollaaPeili();
+  for (let i = 0; i < 10; i += 1) {
+    peiliPetti('laatat');
+    peiliPetti('laatat');
+    peiliToimi('laatat');
+  }
+  assert.equal(peiliKaytossa('laatat'), true);
+  assert.equal(peilinKatkoJaljella('laatat'), 0);
+  // Äskettäin vastannut peili ei katkea kolmesta peräkkäisestäkään.
+  peiliPetti('laatat');
+  peiliPetti('laatat');
+  peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), true);
+  // Kolme peräkkäistä ilman onnistumista 5 s:iin laukaisee yhä (peilin oikea vika).
+  const nyt = Date.now;
+  Date.now = () => nyt() + 6000;
+  try {
+    peiliPetti('laatat');
+    assert.equal(peiliKaytossa('laatat'), false);
+  } finally { Date.now = nyt; }
+  // Katkon aikana onnistuminen ei avaa peiliä etuajassa.
+  peiliToimi('laatat');
+  assert.equal(peiliKaytossa('laatat'), false);
+  nollaaPeili();
+});
+
+test('piilossa (Safarin taustakatko) tulleita virheitä ei lasketa', () => {
+  nollaaPeili();
+  const vanha = globalThis.document;
+  globalThis.document = { hidden: true };
+  try {
+    for (let i = 0; i < 6; i += 1) peiliPetti('laatat');
+    assert.equal(peiliKaytossa('laatat'), true);
+  } finally {
+    globalThis.document = vanha;
+    nollaaPeili();
+  }
+});
+
+test('paluu näkyviin purkaa laattojen katkon (kuuntelija moduulissa)', () => {
+  const lahde = readFileSync(new URL('../js/media.js', import.meta.url), 'utf8');
+  assert.match(lahde, /addEventListener\?\.\('visibilitychange', \(\) => \{\s*if \(piilossa\(\) \|\| !poisAsti\.laatat\) return;\s*poisAsti\.laatat = 0;/);
+  const laatat = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
+  assert.match(laatat, /if \(!vastaus\.ok\) return null;\s*\/\/[^\n]*\n\s*peiliToimi\('laatat'\);/);
+  assert.match(laatat, /kuva\.onload = \(\) => \{\s*peiliToimi\('laatat'\);/);
 });

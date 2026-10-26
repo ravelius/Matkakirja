@@ -1,0 +1,166 @@
+{
+ "kaupunki": "suakin",
+ "kaupunkiQ": "Q571215",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q126029571",
+   "nimi": "Suakinin saari",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 19.11663,
+   "lon": 37.33332,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Egyptian Ahly Bank - Sawakin - Port-Sudan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian_Ahly_Bank_-_Sawakin_-_Port-Sudan.jpg?width=1280",
+     "tekija": "Mazinco93",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Egyptian_Ahly_Bank_-_Sawakin_-_Port-Sudan.jpg",
+     "selite": "Saarikaupungin rapistuneet korallikivitalot, kuten tämä pankkirakennus, seisovat aivan meren rannalla.",
+     "leveys": 4000,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Suakin,custom office.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suakin%2Ccustom_office.jpg?width=1280",
+     "tekija": "Bertramz",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suakin%2Ccustom_office.jpg",
+     "selite": "Vanha tullitalo muistuttaa ajasta, jolloin Suakin oli Punaisenmeren tärkein satama.",
+     "leveys": 1920,
+     "korkeus": 1254,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old Sawakin city.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Sawakin_city.jpg?width=1280",
+     "tekija": "Mazinco93",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Sawakin_city.jpg",
+     "selite": "Saarella näkyy korallikivimuurien raunioita ja kaukana minareetti.",
+     "leveys": 4000,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "الجامع الحنفي.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%86%D9%81%D9%8A.jpg?width=1280",
+     "tekija": "Ahmed Bushra87",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%86%D9%81%D9%8A.jpg",
+     "selite": "Hanafilaisen moskeijan minareetti kohoaa saaren raunioiden keskellä.",
+     "leveys": 6091,
+     "korkeus": 4112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208718",
+   "nimi": "Port Sudan",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 19.61583,
+   "lon": 37.21639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PortSudan center harbour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PortSudan_center_harbour.jpg?width=1280",
+     "tekija": "Bertramz",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PortSudan_center_harbour.jpg",
+     "selite": "Port Sudanin satama otti Suakinin paikan Sudanin pääsatamana 1900-luvun alussa.",
+     "leveys": 1920,
+     "korkeus": 1285,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Portsudan beach1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portsudan_beach1.jpg?width=1280",
+     "tekija": "Hello worldwide",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Portsudan_beach1.jpg",
+     "selite": "Punaisenmeren kirkasvetinen ranta Port Sudanin lähellä.",
+     "leveys": 2304,
+     "korkeus": 4096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q26267357",
+   "nimi": "Dungonabin lahti",
+   "peruste": "UNESCO",
+   "koko_m": 5000,
+   "lat": 20.93722,
+   "lon": 37.25528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ISS006-E-43189 - View of Sudan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS006-E-43189_-_View_of_Sudan.jpg?width=1280",
+     "tekija": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS006-E-43189_-_View_of_Sudan.jpg",
+     "selite": "Dungonabin lahti ja Mukawwarin saari Punaisenmeren rannalla kuuluvat Sudanin maailmanperintökohteisiin.",
+     "leveys": 3032,
+     "korkeus": 2064,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Suakin.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suakin.JPG?width=1280",
+   "tekija": "Bunks",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suakin.JPG",
+   "selite": "Suakinin saarella on jäljellä vain raunioita, joiden yllä erottuu minareetteja.",
+   "leveys": 1264,
+   "korkeus": 948,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Suakin,el-Geyf mosque.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suakin%2Cel-Geyf_mosque.jpg?width=1280",
+   "tekija": "Bertramz",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suakin%2Cel-Geyf_mosque.jpg",
+   "selite": "El-Geyfin moskeija valkoisine minareetteineen Suakinin mantereen puolella.",
+   "leveys": 1920,
+   "korkeus": 1275,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q12217059",
+   "nimi": "Sanganebin kansallispuisto",
+   "peruste": "UNESCO",
+   "lat": 19.73333,
+   "lon": 37.43333,
+   "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
+  }
+ ]
+}

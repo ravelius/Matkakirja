@@ -1,0 +1,467 @@
+{
+ "kaupunki": "miami",
+ "kaupunkiQ": "Q8652",
+ "kohteet": [
+  {
+   "q": "Q1453542",
+   "nimi": "Vapaudentorni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 25.78,
+   "lon": -80.18972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freedom Tower (22830653874).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Tower_(22830653874).jpg?width=1280",
+     "tekija": "Phillip Pessar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Tower_(22830653874).jpg",
+     "selite": "Vapaudentorni on Miamin keskustan 1920-luvun tornirakennus, joka toimi kuubalaisten pakolaisten vastaanottokeskuksena.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Biscayne Boulevard night 20101202.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biscayne_Boulevard_night_20101202.jpg?width=1280",
+     "tekija": "Marc Averette",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biscayne_Boulevard_night_20101202.jpg",
+     "selite": "Illan valoissa Vapaudentorni erottuu värikkäänä Biscayne Boulevardin pilvenpiirtäjien keskellä.",
+     "leveys": 3328,
+     "korkeus": 1872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q812537",
+   "nimi": "Bayfront Park",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 25.775,
+   "lon": -80.186,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bayfront Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayfront_Park.JPG?width=1280",
+     "tekija": "Nhl4hamilton",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bayfront_Park.JPG",
+     "selite": "Bayfront Park avautuu Biscayne-lahden rannalle Miamin keskustan vierelle.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bayfront Park C.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayfront_Park_C.JPG?width=1280",
+     "tekija": "Nhl4hamilton",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bayfront_Park_C.JPG",
+     "selite": "Puiston nurmikkoa ja rantapolkua pitkin voi kävellä lahden äärellä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3026874",
+   "nimi": "Pérez Art Museum Miami",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.7743,
+   "lon": -80.1963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PAMM MRD 23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PAMM_MRD_23.jpg?width=1280",
+     "tekija": "Phillip Pessar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PAMM_MRD_23.jpg",
+     "selite": "Pérez Art Museum Miamin ripustetut kasvikatokset ja lasikuori avautuvat Biscayne-lahden puolelle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jardins do Pérez Art Museum Miami, Florida.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jardins_do_P%C3%A9rez_Art_Museum_Miami%2C_Florida.jpg?width=1280",
+     "tekija": "MichaelaBlanc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jardins_do_P%C3%A9rez_Art_Museum_Miami%2C_Florida.jpg",
+     "selite": "Museon puutarhaterassilta palmut ja lahti avautuvat kaupungin reunalla.",
+     "leveys": 1284,
+     "korkeus": 1889,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2825308",
+   "nimi": "Adrienne Arsht Center",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 25.78722,
+   "lon": -80.19,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adrienne Arsht Center for the Performing Arts of Miami-Dade County - Flickr - Phillip Pessar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adrienne_Arsht_Center_for_the_Performing_Arts_of_Miami-Dade_County_-_Flickr_-_Phillip_Pessar.jpg?width=1280",
+     "tekija": "Phillip Pessar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adrienne_Arsht_Center_for_the_Performing_Arts_of_Miami-Dade_County_-_Flickr_-_Phillip_Pessar.jpg",
+     "selite": "Adrienne Arsht Center kokoaa Miamin oopperan, baletin ja konserttisalit lasiseinäiseen rakennukseen keskustassa.",
+     "leveys": 3782,
+     "korkeus": 2836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Downtown Miami from north 20100129.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Miami_from_north_20100129.jpg?width=1280",
+     "tekija": "Averette",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Miami_from_north_20100129.jpg",
+     "selite": "Ylhäältä katsoen Arsht Centerin kaksi rakennusta erottuvat Miamin keskustan pilvenpiirtäjien edessä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3011775",
+   "nimi": "Miami-Dade Countyn oikeustalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 25.77461,
+   "lon": -80.19514,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dade County Courthouse (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dade_County_Courthouse_(1).jpg?width=1280",
+     "tekija": "Tamanoeconomico",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dade_County_Courthouse_(1).jpg",
+     "selite": "Piirikunnan oikeustalon portaikko ja valkoinen torni nousevat Miamin keskustan yläpuolelle.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130817 Miami 3397.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130817_Miami_3397.jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130817_Miami_3397.jpg",
+     "selite": "Oikeustalon viereen nostettu taideteos kaartuu valkoisen tornitalon edessä.",
+     "leveys": 2758,
+     "korkeus": 3665,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7088984",
+   "nimi": "Olympia Theater",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 25.7742,
+   "lon": -80.19052,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Olympia Theatre Miami exterior 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olympia_Theatre_Miami_exterior_2016.jpg?width=1280",
+     "tekija": "Phillip Pessar",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Olympia_Theatre_Miami_exterior_2016.jpg",
+     "selite": "Olympia Theaterin vanha julkisivu ja kyltti kuuluvat Miamin keskustan historiallisiin teattereihin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Miami FL Downtown HD Olympia Theater01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miami_FL_Downtown_HD_Olympia_Theater01.jpg?width=1280",
+     "tekija": "Ebyabe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miami_FL_Downtown_HD_Olympia_Theater01.jpg",
+     "selite": "Teatterin neonkyltti ja vanha tiilirakennus erottuvat Flagler Streetin kulmassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q806676",
+   "nimi": "Miami Tower",
+   "peruste": "sitelinks",
+   "koko_m": 230,
+   "lat": 25.77205,
+   "lon": -80.19121,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bank of America Miami 20100206.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_America_Miami_20100206.jpg?width=1280",
+     "tekija": "Averette",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bank_of_America_Miami_20100206.jpg",
+     "selite": "Miami Tower on Miamin keskustan kuuluisa lasikuorinen pilvenpiirtäjä, jonka julkisivu on valaistu öisin.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bank of America Tower (Miami) full view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bank_of_America_Tower_(Miami)_full_view.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Averette assumed (based on copyright claims).",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bank_of_America_Tower_(Miami)_full_view.jpg",
+     "selite": "Tornin kulmikas lasi- ja metallirakenne nousee Biscayne Boulevardin yläpuolelle.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q420129",
+   "nimi": "Kaseya Center",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.78139,
+   "lon": -80.18806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "-AMERICAN AIRLINES ARENA-MIAMI - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-AMERICAN_AIRLINES_ARENA-MIAMI_-_panoramio.jpg?width=1280",
+     "tekija": "Ivan Curra",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-AMERICAN_AIRLINES_ARENA-MIAMI_-_panoramio.jpg",
+     "selite": "Kaseya Center on Miami Heatin kotihalli Biscayne-lahden rannalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AA Arena External 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AA_Arena_External_2.jpg?width=1280",
+     "tekija": "Fringio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AA_Arena_External_2.jpg",
+     "selite": "Hallin kaareva valkoinen julkisivu ja tummat leikkaukset ovat keskustan tunnusmerkki.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1368138",
+   "nimi": "loanDepot park",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.77806,
+   "lon": -80.21972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marlins First Pitch at Marlins Park, April 4, 2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marlins_First_Pitch_at_Marlins_Park%2C_April_4%2C_2012.jpg?width=1280",
+     "tekija": "Roberto Coquis",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marlins_First_Pitch_at_Marlins_Park%2C_April_4%2C_2012.jpg",
+     "selite": "loanDepot park on Miami Marlinsin baseball-stadion Little Havanan vierellä.",
+     "leveys": 3670,
+     "korkeus": 2438,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-Miami Marlins Stadium - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-Miami_Marlins_Stadium_-_panoramio.jpg?width=1280",
+     "tekija": "Ivan Curra",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-Miami_Marlins_Stadium_-_panoramio.jpg",
+     "selite": "Stadionin pyöreä katto erottuu kaukaa Miamin matalan kaupungin yllä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q665413",
+   "nimi": "Little Havana",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.77258,
+   "lon": -80.21459,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Little Havana Dominos Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Havana_Dominos_Park.JPG?width=1280",
+     "tekija": "Infrogmation of New Orleans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Little_Havana_Dominos_Park.JPG",
+     "selite": "Little Havanan Domino Parkissa kuubalaisyhteisön vanhat miehet pelaavat dominoa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-LITTLE HAVANA-MIAMI - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-LITTLE_HAVANA-MIAMI_-_panoramio.jpg?width=1280",
+     "tekija": "Ivan Curra",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-LITTLE_HAVANA-MIAMI_-_panoramio.jpg",
+     "selite": "Little Havanan katu on Miamin kuubalaisen kulttuurin sydän.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q75646",
+   "nimi": "PortMiami",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.77417,
+   "lon": -80.17111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial photograph of the Port of Miami Container Port.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photograph_of_the_Port_of_Miami_Container_Port.jpg?width=1280",
+     "tekija": "James R. Tourtellotte",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_the_Port_of_Miami_Container_Port.jpg",
+     "selite": "PortMiami on maailman suosituimpia risteilysatamia ja sijaitsee Biscayne-lahden saarella keskustan vieressä.",
+     "leveys": 3040,
+     "korkeus": 2008,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Carnival Glory cruise ship in Port Miami Florida.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnival_Glory_cruise_ship_in_Port_Miami_Florida.jpg?width=1280",
+     "tekija": "Tips For Travellers",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Carnival_Glory_cruise_ship_in_Port_Miami_Florida.jpg",
+     "selite": "Risteilyalus makaa PortMiamin laiturissa keskustan pilvenpiirtäjien edessä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q954659",
+   "nimi": "Biscayne-lahti",
+   "peruste": "pelin nosto",
+   "koko_m": 2500,
+   "lat": 25.56583,
+   "lon": -80.21639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A view east across Biscayne Bay to Key Biscayne from Coconut Grove Marina, Coconut Grove, Miami, Florida March 28, 2008 - panoramio - Gary Miotla (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_east_across_Biscayne_Bay_to_Key_Biscayne_from_Coconut_Grove_Marina%2C_Coconut_Grove%2C_Miami%2C_Florida_March_28%2C_2008_-_panoramio_-_Gary_Miotla_(1).jpg?width=1280",
+     "tekija": "Gary Miotla",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_east_across_Biscayne_Bay_to_Key_Biscayne_from_Coconut_Grove_Marina%2C_Coconut_Grove%2C_Miami%2C_Florida_March_28%2C_2008_-_panoramio_-_Gary_Miotla_(1).jpg",
+     "selite": "Biscaynen lahden matala vesi on täynnä pieniä saaria ja veneitä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A view east across Biscayne Bay to Key Biscayne from Coconut Grove Marina, Coconut Grove, Miami, Florida March 28, 2008 - panoramio - Gary Miotla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_east_across_Biscayne_Bay_to_Key_Biscayne_from_Coconut_Grove_Marina%2C_Coconut_Grove%2C_Miami%2C_Florida_March_28%2C_2008_-_panoramio_-_Gary_Miotla.jpg?width=1280",
+     "tekija": "Gary Miotla",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_east_across_Biscayne_Bay_to_Key_Biscayne_from_Coconut_Grove_Marina%2C_Coconut_Grove%2C_Miami%2C_Florida_March_28%2C_2008_-_panoramio_-_Gary_Miotla.jpg",
+     "selite": "Coconut Groven venesatama ja kaukana näkyvät Key Biscaynen saaret ovat tyypillinen Miamin lahtimaisema.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Miami, Florida skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miami%2C_Florida_skyline.jpg?width=1280",
+   "tekija": "Wilfredor",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miami%2C_Florida_skyline.jpg",
+   "selite": "Miamin pilvenpiirtäjät kohoavat Biscayne-lahden rannalla vesien takana.",
+   "leveys": 13039,
+   "korkeus": 5504,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Downtown Miami aerial 2008.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Miami_aerial_2008.jpg?width=1280",
+   "tekija": "Marc Averette",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Miami_aerial_2008.jpg",
+   "selite": "Ilmasta katsoen Miamin keskusta ja sen saaret kasvavat lahden ympärille.",
+   "leveys": 3262,
+   "korkeus": 2446,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

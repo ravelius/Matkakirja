@@ -42,15 +42,19 @@ on:
         type: string
         default: 'fi.matkakirja.peli'
       versio:
-        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.0.<build-ordinaali> (omistaja 24.9.2026: TestFlightissa näkyy build-numero)'
+        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.1 (omistaja 30.9.2026: kiinteä versio, jotta ulkoinen beta-arvio koskee vain version ensimmäistä buildia)'
         type: string
         default: ''
       ordinaali:
-        description: 'Build-ordinaali (build 11 → 1.0.11). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
+        description: 'Build-ordinaali = CFBundleVersion (TF näyttää 1.1 (74)). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
         type: string
         default: ''
       build_numero:
-        description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
+        description: 'CFBundleVersion — oletus ordinaali. Build-numero on iOS:ssä versiokohtainen: 1.1:n numerot eivät törmää 1.0.x:n aikaleimoihin.'
+        type: string
+        default: ''
+      proto_ref:
+        description: 'Proton haara tai commit Unity-vientiin (tyhjä = master). Build 14: juna/b13-commit, jos Natiiviseppä ei ehdi mergetä (puu = testattu, Fable 25.9.2026).'
         type: string
         default: ''
       sisainen_ryhma:
@@ -61,18 +65,26 @@ on:
 permissions:
   contents: read
 
-# Sama Mac ajaa myös savukkeet.yml:n ja Karttasepän polttoja — yksi
-# raskas ajo kerrallaan koko koneella (ks. savukkeet.yml:n koko-repon
-# jono, PR #2926/#2947). Tämä työnkulku käyttää samaa jonoryhmää, jotta
-# Unity-käännös ei ala kesken savukesarjan tai polton.
+# TF-ETUSIJA (omistaja hyväksyi 28.9.2026): vienti ajetaan testit-runnerilla
+# (SamiMacStudio2-testit: sama kone, sama käyttäjä koodaus, sama avainnippu)
+# omassa jonoryhmässään, jotta se ei jonota savukerunnerin PR-savukkeiden
+# takana (28.9. TF 1.0.35 ja 1.0.37 odottivat tunteja). Unity-käännösten
+# vuorot jakaa käännöspalvelun lukko (KAANNOSLUKKO) kuten ennenkin.
 concurrency:
-  group: savukkeet-mac-macilla
+  group: proto3d-testflight
   cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
 
 jobs:
   vienti_ja_lahetys:
     name: Unity-vienti, arkistointi ja TestFlight-lähetys
-    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    runs-on: [self-hosted, macOS, ARM64, testit]
     timeout-minutes: 90
 
     env:
@@ -91,6 +103,8 @@ jobs:
       # Viimeisimmän TestFlightiin ladatun buildin ordinaali (ajurin levyllä kuten YOMERKKI).
       LASKURI: /Users/Shared/Claude/proto-3d/lokit/testflight-ordinaali.txt
       SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
+      # Yöajo (schedule) vie aina masterin; käsiajo voi antaa haaran tai commitin.
+      PROTO_REF: ${{ inputs.proto_ref || 'master' }}
 
     steps:
       - name: Onko Unity-projekti paikallaan
@@ -124,33 +138,52 @@ jobs:
           echo $! > "$KAANNOSLUKKO/pid"
           echo "testflight ajo $GITHUB_RUN_ID $(date +%H:%M)" > "$KAANNOSLUKKO/kuka"
           echo "LUKKO_OMA=1" >> "$GITHUB_ENV"
-          git checkout -q --detach master
+          git rev-parse -q --verify "$PROTO_REF^{commit}" >/dev/null || { echo "::error::Proton ref $PROTO_REF ei löydy"; exit 1; }
+          git checkout -q --detach "$PROTO_REF"
           git reset -q --hard
-          echo "Käännöskopio: $(git rev-parse --short HEAD) (master)"
+          echo "Käännöskopio: $(git rev-parse --short HEAD) ($PROTO_REF)"
 
-      # Aikaleima buildinumeroksi: App Store Connect hylkää saman
-      # versio+build-parin kahdesti. Unity-viennissä sama numero menee
-      # MATKAKIRJA_BUILDiin, jolloin sovelluksen rakennus.txt = ASC:n numero.
+      # Omistaja 30.9.2026: versio kiinteä 1.1 ja CFBundleVersion = juokseva ordinaali (74, 75, …),
+      # jolloin TF näyttää "1.1 (74)" ja Applen ulkoinen beta-arvio koskee vain version ensimmäistä
+      # buildia (1.0.<ordinaali> + aikaleima vei 24.–30.9. jokaisen buildin täyteen arvioon). ASC
+      # hylkää saman versio+build-parin kahdesti; build-numero on iOS:ssä versiokohtainen. Unity-
+      # viennissä sama numero menee MATKAKIRJA_BUILDiin, jolloin rakennus.txt = ASC:n numero.
       - name: Buildinumero
         run: |
           set -euo pipefail
+          # Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
+          ord="${ORDINAALI_SYOTE:-}"
+          [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
+          versio="${VERSIO_SYOTE:-1.1}"
           build="${{ inputs.build_numero }}"
-          [ -n "$build" ] || build=$(date -u +%Y%m%d%H%M)
+          [ -n "$build" ] || build="$ord"
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
-          # Näkyvä versio = 1.0.<ordinaali> (build 11 → 1.0.11); CFBundleVersion pysyy aikaleimana,
-          # koska se ei saa pienentyä. Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
-          ord=""
-          if [ -n "${VERSIO_SYOTE:-}" ]; then
-            versio="$VERSIO_SYOTE"
-          else
-            ord="${ORDINAALI_SYOTE:-}"
-            [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
-            versio="1.0.$ord"
-          fi
           echo "VERSIO=$versio" >> "$GITHUB_ENV"
           echo "ORDINAALI=$ord" >> "$GITHUB_ENV"
           echo "Versio $versio (ordinaali ${ord:-–})"
           echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
+
+      # Natiivin "Mitä uutta" vertaa asennettua "<versio> (<CFBundleVersion>)" muutoslokin riviin
+      # (Natiivi-UI 27.9.2026: rivit 12–28 puuttuivat → build 11:n teksti näkyi uutena).
+      # Käsivienti hylätään ennen Unity-vientiä, jos riviä ei ole ajon commitissa: Julkaisija
+      # valitsee build_numeron etukäteen ja mergee rivin (tools/vienti/muutosloki-natiivi.mjs) ensin.
+      # Ajastettu yöajo ei tiedä numeroa etukäteen → vain varoitus; rivi lisätään latauksen jälkeen.
+      - name: Muutoslokin rivi
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          haettu=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/${{ github.repository }}/contents/tools/vienti/muutosloki-natiivi.json?ref=${{ github.sha }}")
+          rivi="$VERSIO ($BUILD_NUMERO)"
+          if printf '%s' "$haettu" | python3 -c 'import json,sys; v=sys.argv[1]; sys.exit(0 if any(r.get("versio")==v for r in json.load(sys.stdin).get("rivit",[])) else 1)' "$rivi"; then
+            echo "Muutoslokissa on rivi \"$rivi\"."
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "::warning title=Muutoslokin rivi puuttuu::\"$rivi\" — lisää latauksen jälkeen: node tools/vienti/muutosloki-natiivi.mjs --versio \"$rivi\" --teksti \"…\""
+          else
+            echo "::error title=Muutoslokin rivi puuttuu::\"$rivi\" ei ole tools/vienti/muutosloki-natiivi.json:ssa (${{ github.sha }}). Mergeä rivi ensin ja anna sama build_numero."
+            exit 1
+          fi
 
       - name: Yöajon ohitusehdot
         if: env.VIE_UNITYSTA == 'true'
@@ -159,6 +192,13 @@ jobs:
           set -euo pipefail
           mkdir -p "$(dirname "$YOLOKI")"
           syy=""
+          # AIKARAJA (Fable 25.9.2026): GitHubin ajastus voi viivästyä tunteja (25.9. yöajo
+          # käynnistyi vasta 11.35 ja olisi vienyt päivän keskeneräisen masterin).
+          # Ajastettu yöajo ohittaa itsensä, jos se käynnistyy klo 06.00 jälkeen Helsingin aikaa.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            tunti=$(TZ=Europe/Helsinki date +%H)
+            if [ "$((10#$tunti))" -ge 6 ]; then syy="ajastus viivästyi, käynnistyi klo $(TZ=Europe/Helsinki date +%H.%M) (raja 06.00)"; fi
+          fi
           # Vienti (~2 Gt) + arkiston DerivedData (~4 Gt) + IPA; muut sessiot
           # käyttävät samaa levyä, joten raja on 30 Gt (Fable 24.9.2026).
           vapaa=$(df -g /System/Volumes/Data | tail -1 | awk '{print $4}')
@@ -167,15 +207,30 @@ jobs:
           # saman projektin varaus näkyy Library-lukosta alla (24.9.2026, build 10 ohittui turhaan).
           # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
-          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse master)" ]; then syy="käännöskopio ei ole masterissa"; fi
+          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse "$PROTO_REF^{commit}")" ]; then syy="käännöskopio ei ole kohdassa $PROTO_REF"; fi
+          # Kaatuneen Unityn mono_crash*.json (TF 161 7.10.2026: "fatal error in the mono runtime" → uusinta ohittui,
+          # koska tiedosto jäi työkopioon) siirretään talteen lokeihin, ei poisteta eikä lasketa muutokseksi.
+          for f in mono_crash*.json; do
+            [ -e "$f" ] || continue
+            mkdir -p /Users/Shared/Claude/proto-3d/lokit/tf-mono-crash && mv "$f" "/Users/Shared/Claude/proto-3d/lokit/tf-mono-crash/$(date +%Y%m%d-%H%M)-$f"
+            echo "::warning::$f siirretty lokit/tf-mono-crash/ (edellinen Unity kaatui)"
+          done
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
-          master=$(git rev-parse --short master)
+          master=$(git rev-parse --short "$PROTO_REF^{commit}")
           edellinen=$(cat "$YOMERKKI" 2>/dev/null || true)
-          if [ -z "$syy" ] && [ "$master" = "$edellinen" ]; then syy="master $master on jo ladattu"; fi
+          # "Jo ladattu" koskee vain ajastettua yöajoa: käsiajo on tarkoituksellinen ja sillä on oma buildinumero
+          # (TF 176 10.10.2026: Apple hylkäsi 175:n, saman masterin uusinta ohittui merkin takia).
+          if [ -z "$syy" ] && [ "${{ github.event_name }}" = "schedule" ] && [ "$master" = "$edellinen" ]; then syy="master $master on jo ladattu"; fi
           echo "PROTO_MASTER=$master" >> "$GITHUB_ENV"
           if [ -n "$syy" ]; then
             echo "$(date '+%Y-%m-%d %H:%M') OHITETTU: $syy" | tee -a "$YOLOKI"
+            # KÄSIAJO EI OHITA HILJAA (Päätoimittaja 10.10.2026: TF 175 3. ajo ja TF 176 1. ajo olivat "success" ilman
+            # vientiä): vain ajastettu yöajo saa ohittaa; käsin käynnistetty ajo päättyy virheeseen ohitussyyn kanssa.
+            if [ "${{ github.event_name }}" != "schedule" ]; then
+              echo "::error title=Vienti ohitettu::$syy"
+              exit 1
+            fi
             echo "OHITA=1" >> "$GITHUB_ENV"
             { echo "## Yöajo ohitettu"; echo; echo "$syy"; } >> "$GITHUB_STEP_SUMMARY"
           else
@@ -184,26 +239,98 @@ jobs:
 
       # Vienti kirjoittaa ProjectSettingsiin bundleVersionin, buildNumberin
       # ja iPhoneSdkVersionin sekä koskee Materiaaleihin: palautus aina.
+      - name: Editorin Burst-JIT pois
+        # MONO-SEGV-JUURIKORJAUS (Päätoimittaja 8.10.2026, Natiiviseppä proto 9a98cd437, junaan 167): Rakennus.Kaanna perui
+        # editorin Burst-JIT:n kesken Unityn käynnistyksen linkityksen → satunnainen segv 7–8 s kohdalla (7.–8.10. kolmesti).
+        # EditorPrefs BurstCompilation = 0 jo ennen Unityä; palautus alla (always). Pelaajan AOT ei käytä tätä asetusta.
+        if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
+        shell: zsh {0}
+        run: source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_pois
+
       - name: Unity-vienti Build/yo
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
           MATKAKIRJA_KANSIO: Build/yo
         run: |
+          # set +e: askeleen oletuskuori on bash -eo pipefail, jolloin unity-vahdin nollasta
+          # poikkeava paluuarvo katkaisi askeleen ennen tila=$?-riviä eikä käännöskopion
+          # palautus (git reset/clean) ajanut; jäänyt iss-tle.json ohitti seuraavan ajon
+          # (30.9.2026 TF 1.1 (75) ja (76)). Virheet käsitellään alla tila-muuttujalla.
+          set +e
           set -uo pipefail
-          rm -rf Build/yo
-          MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
-            zsh tyokalut/unity-vahti.sh tulokset/yo.log \
-            -batchmode -nographics -quit -projectPath . -buildTarget iOS \
-            -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+          # Edellisen viennin siivous: rm -rf kaatui 25.9. "Directory not empty" -virheeseen
+          # (joku kirjoitti kansioon samaan aikaan). Yritetään viisi kertaa, ja jos kansio on
+          # yhä olemassa, se siirretään sivuun (mv onnistuu ei-tyhjällekin) ja poistetaan taustalla.
+          for yritys in 1 2 3 4 5; do
+            rm -rf Build/yo 2>/dev/null || true
+            [ -e Build/yo ] || break
+            sleep 3
+          done
+          if [ -e Build/yo ]; then
+            sivu="Build/yo.poisto-$(date +%s)"
+            mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
+            echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
+          fi
+          # ISS-rata mukaan buildiin (Natiiviseppä 26.9.2026, Linssisepän ISS/SGP4): julkaistu
+          # media.matkakirja.app/data/iss-tle.json (#3334, CI päivittää 6 h välein). Ei pakollinen:
+          # ilman tiedostoa lataaja hakee ämpäristä tai käyttää havainnollista rataa. Palautus alla
+          # (git clean) poistaa tiedoston viennin jälkeen.
+          mkdir -p Assets/StreamingAssets/mukana
+          if curl -fsS --max-time 20 "https://media.matkakirja.app/data/iss-tle.json?t=$(date +%s)" -o Assets/StreamingAssets/mukana/iss-tle.json \
+             && grep -q '"rivi1":"1 25544U' Assets/StreamingAssets/mukana/iss-tle.json; then
+            echo "ISS-TLE mukana: $(grep -o '"haettu":"[^"]*"' Assets/StreamingAssets/mukana/iss-tle.json)"
+          else
+            rm -f Assets/StreamingAssets/mukana/iss-tle.json
+            echo "::warning::ISS-TLE ei saatu ämpäristä; build ilman sitä (lataaja hakee ajossa)"
+          fi
+          # Kohtaus generoidaan koodista ennen vientiä kuten käännöspalvelussa (proto-kaanna.sh):
+          # masterin Pallo.unity ei ole aina tuore (build 13: kohtausta ei committoitu mergessä),
+          # ja IosTestFlight kutsuu LuoPalloa vain, jos kohtaustiedosto puuttuu.
+          # Unity 6.7 -käynnistysjumi (TF 175 10.10.2026, ajo 38029450555; myös juna-vahti 08.52): pääsäie jää ennen
+          # "Begin MonoManager ReloadAssembly" -riviä (ModuleMetadata → opendir editorin asennuksessa), loki hiljenee ja
+          # unity-vahti tappaa ajon (paluu 3). Silloin mitään ei ole vielä tehty → 30 s tauko ja yksi uusinta.
+          vahdilla() { # <loki> <unityn argumentit…>
+            local loki=$1 t
+            zsh tyokalut/unity-vahti.sh "$@"; t=$?
+            if [ $t -eq 3 ] && ! grep -q "Begin MonoManager ReloadAssembly" "$loki"; then
+              echo "::warning::Unity-käynnistysjumi ($loki) → uusinta 30 s:n päästä"
+              sleep 30
+              zsh tyokalut/unity-vahti.sh "$@"; t=$?
+            fi
+            return $t
+          }
+          vahdilla tulokset/yo-luo.log \
+            -batchmode -nographics -quit -projectPath . -executeMethod Matkakirja.Editori.Rakennus.LuoPallo
           tila=$?
-          git checkout -- ProjectSettings/ProjectSettings.asset Assets/Matkakirja/Materiaalit/ || echo "::warning::ProjectSettingsin tai Materiaalien palautus epäonnistui"
+          if [ $tila -eq 0 ] && grep -q "error CS\|Aborting batchmode" tulokset/yo-luo.log; then tila=15; fi
+          if [ $tila -eq 0 ]; then
+            MATKAKIRJA_BUNDLE_ID="$BUNDLE_ID" MATKAKIRJA_VERSIO="$VERSIO" MATKAKIRJA_BUILD="$BUILD_NUMERO" \
+              vahdilla tulokset/yo.log \
+              -batchmode -nographics -quit -projectPath . -buildTarget iOS \
+              -executeMethod Matkakirja.Editori.Rakennus.IosTestFlight
+            tila=$?
+          else
+            echo "LuoPallo kaatui ($tila):"; grep -E "error CS|MATKAKIRJA:" tulokset/yo-luo.log | sort -u | tail -10 || true
+          fi
+          # Vienti ja LuoPallo kirjoittavat Assets/- ja ProjectSettings-tiedostoja: käännöskopio
+          # palautetaan puhtaaksi masteriksi (kuten proto-kaanna.sh ajon alussa).
+          { git reset -q --hard && git clean -fdq Assets/ ProjectSettings/; } || echo "::warning::Käännöskopion palautus epäonnistui"
           if [ $tila -ne 0 ]; then
             echo "$(date '+%Y-%m-%d %H:%M') VIENTI KAATUI ($tila), ks. $PROJEKTI/tulokset/yo.log" | tee -a "$YOLOKI"
             grep -E "MATKAKIRJA:|error" tulokset/yo.log | tail -20 || true
             exit $tila
           fi
           grep "MATKAKIRJA: TestFlight-vienti" tulokset/yo.log || true
+
+      - name: Editorin Burst-JIT takaisin
+        # Myös kaatuneen viennin jälkeen; ilman merkkitiedostoa (pois-askel ei ajanut) ei tee mitään.
+        if: always()
+        shell: zsh {0}
+        run: source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_palauta
 
       - name: Onko Unity-vienti paikallaan
         if: env.OHITA != '1'
@@ -214,6 +341,17 @@ jobs:
           test -f "Build/$VIENTI_KANSIO/Info.plist"
           /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMERO" "Build/$VIENTI_KANSIO/Info.plist"
           /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSIO" "Build/$VIENTI_KANSIO/Info.plist"
+          # ITMS-90208 (Apple hylkäsi TF 175:n 10.10.2026): Unity 6.7:n UnityRuntime.framework on Embed Frameworks -vaiheessa,
+          # ja sen Info.plistin MinimumOSVersion (15.0) on pienempi kuin appin IPHONEOS_DEPLOYMENT_TARGET (17.0). Pikakorjaus:
+          # frameworkin MinimumOSVersion = appin tavoite. Pysyvä korjaus Natiivisepän vientikoodiin.
+          UR="Build/$VIENTI_KANSIO/Frameworks/UnityRuntime.framework/Info.plist"
+          if [ -f "$UR" ]; then
+            tavoite=$(grep -o "IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*" "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj/project.pbxproj" | awk '{print $3}' | sort -V | tail -1)
+            [ -n "$tavoite" ] || { echo "::error::IPHONEOS_DEPLOYMENT_TARGET puuttuu pbxproj:sta"; exit 1; }
+            /usr/libexec/PlistBuddy -c "Set :MinimumOSVersion $tavoite" "$UR" 2>/dev/null \
+              || /usr/libexec/PlistBuddy -c "Add :MinimumOSVersion string $tavoite" "$UR"
+            echo "UnityRuntime.framework MinimumOSVersion → $tavoite"
+          fi
 
       - name: Pura App Store Connect -avain
         if: env.OHITA != '1'
@@ -225,7 +363,7 @@ jobs:
           mkdir -p "$hakemisto"
           chmod 700 "$hakemisto"
           polku="$hakemisto/AuthKey.p8"
-          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then  # ei putkea: pipefail + grep -q → SIGPIPE (29.9. TF 1.0.57)
             printf '%s\n' "$ASC_KEY_P8" > "$polku"
           else
             printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
@@ -545,6 +683,9 @@ jobs:
       # vain Unity-iPhone-target lukee — UnityFramework ei tue profiilia.
       # --keychain rajaa codesignin tähän nippuun. Hakulistaa ei vaihdeta.
       - name: Arkistoi ja allekirjoita
+        # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
+        # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
+        shell: nice -n 10 bash --noprofile --norc -eo pipefail {0}
         if: env.OHITA != '1'
         working-directory: ${{ env.PROJEKTI }}
         env:
@@ -553,7 +694,14 @@ jobs:
           TEAM_ID: ${{ secrets.TEAM_ID }}
         run: |
           set -euo pipefail
-          xcodebuild \
+          # Omistaja 7.10.2026 klo 21.5x: -jobs 12 (12 tehoydintä), kun omistaja ei käytä konetta (HIDIdleTime > 300 s), muuten 8;
+          # kevyt-lipulla tai kuormarajalla 4 (proto-kaanna.sh:n linja).
+          joutilas=$(( $(ioreg -c IOHIDSystem 2>/dev/null | awk '/HIDIdleTime/ {print $NF; exit}') / 1000000000 ))
+          if [ -e /tmp/matkakirja-kuormaraja ] || [ -e /tmp/matkakirja-kevyt ]; then JOBS=4
+          elif [ "$joutilas" -gt 300 ]; then JOBS=12; else JOBS=8; fi
+          echo "xcodebuild -jobs $JOBS (HIDIdleTime ${joutilas} s)"
+          alku=$SECONDS
+          xcodebuild -jobs "$JOBS" \
             -project "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj" \
             -scheme Unity-iPhone \
             -configuration Release \
@@ -565,6 +713,7 @@ jobs:
             PROVISIONING_PROFILE_SPECIFIER_APP="$PROFIILI_NIMI" \
             OTHER_CODE_SIGN_FLAGS="--keychain $AVAINNIPPU" \
             archive
+          echo "vaiheaika: xcodebuild archive $(( SECONDS - alku )) s (-jobs $JOBS)" | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Vie IPA
         if: env.OHITA != '1'
@@ -647,7 +796,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO"
+          python3 repo/tools/testflight/sisainen-ryhma.py --bundle-id "$BUNDLE_ID" --build "$BUILD_NUMERO" --alusta IOS
 
       - name: Merkitse yöajon master ladatuksi
         if: success() && env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
@@ -675,6 +824,24 @@ jobs:
       # Avainnippu ($HOME/Library/Keychains/matkakirja-testflight.keychain-db)
       # on pysyvä eikä sitä poisteta — varmenne ja yksityinen avain
       # säilyvät seuraavaa ajoa varten (ks. "Pysyvä avainnippu" -vaihe).
+      # VÄLITUOTTEIDEN SIIVOUS (Päätoimittaja 7.10.2026 klo 09.1x: levy laski 14 Gi 16 minuutissa, kova raja 30 Gi).
+      # Ajon lopuksi, vain kun tämä ajo piti käännöspalvelun lukkoa (muuten toinen käännös voi käyttää kansioita):
+      # Build/yo (Unity-vienti, ~2,4 Gt), xcodebuild-arkiston oletus-DerivedData Unity-iPhone-* (~6 Gt) ja arkisto/IPA
+      # RUNNER_TEMPista. Ladattu build on App Store Connectissa; proto-kaanna.sh säilyttää simulaattorin .app:n.
+      - name: Siivoa välituotteet
+        if: always() && env.LUKKO_OMA == '1'
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          ennen=$(df -g /Users/Shared | awk 'NR==2 {print $4}')
+          # INKREMENTAALINEN (omistaja 7.10.2026 klo 21.5x): Unity-vienti Build/yo ja arkiston DerivedData Unity-iPhone-* säilyvät
+          # seuraavaa käännöstä varten (kiinteät polut → vain yksi sarja); alle 36 Gi vapaana ne poistetaan kuten ennen.
+          if [ "$ennen" -lt 36 ]; then
+            [ "${VIENTI_KANSIO:-yo}" = "yo" ] && rm -rf Build/yo || true
+            rm -rf "$HOME"/Library/Developer/Xcode/DerivedData/Unity-iPhone-* || true
+          fi
+          rm -rf "$RUNNER_TEMP/proto3d.xcarchive" "$RUNNER_TEMP/ipa" || true
+          echo "Siivous: vapaana ${ennen} Gi → $(df -g /Users/Shared | awk 'NR==2 {print $4}') Gi"
+
       - name: Vapauta käännöspalvelun lukko
         if: always() && env.LUKKO_OMA == '1'
         run: |

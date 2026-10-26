@@ -1,0 +1,86 @@
+{
+ "_meta": "Kysy-napin kysymykset (omistaja 19.10. klo 11.40): 8 napautettavaa kysymystä per esittelykierroksen kohde; Pulu vastaa workerilla. Lähde: pallokierros-v13/koopenhamina.json (8 kohdetta). Kysymykset ≤ 45 merkkiä, uteliaita, kohteeseen sidottuja, ei vastausta kysymyksessä; 13+ ja aikuiset. Avain = kohteen id (Wikidata Q). EI ääntä. Tarkistettu 19.10. klo ~12.15 tekstiä vasten: vastaukset, jotka löytyivät jo kohteen tekstistä, vaihdettu uusiin.",
+ "kaupunki": "koopenhamina",
+ "kohteet": {
+  "Q29157": [
+   "Miksi tornin kierre on ulkopuolella?",
+   "Mitä erikoista urkuparvessa on?",
+   "Mikä paikka Christiania on?",
+   "Miksi Christianshavn rakennettiin?",
+   "Milloin kirkko vihittiin käyttöön?",
+   "Mikä kuuluisa ravintola oli kaupunginosassa?",
+   "Mikä patsas on tornin huipulla?",
+   "Millainen kellopeli tornissa on?"
+  ],
+  "Q943946": [
+   "Ketkä kaivoivat kanavan käsin?",
+   "Mitä ankkuri kanavan päässä muistaa?",
+   "Millaisia laivoja kanavassa on kiinni?",
+   "Mitkä olivat Andersenin ensimmäiset sadut?",
+   "Miksi talot ovat näin värikkäitä?",
+   "Mitä laivat toivat tänne?",
+   "Kuka oli kuningas Kristian viides?",
+   "Mitä täällä tapahtuu nykyään?"
+  ],
+  "Q211053": [
+   "Kenen mukaan Amalienborg on nimetty?",
+   "Kuka asuu Amalienborgissa nyt?",
+   "Mistä tietää, onko kuningas kotona?",
+   "Kuka rahoitti Marmorikirkon valmistumisen?",
+   "Miksi kirkko seisoi keskeneräisenä?",
+   "Mitä Rooman kirkkoa Marmorikirkko muistuttaa?",
+   "Mitä vartijat tekevät palatsin edessä?",
+   "Miksi aukio on kahdeksankulmainen?"
+  ],
+  "Q221812": [
+   "Miksi linnoitus on tähden muotoinen?",
+   "Kuka veisti Gefion-suihkulähteen?",
+   "Mikä kuuluisa patsas on lähellä rannalla?",
+   "Mikä kuninkaan lääkäri vangittiin tänne?",
+   "Mitä rakennuksia tähden sisällä on?",
+   "Miksi linnoitusta ympäröi vesi?",
+   "Mihin Kastelletia käytettiin ennen?",
+   "Mitä linnoitukselle tapahtui vuonna 1940?"
+  ],
+  "Q206101": [
+   "Mistä materiaalista linnan valtaistuin on?",
+   "Miksi Kristian neljäs rakensi linnan?",
+   "Miksi linna on punatiilinen?",
+   "Mitä ovat kruununinsignit?",
+   "Mitä Kuninkaan puutarhassa tehdään kesäisin?",
+   "Milloin linnasta tuli museo?",
+   "Minne Kristian neljäs on haudattu?",
+   "Millainen kuningas Kristian neljäs oli?"
+  ],
+  "Q1140534": [
+   "Kuinka pitkä ramppi on?",
+   "Mikä kultainen merkki julkisivussa on?",
+   "Mihin kirjastosalia käytetään nykyään?",
+   "Voiko tähtitornista katsella tähtiä nykyään?",
+   "Kuinka korkea Pyöreä torni on?",
+   "Mitä kirjoja kirjastossa säilytettiin?",
+   "Miksi torni on pyöreä?",
+   "Mitä huipulta näkee?"
+  ],
+  "Q940733": [
+   "Miksi linna on saarella?",
+   "Miksi Absalon on kaupungin perustaja?",
+   "Miksi aiemmat linnat paloivat?",
+   "Mikä on Tanskan parlamentin nimi?",
+   "Mikä on Kööpenhaminan korkein torni?",
+   "Mihin kuningas käyttää linnan saleja?",
+   "Missä kuninkaan hevoset asuvat?",
+   "Montako edustajaa parlamentissa on?"
+  ],
+  "Q110289": [
+   "Mikä on Tivolin vanhin vuoristorata?",
+   "Mitä riikinkukkoteatterissa esitetään?",
+   "Mikä huvipuisto sai vaikutteita Tivolista?",
+   "Keitä ovat Tivolin poikavartijat?",
+   "Mikä on Tivolin korkein laite?",
+   "Mitä Tivolissa tapahtuu jouluna?",
+   "Mitä Tivolissa voi tehdä?",
+   "Mistä Tivolin nimi on peräisin?"
+  ]
+ }
+}

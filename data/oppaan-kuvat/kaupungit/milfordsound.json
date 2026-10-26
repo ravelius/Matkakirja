@@ -1,0 +1,296 @@
+{
+ "kaupunki": "milfordsound",
+ "kaupunkiQ": "Q187197",
+ "jarjestys": [
+  "Q1049584",
+  "Q38408",
+  "Q877719",
+  "Q575365",
+  "Q1140471",
+  "Q1192384",
+  "Q1154973"
+ ],
+ "kohteet": [
+  {
+   "q": "Q1049584",
+   "nimi": "Mitre Peak",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -44.633,
+   "lon": 167.856,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Milford sound (8237971913).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Milford_sound_(8237971913).jpg?width=1280",
+     "tekija": "paul (dex) bica from toronto, canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Milford_sound_(8237971913).jpg",
+     "selite": "Mitre Peakin terävä huippu kohoaa suoraan Milford Soundin vedestä ja heijastuu tyyneen vuonoon.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 1367 New Zealand - Mitre Peak (Milford Sound).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1367_New_Zealand_-_Mitre_Peak_(Milford_Sound).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1367_New_Zealand_-_Mitre_Peak_(Milford_Sound).jpg",
+     "selite": "Piispanhiipan muotoinen Mitre Peak on Fiordlandin tunnetuin vuori.",
+     "leveys": 1867,
+     "korkeus": 2800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38408",
+   "nimi": "Sutherland Falls",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -44.80028,
+   "lon": 167.73028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sutherland Falls - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sutherland_Falls_-_panoramio.jpg?width=1280",
+     "tekija": "Ray Hayward",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sutherland_Falls_-_panoramio.jpg",
+     "selite": "Sutherland Falls putoaa korkealta vuoristolaaksoon ja kuuluu Uuden-Seelannin korkeimpiin putouksiin.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sutherland Falls 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sutherland_Falls_2011.jpg?width=1280",
+     "tekija": "Javier Sánchez Portero",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sutherland_Falls_2011.jpg",
+     "selite": "Putous syöksyy vehreän sademetsän reunustamana jyrkkää kalliota alas.",
+     "leveys": 2592,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q877719",
+   "nimi": "Fiordlandin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": -45.386,
+   "lon": 167.347,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mountains in Fiordland National Park 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mountains_in_Fiordland_National_Park_08.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mountains_in_Fiordland_National_Park_08.jpg",
+     "selite": "Fiordlandin jäätikkölaaksot ja jyrkät vuoret kuuluvat Uuden-Seelannin villeimpään luontoon.",
+     "leveys": 4385,
+     "korkeus": 2498,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A temperate Rainforest (52295290076).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_temperate_Rainforest_(52295290076).jpg?width=1280",
+     "tekija": "Rod Waddington from Kergunyah, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_temperate_Rainforest_(52295290076).jpg",
+     "selite": "Fiordlandin kostea sademetsä on sammaleen ja saniaisten peitossa.",
+     "leveys": 4192,
+     "korkeus": 2795,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q575365",
+   "nimi": "Doubtful Sound",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -45.345,
+   "lon": 167.03,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Doubtful Sound - Patea - DoubtfulSound9081.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doubtful_Sound_-_Patea_-_DoubtfulSound9081.jpg?width=1280",
+     "tekija": "lumoplank",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Doubtful_Sound_-_Patea_-_DoubtfulSound9081.jpg",
+     "selite": "Doubtful Sound on Milford Soundia pidempi ja hiljaisempi vuono, jonka rinteet nousevat suoraan merestä.",
+     "leveys": 5431,
+     "korkeus": 3621,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Afternoon view from Wilmot Pass to Doubtful Sound.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afternoon_view_from_Wilmot_Pass_to_Doubtful_Sound.jpg?width=1280",
+     "tekija": "Pseudopanax at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afternoon_view_from_Wilmot_Pass_to_Doubtful_Sound.jpg",
+     "selite": "Wilmot Passin näköalapaikalta näkyy vuonon mutkitteleva vesiväylä vuorten välissä.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140471",
+   "nimi": "Te Anau -järvi",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -45.2,
+   "lon": 167.8,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1356 New Zealand - Lake Te Anau (Fiordland National Park).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1356_New_Zealand_-_Lake_Te_Anau_(Fiordland_National_Park).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1356_New_Zealand_-_Lake_Te_Anau_(Fiordland_National_Park).jpg",
+     "selite": "Te Anau -järvi on Etelä-Saaren suurimpia järviä, ja sen ympärillä kohoavat Fiordlandin vuoret.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Anz-0326.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anz-0326.jpg?width=1280",
+     "tekija": "Dwstein (talk) (Uploads)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anz-0326.jpg",
+     "selite": "Purjevene liukuu lumihuippuisten vuorten juurella Te Anau -järvellä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1192384",
+   "nimi": "Manapouri-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -45.514,
+   "lon": 167.508,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1386 New Zealand (Fiordland National Park) - Lake Manapouri.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1386_New_Zealand_(Fiordland_National_Park)_-_Lake_Manapouri.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1386_New_Zealand_(Fiordland_National_Park)_-_Lake_Manapouri.jpg",
+     "selite": "Manapouri-järven saaret ja metsäiset rannat levittäytyvät Fiordlandin kansallispuiston reunalla.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 1462 New Zealand (Southland, Fiordland National Park) - Lake Manapouri.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1462_New_Zealand_(Southland%2C_Fiordland_National_Park)_-_Lake_Manapouri.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1462_New_Zealand_(Southland%2C_Fiordland_National_Park)_-_Lake_Manapouri.jpg",
+     "selite": "Matkustajaveneet lähtevät Manapourin laiturilta järven toiselle rannalle ja vuonoretkille.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1154973",
+   "nimi": "Te Anau",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -45.415,
+   "lon": 167.716,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Te Anau and Murchison Mountains.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Te_Anau_and_Murchison_Mountains.jpg?width=1280",
+     "tekija": "Tim Burgess",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Te_Anau_and_Murchison_Mountains.jpg",
+     "selite": "Te Anaun pikkukaupunki on Fiordlandin portti, ja järven toisella puolella kohoavat Murchisonin vuoret.",
+     "leveys": 6000,
+     "korkeus": 3376,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bowen Street in Te Anau.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowen_Street_in_Te_Anau.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bowen_Street_in_Te_Anau.jpg",
+     "selite": "Bowen Street on Te Anaun pääkatu, jonka varrella on majoitusta ja retkitoimistoja.",
+     "leveys": 3774,
+     "korkeus": 1409,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "MilfordSound.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MilfordSound.jpg?width=1280",
+   "tekija": "Wikikiwiman at English Wikipedia",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MilfordSound.jpg",
+   "selite": "Milford Sound on Fiordlandin vuono, jonka jyrkät seinämät kohoavat suoraan vedestä.",
+   "leveys": 2048,
+   "korkeus": 1364,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "00 1373 Milford Sound -New Zealand.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1373_Milford_Sound_-New_Zealand.jpg?width=1280",
+   "tekija": "W. Bulach",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1373_Milford_Sound_-New_Zealand.jpg",
+   "selite": "Rannalta näkyy Milford Soundin vuoriryhmä ja Mitre Peakin huippu.",
+   "leveys": 3300,
+   "korkeus": 2200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

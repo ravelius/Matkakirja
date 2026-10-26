@@ -403,6 +403,7 @@ export const HAHMOTELMA_IRL = [
   },
   {
     id: 'hahmotelma-powerscourt',
+    nimio: 'Powerscourt',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-powerscourt-6f523c29.jpg',
       lyhyt: 'Powerscourtin vesiputous valuu kallioista rinnettä alas metsäisessä laaksossa.',
@@ -632,7 +633,7 @@ export const HAHMOTELMA_IRL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-cobh-0e911282.jpg',
         lyhyt: 'Värikkäät rinnetalot West Viewn kadulla Cobhissa.',
-        selite: 'Cobhin West View -kadun värikkäät talorivit tunnetaan paikallisesti nimellä "Deck of Cards".',
+        selite: 'Cobhin West View -kadun värikkäät talorivit tunnetaan paikallisesti nimellä ”Deck of Cards”.',
         lahde: 'Valokuva: Colin Park, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'Colin Park',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cobh_-_\'Deck_of_Cards\'_houses,_West_View_-_geograph.org.uk_-_7930681.jpg',
@@ -968,7 +969,7 @@ export const HAHMOTELMA_IRL = [
       selite: 'Kuvassa on Cairn T, Loughcrewn käytävähauta, jonka kumpu on tehty kivistä. Etualalla on pienempi satelliittihauta, luultavasti Cairn S, ja taustalla avautuu Irlannin tasankomaisema.',
       lahde: 'Valokuva: Rob Hurson, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Rob Hurson',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cairns_S(?)_and_T,_Loughcrew.jpg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cairns_S(%3F)_and_T,_Loughcrew.jpg',
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
@@ -1449,6 +1450,7 @@ export const HAHMOTELMA_IRL = [
   },
   {
     id: 'hahmotelma-mellifont',
+    nimio: 'Mellifont',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/irl-nosto-mellifont-4f056d51.jpg',
       lyhyt: 'Mellifontin luostarin kahdeksankulmainen lavabo ja kaariholvien rauniot.',

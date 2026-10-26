@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Maapallon vuosi — Matkakirja (hiomassa)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<!--
+  MAAPALLON VUOSI -LINSSIN KEHITYSSIVU (Siirtoseppä 28.9.2026). Linssi ei ole vielä pelin rekisterissä (ei pelaajille);
+  tämä sivu avaa näkymän suoraan kehitystä ja kuvasarjoja varten.
+    ?kk=1–12          aloituskuukausi (oletus kuluva)
+    ?kerros=<tunnus>  datakerros kerrosluettelosta (ndvi, lumi, sst, sade, pilvet, palot)
+    ?peitto=0–1       kerroksen läpinäkyvyys (oletus 0,7)
+    ?luettelo=<url>   kerrosluettelo (oletus ämpärin data/maapallon-vuosi/kerrokset.json); suhteelliset kuvapolut
+                      luetaan luettelon kansiosta
+    ?pyori=0          ei automaattista pyöritystä (kuvasarjat)
+    ?ampari=<kansio>  paikallinen ämpärin peili (data/bmng/, data/maapallon-vuosi/kerrokset.json): sama luettelo ja
+                      polut kuin tuotannossa (Karttasepän vienti), ennen ämpäriä ja ilman CORS-estettä
+    ?pohja=<kansio>   BMNG-pohjien kansio (<kk>-4096.jpg); paikallisessa kehityksessä, koska ämpäri ei anna
+                      CORS-lupaa localhostille
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #05070d; color: #efe6d2; font: 15px/1.35 Georgia, serif; overflow: hidden; }
+  #kotelo { position: fixed; inset: 0; }
+  .mv-pallo { position: absolute; inset: 0; }
+  .mv-ui { position: absolute; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    width: min(560px, calc(100% - 32px)); display: grid; gap: 8px; padding: 12px 14px 10px;
+    background: rgba(12, 16, 26, 0.72); border: 1px solid rgba(239, 230, 210, 0.18); border-radius: 14px;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .mv-rivi { display: flex; align-items: center; gap: 10px; }
+  .mv-liuku, .mv-peitto { flex: 1; accent-color: #d9b56a; }
+  .mv-nimi { min-width: 6.5em; text-align: right; font-variant: small-caps; letter-spacing: 0.02em; }
+  .mv-toista, .mv-sulje { border: 0; background: rgba(239, 230, 210, 0.12); color: inherit; border-radius: 999px;
+    width: 34px; height: 34px; font-size: 14px; cursor: pointer; }
+  .mv-sulje { position: absolute; top: -44px; right: 0; }
+  .mv-valinta { flex: 0 0 auto; max-width: 48%; background: rgba(239, 230, 210, 0.1); color: inherit;
+    border: 1px solid rgba(239, 230, 210, 0.25); border-radius: 8px; padding: 5px 8px; font: inherit; }
+  .mv-valinta option { color: #1b1712; }
+  .mv-peitto:disabled { opacity: 0.35; }
+  .mv-lahde { font-size: 11px; opacity: 0.6; text-align: center; }
+  .virhe { position: fixed; inset: auto 16px 50% 16px; text-align: center; }
+</style>
+</head>
+<body>
+<div id="kotelo"></div>
+<script type="module">
+  // Kehityssivu: moduuli aina tuoreena (paikallinen palvelin ei lähetä välimuistiotsakkeita).
+  const { avaaMaapallonVuosi } = await import(`./js/linssit/maapallon-vuosi.js?v=${Date.now()}`);
+  const q = new URLSearchParams(location.search);
+  const luku = (k, oletus) => (q.has(k) && Number.isFinite(Number(q.get(k))) ? Number(q.get(k)) : oletus);
+  const luettelo = q.get('luettelo');
+  const valinnat = {
+    kotelo: document.getElementById('kotelo'),
+    kk: luku('kk', new Date().getMonth() + 1),
+    kerros: q.get('kerros'),
+    peitto: luku('peitto', 0.7),
+    pyorita: q.get('pyori') !== '0',
+  };
+  const ampari = q.get('ampari');
+  if (ampari) {
+    const juuri = new URL(ampari.endsWith('/') ? ampari : `${ampari}/`, location.href).href;
+    valinnat.luettelo = `${juuri}data/maapallon-vuosi/kerrokset.json`;
+    valinnat.kerrosJuuri = juuri;
+    valinnat.pohja = (kk) => `${juuri}data/bmng/${String(kk).padStart(2, '0')}-4096.jpg`;
+  }
+  const pohja = q.get('pohja');
+  if (pohja) {
+    const juuri = new URL(pohja.endsWith('/') ? pohja : `${pohja}/`, location.href).href;
+    valinnat.pohja = (kk) => `${juuri}${String(kk).padStart(2, '0')}-4096.jpg`;
+  }
+  if (luettelo) {
+    const osoite = new URL(luettelo, location.href);
+    valinnat.luettelo = osoite.href;
+    valinnat.kerrosJuuri = new URL('./', osoite).href;
+  }
+  try {
+    window.maapallonVuosi = await avaaMaapallonVuosi(valinnat);
+    document.body.dataset.valmis = '1';
+  } catch (e) {
+    const p = document.createElement('p');
+    p.className = 'virhe';
+    p.textContent = `Maapalloa ei saatu auki: ${e?.message ?? e}`;
+    document.body.append(p);
+    document.body.dataset.valmis = 'virhe';
+  }
+</script>
+</body>
+</html>

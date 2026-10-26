@@ -17,9 +17,9 @@ import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'node:http';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SELAIN = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 const avain = process.argv[2] ?? 'kaukasus';
 const kuvaIndeksi = Number(process.argv[3] ?? 0);
 
@@ -44,9 +44,7 @@ const palvelin = createServer((pyynto, vastaus) => {
 await new Promise((r) => palvelin.listen(0, r));
 const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
 
-const paketti = await import('playwright');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: SELAIN });
+const selain = await avaaChromium();
 const konteksti = await selain.newContext({ viewport: { width: 900, height: 1100 } });
 const sivu = await konteksti.newPage();
 sivu.on('console', (v) => { if (v.type() === 'error') console.log(`  konsoli: ${v.text()}`); });

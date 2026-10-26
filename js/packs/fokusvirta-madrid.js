@@ -670,8 +670,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska '
           + 'hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta '
           + '1902, kun vastaavia luolamaalauksia oli löytynyt lisää, '
-          + 'Cartailhac perui julkisesti artikkelissa "Mea culpa d\'un '
-          + 'sceptique". Sautuola oli silloin ollut kuolleena neljätoista '
+          + 'Cartailhac perui julkisesti artikkelissa ”Mea culpa d\'un '
+          + 'sceptique”. Sautuola oli silloin ollut kuolleena neljätoista '
           + 'vuotta.',
       ],
       lahde: 'en-Wikipedia "Cave of Altamira", johdanto ja osio "Discovery, '
@@ -754,7 +754,7 @@ export const FOKUSVIRTA_MADRID = {
        * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
        */
       id: 'munkkiaratit',
-      nimio: 'Madridin papukaijat',
+      nimio: 'Papukaijat',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * piste on Casa de Campon ja Länsipuiston puolella, kaupunkilehden
@@ -840,7 +840,7 @@ export const FOKUSVIRTA_MADRID = {
           + '12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. '
           + 'Kapinalliset saivat puolelleen sataman sota-alukset, jotka '
           + 'olivat Espanjan parhaita. Kantonin laivasto lähti keräämään '
-          + 'rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei '
+          + 'rahaa ”ulkovallalta”, Almerían kaupungilta, ja kun kaupunki ei '
           + 'maksanut, se pommitettiin. Madridin hallitus julisti kantonin '
           + 'johtajan merirosvoksi ja pani hänen päästään palkkion.',
         'Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, '
@@ -1122,6 +1122,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'madridin-kaksi-joukkuetta',
+      wiki: ['Estadio Santiago Bernabéu', 'Plaza de Cibeles'],
       nimio: 'Kaksi joukkuetta',
       otsikko: 'Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka '
         + 'vaihtoi joukkuetta',
@@ -1149,11 +1150,11 @@ export const FOKUSVIRTA_MADRID = {
         + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
         + 'karttauudistuksen erässä 10, 13.9.2026.',
       kuva: {
-        tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
+        tiedosto: 'Estadio Santiago Bernabéu 11.jpg',
         lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
         selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real Madridin '
           + 'kotistadionille mahtuu nykyään 83 186 katsojaa.',
-        lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+        lahde: 'Luis García (Zaqarbal), Wikimedia Commons (CC BY-SA 3.0)',
       },
       /*
        * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
@@ -1187,6 +1188,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'palamaton-linna',
+      wiki: 'Palacio Real de Madrid',
       nimio: 'Palamaton linna',
       otsikko: 'Linna rakennettiin palamattomaksi',
       symboli: 'tekniikka',
@@ -1225,6 +1227,7 @@ export const FOKUSVIRTA_MADRID = {
     },
     {
       id: 'gran-vian-murto',
+      wiki: 'Alfonso XIII',
       nimio: 'Gran Vía',
       otsikko: 'Katu, joka murrettiin talojen läpi',
       symboli: 'kaupunki',
@@ -1275,17 +1278,4 @@ export const FOKUSVIRTA_MADRID = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Vigon lahden
-   * hopealasti. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Vigossa soutumies näytti kohdan, jossa hopealaivat '
-      + 'makaavat, ja pyysi viikon palkan sukelluksesta. Minulla oli '
-      + 'viikko aikaa muttei uskallusta — merkitsin syvyyden ja soudin '
-      + 'takaisin.',
-  },
 };

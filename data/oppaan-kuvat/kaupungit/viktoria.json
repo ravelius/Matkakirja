@@ -1,0 +1,375 @@
+{
+ "kaupunki": "viktoria",
+ "kaupunkiQ": "Q5505",
+ "kohteet": [
+  {
+   "q": "Q487912",
+   "nimi": "Ripon-putoukset",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 0.43391,
+   "lon": 33.19352,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jules_Leclercq-_Aux_sources_du_Nil-1913-chutes_Ripon.jpg?width=1280",
+     "tekija": "indéterminé ; probablement Jules Leclercq (1848-1928)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jules_Leclercq-_Aux_sources_du_Nil-1913-chutes_Ripon.jpg",
+     "selite": "Ripon-putouksilla Speke totesi 1862, että Niili saa alkunsa Viktoriajärvestä.",
+     "leveys": 3341,
+     "korkeus": 2457,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ripon Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ripon_Falls.jpg?width=1280",
+     "tekija": "Andyessex",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ripon_Falls.jpg",
+     "selite": "Putouksen vaahtoava kuohu ennen kuin pato peitti sen veden alle.",
+     "leveys": 1952,
+     "korkeus": 1880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Le Tour du monde-09-p365.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Tour_du_monde-09-p365.jpg?width=1280",
+     "tekija": "Alexandre de Bar",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_Tour_du_monde-09-p365.jpg",
+     "selite": "1800-luvun kaiverrus esittää Niilin lähtöä järvestä saarten ja kallioiden keskellä.",
+     "leveys": 2712,
+     "korkeus": 1830,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q501709",
+   "nimi": "Jinja",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 0.4353,
+   "lon": 33.20556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jinja source of Nile.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinja_source_of_Nile.jpg?width=1280",
+     "tekija": "Dror Feitelson",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jinja_source_of_Nile.jpg",
+     "selite": "Jinjan edustalla opaste merkitsee paikan, jossa Niili lähtee Viktoriajärvestä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Source of the Nile, Jinja Uganda - international tourist site.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Source_of_the_Nile%2C_Jinja_Uganda_-_international_tourist_site.jpg?width=1280",
+     "tekija": "Christopher Liberty",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Source_of_the_Nile%2C_Jinja_Uganda_-_international_tourist_site.jpg",
+     "selite": "Niilin lähteen leveä vesi Jinjan lähellä, kauempana metsäisiä kukkuloita.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Uganda Jinja Streetview.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uganda_Jinja_Streetview.JPG?width=1280",
+     "tekija": "Ilona1001",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uganda_Jinja_Streetview.JPG",
+     "selite": "Jinjan katu punaista maata ja monikerroksisia kauppataloja.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q110218",
+   "nimi": "Mwanza",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -2.51667,
+   "lon": 32.9,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bismarck Rock.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bismarck_Rock.jpg?width=1280",
+     "tekija": "Prof.Chen Hualin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bismarck_Rock.jpg",
+     "selite": "Bismarckin kallio nousee Mwanzan rannan edustalla vedestä kuin tasapainoileva lohkare.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mwanza city-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mwanza_city-1.jpg?width=1280",
+     "tekija": "Emil Sjöblom",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mwanza_city-1.jpg",
+     "selite": "Mwanza levittyy Viktoriajärven lahden ja kumpuilevien kallioisten kukkuloiden ympärille.",
+     "leveys": 1280,
+     "korkeus": 857,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mwanza.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mwanza.JPG?width=1280",
+     "tekija": "User:Cybetraveller",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mwanza.JPG",
+     "selite": "Rinteille on rakennettu tiheästi taloja kallioiden lomaan järven rannalla.",
+     "leveys": 2385,
+     "korkeus": 1789,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211970",
+   "nimi": "Entebbe",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 0.05,
+   "lon": 32.46,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Entebbe Aerial view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entebbe_Aerial_view.jpg?width=1280",
+     "tekija": "Niranjanoak",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entebbe_Aerial_view.jpg",
+     "selite": "Entebben niemi ilmasta: kaupunki ja lentokenttä sijaitsevat Viktoriajärven rannan kapealla niemellä.",
+     "leveys": 4996,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Victoria via from Entebbe Botanical Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Victoria_via_from_Entebbe_Botanical_Gardens.jpg?width=1280",
+     "tekija": "Christopher Liberty",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Victoria_via_from_Entebbe_Botanical_Gardens.jpg",
+     "selite": "Näkymä järven yli Entebben rantaa ja hotellia kohti.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214485",
+   "nimi": "Kisumu",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -0.1,
+   "lon": 34.75,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kisumu City view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kisumu_City_view.jpg?width=1280",
+     "tekija": "Victor Ochieng",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kisumu_City_view.jpg",
+     "selite": "Kisumu avautuu Viktoriajärven Winam-lahden pohjukkaan.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "KISU - Boats and landing sites on Lake Victoria at Kisumu, Kenya, 2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KISU_-_Boats_and_landing_sites_on_Lake_Victoria_at_Kisumu%2C_Kenya%2C_2012.jpg?width=1280",
+     "tekija": "Josep M. Gracia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KISU_-_Boats_and_landing_sites_on_Lake_Victoria_at_Kisumu%2C_Kenya%2C_2012.jpg",
+     "selite": "Värikkäät kalastajaveneet ovat rannassa kalastajien satamapaikoilla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A view of Lake Victoria, Kisumu, Kenya 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Lake_Victoria%2C_Kisumu%2C_Kenya_3.jpg?width=1280",
+     "tekija": "Sanjib Chaudhary",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_Lake_Victoria%2C_Kisumu%2C_Kenya_3.jpg",
+     "selite": "Kisumun rannalla haikaralinnut seisovat matalassa vedessä laiturin vieressä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1060862",
+   "nimi": "Ssese-saaret",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -0.43333,
+   "lon": 32.25,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Shore at Ssese Islands, on Lake Victoria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Shore_at_Ssese_Islands%2C_on_Lake_Victoria.jpg?width=1280",
+     "tekija": "Jiame Josh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Shore_at_Ssese_Islands%2C_on_Lake_Victoria.jpg",
+     "selite": "Ssese-saarten hiekkarannalla aallot vyöryvät järven pitkään uloimpaan rantaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shores of Lake Victoria at Ssese Islands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shores_of_Lake_Victoria_at_Ssese_Islands.jpg?width=1280",
+     "tekija": "Jiame Josh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shores_of_Lake_Victoria_at_Ssese_Islands.jpg",
+     "selite": "Metsäinen niemi ja kalastajaveneet Ssese-saarten rannalla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1782797",
+   "nimi": "Rubondon saaren kansallispuisto",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -2.3,
+   "lon": 31.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rubondo National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rubondo_National_Park.jpg?width=1280",
+     "tekija": "Asterlegorch367",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rubondo_National_Park.jpg",
+     "selite": "Rubondon saaren hiekkaranta ja palmu järven lounaiskulmassa.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2356704",
+   "nimi": "Rusinga",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -0.4,
+   "lon": 34.16667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tom Mboya Mausoleum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom_Mboya_Mausoleum.jpg?width=1280",
+     "tekija": "Wycondi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tom_Mboya_Mausoleum.jpg",
+     "selite": "Tom Mboyan mausoleumin valkoinen kartiokatto kohoaa Rusingan saarella.",
+     "leveys": 3292,
+     "korkeus": 2628,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rusinga Island-4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rusinga_Island-4.jpg?width=1280",
+     "tekija": "Ryan Harvey",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rusinga_Island-4.jpg",
+     "selite": "Rusingan rannalla kalastajaveneet ja suuret puut järven reunalla.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Rusinga Island Fishing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rusinga_Island_Fishing.jpg?width=1280",
+     "tekija": "Ryan Harvey",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rusinga_Island_Fishing.jpg",
+     "selite": "Purjevene kalastamassa vihreän rinteen vieressä Rusingan edustalla.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "A view of Lake Victoria, Kisumu, Kenya 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Lake_Victoria%2C_Kisumu%2C_Kenya_1.jpg?width=1280",
+   "tekija": "Sanjib Chaudhary",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_Lake_Victoria%2C_Kisumu%2C_Kenya_1.jpg",
+   "selite": "Viktoriajärven avoin vesi ja horisontti Kisumun rannalta nähtynä.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lake Victoria in Mwanza, Tanzania.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Victoria_in_Mwanza%2C_Tanzania.jpg?width=1280",
+   "tekija": "N17RM",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Victoria_in_Mwanza%2C_Tanzania.jpg",
+   "selite": "Viktoriajärvi Mwanzan rannalla, vene kulkee vesillä ja metsäinen niemi etäällä.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

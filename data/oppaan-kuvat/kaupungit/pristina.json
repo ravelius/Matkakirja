@@ -1,0 +1,285 @@
+{
+ "kaupunki": "pristina",
+ "kaupunkiQ": "Q25270",
+ "jarjestys": [
+  "Q513756",
+  "Q1486421",
+  "Q1254341",
+  "Q16854755",
+  "Q1817965",
+  "Q12757016"
+ ],
+ "kohteet": [
+  {
+   "q": "Q513756",
+   "nimi": "Sultan Mehmed Fatihin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 42.667,
+   "lon": 21.167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Xhamia e Madhe DSCN4659.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Xhamia_e_Madhe_DSCN4659.JPG?width=1280",
+     "tekija": "IsmailGagica",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Xhamia_e_Madhe_DSCN4659.JPG",
+     "selite": "Sultan Mehmed Fatihin moskeija on Pristinan vanhin ja tunnetuin ottomaanien ajan pyhäkkö.",
+     "leveys": 2556,
+     "korkeus": 2372,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2011 Prisztina, Meczet Mehmeda Zdobywcy (Meczet Zwycięstwa) 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Prisztina%2C_Meczet_Mehmeda_Zdobywcy_(Meczet_Zwyci%C4%99stwa)_01.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Prisztina%2C_Meczet_Mehmeda_Zdobywcy_(Meczet_Zwyci%C4%99stwa)_01.JPG",
+     "selite": "Moskeijan hoikka minareetti nousee vanhan keskustan matalien rakennusten yläpuolelle.",
+     "leveys": 2038,
+     "korkeus": 4243,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2011 Prisztina, Meczet Mehmeda Zdobywcy (Meczet Zwycięstwa) 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Prisztina%2C_Meczet_Mehmeda_Zdobywcy_(Meczet_Zwyci%C4%99stwa)_02.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Prisztina%2C_Meczet_Mehmeda_Zdobywcy_(Meczet_Zwyci%C4%99stwa)_02.JPG",
+     "selite": "Kivinen sisäänkäyntiportti on koristeltu kaarevalla holvilla ja kaiverretuilla yksityiskohdilla.",
+     "leveys": 1880,
+     "korkeus": 3799,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1486421",
+   "nimi": "Pristinan kellotorni",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 30,
+   "lat": 42.66662,
+   "lon": 21.16705,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Clock Tower in Prishtina.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_in_Prishtina.jpg?width=1280",
+     "tekija": "Bujar Gashii",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Clock_Tower_in_Prishtina.jpg",
+     "selite": "Kellotorni on pitkään ollut Pristinan vanhan keskustan tunnusmerkki.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pristina Sahat Kula.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pristina_Sahat_Kula.JPG?width=1280",
+     "tekija": "Julian Nyča",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pristina_Sahat_Kula.JPG",
+     "selite": "Kivinen torni kohoaa matalamman kaupunkirakennuksen ja puiden yläpuolelle.",
+     "leveys": 1770,
+     "korkeus": 2655,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2011 Prisztina, Wieża zegarowa.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Prisztina%2C_Wie%C5%BCa_zegarowa.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Prisztina%2C_Wie%C5%BCa_zegarowa.JPG",
+     "selite": "Tornin yläosan tiilinen kellohuone erottuu selvästi kaupungin taivaanrannasta.",
+     "leveys": 2388,
+     "korkeus": 4632,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1254341",
+   "nimi": "Jashar Pashan moskeija",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 50,
+   "lat": 42.66602,
+   "lon": 21.16636,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jashar Pasha Mosque (Pristina) in 2025.02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jashar_Pasha_Mosque_(Pristina)_in_2025.02.jpg?width=1280",
+     "tekija": "CAPTAIN RAJU",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jashar_Pasha_Mosque_(Pristina)_in_2025.02.jpg",
+     "selite": "Jashar Pashan moskeija on 1800-luvun ottomaanirakennus Pristinan vanhan keskustan laidalla.",
+     "leveys": 5792,
+     "korkeus": 4344,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jashar Pasha Mosque 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jashar_Pasha_Mosque_01.jpg?width=1280",
+     "tekija": "Atdheu",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jashar_Pasha_Mosque_01.jpg",
+     "selite": "Moskeijan paksut kivimuurit ja pitkä minareetti ovat säilyneet kaupungin ottomaanien ajalta.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16854755",
+   "nimi": "Kosovon kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 42.66568,
+   "lon": 21.16627,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Muzeu i Kosovës.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muzeu_i_Kosov%C3%ABs.JPG?width=1280",
+     "tekija": "IsmailGagica",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muzeu_i_Kosov%C3%ABs.JPG",
+     "selite": "Kansallismuseo toimii 1800-luvun lopun keltaisessa rakennuksessa Pristinan keskustassa.",
+     "leveys": 3646,
+     "korkeus": 2476,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museum of Kosovo from the drone.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Kosovo_from_the_drone.jpg?width=1280",
+     "tekija": "Arianit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Kosovo_from_the_drone.jpg",
+     "selite": "Ilmakuvassa näkyy museorakennuksen punakattoinen päärakennus ja sen piha.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1817965",
+   "nimi": "Äiti Teresan bulevardi",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 42.66139,
+   "lon": 21.16222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bulevardi Nëna Tereze Pristina (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulevardi_N%C3%ABna_Tereze_Pristina_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bulevardi_N%C3%ABna_Tereze_Pristina_(2).jpg",
+     "selite": "Äiti Teresan bulevardi on Pristinan puiden reunustama kävelykatu ja kaupungin pääväylä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bulevardi Nëna Tereze Pristina (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulevardi_N%C3%ABna_Tereze_Pristina_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bulevardi_N%C3%ABna_Tereze_Pristina_(1).jpg",
+     "selite": "Leveä kävelykatu yhdistää keskustan aukion kahviloihin ja puistomaisiin istutuksiin.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12757016",
+   "nimi": "Gërmian puisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 1500,
+   "lat": 42.673,
+   "lon": 21.195,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Germia Park during Spring Season in Prishtina, Kosovo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Germia_Park_during_Spring_Season_in_Prishtina%2C_Kosovo.jpg?width=1280",
+     "tekija": "SUHEJLO",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Germia_Park_during_Spring_Season_in_Prishtina%2C_Kosovo.jpg",
+     "selite": "Gërmian puisto on Pristinan koillispuolella sijaitseva metsäinen virkistysalue.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Germia 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Germia_1.jpg?width=1280",
+     "tekija": "Fitore Syla",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Germia_1.jpg",
+     "selite": "Syksyllä puiston metsätie hohtaa kullankeltaisena kaupunkilaisten suosimana lenkkimaastona.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "PrishtinaKosovoSkyline.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PrishtinaKosovoSkyline.JPG?width=1280",
+   "tekija": "Flutur Gërbeshi",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PrishtinaKosovoSkyline.JPG",
+   "selite": "Pristinan kerrostalot levittyvät laaksoon kukkuloiden ja vuorten edessä.",
+   "leveys": 3888,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama Prishtine 2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Prishtine_2.jpg?width=1280",
+   "tekija": "ArdianLumi",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Prishtine_2.jpg",
+   "selite": "Auringonlaskun valaisema panoraama näyttää Pristinan tiiviin kaupunkirakenteen.",
+   "leveys": 1645,
+   "korkeus": 445,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

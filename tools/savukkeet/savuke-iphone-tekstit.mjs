@@ -62,6 +62,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { LIIKU_LAAJENNUS_MS } from '../../js/ui.js';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * EI ?lauta=kartta. Vanha kartta on pois käytöstä (omistaja 7.9.2026),
@@ -70,9 +71,6 @@ import { LIIKU_LAAJENNUS_MS } from '../../js/ui.js';
  * samat lautavalinnasta riippumatta.
  */
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -148,8 +146,7 @@ const PIKSELI = Buffer.from(
   'base64',
 );
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   // Ilman tätä äänikonteksti jää `suspended`ksi eleettömässä ajossa,
   // eikä kaiuttimen VU-mittarilla olisi mitattavaa signaalia.
   args: ['--autoplay-policy=no-user-gesture-required'],

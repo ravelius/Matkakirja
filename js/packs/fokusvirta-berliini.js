@@ -89,7 +89,7 @@ const AMPELMANN_VISA = {
   fakta: 'Liikennepsykologi Karl Peglau piirsi hahmon 1961, ja '
     + 'ensimmäiset valot syttyivät Itä-Berliinissä 1969. Kun ukkelia '
     + 'alettiin yhdistymisen jälkeen vaihtaa lännen tikku-ukkoon, '
-    + 'kansalaiskampanja "Pelastakaa Ampelmännchen" nousi vastaan ja '
+    + 'kansalaiskampanja ”Pelastakaa Ampelmännchen” nousi vastaan ja '
     + 'voitti.',
 };
 
@@ -353,7 +353,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen '
         + 'järjestelmän, joka johti jätevedet kaupungin laidalle '
         + 'sadetuskentille. Pääputkien rakentaminen alkoi 1873 ja '
-        + 'viimeinen valmistui 1893. Samalta mieheltä tilattiin sen '
+        + 'viimeinen valmistui 1909. Samalta mieheltä tilattiin sen '
         + 'jälkeen viemärit kolmeenkymmeneen saksalaiseen kaupunkiin '
         + 'sekä Moskovaan, Tokioon ja Kairoon.',
       lahde: 'en-Wikipedia "James Hobrecht". Tarkistettu 1.9.2026.',
@@ -402,8 +402,8 @@ export const FOKUSVIRTA_BERLIINI = {
       otsikko: 'Berliinin karhu',
       teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. '
         + 'maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on '
-        + 'turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin '
-        + 'porvarien sinetti". Vitsi on siinä, ettei karhulla '
+        + 'turkkurien kiltakirjeessä, ja siinä lukee ”olen Berliinin '
+        + 'porvarien sinetti”. Vitsi on siinä, ettei karhulla '
         + 'todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: '
         + 'tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on '
         + 'slaavilaista perua sanasta berl, suo, ja karhu on '
@@ -604,7 +604,7 @@ export const FOKUSVIRTA_BERLIINI = {
        * takynostot-saksa.md, ehdokas 1 (VARMA). Henkilö kuollut 1922.
        */
       id: 'kopenickin-kapteeni',
-      nimio: 'Köpenickin kapteeni',
+      nimio: 'Köpenick',
       /*
        * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
        * Köpenick on Berliinin kaakkoislaidalla eikä osu kaupunkilehden
@@ -697,7 +697,7 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja '
           + 'pitkine liskomaisine häntineen — ja höyhenten painaumat '
           + 'kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin '
-          + 'kahdestatoista löydetystä yksilöstä täydellisin ja ensimmäinen, '
+          + 'tunnetuista yksilöistä täydellisin ja ensimmäinen, '
           + 'jolla on kokonainen pää.',
         'Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. '
           + 'Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille '
@@ -861,8 +861,8 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
           + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
           + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
-          + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa '
-          + 'Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen '
+          + 'tikku-ukkoon — kunnes kansalaiskampanja ”Pelastakaa '
+          + 'Ampelmännchen” nousi vastaan ja voitti. Nykyään hattupäinen '
           + 'ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin '
           + 'risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota '
           + 'myydään matkamuistona.',
@@ -1040,6 +1040,7 @@ export const FOKUSVIRTA_BERLIINI = {
     },
     {
       id: 'paavin-kosto',
+      wiki: 'Berliinin televisiotorni',
       nimio: 'Paavin kosto',
       otsikko: 'Aurinko piirsi torniin ristin',
       symboli: 'tekniikka',
@@ -1073,6 +1074,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       galleria: [
         {
+          otsikko: 'Työmaa toukokuussa 1968',
           tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
           lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
           selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
@@ -1107,6 +1109,7 @@ export const FOKUSVIRTA_BERLIINI = {
     },
     {
       id: 'maailmankello',
+      wiki: 'Alexanderplatz',
       nimio: 'Maailmankello',
       otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
       symboli: 'tekniikka',
@@ -1143,6 +1146,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       galleria: [
         {
+          otsikko: 'Nimet lähietäisyydeltä',
           tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
           selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan.',
           lahde: 'Gryffindor, Wikimedia Commons (Public domain)',
@@ -1162,15 +1166,4 @@ export const FOKUSVIRTA_BERLIINI = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan. Iso aarre: Nibelungein
-   * aarre.
-   */
-  aarremerkinta: {
-    teksti: 'Seurasin laulun jälkiä Wormsiin asti ja seisoin Reinin '
-      + 'rannalla kartta kädessä. Joki oli leveä ja välinpitämätön — '
-      + 'kirjoitin: tämä aarre ei odota löytäjää, se odottaa uskojaa.',
-  },
 };

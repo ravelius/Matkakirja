@@ -886,7 +886,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       id: 'tulppaanimania',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
-      nimio: 'Alkmaarin huutokauppa',
+      nimio: 'Alkmaar',
       otsikko: 'Yhdestä sipulista maksettiin kanavatalon hinta, ja '
         + 'kaksi päivää myöhemmin siitä ei maksettu mitään',
       lunastus: [
@@ -1306,6 +1306,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     },
     {
       id: 'amsterdamin-maitotytto',
+      wiki: 'Maitotyttö',
       nimio: 'Maitotyttö',
       otsikko: 'Vermeer peitti omat esineensä maalilla',
       symboli: 'silma',
@@ -1461,6 +1462,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     },
     {
       id: 'amsterdamin-yovartio',
+      wiki: 'Yövartio (maalaus)',
       nimio: 'Yövartio',
       otsikko: 'Yövartiosta sahattiin palat pois',
       symboli: 'historia',
@@ -1496,6 +1498,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       galleria: [
         {
+          otsikko: 'Näin taulu näytti ennen leikkausta',
           tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
           lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
           selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
@@ -1529,18 +1532,4 @@ export const FOKUSVIRTA_AMSTERDAM = {
       },
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: VOC-kauppalaivan hopealasti. Merkintä aukeaa, kun aarre
-   * löytyy (js/fokusvirta.js fokusvirtaAarremerkinta).
-   */
-  aarremerkinta: {
-    teksti: 'Satamakonttorin seinällä on lista laivoista, jotka eivät '
-      + 'koskaan palanneet. Yhden kohdalle joku on piirtänyt ristin ja '
-      + 'sanan "hopea". Konttoristi sanoi, että meri on Kompanian '
-      + 'suurin holvi — ja sen ovi on auki sille, joka löytää oikean '
-      + 'hylyn.',
-  },
 };

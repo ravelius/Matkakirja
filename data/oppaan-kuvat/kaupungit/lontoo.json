@@ -1,0 +1,927 @@
+{
+ "kaupunki": "lontoo",
+ "kaupunkiQ": "Q84",
+ "kohteet": [
+  {
+   "q": "Q41225",
+   "nimi": "Big Ben",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 51.50067,
+   "lon": -0.12457,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Elizabeth Tower and the north front of the Palace of Westminster, London.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg",
+     "selite": "Elizabeth Tower, jonka kelloa kutsutaan Big Beniksi, on Lontoon tunnetuin kellotorni.",
+     "leveys": 4347,
+     "korkeus": 7728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AyrtonLight.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AyrtonLight.jpg?width=1280",
+     "tekija": "JSilv99",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AyrtonLight.jpg",
+     "selite": "Kellotornin valtava kellotaulu on valaistu illalla.",
+     "leveys": 2577,
+     "korkeus": 1796,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Big Ben 12 de octubre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Ben_12_de_octubre.jpg?width=1280",
+     "tekija": "Ian Sintes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Ben_12_de_octubre.jpg",
+     "selite": "Torni kohoaa Westminsterin palatsin kulmasta Parliament Squaren laidalla.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83125",
+   "nimi": "Tower Bridge",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 51.50556,
+   "lon": -0.07528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "London - London Tower Bridge - 140806 171049.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London_-_London_Tower_Bridge_-_140806_171049.jpg?width=1280",
+     "tekija": "Barcex",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London_-_London_Tower_Bridge_-_140806_171049.jpg",
+     "selite": "Tower Bridge on goottilaistyylinen nostosilta Thamesin yllä, ja sen tornien välissä kulkee ylempi jalankulkukäytävä.",
+     "leveys": 4828,
+     "korkeus": 2716,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tower Bridge London Feb 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Bridge_London_Feb_2006.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_London_Feb_2006.jpg",
+     "selite": "Illalla valaistu silta heijastuu Thamesin veteen.",
+     "leveys": 9462,
+     "korkeus": 4734,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tower Bridge (aerial view).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Bridge_(aerial_view).jpg?width=1280",
+     "tekija": "Bob Collowan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_(aerial_view).jpg",
+     "selite": "Ylhäältä näkyy sillan nostosiltaosa ja Thamesin rantojen vanhat varastorakennukset.",
+     "leveys": 3650,
+     "korkeus": 2340,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q42182",
+   "nimi": "Buckinghamin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 51.501,
+   "lon": -0.142,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Buckingham Palace, London - April 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace%2C_London_-_April_2009.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace%2C_London_-_April_2009.jpg",
+     "selite": "Buckinghamin palatsi on Britannian kuninkaallisen perheen virallinen asuinpaikka Lontoossa.",
+     "leveys": 3072,
+     "korkeus": 2011,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "East Front of Buckingham Palace 20160816.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Front_of_Buckingham_Palace_20160816.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:East_Front_of_Buckingham_Palace_20160816.jpg",
+     "selite": "Palatsin itäjulkisivu avautuu The Mall -kadun päähän.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Buckingham Palace - front gate.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace_-_front_gate.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Palace_-_front_gate.jpg",
+     "selite": "Koristeelliset portit vartioivat palatsin pääsisäänkäyntiä.",
+     "leveys": 3906,
+     "korkeus": 3021,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q160659",
+   "nimi": "Lontoon silmä",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 51.50333,
+   "lon": -0.11972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "London eye and county hall pano edited 2008-02-19.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London_eye_and_county_hall_pano_edited_2008-02-19.jpg?width=1280",
+     "tekija": "Kim Hansen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London_eye_and_county_hall_pano_edited_2008-02-19.jpg",
+     "selite": "Lontoon silmä on Thamesin etelärannalla kohoava jättiläismäinen maailmanpyörä.",
+     "leveys": 2584,
+     "korkeus": 1260,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "London Eye Twilight April 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Eye_Twilight_April_2006.jpg?width=1280",
+     "tekija": "User:Diliff",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London_Eye_Twilight_April_2006.jpg",
+     "selite": "Hämärässä pyörä loistaa puiden valoketjujen keskellä.",
+     "leveys": 2100,
+     "korkeus": 1400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "London Eye at Night (long exposure).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London_Eye_at_Night_(long_exposure).JPG?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London_Eye_at_Night_(long_exposure).JPG",
+     "selite": "Yöllä pyörä valaistaan värein Thamesin rannalla.",
+     "leveys": 3437,
+     "korkeus": 3437,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5933",
+   "nimi": "Westminster Abbey",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.4994,
+   "lon": -0.12737,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Westminster Abbey west front March 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_Abbey_west_front_March_2015.jpg?width=1280",
+     "tekija": "Prioryman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westminster_Abbey_west_front_March_2015.jpg",
+     "selite": "Westminster Abbeyn länsijulkisivun kaksi tornia ovat goottilaisen arkkitehtuurin tunnusmerkki.",
+     "leveys": 3473,
+     "korkeus": 5207,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Westminster Abbey west front August 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_Abbey_west_front_August_2014.jpg?width=1280",
+     "tekija": "Rob enwiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westminster_Abbey_west_front_August_2014.jpg",
+     "selite": "Luostarikirkossa on kruunattu Englannin hallitsijoita vuosisatojen ajan.",
+     "leveys": 4317,
+     "korkeus": 5134,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Westminster Abbey front, 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_Abbey_front%2C_2017.jpg?width=1280",
+     "tekija": "Robert-brook",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westminster_Abbey_front%2C_2017.jpg",
+     "selite": "Julkisivun koristeelliset ikkunat ja tornit kohoavat taivasta vasten.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q62378",
+   "nimi": "Lontoon Tower",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 51.5082,
+   "lon": -0.0762,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tower of London viewed from the River Thames.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_of_London_viewed_from_the_River_Thames.jpg?width=1280",
+     "tekija": "Bob Collowan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_London_viewed_from_the_River_Thames.jpg",
+     "selite": "Lontoon Tower on keskiaikainen linnoitus Thamesin rannalla, ja se on kuulunut kuninkaalliseen valtaan vuosisatoja.",
+     "leveys": 3948,
+     "korkeus": 2479,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial Tower of London.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Tower_of_London.jpg?width=1280",
+     "tekija": "Rafa Esteve",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Tower_of_London.jpg",
+     "selite": "Ilmasta näkyvät valkoinen torni, kaksinkertaiset muurit ja vallihauta.",
+     "leveys": 4687,
+     "korkeus": 2636,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "London, Tower of London, White Tower -- 2016 -- 4681-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London%2C_Tower_of_London%2C_White_Tower_--_2016_--_4681-2.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London%2C_Tower_of_London%2C_White_Tower_--_2016_--_4681-2.jpg",
+     "selite": "Valkoinen torni on linnoituksen vanhin osa, jonka Vilhelm Valloittaja rakennutti.",
+     "leveys": 4264,
+     "korkeus": 6237,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q173882",
+   "nimi": "St Paulin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 51.51378,
+   "lon": -0.09831,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Paul's Cathedral, London, England - Jan 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul's_Cathedral%2C_London%2C_England_-_Jan_2010.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Paul's_Cathedral%2C_London%2C_England_-_Jan_2010.jpg",
+     "selite": "St Paulin katedraali on Christopher Wrenin suunnittelema barokkikirkko Lontoon Cityssä.",
+     "leveys": 5603,
+     "korkeus": 5369,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St Paul's Cathedral Dome from One New Change - Square Crop.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul's_Cathedral_Dome_from_One_New_Change_-_Square_Crop.jpg?width=1280",
+     "tekija": "Colin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Paul's_Cathedral_Dome_from_One_New_Change_-_Square_Crop.jpg",
+     "selite": "Katedraalin valtava kupoli hallitsee Lontoon siluettia.",
+     "leveys": 7514,
+     "korkeus": 7514,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St Paul's Cathedral Dome 2020 Exterior Ground.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul's_Cathedral_Dome_2020_Exterior_Ground.jpg?width=1280",
+     "tekija": "Julian Herzog (Website)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Paul's_Cathedral_Dome_2020_Exterior_Ground.jpg",
+     "selite": "Kupolia kiertävät pylväät ja kivinen rumpu tukevat lyijyllä päällystettyä kupolia.",
+     "leveys": 5539,
+     "korkeus": 3978,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q62408",
+   "nimi": "Westminsterin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 51.49944,
+   "lon": -0.12417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palace of Westminster seen from the north bank of the Thames, London.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster_seen_from_the_north_bank_of_the_Thames%2C_London.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster_seen_from_the_north_bank_of_the_Thames%2C_London.jpg",
+     "selite": "Westminsterin palatsi on Britannian parlamentin koti Thamesin rannalla.",
+     "leveys": 12233,
+     "korkeus": 6881,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palace of Westminster, London - Feb 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster%2C_London_-_Feb_2007.jpg",
+     "selite": "Uusgoottilainen palatsi rakennettiin 1800-luvulla vuoden 1834 palon jälkeen.",
+     "leveys": 3200,
+     "korkeus": 1261,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Houses of Parliament and Westminster Bridge at night - 2022-05-05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Houses_of_Parliament_and_Westminster_Bridge_at_night_-_2022-05-05.jpg?width=1280",
+     "tekija": "The wub",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houses_of_Parliament_and_Westminster_Bridge_at_night_-_2022-05-05.jpg",
+     "selite": "Illalla palatsi ja Big Ben heijastuvat Thamesin pintaan Westminsterin sillan vieressä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q129143",
+   "nimi": "Trafalgar Square",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 51.50806,
+   "lon": -0.12806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "London, Trafalgar Square, Nelson's Column -- 2016 -- 4851.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London%2C_Trafalgar_Square%2C_Nelson's_Column_--_2016_--_4851.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London%2C_Trafalgar_Square%2C_Nelson's_Column_--_2016_--_4851.jpg",
+     "selite": "Trafalgar Squarea hallitsee Nelsonin pylväs, joka muistaa Trafalgarin meritaistelun voittajaa.",
+     "leveys": 2991,
+     "korkeus": 4187,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "TrafalgarSquareEvening.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TrafalgarSquareEvening.jpg?width=1280",
+     "tekija": "Andreas Tille",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TrafalgarSquareEvening.jpg",
+     "selite": "Aukion yllä hehkuu iltataivas Nelsonin pylvään takana.",
+     "leveys": 3072,
+     "korkeus": 1982,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Admiral Horatio Nelson, Nelson's Column, Trafalgar Square, London.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Admiral_Horatio_Nelson%2C_Nelson's_Column%2C_Trafalgar_Square%2C_London.JPG?width=1280",
+     "tekija": "Beata May",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Admiral_Horatio_Nelson%2C_Nelson's_Column%2C_Trafalgar_Square%2C_London.JPG",
+     "selite": "Amiraali Nelsonin patsas seisoo pylvään huipulla.",
+     "leveys": 1412,
+     "korkeus": 2043,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6373",
+   "nimi": "British Museum",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 51.51944,
+   "lon": -0.12694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "British Museum from NE 2 (cropped).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/British_Museum_from_NE_2_(cropped).JPG?width=1280",
+     "tekija": "Ham",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:British_Museum_from_NE_2_(cropped).JPG",
+     "selite": "British Museum on maailman suurimpia museoita, ja sen kreikkalaistyylinen julkisivu on Lontoon tunnetuimpia.",
+     "leveys": 2560,
+     "korkeus": 1593,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "British Museum - panoramic (20496222784).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/British_Museum_-_panoramic_(20496222784).jpg?width=1280",
+     "tekija": "Elliott Brown from Birmingham, United Kingdom",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:British_Museum_-_panoramic_(20496222784).jpg",
+     "selite": "Joonialaisten pylväiden rivi muodostaa museon pääsisäänkäynnin.",
+     "leveys": 12639,
+     "korkeus": 3181,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "British Museum Great Court, London, UK - Diliff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/British_Museum_Great_Court%2C_London%2C_UK_-_Diliff.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:British_Museum_Great_Court%2C_London%2C_UK_-_Diliff.jpg",
+     "selite": "Museon sisäpihan päälle rakennettu lasikatto on Euroopan suurimpia katettuja aukioita.",
+     "leveys": 3806,
+     "korkeus": 3736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q193375",
+   "nimi": "Tate Modern",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 51.50778,
+   "lon": -0.09944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tate Modern London June 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tate_Modern_London_June_2016.jpg?width=1280",
+     "tekija": "King of Hearts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tate_Modern_London_June_2016.jpg",
+     "selite": "Tate Modern on modernin taiteen museo entisessä Bankside-voimalaitoksessa Thamesin etelärannalla.",
+     "leveys": 4200,
+     "korkeus": 3150,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tate Modern 2025-10-08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tate_Modern_2025-10-08.jpg?width=1280",
+     "tekija": "James Petts",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tate_Modern_2025-10-08.jpg",
+     "selite": "Voimalan korkea tiilinen savupiippu on museon tunnusmerkki.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q188617",
+   "nimi": "Kew Gardens",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 51.47889,
+   "lon": -0.29361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kew Gardens Palm House, London - July 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kew_Gardens_Palm_House%2C_London_-_July_2009.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kew_Gardens_Palm_House%2C_London_-_July_2009.jpg",
+     "selite": "Kew Gardens on maailman merkittävimpiä kasvitieteellisiä puutarhoja Lontoon länsilaidalla.",
+     "leveys": 7499,
+     "korkeus": 4240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flowers in front of the Palm House, Kew Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_in_front_of_the_Palm_House%2C_Kew_Gardens.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flowers_in_front_of_the_Palm_House%2C_Kew_Gardens.jpg",
+     "selite": "Viktoriaaninen Palm House on rauta- ja lasirakenteinen kasvihuone puutarhan keskellä.",
+     "leveys": 5730,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Flowers and shrubbery before rear of Palm House, Kew Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_and_shrubbery_before_rear_of_Palm_House%2C_Kew_Gardens.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flowers_and_shrubbery_before_rear_of_Palm_House%2C_Kew_Gardens.jpg",
+     "selite": "Kukkapenkit ja pensaat reunustavat lasisen kasvihuoneen edustaa.",
+     "leveys": 5064,
+     "korkeus": 3534,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18536",
+   "nimi": "The Shard",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 51.50444,
+   "lon": -0.08667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ayuntamiento y Shard, Londres, Inglaterra, 2014-08-11, DD 076.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayuntamiento_y_Shard%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_076.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_y_Shard%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_076.JPG",
+     "selite": "The Shard on Lontoon korkein pilvenpiirtäjä, ja se kohoaa London Bridgen aseman vieressä.",
+     "leveys": 4982,
+     "korkeus": 3060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Shard at sunset 2017-10-27.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Shard_at_sunset_2017-10-27.jpg?width=1280",
+     "tekija": "Colin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Shard_at_sunset_2017-10-27.jpg",
+     "selite": "Lasipintainen huippu kimaltaa auringonlaskussa Thamesin yllä.",
+     "leveys": 5178,
+     "korkeus": 3965,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The Shard from the Sky Garden 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Shard_from_the_Sky_Garden_2015.jpg?width=1280",
+     "tekija": "Colin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Shard_from_the_Sky_Garden_2015.jpg",
+     "selite": "Teräväkärkinen torni nousee pilvenpiirtäjien joukosta kohti taivasta.",
+     "leveys": 5472,
+     "korkeus": 10986,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q192988",
+   "nimi": "Greenwichin kuninkaallinen observatorio",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 51.47783,
+   "lon": -0.00139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of the Royal Observatory Greenwich from One Tree Hill in Greenwich Park, London, 20260719 0940 4508.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Royal_Observatory_Greenwich_from_One_Tree_Hill_in_Greenwich_Park%2C_London%2C_20260719_0940_4508.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Royal_Observatory_Greenwich_from_One_Tree_Hill_in_Greenwich_Park%2C_London%2C_20260719_0940_4508.jpg",
+     "selite": "Greenwichin observatorio on kukkulalla puistossa, ja sen kautta kulkee nollameridiaani.",
+     "leveys": 4628,
+     "korkeus": 3084,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "London, Greenwich, Royal Greenwich Observatory -- 2016 -- 4695.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London%2C_Greenwich%2C_Royal_Greenwich_Observatory_--_2016_--_4695.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London%2C_Greenwich%2C_Royal_Greenwich_Observatory_--_2016_--_4695.jpg",
+     "selite": "Torin huipun punainen aika-pallo putoaa joka päivä kello yhdeltä.",
+     "leveys": 3572,
+     "korkeus": 5358,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "London, Greenwich, Royal Greenwich Observatory -- 2016 -- 4745-6-8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London%2C_Greenwich%2C_Royal_Greenwich_Observatory_--_2016_--_4745-6-8.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London%2C_Greenwich%2C_Royal_Greenwich_Observatory_--_2016_--_4745-6-8.jpg",
+     "selite": "Muurissa oleva Shepherd Gate Clock näyttää Greenwichin aikaa.",
+     "leveys": 5154,
+     "korkeus": 7277,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q44057",
+   "nimi": "Millennium Bridge",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 51.51017,
+   "lon": -0.09844,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Millennium Bridge ^ St. Paul's - geograph.org.uk - 4026312.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Bridge_%5E_St._Paul's_-_geograph.org.uk_-_4026312.jpg?width=1280",
+     "tekija": "Kim Fyson",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Millennium_Bridge_%5E_St._Paul's_-_geograph.org.uk_-_4026312.jpg",
+     "selite": "Millennium Bridge on teräksinen riippusilta, joka yhdistää Tate Modernin ja St Paulin katedraalin.",
+     "leveys": 1600,
+     "korkeus": 1067,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Millennium Bridge and St Paul's - geograph.org.uk - 6075933.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Bridge_and_St_Paul's_-_geograph.org.uk_-_6075933.jpg?width=1280",
+     "tekija": "Christine Matthews",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Millennium_Bridge_and_St_Paul's_-_geograph.org.uk_-_6075933.jpg",
+     "selite": "Illalla silta ja katedraalin kupoli erottuvat Thamesin rannalla.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "05 2023 London Millennium Bridge with St Paul's IMG 7483.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/05_2023_London_Millennium_Bridge_with_St_Paul's_IMG_7483.jpg?width=1280",
+     "tekija": "Alexander-93",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:05_2023_London_Millennium_Bridge_with_St_Paul's_IMG_7483.jpg",
+     "selite": "Kapea jalankulkusilta avaa näkymän Thamesin toiselle rannalle.",
+     "leveys": 5837,
+     "korkeus": 3146,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q309388",
+   "nimi": "Natural History Museum",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 51.49611,
+   "lon": -0.17611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Natural History Museum London front facade 2025 dllu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Natural_History_Museum_London_front_facade_2025_dllu.jpg?width=1280",
+     "tekija": "Daniel Lu (User:dllu)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Natural_History_Museum_London_front_facade_2025_dllu.jpg",
+     "selite": "Luonnonhistoriallisen museon romaaninen terrakottajulkisivu on 1800-luvun arkkitehtuurin helmi.",
+     "leveys": 7752,
+     "korkeus": 7846,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Natural History Museum London South Facade 2020 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Natural_History_Museum_London_South_Facade_2020_02.jpg?width=1280",
+     "tekija": "Julian Herzog (Website)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Natural_History_Museum_London_South_Facade_2020_02.jpg",
+     "selite": "Rakennus kohoaa South Kensingtonin museokorttelissa kaksoistorneineen.",
+     "leveys": 4475,
+     "korkeus": 4027,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Natural History Museum London South Facade 2020 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Natural_History_Museum_London_South_Facade_2020_01.jpg?width=1280",
+     "tekija": "Julian Herzog (Website)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Natural_History_Museum_London_South_Facade_2020_01.jpg",
+     "selite": "Puiden takaa avautuu näkymä museon pitkälle julkisivulle.",
+     "leveys": 3972,
+     "korkeus": 3972,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q207385",
+   "nimi": "Kensingtonin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 51.50528,
+   "lon": -0.18833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio de Kensington, Londres, Inglaterra, 2022-11-25, DD 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Kensington%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_30.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Kensington%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_30.jpg",
+     "selite": "Kensingtonin palatsi on punatiilinen kuninkaallinen residenssi Kensington Gardensin puistossa.",
+     "leveys": 8252,
+     "korkeus": 4173,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Kensington, Londres, Inglaterra, 2022-11-25, DD 29.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Kensington%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_29.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Kensington%2C_Londres%2C_Inglaterra%2C_2022-11-25%2C_DD_29.jpg",
+     "selite": "Kullatut portit johtavat palatsin edustalle.",
+     "leveys": 8125,
+     "korkeus": 5417,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kensington Palace (August 2023) 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kensington_Palace_(August_2023)_03.jpg?width=1280",
+     "tekija": "DiscoA340",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kensington_Palace_(August_2023)_03.jpg",
+     "selite": "Palatsin tiilijulkisivu ja nurmikko sijaitsevat puiston keskellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q961148",
+   "nimi": "Leadenhall Market",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 51.5127,
+   "lon": -0.0835,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Leadenhall Market In London - Feb 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Leadenhall_Market_In_London_-_Feb_2006.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Leadenhall_Market_In_London_-_Feb_2006.jpg",
+     "selite": "Leadenhall Market on viktoriaaninen katettu kauppahalli Lontoon Cityssä.",
+     "leveys": 2500,
+     "korkeus": 1782,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mercado Leadenhall, Londres, Inglaterra, 2014-08-11, DD 148.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Leadenhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_148.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mercado_Leadenhall%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_148.JPG",
+     "selite": "Värikäs rauta- ja lasirakenne ja kaarikatot luovat hallin tunnelman.",
+     "leveys": 4964,
+     "korkeus": 3517,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q171255",
+   "nimi": "Cutty Sark",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 51.48278,
+   "lon": -0.00972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cutty Sark (16719233476).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cutty_Sark_(16719233476).jpg?width=1280",
+     "tekija": "Krzysztof Belczyński from Warsaw, POLAND",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cutty_Sark_(16719233476).jpg",
+     "selite": "Cutty Sark on 1800-luvun teeklipperi, joka on säilytetty Greenwichissä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cutty Sark (January 2024) 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cutty_Sark_(January_2024)_01.jpg?width=1280",
+     "tekija": "DiscoA340",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cutty_Sark_(January_2024)_01.jpg",
+     "selite": "Purjelaivan korkeat mastot kohoavat Thamesin rannalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "London skylines from Wolfe statue near Greenwich Observatory.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/London_skylines_from_Wolfe_statue_near_Greenwich_Observatory.jpg?width=1280",
+   "tekija": "Daniel Case",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:London_skylines_from_Wolfe_statue_near_Greenwich_Observatory.jpg",
+   "selite": "Lontoon siluetti avautuu Greenwichin kukkulalta kohti Canary Wharfin pilvenpiirtäjiä.",
+   "leveys": 6048,
+   "korkeus": 4032,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "River Thames from the London Eye, August 2014.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_Thames_from_the_London_Eye%2C_August_2014.JPG?width=1280",
+   "tekija": "Cody Logan (aka clpo13)",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_Thames_from_the_London_Eye%2C_August_2014.JPG",
+   "selite": "Thames mutkittelee Lontoon läpi Westminsterin palatsin ohi.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

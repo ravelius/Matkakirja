@@ -58,6 +58,7 @@ import {
   PAAKARTAN_MERKKIKATTO, merkkiPortti,
 } from '../../js/pallolauta/nostot.js';
 import { paakartanNostot, kohdekarttojenNostot } from '../tarkista-nostopaikat.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -169,9 +170,6 @@ vaadi(`0c2. yhdenkään kohdekartan pisteet eivät ylitä ${KOHDEKARTAN_PISTEKAT
 
 /* ==================== VARTIOT 1–5: SELAIN ==================== */
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -217,7 +215,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const virheet = [];
 
 /** Peli auki pallolaudalla annetusta kaupungista; palauttaa sivun ja kontekstin. */

@@ -71,6 +71,7 @@ export const HAHMOTELMA_ROU = [
   ...EUROOPAN_KADONNEET.ROU,
   {
     id: 'hahmotelma-retezat',
+    nimio: 'Retezat',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-retezat-66ba59a6.jpg',
       lyhyt: 'Pietrele-järven rantaa ja lumisia huippuja Retezat-vuoristossa.',
@@ -111,7 +112,7 @@ export const HAHMOTELMA_ROU = [
     lahi: true,
     kysymykset: [
       'Miksi Retezatia kutsutaan usein Euroopan viimeiseksi koskemattomaksi metsäksi?',
-      'Mitä tarkoittaa "vanha metsä", ja miksi sellaista on Euroopassa jäljellä niin vähän?',
+      'Mitä tarkoittaa ”vanha metsä”, ja miksi sellaista on Euroopassa jäljellä niin vähän?',
     ],
     korostukset: ['Peleaga|Peleaga', 'Gemenele|Gemenelen'],
     nappi: 'Kasvitieteilijät tutkivat vuoristoa jo 1800-luvun alusta; kansallispuistoksi se '
@@ -249,7 +250,7 @@ export const HAHMOTELMA_ROU = [
     lahi: true,
     kysymykset: [
       'Miksi vuoren huipuilla on niin paljon kylmempää kuin sen juurella?',
-      'Mitä tarkoittaa, että kansallispuisto suojelee "endeemisiä" lajeja?',
+      'Mitä tarkoittaa, että kansallispuisto suojelee ”endeemisiä” lajeja?',
     ],
     korostukset: ['Duruitoarea|Duruitoarea', 'Panaghia|Panaghia'],
     nappi: 'Moldovan puolen Itäkarpaattien vuori, joka on nykyään yksi Romanian tunnetuimpia',
@@ -270,6 +271,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-berca',
+    nimio: 'Berca',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-berca-c29f1054.jpg',
       lyhyt: 'Kuivuneita mutakartioita Pâclele Marin alueella.',
@@ -344,6 +346,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-scarisoara',
+    nimio: 'Scărișoara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-scarisoara-2d95de4e.jpg',
       lyhyt: 'Valaistuja jääpuikkoja Scărișoaran jääluolan seinämällä.',
@@ -422,7 +425,7 @@ export const HAHMOTELMA_ROU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-sovata-3944611b.jpg',
       lyhyt: 'Ilmakuva Ursu-järvestä ja kylpylärakennuksista Sovatassa.',
-      selite: 'Kuvassa Ursu-järvi ("Karhujärvi") metsäisten kukkuloiden keskellä ja sen '
+      selite: 'Kuvassa Ursu-järvi (”Karhujärvi”) metsäisten kukkuloiden keskellä ja sen '
         + 'rannalla hotelli- ja kylpyläkortteleita.',
       lahde: 'Valokuva: Sie, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Sie',
@@ -458,7 +461,7 @@ export const HAHMOTELMA_ROU = [
     lahi: true,
     kysymykset: [
       'Miksi suolaiset järvet houkuttelivat 1800-luvun lopulla kylpylävieraita Sovataan?',
-      'Miten järvi voi syntyä "geologisten tapahtumien" seurauksena?',
+      'Miten järvi voi syntyä ”geologisten tapahtumien” seurauksena?',
     ],
     korostukset: ['Ursu-järvi|Ursu-järvi', 'Székelyföld|Székelyföldin'],
     nappi: 'Kylpyläkylä Transilvaniassa; Ursu-järvi syntyy vasta vuonna 1875',
@@ -758,6 +761,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-alba-iulia',
+    nimio: 'Alba Carolina',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-alba-iulia-b82bc230.jpg',
       lyhyt: 'Alba Carolinan linnoituksen tiilinen bastioni ja muuri.',
@@ -961,6 +965,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-curtea-de-arges',
+    nimio: 'Curtea de Argeș',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-curtea-de-arges-61553e8b.jpg',
       lyhyt: 'Curtea de Argeșin katedraali vaaleine kupoleineen puiston keskellä.',
@@ -1200,7 +1205,7 @@ export const HAHMOTELMA_ROU = [
       + 'puolivälissä. Keskiajalla Hermannstadt oli transilvaniansaksalaisten tärkein '
       + 'kulttuuri- ja hallintokeskus ja tärkein niistä seitsemästä kaupungista, joista '
       + 'Transilvanian saksankielinen nimi Siebenbürgen tulee. Kaupunkia kutsutaan '
-      + 'lempinimellä "kaupunki, jolla on silmät", koska monien vanhojen talojen '
+      + 'lempinimellä ”kaupunki, jolla on silmät”, koska monien vanhojen talojen '
       + 'kattoikkunat näyttävät silmiltä. Brukenthalin kansallismuseo toimii kaupungissa, '
       + 'ja sen Brukenthalin palatsissa on taidegalleria ja vanha kirjasto. Sibiu oli '
       + 'Euroopan kulttuuripääkaupunki vuonna 2007.',
@@ -1674,7 +1679,7 @@ export const HAHMOTELMA_ROU = [
     lahi: true,
     kysymykset: [
       'Miksi juuri Ploieștissa syntyi maailman ensimmäinen suuri öljynjalostamo?',
-      'Mitä Ploieștin lempinimi "Mustan kullan pääkaupunki" tarkoittaa?',
+      'Mitä Ploieștin lempinimi ”Mustan kullan pääkaupunki” tarkoittaa?',
     ],
     korostukset: ['Mikael Urho|Mikael Urhean', 'öljynjalostamo|öljynjalostamon'],
     nappi: 'Maailman ensimmäisen suurjalostamon kaupunki (1856–1857); rautatie tulee vasta '
@@ -1692,7 +1697,7 @@ export const HAHMOTELMA_ROU = [
       + 'Käänne tuli 1850-luvun puolivälissä, kun Mehedințeanun veljekset perustivat sinne '
       + 'maailman ensimmäisen laajamittaisen öljynjalostamon, joka toimi täydellä teholla '
       + 'vuosina 1856–1857. Sen jälkeen kaupunki on ollut Euroopan öljynjalostuksen keskus '
-      + 'ja saanut lempinimen "Mustan kullan pääkaupunki".',
+      + 'ja saanut lempinimen ”Mustan kullan pääkaupunki”.',
     lahde: 'en-Wikipedia "Ploiești", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
       kysymys: 'Kuka perusti Ploieștiin maailman ensimmäisen laajamittaisen öljynjalostamon?',
@@ -1790,7 +1795,7 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-resita-ce029f66.jpg',
         lyhyt: 'Höyryveturi RESICZA vuodelta 1872 ulkoilmamuseossa.',
-        selite: 'Veturi nro 2 "Resicza" on ensimmäinen nykyisen Romanian alueella rakennettu '
+        selite: 'Veturi nro 2 ”Resicza” on ensimmäinen nykyisen Romanian alueella rakennettu '
           + 'höyryveturi. Sen suunnitteli John Haswell.',
         lahde: 'Valokuva: Eddy Renard, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Eddy Renard',
@@ -1801,7 +1806,7 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-resita-3b9aedf0.jpg',
         lyhyt: 'Veturi Hungaria matkalla Wienin maailmannäyttelyyn vuonna 1873.',
-        selite: 'Reșițassa valmistettu höyryveturi nro 4 "Hungaria" kuljetettiin Wienin '
+        selite: 'Reșițassa valmistettu höyryveturi nro 4 ”Hungaria” kuljetettiin Wienin '
           + 'maailmannäyttelyyn 1873. Kuvaajaa ei tunneta.',
         lahde: 'Valokuva: Tuntematon valokuvaaja, Wikimedia Commons (Public domain).',
         tekija: 'Tuntematon valokuvaaja',
@@ -1838,6 +1843,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-slanic',
+    nimio: 'Slănic Prahova',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-slanic-67a515f2.jpg',
       lyhyt: 'Unirea-tason valtava sali Slănicin Vanhassa suolakaivoksessa.',
@@ -2017,7 +2023,7 @@ export const HAHMOTELMA_ROU = [
     },
     teksti: 'Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan '
       + 'residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. '
-      + 'Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" '
+      + 'Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee ”linnoituksensa” '
       + 'Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 '
       + 'pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea '
       + 'Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin '

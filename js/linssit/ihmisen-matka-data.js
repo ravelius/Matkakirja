@@ -150,7 +150,7 @@ export const IHMISEN_MATKA_LISANOSTOKUVAJUURI = 'https://media.matkakirja.app/li
  * Kuvakohtaiset viitteet ovat esineen `viitteet`-kentässä
  * (kuvaputken toimituksen `sources`, ei näytetä pelissä).
  */
-const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähdeperustainen kuvitus, ei museovalokuva.';
+const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähteisiin perustuva, ei museovalokuva.';
 
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '
@@ -525,7 +525,7 @@ export const IHMISEN_MATKA = [
       + 'liikkuu jotain näkymätöntä. Täällä ei ole laumoja eikä avointa näkyvyyttä, '
       + 'vain kosteus, hyönteiset ja hajallaan oleva ravinto. Silti täälläkin '
       + 'opittiin elämään.',
-    juttu: 'Eugène Dubois tuli Sumatralle etsimään "puuttuvaa rengasta" ja kaivoi '
+    juttu: 'Eugène Dubois tuli Sumatralle etsimään ”puuttuvaa rengasta” ja kaivoi '
       + 'kymmeniä luolia; Lida Ajerin löydöt jäivät sadaksi vuodeksi museon '
       + 'laatikoihin. Kun australialainen ryhmä otti ne uudelleen käsiteltäväksi, '
       + 'kaksi hammasta osoittautui mikroskoopissa nykyihmisen hampaiksi — '
@@ -739,7 +739,7 @@ export const IHMISEN_MATKA = [
       + 'käsissä. Yhden heistä luiden kemia kertoo, että makean veden kala ruokki '
       + 'hänet vuodesta toiseen. Hän eli nelikymppiseksi, hampaat kuluneina.',
     juttu: 'Tianyuanin luola on muutaman kilometrin päässä Zhoukoudianista, jossa '
-      + 'löydettiin aikoinaan "Pekingin ihminen" — paljon vanhempi Homo erectus. '
+      + 'löydettiin aikoinaan ”Pekingin ihminen” — paljon vanhempi Homo erectus. '
       + 'Tianyuanin mies on nykyihminen ja eli 42 000–39 000 vuotta sitten. Hänen '
       + 'luidensa isotoopeista näkyy jotain harvinaista: suuri osa ravinnosta oli '
       + 'makean veden kalaa. Se on vanhin tunnettu merkki siitä, että ihminen '
@@ -774,7 +774,7 @@ export const IHMISEN_MATKA = [
     otsikko: 'Syvä kallo',
     paikka: 'Niahin luolat, Sarawak', maa: 'Malesia', lat: 3.8139, lon: 113.7814,
     loyto: 'Barbara Harrisson löysi helmikuussa 1958 kuumaksi ristityn kaivauskuopan '
-      + 'pohjalta osittaisen kallon lähes kolmen metrin syvyydestä. "Syvä kallo" oli '
+      + 'pohjalta osittaisen kallon lähes kolmen metrin syvyydestä. ”Syvä kallo” oli '
       + 'kauan Kaakkois-Aasian vanhin tunnettu nykyihmisen jäänne.',
     selite: 'Valtavan luolan suulla ihmiset kantavat sisään polttopuita ja '
       + 'kasvinippuja ja katsovat ylös pimeään holviin. Luola on kuiva, viileä ja '
@@ -784,7 +784,7 @@ export const IHMISEN_MATKA = [
       + 'käytössä kymmeniätuhansia vuosia. Sarawakin museon johtaja Tom Harrisson '
       + 'aloitti kaivaukset 1954 sillä perusteella, että luola oli viileä ja kuiva '
       + 'ja siellä oli syötäviä lepakoita ja pääskyjä. Vuonna 1958 hänen vaimonsa '
-      + 'Barbara Harrisson löysi "Hell Trench" -nimisestä kuopasta osittaisen '
+      + 'Barbara Harrisson löysi ”Hell Trench” -nimisestä kuopasta osittaisen '
       + 'kallon. Hiilikerrosten radiohiiliajoitus antoi paikalle iäksi noin 40 000 '
       + 'vuotta, mikä oli aikanaan hämmästyttävä luku.'
       + '\n\n'
@@ -876,7 +876,7 @@ export const IHMISEN_MATKA = [
       + 'Yana on myös vanhin selvä todiste mammutinmetsästyksestä.'
       + '\n\n'
       + 'Vuonna 2019 kahden nuoren miehen hampaista saatiin perimä, ja se osoittautui '
-      + 'kokonaan uudeksi väestöksi: "muinaiset pohjois-siperialaiset". Heidän '
+      + 'kokonaan uudeksi väestöksi: ”muinaiset pohjois-siperialaiset”. Heidän '
       + 'jälkeläisensä sekoittuivat myöhemmin idästä tulleisiin ryhmiin, ja tuosta '
       + 'sekoituksesta syntyi se väestö, joka lopulta siirtyi Amerikkaan. Yanan '
       + 'ihmiset eivät siis olleet umpikuja vaan yksi Amerikan asuttamisen '
@@ -1046,8 +1046,8 @@ export const IHMISEN_MATKA = [
       + 'Yhtään lapita-kanoottia ei ole säilynyt.'
       + '\n\n'
       + 'Nukuleka on ollut Tongan ensimmäinen kylä ja siten yksi Polynesian '
-      + 'vanhimmista. Kaivauksia johtanut David Burley kutsui sitä "Polynesian '
-      + 'kehdoksi", mikä ei ole jäänyt kiistattomaksi: Samoa on pitänyt samaa '
+      + 'vanhimmista. Kaivauksia johtanut David Burley kutsui sitä ”Polynesian '
+      + 'kehdoksi”, mikä ei ole jäänyt kiistattomaksi: Samoa on pitänyt samaa '
       + 'nimeä itsellään vuosikymmeniä, ja tongalainen tutkija Okusitino Māhina on '
       + 'arvostellut päätelmiä. Purjehdukset eivät olleet ajelehtimista. Ne '
       + 'vaativat kaksirunkoisen aluksen, tähtitaivaan lukemisen, tiedon '
@@ -1461,7 +1461,7 @@ export const IHMISEN_MATKA_LISANOSTOT = [
     teksti: 'Mal\'tan kylästä Baikalin länsipuolelta kaivettiin 1920-luvulla '
       + 'nuoren pojan hauta, ja vuonna 2013 hänen perimänsä yllätti kaikki: se on '
       + 'sukua sekä eurooppalaisille että Amerikan alkuperäisväestölle. Tästä '
-      + '"muinaisten pohjois-eurasialaisten" väestöstä tuli toinen puolikas siinä '
+      + '”muinaisten pohjois-eurasialaisten” väestöstä tuli toinen puolikas siinä '
       + 'seoksessa, joka lopulta ylitti Beringian.',
     kuvaAito: {
       osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-malta-poika-f5823400.jpg`,
@@ -1535,7 +1535,7 @@ export const IHMISEN_MATKA_LISANOSTOT = [
     lahde: 'en-Wikipedia "Bluefish Caves"',
     kysymykset: [
       'Miten teurastusjälki erotetaan pedon puremasta?',
-      'Mitä "Beringian pysähdys" tarkoittaa?',
+      'Mitä ”Beringian pysähdys” tarkoittaa?',
       'Mitä muita varhaisia väitteitä Amerikoista on?',
     ],
   },
@@ -1564,7 +1564,7 @@ export const IHMISEN_MATKA_LISANOSTOT = [
     lahde: 'en-Wikipedia "Paisley Caves"',
     kysymykset: [
       'Mitä muinaisesta ulosteesta voi lukea?',
-      'Miten "Clovis ensin" -käsitys kumoutui?',
+      'Miten ”Clovis ensin” -käsitys kumoutui?',
       'Mitä täällä syötiin?',
     ],
   },
@@ -1825,7 +1825,7 @@ export const IHMISEN_MATKA_KYSYMYKSET = {
     'Millainen Itä-Aasia oli tuolloin?',
   ],
   niah: [
-    'Miksi "syvän kallon" iästä kiisteltiin?',
+    'Miksi ”syvän kallon” iästä kiisteltiin?',
     'Miten sademetsässä hankittiin ruokaa?',
     'Miksi juuri Borneolle?',
   ],
@@ -1846,7 +1846,7 @@ export const IHMISEN_MATKA_KYSYMYKSET = {
   ],
   beringia: [
     'Kuinka kauan maasilta oli olemassa?',
-    'Mitä "Beringian pysähdys" tarkoittaa?',
+    'Mitä ”Beringian pysähdys” tarkoittaa?',
     'Millaista siellä oli asua?',
   ],
   'monte-verde': [

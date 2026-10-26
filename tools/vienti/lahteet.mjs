@@ -121,6 +121,8 @@ export const LISAMODUULIT = [
   m('js/tyohuone-musiikki.js', ['MUSIIKKISIVUN_RAIDAT', 'SFX_NIMET', 'HILJENNYKSEN_SYY', 'TUNTEMATTOMAT_LAJIT']),
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
+  m('js/linssit/astro-kysymykset.js', ['ASTRO_KYSYMYKSET'], 'linssi'),
+  m('js/linssit/museo-kysymykset.js', ['MUSEO_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
     // Natiivi-UI 23.9.2026: aloituskortin ja kaistan tekstit.
     'IHMISEN_MATKA_ESITTELY', 'IHMISEN_MATKA_ALOITUS', 'IHMISEN_MATKA_KAISTASELITE', 'IHMISEN_MATKA_LOPPU'], 'linssi'),
@@ -129,7 +131,7 @@ export const LISAMODUULIT = [
   m('js/linssit/ihmisen-matka-virrat.js', ['IHMISEN_MATKA_VIRRAT', 'IHMISEN_MATKA_RETKI', 'IHMISEN_MATKA_VANHA', 'IHMISEN_MATKA_VANAT'], 'linssi'),
   m('js/linssit/ihmisen-matka.js', ['LINSSI', 'ESITYKSEN_KUVAT', 'ALOITUKSEN_TAUSTAKUVAT'], 'linssi'),
   m('js/linssit/keksinnot.js', ['KEKSINNOT', 'LINSSI'], 'linssi'),
-  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE'], 'linssi'),
+  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE', 'SATELLIITTI_KIERROS'], 'linssi'),
   m('js/linssit/satelliitti.js', ['LINSSI'], 'linssi'),
   m('js/linssit/pallo.js', ['LINSSI'], 'linssi'),
   m('js/linssit/radio.js', ['LINSSI'], 'linssi'),
@@ -165,4 +167,19 @@ export const LISATIEDOSTOT = [
   // repon kopiota ovat vanhentuneita (teksti uusittu 14.9.), joten
   // mukaan ei tule yhtään. Ks. kokoelmat.mjs luentoKokoelma.
   ...voimassaOlevatAikaleimat(),
+];
+
+/*
+ * NIMETYT LISÄTIEDOSTOT: repon tiedosto paketin kiinteään polkuun, jonka natiivi lukee suoraan (muoto tarkistetaan
+ * viennissä). Puuttuva lähde ohitetaan, jotta vientikoodi voi tulla mainiin ennen dataa. manifest.lisatiedostot-rivin
+ * muoto on sama kuin muilla (lahde, tiedosto, sha256, tavuja), joten skeema ei muutu.
+ *
+ *   kartta/lippu_lonlat.json  Löydös 161 (Fable 26.9.2026): Karttasepän lipputankoankkurit { ISO3: [lon, lat] },
+ *                             natiivi Kartuscha.LippuAnkkuritPolku (Natiivi-UI a500a778).
+ *   kartta/merikohdat.json    Meren koristeet (Fable 26.9.2026, Linssiseppä): kohdemaan meret ja ankkuripisteet
+ *                             (tools/tee-merikohdat.mjs), Eurooppa ensin.
+ */
+export const NIMETYT_LISATIEDOSTOT = [
+  { lahde: 'assets/data/lippu-lonlat.json', tiedosto: 'kartta/lippu_lonlat.json', muoto: 'iso3-lonlat' },
+  { lahde: 'assets/data/merikohdat.json', tiedosto: 'kartta/merikohdat.json', muoto: 'merikohdat' },
 ];

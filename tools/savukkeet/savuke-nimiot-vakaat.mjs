@@ -29,12 +29,10 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? '';
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const LAHTOKAUPUNKI = 'marseille';
@@ -90,9 +88,7 @@ const PALLON_PACK = packById('maailmankartta');
 const MAA = PALLON_PACK.map.cityCountry;
 const KOHDEMAA = MAA[LAHTOKAUPUNKI];
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+const selain = await avaaChromium();
 
 
 /** DOM-asennot: avain → kylki|dx,dy|piilossa (vain resepti ja luokat, ei ruutupaikka). */

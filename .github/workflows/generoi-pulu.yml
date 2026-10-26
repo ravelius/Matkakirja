@@ -24,7 +24,7 @@
 #            ne ämpärin kansioon aanet/pulu/ manifesteineen.
 #
 # PYSYVÄ OLETUS 12.9.2026: flicker / piI8Kku0DcvcL6TTSeQt,
-# eleven_v3, Natural 0,5. `aanet` säilyy tietoista myöhempää koestusta
+# eleven_v3, Natural 0,5 (malli eleven_v4:ksi 28.9.2026, omistajan valinta). `aanet` säilyy tietoista myöhempää koestusta
 # varten; tavallinen järjestys on kuiva → erillinen maksullisen ajon lupa
 # → generoi.
 #
@@ -108,12 +108,12 @@ on:
         default: ''
       malli:
         description: >-
-          ElevenLabsin malli. Omistajan 12.9.2026 lukitsema oletus on v3,
-          joka ymmärtää hakasulkutagit ([excited], [breathless]).
+          ElevenLabsin malli. Omistajan 28.9.2026 valitsema oletus on v4,
+          joka ymmärtää samat hakasulkutagit ([excited], [whoosh]) kuin v3.
         required: true
         type: choice
-        default: 'eleven_v3'
-        options: ['eleven_multilingual_v2', 'eleven_v3']
+        default: 'eleven_v4'
+        options: ['eleven_multilingual_v2', 'eleven_v3', 'eleven_v4']
       vakaus:
         description: >-
           Vakaus samalla sanalla kuin ElevenLabsin sivulla. Omistajan

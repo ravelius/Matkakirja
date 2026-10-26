@@ -1,0 +1,65 @@
+# Increased Memory Limit -oikeus App ID:ille (omistajan lupa 6.10.2026):
+# muistikatto-entitlement vaatii capabilityn, muuten allekirjoitus hylkää
+# profiilin. Lisää vain INCREASED_MEMORY_LIMITin, ei muuta. Kuiva-ajo
+# näyttää tilan kirjoittamatta. Skripti: tools/testflight/muistioikeus.py.
+
+name: TestFlight-muistioikeus
+
+on:
+  workflow_dispatch:
+    inputs:
+      kuiva:
+        description: 'Kuiva-ajo: näytä tila, älä lisää'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: testflight-muistioikeus
+  cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527).
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  oikeus:
+    name: Muistioikeus
+    runs-on: [self-hosted, macOS, ARM64, testit]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pura App Store Connect -avain
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          set -euo pipefail
+          hakemisto="$RUNNER_TEMP/asc"
+          mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error title=Avain ei purkautunut::ASC_KEY_P8"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Increased Memory Limit
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
+          kuiva=""; [ "${{ inputs.kuiva }}" = "true" ] && kuiva="--kuiva"
+          python3 tools/testflight/muistioikeus.py --bundle-id fi.matkakirja.peli --bundle-id fi.matkakirja.peli.kehitys $kuiva
+
+      - name: Siivoa avain
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc" || true

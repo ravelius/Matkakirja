@@ -1,0 +1,365 @@
+{
+ "kaupunki": "wellington",
+ "kaupunkiQ": "Q23661",
+ "kohteet": [
+  {
+   "q": "Q915603",
+   "nimi": "Te Papa",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -41.29056,
+   "lon": 174.78194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Te Papa (National Museum), Wellington.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Te_Papa_(National_Museum)%2C_Wellington.jpg?width=1280",
+     "tekija": "Phillip Capper",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Te_Papa_(National_Museum)%2C_Wellington.jpg",
+     "selite": "Uuden-Seelannin kansallismuseo Te Papa seisoo Wellingtonin satamarannalla.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7015565",
+   "nimi": "Uuden-Seelannin parlamenttirakennukset",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -41.278,
+   "lon": 174.7768,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NZ Parliament Buildings 2020-06-26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NZ_Parliament_Buildings_2020-06-26.jpg?width=1280",
+     "tekija": "Tom Ackroyd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NZ_Parliament_Buildings_2020-06-26.jpg",
+     "selite": "Mehiläispesää muistuttava Beehive ja vanha parlamenttitalo kohoavat Thorndonin rinteellä.",
+     "leveys": 8422,
+     "korkeus": 2787,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014-01-26 09-07-36 NZ Wellington Parliament Buildings.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014-01-26_09-07-36_NZ_Wellington_Parliament_Buildings.jpg?width=1280",
+     "tekija": "Jan Helebrant",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014-01-26_09-07-36_NZ_Wellington_Parliament_Buildings.jpg",
+     "selite": "Aukion yli näkyvät Beehive ja kivinen parlamenttitalo.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q954278",
+   "nimi": "Wellingtonin köysirata",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -41.28528,
+   "lon": 174.7675,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wellington NZ-cablecar-topview.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wellington_NZ-cablecar-topview.jpg?width=1280",
+     "tekija": "Brett Taylor from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wellington_NZ-cablecar-topview.jpg",
+     "selite": "Punainen köysiratavaunu nousee keskustasta Kelburnen kukkulalle, ja taustalla avautuu satama.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q751768",
+   "nimi": "Old St Paul's",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -41.27625,
+   "lon": 174.78042,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old St Paul's church, Wellington, 2016-01-25-7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_St_Paul's_church%2C_Wellington%2C_2016-01-25-7.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_St_Paul's_church%2C_Wellington%2C_2016-01-25-7.jpg",
+     "selite": "Valkoinen puukirkko on rakennettu 1800-luvun puoliväliin goottilaiseen tyyliin.",
+     "leveys": 4637,
+     "korkeus": 3052,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old St Paul's church, Wellington, 2011-02-06.jpg (5943136295).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_St_Paul's_church%2C_Wellington%2C_2011-02-06.jpg_(5943136295).jpg?width=1280",
+     "tekija": "Bruce Tuten from Savannah, Georgia, United States",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_St_Paul's_church%2C_Wellington%2C_2011-02-06.jpg_(5943136295).jpg",
+     "selite": "Kirkko on kokonaan puuta ja seisoo nykyään modernien rakennusten ympäröimänä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1443310",
+   "nimi": "Oriental Bay",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": -41.29138,
+   "lon": 174.79365,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "-i---i- (52379011992).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(52379011992).jpg?width=1280",
+     "tekija": "Carlos Pacheco from Toronto, Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(52379011992).jpg",
+     "selite": "Oriental Bay on Wellingtonin kaupunkiranta, jossa hiekkaranta kaartuu kaupungin itäpuolella.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Oriental Bay - Wellington.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oriental_Bay_-_Wellington.JPG?width=1280",
+     "tekija": "Octagon",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oriental_Bay_-_Wellington.JPG",
+     "selite": "Rinteen talot ja veneiden satama muodostavat lahden tunnusomaisen näkymän.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4867501",
+   "nimi": "Basin Reserve",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -41.30028,
+   "lon": 174.78028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basin Reserve - grandstands.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basin_Reserve_-_grandstands.JPG?width=1280",
+     "tekija": "Gruyere",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basin_Reserve_-_grandstands.JPG",
+     "selite": "Basin Reserve on Wellingtonin krikettikenttä kaupungin eteläpuolella.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basin Reserve entrance and RA Vance stand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basin_Reserve_entrance_and_RA_Vance_stand.jpg?width=1280",
+     "tekija": "Tom Ackroyd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basin_Reserve_entrance_and_RA_Vance_stand.jpg",
+     "selite": "Pääsisäänkäynnin ja katsomon katto erottuvat kentän laidalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2447822",
+   "nimi": "Wellingtonin kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -41.2829,
+   "lon": 174.766,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arbor - Wellington Botanic Garden - Wellington, NZ - DSC09438.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbor_-_Wellington_Botanic_Garden_-_Wellington%2C_NZ_-_DSC09438.jpg?width=1280",
+     "tekija": "Daderot",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arbor_-_Wellington_Botanic_Garden_-_Wellington%2C_NZ_-_DSC09438.jpg",
+     "selite": "Puutarhan paviljonki on kukkulalle rakennetun puiston rauhallinen nurkka.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "WellBotGardenpath.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WellBotGardenpath.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Ppe42~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:WellBotGardenpath.JPG",
+     "selite": "Syksyn väriset puut reunustavat puutarhan polkuja.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q913886",
+   "nimi": "Zealandia",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -41.29438,
+   "lon": 174.75002,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20170409 Zealandia 013-Pano (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20170409_Zealandia_013-Pano_(cropped).jpg?width=1280",
+     "tekija": "Judi Lapsley Miller",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20170409_Zealandia_013-Pano_(cropped).jpg",
+     "selite": "Zealandian suojelualueen ylempi allas heijastaa ympäröivän metsän.",
+     "leveys": 7093,
+     "korkeus": 4987,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Access bridge and valve tower in lower reservoir lake in Zealandia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Access_bridge_and_valve_tower_in_lower_reservoir_lake_in_Zealandia.jpg?width=1280",
+     "tekija": "Pseudopanax at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Access_bridge_and_valve_tower_in_lower_reservoir_lake_in_Zealandia.jpg",
+     "selite": "Altaan vanha venttiilitorni ja kulkusilta ovat suojelualueen tunnetuimpia maamerkkejä.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q505487",
+   "nimi": "Wellingtonin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -41.27861,
+   "lon": 174.78083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wellington Railway Station (30962990853).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wellington_Railway_Station_(30962990853).jpg?width=1280",
+     "tekija": "Tony Hisgett from Birmingham, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wellington_Railway_Station_(30962990853).jpg",
+     "selite": "Pylväsjulkisivuinen rautatieasema on Wellingtonin tärkein liikenteen solmukohta.",
+     "leveys": 4752,
+     "korkeus": 2890,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4940230",
+   "nimi": "Bolton Street Memorial Park",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -41.2793,
+   "lon": 174.774,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bolton Street Cemetery 2026-07-04 TA 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolton_Street_Cemetery_2026-07-04_TA_06.jpg?width=1280",
+     "tekija": "Tom Ackroyd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bolton_Street_Cemetery_2026-07-04_TA_06.jpg",
+     "selite": "Vanha hautausmaa levittäytyy metsäiselle rinteelle keskustan kupeessa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bolton Street Cemetery 2026-07-04 TA 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bolton_Street_Cemetery_2026-07-04_TA_08.jpg?width=1280",
+     "tekija": "Tom Ackroyd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bolton_Street_Cemetery_2026-07-04_TA_08.jpg",
+     "selite": "Rinteen hautakivet ja polut ovat 1840-luvun siirtokunnan ajalta.",
+     "leveys": 4936,
+     "korkeus": 3290,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Central Wellington from Mt. Kaukau, New Zealand, 20 January 2006 - Flickr - In Memoriam, PhillipC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Wellington_from_Mt._Kaukau%2C_New_Zealand%2C_20_January_2006_-_Flickr_-_In_Memoriam%2C_PhillipC.jpg?width=1280",
+   "tekija": "Phillip Capper from Wellington, New Zealand",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Wellington_from_Mt._Kaukau%2C_New_Zealand%2C_20_January_2006_-_Flickr_-_In_Memoriam%2C_PhillipC.jpg",
+   "selite": "Wellingtonin keskusta ja satama näkyvät Kaukaun huipulta, pääkaupunki tiiviisti merenlahden ja kukkuloiden välissä.",
+   "leveys": 3264,
+   "korkeus": 2176,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Wellington Harbour from above Brooklyn, 7 April 2007 - Flickr - PhillipC.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wellington_Harbour_from_above_Brooklyn%2C_7_April_2007_-_Flickr_-_PhillipC.jpg?width=1280",
+   "tekija": "Phillip Capper from Wellington, New Zealand",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wellington_Harbour_from_above_Brooklyn%2C_7_April_2007_-_Flickr_-_PhillipC.jpg",
+   "selite": "Satamalahti avautuu Brooklynin kukkulalta kohti Cookinsalmea.",
+   "leveys": 3872,
+   "korkeus": 2592,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q9292226",
+   "nimi": "Wellingtonin museo",
+   "peruste": "pelin nosto",
+   "lat": -41.2853,
+   "lon": 174.7781,
+   "syy": "ei vapaata ulkokuvaa; vapaat kuvat vain sisätiloista ja esineistä"
+  }
+ ]
+}

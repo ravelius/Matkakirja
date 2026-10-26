@@ -38,10 +38,17 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026): Astronautin kameran ensimmäinen
+ * avaus aloittaisi Livian A–C-jakson (js/linssit/pulu-tervetulo.js). Tämä
+ * savuke mittaa muuta; jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -93,11 +100,12 @@ peli.visitCity?.(peli.player);
 peli.tokens.delete('lontoo');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage'] });
+const selain = await avaaChromium({ args: ['--disable-dev-shm-usage'] });
 
 /** Avaa pelin Pariisiin; `ohitaKuvat` = painaa Ohita-nappia heti kun se ilmestyy. */
 async function avaa(ohitaKuvat) {
   const ctx = await selain.newContext({ viewport: { width: 2000, height: 1300 }, deviceScaleFactor: 1, serviceWorkers: 'block' });
+  await ctx.addInitScript(PULUN_TERVETULO_KUULTU);
   await ctx.addInitScript((d) => {
     try {
       localStorage.setItem('matkakirja-save-v1', d);

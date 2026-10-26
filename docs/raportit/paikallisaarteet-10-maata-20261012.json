@@ -1,0 +1,207 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Kymmenen pääkaupunkimaan paikallisaarreparit (rivit myös js/packs/paikallisaarteet.js) ja maa-vihjeet (yksi rivi: maalla vain pääkaupunkipiste). Faktat 2 lähteestä, itsenäinen Sonnet-tarkistus, korjaukset tehty. Ei kuvia vielä.",
+  "maat": [
+    {
+      "iso3": "ALB",
+      "kaupunki": "tirana",
+      "nimi": "Albania",
+      "pieniAarre": {
+        "name": "Pala kuumaa byrekiä",
+        "fakta": "Byrek on käsin ohueksi kaulituista taikinakerroksista leivottu piirakka. Täytteenä on juustoa, jauhelihaa tai pinaattia, joskus myös papuja. Nimi on lainattu turkin sanasta börek. Tiranassa byrekejä myydään byrektore-nimisistä erikoisleipomoista, usein kolmioiksi leikattuina."
+      },
+      "isoAarre": {
+        "name": "Vrapin kultakätkö",
+        "fakta": "Tiranan seudun Vrapin kylästä tuli esiin varhaiskeskiajan kullan ja hopean kätkö: kultaisia pikareita, hopeinen ämpäri, juoma-astioita, kannu ja vyön koristeita. Esineet ovat noin 600- ja 700-luvuilta. Tutkijat kiistelevät, tekivätkö ne avaarit vai bysanttilaiset käsityöläiset. Suurin osa kätköstä on nykyisin New Yorkin Metropolitan-museossa."
+      },
+      "maa_vihje": {
+        "iso3": "ALB",
+        "kaupunki": "tirana",
+        "vihjeet": [
+          "Avaarit saivat Bysantilta kultaveroa jo 500-luvun lopulla. En tiedä, minne kulta jäi, mutta Tiranan seudun pelloilta sitä kannattaa etsiä."
+        ]
+      }
+    },
+    {
+      "iso3": "MKD",
+      "kaupunki": "skopje",
+      "nimi": "Pohjois-Makedonia",
+      "pieniAarre": {
+        "name": "Savipannullinen tavče gravčea",
+        "fakta": "Tavče gravče on Pohjois-Makedonian kansallisruoka: isoja valkoisia papuja, sipulia, paprikaa ja kuivattua minttua, paistettuina ja tarjoiltuina samassa savivuoassa. Nimi on suunnilleen \"pavut pannulla\", ja pannun sana tava on lainattu turkin kautta. Perinteisesti sitä syödään perjantaisin ilman lihaa. Tetovon seudun pavut ovat tunnetuimpia."
+      },
+      "isoAarre": {
+        "name": "Skopjen linnoituksen kolikkoarkku",
+        "fakta": "Skopjen Kale-linnoituksen kaivauksissa löytyi toukokuussa 2010 pieni arkku, jossa oli 44 kultakolikkoa ja 76 hopeakolikkoa 1200-luvulta. Kultakolikoissa on Bysantin hallitsija ja raamatullisia aiheita, hopeakolikoissa Venetsian doogeja. Linnoituksen arvellaan olevan 500-luvulta, ja sen kivet haettiin maanjäristyksessä tuhoutuneesta Scupin roomalaiskaupungista."
+      },
+      "maa_vihje": {
+        "iso3": "MKD",
+        "kaupunki": "skopje",
+        "vihjeet": [
+          "Skopjen Kale-linnan sanotaan nousseen maanjäristyksessä tuhoutuneen Scupin kivistä. Levottomina aikoina sinne on voinut joku kätkeä rahansa."
+        ]
+      }
+    },
+    {
+      "iso3": "MNE",
+      "kaupunki": "podgorica",
+      "nimi": "Montenegro",
+      "pieniAarre": {
+        "name": "Terttu vranac-rypäleitä",
+        "fakta": "Vranac on Montenegron istutetuin viinirypälelajike, ja sen tummat marjat poimitaan käsin yleensä syys–lokakuussa. Podgorican eteläpuolella Ćemovskon tasangolla on yli 2 000 hehtaarin viinitarha, jota viinitalo Plantaže kutsuu Euroopan suurimmaksi yhtenäiseksi viinitarhaksi. Siitä noin kaksi kolmasosaa on vranacia."
+      },
+      "isoAarre": {
+        "name": "Podgorican malja Doclean raunioilta",
+        "fakta": "Podgorican malja on myöhäisantiikin lasinen malja, jonka tuntematon antiikinmetsästäjä löysi tiettävästi Doclean roomalaiskaupungin raunioilta 1870-luvun alussa. Hän myi sen Shkodrassa italialaiselle konsulille, ja Pariisin ja venäläisen keräilijän kautta malja päätyi Pietarin Eremitaasiin. Löytö teki Doclean tunnetuksi eurooppalaisille tutkijoille."
+      },
+      "maa_vihje": {
+        "iso3": "MNE",
+        "kaupunki": "podgorica",
+        "vihjeet": [
+          "Podgorican vierellä lepää Doclea, roomalainen kaupunki illyrialaisen dokleatti-heimon maalla. Rauniot ovat vaiti, mutta multa voi kätkeä vielä jotakin."
+        ]
+      }
+    },
+    {
+      "iso3": "BLR",
+      "kaupunki": "minsk",
+      "nimi": "Valko-Venäjä",
+      "pieniAarre": {
+        "name": "Lautasellinen draniki-perunalättyjä",
+        "fakta": "Draniki on raastetusta perunasta, sipulista ja suolasta öljyssä paistettu lätty, jonka päälle lusikoidaan smetanaa. Valko-Venäjällä syödään Euroopan eniten perunaa, yli 150 kiloa henkeä kohti vuodessa, ja perunaa sanotaan siellä toiseksi leiväksi."
+      },
+      "isoAarre": {
+        "name": "Slutskin kultalankavyö",
+        "fakta": "Slutskin silkkivyöt kudottiin 1700-luvun puolivälistä alkaen ruhtinas Radziwiłłin kangaspajassa silkistä sekä kulta- ja hopealangasta. Kalleimmat vyöt olivat kaksipuolisia, joten niissä ei ollut nurjaa puolta. Vyö kiedottiin kaftaanin ympärille vaurauden merkiksi. Alle tuhannen vyön arvioidaan säilyneen, ja Minskin kansallinen taidemuseo hankki yhden kokoelmiinsa."
+      },
+      "maa_vihje": {
+        "iso3": "BLR",
+        "kaupunki": "minsk",
+        "vihjeet": [
+          "Radziwiłłin kutojat Slutskissa tekivät silkkivöitä kultalangalla, ja molemmat puolet ovat kuviolliset. Etsi niitä Minskistä, missä vanhaa taidetta säilytetään."
+        ]
+      }
+    },
+    {
+      "iso3": "MDA",
+      "kaupunki": "chisinau",
+      "nimi": "Moldova",
+      "pieniAarre": {
+        "name": "Punavalkoinen mărțișor-lanka",
+        "fakta": "Maaliskuun ensimmäisenä päivänä Moldovassa lahjoitetaan punavalkoinen lanka tai siitä tehty pieni koru, joka kiinnitetään rintaan kevään merkiksi. Se pidetään yllä, kunnes näkyy ensimmäinen kukkiva puu, pääskynen tai haikara. Tapa kuuluu Unescon aineettomaan kulttuuriperintöön vuodesta 2017, yhdessä Bulgarian, Romanian ja Pohjois-Makedonian kanssa."
+      },
+      "isoAarre": {
+        "name": "Alkuhärän pään hopeagrosi",
+        "fakta": "Taru kertoo metsästäjä Dragoşista, joka ajoi alkuhärkää Karpaattien yli ja jäi Moldova-joen rannalle. Tarun mukaan alkuhärän pää tuli sen jälkeen Moldovan vaakunaan. Se komeilee myös keskiaikaisissa hopeagroseissa 1300-luvun lopulta: alkuhärän pää, sarvien välissä tähti, vieressä ruusu ja kuunsirppi."
+      },
+      "maa_vihje": {
+        "iso3": "MDA",
+        "kaupunki": "chisinau",
+        "vihjeet": [
+          "Taru kertoo metsästäjästä, joka jahtasi alkuhärkää Karpaattien yli ja jäi Moldova-joen rannalle. Alkuhärän pään hopeakolikkoa kannattaa etsiä Chişinăusta."
+        ]
+      }
+    },
+    {
+      "iso3": "SRB",
+      "kaupunki": "belgrad",
+      "nimi": "Serbia",
+      "pieniAarre": {
+        "name": "Purkillinen kotitekoista ajvaria",
+        "fakta": "Ajvar on paahdetuista paprikoista tehty tahna, jonka nimi tulee turkin sanasta havyar, kaviaari. Paprikat paahdetaan liedellä tai nuotiolla, kuoritaan, jauhetaan ja haudutetaan öljyssä tuntikausia. Perheet ja naapurit tekevät sitä yhdessä syksyllä, ja Leskovacin ajvar on suojattu tuotenimi."
+      },
+      "isoAarre": {
+        "name": "Miroslavin evankeliumikirja",
+        "fakta": "Humin ruhtinas Miroslav tilasi evankeliumikirjan noin vuonna 1180, ja sen koristeena on lähes 300 kullalla koristeltua miniatyyriä. Se on vanhimpia serbialaisin kyrillisin kirjaimin kirjoitettuja käsikirjoituksia, ja sitä säilytettiin vuosisatoja Hilandarin luostarissa Athos-vuorella. Nykyään kirja on Belgradin kansallismuseossa, ja Unesco kirjasi sen Maailman muisti -rekisteriin 2005."
+      },
+      "maa_vihje": {
+        "iso3": "SRB",
+        "kaupunki": "belgrad",
+        "vihjeet": [
+          "Hilandarin munkit vaalivat evankeliumikirjaa, jonka ruhtinas Miroslav tilasi 1180. Sen kuvat hohtavat kultaa. Etsi jäljet serbien pääkaupungista Belgradista."
+        ]
+      }
+    },
+    {
+      "iso3": "AND",
+      "kaupunki": "andorralavella",
+      "nimi": "Andorra",
+      "pieniAarre": {
+        "name": "Padallinen trinxatia",
+        "fakta": "Trinxat on Pyreneiden vuoristoruoka, jota syödään Andorrassa sekä Cerdanyan ja Alt Urgellin seuduilla. Nimi tulee katalaanin verbistä trinxar, \"pilkkoa\", ja ruoka tehdään kaalista ja perunoista, jotka keitetään ja soseutetaan. Sen kanssa tarjoillaan paistettua pekonia. Andorrassa sitä saa erityisesti bordoista, perinteisistä maatilarakennuksista, joissa tarjoillaan paikallisia ruokia."
+      },
+      "isoAarre": {
+        "name": "Seitsemän avaimen kaappi",
+        "fakta": "Casa de la Vallin neuvostosalissa on kaappi, jossa säilytetään maan tärkeimpiä asiakirjoja, vanhimmat jo 1300-luvulta. Lukkoja oli aluksi kuusi, yksi jokaiselle pitäjälle, ja seitsemäs lisättiin vuonna 1978, kun Escaldes-Engordanysta tuli oma pitäjä. Kaappi aukeaa vain, kun kaikkien pitäjien avaimet ovat paikalla. Neuvosto osti talon vuonna 1702."
+      },
+      "maa_vihje": {
+        "iso3": "AND",
+        "kaupunki": "andorralavella",
+        "vihjeet": [
+          "Andorra la Vellassa neuvoston talossa on kaappi, jonka kuusi lukkoa aukeavat vain, kun jokainen pitäjä on paikalla. Mitä se kätkee, en tiedä."
+        ]
+      }
+    },
+    {
+      "iso3": "LIE",
+      "kaupunki": "vaduz",
+      "nimi": "Liechtenstein",
+      "pieniAarre": {
+        "name": "Pussillinen Ribel-maissijauhoa",
+        "fakta": "Ribel on Reinin laakson ja Liechtensteinin vanha maissiruoka: karkea maissijauho keitetään ja paistetaan voissa pieniksi muruiksi, ja sen kanssa juodaan maitokahvia tai syödään omenasosetta. Ribelmais sai suojatun alkuperänimen AOP vuonna 2000, ja sitä saa kasvattaa myös Liechtensteinissa."
+      },
+      "isoAarre": {
+        "name": "Gutenbergin pronssiset uhrihahmot",
+        "fakta": "Balzersin Gutenbergin linnakukkulan rinteeltä löytyi vuonna 1932 pronssisia uhrihahmoja: sotureita sekä saksanhirvi ja villisika. Ne on valettu myöhäisellä rautakaudella, noin 500-100 eaa., ja niissä näkyy kelttiläisiä vaikutteita."
+      },
+      "maa_vihje": {
+        "iso3": "LIE",
+        "kaupunki": "vaduz",
+        "vihjeet": [
+          "Vaduzin eteläpuolella Balzersin kukkulalla on Gutenbergin linna. Mitä sen rinteisiin on ikiaikoina jäänyt, sitä en tiedä."
+        ]
+      }
+    },
+    {
+      "iso3": "MCO",
+      "kaupunki": "monaco",
+      "nimi": "Monaco",
+      "pieniAarre": {
+        "name": "Lautasellinen barbagiuaneja",
+        "fakta": "Barbagiuan on Monacon kansallisruoaksi sanottu paistettu piiras, jonka täytteenä on perinteisesti mangoldia ja ricottaa. Nimi tarkoittaa monégasquen kielellä \"setä Jeania\": tarun mukaan kokki Jean ei saanut kastiketta raviolieihinsa, joten hän täytti taikinan mangoldilla ja paistoi sen. Barbagiuaneja syödään erityisesti kansallispäivänä 19. marraskuuta."
+      },
+      "isoAarre": {
+        "name": "Pyhän Devotan pyhäinjäännökset",
+        "fakta": "Legendan mukaan Korsikalla marttyyrina kuolleen Devotan ruumis lähetettiin veneellä kohti Afrikkaa, mutta myrskyssä kyyhkynen ohjasi veneen Monacoon Gaumatesin laaksoon, ja hänet haudattiin pieneen kappeliin. Taru kertoo myös varkaista, jotka yrittivät viedä pyhäinjäännökset: vastatuuli esti pakenemisen ja heidän veneensä poltettiin rannalla. Devota on Monacon suojelija."
+      },
+      "maa_vihje": {
+        "iso3": "MCO",
+        "kaupunki": "monaco",
+        "vihjeet": [
+          "Monacossa kerrotaan tarua pyhästä Devotasta: kyyhkynen ohjasi hänen veneensä rantaan. Missä pyhäinjäännökset nyt ovat, sitä en tiedä."
+        ]
+      }
+    },
+    {
+      "iso3": "SMR",
+      "kaupunki": "sanmarino",
+      "nimi": "San Marino",
+      "pieniAarre": {
+        "name": "Torta Tre Monti -kakku",
+        "fakta": "Torta Tre Monti on sanmarinolainen kakku, jossa ohuet vohvelilevyt liimataan yhteen suklaa- tai hasselpähkinäkermalla ja reunat koristellaan suklaafondantilla. Nimi tarkoittaa kolmen vuoren kakkua, ja se viittaa Titano-vuoren kolmeen torniin, San Marinon tunnukseen. Kakkua on valmistettu kaupallisesti vuodesta 1942."
+      },
+      "isoAarre": {
+        "name": "San Marinon vuoden 1600 lakikirja",
+        "fakta": "San Marinon lait koottiin vuonna 1600 latinankieliseen lakikirjaan, Statutiin, joka jakautuu kuuteen kirjaan; sen kokosi Camillo Bonelli. Se uudisti kaupungin vanhempia säädöksiä, ja siihen perustuu yhä maan lainsäädäntö."
+      },
+      "maa_vihje": {
+        "iso3": "SMR",
+        "kaupunki": "sanmarino",
+        "vihjeet": [
+          "Pikkutasavalta Titano-vuorella on elänyt vuodesta 1600 latinankielisten lakiensa mukaan. San Marinon kaupungissa niitä vaalitaan kuin aarretta."
+        ]
+      }
+    }
+  ]
+}

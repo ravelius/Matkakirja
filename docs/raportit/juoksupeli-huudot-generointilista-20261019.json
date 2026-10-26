@@ -1,0 +1,249 @@
+{
+ "_meta": "Generointilista (EI generoitu): VAIN omistajan hyväksymät KK-erät (erä 1, 10 riviä, hyväksytty 19.10.). Tagi lukittu 10.44: [shouting] [panicked]. aani_teksti = Äänittäjän muoto (alkuun \"Aa!\" tai \"Eei!!\", vuorotellen; ehdotus, Äänittäjä/KK voi vaihtaa). Vanha 236 rivin pohjalista poistettu generointilistasta (huudot ovat edelleen avainpaketissa pohjana). PÄIVITYS 19.10. klo 10.58: omistaja hyväksyi Aa!-version (rivit 01–10); Eei!!-versio (11–20) pois → kaikissa riveissä alku \"Aa!\". Generointi ja ämpäri odottavat äänitestiä (nuorempi lapsi). + 6 hyväksyttyä yleishuutoa (ilman alkuhuudahdusta). PUYIN ÄÄNI LUKITTU 11.23: 08 Kavya (voice_id kentässä \"aani\"). Sallitut alut kentässä \"sallitut_alut\". Tavoite: koominen käänne (huoleton alku, lause kauhistelee). Ei generointia ennen KK:n eriä. Aa!-alku POISTETTU (omistaja 11.29: \"tuo aa on huono\"); 10 huutoriviä odottavat uutta alkua. Ei generointia ennen sitä. PÄIVITYS 19.10. klo 11.45: omistaja hyväksyi Puyin (Kavya) alut: Oho!, Auts!, Hoplaa!, Noin!, Katos vaan!, Hups!, Sori!; Sis-sos! pois. 10 huutoriviä yhä ilman alkua kunnes KK tuo erät. PÄIVITYS 19.10. klo 12.23: omistaja hyväksyi erän 1 puuttuvat 7 ottoa + erän 2 (10) muutoksin (2: aiyaa pois; 4: omistajan oma lause). TASAN 17 ottoa, kenttä \"otto\" = lopullinen ElevenLabs-teksti tunnetageineen (järjestys-kenttä 1–17), Kavya bA58y3FqVI6b6gTNh0oT, speed 1,2, fi pakotettu, ei jälkisäätöjä. Ei generointia ennen omistajan lupaa; ei uusia huutoeriä ennen omistajan pelitestiä.",
+ "rivit": [
+  {
+   "avain": "juoksupeli.rikkoutuva.posliinimaljakko.versio.1.huuto",
+   "teksti": "Noin! Tätä teki 72 eri kättä!",
+   "aani_teksti": "Noin! Tätä teki 72 eri kättä!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kello.versio.1.huuto",
+   "teksti": "Soriii! Tämä tuli laivalla Englannista!",
+   "aani_teksti": "Soriii! Tämä tuli laivalla Englannista!",
+   "tagi": "[cheerfully] [shouting] [panicked] ",
+   "huom": "erä 1, puuttuva otto; omistaja hyväksyi 19.10. klo 12.23 (17 oton lista)",
+   "otto": "[cheerfully] Soriii! [shouting] [panicked] Tämä tuli laivalla Englannista!",
+   "jarjestys": 1
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kirjoittava-kellopeli.versio.1.huuto",
+   "teksti": "Hoplaa! Pikkumies kirjoitti kiinaa!",
+   "aani_teksti": "Hoplaa! Pikkumies kirjoitti kiinaa!",
+   "tagi": "[joyfully] [shouting] [panicked] ",
+   "huom": "erä 1, puuttuva otto; omistaja hyväksyi 19.10. klo 12.23 (17 oton lista)",
+   "otto": "[joyfully] Hoplaa! [shouting] [panicked] Pikkumies kirjoitti kiinaa!",
+   "jarjestys": 2
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.keltalasitteinen-kulho.versio.1.huuto",
+   "teksti": "Hups! Keltainen on vain minun värini!",
+   "aani_teksti": "Hups! Keltainen on vain minun värini!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "ei mukana omistajan 12.23 hyväksymissä 17 otossa (otto tehty/ratkaistaan erikseen)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.ruyi-valtikka.versio.1.huuto",
+   "teksti": "Oho! Sain tämän syntymäpäivänäni!",
+   "aani_teksti": "Oho! Sain tämän syntymäpäivänäni!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "erä 1, puuttuva otto; omistaja hyväksyi 19.10. klo 12.23 (17 oton lista)",
+   "otto": "[shouting] [panicked] Oho! Sain tämän syntymäpäivänäni!",
+   "jarjestys": 3
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.jadesinetti.versio.1.huuto",
+   "teksti": "Katos vaan! Tällä leimattiin käskyt!",
+   "aani_teksti": "Katos vaan! Tällä leimattiin käskyt!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kalakulho.versio.1.huuto",
+   "teksti": "Auts! Me ruokimme näitä joka aamu!",
+   "aani_teksti": "Auts! Me ruokimme näitä joka aamu!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "otto jo äänitetty (alku Noin!/Katos vaan!/Auts!); ei mukana 17 otossa; teksti = ääni (Pelikoodari 19.10.)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lasimaljakko.versio.1.huuto",
+   "teksti": "Oho! Keisarin lasipaja teki tämän!",
+   "aani_teksti": "Oho! Keisarin lasipaja teki tämän!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "ei mukana omistajan 12.23 hyväksymissä 17 otossa (otto tehty/ratkaistaan erikseen)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sivellin.versio.1.huuto",
+   "teksti": "Hups! Tällä opin kirjoittamaan!",
+   "aani_teksti": "Hups! Tällä opin kirjoittamaan!",
+   "tagi": "[casually] [shouting] [panicked] ",
+   "huom": "erä 1, puuttuva otto; omistaja hyväksyi 19.10. klo 12.23 (17 oton lista)",
+   "otto": "[casually] Hups! [shouting] [panicked] Tällä opin kirjoittamaan!",
+   "jarjestys": 4
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.bianqing-kivikellot.versio.1.huuto",
+   "teksti": "Katos vaan! Tämä soi uudenvuoden juhlassa!",
+   "aani_teksti": "Katos vaan! Tämä soi uudenvuoden juhlassa!",
+   "tagi": "[proudly] [shouting] [panicked] ",
+   "huom": "erä 1, puuttuva otto; omistaja hyväksyi 19.10. klo 12.23 (17 oton lista)",
+   "otto": "[proudly] Katos vaan! [shouting] [panicked] Tämä soi uudenvuoden juhlassa!",
+   "jarjestys": 5
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.1",
+   "teksti": "Hups!",
+   "aani_teksti": "Hups!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.2",
+   "teksti": "Voi ei taas!",
+   "aani_teksti": "Voi ei taas!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.4",
+   "teksti": "Aijai!",
+   "aani_teksti": "Aijai!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.18",
+   "teksti": "Voi kökkö!",
+   "aani_teksti": "Voi kökkö!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.19",
+   "teksti": "Eipä kestänyt!",
+   "aani_teksti": "Eipä kestänyt!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.yleishuuto.26",
+   "teksti": "Apua!",
+   "aani_teksti": "Apua!",
+   "tagi": "[shouting] [panicked] ",
+   "huom": "yleishuuto: ei alkuhuudahdusta (omistaja hyväksyi 19.10. klo 10.58, Äänittäjän tee6.py rivit 21–26)"
+  },
+  {
+   "avain": "juoksupeli.huuto.omistaja.1",
+   "teksti": "Auts! Siinä meni miljoonien Ming!",
+   "aani_teksti": "Auts! Siinä meni miljoonien Ming!",
+   "tagi": "[shouting] [panicked] ",
+   "otto": "[shouting] [panicked] Auts! Siinä meni miljoonien Ming!",
+   "jarjestys": 6,
+   "huom": "omistajan oma huuto; esinettä ja kuplaa ei ole vielä sidottu (KK/PT päättää; ehdotus: 1 = Ming-esine, 2 = lahja-kupla tyyppi 4)"
+  },
+  {
+   "avain": "juoksupeli.huuto.omistaja.2",
+   "teksti": "Noin! Tämä oli herttuan lahja isälle!",
+   "aani_teksti": "Noin! Tämä oli herttuan lahja isälle!",
+   "tagi": "[proudly] [shouting] [panicked] ",
+   "otto": "[proudly] Noin! [shouting] [panicked] Tämä oli herttuan lahja isälle!",
+   "jarjestys": 7,
+   "huom": "omistajan oma huuto; esinettä ja kuplaa ei ole vielä sidottu (KK/PT päättää; ehdotus: 1 = Ming-esine, 2 = lahja-kupla tyyppi 4)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kanakuppi-ming.versio.1.huuto",
+   "teksti": "Oho! Qianlong kirjoitti tästä runon!",
+   "aani_teksti": "Oho! Qianlong kirjoitti tästä runon!",
+   "tagi": "[shouting] [panicked] ",
+   "otto": "[shouting] [panicked] Oho! Qianlong kirjoitti tästä runon!",
+   "jarjestys": 8,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.sinivalkoinen-maljakko-ming.versio.1.huuto",
+   "teksti": "Katos vaan! Ihan aitoa Mingiä!",
+   "aani_teksti": "Katos vaan! Ihan aitoa Mingiä!",
+   "tagi": "[proudly] [shouting] [panicked] ",
+   "otto": "[proudly] Katos vaan! [shouting] [panicked] Ihan aitoa Mingiä!",
+   "jarjestys": 9,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.lohikaarmekulho-ming.versio.1.huuto",
+   "teksti": "Hups! Lohikäärmeellä viisi kynttä!",
+   "aani_teksti": "Hups! Lohikäärmeellä viisi kynttä!",
+   "tagi": "[casually] [shouting] [panicked] ",
+   "otto": "[casually] Hups! [shouting] [panicked] Lohikäärmeellä viisi kynttä!",
+   "jarjestys": 10,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kaaretaulu.versio.1.huuto",
+   "teksti": "Hoplaa! Enää ei tarvitse näitä päntätä! Kunhan pääsen vain Shifua karkuun.",
+   "aani_teksti": "Hoplaa! Enää ei tarvitse näitä päntätä! Kunhan pääsen vain Shifua karkuun.",
+   "tagi": "[joyfully] [mischievously] ",
+   "otto": "[joyfully] Hoplaa! Enää ei tarvitse näitä päntätä! [mischievously] Kunhan pääsen vain Shifua karkuun.",
+   "jarjestys": 11,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.kaaretaulu.versio.2.huuto",
+   "teksti": "Soriii! Shifu Chen kirjoitti tämän!",
+   "aani_teksti": "Soriii! Shifu Chen kirjoitti tämän!",
+   "tagi": "[cheerfully] [shouting] [panicked] ",
+   "otto": "[cheerfully] Soriii! [shouting] [panicked] Shifu Chen kirjoitti tämän!",
+   "jarjestys": 12,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.famille-rose-maljakko.versio.1.huuto",
+   "teksti": "Noin! Huang e'niang näki kaiken!",
+   "aani_teksti": "Noin! Huang e'niang näki kaiken!",
+   "tagi": "[proudly] [shouting] [panicked] ",
+   "otto": "[proudly] Noin! [shouting] [panicked] Huang e'niang näki kaiken!",
+   "jarjestys": 13,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.doucai-kuppi.versio.1.huuto",
+   "teksti": "Soriii! Wansuiye ei tehnyt mitään!",
+   "aani_teksti": "Soriii! Wansuiye ei tehnyt mitään!",
+   "tagi": "[cheerfully] [shouting] [panicked] ",
+   "otto": "[cheerfully] Soriii! [shouting] [panicked] Wansuiye ei tehnyt mitään!",
+   "jarjestys": 14,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.gaiwan-kansikuppi.versio.1.huuto",
+   "teksti": "Auts! Amalle tästä ei kerrota!",
+   "aani_teksti": "Auts! Amalle tästä ei kerrota!",
+   "tagi": "[shouting] [panicked] ",
+   "otto": "[shouting] [panicked] Auts! Amalle tästä ei kerrota!",
+   "jarjestys": 15,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.yixing-teekannu.versio.1.huuto",
+   "teksti": "Hoplaa! Huangshang ei saa juosta!",
+   "aani_teksti": "Hoplaa! Huangshang ei saa juosta!",
+   "tagi": "[joyfully] [shouting] [panicked] ",
+   "otto": "[joyfully] Hoplaa! [shouting] [panicked] Huangshang ei saa juosta!",
+   "jarjestys": 16,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  },
+  {
+   "avain": "juoksupeli.rikkoutuva.dayazhai-posliini.versio.1.huuto",
+   "teksti": "Noin! Tämä oli Cixin omaa posliinia!",
+   "aani_teksti": "Noin! Tämä oli Cixin omaa posliinia!",
+   "tagi": "[proudly] [shouting] [panicked] ",
+   "otto": "[proudly] Noin! [shouting] [panicked] Tämä oli Cixin omaa posliinia!",
+   "jarjestys": 17,
+   "huom": "erä 2; omistaja hyväksyi 19.10. klo 12.23 (muutoksin)"
+  }
+ ],
+ "aani": {
+  "nimi": "08 Kavya",
+  "voice_id": "bA58y3FqVI6b6gTNh0oT",
+  "lukittu": "omistaja 19.10. klo 11.23 (korvaa Horatiuksen; loki #4934)"
+ },
+ "sallitut_alut": [
+  "Oho!",
+  "Auts!",
+  "Hoplaa!",
+  "Noin!",
+  "Katos vaan!",
+  "Hups!",
+  "Sori!"
+ ]
+}

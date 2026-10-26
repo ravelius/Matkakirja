@@ -75,7 +75,8 @@ test('pelin puoli: jokitaso on oma kenttä, viivatason paikalla pallolla, ei tas
     'vanha luettelo ilman jokitasoa ei palauta nullia');
   assert.match(runko, /joki: true,/);
   assert.match(PYRAMIDI, /if \(taso\.joki\) return luettelo\?\.jokitaso\?\.versio \?\? '';/);
-  assert.match(PYRAMIDI, /\$\{luettelo\.jokitaso\.versio\}\/viivat\/z\$\{taso\.z\}/, 'jokitason polku ei ole <jokiversio>/viivat/');
+  // Deltasarja (js/deltasarja.js): versio kulkee kerroksenVersio-portin kautta (perus tai jokiversio).
+  assert.match(PYRAMIDI, /\$\{kerroksenVersio\(luettelo\.jokitaso, taso, sarake, rivi\)\}\/viivat\/z\$\{taso\.z\}/, 'jokitason polku ei ole <jokiversio>/viivat/');
   assert.match(PYRAMIDI, /if \(taso\.joki\) return 'j';/, 'jokitasolla ei omaa noutoetuliitettä');
   // Pallon kerroslista: joki viivatason jälkeen, noston edellä (molemmissa haaroissa).
   assert.equal((PYRAMIDI.match(/jokitasonTasot\(\)\?\.find\(\(t\) => t\.z === z\)/g) ?? []).length, 2);

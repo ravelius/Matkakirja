@@ -1,0 +1,464 @@
+{
+ "kaupunki": "neworleans",
+ "kaupunkiQ": "Q34404",
+ "kohteet": [
+  {
+   "q": "Q602939",
+   "nimi": "Ranskalaiskorttelit",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 29.9586,
+   "lon": -90.065,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "French Quarter, looking north with Mississippi River to the right 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/French_Quarter%2C_looking_north_with_Mississippi_River_to_the_right_2011.jpg?width=1280",
+     "tekija": "Chris Litherland",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:French_Quarter%2C_looking_north_with_Mississippi_River_to_the_right_2011.jpg",
+     "selite": "Ranskalaiskorttelin ruutukaava ja matalat katot ulottuvat Mississippin rannalta pohjoiseen.",
+     "leveys": 1280,
+     "korkeus": 799,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "FQHotelRoof1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FQHotelRoof1.jpg?width=1280",
+     "tekija": "Infrogmation",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FQHotelRoof1.jpg",
+     "selite": "Hotellin katolta katsoen Ranskalaiskorttelin katot jatkuvat katedraalin tornin ohi joelle.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "FQHotelRoof4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FQHotelRoof4.jpg?width=1280",
+     "tekija": "Infrogmation",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FQHotelRoof4.jpg",
+     "selite": "Korttelin vanhat tiilikatot ja kuistit levittäytyvät katedraalin tornin ympärille.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3157436",
+   "nimi": "Jackson Square",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 29.9575,
+   "lon": -90.06306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Andrew Jackson monument, New Orleans, USA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andrew_Jackson_monument%2C_New_Orleans%2C_USA.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andrew_Jackson_monument%2C_New_Orleans%2C_USA.jpg",
+     "selite": "Jackson Squaren keskellä Andrew Jacksonin ratsastajapatsas ja takana Saint Louisin katedraali.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "060107-049-StLouisCathedral-JacksonSquare.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/060107-049-StLouisCathedral-JacksonSquare.jpg?width=1280",
+     "tekija": "Bobak Ha'Eri",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:060107-049-StLouisCathedral-JacksonSquare.jpg",
+     "selite": "Jackson Squaren puistoaukio on kaupungin vanhimman osan sydän, ja sen laidalla kohoaa katedraali.",
+     "leveys": 3072,
+     "korkeus": 1832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aerial photograph of Jackson Square, New Orleans, Louisiana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photograph_of_Jackson_Square%2C_New_Orleans%2C_Louisiana.jpg?width=1280",
+     "tekija": "Mark Westguard",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Jackson_Square%2C_New_Orleans%2C_Louisiana.jpg",
+     "selite": "Ilmasta katsottuna Jackson Squaren siisti puisto ja sitä ympäröivät talot erottuvat Ranskalaiskorttelin keskellä.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q167538",
+   "nimi": "Saint Louisin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 29.95786,
+   "lon": -90.0635,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral new orleans.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_new_orleans.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Krakers assumed (based on copyright claims). (Corrected by User:StAn)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_new_orleans.jpg",
+     "selite": "Saint Louisin katedraalin kolme terävää tornia nousevat Jackson Squaren yllä.",
+     "leveys": 1712,
+     "korkeus": 2050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 Jackson Square 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_Jackson_Square_05.jpg?width=1280",
+     "tekija": "Turbine682",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_Jackson_Square_05.jpg",
+     "selite": "Katedraalin torni näkyy kapean kadun päästä Cabildon ja vanhojen talojen välistä.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q756452",
+   "nimi": "Superdome",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 29.95083,
+   "lon": -90.08111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mercedes-Benz Superdome Poydras bike.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_Superdome_Poydras_bike.JPG?width=1280",
+     "tekija": "Infrogmation of New Orleans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Superdome_Poydras_bike.JPG",
+     "selite": "Superdome on kaupungin keskustan laidalla seisova valtava kupolihalli, jossa pelaavat Saints-jalkapalloilijat.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5522239",
+   "nimi": "Garden District",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 29.9278,
+   "lon": -90.0847,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20080622 St. Charles St. Trolley behind tree with Mardi Gras beads.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20080622_St._Charles_St._Trolley_behind_tree_with_Mardi_Gras_beads.JPG?width=1280",
+     "tekija": "(t/c/bio/en:WP:CHICAGO/en:WP:LOTM)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20080622_St._Charles_St._Trolley_behind_tree_with_Mardi_Gras_beads.JPG",
+     "selite": "Garden Districtin tammien varjostamalla Saint Charles Avenuella kulkee vihreä raitiovaunu.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GardDist26Dec07CysternBase.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GardDist26Dec07CysternBase.jpg?width=1280",
+     "tekija": "Infrogmation of New Orleans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GardDist26Dec07CysternBase.jpg",
+     "selite": "Garden Districtin vaaleanpunaisen talon vinoon rakennetut parvekkeet ovat tyypillistä 1800-luvun eteläistä rakennustapaa.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18155455",
+   "nimi": "Saint Charles Avenuen raitiovaunu",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 29.94083,
+   "lon": -90.10222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Streetcar in New Orleans, USA1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Streetcar_in_New_Orleans%2C_USA1.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Streetcar_in_New_Orleans%2C_USA1.jpg",
+     "selite": "Saint Charles Avenuen vihreä raitiovaunu on yksi maailman vanhimmista edelleen liikennöivistä.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A New Orleans streetcar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_New_Orleans_streetcar.jpg?width=1280",
+     "tekija": "Vegasjon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_New_Orleans_streetcar.jpg",
+     "selite": "Raitiovaunu kääntyy Canal Streetin kulmassa kohti kaupungin keskustaa.",
+     "leveys": 3515,
+     "korkeus": 2344,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2933012",
+   "nimi": "Café du Monde",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 29.9575,
+   "lon": -90.0618,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CafeDuMonde-FacingEastfromDacatur.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CafeDuMonde-FacingEastfromDacatur.JPG?width=1280",
+     "tekija": "Jeremykemp",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CafeDuMonde-FacingEastfromDacatur.JPG",
+     "selite": "Café du Monde on vihreäraitaisen katoksen alla toimiva beignet-kahvila, joka palvelee vuorokauden ympäri.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CafeDuMondeBeignetsAreBack.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CafeDuMondeBeignetsAreBack.jpg?width=1280",
+     "tekija": "Infrogmation",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CafeDuMondeBeignetsAreBack.jpg",
+     "selite": "Kahvilan puinen kattorakennus ja pöydät ovat Ranskalaismarkkinoiden rannalla.",
+     "leveys": 2558,
+     "korkeus": 1567,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7228064",
+   "nimi": "Pontalba-talot",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 29.95743,
+   "lon": -90.06278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "FQLowPontablaCarriages.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FQLowPontablaCarriages.jpg?width=1280",
+     "tekija": "Infrogmation",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FQLowPontablaCarriages.jpg",
+     "selite": "Pontalba-talojen valurautaparvekkeet reunustavat Jackson Squarea Ranskalaiskorttelissa.",
+     "leveys": 2816,
+     "korkeus": 1643,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cabildo Museum New Orleans (10070825836).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabildo_Museum_New_Orleans_(10070825836).jpg?width=1280",
+     "tekija": "Wagner Tamanaha from Sao Paulo, Brazil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabildo_Museum_New_Orleans_(10070825836).jpg",
+     "selite": "Pontalba-talojen pitkä valurautainen parvekekäytävä ja punatiiliset julkisivut erottuvat tammien takaa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7720883",
+   "nimi": "Cabildo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.95722,
+   "lon": -90.06417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cabildo 1115.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabildo_1115.jpg?width=1280",
+     "tekija": "Turbine682",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabildo_1115.jpg",
+     "selite": "Cabildon mansardikattoinen julkisivu seisoo Jackson Squaren laidalla, ja täällä Louisiana siirtyi 1803 Yhdysvalloille.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cabildo9Jul07SousaphoneFront.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabildo9Jul07SousaphoneFront.jpg?width=1280",
+     "tekija": "Infrogmation of New Orleans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabildo9Jul07SousaphoneFront.jpg",
+     "selite": "Cabildon pitkä pylväskäytävä ja kupolitorni avautuvat Jackson Squaren viereen.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1105886",
+   "nimi": "Congo Square",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 29.96083,
+   "lon": -90.06833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Congo Square New Orleans.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Congo_Square_New_Orleans.jpg?width=1280",
+     "tekija": "Mr. Littlehand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Congo_Square_New_Orleans.jpg",
+     "selite": "Congo Square on Louis Armstrong -puiston laidalla oleva aukio, jonne orjuutetut kokoontuivat sunnuntaisin soittamaan ja tanssimaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q502333",
+   "nimi": "Preservation Hall",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 29.95834,
+   "lon": -90.06536,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PreservationHallClosed2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PreservationHallClosed2.jpg?width=1280",
+     "tekija": "Infrogmation",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PreservationHallClosed2.jpg",
+     "selite": "Preservation Hallin kulunut julkisivu Saint Peter Streetillä on tunnettu jazzklubi Ranskalaiskorttelissa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5519049",
+   "nimi": "Gallier Hall",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.94632,
+   "lon": -90.07139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GallierHallNO.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GallierHallNO.JPG?width=1280",
+     "tekija": "Baronplantagenet at English Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GallierHallNO.JPG",
+     "selite": "Gallier Hallin kreikkalaistyylinen pylväsjulkisivu valmistui entiseksi kaupungintaloksi 1850-luvulla.",
+     "leveys": 2905,
+     "korkeus": 1665,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1193547",
+   "nimi": "Tulanen yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 29.94083,
+   "lon": -90.12056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "NewcombHallDownsideCenterJan08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NewcombHallDownsideCenterJan08.jpg?width=1280",
+     "tekija": "Infrogmation of New Orleans",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NewcombHallDownsideCenterJan08.jpg",
+     "selite": "Tulanen yliopiston punatiilinen Newcomb Hall seisoo laajan nurmikentän ja vanhojen tammien reunalla.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "New Orleans skyline-02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Orleans_skyline-02.jpg?width=1280",
+   "tekija": "thepipe26",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Orleans_skyline-02.jpg",
+   "selite": "New Orleansin pilvenpiirtäjät hohtavat illan hämärässä Mississippin mutkan sisäpuolella.",
+   "leveys": 4712,
+   "korkeus": 3121,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "New Orleans from the Air September 2019 - French Quarter and CBD - River to Lake.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Orleans_from_the_Air_September_2019_-_French_Quarter_and_CBD_-_River_to_Lake.jpg?width=1280",
+   "tekija": "George Bannister",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Orleans_from_the_Air_September_2019_-_French_Quarter_and_CBD_-_River_to_Lake.jpg",
+   "selite": "Ilmasta katsottuna New Orleans levittäytyy Mississippin mutkan ympärille Ranskalaiskorttelista pohjoiseen.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

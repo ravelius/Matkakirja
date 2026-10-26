@@ -40,9 +40,12 @@ export const MAASTOKOHTEET_UZB = [
     ],
     korostukset: ['Gissarin vuoristo|Gissarin vuoristossa'],
     nappi: 'Uzbekistanin katto',
-    // 68.1722 E / 38.9483 N — en-Wikipedia "Khazret Sultan"
+    // 68.1722 E / 38.9483 N — en-Wikipedia "Khazret Sultan". Huippu on
+    // rajalla; karttavalon piste on siirretty noin 6 km lounaaseen
+    // Uzbekistanin puolelle (38.924 N / 68.105 E), ettei se osu Tadžikistaniin
+    // (tarkistus 10.10.2026, A3).
     laudat: {
-      maailmankartta: { x: 8105.7, y: 1844 },
+      maailmankartta: { x: 8103.5, y: 1845 },
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },

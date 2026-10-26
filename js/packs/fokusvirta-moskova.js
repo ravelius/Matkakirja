@@ -908,23 +908,4 @@ export const FOKUSVIRTA_MOSKOVA = {
       id: 'juliste', sivu: 3, otsake: 'JULISTE', palkinto: 'juliste', visa: ALLAS_VISA,
     },
   ],
-
-  /*
-   * ---------- AARREMERKINTÄ ----------
-   * KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. Iso
-   * aarre: tsaarin kadonnut pääsiäismuna. Merkintä on kirjoitettu niin,
-   * ettei se tunne munia lainkaan (ks. ANAKRONISMIVAARA tiedoston
-   * alussa): vuonna 1873 isoisä voi kuulla vain hovin kultasepistä ja
-   * luetteloista. Merkintä aukeaa, kun aarre löytyy (js/fokusvirta.js
-   * fokusvirtaAarremerkinta), samaan matkakirjakorttiin kuin
-   * saapumismerkintä.
-   */
-  aarremerkinta: {
-    teksti: 'Kauppias kuiskasi teen ääressä, että hovin kultasepiltä '
-      + 'tilataan lahjoja, joita ei koskaan näytetä kansalle — keisarin '
-      + 'perheen omia saleja varten. Sellainen esine elää vain '
-      + 'luetteloissa, hän sanoi, ja kun luettelo palaa tai valtakunta '
-      + 'kaatuu, esine katoaa kuin sitä ei olisi ollutkaan. Silloin sen '
-      + 'löytää se, joka uskoo luetteloa eikä virallista totuutta.',
-  },
 };

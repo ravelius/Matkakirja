@@ -119,8 +119,10 @@ test('kohdistus hyväksyy uuden ja vanhan muodon, ei muuta', () => {
 });
 
 test('malli, ääni ja tagit eivät muuttuneet', () => {
-  assert.match(LAHDE, /PULU_MALLI_OLETUS = 'eleven_v3'/);
+  // Omistajan valinta 28.9.2026: eleven_v4 (sama ääni, vakaus ja muoto).
+  assert.match(LAHDE, /PULU_MALLI_OLETUS = 'eleven_v4'/);
   assert.match(LAHDE, /PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt'/);
   assert.match(LAHDE, /PULU_VAKAUS_OLETUS = 'natural'/);
-  assert.match(LAHDE, /const TAGIT_KAYTOSSA = MALLI === 'eleven_v3'/);
+  assert.match(LAHDE, /const TAGIT_KAYTOSSA = PULU_TAGIMALLIT\.includes\(MALLI\)/);
+  assert.match(LAHDE, /PULU_TAGIMALLIT = Object\.freeze\(\['eleven_v3', 'eleven_v4'\]\)/);
 });

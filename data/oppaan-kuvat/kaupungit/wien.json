@@ -1,0 +1,466 @@
+{
+ "kaupunki": "wien",
+ "kaupunkiQ": "Q1741",
+ "kohteet": [
+  {
+   "q": "Q5943",
+   "nimi": "Stephansdom",
+   "lat": 48.208427,
+   "lon": 16.373256,
+   "peruste": "pelin nosto",
+   "koko_m": 110,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Stephens Cathedral (Stephansdom) (7815703256).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Stephens_Cathedral_(Stephansdom)_(7815703256).jpg?width=1280",
+     "tekija": "Miguel Mendez from Malahide, Ireland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Stephens_Cathedral_(Stephansdom)_(7815703256).jpg",
+     "selite": "Stephansdom on goottilainen katedraali Wienin ydinkeskustassa, ja se on kaupungin tärkein kirkko.",
+     "leveys": 5994,
+     "korkeus": 3996,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wien - Stephansplatz - View East on Stephansdom - Südturm 136,4 m high.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_-_Stephansplatz_-_View_East_on_Stephansdom_-_S%C3%BCdturm_136%2C4_m_high.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansplatz_-_View_East_on_Stephansdom_-_S%C3%BCdturm_136%2C4_m_high.jpg",
+     "selite": "Katedraalin korkea eteläinen torni ohjaa katseen yli Wienin kattojen.",
+     "leveys": 2016,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Austria-00035 - St. Stephen's Cathedral (Stephansdom) Roof (9076913294).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Austria-00035_-_St._Stephen's_Cathedral_(Stephansdom)_Roof_(9076913294).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Austria-00035_-_St._Stephen's_Cathedral_(Stephansdom)_Roof_(9076913294).jpg",
+     "selite": "Kirkon katon värikäs laattakuviointi on tunnettu osa Wienin siluettia.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q131330",
+   "nimi": "Schönbrunnin linna",
+   "lat": 48.18479,
+   "lon": 16.31227,
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Schönbrunn September 2023 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sch%C3%B6nbrunn_September_2023_1.jpg?width=1280",
+     "tekija": "Conny Duck",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sch%C3%B6nbrunn_September_2023_1.jpg",
+     "selite": "Schönbrunn oli Habsburgien keisarillinen kesäpalatsi, ja sen keltainen julkisivu on Wienin tunnetuimpia.",
+     "leveys": 6608,
+     "korkeus": 3304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Schloss Schoenbrunn Gloriette DSC02028.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Schloss_Schoenbrunn_Gloriette_DSC02028.JPG?width=1280",
+     "tekija": "David Monniaux Copyright © 2005. French translation by Berrucomons using text fr",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Schloss_Schoenbrunn_Gloriette_DSC02028.JPG",
+     "selite": "Palatsin puutarhan mäellä seisoo Gloriette-paviljonki, josta avautuu näkymä kaupungille.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q46242",
+   "nimi": "Hofburg",
+   "lat": 48.20638888888889,
+   "lon": 16.365277777777777,
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg",
+     "selite": "Hofburg oli Habsburgien hallitsijoiden palatsi, ja se on laaja rakennuskompleksi Wienin keskustassa.",
+     "leveys": 4776,
+     "korkeus": 2413,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome Hofburg Vienna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_Hofburg_Vienna.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_Hofburg_Vienna.jpg",
+     "selite": "Palatsin Michaelertrakt-siipi kruunataan vihreällä kupolilla.",
+     "leveys": 3006,
+     "korkeus": 2126,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hofburg Michaelertor Vienna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hofburg_Michaelertor_Vienna.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hofburg_Michaelertor_Vienna.jpg",
+     "selite": "Michaelerin portti avaa kulkuyhteyden Hofburgin sisäpihalle.",
+     "leveys": 2095,
+     "korkeus": 3007,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211818",
+   "nimi": "Belvedere",
+   "lat": 48.1934,
+   "lon": 16.380519444444445,
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_93-95_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_93-95_HDR.jpg",
+     "selite": "Belvedere on kahdesta barokkipalatsista koostuva kokonaisuus, jonka rakennutti prinssi Eugen Savoijilainen.",
+     "leveys": 7785,
+     "korkeus": 3428,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Belvedere, Viena, Austria, 2020-02-01, DD 87-89 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg",
+     "selite": "Palatsien välissä levittäytyy muotopuutarha, ja nykyään rakennuksissa on taidemuseo.",
+     "leveys": 7285,
+     "korkeus": 2867,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q697578",
+   "nimi": "Wienin Riesenrad",
+   "lat": 48.21683055555555,
+   "lon": 16.395919444444445,
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wiener Riesenrad DSC02378.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiener_Riesenrad_DSC02378.JPG?width=1280",
+     "tekija": "David Monniaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wiener_Riesenrad_DSC02378.JPG",
+     "selite": "Riesenrad on Pratersin huvipuiston maailmankuulu maailmanpyörä, joka rakennettiin 1800-luvun lopulla.",
+     "leveys": 2336,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Riesenrad Wiener Prater 2020-07-12 d.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riesenrad_Wiener_Prater_2020-07-12_d.jpg?width=1280",
+     "tekija": "Manfred Werner (Tsui)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riesenrad_Wiener_Prater_2020-07-12_d.jpg",
+     "selite": "Pyörän vaunut kulkevat hitaasti ja tarjoavat näkymän yli Wienin.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q209937",
+   "nimi": "Wienin valtionooppera",
+   "lat": 48.203333333333,
+   "lon": 16.369166666667,
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 - Wiener Staatsoper im Morgengrauen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_-_Wiener_Staatsoper_im_Morgengrauen.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_-_Wiener_Staatsoper_im_Morgengrauen.jpg",
+     "selite": "Valtionooppera on Wienin Ringstraßen vanhimpia suurrakennuksia ja yksi maailman tunnetuimmista oopperataloista.",
+     "leveys": 4938,
+     "korkeus": 2945,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q686468",
+   "nimi": "Wienin raatihuone",
+   "lat": 48.2108,
+   "lon": 16.3574,
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rathaus Vienna June 2006 165.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rathaus_Vienna_June_2006_165.jpg?width=1280",
+     "tekija": "Gryffindor",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rathaus_Vienna_June_2006_165.jpg",
+     "selite": "Raatihuone on uusgoottilainen rakennus Ringstraßen varrella, ja sen keskitorni kohoaa korkealle.",
+     "leveys": 2365,
+     "korkeus": 1900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q702121",
+   "nimi": "Itävallan parlamenttitalo",
+   "lat": 48.20805,
+   "lon": 16.3587,
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien - Pallas-Athene-Brunnen.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_-_Pallas-Athene-Brunnen.JPG?width=1280",
+     "tekija": "C.Stadler/Bwag",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_-_Pallas-Athene-Brunnen.JPG",
+     "selite": "Parlamenttitalon edessä seisoo Pallas Athene -suihkulähde, ja rakennus on tehty antiikin temppelin tyyliin.",
+     "leveys": 3600,
+     "korkeus": 5400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q408847",
+   "nimi": "Karlskirche",
+   "lat": 48.198280555555556,
+   "lon": 16.371880555555556,
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karlskirche Wien abends.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karlskirche_Wien_abends.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karlskirche_Wien_abends.jpg",
+     "selite": "Karlskirche on Wienin barokkikirkoista näyttävin, ja sen kupoli ja kaksi pylvästä erottuvat kauas.",
+     "leveys": 4216,
+     "korkeus": 3430,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019 - Wiener Karlskirche mit Teich und \"Hill Arches\" Skulptur am Abend.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_-_Wiener_Karlskirche_mit_Teich_und_%22Hill_Arches%22_Skulptur_am_Abend.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_-_Wiener_Karlskirche_mit_Teich_und_%22Hill_Arches%22_Skulptur_am_Abend.jpg",
+     "selite": "Kirkon edessä on matala allas, jossa julkisivu heijastuu illan hämärässä.",
+     "leveys": 4916,
+     "korkeus": 3236,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q95569",
+   "nimi": "Wienin taidehistoriallinen museo",
+   "lat": 48.20388055555556,
+   "lon": 16.3616,
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AT 13763 Exterior of the Kunsthistorisches Museum, Vienna-2397.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AT_13763_Exterior_of_the_Kunsthistorisches_Museum%2C_Vienna-2397.jpg?width=1280",
+     "tekija": "Hubertl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AT_13763_Exterior_of_the_Kunsthistorisches_Museum%2C_Vienna-2397.jpg",
+     "selite": "Kunsthistorisches Museum on Habsburgien taidekokoelmien koti, ja sen kupolirakennus on Ringstraßen koristeita.",
+     "leveys": 5180,
+     "korkeus": 3453,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q308720",
+   "nimi": "Burgtheater",
+   "lat": 48.210277777778,
+   "lon": 16.361388888889,
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Burgtheater, Viena, Austria, 2020-01-31, DD 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burgtheater%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_36.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burgtheater%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_36.jpg",
+     "selite": "Burgtheater on Itävallan kansallisteatteri, ja se kuuluu saksankielisen maailman arvostetuimpiin näyttämöihin.",
+     "leveys": 5260,
+     "korkeus": 3137,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q254476",
+   "nimi": "Votivkirche",
+   "lat": 48.21545,
+   "lon": 16.3591,
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20250503 Votive Church Vienna 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20250503_Votive_Church_Vienna_02.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20250503_Votive_Church_Vienna_02.jpg",
+     "selite": "Votivkirche on uusgoottilainen kirkko, joka rakennettiin kiitokseksi keisarin pelastumisesta salamurhayrityksestä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wien Votivkirche Südseite 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_Votivkirche_S%C3%BCdseite_01.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_Votivkirche_S%C3%BCdseite_01.jpg",
+     "selite": "Kirkon kaksi suippoa tornia kohoavat Ringstraßen läheisyydessä.",
+     "leveys": 3288,
+     "korkeus": 5159,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q493126",
+   "nimi": "Hundertwasserhaus",
+   "lat": 48.2075,
+   "lon": 16.3939,
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien, Hundertwasserhaus -- 2018 -- 3180.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien%2C_Hundertwasserhaus_--_2018_--_3180.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien%2C_Hundertwasserhaus_--_2018_--_3180.jpg",
+     "selite": "Hundertwasserhaus on värikäs asuintalo, jonka julkisivua ja kattoa koristavat kasvit ja epäsäännölliset muodot.",
+     "leveys": 4480,
+     "korkeus": 6720,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vienna, Austria - Flickr - Pierre Blaché.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg?width=1280",
+   "tekija": "Pierre Blaché from Paris, France",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg",
+   "selite": "Wienin moderni pilvenpiirtäjäsiluetti nousee veden ääreen auringonlaskun aikaan.",
+   "leveys": 5529,
+   "korkeus": 3110,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Wien, Stephansdom, Blick vom Südturm -- 2018 -- 3271-3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien%2C_Stephansdom%2C_Blick_vom_S%C3%BCdturm_--_2018_--_3271-3.jpg?width=1280",
+   "tekija": "Dietmar Rabich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien%2C_Stephansdom%2C_Blick_vom_S%C3%BCdturm_--_2018_--_3271-3.jpg",
+   "selite": "Wienin kattojen yllä näkyy Stephansdomin vaihtelevan värinen laattakatto.",
+   "leveys": 6907,
+   "korkeus": 2985,
+   "tarkistettu": true
+  }
+ ],
+ "jarjestys": [
+  "Q5943",
+  "Q131330",
+  "Q46242",
+  "Q211818",
+  "Q697578",
+  "Q209937",
+  "Q686468",
+  "Q702121",
+  "Q408847",
+  "Q95569",
+  "Q308720",
+  "Q254476",
+  "Q493126"
+ ],
+ "eiKuvaa": []
+}

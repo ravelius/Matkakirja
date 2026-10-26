@@ -58,10 +58,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -219,8 +217,7 @@ const KONTRASTI = [
   { avain: 'naapuri', lon: 5.3, lat: 50.05, seloste: 'Belgia, Ardennit (tasoitettu)' },
 ];
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 const peli = new Game({

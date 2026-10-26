@@ -59,12 +59,10 @@ Kohdenosto (neljäs valinta): Boyanan kirkko (täky 7).
   hahmo (v533 kohtaamiskuva) — jos on, käytetään sitä; aarrekysymys
   pysyy nykyisenä laattakysymyksenä (kaanon: kysymyksiä ei vaihdeta).
 
-## 5. Aarremerkintä (isoisä; aukeaa kun aarre löytyy)
+## 5. Aarremerkintä — poistettu
 
-> Konakin varjossa punnitsin lapion ostamista, mutta torilla
-> kysyttiin jo, kuka on se muukalainen joka utelee vanhoista
-> kätköistä. Lähdin aamulla — jotkut aarteet saavat odottaa
-> rohkeampaa.
+Aarremerkinnät poistettiin pelistä 11.10.2026 (omistaja), eikä niiden tekstejä säilytetä repossa
+(Raamattu, Poistetut ideat).
 
 ## 6. Täkynostopooli (Bulgaria; klikkiotsikot, Fablen muotoilu)
 

@@ -162,6 +162,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'sterkfonteinin-luolat',
     nimi: 'Sterkfonteinin luolat',
+    nimio: 'Sterkfontein',
     tyyppi: 'historia',
     kysymykset: [
       'Kuka oli rouva Ples?',
@@ -173,7 +174,7 @@ export const MAASTOKOHTEET_ZAF = [
     laudat: {
       maailmankartta: { x: 6757.8, y: 4098.4 },
     },
-    teksti: 'Sterkfontein — afrikaansiksi "vahva lähde" — on kalkkikiviluolasto Gautengissa '
+    teksti: 'Sterkfontein — afrikaansiksi ”vahva lähde” — on kalkkikiviluolasto Gautengissa '
       + 'noin 40 kilometriä Johannesburgista luoteeseen, ja se on maailman rikkaimpia '
       + 'varhaisten ihmisen sukulaisten löytöpaikkoja. Alue tunnetaan nimellä Cradle of '
       + 'Humankind, ihmiskunnan kehto, ja se on ollut maailmanperintökohde vuodesta 2000. '
@@ -217,7 +218,7 @@ export const MAASTOKOHTEET_ZAF = [
     tyyppi: 'historia',
     kysymykset: [
       'Miksi aseiden ylivoima ei ratkaissut?',
-      'Mikä on "puhvelin sarvet ja rinta"?',
+      'Mikä on ”puhvelin sarvet ja rinta”?',
     ],
     korostukset: ['assegai|assegai-keihäin'],
     nappi: 'Päivä, jolloin keihäät voittivat kiväärit',
@@ -233,8 +234,8 @@ export const MAASTOKOHTEET_ZAF = [
       + 'assegai-keihäin ja lehmännahkakilvin, joskin heillä oli myös musketteja ja vanhoja '
       + 'kivääreitä; briteillä oli nykyaikaiset Martini–Henry-takaaladattavat kiväärit, kaksi '
       + 'seitsemän naulan vuoristotykkiä ja Hale-rakettipatteri. Aseiden ero ei ratkaissut: '
-      + 'zulut liikkuivat nopeasti, hyökkäsivät sivustoille perinteisessä "puhvelin sarvet ja '
-      + 'rinta" -muodostelmassa ja lopulta murtivat brittien rivit. Yli 1 300 sotilasta kuoli, '
+      + 'zulut liikkuivat nopeasti, hyökkäsivät sivustoille perinteisessä ”puhvelin sarvet ja '
+      + 'rinta” -muodostelmassa ja lopulta murtivat brittien rivit. Yli 1 300 sotilasta kuoli, '
       + 'ja zulujen tappioiksi arvioidaan 1 000–3 000.',
     lahde: 'en-Wikipedia "Battle of Isandlwana", johdanto-osa (tarkistettu 6.9.2026).',
   },
@@ -244,7 +245,7 @@ export const MAASTOKOHTEET_ZAF = [
     tyyppi: 'meri',
     kysymykset: [
       'Missä Atlantti ja Intian valtameri kohtaavat?',
-      'Miksi niemi on saanut nimen "neulojen niemi"?',
+      'Miksi niemi on saanut nimen ”neulojen niemi”?',
     ],
     korostukset: ['klipperireitti|klipperireitin'],
     nappi: 'Afrikan eteläisin kärki',
@@ -257,7 +258,7 @@ export const MAASTOKOHTEET_ZAF = [
       + 'mukaan siitä alkaa perinteinen raja Atlantin ja Intian valtameren välillä. Niemi on '
       + 'noin puoli leveysastetta eli 55 kilometriä etelämpänä kuin Hyväntoivonniemi, jota '
       + 'usein luullaan mantereen kärjeksi. Portugalilaiset antoivat nimen Cabo das Agulhas, '
-      + '"neulojen niemi". Merenkulkijoille se on ollut klipperireitin vaarallinen kohta, ja '
+      + '”neulojen niemi”. Merenkulkijoille se on ollut klipperireitin vaarallinen kohta, ja '
       + 'se lasketaan toisinaan suurten niemien joukkoon. Niemi on Overbergin alueella 170 '
       + 'kilometriä Kapkaupungista kaakkoon, ja sen vieressä on L\'Agulhasin pikkukaupunki.',
     lahde: 'en-Wikipedia "Cape Agulhas", johdanto-osa ja osio "Geography" (tarkistettu '
@@ -315,6 +316,7 @@ export const MAASTOKOHTEET_ZAF = [
   {
     id: 'vredefortin-kraatteri',
     nimi: 'Vredefortin kraatteri',
+    nimio: 'Vredefort',
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka suuri kraatteri oli syntyessään?',

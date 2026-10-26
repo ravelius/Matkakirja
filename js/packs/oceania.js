@@ -254,9 +254,9 @@ const OC_AIR_ROUTES = [
 
 export const OCEANIA = {
   id: 'oceania',
-  name: 'Eteläristin helmi',
+  name: 'Raiatean kuninkaiden höyhenvyö',
   boardLabel: 'Oseania',
-  tagline: 'Etsi Eteläristin helmi punaiselta keskustalta, Suurelta valliriutalta ja Tyynenmeren saarilta.',
+  tagline: 'Etsi Raiatean kuninkaiden höyhenvyö punaiselta keskustalta, Suurelta valliriutalta ja Tyynenmeren saarilta.',
   ariaLabel: 'Oseanian aarrekartta',
 
   /*
@@ -305,11 +305,12 @@ export const OCEANIA = {
     // helteen takia.
     types: themedTokenTypes({
       star: {
-        name: 'Eteläristin helmi',
-        fakta: 'Eteläristi on yhdeksän luonnonhelmen ristinmuotoinen ryhmä, '
-          + 'joka löytyi Länsi-Australiasta 1883 — sitä kierrätettiin '
-          + 'maailmannäyttelyissä ihmeenä.',
-        kuva: 'assets/aarteet/aarre-oceania-star.jpg',
+        name: 'Raiatean kuninkaiden höyhenvyö',
+        fakta: 'Maro ʻura, Raiatean (Polynesia) kuninkaiden pyhä '
+          + 'punahöyhenvyö, oli noin kuuden metrin pituinen, ja jokainen '
+          + 'hallitsija lisäsi siihen oman liuskansa. Vyö lähetettiin '
+          + '1820-luvulla Lontooseen, ja sen jäljet katoavat.',
+        kuva: 'assets/aarteet/aarre-oceania-star-v2.jpg',
       },
       mannerAarre: {
         name: 'Opaali', color: '#7fb7c9',
@@ -380,20 +381,20 @@ export const OCEANIA = {
   ],
 
   texts: {
-    intro: 'Peli alkaa! Etsikää Eteläristin helmi ja palatkaa Sydneyyn tai Perthiin.',
-    starFound: '◈ {name} löysi ETELÄRISTIN HELMEN kaupungista {city}!',
-    starToast: 'ETELÄRISTIN HELMI!',
+    intro: 'Peli alkaa! Etsikää Raiatean kuninkaiden höyhenvyö ja palatkaa Sydneyyn tai Perthiin.',
+    starFound: '◈ {name} löysi RAIATEAN KUNINKAIDEN HÖYHENVYÖN kaupungista {city}!',
+    starToast: 'RAIATEAN HÖYHENVYÖ!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
-    winStar: 'toi Eteläristin helmen turvallisesti kotiin',
-    winnerStar: '{name} toi Eteläristin helmen kotiin {money} punnan kanssa.',
+    winStar: 'toi Raiatean kuninkaiden höyhenvyön turvallisesti kotiin',
+    winnerStar: '{name} toi Raiatean kuninkaiden höyhenvyön kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     // KAISTA B: tälle laudalle tarvitaan vielä vähintään neljä merkintää.
     diaries: [
       'Karttani kutsuu tätä maailman laidaksi. Täältä katsoen laidalla onkin Lontoo — ja myönnettäköön, moni asia näytti sieltä käsin nurinkuriselta.',
-      'Isoisän kartalla tämä alue on enimmäkseen tyhjää sinistä, ja reunaan on kirjoitettu "tuntematon". Tässä on tuhansia saaria, joilla on asuttu kolmetuhatta vuotta ja purjehdittu avomerellä tähtien avulla ilman kompassia. Tuntematon oli hänen sanansa, ei heidän.',
-      '"Siirtokunnat tarvitsevat meitä vielä sata vuotta", arvioi isoisä. Täällä on nyt oma perustuslaki, oma raha ja oma tapa lausua jokainen sana; Lontoo mainitaan lähinnä krikettiotteluiden yhteydessä.',
+      'Isoisän kartalla tämä alue on enimmäkseen tyhjää sinistä, ja reunaan on kirjoitettu ”tuntematon”. Tässä on tuhansia saaria, joilla on asuttu kolmetuhatta vuotta ja purjehdittu avomerellä tähtien avulla ilman kompassia. Tuntematon oli hänen sanansa, ei heidän.',
+      '”Siirtokunnat tarvitsevat meitä vielä sata vuotta”, arvioi isoisä. Täällä on nyt oma perustuslaki, oma raha ja oma tapa lausua jokainen sana; Lontoo mainitaan lähinnä krikettiotteluiden yhteydessä.',
       'Isoisä kirjoitti riutasta kaksi sivua ja päätyi sanaan sanoinkuvaamaton. Riutta on yhä siellä ja yhä sanoinkuvaamaton, mutta nyt sitä mitataan myös asteina: lämpenevä meri vaalentaa korallin.',
-      '"Näillä saarilla aika kuluu hitaasti", merkitsi isoisä hyväntahtoisesti. Kysyin asiaa satamassa, ja minulle näytettiin merenpinnan mittaustaulukkoa ja kysyttiin kummalla meistä on kiire. Hitaus taisi olla hänen omansa.',
+      '”Näillä saarilla aika kuluu hitaasti”, merkitsi isoisä hyväntahtoisesti. Kysyin asiaa satamassa, ja minulle näytettiin merenpinnan mittaustaulukkoa ja kysyttiin kummalla meistä on kiire. Hitaus taisi olla hänen omansa.',
       'Isoisä päätteli, ettei saarten välillä voi olla kauppaa, koska etäisyydet ovat liian suuria. Kauppaa käytiin tuhat vuotta ennen häntä: obsidiaania, simpukkaa ja sukulaisuussuhteita kulki saarelta saarelle kanooteilla.',
     ],
   },

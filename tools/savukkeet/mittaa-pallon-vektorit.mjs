@@ -51,11 +51,13 @@
  *   5. ZOOM 2,5 → 0,05: tasonvalinta (lod), solut, janat ja leveys
  *      neljällä kiinteällä korkeudella.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, pinta, p } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
@@ -83,8 +85,6 @@ if (AINEISTOA_TARVITAAN && (!AINEISTO || !existsSync(join(AINEISTO, 'luettelo.js
     + 'luettelo.json (tuotantomoduulin mittaus: --tapa=peli, ei aineistokansiota)');
   process.exit(1);
 }
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 /* ---------------- palvelin: repo + aineisto + ämpäri ---------------- */
 const TYYPIT = {
@@ -119,9 +119,10 @@ const NAKYMAT = {
 const nakyma = { ...NAKYMAT[NAKYMA] };
 if (arg('dpr', null)) nakyma.deviceScaleFactor = Number(arg('dpr'));
 const dpr = nakyma.deviceScaleFactor;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text().slice(0, 200)); });

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ljubljana",
+    "esittely": "Kartan alue on Ljubljanan vanhakaupunki Ljubljanica-joen molemmin puolin. Prešernin aukiolla on runoilija France Prešerenin patsas vuodelta 1905. Aukiolta joen yli kulkee Tromostovje: keskimmäinen silta rakennettiin 1842, ja Jože Plečnik lisäsi viereen kaksi jalankulkusiltaa, jotka valmistuivat 1932. Tuomiokirkon nykyinen rakennus on barokkia vuosilta 1701–1706.\n\nKeskustorin hallit on suunnitellut Plečnik. Lohikäärmesilta avattiin 1901 teräsbetonisiltana. Križanke oli Saksalaisen ritarikunnan luostari, jonka Plečnik muutti 1952–1956 ulkoilmateatteriksi. Tivoli-puiston suunnitteli 1813 ranskalainen insinööri Jean Blanchard. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 684,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Pre%C5%A1eren_Square", "title": "Wikipedia: Prešeren Square", "tukee": "Prešeren-patsas pystytettiin 1905; Tromostovje ulottaa aukion joen yli"},
+      {"url": "https://www.visitljubljana.com/en/poi/presernov-trg-square/", "title": "Visit Ljubljana: Prešernov trg", "tukee": "Prešeren-monumentti paljastettiin 1905, runoilija France Prešeren; Plečnikin Tromostovje"},
+      {"url": "https://en.wikipedia.org/wiki/Triple_Bridge", "title": "Wikipedia: Triple Bridge", "tukee": "keskisilta 1842; Plečnikin kaksi jalankulkusiltaa rakennettu 1931 - kevät 1932, avattu huhtikuussa 1932"},
+      {"url": "https://www.visitljubljana.com/en/poi/triple-bridge", "title": "Visit Ljubljana: Triple Bridge", "tukee": "keskisilta 1842; Plečnikin sivusillat lisätty 1929-1932"},
+      {"url": "https://en.wikipedia.org/wiki/Ljubljana_Cathedral", "title": "Wikipedia: Ljubljana Cathedral", "tukee": "barokki, rakennettu 1701-1706"},
+      {"url": "https://www.visitljubljana.com/en/poi/the-cathedral-church-of-st-nicholas", "title": "Visit Ljubljana: Cathedral of St Nicholas", "tukee": "nykyinen rakennus 1701-1706, barokki, Andrea Pozzo"},
+      {"url": "https://en.wikipedia.org/wiki/Ljubljana_Central_Market", "title": "Wikipedia: Ljubljana Central Market", "tukee": "suunnittelija Jože Plečnik; pylväikkö katupuolella"},
+      {"url": "https://www.visitljubljana.com/en/poi/central-market/", "title": "Visit Ljubljana: Central Market", "tukee": "Plečnik suunnitteli katetun torin ja pylväikön"},
+      {"url": "https://en.wikipedia.org/wiki/Dragon_Bridge_(Ljubljana)", "title": "Wikipedia: Dragon Bridge (Ljubljana)", "tukee": "avattiin 4.10.1901, teräsbetoni"},
+      {"url": "https://www.visitljubljana.com/en/poi/dragon-bridge", "title": "Visit Ljubljana: Dragon Bridge", "tukee": "rakennettu 1900-1901, teräsbetoni, Ljubljanan ensimmäinen teräsbetonirakenne"},
+      {"url": "https://en.wikipedia.org/wiki/Kri%C5%BEanke", "title": "Wikipedia: Križanke", "tukee": "Saksalaisen ritarikunnan luostari; Plečnik muutti ulkoilmateatteriksi 1952-1956"},
+      {"url": "https://www.ljubljanafestival.si/en/for-visitors/venues/krizanke/", "title": "Ljubljana Festival: Križanke", "tukee": "ritarikunta otti luostarin n. 1228; Plečnikin työ 1952-1956, ulkoilmateatteri"},
+      {"url": "https://en.wikipedia.org/wiki/Tivoli_Park_(Ljubljana)", "title": "Wikipedia: Tivoli Park (Ljubljana)", "tukee": "puisto suunniteltu 1813 insinööri Jean Blanchardin suunnitelmin"},
+      {"url": "https://www.rtvslo.si/news-in-english/slovenia-revealed/ljubljana-s-tivoli-park-is-more-than-200-years-old/331709", "title": "RTV Slovenija: Tivoli Park is more than 200 years old", "tukee": "ranskalainen insinööri Jean Blanchard laati suunnitelmat 1813"}
+    ],
+    "pudotetut": [
+      "Ljubljanan linna: vuosiluvut ristiriitaisia/epävarmoja (ensimmäinen maininta 1161 vs. 'noin 900 vuotta'; vankila 1815-1895 vs. 1813-1945) - ei mainita",
+      "Prešernin patsaan tekijäjako (Zajc/Fabiani) jätetty pois: lähteet kertovat eri tavoin",
+      "Keskustorin valmistumisvuosi: pois, katso ristiriidat",
+      "Unescon maailmanperintö 2021: komponenttilista ei vahvistanut Križankea tai Keskustoria, jätetty pois",
+      "Tromostovjen keskisillan arkkitehti (Giovanni Picco): vain Wikipedia, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Keskustorin rakentaminen: Wikipedia 1940-1942, Visit Ljubljana 1940-1944 -> lukua ei käytetä (vain Plečnik suunnittelijana)",
+      "Tuomiokirkon rakennusvuodet ovat samat kahdessa lähteessä (1701-1706); Visit Ljubljanan ranskankielinen sivu antaa virheellisesti 1469, ei käytetty",
+      "Lohikäärmesillan suunnittelija: lähteet eroavat (Zaninovich/Melan), ei mainita"
+    ],
+    "muutos_sk": "Poistettu entinen 1873-näkökulma (Wienin juna 1849, linna vankilana, 31 000 asukasta 1895, Plečnikia edeltävä Prešernin aukio) ja 1895 maanjäristys. Lisätty tarkistetut nykyajan faktat: Prešeren-patsas 1905, Tromostovje 1842/1932, tuomiokirkko 1701-1706, Keskustorin Plečnik-hallit, Lohikäärmesilta 1901 teräsbetonia, Križanke 1952-1956, Tivoli 1813. Ljubljanan linna jäi pois tilanpuutteen ja ristiriitaisten vuosilukujen vuoksi."
+  }
+]

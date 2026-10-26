@@ -260,6 +260,9 @@ for (const ajo of AJOT) {
           tulos = g.answerQuiz(valinta);
         }
       }
+    } else if (g.phase === 'over') {
+      // Talouden vaihe 1 (27.9.2026): rahat loppuivat ja matka päättyi — jälki loppuu tähän.
+      break;
     } else {
       throw new Error(`odottamaton vaihe ${g.phase} (siemen ${seed})`);
     }

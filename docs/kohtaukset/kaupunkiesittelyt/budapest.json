@@ -1,0 +1,42 @@
+[
+  {
+    "id": "budapest",
+    "esittely": "Kartan alue on Budapestin keskusta Tonavan molemmin puolin. Széchenyin ketjusilta avattiin 20. marraskuuta 1849 Unkarin ensimmäisenä pysyvänä Tonavan siltana, ja sen pituus on 375 metriä. Kalastajanlinnake rakennettiin 1895–1902, ja sen seitsemän tornia viittaavat unkarilaisten seitsemään heimoon. Gellértinvuoren huipulla oleva Citadella rakennettiin Unkarin vuosien 1848–1849 kansannousun jälkeen.\n\nParlamenttitalossa on 691 huonetta, ja sen kupoli on 96 metriä korkea. Pyhän Tapanin kirkon kupoli yltää samaan korkeuteen. Suuri kauppahalli avattiin 15. helmikuuta 1897. Maanalainen rata avattiin 1896 Andrássy-kadun alle. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 679,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Sz%C3%A9chenyi_Chain_Bridge", "title": "Wikipedia: Széchenyi Chain Bridge", "tukee": "avattu 20.11.1849; kokonaispituus 375 m; Unkarin ensimmäinen pysyvä Tonavan silta"},
+      {"url": "https://www.erih.net/i-want-to-go-there/szechenyi-chain-bridge", "title": "ERIH: Széchenyi Chain Bridge", "tukee": "ensimmäinen pysyvä silta Tonavan yli; avattu 1849 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://gracesguide.co.uk/Szechenyi_Chain_Bridge", "title": "Grace's Guide: Szechenyi Chain Bridge", "tukee": "keskijänne 202 m, silta 1230 ft = 375 m (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Fisherman%27s_Bastion", "title": "Wikipedia: Fisherman's Bastion", "tukee": "rakennettu 1895–1902, Frigyes Schulek, seitsemän tornia (seitsemän unkarilaisheimoa/päällikköä)"},
+      {"url": "https://www.5percangol.hu/online-5-perc-angol-magazin/2024-marciusi-szam/hungary-budapests-fishermans-bastion-a-halaszbastya-tortenete/", "title": "5 perc angol: Budapest's Fisherman's Bastion", "tukee": "1895–1902, Schulek, seitsemän tornia (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Gell%C3%A9rt_Hill", "title": "Wikipedia: Gellért Hill", "tukee": "Citadellan rakensivat Habsburgit Unkarin 1848–49 kansannousun jälkeen"},
+      {"url": "https://www.frommers.com/destinations/budapest/attractions/gellrt-hegy", "title": "Frommer's: Gellért Hegy", "tukee": "Citadella rakennettu pian vuosien 1848–49 kansannousun kukistamisen jälkeen (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building", "title": "Wikipedia: Hungarian Parliament Building", "tukee": "691 huonetta, korkeus 96 m, 1885–1904, Imre Steindl"},
+      {"url": "https://www.5percangol.hu/nyelvvizsga-erettsegi-main/nehany-erdekesseg-a-parlament-epuleterl-termeszetesen-angolul/", "title": "5 perc angol: Parlament-érdekességek", "tukee": "691 huonetta, kupoli 96 m (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://aviewoncities.com/budapest/st-stephens-basilica", "title": "A View on Cities: St. Stephen's Basilica", "tukee": "kupoli 96 m, täsmälleen parlamenttitalon korkuinen (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://www.inyourpocket.com/hungary/budapest/venues/St-Stephens-Basilica", "title": "In Your Pocket: St Stephen's Basilica", "tukee": "kupoli 96 m, sama korkeus kuin parlamentilla (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Great_Market_Hall_(Budapest)", "title": "Wikipedia: Great Market Hall", "tukee": "avattu 15.2.1897; arkkitehti Samu Pecz"},
+      {"url": "https://aviewoncities.com/budapest/central-market-hall", "title": "A View on Cities: Central Market Hall", "tukee": "virallinen avaus 15.2.1897 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Metro_Line_M1_(Budapest_Metro)", "title": "Wikipedia: Metro Line M1", "tukee": "avattu 1896, kulkee Andrássy-kadun alla (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://edition.cnn.com/travel/article/budapest-m1-europe-oldest-metro-network/index.html", "title": "CNN: Budapest M1", "tukee": "avattu 1896 (2.5.1896), kulkee Andrássy-kadun alla (luettu hakutuloksen tiivistelmänä)"}
+    ],
+    "pudotetut": [
+      "Gellértinvuoren '140 metriä joen yläpuolella': Wikipedia sanoo 235 m (huippu merenpinnasta) ja 140 m jokeen nähden, Frommer's sanoo 235 m joen yläpuolella; luku jätetty pois",
+      "'Budan kalkkikivikukkulat': lähteet sanovat dolomiitti, jätetty pois",
+      "Ponttonisilta 'talvella jäiden takia usein poissa käytöstä': ponttonisilta on varmistettu, jäiden vaikutusta ei kahdesta lähteestä",
+      "Sankarien aukio, Kainalokartta, Unkarin suuri tasanko: päivämäärät ristiriitaisia (Millennium-monumentti 1896 / 1900 / 1905), jätetty pois",
+      "Maanalainen 'maailman toiseksi vanhin / Euroopan mantereen ensimmäinen': väite riippuu määritelmästä (Lontoon 1863 höyryrata), jätetty pois",
+      "Elmyr de Hory ja Seuson hopeat: ei kuulu tähän, ei tarkistettu"
+    ],
+    "ristiriidat": [
+      "Ketjusillan pääjänne 202 m (Wikipedia, Grace's Guide) vs. 197,6 m (ERIH); rakennuksen alku 1840 vs. 1842; teksti käyttää vain kokonaispituutta 375 m (1230 ft kahdessa lähteessä)",
+      "Parlamenttitalon valmistuminen: 1902 (avaus) vs. 1904; teksti ei anna vuotta",
+      "Kalastajanlinnakkeen tornit: seitsemän päällikköä (Wikipedia) vs. seitsemän heimoa (muut); teksti sanoo 'heimoon'",
+      "Pyhän Tapanin kirkon kupolin romahtamisvuosi 1858 vs. 1868 ja valmistuminen 1905 vs. 1906; teksti ei käytä näitä",
+      "Gellértinvuoren korkeus: 235 m merenpinnasta vs. 235 m joesta; 140 m joen yläpuolella; teksti ei käytä lukua",
+      "Suuren kauppahallin pinta-ala 10 000 vs. 10 400 m²; teksti ei käytä lukua"
+    ],
+    "muutos_sk": "Poistettu: Budan kalkkikivikukkulat, Gellértinvuoren 140 m, Pyhän Tapanin kirkko ja kauppahalli ilman lukuja, Sankarien aukio Városligetin laidalla, ponttonisilta ja jäät, Unkarin suuri tasanko. Lisätty: ketjusillan avajaispäivä ja 'ensimmäinen pysyvä Tonavan silta', Kalastajanlinnakkeen 1895–1902 ja seitsemän tornia, Citadella 1848–49 jälkeen, parlamentin 691 huonetta ja 96 m, kirkon kupoli samaa korkeutta, kauppahallin 15.2.1897 ja metron 1896."
+  }
+]
