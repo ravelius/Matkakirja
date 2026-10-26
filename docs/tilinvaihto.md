@@ -50,6 +50,8 @@ ohjeet koko sen eliniäksi. Siksi kotikansiot päivitetään vanhan tilin roolie
    PT ei poista eikä palauta toisen roolin tiedostoja. Lepäävän roolin likainen kansio ohitetaan (`--ohita kansio`) ja kirjataan.
 3. `zsh tools/paivita-kotikansiot.sh --aja --uusi-haara` vasta, kun kansion sessio on pysähtynyt (haara vaihtuu koti/<kansio>:ksi;
    vanha haara säilyy, mitään ei poisteta). Kuiva-ajo uudelleen: kaikki AJAN TASALLA tai kirjattu ohitus.
+   POIKKEUS Matkakirja-posti (26.10.): KIERROS.md ja NOLLAUS.md ovat vain haarassa postivahti, joten sitä ei vaihdeta koti-haaraan:
+   Postivahti mergeää origin/mainin omaan haaraansa ja pushaa; ajossa `--ohita Matkakirja-posti`.
 4. Jokaisen uuden roolin aloitusviestissä ensimmäinen työ: tuotannonohjauksen osio 0 ja oma LUE ALOITTAESSA -rivi
    (`node tools/raamattu-luku.mjs 7.47`) ennen muuta työtä.
 
