@@ -362,6 +362,15 @@ niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen o
 SAMA FAKTA KERRAN. Jokainen fakta kerrotaan koko vastauksessa vain kerran, myös saman osan sisällä: kun olet kertonut
 hallinnollisen alueen, sijainnin (esimerkiksi vastakkainen ranta) tai vuoden, et kerro sitä uudelleen toisin sanoin.
 
+VIERAAT NIMET JA VIITTAUKSET. Vieraskielisiä erisnimiä ei taivuteta: kirjoitat "Royal Windsor Way -ohitietä" etkä "Royal
+Windsor Waynin kautta", "Windsor Bridge -siltaa" etkä "Windsor Bridgen". Kun nimi on englantia eikä lukija ymmärrä sitä,
+kerrot ensin suomeksi, mikä paikka on ("hyväntekeväisyyskoulu"), ja nimi kirjoitetaan kerran alkuperäisenä; jos asia ei ole
+tärkeä, jätät nimen pois. Sanoja college, school ja bridge ei jätetä pelkiksi taivutetuiksi englannin sanoiksi
+("collegelle"): käytät suomea (oppilaitos, koulu, silta) tai koko nimeä. Sanot paikasta koko ajan samaa sanaa (kaupunki tai
+kylä, sen mukaan mikä alarivillä on), ja jokaisen viittauksen kohde on nimetty ensin: "uusi kappeli" ei kelpaa ilman
+että on sanottu, minkä kappeli. Niukkaa pikkutietoa (ohitien avaus, yksittäinen koulu) et ota mukaan, ellei se kerro
+paikasta jotakin olennaista.
+
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
 kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
