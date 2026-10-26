@@ -1,0 +1,1333 @@
+2026-10-04 17:47:14.570 Matkakirja3D[15661:318692329] Built from '6000.3/staging' branch, Version '6000.3.24f1 (4e7b9b5b6244)', Build type 'Development', Scripting Backend 'il2cpp'
+2026-10-04 17:47:14.571 Matkakirja3D[15661:318692329] MemoryManager: Using 'Dynamic Heap' Allocator.
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=4194304"
+    "memorysetup-bucket-allocator-block-count=1"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=4194304"
+    "memorysetup-profiler-bucket-allocator-block-count=1"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=4194304"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+-> applicationDidFinishLaunching()
+-> sceneWillEnterForeground()
+Found 3 interfaces on host : 0) 192.168.1.146 1) 192.168.1.129 2) 169.254.40.44
+Player connection [4372127232]  Target information:
+
+Player connection [4372127232]  * "[IP] 192.168.1.146 [Port] 55000 [Flags] 2 [Guid] 535493828 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4372127232]  * "[IP] 192.168.1.129 [Port] 55000 [Flags] 2 [Guid] 535493828 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4372127232]  * "[IP] 169.254.40.44 [Port] 55000 [Flags] 2 [Guid] 535493828 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4372127232] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Subsystems] Discovering subsystems at path /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Bundle/Application/AD89D1AE-9A42-48E3-914B-EE70927921EC/Matkakirja3D.app/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple iOS simulator GPU
+Apple GPU Family: 2
+MSL Version: 3.0
+Has Float MSAA: 0
+Has Float Filtering: 0
+ReadWrite Texture Tier: 0
+Initialize engine version: 6000.3.24f1 (4e7b9b5b6244)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+UnloadTime: 0.187125 ms
+CrashReporter: No pending report exists at /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/44A73ACA-1176-4167-84D1-1BBE8E398CEA/Library/Caches/CrashReports/crash-pending.plcrash
+Unknown pseudo class "first-child" in StyleSheet Linssit
+Unknown pseudo class "last-child" in StyleSheet Matkakirja
+Unknown pseudo class "first-child" in StyleSheet lautapeli
+Unknown pseudo class "last-child" in StyleSheet lautapeli
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA valmius: auto 12 s (PlayerPrefs)
+MATKAKIRJA valmius: seuranta aloitusverho alkaa, 12 s
+MATKAKIRJA laattapalvelin: http://127.0.0.1:58134/r/ (löydös 176: 4 porttia: pohja http://127.0.0.1:58134/r/, maasto http://127.0.0.1:58135/r/, kerma http://127.0.0.1:58136/r/, muu http://127.0.0.1:58137/r/)
+MATKAKIRJA laattapalvelin: julisteet/pallo/laatat/2026-09-30-pohja-20260930/ delta paketista, perus 2026-09-27-pohja-20260927
+MATKAKIRJA laattapalvelin: paketti 5978 laattaa, käytössä 24,6 Mt (pohja 1366 maasto 2731 bmng-bathy 1365 vektorit 513 napakalotit 2 pohja-perus 0), avaus 5 ms
+MATKAKIRJA laattapalvelin: paketin sarjat ohitettu (kartta käyttää eri sarjaa, paketti on vanha): maarajat (julisteet/pallo/vektorit/maarajat-2026-09-30/)
+MATKAKIRJA kehysmittari: tavoite 60 Hz (liikkeessä), tiedosto /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/44A73ACA-1176-4167-84D1-1BBE8E398CEA/Documents/kehysajat.jsonl
+MATKAKIRJA paketti: ei valmista versiota, luetaan laiskasti sisalto/1/v536/ (kohde v536, hakemisto tiedossa: 52 tiedostoa varastosta)
+MATKAKIRJA sisältö: osoitin välimuistista (sisalto/1/v536/), tuore haetaan taustalla
+MATKAKIRJA sisältö: käynnistyksen esilataus 0/45 kokoelmaa (sisalto/1/v536/)
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ääni: testimykistys päällä (simulaattori; aani mykistys 0 = kuuluva ääni)
+2026-10-04 17:47:15.869 Matkakirja3D[15661:318692329] MATKAKIRJA puhe: istunto vaihdetaan (AVAudioSessionCategoryAmbient / AVAudioSessionModeDefault / 1 → Playback / SpokenAudio / MixWithOthers)
+MATKAKIRJA ääni-istunto (käynnistys): luokka AVAudioSessionCategoryPlayback, tila AVAudioSessionModeSpokenAudio, valinnat 1, voimakkuus 0.60, muut soivat 0, reitti Speaker, näytetaajuus 24000, kanavia 2
+MATKAKIRJA ui kuva: muistiraja 200 Mt (iPhone)
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: Kone = American Typewriter Regular
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Roman].
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Regular].
+MATKAKIRJA ui: Luku = Charter Roman
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: KoneLihava = American Typewriter Semibold
+MATKAKIRJA ylapalkki saaririvi: matala True, saari (x:138.00, y:11.00, width:126.00, height:37.00), saaren korkeus 37, rivi 37, yksikkö 1
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Bold].
+MATKAKIRJA ui: LukuLihava = Charter Bold
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Italic].
+MATKAKIRJA ui: LukuKursiivi = Charter Italic
+2026-10-04 17:47:16.256 Matkakirja3D[15661:318692329] MATKAKIRJA avaimet: haku pollo-kehittajakoodi epäonnistui (-34018)
+MATKAKIRJA ui: KoneBold = American Typewriter Bold
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui linssit: pelielementit -: portti False, vertailu False, radio False, linssi False, ok
+MATKAKIRJA mukana: 41 tiedostoa buildissa
+MATKAKIRJA lampo {"t":1,"aika":"17:47:16","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":0.0,"tavoite":-1,"piirtovali":1}
+MATKAKIRJA ruutu: näyttö 60 Hz, lepo 30 fps, renderScale 0,8
+MATKAKIRJA matkamuisto: kuvien juuri https://media.matkakirja.app/dioraama/olavinlinna/dcd122307aa43189/
+MATKAKIRJA apuraha: ladattu, 5 kappaletta, 4 kuvaa
+CADisplayLink created
+MATKAKIRJA elävät elementit: päällä; meri - (0 kohtaa): ei lajeja; myllyt ei näkyvissä, 220 kolmiota, nopeus 0,00, seuraava tauko 269 s; karuselli ei näkyvissä, 1629 kolmiota, nopeus 0,00, seuraava tauko 59 s; ilmapallo ei näkyvissä, 536 kolmiota, nopeus 0,00, seuraava tauko 146 s; gondolit ei näkyvissä, 878 kolmiota, nopeus 0,00, seuraava tauko 344 s; maailmanpyora ei näkyvissä, 1088 kolmiota, nopeus 0,00, seuraava tauko 97 s; hoyrylaiva ei näkyvissä, 199 kolmiota, nopeus 0,00, seuraava tauko 502 s; liike 0,00, kerros Taysi
+MATKAKIRJA linssit: linssiaani: synteesi valmis 24000 Hz, kilahdus 4 × 0,46 s, naksu 8 × 0,082 s, 1 ms taustasäikeessä, rekisteröity tehosteväylälle
+Shadowmap RenderTexture requested without a depth buffer. Changing to a 16 bit depth buffer. To resolve this warning, please specify the desired number of depth bits when creating the render texture.
+MATKAKIRJA lennon pinta: varakartta Z2 valmis (2026-09-24/bmng-bathy)
+Player Setting 'Adjust iOS FPS based on thermal state' is ON
+thermalStateDidChange: Nominal
+Thermal state is Nominal/Fair. Setting target frame rate to 60.
+-> applicationWillEnterForeground()
+-> sceneDidBecomeActive()
+-> applicationDidBecomeActive()
+MATKAKIRJA napakalotti pohjoinen: 2048×2048, 12 mipiä
+MATKAKIRJA ääriviiva: maamaa.geojson, 120 maata, 245 viivaa, 50907 pistettä, jäsennys 9 ms
+MATKAKIRJA ääriviiva: maapolygonit.geojson, 135 maata, 2626 viivaa, 497082 pistettä, jäsennys 49 ms
+MATKAKIRJA vektorit: luettelo 2026-09-25-gshhs-korkeus, lodit 0,1/0,03/0,008/0,004/0; rannikko: l0 (1 tiedostoa, 30846 pistettä) l1 (1 tiedostoa, 119436 pistettä) l2 (380 tiedostoa, 450986 pistettä) l3 (380 tiedostoa, 868542 pistettä) l4 (380 tiedostoa, 2766068 pistettä) rajat: l0 (1 tiedostoa, 8111 pistettä, korkeus) l1 (1 tiedostoa, 18246 pistettä, korkeus) l2 (128 tiedostoa, 33496 pistettä, korkeus) l3 (128 tiedostoa, 44730 pistettä, korkeus) l4 (130 tiedostoa, 72815 pistettä, korkeus)
+MATKAKIRJA sisältö: tuore osoitin tallennettu taustalla (sisalto/1/v536/, käyttöön seuraavassa käynnistyksessä)
+MATKAKIRJA valot: 3099 valoa
+MATKAKIRJA valot: maa -, 0 valoa, 0 aihetta
+MATKAKIRJA alueet: kaupunkitaso Z10 13829 laattaa
+MATKAKIRJA meren koristeet: merikohdat 29 maata, 129 kohtaa
+MATKAKIRJA saapuminen: 135 maan rajat saapumisrajaukseen
+MATKAKIRJA valmius [aloitusverho 1,1 s] aste 0,0 % | cesium - | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 7 maks 7 (istunto 7) käsittelyssä 0 maks 6 (istunto 6) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 27 pyyntöä 7 yhteyttä] | luokat sat/bmng-bathy k0 v16/0 p16 vektorit k0 v9/0 p7 maasto k0 v1/0 p1 napakalotit k0 v2/0 p2 | kamera korkeus 9881 km | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA nimet: alfa lineaariseen sekoitukseen maakunta 0,58→0,76 maakunta-pieni 0,58→0,76 meri 0,62→0,77 nykyalue:ruoste-vahva 0,95→0,98 nykyalue-pieni:ruoste-vahva 0,95→0,98 valtameri 0,62→0,72
+MATKAKIRJA nimet: 187 nimeä (aluenimet 187, merinimet 0), ylin taso 9, fontti LiberationSerif-Regular SDF / LiberationSerif-Italic SDF
+MATKAKIRJA reitit: 485 reittiä, 266 kaupunkia
+MATKAKIRJA peli: sisältö sisalto/1/v536/, 266 kaupunkia, 414 reittiä, 71 lentoa
+MATKAKIRJA peli: laattoja 266 (välimuisti)
+MATKAKIRJA alueet: kermasarja 27 maalla
+MATKAKIRJA alueet: 139 aluetta, maasto https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/{z}/{x}/{y}.terrain?v=2026-09-24-maailma
+[2026-10-04 17:47:16.986] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 172, Culled Visited 0, Rendered 2, Culled 19, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 1, Frame 2
+MATKAKIRJA verkko-odotus {"t":1.72,"vaihe":"kaynnistys","mita":"sisalto","ms":824,"haut":1}
+MATKAKIRJA peli: jatketaan tallennuksesta, £400 · päivä 1 · aamu · Ateena
+MATKAKIRJA peli: aloitusnäkymä, tallennus on
+MATKAKIRJA peli: sähkelinja auki
+MATKAKIRJA valmius [aloitusverho 1,6 s] aste 0,5 % | cesium käyty 172 (karsittuja käyty 0) piirto 2 karsittu 19 syvyys 5 jono työ 0 pää 0 ladattuja 1 | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 12 maks 12 (istunto 12) käsittelyssä 0 maks 4 (istunto 6) [pohja 4/4 y 0/2 p 4 pyyntöä 4 yhteyttä, maasto 2/2 y 0/1 p 3 pyyntöä 2 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/4 p 39 pyyntöä 7 yhteyttä] | luokat pohja k0 v4/0 p4 vektorit k0 v12/0 p19 maasto k0 v2/0 p3 | kamera korkeus 9881 km, maapiste 2,17°/s, korkeus 0 %/s, katse 2,5°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA pallo: aloitusportin sumennus 6 pt (renderScale 0,166, Gauss päällä, pistekerroin 3)
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA napakalotti etela: 4096×4096, 13 mipiä
+MATKAKIRJA ääni: äänitaulut valmiit (maisemakoreja 270, maita 265)
+[2026-10-04 17:47:17.493] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 171, Culled Visited 0, Rendered 2, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 1, Frame 4
+MATKAKIRJA valmius [aloitusverho 1,7 s] aste 0,5 % | cesium käyty 171 (karsittuja käyty 0) piirto 2 karsittu 20 syvyys 5 jono työ 0 pää 0 ladattuja 1 | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 12 maks 12 (istunto 12) käsittelyssä 0 maks 4 (istunto 6) [pohja 4/4 y 0/0 p 4 pyyntöä 4 yhteyttä, maasto 2/2 y 0/0 p 3 pyyntöä 2 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/4 p 49 pyyntöä 7 yhteyttä] | luokat vektorit k0 v10/0 p29 | kamera korkeus 9881 km, maapiste 4,95°/s, korkeus 0 %/s, katse 5,0°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA kaupungit: 266 merkkiä, tärkeys paketista
+MATKAKIRJA nostot: 2865 pääkartan nostoa 124 maassa, 135 maan rajat, 36 merinimeä
+MATKAKIRJA lento v3: päällä
+MATKAKIRJA lento v3: kone luotu (7 piirtoa)
+MATKAKIRJA nappula: kone 26 osaa, koko 28,98 m, rajat (28.98, 5.71, 19.84)
+[2026-10-04 17:47:18.817] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 169, Culled Visited 0, Rendered 2, Culled 18, Max Depth Visited 5, Loading-Worker 79, Loading-Main 9 Total Tiles Resident 34, Frame 16
+MATKAKIRJA valmius [aloitusverho 3,2 s] aste 18,5 % | cesium käyty 169 (karsittuja käyty 0) piirto 2 karsittu 18 syvyys 5 jono työ 79 pää 9 ladattuja 34 | objektit 2/33 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 12 (istunto 12) [pohja 6/6 y 0/6 p 72 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 45 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 79 pyyntöä 7 yhteyttä] | luokat pohja k0 v68/0 p72 vektorit k0 v30/0 p59 maasto k0 v42/0 p45 | kamera korkeus 9881 km, maapiste 3,52°/s, korkeus 0 %/s, katse 3,9°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA peli: sähketehtäviä sofia, tukholma
+MATKAKIRJA peli: kuvakysymyksiä 262, lippumaita 135
+MATKAKIRJA peli: kysymyksiä 1287 kaupungeissa, 104 yleistä, 42 kaarta
+MATKAKIRJA peli: saapumispuheita 45, luentoja 45
+MATKAKIRJA puhe: esiladattu intro-puhe.mp3 (buildissa)
+MATKAKIRJA kuvatekijät: 439 Commons-kuvaa
+[2026-10-04 17:47:19.334] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 170, Culled Visited 0, Rendered 2, Culled 21, Max Depth Visited 5, Loading-Worker 17, Loading-Main 0 Total Tiles Resident 86, Frame 39
+MATKAKIRJA valmius [aloitusverho 3,6 s] aste 49,7 % | cesium käyty 170 (karsittuja käyty 0) piirto 2 karsittu 21 syvyys 5 jono työ 17 pää 0 ladattuja 86 | objektit 2/85 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 16 (istunto 16) [pohja 6/6 y 0/6 p 167 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 103 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 108 pyyntöä 7 yhteyttä] | luokat pohja k0 v95/0 p167 vektorit k0 v29/0 p88 maasto k0 v58/0 p103 | kamera korkeus 9882 km, maapiste 5,33°/s, korkeus 0 %/s, katse 5,9°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA peli: muste 3099 nostoa
+MATKAKIRJA ui: Kauno = Snell Roundhand Regular
+[2026-10-04 17:47:19.844] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 163, Culled Visited 0, Rendered 117, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 1 Total Tiles Resident 182, Frame 64
+MATKAKIRJA valmius [aloitusverho 4,1 s] aste 99,3 % | cesium käyty 163 (karsittuja käyty 0) piirto 117 karsittu 20 syvyys 5 jono työ 0 pää 1 ladattuja 182 | objektit 117/181 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 15 (istunto 16) [pohja 6/6 y 0/5 p 281 pyyntöä 6 yhteyttä, maasto 6/6 y 0/5 p 183 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 136 pyyntöä 7 yhteyttä] | luokat pohja k0 v114/0 p281 vektorit k0 v28/0 p116 maasto k0 v80/0 p183 | kamera korkeus 9882 km, maapiste 4,74°/s, korkeus 0 %/s, katse 5,2°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA valmius: verho aloitusverho lähti valmis 4104 ms aste 100,0 % kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA verkko-odotus {"t":4.39,"vaihe":"kaynnistys","mita":"aloitusverho","ms":4104}
+MATKAKIRJA aloitusverho: pois 4,1 s (pallo 100 %)
+[2026-10-04 17:47:20.359] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 159, Culled Visited 0, Rendered 115, Culled 16, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 183, Frame 95
+MATKAKIRJA valmius [aloitusverho 4,6 s] aste 100,0 % | cesium käyty 159 (karsittuja käyty 0) piirto 115 karsittu 16 syvyys 5 jono työ 0 pää 0 ladattuja 183 | objektit 115/182 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 281 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 183 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 136 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9882 km, maapiste 5,07°/s, korkeus 0 %/s, katse 5,5°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys pois
+MATKAKIRJA aloitusnäyttö: esilataus 289 laattaa (lähikuva pinta 70, pohja 93, valinta 126)
+MATKAKIRJA lennon pinta: Sentinel-kattavuus 287 Z8-laattaa
+MATKAKIRJA aloitusnäyttö: esilataus + Sentinel 111 laattaa (yhteensä 400)
+MATKAKIRJA aloitusnäyttö: esilataus + maasto 117 laattaa (yhteensä 517)
+MATKAKIRJA lento v3: esilämmitys 18 aloituskohdetta, 1690 laattaa
+MATKAKIRJA linssit: fonttilämmitys: 173 merkkiä verhon jälkeen (odotus 4518 ms), 367 ms 11 kehyksessä, pisin työ 5,0 ms (lisäys 5,0, kallein merkki 1,8; ensimmäinen jäsennys 0,0; jäsennys 0,2, kallein pala 0,1)
+MATKAKIRJA kehysajat {"t":5.34,"tavoiteMs":16.67,"liike":{"n":2,"p50":400.01,"p95":400.01,"p99":400.01,"max":400.01,"yli15x":2},"lepo":{"n":106,"p50":16.69,"p95":66.68,"p99":116.67,"max":904.77,"yli15x":8},"peitto":null,"kehyksia":113,"piirretty":113,"tilat":{"taysi":99,"lepo":14,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.78,"gpuKehyksia":109,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+MATKAKIRJA valmius [aloitusverho 5,2 s] aste 100,0 % | cesium - | objektit 115/186 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 796 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 10 (istunto 16) [pohja 6/6 y 0/6 p 287 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 188 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/1 p 137 pyyntöä 7 yhteyttä] | luokat pohja k0 v6/0 p287 sat/s2 k0 v1/0 maasto k0 v5/0 p188 | kamera korkeus 9883 km, maapiste 5,71°/s, korkeus 0 %/s, katse 6,2°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:21.414] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 157, Culled Visited 0, Rendered 113, Culled 18, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 187, Frame 126
+MATKAKIRJA valmius [aloitusverho 5,7 s] aste 100,0 % | cesium käyty 157 (karsittuja käyty 0) piirto 113 karsittu 18 syvyys 5 jono työ 0 pää 0 ladattuja 187 | objektit 113/186 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 784 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 287 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 188 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9883 km, maapiste 6,37°/s, korkeus 0 %/s, katse 6,9°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA satloki t=5s: [bmng-bathy/2 n=16 200:paketti×16 t 4336/9021/14435] [s2/laatat.json n=1 200:valimuisti×1 t 18496/18496/18496]
+[2026-10-04 17:47:21.861] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 158, Culled Visited 0, Rendered 114, Culled 17, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 187, Frame 140
+MATKAKIRJA valmius [aloitusverho 6,1 s] aste 100,0 % | cesium käyty 158 (karsittuja käyty 0) piirto 114 karsittu 17 syvyys 5 jono työ 0 pää 0 ladattuja 187 | objektit 114/186 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 780 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 287 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 188 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9883 km, maapiste 6,45°/s, korkeus 0 %/s, katse 6,9°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:22.393] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 164, Culled Visited 0, Rendered 118, Culled 19, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 195, Frame 156
+MATKAKIRJA valmius [aloitusverho 6,7 s] aste 100,0 % | cesium käyty 164 (karsittuja käyty 0) piirto 118 karsittu 19 syvyys 5 jono työ 0 pää 0 ladattuja 195 | objektit 118/194 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 761 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 8 (istunto 16) [pohja 6/6 y 0/4 p 297 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 196 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat pohja k0 v10/0 p297 maasto k0 v8/0 p196 | kamera korkeus 9883 km, maapiste 7,00°/s, korkeus 0 %/s, katse 7,5°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:22.927] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 163, Culled Visited 0, Rendered 117, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 172
+MATKAKIRJA valmius [aloitusverho 7,2 s] aste 100,0 % | cesium käyty 163 (karsittuja käyty 0) piirto 117 karsittu 20 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 117/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 735 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 4 (istunto 16) [pohja 6/6 y 0/3 p 301 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat pohja k0 v4/0 p301 maasto k0 v4/0 p200 | kamera korkeus 9884 km, maapiste 6,91°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [aloitusverho 7,8 s] aste 100,0 % | cesium - | objektit 117/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 706 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 301 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 6,87°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:23.959] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 160, Culled Visited 0, Rendered 116, Culled 15, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 203
+MATKAKIRJA valmius [aloitusverho 8,2 s] aste 100,0 % | cesium käyty 160 (karsittuja käyty 0) piirto 116 karsittu 15 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 116/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 685 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 301 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 6,96°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:24.461] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 161, Culled Visited 0, Rendered 116, Culled 18, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 218
+MATKAKIRJA valmius [aloitusverho 8,7 s] aste 100,0 % | cesium käyty 161 (karsittuja käyty 0) piirto 116 karsittu 18 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 116/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 663 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 2 (istunto 16) [pohja 6/6 y 0/0 p 301 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/2 p 140 pyyntöä 7 yhteyttä] | luokat vektorit k0 v3/0 p119 | kamera korkeus 9884 km, maapiste 6,79°/s, korkeus 0 %/s, katse 7,1°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:24.970] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 158, Culled Visited 0, Rendered 114, Culled 17, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 233
+MATKAKIRJA valmius [aloitusverho 9,2 s] aste 100,0 % | cesium käyty 158 (karsittuja käyty 0) piirto 114 karsittu 17 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 114/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 640 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 301 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 7,02°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:25.493] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 168, Culled Visited 0, Rendered 118, Culled 19, Max Depth Visited 5, Loading-Worker 4, Loading-Main 0 Total Tiles Resident 207, Frame 248
+MATKAKIRJA valmius [aloitusverho 9,8 s] aste 98,7 % | cesium käyty 168 (karsittuja käyty 0) piirto 118 karsittu 19 syvyys 5 jono työ 4 pää 0 ladattuja 207 | objektit 118/206 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 616 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 4 (istunto 16) [pohja 6/6 y 0/2 p 311 pyyntöä 6 yhteyttä, maasto 6/6 y 0/2 p 208 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat pohja k0 v10/0 p311 maasto k0 v8/0 p208 | kamera korkeus 9885 km, maapiste 6,86°/s, korkeus 0 %/s, katse 7,1°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":10.35,"tavoiteMs":16.67,"liike":null,"lepo":{"n":149,"p50":33.36,"p95":34.84,"p99":35.39,"max":65.63,"yli15x":1},"peitto":null,"kehyksia":149,"piirretty":149,"tilat":{"taysi":0,"lepo":149,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.96,"gpuKehyksia":149,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+[2026-10-04 17:47:25.994] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 169, Culled Visited 0, Rendered 121, Culled 22, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 215, Frame 263
+MATKAKIRJA valmius [aloitusverho 10,3 s] aste 100,0 % | cesium käyty 169 (karsittuja käyty 0) piirto 121 karsittu 22 syvyys 5 jono työ 0 pää 0 ladattuja 215 | objektit 121/214 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 594 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 8 (istunto 16) [pohja 6/6 y 0/5 p 323 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 216 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat pohja k0 v12/0 p323 maasto k0 v8/0 p216 | kamera korkeus 9885 km, maapiste 6,74°/s, korkeus 0 %/s, katse 7,0°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:26.504] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 167, Culled Visited 0, Rendered 120, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 215, Frame 278
+MATKAKIRJA valmius [aloitusverho 10,8 s] aste 100,0 % | cesium käyty 167 (karsittuja käyty 0) piirto 120 karsittu 20 syvyys 5 jono työ 0 pää 0 ladattuja 215 | objektit 120/214 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 570 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 323 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 216 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9885 km, maapiste 6,77°/s, korkeus 0 %/s, katse 7,0°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:27.004] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 167, Culled Visited 0, Rendered 118, Culled 16, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 216, Frame 293
+MATKAKIRJA valmius [aloitusverho 11,3 s] aste 99,0 % | cesium käyty 167 (karsittuja käyty 0) piirto 118 karsittu 16 syvyys 5 jono työ 0 pää 0 ladattuja 216 | objektit 118/215 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 554 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 6 (istunto 16) [pohja 6/6 y 0/5 p 329 pyyntöä 6 yhteyttä, maasto 6/6 y 0/1 p 220 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat pohja k0 v6/0 p329 maasto k0 v4/0 p220 | kamera korkeus 9885 km, maapiste 6,24°/s, korkeus 0 %/s, katse 6,5°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:27.526] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 168, Culled Visited 0, Rendered 121, Culled 19, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 219, Frame 308
+MATKAKIRJA valmius [aloitusverho 11,8 s] aste 100,0 % | cesium käyty 168 (karsittuja käyty 0) piirto 121 karsittu 19 syvyys 5 jono työ 0 pää 0 ladattuja 219 | objektit 121/218 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 533 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 16) [pohja 6/6 y 0/0 p 329 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 220 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat | kamera korkeus 9885 km, maapiste 6,99°/s, korkeus 0 %/s, katse 7,2°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius: seuranta aloitusverho loppu 12,0 s, verho lähti 4,1 s, suurin aste 100,0 % (4,6 s), ylitykset 80 %: 4,1 s 90 %: 4,1 s 95 %: 4,1 s 97 %: 4,1 s 99 %: 4,1 s 100 %: 4,6 s
+MATKAKIRJA kehysajat {"t":15.39,"tavoiteMs":16.67,"liike":null,"lepo":{"n":148,"p50":33.35,"p95":34.93,"p99":66.51,"max":100,"yli15x":3},"peitto":null,"kehyksia":148,"piirretty":148,"tilat":{"taysi":0,"lepo":148,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.96,"gpuKehyksia":148,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+MATKAKIRJA kehysajat {"t":20.39,"tavoiteMs":16.67,"liike":null,"lepo":{"n":150,"p50":33.36,"p95":34.9,"p99":35.75,"max":53.95,"yli15x":1},"peitto":null,"kehyksia":150,"piirretty":150,"tilat":{"taysi":0,"lepo":150,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.95,"gpuKehyksia":150,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+MATKAKIRJA linssit: linssien aineisto: katto 20,0 s käynnistyksestä
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiä
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiluentaa
+MATKAKIRJA linssit: maat: 135 maata, 128 nimeä
+MATKAKIRJA levy: 129 Mt / 2048 Mt (kuvat 3, aani 0, aanet 0, sisalto 95, virta 0, laatat 29), ei siivottavaa
+MATKAKIRJA linssit: ihmisen matka: 21 jaksoa, 21 aikaleimaa, ääni https://media.matkakirja.app/aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3 (I ja II)
+MATKAKIRJA paketti: v536 (1.58) 795 tiedostoa, puuttuu 736 (16,7 Mt siirto)
+MATKAKIRJA linssit: ihmisen matka: 17 vanaa laskettu
+MATKAKIRJA esilataaja: tiedosto esilasketut.json 416 alku 202421 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lippu_lonlat.json 416 alku 3464 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto historianHetket.json 416 alku 476142 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karttamerkit.json 416 alku 3705 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: vesistöt: 38 järveä, 169 uomaa, 20 nimeä, muunnos 8,2 ms
+MATKAKIRJA esilataaja: tiedosto aden.json 416 alku 53078 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto addisabeba.json 416 alku 57028 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto adelaide.json 416 alku 92358 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ahaggar.json 416 alku 47201 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto alicesprings.json 416 alku 51910 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto alkufra.json 416 alku 70656 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto amsterdam.json 416 alku 46960 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto angola.json 416 alku 77332 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto anchorage.json 416 alku 54737 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ankara.json 416 alku 49258 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: radio: 182 asemaa (epaselva 178, sallittu 4), 5 viritysääntä
+MATKAKIRJA esilataaja: tiedosto alpit.json 416 alku 60706 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: astronautin kamera: 189 kohdetta
+MATKAKIRJA esilataaja: tiedosto astana.json 416 alku 62076 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto appalakit.json 416 alku 82106 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto antofagasta.json 416 alku 57504 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: isoisä 1873: 185 rajaa, 133 nimeä (GPL-3.0)
+MATKAKIRJA linssit: linssien aineisto valmis 22,0 s käynnistyksestä
+MATKAKIRJA esilataaja: tiedosto bahrelghazal.json 416 alku 49603 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bagdad.json 416 alku 57694 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto auckland.json 416 alku 65230 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asuncion.json 416 alku 68699 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bangkok.json 416 alku 59731 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bananal.json 416 alku 79968 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bali.json 416 alku 84583 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bermuda.json 416 alku 74255 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto berliini.json 416 alku 53993 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto barcelona.json 416 alku 56672 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bergen.json 416 alku 83745 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bogota.json 416 alku 79551 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto boavista.json 416 alku 75525 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto borneo.json 416 alku 54382 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto birdsville.json 416 alku 80776 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto broome.json 416 alku 84747 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto brisbane.json 416 alku 100430 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bryssel.json 416 alku 96096 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto budapest.json 416 alku 61356 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto buenosaires.json 416 alku 66487 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cairns.json 416 alku 58037 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bukarest.json 416 alku 62015 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto campogrande.json 416 alku 77972 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto caphorn.json 416 alku 86816 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cayenne.json 416 alku 69452 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto chennai.json 416 alku 61073 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto caracas.json 416 alku 91127 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto chicago.json 416 alku 80349 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto christchurch.json 416 alku 72834 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto colombo.json 416 alku 65720 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto churchill.json 416 alku 85354 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cooberpedy.json 416 alku 70099 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto damaskos.json 416 alku 56502 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto darwin.json 416 alku 91226 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto darfur.json 416 alku 49857 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dakar.json 416 alku 56907 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto delhi.json 416 alku 58093 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dili.json 416 alku 45440 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto denver.json 416 alku 55772 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto doha.json 416 alku 47707 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dubai.json 416 alku 50088 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dublin.json 416 alku 70601 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dubrovnik.json 416 alku 57586 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dunedin.json 416 alku 60026 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto edinburgh.json 416 alku 58829 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto exmouth.json 416 alku 82846 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto falkland.json 416 alku 78305 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fes.json 416 alku 58758 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto firenze.json 416 alku 74367 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto gao.json 416 alku 76423 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto geraldton.json 416 alku 80310 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto galapagos.json 416 alku 79572 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto grandcanyon.json 416 alku 83253 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto granada.json 416 alku 67487 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto guatemala.json 416 alku 53821 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto halab.json 416 alku 54271 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto havanna.json 416 alku 77804 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hanoi.json 416 alku 61859 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hawaii.json 416 alku 92750 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto halifax.json 416 alku 56398 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto helsinki.json 416 alku 59322 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto honiara.json 416 alku 61594 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hobart.json 416 alku 96987 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hongkong.json 416 alku 63926 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto houston.json 416 alku 57210 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iqaluit.json 416 alku 47177 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iguazu.json 416 alku 85690 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iquitos.json 416 alku 46083 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto irkutsk.json 416 alku 49739 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto islanti.json 416 alku 60239 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto isfahan.json 416 alku 55587 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto istanbul.json 416 alku 85494 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto izmir.json 416 alku 47900 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":25.41,"tavoiteMs":16.67,"liike":null,"lepo":{"n":150,"p50":33.34,"p95":36.98,"p99":55.11,"max":83.22,"yli15x":2},"peitto":null,"kehyksia":150,"piirretty":150,"tilat":{"taysi":0,"lepo":150,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.98,"gpuKehyksia":150,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+MATKAKIRJA esilataaja: tiedosto jakarta.json 416 alku 64289 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jakutsk.json 416 alku 55349 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jerusalem.json 416 alku 55092 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jekaterinburg.json 416 alku 55081 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kabul.json 416 alku 64628 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto joaopessoa.json 416 alku 80582 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kamerun.json 416 alku 50010 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kalgoorlie.json 416 alku 92121 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kairo.json 416 alku 56164 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kano.json 416 alku 60950 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kamtsatka.json 416 alku 50333 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kanton.json 416 alku 62690 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kapadokia.json 416 alku 52440 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kapkaupunki.json 416 alku 57093 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karthago.json 416 alku 78980 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kappalmas.json 416 alku 82059 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karachi.json 416 alku 64128 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kathmandu.json 416 alku 62288 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kimberley.json 416 alku 74282 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kilimandzaro.json 416 alku 71302 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kashgar.json 416 alku 63101 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kioto.json 416 alku 61391 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kiova.json 416 alku 56218 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kobenhavn.json 416 alku 71237 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kolkata.json 416 alku 61790 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto krakova.json 416 alku 64214 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kongo.json 416 alku 48945 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kreeta.json 416 alku 64484 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kosice.json 416 alku 80957 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto labrador.json 416 alku 77976 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lagos.json 416 alku 61228 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kumasi.json 416 alku 58795 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kuwait.json 416 alku 51765 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lalibela.json 416 alku 44340 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lima.json 416 alku 84212 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lappi.json 416 alku 65352 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lhasa.json 416 alku 63789 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lissabon.json 416 alku 83562 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ljubljana.json 416 alku 86453 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lontoo.json 416 alku 82364 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto losangeles.json 416 alku 79761 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto luxemburg.json 416 alku 32932 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto macapa.json 416 alku 75628 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto machupicchu.json 416 alku 73614 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto luxor.json 416 alku 61622 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto madagaskar.json 416 alku 76193 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto magadan.json 416 alku 55099 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto managua.json 416 alku 70068 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto madrid.json 416 alku 49695 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manaus.json 416 alku 75177 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto marrakech.json 416 alku 56929 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manila.json 416 alku 64823 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto marseille.json 416 alku 60371 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mandalay.json 416 alku 63380 +27150 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto masqat.json 200 alku 0 +51825 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto medina.json 200 alku 0 +56351 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mekka.json 200 alku 0 +63172 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mexico.json 200 alku 0 +80200 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto melbourne.json 200 alku 0 +97078 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto merida.json 200 alku 0 +58872 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto miami.json 200 alku 0 +55597 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto milfordsound.json 200 alku 0 +88132 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto montevideo.json 200 alku 0 +77533 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto monterrey.json 200 alku 0 +54914 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto montreal.json 200 alku 0 +60587 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mosul.json 200 alku 0 +54277 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mosambik.json 200 alku 0 +72359 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto moskova.json 200 alku 0 +60209 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mountisa.json 200 alku 0 +83818 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mountrushmore.json 200 alku 0 +78903 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto mumbai.json 200 alku 0 +65943 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tehtävä lento-v3-esilammitys (Kohdekaupungit) 23,8 s
+MATKAKIRJA esilataaja: tiedosto murzuk.json 200 alku 0 +84709 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto neworleans.json 200 alku 0 +79871 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto namib.json 200 alku 0 +80941 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nairobi.json 200 alku 0 +56358 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto newyork.json 200 alku 0 +73224 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nikosia.json 200 alku 0 +54366 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto noumea.json 200 alku 0 +71854 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto norfolk.json 200 alku 0 +74564 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nome.json 200 alku 0 +78320 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nuuk.json 200 alku 0 +59357 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nullarbor.json 200 alku 0 +69484 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto odessa.json 200 alku 0 +58167 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto orjarannikko.json 200 alku 0 +73403 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ouropreto.json 200 alku 0 +80090 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oslo.json 200 alku 0 +66799 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto novosibirsk.json 200 alku 0 +48575 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pariisi.json 200 alku 0 +98418 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto peking.json 200 alku 0 +58116 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto panama.json 200 alku 0 +57618 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto persepolis.json 200 alku 0 +52228 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto perth.json 200 alku 0 +90015 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto petra.json 200 alku 0 +60815 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto portmoresby.json 200 alku 0 +95887 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pietari.json 200 alku 0 +70069 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto portovelho.json 200 alku 0 +78117 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto portoalegre.json 200 alku 0 +71854 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto praha.json 200 alku 0 +72583 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto portvila.json 200 alku 0 +61645 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puertomontt.json 200 alku 0 +78711 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto rashafun.json 200 alku 0 +40478 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":30.41,"tavoiteMs":16.67,"liike":null,"lepo":{"n":149,"p50":33.36,"p95":34.79,"p99":43.04,"max":83.35,"yli15x":1},"peitto":null,"kehyksia":149,"piirretty":149,"tilat":{"taysi":0,"lepo":149,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.99,"gpuKehyksia":149,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":100}
+MATKAKIRJA esilataaja: tiedosto riad.json 200 alku 0 +52106 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puntaarenas.json 200 alku 0 +55134 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto quito.json 200 alku 0 +76449 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto rio.json 200 alku 0 +66167 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto robinsoncrusoe.json 200 alku 0 +87672 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto rooma.json 200 alku 0 +52173 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto rubalkhali.json 200 alku 0 +51578 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto riika.json 200 alku 0 +59752 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto salalah.json 200 alku 0 +46508 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto salta.json 200 alku 0 +51584 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto salvador.json 200 alku 0 +88961 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sahara.json 200 alku 0 +45301 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA lampo {"t":31,"aika":"17:47:46","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":29.1,"tavoite":30,"piirtovali":1}
+MATKAKIRJA esilataaja: tiedosto sahalin.json 200 alku 0 +52265 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA elävät hetket: äänet valmiit (4 × 3, 24000 Hz, tehosteväylällä)
+MATKAKIRJA esilataaja: tiedosto samarkand.json 200 alku 0 +63037 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sana.json 200 alku 0 +49588 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sanambrosio.json 200 alku 0 +37826 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sanfrancisco.json 200 alku 0 +82065 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto santacruz.json 200 alku 0 +51421 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto santafe.json 200 alku 0 +44910 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sansibar.json 200 alku 0 +64423 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sanjuan.json 200 alku 0 +73922 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto santarem.json 200 alku 0 +83594 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saoluis.json 200 alku 0 +78160 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saopaulo.json 200 alku 0 +77780 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sarajevo.json 200 alku 0 +66561 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sepik.json 200 alku 0 +72575 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sevilla.json 200 alku 0 +92752 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto shanghai.json 200 alku 0 +59439 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto siinai.json 200 alku 0 +49865 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto singapore.json 200 alku 0 +62800 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sisilia.json 200 alku 0 +64479 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sierraleone.json 200 alku 0 +79132 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sthelena.json 200 alku 0 +94828 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sofia.json 200 alku 0 +66079 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto soul.json 200 alku 0 +64068 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto suakin.json 200 alku 0 +39640 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sumatra.json 200 alku 0 +53088 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto suva.json 200 alku 0 +60666 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto stjohns.json 200 alku 0 +58263 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sitka.json 200 alku 0 +70443 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tabriz.json 200 alku 0 +50603 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sydney.json 200 alku 0 +63298 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto taipei.json 200 alku 0 +63390 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tallinna.json 200 alku 0 +58754 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tampere.json 200 alku 0 +62319 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tanganjika.json 200 alku 0 +48919 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tanger.json 200 alku 0 +58670 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto timbuktu.json 200 alku 0 +43700 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto teheran.json 200 alku 0 +57446 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tokio.json 200 alku 0 +64010 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto toronto.json 200 alku 0 +81501 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto titicaca.json 200 alku 0 +77486 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto townsville.json 200 alku 0 +49866 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tripoli.json 200 alku 0 +58134 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tromssa.json 200 alku 0 +56014 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tshadjarvi.json 200 alku 0 +51072 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tukholma.json 200 alku 0 +67869 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto uluru.json 200 alku 0 +80430 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto valparaiso.json 200 alku 0 +80981 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto valletta.json 200 alku 0 +35355 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ulanbator.json 200 alku 0 +61852 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto vancouver.json 200 alku 0 +82793 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto varanasi.json 200 alku 0 +59812 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto varsova.json 200 alku 0 +62096 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto venetsia.json 200 alku 0 +81424 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto viktoria.json 200 alku 0 +82863 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto vilna.json 200 alku 0 +48278 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto viktorianputoukset.json 200 alku 0 +72686 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto vladivostok.json 200 alku 0 +56136 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto wellington.json 200 alku 0 +82559 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto whitehorse.json 200 alku 0 +53985 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto winnipeg.json 200 alku 0 +56211 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto xian.json 200 alku 0 +64236 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto wien.json 200 alku 0 +71693 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto yangon.json 200 alku 0 +64461 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA peli-komento: 33.87 puhe pois → ok [Aloitus]
+MATKAKIRJA esilataaja: tiedosto yellowknife.json 200 alku 0 +54580 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto yellowstone.json 200 alku 0 +83778 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kulttuurivisat.json 200 alku 0 +33885 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto livianpuhe.json 200 alku 0 +58370 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto livianrepliikit.json 200 alku 0 +41202 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto monumentit.json 200 alku 0 +126627 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastonimet.json 200 alku 0 +119828 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto liviansaapumiset.json 200 alku 0 +7323 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pulmaaineisto.json 200 alku 0 +11561 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto muutosloki-natiivi.json 200 alku 0 +26071 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saatiedot.json 200 alku 0 +192426 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saapuminen.json 200 alku 0 +112919 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto reitit1873.json 200 alku 0 +1556397 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto skandaalit.json 200 alku 0 +1278284 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lisenssit.json 200 alku 0 +4042 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tapahtumat.json 200 alku 0 +7249 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuonetilastot.json 200 alku 0 +314791 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manifest.json 200 alku 0 +322768 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto takynostot.json 200 alku 0 +416707 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ambience-stream.json 200 alku 0 +137 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto aani-ehdokkaat.json 200 alku 0 +54378 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA peli: matkareitit []
+MATKAKIRJA peli: uusi peli, £400 · päivä 1 · aamu · Ateena
+MATKAKIRJA VARTIJA 171: korjaus päällä
+MATKAKIRJA valmius: seuranta saapuminen alkaa, 20 s
+MATKAKIRJA VARTIJA 171: saapuminen GRC alkaa (korjaus päällä), aste 100,0 %, kohdemaa -, palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija
+MATKAKIRJA saapuminen: GRC Korkeuteen → (38,6, 23,728) korkeus 0,159 R, näkyvä leveys 130 yks; web kotelossa (38,325, 23,728) 0,1458 R, laatikko {x 6473,25, y 1720,15, w 315,81, h 296,24}
+MATKAKIRJA peli-komento: 34.88 uusi-peli 5 ateena → ok [Kartta]
+MATKAKIRJA esilataaja: tiedosto etusivupallo.json 200 alku 0 +11675 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:47:50.428] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 161, Culled Visited 0, Rendered 116, Culled 18, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 291, Frame 990
+MATKAKIRJA valot: maa GRC, 90 valoa, 9 aihetta
+MATKAKIRJA linssit: elävä: kuljettu reitti 1 kaupunkia
+Two or more raster overlays use the same material key on the same Cesium3DTileset. This will cause unexpected behavior, as only one of them will be passed to the tileset's material.
+MATKAKIRJA väritaso: GRC (z3–8)
+MATKAKIRJA valmius [saapuminen 0,1 s] aste 100,0 % | cesium käyty 161 (karsittuja käyty 0) piirto 116 karsittu 18 syvyys 5 jono työ 0 pää 0 ladattuja 291 | objektit 116/290 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 15 maks 18 (istunto 18) käsittelyssä 0 maks 11 (istunto 16) [pohja 6/6 y 0/6 p 423 pyyntöä 6 yhteyttä, maasto 6/6 y 0/5 p 292 pyyntöä 6 yhteyttä, kerma 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, muu 2/6 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat pohja k0 v94/0 p423 kerma k0 v1/0 maasto k0 v72/0 p292 | kamera korkeus 9890 km, maapiste 5,73°/s, korkeus 0 %/s, katse 6,7°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: elävä: valmis 126 ms (maakunnat 60, kolmiot 64): saapuminen GRC, 14 maakuntaa, 0 rajaa, 0 jokea, 0 nostoa (0 heräävässä), 2115 kolmiota; soi 0,00 s:sta, nopeus 1,00
+MATKAKIRJA esilataaja: tiedosto fokustehtavat.json 200 alku 0 +437 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusnosto-symbolit.json 200 alku 0 +1187 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA ääriviiva: GRC, 1 maa–maa-rajaviivaa, 218 janaa, leveys 2,2 pt, peitto 0,5 (natiivi 0,657)
+MATKAKIRJA ääriviiva: GRC, 61 rantarengasta, 3862 janaa, leveys 1,2 pt, peitto 0,22 (natiivi 0,332)
+MATKAKIRJA elävä: GRC esivalmisteltu 90 ms
+MATKAKIRJA esilataaja: tiedosto game.json 200 alku 0 +1613 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet.json 200 alku 0 +4731429 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA lipputanko: maa GRC, paikka 41,52 26,43, näkyy False, lippu 250×167, kangas 3D (jatkuva), korkeus 120 pt (maailma, kasvu 0,5, suoja 0,3), suunta maailma
+MATKAKIRJA esilataaja: tiedosto isoisan-valokuvat.json 200 alku 0 +1142 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karttaselite.json 200 alku 0 +523 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto media.json 200 alku 0 +15274855 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA pallo: aloitusportin sumennus pois
+MATKAKIRJA kehysajat {"t":35.43,"tavoiteMs":16.67,"liike":{"n":22,"p50":17.43,"p95":66.17,"p99":66.64,"max":66.64,"yli15x":5},"lepo":{"n":134,"p50":33.34,"p95":34.85,"p99":34.96,"max":59.16,"yli15x":1},"peitto":null,"kehyksia":156,"piirretty":156,"tilat":{"taysi":22,"lepo":134,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.98,"gpuKehyksia":156,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":81}
+[2026-10-04 17:47:50.931] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 59, Culled Visited 0, Rendered 44, Culled 0, Max Depth Visited 4, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 291, Frame 1012
+MATKAKIRJA valmius [saapuminen 0,6 s] aste 100,0 % | cesium käyty 59 (karsittuja käyty 0) piirto 44 karsittu 0 syvyys 4 jono työ 0 pää 0 ladattuja 291 | objektit 44/290 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 4, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 20 maks 20 (istunto 20) käsittelyssä 5 maks 6 (istunto 16) [pohja 6/6 y 0/0 p 423 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 292 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 32 pyyntöä 6 yhteyttä, muu 2/2 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat kerma k5 v26/19 | kamera korkeus 20742 km, maapiste 99,52°/s, korkeus +236,9 %/s, katse 114,8°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: elävä: hiljaa 0,6 s:n jälkeen: soi
+MATKAKIRJA saapuminen: GRC Korkeuteen → (38,6, 23,728) korkeus 0,159 R, näkyvä leveys 130 yks; web kotelossa (38,325, 23,728) 0,1458 R, laatikko {x 6473,25, y 1720,15, w 315,81, h 296,24}
+MATKAKIRJA linssit: elävä: 0,02 s: maakunnat syttyvät
+MATKAKIRJA esilataaja: tiedosto lahteet.json 200 alku 0 +20737 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto astro-kysymykset.json 200 alku 0 +7474 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kaupunkimusiikki.json 200 alku 0 +1496 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lehti.json 200 alku 0 +152 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kohtaamiskuvat-data.json 200 alku 0 +62661 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 1,1 s] aste 100,0 % | cesium - | objektit 44/290 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 20 maks 20 (istunto 20) käsittelyssä 0 maks 6 (istunto 16) [pohja 6/6 y 0/0 p 423 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 292 pyyntöä 6 yhteyttä, kerma 6/6 y 0/6 p 39 pyyntöä 6 yhteyttä, muu 2/2 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat kerma k0 v12/8 | kamera korkeus 18981 km, maapiste 74,48°/s, korkeus -15,7 %/s, katse 89,1°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-luenta.json 200 alku 0 +149 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-kysymykset.json 200 alku 0 +31752 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto astro-sumu.json 200 alku 0 +459 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-aanimaisema.json 200 alku 0 +184 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-maamaski.json 200 alku 0 +29577 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-rantamaski.json 200 alku 0 +39536 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ihmisen-matka-virrat.json 200 alku 0 +10635 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pallo.json 200 alku 0 +829 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto satelliitti-aani.json 200 alku 0 +427 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA maakunnat (maakuntarajat): 138 maata, 2546 aluetta, 42487 kaarta (46 ilman maata, 2333 alueen sisäistä ja 32492 ulkorajaa pois), jäsennys 323 ms, maittain 216 ms
+[2026-10-04 17:47:51.960] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 144, Culled Visited 0, Rendered 63, Culled 55, Max Depth Visited 6, Loading-Worker 179, Loading-Main 0 Total Tiles Resident 311, Frame 1069
+MATKAKIRJA valmius [saapuminen 1,6 s] aste 25,8 % | cesium käyty 144 (karsittuja käyty 0) piirto 63 karsittu 55 syvyys 6 jono työ 179 pää 0 ladattuja 311 | objektit 63/297 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 20 maks 20 (istunto 20) käsittelyssä 6 maks 18 (istunto 18) [pohja 6/6 y 0/6 p 474 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 332 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 57 pyyntöä 6 yhteyttä, muu 2/2 y 0/0 p 140 pyyntöä 7 yhteyttä] | luokat pohja k0 v51/0 p474 kerma k6 v12/5 maasto k0 v40/0 p332 | kamera korkeus 4961 km, maapiste 52,05°/s, korkeus -154,2 %/s, katse 64,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA maakunnat GRC: 14 aluetta, tunnuskartta 895×739 (teksel 1,2 km, 19,1…28,7°), rypäitä 1 (+0 pois), 126 rajajanaa, 19 ms
+MATKAKIRJA esilataaja: tiedosto omistus.json 200 alku 0 +174 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto topografia.json 200 alku 0 +26779 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto satelliitti.json 200 alku 0 +880 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA maamaski GRC: 3580×2956, 872 maarengasta, 3 järveä, 29 ms
+MATKAKIRJA esilataaja: tiedosto livia-pilotti-cuet.json 200 alku 0 +41593 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA ui sisältö: kaupunkilehti ateena liitetty (1)
+MATKAKIRJA linssit: elävä: 1,22 s: luovutus pysyville kerroksille
+MATKAKIRJA peli-komento: 36.92 odota-tila Kartta 30 → ok [Kartta]
+[2026-10-04 17:47:52.465] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 129, Culled Visited 0, Rendered 41, Culled 74, Max Depth Visited 8, Loading-Worker 189, Loading-Main 0 Total Tiles Resident 375, Frame 1095
+MATKAKIRJA valmius [saapuminen 2,1 s] aste 20,0 % | cesium käyty 129 (karsittuja käyty 0) piirto 41 karsittu 74 syvyys 8 jono työ 189 pää 0 ladattuja 375 | objektit 41/305 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 8 (kohde 0, kiire 2, tausta 0, saapuminen 0) jono 0 kiire 3 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 12 maks 24 (istunto 24) [pohja 6/6 y 0/6 p 508 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 383 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 89 pyyntöä 6 yhteyttä, muu 6/6 y 0/6 p 156 pyyntöä 11 yhteyttä] | luokat pohja k0 v34/24 p474 kerma k6 v32/28 vektorit k0 v16/14 p119 maasto k6 v45/6 p371 | kamera korkeus 1155 km, maapiste 44,74°/s, korkeus -151,5 %/s, katse 56,4°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA linssit: elävä: valmis 1,6 s, kehyksiä 87, mediaani 16,7 ms, p95 33,3 ms, max 66,6 ms
+MATKAKIRJA nostot: näkyvissä GRC, osuus 3,67, maan nostoja 80
+[2026-10-04 17:47:53.024] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 115, Loading-Main 2 Total Tiles Resident 432, Frame 1121
+MATKAKIRJA valmius [saapuminen 2,7 s] aste 39,4 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 115 pää 2 ladattuja 432 | objektit 37/348 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 18 (istunto 24) [pohja 6/6 y 0/6 p 589 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 450 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 167 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat pohja k0 v81/0 p474 kerma k6 v78/20 maasto k0 v73/15 p374 | kamera korkeus 1006 km, maapiste 3,34°/s, korkeus -23,0 %/s, katse 4,3°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:53.513] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 64, Loading-Main 0 Total Tiles Resident 459, Frame 1146
+MATKAKIRJA valmius [saapuminen 3,2 s] aste 74,1 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 64 pää 0 ladattuja 459 | objektit 65/362 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 3 (kohde 0, kiire 3, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 4 maks 12 (istunto 24) [pohja 6/6 y 0/6 p 606 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 458 pyyntöä 6 yhteyttä, kerma 6/6 y 4/6 p 241 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat pohja k0 v17/0 p474 kerma k3 v77/29 maasto k0 v8/0 p375 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:54.028] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 7, Loading-Main 0 Total Tiles Resident 459, Frame 1176
+MATKAKIRJA valmius [saapuminen 3,7 s] aste 97,7 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 7 pää 0 ladattuja 459 | objektit 65/377 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 5 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 6 (istunto 24) [pohja 6/6 y 0/0 p 606 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 458 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 346 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat kerma k6 v102/30 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA VARTIJA 171: saapuminen GRC + saapuminen GRC valmis 3725 ms, aste 100,0 %, kohdemaa -, palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois
+MATKAKIRJA ui liiku: piiloon (kerronta)
+MATKAKIRJA esilataaja: tiedosto media.json 200 alku 0 +15716 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA peli-komento: 38.94 odota-tila → ok Kartta [Kartta]
+MATKAKIRJA peli-komento: 38.94 aani mykistys 1 → ok mykistys päällä (simulaattori True) [Kartta]
+MATKAKIRJA esilataaja: tiedosto liviapuhe.json 200 alku 0 +16971 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto livia-tilanteet.json 200 alku 0 +463 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto livia.json 200 alku 0 +477 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto musiikkivalitsin.json 200 alku 0 +687 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:47:54.528] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 459, Frame 1204
+MATKAKIRJA valmius [saapuminen 4,2 s] aste 100,0 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 0 pää 0 ladattuja 459 | objektit 65/377 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 6 (istunto 24) [pohja 6/6 y 0/0 p 606 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 458 pyyntöä 6 yhteyttä, kerma 6/6 y 0/6 p 372 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat kerma k0 v32/15 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto africa-artikkelit.json 200 alku 0 +109647 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-borders.json 200 alku 0 +13282 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-countries.json 200 alku 0 +23510 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-kulttuuri.json 200 alku 0 +54854 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-maatiedot.json 200 alku 0 +19118 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-saapumiset.json 200 alku 0 +19095 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-puzzles.json 200 alku 0 +15893 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asia-countries.json 200 alku 0 +29819 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto africa-valokuvat.json 200 alku 0 +63182 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asia-artikkelit.json 200 alku 0 +150715 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asia-lisat-valokuvat.json 200 alku 0 +49036 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asia-maatiedot.json 200 alku 0 +47526 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asia-saapumiset.json 200 alku 0 +29835 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 4,8 s] aste 100,0 % | cesium - | objektit 65/377 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 606 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 458 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 372 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto asia-valokuvat.json 200 alku 0 +82523 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto elaintakyt.json 200 alku 0 +133712 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto etusivun-isoisakuvat.json 200 alku 0 +12119 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-countries.json 200 alku 0 +917 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-artikkelit.json 200 alku 0 +197781 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-kielet.json 200 alku 0 +10548 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-kulttuuri.json 200 alku 0 +19204 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA komento: aja 61.87 28.88 40 2
+MATKAKIRJA esilataaja: tiedosto europe-maatiedot.json 200 alku 0 +36224 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-puzzles.json 200 alku 0 +10252 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokus-grc.json 200 alku 0 +35531 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 5,2 s] aste 100,0 % | cesium - | objektit 65/377 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 606 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 458 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 372 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 156 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 1025 km, maapiste 0,34°/s, korkeus +4,0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-bgr.json 200 alku 0 +31565 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-afg.json 200 alku 0 +2320 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-bih.json 200 alku 0 +16333 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto europe-valokuvat.json 200 alku 0 +93066 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-chn.json 200 alku 0 +2090 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-egy.json 200 alku 0 +8976 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":40.43,"tavoiteMs":16.67,"liike":{"n":129,"p50":16.67,"p95":27.54,"p99":50.02,"max":66.6,"yli15x":7},"lepo":{"n":122,"p50":16.69,"p95":34.19,"p99":60.56,"max":66.7,"yli15x":3},"peitto":null,"kehyksia":251,"piirretty":251,"tilat":{"taysi":225,"lepo":26,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.49,"gpuKehyksia":251,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":66}
+[2026-10-04 17:47:56.061] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 55, Culled 70, Max Depth Visited 8, Loading-Worker 50, Loading-Main 0 Total Tiles Resident 467, Frame 1266
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-deu.json 200 alku 0 +30634 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 5,7 s] aste 82,1 % | cesium käyty 121 (karsittuja käyty 0) piirto 55 karsittu 70 syvyys 8 jono työ 50 pää 0 ladattuja 467 | objektit 55/384 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 19 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 2 kiire 1 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 23 maks 23 (istunto 24) [pohja 6/6 y 6/6 p 651 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 480 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 404 pyyntöä 6 yhteyttä, muu 6/6 y 5/5 p 161 pyyntöä 11 yhteyttä] | luokat pohja k5 v40/21 p493 kerma k6 v26/22 vektorit k5 v0/0 p119 maasto k6 v16/6 p385 | kamera korkeus 1759 km, maapiste 9,31°/s, korkeus +138,3 %/s, katse 9,4°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:56.569] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 192, Culled Visited 0, Rendered 74, Culled 63, Max Depth Visited 6, Loading-Worker 98, Loading-Main 0 Total Tiles Resident 500, Frame 1286
+MATKAKIRJA valmius [saapuminen 6,2 s] aste 73,0 % | cesium käyty 192 (karsittuja käyty 0) piirto 74 karsittu 63 syvyys 6 jono työ 98 pää 0 ladattuja 500 | objektit 74/402 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 19 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 3 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 22 maks 24 (istunto 24) [pohja 6/6 y 6/6 p 686 pyyntöä 6 yhteyttä, maasto 6/6 y 5/6 p 516 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 451 pyyntöä 6 yhteyttä, muu 6/6 y 6/6 p 180 pyyntöä 11 yhteyttä] | luokat pohja k6 v34/34 p493 kerma k5 v48/42 vektorit k6 v18/12 p119 maasto k5 v37/18 p398 | kamera korkeus 4748 km, maapiste 20,70°/s, korkeus +348,6 %/s, katse 20,9°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:57.077] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 179, Culled Visited 0, Rendered 129, Culled 20, Max Depth Visited 5, Loading-Worker 57, Loading-Main 0 Total Tiles Resident 557, Frame 1309
+MATKAKIRJA valmius [saapuminen 6,7 s] aste 79,0 % | cesium käyty 179 (karsittuja käyty 0) piirto 129 karsittu 20 syvyys 5 jono työ 57 pää 0 ladattuja 557 | objektit 129/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 3 (kohde 0, kiire 3, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 3 maks 24 (istunto 24) [pohja 6/6 y 0/6 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 3/6 p 502 pyyntöä 6 yhteyttä, muu 6/6 y 0/6 p 188 pyyntöä 11 yhteyttä] | luokat pohja k0 v49/10 p528 kerma k3 v53/39 vektorit k0 v14/6 p127 maasto k0 v45/5 p438 | kamera korkeus 9678 km, maapiste 15,77°/s, korkeus +210,0 %/s, katse 16,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+[2026-10-04 17:47:57.577] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 159, Culled Visited 0, Rendered 115, Culled 16, Max Depth Visited 5, Loading-Worker 1, Loading-Main 0 Total Tiles Resident 557, Frame 1339
+MATKAKIRJA valmius [saapuminen 7,2 s] aste 97,3 % | cesium käyty 159 (karsittuja käyty 0) piirto 115 karsittu 16 syvyys 5 jono työ 1 pää 0 ladattuja 557 | objektit 115/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 5 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 5 maks 6 (istunto 24) [pohja 6/6 y 0/0 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 574 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat kerma k5 v70/49 | kamera korkeus 10364 km, maapiste 1,46°/s, korkeus +14,2 %/s, katse 1,5°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-hrv.json 200 alku 0 +25911 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-hun.json 200 alku 0 +22912 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-grc.json 200 alku 0 +56887 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-fra.json 200 alku 0 +4405 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-gbr.json 200 alku 0 +6902 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:47:58.093] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 159, Culled Visited 0, Rendered 115, Culled 16, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 557, Frame 1370
+MATKAKIRJA valmius [saapuminen 7,7 s] aste 100,0 % | cesium käyty 159 (karsittuja käyty 0) piirto 115 karsittu 16 syvyys 5 jono työ 0 pää 0 ladattuja 557 | objektit 115/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 6 (istunto 24) [pohja 6/6 y 0/0 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 0/6 p 588 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat kerma k0 v19/15 | kamera korkeus 10364 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-irq.json 200 alku 0 +7241 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-irn.json 200 alku 0 +2585 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-ita.json 200 alku 0 +24813 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-lby.json 200 alku 0 +2752 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-jor.json 200 alku 0 +2423 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-mex.json 200 alku 0 +2160 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-rou.json 200 alku 0 +22779 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-syr.json 200 alku 0 +2180 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-tur.json 200 alku 0 +42831 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-tun.json 200 alku 0 +2451 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokuskohteet-zwe.json 200 alku 0 +2701 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-alpit.json 200 alku 0 +4498 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-ateena.json 200 alku 0 +13491 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-barcelona.json 200 alku 0 +17371 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 8,3 s] aste 100,0 % | cesium - | objektit 115/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 588 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 10364 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirrat.json 200 alku 0 +899345 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-bergen.json 200 alku 0 +20736 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-berliini.json 200 alku 0 +30352 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-bryssel.json 200 alku 0 +2567 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-amsterdam.json 200 alku 0 +35506 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-dublin.json 200 alku 0 +21600 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-edinburgh.json 200 alku 0 +26388 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-bukarest.json 200 alku 0 +15562 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-dubrovnik.json 200 alku 0 +16531 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-budapest.json 200 alku 0 +16291 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 8,8 s] aste 100,0 % | cesium - | objektit 115/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 588 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 10364 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-firenze.json 200 alku 0 +17462 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-granada.json 200 alku 0 +17241 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-istanbul.json 200 alku 0 +16373 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-helsinki.json 200 alku 0 +16668 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-islanti.json 200 alku 0 +3817 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA komento: aja 61.87 28.88 3 2
+MATKAKIRJA esilataaja: tiedosto fokusvirta-kiova.json 200 alku 0 +23461 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-kosice.json 200 alku 0 +2551 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-kobenhavn.json 200 alku 0 +17283 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-krakova.json 200 alku 0 +26075 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:47:59.610] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 162, Culled Visited 0, Rendered 117, Culled 17, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 557, Frame 1436
+MATKAKIRJA esilataaja: tiedosto fokusvirta-kreeta.json 200 alku 0 +3968 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 9,3 s] aste 100,0 % | cesium käyty 162 (karsittuja käyty 0) piirto 117 karsittu 17 syvyys 5 jono työ 0 pää 0 ladattuja 557 | objektit 117/441 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 729 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 556 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 588 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 10189 km, maapiste 0,00°/s, korkeus -3,9 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-lissabon.json 200 alku 0 +23919 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-lappi.json 200 alku 0 +3914 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-lontoo.json 200 alku 0 +33821 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-ljubljana.json 200 alku 0 +2574 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-moskova.json 200 alku 0 +15970 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-madrid.json 200 alku 0 +33049 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-odessa.json 200 alku 0 +18394 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-luxemburg.json 200 alku 0 +2639 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:48:00.128] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 170, Culled Visited 0, Rendered 112, Culled 73, Max Depth Visited 5, Loading-Worker 5, Loading-Main 3 Total Tiles Resident 579, Frame 1461
+MATKAKIRJA valmius [saapuminen 9,8 s] aste 98,1 % | cesium käyty 170 (karsittuja käyty 0) piirto 112 karsittu 73 syvyys 5 jono työ 5 pää 3 ladattuja 579 | objektit 112/485 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 15 (istunto 24) [pohja 6/6 y 0/6 p 753 pyyntöä 6 yhteyttä, maasto 6/6 y 0/5 p 580 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 630 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 188 pyyntöä 11 yhteyttä] | luokat pohja k0 v24/0 p552 kerma k6 v36/14 maasto k0 v24/0 p462 | kamera korkeus 5646 km, maapiste 0,05°/s, korkeus -86,5 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-marseille.json 200 alku 0 +18613 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:48:00.674] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 139, Culled Visited 0, Rendered 57, Culled 100, Max Depth Visited 7, Loading-Worker 65, Loading-Main 0 Total Tiles Resident 649, Frame 1490
+MATKAKIRJA valmius [saapuminen 10,3 s] aste 79,3 % | cesium käyty 139 (karsittuja käyty 0) piirto 57 karsittu 100 syvyys 7 jono työ 65 pää 0 ladattuja 649 | objektit 57/522 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 13 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 13 maks 24 (istunto 24) [pohja 6/6 y 0/6 p 837 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 658 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 672 pyyntöä 6 yhteyttä, muu 6/6 y 1/6 p 199 pyyntöä 11 yhteyttä] | luokat pohja k0 v84/21 p609 kerma k6 v42/37 vektorit k1 v10/10 p127 maasto k6 v72/4 p530 | kamera korkeus 1697 km, maapiste 0,08°/s, korkeus -127,3 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":45.44,"tavoiteMs":16.67,"liike":{"n":144,"p50":16.69,"p95":50,"p99":53.29,"max":63.38,"yli15x":22},"lepo":{"n":99,"p50":16.94,"p95":34.18,"p99":34.92,"max":34.92,"yli15x":0},"peitto":null,"kehyksia":243,"piirretty":243,"tilat":{"taysi":218,"lepo":25,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.65,"gpuKehyksia":243,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":49}
+[2026-10-04 17:48:01.177] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 123, Culled Visited 0, Rendered 46, Culled 68, Max Depth Visited 8, Loading-Worker 47, Loading-Main 0 Total Tiles Resident 670, Frame 1520
+MATKAKIRJA valmius [saapuminen 10,8 s] aste 77,7 % | cesium käyty 123 (karsittuja käyty 0) piirto 46 karsittu 68 syvyys 8 jono työ 47 pää 0 ladattuja 670 | objektit 46/536 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 15 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 24) [pohja 6/6 y 6/6 p 850 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 676 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 690 pyyntöä 6 yhteyttä, muu 6/6 y 0/1 p 199 pyyntöä 11 yhteyttä] | luokat pohja k6 v7/7 p609 kerma k6 v18/16 vektorit k0 v1/1 p127 maasto k6 v18/18 p530 | kamera korkeus 795 km, maapiste 0,03°/s, korkeus -106,1 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+[2026-10-04 17:48:01.677] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 46, Culled 66, Max Depth Visited 8, Loading-Worker 35, Loading-Main 0 Total Tiles Resident 685, Frame 1550
+MATKAKIRJA valmius [saapuminen 11,3 s] aste 80,3 % | cesium käyty 121 (karsittuja käyty 0) piirto 46 karsittu 66 syvyys 8 jono työ 35 pää 0 ladattuja 685 | objektit 46/548 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 13 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 13 maks 18 (istunto 24) [pohja 6/6 y 2/6 p 858 pyyntöä 6 yhteyttä, maasto 6/6 y 5/6 p 690 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 701 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat pohja k2 v12/12 p609 kerma k6 v11/11 maasto k5 v15/15 p530 | kamera korkeus 762 km, maapiste 0,00°/s, korkeus -8,4 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:48:02.194] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 55, Culled 66, Max Depth Visited 8, Loading-Worker 16, Loading-Main 0 Total Tiles Resident 703, Frame 1573
+MATKAKIRJA valmius [saapuminen 11,9 s] aste 87,9 % | cesium käyty 121 (karsittuja käyty 0) piirto 55 karsittu 66 syvyys 8 jono työ 16 pää 0 ladattuja 703 | objektit 55/567 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 12 (kohde 0, kiire 4, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 17 maks 18 (istunto 24) [pohja 6/6 y 5/6 p 868 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 708 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 712 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat pohja k5 v7/7 p609 kerma k6 v11/11 maasto k5 v18/18 p530 | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:48:02.748] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 55, Culled 66, Max Depth Visited 8, Loading-Worker 5, Loading-Main 0 Total Tiles Resident 714, Frame 1584
+MATKAKIRJA valmius [saapuminen 12,4 s] aste 91,6 % | cesium käyty 121 (karsittuja käyty 0) piirto 55 karsittu 66 syvyys 8 jono työ 5 pää 0 ladattuja 714 | objektit 55/578 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 12 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 12 maks 17 (istunto 24) [pohja 6/6 y 0/5 p 876 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 723 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 721 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat pohja k0 v13/7 p615 kerma k6 v9/9 maasto k6 v14/14 p530 | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:48:03.242] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 69, Culled 66, Max Depth Visited 8, Loading-Worker 0, Loading-Main 13 Total Tiles Resident 733, Frame 1595
+MATKAKIRJA valmius [saapuminen 12,9 s] aste 94,8 % | cesium käyty 121 (karsittuja käyty 0) piirto 69 karsittu 66 syvyys 8 jono työ 0 pää 13 ladattuja 733 | objektit 69/599 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 2, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 7 maks 15 (istunto 24) [pohja 6/6 y 0/3 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 3/6 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 4/6 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat pohja k0 v10/0 p625 kerma k2 v13/13 maasto k2 v17/9 p538 | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-oslo.json 200 alku 0 +17828 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-praha.json 200 alku 0 +16621 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-pariisi.json 200 alku 0 +75708 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-pietari.json 200 alku 0 +22118 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-riika.json 200 alku 0 +19715 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:48:03.762] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 121, Culled Visited 0, Rendered 74, Culled 66, Max Depth Visited 8, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 737, Frame 1611
+MATKAKIRJA esilataaja: tiedosto fokusvirta-rooma.json 200 alku 0 +26625 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 13,4 s] aste 100,0 % | cesium käyty 121 (karsittuja käyty 0) piirto 74 karsittu 66 syvyys 8 jono työ 0 pää 0 ladattuja 737 | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 7 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/4 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat kerma k0 v2/2 maasto k0 v2/2 p538 | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-sarajevo.json 200 alku 0 +14972 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-sevilla.json 200 alku 0 +23886 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-sisilia.json 200 alku 0 +3887 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-sofia.json 200 alku 0 +18398 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-tallinna.json 200 alku 0 +15893 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-tromssa.json 200 alku 0 +4841 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-tampere.json 200 alku 0 +16141 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-valletta.json 200 alku 0 +2514 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-venetsia.json 200 alku 0 +20119 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-varsova.json 200 alku 0 +18634 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-vilna.json 200 alku 0 +23705 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fokusvirta-tukholma.json 200 alku 0 +18379 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 14,0 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto fokusvirta-wien.json 200 alku 0 +25420 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-aut.json 200 alku 0 +84144 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-bel.json 200 alku 0 +84296 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-bgr.json 200 alku 0 +75933 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-bih.json 200 alku 0 +39295 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-alb.json 200 alku 0 +1621 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 14,5 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto hahmotelma-che.json 200 alku 0 +35151 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-cze.json 200 alku 0 +75995 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-blr.json 200 alku 0 +1340 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-cyp.json 200 alku 0 +48383 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-deu.json 200 alku 0 +88651 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-dnk.json 200 alku 0 +91550 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-est.json 200 alku 0 +83864 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-esp.json 200 alku 0 +84807 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-fin.json 200 alku 0 +92608 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-fra.json 200 alku 0 +65700 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-gbr.json 200 alku 0 +46687 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 15,0 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto hahmotelma-grc.json 200 alku 0 +111478 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-hrv.json 200 alku 0 +79482 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-hun.json 200 alku 0 +71242 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-irl.json 200 alku 0 +69029 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-isl.json 200 alku 0 +34484 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-lva.json 200 alku 0 +69598 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-ltu.json 200 alku 0 +69051 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-lux.json 200 alku 0 +47067 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-ita.json 200 alku 0 +80492 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-mda.json 200 alku 0 +1660 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-mne.json 200 alku 0 +1794 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-mkd.json 200 alku 0 +1787 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-mlt.json 200 alku 0 +70508 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 15,6 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":50.44,"tavoiteMs":16.67,"liike":{"n":31,"p50":16.68,"p95":18.47,"p99":23.86,"max":23.86,"yli15x":0},"lepo":{"n":140,"p50":33.31,"p95":44.2,"p99":115.11,"max":116.67,"yli15x":6},"peitto":null,"kehyksia":171,"piirretty":171,"tilat":{"taysi":60,"lepo":111,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.42,"gpuKehyksia":171,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":44}
+MATKAKIRJA esilataaja: tiedosto hahmotelma-nld.json 200 alku 0 +87210 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-nor.json 200 alku 0 +55144 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-rou.json 200 alku 0 +95923 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-pol.json 200 alku 0 +82551 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-rus.json 200 alku 0 +42754 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-srb.json 200 alku 0 +1767 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-svn.json 200 alku 0 +101141 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 16,1 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto hahmotelma-prt.json 200 alku 0 +86313 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-svk.json 200 alku 0 +90138 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-tur.json 200 alku 0 +6455 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-ukr.json 200 alku 0 +49170 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hintatasot.json 200 alku 0 +1899 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hahmotelma-swe.json 200 alku 0 +93824 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto historian-hetket.json 200 alku 0 +477855 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iskulauseet.json 200 alku 0 +2092 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto henkilot.json 200 alku 0 +1786 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 16,6 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto kohtaamiset.json 200 alku 0 +68880 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto julisteet.json 200 alku 0 +43936 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-historia.json 200 alku 0 +53331 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-ilmasto.json 200 alku 0 +252648 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-leviaminen.json 200 alku 0 +22680 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-kielet.json 200 alku 0 +38012 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kulttuuri-kategoriat.json 200 alku 0 +5513846 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-maaluvut.json 200 alku 0 +50236 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 17,1 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto linssi-muuttoliike.json 200 alku 0 +47556 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-tahdet.json 200 alku 0 +242130 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-topografia-kuva.json 200 alku 0 +1456 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-topografia.json 200 alku 0 +388251 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-tuulet.json 200 alku 0 +37770 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lippu-tekijat.json 200 alku 0 +1008 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto liput-paikalliset.json 200 alku 0 +7634 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lipputiedot.json 200 alku 0 +187625 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 17,6 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto maailmankartta-pallopisteet.json 200 alku 0 +10373 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto linssi-yokartta.json 200 alku 0 +1413 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maailmankartta-syvyys.json 200 alku 0 +262687 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maailmankartta-varjostus.json 200 alku 0 +97568 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maa-kategoriat.json 200 alku 0 +2968436 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maakartat.json 200 alku 0 +362398 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maalehtinostot-fra.json 200 alku 0 +60777 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maasto-korkeus.json 200 alku 0 +24202 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maailmankartta.json 200 alku 0 +1677937 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 18,2 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto maasto-tekstit-malli.json 200 alku 0 +13349 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maasto-nimet-vedet.json 200 alku 0 +43278 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maasto-nimet-vuoret.json 200 alku 0 +20786 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maasto-tekstit.json 200 alku 0 +255805 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maakunnat-nimet.json 200 alku 0 +69560 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-afg.json 200 alku 0 +9635 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maasto-vedet.json 200 alku 0 +139388 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 18,7 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto maastokohteet-alb.json 200 alku 0 +10065 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-are.json 200 alku 0 +12513 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ago.json 200 alku 0 +12686 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-arg.json 200 alku 0 +12140 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-aut.json 200 alku 0 +40234 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ata.json 200 alku 0 +12347 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ark.json 200 alku 0 +51837 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-aus.json 200 alku 0 +11988 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-bgr.json 200 alku 0 +1648 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-blr.json 200 alku 0 +10023 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-bih.json 200 alku 0 +8446 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-bol.json 200 alku 0 +12502 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-bra.json 200 alku 0 +13033 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 19,2 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto maastokohteet-can.json 200 alku 0 +13215 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-che.json 200 alku 0 +55277 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-chl.json 200 alku 0 +13069 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-chn.json 200 alku 0 +11205 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-cmr.json 200 alku 0 +11862 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-cod.json 200 alku 0 +12216 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-col.json 200 alku 0 +13206 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-cub.json 200 alku 0 +12340 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-cze.json 200 alku 0 +43121 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-cyp.json 200 alku 0 +21565 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius [saapuminen 19,8 s] aste 100,0 % | cesium - | objektit 74/603 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 24) [pohja 6/6 y 0/0 p 886 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 736 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 730 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 199 pyyntöä 11 yhteyttä] | luokat | kamera korkeus 762 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto maastokohteet-deu.json 200 alku 0 +7103 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ecu.json 200 alku 0 +13255 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-dnk.json 200 alku 0 +36606 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-dza.json 200 alku 0 +12067 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-egy.json 200 alku 0 +7593 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-esp.json 200 alku 0 +36656 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA valmius: seuranta saapuminen loppu 20,0 s, verho -, suurin aste 100,0 % (0,1 s), ylitykset 80 %: 0,1 s 90 %: 0,1 s 95 %: 0,1 s 97 %: 0,1 s 99 %: 0,1 s 100 %: 0,1 s
+MATKAKIRJA esilataaja: tiedosto maastokohteet-est.json 200 alku 0 +38847 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-fin.json 200 alku 0 +40967 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-eth.json 200 alku 0 +13290 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-fji.json 200 alku 0 +12853 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-fra.json 200 alku 0 +51180 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-grl.json 200 alku 0 +12395 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-gha.json 200 alku 0 +11441 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-gbr.json 200 alku 0 +27859 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-gtm.json 200 alku 0 +12362 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ind.json 200 alku 0 +11304 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-irl.json 200 alku 0 +44715 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-idn.json 200 alku 0 +10597 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-hkg.json 200 alku 0 +5592 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":55.48,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.33,"p95":34.79,"p99":34.92,"max":34.93,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":151,"tilat":{"taysi":0,"lepo":151,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.45,"gpuKehyksia":151,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":44}
+MATKAKIRJA esilataaja: tiedosto maastokohteet-irn.json 200 alku 0 +10258 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-isl.json 200 alku 0 +42987 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-irq.json 200 alku 0 +8363 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ita.json 200 alku 0 +18970 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-jor.json 200 alku 0 +10305 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-jpn.json 200 alku 0 +12273 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-kor.json 200 alku 0 +12114 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-kaz.json 200 alku 0 +11558 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ken.json 200 alku 0 +12580 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-lby.json 200 alku 0 +13967 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-lbr.json 200 alku 0 +12243 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ltu.json 200 alku 0 +36035 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-kwt.json 200 alku 0 +12771 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-lka.json 200 alku 0 +11438 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mdg.json 200 alku 0 +11986 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mda.json 200 alku 0 +9681 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-lva.json 200 alku 0 +40689 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mex.json 200 alku 0 +12058 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mar.json 200 alku 0 +12896 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mli.json 200 alku 0 +12252 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mmr.json 200 alku 0 +11901 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mkd.json 200 alku 0 +9897 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mne.json 200 alku 0 +11108 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-moz.json 200 alku 0 +12154 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-mng.json 200 alku 0 +12004 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nga.json 200 alku 0 +13948 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nam.json 200 alku 0 +11727 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nic.json 200 alku 0 +13209 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nor.json 200 alku 0 +33372 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nld.json 200 alku 0 +27585 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-nzl.json 200 alku 0 +12213 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-omn.json 200 alku 0 +11642 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-npl.json 200 alku 0 +11676 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-pak.json 200 alku 0 +11485 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-pan.json 200 alku 0 +13861 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-phl.json 200 alku 0 +13401 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-pol.json 200 alku 0 +32039 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-png.json 200 alku 0 +11952 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-per.json 200 alku 0 +13271 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-prt.json 200 alku 0 +30189 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-pry.json 200 alku 0 +11235 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-qat.json 200 alku 0 +11877 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sau.json 200 alku 0 +11351 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-rou.json 200 alku 0 +20504 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-rus.json 200 alku 0 +35797 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sdn.json 200 alku 0 +13082 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-shn.json 200 alku 0 +5303 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sds.json 200 alku 0 +12804 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sen.json 200 alku 0 +13007 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sgp.json 200 alku 0 +8199 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA komento: aja 61.867 28.883 8 2
+MATKAKIRJA ui liiku: esiin (kerronta ohi)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-som.json 200 alku 0 +13698 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-slb.json 200 alku 0 +12870 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-sle.json 200 alku 0 +12401 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-srb.json 200 alku 0 +13047 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-swe.json 200 alku 0 +46418 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-syr.json 200 alku 0 +11201 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tcd.json 200 alku 0 +11695 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tha.json 200 alku 0 +11652 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tls.json 200 alku 0 +10720 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tun.json 200 alku 0 +11864 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tza.json 200 alku 0 +12512 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-twn.json 200 alku 0 +11795 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ukr.json 200 alku 0 +39443 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-uga.json 200 alku 0 +12454 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-tur.json 200 alku 0 +8278 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ury.json 200 alku 0 +11819 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-usa.json 200 alku 0 +14241 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-ven.json 200 alku 0 +13623 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-uzb.json 200 alku 0 +11351 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA kehysajat {"t":60.56,"tavoiteMs":16.67,"liike":{"n":105,"p50":16.68,"p95":33.35,"p99":50,"max":98.89,"yli15x":7},"lepo":{"n":93,"p50":33.33,"p95":34.78,"p99":250.01,"max":250.01,"yli15x":1},"peitto":null,"kehyksia":198,"piirretty":198,"tilat":{"taysi":123,"lepo":62,"paikallaan":0,"kerros":13,"peitto":0},"gpuMs":0.47,"gpuKehyksia":198,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA lampo {"t":61,"aika":"17:48:16","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":38.7,"tavoite":30,"piirtovali":1}
+MATKAKIRJA esilataaja: tiedosto maastokohteet-zaf.json 200 alku 0 +12862 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-zwe.json 200 alku 0 +10070 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-yem.json 200 alku 0 +12450 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-vnm.json 200 alku 0 +11854 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet-vut.json 200 alku 0 +13715 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto middleeast-countries.json 200 alku 0 +10726 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto monumentit-eurooppa.json 200 alku 0 +63032 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto miniatyyrit.json 200 alku 0 +66848 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto northamerica-artikkelit.json 200 alku 0 +60773 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto northamerica-countries.json 200 alku 0 +21741 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nakyvat-kaupungit-fra.json 200 alku 0 +20842 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nahtavyysjutut.json 200 alku 0 +2583456 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto northamerica-saapumiset.json 200 alku 0 +19462 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maastokohteet.json 200 alku 0 +1895267 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto northamerica-valokuvat.json 200 alku 0 +78616 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto northamerica-maatiedot.json 200 alku 0 +9579 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-aut.json 200 alku 0 +2734 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-cze.json 200 alku 0 +2752 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-dnk.json 200 alku 0 +1223 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-bel.json 200 alku 0 +1719 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-deu.json 200 alku 0 +3447 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-fra.json 200 alku 0 +4162 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-grc.json 200 alku 0 +3566 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-hun.json 200 alku 0 +1415 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-ita.json 200 alku 0 +3046 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-nld.json 200 alku 0 +3009 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-esp.json 200 alku 0 +3502 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-pol.json 200 alku 0 +2740 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-prt.json 200 alku 0 +2968 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostojen-kokoluokat.json 200 alku 0 +2129 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oceania-artikkelit.json 200 alku 0 +48576 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oceania-countries.json 200 alku 0 +13338 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oceania-maatiedot.json 200 alku 0 +7500 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oceania-saapumiset.json 200 alku 0 +16059 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto nostoankkurit-swe.json 200 alku 0 +1228 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto omat-tiivistelmat.json 200 alku 0 +4654 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto oceania-valokuvat.json 200 alku 0 +72327 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto paikallisaarteet.json 200 alku 0 +29992 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto paivan-kuvat.json 200 alku 0 +4131 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pollo-asetukset.json 200 alku 0 +163 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pollo-poiminnat.json 200 alku 0 +857 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pollo-kysymykset.json 200 alku 0 +58512 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pollon-arvonimet.json 200 alku 0 +16953 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saapumispuheet.json 200 alku 0 +17780 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saatiedot.json 200 alku 0 +147801 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto southamerica-artikkelit.json 200 alku 0 +50117 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto skandaalit.json 200 alku 0 +637569 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto southamerica-countries.json 200 alku 0 +18567 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto southamerica-maatiedot.json 200 alku 0 +13613 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto southamerica-saapumiset.json 200 alku 0 +17864 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto southamerica-valokuvat.json 200 alku 0 +75269 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tarinakaari.json 200 alku 0 +73766 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto syvennyspaikat.json 200 alku 0 +10825 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto vuori-valokuvat.json 200 alku 0 +111993 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto pollo.json 200 alku 0 +3282 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto uutislahteet.json 200 alku 0 +5379 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto valokuvat-flickr.json 200 alku 0 +11382 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto rules.json 200 alku 0 +126 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto siirtymamusiikki.json 200 alku 0 +1018 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto saa.json 200 alku 0 +1542 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto valokuvat-paikalliset.json 200 alku 0 +14439 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sound.json 200 alku 0 +4062 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tietajatasot.json 200 alku 0 +2596 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tokens.json 200 alku 0 +756 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto sisaltotaulut.json 200 alku 0 +837714 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuone-pelit.json 200 alku 0 +7587 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuone-kehitys-data.json 200 alku 0 +121696 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuone-musiikki.json 200 alku 0 +8433 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuone-raamattu.json 200 alku 0 +283293 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto viitekuva-herot.json 200 alku 0 +504 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ui.json 200 alku 0 +244 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ui-apurit.json 200 alku 0 +109 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto tyohuone-tilanne.json 200 alku 0 +220160 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manifest.schema.json 200 alku 0 +3464 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto arvo.schema.json 200 alku 0 +3071 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kaupunki.schema.json 200 alku 0 +5017 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto media.schema.json 200 alku 0 +2534 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":65.58,"tavoiteMs":16.67,"liike":null,"lepo":{"n":147,"p50":33.34,"p95":34.92,"p99":81.75,"max":150,"yli15x":3},"peitto":null,"kehyksia":147,"piirretty":100,"tilat":{"taysi":3,"lepo":96,"paikallaan":48,"kerros":0,"peitto":0},"gpuMs":0.52,"gpuKehyksia":102,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":39}
+MATKAKIRJA esilataaja: tiedosto kokoelma.schema.json 200 alku 0 +2974 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto offline.schema.json 200 alku 0 +6548 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto web-nakyma.schema.json 200 alku 0 +2735 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto osoitin.schema.json 200 alku 0 +4347 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto moduuli.schema.json 200 alku 0 +730 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto intro-puhe.aikaleimat.json 200 alku 0 +2585 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-alpit.aikaleimat.json 200 alku 0 +3516 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-ateena.aikaleimat.json 200 alku 0 +4266 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-amsterdam.aikaleimat.json 200 alku 0 +3536 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-barcelona.aikaleimat.json 200 alku 0 +3294 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-bergen.aikaleimat.json 200 alku 0 +3233 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-berliini.aikaleimat.json 200 alku 0 +2885 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-bukarest.aikaleimat.json 200 alku 0 +3421 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-dublin.aikaleimat.json 200 alku 0 +3107 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-budapest.aikaleimat.json 200 alku 0 +3279 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-dubrovnik.aikaleimat.json 200 alku 0 +3813 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-edinburgh.aikaleimat.json 200 alku 0 +3343 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-firenze.aikaleimat.json 200 alku 0 +3506 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-helsinki.aikaleimat.json 200 alku 0 +3072 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-istanbul.aikaleimat.json 200 alku 0 +3099 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-islanti.aikaleimat.json 200 alku 0 +2415 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-kobenhavn.aikaleimat.json 200 alku 0 +3605 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-krakova.aikaleimat.json 200 alku 0 +3261 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-kiova.aikaleimat.json 200 alku 0 +2983 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-kreeta.aikaleimat.json 200 alku 0 +3034 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-granada.aikaleimat.json 200 alku 0 +3439 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-lappi.aikaleimat.json 200 alku 0 +3243 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-lontoo.aikaleimat.json 200 alku 0 +4149 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-lissabon.aikaleimat.json 200 alku 0 +2943 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-madrid.aikaleimat.json 200 alku 0 +3582 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-marseille.aikaleimat.json 200 alku 0 +3181 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-odessa.aikaleimat.json 200 alku 0 +2683 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-moskova.aikaleimat.json 200 alku 0 +3715 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-pietari.aikaleimat.json 200 alku 0 +2891 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-pariisi.aikaleimat.json 200 alku 0 +4573 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-riika.aikaleimat.json 200 alku 0 +3439 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-oslo.aikaleimat.json 200 alku 0 +3115 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-praha.aikaleimat.json 200 alku 0 +3476 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-rooma.aikaleimat.json 200 alku 0 +3176 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-sarajevo.aikaleimat.json 200 alku 0 +2794 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-sofia.aikaleimat.json 200 alku 0 +2996 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-sevilla.aikaleimat.json 200 alku 0 +3223 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-sisilia.aikaleimat.json 200 alku 0 +3315 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-tampere.aikaleimat.json 200 alku 0 +3425 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-tukholma.aikaleimat.json 200 alku 0 +2914 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-varsova.aikaleimat.json 200 alku 0 +4246 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-tallinna.aikaleimat.json 200 alku 0 +2842 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-tromssa.aikaleimat.json 200 alku 0 +3337 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-venetsia.aikaleimat.json 200 alku 0 +3301 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-lento-alku.aikaleimat.json 200 alku 0 +1453 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-vilna.aikaleimat.json 200 alku 0 +3292 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto maakayrat.json 200 alku 0 +524146 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto puhe-fokus-matkakirja-wien.aikaleimat.json 200 alku 0 +3408 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lehti.json 200 alku 0 +229420 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA elävät hetket: reitit1873 1373 (laivalinjoja 5, ratoja 1368), 37468 ms
+MATKAKIRJA esilataaja: tiedosto maapolygonit.json 200 alku 0 +2776661 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: ryhmä paketti:sisalto/1/v536 valmis (736 valmista, 0 virhettä)
+MATKAKIRJA paketti: v536 lataus 736 valmista, 0 virhettä, 0 väärää tiivistettä
+MATKAKIRJA paketti: v536 valmis, käyttöön seuraavassa käynnistyksessä
+MATKAKIRJA paketti: v536 käytössä (laiska tila valmistui)
+MATKAKIRJA paketti: siivous, säilytetään v536, poistettiin 1 versiokansiota ja 0 varastotiedostoa
+MATKAKIRJA kehysajat {"t":70.58,"tavoiteMs":16.67,"liike":null,"lepo":{"n":184,"p50":33.11,"p95":34.35,"p99":34.93,"max":34.93,"yli15x":0},"peitto":null,"kehyksia":184,"piirretty":71,"tilat":{"taysi":68,"lepo":1,"paikallaan":115,"kerros":0,"peitto":0},"gpuMs":0.54,"gpuKehyksia":65,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":39}
+MATKAKIRJA esilataaja: joutilas (1.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA peli: joutilas ateena, ennakoidaan sofia, kreeta, sisilia, bukarest, valletta
+MATKAKIRJA saapumislaatat: sofia (BGR, Kohdekaupungit) pohja 121 (z7–9), maasto 213, reliefi 0; näkymä lat 41,0–44,8, lon 22,1–24,5, 448 km
+MATKAKIRJA saapumislaatat: sisilia (ITA, Kohdekaupungit) pohja 239 (z6–8), maasto 150, reliefi 0; näkymä lat 35,8–49,0, lon 9,4–17,4, 1526 km
+MATKAKIRJA saapumislaatat: bukarest (ROU, Kohdekaupungit) pohja 189 (z7–9), maasto 143, reliefi 0; näkymä lat 43,3–49,1, lon 24,2–28,0, 684 km
+MATKAKIRJA saapumislaatat: valletta (MLT, Kohdekaupungit) pohja 120 (z8–10, Z10 vanhemmasta 24), maasto 98, reliefi 0; näkymä lat 34,6–37,4, lon 13,7–15,3, 325 km
+MATKAKIRJA ui: saapumisen esilataus sofia (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus kreeta (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus sisilia (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bukarest (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus valletta (Kohdekaupungit)
+MATKAKIRJA ui sisältö: kaupunkilehti sofia liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti kreeta liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti sisilia liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti bukarest liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti valletta liitetty (1)
+MATKAKIRJA puhe: esiladattu 96015e520ee0075e2b3b869acd5182903a5e7c03f9015283eff7095ce4a543a2.mp3 ok
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-ateena.mp3 ok
+MATKAKIRJA puhe: esiladattu 262e7937f1684b25241591088bbe28babe28452a5e8889b312caac7aec4e557d.mp3 ok
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/maastokohteet-grc.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-sofia.mp3 ok
+MATKAKIRJA puhe: esiladattu b0738641ba3d7c80de9f024c16c04b4895599dff9b6c757dbebc5bf8b2c9c2ce.mp3 ok
+MATKAKIRJA aani: linssi poikkileikkaus avautuu, katkaistaan: ei mitään
+MATKAKIRJA linssit: taustaääni pois
+MATKAKIRJA linssit: peite päälle
+MATKAKIRJA linssit: poikki: lataa…
+MATKAKIRJA linssit: auki: poikkileikkaus
+MATKAKIRJA ui linssit: pelielementit poikkileikkaus: portti False, vertailu False, radio False, linssi True, ok
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-kreeta.mp3 ok
+MATKAKIRJA puhe: esiladattu 33d311818b9f96aa05ad3fea9f157ff6419a02339c771880494da1541a692966.mp3 ok
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-sisilia.mp3 ok
+MATKAKIRJA kehysajat {"t":76.38,"tavoiteMs":16.67,"liike":null,"lepo":{"n":182,"p50":31.7,"p95":34.86,"p99":150.01,"max":1032.68,"yli15x":5},"peitto":null,"kehyksia":182,"piirretty":149,"tilat":{"taysi":88,"lepo":60,"paikallaan":34,"kerros":0,"peitto":0},"gpuMs":0.56,"gpuKehyksia":147,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA aani: linssi poikkileikkaus 0,4 s avauksesta, soivat: ei mitään
+MATKAKIRJA linssit: peite pois
+MATKAKIRJA verkko-odotus {"t":76.38,"vaihe":"linssi","mita":"poikkileikkaus:peite","ms":1029}
+MATKAKIRJA ruutu: pallon kamera pois (peitto)
+MATKAKIRJA puhe: esiladattu 72fd45e9f7cb841be363ff08d482a34f03225d7880f1de786edbefbf749076c3.mp3 ok
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-bukarest.mp3 ok
+MATKAKIRJA linssit: poikki: Olavinlinna ladattu, 9 tilaa, juuri https://media.matkakirja.app/dioraama/olavinlinna/dcd122307aa43189/
+MATKAKIRJA linssit: poikki: massa ilman glb-tiedostoa
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/nakyvat-kaupungit-grc.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu GRC
+MATKAKIRJA ui nostot: esiladattu GRC
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/kynttila.png valmis (256x256)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:syvyys 2048×2048 R8_UNorm (ruutu 2740)
+MATKAKIRJA linssit: poikki: ympäristö: syvyyskartta 2048² (4000 m, enintään 30 m)
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/soihtu.png valmis (1024x256)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:taivas 2048×1024 RGB_ETC2_SRGB (ruutu 2751)
+MATKAKIRJA linssit: poikki: ympäristö: taivas 2048×1024
+MATKAKIRJA linssit: nimiruutu: rivi 1 "Linna latautuu…" 4,0 s
+MATKAKIRJA linssit: poikki: pinta vesi tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/tulisija.png valmis (1024x512)
+MATKAKIRJA linssit: poikki: pinta puu tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta katto tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta tiili tekstuuri valmis (2048x512)
+MATKAKIRJA linssit: poikki: pinta rappaus tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta leikkaus tekstuuri valmis (2048x512)
+MATKAKIRJA linssit: poikki: pinta lankku tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:horisontti 1024×1024 RGB_ETC2_SRGB (ruutu 2822)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:horisontti mesh 5591 kärkeä (ruutu 2823)
+MATKAKIRJA linssit: poikki: ympäristö: horisontti 1 lohkoa, 7999 kolmiota, 1024² ETC2_RGB, 4,5 s
+MATKAKIRJA linssit: poikki: pinta kallio tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta kivi tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: laituri valmis (8092 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: laituri liekit glb:n 2 liekki:-solmusta, JSON-liekit 2 pois
+MATKAKIRJA kehysajat {"t":81.39,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":290,"p50":16.68,"p95":18.15,"p99":48.52,"max":66.68,"yli15x":2},"kehyksia":290,"piirretty":290,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":290},"gpuMs":0.92,"gpuKehyksia":290,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: kappeli valmis (25900 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: kappeli liekit glb:n 15 liekki:-solmusta, JSON-liekit 15 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/renki-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kirjuri-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kappalainen-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/talonpoika-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vesipoika-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/soutaja-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: tunnelma valmis (37398 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/apulainen-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kokki-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vouti-1500.glb valmis (79 solmua, skin 65 luuta, leikkeet idle,kavely,tyo)
+MATKAKIRJA linssit: poikki: muurinharja valmis (62030 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: muurinharja liekit glb:n 2 liekki:-solmusta, JSON-liekit 2 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vartija-1500.glb valmis (79 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: keittio valmis (87524 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: keittio liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: fatabuuri valmis (111131 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: fatabuuri liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: kierreportaat valmis (145455 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: kierreportaat liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit 1280×512 87 (ruutu 2841)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 64000 kärkeä (ruutu 2842)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 64000 kärkeä (ruutu 2843)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 32000 kärkeä (ruutu 2844)
+MATKAKIRJA linssit: poikki: ympäristö: aluskasvit 20000 (80000 kolmiota, 3 osaa, 1280×512 ARGB32), 0,1 s
+MATKAKIRJA linssit: poikki: keskushalli valmis (183367 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: keskushalli liekit glb:n 17 liekki:-solmusta, JSON-liekit 17 pois
+MATKAKIRJA linssit: nimiruutu: rivi 2 "Vielä pieni hetki…" 9,0 s
+MATKAKIRJA ui nostot: kuvat esiladataan GRC (90 + 50)
+MATKAKIRJA kehysajat {"t":86.41,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":264,"p50":16.67,"p95":18.16,"p99":49.74,"max":450.01,"yli15x":2},"kehyksia":264,"piirretty":264,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":264},"gpuMs":0.96,"gpuKehyksia":264,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: raskas puukortit LoadImage 57 ms (ruutu 3167)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puukortit 2048×4096 RGBA_ETC2_SRGB (ruutu 3169)
+MATKAKIRJA lampo {"t":91,"aika":"17:48:46","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":43.9,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":91.43,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":287,"p50":16.68,"p95":18.06,"p99":83.34,"max":100.01,"yli15x":3},"kehyksia":287,"piirretty":287,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":287},"gpuMs":0.97,"gpuKehyksia":287,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: raskas puukortit-normaali LoadImage 62 ms (ruutu 3415)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puukortit-normaali 2048×4096 RGBA_ETC2_UNorm (ruutu 3417)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puut mesh 200000 kärkeä (ruutu 3418)
+MATKAKIRJA linssit: poikki: ympäristö: puut 25000 (100000 kolmiota, 2048×4096 ETC2_RGBA8, normaali 2048×4096), 4,7 s
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Kevyt mesh 307454 kärkeä (ruutu 3586)
+MATKAKIRJA kehysajat {"t":96.43,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":285,"p50":16.67,"p95":18.15,"p99":83.33,"max":99.7,"yli15x":3},"kehyksia":285,"piirretty":285,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":285},"gpuMs":1.01,"gpuKehyksia":285,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA kehysajat {"t":101.44,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.68,"p95":17.96,"p99":18.26,"max":24.53,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.01,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: kuori Kevyt ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Kevyt 2048×2048 RGB_ETC2_SRGB (ruutu 4158)
+MATKAKIRJA linssit: poikki: kuori kevyt valmis (188117 kolmiota, 2048² ETC2_RGB, 28,0 s: lataus 18,3, purku 0,1, mesh 0,0, kuva (ASTC/JPEG) 9,6 s)
+MATKAKIRJA linssit: poikki: valoatlas laituri ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA kehysajat {"t":106.46,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":296,"p50":16.67,"p95":18.08,"p99":18.25,"max":99.5,"yli15x":1},"kehyksia":296,"piirretty":296,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":296},"gpuMs":1.01,"gpuKehyksia":296,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: valoatlas kappeli ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas tunnelma ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas kierreportaat ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas keittio ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas fatabuuri ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas muurinharja ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas keskushalli ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas laituri valmis (4096x4096)
+MATKAKIRJA linssit: poikki: laituri savu 2 emitteriä, liekkipisteitä 2
+MATKAKIRJA kehysajat {"t":111.47,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":295,"p50":16.68,"p95":18.19,"p99":19.15,"max":29.27,"yli15x":0},"kehyksia":295,"piirretty":295,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":295},"gpuMs":1.01,"gpuKehyksia":295,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: valoatlas keittio valmis (4096x4096)
+MATKAKIRJA linssit: poikki: keittio savu 6 emitteriä, liekkipisteitä 6
+MATKAKIRJA linssit: poikki: valoatlas tunnelma valmis (4096x4096)
+MATKAKIRJA linssit: poikki: tunnelma savu 38 emitteriä, liekkipisteitä 34
+MATKAKIRJA linssit: poikki: valoatlas keskushalli valmis (4096x4096)
+MATKAKIRJA linssit: poikki: keskushalli savu 55 emitteriä, liekkipisteitä 51
+MATKAKIRJA linssit: poikki: valoatlas kappeli valmis (4096x4096)
+MATKAKIRJA linssit: poikki: kappeli savu 70 emitteriä, liekkipisteitä 66
+MATKAKIRJA linssit: poikki: valoatlas muurinharja valmis (4096x4096)
+MATKAKIRJA linssit: poikki: muurinharja savu 72 emitteriä, liekkipisteitä 68
+MATKAKIRJA linssit: poikki: valoatlas kierreportaat valmis (4096x4096)
+MATKAKIRJA linssit: poikki: kierreportaat savu 76 emitteriä, liekkipisteitä 72
+MATKAKIRJA linssit: poikki: valoatlas fatabuuri valmis (4096x4096)
+MATKAKIRJA linssit: poikki: fatabuuri savu 80 emitteriä, liekkipisteitä 76
+MATKAKIRJA linssit: poikki: esine fatabuuri/arkun-kansi valmis
+MATKAKIRJA linssit: poikki: esine fatabuuri/sinetti valmis
+MATKAKIRJA linssit: poikki: ympäristö: maasto ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), glb:n kuva
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto 2048×2048 RGB_ETC2_SRGB (ruutu 4728)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 62385 kärkeä (ruutu 4729)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 22630 kärkeä (ruutu 4730)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 42352 kärkeä (ruutu 4731)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 68440 kärkeä (ruutu 4732)
+MATKAKIRJA linssit: poikki: ympäristö: maasto 4 lohkoa, 376330 kolmiota, 2048² ETC2_RGB, 38,9 s
+MATKAKIRJA kehysajat {"t":116.48,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":226,"p50":16.67,"p95":17.88,"p99":215.09,"max":883.32,"yli15x":4},"kehyksia":226,"piirretty":226,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":226},"gpuMs":0.98,"gpuKehyksia":226,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: raskas Ymparisto:splat-maski0 LoadImage 52 ms (ruutu 4794)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-maski0 2048×2048 88 (ruutu 4795)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-maski1 2048×2048 88 (ruutu 4805)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-kallio 1024×1024 RGB_ETC2_SRGB (ruutu 4836)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-kallio 1024×1024 RGB_ETC2_UNorm (ruutu 4884)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-varpukangas 1024×1024 RGB_ETC2_SRGB (ruutu 4928)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-varpukangas 1024×1024 RGB_ETC2_UNorm (ruutu 4963)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-niitty 1024×1024 RGB_ETC2_SRGB (ruutu 5003)
+MATKAKIRJA lampo {"t":121,"aika":"17:49:16","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":56.4,"tavoite":60,"piirtovali":1}
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-niitty 1024×1024 RGB_ETC2_UNorm (ruutu 5049)
+MATKAKIRJA kehysajat {"t":121.49,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":293,"p50":16.68,"p95":18.02,"p99":33.32,"max":82.57,"yli15x":2},"kehyksia":293,"piirretty":293,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":293},"gpuMs":0.96,"gpuKehyksia":293,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-neulaset 1024×1024 RGB_ETC2_SRGB (ruutu 5082)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-neulaset 1024×1024 RGB_ETC2_UNorm (ruutu 5135)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-rantakivikko 1024×1024 RGB_ETC2_SRGB (ruutu 5170)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-rantakivikko 1024×1024 RGB_ETC2_UNorm (ruutu 5213)
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/fokuskohteet-mlt.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/nakyvat-kaupungit-ita.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/nakyvat-kaupungit-bgr.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu BGR
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/nakyvat-kaupungit-rou.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ROU
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/maastokohteet-mlt.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-hiekka 1024×1024 RGB_ETC2_SRGB (ruutu 5234)
+MATKAKIRJA sisältö: sisalto/1/v536/moduulit/js/packs/nakyvat-kaupungit-mlt.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu MLT
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-hiekka 1024×1024 RGB_ETC2_UNorm (ruutu 5255)
+MATKAKIRJA linssit: poikki: ympäristö: maanpinta 6 kerrosta + normaalit, 8,9 s
+MATKAKIRJA linssit: poikki: ympäristö: osat valmiit 47,9 s (rinnakkain)
+MATKAKIRJA linssit: poikki: ympäristö valmis (Huippu, 47,9 s)
+MATKAKIRJA kehysajat {"t":126.49,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":297,"p50":16.67,"p95":18.25,"p99":30.08,"max":49.92,"yli15x":0},"kehyksia":297,"piirretty":297,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":297},"gpuMs":0.92,"gpuKehyksia":297,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Huippu mesh 1612316 kärkeä (ruutu 5384)
+MATKAKIRJA saapumislaatat: sofia valmis 405/405 (kerma 71), epäonnistui 0, 54,5 s
+MATKAKIRJA esilataaja: tehtävä saapuminen-sofia (Kohdekaupungit) 53,3 s
+MATKAKIRJA kehysajat {"t":131.51,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":290,"p50":16.67,"p95":17.92,"p99":49.21,"max":82.82,"yli15x":1},"kehyksia":290,"piirretty":290,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":290},"gpuMs":0.83,"gpuKehyksia":290,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA kehysajat {"t":136.52,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.77,"p99":18.26,"max":24.49,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.77,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: kuori Huippu ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA kehysajat {"t":141.54,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":298,"p50":16.67,"p95":17.53,"p99":18.24,"max":65.08,"yli15x":1},"kehyksia":298,"piirretty":298,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":298},"gpuMs":0.76,"gpuKehyksia":298,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: raskas kuori Huippu LoadImage 368 ms (ruutu 6293)
+MATKAKIRJA linssit: poikki: raskas kuori Huippu Compress 80 ms (ruutu 6294)
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Huippu 8192×8192 RGB_ETC2_SRGB (ruutu 6295)
+MATKAKIRJA linssit: poikki: kuori huippu valmis (1398447 kolmiota, 8192² ETC2_RGB, 38,7 s: lataus 21,8, purku 0,2, mesh 0,1, kuva (ASTC/JPEG) 16,6 s)
+MATKAKIRJA saapumislaatat: sisilia valmis 628/628 (kerma 239), epäonnistui 0, 70,7 s
+MATKAKIRJA esilataaja: tehtävä saapuminen-sisilia (Kohdekaupungit) 69,4 s
+MATKAKIRJA kehysajat {"t":146.56,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":209,"p50":16.67,"p95":18.25,"p99":366.67,"max":566.45,"yli15x":5},"kehyksia":209,"piirretty":209,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":209},"gpuMs":0.87,"gpuKehyksia":209,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: poikki: detalji valmis (4 sarjaa, normaali päällä, 7,0 s)
+MATKAKIRJA linssit: poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat 9/8, hahmot 10/10, ympäristö; odotettiin 73,7 s, välimuistista 0, verkosta 88)
+MATKAKIRJA lampo {"t":151,"aika":"17:49:46","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":54.3,"tavoite":60,"piirtovali":1}
+MATKAKIRJA linssit: nimiruutu: häivytys 74,7 s avauksesta
+MATKAKIRJA kehysajat {"t":151.58,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":229,"p50":16.68,"p95":18.03,"p99":149.9,"max":766.32,"yli15x":4},"kehyksia":229,"piirretty":229,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":229},"gpuMs":1.25,"gpuKehyksia":229,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA saapumislaatat: valletta valmis 218/218 (kerma 0), epäonnistui 0, 82,3 s
+MATKAKIRJA esilataaja: tehtävä saapuminen-valletta (Kohdekaupungit) 11,6 s
+MATKAKIRJA kehysajat {"t":156.59,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":293,"p50":16.67,"p95":18.69,"p99":33.34,"max":40.91,"yli15x":0},"kehyksia":293,"piirretty":293,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":293},"gpuMs":1.08,"gpuKehyksia":293,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA saapumislaatat: bukarest valmis 416/416 (kerma 84), epäonnistui 0, 84,0 s
+MATKAKIRJA esilataaja: tehtävä saapuminen-bukarest (Kohdekaupungit) 29,4 s
+MATKAKIRJA kehysajat {"t":161.59,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.68,"p95":18.26,"p99":19.36,"max":28.75,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.06,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA kehysajat {"t":166.61,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":18.03,"p99":18.26,"max":18.26,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.06,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA kehysajat {"t":171.61,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.68,"p95":18.01,"p99":18.26,"max":18.27,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":1.05,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA kehysajat {"t":176.61,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":18.26,"p99":18.26,"max":18.27,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":1.06,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA lampo {"t":181,"aika":"17:50:16","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":59.4,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":181.63,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.68,"p95":17.73,"p99":18.26,"max":18.27,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.04,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":824,"saapuminenVerkkoMs":0,"osumaPros":41}
+MATKAKIRJA linssit: taustaääni pois
+MATKAKIRJA linssit: auki: ei mitään
+MATKAKIRJA ui linssit: pelielementit -: portti False, vertailu False, radio False, linssi False, ok
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA ruutu: pallon kamera päälle
+app.matkakirja.proto3d: 15661

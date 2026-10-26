@@ -1,0 +1,499 @@
+2026-10-04 17:46:23.201 Matkakirja3D[27748:318576078] Built from '6000.3/staging' branch, Version '6000.3.24f1 (4e7b9b5b6244)', Build type 'Development', Scripting Backend 'il2cpp'
+2026-10-04 17:46:23.202 Matkakirja3D[27748:318576078] MemoryManager: Using 'Dynamic Heap' Allocator.
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=4194304"
+    "memorysetup-bucket-allocator-block-count=1"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=4194304"
+    "memorysetup-profiler-bucket-allocator-block-count=1"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=4194304"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+-> applicationDidFinishLaunching()
+-> sceneWillEnterForeground()
+Found 3 interfaces on host : 0) 192.168.1.146 1) 192.168.1.129 2) 169.254.40.44
+Player connection [4341440000]  Target information:
+
+Player connection [4341440000]  * "[IP] 192.168.1.146 [Port] 55000 [Flags] 2 [Guid] 1282057606 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4341440000]  * "[IP] 192.168.1.129 [Port] 55000 [Flags] 2 [Guid] 1282057606 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4341440000]  * "[IP] 169.254.40.44 [Port] 55000 [Flags] 2 [Guid] 1282057606 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4341440000] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Subsystems] Discovering subsystems at path /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Bundle/Application/AD89D1AE-9A42-48E3-914B-EE70927921EC/Matkakirja3D.app/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple iOS simulator GPU
+Apple GPU Family: 2
+MSL Version: 3.0
+Has Float MSAA: 0
+Has Float Filtering: 0
+ReadWrite Texture Tier: 0
+Initialize engine version: 6000.3.24f1 (4e7b9b5b6244)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+UnloadTime: 1.299791 ms
+CrashReporter: No pending report exists at /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/44A73ACA-1176-4167-84D1-1BBE8E398CEA/Library/Caches/CrashReports/crash-pending.plcrash
+Unknown pseudo class "first-child" in StyleSheet Linssit
+Unknown pseudo class "last-child" in StyleSheet Matkakirja
+Unknown pseudo class "first-child" in StyleSheet lautapeli
+Unknown pseudo class "last-child" in StyleSheet lautapeli
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA valmius: auto 12 s (PlayerPrefs)
+MATKAKIRJA valmius: seuranta aloitusverho alkaa, 12 s
+MATKAKIRJA laattapalvelin: http://127.0.0.1:49595/r/ (löydös 176: 4 porttia: pohja http://127.0.0.1:49595/r/, maasto http://127.0.0.1:49596/r/, kerma http://127.0.0.1:49597/r/, muu http://127.0.0.1:49598/r/)
+MATKAKIRJA laattapalvelin: julisteet/pallo/laatat/2026-09-30-pohja-20260930/ delta paketista, perus 2026-09-27-pohja-20260927
+MATKAKIRJA laattapalvelin: paketti 5978 laattaa, käytössä 24,6 Mt (pohja 1366 maasto 2731 bmng-bathy 1365 vektorit 513 napakalotit 2 pohja-perus 0), avaus 8 ms
+MATKAKIRJA laattapalvelin: paketin sarjat ohitettu (kartta käyttää eri sarjaa, paketti on vanha): maarajat (julisteet/pallo/vektorit/maarajat-2026-09-30/)
+MATKAKIRJA kehysmittari: tavoite 60 Hz (liikkeessä), tiedosto /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/44A73ACA-1176-4167-84D1-1BBE8E398CEA/Documents/kehysajat.jsonl
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ääni: testimykistys päällä (simulaattori; aani mykistys 0 = kuuluva ääni)
+2026-10-04 17:46:25.374 Matkakirja3D[27748:318576078] MATKAKIRJA puhe: istunto vaihdetaan (AVAudioSessionCategoryAmbient / AVAudioSessionModeDefault / 1 → Playback / SpokenAudio / MixWithOthers)
+MATKAKIRJA ääni-istunto (käynnistys): luokka AVAudioSessionCategoryPlayback, tila AVAudioSessionModeSpokenAudio, valinnat 1, voimakkuus 0.60, muut soivat 0, reitti Speaker, näytetaajuus 24000, kanavia 2
+MATKAKIRJA ui kuva: muistiraja 200 Mt (iPhone)
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: Kone = American Typewriter Regular
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Roman].
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Regular].
+MATKAKIRJA ui: Luku = Charter Roman
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: KoneLihava = American Typewriter Semibold
+MATKAKIRJA ylapalkki saaririvi: matala True, saari (x:138.00, y:11.00, width:126.00, height:37.00), saaren korkeus 37, rivi 37, yksikkö 1
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Bold].
+MATKAKIRJA ui: LukuLihava = Charter Bold
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Italic].
+MATKAKIRJA ui: LukuKursiivi = Charter Italic
+2026-10-04 17:46:25.842 Matkakirja3D[27748:318576078] MATKAKIRJA avaimet: haku pollo-kehittajakoodi epäonnistui (-34018)
+MATKAKIRJA ui: KoneBold = American Typewriter Bold
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui linssit: pelielementit -: portti False, vertailu False, radio False, linssi False, ok
+MATKAKIRJA mukana: 41 tiedostoa buildissa
+MATKAKIRJA lampo {"t":2,"aika":"17:46:26","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":0.0,"tavoite":-1,"piirtovali":1}
+MATKAKIRJA ruutu: näyttö 60 Hz, lepo 30 fps, renderScale 0,8
+MATKAKIRJA matkamuisto: kuvien juuri https://media.matkakirja.app/dioraama/olavinlinna/dcd122307aa43189/
+MATKAKIRJA sisältö: versio 536, skeema 1.58, sisalto/1/v536/
+MATKAKIRJA paketti: tilannekuva v535, 15 tiedostoa varastoon
+MATKAKIRJA paketti: ei valmista versiota, luetaan laiskasti sisalto/1/v536/ (kohde v536)
+MATKAKIRJA apuraha: ladattu, 5 kappaletta, 4 kuvaa
+CADisplayLink created
+MATKAKIRJA elävät elementit: päällä; meri - (0 kohtaa): ei lajeja; myllyt ei näkyvissä, 220 kolmiota, nopeus 0,00, seuraava tauko 269 s; karuselli ei näkyvissä, 1629 kolmiota, nopeus 0,00, seuraava tauko 59 s; ilmapallo ei näkyvissä, 536 kolmiota, nopeus 0,00, seuraava tauko 146 s; gondolit ei näkyvissä, 878 kolmiota, nopeus 0,00, seuraava tauko 344 s; maailmanpyora ei näkyvissä, 1088 kolmiota, nopeus 0,00, seuraava tauko 97 s; hoyrylaiva ei näkyvissä, 199 kolmiota, nopeus 0,00, seuraava tauko 502 s; liike 0,00, kerros Taysi
+MATKAKIRJA linssit: linssiaani: synteesi valmis 24000 Hz, kilahdus 4 × 0,46 s, naksu 8 × 0,082 s, 2 ms taustasäikeessä, rekisteröity tehosteväylälle
+Shadowmap RenderTexture requested without a depth buffer. Changing to a 16 bit depth buffer. To resolve this warning, please specify the desired number of depth bits when creating the render texture.
+MATKAKIRJA paketti: sisalto/1/v536/ hakemisto kylmänä, 15 tiedostoa varastosta
+MATKAKIRJA sisältö: käynnistyksen esilataus 34/45 kokoelmaa (sisalto/1/v536/)
+MATKAKIRJA lennon pinta: varakartta Z2 valmis (2026-09-24/bmng-bathy)
+Player Setting 'Adjust iOS FPS based on thermal state' is ON
+thermalStateDidChange: Nominal
+Thermal state is Nominal/Fair. Setting target frame rate to 60.
+-> applicationWillEnterForeground()
+-> sceneDidBecomeActive()
+-> applicationDidBecomeActive()
+MATKAKIRJA vektorit: luettelo 2026-09-25-gshhs-korkeus, lodit 0,1/0,03/0,008/0,004/0; rannikko: l0 (1 tiedostoa, 30846 pistettä) l1 (1 tiedostoa, 119436 pistettä) l2 (380 tiedostoa, 450986 pistettä) l3 (380 tiedostoa, 868542 pistettä) l4 (380 tiedostoa, 2766068 pistettä) rajat: l0 (1 tiedostoa, 8111 pistettä, korkeus) l1 (1 tiedostoa, 18246 pistettä, korkeus) l2 (128 tiedostoa, 33496 pistettä, korkeus) l3 (128 tiedostoa, 44730 pistettä, korkeus) l4 (130 tiedostoa, 72815 pistettä, korkeus)
+MATKAKIRJA napakalotti pohjoinen: 2048×2048, 12 mipiä
+MATKAKIRJA valot: 3099 valoa
+MATKAKIRJA valot: maa -, 0 valoa, 0 aihetta
+MATKAKIRJA alueet: kaupunkitaso Z10 13829 laattaa
+MATKAKIRJA valmius [aloitusverho 1,9 s] aste 0,0 % | cesium - | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 2 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 7 maks 7 (istunto 7) käsittelyssä 2 maks 6 (istunto 6) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 2/6 p 27 pyyntöä 6 yhteyttä] | luokat sat/bmng-bathy k0 v16/0 p16 vektorit k2 v7/0 p7 maasto k0 v1/0 p1 napakalotit k0 v2/0 p2 | kamera korkeus 9881 km | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA saapuminen: 135 maan rajat saapumisrajaukseen
+MATKAKIRJA nimet: alfa lineaariseen sekoitukseen maakunta 0,58→0,76 maakunta-pieni 0,58→0,76 meri 0,62→0,77 nykyalue:ruoste-vahva 0,95→0,98 nykyalue-pieni:ruoste-vahva 0,95→0,98 valtameri 0,62→0,72
+MATKAKIRJA nimet: 187 nimeä (aluenimet 187, merinimet 0), ylin taso 9, fontti LiberationSerif-Regular SDF / LiberationSerif-Italic SDF
+MATKAKIRJA reitit: 485 reittiä, 266 kaupunkia
+MATKAKIRJA alueet: kermasarja 27 maalla
+MATKAKIRJA alueet: 139 aluetta, maasto https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/{z}/{x}/{y}.terrain?v=2026-09-24-maailma
+[2026-10-04 17:46:27.465] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 172, Culled Visited 0, Rendered 2, Culled 19, Max Depth Visited 5, Loading-Worker 2, Loading-Main 0 Total Tiles Resident 1, Frame 1
+MATKAKIRJA napakalotti etela: 4096×4096, 13 mipiä
+MATKAKIRJA peli: sisältö sisalto/1/v536/, 266 kaupunkia, 414 reittiä, 71 lentoa
+MATKAKIRJA valmius [aloitusverho 2,3 s] aste 0,5 % | cesium käyty 172 (karsittuja käyty 0) piirto 2 karsittu 19 syvyys 5 jono työ 2 pää 0 ladattuja 1 | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 1 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 7 maks 7 (istunto 7) käsittelyssä 2 maks 6 (istunto 6) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 1/1 y 0/0 p 1 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 2/6 p 39 pyyntöä 6 yhteyttä] | luokat vektorit k1 v13/1 p19 | kamera korkeus 9881 km, maapiste 3,32°/s, korkeus 0 %/s, katse 3,8°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA meren koristeet: merikohdat 29 maata, 129 kohtaa
+MATKAKIRJA ääriviiva: maamaa.geojson, 120 maata, 245 viivaa, 50907 pistettä, jäsennys 3 ms
+[2026-10-04 17:46:27.753] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 170, Culled Visited 0, Rendered 2, Culled 21, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 1, Frame 3
+MATKAKIRJA lento v3: päällä
+MATKAKIRJA lento v3: kone luotu (7 piirtoa)
+MATKAKIRJA nappula: kone 26 osaa, koko 28,98 m, rajat (28.98, 5.71, 19.84)
+MATKAKIRJA ääni: äänitaulut valmiit (maisemakoreja 270, maita 265)
+MATKAKIRJA peli: laattoja 266 (kokoelmat/laatat.json)
+MATKAKIRJA verkko-odotus {"t":3.47,"vaihe":"kaynnistys","mita":"sisalto","ms":1712,"haut":6}
+MATKAKIRJA peli: aloitusnäkymä, tallennus ei
+MATKAKIRJA peli: sähkelinja auki
+MATKAKIRJA valmius [aloitusverho 2,8 s] aste 0,5 % | cesium käyty 170 (karsittuja käyty 0) piirto 2 karsittu 21 syvyys 5 jono työ 0 pää 0 ladattuja 1 | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 1 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 9 maks 9 (istunto 9) käsittelyssä 1 maks 4 (istunto 6) [pohja 2/2 y 0/2 p 4 pyyntöä 2 yhteyttä, maasto 1/1 y 0/1 p 3 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 1/4 p 49 pyyntöä 6 yhteyttä] | luokat pohja k0 v4/0 p4 vektorit k1 v10/0 p29 maasto k0 v2/0 p3 | kamera korkeus 9881 km, maapiste 2,32°/s, korkeus 0 %/s, katse 2,7°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA pallo: aloitusportin sumennus 6 pt (renderScale 0,166, Gauss päällä, pistekerroin 3)
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+[2026-10-04 17:46:28.727] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 169, Culled Visited 0, Rendered 2, Culled 18, Max Depth Visited 5, Loading-Worker 0, Loading-Main 2 Total Tiles Resident 3, Frame 5
+MATKAKIRJA valmius [aloitusverho 3,9 s] aste 0,5 % | cesium käyty 169 (karsittuja käyty 0) piirto 2 karsittu 18 syvyys 5 jono työ 0 pää 2 ladattuja 3 | objektit 2/2 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 9 maks 9 (istunto 9) käsittelyssä 0 maks 5 (istunto 6) [pohja 2/2 y 0/0 p 4 pyyntöä 2 yhteyttä, maasto 1/1 y 0/0 p 3 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/5 p 61 pyyntöä 6 yhteyttä] | luokat vektorit k0 v13/1 p41 | kamera korkeus 9881 km, maapiste 1,18°/s, korkeus 0 %/s, katse 1,2°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+[2026-10-04 17:46:29.229] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 170, Culled Visited 0, Rendered 2, Culled 21, Max Depth Visited 5, Loading-Worker 124, Loading-Main 0 Total Tiles Resident 3, Frame 6
+MATKAKIRJA valmius [aloitusverho 4,0 s] aste 6,7 % | cesium käyty 170 (karsittuja käyty 0) piirto 2 karsittu 21 syvyys 5 jono työ 124 pää 0 ladattuja 3 | objektit 2/2 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 9 maks 9 (istunto 9) käsittelyssä 0 maks 6 (istunto 6) [pohja 2/2 y 0/0 p 4 pyyntöä 2 yhteyttä, maasto 1/1 y 0/0 p 3 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 67 pyyntöä 6 yhteyttä] | luokat vektorit k0 v6/0 p47 | kamera korkeus 9881 km, maapiste 52,67°/s, korkeus +0,1 %/s, katse 58,8°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA ääriviiva: maapolygonit.geojson, 135 maata, 2626 viivaa, 497082 pistettä, jäsennys 13 ms
+MATKAKIRJA kaupungit: 266 merkkiä, tärkeys paketista
+MATKAKIRJA nostot: 2865 pääkartan nostoa 124 maassa, 135 maan rajat, 36 merinimeä
+MATKAKIRJA kuvatekijät: 439 Commons-kuvaa
+[2026-10-04 17:46:29.741] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 167, Culled Visited 0, Rendered 2, Culled 20, Max Depth Visited 5, Loading-Worker 54, Loading-Main 13 Total Tiles Resident 68, Frame 24
+MATKAKIRJA valmius [aloitusverho 4,5 s] aste 34,4 % | cesium käyty 167 (karsittuja käyty 0) piirto 2 karsittu 20 syvyys 5 jono työ 54 pää 13 ladattuja 68 | objektit 2/67 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 12 (istunto 12) [pohja 6/6 y 0/6 p 112 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 75 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/6 p 97 pyyntöä 6 yhteyttä] | luokat pohja k0 v108/0 p112 vektorit k0 v30/0 p77 maasto k0 v72/0 p75 | kamera korkeus 9882 km, maapiste 4,43°/s, korkeus 0 %/s, katse 4,9°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA peli: sähketehtäviä sofia, tukholma
+MATKAKIRJA peli: kuvakysymyksiä 262, lippumaita 135
+MATKAKIRJA peli: kysymyksiä 1287 kaupungeissa, 104 yleistä, 42 kaarta
+MATKAKIRJA peli: saapumispuheita 45, luentoja 45
+MATKAKIRJA puhe: esiladattu intro-puhe.mp3 (buildissa)
+MATKAKIRJA ui: Kauno = Snell Roundhand Regular
+MATKAKIRJA peli: muste 3099 nostoa
+[2026-10-04 17:46:30.242] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 162, Culled Visited 0, Rendered 80, Culled 21, Max Depth Visited 5, Loading-Worker 28, Loading-Main 0 Total Tiles Resident 136, Frame 47
+MATKAKIRJA valmius [aloitusverho 5,0 s] aste 81,7 % | cesium käyty 162 (karsittuja käyty 0) piirto 80 karsittu 21 syvyys 5 jono työ 28 pää 0 ladattuja 136 | objektit 80/134 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 6 maks 15 (istunto 15) [pohja 6/6 y 4/6 p 250 pyyntöä 6 yhteyttä, maasto 6/6 y 1/6 p 156 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 1/6 p 132 pyyntöä 6 yhteyttä] | luokat pohja k0 v138/0 p250 vektorit k0 v35/0 p112 maasto k0 v81/0 p156 | kamera korkeus 9882 km, maapiste 4,39°/s, korkeus 0 %/s, katse 4,8°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA kehysajat {"t":6.02,"tavoiteMs":16.67,"liike":{"n":4,"p50":166.68,"p95":300,"p99":300,"max":300,"yli15x":4},"lepo":{"n":47,"p50":17.6,"p95":83.35,"p99":650,"max":650,"yli15x":7},"peitto":null,"kehyksia":56,"piirretty":56,"tilat":{"taysi":56,"lepo":0,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.8,"gpuKehyksia":52,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":56}
+MATKAKIRJA valmius: verho aloitusverho lähti valmis 5238 ms aste 100,0 % kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA verkko-odotus {"t":6.23,"vaihe":"kaynnistys","mita":"aloitusverho","ms":5238}
+MATKAKIRJA aloitusverho: pois 5,2 s (pallo 100 %)
+[2026-10-04 17:46:30.743] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 163, Culled Visited 0, Rendered 117, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 183, Frame 76
+MATKAKIRJA valmius [aloitusverho 5,5 s] aste 100,0 % | cesium käyty 163 (karsittuja käyty 0) piirto 117 karsittu 20 syvyys 5 jono työ 0 pää 0 ladattuja 183 | objektit 117/182 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 9 (istunto 15) [pohja 6/6 y 0/6 p 292 pyyntöä 6 yhteyttä, maasto 6/6 y 0/5 p 183 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/1 p 136 pyyntöä 6 yhteyttä] | luokat pohja k0 v42/0 p292 vektorit k0 v4/0 p116 maasto k0 v27/0 p183 | kamera korkeus 9882 km, maapiste 4,90°/s, korkeus 0 %/s, katse 5,4°/s | portti 1 musta 0,00 aloitusverho 1 | kevennys pois
+MATKAKIRJA aloitusnäyttö: esilataus 289 laattaa (lähikuva pinta 70, pohja 93, valinta 126)
+MATKAKIRJA aloitusnäyttö: esilataus + maasto 117 laattaa (yhteensä 406)
+MATKAKIRJA lento v3: esilämmitys 18 aloituskohdetta, 1690 laattaa
+[2026-10-04 17:46:31.260] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 160, Culled Visited 0, Rendered 116, Culled 15, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 183, Frame 100
+MATKAKIRJA lennon pinta: Sentinel-kattavuus 287 Z8-laattaa
+MATKAKIRJA satloki t=5s: [bmng-bathy/2 n=16 200:paketti×16 t 4336/9021/14435] [s2/laatat.json n=1 200:verkko×1 t 18496/18496/18496]
+MATKAKIRJA valmius [aloitusverho 6,0 s] aste 100,0 % | cesium käyty 160 (karsittuja käyty 0) piirto 116 karsittu 15 syvyys 5 jono työ 0 pää 0 ladattuja 183 | objektit 116/182 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 195 kohdejono 0 taustajono 1690 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 2 (istunto 15) [pohja 6/6 y 0/0 p 292 pyyntöä 6 yhteyttä, maasto 6/6 y 0/1 p 184 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/1 p 137 pyyntöä 6 yhteyttä] | luokat sat/s2 k0 v1/1 maasto k0 v1/0 p184 | kamera korkeus 9882 km, maapiste 5,28°/s, korkeus 0 %/s, katse 5,8°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA aloitusnäyttö: esilataus + Sentinel 111 laattaa (yhteensä 517)
+MATKAKIRJA linssit: fonttilämmitys: 173 merkkiä verhon jälkeen (odotus 5671 ms), 435 ms 13 kehyksessä, pisin työ 4,9 ms (lisäys 4,9, kallein merkki 2,9; ensimmäinen jäsennys 0,0; jäsennys 0,2, kallein pala 0,1)
+[2026-10-04 17:46:31.766] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 159, Culled Visited 0, Rendered 115, Culled 16, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 187, Frame 115
+MATKAKIRJA valmius [aloitusverho 6,5 s] aste 100,0 % | cesium käyty 159 (karsittuja käyty 0) piirto 115 karsittu 16 syvyys 5 jono työ 0 pää 0 ladattuja 187 | objektit 115/186 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 216 kohdejono 0 taustajono 1690 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 4 (istunto 15) [pohja 6/6 y 0/2 p 298 pyyntöä 6 yhteyttä, maasto 6/6 y 0/2 p 188 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat pohja k0 v6/0 p298 maasto k0 v4/0 p188 | kamera korkeus 9883 km, maapiste 5,82°/s, korkeus 0 %/s, katse 6,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:32.293] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 157, Culled Visited 0, Rendered 113, Culled 18, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 187, Frame 131
+MATKAKIRJA valmius [aloitusverho 7,0 s] aste 100,0 % | cesium käyty 157 (karsittuja käyty 0) piirto 113 karsittu 18 syvyys 5 jono työ 0 pää 0 ladattuja 187 | objektit 113/186 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 158 kohdejono 0 taustajono 1690 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 15) [pohja 6/6 y 0/0 p 298 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 188 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9883 km, maapiste 6,35°/s, korkeus 0 %/s, katse 6,9°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:32.798] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 163, Culled Visited 0, Rendered 114, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 3 Total Tiles Resident 190, Frame 146
+MATKAKIRJA valmius [aloitusverho 7,5 s] aste 97,3 % | cesium käyty 163 (karsittuja käyty 0) piirto 114 karsittu 20 syvyys 5 jono työ 0 pää 3 ladattuja 190 | objektit 114/189 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 90 kohdejono 0 taustajono 1690 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 6 (istunto 15) [pohja 6/6 y 0/4 p 308 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 196 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat pohja k0 v10/0 p308 maasto k0 v8/0 p196 | kamera korkeus 9883 km, maapiste 6,69°/s, korkeus 0 %/s, katse 7,2°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:33.327] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 163, Culled Visited 0, Rendered 117, Culled 20, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 195, Frame 162
+MATKAKIRJA valmius [aloitusverho 8,1 s] aste 100,0 % | cesium käyty 163 (karsittuja käyty 0) piirto 117 karsittu 20 syvyys 5 jono työ 0 pää 0 ladattuja 195 | objektit 117/194 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 14 kohdejono 0 taustajono 1690 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 15) [pohja 6/6 y 0/0 p 308 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 196 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9883 km, maapiste 6,81°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:33.831] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 164, Culled Visited 0, Rendered 118, Culled 19, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 177
+MATKAKIRJA valmius [aloitusverho 8,6 s] aste 100,0 % | cesium käyty 164 (karsittuja käyty 0) piirto 118 karsittu 19 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 118/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1662 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 8 (istunto 15) [pohja 6/6 y 0/4 p 313 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat pohja k0 v5/0 p313 maasto k0 v4/0 p200 | kamera korkeus 9884 km, maapiste 7,10°/s, korkeus 0 %/s, katse 7,5°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:34.361] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 158, Culled Visited 0, Rendered 114, Culled 17, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 193
+MATKAKIRJA valmius [aloitusverho 9,1 s] aste 100,0 % | cesium käyty 158 (karsittuja käyty 0) piirto 114 karsittu 17 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 114/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1640 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 15) [pohja 6/6 y 0/0 p 313 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 6,76°/s, korkeus 0 %/s, katse 7,1°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:34.894] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 160, Culled Visited 0, Rendered 116, Culled 15, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 209
+MATKAKIRJA valmius [aloitusverho 9,6 s] aste 100,0 % | cesium käyty 160 (karsittuja käyty 0) piirto 116 karsittu 15 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 116/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1620 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 15) [pohja 6/6 y 0/0 p 313 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 137 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 6,93°/s, korkeus 0 %/s, katse 7,3°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":11.03,"tavoiteMs":16.67,"liike":null,"lepo":{"n":171,"p50":33.34,"p95":34.64,"p99":34.94,"max":34.94,"yli15x":0},"peitto":null,"kehyksia":171,"piirretty":171,"tilat":{"taysi":42,"lepo":129,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.91,"gpuKehyksia":171,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":55}
+MATKAKIRJA valmius [aloitusverho 10,2 s] aste 100,0 % | cesium - | objektit 116/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1603 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 3 (istunto 15) [pohja 6/6 y 0/0 p 313 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/3 p 140 pyyntöä 6 yhteyttä] | luokat vektorit k0 v3/0 p119 | kamera korkeus 9884 km, maapiste 7,05°/s, korkeus 0 %/s, katse 7,4°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:35.926] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 158, Culled Visited 0, Rendered 114, Culled 17, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 199, Frame 240
+MATKAKIRJA valmius [aloitusverho 10,7 s] aste 100,0 % | cesium käyty 158 (karsittuja käyty 0) piirto 114 karsittu 17 syvyys 5 jono työ 0 pää 0 ladattuja 199 | objektit 114/198 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1581 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 0 (istunto 15) [pohja 6/6 y 0/0 p 313 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 200 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9884 km, maapiste 6,77°/s, korkeus 0 %/s, katse 7,1°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:36.427] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 168, Culled Visited 0, Rendered 118, Culled 19, Max Depth Visited 5, Loading-Worker 0, Loading-Main 3 Total Tiles Resident 211, Frame 255
+MATKAKIRJA valmius [aloitusverho 11,2 s] aste 99,0 % | cesium käyty 168 (karsittuja käyty 0) piirto 118 karsittu 19 syvyys 5 jono työ 0 pää 3 ladattuja 211 | objektit 118/210 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1561 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 8 (istunto 15) [pohja 6/6 y 0/4 p 329 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 212 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat pohja k0 v16/0 p329 maasto k0 v12/0 p212 | kamera korkeus 9885 km, maapiste 6,89°/s, korkeus 0 %/s, katse 7,2°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:36.937] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 168, Culled Visited 0, Rendered 120, Culled 23, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 215, Frame 270
+MATKAKIRJA valmius [aloitusverho 11,7 s] aste 100,0 % | cesium käyty 168 (karsittuja käyty 0) piirto 120 karsittu 23 syvyys 5 jono työ 0 pää 0 ladattuja 215 | objektit 120/214 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 1539 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 7 (istunto 15) [pohja 6/6 y 0/4 p 335 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 216 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat pohja k0 v6/0 p335 maasto k0 v4/0 p216 | kamera korkeus 9885 km, maapiste 6,77°/s, korkeus 0 %/s, katse 7,0°/s | portti 1 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius: seuranta aloitusverho loppu 12,0 s, verho lähti 5,2 s, suurin aste 100,0 % (5,5 s), ylitykset 80 %: 5,0 s 90 %: 5,5 s 95 %: 5,5 s 97 %: 5,5 s 99 %: 5,5 s 100 %: 5,5 s
+MATKAKIRJA ui kosketusvälimuisti: mitätöinti käytössä (UnityEngine.UIElements.BaseVisualElementPanel)
+MATKAKIRJA kehysajat {"t":16.06,"tavoiteMs":16.67,"liike":null,"lepo":{"n":166,"p50":33.33,"p95":34.6,"p99":34.85,"max":50.02,"yli15x":1},"peitto":null,"kehyksia":166,"piirretty":166,"tilat":{"taysi":31,"lepo":135,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.96,"gpuKehyksia":166,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":55}
+MATKAKIRJA kehysajat {"t":21.06,"tavoiteMs":16.67,"liike":null,"lepo":{"n":165,"p50":33.33,"p95":34.56,"p99":34.93,"max":50.71,"yli15x":1},"peitto":null,"kehyksia":165,"piirretty":165,"tilat":{"taysi":32,"lepo":133,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.97,"gpuKehyksia":165,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":55}
+MATKAKIRJA linssit: linssien aineisto: katto 20,0 s käynnistyksestä
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiä
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiluentaa
+MATKAKIRJA linssit: maat: 135 maata, 128 nimeä
+MATKAKIRJA levy: 45 Mt / 2048 Mt (kuvat 0, aani 0, aanet 0, sisalto 27, virta 0, laatat 18), ei siivottavaa
+MATKAKIRJA linssit: ihmisen matka: 21 jaksoa, 21 aikaleimaa, ääni https://media.matkakirja.app/aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3 (I ja II)
+MATKAKIRJA linssit: ihmisen matka: 17 vanaa laskettu
+MATKAKIRJA paketti: v536 (1.58) 795 tiedostoa, puuttuu 743 (21,2 Mt siirto)
+MATKAKIRJA linssit: vesistöt: 38 järveä, 169 uomaa, 20 nimeä, muunnos 3,1 ms
+MATKAKIRJA esilataaja: tiedosto esilasketut.json 200 alku 0 +202421 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karttamerkit.json 200 alku 0 +3705 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto historianHetket.json 200 alku 0 +476142 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto addisabeba.json 200 alku 0 +57028 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: radio: 182 asemaa (epaselva 178, sallittu 4), 5 viritysääntä
+MATKAKIRJA esilataaja: tiedosto lippu_lonlat.json 200 alku 0 +3464 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto adelaide.json 200 alku 0 +92358 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: astronautin kamera: 189 kohdetta
+MATKAKIRJA esilataaja: tiedosto aden.json 200 alku 0 +53078 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ahaggar.json 200 alku 0 +47201 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA linssit: isoisä 1873: 185 rajaa, 133 nimeä (GPL-3.0)
+MATKAKIRJA linssit: linssien aineisto valmis 22,1 s käynnistyksestä
+MATKAKIRJA esilataaja: tiedosto alkufra.json 200 alku 0 +70656 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto alpit.json 200 alku 0 +60706 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto alicesprings.json 200 alku 0 +51910 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto amsterdam.json 200 alku 0 +46960 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto anchorage.json 200 alku 0 +54737 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto angola.json 200 alku 0 +77332 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kaupunkilehdet.json 200 alku 0 +16866211 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ankara.json 200 alku 0 +49258 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto antofagasta.json 200 alku 0 +57504 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto appalakit.json 200 alku 0 +82106 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto astana.json 200 alku 0 +62076 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto asuncion.json 200 alku 0 +68699 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ateena.json 200 alku 0 +92238 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bagdad.json 200 alku 0 +57694 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto auckland.json 200 alku 0 +65230 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bahrelghazal.json 200 alku 0 +49603 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bali.json 200 alku 0 +84583 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bangkok.json 200 alku 0 +59731 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bananal.json 200 alku 0 +79968 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto barcelona.json 200 alku 0 +56672 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bergen.json 200 alku 0 +83745 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto berliini.json 200 alku 0 +53993 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto birdsville.json 200 alku 0 +80776 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bermuda.json 200 alku 0 +74255 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto boavista.json 200 alku 0 +75525 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bogota.json 200 alku 0 +79551 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto borneo.json 200 alku 0 +54382 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto brisbane.json 200 alku 0 +100430 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto broome.json 200 alku 0 +84747 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bryssel.json 200 alku 0 +96096 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto buenosaires.json 200 alku 0 +66487 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto budapest.json 200 alku 0 +61356 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto bukarest.json 200 alku 0 +62015 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cairns.json 200 alku 0 +58037 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto campogrande.json 200 alku 0 +77972 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto caracas.json 200 alku 0 +91127 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto caphorn.json 200 alku 0 +86816 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cayenne.json 200 alku 0 +69452 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto chennai.json 200 alku 0 +61073 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto christchurch.json 200 alku 0 +72834 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto chicago.json 200 alku 0 +80349 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto churchill.json 200 alku 0 +85354 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto colombo.json 200 alku 0 +65720 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto cooberpedy.json 200 alku 0 +70099 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dakar.json 200 alku 0 +56907 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto damaskos.json 200 alku 0 +56502 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto darwin.json 200 alku 0 +91226 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto delhi.json 200 alku 0 +58093 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto darfur.json 200 alku 0 +49857 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto denver.json 200 alku 0 +55772 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dubai.json 200 alku 0 +50088 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto doha.json 200 alku 0 +47707 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA kehysajat {"t":26.09,"tavoiteMs":16.67,"liike":null,"lepo":{"n":150,"p50":33.33,"p95":34.68,"p99":34.92,"max":83.35,"yli15x":1},"peitto":null,"kehyksia":150,"piirretty":150,"tilat":{"taysi":0,"lepo":150,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.96,"gpuKehyksia":150,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":64}
+MATKAKIRJA esilataaja: tiedosto dili.json 200 alku 0 +45440 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dublin.json 200 alku 0 +70601 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dunedin.json 200 alku 0 +60026 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto dubrovnik.json 200 alku 0 +57586 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto edinburgh.json 200 alku 0 +58829 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto exmouth.json 200 alku 0 +82846 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto fes.json 200 alku 0 +58758 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto firenze.json 200 alku 0 +74367 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto galapagos.json 200 alku 0 +79572 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto gao.json 200 alku 0 +76423 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto falkland.json 200 alku 0 +78305 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto geraldton.json 200 alku 0 +80310 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto grandcanyon.json 200 alku 0 +83253 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto guatemala.json 200 alku 0 +53821 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto granada.json 200 alku 0 +67487 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto halab.json 200 alku 0 +54271 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hanoi.json 200 alku 0 +61859 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto halifax.json 200 alku 0 +56398 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto helsinki.json 200 alku 0 +59322 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hobart.json 200 alku 0 +96987 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hawaii.json 200 alku 0 +92750 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto havanna.json 200 alku 0 +77804 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto hongkong.json 200 alku 0 +63926 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto honiara.json 200 alku 0 +61594 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iguazu.json 200 alku 0 +85690 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iqaluit.json 200 alku 0 +47177 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto iquitos.json 200 alku 0 +46083 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto houston.json 200 alku 0 +57210 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto irkutsk.json 200 alku 0 +49739 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto istanbul.json 200 alku 0 +85494 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto islanti.json 200 alku 0 +60239 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto izmir.json 200 alku 0 +47900 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jakutsk.json 200 alku 0 +55349 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto isfahan.json 200 alku 0 +55587 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jekaterinburg.json 200 alku 0 +55081 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jakarta.json 200 alku 0 +64289 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto joaopessoa.json 200 alku 0 +80582 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto jerusalem.json 200 alku 0 +55092 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kabul.json 200 alku 0 +64628 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kairo.json 200 alku 0 +56164 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kalgoorlie.json 200 alku 0 +92121 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kamerun.json 200 alku 0 +50010 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kamtsatka.json 200 alku 0 +50333 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kanton.json 200 alku 0 +62690 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kano.json 200 alku 0 +60950 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kapkaupunki.json 200 alku 0 +57093 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kapadokia.json 200 alku 0 +52440 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karachi.json 200 alku 0 +64128 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto karthago.json 200 alku 0 +78980 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kashgar.json 200 alku 0 +63101 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kappalmas.json 200 alku 0 +82059 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kimberley.json 200 alku 0 +74282 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kioto.json 200 alku 0 +61391 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kilimandzaro.json 200 alku 0 +71302 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kiova.json 200 alku 0 +56218 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kathmandu.json 200 alku 0 +62288 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kolkata.json 200 alku 0 +61790 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kongo.json 200 alku 0 +48945 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kobenhavn.json 200 alku 0 +71237 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kosice.json 200 alku 0 +80957 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto krakova.json 200 alku 0 +64214 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kumasi.json 200 alku 0 +58795 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto kreeta.json 200 alku 0 +64484 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA peli-komento: 29.79 puhe pois → ok [Aloitus]
+MATKAKIRJA esilataaja: tiedosto kuwait.json 200 alku 0 +51765 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lalibela.json 200 alku 0 +44340 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto labrador.json 200 alku 0 +77976 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lagos.json 200 alku 0 +61228 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lhasa.json 200 alku 0 +63789 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lappi.json 200 alku 0 +65352 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lissabon.json 200 alku 0 +83562 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lima.json 200 alku 0 +84212 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto ljubljana.json 200 alku 0 +86453 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto lontoo.json 200 alku 0 +82364 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto luxemburg.json 200 alku 0 +32932 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto machupicchu.json 200 alku 0 +73614 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto macapa.json 200 alku 0 +75628 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto luxor.json 200 alku 0 +61622 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto losangeles.json 200 alku 0 +79761 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto madrid.json 200 alku 0 +49695 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA peli: matkareitit []
+MATKAKIRJA ajoitus kytkeKysely 4.0
+MATKAKIRJA ajoitus kytke 4.8
+MATKAKIRJA peli: uusi peli, £400 · päivä 1 · aamu · Ateena
+MATKAKIRJA VARTIJA 171: korjaus päällä
+MATKAKIRJA valmius: seuranta saapuminen alkaa, 20 s
+MATKAKIRJA VARTIJA 171: saapuminen GRC alkaa (korjaus päällä), aste 100,0 %, kohdemaa -, palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija
+MATKAKIRJA saapuminen: GRC Korkeuteen → (38,6, 23,728) korkeus 0,159 R, näkyvä leveys 130 yks; web kotelossa (38,325, 23,728) 0,1458 R, laatikko {x 6473,25, y 1720,15, w 315,81, h 296,24}
+MATKAKIRJA peli-komento: 30.82 uusi-peli 5 ateena → ok [Kartta]
+MATKAKIRJA esilataaja: tiedosto magadan.json 200 alku 0 +55099 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto madagaskar.json 200 alku 0 +76193 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto managua.json 200 alku 0 +70068 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manaus.json 200 alku 0 +75177 t (Kaynnistys, paketti:sisalto/1/v536)
+[2026-10-04 17:46:55.343] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 159, Culled Visited 0, Rendered 115, Culled 16, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 259, Frame 846
+MATKAKIRJA valot: maa GRC, 90 valoa, 9 aihetta
+MATKAKIRJA linssit: elävä: kuljettu reitti 1 kaupunkia
+MATKAKIRJA valmius [saapuminen 0,3 s] aste 100,0 % | cesium käyty 159 (karsittuja käyty 0) piirto 115 karsittu 16 syvyys 5 jono työ 0 pää 0 ladattuja 259 | objektit 115/258 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 18 maks 18 (istunto 18) käsittelyssä 0 maks 10 (istunto 15) [pohja 6/6 y 0/6 p 393 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 260 pyyntöä 6 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat pohja k0 v58/0 p393 maasto k0 v44/0 p260 | kamera korkeus 10016 km, maapiste 4,91°/s, korkeus +0,1 %/s, katse 5,4°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":31.11,"tavoiteMs":16.67,"liike":{"n":2,"p50":182.59,"p95":182.59,"p99":182.59,"max":182.59,"yli15x":2},"lepo":{"n":142,"p50":33.35,"p95":34.58,"p99":35.49,"max":49.61,"yli15x":0},"peitto":null,"kehyksia":144,"piirretty":144,"tilat":{"taysi":2,"lepo":142,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.94,"gpuKehyksia":144,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":62}
+MATKAKIRJA linssit: elävä: valmis 276 ms (maakunnat 210, kolmiot 64): saapuminen GRC, 14 maakuntaa, 0 rajaa, 0 jokea, 0 nostoa (0 heräävässä), 2115 kolmiota; soi 0,00 s:sta, nopeus 1,00
+MATKAKIRJA elävä: GRC esivalmisteltu 102 ms
+MATKAKIRJA lipputanko: maa GRC, paikka 41,52 26,43, näkyy False, lippu 250×167, kangas 3D (jatkuva), korkeus 120 pt (maailma, kasvu 0,5, suoja 0,3), suunta maailma
+MATKAKIRJA pallo: aloitusportin sumennus pois
+MATKAKIRJA ääriviiva: GRC, 1 maa–maa-rajaviivaa, 218 janaa, leveys 2,2 pt, peitto 0,5 (natiivi 0,657)
+MATKAKIRJA ääriviiva: GRC, 61 rantarengasta, 3862 janaa, leveys 1,2 pt, peitto 0,22 (natiivi 0,332)
+[2026-10-04 17:46:55.859] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 43, Culled Visited 0, Rendered 32, Culled 0, Max Depth Visited 3, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 259, Frame 866
+MATKAKIRJA valmius [saapuminen 0,7 s] aste 100,0 % | cesium käyty 43 (karsittuja käyty 0) piirto 32 karsittu 0 syvyys 3 jono työ 0 pää 0 ladattuja 259 | objektit 32/258 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 1 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 19 maks 19 (istunto 19) käsittelyssä 1 maks 1 (istunto 15) [pohja 6/6 y 0/0 p 393 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 260 pyyntöä 6 yhteyttä, kerma 1/1 y 1/1 p 1 pyyntöä 1 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat kerma k1 v0/0 | kamera korkeus 22436 km, maapiste 130,42°/s, korkeus +265,3 %/s, katse 152,2°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA lampo {"t":32,"aika":"17:46:56","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":29.4,"tavoite":60,"piirtovali":1}
+MATKAKIRJA linssit: elävä: hiljaa 0,7 s:n jälkeen: soi
+MATKAKIRJA saapuminen: GRC Korkeuteen → (38,6, 23,728) korkeus 0,159 R, näkyvä leveys 130 yks; web kotelossa (38,325, 23,728) 0,1458 R, laatikko {x 6473,25, y 1720,15, w 315,81, h 296,24}
+MATKAKIRJA linssit: elävä: 0,02 s: maakunnat syttyvät
+MATKAKIRJA elävät hetket: äänet valmiit (4 × 3, 24000 Hz, tehosteväylällä)
+[2026-10-04 17:46:56.376] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 128, Culled Visited 0, Rendered 81, Culled 51, Max Depth Visited 5, Loading-Worker 0, Loading-Main 1 Total Tiles Resident 280, Frame 885
+MATKAKIRJA valmius [saapuminen 1,3 s] aste 98,1 % | cesium käyty 128 (karsittuja käyty 0) piirto 81 karsittu 51 syvyys 5 jono työ 0 pää 1 ladattuja 280 | objektit 81/274 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 1 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 19 maks 19 (istunto 19) käsittelyssä 6 maks 8 (istunto 15) [pohja 6/6 y 5/5 p 437 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 286 pyyntöä 6 yhteyttä, kerma 1/1 y 1/1 p 1 pyyntöä 1 yhteyttä, muu 6/6 y 0/0 p 140 pyyntöä 6 yhteyttä] | luokat pohja k0 v44/0 p437 kerma k1 v0/0 maasto k0 v26/0 p286 | kamera korkeus 5826 km, maapiste 61,50°/s, korkeus -142,8 %/s, katse 75,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:56.878] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 57, Culled 58, Max Depth Visited 6, Loading-Worker 16, Loading-Main 1 Total Tiles Resident 308, Frame 902
+MATKAKIRJA valmius [saapuminen 1,8 s] aste 88,8 % | cesium käyty 109 (karsittuja käyty 0) piirto 57 karsittu 58 syvyys 6 jono työ 16 pää 1 ladattuja 308 | objektit 57/294 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 13 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 19 maks 19 (istunto 19) käsittelyssä 13 maks 18 (istunto 18) [pohja 6/6 y 6/6 p 443 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 325 pyyntöä 6 yhteyttä, kerma 1/1 y 1/1 p 1 pyyntöä 1 yhteyttä, muu 6/6 y 6/6 p 146 pyyntöä 6 yhteyttä] | luokat pohja k6 v0/0 p437 kerma k1 v0/0 vektorit k6 v0/0 p119 maasto k0 v39/0 p325 | kamera korkeus 3108 km, maapiste 16,88°/s, korkeus -93,6 %/s, katse 21,1°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto mandalay.json 200 alku 0 +63380 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto marseille.json 200 alku 0 +60371 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto manila.json 200 alku 0 +64823 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA esilataaja: tiedosto marrakech.json 200 alku 0 +56929 t (Kaynnistys, paketti:sisalto/1/v536)
+MATKAKIRJA maakunnat (maakuntarajat): 138 maata, 2546 aluetta, 42487 kaarta (46 ilman maata, 2333 alueen sisäistä ja 32492 ulkorajaa pois), jäsennys 416 ms, maittain 149 ms
+MATKAKIRJA maakunnat GRC: 14 aluetta, tunnuskartta 895×739 (teksel 1,2 km, 19,1…28,7°), rypäitä 1 (+0 pois), 126 rajajanaa, 18 ms
+Two or more raster overlays use the same material key on the same Cesium3DTileset. This will cause unexpected behavior, as only one of them will be passed to the tileset's material.
+MATKAKIRJA väritaso: GRC (z3–8)
+[2026-10-04 17:46:57.415] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 127, Culled Visited 0, Rendered 2, Culled 80, Max Depth Visited 8, Loading-Worker 2, Loading-Main 0 Total Tiles Resident 325, Frame 914
+MATKAKIRJA peli-komento: 33.11 odota-tila Kartta 30 → ok [Kartta]
+MATKAKIRJA linssit: elävä: 1,32 s: luovutus pysyville kerroksille
+MATKAKIRJA ui lipputanko: paneelin alla (paneeli 10–178 × 80–144 pt, tanko 55–568 × 1764–2298 px)
+MATKAKIRJA lipputanko: maa GRC, paikka 41,41 26,36, näkyy True, lippu 250×167, kangas 3D (jatkuva), korkeus 120 pt (maailma, kasvu 0,5, suoja 0,3), suunta maailma
+MATKAKIRJA ui lipputanko: yläpaneelin alle (41,41, 26,36), 844 ehdokasta
+MATKAKIRJA valmius [saapuminen 2,3 s] aste 1,4 % | cesium käyty 127 (karsittuja käyty 0) piirto 2 karsittu 80 syvyys 8 jono työ 2 pää 0 ladattuja 325 | objektit 2/294 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 19 maks 19 (istunto 19) käsittelyssä 18 maks 18 (istunto 18) [pohja 6/6 y 6/6 p 443 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 332 pyyntöä 6 yhteyttä, kerma 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, muu 6/6 y 6/6 p 146 pyyntöä 6 yhteyttä] | luokat pohja k6 v0/0 p437 kerma k0 v1/1 vektorit k6 v0/0 p119 maasto k6 v1/0 p326 | kamera korkeus 1122 km, maapiste 17,00°/s, korkeus -120,1 %/s, katse 21,5°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA linssit: elävä: valmis 1,6 s, kehyksiä 46, mediaani 17,0 ms, p95 133,1 ms, max 233,4 ms
+MATKAKIRJA lipputanko: maa GRC, paikka 41,52 26,43, näkyy True, lippu 250×167, kangas 3D (jatkuva), korkeus 120 pt (maailma, kasvu 0,5, suoja 0,3), suunta maailma
+MATKAKIRJA ui lipputanko: takaisin kulmaan
+MATKAKIRJA nostot: näkyvissä GRC, osuus 3,67, maan nostoja 80
+[2026-10-04 17:46:57.911] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 2, Culled 66, Max Depth Visited 8, Loading-Worker 2, Loading-Main 0 Total Tiles Resident 325, Frame 929
+MATKAKIRJA valmius [saapuminen 2,8 s] aste 1,7 % | cesium käyty 109 (karsittuja käyty 0) piirto 2 karsittu 66 syvyys 8 jono työ 2 pää 0 ladattuja 325 | objektit 2/294 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 14 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 19 maks 19 (istunto 19) käsittelyssä 14 maks 18 (istunto 18) [pohja 6/6 y 6/6 p 449 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 332 pyyntöä 6 yhteyttä, kerma 1/1 y 0/0 p 1 pyyntöä 1 yhteyttä, muu 6/6 y 2/6 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v6/6 p437 vektorit k2 v6/6 p119 maasto k6 v0/0 p326 | kamera korkeus 1006 km, maapiste 1,57°/s, korkeus -20,7 %/s, katse 2,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA ui lipputanko: näkyvissä (paneeli 10–178 × 80–144 pt, tanko 951–1810 × 1929–2765 px)
+MATKAKIRJA maamaski GRC: 3580×2956, 872 maarengasta, 3 järveä, 14 ms
+[2026-10-04 17:46:58.426] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 152, Loading-Main 0 Total Tiles Resident 331, Frame 959
+MATKAKIRJA valmius [saapuminen 3,3 s] aste 24,1 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 152 pää 0 ladattuja 331 | objektit 37/294 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 15 (kohde 0, kiire 1, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 22 maks 22 (istunto 22) käsittelyssä 15 maks 15 (istunto 18) [pohja 6/6 y 6/6 p 449 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 338 pyyntöä 6 yhteyttä, kerma 4/4 y 1/1 p 6 pyyntöä 4 yhteyttä, muu 6/6 y 2/2 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v0/0 p437 kerma k1 v4/0 vektorit k2 v0/0 p119 maasto k6 v6/6 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 3,9 s] aste 24,1 % | cesium - | objektit 37/294 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 20 (istunto 20) [pohja 6/6 y 6/6 p 461 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 346 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 17 pyyntöä 6 yhteyttä, muu 6/6 y 0/2 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v12/12 p437 kerma k6 v6/6 vektorit k0 v2/2 p119 maasto k6 v8/8 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:46:59.664] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 150, Loading-Main 0 Total Tiles Resident 341, Frame 993
+MATKAKIRJA peli-komento: 35.16 odota-tila → ok Kartta [Kartta]
+MATKAKIRJA peli-komento: 35.16 aani mykistys 1 → ok mykistys päällä (simulaattori True) [Kartta]
+MATKAKIRJA valmius [saapuminen 4,6 s] aste 24,9 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 150 pää 0 ladattuja 341 | objektit 37/294 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 485 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 359 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 31 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v24/13 p437 kerma k6 v14/12 maasto k6 v13/13 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA ui sisältö: kaupunkilehti ateena liitetty (1)
+[2026-10-04 17:47:00.159] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 147, Loading-Main 0 Total Tiles Resident 352, Frame 1015
+MATKAKIRJA valmius [saapuminen 5,0 s] aste 27,7 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 147 pää 0 ladattuja 352 | objektit 37/299 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 493 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 363 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 37 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v8/6 p437 kerma k6 v6/6 maasto k6 v4/4 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":36.12,"tavoiteMs":16.67,"liike":{"n":77,"p50":16.67,"p95":116.68,"p99":233.36,"max":233.36,"yli15x":15},"lepo":{"n":107,"p50":16.68,"p95":66.63,"p99":183.32,"max":216.68,"yli15x":8},"peitto":null,"kehyksia":184,"piirretty":184,"tilat":{"taysi":184,"lepo":0,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":1.93,"gpuKehyksia":184,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":34}
+[2026-10-04 17:47:00.661] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 141, Loading-Main 0 Total Tiles Resident 358, Frame 1043
+MATKAKIRJA valmius [saapuminen 5,5 s] aste 32,9 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 141 pää 0 ladattuja 358 | objektit 37/305 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 504 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 371 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 45 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v11/10 p437 kerma k6 v8/8 maasto k6 v8/8 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA ui liiku: piiloon (kerronta)
+[2026-10-04 17:47:01.166] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 132, Loading-Main 0 Total Tiles Resident 368, Frame 1068
+MATKAKIRJA valmius [saapuminen 6,1 s] aste 37,8 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 132 pää 0 ladattuja 368 | objektit 37/314 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 12 (kohde 0, kiire 4, tausta 0, saapuminen 0) jono 1 kiire 1 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 17 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 513 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 379 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 55 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k5 v10/10 p437 kerma k5 v11/11 maasto k4 v10/10 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:01.689] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 129, Loading-Main 0 Total Tiles Resident 374, Frame 1073
+MATKAKIRJA valmius [saapuminen 6,6 s] aste 39,0 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 129 pää 0 ladattuja 374 | objektit 37/317 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 523 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 387 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 65 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v9/9 p437 kerma k6 v9/9 maasto k6 v6/6 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:02.199] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 124, Loading-Main 0 Total Tiles Resident 380, Frame 1082
+MATKAKIRJA valmius [saapuminen 7,1 s] aste 41,0 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 124 pää 0 ladattuja 380 | objektit 37/322 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 18 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 18 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 533 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 393 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 77 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v10/10 p437 kerma k6 v12/12 maasto k6 v6/6 p326 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:02.710] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 37, Culled 66, Max Depth Visited 8, Loading-Worker 109, Loading-Main 5 Total Tiles Resident 393, Frame 1103
+MATKAKIRJA valmius [saapuminen 7,7 s] aste 45,0 % | cesium käyty 109 (karsittuja käyty 0) piirto 37 karsittu 66 syvyys 8 jono työ 109 pää 5 ladattuja 393 | objektit 37/338 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 3 (kohde 0, kiire 2, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 17 maks 18 (istunto 20) [pohja 6/6 y 5/6 p 546 pyyntöä 6 yhteyttä, maasto 6/6 y 6/6 p 405 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 91 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k5 v14/14 p437 kerma k6 v14/14 maasto k6 v12/10 p328 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:03.244] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 49, Culled 66, Max Depth Visited 8, Loading-Worker 100, Loading-Main 3 Total Tiles Resident 413, Frame 1111
+MATKAKIRJA valmius [saapuminen 8,1 s] aste 52,4 % | cesium käyty 109 (karsittuja käyty 0) piirto 49 karsittu 66 syvyys 8 jono työ 100 pää 3 ladattuja 413 | objektit 49/346 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 12 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 12 maks 18 (istunto 20) [pohja 6/6 y 6/6 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 107 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k6 v16/16 p437 kerma k6 v16/16 maasto k0 v13/11 p330 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:03.801] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 84, Loading-Main 0 Total Tiles Resident 413, Frame 1129
+MATKAKIRJA valmius [saapuminen 8,7 s] aste 64,9 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 84 pää 0 ladattuja 413 | objektit 65/351 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 12 (istunto 20) [pohja 6/6 y 0/6 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 130 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat pohja k0 v6/6 p437 kerma k6 v23/22 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:04.330] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 58, Loading-Main 0 Total Tiles Resident 413, Frame 1152
+MATKAKIRJA valmius [saapuminen 9,3 s] aste 77,7 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 58 pää 0 ladattuja 413 | objektit 65/351 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 168 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k6 v38/35 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:04.827] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 43, Loading-Main 0 Total Tiles Resident 413, Frame 1170
+MATKAKIRJA valmius [saapuminen 9,7 s] aste 85,2 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 43 pää 0 ladattuja 413 | objektit 65/351 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 184 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k6 v16/16 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:05.346] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 36, Loading-Main 0 Total Tiles Resident 413, Frame 1196
+MATKAKIRJA valmius [saapuminen 10,2 s] aste 88,2 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 36 pää 0 ladattuja 413 | objektit 65/353 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 4, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 5 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 205 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k5 v22/22 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":41.15,"tavoiteMs":16.67,"liike":null,"lepo":{"n":169,"p50":16.68,"p95":115.28,"p99":276.06,"max":281.75,"yli15x":21},"peitto":null,"kehyksia":169,"piirretty":169,"tilat":{"taysi":169,"lepo":0,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.42,"gpuKehyksia":169,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1712,"saapuminenVerkkoMs":0,"osumaPros":18}
+MATKAKIRJA VARTIJA 171: saapuminen GRC + saapuminen GRC valmis 10768 ms, aste 91,8 %, kohdemaa -, palvelin käynnissä 4 (kohde 0, kiire 4, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois
+[2026-10-04 17:47:05.910] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 25, Loading-Main 0 Total Tiles Resident 413, Frame 1220
+MATKAKIRJA valmius [saapuminen 10,8 s] aste 91,8 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 25 pää 0 ladattuja 413 | objektit 65/360 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 233 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k6 v27/26 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+[2026-10-04 17:47:06.437] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 109, Culled Visited 0, Rendered 65, Culled 66, Max Depth Visited 8, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 413, Frame 1235
+MATKAKIRJA valmius [saapuminen 11,3 s] aste 100,0 % | cesium käyty 109 (karsittuja käyty 0) piirto 65 karsittu 66 syvyys 8 jono työ 0 pää 0 ladattuja 413 | objektit 65/364 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 5 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 817 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 5 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 5/6 p 278 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k5 v46/34 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 11,9 s] aste 100,0 % | cesium - | objektit 65/364 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 813 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 6 (istunto 20) [pohja 6/6 y 0/0 p 563 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 412 pyyntöä 6 yhteyttä, kerma 6/6 y 0/6 p 298 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 148 pyyntöä 6 yhteyttä] | luokat kerma k0 v25/16 | kamera korkeus 1006 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+app.matkakirja.proto3d: 27748
