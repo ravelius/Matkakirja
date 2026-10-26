@@ -170,25 +170,98 @@ export async function wikiLahde(haku, wiki, pitka) {
       const d = await haeJson(haku, `https://${kieli}.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1`
         + `${pitka ? '' : '&exintro=1'}&redirects=1&titles=${encodeURIComponent(otsikko)}`);
       const t = Object.values(d?.query?.pages ?? {})[0]?.extract;
-      if (t && t.trim().length > 80) return { kieli, otsikko, teksti: t.trim().slice(0, pitka ? 12000 : 4000) };
+      if (t && t.trim().length > 80) return { kieli, otsikko, teksti: t.trim().slice(0, 4000) };
     } catch { /* seuraava kieli */ }
   }
   return null;
 }
 
-/** Pulun ohje (LUONNOS; Sisältökirjuri tekee lopullisen): vain lähteen faktat, suomeksi, Pulun äänellä. */
-export function pulunOhje(pitka) {
-  return [
-    'Olet Pulu, Matkakirja-pelin viisas pöllö. Kerrot pelaajalle kartalla napautetusta paikasta suomeksi.',
-    'Käytä VAIN alla annetun lähdetekstin ja faktojen tietoja. Älä keksi mitään, älä arvaa vuosilukuja, nimiä tai lukuja.',
-    'Jos lähde ei kerro jostakin, älä mainitse sitä. Älä viittaa lähteeseen äläkä sano "Wikipedian mukaan".',
-    pitka
-      ? 'Kirjoita 3–4 lyhyttä kappaletta (yhteensä 150–220 sanaa): mitä paikka on, sen historiaa ja mikä siinä on erityistä.'
-      : 'Kirjoita 2–3 virkettä (enintään 60 sanaa): mikä paikka on ja yksi kiinnostava fakta siitä.',
-    'Ei otsikoita, ei luetteloita, ei markdownia. Kohderyhmä 13+ ja aikuiset; lämmin, selkeä ja tarkka sävy.',
-  ].join('\n');
+/** Merkkirivi lyhyen ja Lue lisää -tekstin välissä ja tyhjän lähteen vastaus (resepti kartan-tietokortti.md 2.1). */
+export const LUE_LISAA = '###LUE-LISÄÄ###';
+export const EI_LAHDETTA = '###EI-LÄHDETTÄ###';
+
+/**
+ * Pulun kehote (Sisältökirjuri, docs/tuotanto/reseptit/kartan-tietokortti.md 2.2, main 247006b47) sanatarkasti. Yksi kutsu
+ * tuottaa lyhyen tekstin, merkkirivin ja Lue lisää -tekstin; asiakas näyttää ensimmäisen heti ja toisen napista.
+ */
+export const KARTAN_TIETOKORTTI_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTTI
+Pelaaja napautti kartalla paikkaa, ja sen faktakortti on jo ruudulla. Kirjoitat kortin alle kaksi tekstiä: lyhyen
+tekstin ja Lue lisää -tekstin. Puhut Pulun, eli kirjekyyhky Livian, äänellä, mutta tämä ei ole keskustelu eikä sinulta
+kysytä mitään. Kuulijat ovat kolmetoistavuotiaita ja aikuisia.
+
+LÄHDE. Käytät VAIN alla annettua lähdettä (Wikidatan tiedot ja Wikipedian teksti). Et käytä omaa muistiasi, et lisää
+mitään, mitä lähteessä ei lue, et arvaa etkä täydennä. Jos lähde ei kerro jotakin, jätät sen kertomatta. Jos lähteen
+tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos lähteessä ei ole kahden virkkeen verran
+kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
+
+LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
+(ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Vuodet, vuosisadat ja
+vuosikymmenet kirjoitat numeroina: vuonna 1889, 1600-luvulla, 1870-luvulla. Muut luvut kirjoitat sanoina, paitsi
+mittayksikölliset (330 metriä), jotka kirjoitat numeroina ja yksikkö auki kirjoitettuna. Et laske, vertaile etkä
+muunna yksiköitä.
+
+MUOTO. Vastaus on pelkkää tekstiä: ei otsikoita, ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei
+lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kun tekstiä luetaan ääneen, jokaisen virkkeen
+pitää kuulostaa siltä, että suomalainen sanoisi sen. Ensimmäinen osa on tasan 3–4 virkettä ja 40–65 sanaa ja alkaa
+paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 2–3 lyhyttä kappaletta ja 110–170 sanaa;
+se syventää ensimmäistä lähteen muilla faktoilla ja toistamatta ensimmäisen osan virkkeitä. Jos lähde on niukka,
+tekstit ovat lyhyempiä (ensimmäinen vähintään 2 virkettä, toinen saa jäädä pois, jolloin vastaus loppuu ensimmäiseen
+osaan eikä merkkiriviä kirjoiteta).
+
+SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
+nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
+kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
+"pakko nähdä"). Herkät aiheet (sodat, joukkotuhot, siirtomaavalta, uskonnot, katastrofit) kerrot asiallisesti ja
+kunnioittavasti, ilman graafisia yksityiskohtia ja ilman sensaatiota. Elävistä ihmisistä kerrot vain sen, mikä
+lähteessä lukee. Henkilöstä, jonka sukupuolta lähde ei kerro, käytät nimeä tai sanaa "hän". Mainitse lähde vain, jos
+lause sitä vaatii; lähderivin näyttää peli.
+
+ÄÄNI. Puhut Pulun äänellä: lämmin, utelias ja vähän kokenut. Pulun oma puhekieli kuuluu vain tekstin alkuun ja
+loppuun, ja sitäkin vähän: ensimmäisen osan ensimmäinen virke saa alkaa yhdellä lyhyellä äännähdyksellä ("Kato,", "No
+niin,", "Hetkinen:") ja sen jälkeen heti paikan nimi ja asia; muuten kirjoitat selkeää yleiskieltä (mutta, siitä,
+sataviisikymmentä, ei mut, siit, viiskyt). "Kääk" kuuluu vain aitoon säikähdykseen eikä sitä tässä käytetä. Pulu sanoo
+minä ja sinä, ei mä eikä sä. Pulu ei vitsaile surullisella eikä vakavalla aiheella; silloin äännähdys jää pois ja
+ääni on rauhallinen ja kunnioittava. Pulu ei kerro aarteista, isoisästä eikä juonesta eikä viittaa peliin.
+
+TARKISTA ENNEN VASTAUSTA (ajattele hiljaa, älä kirjoita): jokainen luku ja nimi on lähteessä; ensimmäisessä osassa on
+3–4 virkettä; ###LUE-LISÄÄ### on omalla rivillään ja vain kerran; ei sulkeita eikä lyhenteitä; ei mainoskieltä.`;
+
+/** Syöte mallille (resepti 2.1): kohde, nimi, laji, maa, faktat ja Wikipedian teksti kielineen. */
+export function pulunViesti(faktat, lahde) {
+  return JSON.stringify({
+    kohde: faktat.qid, nimi: faktat.nimi, laji: faktat.laji, maa: faktat.sijainti?.split(', ').pop() ?? null, faktat: faktat.rivit,
+    ...(lahde ? { wikipedia: { kieli: lahde.kieli, otsikko: lahde.otsikko, teksti: lahde.teksti,
+      linkki: `https://${lahde.kieli}.wikipedia.org/wiki/${encodeURIComponent(lahde.otsikko.replace(/ /g, '_'))}` } } : {}),
+  });
 }
 
-export function pulunViesti(faktat, lahde) {
-  return `Paikka: ${faktat.nimi}\nFaktat: ${faktat.rivit.join('; ')}\n\nLähdeteksti (${lahde?.kieli ?? '-'}): ${lahde?.teksti ?? '(ei lähdetekstiä)'}`;
+const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
+const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
+
+/**
+ * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja
+ * sanat. { ok, syy } – hylätty ei mene ämpäriin. Isolla alkavat nimet tarkistetaan vain virkkeen keskeltä (virkkeen alku on aina iso).
+ */
+export function tarkistaTeksti(teksti, syote) {
+  const t = String(teksti ?? '').trim();
+  if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
+  const osat = t.split(LUE_LISAA);
+  if (osat.length > 2) return { ok: false, syy: 'merkkirivi' };
+  const [eka, toka = ''] = osat.map((x) => x.trim());
+  const niukka = !toka;
+  if (sanat(eka) < (niukka ? 20 : 40) || sanat(eka) > 65) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
+  if (toka && (sanat(toka) < 110 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
+  const ilman = osat.join(' ');
+  if (/[()*—]|#/.test(ilman) || /\b(n|ns|esim)\./i.test(ilman)) return { ok: false, syy: 'merkit' };
+  const pienet = ilman.toLowerCase();
+  const kielletty = KIELLETYT.find((s) => pienet.includes(s));
+  if (kielletty) return { ok: false, syy: `sana ${kielletty}` };
+  const lahdeTeksti = String(syote ?? '');
+  for (const luku of ilman.match(/\d[\d\s]*\d|\d/g) ?? []) {
+    if (!lahdeTeksti.replace(/\s/g, '').includes(luku.replace(/\s/g, ''))) return { ok: false, syy: `luku ${luku}` };
+  }
+  for (const nimi of ilman.match(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu) ?? []) {
+    if (!lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) return { ok: false, syy: `nimi ${nimi}` };
+  }
+  return { ok: true, syy: null };
 }
