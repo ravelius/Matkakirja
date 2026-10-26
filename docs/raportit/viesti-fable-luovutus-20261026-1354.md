@@ -22,6 +22,8 @@ Viikko 90 %: vain junan 211 jonossa olevaa työtä, ei uusia avauksia.
 - Havainne-editorin kiilat selvitetty (NS): botin juoksumatka ennen sijoitusta + b5/b6-vaihdon kuorma; korjaus "botti 0";
   editori.sh oletus juna-211 (NUI 3e64c8d20, junan rungossa). KIIREELLINEN AUKI: havainne-skenaario lähetti "valo jaady"
   myös Isolle iPadille 13.46 → NUI rajaa kohteen editoriin, LR ei aja ennen sitä tai LT:n tulosta.
+  PÄIVITYS 13.58 (NUI): iPadille ei mennyt mitään; "valo jaady" oli Macin ui-loki.txt:ssä, jota editori ja Mac-käännös
+  jakavat. NUI tekee esikatselulle oman datakansion ("Matkakirja 3D esikatselu"). LR odottaa LT:n tulosta.
 
 ## 1. JUNA 211 (runko NS 3e64c8d20 = 9460c52c6 b6 + editorityökalu; sisältää elävän kartan aae00fc87 ja LR paketti56)
 - KS (nollattu, luovutus 024389943): karttaseppa/elava-kartta 6f3102236 (b6; sarja + elävät elementit + 3D vain sarjalle).
