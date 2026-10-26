@@ -167,6 +167,12 @@ Kolmioita vain siluettiin vaikuttaviin osiin (reunukset, portaat, pylväät, rä
 
 **4. Valmiiksi laskettu valo.** Kun aurinko on kiinteä, staattisten osien varjot ja nurkkavarjostus leivotaan valokarttaan;
 reaaliaikainen varjo vain hahmoille ja liikkuville osille. Lehvästön varjo kuviona.
+*Järjestys (PT 26.10.2026 omistajan kysymyksen 21.06 jälkeen: "Onko valaisussa joku perustavanlaatuinen ongelma?"):* leivottu
+valo on kuva muodosta, joten (1) muoto lukitaan alue kerrallaan (kujat, hallit, jalustat, lattiat) → (2) leivotaan kerran
+lopuksi samoilla varjostajilla, jotka peli lataa → (3) tarkistus 0 ennen paria: `python3 tyokalut/tarkista_leivonta.py
+<vientikansio>` (proto-repo; tuplalattiat, joilla on eri valo = z-taistelu, ja eri tasojen kasvot samoilla tekseleillä) ja
+Lavastajan omat ajot (tuplat, UV1-päällekkäisyys, haamuvarjot, UV0-saumat); tulosrivi liitetään pariin. Muodon muutos leivonnan
+jälkeen = uusi leivonta, muuten poistetun geometrian varjo jää lattiaan (26.10.: aukion kiilat, 06:n vinovyö, tuplalattiat).
 
 **5. Yksityiskohdat vain lähellä.** Kuviot ja instanssit vain lähimmässä tasossa (LOD0, noin 150 m) ja häivytetään etäisyyden mukaan;
 kaukaiset tasot pysyvät kevyinä. Budjetit kohdan 3 mukaan, ruutuaika alle 20 ms (NS mittaa).
