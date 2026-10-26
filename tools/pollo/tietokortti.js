@@ -11,8 +11,9 @@
  * Suomenkielinen kaava on LUONNOS (Sisältökirjuri tekee lopullisen, PT 26.10. 22.13).
  */
 import { haeJson } from './opas.js';
+import { laji, LAJI_QIDS, faktarivit, alarivi, viitatut, valitseAsukkaat } from './tietokortti-kaava.js';
 
-export const TIETOKORTTI_VERSIO = 'v1';
+export const TIETOKORTTI_VERSIO = 'v2';
 /** Tietokortit pysyvät; uusi versio = uusi avain. */
 export const TIETOKORTTI_TTL_S = 365 * 24 * 3600;
 
@@ -135,29 +136,58 @@ async function commonsKuva(haku, tiedosto) {
   }
 }
 
-/** Kortin faktat Wikidata-kohteesta (kaava: nimi; laji ja sijainti; asukkaat tai korkeus; kuva). Puuttuva kenttä jää pois. */
+/** P279-esivanhemmat (enintään 4 tasoa) P31-luokille; pysähtyy reseptin lajitaulukon luokkaan. Muistissa isolaatin ajan. */
+const ylaMuisti = new Map();
+async function ylaluokat(haku, qids) {
+  const tulos = {};
+  let taso = qids.filter((q) => !LAJI_QIDS.has(q));
+  const vanhempi = new Map(qids.map((q) => [q, q]));   // esivanhempi → alkuperäinen P31
+  for (let k = 0; k < 4 && taso.length; k += 1) {
+    const hae = taso.filter((q) => !ylaMuisti.has(q)).slice(0, 50);
+    if (hae.length) {
+      try {
+        const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims&ids=${hae.join('%7C')}`);
+        for (const [q, e] of Object.entries(d?.entities ?? {})) ylaMuisti.set(q, (e?.claims?.P279 ?? []).map((c) => c?.mainsnak?.datavalue?.value?.id).filter(Boolean));
+      } catch { break; }
+    }
+    const seuraava = [];
+    for (const q of taso) {
+      for (const y of ylaMuisti.get(q) ?? []) {
+        const alku = vanhempi.get(q);
+        (tulos[alku] ??= []).push(y);
+        if (!vanhempi.has(y)) { vanhempi.set(y, alku); if (!LAJI_QIDS.has(y)) seuraava.push(y); }
+      }
+    }
+    taso = seuraava;
+  }
+  return tulos;
+}
+
+/**
+ * Kortin faktat Wikidata-kohteesta Sisältökirjurin kaavalla (resepti osa 1): nimi, alarivi "Laji · Maa", enintään viisi
+ * faktariviä "Otsikko: arvo" ja Commonsin kuva. Puuttuva kenttä jää pois.
+ */
 export async function korttiFaktat(haku, e, osmNimi) {
-  const lajit = arvot(e, 'P31').map((v) => v.id).slice(0, 2);
-  const paikka = [...arvot(e, 'P131').map((v) => v.id).slice(0, 1), ...arvot(e, 'P17').map((v) => v.id).slice(0, 1)];
-  const L = await nimiot(haku, [...new Set([...lajit, ...paikka])]);
-  const fi = (q) => L[q]?.fi ?? null;
-  const laji = lajit.map(fi).find(Boolean) ?? null;
-  const sijainti = [...new Set(paikka.map((q) => fi(q) ?? L[q]?.en).filter(Boolean))].join(', ') || null;
-  const korkeus = arvot(e, 'P2044').map((v) => Math.round(Number(v.amount))).find(Number.isFinite) ?? null;
-  const v = vakiluku(e);
+  const p31 = arvot(e, 'P31').map((v) => v.id);
+  const lj = laji(p31, await ylaluokat(haku, p31.slice(0, 6)));
+  // Nykyinen maa: ei päättyneitä (P582) eikä hylättyjä; suositeltu ensin (Cambridge: P17:ssä myös Englannin kuningaskunta ym.).
+  const p17 = (e?.claims?.P17 ?? []).filter((c) => c.rank !== 'deprecated' && !c?.qualifiers?.P582);
+  const p17ens = p17.some((c) => c.rank === 'preferred') ? p17.filter((c) => c.rank === 'preferred') : p17;
+  const maaQ = p17ens.map((c) => c?.mainsnak?.datavalue?.value?.id).filter(Boolean).slice(0, 4);
+  const L = await nimiot(haku, [...new Set([...maaQ, ...viitatut(e, lj.ryhma)])].slice(0, 50));
+  const nimi = (q) => L[q]?.fi ?? L[q]?.en ?? null;
+  const maat = maaQ.map(nimi).filter(Boolean);
+  const v = valitseAsukkaat(e);
+  const kohteenNimi = e?.labels?.fi?.value ?? e?.labels?.en?.value ?? osmNimi;
   return {
     qid: e.id,
-    nimi: e?.labels?.fi?.value ?? osmNimi,
-    laji,
-    sijainti,
-    // Kaava (luonnos): "Kylä Etelä-Cambridgeshiressä, Yhdistynyt kuningaskunta" → kortti rakentaa rivin laji + sijainti.
-    rivit: [
-      laji && sijainti ? `${laji[0].toUpperCase()}${laji.slice(1)} – ${sijainti}` : (laji ?? sijainti),
-      asukkaatTeksti(v),
-      korkeus != null && !v ? `${korkeus} metriä merenpinnan yläpuolella` : null,
-    ].filter(Boolean),
+    nimi: kohteenNimi,
+    laji: lj.nimi,
+    alarivi: alarivi(lj.nimi, maat),
+    // Alue ei ole kaupunki itse (resepti 1.4: Cambridgen P131 on Cambridgen piirikunta, sama nimi).
+    rivit: faktarivit(e, lj, nimi, maat.length === 1 ? maat[0] : null).filter((r) => r !== `Alue: ${kohteenNimi}`),
+    sijainti: maat.join(', ') || null,
     asukkaat: v,
-    korkeusM: korkeus,
     kuva: await commonsKuva(haku, arvot(e, 'P18')[0]),
     wiki: { fi: e?.sitelinks?.fiwiki?.title ?? null, en: e?.sitelinks?.enwiki?.title ?? null },
   };
@@ -230,7 +260,7 @@ TARKISTA ENNEN VASTAUSTA (ajattele hiljaa, älä kirjoita): jokainen luku ja nim
 /** Syöte mallille (resepti 2.1): kohde, nimi, laji, maa, faktat ja Wikipedian teksti kielineen. */
 export function pulunViesti(faktat, lahde) {
   return JSON.stringify({
-    kohde: faktat.qid, nimi: faktat.nimi, laji: faktat.laji, maa: faktat.sijainti?.split(', ').pop() ?? null, faktat: faktat.rivit,
+    kohde: faktat.qid, nimi: faktat.nimi, laji: faktat.laji, maa: faktat.sijainti ?? null, faktat: faktat.rivit,
     ...(lahde ? { wikipedia: { kieli: lahde.kieli, otsikko: lahde.otsikko, teksti: lahde.teksti,
       linkki: `https://${lahde.kieli}.wikipedia.org/wiki/${encodeURIComponent(lahde.otsikko.replace(/ /g, '_'))}` } } : {}),
   });
