@@ -50,3 +50,11 @@ Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto, haarat paikallisia.
 4. Kuja-40 odottaa omistajan leveyspäätöstä (ennallaan).
 
 Väsymystä ja säpsähdystä ei enää odoteta: kortit 12.45 hyväksyttiin, ja ne on toteutettu.
+
+## LISÄYS 13.10
+
+- Simuvideo f421306f7 on valmis: proto-3d/lokit/todistus-elavyys-f421306f7-20261026-1301/elavyys.mp4 (266 Mt). Lokissa näkyvät kallistus,
+  kompurointi ja vilkaisut taakse ja sivulle. Säpsähdys ja piristys eivät lauenneet: botin reitillä ei ollut estettä, ja QA-elinvoima
+  ohitti piristyksen. Korjattu: **f324e3a9f** (QA sapsahdys säpsähtää heti, QA elinvoima-nousu piristää). tarkista.sh 0.
+  Simu 39644E75 on sammutettu, ja JU:lle on lähetetty SIMU VAPAA. Seuraava käännös kärjestä f324e3a9f (sisältää 81479b011:n).
+  Huom.: vilkaisuja tuli tiheästi (taakse noin 10 s:n ja sivulle noin 5 s:n välein); harvenna tarvittaessa.
