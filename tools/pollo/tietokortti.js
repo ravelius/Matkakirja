@@ -212,7 +212,7 @@ export const LUE_LISAA = '###LUE-LISÄÄ###';
 export const EI_LAHDETTA = '###EI-LÄHDETTÄ###';
 
 /**
- * Pulun kehote (Sisältökirjuri, docs/tuotanto/reseptit/kartan-tietokortti.md 2.2, main ae5f5e02e) sanatarkasti. Yksi kutsu
+ * Pulun kehote (Sisältökirjuri, docs/tuotanto/reseptit/kartan-tietokortti.md 2.2, main c431c17ae) sanatarkasti. Yksi kutsu
  * tuottaa lyhyen tekstin, merkkirivin ja Lue lisää -tekstin; asiakas näyttää ensimmäisen heti ja toisen napista.
  */
 export const KARTAN_TIETOKORTTI_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTTI
@@ -248,6 +248,11 @@ sulautunut linnan kylkeen"), ellei lähde sano samaa.
 VIRKKEET LOPPUUN. Jokainen virke ja koko vastaus päättyy valmiiseen virkkeeseen ja pisteeseen; kesken jäävää tekstiä ei
 tuoteta. Jos tila loppuu, jätät viimeisen lauseen kirjoittamatta kokonaan.
 
+LUE LISÄÄ EI TOISTA. Toinen osa ei saa sisältää mitään asiaa, joka on jo ensimmäisessä osassa tai faktakortilla: sama
+vuosi, sama nimi tai sama hallinnollinen tieto kerrotaan vain kerran koko vastauksessa, eikä sama asia saa palata
+toisin sanoin ("pieni kaupunki" ei toista laji-riviä). Toisen osan pitää tuoda vähintään kolme uutta lähteen faktaa. Jos
+niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen osaan, merkkiriviä ei kirjoiteta).
+
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
 kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
@@ -256,10 +261,10 @@ kunnioittavasti, ilman graafisia yksityiskohtia ja ilman sensaatiota. Elävistä
 lähteessä lukee. Henkilöstä, jonka sukupuolta lähde ei kerro, käytät nimeä tai sanaa "hän". Mainitse lähde vain, jos
 lause sitä vaatii; lähderivin näyttää peli.
 
-ÄÄNI. Puhut Pulun äänellä: lämmin, utelias ja vähän kokenut. Pulun oma puhekieli kuuluu vain tekstin alkuun ja
-loppuun, ja sitäkin vähän: ensimmäisen osan ensimmäinen virke saa alkaa yhdellä lyhyellä äännähdyksellä ("Kato,", "No
-niin,", "Hetkinen:") ja sen jälkeen heti paikan nimi ja asia; muuten kirjoitat selkeää yleiskieltä (mutta, siitä,
-sataviisikymmentä, ei mut, siit, viiskyt). "Kääk" kuuluu vain aitoon säikähdykseen eikä sitä tässä käytetä. Pulu sanoo
+ÄÄNI. Puhut Pulun äänellä: lämmin, utelias ja vähän kokenut. Korttitekstissä ei käytetä äännähdyksiä eikä alustuksia
+("Kato,", "No niin," ja muut jäävät chatille: kirjoitettuna ne näyttävät virheeltä, tuore lukija 26.10.). Pulun ääni
+kuuluu sanavalinnoissa ja elävissä, selkeissä yleiskielen lauseissa (mutta, siitä, ei mut, siit); teksti alkaa suoraan
+paikan nimellä. "Kääk" kuuluu vain aitoon säikähdykseen eikä sitä tässä käytetä. Pulu sanoo
 minä ja sinä, ei mä eikä sä. Pulu ei vitsaile surullisella eikä vakavalla aiheella; silloin äännähdys jää pois ja
 ääni on rauhallinen ja kunnioittava. Pulu ei kerro aarteista, isoisästä eikä juonesta eikä viittaa peliin.
 
@@ -282,7 +287,7 @@ const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
  * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja
  * sanat. { ok, syy } – hylätty ei mene ämpäriin. Isolla alkavat nimet tarkistetaan vain virkkeen keskeltä (virkkeen alku on aina iso).
  */
-export function tarkistaTeksti(teksti, syote) {
+export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   const t = String(teksti ?? '').trim();
   if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
   const osat = t.split(LUE_LISAA);
@@ -296,12 +301,23 @@ export function tarkistaTeksti(teksti, syote) {
   const pienet = ilman.toLowerCase();
   const kielletty = KIELLETYT.find((s) => pienet.includes(s));
   if (kielletty) return { ok: false, syy: `sana ${kielletty}` };
-  // PT 26.10. vedos 2: ei aloitusäännähdystä ("Kato," pois) eikä Lue lisää -osassa samoja lukuja kuin lyhyessä (jatko vain uutta tietoa).
-  if (/^(kato|no niin|hetkinen)\b/i.test(eka)) return { ok: false, syy: 'aloitus' };
-  if (toka) {
-    const ekanLuvut = new Set(eka.match(/\d{2,}/g) ?? []);
-    const toisto = (toka.match(/\d{2,}/g) ?? []).find((x) => ekanLuvut.has(x));
-    if (toisto) return { ok: false, syy: `toisto ${toisto}` };
+  // 2.4/6: ei alustusäännähdyksiä tekstin alussa.
+  if (/^(kato|no niin|hetkinen|kääk)\b/i.test(eka)) return { ok: false, syy: 'aloitus' };
+  // 2.4/8: ei toistoa – nelinumeroinen vuosi tai erisnimi (≥ 5 kirjainta, ei kohteen omaa nimeä) kerran koko vastauksessa,
+  // ja kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys.
+  const vuodet = ilman.match(/\b\d{4}\b/g) ?? [];
+  const vuosiToisto = vuodet.find((v, i) => vuodet.indexOf(v) !== i);
+  if (vuosiToisto) return { ok: false, syy: `toisto ${vuosiToisto}` };
+  const oma = (kohteenNimi ?? '').toLowerCase();
+  const nimet = (ilman.match(/(?<=[\p{Ll},] )[\p{Lu}][\p{L}-]{4,}/gu) ?? []).filter((n) => !oma.includes(n.toLowerCase().slice(0, 5)));
+  const nimiToisto = nimet.find((n, i) => nimet.findIndex((m) => m.slice(0, 5) === n.slice(0, 5)) !== i);
+  if (nimiToisto) return { ok: false, syy: `toisto ${nimiToisto}` };
+  const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
+  for (let a = 0; a < virkkeet.length; a += 1) {
+    for (let b = a + 1; b < virkkeet.length; b += 1) {
+      const yhteiset = [...virkkeet[a]].filter((x) => virkkeet[b].has(x)).length;
+      if (yhteiset / Math.min(virkkeet[a].size, virkkeet[b].size) > 0.6) return { ok: false, syy: 'lähes sama virke' };
+    }
   }
   // 2.4/7: ei puhuttelua eikä kehotuksia.
   if (/katsel|huomaat|kannattaa|kävele|\bnäet\b|tuntuu|\bkun \p{L}+t\b/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };

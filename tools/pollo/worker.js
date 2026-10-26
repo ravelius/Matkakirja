@@ -3954,7 +3954,7 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
           }
         }
       }
-      const tarkistus = tarkistaTeksti(teksti, syote);
+      const tarkistus = tarkistaTeksti(teksti, syote, kortti.nimi);
       if (virhe) await laheta('virhe', { viesti: virhe });
       await laheta('loppu', { vastaus: teksti.trim(), valmiina: false, lahde: lahdeRivi, tarkistus: tarkistus.ok ? 'ok' : tarkistus.syy });
       console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: ${tarkistus.ok ? 'hyväksytty' : `hylätty (${tarkistus.syy})`}`);
@@ -3965,7 +3965,7 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
           const u = await kysyMallitiedot(env, {
             jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KARTAN_TIETOKORTTI_KEHOTE}`, viestit: [{ role: 'user', content: syote }], maxTokens: 900, jaettu: true,
           });
-          const t2 = tarkistaTeksti(u.teksti, syote);
+          const t2 = tarkistaTeksti(u.teksti, syote, kortti.nimi);
           console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: uusinta ${kerta + 1} ${t2.ok ? 'hyväksytty' : `hylätty (${t2.syy})`}`);
           if (t2.ok && u.stop === 'end_turn' && u.teksti.trim()) talteen = u.teksti.trim();
         } catch { break; }
