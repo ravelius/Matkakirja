@@ -2703,3 +2703,7 @@ voitaisiin käyttää tiedon striimaamiseen ja pystyisikö sitä tietoa siistim�
 olet mieltä?" Kortti "Tehdäänkö kartan tietokortit näin?" (KK suositteli faktoja heti ja Pulun tekstejä valmiiksi erissä), omistaja omin sanoin klo 22.13: "Faktat heti, pulun teksti striimataan.
 Kohteita liikaa. Mietitään myöhemmin generoimista etukäteen." Raamattuun uusi kohta 2.203 sekä poikkeusviitteet kohtiin 2.31 (peruspeli ilman API-krediittejä) ja 2.76 (ennakkosisältö Opus-agenteilla).
 Tekijät: Karttaseppä (kartan napautus ja kortti) ja Sisältökirjuri (suomenkielinen kaava ja faktalähteet); workerin osuus PT:n jaolla.
+
+## JUNA 211 JULKAISTAAN, KUN KARTAN TIETOKORTTI ON VALMIS; VEDOS ENSIN (omistaja 26.10.2026 klo 22.14) (26.10.2026 klo 22.16)
+
+Omistaja KK:ssa sanatarkasti: "Junan voi julkaista kun tietokortti valmis. Näytä vedos ensin". Tulkinta (KK, PT kirjaa): juna 211 lukitaan ja viedään TestFlightiin, kun kartan tietokortti (Raamattu 2.203) on valmis. Ennen toteutusta omistajalle näytetään KK:n kautta vedos: oikea syvän kartan paikka, Wikidatan faktat kaavalla, Pulun striimattu teksti ja Lue lisää. Juoksupelin ja muut valmistuvat työt latautuvat junaan siihen asti.
