@@ -350,6 +350,11 @@ sulautunut linnan kylkeen"), ellei lähde sano samaa.
 VIRKKEET LOPPUUN. Jokainen virke ja koko vastaus päättyy valmiiseen virkkeeseen ja pisteeseen; kesken jäävää tekstiä ei
 tuoteta. Jos tila loppuu, jätät viimeisen lauseen kirjoittamatta kokonaan.
 
+LUE LISÄÄ EI TOISTA. Toinen osa ei saa sisältää mitään asiaa, joka on jo ensimmäisessä osassa tai faktakortilla: sama
+vuosi, sama nimi tai sama hallinnollinen tieto kerrotaan vain kerran koko vastauksessa, eikä sama asia saa palata
+toisin sanoin ("pieni kaupunki" ei toista laji-riviä). Toisen osan pitää tuoda vähintään kolme uutta lähteen faktaa. Jos
+niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen osaan, merkkiriviä ei kirjoiteta).
+
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
 kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
@@ -358,10 +363,10 @@ kunnioittavasti, ilman graafisia yksityiskohtia ja ilman sensaatiota. Elävistä
 lähteessä lukee. Henkilöstä, jonka sukupuolta lähde ei kerro, käytät nimeä tai sanaa "hän". Mainitse lähde vain, jos
 lause sitä vaatii; lähderivin näyttää peli.
 
-ÄÄNI. Puhut Pulun äänellä: lämmin, utelias ja vähän kokenut. Pulun oma puhekieli kuuluu vain tekstin alkuun ja
-loppuun, ja sitäkin vähän: ensimmäisen osan ensimmäinen virke saa alkaa yhdellä lyhyellä äännähdyksellä ("Kato,", "No
-niin,", "Hetkinen:") ja sen jälkeen heti paikan nimi ja asia; muuten kirjoitat selkeää yleiskieltä (mutta, siitä,
-sataviisikymmentä, ei mut, siit, viiskyt). "Kääk" kuuluu vain aitoon säikähdykseen eikä sitä tässä käytetä. Pulu sanoo
+ÄÄNI. Puhut Pulun äänellä: lämmin, utelias ja vähän kokenut. Korttitekstissä ei käytetä äännähdyksiä eikä alustuksia
+("Kato,", "No niin," ja muut jäävät chatille: kirjoitettuna ne näyttävät virheeltä, tuore lukija 26.10.). Pulun ääni
+kuuluu sanavalinnoissa ja elävissä, selkeissä yleiskielen lauseissa (mutta, siitä, ei mut, siit); teksti alkaa suoraan
+paikan nimellä. "Kääk" kuuluu vain aitoon säikähdykseen eikä sitä tässä käytetä. Pulu sanoo
 minä ja sinä, ei mä eikä sä. Pulu ei vitsaile surullisella eikä vakavalla aiheella; silloin äännähdys jää pois ja
 ääni on rauhallinen ja kunnioittava. Pulu ei kerro aarteista, isoisästä eikä juonesta eikä viittaa peliin.
 
@@ -396,10 +401,12 @@ myös naapurikylien väkeä.
    luku tai nimi = hylkäys ja uusinta (enintään kaksi uusintaa, sen jälkeen `###EI-LÄHDETTÄ###`).
 4. Ei merkkejä `(`, `)`, `*`, `#` (paitsi merkkirivi), `—`, ei pisteellistä lyhennettä (`n.`, `ns.`, `esim.`), ei emojeita.
 5. Kielletyt sanat: kaikkien aikojen, ainutlaatuinen, ihana, pakko nähdä, upea, mahtava, uskomaton.
-6. Ei sanoja `Wikipedia`, `Wikidata`, `lähde` (lähderivin näyttää peli).
+6. Ei alustusäännähdyksiä (`Kato`, `No niin`, `Hetkinen`, `Kääk`) tekstin alussa.
+6b. Ei sanoja `Wikipedia`, `Wikidata`, `lähde` (lähderivin näyttää peli).
 7. Ei puhuttelua eikä kehotuksia: hylkäys, jos vastauksessa on `katsel`, `huomaat`, `kannattaa`, `kävele`, `näet`, `tuntuu`, `kun ` + 2. persoonan verbi.
-8. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
-9. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
+8. **Ei toistoa:** sama nelinumeroinen vuosiluku tai sama erisnimi (vähintään viisi kirjainta) esiintyy koko vastauksessa kerran kummassakin osassa korkeintaan yhteensä kerran; kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys.
+9. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
+10. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
 
 ### 2.5 Näytteet ennen julkaisua
 
