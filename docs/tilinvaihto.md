@@ -42,6 +42,17 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 3. Vanhat sessiot tyhjiksi: `clear_session`, tarkistus `list_events` = 0. Jos vanhan tilin sessiot eivät näy uudella tilillä,
    ne jäävät vanhalle tilille – ei toimia (ne eivät kuluta uuden tilin kiintiötä).
 
+## 1.5 Kotikansiot mainiin ENNEN sessioiden luontia (Raamattu 12.23 kohta 17 ja 7.47; KK 26.10.2026)
+Sovellus lataa CLAUDE.md:n session kansiosta vain käynnistyessään, joten jäljessä oleva kotikansio antaa uudelle sessiolle vanhat
+ohjeet koko sen eliniäksi. Siksi kotikansiot päivitetään vanhan tilin roolien luovutusten jälkeen ja ennen kohtaa 2:
+1. `zsh tools/paivita-kotikansiot.sh` (kuiva-ajo): JÄLJESSÄ-rivit näyttävät, mitkä kansiot tarvitsevat --uusi-haaran tai siivouksen.
+2. Likainen työpuu (muutoksia seuratuissa tiedostoissa): kansion oma rooli committaa tai siirtää muutoksensa ennen luovutusta;
+   PT ei poista eikä palauta toisen roolin tiedostoja. Lepäävän roolin likainen kansio ohitetaan (`--ohita kansio`) ja kirjataan.
+3. `zsh tools/paivita-kotikansiot.sh --aja --uusi-haara` vasta, kun kansion sessio on pysähtynyt (haara vaihtuu koti/<kansio>:ksi;
+   vanha haara säilyy, mitään ei poisteta). Kuiva-ajo uudelleen: kaikki AJAN TASALLA tai kirjattu ohitus.
+4. Jokaisen uuden roolin aloitusviestissä ensimmäinen työ: tuotannonohjauksen osio 0 ja oma LUE ALOITTAESSA -rivi
+   (`node tools/raamattu-luku.mjs 7.47`) ennen muuta työtä.
+
 ## 2. Sessioiden luonti (roolitaulukko)
 Kaava (15.10.2026 alkaen ensisijainen): `start_session` (initiation user_asked, context fresh, cwd roolikansio, use_worktree false, model, effort enintään PT:n oma, permission_mode) ja heti `detach_session`; RC kytkeytyy itsestään. Tilin vanhat sessiot tyhjenevät send_message-pyynnöllä "lataa clear_session ja kutsu self" (list_events = 0), sitten aloitusviesti. PT:n oma effort on uusien sessioiden yläraja, joten luo Opus-max-sessiot ennen kuin PT:n effort lasketaan. Varalla: Raamattu SESSIOIDEN LUONTI ILMAN OMISTAJAA (osascript + screencapture, valikot suomeksi: Tiedosto › Uusi istunto / Avaa kansio…,
 2560×1440-koordinaatit). Edellytys: sallinnat Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*) PT:n .claude/settings.local.json:ssa;
@@ -118,7 +129,10 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
 ## 8. Lopuksi
 `node tools/tyotavat/tilinvaihto-valmis.mjs` (paluu 0 = valmis): osoitekirjan id:t elossa sovelluksen sessiotiedostoista (tili,
 ei arkistoitu, malli ja effort kuten osoitekirjassa, lupatila ja RC tiedoksi), peili ajan tasalla, aloitusviestit olemassa, vanhoja
-id:itä ei jäljellä. Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, taulu <osoite>". Kirjaa tilinvaihto lokiin (`node tools/raamattu-kirjaa.mjs`).
+id:itä ei jäljellä. OHJEIDEN KOE (Raamattu 7.47 ja 12.23 kohta 18): PT ajaa
+kokeen tuoreella Sonnet-ali-agentilla, joka lukee vain CLAUDE.md:n ja PT:n 7.47-rivin ja vastaa PT:n kysymyslistaan
+(scratchpad/paatoimittaja/ohjeiden-koe/); väärä vastaus = lähde korjataan ja koe uusitaan. Tilinvaihto ei ole valmis ennen kuin
+koe on läpi JA tilinvaihto-valmis.mjs palauttaa 0. Sitten rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, taulu <osoite>". Kirjaa tilinvaihto lokiin (`node tools/raamattu-kirjaa.mjs`).
 VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti, kun sessiot ja Asemataulu ovat valmiit (luovutus + tallenna-keskustelu.py + LUOVUTUS VALMIS Postivahdille); 15.10. tilinvaihto nosti PT:n kontekstin 8 %:sta 50 %:iin puolessa tunnissa.
 
 ## VOIMASSA OLEVA ARVO (ristiriitojen ratkaisu 14.10.2026; uusin päätös voittaa)
