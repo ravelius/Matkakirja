@@ -1,0 +1,43 @@
+{
+  "laatat": [
+    {
+      "arvo": "59 %",
+      "jaljella_h": 4.1,
+      "kokonais_h": 10.1,
+      "muutos": "+47 %",
+      "nimi": "Viikko",
+      "palkki": true,
+      "prosentti": 59
+    },
+    {
+      "muutos": "+40 %",
+      "nimi": "5 tuntia",
+      "nollautuu": "2026-10-13T07:20:00Z",
+      "palkki": true,
+      "prosentti": 85
+    },
+    {
+      "arvo": "41 Gi",
+      "lisa": "alle 100 Gi",
+      "nimi": "Levy"
+    },
+    {
+      "arvo": "40 %",
+      "nimi": "Muisti"
+    },
+    {
+      "arvo": "89 %",
+      "nimi": "Prosessori"
+    },
+    {
+      "arvo": "0",
+      "nimi": "Raati"
+    },
+    {
+      "arvo": "4",
+      "nimi": "Testaajat"
+    }
+  ],
+  "pt_konteksti": 47,
+  "ts": 1791870075652
+}

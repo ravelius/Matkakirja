@@ -1,0 +1,24 @@
+{
+  "rivit": [
+    {
+      "aika": "",
+      "otsikko": "TestFlight: raati",
+      "teksti": "https://testflight.apple.com/join/KxKekB4n"
+    },
+    {
+      "aika": "",
+      "otsikko": "TestFlight: beta-testaajat",
+      "teksti": "https://testflight.apple.com/join/BBAT7tBm"
+    },
+    {
+      "aika": "",
+      "otsikko": "Äänisivu",
+      "teksti": "https://matkakirja-aanet.pages.dev/"
+    },
+    {
+      "aika": "",
+      "otsikko": "API-avain (GitHub-salaisuudet)",
+      "teksti": "https://github.com/ravelius/Matkakirja/settings/secrets/actions"
+    }
+  ]
+}

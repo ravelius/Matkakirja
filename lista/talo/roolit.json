@@ -1,0 +1,109 @@
+{
+  "rivit": [
+    {
+      "aika": "08.41",
+      "effort": "max",
+      "malli": "Opus",
+      "nimi": "Päätoimittaja",
+      "teksti": "Työ käynnissä",
+      "tila": "työ"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Julkaisija",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Natiiviseppä",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Natiivi-UI",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Linssiseppä",
+      "teksti": "Työ käynnissä",
+      "tila": "työ"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Linssiseppä 2",
+      "teksti": "Työ käynnissä",
+      "tila": "työ"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Linnanrakentaja",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Siirtoseppä",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Karttaseppä",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Opus",
+      "nimi": "Pelikoodari",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Sonnet",
+      "nimi": "Sisältökirjuri",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Sonnet",
+      "nimi": "Laitetestaaja",
+      "teksti": "Odottaa",
+      "tila": "odottaa"
+    },
+    {
+      "aika": "08.41",
+      "effort": "high",
+      "malli": "Sonnet",
+      "nimi": "Äänittäjä",
+      "teksti": "Levossa",
+      "tila": "lepo"
+    }
+  ],
+  "ts": 1791870075624
+}

@@ -1,0 +1,19 @@
+{
+  "rivit": {
+    "Julkaisija": "TF 186: raati ja beta-testaajat (Applen beta-arvio)",
+    "Karttaseppä": "Kaupunkipaketit eläviin kaupunkeihin (Granada, Budapest)",
+    "Laitetestaaja": "Testit TF 186:lla",
+    "Linnanrakentaja": "Olavinlinnan laajennus: linnantupa ja voudin sali",
+    "Linssiseppä": "Taidemuseo: kävely napauttamalla ja askelten äänet (juna 187)",
+    "Linssiseppä 2": "Olavinlinnan laajennuksen huoneet: pelikuvat",
+    "Natiivi-UI": "Bugikorjaukset: kerronnan taukomerkki, Macin vieritys",
+    "Natiiviseppä": "Juna 187: runko ja muistimittaus",
+    "Pelikoodari": "Shakki Wienissä: äänet ja Williamin repliikit",
+    "Postivahti": "Valvonta ja Asemataulu",
+    "Päätoimittaja": "TF 186 testaajille; juna 187 kokoon",
+    "Siirtoseppä": "Olavinlinnan laajennus peliin ja automaattitesti",
+    "Sisältökirjuri": "Kaupunkien alkuintron kuvat ja aarretehtävät",
+    "Äänittäjä": "Museon askeleet ja sellokappaleet äänisivulle"
+  },
+  "ts": 1791865736377
+}

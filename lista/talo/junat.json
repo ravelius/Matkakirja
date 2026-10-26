@@ -1,0 +1,71 @@
+{
+  "rivit": [
+    {
+      "lisa": "Lisää muistia, joten ennen julkaisua muistiajo iPadilla. Julkaistaan pyynnöstäsi.",
+      "nimi": "Juna 187",
+      "teksti": "Valmiina:\n– elävä kaupunki 17 kaupunkiin (Lontoossa vasemmanpuoleinen liikenne) ja aukioiden kamerat\n– Oslo, Bergen ja Ljubljana kuumailmapallokierroksille (päivä ja yö)\n\nTyön alla:\n– taidemuseo: kävely napauttamalla kuin Street View’ssä mutta pehmeämmin, ja askelten äänet (pyyntösi 13.10.) → tehty; pysähdys taulun eteen korjataan ennen junaa\n– lisää kaupunkeja: Bryssel, Amsterdam ja Krakova valmiina Linssisepälle, 13 seuraavaa tulossa (Sevillasta Kreetaan)\n– taidemuseo: palautteesi 13.10. (lähestymiskuva, näyttelyn valinta, saliin tulo, i-kohdat, nimilista, napit)",
+      "tila": "kertyy",
+      "ts": 1791865639604
+    },
+    {
+      "lisa": "Pikajuna (ent. 184.1), vain iOS. Apple hyväksyi beta-arvion 23.46: ulkoiset testaajat saavat 185:n.",
+      "nimi": "TF 185",
+      "teksti": "Uutta (12.10. klo 22.54):\n– kipin pallokisan kuvakkeet: kaasu, pallo, lippu, ajastin ja nouto\n– maakartalla ei muiden maiden eläinmerkkejä (palautteesi)\n– kartassa ei aukkoja kipistä palatessa (palautteesi)\n– kehittäjätilan kohdekaupungit näkyvissä kaikissa näkymissä (palautteesi)\n– kehittäjätilaan Googlen laatat -kytkin pallon valikkoon kisan nopeustestiin (palautteesi)",
+      "tila": "valmis"
+    },
+    {
+      "lisa": "13.10. iPad, iPhone ja Mac; raati ja beta-testaajat (Apple hyväksyi 8.13).",
+      "nimi": "TF 186",
+      "teksti": "Uutta (13.10. klo 7.24):\n– kipin metrokartta sormella selattavaksi (palautteesi)\n– pallokisaan Lopeta kisa -rivi\n– Olavinlinna: keittiön vartija ei enää kameran edessä, hahmojen viimeistellyt 1499-asut\n– museossa Pulu kertoo katsomastasi teoksesta (palautteesi)\n– kipistä palatessa pelinappula näkyy taas kartalla (testien löydös)\n– Googlen laatat pois -tilassa rakennukset näkyvät, iPhonella kisan taulu ei peitä otsikoita\n– pallokisa: yhteinen kello lähdöstä, ensimmäinen maali päättää kisan ja loppukortti (testien löydös)\n– lautapelien palkkio botin voitosta kerran päivässä per taso (ei loputonta keruuta)\n– shakki Wienin kahvilassa 3D-laudalla: opastus Williamin äänellä, neljä vastustajaa, kuusi tehtävää ja palkkiot (palautteesi)\n– taidemuseon näyttelyvalinnassa iso kuva jokaisesta salista (palautteesi)\n– taidemuseo: lähestyminen kuvana, katselussa kevyt himmennys ja tavallinen kehys, vapaa kävely napauttamalla (palautteesi)\n– Olavinlinna: hahmojen tunikoissa ei enää kovaa varjoraitaa rinnan poikki (testien löydös)\n– Olavinlinna: hahmojen uudet asut ja linnan korjaukset (palautteesi)\n– taidemuseon uusi Yövartion sali kaaren takana ja tasainen valo (palautteesi); iPhonen pystykuvan otsikko hyväksytty",
+      "tila": "TestFlightissa",
+      "ts": 1791868437140
+    },
+    {
+      "lisa": "Apple hyväksyi beta-arvion 22.50: ulkoiset testaajat saavat 184:n.",
+      "nimi": "TF 184",
+      "teksti": "Uutta (12.10. klo 21.37):\n– kipin pallokisa pelaajille: Aloita kisa pallon valikosta, yhteislähtö, Pulu selostaa, tulostaulu, omat äänet ja musiikki\n– Pulun raketti uusissa asennoissa (Max-Q, irtoaminen, tähdet); raketti ja Olavinlinna kartalla nappeina\n– Olavinlinna: MetaHuman-hahmot, parrat, kypärät, kolikot laiturilla\n– läpinäkyvät napit, Lontoon ja Prahan pallokierrokset, aarretehtävät vapaaseen lentoon ja 10 uuteen kaupunkiin\n– Pulu kommentoi visavastaukset, lehden nostoista kartalle, Mylly, retkikunta ja sähke, ISS-ohjaamosta pois\n– Kreikan App Store -versio, apurahasivu arvioijille\nJunaan 186:\n– taidehalli: Yövartion sali (palautteesi)",
+      "tila": "valmis",
+      "ts": 1791805996652
+    },
+    {
+      "lisa": "12.10. iPad, iPhone ja Mac; raati ja beta-testaajat (Apple hyväksyi 15.27).",
+      "nimi": "TF 183",
+      "teksti": "Uutta:\n– ISS-raketti Andøyasta: Pulu kypärä päässä raketin kyljessä, lähikuvat, mittarit alapaneelissa, tähdet ja selostus yhtenä keskusteluna\n– kippi: lennossa vain tauko ja valikko oikeassa yläkulmassa, katse sormella, isompi kompassi, köydet kupuun asti, autot varjoineen\n– minihampurilainen: Auto ja Nostojen ohjaus omina riveinään, oletuksena pois\n– taidehalli: näyttelyvalikko, nimilista, Siirry-nappi, kävely teoksen luo, tauko hiljentää kertojan, tietokortti tauolla\n– kaupunkiin saapuessa ei kelluvia puita eikä harmaita laattoja rakennusten läpi\n– alkuraha £300 ja matkoille kilometrihinnat\n– Euroopan aarre on Kolme veljestä -riipus, isoisän uusi teksti ja kynäpiirros\n– pelin alku, Etsityt kaupungit, nimi kaikkialla Matkakirja, viisi pääkaupunkiluentaa äänellä\n– Andøyan laukaisupaikka 1 m:n maastolla (rinteet, harjanteet ja rantaviiva)\n– taidehalli: valittu teos isommin, läpinäkyvä Siirry-nappi keskellä, kabinettien selitykset, tauon kamera koko kehykseen\n– lautapelit: opastettu ensimmäinen peli Myllyyn ja Tavliin (vinkit, korostus, säännöt kuvin)\n– kaupunkiin saapuessa odotetaan, että lähimaisema on tarkka (ensimmäisellä saapumisella enintään 8 s)\n– laukaisualusta: betonikenttä, valomastot ja hallit, sora- ja betonipinnat, yön äänet; Pulu raketin kyljessä kasvot kärkeen\n– maan lippu näkyy taas kartalla korkeimmalla laadulla\n– lautapelien puheopastus Williamin äänellä vaihe kerrallaan (palautteesi)\n– Pulu pienempänä raketin rinnalla, lähikuvat rajattu sen mukaan (palautteesi)\n– kaupungin alkuintro: tumma ja sumea tausta, Pulu piilossa (palautteesi)\n– lautapelin vinkki otsikon paikalla, lauta näkyy kokonaan (palautteesi)\n– aarretehtävät Ateenassa, Pariisissa ja Tukholmassa: aikajana, arvio, etsintä kaupungista ja isoisän salakirjoitus; yhdessä Kolme veljestä -arvoitus (päätöksesi)\n– intron tausta sävyttyy kuvan väreihin (palautteesi)\n– Pulu kiinni vaijerilla raketissa, keinuu kuin rodeossa (palautteesi)\n– raketti tarkemmaksi: pyöreä runko, terävät raidat ja lippu (palautteesi)\n– vapaassa lennossa kierroksen kohteen napautus lentää sinne ilman puhetta (palautteesi)",
+      "tila": "valmis",
+      "ts": 1791809127421
+    },
+    {
+      "lisa": "11.10. iPad, iPhone ja Mac; raati ja beta-testaajat (Apple hyväksyi 20.42).",
+      "nimi": "TF 182",
+      "teksti": "Uutta:\n– alkulento Ateenaan, Pariisiin ja Tukholmaan, horisontti musta korkealla\n– aloituskaupungit Ateena, Pariisi ja Tukholma, intro ja Pulun uusi alku\n– taidemuseo: teos läheltä, valo katosta, uudet kehykset, tekstitys, koko kehys ja suurennuslasi\n– taidemuseo: moderni kirjasin, tietokortti ja läpinäkyvät napit\n– kippi iPhonen pystykuvassa, Tukholma ei lukitu väärään vastaukseen\n– ISS:n aidot radioäänet, myös venäjää\n– Olavinlinnan kyltit luettaviksi, pallohehkut eivät näy muurien läpi\n– kuumailmapallot: vain Pariisi ja Tukholma, lento £200\n– linssit aarteina: Alpit, Lontoo, Edinburgh, Istanbul ja Amsterdam\n– soutajan suu liikkuu puheen tahdissa ja silmät räpyttävät\n– hidas kaupunkikappale hiljempaa ja vain kerran\n– isoisän aarremerkinnät uusiksi\n– aarreteksti, kuva ja \"Etsityt kaupungit\" -laskuri\n– Olavinlinna, Mylly ja Tavli nostoina\n– kuumailmapallon hintalappu, rahapulailmoitus ja uuden linssin kortti\n– houkuttimet hunnun päällä: pienemmät hehkut ja ohuet rajat\n– rahan muutos oikeaan yläkulmaan ja tärinä\n– lautapelien kaupungit (Berliini, Ateena) ilman sinistä houkutinta\n\n– Pulu pysyy paikallaan koko Euroopan näkymässä\n– Olavinlinnan merkin sininen rengas sykkii, lautapeleissä ei värikorostusta\n– Olavinlinnan Pelaa £20 avaa nykyisen linnan\n",
+      "tila": "valmis",
+      "ts": 1791741097501
+    },
+    {
+      "lisa": "11.10. iPad ja Mac; raati ja beta-testaajat (Apple hyväksyi 11.18).",
+      "nimi": "TF 181",
+      "teksti": "Uutta:\n– kuumailmapallo ja lepäävä kartta kuluttavat vähemmän virtaa, iPad lämpenee hitaammin\n– Pariisiin saapuessa musiikki alkaa isoisän \"Pariisi\"-puheen kanssa, nykypäivän kuvat heti perään\n– Pariisin kierros ei pysähdy kesken, Notre-Dame edestä, aukiot lähempää, korissa kompassi\n– kippi iPhonen pystynäkymässä: aukiot lähikuvassa, obeliski keskellä, Brysselin ja Firenzen tornit kokonaan\n– oppaan kierrosvalinta, isompi kertomuskuva iPhonella, selkeämmät metrolinjat\n– oman maan kortti aina vasemmassa alakulmassa, tiiviimpi maakortti, lippu kaikissa maissa\n– 14 Euroopan pääkaupungin kaupunkilehdet maakortista\n– latausruudun musiikki Pariisiin ja Tukholmaan, Tukholman uudet äänet\n– puut Pariisiin ja Tukholmaan\n– Olavinlinna: laiturilta kävellen linnaan, minikartta pois, vartijan varoitus, vihjeen valokipinä, tyrmästä pois ja tyrmän äänet\n– taidemuseo: 64 teosta, 33 pysähdyksen kierros, uusi kertoja ja salin ääni",
+      "tila": "valmis",
+      "ts": 1791704666040
+    },
+    {
+      "lisa": "10.10. iPad ja Mac",
+      "nimi": "TF 180",
+      "teksti": "Korjattu ja uutta:\n– Pulu tuntee nyt 40 maata (lisää Balkanilta, Moldova, Valko-Venäjä ja Turkki)\n– latauskuvan köysi jatkuu alas sumuun\n– Pekingin vallihaudan ja järvien vesi oikean värisiksi\n– taidemuseoon varjot ja lattiaheijastus\n– Olavinlinnan rannan valkoiset kivet harmaiksi\n– Olavinlinnan kävelyosien puuttuvat seinät\n– todistusajojen kuvat oikeaan aikaan\n– Pariisissa alkaa aina uusi esittely, ja kohdekaupungit näkyvät\n– venekohtauksen puhe tavallisella äänellä ilman kuiskausta\n– kuumailmapallo kaartaa kohteen ympäri eikä pysähdy jyrkästi\n– Riemukaari ja Concorde kuvataan oikealta etäisyydeltä\n– muistimittaus iPadilla läpäisty (ei kaatumisia)\n– Olavinlinnassa pääsee taas laiturilta eteenpäin\n– soutukohtauksen vene pysyy kuivana\n– latauskuvan vene istuu vedessä heijastuksen ja varjon kanssa\n– Pariisin kipin kompassi, kertomuskuvat ja metrokartta\n– pääkaupunkien kuvat maakorttiin\n– musiikki latauskuviin tasaisella äänenvoimakkuudella\n– Olavinlinnan laiturin vaalea laatta poistettu ja muuriportaat viimeistelty\n– Olavinlinnan ylimääräinen \"Kuuntele\"-teksti pois ja kokin hälytyksen ääni\n– latauskuvan Poistu-nappi näkyy\n– Pariisin saapumisesityksen valokuvat ja Ohita-nappi (iPhone ja iPad)\n– latauskuvan Poistu-nappi oikeassa alakulmassa himmeänä, valkoinen neliö pois",
+      "tila": "valmis"
+    },
+    {
+      "lisa": "10.10. iPad ja Mac",
+      "nimi": "TF 179",
+      "teksti": "Korjattu:\n– Pariisin esittely alkaa saapuessa, eikä kippi enää näytä sen kuvia\n– Olavinlinnassa jumiin jäänyt pelaaja palaa tikkaiden yläpäähän\n– torkkuva vartija ei enää herää muiden kiinniotoista\n– tarjotin palaa kiinnijäädessä keittiöön\n– taidemuseon nimikyltit mahtuvat puhelimeen\n\nUutta:\n– Pariisin saapumisesitys jatkuu nykypäivän kuvilla ja omalla musiikilla\n– taidemuseo: Alankomaiden sali\n– pääkaupunki maakorttiin\n– Kaukasuksen ja Lähi-idän pääkaupungit kartalle\n– ilmakehä kaikkiin kaupunkeihin\n– latauskuvan pallo heiluu tuulessa\n– Pulu tuntee Norjan, Slovakian ja Slovenian\n– naamio, avaimet ja köysi tallentavat etenemisen\n– Olavinlinnan vuoden 1499 asu viimeistelty",
+      "tila": "valmis"
+    },
+    {
+      "lisa": "10.10. iPad ja Mac",
+      "nimi": "TF 178",
+      "teksti": "Korjattu:\n– kohdemerkit pysyvät pallolla sitä pyöritettäessä\n– kehittäjän kaupunkivalinta toimii\n– kaupunkipallo avaa taas Pariisin esittelyn\n– Pariisin harmaa kappale poistui kartalta\n– Pulu ei enää nouse yläpalkkiin\n\nUutta:\n– Euroopan puuttuneet pääkaupungit ja minivaltiot kartalla\n– Olavinlinnan reitti ja tähtilinssin kuva korjattu",
+      "tila": "valmis"
+    }
+  ],
+  "ts": 1791869718906
+}

@@ -1,0 +1,45 @@
+{
+  "rivit": [
+    {
+      "nimi": "Mac Studion hiiri",
+      "tila": "vapaa"
+    },
+    {
+      "nimi": "iPad",
+      "tila": "vapaa"
+    },
+    {
+      "nimi": "Blender",
+      "tila": "vapaa"
+    },
+    {
+      "kuvaus": "käännös",
+      "nimi": "Unity",
+      "prosessori": 1,
+      "rooli": "",
+      "tila": "käytössä",
+      "tunnettu": true
+    },
+    {
+      "kuvaus": "Linssiseppä 2 (iPad 13), Natiivi-UI (iPad 11)",
+      "nimi": "Simulaattorit",
+      "prosessori": 7,
+      "rooli": "",
+      "tila": "käytössä",
+      "tunnettu": true
+    },
+    {
+      "nimi": "Pilviajot",
+      "tila": "vapaa"
+    },
+    {
+      "nimi": "Codex",
+      "tila": "vapaa"
+    },
+    {
+      "nimi": "Googlen musiikki",
+      "tila": "vapaa"
+    }
+  ],
+  "ts": 1791870075652
+}

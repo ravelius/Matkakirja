@@ -1,0 +1,316 @@
+{
+  "kysymykset": [],
+  "rivit": [
+    {
+      "lisa": "Karttaseppä, Linssiseppä",
+      "otsikko": "Kuvaoikeudet uusissa kaupungeissa",
+      "tila": "valmis",
+      "tilanne": "Valmiina:\n– päätöksesi: peli ei ole kaupallista kuvaamista, joten Rooma, Barcelona, Lissabon, Madrid ja Ljubljana etenevät\n– tekijänoikeudella suojattuja teoksia ei mallinneta omina 3D-malleina (ennallaan)"
+    },
+    {
+      "edistys": 5,
+      "otsikko": "Kipin metrokartta sormella selattavaksi",
+      "tila": "valmis",
+      "tilanne": "Junassa 186:\n– metrokartta vedettävä sormella kuten taidehallin lista: sormen alla oleva asema korostuu, napautus vie asemaan"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Natiivi-UI, Linssiseppä, Pelikoodari",
+      "otsikko": "Pelin alku ja napit",
+      "teksti": "Aloitusmaan nostot, maakunnat tuplanapautuksella, Etsityt kaupungit, Auto ja ääneen luku, Liiku, lautapelinappi, kierroksen napit alariviin, Pulun ohje.",
+      "tila": "valmis",
+      "tilanne": "Junassa 183:\n– aloitusmaassa vain visanostot, kunnes ensimmäinen oikea vastaus sytyttää aarteen pisteen\n– maakunta aukeaa tuplanapautuksella\n– Etsityt kaupungit 7 s maan alussa ja matkalaukussa omalla rivillä\n– Liiku erottuu aarteen jälkeen, lautapelinappi vasta aarteen paljastuttua\n– kierroksen kolme nappia alariviin\n– Pulun loppu ja ruudun ohje samaan aikaan, ensimmäistä luentaa ei voi ohittaa\n– luennan iso kuva lentää matkakirjan alareunaan vasta luennan jälkeen, kuvat suurennettavissa heti\n– nostot ja chat: sulje-nappi tai kartan napautus asetuksista, (laajenna)-merkki, iPadilla chat yläreunaan näppäimistön ajaksi\n– Auto ja ääneen luku oletuksena pois, Auto ja pin minihampurilaisesta\n– Euroopan aarre Kolme veljestä -riipus, isoisän kynäpiirros\n– isoisän aloitusteksti päiväkirjan tyyliin\n– kaupunkien aarremerkinnät pois pelistä"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Linssiseppä 2, Linnanrakentaja, Äänittäjä, Natiivi-UI",
+      "otsikko": "ISS-raketti Andøyasta",
+      "teksti": "Raketti Andøyan laukaisupaikalta avaruusasemalle, Pulu kyydissä.",
+      "tila": "valmis",
+      "tilanne": "Junassa 183: laukaisupaikka, raketti, Pulu vaijerilla, mittarit ja selostus.\n\nJunassa 184:\n– raketti kartalla nappina kaikilla korkeuksilla, uusi paksumpi ja värikkäämpi malli\n– Pulun kaikki kahdeksan asentoa (Max-Q, irtoaminen, tähdet, laskeutuminen)\n\nTestattu TF 185:llä: lento, mittarit ja selostus toimivat."
+    },
+    {
+      "edistys": 5,
+      "lisa": "Pelikoodari, Natiivi-UI",
+      "otsikko": "Lautapelit",
+      "teksti": "Mylly ja Tavli: opastettu ensimmäinen peli.",
+      "tila": "valmis",
+      "tilanne": "Junassa 183: opastettu ensimmäinen peli ja puheopastus.\nJunassa 184: Myllyssä botin siirto jää näkyviin ja myllyrivi välähtää; laskuri ja vastustaja valinnan mukaan."
+    },
+    {
+      "edistys": 5,
+      "lisa": "Natiivi-UI, Siirtoseppä",
+      "otsikko": "Läpinäkyvät napit kaikkiin peleihin ja linsseihin",
+      "teksti": "Pelien ja linssien napit oletuksena läpinäkyviä samalla tyylillä kuin taidehallissa; Olavinlinna ensin.",
+      "tila": "valmis",
+      "tilanne": "Junassa 184:\n– läpinäkyvät napit peleissä ja linsseissä, myös Olavinlinnassa"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Äänittäjä",
+      "otsikko": "Äänisivun Tekstit-osasto",
+      "teksti": "Generoimattomat tekstit äänisivulle omaan osastoon luettaviksi ja hyväksyttäviksi; ääni tehdään vasta hyväksyntäsi jälkeen.",
+      "tila": "työn alla",
+      "tilanne": "Valmiina:\n– osasto äänisivulla, shakin opastus ja Pulun selostus hyväksytty\n– Pulun ja Williamin puheet hyväksytty peleihin (12.10.)\n\nTyön alla:\n– shakin äänet valittu (20.19) → viedään peliin; lautapelien ja Olavinlinnan tehosteet hyväksytty (20.20–20.21)"
+    },
+    {
+      "edistys": 2,
+      "lisa": "Sisältökirjuri, Pelikoodari",
+      "otsikko": "Shakki Wieniin",
+      "teksti": "Shakki muita lautapelejä paremmaksi: Wienin vuoden 1873 shakkiturnaus, 3D-lauta kahvilassa, opastus Williamin äänellä, vastustajan tasot, shakkitehtävät ja shakin historia -osio; avuksi valmiit vapaasti lisensoidut osat.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 186:\n– shakki Wienin kahvilassa 3D-laudalla pelaajille: säännöt, neljä vastustajaa, opastus, kuusi tehtävää, palkkiot ja diplomi\n\nValmiina:\n– suunnitelma ja faktat, historia-osio (Sisältökirjuri)\n– valmiiden osien kartoitus: säännöt, tekoäly, tehtävät, 3D-nappulat (Pelikoodari)\n– opastuksen tekstit hyväksytty ja opastus Williamin äänellä valmis (12.10.)\n\nTyön alla:\n– äänet valittu äänisivulla (20.19): siirto, lyönti, shakki, matti, kello, kahvila\n– Williamin repliikit ja historian luenta tulevat Tekstit-osastoon hyväksyttäviksi"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Natiivi-UI, Sisältökirjuri",
+      "otsikko": "Kaupunkien alkuintro",
+      "teksti": "Saapumisintron tausta tummaksi ja sumeaksi, ja kahdeksan havainnekuvaa jokaiseen kaupunkiin.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 183: tausta tumma ja sumea.\nValmiina:\n– juhlakuvat Pariisiin, Tukholmaan ja Ateenaan ruokakuvien tilalle (junassa 184, verkossa)\nTyön alla:\n– 42 kaupungin kuvat saapuivat yöllä, ja ne kytketään peliin erissä tarkistuksen jälkeen"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Natiivi-UI, Linssiseppä",
+      "otsikko": "Kaupunkikierroksen vapaa lento",
+      "teksti": "Vapaassa lennossa kierroksen kohteet napautettavissa metrokartalla.",
+      "tila": "valmis",
+      "tilanne": "Junassa 184:\n– kohteen napautus lennättää perille, ja vapaa lento jatkuu"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Sisältökirjuri, Äänittäjä, Linssiseppä",
+      "otsikko": "Uudet kuumailmapallokierrokset: Lontoo ja Praha",
+      "teksti": "Kaksi uutta kippiä Pariisin ja Tukholman malliin: reitti, pysähdykset, kertoja, kuvat ja äänimaisema.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 184: Lontoon ja Prahan kierrokset.\nTyön alla:\n– Lontoon muutaman pysähdyksen karkeat laatat: tarkistus TF 186:lla (Linssiseppä)"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Pelikoodari, Linssiseppä, Laitetestaaja, Natiivi-UI",
+      "otsikko": "Retkikunta: pallot näkyviin ja pallokisa",
+      "teksti": "Retkikunnan pallot näkyvät toisilleen samassa kaupungissa, ja pallokisassa kerätään ilmapallot kierroksen kohteista: kompassi näyttää suunnan ja etäisyyden lähimpään, nopein voittaa.",
+      "tila": "valmis",
+      "tilanne": "Junassa 184:\n– kipin pallokisa pelaajille: Aloita kisa pallon valikosta, yhteislähtö, Pulu selostaa, tulostaulu, valitsemasi äänet ja musiikki\n– retkikunnan jäsenlista, eroaminen ja koodin jakaminen\n\nJunassa 185:\n– kisan kuvakkeet (kaasu, pallo, lippu, ajastin)\n– kehittäjätilaan Googlen laatat -kytkin kisan nopeustestiin\n\nJunassa 186:\n– Lopeta kisa -rivi pallon valikkoon kisan aikana\n– kisan kello yhteinen lähdöstä, ensimmäinen maali päättää kisan ja loppukortti\n– iPhonella tulostaulu ei peitä otsikoita; Googlen laatat pois -tilassa rakennukset näkyvät"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Natiivi-UI, Sisältökirjuri",
+      "otsikko": "Kaupunkilehden nostot takaisin lehteen",
+      "teksti": "Aihesivujen nostot taas lehteen kuvineen ja teksteineen; napautus näyttää kohteen kartalla, ja kartan pisteet säilyvät.",
+      "tila": "valmis",
+      "tilanne": "Junassa 184:\n– nostot takaisin lehteen, ja niistä pääsee kartalle (Näytä kartalla)"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Natiivi-UI, Pelikoodari",
+      "otsikko": "Linssit ja pelit vasta ansaittuina",
+      "teksti": "Tavallinen pelaaja näkee linssit ja pelit vasta ansaittuaan ne, eikä keskeneräisiä koskaan; kartan kipit, raketti ja Olavinlinna näkyvät kaikille.",
+      "tila": "valmis",
+      "tilanne": "Junassa 184:\n– tavallinen pelaaja näkee vain ansaitut linssit ja pelit; kehittäjätilassa kaikki\n– apurahasivu vain arvioijille; beta-linkki piilottaa sen\n– beta-linkki verkossa toimii (matkakirja.app/beta)"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Sisältökirjuri, Pelikoodari, Linssiseppä, Natiivi-UI",
+      "otsikko": "Aarretehtävät",
+      "teksti": "Kaupunkikohtaiset tehtävät: aikajana, arvio, etsintä kaupungista ja isoisän salakirjoitus; maan kaupunkien tehtävät johtavat aarteeseen.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 183: Ateena, Pariisi ja Tukholma.\nJunassa 184:\n– aarretehtävät 10 uuteen Euroopan kaupunkiin, etsintä vapaassa lennossa\n– Pulu kommentoi oikean ja väärän vastauksen ennen kertojaa\n– visanostot vihreinä aina, muut nostot aarteen jälkeen\n\nTyön alla:\n– seuraavat erät Euroopan kaupunkeihin"
+    },
+    {
+      "edistys": 3,
+      "lisa": "Karttaseppä, Linssiseppä 2, Linssiseppä",
+      "otsikko": "Tarkka maasto (Mapterhorn)",
+      "teksti": "Euroopan maiden omat 1–2 m:n korkeusmallit peliin.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 183: Andøyan laukaisupaikka.\nTyön alla:\n– Tukholman maanpinta 1 m:n tarkkuudella: paketti valmis, odottaa kytkentää peliin (Linssiseppä)\nOdottaa:\n– Alppien ja Norjan tarkka maasto valmiina ajoon, mutta tarkimmat tasot eivät näy nykyisissä näkymissä (kartta pysyy kilometrien korkeudella, kaupungit käyttävät Googlen 3D-malleja); tehdään, kun peliin tulee matala vuoristonäkymä"
+    },
+    {
+      "edistys": 3,
+      "lisa": "Linssiseppä, Linssiseppä 2, Natiivi-UI, Siirtoseppä, Linnanrakentaja",
+      "otsikko": "Bugikorjaukset",
+      "tila": "työn alla",
+      "tilanne": "Korjatut:\n– Tukholma ei lukitu väärään vastaukseen (juna 182)\n– Pariisin saapumisesitys, kippi, Notre-Dame, Concorde ja maakortin lippu (TF 181)\n– maan lippu näkyy taas kartalla korkeimmalla laadulla (juna 183)\n– kaupunkiin saapuessa ei kelluvia puita eikä harmaita laattoja (juna 183)\n– kartassa ei aukkoja kipistä palatessa (TF 185)\n– kehittäjätilan kohdekaupungit näkyvät (TF 185)\n– maakartalla ei muiden maiden eläinmerkkejä (TF 185; verkossa 186)\n– kipistä palatessa pelinappula näkyy kartalla (TF 186)\n– erikoismallien nimet väistävät kaupunkipalloja (TF 186)\n\nTyön alla:\n– keskeytetty kerronta: himmennetty kaiutin ja taukomerkki vilkkumisen tilalle (Natiivi-UI)\n– Mac: kaupunkilehden vieritys liian nopea (Natiivi-UI)\n– kehittäjätila: kaikki pelit ja linssit näkyviin, Takaisin palaa oikeaan paikkaan (Natiivi-UI)\n– Olavinlinna: tallennuksesta jatkaminen (ks. Olavinlinna)"
+    },
+    {
+      "edistys": 5,
+      "lisa": "Karttaseppä, Sisältökirjuri, Natiivi-UI, Pelikoodari",
+      "otsikko": "Kaikki maat ja pääkaupungit",
+      "teksti": "64 puuttuvaa maata ja 117 pääkaupunkia perustietoineen ja rajoineen, Eurooppa ensin (minivaltiot kevyesti).",
+      "tila": "valmis",
+      "tilanne": "Valmiina:\n– kaikki puuttuvat maat rajoineen, perustietoineen ja pääkaupunkien kuvineen\n– 14 Euroopan pääkaupungin kaupunkilehdet (TF 181) sekä Kaukasuksen ja Lähi-idän 8 pääkaupunkia (juna 182)\n– Euroopan kohdekartat yhtenäisiksi: reunus ja maanalaiset vedet pois (juna 183)\n– Budapestin ja Bukarestin kohdekartat yhtenäisiksi (verkossa)"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Pelikoodari, Sisältökirjuri",
+      "otsikko": "Kaupunkien omat kappaleet",
+      "teksti": "Oma kappale jokaiselle kaupungille, Eurooppa ensin.",
+      "tila": "työn alla",
+      "tilanne": "Valmiina junassa 183:\n– 47 kaupungin nopeat introt ja hitaiden kappaleiden arvonta\nTyön alla:\n– kipin 20 kappaleen soittolista ja jazz-piano odottavat valintaasi äänisivulla"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Linssiseppä 2, Linssiseppä, Linnanrakentaja, Pelikoodari, Natiivi-UI, Sisältökirjuri",
+      "otsikko": "Taidemuseo",
+      "teksti": "Alankomaiden sali, patsaat ja grafiikka; kertoja myöhemmin.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 182–183: teos läheltä, kehykset, näyttelyvalikko, nimilista.\nJunassa 184: lähestyminen ulkoa Museumpleinilta, kävijät salissa, ‹ ›-nuolet.\n\nJunassa 186:\n– Yövartion sali kaaren taakse ja tasainen valo\n– lähestyminen kuvana 3D-maailman sijaan: havainnekuva pysty ja vaaka, infolappu, puhe-esittely ja Astu sisään -nappi\n– katselutilassa sali himmenee vain vähän ja kehys näyttää tavalliselta\n– Pulu museossa: kysymykset ja vastaukset teoksesta eikä kartasta, kaikki 64 teosta\n– vapaa kävely: napautus lattiaan tai seinään vie sinne\n– näyttelyvalintaan iso kuva jokaisesta salista\n\nTyön alla (juna 187):\n– lähestymiskuva: otsikko ja kuvalähteet hampurilaisvalikkoon, museon nimi tyylikkäästi ylös keskelle, useita museon kuvia vaihtumassa rauhallisesti\n– Valitse näyttely -sivu: iso otsikko, lyhyt kuvaus museosta, keskushallin hitaasti panoroiva näkymä, kapeampi palsta ja Poistu-nappi oikeaan alakulmaan\n– näyttelyyn tullessa kamera lähtee salin ovensuulta ja liukuu lyhyen matkan sisään\n– teoksen katselussa alareunan napautus vie kauemmas ja vapaaseen kävelyyn\n– teoksen nimi ja selittävä nimi omille riveilleen\n– i-nappi: teoksen henkilöt ja merkitykset läpinäkyvinä, kevyesti hohtavina renkaina tauluun; Yövartion 10 kohtaa tarkistettu\n– linssin napit läpinäkyvämmiksi, vedokset eri asteilla sinulle\n– nimilista: nimet pysyvät samanlaisina ja vain koko muuttuu pehmeästi, sormen liu’utus kuin Macin Dockissa\n– kävely Street View'n tapaan mutta pehmeämmin: napautus lattiaan tai tauluun liu'uttaa perille tai tuo taulun näkyviin, katselu sormella vetämällä, askelten äänet, juna 187 → tehty; lattianapautus taulun eteen pysähtyy vielä liian lähelle, korjataan ennen junaa\n– kolme uutta sellokappaletta eri tyyleillä ja tempoilla, nykyiset pois, Äänittäjä"
+    },
+    {
+      "edistys": 3,
+      "lisa": "Linssiseppä, Karttaseppä",
+      "otsikko": "Elävä kaupunki: liikenne, puut ja aukiot",
+      "teksti": "Kuumailmapallokierrosten kaupunkeihin liikenne, puut ja aukioiden kamerat; Karttaseppä tekee kaupunkipaketit ja Linssiseppä kytkee ne.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 187 (kertyy):\n– 17 kaupunkia, Lontoossa vasemmanpuoleinen liikenne, aukioiden kamerat\n– Oslo, Bergen ja Ljubljana\n\nTyön alla:\n– Akershusin pysähdyksen kamera linnoitukseen (risteilyalus peitti näkymän)\n– Bryssel, Amsterdam ja Krakova valmiina Linssisepälle\n– 13 seuraavaa kaupunkia Sevillasta Kreetaan"
+    },
+    {
+      "edistys": 0,
+      "lisa": "Natiiviseppä",
+      "otsikko": "Android-versio",
+      "teksti": "Pelin oma Android-sovellus Google Playhin. Android-pelaajat voivat jo nyt pelata selaimella osoitteessa matkakirja.app, myös retkikunnassa.",
+      "tila": "myöhemmin",
+      "tilanne": "Odottaa päätöstäsi (12.10.). Arvio noin 3–5 viikkoa: 16 iPhone-lisäosaa Androidille, raskaiden osien rajaus laitteen mukaan, Google Play -tili ja 1–2 testilaitetta. Ensin päivän koekäännös."
+    },
+    {
+      "edistys": 0,
+      "lisa": "Karttaseppä, Linssiseppä",
+      "otsikko": "Linssi: Euroopan linnat",
+      "teksti": "Linnat syttyvät kartalle aikajanalla rakennusvuoden mukaan, mukana Olavinlinna ja Allymes (aineisto Wikidata, vapaasti käytettävä).",
+      "tila": "myöhemmin",
+      "tilanne": "Työlistalla, ei aloiteta vielä."
+    },
+    {
+      "edistys": 0,
+      "lisa": "Linssiseppä 2",
+      "otsikko": "Linssi: Jos Maa lakkaisi pyörimästä",
+      "teksti": "Pääkartalla säädetään Maan pyörimistä hitaammaksi tai nopeammaksi, ja meret siirtyvät oikean merenpohjan mukaan.",
+      "tila": "pidossa",
+      "tilanne": "Tauolla omistajan päätöksellä (10.10.) samasta syystä; prototyyppi ja kuvat odottavat."
+    },
+    {
+      "edistys": 3,
+      "lisa": "Linnanrakentaja, Linssiseppä 2",
+      "otsikko": "Koekaupunki Peking",
+      "teksti": "Kaupunki omina malleina ja oma vesi.",
+      "tila": "pidossa",
+      "tilanne": "Tauolla omistajan päätöksellä (10.10.), kunnes Olavinlinna, kippi, taidemuseo ja kartta toimivat. Peking jää nykyiseen tilaansa pois pelistä."
+    },
+    {
+      "edistys": 3,
+      "lisa": "Linnanrakentaja, Linssiseppä 2",
+      "otsikko": "Pariisi ja Tukholma",
+      "teksti": "Notre-Dame tarkemmaksi oikeaan maailmaan verraten, valot, vesi ja äänet.",
+      "tila": "työn alla",
+      "tilanne": "Valmiina:\n– Pariisin sumennetut korttelit omilla malleilla, Notre-Damen katto ja julkisivu lähemmäs oikeaa (11.10.)\n– puut Pariisissa ja Tukholmassa (TF 181), Tukholman kippiin Stortorget (juna 183)\nTyön alla:\n– Tukholman maanpinta 1 m:n tarkkuudella, jolloin autot ja kyyhkyt eivät enää leiju: paketti valmis, odottaa kytkentää"
+    },
+    {
+      "edistys": 4,
+      "lisa": "Linnanrakentaja, Linssiseppä 2, Siirtoseppä, Laitetestaaja",
+      "otsikko": "Olavinlinna",
+      "teksti": "Palatsin osuus, linnan nykyasu ja pelattavuus.",
+      "tila": "työn alla",
+      "tilanne": "Junassa 184:\n– MetaHuman-hahmot (≥ 6 Gt muistia), parrat, kypärät ja vaatteet v48s\n– torni kartalla kipin tapaan, lyhdyn äänet, kolikot laiturilla, läpinäkyvät napit\n\nJunassa 186:\n– hahmojen uudet vuoden 1499 asut viimeistelty, tunikoissa ei kovaa varjoraitaa\n– keittiön vartija ei enää kameran edessä, kappelin holvin korjaus\n\nTyön alla:\n– linnan laajennus keittiön tasolle huone kerrallaan (koehuoneessa): porttikäytävä ja pikkupiha valmiit, siirtymä porttikäytävältä pikkupihalle tasoitettu (oviaukon kaari ja seinäsaumat viimeistellään), linnantupa ja voudin sali työn alla (Tottin vaakuna kivireliefiksi, sininen kivi pois)\n– keittiö, porttikäytävä, pikkupiha ja seuraavat huoneet tulevat peliin yhdessä omana junanaan muistiajon kanssa\n– sisätilojen totuuskorjaukset huone kerrallaan (Linnanrakentaja)"
+    },
+    {
+      "edistys": 2,
+      "lisa": "Linssiseppä 2",
+      "otsikko": "Avaruusaseman kupoli 3D:nä",
+      "teksti": "Kupoli oikeana 3D-tilana.",
+      "tila": "myöhemmin",
+      "tilanne": "Kokeiltu 10.10.: 3D-huoneen ikkunapuitteet peittivät Maan, joten nykyinen kuva jää. Voidaan palata myöhemmin."
+    },
+    {
+      "edistys": 0,
+      "lisa": "",
+      "otsikko": "Seuraava linna: Allymes",
+      "teksti": "Uusi linna nykyisten töiden jälkeen.",
+      "tila": "myöhemmin",
+      "tilanne": "Ei aloitettu."
+    },
+    {
+      "edistys": 5,
+      "lisa": "Julkaisija",
+      "otsikko": "Äänisivu omaksi sivuksi",
+      "teksti": "Kaikki pelin äänet ja kappaleet omalle suojatulle sivulle, jonka vain sinä avaat sähköpostillasi.",
+      "tila": "valmis",
+      "tilanne": "Valmis: matkakirja-aanet.pages.dev. Aukeaa vain sinun sähköpostikirjautumisellasi (kertakoodi, istunto 30 vrk).",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Linssiseppä, Natiivi-UI, Siirtoseppä, Pelikoodari",
+      "otsikko": "Bugikorjaukset (TF 180)",
+      "teksti": "Junan 180 korjaukset: Pariisin esittely ja kuvat, kipin kompassi ja metrokartta, Olavinlinnan laituri, vene ja kivet, latausruudun Poistu-nappi ja musiikki.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Linssiseppä, Natiivi-UI, Siirtoseppä",
+      "otsikko": "Bugikorjaukset (TF 179)",
+      "teksti": "Pariisin esittely alkaa saapuessa eikä tule kipin päälle, Yövartion nimikyltti mahtuu puhelimeen, maakortin pääkaupunkirivi ei peitä arvoa, Olavinlinnan tarjotin ei enää jää tyrmään.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "edistys": 5,
+      "lisa": "Linssiseppä 2",
+      "otsikko": "Ilmakehä kaikkiin kaupunkeihin",
+      "teksti": "Sama ilmakehä kuin Pariisissa ja Tukholmassa kaikkiin kaupunkeihin, jolloin esimerkiksi Ateenan horisontin tumma merinauha muuttuu usvaiseksi mereksi.",
+      "tila": "valmis",
+      "tilanne": "Kaikissa kaupungeissa TF 179:stä alkaen.",
+      "valmistui": "10.10."
+    },
+    {
+      "edistys": 5,
+      "lisa": "Sisältökirjuri",
+      "otsikko": "Pääkaupunkien havainnekuvat",
+      "teksti": "342 kuvaa Codexilta (kaksi jokaiselle 171 pääkaupungille).",
+      "tila": "valmis",
+      "tilanne": "342/342 hyväksytty: jokaisella 171 pääkaupungilla kaksi kuvaa.",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Linssiseppä, Natiivi-UI, Siirtoseppä",
+      "otsikko": "Bugikorjaukset (TF 178)",
+      "teksti": "Kohdemerkit pysyvät pallolla, kehittäjän kaupunkivalinta toimii, kaupunkipallo avaa Pariisin esittelyn, harmaa kappale poistettu, Pulu ei nouse yläpalkkiin, Olavinlinnan reitti ja tähtilinssin kuva korjattu.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Päätoimittaja, Postivahti",
+      "otsikko": "Asemataulu",
+      "teksti": "Kehityksen tilasivu puhelimeen ja koneelle: käyttörajat, junat, työlista, laitteet ja roolit.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Natiivi-UI, Pelikoodari",
+      "otsikko": "Ikäraja asetuksiin",
+      "teksti": "Ikärajan voi tiukentaa Asetuksista, ja alaikäisille Pulu vastaa valmiilla vastauksilla.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Natiiviseppä, Julkaisija",
+      "otsikko": "Unity 6.7",
+      "teksti": "Peli siirrettiin Unity 6.7 -pelimoottoriin (TestFlight 176).",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "10.10."
+    },
+    {
+      "lisa": "Linssiseppä",
+      "otsikko": "Astronautin kameran kohteet",
+      "teksti": "Astronautin kameralla voi kuvata uusia kohteita eri puolilta maailmaa.",
+      "tila": "valmis",
+      "tilanne": "",
+      "valmistui": "27.9."
+    }
+  ],
+  "ts": 1791869718906
+}

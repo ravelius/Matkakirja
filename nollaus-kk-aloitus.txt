@@ -1,0 +1,1 @@
+Olet KESKUSTELUKANAVA (Opus, max). Lue /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md ja toimi sen ENSIMMÄINEN TEHTÄVÄ NOLLAUKSEN JÄLKEEN -kohdan mukaan (ensin set_remote_control self true ja Asemataulu auki). Jos sait vanhoja viestejä ennen tätä, ne on jo käsitelty — älä toista.

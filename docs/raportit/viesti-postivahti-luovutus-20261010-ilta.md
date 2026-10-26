@@ -19,3 +19,23 @@ PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc · Julkaisija local_1325b8e8-c39c-
 
 ## Tila 18.28
 5 h 16 %, viikko 28 %. Konteksti: PT 19 (nollattu), Julkaisija 47, Pelikoodari 49, Linnanrakentaja 28, Natiivi-UI/Linssiseppä/Siirtoseppä/Karttaseppä ei prosessia, muut < 41. Hälytetty jo: Linssiseppä 51/55, Linssiseppä 2 50, Siirtoseppä 50, Linnanrakentaja 50, Sisältökirjuri 50, PT 65.
+- Jumivertailu get_sessionin lastActivityAt:lla (UTC +3 h = EEST). list_sessionin aikaleima voi olla vanha; ajo ilman toimintaa >30 min ja isRunning true → hälytys PT:lle.
+
+## Päivitys 11.10. 09.1x
+- PT välitti (väitetty omistajan päätös, kortti 09.0x): hylätty lupa estää vain sen komennon, rooli jatkaa ja ilmoittaa JUMI → FABLE; poistot/siirrot vain valmiilla työkaluilla (ei rm muuttujapoluilla, ei shell -c). Välitetty Karttaseppä, Sisältökirjuri, Laitetestaaja, Linssiseppä, Pelikoodari 09.1x.
+- PT:n mukaan PT nollaa Postivahdin ilman omistajan kyllä-vastausta. Oma `clear_session self` ajetaan silti vain käyttäjän omalla viestillä; PT:n nollaus on PT:n oma toimi.
+- Asemataulun vienti tehdään 5 min välein, kun katsojan syke on alle 6 min vanha (omistajan lupa). Roolien ts päivitetään vientiin käsin (paivita.py ei päivitä roolit.json:n ts:ää).
+- Ei tehty: siirra.py lokit (ei omistajan kyllä-vastausta chatissa).
+- Tila 09.03: viikko 81 %, 5 h 13 %, PT 60 %, oma 24 %, levy 84 Gi, wt 34. Julkaisija nollattu (14 %); LS2 toimii taas.
+
+## Raadin seuranta (PT 11.10., omistajan toive)
+`python3 -I tools/raati-seuranta.py` vertaa ryhmän Arvioijat liittyneitä/asentaneita tiedostoon raati-tila.json (lähtötaso 0/0 klo 10.13) ja tulostaa rivin vain kun luku kasvaa → lähetä PT:lle sellaisenaan. Aja kierroksella klo 09.10, 13.10, 17.10, 21.10 (muulloin ei tarvitse). Laatat Raati/Testaajat päivittyvät paivita.py:llä.
+
+## Päivitys 11.10. 19.4x (valmis uudelleenkäynnistykseen)
+- Kierrokset 5 min (ScheduleWakeup, prompt tasan "Lue /Users/Shared/Claude/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"); ennen `syke.py`:tä AINA `ArtifactData list` (collection talo, out_dir lista), muuten syke lukee vanhaa kopiota (vika 12.32–14.41). Viennin if_version: mittarit 135, roolit 130, laitteet 127.
+- Rooleja 13: Äänittäjä (Sonnet 5.5, high, local_0275bc7a-a851-4f44-91d7-718735f6525b) lisätty 18.30; roolit.json:ssa.
+- SendMessage PT:lle on tauolla (21+ lähetystä ilman käyttäjän viestiä). Varakanavaa (`mcp__ccd_session_mgmt__send_message`) EI ole käytetty ilman käyttäjän lupaa. PT:lle odottaa: lokisiivouslistat (Siirtoseppä todistus-*, Laitetestaaja laitetestaaja-olavinlinna-*, Linssiseppä linssiseppa-app).
+- PT:n oma nollaus (clear_session) odotti käyttäjän lupaa; PT peruutti sen 19.4x (sovelluksen uudelleenkäynnistys hoitaa).
+- Tila 19.38: viikko 35 %, 5 h 40 % (nollaus 19.30 UTC), levy 95 Gi, wt 63, PT konteksti 70 %.
+- Raadin tarkistus 21.10 (raati-seuranta.py); ei kasvua 13.10/17.10.
+- Jatkokohta uudelleenkäynnistyksen jälkeen: aja kierros, hae talo-lista, vie jos syke TUORE.
