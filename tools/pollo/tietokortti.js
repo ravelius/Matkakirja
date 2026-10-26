@@ -296,6 +296,13 @@ export function tarkistaTeksti(teksti, syote) {
   const pienet = ilman.toLowerCase();
   const kielletty = KIELLETYT.find((s) => pienet.includes(s));
   if (kielletty) return { ok: false, syy: `sana ${kielletty}` };
+  // PT 26.10. vedos 2: ei aloitusäännähdystä ("Kato," pois) eikä Lue lisää -osassa samoja lukuja kuin lyhyessä (jatko vain uutta tietoa).
+  if (/^(kato|no niin|hetkinen)\b/i.test(eka)) return { ok: false, syy: 'aloitus' };
+  if (toka) {
+    const ekanLuvut = new Set(eka.match(/\d{2,}/g) ?? []);
+    const toisto = (toka.match(/\d{2,}/g) ?? []).find((x) => ekanLuvut.has(x));
+    if (toisto) return { ok: false, syy: `toisto ${toisto}` };
+  }
   // 2.4/7: ei puhuttelua eikä kehotuksia.
   if (/katsel|huomaat|kannattaa|kävele|\bnäet\b|tuntuu|\bkun \p{L}+t\b/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
   // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
