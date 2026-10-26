@@ -71,3 +71,10 @@ sahalaitainen kirkas lävistäjä oikealla alhaalla **poissa v57:ssä** ✓, MUT
 leivonnan reunatekseleihin (palan reuna-arvot 0,2–0,5 vs sisä 1,1). Kokeile ensin v1-tilaa (vain ±2 cm, `tausta_tliitokset.py.v1`)
 ja vertaa; tai jätä kiilaraon kolmiot jakamatta mutta laske pitkän reunan kärki (−125, 175) y 0,199 → 0 (lattia korokkeen alla).
 Pakkaa vasta, kun pari on puhdas molempiin suuntiin.
+
+## Lisäys 15.4x: PT – tausta-v57 vain yhdessä VS:n uudelleenleivonnan kanssa
+
+PT 15.4x (VS P43): porttihallin seinien kiilat ja kattojen sotku ovat v56-taustan leivottua valoa, todennäköisesti poistetun geometrian
+varjoja. **Älä pakkaa tausta-v57:ää ennen kuin olet sopinut VS:n kanssa uudelleenleivonnasta samaan pakettiin (yksi v57).** Järjestys:
+T-liitoskorjaus (ja tumman laikun ratkaisu) geometriaan → leivonta nykyisillä varjostajilla VS:n sopimin asetuksin (pohja
+aja_tausta_v46_leivonta.zsh / leivo_valo.py) → pari → pakkaus. Uudelleenleivonta ratkaisee todennäköisesti myös tumman laikun (UV1/valo).
