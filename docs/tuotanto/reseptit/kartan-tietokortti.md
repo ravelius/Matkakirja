@@ -298,9 +298,9 @@ kielen, jotta Pulu kirjoittaa silti suomea. Jos Wikipedia-artikkelia ei ole lain
 `###LUE-LISÄÄ###`. Asiakas näyttää ensimmäisen osan heti ja pitää toisen valmiina, kun pelaaja painaa Lue lisää.
 
 ```
-<lyhyt teksti: 3–4 virkettä, 40–65 sanaa>
+<lyhyt teksti: 3–4 virkettä, noin 28–65 sanaa>
 ###LUE-LISÄÄ###
-<pidempi teksti: 2–3 kappaletta, 110–170 sanaa>
+<pidempi teksti: 2–3 kappaletta, noin 80–170 sanaa>
 ```
 
 Jos lähteessä ei ole tarpeeksi aineistoa, worker palauttaa **vain** rivin `###EI-LÄHDETTÄ###` (ei mitään muuta), ja asiakas
@@ -339,8 +339,8 @@ on jo kortilla. Et laske, vertaile etkä muunna yksiköitä.
 
 MUOTO. Vastaus on pelkkää tekstiä: ei otsikoita, ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei
 lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kun tekstiä luetaan ääneen, jokaisen virkkeen
-pitää kuulostaa siltä, että suomalainen sanoisi sen. Ensimmäinen osa on tasan 3–4 virkettä ja 40–65 sanaa ja alkaa
-paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 2–3 lyhyttä kappaletta ja 110–170 sanaa;
+pitää kuulostaa siltä, että suomalainen sanoisi sen. Ensimmäinen osa on tasan 3–4 virkettä (suomen sanat ovat pitkiä, joten tämä on noin 28–65 sanaa) ja alkaa
+paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 2–3 lyhyttä kappaletta ja noin 80–170 sanaa;
 se syventää ensimmäistä lähteen muilla faktoilla ja toistamatta ensimmäisen osan virkkeitä. Jos lähde on niukka,
 tekstit ovat lyhyempiä (ensimmäinen vähintään 2 virkettä, toinen saa jäädä pois, jolloin vastaus loppuu ensimmäiseen
 osaan eikä merkkiriviä kirjoiteta).
@@ -403,7 +403,7 @@ myös naapurikylien väkeä.
 
 1. Vastaus on joko `###EI-LÄHDETTÄ###` tai ensimmäinen osa, jonka jälkeen on tasan yksi `###LUE-LISÄÄ###`-rivi ja toinen osa
    (tai pelkkä ensimmäinen osa, jos lähde niukka).
-2. Ensimmäinen osa: 40–65 sanaa (niukalla lähteellä vähintään 20), 3–4 virkettä (niukalla vähintään 2). Toinen osa 110–170 sanaa.
+2. Ensimmäinen osa: 28–65 sanaa (niukalla lähteellä vähintään 20), 3–4 virkettä (niukalla vähintään 2). Toinen osa 80–170 sanaa. (Rajat laskettu 27.10.2026 Etonin vedoksen 3 perusteella: 3 suomen virkettä on noin 30 sanaa ja pidempi osa 80–120 sanaa; Karttaseppä ehdotti, SK hyväksyi.)
 3. **Vastauksessa ei ole sanoin kirjoitettuja suuria lukuja (esim. 'viisi tuhatta') eikä asukaslukua; jokainen vastauksen numeromerkein kirjoitettu luku ja jokainen isolla alkava nimi löytyy syötteestä** (lähdeteksti tai Wikidata-lausumat); ylimääräinen
    luku tai nimi = hylkäys ja uusinta (enintään kaksi uusintaa, sen jälkeen `###EI-LÄHDETTÄ###`).
 4. Ei merkkejä `(`, `)`, `*`, `#` (paitsi merkkirivi), `—`, ei pisteellistä lyhennettä (`n.`, `ns.`, `esim.`), ei emojeita.
