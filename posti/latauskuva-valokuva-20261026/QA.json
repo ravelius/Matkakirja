@@ -1,0 +1,178 @@
+{
+  "at": "2026-10-26T15:26:55.772138+00:00",
+  "verdict": "PASS_FOR_PT_AND_OWNER_REVIEW",
+  "selectedAttempts": {
+    "978": 3,
+    "979": 2
+  },
+  "totalGenerativeCalls": 5,
+  "portraitCalls": 3,
+  "landscapeCalls": 2,
+  "maskGenerativeCalls": 0,
+  "originalSourceLimit": 2,
+  "additionalCallsDirectlyAuthorizedByOwner": true,
+  "ownerAuthorizationPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/OWNER-RETRY-AUTHORIZATION.json",
+  "visualReview": {
+    "realisticHumanFaceAndEyes": true,
+    "realisticTextileStoneAndPlaster": true,
+    "portraitSkyBehindHead": true,
+    "portraitMatchesPreferredLandscapeExpressionAndLowCamera": true,
+    "wholeBodyAndFlowingCape": true,
+    "singlePersonNoAddedLogosOrLettering": true,
+    "fullSizeAnd390pxComparisonsReviewed": true,
+    "allThreeLandscapeCropProofsReviewed": true,
+    "maskWhiteDarkBlueBackgroundsReviewed": true,
+    "maskIsTechnicalExtractionNotNewGeneration": true,
+    "logo824And825v7OriginalsUnchanged": true
+  },
+  "technical": {
+    "dimensions": {
+      "pysty": [
+        941,
+        1672
+      ],
+      "vaaka": [
+        2560,
+        1180
+      ],
+      "mask": [
+        2560,
+        1180
+      ]
+    },
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "transparentPixels": 2997421,
+    "opaquePixels": 17484,
+    "partialAlphaPixels": 5895,
+    "alphaBBox": [
+      1056,
+      257,
+      1371,
+      631
+    ],
+    "visibleRGBMatchesDeliveredPhotograph": true,
+    "wholeFigureWithinCentral55Percent": true,
+    "wholeFigureWithin15to94PercentHeight": true,
+    "bottomClearancePixels": 114,
+    "crops": [
+      {
+        "name": "19_5x9",
+        "box": [
+          0,
+          0,
+          2560,
+          1180
+        ],
+        "dimensions": [
+          2560,
+          1180
+        ],
+        "contains": {
+          "keisari": true,
+          "paa": true,
+          "otsikkoTila": true,
+          "leimaTila": true
+        }
+      },
+      {
+        "name": "16x10",
+        "box": [
+          336,
+          0,
+          2224,
+          1180
+        ],
+        "dimensions": [
+          1888,
+          1180
+        ],
+        "contains": {
+          "keisari": true,
+          "paa": true,
+          "otsikkoTila": true,
+          "leimaTila": true
+        }
+      },
+      {
+        "name": "4x3",
+        "box": [
+          493,
+          0,
+          2066,
+          1180
+        ],
+        "dimensions": [
+          1573,
+          1180
+        ],
+        "contains": {
+          "keisari": true,
+          "paa": true,
+          "otsikkoTila": true,
+          "leimaTila": true
+        }
+      },
+      {
+        "name": "74percent",
+        "box": [
+          333,
+          0,
+          2227,
+          1180
+        ],
+        "dimensions": [
+          1894,
+          1180
+        ],
+        "contains": {
+          "keisari": true,
+          "paa": true,
+          "otsikkoTila": true,
+          "leimaTila": true
+        }
+      },
+      {
+        "name": "61percent",
+        "box": [
+          499,
+          0,
+          2061,
+          1180
+        ],
+        "dimensions": [
+          1562,
+          1180
+        ],
+        "contains": {
+          "keisari": true,
+          "paa": true,
+          "otsikkoTila": true,
+          "leimaTila": true
+        }
+      }
+    ],
+    "portraitWholeFigureBox": [
+      25,
+      462,
+      680,
+      1340
+    ],
+    "portraitCentered3to4ContainsWholeFigure": true,
+    "imageGenerationCalls": 5,
+    "maskGenerationCalls": 0
+  },
+  "importantLimits": [
+    "These are generated photographs, not documentary captures of a historical event.",
+    "Landscape native1847x851 was technically resized/cropped by less than1nativepixel in width to2560x1180; this does not add native optical detail.",
+    "The landscape pose and expression are owner-preferred; final combined package owner approval and game publication remain unverified.",
+    "Portrait is a new complete image using the selected landscape as its photographic reference; it is not a crop of that landscape."
+  ],
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "R2UploadedByThisTask": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

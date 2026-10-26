@@ -1,0 +1,137 @@
+{
+  "title824": {
+    "x": 670,
+    "y": 15,
+    "width": 1150,
+    "height": 383,
+    "box": [
+      670,
+      15,
+      1820,
+      398
+    ]
+  },
+  "stamp825v7": {
+    "x": 1510,
+    "y": 865,
+    "width": 510,
+    "height": 189,
+    "box": [
+      1510,
+      865,
+      2020,
+      1054
+    ]
+  },
+  "layerOrder": [
+    "photograph",
+    "title824",
+    "stamp825v7",
+    "head-hat-braid-cutout"
+  ],
+  "crops": [
+    {
+      "name": "19_5x9",
+      "box": [
+        0,
+        0,
+        2560,
+        1180
+      ],
+      "dimensions": [
+        2560,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "16x10",
+      "box": [
+        336,
+        0,
+        2224,
+        1180
+      ],
+      "dimensions": [
+        1888,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "4x3",
+      "box": [
+        493,
+        0,
+        2066,
+        1180
+      ],
+      "dimensions": [
+        1573,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "74percent",
+      "box": [
+        333,
+        0,
+        2227,
+        1180
+      ],
+      "dimensions": [
+        1894,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "61percent",
+      "box": [
+        499,
+        0,
+        2061,
+        1180
+      ],
+      "dimensions": [
+        1562,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    }
+  ],
+  "portraitCentered3to4": [
+    0,
+    209,
+    941,
+    1463
+  ],
+  "previewOnly": true,
+  "approvedLogosUnchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-26T15:23:28.331748+00:00",
+  "directHumanInstruction": "Vaakakuva on parempi ilmeeltään sekä kivakulmalta (taivas pään takana). Tee pystykuva vielä uudestaan.",
+  "newWholePortraitAuthorized": true,
+  "landscapeUnchanged": true,
+  "preferredReference": "native/vaaka-attempt002.png",
+  "preferredTraits": [
+    "expression",
+    "lower camera angle",
+    "sky behind head"
+  ]
+}

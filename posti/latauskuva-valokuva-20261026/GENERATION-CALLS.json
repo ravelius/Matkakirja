@@ -1,0 +1,45 @@
+{
+  "limit": null,
+  "issued": 5,
+  "completed": 5,
+  "calls": [
+    {
+      "taskNumber": 978,
+      "issuedAt": "2026-10-26T15:14:31.513245+00:00",
+      "attempt": 1,
+      "status": "completed",
+      "calls": 1
+    },
+    {
+      "taskNumber": 979,
+      "issuedAt": "2026-10-26T15:14:31.513245+00:00",
+      "attempt": 1,
+      "status": "completed",
+      "calls": 1
+    },
+    {
+      "taskNumber": 978,
+      "issuedAt": "2026-10-26T15:18:00.121768+00:00",
+      "attempt": 2,
+      "status": "completed",
+      "referenceImages": []
+    },
+    {
+      "taskNumber": 979,
+      "issuedAt": "2026-10-26T15:18:00.121768+00:00",
+      "attempt": 2,
+      "status": "completed",
+      "referenceImages": []
+    },
+    {
+      "taskNumber": 978,
+      "attempt": 3,
+      "issuedAt": "2026-10-26T15:23:28.331748+00:00",
+      "status": "completed",
+      "reference": "native/vaaka-attempt002.png",
+      "reason": "Vaakakuva on parempi ilmeeltään sekä kivakulmalta (taivas pään takana). Tee pystykuva vielä uudestaan.",
+      "nativeSHA256": "40577f737a5ec00c462d85cc3138a1a33836a770845db3ccbc8ce636de139c9a"
+    }
+  ],
+  "ownerAuthorization": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/OWNER-RETRY-AUTHORIZATION.json"
+}

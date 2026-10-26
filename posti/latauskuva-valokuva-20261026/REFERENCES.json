@@ -1,0 +1,22 @@
+{
+  "pysty809": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-latauskuva-809-20261021/delivery/juoksupeli-latauskuva-pysty-v1.png",
+    "sha256": "e5f2dfc5c84a03df9ac25b936527dfa0d6f67ef4733989a3fa098ac0ae8d028f",
+    "role": "composition reference only"
+  },
+  "vaaka807": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-807-jatko-uusinta-905907-20261023/delivery/latauskuva-807-top300-blended-v2.png",
+    "sha256": "5e5ab9e350c9386be074aab42241a3602bb87886339875448f99f6879e1b4406",
+    "role": "composition reference only"
+  },
+  "title824": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/delivery/01-viimeinen-keisari.png",
+    "sha256": "67268c35c8879097d6db1e82c44d9ebd254287eb6098974039ff6331081b8ebe",
+    "role": "unchanged approved overlay for proofs only"
+  },
+  "stamp825v7": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-otsikko-824825-20261021/owner-preview-v7/02-karkuteilla-mud-splashes-v7.png",
+    "sha256": "ee789ef9f4c60205ee2fdaf6d6bf84fea914d3cc6a0ed6598f4ab7b821988603",
+    "role": "unchanged approved overlay for proofs only"
+  }
+}

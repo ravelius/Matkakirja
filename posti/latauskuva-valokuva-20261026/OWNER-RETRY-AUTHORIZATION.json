@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-26T15:18:00.121768+00:00",
+  "directHumanInstruction": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+  "supersedes": "Original source two-call cap",
+  "appliesTo": [
+    978,
+    979
+  ],
+  "necessaryRetakesAuthorized": true,
+  "publicationAuthorizationChanged": false
+}
