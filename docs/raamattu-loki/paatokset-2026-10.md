@@ -2739,3 +2739,7 @@ KK:n päätös omistajan valtuutuksella klo 23.53 (sanatarkasti): hyväksytty. T
 ## KOHDEKORTTIPOHJA: NUI:N A/C/D HYVÄKSYTTY (KK omistajan valtuutuksella) (27.10.2026 klo 00.05)
 
 KK:n päätös omistajan valtuutuksella klo 00.1x (sanatarkasti): NUI:n kohdekorttipohjan a/c/d (1ceb1ddff, kuvat proto-3d/_tyo/natiivi-ui/kohdekortti/kuvat-1ceb1ddff/) hyväksytty, merge junan 211 jälkeen. Lisäksi KK tietokortin vedokseen: Pulun ohjeeseen 'älä toista samaa faktaa' (Etonin tekstissä hallintopiiri ja vastakkainen ranta kahdesti); KK tarkistaa vedoksesta.
+
+## JUOKSUPELI: KEISARIN HUOPAPOHJAT VALOSEPÄLLE (KK omistajan valtuutuksella) (27.10.2026 klo 00.22)
+
+KK:n päätös omistajan valtuutuksella klo 00.22 (sanatarkasti): kyllä. VS tekee keisarin tummat huopapohjat materiaalilla tai varjostimella tekstuuria muokkaamatta, koska pohjat ovat basecolor-tekstuurissa ja mallissa on yksi materiaali. Lähikamera caca66ee0 menee junaan tämän kanssa KK:n 2× tarkistuksen jälkeen. Codexin tilaus 0de4bf318 jää pysyväksi korjaukseksi. Codexin herätys on aamulistalla. (Tausta: Codex hiljaa klo 22.48 alkaen; PT ehdotti siirtoa VS:lle.)
