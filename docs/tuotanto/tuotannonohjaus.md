@@ -120,6 +120,10 @@ Kokoaa reseptien entiset "Tarkista ennen" -osiot (omistaja 21.10. klo 17.31); re
 - AINA: työ alkaa reseptistä ja tavoitteesta; opit viedään reseptiin tai tekotapaan ennen valmista (4.21, 8.1).
 - AINA: olemassa olevat UI-pohjat ja tyylikirja; puuttuva osa kysytään PT:ltä, ei omaa ratkaisua (4.1).
 - AINA: kuvat ja 3D Codexilta, Claude koodaa ja tarkistaa toimitukset täysikokoisina (7.15).
+- AINA: jokaiseen tilaukseen (Codex tai rooli) liitetään omistajan aiemmat päätökset samasta aiheesta (`loki-hae`;
+  esim. Puyi ei lenkkareissa 23.10.), ja tekijä tarkistaa työnsä niitä vasten ennen luovutusta (omistaja 26.10. 18.1x).
+- AINA: Codexilla 2–3 hyväksyttyä tilausta jonossa; postilaatikon yli 60 min hiljaisuus avoimen tilauksen aikana
+  hälyttää PT:lle (7.18; omistaja 26.10. 18.1x).
 - AINA: kuvat vain PD/CC, tekijä ja lisenssi näkyvissä; media ämpäriin, ei repoon (11.1, 5.14).
 - AINA: maailma nykyajassa, vain estetiikka vanhaa; uutta työtä vain Euroopalle (1.10, 1.11).
 - AINA: ääneen luettava teksti suomeksi pakotettuna ja suomenkielisellä sanalla alkaen; faktat riippumattomalla
