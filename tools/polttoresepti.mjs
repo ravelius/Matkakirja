@@ -126,6 +126,25 @@ RESEPTITAULU['2026-09-26'] = Object.freeze({
    */
   deltaEdelliseen: Object.freeze({ resepti: '2026-09-25', laji: 'meri' }),
 });
+/*
+ * 2026-10-26 (omistaja 26.10.2026 klo 12.45 "Kyllä, korostetaan": matalat
+ * mäet, harjut ja laaksot näkyviin Tanskassa ja muilla tasangoilla, vuoret
+ * ennallaan): sama kuin tuotannon 2026-09-26, mutta lämpimään reliefiin
+ * lisätään tasankokorostus (maailmapiirto.js reliefi.tasanko). JSON
+ * yhdistyy reliefin oletuksiin, joten `{"tasanko":…}` = 'lammin' +
+ * korostus. Arvot GLO-90-kokeesta (Tanska ja Alpit, ero Alpeilla 0,04).
+ * Muutos koskee maata, ei merta, joten delta-polttoa edelliseen ei ole.
+ */
+export const TASANKO_2026_10_26 = Object.freeze({ kerroin: 4, k0: 0.02, pohjaM: 1500 });
+const { deltaEdelliseen: _d26, ...R26 } = RESEPTITAULU['2026-09-26'];
+RESEPTITAULU['2026-10-26'] = Object.freeze({
+  ...R26,
+  kuvaus: '2026-09-26 + tasankokorostus lämpimään reliefiin (omistaja 26.10.2026 klo 12.45)',
+  pohjaliput: R26.pohjaliput.map((l) => {
+    if (l === 'lammin') return JSON.stringify({ tasanko: TASANKO_2026_10_26 });
+    return l === '2026-09-26' ? '2026-10-26' : l;
+  }),
+});
 export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
 export function resepti(nimi) {
