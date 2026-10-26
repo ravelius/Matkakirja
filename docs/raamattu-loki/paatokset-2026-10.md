@@ -2619,3 +2619,7 @@ ilman avauksen estoa); metal-tarkistus.sh pysäytetty, kunnes VS korjaa ja todis
 ennen jumia; syy-yhteys epävarma, kone oli raskaassa kuormassa. (3) TF 210 (run 40193412825) päättyi failure jo 14.43, tf210.sh jäi silmukkaan TLS-virheisiin: JU käynnistää uudelleen. (4) Omistaja
 antaa täyden levyoikeuden runnerien node24:lle (TCC:n vastuuprosessi Runner.Listener → node, KK:n mittaus): /Users/Shared/Claude/actions-runner{,-2}/externals.2.338.0/node24/bin/node. Runnerin
 automaattipäivitys vaihtaa polun → JU ehdottaa pysyvän polun.
+
+## UNREAL POISTETAAN (omistaja 26.10. klo 11.09) (26.10.2026 klo 11.10)
+
+Kortti KK:ssa: 'Poistetaanko Unreal?' → 'Kyllä, poistan (Suositus)' (Unreal ja välimuisti pois, noin 70 Gt vapaaksi; kokeiluprojekti jää talteen ulkoiselle levylle). Omistaja poistaa itse UE_5.8:n (50 Gt, T7) Epic-ohjelmasta ja ~/Library/Application Support/Epic/UnrealEngine/Common (20 Gt, sisäinen levy); T7:n proto-3d/_tyo/metahuman-koe (14 Gt) jää talteen. Raamattu 12.12 ja 2.182 päivitetty; 2.163:n CesiumSunSky-viittaus poistettu.
