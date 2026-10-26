@@ -2623,3 +2623,7 @@ automaattipäivitys vaihtaa polun → JU ehdottaa pysyvän polun.
 ## UNREAL POISTETAAN (omistaja 26.10. klo 11.09) (26.10.2026 klo 11.10)
 
 Kortti KK:ssa: 'Poistetaanko Unreal?' → 'Kyllä, poistan (Suositus)' (Unreal ja välimuisti pois, noin 70 Gt vapaaksi; kokeiluprojekti jää talteen ulkoiselle levylle). Omistaja poistaa itse UE_5.8:n (50 Gt, T7) Epic-ohjelmasta ja ~/Library/Application Support/Epic/UnrealEngine/Common (20 Gt, sisäinen levy); T7:n proto-3d/_tyo/metahuman-koe (14 Gt) jää talteen. Raamattu 12.12 ja 2.182 päivitetty; 2.163:n CesiumSunSky-viittaus poistettu.
+
+## PT:N OPIT 26.10. (kuvat, merge) (26.10.2026 klo 11.53)
+
+(1) Kuva tarkistetaan ennen KK:ta koko alalta 1:1, myös toissijaiset alueet (elävän kartan parissa KK löysi kolme vikaa, PT yhden). (2) Offline-renderöintejä ei näytetä omistajalle (7.32), vain pelikuvia. (3) PR mergetään vasta, kun kaikki checks ovat valmiit; gh pr checks --watch voi palata ennen kuin checkit ovat alkaneet (PR 5235).
