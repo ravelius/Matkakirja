@@ -320,7 +320,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   if (sanat(eka) < (niukka ? 20 : 28) || sanat(eka) > 65) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
   if (toka && (sanat(toka) < 80 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
   const ilman = osat.join(' ');
-  if (/[()*—]|#/.test(ilman) || /\b(n|ns|esim)\./i.test(ilman)) return { ok: false, syy: 'merkit' };
+  // Lyhenteen alku kirjaimella eikä \b:llä: \b pitää ä:tä sanarajana ("residenssinään." → "n.", Windsor vedos 4).
+  if (/[()*—]|#/.test(ilman) || /(?<!\p{L})(n|ns|esim)\./iu.test(ilman)) return { ok: false, syy: 'merkit' };
   const pienet = ilman.toLowerCase();
   const kielletty = KIELLETYT.find((s) => pienet.includes(s));
   if (kielletty) return { ok: false, syy: `sana ${kielletty}` };
@@ -348,11 +349,12 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     }
   }
   // 2.4/7: ei puhuttelua eikä kehotuksia.
-  if (/katsel|huomaat|kannattaa|kävele|\bnäet\b|tuntuu|\bkun \p{L}+t\b/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
+  if (/katsel|huomaat|kannattaa|kävele|(?<!\p{L})näet(?!\p{L})|tuntuu|(?<!\p{L})kun \p{L}+t(?!\p{L})/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
   // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
   if (!/[.!?]$/.test(eka) || (toka && !/[.!?]$/.test(toka))) return { ok: false, syy: 'kesken' };
   // 2.4/3: ei sanoin kirjoitettuja suuria lukuja.
-  if (/\b(tuhatta|tuhat|miljoonaa|miljoona|sataa)\b/i.test(ilman)) return { ok: false, syy: 'luku sanoin' };
+  // Ei "sataa": se on myös verbi ("joulukuussa sataa eniten", Windsor vedos 4).
+  if (/(?<!\p{L})(tuhatta|tuhat|miljoonaa|miljoona)(?!\p{L})/iu.test(ilman)) return { ok: false, syy: 'luku sanoin' };
   const lahdeTeksti = String(syote ?? '');
   const tiivis = lahdeTeksti.replace(/\s/g, '');
   for (const luku of ilman.match(/\d[\d\s]*\d|\d/g) ?? []) {
