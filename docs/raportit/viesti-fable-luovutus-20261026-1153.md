@@ -1,4 +1,4 @@
-# Päätoimittajan luovutus 26.10.2026 klo 11.53 (talviaika EET; konteksti 27 %; tili vvi@vvi.fi)
+# Päätoimittajan luovutus 26.10.2026 klo 11.53, päivitetty 12.08 (talviaika EET; konteksti 30 %; tili vvi@vvi.fi)
 
 Id:t: /Users/Shared/Claude/osoitekirja.md. PT local_5df52e10. Edellinen -20261025-1430 (lue vain tämä).
 ALOITA: tuotannonohjauksen osio 0, node tools/raamattu-luku.mjs 7.47 (PT: luvut 7, 8, 9, 12, 14, 4.1, docs/tilinvaihto.md).
@@ -19,12 +19,17 @@ VIESTIT: mcp__ccd_session_mgmt__send_message session-id:llä. Omistaja on taas k
 - Levy 94 Gi (JU siivosi + Unreal pois).
 
 ## 1. JUNA 211 (runko NS: e77543fc7 = räystäskamera 957cc6a4b + Metal-korjaus)
-- PK räystäskamera: v54/v46 editorissa porttihallien piilot 0 → LT:n laiteajo A+B KÄYNNISSÄ (tulos LT → PT). Kuittaus vasta
-  sen jälkeen. Sitten PK: kolmikot aukio + kujaportti + porttihalli PT:lle → KK → omistaja; sitten lautaspöydän pari.
+- PK räystäskamera KUITATTU 12.0x: LT e77543fc7 vihreä (A+B, J 10,38 / A 11,10 ms, portti/kuja/aukio-piilot 0; jäljellä
+  räystäs avoin työhuone ×2 + puutarha → PK häivyttää myöhemmin). PK seuraavaksi: PELIKUVAT aukio + kujaportti + porttihalli
+  PT:lle → KK; sitten OMISTAJAN PYYNTÖ 11.57: dronen FPV-kallistus käännöksissä (päätetty jo 19.10./21.10., ei näy → syy ensin),
+  juoksijan nojaus käännöksiin/radanvaihtoihin, askeleen vaihtelu + harva kompurointi suoralla (ei esteen/käännöksen kohdalla).
+  Video PT:lle. Työlistarivi lisätty. Sitten lautaspöydän pari.
 - LR: tausta-v54 + rakennukset-v46 ämpärissä (terassit lähteen korkeudelle: Longzongmen 0,3 m, Zhendumen/Youyimen 2,5 m).
   tausta-v55 (galleriat 1,8 m, Zhaodemen 2,5 m) valmis, KUITTAA vasta yhdessä rakennukset-v47:n (porttipinnat: marmori,
-  leivonta oikealla taivaalla, kiila pois) kuvaparin jälkeen. Kujakolmikot 02/05 PALAUTETTU 11.5x: reunaporras tasaharmaa →
-  laattapinta kuten havainteessa. Sitten kolmikot → KK:lle KYSYMYS kujien leveydestä (kumoaa 11.32:n 7,7/10,7).
+  leivonta oikealla taivaalla, kiila pois) kuvaparin jälkeen. Kujat: reunaporras korjattu (laatat + saumat, kolmikot
+  *-lattiaporras2.png). KK 12.07: kujien leveys = FAKTAKORJAUS, EI kysymystä omistajalle (11.32 "havainnekuvien leveyteen");
+  LR toteuttaa "uuden" lopullisena (02 suora ilman suppiloa, 05 kuja eikä aukio) ja pakkaa kujat + porttipinnat
+  (tausta-v55/v56 + rakennukset-v47) → SHA:t PT:lle → kuittaa JU:lle → PK pelikuvat → KK.
 - VS (nollattu fed2a93cf): valo 1–3 + salin pilotti 3; pari 04 + 01 PT:lle.
 - KS: elävä kartta (proto karttaseppa/elava-kartta, kytkin matkakirja-elava-kartta, NUI-maininta 6f5f3a0bc). KK PALAUTTI parin
   11.27 (viivat, läiskä, ratapiha). Ratapiha korjattu; karkeat ranta/rajakerrokset häipyvät Z10,5:stä (295600481 käännöksessä);
@@ -33,9 +38,11 @@ VIESTIT: mcp__ccd_session_mgmt__send_message session-id:llä. Omistaja on taas k
 - NUI: jono tyhjä (levossa).
 
 ## 2. ODOTTAA OMISTAJAA
-- Kujien 02/05 leveys (kun LR:n kolmikot kunnossa). Elävän kartan pari (kun KS:n korjattu). Aukio/kujaportti/porttihalli-kolmikot.
+- Ei kysymyksiä. Näytettävät (vain PELIKUVAT, 7.32): elävän kartan pari, kujat, aukio/kujaportti/porttihalli, kallistusvideo.
 
 ## 3. Opit (kirjaa lokiin)
 - Kuvan tarkistus ennen KK:ta: koko kuva 1:1, myös toissijaiset alueet (KK löysi 3 vikaa, PT näki 1).
 - Offline-renderöintejä ei näytetä omistajalle (7.32), vain pelikuvia.
+- Faktakorjausta ei kysytä omistajalta, jos alkuperäinen päätös oli tavoitteen tasolla (kujat 12.07).
+- Editorikuvat eivät kelpaa omistajalle, vain pelikuvat.
 - PR:n merge vasta, kun kaikki checks ovat valmiit (gh pr checks --watch voi palata ennen kuin checkit ovat alkaneet).
