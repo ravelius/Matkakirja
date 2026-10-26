@@ -316,7 +316,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   const nimiToisto = nimet.find((n, i) => nimet.findIndex((m) => m.slice(0, 5) === n.slice(0, 5)) !== i);
   if (nimiToisto) return { ok: false, syy: `toisto ${nimiToisto}` };
   // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 10 kirjainta, 8 ensimmäistä samat, ei kohteen nimeä) kahdesti.
-  const pitkat = (pienet.match(/\p{L}{10,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
+  // Isolla alkavat (nimet) jäävät pois: erisnimien toiston hoitaa yllä oleva sääntö.
+  const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{9,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
   const sanaToisto = pitkat.find((s, i) => pitkat.indexOf(s) !== i);
   if (sanaToisto) return { ok: false, syy: `toisto ${sanaToisto}` };
   const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
