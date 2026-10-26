@@ -1155,6 +1155,17 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     valoVoima: reliefi.valoVoima ?? 0.55,
     varjoVoima: reliefi.varjoVoima ?? 0.85,
     rinne: reliefi.rinne ?? 0.35,
+    /*
+     * TASANKOKOROSTUS (omistaja 26.10.2026 klo 12.45 "Matalat mäet, harjut ja
+     * laaksot näkyviin Tanskassa ja muilla tasangoilla; vuoret ennallaan."):
+     * gradienttiin lisätään LAAJAN POHJAN (±pohjaM metriä) gradientti
+     * painolla (kerroin − 1) · exp(−(k/k0)²), k = laajan pohjan kaltevuus.
+     * Kilometrien mittakaavan muodot (moreeniselänteet, laaksot) korostuvat,
+     * mutta pintamallin metsänreunat ja rakennukset (satoja metrejä) eivät.
+     * Jyrkkä rinne (k ≫ k0) ennallaan. Viritys GLO-90:stä Tanskassa ja
+     * Alpeilla: { kerroin: 4, k0: 0.02, pohjaM: 1500 }. null = ennallaan.
+     */
+    tasanko: reliefi.tasanko ?? null,
     kohina: reliefi.kohina ?? 0.25,
     asteikko: reliefi.asteikko ?? [
       { m: 0, v: [238, 229, 194] },
@@ -1207,6 +1218,18 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
         const w = t * t * (3 - 2 * t);
         dzdx = dzdx * (1 - w) + gx * w;
         dzdy = dzdy * (1 - w) + gy * w;
+      }
+    }
+    if (RELIEFI.tasanko) {
+      const T = RELIEFI.tasanko;
+      const n = Math.max(1, Math.round(T.pohjaM / (dd * 111320)));
+      const DD = dd * n;
+      const bx = (korkeus(lon + DD, lat) - korkeus(lon - DD, lat)) / (kx * n);
+      const by = (korkeus(lon, lat + DD) - korkeus(lon, lat - DD)) / (ky * n);
+      if (Number.isFinite(bx) && Number.isFinite(by)) {
+        const u = Math.hypot(bx, by) / T.k0;
+        const w = (T.kerroin - 1) * Math.exp(-u * u);
+        dzdx += w * bx; dzdy += w * by;
       }
     }
     const z = RELIEFI.liioittelu;
