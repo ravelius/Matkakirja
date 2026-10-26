@@ -303,8 +303,14 @@ export function tarkistaTeksti(teksti, syote) {
   // 2.4/3: ei sanoin kirjoitettuja suuria lukuja.
   if (/\b(tuhatta|tuhat|miljoonaa|miljoona|sataa)\b/i.test(ilman)) return { ok: false, syy: 'luku sanoin' };
   const lahdeTeksti = String(syote ?? '');
+  const tiivis = lahdeTeksti.replace(/\s/g, '');
   for (const luku of ilman.match(/\d[\d\s]*\d|\d/g) ?? []) {
-    if (!lahdeTeksti.replace(/\s/g, '').includes(luku.replace(/\s/g, ''))) return { ok: false, syy: `luku ${luku}` };
+    const n = luku.replace(/\s/g, '');
+    if (tiivis.includes(n)) continue;
+    // Vuosisata suomeksi (1100-luvulla) englanninkielisestä lähteestä ("12th century", "1100s").
+    const v = Number(n);
+    if (v >= 100 && v % 100 === 0 && new RegExp(`\\b${v / 100 + 1}(st|nd|rd|th)[ -]century|\\b${v}s\\b|\\b${v / 100 + 1}\\. vuosisa`, 'i').test(lahdeTeksti)) continue;
+    return { ok: false, syy: `luku ${luku}` };
   }
   for (const nimi of ilman.match(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu) ?? []) {
     if (!lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) return { ok: false, syy: `nimi ${nimi}` };
