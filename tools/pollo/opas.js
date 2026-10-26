@@ -172,7 +172,7 @@ export function siivoaOpasPyynto(runko) {
  * erähaun yhden palan hetkellinen virhe tyhjensi koko listan). Odotus Retry-Afterin mukaan, enintään 1,5 s.
  */
 export const HAKU_UUSINTA_MS = { oletus: 500, enintaan: 1500 };
-async function haeJson(haku, url) {
+export async function haeJson(haku, url) {
   for (let yritys = 0; ; yritys += 1) {
     let v = null;
     try {

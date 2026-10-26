@@ -410,13 +410,16 @@ tulos. Sisältökirjuri lukee ne tuoreella lukijalla (Raamattu 9.11) ennen kuin 
 
 ### 2.6 Toteutusmuistiinpanot
 
-- **Robots.txt:** Wikipedian ja Wikidatan `/w/` (`api.php`) ja `query.wikidata.org/sparql` on aiemmin merkitty robots.txt:ssä
-  kielletyiksi (`kuumailmapallokierros.md` kohta Kohdelista, 19.10.2026); `/wiki/Special:EntityData/<Q>.json` (Wikidatan
-  kohteen JSON) ja Wikipedian REST-yhteenveto (`/api/rest_v1/page/summary/...`) on tarkistettava robots.txt:stä ennen
-  toteutusta (Raamatun robots-sääntö). Wikidatan sisältö on CC0 ja Wikipedian teksti CC BY-SA 4.0: lähderivi on
-  pakollinen, ja Pulun teksti on omaa sanamuotoa, ei lainausta.
-- **OSM → Wikidata:** nimen napautus ratkaistaan OSM-objektin `wikidata`-tunnisteella (tai `wikipedia`-tunnisteesta
-  `pageprops.wikibase_item`); ilman kumpaakaan korttia ei avata (ei arvailua nimen perusteella).
+- **Wikimedian rajapinta (PT 26.10.2026 klo 23.4x, Raamattu 2.183):** robots.txt kieltää kaikki koneluettavat polut (`/w/`,
+  `/api/`, `/wiki/Special:EntityData`), joten käytetään Wikidatan ja Wikipedian virallista `api.php`:tä kuvaavalla User-Agentilla
+  kuten `tools/pollo/opas.js` (virallinen rajapinta, jonka 2.183 sallii): maltillinen tahti (haut peräkkäin, uusinta vain 429/5xx),
+  ja jokainen kortti ja teksti tallennetaan ämpäriin, joten samaa paikkaa ei haeta eikä generoida kahdesti. SPARQLia ei käytetä.
+  Wikidatan sisältö on CC0 ja Wikipedian teksti CC BY-SA 4.0: lähderivi on pakollinen, ja Pulun teksti on omaa sanamuotoa.
+- **OSM → Wikidata (PT 26.10.2026 klo 23.4x):** elävän kartan vektoripaloissa (OpenMapTiles) ei ole OSM:n `wikidata`-tunnistetta,
+  joten kytkentä tehdään nimellä, pisteellä ja lajilla: Wikidatan nimihaku, ehdokkaat joiden koordinaatti on lajin säteen sisällä
+  (kaupunki 15 km, kylä 4 km, vuori 4 km, järvi 30 km …), paras = Wikipedia-artikkelin otsikko on nimi, sitten laji sopii, sitten
+  lähin. Nominatimia ei käytetä. Puuttuva tai epävarma osuma (nimi ei täsmää nimiöön eikä otsikkoon) jätetään pois: kortissa on
+  silloin vain nimi.
 - **Tyhjät lajit:** jos kohteen laji on `Paikka` eikä faktoja löydy, kortti sisältää vain nimen, kuvan ja Pulun tekstin
   (jos lähde riittää), muuten kortti ei aukea.
 - **Sisältökirjuri ei muuta kaavaa tai kehotetta Karttasepän puolesta;** muutokset tehdään tähän tiedostoon ja ilmoitetaan.
