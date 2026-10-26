@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
     inputs:
       app_polku:
-        description: 'Valmis Mac-käännös (Natiivisepän mac-kaanna.sh)'
-        default: '/Users/Shared/Claude/proto-3d/Matkakirja-proto-mac/Build/mac/Matkakirja.app'
+        description: 'Valmis Mac-käännös (Natiivisepän mac-kaanna.sh; sisäisellä levyllä, ei T7:ää – PT 26.10.)'
+        default: '/Users/Shared/Claude/proto-3d/lokit/natiiviseppa-mac-tf-uusin/Matkakirja.app'
       versio:
         description: 'CFBundleShortVersionString (sama kuin iOS-junan versio)'
         default: '1.1'

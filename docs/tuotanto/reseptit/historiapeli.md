@@ -23,6 +23,7 @@ esirenderöityä videota (omat reseptinsä).
 | Ala | Tavoite |
 |---|---|
 | Koko peli | tavoitekuva: havainnekuvat tärkeimmistä näkymistä (Codex), kameran etäisyys ja hahmon koko näkyvissä |
+| Näköisyys | havainnekuvasta identtiseksi: kohta kohdalta -taulukko (havainnekuvassa / peli nyt / tekotapa / tekijä / tunnit) B:n 3d-ja-kuvat.md kohdan 11 mukaan, PT hyväksyy ennen työtä (Raamattu 7.20) |
 | Kamera | kuvakäsikirjoitus tai viitevideo (juoksupeli: hahmo noin 1/6 kuvasta, kujilla kapea, aukioilla laaja kuvakulma) |
 | Mekaniikka | nimetty jo ideassa (juoksupelin pyyhkäisyt, hiiviskely) ja harmaana pelattavana ennen grafiikkaa |
 | Äänet | mallinäyte ja kuvaus; tekstit ja repliikit esimerkkeinä pelinäkymässä ennen koko erää |
@@ -58,6 +59,7 @@ esirenderöityä videota (omat reseptinsä).
 - [ ] Harmaa versio: pelattavissa alusta maaliin, botti läpi, ruudun osat pohjilla.
 - [ ] Faktat: kaksi lähdettä per väite, riippumaton tarkistus, anakronismit pois, pelaaja sukupuoleton.
 - [ ] Näköisyys: kamera ja hahmon koko tavoitekuvan mukaan, katot kiinni tai katottomat huoneet, tilatut mallit pelissä.
+- [ ] Havainnekuvasta identtiseksi: taulukon jokainen rivi ok pelikuvaparista ennen ensimmäistä junaa (B 3d-ja-kuvat.md kohta 11).
 - [ ] Testit: `kaanna.sh` 0 fail, `tarkista.sh` 0 virhettä, botti ja mittari ilman nykäysrivejä; todistuskuvat pelinäkymästä.
 - [ ] Opit kirjattu tähän tai tekotapaan (siirtymäajan pohjan luku 7).
 

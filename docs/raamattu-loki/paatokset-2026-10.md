@@ -2356,3 +2356,306 @@ Omistaja (KK:n välittämät): 13.15 käynnistyksen latauksen aikana näkyvä Ma
 tekstit Kielletty kaupunki / Beijing / 1914 rivi kerrallaan (vuosi: juoksupelin Puyi = lapsi noin 1914, päätös 16.10.); energiamittari vasta 3-2-1:n jälkeen. 13.39 JULKAISUPYYNTÖ junalle 210
 grafiikkaparannusten kanssa; grafiikan kuvat ja lennon video omistajalle ennen TF:ää. 13.5x rakettivideoon kaikki viisi parannusta, alku hämärässä, vertailu oikeisiin laukaisukuviin. 14.59 UI-POHJAT:
 uusi iso näyttötyyli EB Garamond SemiBoldilla juoksupelin alkulennon teksteille (2 ×) ja lähtölaskennalle (3 ×).
+
+## PAATOKSET 23.10.2026 klo 17.46: JUNA 210 ODOTTAA SÄVYJÄ (23.10.2026 klo 17.47)
+
+Omistaja (KK:n kortti, kuva pari-03-aukio.png): Julkaistaanko testiversio tasaisemmilla laatoilla? -> Odota sävyjä. Juna 210 TF:ään vasta, kun aukio näyttää hyväksytyltä kierrokselta 2 (laattakohtaiset sävyt, tummat saumat, kattojen tiilirivit) ja pyörii iPadilla nykimättä. Versiota tiilet 0 ei julkaista. Välitetty Julkaisijalle ja Valosepälle 17.4x.
+
+## PAATOKSET 23.10.2026 klo 18.14: RAKETTIVIDEO JATKUU (23.10.2026 klo 18.14)
+
+Omistaja (KK:n kortti, video f2a690238 + vertailut): Jatketaanko rakettivideota tällä ilmeellä? -> Kyllä, jatka. Viimeistelyyn savupilvi korkeammaksi ja oranssimmaksi sekä selvempi heijastus vedessä kuten NASA KSC-06pp2751 ja KSC-00pp1803. Ääni vasta valmiiseen versioon. Välitetty Valosepälle.
+
+## PAATOKSET 23.10.2026 klo 19.02: JUNAN 210 GRAFIIKKA HYVÄKSYTTY (23.10.2026 klo 19.02)
+
+Omistaja (KK:n kortti, 5 paria TF 209 vs. 12a7e15e8): Hyväksytäänkö uusi grafiikka testiversioon? -> Kyllä. TF 210 julkaistaan, kun omistaja on nähnyt vielä alkulennon videon ja vaakalatauskuvan.
+
+## PAATOKSET 24.10.2026 klo 00.37: RAKETTIKOHTAUS SÄVYTETÄÄN CODEXIN MUKAAN (24.10.2026 klo 00.38)
+
+Omistaja (KK:n kortti, näyte 2d9b73aa3): liian värikäs maasto ja taivas, horisontissa näkyy maaston raja. -> Sävytetäänkö kuva Codexin kuvan mukaan näin? Kyllä. Koko kuvaan (peli ja video) värisuodatin (LUT) Codexin havainne-r3/r4:n väreistä ja tummuudesta; horisonttiin tumma usva peittämään tarkan ja karkean maaston sauman; jokainen näyte verrataan koneellisesti Codexin kuvaan (värit ja tummuus), ja omistaja näkee sen vasta, kun ero on pieni. Välitetty Valosepälle.
+
+## PAATOKSET 24.10.2026 klo 01.11: KOKO RAKETTI VIDEONA (24.10.2026 klo 01.12)
+
+Omistaja: miksi ihmeessä koko rakettia ei tehdä videoksi? vasta cupolassa siirrytään pelin piirtoon. -> Koko raketin osuus videona, myös avauslento alustalle; peli piirtää vasta Cupolan (häivytys elävään Cupolaan). Jos alustalla on pelaajan oma laukaisuhetki, video jaetaan siinä kahteen osaan saumattomasti. iPad-mittaus vain Cupolasta ja videon toistosta. Raamattu 2.105 laajennettu.
+
+## PAATOKSET 24.10.2026 klo 01.29: VAAKALATAUSKUVA JA KUVAT ILMAN SELITETTÄ (24.10.2026 klo 01.30)
+
+Omistaja (KK:n kortti Kelpaako vaakalatauskuva testiversioon?): Älä laita selite tekstiä kuvan päälle. Ylhäällä liikaa tilaa. Otsikko piti mennä pään taakse. -> Vaakakuva korjataan: otsikko osin keisarin pään ja hatun taakse, yläreunaan ei tyhjää taivasta, pysty ennallaan (PK). Työtapa: yksittäinen kuva omistajalle raakana ilman selitetekstiä ja -kaistaa, selitys KK:n viestiin (Raamattu 4.48 tarkennettu).
+
+## PT 24.10.2026: MIKSI TESTAUSSÄÄNNÖT UNOHTUIVAT – LUE ALOITTAESSA RAAMATTUUN (7.47) (24.10.2026 klo 01.46)
+
+Omistaja 24.10. klo 01.36 (KK:n kautta, sanatarkasti): "Mutta tärkein kysymys on että miksi näin kävi? Mikä on pielessä ja miten saadaan korjattua jotta tämä ei toistu taas seuraavassa tilin
+vaihdossa?" Syyt: 1) PT:n lukulistassa (vastuukartta) ei ollut lukua 9, joten nollattu PT ei lukenut 9.2/9.3:a; luku 9 oli vain tilinvaihdon listan kohdassa 17. 2) 20.10. klo 22.24 päätöksestä
+(karsinta) työkalut tehtiin, mutta LUE ALOITTAESSA -rivit puuttuivat Raamatusta, ohjeiden koetta ei ajettu ja kotikansioiden päivitystä ei kytketty nollaukseen (12/17 kansiota 500–2200 committia
+jäljessä, vanha CLAUDE.md). 3) Omistajan sanat välitettiin tulkintoina. Korjaus: Raamattu 7.47 LUE ALOITTAESSA (kaikille 9.1–9.3 ja 9.5, PT:lle luku 9), 12.23 kohdat 17–18 (tilinvaihto valmis vasta
+ohjeiden kokeen jälkeen), vastuukartan PT-rivi; kotikansiot mainiin (Sisältökirjuri, Työkaluseppä tehty, muut työkalukorjauksen jälkeen) ja Postivahdin nollaukseen; ohjeiden koe Sonnetilla.
+Sanatarkkojen sanojen sääntö odottaa omistajan korttia KK:ssa.
+
+## PT 24.10.2026: OHJEIDEN KOE 1. KIERROS 9/10 – 9.11 ISO IPAD VAPAASTI TÄSMENNETTY (24.10.2026 klo 02.05)
+
+Ohjeiden koe (7.47) tuoreella Sonnetilla PT:n lukulistalla: 9/10 oikein. Kysymys 1 (saako avoimen junan rungosta mitata iPadilla ennen lukitusta) vastattiin "kyllä" kohdan 9.11 ISO IPAD VAPAASTI ("mittaavat isolla iPadilla aina kysymättä") perusteella; sama sanamuoto johti PT:n 23.–24.10. välimittauksiin. Korjaus: lupa koskee laitetta, ei ajon tarvetta; mitata saa vain yöjunan laitekierroksessa, omistajan pyytämiin kuviin ja uuteen tekniikkaan (9.2, 9.3; omistaja 24.10. klo 01.31).
+
+## PAATOS 24.10.2026 klo 02.12: KERTOJAÄÄNTEN RAJA 3 % JA HYVÄKSYTTY LUKIJAÄÄNI (24.10.2026 klo 02.12)
+
+Omistaja klo 02.12 KK:n kautta (sanatarkasti): "Kertoja ääniä sai tehdä jos se vie alle 3% kuukausi kiintiöstä ja jos lukijaääni on jo hyväksytty". Korvaa kertojaäänten pysyvän luvan rajan "noin enintään 10 000 merkkiä per kokonaisuus". Muutettu: Raamattu 5.1, docs/tuotanto/tuotannonohjaus.md (lupataulukon Kertojaääni-rivi), tuotantopohja kertojan-teksti-ja-aani.md. Periaatesivun päätös tulee erikseen.
+
+## PAATOKSET 24.10.2026 klo 02.17: PERIAATESIVU, VAAKAKUVA JA ALKULENTO (24.10.2026 klo 02.19)
+
+Omistajan vastaukset KK:n korteille klo 02.17 (sanatarkasti). 1) Vaakakuva 210e: "Olisiko piirtää olla keskellä. Ylös vähän lisää tilaa. Kengän kuva isommalla ja se pitää tulla ääni efektin kanssa vasta 2sek päästä. Mieti onko kuva hyvä itse ennen kuin laitat minulle uuden version" → Pelikoodari (sommittelu keskelle, leima isommaksi, ilmestyy 2 s kuluttua tehosteäänen kanssa, 5.27). 2) Alkulento: "Drone vaappuu liikaa. Kaarrokset pitää olla Kauniita eikä hätäisiä kuin nyt. Pitää näyttää ammattilaisen ohjaamalta. Itse pelissä drone on aivan liian kaukana pelaajasta" → NUI (yksi pehmeä kaari, 2.202, kulmanopeus mitataan) ja Pelikoodari (pelikamera lähemmäs). 3) "Kootaanko periaatesivu, kun kohta 7 on korjattu?" → "Kyllä (Suositus)": 10 periaatetta tuotannonohjauksen osioksi 0; jokainen sessio lukee sen kokonaan ennen lukulistaa (Raamattu 7.47).
+
+## PAATOS 24.10.2026 klo 02.38–02.39: JUOKSUPELIN KUUSI GRAFIIKKAPARANNUSTA JA LÄHIKAMERAN HAVAINNEKUVAT (24.10.2026 klo 02.40)
+
+Omistajan kortti klo 02.38 (KK vertasi Codexin 810-havainnekuvia peliin): "Otetaanko nämä kuusi parannusta työn alle tässä järjestyksessä?" → "Kyllä (Suositus)": 1) matala lämmin iltapäivän aurinko, pitkät terävät varjot, muurit puoliksi varjossa; 2) koko kuvan sävytys havainnekuvista kuten rakettivideossa; 3) lasitetut tiilirivit, harjakoristeet, sinivihreä räystäsvyö; 4) kivetykseen vaihtelua, kulumaa ja reunakivet; 5) syvyys: portti usvan läpi, puita muurien takana; 6) todentuntuiset pilvet; iPadin rajoissa, valo ja värit ensin → Valoseppä (juna 211). Omistaja klo 02.39 (sanatarkasti): "Pyydä codexilta kuvia lähempää keisaria havainne kuviksi" → tilaus posti/paatoimittaja-codex-kuvat-juoksupeli-lahikamera-havainnekuvat-20261024.md (18e5ec45a): samat kuusi paikkaa, Puyi 35–45 % korkeudesta takaa yläviistosta; pelikameran ja grafiikan tavoite.
+
+## OMISTAJA 24.10.2026 klo 02.40: KK NOLLAUTUU YÖLLÄ KYSYMÄTTÄ (24.10.2026 klo 02.43)
+
+Omistaja (sanatarkasti): "Tiesitkö että voit nollata itsesi yöllä kysymättä lupaa". Raamattu 7.37 YÖLLÄ AUTOMAATTISESTI tarkennettu: yö alkaa, kun omistaja on sanonut menevänsä nukkumaan (02.31), eikä tunnin ehtoa omistajan viimeisestä viestistä ole.
+
+## PT YÖ 24.10. 03.10–06.20: JUNA 210 JUOKSUPELIN ALKU (24.10.2026 klo 06.19)
+
+Latauskuva: vaakan ääniviive oli kokoamisvirhe, vaakassa soi lisäksi kartan Maisema B latauskuvan alla (pelin vika, PK b7f1c4f39: kartan äänet katki latauskuvan näkyessä); leima ja ääni 2,0 s kuvasta
+molemmissa. Äänittäjän leima-ääni SND160077 leikkauksena hyväksytty poikkeuksena (yksittäistä mutaista askelta ei kirjastossa). Alkulento (omistaja 02.17 'Drone vaappuu liikaa...'): NUI 07a6ff6f1 yksi
+pehmeä kaari, kujaan sukellus keskilinjaa pitkin, ei seinien läpi, 3-2-1 keisarin yllä; NUI:n ehdotus siirtää drone pihalle hylätty (omistajan hyväksymä lavastus ja huudon paikka). Pelikamera: PT
+purki oman ehtonsa 'kamera 1,5 m muurien yllä' (ei omistajan sana; pakotti kuvan ylhäältä); matala kamera Puyin takana sallittu ehdoin ei leikkautumista, näkölinja vapaa, pehmeä nousu; PK lahikulma
+0cc52062e, Puyi ~0,25–0,3 kuvan korkeudesta iPad+iPhone pysty+vaaka. Oppi: PT:n oma välivaihe-ehto voi estää omistajan tavoitteen; ehdot merkitään lähteineen (omistaja/PT), ja PT:n ehto puretaan heti,
+kun se on ristiriidassa omistajan sanojen kanssa.
+
+## JUNA 210 AAMU 24.10. (PT 06.24–09.55) (24.10.2026 klo 09.56)
+
+Omistaja hereillä 06.38 (KK), yön oletuspäätökset päättyivät. LT:n yökierros 589289c59: GPU vihreä, KAMERA PUNAINEN (käännösnykäykset 45/84, raja 8). PK:n juurisyy: katseen kohta haettiin 0,5 m:n
+askelin ilman pehmennystä, ja lähikamerassa (omistaja 02.17 'drone aivan liian kaukana') se näkyi → a618637b7 + 6fceeb6c2 (jatkuva kohta, jouset 0,3 s / 0,08 s); LT 04dedfd2e 0/0. VÄRINÄ kasvoi
+matalan kameran vuoksi (kaukaiset katot, reunat ja puut aliasoituvat): PT päätti, että kamera pysyy ennallaan ja korjaus tehdään renderöinnissä → MSAA 4 juoksuun myös iPadilla (NS 989ad7ca7; LT:
+värinä 0,23/0,13/0,25 %, A 9,22 / J 9,76 ms, vapaa muisti min 1513 Mt, jetsam 0); aniso 8 hylätty (J 17,45 ms), kuviohaalistus c3bed52dc ei mukaan. Latauskuva: iPhonen pysty täyttää ruudun
+(f27ae21a8), iPad jää sellaiseksi kuin omistajalle näytettiin (sivupalkit, kerrotaan omistajalle yhdellä rivillä videoiden kanssa); esilataus kartalla junaan 210 (11 s → 0,05 s); kartan musiikki
+mykistetään latauskuvassa paikallisesti (21f3d5dfc), yhteinen LinssiPito (~1 s vs dokumentoitu 200 ms) junaan 211. PT palautti omistajan videot kolmesti täysikokoisen tarkistuksen jälkeen: musta ruutu
+kartan ja latauskuvan välissä, pystyalkulennon kattojen viistäminen ('ammattilaisen ohjaamalta'), kaksikerroksinen nimiteksti rivittyi väärin (NUI 8db6e8d70 → 8eaed64b4). Latauslogo terävämpi NUI
+bf05235d4 kuitattu.
+
+## OPPI: ROOLIN OMA TARKISTUS ENNEN SHA:TA KOSKEE MYÖS TEKSTIÄ PELIKUVASSA (PT 24.10.) (24.10.2026 klo 09.56)
+
+NUI lähetti 8db6e8d70:n 'tarkistettuna', mutta nimiteksti näkyi pelissä kahtena siirtyneenä kerroksena; PT löysi sen omistajan videosta. Periaate 2 (et ole ensimmäinen tarkistaja) ja 9.5: rooli katsoo muutoksensa pelikuvasta 2× suurennoksella molemmissa suunnissa ennen SHA:ta, ei vain testeillä. Uutta sääntöä ei tarvita; PT muistuttaa tilauksessa.
+
+## PAATOS 24.10.2026 klo 11.22: JUOKSUPELIN GRAFIIKKA HAVAINNEKUVIEN TASOLLE ILMAN IPAD-KARSINTAA (24.10.2026 klo 11.24)
+
+Omistaja klo 11.22 (KK:n välittämä, sanatarkasti, jatkoa 10.53:n yksityiskohta- ja taivaspyyntöön): "Jos joku ei pyöri ipadilla niin ei haittaa. Unityn tulevat päivitykset tod näk korjaavat tilanteen kun v7 moottori tulee". KK:n tavoitekuvaus: juoksupelin grafiikka tehdään havainnekuvien tasolle (seinät, syvennykset, ikkunat, koristevyö, taivas) karsimatta iPadin suorituskyvyn takia; jos jokin ei pyöri iPadilla sulavasti, se hyväksytään. Korvaa 02.38:n kuuden parannuksen listan ehdon "iPadin rajoissa". Raamattu 2.177 GRAFIIKAN TASO; juna 211:n työlistaan (Valoseppä). 10.53:n pyyntö ei näkynyt PT:n sessiossa; pyydetty KK:lta uudelleen.
+
+## PAATOS 24.10.2026 klo 10.53: JUOKSUPELIN YKSITYISKOHDAT JA TAIVAS HAVAINNEKUVIEN TASOLLE (24.10.2026 klo 11.26)
+
+Omistaja klo 10.53 (KK:n välittämä uudelleen klo 11.26, sanatarkasti, kuvaparien jälkeen): "Vertaa myös muita yksityiskohtia ja paranna niitä myös (vihreä boordi, enemmän syvennyksiä, ikkunat, yms) myös taivaassa saisi näkyä saävyt paremmin. Nyt näyttää puhkipalaneelle". KK:n tavoitekuvaus: näkymä vastaa havainnekuvia yksityiskohdissa, ei vain värissä: leveä sinivihreä kuvioitu koristevyö räystään alla, seinissä syvennyksiä, pylväitä, ovia ja ikkunaristikoita, kivijalka ja räystäät havainnekuvan tasolla; taivas syvän sininen ja horisonttia kohti vaaleneva, pilvissä sävyjä ja varjoja, ei ylivalottunutta vaaleutta. Vertailu kohta kohdalta havainnekuvia 01–07 vastaan (wt/fable-posti-0945/posti/juoksupeli-havainnekuvat-810-20261021/), kuvaparit omistajalle. Laajentaa 02.38-listan kohdat 3 (räystäsvyö) ja 6 (pilvet) sekä 10.51:n seinäpäätöstä (10.51 ei ole PT:n lokissa; pyydetty seuraavalta KK:lta). Raamattu 2.177 GRAFIIKAN TASO; juna 211:n työlistaan (Valoseppä).
+
+## PAATOKSET 24.10.2026 klo 10.15–11.25: JUNA 210, MUURIT JA TAIVAS, AJOITUSOPPI (24.10.2026 klo 11.21)
+
+- 24.10. 10.15 JUNA 210: c3bed52dc palaa (VS: v11 0,79 ilman / 0,23–0,29 kanssa; aamun poisto väärällä syyllä) ehdolla tiilirivit näkyvät lähellä (kuvapari PT:lle). Portti-kuja8 korjataan peittokartan
+lähteestä junaan 211, ei kamerasääntöä (PK kysyi). Keskitys 69797250e kuitattu, ehdokas 4bbdc3e89 LT:lle 10.14. Saapumislento yhä 25/26 > 20 ms → NS selvittää.
+- 24.10. 10.20 OMISTAJAN PÄÄTÖS (KK): "Sen korjauksen voi jättää junasta pois" → saapumislento junaan 211 (NS), juna 210 lähtee videoiden hyväksynnän ja pyynnön jälkeen.
+- 24.10. 10.3x Videot 7bf10120d PT:n tarkistamina KK:lle; valkoinen lähtömerkki (ei omistajan pyytämä) → poisto valmiina NUI 9d420ace4 (natiivi-ui/lahtomerkki-210), junaan vain omistajan sanalla.
+Vaakalatauskuva ~33 s → 211.
+- 24.10. 10.4x OPPI (periaate 2 rikottu: PT luotti tekijän mittaukseen): vaakan leima 1,1 s / ääni 2,0 s ohi PT:n tarkistuksen, KK löysi. PT:n videotarkistukseen pakollinen oma ruutumittaus (10 r/s +
+äänitaso 50 ms) jokaisesta omistajan ajoitusehdosta – kirjataan 9.5 PT:N KUVATARKISTUS -kohtaan.
+- 24.10. 10.46 OMISTAJAN VASTAUKSET (KK): alkulennon nimitekstit vahvempi fontti, ohut tumma ääriviiva, ylin kolmannes, rivi kerrallaan, ~7 s → NUI junaan 210; valkoinen välähdys Poista (9d420ace4);
+vaakan lataus seuraavaan junaan; muurit muodottomat ja liian räikeän punaiset → kuvaparit havainnekuva|peli omistajan kanssa (KK).
+- 24.10. 10.51 OMISTAJAN PÄÄTÖS: punaiset seinät heti → LR muoto, VS väri/pinta.
+- 24.10. 10.53 OMISTAJAN PYYNTÖ: yksityiskohdat (vihreä boordi, syvennykset, ikkunat) + taivas sävyt, ei puhkipalanut → LR vertailulista 01–07 + muoto, VS taivas ja valotus; Codex-tilaus 9ba05e91b
+(muurien tekstuurit).
+- 24.10. 11.1x JUNA 210: LT 4bbdc3e89 VIHREÄ, v11 0,29 ilman c3bed52dc:tä → 10.15 päätös peruttu, c3bed52dc pois (vaihtelu ei johtunut siitä). Juna 210 = 4bbdc3e89 + NUI 9d420ace4 + PK 8d9844b61,
+b83e63e78 + NUI nimitekstit.
+- 24.10. 11.13 Codex #917 rappaus, #918 kivijalka, #920 taivas HYVÄKSYTTY (PT valtuutuksella), #919/#921 uusintaan (a3c3edd34); #922–924 ikkunaristikko, portin ovilehti, huoneen ovi tilattu
+(e9f1c2f8a). Lavastaja muoto vaihe 1 luonnos 1ffe66f99.
+- RAAMATTU 9.5: AJOITUKSET MITATAAN ITSE (PT:n oma ruutu- ja äänimittaus jokaisesta omistajan ajoitusehdosta).
+
+## PAATOS 24.10.2026 klo 10.51: PUNAISTEN SEINIEN PINTA JA MUOTO TYÖN ALLE HETI (24.10.2026 klo 11.30)
+
+Omistajan kortti klo 10.51 (KK:n välittämä uudelleen klo 11.3x, sanatarkasti): "Otetaanko punaisten seinien pinta ja muoto työn alle heti?" → "Kyllä, heti (Suositus)" (tehdään värisävytyksen rinnalla). Tausta omistaja 10.46: "suurin ongelma: miksi punaisissa seinissä ei ole minkäänlaista muotoa. lisäksi ne ovat liian räikeän punaisia". Kuvaparit: scratchpad/keskustelukanava/kuvat-20261024/v2-pari-*.jpg (havainnekuvat 02, 01, 05 | juna 210 iPhone-video). KK:n tavoitekuvaus: seinät havainnekuvien tavoin eläviä rapattuja muureja: lämmin, hieman haalistunut punainen (ei kirkas kylläinen), rappauksen sävyvaihtelua ja varjoja, ovet, ikkunaristikot, pylväät ja syvennykset rytmittävät seinää, räystäs ja kivijalka havainnekuvan tasolla. 7. kohta 02.38:n grafiikkalistaan. Jako 10.51: muoto Lavastaja (vaihe 2 valmis 524e59015, viennit juna 211), väri ja pinta Valoseppä. Sivuhuomio VS:lle: k10:n a-01-lahtokuja (kuja-68) näyttää testikamerasta avoimelta aukiolta, ei kapealta kujalta.
+
+## PYYNTÖ 24.10.2026 klo 11.54: JUOKSUPELIN KUVAKULMAVAIHTOEHDOT STILLEINÄ (24.10.2026 klo 11.56)
+
+Omistaja klo 11.54 (KK:n välittämä, sanatarkasti): "Oliko se aiemmin lähetetty video se lähempi kuvakulma kun pelissä voi nyt valita kahden välillä? Paras olisi varmaan tuon ja sen vanhan jostain välistä. Se ehkä riittäisi yksinään. Pystytkö lähettämään eri kuvakulma versioita jotta voisin valita toimivimman? Stillit riittää". KK: videossa oli Normaali-oletuskulma (yöllä lähemmäs: f5016ace8 9,5 → 6,5 m; pysty 368734b50/0cc52062e iPhone 2,6 m, iPad 3,0 m); "vanha" = ennen yötä. Tavoite: omistaja valitsee yhden kulman, jossa keisari ja kaupunki näkyvät parhaiten; jos se riittää yksinään, Normaali/Lähi-nappi voi jäädä pois (kysytään kuvien jälkeen). PT → Pelikoodari: iPhone pysty, 5 kulmaa portaittain nykyisestä vanhaan (päätepisteet mukana), kolme paikkaa (punamuurikuja, lähtökuja, porttikäytävä), raakakuvat numeroituna → KK kortille.
+
+## PAATOS 24.10.2026 klo 13.27: JUOKSUPELIN KUVAKULMA KUVIEN 1 JA 2 VÄLISTÄ, VÄHÄN KORKEAMMALTA (24.10.2026 klo 13.27)
+
+Omistaja klo 13.27 (KK:n välittämä, sanatarkasti, kuvakulmastillien 1–5 jälkeen): "1  ja 2 välistä olisi  paras etäisyyden suhteen mutta kamera saisi olla vähän korkeammalla". KK:n tavoitekuvaus: pelikamera keisarin takana kuvien 1 (2,6 m) ja 2 (4,3 m) puolivälissä, vähän korkeammalla, niin että keisari näkyy isona hieman ylhäältä ja kuja avautuu hänen ylitseen. PT → Pelikoodari: stillit 3,45 m:stä kolmella korkeudella (2,0 / 2,6 / 3,2 m) samoista kolmesta paikasta → KK; kuvakulmanapin poisto kysytään samalla.
+
+## PAATOS 24.10.2026 klo 14.36: JUOKSUPELIN AINOA KUVAKULMA B, KUVAKULMANAPPI POIS (24.10.2026 klo 14.36)
+
+Omistajan kortti klo 14.36 (KK:n välittämä, sanatarkasti): "Mikä korkeus valitaan?" → "B (Suositus)" (kuja avautuu keisarin yli, muurit ja taivas näkyvät); "Poistetaanko kuvakulmanappi?" → "Poista (Suositus)" (valittu kulma on pelin ainoa kulma). B = omistaja-kuvakulmat-210-v3: taakse 3,2 m, korkeus 2,6 m, alas 23,4°, fov 84,75 (iPhone pysty). Junaan 210 porttitunnelin kamerakorjauksen kanssa; juna lähtee vasta näiden kanssa. Raamattu 2.177 KUVAKULMA. PT → Pelikoodari.
+
+## PAATOS 24.10.2026 klo 14.39: MUURIEN SUUNTA OIKEA, KOLME KOHTAA JUNAAN 211 (24.10.2026 klo 14.39)
+
+Omistajan kortti klo 14.39 (KK:n välittämä, sanatarkasti): "Onko muurien suunta oikea?" → "Kyllä, jatketaan (Suositus)" (kolme kohtaa tehdään valmiiksi junaan 211). Näytetty muurit-20261024b-parit (VS build 85dab09d7, LR v24). Kolme kohtaa: 1) lähtökujan ovet kiinni kuten havainnekuvassa (talot läpijuostavia: ovilehdet kiinni, aukeavat keisarin tullessa reitillä – LR + PK); 2) kivijalka varjossa vaaleammaksi (VS); 3) porttikäytävän nastaovet näkyviin tunnelin suulla (LR). KK:n sääntö: omistajalle menevissä kuvapareissa ei teknistä tekstikaistaa.
+
+## PAATOS 24.10.2026 klo 14.41: OMISTAJAN KUVISSA EI TEKSTIÄ KUVAN PÄÄLLÄ (24.10.2026 klo 14.41)
+
+Omistaja klo 14.41 (KK:n välittämä, sanatarkasti): "Teksti kaistoja ei saa poistaa jälkikäteen koska silloin osa kuvasta häviää. Kuvat pitää tehdä alkujaankin ilman tekstiä  tai lisätä teksti kuvan ulkopuolelle". Tausta: KK rajasi 14.37 muuripareista VS:n mustan teknisen kaistan, jolloin pelikuvan alaosa hävisi. Raamattu 7.32 EI TEKSTIÄ KUVAN PÄÄLLÄ ja docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 7; tieto omistajalle kuvia tekeville rooleille (VS, LR, PK, NUI, NS, JU, Codex-tilaukset).
+
+## PYYNTÖ 24.10.2026 klo 14.51: JUOKSUPELI IDENTTISEKSI HAVAINNEKUVIEN KANSSA, OPTIMOIDUSTI (24.10.2026 klo 14.52)
+
+Omistaja klo 14.51 (KK:n välittämä, sanatarkasti, muuriparien jälkeen): "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?". KK:n tavoitekuvaus: näkymä samannäköinen kuin havainnekuvat 01–07 kaikissa yksityiskohdissa (pienet vaaleat laatat limittäin, korotetut kivireunat ja portaat, kivijalat, kultaiset kattotiilet ja harjakoristeet, koristevyöt, nuppiovet, ikkunaristikot, puut muurien takana, lämmin matala valo ja lehvästön varjot); pohjakartta oikean palatsin mukaisena (20.10.). Tekotapa: pintakuvio + syvyysvarjostus, instanssit, valmiiksi laskettu valo + elävä keisarin varjo, LOD. PT → Lavastaja (vetää) + Valoseppä: suunnitelma docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md (kohdat, tekotapa, tekijä, arvio) → KK:lle omistajaa varten.
+
+## JUNA 211 ODOTTAA KOKO UUDEN ULKOASUN (omistaja 14.55) (24.10.2026 klo 14.57)
+
+OMISTAJAN PÄÄTÖS klo 14.55 (kortti KK:n kautta): "Odottaako juna 211 koko uuden ulkoasun?" → "Kyllä, odottaa (Suositus)" (koko ulkoasu valmis noin 2–3 päivässä). Suunnitelman 779817484 kaikki 14 kohtaa junaan 211 (myös harjakoristeet, puut, valon leivonta, aukiot, Meridiaaniportin edusta), ei mitään 212:een. Codex-tilaus b2b8d8eac (chiwen + eläinrivi, 2–3 puuta + kaukolehvästö, keskiportaan laatta) heti. Jos arvio venyy, KK:lle heti uusi arvio.
+
+## HAVAINNEKUVASTA IDENTTISEKSI KAIKKIIN PELEIHIN (omistaja 24.10.2026 klo 18.18) (24.10.2026 klo 18.19)
+
+Omistaja 14.51: "Saako kaiken tehtyä identtiseksi? Pienemmät laatat, kivi korotukset yms? Ja miten sen saa tehtyä kuitenkin fiksusti optimoidusti niin että ulkoasu pysyy kuitenkin identtisenä mallin kanssa?" PT:n suositus 14.59 KK:n kautta; kortti klo 18.18: "Kirjataanko tämä säännöksi kaikkiin tuleviin peleihin?" -> "Kyllä, kirjataan (Suositus)". Kirjattu: B docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11 (purku kohta kohdalta -taulukko, kuviot syvyysvarjostuksella, instanssit ja siluettikortit, leivottu valo, yksityiskohdat vain lähellä, pelikuvaparitarkistus), C reseptit/historiapeli.md Tavoite- ja Valmis kun -rivit, Raamattu 7.20 HAVAINNEKUVASTA IDENTTISEKSI. Esimerkki docs/raportit/juoksupeli-identtinen-suunnitelma-20261024.md.
+
+## JUOKSUPELIN KUVAKULMA 810, LAATAT JA VÄRIT (omistaja 24.10.2026 klo 18.26) (24.10.2026 klo 18.33)
+
+Omistaja KK:n kautta sanatarkasti: "katsoin päätoimittajan viimeisiä kuvia ja huomasin seuraavaa: muuta kuvakulma samaksi kuin havainnekuvassa. siinä pelaajan taakse ei jää niin paljon tyhjää, jolloin kamera voi olla korkeammalla ja keisari näyttää silti yhtä isolle kuin pelin nykyisessä kuvakulmassa. lattian laatat ovat myös vielä kaksiulotteisen näköisiä verrattuna havainenkuvaan. musta menee liian mustaksi, esim. keisarissa ja värit ovat liian voimakkaat. väri korjaatuu ehkä itsestään kun pudotetaan vain kokonaiskontrasti enemmän havainnekuvan tasolle eikä päästetä mustia liian tummiksi. kaikki värit pitää saada mahd. lähelle havainnekuvia." Korvaa 14.36 kulman B (Raamattu 2.177 KUVAKULMA JA VÄRIT). PT: kuvakulma Pelikoodari ja värit Valoseppä junaan 210 (periaate 9), laattojen paksuus junaan 211; KK:n mittaus scratchpad/keskustelukanava/omistajan-pyynto-20261024-1826-kuvakulma-laatat-varit.md.
+
+## JUNA 211 YHDISTYY JUNAAN 210 (omistaja 24.10.2026 klo 18.45) (24.10.2026 klo 18.45)
+
+Omistaja KK:n kautta sanatarkasti: "tee vain kaikki mahdollinen 210 junaan. sanon sitten kun julkaistaan" (vastaus KK:n tietoon, että laattojen paksuus ja Unity b6 menevät junaan 211). Korvaa 14.55-päätöksen junajaon: kaikki junalle 211 merkityt työt (identtinen ulkoasu 14 kohtaa, laattojen paksuus, Unity b6, vaakan lataus, kartan saapumislento, muistokuplat valmistuessaan) junaan 210; TF vasta omistajan sanasta. PT: NS:n juna-211-runko (6908d7ec6, sis. 210-kärjen ja v37:n räystäskorjauksen) on junan 210 uusi kärki.
+
+## 9.5 VÄLÄHDYSHAKU TYÖKALUKSI (PT 24.10.2026) (24.10.2026 klo 19.03)
+
+Raamatun 9.5:n vanhentunut viite valahdys.py (skriptiä ei ollut) korvattu työkalulla tools/valahdys-yavg.py (Valosepän valahdys-yavg.zsh:n pohjalta, ffmpeg signalstats YAVG, yhden ruudun väläys > 4/255; ilman stdin-heredocia 12.9:n mukaan). Koeajo omistaja-vaaka.mp4 (210q): 5741 ruutua, 1 väläys 38,3 s (vanha versio).
+
+## PT 24.10. ILTA: JUOKSUPELI 810 (juna 210) (24.10.2026 klo 21.30)
+
+810-kulma PK 8d7a6b881 kuitattu (keisari 0,51/0,52, koko täsmää); KK löysi horisontin 0,18 vs 0,15 ja räystäät kameran tasolla → PK nostaa kameraa ~2,75 keisaria (omistajan sanat: kamera voi olla korkeammalla), LR talot 3,2 m räystäät, muurikujat 6 m, kujat 4,79 m (v42/v30/v12). OPPI (periaate 2): kulmatarkistukseen myös horisontti ja räystäslinja. VS aurinko 45°/170° (lattia 196/229 vs 206/203). 942b väri hyväksytty, normaali+karheus hylätty. Lähipuut ja harjakoristeet 3D lähellä, kortit kaukana häivyttäen; lehvästö möhkäle → korjaus. NS saapumislento: iPad-ajot sallittu per korjausaskel, kunnes vahti 0.
+
+## YÖSUUNNITELMA 24.–25.10. (24.10.2026 klo 22.07)
+
+PT laati yösuunnitelman (7.46) tiedostoon scratchpad/yosuunnitelma-20261024.md: 1) juna 210 valmiiksi ilman TF:ää (VS pari 7, aurinko 55–60 asteen koe; LR avoimet-v31 aa1d0a732224 ja rakennukset-v31 79a145c5398a hyväksytty; PK 810-parit ja piha-02; NS saapumislento ja runko; videot yöllä), 2) juoksupeli kujiin ja portteihin sekä laatat 3D (juna 211), 3) rakettivideo, 4) muistokuplat 2 ja 4, 5) työlistan siivous. PT:n linjaus: ei eri aurinkoa yhdelle kuvalle eikä muurien madallusta 01:n varjon takia.
+
+## HAVAINNEKUVA TEKIJÖIDEN TYÖKALUIHIN (omistaja 24.10.2026 klo 22.42) (24.10.2026 klo 22.42)
+
+OMISTAJAN PÄÄTÖS klo 22.42 (KK:n kortti, sanatarkasti): "Otetaanko havainnekuva tekijöiden työkaluihin?" → "Kyllä, heti (Suositus)" (selite: "Tekijät sovittavat työn havainnekuvaan itse ennen tarkistusta. Kirjataan kaikille peleille."). Taustalla omistajan kysymys "Keksitkö miten työstöä pystyisi nopeuttamaan?" Toteutus: LR:n Blenderissä ja VS:n ja PK:n Unity-editorissa sama kamera kuin pelissä (noin 2,75 keisarin pituutta, horisontti 0,15, sama kuva-ala), keisari mittakaavana ja havainnekuva läpikuultavana päällä; tekijä ajaa ennen lähettämistä mittarin (keisarin paikka ja koko, horisontti, räystäslinja kameraan nähden, lattian kirkkaus, mustien taso, kylläisyys, varjo-osuus; pohja scratchpad/keskustelukanava/tyokalut/varivertailu.py); PT tarkistaa luvut ja lopullisen parin. Kirjaus Raamattu 7.20 ja tekotavat B kohta 11; käyttöön heti junan 210 juoksupelityössä.
+
+## SAAPUMISLENNON HIOMINEN LOPETETAAN VANHAN IPADIN TAKIA (24.10.2026 klo 23.28)
+
+Omistajan kortti 24.10.2026 klo 23.28 (KK:n välitys, sanatarkasti): "Lopetetaanko lennon hiominen vanhemman iPadin takia?" → "Kyllä, testin jälkeen (Suositus)" (selite: "Tämän illan kaksi korjausta viimeistellään, sitten Natiiviseppä siirtyy juoksupeliin."). Omistaja: "Tuo lento ei mielestäni aiemmin tökkinyt, tosin en ole sillä vanhemmalla iPadilla testannut". Toteutus: kartan saapumislennon askeleet 15–16 (1bb14f0e8) testataan loppuun ja viedään junaan 210, jos ne eivät huononna mitään (askel 14 a272ea78a on jo rungossa bd9ceaf65: yli 20 ms:n ruudut 23–26 → 12–16, huippu 147 → 50–75 ms). Sen jälkeen nykäysvahdin 0-tavoite saapumislennolle vanhalla iPadilla poistuu (sama linja kuin Raamattu 2.177 GRAFIIKAN TASO: vanhan iPadin hitaus hyväksytään); laattojen GPU-latausta ja roskankeruuta ei jatketa. Natiiviseppä siirtyy juoksupelin kriittiselle polulle. Pidempää latauskuvaa koskevaa aamun kysymystä ei tehdä.
+
+## JUOKSUPELIN ALKULENNON ELOKUVATEKSTI: KIELLETTY KAUPUNKI 1914 (24.10.2026 klo 23.54)
+
+Omistajan pyyntö 24.10.2026 klo 23.52 (KK:n välitys, sanatarkasti): "pyydä codexia tekemään pelin lennon alkuun elokuvalliset tekstit (kielletty kaupunki - 1914) jätetään beijing pois ja korjaa vuosiluku oikeaksi." Omistajan päätös 23.53 (kortti): "Mikä vuosiluku tulee tekstiin?" → "1914 (Suositus)" (Puyi noin 8-vuotiaana, päätös 16.10.). Toteutus: Codexin kuvatilaus 77e616e68 (rivit KIELLETTY KAUPUNKI ja 1914 läpinäkyvinä, elokuvamainen ja keisarillinen sävy, ohut tumma ääriviiva, ylin kolmannes, noin 7 s, rivi kerrallaan, omistaja 10.46); Natiivi-UI kytkee ja poistaa Beijingin; omistaja näkee pelikuvan ennen junaa 210.
+
+## MUISTOKUPLA 4: LAUTASPINO TUMMALLE PUUPOYDALLE (25.10.2026 klo 00.31)
+
+Omistajan päätös 25.10.2026 klo 00.30 (kortti KK:ssa, sanatarkasti; omistaja pyysi kysymyksen itse 00.2x): "Tehdäänkö lautaspinosta tumma puupöytä ja kolme matalaa pinoa?" → "Pöytä ja kolme pinoa (Suositus)". Vaihtoehto "Sovin Codexin kanssa" ei valittu. Toteutus Codexin 21.10. tarkennuksen mukaan: tumma Qing-henkinen puupöytä (suorat jalat, 75–80 cm, esikuva dpm.org.cn 230697), päällä kolme 15–20 cm:n sinivalkoista pinoa, kokonaiskorkeus noin 1 m; muistokupla 4 saa uuden kuvan samasta pöydästä. Codexin lautaspöytä-HOLD purettu postilla 7cfe234d6 (ei enää estä #806:ta).
+
+## PT:N YÖPÄÄTÖKSET 25.10.2026 klo 02.10–03.50 (omistaja nukkuu, oletuksilla) (25.10.2026 klo 03.50)
+
+Codex #947 alkulennon nimiteksti hyväksytty omistajan puolesta (valtuutus 13.10., Raamattu 7.15; posti 4c9837b09), NUI kytki 36faff8f6. PK: 03B kallistus 7° (PT:n oma 4° ehto purettu, 9.5).
+Muurikujissa kamera 5,0 m / 8,3 m taakse / ~18° jousisiirtymällä, jotta muurikate näkyy kuten havainteessa 02 ja 05 (omistajan identtiseksi koskee kameraa); 01 ja 03 ennallaan. Lautaspöytä palatsin
+lähtökujalle juhlasalin eteen (omistaja 21.10. 10.18: valmiit palat yksi kerrallaan, funktio ja paikka). Salit havainteen 810/04 mukaan: matot, sermit, maljakot, lyhdyt, kasvit ja arkut pois
+(matot/sermit oli PT:n linja, ei omistajan), pylväät räystään korkeuteen 2,9 m levenevillä jalustoilla, palkisto ohut kehä; Codex-kaappi #955 käyttöön, penkki #954 hylätty (ristikko revennyt) ja
+uusittu umpinaisilla paneeleilla (#958–959). PK:n uusi simu/iPad-toimintatesti kielletty (9.2, 9.3, 9.11). Vakava vika: juoksupelin lattiavarjostin ei kääntynyt Metalissa (as_type cast from int to
+half), korjaus VS 2d67df7dc + testi EiIntTernaariaMetalille.
+
+## JUOKSUPELI: JINGSHAN JA RAKENNUKSET-V36 (PT 25.10. 03.19 talviaikaa, yö oletuksella) (25.10.2026 klo 03.19)
+
+Havainne 810/06–07 kohdittain (LR 5e98ff8dc). Rakennukset-v36 kuitattu (Meridiaaniportin tunnelien ovilehdet seinien suuntaisiksi, aukot auki). Jingshanin kukkula (~45 m, paviljongit) puuttuu ulkorenkaasta: tehdään todellisilla mitoilla (7.15 maasto paras tapa ilman kysymystä), Lavastaja. 07:n pihojen puut kauas Pelikoodarille. 06:n siivet kuvan ulkopuolella todellisen U-pihan vuoksi: ei muuteta (mitat oikeat, omistaja 20.10. 07.30).
+
+## METAL-VARIANTTITARKISTUS RUNKOON (PT 25.10. 04.5x) (25.10.2026 klo 05.05)
+
+Juoksupelin lattiavarjostin näytti pihan taivaana iPadilla: as_type<half>(int) ja Applen GPU-kääntäjän kaatuminen kaskadivarjo+clip-varianteissa näkyivät vasta ajossa, eikä NS:n laitekäännös nähnyt niitä (kolme runkoa vihreänä viallisena). VS: juurikorjaus kaikki half → float juoksupelin 7 varjostimessa (grafiikka-211 2923706a4, testi EiHalfJuoksupelissa), sim A9/B5 puhtaat. Periaate 10: oppi Raamattuun 9.1 METAL-VARIANTTITARKISTUS; työkalu tyokalut/metal-tarkistus.sh NS:n runkotarkistukseen. Ruutuaika half → float mitataan M1-iPadilla (uusi tekniikka, 9.11 a).
+
+## _VALMIIT-KANSIOON EI KIRJOITETA OLEMASSA OLEVAN PAALLE (PT 25.10.2026) (25.10.2026 klo 08.35)
+
+LR kirjoitti klo 08.34 PK:n kuitatun paketin _valmiit/juoksupeli-kk-tausta-peking-v47-vienti-20261025 päälle omalla samannimisellä v47:llä (rinnakkainen työ lupakyselyjumin aikana; ämpäri ja runko ennallaan, JU palauttaa kansion ämpäristä). Oppi: ennen kirjoitusta _valmiit-kansioon tarkistetaan ls:llä, ettei kansiota ole, ja käytetään aina uutta versionumeroa; jumista vapautuva rooli lukee ensin PT:n uusimmat viestit ennen jonossa olevia töitä. PK teki saman nurmikorjauksen LR:n jumin aikana PT:n käskystä.
+
+## PIILOTETTU KATTO HEITTÄÄ VARJON (PT 25.10.2026) (25.10.2026 klo 08.59)
+
+VS kysyi 04:n valkoisesta lattiasta (syy: piilotettu katto ei heitä varjoa, VS:n mukaan omistajan linjaus 21.10. 11.17 'näkymättömästä ei varjoa'). Lokista ei löytynyt tällaista omistajan sanaa; omistajan sanat 21.10. klo 10.43 'ota katto pois näkyvistä' koskevat näkymistä. PT:n päätös: piilotettu katto heittää varjon (vain varjo, ei piirtoa) kaikissa saleissa, jotta lattia ja valojuovat vastaavat havainnekuvaa (omistaja 24.10. identtiseksi). Toteutus Valoseppä, kuvapari 03A + 04 PT:lle.
+
+## SALIKAMERA EI JUNAAN (PT 25.10.2026) (25.10.2026 klo 09.44)
+
+PK teki salikameran (05ae0f8c6: matala kamera, keisari liian iso) ja sisäkattoehdotuksen (95f3ac452, kamera katon alla 3 m / 8,2 m, yläkolmannes katon alapintaa). Havainteen 04 kuva vaatisi isomman salin; omistajan päätös 20.10. 07.30 mitat oikeat ja 21.10. 10.43 drone ylhäällä + katto pois. PT hylkäsi molemmat, ei omistajan kysymystä (kuva ei kelpaa näytettäväksi); juna-210:n nykyinen kamera jää.
+
+## PERIAATETARKISTUS 25.10. (omistaja 09.57) (25.10.2026 klo 10.05)
+
+Omistaja: 'Tehdäänkö korjauksia järkevillä tavoilla ja periaatteilla?' KK löysi kaksi poikkeamaa. 1) LR: avoimet × 0,70 lähteen mukainen (Qing 工程做法则例 1734, pylväsväli 2,88 m); lappe 0,75 ilman lähdettä korvattu 举架 0,5/0,65/0,85 (harja 4,9 → 7,5 m), avoimet-v45 1015e8dd03b4. 2) VS: lattia tummui kahdesti (albedo × 0,78 + valoleikkaus t3) vastoin tekotapa B r. 90 → t3 kumottu e8ca2484e, lattia vain albedolla; lisäksi _JuoksuLaattaSavy/_JuoksuRappausSavy w=2 tuplasi sävypoikkeaman (laatat korjattu, rappaus 05:n kanssa). OPPI (periaate 10, rikottu periaate 6 ja B r. 90): jokainen kerroin vaatii mittauksen tai lähteen taulukkoon ennen junaa; valotus säädetään yhdessä paikassa.
+
+## PALATSIN MITTAKAAVA: YKSI YHTEINEN KERROIN (omistaja 25.10.2026 klo 10.09) (25.10.2026 klo 10.10)
+
+Omistaja ennen korttia (sanatarkasti): "Voisi miettiä kuitenkin pelin kannalta että onko parempi madaltaa rakennuksia jos se näyttäisi ja toimisi paremmin. Myös kujia voi kaventaa tarvittaessa. Tosin
+silloin kaikki kannattaa varmaan tehdä mittakaavassa jotta kokonaisuus säilyy. Eli voidaan joustaa totuudesta kunhan pelaaja tunnistaa todellisuuden rakennukset silti. Mitä olet mieltä". Kortti
+KK:ssa: "Joustetaanko palatsin koosta yhdellä yhteisellä mittakaavalla?" → "Kyllä, yksi mittakaava (Suositus)" (selite: "Rakennukset ja välimatkat pienenevät samassa suhteessa, ovet ja portaat pysyvät
+ihmisen kokoisina. Rakennusten muoto ja paikka säilyvät."). Korvaa 20.10. klo 07.30 kokolinjan (mitat oikeat). Säilyvät: paikat, järjestys, keskiakseli, suunnat, rakennusten muoto ja mittasuhteet.
+Koko palatsi skaalataan yhdellä kertoimella; ovet, portaat ja kaiteet ihmisen kokoisina; kujia kavennetaan erikseen vain pelattavuuden vuoksi; rakennuskohtaiset tai suuntakohtaiset skaalaukset (esim.
+yön Taihedian × 0,17/0,16) kielletty. Kerroin haetaan havainnekuvavertailulla (NUI:n havainnenäkymä), KK näyttää vertailukuvat omistajalle ennen lukitusta. 03-kysymys (Taihedianin mitat) poistuu.
+
+## PALATSIN MITTAKAAVA LUKITTU JA KUJIEN LEVENNYS (25.10.2026 klo 11.33)
+
+Omistaja 25.10.2026 klo 11.31 (KK:n kortti, kuvat 01-05 kolmikot): "Pidetäänkö palatsin koko ennallaan?" -> "Kyllä, koko pysyy (Suositus)" (selite: "Muurit ja ovet ovat jo havainnekuvien kokoisia.
+Kujista kysytään seuraavaksi."). Klo 11.32: "Levennetäänkö kaksi kapeaa kujaa havainnekuvien leveyteen?" -> "Kyllä, levennetään (Suositus)" (selite: "Rakennukset pysyvät ennallaan. Kuja näyttää
+havainnekuvan kaltaiselta."). Peruste (PT): NUI:n mittaus (main 94b2da26b) - korkeudet 0,79-1,13 keisariin nähden, leveydet 0,64-2,12; LR:n lähdemitat: kuja-40 4,2-5,3 m (pohja.json, OSM),
+havainteessa 02 ~7,7 m ja 05 ~10,7 m. Toteutus: LR siirtää muureja, PK pohja/reitti/esteet. Faktakorjauksia ei tehty: kuja 02 on jo lähteen leveydellä; salin 04 pylväät 0,60 m jäävät (v48 0,28 m
+hylätty, sali on keksitty talo ja 0,60 vastaa havainnetta 0,56). Halli 03 ei mahdu kuvaan todellisessa paikassaan; ratkaisu on 2.177:n voimassa oleva 'avarassa loivenee pehmeästi' (PK, aukiokamera).
+OPPI (PT, periaate 6): tilasin faktakorjauksen mittaluvusta tarkistamatta, mitä se mittasi (0,92 m sisälsi jalustan); mittaluvun kohde tarkistetaan ennen tilausta.
+
+## SALIN OMA AURINKO ILMAN KATON VARJOA (PT 25.10.2026 klo 13.1x) (25.10.2026 klo 13.04)
+
+Valosepän mittaus 249525784: räystään ja naapurin väliin jää vain 25–38° kaista, ja juovia on enintään 3 % lattiasta (havainne 04 noin 25 %). PT päätti: salin oma aurinko 45°/70° ilman katon varjoa vain salin sisällä; ulkoaurinko ja muut valot pitävät katon varjon (P25 kumottu tältä osin). Peruste: katto on pelissä häivytetty, ja omistaja pyysi 11.34: "Saako pylväisiin ja seiniin samanlaisen valon kuin havainnekuvissa?". Valon suhde 1,55/1,45 + suunnattu ympäristö 0,5 vakioiksi. Ehto: 05:n lattia vähintään 193, 04 kohti 176, ei mustia.
+
+## PYLVÄÄT JA SEINÄT VALMIIKSI VALAISTUINA (omistaja 25.10.2026 klo 13.10, KK:n kautta) (25.10.2026 klo 13.12)
+
+Omistaja sanatarkasti: 1) "Kannattaisiko pylväät ja seinät piirtää valmiiksi ja tehdä niistä versiot eri ilman suuntiin. Näin saataisiin pyöreys ja seinään struktuuri poltettuna kiinni. Vai onko tämä
+tarkoituskin? Ja samalla saisi värin suoraan oikein koska väri tulee enne kaikkia siitä kun pinnassa on valo varjo vaihtelua jolloin riittää pienempi saturaatio ja värit näyttävät silti herkullisilta"
+2) "Ainoa varjo niitä pitää piirtää on maahan pelaajasta sekä rakennuksista koska ne muuttuvat mutta pylväät ja seinät voisi piirtää valmiiksi muotoinen ja valoineen". KK vastasi kyllä (VS + LR).
+LINJAUS: juoksupelin pylväät ja seinät tehdään tekotavalla 4 (3d-ja-kuvat.md): muoto, pinnan struktuuri ja valo-varjo leivotaan kiinteällä auringolla kunkin pinnan ilmansuunnan mukaan; pelin aikana
+reaaliaikaiset varjot vain pelaajasta ja rakennuksista maahan. Kylläisyys alas (taide.md 4), väri tulee valon vaihtelusta. VS: leivontaputki ja JuoksuValo (leivotuille pinnoille ei
+hemisfääriambienttia eikä kääreLambertia); LR: mallien UV2 ja staattiset osat. Pilotti: salin 04 pylväät ja kujan 02 seinä, kolmikko havainne | nyt | leivottu PT:lle; LT:n reittiajo ennen junaa.
+
+## PINNAT CODEXILTA ILMAN VALOA, VALO POLTETAAN BLENDERISSÄ (omistaja 25.10.2026 klo 13.12, KK:n kautta) (25.10.2026 klo 13.12)
+
+Omistaja sanatarkasti: "Codexilla voisi periaatteessa teettää kaikki pinnat valmiina moduuleina neljälle ilman suunnalle. Mitä olet mieltä?" KK vastasi: Codex piirtää pinnat ilman valoa (väri, struktuuri, maalaus), LR polttaa valon Blenderissä pelin omalla auringolla neljään ilmansuuntaan, jolloin valon suunta vastaa pelin varjoja, versiot ovat yhtenäisiä ja valotus on yhdessä paikassa. VS antaa auringon suunnan ja valotuksen sekä tekee JuoksuValon leivotuille pinnoille. Pilotti nykyisillä pinnoilla ennen Codex-tilausta; este (muisti, kapasiteetti) → KYSYMYS KK:lle ennen tilausta.
+
+## OPPI: KUVAN TARKISTUS ULKOASUA VASTEN, EI VAIN MITTOJA (PT 25.10.2026 klo 13.3x) (25.10.2026 klo 13.27)
+
+PT lähetti kujat 02 ja 05 KK:lle, koska leveys täsmäsi metreissä. KK palautti ne omistajan sanalla "Kuja näyttää havainnekuvan kaltaiselta": 02 oli vino suppilo (keisari muurin vieressä, väliosa hyppää 4,8 m:iin), ja 05 näytti aukiolta (sivumuurit eivät yhdy porttipylväisiin, aukko 3,2 vs 4,2 m). Rikottu periaate 1: jokainen kuvan kohta verrataan omistajan sanoihin, ei vain tilattuun lukuun. Käytäntö: kujien ja näkymien tarkistus havainne-editorin päällekkäiskuvalla (muurien kuvapaikat, symmetria, keisarin paikka), ja mittaluku on vain yksi kohta.
+
+## JUNA 210 JULKAISTAAN NYT ILMAN TESTEJÄ (omistaja 25.10.2026 klo 13.56, KK:n kautta) (25.10.2026 klo 13.58)
+
+Omistaja sanatarkasti: "Julkaise juna nyt ilman testejä ja siirrä keskeneräiset seuraavaan junaan." Kumoaa 24.10. klo 18.45 linjan "juna 210 = kaikki". Tulkinta (14.10. ja juna 189): ei laitetestejä, simukierrosta eikä muistiajoa; käännöksen automaattiset tarkistukset ajetaan. Runko: be6cf0048 (räystäskamera 4b4864d28, kujien levennys omistajan 11.32-päätöksen mukaan, LR:n katoserä v50/v42) + LR rakennukset-v43 (kujaporttien ovet, PT-kuittaus). Junaan 211: VS:n valo ja leivonta, kujien 02/05 uudet leveydet (havainteen mittausvirhe korjattu, kysymys omistajalle tulossa), PK kuja40-pk3, aukion viillot, lautaspöydän pari, Jingshan, salit.
+
+## KONEEN KAATUMINEN 25.10. 14.34 JA VAROTOIMET (KK 26.10. 10.0x, PT 10.1x) (26.10.2026 klo 10.07)
+
+Graafinen istunto kaatui 25.10. klo 14.34 (WindowServerin vahtiajastin; kone päällä 5 vrk), kaikki sessiot pysähtyivät, omistaja kirjautui takaisin 26.10. noin 10.00. Ennen kaatumista
+koodaus-istuntoon kasautui kymmeniä ikkunoita 'Mitään appia ei ole asetettu avaamaan dokumenttia Compiled-Matkakirja-Juoksupeli-Taivas.shader'. SYY: MetalTarkistus.cs (8afdc5004, metal-tarkistus.sh)
+kutsuu ShaderUtil.OpenCompiledShaderia, joka avaa tuloksen ulkoisesti. VAROTOIMET: (1) Editorityökalu ei saa avata tiedostoja, ikkunoita eikä LaunchServices-avauksia (ei open, ei OpenCompiledShader
+ilman avauksen estoa); metal-tarkistus.sh pysäytetty, kunnes VS korjaa ja todistaa. (2) Kukaan rooli ei käytä screencapturea eikä lopeta järjestelmäprosesseja (CoreServicesUIAgent): KK teki niin juuri
+ennen jumia; syy-yhteys epävarma, kone oli raskaassa kuormassa. (3) TF 210 (run 40193412825) päättyi failure jo 14.43, tf210.sh jäi silmukkaan TLS-virheisiin: JU käynnistää uudelleen. (4) Omistaja
+antaa täyden levyoikeuden runnerien node24:lle (TCC:n vastuuprosessi Runner.Listener → node, KK:n mittaus): /Users/Shared/Claude/actions-runner{,-2}/externals.2.338.0/node24/bin/node. Runnerin
+automaattipäivitys vaihtaa polun → JU ehdottaa pysyvän polun.
+
+## UNREAL POISTETAAN (omistaja 26.10. klo 11.09) (26.10.2026 klo 11.10)
+
+Kortti KK:ssa: 'Poistetaanko Unreal?' → 'Kyllä, poistan (Suositus)' (Unreal ja välimuisti pois, noin 70 Gt vapaaksi; kokeiluprojekti jää talteen ulkoiselle levylle). Omistaja poistaa itse UE_5.8:n (50 Gt, T7) Epic-ohjelmasta ja ~/Library/Application Support/Epic/UnrealEngine/Common (20 Gt, sisäinen levy); T7:n proto-3d/_tyo/metahuman-koe (14 Gt) jää talteen. Raamattu 12.12 ja 2.182 päivitetty; 2.163:n CesiumSunSky-viittaus poistettu.
+
+## PT:N OPIT 26.10. (kuvat, merge) (26.10.2026 klo 11.53)
+
+(1) Kuva tarkistetaan ennen KK:ta koko alalta 1:1, myös toissijaiset alueet (elävän kartan parissa KK löysi kolme vikaa, PT yhden). (2) Offline-renderöintejä ei näytetä omistajalle (7.32), vain pelikuvia. (3) PR mergetään vasta, kun kaikki checks ovat valmiit; gh pr checks --watch voi palata ennen kuin checkit ovat alkaneet (PR 5235).
+
+## ELÄVÄN KARTAN TASO HYVÄKSYTTY (omistaja 26.10.2026 klo 12.37) (26.10.2026 klo 12.38)
+
+Kortti KK:ssa sanatarkasti: "Kelpaako elävän kartan taso?" → "Kyllä, tämä taso (Suositus)" (selite: "Sama tarkkuus ja ulkoasu koko kartalle."). Näytetty pelikuva: Thamesin suu ESIMERKKI | PELI (pari-thames-peli.png 26.10. 12.10, KS d3130bafc; PT ja KK tarkistivat 1:1). Tavoite: koko kartan voi nipistää mistä kohdasta tahansa kylien, teiden ja rautateiden tasolle tällä tarkkuudella ja ulkoasulla, ja se säilyy samana vanhana pergamenttikarttana. Toteutus: Karttaseppä, junan 211 runko 43de85596 (aae00fc87: rinnevalo, esilataus, lämpöraja).
+
+## JUOKSIJAN ELÄVYYS JA TASANKOJEN PINNANMUODOT (omistaja 26.10.2026 klo 12.44–12.45) (26.10.2026 klo 12.45)
+
+Pyyntö 12.44 sanatarkasti: "juoksijan kompurointi voi olla hienovaraista eikä tarvitse juurikaan hidastaa vauhtia. tärkeintä että saadaan elävyyttä hahmoon. juoksija voisi myös välillä vilkaista nopeasti taakseen sekä välillä myös vähän sivuille." ja "alankomaista pitäisi ottaa tuulimyllyt pois sekä muualta jos on vastaavia vielä jäljellä. korvataan nämä niillä uusilla 3d malleilla yhtenäistetyllä ilmeellä." Kortit 12.45 KK:ssa sanatarkasti: "Näkyykö väsymys juoksussa, kun energia on vähissä?" → "Kyllä (Suositus)" ("Askel raskaantuu ja ryhti painuu, ja omena piristää."); "Säpsähtääkö juoksija täpärässä ohituksessa?" → "Kyllä (Suositus)" ("Pieni säpsähdys, kun este menee aivan läheltä."); "Korostetaanko tasaisten maiden pieniä korkeuseroja?" → "Kyllä, korostetaan (Suositus)" ("Matalat mäet, harjut ja laaksot näkyviin Tanskassa ja muilla tasangoilla; vuoret ennallaan."). Toteutus: juoksija PK (11.57-paketti), tuulimyllyt ja tasangot KS; kuvat pelistä PT:n 1:1-tarkistuksen kautta KK:lle.
+
+## JUOKSIJAN REAKTIO RIKKOMISEEN (omistaja 26.10.2026 klo 12.57) (26.10.2026 klo 12.58)
+
+Omistaja kysyi sanatarkasti: "montako rikottavaa esinettä on nyt tehty tai työn alla? ja pitäsikö rikkomiseen tehdä omia juoksijan eleitä lisää ja millaisia?" KK vastasi: 8 (7 TF 210:ssä, lautaspöytä junaan 211) + kääretaulu. Kortti sanatarkasti: "Saako juoksija oman reaktion rikkomiseen?" → "Kyllä (Suositus)" ("Säpsähtää törmäyksessä ja vilkaisee taakse \"voi ei\" -eleellä; juoksu ei katkea."). Toteutus PK elävyyspakettiin: säpsähdys ja kasvojen suojaus, taaksevilkaisu käsi päässä, huudahdus vilkaisun aikana olemassa olevista äänistä, alle sekunti, juoksu ja ohjaus eivät katkea.
+
+## YHTENÄINEN SARJA KARTALLE 3D:NÄ (PT 26.10.2026 klo 13.0x) (26.10.2026 klo 13.04)
+
+PT:n linja omistajan uusimpien sanojen perusteella: 21.10. 09.38 arkki 9 ("Suunta on hyvä" – 3D-elementit tunnusmerkkeinä) ja 26.10. 12.44 ("korvataan nämä niillä uusilla 3d malleilla yhtenäistetyllä ilmeellä") kumoavat 29.9. 23.24 päätöksen ("Pakko ottaa 3D nostot ja symbolit pois, eivät vain toimi") yhtenäisen sarjan osalta: Symbolimallit päälle vain sarjan tunnusmerkeille; vanhat erikoismallit ja 3D-nostot pysyvät pois; ei 2D- ja 3D-merkkiä samassa paikassa; KS todistaa pelistä, että ne toimivat (ei välkettä, hyppyjä, fps- tai lämpöpudotusta). Myös vanhat elävät pienoismallit (myllyt, karuselli, gondolit, London Eye, höyrylaiva) sarjan ilmeeseen, liike säilyy (KK 12.58: periaate 6, jo päätetty). Omistaja näkee pelikuvat KK:n kautta.
+
+## OPPI: TILA TARKISTETAAN ROOLIHAAROISTA (KK ja PT 26.10.2026 klo 13.4x) (26.10.2026 klo 13.38)
+
+Periaatteet 2 ja 6. KK kertoi omistajalle 13.3x, että kartan 3D-sarja on pidossa eikä kartalla ole uutta, koska tarkisti vain junan rungon 9460c52c6 ja työlistan vanhan pidossa-rivin, ei proto-3d:n roolihaaroja; korjattu omistajalle 13.4x. Samalla PT jätti työlistan tuulimylly- ja sarjarivit päivittämättä, kun Karttaseppä yhdisti sarjan (b4767cf6c). Oppi: ennen kuin omistajalle kerrotaan tila, katsotaan roolien haarat (git log --all proto-3d:ssä) ja PT päivittää työlistan rivin heti, kun rooli ilmoittaa valmiin vaiheen.
+
+## OPPI: ISON IPADIN AJOT YKSI KERRALLAAN (PT 26.10.) (26.10.2026 klo 14.09)
+
+LT:n b6-reittiajo 13.53–14.07 meni hukkaan: PK ajoi Isolla iPadilla pelikuvien A/B-ajon (valo heitto/jalki) 13.46–13.53 LT:n ajon päälle, ja laite kuumeni (thermalState 2). Rikottu periaate 2 ja 9.11 (iso iPad vapaasti koskee laitetta, ei rinnakkaisia ajoja). Korjaus: ennen jokaista iPad-ajoa ps-tarkistus (ipad.sh, esikatselu.sh, todistusajo) ja vuorolukko /tmp/matkakirja-ipad.lukko (mkdir, tiedosto kuka); NS lisää lukon ipad.sh:hon. Uusinta vasta kun thermalState 0.
+
+## OPPI: OMISTAJALLE VAIN ASENNETUSTA VERSIOSTA TODENNETTU (PT 26.10.) (26.10.2026 klo 15.26)
+
+PT kertoi KK:lle klo 15.3x, että iPad Pro 11:een asennetussa junan 211 rungossa af94882a9 on kartan yhtenäinen 3D-sarja, mutta Symbolimallit.Nollaa asetti sarjan pois päältä käynnistyksessä (KS:n simu 15.18: näkyvissä 0 mallia; korjaus 6922da400). Rikottu periaate 2: väite perustui roolin muutoslistaan, ei asennetusta versiosta otettuun kuvaan. Korjaus: ennen KK:n 'mitä versiossa on' -riviä jokainen omistajalle uutena mainittu näkyvä asia on todennettu juuri siitä käännöksestä (simu- tai laitekuva); muuten se jätetään rivistä pois. KK:lle lähti oikaisu heti.
+
+## ELÄVÄN KARTAN PALAUTE iPAD PRO 11:LTÄ (omistaja 26.10.2026 klo 15.32) (26.10.2026 klo 15.33)
+
+Pyyntö sanatarkasti: "rautatiet näkyvät liian voimakkaasti ja ilmeisesti useampi päällekkäin oleva linja sotkevat linjat mössöksi. pelaajan nappula ja kohdekaupungin piste liikkuvat kartan päällä lähemmilla zoom tasoilla, pitäisi pysyä lukittuna paikallaan. 3d kohteet pitää olla kokoonsa sidottuja mutta kadota pehmeästi näkyvistä kokonaan kun zoomataan sisään ja ne suurenisivat liikaa. niiden paikalle saa silloin ilmestyä paljon pienempi sama kohde mutta sekin kokoon sidottuna. se että jonkin kohteen koko muuttuu zoomattaessa näyttää feikiltä. panorointi tökkii jokin verran lähemmillä zoom tasoilla. kaupunkien nimet saisi tulla näkyviin jo aiemmin (suuremmat kaupungit). pienemmät voi kuten nytkin." Raamattu 4.41 täydennetty (KOKO SIDOTTU KARTTAAN; korvaa 19.27:n "sama koko ruudulla" zoomauksen osalta, uusin sana voittaa). Toteutus Karttaseppä; pelikuvat ja video PT:n 1:1-tarkistuksen kautta KK:lle; asennus iPad Pro 11:een.

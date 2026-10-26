@@ -79,10 +79,9 @@ Tavoite: mallinäyte + lyhyt kuvaus (ääni) / esimerkit pelinäkymässä (uusi 
      kautta (tekstinä), vaikka merkkejä jäisi; jäljelle jääneitä merkkejä ei käytetä. Rooli ei hyväksy uusintaa itse, vaan
      lähettää KK:lle lupapyynnön aineiston (merkit, ääni, syy). Jokainen lisäys tai ylitys vaatii uuden luvan.
    - Lupa lasketaan teksteistä; jos lupa on annettu pelkille teksteille, tageja ei lisätä (opit 20.10.).
-   - **Kertojaäänten pysyvä lupa** (5.1, omistaja 12.10.2026): koskee PT:n hyväksymiä käsikirjoituksia, noin enintään
-     10 000 merkkiä per kokonaisuus ja yksi otto per teksti. Äänittäjä generoi suoraan, ja PT kertoo omistajalle
-     jälkikäteen yhdellä rivillä. Suuri erä vaatii omistajan sanatarkan lauseen, jossa generointi tai määrä mainitaan,
-     ja se ajetaan pieninä paloina kuittauksin. Pulun repliikit ja uudet isoisän tekstit tarvitsevat ensin omistajan
+   - **Kertojaäänten pysyvä lupa** (5.1): PT:n hyväksymät käsikirjoitukset, kun lukijaääni on jo hyväksytty ja ajo vie
+     alle 3 % kuukauden kiintiöstä (omistaja 24.10.2026 klo 02.12), yksi otto per teksti. Äänittäjä generoi suoraan, ja PT
+     kertoo omistajalle jälkikäteen yhdellä rivillä. Uusi lukijaääni tai yli 3 %:n ajo vaatii omistajan luvan. Pulun repliikit ja uudet isoisän tekstit tarvitsevat ensin omistajan
      tekstihyväksynnän (`paakaupungin-avaus.md`, luku 5), joten PT ei yksin tee niistä pysyvän luvan käsikirjoitusta.
    - Vanhoja julkaistuja ottoja ei uusita eikä vaihdeta ilman omistajan päätöstä (5.6; opit 19.10.).
 5. **Luvut sanoiksi ENNEN merkkimäärän laskemista.** Numerot kasvattavat tekstin pituutta puhuttuna (esim. +662 merkkiä
