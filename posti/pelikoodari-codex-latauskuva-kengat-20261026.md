@@ -3,6 +3,8 @@
 PT:n tarkistus 26.10. 18.1x (KK palautti): keisarilla on molemmissa latauskuvissa nykyaikaiset lenkkarit, joissa on valkoinen
 kumipohja, kuvioitu resori ja oranssiraitainen kantalenkki. Omistaja hylkäsi lenkkarit jo 23.10. klo 11.33 muistokupla 2:n
 kohdalla (posti/paatoimittaja-codex-muistokupla-02-uusinta-20261023.md: "kantajilla ja Puyilla on kuvassa lenkkarit").
+Liite: PT:n rajaus lenkkareista iPadin pelikuvasta `posti/latauskuva-valokuva-kengat-20261026/liite-lenkkarit-jalat-ipad.jpg`.
+Leima "karkuteillä" vinossa (omistaja 18.09) on pelin piirtämä, ei kuvassa: ei muutoksia kuvaan sen takia.
 Pysyvä lupa (7.15): **2 korjausta** (pysty ja vaaka), ei muita ottoja.
 
 ## Korjaus
