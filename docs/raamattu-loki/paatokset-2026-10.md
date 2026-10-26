@@ -2743,3 +2743,7 @@ KK:n päätös omistajan valtuutuksella klo 00.1x (sanatarkasti): NUI:n kohdekor
 ## JUOKSUPELI: KEISARIN HUOPAPOHJAT VALOSEPÄLLE (KK omistajan valtuutuksella) (27.10.2026 klo 00.22)
 
 KK:n päätös omistajan valtuutuksella klo 00.22 (sanatarkasti): kyllä. VS tekee keisarin tummat huopapohjat materiaalilla tai varjostimella tekstuuria muokkaamatta, koska pohjat ovat basecolor-tekstuurissa ja mallissa on yksi materiaali. Lähikamera caca66ee0 menee junaan tämän kanssa KK:n 2× tarkistuksen jälkeen. Codexin tilaus 0de4bf318 jää pysyväksi korjaukseksi. Codexin herätys on aamulistalla. (Tausta: Codex hiljaa klo 22.48 alkaen; PT ehdotti siirtoa VS:lle.)
+
+## JUOKSUPELI: LÄHIKAMERA JA TUMMAT POHJAT JUNAAN 211 (KK omistajan valtuutuksella) (27.10.2026 klo 00.33)
+
+KK:n päätös omistajan valtuutuksella klo 00.32 (sanatarkasti): juoksupelin lähikamera ja tummat pohjat (haara 8b961cc46 = caca66ee0 + VS 533efb219; 2× todiste proto-3d/_tyo/pelikoodari/kuvakulma-211/huopapohjat-todiste-20261027/) hyväksytty junaan 211. PK vie NS:lle. Pohjan sävy nostetaan tummanharmaaksi huovaksi (150e189c5), jos se ehtii ennen lukitusta, muuten seuraavassa junassa. Avoimet erät: 05-portti, salin sisäkamera, halli-20 ja halli-24.
