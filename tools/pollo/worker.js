@@ -3915,10 +3915,14 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
     if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'nukkuu', viesti: 'Pulu nukkuu.' }, { status: 503, ...kors });
     ylavirta = await kutsuRajapintaa(env, {
       jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KARTAN_TIETOKORTTI_KEHOTE}`, viestit: [{ role: 'user', content: syote }],
-      maxTokens: 900, striimi: true, jaettu: true, lampotila: 0.3,
+      // Ei temperaturea: Sonnet 5.5 ajattelee (rajat.js ajatteluKentat), jolloin rajapinta hylkää muun kuin 1 (400, 27.10.).
+      maxTokens: 900, striimi: true, jaettu: true,
     });
   }
-  if (!ylavirta.ok || !ylavirta.body) return vastaa({ virhe: 'malli', viesti: `rajapinta ${ylavirta.status}` }, { status: 502, ...kors });
+  if (!ylavirta.ok || !ylavirta.body) {
+    console.log(`pollo: tietoteksti rajapinta ${ylavirta.status}: ${(await ylavirta.text().catch(() => '')).slice(0, 300)}`);
+    return vastaa({ virhe: 'malli', viesti: `rajapinta ${ylavirta.status}` }, { status: 502, ...kors });
+  }
   const valmistuu = (async () => {
     const lukija = ylavirta.body.getReader();
     const purkaja = new TextDecoder();
