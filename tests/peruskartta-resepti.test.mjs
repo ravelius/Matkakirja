@@ -468,3 +468,16 @@ test('resepti 2026-09-26 = 2026-09-25 + litistys 1 ja syvyyskontrasti 1,35 (löy
   assert.equal(b.pohjaliput[b.pohjaliput.indexOf('--reseptinimi') + 1], '2026-09-26');
   assert.ok(a.pohjaliput.includes('{"syvyys":{"litistys":0.8}}'), '25 ennallaan');
 });
+
+test('resepti 2026-10-26 = 2026-09-26 + tasankokorostus lämpimään reliefiin, ei deltaa', () => {
+  const a = RESEPTIT['2026-09-26']; const b = RESEPTIT['2026-10-26'];
+  for (const k of Object.keys(b)) if (!['kuvaus', 'pohjaliput'].includes(k)) assert.deepEqual(b[k], a[k], k);
+  assert.equal(b.deltaEdelliseen, undefined);
+  assert.equal(b.pohjaliput.length, a.pohjaliput.length);
+  const i = a.pohjaliput.indexOf('--reliefi-koe');
+  assert.equal(a.pohjaliput[i + 1], 'lammin', '26 ennallaan');
+  assert.deepEqual(JSON.parse(b.pohjaliput[i + 1]), { tasanko: { kerroin: 4, k0: 0.02, pohjaM: 1500 } });
+  assert.equal(b.pohjaliput[b.pohjaliput.indexOf('--reseptinimi') + 1], '2026-10-26');
+  const muut = (r) => r.pohjaliput.filter((_, j) => j !== i + 1 && j !== r.pohjaliput.indexOf('--reseptinimi') + 1);
+  assert.deepEqual(muut(b), muut(a));
+});
