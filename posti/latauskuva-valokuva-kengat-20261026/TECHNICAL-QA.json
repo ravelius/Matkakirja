@@ -1,0 +1,139 @@
+{
+  "dimensions": {
+    "pysty": [
+      941,
+      1672
+    ],
+    "vaaka": [
+      2560,
+      1180
+    ],
+    "mask": [
+      2560,
+      1180
+    ]
+  },
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "transparentPixels": 2997342,
+  "opaquePixels": 17525,
+  "partialAlphaPixels": 5933,
+  "alphaBBox": [
+    1056,
+    256,
+    1371,
+    631
+  ],
+  "visibleRGBMatchesDeliveredPhotograph": true,
+  "wholeFigureWithinCentral55Percent": true,
+  "wholeFigureWithin15to94PercentHeight": true,
+  "bottomClearancePixels": 114,
+  "crops": [
+    {
+      "name": "19_5x9",
+      "box": [
+        0,
+        0,
+        2560,
+        1180
+      ],
+      "dimensions": [
+        2560,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "16x10",
+      "box": [
+        336,
+        0,
+        2224,
+        1180
+      ],
+      "dimensions": [
+        1888,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "4x3",
+      "box": [
+        493,
+        0,
+        2066,
+        1180
+      ],
+      "dimensions": [
+        1573,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "74percent",
+      "box": [
+        333,
+        0,
+        2227,
+        1180
+      ],
+      "dimensions": [
+        1894,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    },
+    {
+      "name": "61percent",
+      "box": [
+        499,
+        0,
+        2061,
+        1180
+      ],
+      "dimensions": [
+        1562,
+        1180
+      ],
+      "contains": {
+        "keisari": true,
+        "paa": true,
+        "otsikkoTila": true,
+        "leimaTila": true
+      }
+    }
+  ],
+  "portraitWholeFigureBox": [
+    25,
+    462,
+    680,
+    1340
+  ],
+  "portraitCentered3to4ContainsWholeFigure": true,
+  "imageGenerationCalls": 2,
+  "maskGenerationCalls": 0
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "built-in-image-gen",
+  "intent": "new-complete-images-from-references",
+  "ownerWholeNewImageRule": true,
+  "sourceOnlyIntendedContentChange": "both shoes",
+  "specs": [
+    {
+      "taskNumber": 982,
+      "key": "pysty",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/delivery/latauskuva-pysty.png",
+      "target": [
+        941,
+        1672
+      ],
+      "prompt": "Use case: historical-scene, photographic full-image regeneration.\nCreate a complete new photograph using the input photograph as a very strict composition, identity, expression, light and camera reference. The single intentional content correction is BOTH shoes. Preserve the boy's lively smiling look back over his right shoulder, low camera, blue sky behind the entire head and hat, running pose, black hat with red finial, long braid, yellow dragon-embroidered silk robe blowing left, black trousers, palace walls, background, exposure, perspective, and framing as closely as possible.\nReplace BOTH modern sneakers completely with historically plausible early-20th-century Qing imperial court BLACK CLOTH BOOTS: soft matte black woven textile uppers with subtle hand stitching and gentle ankle folds, plain dark brown/black stitched fabric-leather soles worn dusty by stone paving. The raised foot presents its simple dark hand-sewn sole. The grounded foot has the same period shoe construction. NO WHITE SOLES, NO RUBBER, NO ATHLETIC TREAD, NO RIBBED ELASTIC, NO PULL TABS, NO ORANGE TABS, NO LOGOS, NO MODERN SNEAKER SHAPES. Remove every visible modern footwear element on BOTH feet. The feet remain exactly where they were in the composition; do not change the running gesture. Keep natural foot contact and matching shadows.\nReal live-action camera photograph: natural skin, lens depth, irregular stone, realistic fine silk threads and cloth shoes. No illustration, painting, CGI, plastic smoothing, patterned AI surface, text, added logos, border or watermark. No extra people or objects. Return one complete opaque RGB photograph.\nPORTRAIT 941x1672 (9:16). Match the provided portrait's exact framing and relative subject size. Entire fluttering robe, braid, both legs and both shoes remain inside; preserve the large blue-sky space above."
+    },
+    {
+      "taskNumber": 983,
+      "key": "vaaka",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/delivery/latauskuva-vaaka.png",
+      "target": [
+        2560,
+        1180
+      ],
+      "prompt": "Use case: historical-scene, photographic full-image regeneration.\nCreate a complete new photograph using the input photograph as a very strict composition, identity, expression, light and camera reference. The single intentional content correction is BOTH shoes. Preserve the boy's lively smiling look back over his right shoulder, low camera, blue sky behind the entire head and hat, running pose, black hat with red finial, long braid, yellow dragon-embroidered silk robe blowing left, black trousers, palace walls, background, exposure, perspective, and framing as closely as possible.\nReplace BOTH modern sneakers completely with historically plausible early-20th-century Qing imperial court BLACK CLOTH BOOTS: soft matte black woven textile uppers with subtle hand stitching and gentle ankle folds, plain dark brown/black stitched fabric-leather soles worn dusty by stone paving. The raised foot presents its simple dark hand-sewn sole. The grounded foot has the same period shoe construction. NO WHITE SOLES, NO RUBBER, NO ATHLETIC TREAD, NO RIBBED ELASTIC, NO PULL TABS, NO ORANGE TABS, NO LOGOS, NO MODERN SNEAKER SHAPES. Remove every visible modern footwear element on BOTH feet. The feet remain exactly where they were in the composition; do not change the running gesture. Keep natural foot contact and matching shadows.\nReal live-action camera photograph: natural skin, lens depth, irregular stone, realistic fine silk threads and cloth shoes. No illustration, painting, CGI, plastic smoothing, patterned AI surface, text, added logos, border or watermark. No extra people or objects. Return one complete opaque RGB photograph.\nULTRAWIDE LANDSCAPE 2560x1180, aspect 128:59. Match this input's complete ultrawide composition, do not crop or zoom in. Whole boy and robe within central 55% of width and 15%-94% of height. Preserve empty sky above and to the right of the head and empty paving to the right for later UI; no text in the actual photo."
+    }
+  ]
+}

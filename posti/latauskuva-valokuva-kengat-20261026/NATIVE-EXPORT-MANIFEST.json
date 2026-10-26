@@ -1,0 +1,42 @@
+[
+  {
+    "taskNumber": 982,
+    "key": "pysty",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/native/pysty-attempt001.png",
+    "nativeSHA256": "aaa7095145fb9ebabe8b0c36e7d68365ec293025699e35c29ab19d6b659a3d54",
+    "nativeDimensions": [
+      941,
+      1671
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/delivery/latauskuva-pysty.png",
+    "exportSHA256": "462039b78ada454c83245448cc936552ad747edbd343f3066a43089fc44e5523",
+    "exportDimensions": [
+      941,
+      1672
+    ],
+    "sizeExport": "uniform Lanczos fit with subpixel edge aspect adjustment",
+    "sourceReferencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/delivery/latauskuva-pysty.png",
+    "sourceReferenceSHA256": "40577f737a5ec00c462d85cc3138a1a33836a770845db3ccbc8ce636de139c9a"
+  },
+  {
+    "taskNumber": 983,
+    "key": "vaaka",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/native/vaaka-attempt001.png",
+    "nativeSHA256": "71e72209d1903627e5ccbb5916a71a9cd4a2dd3ed146ba20d74c4c34d0019292",
+    "nativeDimensions": [
+      1847,
+      852
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/delivery/latauskuva-vaaka.png",
+    "exportSHA256": "0d73ae162b44556ad05409a7c2134735de48caa0f886760558f88b52076b77b5",
+    "exportDimensions": [
+      2560,
+      1180
+    ],
+    "sizeExport": "uniform Lanczos fit with subpixel edge aspect adjustment",
+    "sourceReferencePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-valokuva-978979-20261026/delivery/latauskuva-vaaka.png",
+    "sourceReferenceSHA256": "0c853f9c2ee21a8f96417054dacfd900df184061e14385168dfe786fe35656f7"
+  }
+]

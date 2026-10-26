@@ -1,0 +1,28 @@
+{
+  "status": "PASS_FOR_PT_REVIEW",
+  "reviewedAt": "2026-10-26T17:26:50.464096+00:00",
+  "fullNativeImagesPersonallyViewed": true,
+  "bothShoePairsPersonallyReviewedAt100Percent": true,
+  "allFourShoes": {
+    "blackClothUppers": true,
+    "darkPlainWornSoles": true,
+    "noWhiteRubberEdge": true,
+    "noModernHeelTab": true,
+    "noElasticRibbing": true,
+    "noLogo": true,
+    "noVisibleAthleticTread": true
+  },
+  "appearance": "Valokuvan pinta, ilme, taivas pään takana ja juoksuasento säilyvät lähteen mukaisina. Pysty ja vaaka ovat kokonaan uusia ottoja vanhojen kuvien referensseillä; pikseli-identtisyyttä muualla ei luvata. Molempien jalkojen tummat kangasjalkineet ja kuluneet tummat pohjat tarkistettu 100 % vertailuista.",
+  "mask": "Uuden vaakakuvan RGB:stä tehty samankokoinen alfa; aiempi ääriviivageometria katsottu uudesta natiivista, reunat tarkistettu valkoisella/tummalla/sinisellä. Nollaa generointikutsua.",
+  "bounds": "Hahmon konservatiiviset rajat ja logotilat ennallaan; päämaskin y0 muuttui 257 -> 256 nykyisen alfan mukaan.",
+  "proofs": "Viisi vaakarajausta säilyttävät hahmon ja logotilat; 4:3/390px esikatselu henkilökohtaisesti katsottu. Pystyn 3:4 sisältää hahmon.",
+  "stamp": "Leiman vinous on runtime-asia. Hyväksyttyä leima- tai otsikkotiedostoa ei muutettu.",
+  "callsIssued": 2,
+  "callsCompleted": 2,
+  "additionalAttempts": 0,
+  "ownerAccepted": false,
+  "PTAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "R2UploadedByThisTask": false
+}

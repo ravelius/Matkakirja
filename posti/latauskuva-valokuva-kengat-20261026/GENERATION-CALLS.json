@@ -1,0 +1,19 @@
+{
+  "issued": 2,
+  "completed": 2,
+  "pending": 0,
+  "mode": "built-in image_gen",
+  "calls": [
+    {
+      "taskNumber": 982,
+      "attempt": 1,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/native/pysty-attempt001.png"
+    },
+    {
+      "taskNumber": 983,
+      "attempt": 1,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/native/vaaka-attempt001.png"
+    }
+  ],
+  "maskCalls": 0
+}

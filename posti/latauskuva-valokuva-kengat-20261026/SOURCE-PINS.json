@@ -1,0 +1,29 @@
+{
+  "latest": {
+    "commit": "6568243f212b4bbd69aed21ec890e7397257f7f1",
+    "path": "posti/pelikoodari-codex-latauskuva-kengat-20261026.md",
+    "blob": "35b242e0876649d2bf02459b704de3db59c76b49",
+    "sha256": "91afe8f397424dda96b9aea995aca12ab7221ebeece5e137a87fdb800cb29ea0",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/sources/6568243f-pelikoodari-codex-latauskuva-kengat-20261026.md",
+    "readInFull": true
+  },
+  "earlierSource": {
+    "commit": "28dba13518fd8f959e1be7363af7cc0e467e14a1",
+    "path": "posti/pelikoodari-codex-latauskuva-kengat-20261026.md",
+    "blob": "b2ac9540d51929d71081279afdf7d99351fb6548",
+    "sha256": "c94337a633e67eed4a10e2f694483524b7255a8b473b600dc73e8bec6f9c0f9f",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/sources/28dba135-pelikoodari-codex-latauskuva-kengat-20261026.md",
+    "readInFull": true
+  },
+  "attachment": {
+    "commit": "6568243f212b4bbd69aed21ec890e7397257f7f1",
+    "path": "posti/latauskuva-valokuva-kengat-20261026/liite-lenkkarit-jalat-ipad.jpg",
+    "blob": "c4614e79023e05d82a5f3cc94f4347a144e79ee4",
+    "sha256": "d74fcf3d4f9d0b0b4dbb06d7f2cf1d5296209a4717052b578c1402e7b80658d3",
+    "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/sources/6568243f-liite-lenkkarit-jalat-ipad.jpg",
+    "readInFull": false
+  },
+  "readHead": "56d663565f1206100ef0e87959621481c5c364af",
+  "readInFull": true,
+  "attachmentViewed": true
+}
