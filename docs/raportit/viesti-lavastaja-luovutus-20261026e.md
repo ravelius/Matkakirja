@@ -78,3 +78,10 @@ PT 15.4x (VS P43): porttihallin seinien kiilat ja kattojen sotku ovat v56-tausta
 varjoja. **Älä pakkaa tausta-v57:ää ennen kuin olet sopinut VS:n kanssa uudelleenleivonnasta samaan pakettiin (yksi v57).** Järjestys:
 T-liitoskorjaus (ja tumman laikun ratkaisu) geometriaan → leivonta nykyisillä varjostajilla VS:n sopimin asetuksin (pohja
 aja_tausta_v46_leivonta.zsh / leivo_valo.py) → pari → pakkaus. Uudelleenleivonta ratkaisee todennäköisesti myös tumman laikun (UV1/valo).
+
+## Lisäys 15.36: v50-leivonta valmis
+
+`leivottu-sali/avoimet-v50/` valmis (juhlasali.glb: valo_rgbm, pylväs 0,443 m, palkisto kuten v49; VALO max 1,80, mediaani 0,12).
+Testijuuri `havainne-kuja40/juuri-v50` (avoimet-v47-linkki → avoimet-v50). VS:lle lähetetty file://-polku: VS ajaa 04:n kertoimilla
+1,0 / 1,25 ja tarkistaa pylväiden kohinan → VS:n luvut OK → pakkaa avoimet-v50 (pohja pakkaa_avoimet_v49.zsh) → PT pari → JU →
+osoitin AvoimetKansio v49 → v50 437f03035:n päälle. VS:lle myös pyydetty P43-asetukset tausta-v57:n uudelleenleivontaan.
