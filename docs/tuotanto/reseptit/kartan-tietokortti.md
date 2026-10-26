@@ -31,10 +31,10 @@ ja Pulun kehote kokonaan.
 
 | Osa | Sisältö | Esimerkki |
 |---|---|---|
-| Kuva | Commons-kuva (P18), jos on; muuten ei kuvaa, ei paikanvaraajaa | |
+| Kuva | Commons-kuva (P18), jos on; muuten ei kuvaa, ei paikanvaraajaa. Kuvan alla **tekijä, lisenssi ja Commons** (BY-SA: tekijän nimi pakollinen, Raamattu 11.1), esim. `Kuva: Tekijän Nimi, CC BY-SA 2.0, Wikimedia Commons` | |
 | Otsikko | nimi (1.1 kohta 4) | `Tartu` |
 | Alarivi | `Laji · Maa` (1.3 ja 1.7). Jos maata ei tiedetä: pelkkä laji | `Kaupunki · Viro` |
-| Faktarivit | enintään viisi riviä `Otsikko: arvo` (1.4) | `Asukkaita: noin 97 000 (2021)` |
+| Faktarivit | enintään viisi riviä `Otsikko: arvo` (1.4) | `noin 97 000 asukasta (2021)` |
 | Pulun teksti | striimautuu (osa 2) | |
 | Lue lisää | nappi, striimaa pidemmän tekstin (osa 2) | |
 | Lähde | `Lähde: Wikidata, Wikipedia` ja kuvan tekijä | |
@@ -113,7 +113,7 @@ Jokaisen ominaisuuden arvo muotoillaan osan 1.5 ja 1.6 säännöin. Ominaisuuksi
 
 | Ryhmä | Rivi (otsikko) | Ominaisuus | Muoto |
 |---|---|---|---|
-| **Asutus** (pääkaupunki, kaupunki, pikkukaupunki, kylä, kunta, asutus) | `Asukkaita` | P1082 + P585 | `noin 180 000 asukasta (2021)` (1.5) |
+| **Asutus** (pääkaupunki, kaupunki, pikkukaupunki, kylä, kunta, asutus) | *(ei otsikkoa)* | P1082 + P585 | `noin 180 000 asukasta (2021)` (1.5); rivi on yksin ilman `Asukkaita:`-otsikkoa, koska "asukasta" on jo luvun perässä |
 | | `Pinta-ala` | P2046 | `noin 105 km²` |
 | | `Korkeus merenpinnasta` | P2044 | `34 m` |
 | | `Perustettu` | P571 | vuosi tai vuosisata (1.6) |
@@ -131,7 +131,7 @@ Jokaisen ominaisuuden arvo muotoillaan osan 1.5 ja 1.6 säännöin. Ominaisuuksi
 | | `Pinta-ala` | P2046 | `noin 600 km²` |
 | **Saari, niemimaa** | `Pinta-ala` | P2046 | `noin 1 200 km²` |
 | | `Korkein kohta` | P610 | kohteen nimi |
-| | `Asukkaita` | P1082 + P585 | `noin 8 200 asukasta (2020)` |
+| | *(ei otsikkoa)* | P1082 + P585 | `noin 8 200 asukasta (2020)` |
 | **Vesiputous** | `Korkeus` | P2048 | `noin 108 m` |
 | **Rakennus, tuomiokirkko, kirkko, moskeija, temppeli, linna, palatsi, linnoitus, museo, teatteri, kirjasto, yliopisto, stadion, majakka** | `Rakennettu` | P571 | vuosi tai vuosisata (1.6) |
 | | `Avattu` | P1619 | vuosi |
@@ -151,7 +151,7 @@ Jokaisen ominaisuuden arvo muotoillaan osan 1.5 ja 1.6 säännöin. Ominaisuuksi
 | | `Pituus` (vain katu) | P2043 | `noin 2 km` |
 | | `Arkkitehti` / `Taiteilija` (patsas: P170) | P84 / P170 | kohteen nimi |
 | **Maa** | `Pääkaupunki` | P36 | kohteen nimi |
-| | `Asukkaita` | P1082 + P585 | `noin 5,5 miljoonaa asukasta (2021)` |
+| | *(ei otsikkoa)* | P1082 + P585 | `noin 5,5 miljoonaa asukasta (2021)` |
 | | `Pinta-ala` | P2046 | `noin 65 000 km²` |
 | | `Maanosa` | P30 | kohteen nimi |
 | **Paikka** (tuntematon laji) | `Alue` | P131 | alueen nimi |
@@ -222,7 +222,7 @@ Vuosia ei kirjoiteta sanoina eikä taivuteta kaksoispisteellä (ei `1889:ssä`).
 ```
 Tartu
 Kaupunki · Viro
-Asukkaita: noin 97 000 asukasta (2021)
+noin 97 000 asukasta (2021)
 Pinta-ala: noin 39 km²
 Perustettu: 1000-luvulla
 Lähde: Wikidata, Wikipedia
@@ -283,7 +283,7 @@ Jokainen rivi on yksikkötesti puhtaalle muotoilufunktiolle; funktiot eivät hae
   "nimi": "Esimerkkilä",
   "laji": "Kylä",
   "maa": "Viro",
-  "faktat": ["Asukkaita: noin 340 asukasta (2021)", "Alue: Tartumaa"],
+  "faktat": ["noin 340 asukasta (2021)", "Alue: Tartumaa"],
   "wikidata": { "...": "valitut P-ominaisuudet arvoineen ja suomenkielisine labeleineen" },
   "wikipedia": { "kieli": "fi", "otsikko": "Esimerkkilä", "teksti": "<johdanto ja ensimmäiset osiot, enintään noin 4 000 merkkiä>", "linkki": "https://fi.wikipedia.org/wiki/Esimerkkilä" }
 }
@@ -328,10 +328,10 @@ tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos l�
 kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
 
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
-(ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Vuodet, vuosisadat ja
-vuosikymmenet kirjoitat numeroina: vuonna 1889, 1600-luvulla, 1870-luvulla. Muut luvut kirjoitat sanoina, paitsi
-mittayksikölliset (330 metriä), jotka kirjoitat numeroina ja yksikkö auki kirjoitettuna. Et laske, vertaile etkä
-muunna yksiköitä.
+(ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat
+NUMEROINA: vuonna 1889, 1600-luvulla, 330 metriä, noin 5 100; ei koskaan sanoina ("viisi tuhatta sataa" on virhe).
+Vain luvut yhdestä kymmeneen saavat olla sanoina, jos se on luontevampaa. Asukaslukua et kirjoita ollenkaan, koska se
+on jo kortilla. Et laske, vertaile etkä muunna yksiköitä.
 
 MUOTO. Vastaus on pelkkää tekstiä: ei otsikoita, ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei
 lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kun tekstiä luetaan ääneen, jokaisen virkkeen
@@ -340,6 +340,15 @@ paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 
 se syventää ensimmäistä lähteen muilla faktoilla ja toistamatta ensimmäisen osan virkkeitä. Jos lähde on niukka,
 tekstit ovat lyhyempiä (ensimmäinen vähintään 2 virkettä, toinen saa jäädä pois, jolloin vastaus loppuu ensimmäiseen
 osaan eikä merkkiriviä kirjoiteta).
+
+EI PUHUTTELUA, EI KEHOTUKSIA. Et puhuttele pelaajaa etkä kehota häntä mihinkään: ei "kun katselet", "huomaat",
+"kannattaa", "täällä kävellään" eikä mitään, mikä on sinun omaa havaintoasi tai elämyskuvausta. Et kuvaile karttanäkymää
+etkä sitä, miltä paikka "näyttää" tai "tuntuu", ellei lähde sano sitä. Jokainen virke kertoo jotakin, mikä lähteessä
+lukee; täytelause ("historia on ulottunut tähän maisemaan") on virhe. Et tee johtopäätöksiä (esimerkiksi "lähes
+sulautunut linnan kylkeen"), ellei lähde sano samaa.
+
+VIRKKEET LOPPUUN. Jokainen virke ja koko vastaus päättyy valmiiseen virkkeeseen ja pisteeseen; kesken jäävää tekstiä ei
+tuoteta. Jos tila loppuu, jätät viimeisen lauseen kirjoittamatta kokonaan.
 
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
@@ -383,12 +392,14 @@ myös naapurikylien väkeä.
 1. Vastaus on joko `###EI-LÄHDETTÄ###` tai ensimmäinen osa, jonka jälkeen on tasan yksi `###LUE-LISÄÄ###`-rivi ja toinen osa
    (tai pelkkä ensimmäinen osa, jos lähde niukka).
 2. Ensimmäinen osa: 40–65 sanaa (niukalla lähteellä vähintään 20), 3–4 virkettä (niukalla vähintään 2). Toinen osa 110–170 sanaa.
-3. **Jokainen vastauksen numeromerkein kirjoitettu luku ja jokainen isolla alkava nimi löytyy syötteestä** (lähdeteksti tai Wikidata-lausumat); ylimääräinen
+3. **Vastauksessa ei ole sanoin kirjoitettuja suuria lukuja (esim. 'viisi tuhatta') eikä asukaslukua; jokainen vastauksen numeromerkein kirjoitettu luku ja jokainen isolla alkava nimi löytyy syötteestä** (lähdeteksti tai Wikidata-lausumat); ylimääräinen
    luku tai nimi = hylkäys ja uusinta (enintään kaksi uusintaa, sen jälkeen `###EI-LÄHDETTÄ###`).
 4. Ei merkkejä `(`, `)`, `*`, `#` (paitsi merkkirivi), `—`, ei pisteellistä lyhennettä (`n.`, `ns.`, `esim.`), ei emojeita.
 5. Kielletyt sanat: kaikkien aikojen, ainutlaatuinen, ihana, pakko nähdä, upea, mahtava, uskomaton.
 6. Ei sanoja `Wikipedia`, `Wikidata`, `lähde` (lähderivin näyttää peli).
-7. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
+7. Ei puhuttelua eikä kehotuksia: hylkäys, jos vastauksessa on `katsel`, `huomaat`, `kannattaa`, `kävele`, `näet`, `tuntuu`, `kun ` + 2. persoonan verbi.
+8. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
+9. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
 
 ### 2.5 Näytteet ennen julkaisua
 
