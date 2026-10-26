@@ -2711,3 +2711,7 @@ Omistaja KK:ssa sanatarkasti: "Junan voi julkaista kun tietokortti valmis. Näyt
 ## JUNA 211: EI TESTEJÄ JULKAISUSSA (omistaja 26.10.2026 klo 22.17) (26.10.2026 klo 22.18)
 
 Omistaja KK:ssa sanatarkasti heti 22.14:n päätöksen jälkeen: "Älä aja testejä julkaisussa." Tulkinta (KK, PT kirjaa): junan 211 julkaisussa ei ajeta tarkistusajoa, laitekierrosta, simulaattoria eikä iPad-ajoja, vaikka juna lähtisi yöllä (vastaus 9.11:n kysymykseen: Ei). Käännöksen automaattiset tarkistukset jäävät 9.11:n mukaisesti. Ilmoitettu Julkaisijalle ja Laitetestaajalle.
+
+## JUOKSUPELIN ESIKATSELUAJOT LINJALLE 2 (omistaja 26.10.2026 klo 22.39) (26.10.2026 klo 22.40)
+
+Kortti KK:ssa: "Saavatko juoksupelin esikatseluajot oman linjan?" → "Kyllä (Suositus)". Syy: kaikki Unity-ajot (esikatselu.sh, proto-kaanna.sh, botti) jonottivat yhteistä linjan 1 lukkoa, ja 22.35 kaikki sessiot odottivat. Lupa jaetun käännösinfran muutokseen (Raamattu 10.5): Natiiviseppä siirtää esikatselu.sh:n linjalle 2 (oma APFS-klooni Matkakirja-proto-esikatselu-2, oma lukko); JU:n käännökset linjalla 1, juna aina ensin.
