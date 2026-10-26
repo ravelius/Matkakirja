@@ -244,8 +244,8 @@ on jo kortilla. Et laske, vertaile etkä muunna yksiköitä.
 
 MUOTO. Vastaus on pelkkää tekstiä: ei otsikoita, ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei
 lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kun tekstiä luetaan ääneen, jokaisen virkkeen
-pitää kuulostaa siltä, että suomalainen sanoisi sen. Ensimmäinen osa on tasan 3–4 virkettä ja 40–65 sanaa ja alkaa
-paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 2–3 lyhyttä kappaletta ja 110–170 sanaa;
+pitää kuulostaa siltä, että suomalainen sanoisi sen. Ensimmäinen osa on tasan 3–4 virkettä (suomen sanat ovat pitkiä, joten tämä on noin 28–65 sanaa) ja alkaa
+paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 2–3 lyhyttä kappaletta ja noin 80–170 sanaa;
 se syventää ensimmäistä lähteen muilla faktoilla ja toistamatta ensimmäisen osan virkkeitä. Jos lähde on niukka,
 tekstit ovat lyhyempiä (ensimmäinen vähintään 2 virkettä, toinen saa jäädä pois, jolloin vastaus loppuu ensimmäiseen
 osaan eikä merkkiriviä kirjoiteta).
@@ -266,6 +266,15 @@ niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen o
 
 SAMA FAKTA KERRAN. Jokainen fakta kerrotaan koko vastauksessa vain kerran, myös saman osan sisällä: kun olet kertonut
 hallinnollisen alueen, sijainnin (esimerkiksi vastakkainen ranta) tai vuoden, et kerro sitä uudelleen toisin sanoin.
+
+VIERAAT NIMET JA VIITTAUKSET. Vieraskielisiä erisnimiä ei taivuteta: kirjoitat "Royal Windsor Way -ohitietä" etkä "Royal
+Windsor Waynin kautta", "Windsor Bridge -siltaa" etkä "Windsor Bridgen". Kun nimi on englantia eikä lukija ymmärrä sitä,
+kerrot ensin suomeksi, mikä paikka on ("hyväntekeväisyyskoulu"), ja nimi kirjoitetaan kerran alkuperäisenä; jos asia ei ole
+tärkeä, jätät nimen pois. Sanoja college, school ja bridge ei jätetä pelkiksi taivutetuiksi englannin sanoiksi
+("collegelle"): käytät suomea (oppilaitos, koulu, silta) tai koko nimeä. Sanot paikasta koko ajan samaa sanaa (kaupunki tai
+kylä, sen mukaan mikä alarivillä on), ja jokaisen viittauksen kohde on nimetty ensin: "uusi kappeli" ei kelpaa ilman
+että on sanottu, minkä kappeli. Niukkaa pikkutietoa (ohitien avaus, yksittäinen koulu) et ota mukaan, ellei se kerro
+paikasta jotakin olennaista.
 
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
@@ -308,8 +317,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   if (osat.length > 2) return { ok: false, syy: 'merkkirivi' };
   const [eka, toka = ''] = osat.map((x) => x.trim());
   const niukka = !toka;
-  if (sanat(eka) < (niukka ? 20 : 40) || sanat(eka) > 65) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
-  if (toka && (sanat(toka) < 110 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
+  if (sanat(eka) < (niukka ? 20 : 28) || sanat(eka) > 65) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
+  if (toka && (sanat(toka) < 80 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
   const ilman = osat.join(' ');
   if (/[()*—]|#/.test(ilman) || /\b(n|ns|esim)\./i.test(ilman)) return { ok: false, syy: 'merkit' };
   const pienet = ilman.toLowerCase();
