@@ -1,0 +1,27 @@
+{
+  "method": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "21",
+      "taskNumber": 999,
+      "code": "21-cloisonne",
+      "size": [
+        1086,
+        1448
+      ],
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/audit-input/21-cloisonne.png",
+      "prompt": "Create a completely NEW photorealistic historical photograph, not a painted illustration, CGI or a texture retouch. Reference image is only for the EXACT artifact identity and photographic light/style; deliberately redesign the human action. Portrait 1086 x 1448, opaque RGB photograph filling all corners. Qing imperial palace craft workshop, bright airy actual architectural setting, glowing large windows, gentle warm backlight, very soft optical background blur, authentic fine skin and cloth detail, no synthetic patterning. Artifact stays tack sharp and main subject. Natural anatomically correct human-sized hands with sensible contact and weight. Qing period clothing and shaved front forehead with long back queue or period cloth caps, no modern clothes/shoes/equipment. Cheerful warm lived-in moment, not posing for a product ad. No text, labels, watermarks, vignette or baked feathering. Essential faces, hands and the complete object grouped near center so a soft oval game bubble at 160px wide retains their legibility.\nSPECIFIC NEW SCENE: TWO MEN STANDING fully upright together, an older grey-templed Qing master at left and a younger assistant at right, carefully lifting a finished cloisonne platter off a low narrow wooden support. Show their upright torsos and hips so standing is unmistakable. Their faces at roughly x=.37 and .61, y=.29, both leaning only their gaze toward the platter with quiet satisfaction. They jointly hold its outer underside and edge at waist height; 4 natural hands maximum, separated grips. The platter is exactly the large shallow blue enamel round dish in reference, ornate gold wire outlines, central large pale pink peony with white/pink blossoms, turquoise leaves and rim floral bands. Tilt its beautiful broad face toward camera enough to display the sharp design; complete gold rim uncut, platter centered x=.5,y=.58. No brush, no painting, nobody sitting, no large workbench between camera and men. Wide-enough mid-length candid two-person photograph with soft background, substantially different from the reference solitary seated brush pose."
+    },
+    {
+      "key": "29",
+      "taskNumber": 1000,
+      "code": "29-falangcai",
+      "size": [
+        1086,
+        1448
+      ],
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/audit-input/29-falangcai.png",
+      "prompt": "Create a completely NEW photorealistic historical photograph, not a painted illustration, CGI or a texture retouch. Reference image is only for the EXACT artifact identity and photographic light/style; deliberately redesign the human action. Portrait 1086 x 1448, opaque RGB photograph filling all corners. Qing imperial palace craft workshop, bright airy actual architectural setting, glowing large windows, gentle warm backlight, very soft optical background blur, authentic fine skin and cloth detail, no synthetic patterning. Artifact stays tack sharp and main subject. Natural anatomically correct human-sized hands with sensible contact and weight. Qing period clothing and shaved front forehead with long back queue or period cloth caps, no modern clothes/shoes/equipment. Cheerful warm lived-in moment, not posing for a product ad. No text, labels, watermarks, vignette or baked feathering. Essential faces, hands and the complete object grouped near center so a soft oval game bubble at 160px wide retains their legibility.\nSPECIFIC NEW SCENE: ONE ELDERLY GREYING MASTER STANDING in a three-quarter SIDE VIEW beside a bright palace workshop window. Upright torso visible from hips to head, elbows naturally raised to inspect a bowl at upper chest height against the window light. His thoughtful delighted old face near x=.49,y=.30, bowl near x=.52,y=.55; he is looking across the rim toward light, not down at a tabletop. He gently cradles the bowl foot in one hand and steadies the far side with the other; normal-size hands, no impossible fingers. Same exact medium-large white porcelain falangcai bowl as reference, full gently flared shape with detailed pink peony clusters, green leaves, delicate branch strokes. Bowl sharp and complete and visually dominant, person secondary; lit as solid porcelain, not transparent glass. Qing dark blue/brown silk robe, plain small black cloth cap with grey temples, long grey back queue. No brush, no seated pose, no painting bench in foreground, no workshop painting gesture. Standing side-view inspection must be visibly different from both young seated woman and seated bald carving master elsewhere in series."
+    }
+  ]
+}

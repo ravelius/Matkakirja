@@ -1,0 +1,65 @@
+{
+  "method": "built-in image_gen",
+  "issued": 2,
+  "completed": 2,
+  "pending": 0,
+  "perImageCallLimit": 1,
+  "attempts": [
+    {
+      "code": "21-cloisonne",
+      "taskNumber": 999,
+      "family": "memory",
+      "attempt": 1,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/native/21-cloisonne-attempt001.png",
+      "nativeSHA256": "de80f2987b03cf11103c4e7c7510908cd225accbacd682bb5abeaf07e82ea8cf",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/delivery/rejected/21-cloisonne.png",
+      "exportSHA256": "5e4fd5c0abf6217ee3e69ad78abb7ad0b0b9b3879d4f1095a2669b41000d304a",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "producerQAPassed": false,
+      "ownerAccepted": false,
+      "PTAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false,
+      "status": "QA-rejected-one-source-authorized-attempt-used",
+      "reason": "Standing two-person pose and artifact fixed, but the scalp contains an artificial repeating engraved pattern. Rejected; do not use in game. No additional memory-image call."
+    },
+    {
+      "code": "29-falangcai",
+      "taskNumber": 1000,
+      "family": "memory",
+      "attempt": 1,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/native/29-falangcai-attempt001.png",
+      "nativeSHA256": "26e4bbad449aba50316bad2cd9bec504c066a48f8cafbba037b6db0eb70ac47b",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/memory/delivery/29-falangcai.png",
+      "exportSHA256": "54fae35cbefade58acdec649a3adf2d8d2c0124de406bfd5528ad2d09322efc5",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "callsIssued": 1,
+      "callsCompleted": 1,
+      "producerQAPassed": true,
+      "ownerAccepted": false,
+      "PTAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false,
+      "status": "QA-passed-for-recipient-review",
+      "reason": "Standing grey-haired master inspects the unchanged peony bowl in window light; no seated brush pose. Natural hands, bright photographic environment. Face remains readable in small oval preview; outer bowl rim fades slightly at right."
+    }
+  ]
+}
