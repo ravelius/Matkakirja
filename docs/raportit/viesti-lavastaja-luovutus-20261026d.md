@@ -59,7 +59,7 @@ Ajot `lokit/havainne-editori-20261026-142325` (v47) ja `-142922` (v48), pari `ki
 lähetetty PT:lle: (1) kivikerrat ✓, (2) p216 portaat tasaisemmat, (3) seinäkiilat samat v47:ssä ja v48:ssa → ympäristön varjot,
 ei malli. Seuraavaksi: PT:n kuittaus → pakkaa rakennukset-v48 (pohja `pakkaa_v56_v47_v16.zsh`, vain rakennukset) → SHA:t PT:lle.
 
-## Lisäys 15.1x: v48 pakattu, valkoinen viiva kesken
+## Lisäys 14.49: v48 pakattu, valkoinen viiva kesken
 
 - **rakennukset-v48 pakattu** (PT 15.0x kuittaus): `proto-3d/_valmiit/juoksupeli-kielletty-rakennukset-v48-vienti-20261026`,
   SHA256SUMS 9aefdaf29e71d699ebbbf48f176badfa5595ef76dcfbc99856940145615ee8a8 (`tyokalut/pakkaa_rakennukset_v48.zsh`). Osoitin
