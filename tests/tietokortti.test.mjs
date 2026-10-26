@@ -44,6 +44,7 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.match(tarkistaTeksti(`${s(40)} se on toiminut yli 580 vuotta.`, en).syy, /luku/);
   assert.match(tarkistaTeksti(`Kato, ${s(44)}`, syote).syy, /aloitus/);
   assert.match(tarkistaTeksti(`${s(44)} vuonna 1889.\n${LUE_LISAA}\n${s(115)} vuonna 1889.`, syote).syy, /toisto/);
+  assert.match(tarkistaTeksti(`${s(40)} Hallintopiiri on vanha. Se kuuluu hallintopiiriin.`, syote).syy, /toisto/, 'sama fakta kahdesti');
   assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
 });

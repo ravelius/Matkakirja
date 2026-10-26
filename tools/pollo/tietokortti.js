@@ -253,6 +253,9 @@ vuosi, sama nimi tai sama hallinnollinen tieto kerrotaan vain kerran koko vastau
 toisin sanoin ("pieni kaupunki" ei toista laji-riviä). Toisen osan pitää tuoda vähintään kolme uutta lähteen faktaa. Jos
 niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen osaan, merkkiriviä ei kirjoiteta).
 
+SAMA FAKTA KERRAN. Jokainen fakta kerrotaan koko vastauksessa vain kerran, myös saman osan sisällä: kun olet kertonut
+hallinnollisen alueen, sijainnin (esimerkiksi vastakkainen ranta) tai vuoden, et kerro sitä uudelleen toisin sanoin.
+
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
 kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
@@ -312,6 +315,10 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   const nimet = (ilman.match(/(?<=[\p{Ll},] )[\p{Lu}][\p{L}-]{4,}/gu) ?? []).filter((n) => !oma.includes(n.toLowerCase().slice(0, 5)));
   const nimiToisto = nimet.find((n, i) => nimet.findIndex((m) => m.slice(0, 5) === n.slice(0, 5)) !== i);
   if (nimiToisto) return { ok: false, syy: `toisto ${nimiToisto}` };
+  // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 10 kirjainta, 8 ensimmäistä samat, ei kohteen nimeä) kahdesti.
+  const pitkat = (pienet.match(/\p{L}{10,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
+  const sanaToisto = pitkat.find((s, i) => pitkat.indexOf(s) !== i);
+  if (sanaToisto) return { ok: false, syy: `toisto ${sanaToisto}` };
   const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
   for (let a = 0; a < virkkeet.length; a += 1) {
     for (let b = a + 1; b < virkkeet.length; b += 1) {
