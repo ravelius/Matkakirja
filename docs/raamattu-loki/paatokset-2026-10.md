@@ -2731,3 +2731,7 @@ KK:n päätös omistajan valtuutuksella klo 23.16 (sanatarkasti): pelin 3D-keisa
 ## JUOKSUPELI: LÄHIKAMERA VAIN ULKOKOHTIIN, SALEISSA YLÄKAMERA (KK omistajan valtuutuksella) (26.10.2026 klo 23.34)
 
 KK:n päätös omistajan valtuutuksella klo 23.3x (sanatarkasti): juoksupelin lähikamera menee junaan vain ulkokohtiin (kujat, aukio, portit) yhdessä Codexin tummien pohjien kanssa, kun KK on tarkistanut parit 3. Saleissa pysyy toistaiseksi nykyinen yläkamera, koska sisäkamera piilotti keisarin (221 piiloruutua). Salin sisäkamera ja haalennus (PK + VS) tehdään omana eränään LR:n salin sisustuksen kanssa (alue 3).
+
+## KOHDEKORTTIPOHJA: TIETOKORTTI POHJALLA SELLAISENAAN, PUUTTEET NUI:N POHJATYÖKSI (KK omistajan valtuutuksella) (26.10.2026 klo 23.53)
+
+KK:n päätös omistajan valtuutuksella klo 23.53 (sanatarkasti): hyväksytty. Tietokortti menee junaan 211 nykyisellä kohdekorttipohjalla. NUI tekee puuttuvat a) vierityksen vihjeen laajennettuun korttiin, c) ☰-napin selkeän merkityksen ja d) "Näytä vähemmän" -napin "Lue lisää" -napin jälkeen omana pohjatyönään junan 211 jälkeen olemassa olevilla UI-pohjilla. Toteutustapa tulee kuvina KK:lle ennen mergeä, koska omistaja ei ole aiemmin päättänyt näistä (lokissa ei osumia).
