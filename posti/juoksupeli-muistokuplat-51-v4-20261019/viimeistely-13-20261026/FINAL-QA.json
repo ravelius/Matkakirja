@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-26T17:40:42.273243+00:00",
+  "mode": "visual native and technical small masked preview",
+  "newImages": {
+    "27": {
+      "passed": true,
+      "wholeNativeViewed": true,
+      "masked160pxViewed": true,
+      "handsNatural": true,
+      "periodAppearance": "Plain cloth Qing work cap, grey temple and visible back queue; modern crew-cut removed. Distinct mature craftsman, same bronze casting memory.",
+      "objectAndLight": "Mountain censer intact and foreground sharp, light palace foundry, gentle backlight and soft depth."
+    },
+    "30": {
+      "passed": true,
+      "wholeNativeViewed": true,
+      "masked160pxViewed": true,
+      "handsNatural": true,
+      "pose": "Artisan now on right looking down-left, opposite three-quarter view, relaxed brush hand; opened enamel box in front, no identical previous front lean.",
+      "objectAndLight": "Same rectangular copper enamel box and peony-painted hinged lid; clear hands normal relative to face, bright real workshop."
+    },
+    "37": {
+      "passed": true,
+      "wholeNativeViewed": true,
+      "masked160pxViewed": true,
+      "handsNatural": true,
+      "faceFade": "Right recipient moved substantially inward; both eyes and mouth clearly readable in 160px preview. Outer hats and background woman still fade; not claiming all head pixels inside r=.45.",
+      "objectAndLight": "Same open folding landscape fan with bamboo ribs, complete. Two distinct men in period court robes; natural handover and soft bright backlight."
+    },
+    "33": {
+      "passed": true,
+      "selectedAttempt": 3,
+      "wholeNativeViewed": true,
+      "masked160pxViewed": true,
+      "handsNatural": true,
+      "faceFade": "All three essential faces readable at 160px; the right face moved inward. Outer coiffure and the left outer shoulder still fade. No claim that entire heads are within r=.45.",
+      "objectAndLight": "Complete gold writing automaton with figure at desk and clock face. Bright soft palace bokeh and natural skin; sharp central artifact and believable hands. Period court costumes and European presenter retained.",
+      "rejectedAttempts": {
+        "1": "Right face still too near feather edge.",
+        "2": "Central grouping improved but too dim and background too sharp for this series."
+      }
+    }
+  },
+  "allInput13FullSizeViewed": true,
+  "unchangedNinePassed": true,
+  "ownerAccepted": false,
+  "PTAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

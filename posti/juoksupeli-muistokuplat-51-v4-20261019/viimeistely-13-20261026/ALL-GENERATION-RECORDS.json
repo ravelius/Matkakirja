@@ -1,0 +1,126 @@
+[
+  {
+    "number": 27,
+    "taskNumber": 991,
+    "code": "27-vuoripoltin",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/27-vuoripoltin-attempt001.png",
+    "nativeSHA256": "dba29ac3f8a8523f0cea3fadac7ad296503b5e4d3dcea461d853c05b5f6fb51f",
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/delivery/27-vuoripoltin.png",
+    "exportSHA256": "5f38e3891fcc1bee31a293b3be4ea69b3fc4c55ac1561e9f263553d9fcbcc44b",
+    "exportDimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "technicalSizeExport": "Uniform Lanczos fit; original native preserved",
+    "wholeNewImageGeneration": true,
+    "qaPassed": true
+  },
+  {
+    "number": 30,
+    "taskNumber": 994,
+    "code": "30-maalattu-emalirasia",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/30-maalattu-emalirasia-attempt001.png",
+    "nativeSHA256": "6c2eb49882fc3a083c62e43db7a77db3573c667353b3dcf14282a380ba015662",
+    "nativeDimensions": [
+      1087,
+      1447
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/delivery/30-maalattu-emalirasia.png",
+    "exportSHA256": "7159ed4788487c7ea0e643207645f8f2f26f8c0c67615f57d2b2a979b7d5be89",
+    "exportDimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "technicalSizeExport": "Uniform Lanczos fit; original native preserved",
+    "wholeNewImageGeneration": true,
+    "qaPassed": true
+  },
+  {
+    "number": 33,
+    "taskNumber": 995,
+    "code": "33-kirjoittava-kellopeli",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/33-kirjoittava-kellopeli-attempt001.png",
+    "nativeSHA256": "12d80cf6d997c893908088a9796712ca107ad69640627f17b60b9fa8265d04d4",
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/delivery/33-kirjoittava-kellopeli.png",
+    "exportSHA256": "3556314098cf740f39c08bbd85ab169bc5a8dd7fd707a711ac9da72b339826cc",
+    "exportDimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "technicalSizeExport": "Uniform Lanczos fit; original native preserved",
+    "wholeNewImageGeneration": true,
+    "qaPassed": false,
+    "rejectionReason": "Right face remained too close to feather edge; preserved, not selected."
+  },
+  {
+    "number": 37,
+    "taskNumber": 997,
+    "code": "37-viuhka",
+    "attempt": 1,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/37-viuhka-attempt001.png",
+    "nativeSHA256": "1d24e1d0490511c60f2f76ca483643693eda0c6635c013b343d02800ed87e7de",
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/delivery/37-viuhka.png",
+    "exportSHA256": "265aa47c744d378db7e98c29c306281619548249e61b53b56fe32115ce1b0487",
+    "exportDimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "technicalSizeExport": "Uniform Lanczos fit; original native preserved",
+    "wholeNewImageGeneration": true,
+    "qaPassed": true
+  },
+  {
+    "number": 33,
+    "taskNumber": 995,
+    "attempt": 2,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/33-kirjoittava-kellopeli-attempt002.png",
+    "nativeSHA256": "43dee05bba6776ee4b79b066a6fddc0e30d1bebf675d2f75a3263ec75ce6ad2d",
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "qaPassed": false,
+    "qaReason": "Background too detailed and light too subdued compared with luminous v4 memory style"
+  },
+  {
+    "number": 33,
+    "taskNumber": 995,
+    "code": "33-kirjoittava-kellopeli",
+    "attempt": 3,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/native/33-kirjoittava-kellopeli-attempt003.png",
+    "nativeSHA256": "8f160fc86d774bb077946eb13dd2bc1fd2de0269f0f0c6372e6dde4dcb0f0bf8",
+    "nativeDimensions": [
+      1086,
+      1448
+    ],
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/delivery/33-kirjoittava-kellopeli.png",
+    "exportSHA256": "cac43a83daf32c0cc45a73035264b7a944bee60297d305ae8a2a16f37ced7483",
+    "exportDimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "technicalSizeExport": "Uniform Lanczos fit; original native preserved",
+    "wholeNewImageGeneration": true,
+    "qaPassed": true
+  }
+]

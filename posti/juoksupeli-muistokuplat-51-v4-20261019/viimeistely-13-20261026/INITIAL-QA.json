@@ -1,0 +1,161 @@
+{
+  "at": "2026-10-26T17:29:50.866510+00:00",
+  "reviews": [
+    {
+      "number": 19,
+      "taskNumber": 985,
+      "code": "19-bianqing-kivikellot",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/19-bianqing-kivikellot.png",
+      "sourceSHA256": "6c33b12609e17ac22db2ccb847ca667c46f2abb25de7be81b805e5e22df7c622",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Luonnollinen soittoasento ja kädet; esine terävä, vanhempi kuulija, vaalea palatsisali, jalat eivät näy."
+    },
+    {
+      "number": 21,
+      "taskNumber": 986,
+      "code": "21-cloisonne",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/21-cloisonne.png",
+      "sourceSHA256": "721cb106827cd879f40f0ff6a52ca20213cad3f0f5af6045b69cf637725db4de",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Työn asento ja kädet luonnolliset, paljas ajeltu otsa ja queue, esine terävä, vaalea emalityöpaja; jalat eivät näy."
+    },
+    {
+      "number": 23,
+      "taskNumber": 987,
+      "code": "23-zun-malja",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/23-zun-malja.png",
+      "sourceSHA256": "b1b6b8e4b6af8b133fdfef49ea147aa2d55b8fd0ce3ea6c8dc9a58edaa89fa2d",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Luonteva kaato; käsi suhteessa kasvoihin normaali; kaksi erilaista henkilöä, esine pääosassa, vaalea tila; jalat eivät näy."
+    },
+    {
+      "number": 24,
+      "taskNumber": 988,
+      "code": "24-pronssikurki",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/24-pronssikurki.png",
+      "sourceSHA256": "65f03e9c9d42971a64939e352e192327c2fc2aa77d34ebf6bead81d84eda8d67",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Keväinen ulkoympäristö, kurki jalustalla, luonnollinen avoin käsi; Qing-työasu ja lakki, jalat eivät näy."
+    },
+    {
+      "number": 25,
+      "taskNumber": 989,
+      "code": "25-pronssikilpikonna",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/25-pronssikilpikonna.png",
+      "sourceSHA256": "55bdec7ad01d87d090c532e2709b8e6b7ba172086d044602809932de523c9166",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Talvinen valkoinen ulkoympäristö; luonnollinen vanhempi hoitaja ja pieni lepäävä käsi, esine pääosassa, jalat eivät näy."
+    },
+    {
+      "number": 26,
+      "taskNumber": 990,
+      "code": "26-kullattu-vesiastia",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/26-kullattu-vesiastia.png",
+      "sourceSHA256": "f825a192b0b599d565a473c82cb4633c408c796e286c90e85682cc328f5c5fbe",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Tarkistettu erikseen natiivissa ja 160px häivytyksessä: sivukasvot lievässä varhaisessa häivytyksessä, molemmat ilmeet ja toiminta edelleen luettavat; ei väitetä kaikkia piirteitä täysin peittäviksi. Näkyvät mustat kangaskengät vaalealla kerrospohjalla sallitaan tämän muistokuvalähteen eunukkiohjeessa, ei moderneja logoja/tread-kuvioita."
+    },
+    {
+      "number": 27,
+      "taskNumber": 991,
+      "code": "27-vuoripoltin",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/27-vuoripoltin.png",
+      "sourceSHA256": "5f7ad9a72793a4badeedcb3162603c29e0570cfc63c7662fc360cb7e3ff0d33b",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "regenerate-once",
+      "reasonFI": "Korjaus: lyhyt etuhiuksinen crew-cut vaikutelma on nykyaikainen; tehdään ajeltu otsa, queue ja aikakauden työpäähine."
+    },
+    {
+      "number": 28,
+      "taskNumber": 992,
+      "code": "28-cloisonne-poltin",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/28-cloisonne-poltin.png",
+      "sourceSHA256": "d143e700641a00fadda087ea969b92877dcf057950d297c136ed78a444271a0a",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Sivellintyö, luonnolliset kädet, nuori aikuinen artesaani historiallisessa työasussa; terävä esine, vaalea oikea työtila. Säilytetään, eriytetään 30:n toistuva asento."
+    },
+    {
+      "number": 29,
+      "taskNumber": 993,
+      "code": "29-falangcai",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/29-falangcai.png",
+      "sourceSHA256": "6837e1295b156ff81fc04ba53c1cd2c268d466dca36539e87395c7c0a72fa068",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Erillisarvio: silmät ja suu säilyvät 160px häivytyksessä selvästi; vain kalotti/otsan reuna haalistuu, ei uutta ottoa tämän vuoksi. Kädessä kallistettu kulho erottaa työn pöydällä olevista astioista. Luonnolliset kädet ja historiallinen päähine."
+    },
+    {
+      "number": 30,
+      "taskNumber": 994,
+      "code": "30-maalattu-emalirasia",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/30-maalattu-emalirasia.png",
+      "sourceSHA256": "89ac70835472d25b2a923359399f231d3df0f3ab3489b68e506ee0480b43e246",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "regenerate-once",
+      "reasonFI": "Korjaus: lähes sama eteen kumartuva sivellinote kuin 28/34; uusi sivuttainen työasento, sama emalirasia ja muistotyyppi."
+    },
+    {
+      "number": 33,
+      "taskNumber": 995,
+      "code": "33-kirjoittava-kellopeli",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/33-kirjoittava-kellopeli.png",
+      "sourceSHA256": "e691e8e92f19b982bfd686028388e751f1f3acd393027d0a4395a7b3db07bb64",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "regenerate-once",
+      "reasonFI": "Erillisarvio: ulommat kasvot, varsinkin hovinainen, haalistuvat pienessä kuplassa liikaa. Uusi tiiviimpi keskusryhmä saman kellopelin taakse."
+    },
+    {
+      "number": 34,
+      "taskNumber": 996,
+      "code": "34-punalakka-veisto",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/34-punalakka-veisto.png",
+      "sourceSHA256": "1a59336d89239307f3ea249f84c2808972576174c28c7431f79676a8861dd38e",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "pass-no-generation",
+      "reasonFI": "Vanha kalju mestari, luonnolliset pienet käsityöotteet ja veistäminen; esine selvästi pääosassa. Asennon vaihtelu paranee 30:n muutoksella; ei tarvitse omaa uusintaa."
+    },
+    {
+      "number": 37,
+      "taskNumber": 997,
+      "code": "37-viuhka",
+      "sourcePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/muistokuplat51-viimeistely-985997-20261026/audit-input/37-viuhka.png",
+      "sourceSHA256": "ac790b3753b58a7d04b438a649268b1799a3a5705cdada17056f03df5fb14a1a",
+      "fullSizeViewed": true,
+      "masked160pxViewed": true,
+      "decision": "regenerate-once",
+      "reasonFI": "Erillisarvio: oikea vastaanottaja jää kuplan reunan voimakkaaseen häivytykseen. Uusi keskitetty luovutus, sama avoin taittoviuhka."
+    }
+  ],
+  "source51OverviewViewed": true,
+  "peopleFreeScenesInSource51": [
+    1,
+    2,
+    5,
+    11,
+    13,
+    31,
+    39
+  ],
+  "peopleFreeSceneVarietySufficientForAlsoRequest": true,
+  "greyingOlderTeacherVarietyAlreadyPresent": true,
+  "actualHistoricalTimeClaimsNotNewlyResearched": true
+}
