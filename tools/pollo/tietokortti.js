@@ -13,7 +13,7 @@
 import { haeJson } from './opas.js';
 import { laji, LAJI_QIDS, faktarivit, alarivi, viitatut, valitseAsukkaat } from './tietokortti-kaava.js';
 
-export const TIETOKORTTI_VERSIO = 'v2';
+export const TIETOKORTTI_VERSIO = 'v3';
 /** Tietokortit pysyvät; uusi versio = uusi avain. */
 export const TIETOKORTTI_TTL_S = 365 * 24 * 3600;
 
@@ -212,7 +212,7 @@ export const LUE_LISAA = '###LUE-LISÄÄ###';
 export const EI_LAHDETTA = '###EI-LÄHDETTÄ###';
 
 /**
- * Pulun kehote (Sisältökirjuri, docs/tuotanto/reseptit/kartan-tietokortti.md 2.2, main 247006b47) sanatarkasti. Yksi kutsu
+ * Pulun kehote (Sisältökirjuri, docs/tuotanto/reseptit/kartan-tietokortti.md 2.2, main ae5f5e02e) sanatarkasti. Yksi kutsu
  * tuottaa lyhyen tekstin, merkkirivin ja Lue lisää -tekstin; asiakas näyttää ensimmäisen heti ja toisen napista.
  */
 export const KARTAN_TIETOKORTTI_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTTI
@@ -226,10 +226,10 @@ tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos l�
 kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
 
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
-(ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Vuodet, vuosisadat ja
-vuosikymmenet kirjoitat numeroina: vuonna 1889, 1600-luvulla, 1870-luvulla. Muut luvut kirjoitat sanoina, paitsi
-mittayksikölliset (330 metriä), jotka kirjoitat numeroina ja yksikkö auki kirjoitettuna. Et laske, vertaile etkä
-muunna yksiköitä.
+(ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat
+NUMEROINA: vuonna 1889, 1600-luvulla, 330 metriä, noin 5 100; ei koskaan sanoina ("viisi tuhatta sataa" on virhe).
+Vain luvut yhdestä kymmeneen saavat olla sanoina, jos se on luontevampaa. Asukaslukua et kirjoita ollenkaan, koska se
+on jo kortilla. Et laske, vertaile etkä muunna yksiköitä.
 
 MUOTO. Vastaus on pelkkää tekstiä: ei otsikoita, ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei
 lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kun tekstiä luetaan ääneen, jokaisen virkkeen
@@ -238,6 +238,15 @@ paikan nimellä. Sitten tulee tasan yksi rivi: ###LUE-LISÄÄ###. Toinen osa on 
 se syventää ensimmäistä lähteen muilla faktoilla ja toistamatta ensimmäisen osan virkkeitä. Jos lähde on niukka,
 tekstit ovat lyhyempiä (ensimmäinen vähintään 2 virkettä, toinen saa jäädä pois, jolloin vastaus loppuu ensimmäiseen
 osaan eikä merkkiriviä kirjoiteta).
+
+EI PUHUTTELUA, EI KEHOTUKSIA. Et puhuttele pelaajaa etkä kehota häntä mihinkään: ei "kun katselet", "huomaat",
+"kannattaa", "täällä kävellään" eikä mitään, mikä on sinun omaa havaintoasi tai elämyskuvausta. Et kuvaile karttanäkymää
+etkä sitä, miltä paikka "näyttää" tai "tuntuu", ellei lähde sano sitä. Jokainen virke kertoo jotakin, mikä lähteessä
+lukee; täytelause ("historia on ulottunut tähän maisemaan") on virhe. Et tee johtopäätöksiä (esimerkiksi "lähes
+sulautunut linnan kylkeen"), ellei lähde sano samaa.
+
+VIRKKEET LOPPUUN. Jokainen virke ja koko vastaus päättyy valmiiseen virkkeeseen ja pisteeseen; kesken jäävää tekstiä ei
+tuoteta. Jos tila loppuu, jätät viimeisen lauseen kirjoittamatta kokonaan.
 
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
@@ -287,6 +296,12 @@ export function tarkistaTeksti(teksti, syote) {
   const pienet = ilman.toLowerCase();
   const kielletty = KIELLETYT.find((s) => pienet.includes(s));
   if (kielletty) return { ok: false, syy: `sana ${kielletty}` };
+  // 2.4/7: ei puhuttelua eikä kehotuksia.
+  if (/katsel|huomaat|kannattaa|kävele|\bnäet\b|tuntuu|\bkun \p{L}+t\b/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
+  // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
+  if (!/[.!?]$/.test(eka) || (toka && !/[.!?]$/.test(toka))) return { ok: false, syy: 'kesken' };
+  // 2.4/3: ei sanoin kirjoitettuja suuria lukuja.
+  if (/\b(tuhatta|tuhat|miljoonaa|miljoona|sataa)\b/i.test(ilman)) return { ok: false, syy: 'luku sanoin' };
   const lahdeTeksti = String(syote ?? '');
   for (const luku of ilman.match(/\d[\d\s]*\d|\d/g) ?? []) {
     if (!lahdeTeksti.replace(/\s/g, '').includes(luku.replace(/\s/g, ''))) return { ok: false, syy: `luku ${luku}` };

@@ -79,6 +79,6 @@ test('faktarivit: asutus, puuttuva pois, enintään viisi', () => {
     P2046: [q(38.8, 'Q712226')], P571: [{ mainsnak: { datavalue: { value: { time: '+1030-00-00T00:00:00Z', precision: 7 } } } }],
   } };
   assert.deepEqual(faktarivit(e, { nimi: 'Kaupunki', ryhma: 'asutus' }),
-    ['Asukkaita: noin 97 000 asukasta (2021)', 'Pinta-ala: 38,8 km²', 'Perustettu: 1000-luvulla']);
+    ['noin 97 000 asukasta (2021)', 'Pinta-ala: 38,8 km²', 'Perustettu: 1000-luvulla']);
   assert.deepEqual(faktarivit({ claims: {} }, { nimi: 'Paikka', ryhma: 'paikka' }), []);
 });

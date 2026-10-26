@@ -167,7 +167,7 @@ export function faktarivit(e, { nimi: lajiNimi, ryhma }, nimi = () => null, maa 
   const as = valitseAsukkaat(e);
   switch (ryhma) {
     case 'asutus':
-      lisaa('Asukkaita', as && asukasluku(as.maara, as.vuosi));
+      if (as) r.push(asukasluku(as.maara, as.vuosi));   // resepti ae5f5e02e: asukasrivi ilman otsikkoa
       lisaa('Pinta-ala', pintaAla(km2ina(suure(e, 'P2046'))));
       lisaa('Korkeus merenpinnasta', korkeus(metreina(suure(e, 'P2044'))));
       lisaa('Perustettu', aika(e, 'P571'));
@@ -193,7 +193,7 @@ export function faktarivit(e, { nimi: lajiNimi, ryhma }, nimi = () => null, maa 
     case 'saari':
       lisaa('Pinta-ala', pintaAla(km2ina(suure(e, 'P2046'))));
       lisaa('Korkein kohta', ensim('P610'));
-      lisaa('Asukkaita', as && asukasluku(as.maara, as.vuosi));
+      if (as) r.push(asukasluku(as.maara, as.vuosi));
       break;
     case 'vesiputous':
       lisaa('Korkeus', korkeus(metreina(suure(e, 'P2048'))));
@@ -230,7 +230,7 @@ export function faktarivit(e, { nimi: lajiNimi, ryhma }, nimi = () => null, maa 
       break;
     case 'maa':
       lisaa('Pääkaupunki', ensim('P36'));
-      lisaa('Asukkaita', as && asukasluku(as.maara, as.vuosi));
+      if (as) r.push(asukasluku(as.maara, as.vuosi));
       lisaa('Pinta-ala', pintaAla(km2ina(suure(e, 'P2046'))));
       lisaa('Maanosa', ensim('P30'));
       break;
