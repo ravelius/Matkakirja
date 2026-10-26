@@ -193,18 +193,27 @@ export async function korttiFaktat(haku, e, osmNimi) {
   };
 }
 
-/** Wikipedian johdanto (fi, muuten en) tekstiksi Pululle: { kieli, otsikko, teksti } tai null. pitka = koko artikkelin alku. */
+/**
+ * Wikipedian teksti Pululle: { kieli, otsikko, teksti } tai null. pitka = koko artikkelin alku. Suomenkielinen ensin; jos se on
+ * tynkä (alle 1 500 merkkiä, esim. Eton kolme virkettä, vedos 3 27.10.), perään englanninkielinen, jotta Lue lisää saa uusia faktoja.
+ */
+const TYNKA = 1500;
 export async function wikiLahde(haku, wiki, pitka) {
-  for (const [kieli, otsikko] of [['fi', wiki?.fi], ['en', wiki?.en]]) {
-    if (!otsikko) continue;
+  const hae = async (kieli, otsikko) => {
+    if (!otsikko) return null;
     try {
       const d = await haeJson(haku, `https://${kieli}.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&explaintext=1`
         + `${pitka ? '' : '&exintro=1'}&redirects=1&titles=${encodeURIComponent(otsikko)}`);
-      const t = Object.values(d?.query?.pages ?? {})[0]?.extract;
-      if (t && t.trim().length > 80) return { kieli, otsikko, teksti: t.trim().slice(0, 4000) };
-    } catch { /* seuraava kieli */ }
-  }
-  return null;
+      // Tyhjät osiootsikot (== Lähteet ==, == Aiheesta muualla ==) pois.
+      const t = (Object.values(d?.query?.pages ?? {})[0]?.extract ?? '').replace(/\n*==+ [^=\n]+ ==+\n*(?=\n*(==|$))/g, '\n').trim();
+      return t.length > 80 ? { kieli, otsikko, teksti: t } : null;
+    } catch { return null; }
+  };
+  const fi = await hae('fi', wiki?.fi);
+  const en = !fi || (pitka && fi.teksti.length < TYNKA) ? await hae('en', wiki?.en) : null;
+  if (fi && en) return { ...fi, kielet: ['fi', 'en'], teksti: `${fi.teksti}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  const l = fi ?? en;
+  return l ? { ...l, teksti: l.teksti.slice(0, 4000) } : null;
 }
 
 /** Merkkirivi lyhyen ja Lue lisää -tekstin välissä ja tyhjän lähteen vastaus (resepti kartan-tietokortti.md 2.1). */
@@ -224,6 +233,8 @@ LÄHDE. Käytät VAIN alla annettua lähdettä (Wikidatan tiedot ja Wikipedian t
 mitään, mitä lähteessä ei lue, et arvaa etkä täydennä. Jos lähde ei kerro jotakin, jätät sen kertomatta. Jos lähteen
 tiedot ovat keskenään ristiriidassa, jätät ristiriitaisen asian pois. Jos lähteessä ei ole kahden virkkeen verran
 kerrottavaa tai se ei kerro paikasta mitään olennaista, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
+Jos lähteessä on suomenkielisen tekstin perässä englanninkielinen artikkeli, kirjoitat sen nimet suomeksi vain, kun
+suomenkielinen teksti tai faktat käyttävät vakiintunutta suomenkielistä muotoa (esimerkiksi Thamesjoki); muuten nimi jää alkuperäiseksi.
 
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
 (ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat

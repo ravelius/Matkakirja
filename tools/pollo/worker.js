@@ -3893,7 +3893,8 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
   if (valmis) return valmisStriimi(kors, { vastaus: valmis, valmiina: true, lahde: kortti.lahdeRivi ?? null });
   const lahde = await wikiLahde((url, o) => fetch(url, o), kortti.wiki, true);
   // Resepti 1.1 kohta 5: "Lähde: Wikidata, Wikipedia" (Wikipedian teksti CC BY-SA 4.0, Pulun teksti omaa sanamuotoa).
-  const lahdeRivi = lahde ? 'Wikidata, Wikipedia' : 'Wikidata';
+  // Suomenkielinen tynkä + englanninkielinen artikkeli: molemmat lähderivillä (SK 27.10., kaksi CC BY-SA -lähdettä).
+  const lahdeRivi = !lahde ? 'Wikidata' : lahde.kielet ? `Wikidata, Wikipedia (${lahde.kielet.join(', ')})` : 'Wikidata, Wikipedia';
   if (!lahde && !kortti.rivit?.length) return valmisStriimi(kors, { vastaus: EI_LAHDETTA, valmiina: false, lahde: lahdeRivi });
   if (await tietoRajaYlittyy(pyynto, env, ctx)) return vastaa({ virhe: 'raja', viesti: 'Päivän uudet tekstit on käytetty.' }, { status: 429, ...kors });
   const syote = pulunViesti(kortti, lahde);
