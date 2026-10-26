@@ -2627,3 +2627,7 @@ Kortti KK:ssa: 'Poistetaanko Unreal?' → 'Kyllä, poistan (Suositus)' (Unreal j
 ## PT:N OPIT 26.10. (kuvat, merge) (26.10.2026 klo 11.53)
 
 (1) Kuva tarkistetaan ennen KK:ta koko alalta 1:1, myös toissijaiset alueet (elävän kartan parissa KK löysi kolme vikaa, PT yhden). (2) Offline-renderöintejä ei näytetä omistajalle (7.32), vain pelikuvia. (3) PR mergetään vasta, kun kaikki checks ovat valmiit; gh pr checks --watch voi palata ennen kuin checkit ovat alkaneet (PR 5235).
+
+## ELÄVÄN KARTAN TASO HYVÄKSYTTY (omistaja 26.10.2026 klo 12.37) (26.10.2026 klo 12.38)
+
+Kortti KK:ssa sanatarkasti: "Kelpaako elävän kartan taso?" → "Kyllä, tämä taso (Suositus)" (selite: "Sama tarkkuus ja ulkoasu koko kartalle."). Näytetty pelikuva: Thamesin suu ESIMERKKI | PELI (pari-thames-peli.png 26.10. 12.10, KS d3130bafc; PT ja KK tarkistivat 1:1). Tavoite: koko kartan voi nipistää mistä kohdasta tahansa kylien, teiden ja rautateiden tasolle tällä tarkkuudella ja ulkoasulla, ja se säilyy samana vanhana pergamenttikarttana. Toteutus: Karttaseppä, junan 211 runko 43de85596 (aae00fc87: rinnevalo, esilataus, lämpöraja).
