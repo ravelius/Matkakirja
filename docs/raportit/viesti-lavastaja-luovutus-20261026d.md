@@ -58,3 +58,18 @@ hallit_jalusta_sokkeli.py, kaiverrus_marmoriksi.py, aja_hallit_v56.zsh, sali_uv1
 Ajot `lokit/havainne-editori-20261026-142325` (v47) ja `-142922` (v48), pari `kielletty-rakennukset/hallit-v56/porttipari-b6-v47-v48.png`,
 lähetetty PT:lle: (1) kivikerrat ✓, (2) p216 portaat tasaisemmat, (3) seinäkiilat samat v47:ssä ja v48:ssa → ympäristön varjot,
 ei malli. Seuraavaksi: PT:n kuittaus → pakkaa rakennukset-v48 (pohja `pakkaa_v56_v47_v16.zsh`, vain rakennukset) → SHA:t PT:lle.
+
+## Lisäys 15.1x: v48 pakattu, valkoinen viiva kesken
+
+- **rakennukset-v48 pakattu** (PT 15.0x kuittaus): `proto-3d/_valmiit/juoksupeli-kielletty-rakennukset-v48-vienti-20261026`,
+  SHA256SUMS 9aefdaf29e71d699ebbbf48f176badfa5595ef76dcfbc99856940145615ee8a8 (`tyokalut/pakkaa_rakennukset_v48.zsh`). Osoitin
+  **79a7f3ad1** (wt/proto-lavastaja-muoto, haara lavastaja/rakennukset-v48-211 juna-211:n päällä, vain RakennusKansio v47 → v48).
+  JU:lle vietäväksi ja osoitin NS:lle; PT:lle SHA:t lähetetty.
+- **Valkoinen viiva** (PK:n video `lokit/todistus-elavyys-11c3a8202-20261026-1420`, ruudut t53.2–54.0): PK:n (82, −543) on pelikehys
+  (Puyi puomilokissa s 419,6) eikä videon hetki. Videon t 54,0 = s 314 (rikkomisreaktion lokirivi). Pelikehys → pohja: kierto −2,0335°
+  Meridiaaniportin (13,186, −380,906) ympäri, Ox 16,37, Oz −387,0 (kalibroitu juhlasalin lähtöön): x_p, z_p = Pohjaan(Ox − gx, Oz − gz).
+  s 285,6 = pohja (−142, 190), suunta itään; viivan kohta arviolta s 309–314 ≈ (−117, 191), mutta reitti kääntyy (s 419,6 on jo
+  (−85, 153) portin t-portti-120 luona). Editorikuva (−135, 190,8, 88°) `lokit/havainne-editori-20261026-144533/06.png` ei vastaa
+  videon ruutua → paikka ei varmistunut. Taustan maapinnoissa (palat 1-2, 1-3, x −170…−40, z 90…230) EI rakoja; ohuet viivamaiset
+  pinnat ovat V4_kivireunus (0,15 m korkea, 0,3 m leveä, peking_tausta.py rivi 527, hallien seinien vierellä). Seuraavaksi: tarkka
+  pohjapaikka ruudulle t53.6 (PK:n Pohjaan-loki tai botin polku), sitten kuva siitä. Työkalut: scratchpadin maarako.py (maapintakartta).
