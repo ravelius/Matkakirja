@@ -2671,3 +2671,7 @@ Omistaja KK:ssa sanatarkasti: "Poistetaan tuo kommentorivikirjautuminen tilinvai
 ## IPAD PRO 11 -ASENNUS PERUTTU, SEURAAVA ON TF (omistaja 26.10.2026 klo 16.43) (26.10.2026 klo 16.43)
 
 Omistaja KK:ssa sanatarkasti: "Palaan vasta huomenna takaisin töihin, joten ei tarvitse tehdä loppuun sita pelin siirtoa iPadille nyt. Tehdään uusi test flight, sitten kun Tarpeeksi asioita on valmistunut." Toteutus: 14.32-ketju (KS→NS→LT→asennus) lopetettu; KS:n 3D-sarjan korjaus junaan 211 tavalliseen tapaan; PT kertoo KK:lle, kun juna 211 on TF-kypsä, KK kysyy kortilla. Omistaja poissa huomiseen: yö oletuksilla.
+
+## TEHOSTUS: CODEX AINA TÖISSÄ JA AIEMMAT PÄÄTÖKSET TILAUKSEEN (omistaja 26.10. 18.1x) (26.10.2026 klo 18.50)
+
+Omistaja KK:ssa: "Voiko työtä tehostaa?" KK:n vastaus toteutettu: (1) Codexilla 2–3 hyväksyttyä tilausta jonossa (seuraavaksi loput muistokuplien kuvat v4-tyylillä, peliin kytkentä juoksupelin jälkeen), postilaatikon 60 min hiljaisuushälytys PT:lle (Postivahti), vanha jäämä codex-tripo-lautaspoyta950 kuitattu. (2) Jokaiseen tilaukseen omistajan aiemmat päätökset aiheesta (loki-hae), tekijä tarkistaa ne ennen luovutusta; tuotannonohjaus.md luku 4. Syy: latauskuvassa Puyilla lenkkarit, jotka omistaja hylkäsi jo 23.10.
