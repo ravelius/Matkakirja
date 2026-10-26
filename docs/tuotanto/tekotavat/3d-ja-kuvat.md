@@ -31,6 +31,7 @@ Postiin `posti/<rooli>-codex-<aihe>-<pvm>.md` (muoto: `codex-3d-toimitus.md` luk
 - referenssit: hahmo edestä, sivulta ja takaa, kädet irti, tasainen valo, harmaa tausta; ei oikeiden ihmisten valokuvia;
 - **ei Googlen laattoja sisältäviä pelikuvia** pohjaksi tai referenssiksi; käytä omia renderejä, LiDAR-massaa, OSM:ää;
 - ei suojattuja teoksia (tekijän kuolemasta alle 70 v, Espanja 80 v).
+- **lattiat ja maa yhtenä kerroksena:** ei päällekkäisiä pintoja eikä saman alueen kahta kolmiointia (myös 0–5 cm:n välein), ei alaspäin käännettyjä lattioita (KK 26.10.2026 21.3x: tausta-v57:n Codex-pohjan päällekkäiset lattiat varjostivat toisensa leivonnassa mustiksi); vastaanotossa `python3 tyokalut/tarkista_leivonta.py` → PUHDAS.
 
 Sovitustiedot (mitat, toleranssit, liitospinnat) kirjoitetaan tilaukseen numeroina, esim. Niken keula: yläpinta Niken
 alapinnan tasolle, jalusta 2,2 × 2,4 × 3,2 m.
