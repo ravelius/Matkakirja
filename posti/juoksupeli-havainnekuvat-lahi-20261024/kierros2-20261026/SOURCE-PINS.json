@@ -1,0 +1,26 @@
+[
+  {
+    "path": "posti/pelikoodari-codex-lahikamera-jalat-ja-uusinnat-20261026.md",
+    "commit": "52073b72436e49208aa419f3c9eec790cab67946",
+    "blob": "120b5fbed833409c67c9c7a4f81926cdf171c604",
+    "sha256": "be3c9dcd30572e21c269de64d0502f90e5fad28eadc142337d2a4a4462e404e5",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/sources/pelikoodari-codex-lahikamera-jalat-ja-uusinnat-20261026.md",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-kuvat-juoksupeli-lahikamera-havainnekuvat-20261024.md",
+    "commit": "18e5ec45ab0531c6b61f037cd25fd6ffa1f4da54",
+    "blob": "597697a67c227863113c1c1b80dd39e0e7372c79",
+    "sha256": "d939296b46006d125a8fa80afee9fedbda254dff767a442cd96c172b33abe719",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/sources/paatoimittaja-codex-kuvat-juoksupeli-lahikamera-havainnekuvat-20261024.md",
+    "readInFull": true
+  },
+  {
+    "path": "posti/paatoimittaja-codex-juoksupeli-lahikamera-kuittaus-20261026.md",
+    "commit": "420e68cb845a473a502b07ac8290c630159d46ba",
+    "blob": "75e6424d8213823d5319ddae6483573319199d16",
+    "sha256": "503de7f37b3d3d9bcb0bbe09a5b678d8a01ec41571b13b9feecebdada7e81cbf",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/sources/paatoimittaja-codex-juoksupeli-lahikamera-kuittaus-20261026.md",
+    "readInFull": true
+  }
+]

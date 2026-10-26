@@ -1,0 +1,321 @@
+{
+  "method": "built-in image_gen",
+  "callsIssued": 16,
+  "callsCompleted": 16,
+  "pendingCalls": 0,
+  "perPlace": {
+    "01": 1,
+    "02": 1,
+    "03": 2,
+    "04": 2,
+    "05": 8,
+    "06": 2
+  },
+  "authorization": "Pelikoodari / KK: ottomäärää ei rajata",
+  "attempts": {
+    "01-1": {
+      "id": "01",
+      "taskNumber": 1009,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/01-lahtokuja-attempt001.png",
+      "sha256": "527355d18c5b5b55b70003709aa579d7fc1603758f4f6c4d7e3c9dc7f488ea37",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        633,
+        1020
+      ],
+      "heightFraction": 0.356353591160221,
+      "approvedForDelivery": true,
+      "reason": "Framing retained and dark felt soles checked at full resolution."
+    },
+    "02-1": {
+      "id": "02",
+      "taskNumber": 1010,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/02-punamuuri-kuja-attempt001.png",
+      "sha256": "67db664d4d66f14f0149bd41a2da753e094e7ccd74bb1a98103b032c09b63cb4",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        642,
+        1024
+      ],
+      "heightFraction": 0.35174953959484345,
+      "approvedForDelivery": true,
+      "reason": "Framing retained and dark felt soles checked at full resolution."
+    },
+    "03-1": {
+      "id": "03",
+      "taskNumber": 1011,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/03-aukio-attempt001.png",
+      "sha256": "7b0a7def750c59f825c6ddd0cdf7eeffc37636550d63649c3d20e34d204ff7c1",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        320,
+        1008
+      ],
+      "heightFraction": 0.6335174953959485,
+      "approvedForDelivery": false,
+      "reason": "Incorrect camera scale: exceeds 45 percent height."
+    },
+    "04-1": {
+      "id": "04",
+      "taskNumber": 1012,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/04-sali-katto-avattu-attempt001.png",
+      "sha256": "b47abc97fc6ff67669b60e36f9efb98a5277ec2fd09fea27e294dbc119f9af47",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        419,
+        1006
+      ],
+      "heightFraction": 0.5405156537753223,
+      "approvedForDelivery": false,
+      "reason": "Incorrect camera scale: exceeds 45 percent height."
+    },
+    "05-1": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt001.png",
+      "sha256": "1e4faa9db5cd0384c1bc7ca32f299ce6f02ce8f6070784789892ebdebf338202",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        461,
+        992
+      ],
+      "heightFraction": 0.4889502762430939,
+      "approvedForDelivery": false,
+      "reason": "Incorrect camera scale: exceeds 45 percent height."
+    },
+    "06-1": {
+      "id": "06",
+      "taskNumber": 1014,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/06-meridiaaniportti-attempt001.png",
+      "sha256": "e55e17673a41b2537fca155c2ff3c923ba39f1ea55a0fbdca243cba590541027",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        467,
+        1008
+      ],
+      "heightFraction": 0.498158379373849,
+      "approvedForDelivery": false,
+      "reason": "Incorrect camera scale: exceeds 45 percent height."
+    },
+    "03-2": {
+      "id": "03",
+      "taskNumber": 1011,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/03-aukio-attempt002.png",
+      "sha256": "f3cd425c648588d6c31d890ee2afbaa948081c00520326d8e8f73b81a94bf09e",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        638,
+        1024
+      ],
+      "heightFraction": 0.35510579576816925,
+      "approvedForDelivery": true,
+      "reason": "Camera scale and dark plain felt soles pass."
+    },
+    "04-2": {
+      "id": "04",
+      "taskNumber": 1012,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/04-sali-katto-avattu-attempt002.png",
+      "sha256": "05ea3877e982201d37d6b9963aca5b7e78e71bddd6959ed4a5dd0add00413cdc",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        644,
+        1024
+      ],
+      "heightFraction": 0.34958601655933763,
+      "approvedForDelivery": true,
+      "reason": "Camera and dark plain soles pass; elevated hall camera has no roof obstruction."
+    },
+    "05-2": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt002.png",
+      "sha256": "67b2df8e729e9412b1fbb61d8192d13a04e4caf326928aeb364bb0c491f7ff3f",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        644,
+        1024
+      ],
+      "heightFraction": 0.34958601655933763,
+      "approvedForDelivery": false,
+      "reason": "Rejected: door grids incomplete and not 9 by 9; top of leaves clipped."
+    },
+    "06-2": {
+      "id": "06",
+      "taskNumber": 1014,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/06-meridiaaniportti-attempt002.png",
+      "sha256": "3cf60886e6bfcbad00ff6bfc1e9f565421da8fbdd7d14e1a27093287c7ca0f3e",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        644,
+        1024
+      ],
+      "heightFraction": 0.34958601655933763,
+      "approvedForDelivery": true,
+      "reason": "Camera scale and dark plain felt soles pass."
+    },
+    "05-3": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 3,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt003.png",
+      "sha256": "4f0b097f83a5374eefcad79186611cb31b53bba32d86e7b72dcc4b9e89eebbda",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        595,
+        984
+      ],
+      "heightFraction": 0.3578656853725851,
+      "approvedForDelivery": false,
+      "reason": "Both leaves have 8 columns by 9 rows, need ninth column."
+    },
+    "05-4": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 4,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt004.png",
+      "sha256": "078ac052b44469c1539ecb05ae4e05e008cd0d4155fa07878d49b9923b4457f6",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        596,
+        984
+      ],
+      "heightFraction": 0.35694572217111314,
+      "approvedForDelivery": false,
+      "reason": "Both doors have 9 columns by 10 rows, need only nine rows."
+    },
+    "05-5": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 5,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt005.png",
+      "sha256": "294e55d452f9c2836e07ac1930ac1f916a0e3f86af5c2e244d85491b6361ecdb",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        595,
+        984
+      ],
+      "heightFraction": 0.3578656853725851,
+      "approvedForDelivery": false,
+      "reason": "Rejected: stud matrix still not 9x9, left 7x8 and right 7x9."
+    },
+    "05-6": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 6,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt006.png",
+      "sha256": "61c3501f79201e690b645374bf406ce3dcfc83740431a3ad3e0f0a086345a38c",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        564,
+        913
+      ],
+      "heightFraction": 0.32106715731370744,
+      "approvedForDelivery": false,
+      "reason": "Rejected: 8x10 grids and child below35%."
+    },
+    "05-7": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 7,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt007.png",
+      "sha256": "32be3bd63ab6c359bc3ab68337238e0826b0e87c0a0166df1a3b618717a2432e",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        569,
+        1006
+      ],
+      "heightFraction": 0.40202391904323825,
+      "approvedForDelivery": false,
+      "reason": "Rejected: 9 columns but 8 rows. Camera and shoes pass."
+    },
+    "05-8": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 8,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt008.png",
+      "sha256": "3534aa75e89815c6dc90dc825db8d239fd3218b39b725dfae3fb95f3516b9c8a",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        568,
+        1007
+      ],
+      "heightFraction": 0.40423572744014735,
+      "approvedForDelivery": true,
+      "reason": "Both doors manually counted: nine rows of nine gold studs. Child scale and dark plain felt soles pass."
+    }
+  }
+}

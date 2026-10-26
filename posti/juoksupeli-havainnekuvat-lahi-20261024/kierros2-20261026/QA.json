@@ -1,0 +1,211 @@
+{
+  "personallyViewed": true,
+  "approvedForDelivery": true,
+  "assets": {
+    "01": {
+      "id": "01",
+      "taskNumber": 1009,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/01-lahtokuja.png",
+      "sha256": "9217f8f3062f511b74fbfc7b056e3c2071cb5f791471a87939b6088adffc89ad",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        633,
+        1020
+      ],
+      "heightFraction": 0.356353591160221,
+      "approvedForDelivery": true,
+      "reason": "Framing retained and dark felt soles checked at full resolution.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/01-lahtokuja-attempt001.png",
+      "nativeSHA256": "527355d18c5b5b55b70003709aa579d7fc1603758f4f6c4d7e3c9dc7f488ea37",
+      "deliverySHA256": "9217f8f3062f511b74fbfc7b056e3c2071cb5f791471a87939b6088adffc89ad",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true
+    },
+    "02": {
+      "id": "02",
+      "taskNumber": 1010,
+      "attempt": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/02-punamuuri-kuja.png",
+      "sha256": "2c01a6c4aa8e87df6339969e6d87bc7398de89a2750474976b8f60e953bcdc99",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        642,
+        1024
+      ],
+      "heightFraction": 0.35174953959484345,
+      "approvedForDelivery": true,
+      "reason": "Framing retained and dark felt soles checked at full resolution.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/02-punamuuri-kuja-attempt001.png",
+      "nativeSHA256": "67db664d4d66f14f0149bd41a2da753e094e7ccd74bb1a98103b032c09b63cb4",
+      "deliverySHA256": "2c01a6c4aa8e87df6339969e6d87bc7398de89a2750474976b8f60e953bcdc99",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true
+    },
+    "03": {
+      "id": "03",
+      "taskNumber": 1011,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/03-aukio.png",
+      "sha256": "df58e9251737b55c72f1004a15f91006ef02aaa7e8ff271c9948f92f0229c84f",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        638,
+        1024
+      ],
+      "heightFraction": 0.35510579576816925,
+      "approvedForDelivery": true,
+      "reason": "Camera scale and dark plain felt soles pass.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/03-aukio-attempt002.png",
+      "nativeSHA256": "f3cd425c648588d6c31d890ee2afbaa948081c00520326d8e8f73b81a94bf09e",
+      "deliverySHA256": "df58e9251737b55c72f1004a15f91006ef02aaa7e8ff271c9948f92f0229c84f",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true
+    },
+    "04": {
+      "id": "04",
+      "taskNumber": 1012,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/04-sali-katto-avattu.png",
+      "sha256": "173b7ff55b64dc245d7c9d7c70866a661ef998865b2a7e3db9cdb3d57afe941d",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        644,
+        1024
+      ],
+      "heightFraction": 0.34958601655933763,
+      "approvedForDelivery": true,
+      "reason": "Camera and dark plain soles pass; elevated hall camera has no roof obstruction.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/04-sali-katto-avattu-attempt002.png",
+      "nativeSHA256": "05ea3877e982201d37d6b9963aca5b7e78e71bddd6959ed4a5dd0add00413cdc",
+      "deliverySHA256": "173b7ff55b64dc245d7c9d7c70866a661ef998865b2a7e3db9cdb3d57afe941d",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true
+    },
+    "05": {
+      "id": "05",
+      "taskNumber": 1013,
+      "attempt": 8,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/05-porttikaytava.png",
+      "sha256": "00d80a74bd5e7729302b804be65d8c0ad88b31d9b0cfdd6cbee2cfa01605a064",
+      "size": [
+        1448,
+        1086
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        568,
+        1007
+      ],
+      "heightFraction": 0.40423572744014735,
+      "approvedForDelivery": true,
+      "reason": "Both doors manually counted: nine rows of nine gold studs. Child scale and dark plain felt soles pass.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/05-porttikaytava-attempt008.png",
+      "nativeSHA256": "3534aa75e89815c6dc90dc825db8d239fd3218b39b725dfae3fb95f3516b9c8a",
+      "deliverySHA256": "00d80a74bd5e7729302b804be65d8c0ad88b31d9b0cfdd6cbee2cfa01605a064",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true,
+      "doorStudCounts": {
+        "leftRows": 9,
+        "leftColumns": 9,
+        "rightRows": 9,
+        "rightColumns": 9,
+        "method": "manual full-resolution counting"
+      }
+    },
+    "06": {
+      "id": "06",
+      "taskNumber": 1014,
+      "attempt": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/delivery/06-meridiaaniportti.png",
+      "sha256": "c693865fcc3e7d039fc759defb40277e76696649746cb6be388a6f11ba97e9a1",
+      "size": [
+        1447,
+        1087
+      ],
+      "personallyViewed": true,
+      "estimatedBoundsY": [
+        644,
+        1024
+      ],
+      "heightFraction": 0.34958601655933763,
+      "approvedForDelivery": true,
+      "reason": "Camera scale and dark plain felt soles pass.",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-lahikamera-kierros2-10091014-20261026/native/06-meridiaaniportti-attempt002.png",
+      "nativeSHA256": "3cf60886e6bfcbad00ff6bfc1e9f565421da8fbdd7d14e1a27093287c7ca0f3e",
+      "deliverySHA256": "c693865fcc3e7d039fc759defb40277e76696649746cb6be388a6f11ba97e9a1",
+      "deliverySize": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "normalization": "Full-frame resample by at most1pixel per axis; no local image edits",
+      "plainDarkFeltSoles": true,
+      "soleTread": false,
+      "whiteRubberSole": false,
+      "sameEmperorAndElevatedRearCamera": true
+    }
+  },
+  "checks": [
+    "All six full native images and 100 percent soles visually inspected",
+    "05 both doors manually counted nine rows of nine bosses",
+    "01/02 composition, light and camera compared to accepted prior scene",
+    "Absolute camera metres and degrees cannot be measured from generated photograph"
+  ]
+}
