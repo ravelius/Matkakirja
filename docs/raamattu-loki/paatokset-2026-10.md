@@ -2727,3 +2727,7 @@ Omistaja KK:n ikkunassa sanatarkasti: "Menen nukkumaan. Saat hyväksyä puolesta
 ## JUOKSUPELI: KEISARIN TUMMAT HUOPAPOHJAT JA LÄHIKAMERAN PARIT 2 (KK omistajan valtuutuksella) (26.10.2026 klo 23.16)
 
 KK:n päätös omistajan valtuutuksella klo 23.16 (sanatarkasti): pelin 3D-keisarilla on valkoiset kumipohjat, jotka näkyvät joka askeleella lähikamerassa. Omistaja hylkäsi valkopohjaiset lenkkarit 23.10. ja 26.10. (latauskuvan tummat huopapohjat 150e189c5, Codexin lähikuvien palautus 21.36). Pohjat tehdään tummaksi huovaksi (PK valitsee nopeimman tavan: VS:n materiaali tai Codexin tekstuuri), ja lähikamera menee junaan vasta tummien pohjien kanssa; muu juna 211 ei odota tätä. Lähikameran parit 2 (8b572bf07): geometria oikea kohdissa 01–03 ja 06, jalkojen tila korjauksessa, 05 korjauksessa, 04 salin sisustus LR:lle (alue 3).
+
+## JUOKSUPELI: LÄHIKAMERA VAIN ULKOKOHTIIN, SALEISSA YLÄKAMERA (KK omistajan valtuutuksella) (26.10.2026 klo 23.34)
+
+KK:n päätös omistajan valtuutuksella klo 23.3x (sanatarkasti): juoksupelin lähikamera menee junaan vain ulkokohtiin (kujat, aukio, portit) yhdessä Codexin tummien pohjien kanssa, kun KK on tarkistanut parit 3. Saleissa pysyy toistaiseksi nykyinen yläkamera, koska sisäkamera piilotti keisarin (221 piiloruutua). Salin sisäkamera ja haalennus (PK + VS) tehdään omana eränään LR:n salin sisustuksen kanssa (alue 3).
