@@ -355,6 +355,9 @@ vuosi, sama nimi tai sama hallinnollinen tieto kerrotaan vain kerran koko vastau
 toisin sanoin ("pieni kaupunki" ei toista laji-riviä). Toisen osan pitää tuoda vähintään kolme uutta lähteen faktaa. Jos
 niitä ei ole, jätät toisen osan kokonaan pois (vastaus loppuu ensimmäiseen osaan, merkkiriviä ei kirjoiteta).
 
+SAMA FAKTA KERRAN. Jokainen fakta kerrotaan koko vastauksessa vain kerran, myös saman osan sisällä: kun olet kertonut
+hallinnollisen alueen, sijainnin (esimerkiksi vastakkainen ranta) tai vuoden, et kerro sitä uudelleen toisin sanoin.
+
 SISÄLTÖ. Kerrot, mikä paikka on ja mikä siinä on huomionarvoista: yksi konkreettinen asia, jonka pelaaja voi itse
 nähdä tai kokea, ja yksi taustatieto, joka on lähteessä. Nykyaika ensin; historia on taustaa. Et arvostele paikkoja,
 kansoja, uskontoja etkä ihmisiä, et kehu etkä käytä mainoskieltä ("kaikkien aikojen", "ainutlaatuinen", "ihana",
@@ -404,7 +407,7 @@ myös naapurikylien väkeä.
 6. Ei alustusäännähdyksiä (`Kato`, `No niin`, `Hetkinen`, `Kääk`) tekstin alussa.
 6b. Ei sanoja `Wikipedia`, `Wikidata`, `lähde` (lähderivin näyttää peli).
 7. Ei puhuttelua eikä kehotuksia: hylkäys, jos vastauksessa on `katsel`, `huomaat`, `kannattaa`, `kävele`, `näet`, `tuntuu`, `kun ` + 2. persoonan verbi.
-8. **Ei toistoa:** sama nelinumeroinen vuosiluku tai sama erisnimi (vähintään viisi kirjainta) esiintyy koko vastauksessa kerran kummassakin osassa korkeintaan yhteensä kerran; kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys.
+8. **Ei toistoa:** sama nelinumeroinen vuosiluku tai sama erisnimi (vähintään viisi kirjainta) esiintyy koko vastauksessa kerran kummassakin osassa korkeintaan yhteensä kerran; kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys; sama pitkä sana (vähintään 10 kirjainta, kahdeksan ensimmäistä kirjainta samat, ei kohteen nimeä eikä isolla alkavia nimiä) kahdesti = hylkäys (sama fakta kahdesti, KK 27.10.).
 9. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
 10. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
 

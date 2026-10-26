@@ -3954,12 +3954,24 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
           }
         }
       }
-      const tarkistus = tarkistaTeksti(teksti, syote);
+      const tarkistus = tarkistaTeksti(teksti, syote, kortti.nimi);
       if (virhe) await laheta('virhe', { viesti: virhe });
       await laheta('loppu', { vastaus: teksti.trim(), valmiina: false, lahde: lahdeRivi, tarkistus: tarkistus.ok ? 'ok' : tarkistus.syy });
       console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: ${tarkistus.ok ? 'hyväksytty' : `hylätty (${tarkistus.syy})`}`);
-      if (!virhe && stop === 'end_turn' && tarkistus.ok && teksti.trim()) {
-        await pysyvaKirjoita(env.PUHE_R2, avain, teksti.trim(), TIETOKORTTI_TTL_S);
+      let talteen = !virhe && stop === 'end_turn' && tarkistus.ok ? teksti.trim() : null;
+      // Resepti 2.4/3: hylätty → enintään kaksi uusintaa taustalla (pelaaja näki jo striimin); hyväksytty ämpäriin seuraaville.
+      for (let kerta = 0; !talteen && !chatista && kerta < 2; kerta += 1) {
+        try {
+          const u = await kysyMallitiedot(env, {
+            jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KARTAN_TIETOKORTTI_KEHOTE}`, viestit: [{ role: 'user', content: syote }], maxTokens: 900, jaettu: true,
+          });
+          const t2 = tarkistaTeksti(u.teksti, syote, kortti.nimi);
+          console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: uusinta ${kerta + 1} ${t2.ok ? 'hyväksytty' : `hylätty (${t2.syy})`}`);
+          if (t2.ok && u.stop === 'end_turn' && u.teksti.trim()) talteen = u.teksti.trim();
+        } catch { break; }
+      }
+      if (talteen) {
+        await pysyvaKirjoita(env.PUHE_R2, avain, talteen, TIETOKORTTI_TTL_S);
         if (!kortti.lahdeRivi) { kortti.lahdeRivi = lahdeRivi; await pysyvaKirjoita(env.PUHE_R2, korttiAvain(paikka), JSON.stringify(kortti), TIETOKORTTI_TTL_S); }
       }
     } catch (e) {
