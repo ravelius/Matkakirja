@@ -2675,3 +2675,11 @@ Omistaja KK:ssa sanatarkasti: "Palaan vasta huomenna takaisin töihin, joten ei 
 ## TEHOSTUS: CODEX AINA TÖISSÄ JA AIEMMAT PÄÄTÖKSET TILAUKSEEN (omistaja 26.10. 18.1x) (26.10.2026 klo 18.50)
 
 Omistaja KK:ssa: "Voiko työtä tehostaa?" KK:n vastaus toteutettu: (1) Codexilla 2–3 hyväksyttyä tilausta jonossa (seuraavaksi loput muistokuplien kuvat v4-tyylillä, peliin kytkentä juoksupelin jälkeen), postilaatikon 60 min hiljaisuushälytys PT:lle (Postivahti), vanha jäämä codex-tripo-lautaspoyta950 kuitattu. (2) Jokaiseen tilaukseen omistajan aiemmat päätökset aiheesta (loki-hae), tekijä tarkistaa ne ennen luovutusta; tuotannonohjaus.md luku 4. Syy: latauskuvassa Puyilla lenkkarit, jotka omistaja hylkäsi jo 23.10.
+
+## LATAUSKUVA VAAKANA HYVÄKSYTTY (omistaja 26.10.2026 klo 21.05) (26.10.2026 klo 21.12)
+
+Kortti KK:ssa: "Kelpaako latauskuva vaakana näin?" → "Kelpaa (Suositus)". Kuvat proto-3d/_tyo/pelikoodari/latauskuva-211/kuvat-kengat-20261026/ vaaka iPhone/iPad/Mac (Qing-saappaat, leima 12° vinossa, keisari kokonaan, palkki näkyy; juna 211 runko 8ff161997). Pysty näytetään erikseen Codexin pohjakorjauksen jälkeen.
+
+## OLAVINLINNA CODEXILLE JA PYLVÄÄT/SEINÄT HAVAINNETTA VASTEN (omistaja 26.10.2026 klo 21.08–21.09) (26.10.2026 klo 21.12)
+
+21.09 (KK:ssa, sanatarkasti): "Jos kodeksilla ei ole hommia, niin sille voi antaa Olavin linnasta uusia tehtäviä niin paljon kuin mahdollista." → Olavinlinnan tauko purkautuu Codexin osalta (kuvat ja Tripo pysyvällä luvalla), juoksupeli ensin, Olavinlinna täytteenä; Natiiviseppä kartoittaa ja tilaa. 21.08: "miltä pylväät ja rakennusten seinät näyttävät verrattuna havainnekuviin" → Natiivi-UI havainne|peli-parit. 21.02: "pitää saada jo tänään valmista" → aikataulu KK:lle. 21.06 valaistuksen perussyy: leivottu valo = kuva muodosta → muoto lukkoon alueittain, leivonta kerran, tarkista_leivonta.py 0 ennen paria (PR 5255).
