@@ -1,0 +1,48 @@
+{
+  "asset": {
+    "taskNumber": 1002,
+    "code": "latauskuva-pysty",
+    "family": "shoes",
+    "attempt": 4,
+    "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt004.png",
+    "nativeSHA256": "d762180d79949dda27839b1af79317d80b9074c094df1601d0b8fb8fc7cee11c",
+    "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/delivery/latauskuva-pysty.png",
+    "exportSHA256": "d762180d79949dda27839b1af79317d80b9074c094df1601d0b8fb8fc7cee11c",
+    "dimensions": [
+      941,
+      1672
+    ],
+    "mode": "RGB",
+    "producerQAPassed": true
+  },
+  "qa": {
+    "at": "2026-10-26T19:18:37.472316+00:00",
+    "personallyViewed": true,
+    "fullNativeViewed": true,
+    "feet100PercentViewed": true,
+    "producerQAPassed": true,
+    "selectedAttempt": 4,
+    "callsIssued": 4,
+    "callsCompleted": 4,
+    "pendingCalls": 0,
+    "dimensions": [
+      941,
+      1672
+    ],
+    "mode": "RGB",
+    "sha256": "d762180d79949dda27839b1af79317d80b9074c094df1601d0b8fb8fc7cee11c",
+    "notes": [
+      "Both bottoms plain dark matte felt, pale layered cloth side edge; no rubber tread, studs, dots or embossed pattern.",
+      "Black cloth uppers preserved. Original smile, pose, flowing cape, sky behind head and framing closely matched.",
+      "Whole new generation per owner direction, not pixel-identical preservation or partial editing."
+    ],
+    "ownerAuthorization": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+    "authorizationScope": "Loading images only; not memory images.",
+    "PTAccepted": false,
+    "ownerAccepted": false,
+    "R2UploadedByCodex": false,
+    "R2Owner": "Pelikoodari",
+    "gameIntegrationVerified": false,
+    "published": false
+  }
+}

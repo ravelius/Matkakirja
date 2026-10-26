@@ -1,0 +1,78 @@
+{
+  "method": "built-in image_gen",
+  "callsIssued": 4,
+  "callsCompleted": 4,
+  "pendingCalls": 0,
+  "selectedAttempt": 4,
+  "sourceLimit": 1,
+  "ownerOverride": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+  "ownerOverrideScope": "Loading images only; not memory images.",
+  "attempts": [
+    {
+      "code": "latauskuva-pysty",
+      "taskNumber": 1002,
+      "family": "shoes",
+      "attempt": 1,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt001.png",
+      "nativeSHA256": "e430c700d3754e1027186657dc709522511f3aa25206c3ce425206cf59c72f6b",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/delivery/latauskuva-pysty.png",
+      "exportSHA256": "b9554418479a7bf9a8ecb3dbf912f6b0be82b1152670f5ed58fc765805704d50",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "callsIssued": 1,
+      "callsCompleted": 1
+    },
+    {
+      "code": "latauskuva-pysty",
+      "taskNumber": 1002,
+      "family": "shoes",
+      "attempt": 2,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt002.png",
+      "nativeSHA256": "c61cc77a6fe06c6fd0935a6ba878feb49bdfde985ce3d53baa370f9f561375ea",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "producerQAPassed": false,
+      "reason": "Visible repeated residual tread-like shapes on both bottoms at 100 percent; not plain felt."
+    },
+    {
+      "code": "latauskuva-pysty",
+      "taskNumber": 1002,
+      "family": "shoes",
+      "attempt": 3,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt003.png",
+      "nativeSHA256": "296ccf86baf3ab34aa7e9839d5d4ca269ff10d27fc87bd3809027ac885f8d58d",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "footwearQAPassed": true,
+      "approvedForDelivery": false,
+      "reason": "Plain dark felt correct; full new image changes face and framing considerably. Use only sole-material reference for next whole generation."
+    },
+    {
+      "taskNumber": 1002,
+      "code": "latauskuva-pysty",
+      "family": "shoes",
+      "attempt": 4,
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt004.png",
+      "nativeSHA256": "d762180d79949dda27839b1af79317d80b9074c094df1601d0b8fb8fc7cee11c",
+      "exportPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/delivery/latauskuva-pysty.png",
+      "exportSHA256": "d762180d79949dda27839b1af79317d80b9074c094df1601d0b8fb8fc7cee11c",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "mode": "RGB",
+      "producerQAPassed": true
+    }
+  ]
+}

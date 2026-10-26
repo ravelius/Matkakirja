@@ -1,0 +1,43 @@
+{
+  "method": "built-in image_gen",
+  "attempts": [
+    {
+      "key": "pysty",
+      "taskNumber": 1002,
+      "code": "latauskuva-pysty",
+      "size": [
+        941,
+        1672
+      ],
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/delivery/latauskuva-pysty.png",
+      "prompt": "Generate a completely NEW full photorealistic portrait photograph matching the supplied reference extremely closely in person, laughing over-shoulder expression, running gesture, black Qing court hat and long braid, flowing yellow embroidered dragon robe, stone palace alley, blue sky directly behind the head, low camera angle, position, lighting and portrait framing. Whole new exposure, no patch editing, no illustration or CGI. Aspect 941 x 1672 (9:16). Preserve ample blue sky above, entire hat cape and both feet inside frame. No added text or logo.\nONLY INTENDED DESIGN CHANGE: BOTH black traditional cloth boots must have thick, completely FLAT SMOOTH WORN CLOTH/FELT SOLES of Qing footwear. The entire visible bottom of the raised nearer boot is a single unpatterned matte dusty taupe felt surface, like densely compressed old wool cloth, with a softly worn edge; absolutely NO tread pattern, studs, dots, holes, stars, diamond shapes, concentric forms or repeating spots. Uniform smooth unmarked surface with only extremely subtle natural dirt shading, not texture markings. No rubber rim, black rubber outsole, moulded welt, athletic heel or tread. Side edge can subtly show flat compressed cloth layers, never little holes, studs or a plastic rim. Apply precisely the same plain smooth thick cloth sole to the grounded boot including its visible underside. Boot uppers remain plain black cloth. The raised sole faces camera clearly enough that its completely plain UNPATTERNED surface is unmistakable at 100% inspection. Important: reference has incorrect rubber studded soles—do NOT reproduce those marks. Keep all other visual decisions as close to reference as whole new photography allows. Real camera photographic surface, natural human anatomy, embroidered fabric believable, sharp face/boots, slight foreground pavement motion blur. Output fully opaque portrait photograph."
+    },
+    {
+      "taskNumber": 1002,
+      "attempt": 2,
+      "prompt": "Create an entirely NEW full photograph, using the reference for subject identity, pose, expression, costume, framing and palace location. Portrait 941x1672, fully opaque photographic image. The laughing young Qing emperor looks over his shoulder while running away through the red Forbidden City alley; low viewpoint, blue sky behind head, long black braid, black court hat with red finial, yellow flowing dragon robe, black cloth boots. Match this entire scene extremely closely.\nTHE MOST IMPORTANT CHANGE IS VISIBLE BOOT BOTTOMS: remove EVERY sign of tread on BOTH soles. Their bottom surface is perfectly PLAIN, SMOOTH, FLAT, uninterrupted warm grey-tan worn FELT. Think of a flat oval sheet of matte dense felt with absolutely nothing embossed, stamped, engraved, woven into a visible pattern or punched in it. NO repeating shapes, NO diamonds, NO lines, NO crosses, NO dots, NO studs, NO pinholes, NO cracks, NO tread, NO stitch holes on the bottom. Dust only as a soft uniform tonal veil. Slight soft edge; cloth layers visible only on the SIDE, no rigid rubber lip or moulded heel. In particular the raised foot's entire bottom faces camera: it must be a single plain matte unmarked surface from heel to toe. The supporting boot also has a uniformly flat plain sole. Leave boot UPPERS black cloth. The reference has visible residual sole impressions—do not copy any of them.\nPhotographic natural surface and light. Keep the child's face, body shape, gesture, long robe, background, shadows, framing and size consistent. Whole new image generation, not an inpaint or composited foot. No text/UI/watermarks. Do not change robe ornaments or introduce new decorations. Everything remains in frame including the raised hat and both soles.",
+      "ownerAuthorization": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+      "scope": "Loading-image work only; incoming memory feedback explicitly says this owner authorization was for loading images. Not applied to memory21 or29.",
+      "reason": "First sole correction removed studs but retained visible low repeating sole impressions; not passing QA as smooth felt."
+    },
+    {
+      "taskNumber": 1002,
+      "attempt": 3,
+      "ownerAuthorization": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+      "scope": "Loading images only",
+      "prompt": "Create a completely NEW live-action historical photograph, vertical 941x1672. Young Chinese emperor Puyi, cheerful laughing boy running away through a Forbidden City alley while turning his head over his right shoulder toward the low camera. Black Qing court hat with red finial, long braid, rich yellow embroidered silk dragon robe flying out left, dark trousers, black SOFT CLOTH BOOTS. Low dynamic view from behind, blue sky directly behind his smiling face and hat, red palace walls left and right with yellow tiled eaves, grey stone lower walls and worn paving, late afternoon sun. Full body with space above the hat and below feet, portrait composition, rightward glanced face around upper third, windblown yellow robe fills middle, shoes in lower quarter. Real camera photograph, natural skin and textile detail, credible child anatomy. No text/UI.\nThe visible soles of BOTH boots are plain dense dark grey FELT, the kind of soft flat felt used on an old handmade slipper. The entire bottom is one single smooth blank dark grey matte surface, without any marks, pattern or relief, like an unmarked flat sheet of felt. No rubber and no leather texture. A soft very thin pale textile layered SIDE edge only. Raised heel toward camera shows this completely BLANK SOFT FELT underside. Groundward foot also has the same blank dark grey felt bottom. This is a crucial wardrobe material requirement: absolutely no shoe-tread shapes, embossing, stars, diamonds, dots, pits, cracks or embossed decorations. Do not introduce mottled geometric material. The plain sole should be visibly soft and simpler than all surrounding surfaces.\nAn entirely new photograph. No reference image is supplied deliberately, to avoid inheriting the erroneous patterned footwear of previous candidates. Preserve the described expression, location, low angle and sky behind head.",
+      "reference": null
+    },
+    {
+      "taskNumber": 1002,
+      "attempt": 4,
+      "prompt": "Create one entirely NEW complete portrait photograph, 941x1672. Use IMAGE ONE for the exact smiling boy identity, slightly sideways over-shoulder smile, costume, flowing cape shape, pose, low viewpoint, head at y=.33 and plenty of sky, palace alley, lighting, framing and body scale. Match image ONE closely. Use IMAGE TWO ONLY as material reference for the correct footwear BOTTOMS: plain soft dark grey felt, unmarked, with thin pale cloth layer around the side. Do not take the much larger child or different face or robe from image two. The result has image ONE composition and smiling face, with image TWO's plain dark felt soles on BOTH black cloth boots. Both visible soles must be simple BLANK dark grey matte surfaces with NO pattern whatsoever, like flat felt sheets. No rubber, no raised shoe tread, no stars/diamonds/dots/pits/embossing, no leather grain. This is a full new photographic exposure, not a partial edit. Keep the same black cloth boot uppers as image one, not the fuzzy uppers from image two. Preserve the bright real photographic skin and silk, laugh and cheek expression from image one, blue sky behind head and no text/UI. Whole hat and both boots inside portrait frame. Make the sole material correction unmistakable, but keep the rest visually extremely close to image ONE.",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/latauskuva-qing-kengat-982984-20261026/delivery/latauskuva-pysty.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/mail-recovery-9981002-20261026/shoes/native/latauskuva-pysty-attempt003.png"
+      ],
+      "ownerAuthorization": "Saat tehdä niin monta ottoa, kun sinusta itsestäsi on tarpeen.",
+      "scope": "loading images only"
+    }
+  ]
+}
