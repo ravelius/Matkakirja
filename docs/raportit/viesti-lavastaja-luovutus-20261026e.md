@@ -85,3 +85,9 @@ aja_tausta_v46_leivonta.zsh / leivo_valo.py) → pari → pakkaus. Uudelleenleiv
 Testijuuri `havainne-kuja40/juuri-v50` (avoimet-v47-linkki → avoimet-v50). VS:lle lähetetty file://-polku: VS ajaa 04:n kertoimilla
 1,0 / 1,25 ja tarkistaa pylväiden kohinan → VS:n luvut OK → pakkaa avoimet-v50 (pohja pakkaa_avoimet_v49.zsh) → PT pari → JU →
 osoitin AvoimetKansio v49 → v50 437f03035:n päälle. VS:lle myös pyydetty P43-asetukset tausta-v57:n uudelleenleivontaan.
+
+## Lisäys 15.4x: VS:n jono
+
+VS: v50 = **P45** (04 kertoimilla 1,25 / 1,0 / 1,5, täyttö 0,5) P44:n jälkeen → luvut LR:lle. tausta-v57: **P44** (aukio pysäytettynä,
+leivonta 0/1) ratkaisee, ovatko aukion kiilat poistetun geometrian leivottuja varjoja; sen jälkeen VS:n ehdotus leivontaan (AZ 188 / EL 45,
+nykyinen geometria). v57:ää EI viedä ennen sitä; PT haluaa parin ennen vientiä.
