@@ -3,6 +3,10 @@
 Id:t: /Users/Shared/Claude/osoitekirja.md. Edellinen -20261026-1737. Taulu https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy.
 Omistaja ON PAIKALLA tänä iltana (21.02: "pitää saada jo tänään valmista") → polut KK:lle sitä mukaa kuin PT on tarkistanut.
 
+**21.11 OMISTAJA: KK JOHTAA JUOKSUPELIÄ** ("Ota sinä ohjat juoksupelin kehittämisessä …"): PK, VS, LR, NUI ja juoksupelin
+Codex raportoivat juoksupelistä KK:lle (ilmoitettu). PT: junat, merget, kartta (kohta 0.2), Olavinlinna (NS:n lista
+posti/natiiviseppa-pt-olavinlinna-codex-lista-20261026.md; #3 palatsikuittauksen jälkeen), Raamattu, muut roolit.
+
 ## 0. TÄNÄÄN ILLALLA KK:LLE LUVATUT (21.03 aikataulu)
 1. Latauskuva VAAKA: omistaja HYVÄKSYI 21.05 ("Kelpaa"). PYSTY ~22.00: Codex tekee pohjat (nastakuvio + kumireuna pois, tasainen
    kangas-/huopapohja), PK tarkistaa → PT katsoo jalkojen lähikuvan → KK. Kuvat proto-3d/_tyo/pelikoodari/latauskuva-211/.
