@@ -2687,3 +2687,19 @@ Kortti KK:ssa: "Kelpaako latauskuva vaakana näin?" → "Kelpaa (Suositus)". Kuv
 ## KK JOHTAA JUOKSUPELIN KEHITYSTÄ (omistaja 26.10.2026 klo 21.11) (26.10.2026 klo 21.14)
 
 KK:ssa, sanatarkasti: "Ota sinä ohjat juoksupelin kehittämisessä. Se on ollut liian kauan hakoteillä. Pitää saada nopeammin tuloksia aikaan." Toteutus: Keskustelukanava johtaa juoksupelin työtä suoraan (järjestys, tekotavat omistajan päätösten sisällä, hyväksyntä omistajan sanoja vasten); Pelikoodari, Valoseppä, Lavastaja, Natiivi-UI ja juoksupelin Codex-tilaukset raportoivat juoksupelistä KK:lle ≤ 3 riviä. PT jatkaa junat, merget, kartan, Raamatun ja muut roolit; juoksupelin junavienti NS:n kautta ennallaan. Roolit ilmoitettu 21.1x.
+## 7.32 TARKENNUS: KESKENERÄISET PELIKUVAT EDISTYMISEN MUKAAN (omistaja 26.10.2026 klo 21.17) (26.10.2026 klo 21.18)
+
+Omistaja KK:ssa sanatarkasti: "Laita minulle kuvia kun etenee jos pystyn auttamaan myös ratkaisujen keksimisessä." Tulkinta (KK, PT kirjaa): juoksupelin ja muiden käynnissä olevien töiden keskeneräisetkin pelistä otetut kuvat lähetetään omistajalle edistymisen mukaan, merkittyinä keskeneräisiksi; korjaamattomat viat kerrotaan rehellisesti kuvien ulkopuolella, ja omistaja voi ehdottaa ratkaisuja. 7.32 muuten ennallaan (vain pelaajan näkymä, ei tekstiä kuvan päällä). Kanava: tekijä → PT → KK.
+
+## JUOKSUPELI: PYSTYLATAUSKUVA HYVÄKSYTTY JA KAMERA LÄHEMMÄS KEISARIA (omistaja 26.10.2026 klo 21.49) (26.10.2026 klo 21.49)
+
+Omistajan kortit KK:ssa: "Kelpaako latauskuva pystynä näin?" → "Kelpaa (Suositus)" (Codexin huopapohjainen pystykuva 150e189c5, junassa 211). "Viedäänkö pelin kamera näin lähelle keisaria?" → "Kyllä, näin lähelle (Suositus)": mallina Codexin lähikamerakuvat 01 lähtökuja ja 02 punamuurikuja (30617f4a3), joissa keisari on noin 35 % kuvan korkeudesta (pelissä nyt 20–24 %). Pelikoodari tekee kameran; Codex korjaa kuvien 01 ja 02 valkoiset kengänpohjat tummiksi ja tekee hylätyt 03–06 uudelleen (PK tilaa).
+
+## KARTAN TIETOKORTIT: FAKTAT HETI, PULUN TEKSTI STRIIMATAAN (omistaja 26.10.2026 klo 22.13) (26.10.2026 klo 22.14)
+
+Omistajan pyyntö klo 22.0x (KK, sanatarkasti): "Saako jostain dataa mitä voisi näyttää kun pelaaja klikkaa kartan syvistä osista paljastuvia nimiä ja kohteita? Ja lisäksi pulun workerillä voisi tuoda
+lisää tietoa kohteesta (muutamia lauseita) ja sen alla olisi lue lisää nappi jolla worker loisi lisää tietoa ja kaikki tallentuisi tulevaa käyttöä varten. Mitä olet mieltä? Ja mitä data lähteitä
+voitaisiin käyttää tiedon striimaamiseen ja pystyisikö sitä tietoa siistimään esiasetetulla kaavalla peliin paremmin sopivaksi. Esim. asukasluku näytettäisiin suomennettuna teksti pohjana yms. Mitä
+olet mieltä?" Kortti "Tehdäänkö kartan tietokortit näin?" (KK suositteli faktoja heti ja Pulun tekstejä valmiiksi erissä), omistaja omin sanoin klo 22.13: "Faktat heti, pulun teksti striimataan.
+Kohteita liikaa. Mietitään myöhemmin generoimista etukäteen." Raamattuun uusi kohta 2.203 sekä poikkeusviitteet kohtiin 2.31 (peruspeli ilman API-krediittejä) ja 2.76 (ennakkosisältö Opus-agenteilla).
+Tekijät: Karttaseppä (kartan napautus ja kortti) ja Sisältökirjuri (suomenkielinen kaava ja faktalähteet); workerin osuus PT:n jaolla.
