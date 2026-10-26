@@ -2667,3 +2667,7 @@ Tilinvaihto tilille sami.reivinen@vvi.fi (org ddaee6a2). PT local_8d8ebf72, KK l
 ## KOMENTORIVIN KIRJAUTUMINEN POIS TILINVAIHDOSTA (omistaja 26.10.2026 klo 16.41) (26.10.2026 klo 16.41)
 
 Omistaja KK:ssa sanatarkasti: "Poistetaan tuo kommentorivikirjautuminen tilinvaihdon alusta. Se ei ole tarpeellista." Toteutus: tilinvaihto.md 0.1, VOIMASSA OLEVA ARVO -rivi Komentorivin tili ja siirtopromptin auth-maininnat poistettu, Raamattu 12.23 kohta 1 korjattu. Mikään työkalu ei käytä komentorivin tiliä (grep tools, hooks, julkaisija-tyokalut).
+
+## IPAD PRO 11 -ASENNUS PERUTTU, SEURAAVA ON TF (omistaja 26.10.2026 klo 16.43) (26.10.2026 klo 16.43)
+
+Omistaja KK:ssa sanatarkasti: "Palaan vasta huomenna takaisin töihin, joten ei tarvitse tehdä loppuun sita pelin siirtoa iPadille nyt. Tehdään uusi test flight, sitten kun Tarpeeksi asioita on valmistunut." Toteutus: 14.32-ketju (KS→NS→LT→asennus) lopetettu; KS:n 3D-sarjan korjaus junaan 211 tavalliseen tapaan; PT kertoo KK:lle, kun juna 211 on TF-kypsä, KK kysyy kortilla. Omistaja poissa huomiseen: yö oletuksilla.
