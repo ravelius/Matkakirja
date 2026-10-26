@@ -2683,3 +2683,7 @@ Kortti KK:ssa: "Kelpaako latauskuva vaakana näin?" → "Kelpaa (Suositus)". Kuv
 ## OLAVINLINNA CODEXILLE JA PYLVÄÄT/SEINÄT HAVAINNETTA VASTEN (omistaja 26.10.2026 klo 21.08–21.09) (26.10.2026 klo 21.12)
 
 21.09 (KK:ssa, sanatarkasti): "Jos kodeksilla ei ole hommia, niin sille voi antaa Olavin linnasta uusia tehtäviä niin paljon kuin mahdollista." → Olavinlinnan tauko purkautuu Codexin osalta (kuvat ja Tripo pysyvällä luvalla), juoksupeli ensin, Olavinlinna täytteenä; Natiiviseppä kartoittaa ja tilaa. 21.08: "miltä pylväät ja rakennusten seinät näyttävät verrattuna havainnekuviin" → Natiivi-UI havainne|peli-parit. 21.02: "pitää saada jo tänään valmista" → aikataulu KK:lle. 21.06 valaistuksen perussyy: leivottu valo = kuva muodosta → muoto lukkoon alueittain, leivonta kerran, tarkista_leivonta.py 0 ennen paria (PR 5255).
+
+## KK JOHTAA JUOKSUPELIN KEHITYSTÄ (omistaja 26.10.2026 klo 21.11) (26.10.2026 klo 21.14)
+
+KK:ssa, sanatarkasti: "Ota sinä ohjat juoksupelin kehittämisessä. Se on ollut liian kauan hakoteillä. Pitää saada nopeammin tuloksia aikaan." Toteutus: Keskustelukanava johtaa juoksupelin työtä suoraan (järjestys, tekotavat omistajan päätösten sisällä, hyväksyntä omistajan sanoja vasten); Pelikoodari, Valoseppä, Lavastaja, Natiivi-UI ja juoksupelin Codex-tilaukset raportoivat juoksupelistä KK:lle ≤ 3 riviä. PT jatkaa junat, merget, kartan, Raamatun ja muut roolit; juoksupelin junavienti NS:n kautta ennallaan. Roolit ilmoitettu 21.1x.
