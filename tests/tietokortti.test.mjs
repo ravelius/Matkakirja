@@ -49,6 +49,8 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.equal(tarkistaTeksti(`${s(40)} Eton Collegessa opiskelee poikia. Collegessa on kirkko.`, college, 'Eton').ok, true, 'nimet eivät ole pitkän sanan toistoa');
   assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
+  assert.equal(tarkistaTeksti(`${s(40)} linnaa käytetään residenssinään.`, syote).ok, true, 'ä ei ole sanaraja');
+  assert.match(tarkistaTeksti(`${s(40)} se on n. sata.`, syote).syy, /merkit/);
 });
 
 import { laji, asukasluku, pituus, pintaAla, korkeus, vuosi, alarivi, faktarivit } from '../tools/pollo/tietokortti-kaava.js';
