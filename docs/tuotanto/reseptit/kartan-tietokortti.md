@@ -420,7 +420,7 @@ myös naapurikylien väkeä.
 6. Ei alustusäännähdyksiä (`Kato`, `No niin`, `Hetkinen`, `Kääk`) tekstin alussa.
 6b. Ei sanoja `Wikipedia`, `Wikidata`, `lähde` (lähderivin näyttää peli).
 7. Ei puhuttelua eikä kehotuksia: hylkäys, jos vastauksessa on `katsel`, `huomaat`, `kannattaa`, `kävele`, `näet`, `tuntuu`, `kun ` + 2. persoonan verbi.
-8. **Ei toistoa:** sama nelinumeroinen vuosiluku tai sama erisnimi (vähintään viisi kirjainta) esiintyy koko vastauksessa kerran kummassakin osassa korkeintaan yhteensä kerran; kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys; sama pitkä sana (vähintään 10 kirjainta, kahdeksan ensimmäistä kirjainta samat, ei kohteen nimeä eikä isolla alkavia nimiä) kahdesti = hylkäys (sama fakta kahdesti, KK 27.10.).
+8. **Ei toistoa:** sama nelinumeroinen vuosiluku esiintyy koko vastauksessa korkeintaan kerran ja sama erisnimi (vähintään viisi kirjainta) korkeintaan kahdesti (Karttaseppä 27.10. vedos 5: naapurikaupunki ja kreivikunta ovat luontevia kahdesti; PT: juna 211); kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys; sama pitkä sana (vähintään 10 kirjainta, kahdeksan ensimmäistä kirjainta samat, ei kohteen nimeä eikä isolla alkavia nimiä) kahdesti = hylkäys (sama fakta kahdesti, KK 27.10.).
 9. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
 10. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
 
