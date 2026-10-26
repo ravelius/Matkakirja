@@ -349,6 +349,9 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
       if (yhteiset / Math.min(virkkeet[a].size, virkkeet[b].size) > 0.6) return { ok: false, syy: 'lähes sama virke' };
     }
   }
+  // 2.4 (SK 27.10.): englannin sana suomen päätteellä ("collegelle") tai vieras nimi genetiivissä ("Windsor Bridgen") = hylkäys.
+  if (/(?<!\p{L})(college|school|bridge)(n|lle|lla|lta|sta|ssa|ksi|a|t|ja)(?!\p{L})/u.test(ilman)
+    || /(?<!\p{L})[A-Z]\p{L}* (Bridge|College|School|Way|Street|Road)n(?!\p{L})/u.test(ilman)) return { ok: false, syy: 'vieras sana' };
   // 2.4/7: ei puhuttelua eikä kehotuksia.
   if (/katsel|huomaat|kannattaa|kävele|(?<!\p{L})näet(?!\p{L})|tuntuu|(?<!\p{L})kun \p{L}+t(?!\p{L})/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
   // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
