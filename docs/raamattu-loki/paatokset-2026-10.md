@@ -2707,3 +2707,7 @@ Tekijät: Karttaseppä (kartan napautus ja kortti) ja Sisältökirjuri (suomenki
 ## JUNA 211 JULKAISTAAN, KUN KARTAN TIETOKORTTI ON VALMIS; VEDOS ENSIN (omistaja 26.10.2026 klo 22.14) (26.10.2026 klo 22.16)
 
 Omistaja KK:ssa sanatarkasti: "Junan voi julkaista kun tietokortti valmis. Näytä vedos ensin". Tulkinta (KK, PT kirjaa): juna 211 lukitaan ja viedään TestFlightiin, kun kartan tietokortti (Raamattu 2.203) on valmis. Ennen toteutusta omistajalle näytetään KK:n kautta vedos: oikea syvän kartan paikka, Wikidatan faktat kaavalla, Pulun striimattu teksti ja Lue lisää. Juoksupelin ja muut valmistuvat työt latautuvat junaan siihen asti.
+
+## JUNA 211: EI TESTEJÄ JULKAISUSSA (omistaja 26.10.2026 klo 22.17) (26.10.2026 klo 22.18)
+
+Omistaja KK:ssa sanatarkasti heti 22.14:n päätöksen jälkeen: "Älä aja testejä julkaisussa." Tulkinta (KK, PT kirjaa): junan 211 julkaisussa ei ajeta tarkistusajoa, laitekierrosta, simulaattoria eikä iPad-ajoja, vaikka juna lähtisi yöllä (vastaus 9.11:n kysymykseen: Ei). Käännöksen automaattiset tarkistukset jäävät 9.11:n mukaisesti. Ilmoitettu Julkaisijalle ja Laitetestaajalle.
