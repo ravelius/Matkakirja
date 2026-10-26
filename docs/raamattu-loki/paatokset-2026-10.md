@@ -2715,3 +2715,11 @@ Omistaja KK:ssa sanatarkasti heti 22.14:n päätöksen jälkeen: "Älä aja test
 ## JUOKSUPELIN ESIKATSELUAJOT LINJALLE 2 (omistaja 26.10.2026 klo 22.39) (26.10.2026 klo 22.40)
 
 Kortti KK:ssa: "Saavatko juoksupelin esikatseluajot oman linjan?" → "Kyllä (Suositus)". Syy: kaikki Unity-ajot (esikatselu.sh, proto-kaanna.sh, botti) jonottivat yhteistä linjan 1 lukkoa, ja 22.35 kaikki sessiot odottivat. Lupa jaetun käännösinfran muutokseen (Raamattu 10.5): Natiiviseppä siirtää esikatselu.sh:n linjalle 2 (oma APFS-klooni Matkakirja-proto-esikatselu-2, oma lukko); JU:n käännökset linjalla 1, juna aina ensin.
+
+## LÄHIKAMERAN MALLIKUVAT HYVÄKSYTTY (omistaja 26.10.2026 klo 22.45) (26.10.2026 klo 22.47)
+
+Kortti KK:ssa: "Kelpaavatko nämä kuusi lähikuvaa pelin kameran malliksi?" → "Kelpaavat (Suositus)". Codexin lähikamerasarja kierros 2 (5076eb6ca, posti/juoksupeli-havainnekuvat-lahi-20261024/kierros2-20261026/) on juoksupelin lähikameran malli kohtiin 01–06; KK tarkisti ennen omistajaa (harmaat huopapohjat kuten 150e189c5, asu sama, ei irtoviivoja, keisari 35–40 %). Välitetty Pelikoodarille.
+
+## YÖN VALTUUTUS KESKUSTELUKANAVALLE (omistaja 26.10.2026 klo 22.47) (26.10.2026 klo 22.47)
+
+Omistaja KK:n ikkunassa sanatarkasti: "Menen nukkumaan. Saat hyväksyä puolestani kaikki päätökset". Omistajan seuraavaan viestiin asti KK päättää omistajan puolesta kaikki hänelle kuuluvat kysymykset ja kuvien hyväksynnät hänen aiempia sanojaan vasten, kirjauksella "KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA klo …". Koskee myös kartan tietokortin vedosta (22.14): hyväksytyn vedoksen jälkeen juna 211 saa lähteä, ilman testejä (22.17). Ei koske ostoja eikä lupa-asetuksia, avaimia, tunnuksia tai CLAUDE.md-tiedostoja (vain omistajan omalla viestillä). Roolit lähettävät KYSYMYS-rivit KK:lle heti, ei yöoletusta omistajalle kuuluvissa asioissa. Aamulla KK kokoaa omistajalle listan yön päätöksistä.
