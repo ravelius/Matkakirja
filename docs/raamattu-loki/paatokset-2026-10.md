@@ -2609,3 +2609,13 @@ PT lähetti kujat 02 ja 05 KK:lle, koska leveys täsmäsi metreissä. KK palautt
 ## JUNA 210 JULKAISTAAN NYT ILMAN TESTEJÄ (omistaja 25.10.2026 klo 13.56, KK:n kautta) (25.10.2026 klo 13.58)
 
 Omistaja sanatarkasti: "Julkaise juna nyt ilman testejä ja siirrä keskeneräiset seuraavaan junaan." Kumoaa 24.10. klo 18.45 linjan "juna 210 = kaikki". Tulkinta (14.10. ja juna 189): ei laitetestejä, simukierrosta eikä muistiajoa; käännöksen automaattiset tarkistukset ajetaan. Runko: be6cf0048 (räystäskamera 4b4864d28, kujien levennys omistajan 11.32-päätöksen mukaan, LR:n katoserä v50/v42) + LR rakennukset-v43 (kujaporttien ovet, PT-kuittaus). Junaan 211: VS:n valo ja leivonta, kujien 02/05 uudet leveydet (havainteen mittausvirhe korjattu, kysymys omistajalle tulossa), PK kuja40-pk3, aukion viillot, lautaspöydän pari, Jingshan, salit.
+
+## KONEEN KAATUMINEN 25.10. 14.34 JA VAROTOIMET (KK 26.10. 10.0x, PT 10.1x) (26.10.2026 klo 10.07)
+
+Graafinen istunto kaatui 25.10. klo 14.34 (WindowServerin vahtiajastin; kone päällä 5 vrk), kaikki sessiot pysähtyivät, omistaja kirjautui takaisin 26.10. noin 10.00. Ennen kaatumista
+koodaus-istuntoon kasautui kymmeniä ikkunoita 'Mitään appia ei ole asetettu avaamaan dokumenttia Compiled-Matkakirja-Juoksupeli-Taivas.shader'. SYY: MetalTarkistus.cs (8afdc5004, metal-tarkistus.sh)
+kutsuu ShaderUtil.OpenCompiledShaderia, joka avaa tuloksen ulkoisesti. VAROTOIMET: (1) Editorityökalu ei saa avata tiedostoja, ikkunoita eikä LaunchServices-avauksia (ei open, ei OpenCompiledShader
+ilman avauksen estoa); metal-tarkistus.sh pysäytetty, kunnes VS korjaa ja todistaa. (2) Kukaan rooli ei käytä screencapturea eikä lopeta järjestelmäprosesseja (CoreServicesUIAgent): KK teki niin juuri
+ennen jumia; syy-yhteys epävarma, kone oli raskaassa kuormassa. (3) TF 210 (run 40193412825) päättyi failure jo 14.43, tf210.sh jäi silmukkaan TLS-virheisiin: JU käynnistää uudelleen. (4) Omistaja
+antaa täyden levyoikeuden runnerien node24:lle (TCC:n vastuuprosessi Runner.Listener → node, KK:n mittaus): /Users/Shared/Claude/actions-runner{,-2}/externals.2.338.0/node24/bin/node. Runnerin
+automaattipäivitys vaihtaa polun → JU ehdottaa pysyvän polun.
