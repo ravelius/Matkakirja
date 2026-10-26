@@ -43,3 +43,7 @@ L1-sääntö: kun JU ilmoittaa TF-etusijasta, ei uusia Unity-ajoja ennen JU:n lu
   sk-laite-a.txt (reitti A, siemen 116562, 180 s, ei kuvia → "VIKA kuvia ei syntynyt" on odotettu), *-paikallinen.txt = sama + paikalliset paketit.
   lautaspoyta-04/skenaariot/sk-lautaspoyta-04g.txt (pari), -04h.txt (+ mika-luotaus).
 - Koordinaatit: mittarin maailma ≈ (−pohja_x + 1, −pohja_z − 390) palatsin alueella; `ui juoksupeli paikka` antaa Puyin pohjan.
+
+## LISÄYS 11.4x (NS)
+
+LT:n laiteajo rakennetaan ehdokkaasta natiiviseppa/juna-211-raystas = 7c78b3a9a (211-runko 176e10cc1 + 4b4864d28; puu = 957cc6a4b + MetalTarkistus-korjaus). Testit ja laite n. 11.45 jälkeen, sitten asennus LT:lle; runkoon PT:n kuittauksella.
