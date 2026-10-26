@@ -2647,3 +2647,7 @@ PT:n linja omistajan uusimpien sanojen perusteella: 21.10. 09.38 arkki 9 ("Suunt
 ## OPPI: TILA TARKISTETAAN ROOLIHAAROISTA (KK ja PT 26.10.2026 klo 13.4x) (26.10.2026 klo 13.38)
 
 Periaatteet 2 ja 6. KK kertoi omistajalle 13.3x, että kartan 3D-sarja on pidossa eikä kartalla ole uutta, koska tarkisti vain junan rungon 9460c52c6 ja työlistan vanhan pidossa-rivin, ei proto-3d:n roolihaaroja; korjattu omistajalle 13.4x. Samalla PT jätti työlistan tuulimylly- ja sarjarivit päivittämättä, kun Karttaseppä yhdisti sarjan (b4767cf6c). Oppi: ennen kuin omistajalle kerrotaan tila, katsotaan roolien haarat (git log --all proto-3d:ssä) ja PT päivittää työlistan rivin heti, kun rooli ilmoittaa valmiin vaiheen.
+
+## OPPI: ISON IPADIN AJOT YKSI KERRALLAAN (PT 26.10.) (26.10.2026 klo 14.09)
+
+LT:n b6-reittiajo 13.53–14.07 meni hukkaan: PK ajoi Isolla iPadilla pelikuvien A/B-ajon (valo heitto/jalki) 13.46–13.53 LT:n ajon päälle, ja laite kuumeni (thermalState 2). Rikottu periaate 2 ja 9.11 (iso iPad vapaasti koskee laitetta, ei rinnakkaisia ajoja). Korjaus: ennen jokaista iPad-ajoa ps-tarkistus (ipad.sh, esikatselu.sh, todistusajo) ja vuorolukko /tmp/matkakirja-ipad.lukko (mkdir, tiedosto kuka); NS lisää lukon ipad.sh:hon. Uusinta vasta kun thermalState 0.
