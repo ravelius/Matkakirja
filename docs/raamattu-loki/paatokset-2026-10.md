@@ -2659,3 +2659,15 @@ PT kertoi KK:lle klo 15.3x, että iPad Pro 11:een asennetussa junan 211 rungossa
 ## ELÄVÄN KARTAN PALAUTE iPAD PRO 11:LTÄ (omistaja 26.10.2026 klo 15.32) (26.10.2026 klo 15.33)
 
 Pyyntö sanatarkasti: "rautatiet näkyvät liian voimakkaasti ja ilmeisesti useampi päällekkäin oleva linja sotkevat linjat mössöksi. pelaajan nappula ja kohdekaupungin piste liikkuvat kartan päällä lähemmilla zoom tasoilla, pitäisi pysyä lukittuna paikallaan. 3d kohteet pitää olla kokoonsa sidottuja mutta kadota pehmeästi näkyvistä kokonaan kun zoomataan sisään ja ne suurenisivat liikaa. niiden paikalle saa silloin ilmestyä paljon pienempi sama kohde mutta sekin kokoon sidottuna. se että jonkin kohteen koko muuttuu zoomattaessa näyttää feikiltä. panorointi tökkii jokin verran lähemmillä zoom tasoilla. kaupunkien nimet saisi tulla näkyviin jo aiemmin (suuremmat kaupungit). pienemmät voi kuten nytkin." Raamattu 4.41 täydennetty (KOKO SIDOTTU KARTTAAN; korvaa 19.27:n "sama koko ruudulla" zoomauksen osalta, uusin sana voittaa). Toteutus Karttaseppä; pelikuvat ja video PT:n 1:1-tarkistuksen kautta KK:lle; asennus iPad Pro 11:een.
+
+## TILINVAIHTO 26.10.2026 klo 16.3x (26.10.2026 klo 16.32)
+
+Tilinvaihto tilille sami.reivinen@vvi.fi (org ddaee6a2). PT local_8d8ebf72, KK local_d5f31591, 10 roolia uusina sessioina (id:t osoitekirjassa); levossa olevat roolit tämän tilin vanhoihin sessioihin. Taulu R6VQFTUNq629zSzah719Uy. Kotikansiot mainiin (posti oma haara, siirtoseppä ohitettu). Ohjeiden koe 10/10, tilinvaihto-valmis.mjs 0. OPPI: paivita-kotikansiot.sh --ohita ottaa pilkkulistan (--ohita a,b), toistettu lippu ohittaa vain viimeisen.
+
+## KOMENTORIVIN KIRJAUTUMINEN POIS TILINVAIHDOSTA (omistaja 26.10.2026 klo 16.41) (26.10.2026 klo 16.41)
+
+Omistaja KK:ssa sanatarkasti: "Poistetaan tuo kommentorivikirjautuminen tilinvaihdon alusta. Se ei ole tarpeellista." Toteutus: tilinvaihto.md 0.1, VOIMASSA OLEVA ARVO -rivi Komentorivin tili ja siirtopromptin auth-maininnat poistettu, Raamattu 12.23 kohta 1 korjattu. Mikään työkalu ei käytä komentorivin tiliä (grep tools, hooks, julkaisija-tyokalut).
+
+## IPAD PRO 11 -ASENNUS PERUTTU, SEURAAVA ON TF (omistaja 26.10.2026 klo 16.43) (26.10.2026 klo 16.43)
+
+Omistaja KK:ssa sanatarkasti: "Palaan vasta huomenna takaisin töihin, joten ei tarvitse tehdä loppuun sita pelin siirtoa iPadille nyt. Tehdään uusi test flight, sitten kun Tarpeeksi asioita on valmistunut." Toteutus: 14.32-ketju (KS→NS→LT→asennus) lopetettu; KS:n 3D-sarjan korjaus junaan 211 tavalliseen tapaan; PT kertoo KK:lle, kun juna 211 on TF-kypsä, KK kysyy kortilla. Omistaja poissa huomiseen: yö oletuksilla.

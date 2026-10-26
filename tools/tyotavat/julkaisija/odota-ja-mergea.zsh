@@ -4,7 +4,13 @@
 # Kärki vaihtuu kesken → odottaa uudelleen. Punainen/peruttu → tulostaa ja lopettaa mergeämättä.
 cd /Users/Shared/Claude/Matkakirja-julkaisija || exit 2
 PR=$1
+# 23.10.: #5185 (js/tyohuone-raamattu.js) mergettiin ennen kuin testit ehtivät jonoon → koodi-PR odottaa testit-tarkistuksen.
+KOODI=$(gh pr view $PR --json files --jq '[.files[].path|select((startswith("docs/") or endswith(".md") or .=="tools/vienti/muutosloki-natiivi.json")|not)]|length')
 while true; do
+  if (( KOODI > 0 )); then
+    t=$(gh pr checks $PR --json name,bucket --jq '[.[]|select(.name=="testit")|.bucket]|join(",")' 2>/dev/null)
+    [[ -z $t || $t == *pending* ]] && { sleep 45; continue; }
+  fi
   read -r tila karki <<< "$(gh pr view $PR --json state,headRefOid --jq '.state+" "+.headRefOid')"
   [[ $tila != OPEN ]] && { print "PR $PR $tila"; exit 0; }
   s=$(gh pr checks $PR --json bucket --jq '[.[].bucket]|join(",")' 2>/dev/null)

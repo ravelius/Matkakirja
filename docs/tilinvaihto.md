@@ -20,9 +20,8 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
   läppärin Chromessa vanhalla kirjautumisella (avauskomento kohdassa 4).
 
 ## 0. Tili ensin (ennen yhtään roolisessiota)
-1. `claude auth status` → millä tilillä komentorivi on. Jos väärä: `claude auth login` (omistaja hyväksyy selaimessa) ja tarkista,
-   että accountUuid = ympäristön CLAUDE_CODE_ACCOUNT_UUID ja orgId = CLAUDE_CODE_ORGANIZATION_UUID. Komentorivi kirjataan SOVELLUKSEN
-   tilille (Raamattu TILI ENNEN KÄYNNISTYSTÄ, 9.10.; kumoaa 7.10. "toinen tili kuin sovellus").
+1. Komentorivin (`claude auth`) kirjautumista EI tarkisteta eikä pyydetä omistajalta (omistaja 26.10.2026 klo 16.41: "ei ole
+   tarpeellista"); mikään työkalu ei käytä komentorivin tiliä. Tili tunnistetaan sovelluksesta (ympäristön CLAUDE_CODE_ORGANIZATION_UUID).
 2. OMISTAJAN TOIMET (yksi "## ⚠️ TOIMI TARVITAAN" -viesti, kaikki kerralla; ennen KK:n luontia suoraan PT:n chattiin, kohta 0.0):
    - Chrome kirjautuu claude.ai:hin uudella tilillä (Asemataulun avaus);
    - puhelimen Claude-sovellus kirjautuu uudelle tilille (muuten Remote Control -ilmoitukset eivät tule);
@@ -146,7 +145,6 @@ VIIMEINEN VAIHE (omistaja 15.10.2026 klo 14.39): PT luovuttaa ja nollautuu heti,
 | Asemataulun osoite | osoitekirjan rivi "Asemataulu (tämän tilin taulu): …" (sama TAULU/nykyinen.json:ssa ja osoitteet.md:n KÄYTÖSSÄ-rivillä; docs/moduulit/asemataulu.md luku 9); muut tilit F/asemataulu/osoitteet.md | EekZDPMuAcsjT3awvn4jPb on VVI-tilin taulu (13.10.), Rq5ajPU4SraE2XKd7BYAix päätilin (10.10.) |
 | Kontekstirajat | liukumat pehmeä–kova (omistaja 14.10. klo 22.55 ja 22.57): Postivahti 20–30 %; koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT (oma nollaus), Laitetestaaja ja Äänittäjä 30–40 %; KK 40–50 % kortilla "Nollaanko nyt?" (vain KK:n nollaus kysytään omistajalta). Pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, uusi iso tehtävä → nollaus ensin; luovutus → Postivahti nollaa ilman omistajan vahvistusta. VALVONTA (omistaja 15.10. klo 14.39): KONTEKSTIVAHTI-koukku muistuttaa 30/35/40 % (muistutus on käsky), Postivahti lukee PT:n ja KK:n kontekstin joka kierroksella, PT ≥ 40 % = pakkonollaus; PT lukee get_usage selfin jokaisen pyynnön alussa (Raamattu VALVONTA JA PAKKONOLLAUS) | roolit 50 % (10.10.), 35 % (14.10. 22.4x); PT 65 %; KK 55/65 %; Postivahti ei nollaa KK:ta |
 | Viikkokiintiö | päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
-| Komentorivin tili | sama kuin sovelluksen tili; uudelleenkirjautuminen jokaisessa tilinvaihdossa | "toinen tili kuin sovellus" (7.10.) |
 | TF-juna | lähtee vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA", PT:n välittämä riittää), kaikki kuitattu samaan junaan, TF enintään 2/pv | "heti kun valmista" (6.10.); launchd fi.matkakirja.juna (2 h välein 08–22) ja juna-vahti (10 min) ovat simulaattorikäännöksiä, eivät TF-junia |
 | Session id:t | vain S/osoitekirja.md | Raamatun ja vanhojen ohjeiden kovakoodatut id:t |
 | PT:n malli | Opus, medium | "Opus max" (28.9.) |
