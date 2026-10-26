@@ -2687,3 +2687,39 @@ Kortti KK:ssa: "Kelpaako latauskuva vaakana näin?" → "Kelpaa (Suositus)". Kuv
 ## KK JOHTAA JUOKSUPELIN KEHITYSTÄ (omistaja 26.10.2026 klo 21.11) (26.10.2026 klo 21.14)
 
 KK:ssa, sanatarkasti: "Ota sinä ohjat juoksupelin kehittämisessä. Se on ollut liian kauan hakoteillä. Pitää saada nopeammin tuloksia aikaan." Toteutus: Keskustelukanava johtaa juoksupelin työtä suoraan (järjestys, tekotavat omistajan päätösten sisällä, hyväksyntä omistajan sanoja vasten); Pelikoodari, Valoseppä, Lavastaja, Natiivi-UI ja juoksupelin Codex-tilaukset raportoivat juoksupelistä KK:lle ≤ 3 riviä. PT jatkaa junat, merget, kartan, Raamatun ja muut roolit; juoksupelin junavienti NS:n kautta ennallaan. Roolit ilmoitettu 21.1x.
+## 7.32 TARKENNUS: KESKENERÄISET PELIKUVAT EDISTYMISEN MUKAAN (omistaja 26.10.2026 klo 21.17) (26.10.2026 klo 21.18)
+
+Omistaja KK:ssa sanatarkasti: "Laita minulle kuvia kun etenee jos pystyn auttamaan myös ratkaisujen keksimisessä." Tulkinta (KK, PT kirjaa): juoksupelin ja muiden käynnissä olevien töiden keskeneräisetkin pelistä otetut kuvat lähetetään omistajalle edistymisen mukaan, merkittyinä keskeneräisiksi; korjaamattomat viat kerrotaan rehellisesti kuvien ulkopuolella, ja omistaja voi ehdottaa ratkaisuja. 7.32 muuten ennallaan (vain pelaajan näkymä, ei tekstiä kuvan päällä). Kanava: tekijä → PT → KK.
+
+## JUOKSUPELI: PYSTYLATAUSKUVA HYVÄKSYTTY JA KAMERA LÄHEMMÄS KEISARIA (omistaja 26.10.2026 klo 21.49) (26.10.2026 klo 21.49)
+
+Omistajan kortit KK:ssa: "Kelpaako latauskuva pystynä näin?" → "Kelpaa (Suositus)" (Codexin huopapohjainen pystykuva 150e189c5, junassa 211). "Viedäänkö pelin kamera näin lähelle keisaria?" → "Kyllä, näin lähelle (Suositus)": mallina Codexin lähikamerakuvat 01 lähtökuja ja 02 punamuurikuja (30617f4a3), joissa keisari on noin 35 % kuvan korkeudesta (pelissä nyt 20–24 %). Pelikoodari tekee kameran; Codex korjaa kuvien 01 ja 02 valkoiset kengänpohjat tummiksi ja tekee hylätyt 03–06 uudelleen (PK tilaa).
+
+## KARTAN TIETOKORTIT: FAKTAT HETI, PULUN TEKSTI STRIIMATAAN (omistaja 26.10.2026 klo 22.13) (26.10.2026 klo 22.14)
+
+Omistajan pyyntö klo 22.0x (KK, sanatarkasti): "Saako jostain dataa mitä voisi näyttää kun pelaaja klikkaa kartan syvistä osista paljastuvia nimiä ja kohteita? Ja lisäksi pulun workerillä voisi tuoda
+lisää tietoa kohteesta (muutamia lauseita) ja sen alla olisi lue lisää nappi jolla worker loisi lisää tietoa ja kaikki tallentuisi tulevaa käyttöä varten. Mitä olet mieltä? Ja mitä data lähteitä
+voitaisiin käyttää tiedon striimaamiseen ja pystyisikö sitä tietoa siistimään esiasetetulla kaavalla peliin paremmin sopivaksi. Esim. asukasluku näytettäisiin suomennettuna teksti pohjana yms. Mitä
+olet mieltä?" Kortti "Tehdäänkö kartan tietokortit näin?" (KK suositteli faktoja heti ja Pulun tekstejä valmiiksi erissä), omistaja omin sanoin klo 22.13: "Faktat heti, pulun teksti striimataan.
+Kohteita liikaa. Mietitään myöhemmin generoimista etukäteen." Raamattuun uusi kohta 2.203 sekä poikkeusviitteet kohtiin 2.31 (peruspeli ilman API-krediittejä) ja 2.76 (ennakkosisältö Opus-agenteilla).
+Tekijät: Karttaseppä (kartan napautus ja kortti) ja Sisältökirjuri (suomenkielinen kaava ja faktalähteet); workerin osuus PT:n jaolla.
+
+## JUNA 211 JULKAISTAAN, KUN KARTAN TIETOKORTTI ON VALMIS; VEDOS ENSIN (omistaja 26.10.2026 klo 22.14) (26.10.2026 klo 22.16)
+
+Omistaja KK:ssa sanatarkasti: "Junan voi julkaista kun tietokortti valmis. Näytä vedos ensin". Tulkinta (KK, PT kirjaa): juna 211 lukitaan ja viedään TestFlightiin, kun kartan tietokortti (Raamattu 2.203) on valmis. Ennen toteutusta omistajalle näytetään KK:n kautta vedos: oikea syvän kartan paikka, Wikidatan faktat kaavalla, Pulun striimattu teksti ja Lue lisää. Juoksupelin ja muut valmistuvat työt latautuvat junaan siihen asti.
+
+## JUNA 211: EI TESTEJÄ JULKAISUSSA (omistaja 26.10.2026 klo 22.17) (26.10.2026 klo 22.18)
+
+Omistaja KK:ssa sanatarkasti heti 22.14:n päätöksen jälkeen: "Älä aja testejä julkaisussa." Tulkinta (KK, PT kirjaa): junan 211 julkaisussa ei ajeta tarkistusajoa, laitekierrosta, simulaattoria eikä iPad-ajoja, vaikka juna lähtisi yöllä (vastaus 9.11:n kysymykseen: Ei). Käännöksen automaattiset tarkistukset jäävät 9.11:n mukaisesti. Ilmoitettu Julkaisijalle ja Laitetestaajalle.
+
+## JUOKSUPELIN ESIKATSELUAJOT LINJALLE 2 (omistaja 26.10.2026 klo 22.39) (26.10.2026 klo 22.40)
+
+Kortti KK:ssa: "Saavatko juoksupelin esikatseluajot oman linjan?" → "Kyllä (Suositus)". Syy: kaikki Unity-ajot (esikatselu.sh, proto-kaanna.sh, botti) jonottivat yhteistä linjan 1 lukkoa, ja 22.35 kaikki sessiot odottivat. Lupa jaetun käännösinfran muutokseen (Raamattu 10.5): Natiiviseppä siirtää esikatselu.sh:n linjalle 2 (oma APFS-klooni Matkakirja-proto-esikatselu-2, oma lukko); JU:n käännökset linjalla 1, juna aina ensin.
+
+## LÄHIKAMERAN MALLIKUVAT HYVÄKSYTTY (omistaja 26.10.2026 klo 22.45) (26.10.2026 klo 22.47)
+
+Kortti KK:ssa: "Kelpaavatko nämä kuusi lähikuvaa pelin kameran malliksi?" → "Kelpaavat (Suositus)". Codexin lähikamerasarja kierros 2 (5076eb6ca, posti/juoksupeli-havainnekuvat-lahi-20261024/kierros2-20261026/) on juoksupelin lähikameran malli kohtiin 01–06; KK tarkisti ennen omistajaa (harmaat huopapohjat kuten 150e189c5, asu sama, ei irtoviivoja, keisari 35–40 %). Välitetty Pelikoodarille.
+
+## YÖN VALTUUTUS KESKUSTELUKANAVALLE (omistaja 26.10.2026 klo 22.47) (26.10.2026 klo 22.47)
+
+Omistaja KK:n ikkunassa sanatarkasti: "Menen nukkumaan. Saat hyväksyä puolestani kaikki päätökset". Omistajan seuraavaan viestiin asti KK päättää omistajan puolesta kaikki hänelle kuuluvat kysymykset ja kuvien hyväksynnät hänen aiempia sanojaan vasten, kirjauksella "KK:N PÄÄTÖS OMISTAJAN VALTUUTUKSELLA klo …". Koskee myös kartan tietokortin vedosta (22.14): hyväksytyn vedoksen jälkeen juna 211 saa lähteä, ilman testejä (22.17). Ei koske ostoja eikä lupa-asetuksia, avaimia, tunnuksia tai CLAUDE.md-tiedostoja (vain omistajan omalla viestillä). Roolit lähettävät KYSYMYS-rivit KK:lle heti, ei yöoletusta omistajalle kuuluvissa asioissa. Aamulla KK kokoaa omistajalle listan yön päätöksistä.
