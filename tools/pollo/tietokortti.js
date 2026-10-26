@@ -76,7 +76,8 @@ export async function linkitaWikidata(haku, { nimi, lat, lon, luokka }) {
     .sort((a, b) => (otsikkoTasmaa(b.e, nimi) - otsikkoTasmaa(a.e, nimi))
       || ([...p31(b.e)].some((q) => toive.has(q)) - [...p31(a.e)].some((q) => toive.has(q)))
       || (a.m - b.m));
-  return ehdokkaat[0]?.e ?? null;
+  // Epävarma osuma jää pois (PT 26.10. 23.4x): nimen pitää täsmätä nimiöön tai Wikipedia-artikkelin otsikkoon.
+  return ehdokkaat[0] && otsikkoTasmaa(ehdokkaat[0].e, nimi) > 0 ? ehdokkaat[0].e : null;
 }
 
 async function nimiot(haku, qids) {

@@ -1,7 +1,7 @@
 // Kartan tietokortit (Raamattu 2.203): suomenkielisen kaavan luvut ja välimuistin avaimet (tools/pollo/tietokortti.js).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { asukkaatTeksti, vakiluku, korttiAvain, tekstiAvain, pulunOhje } from '../tools/pollo/tietokortti.js';
+import { asukkaatTeksti, vakiluku, korttiAvain, tekstiAvain, KARTAN_TIETOKORTTI_KEHOTE, tarkistaTeksti, LUE_LISAA, EI_LAHDETTA } from '../tools/pollo/tietokortti.js';
 
 test('asukkaat kaavalla: noin, kaksi merkitsevää, tuhaterotin välilyönti, vuosi', () => {
   assert.equal(asukkaatTeksti({ maara: 183631, vuosi: '2021' }), 'noin 180 000 asukasta (2021)');
@@ -25,6 +25,20 @@ test('välimuistin avaimet: sama paikka eri palasta = sama kortti, teksti kohtee
   assert.match(tekstiAvain('Q2500974', 'pitka'), /teksti:pitka:Q2500974$/);
 });
 
-test('Pulun ohje: vain lähteen faktat', () => {
-  for (const p of [false, true]) assert.match(pulunOhje(p), /VAIN alla annetun lähdetekstin/);
+test('Pulun kehote on Sisältökirjurin reseptin (2.2)', () => {
+  assert.match(KARTAN_TIETOKORTTI_KEHOTE, /^VASTAUKSEN LAJI: KARTAN TIETOKORTTI/);
+  assert.match(KARTAN_TIETOKORTTI_KEHOTE, /###LUE-LISÄÄ###/);
+});
+
+test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
+  const s = (n, sana = 'kylä') => Array.from({ length: n }, () => sana).join(' ') + '.';
+  const syote = JSON.stringify({ nimi: 'Kylä', wikipedia: { teksti: 'kirkko valmistui vuonna 1889' } });
+  assert.equal(tarkistaTeksti(EI_LAHDETTA, syote).ok, true);
+  assert.equal(tarkistaTeksti(`${s(45)}\n${LUE_LISAA}\n${s(120)}`, syote).ok, true);
+  assert.equal(tarkistaTeksti(s(30), syote).ok, true, 'niukka: pelkkä lyhyt ≥ 20 sanaa');
+  assert.match(tarkistaTeksti(s(10), syote).syy, /lyhyt/);
+  assert.match(tarkistaTeksti(`${s(44)} vuonna 1777.`, syote).syy, /luku/);
+  assert.equal(tarkistaTeksti(`${s(44)} vuonna 1889.`, syote).ok, true);
+  assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
+  assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
 });
