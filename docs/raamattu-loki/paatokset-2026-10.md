@@ -2643,3 +2643,7 @@ Omistaja kysyi sanatarkasti: "montako rikottavaa esinettä on nyt tehty tai työ
 ## YHTENÄINEN SARJA KARTALLE 3D:NÄ (PT 26.10.2026 klo 13.0x) (26.10.2026 klo 13.04)
 
 PT:n linja omistajan uusimpien sanojen perusteella: 21.10. 09.38 arkki 9 ("Suunta on hyvä" – 3D-elementit tunnusmerkkeinä) ja 26.10. 12.44 ("korvataan nämä niillä uusilla 3d malleilla yhtenäistetyllä ilmeellä") kumoavat 29.9. 23.24 päätöksen ("Pakko ottaa 3D nostot ja symbolit pois, eivät vain toimi") yhtenäisen sarjan osalta: Symbolimallit päälle vain sarjan tunnusmerkeille; vanhat erikoismallit ja 3D-nostot pysyvät pois; ei 2D- ja 3D-merkkiä samassa paikassa; KS todistaa pelistä, että ne toimivat (ei välkettä, hyppyjä, fps- tai lämpöpudotusta). Myös vanhat elävät pienoismallit (myllyt, karuselli, gondolit, London Eye, höyrylaiva) sarjan ilmeeseen, liike säilyy (KK 12.58: periaate 6, jo päätetty). Omistaja näkee pelikuvat KK:n kautta.
+
+## OPPI: TILA TARKISTETAAN ROOLIHAAROISTA (KK ja PT 26.10.2026 klo 13.4x) (26.10.2026 klo 13.38)
+
+Periaatteet 2 ja 6. KK kertoi omistajalle 13.3x, että kartan 3D-sarja on pidossa eikä kartalla ole uutta, koska tarkisti vain junan rungon 9460c52c6 ja työlistan vanhan pidossa-rivin, ei proto-3d:n roolihaaroja; korjattu omistajalle 13.4x. Samalla PT jätti työlistan tuulimylly- ja sarjarivit päivittämättä, kun Karttaseppä yhdisti sarjan (b4767cf6c). Oppi: ennen kuin omistajalle kerrotaan tila, katsotaan roolien haarat (git log --all proto-3d:ssä) ja PT päivittää työlistan rivin heti, kun rooli ilmoittaa valmiin vaiheen.
