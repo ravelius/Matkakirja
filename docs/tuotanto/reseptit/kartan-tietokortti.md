@@ -289,7 +289,9 @@ Jokainen rivi on yksikkötesti puhtaalle muotoilufunktiolle; funktiot eivät hae
 }
 ```
 
-Wikipedian teksti haetaan suomeksi; jos suomenkielistä artikkelia ei ole, englanniksi (`kieli: "en"`), ja kehote kertoo
+Wikipedian teksti haetaan suomeksi; jos suomenkielinen artikkeli on tynkä (alle 1 500 merkkiä), sen perään liitetään
+englanninkielinen otsikolla "Englanninkielinen artikkeli:" (Karttaseppä 27.10., Etonin vedos 3: suomenkielinen oli kolme virkettä,
+jolloin Lue lisää jäi ilman uusia faktoja). Jos suomenkielistä artikkelia ei ole, englanniksi (`kieli: "en"`), ja kehote kertoo
 kielen, jotta Pulu kirjoittaa silti suomea. Jos Wikipedia-artikkelia ei ole lainkaan, `wikipedia` puuttuu.
 
 **Palautus (striimataan, pelkkä teksti, ei markdownia):** kaksi osaa, joiden välissä on tasan yksi rivi
