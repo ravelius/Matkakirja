@@ -1,0 +1,112 @@
+{
+  "stage": "SURFACES_REVIEW_V1",
+  "sourceOrderCommits": [
+    "1f83e14a3ed1e1f06c46ba9f03e92eefcf67c7f4",
+    "c1b73c0e691bfb292d11060a9d0a97704cbd1a45"
+  ],
+  "method": "Five built-in image_gen calls; full new second1068 source after cropped silhouette. Technical resize, format conversion and exact repetition of alpha unit; no painted retouch. Native sources preserved.",
+  "assets": [
+    {
+      "task": 1068,
+      "file": "1068-kannatinrivi.png",
+      "source": "sources/1068-native-v2.png",
+      "sourceSHA256": "c9646ab696bb6ed7620e8101d7f8be7fd830d95b2675d8a300dcc7754a191d8d",
+      "sha256": "07191c8b40573efdcdcacba9191f60e564c6cbdadca73ca2c36edadb7cf9d20a",
+      "bytes": 166491,
+      "dimensions": [
+        2048,
+        512
+      ],
+      "mode": "RGBA",
+      "repeatCountX": 4,
+      "cropBox": null,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.7486000061035156,
+      "edgeMaxAlphaLeft": 1,
+      "edgeMaxAlphaRight": 0,
+      "alphaTestSuggested": 0.5
+    },
+    {
+      "task": 1069,
+      "file": "1069-paattotiilirivi.png",
+      "source": "sources/1069-native-v1.png",
+      "sourceSHA256": "301c6bd7df801779a5825d1105c6ec523b66c18e8665dd15edc4c3c077d3a62b",
+      "sha256": "0cee559c110c407349458b6508dabe99dc6459d2019df7a10fdf86bbcc4843ac",
+      "bytes": 69869,
+      "dimensions": [
+        1024,
+        256
+      ],
+      "mode": "RGBA",
+      "repeatCountX": 4,
+      "cropBox": null,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "transparentFraction": 0.6360931396484375,
+      "edgeMaxAlphaLeft": 0,
+      "edgeMaxAlphaRight": 0,
+      "alphaTestSuggested": 0.5
+    },
+    {
+      "task": 1070,
+      "file": "1070-ristikko-pariovi.jpg",
+      "source": "sources/1070-native-v1.png",
+      "sourceSHA256": "add09a11b51846d2d98c783bc58a03ce0885881e0f24a3ccab9767ed5c50e45e",
+      "sha256": "6d48dcba65e3cffa87048467d2f719db27d7ed1ddb3d633671039e0f7e275970",
+      "bytes": 282814,
+      "dimensions": [
+        512,
+        1024
+      ],
+      "mode": "RGB",
+      "repeatCountX": 1,
+      "cropBox": null,
+      "horizontalSeamMeanAbsRGB": 11.4736328125,
+      "verticalSeamMeanAbsRGB": 19.199869791666668
+    },
+    {
+      "task": 1071,
+      "file": "1071-ristikkoikkuna.jpg",
+      "source": "sources/1071-native-v1.png",
+      "sourceSHA256": "3d393e30f1dd02d920a99e24ea4d23e9ad241221192c4b3e5042b3c9770a4931",
+      "sha256": "f3346db9c0525a3b63575a13cb7cfc1574e00ea29a8439066aaf72aae6ee8161",
+      "bytes": 110225,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "repeatCountX": 1,
+      "cropBox": [
+        18,
+        25,
+        1240,
+        1235
+      ],
+      "horizontalSeamMeanAbsRGB": 5.794270833333333,
+      "verticalSeamMeanAbsRGB": 6.259114583333333
+    }
+  ],
+  "texture1068Placement": {
+    "stripWidthM": 2.4,
+    "stripHeightM": 0.6,
+    "bracketCenterSpacingM": 0.6
+  },
+  "texture1069Placement": {
+    "suggestedStripWidthM": 1.2,
+    "suggestedStripHeightM": 0.3,
+    "note": "Adjust UV physical scale to roof; do not distort circle proportions."
+  },
+  "limitations": [
+    "Game material/lighting and final reference-match review pending receiver.",
+    "Generated texture source has shallow recess/relief shading, not a measured physically pure albedo. No scene shadows or illumination gradient.",
+    "Window tile grid continuous; small wood-color discontinuity may remain at repeat edge. See measured seam and2x2proof.",
+    "Alpha should use cutout/MASK with mip/dilation control at receiver. Faint generated fringe alpha below0.5 is retained in native and export."
+  ],
+  "newTripoCalls": 0,
+  "imageCalls": 5,
+  "imageCost": "Monetary price not exposed by tool; zero Tripo credits",
+  "gameIntegrated": false,
+  "receiverAccepted": false
+}
