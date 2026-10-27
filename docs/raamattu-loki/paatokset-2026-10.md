@@ -2815,3 +2815,7 @@ OMISTAJAN PÄÄTÖKSET klo 10.05 (kortti KK:ssa, sanatarkasti): "Tehdäänkö ko
 ## ÄÄNILUPA VAIN YLI 3 %:N AJOIHIN, MYÖS UUSILLA ÄÄNILLÄ (omistaja 27.10. klo 10.06, KK:n välitys) (27.10.2026 klo 10.07)
 
 OMISTAJAN PÄÄTÖS klo 10.06 (sanatarkasti, viesti KK:lle): "Ohjeissa pitäisi siis olla, että äänien generoinnista ei tarvitse erikseen pyytää lupaa, ellei se käytä yli 3% koko kuukausikiintiöstä." RAAMATTU: 5.1 (otsikko ja 3 %:N RAJA: raja koskee myös uusia henkilöitä, ääniä, koeottoja ja uusintoja; kumoaa "uusi henkilö tai uusi ääni vaatii aina luvan"), 5.2 (määrä- ja ottoluvat vain rajan ylittävään kulutukseen) ja 7.27 ÄÄNISTÄ EI KORTTEJA (lupakortti vain yli 3 %:n ajoihin; rajan alla kulutus KK:lle jälkikäteen yhdellä rivillä). KK:n tiedoksi: Olavinlinnan 1017 v2 ja vaakunahuomio viety omistajalle.
+
+## JUOKSUPELIN OVIKOHTAUS (omistaja 27.10. klo 10.10, KK:n välitys) (27.10.2026 klo 10.11)
+
+OMISTAJAN PYYNTÖ klo 10.10 (sanatarkasti, tason 1 ovikuvista): "Keisarin pitää itse työntää ovi auki ja samalla juosta ulos, ja kameran ei tarvitse näyttää huonetta. Kamera voi olla siis käytävällä. Lähinnä siinä on se idea, että keisari näyttää pakenevan huoneen sisältä kujalle, missä kamera tulee häntä vastaan." TOIMET (KK): välitetty PK:lle (ovet kiinni, kunnes keisarin kädet osuvat; kamera kujalla häntä vastaan; Codexille täydennys: oven työntö juostessa). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
