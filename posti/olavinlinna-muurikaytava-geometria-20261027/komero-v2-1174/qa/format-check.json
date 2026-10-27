@@ -1,0 +1,41 @@
+[
+ {
+  "nimi": "komero.glb",
+  "virheet": [],
+  "huomiot": [],
+  "tiedot": {
+   "nimi": "komero.glb",
+   "tyyppi": "esine",
+   "kolmiot": 2646,
+   "piirrot": 5,
+   "materiaalit": 6,
+   "solmut": 15,
+   "kuvat": [
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "1024×1024 jpg",
+    "1024×1024 jpg",
+    "512×512 jpg"
+   ],
+   "rajat": {
+    "min": [
+     -51.898,
+     14.8,
+     -6.051
+    ],
+    "max": [
+     -50.077,
+     17.05,
+     -4.919
+    ],
+    "koko": [
+     1.822,
+     2.25,
+     1.132
+    ]
+   }
+  }
+ }
+]

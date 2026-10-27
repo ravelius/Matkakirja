@@ -1,0 +1,20 @@
+{
+  "mail": [
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3d-v2-3c-v2-kuittaus-20261027.md",
+      "commit": "789773d34e92bfaf051636930a8305635c00d1f6",
+      "blob": "83670df4424290a89889af63893bfd95d8363a09",
+      "readInFull": true
+    },
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3c-komero-lupa-20261027.md",
+      "commit": "b4ae5d6809e595d9e0683b68ada40a73027fa52e",
+      "blob": "af133286dd6ce513490dbd36df4dd2420fa76d81",
+      "readInFull": true
+    }
+  ],
+  "readHead": "9194a7fc189af70f3f127c2794e9076620c41073",
+  "originalKomeroSHA256": "8bb80b75ee08ee24eb63507b5021c0e00b96ff85ba2bc714d4af6a55592d8892",
+  "originalPropSHA256": "7f6fdff907a51576ba2888aa6790675342f873a612edb1bb5c45ca7d67bf4c5c",
+  "originalPropPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/esine-tiili-komero.glb"
+}

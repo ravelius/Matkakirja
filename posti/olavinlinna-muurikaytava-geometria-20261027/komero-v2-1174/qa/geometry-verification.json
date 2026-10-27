@@ -1,0 +1,274 @@
+{
+  "inputGLBSHA256": "877edc14eaebb0d7d5b4a044148c3a1a319c48d0d1aa69dae4b8de28592d92b3",
+  "sourceMarkers": 95,
+  "exportedMarkers": 95,
+  "changedMarkers": [],
+  "extraMarkers": [],
+  "walkSamples": 5624,
+  "newHeadroomObstructionsCount": 0,
+  "newHeadroomObstructions": [],
+  "missingFloorSamplesCount": 0,
+  "missingFloorSamples": [],
+  "newClearanceNarrowingsCount": 0,
+  "newClearanceNarrowings": [],
+  "closedPuzzleChangesCount": 76,
+  "closedPuzzleChanges": [
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      0.6,
+      3,
+      0.16708211600780487,
+      0.060427334159612656
+    ],
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      0.6,
+      4,
+      0.4,
+      0.050261273980140686
+    ],
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      0.6,
+      5,
+      0.4,
+      0.08629289269447327
+    ],
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      1.5,
+      3,
+      0.16708208620548248,
+      0.06042758375406265
+    ],
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      1.5,
+      4,
+      0.4,
+      0.050260722637176514
+    ],
+    [
+      [
+        -51.49340057373047,
+        5.908430576324463,
+        14.799999237060547
+      ],
+      1.5,
+      5,
+      0.4,
+      0.08629335463047028
+    ],
+    [
+      [
+        -51.33361053466797,
+        5.211767673492432,
+        14.800000190734863
+      ],
+      0.6,
+      4,
+      0.4,
+      0.3328717052936554
+    ],
+    [
+      [
+        -51.33361053466797,
+        5.211767673492432,
+        14.800000190734863
+      ],
+      1.5,
+      4,
+      0.4,
+      0.3328700065612793
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      0,
+      0.4,
+      0.09005381911993027
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      1,
+      0.4,
+      0.15461327135562897
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      2,
+      0.4,
+      0.16487039625644684
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      3,
+      0.4,
+      0.05723049119114876
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      4,
+      0.4,
+      0.047602493315935135
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      5,
+      0.11699048429727554,
+      0.014550114050507545
+    ],
+    [
+      [
+        -51.74477005004883,
+        5.284265041351318,
+        14.799999237060547
+      ],
+      0.6,
+      6,
+      0.09731139242649078,
+      0.01210233848541975
+    ]
+  ],
+  "closedPuzzleExplanation": "Named komero_tiilitatto infill intentionally blocks closed puzzle; opened state removes it and existing removable bricks. Source gameplay collision is not changed.",
+  "doors": [
+    {
+      "name": "ovi:kellotorni",
+      "rays": 651,
+      "baselineBlocked": 0,
+      "newlyBlocked": []
+    },
+    {
+      "name": "ovi:muurikaytava",
+      "rays": 651,
+      "baselineBlocked": 31,
+      "newlyBlocked": []
+    }
+  ],
+  "windows": [
+    {
+      "name": "muurikaytava-aukko",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "muurikaytava-aukko.001",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "muurikaytava-aukko.002",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "muurikaytava-aukko.003",
+      "rays": 9,
+      "blocked": []
+    }
+  ],
+  "cameras": [
+    {
+      "name": "kamera:K3",
+      "baselineFreeMetres": 3,
+      "finalFreeMetres": 3
+    },
+    {
+      "name": "kamera:K4",
+      "baselineFreeMetres": 3,
+      "finalFreeMetres": 3
+    },
+    {
+      "name": "kamera:K5",
+      "baselineFreeMetres": 3,
+      "finalFreeMetres": 3
+    }
+  ],
+  "brickSlots": [
+    {
+      "marker": "tiili:komero-1",
+      "testedRays": 9,
+      "blocked": []
+    },
+    {
+      "marker": "tiili:komero-2",
+      "testedRays": 9,
+      "blocked": []
+    },
+    {
+      "marker": "tiili:komero-3",
+      "testedRays": 9,
+      "blocked": []
+    },
+    {
+      "marker": "tiili:komero-4",
+      "testedRays": 9,
+      "blocked": []
+    },
+    {
+      "marker": "tiili:komero-5",
+      "testedRays": 9,
+      "blocked": []
+    },
+    {
+      "marker": "tiili:komero-6",
+      "testedRays": 9,
+      "blocked": []
+    }
+  ],
+  "ladder": {
+    "baselineFreeMetres": 3.17,
+    "finalFreeMetres": 3.17,
+    "gameplayClimbAnimationUnchanged": true
+  },
+  "toleranceMetres": 0.015
+}

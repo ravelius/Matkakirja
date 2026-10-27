@@ -1,0 +1,36 @@
+{
+  "outputSHA256": "877edc14eaebb0d7d5b4a044148c3a1a319c48d0d1aa69dae4b8de28592d92b3",
+  "onlyMeshChanged": "komero_tiilitatto",
+  "otherMeshesAndAllNodesExactlyUnchanged": true,
+  "originalBinaryPrefixUnchanged": true,
+  "originalMaterialsAndImagesUnchanged": true,
+  "infillBoundsBefore": [
+    [
+      -51.80852508544922,
+      14.800000190734863,
+      -6.035487174987793
+    ],
+    [
+      -51.525474548339844,
+      17.049999237060547,
+      -5.174511909484863
+    ]
+  ],
+  "infillBoundsAfter": [
+    [
+      -51.80852508544922,
+      14.800000190734863,
+      -6.035487651824951
+    ],
+    [
+      -51.525474548339844,
+      17.049999237060547,
+      -5.1745123863220215
+    ]
+  ],
+  "maximumBoundDifferenceMetres": 4.76837158203125e-07,
+  "komeroMarkersExactlyPreserved": 12,
+  "sixBrickMarkerLocationsExactlyPreserved": true,
+  "newPropCount": 0,
+  "newImageGenerationCalls": 0
+}

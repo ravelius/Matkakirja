@@ -1,0 +1,92 @@
+{
+  "taskNumbers": [
+    1151,
+    1153,
+    1174
+  ],
+  "files": [
+    {
+      "path": "LAHTEET.md",
+      "sha256": "795915579c10fc79585a24efbb7f77cdd6468ed79a05ad33788703850e85e03c",
+      "bytes": 1085
+    },
+    {
+      "path": "LUEMINUT.md",
+      "sha256": "aec14f1bbd90c622eca9b4ee76d8a5a68e399686de03d802113e3224e1baca11",
+      "bytes": 3485
+    },
+    {
+      "path": "OPIT-PT-LLE.md",
+      "sha256": "efb3f61e0bcbc15ffb87811b6fbee75161b9c5a6b28a0043167ae24dc492ecad",
+      "bytes": 590
+    },
+    {
+      "path": "SOURCE-PINS.json",
+      "sha256": "bca3dbeee9785b99a3c24d77cffd63de1b32aeb311e556a144636d84c947748a",
+      "bytes": 903
+    },
+    {
+      "path": "komero.glb",
+      "sha256": "877edc14eaebb0d7d5b4a044148c3a1a319c48d0d1aa69dae4b8de28592d92b3",
+      "bytes": 14040540,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä; täyttösolmu piilotetaan pulman avautuessa"
+    },
+    {
+      "path": "qa/build.json",
+      "sha256": "70bdba0eee79f01e65280916e1af49acb105197713adcbba6850edad05c992e8",
+      "bytes": 25812
+    },
+    {
+      "path": "qa/format-check.json",
+      "sha256": "15310b88127adf904bc9b7a06bb87bc53c6b220321d6bf3328e72cb8acb22534",
+      "bytes": 567
+    },
+    {
+      "path": "qa/geometry-verification.json",
+      "sha256": "d4e99cb99a0bb0de23b144756e7786999b757483768a624b9c4fbcf8d216851b",
+      "bytes": 4927
+    },
+    {
+      "path": "qa/komero-closed-unlit.png",
+      "sha256": "a57121eabe5cbf42b61c3cb1fe128057dd3566396354e9f5392b9cc387d665d8",
+      "bytes": 1500166
+    },
+    {
+      "path": "qa/komero-closed.png",
+      "sha256": "1a3e49a71be0eafc17e163cc246717c93a114bdb362c111d235d179581b64e6a",
+      "bytes": 1454139
+    },
+    {
+      "path": "qa/mortar-verification.json",
+      "sha256": "563bbc9383ad464868a05b7ae359c4b8e75770a61f01a9bdb8e0f71c291060e8",
+      "bytes": 448
+    },
+    {
+      "path": "qa/render-evidence-unlit.json",
+      "sha256": "7dfdf1937aede47d443252cc96338852e4db6c043d5cd750cc0cface2b01762a",
+      "bytes": 588
+    },
+    {
+      "path": "qa/render-evidence.json",
+      "sha256": "c52ddd5b87a55e52405d9f10ee74b367ff16460d57064450689adbf511bda9ef",
+      "bytes": 588
+    },
+    {
+      "path": "qa/scope-verification.json",
+      "sha256": "4669b92b8e5d3af7e5f57d170d3532d04f1a100a9e9f05ade84fb069eb18ac6d",
+      "bytes": 890
+    },
+    {
+      "path": "qa/visual-QA.json",
+      "sha256": "9b71275e27e745b69e9dbaf801b42dd4d7bea5d3dce8169fd2df94b2a5bb3216",
+      "bytes": 1009
+    }
+  ],
+  "localQA": "PASS",
+  "generationCallsIssued": 0,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

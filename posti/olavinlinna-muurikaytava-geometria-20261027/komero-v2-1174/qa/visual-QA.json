@@ -1,0 +1,18 @@
+{
+  "reviewedAt": "2026-10-27T16:04:16.660687+00:00",
+  "inputGLBSHA256": "877edc14eaebb0d7d5b4a044148c3a1a319c48d0d1aa69dae4b8de28592d92b3",
+  "result": "PASS_LOCAL_PENDING_RECIPIENT_REVIEW",
+  "fullResolutionViewed": [
+    "komero-closed.png",
+    "komero-closed-unlit.png"
+  ],
+  "findings": [
+    "Fill, all six unchanged original props and corridor wall visible together at source coordinates.",
+    "Pale closed mortar appears in every ordinary joint and the perimeter; no black open groove or black outer edge stripe.",
+    "Six original props share original brick atlas colour family with infill. Small bevel/contact shadows around props disappear in unlit pass; source prop shapes and positions not changed.",
+    "Full bricks use 0.2824 x 0.0869 m faces. Edge cuts and short pieces between fixed props are explicitly documented.",
+    "No new generated target image; these are internal model QA images, not game screenshots."
+  ],
+  "receiverAcceptance": false,
+  "gameIntegrationVerified": false
+}
