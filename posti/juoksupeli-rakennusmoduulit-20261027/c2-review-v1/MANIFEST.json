@@ -1,0 +1,149 @@
+{
+  "models": [
+    {
+      "task": 1061,
+      "file": "1061-c2-pylvas.glb",
+      "sha256": "66f16cbe2837780646f81630858f996f5a6d77a6c74752dcfdfdf2a109350360",
+      "sourceSHA256": "e12c33c64989cd592ffd5cf6813df28511007a32a49d8f09351dd2bdfe76d982",
+      "triangles": 1434,
+      "vertices": 1383,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "dimensionsXYZM": [
+        0.262704461812973,
+        1.100000023841858,
+        0.25823259353637695
+      ],
+      "pivot": "bottom-center",
+      "scaleXYZ": [
+        1.1207263469696045,
+        1.1207263469696045,
+        1.1207263469696045
+      ],
+      "technicalQA": "PASS",
+      "topologyUVPreserved": true,
+      "notes": "1.10m total height; uniform scale",
+      "status": "REVIEW_READY",
+      "receiverAccepted": false
+    },
+    {
+      "task": 1062,
+      "file": "1062-c2-paneeli.glb",
+      "sha256": "a7becc3a9e787b89b4bbdd774e827e6a3d77e7583577c0bb76e7d99c12eb37a9",
+      "sourceSHA256": "525cad991fa69dd470e8440dc7c19fef03de4df05914905d5ad7d09ed30d68e3",
+      "triangles": 1584,
+      "vertices": 1696,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "dimensionsXYZM": [
+        1.5,
+        0.7200000000000001,
+        0.12
+      ],
+      "pivot": "left-bottom-center",
+      "scaleXYZ": [
+        1.5301660551269798,
+        2.345341219742532,
+        1.0422192092047948
+      ],
+      "technicalQA": "PASS",
+      "topologyUVPreserved": true,
+      "notes": "1.5m panel length,0.72m vertical height,0.12m thickness; nonuniform dimensional fit",
+      "status": "REVIEW_READY",
+      "receiverAccepted": false
+    },
+    {
+      "task": 1063,
+      "file": "1063-c2-porraspaneeli-PROVISIONAL.glb",
+      "sha256": "f43bf8024041826b42a7744ce0523be1ef5a9514a40da1d37faee28bd0080725",
+      "sourceSHA256": "41c0e111a5d65ac82b50b892908ef5c4d6340aa966e13ec73ddfa0d739a7ec15",
+      "triangles": 1818,
+      "vertices": 1836,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "dimensionsXYZM": [
+        1.5,
+        0.7686154246330261,
+        0.1259646862745285
+      ],
+      "pivot": "left-global-bottom-center",
+      "scaleXYZ": [
+        1.5326471328735352,
+        1.5326471328735352,
+        1.5326471328735352
+      ],
+      "technicalQA": "PASS",
+      "topologyUVPreserved": true,
+      "notes": "PROVISIONAL: uniform scale to1.5m run only. Actual slope and infill height await receiver stair dimensions. Do not integrate as final.",
+      "status": "PROVISIONAL_DIMENSIONS_PENDING",
+      "receiverAccepted": false
+    },
+    {
+      "task": 1064,
+      "file": "1064-c2-vesisylkija.glb",
+      "sha256": "6d7a8cab25d788ac2259020fbf015e5db4cdaa98a341affe1ece55068a9b582b",
+      "sourceSHA256": "f5568f5c4393f3d0458cd570a38fa74945d4dea5af10d76ab98297b8268441a9",
+      "triangles": 2840,
+      "vertices": 2066,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "dimensionsXYZM": [
+        0.2333618551492691,
+        0.2512480914592743,
+        0.44999998807907104
+      ],
+      "pivot": "back-mount-center",
+      "scaleXYZ": [
+        0.458964079618454,
+        0.458964079618454,
+        0.458964079618454
+      ],
+      "technicalQA": "PASS",
+      "topologyUVPreserved": true,
+      "notes": "0.45m projection in +Z, uniformly scaled; mouth cavity visible but no physical water channel validated",
+      "status": "REVIEW_READY",
+      "receiverAccepted": false
+    }
+  ],
+  "source": "Tripo H3.1,one candidate per model",
+  "credits": 180,
+  "calls": 4,
+  "elapsedS": 3.632361082942225,
+  "peakRSSMiB": 120.59375,
+  "assemblyExample": {
+    "postCentersX": [
+      0,
+      1.66,
+      3.32
+    ],
+    "panelOriginsXYZ": [
+      [
+        0.08,
+        0.15,
+        0
+      ],
+      [
+        1.74,
+        0.15,
+        0
+      ]
+    ]
+  },
+  "open": [
+    "1063 requires real stair rise/run and infill height from LR",
+    "Receiver lighting, repeated stone tone and camera fit pending",
+    "1064 is decorative spout; no water simulation or tunnel guaranteed"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task": 1066,
+  "sourceImage": "sources/1066-native-v2.png",
+  "sourceSHA256": "f261e43749c5ab48ec4052dc1ba567a364729388fc0d252e48cc24710334aef5",
+  "imageCalls": 2,
+  "tripoCredits": 0,
+  "dimensions": [
+    2048,
+    2048
+  ],
+  "albedoProcessing": "resize only; generated pigment texture, no baked tile lighting",
+  "normalSource": "Analytic periodic height field: 12mm sinusoidal troughs and2.5mm smooth course overlap ribs. Not a measured historical scan. No albedo-derived bump.",
+  "recommendedWorldRepeatM": [
+    1.6,
+    1.28
+  ],
+  "troughsAcrossU": 8,
+  "coursesAlongV": 4,
+  "normalSeamMaxRGBDifference": 0,
+  "albedoSeamMetrics": {
+    "XMeanAbsRGB": 2.2405598163604736,
+    "YMeanAbsRGB": 2.5869140625
+  },
+  "normalImport": "Linear / NormalMap; OpenGL +Y and DirectX -Y supplied, choose one matching engine import. Do not sample as sRGB.",
+  "materialSuggestion": "Ceramic dielectric, metalness0; VS decides roughness and final amber/gold tint in game.",
+  "limits": [
+    "Normal map does not change roof silhouette or collisions; use on existing roof geometry.",
+    "Generated amber glaze color is selected after rejecting coarse yellow v1; VS sets final tint and roughness.",
+    "Normal surface is a regular simplified trough pattern, not the exact Tripo tile geometry.",
+    "Albedo wrapping still needs target-camera game QA; quantitative boundary error is reported."
+  ],
+  "receiverAccepted": false,
+  "elapsedS": 3.366990667069331,
+  "peakRSSMiB": 306.421875
+}
