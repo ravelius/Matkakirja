@@ -2959,3 +2959,7 @@ OMISTAJAN PÄÄTÖS 18.51 (sanatarkasti): Hengitys ei sovi nuorelle keisarille. 
 ## OPPI: OMISTAJALLE VAIN SUOMEKSI (OMISTAJA 27.10. klo 19.23) (27.10.2026 klo 19.23)
 
 KK kirjoitti omistajalle englanniksi klo 18.53–19.12. Omistaja huomautti 19.23 (sanatarkasti): Käytä suomea. Rikottu periaate 5 (suomeksi). Myös PT:n ikkunan vastaukset olivat tänään englanniksi. Korjaus: kaikki omistajalle näkyvä teksti, myös PT:n ja roolien omien ikkunoiden vastaukset, kirjoitetaan suomeksi.
+
+## KIINNIOTTO VALMIS JUNAAN 213 (OMISTAJA 27.10. klo 19.52) (27.10.2026 klo 19.52)
+
+OMISTAJAN PÄÄTÖS 19.52 (kortti KK:ssa, sanatarkasti): Onko kiinniotto nyt valmis? → Kyllä (Suositus); selite: Kiinniotto viedään tällaisenaan seuraavaan junaan. Video PK v7 7ac355ba4 (Codexin takapinnat, hengitys pois, keisari-2 pois, repliikit 4 ja 9; KK tarkisti ruuduittain). Avoin: keisarin Huh-otto (KK suosittaa ottoa 2, odottaa omistajaa).
