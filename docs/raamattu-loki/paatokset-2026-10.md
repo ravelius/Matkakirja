@@ -2751,3 +2751,7 @@ KK:n päätös omistajan valtuutuksella klo 00.32 (sanatarkasti): juoksupelin l�
 ## KARTAN TIETOKORTTI JUNAAN 211, JUNA LÄHTEE ILMAN TESTEJÄ (KK omistajan valtuutuksella) (27.10.2026 klo 02.12)
 
 KK:n päätös omistajan valtuutuksella klo 02.12 (sanatarkasti): karttojen tietokortti (d7a25ce12; todiste proto-3d/lokit/todistus-tietokortti-3paikkaa-20261027-0204/kuvat/) hyväksytty junaan 211, ja juna 211 saa lähteä ilman testejä (omistaja 22.14 ja 22.17). Tarkistettu omistajan sanoja vasten: faktat ja kuva näkyvät heti, Pulun teksti striimataan, Lue lisää ja lähderivi toimivat kolmessa paikassa. Palvelimella ennen aamua (KS/SK, ei vaadi julkaisua): 1) Windsor (~32 000 as.) on laji "Kaupunki", ei "Pikkukaupunki", ja asukasluvusta puuttuu vuosi. 2) Pulun virkkeet vain lähdetekstin pohjalta: Windsorissa "saksit perustivat sinne linnoituksen" on väärin, sillä linnan rakennutti Vilhelm Valloittaja noin vuonna 1070. 3) Toistotarkistus läpäisyyn.
+
+## LEIVONNAN PUHDAS LAAJENEE: PALOJEN VÄLISET PÄÄLLEKKÄISET PINNAT JA VALO AURINGONSÄDETTÄ VASTEN (KK, periaate 10) (27.10.2026 klo 02.45)
+
+KK klo 02.45 (sanatarkasti): leivonnan PUHDAS laajenee. VS:n tarkistin hakee nyt myös palojen väliset päällekkäiset pinnat ja vertaa leivottua valoa auringonsäteeseen. Syy: kujan 02 iso vaalea läikkä oli naapuripalan 1-3 lattia palan 0-3 lattian tasossa, eikä vanha tarkistus nähnyt sitä (VS selitti sen ensin auringoksi). Kuja saa oman taustapalan omalla 1024-atlaksella (KK 02.40); LR leipoo kerran, kun 1-3:n lattia on poistettu.
