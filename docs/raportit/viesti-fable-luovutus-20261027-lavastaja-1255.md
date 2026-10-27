@@ -275,3 +275,20 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   ajettu paikallaan (vanha .ennen-taydennys), 23 palaa. LISÄÄ TÄMÄ JOKAISEN TAUSTAKETJUN LOPPUUN.
 - SEURAAVAKSI: PK:n tarkistus juuri-v85m:llä (C1 Baohedian, Taihemen, paviljongit); viisteen v < 0; T-risteys, aukion sivuhallit, 04,
   06, 07 (EROLISTA); jonossa Olavinlinnan palatsi-v2; valon uusi leivonta (katto_uv1, myös leivo_valo) vasta omistajan luvalla.
+
+## LISÄYS 19 klo 19.59: reunakivi yksittäisinä kivinä, tausta-v59 ja -v60 viety (LUOVUTUS, konteksti 30 %)
+- VIETY: tausta-v59 (= yksikerros-v79 + tausta.json; JU vei, NS junaan 212 ff39153ac). tausta-v60 (= yksikerros-v83) JU:lle 19.59
+  (_valmiit/juoksupeli-kk-tausta-peking-v60-vienti-20261027, SHA256SUMS b0b11ab458e1), osoitin lavastaja/tausta-v60-212 9805ef7c5
+  (proto-repo, worktree wt/proto-lavastaja-muoto). KK 19.1x: muoto hyväksytty; lovettoman parin 195504 KK:lle ja PT:lle.
+- REUNAKIVI (PT/KK 17.4x–19.1x, omistajan 16.03 "pitkiä yksittäisiä kiviä"): 0,30 × 0,20 m (REUNA_W/REUNA_H), kivet geometriassa
+  K/tyokalut/reunakivi_kivet.py (kuja_reunakivi2.py ja kuja01_reunakivi2.py kutsuvat): yläpinnan V-urat 2 × 6 mm / 3 cm, viiste 2 cm,
+  REUNA_URA_VIISTE=0 (viiste ja etupinta ehjät). Urat kohdissa u = k·0,7 + (frac(k·0,618034) − 0,5)·0,2 = VS:n ReunusRaja (seinat-211
+  2cb23fc37→); TiivisteK ei kelpaa rajoihin (float32 kaoottinen). UV0.u = urien pituus-u, v = ±1000 merkkinä → kivireunus_uv.py säilyttää u:n
+  (oma PCA-akseli erosi ~1e-4 → x ≈ −247 siirsi u:ta 2–30 cm = v88m:n valkoiset viivat); uraseinät ja päädyt vakio-u. Ketju aja_ketju_v83.zsh.
+- KORJATTU: kuja01_reunakivi2.py:stä puuttui import os (v79:ssä kujan 01 reunakivi puuttui kokonaan; 01:n "penkki" hävisi korjauksella).
+- Havainneparit: AINA VS:n pinnalla REF=<VS:n seinat-211 SHA, nyt 3985a20cf> MALLIT=file://<juuri>/ zsh _tyo/linssiseppa2/tyokalut/editori-vs.sh
+  02 01 05 03; juureen sekä kielletty-tausta-v57 ETTÄ -v59 (ja jatkossa -v60) samaan yksikerros-kansioon (juna-212 lataa v59/v60). Uusin H/juuri-v89m.
+- PK 18.1x: C1 v4 OK pelissä; epävarma: Meridiaaniportin itäpaviljongin alakaton vasen nurkka portaikkoinen.
+- SEURAAVAKSI: rakennukset-v54 + c1-v4 + c2-v3 vienti PK:n linjan kanssa (rakennukset-v54 vaatii C1-koodin); T-risteys, aukion sivuhallit,
+  04, 06, 07 (EROLISTA); Olavinlinna 3c pako-v2 ja 3d tyrma-e101-v2 (NS 19.0x: PT kirjannut LR:lle koottaviksi, tiedostoja ei vielä löytynyt);
+  valon uusi leivonta vasta omistajan luvalla.
