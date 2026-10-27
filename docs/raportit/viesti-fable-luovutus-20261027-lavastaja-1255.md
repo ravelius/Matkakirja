@@ -292,3 +292,64 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - SEURAAVAKSI: rakennukset-v54 + c1-v4 + c2-v3 vienti PK:n linjan kanssa (rakennukset-v54 vaatii C1-koodin); T-risteys, aukion sivuhallit,
   04, 06, 07 (EROLISTA); Olavinlinna 3c pako-v2 ja 3d tyrma-e101-v2 (NS 19.0x: PT kirjannut LR:lle koottaviksi, tiedostoja ei vielä löytynyt);
   valon uusi leivonta vasta omistajan luvalla.
+
+## LISÄYS 20 klo 20.05: reunakiven muoto ja väri LUKOSSA (omistaja 20.05, KK:n kortti)
+- OMISTAJA 20.05 "Kyllä (Suositus)": reunakiven muoto ja väri hyväksytty (pari 195504, tausta-v60), koskee myös kujia 01, 05 ja 03.
+  Seuraavaan junaan (213) PT:n kautta: tausta-v60 on JU:lla (SHA256SUMS b0b11ab458e1, osoitin lavastaja/tausta-v60-212 9805ef7c5).
+- Pinnan rosoisuuden viimeistely VS:llä (varjostin/pinta); Lavastaja EI muuta reunakiven geometriaa (REUNA_W/H, urat, viiste) ilman uutta päätöstä.
+
+## LISÄYS 21 klo 21.0x: muurin yläreuna kiveksi (omistaja 20.06 "Kivimuurin yläreunasta puuttuu tekstuuri"; VS sopi työnjaon)
+- Syy: sokkelin päällä V4_sokkeli_kansi (tasaväri, yläpinta 1,2–1,3 m, 8–10 cm etureuna) ulkoni 6 cm sokkelin pinnasta.
+- K/tyokalut/kansi_seinaan.py (ketjussa marmori_pystyt_sokkeliin-askeleen jälkeen, K/tyokalut/aja_ketju_v84.zsh → yksikerros-v84):
+  kannen pystyreunat sokkelin tasoon (mitattu 6 cm → 0), litteät alapinnat pois, kaikki kansi → V4_sokkeli (VS: laji 11 kivikerta myös vaakapinnalle).
+  Matalat marmoripystyt → V4_sokkeli vain, jos ≤ 1,45 m ja sokkelin vieressä (lähes ei osumia).
+- Parit: lokit/havainne-editori-20261027-205842 (02 01 05, VS:n REF 77417f7e4, H/juuri-v90m = v89m + tausta-v57/59/60 → yksikerros-v84), VS:llä.
+- AVOIN: pilarien beiget kulmakivet ovat jo V4_sokkelia → sävy VS:n varjostimesta (VS:lle 21.0x). v84 EI vielä vientinä (tausta-v61), odottaa VS:n lähikuvaa ja KK:ta.
+- VS 21.1x: kulmakivet mitattu samaa harmaata kuin sokkeli (186/177/170 vs 177/170/163), ei erottelua. VS tekee KK:lle yhdistelmäparin (rosoisuus a1d79e26e + juuri-v90m); KK:n kuittauksen jälkeen v84 → tausta-v61 JU:lle.
+- VS 21.3x: beige kulmakivi = auringon puoleisten pystypintojen valo, korjattu VS:n varjostimessa 1158e9df0 (ei nimenvaihtoa; pilarit ovat taustassa 0-3, eivät avoin-paloissa). Geometriaa ei tarvita lisää.
+- KK 21.2x: välikorjaus loppuun → tausta-v61 = yksikerros-v84 (_valmiit/juoksupeli-kk-tausta-peking-v61-vienti-20261027, SHA256SUMS c24b05fa9218),
+  osoitin lavastaja/tausta-v61-213 da2a83a50 (proto, wt/proto-lavastaja-muoto). Vienti JU:lle + osoitin NS:lle, kun KK kuittaa VS:n yhdistelmäparin. Kansi muutettu vain LOD0:ssa.
+- KK 21.2x: Codex tekee kujien kivet havainteen mukaisina paloina (PK tilaa); mitat PK:lle 21.3x (reunakivi 0,30 × 0,20 × 0,6–0,8; sokkeli 1,20 ilman kansilistaa;
+  pilari ~0,4 ulos × 0,6; lattia kuja ~6,8, laatat 0,6–1,2 × 0,4–0,6). SEURAAVAKSI: kun palat tulevat, LR kokoaa ne nykyisten kivien tilalle → pari KK:lle.
+
+## LISÄYS 22 klo 22.1x: v85 + muurikate-v19 (KK 21.5x pari 211947: suikale ja pilarien harmaat katteet), pari 221009 KK:lla
+- Suikale = taustan 1,30 m:n kaistan etupinta siirtyi v84:ssä 7 cm (yläpinta T-liitoksin pilkottu, ei siirtynyt) → kansi_seinaan.py KANSI_YLA=1.205
+  (aja_ketju_v85.zsh → yksikerros-v85). tausta-v61 (v84) EI käyttöön.
+- Pilarien katteet = muurikatteen V4_sokkeli_kansi (0,22 × 0,95 m, 1,20–1,26) → muurikate_kansi.py (seinän tasoon 5422 reunaa, kansi → V4_sokkeli,
+  nimet tarkoiksi). Junan v18-pohjasta K/muurikate-v19/kielletty-muurikate-v19/kk-muurikate-v19-pohja.glb (+ 1057-c3 ja c3-sijoitukset kopioina);
+  parin v16-nimelle v17:stä K/muurikate-v19/pari-v17-v16-nimella. HUOM: juna 213 MuurikateTiedosto = kielletty-muurikate-v18/kk-muurikate-v18-pohja.glb.
+- Pari: lokit/havainne-editori-20261027-221009/02 (H/juuri-v92m, REF 1158e9df0). VS:n editori-vs.sh viittaa poistettuun wt/proto-linssiseppa2-p11:een →
+  oma kopio T=wt/proto-lavastaja-havainne/tyokalut/havainne.
+- Kuittauksella: tausta-v62 (= v85) + muurikate-v19 paketit JU:lle, osoitin (TaustaKansio v62, MuurikateTiedosto v19-pohja) NS:lle.
+- Codexin 2D-pinnat (omistaja 21.51/21.54): kivien ja kattojen/friisien/rappauksen pintamitat PK:n postissa bba13fd6b ja 7eb80206c; muodot ja UV:t LR.
+- KK 22.2x: pari 221009 ok, omistajan kortilla. VALMIINA: _valmiit/juoksupeli-kk-tausta-peking-v62-vienti-20261027 (SHA256SUMS eb30ccc2f8fb) ja
+  _valmiit/juoksupeli-kk-muurikate-v19-vienti-20261027 (6afb0652f35f; vanha C3-kate jää v18-kansioon). Osoitin lavastaja/tausta-v62-213 5ca3e2d4b
+  (natiiviseppa/juna-213:n päällä, wt/proto-lavastaja-muoto). NS:lle ja JU:lle VASTA kun KK välittää omistajan Kyllän.
+- OMISTAJA 22.23 (KK): Kyllä → tausta-v62 + muurikate-v19 JU:lle ja osoitin 5ca3e2d4b NS:lle junaan 213 (lähetetty 22.2x). SEURAAVAKSI: Codexin 2D-pinnat (kivet, sitten katot/friisit/rappaus) → muodot + metriset UV:t → pari KK:lle.
+- JONO (PT 22.3x): Pekingin kivet ja 2D-pinnat ensin; sitten Olavinlinnan aarteet J3/J4 (Codex 0cba769bd, NS:n tekninen vastaanotto OK) arkkuun ja käteen, NS:n havainnot (J4-kannun kahvan venynyt tekstuuri, arkkujen laakeat sävyt) pelin valossa → pari KK:lle; korjauspyyntö Codexille vasta sen jälkeen.
+
+## LISÄYS 23 klo 22.5x: Codexin kujakivien 2D-pinnat kokoamiseen (LUOVUTUS, aloita tästä)
+- TILA: juna 213:ssa tausta-v62 (= yksikerros-v85) + muurikate-v19 (NS 5ca3e2d4b, JU vienyt). Pohja seuraavalle: K/yksikerros-v85, K/muurikate-v19.
+- PINNAT: claude/postilaatikko c56b5c011, posti/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v3/ (myös T7, SHA 110/110). LUE KAYTTO.md:
+  reunakivi 0,70 × 0,52 clamp (yläpinta 0–0,30 | viiste 0,30–0,32 | etu 0,32–0,52 kuvan yläreunasta), sokkeli 2,00 × 1,20 X-toisto (yläreuna = ylin kerta),
+  sokkelin-ylapinta 2,00 × 0,10 (y=0 etureuna), pilarin-etu 0,60 × 1,20 ja -sivu 0,40 × 1,20 clamp (etu OIKEA reuna = sivu VASEN reuna samassa ulkokulmassa),
+  lattialaatat 2 × 2 toisto (kuvan pysty = kujan suunta). Normaali OpenGL +Y, PNG:n rivit alas. Valitse SAMA vNN kaikille (aloita v01).
+- VS 22.5x SOPI (A): LR tekee metriset UV0:t + omat materiaalit V4_kujakivi_reuna / _sokkeli / _sokkeli_yla / _pilari_etu / _pilari_sivu / _lattia,
+  kuvat glb:hen baseColorTexture + normalTexture (EI karheutta). Peli piirtää laji 0 -polulla (JuoksuMaailma.shader: albedo + JUOKSU_NORMAALI + leivottu UV1).
+  UV1 (valo_rgbm) säilyy, koska vain materiaali ja UV0 muuttuvat (leivonta seis, omistaja 10.56). VS lisää myöhemmin kohokuvion leivottuun valoon ja rajaa
+  JuoksuMaaKivi-sävytyksen V4_kujakivi_*:sta, jos tarpeen. VS odottaa REF/juuri-tietoa parille 02/01/05.
+- TOTEUTUS (ehdotus): Blender-askel kujakivi_uv.py ketjuun kansi_seinaan.py:n jälkeen (aja_ketju_v86.zsh → yksikerros-v86):
+  (1) kuja-palat kk-tausta-kuja-0-3/1-3: V4_kivireunus → _reuna, UV0.u = kiven sisäinen 0–0,70 (kivirajat u = k·0,7 + (frac(k·0,618034) − 0,5)·0,2,
+  nykyinen UV0.u on jo urien pituus-u → u_kivi = (u − alku)/(loppu − alku)·0,70), UV0.v = poikkileikkauksen kaari 0–0,52 (kivireunus_uv.py:n v ±1000 -merkki
+  kertoo puolen; tarkista). V4_lattia kujapaloissa → _lattia, UV0 = kujan akselin suuntainen tasoprojektio / 2,0 m.
+  (2) Taustan V4_sokkeli-pystypinnat kujapalojen alueella (bbox + 3 m) → _sokkeli, u = seinän suuntainen etäisyys / 2,0, v = z / 1,20; yläpinnat → _sokkeli_yla.
+  (3) Muurikatteen pilarien sokkelilohkot (V4_sokkeli, 0–1,20 m, kansi 0,22 × 0,95) → _pilari_etu (leveät pinnat) / _pilari_sivu (kapeat), u venytetään pinnan leveyteen.
+  Sitten python-askel kujakivi_kuvat.py (tausta_pinnat.py:n mallilla, JSON + numpy): kuvat ja materiaalit glb:hen. Pari 02/01/05 omalla editori-kopiolla
+  (/private/tmp ei säily → kopioi _tyo/linssiseppa2/tyokalut/editori-vs.sh ja vaihda T=/Users/Shared/Claude/wt/proto-lavastaja-havainne/tyokalut/havainne),
+  REF = VS:n uusin (1158e9df0 tai uudempi, kysy), juuri = H/juuri-v92m + tausta → v86, muurikate pariin v17-v16-nimella-kopio samalla käsittelyllä.
+- MUUT KUVAT TULOSSA: katot/friisit/rappaus (mitat postissa 7eb80206c): katto 1 × 1 m, friisi 4,13 × 1,03 m (nykyinen UV0 jo valmis), kultalista 1 × 0,06, rappaus 4 × 4 m + likajuova.
+- JONO: Olavinlinnan aarteet: J4 (Codex 0cba769bd) voi edetä, J3 vasta Codexin korjatulla (ee62a9541: kaksi ylimääräistä kilpeä); NS:n havainnot (J4-kannun kahvan
+  venynyt tekstuuri, arkkujen laakeat sävyt) pelin valossa → pari KK:lle, korjauspyyntö Codexille vasta sitten.
+- TYÖKALUT tänään: K/tyokalut/kansi_seinaan.py (KANSI_YLA), muurikate_kansi.py, aja_ketju_v84/v85.zsh, aja_v84_juuri.zsh, aja_v85_pari.zsh. Proto-osoittimet
+  wt/proto-lavastaja-muoto: lavastaja/tausta-v62-213 5ca3e2d4b (junassa); lavastaja/tausta-v61-213 da2a83a50 EI käytössä.
+- HUOM: tämän checkoutin haara vaihtui kesken session koti-haaraan (joku muu sessio?) → tarkista git branch ennen committia.
