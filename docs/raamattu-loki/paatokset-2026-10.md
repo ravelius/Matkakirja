@@ -2747,3 +2747,7 @@ KK:n päätös omistajan valtuutuksella klo 00.22 (sanatarkasti): kyllä. VS tek
 ## JUOKSUPELI: LÄHIKAMERA JA TUMMAT POHJAT JUNAAN 211 (KK omistajan valtuutuksella) (27.10.2026 klo 00.33)
 
 KK:n päätös omistajan valtuutuksella klo 00.32 (sanatarkasti): juoksupelin lähikamera ja tummat pohjat (haara 8b961cc46 = caca66ee0 + VS 533efb219; 2× todiste proto-3d/_tyo/pelikoodari/kuvakulma-211/huopapohjat-todiste-20261027/) hyväksytty junaan 211. PK vie NS:lle. Pohjan sävy nostetaan tummanharmaaksi huovaksi (150e189c5), jos se ehtii ennen lukitusta, muuten seuraavassa junassa. Avoimet erät: 05-portti, salin sisäkamera, halli-20 ja halli-24.
+
+## KARTAN TIETOKORTTI JUNAAN 211, JUNA LÄHTEE ILMAN TESTEJÄ (KK omistajan valtuutuksella) (27.10.2026 klo 02.12)
+
+KK:n päätös omistajan valtuutuksella klo 02.12 (sanatarkasti): karttojen tietokortti (d7a25ce12; todiste proto-3d/lokit/todistus-tietokortti-3paikkaa-20261027-0204/kuvat/) hyväksytty junaan 211, ja juna 211 saa lähteä ilman testejä (omistaja 22.14 ja 22.17). Tarkistettu omistajan sanoja vasten: faktat ja kuva näkyvät heti, Pulun teksti striimataan, Lue lisää ja lähderivi toimivat kolmessa paikassa. Palvelimella ennen aamua (KS/SK, ei vaadi julkaisua): 1) Windsor (~32 000 as.) on laji "Kaupunki", ei "Pikkukaupunki", ja asukasluvusta puuttuu vuosi. 2) Pulun virkkeet vain lähdetekstin pohjalta: Windsorissa "saksit perustivat sinne linnoituksen" on väärin, sillä linnan rakennutti Vilhelm Valloittaja noin vuonna 1070. 3) Toistotarkistus läpäisyyn.
