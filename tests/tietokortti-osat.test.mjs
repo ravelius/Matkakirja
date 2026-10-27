@@ -97,7 +97,7 @@ test('neutraali asiateksti: minä- ja me-muoto hylätään', () => {
 test('maailmanperintö: oma kortin avain tunnuksella; vesilähde ei ole kielletty sana', async () => {
   const { korttiAvain, tarkistaTeksti } = await import('../tools/pollo/tietokortti.js');
   assert.equal(korttiAvain({ nimi: 'Akropolis', lat: 37.97, lon: 23.72, luokka: 'perinto', qid: 'Q131013' }), 'tietokortti:v4:perinto:Q131013');
-  const s2 = JSON.stringify({ nimi: 'Akropolis', faktat: [], wikipedia: { kieli: 'fi', teksti: 'Akropolis on linnavuori. Rinteillä oli lähteitä, joiden ansiosta linnoitus kesti piirityksen. Parthenon valmistui.' } });
+  const s2 = JSON.stringify({ nimi: 'Akropolis', faktat: [], wikipedia: { kieli: 'fi', teksti: 'Akropolis on Ateenan linnavuori. Rinteillä oli lähteitä, joiden ansiosta linnoitus kesti piirityksen. Parthenon valmistui.' } });
   assert.equal(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja sen rinteillä oli lähteitä. Niiden ansiosta linnoitus kesti pitkänkin piirityksen, ja kukkula pysyi asuttuna.', s2, 'Akropolis').ok, true);
   assert.match(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja lähteen mukaan se kesti piirityksen. Kukkula pysyi asuttuna pitkään, ja sinne rakennettiin temppeleitä.', s2, 'Akropolis').syy, /sana/);
 });
