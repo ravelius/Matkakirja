@@ -145,7 +145,8 @@ export function valitseAsukkaat(e) {
     if (parempi) paras = x;
   }
   // Valitulla luvulla ei vuotta (Windsor: suositeltu 32 184 ilman P585): uusin vuodellinen luku vuodesta 1990 (KK 27.10.: vuosi näkyviin).
-  if (paras && !paras.vuosi) {
+  // Myös ennen vuotta 1990 olevan valinnan (suositeltukin) korvaa uusin vuodellinen luku vuodesta 1990 (SK 27.10.).
+  if (paras && (!paras.vuosi || paras.vuosi < '1990')) {
     const vuodelliset = (e?.claims?.P1082 ?? []).filter((c) => c.rank !== 'deprecated').map((c) => ({ maara: Math.round(Number(c?.mainsnak?.datavalue?.value?.amount)),
       vuosi: /^\+(\d{4})/.exec(c?.qualifiers?.P585?.[0]?.datavalue?.value?.time ?? '')?.[1] ?? null, ensisijainen: false }))
       .filter((x) => x.maara > 0 && x.vuosi >= '1990').sort((a, b) => b.vuosi.localeCompare(a.vuosi));

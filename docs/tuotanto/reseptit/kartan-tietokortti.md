@@ -162,7 +162,7 @@ on silti hyväksytty, koska pelin faktat ovat opetuksellisia eivätkä tarkkoja 
 
 ### 1.5 Luvut: pyöristys ja kirjoitusasu
 
-**Asukasluvun vuosi (KK 27.10.):** jos valitulla luvulla ei ole vuotta (P585), käytetään uusinta vuodellista lukua vuodesta 1990 alkaen; muuten luku ilman vuotta.
+**Asukasluvun vuosi (KK ja SK 27.10.):** suositeltu (preferred) arvo voittaa, jos sen vuosi on 1990 tai myöhemmin. Jos valitulla luvulla (suositellullakin) ei ole vuotta (P585) tai vuosi on ennen vuotta 1990, käytetään uusinta vuodellista lukua vuodesta 1990 alkaen; jos sellaista ei ole, valittu luku näytetään sellaisenaan.
 
 **Kirjoitusasu:** desimaalipilkku (`2,1`), tuhaterotin ei-katkeava väli (U+00A0: `180 000`), ei pistettä eikä sulkevaa lyhennettä
 muuten kuin yksiköissä (`km`, `m`, `km²`). Yksikkö on aina erillään luvusta ei-katkeavalla välilyönnillä.
