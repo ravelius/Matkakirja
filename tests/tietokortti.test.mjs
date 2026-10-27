@@ -78,8 +78,14 @@ test('resepti 1.9: luvut, vuodet, laji ja alarivi', () => {
   assert.equal(pintaAla(105.3), `noin 105${N}km²`);
   assert.equal(korkeus(4806.4), `4${N}806${N}m`);
   assert.equal(vuosi('+1889-00-00T00:00:00Z', 9), '1889');
-  assert.equal(vuosi('+1100-00-00T00:00:00Z', 7), '1100-luvulla');
+  // Wikidatan vuosisata: +1200 (tarkkuus 7) = 12. vuosisata = 1100-luvulla (Angkor Wat, KK 27.10.).
+  assert.equal(vuosi('+1200-00-00T00:00:00Z', 7), '1100-luvulla');
+  assert.equal(vuosi('+1150-00-00T00:00:00Z', 7), '1100-luvulla');
+  assert.equal(vuosi('+0082-00-00T00:00:00Z', 9), '82 jaa.');
+  assert.equal(vuosi('-3000-00-00T00:00:00Z', 7), '2900-luvulla eaa.');
   assert.equal(vuosi('+1880-00-00T00:00:00Z', 8), '1880-luvulla');
+  // Ennen ajanlaskua: Wikidatan -0500 (tarkkuus 7) = 5. vuosisata eaa. = 400-luvulla eaa. (PT 27.10., Akropolis).
+  assert.equal(vuosi('-0500-00-00T00:00:00Z', 7), '400-luvulla eaa.');
   assert.equal(vuosi('-0052-00-00T00:00:00Z', 9), '52 eaa.');
   assert.equal(vuosi('+1000-00-00T00:00:00Z', 6), null);
   assert.equal(laji(['Q2977', 'Q41176']).nimi, 'Tuomiokirkko');

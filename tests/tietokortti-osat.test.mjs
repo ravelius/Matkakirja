@@ -81,6 +81,15 @@ test('faktarivi vastaa kysymykseen (KK 27.10.: "Kuka Etonia hallinnoi?" ja "Alue
   assert.equal(faktaVastaa('Miten Eton College vaikuttaa kaupungin elämään?', faktat, 'Eton'), false);
 });
 
+test('siistiLisaa: otsikoton alkukappale pois, kun perässä on kaksi otsikollista jaksoa', async () => {
+  const { siistiLisaa, jasennaLisaa } = await import('../tools/pollo/tietokortti.js');
+  const raaka = 'Eton on kaupunki.\n\n## Koulu\nKoulu perustettiin.\n\n## Silta\nSilta suljettiin.\n\n###KYSYMYKSET###\nMiksi?\nMiten?';
+  const s = jasennaLisaa(siistiLisaa(raaka));
+  assert.deepEqual(s.jaksot.map((j) => j.otsikko), ['Koulu', 'Silta']);
+  assert.equal(s.kysymykset.length, 2);
+  assert.equal(siistiLisaa('Vain kappale.\n\n## Yksi\nTeksti.'), 'Vain kappale.\n\n## Yksi\nTeksti.');
+});
+
 test('lievin hylkäys valitaan, kun kaikki yritykset hylätään', async () => {
   const { hylkayksenVakavuus } = await import('../tools/pollo/tietokortti.js');
   assert.ok(hylkayksenVakavuus('vastattu') < hylkayksenVakavuus('toisto 1440'));
@@ -129,7 +138,9 @@ test('Lue lisää: jäsennys ja tarkistus (otsikot, sanat, kaksi kysymystä)', (
   // vainTeksti: teksti kelpaa ilman kysymyksiä (näytetään heti, KK 27.10.).
   assert.equal(tarkistaLisaa(lisaa().replace(KYSYMYKSET, '').split('\n').filter((r) => !r.endsWith('?')).join('\n'), syote, 'Windsor', '', { vainTeksti: true }).ok, true);
   // Johdannon vuosi toistuu Lue lisää -tekstissä → hylkäys.
-  assert.match(tarkistaLisaa(lisaa(), syote, 'Windsor', 'Windsoria kutsuttiin uudella nimellä vuoteen 1974 asti.').syy, /toisto/);
+  // Johdannon vuosiluku saa toistua kerran aikaviitteenä (KK 27.10.); muu johdannon luku ei.
+  const vuosi = tarkistaLisaa(lisaa(), syote, 'Windsor', 'Windsor sai nykyisen asemansa vuonna 1974.');
+  assert.equal(vuosi.ok, true, JSON.stringify(vuosi));
 });
 
 test('kysymysrivi myös poikkeavissa muodoissa; tuhaterotin pilkkuna lähteessä', () => {
@@ -156,7 +167,7 @@ test('neutraali asiateksti: minä- ja me-muoto hylätään', () => {
 
 test('maailmanperintö: oma kortin avain tunnuksella; vesilähde ei ole kielletty sana', async () => {
   const { korttiAvain, tarkistaTeksti } = await import('../tools/pollo/tietokortti.js');
-  assert.equal(korttiAvain({ nimi: 'Akropolis', lat: 37.97, lon: 23.72, luokka: 'perinto', qid: 'Q131013' }), 'tietokortti:v4:perinto:Q131013');
+  assert.equal(korttiAvain({ nimi: 'Akropolis', lat: 37.97, lon: 23.72, luokka: 'perinto', qid: 'Q131013' }), 'tietokortti:v5:perinto:Q131013');
   const s2 = JSON.stringify({ nimi: 'Akropolis', faktat: [], wikipedia: { kieli: 'fi', teksti: 'Akropolis on Ateenan linnavuori. Rinteillä oli lähteitä, joiden ansiosta linnoitus kesti piirityksen. Parthenon valmistui.' } });
   assert.equal(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja sen rinteillä oli lähteitä. Niiden ansiosta linnoitus kesti pitkänkin piirityksen, ja kukkula pysyi asuttuna.', s2, 'Akropolis').ok, true);
   assert.match(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja lähteen mukaan se kesti piirityksen. Kukkula pysyi asuttuna pitkään, ja sinne rakennettiin temppeleitä.', s2, 'Akropolis').syy, /sana/);

@@ -13,7 +13,7 @@
 import { haeJson } from './opas.js';
 import { laji, LAJI_QIDS, faktarivit, alarivi, viitatut, valitseAsukkaat } from './tietokortti-kaava.js';
 
-export const TIETOKORTTI_VERSIO = 'v4';
+export const TIETOKORTTI_VERSIO = 'v5';
 /** Tietokortit pysyvät; uusi versio = uusi avain. */
 export const TIETOKORTTI_TTL_S = 365 * 24 * 3600;
 
@@ -406,7 +406,7 @@ export function korjausPalaute(syy) {
  * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja
  * sanat. { ok, syy } – hylätty ei mene ämpäriin. Isolla alkavat nimet tarkistetaan vain virkkeen keskeltä (virkkeen alku on aina iso).
  */
-export function tarkistaTeksti(teksti, syote, kohteenNimi = null, { ilmanMaaria = false } = {}) {
+export function tarkistaTeksti(teksti, syote, kohteenNimi = null, { ilmanMaaria = false, sanaToistoSallittu = false, vuosiKahdesti = false } = {}) {
   const t = String(teksti ?? '').trim();
   if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
   const osat = t.split(LUE_LISAA);
@@ -428,7 +428,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null, { ilmanMaaria 
   // ja kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys.
   // Vain tarkat vuodet: vuosisata (1700-luvun alku ja loppu) saa toistua.
   const vuodet = ilman.match(/\b\d{4}\b(?!-lu)/g) ?? [];
-  const vuosiToisto = vuodet.find((v, i) => vuodet.indexOf(v) !== i);
+  // Lue lisää (KK 27.10.): johdannon vuosiluvun saa mainita kerran aikaviitteenä (johdanto + Lue lisää yhteensä enintään kahdesti).
+  const vuosiToisto = vuodet.find((v) => vuodet.filter((x) => x === v).length > (vuosiKahdesti ? 2 : 1));
   if (vuosiToisto) return { ok: false, syy: `toisto ${vuosiToisto}` };
   const oma = (kohteenNimi ?? '').toLowerCase();
   const nimet = (ilman.match(/(?<=[\p{Ll},] )[\p{Lu}][\p{L}-]{4,}/gu) ?? []).filter((n) => !oma.includes(n.toLowerCase().slice(0, 5)));
@@ -438,7 +439,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null, { ilmanMaaria 
   // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 13 kirjainta, 11 ensimmäistä samat, ei kohteen nimeä) kahdesti.
   // Isolla alkavat (nimet) jäävät pois: erisnimien toiston hoitaa yllä oleva sääntö.
   const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{12,}/gu) ?? []).map((s) => s.slice(0, 11)).filter((s) => !oma.includes(s));
-  const sanaToisto = pitkat.find((s, i) => pitkat.indexOf(s) !== i);
+  // Lue lisää (KK 27.10.): toistosääntö koskee faktoja, ei yksittäisiä sanoja; sama pitkä sana saa toistua.
+  const sanaToisto = sanaToistoSallittu ? null : pitkat.find((s, i) => pitkat.indexOf(s) !== i);
   if (sanaToisto) return { ok: false, syy: `toisto ${sanaToisto}` };
   const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
   for (let a = 0; a < virkkeet.length; a += 1) {
@@ -521,7 +523,7 @@ export function kohdeTyyppi(laji) {
 }
 
 /** Osatekstien versio ja avain (osa = johdanto | lisaa). */
-export const OSA_VERSIO = 't7';
+export const OSA_VERSIO = 't8';
 export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
 /** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
 export const KYSYMYKSET = '###KYSYMYKSET###';
@@ -563,7 +565,8 @@ lisää -tekstin neutraalina asiatekstinä (kohta TYYLI) ja sen perään kaksi v
 sinulta kysytä mitään. Lukijat ovat kolmetoistavuotiaita ja aikuisia.
 
 EI ESITTELYÄ UUDELLEEN. Johdanto on jo esitellyt paikan. Lue lisää -teksti ei ala paikan nimellä eikä esittelyllä, eikä se kerro
-uudelleen mitään johdannon asiaa: ei sijaintia, ei etäisyyttä, ei samaa vuotta, lukua, rakennusta eikä nimeä samassa merkityksessä.
+uudelleen mitään johdannon asiaa: älä kerro uudelleen johdannon faktoja (ei sijaintia, ei etäisyyttä, ei samaa lukua, rakennusta
+eikä nimeä samassa merkityksessä). Johdannon vuosiluvun saat mainita kerran aikaviitteenä, jos kerrot siitä jotain uutta.
 Ensimmäinen jakso alkaa suoraan uudella asialla (esimerkiksi "Vuonna 1070 Vilhelm Valloittaja rakennutti…").
 
 MUOTO. 2–3 jaksoa. Jokainen jakso alkaa väliotsikolla omalla rivillään muodossa "## Väliotsikko" (1–4 sanaa, iso alkukirjain, ei
@@ -640,6 +643,21 @@ export function kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNim
   return [...new Set(rivit.filter(kelpaa))];
 }
 
+/**
+ * Lue lisää -vastauksen siistiminen ennen tarkistusta (KK 27.10. mittaus: yleisin hylkäys "otsikot" = väliotsikoton
+ * johdantokappale ennen ensimmäistä väliotsikkoa): otsikoton alkukappale pois, kun perässä on vähintään kaksi otsikollista jaksoa.
+ */
+export function siistiLisaa(teksti) {
+  const t = String(teksti ?? '').trim();
+  const [runko, kys] = jaaKysymykset(t);
+  const rivit = runko.split('\n');
+  const eka = rivit.findIndex((r) => r.trim().startsWith(VALIOTSIKKO));
+  if (eka <= 0 || rivit.slice(0, eka).every((r) => !r.trim())) return t;
+  const loput = rivit.slice(eka).join('\n');
+  if ((loput.match(new RegExp(`^\\s*${VALIOTSIKKO}`, 'gm')) ?? []).length < 2) return t;
+  return kys === null ? loput.trim() : `${loput.trim()}\n\n${KYSYMYKSET}\n${kys.trim()}`;
+}
+
 /** Lue lisää -teksti uusilla kysymyksillä (###KYSYMYKSET### ja kaksi riviä). */
 export function vaihdaKysymykset(lisaaTeksti, kysymykset) {
   const [runko] = jaaKysymykset(String(lisaaTeksti ?? '').trim());
@@ -708,10 +726,13 @@ export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '', 
   const yhdessa = johdanto ? `${String(johdanto).trim()} ${kappaleet}` : kappaleet;
   // Johdannon luku (≥ 10) toistuu Lue lisää -tekstissä = toisto (Box Hill: "31 kilometriä Lontoosta" kahdesti).
   const johdannonLuvut = new Set((String(johdanto ?? '').match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).filter((x) => Number(x) >= 10));
-  const lukuToisto = (kappaleet.match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).find((x) => johdannonLuvut.has(x));
+  // Johdannon vuosiluku saa toistua kerran aikaviitteenä (KK 27.10.); muut luvut (etäisyys, korkeus: luku + yksikkö) eivät.
+  const johdannonVuodet = new Set((String(johdanto ?? '').match(/\b(1\d{3}|20\d{2})\b(?!\s*(metr|kilometr|km|hehtaar|neliö|asuka|ihmis|kävijä))/giu) ?? []));
+  const lukuToisto = (kappaleet.match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, ''))
+    .find((x, i, kaikki) => johdannonLuvut.has(x) && (!johdannonVuodet.has(x) || kaikki.filter((y) => y === x).length > 1));
   if (lukuToisto) return { ok: false, syy: `toisto ${lukuToisto}` };
   for (const j of jaksot) if (!/[.!?]$/.test(j.teksti)) return { ok: false, syy: 'kesken' };
-  const r = yhteiset(yhdessa, syote, kohteenNimi);
+  const r = yhteiset(yhdessa, syote, kohteenNimi, { sanaToistoSallittu: true, vuosiKahdesti: true });
   if (!r.ok || vainTeksti) return r;
   // Kysymykset viimeisinä (KK 27.10.: teksti näytetään heti, kun se kelpaa; kysymykset lisätään tarkistettuina): kysymysvirheet
   // ovat lievimpiä (hylkayksenVakavuus 0), ja worker kirjoittaa kysymykset erikseen tekstiä uusimatta.
@@ -792,8 +813,8 @@ export function hylkayksenVakavuus(syy) {
 }
 
 /** Yhteiset säännöt (merkit, sanat, toisto, vieras sana, faktatoisto, puhuttelu, luvut, nimet) yhdelle tekstille tarkistaTekstin kautta. */
-function yhteiset(t, syote, kohteenNimi) {
+function yhteiset(t, syote, kohteenNimi, lisa = {}) {
   // tarkistaTeksti ilman merkkiriviä: yksi osa, sanamäärän alaraja niukan rajan (20) mukaan → ohitetaan tässä sanamäärä (tarkistettu jo).
-  const r = tarkistaTeksti(t, syote, kohteenNimi, { ilmanMaaria: true });
+  const r = tarkistaTeksti(t, syote, kohteenNimi, { ilmanMaaria: true, ...lisa });
   return r.ok ? { ok: true, syy: null } : r;
 }

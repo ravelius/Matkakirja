@@ -34,7 +34,7 @@ import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyva
 import {
   korttiAvain, tekstiAvain, linkitaWikidata, haeEntiteetti, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
   tarkistaTeksti, EI_LAHDETTA, kohdeTyyppi, osaAvain, JOHDANTO_KEHOTE, LISAA_KEHOTE, lisaaViesti, tarkistaJohdanto, tarkistaLisaa, hylkayksenVakavuus,
-  KYSYMYS_KEHOTE, kysymysViesti, tarkistaKysymykset, kelvollisetKysymykset, vaihdaKysymykset, jasennaLisaa,
+  KYSYMYS_KEHOTE, kysymysViesti, tarkistaKysymykset, kelvollisetKysymykset, vaihdaKysymykset, jasennaLisaa, siistiLisaa,
 } from './tietokortti.js';
 import {
   KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi, jerusalemissa, ilmanMaanNimea,
@@ -4118,6 +4118,7 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
           }
         }
       }
+      if (osa === 'lisaa') teksti = siistiLisaa(teksti);
       const tarkistus = tarkista(teksti);
       if (virhe) await laheta('virhe', { viesti: virhe });
       if (striimaa) await laheta('loppu', { vastaus: teksti.trim(), valmiina: false, lahde: lahdeRivi, osa, tarkistus: tarkistus.ok ? 'ok' : tarkistus.syy });
@@ -4141,6 +4142,7 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
           if (edellinen) viestit.push({ role: 'assistant', content: edellinen }, { role: 'user', content: korjausPalaute(syy) });
           const u = chatista ? await valitysUusinta(env, kehote, syote, osa, kortti.nimi, edellinen, korjausPalaute(syy))
             : await kysyMallitiedot(env, { jarjestelma: kehote, viestit, maxTokens, jaettu: true });
+          if (osa === 'lisaa') u.teksti = siistiLisaa(u.teksti);
           const t2 = tarkista(u.teksti);
           edellinen = (u.teksti ?? '').trim(); syy = t2.syy;
           yritykset.push({ teksti: edellinen, syy });
