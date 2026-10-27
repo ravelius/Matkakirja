@@ -4,7 +4,7 @@
 
 Käyttämäni kumulatiivinen lähde:
 `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/struggle-all-contexts-review-v1/models/eunukki-1-all-struggles-perus.glb`
-SHA256 `07e35916cb43d4a30987c45bae7bd9734042c3d1e6b9daef2aed494dace72201` on viittaparin aiemmin kirjattu SHA; perusmallin täsmällinen SHA kirjataan erikseen tarkistusraporttiin — älä käytä tätä SHA:ta perusmallin tunnisteena.
+SHA256 `328dd3c557e69c72b973d3f462d205253622dcd167e7afc2796c583847083d9b`.
 
 Vertailukuva:
 `/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v10/rest-front-back.png`
