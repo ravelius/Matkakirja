@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "source": "work/robe-v9/perus/puyi.glb",
+  "sourceSHA256": "4aa53ab22c7d0eaf8a81ff146f49da280118f45b75266d3d1801921136441f4f",
+  "file": "work/robe-v9/perus/puyi-final.glb",
+  "sha256": "089856c6a7ef129da997f357ac5a115d69ad5fdcda7578ac2cdfe585c39cf702",
+  "bytes": 13161700,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternionChord": 2e-05,
+    "translationScale": 2e-06
+  },
+  "keys": [
+    {
+      "clip": "jump_robe",
+      "beforeKeys": 107864,
+      "afterKeys": 12458
+    },
+    {
+      "clip": "stairs_robe",
+      "beforeKeys": 23675,
+      "afterKeys": 5262
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "jump_robe",
+      "samples": 923,
+      "maxSkinnedVertexDeltaM": 2.1541351175265794e-05,
+      "pass": true
+    },
+    {
+      "clip": "stairs_robe",
+      "samples": 633,
+      "maxSkinnedVertexDeltaM": 1.3727632358673436e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "work/robe-v9/perus/puyi-final.unpacked.glb",
+    "sourceSHA256": "919b97293d02e4e762a2c05fdafe1047139eada5e001f20cb8794acb7339d0dc",
+    "file": "work/robe-v9/perus/puyi-final.glb",
+    "sha256": "089856c6a7ef129da997f357ac5a115d69ad5fdcda7578ac2cdfe585c39cf702",
+    "beforeBytes": 15427868,
+    "afterBytes": 13161700,
+    "sourceAccessors": 4927,
+    "usedAccessors": 3867,
+    "deduplicatedAccessors": 3040,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.12257749994751066,
+    "peakRSSMiB": 198.9375
+  },
+  "elapsedSeconds": 24.73999425000511,
+  "peakRSSMiB": 277.828125
+}

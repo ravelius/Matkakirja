@@ -1,0 +1,4431 @@
+{
+  "status": "PASS",
+  "method": "Non-coplanar edge/triangle intersections in local hand/cloth patch, exact float skin positions; not complete whole-body collision certificate",
+  "records": [
+    {
+      "clip": "jump_robe",
+      "t": 0.0,
+      "handTriangles": 0,
+      "clothTriangles": 1232,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.004173912950184034,
+      "handTriangles": 0,
+      "clothTriangles": 1230,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.008347825900368068,
+      "handTriangles": 0,
+      "clothTriangles": 1222,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.012521738850552102,
+      "handTriangles": 0,
+      "clothTriangles": 1217,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.016695651800736136,
+      "handTriangles": 0,
+      "clothTriangles": 1210,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.02086956475092017,
+      "handTriangles": 0,
+      "clothTriangles": 1207,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.025043477701104204,
+      "handTriangles": 0,
+      "clothTriangles": 1245,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.029217390651288238,
+      "handTriangles": 0,
+      "clothTriangles": 1304,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.03339130360147227,
+      "handTriangles": 0,
+      "clothTriangles": 1348,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.0375652165516563,
+      "handTriangles": 0,
+      "clothTriangles": 1394,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.04173912950184034,
+      "handTriangles": 0,
+      "clothTriangles": 1440,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.04591304245202438,
+      "handTriangles": 0,
+      "clothTriangles": 1487,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.05008695540220841,
+      "handTriangles": 0,
+      "clothTriangles": 1514,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.05426086835239244,
+      "handTriangles": 0,
+      "clothTriangles": 1545,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.058434781302576476,
+      "handTriangles": 0,
+      "clothTriangles": 1592,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.06260869425276051,
+      "handTriangles": 0,
+      "clothTriangles": 1636,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.06678260720294454,
+      "handTriangles": 7,
+      "clothTriangles": 1691,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.07095652015312857,
+      "handTriangles": 61,
+      "clothTriangles": 1754,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.0751304331033126,
+      "handTriangles": 198,
+      "clothTriangles": 1832,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.07930434605349665,
+      "handTriangles": 356,
+      "clothTriangles": 1881,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.08347825900368068,
+      "handTriangles": 533,
+      "clothTriangles": 1885,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.08765217195386471,
+      "handTriangles": 622,
+      "clothTriangles": 1889,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.09182608490404875,
+      "handTriangles": 622,
+      "clothTriangles": 1880,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.09599999785423279,
+      "handTriangles": 622,
+      "clothTriangles": 1868,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.10017391080441682,
+      "handTriangles": 622,
+      "clothTriangles": 1859,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.10434782375460085,
+      "handTriangles": 622,
+      "clothTriangles": 1855,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.10852173670478488,
+      "handTriangles": 622,
+      "clothTriangles": 1849,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.11269564965496892,
+      "handTriangles": 622,
+      "clothTriangles": 1843,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.11686956260515295,
+      "handTriangles": 622,
+      "clothTriangles": 1842,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.12104347555533698,
+      "handTriangles": 622,
+      "clothTriangles": 1834,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.12521738850552103,
+      "handTriangles": 622,
+      "clothTriangles": 1827,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.12939130145570504,
+      "handTriangles": 622,
+      "clothTriangles": 1812,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1335652144058891,
+      "handTriangles": 622,
+      "clothTriangles": 1792,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.13773912735607313,
+      "handTriangles": 622,
+      "clothTriangles": 1770,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.14191304030625715,
+      "handTriangles": 622,
+      "clothTriangles": 1748,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1460869532564412,
+      "handTriangles": 622,
+      "clothTriangles": 1722,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1502608662066252,
+      "handTriangles": 622,
+      "clothTriangles": 1708,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.15443477915680925,
+      "handTriangles": 622,
+      "clothTriangles": 1694,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1586086921069933,
+      "handTriangles": 622,
+      "clothTriangles": 1681,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.16278260505717732,
+      "handTriangles": 622,
+      "clothTriangles": 1668,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.16695651800736136,
+      "handTriangles": 622,
+      "clothTriangles": 1657,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1711304309575454,
+      "handTriangles": 622,
+      "clothTriangles": 1645,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.17530434390772942,
+      "handTriangles": 622,
+      "clothTriangles": 1635,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.17947825685791347,
+      "handTriangles": 622,
+      "clothTriangles": 1643,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1836521698080975,
+      "handTriangles": 622,
+      "clothTriangles": 1654,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.18782608275828153,
+      "handTriangles": 622,
+      "clothTriangles": 1658,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.19199999570846557,
+      "handTriangles": 622,
+      "clothTriangles": 1664,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.1961739086586496,
+      "handTriangles": 622,
+      "clothTriangles": 1669,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.20034782160883363,
+      "handTriangles": 622,
+      "clothTriangles": 1670,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.20452173455901768,
+      "handTriangles": 622,
+      "clothTriangles": 1673,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2086956475092017,
+      "handTriangles": 622,
+      "clothTriangles": 1668,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.21286956045938574,
+      "handTriangles": 622,
+      "clothTriangles": 1663,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.21704347340956975,
+      "handTriangles": 622,
+      "clothTriangles": 1645,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2212173863597538,
+      "handTriangles": 622,
+      "clothTriangles": 1617,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.22539129930993784,
+      "handTriangles": 622,
+      "clothTriangles": 1581,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.22956521226012186,
+      "handTriangles": 622,
+      "clothTriangles": 1561,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2337391252103059,
+      "handTriangles": 622,
+      "clothTriangles": 1538,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.23791303816048995,
+      "handTriangles": 622,
+      "clothTriangles": 1516,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.24208695111067396,
+      "handTriangles": 622,
+      "clothTriangles": 1489,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.246260864060858,
+      "handTriangles": 622,
+      "clothTriangles": 1472,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.25043477701104205,
+      "handTriangles": 622,
+      "clothTriangles": 1446,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2546086899612261,
+      "handTriangles": 622,
+      "clothTriangles": 1433,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2587826029114101,
+      "handTriangles": 622,
+      "clothTriangles": 1417,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.26295651586159413,
+      "handTriangles": 622,
+      "clothTriangles": 1412,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2671304288117782,
+      "handTriangles": 622,
+      "clothTriangles": 1407,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2713043417619622,
+      "handTriangles": 622,
+      "clothTriangles": 1398,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.27547825471214626,
+      "handTriangles": 622,
+      "clothTriangles": 1394,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.27965216766233025,
+      "handTriangles": 622,
+      "clothTriangles": 1393,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2838260806125143,
+      "handTriangles": 622,
+      "clothTriangles": 1392,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.28799999356269834,
+      "handTriangles": 622,
+      "clothTriangles": 1396,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.2921739065128824,
+      "handTriangles": 622,
+      "clothTriangles": 1405,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.29634781946306643,
+      "handTriangles": 622,
+      "clothTriangles": 1411,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3005217324132504,
+      "handTriangles": 622,
+      "clothTriangles": 1415,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.30469564536343446,
+      "handTriangles": 622,
+      "clothTriangles": 1419,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3088695583136185,
+      "handTriangles": 622,
+      "clothTriangles": 1421,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.31304347126380255,
+      "handTriangles": 622,
+      "clothTriangles": 1424,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3172173842139866,
+      "handTriangles": 622,
+      "clothTriangles": 1431,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.32139129716417064,
+      "handTriangles": 622,
+      "clothTriangles": 1434,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.32556521011435463,
+      "handTriangles": 622,
+      "clothTriangles": 1436,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3297391230645387,
+      "handTriangles": 622,
+      "clothTriangles": 1442,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3339130360147227,
+      "handTriangles": 622,
+      "clothTriangles": 1445,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.33808694896490676,
+      "handTriangles": 622,
+      "clothTriangles": 1449,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3422608619150908,
+      "handTriangles": 622,
+      "clothTriangles": 1451,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3464347748652748,
+      "handTriangles": 622,
+      "clothTriangles": 1453,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.35060868781545884,
+      "handTriangles": 622,
+      "clothTriangles": 1457,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3547826007656429,
+      "handTriangles": 622,
+      "clothTriangles": 1462,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.35895651371582693,
+      "handTriangles": 622,
+      "clothTriangles": 1465,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.363130426666011,
+      "handTriangles": 622,
+      "clothTriangles": 1474,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.367304339616195,
+      "handTriangles": 622,
+      "clothTriangles": 1477,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.371478252566379,
+      "handTriangles": 622,
+      "clothTriangles": 1481,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.37565216551656305,
+      "handTriangles": 622,
+      "clothTriangles": 1487,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3798260784667471,
+      "handTriangles": 622,
+      "clothTriangles": 1490,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.38399999141693114,
+      "handTriangles": 622,
+      "clothTriangles": 1497,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3881739043671152,
+      "handTriangles": 622,
+      "clothTriangles": 1502,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3923478173172992,
+      "handTriangles": 622,
+      "clothTriangles": 1516,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.3965217302674832,
+      "handTriangles": 622,
+      "clothTriangles": 1520,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.40069564321766726,
+      "handTriangles": 622,
+      "clothTriangles": 1521,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4048695561678513,
+      "handTriangles": 622,
+      "clothTriangles": 1520,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.40904346911803535,
+      "handTriangles": 622,
+      "clothTriangles": 1522,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.41321738206821934,
+      "handTriangles": 622,
+      "clothTriangles": 1523,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4173912950184034,
+      "handTriangles": 622,
+      "clothTriangles": 1520,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.42156520796858743,
+      "handTriangles": 622,
+      "clothTriangles": 1512,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4257391209187715,
+      "handTriangles": 622,
+      "clothTriangles": 1507,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4299130338689555,
+      "handTriangles": 622,
+      "clothTriangles": 1502,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4340869468191395,
+      "handTriangles": 622,
+      "clothTriangles": 1494,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.43826085976932355,
+      "handTriangles": 622,
+      "clothTriangles": 1490,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4424347727195076,
+      "handTriangles": 622,
+      "clothTriangles": 1485,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.44660868566969164,
+      "handTriangles": 622,
+      "clothTriangles": 1481,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4507825986198757,
+      "handTriangles": 622,
+      "clothTriangles": 1467,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.45495651157005973,
+      "handTriangles": 622,
+      "clothTriangles": 1461,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4591304245202437,
+      "handTriangles": 622,
+      "clothTriangles": 1458,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.46330433747042776,
+      "handTriangles": 622,
+      "clothTriangles": 1456,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4674782504206118,
+      "handTriangles": 622,
+      "clothTriangles": 1455,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.47165216337079585,
+      "handTriangles": 622,
+      "clothTriangles": 1450,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4758260763209799,
+      "handTriangles": 622,
+      "clothTriangles": 1448,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.4799999892711639,
+      "handTriangles": 622,
+      "clothTriangles": 1443,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.48417390222134793,
+      "handTriangles": 622,
+      "clothTriangles": 1444,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.488347815171532,
+      "handTriangles": 622,
+      "clothTriangles": 1442,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.492521728121716,
+      "handTriangles": 622,
+      "clothTriangles": 1441,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.49669564107190006,
+      "handTriangles": 622,
+      "clothTriangles": 1438,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5008695540220841,
+      "handTriangles": 622,
+      "clothTriangles": 1435,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5050434669722681,
+      "handTriangles": 622,
+      "clothTriangles": 1435,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5092173799224522,
+      "handTriangles": 622,
+      "clothTriangles": 1429,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5133912928726362,
+      "handTriangles": 622,
+      "clothTriangles": 1425,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5175652058228202,
+      "handTriangles": 622,
+      "clothTriangles": 1418,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5217391187730043,
+      "handTriangles": 622,
+      "clothTriangles": 1411,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5259130317231883,
+      "handTriangles": 622,
+      "clothTriangles": 1409,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5300869446733724,
+      "handTriangles": 622,
+      "clothTriangles": 1406,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5342608576235564,
+      "handTriangles": 622,
+      "clothTriangles": 1397,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5384347705737403,
+      "handTriangles": 622,
+      "clothTriangles": 1394,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5426086835239244,
+      "handTriangles": 622,
+      "clothTriangles": 1390,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5467825964741084,
+      "handTriangles": 622,
+      "clothTriangles": 1383,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5509565094242925,
+      "handTriangles": 622,
+      "clothTriangles": 1382,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5551304223744765,
+      "handTriangles": 622,
+      "clothTriangles": 1378,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5593043353246605,
+      "handTriangles": 622,
+      "clothTriangles": 1374,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5634782482748446,
+      "handTriangles": 622,
+      "clothTriangles": 1370,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5676521612250286,
+      "handTriangles": 622,
+      "clothTriangles": 1370,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5718260741752127,
+      "handTriangles": 622,
+      "clothTriangles": 1369,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5759999871253967,
+      "handTriangles": 622,
+      "clothTriangles": 1368,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5801739000755807,
+      "handTriangles": 622,
+      "clothTriangles": 1367,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5843478130257648,
+      "handTriangles": 622,
+      "clothTriangles": 1369,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5885217259759488,
+      "handTriangles": 622,
+      "clothTriangles": 1371,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5926956389261329,
+      "handTriangles": 622,
+      "clothTriangles": 1375,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.5968695518763169,
+      "handTriangles": 622,
+      "clothTriangles": 1378,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6010434648265008,
+      "handTriangles": 622,
+      "clothTriangles": 1381,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6052173777766849,
+      "handTriangles": 622,
+      "clothTriangles": 1392,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6093912907268689,
+      "handTriangles": 622,
+      "clothTriangles": 1400,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.613565203677053,
+      "handTriangles": 622,
+      "clothTriangles": 1417,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.617739116627237,
+      "handTriangles": 622,
+      "clothTriangles": 1442,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6219130295774211,
+      "handTriangles": 622,
+      "clothTriangles": 1461,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6260869425276051,
+      "handTriangles": 622,
+      "clothTriangles": 1480,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6302608554777891,
+      "handTriangles": 622,
+      "clothTriangles": 1512,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6344347684279732,
+      "handTriangles": 622,
+      "clothTriangles": 1536,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6386086813781572,
+      "handTriangles": 622,
+      "clothTriangles": 1571,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6427825943283413,
+      "handTriangles": 622,
+      "clothTriangles": 1599,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6469565072785253,
+      "handTriangles": 622,
+      "clothTriangles": 1624,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6511304202287093,
+      "handTriangles": 622,
+      "clothTriangles": 1655,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6553043331788934,
+      "handTriangles": 622,
+      "clothTriangles": 1679,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6594782461290774,
+      "handTriangles": 622,
+      "clothTriangles": 1712,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6636521590792615,
+      "handTriangles": 622,
+      "clothTriangles": 1735,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6678260720294454,
+      "handTriangles": 622,
+      "clothTriangles": 1743,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6719999849796294,
+      "handTriangles": 622,
+      "clothTriangles": 1741,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6761738979298135,
+      "handTriangles": 622,
+      "clothTriangles": 1741,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6803478108799975,
+      "handTriangles": 622,
+      "clothTriangles": 1748,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6845217238301816,
+      "handTriangles": 622,
+      "clothTriangles": 1743,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6886956367803656,
+      "handTriangles": 622,
+      "clothTriangles": 1745,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6928695497305496,
+      "handTriangles": 622,
+      "clothTriangles": 1746,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.6970434626807337,
+      "handTriangles": 622,
+      "clothTriangles": 1746,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7012173756309177,
+      "handTriangles": 622,
+      "clothTriangles": 1750,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7053912885811018,
+      "handTriangles": 622,
+      "clothTriangles": 1756,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7095652015312858,
+      "handTriangles": 622,
+      "clothTriangles": 1770,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7137391144814698,
+      "handTriangles": 622,
+      "clothTriangles": 1793,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7179130274316539,
+      "handTriangles": 622,
+      "clothTriangles": 1810,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7220869403818378,
+      "handTriangles": 622,
+      "clothTriangles": 1831,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.726260853332022,
+      "handTriangles": 622,
+      "clothTriangles": 1844,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7304347662822059,
+      "handTriangles": 622,
+      "clothTriangles": 1857,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.73460867923239,
+      "handTriangles": 622,
+      "clothTriangles": 1865,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.738782592182574,
+      "handTriangles": 622,
+      "clothTriangles": 1863,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.742956505132758,
+      "handTriangles": 622,
+      "clothTriangles": 1875,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7471304180829421,
+      "handTriangles": 622,
+      "clothTriangles": 1871,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7513043310331261,
+      "handTriangles": 622,
+      "clothTriangles": 1867,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7554782439833102,
+      "handTriangles": 622,
+      "clothTriangles": 1857,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7596521569334942,
+      "handTriangles": 622,
+      "clothTriangles": 1854,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7638260698836782,
+      "handTriangles": 622,
+      "clothTriangles": 1855,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7679999828338623,
+      "handTriangles": 622,
+      "clothTriangles": 1856,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7721738957840463,
+      "handTriangles": 622,
+      "clothTriangles": 1867,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7763478087342304,
+      "handTriangles": 622,
+      "clothTriangles": 1871,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7805217216844144,
+      "handTriangles": 622,
+      "clothTriangles": 1877,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7846956346345983,
+      "handTriangles": 622,
+      "clothTriangles": 1894,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7888695475847824,
+      "handTriangles": 622,
+      "clothTriangles": 1898,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7930434605349664,
+      "handTriangles": 606,
+      "clothTriangles": 1882,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.7972173734851505,
+      "handTriangles": 571,
+      "clothTriangles": 1851,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8013912864353345,
+      "handTriangles": 490,
+      "clothTriangles": 1772,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8055651993855185,
+      "handTriangles": 432,
+      "clothTriangles": 1718,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8097391123357026,
+      "handTriangles": 370,
+      "clothTriangles": 1698,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8139130252858866,
+      "handTriangles": 338,
+      "clothTriangles": 1681,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8180869382360707,
+      "handTriangles": 326,
+      "clothTriangles": 1662,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8222608511862547,
+      "handTriangles": 325,
+      "clothTriangles": 1634,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8264347641364387,
+      "handTriangles": 335,
+      "clothTriangles": 1608,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8306086770866228,
+      "handTriangles": 353,
+      "clothTriangles": 1585,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8347825900368068,
+      "handTriangles": 386,
+      "clothTriangles": 1553,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8389565029869909,
+      "handTriangles": 446,
+      "clothTriangles": 1526,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8431304159371749,
+      "handTriangles": 485,
+      "clothTriangles": 1497,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8473043288873588,
+      "handTriangles": 518,
+      "clothTriangles": 1464,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.851478241837543,
+      "handTriangles": 511,
+      "clothTriangles": 1440,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8556521547877269,
+      "handTriangles": 430,
+      "clothTriangles": 1408,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.859826067737911,
+      "handTriangles": 248,
+      "clothTriangles": 1350,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.863999980688095,
+      "handTriangles": 58,
+      "clothTriangles": 1297,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.868173893638279,
+      "handTriangles": 0,
+      "clothTriangles": 1240,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8723478065884631,
+      "handTriangles": 0,
+      "clothTriangles": 1183,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8765217195386471,
+      "handTriangles": 0,
+      "clothTriangles": 1134,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8806956324888312,
+      "handTriangles": 0,
+      "clothTriangles": 1103,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8848695454390152,
+      "handTriangles": 0,
+      "clothTriangles": 1069,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8890434583891993,
+      "handTriangles": 0,
+      "clothTriangles": 1038,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8932173713393833,
+      "handTriangles": 0,
+      "clothTriangles": 1008,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.8973912842895673,
+      "handTriangles": 0,
+      "clothTriangles": 1002,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9015651972397514,
+      "handTriangles": 0,
+      "clothTriangles": 981,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9057391101899354,
+      "handTriangles": 0,
+      "clothTriangles": 986,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9099130231401195,
+      "handTriangles": 0,
+      "clothTriangles": 990,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9140869360903034,
+      "handTriangles": 0,
+      "clothTriangles": 1007,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9182608490404874,
+      "handTriangles": 0,
+      "clothTriangles": 1032,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9224347619906715,
+      "handTriangles": 0,
+      "clothTriangles": 1047,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9266086749408555,
+      "handTriangles": 0,
+      "clothTriangles": 1048,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9307825878910396,
+      "handTriangles": 0,
+      "clothTriangles": 1052,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9349565008412236,
+      "handTriangles": 0,
+      "clothTriangles": 1056,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9391304137914076,
+      "handTriangles": 0,
+      "clothTriangles": 1060,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9433043267415917,
+      "handTriangles": 0,
+      "clothTriangles": 1061,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9474782396917757,
+      "handTriangles": 0,
+      "clothTriangles": 1054,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9516521526419598,
+      "handTriangles": 0,
+      "clothTriangles": 1044,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9558260655921438,
+      "handTriangles": 0,
+      "clothTriangles": 1028,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "jump_robe",
+      "t": 0.9599999785423279,
+      "handTriangles": 0,
+      "clothTriangles": 1010,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.0,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.004167349910438989,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.008334699820877978,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.012502049731316967,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.016669399641755955,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.020836749552194944,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.025004099462633933,
+      "handTriangles": 622,
+      "clothTriangles": 1727,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.029171449373072922,
+      "handTriangles": 622,
+      "clothTriangles": 1731,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.03333879928351191,
+      "handTriangles": 622,
+      "clothTriangles": 1729,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.0375061491939509,
+      "handTriangles": 622,
+      "clothTriangles": 1726,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.04167349910438989,
+      "handTriangles": 622,
+      "clothTriangles": 1721,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.04584084901482888,
+      "handTriangles": 622,
+      "clothTriangles": 1720,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.050008198925267866,
+      "handTriangles": 622,
+      "clothTriangles": 1715,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.054175548835706855,
+      "handTriangles": 622,
+      "clothTriangles": 1708,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.058342898746145844,
+      "handTriangles": 622,
+      "clothTriangles": 1701,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.06251024865658483,
+      "handTriangles": 622,
+      "clothTriangles": 1689,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.06667759856702382,
+      "handTriangles": 622,
+      "clothTriangles": 1674,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.07084494847746281,
+      "handTriangles": 622,
+      "clothTriangles": 1653,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.0750122983879018,
+      "handTriangles": 622,
+      "clothTriangles": 1638,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.07917964829834079,
+      "handTriangles": 622,
+      "clothTriangles": 1628,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.08334699820877978,
+      "handTriangles": 622,
+      "clothTriangles": 1614,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.08751434811921877,
+      "handTriangles": 622,
+      "clothTriangles": 1608,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.09168169802965775,
+      "handTriangles": 622,
+      "clothTriangles": 1602,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.09584904794009674,
+      "handTriangles": 622,
+      "clothTriangles": 1597,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.10001639785053573,
+      "handTriangles": 622,
+      "clothTriangles": 1597,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.10418374776097472,
+      "handTriangles": 622,
+      "clothTriangles": 1601,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.10835109767141371,
+      "handTriangles": 622,
+      "clothTriangles": 1602,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1125184475818527,
+      "handTriangles": 622,
+      "clothTriangles": 1617,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.11668579749229169,
+      "handTriangles": 622,
+      "clothTriangles": 1633,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.12085314740273068,
+      "handTriangles": 622,
+      "clothTriangles": 1643,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.12502049731316967,
+      "handTriangles": 622,
+      "clothTriangles": 1659,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.12918784722360865,
+      "handTriangles": 622,
+      "clothTriangles": 1679,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.13335519713404764,
+      "handTriangles": 622,
+      "clothTriangles": 1683,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.13752254704448663,
+      "handTriangles": 622,
+      "clothTriangles": 1676,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.14168989695492562,
+      "handTriangles": 622,
+      "clothTriangles": 1674,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1458572468653646,
+      "handTriangles": 622,
+      "clothTriangles": 1667,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1500245967758036,
+      "handTriangles": 622,
+      "clothTriangles": 1661,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1541919466862426,
+      "handTriangles": 622,
+      "clothTriangles": 1650,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.15835929659668158,
+      "handTriangles": 622,
+      "clothTriangles": 1631,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.16252664650712056,
+      "handTriangles": 622,
+      "clothTriangles": 1621,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.16669399641755955,
+      "handTriangles": 622,
+      "clothTriangles": 1602,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.17086134632799854,
+      "handTriangles": 622,
+      "clothTriangles": 1585,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.17502869623843753,
+      "handTriangles": 622,
+      "clothTriangles": 1569,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.17919604614887652,
+      "handTriangles": 622,
+      "clothTriangles": 1573,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1833633960593155,
+      "handTriangles": 622,
+      "clothTriangles": 1577,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1875307459697545,
+      "handTriangles": 622,
+      "clothTriangles": 1578,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.1916980958801935,
+      "handTriangles": 622,
+      "clothTriangles": 1590,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.19586544579063248,
+      "handTriangles": 622,
+      "clothTriangles": 1595,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.20003279570107146,
+      "handTriangles": 622,
+      "clothTriangles": 1624,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.20420014561151045,
+      "handTriangles": 622,
+      "clothTriangles": 1654,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.20836749552194944,
+      "handTriangles": 622,
+      "clothTriangles": 1702,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.21253484543238843,
+      "handTriangles": 622,
+      "clothTriangles": 1744,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.21670219534282742,
+      "handTriangles": 622,
+      "clothTriangles": 1778,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2208695452532664,
+      "handTriangles": 622,
+      "clothTriangles": 1823,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2250368951637054,
+      "handTriangles": 622,
+      "clothTriangles": 1848,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.22920424507414439,
+      "handTriangles": 622,
+      "clothTriangles": 1880,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.23337159498458337,
+      "handTriangles": 622,
+      "clothTriangles": 1906,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.23753894489502236,
+      "handTriangles": 622,
+      "clothTriangles": 1928,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.24170629480546135,
+      "handTriangles": 622,
+      "clothTriangles": 1954,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.24587364471590034,
+      "handTriangles": 622,
+      "clothTriangles": 1953,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.25004099462633933,
+      "handTriangles": 622,
+      "clothTriangles": 1939,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2542083445367783,
+      "handTriangles": 622,
+      "clothTriangles": 1938,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2583756944472173,
+      "handTriangles": 622,
+      "clothTriangles": 1915,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2625430443576563,
+      "handTriangles": 622,
+      "clothTriangles": 1912,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2667103942680953,
+      "handTriangles": 622,
+      "clothTriangles": 1895,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2708777441785343,
+      "handTriangles": 622,
+      "clothTriangles": 1883,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.27504509408897326,
+      "handTriangles": 622,
+      "clothTriangles": 1874,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.27921244399941225,
+      "handTriangles": 622,
+      "clothTriangles": 1860,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.28337979390985124,
+      "handTriangles": 620,
+      "clothTriangles": 1845,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.28754714382029023,
+      "handTriangles": 620,
+      "clothTriangles": 1834,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2917144937307292,
+      "handTriangles": 621,
+      "clothTriangles": 1823,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.2958818436411682,
+      "handTriangles": 622,
+      "clothTriangles": 1818,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3000491935516072,
+      "handTriangles": 622,
+      "clothTriangles": 1813,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3042165434620462,
+      "handTriangles": 622,
+      "clothTriangles": 1804,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3083838933724852,
+      "handTriangles": 622,
+      "clothTriangles": 1798,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.31255124328292416,
+      "handTriangles": 622,
+      "clothTriangles": 1788,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.31671859319336315,
+      "handTriangles": 622,
+      "clothTriangles": 1779,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.32088594310380214,
+      "handTriangles": 622,
+      "clothTriangles": 1766,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.32505329301424113,
+      "handTriangles": 622,
+      "clothTriangles": 1707,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3292206429246801,
+      "handTriangles": 622,
+      "clothTriangles": 1688,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3333879928351191,
+      "handTriangles": 622,
+      "clothTriangles": 1689,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3375553427455581,
+      "handTriangles": 622,
+      "clothTriangles": 1687,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3417226926559971,
+      "handTriangles": 622,
+      "clothTriangles": 1686,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.3458900425664361,
+      "handTriangles": 622,
+      "clothTriangles": 1682,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.35005739247687506,
+      "handTriangles": 622,
+      "clothTriangles": 1682,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.35422474238731405,
+      "handTriangles": 622,
+      "clothTriangles": 1694,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.35839209229775304,
+      "handTriangles": 622,
+      "clothTriangles": 1699,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.36255944220819203,
+      "handTriangles": 622,
+      "clothTriangles": 1703,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.366726792118631,
+      "handTriangles": 622,
+      "clothTriangles": 1706,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.37089414202907,
+      "handTriangles": 622,
+      "clothTriangles": 1699,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.375061491939509,
+      "handTriangles": 622,
+      "clothTriangles": 1691,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.379228841849948,
+      "handTriangles": 622,
+      "clothTriangles": 1686,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.383396191760387,
+      "handTriangles": 622,
+      "clothTriangles": 1676,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.38756354167082596,
+      "handTriangles": 622,
+      "clothTriangles": 1668,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.39173089158126495,
+      "handTriangles": 622,
+      "clothTriangles": 1653,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.39589824149170394,
+      "handTriangles": 622,
+      "clothTriangles": 1642,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.40006559140214293,
+      "handTriangles": 622,
+      "clothTriangles": 1626,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4042329413125819,
+      "handTriangles": 622,
+      "clothTriangles": 1606,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4084002912230209,
+      "handTriangles": 622,
+      "clothTriangles": 1586,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4125676411334599,
+      "handTriangles": 622,
+      "clothTriangles": 1571,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4167349910438989,
+      "handTriangles": 622,
+      "clothTriangles": 1555,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4209023409543379,
+      "handTriangles": 622,
+      "clothTriangles": 1550,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.42506969086477686,
+      "handTriangles": 622,
+      "clothTriangles": 1542,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.42923704077521585,
+      "handTriangles": 622,
+      "clothTriangles": 1535,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.43340439068565484,
+      "handTriangles": 622,
+      "clothTriangles": 1531,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.43757174059609383,
+      "handTriangles": 622,
+      "clothTriangles": 1533,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4417390905065328,
+      "handTriangles": 622,
+      "clothTriangles": 1544,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4459064404169718,
+      "handTriangles": 622,
+      "clothTriangles": 1557,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4500737903274108,
+      "handTriangles": 622,
+      "clothTriangles": 1572,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4542411402378498,
+      "handTriangles": 622,
+      "clothTriangles": 1582,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.45840849014828877,
+      "handTriangles": 622,
+      "clothTriangles": 1595,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.46257584005872776,
+      "handTriangles": 622,
+      "clothTriangles": 1607,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.46674318996916675,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.47091053987960574,
+      "handTriangles": 622,
+      "clothTriangles": 1611,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4750778897900447,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4792452397004837,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4834125896109227,
+      "handTriangles": 622,
+      "clothTriangles": 1612,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4875799395213617,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.4917472894318007,
+      "handTriangles": 622,
+      "clothTriangles": 1604,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.49591463934223967,
+      "handTriangles": 622,
+      "clothTriangles": 1594,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5000819892526787,
+      "handTriangles": 622,
+      "clothTriangles": 1586,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5042493391631176,
+      "handTriangles": 622,
+      "clothTriangles": 1579,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5084166890735566,
+      "handTriangles": 622,
+      "clothTriangles": 1582,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5125840389839956,
+      "handTriangles": 622,
+      "clothTriangles": 1585,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5167513888944346,
+      "handTriangles": 622,
+      "clothTriangles": 1589,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5209187388048736,
+      "handTriangles": 622,
+      "clothTriangles": 1593,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5250860887153126,
+      "handTriangles": 622,
+      "clothTriangles": 1605,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5292534386257516,
+      "handTriangles": 622,
+      "clothTriangles": 1623,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5334207885361906,
+      "handTriangles": 622,
+      "clothTriangles": 1648,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5375881384466296,
+      "handTriangles": 622,
+      "clothTriangles": 1679,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5417554883570685,
+      "handTriangles": 622,
+      "clothTriangles": 1720,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5459228382675075,
+      "handTriangles": 622,
+      "clothTriangles": 1748,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5500901881779465,
+      "handTriangles": 622,
+      "clothTriangles": 1776,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5542575380883855,
+      "handTriangles": 622,
+      "clothTriangles": 1814,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5584248879988245,
+      "handTriangles": 622,
+      "clothTriangles": 1845,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5625922379092635,
+      "handTriangles": 622,
+      "clothTriangles": 1870,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5667595878197025,
+      "handTriangles": 622,
+      "clothTriangles": 1895,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5709269377301415,
+      "handTriangles": 622,
+      "clothTriangles": 1912,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5750942876405805,
+      "handTriangles": 622,
+      "clothTriangles": 1919,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5792616375510194,
+      "handTriangles": 622,
+      "clothTriangles": 1920,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5834289874614584,
+      "handTriangles": 622,
+      "clothTriangles": 1922,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5875963373718974,
+      "handTriangles": 622,
+      "clothTriangles": 1911,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5917636872823364,
+      "handTriangles": 622,
+      "clothTriangles": 1913,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.5959310371927754,
+      "handTriangles": 622,
+      "clothTriangles": 1902,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6000983871032144,
+      "handTriangles": 622,
+      "clothTriangles": 1893,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6042657370136534,
+      "handTriangles": 622,
+      "clothTriangles": 1883,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6084330869240924,
+      "handTriangles": 622,
+      "clothTriangles": 1873,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6126004368345314,
+      "handTriangles": 621,
+      "clothTriangles": 1862,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6167677867449703,
+      "handTriangles": 621,
+      "clothTriangles": 1856,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6209351366554093,
+      "handTriangles": 621,
+      "clothTriangles": 1848,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6251024865658483,
+      "handTriangles": 622,
+      "clothTriangles": 1840,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6292698364762873,
+      "handTriangles": 622,
+      "clothTriangles": 1833,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6334371863867263,
+      "handTriangles": 622,
+      "clothTriangles": 1829,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6376045362971653,
+      "handTriangles": 622,
+      "clothTriangles": 1828,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6417718862076043,
+      "handTriangles": 622,
+      "clothTriangles": 1824,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6459392361180433,
+      "handTriangles": 622,
+      "clothTriangles": 1818,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6501065860284823,
+      "handTriangles": 622,
+      "clothTriangles": 1809,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6542739359389212,
+      "handTriangles": 622,
+      "clothTriangles": 1798,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6584412858493602,
+      "handTriangles": 622,
+      "clothTriangles": 1752,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6626086357597992,
+      "handTriangles": 622,
+      "clothTriangles": 1729,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6667759856702382,
+      "handTriangles": 622,
+      "clothTriangles": 1735,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6709433355806772,
+      "handTriangles": 622,
+      "clothTriangles": 1738,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6751106854911162,
+      "handTriangles": 622,
+      "clothTriangles": 1736,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6792780354015552,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6834453853119942,
+      "handTriangles": 622,
+      "clothTriangles": 1727,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6876127352224332,
+      "handTriangles": 622,
+      "clothTriangles": 1731,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6917800851328721,
+      "handTriangles": 622,
+      "clothTriangles": 1729,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.6959474350433111,
+      "handTriangles": 622,
+      "clothTriangles": 1726,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7001147849537501,
+      "handTriangles": 622,
+      "clothTriangles": 1721,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7042821348641891,
+      "handTriangles": 622,
+      "clothTriangles": 1720,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7084494847746281,
+      "handTriangles": 622,
+      "clothTriangles": 1713,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7126168346850671,
+      "handTriangles": 622,
+      "clothTriangles": 1706,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7167841845955061,
+      "handTriangles": 622,
+      "clothTriangles": 1699,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7209515345059451,
+      "handTriangles": 622,
+      "clothTriangles": 1685,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7251188844163841,
+      "handTriangles": 622,
+      "clothTriangles": 1671,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.729286234326823,
+      "handTriangles": 622,
+      "clothTriangles": 1650,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.733453584237262,
+      "handTriangles": 622,
+      "clothTriangles": 1637,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.737620934147701,
+      "handTriangles": 622,
+      "clothTriangles": 1624,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.74178828405814,
+      "handTriangles": 622,
+      "clothTriangles": 1615,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.745955633968579,
+      "handTriangles": 622,
+      "clothTriangles": 1605,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.750122983879018,
+      "handTriangles": 622,
+      "clothTriangles": 1599,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.754290333789457,
+      "handTriangles": 622,
+      "clothTriangles": 1595,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.758457683699896,
+      "handTriangles": 622,
+      "clothTriangles": 1599,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.762625033610335,
+      "handTriangles": 622,
+      "clothTriangles": 1601,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.766792383520774,
+      "handTriangles": 622,
+      "clothTriangles": 1603,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7709597334312129,
+      "handTriangles": 622,
+      "clothTriangles": 1619,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7751270833416519,
+      "handTriangles": 622,
+      "clothTriangles": 1633,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7792944332520909,
+      "handTriangles": 622,
+      "clothTriangles": 1644,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7834617831625299,
+      "handTriangles": 622,
+      "clothTriangles": 1660,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7876291330729689,
+      "handTriangles": 622,
+      "clothTriangles": 1680,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7917964829834079,
+      "handTriangles": 622,
+      "clothTriangles": 1683,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.7959638328938469,
+      "handTriangles": 622,
+      "clothTriangles": 1676,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8001311828042859,
+      "handTriangles": 622,
+      "clothTriangles": 1673,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8042985327147248,
+      "handTriangles": 622,
+      "clothTriangles": 1665,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8084658826251638,
+      "handTriangles": 622,
+      "clothTriangles": 1659,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8126332325356028,
+      "handTriangles": 622,
+      "clothTriangles": 1648,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8168005824460418,
+      "handTriangles": 622,
+      "clothTriangles": 1628,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8209679323564808,
+      "handTriangles": 622,
+      "clothTriangles": 1619,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8251352822669198,
+      "handTriangles": 622,
+      "clothTriangles": 1599,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8293026321773588,
+      "handTriangles": 622,
+      "clothTriangles": 1579,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8334699820877978,
+      "handTriangles": 622,
+      "clothTriangles": 1569,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8376373319982368,
+      "handTriangles": 622,
+      "clothTriangles": 1572,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8418046819086757,
+      "handTriangles": 622,
+      "clothTriangles": 1577,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8459720318191147,
+      "handTriangles": 622,
+      "clothTriangles": 1578,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8501393817295537,
+      "handTriangles": 622,
+      "clothTriangles": 1590,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8543067316399927,
+      "handTriangles": 622,
+      "clothTriangles": 1596,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8584740815504317,
+      "handTriangles": 622,
+      "clothTriangles": 1626,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8626414314608707,
+      "handTriangles": 622,
+      "clothTriangles": 1661,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8668087813713097,
+      "handTriangles": 622,
+      "clothTriangles": 1707,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8709761312817487,
+      "handTriangles": 622,
+      "clothTriangles": 1748,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8751434811921877,
+      "handTriangles": 622,
+      "clothTriangles": 1785,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8793108311026266,
+      "handTriangles": 622,
+      "clothTriangles": 1826,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8834781810130656,
+      "handTriangles": 622,
+      "clothTriangles": 1851,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8876455309235046,
+      "handTriangles": 622,
+      "clothTriangles": 1885,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8918128808339436,
+      "handTriangles": 622,
+      "clothTriangles": 1910,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.8959802307443826,
+      "handTriangles": 622,
+      "clothTriangles": 1930,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9001475806548216,
+      "handTriangles": 622,
+      "clothTriangles": 1956,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9043149305652606,
+      "handTriangles": 622,
+      "clothTriangles": 1949,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9084822804756996,
+      "handTriangles": 622,
+      "clothTriangles": 1939,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9126496303861386,
+      "handTriangles": 622,
+      "clothTriangles": 1932,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9168169802965775,
+      "handTriangles": 622,
+      "clothTriangles": 1916,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9209843302070165,
+      "handTriangles": 622,
+      "clothTriangles": 1911,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9251516801174555,
+      "handTriangles": 622,
+      "clothTriangles": 1895,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9293190300278945,
+      "handTriangles": 622,
+      "clothTriangles": 1882,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9334863799383335,
+      "handTriangles": 622,
+      "clothTriangles": 1873,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9376537298487725,
+      "handTriangles": 622,
+      "clothTriangles": 1861,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9418210797592115,
+      "handTriangles": 620,
+      "clothTriangles": 1841,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9459884296696505,
+      "handTriangles": 620,
+      "clothTriangles": 1834,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9501557795800895,
+      "handTriangles": 622,
+      "clothTriangles": 1823,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9543231294905284,
+      "handTriangles": 622,
+      "clothTriangles": 1818,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9584904794009674,
+      "handTriangles": 622,
+      "clothTriangles": 1812,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9626578293114064,
+      "handTriangles": 622,
+      "clothTriangles": 1804,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9668251792218454,
+      "handTriangles": 622,
+      "clothTriangles": 1798,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9709925291322844,
+      "handTriangles": 622,
+      "clothTriangles": 1789,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9751598790427234,
+      "handTriangles": 622,
+      "clothTriangles": 1776,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9793272289531624,
+      "handTriangles": 622,
+      "clothTriangles": 1765,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9834945788636014,
+      "handTriangles": 622,
+      "clothTriangles": 1704,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9876619287740404,
+      "handTriangles": 622,
+      "clothTriangles": 1687,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9918292786844793,
+      "handTriangles": 622,
+      "clothTriangles": 1686,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 0.9959966285949183,
+      "handTriangles": 622,
+      "clothTriangles": 1687,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0001639785053573,
+      "handTriangles": 622,
+      "clothTriangles": 1684,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0043313284157964,
+      "handTriangles": 622,
+      "clothTriangles": 1682,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0084986783262353,
+      "handTriangles": 622,
+      "clothTriangles": 1680,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0126660282366742,
+      "handTriangles": 622,
+      "clothTriangles": 1695,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0168333781471133,
+      "handTriangles": 622,
+      "clothTriangles": 1700,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0210007280575524,
+      "handTriangles": 622,
+      "clothTriangles": 1703,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0251680779679913,
+      "handTriangles": 622,
+      "clothTriangles": 1707,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0293354278784301,
+      "handTriangles": 622,
+      "clothTriangles": 1697,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0335027777888692,
+      "handTriangles": 622,
+      "clothTriangles": 1691,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0376701276993083,
+      "handTriangles": 622,
+      "clothTriangles": 1686,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0418374776097472,
+      "handTriangles": 622,
+      "clothTriangles": 1675,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.046004827520186,
+      "handTriangles": 622,
+      "clothTriangles": 1668,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0501721774306252,
+      "handTriangles": 622,
+      "clothTriangles": 1653,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0543395273410643,
+      "handTriangles": 622,
+      "clothTriangles": 1638,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0585068772515032,
+      "handTriangles": 622,
+      "clothTriangles": 1625,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.062674227161942,
+      "handTriangles": 622,
+      "clothTriangles": 1600,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0668415770723811,
+      "handTriangles": 622,
+      "clothTriangles": 1585,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0710089269828202,
+      "handTriangles": 622,
+      "clothTriangles": 1571,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0751762768932591,
+      "handTriangles": 622,
+      "clothTriangles": 1554,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.079343626803698,
+      "handTriangles": 622,
+      "clothTriangles": 1547,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.083510976714137,
+      "handTriangles": 622,
+      "clothTriangles": 1539,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.0876783266245762,
+      "handTriangles": 622,
+      "clothTriangles": 1535,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.091845676535015,
+      "handTriangles": 622,
+      "clothTriangles": 1533,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.096013026445454,
+      "handTriangles": 622,
+      "clothTriangles": 1532,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.100180376355893,
+      "handTriangles": 622,
+      "clothTriangles": 1543,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1043477262663322,
+      "handTriangles": 622,
+      "clothTriangles": 1558,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.108515076176771,
+      "handTriangles": 622,
+      "clothTriangles": 1573,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.11268242608721,
+      "handTriangles": 622,
+      "clothTriangles": 1585,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.116849775997649,
+      "handTriangles": 622,
+      "clothTriangles": 1597,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.121017125908088,
+      "handTriangles": 622,
+      "clothTriangles": 1607,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.125184475818527,
+      "handTriangles": 622,
+      "clothTriangles": 1609,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1293518257289659,
+      "handTriangles": 622,
+      "clothTriangles": 1612,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.133519175639405,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.137686525549844,
+      "handTriangles": 622,
+      "clothTriangles": 1612,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.141853875460283,
+      "handTriangles": 622,
+      "clothTriangles": 1610,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1460212253707218,
+      "handTriangles": 622,
+      "clothTriangles": 1611,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.150188575281161,
+      "handTriangles": 622,
+      "clothTriangles": 1603,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1543559251916,
+      "handTriangles": 622,
+      "clothTriangles": 1590,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.158523275102039,
+      "handTriangles": 622,
+      "clothTriangles": 1584,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1626906250124778,
+      "handTriangles": 622,
+      "clothTriangles": 1579,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1668579749229169,
+      "handTriangles": 622,
+      "clothTriangles": 1581,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.171025324833356,
+      "handTriangles": 622,
+      "clothTriangles": 1583,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1751926747437949,
+      "handTriangles": 622,
+      "clothTriangles": 1589,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1793600246542337,
+      "handTriangles": 622,
+      "clothTriangles": 1593,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1835273745646728,
+      "handTriangles": 622,
+      "clothTriangles": 1605,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.187694724475112,
+      "handTriangles": 622,
+      "clothTriangles": 1623,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1918620743855508,
+      "handTriangles": 622,
+      "clothTriangles": 1651,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.1960294242959897,
+      "handTriangles": 622,
+      "clothTriangles": 1684,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2001967742064288,
+      "handTriangles": 622,
+      "clothTriangles": 1726,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2043641241168679,
+      "handTriangles": 622,
+      "clothTriangles": 1751,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2085314740273068,
+      "handTriangles": 622,
+      "clothTriangles": 1783,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2126988239377456,
+      "handTriangles": 622,
+      "clothTriangles": 1816,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2168661738481847,
+      "handTriangles": 622,
+      "clothTriangles": 1848,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2210335237586238,
+      "handTriangles": 622,
+      "clothTriangles": 1873,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2252008736690627,
+      "handTriangles": 622,
+      "clothTriangles": 1899,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2293682235795016,
+      "handTriangles": 622,
+      "clothTriangles": 1911,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2335355734899407,
+      "handTriangles": 622,
+      "clothTriangles": 1922,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2377029234003798,
+      "handTriangles": 622,
+      "clothTriangles": 1920,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2418702733108187,
+      "handTriangles": 622,
+      "clothTriangles": 1918,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2460376232212576,
+      "handTriangles": 622,
+      "clothTriangles": 1915,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2502049731316967,
+      "handTriangles": 622,
+      "clothTriangles": 1916,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2543723230421358,
+      "handTriangles": 622,
+      "clothTriangles": 1899,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2585396729525746,
+      "handTriangles": 622,
+      "clothTriangles": 1892,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2627070228630135,
+      "handTriangles": 622,
+      "clothTriangles": 1882,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2668743727734526,
+      "handTriangles": 622,
+      "clothTriangles": 1872,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2710417226838917,
+      "handTriangles": 622,
+      "clothTriangles": 1863,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2752090725943306,
+      "handTriangles": 622,
+      "clothTriangles": 1856,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2793764225047695,
+      "handTriangles": 622,
+      "clothTriangles": 1853,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2835437724152086,
+      "handTriangles": 622,
+      "clothTriangles": 1846,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2877111223256477,
+      "handTriangles": 622,
+      "clothTriangles": 1844,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2918784722360865,
+      "handTriangles": 622,
+      "clothTriangles": 1836,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.2960458221465254,
+      "handTriangles": 622,
+      "clothTriangles": 1776,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3002131720569645,
+      "handTriangles": 622,
+      "clothTriangles": 1757,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3043805219674036,
+      "handTriangles": 622,
+      "clothTriangles": 1752,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3085478718778425,
+      "handTriangles": 622,
+      "clothTriangles": 1742,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3127152217882814,
+      "handTriangles": 622,
+      "clothTriangles": 1733,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3168825716987205,
+      "handTriangles": 622,
+      "clothTriangles": 1738,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3210499216091596,
+      "handTriangles": 622,
+      "clothTriangles": 1732,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3252172715195984,
+      "handTriangles": 622,
+      "clothTriangles": 1727,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3293846214300373,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3335519713404764,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    },
+    {
+      "clip": "stairs_robe",
+      "t": 1.3377193212509155,
+      "handTriangles": 622,
+      "clothTriangles": 1724,
+      "crossingPairs": 0,
+      "firstCrossingFaces": []
+    }
+  ],
+  "seconds": 15.49994287500158
+}

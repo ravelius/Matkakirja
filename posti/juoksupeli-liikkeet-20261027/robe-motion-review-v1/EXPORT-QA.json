@@ -1,0 +1,52 @@
+[
+  {
+    "variant": "perus",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/motions/puyi-perus-liikkeet.glb",
+    "sha256": "71b7b357ab6266bd7dc369ee87d9add3244c786fbd139ca907767a51732f40b8",
+    "bytes": 3111472,
+    "clips": [
+      "idle",
+      "run",
+      "vault_low",
+      "run_upstairs",
+      "vault_hand",
+      "jump_down",
+      "bar_approach_takeoff",
+      "bar_swing_over",
+      "bar_release_land_run",
+      "jump_robe",
+      "stairs_robe"
+    ],
+    "channelsVerified": 3729,
+    "allBoneAnimationArraysByteExact": true,
+    "nodesRestHierarchyUnchanged": true,
+    "noMeshesMaterialsImages": true,
+    "morphPayloadBytes": 1197552,
+    "morphManifest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/morph/perus/manifest.json"
+  },
+  {
+    "variant": "viitta",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/motions/puyi-liikkeet.glb",
+    "sha256": "158489bcedc2d5e9083fd7f067a384df308c2b4b42a3363769d253b695d017c5",
+    "bytes": 5382968,
+    "clips": [
+      "idle",
+      "run",
+      "vault_low",
+      "run_upstairs",
+      "vault_hand",
+      "jump_down",
+      "bar_approach_takeoff",
+      "bar_swing_over",
+      "bar_release_land_run",
+      "jump_robe",
+      "stairs_robe"
+    ],
+    "channelsVerified": 3762,
+    "allBoneAnimationArraysByteExact": true,
+    "nodesRestHierarchyUnchanged": true,
+    "noMeshesMaterialsImages": true,
+    "morphPayloadBytes": 643152,
+    "morphManifest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/morph/viitta/manifest.json"
+  }
+]

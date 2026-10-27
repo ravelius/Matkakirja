@@ -1,0 +1,24 @@
+[
+  {
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/robe-import-validation-v2/perus/with-robe-morph.glb",
+    "sha256": "15408101c43711130c921fdae0bb06a89b750f78caed3e84c6533ba03c657e20",
+    "oldAccessorArraysByteExact": true,
+    "clips": 11,
+    "newMorph": "robeHemLiftLeft",
+    "runtimeVerified": false,
+    "variant": "perus",
+    "reimportedSkinnedVertexMaxDeltaM": 0.0,
+    "samples": 194
+  },
+  {
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/robe-import-validation-v2/viitta/with-robe-morph.glb",
+    "sha256": "2c946b4ca203bb108e191e275da3ed717426267fd2378f534126a1fd5a8589df",
+    "oldAccessorArraysByteExact": true,
+    "clips": 11,
+    "newMorph": "robeHemLiftLeft",
+    "runtimeVerified": false,
+    "variant": "viitta",
+    "reimportedSkinnedVertexMaxDeltaM": 0.0,
+    "samples": 194
+  }
+]

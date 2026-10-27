@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "variant": "perus",
+  "model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/robe-v9/perus/puyi-final.glb",
+  "reports": [
+    {
+      "clip": "jump_robe",
+      "durationS": 0.9599999785423279,
+      "floorMinimumM": 0.0009937520163960224,
+      "contactProxyMaxErrorM": 8.328810562301698e-06,
+      "maxAngularStep240HzDeg": 14.524380325614292,
+      "worstAngular": {
+        "time": 0.06678260720294454,
+        "bone": "mixamorig:LeftHand"
+      },
+      "morphWeightRange": [
+        0.0,
+        1.0
+      ],
+      "maximumTriangleObstacleHits": 0,
+      "loopDelta": null,
+      "localOrientedHandClothProbe": [
+        {
+          "t": 0.3,
+          "vertices": 2498,
+          "closestM": 0.00197468072276178,
+          "negativeOrientedMaxM": 0.05045433927390077,
+          "moreThan1cmBehind": 69
+        },
+        {
+          "t": 0.38,
+          "vertices": 2498,
+          "closestM": 0.0019327144513824222,
+          "negativeOrientedMaxM": 0.04839961293736939,
+          "moreThan1cmBehind": 71
+        },
+        {
+          "t": 0.45999999999999996,
+          "vertices": 2498,
+          "closestM": 0.0022191057565581836,
+          "negativeOrientedMaxM": 0.046442294607703265,
+          "moreThan1cmBehind": 46
+        },
+        {
+          "t": 0.54,
+          "vertices": 2498,
+          "closestM": 0.0023473027547211696,
+          "negativeOrientedMaxM": 0.048577675914781605,
+          "moreThan1cmBehind": 43
+        },
+        {
+          "t": 0.62,
+          "vertices": 2498,
+          "closestM": 0.002137385308864857,
+          "negativeOrientedMaxM": 0.0480164693777142,
+          "moreThan1cmBehind": 94
+        }
+      ],
+      "numericPass": true
+    },
+    {
+      "clip": "stairs_robe",
+      "durationS": 0.6578947305679321,
+      "floorMinimumM": 0.0008918081210715217,
+      "contactProxyMaxErrorM": 3.0630527134817896e-06,
+      "maxAngularStep240HzDeg": 7.856681146917742,
+      "worstAngular": {
+        "time": 0.3664223815821394,
+        "bone": "mixamorig:LeftHand"
+      },
+      "morphWeightRange": [
+        1.0,
+        1.0
+      ],
+      "maximumTriangleObstacleHits": 0,
+      "loopDelta": 5.4339673816183875e-08,
+      "localOrientedHandClothProbe": [
+        {
+          "t": 0.0,
+          "vertices": 2498,
+          "closestM": 0.001644685271483868,
+          "negativeOrientedMaxM": 0.053251399503546,
+          "moreThan1cmBehind": 19
+        },
+        {
+          "t": 0.10964912176132202,
+          "vertices": 2498,
+          "closestM": 0.0008075962925303668,
+          "negativeOrientedMaxM": 0.0706770261249855,
+          "moreThan1cmBehind": 192
+        },
+        {
+          "t": 0.21929824352264404,
+          "vertices": 2498,
+          "closestM": 0.0006496115123004365,
+          "negativeOrientedMaxM": 0.0,
+          "moreThan1cmBehind": 0
+        },
+        {
+          "t": 0.32894736528396606,
+          "vertices": 2498,
+          "closestM": 0.0009564881237855898,
+          "negativeOrientedMaxM": 0.05378010596300317,
+          "moreThan1cmBehind": 23
+        },
+        {
+          "t": 0.4385964870452881,
+          "vertices": 2498,
+          "closestM": 0.0015713199046890835,
+          "negativeOrientedMaxM": 0.06943615708070466,
+          "moreThan1cmBehind": 160
+        },
+        {
+          "t": 0.5482456088066101,
+          "vertices": 2498,
+          "closestM": 0.0009579425224764887,
+          "negativeOrientedMaxM": 0.0,
+          "moreThan1cmBehind": 0
+        },
+        {
+          "t": 0.6578947305679321,
+          "vertices": 2498,
+          "closestM": 0.0016446896536768067,
+          "negativeOrientedMaxM": 0.05325140212472033,
+          "moreThan1cmBehind": 19
+        }
+      ],
+      "numericPass": true
+    }
+  ],
+  "oldNineClipsExistingChannelsByteExact": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run"
+  ],
+  "sourceGeometryArraysUnchanged": true,
+  "newMorphAdded": true,
+  "surfaceProbeIsNotWatertightCollisionCertificate": true,
+  "runtimeVerified": false,
+  "seconds": 29.394847417017445
+}

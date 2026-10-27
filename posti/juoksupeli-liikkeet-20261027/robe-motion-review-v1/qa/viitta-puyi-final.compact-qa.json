@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "source": "work/robe-v8/viitta/puyi.glb",
+  "sourceSHA256": "4af4a19c9f98172b783adcb95823fc0098972346a0d7a9ed8b6291835467c70b",
+  "file": "work/robe-v8/viitta/puyi-final.glb",
+  "sha256": "33c0e0a4b8a2fba4d25e990787a00f5f85fa1cd12a73a9b1b627fa7b456be76f",
+  "bytes": 14418164,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternionChord": 2e-05,
+    "translationScale": 2e-06
+  },
+  "keys": [
+    {
+      "clip": "jump_robe",
+      "beforeKeys": 59614,
+      "afterKeys": 17427
+    },
+    {
+      "clip": "stairs_robe",
+      "beforeKeys": 69914,
+      "afterKeys": 15583
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "jump_robe",
+      "samples": 923,
+      "maxSkinnedVertexDeltaM": 4.667666250373731e-05,
+      "pass": true
+    },
+    {
+      "clip": "stairs_robe",
+      "samples": 1285,
+      "maxSkinnedVertexDeltaM": 7.128929798265609e-06,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "work/robe-v8/viitta/puyi-final.unpacked.glb",
+    "sourceSHA256": "7264dd92961cda602238951a90c5ad3fdd293fd98470f12c85f9af8bbed81448",
+    "file": "work/robe-v8/viitta/puyi-final.glb",
+    "sha256": "33c0e0a4b8a2fba4d25e990787a00f5f85fa1cd12a73a9b1b627fa7b456be76f",
+    "beforeBytes": 16807000,
+    "afterBytes": 14418164,
+    "sourceAccessors": 5276,
+    "usedAccessors": 4135,
+    "deduplicatedAccessors": 3228,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.13245949998963624,
+    "peakRSSMiB": 212.96875
+  },
+  "elapsedSeconds": 24.351362166926265,
+  "peakRSSMiB": 296.328125
+}

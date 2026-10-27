@@ -1,0 +1,345 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_MORPH_RUNTIME_IMPORT_PENDING",
+  "createdAt": "2026-10-27T18:02:30.326450+00:00",
+  "newClips": [
+    "jump_robe",
+    "stairs_robe"
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "motionFormat": "PT1182, cumulative11clip first motion library. Full node hierarchy and rest transforms; no mesh/material/image. Merge by name, do not replace main model or delete unlisted clips.",
+  "morph": "robeHemLiftLeft POSITION+NORMAL, default0; per-clip weight curves in morph/VAR/manifest.json. Bone-only import insufficient.",
+  "exports": [
+    {
+      "variant": "perus",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/motions/puyi-perus-liikkeet.glb",
+      "sha256": "71b7b357ab6266bd7dc369ee87d9add3244c786fbd139ca907767a51732f40b8",
+      "bytes": 3111472,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down",
+        "bar_approach_takeoff",
+        "bar_swing_over",
+        "bar_release_land_run",
+        "jump_robe",
+        "stairs_robe"
+      ],
+      "channelsVerified": 3729,
+      "allBoneAnimationArraysByteExact": true,
+      "nodesRestHierarchyUnchanged": true,
+      "noMeshesMaterialsImages": true,
+      "morphPayloadBytes": 1197552,
+      "morphManifest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/morph/perus/manifest.json"
+    },
+    {
+      "variant": "viitta",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/motions/puyi-liikkeet.glb",
+      "sha256": "158489bcedc2d5e9083fd7f067a384df308c2b4b42a3363769d253b695d017c5",
+      "bytes": 5382968,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down",
+        "bar_approach_takeoff",
+        "bar_swing_over",
+        "bar_release_land_run",
+        "jump_robe",
+        "stairs_robe"
+      ],
+      "channelsVerified": 3762,
+      "allBoneAnimationArraysByteExact": true,
+      "nodesRestHierarchyUnchanged": true,
+      "noMeshesMaterialsImages": true,
+      "morphPayloadBytes": 643152,
+      "morphManifest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/morph/viitta/manifest.json"
+    }
+  ],
+  "QA": [
+    {
+      "variant": "perus",
+      "localFullReviewFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/robe-v9/perus/puyi-final.glb",
+      "localReviewSHA256": "089856c6a7ef129da997f357ac5a115d69ad5fdcda7578ac2cdfe585c39cf702",
+      "numeric": [
+        {
+          "clip": "jump_robe",
+          "durationS": 0.9599999785423279,
+          "floorMinimumM": 0.0009937520163960224,
+          "contactProxyMaxErrorM": 8.328810562301698e-06,
+          "maxAngularStep240HzDeg": 14.524380325614292,
+          "worstAngular": {
+            "time": 0.06678260720294454,
+            "bone": "mixamorig:LeftHand"
+          },
+          "morphWeightRange": [
+            0.0,
+            1.0
+          ],
+          "maximumTriangleObstacleHits": 0,
+          "loopDelta": null,
+          "localOrientedHandClothProbe": [
+            {
+              "t": 0.3,
+              "vertices": 2498,
+              "closestM": 0.00197468072276178,
+              "negativeOrientedMaxM": 0.05045433927390077,
+              "moreThan1cmBehind": 69
+            },
+            {
+              "t": 0.38,
+              "vertices": 2498,
+              "closestM": 0.0019327144513824222,
+              "negativeOrientedMaxM": 0.04839961293736939,
+              "moreThan1cmBehind": 71
+            },
+            {
+              "t": 0.45999999999999996,
+              "vertices": 2498,
+              "closestM": 0.0022191057565581836,
+              "negativeOrientedMaxM": 0.046442294607703265,
+              "moreThan1cmBehind": 46
+            },
+            {
+              "t": 0.54,
+              "vertices": 2498,
+              "closestM": 0.0023473027547211696,
+              "negativeOrientedMaxM": 0.048577675914781605,
+              "moreThan1cmBehind": 43
+            },
+            {
+              "t": 0.62,
+              "vertices": 2498,
+              "closestM": 0.002137385308864857,
+              "negativeOrientedMaxM": 0.0480164693777142,
+              "moreThan1cmBehind": 94
+            }
+          ],
+          "numericPass": true
+        },
+        {
+          "clip": "stairs_robe",
+          "durationS": 0.6578947305679321,
+          "floorMinimumM": 0.0008918081210715217,
+          "contactProxyMaxErrorM": 3.0630527134817896e-06,
+          "maxAngularStep240HzDeg": 7.856681146917742,
+          "worstAngular": {
+            "time": 0.3664223815821394,
+            "bone": "mixamorig:LeftHand"
+          },
+          "morphWeightRange": [
+            1.0,
+            1.0
+          ],
+          "maximumTriangleObstacleHits": 0,
+          "loopDelta": 5.4339673816183875e-08,
+          "localOrientedHandClothProbe": [
+            {
+              "t": 0.0,
+              "vertices": 2498,
+              "closestM": 0.001644685271483868,
+              "negativeOrientedMaxM": 0.053251399503546,
+              "moreThan1cmBehind": 19
+            },
+            {
+              "t": 0.10964912176132202,
+              "vertices": 2498,
+              "closestM": 0.0008075962925303668,
+              "negativeOrientedMaxM": 0.0706770261249855,
+              "moreThan1cmBehind": 192
+            },
+            {
+              "t": 0.21929824352264404,
+              "vertices": 2498,
+              "closestM": 0.0006496115123004365,
+              "negativeOrientedMaxM": 0.0,
+              "moreThan1cmBehind": 0
+            },
+            {
+              "t": 0.32894736528396606,
+              "vertices": 2498,
+              "closestM": 0.0009564881237855898,
+              "negativeOrientedMaxM": 0.05378010596300317,
+              "moreThan1cmBehind": 23
+            },
+            {
+              "t": 0.4385964870452881,
+              "vertices": 2498,
+              "closestM": 0.0015713199046890835,
+              "negativeOrientedMaxM": 0.06943615708070466,
+              "moreThan1cmBehind": 160
+            },
+            {
+              "t": 0.5482456088066101,
+              "vertices": 2498,
+              "closestM": 0.0009579425224764887,
+              "negativeOrientedMaxM": 0.0,
+              "moreThan1cmBehind": 0
+            },
+            {
+              "t": 0.6578947305679321,
+              "vertices": 2498,
+              "closestM": 0.0016446896536768067,
+              "negativeOrientedMaxM": 0.05325140212472033,
+              "moreThan1cmBehind": 19
+            }
+          ],
+          "numericPass": true
+        }
+      ],
+      "localTriangleCrossingSamples": {
+        "jump_robe": 231,
+        "stairs_robe": 159
+      },
+      "maximumLocalHandClothCrossingPairs": 0
+    },
+    {
+      "variant": "viitta",
+      "localFullReviewFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/robe-v8/viitta/puyi-final.glb",
+      "localReviewSHA256": "33c0e0a4b8a2fba4d25e990787a00f5f85fa1cd12a73a9b1b627fa7b456be76f",
+      "numeric": [
+        {
+          "clip": "jump_robe",
+          "durationS": 0.9599999785423279,
+          "floorMinimumM": 0.00014866840567267256,
+          "contactProxyMaxErrorM": 8.52331247461914e-06,
+          "maxAngularStep240HzDeg": 13.728323893662099,
+          "worstAngular": {
+            "time": 0.07095652015312857,
+            "bone": "mixamorig:LeftHand"
+          },
+          "morphWeightRange": [
+            0.0,
+            1.0
+          ],
+          "maximumTriangleObstacleHits": 0,
+          "loopDelta": null,
+          "localOrientedHandClothProbe": [
+            {
+              "t": 0.3,
+              "vertices": 443,
+              "closestM": 0.0010933789431914346,
+              "negativeOrientedMaxM": 0.07048542756206408,
+              "moreThan1cmBehind": 15
+            },
+            {
+              "t": 0.38,
+              "vertices": 443,
+              "closestM": 0.0010418920391841247,
+              "negativeOrientedMaxM": 0.07035963105842348,
+              "moreThan1cmBehind": 21
+            },
+            {
+              "t": 0.45999999999999996,
+              "vertices": 443,
+              "closestM": 0.0009989349914279137,
+              "negativeOrientedMaxM": 0.07030349991171463,
+              "moreThan1cmBehind": 23
+            },
+            {
+              "t": 0.54,
+              "vertices": 443,
+              "closestM": 0.0011095101039042456,
+              "negativeOrientedMaxM": 0.07022109460116968,
+              "moreThan1cmBehind": 18
+            },
+            {
+              "t": 0.62,
+              "vertices": 443,
+              "closestM": 0.0010638733529138222,
+              "negativeOrientedMaxM": 0.07002608469094632,
+              "moreThan1cmBehind": 19
+            }
+          ],
+          "numericPass": true
+        },
+        {
+          "clip": "stairs_robe",
+          "durationS": 1.3377193212509155,
+          "floorMinimumM": 0.0006294893891254302,
+          "contactProxyMaxErrorM": 5.6599158437799486e-06,
+          "maxAngularStep240HzDeg": 8.069466838389905,
+          "worstAngular": {
+            "time": 1.2960458221465254,
+            "bone": "cape_6_6"
+          },
+          "morphWeightRange": [
+            1.0,
+            1.0
+          ],
+          "maximumTriangleObstacleHits": 0,
+          "loopDelta": 5.298250227436796e-08,
+          "localOrientedHandClothProbe": [
+            {
+              "t": 0.0,
+              "vertices": 440,
+              "closestM": 0.005958785213819095,
+              "negativeOrientedMaxM": 0.06714585023112093,
+              "moreThan1cmBehind": 20
+            },
+            {
+              "t": 0.22295322020848593,
+              "vertices": 443,
+              "closestM": 0.0024229413295810986,
+              "negativeOrientedMaxM": 0.06654975319652438,
+              "moreThan1cmBehind": 32
+            },
+            {
+              "t": 0.44590644041697186,
+              "vertices": 443,
+              "closestM": 0.0010923516222843144,
+              "negativeOrientedMaxM": 0.05187025240499103,
+              "moreThan1cmBehind": 18
+            },
+            {
+              "t": 0.6688596606254578,
+              "vertices": 427,
+              "closestM": 0.0012789877575857004,
+              "negativeOrientedMaxM": 0.10732691909667999,
+              "moreThan1cmBehind": 15
+            },
+            {
+              "t": 0.8918128808339437,
+              "vertices": 427,
+              "closestM": 0.0014556953982107787,
+              "negativeOrientedMaxM": 0.10892833813401721,
+              "moreThan1cmBehind": 17
+            },
+            {
+              "t": 1.1147661010424297,
+              "vertices": 443,
+              "closestM": 0.0010964593198792838,
+              "negativeOrientedMaxM": 0.0522010208160384,
+              "moreThan1cmBehind": 17
+            },
+            {
+              "t": 1.3377193212509155,
+              "vertices": 440,
+              "closestM": 0.00595879553943195,
+              "negativeOrientedMaxM": 0.06714585834487631,
+              "moreThan1cmBehind": 20
+            }
+          ],
+          "numericPass": true
+        }
+      ],
+      "localTriangleCrossingSamples": {
+        "jump_robe": 231,
+        "stairs_robe": 322
+      },
+      "maximumLocalHandClothCrossingPairs": 0
+    }
+  ],
+  "runtimeVerified": false,
+  "ownerAccepted": false,
+  "open": [
+    "Receiver answer to e90171f69: morph animation support",
+    "Runtime crossfade, root timing, stair treads/foot sliding",
+    "Existing full cape underarm correction"
+  ]
+}

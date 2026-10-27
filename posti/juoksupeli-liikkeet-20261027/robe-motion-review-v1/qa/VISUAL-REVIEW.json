@@ -1,0 +1,9 @@
+{
+  "status": "REVIEWED",
+  "views": "Both variants, jump and stairs, front/side/back18degreesDown, six poses per sheet; final jump hand release .66/.689/.72 front+side.",
+  "finalReleaseSheetsFromFinalGLB": true,
+  "wideSheetsFromV8BeforePerus2point5mmLocalHandReleasePatch": true,
+  "wideSheetDifference": "Only perus left hand around.689s changed by2.5mm; final patch shown separately. Compression verified <.047mm whole mesh.",
+  "observed": "Hem visibly lifts with left hand, leaves room for legs, lowers during jump return; stairs holds hem; no gross local clipping in inspected poses.",
+  "limits": "Static CPU previews, no live game/crossfade test, no complete cloth/body self-collision certificate; existing cape underarm issue separate."
+}
