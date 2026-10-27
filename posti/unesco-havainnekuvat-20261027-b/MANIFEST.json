@@ -1,0 +1,68 @@
+{
+  "createdAt": "2026-10-27T15:25:43.894452+00:00",
+  "assets": [
+    {
+      "taskNumber": 1165,
+      "id": "u03",
+      "subject": "Stonehenge",
+      "file": "u03.png",
+      "bytes": 2743420,
+      "sha256": "19b62ee289d18ed335aa89d5d9d5c3a58863fe62e0baa8c1c1cd7a1f3cfd7770",
+      "nativeSHA256": "fad85472a2d253621bc062f3ccd8249053390a2b8f64247a9e1d26376e174530",
+      "decodedRGBA256": "9de5f5571efd92e4d7c4471c22a4fbd44f14f2b6a6840edcfacbfffb530f6b53",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "selectedAttempt": 2,
+      "generationCallsIssued": 2,
+      "generationCallsCompleted": 2,
+      "classification": "havainnekuva",
+      "pixelContentUnchanged": true,
+      "visualQA": {
+        "result": "PASS",
+        "fullNativeViewed": true,
+        "realReferenceCompared": true,
+        "notesFI": "Kivet ovat mattaharmaita, epäsäännöllisesti rapautuneita ja jäkälälaikkuisia. Toistuvaa piirrettyä kiemurakuviota ei näy. Etukivien suuret lohkeamat ja uurteet vastaavat aidon vuoden 2022 viitteen muotoja. Keskimmäisten triliittien ylätukit ovat tasapintaisia suorakulmaisia kiviä; oikean reunan ylätukin kuluneempi muoto vastaa viitettä. Pääkivien järjestys ja kaatuneet kivet säilyvät tunnistettavina. Luonnollinen valo ja väritys, ei ihmisiä, tekstejä, vesileimoja tai näkyvää vinjettiä. Oikean reunan laajennuksen pienet yksityiskohdat ovat synteettisiä."
+      },
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "ownerAuthorization": {
+    "recordedAt": "2026-10-27T15:17:47.325324+00:00",
+    "source": "direct-user-reply-in-Matkakirjan-kuvat",
+    "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+    "questionItemId": "[\"request_user_input_async\",\"call_4e91c76ac6b54d1a807ae5a33d6fc74f\",0]",
+    "verbatim": "saat aina tehdä kuvia, älä kysy minulta enää niistä",
+    "meaning": "Owner authorizes requested image production and necessary quality retakes without repeated permission questions. This newer direct instruction resolves task1165 and supersedes older image-call limits for these requested productions. Preserve QA, history, delivery evidence and any separate approval/integration/publication gates; a later direct owner restriction takes precedence."
+  },
+  "replaces": "d8259ac6820e3027323f5b16d4c24bacd18b0e2c:posti/unesco-havainnekuvat-20261027/u03.png",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "qa-rejected",
+      "startedAt": "2026-10-27T15:17:47.325324+00:00",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-stonehenge-1165-20261027/native/u03-attempt1-rejected.png",
+      "sha256": "1571719c8fb44d63780f40b867b7b52cd9fbd047e7c4f7fd3e74d326a8b0e999",
+      "reason": "Same engraved-looking curved marks on smaller central stone and several upright surfaces; lintel surface still stylized. Not delivered."
+    },
+    {
+      "attempt": 2,
+      "status": "qa-passed",
+      "startedAt": "2026-10-27T15:21:43.516251+00:00",
+      "specPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-stonehenge-1165-20261027/sources/attempt2-generation-spec.json",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-stonehenge-1165-20261027/native/u03-attempt2.png",
+      "originalToolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fd63cc7f-f792-484e-ba42-65af29e458ee.png",
+      "sha256": "fad85472a2d253621bc062f3ccd8249053390a2b8f64247a9e1d26376e174530",
+      "completedAt": "2026-10-27T15:25:43.568560+00:00",
+      "visualQA": {
+        "result": "PASS",
+        "fullNativeViewed": true,
+        "realReferenceCompared": true,
+        "notesFI": "Kivet ovat mattaharmaita, epäsäännöllisesti rapautuneita ja jäkälälaikkuisia. Toistuvaa piirrettyä kiemurakuviota ei näy. Etukivien suuret lohkeamat ja uurteet vastaavat aidon vuoden 2022 viitteen muotoja. Keskimmäisten triliittien ylätukit ovat tasapintaisia suorakulmaisia kiviä; oikean reunan ylätukin kuluneempi muoto vastaa viitettä. Pääkivien järjestys ja kaatuneet kivet säilyvät tunnistettavina. Luonnollinen valo ja väritys, ei ihmisiä, tekstejä, vesileimoja tai näkyvää vinjettiä. Oikean reunan laajennuksen pienet yksityiskohdat ovat synteettisiä."
+      }
+    }
+  ]
+}
