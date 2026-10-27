@@ -1,0 +1,13 @@
+9dbc92064ced5ca5b20c0118cf0fac18e41c91ce9089604edbfd54543dda212a  MANIFEST.json
+79f0a837fce37d478f723ed21d0f2d09f87e1ba885c9ed86b3fec8acf9bd6c86  models/eunukki-1-model.glb
+12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c  models/eunukki-1-rig-animations-review.glb
+c78391f8b3fdfa7f288499726ca9650c43c39a79ebe5d7f097553a7a401effad  models/eunukki-2-model.glb
+4b292e677d721155b658bd89d4af43f2b5c443b687249d5edb24f55ae9ca12fd  models/eunukki-2-rig-animations-review.glb
+d9607b0510250613b5075bdede65a0407611946ca32778c9c22a2b31f5e29dd1  models/eunukki-3-model.glb
+59e36118154e5325a9800c4dda7971ae319203e87ad88f9dd2f0934e0cb26e61  models/eunukki-3-rig-animations-review.glb
+39bee7df026bc02edb72533a56c30024ffd8bf4dfca35e8aea83232e70ef660e  qa/eunukki-1-model-and-run.png
+6250a76520b6eda70274b39c8eb8ba34c5618ffaaa4119b40ffebafdc93613c9  qa/eunukki-1-peek-six-poses.png
+c13cb7e52b42dcb419b0f6552fb330082d15b488f709c5cb3493c99d3368b1c8  qa/eunukki-2-model-and-run.png
+af47c4e2f5057ab9adeef76a688df0b89fa94d4ff6cf6f6cf032a9efcd3276d7  qa/eunukki-2-peek-six-poses.png
+bd7e46c020f1d79d304aea635d7aca9347eab87d78ae90e4d32ddfd0906f5de9  qa/eunukki-3-model-and-run.png
+1c35afe935dcf74b6e5475b51bd9b03d4a91e236b2494756e20d75e927b146c4  qa/eunukki-3-peek-six-poses.png

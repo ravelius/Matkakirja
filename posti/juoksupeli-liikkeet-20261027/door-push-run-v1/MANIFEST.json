@@ -1,0 +1,92 @@
+{
+  "status": "MOTION_REVIEW_READY_GAME_DOOR_ALIGNMENT_PENDING",
+  "sourceOrderCommit": "f7ec4b56b4a3f1e1502375701cfb423e7de9bc81",
+  "assets": [
+    {
+      "asset": "puyi-perus",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/review-batch-v3/puyi-perus-six-motion-review.glb",
+      "sourceSHA256": "1ba798cb2dafdde2ad66802bc9add734c904e9e040323e5c55ae71a2e8cf7a57",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/door-push-run-v4/puyi-perus-door-push-run.glb",
+      "sha256": "988ecc4f070431694cfb5348c5c3a196af81432d65304403f54c94df77880360",
+      "contactSeconds": 0.25,
+      "contactPalmErrorsM": [
+        5.808512360223937e-08,
+        6.426156488417664e-08
+      ],
+      "runExitContinuityMaxDelta": 0.0,
+      "lowerBodyTracksPreserved": true,
+      "sourceGeometryRigOldAnimationsPreserved": true,
+      "status": "CANDIDATE_PENDING_VISIBLE_PALM_AND_DOOR_CONTACT_QA",
+      "gameVerified": false,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-perus-door-push-run.glb",
+      "durationSeconds": 0.65,
+      "palmLocalXYZ": [
+        [
+          -0.22,
+          1.0,
+          0.4
+        ],
+        [
+          0.22,
+          1.0,
+          0.4
+        ]
+      ]
+    },
+    {
+      "asset": "puyi-viitta",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puyi-kengat-10251027-20261027/delivery-v2/puyi.glb",
+      "sourceSHA256": "cf39e196e88abca3b99587d7dffb808f241e81747b84843bd11650a409d96c32",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/door-push-run-v4/puyi-viitta-door-push-run.glb",
+      "sha256": "5b4217333aa3a35fc6e164e0a397ea303e297e578efd008ec38e2be53f0ae0fc",
+      "contactSeconds": 0.25,
+      "contactPalmErrorsM": [
+        3.2350443609647544e-08,
+        9.690300067912983e-08
+      ],
+      "runExitContinuityMaxDelta": 0.0,
+      "lowerBodyTracksPreserved": true,
+      "sourceGeometryRigOldAnimationsPreserved": true,
+      "status": "CANDIDATE_PENDING_VISIBLE_PALM_AND_DOOR_CONTACT_QA",
+      "gameVerified": false,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-viitta-door-push-run.glb",
+      "durationSeconds": 0.65,
+      "palmLocalXYZ": [
+        [
+          -0.22,
+          1.0,
+          0.4
+        ],
+        [
+          0.22,
+          1.0,
+          0.4
+        ]
+      ]
+    }
+  ],
+  "newMotion": "door_push_run",
+  "newTripoCalls": 0,
+  "newTripoCredits": 0,
+  "geometryRigOldClipsPreserved": true,
+  "contactTimeSeconds": 0.25,
+  "durationSeconds": 0.65,
+  "exitRunPhaseSeconds": 0.65,
+  "controllerRecommendation": {
+    "startDistanceFormulaM": "integral(speed(t),0,0.25) + 0.40",
+    "at5mps": 1.65,
+    "at7_5mps": 2.275,
+    "current0_9mTriggerSuitable": false,
+    "note": "Start the animation earlier than the current0.9m door-opening trigger, and open leaves at the0.25s contact event. Controller owns displacement and threshold jump."
+  },
+  "knownLimits": [
+    "Door contact is validated against specified actor-local plane, not actual game leaves",
+    "Cape source retains previously reported underarm/cloth concerns",
+    "Base file includes six earlier review clips; their acceptance is unchanged",
+    "No game/runtime/installed-app acceptance claimed"
+  ],
+  "gameIntegrated": false,
+  "ownerAccepted": false,
+  "QA": "Sampled source gait preserved, exact synthesized exit into run, palm targets reachable below1mm; actual GLB floats differ by at most ordinary quaternion rounding",
+  "generatedAt": "2026-10-27T09:41:09.065958+00:00"
+}

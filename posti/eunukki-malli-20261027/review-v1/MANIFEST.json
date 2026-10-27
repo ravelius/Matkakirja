@@ -1,0 +1,121 @@
+{
+  "assets": [
+    {
+      "asset": "eunukki-1",
+      "heightM": 1.67,
+      "triangles": 39356,
+      "textureMaxPx": 2048,
+      "rigBones": 65,
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call"
+      ],
+      "model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-1-model.glb",
+      "modelSHA256": "79f0a837fce37d478f723ed21d0f2d09f87e1ba885c9ed86b3fec8acf9bd6c86",
+      "animatedReview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-1-rig-animations-review.glb",
+      "animatedSHA256": "12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/work/gestures-v3/eunukki-1-motion-review.glb",
+      "sourceSHA256": "12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c",
+      "front": "+Z",
+      "unit": "metre",
+      "status": "REVIEW_ONLY_NOT_FINAL_ACCEPTANCE"
+    },
+    {
+      "asset": "eunukki-2",
+      "heightM": 1.69,
+      "triangles": 38408,
+      "textureMaxPx": 2048,
+      "rigBones": 65,
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call"
+      ],
+      "model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-2-model.glb",
+      "modelSHA256": "c78391f8b3fdfa7f288499726ca9650c43c39a79ebe5d7f097553a7a401effad",
+      "animatedReview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-2-rig-animations-review.glb",
+      "animatedSHA256": "4b292e677d721155b658bd89d4af43f2b5c443b687249d5edb24f55ae9ca12fd",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/work/gestures-v3/eunukki-2-motion-review.glb",
+      "sourceSHA256": "4b292e677d721155b658bd89d4af43f2b5c443b687249d5edb24f55ae9ca12fd",
+      "front": "+Z",
+      "unit": "metre",
+      "status": "REVIEW_ONLY_NOT_FINAL_ACCEPTANCE"
+    },
+    {
+      "asset": "eunukki-3",
+      "heightM": 1.68,
+      "triangles": 39126,
+      "textureMaxPx": 2048,
+      "rigBones": 65,
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call"
+      ],
+      "model": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-3-model.glb",
+      "modelSHA256": "d9607b0510250613b5075bdede65a0407611946ca32778c9c22a2b31f5e29dd1",
+      "animatedReview": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-3-rig-animations-review.glb",
+      "animatedSHA256": "59e36118154e5325a9800c4dda7971ae319203e87ad88f9dd2f0934e0cb26e61",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/work/gestures-v3/eunukki-3-motion-review.glb",
+      "sourceSHA256": "59e36118154e5325a9800c4dda7971ae319203e87ad88f9dd2f0934e0cb26e61",
+      "front": "+Z",
+      "unit": "metre",
+      "status": "REVIEW_ONLY_NOT_FINAL_ACCEPTANCE"
+    }
+  ],
+  "tripoCredits": 195,
+  "remainingBalanceObserved": 18470,
+  "modelCalls": 3,
+  "rigCalls": 3,
+  "knownOpenItems": [
+    "peek/call mouth opening absent; PK technical question c28bd8ae079aa85cda7924625bd91e881d626833 pending",
+    "65 Mixamo core bones present; guard has48additional cloth/hair bones; PK compatibility question pending",
+    "no complete continuous game/device cloth/contact and foot no-slip verification",
+    "edge-stretch scan flags retained; similar maxima occur in original guard source; no blanket pass",
+    "weight-repair-v1 not selected: improvement inconsistent and no clear visual gain"
+  ],
+  "sourceGuard": "output/tripo-hahmot-20261019/vartija/vartija-rig-animations.glb",
+  "gameIntegrated": false,
+  "ownerAccepted": false,
+  "peekPlacement": {
+    "doorWidthM": 3.5,
+    "actorOffsetFromDoorCentre": [
+      1.88,
+      0,
+      -0.22
+    ],
+    "actorLocalGripPoint": [
+      -0.13,
+      1.19,
+      0.28
+    ],
+    "blendAtExit": "run phase .32"
+  },
+  "elapsedSeconds": 30.926037749974057,
+  "peakRSSMiB": 390.75
+}
