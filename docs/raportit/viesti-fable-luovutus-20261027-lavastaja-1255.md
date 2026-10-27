@@ -367,7 +367,11 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - PARI: K/tyokalut/aja_v86_pari.zsh (H/juuri-v93m = v92m + tausta-v57/59/60 → yksikerros-v86; oma editori-kopio K/tyokalut/editori-lr.sh, T = wt/proto-lavastaja-havainne).
   Tulos proto-3d/lokit/havainne-editori-20261027-231817 (02 01 05, REF 1158e9df0). Sonnet-tarkistus: pinnat latautuvat, reunakiven venyminen korjattu;
   lattia ~40 % havainnetta vaaleampi ja kylmä, valoa/varjoa ei näy (kujapaloissa ei UV1:tä) → VS:lle 23.2x (laji 0 -polun sävy). KK:lle pari vasta VS:n REF:n jälkeen.
-- AVOIN: (3) muurikatteen/taustan 0-3 pilarit → _pilari_etu/_pilari_sivu (VS 21.3x: pilarit ovat taustassa 0-3); kujan 01 sokkeli avoimet-paloissa; 01:n reunakivet
+- 23.3x: (3) pilarit → V4_kujakivi_pilari_etu / _sivu (saman tason pinnat, leveys ≤ 0,70: > 0,45 etu, muuten sivu, u venytetty leveyteen). Näkyvät pilarit
+  ja muurisokkeli ovat MUURIKATTEEN V4_sokkelissa: ketju tekee myös K/muurikate-v19/pari-v86-v16-nimella (LISA=…glb), juuri-v93m:n kielletty-muurikate-v16 → siihen.
+  Pari proto-3d/lokit/havainne-editori-20261027-232729 (02 05): pilarit kerroskuvioisia, ei venymää; kivijalka havainnetta vaaleampi ja tasaisempi (VS).
+  VIENTIIN myöhemmin: tausta-v63 = yksikerros-v86 ja muurikate-v20 = junan v19-pohja samalla käsittelyllä (EI vielä tehty; pari käytti v17-v16-nimella-kopiota).
+- AVOIN: kujan 01 sokkeli avoimet-paloissa; 01:n reunakivet
   näyttävät irrallisilta kermanvalkoisilta laatoilta (tarkista pelin valossa VS:n korjauksen jälkeen). Olavinlinna J4: arkun glb:tä ei löytynyt _tyo/_valmiit-hauilla → kysy NS:ltä polku.
-- JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
+- JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min, myös muurikatteen parikopio), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
   (REF=<VS:n uusi SHA> ympäristössä).
