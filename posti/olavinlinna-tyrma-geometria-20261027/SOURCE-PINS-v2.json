@@ -1,0 +1,25 @@
+{
+  "mail": [
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3d-kuittaus-20261027.md",
+      "commit": "cdf71d361c9f781f1edac081309a50a3f3e83d7d",
+      "blob": "50c8ad7341d96cd9ec1ad40f51f753c4d81228a6",
+      "sha256": "bf9ab11b45fd5ed6477bddb57c2a4c260ce2fe515c19cf5f61e2a812cd986b7b",
+      "readInFull": true
+    },
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3d-v2-lisays-20261027.md",
+      "commit": "3e23155b1158a074c5ec491502a091f6c651a634",
+      "blob": "3a7a9afaa2a790c96ccbb61c29aaac79973964cb",
+      "sha256": "d580db7ff14fd08c1cbc89b34b5b72cb0f45550473f8789681eb3e580261bd3b",
+      "readInFull": true
+    }
+  ],
+  "sourceGLBSHA256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb",
+  "originalDeliveryCommit": "d97f4782cadf3b1fcf73fc2f673fcfd19ea87246",
+  "newSourceMap": {
+    "source": "/Users/Shared/Claude/proto-3d/_lahteet/koehuone-20261012/tekstuurit/white_rough_plaster/white_rough_plaster_rough_4k.jpg",
+    "deliveryMapSHA256": "170c6783a092b4ed920d2710673f5d1e2c2ae733a7b7b8ace0745878deca3a04",
+    "rights": "CC0 1.0, Rob Tuytel"
+  }
+}

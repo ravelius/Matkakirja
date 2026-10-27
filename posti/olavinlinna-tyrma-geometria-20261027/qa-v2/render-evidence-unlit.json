@@ -1,0 +1,10 @@
+{
+  "inputGLBSHA256": "a9b274f665b5dc5a420e872ff7533bbfe6fbce029b878844903c3529ad9bee56",
+  "startedAt": "2026-10-27T15:41:43.144534+00:00",
+  "views": [
+    "seated-to-door",
+    "crawl-mouth",
+    "--unlit"
+  ],
+  "kind": "Internal diagnostic renders, no game integration; QA fill lights are not exported."
+}

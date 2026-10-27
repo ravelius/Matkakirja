@@ -1,0 +1,17 @@
+{
+  "taskNumbers": [
+    1156,
+    1157,
+    1158,
+    1159,
+    1162
+  ],
+  "imageGenerationCalls": 0,
+  "glb": "tyrma-e101-v2.glb",
+  "sha256": "a9b274f665b5dc5a420e872ff7533bbfe6fbce029b878844903c3529ad9bee56",
+  "bytes": 14839932,
+  "localQA": "PASS",
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

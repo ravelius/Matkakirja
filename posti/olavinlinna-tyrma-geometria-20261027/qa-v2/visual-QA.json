@@ -1,0 +1,21 @@
+{
+  "result": "PASS_LOCAL_QA_PENDING_RECIPIENT",
+  "inputGLBSHA256": "a9b274f665b5dc5a420e872ff7533bbfe6fbce029b878844903c3529ad9bee56",
+  "reviewedAt": "2026-10-27T15:42:36.916471+00:00",
+  "views": [
+    "chamber-v2.png",
+    "seated-to-door-v2.png",
+    "crawl-mouth-v2.png",
+    "seated-to-door-v2-unlit.png",
+    "crawl-mouth-v2-unlit.png"
+  ],
+  "findings": {
+    "1156": "Wall albedo retained from approved palace family; pale mortar visible without directional light; 534 UV edges verify 2.5 m repeat.",
+    "1157": "Plaster normal strength 1 and CC0 roughness map; relief visible in lit chamber. No plaster geometry added.",
+    "1158": "1800 existing straw ribbons, 6.53–15 cm, improved contrast; ten moved to floor at original bed edge within footprint. Original bed base and position preserved.",
+    "1159": "Same seated and crawl cameras in unlit pass: black areas disappear; actual wall/crawl surface present.",
+    "1162": "Light aimed down opening toward floor; floor patch visible in chamber. Inner sill edge lowered 3 cm, outer edge unchanged, not a blanket unchanged-geometry claim. 9/9 aperture rays remain free."
+  },
+  "gameIntegrationVerified": false,
+  "published": false
+}

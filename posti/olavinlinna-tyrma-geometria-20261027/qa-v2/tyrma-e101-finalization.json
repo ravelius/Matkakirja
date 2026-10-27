@@ -1,0 +1,22 @@
+{
+  "markersExactCount": 16,
+  "nonImageBufferDataUnchangedByFinalizer": true,
+  "sourceMapsBytePreserved": [
+    "slate_driveway_nor_gl_2k",
+    "slate_driveway_diff_2k",
+    "rock_wall_13_nor_gl_2k",
+    "rock_wall_13_diff_2k",
+    "olki-normaali",
+    "olki-albedo",
+    "white_rough_plaster-normaali-1k"
+  ],
+  "newMapsCompression": [
+    {
+      "name": "white-rough-plaster-rough-1k-v2",
+      "before": 918199,
+      "after": 273884
+    }
+  ],
+  "sha256": "a9b274f665b5dc5a420e872ff7533bbfe6fbce029b878844903c3529ad9bee56",
+  "bytes": 14839932
+}

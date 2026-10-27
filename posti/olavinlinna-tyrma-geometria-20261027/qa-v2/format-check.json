@@ -1,0 +1,42 @@
+[
+ {
+  "nimi": "tyrma-e101-v2.glb",
+  "virheet": [],
+  "huomiot": [],
+  "tiedot": {
+   "nimi": "tyrma-e101-v2.glb",
+   "tyyppi": "esine",
+   "kolmiot": 7772,
+   "piirrot": 5,
+   "materiaalit": 5,
+   "solmut": 18,
+   "kuvat": [
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "1024×1024 jpg",
+    "1024×1024 jpg",
+    "1024×1024 jpg",
+    "1024×1024 jpg"
+   ],
+   "rajat": {
+    "min": [
+     -19.534,
+     -3.8,
+     -7.636
+    ],
+    "max": [
+     -9.349,
+     -0.6,
+     3.559
+    ],
+    "koko": [
+     10.185,
+     3.2,
+     11.196
+    ]
+   }
+  }
+ }
+]
