@@ -31,3 +31,6 @@ Korvattu samalla nimellä `ulos-lopulliset/`; vanhat `ulos-lopulliset/hylatyt-sa
 - keisari-3-huh-lahelta-piti-otto2: "[panicked] Huh, läheltä piti!" (0,25 / 0,8) · 2,08 s
 - keisari-4-hui-otto1: "[startled] Hui!" (0,5 / 0,5) · 0,88 s
 - keisari-4-hui-otto2: "[panicked] Hui!" (0,7 / 0,3) · 0,96 s
+
+## SEIS uusinnat (KK 27.10., omistaja: ei koneellista litterointia): alkuperäiset 14 ottoa palautettu
+`ulos-lopulliset/` = alkuperäiset 14 ottoa (koot täsmäävät); 4 uusintaa siirretty `ulos-uusinnat/` (keisari-2-huh-otto1, 3-…-otto2, 4-hui-otto1, 4-hui-otto2; promptit yllä). Mitään ei hylätä Geminin perusteella; kaikki otot omistajalle kuunneltaviksi.
