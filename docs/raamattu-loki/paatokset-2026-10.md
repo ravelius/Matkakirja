@@ -2815,3 +2815,7 @@ OMISTAJAN PÄÄTÖKSET klo 10.05 (kortti KK:ssa, sanatarkasti): "Tehdäänkö ko
 ## ÄÄNILUPA VAIN YLI 3 %:N AJOIHIN, MYÖS UUSILLA ÄÄNILLÄ (omistaja 27.10. klo 10.06, KK:n välitys) (27.10.2026 klo 10.07)
 
 OMISTAJAN PÄÄTÖS klo 10.06 (sanatarkasti, viesti KK:lle): "Ohjeissa pitäisi siis olla, että äänien generoinnista ei tarvitse erikseen pyytää lupaa, ellei se käytä yli 3% koko kuukausikiintiöstä." RAAMATTU: 5.1 (otsikko ja 3 %:N RAJA: raja koskee myös uusia henkilöitä, ääniä, koeottoja ja uusintoja; kumoaa "uusi henkilö tai uusi ääni vaatii aina luvan"), 5.2 (määrä- ja ottoluvat vain rajan ylittävään kulutukseen) ja 7.27 ÄÄNISTÄ EI KORTTEJA (lupakortti vain yli 3 %:n ajoihin; rajan alla kulutus KK:lle jälkikäteen yhdellä rivillä). KK:n tiedoksi: Olavinlinnan 1017 v2 ja vaakunahuomio viety omistajalle.
+
+## OVIKOHTAUKSEN KAMERA KADUN SUUNTAISESTI (omistaja 27.10. klo 10.25, KK:n välitys) (27.10.2026 klo 10.25)
+
+OMISTAJAN PÄÄTÖS klo 10.25 (sanatarkasti): "Ja kamera ei saa olla kohti sisätilaa, vaan keisari näkyy vasta, kun hän on tullut ulos ja kiertänyt oven takaa kujalle. Eli kameran suunta pitää olla 90 astetta eri suunnasta kuin viimeisin kuva. Eli kamera kuvaa kadun myötäisesti." → PK:lle (ovikohtaus; KK:n korjauslista: ei rakoa ovien väliin, opetusteksti luonnoksen kokoiseksi). CODEX: omistaja käynnistää Codexin uudelleen ja antaa tekstin noin klo 10.40 studiolla (tilaukset dded84cde ja f7ec4b56b). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
