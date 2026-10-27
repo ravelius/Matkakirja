@@ -2763,3 +2763,18 @@ KK:n päätös omistajan valtuutuksella klo 04.09 (sanatarkasti): Pulun tietokor
 ## TARKENNUS 27.10. KLO 02.45 KIRJAUKSEEN: KUJAN 02 LÄIKKÄ OLI REIKÄ LATTIASSA (KK) (27.10.2026 klo 04.10)
 
 KK klo 04.09 (sanatarkasti): tarkennus 02.45-riviin: kujan 02 läikkä oli reikä palan lattiassa (pelin täytelattia näkyi läpi), ei päällekkäinen lattia. v64 paikkasi sen. Kuunportti pois puutarhoista (KK 03.39).
+
+## JUOKSUPELIN ALKU JA OPETUS (omistaja 27.10. klo 08.26 ja 08.27, KK:n välitys) (27.10.2026 klo 08.28)
+
+OMISTAJAN PYYNTÖ klo 08.26 (sanatarkasti): "Juoksupeli saisi alkaa samalta kujalta kuin nytkin, mutta aivan kujan perältä niin, että keisari työntää takimmaisen rakennuksen oven auki ja livahtaa siitä
+ulos ja sen jälkeen huikkaa ottakaa kiinni, jos saatte. Aiemmissa versioissa kamera on pysynyt turhan kauan. Keisarin kasvojen etupuolella se voisi kiertää nopeammin keisarin taakse ja sen jälkeen
+lähteä heti numerolaskenta käyntiin, niin että pelaaja pääsisi jo ensimmäisellä suoralla ohjaamaan keisaria. Ja kun tulee ensimmäinen T-risteys, niin siinä tulisi ruudulle ohje. Vaipata oikealla
+peukalolla vasemmalle tai oikealle, tai ehkä mieluummin vain oikealle, niin pelaaja oppii ensimmäisen ohjausliikkeen saman tien. Sen jälkeen voisi tulla ensimmäinen este, jonka yli pitää hypätä, ja
+siihen tulisi kanssa ohje. Sitten tulisi käännös. Vasemmalle ja siihen tulisi ohje ja niin poispäin, että kaikki ohjain napit tulisi opetettua pelaajalle heti alussa, paitsi omenan heitto. Se voisi
+tulla vasta vähän myöhemmin, mutta kun ensimmäinen omena tulee reitillä, niin siltä kanssa tulisi näkyvä ohje ja miten sitä sitten käytetään. Pitää olla myös väistämisjuttu, missä pelaajan linjalle
+tulee jokin arvokas esine, ja kun pelaaja on saanut sen väistettyä, niin pitää keksiä uusi tai generoida uusi ääni, joka sanoo huh, se oli lähellä. Sen lisäksi voisi generoida muutamia muitakin
+väistörepliikkejä. Periaatteessa pelkkä huh ja joku muu vastaava, mahdollisimman lyhyt. Varmasti kaikkein paras." OMISTAJAN PYYNTÖ klo 08.27 (sanatarkasti): "Kun keisari pinkaisee alkukohtauksessa
+ovesta ulos, niin hänen perään voisi heti kurkistaa ensimmäinen eunukki, joka huutaa hänen majesteetti. Näin myös kiinniottajien kasvot tulevat heti tutuksi pelaajalle." TAVOITE (KK): pelaaja ohjaa
+keisaria muutaman sekunnin päästä alusta; alkukohtaus = ovesta karkuun, huuto, perään kurkistava eunukki; jokainen ohjausliike opitaan juuri tarvittaessa (ensin oikealle pyyhkäisy), omenan heitto
+vasta ensimmäisen omenan kohdalla; väistörepliikit (huh) generoidaan vasta omistajan ääniluvalla. TYÖNJAKO: KK johtaa (PK + LR + NUI ohjeiden pohja + Äänittäjä luvan jälkeen); juna 212 tai seuraava,
+kun valmis.
