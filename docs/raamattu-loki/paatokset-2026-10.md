@@ -2939,3 +2939,7 @@ Kortti KK:ssa (PK:n video a210bfa50 yläkulmasta): 'Nouseeko kamera kiinnioton a
 ## LUE LISÄÄ: TOISTOTARKISTUS VÄLJENNETTY (KK 27.10. klo 17.24) (27.10.2026 klo 17.24)
 
 KK väljensi Lue lisää -toistotarkistusta omistajan valtuutuksella (klo 00.05 ja 04.10 tehty sääntö). Sama pitkä sana ja johdannon vuosiluku saavat nyt esiintyä kerran, mutta saman faktan toisto hylätään edelleen. Syy: aiemmin kaikki tekstiyritykset hylättiin; tavoite on, että teksti näkyy noin 6 sekunnissa. Toteutus: Karttaseppä PR 5368, worker t7.
+
+## OPPI: KORTIN KAKSI KUVAA ERI KUVIKSI (KK 27.10. klo 17.3x, 9.5) (27.10.2026 klo 17.30)
+
+KK palautti Akropolis-koosteen ennen omistajaa. 1) Commons-kuva (Wikidata P18) ja havainnekuva olivat lähes samat, koska Codex käytti samaa kuvaa mallina. 2) Perustettu-rivi oli väärin: P571 on -0500 vuosisadan tarkkuudella, eli oikein on 400-luvulla eaa. 3) Korkeus noin 90 metriä ilman lähdettä. 4) Koosteesta puuttuivat Lue lisää ja Pulun kysymykset. OPPI: omistaja pyysi kuvat ja havainnekuvat, joten kortissa on kaksi eri kuvaa. Kuva tarkistetaan tätä sanamuotoa vasten, ja havainnekuvan malliksi annetaan eri kuva kuin kortin P18. Vuosisatatarkkuuden P571 muunnetaan oikein (-0500 = 400-luku eaa.). Kooste näyttää koko kortin, myös Lue lisää ja Pulun kysymykset. PT:n tarkistus ohitti kohdat 1 ja 4. KS korjaa kaikki 18 kohdetta ja lähettää uuden koosteen KK:lle ja PT:lle.
