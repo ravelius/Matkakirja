@@ -2786,3 +2786,7 @@ OMISTAJAN PYYNTÖ klo 08.35 (sanatarkasti): "onko Codex toimittanut jo kaikki ju
 ## KEISARIN KÄSIEN LIIKKEET CODEX-TILAUKSEEN (omistaja 27.10. klo 08.39, KK:n välitys; jatkoa 08.35-pyyntöön) (27.10.2026 klo 08.39)
 
 OMISTAJAN PÄÄTÖS klo 08.39 (kortti KK:ssa, sanatarkasti): "Lisätäänkö samaan Codex-tilaukseen myös nämä neljä käsien liikettä?" → "Kyllä, kaikki neljä (Suositus)" (kaavun nosto hypyissä ja portailla, kämmen esteen päällä matalan esteen yli, alastulo käsillä, pilkallinen kädenheilautus alun huudossa). TYÖNJAKO: PK tilaa samaan Codex-postiin kiinnioton, rimpuilun, oviaukon tuen ja eunukin kanssa.
+
+## CODEXIN SUORA LIIKETILAUS JA KAKSI CODEX-SESSIOTA (omistaja 27.10. klo 08.40 ja 08.41, KK:n välitys) (27.10.2026 klo 08.42)
+
+OMISTAJAN TIEDOTE klo 08.40 (sanatarkasti): "tilasin vahingossa liikkeitä myös suoraan kodeksilta. Se viestii sinulle, mitä kaikkea se on nyt tekemässä, ja ottaa myös lisätilaukset sinulta vastaan. Kaikki ne pitäisi olla hyödyllisiä liikkeitä." TOIMET: KK pysäytti PK:n oman tilauksen; KK kokoaa Codexille lisätilauksen vain puuttuvista Codexin viestin jälkeen. UUSI TYÖTAPA klo 08.41 (sanatarkasti): "Codexilta voi siis tilata 2D-kuvia sekä Tripo 3D-malleja yhtä aikaa, koska siellä on kaksi eri sessiota, jotka tekevät kahta eri asiaa." RAAMATTU 7.15: lisätty KAKSI CODEX-SESSIOTA.
