@@ -50,3 +50,15 @@ Konteksti noin 35 %. Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-ti
 ## Opit
 - Tarkista `ls -ld` ennen muokkausta: koejuuren kansio voi olla symlinkki toisen roolin kansioon. Vahinko korjattiin heti, v1:n SHA täsmäsi.
 - Editorin kuva-komento syö ~1 s peliaikaa → lyhyet vaiheet kuvataan lokilla (0,1 s välein) tai pysäyttämällä autopilotti.
+
+## Lisäys 15.05: KK:n arvio ed8cfaf46:sta
+1. pc-3 v5 on HYVÄKSYTTY, ja 0,6 s myöhempi ohjaus käy.
+2. Sivulta kiinniotto EI mene vielä peliin. KK:n mukaan eunukin kasvot ja vartalo kääntyvät poispäin keisarista, ja ote näyttää ohi kävelyltä.
+   Sivuote pysyy QA-komennon takana. Selvitä ottajan kierto ja paikka Codexin qa/eight-side-pairs.png:tä vasten ennen kuin sivuotetta kysytään uudelleen.
+3. SEURAAVA TYÖ, rimpuiluvideo KK:lle:
+   - Alle 30 MiB, 960 leveä. Video menee KK:n kautta omistajalle koko kiinniottosarjana.
+   - Sisältö: takaa-kiinniotto → rimpuilu napautuksin → irtipääsy ja juoksuun. Perään uupuminen → luovutus → Uuvuit-ruutu.
+   - Pohjana elävyysvideon tekotapa (_tyo/pelikoodari/elavyys-212-20261027).
+   - Skenaariot: _tyo/pelikoodari/juoksu-alku-opetus-20261027/sk-taso1-rimpuilu2-*.txt ja sk-taso1-rimpuilu-uupui.txt, hahmot-v7-koe.
+   - Punaiset pallot lattialla ovat Peukalokohta-ympyröitä (Rimpuilu-tila, sykkivät napautusohjeet, omistaja 08.58). Batch-kuvissa ne näyttävät lattialla oleviltä palloilta.
+     Tarkista videolta, että ne näyttävät tarkoituksellisilta (UI-kerros, ei 3D). Jos eivät, kysy NUI:lta / PT:ltä (UI-POHJAT).
