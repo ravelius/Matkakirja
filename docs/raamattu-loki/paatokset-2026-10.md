@@ -2856,3 +2856,7 @@ Kohdemaan lippu pitää näkyä myös kauemmilla zoom-tasoilla. Lipun koko ei to
 epäkeskosti, kun kartan pitäisi zoomautua nipistyspisteen keskelle sisään tai ulos." Raamattu 2.167 päivitetty (merkkien valinta, lippu, nipistys). Toteutus KS junaan 212: 1) Grimeton, Matterhorn,
 Hagia Sofia, Edinburgh pois kartalta (linssit ennallaan) 2) Rijksmuseum ilman sivukäytäviä 3) Kielletyn kaupungin 2D-merkki samaan sarjaan 4) kehittäjätilaan kytkin harmaiden kuumailmapallojen
 piilotukseen 5) lippu kaikilla loitonnustasoilla 6) nipistys sormien välisen pisteen ympäri. Liikkuvat 3D-pienoismallit lähtevät 3D-merkkien mukana.
+
+## JUOKSUPELIN ÄÄNIOTOT HYVÄKSYTTY (omistaja 27.10. klo 12.47, KK:n välitys) (27.10.2026 klo 12.49)
+
+OMISTAJAN PÄÄTÖS klo 12.47 (sanatarkasti): "Eunukeista kummaltakin Otto B. oli parempi. keisarilta hyväksyn: 2 otto 2, 3 otto 1, 5 otto 1, 7 otto 1, 9 otto 1 12 lisäotto parempi (voi korvata aiemman)". Numerot ovat videoiden ruutunumeroita. KK:n tulkinta: eunukit Georg B ja Sergio B; keisari "Ottakaa kiinni" otto 2, "Huh!" otto 1, "Huh, läheltä piti!" lisäotto 12 (korvaa oton 1), "Hui!" otto 1, "Melkein!" otto 1. KK välitti Äänittäjälle tiedostopolkujen kanssa; Pelikoodari kytkee otot juoksupeliin (juna 212).
