@@ -1,0 +1,317 @@
+{
+  "technicalChecksPassed": true,
+  "visualQA": "PASS",
+  "callsIssued": 10,
+  "callsCompleted": 10,
+  "retakes": 0,
+  "files": [
+    {
+      "id": "kaupunki",
+      "taskNumber": 1088,
+      "file": "sym-tyyppi-kaupunki.png",
+      "sha256": "cf72d73f8f610b68ecf82be5d7df6838695c5d27b86e42b8870ca74aef0838f7",
+      "bytes": 43291,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        27,
+        12,
+        1236,
+        1254
+      ],
+      "nativeSHA256": "b9dca2c9f2e74d2a78dd63156ba53c61255652b6f1167a52d995938bdf714e48",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "kyla",
+      "taskNumber": 1089,
+      "file": "sym-tyyppi-kyla.png",
+      "sha256": "8e15b617fb4084749c3c266dcfda3dc8872ccd357d2c5845bf172151a055439f",
+      "bytes": 52376,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        19,
+        1234,
+        1254
+      ],
+      "nativeSHA256": "94237a0a545115b235df9d740f9ae3e9844a3f028b8982aa5715f864e85942ba",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "luonto",
+      "taskNumber": 1090,
+      "file": "sym-tyyppi-luonto.png",
+      "sha256": "c8b2e64d748b145a976c6f4f9f18fd3d4cd0c386b5bd660b7197abd8b57a8f20",
+      "bytes": 53108,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        17,
+        1238,
+        1254
+      ],
+      "nativeSHA256": "5a79ea60831c383112cc3f4541666297920e7ab0b3f33cb02ecbe4af534b346c",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "vesisto",
+      "taskNumber": 1091,
+      "file": "sym-tyyppi-vesisto.png",
+      "sha256": "81cded3c5ae0379e62bfbe2987815f2d51ca326eb81d4c7aaf7cd5246fe6dcb1",
+      "bytes": 46977,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        23,
+        1230,
+        1232
+      ],
+      "nativeSHA256": "6361dd0b8bdc49045fecee0127142fa3660c2c0b53e5b116ddeab294f330708c",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "historia",
+      "taskNumber": 1092,
+      "file": "sym-tyyppi-historia.png",
+      "sha256": "892e4a63e12ecb8e359b1047684b37411ab9f8e082a786fe068e25d7ee678f54",
+      "bytes": 41997,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        28,
+        1253,
+        1236
+      ],
+      "nativeSHA256": "81d0abd48de10dd1bfbcf5e978f44726ed2e117c46513a9a0b4d41dba99a0c3b",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "arkkitehtuuri",
+      "taskNumber": 1093,
+      "file": "sym-tyyppi-arkkitehtuuri.png",
+      "sha256": "90bf0ceb7db795faa07a8a9439901dfcc0696717c423575c816f5b9f25502648",
+      "bytes": 48967,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        41,
+        19,
+        1242,
+        1230
+      ],
+      "nativeSHA256": "0ab2e3af914e1904769919a938a2a99801e7e9e8b3c778b93086c47f93d51dda",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "uskonto",
+      "taskNumber": 1094,
+      "file": "sym-tyyppi-uskonto.png",
+      "sha256": "608b0b55372305610290591c714322a93cc4e2418cabfea986519054750ade4d",
+      "bytes": 27411,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        19,
+        1234,
+        1230
+      ],
+      "nativeSHA256": "c171eca90f0f3c594aa7a96bc4cde175d63162213f6c335d0748233279696c8f",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "kulttuuri",
+      "taskNumber": 1095,
+      "file": "sym-tyyppi-kulttuuri.png",
+      "sha256": "1296695862ce579bec234ef8ce67bf43a5f3719977474d22f1fdec6ea442534d",
+      "bytes": 47092,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        29,
+        1232,
+        1206
+      ],
+      "nativeSHA256": "c3b34e302f72806a228f338922095dc66bf1340f66e747743b985dab7ebe92e2",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "liikenne",
+      "taskNumber": 1096,
+      "file": "sym-tyyppi-liikenne.png",
+      "sha256": "70d2fc52cbfa7154a5ce4ae227f852e42087ba28f56fcf2f4db2684fee03a287",
+      "bytes": 39374,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        9,
+        1254,
+        1254
+      ],
+      "nativeSHA256": "928a009753a0265b59ac7e97118004468a8985fc9c8e9af888a583120277c409",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    },
+    {
+      "id": "alue",
+      "taskNumber": 1097,
+      "file": "sym-tyyppi-alue.png",
+      "sha256": "0ea102744db62173527de5a42634101f0df78da4911000982472cadc33b11930",
+      "bytes": 53036,
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGBA",
+      "sRGB": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "nativeAlphaBounds": [
+        0,
+        9,
+        1254,
+        1254
+      ],
+      "nativeSHA256": "ee8fcabe9bf96c953b8664585412b3d864a55c47610c386e1f0c16e2541a784a",
+      "generationCalls": 1,
+      "mechanicalProcessing": "Transparent-only exterior removed; aspect-preserving premultiplied-alpha downsample; centered on transparent 192px canvas."
+    }
+  ],
+  "reviewedAt": "2026-10-27T12:19:23.591515+00:00",
+  "visualNotes": [
+    "Kaikki kymmenen pyydettyä aihetta kuvattu yhtenäisenä kaiverrus- ja akvarellisarjana.",
+    "Täysikokoiset alkuperäiset ja 192/32 px kooste katsottu.",
+    "Uskonto: vain kynttilä ja kynttilänjalka; ei uskontotunnuksia.",
+    "Ei tekstiä, taustalaattaa, kehystä, ihmisiä tai logoja kuvakkeissa.",
+    "32 px: päämuoto erottuu; hienot kaiverrusviivat ja sivuesineet yksinkertaistuvat odotetusti."
+  ]
+}

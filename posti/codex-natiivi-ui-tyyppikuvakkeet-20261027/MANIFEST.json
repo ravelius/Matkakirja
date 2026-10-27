@@ -1,0 +1,92 @@
+{
+  "taskNumbers": [
+    1088,
+    1089,
+    1090,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095,
+    1096,
+    1097
+  ],
+  "callsIssued": 10,
+  "files": [
+    {
+      "path": "LUEMINUT.md",
+      "bytes": 1055,
+      "sha256": "264329b084f45325c06c2575ef8c8ea9de5408a0be02d39c9fc206cc49fd93f4"
+    },
+    {
+      "path": "PROMPT-SET.json",
+      "bytes": 14561,
+      "sha256": "d74a4bb3ba6a4e9a7d2586a12f5a5775efdd198a452436cffe0cfe7b3d94a26b"
+    },
+    {
+      "path": "QA.json",
+      "bytes": 8383,
+      "sha256": "7be13e43e4740363f8ece068fff744baa295f5482e8a8e1585a601e00f5d9d57"
+    },
+    {
+      "path": "SOURCE-PINS.json",
+      "bytes": 477,
+      "sha256": "cb3dcc2e13494ec0555ad66bbd9846dfc285041465cc73532a87c0c3d21daa4b"
+    },
+    {
+      "path": "kooste.png",
+      "bytes": 407652,
+      "sha256": "86fc3fea77d506a67550cbcd5e098ca445a212545e563328ca80427094393653"
+    },
+    {
+      "path": "sym-tyyppi-alue.png",
+      "bytes": 53036,
+      "sha256": "0ea102744db62173527de5a42634101f0df78da4911000982472cadc33b11930"
+    },
+    {
+      "path": "sym-tyyppi-arkkitehtuuri.png",
+      "bytes": 48967,
+      "sha256": "90bf0ceb7db795faa07a8a9439901dfcc0696717c423575c816f5b9f25502648"
+    },
+    {
+      "path": "sym-tyyppi-historia.png",
+      "bytes": 41997,
+      "sha256": "892e4a63e12ecb8e359b1047684b37411ab9f8e082a786fe068e25d7ee678f54"
+    },
+    {
+      "path": "sym-tyyppi-kaupunki.png",
+      "bytes": 43291,
+      "sha256": "cf72d73f8f610b68ecf82be5d7df6838695c5d27b86e42b8870ca74aef0838f7"
+    },
+    {
+      "path": "sym-tyyppi-kulttuuri.png",
+      "bytes": 47092,
+      "sha256": "1296695862ce579bec234ef8ce67bf43a5f3719977474d22f1fdec6ea442534d"
+    },
+    {
+      "path": "sym-tyyppi-kyla.png",
+      "bytes": 52376,
+      "sha256": "8e15b617fb4084749c3c266dcfda3dc8872ccd357d2c5845bf172151a055439f"
+    },
+    {
+      "path": "sym-tyyppi-liikenne.png",
+      "bytes": 39374,
+      "sha256": "70d2fc52cbfa7154a5ce4ae227f852e42087ba28f56fcf2f4db2684fee03a287"
+    },
+    {
+      "path": "sym-tyyppi-luonto.png",
+      "bytes": 53108,
+      "sha256": "c8b2e64d748b145a976c6f4f9f18fd3d4cd0c386b5bd660b7197abd8b57a8f20"
+    },
+    {
+      "path": "sym-tyyppi-uskonto.png",
+      "bytes": 27411,
+      "sha256": "608b0b55372305610290591c714322a93cc4e2418cabfea986519054750ade4d"
+    },
+    {
+      "path": "sym-tyyppi-vesisto.png",
+      "bytes": 46977,
+      "sha256": "81cded3c5ae0379e62bfbe2987815f2d51ca326eb81d4c7aaf7cd5246fe6dcb1"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "kaupunki",
+    "taskNumber": 1088,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: A small compact European town with one prominent church tower and two or three gabled stone houses. Clear readable silhouette.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "kyla",
+    "taskNumber": 1089,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: A small rural village with one red wooden cottage, a short wooden fence, and a small timber church behind it.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "luonto",
+    "taskNumber": 1090,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: One evergreen conifer tree beside a rugged mountain, simple recognizable mountain outline.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "vesisto",
+    "taskNumber": 1091,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: A small lakeshore vignette with reeds, a few clear blue ripples and a small empty wooden rowboat.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "historia",
+    "taskNumber": 1092,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: An antique Ionic stone column with a rolled parchment scroll resting at its foot. Blank parchment, no writing.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "arkkitehtuuri",
+    "taskNumber": 1093,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: One stone archway with a pair of architectural drawing compasses in front. Clear arch silhouette and opened two-leg compass.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "uskonto",
+    "taskNumber": 1094,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: One lit ivory candle in a plain simple candleholder. A small warm flame. Absolutely no religious emblems: no cross, crescent or star.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "kulttuuri",
+    "taskNumber": 1095,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: One painter palette and a paintbrush in front of one simple theatre mask. Palette with a few subdued coloured paint dabs.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "liikenne",
+    "taskNumber": 1096,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: A rustic wooden direction signpost with two blank arrow boards and one wooden cart wheel beside its base. No writing on signs.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  },
+  {
+    "id": "alue",
+    "taskNumber": 1097,
+    "prompt": "Use case: illustration-story. Asset: a single finished small UI category icon, matching the supplied six-icon style reference. Generate a completely new icon, not a contact sheet and not an edit of the screenshot. Style reference ONLY: colour engraving and watercolour, fine dark brown contour lines, controlled cross-hatching, warm muted earthy ochre and umber, subdued greens/blues, lightly aged printed illustration. Compact recognisable silhouette and substantial simple colour masses readable at only 32 pixels. The final export is 192x192. Square 1024x1024 canvas, centred object occupies about 84% of canvas, 8% clear margin each side, everything fully inside frame, comparable visual weight to the reference. Real transparent background with preserved alpha, including holes between objects. No paper rectangle or white fill outside objects. No background, panel, frame, ground platform, shadow tile, cast shadow, people, logo, text, label, title, or watermark. Do not reproduce any of the six reference icons themselves. Subject: One folded paper map sheet with a clearly visible dashed boundary line and one small compass rose. No place names, no letters, no writing.",
+    "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/references-20261027-1140/viite-nykyiset-symbolit.png",
+    "callsIssued": 0,
+    "callLimit": 1,
+    "state": "ready"
+  }
+]
