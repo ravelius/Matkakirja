@@ -1,0 +1,135 @@
+{
+  "createdAt": "2026-10-27T07:43:00.308Z",
+  "status": "BOUNDED_INDEPENDENT_VISUAL_REVIEW_COMPLETE_ALL_CANDIDATES_NONFINAL",
+  "scope": {
+    "mode": "Read-only visual inspection of 3 six-pose sheets and existing PAIR-QA.json; in-memory magnification only",
+    "modelChanges": false,
+    "newRenderOrHeavyTest": false,
+    "gameRuntimeTest": false,
+    "writeTargetOnly": "output/juoksupeli-liikkeet-20261027/qa/independent/second-review.json",
+    "reviewBatchV3Touched": false
+  },
+  "inputs": [
+    {
+      "path": "work/paired-catch-back-v1/six-paired-poses.png",
+      "sha256": "270b97c84ebde22bd36bd454b4b2f893d3bbec528768e5f7b8eee7d412aad992"
+    },
+    {
+      "path": "work/paired-catch-back-v1/PAIR-QA.json",
+      "sha256": "c36fc8da2ec83c830c62db77e12bdf6c3fdca81e4b7944cbdf3ac7bf4ae8425e"
+    },
+    {
+      "path": "work/feet-first-v4/six-poses.png",
+      "sha256": "9565e4ebdbcbed4af94f201751e291a8a5e37e2a9acb567d16c2d4a7ae959af4"
+    },
+    {
+      "path": "work/taunt-run-v2/six-poses.png",
+      "sha256": "98fa2c71f6f05cf0ceab61b506191e6b804f5d25bfee9141f9443ab058b00281"
+    }
+  ],
+  "pairedCatchBackV1": {
+    "status": "NONFINAL_VISIBLE_GRIP_NOT_PROVEN_AND_STIFF_STOP",
+    "samplesSeconds": [
+      0,
+      0.15,
+      0.32,
+      0.54,
+      0.73,
+      0.9
+    ],
+    "views": "Side three-quarter and rear three-quarter",
+    "numericEvidenceFromExistingReport": {
+      "sampleCount": 109,
+      "rangeSeconds": [
+        0,
+        0.9
+      ],
+      "guardOffsetMeters": [
+        0,
+        0,
+        -0.38
+      ],
+      "relativeYawDegrees": 0,
+      "firstBothWristTargetErrorsBelow1mmSeconds": 0.5333333333333333,
+      "maximumWristTargetErrorAfterPoint54SecondsMeters": 1.008035805971326e-7,
+      "allReportedIkUnreachableDistancesZero": true,
+      "independentRerun": false,
+      "interpretation": "Wrist-node target proximity only; does not certify palm surface contact, finger closure, cloth collision clearance or forceful grip. Early approach errors are not treated as a failed hold."
+    },
+    "findings": [
+      {
+        "severity": "REQUIRES_REVIEW_BEFORE_FINAL",
+        "topic": "Todellinen ote",
+        "observationFi": "0,32 s kohdalla näkyvä vartijan käsi on Puyin olkavarren vieressä ja näyttää avoimelta/alas suuntautuneelta. 0,54–0,90 s kohdalla kämmenet jäävät Puyin olkavarsien ja vartijan hihojen/ylävartalon taakse. Kahden käden sulkeutuvaa tarttumisotetta ei näy vakuuttavasti.",
+        "confidence": "Visible lack of demonstrated grip; hidden palm positions are not proven wrong"
+      },
+      {
+        "severity": "UNRESOLVED_OCCLUSION",
+        "topic": "Hahmojen leikkaukset",
+        "observationFi": "Puyin olkapään ja selän alue sekä vartijan hihansuut limittyvät loppupidossa. Käsien ja vaatteen välisiä rajoja ei voi erottaa. Tässä ei ole riittävää näyttöä julistaa läpilyöntiä, mutta pintakontaktia tai leikkaamattomuutta ei voi hyväksyä. Suurta näkyvää pään, vartalon tai saappaan läpilyöntiä ei erotu avoimista silueteista; takanäkymässä vartija peittää suuren osan Puyistä."
+      },
+      {
+        "severity": "VISUAL_STIFFNESS_CAVEAT",
+        "topic": "Liikeketju",
+        "observationFi": "0,54, 0,73 ja 0,90 s ovat näkyvästi lähes sama pystyasentoinen pysähdys. Puyin kädet jäävät eteen ja vartija seisoo hyvin suorana; painonsiirto tai otteen jälkeinen vartalon jousto ei erotu. Loppupito voi olla tarkoituksellinen, mutta tämän koosteen perusteella lopetus näyttää jäykältä. Tarkkaa nykäystä tai nopeutta ei voi arvioida kuudesta stillistä."
+      }
+    ],
+    "nextReviewNeededFi": "Näytä lähikuva tai ajettava jatkuva esikatselu molempien käsien kontaktista vartijaan nähden oikeilla etäisyyksillä. Tarkista kämmenen suunta, sormet ja hihan/olkapään pintaraja sekä pysähtymisen painonsiirto. Ei uutta testiä tässä katselmuksessa.",
+    "gameReady": false
+  },
+  "feetFirstV4": {
+    "status": "LOWER_SEATED_SILHOUETTE_IMPROVED_TRANSITIONS_AND_RUNTIME_PENDING",
+    "samplesSeconds": [
+      0.04,
+      0.1,
+      0.2,
+      0.35,
+      0.48,
+      0.56
+    ],
+    "views": "Side and rear elevated",
+    "observationsFi": [
+      "0,10–0,35 s jalat edellä -siluetti on luettavissa: istuva lantio/kaavun alareuna on lähellä saappaiden alinta tasoa. Aiemman katselmuksen suuri lantion ilmarako ei enää näy vastaavana.",
+      "Vartalo, koukistetut polvet ja saappaat pysyvät erotettavina. Näkyvissä näytteissä ei erotu suurta käden, jalan tai kaavun läpilyöntiä; käsi/hiha ja kaavun sivu ovat kuitenkin lähekkäin ja osin peittyvät.",
+      "0,10, 0,20 ja 0,35 s näyttävät lähes samalta istuvalta pidolta. Liuku voi käyttää tällaista asentoa, mutta painon ja liikkeen luonnollisuutta stillit eivät todista.",
+      "Sisäänmeno muuttuu 0,04 s osakyykystä 0,10 s hyvin matalaan istuntaan, ja 0,48 s matala asento on jo 0,56 s juoksuasento. Lyhyet 0,06/0,08 s välit ovat siirtymien nopeuden ja mahdollisen pomppauksen tarkistuskohdat; nykäystä ei voi vahvistaa ilman jatkuvaa liikettä.",
+      "Koosteessa ei ole mitoitettua lattiatasoa tai varjoa, joten tarkkaa lantion tuki-/saapaskontaktia ei voi mitata kuvasta."
+    ],
+    "parentReportedNumericEvidence": {
+      "source": "Parent message, not re-run in this review",
+      "test": "240 Hz keys and midpoints, whole mesh",
+      "minimumYMillimeters": 0.118,
+      "interpretation": "Reported nonpenetration supports the floor gate; a global mesh minimum alone does not certify the pelvis or each foot contact."
+    },
+    "nextReviewNeededFi": "Jatkuva 0,6 s toisto pelin siirtymineen ja näkyvällä lattialla; varmista erityisesti alasmeno, nousu ja tukikohdat. Ei lopullista hyväksyntää posekuvista.",
+    "gameReady": false
+  },
+  "tauntRunV2": {
+    "status": "RUNNING_ARM_GESTURE_READABLE_TAUNT_SHOUT_AND_FLOOR_LIMITS_PENDING",
+    "durationSeconds": 2.4,
+    "durationEvidence": "Parent message",
+    "samplesSeconds": [
+      0.1,
+      0.45,
+      0.85,
+      1.25,
+      1.7,
+      2.25
+    ],
+    "views": "Rear elevated and front diagonal",
+    "observationsFi": [
+      "Juoksu ja kohotetun käden ele erottuvat selvästi. Käsi sekä pään/vartalon kääntyminen vaihtelevat näytteissä, joten poseketju on parikokeen loppupitoa elävämpi.",
+      "Ele voidaan lukea heilautukseksi tai huomiota hakevaksi huudoksi. Pilkan/huudon tarkka sävy ja suunnattu kontakti eivät varmistu stillien pienestä kasvoesityksestä; selvää suun avautumista ei voi todeta.",
+      "Näkyvät kädet ja kyynärvarret irtoavat pääosin vartalon siluetista; selvää suurta käden/kaavun läpilyöntiä ei erotu kuudessa näytteessä. Kohotettu käsi kulkee lähellä päähinettä, joten välipoosit jäävät tarkistamatta.",
+      "2,4 s ajoitus, juoksusyklin jatkumo ja paluu tavalliseen juoksuun eivät ole todistettavissa näytekoosteesta."
+    ],
+    "parentReportedNumericEvidence": {
+      "source": "Parent message, not re-run in this review",
+      "inheritedSourceRunMinimumYMillimeters": -3,
+      "interpretation": "Known approximately 3 mm penetration remains open. Being inherited does not make this a <1 mm floor-clearance pass; it must be explicitly retained as a limitation or fixed/accepted in a later authorized step."
+    },
+    "nextReviewNeededFi": "Jatkuva juoksutoisto ja eleen kohdistuminen, ilme/ääni tarvittaessa, loppusiirtymä sekä tiedossa olevan noin 3 mm lattialäpimenon käsittely. Ei lopullista hyväksyntää.",
+    "gameReady": false
+  },
+  "overallConclusionFi": "Parikoe on edelleen prototyyppi: numeerisesti tarkka rannekohdistus ei korvaa näkyvää tarttumisotetta, ja loppupito näyttää jäykältä. Feet-v4:n lantion mataluus on näkyvä parannus; siirtymien nopeus, tukikontakti ja pelitoteutus ovat avoinna. Tauntin käsiele toimii kuvissa, mutta huudon/pilkan luettavuus, jatkuva juoksu ja tiedossa oleva lattiaminimi jäävät avoimiksi. Yhtäkään ei hyväksytä pelivalmiiksi tämän rajatun katselmuksen perusteella."
+}

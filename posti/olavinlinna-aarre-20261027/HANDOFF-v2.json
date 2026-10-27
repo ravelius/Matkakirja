@@ -1,0 +1,165 @@
+{
+  "createdAt": "2026-10-27T07:39:08.417168+00:00",
+  "status": "THREE_V2_IMAGES_PRODUCED_1018_TILT_DIRECTION_CAVEAT",
+  "imagegenCallsThisOrder": 3,
+  "imagegenCallsIncludingV1": 8,
+  "callsPerAssetThisOrder": 1,
+  "retries": 0,
+  "fullNewGenerationOnly": true,
+  "noPartialImageEdits": true,
+  "tool": "Built-in image_gen.imagegen",
+  "tripoCalls": 0,
+  "tripoCredits": 0,
+  "new3dModels": 0,
+  "orderCommit": "3b344530ca72291e2041fafaef9e4bc76d63359e",
+  "orderBlob": "c27a227d3ce1086b4b3258f88dcd3c3cd974fd88",
+  "nativeLocation": "../native-v2",
+  "nativeHashesByteVerified": true,
+  "j1Export": {
+    "path": "1017-Aarnivalkean hopea-v2 - Havainnekuva. Tekoälyllä tuotettu, ei valokuva.jpg",
+    "sha256": "178f72abbd9d4f38ad587996c1fd2d7bdeae84448bd0904307516ebdec544e1d",
+    "bytes": 285954,
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "disclosure": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+    "filenameDisclosureVerified": true,
+    "xmpReadbackVerified": true,
+    "exifXpCommentReadbackVerified": true,
+    "exifUnicodeUserCommentReadbackVerified": true,
+    "pixelEditing": "Only requested resize and JPEG conversion; no content edit, no inpainting, no extra generation."
+  },
+  "localVisualQAPass": [
+    "1017 scene: black Sture leaves, inward upper shield lean, no shield plates on inner lid; moon/segmental arch/foreground goblet preserved",
+    "1019 side: black Sture leaves, inward upper shield lean, clear foreshortened three-quarter side view"
+  ],
+  "localVisualQACaveats": {
+    "1018": [
+      "Three black Sture leaves on gold and visible shield tilt are correct. Upper shield centers lean outwards and lower points converge, opposite to the upper-inward arrangement requested in the exact prompt.",
+      "The source order says shields lean toward each other without specifying the pivot. Treat the observed tilt direction as a PT review caveat, not a strict acceptance.",
+      "Tilt direction is inconsistent with 1017/1019 v2. The multi-view set is not approved for Tripo."
+    ],
+    "1017": [
+      "The outside face of the raised lid is hidden; absence of erroneous inside plates is visible, but exterior plate existence/placement cannot be verified from this view."
+    ],
+    "1019": [
+      "Approximate three-quarter yaw is visually evident; exact 45-degree camera position cannot be measured or certified from the generated raster."
+    ]
+  },
+  "acceptedExistingAssets": [
+    {
+      "id": "1020",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1020-pikari-takaa.png",
+      "sha256": "a6bf6260ea642319a49203a97139e49fce6f10553f4832c144de74725058e674",
+      "acceptedByPT": true,
+      "referenceOnly": true
+    },
+    {
+      "id": "1021",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1021-arkun-sisalto-kolmeneljannesta.png",
+      "sha256": "c4c95f80218c5f52d41d4b6f5f17c647052f94e58fd526b42c774538be9c56ba",
+      "acceptedByPT": true,
+      "referenceOnly": true
+    }
+  ],
+  "accepted1020And1021PreservedWithoutCopies": true,
+  "sourceConflictResolution": {
+    "SturePng": "Leaf points down in sture-vaakuna-laatta.png",
+    "gameGlbAndPreview": "Three leaves 2+1, points up; chosen as authoritative shape/orientation because order references existing game shield geometry",
+    "resolution": "Use GLB preview for leaf orientation, preserve PNG as supplied context, no source edits."
+  },
+  "previousImagesAndDeliveryBytePreserved": true,
+  "nextStep": "Parent delivers these three new images with the 1018 caveat to PT. All three authorized calls are consumed; no automatic retries. No Tripo until corrected references are accepted and browser runtime works.",
+  "receiverAcceptedV2": false,
+  "ownerAcceptedV2": false,
+  "gameIntegrated": false,
+  "published": false,
+  "glbsCommitted": false,
+  "sharedLedgerModified": false,
+  "mailboxWritten": false,
+  "filesAndCallTimes": {
+    "1017": {
+      "calls": 1,
+      "status": "native-produced-visual-pass",
+      "dispatchReservedAt": "2026-10-27T07:36:44.012116+00:00",
+      "id": 1017,
+      "callStartedAt": "2026-10-27T07:36:47.094Z",
+      "callReturnedAt": "2026-10-27T07:37:29.892Z",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-f2a3c559-a141-4b0e-b68a-94d794268eee.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native-v2/1017-aarnivalkean-hopea-v2.png",
+      "sha256": "3ad569ece00b58199291b18bf25a210a4fdd9801fff4c33dde47b47b37c38212",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullNewImageProduced": true,
+        "stureThreeBlackLeavesOnGold": true,
+        "tottQuarteringCorrect": true,
+        "inwardTopLean": "VISUAL_PASS: top edges valley and lower pointed ends splayed",
+        "innerLidNoExteriorShieldPlates": true,
+        "exteriorLidPlates": "Correct placement specified; outside face hidden behind open lid and cannot be visually confirmed",
+        "sceneCompositionMoonSegmentalArchForegroundGobletPreserved": true,
+        "retry": false
+      },
+      "nativeByteExact": true
+    },
+    "1018": {
+      "calls": 1,
+      "status": "native-produced-tilt-direction-caveat",
+      "dispatchReservedAt": "2026-10-27T07:31:15.567226+00:00",
+      "id": 1018,
+      "callStartedAt": "2026-10-27T07:31:20.463Z",
+      "callReturnedAt": "2026-10-27T07:31:43.988Z",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-114e7e3a-28e5-4f84-b8e5-66b151f56311.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native-v2/1018-pikari-edesta-v2.png",
+      "sha256": "aaaaa73ba5c5f0973ab0f5719b9f9a0f96298c7ea8206129e5bbb30419600381",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullNewImageProduced": true,
+        "tottQuarteringCorrect": true,
+        "stureThreeBlackLeavesOnGold": true,
+        "visibleShieldTilt": true,
+        "inwardTopLean": "NOT_MET: top centers farther apart than lower shield tips; tilt runs opposite to explicit requested upper-inward geometry",
+        "retry": false
+      },
+      "nativeByteExact": true
+    },
+    "1019": {
+      "calls": 1,
+      "status": "native-produced-visual-pass-exact-angle-not-measurable",
+      "dispatchReservedAt": "2026-10-27T07:35:22.768475+00:00",
+      "id": 1019,
+      "callStartedAt": "2026-10-27T07:35:26.156Z",
+      "callReturnedAt": "2026-10-27T07:35:48.903Z",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-82ecb348-1176-4526-b42e-57790fa8a181.png",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native-v2/1019-pikari-kolmeneljannesta-v2.png",
+      "sha256": "aa36d4fa051075f66d999013dcaa49a9d773a70fc546cf5cb8607f8936482956",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullNewImageProduced": true,
+        "stureThreeBlackLeavesOnGold": true,
+        "tottQuarteringCorrect": true,
+        "inwardTopLean": "VISUAL_PASS",
+        "threeQuarterSideView": "VISUAL_PASS: front heraldry foreshortened and displaced left, unheralded right side visible; exact physical camera degrees not measurable from generated raster",
+        "retry": false
+      },
+      "nativeByteExact": true
+    }
+  },
+  "technicalGate": {
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 0,
+    "report": "qa/image-delivery-gate.json"
+  },
+  "jpeg640AndContactSheetVisuallyInspected": true
+}

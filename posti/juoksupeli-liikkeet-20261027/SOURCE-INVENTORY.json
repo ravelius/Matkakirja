@@ -1,0 +1,42 @@
+{
+  "source": "Existing owner-authorized Tripo character and previously delivered models; no new model generation",
+  "base": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puyi-kengat-10251027-20261027/delivery-v2/puyi-perus.glb",
+  "baseSHA256": "2b94044dac9da55df6c6ebe6eae668e084fb40e705166a33cedcc632d4b80e1a",
+  "derivedMotionSources": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/crouch-clearance-v3/puyi-crouch-clearance-candidates.glb",
+      "sha256": "6d3c74c6b3a9cc9287014911ced8322de429118b8260286fabf00b34d76bff28",
+      "clips": [
+        "slide_short",
+        "slide_long"
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/feet-first-v4/puyi-feet-first-candidate.glb",
+      "sha256": "b847be90d09306a081590c88360b7a87ff44f04eda86142cccded98769ad27fd",
+      "clips": [
+        "slide_feet_first"
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/first-batch-v2/puyi-perus-motion-candidates.glb",
+      "sha256": "2350eb5aba18d05d3fcc320670cfeea81f0a0c1b58579e479150df7b32540889",
+      "clips": [
+        "jump_small",
+        "jump_long"
+      ]
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/taunt-run-v2/puyi-taunt-run-candidate.glb",
+      "sha256": "53e1ace01178b58c82b99d427a29c88903edffa47095e73dfc0de8994d3199f2",
+      "clips": [
+        "taunt_run"
+      ]
+    }
+  ],
+  "tool": "Local deterministic GLB animation composition, two-bone IK and key reduction; existing Tripo mesh/rig/textures preserved",
+  "license": "Owner Tripo-account source retained. No newly acquired third-party motion or geometry; detailed original source/job receipts remain with original character delivery.",
+  "sourceImagesRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/puyi/sources",
+  "newTripoCalls": 0,
+  "newCredits": 0
+}
