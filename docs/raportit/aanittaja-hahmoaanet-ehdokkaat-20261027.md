@@ -34,3 +34,8 @@ Korvattu samalla nimellä `ulos-lopulliset/`; vanhat `ulos-lopulliset/hylatyt-sa
 
 ## SEIS uusinnat (KK 27.10., omistaja: ei koneellista litterointia): alkuperäiset 14 ottoa palautettu
 `ulos-lopulliset/` = alkuperäiset 14 ottoa (koot täsmäävät); 4 uusintaa siirretty `ulos-uusinnat/` (keisari-2-huh-otto1, 3-…-otto2, 4-hui-otto1, 4-hui-otto2; promptit yllä). Mitään ei hylätä Geminin perusteella; kaikki otot omistajalle kuunneltaviksi.
+
+## Omistajan valinta ja vienti (27.10. klo 12.47)
+Valinta: eunukit Georg ja Sergio otto B; keisari 1 otto 2, 2 otto 1, 3 lisäotto (ulos-uusinnat/keisari-3-huh-lahelta-piti-otto2), 4 otto 1, 5 otto 1.
+Vienti: proto-3d/_valmiit/juoksupeli-hahmoaanet-vienti-20261027 → ämpäri audio/juoksupeli/hahmoaanet-v1/ (7 tiedostoa, ääniportti läpi, 12.49).
+Nimet: eunukki-georg, eunukki-sergio, keisari-1-ottakaa-kiinni, keisari-2-huh, keisari-3-huh-lahelta-piti, keisari-4-hui, keisari-5-melkein (.mp3).
