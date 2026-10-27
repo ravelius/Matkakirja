@@ -2876,3 +2876,7 @@ UI-pohjilla; puuttuva pohja kuvina KK:lle.
 ## KARTTA: LIPPU EI KASVA, KUUMAILMAPALLOT PYSTYYN, NOSTON SUMENNUS KAIKKEEN (omistaja 27.10. klo 13.25, KK:n välitys) (27.10.2026 klo 13.36)
 
 OMISTAJAN PYYNTÖ klo 13.25 (sanatarkasti): "kohdemaan lippu ei saa kasvaa kokoa kun karttaa zoomaa ulos, nyt näyttää että britannian lippu on ihan valtavan kokoinen. saako kuumailmapallot suoraan, nyt osa palloista on ihan vinossa. jos se on väistöliike, niin mielummin siirretään koko palloa kuin pidetään se sivussa. kun nosto aukeaa, niin osa uudet striimipaikannimet sekä ainakin kehittäjän mv kipit eivät sumene" KK:n tavoite: 1) lippu ei kasva loitonnettaessa (enintään saapumisnäkymän koko, koko pallon näkymässä pieni mutta näkyvä) 2) kuumailmapallot aina pystyssä, väistö siirtää koko palloa 3) noston takana koko kartta sumenee, myös striimatut paikannimet ja kehittäjätilan sirut. 13.23-kortti jäi vastaamatta: KK:n suositukset (faktojen tumma alaotsikkorivi, lopputekstin taustagenerointi) oletuksena. Toteutus: KS 1–2, NUI 3.
+
+## TIETOKORTIN LATAUSMERKKI: PELKÄT PISTEET (omistaja 27.10. klo 13.38, KK:n kortti) (27.10.2026 klo 13.39)
+
+Kysymys: "Mikä tulee tekstin latausmerkiksi?" Vastaus: "b: Pelkät pisteet" (selite: "Kolme aaltoilevaa pistettä ilman tekstiä."). NUI:n vedos 82240e7ff näytetty omistajalle; faktarivit tummennetaan alaotsikon sävyyn. Toteutus NUI, juna 212. KK nollautui omistajan luvalla (kortti 13.38 "Kyllä").
