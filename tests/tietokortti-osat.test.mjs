@@ -59,6 +59,35 @@ test('kysymys, johon teksti jo vastaa, hylätään (NUI t4: Etonin nimi)', async
   assert.equal(vastattuTekstissa('Mistä Etonin nimi tulee?', 'Eton on pieni kaupunki Thamesin varrella.', 'Eton'), false);
 });
 
+test('kysymykset erikseen: tarkistus ja vaihto (KK 27.10., Eton)', async () => {
+  const { tarkistaKysymykset, vaihdaKysymykset, jasennaLisaa } = await import('../tools/pollo/tietokortti.js');
+  const lisaa = '## Eton Collegen perustaminen\nHenrik VI perusti koulun, mikä pysäytti kylän kasvun.\n## Sisällissota\nKuninkaalliset miehittivät kylän.\n###KYSYMYKSET###\nMiksi Eton Collegen perustaminen pysäytti kylän kasvun?\nMitä sisällissodassa tapahtui?';
+  assert.equal(tarkistaKysymykset('Miksi Eton Collegen perustaminen pysäytti kylän kasvun?\nMitä koulu opettaa nykyään?', 'Eton on kaupunki.', lisaa, 'Eton'), null);
+  // Ehdokkaista kaksi kelvollista; alkuperäinen kelvollinen ensin.
+  assert.deepEqual(tarkistaKysymykset(['Mitä koulu opettaa nykyään?', 'Mitä sisällissodassa tapahtui?', 'Keitä kuuluisia oppilaita koulussa on ollut?'], 'Eton on kaupunki.', lisaa, 'Eton'),
+    ['Mitä koulu opettaa nykyään?', 'Keitä kuuluisia oppilaita koulussa on ollut?']);
+  const ok = tarkistaKysymykset('1. Keitä kuuluisia oppilaita koulussa on ollut?\n2. Miten koulun oppilaat pukeutuvat?', 'Eton on kaupunki.', lisaa, 'Eton');
+  assert.deepEqual(ok, ['Keitä kuuluisia oppilaita koulussa on ollut?', 'Miten koulun oppilaat pukeutuvat?']);
+  assert.deepEqual(jasennaLisaa(vaihdaKysymykset(lisaa, ok)).kysymykset, ok);
+  const { kelvollisetKysymykset } = await import('../tools/pollo/tietokortti.js');
+  assert.deepEqual(kelvollisetKysymykset(['Mitä sisällissodassa tapahtui?', 'Mitä koulu opettaa nykyään?'], 'Eton on kaupunki.', lisaa, 'Eton'), ['Mitä koulu opettaa nykyään?']);
+});
+
+test('lievin hylkäys valitaan, kun kaikki yritykset hylätään', async () => {
+  const { hylkayksenVakavuus } = await import('../tools/pollo/tietokortti.js');
+  assert.ok(hylkayksenVakavuus('vastattu') < hylkayksenVakavuus('toisto 1440'));
+  assert.ok(hylkayksenVakavuus('toisto 1440') < hylkayksenVakavuus('otsikot 3'));
+});
+
+test('kysymys väliotsikon aiheesta hylätään (NUI t5: Etonin sisällissota)', async () => {
+  const { otsikonAihe } = await import('../tools/pollo/tietokortti.js');
+  assert.equal(otsikonAihe('Mitä Etonissa tapahtui Englannin sisällissodan aikana?', ['Nimi ja varhaiset vuosisadat', 'Sisällissota ja nykyiset yhteydet'], 'Eton'), true);
+  assert.equal(otsikonAihe('Miksi koulun oppilaat käyttävät frakkia?', ['Nimi ja varhaiset vuosisadat', 'Sisällissota ja nykyiset yhteydet'], 'Eton'), false);
+  assert.equal(otsikonAihe('Mistä Etonin nimi tulee?', ['Etonin vaiheet'], 'Eton'), false);
+  // Vedos t6: erisnimi otsikossa ei hylkää nykypäivään vievää kysymystä.
+  assert.equal(otsikonAihe('Miten Eton College toimii nykyään?', ['Eton College ja sen historia', 'Silta ja liikenne'], 'Eton'), false);
+});
+
 test('johdanto on yksi kappale ilman nimen alkuperää (omistaja 14.39)', () => {
   const s2 = JSON.stringify({ nimi: 'Eton', faktat: [], wikipedia: { kieli: 'en', teksti: 'Eton is a town on the Thames. Eton College was founded in 1440. The name comes from Old English.' } });
   const ok = 'Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on vuonna 1440 perustettu Eton College. Koulu leimaa yhä kaupungin katuja.';
