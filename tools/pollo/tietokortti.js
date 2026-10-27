@@ -521,7 +521,7 @@ export function kohdeTyyppi(laji) {
 }
 
 /** Osatekstien versio ja avain (osa = johdanto | lisaa). */
-export const OSA_VERSIO = 't6';
+export const OSA_VERSIO = 't7';
 export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
 /** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
 export const KYSYMYKSET = '###KYSYMYKSET###';
@@ -623,19 +623,20 @@ export function kysymysViesti(lisaaSyote, johdanto, lisaaTeksti) {
  * Kysymysehdokkaista kaksi ensimmäistä kelvollista (lyhyt kysymys, ei peliä, ei jo vastattu, ei väliotsikon aihetta); null, jos alle
  * kaksi. Ehdokkaat: rivit (kysymykset erikseen -vastaus) tai lista (myös alkuperäiset kysymykset ensin).
  */
-export function tarkistaKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null) {
-  const valitut = kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi).slice(0, 2);
+export function tarkistaKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null, faktat = []) {
+  const valitut = kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi, faktat).slice(0, 2);
   return valitut.length === 2 ? valitut : null;
 }
 
 /** Kelvolliset kysymykset ehdokkaista (ks. tarkistaKysymykset); jo vastatut ja väliotsikon aiheet pois. */
-export function kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null) {
+export function kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null, faktat = []) {
   const rivit = (Array.isArray(vastaus) ? vastaus : String(vastaus ?? '').split('\n'))
     .map((r) => String(r).replace(/^\s*(?:[-*•]|\d+[.)])\s*/, '').trim()).filter(Boolean);
   const { jaksot } = jasennaLisaa(lisaaTeksti);
   const teksti = `${String(johdanto ?? '').trim()} ${jaksot.map((j) => j.teksti).join(' ')}`;
   const kelpaa = (k) => /\?$/.test(k) && sanat(k) <= 14 && !/[#()*]/.test(k) && !/aarre|isoisä|pelaaja|peli/.test(k.toLowerCase())
-    && !vastattuTekstissa(k, teksti, kohteenNimi) && !otsikonAihe(k, jaksot.map((j) => j.otsikko), kohteenNimi);
+    && !vastattuTekstissa(k, teksti, kohteenNimi) && !otsikonAihe(k, jaksot.map((j) => j.otsikko), kohteenNimi)
+    && !faktaVastaa(k, faktat, kohteenNimi);
   return [...new Set(rivit.filter(kelpaa))];
 }
 
@@ -655,7 +656,8 @@ function jaaKysymykset(t) {
 /** Lue lisää -vastaus osiin: jaksot [{ otsikko, teksti }], kysymykset [string]. */
 export function jasennaLisaa(teksti) {
   const t = String(teksti ?? '').trim();
-  const [runko, kys = ''] = jaaKysymykset(t);
+  const [runko, kysOsa] = jaaKysymykset(t);
+  const kys = kysOsa ?? '';
   const jaksot = [];
   for (const rivi of runko.split('\n').map((r) => r.trim()).filter(Boolean)) {
     if (rivi.startsWith(VALIOTSIKKO)) jaksot.push({ otsikko: rivi.slice(VALIOTSIKKO.length).trim(), teksti: '' });
@@ -688,24 +690,20 @@ export function tarkistaJohdanto(teksti, syote, kohteenNimi = null) {
 }
 
 /** Lue lisää -tarkistus (resepti 3.4): 2–3 väliotsikkoa, kappaleet 80–170 sanaa, kaksi kysymystä; toisto johdannon kanssa hylätään. */
-export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '') {
+export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '', { vainTeksti = false } = {}) {
   const t = String(teksti ?? '').trim();
   // Pitkästä lähteestä (Wikipedian tekstiä yli 2 000 merkkiä) ei kelpaa tyhjä Lue lisää (vedos Windsor 27.10.).
   const lahdePituus = (() => { try { return String(JSON.parse(String(syote ?? '{}')).wikipedia?.teksti ?? '').length; } catch { return 0; } })();
   if (t === EI_LAHDETTA) return lahdePituus > 2000 ? { ok: false, syy: 'turha ei-lähdettä' } : { ok: true, syy: 'ei-lahdetta' };
-  if (jaaKysymykset(t)[1] === null || t.match(new RegExp(KYSYMYS_RIVI.source, 'gimu')).length !== 1) return { ok: false, syy: 'kysymysrivi' };
   const { jaksot, kysymykset } = jasennaLisaa(t);
   if (jaksot.length < 2 || jaksot.length > 4 || jaksot.some((j) => !j.otsikko)) return { ok: false, syy: `otsikot ${jaksot.length}` };
   if (jaksot.some((j) => sanat(j.otsikko) > 5 || /[.!?#]/.test(j.otsikko) || !j.teksti)) return { ok: false, syy: 'otsikko' };
   const kappaleet = jaksot.map((j) => j.teksti).join(' ');
   // 60 sanan alaraja (vedos 27.10.: toistot poistanut teksti jäi 59–72 sanaan; kaksi täyttä jaksoa riittää).
   if (sanat(kappaleet) < 60 || sanat(kappaleet) > 170) return { ok: false, syy: `pitkä ${sanat(kappaleet)} sanaa` };
-  if (kysymykset.length !== 2 || kysymykset.some((k) => !/\?$/.test(k) || sanat(k) > 14 || /[#()*]/.test(k))) return { ok: false, syy: 'kysymykset' };
   // Ei Pulusta eikä tietämättömyydestä (näyte Windsor 27.10.: "Pulu ei tiedä, miltä kaupunki näytti").
   if (/(?<!\p{L})pulu|ei tiedä|en tiedä/iu.test(kappaleet)) return { ok: false, syy: 'sana pulu' };
   if (MINA_ME.test(kappaleet)) return { ok: false, syy: 'kertoja' };
-  const pienet = kysymykset.join(' ').toLowerCase();
-  if (/aarre|isoisä|pelaaja|peli/.test(pienet)) return { ok: false, syy: 'kysymykset' };
   // Toisto johdannon kanssa: johdanto ja kappaleet yhdessä yhteisiin sääntöihin (sama vuosi, sama pitkä sana, lähes sama virke).
   const yhdessa = johdanto ? `${String(johdanto).trim()} ${kappaleet}` : kappaleet;
   // Johdannon luku (≥ 10) toistuu Lue lisää -tekstissä = toisto (Box Hill: "31 kilometriä Lontoosta" kahdesti).
@@ -714,11 +712,12 @@ export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '') 
   if (lukuToisto) return { ok: false, syy: `toisto ${lukuToisto}` };
   for (const j of jaksot) if (!/[.!?]$/.test(j.teksti)) return { ok: false, syy: 'kesken' };
   const r = yhteiset(yhdessa, syote, kohteenNimi);
-  if (!r.ok) return r;
-  // Kysymykset viimeisinä: 'vastattu' tarkoittaa, että teksti kelpaa ja vain kysymykset vaihdetaan (kysymykset erikseen, worker).
-  // Vastaus ei saa olla tekstissä (NUI t4: "Mistä Etonin nimi tulee?") eikä kysymys väliotsikon aihe (NUI t5: sisällissota).
-  if (kysymykset.some((k) => vastattuTekstissa(k, yhdessa, kohteenNimi))) return { ok: false, syy: 'vastattu' };
-  if (kysymykset.some((k) => otsikonAihe(k, jaksot.map((j) => j.otsikko), kohteenNimi))) return { ok: false, syy: 'vastattu' };
+  if (!r.ok || vainTeksti) return r;
+  // Kysymykset viimeisinä (KK 27.10.: teksti näytetään heti, kun se kelpaa; kysymykset lisätään tarkistettuina): kysymysvirheet
+  // ovat lievimpiä (hylkayksenVakavuus 0), ja worker kirjoittaa kysymykset erikseen tekstiä uusimatta.
+  if (jaaKysymykset(t)[1] === null || t.match(new RegExp(KYSYMYS_RIVI.source, 'gimu')).length !== 1) return { ok: false, syy: 'kysymysrivi' };
+  if (kysymykset.length !== 2) return { ok: false, syy: 'kysymykset' };
+  if (kelvollisetKysymykset(kysymykset, johdanto, t, kohteenNimi, syotteenFaktat(syote)).length !== 2) return { ok: false, syy: 'vastattu' };
   return r;
 }
 
@@ -748,6 +747,29 @@ export function vastattuTekstissa(kysymys, teksti, kohteenNimi = null) {
   });
 }
 
+/** Kortin faktarivit syötteestä (pulunViesti: faktat). */
+export function syotteenFaktat(syote) {
+  try { const f = JSON.parse(String(syote ?? '{}')).faktat; return Array.isArray(f) ? f.map(String) : []; } catch { return []; }
+}
+
+/** Faktarivin otsikko → kysymyksen sanat, joihin rivi jo vastaa (KK 27.10.: "Kuka Etonia hallinnoi?" ja "Alue: Windsor ja Maidenhead"). */
+const FAKTA_AIHEET = [
+  [/^alue\s*:/i, /hallinno|hallinto|hallitse|kunta|kunnan|kreivikun|maakun|mihin\s+(alueeseen|kuntaan)|kuuluu/],
+  [/asuka|asukas|väkiluku/i, /asuu|asukk|asukas|väkilu|väestö|kuinka\s+monta\s+ihmis/],
+  [/^korkeus/i, /korkea|korkeus|metriä/],
+  [/^pinta-ala/i, /pinta-ala|kuinka\s+(suuri|laaja|iso)|laajuus/],
+  [/^perustettu|^rakennettu|^valmistunut/i, /milloin\b.*(perustet|rakennet|valmistu)|perustamisvuo/],
+  [/^vuoristo/i, /vuoristo/],
+  [/^pituus/i, /pituus|kuinka\s+pitkä/],
+];
+
+/** Vastaako kortin faktarivi jo kysymykseen: rivin aihe (FAKTA_AIHEET) tai sisältösanat (vastattuTekstissa). */
+export function faktaVastaa(kysymys, faktat = [], kohteenNimi = null) {
+  const k = String(kysymys ?? '').toLowerCase();
+  if ((faktat ?? []).some((rivi) => FAKTA_AIHEET.some(([otsikko, sanat]) => otsikko.test(String(rivi).trim()) && sanat.test(k)))) return true;
+  return vastattuTekstissa(kysymys, (faktat ?? []).join('. '), kohteenNimi);
+}
+
 /**
  * Kysyykö kysymys väliotsikon aiheesta: jokin kysymyksen pienellä alkava sisältösana (≥ 6 kirjainta) alkaa samoin kuin otsikon sana.
  * Erisnimet (iso alkukirjain, esim. "Eton College") eivät riitä: "Miten Eton College toimii nykyään?" vie otsikon aihetta pidemmälle.
@@ -764,7 +786,8 @@ export function otsikonAihe(kysymys, otsikot, kohteenNimi = null) {
 export function hylkayksenVakavuus(syy) {
   const lj = String(syy ?? '').split(' ')[0];
   if (lj === 'vastattu') return 0;
-  if (['otsikot', 'otsikko', 'pitkä', 'kysymysrivi', 'kysymykset', 'merkit', 'kesken', 'turha', 'merkkirivi'].includes(lj)) return 2;
+  if (['kysymysrivi', 'kysymykset'].includes(lj)) return 0;
+  if (['otsikot', 'otsikko', 'pitkä', 'merkit', 'kesken', 'turha', 'merkkirivi'].includes(lj)) return 2;
   return 1;
 }
 
