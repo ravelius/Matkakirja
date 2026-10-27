@@ -257,7 +257,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - JONO: rakennukset-v54:n leivonta (kaikki mallit leivo_malli.py:llä, uusi UV1) vasta muotoerien jälkeen, kun valo otetaan taas
   työn alle. Sama vika voi olla taustapaloissa (leivo_valo.py, 1,6 tekseliä/m²): katto_uv1 sinne samalla.
 
-## LISÄYS 18 klo 18.0x: C1 v4 kaikkiin hallirakennuksiin, rakennukset-v54, juuri-v85m, tausta.json (LUOVUTUS)
+## LISÄYS 18 klo 17.3x: C1 v4 kaikkiin hallirakennuksiin, rakennukset-v54, juuri-v85m, tausta.json (LUOVUTUS)
 - K/tyokalut/c1_raystaat2.py v4 (varmuuskopio .ennen-v4; aja aina INSET=0.15 NALAS=0.35 kuten v3):
   1. Sisäketjut pois haaroittain (aste ≠ 2 -kohtien välit): avoin haara, jonka ≥ 70 % pisteistä on 0,3–2,5 m ulomman haaran sisäpuolella
      (|dz| < 1,2), poistetaan ennen parien hakua. Lisäksi pois tasaiset irtoketjut (z-vaihtelu < 5 cm) ja jäänteet (avoin haara < 6 m).
