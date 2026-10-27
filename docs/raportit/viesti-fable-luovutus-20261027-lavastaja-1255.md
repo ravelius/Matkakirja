@@ -389,3 +389,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Kuja 01: näkyvä sokkeli (0,7 m) ja reunus ovat avoimet-v57b:n rakennuksissa (paikalliset, instansoidut meshit; V4_sokkeli/V4_kivireunus) → kujakivi_pinnat.py ei käsittele;
   oma askel (instanssikohtainen maailmakoordinaatti tai paikallinen UV), KK:n vastauksen jälkeen.
 - J4: NS kuvaa `linssi poikki kavely data file://…/olavinlinna-j4/kavely-j4/` -komennolla (aloitus pako, arkku auki); kuvat tulossa NS:ltä.
+
+## LISÄYS 27 klo 00.2x (28.10.): KK:n linja, Codex-tilaus v4, kuja 01 mukana, välipari
+- KK 00.0x: suunta oikein, EI vielä omistajalle eikä junaan. Kivijalassa havainteessa ~8 kerrosta pieniä tiiliä, sävy tiilittäin ja kuluneet reunat; lattiassa
+  tyynylaatat porrastetusti ilman kiemuroita; reunakivi ennallaan; aurinko/varjo vasta leivonnassa. Omistaja näkee parin ennen junaa.
+- Codex-tilaus postissa f0766ed58 (posti/lavastaja-codex-kujakivet-v4-tarkennus-20261028.md; worktree wt/lavastaja-posti): stone-surfaces-v4, samat mitat ja UV-sopimus.
+- Väliaikaisesti VV_SOKKELI=v02, VV_PILARI=v02, VV_LATTIA=v04 (Sonnet: lähimmät), reuna v01 (aja_ketju_v86.zsh; per-laji VV_* kujakivi_pinnat.py:ssä).
+- Kuja 01: AVOIMET=1 YTOP=0.70 → leivottu-sali/avoimet-v58k (avoimet-v57b + pinnat; juuri-v93m:n avoimet-v50 → v58k). Välipari havainne-editori-20261028-001129
+  (02 05 01, REF 67afc1220): 01:n kivijalassa kivikuvio, ei venymää; kaksi vaaleaa vanhaa palaa (01: x≈1360 y≈620 ja x≈105 y≈590, todennäk. taustan pala) ja
+  01:n reunakivissä ruskehtava pinta (ei uusi) → tarkista seuraavalla kierroksella.
+- SEURAAVAKSI: Codexin v4 → K/kujakivi-pinnat-v4 (SHA) → aja_ketju_v86.zsh pinnat-kansio v4:ksi → pari + 2× lähikuvat KK:lle. J4: NS:n komerokuvat.
