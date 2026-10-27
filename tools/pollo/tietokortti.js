@@ -389,6 +389,8 @@ export function korjausPalaute(syy) {
     merkkirivi: 'Kirjoita ###LUE-LISÄÄ### vain kerran omalle rivilleen.',
     virkkeet: 'Kirjoita ensimmäiseen kappaleeseen tasan 2–3 virkettä.',
     johdanto: 'Ensimmäinen kappale on 2–3 virkettä ja noin 18–50 sanaa.',
+    kappaleet: 'Kirjoita vain yksi kappale ilman rivinvaihtoja.',
+    nimen: 'Älä kerro nimen alkuperää ensimmäisessä kappaleessa: kerro sen sijaan, mikä paikka on ja mikä siinä on huomionarvoista.',
     kysymysrivi: 'Kirjoita tekstin perään tasan kerran rivi ###KYSYMYKSET### ja sen alle kaksi kysymystä.',
     otsikot: 'Kirjoita 2–3 jaksoa, ja jokainen alkaa omalla rivillään väliotsikolla muodossa "## Otsikko".',
     otsikko: 'Väliotsikko on 1–4 sanaa ilman pistettä, ja jokaisen alla on kappale.',
@@ -518,7 +520,7 @@ export function kohdeTyyppi(laji) {
 }
 
 /** Osatekstien versio ja avain (osa = johdanto | lisaa). */
-export const OSA_VERSIO = 't3';
+export const OSA_VERSIO = 't4';
 export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
 /** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
 export const KYSYMYKSET = '###KYSYMYKSET###';
@@ -544,9 +546,10 @@ export const JOHDANTO_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTIN ENSIMMÄINEN
 Pelaaja napautti kartalla paikkaa, ja sen faktakortti on jo ruudulla. Kirjoitat kortin alle ensimmäisen kappaleen neutraalina
 asiatekstinä (kohta TYYLI). Tämä ei ole keskustelu eikä sinulta kysytä mitään. Lukijat ovat kolmetoistavuotiaita ja aikuisia.
 
-MUOTO. Yksi kappale, tasan 2–3 virkettä (noin 18–50 sanaa), alkaa paikan nimellä. Pelkkää tekstiä: ei otsikoita, ei luetteloita,
+MUOTO. Yksi kappale ilman rivinvaihtoja, tasan 2–3 virkettä (noin 18–50 sanaa), alkaa paikan nimellä. Pelkkää tekstiä: ei otsikoita, ei luetteloita,
 ei sulkeita, ei lainausmerkkejä, ei emojeita, ei lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kappale
-kertoo tärkeimmän: mikä paikka on ja yksi asia, joka siitä on huomionarvoista. Muut faktat kerrotaan myöhemmin Lue lisää -tekstissä.
+kertoo tärkeimmän: mikä paikka on ja yksi asia, joka siitä on huomionarvoista. Nimen alkuperää ei kerrota tässä kappaleessa. Muut
+faktat kerrotaan myöhemmin Lue lisää -tekstissä.
 
 ${YHTEISET_OHJEET}
 
@@ -611,6 +614,7 @@ export function jasennaLisaa(teksti) {
 
 /** Kertojan minä- ja me-muoto tai lukijan sinuttelu neutraalissa asiatekstissä (omistaja 13.52). */
 const MINA_ME = /(?<!\p{L})(minä|minun|minua|minusta|minulle|me|meidän|meille|meitä|sinä|sinun|sinulle|sinua)(?!\p{L})/iu;
+const NIMEN_ALKUPERA = /(?<!\p{L})nimi (?:tulee|juontuu|johtuu|on peräisin|periytyy)|nimen alkuperä|(?<!\p{L})nimi (?:on )?(?:saatu|saanut)/iu;
 const virkkeita = (t) => (t.match(/[.!?](?=\s|$)/g) ?? []).length;
 
 /** Johdannon tarkistus (resepti 3.4): 2–3 virkettä, 18–50 sanaa, alkaa nimellä; muut säännöt kuten tarkistaTeksti. */
@@ -618,6 +622,9 @@ export function tarkistaJohdanto(teksti, syote, kohteenNimi = null) {
   const t = String(teksti ?? '').trim();
   if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
   if (t.includes(LUE_LISAA) || t.includes('#')) return { ok: false, syy: 'merkit' };
+  // Vain ensimmäinen kappale näkyviin, nimen alkuperä Lue lisää -tekstiin (omistaja 27.10.2026 klo 14.39: Etonin "Nimi tulee").
+  if (/\n/.test(t)) return { ok: false, syy: 'kappaleet' };
+  if (NIMEN_ALKUPERA.test(t)) return { ok: false, syy: 'nimen alkuperä' };
   const v = virkkeita(t);
   if (v < 2 || v > 3) return { ok: false, syy: `virkkeet ${v}` };
   if (sanat(t) < 18 || sanat(t) > 50) return { ok: false, syy: `johdanto ${sanat(t)} sanaa` };

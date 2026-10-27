@@ -47,6 +47,14 @@ test('johdanto: 2–3 virkettä hyväksytään, neljä ja yksi hylätään', () 
   assert.equal(tarkistaJohdanto(EI_LAHDETTA, syote).ok, true);
 });
 
+test('johdanto on yksi kappale ilman nimen alkuperää (omistaja 14.39)', () => {
+  const s2 = JSON.stringify({ nimi: 'Eton', faktat: [], wikipedia: { kieli: 'en', teksti: 'Eton is a town on the Thames. Eton College was founded in 1440. The name comes from Old English.' } });
+  const ok = 'Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on vuonna 1440 perustettu Eton College. Koulu leimaa yhä kaupungin katuja.';
+  assert.equal(tarkistaJohdanto(ok, s2, 'Eton').ok, true, JSON.stringify(tarkistaJohdanto(ok, s2, 'Eton')));
+  assert.equal(tarkistaJohdanto(`${ok}\n\nKaupunki on joen rannalla.`, s2, 'Eton').syy, 'kappaleet');
+  assert.equal(tarkistaJohdanto('Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on Eton College. Nimi tulee vanhan englannin sanasta, joka tarkoittaa jokikaupunkia.', s2, 'Eton').syy, 'nimen alkuperä');
+});
+
 const lisaa = (k = 'Kuka suunnitteli kaupungintalon?\nMilloin kaupunki sai torioikeudet?') => `## Vanha ja uusi Windsor
 Old Windsor on kolme kilometriä etelämpänä, ja nykyistä kaupunkia kutsuttiin New Windsoriksi vuoteen 1974 asti. Nimi erotti kaksi
 paikkaa toisistaan, ja vanhempi asutus jäi pienemmäksi kyläksi joen varrelle. Siirtyminen uuteen paikkaan tapahtui vähitellen,
