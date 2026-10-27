@@ -2911,3 +2911,7 @@ Omistajan pyyntö 14.05 (sanatarkasti): "Tuo olikin hyvä idea, tuo Unesco. Niih
 ## UNESCO-KOE: 18 KOHTEEN LISTA HYVÄKSYTTY (omistaja 27.10. klo 14.34) (27.10.2026 klo 14.34)
 
 Omistajan kortti KK:ssa: "Käykö tämä 18 kohteen lista Unesco-kokeeseen?" → "Kyllä (Suositus)". Lista = Karttasepän ehdotus sellaisenaan, 3 kohdetta per maanosa (Raamattu 1.12): Eurooppa: Akropolis, Colosseum, Stonehenge. Aasia: Kiinan muuri, Taj Mahal, Angkor Wat. Afrikka: Gizan pyramidit, Victorian putoukset, Serengeti. Pohjois-Amerikka: Grand Canyon, Yellowstone, Chichén Itzá. Etelä-Amerikka: Machu Picchu, Galápagos, Iguaçu. Oseania: Iso valliriutta, Sydneyn oopperatalo, Uluru. Karttaseppä tilaa Codexilta 18 havainnekuvaa (1 otto per kohde, pysyvä lupa). Laajennus vasta kun omistaja on nähnyt kokeen pelissä.
+
+## KARTAN TIETOKORTTI: VAIN ENSIMMÄINEN KAPPALE, VÄLIOTSIKOILLE TILAA (omistaja 27.10. klo 14.39) (27.10.2026 klo 14.40)
+
+Omistajan kortti KK:ssa ("Onko kartan tietokortti nyt toivomasi kaltainen?", NUI:n kooste eabaaa896), sanatarkasti: "toinen kappale joka alkaa \"Nimi tulee\" voi ottaa pois. Eli näkyviin tulisi vain ensimmäinen kappale tekstiä. onko helppo toteuttaa. lisäksi väliotsikon yläpuolelle vähän enemmän tilaa. muuten hyvä". Toteutus: Karttaseppä tekee johdannon yhdeksi kappaleeksi (nimen alkuperää ei erillisenä kappaleena), Natiivi-UI näyttää vain ensimmäisen kappaleen ja lisää väliotsikoiden yläpuolelle tilaa. Muuten kortti hyväksytty.
