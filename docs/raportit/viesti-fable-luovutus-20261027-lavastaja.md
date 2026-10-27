@@ -29,7 +29,7 @@ Meridiaaniportti 06 ja yleiskuva 07. Mitat ja paikat pysyvät. Valo (aurinko, VS
 3. T-risteys (−134; 294, pala 1-3): harmaa marmorijalusta y 0,4–0,6 z 286–292, vaalea kaistale, katon kulma (puutarha/varasto-räystäät).
 4. VS:n v70-korjauslista (aukio: rako z −192,75…−192,5 x 1,75…9,25 + 27 ruutua + 6 T-liitosta; kuja01-pala porttiin + palan 1-4 lattia):
    /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/tarkistus-v70-20261027/.
-5. Aukio 03: Taihedianin jalustan kerrokset, portaat, kaiteet (C2), sivuhallit. Sitten 04, 06, 07 EROLISTAn mukaan.
+5. Aukio 03: Taihedianin jalustan kerrokset, portaat, kaiteet (C2), sivuhallit, horisontin modernit kerrostalot pois (KK 12.1x, EROLISTA lopussa). Sitten 04, 06, 07.
 
 ## Opit
 - Lattian "läikkä" pientiilikuviolla = REIKÄ (pelin täyte −0,08). Peittokoe: kaikkien ylöspäin osoittavien kasvojen ruudukko.
