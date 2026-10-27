@@ -238,3 +238,21 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   alemman renkaan päät pariutuvat sisärenkaan kanssa; c1_raystaat2.py:n parihaku), Taihemen ylä, Meridiaaniportin siivet → c1_vanha_leikkaus +
   c1_sijoitukset (kaikki mallit kerralla) → rakennukset-v54 + kielletty-c1-v4 PK:lle (myös F kaiteeton uudelleen c2_kaidesaaret.py:llä);
   viisteen v < 0 harvat kolmiot; T-risteys, aukion sivuhallit, 04, 06, 07 (EROLISTA); jonossa Olavinlinnan palatsi-v2.
+
+## LISÄYS 17 klo 17.1x: kujan 02 vastaus VS:lle, Meridiaaniportin kattoläikät → katon UV1 (ei leivontaa)
+- VS (kuja 02, juuri-v84m): yksikerros-v79 rasteroitu x −254…−237, z 320…345. Kuja seinästä seinään x −249,3…−242,2, kujapala
+  peittää sen, reunakivi y 0,20 molemmilla reunoilla. rakennukset.015:n V4_lattia ja V4_kivireunus ovat muurien ulkopuolella
+  (kujalle vain portin pilarit z 344–345). Pientiilialue, isojen laattojen kaista ja porras tulevat pelin omasta geometriasta
+  → VS tarkistaa PK:n kanssa (raycast −247; 330). Mallissa ei ole korjattavaa.
+- PK/PT: Meridiaaniportin kultakaton tummat lohkoläikät (esikatselu-20261027-165404/d-perus.png) = LOD0:n valo_rgbm, ei
+  esikatselu. Sama vika on ollut v50:stä asti, eli C1 ei aiheuta sitä. SYY: leivo_malli.py:n smart_project teki jokaisesta tiilestä
+  oman saarekkeen (2 tekseliä/m², 78 % katon kolmioista alle tekselin; atlaksen täyttävät ~50 000 pikkusaareketta marginaaleineen),
+  joten naapurisaarekkeiden ja tyhjän alueen valo vuotaa katolle. Laitekuva (aukio 03) ilman läikkiä: LOD1/2:ssa ei ole valokarttaa.
+- KORJAUS ILMAN LEIVONTAA (PT 17.0x: omistajan 10.56-päätös voimassa): K/tyokalut/katto_uv1.py, kytketty leivo_malli.py:hyn
+  (KATTO_UV=1 oletus, varmuuskopio .ennen-kattouv). Ylöspäin osoittavat V4_gold-pinnat jaetaan 1 m:n kuutioista lapealueiksi
+  (naapurinormaalit, pistetulo > 0,8), jokainen alue projisoidaan keskinormaalinsa suunnasta yhdeksi saarekkeeksi (merge_overlap);
+  muut pinnat smart_projectilla. Lappeiden mittakaava × VAHV, jotta katolle tulee KATTO_OSUUS (0,5) atlaksesta.
+  Tarkistus VAIN_UV=<npz> (ei leivontaa): Meridiaaniportti 20 lapealuetta, katto 2,1 → 17 tekseliä/m², muut 2,4 → 3,0,
+  päällekkäisyys katto/muut 0,01 %.
+- JONO: rakennukset-v54:n leivonta (kaikki mallit leivo_malli.py:llä, uusi UV1) vasta muotoerien jälkeen, kun valo otetaan taas
+  työn alle. Sama vika voi olla taustapaloissa (leivo_valo.py, 1,6 tekseliä/m²): katto_uv1 sinne samalla.
