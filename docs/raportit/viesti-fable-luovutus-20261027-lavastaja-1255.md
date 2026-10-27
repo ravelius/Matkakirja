@@ -375,3 +375,6 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   näyttävät irrallisilta kermanvalkoisilta laatoilta (tarkista pelin valossa VS:n korjauksen jälkeen). Olavinlinna J4: arkun glb:tä ei löytynyt _tyo/_valmiit-hauilla → kysy NS:ltä polku.
 - JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min, myös muurikatteen parikopio), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
   (REF=<VS:n uusi SHA> ympäristössä).
+- J4 (NS 00.5x): pelin valossa komerossa arkku auki proto-3d/lokit/esikatselu-20261028-005705/ (paras j4g-ylhaalta-y81.png; juna-213 5f80444a5, `poikki kavely data file://…/kavely-j4/`,
+  skenaario proto-3d/tyokalut/natiiviseppa-ajot/sk-komero-j4.txt). Sovitus OK (pohjalla, ei törmäyksiä). Hopea himmeä beige: DioraamaValaistu ei käytä metallisuutta/karheutta
+  (SeikkailuEsineet.cs:762) → PT:lle päätös esineiden metallituesta ennen Codex-korjausta; kahvan venymää ei voi arvioida.
