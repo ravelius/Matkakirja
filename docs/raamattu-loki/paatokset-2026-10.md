@@ -2951,3 +2951,7 @@ OMISTAJAN PÄÄTÖS 18.12 (kortti KK:ssa v4-videon jälkeen, sanatarkasti): kysy
 ## JUOKSUPELI: HENGITYSÄÄNI POIS KOKONAAN (OMISTAJA 27.10. klo 18.37) (27.10.2026 klo 18.38)
 
 OMISTAJAN PÄÄTÖS 18.37 (sanatarkasti, rimpuiluvideo v5:n jälkeen): Ota se hengitys äänitehoste pois kokonaan. Nyt kuului ainakin siinä ihan lopussa. Toteutus: Pelikoodari poistaa hengitysäänitehosteen juoksupelin kaikista kohdista. Repliikit 4 ja 9 (Sainpas sinut! / Päästä irti!) jäävät ennalleen.
+
+## EI HENGITYSTÄ NUOREN KEISARIN ÄÄNISSÄ + JUNA 212 JULKAISUUN (OMISTAJA 27.10. klo 18.51 ja 18.52) (27.10.2026 klo 18.54)
+
+OMISTAJAN PÄÄTÖS 18.51 (sanatarkasti): Hengitys ei sovi nuorelle keisarille. Se pitää ottaa kokonaan pois kaikkialta, kuulostaa aikuisen miehen huohotukselta eikä sovi ollenkaan peliin. Pysyvä linjaus Raamattuun 5.29. Toteutus: PK 46b3f424c (huohotus-1…4 pois); PK tarkistaa muut hahmoäänet ja poistaa huohotus-tiedostot; Äänittäjä poistaa hengästymisen keisarin äänityylistä (juoksupeli.aanityyli.kuvaus) ja tarkistaa nykyiset otot. Ei koske ISS:n kypärähengitystä. OMISTAJAN PÄÄTÖS 18.52 (sanatarkasti): Julkaise juna jotta näen uudet kartta jutut. Ei testejä. Juna 212 lukkoon ja TF:ään ilman tarkistusajoa (9.11); ehto: ei huohotusta junassa (PK 46b3f424c mukaan, jos juoksupeli on rungossa).
