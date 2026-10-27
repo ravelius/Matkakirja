@@ -396,6 +396,7 @@ export function korjausPalaute(syy) {
     otsikko: 'Väliotsikko on 1–4 sanaa ilman pistettä, ja jokaisen alla on kappale.',
     kertoja: 'Kirjoita neutraalia asiatekstiä: ei minä- eikä me-muotoa eikä lukijan puhuttelua.',
     turha: 'Lähteessä on johdannosta puuttuvia faktoja: kirjoita Lue lisää -teksti väliotsikoineen äläkä vastaa ###EI-LÄHDETTÄ###.',
+    vastattu: 'Kysymyksen vastaus on jo johdannossa tai Lue lisää -tekstissä: kysy jotain lähteestä, mitä teksti ei kerro.',
     kysymykset: 'Kirjoita ###KYSYMYKSET###-rivin alle tasan kaksi lyhyttä kysymystä (enintään 12 sanaa, kysymysmerkki lopussa), ei peliä eikä aarteita.',
   }[lj] ?? `Tarkistus hylkäsi vastauksen (${s}).`;
   return `Tarkistus hylkäsi vastauksen: ${ohje} Kirjoita koko vastaus uudelleen samassa muodossa; muut ohjeet ennallaan.`;
@@ -520,7 +521,7 @@ export function kohdeTyyppi(laji) {
 }
 
 /** Osatekstien versio ja avain (osa = johdanto | lisaa). */
-export const OSA_VERSIO = 't4';
+export const OSA_VERSIO = 't5';
 export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
 /** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
 export const KYSYMYKSET = '###KYSYMYKSET###';
@@ -575,8 +576,10 @@ siitä, mitä et tiedä. Kaksi jaksoa riittää, jos kolmannelle ei ole omia fak
 
 KYSYMYKSET. Tekstin perään tulee tasan yksi rivi ###KYSYMYKSET### ja sen alle tasan kaksi riviä, kumpikin yksi lyhyt kysymys
 (enintään 12 sanaa, päättyy kysymysmerkkiin), jonka pelaaja voisi esittää Pululle tästä paikasta. Kysymykseen on vastaus
-lähteessä, mutta johdanto ja Lue lisää -teksti eivät kerro sitä: kysymyksen vastaus ei saa olla kummassakaan. Kysymys on pelaajan äänellä (esimerkiksi "Kuka rakennutti
-ensimmäisen linnan?"), ei vihjeitä peliin, aarteisiin eikä juoneen. Vastauksia et kirjoita. Vastauksen loppu on täsmälleen tätä muotoa:
+lähteessä, mutta johdanto ja Lue lisää -teksti eivät kerro sitä: kysymyksen vastaus ei saa olla kummassakaan, eikä kysymys saa
+toistaa tekstin aihetta (jos teksti kertoo nimen alkuperän tai sodan vaiheet, niistä ei kysytä). Kysymys vie pidemmälle: syy,
+seuraus, vertailu, ihmiset tai nykypäivä. Kysymys on pelaajan äänellä (esimerkiksi "Miten linnaa käytetään nykyään?"), ei vihjeitä
+peliin, aarteisiin eikä juoneen. Vastauksia et kirjoita. Vastauksen loppu on täsmälleen tätä muotoa:
 ###KYSYMYKSET###
 Ensimmäinen kysymys?
 Toinen kysymys?
@@ -654,12 +657,40 @@ export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '') 
   if (/aarre|isoisä|pelaaja|peli/.test(pienet)) return { ok: false, syy: 'kysymykset' };
   // Toisto johdannon kanssa: johdanto ja kappaleet yhdessä yhteisiin sääntöihin (sama vuosi, sama pitkä sana, lähes sama virke).
   const yhdessa = johdanto ? `${String(johdanto).trim()} ${kappaleet}` : kappaleet;
+  // Kysymyksen vastaus ei saa olla tekstissä (NUI:n vedos t4: "Mistä Etonin nimi tulee?", vaikka Lue lisää kertoi Ēa-tūn).
+  if (kysymykset.some((k) => vastattuTekstissa(k, yhdessa, kohteenNimi))) return { ok: false, syy: 'vastattu' };
   // Johdannon luku (≥ 10) toistuu Lue lisää -tekstissä = toisto (Box Hill: "31 kilometriä Lontoosta" kahdesti).
   const johdannonLuvut = new Set((String(johdanto ?? '').match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).filter((x) => Number(x) >= 10));
   const lukuToisto = (kappaleet.match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).find((x) => johdannonLuvut.has(x));
   if (lukuToisto) return { ok: false, syy: `toisto ${lukuToisto}` };
   for (const j of jaksot) if (!/[.!?]$/.test(j.teksti)) return { ok: false, syy: 'kesken' };
   return yhteiset(yhdessa, syote, kohteenNimi);
+}
+
+const KYSYMYSSANAT = new Set(['mistä', 'miksi', 'mikä', 'mitä', 'mitkä', 'kuka', 'ketkä', 'keitä', 'milloin', 'missä', 'mihin',
+  'miten', 'millä', 'millainen', 'millaisia', 'kuinka', 'paljon', 'onko', 'oliko', 'ovat', 'olivat', 'olla', 'tämä', 'tässä', 'siitä',
+  'sitä', 'nykyään', 'alun', 'perin', 'kaupunki', 'kaupungin', 'paikka', 'paikan', 'alue', 'alueen', 'vuonna']);
+
+/**
+ * Onko kysymyksen vastaus jo tekstissä: kysymyksen sisältösanojen (≥ 4 kirjainta, ei kysymyssana eikä kohteen nimi) alut
+ * (5 kirjainta, taivutus) löytyvät samasta virkkeestä vähintään kaksi ja kaksi kolmasosaa; nimen alkuperästä kysyttäessä riittää,
+ * että teksti kertoo nimen alkuperän.
+ */
+export function vastattuTekstissa(kysymys, teksti, kohteenNimi = null) {
+  const k = String(kysymys ?? '').toLowerCase();
+  const t = String(teksti ?? '');
+  if (/(?<!\p{L})nim(i|en|ensä)(?!\p{L})/u.test(k) && /tulee|peräisin|alkuperä|juontuu|tarkoittaa|merkitsee/u.test(k)
+    && (NIMEN_ALKUPERA.test(t) || /(?<!\p{L})nimi\S*\s[^.!?]*(sanasta|tarkoittaa|merkitsee)/iu.test(t))) return true;
+  const kohde = String(kohteenNimi ?? '').toLowerCase().slice(0, 4);
+  const alut = [...new Set((k.match(/\p{L}+/gu) ?? [])
+    .filter((s) => s.length >= 4 && !KYSYMYSSANAT.has(s) && !(kohde.length === 4 && s.startsWith(kohde)))
+    .map((s) => s.slice(0, 5)))];
+  if (alut.length < 2) return false;
+  const tarve = Math.max(2, Math.ceil((alut.length * 2) / 3));
+  return t.split(/(?<=[.!?])\s+/).some((v) => {
+    const sanatV = (v.toLowerCase().match(/\p{L}+/gu) ?? []);
+    return alut.filter((a) => sanatV.some((s) => s.startsWith(a))).length >= tarve;
+  });
 }
 
 /** Yhteiset säännöt (merkit, sanat, toisto, vieras sana, faktatoisto, puhuttelu, luvut, nimet) yhdelle tekstille tarkistaTekstin kautta. */

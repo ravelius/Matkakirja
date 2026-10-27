@@ -47,6 +47,18 @@ test('johdanto: 2–3 virkettä hyväksytään, neljä ja yksi hylätään', () 
   assert.equal(tarkistaJohdanto(EI_LAHDETTA, syote).ok, true);
 });
 
+test('kysymys, johon teksti jo vastaa, hylätään (NUI t4: Etonin nimi)', async () => {
+  const { vastattuTekstissa } = await import('../tools/pollo/tietokortti.js');
+  const teksti = 'Eton on pieni kaupunki. Nimi tulee vanhan englannin sanasta Ēa-tūn, joka tarkoittaa jokikaupunkia. Vilhelm Valloittaja rakennutti linnan joen yläpuolelle.';
+  assert.equal(vastattuTekstissa('Mistä Etonin nimi tulee?', teksti, 'Eton'), true);
+  assert.equal(vastattuTekstissa('Kuka rakennutti ensimmäisen linnan?', teksti, 'Eton'), true);
+  assert.equal(vastattuTekstissa('Miksi koulun oppilaat käyttävät frakkia?', teksti, 'Eton'), false);
+  // KK 27.10.: Etonin toinen kysymys oli myös jo vastattu.
+  const sota = 'Englannin sisällissodan aikana kuninkaalliset joukot miehittivät kolledžin, mutta Windsorin valtaus epäonnistui.';
+  assert.equal(vastattuTekstissa('Mitä Etonissa tapahtui Englannin sisällissodan aikana?', sota, 'Eton'), true);
+  assert.equal(vastattuTekstissa('Mistä Etonin nimi tulee?', 'Eton on pieni kaupunki Thamesin varrella.', 'Eton'), false);
+});
+
 test('johdanto on yksi kappale ilman nimen alkuperää (omistaja 14.39)', () => {
   const s2 = JSON.stringify({ nimi: 'Eton', faktat: [], wikipedia: { kieli: 'en', teksti: 'Eton is a town on the Thames. Eton College was founded in 1440. The name comes from Old English.' } });
   const ok = 'Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on vuonna 1440 perustettu Eton College. Koulu leimaa yhä kaupungin katuja.';
