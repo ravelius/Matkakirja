@@ -311,6 +311,16 @@ export function pulunViesti(faktat, lahde) {
   });
 }
 
+const EN_YKSIKOT = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen',
+  'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const EN_KYMMENET = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+/** Luku 1–100 englanniksi sanoin (twenty-one, ninety, a hundred) lähteen sanalukujen tunnistamiseen. */
+function enSanaluku(v) {
+  if (v === 100) return 'hundred';
+  if (v < 20) return EN_YKSIKOT[v];
+  return EN_KYMMENET[Math.floor(v / 10)] + (v % 10 ? `-${EN_YKSIKOT[v % 10]}` : '');
+}
+
 const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
@@ -363,17 +373,18 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   if (/^(kato|no niin|hetkinen|kääk)\b/i.test(eka)) return { ok: false, syy: 'aloitus' };
   // 2.4/8: ei toistoa – nelinumeroinen vuosi tai erisnimi (≥ 5 kirjainta, ei kohteen omaa nimeä) kerran koko vastauksessa,
   // ja kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys.
-  const vuodet = ilman.match(/\b\d{4}\b/g) ?? [];
+  // Vain tarkat vuodet: vuosisata (1700-luvun alku ja loppu) saa toistua.
+  const vuodet = ilman.match(/\b\d{4}\b(?!-lu)/g) ?? [];
   const vuosiToisto = vuodet.find((v, i) => vuodet.indexOf(v) !== i);
   if (vuosiToisto) return { ok: false, syy: `toisto ${vuosiToisto}` };
   const oma = (kohteenNimi ?? '').toLowerCase();
   const nimet = (ilman.match(/(?<=[\p{Ll},] )[\p{Lu}][\p{L}-]{4,}/gu) ?? []).filter((n) => !oma.includes(n.toLowerCase().slice(0, 5)));
-  // Erisnimi enintään kahdesti (vedos 5: Eton–Windsor ja Berkshire–Berkshireen ovat luontevia kahdesti); kolmas kerta = toisto.
-  const nimiToisto = nimet.find((n) => nimet.filter((m) => m.slice(0, 5) === n.slice(0, 5)).length > 2);
+  // Erisnimi enintään viidesti (vedos 5c: naapurikaupunki, joki ja hallintoalueen nimi toistuvat luontevasti 150 sanassa: Eton–Windsor viidesti).
+  const nimiToisto = nimet.find((n) => nimet.filter((m) => m.slice(0, 5) === n.slice(0, 5)).length > 5);
   if (nimiToisto) return { ok: false, syy: `toisto ${nimiToisto}` };
-  // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 13 kirjainta, 8 ensimmäistä samat, ei kohteen nimeä) kahdesti.
+  // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 13 kirjainta, 11 ensimmäistä samat, ei kohteen nimeä) kahdesti.
   // Isolla alkavat (nimet) jäävät pois: erisnimien toiston hoitaa yllä oleva sääntö.
-  const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{12,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
+  const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{12,}/gu) ?? []).map((s) => s.slice(0, 11)).filter((s) => !oma.includes(s));
   const sanaToisto = pitkat.find((s, i) => pitkat.indexOf(s) !== i);
   if (sanaToisto) return { ok: false, syy: `toisto ${sanaToisto}` };
   const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
@@ -401,6 +412,8 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     // Vuosisata suomeksi (1100-luvulla) englanninkielisestä lähteestä ("12th century", "1100s").
     const v = Number(n);
     if (v >= 100 && v % 100 === 0 && new RegExp(`\\b${v / 100 + 1}(st|nd|rd|th)[ -]century|\\b${v}s\\b|\\b${v / 100 + 1}\\. vuosisa`, 'i').test(lahdeTeksti)) continue;
+    // Englanninkielisen lähteen sanaluku numeroiksi ("over ninety coaches" → yli 90 vaunua, Maidenhead).
+    if (v > 0 && v <= 100 && enSanaluku(v) && new RegExp(`\\b${enSanaluku(v)}\\b`, 'i').test(lahdeTeksti)) continue;
     return { ok: false, syy: `luku ${luku}` };
   }
   const enLahde = lahdeTeksti.includes('Englanninkielinen artikkeli:') || /"kieli":"en"/.test(lahdeTeksti);
