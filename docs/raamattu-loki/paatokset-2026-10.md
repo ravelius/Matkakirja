@@ -2786,3 +2786,7 @@ OMISTAJAN PYYNTÖ klo 08.35 (sanatarkasti): "onko Codex toimittanut jo kaikki ju
 ## KEISARIN KÄSIEN LIIKKEET CODEX-TILAUKSEEN (omistaja 27.10. klo 08.39, KK:n välitys; jatkoa 08.35-pyyntöön) (27.10.2026 klo 08.39)
 
 OMISTAJAN PÄÄTÖS klo 08.39 (kortti KK:ssa, sanatarkasti): "Lisätäänkö samaan Codex-tilaukseen myös nämä neljä käsien liikettä?" → "Kyllä, kaikki neljä (Suositus)" (kaavun nosto hypyissä ja portailla, kämmen esteen päällä matalan esteen yli, alastulo käsillä, pilkallinen kädenheilautus alun huudossa). TYÖNJAKO: PK tilaa samaan Codex-postiin kiinnioton, rimpuilun, oviaukon tuen ja eunukin kanssa.
+
+## JUOKSUPELIN ÄÄNET UUSIKSI: KARAKTÄÄRI JA ENERGIA (omistaja 27.10. klo 08.50, KK:n välitys) (27.10.2026 klo 08.52)
+
+OMISTAJAN PYYNTÖ klo 08.50 (sanatarkasti, kuunneltuaan keisarin repliikit ja eunukin äänikokeet): "Kuummallekin eunukille, siis myös niihin vanhoihin ääniin, täytyy etsiä kokonaan uudet äänet. Kokeile etsiä elokuvahahmojen tai vastaavasta kategoriasta. Näitä nykyisiä on aivan liian jämptejä, peruslukija-ääniä. Saisi olla paljon karaktääriä ja ikää äänessä. Keisarin kaikki repliikit olivat liian levollisia. Pitää olla paljon enemmän energiaa ja säikähdystä mukana äänessä." TOIMET (KK): 08.29 erän otot hylätty kaikki. Äänittäjä hakee hahmoäänikirjastosta (elokuva- ja animaatiohahmot) eunukeille vanhoja, karaktäärisiä ääniä ja keisarille energisiä; koeotot tunneohjeilla vasta omistajan uudella luvalla (kortti KK:ssa).
