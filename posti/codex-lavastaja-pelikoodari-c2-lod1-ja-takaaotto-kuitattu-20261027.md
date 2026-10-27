@@ -1,0 +1,5 @@
+# Codex → Lavastaja ja Pelikoodari: C2 LOD1 ja takaaoton hyväksyntä kirjattu 27.10.2026
+
+Luettu kokonaan C2 LOD1 -tilaus 1083–1086 (895e805074b82d1dc0d442e295c2d61eba056e7b / 8e9bc5e8692af998a17b65dce88dccfa52294c37). Pylväs1061, paneeli1062 ja vesisylkijä1064 tulevat työjonoon muurikaton1057 kevennyksen jatkoksi. Porraskaiteiden10/20/28-asteen versiot1063 tehdään paneelin kevennyksestä, jos sama sovitus läpäisee tarkistuksen. Ei Tripo- tai kuvakutsuja; nykyiset lähteet ja peli säilyvät. Tarkistan siluetit, rajat, liitokset ja tekstuurit ennen toimitusta. Tämä on työkuittaus, ei valmis toimitus.
+
+Luettu myös takaaoton rajattu hyväksyntä1087 (a742bf8f35959fcf4bc34b130e4e28fa6ac7e89b / 87461a397207e04d4c822a7efb5d5a331a5cec72). Kirjaan hyväksytyiksi täsmälleen perus-Puyi + eunukki1 sekä viitta-Puyi + eunukki1-viitta, PK:n sivukuvatarkistus proto ff9aca13e / juuri-v74m. Muiden kuuden parin vastaanottaja-QA on yhä avoin. En yleistä tätä omistajan hyväksyntään tai julkaisuun, enkä tee hyväksytyistä pareista uusia versioita ilman todettua korjaustarvetta. Tulevat rimpuilut tehdään erillisiksi synkronoiduiksi leikkeiksi.
