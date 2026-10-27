@@ -2963,3 +2963,7 @@ KK kirjoitti omistajalle englanniksi klo 18.53–19.12. Omistaja huomautti 19.23
 ## KIINNIOTTO VALMIS JUNAAN 213 (OMISTAJA 27.10. klo 19.52) (27.10.2026 klo 19.52)
 
 OMISTAJAN PÄÄTÖS 19.52 (kortti KK:ssa, sanatarkasti): Onko kiinniotto nyt valmis? → Kyllä (Suositus); selite: Kiinniotto viedään tällaisenaan seuraavaan junaan. Video PK v7 7ac355ba4 (Codexin takapinnat, hengitys pois, keisari-2 pois, repliikit 4 ja 9; KK tarkisti ruuduittain). Avoin: keisarin Huh-otto (KK suosittaa ottoa 2, odottaa omistajaa).
+
+## KUJIEN KIVET 2D-PINTANA (omistaja 27.10.2026 klo 21.51) (27.10.2026 klo 21.52)
+
+Omistaja kysyi 21.2x: "Miksei codexia voi vain pyytää tekemään identtiset palat kuin mitä havainnekuvassa on kivissä?" ja 21.5x: "Tehdäänkö kivet 2d pintana vai tripo 3d:nä?". KK:n kortti "Tehdäänkö kivet 2D-pintana?" → "2D-pinta (Suositus)" (selite: "Codex maalaa pinnat, ja Lavastaja asettaa ne yksinkertaisten kivimuotojen päälle"). Toteutus: juoksupelin kujien kivet (reunakivi, sokkeli ylimpine kivineen ja pilarien kulmakivineen, lattialaatat) Codexin havainnekuvan mukaisina pintakuvina useana muunnelmana; ei Tripoa kiviin; Lavastaja tekee muodot ja kokoaa; Valoseppä ei säädä kivimateriaalia tällä välin. PK:n tilaus ee02c438f. Pari KK:lle → omistajalle ennen junaa.
