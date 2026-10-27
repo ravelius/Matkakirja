@@ -2915,3 +2915,7 @@ Omistajan kortti KK:ssa: "Käykö tämä 18 kohteen lista Unesco-kokeeseen?" →
 ## KARTAN TIETOKORTTI: VAIN ENSIMMÄINEN KAPPALE, VÄLIOTSIKOILLE TILAA (omistaja 27.10. klo 14.39) (27.10.2026 klo 14.40)
 
 Omistajan kortti KK:ssa ("Onko kartan tietokortti nyt toivomasi kaltainen?", NUI:n kooste eabaaa896), sanatarkasti: "toinen kappale joka alkaa "Nimi tulee" voi ottaa pois. Eli näkyviin tulisi vain ensimmäinen kappale tekstiä. onko helppo toteuttaa. lisäksi väliotsikon yläpuolelle vähän enemmän tilaa. muuten hyvä". Toteutus: Karttaseppä tekee johdannon yhdeksi kappaleeksi (nimen alkuperää ei erillisenä kappaleena), Natiivi-UI näyttää vain ensimmäisen kappaleen ja lisää väliotsikoiden yläpuolelle tilaa. Muuten kortti hyväksytty.
+
+## KARTAN TIETOKORTIN ULKOASU HYVÄKSYTTY (omistaja 27.10. klo 15.21) (27.10.2026 klo 15.22)
+
+Omistajan kortti KK:ssa, sanatarkasti: 'Hyväksytkö tietokortin ulkoasun nyt?' → 'Kyllä (Suositus)' (selite: 'Ulkoasu on valmis. Pulun kysymykset ja lippu korjataan erikseen.'). Kuva scratchpad/keskustelukanava/kuvat-20261027/tietokortti-eton-B1-B5-v2.png (NUI 60cfa418d + KS t4). Kortti tällaisena junaan 212. Erilliset korjaukset ilman uutta omistajakierrosta: Karttaseppä korjaa Pulun kysymykset (ei kysymyksiä, joihin teksti jo vastaa), Natiivi-UI sumentaa noston takana jäävät terävät osat (3D-lippu ja päiväkirjakortti, linja 13.25 'noston sumennus kaikkeen', PT 15.2x).
