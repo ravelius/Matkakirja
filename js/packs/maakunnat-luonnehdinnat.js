@@ -4471,8 +4471,8 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    * TÄSMÄLLEEN (Natural Earthin englanninkielinen nimi, esim.
    * "Finland Proper" = Varsinais-Suomi). Vain `lyhyt` tässä erässä.
    * Lähteet (tarkistettu 25.9.2026; en = en-Wikipedia, fi = fi-Wikipedia):
-   *   South Karelia         — en Imatrankoski (pato 1929, avataan päivittäin
-   *                           kesä–elokuussa klo 18)
+   *   South Karelia         — en Imatrankoski (pato 1929, avataan pääsääntöisesti
+   *                           kesä–elokuussa ke–su klo 18, kesto n. 16 min)
    *   Southern Ostrobothnia — en Tangomarkkinat (world's oldest tango
    *                           festival, Seinäjoki, vuodesta 1985)
    *   Southern Savonia      — en Saimaa ringed seal (vain Saimaassa, n. 500
@@ -4570,7 +4570,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   FIN: {
     'South Karelia': {
       lyhyt: 'Imatrankoski on ollut padottuna vuodesta 1929, mutta kesäiltaisin padon luukut avataan ja vesi ryöppyää taas vanhaan uomaansa.',
-      pitka: `Etelä-Karjala on Saimaan eteläpään ja Venäjän rajan maakunta. Asukkaita on noin 120 000, ja yli puolet heistä asuu Lappeenrannassa. Lappeenranta on Saimaan etelärannalla, ja se sai kaupunkioikeudet vuonna 1649. Saimaan kanava yhdistää Saimaan Suomenlahteen, ja se avattiin vuonna 1856. Parikkalassa on kansantaiteilija Veijo Rönkkösen patsaspuisto, jossa on maalattuja betonihahmoja. Imatralla Vuoksi virtaa Imatrankosken kautta. Koski on maan vanhin matkailunähtävyys, mutta voimalaitos otti kosken veden käyttöönsä vuonna 1929. Siksi koski on yleensä hiljainen. Kesäisin keskiviikosta sunnuntaihin padon luukut avataan kello 18 noin 16 minuutiksi, ja koski kohisee kuten ennen.`,
+      pitka: `Etelä-Karjala on Saimaan eteläpään ja Venäjän rajan maakunta. Asukkaita on noin 120 000, ja yli puolet heistä asuu Lappeenrannassa. Lappeenranta on Saimaan etelärannalla, ja se sai kaupunkioikeudet vuonna 1649. Saimaan kanava yhdistää Saimaan Suomenlahteen, ja se avattiin vuonna 1856. Parikkalassa on kansantaiteilija Veijo Rönkkösen patsaspuisto, jossa on maalattuja betonihahmoja. Imatralla Vuoksi virtaa Imatrankosken kautta. Koski on maan vanhin matkailunähtävyys, mutta voimalaitos otti kosken veden käyttöönsä vuonna 1929. Siksi koski on yleensä hiljainen. Kesäisin keskiviikosta sunnuntaihin padon luukut avataan yleensä kello 18 noin vartin ajaksi, ja koski kohisee kuten ennen.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-south-karelia-86bd95d9.jpg',
@@ -4593,7 +4593,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Southern Ostrobothnia': {
       lyhyt: 'Seinäjoen Tangomarkkinat on maailman vanhin tangofestivaali, ja joka heinäkuu siellä etsitään Suomen parhaita tangolaulajia.',
-      pitka: `Etelä-Pohjanmaa on lakeuksien ja peltojen maakunta Länsi-Suomessa. Asukkaita on noin 190 000. Maisema on enimmäkseen tasaista, ja maakuntaa pidetään Suomen suurimpana maatalousalueena. Seinäjoella on arkkitehti Alvar Aallon suunnittelema Lakeuden Risti -kirkko, joka valmistui vuonna 1960. Lappajärvi on meteoriitin törmäyksessä syntynyt kraatterijärvi. Isku tapahtui noin 78 miljoonaa vuotta sitten, ja kraatterin halkaisija on 22–23 kilometriä. Tango on Suomessa suosittu tanssi ja musiikkilaji. Seinäjoen Tangomarkkinoilla valitaan joka heinäkuu Tangokuningas ja Tangokuningatar. Tapahtuma alkoi vuonna 1985, ja vuonna 2019 siellä kävi yli 111 000 ihmistä.`,
+      pitka: `Etelä-Pohjanmaa on lakeuksien ja peltojen maakunta Länsi-Suomessa. Asukkaita on noin 190 000. Maisema on enimmäkseen tasaista, ja maakuntaa pidetään Suomen suurimpana maatalousalueena. Seinäjoella on arkkitehti Alvar Aallon suunnittelema Lakeuden Risti -kirkko, joka valmistui vuonna 1960. Lappajärvi on meteoriitin törmäyksessä syntynyt kraatterijärvi. Isku tapahtui noin 78 miljoonaa vuotta sitten, ja kraatterin halkaisija on 22–23 kilometriä. Seinäjoen Tangomarkkinoilla valitaan joka heinäkuu Tangokuningas ja Tangokuningatar. Tapahtuma alkoi vuonna 1985, ja vuonna 2019 siellä kävi yli 111 000 ihmistä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-southern-ostrobothnia-34de725d.jpg',
@@ -4639,7 +4639,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kainuu: {
       lyhyt: 'Suomussalmella valtatien varren pellolla seisoo Hiljainen kansa, turvepäisten hahmojen joukko, jonka vaatteet vaihdetaan vuodenajan mukaan.',
-      pitka: `Kainuu on metsien ja järvien maakunta Suomen itärajalla. Se on pinta-alaltaan maan kolmanneksi suurin, mutta asukkaita on vain noin 69 000, ja metsää on noin 80 prosenttia maa-alasta. Keskus Kajaani on Oulujärven ja Nuasjärven välissä. Lääkäri Elias Lönnrot asui siellä ja kokosi kansanrunoja, joista syntyi Kalevala (1835). Kuhmon erämaissa elää tiheä karhu- ja susikanta, ja Kuhmossa pidetään kamarimusiikkifestivaalia vuodesta 1970. Suomussalmen Hossan kansallispuistossa on Värikallion kalliomaalaus, jossa on yli 60 kuvaa, enimmäkseen eläimiä. Sotkamon Vuokatissa on hiihtotunneli, jossa hiihdetään ympäri vuoden. Suomussalmella valtatie 5:n varrella pellolla seisoo Hiljainen kansa, taiteilija Reijo Kelan teos: vaatetettuja hahmoja, joilla on turpeesta tehdyt päät.`,
+      pitka: `Kainuu on metsien ja järvien maakunta Suomen itärajalla. Se on pinta-alaltaan maan kolmanneksi suurin, mutta asukkaita on vain noin 69 000, ja metsää on noin 80 prosenttia maa-alasta. Keskus Kajaani on Oulujärven ja Nuasjärven välissä. Lääkäri Elias Lönnrot asui siellä ja kokosi kansanrunoja, joista syntyi Kalevala (1835). Kuhmon erämaissa elää tiheä karhu- ja susikanta, ja Kuhmossa pidetään kamarimusiikkifestivaalia vuodesta 1970. Suomussalmen Hossan kansallispuistossa on Värikallion kalliomaalaus, jossa on noin 60 kuviota, enimmäkseen ihmisiä ja hirvieläimiä. Sotkamon Vuokatissa on hiihtotunneli, jossa hiihdetään ympäri vuoden. Suomussalmella valtatie 5:n varrella pellolla seisoo Hiljainen kansa, taiteilija Reijo Kelan teos: vaatetettuja hahmoja, joilla on turpeesta tehdyt päät.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kainuu-8bc0332c.jpg',
@@ -4662,7 +4662,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Tavastia Proper': {
       lyhyt: 'Hämeenlinnaan kuuluvassa Iittalan kylässä on puhallettu lasia vuodesta 1881, ja kylän nimi on nyt maailmalla tunnettu muotoilumerkki.',
-      pitka: `Kanta-Häme on järviseudun maakunta Etelä-Suomessa. Asukkaita on noin 170 000. Maakunnan keskus Hämeenlinna on perustettu vuonna 1639, ja sitä kutsutaan Suomen vanhimmaksi sisämaakaupungiksi. Hämeen linna on Vanajaveden rannalla, ja sen rakentaminen alkoi 1200-luvulla tai 1300-luvun alussa. Hattulassa on tiilestä rakennettu Pyhän Ristin kirkko, jonka seinämaalaukset ovat todennäköisesti vuosilta 1513–1516. Tammelan Torronsuon kansallispuistossa suon turvekerros on paikoin jopa 12 metriä paksu. Hämeenlinnaan kuuluvassa Iittalan kylässä on lasitehdas vuodesta 1881. Alvar Aalto suunnitteli Iittalalle Savoy-maljakon vuonna 1936, ja lähes kaikki Iittalan lasiesineet valmistetaan yhä Suomessa.`,
+      pitka: `Kanta-Häme on järviseudun maakunta Etelä-Suomessa. Asukkaita on noin 170 000. Maakunnan keskus Hämeenlinna on perustettu vuonna 1639, ja sitä kutsutaan Suomen vanhimmaksi sisämaakaupungiksi. Hämeen linna on Vanajaveden rannalla, ja sen rakentaminen alkoi 1200-luvulla tai 1300-luvun alussa. Hattulassa on tiilestä rakennettu Pyhän Ristin kirkko, jonka seinämaalaukset ovat todennäköisesti vuosilta 1513–1516. Tammelan Torronsuon kansallispuistossa suon turvekerros on paikoin jopa 12 metriä paksu. Hämeenlinnaan kuuluvassa Iittalan kylässä on lasitehdas vuodesta 1881. Alvar Aalto suunnitteli vuonna 1936 Savoy-maljakon, joka on hänen tunnetuin esineensä ja kuuluu nykyään Iittalan valikoimaan. Lähes kaikki Iittalan lasiesineet valmistetaan yhä Suomessa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/fin-maakunta2-tavastia-proper-v-25d3cb52.jpg',
@@ -4685,7 +4685,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Central Ostrobothnia': {
       lyhyt: 'Kokkolan Englantilaisessa puistossa on brittien tykkivene, joka kaapattiin 1854 – kaupunki ei ole palauttanut sitä pyynnöistä huolimatta.',
-      pitka: `Keski-Pohjanmaa on Pohjanlahden rannikon ja jokilaaksojen maakunta. Asukkaita on noin 67 000, ja väkiluvultaan se on Manner-Suomen pienin maakunta. Maa nousee täällä merestä noin 8,5 senttimetriä kymmenessä vuodessa, joten meren ranta siirtyy hitaasti kauemmas. Maakuntakeskus Kokkola perustettiin vuonna 1620, ja siellä asuu noin 48 000 ihmistä. Kaustisen kunta tunnetaan pelimanneista eli kansanmuusikoista, ja kaustislainen viulunsoitto on Unescon aineettoman kulttuuriperinnön luettelossa vuodesta 2021. Kokkolan Englanninpuistossa on barkassi eli sotalaivan iso vene. Suomalaiset saivat sen saaliiksi Halkokarin kahakassa 7. kesäkuuta 1854, kun brittien sotalaivat yrittivät nousta maihin Krimin sodan aikana.`,
+      pitka: `Keski-Pohjanmaa on Pohjanlahden rannikon ja jokilaaksojen maakunta. Asukkaita on noin 67 000, ja väkiluvultaan se on Manner-Suomen pienin maakunta. Maa nousee täällä merestä noin 8,5 millimetriä vuodessa, joten meren ranta siirtyy hitaasti kauemmas. Maakuntakeskus Kokkola perustettiin vuonna 1620, ja siellä asuu noin 48 000 ihmistä. Kaustisen kunta tunnetaan pelimanneista eli kansanmuusikoista, ja kaustislainen viulunsoitto on Unescon aineettoman kulttuuriperinnön luettelossa vuodesta 2021. Kokkolan Englanninpuistossa on barkassi eli sotalaivan iso vene. Suomalaiset saivat sen saaliiksi Halkokarin kahakassa 7. kesäkuuta 1854, kun brittien sotalaivat yrittivät nousta maihin Krimin sodan aikana.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-central-ostrobothnia-006f30d5.jpg',
@@ -4800,7 +4800,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ostrobothnia: {
       lyhyt: 'Merenkurkun saaristo kohoaa merestä lähes sentin vuodessa, ja tämän maannousun vuoksi se on vuodesta 2006 ollut Unescon maailmanperintöä.',
-      pitka: `Pohjanmaa on Pohjanlahden rannikon maakunta, jossa asuu noin 180 000 ihmistä. Lähes puolet heistä puhuu äidinkielenään ruotsia. Maisema on enimmäkseen tasaista. Närpiössä kasvatetaan kasvihuoneissa 60 prosenttia Suomen tomaateista. Maakuntakeskus Vaasa perustettiin vuonna 1606, ja siellä asuu noin 71 000 ihmistä. Kaupunki paloi vuonna 1852, ja uusi Vaasa rakennettiin vuonna 1855 seitsemän kilometriä länteen Klemetsön saarelle. Vaasan edustalla on Merenkurkku, Pohjanlahden kapein kohta. Merenkurkun saaristossa maa kohoaa yli metrin sadassa vuodessa, koska jäätikön painama maa nousee takaisin jääkauden jälkeen. Saaristo on kuulunut Unescon maailmanperintöön vuodesta 2006.`,
+      pitka: `Pohjanmaa on Pohjanlahden rannikon maakunta, jossa asuu noin 180 000 ihmistä. Lähes puolet heistä puhuu äidinkielenään ruotsia. Maisema on enimmäkseen tasaista. Närpiössä kasvatetaan kasvihuoneissa 60 prosenttia Suomen tomaateista. Maakuntakeskus Vaasa perustettiin vuonna 1606, ja siellä asuu noin 71 000 ihmistä. Kaupunki paloi vuonna 1852, ja uusi Vaasa rakennettiin vuonna 1855 seitsemän kilometriä länteen Klemetsön saarelle. Vaasan edustalla on Merenkurkku, Pohjanlahden kapein kohta. Merenkurkun saaristossa maa kohoaa 8–8,5 millimetriä vuodessa, koska jäätikön painama maa nousee takaisin jääkauden jälkeen. Saaristo on kuulunut Unescon maailmanperintöön vuodesta 2006.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/fin-maakunta2-ostrobothnia-v-bb2d048e.jpg',
@@ -4823,7 +4823,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'North Karelia': {
       lyhyt: 'Kolin vaaroilta avautuu näkymä Pielisjärvelle, ja samaa maisemaa ovat ihailleet Sibelius, Juhani Aho ja taidemaalari Eero Järnefelt.',
-      pitka: `Pohjois-Karjala on Suomen itäisin maakunta, jossa asuu noin 160 000 ihmistä. Maakuntakeskus Joensuu perustettiin vuonna 1848 Pielisjoen suulle. Pielinen on Suomen neljänneksi suurin järvi. Ilomantsi on Suomen itäisin kunta ja Suomen ortodoksisin kunta, ja noin 17 prosenttia asukkaista kuuluu ortodoksiseen kirkkoon, kun koko maassa osuus on noin yksi prosentti. Heinävedellä on Valamon luostari, joka jatkaa Laatokalla sijainneen Valamon luostarin perinnettä. Karjalanpiirakka on ohuessa ruisleipätaikinakuoressa oleva riisipuurotäytteinen herkku, joka on lähtöisin Karjalan ruokaperinteestä. Lieksan Kolin kansallispuistossa kävi vuonna 2025 noin 224 000 ihmistä. Kolilla vierailivat 1800- ja 1900-lukujen taitteessa taidemaalari Eero Järnefelt, kirjailija Juhani Aho ja säveltäjä Jean Sibelius.`,
+      pitka: `Pohjois-Karjala on Suomen itäisin maakunta, jossa asuu noin 160 000 ihmistä. Maakuntakeskus Joensuu perustettiin vuonna 1848 Pielisjoen suulle. Pielinen on Suomen neljänneksi suurin järvi. Ilomantsi on Suomen itäisin kunta, ja siellä on suhteessa eniten ortodokseja: noin 17 prosenttia asukkaista kuuluu ortodoksiseen kirkkoon, kun koko maassa osuus on noin yksi prosentti. Heinävedellä on Valamon luostari, joka jatkaa Laatokalla sijainneen Valamon luostarin perinnettä. Karjalanpiirakka on ohuessa ruistaikinakuoressa oleva riisipuurotäytteinen herkku, joka on lähtöisin Karjalan ruokaperinteestä. Lieksan Kolin kansallispuistossa kävi vuonna 2025 noin 224 000 ihmistä. Kolilla vierailivat 1800- ja 1900-lukujen taitteessa taidemaalari Eero Järnefelt, kirjailija Juhani Aho ja säveltäjä Jean Sibelius.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/fin-maakunta2-north-karelia-v-fa6779d8.jpg',
@@ -4869,7 +4869,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Savonia': {
       lyhyt: 'Sonkajärvellä kisataan joka vuosi eukonkannon maailmanmestaruudesta, ja voittaja on se, joka kantaa toisen ihmisen esteradan läpi nopeimmin.',
-      pitka: `Pohjois-Savo on järvien maakunta Itä-Suomessa, ja siellä asuu noin 250 000 ihmistä. Maakuntakeskus Kuopio on Kallaveden rannalla. Kuopion Puijon mäellä on 75 metriä korkea näkötorni. Savon perinneruoka on kalakukko, jossa kalaa ja sianlihaa paistetaan ruisleipätaikinan sisällä. Iisalmessa on Olvin olutpanimo, ja Varkaudessa on vuonna 1840 avattu Taipaleen kanava. Sonkajärvellä pidetään heinäkuussa eukonkannon maailmanmestaruuskisat. Eukko on vanha sana vaimolle. Kilpailija kantaa toista ihmistä 253,5 metrin esteradan läpi, ja kisa on järjestetty vuodesta 1992.`,
+      pitka: `Pohjois-Savo on järvien maakunta Itä-Suomessa, ja siellä asuu noin 250 000 ihmistä. Maakuntakeskus Kuopio on Kallaveden rannalla. Kuopion Puijon mäellä on 75 metriä korkea näkötorni. Savon perinneruoka on kalakukko, jossa kalaa ja sianlihaa paistetaan ruistaikinan sisällä. Iisalmessa on Olvin olutpanimo, ja Varkaudessa on vuonna 1840 avattu Taipaleen kanava. Sonkajärvellä pidetään heinäkuussa eukonkannon maailmanmestaruuskisat. Eukko on vanha sana vaimolle. Kilpailija kantaa toista ihmistä 253,5 metrin esteradan läpi, ja kisa on järjestetty vuodesta 1992.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-northern-savonia-ece931f2.jpg',
