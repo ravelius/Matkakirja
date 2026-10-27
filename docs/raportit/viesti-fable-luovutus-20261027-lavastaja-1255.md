@@ -292,3 +292,8 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - SEURAAVAKSI: rakennukset-v54 + c1-v4 + c2-v3 vienti PK:n linjan kanssa (rakennukset-v54 vaatii C1-koodin); T-risteys, aukion sivuhallit,
   04, 06, 07 (EROLISTA); Olavinlinna 3c pako-v2 ja 3d tyrma-e101-v2 (NS 19.0x: PT kirjannut LR:lle koottaviksi, tiedostoja ei vielä löytynyt);
   valon uusi leivonta vasta omistajan luvalla.
+
+## LISÄYS 20 klo 20.05: reunakiven muoto ja väri LUKOSSA (omistaja 20.05, KK:n kortti)
+- OMISTAJA 20.05 "Kyllä (Suositus)": reunakiven muoto ja väri hyväksytty (pari 195504, tausta-v60), koskee myös kujia 01, 05 ja 03.
+  Seuraavaan junaan (213) PT:n kautta: tausta-v60 on JU:lla (SHA256SUMS b0b11ab458e1, osoitin lavastaja/tausta-v60-212 9805ef7c5).
+- Pinnan rosoisuuden viimeistely VS:llä (varjostin/pinta); Lavastaja EI muuta reunakiven geometriaa (REUNA_W/H, urat, viiste) ilman uutta päätöstä.
