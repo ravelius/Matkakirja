@@ -1,0 +1,26 @@
+{
+  "correctionSource": {
+    "path": "posti/natiiviseppa-codex-olavinlinna-kirkkotorni-portaat-kuittaus-20261027.md",
+    "readHead": "84419db6a7b500ceba1e6d7748c7ee1a03029bf1",
+    "blob": "c4aaa03cb1a210267ed634a7bcdf5861c14bb3a1",
+    "sha256": "c6e3d0e5ad61258d0cbc1d756e5196a00efc4ab84d55a1d711b5dae2ac6edb55",
+    "readInFull": true
+  },
+  "v1DeliveryCommit": "3452a56aa2c82cd047b8516b80d655b07c6fe4a3",
+  "v1GLBSHA256": "2637529402094d0ef5a3cb1726f44df4c9e66c6a41c7ee7ac24363c0bcdc31bd",
+  "geometrySource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/asettelu-kirkkotorni-portaat.glb",
+  "geometrySourceSHA256": "7e605005cbd9007e5b07dc66ab86e4c4c605f24e2673dae46ccfab2a37006f72",
+  "rock01": {
+    "source": "https://polyhaven.com/a/rock_01",
+    "author": "Rob Tuytel",
+    "license": "CC0 1.0",
+    "licenseURL": "https://polyhaven.com/license",
+    "download": {
+      "size": 688083,
+      "md5": "5897cd4496982b03cad0c3e2358486c0",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_01/rock_01_diff_1k.jpg"
+    },
+    "sha256": "0b5f0418eb1e686190c5d33bb54c400b1f9ed58813b5e34aa5e573a5197302b5",
+    "purpose": "Solid grey stair stones and bare cliff surface"
+  }
+}

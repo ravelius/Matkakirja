@@ -1,0 +1,21 @@
+{
+  "input": "output/olavinlinna-kirkkotorni-portaat-1106-20261027/delivery/kirkkotorni-portaat.glb",
+  "output": "output/olavinlinna-kirkkotorni-portaat-1106-20261027/delivery-v2/kirkkotorni-portaat-v2.glb",
+  "worldTriangleFingerprintBefore": "00e2e11b47b333e514e1a648ed0a5eff35188002885d01a1f083ed1c78c21ba2",
+  "worldTriangleFingerprintAfter": "00e2e11b47b333e514e1a648ed0a5eff35188002885d01a1f083ed1c78c21ba2",
+  "triangles": 4020,
+  "geometryUnchanged": true,
+  "masonryMetresPerRepeat": 2.5,
+  "solidStoneMetresPerRepeat": 1.5,
+  "counts": {
+    "cylindricalMasonryFaces": 162,
+    "metricPlanarFaces": 3858,
+    "solidStepFaces": 622
+  },
+  "masonryEdgeDensityRatioMin": 0.9921492471744168,
+  "masonryEdgeDensityRatioMax": 1.0044102325667377,
+  "cylinderMapping": "Unwrapped circumference, no mirrored axis projection; stable continuous phase.",
+  "otherMapping": "Orthonormal plane coordinates with unit metric scale.",
+  "source": "https://polyhaven.com/a/rock_01",
+  "imageGenerationCalls": 0
+}

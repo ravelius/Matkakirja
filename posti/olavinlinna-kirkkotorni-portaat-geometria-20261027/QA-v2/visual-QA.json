@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "reviewedAt": "2026-10-27T13:19:06.829882+00:00",
+  "inputGLBSHA256": "f85ea2e7b524649e535ffdd828bb5195b0ed3b2b7a653ae9fc05a0f3d70c457c",
+  "reviewedViews": [
+    "stair-internal",
+    "tott-internal",
+    "chapel-internal",
+    "entrance-internal",
+    "upper-stair-internal",
+    "upper-stair-no-shadow-diagnostic"
+  ],
+  "checks": [
+    "All five final 1280x960 renders inspected; masonry has a consistent physical scale.",
+    "Chapel curve has continuous unwrapped texture without the former axial mirror seam.",
+    "Ascending and descending stairs have solid stone treads and risers; near walls retain masonry.",
+    "Dark lower-left region is existing landing geometry: no-shadow view and 48/48 camera rays confirm its surface.",
+    "V1 geometry and all 72 source markers unchanged."
+  ],
+  "limits": [
+    "Internal model renders, not game captures.",
+    "Recipient acceptance of V2, owner acceptance and game integration remain separate."
+  ]
+}

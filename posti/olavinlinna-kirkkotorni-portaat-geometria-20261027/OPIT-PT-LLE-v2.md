@@ -1,0 +1,1 @@
+Kaarevan seinän mittakaava on tarkistettava pintapituudesta, ei maailman akseliprojektiosta. Askelmat ja laastisaumaiset lattiat tarvitsevat eri pintamateriaalit. Musta alue tarkistetaan kamerasäteillä ja varjottomalla tekstuurikuvalla ennen geometriaan koskemista. Nämä opit on otettu 3b–3d-työhön; yhteistä tuotantopohjaa ei muutettu.

@@ -1,0 +1,296 @@
+{
+  "sourceMarkers": 72,
+  "exportedMarkers": 72,
+  "changedMarkers": [],
+  "walkSamples": 4214,
+  "newHeadroomObstructionsCount": 0,
+  "newHeadroomObstructions": [],
+  "missingFloorSamplesCount": 0,
+  "missingFloorSamples": [],
+  "newClearanceNarrowingsCount": 0,
+  "newClearanceNarrowings": [],
+  "doors": [
+    {
+      "name": "ovi:kappeli-alku",
+      "width": 1.0,
+      "height": 1.9,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 55,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 44,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 33,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 88,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 77,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:kappeli-porras",
+      "width": 1.0,
+      "height": 1.9,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 55,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 55,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 55,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 88,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 99,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:kierreporras",
+      "width": 1.05,
+      "height": 1.95,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 7,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 5,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 5,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 6,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 9,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:kirkkotorni-piha",
+      "width": 2.0,
+      "height": 2.6,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 0,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 11,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 11,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:linnantupa",
+      "width": 1.05,
+      "height": 2.0,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 22,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 22,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 55,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 22,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 66,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:muuriporras",
+      "width": 1.0,
+      "height": 1.9,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 66,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 66,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 96,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 110,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 50,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:paaovi",
+      "width": 1.0,
+      "height": 1.9,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 88,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 1.0472,
+          "rays": 121,
+          "baselineBlocked": 66,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.8325981633974482,
+          "rays": 121,
+          "baselineBlocked": 121,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.6179963267948967,
+          "rays": 121,
+          "baselineBlocked": 121,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 3.403394490192345,
+          "rays": 121,
+          "baselineBlocked": 33,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:tott-kammio",
+      "width": 1.05,
+      "height": 2.0,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 11,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 0,
+          "newlyBlocked": []
+        }
+      ]
+    }
+  ],
+  "toleranceMetres": 0.015,
+  "gameplayCollisionSourceRetainedByReceiver": true
+}

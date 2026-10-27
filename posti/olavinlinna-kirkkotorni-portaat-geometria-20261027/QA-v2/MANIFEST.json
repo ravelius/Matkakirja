@@ -1,0 +1,117 @@
+{
+  "tasks": [
+    1136,
+    1137,
+    1138,
+    1139
+  ],
+  "files": [
+    {
+      "path": "LAHTEET-v2.md",
+      "sha256": "77474f6473ad0631240accb37728f2bcacdc6b3f4e9c8700254091f51f475986",
+      "bytes": 850
+    },
+    {
+      "path": "LUEMINUT-v2.md",
+      "sha256": "59ac4a2c46e3903ca0b3c7edf805e17afaad243d6647976b44198699a0629b29",
+      "bytes": 2281
+    },
+    {
+      "path": "OPIT-PT-LLE-v2.md",
+      "sha256": "095efa7f926799c8ca5829dd6d2bb1f14de5a9844f89171f082307f557f05b4e",
+      "bytes": 347
+    },
+    {
+      "path": "QA-v2/CREDITS.md",
+      "sha256": "77474f6473ad0631240accb37728f2bcacdc6b3f4e9c8700254091f51f475986",
+      "bytes": 850
+    },
+    {
+      "path": "QA-v2/chapel-internal.png",
+      "sha256": "c6abf12eb435567a6b55a5e8e21f6e39a7773253a5a5c3059bbd3c91bb02c0aa",
+      "bytes": 1850202
+    },
+    {
+      "path": "QA-v2/dark-corner-ray-diagnosis.json",
+      "sha256": "282ec2b15572581e39152d517cd96187646dcc962eb5b2ac717b429369171390",
+      "bytes": 13536
+    },
+    {
+      "path": "QA-v2/entrance-internal.png",
+      "sha256": "361a6adb0e37400f2dff1b04ef314c264ad24ee82196fd2a8353f750d0ee4c54",
+      "bytes": 2006346
+    },
+    {
+      "path": "QA-v2/finalization.json",
+      "sha256": "8baa1156c1bb084c1eab4964534bf1c07424566b5302cc719edd2c9967794252",
+      "bytes": 494
+    },
+    {
+      "path": "QA-v2/format-check.json",
+      "sha256": "1d4306558f303b30b32c7e3a6a124bfa9e17f59052f1f982b75d7110910d38f5",
+      "bytes": 2353
+    },
+    {
+      "path": "QA-v2/geometry-identity.json",
+      "sha256": "02fbdb3768c50fde80de17ad5d8f8e33f0224ed854db6d9636caa1e3b1656270",
+      "bytes": 441
+    },
+    {
+      "path": "QA-v2/geometry-verification.json",
+      "sha256": "ad15d683b943a6259ebf82230b9da88d51c3d3197570f4f403b5d61a3ad96d55",
+      "bytes": 7495
+    },
+    {
+      "path": "QA-v2/render-evidence.json",
+      "sha256": "9edd0aa153cfc326e2a3acec07fe82df696aff6e22680242f7b90a98090a71d1",
+      "bytes": 337
+    },
+    {
+      "path": "QA-v2/stair-internal.png",
+      "sha256": "a2b745e3b57600e8a7fa8ec6c2b87cce4a76a65a5d9c237b1e16c0f2cca93cce",
+      "bytes": 2100397
+    },
+    {
+      "path": "QA-v2/surface-finish.json",
+      "sha256": "04accaadf90a6b234a7bfe194b0dd2ab952b5e04be5897586ffe711442914aaa",
+      "bytes": 1006
+    },
+    {
+      "path": "QA-v2/tott-internal.png",
+      "sha256": "73dc74ef2bd4e80c6e252f6c97d03d4c9b48d9911a1f977669167d194fcb6428",
+      "bytes": 2136832
+    },
+    {
+      "path": "QA-v2/upper-stair-internal.png",
+      "sha256": "1cbc8fb6be5fbbd229cb0b77a2272bfb916763f4e87b7fe141f5071e9b954f2c",
+      "bytes": 1972375
+    },
+    {
+      "path": "QA-v2/upper-stair-no-shadow-diagnostic.png",
+      "sha256": "5732e92fcf326ecb0fef8bda501d5f7ee9e49f7c8b2b589f284ac79bd039552f",
+      "bytes": 1968581
+    },
+    {
+      "path": "QA-v2/visual-QA.json",
+      "sha256": "b65012fdaeee4eea5ee0429bc49ee4a8fd1dffa621fd67cdf88a11efa1b4e767",
+      "bytes": 981
+    },
+    {
+      "path": "SOURCE-PINS-v2.json",
+      "sha256": "ab5080001e06838c72c439931ea4c60a29a272401b1537ab1f86fa0033bfadc1",
+      "bytes": 1280
+    },
+    {
+      "path": "kirkkotorni-portaat-v2.glb",
+      "sha256": "f85ea2e7b524649e535ffdd828bb5195b0ed3b2b7a653ae9fc05a0f3d70c457c",
+      "bytes": 14613088,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    }
+  ],
+  "newImageCalls": 0,
+  "geometryUnchanged": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

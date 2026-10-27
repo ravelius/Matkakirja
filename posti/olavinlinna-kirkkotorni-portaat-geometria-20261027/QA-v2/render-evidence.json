@@ -1,0 +1,12 @@
+{
+  "inputGLBSHA256": "f85ea2e7b524649e535ffdd828bb5195b0ed3b2b7a653ae9fc05a0f3d70c457c",
+  "startedAt": "2026-10-27T13:16:10.134819+00:00",
+  "views": [
+    "stair-internal",
+    "tott-internal",
+    "chapel-internal",
+    "entrance-internal",
+    "upper-stair-internal"
+  ],
+  "kind": "Internal model QA renders, not game captures."
+}
