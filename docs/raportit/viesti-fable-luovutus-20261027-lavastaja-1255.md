@@ -196,3 +196,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   takaisin palkkimaalaus-teal-1536 (kuten rakennuksissa), 1069-nauha, harmaa→teal ja konsoli teal pysyvät. Avoimissa 1067 pysyy (VS hyväksyi).
 - H/juuri-v79m = v78m + yksikerros-v77. VS:lle parit pyydetty (01 oikea yläkulma).
 - Avoinna: C1 Baohedian, Taihemen ylä, Meridiaaniportin siivet; PK: rakennukset-v53 + c1-sijoitukset samaan erään (PT välitti).
+
+## LISÄYS 12 klo 16.0x: C1 PK:lle
+- K/c1-v3/kielletty-c1-v3/ (c1-sijoitukset.json + 1055 + 1056-A/B + SHA256SUMS); H/juuri-v80m = v79m + kielletty-rakennukset-v48 → rakennukset-v53
+  + kielletty-c1-v3. PK:lle vastattu: LOD0 = v53:n <nimi>-lod0.glb (c1-v3:n -c1-lod0.glb vain esikatselu). VS (nollautuu) ajaa v79m-parit JONO.md:n kautta.
