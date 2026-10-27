@@ -379,3 +379,15 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   skenaario proto-3d/tyokalut/natiiviseppa-ajot/sk-komero-j4.txt). Sovitus OK (pohjalla, ei törmäyksiä). Hopea himmeä beige: DioraamaValaistu ei käytä metallisuutta/karheutta
   (SeikkailuEsineet.cs:762) → PT:lle päätös esineiden metallituesta ennen Codex-korjausta; kahvan venymää ei voi arvioida.
 - PT 01.0x: metallituki ensin (VS kujakivien sävytyksen jälkeen, NS avustaa); Codexilta EI J4-sävykorjausta ennen sitä; J4-kuvaa EI KK:lle ennen metallitukea. Jatka kujakivillä.
+
+## LISÄYS 28 klo 01.4x (28.10.): J4 hopeaksi metallituella; LUOVUTUS (konteksti 30 %)
+- VS 01.1x: metallituki REF 33acd68dd (linssiseppa2/esineet-metalli-213; glb:n metallisuus/karheus, kartan keskiarvo M 0,73 / K 0,49; täysi kartta <glb>-orm-6x6.astcm myöhemmin).
+- Ajot (oma: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 33acd68dd <skenaario> ipad --batch, ~6 min):
+  012404 Tripon väri (pronssi/sepia), 013011 hopea 0,25 + 1,35·L (liian vaalea, liitumainen), 013631 hopea 0,08 + 1,25·L, sävy (0,94, 0,97, 1,00) + lähikuvat j4h/j4i
+  (skenaario _tyo/linnanrakentaja/olavinlinna-j4/sk-komero-j4-lahi.txt). 013631:n arvio kesken luovutushetkellä → katso kuvat Sonnetilla.
+- Työkalu olavinlinna-j4/j4_hopea.py (VAL0/VAL1 tiedoston alussa): esine-arkun-hopeasisalto-pronssi.glb (= skaala 0,97, Tripon väri) → esine-arkun-hopeasisalto.glb
+  (+ kopio kavely-j4:ään). Vanha JPEG-kuva jää käyttämättömänä bufferiin (12 Mt) → siivoa ennen vientiä (tai ASTC glb_kuvat_astc6).
+- SEURAAVAKSI: J4-pari (ennen/jälkeen) KK:lle vasta, kun hopea näyttää hopealta (PT 01.0x: ei beigeä KK:lle); kahvan venymä lähikuvasta → Codex-korjaus vasta sitten.
+  Kujakivet: odota Codexin stone-surfaces-v4 (tilaus f0766ed58) → K/kujakivi-pinnat-v4 (SHA) → aja_ketju_v86.zsh (pinnat-kansio v4, VV_*) → pari + 2× lähikuvat KK:lle;
+  kujan 01 kaksi vaaleaa sokkelipalaa ja ruskea reunakivi (välipari 001129) tarkista.
+- Checkout on haarassa lavastaja/luovutus-lisays24 (PR 5392). Ei käynnissä olevia taustaajoja.
