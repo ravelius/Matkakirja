@@ -209,3 +209,15 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   K/yksikerros-v78 (= v77 + UV, 132 586 kolm.) ja leivottu-sali/avoimet-v57 (= v56 + UV). H/juuri-v81m = v80m + nämä.
 - PT:lle uudelle VS:lle: kivet floor(u/1,6), sauma fract(u/1,6) < ~0,01, sävy hash(kivi), ei lohkokuviota; lattia/reunus/kivijalka samaan harmaaseen.
   Kysytty PT:ltä: reunus 0,5 → 0,4 m (havainne 0,35–0,4)? Pari KK:lle VS:n sävytyksen jälkeen.
+
+## LISÄYS 14 klo 16.3x: reunakivi 0,4 m + UV v2, juuri-v82m; ketju v79 käynnissä
+- PT 16.3x: reunus 0,5 → 0,4 m (havainne mittarina); PK: törmäys/juoksulinja pohja.json-rasterista, leveyttä ei lueta → vapaa. PK: C1 koodissa
+  9b97dc324 (juuri-v80m), editorikuvat PK:lta.
+- VS 617af4400 (seinat-211): V4_kivireunus = laji 18, kivet UV0.u:sta 1,2–2 m (1,6 ± 0,2), sauma 8 mm, oma sävy/raidoitus, ei lohkoja; viiste
+  tarvitsee yläpinnan v = 0 kadun puoleisesta reunasta. Sävyt (lattia/kivijalka/reunus) VS:llä, pari KK:lle VS:ltä.
+- kivireunus_uv.py v2 (VS: yläpinnan u kulki poikki, neliökolmioiden lävistäjä): yläpinta saa u:n viereisiltä pitkittäisiltä sivuilta, v = etäisyys
+  kadun puoleisesta sivupinnasta. K/yksikerros-v78b + leivottu-sali/avoimet-v57b → H/juuri-v82m (reunus vielä 0,5). VS:lle ilmoitettu.
+- KÄYNNISSÄ: K/tyokalut/aja_ketju_v79.zsh (v73:n muoto-osa REUNA_W=0.4 [kuja_reunakivi2.py ALUEET + kuja01_reunakivi2.py W ympäristömuuttujasta]
+  → tausta_pinnat EI_1067 → konsoli_teal → kivireunus_uv v2) → K/yksikerros-v79/kielletty-tausta-v57; loki scratchpadissa (alkoi 16.07).
+  Valmistuttua: H/juuri-v83m = v82m + kielletty-tausta-v57 → yksikerros-v79; VS:lle ja KK:lle (pari). Jos ketju kaatui: aja uudelleen samalla skriptillä.
+- Avoinna: viisteen v:n negatiiviset (≈ −0,2) harvat kolmiot; C1 Baohedian, Taihemen ylä, Meridiaaniportin siivet.
