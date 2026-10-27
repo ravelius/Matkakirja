@@ -1,0 +1,166 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-1-rig-animations-review.glb",
+  "sourceSha256": "12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c",
+  "keyPoses": [
+    {
+      "time": 0,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0.0,
+      "lean": 0.0,
+      "reach": 0.0,
+      "head": [
+        0.00972852480978521,
+        1.437774177893016,
+        -0.055815310824525954
+      ],
+      "neck": [
+        0.005588841917948983,
+        1.3344033224464755,
+        -0.07978312920953867
+      ],
+      "rightShoulder": [
+        -0.1619054749796281,
+        1.224575137357334,
+        -0.08985062723655579
+      ],
+      "floorM": 0.00049999999944318,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    },
+    {
+      "time": 0.6,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0.0,
+      "lean": 0.0,
+      "reach": 0.0,
+      "head": [
+        0.00972852480978521,
+        1.437774177893016,
+        -0.055815310824525954
+      ],
+      "neck": [
+        0.005588841917948983,
+        1.3344033224464755,
+        -0.07978312920953867
+      ],
+      "rightShoulder": [
+        -0.1619054749796281,
+        1.224575137357334,
+        -0.08985062723655579
+      ],
+      "floorM": 0.00049999999944318,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    },
+    {
+      "time": 1.2,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0.0,
+      "lean": 0.4424214838416022,
+      "reach": 0.0,
+      "head": [
+        -0.15272517478603792,
+        1.4147594678550857,
+        -0.0558153105008414
+      ],
+      "neck": [
+        -0.13228545351346524,
+        1.3133450282019803,
+        -0.07978312901210395
+      ],
+      "rightShoulder": [
+        -0.2690325430339851,
+        1.167000199668983,
+        -0.08985062748255361
+      ],
+      "floorM": 0.0004999998747826715,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    },
+    {
+      "time": 1.9,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0.0,
+      "lean": 1.0,
+      "reach": 0.0,
+      "head": [
+        -0.35077337561682587,
+        1.3560556462106979,
+        -0.05581531019282737
+      ],
+      "neck": [
+        -0.30117733716729517,
+        1.265265206243274,
+        -0.07978312883566996
+      ],
+      "rightShoulder": [
+        -0.38837204077522547,
+        1.0849497669492105,
+        -0.08985062783764124
+      ],
+      "floorM": 0.0004999998607150217,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    },
+    {
+      "time": 3,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0,
+      "lean": 1.0,
+      "reach": 0.5,
+      "head": [
+        -0.35171086162864607,
+        1.3560556459182616,
+        -0.07102014852609434
+      ],
+      "neck": [
+        -0.29960224727000234,
+        1.2652652060644178,
+        -0.08887835363104107
+      ],
+      "rightShoulder": [
+        -0.38496469918202864,
+        1.084949766566443,
+        -0.10931172646555055
+      ],
+      "floorM": 0.0004999998607150217,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    },
+    {
+      "time": 4.5,
+      "rightUnreachableM": 0,
+      "leftUnreachableM": 0,
+      "lean": 1.0,
+      "reach": 1.0,
+      "head": [
+        -0.35171086162864607,
+        1.3560556459182616,
+        -0.07102014852609434
+      ],
+      "neck": [
+        -0.29960224727000234,
+        1.2652652060644178,
+        -0.08887835363104107
+      ],
+      "rightShoulder": [
+        -0.38496469918202864,
+        1.084949766566443,
+        -0.10931172646555055
+      ],
+      "floorM": 0.0004999998607150217,
+      "doorTriangleHits": 0,
+      "doorVertices": 0,
+      "firstHitVertices": []
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "elapsedSeconds": 9.181883999961428,
+  "peakRSSMiB": 101.609375
+}

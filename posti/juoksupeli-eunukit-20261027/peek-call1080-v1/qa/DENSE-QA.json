@@ -1,0 +1,4917 @@
+{
+  "summary": {
+    "status": "PASS",
+    "samples": 541,
+    "sampleRateHz": 120,
+    "doorTriangleHitsMax": 0,
+    "frontPlaneVerticesMax": 0,
+    "floorRangeM": [
+      0.000498150752361236,
+      0.0005097175251054673
+    ],
+    "faceProxyVertices": 189,
+    "faceProxyOccludedMax": 0,
+    "faceCheckLimit": "189 source front-face points vs projected arm triangles plus six visual stills; not a full camera/door occlusion or exhaustive self-collision test",
+    "rightEdgeGapAfterGripMaxM": 0.003051423123030458,
+    "headXAfterLeanRange": [
+      -0.3517108735884045,
+      -0.35077338742022063
+    ],
+    "lastPointTwoSecondsPoseDelta": 2.7933313884176414e-08,
+    "bones": 65,
+    "sourceBinaryPrefixPreserved": true,
+    "oldClipsPreserved": true,
+    "clips": [
+      "balance",
+      "catch",
+      "idle",
+      "jump",
+      "run",
+      "slide",
+      "sprint",
+      "stumble",
+      "throw",
+      "peek",
+      "call",
+      "peek_call"
+    ],
+    "sha256": "bdfedc0e7d0d0d1d3dc0f47623fb3ff79f62fc3f909fc75f4aa12f9879bdeae7",
+    "gameVerified": false,
+    "newTripoCalls": 0,
+    "credits": 0,
+    "elapsedSeconds": 3.7972721670521423,
+    "peakRSSMiB": 136.484375
+  },
+  "failedSamples": [],
+  "samples": [
+    {
+      "t": 0.0,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2741542057504041,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.008333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.27347532472843544,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.016666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.27279727858984404,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.025,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2708191047608425,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.03333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2688482160801827,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.041666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2656724023184436,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.05,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.26251643708149186,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.058333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.25826147299474195,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.06666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2540451489856117,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.075,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.24884605729250564,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.08333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.24371103848988163,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.09166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.23771944197447548,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.1,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.23182447030393838,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.10833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.2252088487233041,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.11666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.21872987267660657,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.125,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.21167496888919762,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.13333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.20480415196158647,
+      "headX": 0.009728525418640305
+    },
+    {
+      "t": 0.14166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.19750960869213766,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.15,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.1904532466284944,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.15833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.18312990493553738,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.16666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.1761035152015915,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.175,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.1689669039221073,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.18333333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.16218685302841113,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.19166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.15544613022046685,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.2,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.14911605214801696,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.20833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.14295742498038244,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.21666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.1372488513834469,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.225,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.13181364442288893,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.23333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.12684222565257214,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.24166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.12220278384003593,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.25,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.11800535344438878,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.2583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.11414658643973052,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.26666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.11066852708941786,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.275,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.10748477179288664,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.2833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.1045370472615635,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.2916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.10165815007106188,
+      "headX": 0.009728525418640303
+    },
+    {
+      "t": 0.3,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.09899798982239358,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.30833333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.09631315777246396,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.31666666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.09344726567773265,
+      "headX": 0.009728525418640305
+    },
+    {
+      "t": 0.325,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.09031546872690682,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.3333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.08683523140470556,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.3416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463249,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.08322545659456385,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.35,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.07945817912160208,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.35833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.07562367536011574,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.36666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463252,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.07166739854849385,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.375,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.06771078418766707,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.3833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.063669117268678,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.39166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463249,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.05969456239231155,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.4,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.05566995797708996,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.4083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.05177655369773396,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.4166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.04786401088436512,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.425,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.04414026389130332,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.43333333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.04042250115636725,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.44166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.03694238152543128,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.45,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.033486523854043965,
+      "headX": 0.009728525418640303
+    },
+    {
+      "t": 0.4583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.030307342322415026,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.4666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.02716368884951728,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.475,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.024325888450483085,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.48333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.00049999740554633,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.021528312103333058,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.49166666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.019056900252045844,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.01662492074415467,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.014532214164344276,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.012474017993018394,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.525,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.01076327487046036,
+      "headX": 0.009728525418640305
+    },
+    {
+      "t": 0.5333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.009079554322907746,
+      "headX": 0.009728525418640303
+    },
+    {
+      "t": 0.5416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0077488530865678085,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.55,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.006436698320212264,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00548298699588301,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.004539755615511315,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.575,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003962590440781649,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.00049999740554633,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003389525008109434,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.5916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463249,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00320237603921608,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.6,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999974055463253,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492751593151563,
+      "headX": 0.009728525418640306
+    },
+    {
+      "t": 0.6083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999939824797242,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492793466573753,
+      "headX": 0.009638528078828496
+    },
+    {
+      "t": 0.6166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999981247290558,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049291604095197,
+      "headX": 0.009548530480781333
+    },
+    {
+      "t": 0.625,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999630239491346,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492500770759965,
+      "headX": 0.009281640769324431
+    },
+    {
+      "t": 0.6333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999940501865057,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492797858351784,
+      "headX": 0.009014748817262995
+    },
+    {
+      "t": 0.6416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999114312263778,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049179277217729,
+      "headX": 0.008575613765997993
+    },
+    {
+      "t": 0.65,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000056822449573,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492728255066917,
+      "headX": 0.008136472811339498
+    },
+    {
+      "t": 0.6583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004998261984686531,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030490901172298083,
+      "headX": 0.007529732837102857
+    },
+    {
+      "t": 0.6666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999784626229023,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492812623177236,
+      "headX": 0.006922986392811021
+    },
+    {
+      "t": 0.675,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004997374194717526,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003048977427063183,
+      "headX": 0.006153284845524261
+    },
+    {
+      "t": 0.6833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000182939910366,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049282336544835,
+      "headX": 0.005383566875331977
+    },
+    {
+      "t": 0.6916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004996509891321338,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030488291560761527,
+      "headX": 0.004455539819351526
+    },
+    {
+      "t": 0.7,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000220248194626,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492733515482076,
+      "headX": 0.003527490634588461
+    },
+    {
+      "t": 0.7083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499531305490432,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003048655426287099,
+      "headX": 0.002445773089979631
+    },
+    {
+      "t": 0.7166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000129304699376,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492761474934893,
+      "headX": 0.0013640282862120603
+    },
+    {
+      "t": 0.725,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004994003571905457,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030484649946326656,
+      "headX": 0.0001332571220081418
+    },
+    {
+      "t": 0.7333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000037397717594,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492853907963208,
+      "headX": -0.0010975363483628053
+    },
+    {
+      "t": 0.7416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004992607047741823,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030482387138991342,
+      "headX": -0.002472712491344858
+    },
+    {
+      "t": 0.75,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999799482456413,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492670153492297,
+      "headX": -0.003847921594219839
+    },
+    {
+      "t": 0.7583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004991428850522717,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003047994036021549,
+      "headX": -0.005362858176806821
+    },
+    {
+      "t": 0.7666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000112749394558,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049288457610533,
+      "headX": -0.00687782684976112
+    },
+    {
+      "t": 0.775,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004990277795619163,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030477230232641857,
+      "headX": -0.00852786547221796
+    },
+    {
+      "t": 0.7833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499985149680442,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492646854675455,
+      "headX": -0.010177943693175096
+    },
+    {
+      "t": 0.7916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004989145661635203,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030474276637125013,
+      "headX": -0.01195843237921072
+    },
+    {
+      "t": 0.8,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000089489597068,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492822100356594,
+      "headX": -0.013738940467012123
+    },
+    {
+      "t": 0.8083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004988197446134466,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003047127118022876,
+      "headX": -0.01564519959847681
+    },
+    {
+      "t": 0.8166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000057147805318,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492901041988822,
+      "headX": -0.017551465002277254
+    },
+    {
+      "t": 0.825,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004987190149818061,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030467899252037906,
+      "headX": -0.019578809972074656
+    },
+    {
+      "t": 0.8333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000020543312058,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049272870521007,
+      "headX": -0.021606142767679175
+    },
+    {
+      "t": 0.8416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004986320256400052,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030464348630863526,
+      "headX": -0.023749868053110582
+    },
+    {
+      "t": 0.85,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000096975811103,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492795224663083,
+      "headX": -0.025893572212596458
+    },
+    {
+      "t": 0.8583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004985496946088945,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030460619858411237,
+      "headX": -0.02814898101968894
+    },
+    {
+      "t": 0.8666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999982392681996,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492569021680718,
+      "headX": -0.03040432279421578
+    },
+    {
+      "t": 0.875,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004984733032317274,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003045683345845074,
+      "headX": -0.03276667852288733
+    },
+    {
+      "t": 0.8833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000500000637659518,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492769216057683,
+      "headX": -0.035128929981005676
+    },
+    {
+      "t": 0.8916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004984227497719925,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030453167449773126,
+      "headX": -0.037593490009200176
+    },
+    {
+      "t": 0.9,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000240103489452,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492981897894313,
+      "headX": -0.04005790157282094
+    },
+    {
+      "t": 0.9083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004983585093205978,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030449273653437446,
+      "headX": -0.0426199163573531
+    },
+    {
+      "t": 0.9166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999827045342282,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049286757938519,
+      "headX": -0.04518171299460181
+    },
+    {
+      "t": 0.9249999999999999,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498302226474218,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030445247598709303,
+      "headX": -0.047836385986331414
+    },
+    {
+      "t": 0.9333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000063868184734,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492894796935394,
+      "headX": -0.05049080051700348
+    },
+    {
+      "t": 0.9416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498268045238502,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003044113340767532,
+      "headX": -0.053233348450749084
+    },
+    {
+      "t": 0.95,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999944605477622,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049262360204109,
+      "headX": -0.05597557197979495
+    },
+    {
+      "t": 0.9583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498228927723854,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030437098134713718,
+      "headX": -0.05880118485258366
+    },
+    {
+      "t": 0.9666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999942276904786,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275914328232,
+      "headX": -0.06162640013945366
+    },
+    {
+      "t": 0.975,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004993613815386959,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003043323477915421,
+      "headX": -0.06453026479593106
+    },
+    {
+      "t": 0.9833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999899430901096,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492648851303725,
+      "headX": -0.06743363083981307
+    },
+    {
+      "t": 0.9916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981897284299525,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003042953707363947,
+      "headX": -0.0704108867791476
+    },
+    {
+      "t": 1.0,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000107091990524,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049270760434079,
+      "headX": -0.0733875777894555
+    },
+    {
+      "t": 1.0083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981824656975643,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030425941349154525,
+      "headX": -0.07643338036194615
+    },
+    {
+      "t": 1.0166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000047279219554,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00304928486753605,
+      "headX": -0.07947852443881881
+    },
+    {
+      "t": 1.025,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981646147447865,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003042236933787152,
+      "headX": -0.08258800863319599
+    },
+    {
+      "t": 1.0333333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.00049999371768104,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492657442666047,
+      "headX": -0.0856967347101236
+    },
+    {
+      "t": 1.0416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498150752361236,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030418959426691855,
+      "headX": -0.08886501913744978
+    },
+    {
+      "t": 1.05,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999857823551059,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275932515874,
+      "headX": -0.09203244028512754
+    },
+    {
+      "t": 1.0583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498157706558972,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030415877926449684,
+      "headX": -0.09525462117092387
+    },
+    {
+      "t": 1.0666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000072495868868,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049280700505306,
+      "headX": -0.09847587475015541
+    },
+    {
+      "t": 1.075,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981608723696561,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030412948375486432,
+      "headX": -0.10174709848244419
+    },
+    {
+      "t": 1.0833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999831971520425,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492737361850018,
+      "headX": -0.10501723442410539
+    },
+    {
+      "t": 1.0916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981639385508831,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003041032364372567,
+      "headX": -0.10833257868752824
+    },
+    {
+      "t": 1.1,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999965949136872,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492869718880176,
+      "headX": -0.11164671721267379
+    },
+    {
+      "t": 1.1083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004981745747903461,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030407975638092784,
+      "headX": -0.11500127991805027
+    },
+    {
+      "t": 1.1166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999803605760105,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492782678916966,
+      "headX": -0.11835451618121823
+    },
+    {
+      "t": 1.125,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004982024385598806,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030405888717813913,
+      "headX": -0.1217433920237414
+    },
+    {
+      "t": 1.1333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000500021388936436,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049281738943091,
+      "headX": -0.12513081881581456
+    },
+    {
+      "t": 1.1416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004982348643960077,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030404177108122386,
+      "headX": -0.1285491066526006
+    },
+    {
+      "t": 1.15,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000079733199274,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492825508237325,
+      "headX": -0.13196582182266622
+    },
+    {
+      "t": 1.1583333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004982378874803182,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030402818365410232,
+      "headX": -0.13540862594683717
+    },
+    {
+      "t": 1.1666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999843281402825,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492878403560763,
+      "headX": -0.1388497337114506
+    },
+    {
+      "t": 1.175,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004982582543870977,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030401692356443674,
+      "headX": -0.14231216075418843
+    },
+    {
+      "t": 1.1833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000001524662206,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492636483307354,
+      "headX": -0.14577276864149147
+    },
+    {
+      "t": 1.1916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004982908907480407,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003040100799233872,
+      "headX": -0.14924996589952555
+    },
+    {
+      "t": 1.2,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999959448500783,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492828762729105,
+      "headX": -0.15272517336154334
+    },
+    {
+      "t": 1.2083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000498310312493445,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003040075509900498,
+      "headX": -0.15621222235044296
+    },
+    {
+      "t": 1.2166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999806223281525,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049269787219706,
+      "headX": -0.1596972132351317
+    },
+    {
+      "t": 1.225,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004983455365351109,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030400833733006134,
+      "headX": -0.16318929109122376
+    },
+    {
+      "t": 1.2333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000035889795526,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492782466407524,
+      "headX": -0.16667919670250433
+    },
+    {
+      "t": 1.2416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004983965128866146,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003040141640444973,
+      "headX": -0.17017147492971754
+    },
+    {
+      "t": 1.25,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000156459744123,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492890581817755,
+      "headX": -0.17366147165026197
+    },
+    {
+      "t": 1.2583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004984199016608615,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030402288052603413,
+      "headX": -0.1771491331493744
+    },
+    {
+      "t": 1.2666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999795995522836,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049278230935609,
+      "headX": -0.18063440976462458
+    },
+    {
+      "t": 1.275,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004984515521265754,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030403473304794074,
+      "headX": -0.1841126673538327
+    },
+    {
+      "t": 1.2833333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000045571997742,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492752103984926,
+      "headX": -0.18758844351749585
+    },
+    {
+      "t": 1.2916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004985022014133625,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030405082731920596,
+      "headX": -0.1910525397536381
+    },
+    {
+      "t": 1.3,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000031843675709,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049274622313896,
+      "headX": -0.1945140657816993
+    },
+    {
+      "t": 1.3083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004985272861153273,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030407133988372284,
+      "headX": -0.19795925584052526
+    },
+    {
+      "t": 1.3166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999738233148632,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492872833742806,
+      "headX": -0.20140184481111215
+    },
+    {
+      "t": 1.325,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004985679696959328,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003040953214879559,
+      "headX": -0.2048234722926018
+    },
+    {
+      "t": 1.3333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000007525142239,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00304928633024795,
+      "headX": -0.20824237876565013
+    },
+    {
+      "t": 1.3416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004986188366880165,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003041205624441554,
+      "headX": -0.21163576029994285
+    },
+    {
+      "t": 1.35,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999890180728882,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049258198752779,
+      "headX": -0.2150263604197261
+    },
+    {
+      "t": 1.3583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004986690580965167,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030415017090892416,
+      "headX": -0.2183868699604681
+    },
+    {
+      "t": 1.3666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000121395361389,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492816537924135,
+      "headX": -0.22174454863376258
+    },
+    {
+      "t": 1.375,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005097175251054673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030420393238453497,
+      "headX": -0.22506760611677276
+    },
+    {
+      "t": 1.3833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000065677267691,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049285420344587,
+      "headX": -0.22838779483975186
+    },
+    {
+      "t": 1.3916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004987644973784405,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003042446767749276,
+      "headX": -0.23166883943664576
+    },
+    {
+      "t": 1.4,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999904173219362,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492646037850886,
+      "headX": -0.23494698954387802
+    },
+    {
+      "t": 1.4083333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004988013455510028,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003042808829489103,
+      "headX": -0.23818152797311495
+    },
+    {
+      "t": 1.4166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499985630613831,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049276159709294,
+      "headX": -0.24141315871849958
+    },
+    {
+      "t": 1.425,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004988489789919082,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030432054600701636,
+      "headX": -0.24459672543573086
+    },
+    {
+      "t": 1.4333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999891674601204,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492876687440193,
+      "headX": -0.24777738420747158
+    },
+    {
+      "t": 1.4416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004989053273138134,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030435998687910926,
+      "headX": -0.25090558255959167
+    },
+    {
+      "t": 1.45,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000001850414149,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492660012608006,
+      "headX": -0.25403084112793284
+    },
+    {
+      "t": 1.4583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004989684044076376,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030440023698074183,
+      "headX": -0.2570992497571168
+    },
+    {
+      "t": 1.4666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000157388167586,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049271621594219,
+      "headX": -0.2601647895269848
+    },
+    {
+      "t": 1.475,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004990140499440876,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030444241022942963,
+      "headX": -0.26316910412156197
+    },
+    {
+      "t": 1.4833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999906461556453,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049274715388392,
+      "headX": -0.26617058935982735
+    },
+    {
+      "t": 1.4916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004990636829000436,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003044841375339118,
+      "headX": -0.2691065115190837
+    },
+    {
+      "t": 1.5,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000131431839713,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492653658506443,
+      "headX": -0.27203965705473593
+    },
+    {
+      "t": 1.5083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499246535649929,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003045294309326907,
+      "headX": -0.2749029652890637
+    },
+    {
+      "t": 1.5166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999882935250309,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492663686544725,
+      "headX": -0.2777635625660949
+    },
+    {
+      "t": 1.525,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004991558689892006,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030457157008142773,
+      "headX": -0.2805500432682524
+    },
+    {
+      "t": 1.5333333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.00049998431842836,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049285293935329,
+      "headX": -0.2833338913278939
+    },
+    {
+      "t": 1.5416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004992111280622878,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003046118932825515,
+      "headX": -0.2860393793154429
+    },
+    {
+      "t": 1.55,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999959735813295,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492712257254306,
+      "headX": -0.28874232513839454
+    },
+    {
+      "t": 1.5583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004992674317931075,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030465040734650216,
+      "headX": -0.2913626844917251
+    },
+    {
+      "t": 1.5666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999940580987495,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492815181710777,
+      "headX": -0.29398064112935424
+    },
+    {
+      "t": 1.575,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004993123438886914,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030468717692138927,
+      "headX": -0.2965118401623448
+    },
+    {
+      "t": 1.5833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999831795072672,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00304926789977187,
+      "headX": -0.2990407117557691
+    },
+    {
+      "t": 1.5916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004993552166176881,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00304721891010525,
+      "headX": -0.30147867893434716
+    },
+    {
+      "t": 1.6,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999777435315325,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049277726305944,
+      "headX": -0.30391444130919854
+    },
+    {
+      "t": 1.6083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004994053445824336,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030475468837868904,
+      "headX": -0.30625515254660096
+    },
+    {
+      "t": 1.6166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999822622206043,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492740276764894,
+      "headX": -0.3085937905397847
+    },
+    {
+      "t": 1.625,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004994685916477149,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030478473718329848,
+      "headX": -0.3108332796569339
+    },
+    {
+      "t": 1.6333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000042717657254,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492815685987436,
+      "headX": -0.313070834781433
+    },
+    {
+      "t": 1.6416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005004439485354669,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030481277442887204,
+      "headX": -0.3152051271351503
+    },
+    {
+      "t": 1.65,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000063470062275,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275766465689,
+      "headX": -0.3173376312448872
+    },
+    {
+      "t": 1.6583333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004995876084144684,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030483691103940012,
+      "headX": -0.31936279617943847
+    },
+    {
+      "t": 1.6666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000500020207739139,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492781365244023,
+      "headX": -0.32138632372126275
+    },
+    {
+      "t": 1.675,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004996316699523685,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003048576967016348,
+      "headX": -0.3232984359761107
+    },
+    {
+      "t": 1.6833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000009111390976,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492746619915803,
+      "headX": -0.325209065249371
+    },
+    {
+      "t": 1.6916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004996560300349572,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030487555788424395,
+      "headX": -0.32700423705763165
+    },
+    {
+      "t": 1.7,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999782308601061,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049278738295741,
+      "headX": -0.3287980565997361
+    },
+    {
+      "t": 1.7083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004997090968667543,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030488972219801054,
+      "headX": -0.3304723655861053
+    },
+    {
+      "t": 1.7166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000196485335839,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049261118678043,
+      "headX": -0.3321455045897904
+    },
+    {
+      "t": 1.7249999999999999,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004997609054089248,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049013457744053,
+      "headX": -0.3336950604144143
+    },
+    {
+      "t": 1.7333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999982862609471,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049271607679987,
+      "headX": -0.3352436012940384
+    },
+    {
+      "t": 1.7416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499788390110219,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049112535034836,
+      "headX": -0.3366645068563472
+    },
+    {
+      "t": 1.75,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999954000086937,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049272298237834,
+      "headX": -0.3380845489882981
+    },
+    {
+      "t": 1.7583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004998353112847875,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030491805843376623,
+      "headX": -0.3393728917805874
+    },
+    {
+      "t": 1.7666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000178065221982,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492689582099805,
+      "headX": -0.34066051718783036
+    },
+    {
+      "t": 1.775,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004998741137583053,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492334349722402,
+      "headX": -0.34181237822956023
+    },
+    {
+      "t": 1.7833333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000041739869512,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492810885562817,
+      "headX": -0.3429636603488478
+    },
+    {
+      "t": 1.7916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004998887025737187,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492653699620413,
+      "headX": -0.3439750800341868
+    },
+    {
+      "t": 1.8,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999842573354973,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492713221597356,
+      "headX": -0.34498604959579626
+    },
+    {
+      "t": 1.8083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999236537920604,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049274963110613,
+      "headX": -0.3458530662987129
+    },
+    {
+      "t": 1.8166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000180961138801,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492669070849867,
+      "headX": -0.3467197622097926
+    },
+    {
+      "t": 1.825,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999534780081058,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049283170390123,
+      "headX": -0.34743836690609153
+    },
+    {
+      "t": 1.8333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999953598710571,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275134107031,
+      "headX": -0.3481567413104828
+    },
+    {
+      "t": 1.8416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999577805938863,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049294426264656,
+      "headX": -0.3487228810955839
+    },
+    {
+      "t": 1.8499999999999999,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999863028088075,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049290350184337,
+      "headX": -0.34928887722874
+    },
+    {
+      "t": 1.8583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999647193917431,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492895729727185,
+      "headX": -0.34969843993062205
+    },
+    {
+      "t": 1.8666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999777296578844,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049273213508755,
+      "headX": -0.350107927167394
+    },
+    {
+      "t": 1.875,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999843997233429,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049273569903597,
+      "headX": -0.35035676866041127
+    },
+    {
+      "t": 1.8833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000038418415584,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492673234426048,
+      "headX": -0.35060558222226157
+    },
+    {
+      "t": 1.8916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999990295158593,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492807836279136,
+      "headX": -0.35068948641114717
+    },
+    {
+      "t": 1.9,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492934494254598,
+      "headX": -0.35077338742022063
+    },
+    {
+      "t": 1.9083333333333332,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492955472060496,
+      "headX": -0.35077548625762944
+    },
+    {
+      "t": 1.9166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492856268498018,
+      "headX": -0.3507775827521009
+    },
+    {
+      "t": 1.925,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030493335707061377,
+      "headX": -0.3507837005409578
+    },
+    {
+      "t": 1.9333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492786434406093,
+      "headX": -0.3507897982885288
+    },
+    {
+      "t": 1.9416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030494170764354144,
+      "headX": -0.3507996304049682
+    },
+    {
+      "t": 1.95,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492855206365396,
+      "headX": -0.3508094098222758
+    },
+    {
+      "t": 1.9583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030495309997096124,
+      "headX": -0.35082261153530625
+    },
+    {
+      "t": 1.9666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492774427997725,
+      "headX": -0.3508357162216869
+    },
+    {
+      "t": 1.9749999999999999,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049674229259751,
+      "headX": -0.35085191322016923
+    },
+    {
+      "t": 1.9833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492945099758507,
+      "headX": -0.35086795946593585
+    },
+    {
+      "t": 1.9916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049830066318406,
+      "headX": -0.3508867559101805
+    },
+    {
+      "t": 2.0,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492756125440786,
+      "headX": -0.35090534113128113
+    },
+    {
+      "t": 2.0083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030499961711182347,
+      "headX": -0.350926328365516
+    },
+    {
+      "t": 2.0166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049288768812608,
+      "headX": -0.3509470388964417
+    },
+    {
+      "t": 2.025,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030501765889139176,
+      "headX": -0.3509698015246827
+    },
+    {
+      "t": 2.033333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492848792773156,
+      "headX": -0.35099222025879595
+    },
+    {
+      "t": 2.0416666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003050351318285194,
+      "headX": -0.35101634530204867
+    },
+    {
+      "t": 2.05,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049282923343826,
+      "headX": -0.351040058997984
+    },
+    {
+      "t": 2.058333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030505266533977777,
+      "headX": -0.35106514096417846
+    },
+    {
+      "t": 2.0666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049285732981349,
+      "headX": -0.35108974566650686
+    },
+    {
+      "t": 2.075,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00305069660324294,
+      "headX": -0.35111539169756834
+    },
+    {
+      "t": 2.0833333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049286796779404,
+      "headX": -0.3511404977096035
+    },
+    {
+      "t": 2.091666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030508517971440945,
+      "headX": -0.3511663355665914
+    },
+    {
+      "t": 2.1,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049281451177059,
+      "headX": -0.3511915752753748
+    },
+    {
+      "t": 2.1083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030510011545343647,
+      "headX": -0.35121725483575633
+    },
+    {
+      "t": 2.1166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492992317702307,
+      "headX": -0.35124228400088986
+    },
+    {
+      "t": 2.125,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051136875188268,
+      "headX": -0.35126748214587245
+    },
+    {
+      "t": 2.1333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030493007660922873,
+      "headX": -0.35129198534574363
+    },
+    {
+      "t": 2.1416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051235648507811,
+      "headX": -0.3513164111312275
+    },
+    {
+      "t": 2.15,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492842213146313,
+      "headX": -0.3513401052801119
+    },
+    {
+      "t": 2.158333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051311236861196,
+      "headX": -0.35136350110293046
+    },
+    {
+      "t": 2.1666666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049283229521755,
+      "headX": -0.35138613650814016
+    },
+    {
+      "t": 2.175,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030513739176671237,
+      "headX": -0.3514082808079317
+    },
+    {
+      "t": 2.183333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492883402481992,
+      "headX": -0.3514296450927011
+    },
+    {
+      "t": 2.1916666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051416120094793,
+      "headX": -0.3514503532127239
+    },
+    {
+      "t": 2.2,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049296542656187,
+      "headX": -0.35147027127190483
+    },
+    {
+      "t": 2.2083333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051423123030458,
+      "headX": -0.3514893984012221
+    },
+    {
+      "t": 2.216666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049283055490324,
+      "headX": -0.35150773518429623
+    },
+    {
+      "t": 2.225,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030513982981304256,
+      "headX": -0.35152517407167927
+    },
+    {
+      "t": 2.2333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492804338990375,
+      "headX": -0.3515418320855983
+    },
+    {
+      "t": 2.2416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051355680866942,
+      "headX": -0.3515575158149474
+    },
+    {
+      "t": 2.25,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492837616920353,
+      "headX": -0.35157243774085534
+    },
+    {
+      "t": 2.2583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003051284786736137,
+      "headX": -0.3515863368424142
+    },
+    {
+      "t": 2.2666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492760279013527,
+      "headX": -0.35159950167071163
+    },
+    {
+      "t": 2.275,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030511883313656496,
+      "headX": -0.35161162299217935
+    },
+    {
+      "t": 2.283333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492774133887204,
+      "headX": -0.3516230471430032
+    },
+    {
+      "t": 2.2916666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030510763994151227,
+      "headX": -0.3516334325151799
+    },
+    {
+      "t": 2.3,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049284511856439,
+      "headX": -0.3516431657916407
+    },
+    {
+      "t": 2.308333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003050946590748794,
+      "headX": -0.3516518893212706
+    },
+    {
+      "t": 2.3166666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.00304929150365939,
+      "headX": -0.3516600128981891
+    },
+    {
+      "t": 2.325,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003050787898210962,
+      "headX": -0.35166717688824595
+    },
+    {
+      "t": 2.3333333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049276863578507,
+      "headX": -0.3516737990368493
+    },
+    {
+      "t": 2.341666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030506206856314648,
+      "headX": -0.351679531593348
+    },
+    {
+      "t": 2.35,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492958538585607,
+      "headX": -0.35168478512166623
+    },
+    {
+      "t": 2.3583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030504441693700495,
+      "headX": -0.35168923416303965
+    },
+    {
+      "t": 2.3666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492836921643036,
+      "headX": -0.35169327023253416
+    },
+    {
+      "t": 2.375,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003050259967846174,
+      "headX": -0.35169659953215027
+    },
+    {
+      "t": 2.3833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492994921048023,
+      "headX": -0.35169958360850784
+    },
+    {
+      "t": 2.3916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003050071545405449,
+      "headX": -0.35170196705194695
+    },
+    {
+      "t": 2.4,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492804758806826,
+      "headX": -0.35170407275664406
+    },
+    {
+      "t": 2.408333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049874826087414,
+      "headX": -0.35170568651237677
+    },
+    {
+      "t": 2.4166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049269844686501,
+      "headX": -0.3517070877171424
+    },
+    {
+      "t": 2.425,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030497062971388236,
+      "headX": -0.351708106025001
+    },
+    {
+      "t": 2.433333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049284569121856,
+      "headX": -0.3517089725849599
+    },
+    {
+      "t": 2.4416666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030495637581059044,
+      "headX": -0.3517095580587008
+    },
+    {
+      "t": 2.45,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492894324627125,
+      "headX": -0.35171004583845217
+    },
+    {
+      "t": 2.4583333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049435979288565,
+      "headX": -0.3517103423784092
+    },
+    {
+      "t": 2.466666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049282198948067,
+      "headX": -0.35171058598701377
+    },
+    {
+      "t": 2.475,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049347908862904,
+      "headX": -0.3517107101531588
+    },
+    {
+      "t": 2.4833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049298966408927,
+      "headX": -0.3517108141344273
+    },
+    {
+      "t": 2.4916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.0030492939535182594,
+      "headX": -0.3517108450411877
+    },
+    {
+      "t": 2.5,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.5083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.5166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.525,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.533333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.5416666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.55,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.558333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.5666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.575,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.5833333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.591666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.625,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.65,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.658333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6666666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.675,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.683333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.6916666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7083333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.716666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.725,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.75,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.775,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.783333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.7916666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.808333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8166666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.825,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8333333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.841666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.85,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459393,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 2.8666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 2.875,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.8916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.908333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.925,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459393,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 2.933333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9416666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.95,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9583333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.966666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 2.975,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 2.9916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.0,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.0083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.000499995669045938,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.0166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.025,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.033333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.0416666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.05,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.058333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.0666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459385,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.075,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.0833333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.091666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459385,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.1166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.125,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.15,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459383,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.158333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1666666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.175,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.183333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.1916666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.2,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459378,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.2083333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.216666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.225,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.2333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.2416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.25,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.2583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.2666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459378,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.275,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.283333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.2916666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.308333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459393,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.3166666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3249999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3333333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.341666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.35,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459517,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126751,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.375,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.3916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458673,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.4,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.408333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.4166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.425,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.433333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.4416666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.4499999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.4583333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.466666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459524,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126751,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.475,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.4833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.4916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5166666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.525,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.533333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5416666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.55,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.558333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5666666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459517,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126634,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.5749999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.5833333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.591666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.6,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.6083333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.6166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459393,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.625,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.6333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.6416666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.65,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.658333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.6666666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.675,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.683333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.6916666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458683,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.6999999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.7083333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.716666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459378,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.725,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.7333333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.7416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.75,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.7583333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459378,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.7666666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.775,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.783333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.7916666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.808333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8166666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8249999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8333333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 3.841666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.85,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8583333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8666666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.875,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8833333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.8916666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.908333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9166666666666665,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126624,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.925,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.933333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9416666666666664,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9499999999999997,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459385,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 3.9583333333333335,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.966666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.975,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9833333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 3.9916666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.0,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 4.008333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.016666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.025,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459387,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 4.033333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.041666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.05,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.058333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458681,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.066666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.075,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.083333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.091666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.1,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.108333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.116666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.125,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.133333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.141666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.15,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.158333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.166666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458668,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.175,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.183333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.191666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.2,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 4.208333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.216666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.225,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.233333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.241666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126696,
+      "headX": -0.3517108735884044
+    },
+    {
+      "t": 4.25,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.258333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.266666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.275,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.283333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.291666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.3,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.308333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.316666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690459385,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126614,
+      "headX": -0.3517108735884045
+    },
+    {
+      "t": 4.325,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.333333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.341666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.35,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.358333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.366666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.375,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.383333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.391666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.4,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.408333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.416666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.425,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.433333333333334,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.441666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.45,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.458333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.466666666666667,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.475,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.483333333333333,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.491666666666666,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0004999956690458687,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049275532126597,
+      "headX": -0.35171087358840447
+    },
+    {
+      "t": 4.5,
+      "doorTriangleHits": 0,
+      "verticesBeyondFrontPlane": 0,
+      "floorM": 0.0005000452617029947,
+      "faceProxyOccludedByArms": 0,
+      "rightHandEdgeGapM": 0.003049274422547913,
+      "headX": -0.3517108655375185
+    }
+  ]
+}

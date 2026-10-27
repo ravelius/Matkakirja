@@ -1,0 +1,123 @@
+{
+  "order": 1080,
+  "status": "localQA-pass-receiver-review-pending",
+  "mainModel": "models/eunukki-1-peek-call.glb",
+  "cumulativeVariants": "Two optional models retain earlier catch_back/hold_back for the matching Puyi variant. Use ONE appropriate file or import ONLY peek_call into the matching accepted rig. Do not play multiple eunuch models.",
+  "sources": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-back-review-v1/models/eunukki-1-catch-back-perus.glb",
+      "sha256": "ba8c614fc9eff6518bb694f344144238c5d4ce23f9a8f947662f701bb2190e46"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-back-review-v1/models/eunukki-1-catch-back-viitta.glb",
+      "sha256": "2b88c02ba300bfb916061a74dacb15df7693559cad222b99779acc52b0d75710"
+    }
+  ],
+  "clip": {
+    "name": "peek_call",
+    "durationSeconds": 4.5,
+    "sampleRateHz": 60,
+    "inPlace": true,
+    "loop": false,
+    "holdLastFrame": true,
+    "lastPoseStableFromSeconds": 4.3,
+    "constantHipBackwardOffsetM": 0.075,
+    "reasonForOffset": "Original robe front intersects specified slab at z=.30 in source idle; constant75mm retreat clears robe while hands reach the fixed edge. No root translation track."
+  },
+  "bones": 65,
+  "doorVolume": {
+    "xGreaterThan": -0.13,
+    "zMin": 0.3,
+    "zMax": 0.36
+  },
+  "QA": {
+    "status": "PASS",
+    "samples": 541,
+    "sampleRateHz": 120,
+    "doorTriangleHitsMax": 0,
+    "frontPlaneVerticesMax": 0,
+    "floorRangeM": [
+      0.000498150752361236,
+      0.0005097175251054673
+    ],
+    "faceProxyVertices": 189,
+    "faceProxyOccludedMax": 0,
+    "faceCheckLimit": "189 source front-face points vs projected arm triangles plus six visual stills; not a full camera/door occlusion or exhaustive self-collision test",
+    "rightEdgeGapAfterGripMaxM": 0.003051423123030458,
+    "headXAfterLeanRange": [
+      -0.3517108735884045,
+      -0.35077338742022063
+    ],
+    "lastPointTwoSecondsPoseDelta": 2.7933313884176414e-08,
+    "bones": 65,
+    "sourceBinaryPrefixPreserved": true,
+    "oldClipsPreserved": true,
+    "clips": [
+      "balance",
+      "catch",
+      "idle",
+      "jump",
+      "run",
+      "slide",
+      "sprint",
+      "stumble",
+      "throw",
+      "peek",
+      "call",
+      "peek_call"
+    ],
+    "sha256": "bdfedc0e7d0d0d1d3dc0f47623fb3ff79f62fc3f909fc75f4aa12f9879bdeae7",
+    "gameVerified": false,
+    "newTripoCalls": 0,
+    "credits": 0,
+    "elapsedSeconds": 3.7972721670521423,
+    "peakRSSMiB": 136.484375
+  },
+  "limits": [
+    "Six front pictures isolate the character; the solid door naturally hides the face before the character peeks around it. No hand or forearm covers the face.",
+    "No morph/jaw animation; call shown with body/head and open-palm reach.",
+    "Eunuchs2/3 unchanged; explicit priority eunuch1 complete locally.",
+    "Game camera, voice synchronization and final receiver acceptance still require PK verification."
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "files": [
+    {
+      "file": "models/eunukki-1-catch-back-perus-peek-call.glb",
+      "bytes": 6572172,
+      "sha256": "f42e2dfa6a5ea54742fd1a83350fe0d27373dde0601569f3895185980013f253"
+    },
+    {
+      "file": "models/eunukki-1-catch-back-viitta-peek-call.glb",
+      "bytes": 6572172,
+      "sha256": "22e79bcfc9acf3f6012ac5153da8a3694e6b64b28eb41548763fe6be5f71d24c"
+    },
+    {
+      "file": "models/eunukki-1-peek-call.glb",
+      "bytes": 6305080,
+      "sha256": "bdfedc0e7d0d0d1d3dc0f47623fb3ff79f62fc3f909fc75f4aa12f9879bdeae7"
+    },
+    {
+      "file": "qa/DENSE-QA.json",
+      "bytes": 144809,
+      "sha256": "33db027711fbea6613d1de1fb47bc7c24b718b526c4ad71f56e4bce3ae6f9bbe"
+    },
+    {
+      "file": "qa/POSE-QA.json",
+      "bytes": 3960,
+      "sha256": "35b0f78ff64cc47d163a70891da016735662a864f425947b6581e4f553b9efea"
+    },
+    {
+      "file": "qa/peek-call-top-door.png",
+      "bytes": 126806,
+      "sha256": "66569f891f80c6ddd4d65493b68b72955cf9ba2f21eb6e5436967a330d96eda4"
+    },
+    {
+      "file": "qa/six-front-poses.png",
+      "bytes": 118012,
+      "sha256": "c81dd1b065a5094015e7bad46b01ff7ddc00c78b766531e9c28136cef15dc61b"
+    }
+  ],
+  "elapsedSeconds": 3.7656794999493286,
+  "peakRSSMiB": 190.5625
+}
