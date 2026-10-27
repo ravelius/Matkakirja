@@ -49,3 +49,7 @@ Keisari (Kavya bA58y3FqVI6b6gTNh0oT), keisari-rimpuilu-otto1..3 (tauko = "..."):
 
 ## Rimpuilun valinta ja vienti (27.10. klo 17.25)
 Valinta: otto 4 = eunukki Sergio otto1, otto 9 = keisari otto3. Vienti: _valmiit/juoksupeli-rimpuilu-vienti-20261027 → ämpäri audio/juoksupeli/hahmoaanet-v2/eunukki-sergio-sainpas.mp3 ja keisari-paasta-irti.mp3.
+
+## Keisari-2 "Huh!" ilman hengitystä (omistaja 27.10. klo 18.51)
+Kansio: proto-3d/_tyo/juoksupeli-hahmoaanet-haku-20261027/ulos-huh3/ (tee_huh3.py), video video-huh3/keisari-2-huh-uudet.mp4 (121 kt). 3 ottoa, 45 mrk. Kavya, eleven_v4_turbo, fi, stab 0,25, style 0,8, speed 1,2.
+0 (nykyinen) "[gasps] [panicked] Huh!"; 1, 2, 3 (uudet) "[panicked] Huh!" (sama prompti, otot vaihtelevat).
