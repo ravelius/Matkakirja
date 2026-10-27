@@ -32,7 +32,7 @@ import {
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
-  korttiAvain, tekstiAvain, linkitaWikidata, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
+  korttiAvain, tekstiAvain, linkitaWikidata, haeEntiteetti, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
   tarkistaTeksti, EI_LAHDETTA, kohdeTyyppi, osaAvain, JOHDANTO_KEHOTE, LISAA_KEHOTE, lisaaViesti, tarkistaJohdanto, tarkistaLisaa,
 } from './tietokortti.js';
 import {
@@ -3823,7 +3823,9 @@ function tietoPaikka(runko) {
   const lat = Number(runko?.lat), lon = Number(runko?.lon);
   const luokka = String(runko?.luokka ?? '').replace(/[^a-z_]/g, '').slice(0, 24) || 'place';
   if (!nimi || !Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) return null;
-  return { nimi, lat, lon, luokka };
+  // Maailmanperintömerkki (OMISTAJAN PÄÄTÖS 27.10.2026 klo 14.15, UNESCO-koe): kohde suoraan Wikidatan tunnuksella, ei nimihakua.
+  const qid = /^Q\d{1,12}$/.test(String(runko?.qid ?? '')) ? String(runko.qid) : null;
+  return qid ? { nimi, lat, lon, luokka, qid } : { nimi, lat, lon, luokka };
 }
 
 async function tietoRajaYlittyy(pyynto, env, ctx) {
@@ -3844,7 +3846,7 @@ async function tietokorttiFaktat(pyynto, env, paikka, ctx) {
   const tyo = (async () => {
     if (await tietoRajaYlittyy(pyynto, env, ctx)) return { virhe: 'raja' };
     const haku = (url, o) => fetch(url, o);
-    const e = await linkitaWikidata(haku, paikka);
+    const e = paikka.qid ? await haeEntiteetti(haku, paikka.qid) : await linkitaWikidata(haku, paikka);
     const kortti = e ? await korttiFaktat(haku, e, paikka.nimi) : { qid: null, nimi: paikka.nimi, rivit: [], kuva: null, wiki: {} };
     kortti.paikka = paikka;
     await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kortti), TIETOKORTTI_TTL_S);
@@ -3861,7 +3863,9 @@ async function hoidaTietokortti(pyynto, env, kors, runko, ctx) {
     const t = await tietokorttiFaktat(pyynto, env, paikka, ctx);
     if (t.virhe === 'raja') return vastaa({ virhe: 'raja', viesti: 'Päivän uudet kortit on käytetty.' }, { status: 429, ...kors });
     // Kohdetyyppi (omistaja 27.10. 13.23): kortin lajista, myös jo tallennetuille korteille (ei uutta avainta).
-    return vastaa({ ...t.kortti, tyyppi: t.kortti.tyyppi ?? kohdeTyyppi(t.kortti.laji), valmiina: t.valmiina }, kors);
+    // Maailmanperintömerkin kortti (UNESCO-koe 14.15): tyyppi Maailmanperintö.
+    const tyyppi = paikka.luokka === 'perinto' ? { id: 'maailmanperinto', nimi: 'Maailmanperintö' } : t.kortti.tyyppi ?? kohdeTyyppi(t.kortti.laji);
+    return vastaa({ ...t.kortti, tyyppi, valmiina: t.valmiina }, kors);
   } catch (virhe) {
     console.log(`pollo: tietokortti ${paikka.nimi}: ${virhe?.message ?? virhe}`);
     return vastaa({ virhe: 'lahde', viesti: 'Wikidata ei vastannut.' }, { status: 502, ...kors });
