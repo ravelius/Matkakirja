@@ -353,3 +353,21 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - TYÖKALUT tänään: K/tyokalut/kansi_seinaan.py (KANSI_YLA), muurikate_kansi.py, aja_ketju_v84/v85.zsh, aja_v84_juuri.zsh, aja_v85_pari.zsh. Proto-osoittimet
   wt/proto-lavastaja-muoto: lavastaja/tausta-v62-213 5ca3e2d4b (junassa); lavastaja/tausta-v61-213 da2a83a50 EI käytössä.
 - HUOM: tämän checkoutin haara vaihtui kesken session koti-haaraan (joku muu sessio?) → tarkista git branch ennen committia.
+
+## LISÄYS 24 klo 23.2x: kujakivien 2D-pinnat v01 kujapaloihin (yksikerros-v86), pari VS:llä
+- PINNAT: postista c56b5c011 kansioon K/kujakivi-pinnat-v3 (SHA256SUMS 110/110 OK). Valittu v01 kaikille.
+- K/tyokalut/kujakivi_pinnat.py (pelkkä python, v85:n valmiiden glb:iden päälle; UV1 ja muu geometria ennallaan). Ketju K/tyokalut/aja_ketju_v86.zsh [vNN]
+  → K/yksikerros-v86 = v85 + pinnat:
+  (1) kujapalat kk-tausta-kuja-0-3/1-3: V4_kivireunus → V4_kujakivi_reuna (UV0.u = kiven sisäinen 0–1 kivirajoista raja(k), v = avattu poikkileikkaus
+  0–0,52 / 0,52; etupinnan taso interpoloidaan pituus-u:n mukaan, koska kujan 02 oikea nauha ei ole suora, ks. v86:n 1. pari 230352). V4_lattia → V4_kujakivi_lattia
+  (kujan PCA-akseli, 2 m toisto, kaikki lodit).
+  (2) taustapalojen V4_sokkeli kujapalojen bbox + 3 m: pystypinnat → V4_kujakivi_sokkeli (u seinän suuntaan / 2, v = (1,20 − y) / 1,20), yläpinnat y > 1,1 → _sokkeli_yla.
+  Osumat vain 0-3 (kuja 02); kujan 01 seinät ovat avoimet-palojen rakennuksia → kujan 01 sokkeli EI vielä (avoimet-v5x, oma askel).
+  Kuvat glb:hen (albedo + normal, ei karheutta), samplerit KAYTTO.md:n mukaan (reuna clamp, sokkeli X-toisto, lattia toisto).
+- PARI: K/tyokalut/aja_v86_pari.zsh (H/juuri-v93m = v92m + tausta-v57/59/60 → yksikerros-v86; oma editori-kopio K/tyokalut/editori-lr.sh, T = wt/proto-lavastaja-havainne).
+  Tulos proto-3d/lokit/havainne-editori-20261027-231817 (02 01 05, REF 1158e9df0). Sonnet-tarkistus: pinnat latautuvat, reunakiven venyminen korjattu;
+  lattia ~40 % havainnetta vaaleampi ja kylmä, valoa/varjoa ei näy (kujapaloissa ei UV1:tä) → VS:lle 23.2x (laji 0 -polun sävy). KK:lle pari vasta VS:n REF:n jälkeen.
+- AVOIN: (3) muurikatteen/taustan 0-3 pilarit → _pilari_etu/_pilari_sivu (VS 21.3x: pilarit ovat taustassa 0-3); kujan 01 sokkeli avoimet-paloissa; 01:n reunakivet
+  näyttävät irrallisilta kermanvalkoisilta laatoilta (tarkista pelin valossa VS:n korjauksen jälkeen). Olavinlinna J4: arkun glb:tä ei löytynyt _tyo/_valmiit-hauilla → kysy NS:ltä polku.
+- JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
+  (REF=<VS:n uusi SHA> ympäristössä).
