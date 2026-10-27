@@ -1,0 +1,22 @@
+{
+  "status": "APPROVED_91_UV_COORDINATE_CORRECTION_APPLIED",
+  "approvalCommit": "6640c5369be0bd483615a825321611054d41f227",
+  "sourceV1SHA256": "5f9426d5e5621a2de154d9e192cb19236e4a638011dfa46ecf97a7998ef7341f",
+  "outputSHA256": "2b94044dac9da55df6c6ebe6eae668e084fb40e705166a33cedcc632d4b80e1a",
+  "changedVertices": 91,
+  "affectedTriangles": 36,
+  "changedBinaryBytes": 660,
+  "bytesOutsideApprovedUvEntriesExact": true,
+  "jsonExactToV1": true,
+  "basecolorNormalRoughnessImagesExactToV1": true,
+  "positionsIndicesUv0NormalsJointsWeightsAnimationsExact": true,
+  "fullTarget128PatchRGB": [
+    92,
+    88,
+    85
+  ],
+  "allSelectedTrianglesWhollyInsideSelectedVertexSet": true,
+  "visualQA": "pending",
+  "gameVerified": false,
+  "sourcePreserved": true
+}

@@ -1,0 +1,33 @@
+{
+  "createdAt": "2026-10-27T07:12:29.182533+00:00",
+  "status": "LOCAL_APPROVED_SCOPE_COMPLETE_RECEIVER_GAME_QA_PENDING",
+  "parentV1": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-puyi-kengat-10251027-20261027/delivery-v1",
+  "approvalCommit": "6640c5369be0bd483615a825321611054d41f227",
+  "scope": "Both shoes dark felt soles/black cloth, ankle stripes removed; perus exact91TEXCOORD_1 changes on36soletriangles permitted by PT. All geometry/UV0/rig/weights/existing motions preserved.",
+  "files": [
+    {
+      "file": "puyi.glb",
+      "sha256": "cf39e196e88abca3b99587d7dffb808f241e81747b84843bd11650a409d96c32",
+      "bytes": 10929672
+    },
+    {
+      "file": "puyi-perus.glb",
+      "sha256": "2b94044dac9da55df6c6ebe6eae668e084fb40e705166a33cedcc632d4b80e1a",
+      "bytes": 13716636
+    }
+  ],
+  "qa": {
+    "imageOnlyStage": "See image-only-preservation-qa.json; normal texture and every nonimage byte preserved before approvedUVstep.",
+    "uvStep": "See approved-uv-patch.json; only660binarybytes in91authorizedUVentries changed,JSONidentical toV1.",
+    "brightSampleInterpretation": "85original bright sharedtexels avoided. Denser231barycentric samples/triangle gives0capsule brightpoints and1perus sample113/90/72 (darkbrown,notwhite) attexel1338,797. Retainedbecauseoutsidethe91UVscopeandsharedwithotherclothing. Raw threshold>110 testfailsforperus, nothidden.",
+    "visual": "Root inspected before/after soles/lowview: white patches removed; minor inherited dark triangle marks remain. No claimofperfect uniformfelt orenginePBRapproval.",
+    "gameVerified": false
+  },
+  "retainedWarning": "Cape originalroot1.373 remains unchanged toavoid unauthorized skeleton/motion rescaling.",
+  "TripoCalls": 0,
+  "TripoCredits": 0,
+  "newImageGenerations": 0,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "cdnUploaded": false
+}

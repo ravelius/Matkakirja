@@ -1,0 +1,190 @@
+{
+  "createdAt": "2026-10-27T07:13:54.645345+00:00",
+  "status": "FIVE_LOCAL_IMAGE_CANDIDATES_PRODUCED_PARTIAL_VISUAL_QA",
+  "imagesProduced": 5,
+  "imagegenCalls": 5,
+  "callsPerImage": 1,
+  "retries": 0,
+  "tripoCalls": 0,
+  "tripoCredits": 0,
+  "new3dModels": 0,
+  "tool": "Built-in image_gen.imagegen only; no CLI/API fallback",
+  "sourceOrder": "posti/natiiviseppa-codex-olavinlinna-tripo-jatkojono-20261026.md @ 7d02eb3588418fb1d9981c70c12f1bf69a3e7ff6",
+  "sourceOrderSHA256": "053fc91c061dfa8132ecdbaa000d4886e320843e58a715b9fdbb43b4a3c95006",
+  "nativeLocation": "../native; original built-in files also preserved at checkpoint toolNativePath",
+  "nativeHashesByteVerified": true,
+  "j1Export": {
+    "path": "1017-Aarnivalkean hopea - Havainnekuva. Tekoälyllä tuotettu, ei valokuva.jpg",
+    "sha256": "de55e09a824eee919e7e4f64a80f9020c1b2e08860902d001b8654ebd667ef7d",
+    "bytes": 262202,
+    "dimensions": [
+      640,
+      640
+    ],
+    "format": "JPEG",
+    "disclosure": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+    "filenameDisclosureVerified": true,
+    "xmpReadbackVerified": true,
+    "exifXpCommentReadbackVerified": true,
+    "pixelEditing": "Only requested size and JPEG-format conversion; no content retouch, no re-generation."
+  },
+  "localVisualQAPass": [
+    "1020 rear view",
+    "1021 contents reference"
+  ],
+  "localVisualQACaveats": {
+    "1017": [
+      "Alliance shields appear nearly upright rather than clearly leaning inward.",
+      "The generated open lid shows shield lock plates on its inner visible face; existing closed source chest shows those plates on the outer lid. Exact chest identity is not fully preserved."
+    ],
+    "1018": [
+      "Tott quartering and Sture 2+1 upward leaves are correct, but both shields remain nearly upright."
+    ],
+    "1019": [
+      "Camera elevation changes but horizontal yaw remains too frontal for a clear three-quarter side reference.",
+      "Alliance shields remain nearly upright."
+    ]
+  },
+  "referenceConflictResolution": "Sture project PNG has downward leaf tips, while the actual named game GLB and its preview have upward tips. The actual game geometry/preview controls shape and orientation; original references preserved.",
+  "noRetryDisposition": "One permitted call per asset has been used. Caveats recorded and outputs preserved; no corrective image calls were made.",
+  "nextStep": "Parent delivers the actual image results and caveats for PT review. Do not call the goblet multiview set approved or 3D-ready. Any additional take needs a new explicit call allowance; existing chest remains the original game model.",
+  "receiverAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "published": false,
+  "glbsCommitted": false,
+  "sharedLedgerModified": false,
+  "mailboxWritten": false,
+  "filesAndCallTimes": {
+    "1017": {
+      "calls": 1,
+      "status": "native-produced-qa-caveat",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1017-aarnivalkean-hopea.png",
+      "callStartedAt": "2026-10-27T07:10:57.112819+00:00",
+      "callCompletedAt": "2026-10-27T07:12:48.285643+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-5c239b16-6146-4139-aedd-fe9774e32085.png",
+      "sha256": "572152b87d7d3a4400437b2332befe2d018b9f4bacde0777d4b0660e66184a4e",
+      "size": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "squareScene": true,
+        "openOakIronChest": true,
+        "segmentalArchVisible": true,
+        "moonlightOnSilver": true,
+        "sameGobletIdentity": true,
+        "heraldicPatternsReadable": true,
+        "allianceShieldInwardTilt": "NOT_CLEARLY_MET: shields remain nearly upright",
+        "chestLidSourceFidelity": "CAVEAT: generated visible inner lid carries shield plates; source closed-chest preview places them on the outer lid. Exact existing chest identity not fully preserved.",
+        "noNew3dChestModel": true,
+        "retry": false
+      },
+      "nativeSavedAt": "2026-10-27T07:11:57.412087+00:00",
+      "callTimestampNote": "callStartedAt was recorded immediately before dispatch; callCompletedAt is the local receipt write time. nativeSavedAt is the unchanged built-in output file timestamp.",
+      "nativeByteExact": true
+    },
+    "1018": {
+      "calls": 1,
+      "status": "native-produced-qa-caveat",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1018-pikari-edesta.png",
+      "callStartedAt": "2026-10-27T07:05:38.437269+00:00",
+      "callCompletedAt": "2026-10-27T07:06:38.511096+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-27ef2976-20cf-477f-84d0-4b711d9dc049.png",
+      "sha256": "4156b2a37a992eec890c5eacf182cf5903b87d810f20275d9ff1eed40f5c5ea4",
+      "size": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullObjectVisible": true,
+        "neutralBackground": true,
+        "evenLighting": true,
+        "tottQuarteringCorrect": true,
+        "stureLeaves2plus1PointsUp": true,
+        "allianceShieldInwardTilt": "NOT_CLEARLY_MET: shields appear nearly upright",
+        "retry": false
+      },
+      "nativeSavedAt": "2026-10-27T07:06:10.095558+00:00",
+      "callTimestampNote": "callStartedAt was recorded immediately before dispatch; callCompletedAt is the local receipt write time. nativeSavedAt is the unchanged built-in output file timestamp.",
+      "nativeByteExact": true
+    },
+    "1019": {
+      "calls": 1,
+      "status": "native-produced-qa-caveat",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1019-pikari-kolmeneljannesta.png",
+      "callStartedAt": "2026-10-27T07:07:21.284196+00:00",
+      "callCompletedAt": "2026-10-27T07:08:24.775758+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-aaa2ee22-2143-4347-808b-9e6c237f428d.png",
+      "sha256": "a0b4d63c6b7541b427ab8b37212fbcabc0d410b2aa55a9ad1be66e9d8b33f862",
+      "size": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullObjectVisible": true,
+        "neutralBackground": true,
+        "objectIdentitySimilar": true,
+        "tottQuarteringCorrect": true,
+        "stureLeaves2plus1PointsUp": true,
+        "threeQuarterYaw": "NOT_CLEARLY_MET: elevation changed but frontal emblem remains nearly centered",
+        "allianceShieldInwardTilt": "NOT_CLEARLY_MET",
+        "retry": false
+      },
+      "nativeSavedAt": "2026-10-27T07:07:50.649163+00:00",
+      "callTimestampNote": "callStartedAt was recorded immediately before dispatch; callCompletedAt is the local receipt write time. nativeSavedAt is the unchanged built-in output file timestamp.",
+      "nativeByteExact": true
+    },
+    "1020": {
+      "calls": 1,
+      "status": "native-produced-local-qa-pass",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1020-pikari-takaa.png",
+      "callStartedAt": "2026-10-27T07:08:24.781393+00:00",
+      "callCompletedAt": "2026-10-27T07:09:31.241193+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-d83f27cc-f2d8-4361-b8af-e8b2961554e5.png",
+      "sha256": "a6bf6260ea642319a49203a97139e49fce6f10553f4832c144de74725058e674",
+      "size": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullObjectVisible": true,
+        "neutralBackground": true,
+        "evenLighting": true,
+        "consistentGobletShape": true,
+        "rearHasNoDuplicateHeraldry": true,
+        "physicalMultiviewReconstructionUnverified": true,
+        "retry": false
+      },
+      "nativeSavedAt": "2026-10-27T07:08:54.516182+00:00",
+      "callTimestampNote": "callStartedAt was recorded immediately before dispatch; callCompletedAt is the local receipt write time. nativeSavedAt is the unchanged built-in output file timestamp.",
+      "nativeByteExact": true
+    },
+    "1021": {
+      "calls": 1,
+      "status": "native-produced-local-qa-pass",
+      "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/native/1021-arkun-sisalto-kolmeneljannesta.png",
+      "callStartedAt": "2026-10-27T07:09:31.247096+00:00",
+      "callCompletedAt": "2026-10-27T07:10:57.107307+00:00",
+      "toolNativePath": "/Users/samireivinen/.codex/generated_images/01a179f8-d479-7823-be25-c0322fe7b8c7/exec-13d56c42-1b8b-402a-86bb-00612c1d1efc.png",
+      "sha256": "c4c95f80218c5f52d41d4b6f5f17c647052f94e58fd526b42c774538be9c56ba",
+      "size": [
+        1254,
+        1254
+      ],
+      "qa": {
+        "fullGroupVisible": true,
+        "neutralBackground": true,
+        "threeSilverVessels": true,
+        "continuousCoinPile": true,
+        "clearElevatedObliqueView": true,
+        "noChestRemodel": true,
+        "actual3dFitNotMeasured": true,
+        "retry": false
+      },
+      "nativeSavedAt": "2026-10-27T07:10:05.401310+00:00",
+      "callTimestampNote": "callStartedAt was recorded immediately before dispatch; callCompletedAt is the local receipt write time. nativeSavedAt is the unchanged built-in output file timestamp.",
+      "nativeByteExact": true
+    }
+  }
+}

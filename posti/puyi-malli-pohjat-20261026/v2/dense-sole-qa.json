@@ -1,0 +1,18 @@
+{
+  "puyi": {
+    "candidateSHA256": "cf39e196e88abca3b99587d7dffb808f241e81747b84843bd11650a409d96c32",
+    "samplesBelowSoleCut": 306936,
+    "remainingSampledBrightPixels": 0,
+    "threshold": 110,
+    "method": "231barycentric samples/triangle; sourceY<.032m; nearest color sampler; not all engine lighting",
+    "pass": true
+  },
+  "puyi-perus": {
+    "candidateSHA256": "2b94044dac9da55df6c6ebe6eae668e084fb40e705166a33cedcc632d4b80e1a",
+    "samplesBelowSoleCut": 375095,
+    "remainingSampledBrightPixels": 1,
+    "threshold": 110,
+    "method": "231barycentric samples/triangle; sourceY<.032m; nearest color sampler; not all engine lighting",
+    "pass": false
+  }
+}
