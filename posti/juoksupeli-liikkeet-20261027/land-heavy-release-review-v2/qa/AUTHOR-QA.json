@@ -1,0 +1,15 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-heavy-review-v1/models/puyi-perus.glb",
+  "sourceSHA256": "24f896b9bc15af2258438453e7adca94d35862b9f339e246f1141d3508ed53cf",
+  "durationS": 0.78,
+  "allOtherClipsExact": true,
+  "changedClip": "land_heavy",
+  "changedRangeS": [
+    0.44,
+    0.78
+  ],
+  "method": "Same all-body quintic release used in delivered jump_down; floor correction only when needed.",
+  "newTripoCalls": 0,
+  "credits": 0,
+  "elapsedSeconds": 2.4637794999871403
+}

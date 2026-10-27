@@ -1,0 +1,14 @@
+{
+  "coordinateSystem": "+Y up; +Z forward; +X anatomical left",
+  "durationS": 0.78,
+  "S": "S(u)=0 below0,1 above1,otherwise3u^2-2u^3.",
+  "I": "I(u)=0 below0,u-0.5 above1,otherwiseu^3-0.5u^4.",
+  "root": "X=0; Y=0.28*(1-S(t/0.16)); Z=5*(t-0.16*I(t/0.16))+2.2*I((t-0.34)/0.44). All metres and seconds.",
+  "origin": "Origin is landing ground plane. At t0 the controller root is28cm above it; keep ground origin fixed through clip. Root at t=.78: (0,0,1.50)m. Do not add locomotion5m/s on top of the curve.",
+  "contact": "Hands locked .16–.28s (release blend until.34); both feet .16–.34s; rightfoot full support until.43, release until.52. Root is stationary in X/Z during.16–.34s.",
+  "entryExit": "Entry run phase0, exit run phase1.482 seconds modulo model run duration; source run rate1.9x at5m/s. Fade from previous jump/fall as needed; arbitrary entry state not game-verified.",
+  "playback": "Reference landing .78s. After clip continue5m/s; for sprint, blend game speed after exit. Do not independently time-scale vertical/contact phases without QA.",
+  "arbitraryDrop": "This is the final28cm of a fall. Higher falls require controller fall phase before this clip; align landing floor before t0.",
+  "collision": "Controller confirms landing ground and clear forward1.5m recovery corridor. No game-code modifications in package.",
+  "gameVerified": false
+}

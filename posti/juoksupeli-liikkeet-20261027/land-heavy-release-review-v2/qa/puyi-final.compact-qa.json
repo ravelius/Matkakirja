@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/land-heavy-release-v2/perus/puyi.glb",
+  "sourceSHA256": "c33988c729a9839f7ecea03a11eb30456cf1df66dc19926f8d6fee0fd4fccd47",
+  "file": "output/juoksupeli-liikkeet-20261027/work/land-heavy-release-v2/perus/puyi-final.glb",
+  "sha256": "3499e3388fe62b93e916d52f671cbd600ba69608e9b4a5cc986874ecaa6f49bd",
+  "bytes": 14985072,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternionChord": 4e-05,
+    "translationScale": 4e-06
+  },
+  "keys": [
+    {
+      "clip": "land_heavy",
+      "beforeKeys": 78844,
+      "afterKeys": 12579
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "land_heavy",
+      "samples": 750,
+      "maxSkinnedVertexDeltaM": 6.14474662084984e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/land-heavy-release-v2/perus/puyi-final.unpacked.glb",
+    "sourceSHA256": "5b379d9501406a137d1df99badeaa1f2960500e9b6c0f9fe6e71dc8f8b1eeed6",
+    "file": "output/juoksupeli-liikkeet-20261027/work/land-heavy-release-v2/perus/puyi-final.glb",
+    "sha256": "3499e3388fe62b93e916d52f671cbd600ba69608e9b4a5cc986874ecaa6f49bd",
+    "beforeBytes": 16193000,
+    "afterBytes": 14985072,
+    "sourceAccessors": 7093,
+    "usedAccessors": 6863,
+    "deduplicatedAccessors": 6458,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.2855764579726383,
+    "peakRSSMiB": 281.53125
+  },
+  "elapsedSeconds": 11.782018291996792,
+  "peakRSSMiB": 390.71875
+}

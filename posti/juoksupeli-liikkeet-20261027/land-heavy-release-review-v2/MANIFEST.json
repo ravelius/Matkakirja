@@ -1,0 +1,47 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_GAME_PENDING",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-heavy-release-review-v2/models/puyi-perus.glb",
+  "sha256": "3499e3388fe62b93e916d52f671cbd600ba69608e9b4a5cc986874ecaa6f49bd",
+  "bytes": 14985072,
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-heavy-review-v1/models/puyi-perus.glb",
+  "sourceSHA256": "24f896b9bc15af2258438453e7adca94d35862b9f339e246f1141d3508ed53cf",
+  "changedClip": "land_heavy",
+  "changedPartS": [
+    0.44,
+    0.78
+  ],
+  "otherClipsExact": true,
+  "sourceGeometryRigTexturesPreserved": true,
+  "import": "Replace ONLY land_heavy on perus rig. Do not replace later cumulative full library with this older delivery container. Cape unchanged. jump_down already contains same correction.",
+  "denseQA": {
+    "status": "PASS",
+    "poses": 750,
+    "maxContactAnchorErrorM": 3.506796203021429e-05,
+    "minimumWholeMeshFloorM": 0.0009639264477162984,
+    "unchangedContactPhaseMaxSurfaceDeltaM": 2.427859195991023e-05,
+    "handYRanges": {
+      "Left": [
+        0.0009730511753411354,
+        0.0009891159725238614
+      ],
+      "Right": [
+        0.0009793781976913279,
+        0.000987602294524808
+      ]
+    },
+    "maxAngularStepDegreesAt240Hz": 11.55757333724556,
+    "oldMaximumAngularStepDegreesAt240Hz": 12.636956578141296,
+    "worst": {
+      "t": 0.15,
+      "bone": "mixamorig:LeftForeArm"
+    },
+    "entryPoseDelta": 1.4710189191746714e-08,
+    "exitPoseDelta": 0.0,
+    "gameVerified": false,
+    "seconds": 9.988337666960433
+  },
+  "visualReview": "Two side/rear sheets at.22,.44,.52,.60,.68,.78 personally inspected",
+  "newTripoCalls": 0,
+  "credits": 0,
+  "gameVerified": false
+}

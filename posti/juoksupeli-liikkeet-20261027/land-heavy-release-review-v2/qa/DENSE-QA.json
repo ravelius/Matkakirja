@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "poses": 750,
+  "maxContactAnchorErrorM": 3.506796203021429e-05,
+  "minimumWholeMeshFloorM": 0.0009639264477162984,
+  "unchangedContactPhaseMaxSurfaceDeltaM": 2.427859195991023e-05,
+  "handYRanges": {
+    "Left": [
+      0.0009730511753411354,
+      0.0009891159725238614
+    ],
+    "Right": [
+      0.0009793781976913279,
+      0.000987602294524808
+    ]
+  },
+  "maxAngularStepDegreesAt240Hz": 11.55757333724556,
+  "oldMaximumAngularStepDegreesAt240Hz": 12.636956578141296,
+  "worst": {
+    "t": 0.15,
+    "bone": "mixamorig:LeftForeArm"
+  },
+  "entryPoseDelta": 1.4710189191746714e-08,
+  "exitPoseDelta": 0.0,
+  "gameVerified": false,
+  "seconds": 9.988337666960433
+}
