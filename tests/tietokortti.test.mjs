@@ -51,6 +51,7 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
   const kunkut = JSON.stringify({ t: 'Englanninkielinen artikkeli: William the Conqueror and Charles II.' });
   assert.equal(tarkistaTeksti(`${s(40)} linnan rakennutti Vilhelm Valloittaja, ja sitä laajensi Kaarle toinen.`, kunkut).ok, true, 'suomenkieliset hallitsijanimet');
+  assert.match(tarkistaTeksti(`${s(40)} linnan rakennutti Vilppu, joka asui kylässä.`, JSON.stringify({ t: 'Englanninkielinen artikkeli: the village of Eton.' })).syy, /nimi/, 'ei vastinetta lähteessä');
   assert.match(korjausPalaute('toisto Windsorin'), /"Windsorin" toistuu/);
   assert.match(tarkistaTeksti(`${s(40)} maa lahjoitettiin collegelle.`, syote).syy, /vieras/);
   assert.match(tarkistaTeksti(`${s(40)} Se on Windsor Bridgen vieressä.`, JSON.stringify({ t: 'Windsor Bridge' })).syy, /vieras/);

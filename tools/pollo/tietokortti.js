@@ -422,16 +422,18 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     return { ok: false, syy: `luku ${luku}` };
   }
   const enLahde = lahdeTeksti.includes('Englanninkielinen artikkeli:') || /"kieli":"en"/.test(lahdeTeksti);
+  const lahdeNimet = lahdeTeksti.match(/(?<!\p{L})[A-ZÄÖÅ]\p{L}+/gu) ?? [];
   for (const osuma of ilman.matchAll(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu)) {
     const nimi = osuma[0];
     // Monisanaisen nimen jatko (Vilhelm Valloittaja, Royal Windsor Way): alku on jo tarkistettu.
     if (/[A-ZÄÖÅ][\p{L}-]* $/u.test(ilman.slice(Math.max(0, osuma.index - 30), osuma.index))) continue;
     if (lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) continue;
     // Englanninkielinen lähde: suomenkielinen vakiintunut muoto (Lontoo ← London) kelpaa kolmen alkukirjaimen sanana lähteessä.
-    if (enLahde && new RegExp(`(?<!\\p{L})${nimi.slice(0, 3)}\\p{L}`, 'u').test(lahdeTeksti)) continue;
+    // Vain lähteen isolla alkava sana kelpaa vastineeksi (SK 27.10.: keksitty nimi ei pääse läpi pelkän säännön vuoksi).
+    if (enLahde && lahdeNimet.some((x) => x.startsWith(nimi.slice(0, 3)))) continue;
     // Kirjoitusasun erot (Vilhelm ← William, Rikhard ← Richard) ja vakiintuneet suomenkieliset hallitsijanimet (Kaarle ← Charles).
     if (enLahde && (NIMIMUODOT[nimi.slice(0, 4)] ?? []).some((x) => lahdeTeksti.includes(x))) continue;
-    if (enLahde && kirjoitusasu(lahdeTeksti).includes(` ${kirjoitusasu(nimi.slice(0, 3))}`)) continue;
+    if (enLahde && lahdeNimet.some((x) => kirjoitusasu(x).startsWith(kirjoitusasu(nimi.slice(0, 3))))) continue;
     return { ok: false, syy: `nimi ${nimi}` };
   }
   return { ok: true, syy: null };
