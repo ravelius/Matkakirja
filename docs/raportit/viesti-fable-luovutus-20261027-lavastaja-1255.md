@@ -327,3 +327,29 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   (natiiviseppa/juna-213:n päällä, wt/proto-lavastaja-muoto). NS:lle ja JU:lle VASTA kun KK välittää omistajan Kyllän.
 - OMISTAJA 22.23 (KK): Kyllä → tausta-v62 + muurikate-v19 JU:lle ja osoitin 5ca3e2d4b NS:lle junaan 213 (lähetetty 22.2x). SEURAAVAKSI: Codexin 2D-pinnat (kivet, sitten katot/friisit/rappaus) → muodot + metriset UV:t → pari KK:lle.
 - JONO (PT 22.3x): Pekingin kivet ja 2D-pinnat ensin; sitten Olavinlinnan aarteet J3/J4 (Codex 0cba769bd, NS:n tekninen vastaanotto OK) arkkuun ja käteen, NS:n havainnot (J4-kannun kahvan venynyt tekstuuri, arkkujen laakeat sävyt) pelin valossa → pari KK:lle; korjauspyyntö Codexille vasta sen jälkeen.
+
+## LISÄYS 23 klo 22.5x: Codexin kujakivien 2D-pinnat kokoamiseen (LUOVUTUS, aloita tästä)
+- TILA: juna 213:ssa tausta-v62 (= yksikerros-v85) + muurikate-v19 (NS 5ca3e2d4b, JU vienyt). Pohja seuraavalle: K/yksikerros-v85, K/muurikate-v19.
+- PINNAT: claude/postilaatikko c56b5c011, posti/juoksupeli-kujakivet-11911194-20261027/stone-surfaces-v3/ (myös T7, SHA 110/110). LUE KAYTTO.md:
+  reunakivi 0,70 × 0,52 clamp (yläpinta 0–0,30 | viiste 0,30–0,32 | etu 0,32–0,52 kuvan yläreunasta), sokkeli 2,00 × 1,20 X-toisto (yläreuna = ylin kerta),
+  sokkelin-ylapinta 2,00 × 0,10 (y=0 etureuna), pilarin-etu 0,60 × 1,20 ja -sivu 0,40 × 1,20 clamp (etu OIKEA reuna = sivu VASEN reuna samassa ulkokulmassa),
+  lattialaatat 2 × 2 toisto (kuvan pysty = kujan suunta). Normaali OpenGL +Y, PNG:n rivit alas. Valitse SAMA vNN kaikille (aloita v01).
+- VS 22.5x SOPI (A): LR tekee metriset UV0:t + omat materiaalit V4_kujakivi_reuna / _sokkeli / _sokkeli_yla / _pilari_etu / _pilari_sivu / _lattia,
+  kuvat glb:hen baseColorTexture + normalTexture (EI karheutta). Peli piirtää laji 0 -polulla (JuoksuMaailma.shader: albedo + JUOKSU_NORMAALI + leivottu UV1).
+  UV1 (valo_rgbm) säilyy, koska vain materiaali ja UV0 muuttuvat (leivonta seis, omistaja 10.56). VS lisää myöhemmin kohokuvion leivottuun valoon ja rajaa
+  JuoksuMaaKivi-sävytyksen V4_kujakivi_*:sta, jos tarpeen. VS odottaa REF/juuri-tietoa parille 02/01/05.
+- TOTEUTUS (ehdotus): Blender-askel kujakivi_uv.py ketjuun kansi_seinaan.py:n jälkeen (aja_ketju_v86.zsh → yksikerros-v86):
+  (1) kuja-palat kk-tausta-kuja-0-3/1-3: V4_kivireunus → _reuna, UV0.u = kiven sisäinen 0–0,70 (kivirajat u = k·0,7 + (frac(k·0,618034) − 0,5)·0,2,
+  nykyinen UV0.u on jo urien pituus-u → u_kivi = (u − alku)/(loppu − alku)·0,70), UV0.v = poikkileikkauksen kaari 0–0,52 (kivireunus_uv.py:n v ±1000 -merkki
+  kertoo puolen; tarkista). V4_lattia kujapaloissa → _lattia, UV0 = kujan akselin suuntainen tasoprojektio / 2,0 m.
+  (2) Taustan V4_sokkeli-pystypinnat kujapalojen alueella (bbox + 3 m) → _sokkeli, u = seinän suuntainen etäisyys / 2,0, v = z / 1,20; yläpinnat → _sokkeli_yla.
+  (3) Muurikatteen pilarien sokkelilohkot (V4_sokkeli, 0–1,20 m, kansi 0,22 × 0,95) → _pilari_etu (leveät pinnat) / _pilari_sivu (kapeat), u venytetään pinnan leveyteen.
+  Sitten python-askel kujakivi_kuvat.py (tausta_pinnat.py:n mallilla, JSON + numpy): kuvat ja materiaalit glb:hen. Pari 02/01/05 omalla editori-kopiolla
+  (/private/tmp ei säily → kopioi _tyo/linssiseppa2/tyokalut/editori-vs.sh ja vaihda T=/Users/Shared/Claude/wt/proto-lavastaja-havainne/tyokalut/havainne),
+  REF = VS:n uusin (1158e9df0 tai uudempi, kysy), juuri = H/juuri-v92m + tausta → v86, muurikate pariin v17-v16-nimella-kopio samalla käsittelyllä.
+- MUUT KUVAT TULOSSA: katot/friisit/rappaus (mitat postissa 7eb80206c): katto 1 × 1 m, friisi 4,13 × 1,03 m (nykyinen UV0 jo valmis), kultalista 1 × 0,06, rappaus 4 × 4 m + likajuova.
+- JONO: Olavinlinnan aarteet: J4 (Codex 0cba769bd) voi edetä, J3 vasta Codexin korjatulla (ee62a9541: kaksi ylimääräistä kilpeä); NS:n havainnot (J4-kannun kahvan
+  venynyt tekstuuri, arkkujen laakeat sävyt) pelin valossa → pari KK:lle, korjauspyyntö Codexille vasta sitten.
+- TYÖKALUT tänään: K/tyokalut/kansi_seinaan.py (KANSI_YLA), muurikate_kansi.py, aja_ketju_v84/v85.zsh, aja_v84_juuri.zsh, aja_v85_pari.zsh. Proto-osoittimet
+  wt/proto-lavastaja-muoto: lavastaja/tausta-v62-213 5ca3e2d4b (junassa); lavastaja/tausta-v61-213 da2a83a50 EI käytössä.
+- HUOM: tämän checkoutin haara vaihtui kesken session koti-haaraan (joku muu sessio?) → tarkista git branch ennen committia.
