@@ -1,0 +1,91 @@
+{
+  "stage": "REVIEW_MODELS_V2",
+  "models": [
+    {
+      "task": 1055,
+      "file": "1055-c1-raystas-1m.glb",
+      "sha256": "d21bffe3a74fc774438f0a87beefa5997d7c57a9d2dbc6aad02202faa4ec0986",
+      "sourceSHA256": "b371105e5f522c577caf4a6ea905faf03e34bef4a77071008854c7c6a455b8f8",
+      "bytes": 499952,
+      "triangles": 1358,
+      "materialCount": 1,
+      "texturePx": 1024,
+      "dimensionsXYZM": [
+        1.0309278964996338,
+        0.34622323513031006,
+        0.513616144657135
+      ],
+      "pivot": "rear-bottom-center",
+      "axes": "Xrepeat,Yup,Zfront",
+      "repeatLengthM": 1.0,
+      "overlapM": 0.030927835051546504,
+      "overlapFractionOfPhysicalWidth": 0.03,
+      "sourceScaleXYZ": [
+        1.0513659715652466,
+        1.0198249816894531,
+        1.0198249816894531
+      ],
+      "geometryTopologyUVPreserved": true,
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "skins": 0,
+      "animations": 0,
+      "technicalQA": "PASS",
+      "visualQA": "Reference vocabulary preserved; receiver lighting and corner fit pending",
+      "repeatSeamQA": "3 percent longitudinal overlap closes visible slit in CPU proof; runtime z-fighting and camera QA pending",
+      "gameIntegrated": false
+    },
+    {
+      "task": 1057,
+      "file": "1057-c3-muurikate-2m.glb",
+      "sha256": "825c57aaf16fee834698444adaa2dd321557ee78522357e32750fec6d7bf523f",
+      "sourceSHA256": "0e270d70e7595b34efe17843642419d4350cb3c1f8d5b486083d94d759eec6df",
+      "bytes": 509932,
+      "triangles": 2794,
+      "materialCount": 1,
+      "texturePx": 1024,
+      "dimensionsXYZM": [
+        2.0618555545806885,
+        0.5136135220527649,
+        1.7999999523162842
+      ],
+      "pivot": "bottom-center-on-wall",
+      "axes": "Xrepeat,Yup,Zfront",
+      "repeatLengthM": 2.0,
+      "overlapM": 0.06185567010309301,
+      "overlapFractionOfPhysicalWidth": 0.03,
+      "sourceScaleXYZ": [
+        2.102339267730713,
+        2.039269208908081,
+        3.0242724418640137
+      ],
+      "geometryTopologyUVPreserved": true,
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "skins": 0,
+      "animations": 0,
+      "technicalQA": "PASS",
+      "visualQA": "Reference vocabulary preserved; receiver lighting and corner fit pending",
+      "repeatSeamQA": "3 percent longitudinal overlap closes visible slit in CPU proof; runtime z-fighting and camera QA pending",
+      "gameIntegrated": false
+    }
+  ],
+  "tripoCredits": 90,
+  "newTripoCalls": 2,
+  "sourceJobs": [
+    "8ef11744-bfcf-42c2-b7d1-b83db314f8f6",
+    "6370e8f5-32de-48e4-adc4-ec2e11d87971"
+  ],
+  "elapsedS": 3.0075801661005244,
+  "peakRSSMiB": 101.734375,
+  "open": [
+    "C1corner1056 not yet produced; 45-degree assembly meaning requested from PK/LR",
+    "Receiver game fit, repeat overlap depth stability and reference comparison pending"
+  ]
+}

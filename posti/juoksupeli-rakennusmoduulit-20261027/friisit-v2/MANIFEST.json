@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "task": 1058,
+      "file": "1058-muurifriisi.png",
+      "sha256": "b9beb5d9a830623ac125f508313af6f7d1c43ba1ee7ed94bddd757bbb92bd711",
+      "dimensions": [
+        2048,
+        256
+      ],
+      "source": "sources/1058-native-v1.png",
+      "sourceSHA256": "104f488075bada15589ca26cf3e71feb3c3ba4cb67866ee77cb5b5b21c3a5fb8",
+      "cropBox": [
+        961,
+        108,
+        1705,
+        618
+      ],
+      "repeatCount": 6,
+      "seamMeanAbsRGB": 9.2578125,
+      "note": "Geometric painted motif continues; nonzero pigment/wood variation across join, receiver game seam QA required."
+    },
+    {
+      "task": 1067,
+      "file": "1067-palkkimaalaus.png",
+      "sha256": "bcea996272e482e79b39eade9076ce06941d796afaab4729f4f4ca49738fc119",
+      "dimensions": [
+        2048,
+        512
+      ],
+      "source": "sources/1067-native-v1.png",
+      "sourceSHA256": "b3ee738511670055e02b70d12a45a2eafe8148eb926094213a586827441938b9",
+      "cropBox": [
+        796,
+        0,
+        1578,
+        724
+      ],
+      "repeatCount": 4,
+      "seamMeanAbsRGB": 16.20703125,
+      "note": "Geometric painted motif continues; nonzero pigment/wood variation across join, receiver game seam QA required."
+    }
+  ],
+  "provider": "built-in image_gen,one call per asset",
+  "technicalProcessing": "crop repeat period and resize; no painted retouch",
+  "newTripoCredits": 0,
+  "receiverAccepted": false
+}
