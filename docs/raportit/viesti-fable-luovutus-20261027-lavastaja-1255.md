@@ -382,3 +382,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - _tyo/linnanrakentaja/olavinlinna-j4/: j4_arkkuun.py, esine-arkun-hopeasisalto.glb (T7-lähde SHA 96a0674a…), merkki.json (esine:arkun-hopeasisalto, paikka y +0,051).
 - AVOIN: merkki kavely-pakettiin + mahdollinen ASTC (glb_kuvat_astc6) + vienti JU:lle vasta pelin valon parin ja KK:n jälkeen; kannun kahvan venymä (Codexin J4-four-views) ja
   arkkujen laakeat sävyt arvioidaan samassa kuvassa; korjauspyyntö Codexille vasta sitten. J3 odottaa Codexin korjattua (ee62a9541).
+
+## LISÄYS 26 klo 00.0x (28.10.): KK-pari kujakivistä
+- VS 23.5x: sävykorjaus 67afc1220 (seinat-211; V4_kujakivi_* kerroin 0,52/0,49/0,45). Pari KK:lle: proto-3d/lokit/havainne-editori-20261027-235149 (02 05 01, linja 2).
+- Worktree wt/proto-lavastaja-havainne: tyokalut/esikatselu.sh + lokikansio.zsh 69bc67131:stä (linja 2, JU/PT 15.5x); ajo: REF=67afc1220 zsh K/tyokalut/aja_v86_pari.zsh.
+- Kuja 01: näkyvä sokkeli (0,7 m) ja reunus ovat avoimet-v57b:n rakennuksissa (paikalliset, instansoidut meshit; V4_sokkeli/V4_kivireunus) → kujakivi_pinnat.py ei käsittele;
+  oma askel (instanssikohtainen maailmakoordinaatti tai paikallinen UV), KK:n vastauksen jälkeen.
+- J4: NS kuvaa `linssi poikki kavely data file://…/olavinlinna-j4/kavely-j4/` -komennolla (aloitus pako, arkku auki); kuvat tulossa NS:ltä.
