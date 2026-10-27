@@ -2825,3 +2825,11 @@ OMISTAJAN PÄÄTÖS klo 10.16 (sanatarkasti): "Käytä eunukista ensimmäistä j
 ## JUOKSUPELIN OVIKOHTAUS (omistaja 27.10. klo 10.10, KK:n välitys) (27.10.2026 klo 10.11)
 
 OMISTAJAN PYYNTÖ klo 10.10 (sanatarkasti, tason 1 ovikuvista): "Keisarin pitää itse työntää ovi auki ja samalla juosta ulos, ja kameran ei tarvitse näyttää huonetta. Kamera voi olla siis käytävällä. Lähinnä siinä on se idea, että keisari näyttää pakenevan huoneen sisältä kujalle, missä kamera tulee häntä vastaan." TOIMET (KK): välitetty PK:lle (ovet kiinni, kunnes keisarin kädet osuvat; kamera kujalla häntä vastaan; Codexille täydennys: oven työntö juostessa). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
+
+## EI KONEELLISTA LITTEROINTIA: KAIKKI OTOT OMISTAJALLE (omistaja 27.10. klo 10.29, KK:n välitys) (27.10.2026 klo 10.30)
+
+OMISTAJAN PÄÄTÖS klo 10.29 (sanatarkasti): "Älä luota koneelliseen äänen litterointiin, vaan anna minulle näytteet kuunneltaviksi." → kaikki otot omistajalle kuunneltaviksi, eikä mitään hylätä pelkän Gemini-litteroinnin perusteella. KK: Äänittäjän 4 uusintaa pysäytetty, alkuperäiset tallessa ja kaikki 14 omistajalla videona. RAAMATTU 7.27 ÄÄNISTÄ EI KORTTEJA: lisätty KAIKKI OTOT OMISTAJALLE.
+
+## VALO POIS ENSIN: MUODOT HAVAINNEKUVIEN MUKAISIKSI TASAISESSA VALOSSA (omistaja 27.10. klo 10.56, KK:n välitys) (27.10.2026 klo 10.58)
+
+OMISTAJAN PÄÄTÖS klo 10.56 (sanatarkasti): "Ehdotan, että ennen kuin korjataan valoa, niin otetaan valo kokonaan pois ja korjataan ensin kaikki Rakennukset ja muut elementit samanlaisiksi kuin havainnekuvissa. Aletaan sen jälkeen miettiä valoa uudestaan. Esimerkiksi oheisessa kuvaparissa on todella paljon eroa itse 3D-rakennuksissa." (kuva docs/raportit/kaappaukset/omistaja-20261027/aukio03-pari-rakennukset-eroavat.webp). KK OHJAA: valon leivonta ja aurinkotyö seis, vertailut tasaisessa valossa ilman varjoja, LR rakennukset ja elementit, VS materiaalit, NUI parit, alueet entisessä järjestyksessä; valo mietitään uudelleen vasta sen jälkeen. TEKOTAPA: docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11.4 (Valo pois ensin).
