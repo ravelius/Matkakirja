@@ -1,0 +1,1143 @@
+{
+  "status": "BACK_HOLD_STRUGGLE_REVIEW_READY_NOT_GAME_ACCEPTED",
+  "createdAt": "2026-10-27T12:06:01.304538+00:00",
+  "order": 1034,
+  "partialOrder": true,
+  "models": [
+    {
+      "file": "models/puyi-perus-struggle-back.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/perus-eunukki-1/puyi-struggle-back.glb",
+      "sha256": "55c382fcc96da006613076b97728a60c96bad588cf3e93a9811380b4e90744c7",
+      "bytes": 18382292,
+      "kind": "Puyi",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "hang_grab",
+        "hang_loop",
+        "hang_release",
+        "slide_short",
+        "slide_long",
+        "slide_feet_first",
+        "jump_small",
+        "jump_long",
+        "taunt_run",
+        "door_push_run",
+        "caught_back",
+        "caught_hold_back",
+        "caught_front",
+        "caught_hold_front",
+        "caught_side",
+        "caught_hold_side",
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free"
+      ]
+    },
+    {
+      "file": "models/vartija-struggle-back-perus.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/perus-vartija/vartija-struggle-back.glb",
+      "sha256": "fc48090582590551a9ac686ca0bd1ee41cc45a7ad5ddb7fb6c17e6535a5dc5cd",
+      "bytes": 7924696,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-1-struggle-back-perus.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/perus-eunukki-1/eunukki-1-struggle-back.glb",
+      "sha256": "f39bd8da6183edf6d37cdf0a6926068d12a061b499bc72ad19c8d95509bc7cf1",
+      "bytes": 7821152,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "peek_call",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-2-struggle-back-perus.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/perus-eunukki-2/eunukki-2-struggle-back.glb",
+      "sha256": "ea3f01fecd32721bda2dd4a9ed126f04bea8225011fed7e413a603367793e135",
+      "bytes": 7579888,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-3-struggle-back-perus.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/perus-eunukki-3/eunukki-3-struggle-back.glb",
+      "sha256": "8a1b13574f43a2aaa00d361cf25e830ad18dc1557001e471b5292949554cc1de",
+      "bytes": 7820736,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/puyi-viitta-struggle-back.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/viitta-eunukki-1/puyi-struggle-back.glb",
+      "sha256": "00814be568c6a2c47b0ce339d84ee13fcc3309585635255393b3d097f449fc1c",
+      "bytes": 14387028,
+      "kind": "Puyi",
+      "clips": [
+        "glide_enter",
+        "glide_exit",
+        "glide_left",
+        "glide_loop",
+        "glide_right",
+        "hop_sequence",
+        "idle",
+        "run",
+        "sprint_cape",
+        "door_push_run",
+        "caught_back",
+        "caught_hold_back",
+        "caught_front",
+        "caught_hold_front",
+        "caught_side",
+        "caught_hold_side",
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free"
+      ]
+    },
+    {
+      "file": "models/vartija-struggle-back-viitta.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/viitta-vartija/vartija-struggle-back.glb",
+      "sha256": "f63c9c7a9cbe26c1c2f819f4c952c3585b343e6ec38768507acaa9d95f78f918",
+      "bytes": 7924724,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-1-struggle-back-viitta.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/viitta-eunukki-1/eunukki-1-struggle-back.glb",
+      "sha256": "7864c3d1079d3f97b5bdd041efcd4450aa0801e1860eb27195203fcc3d8d84e3",
+      "bytes": 7821164,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "peek_call",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-2-struggle-back-viitta.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/viitta-eunukki-2/eunukki-2-struggle-back.glb",
+      "sha256": "b1fe1d44a6cf605d7964bf866598335289d08a78f050152d696aaf89b912b231",
+      "bytes": 7579892,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-3-struggle-back-viitta.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-back-v2/viitta-eunukki-3/eunukki-3-struggle-back.glb",
+      "sha256": "0d362903bf6045a1ba04ccdac1a6afeec6da289b2a10c4474b8b6c263dfb5eb9",
+      "bytes": 7820756,
+      "kind": "Guard",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-perus-struggle-back.glb",
+      "guardModel": "models/vartija-struggle-back-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0007813497663871302,
+          0.0,
+          -0.3975792945389101
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-perus-struggle-back.glb",
+      "guardModel": "models/eunukki-1-struggle-back-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005898518487566284,
+          0.0,
+          -0.38964884550892553
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-perus-struggle-back.glb",
+      "guardModel": "models/eunukki-2-struggle-back-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005937556007683694,
+          0.0,
+          -0.38992234056847425
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-perus-struggle-back.glb",
+      "guardModel": "models/eunukki-3-struggle-back-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005917868721770794,
+          0.0,
+          -0.3832234035636498
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-viitta-struggle-back.glb",
+      "guardModel": "models/vartija-struggle-back-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0007813041712786913,
+          0.0,
+          -0.29738691290532865
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-viitta-struggle-back.glb",
+      "guardModel": "models/eunukki-1-struggle-back-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005898564082674723,
+          0.0,
+          -0.28945646387534407
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-viitta-struggle-back.glb",
+      "guardModel": "models/eunukki-2-struggle-back-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005937601602792133,
+          0.0,
+          -0.2897299589348928
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-viitta-struggle-back.glb",
+      "guardModel": "models/eunukki-3-struggle-back-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005917914316879233,
+          0.0,
+          -0.28303102193006835
+        ],
+        "relativeYawDegrees": 0
+      },
+      "surfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      },
+      "continuity": [
+        {
+          "name": "struggle_1",
+          "guardClip": "hold_struggle_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_2",
+          "guardClip": "hold_struggle_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_3",
+          "guardClip": "hold_struggle_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_4",
+          "guardClip": "hold_struggle_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_give_up",
+          "guardClip": "hold_struggle_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_free",
+          "guardClip": "hold_struggle_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "puyi": "struggle_1",
+      "guard": "hold_struggle_1",
+      "durationS": 1.2,
+      "loop": true
+    },
+    {
+      "puyi": "struggle_2",
+      "guard": "hold_struggle_2",
+      "durationS": 1.2,
+      "loop": true
+    },
+    {
+      "puyi": "struggle_3",
+      "guard": "hold_struggle_3",
+      "durationS": 1.3,
+      "loop": true
+    },
+    {
+      "puyi": "struggle_4",
+      "guard": "hold_struggle_4",
+      "durationS": 1.5,
+      "loop": true
+    },
+    {
+      "puyi": "struggle_give_up",
+      "guard": "hold_struggle_give_up",
+      "durationS": 1.5,
+      "loop": false
+    },
+    {
+      "puyi": "struggle_free",
+      "guard": "hold_struggle_free",
+      "durationS": 0.6,
+      "loop": false
+    }
+  ],
+  "controllerContract": {
+    "context": "back catch only; not front/side holds",
+    "synchronizedClocks": true,
+    "entryPose": "caught_hold_back/hold_back at phase0",
+    "loopSwitch": "Switch at loop endpoints, all share exact phase0. Midloop interruption/blend needs receiver contact QA. No runtime IK provided.",
+    "giveUp": "Nonloop, hold last frame; do not jump to idle",
+    "free": "Hold roots until .18s. Puyi Z=.5*(5/.42)*(t-.18)^2 for .18<t<=.6, X=Y=0; ends Z1.05m with speed5m/s. Guard remains at pair.guardOrigin. Contact releases .18-.32s. Continue run at source phase .6 and velocity5, receiver blend QA required.",
+    "rootMotionBaked": false,
+    "sameCoordinates": "Same root placement and common Unity conversion as delivered catch-back; no additional mirror or second yaw."
+  },
+  "technicalQA": {
+    "allPass": true,
+    "pairCount": 8,
+    "clipPairCount": 48,
+    "maxPalmProxyErrorM": 0.0006465528606372741,
+    "wholeMeshFloorMinM": 0.0006950780022207531
+  },
+  "preserved": "Geometry, textures, skin, hierarchy, original clips, all delivered catches/holds, E1 peek_call1080",
+  "open": [
+    "Receiver game/camera/contact/cloth/finger QA",
+    "Responsive midloop interruption and run transition QA",
+    "Front and side hold struggle variants are not in this batch",
+    "Remaining parkour work remains queued"
+  ],
+  "newTripoCalls": 0,
+  "newCredits": 0
+}
