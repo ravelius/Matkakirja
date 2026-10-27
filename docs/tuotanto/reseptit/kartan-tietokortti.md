@@ -292,7 +292,7 @@ Jokainen rivi on yksikkötesti puhtaalle muotoilufunktiolle; funktiot eivät hae
 ```
 
 Wikipedian teksti haetaan suomeksi, ja sen perään liitetään aina englanninkielinen otsikolla "Englanninkielinen artikkeli:" (suomenkielisestä enintään
-2 400 merkkiä, yhteensä 4 000; KK 27.10.: suomenkielisen Windsor-artikkelin virhe, kahdesta lähteestä ristiriita jää pois). Alkuperäinen syy (Karttaseppä 27.10., Etonin vedos 3: suomenkielinen oli kolme virkettä,
+2 400 merkkiä; jos englanninkielinen on vähintään kaksi kertaa pidempi, suomenkielisestä vain ensimmäinen kappale nimimuotoja varten, yhteensä 4 000; KK 27.10.: suomenkielisen Windsor-artikkelin virhe, kahdesta lähteestä ristiriita jää pois). Alkuperäinen syy (Karttaseppä 27.10., Etonin vedos 3: suomenkielinen oli kolme virkettä,
 jolloin Lue lisää jäi ilman uusia faktoja). Jos suomenkielistä artikkelia ei ole, englanniksi (`kieli: "en"`), ja kehote kertoo
 kielen, jotta Pulu kirjoittaa silti suomea. Jos Wikipedia-artikkelia ei ole lainkaan, `wikipedia` puuttuu.
 

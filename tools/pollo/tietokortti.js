@@ -215,7 +215,9 @@ export async function wikiLahde(haku, wiki, pitka) {
   // Pitkä teksti: englanninkielinen aina rinnalle (KK 27.10.: fi-Wikipedian Windsor-virhe; kaksi lähdettä → ristiriita jää pois, kehote).
   const en = !fi || pitka ? await hae('en', wiki?.en) : null;
   if (fi && en) {
-    const fiOsa = fi.teksti.slice(0, fi.teksti.length < TYNKA ? TYNKA : 2400);
+    // Englanninkielinen vähintään kaksi kertaa laajempi: suomenkielisestä vain ensimmäinen kappale (nimimuodot), faktat laajemmasta
+    // (KK 27.10.: fi-Windsorin leipätekstin "saksit perustivat linnoituksen"; linnan rakennutti Vilhelm Valloittaja n. 1070).
+    const fiOsa = en.teksti.length >= 2 * fi.teksti.length ? fi.teksti.split(/\n/)[0].slice(0, 800) : fi.teksti.slice(0, 2400);
     return { ...fi, kielet: ['fi', 'en'], teksti: `${fiOsa}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
   }
   const l = fi ?? en;
