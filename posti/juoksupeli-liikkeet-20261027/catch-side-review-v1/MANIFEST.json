@@ -1,0 +1,848 @@
+{
+  "status": "SIDE_CATCH_REVIEW_READY_GAME_ACCEPTANCE_PENDING",
+  "createdAt": "2026-10-27T11:41:45.581459+00:00",
+  "task": 1033,
+  "partialOrder": true,
+  "models": [
+    {
+      "file": "models/puyi-perus-catch-side.glb",
+      "sha256": "f86cce2a283e61a9b469dca366e4351148f5a5302fecfe379cb4403398ab9b05",
+      "bytes": 16930452,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-vartija/puyi-caught-side.glb",
+      "kind": "Puyi"
+    },
+    {
+      "file": "models/vartija-catch-side-perus.glb",
+      "sha256": "42358f4a54a48b4e452215d3240c721e3b53b4c8ab3d2191af60d320ca8d9090",
+      "bytes": 6508880,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-vartija/vartija-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-1-catch-side-perus.glb",
+      "sha256": "5644967722baaca41ae68ccae727c143c2ea3a1573990a79779f481e7ce33091",
+      "bytes": 7082452,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-1/eunukki-1-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-2-catch-side-perus.glb",
+      "sha256": "b7e11493cf1a2472764018e22bb1c0605da9669bcbd6f0ab2f86417f47d9f2b2",
+      "bytes": 6829692,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-2/eunukki-2-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-3-catch-side-perus.glb",
+      "sha256": "9ff4952deab67bc0f310867f8d077924ded6ff603d6c84b5bef45d9cf106720f",
+      "bytes": 7072284,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-3/eunukki-3-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/puyi-viitta-catch-side.glb",
+      "sha256": "cf20da307a7175c461d37012cfcc40db0737e33f01119e6785c48d5d23304053",
+      "bytes": 12924368,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-vartija/puyi-caught-side.glb",
+      "kind": "Puyi"
+    },
+    {
+      "file": "models/vartija-catch-side-viitta.glb",
+      "sha256": "b9348643e85a11fd7de6e579ecf9fbeaa3a5baf83b0360214d615f9b6f3126a9",
+      "bytes": 6508900,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-vartija/vartija-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-1-catch-side-viitta.glb",
+      "sha256": "f9f3f72831b29920ea471ecc0d2bf00dc08878325c46b02f048901e33365511d",
+      "bytes": 7082460,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-1/eunukki-1-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-2-catch-side-viitta.glb",
+      "sha256": "e87bbc6a4dca81be78238e15c198d3ffcdb13a148fc661f3b510b5cdcd1bd4c8",
+      "bytes": 6829696,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-2/eunukki-2-catch-side.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-3-catch-side-viitta.glb",
+      "sha256": "2e28c66a5948d26bdea1ebce2953e11671995d916bbe017e8a270c44cffc1417",
+      "bytes": 7072304,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-3/eunukki-3-catch-side.glb",
+      "kind": "Guard"
+    }
+  ],
+  "pairs": [
+    {
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-perus-catch-side.glb",
+      "guardModel": "models/vartija-catch-side-perus.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2233992149986723,
+        0.0,
+        0.049765131237597675
+      ],
+      "guardHeldOrigin": [
+        0.5233992149986724,
+        0.0,
+        0.049765131237597675
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 37255,
+        "fore": 30043
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 5.551115123125783e-16,
+        "caught_hold_sideloop": 0.0,
+        "catch_side->hold_side": 7.771561172376096e-16,
+        "hold_sideloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-perus-catch-front.glb",
+          "sha256": "b7abed622159aa820cb5372ffdd1390bc26e4768494720f7e7eccd9bc62e85bf"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/vartija-catch-front-perus.glb",
+          "sha256": "e9d2018bb5038a8ad4906e4bfb17951b882d6a482cb53fb3063e7112bb66fd1d"
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-perus-catch-side.glb",
+      "guardModel": "models/eunukki-1-catch-side-perus.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2154687659686876,
+        0.0,
+        0.05644499949155109
+      ],
+      "guardHeldOrigin": [
+        0.5154687659686877,
+        0.0,
+        0.05644499949155109
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 37255,
+        "fore": 30043
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 5.551115123125783e-16,
+        "caught_hold_sideloop": 0.0,
+        "catch_side->hold_side": 9.992007221626409e-16,
+        "hold_sideloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-perus-catch-front.glb",
+          "sha256": "b7abed622159aa820cb5372ffdd1390bc26e4768494720f7e7eccd9bc62e85bf"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-1-catch-front-perus.glb",
+          "sha256": "6a7b804f9679ef2a9e8817c51c44096ea3452e13fd3f5547482d063f6eb0872d"
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-perus-catch-side.glb",
+      "guardModel": "models/eunukki-2-catch-side-perus.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2157422610282365,
+        0.0,
+        0.0564840370116685
+      ],
+      "guardHeldOrigin": [
+        0.5157422610282365,
+        0.0,
+        0.0564840370116685
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 37255,
+        "fore": 30043
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 5.551115123125783e-16,
+        "caught_hold_sideloop": 0.0,
+        "catch_side->hold_side": 7.216449660063518e-16,
+        "hold_sideloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-perus-catch-front.glb",
+          "sha256": "b7abed622159aa820cb5372ffdd1390bc26e4768494720f7e7eccd9bc62e85bf"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-2-catch-front-perus.glb",
+          "sha256": "0173114750c7316407791ed0cb999113f0be3d6afe1377e09fd42f5e568aec89"
+        }
+      ]
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-perus-catch-side.glb",
+      "guardModel": "models/eunukki-3-catch-side-perus.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.209043324023412,
+        0.0,
+        0.0564643497257556
+      ],
+      "guardHeldOrigin": [
+        0.509043324023412,
+        0.0,
+        0.0564643497257556
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 37255,
+        "fore": 30043
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 5.551115123125783e-16,
+        "caught_hold_sideloop": 0.0,
+        "catch_side->hold_side": 9.992007221626409e-16,
+        "hold_sideloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-perus-catch-front.glb",
+          "sha256": "b7abed622159aa820cb5372ffdd1390bc26e4768494720f7e7eccd9bc62e85bf"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-3-catch-front-perus.glb",
+          "sha256": "6b6138cfc22f9cb83dfc42a3735fc4fd185c3b3502d35a40cfefda16a6b9f6f9"
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-viitta-catch-side.glb",
+      "guardModel": "models/vartija-catch-side-viitta.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2233992605937807,
+        0.0,
+        0.14995751287117914
+      ],
+      "guardHeldOrigin": [
+        0.5233992605937807,
+        0.0,
+        0.14995751287117914
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 22267,
+        "fore": 23387
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 3.3306690738754696e-16,
+        "caught_hold_sideloop": 9.71445146547012e-16,
+        "catch_side->hold_side": 1.1102230246251565e-15,
+        "hold_sideloop": 7.771561172376096e-16
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-viitta-catch-front.glb",
+          "sha256": "42f6e27bf9bf17fab0052571ac8108e25e8808233671a7f8e70f58285d96546b"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/vartija-catch-front-viitta.glb",
+          "sha256": "197bfc7742622abef10a140b12a534d2e0b216d603ba8a3edcb31897fadcdb0d"
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-viitta-catch-side.glb",
+      "guardModel": "models/eunukki-1-catch-side-viitta.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2154688115637962,
+        0.0,
+        0.15663738112513256
+      ],
+      "guardHeldOrigin": [
+        0.5154688115637962,
+        0.0,
+        0.15663738112513256
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 22267,
+        "fore": 23387
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 3.3306690738754696e-16,
+        "caught_hold_sideloop": 9.71445146547012e-16,
+        "catch_side->hold_side": 9.992007221626409e-16,
+        "hold_sideloop": 7.320533068622126e-16
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-viitta-catch-front.glb",
+          "sha256": "42f6e27bf9bf17fab0052571ac8108e25e8808233671a7f8e70f58285d96546b"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-1-catch-front-viitta.glb",
+          "sha256": "f576e069f08ee375bf2ba979ab19c5e6c74b6e42476703c694787df96a360ff8"
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-viitta-catch-side.glb",
+      "guardModel": "models/eunukki-2-catch-side-viitta.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2157423066233448,
+        0.0,
+        0.15667641864524995
+      ],
+      "guardHeldOrigin": [
+        0.5157423066233449,
+        0.0,
+        0.15667641864524995
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 22267,
+        "fore": 23387
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 3.3306690738754696e-16,
+        "caught_hold_sideloop": 9.71445146547012e-16,
+        "catch_side->hold_side": 6.106226635438361e-16,
+        "hold_sideloop": 9.298117831235686e-16
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-viitta-catch-front.glb",
+          "sha256": "42f6e27bf9bf17fab0052571ac8108e25e8808233671a7f8e70f58285d96546b"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-2-catch-front-viitta.glb",
+          "sha256": "1f29cdc6073411a66909c94ce91e4ea7f5af267de38f053010e5110891f0efb1"
+        }
+      ]
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-viitta-catch-side.glb",
+      "guardModel": "models/eunukki-3-catch-side-viitta.glb",
+      "relativeYawDegrees": -90,
+      "puyiInitialOrigin": [
+        0,
+        0,
+        -1.125
+      ],
+      "puyiHeldOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardInitialOrigin": [
+        1.2090433696185205,
+        0.0,
+        0.15665673135933705
+      ],
+      "guardHeldOrigin": [
+        0.5090433696185205,
+        0.0,
+        0.15665673135933705
+      ],
+      "controllerCurve": {
+        "durationS": 0.45,
+        "puyiZ": "-1.125*(1-t/.45)^2 until .45 then0",
+        "guardOffsetX": ".70*(1-t/.45)^2 until .45 then0",
+        "referencePuyiSpeedMps": 5,
+        "controllerMustApply": true
+      },
+      "surfaceAnchors": {
+        "upper": 22267,
+        "fore": 23387
+      },
+      "continuity": {
+        "caught_side->caught_hold_side": 3.3306690738754696e-16,
+        "caught_hold_sideloop": 9.71445146547012e-16,
+        "catch_side->hold_side": 1.0547118733938987e-15,
+        "hold_sideloop": 1.0234868508263162e-15
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/puyi-viitta-catch-front.glb",
+          "sha256": "42f6e27bf9bf17fab0052571ac8108e25e8808233671a7f8e70f58285d96546b"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/catch-front-review-v1/models/eunukki-3-catch-front-viitta.glb",
+          "sha256": "e7229486b742ad545b36d9b584c6013e017d064fa5cb96babce45894231ec345"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "puyi": "caught_side",
+      "guard": "catch_side",
+      "durationS": 0.9,
+      "contactFullyEstablishedS": 0.45
+    },
+    {
+      "puyi": "caught_hold_side",
+      "guard": "hold_side",
+      "durationS": 1.2,
+      "loop": true
+    }
+  ],
+  "controllerContract": {
+    "synchronizedClocks": true,
+    "relativeYawDegrees": -90,
+    "approachSide": "+X of Puyi",
+    "referencePuyiSpeedMps": 5,
+    "T": 0.45,
+    "puyiCurve": "z=-1.125*(1-t/.45)^2 until .45, then0; X=Y=0",
+    "guardCurve": "Add X=.70*(1-t/.45)^2 until .45, then0 to pair.guardHeldOrigin",
+    "mandatory": true,
+    "rootMotionBaked": false,
+    "scenePlacement": "Apply common parent transform to both actors; use existing glTF to Unity conversion consistently. Do not mirror the rig to intercept from the other side; that requires separate animation/placement QA.",
+    "warning": "Final roots at t=0 bypass approach and cause overlap. Speeds other than5m/s require receiver timing QA."
+  },
+  "technicalQA": {
+    "results": [
+      {
+        "pair": "perus-vartija",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-vartija/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0002509854153519187,
+            "palmProxySurfaceAnchorMaxM": 2.085019920195099e-07,
+            "plantedFootJointDriftAfterContactM": 2.0666660963102524e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.795509961879162e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018439521228216765,
+            "palmProxySurfaceAnchorMaxM": 2.3619213950751343e-07,
+            "plantedFootJointDriftAfterContactM": 1.7554167342883506e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.152080352286646e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "perus-eunukki-1",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-1/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0003648570095837097,
+            "palmProxySurfaceAnchorMaxM": 5.969599385563676e-08,
+            "plantedFootJointDriftAfterContactM": 5.405524109462865e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.9614858504677386e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018439521228216765,
+            "palmProxySurfaceAnchorMaxM": 1.0169906081876392e-07,
+            "plantedFootJointDriftAfterContactM": 2.0014830212433605e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.1045278287299425e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "perus-eunukki-2",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-2/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0005771577123106319,
+            "palmProxySurfaceAnchorMaxM": 4.927134538999283e-08,
+            "plantedFootJointDriftAfterContactM": 3.217200208891832e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.897562417254363e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018439521228216765,
+            "palmProxySurfaceAnchorMaxM": 1.0078028669333114e-07,
+            "plantedFootJointDriftAfterContactM": 2.2887833992611187e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.071042880582354e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "perus-eunukki-3",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-3/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0005771577123106319,
+            "palmProxySurfaceAnchorMaxM": 8.869644826987244e-08,
+            "plantedFootJointDriftAfterContactM": 6.135769373843567e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.80055846793681e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018439521228216765,
+            "palmProxySurfaceAnchorMaxM": 1.4105385860769852e-07,
+            "plantedFootJointDriftAfterContactM": 1.722188176232883e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.730496822562657e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "viitta-vartija",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-vartija/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0002509854153519187,
+            "palmProxySurfaceAnchorMaxM": 2.593370447963492e-07,
+            "plantedFootJointDriftAfterContactM": 5.190617956842814e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.8932554735637837e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.00099999219904155,
+            "palmProxySurfaceAnchorMaxM": 2.766729418709e-07,
+            "plantedFootJointDriftAfterContactM": 1.7554167342883506e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.7931078944453134e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "viitta-eunukki-1",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-1/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0003648570095837097,
+            "palmProxySurfaceAnchorMaxM": 4.924648080544648e-08,
+            "plantedFootJointDriftAfterContactM": 5.405524109462865e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.8932554735637837e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.00099999219904155,
+            "palmProxySurfaceAnchorMaxM": 7.018864429168579e-08,
+            "plantedFootJointDriftAfterContactM": 2.0014830212433605e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.7680835118791833e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "viitta-eunukki-2",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-2/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0006457179120451456,
+            "palmProxySurfaceAnchorMaxM": 8.438188253722095e-08,
+            "plantedFootJointDriftAfterContactM": 5.190617956842814e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.897562417254363e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.00099999219904155,
+            "palmProxySurfaceAnchorMaxM": 9.484204564240024e-08,
+            "plantedFootJointDriftAfterContactM": 2.2887833992611187e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.712398410904427e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      },
+      {
+        "pair": "viitta-eunukki-3",
+        "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-3/PAIR-QA.json",
+        "metrics": [
+          {
+            "clips": [
+              "caught_side",
+              "catch_side"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.000633690679736267,
+            "palmProxySurfaceAnchorMaxM": 8.406291637206425e-08,
+            "plantedFootJointDriftAfterContactM": 6.135769373843567e-08,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.8932554735637837e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_side",
+              "hold_side"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.00099999219904155,
+            "palmProxySurfaceAnchorMaxM": 9.228919815784633e-08,
+            "plantedFootJointDriftAfterContactM": 1.415262216750919e-16,
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.54128731894221e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+      }
+    ],
+    "allPass": true,
+    "elapsedSeconds": 22.143758833990432,
+    "peakRSSMiB": 320.359375,
+    "gameVerified": false
+  },
+  "preserved": [
+    "Original geometry,UV,textures,rig and all previous clips",
+    "Delivered catch_back and catch_front with holds",
+    "peek_call1080 on both eunukki1 variants"
+  ],
+  "open": [
+    "Receiver contact,feet,cloth and camera test",
+    "Reference5m/s approach only",
+    "No exhaustive finger/cloth/body triangle collision claim",
+    "Struggles and remaining parkour queued"
+  ],
+  "newTripoCalls": 0,
+  "newCredits": 0
+}

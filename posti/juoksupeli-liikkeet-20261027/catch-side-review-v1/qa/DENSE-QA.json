@@ -1,0 +1,296 @@
+{
+  "results": [
+    {
+      "pair": "perus-vartija",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-vartija/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0002509854153519187,
+          "palmProxySurfaceAnchorMaxM": 2.085019920195099e-07,
+          "plantedFootJointDriftAfterContactM": 2.0666660963102524e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.795509961879162e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018439521228216765,
+          "palmProxySurfaceAnchorMaxM": 2.3619213950751343e-07,
+          "plantedFootJointDriftAfterContactM": 1.7554167342883506e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.152080352286646e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "perus-eunukki-1",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-1/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0003648570095837097,
+          "palmProxySurfaceAnchorMaxM": 5.969599385563676e-08,
+          "plantedFootJointDriftAfterContactM": 5.405524109462865e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.9614858504677386e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018439521228216765,
+          "palmProxySurfaceAnchorMaxM": 1.0169906081876392e-07,
+          "plantedFootJointDriftAfterContactM": 2.0014830212433605e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1045278287299425e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-2/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0005771577123106319,
+          "palmProxySurfaceAnchorMaxM": 4.927134538999283e-08,
+          "plantedFootJointDriftAfterContactM": 3.217200208891832e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.897562417254363e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018439521228216765,
+          "palmProxySurfaceAnchorMaxM": 1.0078028669333114e-07,
+          "plantedFootJointDriftAfterContactM": 2.2887833992611187e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.071042880582354e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/perus-eunukki-3/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0005771577123106319,
+          "palmProxySurfaceAnchorMaxM": 8.869644826987244e-08,
+          "plantedFootJointDriftAfterContactM": 6.135769373843567e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.80055846793681e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018439521228216765,
+          "palmProxySurfaceAnchorMaxM": 1.4105385860769852e-07,
+          "plantedFootJointDriftAfterContactM": 1.722188176232883e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.730496822562657e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "viitta-vartija",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-vartija/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0002509854153519187,
+          "palmProxySurfaceAnchorMaxM": 2.593370447963492e-07,
+          "plantedFootJointDriftAfterContactM": 5.190617956842814e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8932554735637837e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.00099999219904155,
+          "palmProxySurfaceAnchorMaxM": 2.766729418709e-07,
+          "plantedFootJointDriftAfterContactM": 1.7554167342883506e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7931078944453134e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-1/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0003648570095837097,
+          "palmProxySurfaceAnchorMaxM": 4.924648080544648e-08,
+          "plantedFootJointDriftAfterContactM": 5.405524109462865e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8932554735637837e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.00099999219904155,
+          "palmProxySurfaceAnchorMaxM": 7.018864429168579e-08,
+          "plantedFootJointDriftAfterContactM": 2.0014830212433605e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7680835118791833e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-2/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0006457179120451456,
+          "palmProxySurfaceAnchorMaxM": 8.438188253722095e-08,
+          "plantedFootJointDriftAfterContactM": 5.190617956842814e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.897562417254363e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.00099999219904155,
+          "palmProxySurfaceAnchorMaxM": 9.484204564240024e-08,
+          "plantedFootJointDriftAfterContactM": 2.2887833992611187e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.712398410904427e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-side-v1/viitta-eunukki-3/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_side",
+            "catch_side"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.000633690679736267,
+          "palmProxySurfaceAnchorMaxM": 8.406291637206425e-08,
+          "plantedFootJointDriftAfterContactM": 6.135769373843567e-08,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8932554735637837e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_side",
+            "hold_side"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.00099999219904155,
+          "palmProxySurfaceAnchorMaxM": 9.228919815784633e-08,
+          "plantedFootJointDriftAfterContactM": 1.415262216750919e-16,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.54128731894221e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Fixed cloth vertex/palm proxy and foot joints after contact; not exhaustive finger/cloth/body intersection or pre-contact sliding proof. Mandatory actor curves at reference5m/s."
+    }
+  ],
+  "allPass": true,
+  "elapsedSeconds": 22.143758833990432,
+  "peakRSSMiB": 320.359375,
+  "gameVerified": false
+}
