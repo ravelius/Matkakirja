@@ -22,7 +22,7 @@ test('väkiluku: ensisijainen voittaa, muuten uusin', () => {
 test('välimuistin avaimet: sama paikka eri palasta = sama kortti, teksti kohteen tunnuksella', () => {
   assert.equal(korttiAvain({ nimi: 'Richmond ', lat: 51.4613, lon: -0.3037, luokka: 'town' }),
     korttiAvain({ nimi: 'richmond', lat: 51.4611, lon: -0.3041, luokka: 'town' }));
-  assert.match(tekstiAvain('Q2500974', 'pitka'), /teksti:pitka:Q2500974$/);
+  assert.match(tekstiAvain('Q2500974', 'pitka'), /teksti:t2:pitka:Q2500974$/);
 });
 
 test('Pulun kehote on Sisältökirjurin reseptin (2.2)', () => {
@@ -49,6 +49,9 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.equal(tarkistaTeksti(`${s(40)} Eton Collegessa opiskelee poikia. Collegessa on kirkko.`, college, 'Eton').ok, true, 'nimet eivät ole pitkän sanan toistoa');
   assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
+  const alue = JSON.stringify({ faktat: ['noin 32 000 asukasta', 'Alue: Windsor ja Maidenhead'] });
+  assert.match(tarkistaTeksti(`${s(40)} se kuuluu Windsorin ja Maidenheadin piiriin.`, alue).syy, /faktatoisto/);
+  assert.match(tarkistaTeksti(`${s(40)} siellä on noin 32 000 asukasta.`, alue).syy, /faktatoisto/);
   const kunkut = JSON.stringify({ t: 'Englanninkielinen artikkeli: William the Conqueror and Charles II.' });
   assert.equal(tarkistaTeksti(`${s(40)} linnan rakennutti Vilhelm Valloittaja, ja sitä laajensi Kaarle toinen.`, kunkut).ok, true, 'suomenkieliset hallitsijanimet');
   assert.match(tarkistaTeksti(`${s(40)} linnan rakennutti Vilppu, joka asui kylässä.`, JSON.stringify({ t: 'Englanninkielinen artikkeli: the village of Eton.' })).syy, /nimi/, 'ei vastinetta lähteessä');

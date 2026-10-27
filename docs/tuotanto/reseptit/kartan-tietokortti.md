@@ -337,6 +337,10 @@ SUUNNAT. Englanninkielinen "Windsor is 9 km southeast of Maidenhead" tarkoittaa,
 eli Maidenhead on Windsorista luoteeseen. Kirjoitat suunnan aina lähteen tavoin paikasta itsestään ("Windsor on 9 kilometriä
 Maidenheadista kaakkoon") etkä käännä sitä. Jos et ole varma, jätät suunnan pois.
 
+KORTIN FAKTAT EIVÄT TOISTU. Faktakortin rivit näkyvät jo ruudulla: et kirjoita asukaslukua, aluetta (Alue-rivin nimeä,
+esimerkiksi "Windsorin ja Maidenheadin yhtenäishallintopiiri") etkä muita faktarivejä. Kerrot lähteestä jotain muuta: historiaa,
+tunnetuimman kohteen tai sijainnin joen tai muun paikan suhteen.
+
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
 (ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat
 NUMEROINA: vuonna 1889, 1600-luvulla, 330 metriä, noin 5 100; ei koskaan sanoina ("viisi tuhatta sataa" on virhe).
@@ -428,6 +432,7 @@ myös naapurikylien väkeä.
 7. Ei puhuttelua eikä kehotuksia: hylkäys, jos vastauksessa on `katsel`, `huomaat`, `kannattaa`, `kävele`, `näet`, `tuntuu`, `kun ` + 2. persoonan verbi.
 8. **Ei toistoa:** sama tarkka vuosiluku esiintyy koko vastauksessa korkeintaan kerran (vuosisata, esim. `1700-luvun`, saa toistua) ja sama erisnimi (vähintään viisi kirjainta) korkeintaan viidesti (Karttaseppä 27.10. vedokset 5–5c: naapurikaupunki, joki ja hallintoalueen nimi toistuvat luontevasti; kahden kerran raja hylkäsi kaikki tekstit); kaksi lähes samaa virkettä (yhteisiä sanoja yli 60 %) = hylkäys; sama pitkä sana (vähintään 13 kirjainta, 11 ensimmäistä kirjainta samat, ei kohteen nimeä eikä isolla alkavia nimiä) kahdesti = hylkäys (sama fakta kahdesti, KK 27.10.).
 8b. **Ei englannin sanoja suomen päätteellä** (SK 27.10.): pienellä kirjoitettu `college|school|bridge` + suomen pääte (`collegelle`, `bridgen`) tai vieras erisnimi genetiivissä (`Windsor Bridgen`, `Royal Windsor Wayn`) = hylkäys.
+8c. **Kortin faktat eivät toistu** (KK 27.10. omistajan valtuutuksella): asukasluku (luku + asukas-sana) tai Alue-rivin nimi taivutettuna tekstissä = hylkäys. Tekstien avaimen versio t2 uusi kaikki aiemmin tallennetut tekstit.
 9. Viimeinen merkki on piste (tai ###LUE-LISÄÄ###-rivin edellä piste); kesken katkennut teksti = hylkäys.
 10. Kieli: vastaus on suomea (nopea merkkitarkistus: ä/ö/y-osuus tai kielitunnistus).
 
