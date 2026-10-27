@@ -378,3 +378,4 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - J4 (NS 00.5x): pelin valossa komerossa arkku auki proto-3d/lokit/esikatselu-20261028-005705/ (paras j4g-ylhaalta-y81.png; juna-213 5f80444a5, `poikki kavely data file://…/kavely-j4/`,
   skenaario proto-3d/tyokalut/natiiviseppa-ajot/sk-komero-j4.txt). Sovitus OK (pohjalla, ei törmäyksiä). Hopea himmeä beige: DioraamaValaistu ei käytä metallisuutta/karheutta
   (SeikkailuEsineet.cs:762) → PT:lle päätös esineiden metallituesta ennen Codex-korjausta; kahvan venymää ei voi arvioida.
+- PT 01.0x: metallituki ensin (VS kujakivien sävytyksen jälkeen, NS avustaa); Codexilta EI J4-sävykorjausta ennen sitä; J4-kuvaa EI KK:lle ennen metallitukea. Jatka kujakivillä.
