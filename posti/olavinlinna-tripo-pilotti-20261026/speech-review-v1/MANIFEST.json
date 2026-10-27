@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "scope": "Olavinlinna 1004/1005 speech pilot technical review",
+  "files": [
+    {
+      "path": "hahmot/kokki.glb",
+      "sha256": "ffd865970b1f9f4acce6a78b1157fd910ff6e568a0935c4d4acbe104b360e1b4",
+      "bytes": 9849988,
+      "liike": "idle ja kuusi puheen kasvosäädintä",
+      "tyyppi": "hahmo",
+      "triangles": 39832,
+      "bones": 65,
+      "heightM": 0.9782102837423251,
+      "origin": "jalkojen taso",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "accepted": false
+    },
+    {
+      "path": "hahmot/portinvartija.glb",
+      "sha256": "1626ff27afd3658df9fe99d2d80a957bfe1d79e6f43d8ece6f5830d8c3665472",
+      "bytes": 10403360,
+      "liike": "idle ja kuusi puheen kasvosäädintä",
+      "tyyppi": "hahmo",
+      "triangles": 39989,
+      "bones": 65,
+      "heightM": 0.9794314912743974,
+      "origin": "jalkojen taso",
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "accepted": false
+    }
+  ],
+  "modelGenerationCalls": 2,
+  "rigCalls": 2,
+  "tripoCredits": 130,
+  "newImageCallsThisPhase": 0,
+  "newTripoCallsThisPhase": 0,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "ownerAccepted": false
+}

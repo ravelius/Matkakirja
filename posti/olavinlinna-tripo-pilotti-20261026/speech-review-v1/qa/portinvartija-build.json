@@ -1,0 +1,114 @@
+{
+  "status": "BUILT_REVIEW_PENDING",
+  "at": "2026-10-27T19:45:14.068005+00:00",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-10041005-20261026/portinvartija/candidate01/rig-idle.glb",
+  "sourceSHA256": "5ae6ee2cf8adc343b02bcccefdf9db824a97c360b9b748b2b035d82d133ba682",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-10041005-20261026/work/face-morphs-v5/portinvartija/face-controls-review.glb",
+  "outputSHA256": "1626ff27afd3658df9fe99d2d80a957bfe1d79e6f43d8ece6f5830d8c3665472",
+  "bytes": 10403360,
+  "landmarks": {
+    "cx": -0.001,
+    "mouthY": 0.8517,
+    "mouthHalfWidth": 0.0167,
+    "jawHingeZ": 0.021,
+    "chinY": 0.815,
+    "eyeX": [
+      0.019,
+      -0.019
+    ],
+    "eyeY": [
+      0.8933,
+      0.8923
+    ],
+    "eyeHW": 0.0102,
+    "eyeHH": 0.0034
+  },
+  "controls": [
+    "jawOpen",
+    "mouthClose",
+    "mouthFunnel",
+    "mouthPucker",
+    "eyeBlinkLeft",
+    "eyeBlinkRight"
+  ],
+  "parts": [
+    {
+      "role": "original-surface-with-split-lips",
+      "vertices": 23545,
+      "triangles": 39627,
+      "nonzeroVertices": {
+        "jawOpen": 288,
+        "mouthClose": 152,
+        "mouthFunnel": 220,
+        "mouthPucker": 220,
+        "eyeBlinkLeft": 0,
+        "eyeBlinkRight": 0
+      }
+    },
+    {
+      "role": "oral-cavity",
+      "vertices": 184,
+      "triangles": 138,
+      "nonzeroVertices": {
+        "jawOpen": 136,
+        "mouthClose": 136,
+        "mouthFunnel": 184,
+        "mouthPucker": 184,
+        "eyeBlinkLeft": 0,
+        "eyeBlinkRight": 0
+      }
+    },
+    {
+      "role": "skin-textured-eyelids",
+      "vertices": 150,
+      "triangles": 224,
+      "nonzeroVertices": {
+        "jawOpen": 0,
+        "mouthClose": 0,
+        "mouthFunnel": 0,
+        "mouthPucker": 0,
+        "eyeBlinkLeft": 75,
+        "eyeBlinkRight": 75
+      }
+    }
+  ],
+  "sourceOriginalVertexCount": 23071,
+  "oldGeometryAttributesAtOriginalVerticesPreserved": true,
+  "sourceBinaryPrefixPreserved": true,
+  "rigNodesSkinsIdleImagesPreserved": true,
+  "discardedInterpolatedSkinWeight": 0.0,
+  "oralCutSegments": 23,
+  "eyelids": [
+    {
+      "morph": "eyeBlinkLeft",
+      "first": 0,
+      "count": 75,
+      "columns": 15,
+      "rows": 5,
+      "center": [
+        0.019,
+        0.8933
+      ],
+      "halfWidth": 0.0102,
+      "halfHeight": 0.0034
+    },
+    {
+      "morph": "eyeBlinkRight",
+      "first": 75,
+      "count": 75,
+      "columns": 15,
+      "rows": 5,
+      "center": [
+        -0.019,
+        0.8923
+      ],
+      "halfWidth": 0.0102,
+      "halfHeight": 0.0034
+    }
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "localCredits": 0,
+  "qaPassed": false,
+  "gameIntegrated": false
+}

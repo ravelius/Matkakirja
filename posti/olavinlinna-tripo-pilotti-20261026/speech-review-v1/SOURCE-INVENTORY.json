@@ -1,0 +1,70 @@
+{
+  "generatedNow": false,
+  "newImageCalls": 0,
+  "historicalImageCalls": 9,
+  "selectedImages": 6,
+  "items": [
+    {
+      "id": "kokki-front-v2",
+      "path": "references/kokki/kokki-front-v2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/kokki/references/kokki-front-v2.png",
+      "sha256": "332feb6586abecc3c3f6e28402ac0cbe941433d68f2052f3f062338c1aafdea3",
+      "bytes": 2029296,
+      "historicalQA": "Complete body and feet, separate digits/palms visible, clean visible face, consistent period-inspired palette; accepted front reference, not yet a 3D model",
+      "visualReviewedAt": "2026-10-26T20:50:07.106110+00:00"
+    },
+    {
+      "id": "kokki-threequarter-v1",
+      "path": "references/kokki/kokki-threequarter-v1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/kokki/references/kokki-threequarter-v1.png",
+      "sha256": "6f1d7af43370a777a609673681d8a079152ccb5db172eb15c6bfd6e38acc1368",
+      "bytes": 1996843,
+      "historicalQA": "Cook threequarter shows character right; valid costume and front+side view.",
+      "visualReviewedAt": "2026-10-26T20:50:07.119232+00:00"
+    },
+    {
+      "id": "kokki-back-v2",
+      "path": "references/kokki/kokki-back-v2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/kokki/references/kokki-back-v2.png",
+      "sha256": "9e997bd6dbdf29a43d94b0c0e35acc34d52fff870cfe0c9b030618e67d60ad12",
+      "bytes": 2040444,
+      "historicalQA": "Complete rear view; costume and hip accessories consistent. Nails are visible on rear-facing fingers, but palm-like skin creases remain ambiguous. Accept for bounded 3D pilot; inspect resulting hand topology and orientation, do not claim perfect source anatomy.",
+      "visualReviewedAt": "2026-10-26T20:50:07.132824+00:00"
+    },
+    {
+      "id": "portinvartija-front-v1",
+      "path": "references/portinvartija/portinvartija-front-v1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/portinvartija/references/portinvartija-front-v1.png",
+      "sha256": "287d264a1455301e856bb645fcd5a05d48785a8cb5487312fe94fb2de8b0785e",
+      "bytes": 2046706,
+      "historicalQA": "Complete body and feet, separate digits/palms visible, clean visible face, consistent period-inspired palette; accepted front reference, not yet a 3D model",
+      "visualReviewedAt": "2026-10-26T20:50:07.113126+00:00"
+    },
+    {
+      "id": "portinvartija-threequarter-v1",
+      "path": "references/portinvartija/portinvartija-threequarter-v1.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/portinvartija/references/portinvartija-threequarter-v1.png",
+      "sha256": "9648b93df5d03de711854d523cbda82ba0cf3c88a92eb993d55c4bbdc936e03e",
+      "bytes": 1973735,
+      "historicalQA": "Consistent front+left quarter view and keys at anatomical left hip.",
+      "visualReviewedAt": "2026-10-26T20:50:07.125989+00:00"
+    },
+    {
+      "id": "portinvartija-back-v2",
+      "path": "references/portinvartija/portinvartija-back-v2.png",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-20261019/portinvartija/references/portinvartija-back-v2.png",
+      "sha256": "1b6dcabefc07753aa55a6ee111b47b839ed39e09f15f84aa01e3c60fb8693a3e",
+      "bytes": 1963622,
+      "historicalQA": "Complete rear view; costume and hip accessories consistent. Nails are visible on rear-facing fingers, but palm-like skin creases remain ambiguous. Accept for bounded 3D pilot; inspect resulting hand topology and orientation, do not claim perfect source anatomy.",
+      "visualReviewedAt": "2026-10-26T20:50:07.138934+00:00"
+    }
+  ],
+  "qa": "REUSABLE_WITH_CAVEATS",
+  "caveats": [
+    "Rear hand skin creases ambiguous; require actual 3D hand orientation and separation check.",
+    "Sources show fictional period-inspired costumes; exact historical reconstruction and match to MetaHuman v48r-v48v not independently verified.",
+    "Three-quarter reference is not an orthographic side view; inspect live Tripo input requirements before upload.",
+    "Visible lips in an image do not prove mouth geometry, visemes, facial rig or speech animation."
+  ],
+  "notModelDelivery": true
+}

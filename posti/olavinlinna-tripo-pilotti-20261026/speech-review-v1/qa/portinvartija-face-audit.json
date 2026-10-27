@@ -1,0 +1,79 @@
+{
+  "status": "PASS_LOCAL_GEOMETRY_AND_PRESERVATION",
+  "at": "2026-10-27T19:45:23.244901+00:00",
+  "sourceSHA256": "5ae6ee2cf8adc343b02bcccefdf9db824a97c360b9b748b2b035d82d133ba682",
+  "candidateSHA256": "1626ff27afd3658df9fe99d2d80a957bfe1d79e6f43d8ece6f5830d8c3665472",
+  "triangles": 39989,
+  "primitives": 3,
+  "bones": 65,
+  "weightSumMaxError": 1.1920928955078125e-07,
+  "allSixTargetsNonEmpty": {
+    "jawOpen": 421,
+    "mouthClose": 286,
+    "mouthFunnel": 404,
+    "mouthPucker": 404,
+    "eyeBlinkLeft": 75,
+    "eyeBlinkRight": 75
+  },
+  "originalVertexIdleParity": [
+    {
+      "t": 0.0,
+      "maxM": 3.4023583985204336e-16
+    },
+    {
+      "t": 3.8333332538604736,
+      "maxM": 3.3486903561235222e-16
+    },
+    {
+      "t": 7.666666507720947,
+      "maxM": 3.3335590258932494e-16
+    },
+    {
+      "t": 11.499999761581421,
+      "maxM": 3.4021815010030383e-16
+    },
+    {
+      "t": 15.333333015441895,
+      "maxM": 3.377725334395575e-16
+    }
+  ],
+  "sourceRigIdleImagesMaterialsPreserved": true,
+  "sourceRootScale": [
+    1,
+    1,
+    1
+  ],
+  "heightM": 0.9794314912743974,
+  "jawOpeningMAtSourceScale": {
+    "min": 0.009561177740032997,
+    "median": 0.009618930750056832,
+    "max": 0.009623250933830194
+  },
+  "jawOpeningAt1p8m": 0.017677678841604236,
+  "jawPlusMouthCloseSeamMaxGapM": 0.0,
+  "eyelidCoverage": [
+    {
+      "name": "eyeBlinkLeft",
+      "samplePoints": 635,
+      "uncovered": 0,
+      "minimumClearanceM": 0.0006021429097494563,
+      "missExamples": []
+    },
+    {
+      "name": "eyeBlinkRight",
+      "samplePoints": 635,
+      "uncovered": 0,
+      "minimumClearanceM": 0.0005227697424942876,
+      "missExamples": []
+    }
+  ],
+  "knownLimitations": [
+    "No teeth or tongue; simple dark oral cavity.",
+    "Six required controls only, not full ARKit facial performance.",
+    "Talking and idle in receiver scene, kitchen-light matched comparison, KK and owner approval remain pending."
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "runtimeAccepted": false
+}

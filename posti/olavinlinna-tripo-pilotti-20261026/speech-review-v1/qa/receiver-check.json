@@ -1,0 +1,213 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tripo-pilotti-10041005-20261026/speech-review-v1",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "kokki.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "kokki.glb",
+     "liike": "liikkuu",
+     "tyyppi": "hahmo",
+     "kolmiot": 39832,
+     "piirrot": 3,
+     "materiaalit": 2,
+     "solmut": 67,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.337,
+       0,
+       -0.126
+      ],
+      "max": [
+       0.337,
+       0.978,
+       0.126
+      ],
+      "koko": [
+       0.675,
+       0.978,
+       0.253
+      ]
+     },
+     "luut": 65,
+     "animaatiot": [
+      "idle"
+     ]
+    },
+    "polku": "hahmot/kokki.glb"
+   },
+   {
+    "nimi": "portinvartija.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "portinvartija.glb",
+     "liike": "liikkuu",
+     "tyyppi": "hahmo",
+     "kolmiot": 39989,
+     "piirrot": 3,
+     "materiaalit": 2,
+     "solmut": 67,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.343,
+       0,
+       -0.111
+      ],
+      "max": [
+       0.343,
+       0.979,
+       0.111
+      ],
+      "koko": [
+       0.687,
+       0.979,
+       0.222
+      ]
+     },
+     "luut": 65,
+     "animaatiot": [
+      "idle"
+     ]
+    },
+    "polku": "hahmot/portinvartija.glb"
+   },
+   {
+    "nimi": "kokki-kasvot.png",
+    "polku": "esikatselu/kokki-kasvot.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1440,
+     "h": 1170
+    }
+   },
+   {
+    "nimi": "kokki-koko-hahmo.png",
+    "polku": "esikatselu/kokki-koko-hahmo.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 930
+    }
+   },
+   {
+    "nimi": "portinvartija-kasvot.png",
+    "polku": "esikatselu/portinvartija-kasvot.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1440,
+     "h": 1170
+    }
+   },
+   {
+    "nimi": "portinvartija-koko-hahmo.png",
+    "polku": "esikatselu/portinvartija-koko-hahmo.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 930
+    }
+   },
+   {
+    "nimi": "kokki-back-v2.png",
+    "polku": "references/kokki/kokki-back-v2.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   },
+   {
+    "nimi": "kokki-front-v2.png",
+    "polku": "references/kokki/kokki-front-v2.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   },
+   {
+    "nimi": "kokki-threequarter-v1.png",
+    "polku": "references/kokki/kokki-threequarter-v1.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   },
+   {
+    "nimi": "portinvartija-back-v2.png",
+    "polku": "references/portinvartija/portinvartija-back-v2.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   },
+   {
+    "nimi": "portinvartija-front-v1.png",
+    "polku": "references/portinvartija/portinvartija-front-v1.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   },
+   {
+    "nimi": "portinvartija-threequarter-v1.png",
+    "polku": "references/portinvartija/portinvartija-threequarter-v1.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1024,
+     "h": 1536
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: kokki.glb kyllä (hahmo), portinvartija.glb kyllä (hahmo)"
+  ]
+ }
+]

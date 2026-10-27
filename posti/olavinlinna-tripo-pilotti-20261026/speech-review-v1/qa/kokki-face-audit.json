@@ -1,0 +1,79 @@
+{
+  "status": "PASS_LOCAL_GEOMETRY_AND_PRESERVATION",
+  "at": "2026-10-27T19:45:22.955824+00:00",
+  "sourceSHA256": "cfbbd53cfaa09b67f2d8deb9910bd5e6d85c3d2772f3f9610fac6194a5f196a1",
+  "candidateSHA256": "ffd865970b1f9f4acce6a78b1157fd910ff6e568a0935c4d4acbe104b360e1b4",
+  "triangles": 39832,
+  "primitives": 3,
+  "bones": 65,
+  "weightSumMaxError": 1.1920928955078125e-07,
+  "allSixTargetsNonEmpty": {
+    "jawOpen": 323,
+    "mouthClose": 277,
+    "mouthFunnel": 381,
+    "mouthPucker": 381,
+    "eyeBlinkLeft": 85,
+    "eyeBlinkRight": 85
+  },
+  "originalVertexIdleParity": [
+    {
+      "t": 0.0,
+      "maxM": 3.376656067372904e-16
+    },
+    {
+      "t": 3.8333332538604736,
+      "maxM": 3.3768899984651193e-16
+    },
+    {
+      "t": 7.666666507720947,
+      "maxM": 3.5135752366389115e-16
+    },
+    {
+      "t": 11.499999761581421,
+      "maxM": 3.377324398933778e-16
+    },
+    {
+      "t": 15.333333015441895,
+      "maxM": 3.35945672305943e-16
+    }
+  ],
+  "sourceRigIdleImagesMaterialsPreserved": true,
+  "sourceRootScale": [
+    1,
+    1,
+    1
+  ],
+  "heightM": 0.9782102837423251,
+  "jawOpeningMAtSourceScale": {
+    "min": 0.01084266164537046,
+    "median": 0.010932170291979751,
+    "max": 0.01111134750281332
+  },
+  "jawOpeningAt1p8m": 0.020116233546719695,
+  "jawPlusMouthCloseSeamMaxGapM": 0.0,
+  "eyelidCoverage": [
+    {
+      "name": "eyeBlinkLeft",
+      "samplePoints": 635,
+      "uncovered": 0,
+      "minimumClearanceM": 0.0007274244177236933,
+      "missExamples": []
+    },
+    {
+      "name": "eyeBlinkRight",
+      "samplePoints": 635,
+      "uncovered": 0,
+      "minimumClearanceM": 0.0005346830653003148,
+      "missExamples": []
+    }
+  ],
+  "knownLimitations": [
+    "No teeth or tongue; simple dark oral cavity.",
+    "Six required controls only, not full ARKit facial performance.",
+    "Talking and idle in receiver scene, kitchen-light matched comparison, KK and owner approval remain pending."
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "runtimeAccepted": false
+}
