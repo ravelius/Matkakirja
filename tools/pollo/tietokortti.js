@@ -34,7 +34,9 @@ export function korttiAvain({ nimi, lat, lon, luokka }) {
   const n = String(nimi ?? '').trim().toLowerCase().normalize('NFC');
   return `tietokortti:${TIETOKORTTI_VERSIO}:${luokka}:${n}:${Number(lat).toFixed(2)}:${Number(lon).toFixed(2)}`;
 }
-export const tekstiAvain = (qid, laji) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${laji}:${qid}`;
+/** Tekstin oma versio: nosto uusii kaikki tallennetut tekstit (t2 27.10.: KK:n päätös, kortin faktat eivät toistu Pulun tekstissä). */
+export const TEKSTI_VERSIO = 't2';
+export const tekstiAvain = (qid, laji) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${TEKSTI_VERSIO}:${laji}:${qid}`;
 
 function etaisyysM(e, lat, lon) {
   const v = e?.claims?.P625?.[0]?.mainsnak?.datavalue?.value;
@@ -248,6 +250,10 @@ SUUNNAT. Englanninkielinen "Windsor is 9 km southeast of Maidenhead" tarkoittaa,
 eli Maidenhead on Windsorista luoteeseen. Kirjoitat suunnan aina lähteen tavoin paikasta itsestään ("Windsor on 9 kilometriä
 Maidenheadista kaakkoon") etkä käännä sitä. Jos et ole varma, jätät suunnan pois.
 
+KORTIN FAKTAT EIVÄT TOISTU. Faktakortin rivit näkyvät jo ruudulla: et kirjoita asukaslukua, aluetta (Alue-rivin nimeä,
+esimerkiksi "Windsorin ja Maidenheadin yhtenäishallintopiiri") etkä muita faktarivejä. Kerrot lähteestä jotain muuta: historiaa,
+tunnetuimman kohteen tai sijainnin joen tai muun paikan suhteen.
+
 LUVUT JA VUODET. Käytät lukuja ja vuosilukuja vain, jos ne ovat lähteessä. Et toista faktakortin lukuja sellaisinaan
 (ne näkyvät jo kortilla); kerrot mieluummin, mitä ne tarkoittavat tai mitä paikalla näkee ja kokee. Kaikki luvut ja vuodet kirjoitat
 NUMEROINA: vuonna 1889, 1600-luvulla, 330 metriä, noin 5 100; ei koskaan sanoina ("viisi tuhatta sataa" on virhe).
@@ -330,6 +336,19 @@ const NIMIMUODOT = { Kaar: ['Charles', 'Carl'], 'Yrjö': ['George'], Juha: ['Joh
 /** Vertailuasu: pienet kirjaimet, w → v, c → k, ph → f (Vilhelm ~ William, Rikhard ~ Richard). */
 const kirjoitusasu = (t) => String(t).toLowerCase().replace(/ph/g, 'f').replace(/w/g, 'v').replace(/c/g, 'k');
 
+/** Faktakortin Alue-rivin nimi syötteestä (pulunViesti: faktat-taulukko), tai null. */
+function korttiAlue(syote) {
+  try {
+    const r = (JSON.parse(String(syote ?? '')).faktat ?? []).find((x) => String(x).startsWith('Alue: '));
+    return r ? String(r).slice(6).trim() : null;
+  } catch { return null; }
+}
+/** Alueen nimi taivutettuna: jokainen vähintään nelikirjaiminen sana alkunsa mukaan (Windsor ja Maidenhead → Windsorin ja Maidenheadin). */
+function alueRegex(alue) {
+  const osat = alue.split(/\s+/).map((w) => (w.length >= 4 ? `${w.slice(0, w.length - 1).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\p{L}*` : w));
+  return new RegExp(`(?<!\\p{L})${osat.join('\\s+')}`, 'iu');
+}
+
 const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
@@ -347,6 +366,7 @@ export function korjausPalaute(syy) {
     toisto: `"${mika}" toistuu: sama erisnimi enintään kahdesti, sama vuosiluku ja sama pitkä sana vain kerran koko vastauksessa. Käytä viittausta (se, kaupunki) tai jätä toisto pois.`,
     nimi: `Nimeä "${mika}" ei ole lähteessä: käytä vain lähteen nimiä.`,
     luku: `Lukua ${mika} ei ole lähteessä: käytä vain lähteen lukuja.`,
+    faktatoisto: `Älä toista kortin faktariviä (${mika}): kerro lähteestä jotain muuta, esimerkiksi historiaa tai tunnetuin kohde.`,
     vieras: 'Älä taivuta englannin sanoja (collegelle, Windsor Bridgen): käytä suomea (oppilaitos, silta) tai nimeä taivuttamattomana (Windsor Bridge -silta).',
     merkit: 'Poista sulkeet, tähdet, ajatusviivat ja lyhenteet (n., ns., esim.).',
     sana: `Poista sana "${mika}".`,
@@ -406,6 +426,10 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   // 2.4 (SK 27.10.): englannin sana suomen päätteellä ("collegelle") tai vieras nimi genetiivissä ("Windsor Bridgen") = hylkäys.
   if (/(?<!\p{L})(college|school|bridge)(n|lle|lla|lta|sta|ssa|ksi|a|t|ja)(?!\p{L})/u.test(ilman)
     || /(?<!\p{L})[A-Z]\p{L}* (Bridge|College|School|Way|Street|Road)n(?!\p{L})/u.test(ilman)) return { ok: false, syy: 'vieras sana' };
+  // Kortin faktat eivät toistu (KK 27.10. omistajan valtuutuksella): asukasluku ja Alue-rivin nimi = hylkäys.
+  if (/\d[\d\s]*\s(asukkaan|asukasta|asukas|asukkaiden)(?!\p{L})/u.test(ilman)) return { ok: false, syy: 'faktatoisto asukasluku' };
+  const alue = korttiAlue(syote);
+  if (alue && alueRegex(alue).test(ilman)) return { ok: false, syy: `faktatoisto ${alue}` };
   // 2.4/7: ei puhuttelua eikä kehotuksia.
   if (/katsel|huomaat|kannattaa|kävele|(?<!\p{L})näet(?!\p{L})|tuntuu|(?<!\p{L})kun \p{L}+t(?!\p{L})/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
   // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
