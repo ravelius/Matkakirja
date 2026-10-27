@@ -2931,3 +2931,7 @@ OMISTAJAN PYYNTÖ klo 15.43 (sanatarkasti, 2 kuvaa juoksupelistä): 'oletteko hu
 ## JUOKSUPELI: REUNAKIVI PITKINÄ YKSITTÄISINÄ KIVINÄ, KAIKKI KIVET SAMAA SÄVYMAAILMAA (omistaja 27.10. klo 16.03) (27.10.2026 klo 16.03)
 
 Kortti KK:ssa ('Onko reunakivi nyt havainnekuvan mukainen?', kuva scratchpad/keskustelukanava/kuvat-20261027/havainnepari-02-reunakivi-1558.png = VS seinat-211 31601c9e7 + juuri-v77m), omistaja sanatarkasti: 'ei ole, pitäisi olla havannekuvan tyylisiä pitkiä yksittäisiä kiviä ja kaikkien kivien tulisi olla samaa sävymaailmaa, nyt kaikki kolme erivärisiä kiviä'. KK:n tavoite: reunus havainnekuvan tapaan pitkinä yksittäisinä kivinä (ei pieninä lohkoina); lattia, kivijalka ja reunus samaa harmaata sävymaailmaa kuin havainteessa (nyt beige lattia, vaalea kivijalka ja harmaa reunus); kaikki kujat ja aukiot. Työnjako: Lavastaja muoto ja kivijako, Valoseppä sävyt. OPPI (periaate 1): erolistan vertailuun myös kivijako (kiven koko ja muoto) ja eri pintojen keskinäinen sävy, ei vain yksittäisen pinnan väri.
+
+## JUOKSUPELI: KIINNIOTON KAMERA ENNALLAAN, KEISARILLE ISOMMAT KÄSIEN RIMPUILUT (omistaja 27.10. klo 16.05) (27.10.2026 klo 16.06)
+
+Kortti KK:ssa (PK:n video a210bfa50 yläkulmasta): 'Nouseeko kamera kiinnioton ajaksi korkeammalle, jotta keisari näkyy eunukin yli?' → omistaja sanatarkasti: 'ei mutta keisari saisi rimpuilla käsillä enemmän'. Toteutus: kamera pysyy juoksun yläkulmassa (15.41); Pelikoodari tilaa Codexin rimpuilu v2:een isot käsien liikkeet, jotka näkyvät eunukin yli.
