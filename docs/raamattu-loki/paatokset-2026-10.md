@@ -2884,3 +2884,7 @@ Kysymys: "Mikä tulee tekstin latausmerkiksi?" Vastaus: "b: Pelkät pisteet" (se
 ## JUOKSUPELI: KIVETYKSEN KIILTO JA UNITY 7 -VALMIUS (omistaja 27.10. klo 13.48, KK:n ohjaus) (27.10.2026 klo 13.52)
 
 OMISTAJAN PYYNTÖ klo 13.48 (sanatarkasti): "miten paljon juoksupelin grafiikka tulee parantumaan tulevan unity 7 päivityksen myötä? siihen kai ainakin voi silloin laittaa loputtomasti polygoneja kuten unrealissa, mutta mitä muuta? saako maakiviin tehtyä kiiltoa kuten nyt muutamissa havainne kuvissa yms? tämän voisi ottaa jo nyt huomioon pelin teossa varmaan jollain tavalla." KK ohjasi Valosepälle (juoksupeli KK:n johdossa): kivetyksen kiilto havainnekuvien mukaan osana pintatyötä (kujat ensin, juhlasali 04 URP:n ruutuheijastuksilla vuorollaan), pinnat tehdään Unity 7 -valmiiksi.
+
+## TIETOKORTIN TEKSTI ON ASIATEKSTIÄ, EI PULUN PUHETTA (omistaja 27.10. klo 13.52, KK:n välitys) (27.10.2026 klo 13.54)
+
+OMISTAJAN TARKENNUS klo 13.52 (sanatarkasti): "stiirinostoihin vielä se tiedoksi, että vaikka teksti tehdään pulun workerillä, niin teksti ei ole pulun koska on puhtaasti asiatekstiä. vasta kun pululta kysytään lisää nostosta pulun kysymysten kautta, vasta silloin tekstistä tulee pulun tekstiä. pieni ero, mutta ajattelin tarkentaa varmuuden vuoksi." Raamattu 2.203 päivitetty: striimattu teksti neutraalia asiatekstiä, Pulun tyyli vasta Pulun kysymysten vastauksissa. KS (worker, resepti) ja NUI (tietokortti) toteuttavat.
