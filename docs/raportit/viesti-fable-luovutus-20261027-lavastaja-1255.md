@@ -375,3 +375,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   näyttävät irrallisilta kermanvalkoisilta laatoilta (tarkista pelin valossa VS:n korjauksen jälkeen). Olavinlinna J4: arkun glb:tä ei löytynyt _tyo/_valmiit-hauilla → kysy NS:ltä polku.
 - JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min, myös muurikatteen parikopio), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
   (REF=<VS:n uusi SHA> ympäristössä).
+
+## LISÄYS 25 klo 23.4x: Olavinlinna J4 arkkuun (valmisteltu, ei vielä pelissä)
+- NS 23.3x: arkku = kavely/merkit.json esine:arkku-komero (_valmiit/olavinlinna-blender-v44/kavely, paikka (−50,397; 14,8; −5,381), kierto_y −1,7453), Kellotornin komero.
+- Mitattu runko: sisäpohja y 0,05, sisäseinät x ±0,275, z ±0,200 (sisätila 0,55 × 0,40), reuna 0,361. J4 0,476 × 0,223 × 0,400 → skaala 0,97 juurisolmuun.
+- _tyo/linnanrakentaja/olavinlinna-j4/: j4_arkkuun.py, esine-arkun-hopeasisalto.glb (T7-lähde SHA 96a0674a…), merkki.json (esine:arkun-hopeasisalto, paikka y +0,051).
+- AVOIN: merkki kavely-pakettiin + mahdollinen ASTC (glb_kuvat_astc6) + vienti JU:lle vasta pelin valon parin ja KK:n jälkeen; kannun kahvan venymä (Codexin J4-four-views) ja
+  arkkujen laakeat sävyt arvioidaan samassa kuvassa; korjauspyyntö Codexille vasta sitten. J3 odottaa Codexin korjattua (ee62a9541).
