@@ -2755,3 +2755,11 @@ KK:n päätös omistajan valtuutuksella klo 02.12 (sanatarkasti): karttojen tiet
 ## LEIVONNAN PUHDAS LAAJENEE: PALOJEN VÄLISET PÄÄLLEKKÄISET PINNAT JA VALO AURINGONSÄDETTÄ VASTEN (KK, periaate 10) (27.10.2026 klo 02.45)
 
 KK klo 02.45 (sanatarkasti): leivonnan PUHDAS laajenee. VS:n tarkistin hakee nyt myös palojen väliset päällekkäiset pinnat ja vertaa leivottua valoa auringonsäteeseen. Syy: kujan 02 iso vaalea läikkä oli naapuripalan 1-3 lattia palan 0-3 lattian tasossa, eikä vanha tarkistus nähnyt sitä (VS selitti sen ensin auringoksi). Kuja saa oman taustapalan omalla 1024-atlaksella (KK 02.40); LR leipoo kerran, kun 1-3:n lattia on poistettu.
+
+## KARTAN TIETOKORTTI (2.203 TARKENNUS): PULU EI TOISTA YLÄRIVIN FAKTOJA (KK omistajan valtuutuksella) (27.10.2026 klo 04.10)
+
+KK:n päätös omistajan valtuutuksella klo 04.09 (sanatarkasti): Pulun tietokorttiteksti ei toista kortin ylärivin faktoja (laji, asukasluku, alue), vaan kertoo lähteestä jotain muuta. KS korjaa ohjeen ja toistotarkistuksen ja tekee toistavat tallennetut tekstit uudelleen. Windsor korjattu: Vilhelm Valloittaja, noin 32 000 asukasta.
+
+## TARKENNUS 27.10. KLO 02.45 KIRJAUKSEEN: KUJAN 02 LÄIKKÄ OLI REIKÄ LATTIASSA (KK) (27.10.2026 klo 04.10)
+
+KK klo 04.09 (sanatarkasti): tarkennus 02.45-riviin: kujan 02 läikkä oli reikä palan lattiassa (pelin täytelattia näkyi läpi), ei päällekkäinen lattia. v64 paikkasi sen. Kuunportti pois puutarhoista (KK 03.39).
