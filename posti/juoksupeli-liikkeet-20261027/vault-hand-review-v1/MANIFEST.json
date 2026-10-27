@@ -1,0 +1,159 @@
+{
+  "createdAt": "2026-10-27T16:18:10.220018+00:00",
+  "status": "TECHNICAL_REVIEW_READY_GAME_QA_PENDING",
+  "models": [
+    {
+      "file": "models/puyi-perus-parkour.glb",
+      "sha256": "cf0cbc25384ba47c56e21f46da8fdd908e99c5f3d33ad56767f48e800cd27d19",
+      "bytes": 10010188,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand"
+      ],
+      "addedClip": "vault_hand",
+      "durationS": 0.9599999785423279,
+      "dense": {
+        "allPass": true,
+        "samples": 923,
+        "minFloorM": 0.000993752010674821,
+        "maxHandContactErrorM": 0.00011179274126119933,
+        "fullContactSampleWindowS": [
+          0.295,
+          0.345
+        ],
+        "maximumEquivalent240HzStepDegrees": 10.83426803512476,
+        "entryVaultDelta": 7.355094616690039e-09,
+        "exitVaultDelta": 0.0,
+        "gameVerified": false,
+        "limits": "Palm proxy, floor and sampled rotation continuity; separate obstacle and visual checks required. Does not prove cloth self-collision or game transitions.",
+        "elapsedSeconds": 8.310180749977008,
+        "peakRSSMiB": 107.421875
+      },
+      "obstacle": {
+        "status": "PASS",
+        "variant": "perus",
+        "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v11/perus/puyi-final.glb",
+        "samples": 462,
+        "wholeTriangleBoxTest": true,
+        "obstacleBounds": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0.002,
+            0.498
+          ],
+          "z": [
+            1.9,
+            2.4
+          ]
+        },
+        "contactSurfaceToleranceM": 0.002,
+        "collidingSamples": 0,
+        "collisions": [],
+        "minVertexHeightOverObstacleM": 0.4985722543423433,
+        "minFloorM": 0.0009999915122354116,
+        "gameVerified": false,
+        "elapsedSeconds": 6.660359625006095,
+        "peakRSSMiB": 114.953125
+      },
+      "actualPalm": {
+        "meshRegion": "LeftHand weight>0.6 (palm including blended wrist/finger-root skin), over obstacle footprint; whole mesh collision separately checked",
+        "samples": 49,
+        "minSurfaceGapM": -0.0014747126732623794,
+        "maxSurfaceGapM": -0.0011060882871474775,
+        "minimumRegionVertexCount": 168,
+        "allPass": true,
+        "limitM": [
+          -0.002,
+          0.004
+        ],
+        "gameVerified": false
+      }
+    },
+    {
+      "file": "models/puyi-viitta-parkour.glb",
+      "sha256": "dc7b69a4f5be4528931b49c85e87a8d3ca6effd03ac1ab363bf508c2a774b533",
+      "bytes": 10097480,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand"
+      ],
+      "addedClip": "vault_hand",
+      "durationS": 0.9599999785423279,
+      "dense": {
+        "allPass": true,
+        "samples": 923,
+        "minFloorM": 0.0001486582210764233,
+        "maxHandContactErrorM": 0.0001303107429932412,
+        "fullContactSampleWindowS": [
+          0.295,
+          0.345
+        ],
+        "maximumEquivalent240HzStepDegrees": 13.729588556588316,
+        "entryVaultDelta": 0.0,
+        "exitVaultDelta": 7.450580596923828e-09,
+        "gameVerified": false,
+        "limits": "Palm proxy, floor and sampled rotation continuity; separate obstacle and visual checks required. Does not prove cloth self-collision or game transitions.",
+        "elapsedSeconds": 5.842379916924983,
+        "peakRSSMiB": 91.859375
+      },
+      "obstacle": {
+        "status": "PASS",
+        "variant": "viitta",
+        "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v12/viitta/puyi-final.glb",
+        "samples": 462,
+        "wholeTriangleBoxTest": true,
+        "obstacleBounds": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0.002,
+            0.498
+          ],
+          "z": [
+            1.9,
+            2.4
+          ]
+        },
+        "contactSurfaceToleranceM": 0.002,
+        "collidingSamples": 0,
+        "collisions": [],
+        "minVertexHeightOverObstacleM": 0.4993076346893831,
+        "minFloorM": 0.0009999895183590048,
+        "gameVerified": false,
+        "elapsedSeconds": 5.153212500037625,
+        "peakRSSMiB": 92.671875
+      },
+      "actualPalm": {
+        "meshRegion": "LeftHand weight>0.6 (palm including blended wrist/finger-root skin), over obstacle footprint; whole mesh collision separately checked",
+        "samples": 49,
+        "minSurfaceGapM": 0.001140930651291172,
+        "maxSurfaceGapM": 0.00173448958098954,
+        "minimumRegionVertexCount": 52,
+        "allPass": true,
+        "limitM": [
+          -0.002,
+          0.004
+        ],
+        "gameVerified": false
+      }
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "open": [
+    "Import choice44de2de4",
+    "Game transitions, obstacle alignment, cloth/sleeve interpenetration",
+    "Receiver and owner acceptance"
+  ]
+}

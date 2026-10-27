@@ -1,0 +1,12 @@
+== output/juoksupeli-liikkeet-20261027/vault-hand-review-v1
+OK       models/puyi-perus-parkour.glb  hahmo 39999 kolm, 1 piirtoa, 1 mat, koko 0.871 × 1.35 × 0.287 m, 113 luuta, anim idle run vault_low run_upstairs vault_hand
+OK       models/puyi-viitta-parkour.glb  hahmo 39999 kolm, 1 piirtoa, 1 mat, koko 0.859 × 1.35 × 0.439 m, 114 luuta, anim idle run vault_low run_upstairs vault_hand
+OK       qa/perus-palm-closeup.png  kuva png 1200 × 820 px
+OK       qa/perus-vault_hand-0.png  kuva png 1260 × 840 px
+OK       qa/perus-vault_hand-180.png  kuva png 1260 × 840 px
+OK       qa/perus-vault_hand-90.png  kuva png 1260 × 840 px
+OK       qa/viitta-palm-closeup.png  kuva png 1200 × 820 px
+OK       qa/viitta-vault_hand-0.png  kuva png 1260 × 840 px
+OK       qa/viitta-vault_hand-180.png  kuva png 1260 × 840 px
+OK       qa/viitta-vault_hand-90.png  kuva png 1260 × 840 px
+KAIKKI OK

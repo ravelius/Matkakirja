@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v12/viitta/puyi-final.glb",
+  "samples": 462,
+  "wholeTriangleBoxTest": true,
+  "obstacleBounds": {
+    "x": [
+      -1.8,
+      1.8
+    ],
+    "y": [
+      0.002,
+      0.498
+    ],
+    "z": [
+      1.9,
+      2.4
+    ]
+  },
+  "contactSurfaceToleranceM": 0.002,
+  "collidingSamples": 0,
+  "collisions": [],
+  "minVertexHeightOverObstacleM": 0.4993076346893831,
+  "minFloorM": 0.0009999895183590048,
+  "gameVerified": false,
+  "elapsedSeconds": 5.153212500037625,
+  "peakRSSMiB": 92.671875
+}

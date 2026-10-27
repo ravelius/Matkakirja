@@ -1,0 +1,17 @@
+{
+  "allPass": true,
+  "samples": 923,
+  "minFloorM": 0.000993752010674821,
+  "maxHandContactErrorM": 0.00011179274126119933,
+  "fullContactSampleWindowS": [
+    0.295,
+    0.345
+  ],
+  "maximumEquivalent240HzStepDegrees": 10.83426803512476,
+  "entryVaultDelta": 7.355094616690039e-09,
+  "exitVaultDelta": 0.0,
+  "gameVerified": false,
+  "limits": "Palm proxy, floor and sampled rotation continuity; separate obstacle and visual checks required. Does not prove cloth self-collision or game transitions.",
+  "elapsedSeconds": 8.310180749977008,
+  "peakRSSMiB": 107.421875
+}

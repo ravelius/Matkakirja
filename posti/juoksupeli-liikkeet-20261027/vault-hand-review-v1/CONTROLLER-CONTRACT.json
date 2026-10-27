@@ -1,0 +1,48 @@
+{
+  "coordinateSystem": "metres,+Yup,+Zforward,+XanatomicalLeft",
+  "import": "Additional self-contained review GLBs. Contains idle/run/vault_low/run_upstairs/vault_hand only. Import selected new clip onto existing matching rig; do not replace full library. Receiver import-format question44de2de4 remains open.",
+  "vault_hand": {
+    "durationS": 0.96,
+    "externalRoot": "Identical to prior vault_low. u=(t-.058)/.04;T=t-.22*(t-.058)*(1-u*u)^3 if abs(u)<1 else t; v=(T-.14)/.60;X=0;Y=.50*4*v*(1-v) if0<v<1 else0;Z=5*T; yaw0.",
+    "referenceObstacleBoundsM": {
+      "x": [
+        -1.8,
+        1.8
+      ],
+      "y": [
+        0,
+        0.5
+      ],
+      "z": [
+        1.9,
+        2.4
+      ]
+    },
+    "contactS": [
+      0.295,
+      0.345
+    ],
+    "hand": "left palm; real blended mesh contact verified separately from rig proxy",
+    "palmRigProxyWorldM": {
+      "perus": [
+        0.2,
+        0.5201,
+        1.92
+      ],
+      "viitta": [
+        0.2,
+        0.524,
+        1.94
+      ]
+    },
+    "physicalObstacleTopM": 0.5,
+    "collisionSurfaceToleranceM": 0.002,
+    "exit": "At.96s root[0,0,4.8], velocity5m/s; source run phase1.824s modulo its duration. Entry/exit equal prior vault_low.",
+    "integration": "Includes own takeoff and landing. Do not automatically overlay land_soft0.12s before end or add ordinary root locomotion. Place obstacle/actor to the documented coordinates; no runtime IK assumed."
+  },
+  "gameVerified": false,
+  "limits": [
+    "Whole-mesh obstacle test allows2mm surface contact. Does not establish cloth self-collision or runtime transition blending.",
+    "Owner and receiver visual acceptance outstanding."
+  ]
+}

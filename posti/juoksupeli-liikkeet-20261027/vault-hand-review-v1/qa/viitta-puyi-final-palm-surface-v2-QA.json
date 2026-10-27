@@ -1,0 +1,13 @@
+{
+  "meshRegion": "LeftHand weight>0.6 (palm including blended wrist/finger-root skin), over obstacle footprint; whole mesh collision separately checked",
+  "samples": 49,
+  "minSurfaceGapM": 0.001140930651291172,
+  "maxSurfaceGapM": 0.00173448958098954,
+  "minimumRegionVertexCount": 52,
+  "allPass": true,
+  "limitM": [
+    -0.002,
+    0.004
+  ],
+  "gameVerified": false
+}

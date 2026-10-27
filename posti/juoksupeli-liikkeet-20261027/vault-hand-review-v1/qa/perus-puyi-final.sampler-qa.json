@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v11/perus/puyi-trim.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v11/perus/puyi-final.glb",
+  "beforeBytes": 10013968,
+  "bytes": 10010188,
+  "sha256": "cf0cbc25384ba47c56e21f46da8fdd908e99c5f3d33ad56767f48e800cd27d19",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "idle",
+      "beforeSamplers": 281,
+      "afterSamplers": 281
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "vault_low",
+      "beforeSamplers": 269,
+      "afterSamplers": 269
+    },
+    {
+      "clip": "run_upstairs",
+      "beforeSamplers": 258,
+      "afterSamplers": 258
+    },
+    {
+      "clip": "vault_hand",
+      "beforeSamplers": 339,
+      "afterSamplers": 269
+    }
+  ]
+}

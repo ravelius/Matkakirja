@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "variant": "perus",
+  "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-hand-v11/perus/puyi-final.glb",
+  "samples": 462,
+  "wholeTriangleBoxTest": true,
+  "obstacleBounds": {
+    "x": [
+      -1.8,
+      1.8
+    ],
+    "y": [
+      0.002,
+      0.498
+    ],
+    "z": [
+      1.9,
+      2.4
+    ]
+  },
+  "contactSurfaceToleranceM": 0.002,
+  "collidingSamples": 0,
+  "collisions": [],
+  "minVertexHeightOverObstacleM": 0.4985722543423433,
+  "minFloorM": 0.0009999915122354116,
+  "gameVerified": false,
+  "elapsedSeconds": 6.660359625006095,
+  "peakRSSMiB": 114.953125
+}

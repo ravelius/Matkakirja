@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-27T16:18:09.978473+00:00",
+  "readyForReceiverReview": true,
+  "reviewer": "Codex primary visual inspection",
+  "actualFile": "puyi-final.glb",
+  "viewed": [
+    "qa/vault_hand-0.png",
+    "qa/vault_hand-90.png",
+    "qa/vault_hand-180.png",
+    "qa/palm-closeup.png"
+  ],
+  "observations": [
+    "Side vault silhouette and leg separation visible. Palm reaches and leaves reference obstacle; no visible open palm gap at support.",
+    "Rear upper camera sequence inspected. Numerical whole-mesh obstacle and palm contact evidence checked.",
+    "Closeup uses spatial mesh selection: cut edges outside hand/cuff are diagnostic cropping, not evidence of whole-mesh tears."
+  ],
+  "limitations": [
+    "Static sampled frames, not runtime interpolation/blending or cloth self-collision proof.",
+    "Existing source cape/underarm defects remain a separate pending correction.",
+    "Receiver game import and owner acceptance pending."
+  ]
+}
