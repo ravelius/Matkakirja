@@ -729,6 +729,18 @@
       "sijainti": "turva-alueen sisällä; linssin ylärivi ja alanauha rajaavat (rullat ylärivin alle ja nauhan yläpuolelle, KehysKaaro.AsetaRajat; simu 17.10. 11.28: rullat jäivät niiden alle); rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
       "liike": "avaus kuin kääritty kartta: rullat keskeltä reunoille liike.liikkeet kortti-avaus (220 ms), sulku takaisin kortti-sulku (200 ms); alle liike.maksimi"
     },
+    "OHJAINOPETUS": {
+      "_selite": "Pelin kosketusohjauksen opetus 3D-näkymän päällä (omistaja 21.10.2026 08.58 peukalokohdat; OMISTAJAN PÄÄTÖS 27.10.2026 klo 10.05 KK:n kortilla pyyhkäisyosoitin luonnoksen mukaan; PT 27.10. 10.3x: pohjaksi, NUI ja PK). Ensimmäinen käyttäjä juoksupelin taso 1 (JuoksuOpetus); muut pelit, joissa ohjataan peukaloilla, samalla pohjalla. Vain natiivi: UI/Pelit/Peukalokohta.cs, UI/Pelit/PyyhkaisyOsoitin.cs, tyylit Pohjat/ohjainopetus.uss.",
+      "teemat": ["tumma"],
+      "koostuu": [
+        "PEUKALOKOHTA: peukalon keskikohta pehmeänä hehkupisteenä ilman reunaa (Kuviot.Hehkupiste); normaali = lämpimän ruskea pieni peitto (kuulto.accent-dark-14), ohjeen kohta = punainen (tila.virhe) syke 0,6 s välein",
+        "PYYHKÄISYOSOITIN: ohjeen peukalokohdasta eleen suuntaan (oikea, vasen, ylös = hyppy, alas = liuku) liukuva jälki: kolme pienenevää vaaleaa hehkupistettä (kuulto-valkoinen-92) ja kulmanuoli pyöreäpäisistä viivoista, alla tumma pehmeä varjo (kuulto-musta-50/-25), joka näkyy vaalealla kiveyksellä; napautuksessa (kaista, heitto) ei jälkeä, pelkkä syke",
+        "OHJETEKSTI: kertojan kaista (.mk-aikajana-kertomus--ohje) luonnoksen koossa: tumma kuultopohja (kuulto-musta-72), kulma 6 pt, ei reunaviivaa, teksti 32 pt fonttipoikkeuksena (KK 27.10. 10.2x: luonnoksen koko, rivi noin 60 % ruudun leveydestä; arkin 26 pt jäi pieneksi) ohuella tummalla ääriviivalla, leveys enintään 1100 pt; yksi lyhyt käsky kerrallaan muodossa ele: seuraus (\"Pyyhkäise oikealla peukalolla oikealle: käänny oikealle\")"
+      ],
+      "sijainti": "peukalokohdat ja osoitin pelin peukaloiden kohdalla (oikea peukalo = eleet), ohjeteksti keisarin alapuolella kertojan kaistan paikalla; kosketukset menevät läpi (PickingMode.Ignore)",
+      "liike": "osoittimen jälki liukuu 14 pt ulos ja häipyy 0,45 s:n tahdissa (ympäristöanimaatio), esiin ja pois häivyttäen 0,2 s; peukalokohta esiin 0,25 s; alle liike.maksimi UI-siirtymissä",
+      "nakyvyys": "vain opetuksen ohjeen aikana; ohje kerrallaan, kunnes pelaaja tekee liikkeen"
+    },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)", "LAITEPÖYTÄ/sauva": "sauvan rengas ja nuppi pyöreinä: laitteen fyysinen osa, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja hyväksyi luonnoksen 4 17.10.2026 klo 17.06)" }
   }
 }

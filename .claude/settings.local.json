@@ -6,29 +6,36 @@
       "Bash(aws s3 ls:*)",
       "Bash(source:*)",
       "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(osascript:*)",
+      "Bash(screencapture:*)",
+      "Bash(sleep:*)",
+      "mcp__ccd_session_mgmt__set_session_effort"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "SendMessage|mcp__ccd_session_mgmt__send_message",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f /Users/Shared/Claude/hooks/pt-taulu-muistutus.py ] && python3 -I /Users/Shared/Claude/hooks/pt-taulu-muistutus.py || true",
+            "timeout": 10
+          }
+        ]
+      }
     ],
-    "deny": [
-      "Workflow",
-      "SuggestPluginInstall",
-      "SuggestSkills",
-      "SearchPlugins",
-      "ReportFindings",
-      "SendUserFile",
-      "mcp__Claude_Browser",
-      "mcp__Claude_Code_iOS_Simulator",
-      "mcp__terminal",
-      "mcp__visualize",
-      "mcp__6f616b42-0ed8-571e-823f-ee4aca6b7ce9",
-      "mcp__1a59c906-04da-521d-bda7-7f71b9f9e01c",
-      "mcp__claude-in-chrome",
-      "mcp__computer-use",
-      "mcp__ccd_sidebar",
-      "mcp__ccd_window",
-      "mcp__ccd_view",
-      "mcp__ccd_settings",
-      "AskUserQuestion",
-      "Artifact"
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f /Users/Shared/Claude/hooks/pt-taulu-muistutus.py ] && python3 -I /Users/Shared/Claude/hooks/pt-taulu-muistutus.py || true",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   }
 }
