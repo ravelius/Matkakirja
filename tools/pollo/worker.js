@@ -3908,7 +3908,7 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
     chatista = true;
     ylavirta = await fetch(env.TIETOTEKSTI_VALITYS, {
       method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/vedos (app.matkakirja.proto3d)' },
+      headers: valitysOtsakkeet(env),
       // Chatin rajat: kysymys ≤ 500, konteksti ≤ 5 000 merkkiä → kehote kontekstiin ja syötteestä mahtuva alku.
       body: JSON.stringify({ tehtava: 'vastaus', striimi: true, historia: [],
         kysymys: `Kirjoita kartan tietokortin teksti kohteelle ${kortti.nimi} ohjeen VASTAUKSEN LAJI: KARTAN TIETOKORTTI mukaan.`,
@@ -3992,6 +3992,36 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
   return new Response(readable, { status: 200, headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) } });
 }
 
+/** Välityksen otsakkeet (vedos): natiivin tunniste ja kehittäjän testitunnus (POLLO_TESTITUNNUS, ohittaa päivärajan; ei lokiin). */
+function valitysOtsakkeet(env) {
+  return { 'content-type': 'application/json', 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/vedos (app.matkakirja.proto3d)',
+    ...(env.POLLO_TESTITUNNUS ? { 'x-matkakirja-testitunnus': env.POLLO_TESTITUNNUS } : {}) };
+}
+
+/** Välitysrunko (vedos): kehote ja syöte chatin kontekstiin ja historiaan (konteksti ≤ 5 000, historia 6 × 2 000 merkkiä). */
+function valitysRunko(kehote, syote, osa, nimi, lisa = []) {
+  const koko = `${kehote}\n\nSYÖTE: ${syote}`;
+  const historia = [];
+  for (let i = 4990; i < koko.length && historia.length < 6 - lisa.length; i += 1990) {
+    historia.push({ rooli: 'kayttaja', teksti: `(ohjeen ja syötteen jatko) ${koko.slice(i, i + 1990)}` }, { rooli: 'pollo', teksti: 'Selvä, luen jatkon.' });
+  }
+  return { tehtava: 'vastaus', striimi: true, historia: [...historia, ...lisa], konteksti: koko.slice(0, 4990),
+    kysymys: `Kirjoita nyt kartan tietokortin ${osa === 'lisaa' ? 'Lue lisää -teksti' : 'ensimmäinen kappale'} kohteelle ${nimi} ohjeen mukaan.` };
+}
+
+/** Vedoksen uusinta välityksen kautta (paikallinen ajuri; tuotannossa kysyMallitiedot): edellinen vastaus ja korjauspalaute historiaan. */
+async function valitysUusinta(env, kehote, syote, osa, nimi, edellinen, palaute) {
+  const lisa = edellinen ? [{ rooli: 'pollo', teksti: edellinen.slice(0, 1990) }, { rooli: 'kayttaja', teksti: palaute.slice(0, 1990) }] : [];
+  const r = await fetch(env.TIETOTEKSTI_VALITYS, {
+    method: 'POST',
+    headers: valitysOtsakkeet(env),
+    body: JSON.stringify(valitysRunko(kehote, syote, osa, nimi, lisa)),
+  });
+  const t = await r.text();
+  const loppu = [...t.matchAll(/event: loppu\ndata: (.*)/g)].pop()?.[1];
+  return { teksti: loppu ? JSON.parse(loppu).vastaus ?? '' : '', stop: 'end_turn' };
+}
+
 /**
  * KARTAN TIETOKORTIT 2 (omistaja 27.10.2026 klo 13.23; resepti osa 3): teksti osina. osa = johdanto → 2–3 virkkeen ensimmäinen
  * kappale (striimi), osa = lisaa → Lue lisää väliotsikoin (## ) ja ###KYSYMYKSET### + kaksi kysymystä (striimi). Asiakas pyytää
@@ -4011,7 +4041,8 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
   const lahdeRiviTalletettu = kortti.lahdeRivi ?? null;
   const valmis = await pysyvaLue(env.PUHE_R2, avain);
   if (valmis) return valmisStriimi(kors, { vastaus: valmis, valmiina: true, lahde: lahdeRiviTalletettu, osa });
-  const lahde = await wikiLahde((url, o) => fetch(url, o), kortti.wiki, osa === 'lisaa');
+  // Sama lähde kuin vanhassa reitissä: koko artikkeli ja englanninkielinen rinnalle (fi-johdannon virheet, KK 27.10.: Windsorin saksit).
+  const lahde = await wikiLahde((url, o) => fetch(url, o), kortti.wiki, true);
   const lahdeRivi = !lahde ? 'Wikidata' : lahde.kielet ? `Wikidata, Wikipedia (${lahde.kielet.join(', ')})` : 'Wikidata, Wikipedia';
   if (!lahde && !kortti.rivit?.length) return valmisStriimi(kors, { vastaus: EI_LAHDETTA, valmiina: false, lahde: lahdeRivi, osa });
   let johdanto = '';
@@ -4032,14 +4063,14 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
     chatista = true;
     ylavirta = await fetch(env.TIETOTEKSTI_VALITYS, {
       method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/vedos (app.matkakirja.proto3d)' },
-      body: JSON.stringify({ tehtava: 'vastaus', striimi: true, historia: [],
-        kysymys: `Kirjoita kartan tietokortin ${osa === 'lisaa' ? 'Lue lisää -teksti' : 'ensimmäinen kappale'} kohteelle ${kortti.nimi} ohjeen mukaan.`,
-        konteksti: `${kehote}\n\nSYÖTE: ${syote}`.slice(0, 4990) }),
+      headers: valitysOtsakkeet(env),
+      // Chatin rajat (konteksti ≤ 5 000, historia 6 × 2 000 merkkiä): kehote ja syöte kokonaan, ylimenevä osa historian käyttäjäviesteinä.
+      body: JSON.stringify(valitysRunko(kehote, syote, osa, kortti.nimi)),
     });
   } else {
     ylavirta = await kutsuRajapintaa(env, {
-      jarjestelma: `${JARJESTELMAKEHOTE}\n\n${kehote}`, viestit: [{ role: 'user', content: syote }], maxTokens, striimi: true, jaettu: true,
+      // Neutraali asiateksti (omistaja 13.52): ei Pulun järjestelmäkehotetta, vain osan kehote.
+      jarjestelma: kehote, viestit: [{ role: 'user', content: syote }], maxTokens, striimi: true, jaettu: true,
     });
   }
   if (!ylavirta.ok || !ylavirta.body) {
@@ -4083,11 +4114,12 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
       console.log(`pollo: tietoteksti ${osa} ${tunnus}: ${tarkistus.ok ? 'hyväksytty' : `hylätty (${tarkistus.syy})`}`);
       let talteen = !virhe && stop === 'end_turn' && tarkistus.ok ? teksti.trim() : null;
       let edellinen = teksti.trim(), syy = tarkistus.syy;
-      for (let kerta = 0; !talteen && !chatista && kerta < 2; kerta += 1) {
+      for (let kerta = 0; !talteen && kerta < 2; kerta += 1) {
         try {
           const viestit = [{ role: 'user', content: syote }];
           if (edellinen) viestit.push({ role: 'assistant', content: edellinen }, { role: 'user', content: korjausPalaute(syy) });
-          const u = await kysyMallitiedot(env, { jarjestelma: `${JARJESTELMAKEHOTE}\n\n${kehote}`, viestit, maxTokens, jaettu: true });
+          const u = chatista ? await valitysUusinta(env, kehote, syote, osa, kortti.nimi, edellinen, korjausPalaute(syy))
+            : await kysyMallitiedot(env, { jarjestelma: kehote, viestit, maxTokens, jaettu: true });
           const t2 = tarkista(u.teksti);
           edellinen = (u.teksti ?? '').trim(); syy = t2.syy;
           console.log(`pollo: tietoteksti ${osa} ${tunnus}: uusinta ${kerta + 1} ${t2.ok ? 'hyväksytty' : `hylätty (${t2.syy})`}`);

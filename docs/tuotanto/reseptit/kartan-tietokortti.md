@@ -494,15 +494,23 @@ saa aina saman tyypin, myös jo tallennetut kortit (worker laskee kentän palvel
 - Ilman `osa`-kenttää vanha yhden kutsun teksti (osa 2, `###LUE-LISÄÄ###`) junan 211 sovellukselle.
 - Välimuisti: `tietokortti:v4:teksti:t3:<osa>:fi:<qid>`; vain tarkistuksen läpäissyt osa tallennetaan (kaksi uusintaa korjauspalautteella).
 
-### 3.3 Kehotteet
+### 3.3 Kehotteet ja tyyli
 
-`JOHDANTO_KEHOTE` ja `LISAA_KEHOTE` (tools/pollo/tietokortti.js): oma VASTAUKSEN LAJI ja MUOTO, ja osan 2.2 yhteiset säännöt sanatarkasti
+NEUTRAALI ASIATEKSTI (OMISTAJAN TARKENNUS 27.10.2026 klo 13.52, Raamattu 2.203): johdanto ja Lue lisää ovat neutraalia asiatekstiä, ei
+Pulun puhetta: ei Pulun äänensävyä, ei puhuttelua, ei minä- eikä me-muotoa. Pulun tyyli kuuluu vain Pulun kysymysten vastauksiin
+(chat). Siksi osa-reitti ei liitä Pulun järjestelmäkehotetta (JARJESTELMAKEHOTE), vaan mallille menee pelkkä osan kehote.
+
+`JOHDANTO_KEHOTE` ja `LISAA_KEHOTE` (tools/pollo/tietokortti.js): oma VASTAUKSEN LAJI ja MUOTO, osan 2.2 yhteiset säännöt sanatarkasti
 (LÄHDE, SUUNNAT, KORTIN FAKTAT EIVÄT TOISTU, LUVUT JA VUODET, EI PUHUTTELUA, VIRKKEET LOPPUUN, SAMA FAKTA KERRAN, VIERAAT NIMET,
-SISÄLTÖ, ÄÄNI). Yhteiset säännöt muuttuvat siis yhdessä paikassa (osa 2.2).
+SISÄLTÖ) ja ÄÄNI-kohdan tilalla TYYLI (neutraali asiateksti kuin hyvässä tietokirjassa tai matkaoppaassa). Lue lisää -kehotteessa lisäksi
+EI ESITTELYÄ UUDELLEEN (ei aloita paikan nimellä, ei toista johdannon sijaintia, etäisyyttä, vuotta eikä lukua).
+Vanha yhden kutsun teksti (osa 2, junan 211 sovellus) pysyy toistaiseksi Pulun äänellä; se poistuu, kun 211 korvautuu.
 
 ### 3.4 Tarkistukset
 
-- Johdanto: 2–3 virkettä, 18–50 sanaa, ei `#`; muut osan 2.4 säännöt.
-- Lue lisää: `###KYSYMYKSET###` kerran; 2–3 väliotsikkoa, jokaisen alla kappale; kappaleet 80–170 sanaa; tasan kaksi kysymystä
+- Johdanto: 2–3 virkettä, 18–50 sanaa, ei `#`, ei minä-, me- eikä sinä-muotoa; muut osan 2.4 säännöt (asukasluku myös muodossa "asuu noin N ihmistä").
+- Lue lisää: kysymysrivi kerran (`###KYSYMYKSET###`, myös mallin muodot "Kysymyksiä:" ja "KYSYMYKSET"); 2–4 väliotsikkoa, jokaisen
+  alla kappale; kappaleet 60–170 sanaa; ei sanaa Pulu eikä "ei tiedä"; pitkästä lähteestä (yli 2 000 merkkiä) ei kelpaa `###EI-LÄHDETTÄ###`;
+  johdannon luku (≥ 10) ei saa toistua; tasan kaksi kysymystä
   (`?`, ≤ 14 sanaa, ei aarteita, isoisää eikä peliä). Toisto tarkistetaan johdanto ja Lue lisää yhdessä (sama vuosi, sama pitkä sana,
   lähes sama virke = hylkäys); muut osan 2.4 säännöt kappaleille.

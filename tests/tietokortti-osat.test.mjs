@@ -30,7 +30,9 @@ test('osien avaimet eivät törmää vanhaan tekstiin', () => {
 
 test('kehotteet: yhteiset ohjeet mukana, muoto osan mukaan', () => {
   for (const k of [JOHDANTO_KEHOTE, LISAA_KEHOTE]) {
-    for (const o of ['LÄHDE.', 'SUUNNAT.', 'KORTIN FAKTAT EIVÄT TOISTU.', 'EI PUHUTTELUA', 'VIERAAT NIMET', 'ÄÄNI.']) assert.ok(k.includes(o), o);
+    for (const o of ['LÄHDE.', 'SUUNNAT.', 'KORTIN FAKTAT EIVÄT TOISTU.', 'EI PUHUTTELUA', 'VIERAAT NIMET', 'TYYLI.']) assert.ok(k.includes(o), o);
+    // Neutraali asiateksti (omistaja 13.52): ei Pulun ääntä.
+    assert.ok(!k.includes('ÄÄNI.') && !k.includes('Pulun äänellä') && !k.includes('Pulun,'));
   }
   assert.ok(JOHDANTO_KEHOTE.includes('2–3 virkettä'));
   assert.ok(LISAA_KEHOTE.includes('## ') && LISAA_KEHOTE.includes(KYSYMYKSET));
@@ -68,4 +70,26 @@ test('Lue lisää: jäsennys ja tarkistus (otsikot, sanat, kaksi kysymystä)', (
   assert.equal(tarkistaLisaa(lisaa('Mihin isoisä piilotti aarteen?\nMilloin kaupunki sai torioikeudet?'), syote, 'Windsor').syy, 'kysymykset');
   // Johdannon vuosi toistuu Lue lisää -tekstissä → hylkäys.
   assert.match(tarkistaLisaa(lisaa(), syote, 'Windsor', 'Windsoria kutsuttiin uudella nimellä vuoteen 1974 asti.').syy, /toisto/);
+});
+
+test('kysymysrivi myös poikkeavissa muodoissa; tuhaterotin pilkkuna lähteessä', () => {
+  for (const r of ['Kysymyksiä:', 'KYSYMYKSET', '### Kysymykset ###']) {
+    assert.equal(jasennaLisaa(lisaa().replace(KYSYMYKSET, r)).kysymykset.length, 2, r);
+    assert.equal(tarkistaLisaa(lisaa().replace(KYSYMYKSET, r), syote, 'Windsor').ok, true, r);
+  }
+  const s2 = JSON.stringify({ nimi: 'Box Hill', faktat: [], wikipedia: { kieli: 'en', teksti: 'Box Hill attracts 850,000 visitors a year and is part of the Surrey Hills.' } });
+  assert.equal(tarkistaJohdanto('Box Hill on kukkula Surreyssa, ja se kuuluu Surrey Hillsin maisema-alueeseen. Kukkulalla käy vuosittain noin 850 000 ihmistä.', s2, 'Box Hill').ok, true);
+});
+
+test('asukasluku muodossa "asuu noin N ihmistä" ja johdannon luvun toisto hylätään; turha EI-LÄHDETTÄ pitkästä lähteestä', () => {
+  const s2 = JSON.stringify({ nimi: 'Eton', faktat: [], wikipedia: { kieli: 'en', teksti: 'Eton is a town with a population of 5,100 people. Eton College was founded in 1440.' } });
+  assert.equal(tarkistaJohdanto('Eton on pieni kaupunki Thamesin varrella Windsorin vastarannalla, ja Eton College perustettiin vuonna 1440. Kaupungissa asuu nykyään noin 5 100 ihmistä.', s2, 'Eton').syy, 'faktatoisto asukasluku');
+  assert.match(tarkistaLisaa(lisaa(), syote, 'Windsor', 'Windsor on 1191 metrin päässä.').syy, /toisto 1191/);
+  const pitka = JSON.stringify({ nimi: 'W', wikipedia: { teksti: 'x'.repeat(2500) } });
+  assert.equal(tarkistaLisaa(EI_LAHDETTA, pitka).ok, false);
+  assert.equal(tarkistaLisaa(EI_LAHDETTA, syote).ok, true);
+});
+
+test('neutraali asiateksti: minä- ja me-muoto hylätään', () => {
+  assert.equal(tarkistaJohdanto('Windsor on kaupunki Thamesin rannalla, ja minä kerron siitä mielelläni vähän lisää. Windsorin linnan rakennutti Vilhelm Valloittaja noin vuonna 1070.', syote, 'Windsor').syy, 'kertoja');
 });
