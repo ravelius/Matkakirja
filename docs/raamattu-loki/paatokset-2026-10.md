@@ -2860,3 +2860,15 @@ piilotukseen 5) lippu kaikilla loitonnustasoilla 6) nipistys sormien välisen pi
 ## JUOKSUPELIN ÄÄNIOTOT HYVÄKSYTTY (omistaja 27.10. klo 12.47, KK:n välitys) (27.10.2026 klo 12.49)
 
 OMISTAJAN PÄÄTÖS klo 12.47 (sanatarkasti): "Eunukeista kummaltakin Otto B. oli parempi. keisarilta hyväksyn: 2 otto 2, 3 otto 1, 5 otto 1, 7 otto 1, 9 otto 1 12 lisäotto parempi (voi korvata aiemman)". Numerot ovat videoiden ruutunumeroita. KK:n tulkinta: eunukit Georg B ja Sergio B; keisari "Ottakaa kiinni" otto 2, "Huh!" otto 1, "Huh, läheltä piti!" lisäotto 12 (korvaa oton 1), "Hui!" otto 1, "Melkein!" otto 1. KK välitti Äänittäjälle tiedostopolkujen kanssa; Pelikoodari kytkee otot juoksupeliin (juna 212).
+
+## KARTAN TIETOKORTIT: MUOTOILU, VÄLIOTSIKOT, ENSIN 1. KAPPALE, PULUN KYSYMYKSET, TYYPPIKUVAKKEET (omistaja 27.10. klo 13.23, KK:n välitys) (27.10.2026 klo 13.23)
+
+OMISTAJAN PYYNTÖ klo 13.23 (sanatarkasti): "Uusissa dynaamisissa nostoissa lähimmiltä karttatasoilta tarvitsee tehdä korjauksia. Faktatiedot näkyvät nyt liian harmaalla. Miten ne saisi paremmin
+muotoiltua? Ja Workerin tekemä teksti tarvitsee väliotsikot. Ja ensimmäinen kappale saisi olla lyhyempi. Kannattaisiko generoida ensiksi vain se ensimmäinen kappale tuoda se näkyviin ja sitten
+taustalla generoida lisäteksti sen jälkeen kun noston ensimmäinen osa on valmiina. Ja lue lisää jutun perään saisi generoida kaksi valmista kysymystä pululle. Mutta vastauksia ei tarvitse generoida
+etukäteen. lähde ja kuvan kreditit saa olla pienemmällä ja harmaalla. saisiko tekstin generoinnin ajaksi tehtyä pienen animoidun latauskuvakkeen. Otsikon päälle voisi tehdä samanlaisen kuvakkeen ja
+tyyppitekstin (historia, jne). kohteiden mukaan, jos vain mahdollista. Kohdetyypit voisi siis tehdä etukäteen ja worker tai muu automaatti voisi tehdä kohdistuksen." KK:n tavoite: 1) faktat erottuvat
+(KK ehdottaa tummaa alaotsikkoriviä, kortti tulossa) 2) väliotsikot, 1. kappale 2–3 virkettä 3) ensin 1. kappale näkyviin, loppu heti taustalla (kortti tulossa) 4) Lue lisää -tekstin perään kaksi
+valmista kysymystä Pululle, vastaus vasta napautuksesta 5) lähde ja kuvakrediitit pienellä harmaalla 6) pieni animoitu latauskuvake generoinnin ajaksi 7) otsikon yläpuolelle kohdetyypin kuvake +
+tyyppiteksti; kiinteä tyyppijoukko etukäteen, kuvakkeet Codexilta, worker kohdistaa. Jako: KS worker ja resepti (2, 3, 4, 7 kohdistus), NUI kortin pohja (1, 5, 6, 7 näkymä) olemassa olevilla
+UI-pohjilla; puuttuva pohja kuvina KK:lle.
