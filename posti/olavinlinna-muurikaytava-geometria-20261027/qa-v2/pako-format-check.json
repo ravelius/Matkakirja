@@ -1,0 +1,37 @@
+[
+ {
+  "nimi": "pako-v2.glb",
+  "virheet": [],
+  "huomiot": [],
+  "tiedot": {
+   "nimi": "pako-v2.glb",
+   "tyyppi": "esine",
+   "kolmiot": 182,
+   "piirrot": 2,
+   "materiaalit": 2,
+   "solmut": 18,
+   "kuvat": [
+    "2048×2048 jpg",
+    "2048×2048 jpg",
+    "2048×2048 png"
+   ],
+   "rajat": {
+    "min": [
+     -74.502,
+     -7.757,
+     -15.626
+    ],
+    "max": [
+     -51.581,
+     4.694,
+     2.141
+    ],
+    "koko": [
+     22.921,
+     12.451,
+     17.767
+    ]
+   }
+  }
+ }
+]

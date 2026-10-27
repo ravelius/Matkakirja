@@ -1,0 +1,81 @@
+{
+  "id": "lichen_rock",
+  "metadata": {
+    "name": "Lichen Rock",
+    "categories": [
+      "collection: verdant_trail",
+      "rock",
+      "terrain",
+      "natural"
+    ],
+    "type": 1,
+    "tags": [
+      "rock",
+      "cliff",
+      "lichen",
+      "moss",
+      "rock face",
+      "boulder",
+      "mossy",
+      "stone",
+      "nature",
+      "rugged"
+    ],
+    "authors": {
+      "Rico Cilliers": "All"
+    },
+    "info": null,
+    "dimensions": [
+      2000,
+      2000
+    ],
+    "date_published": 1707177600,
+    "max_resolution": [
+      8192,
+      8192
+    ],
+    "files_hash": "3f77b26ff52da2807965072c56cbf18b8fcf3af5",
+    "description": "Free 8K texture of rugged, weathered rock with pale-green lichen patches, layered stone grain, rough microdetail and a subtle damp sheen.",
+    "category_id": "e8121dc9-96d3-59b8-b8ee-83104e60ba82",
+    "category": "Stone/Rock & Cliffs/Mossy & Lichened Rock",
+    "collections": [
+      "verdant_trail"
+    ],
+    "attributes": {
+      "condition": [
+        "weathered",
+        "mossy"
+      ],
+      "origin": "natural",
+      "setting": "outdoor"
+    },
+    "img_version": "eefe40e1",
+    "download_count": 62208,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/lichen_rock.png?width=256&height=256&format=webp&v=eefe40e1"
+  },
+  "source": "https://polyhaven.com/a/lichen_rock",
+  "license": "CC0 1.0",
+  "files": [
+    {
+      "kind": "Diffuse",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/lichen_rock/lichen_rock_diff_2k.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/materials-v2/lichen_rock_diff_2k.jpg",
+      "sha256": "f2ec7a10c6cb929653278e00dcfb0e7e07aea178136a37eac7478d2b9cdd5e96",
+      "bytes": 4010129
+    },
+    {
+      "kind": "nor_gl",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/lichen_rock/lichen_rock_nor_gl_2k.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/materials-v2/lichen_rock_nor_gl_2k.jpg",
+      "sha256": "89b28336282a07492080a20725d18c7649ae69b1d8e10187ffe143c804bd6d2c",
+      "bytes": 4844348
+    },
+    {
+      "kind": "Rough",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/lichen_rock/lichen_rock_rough_2k.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/materials-v2/lichen_rock_rough_2k.jpg",
+      "sha256": "ad8a3ffad3cc15e8781958179db56dbcc9c82b50021076a0068c9e62d494a4c2",
+      "bytes": 2108970
+    }
+  ]
+}

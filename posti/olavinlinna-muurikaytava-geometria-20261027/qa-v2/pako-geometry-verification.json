@@ -1,0 +1,15 @@
+{
+  "originalSHA256": "0d94dcfe7b1015778a118ca976d4ce0551347abfa434a168fe8a2afc2c7c9c05",
+  "v2SHA256": "72f77920df4e0a274602c161524a49347b916ebdb586195ae755637f76ac0356",
+  "before": {
+    "triangleCount": 182,
+    "worldGeometrySHA256": "aeb7ad1621b0e8d2e305d41ca494a64a2e311606ae75572b1ab6b8e593d974c7"
+  },
+  "after": {
+    "triangleCount": 182,
+    "worldGeometrySHA256": "aeb7ad1621b0e8d2e305d41ca494a64a2e311606ae75572b1ab6b8e593d974c7"
+  },
+  "allWorldTrianglesUnchanged": true,
+  "markers": 16,
+  "markerJSONExactlyPreserved": true
+}

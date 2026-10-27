@@ -1,0 +1,313 @@
+{
+  "parts": {
+    "muurikaytava": {
+      "blenderXYZmin": [
+        -39.085205078125,
+        7.326408863067627,
+        13.100000381469727
+      ],
+      "blenderXYZmax": [
+        -20.583961486816406,
+        16.26506996154785,
+        16.149999618530273
+      ]
+    },
+    "harja": {
+      "blenderXYZmin": [
+        -40.05195236206055,
+        5.749838352203369,
+        13.399999618530273
+      ],
+      "blenderXYZmax": [
+        -30.75021743774414,
+        12.408249855041504,
+        19.200000762939453
+      ]
+    },
+    "komero": {
+      "blenderXYZmin": [
+        -51.89846420288086,
+        4.91885232925415,
+        14.800000190734863
+      ],
+      "blenderXYZmax": [
+        -50.076690673828125,
+        6.051140785217285,
+        17.049999237060547
+      ]
+    },
+    "pako": {
+      "blenderXYZmin": [
+        -74.50228881835938,
+        -2.1413066387176514,
+        -7.757143020629883
+      ],
+      "blenderXYZmax": [
+        -51.58106231689453,
+        15.625500679016113,
+        4.694285869598389
+      ]
+    }
+  },
+  "pairDistances": [
+    {
+      "a": "muurikaytava",
+      "b": "harja",
+      "minimumVertexToSurfaceMetres": 0.0,
+      "points": [
+        [
+          -37.26084899902344,
+          8.39773178100586,
+          13.399999618530273
+        ],
+        [
+          -37.26084899902344,
+          8.39773178100586,
+          13.399999618530273
+        ]
+      ],
+      "triangleOverlapPairs": 23,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    },
+    {
+      "a": "muurikaytava",
+      "b": "komero",
+      "minimumVertexToSurfaceMetres": 11.630622863769531,
+      "points": [
+        [
+          -39.085205078125,
+          9.558387756347656,
+          15.800000190734863
+        ],
+        [
+          -50.076690673828125,
+          5.75593900680542,
+          15.800000190734863
+        ]
+      ],
+      "triangleOverlapPairs": 0,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    },
+    {
+      "a": "muurikaytava",
+      "b": "pako",
+      "minimumVertexToSurfaceMetres": 16.618061065673828,
+      "points": [
+        [
+          -39.085205078125,
+          9.558387756347656,
+          13.100000381469727
+        ],
+        [
+          -51.58106231689453,
+          7.384156227111816,
+          2.3628571033477783
+        ]
+      ],
+      "triangleOverlapPairs": 0,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    },
+    {
+      "a": "harja",
+      "b": "komero",
+      "minimumVertexToSurfaceMetres": 10.62738037109375,
+      "points": [
+        [
+          -40.05195236206055,
+          9.283804893493652,
+          16.399999618530273
+        ],
+        [
+          -50.076690673828125,
+          5.75593900680542,
+          16.399999618530273
+        ]
+      ],
+      "triangleOverlapPairs": 0,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    },
+    {
+      "a": "harja",
+      "b": "pako",
+      "minimumVertexToSurfaceMetres": 17.97663688659668,
+      "points": [
+        [
+          -52.01425552368164,
+          2.432750701904297,
+          4.694285869598389
+        ],
+        [
+          -39.326236724853516,
+          7.447720527648926,
+          16.399999618530273
+        ]
+      ],
+      "triangleOverlapPairs": 0,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    },
+    {
+      "a": "komero",
+      "b": "pako",
+      "minimumVertexToSurfaceMetres": 10.475610733032227,
+      "points": [
+        [
+          -52.01425552368164,
+          2.432750701904297,
+          4.694285869598389
+        ],
+        [
+          -51.535133361816406,
+          5.149989128112793,
+          14.800000190734863
+        ]
+      ],
+      "triangleOverlapPairs": 0,
+      "note": "Minimum surface distance only; not proof of a continuous walkable joining seam."
+    }
+  ],
+  "coordinateTransforms": {
+    "muurikaytava": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "harja": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "komero": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pako": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "explodedView": false,
+  "mortarGeometry": {
+    "horizontalPitch": 0.1,
+    "verticalJointPitch": 0.285,
+    "frontVerticalGrooveWidth": 0.008,
+    "horizontalGrooveWidth": 0.01,
+    "existingLooseBrickFace": [
+      0.282365,
+      0.0868541
+    ],
+    "requestedJointWidth": [
+      0.01,
+      0.015
+    ],
+    "existingSolidFrontBrickFaceNominal": [
+      0.277,
+      0.09
+    ],
+    "requiredGeometryChangeForExactRequestedPitch": true
+  },
+  "infillAxes": {
+    "t": [
+      -0.1736193746328354,
+      -0.98481285572052,
+      0.0
+    ],
+    "n": [
+      0.98481285572052,
+      -0.1736193746328354,
+      0.0
+    ],
+    "front": -51.78666877746582,
+    "back": -51.924250304698944
+  },
+  "waterMaterial": {
+    "name": "flowing_lake_water",
+    "origin": "source mesh -vesi (lake surface, not helper)",
+    "preserveGeometry": true
+  }
+}

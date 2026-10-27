@@ -1,0 +1,17 @@
+{
+  "reviewedAt": "2026-10-27T15:43:44.822067+00:00",
+  "pako": {
+    "sha256": "72f77920df4e0a274602c161524a49347b916ebdb586195ae755637f76ac0356",
+    "result": "PASS_LOCAL_PENDING_RECIPIENT",
+    "findings": "Natural rock and lichen detail visible; water identified, source mesh retained."
+  },
+  "komero": {
+    "result": "FAIL_NOT_DELIVERED",
+    "findings": "Visible dark open grooves and regular brick pattern remain; source surface-only restriction conflicts with exact groove geometry target."
+  },
+  "assembly": {
+    "result": "OPEN_NEEDS_RECEIVER_ASSEMBLY",
+    "explodedView": false,
+    "findings": "Known source coordinates preserved; gaps documented, no invented connector architecture."
+  }
+}

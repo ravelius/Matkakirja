@@ -1,0 +1,27 @@
+{
+  "mail": [
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3b-v2-3c-kuittaus-20261027.md",
+      "commit": "391aa80fce20e88bbdca4123a70c5ed31e6112a0",
+      "blob": "da43dc7b0422877bd6837d7876a9acc2b174501b",
+      "sha256": "cd2af4278ada4723b82b122e91c6ac058205ae16cc17e3e2f7657cfd134438b4",
+      "readInFull": true
+    },
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3c-v2-lisays-20261027.md",
+      "commit": "b8a3844737b052d13d84732089826897328d982e",
+      "blob": "f1f17dfc3a6ed433f994120f558767e57da86389",
+      "sha256": "ced0b76957e34530af891923ac7bac1edcd0c3af0e650ca740e91181fca66fe0",
+      "readInFull": true
+    }
+  ],
+  "originalDeliveryCommit": "404e7ccd1cab88644fdfe824ba58319522814b9c",
+  "originalModels": {
+    "muurikaytava": "80d31aaf92e48312cd61d880bf02a03dec4b6148cfb534b6b93b24e0c78f12dc",
+    "harja": "cd125ad284bc58fe248d13d1247df044d7f53aad008af7666e596d443838bf71",
+    "komero": "8bb80b75ee08ee24eb63507b5021c0e00b96ff85ba2bc714d4af6a55592d8892",
+    "pako": "0d94dcfe7b1015778a118ca976d4ce0551347abfa434a168fe8a2afc2c7c9c05"
+  },
+  "diagnosticKomeroCandidateSHA256": "14a08beaaa69aa54087bc24c178317c248bd0fca92e4f94fedc2f83e699c49bf",
+  "diagnosticKomeroCandidateDelivered": false
+}

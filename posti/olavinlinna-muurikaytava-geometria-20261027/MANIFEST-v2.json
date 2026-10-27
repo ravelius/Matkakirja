@@ -1,0 +1,24 @@
+{
+  "taskNumbers": [
+    1151,
+    1152,
+    1153,
+    1154
+  ],
+  "completedLocalTaskNumbers": [
+    1152
+  ],
+  "openTaskNumbers": [
+    1151,
+    1153,
+    1154
+  ],
+  "imageGenerationCalls": 0,
+  "glb": "pako-v2.glb",
+  "sha256": "72f77920df4e0a274602c161524a49347b916ebdb586195ae755637f76ac0356",
+  "bytes": 12498628,
+  "localQA": "PARTIAL_PAKO_PASS_KOMERO_AND_JOINTS_OPEN",
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}
