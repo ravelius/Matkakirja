@@ -1,0 +1,585 @@
+{
+  "status": "FAIL",
+  "source": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/perus/puyi-door-grab.glb",
+  "sourceSHA256": "5fcc3d76fd27b211fe7937b691424a6540b3d1432a29721f7a8d5db2a32c993e",
+  "file": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/perus/puyi-mobile.glb",
+  "sha256": "9dd344245da94d8aac915a1a03aaec705341109f9961385bb48d00e35eb90aa8",
+  "bytes": 15076588,
+  "geometryRigTexturesUnchanged": true,
+  "keyTolerance": {
+    "quaternionChord": 4e-05,
+    "translationScale": 4e-06
+  },
+  "motionDeltaGateM": 0.0001,
+  "keys": [
+    {
+      "clip": "balance",
+      "beforeKeys": 4981,
+      "afterKeys": 3520
+    },
+    {
+      "clip": "catch",
+      "beforeKeys": 5143,
+      "afterKeys": 3495
+    },
+    {
+      "clip": "idle",
+      "beforeKeys": 17923,
+      "afterKeys": 12357
+    },
+    {
+      "clip": "jump",
+      "beforeKeys": 1766,
+      "afterKeys": 1699
+    },
+    {
+      "clip": "run",
+      "beforeKeys": 2523,
+      "afterKeys": 2463
+    },
+    {
+      "clip": "slide",
+      "beforeKeys": 4671,
+      "afterKeys": 3193
+    },
+    {
+      "clip": "sprint",
+      "beforeKeys": 1955,
+      "afterKeys": 1915
+    },
+    {
+      "clip": "stumble",
+      "beforeKeys": 4671,
+      "afterKeys": 3215
+    },
+    {
+      "clip": "throw",
+      "beforeKeys": 4814,
+      "afterKeys": 3356
+    },
+    {
+      "clip": "hang_grab",
+      "beforeKeys": 3432,
+      "afterKeys": 2818
+    },
+    {
+      "clip": "hang_loop",
+      "beforeKeys": 1437,
+      "afterKeys": 1425
+    },
+    {
+      "clip": "hang_release",
+      "beforeKeys": 6941,
+      "afterKeys": 5753
+    },
+    {
+      "clip": "slide_short",
+      "beforeKeys": 6755,
+      "afterKeys": 6525
+    },
+    {
+      "clip": "slide_long",
+      "beforeKeys": 8539,
+      "afterKeys": 8161
+    },
+    {
+      "clip": "slide_feet_first",
+      "beforeKeys": 6286,
+      "afterKeys": 6102
+    },
+    {
+      "clip": "jump_small",
+      "beforeKeys": 2705,
+      "afterKeys": 2621
+    },
+    {
+      "clip": "jump_long",
+      "beforeKeys": 2678,
+      "afterKeys": 2648
+    },
+    {
+      "clip": "taunt_run",
+      "beforeKeys": 6678,
+      "afterKeys": 6678
+    },
+    {
+      "clip": "door_push_run",
+      "beforeKeys": 2159,
+      "afterKeys": 2107
+    },
+    {
+      "clip": "caught_back",
+      "beforeKeys": 4618,
+      "afterKeys": 3930
+    },
+    {
+      "clip": "caught_hold_back",
+      "beforeKeys": 1022,
+      "afterKeys": 921
+    },
+    {
+      "clip": "caught_front",
+      "beforeKeys": 3231,
+      "afterKeys": 2886
+    },
+    {
+      "clip": "caught_hold_front",
+      "beforeKeys": 1022,
+      "afterKeys": 921
+    },
+    {
+      "clip": "caught_side",
+      "beforeKeys": 3341,
+      "afterKeys": 2974
+    },
+    {
+      "clip": "caught_hold_side",
+      "beforeKeys": 1024,
+      "afterKeys": 833
+    },
+    {
+      "clip": "struggle_1",
+      "beforeKeys": 1007,
+      "afterKeys": 983
+    },
+    {
+      "clip": "struggle_2",
+      "beforeKeys": 1497,
+      "afterKeys": 1266
+    },
+    {
+      "clip": "struggle_3",
+      "beforeKeys": 1674,
+      "afterKeys": 1553
+    },
+    {
+      "clip": "struggle_4",
+      "beforeKeys": 1808,
+      "afterKeys": 1711
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeKeys": 1762,
+      "afterKeys": 1268
+    },
+    {
+      "clip": "struggle_free",
+      "beforeKeys": 5768,
+      "afterKeys": 4280
+    },
+    {
+      "clip": "struggle_front_1",
+      "beforeKeys": 1007,
+      "afterKeys": 983
+    },
+    {
+      "clip": "struggle_front_2",
+      "beforeKeys": 1497,
+      "afterKeys": 1266
+    },
+    {
+      "clip": "struggle_front_3",
+      "beforeKeys": 1674,
+      "afterKeys": 1553
+    },
+    {
+      "clip": "struggle_front_4",
+      "beforeKeys": 1808,
+      "afterKeys": 1711
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "beforeKeys": 1762,
+      "afterKeys": 1268
+    },
+    {
+      "clip": "struggle_front_free",
+      "beforeKeys": 9117,
+      "afterKeys": 5427
+    },
+    {
+      "clip": "struggle_side_1",
+      "beforeKeys": 991,
+      "afterKeys": 957
+    },
+    {
+      "clip": "struggle_side_2",
+      "beforeKeys": 1503,
+      "afterKeys": 1313
+    },
+    {
+      "clip": "struggle_side_3",
+      "beforeKeys": 1674,
+      "afterKeys": 1548
+    },
+    {
+      "clip": "struggle_side_4",
+      "beforeKeys": 1775,
+      "afterKeys": 1670
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "beforeKeys": 1758,
+      "afterKeys": 1299
+    },
+    {
+      "clip": "struggle_side_free",
+      "beforeKeys": 9104,
+      "afterKeys": 5417
+    },
+    {
+      "clip": "dodge_left",
+      "beforeKeys": 4689,
+      "afterKeys": 4151
+    },
+    {
+      "clip": "dodge_right",
+      "beforeKeys": 4689,
+      "afterKeys": 4155
+    },
+    {
+      "clip": "dodge_left_right",
+      "beforeKeys": 8096,
+      "afterKeys": 7107
+    },
+    {
+      "clip": "dodge_right_left",
+      "beforeKeys": 8093,
+      "afterKeys": 7110
+    },
+    {
+      "clip": "land_heavy",
+      "beforeKeys": 12684,
+      "afterKeys": 12684
+    },
+    {
+      "clip": "door_grab_left",
+      "beforeKeys": 158363,
+      "afterKeys": 8846
+    },
+    {
+      "clip": "door_grab_right",
+      "beforeKeys": 158363,
+      "afterKeys": 9163
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "balance",
+      "samples": 91,
+      "maxSkinnedVertexDeltaM": 2.377616034652168e-05,
+      "pass": true
+    },
+    {
+      "clip": "catch",
+      "samples": 105,
+      "maxSkinnedVertexDeltaM": 2.1005754947476536e-05,
+      "pass": true
+    },
+    {
+      "clip": "idle",
+      "samples": 461,
+      "maxSkinnedVertexDeltaM": 7.947265052929611e-05,
+      "pass": true
+    },
+    {
+      "clip": "jump",
+      "samples": 20,
+      "maxSkinnedVertexDeltaM": 2.3049254197242864e-05,
+      "pass": true
+    },
+    {
+      "clip": "run",
+      "samples": 39,
+      "maxSkinnedVertexDeltaM": 1.1610718743721506e-05,
+      "pass": true
+    },
+    {
+      "clip": "slide",
+      "samples": 90,
+      "maxSkinnedVertexDeltaM": 3.3786227201601125e-05,
+      "pass": true
+    },
+    {
+      "clip": "sprint",
+      "samples": 30,
+      "maxSkinnedVertexDeltaM": 1.4779039213292764e-05,
+      "pass": true
+    },
+    {
+      "clip": "stumble",
+      "samples": 90,
+      "maxSkinnedVertexDeltaM": 2.3542685670600904e-05,
+      "pass": true
+    },
+    {
+      "clip": "throw",
+      "samples": 91,
+      "maxSkinnedVertexDeltaM": 2.377616034652168e-05,
+      "pass": true
+    },
+    {
+      "clip": "hang_grab",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 4.457858758623554e-05,
+      "pass": true
+    },
+    {
+      "clip": "hang_loop",
+      "samples": 49,
+      "maxSkinnedVertexDeltaM": 4.9172884342815295e-05,
+      "pass": true
+    },
+    {
+      "clip": "hang_release",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 5.847159586486721e-05,
+      "pass": true
+    },
+    {
+      "clip": "slide_short",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 4.795397711955538e-06,
+      "pass": true
+    },
+    {
+      "clip": "slide_long",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 5.1106087331459786e-06,
+      "pass": true
+    },
+    {
+      "clip": "slide_feet_first",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 2.7696609148198667e-06,
+      "pass": true
+    },
+    {
+      "clip": "jump_small",
+      "samples": 18,
+      "maxSkinnedVertexDeltaM": 3.410650404195296e-06,
+      "pass": true
+    },
+    {
+      "clip": "jump_long",
+      "samples": 25,
+      "maxSkinnedVertexDeltaM": 2.5655674862271544e-06,
+      "pass": true
+    },
+    {
+      "clip": "taunt_run",
+      "samples": 73,
+      "maxSkinnedVertexDeltaM": 5.058105373573495e-09,
+      "pass": true
+    },
+    {
+      "clip": "door_push_run",
+      "samples": 20,
+      "maxSkinnedVertexDeltaM": 2.98076057198456e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_back",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 2.0594837334841234e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_back",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.178889751463793e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_front",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 4.614053869644797e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_front",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.178889751463793e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_side",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 2.423796281100288e-05,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_side",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.2771645497980807e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.8967797592293584e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 6.070100715021041e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 5.921987190866128e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 5.4817254862572074e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 5.8202044812733374e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 3.054387985750496e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.8967797592293584e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 6.070100715021041e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 5.921987190866128e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 5.4817254862572074e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 5.8202044812733374e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 9.030909477237662e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 3.741996779579892e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 5.753824056405931e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 5.980518248114105e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 5.8945652243563805e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 6.108982582492712e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 8.755321389054166e-05,
+      "pass": true
+    },
+    {
+      "clip": "dodge_left",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 3.6726636325787384e-05,
+      "pass": true
+    },
+    {
+      "clip": "dodge_right",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 3.0254236014382444e-05,
+      "pass": true
+    },
+    {
+      "clip": "dodge_left_right",
+      "samples": 529,
+      "maxSkinnedVertexDeltaM": 3.7615440774897875e-05,
+      "pass": true
+    },
+    {
+      "clip": "dodge_right_left",
+      "samples": 529,
+      "maxSkinnedVertexDeltaM": 3.7716591671936674e-05,
+      "pass": true
+    },
+    {
+      "clip": "land_heavy",
+      "samples": 750,
+      "maxSkinnedVertexDeltaM": 1.537782375876814e-08,
+      "pass": true
+    },
+    {
+      "clip": "door_grab_left",
+      "samples": 673,
+      "maxSkinnedVertexDeltaM": 5.379327641276955e-05,
+      "pass": true
+    },
+    {
+      "clip": "door_grab_right",
+      "samples": 673,
+      "maxSkinnedVertexDeltaM": 5.379327641276955e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/perus/puyi-mobile.unpacked.glb",
+    "sourceSHA256": "b6b96f9b55eeeef1919bcacbd54dbebcf871d3131ee6f34b958099d61baeea6c",
+    "file": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/perus/puyi-mobile.glb",
+    "sha256": "9dd344245da94d8aac915a1a03aaec705341109f9961385bb48d00e35eb90aa8",
+    "beforeBytes": 23768932,
+    "afterBytes": 15076588,
+    "sourceAccessors": 13982,
+    "usedAccessors": 6980,
+    "deduplicatedAccessors": 6975,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.3645888330647722,
+    "peakRSSMiB": 330.28125
+  },
+  "elapsedSeconds": 92.71671270800289,
+  "peakRSSMiB": 413.671875
+}

@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/viitta/puyi-mobile.glb",
+  "file": "output/juoksupeli-liikkeet-20261027/work/door-grab-v6/viitta/puyi-final.glb",
+  "beforeBytes": 14475008,
+  "bytes": 14389616,
+  "sha256": "a790a9fae9725537b81f5149df23439f19f2051b4cb780d12847bf1c5d43e4db",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "glide_enter",
+      "beforeSamplers": 342,
+      "afterSamplers": 338
+    },
+    {
+      "clip": "glide_exit",
+      "beforeSamplers": 342,
+      "afterSamplers": 338
+    },
+    {
+      "clip": "glide_left",
+      "beforeSamplers": 342,
+      "afterSamplers": 283
+    },
+    {
+      "clip": "glide_loop",
+      "beforeSamplers": 342,
+      "afterSamplers": 290
+    },
+    {
+      "clip": "glide_right",
+      "beforeSamplers": 342,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "hop_sequence",
+      "beforeSamplers": 342,
+      "afterSamplers": 334
+    },
+    {
+      "clip": "idle",
+      "beforeSamplers": 342,
+      "afterSamplers": 332
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "sprint_cape",
+      "beforeSamplers": 342,
+      "afterSamplers": 304
+    },
+    {
+      "clip": "door_push_run",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "caught_back",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_back",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "caught_front",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_front",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "caught_side",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_side",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_1",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_2",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_3",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_4",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_free",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "struggle_front_1",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_2",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_3",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_4",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_free",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "struggle_side_1",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_2",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_3",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_4",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_free",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "dodge_left",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_right",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_left_right",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_right_left",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "land_heavy",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "door_grab_left",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "door_grab_right",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "coordinateSystem": "+Y up; +Z forward; +X anatomical left",
+  "durationS": 0.7,
+  "S": "S(u)=0 below0,1 above1,otherwise3u^2-2u^3.",
+  "I": "I(u)=0 below0,u-0.5 above1,otherwiseu^3-0.5u^4.",
+  "sign": "left:+1,right:-1",
+  "root": "t<.20: X=0,Z=5*(t-.08*I((t-.12)/.08)),yaw=0. .20<=t<=.50: theta=pi/2*S((t-.20)/.30),X=sign*.35*(1-cos(theta)),Z=.8+.35*sin(theta),yaw=sign*theta. t>.50: X=sign*(.35+.4*I((t-.50)/.08)),Z=1.15,yaw=sign*pi/2. Y=0 throughout.",
+  "application": "Apply BOTH translation and yaw to actor/controller; yaw is not baked into Hips. Convert root and anchor from clip-local into world using entry transform. Do not add normal locomotion on top.",
+  "anchor": "Actual finger-pad brace at local [sign*.35,1.0,.8] metres. Contact .10-.54s; enter .00-.10, release .54-.64. This is a bracing hand against the exposed jamb corner, not a fully curled hand wrapping a thick post.",
+  "prototypeJamb": "8x8cm post, y0..1.7; left x .35...43,z .72...80; right mirrored. Tested mesh vertices, not a continuous triangle collision proof. Actual game doorway mesh not tested.",
+  "doorPlacement": "Door width1.2-3.5m does not change anchor. Align selected exposed jamb corner to anchor; receiver checks root corridor, wall/door/header clearance and reverse-side approach.",
+  "end": "At .70s root[sign*1.15,0,1.15], heading sign90deg, speed5m/s along new heading. Keep final heading; resume run at phase1.33s modulo run duration.",
+  "playback": "Reference5m/s. If scaled, scale the ENTIRE clip time/root/yaw/contact clock by gameSpeed/5; never scale translation alone. Gameplay blends still require receiver QA.",
+  "cape": "Only this clip recentres source forward Hips offset during contact, restores it at exit, and folds the inner lower cape grid away from the post. Source mesh, rest pose and all older clip names preserved.",
+  "gameVerified": false
+}

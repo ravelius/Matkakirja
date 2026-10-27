@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "clip": "door_grab_left",
+      "samples": 1345,
+      "minWholeMeshFloorM": 0.0009862769329574644,
+      "maxPlantedContactProxyErrorM": 4.646580799539697e-05,
+      "maxActualFingerSurfaceErrorM": 4.6460520318232706e-05,
+      "maxTestJambVertexPenetrationM": 1.5180053416941064e-05,
+      "maxPlantedFootErrorM": 0.00011747952794416192,
+      "entryRunPoseDelta": 8.488925784533308e-09,
+      "exitRunPoseDelta": 3.05175760217935e-08,
+      "pass": true
+    },
+    {
+      "clip": "door_grab_right",
+      "samples": 1345,
+      "minWholeMeshFloorM": 0.0009862769329574644,
+      "maxPlantedContactProxyErrorM": 4.217058644246136e-05,
+      "maxActualFingerSurfaceErrorM": 4.236641980589756e-05,
+      "maxTestJambVertexPenetrationM": 9.49283878615148e-06,
+      "maxPlantedFootErrorM": 0.00011747952794416192,
+      "entryRunPoseDelta": 8.488925784533308e-09,
+      "exitRunPoseDelta": 3.05175760217935e-08,
+      "pass": true
+    }
+  ],
+  "actualDoorMeshTested": false,
+  "gameVerified": false,
+  "elapsedSeconds": 27.78951683396008,
+  "peakRSSMiB": 181.171875
+}
