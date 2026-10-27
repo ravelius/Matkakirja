@@ -24,3 +24,10 @@ Kansio `/Users/Shared/Claude/proto-3d/_tyo/juoksupeli-hahmoaanet-haku-20261027/u
 Eunukki, Georg `LRpNiUBlcqgIsKUzcrlN` ja Sergio `RGbeQtiShYRDVCrd9b9w`: otto A "[panicked] [shouting] Teidän majesteettinne!" · otto B "[terrified] [screaming] Teidän majesteettinne!" (tiedostot `eunukki-georg|sergio-ottoA|B.mp3`; Georg A on sama otto kuin koe e1).
 Keisari, Kavya `bA58y3FqVI6b6gTNh0oT` (otto1 / otto2): 1 "[mischievous] [laughing] Ottakaa kiinni, jos saatte!" / "[excited] [shouting] Ottakaa kiinni, jos saatte!" · 2 "[gasps] [panicked] Huh!" / "[scared] [breathless] Huh!" · 3 "[gasps] [panicked] [breathless] Huh, läheltä piti!" / "[frightened] [relieved] Huh, läheltä piti!" · 4 "[startled] [shouting] Hui!" / "[gasps] [scared] Hui!" · 5 "[excited] [panicked] Melkein!" / "[gasps] [frightened] Melkein!" (`keisari-N-<nimi>-otto1|2.mp3`).
 Gemini: Sergio B "frantic and panicked", Georg/Sergio A ja Georg B "formal and respectful" (hätä heikko); keisari 2/1 litteroituu "Huh huh!", 4/1 "Hyi!", 4/2 "Hah, voi!", 3/2 "Hah, läheltä piti" (tagit lisäävät sanoja).
+
+## KORJAUS: 4 väärää sanaa uusiksi (KK 27.10., alle 3 %): 368 mrk, 23 yritystä
+Korvattu samalla nimellä `ulos-lopulliset/`; vanhat `ulos-lopulliset/hylatyt-sanat/`. Kaikki Kavya, eleven_v4_turbo, fi, speed 1,2, ei jälkikäsittelyä; Gemini-litterointi 2× täsmää, portti 0/0. Lyhyet äänenpurkaukset ("Huh!", "Hui!") litteroituvat usein väärin, joten tyyli/vakaus laskettiin kahdelle (energia kuuluu silti, Gemini: säikähdys/helpotus).
+- keisari-2-huh-otto1: "[frightened] Huh!" (stability 0,7, style 0,3) · 0,96 s
+- keisari-3-huh-lahelta-piti-otto2: "[panicked] Huh, läheltä piti!" (0,25 / 0,8) · 2,08 s
+- keisari-4-hui-otto1: "[startled] Hui!" (0,5 / 0,5) · 0,88 s
+- keisari-4-hui-otto2: "[panicked] Hui!" (0,7 / 0,3) · 0,96 s
