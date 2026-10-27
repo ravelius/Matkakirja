@@ -2822,3 +2822,13 @@ OMISTAJAN PÄÄTÖS klo 10.16 (sanatarkasti): "Käytä eunukista ensimmäistä j
 ## JUOKSUPELIN OVIKOHTAUS (omistaja 27.10. klo 10.10, KK:n välitys) (27.10.2026 klo 10.11)
 
 OMISTAJAN PYYNTÖ klo 10.10 (sanatarkasti, tason 1 ovikuvista): "Keisarin pitää itse työntää ovi auki ja samalla juosta ulos, ja kameran ei tarvitse näyttää huonetta. Kamera voi olla siis käytävällä. Lähinnä siinä on se idea, että keisari näyttää pakenevan huoneen sisältä kujalle, missä kamera tulee häntä vastaan." TOIMET (KK): välitetty PK:lle (ovet kiinni, kunnes keisarin kädet osuvat; kamera kujalla häntä vastaan; Codexille täydennys: oven työntö juostessa). RAAMATTU 2.177 ALKU JA OPETUS täydennetty.
+
+## KARTTA: VAIN 2D-MERKIT, KOKO MAAPALLO SELATTAVISSA, NOSTON SULKEMINEN (omistaja 27.10. klo 11.25, KK:n välitys) (27.10.2026 klo 11.27)
+
+OMISTAJAN PÄÄTÖS klo 11.25 (sanatarkasti, karttapalaute): "poista kolmiulotteiset karttamerkit käytöstä. käytä pelkkiä 2d merkkejä. louvre yms kohteet ovat myös 2d, näistä pitää kuitenkin korjata
+varjo niin että se piirtyy vain pienesti kohteen alle sen ääriviivoja pitkin (vain ne osat jotka koskettavat maata). poista siis nykyinen ympyrä-soikio varjo. näytä minulle vielä kaikki nykyiset
+louvren kaltaiset 2d merkit, niin annan niistä vielä palautetta. ne ainakin pitää näkyä pienempänä kartalla, kaikki keskimäärin hiukan louvrea pienempänä (nyt osa näyttää louvrea paljon isommilta).
+pelaajan voi antaa selata aina koko maapalloa, mutta pidetään huntu edelleen päällä. nostoissa jos on auto päällä mut pin pois, niin noston pitää sulkeutua silloin kokonaan suljettaessa. vain jos pin
+on päällä, nosto jää yläreunaan pienennettynä. eli auto tila ei vaikuta siihen jääkö nosto näkyviin vai ei." KK:N TAVOITE: kartalla vain 2D-merkit, keskimäärin hieman Louvrea pienempiä, ja ohut varjo
+vain maakosketuksessa; koko maapallo selattavissa hunnun alla; suljettu nosto katoaa kokonaan, ellei pin ole päällä. ENSIN: Karttaseppä tekee kaikista Louvren kaltaisista 2D-merkeistä kontaktiarkin
+KK:lle omistajalle näytettäväksi. RAAMATTU: 2.167 VAIN 2D-MERKIT ja 4.12 SULKEMINEN.
