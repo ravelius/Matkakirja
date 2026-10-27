@@ -1,0 +1,998 @@
+{
+  "status": "PASS",
+  "time": "2026-10-27T20:31:00.188843+00:00",
+  "pngMaps": 88,
+  "dimensionsVerified": true,
+  "normalVectorsVerified": true,
+  "height16bitVerified": true,
+  "files": [
+    {
+      "path": "friisit/pinnat/friisi-v01/friisi-v01-albedo.png",
+      "sha256": "4aec81c94608e04b09e295b209e171ddb2cf6a9ea7a4651546bdc416cc47b361",
+      "bytes": 1323581,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v01/friisi-v01-height.png",
+      "sha256": "e7c0d96df0d107e1e2d99731796634ef1a191f50b413cb5609c9677f7274bd3a",
+      "bytes": 273335,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v01/friisi-v01-metallic.png",
+      "sha256": "c01296c60c66a712aa376111fcae444d5bf305605bdb655c1ac211d1a979cdf4",
+      "bytes": 165474,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v01/friisi-v01-normal-opengl.png",
+      "sha256": "a93f23b792cd495a78c278fdbb5f394a96576157f66455e14fc09dc4d2d74160",
+      "bytes": 226545,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.004067063331604004
+    },
+    {
+      "path": "friisit/pinnat/friisi-v01/friisi-v01-roughness.png",
+      "sha256": "c0cd98b29bd83ae7ee5e94bd3a8a23680613ab308df7908976065ae56617c0b9",
+      "bytes": 132310,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v02/friisi-v02-albedo.png",
+      "sha256": "c0b76fc08b5562bf67e0a635d15481e00657af6e9cacc6d514d318b32afcbb37",
+      "bytes": 1471423,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v02/friisi-v02-height.png",
+      "sha256": "e2c71f7a523286daf76e8ffe1440332931b643c5819f7819ee687d31bb362781",
+      "bytes": 339560,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v02/friisi-v02-metallic.png",
+      "sha256": "f95733470590c9af14eb9bcdf510cce2e385c2aa7919ca4d25bd76a36b08350f",
+      "bytes": 202191,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v02/friisi-v02-normal-opengl.png",
+      "sha256": "47d4ade7d21366b6fccc1b6bd82d5bb54b02b450fc2d08b3d5f36ae0958e74f1",
+      "bytes": 273841,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.004067063331604004
+    },
+    {
+      "path": "friisit/pinnat/friisi-v02/friisi-v02-roughness.png",
+      "sha256": "6c51480aca8bc1d1384bb4be3e2384d111c240e719a2585bb0d6a84d6f888854",
+      "bytes": 160987,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v03/friisi-v03-albedo.png",
+      "sha256": "c061cded0bc3dc7d0491dd105f91f3dae41daee49b3c1f6fc19c492c895d991b",
+      "bytes": 1580267,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v03/friisi-v03-height.png",
+      "sha256": "a4a6da0982e33c22a6692026e7c21c846415f658e39960a71725691cc9db6704",
+      "bytes": 384832,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v03/friisi-v03-metallic.png",
+      "sha256": "6b9f837a73b614e1ef40c88ea0f5ed084ad068911db16abc4938a978fe3db590",
+      "bytes": 231490,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v03/friisi-v03-normal-opengl.png",
+      "sha256": "8d5defd97f65620cc9827738e44c333112cc384b1aa68157e06245fcf8f9aded",
+      "bytes": 313985,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.004067063331604004
+    },
+    {
+      "path": "friisit/pinnat/friisi-v03/friisi-v03-roughness.png",
+      "sha256": "59299f80e396edb5f0470379e6fc205692f32eae6c2f4b800219bf63e00fe3c7",
+      "bytes": 183753,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v04/friisi-v04-albedo.png",
+      "sha256": "07114d5a487b34b351af7f2c595a3a2b69ef39490e4f8eff90bf01e7d37d0f58",
+      "bytes": 1561066,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v04/friisi-v04-height.png",
+      "sha256": "ccb23df5c1c3fd57dbd6f2567edf5b74d8ccabef6351caa7d307f12de968d091",
+      "bytes": 313963,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v04/friisi-v04-metallic.png",
+      "sha256": "a4838fdafc107e5de23ff34b653dd3e5042c886b5835257d6833c4004b52687d",
+      "bytes": 195361,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/friisi-v04/friisi-v04-normal-opengl.png",
+      "sha256": "2b8d2061cb0cd40de9c484f472931212e2ff77dc9e2e50f629fd3c4f3669f2bc",
+      "bytes": 261439,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.004067063331604004
+    },
+    {
+      "path": "friisit/pinnat/friisi-v04/friisi-v04-roughness.png",
+      "sha256": "261371509250e031ac880a07cd49da1ba8020a83cfef14a9b650c2bc91be49da",
+      "bytes": 154635,
+      "sizePx": [
+        2048,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v01/kultalista-v01-albedo.png",
+      "sha256": "018f78c52b20b20122fcbdf2fdbf79840cab329f9c9faa5528c8b04668ba5637",
+      "bytes": 972,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v01/kultalista-v01-metallic.png",
+      "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v01/kultalista-v01-normal-opengl.png",
+      "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+      "bytes": 205,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 1.537799835205078e-05
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v01/kultalista-v01-roughness.png",
+      "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v02/kultalista-v02-albedo.png",
+      "sha256": "a4e88fe73a1875914714d8ff97308358ef86d139fa433e43e83a58081961ee6f",
+      "bytes": 929,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v02/kultalista-v02-metallic.png",
+      "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v02/kultalista-v02-normal-opengl.png",
+      "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+      "bytes": 205,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 1.537799835205078e-05
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v02/kultalista-v02-roughness.png",
+      "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v03/kultalista-v03-albedo.png",
+      "sha256": "5679a59f11308d2be51bbf8d38ed5022fb7c935954d503dc88b51ac25b76d021",
+      "bytes": 924,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v03/kultalista-v03-metallic.png",
+      "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v03/kultalista-v03-normal-opengl.png",
+      "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+      "bytes": 205,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 1.537799835205078e-05
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v03/kultalista-v03-roughness.png",
+      "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v04/kultalista-v04-albedo.png",
+      "sha256": "b6149e5995f28ff9bbf0ae5e0d7afcd4ff193508965a20b58783e35ad3a72087",
+      "bytes": 896,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v04/kultalista-v04-metallic.png",
+      "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v04/kultalista-v04-normal-opengl.png",
+      "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+      "bytes": 205,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 1.537799835205078e-05
+    },
+    {
+      "path": "friisit/pinnat/kultalista-v04/kultalista-v04-roughness.png",
+      "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+      "bytes": 162,
+      "sizePx": [
+        512,
+        32
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v01/kattotiili-v01-albedo.png",
+      "sha256": "10eb08d2e1f1dd6bbdffea793fc14e0f65a97c6dc9a9968312cdff36c92c9fb5",
+      "bytes": 419259,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v01/kattotiili-v01-height.png",
+      "sha256": "bbdbcc78f2640e57cf558431de9278cb9b6ad9989a392b81d3c2d0e776e624cb",
+      "bytes": 238700,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v01/kattotiili-v01-normal-opengl.png",
+      "sha256": "edb27325a139a4d79c9692a5fb090190d9ec049c10fea09578da6d0fb61570a1",
+      "bytes": 48480,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00590747594833374
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v01/kattotiili-v01-roughness.png",
+      "sha256": "1a35f822736340d53510b9c68011c9f98245d385946a3ca5503620ca5c194753",
+      "bytes": 5112,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v02/kattotiili-v02-albedo.png",
+      "sha256": "046cc3aa2ba38a4760b174fdc7df9a0af22a26b2ce7f6c6b2cafc158e897d4c5",
+      "bytes": 417402,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v02/kattotiili-v02-height.png",
+      "sha256": "67a8715513aed093093fbe00cb26243c007dbac9131ea37d63c70a97260184f3",
+      "bytes": 239226,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v02/kattotiili-v02-normal-opengl.png",
+      "sha256": "f2738d9d9ff5c6d26f73cf35c4ba61355a98656e1a7cc60fe4857f2f01610a56",
+      "bytes": 48677,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.006147980690002441
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v02/kattotiili-v02-roughness.png",
+      "sha256": "3ddf67814400e31e0877c167a1af22776609ea5677a2f9f05ef1c88dd8fbdb98",
+      "bytes": 5172,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v03/kattotiili-v03-albedo.png",
+      "sha256": "501f403b943289af7608a475b5f2d9b2d186c842860ddf016e1aeceecab7f002",
+      "bytes": 425246,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v03/kattotiili-v03-height.png",
+      "sha256": "8681a4f2d0d5b6fd3b640ef2822ddbea108152911e423221b6842bf21e1de344",
+      "bytes": 239068,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v03/kattotiili-v03-normal-opengl.png",
+      "sha256": "8a68ee0bd5aa4d5437d6106027611128e9804903471d99cc4632482d5f58c0a8",
+      "bytes": 48757,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.0053528547286987305
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v03/kattotiili-v03-roughness.png",
+      "sha256": "0bbd5416a111ee7fc9e1a267e09630c9d238ed11e8173ea41240fc688d73376c",
+      "bytes": 5165,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v04/kattotiili-v04-albedo.png",
+      "sha256": "1106063edaaa1afd21067aeb9de093895d282eae10599b6fd366e9637fcf9814",
+      "bytes": 410854,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v04/kattotiili-v04-height.png",
+      "sha256": "fabb993795a837743c00460fe1a3a0d75e9662cf1f362237401ecd548b316761",
+      "bytes": 238614,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v04/kattotiili-v04-normal-opengl.png",
+      "sha256": "2e2674effe8dc7e240fad7cacea32fa375b001d84e218de1640ed529e96d5cbd",
+      "bytes": 48650,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.0053528547286987305
+    },
+    {
+      "path": "katot/pinnat/kattotiili-v04/kattotiili-v04-roughness.png",
+      "sha256": "341f25e06bb2e5b0dad303b855e2a8538dd5b68d4450eec925ce7680b180315a",
+      "bytes": 5193,
+      "sizePx": [
+        512,
+        512
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v01/rappaus-alalika-v01-albedo.png",
+      "sha256": "f72bfd8db1fc996c6bf6ea94ee85de82f6b3c8e7d6c7290dd079ad86e2a2c597",
+      "bytes": 565453,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v01/rappaus-alalika-v01-dirt-mask.png",
+      "sha256": "4dd103bc44fca429f33065202b1b3c1c69de8d1ff95a7c7c81db40e42fc36aea",
+      "bytes": 25164,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v01/rappaus-alalika-v01-height.png",
+      "sha256": "94b87a9cc08daa33b2241b6e7c51a63aba3e95bf83d25a8ba86455f6a276d53b",
+      "bytes": 785434,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v01/rappaus-alalika-v01-normal-opengl.png",
+      "sha256": "53ad0fed0796f8188ed3a976366799fde0e86da1567d966c671d9357bcda258c",
+      "bytes": 188288,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v01/rappaus-alalika-v01-roughness.png",
+      "sha256": "128a96cf524797b75065323f85230932cd2d5100de7ca5213b3eda0514645c6c",
+      "bytes": 19606,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v02/rappaus-alalika-v02-albedo.png",
+      "sha256": "cde5e05b037ecb5a2a5b0db98e1e1fe22f6133b919997e597336080d008f062a",
+      "bytes": 560775,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v02/rappaus-alalika-v02-dirt-mask.png",
+      "sha256": "4ebe9ee329b795bc73740edf2ead766f2b174533542c607c343ec2b2c32f9298",
+      "bytes": 24772,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v02/rappaus-alalika-v02-height.png",
+      "sha256": "e0df8665e136a52f657e77657fae428bb8938f514756a5ecda9287874335f762",
+      "bytes": 785515,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v02/rappaus-alalika-v02-normal-opengl.png",
+      "sha256": "e40c499ba12cbd339314d2b5b23886f3399a4a738c60e165869eb6d871bb58bc",
+      "bytes": 187640,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v02/rappaus-alalika-v02-roughness.png",
+      "sha256": "c436ac480d9f633e120b02f3aebac23b9d7db353689075d49b45597a5fd0793e",
+      "bytes": 20178,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v03/rappaus-alalika-v03-albedo.png",
+      "sha256": "f464bb97ec73fe6da585dd46312c3a0e02386e770e11909f980f745a5950d8bc",
+      "bytes": 542885,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v03/rappaus-alalika-v03-dirt-mask.png",
+      "sha256": "1600932cb5e6e5cae6d998a4c404a965d533604fc750e9a785f30eef8b075990",
+      "bytes": 25022,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v03/rappaus-alalika-v03-height.png",
+      "sha256": "982276c874c21bb25f8957f62d464ce9db330b747624a32d8eda212eeae06144",
+      "bytes": 785727,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v03/rappaus-alalika-v03-normal-opengl.png",
+      "sha256": "1129089019d84c61b8e2013356b9fe875dcd3c990321d3434cc3e5d92b20695c",
+      "bytes": 187921,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v03/rappaus-alalika-v03-roughness.png",
+      "sha256": "eef6265cc6a7a2867ab81d8e0e3eb3126448c207054c4723c4fef757ce9d60d4",
+      "bytes": 20183,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v04/rappaus-alalika-v04-albedo.png",
+      "sha256": "5c0fcc92dadca43eb6ea1e5c52785fd60835ebf5de8c8ea9ff9de7a4dfc6efe4",
+      "bytes": 574976,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v04/rappaus-alalika-v04-dirt-mask.png",
+      "sha256": "3e3740857f0d1c021ae9dfb668e52e71e0f911d95bf5652b93c78deb06ef9716",
+      "bytes": 24971,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v04/rappaus-alalika-v04-height.png",
+      "sha256": "e9b1c0e00c59e9a0a27405398dc55ddca9f5dfd05a6d0f66d330e22083522f9a",
+      "bytes": 785552,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v04/rappaus-alalika-v04-normal-opengl.png",
+      "sha256": "1e720089a66405b7716f7f8fcdfbcc0f48b27a0d845e44a0f0a934fe1eeb6a90",
+      "bytes": 188128,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-alalika-v04/rappaus-alalika-v04-roughness.png",
+      "sha256": "257db7fd73761d796dcf9b14364c5b73347979cf84c7b471804a3a2f181b3357",
+      "bytes": 19980,
+      "sizePx": [
+        2048,
+        256
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v01/rappaus-v01-albedo.png",
+      "sha256": "fc0520c4da895ac6b073db7741c40d68fb3b850ad0def19a1e635a9b75cb68b0",
+      "bytes": 2745637,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v01/rappaus-v01-height.png",
+      "sha256": "5dca30e28404eb06fd66f3491a295cfc76454caf5ea5e052bfce9c9117173deb",
+      "bytes": 6281021,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v01/rappaus-v01-normal-opengl.png",
+      "sha256": "3e38efaa2063fd9a823b18b4d01e0c88a691ec4b8da00d6b2bce930691d5d05b",
+      "bytes": 1502487,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v01/rappaus-v01-roughness.png",
+      "sha256": "77f6e36ec79daf4fa51a0fe20223226a9e1a6e9f92ccf6c58f17d2bafbfeae32",
+      "bytes": 63604,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v02/rappaus-v02-albedo.png",
+      "sha256": "581ff173f71cdb28181bd57e8ac3124c213e9a5b8caf8f350cb145687f740c5f",
+      "bytes": 2724197,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v02/rappaus-v02-height.png",
+      "sha256": "4890cf931e8f93d2a33985fba8818d70c9d4858677634fb8fbb9986dbbb2bd51",
+      "bytes": 6282409,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v02/rappaus-v02-normal-opengl.png",
+      "sha256": "0a1e5f7f4ffba82bfe92c6c28c494b4c6b59626c378e3b02ad4fb6f6c2f169bf",
+      "bytes": 1502060,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v02/rappaus-v02-roughness.png",
+      "sha256": "81cea336dda158f862f4684f68d61a178cdc94f0ef4143965976ba0549fcad9c",
+      "bytes": 65581,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v03/rappaus-v03-albedo.png",
+      "sha256": "9c76ae0d443ff6093b3cfb8f629123b350ca76b3c5ec0f37dd53096fd3879a19",
+      "bytes": 2602651,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v03/rappaus-v03-height.png",
+      "sha256": "cd32c5c2839e6271617c14207ba26bf67269de3641e743dcc873bb6528e2600a",
+      "bytes": 6282487,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v03/rappaus-v03-normal-opengl.png",
+      "sha256": "45d81be3563d137cd5dcdcf8e4f250e85c9d3fd252ed941143f78dc5e47e9fba",
+      "bytes": 1502690,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v03/rappaus-v03-roughness.png",
+      "sha256": "e2cff8c7c5928574cb5acf28c961e08ce78682367be30d3fe4637a552582876e",
+      "bytes": 64171,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v04/rappaus-v04-albedo.png",
+      "sha256": "c5ef5c7760e260ca7341aa145b821a883e476851508fb56bdb9b4dd13c408f53",
+      "bytes": 2821209,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v04/rappaus-v04-height.png",
+      "sha256": "8d862773bcbeca61d4a91b8aea24fed323a052ab23d41ea93bf6fd4c63ade5d4",
+      "bytes": 6281197,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "I;16",
+      "colorSpace": "linear"
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v04/rappaus-v04-normal-opengl.png",
+      "sha256": "599a65744c60bb08b7772d04ca34663a24a9da8a5b90661cf684272480e13472",
+      "bytes": 1502173,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "colorSpace": "linear",
+      "normalLengthMaxError": 0.00019991397857666016
+    },
+    {
+      "path": "rappaus/pinnat/rappaus-v04/rappaus-v04-roughness.png",
+      "sha256": "dba99577b615e4d8af96df4fc08d67f6e8007be3cda16aef217007961917901e",
+      "bytes": 64087,
+      "sizePx": [
+        2048,
+        2048
+      ],
+      "mode": "L",
+      "colorSpace": "linear"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-205842/02/havainne.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+    "sha256": "ade56ecc3ccdf05a4ac50494b3cfad38a300552397d6812c8f511c42b0bfd8a2"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-205842/01/havainne.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-01-havainne.png",
+    "sha256": "7a4a14b1dc6b457778155efb5a7e4db5571621b95886ad6ad8c9fe124104b955"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-205842/05/havainne.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-05-havainne.png",
+    "sha256": "c88e64a66447ad0a6340d082d8eb1ff4f2374841e8ecca839ea7da3a99efc5f2"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-195504/02/peli.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/195504-02-peli.png",
+    "sha256": "db6eada1807557247beb03c4bf230436e0d6467b1f9b42c4f952f171bf15b524"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-195504/reunus-02-lahikuva.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/195504-reunus-02-lahikuva.png",
+    "sha256": "493caa42df4fe656ca8aa462601f49b3eb241ad34516225550d32147c317fb39"
+  }
+]

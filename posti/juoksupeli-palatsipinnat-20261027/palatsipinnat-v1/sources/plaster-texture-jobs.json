@@ -1,0 +1,73 @@
+{
+  "startedAt": "2026-10-27T20:24:51.779164+00:00",
+  "plannedCalls": 4,
+  "calls": [
+    {
+      "variant": 1,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR albedo source, variant 1 of 4. One perfectly flat seamless square plaster wall material filling entire 2048x2048 canvas. Reference image is ONLY for the Forbidden City red wall surface palette. No scene, no architecture, no borders, no bricks, no grout, no objects, no perspective. Color: warm vermilion red with fine ochre mottles. Subtle authentic hand-applied lime plaster texture under red mineral paint, soft uneven trowel traces, fine sparse hairline cracks and mottling at several scales; restrained, well-maintained palace wall, not ruin, not graffiti. Entire surface is red plaster with no stone showing. Base color only: completely neutral uniform illumination, no highlights, cast shadows, AO, vignette, sunlight or directional gradient. Repeat seamlessly in both directions, no obvious repeated central patch. Do not add a dirt strip at the bottom; bottom weathering is a separate material layer. No letters, no text, no watermark.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:24:52.231610+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:25:55.930404+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-443daf33-8d91-4dd6-ad5e-7bc1ad300139.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/plaster-base-v01.png",
+      "sha256": "bc34e44b4b83a7b7f698f96077e11072cafd8ec365136a37edd95de9d68ba562",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 2,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR albedo source, variant 2 of 4. One perfectly flat seamless square plaster wall material filling entire 2048x2048 canvas. Reference image is ONLY for the Forbidden City red wall surface palette. No scene, no architecture, no borders, no bricks, no grout, no objects, no perspective. Color: slightly muted cinnabar red, very subtle dusty rose mineral mottles. Subtle authentic hand-applied lime plaster texture under red mineral paint, soft uneven trowel traces, fine sparse hairline cracks and mottling at several scales; restrained, well-maintained palace wall, not ruin, not graffiti. Entire surface is red plaster with no stone showing. Base color only: completely neutral uniform illumination, no highlights, cast shadows, AO, vignette, sunlight or directional gradient. Repeat seamlessly in both directions, no obvious repeated central patch. Do not add a dirt strip at the bottom; bottom weathering is a separate material layer. No letters, no text, no watermark.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:25:55.983572+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:27:19.000766+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-2e18f67e-f7af-455b-94be-ce64c63b9e91.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/plaster-base-v02.png",
+      "sha256": "6361ba00085b45f492ec7ea44b0ade4514e47634cbfd6637004fcbc6e14cab54",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 3,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR albedo source, variant 3 of 4. One perfectly flat seamless square plaster wall material filling entire 2048x2048 canvas. Reference image is ONLY for the Forbidden City red wall surface palette. No scene, no architecture, no borders, no bricks, no grout, no objects, no perspective. Color: warm brick-vermilion red with soft faded coral patches. Subtle authentic hand-applied lime plaster texture under red mineral paint, soft uneven trowel traces, fine sparse hairline cracks and mottling at several scales; restrained, well-maintained palace wall, not ruin, not graffiti. Entire surface is red plaster with no stone showing. Base color only: completely neutral uniform illumination, no highlights, cast shadows, AO, vignette, sunlight or directional gradient. Repeat seamlessly in both directions, no obvious repeated central patch. Do not add a dirt strip at the bottom; bottom weathering is a separate material layer. No letters, no text, no watermark.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:27:19.056137+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:28:07.689059+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-df2a3f0d-177a-4c24-977c-7c588a6b97b9.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/plaster-base-v03.png",
+      "sha256": "af463f3ddf318da9e04d03e053ac4c34cdf74e38fe01d3edd128df6ee3285d19",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 4,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR albedo source, variant 4 of 4. One perfectly flat seamless square plaster wall material filling entire 2048x2048 canvas. Reference image is ONLY for the Forbidden City red wall surface palette. No scene, no architecture, no borders, no bricks, no grout, no objects, no perspective. Color: rich warm palace red, faint mineral wear and fine plaster grain. Subtle authentic hand-applied lime plaster texture under red mineral paint, soft uneven trowel traces, fine sparse hairline cracks and mottling at several scales; restrained, well-maintained palace wall, not ruin, not graffiti. Entire surface is red plaster with no stone showing. Base color only: completely neutral uniform illumination, no highlights, cast shadows, AO, vignette, sunlight or directional gradient. Repeat seamlessly in both directions, no obvious repeated central patch. Do not add a dirt strip at the bottom; bottom weathering is a separate material layer. No letters, no text, no watermark.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:28:07.742317+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:29:31.154976+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-58715e0e-842e-4d57-b96b-925ff1e22260.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/plaster-base-v04.png",
+      "sha256": "65836a09141ea563b719d182805c9102f2a449bb396fded0ad5a2241fcb3bb83",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "tripoCalls": 0,
+  "sourceCommit": "7eb80206c277d3572eebf583f971de23c7609f4f",
+  "cost": "not reported by tool"
+}

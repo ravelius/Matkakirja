@@ -1,0 +1,358 @@
+{
+  "createdAt": "2026-10-27T20:19:12.004489+00:00",
+  "materials": [
+    {
+      "variant": 1,
+      "dimensionsM": [
+        1,
+        1
+      ],
+      "rows": 4,
+      "overlapSpacingM": 0.25,
+      "repeatXY": [
+        true,
+        true
+      ],
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v01.png",
+      "sourceSHA256": "d733d00611e2ad7bd7bdf2fc2cade7ecb02f43183de7d468c648347b6f06557e",
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/kattotiili-v01/kattotiili-v01-albedo.png",
+          "sha256": "10eb08d2e1f1dd6bbdffea793fc14e0f65a97c6dc9a9968312cdff36c92c9fb5",
+          "bytes": 419259,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/kattotiili-v01/kattotiili-v01-normal-opengl.png",
+          "sha256": "edb27325a139a4d79c9692a5fb090190d9ec049c10fea09578da6d0fb61570a1",
+          "bytes": 48480,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/kattotiili-v01/kattotiili-v01-roughness.png",
+          "sha256": "1a35f822736340d53510b9c68011c9f98245d385946a3ca5503620ca5c194753",
+          "bytes": 5112,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/kattotiili-v01/kattotiili-v01-height.png",
+          "sha256": "bbdbcc78f2640e57cf558431de9278cb9b6ad9989a392b81d3c2d0e776e624cb",
+          "bytes": 238700,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "qaPeriodic": [
+        {
+          "axis": 0,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "axis": 1,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.025,
+        "rangeM": 0.065
+      },
+      "rangeM": [
+        -0.018024027347564697,
+        0.03391551971435547
+      ]
+    },
+    {
+      "variant": 2,
+      "dimensionsM": [
+        1,
+        1
+      ],
+      "rows": 4,
+      "overlapSpacingM": 0.25,
+      "repeatXY": [
+        true,
+        true
+      ],
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v02.png",
+      "sourceSHA256": "6670503156d858da8e3885d6ce8662d6fd280df9eb70d0057899cd0ed1bb1e7a",
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/kattotiili-v02/kattotiili-v02-albedo.png",
+          "sha256": "046cc3aa2ba38a4760b174fdc7df9a0af22a26b2ce7f6c6b2cafc158e897d4c5",
+          "bytes": 417402,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/kattotiili-v02/kattotiili-v02-normal-opengl.png",
+          "sha256": "f2738d9d9ff5c6d26f73cf35c4ba61355a98656e1a7cc60fe4857f2f01610a56",
+          "bytes": 48677,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/kattotiili-v02/kattotiili-v02-roughness.png",
+          "sha256": "3ddf67814400e31e0877c167a1af22776609ea5677a2f9f05ef1c88dd8fbdb98",
+          "bytes": 5172,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/kattotiili-v02/kattotiili-v02-height.png",
+          "sha256": "67a8715513aed093093fbe00cb26243c007dbac9131ea37d63c70a97260184f3",
+          "bytes": 239226,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "qaPeriodic": [
+        {
+          "axis": 0,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "axis": 1,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.025,
+        "rangeM": 0.065
+      },
+      "rangeM": [
+        -0.01802363246679306,
+        0.0339101105928421
+      ]
+    },
+    {
+      "variant": 3,
+      "dimensionsM": [
+        1,
+        1
+      ],
+      "rows": 4,
+      "overlapSpacingM": 0.25,
+      "repeatXY": [
+        true,
+        true
+      ],
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v03.png",
+      "sourceSHA256": "8af9c10ecfd91206dcd41d8ff38a0ff2828bb5f1b521237bfe14a47e5470c386",
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/kattotiili-v03/kattotiili-v03-albedo.png",
+          "sha256": "501f403b943289af7608a475b5f2d9b2d186c842860ddf016e1aeceecab7f002",
+          "bytes": 425246,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/kattotiili-v03/kattotiili-v03-normal-opengl.png",
+          "sha256": "8a68ee0bd5aa4d5437d6106027611128e9804903471d99cc4632482d5f58c0a8",
+          "bytes": 48757,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/kattotiili-v03/kattotiili-v03-roughness.png",
+          "sha256": "0bbd5416a111ee7fc9e1a267e09630c9d238ed11e8173ea41240fc688d73376c",
+          "bytes": 5165,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/kattotiili-v03/kattotiili-v03-height.png",
+          "sha256": "8681a4f2d0d5b6fd3b640ef2822ddbea108152911e423221b6842bf21e1de344",
+          "bytes": 239068,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "qaPeriodic": [
+        {
+          "axis": 0,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "axis": 1,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.025,
+        "rangeM": 0.065
+      },
+      "rangeM": [
+        -0.01802399381995201,
+        0.033913690596818924
+      ]
+    },
+    {
+      "variant": 4,
+      "dimensionsM": [
+        1,
+        1
+      ],
+      "rows": 4,
+      "overlapSpacingM": 0.25,
+      "repeatXY": [
+        true,
+        true
+      ],
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v04.png",
+      "sourceSHA256": "ee1805b1ca63013b821d9eb4aa58926381904376102ee4f3df876f3c671410ce",
+      "maps": [
+        {
+          "kind": "albedo",
+          "path": "pinnat/kattotiili-v04/kattotiili-v04-albedo.png",
+          "sha256": "1106063edaaa1afd21067aeb9de093895d282eae10599b6fd366e9637fcf9814",
+          "bytes": 410854,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "kind": "normal-opengl",
+          "path": "pinnat/kattotiili-v04/kattotiili-v04-normal-opengl.png",
+          "sha256": "2e2674effe8dc7e240fad7cacea32fa375b001d84e218de1640ed529e96d5cbd",
+          "bytes": 48650,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "roughness",
+          "path": "pinnat/kattotiili-v04/kattotiili-v04-roughness.png",
+          "sha256": "341f25e06bb2e5b0dad303b855e2a8538dd5b68d4450eec925ce7680b180315a",
+          "bytes": 5193,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "kind": "height",
+          "path": "pinnat/kattotiili-v04/kattotiili-v04-height.png",
+          "sha256": "fabb993795a837743c00460fe1a3a0d75e9662cf1f362237401ecd548b316761",
+          "bytes": 238614,
+          "sizePx": [
+            512,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "qaPeriodic": [
+        {
+          "axis": 0,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "axis": 1,
+          "albedoHeightRoughnessMaxDelta": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "heightDecode": {
+        "offsetM": -0.025,
+        "rangeM": 0.065
+      },
+      "rangeM": [
+        -0.01802436076104641,
+        0.033916160464286804
+      ]
+    }
+  ],
+  "imageCalls": 4,
+  "tripoCalls": 0,
+  "qa": "PASS_READBACK_DIMENSIONS_PERIODIC_NORMALS",
+  "gameIntegrated": false,
+  "ownerAccepted": false
+}

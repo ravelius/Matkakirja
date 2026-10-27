@@ -1,0 +1,69 @@
+{
+  "plannedCalls": 3,
+  "originalCalls": 4,
+  "calls": [
+    {
+      "variant": 1,
+      "status": "GENERATED",
+      "prompt": "Use case: historical-scene; GAME MATERIAL ALBEDO TEXTURE, variant 1 of 4. Generate a new flat front-orthographic painted wood frieze texture, NOT a scene or a photographed object. Exact wide horizontal rectangular canvas aspect ratio 4:1, requested 2048x512 pixels, art fills every pixel, no whitespace or outside frame. This maps to one 4.13m-wide, 1.03m-tall decorative painted beam under palace eaves. Reference images ONLY define the turquoise/blue and gold palette and palace painted-beam style; exclude roofs, walls, people, perspective and shadows. Beautiful Qing palace polychrome decoration: deep turquoise teal and some lapis-blue painted background with fine warm golden linework, lotus scroll and a central eight-petal rosette, restrained geometric ruyi borders. Elegant carefully drawn historic Chinese floral ornament, painterly handmade gold detailing with VERY subtle age wear, not generic wallpaper. Thin straight gold horizontal bands run at precisely the same heights across the whole top and bottom edges. No vertical exterior border at either left or right edge; edge ornament seamlessly continues into adjacent repeat horizontally. Vertical crop is the full frieze. All elements strictly front-facing, no bevel-lit frame, no 3D thickness, no highlights, no cast or baked shadows, no ambient occlusion, no illumination gradient. Uniform albedo color only; separate engine lighting and normal maps added later. No text, no glyphs, no letters, no seals, no watermark. Produce one single continuous frieze image, not a contact sheet. CRITICAL TILING REQUIREMENT: Leave the leftmost and rightmost 3 percent of the image as identical perfectly flat solid teal paint RGB(18,104,105); all flowers and scrolls end inside these margins, nothing is cut at an edge. Thin gold top/bottom horizontal bands must meet both edges at exactly the same height and use identical flat ochre gold color there. No weathering, stains, cracks, grain, shadows or lighting variation in these edge margins. This is an exact game texture seam constraint. Avoid raised moldings: even the gold borders are FLAT PAINT, without any black shadow or bright bevel.",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-05-havainne.png"
+      ],
+      "reason": "Original native edge mismatch16–20/255 failed seamless repeat; fresh full generation with explicit plain edge margins",
+      "startedAt": "2026-10-27T20:22:19.791153+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:23:05.611783+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-f86356da-8b70-43cb-922d-72fa15949e30.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v01.png",
+      "sha256": "a35a4e98554a550696d4f3efe190fd9da26dd4028d290a83f72c96456157543f",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "variant": 2,
+      "status": "GENERATED",
+      "prompt": "Use case: historical-scene; GAME MATERIAL ALBEDO TEXTURE, variant 2 of 4. Generate a new flat front-orthographic painted wood frieze texture, NOT a scene or a photographed object. Exact wide horizontal rectangular canvas aspect ratio 4:1, requested 2048x512 pixels, art fills every pixel, no whitespace or outside frame. This maps to one 4.13m-wide, 1.03m-tall decorative painted beam under palace eaves. Reference images ONLY define the turquoise/blue and gold palette and palace painted-beam style; exclude roofs, walls, people, perspective and shadows. Beautiful Qing palace polychrome decoration: deep turquoise teal and some lapis-blue painted background with fine warm golden linework, stylized cloud scroll with two balanced floral medallions and fine meander borders. Elegant carefully drawn historic Chinese floral ornament, painterly handmade gold detailing with VERY subtle age wear, not generic wallpaper. Thin straight gold horizontal bands run at precisely the same heights across the whole top and bottom edges. No vertical exterior border at either left or right edge; edge ornament seamlessly continues into adjacent repeat horizontally. Vertical crop is the full frieze. All elements strictly front-facing, no bevel-lit frame, no 3D thickness, no highlights, no cast or baked shadows, no ambient occlusion, no illumination gradient. Uniform albedo color only; separate engine lighting and normal maps added later. No text, no glyphs, no letters, no seals, no watermark. Produce one single continuous frieze image, not a contact sheet. CRITICAL TILING REQUIREMENT: Leave the leftmost and rightmost 3 percent of the image as identical perfectly flat solid teal paint RGB(18,104,105); all flowers and scrolls end inside these margins, nothing is cut at an edge. Thin gold top/bottom horizontal bands must meet both edges at exactly the same height and use identical flat ochre gold color there. No weathering, stains, cracks, grain, shadows or lighting variation in these edge margins. This is an exact game texture seam constraint. Avoid raised moldings: even the gold borders are FLAT PAINT, without any black shadow or bright bevel.",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-05-havainne.png"
+      ],
+      "reason": "Original native edge mismatch16–20/255 failed seamless repeat; fresh full generation with explicit plain edge margins",
+      "startedAt": "2026-10-27T20:23:05.670394+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:23:46.359259+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-678c596b-45d1-4b38-831c-8f26ce03b86d.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v02.png",
+      "sha256": "f57a684648388fe33c267c3ab27a94c72b9ec850d8ee71fa0597322cf0350336",
+      "size": [
+        2172,
+        724
+      ]
+    },
+    {
+      "variant": 3,
+      "status": "GENERATED",
+      "prompt": "Use case: historical-scene; GAME MATERIAL ALBEDO TEXTURE, variant 3 of 4. Generate a new flat front-orthographic painted wood frieze texture, NOT a scene or a photographed object. Exact wide horizontal rectangular canvas aspect ratio 4:1, requested 2048x512 pixels, art fills every pixel, no whitespace or outside frame. This maps to one 4.13m-wide, 1.03m-tall decorative painted beam under palace eaves. Reference images ONLY define the turquoise/blue and gold palette and palace painted-beam style; exclude roofs, walls, people, perspective and shadows. Beautiful Qing palace polychrome decoration: deep turquoise teal and some lapis-blue painted background with fine warm golden linework, delicate peony tendrils with a central lozenge flower medallion, fine ruyi border. Elegant carefully drawn historic Chinese floral ornament, painterly handmade gold detailing with VERY subtle age wear, not generic wallpaper. Thin straight gold horizontal bands run at precisely the same heights across the whole top and bottom edges. No vertical exterior border at either left or right edge; edge ornament seamlessly continues into adjacent repeat horizontally. Vertical crop is the full frieze. All elements strictly front-facing, no bevel-lit frame, no 3D thickness, no highlights, no cast or baked shadows, no ambient occlusion, no illumination gradient. Uniform albedo color only; separate engine lighting and normal maps added later. No text, no glyphs, no letters, no seals, no watermark. Produce one single continuous frieze image, not a contact sheet. CRITICAL TILING REQUIREMENT: Leave the leftmost and rightmost 3 percent of the image as identical perfectly flat solid teal paint RGB(18,104,105); all flowers and scrolls end inside these margins, nothing is cut at an edge. Thin gold top/bottom horizontal bands must meet both edges at exactly the same height and use identical flat ochre gold color there. No weathering, stains, cracks, grain, shadows or lighting variation in these edge margins. This is an exact game texture seam constraint. Avoid raised moldings: even the gold borders are FLAT PAINT, without any black shadow or bright bevel.",
+      "references": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-05-havainne.png"
+      ],
+      "reason": "Original native edge mismatch16–20/255 failed seamless repeat; fresh full generation with explicit plain edge margins",
+      "startedAt": "2026-10-27T20:23:46.412524+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:24:51.738353+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-a74aabf6-1062-4a85-b261-3292d581c9b8.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v03.png",
+      "sha256": "91331f3cb9a980ad810fa96d853c7ecbc572d0ec3fbe3f0e669414dc6f570aef",
+      "size": [
+        2172,
+        724
+      ]
+    }
+  ],
+  "tripoCalls": 0,
+  "scope": "One full new image per failed frieze variant; preserve originals, no iterative edits",
+  "cost": "not reported by image tool"
+}

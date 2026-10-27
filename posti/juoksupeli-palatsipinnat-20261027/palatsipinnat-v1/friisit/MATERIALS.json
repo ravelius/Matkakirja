@@ -1,0 +1,579 @@
+{
+  "createdAt": "2026-10-27T20:27:20.466572+00:00",
+  "imageCalls": 7,
+  "originalFailedCalls": 3,
+  "selectedSources": 4,
+  "materials": [
+    {
+      "variant": 1,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v01.png",
+      "sourceSHA256": "a35a4e98554a550696d4f3efe190fd9da26dd4028d290a83f72c96456157543f",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "finalSize": [
+        2048,
+        512
+      ],
+      "uvNormalization": "entire original image resampled to LR rectangle; no crop or paint retouch",
+      "dimensionsM": [
+        4.13,
+        1.03
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "path": "pinnat/friisi-v01/friisi-v01-albedo.png",
+          "sha256": "4aec81c94608e04b09e295b209e171ddb2cf6a9ea7a4651546bdc416cc47b361",
+          "bytes": 1323581,
+          "kind": "albedo",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "path": "pinnat/friisi-v01/friisi-v01-normal-opengl.png",
+          "sha256": "a93f23b792cd495a78c278fdbb5f394a96576157f66455e14fc09dc4d2d74160",
+          "bytes": 226545,
+          "kind": "normal-opengl",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v01/friisi-v01-roughness.png",
+          "sha256": "c0cd98b29bd83ae7ee5e94bd3a8a23680613ab308df7908976065ae56617c0b9",
+          "bytes": 132310,
+          "kind": "roughness",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v01/friisi-v01-metallic.png",
+          "sha256": "c01296c60c66a712aa376111fcae444d5bf305605bdb655c1ac211d1a979cdf4",
+          "bytes": 165474,
+          "kind": "metallic",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v01/friisi-v01-height.png",
+          "sha256": "e7c0d96df0d107e1e2d99731796634ef1a191f50b413cb5609c9677f7274bd3a",
+          "bytes": 273335,
+          "kind": "height",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "heightRangeM": [
+        0,
+        0.001
+      ],
+      "goldTrim": {
+        "dimensionsM": [
+          1,
+          0.06
+        ],
+        "maps": [
+          {
+            "path": "pinnat/kultalista-v01/kultalista-v01-albedo.png",
+            "sha256": "018f78c52b20b20122fcbdf2fdbf79840cab329f9c9faa5528c8b04668ba5637",
+            "bytes": 972,
+            "kind": "albedo",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "sRGB"
+          },
+          {
+            "path": "pinnat/kultalista-v01/kultalista-v01-normal-opengl.png",
+            "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+            "bytes": 205,
+            "kind": "normal-opengl",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v01/kultalista-v01-roughness.png",
+            "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+            "bytes": 162,
+            "kind": "roughness",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v01/kultalista-v01-metallic.png",
+            "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+            "bytes": 162,
+            "kind": "metallic",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          }
+        ]
+      },
+      "seamQA": {
+        "meanAbsRGBDelta255": 1.1516927083333333,
+        "p95": 3.0,
+        "fractionOver32": 0.0,
+        "gate": "visual tolerance, not byte-identical edges",
+        "status": "PASS_REVIEW"
+      }
+    },
+    {
+      "variant": 2,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v02.png",
+      "sourceSHA256": "f57a684648388fe33c267c3ab27a94c72b9ec850d8ee71fa0597322cf0350336",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "finalSize": [
+        2048,
+        512
+      ],
+      "uvNormalization": "entire original image resampled to LR rectangle; no crop or paint retouch",
+      "dimensionsM": [
+        4.13,
+        1.03
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "path": "pinnat/friisi-v02/friisi-v02-albedo.png",
+          "sha256": "c0b76fc08b5562bf67e0a635d15481e00657af6e9cacc6d514d318b32afcbb37",
+          "bytes": 1471423,
+          "kind": "albedo",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "path": "pinnat/friisi-v02/friisi-v02-normal-opengl.png",
+          "sha256": "47d4ade7d21366b6fccc1b6bd82d5bb54b02b450fc2d08b3d5f36ae0958e74f1",
+          "bytes": 273841,
+          "kind": "normal-opengl",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v02/friisi-v02-roughness.png",
+          "sha256": "6c51480aca8bc1d1384bb4be3e2384d111c240e719a2585bb0d6a84d6f888854",
+          "bytes": 160987,
+          "kind": "roughness",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v02/friisi-v02-metallic.png",
+          "sha256": "f95733470590c9af14eb9bcdf510cce2e385c2aa7919ca4d25bd76a36b08350f",
+          "bytes": 202191,
+          "kind": "metallic",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v02/friisi-v02-height.png",
+          "sha256": "e2c71f7a523286daf76e8ffe1440332931b643c5819f7819ee687d31bb362781",
+          "bytes": 339560,
+          "kind": "height",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "heightRangeM": [
+        0,
+        0.001
+      ],
+      "goldTrim": {
+        "dimensionsM": [
+          1,
+          0.06
+        ],
+        "maps": [
+          {
+            "path": "pinnat/kultalista-v02/kultalista-v02-albedo.png",
+            "sha256": "a4e88fe73a1875914714d8ff97308358ef86d139fa433e43e83a58081961ee6f",
+            "bytes": 929,
+            "kind": "albedo",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "sRGB"
+          },
+          {
+            "path": "pinnat/kultalista-v02/kultalista-v02-normal-opengl.png",
+            "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+            "bytes": 205,
+            "kind": "normal-opengl",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v02/kultalista-v02-roughness.png",
+            "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+            "bytes": 162,
+            "kind": "roughness",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v02/kultalista-v02-metallic.png",
+            "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+            "bytes": 162,
+            "kind": "metallic",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          }
+        ]
+      },
+      "seamQA": {
+        "meanAbsRGBDelta255": 1.6022135416666667,
+        "p95": 4.25,
+        "fractionOver32": 0.004557291666666667,
+        "gate": "visual tolerance, not byte-identical edges",
+        "status": "PASS_REVIEW"
+      }
+    },
+    {
+      "variant": 3,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-v2-base-v03.png",
+      "sourceSHA256": "91331f3cb9a980ad810fa96d853c7ecbc572d0ec3fbe3f0e669414dc6f570aef",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "finalSize": [
+        2048,
+        512
+      ],
+      "uvNormalization": "entire original image resampled to LR rectangle; no crop or paint retouch",
+      "dimensionsM": [
+        4.13,
+        1.03
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "path": "pinnat/friisi-v03/friisi-v03-albedo.png",
+          "sha256": "c061cded0bc3dc7d0491dd105f91f3dae41daee49b3c1f6fc19c492c895d991b",
+          "bytes": 1580267,
+          "kind": "albedo",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "path": "pinnat/friisi-v03/friisi-v03-normal-opengl.png",
+          "sha256": "8d5defd97f65620cc9827738e44c333112cc384b1aa68157e06245fcf8f9aded",
+          "bytes": 313985,
+          "kind": "normal-opengl",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v03/friisi-v03-roughness.png",
+          "sha256": "59299f80e396edb5f0470379e6fc205692f32eae6c2f4b800219bf63e00fe3c7",
+          "bytes": 183753,
+          "kind": "roughness",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v03/friisi-v03-metallic.png",
+          "sha256": "6b9f837a73b614e1ef40c88ea0f5ed084ad068911db16abc4938a978fe3db590",
+          "bytes": 231490,
+          "kind": "metallic",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v03/friisi-v03-height.png",
+          "sha256": "a4a6da0982e33c22a6692026e7c21c846415f658e39960a71725691cc9db6704",
+          "bytes": 384832,
+          "kind": "height",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "heightRangeM": [
+        0,
+        0.001
+      ],
+      "goldTrim": {
+        "dimensionsM": [
+          1,
+          0.06
+        ],
+        "maps": [
+          {
+            "path": "pinnat/kultalista-v03/kultalista-v03-albedo.png",
+            "sha256": "5679a59f11308d2be51bbf8d38ed5022fb7c935954d503dc88b51ac25b76d021",
+            "bytes": 924,
+            "kind": "albedo",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "sRGB"
+          },
+          {
+            "path": "pinnat/kultalista-v03/kultalista-v03-normal-opengl.png",
+            "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+            "bytes": 205,
+            "kind": "normal-opengl",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v03/kultalista-v03-roughness.png",
+            "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+            "bytes": 162,
+            "kind": "roughness",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v03/kultalista-v03-metallic.png",
+            "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+            "bytes": 162,
+            "kind": "metallic",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          }
+        ]
+      },
+      "seamQA": {
+        "meanAbsRGBDelta255": 1.3001302083333333,
+        "p95": 5.0,
+        "fractionOver32": 0.0,
+        "gate": "visual tolerance, not byte-identical edges",
+        "status": "PASS_REVIEW"
+      }
+    },
+    {
+      "variant": 4,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/frieze-base-v04.png",
+      "sourceSHA256": "9a51c635ac094a37f88effe4c32da395b542a565a10bf172147154cb890d760b",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "finalSize": [
+        2048,
+        512
+      ],
+      "uvNormalization": "entire original image resampled to LR rectangle; no crop or paint retouch",
+      "dimensionsM": [
+        4.13,
+        1.03
+      ],
+      "repeatXY": [
+        true,
+        false
+      ],
+      "maps": [
+        {
+          "path": "pinnat/friisi-v04/friisi-v04-albedo.png",
+          "sha256": "07114d5a487b34b351af7f2c595a3a2b69ef39490e4f8eff90bf01e7d37d0f58",
+          "bytes": 1561066,
+          "kind": "albedo",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "sRGB"
+        },
+        {
+          "path": "pinnat/friisi-v04/friisi-v04-normal-opengl.png",
+          "sha256": "2b8d2061cb0cd40de9c484f472931212e2ff77dc9e2e50f629fd3c4f3669f2bc",
+          "bytes": 261439,
+          "kind": "normal-opengl",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v04/friisi-v04-roughness.png",
+          "sha256": "261371509250e031ac880a07cd49da1ba8020a83cfef14a9b650c2bc91be49da",
+          "bytes": 154635,
+          "kind": "roughness",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v04/friisi-v04-metallic.png",
+          "sha256": "a4838fdafc107e5de23ff34b653dd3e5042c886b5835257d6833c4004b52687d",
+          "bytes": 195361,
+          "kind": "metallic",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        },
+        {
+          "path": "pinnat/friisi-v04/friisi-v04-height.png",
+          "sha256": "ccb23df5c1c3fd57dbd6f2567edf5b74d8ccabef6351caa7d307f12de968d091",
+          "bytes": 313963,
+          "kind": "height",
+          "sizePx": [
+            2048,
+            512
+          ],
+          "colorSpace": "linear"
+        }
+      ],
+      "heightRangeM": [
+        0,
+        0.001
+      ],
+      "goldTrim": {
+        "dimensionsM": [
+          1,
+          0.06
+        ],
+        "maps": [
+          {
+            "path": "pinnat/kultalista-v04/kultalista-v04-albedo.png",
+            "sha256": "b6149e5995f28ff9bbf0ae5e0d7afcd4ff193508965a20b58783e35ad3a72087",
+            "bytes": 896,
+            "kind": "albedo",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "sRGB"
+          },
+          {
+            "path": "pinnat/kultalista-v04/kultalista-v04-normal-opengl.png",
+            "sha256": "4da755f1dad4e2e05c4c7ac2ce51946668c28c0cd47a8fb81387f1ea58775681",
+            "bytes": 205,
+            "kind": "normal-opengl",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v04/kultalista-v04-roughness.png",
+            "sha256": "7ca45b4f951b4ad0f82c02a4d0135e5fd549d797c702999346e9020caf56e49d",
+            "bytes": 162,
+            "kind": "roughness",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          },
+          {
+            "path": "pinnat/kultalista-v04/kultalista-v04-metallic.png",
+            "sha256": "3cd7ea2b26a4d8fc7c464a71736a9aefdaae37c4858a5ec0ef9392195dede736",
+            "bytes": 162,
+            "kind": "metallic",
+            "sizePx": [
+              512,
+              32
+            ],
+            "colorSpace": "linear"
+          }
+        ]
+      },
+      "seamQA": {
+        "meanAbsRGBDelta255": 2.1510416666666665,
+        "p95": 6.0,
+        "fractionOver32": 0.009114583333333334,
+        "gate": "visual tolerance, not byte-identical edges",
+        "status": "PASS_REVIEW"
+      }
+    }
+  ],
+  "tripoCalls": 0,
+  "gameIntegrated": false,
+  "ownerAccepted": false
+}

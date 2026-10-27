@@ -1,0 +1,73 @@
+{
+  "startedAt": "2026-10-27T20:13:21.704888+00:00",
+  "sourceCommit": "7eb80206c277d3572eebf583f971de23c7609f4f",
+  "scope": "4 roof ceramic albedo sources, metric tile UV graph and PBR maps",
+  "plannedCalls": 4,
+  "calls": [
+    {
+      "variant": 1,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR material albedo source, variant 1 of 4. Reference image is palette and material reference ONLY: yellow glazed Forbidden City roof tiles. Produce ONE flat continuous glazed ceramic material color swatch filling entire square 2048 x 2048 image, orthographic top-down, no objects, no tile divisions, no grout, no rim, no perspective, no text. Color: rich imperial golden yellow with subtle warm amber mottling. Authentic subtle fired ceramic mineral coloration, very fine hairline glaze crazing, tiny pits, fine grain. CLEAN BASE COLOR ONLY: no cast shadows, no directional lighting, no highlights, no specular reflections, no ambient-occlusion vignette. Completely uniform neutral illumination. No large repeating spots. Seamlessly repeatable on all edges. Tile structure and convex curves will be authored in the normal map separately; do not draw them into the albedo. Preserve rich yellow ceramic color, not metallic gold.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:13:31.985592+00:00",
+      "estimate": "1–4 minutes cloud image generation",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-36ecff7d-dcef-46ec-a2b5-ea09699d6c12.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v01.png",
+      "sha256": "d733d00611e2ad7bd7bdf2fc2cade7ecb02f43183de7d468c648347b6f06557e",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 2,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR material albedo source, variant 2 of 4. Reference image is palette and material reference ONLY: yellow glazed Forbidden City roof tiles. Produce ONE flat continuous glazed ceramic material color swatch filling entire square 2048 x 2048 image, orthographic top-down, no objects, no tile divisions, no grout, no rim, no perspective, no text. Color: slightly lighter warm golden yellow, fine ochre speckling. Authentic subtle fired ceramic mineral coloration, very fine hairline glaze crazing, tiny pits, fine grain. CLEAN BASE COLOR ONLY: no cast shadows, no directional lighting, no highlights, no specular reflections, no ambient-occlusion vignette. Completely uniform neutral illumination. No large repeating spots. Seamlessly repeatable on all edges. Tile structure and convex curves will be authored in the normal map separately; do not draw them into the albedo. Preserve rich yellow ceramic color, not metallic gold.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:14:12.129910+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:15:03.344014+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-f0939f37-dff4-43cd-9255-a180641609a1.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v02.png",
+      "sha256": "6670503156d858da8e3885d6ce8662d6fd280df9eb70d0057899cd0ed1bb1e7a",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 3,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR material albedo source, variant 3 of 4. Reference image is palette and material reference ONLY: yellow glazed Forbidden City roof tiles. Produce ONE flat continuous glazed ceramic material color swatch filling entire square 2048 x 2048 image, orthographic top-down, no objects, no tile divisions, no grout, no rim, no perspective, no text. Color: restrained honey-yellow with sparse iron-orange flecks. Authentic subtle fired ceramic mineral coloration, very fine hairline glaze crazing, tiny pits, fine grain. CLEAN BASE COLOR ONLY: no cast shadows, no directional lighting, no highlights, no specular reflections, no ambient-occlusion vignette. Completely uniform neutral illumination. No large repeating spots. Seamlessly repeatable on all edges. Tile structure and convex curves will be authored in the normal map separately; do not draw them into the albedo. Preserve rich yellow ceramic color, not metallic gold.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:15:03.404283+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:16:22.549732+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-44d98486-88b2-491e-909a-e8bab5571718.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v03.png",
+      "sha256": "8af9c10ecfd91206dcd41d8ff38a0ff2828bb5f1b521237bfe14a47e5470c386",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "variant": 4,
+      "status": "GENERATED",
+      "prompt": "Use case: photorealistic-natural. New game PBR material albedo source, variant 4 of 4. Reference image is palette and material reference ONLY: yellow glazed Forbidden City roof tiles. Produce ONE flat continuous glazed ceramic material color swatch filling entire square 2048 x 2048 image, orthographic top-down, no objects, no tile divisions, no grout, no rim, no perspective, no text. Color: bright ochre-gold with very gentle mottling, no large dark patch. Authentic subtle fired ceramic mineral coloration, very fine hairline glaze crazing, tiny pits, fine grain. CLEAN BASE COLOR ONLY: no cast shadows, no directional lighting, no highlights, no specular reflections, no ambient-occlusion vignette. Completely uniform neutral illumination. No large repeating spots. Seamlessly repeatable on all edges. Tile structure and convex curves will be authored in the normal map separately; do not draw them into the albedo. Preserve rich yellow ceramic color, not metallic gold.",
+      "reference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/references/205842-02-havainne.png",
+      "startedAt": "2026-10-27T20:16:22.610197+00:00",
+      "estimate": "1–4 minutes cloud generation",
+      "finishedAt": "2026-10-27T20:17:12.101610+00:00",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-1ebb0e4e-f12f-4395-87e4-fd74e5f5ae7a.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/roof-base-v04.png",
+      "sha256": "ee1805b1ca63013b821d9eb4aa58926381904376102ee4f3df876f3c671410ce",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "tripoCalls": 0,
+  "cost": "not reported by built-in tool"
+}
