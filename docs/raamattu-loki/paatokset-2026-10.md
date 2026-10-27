@@ -2846,3 +2846,13 @@ OMISTAJAN PÄÄTÖS klo 10.56 (sanatarkasti): "Ehdotan, että ennen kuin korjata
 ## LOITONNUS KOKO MAAPALLOON (omistaja 27.10. klo 12.27, KK:n kortti) (27.10.2026 klo 12.27)
 
 Kysymys: "Saako pelaaja loitontaa koko maapallon näkyviin?" Vastaus: "Kyllä (Suositus)" (selite: "Koko maapallo näkyy loitonnettaessa. Huntu peittää paikat, joissa pelaaja ei ole käynyt."). Raamattu 2.15 ja 2.136 päivitetty: rajaus "saapumisnäkymä uloin sallittu" poistuu; pelaaja voi loitontaa koko maapallon ja selata sitä vapaasti hunnun alla. Toteutus KS, juna 212.
+
+## KARTAN 2D-MERKIT, LIPPU, NIPISTYS JA KUUMAILMAPALLOKYTKIN (omistaja 27.10. klo 12.43, KK:n välitys) (27.10.2026 klo 12.44)
+
+OMISTAJAN PÄÄTÖS JA PYYNNÖT klo 12.43 (sanatarkasti): "Grimetonin, Matterhornin, Hagia Sofian ja Edinburgin linnan voi ottaa kokonaan pois, koska niissä ei ole mitään pelillistä juttua eikä niiden
+linssit ole myöskään mitenkään erityisiä. Rijksmuseumista pitää ottaa sivuilla olevat kulkukäytävät pois.  Lisätään kohteita sitten kun uusia pelillisiä tai kohdelinssejä valmistuu. Pekingiin täytyy
+tehdä kielletynkaupungin 2d kuva, koska siellä on juoksupeli sekä tuleva historiaesittely olavinlinnan tyyliin. Laita kehittäjätilaan nappi, millä saa harmaat kuumailmapallot kokonaan pois näkyvistä.
+Kohdemaan lippu pitää näkyä myös kauemmilla zoom-tasoilla. Lipun koko ei tosin tarvitse kasvaa, mutta sitä ei saa hävittää pois näkyvistä. Nipistyszoomaus ainakin iPadilla liikuttaa karttaa
+epäkeskosti, kun kartan pitäisi zoomautua nipistyspisteen keskelle sisään tai ulos." Raamattu 2.167 päivitetty (merkkien valinta, lippu, nipistys). Toteutus KS junaan 212: 1) Grimeton, Matterhorn,
+Hagia Sofia, Edinburgh pois kartalta (linssit ennallaan) 2) Rijksmuseum ilman sivukäytäviä 3) Kielletyn kaupungin 2D-merkki samaan sarjaan 4) kehittäjätilaan kytkin harmaiden kuumailmapallojen
+piilotukseen 5) lippu kaikilla loitonnustasoilla 6) nipistys sormien välisen pisteen ympäri. Liikkuvat 3D-pienoismallit lähtevät 3D-merkkien mukana.
