@@ -1,0 +1,644 @@
+{
+  "status": "LOD1_REVIEW_DELIVERABLE_GAME_ACCEPTANCE_PENDING",
+  "createdAt": "2026-10-27T11:49:05.218328+00:00",
+  "models": [
+    {
+      "file": "1057-c3-muurikate-2m-lod1.glb",
+      "task": 1081,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-modules-v2/1057-c3-muurikate-2m.glb",
+      "sourceSHA256": "825c57aaf16fee834698444adaa2dd321557ee78522357e32750fec6d7bf523f",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-v9/1057-c3-muurikate-2m-lod1.glb",
+      "sha256": "43ea8c1e908849473c2ec69e9de4271b54f56cec81fe1c351a416fec0b6951c9",
+      "bytes": 554684,
+      "trianglesLOD0": 2794,
+      "trianglesLOD1": 398,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          -1.0309277772903442,
+          0.0,
+          -0.8999999761581421
+        ],
+        "max": [
+          1.0309277772903442,
+          0.5136135220527649,
+          0.8999999761581421
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1057-c3-muurikate-2m-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9710193066223791,
+            "lod1OutsideLod0Pixels": 265,
+            "lod0OutsideLod1Pixels": 1131,
+            "pixelSizeM": 0.0044628908107807105
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.900477633875264,
+            "lod1OutsideLod0Pixels": 376,
+            "lod0OutsideLod1Pixels": 1791,
+            "pixelSizeM": 0.00389610379289239
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9600070749154941,
+            "lod1OutsideLod0Pixels": 124,
+            "lod0OutsideLod1Pixels": 1911,
+            "pixelSizeM": 0.006185197267220993
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9681596855567288,
+            "lod1OutsideLod0Pixels": 689,
+            "lod0OutsideLod1Pixels": 1482,
+            "pixelSizeM": 0.0044628908107807105
+          }
+        ],
+        "elapsedSeconds": 2.23605087492615,
+        "peakRSSMiB": 77.046875
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1061-c2-pylvas-lod1.glb",
+      "task": 1083,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1061-c2-pylvas.glb",
+      "sourceSHA256": "66f16cbe2837780646f81630858f996f5a6d77a6c74752dcfdfdf2a109350360",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1061-v1/1061-c2-pylvas-lod1.glb",
+      "sha256": "6ae08a4916570e30ef93e74cdcd2cc855f9928aa66c04c98183508bee74e519e",
+      "bytes": 523128,
+      "trianglesLOD0": 1434,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          -0.1313522309064865,
+          0.0,
+          -0.12911629676818848
+        ],
+        "max": [
+          0.1313522309064865,
+          1.100000023841858,
+          0.12911629676818848
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1061-c2-pylvas-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9909711863076077,
+            "lod1OutsideLod0Pixels": 9,
+            "lod0OutsideLod1Pixels": 106,
+            "pixelSizeM": 0.004000000086697666
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.9768873960332694,
+            "lod1OutsideLod0Pixels": 4,
+            "lod0OutsideLod1Pixels": 285,
+            "pixelSizeM": 0.004000000086697666
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9896348802995854,
+            "lod1OutsideLod0Pixels": 14,
+            "lod0OutsideLod1Pixels": 141,
+            "pixelSizeM": 0.0041501491055635645
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9853393811760894,
+            "lod1OutsideLod0Pixels": 3,
+            "lod0OutsideLod1Pixels": 178,
+            "pixelSizeM": 0.004106741618984996
+          }
+        ],
+        "elapsedSeconds": 0.45273279200773686,
+        "peakRSSMiB": 66.125
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1062-c2-paneeli-lod1.glb",
+      "task": 1084,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1062-c2-paneeli.glb",
+      "sourceSHA256": "a7becc3a9e787b89b4bbdd774e827e6a3d77e7583577c0bb76e7d99c12eb37a9",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1062-v2/1062-c2-paneeli-lod1.glb",
+      "sha256": "025bed154a0925d4ae4d3a53aa43cc1d928e2b5e647a92714c6cbaefd14d8a29",
+      "bytes": 554008,
+      "trianglesLOD0": 1584,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.5,
+          0.7200000286102295,
+          0.05999999865889549
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1062-c2-paneeli-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.992341998708996,
+            "lod1OutsideLod0Pixels": 0,
+            "lod0OutsideLod1Pixels": 783,
+            "pixelSizeM": 0.003246753246753247
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.9541878298974206,
+            "lod1OutsideLod0Pixels": 78,
+            "lod0OutsideLod1Pixels": 382,
+            "pixelSizeM": 0.0026181819222190162
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.985279900771574,
+            "lod1OutsideLod0Pixels": 115,
+            "lod0OutsideLod1Pixels": 692,
+            "pixelSizeM": 0.0039483173122239704
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9917090952314915,
+            "lod1OutsideLod0Pixels": 131,
+            "lod0OutsideLod1Pixels": 706,
+            "pixelSizeM": 0.003246753246753247
+          }
+        ],
+        "elapsedSeconds": 0.9824558749096468,
+        "peakRSSMiB": 74.75
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1064-c2-vesisylkija-lod1.glb",
+      "task": 1086,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1064-c2-vesisylkija.glb",
+      "sourceSHA256": "6d7a8cab25d788ac2259020fbf015e5db4cdaa98a341affe1ece55068a9b582b",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1064-v2/1064-c2-vesisylkija-lod1.glb",
+      "sha256": "5015258e8720b97027d616aee99bb9082fad059057e3a426fcfc7fe5fbecf598",
+      "bytes": 600208,
+      "trianglesLOD0": 2840,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          -0.11668092757463455,
+          -0.12562404572963715,
+          0.0
+        ],
+        "max": [
+          0.11668092757463455,
+          0.12562404572963715,
+          0.44999998807907104
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1064-c2-vesisylkija-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9366151866151866,
+            "lod1OutsideLod0Pixels": 0,
+            "lod0OutsideLod1Pixels": 3940,
+            "pixelSizeM": 0.0009136294234882702
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.9081541218637993,
+            "lod1OutsideLod0Pixels": 45,
+            "lod0OutsideLod1Pixels": 8770,
+            "pixelSizeM": 0.0009740259482230975
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9308358208955224,
+            "lod1OutsideLod0Pixels": 0,
+            "lod0OutsideLod1Pixels": 2317,
+            "pixelSizeM": 0.0016644870242568605
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9422938552309685,
+            "lod1OutsideLod0Pixels": 5,
+            "lod0OutsideLod1Pixels": 2000,
+            "pixelSizeM": 0.0013060203183895339
+          }
+        ],
+        "elapsedSeconds": 1.3130192080279812,
+        "peakRSSMiB": 76.65625
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1063-c2-porraskaide-10deg-lod1.glb",
+      "task": 1085,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-lr-fit-v1/1063-c2-porraskaide-10deg.glb",
+      "sourceSHA256": "8953d9266ce0e8695aecbbecf8bb5c61cfcb32ebea3285aecc56579ba746f6c6",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1063-v1/1063-c2-porraskaide-10deg-lod1.glb",
+      "sha256": "056683f63f44303e05ad9fb54522871c30bfd3602a993882aeb635ba521dc8cd",
+      "bytes": 587180,
+      "trianglesLOD0": 1584,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0011393435997888446,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          0.9300740957260132,
+          0.05999999865889549
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1063-c2-porraskaide-10deg-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9949385394070861,
+            "lod1OutsideLod0Pixels": 11,
+            "lod0OutsideLod1Pixels": 374,
+            "pixelSizeM": 0.0033779445531862706
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.8915979443050077,
+            "lod1OutsideLod0Pixels": 19,
+            "lod0OutsideLod1Pixels": 888,
+            "pixelSizeM": 0.0033779445531862706
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9860256515437417,
+            "lod1OutsideLod0Pixels": 45,
+            "lod0OutsideLod1Pixels": 466,
+            "pixelSizeM": 0.004335182228367497
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9928646687739233,
+            "lod1OutsideLod0Pixels": 56,
+            "lod0OutsideLod1Pixels": 479,
+            "pixelSizeM": 0.003375783100851818
+          }
+        ],
+        "elapsedSeconds": 0.8923001249786466,
+        "peakRSSMiB": 75.234375
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1063-c2-porraskaide-20deg-lod1.glb",
+      "task": 1085,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-lr-fit-v1/1063-c2-porraskaide-20deg.glb",
+      "sourceSHA256": "de87526df1d8e43b90604b067e66653b463b8f282183c4aa08fb3bdf19ae2a83",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1063-v1/1063-c2-porraskaide-20deg-lod1.glb",
+      "sha256": "1eb2e1b26c1b92580d01c0588da9ba882607614c6b6544292f4c7e3c2f064e2c",
+      "bytes": 587180,
+      "trianglesLOD0": 1584,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0015139641473069787,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          1.155991554260254,
+          0.05999999865889549
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1063-c2-porraskaide-20deg-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9938409173791483,
+            "lod1OutsideLod0Pixels": 34,
+            "lod0OutsideLod1Pixels": 270,
+            "pixelSizeM": 0.0041981003276834435
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.8873278620114063,
+            "lod1OutsideLod0Pixels": 5,
+            "lod0OutsideLod1Pixels": 805,
+            "pixelSizeM": 0.0041981003276834435
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9884395240247025,
+            "lod1OutsideLod0Pixels": 36,
+            "lod0OutsideLod1Pixels": 271,
+            "pixelSizeM": 0.005059336795229124
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9898828433257117,
+            "lod1OutsideLod0Pixels": 53,
+            "lod0OutsideLod1Pixels": 447,
+            "pixelSizeM": 0.00416799274501875
+          }
+        ],
+        "elapsedSeconds": 0.915482125012204,
+        "peakRSSMiB": 76.203125
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    },
+    {
+      "file": "1063-c2-porraskaide-28deg-lod1.glb",
+      "task": 1085,
+      "sourceLOD0": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-lr-fit-v1/1063-c2-porraskaide-28deg.glb",
+      "sourceSHA256": "62e35843007eef62cb1342c48aeb2de0e497e0d5d3bec3b4b840756f7914c987",
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1063-v1/1063-c2-porraskaide-28deg-lod1.glb",
+      "sha256": "bd2275f58ef64edd5ecfe4a663c962a68405bbdaeeea974c023fe453d88ecd12",
+      "bytes": 587180,
+      "trianglesLOD0": 1584,
+      "trianglesLOD1": 298,
+      "materials": 1,
+      "mapsPx": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0018488471396267414,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          1.3579449653625488,
+          0.05999999865889549
+        ]
+      },
+      "boundsMaxDifferenceM": 0.0,
+      "pivotAndAxesUnchanged": true,
+      "nodeTransforms": [
+        {
+          "mesh": 0,
+          "name": "1063-c2-porraskaide-28deg-lod1"
+        }
+      ],
+      "sourceImageRebake": true,
+      "UVLayoutChangedWithSourceRebake": true,
+      "normalTangentConversion": true,
+      "visualMetrics": {
+        "views": [
+          {
+            "view": "Edestä +Z",
+            "silhouetteIoU": 0.9933669630166383,
+            "lod1OutsideLod0Pixels": 6,
+            "lod0OutsideLod1Pixels": 232,
+            "pixelSizeM": 0.0049312586117197165
+          },
+          {
+            "view": "Pääty +X",
+            "silhouetteIoU": 0.8807310035267714,
+            "lod1OutsideLod0Pixels": 0,
+            "lod0OutsideLod1Pixels": 744,
+            "pixelSizeM": 0.0049312586117197165
+          },
+          {
+            "view": "Viisto",
+            "silhouetteIoU": 0.9856399383191982,
+            "lod1OutsideLod0Pixels": 51,
+            "lod0OutsideLod1Pixels": 247,
+            "pixelSizeM": 0.005706677137303534
+          },
+          {
+            "view": "Takaa",
+            "silhouetteIoU": 0.9884016348171877,
+            "lod1OutsideLod0Pixels": 18,
+            "lod0OutsideLod1Pixels": 402,
+            "pixelSizeM": 0.004876169266327162
+          }
+        ],
+        "elapsedSeconds": 0.9089599169092253,
+        "peakRSSMiB": 74.0
+      },
+      "localTechnicalQA": "PASS",
+      "receiverGameAcceptance": false
+    }
+  ],
+  "sourceOrders": [
+    "4cff934a18cf1ce9d614edfbb9f09ac16b8ef41a",
+    "895e805074b82d1dc0d442e295c2d61eba056e7b"
+  ],
+  "receiverDistanceDecision": "866782d0af057edf60f2395838469bcfec83c184",
+  "C3Selection": {
+    "folder": "work/lod1057-v9",
+    "triangles": 398,
+    "switchDistanceM": 25,
+    "verticalFOV": 65,
+    "screenHeightPx": 2048,
+    "why": "Closer projected main contour than356tri profile at25m, especially end view. Small underside ornaments are texture-only as receiver permits.",
+    "comparisonImageColumns": [
+      "sourceLOD0",
+      "selected398tri",
+      "unselected356tri"
+    ]
+  },
+  "C2Selection": {
+    "1061": "298tri v1",
+    "1062": "298tri v2 keeps all3 staircase extrema",
+    "1063": "same298tri panel with source-equivalent affine10/20/28deg transforms",
+    "1064": "298tri v2 preserves16 additional source opening contour anchors; no new aperture geometry"
+  },
+  "C2InstanceCountsFromOrder": {
+    "posts": 2563,
+    "panels": 2275,
+    "spouts": 2320,
+    "LOD0Triangles": 13867742,
+    "LOD1Triangles": 2133084
+  },
+  "sourceLOD0Preserved": true,
+  "newTripoCalls": 0,
+  "newImageGenCalls": 0,
+  "newCredits": 0,
+  "maps": "Existing source PBR images reprojected to512px, one material. UV layout is new; original order explicitly permits source-image rebake. No newly generated texture.",
+  "limits": [
+    "Distant LOD1 only; sourceLOD0 remains for near view",
+    "C3 receiver decides actual25m transition; no game code changed",
+    "Spout opening is coarser at298tri; source mouth cavity retained, not a functional through-pipe",
+    "Unlit CPU stills verify silhouette/basecolor; receiver PBR/material/LOD transition QA remains open",
+    "No new source model, paid generation or installation"
+  ]
+}
