@@ -188,3 +188,11 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   VS korjasi (17168ea22). Friisien väreily = suodatus, VS korjasi (aniso 8, mip-siirtymä 0,4). EROLISTA 01/5 korjattu, 01/9 uusi + korjattu.
 - H/juuri-v78m = v77m + yksikerros-v76 (konsoli teal) + rakennukset-v52 (konsoli teal); v53 ei juuressa.
 - Sini-violetit laatat: eivät näy havainteessa (vain VS:n peliruudussa) eivätkä tule rakennusmalleista → ei Codex-tilausta; lähde auki.
+
+## LISÄYS 11 klo 16.5x: sini-violetit laatat = 1067 taustapaloissa → juuri-v79m
+- Sonnet (VS:n parit 125052/135856, kuja 01): "sini-violetit laatat" = räystään alla oleva palkkivyö ylempien rakennusten räystäslinjassa;
+  havainteessa vihertävä turkoosi. Lähde: 1067-palkkimaalaus taustapaloissa (tausta_pinnat.py, v75). PT 16.4x: havainne mittarina,
+  korvataan olemassa olevalla → K/yksikerros-v77 (K/tyokalut/aja_ketju_v77.zsh: v73 + tausta_pinnat EI_1067=1 + konsoli_teal) = palkkivyö
+  takaisin palkkimaalaus-teal-1536 (kuten rakennuksissa), 1069-nauha, harmaa→teal ja konsoli teal pysyvät. Avoimissa 1067 pysyy (VS hyväksyi).
+- H/juuri-v79m = v78m + yksikerros-v77. VS:lle parit pyydetty (01 oikea yläkulma).
+- Avoinna: C1 Baohedian, Taihemen ylä, Meridiaaniportin siivet; PK: rakennukset-v53 + c1-sijoitukset samaan erään (PT välitti).
