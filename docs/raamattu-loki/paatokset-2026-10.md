@@ -2935,3 +2935,7 @@ Kortti KK:ssa ('Onko reunakivi nyt havainnekuvan mukainen?', kuva scratchpad/kes
 ## JUOKSUPELI: KIINNIOTON KAMERA ENNALLAAN, KEISARILLE ISOMMAT KÄSIEN RIMPUILUT (omistaja 27.10. klo 16.05) (27.10.2026 klo 16.06)
 
 Kortti KK:ssa (PK:n video a210bfa50 yläkulmasta): 'Nouseeko kamera kiinnioton ajaksi korkeammalle, jotta keisari näkyy eunukin yli?' → omistaja sanatarkasti: 'ei mutta keisari saisi rimpuilla käsillä enemmän'. Toteutus: kamera pysyy juoksun yläkulmassa (15.41); Pelikoodari tilaa Codexin rimpuilu v2:een isot käsien liikkeet, jotka näkyvät eunukin yli.
+
+## LUE LISÄÄ: TOISTOTARKISTUS VÄLJENNETTY (KK 27.10. klo 17.24) (27.10.2026 klo 17.24)
+
+KK väljensi Lue lisää -toistotarkistusta omistajan valtuutuksella (klo 00.05 ja 04.10 tehty sääntö). Sama pitkä sana ja johdannon vuosiluku saavat nyt esiintyä kerran, mutta saman faktan toisto hylätään edelleen. Syy: aiemmin kaikki tekstiyritykset hylättiin; tavoite on, että teksti näkyy noin 6 sekunnissa. Toteutus: Karttaseppä PR 5368, worker t7.
