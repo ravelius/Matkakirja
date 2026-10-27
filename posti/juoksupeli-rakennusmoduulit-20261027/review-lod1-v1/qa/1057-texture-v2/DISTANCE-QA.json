@@ -1,0 +1,83 @@
+{
+  "sourceDecision": "866782d0af057edf60f2395838469bcfec83c184",
+  "distanceM": 25,
+  "verticalFovDeg": 65,
+  "screenHeightPx": 2048,
+  "cropPx": [
+    256,
+    256
+  ],
+  "perspectiveCorrect": true,
+  "twoTimesSupersampling": true,
+  "unlitBasecolorOnly": true,
+  "sourceImagesReprojected512AllowedByOriginalOrder": "4cff934a18cf1ce9d614edfbb9f09ac16b8ef41a",
+  "views": [
+    {
+      "view": "Edest\u00e4",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-v9/1057-c3-muurikate-2m-lod1.glb",
+      "nativePixelIoU": 0.9591886608015641,
+      "sourcePixelArea": 4087,
+      "candidatePixelArea": 3930,
+      "pixelsDifferent": 167
+    },
+    {
+      "view": "Edest\u00e4",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-texture-v3/1057-c3-muurikate-2m-lod1-v2.glb",
+      "nativePixelIoU": 0.9591886608015641,
+      "sourcePixelArea": 4087,
+      "candidatePixelArea": 3930,
+      "pixelsDifferent": 167
+    },
+    {
+      "view": "P\u00e4\u00e4ty",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-v9/1057-c3-muurikate-2m-lod1.glb",
+      "nativePixelIoU": 0.9028609447771124,
+      "sourcePixelArea": 1487,
+      "candidatePixelArea": 1373,
+      "pixelsDifferent": 146
+    },
+    {
+      "view": "P\u00e4\u00e4ty",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-texture-v3/1057-c3-muurikate-2m-lod1-v2.glb",
+      "nativePixelIoU": 0.9028609447771124,
+      "sourcePixelArea": 1487,
+      "candidatePixelArea": 1373,
+      "pixelsDifferent": 146
+    },
+    {
+      "view": "Juoksukamera yl\u00e4viisto",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-v9/1057-c3-muurikate-2m-lod1.glb",
+      "nativePixelIoU": 0.9676133048045127,
+      "sourcePixelArea": 10255,
+      "candidatePixelArea": 9976,
+      "pixelsDifferent": 333
+    },
+    {
+      "view": "Juoksukamera yl\u00e4viisto",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-texture-v3/1057-c3-muurikate-2m-lod1-v2.glb",
+      "nativePixelIoU": 0.9676133048045127,
+      "sourcePixelArea": 10255,
+      "candidatePixelArea": 9976,
+      "pixelsDifferent": 333
+    },
+    {
+      "view": "Takaa",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-v9/1057-c3-muurikate-2m-lod1.glb",
+      "nativePixelIoU": 0.97453125,
+      "sourcePixelArea": 6364,
+      "candidatePixelArea": 6273,
+      "pixelsDifferent": 163
+    },
+    {
+      "view": "Takaa",
+      "candidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/work/lod1057-texture-v3/1057-c3-muurikate-2m-lod1-v2.glb",
+      "nativePixelIoU": 0.97453125,
+      "sourcePixelArea": 6364,
+      "candidatePixelArea": 6273,
+      "pixelsDifferent": 163
+    }
+  ],
+  "elapsedSeconds": 1.2990183329675347,
+  "peakRSSMiB": 67.4375,
+  "gameQA": false
+}

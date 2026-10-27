@@ -1,3 +1,4 @@
+bad11e637a41f3d68b18481b3041fbcc5f6c6d781a349e61df409ba4dee25c60  1057-c3-muurikate-2m-lod1-v2.glb
 43ea8c1e908849473c2ec69e9de4271b54f56cec81fe1c351a416fec0b6951c9  1057-c3-muurikate-2m-lod1.glb
 6ae08a4916570e30ef93e74cdcd2cc855f9928aa66c04c98183508bee74e519e  1061-c2-pylvas-lod1.glb
 025bed154a0925d4ae4d3a53aa43cc1d928e2b5e647a92714c6cbaefd14d8a29  1062-c2-paneeli-lod1.glb
@@ -5,10 +6,17 @@
 1eb2e1b26c1b92580d01c0588da9ba882607614c6b6544292f4c7e3c2f064e2c  1063-c2-porraskaide-20deg-lod1.glb
 bd2275f58ef64edd5ecfe4a663c962a68405bbdaeeea974c023fe453d88ecd12  1063-c2-porraskaide-28deg-lod1.glb
 5015258e8720b97027d616aee99bb9082fad059057e3a426fcfc7fe5fbecf598  1064-c2-vesisylkija-lod1.glb
+bd3b5036bca71365bbea625f8c70183df2a25397ab761666d5620a69dde42d6d  MANIFEST-1057-v2.json
 5a87c01a958b45f65010ba66be165fc418e114e21060b76e38dcd55adb879efe  MANIFEST.json
+68b49927dd91387cc3c20c21be116ea789c70854a1dd8c257bc0c5684eeb1738  SHA256SUMS-original-v1
 1dc4ddc43aebd7d3443c5b9b27fb0bac799597fdd588ecc746ea955812c2fb44  qa/1057-25m-comparison.png
 146f7ffafb8ec5824352462204fd9ca41c6c01f20c38490aa7bfaddb1ab1aeea  qa/1057-DISTANCE-QA.json
 c714e3e7aa5b03959968db2d7c2bc5a468761de817ba782e57538fcf43df2dcc  qa/1057-c3-muurikate-2m-four-views.png
+818296d5106c1a5fba83ee5dd93193df4c656fc273196ef420868c665afc3e28  qa/1057-texture-v2/25m-native-pixel-comparison.png
+d78c14f4e84a5bc785e4f85623e1541fd9c2ec3a0bca0fce1eab98db17cb591d  qa/1057-texture-v2/BAKE-QA.json
+ec17c3be66c1dc7b64b71ae9899b844e95299a8133b0874b91a9bb3f41e32507  qa/1057-texture-v2/DISTANCE-QA.json
+651db2975b7b2d1be84ef346f9cca7e9b406f3d962600420d8623815a2353501  qa/1057-texture-v2/before-after-four-views.png
+dab0d5700e69d2a7fd477d10c79bc2f56822c5319e00a5c07fca87a3e022ccb6  qa/1057-texture-v2/three-repeat-before-after.png
 dec2a5a58356bab47466e0cea55cb989d64e391ad7c2cceffc1213d0646999ce  qa/1057-three-repeat.png
 f5efa0cd0df2c95cf8f63c2f1dba5d33e924c51593108e5ba6b2b7edf824dbce  qa/1061-c2-pylvas-four-views.png
 d899882b53162df2b6c0ae0bbc4bc0ee30c9a38482116d6a770b8da45683740f  qa/1062-c2-paneeli-four-views.png

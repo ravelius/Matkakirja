@@ -1,0 +1,57 @@
+{
+  "order": 1102,
+  "triangles": 398,
+  "geometryNormalsIndicesNodesUnchanged": true,
+  "textureSize": 512,
+  "materials": 1,
+  "charts": [
+    {
+      "chart": 0,
+      "faces": 328,
+      "pixels": 114688,
+      "goldenBandPixels": 20480,
+      "nearestFallback": 2399
+    },
+    {
+      "chart": 1,
+      "faces": 15,
+      "pixels": 32768,
+      "goldenBandPixels": 0,
+      "nearestFallback": 3685
+    },
+    {
+      "chart": 2,
+      "faces": 10,
+      "pixels": 25600,
+      "goldenBandPixels": 25600,
+      "nearestFallback": 700
+    },
+    {
+      "chart": 3,
+      "faces": 13,
+      "pixels": 25600,
+      "goldenBandPixels": 25600,
+      "nearestFallback": 350
+    },
+    {
+      "chart": 4,
+      "faces": 14,
+      "pixels": 29464,
+      "goldenBandPixels": 6692,
+      "nearestFallback": 22109
+    },
+    {
+      "chart": 5,
+      "faces": 18,
+      "pixels": 29464,
+      "goldenBandPixels": 6692,
+      "nearestFallback": 22130
+    }
+  ],
+  "normalMap": "Neutral128,128,255 for distantLOD; source geometric normals unchanged",
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "sha256": "bad11e637a41f3d68b18481b3041fbcc5f6c6d781a349e61df409ba4dee25c60",
+  "elapsedSeconds": 26.38383124989923,
+  "peakRSSMiB": 133.234375
+}
