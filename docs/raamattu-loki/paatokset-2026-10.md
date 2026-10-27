@@ -2967,3 +2967,11 @@ OMISTAJAN PÄÄTÖS 19.52 (kortti KK:ssa, sanatarkasti): Onko kiinniotto nyt val
 ## KUJIEN KIVET 2D-PINTANA (omistaja 27.10.2026 klo 21.51) (27.10.2026 klo 21.52)
 
 Omistaja kysyi 21.2x: "Miksei codexia voi vain pyytää tekemään identtiset palat kuin mitä havainnekuvassa on kivissä?" ja 21.5x: "Tehdäänkö kivet 2d pintana vai tripo 3d:nä?". KK:n kortti "Tehdäänkö kivet 2D-pintana?" → "2D-pinta (Suositus)" (selite: "Codex maalaa pinnat, ja Lavastaja asettaa ne yksinkertaisten kivimuotojen päälle"). Toteutus: juoksupelin kujien kivet (reunakivi, sokkeli ylimpine kivineen ja pilarien kulmakivineen, lattialaatat) Codexin havainnekuvan mukaisina pintakuvina useana muunnelmana; ei Tripoa kiviin; Lavastaja tekee muodot ja kokoaa; Valoseppä ei säädä kivimateriaalia tällä välin. PK:n tilaus ee02c438f. Pari KK:lle → omistajalle ennen junaa.
+
+## KATOT, FRIISIT JA RAPPAUS 2D-PINTOINA (omistaja 27.10.2026 klo 21.54) (27.10.2026 klo 22.02)
+
+Omistaja kysyi: "Mitä muuta kannattaisi tilata 2d pintana?" KK:n kortti "Tilataanko katot, friisit ja seinän rappaus Codexilta 2D-pintoina?" → "Kyllä (Suositus)" (selite: "Järjestys: katot, friisit, seinä; kivet ensin"). PK tilaa Codexilta kivitilauksen jatkoksi, LR asettaa pinnat. Ikkunaristikot, nastoitetut ovet ja kaiteet pysyvät 3D-kappaleina.
+
+## OPPI: KUVAPARI TARKISTETAAN KOKONAAN OMISTAJAN SANOJA VASTEN (KK 27.10.2026 klo 22.00) (27.10.2026 klo 22.02)
+
+KK hyväksyi reunakiviparin 195504 klo 19.59, ja myös PT katsoi sen, mutta kumpikaan ei huomannut muurin yläreunan tasaista tekstuuritonta kaistaa eikä pilarien beigejä kulmakiviä (ristiriidassa omistajan 16.03-sanojen kanssa); omistaja löysi ne klo 20.06. Jatkossa KK ja PT vertaavat koko kuvaa omistajan aiempiin sanoihin, eivät vain kysyttyä kohtaa.
