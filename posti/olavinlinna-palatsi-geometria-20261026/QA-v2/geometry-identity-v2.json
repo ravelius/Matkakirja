@@ -1,0 +1,202 @@
+{
+  "at": "2026-10-27T12:05:25.030412+00:00",
+  "sourceGLB": "palatsi.glb",
+  "sourceSHA256": "3ddc59cfe9bbb4c24f602ae5a95d5365bfaf4afab4585521540bb5bfb087c8ee",
+  "outputGLB": "palatsi-v2.glb",
+  "outputSHA256": "87ec37237701069642d32089bcfd353895acb57876d30e78dd8595c1c3a2fede",
+  "outputBytes": 14968356,
+  "geometryUVIndicesNormalsTangentsByteIdentical": true,
+  "sceneHierarchyAndTransformsIdentical": true,
+  "markersExactCount": 63,
+  "nonImageBufferViews": [
+    {
+      "bufferView": 0,
+      "bytes": 20220,
+      "sha256": "3b002b7f1b5c38b84dbc4cd2a516772148ae8d8451b3d8de76de430bd75921fd",
+      "identical": true
+    },
+    {
+      "bufferView": 1,
+      "bytes": 20220,
+      "sha256": "83f99f4d83070555ca9b8775bcf970d7c2c73ecf5446cdadc33fc014d9037078",
+      "identical": true
+    },
+    {
+      "bufferView": 2,
+      "bytes": 13480,
+      "sha256": "48edeb278f23e22f952d23f5aa87841683fa3910b8a2c9fef71006947d4bca89",
+      "identical": true
+    },
+    {
+      "bufferView": 3,
+      "bytes": 13480,
+      "sha256": "af83d42577bd77374878feb786c88ea3757a76dd256d8b7fd3bf7b6097c9db7c",
+      "identical": true
+    },
+    {
+      "bufferView": 4,
+      "bytes": 9108,
+      "sha256": "0497551fa6e7c86871aec66df9d452249f598a2a6d47de922aea4c2fd89dbf37",
+      "identical": true
+    },
+    {
+      "bufferView": 7,
+      "bytes": 288,
+      "sha256": "7eea988ec94112b1beb44ad0df2c40ca89c1f0fc848467942e1febbf1120c73a",
+      "identical": true
+    },
+    {
+      "bufferView": 8,
+      "bytes": 288,
+      "sha256": "9dcaf36b734e89e24825c784a075fc828984a25b2ceec2152cbdc29c54f93904",
+      "identical": true
+    },
+    {
+      "bufferView": 9,
+      "bytes": 192,
+      "sha256": "76b34304c991f408faa52e1a51afd75e647a2c8594534c063050a40fbf3bdbf5",
+      "identical": true
+    },
+    {
+      "bufferView": 10,
+      "bytes": 192,
+      "sha256": "9bd917b8227de07a37594dfd63c68f27bb3ce962bf4f30cb2e7de16d9b4d7ee6",
+      "identical": true
+    },
+    {
+      "bufferView": 11,
+      "bytes": 72,
+      "sha256": "e8fca7d97cfa1e04aac31d498f8e70adab7c02ef8612d10a89340ab84abfad21",
+      "identical": true
+    },
+    {
+      "bufferView": 14,
+      "bytes": 13308,
+      "sha256": "f5ad1cdf45cd54a601443fa9e4dd1d9376614599a9d04a98545dda7c4c789545",
+      "identical": true
+    },
+    {
+      "bufferView": 15,
+      "bytes": 13308,
+      "sha256": "b3ec5d28f91ec12ae2400557f76d61264379f7f873e8acce087c13818c521510",
+      "identical": true
+    },
+    {
+      "bufferView": 16,
+      "bytes": 8872,
+      "sha256": "099d4e40d59120dcbc2f29df080e4f434c300e88dd4b4b7ac134c8d223dbc4ae",
+      "identical": true
+    },
+    {
+      "bufferView": 17,
+      "bytes": 8872,
+      "sha256": "439960345d4929991dcee38785e81578920d48a701157d8b4cdd5472f6aece56",
+      "identical": true
+    },
+    {
+      "bufferView": 18,
+      "bytes": 8844,
+      "sha256": "858835f1235a7f9764aa4fa8dc3aeaf75de7cfdf1e4e86c42668c628d7ea386e",
+      "identical": true
+    },
+    {
+      "bufferView": 20,
+      "bytes": 2880,
+      "sha256": "3e678b295d9fadb7110a9d1c8fb456d4ea993beeadc85ef2e8f5a52a2817de4c",
+      "identical": true
+    },
+    {
+      "bufferView": 21,
+      "bytes": 2880,
+      "sha256": "59df3b130180e3a710290aca02530a6efde5612d09fc9eee0b20bb4c8e9ff52c",
+      "identical": true
+    },
+    {
+      "bufferView": 22,
+      "bytes": 1920,
+      "sha256": "418a65aa02dec70c26b1d69db911bab1bf43ee5bfb731f4862b4eac12d339653",
+      "identical": true
+    },
+    {
+      "bufferView": 23,
+      "bytes": 1920,
+      "sha256": "967d59e9e6c2747f3fb535986e2d82729b92b00e731560aba54b63bcf968b96f",
+      "identical": true
+    },
+    {
+      "bufferView": 24,
+      "bytes": 720,
+      "sha256": "06a01af5d63bbbabd150b8ac568e33ae6c60424f648b00c7033f325d80245543",
+      "identical": true
+    },
+    {
+      "bufferView": 27,
+      "bytes": 1728,
+      "sha256": "2c9d1ed8c546312910face1116b0a387b970b89ae70170320daabcfdfca6ccb9",
+      "identical": true
+    },
+    {
+      "bufferView": 28,
+      "bytes": 1728,
+      "sha256": "6c12263a61b6376d5c903a14955293cf0c54c5470c92d456f04b7b9d33c6842f",
+      "identical": true
+    },
+    {
+      "bufferView": 29,
+      "bytes": 1152,
+      "sha256": "83701d75ee639fa94f37b2e86262d67bc29d9b34dd65577c98b66dbdc8111ff5",
+      "identical": true
+    },
+    {
+      "bufferView": 30,
+      "bytes": 1152,
+      "sha256": "c1e486831e8b760087dbfeb00d988957320e677c4a5ea7e9bcb47db33993d6ff",
+      "identical": true
+    },
+    {
+      "bufferView": 31,
+      "bytes": 432,
+      "sha256": "a5aad3b90bccb089b1a71d7599203454ad3b586eb49b367383c73c02ca14f925",
+      "identical": true
+    }
+  ],
+  "unchangedTextureImageIndices": [
+    4,
+    5,
+    6
+  ],
+  "replacedTextureImageIndices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "newGeometry": false,
+  "newImageGenerationCalls": 0,
+  "triangleCount": 3196,
+  "primitiveCount": 5,
+  "materialCount": 5,
+  "textureCount": 7,
+  "newTextureFiles": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-palatsi-geometria-1003-20261026/sources/materials-v2/rock_wall_13_nor_gl_2k.jpg",
+      "sha256": "3e2d3655b3b78e29fb5dad61d71255c6a21d7086c748b5b19ff550087f4e1f90",
+      "bytes": 3727830
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-palatsi-geometria-1003-20261026/sources/materials-v2/rock_wall_13_diff_2k.jpg",
+      "sha256": "d02f12e3c953fd2e7962714ce80284f32ad2de4177c460b8c19fc2a6f3e736a8",
+      "bytes": 3081301
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_lahteet/koehuone-20261012/tekstuurit/slate_driveway/slate_driveway_nor_gl_2k.jpg",
+      "sha256": "c65f5f32c9759f83ef075df5f642839a0342eb96e9e5eb7a7f10b9ca44e34dca",
+      "bytes": 3890693
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_lahteet/koehuone-20261012/tekstuurit/slate_driveway/slate_driveway_diff_2k.jpg",
+      "sha256": "c3c1ef569ee2ceaf7b34541a2beae072036259a8d80a21e6de477d13526d65e8",
+      "bytes": 3155363
+    }
+  ]
+}

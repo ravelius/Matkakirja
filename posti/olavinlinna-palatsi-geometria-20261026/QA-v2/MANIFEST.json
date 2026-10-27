@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "path": "LAHTEET-v2.md",
+      "sha256": "ba23d1b01be44078fad47087f6a30363002f2ed68f744480435d3dbb20c536f5",
+      "bytes": 1549
+    },
+    {
+      "path": "LUEMINUT-v2.md",
+      "sha256": "e223c6527ca956fa3d5190fa6ec4dc082da52d34b12051864dcdfa1adde740fd",
+      "bytes": 2766
+    },
+    {
+      "path": "OPIT-PT-LLE-v2.md",
+      "sha256": "dca4e4369ef6fee0852a06c84abaa90bb387e3a052dffc850b18f7b302c9654b",
+      "bytes": 530
+    },
+    {
+      "path": "QA-v2/CREDITS.md",
+      "sha256": "ba23d1b01be44078fad47087f6a30363002f2ed68f744480435d3dbb20c536f5",
+      "bytes": 1549
+    },
+    {
+      "path": "QA-v2/geometry-identity-v2.json",
+      "sha256": "703ae93c36bfd451f2edf77dcb1ac95e0e6c18ddd0970295df9439842101dac9",
+      "bytes": 5996
+    },
+    {
+      "path": "QA-v2/lower-hall-internal-v2.png",
+      "sha256": "6401872b6fb037e08bca8640a1740bb0c4efb7b9edacab3bb0d95688bdd50216",
+      "bytes": 1932321
+    },
+    {
+      "path": "QA-v2/source-geometry-verification-v1.json",
+      "sha256": "6a83d0ab75e21ab82df8c26e31c550d04de4eb3681211f23189deab7660ca9aa",
+      "bytes": 1576
+    },
+    {
+      "path": "QA-v2/stair-internal-v2.png",
+      "sha256": "454297859172b99fd47b484c9879467dad0917453e3523f80f74597b6c48a1f2",
+      "bytes": 2050692
+    },
+    {
+      "path": "QA-v2/upper-hall-internal-v2.png",
+      "sha256": "aad6a0df262aca8dfb86bd6ec3d1b25ea22bceed98a6341c42072dfc434e78be",
+      "bytes": 1793413
+    },
+    {
+      "path": "QA-v2/visual-QA-v2.json",
+      "sha256": "e067e97420d87034bc4da6067a35b5ff9e7cf88506321f820d50f7f56f35d549",
+      "bytes": 676
+    },
+    {
+      "path": "SOURCE-PINS-v2.json",
+      "sha256": "d0865e43bd9d9b49a12cc0a405bb19c84c35fccb39105b4baca0557a5fc773ef",
+      "bytes": 1063
+    },
+    {
+      "path": "palatsi-v2.glb",
+      "sha256": "87ec37237701069642d32089bcfd353895acb57876d30e78dd8595c1c3a2fede",
+      "bytes": 14968356,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    }
+  ],
+  "taskNumbers": [
+    1103,
+    1104,
+    1105
+  ],
+  "callsIssued": 0,
+  "geometryUnchanged": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

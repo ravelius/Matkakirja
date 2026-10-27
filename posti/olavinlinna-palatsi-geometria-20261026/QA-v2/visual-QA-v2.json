@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-27T12:07:24.601631+00:00",
+  "views": [
+    "lower-hall-internal-v2.png",
+    "upper-hall-internal-v2.png",
+    "stair-internal-v2.png"
+  ],
+  "fullResolutionReviewed": true,
+  "lowerFloor": "grey irregular slate, visible mortar; rusty smooth surface removed",
+  "upperFloor": "same slate, explicit interpretation",
+  "walls": "irregular mixed-size dark fieldstone, pale extensive mortar, patchy mortar on stone",
+  "renderer": "Blender Cycles; internal only",
+  "geometrySource": "exact final palatsi-v2.glb imported for renders",
+  "imageGenerationCalls": 0,
+  "producerQA": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false
+}

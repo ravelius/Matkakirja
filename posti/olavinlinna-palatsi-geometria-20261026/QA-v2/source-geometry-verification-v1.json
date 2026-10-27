@@ -1,0 +1,52 @@
+{
+  "sourceMarkers": 63,
+  "exportedMarkers": 63,
+  "changedMarkers": [],
+  "walkSamples": 4285,
+  "newHeadroomObstructionsCount": 0,
+  "newHeadroomObstructions": [],
+  "missingFloorSamplesCount": 0,
+  "missingFloorSamples": [],
+  "newClearanceNarrowingsCount": 0,
+  "newClearanceNarrowings": [],
+  "doors": [
+    {
+      "name": "ovi:linnantupa-pohjoinen",
+      "width": 1.05,
+      "height": 2.0,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 44,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientedRays": 441,
+      "orientedBaselineBlocked": 0,
+      "orientedNewlyBlocked": []
+    },
+    {
+      "name": "ovi:palatsi-porras-ala",
+      "width": 1.0,
+      "height": 2.1,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 110,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientedRays": 441,
+      "orientedBaselineBlocked": 2,
+      "orientedNewlyBlocked": []
+    },
+    {
+      "name": "ovi:palatsi-porras-yla",
+      "width": 1.0,
+      "height": 2.1,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 110,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientedRays": 441,
+      "orientedBaselineBlocked": 0,
+      "orientedNewlyBlocked": []
+    }
+  ],
+  "toleranceMetres": 0.015,
+  "gameplayCollisionSourceRetainedByReceiver": true
+}

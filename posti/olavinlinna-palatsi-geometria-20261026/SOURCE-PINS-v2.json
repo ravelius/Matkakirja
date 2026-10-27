@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posti/natiiviseppa-codex-olavinlinna-palatsi-kuittaus-20261027.md",
+    "commit": "dde46cc4e216009c49318c3700b69a09b8641280",
+    "blob": "69fc697342503e09cbe704273a2dc1e17b33f03c",
+    "sha256": "20945909477afefe86b909cbdf54e95e2bfc4766a9ca1e103e9558a61d2ea330",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-palatsi-geometria-1003-20261026/sources/natiiviseppa-codex-olavinlinna-palatsi-kuittaus-20261027.md",
+    "readInFull": true
+  },
+  {
+    "path": "posti/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "commit": "8965de38f95305a8be4403430534ea30a3687950",
+    "blob": "bd34fa9a0af8bf9acc9ee71e00b10f98eaa1e7bd",
+    "sha256": "84e1b2afcb810ed69fb25b43f75b1e7c9109dda1543f0b9110c5f0457ceb4892",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-palatsi-geometria-1003-20261026/sources/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "readInFull": true,
+    "scope": "Separate parts released; palace material correction unchanged"
+  }
+]
