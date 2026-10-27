@@ -334,11 +334,12 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
   if (vuosiToisto) return { ok: false, syy: `toisto ${vuosiToisto}` };
   const oma = (kohteenNimi ?? '').toLowerCase();
   const nimet = (ilman.match(/(?<=[\p{Ll},] )[\p{Lu}][\p{L}-]{4,}/gu) ?? []).filter((n) => !oma.includes(n.toLowerCase().slice(0, 5)));
-  const nimiToisto = nimet.find((n, i) => nimet.findIndex((m) => m.slice(0, 5) === n.slice(0, 5)) !== i);
+  // Erisnimi enintään kahdesti (vedos 5: Eton–Windsor ja Berkshire–Berkshireen ovat luontevia kahdesti); kolmas kerta = toisto.
+  const nimiToisto = nimet.find((n) => nimet.filter((m) => m.slice(0, 5) === n.slice(0, 5)).length > 2);
   if (nimiToisto) return { ok: false, syy: `toisto ${nimiToisto}` };
-  // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 10 kirjainta, 8 ensimmäistä samat, ei kohteen nimeä) kahdesti.
+  // Sama fakta kahdesti (KK 27.10.): sama pitkä sana (≥ 13 kirjainta, 8 ensimmäistä samat, ei kohteen nimeä) kahdesti.
   // Isolla alkavat (nimet) jäävät pois: erisnimien toiston hoitaa yllä oleva sääntö.
-  const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{9,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
+  const pitkat = (ilman.match(/(?<![\p{L}])\p{Ll}\p{L}{12,}/gu) ?? []).map((s) => s.slice(0, 8)).filter((s) => !oma.includes(s));
   const sanaToisto = pitkat.find((s, i) => pitkat.indexOf(s) !== i);
   if (sanaToisto) return { ok: false, syy: `toisto ${sanaToisto}` };
   const virkkeet = ilman.split(/(?<=[.!?])\s+/).map((v) => new Set(v.toLowerCase().match(/\p{L}{3,}/gu) ?? [])).filter((v) => v.size >= 4);
@@ -348,6 +349,9 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
       if (yhteiset / Math.min(virkkeet[a].size, virkkeet[b].size) > 0.6) return { ok: false, syy: 'lähes sama virke' };
     }
   }
+  // 2.4 (SK 27.10.): englannin sana suomen päätteellä ("collegelle") tai vieras nimi genetiivissä ("Windsor Bridgen") = hylkäys.
+  if (/(?<!\p{L})(college|school|bridge)(n|lle|lla|lta|sta|ssa|ksi|a|t|ja)(?!\p{L})/u.test(ilman)
+    || /(?<!\p{L})[A-Z]\p{L}* (Bridge|College|School|Way|Street|Road)n(?!\p{L})/u.test(ilman)) return { ok: false, syy: 'vieras sana' };
   // 2.4/7: ei puhuttelua eikä kehotuksia.
   if (/katsel|huomaat|kannattaa|kävele|(?<!\p{L})näet(?!\p{L})|tuntuu|(?<!\p{L})kun \p{L}+t(?!\p{L})/iu.test(ilman)) return { ok: false, syy: 'puhuttelu' };
   // 2.4/8: viimeinen merkki on piste (myös lyhyen osan loppu).
@@ -365,8 +369,12 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     if (v >= 100 && v % 100 === 0 && new RegExp(`\\b${v / 100 + 1}(st|nd|rd|th)[ -]century|\\b${v}s\\b|\\b${v / 100 + 1}\\. vuosisa`, 'i').test(lahdeTeksti)) continue;
     return { ok: false, syy: `luku ${luku}` };
   }
+  const enLahde = lahdeTeksti.includes('Englanninkielinen artikkeli:') || /"kieli":"en"/.test(lahdeTeksti);
   for (const nimi of ilman.match(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu) ?? []) {
-    if (!lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) return { ok: false, syy: `nimi ${nimi}` };
+    if (lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) continue;
+    // Englanninkielinen lähde: suomenkielinen vakiintunut muoto (Lontoo ← London) kelpaa kolmen alkukirjaimen sanana lähteessä.
+    if (enLahde && new RegExp(`(?<!\\p{L})${nimi.slice(0, 3)}\\p{L}`, 'u').test(lahdeTeksti)) continue;
+    return { ok: false, syy: `nimi ${nimi}` };
   }
   return { ok: true, syy: null };
 }
