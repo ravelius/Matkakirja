@@ -256,3 +256,22 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   päällekkäisyys katto/muut 0,01 %.
 - JONO: rakennukset-v54:n leivonta (kaikki mallit leivo_malli.py:llä, uusi UV1) vasta muotoerien jälkeen, kun valo otetaan taas
   työn alle. Sama vika voi olla taustapaloissa (leivo_valo.py, 1,6 tekseliä/m²): katto_uv1 sinne samalla.
+
+## LISÄYS 18 klo 17.3x: C1 v4 kaikkiin hallirakennuksiin, rakennukset-v54, juuri-v85m, tausta.json (LUOVUTUS)
+- K/tyokalut/c1_raystaat2.py v4 (varmuuskopio .ennen-v4; aja aina INSET=0.15 NALAS=0.35 kuten v3):
+  1. Sisäketjut pois haaroittain (aste ≠ 2 -kohtien välit): avoin haara, jonka ≥ 70 % pisteistä on 0,3–2,5 m ulomman haaran sisäpuolella
+     (|dz| < 1,2), poistetaan ennen parien hakua. Lisäksi pois tasaiset irtoketjut (z-vaihtelu < 5 cm) ja jäänteet (avoin haara < 6 m).
+  2. Renkaat: kattonauha pudotetaan vain, jos se on ison renkaan sisällä ja kutistunut tasaisesti (_nauha), eli Meridiaaniportin
+     kulmapaviljongit jäävät. Tasaiset renkaat (z-vaihtelu ≤ 0,1) eivät ole räystäitä.
+  Regressio: Taihedian ja Zhonghedian palalleen samat kuin v3. Uudet räystäät: Baohedian 2 (歇山 ylä ja ala), Taihemen ylä ja ala
+  (alempi korjattu), Meridiaaniportti +8 paviljonkirengasta. Sonnet tarkisti kuvat c1-v4/*.png (Taihemenin alanurkan koukku korjattu ja
+  tarkistettu itse). DEBUG=1, SEGS=<json> ja PAAZ/PAAZ0 ovat vianetsintään.
+- K/c1-v4/kielletty-c1-v4: c1-sijoitukset.json 2280 palaa (1055 2204, 1056-pareja 76; 5 mallia) + 3 glb + SHA256SUMS.
+- K/rakennukset-v54 (aja_c1_vanha_v54.zsh / aja_c1_v4.zsh): v52 + vanha kultareuna leikattu c1-v4:n alta 5 mallista, valo_rgbm v52:sta
+  (EI uutta leivontaa). HUOM: kun valo leivotaan uudelleen (katto_uv1), leivontanimi on v55 tai uudempi, ei v54.
+- K/c2-v4/kielletty-c2-v3 = c2-v2 + f-taihemen-lod0-kaiteeton v54:stä (c2-sijoitukset ennallaan, tarkistettu samaksi).
+- H/juuri-v85m = v84m + kielletty-rakennukset-v48 → rakennukset-v54, kielletty-c1-v3 → c1-v4, kielletty-c2-v2 → c2-v3 (pelin nimet).
+- VS 17.2x: yksikerros-v79:n tausta.json ei listannut kujapaloja → peli ei ladannut uutta reunakiveä. K/tyokalut/tausta_json_taydenna.py
+  ajettu paikallaan (vanha .ennen-taydennys), 23 palaa. LISÄÄ TÄMÄ JOKAISEN TAUSTAKETJUN LOPPUUN.
+- SEURAAVAKSI: PK:n tarkistus juuri-v85m:llä (C1 Baohedian, Taihemen, paviljongit); viisteen v < 0; T-risteys, aukion sivuhallit, 04,
+  06, 07 (EROLISTA); jonossa Olavinlinnan palatsi-v2; valon uusi leivonta (katto_uv1, myös leivo_valo) vasta omistajan luvalla.
