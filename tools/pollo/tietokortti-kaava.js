@@ -100,12 +100,16 @@ export function vuosi(aika, tarkkuus) {
   if (!m) return null;
   const eaa = m[1] === '-';
   const y = Number(m[2]);
-  if (tarkkuus >= 9) return eaa ? `${y} eaa.` : String(y);
-  if (tarkkuus === 8) return eaa ? null : `${Math.floor(y / 10) * 10}-luvulla`;
+  // Ajanlaskun merkintä (KK 27.10.): eaa. aina, jaa. alle vuoden 1000 (Colosseum "82" → "82 jaa.").
+  const aikakausi = eaa ? ' eaa.' : y < 1000 ? ' jaa.' : '';
+  if (tarkkuus >= 9) return `${y}${aikakausi}`;
+  if (tarkkuus === 8) return eaa ? null : `${Math.floor(y / 10) * 10}-luvulla${aikakausi}`;
   if (tarkkuus === 7) {
-    const s = Math.floor(y / 100) * 100;   // resepti 1.9: 1100 (tarkkuus 7) → 1100-luvulla
-    if (s === 0) return null;   // "0-luvulla" ei ole suomea: rivi pois
-    return `${s}-luvulla${eaa ? ' eaa.' : ''}`;
+    // Wikidatan vuosisata (tarkkuus 7): +1200 = 12. vuosisata = suomeksi 1100-luvulla (Angkor Wat), -0500 = 5. vuosisata eaa. =
+    // 400-luvulla eaa. (Akropolis, PT/KK 27.10.: aiempi muunnos oli vuosisadan verran väärin molempiin suuntiin).
+    const s = Math.floor((y - 1) / 100) * 100;
+    if (s <= 0) return null;   // "0-luvulla" ei ole suomea: rivi pois
+    return `${s}-luvulla${eaa ? ' eaa.' : s < 1000 ? ' jaa.' : ''}`;
   }
   return null;
 }
