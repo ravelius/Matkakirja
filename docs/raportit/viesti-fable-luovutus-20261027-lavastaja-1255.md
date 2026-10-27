@@ -311,3 +311,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   osoitin lavastaja/tausta-v61-213 da2a83a50 (proto, wt/proto-lavastaja-muoto). Vienti JU:lle + osoitin NS:lle, kun KK kuittaa VS:n yhdistelmäparin. Kansi muutettu vain LOD0:ssa.
 - KK 21.2x: Codex tekee kujien kivet havainteen mukaisina paloina (PK tilaa); mitat PK:lle 21.3x (reunakivi 0,30 × 0,20 × 0,6–0,8; sokkeli 1,20 ilman kansilistaa;
   pilari ~0,4 ulos × 0,6; lattia kuja ~6,8, laatat 0,6–1,2 × 0,4–0,6). SEURAAVAKSI: kun palat tulevat, LR kokoaa ne nykyisten kivien tilalle → pari KK:lle.
+
+## LISÄYS 22 klo 22.1x: v85 + muurikate-v19 (KK 21.5x pari 211947: suikale ja pilarien harmaat katteet), pari 221009 KK:lla
+- Suikale = taustan 1,30 m:n kaistan etupinta siirtyi v84:ssä 7 cm (yläpinta T-liitoksin pilkottu, ei siirtynyt) → kansi_seinaan.py KANSI_YLA=1.205
+  (aja_ketju_v85.zsh → yksikerros-v85). tausta-v61 (v84) EI käyttöön.
+- Pilarien katteet = muurikatteen V4_sokkeli_kansi (0,22 × 0,95 m, 1,20–1,26) → muurikate_kansi.py (seinän tasoon 5422 reunaa, kansi → V4_sokkeli,
+  nimet tarkoiksi). Junan v18-pohjasta K/muurikate-v19/kielletty-muurikate-v19/kk-muurikate-v19-pohja.glb (+ 1057-c3 ja c3-sijoitukset kopioina);
+  parin v16-nimelle v17:stä K/muurikate-v19/pari-v17-v16-nimella. HUOM: juna 213 MuurikateTiedosto = kielletty-muurikate-v18/kk-muurikate-v18-pohja.glb.
+- Pari: lokit/havainne-editori-20261027-221009/02 (H/juuri-v92m, REF 1158e9df0). VS:n editori-vs.sh viittaa poistettuun wt/proto-linssiseppa2-p11:een →
+  oma kopio T=wt/proto-lavastaja-havainne/tyokalut/havainne.
+- Kuittauksella: tausta-v62 (= v85) + muurikate-v19 paketit JU:lle, osoitin (TaustaKansio v62, MuurikateTiedosto v19-pohja) NS:lle.
+- Codexin 2D-pinnat (omistaja 21.51/21.54): kivien ja kattojen/friisien/rappauksen pintamitat PK:n postissa bba13fd6b ja 7eb80206c; muodot ja UV:t LR.
