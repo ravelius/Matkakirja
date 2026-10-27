@@ -13,7 +13,7 @@ export const LAJIT = [
   ['Joki', 'joki', ['Q4022']], ['Järvi', 'vesi', ['Q23397']], ['Vesiputous', 'vesiputous', ['Q34038']], ['Meri', 'vesi', ['Q165']],
   ['Valtameri', 'vesi', ['Q9430']], ['Lahti', 'vesi', ['Q39594']], ['Salmi', 'vesi', ['Q37901']], ['Kanava', 'joki', ['Q12284']],
   ['Vesistö', 'vesi', ['Q15324']],
-  ['Tulivuori', 'vuori', ['Q8072']], ['Vuori', 'vuori', ['Q8502']], ['Jäätikkö', 'vuori', ['Q35666']], ['Laakso', 'vuori', ['Q39816']],
+  ['Tulivuori', 'vuori', ['Q8072']], ['Vuori', 'vuori', ['Q8502']], ['Kukkula', 'vuori', ['Q54050']], ['Jäätikkö', 'vuori', ['Q35666']], ['Laakso', 'vuori', ['Q39816']],
   ['Aavikko', 'puisto', ['Q8514']], ['Saari', 'saari', ['Q23442']], ['Niemimaa', 'saari', ['Q34763']], ['Luola', 'puisto', ['Q35509']],
   ['Metsä', 'puisto', ['Q4421']], ['Kansallispuisto', 'puisto', ['Q46169']], ['Puisto', 'puisto', ['Q22698']],
   ['Puutarha', 'puisto', ['Q1107656']],
