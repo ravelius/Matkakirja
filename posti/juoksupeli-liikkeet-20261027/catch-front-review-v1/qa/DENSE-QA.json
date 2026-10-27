@@ -1,0 +1,360 @@
+{
+  "results": [
+    {
+      "pair": "perus-vartija",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v2/perus-vartija/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.000590095376526693,
+          "palmProxySurfaceAnchorMaxM": 8.917734910072801e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Right",
+            "childSide": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.988595387305338e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 3.489356523569881e-07,
+          "worstContact": {
+            "time": 0.008333333333333333,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.228449962922042e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "perus-eunukki-1",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v3/perus-eunukki-1/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.000590095376526693,
+          "palmProxySurfaceAnchorMaxM": 9.819663542382821e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.256402197366782e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.406261619570678e-06,
+          "worstContact": {
+            "time": 0.7083333333333334,
+            "guardSide": "Right",
+            "childSide": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7536530994586315e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v3/perus-eunukki-2/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.000590095376526693,
+          "palmProxySurfaceAnchorMaxM": 8.915670847876113e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.943384185856047e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.322746991415478e-07,
+          "worstContact": {
+            "time": 0.025,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.2585163900478165e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v3/perus-eunukki-3/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.000590095376526693,
+          "palmProxySurfaceAnchorMaxM": 0.00010092110628640663,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.943384185856047e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.6512093330377916e-06,
+          "worstContact": {
+            "time": 0.7083333333333334,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.962528904999374e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "viitta-vartija",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v3/viitta-vartija/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0007337054317141849,
+          "palmProxySurfaceAnchorMaxM": 9.551917961797105e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Right",
+            "childSide": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.044824730708996e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 8.89195566185488e-07,
+          "worstContact": {
+            "time": 0.625,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.355253275216796e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v4/viitta-eunukki-1/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0007337054317141849,
+          "palmProxySurfaceAnchorMaxM": 8.941052740432327e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.044824730708996e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 5.768924761813327e-07,
+          "worstContact": {
+            "time": 0.625,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.818189875381961e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v3/viitta-eunukki-2/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0007337054317141849,
+          "palmProxySurfaceAnchorMaxM": 9.597433222488744e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.044824730708996e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 6.769876253441165e-07,
+          "worstContact": {
+            "time": 0.6083333333333333,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.805383241850535e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "pairQA": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-front-v4/viitta-eunukki-3/PAIR-QA.json",
+      "metrics": [
+        {
+          "clips": [
+            "caught_front",
+            "catch_front"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0007337054317141849,
+          "palmProxySurfaceAnchorMaxM": 9.261951600857004e-05,
+          "worstContact": {
+            "time": 0.425,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.044824730708996e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_front",
+            "hold_front"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 9.713399390585449e-07,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "guardSide": "Left",
+            "childSide": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.500318102034328e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy and fixed source cloth vertex; not exhaustive finger, cloth or actor collision QA. Reference approach speed5m/s only; controller curve required."
+    }
+  ],
+  "allPass": true,
+  "elapsedSeconds": 22.07418041699566,
+  "peakRSSMiB": 300.34375,
+  "gameVerified": false
+}
