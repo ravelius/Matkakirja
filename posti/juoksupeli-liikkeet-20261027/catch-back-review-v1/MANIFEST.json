@@ -1,0 +1,749 @@
+{
+  "status": "BACK_CATCH_REVIEW_READY_GAME_ACCEPTANCE_PENDING",
+  "createdAt": "2026-10-27T10:49:17.416793+00:00",
+  "order": "0d4eef81cecd4e543191def089de2436c4f8a5bb",
+  "task": 1033,
+  "partialOrder": true,
+  "models": [
+    {
+      "file": "models/puyi-perus-catch-back.glb",
+      "sha256": "cd6179f470535ca550dac1c1f890cbf6b9f2f640df9bbe4906516628d7aebc6f",
+      "bytes": 15812520,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/perus-vartija/puyi-caught-back.glb",
+      "kind": "Puyi"
+    },
+    {
+      "file": "models/vartija-catch-back-perus.glb",
+      "sha256": "73524437726dad7846bacbd544312db6f2d1fd39a132301d6f12da6313676a4a",
+      "bytes": 5548832,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/perus-vartija/vartija-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-1-catch-back-perus.glb",
+      "sha256": "ba8c614fc9eff6518bb694f344144238c5d4ce23f9a8f947662f701bb2190e46",
+      "bytes": 6292964,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/perus-eunukki-1/eunukki-1-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-2-catch-back-perus.glb",
+      "sha256": "de01898270e5d80b52d1395e43479120372cc6fe65b06f0d03d8eac1bf4b7374",
+      "bytes": 6322880,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/perus-eunukki-2/eunukki-2-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-3-catch-back-perus.glb",
+      "sha256": "255fd6e3ccaae49605a79686a51996d664563df66740d5b2d4992f6731e142ba",
+      "bytes": 6562928,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/perus-eunukki-3/eunukki-3-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/puyi-viitta-catch-back.glb",
+      "sha256": "6d39301d6542dba367eba9f5e5d584c378b697bb7cd4d7eb115a70b654a86d44",
+      "bytes": 11788856,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/viitta-vartija/puyi-caught-back.glb",
+      "kind": "Puyi"
+    },
+    {
+      "file": "models/vartija-catch-back-viitta.glb",
+      "sha256": "8cd16abf5bb2741d246727c22a200d7e6d304595327e48247a12c7d3f63e6c10",
+      "bytes": 5548836,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/viitta-vartija/vartija-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-1-catch-back-viitta.glb",
+      "sha256": "2b88c02ba300bfb916061a74dacb15df7693559cad222b99779acc52b0d75710",
+      "bytes": 6292964,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/viitta-eunukki-1/eunukki-1-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-2-catch-back-viitta.glb",
+      "sha256": "afb005be86163ef5ead9350b2d6a3e8f04432b048ab6f8561dcd72e81d29a9c0",
+      "bytes": 6322888,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/viitta-eunukki-2/eunukki-2-catch-back.glb",
+      "kind": "Guard"
+    },
+    {
+      "file": "models/eunukki-3-catch-back-viitta.glb",
+      "sha256": "bef2086148af71b0b95571280565f9d5e37c74f6871d8045a52c7cad9067248a",
+      "bytes": 6562932,
+      "candidateSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-catch-back-v6/viitta-eunukki-3/eunukki-3-catch-back.glb",
+      "kind": "Guard"
+    }
+  ],
+  "pairs": [
+    {
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-perus-catch-back.glb",
+      "guardModel": "models/vartija-catch-back-perus.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        -0.0007813497663871302,
+        0.0,
+        -0.3975792945389101
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 4.510281037539698e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 1.2212453270876722e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-perus-door-push-run.glb",
+          "sha256": "988ecc4f070431694cfb5348c5c3a196af81432d65304403f54c94df77880360"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/vartija/vartija-rig-animations.glb",
+          "sha256": "00a6d5df744907c4b317ee86e63801f12052e3ff0331f7415712440e9be8c638"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-perus-catch-back.glb",
+      "guardModel": "models/eunukki-1-catch-back-perus.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005898518487566284,
+        0.0,
+        -0.38964884550892553
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 4.510281037539698e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 1.3448443747510197e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-perus-door-push-run.glb",
+          "sha256": "988ecc4f070431694cfb5348c5c3a196af81432d65304403f54c94df77880360"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-1-rig-animations-review.glb",
+          "sha256": "12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-perus-catch-back.glb",
+      "guardModel": "models/eunukki-2-catch-back-perus.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005937556007683694,
+        0.0,
+        -0.38992234056847425
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 4.510281037539698e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 1.6653345369377348e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-perus-door-push-run.glb",
+          "sha256": "988ecc4f070431694cfb5348c5c3a196af81432d65304403f54c94df77880360"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-2-rig-animations-review.glb",
+          "sha256": "4b292e677d721155b658bd89d4af43f2b5c443b687249d5edb24f55ae9ca12fd"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-perus-catch-back.glb",
+      "guardModel": "models/eunukki-3-catch-back-perus.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005917868721770794,
+        0.0,
+        -0.3832234035636498
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 4.510281037539698e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 2.4980018054066022e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-perus-door-push-run.glb",
+          "sha256": "988ecc4f070431694cfb5348c5c3a196af81432d65304403f54c94df77880360"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-3-rig-animations-review.glb",
+          "sha256": "59e36118154e5325a9800c4dda7971ae319203e87ad88f9dd2f0934e0cb26e61"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 34432,
+        "Right": 35125
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-viitta-catch-back.glb",
+      "guardModel": "models/vartija-catch-back-viitta.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        -0.0007813041712786913,
+        0.0,
+        -0.29738691290532865
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 3.3306690738754696e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 6.661338147750939e-16,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-viitta-door-push-run.glb",
+          "sha256": "5b4217333aa3a35fc6e164e0a397ea303e297e578efd008ec38e2be53f0ae0fc"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tripo-hahmot-20261019/vartija/vartija-rig-animations.glb",
+          "sha256": "00a6d5df744907c4b317ee86e63801f12052e3ff0331f7415712440e9be8c638"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-viitta-catch-back.glb",
+      "guardModel": "models/eunukki-1-catch-back-viitta.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005898564082674723,
+        0.0,
+        -0.28945646387534407
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 3.3306690738754696e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 1.1102230246251565e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-viitta-door-push-run.glb",
+          "sha256": "5b4217333aa3a35fc6e164e0a397ea303e297e578efd008ec38e2be53f0ae0fc"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-1-rig-animations-review.glb",
+          "sha256": "12c8236bbe12020f21886bad9c0b8cfa406aacedeba85784bac38005e1c8955c"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-viitta-catch-back.glb",
+      "guardModel": "models/eunukki-2-catch-back-viitta.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005937601602792133,
+        0.0,
+        -0.2897299589348928
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 3.3306690738754696e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 1.1934897514720433e-15,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-viitta-door-push-run.glb",
+          "sha256": "5b4217333aa3a35fc6e164e0a397ea303e297e578efd008ec38e2be53f0ae0fc"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-2-rig-animations-review.glb",
+          "sha256": "4b292e677d721155b658bd89d4af43f2b5c443b687249d5edb24f55ae9ca12fd"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-viitta-catch-back.glb",
+      "guardModel": "models/eunukki-3-catch-back-viitta.glb",
+      "puyiOrigin": [
+        0,
+        0,
+        0
+      ],
+      "guardOrigin": [
+        0.005917914316879233,
+        0.0,
+        -0.28303102193006835
+      ],
+      "relativeYawDegrees": 0,
+      "continuity": {
+        "caught_back->caught_hold_back": 3.3306690738754696e-16,
+        "caught_hold_backloop": 0.0,
+        "catch_back->hold_back": 9.992007221626409e-16,
+        "hold_backloop": 0.0
+      },
+      "sourceModels": [
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/door-push-run-review-v1/puyi-viitta-door-push-run.glb",
+          "sha256": "5b4217333aa3a35fc6e164e0a397ea303e297e578efd008ec38e2be53f0ae0fc"
+        },
+        {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/review-v1/models/eunukki-3-rig-animations-review.glb",
+          "sha256": "59e36118154e5325a9800c4dda7971ae319203e87ad88f9dd2f0934e0cb26e61"
+        }
+      ],
+      "fixedSurfaceVertices": {
+        "Left": 22158,
+        "Right": 15566
+      }
+    }
+  ],
+  "clips": [
+    {
+      "puyi": "caught_back",
+      "guard": "catch_back",
+      "durationS": 0.9,
+      "contactFullyEstablishedS": 0.38,
+      "decelerationStartS": 0.13,
+      "decelerationEndS": 0.73
+    },
+    {
+      "puyi": "caught_hold_back",
+      "guard": "hold_back",
+      "durationS": 1.2,
+      "loop": true
+    }
+  ],
+  "controllerContract": [
+    "Use matching base/cape guard variant and exact pair placement",
+    "Synchronize both clips and shared deceleration; no baked actor root movement",
+    "Do not play old generic catch simultaneously",
+    "Hold starts exactly at catch final pose; looping body motion and grip are synchronized",
+    "At zero-relative-root approach speed5–7.5m/s, apply controller deceleration between.13–.73s; verify game foot contacts",
+    "Base/cape local origin differs, do not reuse the same guard offset for both"
+  ],
+  "technicalQA": {
+    "results": [
+      {
+        "pair": "perus-eunukki-1",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.00046940241843239285,
+            "palmProxySurfaceAnchorMaxM": 0.00018407161210884016,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.26681312504229e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018236797168090313,
+            "palmProxySurfaceAnchorMaxM": 2.2060568583603246e-07,
+            "worstContact": {
+              "time": 0.5916666666666667,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.695293093741725e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "perus-eunukki-2",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.00046940241843239285,
+            "palmProxySurfaceAnchorMaxM": 0.00018526666049822606,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.26681312504229e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018236797168090313,
+            "palmProxySurfaceAnchorMaxM": 2.695705074835116e-07,
+            "worstContact": {
+              "time": 0.6083333333333333,
+              "side": "Right"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.889847566274085e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "perus-eunukki-3",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.00046940241843239285,
+            "palmProxySurfaceAnchorMaxM": 0.00021113074902841085,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.26681312504229e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018236797168090313,
+            "palmProxySurfaceAnchorMaxM": 2.188076729367907e-07,
+            "worstContact": {
+              "time": 1.1916666666666667,
+              "side": "Right"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.9000754181728325e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "perus-vartija",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.00029624499266377174,
+            "palmProxySurfaceAnchorMaxM": 0.000171001844287279,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.26681312504229e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0018236797168090313,
+            "palmProxySurfaceAnchorMaxM": 3.2364429826042576e-07,
+            "worstContact": {
+              "time": 1.1916666666666667,
+              "side": "Right"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.19708250984263e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "viitta-eunukki-1",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0004742401456334776,
+            "palmProxySurfaceAnchorMaxM": 0.0002593415065594525,
+            "worstContact": {
+              "time": 0.5083333333333333,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.1604383937965395e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0010000105927898647,
+            "palmProxySurfaceAnchorMaxM": 1.5148160835987308e-07,
+            "worstContact": {
+              "time": 0.625,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.836050765926302e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "viitta-eunukki-2",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0004742401456334776,
+            "palmProxySurfaceAnchorMaxM": 0.00021713178096849286,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.1604383937965395e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0010000105927898647,
+            "palmProxySurfaceAnchorMaxM": 1.5831280850075914e-07,
+            "worstContact": {
+              "time": 0.6083333333333333,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.8087313081192065e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "viitta-eunukki-3",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.0004742401456334776,
+            "palmProxySurfaceAnchorMaxM": 0.0003350501864070821,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.1604383937965395e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0010000105927898647,
+            "palmProxySurfaceAnchorMaxM": 1.3574285377754326e-07,
+            "worstContact": {
+              "time": 0.5916666666666667,
+              "side": "Right"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.608530163567991e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      },
+      {
+        "pair": "viitta-vartija",
+        "metrics": [
+          {
+            "clips": [
+              "caught_back",
+              "catch_back"
+            ],
+            "samples120Hz": 109,
+            "wholeMeshFloorMinM": 0.00029624499266377174,
+            "palmProxySurfaceAnchorMaxM": 0.00021540705671083398,
+            "worstContact": {
+              "time": 0.475,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 4.1604383937965395e-08,
+            "pass": true
+          },
+          {
+            "clips": [
+              "caught_hold_back",
+              "hold_back"
+            ],
+            "samples120Hz": 145,
+            "wholeMeshFloorMinM": 0.0010000105927898647,
+            "palmProxySurfaceAnchorMaxM": 2.38767049945421e-07,
+            "worstContact": {
+              "time": 1.1,
+              "side": "Left"
+            },
+            "finite": true,
+            "strictlyIncreasingTimes": true,
+            "quaternionNormError": 3.929069547492503e-08,
+            "pass": true
+          }
+        ],
+        "pass": true,
+        "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+      }
+    ],
+    "allPass": true,
+    "elapsedSeconds": 22.457333541009575,
+    "peakRSSMiB": 297.046875,
+    "gameVerified": false
+  },
+  "preserved": [
+    "Tripo source meshes, UV, textures, rigs and all old clips",
+    "Accepted eunuch and door_push_run delivery remains separate"
+  ],
+  "notClaimed": [
+    "No final game or owner acceptance",
+    "No exhaustive triangle-to-triangle finger/cloth collision test",
+    "Cape full-underarm correction remains open",
+    "Front and side catch, struggles and other parkour remain in queue"
+  ],
+  "newTripoCalls": 0,
+  "newCredits": 0
+}

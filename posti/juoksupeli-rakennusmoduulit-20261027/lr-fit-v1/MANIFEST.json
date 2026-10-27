@@ -1,0 +1,231 @@
+{
+  "status": "LR_DIMENSIONED_TRIPO_DERIVATIVES_PENDING_VISUAL_AND_GAME_QA",
+  "models": [
+    {
+      "file": "1063-c2-porraskaide-10deg.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1062-c2-paneeli.glb",
+      "sourceSHA256": "a7becc3a9e787b89b4bbdd774e827e6a3d77e7583577c0bb76e7d99c12eb37a9",
+      "sha256": "8953d9266ce0e8695aecbbecf8bb5c61cfcb32ebea3285aecc56579ba746f6c6",
+      "triangles": 1584,
+      "vertices": 1696,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0011393435997888446,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          0.9300740957260132,
+          0.05999999865889549
+        ]
+      },
+      "axes": "X horizontal,Y up,Z front",
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "note": "Affine length fit and vertical shear from Tripo1062; topology and UV unchanged, inverse-transpose normals",
+      "task": 1063,
+      "slopeDegrees": 10,
+      "horizontalLengthM": 1.21,
+      "verticalHeightM": 0.72,
+      "thicknessM": 0.12,
+      "riseM": 0.2133556466572426,
+      "pivot": "lower end bottom edge, thickness center",
+      "sourceJob": "a6830e6f-3de0-4d90-83bd-a2a0abbdd203",
+      "topologyUVPreserved": true,
+      "notSource1063": "Original sloped generation retained; using straight1062 gives exact vertical-end affine variants."
+    },
+    {
+      "file": "1063-c2-porraskaide-20deg.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1062-c2-paneeli.glb",
+      "sourceSHA256": "a7becc3a9e787b89b4bbdd774e827e6a3d77e7583577c0bb76e7d99c12eb37a9",
+      "sha256": "de87526df1d8e43b90604b067e66653b463b8f282183c4aa08fb3bdf19ae2a83",
+      "triangles": 1584,
+      "vertices": 1696,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0015139641473069787,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          1.155991554260254,
+          0.05999999865889549
+        ]
+      },
+      "axes": "X horizontal,Y up,Z front",
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "note": "Affine length fit and vertical shear from Tripo1062; topology and UV unchanged, inverse-transpose normals",
+      "task": 1063,
+      "slopeDegrees": 20,
+      "horizontalLengthM": 1.21,
+      "verticalHeightM": 0.72,
+      "thicknessM": 0.12,
+      "riseM": 0.4404039834621048,
+      "pivot": "lower end bottom edge, thickness center",
+      "sourceJob": "a6830e6f-3de0-4d90-83bd-a2a0abbdd203",
+      "topologyUVPreserved": true,
+      "notSource1063": "Original sloped generation retained; using straight1062 gives exact vertical-end affine variants."
+    },
+    {
+      "file": "1063-c2-porraskaide-28deg.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-c2-v1/1062-c2-paneeli.glb",
+      "sourceSHA256": "a7becc3a9e787b89b4bbdd774e827e6a3d77e7583577c0bb76e7d99c12eb37a9",
+      "sha256": "62e35843007eef62cb1342c48aeb2de0e497e0d5d3bec3b4b840756f7914c987",
+      "triangles": 1584,
+      "vertices": 1696,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "min": [
+          0.0,
+          0.0018488471396267414,
+          -0.05999999865889549
+        ],
+        "max": [
+          1.2100000381469727,
+          1.3579449653625488,
+          0.05999999865889549
+        ]
+      },
+      "axes": "X horizontal,Y up,Z front",
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "note": "Affine length fit and vertical shear from Tripo1062; topology and UV unchanged, inverse-transpose normals",
+      "task": 1063,
+      "slopeDegrees": 28,
+      "horizontalLengthM": 1.21,
+      "verticalHeightM": 0.72,
+      "thicknessM": 0.12,
+      "riseM": 0.6433684123103893,
+      "pivot": "lower end bottom edge, thickness center",
+      "sourceJob": "a6830e6f-3de0-4d90-83bd-a2a0abbdd203",
+      "topologyUVPreserved": true,
+      "notSource1063": "Original sloped generation retained; using straight1062 gives exact vertical-end affine variants."
+    },
+    {
+      "file": "1056-c1-kulma-A.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-modules-v2/1055-c1-raystas-1m.glb",
+      "sourceSHA256": "d21bffe3a74fc774438f0a87beefa5997d7c57a9d2dbc6aad02202faa4ec0986",
+      "sha256": "d4b1293b171ab5337ee708edbdf4c04f0c09cff23d12e3744bd008aa763b72f3",
+      "triangles": 1176,
+      "vertices": 3528,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "min": [
+          -0.5154639482498169,
+          0.0011299285106360912,
+          0.0007157587679103017
+        ],
+        "max": [
+          0.5118960738182068,
+          0.3434051275253296,
+          0.513616144657135
+        ]
+      },
+      "axes": "X horizontal,Y up,Z front",
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "note": "Tripo1055 trimmed at45deg x=z; continuous local4cm upturn, UV interpolation only",
+      "task": 1056,
+      "sourceJob": "8ef11744-bfcf-42c2-b7d1-b83db314f8f6",
+      "pivot": "90-degree building outside corner, rear lower attachment plane",
+      "miterPlane": "x=z",
+      "rearLegLengthM": 0.5154639482498169,
+      "frontProjectionM": 0.513616144657135,
+      "cornerRiseMaxM": 0.04,
+      "openMiterCutFace": true,
+      "miterUse": "Must mate with supplied mirrored half; not a standalone exposed-ended object",
+      "trimmedSource": true,
+      "sourceTextureBytesPreserved": true
+    },
+    {
+      "file": "1056-c1-kulma-B-peilattu.glb",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-rakennusmoduulit-20261027/review-modules-v2/1055-c1-raystas-1m.glb",
+      "sourceSHA256": "d21bffe3a74fc774438f0a87beefa5997d7c57a9d2dbc6aad02202faa4ec0986",
+      "sha256": "e93d6757d77a00b39cba8ebd84a5bb82193bfe491255f70a78f65dc6fc52d909",
+      "triangles": 1176,
+      "vertices": 3528,
+      "materials": 1,
+      "texturePx": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "min": [
+          0.0007157587679103017,
+          0.0011299285106360912,
+          -0.5154639482498169
+        ],
+        "max": [
+          0.513616144657135,
+          0.3434051275253296,
+          0.5118960738182068
+        ]
+      },
+      "axes": "X horizontal,Y up,Z front",
+      "nodeScale": [
+        1,
+        1,
+        1
+      ],
+      "note": "Mirrored partner ofA, X/Z swap baked, winding reversed, root scale1",
+      "task": 1056,
+      "sourceJob": "8ef11744-bfcf-42c2-b7d1-b83db314f8f6",
+      "pivot": "90-degree building outside corner, rear lower attachment plane",
+      "miterPlane": "x=z",
+      "rearLegLengthM": 0.5154639482498169,
+      "frontProjectionM": 0.513616144657135,
+      "cornerRiseMaxM": 0.04,
+      "openMiterCutFace": true,
+      "miterUse": "Must mate with supplied mirrored half; not a standalone exposed-ended object",
+      "trimmedSource": true,
+      "sourceTextureBytesPreserved": true
+    }
+  ],
+  "cornerMatingSurfaceMaxErrorM": 7.850462293418876e-17,
+  "sourceGeometryAndEarlierDeliveriesPreserved": true,
+  "newTripoCalls": 0,
+  "newImageGenCalls": 0,
+  "newCredits": 0,
+  "generationSource": "Existing Tripo H3.1 jobs for C1 and C2; local cutting/mirroring and dimension preparation explicitly recorded",
+  "elapsedSeconds": 1.389607458957471,
+  "peakRSSMiB": 88.171875,
+  "limitations": [
+    "Carved relief shears with slope as agreed by LR",
+    "Corner cut face intentionally hidden by mating partner; collision mesh belongs to LR",
+    "The4cm upturn is a local deformation of Tripo source, not new Tripo synthesis",
+    "Game reference camera/material/occlusion tests remain receiver work"
+  ]
+}

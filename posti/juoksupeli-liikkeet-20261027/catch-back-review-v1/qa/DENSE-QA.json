@@ -1,0 +1,336 @@
+{
+  "results": [
+    {
+      "pair": "perus-eunukki-1",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.00046940241843239285,
+          "palmProxySurfaceAnchorMaxM": 0.00018407161210884016,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.26681312504229e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.2060568583603246e-07,
+          "worstContact": {
+            "time": 0.5916666666666667,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.695293093741725e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.00046940241843239285,
+          "palmProxySurfaceAnchorMaxM": 0.00018526666049822606,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.26681312504229e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.695705074835116e-07,
+          "worstContact": {
+            "time": 0.6083333333333333,
+            "side": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.889847566274085e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.00046940241843239285,
+          "palmProxySurfaceAnchorMaxM": 0.00021113074902841085,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.26681312504229e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 2.188076729367907e-07,
+          "worstContact": {
+            "time": 1.1916666666666667,
+            "side": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.9000754181728325e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "perus-vartija",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.00029624499266377174,
+          "palmProxySurfaceAnchorMaxM": 0.000171001844287279,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.26681312504229e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090313,
+          "palmProxySurfaceAnchorMaxM": 3.2364429826042576e-07,
+          "worstContact": {
+            "time": 1.1916666666666667,
+            "side": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.19708250984263e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0004742401456334776,
+          "palmProxySurfaceAnchorMaxM": 0.0002593415065594525,
+          "worstContact": {
+            "time": 0.5083333333333333,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1604383937965395e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 1.5148160835987308e-07,
+          "worstContact": {
+            "time": 0.625,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.836050765926302e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0004742401456334776,
+          "palmProxySurfaceAnchorMaxM": 0.00021713178096849286,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1604383937965395e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 1.5831280850075914e-07,
+          "worstContact": {
+            "time": 0.6083333333333333,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8087313081192065e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.0004742401456334776,
+          "palmProxySurfaceAnchorMaxM": 0.0003350501864070821,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1604383937965395e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 1.3574285377754326e-07,
+          "worstContact": {
+            "time": 0.5916666666666667,
+            "side": "Right"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.608530163567991e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    },
+    {
+      "pair": "viitta-vartija",
+      "metrics": [
+        {
+          "clips": [
+            "caught_back",
+            "catch_back"
+          ],
+          "samples120Hz": 109,
+          "wholeMeshFloorMinM": 0.00029624499266377174,
+          "palmProxySurfaceAnchorMaxM": 0.00021540705671083398,
+          "worstContact": {
+            "time": 0.475,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1604383937965395e-08,
+          "pass": true
+        },
+        {
+          "clips": [
+            "caught_hold_back",
+            "hold_back"
+          ],
+          "samples120Hz": 145,
+          "wholeMeshFloorMinM": 0.0010000105927898647,
+          "palmProxySurfaceAnchorMaxM": 2.38767049945421e-07,
+          "worstContact": {
+            "time": 1.1,
+            "side": "Left"
+          },
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.929069547492503e-08,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "limits": "Palm proxy targets a tracked cloth vertex; this is not exhaustive finger/cloth intersection QA or game acceptance."
+    }
+  ],
+  "allPass": true,
+  "elapsedSeconds": 22.457333541009575,
+  "peakRSSMiB": 297.046875,
+  "gameVerified": false
+}
