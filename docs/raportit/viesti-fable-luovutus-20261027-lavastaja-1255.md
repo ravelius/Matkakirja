@@ -305,3 +305,4 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   Matalat marmoripystyt → V4_sokkeli vain, jos ≤ 1,45 m ja sokkelin vieressä (lähes ei osumia).
 - Parit: lokit/havainne-editori-20261027-205842 (02 01 05, VS:n REF 77417f7e4, H/juuri-v90m = v89m + tausta-v57/59/60 → yksikerros-v84), VS:llä.
 - AVOIN: pilarien beiget kulmakivet ovat jo V4_sokkelia → sävy VS:n varjostimesta (VS:lle 21.0x). v84 EI vielä vientinä (tausta-v61), odottaa VS:n lähikuvaa ja KK:ta.
+- VS 21.1x: kulmakivet mitattu samaa harmaata kuin sokkeli (186/177/170 vs 177/170/163), ei erottelua. VS tekee KK:lle yhdistelmäparin (rosoisuus a1d79e26e + juuri-v90m); KK:n kuittauksen jälkeen v84 → tausta-v61 JU:lle.
