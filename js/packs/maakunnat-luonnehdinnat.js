@@ -4518,7 +4518,10 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *     Kruununpuisto 1842, Pedro II 1876)
    *   Southern Ostrobothnia — Tangomarkkinat (1985)
    *   Southern Savonia — Saimaa ringed seal (eristys, kanta, Norppalive)
-   *   Kainuu — "Hiljainen Kansa" (Reijo Kela, 1994)
+   *   Kainuu — koko maakunta (27.10.2026, omistajan palaute 22.26): en Kainuu
+   *     (pinta-ala, asukasluku, metsä 80 %), en Kajaani (Lönnrot 1833), en Kuhmo
+   *     (kamarimusiikki 1970, karhut ja sudet), en Hossa National Park (2017,
+   *     Värikallio), en Vuokatti (hiihtotunneli); Hiljainen kansa vain yksityiskohtana
    *   Tavastia Proper — Iittala (1881, Aino/Alvar Aalto, Sarpaneva)
    *   Central Ostrobothnia — Kokkola (Halkokarin kahakka 1854)
    *   Central Finland — Rally Finland (1951, MM-sarja 1973)
@@ -4631,7 +4634,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kainuu: {
       lyhyt: 'Suomussalmella valtatien varren pellolla seisoo Hiljainen kansa, turvepäisten hahmojen joukko, jonka vaatteet vaihdetaan vuodenajan mukaan.',
-      pitka: `Suomussalmella valtatien varren pellolla seisoo pimeän tullen aavemainen näky: noin tuhat turvepäistä hahmoa, Hiljainen kansa, taiteilija Reijo Kelan teos, joka löysi nykyisen paikkansa vuonna 1994 vaellettuaan sitä ennen Helsingin Lassilasta Senaatintorille asti. Suomussalmen nuorisotyöpaja vaihtaa hahmojen vaatteet kahdesti vuodessa lahjoitetuista vaatteista – joukossa on morsiuspukuja, kumisaappaita ja pukuja, jotka tekevät väkijoukosta yhä uudelleen erilaisen. Kela ei ole koskaan selittänyt, keitä hahmot esittävät, ja kävijät ovatkin nähneet niissä niin talvisodan kaatuneita kuin unohdettua kansaa yleensä. Kainuun hiljaisilla teillä tämä äänetön väkijoukko on tullut yhtä tutuksi kuin alueen metsät ja järvet.`,
+      pitka: `Kainuu on metsien ja vesien maakunta Suomen itärajalla: pinta-alaltaan se on maan neljänneksi suurin, mutta asukkaita on vain noin 69 000, ja metsää on noin 80 prosenttia maa-alasta. Maakunnan keskus Kajaani sijaitsee Oulujärven ja Nuasjärven välissä, ja siellä Elias Lönnrot aloitti piirilääkärinä vuonna 1833, pian ennen Kalevalan ensimmäistä painosta. Kuhmon metsissä elää karhuja ja susia tiheämmin kuin muualla Suomessa, ja kaupungin kamarimusiikkifestivaali on järjestetty vuodesta 1970. Suomussalmen Hossassa on kansallispuisto sekä Värikallion kalliomaalaus, jossa on yli 60 hahmoa, ja Sotkamon Vuokatissa voi hiihtää tunnelissa ympäri vuoden. Valtatien 5 varrella Suomussalmella seisoo lisäksi Hiljainen kansa, Reijo Kelan turvepäisten hahmojen joukko.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/fin-maakunta-kainuu-8bc0332c.jpg',
