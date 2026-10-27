@@ -13,7 +13,7 @@
 import { haeJson } from './opas.js';
 import { laji, LAJI_QIDS, faktarivit, alarivi, viitatut, valitseAsukkaat } from './tietokortti-kaava.js';
 
-export const TIETOKORTTI_VERSIO = 'v3';
+export const TIETOKORTTI_VERSIO = 'v4';
 /** Tietokortit pysyvät; uusi versio = uusi avain. */
 export const TIETOKORTTI_TTL_S = 365 * 24 * 3600;
 
@@ -178,6 +178,8 @@ export async function korttiFaktat(haku, e, osmNimi) {
   const nimi = (q) => L[q]?.fi ?? L[q]?.en ?? null;
   const maat = maaQ.map(nimi).filter(Boolean);
   const v = valitseAsukkaat(e);
+  // Wikidatan "town" (Q3957) on suomeksi pikkukaupunki vain pienelle: 20 000 asukkaasta Kaupunki (KK 27.10.: Windsor).
+  if (lj.nimi === 'Pikkukaupunki' && v?.maara >= 20000) lj.nimi = 'Kaupunki';
   const kohteenNimi = e?.labels?.fi?.value ?? e?.labels?.en?.value ?? osmNimi;
   return {
     qid: e.id,
@@ -210,8 +212,12 @@ export async function wikiLahde(haku, wiki, pitka) {
     } catch { return null; }
   };
   const fi = await hae('fi', wiki?.fi);
-  const en = !fi || (pitka && fi.teksti.length < TYNKA) ? await hae('en', wiki?.en) : null;
-  if (fi && en) return { ...fi, kielet: ['fi', 'en'], teksti: `${fi.teksti}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  // Pitkä teksti: englanninkielinen aina rinnalle (KK 27.10.: fi-Wikipedian Windsor-virhe; kaksi lähdettä → ristiriita jää pois, kehote).
+  const en = !fi || pitka ? await hae('en', wiki?.en) : null;
+  if (fi && en) {
+    const fiOsa = fi.teksti.slice(0, fi.teksti.length < TYNKA ? TYNKA : 2400);
+    return { ...fi, kielet: ['fi', 'en'], teksti: `${fiOsa}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  }
   const l = fi ?? en;
   return l ? { ...l, teksti: l.teksti.slice(0, 4000) } : null;
 }

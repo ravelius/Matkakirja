@@ -51,7 +51,7 @@ Sana on aina perusmuodossa, versaalilla alkava. (Kaikki Q-tunnukset ja suomenkie
 |---|---|---|
 | Asutus | Pääkaupunki | Q5119 |
 | | Kaupunki | Q515, Q1549591 (suuri kaupunki) |
-| | Pikkukaupunki | Q3957 |
+| | Pikkukaupunki | Q3957 (vain alle 20 000 asukasta; muuten Kaupunki, KK 27.10.: Windsor) |
 | | Kylä | Q532 |
 | | Kunta | Q15284 |
 | | Asutus | Q486972 |
@@ -161,6 +161,8 @@ jos se on sama kuin alarivin maa. Rakennuksen P571 voi Wikidatassa tarkoittaa ra
 on silti hyväksytty, koska pelin faktat ovat opetuksellisia eivätkä tarkkoja rakennushistoriaa.
 
 ### 1.5 Luvut: pyöristys ja kirjoitusasu
+
+**Asukasluvun vuosi (KK 27.10.):** jos valitulla luvulla ei ole vuotta (P585), käytetään uusinta vuodellista lukua vuodesta 1990 alkaen; muuten luku ilman vuotta.
 
 **Kirjoitusasu:** desimaalipilkku (`2,1`), tuhaterotin ei-katkeava väli (U+00A0: `180 000`), ei pistettä eikä sulkevaa lyhennettä
 muuten kuin yksiköissä (`km`, `m`, `km²`). Yksikkö on aina erillään luvusta ei-katkeavalla välilyönnillä.
@@ -289,8 +291,8 @@ Jokainen rivi on yksikkötesti puhtaalle muotoilufunktiolle; funktiot eivät hae
 }
 ```
 
-Wikipedian teksti haetaan suomeksi; jos suomenkielinen artikkeli on tynkä (alle 1 500 merkkiä), sen perään liitetään
-englanninkielinen otsikolla "Englanninkielinen artikkeli:" (Karttaseppä 27.10., Etonin vedos 3: suomenkielinen oli kolme virkettä,
+Wikipedian teksti haetaan suomeksi, ja sen perään liitetään aina englanninkielinen otsikolla "Englanninkielinen artikkeli:" (suomenkielisestä enintään
+2 400 merkkiä, yhteensä 4 000; KK 27.10.: suomenkielisen Windsor-artikkelin virhe, kahdesta lähteestä ristiriita jää pois). Alkuperäinen syy (Karttaseppä 27.10., Etonin vedos 3: suomenkielinen oli kolme virkettä,
 jolloin Lue lisää jäi ilman uusia faktoja). Jos suomenkielistä artikkelia ei ole, englanniksi (`kieli: "en"`), ja kehote kertoo
 kielen, jotta Pulu kirjoittaa silti suomea. Jos Wikipedia-artikkelia ei ole lainkaan, `wikipedia` puuttuu.
 

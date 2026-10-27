@@ -144,6 +144,13 @@ export function valitseAsukkaat(e) {
         || ((x.vuosi ?? '') === (paras.vuosi ?? '') && x.maara > paras.maara)));
     if (parempi) paras = x;
   }
+  // Valitulla luvulla ei vuotta (Windsor: suositeltu 32 184 ilman P585): uusin vuodellinen luku vuodesta 1990 (KK 27.10.: vuosi näkyviin).
+  if (paras && !paras.vuosi) {
+    const vuodelliset = (e?.claims?.P1082 ?? []).filter((c) => c.rank !== 'deprecated').map((c) => ({ maara: Math.round(Number(c?.mainsnak?.datavalue?.value?.amount)),
+      vuosi: /^\+(\d{4})/.exec(c?.qualifiers?.P585?.[0]?.datavalue?.value?.time ?? '')?.[1] ?? null, ensisijainen: false }))
+      .filter((x) => x.maara > 0 && x.vuosi >= '1990').sort((a, b) => b.vuosi.localeCompare(a.vuosi));
+    if (vuodelliset[0]) paras = vuodelliset[0];
+  }
   return paras;
 }
 
