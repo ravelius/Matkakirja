@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi.glb",
+  "sourceSHA256": "976db8df0ee1a5e4b4e50906c9ecf8641ba9b610676ec8db0b8de7ed4fcd60cc",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-compact20.glb",
+  "sha256": "260039445fa2fd6c7aac361fdf3be7737d26840c00649d423d687026ca8ea096",
+  "bytes": 14603528,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 2e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "land_soft",
+      "beforeKeys": 48160,
+      "afterKeys": 16486
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "land_soft",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 2.9000882205263855e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-compact20.unpacked.glb",
+    "sourceSHA256": "42993186d1ccfa4f79c7f1e8d67993cc183415b463bd6645bc764cee870158be",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-compact20.glb",
+    "sha256": "260039445fa2fd6c7aac361fdf3be7737d26840c00649d423d687026ca8ea096",
+    "beforeBytes": 15458676,
+    "afterBytes": 14603528,
+    "sourceAccessors": 6643,
+    "usedAccessors": 6290,
+    "deduplicatedAccessors": 5813,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.21651850000489503,
+    "peakRSSMiB": 249.578125
+  },
+  "elapsedSeconds": 3.8537001659860834,
+  "peakRSSMiB": 345.765625
+}

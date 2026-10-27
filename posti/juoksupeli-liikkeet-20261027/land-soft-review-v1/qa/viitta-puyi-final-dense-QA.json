@@ -1,0 +1,14 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-final.glb",
+  "samples": 577,
+  "minimumWholeMeshFloorM": 0.00030081970835735576,
+  "maxFullContactAnchorErrorM": 1.7415457351029185e-05,
+  "maximumEquivalent240HzStepDegrees": 5.8296285803754255,
+  "entryRunPoseDelta": 5.6636120238096055e-08,
+  "exitRunPoseDelta": 5.6636120238096055e-08,
+  "pass": true,
+  "gameVerified": false,
+  "clothSelfCollisionVerified": false,
+  "elapsedSeconds": 3.3713818329852074,
+  "peakRSSMiB": 142.546875
+}

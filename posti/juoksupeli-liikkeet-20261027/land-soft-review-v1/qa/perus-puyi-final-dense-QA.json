@@ -1,0 +1,14 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/perus/puyi-final.glb",
+  "samples": 577,
+  "minimumWholeMeshFloorM": 0.0007516329431891469,
+  "maxFullContactAnchorErrorM": 1.7957614415185817e-05,
+  "maximumEquivalent240HzStepDegrees": 6.348257569640054,
+  "entryRunPoseDelta": 1.4710189233380078e-08,
+  "exitRunPoseDelta": 4.1961669694501325e-08,
+  "pass": true,
+  "gameVerified": false,
+  "clothSelfCollisionVerified": false,
+  "elapsedSeconds": 5.212842375040054,
+  "peakRSSMiB": 169.171875
+}

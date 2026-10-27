@@ -1,0 +1,26 @@
+{
+  "reviewedAt": "2026-10-27T14:51:43.921092+00:00",
+  "readyForReceiverReview": true,
+  "gameAccepted": false,
+  "variants": [
+    {
+      "variant": "perus",
+      "images": [
+        "land-soft-180.png",
+        "land-soft-90.png"
+      ],
+      "finding": "Six actual final-GLB poses inspected from side and rear-above. Knee bend, arms balancing above ground, two-foot support and run exit read clearly. Cape hangs rearward through crouch in cape version; no floor crossing evident.",
+      "limits": "No full continuous collision or game-transition certification; existing cape underarm limitation unchanged."
+    },
+    {
+      "variant": "viitta",
+      "images": [
+        "land-soft-180.png",
+        "land-soft-90.png"
+      ],
+      "finding": "Six actual final-GLB poses inspected from side and rear-above. Knee bend, arms balancing above ground, two-foot support and run exit read clearly. Cape hangs rearward through crouch in cape version; no floor crossing evident.",
+      "limits": "No full continuous collision or game-transition certification; existing cape underarm limitation unchanged."
+    }
+  ],
+  "rejectedCompression": "Cape first30e-6 setting exceeded0.1mm mesh difference gate (0.1063mm), preserved and not selected.20e-6 passes."
+}

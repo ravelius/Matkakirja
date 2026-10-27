@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-compact20.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/land-soft-v1/viitta/puyi-final.glb",
+  "sourceSHA256": "260039445fa2fd6c7aac361fdf3be7737d26840c00649d423d687026ca8ea096",
+  "sha256": "18ce772392f550d6ce95c9d7cc26dce7fc6359620a67a3524e6a5b532e08fc08",
+  "beforeBytes": 14603528,
+  "afterBytes": 14560120,
+  "removedOptionalOutputBounds": 298,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

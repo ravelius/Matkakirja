@@ -1,0 +1,23 @@
+{
+  "creator": "Codex under owner instruction27.10.2026",
+  "sourceModels": [
+    {
+      "variant": "perus",
+      "sourceModel": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/struggle-back-review-v2/models/puyi-perus.glb",
+      "sourceSHA256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+      "authoredClip": "land_soft",
+      "tool": "Local Python rig/IK pipeline on existing Tripo model; no new model/image generation"
+    },
+    {
+      "variant": "viitta",
+      "sourceModel": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/struggle-back-review-v2/models/puyi-viitta.glb",
+      "sourceSHA256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42",
+      "authoredClip": "land_soft",
+      "tool": "Local Python rig/IK pipeline on existing Tripo model; no new model/image generation"
+    }
+  ],
+  "rights": "Existing owner-approved Tripo source assets. Rights are inherited from those source packages; no new external media or licensing claim is introduced.",
+  "sourceReferenceChain": "struggle-back-review-v2 -> door-grab-review-v1 -> earlier Puyi model sources preserved on T7",
+  "newCalls": 0,
+  "credits": 0
+}

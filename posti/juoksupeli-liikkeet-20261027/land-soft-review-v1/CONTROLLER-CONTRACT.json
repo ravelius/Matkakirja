@@ -1,0 +1,12 @@
+{
+  "coordinateSystem": "metres,+Yup,+Zforward,+Xleft",
+  "durationS": 0.6,
+  "S": "clamp u to[0,1], S=3u^2-2u^3",
+  "I": "0 for u<=0; u-.5 for u>=1; otherwise u^3-.5u^4",
+  "root": "X=0;Y=.14*(1-S(t/.12));Z=5*(t-.12*I(t/.12))+1.9*I((t-.22)/.38)",
+  "entry": "Final14cm of a fall; ground origin fixed. Start phase0 of source run. Arbitrary preceding jump transition must be verified in game.",
+  "contact": "Both feet full pin .12\u2013.22s; right foot full pin until.28s. Left release blend.22\u2013.30, right.28\u2013.36. Root forward velocity0 during.12\u2013.22. No hand contact with ground.",
+  "exit": "At.60s root(0,0,1.25)m, speed5m/s, run phase1.14seconds modulo run duration. Do not add separate forward locomotion on top of this curve.",
+  "timing": "Reference timing. Coordinate animation, root curve and contact phase if runtime time scaling is used. Do not scale one independently.",
+  "gameVerified": false
+}
