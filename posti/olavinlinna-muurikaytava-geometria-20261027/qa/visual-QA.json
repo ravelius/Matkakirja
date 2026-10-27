@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-10-27T13:39:04.720123+00:00",
+  "finalGLBSHA256": {
+    "muurikaytava": "80d31aaf92e48312cd61d880bf02a03dec4b6148cfb534b6b93b24e0c78f12dc",
+    "harja": "cd125ad284bc58fe248d13d1247df044d7f53aad008af7666e596d443838bf71",
+    "komero": "8bb80b75ee08ee24eb63507b5021c0e00b96ff85ba2bc714d4af6a55592d8892",
+    "pako": "0d94dcfe7b1015778a118ca976d4ce0551347abfa434a168fe8a2afc2c7c9c05"
+  },
+  "views": [
+    "slit-2",
+    "corridor-K3",
+    "corridor-east",
+    "harja",
+    "komero-closed",
+    "komero-open",
+    "pako"
+  ],
+  "observations": [
+    "Natural stone passage, four recesses and open slits, same scale across wall height.",
+    "Stone returns and sill surround the open slit; grey centre is empty world background.",
+    "Original six brick props fit their unscaled slot holes after applying the source import transform correctly.",
+    "Closed infill is named and removed in the opened-state assembly view.",
+    "Source rampart, ladder opening and low-poly rock/water component retained; external castle/shore assembly remains with receiver."
+  ],
+  "receiverAssemblyRequired": [
+    "Original full v25 castle shell",
+    "Six original removable brick props",
+    "Hide named infill when the whole closet mouth opens",
+    "Existing gameplay collision and lighting"
+  ],
+  "gameCapture": false,
+  "ownerAccepted": false
+}

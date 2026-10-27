@@ -1,0 +1,156 @@
+{
+  "task": 1108,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "2e88bdba2e16163c0acf5ab40acdd2124d59bd645764bf7030ef5b495346504a",
+      "bytes": 2302
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "fabdfae12c73f2510050a7299cc4be7546d1bdbc005ad9843a4a09d8f92142ed",
+      "bytes": 2134
+    },
+    {
+      "path": "LUEMINUT.md",
+      "sha256": "cc179a5130909835cce5a5546600fba0e4c532dbe15db16a82fe7941b178bb2c",
+      "bytes": 5161
+    },
+    {
+      "path": "Muurikäytävä - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+      "sha256": "2ae801d9970c90793628b2379694162606a433aa8dc3c4ce6db8e5df032d1af0",
+      "bytes": 2701041
+    },
+    {
+      "path": "OPIT-PT-LLE.md",
+      "sha256": "97fa62c1f774552e3859ac9ac6e832e6b78e44acf8615100385d8f82c64ee913",
+      "bytes": 429
+    },
+    {
+      "path": "SOURCE-PINS.json",
+      "sha256": "e59b2ec836c71f79f7f9007fecf0b07cbbe8eec67bf1db9c2a1b25239c6c951d",
+      "bytes": 6325
+    },
+    {
+      "path": "harja.glb",
+      "sha256": "cd125ad284bc58fe248d13d1247df044d7f53aad008af7666e596d443838bf71",
+      "bytes": 14534680,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "komero.glb",
+      "sha256": "8bb80b75ee08ee24eb63507b5021c0e00b96ff85ba2bc714d4af6a55592d8892",
+      "bytes": 13740996,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "muurikaytava.glb",
+      "sha256": "80d31aaf92e48312cd61d880bf02a03dec4b6148cfb534b6b93b24e0c78f12dc",
+      "bytes": 14200308,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "pako.glb",
+      "sha256": "0d94dcfe7b1015778a118ca976d4ce0551347abfa434a168fe8a2afc2c7c9c05",
+      "bytes": 719420,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "qa/build.json",
+      "sha256": "615b820e4307aef33a34c2ffa7fbf033abdc551b7e509f88eb330b19a1dcb235",
+      "bytes": 20563
+    },
+    {
+      "path": "qa/corridor-K3.png",
+      "sha256": "84ea573a2703c7076e7d035cbbd9b2fc5e5877b349474e3209baebd18fd12c26",
+      "bytes": 1720088
+    },
+    {
+      "path": "qa/corridor-east.png",
+      "sha256": "26d72478c6ac2fdd99362eafb23a7c9b20bc0ed485d4cc018f841d950dfae2b2",
+      "bytes": 1309255
+    },
+    {
+      "path": "qa/existing-brick-source.json",
+      "sha256": "1cdf495712a37636b9f954aad144fd3fd07c770b1e1a4edb53b1b1cdc40bf6ae",
+      "bytes": 484
+    },
+    {
+      "path": "qa/format-check.json",
+      "sha256": "3106b66ac45300f0549483875393a53ae6e733862113c3d7be43459e18d7c5aa",
+      "bytes": 4623
+    },
+    {
+      "path": "qa/geometry-verification.json",
+      "sha256": "9d79e0dfb58cfd909baa88f26becb1f00f59c00a65739ce4ca4ebd6e94bf81ea",
+      "bytes": 4838
+    },
+    {
+      "path": "qa/harja-finalization.json",
+      "sha256": "8dcf1c86b8b15ffb7fde7c6c0ff0f1aa204bd1f793191699d5fcbe0e71a04e6c",
+      "bytes": 209
+    },
+    {
+      "path": "qa/harja.png",
+      "sha256": "78f484e6ced0643175fae7043f9bde78019045799217a0ae549fddd089139ab8",
+      "bytes": 1689606
+    },
+    {
+      "path": "qa/komero-closed.png",
+      "sha256": "e286884cb71513e6883fcef8f32291fb4d36c925cb91bb96e5a8924090d72021",
+      "bytes": 1603478
+    },
+    {
+      "path": "qa/komero-finalization.json",
+      "sha256": "6f7b621654f403100242ab01bcfc0bec21c19cd4d3d157d71ca31aa65546e227",
+      "bytes": 426
+    },
+    {
+      "path": "qa/komero-open.png",
+      "sha256": "1980a3163e830aa24802a5fb080c094aaea36f50810a1a0c40b00ff0f60953f6",
+      "bytes": 1482253
+    },
+    {
+      "path": "qa/muurikaytava-finalization.json",
+      "sha256": "466bc13135e9a8eca69b8e9381e66fa5186a457fe9ec2d0bf077f1e4675341db",
+      "bytes": 209
+    },
+    {
+      "path": "qa/pako-finalization.json",
+      "sha256": "f3aabda85e571f60c06f379c2bc6872bff6b0a4a0893bbe9f7cee72cc5e24b22",
+      "bytes": 207
+    },
+    {
+      "path": "qa/pako.png",
+      "sha256": "4c2cddd251305905c98a3d6523a0dac47a3a9ab042734256c2968a83d504a952",
+      "bytes": 1279498
+    },
+    {
+      "path": "qa/render-evidence.json",
+      "sha256": "6cc05aeea2a1d5242e5016d96ad9fcd805167a3337aef1a926f2816270822308",
+      "bytes": 686
+    },
+    {
+      "path": "qa/slit-2.png",
+      "sha256": "2fca64ced38f61af690e7fbccbb37096b69aee576fe14b5a42e4193ef2870a4c",
+      "bytes": 1653690
+    },
+    {
+      "path": "qa/visual-QA.json",
+      "sha256": "ffafc8571b04404d0f8852be1f98569abfaa28cc932cd42eb6613cecf6ee42fe",
+      "bytes": 1377
+    },
+    {
+      "path": "qa/window-source-depth.json",
+      "sha256": "de619f4091dcbfc1819c63f0d0d0e88849639af91b339293a3c7b1cf8eb9cb11",
+      "bytes": 740
+    }
+  ],
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "callsIssued": 1,
+  "successfulOutputs": 1,
+  "retryCalls": 0,
+  "nativeSHA256": "d4a54217da8af8c9a94fad845af380eb977ec990cb4befee95d288ff813c97ed",
+  "references": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/muurikaytava-pohja-5-y+13,5.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/muurikaytava-leikkaus-etelasta.png"
+  ],
+  "prompt": "Create exactly one new landscape 4:3 photorealistic architectural target photograph of the enclosed wall-walk passage inside Olavinlinna castle in Finland, interpreted for the year 1499. Use the attached OWN layout plan and section only as architectural references, not as imagery to reproduce. Camera at human eye level, about 1.55 metres over the floor, looking along the full straight narrow passage towards its distant timber ladder access. Roughly 1.4 metre clear width and a low plastered ceiling, an approximately 18 metre long passage enclosed within massive stone walls. Grey irregular natural flagstone floor set in pale lime mortar; irregular dark Finnish granite and paler fieldstones in generous off-white lime mortar, scattered lime plaster, old oak timber only at the far ladder. Four modest narrow firing openings spaced along one wall bring restrained cool daylight into the deep passage. Faithful plain utilitarian castle architecture, no invented grand arches, no ornament, no red tile, no uniformly rectangular ashlar, no furnishings or people, no candles, no lanterns or modern fittings. Physically plausible stone surfaces with natural fine detail, not a repeated procedural texture or painterly surface; subdued neutral grey palette, soft real camera optics 28mm, readable natural shadows and mild atmospheric depth. One coherent full photograph, no collage, plan labels, diagrams, grids, coloured markers, text or watermark. This is a material and atmosphere target, not archaeological proof, and it must not suggest extra openings beyond the supplied source layout.\n",
+  "imagePixelEdits": false,
+  "metadataAdded": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "scope": "Material and atmosphere target; does not override source geometry."
+}

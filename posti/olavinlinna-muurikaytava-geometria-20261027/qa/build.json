@@ -1,0 +1,822 @@
+{
+  "parts": {
+    "muurikaytava": {
+      "markers": [
+        "aukko:muuri-1",
+        "aukko:muuri-2",
+        "aukko:muuri-3",
+        "aukko:muuri-4",
+        "esine:kivi-muurikaytava",
+        "kamera:K3",
+        "ovi:muurikaytava",
+        "partio:muurikaytava-1",
+        "partio:muurikaytava-2",
+        "piilo:muurikaytava-komero-1",
+        "piilo:muurikaytava-komero-2",
+        "piilo:muurikaytava-komero-3",
+        "piilo:muurikaytava-komero-4",
+        "piilo:muurikaytava-vali-1",
+        "piilo:muurikaytava-vali-2",
+        "piilo:muurikaytava-vali-3",
+        "pinta:kivi-muuri",
+        "reitti:pelaaja-82",
+        "reitti:pelaaja-83",
+        "reitti:pelaaja-84",
+        "reitti:pelaaja-85",
+        "reitti:pelaaja-86",
+        "reitti:pelaaja-87",
+        "valo:kuu-muuri-1",
+        "valo:kuu-muuri-2",
+        "valo:kuu-muuri-3",
+        "valo:kuu-muuri-4"
+      ],
+      "triangles": 388,
+      "duplicateTrianglesRemoved": 0
+    },
+    "harja": {
+      "markers": [
+        "esine:koysikieppi",
+        "kiipeily:tikkaat-harja",
+        "koysi:sakara",
+        "ote:kellotorni-1",
+        "ote:kellotorni-10",
+        "ote:kellotorni-11",
+        "ote:kellotorni-12",
+        "ote:kellotorni-13",
+        "ote:kellotorni-14",
+        "ote:kellotorni-15",
+        "ote:kellotorni-16",
+        "ote:kellotorni-17",
+        "ote:kellotorni-18",
+        "ote:kellotorni-19",
+        "ote:kellotorni-2",
+        "ote:kellotorni-20",
+        "ote:kellotorni-21",
+        "ote:kellotorni-22",
+        "ote:kellotorni-23",
+        "ote:kellotorni-24",
+        "ote:kellotorni-3",
+        "ote:kellotorni-4",
+        "ote:kellotorni-5",
+        "ote:kellotorni-6",
+        "ote:kellotorni-7",
+        "ote:kellotorni-8",
+        "ote:kellotorni-9",
+        "ovi:kellotorni",
+        "pinta:kivi-harja",
+        "reitti:pelaaja-88",
+        "reitti:pelaaja-89",
+        "reitti:pelaaja-90",
+        "reitti:pelaaja-91",
+        "reitti:pelaaja-92",
+        "seisoo:harja-talonpoika",
+        "seisoo:harja-vartija",
+        "tuuli:puuska-1",
+        "tuuli:puuska-2",
+        "tuuli:puuska-3",
+        "valo:lyhty-harja"
+      ],
+      "triangles": 296,
+      "duplicateTrianglesRemoved": 0
+    },
+    "komero": {
+      "markers": [
+        "esine:arkku-komero",
+        "kilpi:arkku-1",
+        "kilpi:arkku-2",
+        "komero:kellotorni",
+        "reitti:pelaaja-93",
+        "tiili:komero-1",
+        "tiili:komero-2",
+        "tiili:komero-3",
+        "tiili:komero-4",
+        "tiili:komero-5",
+        "tiili:komero-6",
+        "valo:kuu-komero"
+      ],
+      "triangles": 10,
+      "duplicateTrianglesRemoved": 0
+    },
+    "pako": {
+      "markers": [
+        "kamera:K4",
+        "kamera:K5",
+        "koysi:krampi-komero",
+        "koysi:vene-kiinnitys",
+        "koysilasku:loppu",
+        "leikkaus:vain-1499",
+        "partio:ranta-1",
+        "partio:ranta-2",
+        "reitti:pako-1",
+        "reitti:pako-2",
+        "reitti:pako-3",
+        "reitti:pako-4",
+        "reitti:pako-5",
+        "reitti:pelaaja-94",
+        "seisoo:ranta-vartija",
+        "vene:pako"
+      ],
+      "triangles": 182,
+      "duplicateTrianglesRemoved": 0
+    }
+  },
+  "components": [
+    {
+      "sourceComponent": "muurikaytava-kallio",
+      "part": "pako",
+      "material": "solid_worn_grey_stone"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.001",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.002",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.003",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.004",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.005",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.006",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.007",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.008",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.009",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.010",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.011",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.012",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.013",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.014",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.015",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.016",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.017",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.018",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.019",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.020",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.021",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.022",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.023",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.024",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.025",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.026",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.027",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.028",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.029",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.030",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.031",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.032",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.033",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.034",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.035",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.036",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.037",
+      "part": "komero",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.038",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.039",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.040",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.041",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.042",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.043",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.044",
+      "part": "muurikaytava",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.045",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.046",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.047",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.048",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.049",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.050",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.051",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.052",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.053",
+      "part": "harja",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivi.054",
+      "part": "komero",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.001",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.002",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.003",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.004",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.005",
+      "part": "muurikaytava",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-kivilattia.006",
+      "part": "harja",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.001",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.002",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.003",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.004",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.005",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.006",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.007",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.008",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.009",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.010",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.011",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.012",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.013",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.014",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.015",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.016",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.017",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.018",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.019",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.020",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.021",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.022",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.023",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.024",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.025",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.026",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.027",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.028",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.029",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.030",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.031",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.032",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.033",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.034",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.035",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.036",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.037",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.038",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.039",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.040",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.041",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.042",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.043",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-puu.044",
+      "part": "harja",
+      "material": "rough_timber"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.001",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.002",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.003",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.004",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.005",
+      "part": "muurikaytava",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-rappaus.006",
+      "part": "komero",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "sourceComponent": "muurikaytava-vesi",
+      "part": "pako",
+      "material": "flowing_lake_water"
+    },
+    {
+      "sourceComponent": "muurikaytava-vesi.001",
+      "part": "pako",
+      "material": "flowing_lake_water"
+    },
+    {
+      "sourceComponent": "muurikaytava-vesi.002",
+      "part": "pako",
+      "material": "flowing_lake_water"
+    }
+  ],
+  "windowOpenings": [
+    {
+      "name": "muurikaytava-aukko",
+      "centre": [
+        -25.157052993774414,
+        15.794719696044922,
+        14.450000762939453
+      ],
+      "tangent": [
+        -0.9299911856651306,
+        -0.3675817549228668,
+        0.0
+      ],
+      "bottom": 14.0,
+      "top": 14.899999618530273
+    },
+    {
+      "name": "muurikaytava-aukko.001",
+      "centre": [
+        -29.24901580810547,
+        14.177360534667969,
+        14.450000762939453
+      ],
+      "tangent": [
+        -0.9299911856651306,
+        -0.3675817549228668,
+        0.0
+      ],
+      "bottom": 14.0,
+      "top": 14.899999618530273
+    },
+    {
+      "name": "muurikaytava-aukko.002",
+      "centre": [
+        -33.34097671508789,
+        12.559999465942383,
+        14.450000762939453
+      ],
+      "tangent": [
+        -0.9299911856651306,
+        -0.3675817549228668,
+        0.0
+      ],
+      "bottom": 14.0,
+      "top": 14.899999618530273
+    },
+    {
+      "name": "muurikaytava-aukko.003",
+      "centre": [
+        -37.24694061279297,
+        11.016157150268555,
+        14.450000762939453
+      ],
+      "tangent": [
+        -0.9299911856651306,
+        -0.3675817549228668,
+        0.0
+      ],
+      "bottom": 14.0,
+      "top": 14.899999618530273
+    }
+  ],
+  "windowStoneReturnDepth": 0.12,
+  "brickAssetDimensions": [
+    0.282365,
+    0.0868541,
+    0.137566
+  ],
+  "brickSlots": [
+    [
+      -51.702,
+      15.15,
+      -5.408
+    ],
+    [
+      -51.632,
+      15.15,
+      -5.802
+    ],
+    [
+      -51.702,
+      15.55,
+      -5.408
+    ],
+    [
+      -51.632,
+      15.55,
+      -5.802
+    ],
+    [
+      -51.702,
+      15.95,
+      -5.408
+    ],
+    [
+      -51.632,
+      15.95,
+      -5.802
+    ]
+  ],
+  "brickInfillNode": "komero_tiilitatto",
+  "closedPuzzleInfillRemovableByReceiver": true,
+  "newProps": false,
+  "sourceOuterCastleShell": "Receiver original v25 remains; climbing markers retained. Not a replacement for full castle shell.",
+  "masonryMetresPerRepeat": 2.5,
+  "rockMetresPerRepeat": 1.5,
+  "targetImageCalls": 1
+}

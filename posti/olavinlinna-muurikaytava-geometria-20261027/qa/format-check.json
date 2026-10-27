@@ -1,0 +1,261 @@
+[
+ {
+  "kansio": "output/olavinlinna-muurikaytava-1108-20261027/delivery",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "harja.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "harja.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 296,
+     "piirrot": 3,
+     "materiaalit": 3,
+     "solmut": 42,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -40.052,
+       13.4,
+       -12.408
+      ],
+      "max": [
+       -30.75,
+       19.2,
+       -5.75
+      ],
+      "koko": [
+       9.302,
+       5.8,
+       6.658
+      ]
+     }
+    },
+    "polku": "harja.glb"
+   },
+   {
+    "nimi": "komero.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "komero.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 1884,
+     "piirrot": 4,
+     "materiaalit": 4,
+     "solmut": 15,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -51.898,
+       14.8,
+       -6.051
+      ],
+      "max": [
+       -50.077,
+       17.05,
+       -4.919
+      ],
+      "koko": [
+       1.822,
+       2.25,
+       1.132
+      ]
+     }
+    },
+    "polku": "komero.glb"
+   },
+   {
+    "nimi": "muurikaytava.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "muurikaytava.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 388,
+     "piirrot": 3,
+     "materiaalit": 3,
+     "solmut": 29,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -39.085,
+       13.1,
+       -16.265
+      ],
+      "max": [
+       -20.584,
+       16.15,
+       -7.326
+      ],
+      "koko": [
+       18.501,
+       3.05,
+       8.939
+      ]
+     }
+    },
+    "polku": "muurikaytava.glb"
+   },
+   {
+    "nimi": "pako.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "pako.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 182,
+     "piirrot": 2,
+     "materiaalit": 2,
+     "solmut": 18,
+     "kuvat": [
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -74.502,
+       -7.757,
+       -15.626
+      ],
+      "max": [
+       -51.581,
+       4.694,
+       2.141
+      ],
+      "koko": [
+       22.921,
+       12.451,
+       17.767
+      ]
+     }
+    },
+    "polku": "pako.glb"
+   },
+   {
+    "nimi": "Muurikäytävä - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "polku": "Muurikäytävä - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1448,
+     "h": 1086
+    }
+   },
+   {
+    "nimi": "corridor-K3.png",
+    "polku": "qa/corridor-K3.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "corridor-east.png",
+    "polku": "qa/corridor-east.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "harja.png",
+    "polku": "qa/harja.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "komero-closed.png",
+    "polku": "qa/komero-closed.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "komero-open.png",
+    "polku": "qa/komero-open.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "pako.png",
+    "polku": "qa/pako.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "slit-2.png",
+    "polku": "qa/slit-2.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: harja.glb ei liikettä, komero.glb ei liikettä, muurikaytava.glb ei liikettä, pako.glb ei liikettä"
+  ]
+ }
+]

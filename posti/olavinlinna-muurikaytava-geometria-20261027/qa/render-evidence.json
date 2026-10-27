@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "muurikaytava": "80d31aaf92e48312cd61d880bf02a03dec4b6148cfb534b6b93b24e0c78f12dc",
+    "harja": "cd125ad284bc58fe248d13d1247df044d7f53aad008af7666e596d443838bf71",
+    "komero": "8bb80b75ee08ee24eb63507b5021c0e00b96ff85ba2bc714d4af6a55592d8892",
+    "pako": "0d94dcfe7b1015778a118ca976d4ce0551347abfa434a168fe8a2afc2c7c9c05"
+  },
+  "startedAt": "2026-10-27T13:37:24.328623+00:00",
+  "views": [
+    "slit-2",
+    "corridor-K3",
+    "corridor-east",
+    "harja",
+    "komero-closed",
+    "komero-open",
+    "pako"
+  ],
+  "kind": "Internal model QA renders, not game captures. Six original brick props added for assembly test only; not duplicated in delivered GLB."
+}
