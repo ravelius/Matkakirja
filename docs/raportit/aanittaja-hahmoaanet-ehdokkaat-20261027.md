@@ -13,3 +13,8 @@ Pyyntö: omistaja 27.10. klo 08.50 (KK): vanhat 13 ottoa hylätty; eunukille 4 v
 Esikuuntelulinkit: ehdokkaat.json (preview_url).
 ## Koeajo (kun lupa tulee)
 8 ottoa: eunukki ×4 "[panicked] [shouting] Teidän majesteettinne!" = 44 mrk; keisari ×4 "[mischievous] Ottakaa kiinni, jos saatte! [gasps] [panicked] Huh, läheltä piti!" = 79 mrk; tagit mukana laskettuna täsmää: 4×44 + 4×79 = **492 mrk** (tarkistettu koodilla). Asetukset: eleven_v4_turbo, language_code fi, stability matala 0,25, style 0,8, speed 1,15, ei jälkikäsittelyä. Uudet äänet lisätään ensin tilin kirjastoon (add shared voice, ei merkkikulutusta; käyttää äänipaikan).
+
+## TULOS: 8 koeottoa tehty (omistaja 09.08, KK) — 492 mrk, ei uusintoja
+Kansio `/Users/Shared/Claude/proto-3d/_tyo/juoksupeli-hahmoaanet-haku-20261027/ulos-koe/`; eleven_v4_turbo, fi pakotettu, stability 0,25, style 0,8, speed 1,15, tagit mukana; ääniportti 0 hylättyä, 0 varoitusta; Gemini-litterointi täsmää. Uudet äänet lisätty tilin kirjastoon (add shared voice).
+Eunukki "[panicked] [shouting] Teidän majesteettinne!" (1,7–1,8 s): E1 Georg (90+ v, väräjävä rahiseva isoisä; Gemini: kimeä sarjakuvamainen, kiireellinen) · E2 Grimblewood (vanha käheä hahmo; Gemini: käheä aikuinen, dramaattinen) · E3 Gert (vanha korkea klovni; Gemini: korkea, hätääntynyt) · E4 Sergio (vanha äänekäs nurkkakuntainen; Gemini: korkea, ahdistunut alamainen).
+Keisari "[mischievous] Ottakaa kiinni, jos saatte! [gasps] [panicked] Huh, läheltä piti!" (4,8–5,4 s): K1 Gappu (äänekäs sarjakuvapoika; Gemini: nuori poika, korkea, iloinen) · K2 Vardan (kujeileva poika; Gemini: nuori mies, energinen) · K3 Valf (hyvin nuori leikkisä; Gemini: animoitu, paljon energiaa) · K4 Kavya (nykyinen; Gemini: nuori tyttö).
