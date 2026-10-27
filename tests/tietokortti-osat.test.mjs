@@ -47,6 +47,14 @@ test('johdanto: 2–3 virkettä hyväksytään, neljä ja yksi hylätään', () 
   assert.equal(tarkistaJohdanto(EI_LAHDETTA, syote).ok, true);
 });
 
+test('johdanto on yksi kappale ilman nimen alkuperää (omistaja 14.39)', () => {
+  const s2 = JSON.stringify({ nimi: 'Eton', faktat: [], wikipedia: { kieli: 'en', teksti: 'Eton is a town on the Thames. Eton College was founded in 1440. The name comes from Old English.' } });
+  const ok = 'Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on vuonna 1440 perustettu Eton College. Koulu leimaa yhä kaupungin katuja.';
+  assert.equal(tarkistaJohdanto(ok, s2, 'Eton').ok, true, JSON.stringify(tarkistaJohdanto(ok, s2, 'Eton')));
+  assert.equal(tarkistaJohdanto(`${ok}\n\nKaupunki on joen rannalla.`, s2, 'Eton').syy, 'kappaleet');
+  assert.equal(tarkistaJohdanto('Eton on pieni kaupunki Thamesin varrella, ja sen tunnetuin paikka on Eton College. Nimi tulee vanhan englannin sanasta, joka tarkoittaa jokikaupunkia.', s2, 'Eton').syy, 'nimen alkuperä');
+});
+
 const lisaa = (k = 'Kuka suunnitteli kaupungintalon?\nMilloin kaupunki sai torioikeudet?') => `## Vanha ja uusi Windsor
 Old Windsor on kolme kilometriä etelämpänä, ja nykyistä kaupunkia kutsuttiin New Windsoriksi vuoteen 1974 asti. Nimi erotti kaksi
 paikkaa toisistaan, ja vanhempi asutus jäi pienemmäksi kyläksi joen varrelle. Siirtyminen uuteen paikkaan tapahtui vähitellen,
@@ -92,4 +100,12 @@ test('asukasluku muodossa "asuu noin N ihmistä" ja johdannon luvun toisto hylä
 
 test('neutraali asiateksti: minä- ja me-muoto hylätään', () => {
   assert.equal(tarkistaJohdanto('Windsor on kaupunki Thamesin rannalla, ja minä kerron siitä mielelläni vähän lisää. Windsorin linnan rakennutti Vilhelm Valloittaja noin vuonna 1070.', syote, 'Windsor').syy, 'kertoja');
+});
+
+test('maailmanperintö: oma kortin avain tunnuksella; vesilähde ei ole kielletty sana', async () => {
+  const { korttiAvain, tarkistaTeksti } = await import('../tools/pollo/tietokortti.js');
+  assert.equal(korttiAvain({ nimi: 'Akropolis', lat: 37.97, lon: 23.72, luokka: 'perinto', qid: 'Q131013' }), 'tietokortti:v4:perinto:Q131013');
+  const s2 = JSON.stringify({ nimi: 'Akropolis', faktat: [], wikipedia: { kieli: 'fi', teksti: 'Akropolis on Ateenan linnavuori. Rinteillä oli lähteitä, joiden ansiosta linnoitus kesti piirityksen. Parthenon valmistui.' } });
+  assert.equal(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja sen rinteillä oli lähteitä. Niiden ansiosta linnoitus kesti pitkänkin piirityksen, ja kukkula pysyi asuttuna.', s2, 'Akropolis').ok, true);
+  assert.match(tarkistaJohdanto('Akropolis on Ateenan linnavuori, ja lähteen mukaan se kesti piirityksen. Kukkula pysyi asuttuna pitkään, ja sinne rakennettiin temppeleitä.', s2, 'Akropolis').syy, /sana/);
 });
