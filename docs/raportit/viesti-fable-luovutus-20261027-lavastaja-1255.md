@@ -297,3 +297,11 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - OMISTAJA 20.05 "Kyllä (Suositus)": reunakiven muoto ja väri hyväksytty (pari 195504, tausta-v60), koskee myös kujia 01, 05 ja 03.
   Seuraavaan junaan (213) PT:n kautta: tausta-v60 on JU:lla (SHA256SUMS b0b11ab458e1, osoitin lavastaja/tausta-v60-212 9805ef7c5).
 - Pinnan rosoisuuden viimeistely VS:llä (varjostin/pinta); Lavastaja EI muuta reunakiven geometriaa (REUNA_W/H, urat, viiste) ilman uutta päätöstä.
+
+## LISÄYS 21 klo 21.0x: muurin yläreuna kiveksi (omistaja 20.06 "Kivimuurin yläreunasta puuttuu tekstuuri"; VS sopi työnjaon)
+- Syy: sokkelin päällä V4_sokkeli_kansi (tasaväri, yläpinta 1,2–1,3 m, 8–10 cm etureuna) ulkoni 6 cm sokkelin pinnasta.
+- K/tyokalut/kansi_seinaan.py (ketjussa marmori_pystyt_sokkeliin-askeleen jälkeen, K/tyokalut/aja_ketju_v84.zsh → yksikerros-v84):
+  kannen pystyreunat sokkelin tasoon (mitattu 6 cm → 0), litteät alapinnat pois, kaikki kansi → V4_sokkeli (VS: laji 11 kivikerta myös vaakapinnalle).
+  Matalat marmoripystyt → V4_sokkeli vain, jos ≤ 1,45 m ja sokkelin vieressä (lähes ei osumia).
+- Parit: lokit/havainne-editori-20261027-205842 (02 01 05, VS:n REF 77417f7e4, H/juuri-v90m = v89m + tausta-v57/59/60 → yksikerros-v84), VS:llä.
+- AVOIN: pilarien beiget kulmakivet ovat jo V4_sokkelia → sävy VS:n varjostimesta (VS:lle 21.0x). v84 EI vielä vientinä (tausta-v61), odottaa VS:n lähikuvaa ja KK:ta.
