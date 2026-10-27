@@ -228,3 +228,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   osat 146/80/92 samat); PK kytki (proto 77f5abf6f). H/juuri-v83m = v82m + kielletty-c2-v2; H/juuri-v84m = v83m + yksikerros-v79 (UUSIN).
 - VS: sirukuvio kujalla 02 EI mallista (sama v81m:llä; epäilee ympäristöheijastusta, tarkistaa). VS ajaa KK-parin juuri-v84m:llä.
 - Seuraavaksi: C1 Baohedian (歇山), Taihemen ylä, Meridiaaniportin siivet; T-risteys, aukion sivuhallit, 04, 06, 07 (EROLISTA); jonossa Olavinlinna.
+
+## LISÄYS 16 klo 16.5x: LUOVUTUS (konteksti 33 %)
+- PK: C1 pelissä varmistettu (9b97dc324, juuri-v80m; kuvat proto-3d/lokit/esikatselu-20261027-164304/ g-c1/g-c0, a-c1/a-c0): rivi räystäällä,
+  nurkat kaaren mukaan, ei leijuvia/rakoja/z-taistelua; ero hienovarainen 20–30 m:stä.
+- VS: kujan 02 sirut = editori.sh ei ladannut juurta (junan oletusmallit). JUNARIIPPUVUUS (PT:lle kerrottu): seinat-211 laji 18 + yksikerros-v79
+  (reunakiven UV) junaan YHDESSÄ. VS ajaa KK-parin juuri-v84m:llä.
+- Seuraava Lavastaja: lue LISÄYKSET 9–16. Jono: VS:n KK-parin palaute (reunakivi); C1 Baohedian (歇山: ylempi rengas kiertää päädyn kautta,
+  alemman renkaan päät pariutuvat sisärenkaan kanssa; c1_raystaat2.py:n parihaku), Taihemen ylä, Meridiaaniportin siivet → c1_vanha_leikkaus +
+  c1_sijoitukset (kaikki mallit kerralla) → rakennukset-v54 + kielletty-c1-v4 PK:lle (myös F kaiteeton uudelleen c2_kaidesaaret.py:llä);
+  viisteen v < 0 harvat kolmiot; T-risteys, aukion sivuhallit, 04, 06, 07 (EROLISTA); jonossa Olavinlinnan palatsi-v2.
