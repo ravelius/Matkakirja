@@ -1,0 +1,27 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/crouch-slides-review-v1/motions/puyi-perus-liikkeet.glb",
+  "bytes": 10997140,
+  "sha256": "553b96b3f072ae3a1d5a86e8531f8964cd3c61bdfdc1b89afd4a1335f62d5fbd",
+  "clips": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run",
+    "jump_robe",
+    "stairs_robe",
+    "taunt_run",
+    "slide_feet_first",
+    "slide_short",
+    "slide_long"
+  ],
+  "addedOrReplaced": [
+    "slide_long"
+  ],
+  "allOldAndNewClipArraysByteExact": true,
+  "geometryIncluded": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_RUNTIME_AND_OWNER_ACCEPTANCE_PENDING",
+  "newClipsDenseQAPass": true,
+  "allLibraryQAComplete": false,
+  "inheritedLimitations": [
+    "taunt_run boot-skin limitation",
+    "cape underarm and feet-first hem bunching review"
+  ],
+  "runtimeVerified": false,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "updatedAt": "2026-10-27T19:06:45.707017+00:00"
+}

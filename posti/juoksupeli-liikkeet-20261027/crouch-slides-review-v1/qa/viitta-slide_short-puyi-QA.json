@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "floorMinimumM": 0.0006342427445966137,
+  "maxAngularStep240HzDeg": 9.955869525076702,
+  "worstAngular": {
+    "t": 0.5833333565129174,
+    "bone": "mixamorig:RightArm"
+  },
+  "handBodyCrossingSamples": 0,
+  "handBodyCrossings": [],
+  "obstacle": {
+    "min": [
+      -1.8,
+      0.95,
+      1.3
+    ],
+    "max": [
+      1.8,
+      1.2,
+      1.7
+    ]
+  },
+  "obstacleCrossingSamples": 0,
+  "obstacleCrossings": [],
+  "entryRunDelta": 5.6636120238096055e-08,
+  "exitRunDelta": 5.960464477539063e-08,
+  "externalRootEnd": [
+    0,
+    0,
+    3.0000001192092896
+  ],
+  "sourceRunExitPhase": 1.32050004529953,
+  "runtimeVerified": false
+}

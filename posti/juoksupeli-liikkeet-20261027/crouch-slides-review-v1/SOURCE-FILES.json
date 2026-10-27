@@ -1,0 +1,30 @@
+[
+  {
+    "variant": "perus",
+    "clip": "slide_short",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-crouch-v2/slide_short/perus/puyi.glb",
+    "sha256": "7d96c710cb425245ae8d969369893d36d50fed7527209f79f3bce058c07ceca3",
+    "bytes": 12841976
+  },
+  {
+    "variant": "perus",
+    "clip": "slide_long",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-crouch-v2/slide_long/perus/puyi.glb",
+    "sha256": "5ce49b5d7f65967d37f9eae4c8ad6a835488ab9f450c7c40538a0879d4b7c7d0",
+    "bytes": 12841908
+  },
+  {
+    "variant": "viitta",
+    "clip": "slide_short",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-crouch-cape-v2/slide_short/viitta/puyi.glb",
+    "sha256": "893d472983cc3a7014e1e37a8c8a102e452202a1cda5293370764d036f1f0421",
+    "bytes": 14477788
+  },
+  {
+    "variant": "viitta",
+    "clip": "slide_long",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-crouch-cape-v2/slide_long/viitta/puyi.glb",
+    "sha256": "eff36be360fb4492011251e77dd7c7710f5d725dc79435476a43b9bb0bc27327",
+    "bytes": 14477792
+  }
+]
