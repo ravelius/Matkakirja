@@ -2778,3 +2778,14 @@ ovesta ulos, niin hänen perään voisi heti kurkistaa ensimmäinen eunukki, jok
 keisaria muutaman sekunnin päästä alusta; alkukohtaus = ovesta karkuun, huuto, perään kurkistava eunukki; jokainen ohjausliike opitaan juuri tarvittaessa (ensin oikealle pyyhkäisy), omenan heitto
 vasta ensimmäisen omenan kohdalla; väistörepliikit (huh) generoidaan vasta omistajan ääniluvalla. TYÖNJAKO: KK johtaa (PK + LR + NUI ohjeiden pohja + Äänittäjä luvan jälkeen); juna 212 tai seuraava,
 kun valmis.
+
+## JUOKSUPELIN ÄÄNILUVAT JA KOLME TASOA (omistaja 27.10. klo 08.29 ja 08.30, KK:n välitys) (27.10.2026 klo 08.30)
+
+OMISTAJAN PÄÄTÖS klo 08.29 (kortti KK:ssa, sanatarkasti): "Saako keisarin viisi repliikkiä generoida (10 ottoa, 122 merkkiä)?" → "Kyllä (Suositus)" (Ottakaa kiinni, jos saatte! / Huh! / Huh, läheltä
+piti! / Hui! / Melkein!); "Mikä eunukin huuto valitaan?" → "Huuto 1 (Suositus)" = "Teidän majesteettinne!"; "Saako Äänittäjä tehdä eunukille kolme äänikoetta (enintään 66 merkkiä)?" → "Kyllä
+(Suositus)"; "Hidastuuko peli ensimmäisten ohjeiden kohdalla, kunnes pelaaja tekee liikkeen?" → "Kyllä (Suositus)". OMISTAJAN PYYNTÖ klo 08.30 (sanatarkasti): "Pelin voisi vielä lisäksi jaotella
+muutamaan lisätasoon niin, että ensimmäinen taso olisi juoksupelkillä ulkokujilla. Toinen taso olisi, että pelaaja pääsee myös huoneiden sisälle. Ja kolmas taso olisi se, kun pelaaja voi hypätä
+katoille ja niiltä alas sekä katolta toiselle viitan avulla. Eli pelissä olisi yhteensä kolme eri kenttää tai tasoa. Ja ensimmäinen taso olisi enemmän opetuksellinen pelin ohjaimista ja vähän
+lyhyempi, mutta toinen taso, missä on myös huoneet mukana, niin olisi selvästi jo pidempi. Ja viimeinen taso olisi yhtä pitkä, mutta siinä pystyisi sitten tekemään vielä enemmän juttuja." KK:N
+TAVOITE: taso 1 = alkukohtaus, opetus, ulkokujat + aukio (alueet 1–2); taso 2 = huoneet ja salit (alue 3, salin sisäkamera); taso 3 = katot ja viitta (uusi liike, Codexin animaatiot). Muuttaa 18.10.
+linjaa, jossa ensimmäinen rata kulki huoneiden kautta. Tuotanto tasoittain, ei osittaista julkaisua. RAAMATTU 2.177: lisätty KOLME TASOA sekä ALKU JA OPETUS (08.26–08.29).
