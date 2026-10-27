@@ -2888,3 +2888,14 @@ OMISTAJAN PYYNTÖ klo 13.48 (sanatarkasti): "miten paljon juoksupelin grafiikka 
 ## TIETOKORTIN TEKSTI ON ASIATEKSTIÄ, EI PULUN PUHETTA (omistaja 27.10. klo 13.52, KK:n välitys) (27.10.2026 klo 13.54)
 
 OMISTAJAN TARKENNUS klo 13.52 (sanatarkasti): "stiirinostoihin vielä se tiedoksi, että vaikka teksti tehdään pulun workerillä, niin teksti ei ole pulun koska on puhtaasti asiatekstiä. vasta kun pululta kysytään lisää nostosta pulun kysymysten kautta, vasta silloin tekstistä tulee pulun tekstiä. pieni ero, mutta ajattelin tarkentaa varmuuden vuoksi." Raamattu 2.203 päivitetty: striimattu teksti neutraalia asiatekstiä, Pulun tyyli vasta Pulun kysymysten vastauksissa. KS (worker, resepti) ja NUI (tietokortti) toteuttavat.
+
+## KARTAN KERROKSET SUURENNUSLASIN KARTTA-VÄLILEHDELLE, VAIN NYKYAIKAISET (omistaja 27.10. klo 14.00, KK:n kortti) (27.10.2026 klo 14.02)
+
+Kysymys: "Tehdäänkö kartan kerroksille päälle/pois-valinnat ratasvalikkoon?" Vastaus omin sanoin (sanatarkasti): "Pidetään kartalla vain nykyaikaiset asiat. Nuo museot, linnat, nähtävyydet ja
+kansallispuistot ainakin ovat hyviä. Sekä onko saatavilla myös kadunnimiä ja mahdollisesti muita lisätietoja? Anna vielä lista, miten jaottelisit nämä. Ja lähdit Zoomissa. Kartalle voisi
+automaattisesti ilmestyä hammasratasvalikko suurennuslasin alle, mitä klikkaamalla nämä valinnat tulisivat näkyville. Ja tosiaan riittää, että muutokset näkyvät vain niissä lähimmissä zoomaustasoissa,
+ja hammasratasvalikko voi automaattisesti feidata pois näkyvistä, kun pelaajat zoomaavat ulospäin. Tai itse asiassa sen voisi periaatteessa kyllä pitää päällä koko ajan, koska taas laajempiin näkymiin
+voitaisiin mahdollisesti tuoda muuta informaatiota näkyville. Pitää vain miettiä, mitä se voisi olla. Itse asiassa tuodaan nämä toiminnot suoraan suurennuslasin alle ja tehdään siihen kolmas välilehti
+nimeltä kartta. Ja zoomitason ollessa kauempana eri valittavat osat ovat harmaana. Ja sitten kun zoomi menee tarpeeksi lähelle, niin valittavat osat tulevatkin. näkyviin. Ja mahdollisesti jotkut osat,
+jotka toimivat vain kauemmassa zoomissa, poistuisivat sitten näkyvistä." Toinen kysymys (lisäkerros ensin): "ks ed." KK: vuoden 1873 reitit eivät tule; data OpenFreeMap (OpenMapTiles). Raamattu 2.73
+päivitetty poikkeuksella. KK lähettää omistajalle jaottelulistan; vahvistettu jaottelu → KS (kerrokset) + NUI (Kartta-välilehti).
