@@ -200,3 +200,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 ## LISÄYS 12 klo 16.0x: C1 PK:lle
 - K/c1-v3/kielletty-c1-v3/ (c1-sijoitukset.json + 1055 + 1056-A/B + SHA256SUMS); H/juuri-v80m = v79m + kielletty-rakennukset-v48 → rakennukset-v53
   + kielletty-c1-v3. PK:lle vastattu: LOD0 = v53:n <nimi>-lod0.glb (c1-v3:n -c1-lod0.glb vain esikatselu). VS (nollautuu) ajaa v79m-parit JONO.md:n kautta.
+
+## LISÄYS 13 klo 16.2x: reunakivi pitkinä kivinä (omistaja 16.03, KK) → UV, juuri-v81m
+- Sonnet (havainnepari 02 1558): havainteessa pitkiä yksittäisiä kiviä 1,2–2 × 0,35–0,4 × 0,15–0,2 m, ohuet vaaleat saumat, pitkän yläreunan viiste,
+  ei lohkoja; pelissä 0,3–0,6 m lohkoja 2–3 rivissä (VS:n kivijalkakuvio) ja kolme eri sävyä. EROLISTA 01/5 päivitetty.
+- K/tyokalut/kivireunus_uv.py: V4_kivireunus TEXCOORD_0 → u = metrit pituussuuntaan (komponentin tasopääakseli tai kohtisuora, kolmioittain
+  napsautettu; ylä- ja sivupinnat yhtenäiset), v = metrit poikki/korkeus; kolmiot omiksi kärjikseen, muut attribuutit (valo TEXCOORD_1) kopioitu.
+  K/yksikerros-v78 (= v77 + UV, 132 586 kolm.) ja leivottu-sali/avoimet-v57 (= v56 + UV). H/juuri-v81m = v80m + nämä.
+- PT:lle uudelle VS:lle: kivet floor(u/1,6), sauma fract(u/1,6) < ~0,01, sävy hash(kivi), ei lohkokuviota; lattia/reunus/kivijalka samaan harmaaseen.
+  Kysytty PT:ltä: reunus 0,5 → 0,4 m (havainne 0,35–0,4)? Pari KK:lle VS:n sävytyksen jälkeen.
