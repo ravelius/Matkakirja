@@ -57,6 +57,14 @@ function otsikkoTasmaa(e, nimi) {
 }
 
 /** Paras Wikidata-kohde nimelle ja pisteelle, tai null. */
+/** Wikidatan kohde suoraan tunnuksella (maailmanperintömerkki, UNESCO-koe 27.10.2026): sama muoto kuin linkitaWikidatan tulos. */
+export async function haeEntiteetti(haku, qid) {
+  const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=${encodeURIComponent(qid)}`
+    + '&props=claims|labels|sitelinks&languages=fi|en&sitefilter=fiwiki|enwiki');
+  const e = d?.entities?.[qid];
+  return e && !e.missing ? e : null;
+}
+
 export async function linkitaWikidata(haku, { nimi, lat, lon, luokka }) {
   const sade = SADE[luokka] ?? 5000;
   const ids = [];
