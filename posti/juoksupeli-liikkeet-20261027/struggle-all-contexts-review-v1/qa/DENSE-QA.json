@@ -1,0 +1,2089 @@
+{
+  "allPass": true,
+  "pairContexts": 16,
+  "newClipPairs": 96,
+  "maxPalmProxyErrorM": 0.0006504067281189499,
+  "minMeshFloorM": 0.0009173107604429215,
+  "results": [
+    {
+      "pair": "perus-vartija",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 0.0004104186875297668,
+          "worstContact": {
+            "time": 0.8416666666666667,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.3066909849678117e-06,
+          "minSpineCenterDistanceM": 0.3981161266344476,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.9238633897653585e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 9.558721439407648e-06,
+          "worstContact": {
+            "time": 0.2583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.3066909849678117e-06,
+          "minSpineCenterDistanceM": 0.4038987629437545,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8814484071281186e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 1.1373567154354238e-05,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.8509711932600983e-06,
+          "minSpineCenterDistanceM": 0.4038987629437545,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.462771219237993e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 0.0004153960526260426,
+          "worstContact": {
+            "time": 1.0916666666666666,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1263494136768482e-06,
+          "minSpineCenterDistanceM": 0.40588681535522253,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.206656345484561e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 6.6535262171941e-07,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.121025738910988e-07,
+          "minSpineCenterDistanceM": 0.4157261537196647,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7423361460019464e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.000917651621024862,
+          "maxPalmProxyErrorM": 0.000537304201372886,
+          "worstContact": {
+            "time": 0.05625,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.48070393316353327,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.089241945059996e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 13.973867458989844,
+      "peakRSSMiB": 270.0625
+    },
+    {
+      "pair": "perus-vartija",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 0.000307557380147003,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 1.7554167342883506e-16,
+          "minSpineCenterDistanceM": 0.5292064566748739,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.830123529446894e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 3.230544494512784e-07,
+          "worstContact": {
+            "time": 0.325,
+            "side": "Left"
+          },
+          "guardFootDriftM": 1.7554167342883506e-16,
+          "minSpineCenterDistanceM": 0.5292064566748739,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.83530450731584e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 1.746211281089476e-05,
+          "worstContact": {
+            "time": 0.625,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5249881532786593,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.514754670115195e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 0.0005025457458860277,
+          "worstContact": {
+            "time": 1.2583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5259632749396617,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.4269347299064066e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 3.0159769874802085e-06,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5292064566748739,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7856405727131346e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009173107604429215,
+          "maxPalmProxyErrorM": 0.00046446435000959215,
+          "worstContact": {
+            "time": 0.03958333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5292064566748739,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.213501858529867e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 15.432328957947902,
+      "peakRSSMiB": 288.84375
+    },
+    {
+      "pair": "perus-eunukki-1",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 0.00047550335600135053,
+          "worstContact": {
+            "time": 0.8416666666666667,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.2939602409111367e-06,
+          "minSpineCenterDistanceM": 0.35129297456944425,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.798850312097812e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 2.3503343705219025e-05,
+          "worstContact": {
+            "time": 0.15833333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.2939602409111367e-06,
+          "minSpineCenterDistanceM": 0.3547031892728738,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8814484071281186e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 2.0245423554034575e-05,
+          "worstContact": {
+            "time": 1.125,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.840508833231522e-06,
+          "minSpineCenterDistanceM": 0.3547031892728738,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.462771219237993e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 0.0004773511889840811,
+          "worstContact": {
+            "time": 1.0916666666666666,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1360647508271052e-06,
+          "minSpineCenterDistanceM": 0.3559225652046278,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.206656345484561e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 1.5079609078083743e-06,
+          "worstContact": {
+            "time": 0.5916666666666667,
+            "side": "Right"
+          },
+          "guardFootDriftM": 4.932602801970976e-07,
+          "minSpineCenterDistanceM": 0.36226220907600404,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7423361460019464e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.000917651621024862,
+          "maxPalmProxyErrorM": 0.0006348283186617329,
+          "worstContact": {
+            "time": 0.05625,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.43505194883929277,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.078537041429797e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 12.265744709060527,
+      "peakRSSMiB": 260.75
+    },
+    {
+      "pair": "perus-eunukki-1",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 0.00031988689702015647,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0014830212433605e-16,
+          "minSpineCenterDistanceM": 0.492106051201547,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.441745555221587e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 3.335907376264321e-07,
+          "worstContact": {
+            "time": 0.30833333333333335,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0014830212433605e-16,
+          "minSpineCenterDistanceM": 0.492106051201547,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.10753893120841e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 1.7544776919712826e-05,
+          "worstContact": {
+            "time": 0.625,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.48616529909408346,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.514754670115195e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 0.000512445089127054,
+          "worstContact": {
+            "time": 1.2583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.486752727115099,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.4269347299064066e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 4.619922011474222e-06,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.492106051201547,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7856405727131346e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009173107604429215,
+          "maxPalmProxyErrorM": 0.00047859474919802533,
+          "worstContact": {
+            "time": 0.03958333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.492106051201547,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.213501858529867e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 14.411036750068888,
+      "peakRSSMiB": 288.046875
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 0.00044276858669371787,
+          "worstContact": {
+            "time": 0.8416666666666667,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.373979439523461e-06,
+          "minSpineCenterDistanceM": 0.35990663064004513,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7670008445900294e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 8.753270836266534e-06,
+          "worstContact": {
+            "time": 0.2583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.373979439523461e-06,
+          "minSpineCenterDistanceM": 0.3635192536250149,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8814484071281186e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 1.1366144239353086e-05,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.896001864482339e-06,
+          "minSpineCenterDistanceM": 0.3635192536250149,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.462771219237993e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 0.0004412337531742396,
+          "worstContact": {
+            "time": 1.0916666666666666,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1785429375200013e-06,
+          "minSpineCenterDistanceM": 0.36480321933156484,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.206656345484561e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 7.435223113553103e-07,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.149055548417717e-07,
+          "minSpineCenterDistanceM": 0.3714301818204535,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7423361460019464e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.000917651621024862,
+          "maxPalmProxyErrorM": 0.0005629103232660944,
+          "worstContact": {
+            "time": 0.05625,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.44369197561579543,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.078537041429797e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 12.473177999956533,
+      "peakRSSMiB": 256.265625
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 0.0003146050818649093,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.2887833992611187e-16,
+          "minSpineCenterDistanceM": 0.5000744643234513,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.061428193757877e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 3.283124421266416e-07,
+          "worstContact": {
+            "time": 0.30833333333333335,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.2887833992611187e-16,
+          "minSpineCenterDistanceM": 0.5000744643234513,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.843018414606547e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 1.7516008688400286e-05,
+          "worstContact": {
+            "time": 0.625,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.4942765922606216,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.514754670115195e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 0.0005079593684992627,
+          "worstContact": {
+            "time": 1.2583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.4948993444851098,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.4269347299064066e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 4.066039688365633e-06,
+          "worstContact": {
+            "time": 0.675,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.5000744643234513,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7856405727131346e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009173107604429215,
+          "maxPalmProxyErrorM": 0.0004721400350646475,
+          "worstContact": {
+            "time": 0.03958333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5000744643234513,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.213501858529867e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 13.655641874996945,
+      "peakRSSMiB": 286.484375
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 0.00045167562388630033,
+          "worstContact": {
+            "time": 0.8416666666666667,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.3709188156658394e-06,
+          "minSpineCenterDistanceM": 0.36461702463886636,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.882018584366875e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 2.374614739754065e-05,
+          "worstContact": {
+            "time": 0.15833333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.3709188156658394e-06,
+          "minSpineCenterDistanceM": 0.36865762739038704,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.882018584366875e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 2.1548436381243316e-05,
+          "worstContact": {
+            "time": 1.125,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.8831815147930577e-06,
+          "minSpineCenterDistanceM": 0.36865762739038704,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.462771219237993e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236746764468382,
+          "maxPalmProxyErrorM": 0.0004553481007483411,
+          "worstContact": {
+            "time": 1.0916666666666666,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1790460293822006e-06,
+          "minSpineCenterDistanceM": 0.3700811457539749,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.206656345484561e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018236797168090433,
+          "maxPalmProxyErrorM": 1.5999072027400868e-06,
+          "worstContact": {
+            "time": 0.6083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.163064250946328e-07,
+          "minSpineCenterDistanceM": 0.37734900704815877,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7423361460019464e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.000917651621024862,
+          "maxPalmProxyErrorM": 0.0006420841572953623,
+          "worstContact": {
+            "time": 0.05625,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.4483845634851197,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.078537041429797e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 13.355067999917082,
+      "peakRSSMiB": 262.921875
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 0.0003154055287324278,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.206335383118183e-17,
+          "minSpineCenterDistanceM": 0.5034025320376244,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.707050466594808e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 3.335145632387078e-07,
+          "worstContact": {
+            "time": 0.9083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.206335383118183e-17,
+          "minSpineCenterDistanceM": 0.5034025320376244,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.697309014505379e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 1.752250236070818e-05,
+          "worstContact": {
+            "time": 0.625,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.49788956525293226,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.514754670115195e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439362903768888,
+          "maxPalmProxyErrorM": 0.0005086653943140846,
+          "worstContact": {
+            "time": 1.2583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.4985786689386974,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.4269347299064066e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0018439521228217244,
+          "maxPalmProxyErrorM": 4.1763897484884475e-06,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.5034025320376244,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7856405727131346e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009173107604429215,
+          "maxPalmProxyErrorM": 0.0004729814109658903,
+          "worstContact": {
+            "time": 0.03958333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5034025320376244,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.213501858529867e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 14.1757531670155,
+      "peakRSSMiB": 286.359375
+    },
+    {
+      "pair": "viitta-vartija",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105272183217,
+          "maxPalmProxyErrorM": 4.100185644679583e-05,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.3066909849678117e-06,
+          "minSpineCenterDistanceM": 0.41467836415176074,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.54692697435155e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 1.7354285501258137e-05,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.3066909849678117e-06,
+          "minSpineCenterDistanceM": 0.4214379273755346,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7236285832520366e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996358088374454,
+          "maxPalmProxyErrorM": 1.5642856645062327e-05,
+          "worstContact": {
+            "time": 0.225,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.8509711932600983e-06,
+          "minSpineCenterDistanceM": 0.4214379273755346,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8815475500442176e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999727462347303,
+          "maxPalmProxyErrorM": 2.7970678665525445e-05,
+          "worstContact": {
+            "time": 1.0583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1263494136768482e-06,
+          "minSpineCenterDistanceM": 0.42374268943098353,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.27918758205692e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 6.874436336147276e-07,
+          "worstContact": {
+            "time": 0.525,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.121025738910988e-07,
+          "minSpineCenterDistanceM": 0.43502589997725394,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.8396409768614035e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009303350086954654,
+          "maxPalmProxyErrorM": 3.668833812525915e-05,
+          "worstContact": {
+            "time": 0.04791666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.49568402866348765,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 12.680208999896422,
+      "peakRSSMiB": 216.078125
+    },
+    {
+      "pair": "viitta-vartija",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 0.00036899035065777276,
+          "worstContact": {
+            "time": 0.4083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 1.7554167342883506e-16,
+          "minSpineCenterDistanceM": 0.5444193545466955,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.844854723489277e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 3.2895052702951804e-07,
+          "worstContact": {
+            "time": 0.325,
+            "side": "Left"
+          },
+          "guardFootDriftM": 1.7554167342883506e-16,
+          "minSpineCenterDistanceM": 0.5444193545466955,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.896991307428266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996592362055909,
+          "maxPalmProxyErrorM": 1.2933802005542474e-05,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5409596817594614,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.838348061613317e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.000999942998857577,
+          "maxPalmProxyErrorM": 0.0006344498131744795,
+          "worstContact": {
+            "time": 0.575,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5420740087187302,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.391946095694266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 3.2871857048212534e-06,
+          "worstContact": {
+            "time": 0.725,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0666660963102524e-08,
+          "minSpineCenterDistanceM": 0.5444193545466955,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.534662045863058e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009248133589188634,
+          "maxPalmProxyErrorM": 0.00026553594015652735,
+          "worstContact": {
+            "time": 0.13541666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5444193545466955,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.7211232923061175e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 13.191574625088833,
+      "peakRSSMiB": 254.140625
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105272183217,
+          "maxPalmProxyErrorM": 3.786229157771366e-05,
+          "worstContact": {
+            "time": 0.20833333333333334,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.2939602409111367e-06,
+          "minSpineCenterDistanceM": 0.3227632424007728,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.6734048025621746e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 1.64322445118799e-05,
+          "worstContact": {
+            "time": 0.20833333333333334,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.2939602409111367e-06,
+          "minSpineCenterDistanceM": 0.3280209398495423,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7236285832520366e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996358088374454,
+          "maxPalmProxyErrorM": 1.6332920707482076e-05,
+          "worstContact": {
+            "time": 0.225,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.840508833231522e-06,
+          "minSpineCenterDistanceM": 0.3280209398495423,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.939023895949134e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999727462347303,
+          "maxPalmProxyErrorM": 2.9448564478088736e-05,
+          "worstContact": {
+            "time": 1.0583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1360647508271052e-06,
+          "minSpineCenterDistanceM": 0.32985191716461165,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.553467392032218e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 7.660379996633591e-07,
+          "worstContact": {
+            "time": 0.575,
+            "side": "Left"
+          },
+          "guardFootDriftM": 4.932602801970976e-07,
+          "minSpineCenterDistanceM": 0.3390588017073719,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.8396409768614035e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009303350086954654,
+          "maxPalmProxyErrorM": 3.306591603011949e-05,
+          "worstContact": {
+            "time": 0.052083333333333336,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.40596082596219835,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 12.12544583401177,
+      "peakRSSMiB": 199.75
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 0.00038410914084453215,
+          "worstContact": {
+            "time": 0.4083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0014830212433605e-16,
+          "minSpineCenterDistanceM": 0.500659754252616,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8194791995849187e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 3.313790128740971e-07,
+          "worstContact": {
+            "time": 0.9083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.0014830212433605e-16,
+          "minSpineCenterDistanceM": 0.500659754252616,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.896991307428266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996592362055909,
+          "maxPalmProxyErrorM": 1.2926203503669309e-05,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.4955593923465811,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.90233767522119e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.000999942998857577,
+          "maxPalmProxyErrorM": 0.0006504067281189499,
+          "worstContact": {
+            "time": 0.575,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.49634500594083364,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.391946095694266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 4.4577331110440856e-06,
+          "worstContact": {
+            "time": 0.7083333333333334,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.405524109462865e-08,
+          "minSpineCenterDistanceM": 0.500659754252616,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.534662045863058e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009248133589188634,
+          "maxPalmProxyErrorM": 0.00027574239054885524,
+          "worstContact": {
+            "time": 0.13541666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.500659754252616,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 11.114593084086664,
+      "peakRSSMiB": 229.09375
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105272183217,
+          "maxPalmProxyErrorM": 3.521818823463594e-05,
+          "worstContact": {
+            "time": 0.975,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.373979439523461e-06,
+          "minSpineCenterDistanceM": 0.3687054749927481,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7670008445900294e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 1.5110177620053723e-05,
+          "worstContact": {
+            "time": 0.20833333333333334,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.373979439523461e-06,
+          "minSpineCenterDistanceM": 0.3735923171417497,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.7670008445900294e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996358088374454,
+          "maxPalmProxyErrorM": 1.4817550666673185e-05,
+          "worstContact": {
+            "time": 0.24166666666666667,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.896001864482339e-06,
+          "minSpineCenterDistanceM": 0.3735923171417497,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.948139348786128e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999727462347303,
+          "maxPalmProxyErrorM": 2.85527625972808e-05,
+          "worstContact": {
+            "time": 1.0583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1785429375200013e-06,
+          "minSpineCenterDistanceM": 0.3752924088057388,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.27918758205692e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 7.112244444869514e-07,
+          "worstContact": {
+            "time": 0.5416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.149055548417717e-07,
+          "minSpineCenterDistanceM": 0.3838345092185964,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.8396409768614035e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009303350086954654,
+          "maxPalmProxyErrorM": 3.261765185625719e-05,
+          "worstContact": {
+            "time": 0.052083333333333336,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.45214855133589704,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 11.118714333046228,
+      "peakRSSMiB": 197.078125
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 0.00037485923781133503,
+          "worstContact": {
+            "time": 0.4083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.2887833992611187e-16,
+          "minSpineCenterDistanceM": 0.5092013741713634,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.1719987464716723e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 3.3265524420754676e-07,
+          "worstContact": {
+            "time": 0.30833333333333335,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.2887833992611187e-16,
+          "minSpineCenterDistanceM": 0.5092013741713634,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.970201900571624e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996592362055909,
+          "maxPalmProxyErrorM": 1.2940730866611582e-05,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.504233506710501,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.028011779677598e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.000999942998857577,
+          "maxPalmProxyErrorM": 0.0006422664588741277,
+          "worstContact": {
+            "time": 0.575,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.5050481397430056,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.391946095694266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 4.07205648027255e-06,
+          "worstContact": {
+            "time": 0.7083333333333334,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.217200208891832e-08,
+          "minSpineCenterDistanceM": 0.5092013741713634,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.534662045863058e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009248133589188634,
+          "maxPalmProxyErrorM": 0.0002705396390501542,
+          "worstContact": {
+            "time": 0.13541666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5092013741713634,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 10.908794624963775,
+      "peakRSSMiB": 225.296875
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "context": "front",
+      "results": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105272183217,
+          "maxPalmProxyErrorM": 3.438279050448353e-05,
+          "worstContact": {
+            "time": 0.975,
+            "side": "Right"
+          },
+          "guardFootDriftM": 3.3709188156658394e-06,
+          "minSpineCenterDistanceM": 0.3391848753855257,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.086606053554931e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 2.0047535685156382e-05,
+          "worstContact": {
+            "time": 0.19166666666666665,
+            "side": "Left"
+          },
+          "guardFootDriftM": 3.3709188156658394e-06,
+          "minSpineCenterDistanceM": 0.3449975032953041,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.315864687853832e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996358088374454,
+          "maxPalmProxyErrorM": 1.923653457572749e-05,
+          "worstContact": {
+            "time": 0.20833333333333334,
+            "side": "Left"
+          },
+          "guardFootDriftM": 2.8831815147930577e-06,
+          "minSpineCenterDistanceM": 0.3449975032953041,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.025914379646167e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999727462347303,
+          "maxPalmProxyErrorM": 2.7794799284147242e-05,
+          "worstContact": {
+            "time": 1.0583333333333333,
+            "side": "Right"
+          },
+          "guardFootDriftM": 2.1790460293822006e-06,
+          "minSpineCenterDistanceM": 0.34700564727165817,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.27918758205692e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0010000105927901938,
+          "maxPalmProxyErrorM": 8.250821272617697e-07,
+          "worstContact": {
+            "time": 0.6583333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 5.163064250946328e-07,
+          "minSpineCenterDistanceM": 0.357002358076604,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.8396409768614035e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009303350086954654,
+          "maxPalmProxyErrorM": 3.778117723991749e-05,
+          "worstContact": {
+            "time": 0.04375,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.42179965883412684,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 11.26237754104659,
+      "peakRSSMiB": 198.921875
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "context": "side",
+      "results": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 0.0003796609269762727,
+          "worstContact": {
+            "time": 0.4083333333333333,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.206335383118183e-17,
+          "minSpineCenterDistanceM": 0.5136707815695052,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.8194791995849187e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 145,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 3.259548438672078e-07,
+          "worstContact": {
+            "time": 0.30833333333333335,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.206335383118183e-17,
+          "minSpineCenterDistanceM": 0.5136707815695052,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 3.9764341930315084e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 157,
+          "wholeMeshFloorMinM": 0.0009996592362055909,
+          "maxPalmProxyErrorM": 1.2932247192937275e-05,
+          "worstContact": {
+            "time": 0.6416666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.5089818335683912,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.258181052207988e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.000999942998857577,
+          "maxPalmProxyErrorM": 0.0006459414784692462,
+          "worstContact": {
+            "time": 0.575,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.5098608836070274,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.391946095694266e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "sampleRateHz": 120,
+          "samples": 181,
+          "wholeMeshFloorMinM": 0.0009999921990415683,
+          "maxPalmProxyErrorM": 4.2228187211050965e-06,
+          "worstContact": {
+            "time": 0.725,
+            "side": "Left"
+          },
+          "guardFootDriftM": 6.135769373843567e-08,
+          "minSpineCenterDistanceM": 0.5136707815695052,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.534662045863058e-08,
+          "pass": true
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "sampleRateHz": 480,
+          "samples": 289,
+          "wholeMeshFloorMinM": 0.0009248133589188634,
+          "maxPalmProxyErrorM": 0.00027235227950597653,
+          "worstContact": {
+            "time": 0.13541666666666666,
+            "side": "Left"
+          },
+          "guardFootDriftM": null,
+          "minSpineCenterDistanceM": 0.5136707815695052,
+          "finite": true,
+          "strictlyIncreasingTimes": true,
+          "quaternionNormError": 4.5685916605364696e-08,
+          "pass": true
+        }
+      ],
+      "allPass": true,
+      "limits": "Palm/cloth anchors and joint separation diagnostics; not exhaustive body, finger or cloth collision proof. Runtime transition QA remains.",
+      "elapsedSeconds": 10.936438041971996,
+      "peakRSSMiB": 229.515625
+    }
+  ]
+}

@@ -1,0 +1,2323 @@
+{
+  "status": "FRONT_SIDE_STRUGGLES_REVIEW_READY_NOT_GAME_ACCEPTED",
+  "createdAt": "2026-10-27T12:27:33.881927+00:00",
+  "models": [
+    {
+      "file": "models/puyi-perus-all-struggles.glb",
+      "sha256": "ff8be64b2c05fbb0f4dad97142c46035e283827104b8f02a6b4828321f816c23",
+      "bytes": 21908032,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/perus-eunukki-1/puyi-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "hang_grab",
+        "hang_loop",
+        "hang_release",
+        "slide_short",
+        "slide_long",
+        "slide_feet_first",
+        "jump_small",
+        "jump_long",
+        "taunt_run",
+        "door_push_run",
+        "caught_back",
+        "caught_hold_back",
+        "caught_front",
+        "caught_hold_front",
+        "caught_side",
+        "caught_hold_side",
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free",
+        "struggle_front_1",
+        "struggle_front_2",
+        "struggle_front_3",
+        "struggle_front_4",
+        "struggle_front_give_up",
+        "struggle_front_free",
+        "struggle_side_1",
+        "struggle_side_2",
+        "struggle_side_3",
+        "struggle_side_4",
+        "struggle_side_give_up",
+        "struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/vartija-all-struggles-perus.glb",
+      "sha256": "6e252c2b5cf496b35a86bbc23ab6e68ea8c6ce594692d03357c9950e921a8877",
+      "bytes": 11406180,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/perus-vartija/vartija-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-1-all-struggles-perus.glb",
+      "sha256": "328dd3c557e69c72b973d3f462d205253622dcd167e7afc2796c583847083d9b",
+      "bytes": 9487544,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/perus-eunukki-1/eunukki-1-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "peek_call",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-2-all-struggles-perus.glb",
+      "sha256": "1f95f9748354a1f9423227bb93c73792058f984b0a247360012a0f763551f8a4",
+      "bytes": 9268440,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/perus-eunukki-2/eunukki-2-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-3-all-struggles-perus.glb",
+      "sha256": "cfd3bb2728cab9a47734795d91eb0e6270d0f43d293f14379f84b581f58c3c42",
+      "bytes": 9505776,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/perus-eunukki-3/eunukki-3-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/puyi-viitta-all-struggles.glb",
+      "sha256": "10d44c9e78f37b3d368a7b8eef064ad2b5f03297e746679fd23b863bd3ac6a80",
+      "bytes": 17967212,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/viitta-eunukki-1/puyi-struggle-side.glb",
+      "clips": [
+        "glide_enter",
+        "glide_exit",
+        "glide_left",
+        "glide_loop",
+        "glide_right",
+        "hop_sequence",
+        "idle",
+        "run",
+        "sprint_cape",
+        "door_push_run",
+        "caught_back",
+        "caught_hold_back",
+        "caught_front",
+        "caught_hold_front",
+        "caught_side",
+        "caught_hold_side",
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free",
+        "struggle_front_1",
+        "struggle_front_2",
+        "struggle_front_3",
+        "struggle_front_4",
+        "struggle_front_give_up",
+        "struggle_front_free",
+        "struggle_side_1",
+        "struggle_side_2",
+        "struggle_side_3",
+        "struggle_side_4",
+        "struggle_side_give_up",
+        "struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/vartija-all-struggles-viitta.glb",
+      "sha256": "3453b74fc7c8d94b3fa855b591b52f33e8395fabc8e4bf17fa32676ee3eede0d",
+      "bytes": 11406208,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/viitta-vartija/vartija-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-1-all-struggles-viitta.glb",
+      "sha256": "07e35916cb43d4a30987c45bae7bd9734042c3d1e6b9daef2aed494dace72201",
+      "bytes": 9487484,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/viitta-eunukki-1/eunukki-1-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "peek_call",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-2-all-struggles-viitta.glb",
+      "sha256": "5fbfd9c4dab64136fe14212ec3632aa4872e43341d54c55041379d91f70979f1",
+      "bytes": 9268476,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/viitta-eunukki-2/eunukki-2-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    },
+    {
+      "file": "models/eunukki-3-all-struggles-viitta.glb",
+      "sha256": "955347005f9c9d571e7fc1e611c9ec688630715625152389babc4acb17653a72",
+      "bytes": 9505820,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/paired-struggle-context-v3/side/viitta-eunukki-3/eunukki-3-struggle-side.glb",
+      "clips": [
+        "balance",
+        "catch",
+        "idle",
+        "jump",
+        "run",
+        "slide",
+        "sprint",
+        "stumble",
+        "throw",
+        "peek",
+        "call",
+        "catch_back",
+        "hold_back",
+        "catch_front",
+        "hold_front",
+        "catch_side",
+        "hold_side",
+        "hold_struggle_1",
+        "hold_struggle_2",
+        "hold_struggle_3",
+        "hold_struggle_4",
+        "hold_struggle_give_up",
+        "hold_struggle_free",
+        "hold_struggle_front_1",
+        "hold_struggle_front_2",
+        "hold_struggle_front_3",
+        "hold_struggle_front_4",
+        "hold_struggle_front_give_up",
+        "hold_struggle_front_free",
+        "hold_struggle_side_1",
+        "hold_struggle_side_2",
+        "hold_struggle_side_3",
+        "hold_struggle_side_4",
+        "hold_struggle_side_give_up",
+        "hold_struggle_side_free"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "context": "front",
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/vartija-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.006054789222164536,
+          0.0,
+          0.4739456960026571
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 35125,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 34432,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/vartija-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5233992149986724,
+          0.0,
+          0.049765131237597675
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 30043,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 37255,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-1-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0006250790317888773,
+          0.0,
+          0.46601524697267255
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 35125,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 34432,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-1-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5154687659686877,
+          0.0,
+          0.05644499949155109
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 30043,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 37255,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-2-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0006641165519062869,
+          0.0,
+          0.46628874203222126
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 35125,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 34432,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-2-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5157422610282365,
+          0.0,
+          0.0564840370116685
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 30043,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 37255,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-3-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0006444292659933868,
+          0.0,
+          0.4595898050273968
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 35125,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 34432,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-perus-all-struggles.glb",
+      "guardModel": "models/eunukki-3-all-struggles-perus.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.509043324023412,
+          0.0,
+          0.0564643497257556
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 30043,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 37255,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/vartija-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.006054834817272975,
+          0.0,
+          0.5741380776362386
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 15566,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22158,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/vartija-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5233992605937807,
+          0.0,
+          0.14995751287117914
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 23387,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22267,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-1-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0006250334366804384,
+          0.0,
+          0.526207628606254
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 15566,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22158,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-1-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5154688115637962,
+          0.0,
+          0.15663738112513256
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 23387,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22267,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-2-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.0006640709567978481,
+          0.0,
+          0.5664811236658027
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 15566,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22158,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-2-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5157423066233449,
+          0.0,
+          0.15667641864524995
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 23387,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22267,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "front",
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-3-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          -0.000644383670884948,
+          0.0,
+          0.5197821866609783
+        ],
+        "relativeYawDegrees": 180
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 15566,
+          "worldPad": [
+            -0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22158,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.12,
+        "freeReleaseEndS": 0.22,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_front_1",
+          "guardClip": "hold_struggle_front_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_2",
+          "guardClip": "hold_struggle_front_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_3",
+          "guardClip": "hold_struggle_front_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_4",
+          "guardClip": "hold_struggle_front_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_give_up",
+          "guardClip": "hold_struggle_front_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_front_free",
+          "guardClip": "hold_struggle_front_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context": "side",
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModel": "models/puyi-viitta-all-struggles.glb",
+      "guardModel": "models/eunukki-3-all-struggles-viitta.glb",
+      "actorPlacement": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.5090433696185205,
+          0.0,
+          0.15665673135933705
+        ],
+        "relativeYawDegrees": -90
+      },
+      "contacts": [
+        {
+          "guardSide": "Left",
+          "vertex": 23387,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        },
+        {
+          "guardSide": "Right",
+          "vertex": 22267,
+          "worldPad": [
+            0.004,
+            0,
+            0
+          ]
+        }
+      ],
+      "controller": {
+        "mandatory": true,
+        "freeReleaseStartS": 0.18,
+        "freeReleaseEndS": 0.32,
+        "freeOrigin": "front: X=.68*smoothstep((t-.12)/.22), Z=.5*5/.36*clamp(t-.24,0,.36)^2; side: X=-.18*smoothstep((t-.18)/.25), Z=.5*5/.42*clamp(t-.18,0,.42)^2. Y=0. Guard fixed. Smoothstep input clamped0..1. Endvelocity5m/s; runphase.6s."
+      },
+      "clips": [
+        {
+          "name": "struggle_side_1",
+          "guardClip": "hold_struggle_side_1",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_2",
+          "guardClip": "hold_struggle_side_2",
+          "durationS": 1.2,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_3",
+          "guardClip": "hold_struggle_side_3",
+          "durationS": 1.3,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_4",
+          "guardClip": "hold_struggle_side_4",
+          "durationS": 1.5,
+          "loop": true,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0,
+            "puyiLoop": 0.0,
+            "guardLoop": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_give_up",
+          "guardClip": "hold_struggle_side_give_up",
+          "durationS": 1.5,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        },
+        {
+          "name": "struggle_side_free",
+          "guardClip": "hold_struggle_side_free",
+          "durationS": 0.6,
+          "loop": false,
+          "continuity": {
+            "puyiStart": 0.0,
+            "guardStart": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "previousBackPackage": "../struggle-back-review-v1",
+  "allPriorClipsPreserved": true,
+  "newTripoCalls": 0,
+  "newCredits": 0,
+  "technicalQA": {
+    "allPass": true,
+    "pairContexts": 16,
+    "newClipPairs": 96,
+    "maxPalmProxyErrorM": 0.0006504067281189499,
+    "minMeshFloorM": 0.0009173107604429215
+  },
+  "contract": [
+    "Front clips struggle_front_1..4, struggle_front_give_up/free; side likewise. Guard prefix hold_.",
+    "Enter matching caught_hold_front/side and hold_front/side phase0, same clock. Loop endpoint pose is exact.",
+    "Names struggle_1..4/give_up/free retained for back context; do not mix hold contexts.",
+    "Guard roots fixed per pair. Free Puyi controller curve mandatory; skeleton has no root travel. Front path passes to +X of guard, side path departs -X.",
+    "Run continuation phase.6 with5m/s, root position inherited from end of free curve. Other speeds or immediate interruptions need receiver QA."
+  ],
+  "open": [
+    "Receiver QA for body/cloth/fingers, camera and transitions",
+    "Midloop 10-tap interruption response still requires controller transition design",
+    "Not exhaustive mesh collision QA, source cape underarm gate remains open",
+    "Remaining original parkour queue not complete"
+  ]
+}
