@@ -2842,3 +2842,7 @@ OMISTAJAN PÄÄTÖS klo 10.29 (sanatarkasti): "Älä luota koneelliseen äänen 
 ## VALO POIS ENSIN: MUODOT HAVAINNEKUVIEN MUKAISIKSI TASAISESSA VALOSSA (omistaja 27.10. klo 10.56, KK:n välitys) (27.10.2026 klo 10.58)
 
 OMISTAJAN PÄÄTÖS klo 10.56 (sanatarkasti): "Ehdotan, että ennen kuin korjataan valoa, niin otetaan valo kokonaan pois ja korjataan ensin kaikki Rakennukset ja muut elementit samanlaisiksi kuin havainnekuvissa. Aletaan sen jälkeen miettiä valoa uudestaan. Esimerkiksi oheisessa kuvaparissa on todella paljon eroa itse 3D-rakennuksissa." (kuva docs/raportit/kaappaukset/omistaja-20261027/aukio03-pari-rakennukset-eroavat.webp). KK OHJAA: valon leivonta ja aurinkotyö seis, vertailut tasaisessa valossa ilman varjoja, LR rakennukset ja elementit, VS materiaalit, NUI parit, alueet entisessä järjestyksessä; valo mietitään uudelleen vasta sen jälkeen. TEKOTAPA: docs/tuotanto/tekotavat/3d-ja-kuvat.md kohta 11.4 (Valo pois ensin).
+
+## LOITONNUS KOKO MAAPALLOON (omistaja 27.10. klo 12.27, KK:n kortti) (27.10.2026 klo 12.27)
+
+Kysymys: "Saako pelaaja loitontaa koko maapallon näkyviin?" Vastaus: "Kyllä (Suositus)" (selite: "Koko maapallo näkyy loitonnettaessa. Huntu peittää paikat, joissa pelaaja ei ole käynyt."). Raamattu 2.15 ja 2.136 päivitetty: rajaus "saapumisnäkymä uloin sallittu" poistuu; pelaaja voi loitontaa koko maapallon ja selata sitä vapaasti hunnun alla. Toteutus KS, juna 212.
