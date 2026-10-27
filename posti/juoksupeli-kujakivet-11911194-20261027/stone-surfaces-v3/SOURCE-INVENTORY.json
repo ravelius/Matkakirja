@@ -1,0 +1,41 @@
+{
+  "startedAt": "2026-10-27T19:58:24.560972+00:00",
+  "scope": "four fresh stone micro-surface albedo sources; exact seam/UV atlas and linear normal/roughness assembled deterministically at LR dimensions",
+  "sourceCommit": "bba13fd6b3c2f83f59faf98b27905db04bf7def2",
+  "plannedImageCalls": 4,
+  "calls": [
+    {
+      "variant": 1,
+      "status": "GENERATED",
+      "reference": "references/205842-02-havainne.png",
+      "purpose": "seamless flat mineral/chisel stone base, no authored structural joints",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-f1448fc1-3fce-4a6f-a3c2-f32a4a932195.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/stone-base-v01.png",
+      "sha256": "eeb37882130c3e5a7625d3ece7b15de6468cf760874b4497d5a60540bf1ba664"
+    },
+    {
+      "variant": 2,
+      "status": "GENERATED",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-a5d13ac7-260b-46af-9a8c-873fdebec2ed.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/stone-base-v02.png",
+      "sha256": "fe7d841e44257dec8ec0369fdcd478d4d212cd6cd3f8971fd42744615df54a1e"
+    },
+    {
+      "variant": 3,
+      "status": "GENERATED",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-0acc163f-368a-481a-90c7-9811f99a0683.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/stone-base-v03.png",
+      "sha256": "557d1f31761b420a3492b3a48130fd9c9cd64735af81780d272df5ff7070174b"
+    },
+    {
+      "variant": 4,
+      "status": "GENERATED",
+      "native": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex-app-data/migration-20261011/codex-home/generated_images/01a14ee0-3e23-72b2-82b1-510228c70b7d/exec-122e66ae-4606-40b9-a8e1-fba107626c69.png",
+      "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-kujakivet-11911194-20261027/texture-native/stone-base-v04.png",
+      "sha256": "e3395c5ac78dabdd88d1c1c6146c1f107f00902a97924ab6e7cef0def3b3f945"
+    }
+  ],
+  "tripoCalls": 0,
+  "cost": "not reported by built-in image tool; do not invent",
+  "recoveredAfterInterruptionAt": "2026-10-27T20:04:15.666667+00:00"
+}
