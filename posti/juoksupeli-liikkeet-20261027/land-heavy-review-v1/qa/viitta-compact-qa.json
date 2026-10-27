@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/land-heavy-v3/viitta/puyi-land-heavy.glb",
+  "sourceSHA256": "62cf7ea888ecbe9aa65f2462b60d868f0ba382d40e5f84552c5e0574aebd2861",
+  "file": "output/juoksupeli-liikkeet-20261027/work/land-heavy-v3/viitta/puyi-mobile.glb",
+  "sha256": "6170c08ceb543958fa69844853a80bb85a055194f2a453000918d500e3086d38",
+  "bytes": 14023500,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keys": [
+    {
+      "clip": "land_heavy",
+      "beforeKeys": 124147,
+      "afterKeys": 39816
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "land_heavy",
+      "samples": 750,
+      "maxSkinnedVertexDeltaM": 9.800083071520108e-06,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/land-heavy-v3/viitta/puyi-mobile.unpacked.glb",
+    "sourceSHA256": "dacfef1366ffa648b412fbcbe93f4af5e2a2d722e4619d84a2d85d7cbd5db728",
+    "file": "output/juoksupeli-liikkeet-20261027/work/land-heavy-v3/viitta/puyi-mobile.glb",
+    "sha256": "6170c08ceb543958fa69844853a80bb85a055194f2a453000918d500e3086d38",
+    "beforeBytes": 15938704,
+    "afterBytes": 14023500,
+    "sourceAccessors": 5755,
+    "usedAccessors": 5401,
+    "deduplicatedAccessors": 4947,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.25271204102318734,
+    "peakRSSMiB": 259.078125
+  },
+  "elapsedSeconds": 9.207991249975748,
+  "peakRSSMiB": 345.484375
+}

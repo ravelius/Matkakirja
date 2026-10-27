@@ -1,0 +1,21 @@
+{
+  "samples": 750,
+  "minimumWholeMeshFloorM": 0.0009822552817623153,
+  "maxFullContactAnchorErrorM": 2.645456072013083e-05,
+  "actualHandSurfaceMinimumYRangesM": {
+    "Left": [
+      0.0009822552817623153,
+      0.0009949285172692118
+    ],
+    "Right": [
+      0.0009915727461788165,
+      0.0009960511295948986
+    ]
+  },
+  "entryRunPoseDelta": 1.4710189275013441e-08,
+  "exitRunPoseDelta": 5.531310964812519e-08,
+  "pass": true,
+  "gameVerified": false,
+  "elapsedSeconds": 6.5327430829638615,
+  "peakRSSMiB": 174.0
+}
