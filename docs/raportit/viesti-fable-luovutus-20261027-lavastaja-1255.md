@@ -325,3 +325,4 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - KK 22.2x: pari 221009 ok, omistajan kortilla. VALMIINA: _valmiit/juoksupeli-kk-tausta-peking-v62-vienti-20261027 (SHA256SUMS eb30ccc2f8fb) ja
   _valmiit/juoksupeli-kk-muurikate-v19-vienti-20261027 (6afb0652f35f; vanha C3-kate jää v18-kansioon). Osoitin lavastaja/tausta-v62-213 5ca3e2d4b
   (natiiviseppa/juna-213:n päällä, wt/proto-lavastaja-muoto). NS:lle ja JU:lle VASTA kun KK välittää omistajan Kyllän.
+- OMISTAJA 22.23 (KK): Kyllä → tausta-v62 + muurikate-v19 JU:lle ja osoitin 5ca3e2d4b NS:lle junaan 213 (lähetetty 22.2x). SEURAAVAKSI: Codexin 2D-pinnat (kivet, sitten katot/friisit/rappaus) → muodot + metriset UV:t → pari KK:lle.
