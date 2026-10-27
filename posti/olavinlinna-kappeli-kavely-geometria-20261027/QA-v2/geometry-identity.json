@@ -1,0 +1,11 @@
+{
+  "geometryAndMarkersEqual": true,
+  "v1SHA256": "ad9e6407d0f7865f43292f957ee9fb0f1c501dfa22cea7f616c0195b53946e15",
+  "v2SHA256": "a8e68c413aba667e972eb2c70128c8ca06fe777bc05a4e6db1aeb955e4d945a8",
+  "worldTriangleFingerprint": "a2966beba35230fcdbc36e6494ba556887c3e640090d819e6df37bcbb8c3cc9a",
+  "triangles": 6965,
+  "markerCount": 59,
+  "positionRoundingMetres": 1e-05,
+  "uvAndMaterialAssignmentChanged": true,
+  "newImageCalls": 0
+}

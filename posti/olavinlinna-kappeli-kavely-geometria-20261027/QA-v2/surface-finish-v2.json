@@ -1,0 +1,25 @@
+{
+  "geometryUnchanged": true,
+  "worldTriangleFingerprintBefore": "08c85f389a70ef0a071d4bb8acf9ccbfdea27bec8b6c8b309e7ff8da53ee09ec",
+  "worldTriangleFingerprintAfter": "08c85f389a70ef0a071d4bb8acf9ccbfdea27bec8b6c8b309e7ff8da53ee09ec",
+  "triangles": 6965,
+  "counts": {
+    "5.3": 340,
+    "4.4": 340
+  },
+  "ringCrossSections": {
+    "4.4": {
+      "points": 204,
+      "perimeter": 27.637244226144652
+    },
+    "5.3": {
+      "points": 224,
+      "perimeter": 34.338639701216984
+    }
+  },
+  "masonryMetresPerRepeat": 2.5,
+  "verticalUV": "global height / 2.5 + 0.291 across the full wall height",
+  "horizontalUV": "continuous measured source wall perimeter / 2.5 + 0.173; independent of triangle shape and height",
+  "callsIssued": 0,
+  "geometryAdded": false
+}

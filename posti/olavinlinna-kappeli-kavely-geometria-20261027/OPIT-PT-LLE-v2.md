@@ -1,0 +1,1 @@
+Koko seinäkorkeus kartoitetaan samalla pintapituudella. Aukot ja varjot erotetaan geometriavirheistä kamerasäteillä sekä varjottomilla kuvilla. V2:n hyväksyttyä geometriaa ei muuteta pintapalautteen yhteydessä. 3c-toimituksen aukot on jo tarkistettu samoilla periaatteilla; 3d seuraa näitä oppeja.

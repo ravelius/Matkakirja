@@ -1,0 +1,166 @@
+{
+  "tasks": [
+    1142,
+    1143,
+    1144
+  ],
+  "files": [
+    {
+      "path": "LAHTEET-v2.md",
+      "bytes": 1799,
+      "sha256": "453b54a05e348d4ba79296c0e2b3ed93ab9b88adb6c75b24c0b6fa6e56cdebf6"
+    },
+    {
+      "path": "LUEMINUT-v2.md",
+      "bytes": 3114,
+      "sha256": "b8623629efc6349f241a1b3f02e4222a91179dcddc44822e05da1d1ab595bccb"
+    },
+    {
+      "path": "OPIT-PT-LLE-v2.md",
+      "bytes": 308,
+      "sha256": "252d243fe38df5c0e53bdc1e276a8f19b5114f52af249bd3a7ff884ffafd7e37"
+    },
+    {
+      "path": "QA-v2/CREDITS.md",
+      "bytes": 1799,
+      "sha256": "453b54a05e348d4ba79296c0e2b3ed93ab9b88adb6c75b24c0b6fa6e56cdebf6"
+    },
+    {
+      "path": "QA-v2/baseline-render-evidence.json",
+      "bytes": 277,
+      "sha256": "bd4c8ae0dc882442c77d3366d7adb0dbd5e947723ee10302be04ea1c7766149b"
+    },
+    {
+      "path": "QA-v2/finalization.json",
+      "bytes": 209,
+      "sha256": "69fc27dcd1d4013a9578cd22dad3a5ebca5e39d94a8c08babc5ea83e18e86537"
+    },
+    {
+      "path": "QA-v2/firing-opening-verification.json",
+      "bytes": 699,
+      "sha256": "5881749a80f71bf4fe13acbe7f1d1f66839d71df27a299441b6a7b5b1af1b0f5"
+    },
+    {
+      "path": "QA-v2/format-check.json",
+      "bytes": 3394,
+      "sha256": "9a4061e10a15c4d7f69b94040a4220e9f38b49bfc426d2ede10de08c4c1634a5"
+    },
+    {
+      "path": "QA-v2/gallery-east-v1-unlit.png",
+      "bytes": 2115679,
+      "sha256": "187a0d7f09bbac9f736daa0660b870709bc2c829f4211da1290a880679dffd97"
+    },
+    {
+      "path": "QA-v2/gallery-east-v2-unlit.png",
+      "bytes": 2128593,
+      "sha256": "1dfaf8b8647b02a7ddcdcc4fd3e252c6d00206587611c72ce2241526963cbe4d"
+    },
+    {
+      "path": "QA-v2/gallery-east.png",
+      "bytes": 1807142,
+      "sha256": "5dc862649294efca2eaa9e3e9362a2fa5882a61c8604a6ccf52774c50db179d9"
+    },
+    {
+      "path": "QA-v2/gallery-west-v1-unlit.png",
+      "bytes": 2088399,
+      "sha256": "e3129faceaf86f3f7dffbb3dc8f4eaf636167fe68e918a15af029e3027f46065"
+    },
+    {
+      "path": "QA-v2/gallery-west-v2-unlit.png",
+      "bytes": 2064147,
+      "sha256": "c26c4ba4512209fc5278b9e559905765909a089ad742b47e616d74f202e2c8fa"
+    },
+    {
+      "path": "QA-v2/gallery-west.png",
+      "bytes": 1713834,
+      "sha256": "0472d41d7e91b994f015395a36b545bb9ae0f539b316f0970e64c3b4ce0f408c"
+    },
+    {
+      "path": "QA-v2/geometry-identity.json",
+      "bytes": 441,
+      "sha256": "baa9d1de2069490678867ec4638a258d23ee8cac4f4913fbafad8ef1cab90f8d"
+    },
+    {
+      "path": "QA-v2/geometry-verification.json",
+      "bytes": 4544,
+      "sha256": "053a9d83c358df44d27228922839e70b574f3aab34da408eecb9b3906de1bcb1"
+    },
+    {
+      "path": "QA-v2/main-stair-v2-unlit.png",
+      "bytes": 2203854,
+      "sha256": "e12fefe7ef6b2ea549f53167c492d23cf2d66532a656e7c2f4b6048ab25d10cb"
+    },
+    {
+      "path": "QA-v2/main-stair-verification.json",
+      "bytes": 1874,
+      "sha256": "abe5cce649133b7ed6a965b6e335755ed88f547cdbd71ec892da3290a42b55e7"
+    },
+    {
+      "path": "QA-v2/main-stair.png",
+      "bytes": 1730123,
+      "sha256": "5141ede7cfcb86c092fc2019b29158f4d711277465a7079c247660b7097558ba"
+    },
+    {
+      "path": "QA-v2/render-evidence.json",
+      "bytes": 295,
+      "sha256": "97205681221815f3a2c776fff5e3a4fa1ca588a0ceb6635cfa494f466d7c61fb"
+    },
+    {
+      "path": "QA-v2/surface-finish-v2.json",
+      "bytes": 770,
+      "sha256": "703276e388afcc79a9f536377f423783b143827d2525c670de054d39778dd40e"
+    },
+    {
+      "path": "QA-v2/unlit-render-evidence-v2.json",
+      "bytes": 295,
+      "sha256": "8e7c50a0919eea9f60199513aeff6873f1a80debd9fa685402d2eb748c209aa0"
+    },
+    {
+      "path": "QA-v2/uv-diagnosis.json",
+      "bytes": 714046,
+      "sha256": "ab12c45a7cdccafd685166987c365f786d22d07540f2812245b47ba4fbc9e1b5"
+    },
+    {
+      "path": "QA-v2/visual-QA.json",
+      "bytes": 694,
+      "sha256": "ddd73aa0d2b10d938c71d025953d1d03c4bb7a7ae688915df532c1f087b19344"
+    },
+    {
+      "path": "QA-v2/vouti-stair-v1-unlit.png",
+      "bytes": 2198529,
+      "sha256": "a6f23400fcf09ad98c0ab95c06234f0dc1abe46f68227394dbfa2ef7bf1e1922"
+    },
+    {
+      "path": "QA-v2/vouti-stair-v2-unlit.png",
+      "bytes": 2198529,
+      "sha256": "92499ec3da0946fcdada4d9316625dc9fd1f7c0b6e9e22b85976f53bb9199ad5"
+    },
+    {
+      "path": "QA-v2/vouti-stair.png",
+      "bytes": 2099258,
+      "sha256": "15ae0d2064bfb3ee7c4eb0be32c5e2236228da40d2cc7ac28903597970d06a6a"
+    },
+    {
+      "path": "QA-v2/window-shadow-uv-diagnosis.json",
+      "bytes": 77464,
+      "sha256": "b5e0c72872999ddc2e11b9d1f5e78435fcb60e792fd4aaae539d8ea1df559085"
+    },
+    {
+      "path": "SOURCE-PINS-v2.json",
+      "bytes": 1365,
+      "sha256": "60e3e0d319cee4194ea6a61d7509f1d5400004faa13ea4999972caf7a2b0c649"
+    },
+    {
+      "path": "kappeli-kavely-v2.glb",
+      "bytes": 14251052,
+      "sha256": "a8e68c413aba667e972eb2c70128c8ca06fe777bc05a4e6db1aeb955e4d945a8",
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    }
+  ],
+  "newImageCalls": 0,
+  "geometryUnchanged": true,
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

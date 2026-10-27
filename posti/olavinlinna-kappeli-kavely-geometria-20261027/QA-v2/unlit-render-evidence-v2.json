@@ -1,0 +1,11 @@
+{
+  "inputGLBSHA256": "a8e68c413aba667e972eb2c70128c8ca06fe777bc05a4e6db1aeb955e4d945a8",
+  "startedAt": "2026-10-27T13:43:30.115049+00:00",
+  "views": [
+    "gallery-west",
+    "gallery-east",
+    "main-stair",
+    "vouti-stair"
+  ],
+  "kind": "Internal model QA renders, not game captures."
+}

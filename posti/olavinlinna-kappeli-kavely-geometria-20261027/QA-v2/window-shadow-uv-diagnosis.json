@@ -1,0 +1,3803 @@
+{
+  "inputGLBSHA256": "a8e68c413aba667e972eb2c70128c8ca06fe777bc05a4e6db1aeb955e4d945a8",
+  "uv": {
+    "trianglesChecked": 680,
+    "maxVerticalUVError": 2.0599365235796085e-07,
+    "heightColumnsChecked": 215,
+    "maxUChangeAcrossHeight": 9.5367431640625e-07,
+    "metresPerRepeat": 2.5,
+    "horizontalBoundaryInBaselineUnlit": false
+  },
+  "cameraRegions": {
+    "voutiBlackCorner": {
+      "region": [
+        1255,
+        80,
+        1275,
+        190
+      ],
+      "rays": 60,
+      "hits": 60,
+      "misses": 0,
+      "details": [
+        {
+          "pixel": [
+            1255,
+            80
+          ],
+          "distance": 0.9996728301048279,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "irregular_fieldstone_lime_v2"
+          },
+          "position": [
+            -19.308910369873047,
+            17.973119735717773,
+            11.622770309448242
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            80
+          ],
+          "distance": 7.315916061401367,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.355016708374023,
+            19.54670524597168,
+            13.02634334564209
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            80
+          ],
+          "distance": 7.345263481140137,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.319661140441895,
+            19.5283203125,
+            13.028887748718262
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            80
+          ],
+          "distance": 7.383498191833496,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.275980949401855,
+            19.51198959350586,
+            13.033364295959473
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            80
+          ],
+          "distance": 7.422043800354004,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.232060432434082,
+            19.495569229125977,
+            13.03786563873291
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            90
+          ],
+          "distance": 7.264970302581787,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.396468162536621,
+            19.557039260864258,
+            12.960186004638672
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            90
+          ],
+          "distance": 7.302722930908203,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.353132247924805,
+            19.540834426879883,
+            12.964460372924805
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            90
+          ],
+          "distance": 7.340787410736084,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.309555053710938,
+            19.5245418548584,
+            12.968758583068848
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            90
+          ],
+          "distance": 7.3791608810424805,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.265737533569336,
+            19.508159637451172,
+            12.9730806350708
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            90
+          ],
+          "distance": 7.417847156524658,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.221677780151367,
+            19.491687774658203,
+            12.977426528930664
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            100
+          ],
+          "distance": 7.260704517364502,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.38658332824707,
+            19.553342819213867,
+            12.900066375732422
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            100
+          ],
+          "distance": 7.2985944747924805,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.34311294555664,
+            19.53708839416504,
+            12.904186248779297
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            100
+          ],
+          "distance": 7.33679723739624,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.299398422241211,
+            19.52074432373047,
+            12.908329010009766
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            100
+          ],
+          "distance": 7.375311851501465,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.255443572998047,
+            19.50431251525879,
+            12.912494659423828
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            100
+          ],
+          "distance": 7.414140701293945,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.211244583129883,
+            19.4877872467041,
+            12.9166841506958
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            110
+          ],
+          "distance": 7.256931781768799,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.376649856567383,
+            19.54962921142578,
+            12.839646339416504
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            110
+          ],
+          "distance": 7.294962406158447,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.333040237426758,
+            19.533323287963867,
+            12.843610763549805
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            110
+          ],
+          "distance": 7.333304405212402,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.289190292358398,
+            19.516929626464844,
+            12.847597122192383
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            110
+          ],
+          "distance": 7.371959686279297,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.245098114013672,
+            19.500442504882812,
+            12.851604461669922
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            110
+          ],
+          "distance": 7.41093111038208,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.200758934020996,
+            19.48386573791504,
+            12.855635643005371
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            120
+          ],
+          "distance": 7.253663063049316,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.36666488647461,
+            19.545894622802734,
+            12.778925895690918
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            120
+          ],
+          "distance": 7.291831016540527,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.322920799255371,
+            19.529539108276367,
+            12.782732009887695
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            120
+          ],
+          "distance": 7.330315113067627,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.278932571411133,
+            19.513093948364258,
+            12.786559104919434
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            120
+          ],
+          "distance": 7.369113445281982,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.234699249267578,
+            19.49655532836914,
+            12.79040813446045
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            120
+          ],
+          "distance": 7.408228397369385,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.19021987915039,
+            19.47992515563965,
+            12.794279098510742
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            130
+          ],
+          "distance": 7.250901222229004,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.356633186340332,
+            19.542144775390625,
+            12.717900276184082
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            130
+          ],
+          "distance": 7.289212703704834,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.312749862670898,
+            19.525737762451172,
+            12.721548080444336
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            130
+          ],
+          "distance": 7.327839374542236,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.268621444702148,
+            19.509239196777344,
+            12.725214958190918
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            130
+          ],
+          "distance": 7.3667802810668945,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.224247932434082,
+            19.49264907836914,
+            12.728902816772461
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            130
+          ],
+          "distance": 7.406039237976074,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.179628372192383,
+            19.47596549987793,
+            12.732610702514648
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            140
+          ],
+          "distance": 7.248661041259766,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.346548080444336,
+            19.538373947143555,
+            12.656569480895996
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            140
+          ],
+          "distance": 7.287113666534424,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.302526473999023,
+            19.521915435791016,
+            12.660055160522461
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            140
+          ],
+          "distance": 7.3258819580078125,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.258258819580078,
+            19.50536346435547,
+            12.66356086730957
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            140
+          ],
+          "distance": 7.364969730377197,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.2137451171875,
+            19.48872184753418,
+            12.667086601257324
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            140
+          ],
+          "distance": 7.404375076293945,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.168981552124023,
+            19.47198486328125,
+            12.670631408691406
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            150
+          ],
+          "distance": 7.246948719024658,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.33641242980957,
+            19.534584045410156,
+            12.594929695129395
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            150
+          ],
+          "distance": 7.2855424880981445,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.292252540588379,
+            19.51807403564453,
+            12.598252296447754
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            150
+          ],
+          "distance": 7.324456214904785,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.247843742370605,
+            19.5014705657959,
+            12.601594924926758
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            150
+          ],
+          "distance": 7.363687992095947,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.203187942504883,
+            19.484773635864258,
+            12.604955673217773
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            150
+          ],
+          "distance": 7.403242111206055,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.158281326293945,
+            19.467985153198242,
+            12.608335494995117
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            160
+          ],
+          "distance": 7.245769023895264,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.326228141784668,
+            19.53077507019043,
+            12.532978057861328
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            160
+          ],
+          "distance": 7.28450870513916,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.281925201416016,
+            19.51421356201172,
+            12.536137580871582
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            160
+          ],
+          "distance": 7.323567867279053,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.237375259399414,
+            19.497556686401367,
+            12.539314270019531
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            160
+          ],
+          "distance": 7.362946033477783,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.192577362060547,
+            19.480806350708008,
+            12.542509078979492
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            160
+          ],
+          "distance": 7.402649402618408,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.147526741027832,
+            19.46396255493164,
+            12.545722007751465
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            170
+          ],
+          "distance": 7.245135307312012,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.31598949432373,
+            19.526948928833008,
+            12.470714569091797
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            170
+          ],
+          "distance": 7.2840189933776855,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.271547317504883,
+            19.510332107543945,
+            12.47370719909668
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            170
+          ],
+          "distance": 7.323225498199463,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.22685432434082,
+            19.493623733520508,
+            12.476717948913574
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            170
+          ],
+          "distance": 7.3627519607543945,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.181913375854492,
+            19.47681999206543,
+            12.479743957519531
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            170
+          ],
+          "distance": 7.402605056762695,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.136716842651367,
+            19.459922790527344,
+            12.4827880859375
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            180
+          ],
+          "distance": 7.245054721832275,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.305699348449707,
+            19.523101806640625,
+            12.408135414123535
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            180
+          ],
+          "distance": 7.284084796905518,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.261116027832031,
+            19.506431579589844,
+            12.41096019744873
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            180
+          ],
+          "distance": 7.3234381675720215,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.216279983520508,
+            19.489669799804688,
+            12.413801193237305
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            180
+          ],
+          "distance": 7.363112449645996,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.171194076538086,
+            19.47281265258789,
+            12.416658401489258
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            180
+          ],
+          "distance": 7.403117656707764,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.125850677490234,
+            19.455860137939453,
+            12.41953182220459
+          ]
+        },
+        {
+          "pixel": [
+            1255,
+            190
+          ],
+          "distance": 7.2455339431762695,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.295358657836914,
+            19.519235610961914,
+            12.345237731933594
+          ]
+        },
+        {
+          "pixel": [
+            1260,
+            190
+          ],
+          "distance": 7.284710884094238,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.250631332397461,
+            19.502511978149414,
+            12.347892761230469
+          ]
+        },
+        {
+          "pixel": [
+            1265,
+            190
+          ],
+          "distance": 7.324212074279785,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.205652236938477,
+            19.485694885253906,
+            12.350564002990723
+          ]
+        },
+        {
+          "pixel": [
+            1270,
+            190
+          ],
+          "distance": 7.364038467407227,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.160420417785645,
+            19.46878433227539,
+            12.353249549865723
+          ]
+        },
+        {
+          "pixel": [
+            1275,
+            190
+          ],
+          "distance": 7.404196262359619,
+          "surface": {
+            "object": "kappeli_architecture",
+            "material": "solid_worn_grey_stone"
+          },
+          "position": [
+            -13.11492919921875,
+            19.4517765045166,
+            12.355951309204102
+          ]
+        }
+      ]
+    },
+    "voutiGreyBackground": {
+      "region": [
+        1255,
+        400,
+        1275,
+        800
+      ],
+      "rays": 205,
+      "hits": 0,
+      "misses": 205,
+      "details": [
+        {
+          "pixel": [
+            1255,
+            400
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            400
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            400
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            400
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            400
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            410
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            410
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            410
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            410
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            410
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            420
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            420
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            420
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            420
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            420
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            430
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            430
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            430
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            430
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            430
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            440
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            440
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            440
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            440
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            440
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            450
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            450
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            450
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            450
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            450
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            460
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            460
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            460
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            460
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            460
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            470
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            470
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            470
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            470
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            470
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            480
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            480
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            480
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            480
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            480
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            490
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            490
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            490
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            490
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            490
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            500
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            500
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            500
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            500
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            500
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            510
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            510
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            510
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            510
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            510
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            520
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            520
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            520
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            520
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            520
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            530
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            530
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            530
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            530
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            530
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            540
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            540
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            540
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            540
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            540
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            550
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            550
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            550
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            550
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            550
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            560
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            560
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            560
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            560
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            560
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            720
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            720
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            720
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            720
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            720
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            730
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            730
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            730
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            730
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            730
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            740
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            740
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            740
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            740
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            740
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            750
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            750
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            750
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            750
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            750
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            760
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            760
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            760
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            760
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            760
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            770
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            770
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            770
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            770
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            770
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            780
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            780
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            780
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            780
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            780
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            790
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            790
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            790
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            790
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            790
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1255,
+            800
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1260,
+            800
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1265,
+            800
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1270,
+            800
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1275,
+            800
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        }
+      ]
+    },
+    "galleryWestGreyOpening": {
+      "region": [
+        1200,
+        570,
+        1230,
+        710
+      ],
+      "rays": 105,
+      "hits": 0,
+      "misses": 105,
+      "details": [
+        {
+          "pixel": [
+            1200,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            570
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            580
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            590
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            600
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            610
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            620
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            630
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            640
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            650
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            660
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            670
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            680
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            690
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            700
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1200,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1205,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1210,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1215,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1220,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1225,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        },
+        {
+          "pixel": [
+            1230,
+            710
+          ],
+          "distance": null,
+          "surface": null,
+          "position": null
+        }
+      ]
+    }
+  },
+  "newGeometry": false
+}

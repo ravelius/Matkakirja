@@ -1,0 +1,183 @@
+[
+ {
+  "kansio": "output/olavinlinna-kappeli-kavely-1107-20261027/delivery-v2",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "kappeli-kavely-v2.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "kappeli-kavely-v2.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 6965,
+     "piirrot": 5,
+     "materiaalit": 5,
+     "solmut": 61,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -21.029,
+       9.2,
+       -20.968
+      ],
+      "max": [
+       -10.1,
+       16.05,
+       -7.275
+      ],
+      "koko": [
+       10.929,
+       6.85,
+       13.693
+      ]
+     }
+    },
+    "polku": "kappeli-kavely-v2.glb"
+   },
+   {
+    "nimi": "gallery-east-v1-unlit.png",
+    "polku": "QA-v2/gallery-east-v1-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-east-v2-unlit.png",
+    "polku": "QA-v2/gallery-east-v2-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-east.png",
+    "polku": "QA-v2/gallery-east.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-west-v1-unlit.png",
+    "polku": "QA-v2/gallery-west-v1-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-west-v2-unlit.png",
+    "polku": "QA-v2/gallery-west-v2-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-west.png",
+    "polku": "QA-v2/gallery-west.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "main-stair-v2-unlit.png",
+    "polku": "QA-v2/main-stair-v2-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "main-stair.png",
+    "polku": "QA-v2/main-stair.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "vouti-stair-v1-unlit.png",
+    "polku": "QA-v2/vouti-stair-v1-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "vouti-stair-v2-unlit.png",
+    "polku": "QA-v2/vouti-stair-v2-unlit.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "vouti-stair.png",
+    "polku": "QA-v2/vouti-stair.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: kappeli-kavely-v2.glb ei liikettä"
+  ]
+ }
+]

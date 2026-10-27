@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-10-27T13:44:36.044886+00:00",
+  "inputGLBSHA256": "a8e68c413aba667e972eb2c70128c8ca06fe777bc05a4e6db1aeb955e4d945a8",
+  "viewsInspected": [
+    "gallery-east",
+    "gallery-west",
+    "main-stair",
+    "vouti-stair",
+    "gallery-east-v2-unlit",
+    "gallery-west-v2-unlit",
+    "vouti-stair-v2-unlit"
+  ],
+  "findings": [
+    "Continuous stone albedo across wall height; no horizontal texture scale split.",
+    "Lighting boundary disappears in V1 and V2 unlit view.",
+    "Grey window regions are empty world backdrop; black stair corner has normal stone albedo.",
+    "Stair geometry unchanged."
+  ],
+  "gameCapture": false,
+  "newImageCalls": 0
+}
