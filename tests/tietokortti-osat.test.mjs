@@ -73,6 +73,14 @@ test('kysymykset erikseen: tarkistus ja vaihto (KK 27.10., Eton)', async () => {
   assert.deepEqual(kelvollisetKysymykset(['Mitä sisällissodassa tapahtui?', 'Mitä koulu opettaa nykyään?'], 'Eton on kaupunki.', lisaa, 'Eton'), ['Mitä koulu opettaa nykyään?']);
 });
 
+test('faktarivi vastaa kysymykseen (KK 27.10.: "Kuka Etonia hallinnoi?" ja "Alue: Windsor ja Maidenhead")', async () => {
+  const { faktaVastaa } = await import('../tools/pollo/tietokortti.js');
+  const faktat = ['noin 5 100 asukasta (2021)', 'Alue: Windsor ja Maidenhead'];
+  assert.equal(faktaVastaa('Kuka Etonia hallinnoi?', faktat, 'Eton'), true);
+  assert.equal(faktaVastaa('Kuinka monta ihmistä Etonissa asuu?', faktat, 'Eton'), true);
+  assert.equal(faktaVastaa('Miten Eton College vaikuttaa kaupungin elämään?', faktat, 'Eton'), false);
+});
+
 test('lievin hylkäys valitaan, kun kaikki yritykset hylätään', async () => {
   const { hylkayksenVakavuus } = await import('../tools/pollo/tietokortti.js');
   assert.ok(hylkayksenVakavuus('vastattu') < hylkayksenVakavuus('toisto 1440'));
@@ -116,7 +124,10 @@ test('Lue lisää: jäsennys ja tarkistus (otsikot, sanat, kaksi kysymystä)', (
   assert.equal(tarkistaLisaa(lisaa('Kuka suunnitteli kaupungintalon?'), syote, 'Windsor').syy, 'kysymykset');
   assert.equal(tarkistaLisaa(lisaa().replace(KYSYMYKSET, ''), syote, 'Windsor').syy, 'kysymysrivi');
   assert.match(tarkistaLisaa(lisaa().replace('## Silta ja Eton\n', ''), syote, 'Windsor').syy, /otsikot/);
-  assert.equal(tarkistaLisaa(lisaa('Mihin isoisä piilotti aarteen?\nMilloin kaupunki sai torioikeudet?'), syote, 'Windsor').syy, 'kysymykset');
+  // Pelikysymys on kysymysvirhe (kysymykset kirjoitetaan erikseen, t7), ei tekstivirhe.
+  assert.equal(tarkistaLisaa(lisaa('Mihin isoisä piilotti aarteen?\nMilloin kaupunki sai torioikeudet?'), syote, 'Windsor').syy, 'vastattu');
+  // vainTeksti: teksti kelpaa ilman kysymyksiä (näytetään heti, KK 27.10.).
+  assert.equal(tarkistaLisaa(lisaa().replace(KYSYMYKSET, '').split('\n').filter((r) => !r.endsWith('?')).join('\n'), syote, 'Windsor', '', { vainTeksti: true }).ok, true);
   // Johdannon vuosi toistuu Lue lisää -tekstissä → hylkäys.
   assert.match(tarkistaLisaa(lisaa(), syote, 'Windsor', 'Windsoria kutsuttiin uudella nimellä vuoteen 1974 asti.').syy, /toisto/);
 });
