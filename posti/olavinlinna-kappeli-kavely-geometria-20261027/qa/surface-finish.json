@@ -1,0 +1,21 @@
+{
+  "input": "output/olavinlinna-kappeli-kavely-1107-20261027/native/before-surface-feedback.glb",
+  "output": "output/olavinlinna-kappeli-kavely-1107-20261027/delivery/kappeli-kavely.glb",
+  "worldTriangleFingerprintBefore": "08c85f389a70ef0a071d4bb8acf9ccbfdea27bec8b6c8b309e7ff8da53ee09ec",
+  "worldTriangleFingerprintAfter": "08c85f389a70ef0a071d4bb8acf9ccbfdea27bec8b6c8b309e7ff8da53ee09ec",
+  "triangles": 6965,
+  "geometryUnchanged": true,
+  "masonryMetresPerRepeat": 2.5,
+  "solidStoneMetresPerRepeat": 1.5,
+  "counts": {
+    "cylindricalMasonryFaces": 702,
+    "metricPlanarFaces": 6263,
+    "solidStepFaces": 611
+  },
+  "masonryEdgeDensityRatioMin": 0.9940735585238475,
+  "masonryEdgeDensityRatioMax": 1.0073314240570324,
+  "cylinderMapping": "Unwrapped circumference, no mirrored axis projection; stable continuous phase.",
+  "otherMapping": "Orthonormal plane coordinates with unit metric scale.",
+  "source": "https://polyhaven.com/a/rock_01",
+  "imageGenerationCalls": 0
+}

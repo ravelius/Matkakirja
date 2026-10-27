@@ -1,0 +1,111 @@
+[
+ {
+  "kansio": "output/olavinlinna-kappeli-kavely-1107-20261027/delivery",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "kappeli-kavely.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "kappeli-kavely.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 6965,
+     "piirrot": 5,
+     "materiaalit": 5,
+     "solmut": 61,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -21.029,
+       9.2,
+       -20.968
+      ],
+      "max": [
+       -10.1,
+       16.05,
+       -7.275
+      ],
+      "koko": [
+       10.929,
+       6.85,
+       13.693
+      ]
+     }
+    },
+    "polku": "kappeli-kavely.glb"
+   },
+   {
+    "nimi": "Kappelin kehä- ja ampumakäytävä - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "polku": "Kappelin kehä- ja ampumakäytävä - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1448,
+     "h": 1086
+    }
+   },
+   {
+    "nimi": "gallery-east.png",
+    "polku": "qa/gallery-east.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "gallery-west.png",
+    "polku": "qa/gallery-west.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "main-stair.png",
+    "polku": "qa/main-stair.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "vouti-stair.png",
+    "polku": "qa/vouti-stair.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: kappeli-kavely.glb ei liikettä"
+  ]
+ }
+]

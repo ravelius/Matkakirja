@@ -1,0 +1,191 @@
+{
+  "sourceMarkers": 59,
+  "exportedMarkers": 59,
+  "changedMarkers": [],
+  "walkSamples": 3712,
+  "newHeadroomObstructionsCount": 0,
+  "newHeadroomObstructions": [],
+  "missingFloorSamplesCount": 0,
+  "missingFloorSamples": [],
+  "newClearanceNarrowingsCount": 0,
+  "newClearanceNarrowings": [],
+  "doors": [
+    {
+      "name": "ovi:kaari-ovi",
+      "width": 1.05,
+      "height": 2.4,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 88,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 55,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 44,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 33,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 33,
+          "newlyBlocked": []
+        }
+      ],
+      "sourceMarkerSlabCheck": {
+        "depth": 0.12,
+        "rays": 651,
+        "newlyBlocked": []
+      },
+      "diagnosticLongRaysMayIntersectAdjacentStairRisers": true
+    },
+    {
+      "name": "ovi:paaovi-porras-ala",
+      "width": 0.95,
+      "height": 2.3,
+      "rays": 121,
+      "newlyBlockedRays": [
+        [
+          10,
+          1,
+          1.3,
+          0.23207585513591766
+        ]
+      ],
+      "baselineBlockedRays": 47,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 35,
+          "newlyBlocked": [
+            [
+              7,
+              0,
+              1.0,
+              0.032199449837207794
+            ],
+            [
+              10,
+              0,
+              1.0,
+              0.11284991353750229
+            ],
+            [
+              10,
+              1,
+              1.0,
+              0.11284993588924408
+            ]
+          ]
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 71,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 69,
+          "newlyBlocked": [
+            [
+              9,
+              1,
+              1.0,
+              0.9699234366416931
+            ],
+            [
+              10,
+              1,
+              1.0,
+              0.9397019147872925
+            ]
+          ]
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 72,
+          "newlyBlocked": [
+            [
+              1,
+              1,
+              1.0,
+              0.9410807490348816
+            ],
+            [
+              2,
+              1,
+              1.0,
+              0.9884629845619202
+            ]
+          ]
+        }
+      ],
+      "sourceMarkerSlabCheck": {
+        "depth": 0.12,
+        "rays": 651,
+        "newlyBlocked": []
+      },
+      "diagnosticLongRaysMayIntersectAdjacentStairRisers": true
+    },
+    {
+      "name": "ovi:paaovi-porras-yla",
+      "width": 0.95,
+      "height": 2.0,
+      "rays": 121,
+      "newlyBlockedRays": [],
+      "baselineBlockedRays": 22,
+      "note": "Marker axis and angled wall differ; compare full source aperture and separately test oriented opening.",
+      "orientationChecks": [
+        {
+          "angle": 0,
+          "rays": 121,
+          "baselineBlocked": 22,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 0.7853981633974483,
+          "rays": 121,
+          "baselineBlocked": 66,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 1.5707963267948966,
+          "rays": 121,
+          "baselineBlocked": 33,
+          "newlyBlocked": []
+        },
+        {
+          "angle": 2.356194490192345,
+          "rays": 121,
+          "baselineBlocked": 44,
+          "newlyBlocked": []
+        }
+      ],
+      "sourceMarkerSlabCheck": {
+        "depth": 0.12,
+        "rays": 651,
+        "newlyBlocked": []
+      },
+      "diagnosticLongRaysMayIntersectAdjacentStairRisers": true
+    }
+  ],
+  "toleranceMetres": 0.015,
+  "gameplayCollisionSourceRetainedByReceiver": true
+}

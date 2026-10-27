@@ -1,0 +1,98 @@
+[
+  {
+    "name": "aukko:ampuma-1",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -13.368,
+      14.45,
+      -19.506
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-2",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -10.494,
+      14.45,
+      -16.632
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-3",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -10.494,
+      14.45,
+      -12.568
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-4",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -12.745,
+      14.45,
+      -10.001
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-5",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -17.432,
+      14.45,
+      -9.694
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-6",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -20.306,
+      14.45,
+      -12.568
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-7",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -20.306,
+      14.45,
+      -16.632
+    ],
+    "sourceRectanglePreserved": true
+  },
+  {
+    "name": "aukko:ampuma-8",
+    "width": 0.24,
+    "bottom": 14.1,
+    "top": 14.8,
+    "centre": [
+      -17.432,
+      14.45,
+      -19.506
+    ],
+    "sourceRectanglePreserved": true
+  }
+]

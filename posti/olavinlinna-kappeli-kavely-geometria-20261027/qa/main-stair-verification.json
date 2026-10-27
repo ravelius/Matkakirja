@@ -1,0 +1,71 @@
+{
+  "sampledTreads": 270,
+  "minDifferenceFromSourceRamp": -0.042266845703125,
+  "maxDifferenceFromSourceRamp": 0.18698501586914062,
+  "allowedRise": 0.21,
+  "maxDifferenceFromSourceWalkProxy": 0.26119518280029297,
+  "overlappingSourceRampJunction": true,
+  "sourceFloorGapFilled": [
+    {
+      "sourceWalkSample": [
+        -16.19247055053711,
+        7.912483215332031,
+        11.587545394897461
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": -0.08754539489746094,
+      "baselineGroundHit": false
+    },
+    {
+      "sourceWalkSample": [
+        -16.21475601196289,
+        8.072929382324219,
+        11.531612396240234
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": -0.031612396240234375,
+      "baselineGroundHit": false
+    },
+    {
+      "sourceWalkSample": [
+        -16.23166275024414,
+        7.921299457550049,
+        11.555933952331543
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": -0.05593395233154297,
+      "baselineGroundHit": false
+    },
+    {
+      "sourceWalkSample": [
+        -16.176389694213867,
+        8.02891731262207,
+        11.475677490234375
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": 0.024322509765625,
+      "baselineGroundHit": false
+    },
+    {
+      "sourceWalkSample": [
+        -16.22989273071289,
+        8.088385581970215,
+        11.436777114868164
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": 0.06322288513183594,
+      "baselineGroundHit": false
+    },
+    {
+      "sourceWalkSample": [
+        -16.216552734375,
+        8.029844284057617,
+        11.444067001342773
+      ],
+      "finalLandingLevel": 11.5,
+      "heightDifference": 0.05593299865722656,
+      "baselineGroundHit": false
+    }
+  ],
+  "note": "Headroom and lateral clearance evaluated above actual visible tread; source gameplay ramps unchanged."
+}

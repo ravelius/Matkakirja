@@ -1,0 +1,59 @@
+{
+  "lowerDoorAperturePreservedByTreadTrim": true,
+  "flights": [
+    [
+      [
+        -18.6011,
+        9.6,
+        -8.6381
+      ],
+      [
+        -18.3075,
+        9.6,
+        -9.5416
+      ],
+      [
+        -16.3146,
+        11.5,
+        -7.8952
+      ],
+      [
+        -16.021,
+        11.5,
+        -8.7987
+      ]
+    ],
+    [
+      [
+        -16.1346,
+        11.5,
+        -7.8731
+      ],
+      [
+        -16.2009,
+        11.5,
+        -8.8208
+      ],
+      [
+        -13.7363,
+        13.4,
+        -8.0408
+      ],
+      [
+        -13.8026,
+        13.4,
+        -8.9885
+      ]
+    ]
+  ],
+  "removedRampTriangles": 4,
+  "stepsPerFlight": 10,
+  "risePerStep": 0.19,
+  "overallLevels": [
+    9.6,
+    11.5,
+    13.4
+  ],
+  "navigationAndCollisionUnchanged": true,
+  "interpretation": "Visible stone treads replace two source ramp surfaces, keeping exact run, width and total rise; collision remains source ramps."
+}

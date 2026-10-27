@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "reviewedAt": "2026-10-27T13:18:29.669035+00:00",
+  "inputGLBSHA256": "ad9e6407d0f7865f43292f957ee9fb0f1c501dfa22cea7f616c0195b53946e15",
+  "reviewedViews": [
+    "gallery-west",
+    "gallery-east",
+    "main-stair",
+    "vouti-stair"
+  ],
+  "checks": [
+    "Both gallery directions inspected at 1280x960: masonry scale continuous through curve, no mirrored axial pattern, floor and all visible openings clear.",
+    "Main stair and vouti stair: treads and risers use solid grey stone, including the turning tread; masonry remains on walls.",
+    "Final target image previously inspected at full size; one generated image retained without pixel changes."
+  ],
+  "limits": [
+    "Internal isolated-part Blender renders, not game captures.",
+    "Surrounding castle mass and gameplay collision remain receiver assembly tasks.",
+    "Lighting in QA is temporary, receiver acceptance and game integration remain open."
+  ]
+}

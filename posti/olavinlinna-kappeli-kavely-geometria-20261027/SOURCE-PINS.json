@@ -1,0 +1,74 @@
+{
+  "mail": {
+    "path": "posti/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "commit": "8965de38f95305a8be4403430534ea30a3687950",
+    "blob": "bd34fa9a0af8bf9acc9ee71e00b10f98eaa1e7bd",
+    "sha256": "84e1b2afcb810ed69fb25b43f75b1e7c9109dda1543f0b9110c5f0457ceb4892",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "readInFull": true
+  },
+  "surfaceFeedback": {
+    "path": "posti/natiiviseppa-codex-olavinlinna-kirkkotorni-portaat-kuittaus-20261027.md",
+    "readHead": "84419db6a7b500ceba1e6d7748c7ee1a03029bf1",
+    "blob": "c4aaa03cb1a210267ed634a7bcdf5861c14bb3a1",
+    "sha256": "c6e3d0e5ad61258d0cbc1d756e5196a00efc4ab84d55a1d711b5dae2ac6edb55",
+    "readInFull": true
+  },
+  "localInputs": [
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/OHJE-CODEXILLE.md",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/OHJE-CODEXILLE.md",
+      "sha256": "1fb9ec2f9f923c0d7885f32cd92ef21863d1cdc94a2252fd7fe46a3d826df13f",
+      "bytes": 6200
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu.json",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/asettelu.json",
+      "sha256": "d7bf69c47ade32fd19314d7f35ed07864ac5ecb69222ff951be80f5776ff504b",
+      "bytes": 9824
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu-kappeli-kavely.glb",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/asettelu-kappeli-kavely.glb",
+      "sha256": "e7b5b15c8f60a0052fa57d1ec9051cc224e3280b02d316598b30bed3abab724b",
+      "bytes": 994748
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kappeli-kavely-leikkaus-etelasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-leikkaus-etelasta.png",
+      "sha256": "62080c6e3813c58657c3e0df391fca4ac7c8e9112b5c2495e72e7bf2b943a6ee",
+      "bytes": 760928
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kappeli-kavely-leikkaus-idasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-leikkaus-idasta.png",
+      "sha256": "719758dec5f31e380a2547237277bfd20a274a93c9e690fc60c51dddec88688f",
+      "bytes": 936142
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kappeli-kavely-pohja-1-y+9,5.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-pohja-1-y+9,5.png",
+      "sha256": "c26fe512f0ef924e95106a817f7ef2df96f22b0d1a721b77e63866765c1c366b",
+      "bytes": 1442797
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kappeli-kavely-pohja-2-y+13,5.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-pohja-2-y+13,5.png",
+      "sha256": "d69a9c68557b53256dfe5ec82f3d2d87b0e93b527319f3c8bfe912d08161ccb9",
+      "bytes": 1978781
+    }
+  ],
+  "rock01": {
+    "source": "https://polyhaven.com/a/rock_01",
+    "author": "Rob Tuytel",
+    "license": "CC0 1.0",
+    "licenseURL": "https://polyhaven.com/license",
+    "download": {
+      "size": 688083,
+      "md5": "5897cd4496982b03cad0c3e2358486c0",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_01/rock_01_diff_1k.jpg"
+    },
+    "sha256": "0b5f0418eb1e686190c5d33bb54c400b1f9ed58813b5e34aa5e573a5197302b5",
+    "purpose": "Solid grey stair stones and bare cliff surface"
+  }
+}

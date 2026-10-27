@@ -1,0 +1,14 @@
+{
+  "markerCount": 59,
+  "duplicateTrianglesRemoved": 0,
+  "sourceVisibleArchitectureRetained": true,
+  "collisionHelperSurfacesExcludedFromRendering": true,
+  "sourceWalkAndCollisionGameplayUnchanged": true,
+  "interpretations": [
+    "Source wall, stair, floor and ceiling geometry retained.",
+    "Grey stone tread and floor materials, irregular lime masonry and plaster surfaces.",
+    "Eight firing openings cut through the visible wall at the exact source rectangles, 0.24m by 0.70m; source markers unchanged."
+  ],
+  "newProps": false,
+  "callsIssued": 1
+}

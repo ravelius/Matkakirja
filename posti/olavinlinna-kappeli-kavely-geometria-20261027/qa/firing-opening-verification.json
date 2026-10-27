@@ -1,0 +1,45 @@
+{
+  "openings": [
+    {
+      "name": "aukko:ampuma-1",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-2",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-3",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-4",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-5",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-6",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-7",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "name": "aukko:ampuma-8",
+      "rays": 9,
+      "blocked": []
+    }
+  ],
+  "allClear": true
+}

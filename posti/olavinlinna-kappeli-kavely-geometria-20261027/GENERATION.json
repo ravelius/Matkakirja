@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "callsIssued": 1,
+  "successfulOutputs": 1,
+  "retryCalls": 0,
+  "nativeSHA256": "5c386f26debca4446df188f185c78b401e9c16f3bc265ea9f0785b3d165eea28",
+  "references": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-pohja-2-y+13,5.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kappeli-kavely-1107-20261027/sources/kappeli-kavely-leikkaus-etelasta.png"
+  ],
+  "prompt": "Create exactly one new landscape 4:3 photorealistic architectural target photograph for Olavinlinna castle Finland in the year 1499: the narrow circular firing gallery around the chapel tower. The attached OWN section and plan diagrams are layout references, not artwork to copy. Show an eye-level view along the gently curving enclosed stone passage, roughly one metre clear width, grey irregular flagstone floor with pale lime mortar, massive irregular Finnish granite and paler fieldstone walls in abundant lime mortar and patches of old lime plaster. The outer wall has small narrow firing openings with splayed stone embrasures, cool daylight grazing the rough edges; the inner wall follows the round tower. Low but usable lime-plastered ceiling, around two metres above floor, no obstruction. The photographed corridor curves out of view, avoiding a long straight generic medieval hallway. Restrained natural daylight and deep readable shadows, natural camera optics 28mm, true stone surface and gentle wear without procedural patterns or painted texture, no dramatic fantasy arches. No people, weapons, banners, furniture, torches, modern features or overlays. No grids, diagram labels, coloured route lines or markers. Neutral cool grey stone, no red/brown tiles, no uniform rectangular ashlar. One complete coherent photographic composition, no montage, no text, no watermarks. This is an interpretive material and lighting target, not a claim of exact historical documentation. Preserve plausible layout from references; do not reproduce a floor plan.",
+  "imagePixelEdits": false,
+  "metadataAdded": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "scope": "Material and atmosphere target. Image does not override source dimensions or add windows."
+}
