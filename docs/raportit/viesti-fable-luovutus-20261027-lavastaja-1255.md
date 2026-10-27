@@ -384,7 +384,8 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - VS 01.1x: metallituki REF 33acd68dd (linssiseppa2/esineet-metalli-213; glb:n metallisuus/karheus, kartan keskiarvo M 0,73 / K 0,49; täysi kartta <glb>-orm-6x6.astcm myöhemmin).
 - Ajot (oma: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 33acd68dd <skenaario> ipad --batch, ~6 min):
   012404 Tripon väri (pronssi/sepia), 013011 hopea 0,25 + 1,35·L (liian vaalea, liitumainen), 013631 hopea 0,08 + 1,25·L, sävy (0,94, 0,97, 1,00) + lähikuvat j4h/j4i
-  (skenaario _tyo/linnanrakentaja/olavinlinna-j4/sk-komero-j4-lahi.txt). 013631:n arvio kesken luovutushetkellä → katso kuvat Sonnetilla.
+  (skenaario _tyo/linnanrakentaja/olavinlinna-j4/sk-komero-j4-lahi.txt). 013631 (Sonnet): hopeaa muistuttava viileä harmaa (kolikot ~140, kulho ~105), ei liian vaalea, mutta litteä: tarvitsee kontrastia ja kirkkaita heijastuksia
+  (karheus alas? VS:n täysi ORM-kartta) → kysy VS:ltä ennen seuraavaa säätöä. j4h näyttää sisällön hyvin; j4i katsoo seinään (kamerapaikka uusiksi); kahva sileä silmukka j4h:ssa.
 - Työkalu olavinlinna-j4/j4_hopea.py (VAL0/VAL1 tiedoston alussa): esine-arkun-hopeasisalto-pronssi.glb (= skaala 0,97, Tripon väri) → esine-arkun-hopeasisalto.glb
   (+ kopio kavely-j4:ään). Vanha JPEG-kuva jää käyttämättömänä bufferiin (12 Mt) → siivoa ennen vientiä (tai ASTC glb_kuvat_astc6).
 - SEURAAVAKSI: J4-pari (ennen/jälkeen) KK:lle vasta, kun hopea näyttää hopealta (PT 01.0x: ei beigeä KK:lle); kahvan venymä lähikuvasta → Codex-korjaus vasta sitten.
