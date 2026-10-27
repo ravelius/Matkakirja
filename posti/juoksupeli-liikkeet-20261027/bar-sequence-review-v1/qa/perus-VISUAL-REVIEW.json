@@ -1,0 +1,11 @@
+{
+  "oldSixSheetsPersonallyInspected": true,
+  "finalFilesMatchShownPosesWithinM": {
+    "bar_approach_takeoff": 2.9639834330276605e-05,
+    "bar_swing_over": 1.2250739404771031e-05,
+    "bar_release_land_run": 1.8053205113134734e-05
+  },
+  "approachAndReleaseTracksByteExactToPreviouslyDenseVerifiedFinal": true,
+  "swingRefinement": "First/last .04s leg IK is smoothly weighted; six shown sample times match old poses. Dense final checks separately.",
+  "gameVerified": false
+}

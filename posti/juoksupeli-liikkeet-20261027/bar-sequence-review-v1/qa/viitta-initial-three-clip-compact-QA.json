@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v1/viitta/puyi.glb",
+  "sourceSHA256": "83b5ccc4935ead75f9eb84b376f47ecbd0131db59fb4fd82bf07c8cd244203bf",
+  "file": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v1/viitta/puyi-final.glb",
+  "sha256": "561867afc4a1560c9b41ed77422428db86ebfef5d9da55dacdd6367c2647af3d",
+  "bytes": 13065316,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternionChord": 2e-05,
+    "translationScale": 2e-06
+  },
+  "keys": [
+    {
+      "clip": "bar_approach_takeoff",
+      "beforeKeys": 102608,
+      "afterKeys": 26668
+    },
+    {
+      "clip": "bar_swing_over",
+      "beforeKeys": 1482,
+      "afterKeys": 1422
+    },
+    {
+      "clip": "bar_release_land_run",
+      "beforeKeys": 222792,
+      "afterKeys": 51647
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "bar_approach_takeoff",
+      "samples": 615,
+      "maxSkinnedVertexDeltaM": 7.437360941888748e-05,
+      "pass": true
+    },
+    {
+      "clip": "bar_swing_over",
+      "samples": 231,
+      "maxSkinnedVertexDeltaM": 3.1335050960897825e-05,
+      "pass": true
+    },
+    {
+      "clip": "bar_release_land_run",
+      "samples": 1338,
+      "maxSkinnedVertexDeltaM": 6.25586826045113e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v1/viitta/puyi-final.unpacked.glb",
+    "sourceSHA256": "ab07fbf4e27113ea34197d8b14ec2d949cecdc888afb4c47ee6c1655c9632eb5",
+    "file": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v1/viitta/puyi-final.glb",
+    "sha256": "561867afc4a1560c9b41ed77422428db86ebfef5d9da55dacdd6367c2647af3d",
+    "beforeBytes": 17933316,
+    "afterBytes": 13065316,
+    "sourceAccessors": 5114,
+    "usedAccessors": 3730,
+    "deduplicatedAccessors": 2743,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.18055383302271366,
+    "peakRSSMiB": 228.03125
+  },
+  "elapsedSeconds": 27.352131915977225,
+  "peakRSSMiB": 292.53125
+}

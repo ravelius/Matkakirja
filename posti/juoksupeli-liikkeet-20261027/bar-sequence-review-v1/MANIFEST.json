@@ -1,0 +1,61 @@
+{
+  "createdAt": "2026-10-27T17:09:34.335618+00:00",
+  "status": "TECHNICAL_REVIEW_READY_GAME_CONTROLLER_QA_PENDING",
+  "models": [
+    {
+      "file": "models/puyi-perus-parkour.glb",
+      "bytes": 11485732,
+      "sha256": "3bf7430f34f3e9eca57690c45731200309b4725491e8608805758f8725c5584a",
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down",
+        "bar_approach_takeoff",
+        "bar_swing_over",
+        "bar_release_land_run"
+      ],
+      "durationsS": {
+        "bar_approach_takeoff": 0.64,
+        "bar_swing_over": 0.24,
+        "bar_release_land_run": 1.3598378532233215
+      },
+      "wholeMeshFloorM": 0.0009536518906918257,
+      "barTriangleIntersections": 0,
+      "poolContactVertices": 0,
+      "poses": 2152,
+      "rootCurveParityMaxErrorM": 4.518280359883027e-16
+    },
+    {
+      "file": "models/puyi-viitta-parkour.glb",
+      "bytes": 13065396,
+      "sha256": "b0a2cd12ae148f4327653c57cedfee678251125d45a618af52108a18cbde2444",
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down",
+        "bar_approach_takeoff",
+        "bar_swing_over",
+        "bar_release_land_run"
+      ],
+      "durationsS": {
+        "bar_approach_takeoff": 0.64,
+        "bar_swing_over": 0.24,
+        "bar_release_land_run": 1.392522792464146
+      },
+      "wholeMeshFloorM": 0.0009507952033691164,
+      "barTriangleIntersections": 0,
+      "poolContactVertices": 0,
+      "poses": 2184,
+      "rootCurveParityMaxErrorM": 4.440892098500626e-16
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "gameVerified": false
+}

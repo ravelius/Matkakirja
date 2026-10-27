@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "clip": "bar_approach_takeoff",
+      "durationS": 0.64,
+      "poses": 615,
+      "floorMinimumM": 0.0009507952033691164,
+      "maximumBodyTriangleBarIntersections": 0,
+      "maximumHandTriangleBarIntersections": 0,
+      "minimumBodyRadiusM": 0.09539992704970154,
+      "minimumHandRadiusM": 0.06154886039351867,
+      "maxWaterContactVertices": 0,
+      "failedTimes": []
+    },
+    {
+      "clip": "bar_swing_over",
+      "durationS": 0.24,
+      "poses": 231,
+      "floorMinimumM": 1.1026356675183877,
+      "maximumBodyTriangleBarIntersections": 0,
+      "maximumHandTriangleBarIntersections": 0,
+      "minimumBodyRadiusM": 0.09539055185414104,
+      "minimumHandRadiusM": 0.06153376664165079,
+      "maxWaterContactVertices": 0,
+      "failedTimes": []
+    },
+    {
+      "clip": "bar_release_land_run",
+      "durationS": 1.392522792464146,
+      "poses": 1338,
+      "floorMinimumM": 0.0009966617496315676,
+      "maximumBodyTriangleBarIntersections": 0,
+      "maximumHandTriangleBarIntersections": 0,
+      "minimumBodyRadiusM": 0.09539988078584336,
+      "minimumHandRadiusM": 0.06153828666733844,
+      "maxWaterContactVertices": 0,
+      "failedTimes": []
+    }
+  ],
+  "barRadiusToleranceM": 0.002,
+  "poolXNotBoundedForConservativeCheck": true,
+  "seconds": 20.093055333010852
+}

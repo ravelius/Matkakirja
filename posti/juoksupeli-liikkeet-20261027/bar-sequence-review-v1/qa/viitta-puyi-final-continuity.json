@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "joins": [
+    {
+      "from": "bar_approach_takeoff",
+      "to": "bar_swing_over",
+      "poseDelta": 2.797720521918734e-08,
+      "rootDelta": 0.0
+    },
+    {
+      "from": "bar_swing_over",
+      "to": "bar_release_land_run",
+      "poseDelta": 2.797720521918734e-08,
+      "rootDelta": 0.0
+    }
+  ],
+  "angular": [
+    {
+      "clip": "bar_approach_takeoff",
+      "maximumAngularStepAt240HzDegrees": 6.804333227957573,
+      "worst": {
+        "time": 0.18333333333333332,
+        "bone": "cape_6_0"
+      }
+    },
+    {
+      "clip": "bar_swing_over",
+      "maximumAngularStepAt240HzDegrees": 4.590189533596898,
+      "worst": {
+        "time": 0.029166666666666667,
+        "bone": "mixamorig:LeftLeg"
+      }
+    },
+    {
+      "clip": "bar_release_land_run",
+      "maximumAngularStepAt240HzDegrees": 9.453432035780748,
+      "worst": {
+        "time": 0.7458333333333333,
+        "bone": "mixamorig:RightForeArm"
+      }
+    }
+  ],
+  "entryPoseDelta": 5.6636120238096055e-08,
+  "exitPoseDelta": 2.8933351714499622e-08,
+  "runPhaseAtExit": 1.482,
+  "gameVerified": false
+}

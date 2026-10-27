@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v2/viitta/puyi-swing-raw.glb",
+  "sourceSHA256": "c884f3fa0ff8f1a64d6745631a1d363b39cb8d5abdc22bcd909b84d59fa0f45c",
+  "file": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v2/viitta/puyi-final.glb",
+  "sha256": "b0a2cd12ae148f4327653c57cedfee678251125d45a618af52108a18cbde2444",
+  "bytes": 13065396,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternionChord": 2e-05,
+    "translationScale": 2e-06
+  },
+  "keys": [
+    {
+      "clip": "bar_swing_over",
+      "beforeKeys": 1482,
+      "afterKeys": 1426
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "bar_swing_over",
+      "samples": 231,
+      "maxSkinnedVertexDeltaM": 2.755035896525645e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v2/viitta/puyi-final.unpacked.glb",
+    "sourceSHA256": "5b2b3f66487112fd8f6c056129b503a4c46c9e4b8e798192455670cf7afd4830",
+    "file": "output/juoksupeli-liikkeet-20261027/work/bar-sequence-v2/viitta/puyi-final.glb",
+    "sha256": "b0a2cd12ae148f4327653c57cedfee678251125d45a618af52108a18cbde2444",
+    "beforeBytes": 13230468,
+    "afterBytes": 13065396,
+    "sourceAccessors": 3421,
+    "usedAccessors": 3135,
+    "deduplicatedAccessors": 2743,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.10409329202957451,
+    "peakRSSMiB": 189.296875
+  },
+  "elapsedSeconds": 2.644243040936999,
+  "peakRSSMiB": 232.75
+}

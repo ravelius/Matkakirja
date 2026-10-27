@@ -1,0 +1,27 @@
+{
+  "coordinateSystem": "metres,+Yup,+Zforward. Place reference ground origin under actual bar, rotate once to route; bar center[0,2.3,0].",
+  "barHeightM": 2.3,
+  "barDiameterM": 0.12,
+  "poolAlongZ": [
+    0,
+    2.6
+  ],
+  "clipSequence": [
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run"
+  ],
+  "internalTransitions": "Exact end/start poses and roots match. Play internal boundaries without generic0.18s crossfade, or concatenate the three tracks. Independent0.18s crossfade would disturb contact/root trajectory and needs a separate receiver test.",
+  "entry": "Initial root[0,0,-2.8], run phase0 at5m/s. Trigger on approach before bar.",
+  "exit": "Each root ends beyond pool, Y0, speed5m/s; continue source run phase1.482s.",
+  "movement": "Use root_curve + ROOT-PARAMETERS; do not add ordinary root motion/advance again. If changing playback speed, scale root time and clip time together.",
+  "jump": "Special assisted jump, root rises about1.2m to reach2.3m bar with1.35m child. Do not substitute ordinary low jump curve.",
+  "landing": "Heavy landing already included. Do not overlay automatic land_soft.",
+  "import": "Nine-clip parkour ADDITIONAL subset. Previous six unchanged. Import the three new clips onto matching Puyi rig; do not overwrite full other animation library.",
+  "knownLimits": [
+    "Runtime controller/camera/cloth self-collision and owner acceptance pending.",
+    "Cape source underarm correction remains separate.",
+    "Bar visual proof is local reference geometry, not installed-game capture."
+  ],
+  "gameVerified": false
+}

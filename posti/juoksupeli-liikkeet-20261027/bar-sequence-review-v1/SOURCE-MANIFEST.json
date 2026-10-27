@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/jump-down-review-v1/models/puyi-perus-parkour.glb",
+      "sha256": "8f09c0c7e9af12e5592e2ece0355d32ead53f773c84e1c208ef1c29a6ae10ce8",
+      "previousSixClipsAndGeometryExact": true
+    },
+    {
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/jump-down-review-v1/models/puyi-viitta-parkour.glb",
+      "sha256": "5e058aa57a7a5a03eabd0e959089d31a83feaeff6ea625d4b3335b2597298c6e",
+      "previousSixClipsAndGeometryExact": true
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "rejectedWorkPreserved": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/bar-study-v1",
+  "scope": "Only animations added to existing geometry/rig/textures"
+}

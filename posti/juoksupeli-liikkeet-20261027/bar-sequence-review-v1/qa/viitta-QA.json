@@ -1,0 +1,103 @@
+{
+  "status": "CANDIDATE_PENDING_DENSE_BAR_POOL_FLOOR_VISUAL_QA",
+  "variant": "viitta",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/jump-down-review-v1/models/puyi-viitta-parkour.glb",
+  "sourceSHA256": "5e058aa57a7a5a03eabd0e959089d31a83feaeff6ea625d4b3335b2597298c6e",
+  "landingSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-heavy-review-v1/models/puyi-viitta.glb",
+  "durations": [
+    0.64,
+    0.24,
+    1.392522792464146
+  ],
+  "grip": [
+    {
+      "side": "Left",
+      "reachExcessM": 0,
+      "target": [
+        0.18,
+        1.205,
+        0.15
+      ]
+    },
+    {
+      "side": "Right",
+      "reachExcessM": 0,
+      "target": [
+        -0.18,
+        1.205,
+        0.15
+      ]
+    }
+  ],
+  "swingStartRoot": [
+    0.0,
+    1.148273502099746,
+    -0.3729232185263309
+  ],
+  "releaseRoot": [
+    0.0,
+    1.07405888122077,
+    0.25840252283782505
+  ],
+  "releaseVelocityMps": [
+    -0.0,
+    2.0672201827026004,
+    4.193657375744244
+  ],
+  "releaseAirDurationS": 0.612522792464146,
+  "landingApproachRoot": [
+    0.0,
+    0.49999999999999956,
+    2.827113249266551
+  ],
+  "records": [
+    {
+      "clip": "bar_approach_takeoff",
+      "durationS": 0.64,
+      "rootStart": [
+        0.0,
+        0.0,
+        -2.8
+      ],
+      "rootEnd": [
+        0.0,
+        1.148273502099746,
+        -0.3729232185263309
+      ]
+    },
+    {
+      "clip": "bar_swing_over",
+      "durationS": 0.24,
+      "rootStart": [
+        0.0,
+        1.148273502099746,
+        -0.3729232185263309
+      ],
+      "rootEnd": [
+        0.0,
+        1.07405888122077,
+        0.25840252283782505
+      ]
+    },
+    {
+      "clip": "bar_release_land_run",
+      "durationS": 1.392522792464146,
+      "rootStart": [
+        0.0,
+        1.07405888122077,
+        0.25840252283782505
+      ],
+      "rootEnd": [
+        0.0,
+        0.0,
+        4.327113249266551
+      ]
+    }
+  ],
+  "specialAssistedJumpRequired": true,
+  "note": "2.3m bar needs roughly1.1m vertical root rise with this1.35m child rig; not ordinary0.5m jump. No game controller changed.",
+  "newTripoCalls": 0,
+  "credits": 0,
+  "seconds": 4.742636125069112,
+  "peakRSSMiB": 269.78125
+}
