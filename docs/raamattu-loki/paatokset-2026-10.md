@@ -2947,3 +2947,7 @@ KK palautti Akropolis-koosteen ennen omistajaa. 1) Commons-kuva (Wikidata P18) j
 ## KIINNIOTTO: EUNUKIN SELKÄ KAMERAAN, KEISARIA EI KÄÄNNETÄ (OMISTAJA 27.10. klo 18.12) (27.10.2026 klo 18.12)
 
 OMISTAJAN PÄÄTÖS 18.12 (kortti KK:ssa v4-videon jälkeen, sanatarkasti): kysymys Onko kiinniotto nyt oikean suuntainen? → Ei tehdä kääntää. Parempi että keisaria ei näy koska kiinniotto ei näytä aidolta. Mutta enukin selkä peittää hyvin huonot liikkeet. Kumoaa 17.48-päätöksen (keisari kasvot kameraan). Toteutus: Pelikoodari palaa v3:n otteeseen (dbf343a16); eunukin selkä kameraan peittää keisarin myös toisessa kiinniotossa ja Uuvuit-ruudulla. Ohjeteksti korjataan, ja eunukin kasvot tulevat Codexilta. Kamera ennallaan.
+
+## JUOKSUPELI: HENGITYSÄÄNI POIS KOKONAAN (OMISTAJA 27.10. klo 18.37) (27.10.2026 klo 18.38)
+
+OMISTAJAN PÄÄTÖS 18.37 (sanatarkasti, rimpuiluvideo v5:n jälkeen): Ota se hengitys äänitehoste pois kokonaan. Nyt kuului ainakin siinä ihan lopussa. Toteutus: Pelikoodari poistaa hengitysäänitehosteen juoksupelin kaikista kohdista. Repliikit 4 ja 9 (Sainpas sinut! / Päästä irti!) jäävät ennalleen.
