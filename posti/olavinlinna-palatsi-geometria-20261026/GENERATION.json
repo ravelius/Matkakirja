@@ -1,0 +1,19 @@
+{
+  "tool": "image_gen.imagegen",
+  "callsIssued": 2,
+  "successfulOutputs": 1,
+  "abortedWithoutOutput": 1,
+  "newAttemptsAfterSuccessfulImage": 0,
+  "originalOrderLimit": 1,
+  "retryAuthorization": "Omistajan suora vastaus: Saa yrittää uudelleen",
+  "nativePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-palatsi-geometria-1003-20261026/native/palatsi-target-retry.png",
+  "nativeSHA256": "787bae88f8fceca7d5515f5cc3e394d8cc44ea5008b03ea2c63b682be20d32d8",
+  "prompt": "A photorealistic architectural target illustration of the lower palace hall (linnantupa) inside Olavinlinna castle, imagined for year1499. This is an explicitly interpretive reconstruction, not a documentary photograph. Reference1 is the binding floor plan: a long modest rectangular hall about7metres wide and17metres long, with the straight narrow masonry staircase enclosed in the thick LEFT wall and a small north passage at the far end. Reference2 is the binding section: lower floor and upper floor separated by about4.1metres. Show ONLY the lower hall from a person's eye level, broad perspective towards north end. Heavy irregular Finnish fieldstone masonry with thick pale lime mortar, patchy warm off-white lime plaster, rough worn stone floor. A very shallow broad plastered barrel vault, no centre columns, no grand gothic ribbing. Low arch springing at about2.85m abovefloor and crown about3.6m. Plain dark rough timber door at the north passage, open and recessed, iron strap hinges. Light gently rakes in from the open passage at far end, muted cool daylight balanced with very subtle warm reflected light. Deep shadows, natural photographic textures, real stone and lime rather than tiling noise or CGI. No modern windows, electric lamps, signage, glass curtain walls, people, furniture, decorations, text or logos. The route is clear. No illustration title or watermark printed on image. Landscape1448x1086. Whole new image.\n",
+  "references": [
+    "asettelu-palatsi/palatsi-pohja-1-y+3,5.png",
+    "asettelu-palatsi/palatsi-leikkaus-idasta.png"
+  ],
+  "imagePixelEdits": false,
+  "metadataAdded": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "imageUse": "Interpretive material and atmosphere target; binding geometry remains source GLB. Extra image wall recesses are not added to game geometry."
+}

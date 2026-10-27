@@ -1,0 +1,1636 @@
+{
+  "sourceSHA256": "9a38708d050a8cc54218d6c5a1e4f2182ac56cc899c7d917ed1d127a1b6bac72",
+  "markersCount": 63,
+  "markerSnapshots": [
+    {
+      "name": "esine:avainrengas",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.892999649047852,
+        0.0,
+        1.0,
+        0.0,
+        -7.789999961853027,
+        0.0,
+        0.0,
+        1.0,
+        8.300000190734863,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"esine:avainrengas\", \"paikka\": [-9.893, 8.3, 7.79], \"glb\": \"esine-avainrengas.glb\", \"kannettava\": true, \"huom\": \"Kellotornin avaimet voudin pöydällä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "esine:keittokulho",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -12.697999954223633,
+        0.0,
+        1.0,
+        0.0,
+        -0.6330000162124634,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"esine:keittokulho\", \"paikka\": [-12.698, 4.18, 0.633], \"kannettava\": true, \"glb\": \"esine-keittokulho.glb\", \"huom\": \"Linnantuvan pitkällä pöydällä (\\\"voudin pöytään ylös\\\"); höyry solmusta hoyry\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "esine:kulho-poydalle",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.11400032043457,
+        0.0,
+        1.0,
+        0.0,
+        -7.336999893188477,
+        0.0,
+        0.0,
+        1.0,
+        8.300000190734863,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"esine:kulho-poydalle\", \"paikka\": [-9.114, 8.3, 7.337], \"huom\": \"tähän pelaaja laskee keittokulhon\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:linnavaki-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.369000434875488,
+        0.0,
+        1.0,
+        0.0,
+        -0.6380000114440918,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:linnavaki-1\", \"paikka\": [-13.369, 3.4, 0.638], \"kierto_y\": -1.0995, \"profiili\": \"vartija\", \"henkilo\": \"vartija-1500\", \"huom\": \"syö pitkän pöydän ääressä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:linnavaki-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -12.234000205993652,
+        0.0,
+        1.0,
+        0.0,
+        -2.865999937057495,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:linnavaki-2\", \"paikka\": [-12.234, 3.4, 2.866], \"kierto_y\": -1.0995, \"profiili\": \"vartija\", \"henkilo\": \"talonpoika-1500\", \"huom\": \"syö pitkän pöydän ääressä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:linnavaki-3",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -11.532999992370605,
+        0.0,
+        1.0,
+        0.0,
+        -0.9369999766349792,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:linnavaki-3\", \"paikka\": [-11.533, 3.4, 0.937], \"kierto_y\": 2.0421, \"profiili\": \"vartija\", \"henkilo\": \"vartija-1500\", \"huom\": \"syö pitkän pöydän ääressä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:linnavaki-4",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.625,
+        0.0,
+        1.0,
+        0.0,
+        -2.7190001010894775,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:linnavaki-4\", \"paikka\": [-10.625, 3.4, 2.719], \"kierto_y\": 2.0421, \"profiili\": \"vartija\", \"henkilo\": \"talonpoika-1500\", \"huom\": \"syö pitkän pöydän ääressä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:noppa-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.345999717712402,
+        0.0,
+        1.0,
+        0.0,
+        -7.123000144958496,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:noppa-1\", \"paikka\": [-10.346, 3.4, 7.123], \"kierto_y\": 0.4713, \"profiili\": \"vartija\", \"henkilo\": \"renki-1500\", \"huom\": \"noppapeli (kuunnelma)\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:noppa-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.664999961853027,
+        0.0,
+        1.0,
+        0.0,
+        -8.458999633789062,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:noppa-2\", \"paikka\": [-9.665, 3.4, 8.459], \"kierto_y\": -2.6703, \"profiili\": \"vartija\", \"henkilo\": \"renki-1500\", \"huom\": \"noppapeli (kuunnelma)\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "istuu:vouti",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.015999794006348,
+        0.0,
+        1.0,
+        0.0,
+        -8.409000396728516,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"istuu:vouti\", \"paikka\": [-9.016, 7.5, 8.409], \"kierto_y\": -2.6703, \"henkilo\": \"vouti-1500\", \"huom\": \"voudin pöydän eteläpuolella, katse pohjoiseen saliin\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "lakaisu:apulainen-tupa",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -11.395999908447266,
+        0.0,
+        1.0,
+        0.0,
+        -7.264999866485596,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"lakaisu:apulainen-tupa\", \"paikka\": [-11.396, 3.4, 7.265], \"henkilo\": \"apulainen-1500\", \"aani\": \"luuta\", \"huom\": \"9.10. Siirtoseppä: luuta-äänen paikka; apulainen lakaisee oven edustaa partio-2:n kohdalla\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "ovi:linnantupa-pohjoinen",
+      "matrixWorld": [
+        1.0499999523162842,
+        0.0,
+        0.0,
+        -16.143999099731445,
+        0.0,
+        0.11999999731779099,
+        0.0,
+        5.578999996185303,
+        0.0,
+        0.0,
+        2.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"ovi:linnantupa-pohjoinen\", \"paikka\": [-16.144, 3.4, -5.579], \"leveys\": 1.05, \"korkeus\": 2.0, \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "ovi:palatsi-porras-ala",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -18.582000732421875,
+        0.0,
+        0.11999999731779099,
+        0.0,
+        2.6540000438690186,
+        0.0,
+        0.0,
+        2.0999999046325684,
+        4.449999809265137,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"ovi:palatsi-porras-ala\", \"paikka\": [-18.582, 3.4, -2.654], \"leveys\": 1.0, \"korkeus\": 2.1, \"huom\": \"muurinsisäinen porras saliin (A), noin 20 askelmaa\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "ovi:palatsi-porras-yla",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.994000434875488,
+        0.0,
+        0.11999999731779099,
+        0.0,
+        -2.424999952316284,
+        0.0,
+        0.0,
+        2.0999999046325684,
+        8.550000190734863,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"ovi:palatsi-porras-yla\", \"paikka\": [-15.994, 7.5, 2.425], \"leveys\": 1.0, \"korkeus\": 2.1, \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "partio:apulainen-tupa-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.618000030517578,
+        0.0,
+        1.0,
+        0.0,
+        1.0219999551773071,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"partio:apulainen-tupa-1\", \"paikka\": [-15.618, 3.4, -1.022], \"profiili\": \"apulainen\", \"henkilo\": \"apulainen-1500\", \"odotus_s\": 4, \"huom\": \"tarjoilee pitkän pöydän ja oven väliä\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "partio:apulainen-tupa-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -11.758999824523926,
+        0.0,
+        1.0,
+        0.0,
+        -6.552000045776367,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"partio:apulainen-tupa-2\", \"paikka\": [-11.759, 3.4, 6.552], \"odotus_s\": 3, \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "piilo:tupa-tynnyrit",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -7.189000129699707,
+        0.0,
+        1.0,
+        0.0,
+        -7.591000080108643,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"piilo:tupa-tynnyrit\", \"paikka\": [-7.189, 3.4, 7.591], \"tyyppi\": \"kyykky\", \"koko\": [0.8, 1.0, 0.8], \"kierto_y\": 0.4713, \"huom\": \"oluttynnyrien takana kaakkoiskulmassa\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "pinta:porras-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -18.045000076293945,
+        0.0,
+        1.0,
+        0.0,
+        -0.2709999978542328,
+        0.0,
+        0.0,
+        1.0,
+        5.449999809265137,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"pinta:porras-1\", \"paikka\": [-18.045, 5.45, 0.271], \"koko\": [1.6, 4.6, 7.4], \"huom\": \"muurinsisäinen porras (AABB likimäärin)\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-49",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -17.097000122070312,
+        0.0,
+        1.0,
+        0.0,
+        7.449999809265137,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-49\", \"paikka\": [-17.097, 3.4, -7.45], \"osa\": \"palatsi\", \"huom\": \"käytävä\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-50",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -16.143999099731445,
+        0.0,
+        1.0,
+        0.0,
+        5.578999996185303,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-50\", \"paikka\": [-16.144, 3.4, -5.579], \"osa\": \"palatsi\", \"huom\": \"Linnantuvan pohjoisovi\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-51",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.781000137329102,
+        0.0,
+        1.0,
+        0.0,
+        4.867000102996826,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-51\", \"paikka\": [-15.781, 3.4, -4.867], \"osa\": \"palatsi\", \"huom\": \"Linnantupa\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-52",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.812000274658203,
+        0.0,
+        1.0,
+        0.0,
+        -1.2009999752044678,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-52\", \"paikka\": [-13.812, 3.4, 1.201], \"osa\": \"palatsi\", \"huom\": \"pitkä pöytä: keittokulho\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-53",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -18.13599967956543,
+        0.0,
+        1.0,
+        0.0,
+        2.88100004196167,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-53\", \"paikka\": [-18.136, 3.4, -2.881], \"osa\": \"palatsi\", \"huom\": \"kohti salin porrasta\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-54",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -19.11199951171875,
+        0.0,
+        1.0,
+        0.0,
+        1.8229999542236328,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-54\", \"paikka\": [-19.112, 3.4, -1.823], \"osa\": \"palatsi\", \"huom\": \"salin portaan alapää\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-55",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -16.97800064086914,
+        0.0,
+        1.0,
+        0.0,
+        -2.365000009536743,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-55\", \"paikka\": [-16.978, 7.5, 2.365], \"osa\": \"palatsi\", \"huom\": \"salin portaan yläpää\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-56",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.54800033569336,
+        0.0,
+        1.0,
+        0.0,
+        -2.197999954223633,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-56\", \"paikka\": [-15.548, 7.5, 2.198], \"osa\": \"palatsi\", \"huom\": \"voudin sali\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-57",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.923999786376953,
+        0.0,
+        1.0,
+        0.0,
+        -6.626999855041504,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-57\", \"paikka\": [-9.924, 7.5, 6.627], \"osa\": \"palatsi\", \"huom\": \"voudin pöytä: kulho pöytään, avainrengas\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-58",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.54800033569336,
+        0.0,
+        1.0,
+        0.0,
+        -2.197999954223633,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-58\", \"paikka\": [-15.548, 7.5, 2.198], \"osa\": \"palatsi\", \"huom\": \"paluu\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-59",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -16.97800064086914,
+        0.0,
+        1.0,
+        0.0,
+        -2.365000009536743,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-59\", \"paikka\": [-16.978, 7.5, 2.365], \"osa\": \"palatsi\", \"huom\": \"salin portaan yläpää\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-60",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -19.11199951171875,
+        0.0,
+        1.0,
+        0.0,
+        1.8229999542236328,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-60\", \"paikka\": [-19.112, 3.4, -1.823], \"osa\": \"palatsi\", \"huom\": \"salin portaan alapää\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-61",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.781000137329102,
+        0.0,
+        1.0,
+        0.0,
+        4.867000102996826,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-61\", \"paikka\": [-15.781, 3.4, -4.867], \"osa\": \"palatsi\", \"huom\": \"Linnantupa\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-62",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -16.143999099731445,
+        0.0,
+        1.0,
+        0.0,
+        5.578999996185303,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-62\", \"paikka\": [-16.144, 3.4, -5.579], \"osa\": \"palatsi\", \"huom\": \"Linnantuvan pohjoisovi\"}"
+      }
+    },
+    {
+      "name": "reitti:pelaaja-63",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -17.097000122070312,
+        0.0,
+        1.0,
+        0.0,
+        7.449999809265137,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"reitti:pelaaja-63\", \"paikka\": [-17.097, 3.4, -7.45], \"osa\": \"palatsi\", \"huom\": \"käytävä\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-brass_goblets-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.5600004196167,
+        0.0,
+        1.0,
+        0.0,
+        -9.329999923706055,
+        0.0,
+        0.0,
+        1.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-brass_goblets-1\", \"paikka\": [-13.56, 4.4, 9.33], \"kierto_y\": -1.3558, \"glb\": \"rekvisiitta-brass_goblets.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-carved_wooden_plate-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -6.559999942779541,
+        0.0,
+        1.0,
+        0.0,
+        -4.929999828338623,
+        0.0,
+        0.0,
+        1.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-carved_wooden_plate-1\", \"paikka\": [-6.56, 4.4, 4.93], \"kierto_y\": 0.1423, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-carved_wooden_plate-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -8.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        1.8700000047683716,
+        0.0,
+        0.0,
+        1.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-carved_wooden_plate-2\", \"paikka\": [-8.76, 4.4, -1.87], \"kierto_y\": -2.0461, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-carved_wooden_plate-3",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -5.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        -4.329999923706055,
+        0.0,
+        0.0,
+        1.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-carved_wooden_plate-3\", \"paikka\": [-5.76, 4.4, 4.33], \"kierto_y\": 0.5439, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-carved_wooden_plate-4",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        -1.1299999952316284,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-carved_wooden_plate-4\", \"paikka\": [-10.96, 4.18, 1.13], \"kierto_y\": 2.5457, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-codex-liina-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        -4.730000019073486,
+        0.0,
+        0.0,
+        1.0,
+        4.4019999504089355,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-codex-liina-1\", \"paikka\": [-15.76, 4.402, 4.73], \"kierto_y\": -0.3927, \"glb\": \"rekvisiitta-codex-liina.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-codex-viltti-punainen-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        -1.1299999952316284,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-codex-viltti-punainen-1\", \"paikka\": [-15.96, 3.4, 1.13], \"kierto_y\": 1.7921, \"glb\": \"rekvisiitta-codex-viltti-punainen.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-food_apple_01-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        1.4700000286102295,
+        0.0,
+        0.0,
+        1.0,
+        4.400000095367432,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-food_apple_01-1\", \"paikka\": [-9.76, 4.4, -1.47], \"kierto_y\": -2.8204, \"glb\": \"rekvisiitta-food_apple_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-food_apple_01-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -14.15999984741211,
+        0.0,
+        1.0,
+        0.0,
+        -2.3299999237060547,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-food_apple_01-2\", \"paikka\": [-14.16, 4.18, 2.33], \"kierto_y\": 2.9382, \"glb\": \"rekvisiitta-food_apple_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-jug_01-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -11.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        -1.7300000190734863,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-jug_01-1\", \"paikka\": [-11.96, 4.18, 1.73], \"kierto_y\": -2.4039, \"glb\": \"rekvisiitta-jug_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-metal_jug-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.5600004196167,
+        0.0,
+        1.0,
+        0.0,
+        -2.7300000190734863,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-metal_jug-1\", \"paikka\": [-13.56, 4.18, 2.73], \"kierto_y\": -1.2979, \"glb\": \"rekvisiitta-metal_jug.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wine_barrel_01-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        -5.130000114440918,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wine_barrel_01-1\", \"paikka\": [-13.76, 3.4, 5.13], \"kierto_y\": 2.6456, \"glb\": \"rekvisiitta-wine_barrel_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wooden_bowl_02-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -13.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        -2.930000066757202,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wooden_bowl_02-1\", \"paikka\": [-13.96, 4.18, 2.93], \"kierto_y\": -1.9579, \"glb\": \"rekvisiitta-wooden_bowl_02.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wooden_bowl_02-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.359999656677246,
+        0.0,
+        1.0,
+        0.0,
+        -0.5299999713897705,
+        0.0,
+        0.0,
+        1.0,
+        4.179999828338623,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wooden_bowl_02-2\", \"paikka\": [-10.36, 4.18, 0.53], \"kierto_y\": -3.0795, \"glb\": \"rekvisiitta-wooden_bowl_02.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wooden_bucket_02-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -12.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        6.070000171661377,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wooden_bucket_02-1\", \"paikka\": [-12.96, 3.4, -6.07], \"kierto_y\": -0.5713, \"glb\": \"rekvisiitta-wooden_bucket_02.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wooden_stool_01-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -9.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        -1.9299999475479126,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wooden_stool_01-1\", \"paikka\": [-9.76, 3.4, 1.93], \"kierto_y\": -1.3259, \"glb\": \"rekvisiitta-wooden_stool_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:linnantupa-wooden_stool_01-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -11.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        3.869999885559082,
+        0.0,
+        0.0,
+        1.0,
+        3.4000000953674316,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:linnantupa-wooden_stool_01-2\", \"paikka\": [-11.96, 3.4, -3.87], \"kierto_y\": -1.3293, \"glb\": \"rekvisiitta-wooden_stool_01.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-brass_goblets-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.960000038146973,
+        0.0,
+        1.0,
+        0.0,
+        3.869999885559082,
+        0.0,
+        0.0,
+        1.0,
+        8.399999618530273,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-brass_goblets-1\", \"paikka\": [-10.96, 8.4, -3.87], \"kierto_y\": 1.0421, \"glb\": \"rekvisiitta-brass_goblets.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-carved_wooden_plate-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -15.15999984741211,
+        0.0,
+        1.0,
+        0.0,
+        -6.329999923706055,
+        0.0,
+        0.0,
+        1.0,
+        8.199999809265137,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-carved_wooden_plate-1\", \"paikka\": [-15.16, 8.2, 6.33], \"kierto_y\": 2.7889, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-carved_wooden_plate-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -6.159999847412109,
+        0.0,
+        1.0,
+        0.0,
+        -4.53000020980835,
+        0.0,
+        0.0,
+        1.0,
+        8.399999618530273,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-carved_wooden_plate-2\", \"paikka\": [-6.16, 8.4, 4.53], \"kierto_y\": 0.6002, \"glb\": \"rekvisiitta-carved_wooden_plate.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-codex-asiakirja-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.359999656677246,
+        0.0,
+        1.0,
+        0.0,
+        4.46999979019165,
+        0.0,
+        0.0,
+        1.0,
+        8.402000427246094,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-codex-asiakirja-1\", \"paikka\": [-10.36, 8.402, -4.47], \"kierto_y\": 0.0, \"glb\": \"rekvisiitta-codex-asiakirja.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-codex-kuvakudos-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -12.975000381469727,
+        0.0,
+        1.0,
+        0.0,
+        7.057000160217285,
+        0.0,
+        0.0,
+        1.0,
+        8.510000228881836,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-codex-kuvakudos-1\", \"paikka\": [-12.975, 8.51, -7.057], \"kierto_y\": -1.0996, \"glb\": \"rekvisiitta-codex-kuvakudos.glb\", \"osa\": \"palatsi\", \"seina\": true}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-codex-tilikirja-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -8.5600004196167,
+        0.0,
+        1.0,
+        0.0,
+        -7.130000114440918,
+        0.0,
+        0.0,
+        1.0,
+        8.302000045776367,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-codex-tilikirja-1\", \"paikka\": [-8.56, 8.302, 7.13], \"kierto_y\": 1.5708, \"glb\": \"rekvisiitta-codex-tilikirja.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-codex-tott-vaakuna-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -10.27400016784668,
+        0.0,
+        1.0,
+        0.0,
+        1.7580000162124634,
+        0.0,
+        0.0,
+        1.0,
+        9.0600004196167,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-codex-tott-vaakuna-1\", \"paikka\": [-10.274, 9.06, -1.758], \"kierto_y\": -1.0996, \"glb\": \"rekvisiitta-codex-tott-vaakuna.glb\", \"osa\": \"palatsi\", \"seina\": true}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-codex-viltti-sininen-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -16.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        4.670000076293945,
+        0.0,
+        0.0,
+        1.0,
+        7.510000228881836,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-codex-viltti-sininen-1\", \"paikka\": [-16.76, 7.51, -4.67], \"kierto_y\": 0.6882, \"glb\": \"rekvisiitta-codex-viltti-sininen.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-metal_jug-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -6.760000228881836,
+        0.0,
+        1.0,
+        0.0,
+        -4.730000019073486,
+        0.0,
+        0.0,
+        1.0,
+        8.399999618530273,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-metal_jug-1\", \"paikka\": [-6.76, 8.4, 4.73], \"kierto_y\": -0.0318, \"glb\": \"rekvisiitta-metal_jug.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-wooden_candlestick-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -6.559999942779541,
+        0.0,
+        1.0,
+        0.0,
+        -8.329999923706055,
+        0.0,
+        0.0,
+        1.0,
+        8.050000190734863,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-wooden_candlestick-1\", \"paikka\": [-6.56, 8.05, 8.33], \"kierto_y\": 1.6864, \"glb\": \"rekvisiitta-wooden_candlestick.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-wooden_candlestick-2",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -14.359999656677246,
+        0.0,
+        1.0,
+        0.0,
+        -6.53000020980835,
+        0.0,
+        0.0,
+        1.0,
+        8.199999809265137,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-wooden_candlestick-2\", \"paikka\": [-14.36, 8.2, 6.53], \"kierto_y\": -2.8639, \"glb\": \"rekvisiitta-wooden_candlestick.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "rekvisiitta:voudin-sali-wooden_crate_02-1",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -18.15999984741211,
+        0.0,
+        1.0,
+        0.0,
+        3.4700000286102295,
+        0.0,
+        0.0,
+        1.0,
+        7.510000228881836,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"rekvisiitta:voudin-sali-wooden_crate_02-1\", \"paikka\": [-18.16, 7.51, -3.47], \"kierto_y\": 2.2469, \"glb\": \"rekvisiitta-wooden_crate_02.glb\", \"osa\": \"palatsi\"}"
+      }
+    },
+    {
+      "name": "seisoo:aitan-hoitaja",
+      "matrixWorld": [
+        1.0,
+        0.0,
+        0.0,
+        -8.40999984741211,
+        0.0,
+        1.0,
+        0.0,
+        -5.855999946594238,
+        0.0,
+        0.0,
+        1.0,
+        7.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "extras": {
+        "merkki": "{\"nimi\": \"seisoo:aitan-hoitaja\", \"paikka\": [-8.41, 7.5, 5.856], \"kierto_y\": -0.4849, \"henkilo\": \"kirjuri-1500\", \"huom\": \"aitan hoitaja luetteloineen; vouti kääntyy kahdesti 6 s:ksi häneen päin\", \"osa\": \"palatsi\"}"
+      }
+    }
+  ],
+  "sourceWalkVertices": 765,
+  "sourceWalkVertexSHA256": "a13aa69b51d9b6b1c0949a3363838b3e4cde1dc615ed7b5b6d85d21ceb6a318d",
+  "floorLevels": [
+    3.4000000953674316,
+    7.5
+  ],
+  "vaultSpringY": 6.25,
+  "vaultCrownY": 7.0,
+  "upperBeamMinimumY": 9.94,
+  "newFurniture": false,
+  "gameIntegrationVerified": false,
+  "routeHeadroomObstructions": [
+    {
+      "marker": "reitti:pelaaja-54",
+      "hitDistance": 0.125,
+      "hit": [
+        -19.11199951171875,
+        3.6050000190734863,
+        -1.8229999542236328
+      ]
+    },
+    {
+      "marker": "reitti:pelaaja-60",
+      "hitDistance": 0.125,
+      "hit": [
+        -19.11199951171875,
+        3.6050000190734863,
+        -1.8229999542236328
+      ]
+    }
+  ],
+  "routeFloorChecks": [
+    {
+      "marker": "partio:apulainen-tupa-1",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "partio:apulainen-tupa-2",
+      "floorFound": true,
+      "distance": 0.07999993115663528
+    },
+    {
+      "marker": "reitti:pelaaja-49",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-50",
+      "floorFound": true,
+      "distance": 0.07999991625547409
+    },
+    {
+      "marker": "reitti:pelaaja-51",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-52",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-53",
+      "floorFound": true,
+      "distance": 0.07999991625547409
+    },
+    {
+      "marker": "reitti:pelaaja-54",
+      "floorFound": true,
+      "distance": 0.06999993324279785
+    },
+    {
+      "marker": "reitti:pelaaja-55",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-56",
+      "floorFound": true,
+      "distance": 0.07999993115663528
+    },
+    {
+      "marker": "reitti:pelaaja-57",
+      "floorFound": true,
+      "distance": 0.07999993115663528
+    },
+    {
+      "marker": "reitti:pelaaja-58",
+      "floorFound": true,
+      "distance": 0.07999993115663528
+    },
+    {
+      "marker": "reitti:pelaaja-59",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-60",
+      "floorFound": true,
+      "distance": 0.06999993324279785
+    },
+    {
+      "marker": "reitti:pelaaja-61",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    },
+    {
+      "marker": "reitti:pelaaja-62",
+      "floorFound": true,
+      "distance": 0.07999991625547409
+    },
+    {
+      "marker": "reitti:pelaaja-63",
+      "floorFound": true,
+      "distance": 0.07999992370605469
+    }
+  ]
+}

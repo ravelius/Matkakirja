@@ -1,0 +1,100 @@
+[
+ {
+  "kansio": "output/olavinlinna-palatsi-geometria-1003-20261026/delivery",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "palatsi.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "palatsi.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 3196,
+     "piirrot": 5,
+     "materiaalit": 5,
+     "solmut": 65,
+     "kuvat": [
+      "1024×1024 jpg",
+      "1024×1024 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -20.412,
+       3.1,
+       -10.953
+      ],
+      "max": [
+       -4.951,
+       10.2,
+       11.513
+      ],
+      "koko": [
+       15.461,
+       7.1,
+       22.466
+      ]
+     }
+    },
+    "polku": "palatsi.glb"
+   },
+   {
+    "nimi": "Palatsi - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "polku": "Palatsi - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1448,
+     "h": 1086
+    }
+   },
+   {
+    "nimi": "lower-hall-internal.png",
+    "polku": "qa/lower-hall-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "stair-internal.png",
+    "polku": "qa/stair-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 960,
+     "h": 1280
+    }
+   },
+   {
+    "nimi": "upper-hall-internal.png",
+    "polku": "qa/upper-hall-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: palatsi.glb ei liikettä"
+  ]
+ }
+]

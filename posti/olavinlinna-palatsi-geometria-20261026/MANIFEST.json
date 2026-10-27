@@ -1,0 +1,86 @@
+{
+  "task": 1003,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 2339,
+      "sha256": "a0f1e48f65b7e37d87b0ddced08e61cbe025d83c8406886dd4a31b018445c508"
+    },
+    {
+      "path": "INPUT-VERIFICATION.json",
+      "bytes": 1793,
+      "sha256": "73e245160497bcb83ffd07a876d2fe29288078dcfa0216997354add9a08491d5"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 1832,
+      "sha256": "d31417a89bd56f848f2b1abd2bea453787d5f466230cc580eb2dd919f1870805"
+    },
+    {
+      "path": "LUEMINUT.md",
+      "bytes": 3701,
+      "sha256": "7b0f4ccbea977a57c8aeb5d457fff0e01025c3dc94a60b83502df56f2d30c8d2"
+    },
+    {
+      "path": "OPIT-PT-LLE.md",
+      "bytes": 1065,
+      "sha256": "c83983f6eea14fb78d7febe5c35f51f3c705edf57d6c6b1cc7b0fc7bdd20a40a"
+    },
+    {
+      "path": "Palatsi - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+      "bytes": 2952069,
+      "sha256": "2a8ddfcf7bb05078aedfd970c0d3f49ca3e59f61c102a6fd226f30949935c77b"
+    },
+    {
+      "path": "SOURCE-PINS.json",
+      "bytes": 1003,
+      "sha256": "6c8714fd9e65ba7a805570c4741f799076e77f5af9fb0a23da82551dcefc586f"
+    },
+    {
+      "path": "palatsi.glb",
+      "bytes": 9071532,
+      "sha256": "3ddc59cfe9bbb4c24f602ae5a95d5365bfaf4afab4585521540bb5bfb087c8ee",
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    },
+    {
+      "path": "qa/format-check.json",
+      "bytes": 1885,
+      "sha256": "d5487e8babaeade4509c16f53406261760e4d3f8b58309cec84feba46e6b5e11"
+    },
+    {
+      "path": "qa/geometry-build.json",
+      "bytes": 38343,
+      "sha256": "d4e45054c00aba9ab0e50d5bd63b0b94e75987e8165ad13e0550f6ef828885e7"
+    },
+    {
+      "path": "qa/geometry-verification.json",
+      "bytes": 1576,
+      "sha256": "6a83d0ab75e21ab82df8c26e31c550d04de4eb3681211f23189deab7660ca9aa"
+    },
+    {
+      "path": "qa/lower-hall-internal.png",
+      "bytes": 1909851,
+      "sha256": "4b1a1572b56911b3ca0da540197b73583b1e30b4574ec37ccd7481d537a6430c"
+    },
+    {
+      "path": "qa/stair-internal.png",
+      "bytes": 1926638,
+      "sha256": "24561cb224040252110cb321d2b75d0c94142bf126e6f334f0b9d3822a0caa48"
+    },
+    {
+      "path": "qa/upper-hall-internal.png",
+      "bytes": 1743079,
+      "sha256": "3132f3a7ef5118f3a2c93fe46e32b2dc3b3f1a2e2f56a00edbf121bb8486587a"
+    }
+  ],
+  "productionComplete": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "formatCheckExitCode": 0,
+  "imageCallsIssued": 2,
+  "successfulImages": 1,
+  "abortedWithoutResult": 1
+}

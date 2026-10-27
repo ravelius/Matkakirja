@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/OHJE-CODEXILLE.md",
+    "sha256": "1fb9ec2f9f923c0d7885f32cd92ef21863d1cdc94a2252fd7fe46a3d826df13f",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu-palatsi.glb",
+    "sha256": "9a38708d050a8cc54218d6c5a1e4f2182ac56cc899c7d917ed1d127a1b6bac72",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu.json",
+    "sha256": "d7bf69c47ade32fd19314d7f35ed07864ac5ecb69222ff951be80f5776ff504b",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/LAHTEET.md",
+    "sha256": "dedd98819903461ecd3be692b6d57995b5831fd4dc1396e465215a5637b44573",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/palatsi-pohja-1-y+3,5.png",
+    "sha256": "da9bb246bb6646c740ffdca1394dab67656f4b977ae67ebd20c978da12a06240",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/palatsi-pohja-2-y+7,5.png",
+    "sha256": "9972237b0c4f7c17456b80b3d6af268f9985f9ea279d49a6c5095762adb23155",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/palatsi-leikkaus-etelasta.png",
+    "sha256": "e8d446c94fca742aff30c6a76fba219606ebc6809675918736986ce66b8c0ad6",
+    "manifestMatched": true
+  },
+  {
+    "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/palatsi-leikkaus-idasta.png",
+    "sha256": "4f1380c42cfb90274d2fd127ab1ac478458c5b319638ea7a4c5434b7cef9680a",
+    "manifestMatched": true
+  }
+]
