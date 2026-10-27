@@ -2955,3 +2955,7 @@ OMISTAJAN PÄÄTÖS 18.37 (sanatarkasti, rimpuiluvideo v5:n jälkeen): Ota se he
 ## EI HENGITYSTÄ NUOREN KEISARIN ÄÄNISSÄ + JUNA 212 JULKAISUUN (OMISTAJA 27.10. klo 18.51 ja 18.52) (27.10.2026 klo 18.54)
 
 OMISTAJAN PÄÄTÖS 18.51 (sanatarkasti): Hengitys ei sovi nuorelle keisarille. Se pitää ottaa kokonaan pois kaikkialta, kuulostaa aikuisen miehen huohotukselta eikä sovi ollenkaan peliin. Pysyvä linjaus Raamattuun 5.29. Toteutus: PK 46b3f424c (huohotus-1…4 pois); PK tarkistaa muut hahmoäänet ja poistaa huohotus-tiedostot; Äänittäjä poistaa hengästymisen keisarin äänityylistä (juoksupeli.aanityyli.kuvaus) ja tarkistaa nykyiset otot. Ei koske ISS:n kypärähengitystä. OMISTAJAN PÄÄTÖS 18.52 (sanatarkasti): Julkaise juna jotta näen uudet kartta jutut. Ei testejä. Juna 212 lukkoon ja TF:ään ilman tarkistusajoa (9.11); ehto: ei huohotusta junassa (PK 46b3f424c mukaan, jos juoksupeli on rungossa).
+
+## OPPI: OMISTAJALLE VAIN SUOMEKSI (OMISTAJA 27.10. klo 19.23) (27.10.2026 klo 19.23)
+
+KK kirjoitti omistajalle englanniksi klo 18.53–19.12. Omistaja huomautti 19.23 (sanatarkasti): Käytä suomea. Rikottu periaate 5 (suomeksi). Myös PT:n ikkunan vastaukset olivat tänään englanniksi. Korjaus: kaikki omistajalle näkyvä teksti, myös PT:n ja roolien omien ikkunoiden vastaukset, kirjoitetaan suomeksi.
