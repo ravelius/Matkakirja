@@ -2815,3 +2815,7 @@ OMISTAJAN PÄÄTÖKSET klo 10.05 (kortti KK:ssa, sanatarkasti): "Tehdäänkö ko
 ## ÄÄNILUPA VAIN YLI 3 %:N AJOIHIN, MYÖS UUSILLA ÄÄNILLÄ (omistaja 27.10. klo 10.06, KK:n välitys) (27.10.2026 klo 10.07)
 
 OMISTAJAN PÄÄTÖS klo 10.06 (sanatarkasti, viesti KK:lle): "Ohjeissa pitäisi siis olla, että äänien generoinnista ei tarvitse erikseen pyytää lupaa, ellei se käytä yli 3% koko kuukausikiintiöstä." RAAMATTU: 5.1 (otsikko ja 3 %:N RAJA: raja koskee myös uusia henkilöitä, ääniä, koeottoja ja uusintoja; kumoaa "uusi henkilö tai uusi ääni vaatii aina luvan"), 5.2 (määrä- ja ottoluvat vain rajan ylittävään kulutukseen) ja 7.27 ÄÄNISTÄ EI KORTTEJA (lupakortti vain yli 3 %:n ajoihin; rajan alla kulutus KK:lle jälkikäteen yhdellä rivillä). KK:n tiedoksi: Olavinlinnan 1017 v2 ja vaakunahuomio viety omistajalle.
+
+## EI KONEELLISTA LITTEROINTIA: KAIKKI OTOT OMISTAJALLE (omistaja 27.10. klo 10.29, KK:n välitys) (27.10.2026 klo 10.30)
+
+OMISTAJAN PÄÄTÖS klo 10.29 (sanatarkasti): "Älä luota koneelliseen äänen litterointiin, vaan anna minulle näytteet kuunneltaviksi." → kaikki otot omistajalle kuunneltaviksi, eikä mitään hylätä pelkän Gemini-litteroinnin perusteella. KK: Äänittäjän 4 uusintaa pysäytetty, alkuperäiset tallessa ja kaikki 14 omistajalla videona. RAAMATTU 7.27 ÄÄNISTÄ EI KORTTEJA: lisätty KAIKKI OTOT OMISTAJALLE.
