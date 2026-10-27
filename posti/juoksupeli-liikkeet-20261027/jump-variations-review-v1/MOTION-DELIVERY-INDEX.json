@@ -1,0 +1,356 @@
+{
+  "items": [
+    {
+      "name": "slide_short",
+      "label": "Lyhyt liuku",
+      "status": "BOTH_VARIANTS_TECHNICAL_REVIEW_DELIVERED",
+      "latest": "crouch-slides-review-v1",
+      "mailboxCommit": "e36ce3770b096c36d17b05ab8a4164d46908b7bd",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "slide_long",
+      "label": "Pitkä liuku",
+      "status": "BOTH_VARIANTS_TECHNICAL_REVIEW_DELIVERED",
+      "latest": "crouch-slides-review-v1",
+      "mailboxCommit": "e36ce3770b096c36d17b05ab8a4164d46908b7bd",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "slide_feet_first",
+      "label": "Jalat edellä liuku",
+      "status": "BOTH_VARIANTS_TECHNICAL_REVIEW_DELIVERED",
+      "latest": "feet-first-review-v1",
+      "mailboxCommit": "ceb0bf7ee3fb09491a80b3a39bd509c63de1de3a",
+      "technicalQAPassed": true,
+      "gameAccepted": false,
+      "knownLimitations": [
+        "Runtime .18s crossfade/root and cape hem bunching need game-camera review",
+        "Existing full cape underarm correction separate"
+      ]
+    },
+    {
+      "name": "dodge_left",
+      "label": "Väistö vasemmalle",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dodges-review-v1",
+      "mailboxCommit": "a8f1ab95e8582bf3f56365bd103998bfcb7835ac",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "dodge_right",
+      "label": "Väistö oikealle",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dodges-review-v1",
+      "mailboxCommit": "a8f1ab95e8582bf3f56365bd103998bfcb7835ac",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "dodge_left_right",
+      "label": "Edestakainen väistö vasen-oikea",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dodges-review-v1",
+      "mailboxCommit": "a8f1ab95e8582bf3f56365bd103998bfcb7835ac",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "dodge_right_left",
+      "label": "Edestakainen väistö oikea-vasen",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dodges-review-v1",
+      "mailboxCommit": "a8f1ab95e8582bf3f56365bd103998bfcb7835ac",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "dive_left",
+      "label": "Syöksy vasemmalle",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dives-review-v1",
+      "technicalQAPassed": true,
+      "mailboxCommit": "53dc1eb519280bba8b3e8440af56e6901fd78c47",
+      "gameAccepted": false
+    },
+    {
+      "name": "dive_right",
+      "label": "Syöksy oikealle",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "dives-review-v1",
+      "technicalQAPassed": true,
+      "mailboxCommit": "53dc1eb519280bba8b3e8440af56e6901fd78c47",
+      "gameAccepted": false
+    },
+    {
+      "name": "jump_small",
+      "label": "Pieni loikka",
+      "status": "TECHNICAL_REVIEW_IN_THIS_DELIVERY_GAME_QA_PENDING",
+      "latest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/jump-variations-review-v1",
+      "mailboxCommit": "SAME_COMMIT_AS_THIS_REPORT",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "jump_long",
+      "label": "Pitkä loikka",
+      "status": "TECHNICAL_REVIEW_IN_THIS_DELIVERY_GAME_QA_PENDING",
+      "latest": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/jump-variations-review-v1",
+      "mailboxCommit": "SAME_COMMIT_AS_THIS_REPORT",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "vault_low",
+      "label": "Matalan esteen ylitys",
+      "status": "both-variants-review-delivered-format-game-QA-pending",
+      "latest": "parkour-first-review-v1",
+      "technicalQAPassed": true,
+      "gameAccepted": false,
+      "mailboxCommit": "f727336277b0db95baa6a47f004f16ea64b7ba8f"
+    },
+    {
+      "name": "vault_high",
+      "label": "Korkean esteen ylitys",
+      "status": "deferred-by-Pelikoodari-no-high-obstacle",
+      "sourceDecision": "b0f2803946414fc9a3c8cb07715d73bae14e4e53"
+    },
+    {
+      "name": "land_soft",
+      "label": "Pehmeä alastulo",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "land-soft-review-v1",
+      "mailboxCommit": "81f60364d3370922dc89ce97ee5b249f63a6858e",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "land_heavy",
+      "label": "Raskas alastulo",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "land-heavy-release-review-v2",
+      "mailboxCommit": "b8b214858a10f10f87c9cde31b38d157a1334385",
+      "technicalQAPassed": true,
+      "gameAccepted": false,
+      "perusCorrectionCommit": "b984a22a7999aef0742157fba9af9f7a086db590"
+    },
+    {
+      "name": "jump_down",
+      "label": "Korkealta pudottautuminen",
+      "status": "technical-review-delivered-game-QA-pending",
+      "gameAccepted": false,
+      "mailboxCommit": "ce42f007643ca79b4de9a9265a3791fab48ff98b",
+      "latest": "jump-down-review-v1"
+    },
+    {
+      "name": "run_upstairs",
+      "label": "Portaissa juoksu",
+      "status": "both-variants-review-delivered-format-game-QA-pending",
+      "receiverRequirement": "Inclined running enough; test .16m rise/.32m tread; no per-step pins across mixed geometry. b0f280394",
+      "latest": "parkour-first-review-v1",
+      "technicalQAPassed": true,
+      "gameAccepted": false,
+      "mailboxCommit": "f727336277b0db95baa6a47f004f16ea64b7ba8f"
+    },
+    {
+      "name": "bar_approach_takeoff",
+      "label": "Tangolle lähestyminen ja ponnistus",
+      "status": "both-variants-technical-review-delivered-game-QA-pending",
+      "latest": "bar-sequence-review-v1",
+      "mailboxCommit": "2b5c241f8d2267e59be1f852267b92a4fd561a5b",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "bar_swing_over",
+      "label": "Heilautus tangolla esteen yli",
+      "status": "both-variants-technical-review-delivered-game-QA-pending",
+      "latest": "bar-sequence-review-v1",
+      "mailboxCommit": "2b5c241f8d2267e59be1f852267b92a4fd561a5b",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "bar_release_land_run",
+      "label": "Irrotus, alastulo ja juoksuun paluu",
+      "status": "both-variants-technical-review-delivered-game-QA-pending",
+      "latest": "bar-sequence-review-v1",
+      "mailboxCommit": "2b5c241f8d2267e59be1f852267b92a4fd561a5b",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "catch_back",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-back-review-v1",
+      "gameAccepted": false,
+      "mailboxCommit": "6758995016838d98a4a683c2e1ba87ad891839ea",
+      "technicalQAPassed": true
+    },
+    {
+      "name": "caught_back",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-back-review-v1",
+      "gameAccepted": false,
+      "mailboxCommit": "6758995016838d98a4a683c2e1ba87ad891839ea",
+      "technicalQAPassed": true
+    },
+    {
+      "name": "catch_front",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-front-review-v1",
+      "mailboxCommit": "d729bb236e7f955cd0ca141396d655465409d9b0",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "caught_front",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-front-review-v1",
+      "mailboxCommit": "d729bb236e7f955cd0ca141396d655465409d9b0",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "catch_side",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-side-review-v1",
+      "mailboxCommit": "f97bebb26ff782fd2237d384529de4865501d748",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "caught_side",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-side-review-v1",
+      "mailboxCommit": "f97bebb26ff782fd2237d384529de4865501d748",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "hold_back",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-back-review-v1",
+      "gameAccepted": false,
+      "mailboxCommit": "6758995016838d98a4a683c2e1ba87ad891839ea",
+      "technicalQAPassed": true
+    },
+    {
+      "name": "hold_front",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-front-review-v1",
+      "mailboxCommit": "d729bb236e7f955cd0ca141396d655465409d9b0",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "hold_side",
+      "status": "review-delivered-both-Puyis-four-guards-game-QA-pending",
+      "latest": "catch-side-review-v1",
+      "mailboxCommit": "f97bebb26ff782fd2237d384529de4865501d748",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_1",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_2",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_3",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_4",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_give_up",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "struggle_free",
+      "status": "all3-contexts-review-delivered-awaiting-game-QA",
+      "latest": "struggle-all-contexts-review-v1",
+      "mailboxCommit": "1727f800e423c4f32d6adf0f3a0011c588386041",
+      "technicalQAPassed": true,
+      "gameAccepted": false
+    },
+    {
+      "name": "door_grab_left",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "work/door-grab-v1"
+    },
+    {
+      "name": "door_grab_right",
+      "status": "both-variants-review-delivered-game-QA-pending",
+      "latest": "work/door-grab-v1"
+    },
+    {
+      "name": "jump_robe",
+      "status": "TECHNICAL_REVIEW_DELIVERED_MORPH_RUNTIME_PENDING",
+      "latest": "robe-motion-review-v2"
+    },
+    {
+      "name": "stairs_robe",
+      "status": "TECHNICAL_REVIEW_DELIVERED_MORPH_RUNTIME_PENDING",
+      "latest": "robe-motion-review-v2"
+    },
+    {
+      "name": "vault_hand",
+      "status": "both-variants-review-delivered-format-game-QA-pending",
+      "latest": "vault-hand-review-v1",
+      "technicalQAPassed": true,
+      "gameAccepted": false,
+      "mailboxCommit": "4250985b7e7d65eaaf50fee722133699b906b704"
+    },
+    {
+      "name": "taunt_run",
+      "status": "TECHNICAL_REVIEW_DELIVERED_KNOWN_BOOT_SKIN_LIMITATION",
+      "latest": "taunt-run-review-v2",
+      "mailboxCommit": "59a6fc932d66f2a6ade62469315177daf8de882c",
+      "technicalQAPassed": false,
+      "gameAccepted": false
+    },
+    {
+      "name": "door_push_run",
+      "status": "PK-accepted-and-reported-integrated-level1",
+      "latest": "door-push-run-review-v1",
+      "mailboxCommit": "fbda21ac2bcb8e9fa1798e45fd669b629c023629",
+      "technicalQAPassed": true
+    }
+  ],
+  "itemCount": 42,
+  "deferred": [
+    "vault_high"
+  ],
+  "allRuntimeAccepted": false,
+  "fullCapeUnderarmCorrected": false,
+  "notes": "Technical delivery does not imply complete QA acceptance. taunt_run retains explicit boot-skin limitation; prior captures/struggles require runtime pair and blend review."
+}

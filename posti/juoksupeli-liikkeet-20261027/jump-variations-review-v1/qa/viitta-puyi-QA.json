@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "reports": [
+    {
+      "clip": "jump_small",
+      "durationS": 0.9599999785423279,
+      "floorMinimumM": 0.00014881076592377718,
+      "middleAirMinimumM": 0.31024851802457554,
+      "maxAngularStep240HzDeg": 11.67085539777462,
+      "worstAngular": {
+        "t": 0.6803478108799975,
+        "bone": "mixamorig:LeftArm"
+      },
+      "maxTriangleBoxHits": 0,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          1.9
+        ],
+        "max": [
+          1.8,
+          0.5,
+          2.4
+        ]
+      },
+      "entrySourceDelta": 0.04250779630302132,
+      "entryBodyExcludingDeclaredArmChannelsDelta": 0.0,
+      "entryArmClearanceDeg": 6.875494472503873,
+      "entryExemptChannels": [
+        "RightArm.rotation",
+        "RightHand.rotation"
+      ],
+      "exitSourceDelta": 3.725290298461914e-09,
+      "externalRootEnd": [
+        0.0,
+        0.0,
+        4.799999892711639
+      ],
+      "pass": true
+    },
+    {
+      "clip": "jump_long",
+      "durationS": 1.2599999904632568,
+      "floorMinimumM": 0.0001071626456211935,
+      "middleAirMinimumM": 0.29654267883268975,
+      "maxAngularStep240HzDeg": 11.699599060158489,
+      "worstAngular": {
+        "t": 0.9762913833390798,
+        "bone": "mixamorig:LeftArm"
+      },
+      "maxTriangleBoxHits": 0,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          2.4
+        ],
+        "max": [
+          1.8,
+          0.5,
+          3.5
+        ]
+      },
+      "entrySourceDelta": 0.04250779630302132,
+      "entryBodyExcludingDeclaredArmChannelsDelta": 0.0,
+      "entryArmClearanceDeg": 6.875494472503873,
+      "entryExemptChannels": [
+        "RightArm.rotation",
+        "RightHand.rotation"
+      ],
+      "exitSourceDelta": 3.725290298461914e-09,
+      "externalRootEnd": [
+        0.0,
+        0.0,
+        6.299999952316285
+      ],
+      "pass": true
+    }
+  ],
+  "runtimeVerified": false,
+  "limits": "Defined obstacle, floor, angular steps and endpoint poses. Actual game root/transition and all cloth collision pending.",
+  "seconds": 31.6366041660076
+}

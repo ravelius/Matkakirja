@@ -1,0 +1,18 @@
+[
+  {
+    "variant": "perus",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-variations-v4/perus/puyi.glb",
+    "sha256": "b5e76a8a7fb9a800863ef46d3ebda2fa7a6b3e3edda5079ddcd1b156e93e4696",
+    "bytes": 15113196,
+    "cumulativeBase": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/crouch-slides-review-v1/motions/puyi-perus-liikkeet.glb",
+    "baseSHA256": "553b96b3f072ae3a1d5a86e8531f8964cd3c61bdfdc1b89afd4a1335f62d5fbd"
+  },
+  {
+    "variant": "viitta",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-variations-v6/viitta/puyi.glb",
+    "sha256": "2f3d4b063d8456e2f71e371a3db1956a1ee0b9c7d3010126b574bf64d2304469",
+    "bytes": 15054528,
+    "cumulativeBase": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/crouch-slides-review-v1/motions/puyi-liikkeet.glb",
+    "baseSHA256": "528084d1e71e23c34e17946bc8821ac7385b340155477d0cb73d382518ad767e"
+  }
+]

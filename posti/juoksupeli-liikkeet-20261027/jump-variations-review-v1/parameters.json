@@ -1,0 +1,108 @@
+{
+  "clips": {
+    "jump_small": {
+      "airS": 0.6,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          1.9
+        ],
+        "max": [
+          1.8,
+          0.5,
+          2.4
+        ]
+      },
+      "durationS": 0.96,
+      "takeoffTimeS": 0.14,
+      "touchdownTimeS": 0.74,
+      "takeoffRoot": [
+        0.0,
+        0.0,
+        0.7000000000000001
+      ],
+      "touchdownRoot": [
+        0.0,
+        0.0,
+        3.7
+      ],
+      "obstacleCenterRootZ": 2.15,
+      "rootEnd": [
+        0.0,
+        0.0,
+        4.8
+      ]
+    },
+    "jump_long": {
+      "airS": 0.9,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          2.4
+        ],
+        "max": [
+          1.8,
+          0.5,
+          3.5
+        ]
+      },
+      "durationS": 1.26,
+      "takeoffTimeS": 0.14,
+      "touchdownTimeS": 1.04,
+      "takeoffRoot": [
+        0.0,
+        0.0,
+        0.7000000000000001
+      ],
+      "touchdownRoot": [
+        0.0,
+        0.0,
+        5.2
+      ],
+      "obstacleCenterRootZ": 2.95,
+      "rootEnd": [
+        0.0,
+        0.0,
+        6.299999999999999
+      ]
+    }
+  },
+  "sourceRunPhases": {
+    "perus": {
+      "runEntryPhaseS": 0,
+      "runExitPhaseS": 0.5739999999999998,
+      "runPeriodS": 1.25,
+      "newEntryRightArmCorrectionDeg": 6.875493541569878,
+      "capeLeftArmGuardWorldYRad": 0,
+      "correctionChannels": [
+        "mixamorig:RightArm.rotation",
+        "mixamorig:RightHand.rotation"
+      ]
+    },
+    "viitta": {
+      "runEntryPhaseS": 0,
+      "runExitPhaseS": 1.8239999999999998,
+      "runPeriodS": 2.5416667461395264,
+      "newEntryRightArmCorrectionDeg": 6.875493541569878,
+      "capeLeftArmGuardWorldYRad": -0.35,
+      "correctionChannels": [
+        "mixamorig:RightArm.rotation",
+        "mixamorig:RightHand.rotation"
+      ]
+    }
+  },
+  "sourceTimeMap": "T=t+(.6-airS)*smoothstep5((t-.14)/airS)",
+  "rootReference": "ROOT-SAMPLES.csv, world actor offset meters; +Yup,+Zforward",
+  "clock": "root Z distance; scale entire motion and root together with run speed",
+  "internalCrossfadeS": 0,
+  "automaticLandSoft": false,
+  "additionalVerticalOrYawOffset": false,
+  "entryBlend": "Run-to-series only; runtime0.18s blend unverified. Corrected right arm differs6.875deg at entry; body/feet unchanged.",
+  "morphWeight": 0,
+  "newTripoCalls": 0,
+  "credits": 0
+}

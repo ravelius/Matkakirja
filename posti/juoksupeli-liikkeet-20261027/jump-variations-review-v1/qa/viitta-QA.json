@@ -1,0 +1,49 @@
+{
+  "status": "CANDIDATE_PENDING_DENSE_VISUAL_QA",
+  "variant": "viitta",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/bar-sequence-review-v1/models/puyi-viitta-parkour.glb",
+  "sourceSHA256": "b0a2cd12ae148f4327653c57cedfee678251125d45a618af52108a18cbde2444",
+  "clips": [
+    {
+      "clip": "jump_small",
+      "durationS": 0.96,
+      "maxReachResidualM": 0.0,
+      "airS": 0.6,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          1.9
+        ],
+        "max": [
+          1.8,
+          0.5,
+          2.4
+        ]
+      }
+    },
+    {
+      "clip": "jump_long",
+      "durationS": 1.26,
+      "maxReachResidualM": 0.0,
+      "airS": 0.9,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          2.4
+        ],
+        "max": [
+          1.8,
+          0.5,
+          3.5
+        ]
+      }
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "seconds": 4.9532411670079455
+}

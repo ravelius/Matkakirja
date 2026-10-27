@@ -1,0 +1,14 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_RUNTIME_AND_OWNER_ACCEPTANCE_PENDING",
+  "newClipsDenseQAPass": true,
+  "allLibraryQAComplete": false,
+  "runtimeVerified": false,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "updatedAt": "2026-10-27T19:27:09.662520+00:00",
+  "limitations": [
+    "run-to-series blending pending",
+    "whole cloth continuous self-collision not certified",
+    "inherited cape underarm and taunt boot-skin limitations"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "CANDIDATE_PENDING_DENSE_VISUAL_QA",
+  "variant": "perus",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/bar-sequence-review-v1/models/puyi-perus-parkour.glb",
+  "sourceSHA256": "3bf7430f34f3e9eca57690c45731200309b4725491e8608805758f8725c5584a",
+  "clips": [
+    {
+      "clip": "jump_small",
+      "durationS": 0.96,
+      "maxReachResidualM": 0.0,
+      "airS": 0.6,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          1.9
+        ],
+        "max": [
+          1.8,
+          0.5,
+          2.4
+        ]
+      }
+    },
+    {
+      "clip": "jump_long",
+      "durationS": 1.26,
+      "maxReachResidualM": 0.0,
+      "airS": 0.9,
+      "heightM": 0.55,
+      "obstacle": {
+        "min": [
+          -1.8,
+          0.002,
+          2.4
+        ],
+        "max": [
+          1.8,
+          0.5,
+          3.5
+        ]
+      }
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "seconds": 9.352414624998346
+}

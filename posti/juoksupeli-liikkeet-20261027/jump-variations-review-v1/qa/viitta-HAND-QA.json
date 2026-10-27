@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "sampleHz": 240,
+  "reports": [
+    {
+      "clip": "jump_small",
+      "crossingSamples": 0,
+      "newPairSamples": 0,
+      "crossings": []
+    },
+    {
+      "clip": "jump_long",
+      "crossingSamples": 0,
+      "newPairSamples": 0,
+      "crossings": []
+    }
+  ],
+  "scope": "Exact sampled hand-versus-low-hand-weight triangles, local24cm broad phase; original matching vault pose recorded separately, no failures hidden."
+}

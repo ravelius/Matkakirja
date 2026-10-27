@@ -1,0 +1,11 @@
+# Loikkien ohjaussopimus — vastaanottajan58b86738 mukaan
+
+jump_small: ilmalento0,60s, koko leike0,96s. jump_long: ilmalento0,90s, koko leike1,26s. Valmistautuminen0,00–0,14s, lento0,14–0,74s tai0,14–1,04s, paluujuoksu viimeiset0,22s. Lyhyt vaihtaa johtavan jalan ilmassa, pitkä säilyttää lähteen jalkajärjestyksen ja pidentää lentoa. Rootin nousuhuippu0,55m kummassakin; se ei tarkoita hahmon kokonaiskorkeutta.
+
+Käytä ROOT-SAMPLES.csv:n time_s/x_m/y_m/z_m reittiä. +Yylös,+Zeteen,metrit. Kohdista lähtö tapahtuman esteeseen: lyhyen0,5m korkea esteZ1,9–2,4(keskikohta2,15), pitkänZ2,4–3,5(keskikohta2,95). Ponnistus rootZ0,70m kohdalla. Laskeutuminen rootZ3,70m/5,20m, loppuZ4,80m/6,30m. Muut esteet/ajoitukset vaativat oman runtime-tarkistuksen.
+
+Matkakello skaalaa liikkeen ja koko root-reitin yhdessä. Nimellisnopeus5m/s; rootin ensimmäisellä~0,04–0,10s osuudella on lähteen pieni jalkakontaktia korjaava vaihesäätö. Älä korvaa taulukkoa pelkällä5*t:llä. Ei sarjan sisäistä ristiinhäivytystä, lisä-Y-kaarta, yawia tai automaattista land_softia. Run→sarja-siirtymä saa ristiinhäivytyksen; pelin0,18s blendin kontaktit/ajoitus vielä tarkistettava.
+
+Ensiasennossa lähteen oikean käden vaateosuma korjattu6,875asteen olkavarren ulospäinkäännöllä ja ranteen maailmanorientaatio säilytetty. Vain RightArm/RightHand.rotation poikkeavat lähteen alusta; jalat, lantio ja muut kanavat ennallaan. Korjaus häipyy0,06sekunnissa ja palaa lyhyesti loppupuolen lähdeosuman kohdalla. Viittamallin vasenta käsivartta ohjataan lisäksi0,00–0,10s aikana eteenpäin maailmay-akselin enintään0,35rad käännöllä, jotta käsi kiertää viitan pinnan; ranteen maailmanorientaatio säilyy. Uusien leikkeiden tiheässä käsi-vartalotestissä0 osumaa. Poikkeamaa ei pidä tulkita koko alkuasennon tavutarkaksi vastaavuudeksi. Molemmat päättyvät täsmälleen samaan vault_low-lähteen loppujuoksuasentoon; sourceRunPhases parametreissa.
+
+Tuo17 leikkeen kumulatiivinen liikepaketti1182/1187-tuontisopimuksella. Edelliset15 leikettä säilyvät tavutarkasti, mukaan lukien kaavunnoston morfipainot. Päämallia ei korvata; ei uusia geometrioita/materialeja/kuvia. Nolla morfipaino uusissa loikissa. Aiemmat liukujen, taunt_run-saappaiden ja viitan kainalon rajoitukset eivät poistu.
