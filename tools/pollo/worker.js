@@ -33,7 +33,8 @@ import {
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
   korttiAvain, tekstiAvain, linkitaWikidata, haeEntiteetti, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
-  tarkistaTeksti, EI_LAHDETTA, kohdeTyyppi, osaAvain, JOHDANTO_KEHOTE, LISAA_KEHOTE, lisaaViesti, tarkistaJohdanto, tarkistaLisaa,
+  tarkistaTeksti, EI_LAHDETTA, kohdeTyyppi, osaAvain, JOHDANTO_KEHOTE, LISAA_KEHOTE, lisaaViesti, tarkistaJohdanto, tarkistaLisaa, hylkayksenVakavuus,
+  KYSYMYS_KEHOTE, kysymysViesti, tarkistaKysymykset, kelvollisetKysymykset, vaihdaKysymykset, jasennaLisaa,
 } from './tietokortti.js';
 import {
   KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi, jerusalemissa, ilmanMaanNimea,
@@ -4013,7 +4014,7 @@ function valitysRunko(kehote, syote, osa, nimi, lisa = []) {
     historia.push({ rooli: 'kayttaja', teksti: `(ohjeen ja syötteen jatko) ${koko.slice(i, i + 1990)}` }, { rooli: 'pollo', teksti: 'Selvä, luen jatkon.' });
   }
   return { tehtava: 'vastaus', striimi: true, historia: [...historia, ...lisa], konteksti: koko.slice(0, 4990),
-    kysymys: `Kirjoita nyt kartan tietokortin ${osa === 'lisaa' ? 'Lue lisää -teksti' : 'ensimmäinen kappale'} kohteelle ${nimi} ohjeen mukaan.` };
+    kysymys: `Kirjoita nyt kartan tietokortin ${osa === 'kysymykset' ? 'kaksi kysymystä Pululle' : osa === 'lisaa' ? 'Lue lisää -teksti' : 'ensimmäinen kappale'} kohteelle ${nimi} ohjeen mukaan.` };
 }
 
 /** Vedoksen uusinta välityksen kautta (paikallinen ajuri; tuotannossa kysyMallitiedot): edellinen vastaus ja korjauspalaute historiaan. */
@@ -4064,6 +4065,8 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
   const tarkista = (x) => (osa === 'lisaa' ? tarkistaLisaa(x, syote, kortti.nimi, johdanto) : tarkistaJohdanto(x, syote, kortti.nimi));
   const maxTokens = osa === 'lisaa' ? 1100 : 400;
   const { readable, kirjoitin, laheta } = sseVirta();
+  // Johdanto virtaa heti; Lue lisää (taustalla, omistaja 13.52) lähetetään vasta tarkistuksen ja uusintojen jälkeen.
+  const striimaa = osa !== 'lisaa';
   let ylavirta, chatista = false;
   if (env.TIETOTEKSTI_VALITYS) {
     // VEDOS (paikallinen ajuri, kuten hoidaTietoteksti): kehote ja syöte julkaistun Pulun chatin kautta.
@@ -4100,7 +4103,7 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
             const lj = /^event: (\w+)/m.exec(tap)?.[1], data = /^data: (.*)$/m.exec(tap)?.[1];
             if (!data) continue;
             const d = JSON.parse(data);
-            if (lj === 'pala' && d.teksti) { teksti += d.teksti; await laheta('pala', { teksti: d.teksti }); }
+            if (lj === 'pala' && d.teksti) { teksti += d.teksti; if (striimaa) await laheta('pala', { teksti: d.teksti }); }
             if (lj === 'loppu') { stop = 'end_turn'; teksti = d.vastaus ?? teksti; }
             if (lj === 'virhe') virhe = d.viesti ?? 'virhe';
           }
@@ -4109,7 +4112,7 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
           jono = rivit.pop();
           for (const rivi of rivit) {
             const h = striimiPala(rivi);
-            if (h?.teksti) { teksti += h.teksti; await laheta('pala', { teksti: h.teksti }); }
+            if (h?.teksti) { teksti += h.teksti; if (striimaa) await laheta('pala', { teksti: h.teksti }); }
             if (h?.virhe) virhe = h.virhe;
             if (h?.stop) stop = h.stop;
           }
@@ -4117,10 +4120,11 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
       }
       const tarkistus = tarkista(teksti);
       if (virhe) await laheta('virhe', { viesti: virhe });
-      await laheta('loppu', { vastaus: teksti.trim(), valmiina: false, lahde: lahdeRivi, osa, tarkistus: tarkistus.ok ? 'ok' : tarkistus.syy });
+      if (striimaa) await laheta('loppu', { vastaus: teksti.trim(), valmiina: false, lahde: lahdeRivi, osa, tarkistus: tarkistus.ok ? 'ok' : tarkistus.syy });
       console.log(`pollo: tietoteksti ${osa} ${tunnus}: ${tarkistus.ok ? 'hyväksytty' : `hylätty (${tarkistus.syy})`}`);
       let talteen = !virhe && stop === 'end_turn' && tarkistus.ok ? teksti.trim() : null;
       let edellinen = teksti.trim(), syy = tarkistus.syy;
+      const yritykset = [{ teksti: edellinen, syy }];
       for (let kerta = 0; !talteen && kerta < 2; kerta += 1) {
         try {
           const viestit = [{ role: 'user', content: syote }];
@@ -4129,9 +4133,44 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
             : await kysyMallitiedot(env, { jarjestelma: kehote, viestit, maxTokens, jaettu: true });
           const t2 = tarkista(u.teksti);
           edellinen = (u.teksti ?? '').trim(); syy = t2.syy;
+          yritykset.push({ teksti: edellinen, syy });
           console.log(`pollo: tietoteksti ${osa} ${tunnus}: uusinta ${kerta + 1} ${t2.ok ? 'hyväksytty' : `hylätty (${t2.syy})`}`);
           if (t2.ok && u.stop === 'end_turn' && u.teksti.trim()) talteen = u.teksti.trim();
         } catch { break; }
+      }
+      // Lue lisää näytetään vasta tarkistettuna (NUI 27.10.: hylätty ensimmäinen versio näkyi pelaajalle, uusinta vasta seuraavalle).
+      // Kaikki hylätty: lievimmin hylätty yritys; jos sen kysymykset ovat jo vastattuja, ne kirjoitetaan erikseen valmiin tekstin
+      // perusteella (KK 27.10., Eton: kolme yritystä toisti tekstiä), enintään kaksi kertaa. Kelpaava kokonaisuus myös talteen.
+      let naytettava = null;
+      if (!talteen && osa === 'lisaa') {
+        naytettava = yritykset.filter((y) => y.teksti).reduce((a, b) => (hylkayksenVakavuus(b.syy) < hylkayksenVakavuus(a.syy) ? b : a), yritykset[0]);
+        const kys = jasennaLisaa(naytettava.teksti).kysymykset;
+        const kunnossa = kys.length === 2 && tarkistaKysymykset(kys.join('\n'), johdanto, naytettava.teksti, kortti.nimi);
+        for (let kerta = 0; !kunnossa && !talteen && kerta < 2; kerta += 1) {
+          try {
+            const ksyote = kysymysViesti(syote, johdanto, naytettava.teksti);
+            const u = chatista ? await valitysUusinta(env, KYSYMYS_KEHOTE, ksyote, 'kysymykset', kortti.nimi, null, '')
+              : await kysyMallitiedot(env, { jarjestelma: KYSYMYS_KEHOTE, viestit: [{ role: 'user', content: ksyote }], maxTokens: 400, jaettu: true });
+            // Kelpaava alkuperäinen kysymys säilyy ensimmäisenä; toinen ehdokkaista.
+            const uudet = tarkistaKysymykset([...kys, ...String(u.teksti ?? '').split('\n')], johdanto, naytettava.teksti, kortti.nimi);
+            console.log(`pollo: tietoteksti ${osa} ${tunnus}: kysymykset erikseen ${kerta + 1} ${uudet ? 'kelpaavat' : `hylätty: ${String(u.teksti ?? '').slice(0, 160).replace(/\n/g, ' | ')}`}`);
+            if (!uudet) continue;
+            const koko = vaihdaKysymykset(naytettava.teksti, uudet);
+            const t3 = tarkista(koko);
+            if (t3.ok) talteen = koko;
+            naytettava = { teksti: koko, syy: t3.syy };
+            break;
+          } catch { break; }
+        }
+        // Korjaus ei onnistunut: jo vastatut kysymykset pois (yksi kelvollinen tai ei yhtään parempi kuin tekstin toisto, KK 27.10.).
+        if (!talteen && !jasennaLisaa(naytettava.teksti).kysymykset.every((k) => kelvollisetKysymykset([k], johdanto, naytettava.teksti, kortti.nimi).length)) {
+          const jaljella = kelvollisetKysymykset(jasennaLisaa(naytettava.teksti).kysymykset, johdanto, naytettava.teksti, kortti.nimi);
+          naytettava = { ...naytettava, teksti: vaihdaKysymykset(naytettava.teksti, jaljella) };
+        }
+      }
+      if (!striimaa) {
+        await laheta('loppu', { vastaus: talteen ?? naytettava?.teksti ?? teksti.trim(), valmiina: false, lahde: lahdeRivi, osa,
+          tarkistus: talteen ? 'ok' : (naytettava?.syy ?? 'hylätty') });
       }
       if (talteen) {
         await pysyvaKirjoita(env.PUHE_R2, avain, talteen, TIETOKORTTI_TTL_S);

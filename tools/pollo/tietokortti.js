@@ -521,7 +521,7 @@ export function kohdeTyyppi(laji) {
 }
 
 /** Osatekstien versio ja avain (osa = johdanto | lisaa). */
-export const OSA_VERSIO = 't5';
+export const OSA_VERSIO = 't6';
 export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
 /** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
 export const KYSYMYKSET = '###KYSYMYKSET###';
@@ -594,6 +594,57 @@ export function lisaaViesti(faktat, lahde, johdanto) {
   return JSON.stringify({ ...JSON.parse(pulunViesti(faktat, lahde)), johdanto: String(johdanto ?? '').slice(0, 1200) });
 }
 
+/**
+ * KYSYMYSTEN KORJAUS (KK 27.10.: Etonin kysymykset toistivat tekstiä kolmella yrityksellä): kun Lue lisää -teksti kelpaa muuten,
+ * mutta kysymys on jo vastattu, kaksi kysymystä kirjoitetaan erikseen tällä kehotteella valmiin tekstin perusteella.
+ */
+export const KYSYMYS_KEHOTE = `VASTAUKSEN LAJI: KAKSI VALMISTA KYSYMYSTÄ PULULLE
+Pelaaja lukee kartan tietokorttia. Syötteen kenttä teksti on kortin koko teksti (johdanto ja Lue lisää väliotsikoineen), kenttä
+otsikot sen väliotsikot ja kenttä wikipedia lähde. Kirjoitat viisi ehdokaskysymystä, jotka pelaaja voisi esittää Pululle tästä
+paikasta; jokainen eri aiheesta. Niistä valitaan kaksi.
+
+SÄÄNNÖT. Kysymyksen vastaus on lähteessä tai yleistiedossa, mutta EI kortin tekstissä. Älä kysy mistään, mitä teksti tai väliotsikot
+jo kertovat (esimerkiksi jos teksti kertoo nimen alkuperän, sisällissodan tai perustamisen, niistä ei kysytä). Kysymys vie pidemmälle:
+syy, seuraus, vertailu, ihmiset tai nykypäivä. Enintään 12 sanaa, päättyy kysymysmerkkiin, pelaajan äänellä, ei vihjeitä peliin,
+aarteisiin eikä juoneen.
+
+MUOTO. Vastaa pelkillä viidellä rivillä, kullakin yksi kysymys. Ei otsikkoa, ei numeroita, ei muuta tekstiä.`;
+
+/** Kysymyskorjauksen syöte: kortin teksti, väliotsikot ja lähde (pulunViestin wikipedia-kenttä lisaaViestistä). */
+export function kysymysViesti(lisaaSyote, johdanto, lisaaTeksti) {
+  const { jaksot } = jasennaLisaa(lisaaTeksti);
+  let wikipedia = null;
+  try { wikipedia = JSON.parse(String(lisaaSyote ?? '{}')).wikipedia ?? null; } catch { /* ei lähdettä */ }
+  const teksti = [String(johdanto ?? '').trim(), ...jaksot.map((j) => `${j.otsikko ? `${VALIOTSIKKO}${j.otsikko}\n` : ''}${j.teksti}`)].filter(Boolean).join('\n\n');
+  return JSON.stringify({ teksti, otsikot: jaksot.map((j) => j.otsikko).filter(Boolean), wikipedia });
+}
+
+/**
+ * Kysymysehdokkaista kaksi ensimmäistä kelvollista (lyhyt kysymys, ei peliä, ei jo vastattu, ei väliotsikon aihetta); null, jos alle
+ * kaksi. Ehdokkaat: rivit (kysymykset erikseen -vastaus) tai lista (myös alkuperäiset kysymykset ensin).
+ */
+export function tarkistaKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null) {
+  const valitut = kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi).slice(0, 2);
+  return valitut.length === 2 ? valitut : null;
+}
+
+/** Kelvolliset kysymykset ehdokkaista (ks. tarkistaKysymykset); jo vastatut ja väliotsikon aiheet pois. */
+export function kelvollisetKysymykset(vastaus, johdanto, lisaaTeksti, kohteenNimi = null) {
+  const rivit = (Array.isArray(vastaus) ? vastaus : String(vastaus ?? '').split('\n'))
+    .map((r) => String(r).replace(/^\s*(?:[-*•]|\d+[.)])\s*/, '').trim()).filter(Boolean);
+  const { jaksot } = jasennaLisaa(lisaaTeksti);
+  const teksti = `${String(johdanto ?? '').trim()} ${jaksot.map((j) => j.teksti).join(' ')}`;
+  const kelpaa = (k) => /\?$/.test(k) && sanat(k) <= 14 && !/[#()*]/.test(k) && !/aarre|isoisä|pelaaja|peli/.test(k.toLowerCase())
+    && !vastattuTekstissa(k, teksti, kohteenNimi) && !otsikonAihe(k, jaksot.map((j) => j.otsikko), kohteenNimi);
+  return [...new Set(rivit.filter(kelpaa))];
+}
+
+/** Lue lisää -teksti uusilla kysymyksillä (###KYSYMYKSET### ja kaksi riviä). */
+export function vaihdaKysymykset(lisaaTeksti, kysymykset) {
+  const [runko] = jaaKysymykset(String(lisaaTeksti ?? '').trim());
+  return `${runko.trim()}\n\n${KYSYMYKSET}\n${kysymykset.join('\n')}`;
+}
+
 /** Kysymysten merkkirivi myös mallin poikkeavissa muodoissa ("Kysymyksiä:", "KYSYMYKSET", vedos 27.10.). */
 export const KYSYMYS_RIVI = /^\s*(?:#{1,3}\s*)?kysymyks(?:et|iä)\s*:?\s*(?:#{1,3})?\s*$/imu;
 function jaaKysymykset(t) {
@@ -657,14 +708,18 @@ export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '') 
   if (/aarre|isoisä|pelaaja|peli/.test(pienet)) return { ok: false, syy: 'kysymykset' };
   // Toisto johdannon kanssa: johdanto ja kappaleet yhdessä yhteisiin sääntöihin (sama vuosi, sama pitkä sana, lähes sama virke).
   const yhdessa = johdanto ? `${String(johdanto).trim()} ${kappaleet}` : kappaleet;
-  // Kysymyksen vastaus ei saa olla tekstissä (NUI:n vedos t4: "Mistä Etonin nimi tulee?", vaikka Lue lisää kertoi Ēa-tūn).
-  if (kysymykset.some((k) => vastattuTekstissa(k, yhdessa, kohteenNimi))) return { ok: false, syy: 'vastattu' };
   // Johdannon luku (≥ 10) toistuu Lue lisää -tekstissä = toisto (Box Hill: "31 kilometriä Lontoosta" kahdesti).
   const johdannonLuvut = new Set((String(johdanto ?? '').match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).filter((x) => Number(x) >= 10));
   const lukuToisto = (kappaleet.match(/\d[\d\s]*\d/g) ?? []).map((x) => x.replace(/\s/g, '')).find((x) => johdannonLuvut.has(x));
   if (lukuToisto) return { ok: false, syy: `toisto ${lukuToisto}` };
   for (const j of jaksot) if (!/[.!?]$/.test(j.teksti)) return { ok: false, syy: 'kesken' };
-  return yhteiset(yhdessa, syote, kohteenNimi);
+  const r = yhteiset(yhdessa, syote, kohteenNimi);
+  if (!r.ok) return r;
+  // Kysymykset viimeisinä: 'vastattu' tarkoittaa, että teksti kelpaa ja vain kysymykset vaihdetaan (kysymykset erikseen, worker).
+  // Vastaus ei saa olla tekstissä (NUI t4: "Mistä Etonin nimi tulee?") eikä kysymys väliotsikon aihe (NUI t5: sisällissota).
+  if (kysymykset.some((k) => vastattuTekstissa(k, yhdessa, kohteenNimi))) return { ok: false, syy: 'vastattu' };
+  if (kysymykset.some((k) => otsikonAihe(k, jaksot.map((j) => j.otsikko), kohteenNimi))) return { ok: false, syy: 'vastattu' };
+  return r;
 }
 
 const KYSYMYSSANAT = new Set(['mistä', 'miksi', 'mikä', 'mitä', 'mitkä', 'kuka', 'ketkä', 'keitä', 'milloin', 'missä', 'mihin',
@@ -691,6 +746,26 @@ export function vastattuTekstissa(kysymys, teksti, kohteenNimi = null) {
     const sanatV = (v.toLowerCase().match(/\p{L}+/gu) ?? []);
     return alut.filter((a) => sanatV.some((s) => s.startsWith(a))).length >= tarve;
   });
+}
+
+/**
+ * Kysyykö kysymys väliotsikon aiheesta: jokin kysymyksen pienellä alkava sisältösana (≥ 6 kirjainta) alkaa samoin kuin otsikon sana.
+ * Erisnimet (iso alkukirjain, esim. "Eton College") eivät riitä: "Miten Eton College toimii nykyään?" vie otsikon aihetta pidemmälle.
+ */
+export function otsikonAihe(kysymys, otsikot, kohteenNimi = null) {
+  const kohde = String(kohteenNimi ?? '').toLowerCase().slice(0, 4);
+  const alut = (String(kysymys ?? '').match(/\p{L}+/gu) ?? []).slice(1).filter((s) => /^\p{Ll}/u.test(s)).map((s) => s.toLowerCase())
+    .filter((s) => s.length >= 6 && !KYSYMYSSANAT.has(s) && !(kohde.length === 4 && s.startsWith(kohde))).map((s) => s.slice(0, 6));
+  const sanatO = (otsikot ?? []).join(' ').toLowerCase().match(/\p{L}+/gu) ?? [];
+  return alut.some((a) => sanatO.some((s) => s.startsWith(a)));
+}
+
+/** Hylkäyksen vakavuus, kun kaikki yritykset hylätään: 0 vain kysymys jo vastattu, 1 sisältö (toisto, luku, nimi …), 2 rakenne. */
+export function hylkayksenVakavuus(syy) {
+  const lj = String(syy ?? '').split(' ')[0];
+  if (lj === 'vastattu') return 0;
+  if (['otsikot', 'otsikko', 'pitkä', 'kysymysrivi', 'kysymykset', 'merkit', 'kesken', 'turha', 'merkkirivi'].includes(lj)) return 2;
+  return 1;
 }
 
 /** Yhteiset säännöt (merkit, sanat, toisto, vieras sana, faktatoisto, puhuttelu, luvut, nimet) yhdelle tekstille tarkistaTekstin kautta. */
