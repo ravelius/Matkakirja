@@ -2880,3 +2880,7 @@ OMISTAJAN PYYNTÖ klo 13.25 (sanatarkasti): "kohdemaan lippu ei saa kasvaa kokoa
 ## TIETOKORTIN LATAUSMERKKI: PELKÄT PISTEET (omistaja 27.10. klo 13.38, KK:n kortti) (27.10.2026 klo 13.39)
 
 Kysymys: "Mikä tulee tekstin latausmerkiksi?" Vastaus: "b: Pelkät pisteet" (selite: "Kolme aaltoilevaa pistettä ilman tekstiä."). NUI:n vedos 82240e7ff näytetty omistajalle; faktarivit tummennetaan alaotsikon sävyyn. Toteutus NUI, juna 212. KK nollautui omistajan luvalla (kortti 13.38 "Kyllä").
+
+## JUOKSUPELI: KIVETYKSEN KIILTO JA UNITY 7 -VALMIUS (omistaja 27.10. klo 13.48, KK:n ohjaus) (27.10.2026 klo 13.52)
+
+OMISTAJAN PYYNTÖ klo 13.48 (sanatarkasti): "miten paljon juoksupelin grafiikka tulee parantumaan tulevan unity 7 päivityksen myötä? siihen kai ainakin voi silloin laittaa loputtomasti polygoneja kuten unrealissa, mutta mitä muuta? saako maakiviin tehtyä kiiltoa kuten nyt muutamissa havainne kuvissa yms? tämän voisi ottaa jo nyt huomioon pelin teossa varmaan jollain tavalla." KK ohjasi Valosepälle (juoksupeli KK:n johdossa): kivetyksen kiilto havainnekuvien mukaan osana pintatyötä (kujat ensin, juhlasali 04 URP:n ruutuheijastuksilla vuorollaan), pinnat tehdään Unity 7 -valmiiksi.
