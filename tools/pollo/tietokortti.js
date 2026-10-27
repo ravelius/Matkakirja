@@ -13,7 +13,7 @@
 import { haeJson } from './opas.js';
 import { laji, LAJI_QIDS, faktarivit, alarivi, viitatut, valitseAsukkaat } from './tietokortti-kaava.js';
 
-export const TIETOKORTTI_VERSIO = 'v3';
+export const TIETOKORTTI_VERSIO = 'v4';
 /** Tietokortit pysyvät; uusi versio = uusi avain. */
 export const TIETOKORTTI_TTL_S = 365 * 24 * 3600;
 
@@ -178,6 +178,8 @@ export async function korttiFaktat(haku, e, osmNimi) {
   const nimi = (q) => L[q]?.fi ?? L[q]?.en ?? null;
   const maat = maaQ.map(nimi).filter(Boolean);
   const v = valitseAsukkaat(e);
+  // Wikidatan "town" (Q3957) on suomeksi pikkukaupunki vain pienelle: 20 000 asukkaasta Kaupunki (KK 27.10.: Windsor).
+  if (lj.nimi === 'Pikkukaupunki' && v?.maara >= 20000) lj.nimi = 'Kaupunki';
   const kohteenNimi = e?.labels?.fi?.value ?? e?.labels?.en?.value ?? osmNimi;
   return {
     qid: e.id,
@@ -210,8 +212,14 @@ export async function wikiLahde(haku, wiki, pitka) {
     } catch { return null; }
   };
   const fi = await hae('fi', wiki?.fi);
-  const en = !fi || (pitka && fi.teksti.length < TYNKA) ? await hae('en', wiki?.en) : null;
-  if (fi && en) return { ...fi, kielet: ['fi', 'en'], teksti: `${fi.teksti}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  // Pitkä teksti: englanninkielinen aina rinnalle (KK 27.10.: fi-Wikipedian Windsor-virhe; kaksi lähdettä → ristiriita jää pois, kehote).
+  const en = !fi || pitka ? await hae('en', wiki?.en) : null;
+  if (fi && en) {
+    // Englanninkielinen vähintään kaksi kertaa laajempi: suomenkielisestä vain ensimmäinen kappale (nimimuodot), faktat laajemmasta
+    // (KK 27.10.: fi-Windsorin leipätekstin "saksit perustivat linnoituksen"; linnan rakennutti Vilhelm Valloittaja n. 1070).
+    const fiOsa = en.teksti.length >= 2 * fi.teksti.length ? fi.teksti.split(/\n/)[0].slice(0, 800) : fi.teksti.slice(0, 2400);
+    return { ...fi, kielet: ['fi', 'en'], teksti: `${fiOsa}\n\nEnglanninkielinen artikkeli:\n${en.teksti}`.slice(0, 4000) };
+  }
   const l = fi ?? en;
   return l ? { ...l, teksti: l.teksti.slice(0, 4000) } : null;
 }
@@ -305,6 +313,32 @@ export function pulunViesti(faktat, lahde) {
 
 const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
+
+/**
+ * Uusinnan korjauspalaute mallille (resepti 2.4/3: hylätty → uusinta): tarkistuksen syy suomeksi ohjeena. Sokea uusinta toisti
+ * saman virheen (vedos 5b: kolme paikkaa, kuusi uusintaa, yksikään ei läpäissyt).
+ */
+export function korjausPalaute(syy) {
+  const s = String(syy ?? '');
+  const [lj, ...loput] = s.split(' ');
+  const mika = loput.join(' ');
+  const ohje = {
+    lyhyt: 'Ensimmäinen osa on liian lyhyt: kirjoita 3–4 kokonaista virkettä (vähintään 28 sanaa).',
+    'pitkä': 'Lue lisää -osa ei ole 80–170 sanaa: kirjoita se 2–3 kappaleeseen, tai jätä se kokonaan pois, jos uusia faktoja ei ole.',
+    toisto: `"${mika}" toistuu: sama erisnimi enintään kahdesti, sama vuosiluku ja sama pitkä sana vain kerran koko vastauksessa. Käytä viittausta (se, kaupunki) tai jätä toisto pois.`,
+    nimi: `Nimeä "${mika}" ei ole lähteessä: käytä vain lähteen nimiä.`,
+    luku: `Lukua ${mika} ei ole lähteessä: käytä vain lähteen lukuja.`,
+    vieras: 'Älä taivuta englannin sanoja (collegelle, Windsor Bridgen): käytä suomea (oppilaitos, silta) tai nimeä taivuttamattomana (Windsor Bridge -silta).',
+    merkit: 'Poista sulkeet, tähdet, ajatusviivat ja lyhenteet (n., ns., esim.).',
+    sana: `Poista sana "${mika}".`,
+    aloitus: 'Älä aloita äännähdyksellä; aloita paikan nimellä.',
+    'lähes': 'Kaksi virkettä sanoo lähes saman: poista toinen.',
+    puhuttelu: 'Älä puhuttele lukijaa äläkä kehota häntä mihinkään.',
+    kesken: 'Lopeta jokainen osa valmiiseen virkkeeseen ja pisteeseen.',
+    merkkirivi: 'Kirjoita ###LUE-LISÄÄ### vain kerran omalle rivilleen.',
+  }[lj] ?? `Tarkistus hylkäsi vastauksen (${s}).`;
+  return `Tarkistus hylkäsi vastauksen: ${ohje} Kirjoita koko vastaus uudelleen samassa muodossa; muut ohjeet ennallaan.`;
+}
 
 /**
  * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja

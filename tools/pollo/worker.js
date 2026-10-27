@@ -32,7 +32,7 @@ import {
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
-  korttiAvain, tekstiAvain, linkitaWikidata, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
+  korttiAvain, tekstiAvain, linkitaWikidata, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
   tarkistaTeksti, EI_LAHDETTA,
 } from './tietokortti.js';
 import {
@@ -3961,12 +3961,17 @@ async function hoidaTietoteksti(pyynto, env, kors, runko, ctx) {
       console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: ${tarkistus.ok ? 'hyväksytty' : `hylätty (${tarkistus.syy})`}`);
       let talteen = !virhe && stop === 'end_turn' && tarkistus.ok ? teksti.trim() : null;
       // Resepti 2.4/3: hylätty → enintään kaksi uusintaa taustalla (pelaaja näki jo striimin); hyväksytty ämpäriin seuraaville.
+      // Uusinta saa edellisen vastauksen ja hylkäyksen syyn (korjauspalaute), ei sokeaa uusintaa.
+      let edellinen = teksti.trim(), syy = tarkistus.syy;
       for (let kerta = 0; !talteen && !chatista && kerta < 2; kerta += 1) {
         try {
+          const viestit = [{ role: 'user', content: syote }];
+          if (edellinen) viestit.push({ role: 'assistant', content: edellinen }, { role: 'user', content: korjausPalaute(syy) });
           const u = await kysyMallitiedot(env, {
-            jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KARTAN_TIETOKORTTI_KEHOTE}`, viestit: [{ role: 'user', content: syote }], maxTokens: 900, jaettu: true,
+            jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KARTAN_TIETOKORTTI_KEHOTE}`, viestit, maxTokens: 900, jaettu: true,
           });
           const t2 = tarkistaTeksti(u.teksti, syote, kortti.nimi);
+          edellinen = (u.teksti ?? '').trim(); syy = t2.syy;
           console.log(`pollo: tietoteksti ${kortti.qid ?? paikka.nimi}: uusinta ${kerta + 1} ${t2.ok ? 'hyväksytty' : `hylätty (${t2.syy})`}`);
           if (t2.ok && u.stop === 'end_turn' && u.teksti.trim()) talteen = u.teksti.trim();
         } catch { break; }

@@ -1,7 +1,7 @@
 // Kartan tietokortit (Raamattu 2.203): suomenkielisen kaavan luvut ja välimuistin avaimet (tools/pollo/tietokortti.js).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { asukkaatTeksti, vakiluku, korttiAvain, tekstiAvain, KARTAN_TIETOKORTTI_KEHOTE, tarkistaTeksti, LUE_LISAA, EI_LAHDETTA } from '../tools/pollo/tietokortti.js';
+import { korjausPalaute, asukkaatTeksti, vakiluku, korttiAvain, tekstiAvain, KARTAN_TIETOKORTTI_KEHOTE, tarkistaTeksti, LUE_LISAA, EI_LAHDETTA } from '../tools/pollo/tietokortti.js';
 
 test('asukkaat kaavalla: noin, kaksi merkitsevää, tuhaterotin välilyönti, vuosi', () => {
   assert.equal(asukkaatTeksti({ maara: 183631, vuosi: '2021' }), 'noin 180 000 asukasta (2021)');
@@ -49,6 +49,7 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.equal(tarkistaTeksti(`${s(40)} Eton Collegessa opiskelee poikia. Collegessa on kirkko.`, college, 'Eton').ok, true, 'nimet eivät ole pitkän sanan toistoa');
   assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
+  assert.match(korjausPalaute('toisto Windsorin'), /"Windsorin" toistuu/);
   assert.match(tarkistaTeksti(`${s(40)} maa lahjoitettiin collegelle.`, syote).syy, /vieras/);
   assert.match(tarkistaTeksti(`${s(40)} Se on Windsor Bridgen vieressä.`, JSON.stringify({ t: 'Windsor Bridge' })).syy, /vieras/);
   assert.equal(tarkistaTeksti(`${s(40)} linnaa käytetään residenssinään.`, syote).ok, true, 'ä ei ole sanaraja');

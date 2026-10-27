@@ -144,6 +144,14 @@ export function valitseAsukkaat(e) {
         || ((x.vuosi ?? '') === (paras.vuosi ?? '') && x.maara > paras.maara)));
     if (parempi) paras = x;
   }
+  // Kartta elää nykyajassa (KK 27.10. 02.18): suositeltu tai uusin luku voittaa, myös ilman vuotta (Windsor 32 184), eikä vanhempaa
+  // lukua oteta vuoden takia. Vain ennen vuotta 1990 olevan valinnan korvaa uusin vuodellinen luku vuodesta 1990 (SK 27.10.).
+  if (paras?.vuosi && paras.vuosi < '1990') {
+    const vuodelliset = (e?.claims?.P1082 ?? []).filter((c) => c.rank !== 'deprecated').map((c) => ({ maara: Math.round(Number(c?.mainsnak?.datavalue?.value?.amount)),
+      vuosi: /^\+(\d{4})/.exec(c?.qualifiers?.P585?.[0]?.datavalue?.value?.time ?? '')?.[1] ?? null, ensisijainen: false }))
+      .filter((x) => x.maara > 0 && x.vuosi >= '1990').sort((a, b) => b.vuosi.localeCompare(a.vuosi));
+    if (vuodelliset[0]) paras = vuodelliset[0];
+  }
   return paras;
 }
 
