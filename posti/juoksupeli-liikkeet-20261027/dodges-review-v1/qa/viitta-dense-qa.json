@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "clip": "dodge_left",
+      "samples": 289,
+      "wholeMeshFloorMinM": 0.00034340703549223984,
+      "fullContactSamples": 93,
+      "maxPlantedAnkleErrorM": 0.00033754318862862985,
+      "entryExitWorldMatrixDelta": [
+        2.215778630576537e-07,
+        2.1186907753212303e-07
+      ],
+      "pass": true
+    },
+    {
+      "clip": "dodge_right",
+      "samples": 289,
+      "wholeMeshFloorMinM": 0.00034337937655594907,
+      "fullContactSamples": 93,
+      "maxPlantedAnkleErrorM": 0.000389438092477795,
+      "entryExitWorldMatrixDelta": [
+        2.215778630576537e-07,
+        2.1186907753212303e-07
+      ],
+      "pass": true
+    },
+    {
+      "clip": "dodge_left_right",
+      "samples": 529,
+      "wholeMeshFloorMinM": 0.00043913987832169154,
+      "fullContactSamples": 190,
+      "maxPlantedAnkleErrorM": 0.0002924228894721135,
+      "entryExitWorldMatrixDelta": [
+        2.215778630576537e-07,
+        2.2023077086985587e-07
+      ],
+      "pass": true
+    },
+    {
+      "clip": "dodge_right_left",
+      "samples": 529,
+      "wholeMeshFloorMinM": 0.0005316887873612265,
+      "fullContactSamples": 190,
+      "maxPlantedAnkleErrorM": 0.00039008015015004063,
+      "entryExitWorldMatrixDelta": [
+        2.215778630576537e-07,
+        2.2023077086985587e-07
+      ],
+      "pass": true
+    }
+  ],
+  "criterion": "Whole mesh floor >= -0.5mm; ankle-contact proxy <1mm during full support; entry/exit match floor-corrected source run at stated phase. Not an exhaustive cloth/finger collision proof.",
+  "elapsedSeconds": 9.162794125033543,
+  "peakRSSMiB": 142.3125
+}

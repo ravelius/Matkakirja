@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "sourceRootScale": 1.3734724521636963,
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "method": "uniform similarity transform of positions, node/animation translations and inverse-bind translations; no deformation or new motion",
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-mobile-normalized.unpacked.glb",
+    "sourceSHA256": "0e201e6a4654973d292aac63fa650032fe0a2ac8da5b4d451f4d3c0f29f2c041",
+    "file": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-mobile-normalized.glb",
+    "sha256": "5782adb354a277998190ec1c73771473e0bfccdf3ab6244fbec4eb24823bf71d",
+    "beforeBytes": 14526132,
+    "afterBytes": 13263292,
+    "sourceAccessors": 6426,
+    "usedAccessors": 4788,
+    "deduplicatedAccessors": 4717,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.3672491250326857,
+    "peakRSSMiB": 223.890625
+  },
+  "worldMotionQA": [
+    {
+      "clip": "glide_enter",
+      "maxWorldVertexDeltaM": 1.3369529349175637e-07,
+      "maxFootJointDeltaM": 5.2653617921313683e-08
+    },
+    {
+      "clip": "glide_exit",
+      "maxWorldVertexDeltaM": 1.36861311148332e-07,
+      "maxFootJointDeltaM": 5.615391820957548e-08
+    },
+    {
+      "clip": "glide_left",
+      "maxWorldVertexDeltaM": 1.4025554587912507e-07,
+      "maxFootJointDeltaM": 6.209595185530671e-08
+    },
+    {
+      "clip": "glide_loop",
+      "maxWorldVertexDeltaM": 1.396067428290227e-07,
+      "maxFootJointDeltaM": 6.035812705009697e-08
+    },
+    {
+      "clip": "glide_right",
+      "maxWorldVertexDeltaM": 1.3809258384017686e-07,
+      "maxFootJointDeltaM": 7.015530355866255e-08
+    },
+    {
+      "clip": "hop_sequence",
+      "maxWorldVertexDeltaM": 1.28649362932937e-07,
+      "maxFootJointDeltaM": 3.5708002173609876e-08
+    },
+    {
+      "clip": "idle",
+      "maxWorldVertexDeltaM": 1.2699082874215493e-07,
+      "maxFootJointDeltaM": 4.893763846376968e-08
+    },
+    {
+      "clip": "run",
+      "maxWorldVertexDeltaM": 1.1705925677984625e-07,
+      "maxFootJointDeltaM": 3.8924616139462634e-08
+    },
+    {
+      "clip": "sprint_cape",
+      "maxWorldVertexDeltaM": 1.1833305017258693e-07,
+      "maxFootJointDeltaM": 4.065232864725695e-08
+    },
+    {
+      "clip": "door_push_run",
+      "maxWorldVertexDeltaM": 1.1705925599820958e-07,
+      "maxFootJointDeltaM": 3.876844079159301e-08
+    },
+    {
+      "clip": "caught_back",
+      "maxWorldVertexDeltaM": 1.1981245307823465e-07,
+      "maxFootJointDeltaM": 3.6602435798106745e-08
+    },
+    {
+      "clip": "caught_hold_back",
+      "maxWorldVertexDeltaM": 9.441336114681783e-08,
+      "maxFootJointDeltaM": 1.282566104946818e-08
+    },
+    {
+      "clip": "caught_front",
+      "maxWorldVertexDeltaM": 1.1754372621100132e-07,
+      "maxFootJointDeltaM": 4.191845493307068e-08
+    },
+    {
+      "clip": "caught_hold_front",
+      "maxWorldVertexDeltaM": 9.441336114681783e-08,
+      "maxFootJointDeltaM": 1.282566104946818e-08
+    },
+    {
+      "clip": "caught_side",
+      "maxWorldVertexDeltaM": 1.1034140315925708e-07,
+      "maxFootJointDeltaM": 3.537225257819971e-08
+    },
+    {
+      "clip": "caught_hold_side",
+      "maxWorldVertexDeltaM": 9.238460167340104e-08,
+      "maxFootJointDeltaM": 1.477527328481455e-08
+    },
+    {
+      "clip": "struggle_1",
+      "maxWorldVertexDeltaM": 9.437711605310891e-08,
+      "maxFootJointDeltaM": 1.282566104946818e-08
+    },
+    {
+      "clip": "struggle_2",
+      "maxWorldVertexDeltaM": 1.287759143055623e-07,
+      "maxFootJointDeltaM": 3.9112825772839414e-08
+    },
+    {
+      "clip": "struggle_3",
+      "maxWorldVertexDeltaM": 1.2546791447864448e-07,
+      "maxFootJointDeltaM": 3.57039363753774e-08
+    },
+    {
+      "clip": "struggle_4",
+      "maxWorldVertexDeltaM": 1.272904906133924e-07,
+      "maxFootJointDeltaM": 3.760127486448307e-08
+    },
+    {
+      "clip": "struggle_give_up",
+      "maxWorldVertexDeltaM": 1.2748583693458259e-07,
+      "maxFootJointDeltaM": 3.826817302620219e-08
+    },
+    {
+      "clip": "struggle_free",
+      "maxWorldVertexDeltaM": 1.2341297735280502e-07,
+      "maxFootJointDeltaM": 3.9651210776253924e-08
+    },
+    {
+      "clip": "struggle_front_1",
+      "maxWorldVertexDeltaM": 9.437711605310891e-08,
+      "maxFootJointDeltaM": 1.282566104946818e-08
+    },
+    {
+      "clip": "struggle_front_2",
+      "maxWorldVertexDeltaM": 1.287759143055623e-07,
+      "maxFootJointDeltaM": 3.9112825772839414e-08
+    },
+    {
+      "clip": "struggle_front_3",
+      "maxWorldVertexDeltaM": 1.2546791447864448e-07,
+      "maxFootJointDeltaM": 3.57039363753774e-08
+    },
+    {
+      "clip": "struggle_front_4",
+      "maxWorldVertexDeltaM": 1.272904906133924e-07,
+      "maxFootJointDeltaM": 3.760127486448307e-08
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "maxWorldVertexDeltaM": 1.2748583693458259e-07,
+      "maxFootJointDeltaM": 3.826817302620219e-08
+    },
+    {
+      "clip": "struggle_front_free",
+      "maxWorldVertexDeltaM": 1.2341297735280502e-07,
+      "maxFootJointDeltaM": 3.9651210776253924e-08
+    },
+    {
+      "clip": "struggle_side_1",
+      "maxWorldVertexDeltaM": 9.23672072435661e-08,
+      "maxFootJointDeltaM": 1.477527328481455e-08
+    },
+    {
+      "clip": "struggle_side_2",
+      "maxWorldVertexDeltaM": 1.2668437769309224e-07,
+      "maxFootJointDeltaM": 3.696162930511481e-08
+    },
+    {
+      "clip": "struggle_side_3",
+      "maxWorldVertexDeltaM": 1.2762849761928356e-07,
+      "maxFootJointDeltaM": 3.808698895379158e-08
+    },
+    {
+      "clip": "struggle_side_4",
+      "maxWorldVertexDeltaM": 1.2471317943375078e-07,
+      "maxFootJointDeltaM": 3.5237949086081385e-08
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "maxWorldVertexDeltaM": 1.2480598792458984e-07,
+      "maxFootJointDeltaM": 3.7508805559737135e-08
+    },
+    {
+      "clip": "struggle_side_free",
+      "maxWorldVertexDeltaM": 1.2117942597809466e-07,
+      "maxFootJointDeltaM": 3.690282154521433e-08
+    },
+    {
+      "clip": "dodge_left",
+      "maxWorldVertexDeltaM": 1.181058457387535e-07,
+      "maxFootJointDeltaM": 4.570469631561687e-08
+    },
+    {
+      "clip": "dodge_right",
+      "maxWorldVertexDeltaM": 1.1786546885003403e-07,
+      "maxFootJointDeltaM": 4.570366659764411e-08
+    },
+    {
+      "clip": "dodge_left_right",
+      "maxWorldVertexDeltaM": 1.1911995274173012e-07,
+      "maxFootJointDeltaM": 4.570686818350391e-08
+    },
+    {
+      "clip": "dodge_right_left",
+      "maxWorldVertexDeltaM": 1.1870628150414347e-07,
+      "maxFootJointDeltaM": 4.570597248161507e-08
+    }
+  ],
+  "elapsedSeconds": 32.5196973340353,
+  "peakRSSMiB": 266.625
+}

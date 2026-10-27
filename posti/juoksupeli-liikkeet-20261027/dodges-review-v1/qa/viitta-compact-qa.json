@@ -1,0 +1,453 @@
+{
+  "status": "PASS",
+  "source": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-dodges.glb",
+  "sourceSHA256": "6f1ee836363ae1230ccd2f1eb9d7d2dc31c128df0cabddcd7922431f87ffc6f5",
+  "file": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-mobile.glb",
+  "sha256": "7474a6478262614e9dd1f7ed9382aa90aac0eea16ecfcfd0b33f24a48e2d3db8",
+  "bytes": 13237536,
+  "geometryRigTexturesUnchanged": true,
+  "keyTolerance": {
+    "quaternionChord": 5e-06,
+    "translationScale": 5e-07
+  },
+  "motionDeltaGateM": 0.0001,
+  "keys": [
+    {
+      "clip": "glide_enter",
+      "beforeKeys": 3922,
+      "afterKeys": 3778
+    },
+    {
+      "clip": "glide_exit",
+      "beforeKeys": 3922,
+      "afterKeys": 3778
+    },
+    {
+      "clip": "glide_left",
+      "beforeKeys": 4165,
+      "afterKeys": 4125
+    },
+    {
+      "clip": "glide_loop",
+      "beforeKeys": 4165,
+      "afterKeys": 4125
+    },
+    {
+      "clip": "glide_right",
+      "beforeKeys": 4165,
+      "afterKeys": 4125
+    },
+    {
+      "clip": "hop_sequence",
+      "beforeKeys": 7686,
+      "afterKeys": 7323
+    },
+    {
+      "clip": "idle",
+      "beforeKeys": 50460,
+      "afterKeys": 24302
+    },
+    {
+      "clip": "run",
+      "beforeKeys": 6527,
+      "afterKeys": 6527
+    },
+    {
+      "clip": "sprint_cape",
+      "beforeKeys": 5029,
+      "afterKeys": 5029
+    },
+    {
+      "clip": "door_push_run",
+      "beforeKeys": 8923,
+      "afterKeys": 2712
+    },
+    {
+      "clip": "caught_back",
+      "beforeKeys": 18227,
+      "afterKeys": 6435
+    },
+    {
+      "clip": "caught_hold_back",
+      "beforeKeys": 1039,
+      "afterKeys": 1026
+    },
+    {
+      "clip": "caught_front",
+      "beforeKeys": 18227,
+      "afterKeys": 4431
+    },
+    {
+      "clip": "caught_hold_front",
+      "beforeKeys": 1039,
+      "afterKeys": 1026
+    },
+    {
+      "clip": "caught_side",
+      "beforeKeys": 18227,
+      "afterKeys": 4554
+    },
+    {
+      "clip": "caught_hold_side",
+      "beforeKeys": 1110,
+      "afterKeys": 1065
+    },
+    {
+      "clip": "struggle_1",
+      "beforeKeys": 1465,
+      "afterKeys": 1037
+    },
+    {
+      "clip": "struggle_2",
+      "beforeKeys": 1536,
+      "afterKeys": 1499
+    },
+    {
+      "clip": "struggle_3",
+      "beforeKeys": 1685,
+      "afterKeys": 1681
+    },
+    {
+      "clip": "struggle_4",
+      "beforeKeys": 1841,
+      "afterKeys": 1838
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeKeys": 1841,
+      "afterKeys": 1769
+    },
+    {
+      "clip": "struggle_free",
+      "beforeKeys": 24185,
+      "afterKeys": 8302
+    },
+    {
+      "clip": "struggle_front_1",
+      "beforeKeys": 1465,
+      "afterKeys": 1037
+    },
+    {
+      "clip": "struggle_front_2",
+      "beforeKeys": 1536,
+      "afterKeys": 1499
+    },
+    {
+      "clip": "struggle_front_3",
+      "beforeKeys": 1685,
+      "afterKeys": 1681
+    },
+    {
+      "clip": "struggle_front_4",
+      "beforeKeys": 1841,
+      "afterKeys": 1838
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "beforeKeys": 1841,
+      "afterKeys": 1769
+    },
+    {
+      "clip": "struggle_front_free",
+      "beforeKeys": 48017,
+      "afterKeys": 15409
+    },
+    {
+      "clip": "struggle_side_1",
+      "beforeKeys": 1465,
+      "afterKeys": 1021
+    },
+    {
+      "clip": "struggle_side_2",
+      "beforeKeys": 1536,
+      "afterKeys": 1503
+    },
+    {
+      "clip": "struggle_side_3",
+      "beforeKeys": 1685,
+      "afterKeys": 1681
+    },
+    {
+      "clip": "struggle_side_4",
+      "beforeKeys": 1841,
+      "afterKeys": 1814
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "beforeKeys": 1841,
+      "afterKeys": 1765
+    },
+    {
+      "clip": "struggle_side_free",
+      "beforeKeys": 48017,
+      "afterKeys": 15404
+    },
+    {
+      "clip": "dodge_left",
+      "beforeKeys": 15985,
+      "afterKeys": 6775
+    },
+    {
+      "clip": "dodge_right",
+      "beforeKeys": 15985,
+      "afterKeys": 6775
+    },
+    {
+      "clip": "dodge_left_right",
+      "beforeKeys": 28825,
+      "afterKeys": 11826
+    },
+    {
+      "clip": "dodge_right_left",
+      "beforeKeys": 28825,
+      "afterKeys": 11826
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "glide_enter",
+      "samples": 32,
+      "maxSkinnedVertexDeltaM": 3.012862591927326e-07,
+      "pass": true
+    },
+    {
+      "clip": "glide_exit",
+      "samples": 32,
+      "maxSkinnedVertexDeltaM": 2.8256400820221524e-07,
+      "pass": true
+    },
+    {
+      "clip": "glide_left",
+      "samples": 62,
+      "maxSkinnedVertexDeltaM": 4.125311654157931e-07,
+      "pass": true
+    },
+    {
+      "clip": "glide_loop",
+      "samples": 62,
+      "maxSkinnedVertexDeltaM": 4.0872212838234994e-07,
+      "pass": true
+    },
+    {
+      "clip": "glide_right",
+      "samples": 62,
+      "maxSkinnedVertexDeltaM": 4.0748731436482334e-07,
+      "pass": true
+    },
+    {
+      "clip": "hop_sequence",
+      "samples": 67,
+      "maxSkinnedVertexDeltaM": 8.963402101275614e-07,
+      "pass": true
+    },
+    {
+      "clip": "idle",
+      "samples": 461,
+      "maxSkinnedVertexDeltaM": 1.03013215783711e-05,
+      "pass": true
+    },
+    {
+      "clip": "run",
+      "samples": 77,
+      "maxSkinnedVertexDeltaM": 1.5569059696471944e-07,
+      "pass": true
+    },
+    {
+      "clip": "sprint_cape",
+      "samples": 60,
+      "maxSkinnedVertexDeltaM": 1.5569059696471944e-07,
+      "pass": true
+    },
+    {
+      "clip": "door_push_run",
+      "samples": 20,
+      "maxSkinnedVertexDeltaM": 3.8022330092272555e-06,
+      "pass": true
+    },
+    {
+      "clip": "caught_back",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 1.1045193659731227e-06,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_back",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 1.6244868988467212e-06,
+      "pass": true
+    },
+    {
+      "clip": "caught_front",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 5.043363966044731e-07,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_front",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 1.6244868988467212e-06,
+      "pass": true
+    },
+    {
+      "clip": "caught_side",
+      "samples": 28,
+      "maxSkinnedVertexDeltaM": 3.911980589174508e-07,
+      "pass": true
+    },
+    {
+      "clip": "caught_hold_side",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 2.762747397315938e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 8.947969765832273e-07,
+      "pass": true
+    },
+    {
+      "clip": "struggle_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 5.936314612771439e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 2.4586067932608883e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 2.6079752957031086e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 7.179393340450188e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 5.426168517382216e-07,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 8.947969765832273e-07,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 5.936314612771439e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 2.4586067932608883e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 2.6079752957031086e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 7.179393340450188e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_front_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 2.4081526440507193e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_1",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 1.179251343285769e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_2",
+      "samples": 37,
+      "maxSkinnedVertexDeltaM": 4.502956506135513e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_3",
+      "samples": 40,
+      "maxSkinnedVertexDeltaM": 2.917837412015939e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_4",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 2.7200436938652376e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "samples": 46,
+      "maxSkinnedVertexDeltaM": 7.291193112216267e-06,
+      "pass": true
+    },
+    {
+      "clip": "struggle_side_free",
+      "samples": 19,
+      "maxSkinnedVertexDeltaM": 2.406734295773126e-06,
+      "pass": true
+    },
+    {
+      "clip": "dodge_left",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 9.722866351652228e-07,
+      "pass": true
+    },
+    {
+      "clip": "dodge_right",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 9.722866351652228e-07,
+      "pass": true
+    },
+    {
+      "clip": "dodge_left_right",
+      "samples": 529,
+      "maxSkinnedVertexDeltaM": 1.0828640771293788e-06,
+      "pass": true
+    },
+    {
+      "clip": "dodge_right_left",
+      "samples": 529,
+      "maxSkinnedVertexDeltaM": 1.0808264579199166e-06,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-mobile.unpacked.glb",
+    "sourceSHA256": "48a7030c4aa7ce1ba832ab874979e8090e0537d6daaf9d71585c7aed66461337",
+    "file": "output/juoksupeli-liikkeet-20261027/work/dodges-v3/viitta/puyi-mobile.glb",
+    "sha256": "7474a6478262614e9dd1f7ed9382aa90aac0eea16ecfcfd0b33f24a48e2d3db8",
+    "beforeBytes": 23103300,
+    "afterBytes": 13237536,
+    "sourceAccessors": 23547,
+    "usedAccessors": 4788,
+    "deduplicatedAccessors": 4788,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.3748265419853851,
+    "peakRSSMiB": 338.9375
+  },
+  "elapsedSeconds": 38.99196820904035,
+  "peakRSSMiB": 409.625
+}

@@ -1,0 +1,12 @@
+{
+  "coordinateSystem": "+Y up; +Z forward; +X anatomical left",
+  "origin": "At clip entry, preserve actor world origin. Add the following local displacement in the entry-facing coordinate frame. Hip yaw is already baked; do not rotate the actor a second time.",
+  "time": "t is clip time. Playback rate=game speed/5 for 5–7.5m/s; all equations use clip time.",
+  "S": "S(u)=0 if u<=0, 1 if u>=1, otherwise 10u^3-15u^4+6u^5.",
+  "rootSingle": "X=sign*0.75*S((t-0.07)/0.40); Y=0; Z=5*t; duration0.60s. sign=+1 dodge_left, -1 dodge_right.",
+  "rootWeave": "X=sign*0.65*(S((t-0.07)/0.40)-S((t-0.60)/0.40)); Y=0; Z=5*t; duration1.10s. sign=+1 dodge_left_right, -1 dodge_right_left.",
+  "entryExit": "Entry source run phase0. Exit source run phase1.9*duration modulo the model run duration. Continue root from its endpoint; do not snap X back after a single dodge. Arbitrary-phase entry needs a short game-side blend and Unity QA.",
+  "speed": "Source run sampled at1.9x for the5m/s reference. At exit continue run at1.9*(gameSpeed/5); receiver may tune this after foot-contact testing.",
+  "collision": "Controller checks space along the entire side path and aborts/blends when blocked. This asset package does not alter game code.",
+  "footContact": "Dense480Hz exported model checks use exactly these root curves; alternate controller trajectories require a fresh contact check."
+}
