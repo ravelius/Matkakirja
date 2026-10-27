@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi.glb",
+  "sourceSHA256": "427b557f432ff7aa9474b67390946e1844697b02a1f207d64e57d645e5360a02",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi-compact.glb",
+  "sha256": "030cff5d8301aee39b38d8837f1feefc614988464e2cf9f870da89c651beca8a",
+  "bytes": 10542548,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 2e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "jump_down",
+      "beforeKeys": 158693,
+      "afterKeys": 24116
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "jump_down",
+      "samples": 714,
+      "maxSkinnedVertexDeltaM": 4.454767513538646e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi-compact.unpacked.glb",
+    "sourceSHA256": "38a98eb87d016842b108b4300654d62420ff784415a39a5c84d20cb6dccc6b6b",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi-compact.glb",
+    "sha256": "030cff5d8301aee39b38d8837f1feefc614988464e2cf9f870da89c651beca8a",
+    "beforeBytes": 12898748,
+    "afterBytes": 10542548,
+    "sourceAccessors": 2627,
+    "usedAccessors": 2169,
+    "deduplicatedAccessors": 1580,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.07014454202726483,
+    "peakRSSMiB": 169.984375
+  },
+  "elapsedSeconds": 10.94335512490943,
+  "peakRSSMiB": 220.609375
+}

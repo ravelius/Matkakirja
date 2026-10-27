@@ -1,0 +1,100 @@
+{
+  "createdAt": "2026-10-27T16:43:48.132186+00:00",
+  "status": "TECHNICAL_REVIEW_READY_GAME_QA_PENDING",
+  "models": [
+    {
+      "file": "models/puyi-perus-parkour.glb",
+      "sha256": "8f09c0c7e9af12e5592e2ece0355d32ead53f773c84e1c208ef1c29a6ae10ce8",
+      "bytes": 10499348,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down"
+      ],
+      "durationS": 1.4848241606419053,
+      "denseQA": {
+        "allPass": true,
+        "samples": 1429,
+        "minFloorM": 0.0009720326959555686,
+        "maximumEquivalent240HzStepDegrees": 13.343114399861047,
+        "maximumStepWhere": {
+          "t": 0.8554671129031609,
+          "joint": "mixamorig:RightForeArm",
+          "dt": 0.0010419818671171255
+        },
+        "ledgeCollisionSamples": 0,
+        "collisions": [],
+        "ledgeBoundsM": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0,
+            1.498
+          ],
+          "z": [
+            -2,
+            0.95
+          ]
+        },
+        "maxLandingContactDeviationFromReviewedSourceM": 1.3690030391992072e-05,
+        "referenceHeightM": 1.5,
+        "gameVerified": false,
+        "elapsedSeconds": 17.724531166022643,
+        "peakRSSMiB": 194.078125
+      }
+    },
+    {
+      "file": "models/puyi-viitta-parkour.glb",
+      "sha256": "5e058aa57a7a5a03eabd0e959089d31a83feaeff6ea625d4b3335b2597298c6e",
+      "bytes": 11221280,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs",
+        "vault_hand",
+        "jump_down"
+      ],
+      "durationS": 1.4848241606419053,
+      "denseQA": {
+        "allPass": true,
+        "samples": 1429,
+        "minFloorM": 0.0009909134250101989,
+        "maximumEquivalent240HzStepDegrees": 13.740736560224088,
+        "maximumStepWhere": {
+          "t": 0.059392966425676215,
+          "joint": "mixamorig:RightLeg",
+          "dt": 0.0010419818671171255
+        },
+        "ledgeCollisionSamples": 0,
+        "collisions": [],
+        "ledgeBoundsM": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0,
+            1.498
+          ],
+          "z": [
+            -2,
+            0.95
+          ]
+        },
+        "maxLandingContactDeviationFromReviewedSourceM": 1.2758858362448914e-05,
+        "referenceHeightM": 1.5,
+        "gameVerified": false,
+        "elapsedSeconds": 15.37549483391922,
+        "peakRSSMiB": 184.84375
+      }
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0
+}

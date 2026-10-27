@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi-trim.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus/puyi-final.glb",
+  "beforeBytes": 10503360,
+  "bytes": 10499348,
+  "sha256": "8f09c0c7e9af12e5592e2ece0355d32ead53f773c84e1c208ef1c29a6ae10ce8",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "idle",
+      "beforeSamplers": 281,
+      "afterSamplers": 281
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "vault_low",
+      "beforeSamplers": 269,
+      "afterSamplers": 269
+    },
+    {
+      "clip": "run_upstairs",
+      "beforeSamplers": 258,
+      "afterSamplers": 258
+    },
+    {
+      "clip": "vault_hand",
+      "beforeSamplers": 269,
+      "afterSamplers": 269
+    },
+    {
+      "clip": "jump_down",
+      "beforeSamplers": 339,
+      "afterSamplers": 266
+    }
+  ]
+}

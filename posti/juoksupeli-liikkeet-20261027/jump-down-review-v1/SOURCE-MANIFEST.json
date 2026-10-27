@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "variant": "perus",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/vault-hand-review-v1/models/puyi-perus-parkour.glb",
+      "sha256": "cf0cbc25384ba47c56e21f46da8fdd908e99c5f3d33ad56767f48e800cd27d19",
+      "work": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v3/perus",
+      "geometryRigTexturesAndPreviousFiveClipsExact": true
+    },
+    {
+      "variant": "viitta",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/vault-hand-review-v1/models/puyi-viitta-parkour.glb",
+      "sha256": "dc7b69a4f5be4528931b49c85e87a8d3ca6effd03ac1ab363bf508c2a774b533",
+      "work": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/jump-down-v1/viitta",
+      "geometryRigTexturesAndPreviousFiveClipsExact": true
+    }
+  ],
+  "method": "Local animation of existing Tripo rigs; source mesh/rig/texture unchanged",
+  "newTripoCalls": 0,
+  "credits": 0
+}

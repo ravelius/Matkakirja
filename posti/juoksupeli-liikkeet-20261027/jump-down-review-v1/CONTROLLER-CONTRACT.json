@@ -1,0 +1,39 @@
+{
+  "coordinates": "metres,+Yup,+Zforward",
+  "import": "Six-clip additional package, NOT replacement for full library. Import jump_down to matching existing rig. idle/run/vault_low/run_upstairs/vault_hand exact unchanged.",
+  "clip": "jump_down",
+  "durationS": 1.4848241606419053,
+  "referenceDropHeightM": 1.5,
+  "referenceLedgeEdgeZ": 0.95,
+  "takeoffS": 0.14,
+  "joinLandingApproachS": 0.7048241606419053,
+  "groundContactS": 0.8648241606419054,
+  "gravity": 9.81,
+  "initialUpSpeed": 1.0,
+  "externalRoot": {
+    "0_to_takeoff": "Prior vault_low root +[0,1.5,0]. For u=(t-.058)/.04: T=t-.22*(t-.058)*(1-u*u)^3 if abs(u)<1 else t; root[0,1.5,5*T].",
+    "air": "s=t-.14; root[0,1.5+s-.5*9.81*s*s,5*t] until JOIN.",
+    "landing": "s=t-JOIN; use previous land_heavy root(s), add5*JOIN toZ. For0<=s<.16 replaceY: u=s/.16;Y=(2*u^3-3*u^2+1)*.5+(u^3-2*u^2+u)*.16*VJOIN.",
+    "VJOIN": -4.540925015897091,
+    "exactSamples": "ROOT-SAMPLES.csv",
+    "authoringCurveSource": "tools/author_jump_down_v3.py"
+  },
+  "exitRootM": [
+    0.0,
+    0.0,
+    5.024120803209527
+  ],
+  "runPhaseAtExitS": 1.482,
+  "exitSpeedMps": 5,
+  "integration": [
+    "No automatic land_soft overlay. Clip contains own heavy landing.",
+    "The reference is1.5m only; receiver must adapt timing/root to actual ledge height.",
+    "Do not add normal root advance on top of external curve.",
+    "Do not treat this as the cape glide sequence."
+  ],
+  "limits": [
+    "Cloth self-collision and runtime transitions require game QA.",
+    "Perus landing release.44-.78s was smoothed across allbones to remove inherited source jerk. Separate old land_heavy replacement follows."
+  ],
+  "gameVerified": false
+}

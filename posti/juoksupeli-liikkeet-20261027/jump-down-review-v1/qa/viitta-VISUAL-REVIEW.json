@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-27T16:43:04.364497+00:00",
+  "actualFinalGLB": true,
+  "viewsPersonallyInspected": [
+    0,
+    90,
+    180
+  ],
+  "sixPhasesPerView": true,
+  "findings": [
+    "Clear ledge departure, airborne phase, two-hand deep landing and return to run",
+    "No ledge or floor crossings in sampled whole-mesh test",
+    "Cape keeps existing deformation; full underarm self-collision remains separate QA"
+  ],
+  "readyForReceiverReview": true,
+  "gameVerified": false
+}

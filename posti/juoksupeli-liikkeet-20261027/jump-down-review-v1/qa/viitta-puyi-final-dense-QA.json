@@ -1,0 +1,32 @@
+{
+  "allPass": true,
+  "samples": 1429,
+  "minFloorM": 0.0009909134250101989,
+  "maximumEquivalent240HzStepDegrees": 13.740736560224088,
+  "maximumStepWhere": {
+    "t": 0.059392966425676215,
+    "joint": "mixamorig:RightLeg",
+    "dt": 0.0010419818671171255
+  },
+  "ledgeCollisionSamples": 0,
+  "collisions": [],
+  "ledgeBoundsM": {
+    "x": [
+      -1.8,
+      1.8
+    ],
+    "y": [
+      0,
+      1.498
+    ],
+    "z": [
+      -2,
+      0.95
+    ]
+  },
+  "maxLandingContactDeviationFromReviewedSourceM": 1.2758858362448914e-05,
+  "referenceHeightM": 1.5,
+  "gameVerified": false,
+  "elapsedSeconds": 15.37549483391922,
+  "peakRSSMiB": 184.84375
+}
