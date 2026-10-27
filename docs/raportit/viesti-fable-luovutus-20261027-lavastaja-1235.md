@@ -41,3 +41,26 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Peittokoe ilman leivontaa: K/tyokalut/lattia_tuplat.py <lattia_peitto_apu.py> <kansio> x0 x1 z0 z1 ruutu <palat…> (ylöspäin |y| < 2 cm,
   > 1 = tupla, 0 = reikä; kujan linjat koodissa kujalle 01). lattia_ylakuva.py piirtää palat väreittäin ylhäältä (saumat näkyvät heti),
   render_alue.py renderöi taustapalat + avoimet sijoituksineen kamerasta (x y z → kohde x y z). Python: /opt/homebrew/bin/python3.
+
+## LISÄYS klo 12.4x: vastaukset ja uudet tehtävät (tulleet luovutuksen jälkeen, sitovat; lue ennen "Seuraavaksi"-listaa)
+- VS 1070: avointen pariovi pysyy nykyisellään (V4_ovi). 1070 vain aukkoihin, joiden lehti ≥ 1:1,6 pysty (hallien/porttien korkeat ovet), ei venytystä.
+- VS 1069: KORVAA kultaiset päätylaatat (Katto paatylaatta) 1069-nauhalla (laatta + tippa) lappeen kulmassa räystään reunassa,
+  laatan keskikohta nykyisten laattojen kohdalle; vanhoja ei jätetä alle. → avoimet_pinnat.py:hin, avoimet-v56.
+- VS friisit-v2 (SHA OK, saumat tasoitettu): /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/friisit-v2-sauma/ (1058 sha256 04801a3c…,
+  1067 0b6485fc…). V4_palkkivyo ← 1067 (yksi kuva ≈ 3,2 m × 0,8 m), 1058 muurin harjan alle turkoosiksi vyöksi (≈ 4 m × 0,5 m, havainne 02).
+- VS v73m-parit: /Users/Shared/Claude/proto-3d/lokit/havainne-editori-20261027-122051/ (1071 toimii). Kujan 01 näkyvimmät räystäät ovat
+  TAUSTAPALAN 1-3 rakennuksissa (itäpuoli): sama sarja niihin: V4_palkkivyo ← 1067, räystään alle 1068, reunaan 1069, harmaat räystäslaatat
+  (V4_harmaa) → V4_teal tai 1058. Ilmoita VS:lle juuri-v7x → parit.
+- NUI v72m-parit: havainne-editori-20261027-121714/ (RAPORTTI.md EROLISTAn numeroin, KK:lla). Reunakivi näkyy, 02 sokkeli lähellä. Suurimmat
+  erot: 01/1–3 (ovet, kynnykset, ikkunat), 01/6–7 (räystäs, katot), 02/1 (harjakate), 05/1 (ovien kulma).
+- PT kohta 3 (T-risteys −134; 294): edellisen LR:n oma havainto. Linja: vertaa havainteeseen samasta kamerasta; jos havainteessa ei
+  jalustaa/kaistaletta → poista, jos on → muotoile; katon kulma havainteen räystäiden mukaan (C1). Ei omistajakysymystä.
+- PT Codex-posti 77e5cde51 (claude/postilaatikko, posti/pelikoodari-codex-rakennusmoduulit-toimitus-20261027.md): C1 räystäs 1055 +
+  C3 muurikate 1057 Tripo-GLB:t (T7: …/juoksupeli-rakennusmoduulit-20261027/review-modules-v2/), 3 % limitys. LR: sovitus kujaan,
+  sivukamerat + z-fighting, sitten parit NUI:lle. Friisit 1058/1067 → VS (tehty, yllä).
+- PT Codex-posti adf64e924 (posti/codex-pelikoodari-c2-portaiden-kaltevuus-20261027.md): LR VASTAA postilaatikon kautta (ei PK):
+  (a) C2 vino paneeli 1063: Taihemenin/Taihedianin portaiden nousu + etenemä (tai kaiteen kulma), tarvittavat eri kulmat, paneelin
+  pystykorkeus suhteessa 1,1 m pylvääseen (lähteet: kk_rakennelmat.py portaat/portaskaide, kk_portit.py; g-jalusta tasot 3 × 2,71 m);
+  (b) 1056-kulmapala: linja 90° rakennusnurkan ulkonurkan 45° jiiripuolikas.
+- Järjestysehdotus: (1) Codexin vastausposti (pieni, odottaa), (2) 1069 + 1067/1058 avoimiin ja taustapaloihin → juuri-v75m VS:lle,
+  (3) C1/C3-sovitus kujaan, (4) T-risteys, (5) aukion sivuhallit.
