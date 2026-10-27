@@ -1,0 +1,7 @@
+{
+  "cpuSeconds": 3.270998,
+  "uvSet": 0,
+  "normals": "Both use same posed source normals to isolate geometry; no PBR/runtime acceptance",
+  "source": "precommit.json",
+  "candidateRejected": true
+}
