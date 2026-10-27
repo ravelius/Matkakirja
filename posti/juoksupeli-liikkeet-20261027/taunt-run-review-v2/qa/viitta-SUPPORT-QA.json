@@ -1,0 +1,168 @@
+{
+  "status": "FAIL",
+  "variant": "viitta",
+  "root": "[0,0,5*t]",
+  "groundWindowSource": "v7 actual sole distance<6mm; final candidate measured independently",
+  "testedFullContacts": 14,
+  "samples": 1362,
+  "maxPatchXZDriftFromMidM": 0.007417832863190191,
+  "minBootFloorM": 0.0026891938253559363,
+  "maxAnkleErrorM": 0.00023454797617043058,
+  "windows": [
+    {
+      "side": "Left",
+      "start": 0.06666666931576198,
+      "end": 0.17916667378611034,
+      "patchVertices": 36,
+      "samples": 109,
+      "maxPatchXZFromMidM": 0.007386105524956736,
+      "maxMedianPatchXZFromMidM": 0.00014521248290333335,
+      "minBootFloorM": 0.0028032563501358084,
+      "maxAnkleErrorM": 0.00023454797617043058
+    },
+    {
+      "side": "Left",
+      "start": 0.404166682726807,
+      "end": 0.5125000203649203,
+      "patchVertices": 37,
+      "samples": 105,
+      "maxPatchXZFromMidM": 0.00670516759430139,
+      "maxMedianPatchXZFromMidM": 0.00010605074913962883,
+      "minBootFloorM": 0.0028592534125315193,
+      "maxAnkleErrorM": 0.00016840185083772584
+    },
+    {
+      "side": "Left",
+      "start": 0.7250000288089116,
+      "end": 0.8375000332792599,
+      "patchVertices": 36,
+      "samples": 109,
+      "maxPatchXZFromMidM": 0.007323413273442648,
+      "maxMedianPatchXZFromMidM": 0.00012184953925706865,
+      "minBootFloorM": 0.0028405795337236024,
+      "maxAnkleErrorM": 0.00019199036506629255
+    },
+    {
+      "side": "Left",
+      "start": 1.0583333753877215,
+      "end": 1.17083337985807,
+      "patchVertices": 37,
+      "samples": 109,
+      "maxPatchXZFromMidM": 0.007332676082492419,
+      "maxMedianPatchXZFromMidM": 0.00011295505692485077,
+      "minBootFloorM": 0.0026891938253559363,
+      "maxAnkleErrorM": 0.00017873851972937695
+    },
+    {
+      "side": "Left",
+      "start": 1.4041667224632368,
+      "end": 1.5166667269335852,
+      "patchVertices": 35,
+      "samples": 109,
+      "maxPatchXZFromMidM": 0.007417832863190191,
+      "maxMedianPatchXZFromMidM": 0.000140978090059989,
+      "minBootFloorM": 0.002810078612625299,
+      "maxAnkleErrorM": 0.000226505997937941
+    },
+    {
+      "side": "Left",
+      "start": 1.741666735874282,
+      "end": 1.8500000735123951,
+      "patchVertices": 39,
+      "samples": 105,
+      "maxPatchXZFromMidM": 0.006733059678781122,
+      "maxMedianPatchXZFromMidM": 0.00010405522738620694,
+      "minBootFloorM": 0.0028621598862896332,
+      "maxAnkleErrorM": 0.00016488941632065987
+    },
+    {
+      "side": "Left",
+      "start": 2.0625000819563866,
+      "end": 2.175000086426735,
+      "patchVertices": 36,
+      "samples": 109,
+      "maxPatchXZFromMidM": 0.007354636076446467,
+      "maxMedianPatchXZFromMidM": 0.00014203299514163766,
+      "minBootFloorM": 0.002809319847354713,
+      "maxAnkleErrorM": 0.00022799344974167677
+    },
+    {
+      "side": "Right",
+      "start": 0.24583334310187233,
+      "end": 0.3333333465788099,
+      "patchVertices": 12,
+      "samples": 85,
+      "maxPatchXZFromMidM": 0.00016385303348442223,
+      "maxMedianPatchXZFromMidM": 4.796494661764423e-05,
+      "minBootFloorM": 0.0028975685473668117,
+      "maxAnkleErrorM": 0.0001117896240243908
+    },
+    {
+      "side": "Right",
+      "start": 0.5750000228484471,
+      "end": 0.6541666926609144,
+      "patchVertices": 16,
+      "samples": 77,
+      "maxPatchXZFromMidM": 0.00013898274982573252,
+      "maxMedianPatchXZFromMidM": 5.138638589721937e-05,
+      "minBootFloorM": 0.0028882278674108286,
+      "maxAnkleErrorM": 0.00012294611904495624
+    },
+    {
+      "side": "Right",
+      "start": 0.9041667025950219,
+      "end": 0.9916667060719595,
+      "patchVertices": 12,
+      "samples": 85,
+      "maxPatchXZFromMidM": 0.00016291976816118188,
+      "maxMedianPatchXZFromMidM": 5.067393465860929e-05,
+      "minBootFloorM": 0.0028939946497762463,
+      "maxAnkleErrorM": 0.00011613810797812577
+    },
+    {
+      "side": "Right",
+      "start": 1.2166667150126562,
+      "end": 1.3333333863152397,
+      "patchVertices": 14,
+      "samples": 113,
+      "maxPatchXZFromMidM": 0.00024960155386903393,
+      "maxMedianPatchXZFromMidM": 5.383629598450975e-05,
+      "minBootFloorM": 0.0028759444784324743,
+      "maxAnkleErrorM": 0.00013625855802657907
+    },
+    {
+      "side": "Right",
+      "start": 1.5833333962493472,
+      "end": 1.6708333997262848,
+      "patchVertices": 12,
+      "samples": 85,
+      "maxPatchXZFromMidM": 0.00016444809417215421,
+      "maxMedianPatchXZFromMidM": 4.6764698080966345e-05,
+      "minBootFloorM": 0.0028991999230119202,
+      "maxAnkleErrorM": 0.00010983339604361787
+    },
+    {
+      "side": "Right",
+      "start": 1.9125000759959219,
+      "end": 1.9916667458083892,
+      "patchVertices": 15,
+      "samples": 77,
+      "maxPatchXZFromMidM": 0.0001394347772240929,
+      "maxMedianPatchXZFromMidM": 4.82895071920771e-05,
+      "minBootFloorM": 0.0028917124614455465,
+      "maxAnkleErrorM": 0.00011862562730226928
+    },
+    {
+      "side": "Right",
+      "start": 2.2416667557424965,
+      "end": 2.3291667592194343,
+      "patchVertices": 12,
+      "samples": 85,
+      "maxPatchXZFromMidM": 0.0001634122795750331,
+      "maxMedianPatchXZFromMidM": 4.930505035561752e-05,
+      "minBootFloorM": 0.0028958306965260667,
+      "maxAnkleErrorM": 0.00011391419958574858
+    }
+  ],
+  "limits": "Full planted intervals at960Hz; near-floor boot vertices at contact midpoint, cutoff6mm. Contact blends and end-of-clip return to original run excluded from fixed-foot claim; separately visually reviewed. Not game verification."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "clip": "taunt_run",
+  "durationS": 2.4000000953674316,
+  "floorMinimumM": 0.000684467974299342,
+  "maxAngularStep240HzDeg": 12.116585938522737,
+  "worstAngular": {
+    "time": 2.35833342704508,
+    "bone": "mixamorig:RightFoot"
+  },
+  "handBodyCrossingSamples": 0,
+  "handBodyCrossings": [],
+  "entryRunDelta": 5.6636120238096055e-08,
+  "exitRunDelta": 1.0518737202369621e-06,
+  "sourceRunExitPhase": 2.170333435058594,
+  "runtimeVerified": false,
+  "limits": "960Hz floor,240Hz right-hand vs non-hand local triangle crossings and rotation steps; not complete self collision or actual foot sliding certification.",
+  "seconds": 53.273491041967645
+}

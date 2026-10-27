@@ -1,0 +1,8 @@
+{
+  "status": "TECHNICAL_REVIEW_WITH_KNOWN_BOOT_SKIN_LIMITATION",
+  "strictSupportFailurePreserved": true,
+  "reason": "Do not call all tests PASS: the strict midpoint-nearby6mm surface gate6mm drift/0.2mm ankle fails. Exact ground-at-both-poses measurement shows median<=0.485mm and worst6.096mm perus/3.294mm cape; ankle<=0.235mm. Nearby boot edge contains13-18percent shin influence and flexes<=8.93mm. Preserve accepted main-model weights; deliver this named limitation for gameplay review.",
+  "visualReviewed": true,
+  "gameVerified": false,
+  "ownerAccepted": false
+}

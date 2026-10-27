@@ -1,0 +1,24 @@
+{
+  "file": "taunt-run-review-v2/motions/puyi-perus-liikkeet.glb",
+  "bytes": 6929640,
+  "sha256": "6b702dbe99caf689f092ec3c33ee91199e1cdcddd099c5debf69ac8848377b8d",
+  "clips": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run",
+    "jump_robe",
+    "stairs_robe",
+    "taunt_run"
+  ],
+  "addedOrReplaced": [
+    "taunt_run"
+  ],
+  "allOldAndNewClipArraysByteExact": true,
+  "geometryIncluded": false
+}

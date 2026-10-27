@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "variant": "perus",
+  "clip": "taunt_run",
+  "durationS": 2.4000000953674316,
+  "floorMinimumM": 0.0005713375493933319,
+  "maxAngularStep240HzDeg": 12.497987077559662,
+  "worstAngular": {
+    "time": 0.9916667060719595,
+    "bone": "mixamorig:LeftLeg"
+  },
+  "handBodyCrossingSamples": 0,
+  "handBodyCrossings": [],
+  "entryRunDelta": 5.7983395862493126e-08,
+  "exitRunDelta": 7.916988649971091e-07,
+  "sourceRunExitPhase": 0.9620001811981203,
+  "runtimeVerified": false,
+  "limits": "960Hz floor,240Hz right-hand vs non-hand local triangle crossings and rotation steps; not complete self collision or actual foot sliding certification.",
+  "seconds": 71.52675675007049
+}

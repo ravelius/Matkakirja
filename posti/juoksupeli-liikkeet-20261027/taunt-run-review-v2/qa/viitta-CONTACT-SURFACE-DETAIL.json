@@ -1,0 +1,342 @@
+{
+  "variant": "viitta",
+  "method": "Compare midpoint and current SAME boot vertices with world Y<4mm at both poses. Also retain all midpoint-nearby6mm samples including lifting surface for diagnosis.",
+  "rows": [
+    {
+      "side": "Left",
+      "start": 0.06666666931576198,
+      "end": 0.17916667378611034,
+      "worstNearFoot": {
+        "t": 0.06666666931576198,
+        "nearFootWorst": {
+          "drift": 0.007386105524956736,
+          "midY": 0.005824209438625123,
+          "currentY": 0.003288987615923183,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 14,
+        "groundMaxDrift": 0.0032819071192945123,
+        "groundMedianDrift": 1.855807416773155e-06
+      },
+      "maxActualGroundDrift": 0.0032819071192945123,
+      "maxMedianGroundDrift": 0.00012538228720735902
+    },
+    {
+      "side": "Left",
+      "start": 0.404166682726807,
+      "end": 0.5125000203649203,
+      "worstNearFoot": {
+        "t": 0.404166682726807,
+        "nearFootWorst": {
+          "drift": 0.00670516759430139,
+          "midY": 0.005538761572841082,
+          "currentY": 0.0029297043925866294,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 15,
+        "groundMaxDrift": 0.003017330531449746,
+        "groundMedianDrift": 1.7009419445744455e-06
+      },
+      "maxActualGroundDrift": 0.003017330531449746,
+      "maxMedianGroundDrift": 9.407902620841881e-05
+    },
+    {
+      "side": "Left",
+      "start": 0.7250000288089116,
+      "end": 0.8375000332792599,
+      "worstNearFoot": {
+        "t": 0.7250000288089116,
+        "nearFootWorst": {
+          "drift": 0.007323413273442648,
+          "midY": 0.005888655619435862,
+          "currentY": 0.003326547739625287,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 14,
+        "groundMaxDrift": 0.0032599082761064777,
+        "groundMedianDrift": 1.8632943632447243e-06
+      },
+      "maxActualGroundDrift": 0.0032599082761064777,
+      "maxMedianGroundDrift": 0.00010529192528802245
+    },
+    {
+      "side": "Left",
+      "start": 1.0583333753877215,
+      "end": 1.17083337985807,
+      "worstNearFoot": {
+        "t": 1.0583333753877215,
+        "nearFootWorst": {
+          "drift": 0.007332676082492419,
+          "midY": 0.005260701139280636,
+          "currentY": 0.0027416338590488653,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 15,
+        "groundMaxDrift": 0.0032592096216097427,
+        "groundMedianDrift": 1.594649076769708e-06
+      },
+      "maxActualGroundDrift": 0.0032592096216097427,
+      "maxMedianGroundDrift": 0.00011093165752335271
+    },
+    {
+      "side": "Left",
+      "start": 1.4041667224632368,
+      "end": 1.5166667269335852,
+      "worstNearFoot": {
+        "t": 1.4041667224632368,
+        "nearFootWorst": {
+          "drift": 0.007417832863190191,
+          "midY": 0.005792103947004443,
+          "currentY": 0.0032705671039368993,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 14,
+        "groundMaxDrift": 0.0032930454182814473,
+        "groundMedianDrift": 1.8403689628222763e-06
+      },
+      "maxActualGroundDrift": 0.0032930454182814473,
+      "maxMedianGroundDrift": 0.00012110702928025607
+    },
+    {
+      "side": "Left",
+      "start": 1.741666735874282,
+      "end": 1.8500000735123951,
+      "worstNearFoot": {
+        "t": 1.741666735874282,
+        "nearFootWorst": {
+          "drift": 0.006733059678781122,
+          "midY": 0.005501432166414959,
+          "currentY": 0.0029039928816114347,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 15,
+        "groundMaxDrift": 0.0030271719376052386,
+        "groundMedianDrift": 1.695296099786648e-06
+      },
+      "maxActualGroundDrift": 0.0030271719376052386,
+      "maxMedianGroundDrift": 9.207373974397362e-05
+    },
+    {
+      "side": "Left",
+      "start": 2.0625000819563866,
+      "end": 2.175000086426735,
+      "worstNearFoot": {
+        "t": 2.0625000819563866,
+        "nearFootWorst": {
+          "drift": 0.007354636076446467,
+          "midY": 0.005856375605223925,
+          "currentY": 0.0033076322862741598,
+          "weights": [
+            0.8509804010391235,
+            0.13333334028720856,
+            0.01568627543747425,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 14,
+        "groundMaxDrift": 0.003270854385987108,
+        "groundMedianDrift": 1.8479756189764746e-06
+      },
+      "maxActualGroundDrift": 0.003270854385987108,
+      "maxMedianGroundDrift": 0.00012235525734907986
+    },
+    {
+      "side": "Right",
+      "start": 0.24583334310187233,
+      "end": 0.3333333465788099,
+      "worstNearFoot": {
+        "t": 0.24583334310187233,
+        "nearFootWorst": {
+          "drift": 0.00016385303348442223,
+          "midY": 0.004888675872313324,
+          "currentY": 0.004886778184904804,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 4,
+        "groundMaxDrift": 1.1872031282910684e-06,
+        "groundMedianDrift": 1.1684400403492131e-06
+      },
+      "maxActualGroundDrift": 4.5390029760498405e-05,
+      "maxMedianGroundDrift": 4.532863924716952e-05
+    },
+    {
+      "side": "Right",
+      "start": 0.5750000228484471,
+      "end": 0.6541666926609144,
+      "worstNearFoot": {
+        "t": 0.5750000228484471,
+        "nearFootWorst": {
+          "drift": 0.00013898274982573252,
+          "midY": 0.005606221082253092,
+          "currentY": 0.005592486419696558,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 3,
+        "groundMaxDrift": 1.2397893504295572e-06,
+        "groundMedianDrift": 1.2350509299556846e-06
+      },
+      "maxActualGroundDrift": 4.7715631000733516e-05,
+      "maxMedianGroundDrift": 4.7656717374944406e-05
+    },
+    {
+      "side": "Right",
+      "start": 0.9041667025950219,
+      "end": 0.9916667060719595,
+      "worstNearFoot": {
+        "t": 0.9041667025950219,
+        "nearFootWorst": {
+          "drift": 0.00016291976816118188,
+          "midY": 0.004936199771273735,
+          "currentY": 0.004933445758346453,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 4,
+        "groundMaxDrift": 1.2010391774035241e-06,
+        "groundMedianDrift": 1.1838809476593245e-06
+      },
+      "maxActualGroundDrift": 4.798052310904601e-05,
+      "maxMedianGroundDrift": 4.790910169358367e-05
+    },
+    {
+      "side": "Right",
+      "start": 1.2166667150126562,
+      "end": 1.3333333863152397,
+      "worstNearFoot": {
+        "t": 1.2166667150126562,
+        "nearFootWorst": {
+          "drift": 0.00024960155386903393,
+          "midY": 0.004767566303020523,
+          "currentY": 0.004794226755926585,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 5,
+        "groundMaxDrift": 1.0993475339267988e-06,
+        "groundMedianDrift": 1.0892661943498236e-06
+      },
+      "maxActualGroundDrift": 4.813142162786044e-05,
+      "maxMedianGroundDrift": 4.791417852593987e-05
+    },
+    {
+      "side": "Right",
+      "start": 1.5833333962493472,
+      "end": 1.6708333997262848,
+      "worstNearFoot": {
+        "t": 1.5833333962493472,
+        "nearFootWorst": {
+          "drift": 0.00016444809417215421,
+          "midY": 0.0048649598687547655,
+          "currentY": 0.004863476631273771,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 4,
+        "groundMaxDrift": 1.185245868652922e-06,
+        "groundMedianDrift": 1.1675308587074222e-06
+      },
+      "maxActualGroundDrift": 4.4503332941630765e-05,
+      "maxMedianGroundDrift": 4.444057312111333e-05
+    },
+    {
+      "side": "Right",
+      "start": 1.9125000759959219,
+      "end": 1.9916667458083892,
+      "worstNearFoot": {
+        "t": 1.9125000759959219,
+        "nearFootWorst": {
+          "drift": 0.0001394347772240929,
+          "midY": 0.005593234293168174,
+          "currentY": 0.005579622745811062,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 3,
+        "groundMaxDrift": 1.2510272118524447e-06,
+        "groundMedianDrift": 1.2462285574848723e-06
+      },
+      "maxActualGroundDrift": 4.481378654627612e-05,
+      "maxMedianGroundDrift": 4.4746889456226765e-05
+    },
+    {
+      "side": "Right",
+      "start": 2.2416667557424965,
+      "end": 2.3291667592194343,
+      "worstNearFoot": {
+        "t": 2.2416667557424965,
+        "nearFootWorst": {
+          "drift": 0.0001634122795750331,
+          "midY": 0.004912445067869274,
+          "currentY": 0.004910121787249908,
+          "weights": [
+            0.7215685844421387,
+            0.2745097875595093,
+            0.003921568393707275,
+            0.0
+          ]
+        },
+        "sameGroundVertices": 4,
+        "groundMaxDrift": 1.1853666106764434e-06,
+        "groundMedianDrift": 1.1676800695859417e-06
+      },
+      "maxActualGroundDrift": 4.643772560970192e-05,
+      "maxMedianGroundDrift": 4.6375264560901495e-05
+    }
+  ]
+}

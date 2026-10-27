@@ -1,0 +1,19 @@
+{
+  "clip": "taunt_run",
+  "durationS": 2.4,
+  "externalRoot": "[0,0,5*t]",
+  "rootSpeedMps": 5,
+  "sourceRunPlaybackRate": 1.9,
+  "sourceEntryTimeS": 0.152,
+  "sourceExitPhaseS": {
+    "perus": 0.9620001811981203,
+    "viitta": 2.170333435058594
+  },
+  "rootYawAdded": false,
+  "extraLandSoft": false,
+  "morphWeight": 0,
+  "morphResetContract": "Absent weights => reset0 per1187",
+  "entryExitCrossfade": "Not tested in runtime; align run source phase at entry and return; avoid adding unverified IK or extra root translation.",
+  "newTripoCalls": 0,
+  "credits": 0
+}

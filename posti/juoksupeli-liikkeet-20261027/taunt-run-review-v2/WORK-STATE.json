@@ -1,0 +1,12 @@
+{
+  "status": "READY_FOR_MAILBOX_TECHNICAL_REVIEW_WITH_KNOWN_BOOT_LIMITATION",
+  "variants": [
+    "perus",
+    "viitta"
+  ],
+  "runtimeVerified": false,
+  "allQAPass": false,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "updatedAt": "2026-10-27T18:42:40.874237+00:00"
+}

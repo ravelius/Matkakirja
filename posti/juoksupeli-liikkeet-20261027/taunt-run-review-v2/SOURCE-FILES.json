@@ -1,0 +1,70 @@
+{
+  "sourceDelivery": "90d72c063c009e9e90e106b668ddd0e563dabd89",
+  "reports": [
+    {
+      "variant": "perus",
+      "denseQA": {
+        "status": "PASS",
+        "variant": "perus",
+        "clip": "taunt_run",
+        "durationS": 2.4000000953674316,
+        "floorMinimumM": 0.0005713375493933319,
+        "maxAngularStep240HzDeg": 12.497987077559662,
+        "worstAngular": {
+          "time": 0.9916667060719595,
+          "bone": "mixamorig:LeftLeg"
+        },
+        "handBodyCrossingSamples": 0,
+        "handBodyCrossings": [],
+        "entryRunDelta": 5.7983395862493126e-08,
+        "exitRunDelta": 7.916988649971091e-07,
+        "sourceRunExitPhase": 0.9620001811981203,
+        "runtimeVerified": false,
+        "limits": "960Hz floor,240Hz right-hand vs non-hand local triangle crossings and rotation steps; not complete self collision or actual foot sliding certification.",
+        "seconds": 71.52675675007049
+      },
+      "strictSurfaceGate": "FAIL",
+      "maxMidpoint6mmPatchDriftM": 0.008925541435839289,
+      "maxCommonGround4mmPatchDriftM": 0.0060955903335710515,
+      "maxMedianCommonGroundPatchDriftM": 0.0004841923668149353,
+      "maxAnkleErrorM": 0.0002217566710294063,
+      "localReviewedFullFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/taunt-run-v12/perus/puyi.glb",
+      "localReviewedFullSHA256": "1cc4b0e6cc036cceb8a8f595d6eb42fd9a97df77913a477dd99e543e858e4d51",
+      "observed": "Behind/forward18degree eight poses reviewed. Gait, head glance, separated right-hand gesture and cape are readable. Small original boot skin deformation remains; game crossfade not tested."
+    },
+    {
+      "variant": "viitta",
+      "denseQA": {
+        "status": "PASS",
+        "variant": "viitta",
+        "clip": "taunt_run",
+        "durationS": 2.4000000953674316,
+        "floorMinimumM": 0.000684467974299342,
+        "maxAngularStep240HzDeg": 12.116585938522737,
+        "worstAngular": {
+          "time": 2.35833342704508,
+          "bone": "mixamorig:RightFoot"
+        },
+        "handBodyCrossingSamples": 0,
+        "handBodyCrossings": [],
+        "entryRunDelta": 5.6636120238096055e-08,
+        "exitRunDelta": 1.0518737202369621e-06,
+        "sourceRunExitPhase": 2.170333435058594,
+        "runtimeVerified": false,
+        "limits": "960Hz floor,240Hz right-hand vs non-hand local triangle crossings and rotation steps; not complete self collision or actual foot sliding certification.",
+        "seconds": 53.273491041967645
+      },
+      "strictSurfaceGate": "FAIL",
+      "maxMidpoint6mmPatchDriftM": 0.007417832863190191,
+      "maxCommonGround4mmPatchDriftM": 0.0032930454182814473,
+      "maxMedianCommonGroundPatchDriftM": 0.00012538228720735902,
+      "maxAnkleErrorM": 0.00023454797617043058,
+      "localReviewedFullFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/taunt-run-v12/viitta/puyi.glb",
+      "localReviewedFullSHA256": "d639d25296f9637a621c5371f95a4449d3fcb9c4b3c6962a8deff1aa43612d3c",
+      "observed": "Behind/forward18degree eight poses reviewed. Gait, head glance, separated right-hand gesture and cape are readable. Small original boot skin deformation remains; game crossfade not tested."
+    }
+  ],
+  "runtimeVerified": false,
+  "credits": 0,
+  "newTripoCalls": 0
+}
