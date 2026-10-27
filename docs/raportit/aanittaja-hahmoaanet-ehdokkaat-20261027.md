@@ -46,3 +46,6 @@ Eunukki (Georg LRpNiUBlcqgIsKUzcrlN ja Sergio RGbeQtiShYRDVCrd9b9w), tiedostot e
 1 "[triumphant] [shouting] Sainpas sinut!"; 2 "[panicked] [screaming] Sainpas sinut!"; 3 "[terrified] [relieved] Sainpas sinut!"
 Keisari (Kavya bA58y3FqVI6b6gTNh0oT), keisari-rimpuilu-otto1..3 (tauko = "..."):
 1 "[angry] [shouting] Päästä irti! ... Käsken sinua! Päästä irti!"; 2 "[furious] [commanding] Päästä irti! ... Käsken sinua! Päästä irti!"; 3 "[scared] [struggling] Päästä irti! ... Käsken sinua! Päästä irti!"
+
+## Rimpuilun valinta ja vienti (27.10. klo 17.25)
+Valinta: otto 4 = eunukki Sergio otto1, otto 9 = keisari otto3. Vienti: _valmiit/juoksupeli-rimpuilu-vienti-20261027 → ämpäri audio/juoksupeli/hahmoaanet-v2/eunukki-sergio-sainpas.mp3 ja keisari-paasta-irti.mp3.
