@@ -221,3 +221,10 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   → tausta_pinnat EI_1067 → konsoli_teal → kivireunus_uv v2) → K/yksikerros-v79/kielletty-tausta-v57; loki scratchpadissa (alkoi 16.07).
   Valmistuttua: H/juuri-v83m = v82m + kielletty-tausta-v57 → yksikerros-v79; VS:lle ja KK:lle (pari). Jos ketju kaatui: aja uudelleen samalla skriptillä.
 - Avoinna: viisteen v:n negatiiviset (≈ −0,2) harvat kolmiot; C1 Baohedian, Taihemen ylä, Meridiaaniportin siivet.
+
+## LISÄYS 15 klo 16.5x: yksikerros-v79 valmis, juuri-v83m/v84m
+- Ketju v79 valmis 16.44: K/yksikerros-v79 (reunus 0,4 m, kuja 02 etureuna −0,1 m tarkistettu; UV v2; teal-1536 palkkivyö; konsoli teal).
+- PK: F-ristiriita C1 + C2 → K/c2-v3/kielletty-c2-v2 = kielletty-c2-v1 + v53-pohjainen f-taihemen-lod0-kaiteeton.glb (sijoitukset ennallaan,
+  osat 146/80/92 samat); PK kytki (proto 77f5abf6f). H/juuri-v83m = v82m + kielletty-c2-v2; H/juuri-v84m = v83m + yksikerros-v79 (UUSIN).
+- VS: sirukuvio kujalla 02 EI mallista (sama v81m:llä; epäilee ympäristöheijastusta, tarkistaa). VS ajaa KK-parin juuri-v84m:llä.
+- Seuraavaksi: C1 Baohedian (歇山), Taihemen ylä, Meridiaaniportin siivet; T-risteys, aukion sivuhallit, 04, 06, 07 (EROLISTA); jonossa Olavinlinna.
