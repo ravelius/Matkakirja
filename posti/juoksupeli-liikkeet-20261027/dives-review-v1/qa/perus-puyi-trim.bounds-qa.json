@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-compact.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-trim.glb",
+  "sourceSHA256": "1329aca4c8013d6c084764675bf58f5f11fc930792b19682037eb9f77e4d35e4",
+  "sha256": "3c51fb490349eb9fbb655f4e45ae39637970fb53949bf3c5731d49293d4990c6",
+  "beforeBytes": 14927528,
+  "afterBytes": 14885516,
+  "removedOptionalOutputBounds": 282,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "clip": "dive_left",
+      "samples": 884,
+      "minFloorM": 0.0008320014852968177,
+      "maxFootPinErrorM": 9.058213028294115e-05,
+      "middleAirMinM": 0.21601739233110542,
+      "maximumEquivalent240HzStepDegrees": 12.784314797834996,
+      "entryRunDelta": 5.6636120238096055e-08,
+      "exitRunDelta": 5.6636120238096055e-08,
+      "pass": true
+    },
+    {
+      "clip": "dive_right",
+      "samples": 884,
+      "minFloorM": 0.0008315843688529224,
+      "maxFootPinErrorM": 6.319090188465433e-05,
+      "middleAirMinM": 0.21261324721643418,
+      "maximumEquivalent240HzStepDegrees": 12.784314797834996,
+      "entryRunDelta": 5.6636120238096055e-08,
+      "exitRunDelta": 5.6636120238096055e-08,
+      "pass": true
+    }
+  ],
+  "allPass": true,
+  "gameVerified": false,
+  "limits": "Sampled mesh floor, defined foot pins, interpolated rotations and run boundary poses; not exhaustive self-collision, obstacle clearance or live game test.",
+  "elapsedSeconds": 10.979393834015355,
+  "peakRSSMiB": 151.765625
+}

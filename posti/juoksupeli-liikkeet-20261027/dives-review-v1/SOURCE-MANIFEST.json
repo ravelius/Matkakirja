@@ -1,0 +1,21 @@
+{
+  "creator": "Codex under owner instruction",
+  "sources": [
+    {
+      "variant": "perus",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-soft-review-v1/models/puyi-perus.glb",
+      "sourceSHA256": "513c60b1314ac2ae1748044c85483527a290983ba2dbe7484deed00c6649cccf",
+      "newClipAuthoring": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus"
+    },
+    {
+      "variant": "viitta",
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/land-soft-review-v1/models/puyi-viitta.glb",
+      "sourceSHA256": "18ce772392f550d6ce95c9d7cc26dce7fc6359620a67a3524e6a5b532e08fc08",
+      "newClipAuthoring": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta"
+    }
+  ],
+  "tool": "Local rig/IK derivation on existing approved Tripo sources",
+  "rights": "Inherited source-asset rights; no new third-party media or licensing claim",
+  "newTripoCalls": 0,
+  "credits": 0
+}

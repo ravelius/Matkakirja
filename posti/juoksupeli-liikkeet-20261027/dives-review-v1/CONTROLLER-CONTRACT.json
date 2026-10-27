@@ -1,0 +1,12 @@
+{
+  "coordinateSystem": "Metres; +Y up,+Z forward,+X anatomical left",
+  "durationS": 0.92,
+  "quintic": "S5(u)=clamp u to[0,1],then10u^3-15u^4+6u^5",
+  "root": "First T=t-.22*(t-.644)*exp(-((t-.644)/.025)^2). Then X=sign*1.2*S5((T-.06)/.72);Y=.26*sin(pi*clamp((T-.13)/.52,0,1))^2;Z=5*T; sign=+1 left,-1 right.",
+  "yaw": "Yaw atan2(dX/dt,5) is baked into Hips, do not rotate actor again.",
+  "exit": "At.92s: root(\u00b11.2,0,4.6)m, exit forward velocity5m/s, run phase1.748s modulo source run duration.",
+  "contact": "Foot plants are authored on the reference flat ground; airborne root phase T=.13\u2013.65s. No hand or prone body ground contact. These are diving side leaps, not a belly slide.",
+  "collision": "Controller must check lateral landing1.2m away and forward4.6m route, including body/cape extent. No universal obstacle-clearance claim.",
+  "timing": "Reference5m/s. If scaling, synchronize clip clock and whole root curve; sprint and arbitrary entry/exit blends need game QA. Never add ordinary forward locomotion on top of root curve.",
+  "gameVerified": false
+}

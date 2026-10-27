@@ -1,0 +1,277 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-trim.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-final.glb",
+  "beforeBytes": 14885516,
+  "bytes": 14849772,
+  "sha256": "550f42badf8d84f21b28a7b12bf01ebbfc226c7c2e27a98410ba244ef8be3301",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "balance",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "catch",
+      "beforeSamplers": 283,
+      "afterSamplers": 283
+    },
+    {
+      "clip": "idle",
+      "beforeSamplers": 281,
+      "afterSamplers": 281
+    },
+    {
+      "clip": "jump",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "slide",
+      "beforeSamplers": 282,
+      "afterSamplers": 282
+    },
+    {
+      "clip": "sprint",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "stumble",
+      "beforeSamplers": 276,
+      "afterSamplers": 276
+    },
+    {
+      "clip": "throw",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "hang_grab",
+      "beforeSamplers": 190,
+      "afterSamplers": 190
+    },
+    {
+      "clip": "hang_loop",
+      "beforeSamplers": 170,
+      "afterSamplers": 170
+    },
+    {
+      "clip": "hang_release",
+      "beforeSamplers": 258,
+      "afterSamplers": 258
+    },
+    {
+      "clip": "slide_short",
+      "beforeSamplers": 268,
+      "afterSamplers": 268
+    },
+    {
+      "clip": "slide_long",
+      "beforeSamplers": 268,
+      "afterSamplers": 268
+    },
+    {
+      "clip": "slide_feet_first",
+      "beforeSamplers": 269,
+      "afterSamplers": 269
+    },
+    {
+      "clip": "jump_small",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "jump_long",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "taunt_run",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "door_push_run",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "caught_back",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "caught_hold_back",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "caught_front",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "caught_hold_front",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "caught_side",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "caught_hold_side",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_1",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_2",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_3",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_4",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_front_free",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "struggle_side_1",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_side_2",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_side_3",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_side_4",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "beforeSamplers": 261,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_side_free",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "dodge_left",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "dodge_right",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "dodge_left_right",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "dodge_right_left",
+      "beforeSamplers": 270,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "land_heavy",
+      "beforeSamplers": 266,
+      "afterSamplers": 266
+    },
+    {
+      "clip": "door_grab_left",
+      "beforeSamplers": 258,
+      "afterSamplers": 258
+    },
+    {
+      "clip": "door_grab_right",
+      "beforeSamplers": 258,
+      "afterSamplers": 258
+    },
+    {
+      "clip": "struggle_1",
+      "beforeSamplers": 339,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_2",
+      "beforeSamplers": 339,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_3",
+      "beforeSamplers": 339,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_4",
+      "beforeSamplers": 339,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeSamplers": 339,
+      "afterSamplers": 261
+    },
+    {
+      "clip": "struggle_free",
+      "beforeSamplers": 339,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "land_soft",
+      "beforeSamplers": 339,
+      "afterSamplers": 270
+    },
+    {
+      "clip": "dive_left",
+      "beforeSamplers": 339,
+      "afterSamplers": 268
+    },
+    {
+      "clip": "dive_right",
+      "beforeSamplers": 339,
+      "afterSamplers": 268
+    }
+  ]
+}

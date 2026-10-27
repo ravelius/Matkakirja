@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta/puyi-compact.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta/puyi-trim.glb",
+  "sourceSHA256": "afcadd98ae5f7690dc67addefb876542d11b1739635df428de3e16e57b5f088b",
+  "sha256": "1ad5a3a044f1e626e67949eb92efa002768fa41f7e66edf51b6bfa206aa5d443",
+  "beforeBytes": 15048244,
+  "afterBytes": 15002548,
+  "removedOptionalOutputBounds": 311,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

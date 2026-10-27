@@ -1,0 +1,37 @@
+{
+  "reviewedAt": "2026-10-27T15:19:48.346481+00:00",
+  "readyForReceiverReview": true,
+  "gameAccepted": false,
+  "variants": [
+    {
+      "variant": "perus",
+      "sourceVersion": "v11",
+      "file": "output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-final.glb",
+      "inspected": [
+        "dive_left-180",
+        "dive_left-0",
+        "dive_left-90",
+        "dive_right-180",
+        "dive_right-0",
+        "dive_right-90"
+      ],
+      "finding": "Both directions show airborne side lean, tucked legs and forward balancing hands, then return to running. Cape follows source secondary motion and remains visible behind. No gross body intersection seen in these selected poses. Side leap, not prone slide.",
+      "limits": "36 pose/view samples, not real-time game or exhaustive cloth collision. Cape sleeve/underarm correction and blend QA remain open."
+    },
+    {
+      "variant": "viitta",
+      "sourceVersion": "v11",
+      "file": "output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta/puyi-final.glb",
+      "inspected": [
+        "dive_left-180",
+        "dive_left-0",
+        "dive_left-90",
+        "dive_right-180",
+        "dive_right-0",
+        "dive_right-90"
+      ],
+      "finding": "Both directions show airborne side lean, tucked legs and forward balancing hands, then return to running. Cape follows source secondary motion and remains visible behind. No gross body intersection seen in these selected poses. Side leap, not prone slide.",
+      "limits": "36 pose/view samples, not real-time game or exhaustive cloth collision. Cape sleeve/underarm correction and blend QA remain open."
+    }
+  ]
+}

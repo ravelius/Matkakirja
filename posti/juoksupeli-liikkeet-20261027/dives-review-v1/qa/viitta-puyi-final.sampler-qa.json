@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta/puyi-trim.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/viitta/puyi-final.glb",
+  "beforeBytes": 15002548,
+  "bytes": 14981456,
+  "sha256": "ac78b0255112fc1536456b1acecc5580f8cc2415cc41940778414870cbc392d1",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "glide_enter",
+      "beforeSamplers": 338,
+      "afterSamplers": 338
+    },
+    {
+      "clip": "glide_exit",
+      "beforeSamplers": 338,
+      "afterSamplers": 338
+    },
+    {
+      "clip": "glide_left",
+      "beforeSamplers": 283,
+      "afterSamplers": 283
+    },
+    {
+      "clip": "glide_loop",
+      "beforeSamplers": 290,
+      "afterSamplers": 290
+    },
+    {
+      "clip": "glide_right",
+      "beforeSamplers": 286,
+      "afterSamplers": 286
+    },
+    {
+      "clip": "hop_sequence",
+      "beforeSamplers": 334,
+      "afterSamplers": 334
+    },
+    {
+      "clip": "idle",
+      "beforeSamplers": 332,
+      "afterSamplers": 332
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "sprint_cape",
+      "beforeSamplers": 304,
+      "afterSamplers": 304
+    },
+    {
+      "clip": "door_push_run",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "caught_back",
+      "beforeSamplers": 333,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_back",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "caught_front",
+      "beforeSamplers": 333,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_front",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "caught_side",
+      "beforeSamplers": 333,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "caught_hold_side",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_1",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_2",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_3",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_4",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_give_up",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_front_free",
+      "beforeSamplers": 333,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "struggle_side_1",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_2",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_3",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_4",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_give_up",
+      "beforeSamplers": 292,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_side_free",
+      "beforeSamplers": 333,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "dodge_left",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_right",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_left_right",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dodge_right_left",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "land_heavy",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "door_grab_left",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "door_grab_right",
+      "beforeSamplers": 298,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "struggle_1",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_2",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_3",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_4",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeSamplers": 342,
+      "afterSamplers": 292
+    },
+    {
+      "clip": "struggle_free",
+      "beforeSamplers": 342,
+      "afterSamplers": 333
+    },
+    {
+      "clip": "land_soft",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dive_left",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    },
+    {
+      "clip": "dive_right",
+      "beforeSamplers": 342,
+      "afterSamplers": 298
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi.glb",
+  "sourceSHA256": "14143cf85261c5a5a509b6aa5cd577e61280ae57db2e6e696acaf4925012960e",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-compact.glb",
+  "sha256": "1329aca4c8013d6c084764675bf58f5f11fc930792b19682037eb9f77e4d35e4",
+  "bytes": 14927528,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 2e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "dive_left",
+      "beforeKeys": 52378,
+      "afterKeys": 7534
+    },
+    {
+      "clip": "dive_right",
+      "beforeKeys": 52378,
+      "afterKeys": 7534
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "dive_left",
+      "samples": 443,
+      "maxSkinnedVertexDeltaM": 2.1801089462233354e-05,
+      "pass": true
+    },
+    {
+      "clip": "dive_right",
+      "samples": 443,
+      "maxSkinnedVertexDeltaM": 2.2400299833856672e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-compact.unpacked.glb",
+    "sourceSHA256": "922e2b86baeed75d028c6ed41c75e0a1b4e2b046a9395cecfd6c642b55f115b4",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/dives-v11/perus/puyi-compact.glb",
+    "sha256": "1329aca4c8013d6c084764675bf58f5f11fc930792b19682037eb9f77e4d35e4",
+    "beforeBytes": 16902924,
+    "afterBytes": 14927528,
+    "sourceAccessors": 9623,
+    "usedAccessors": 8735,
+    "deduplicatedAccessors": 7528,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.33355195890180767,
+    "peakRSSMiB": 272.28125
+  },
+  "elapsedSeconds": 15.57874691602774,
+  "peakRSSMiB": 377.5625
+}
