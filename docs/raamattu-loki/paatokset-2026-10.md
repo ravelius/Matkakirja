@@ -2779,6 +2779,16 @@ keisaria muutaman sekunnin päästä alusta; alkukohtaus = ovesta karkuun, huuto
 vasta ensimmäisen omenan kohdalla; väistörepliikit (huh) generoidaan vasta omistajan ääniluvalla. TYÖNJAKO: KK johtaa (PK + LR + NUI ohjeiden pohja + Äänittäjä luvan jälkeen); juna 212 tai seuraava,
 kun valmis.
 
+## JUOKSUPELIN ÄÄNILUVAT JA KOLME TASOA (omistaja 27.10. klo 08.29 ja 08.30, KK:n välitys) (27.10.2026 klo 08.30)
+
+OMISTAJAN PÄÄTÖS klo 08.29 (kortti KK:ssa, sanatarkasti): "Saako keisarin viisi repliikkiä generoida (10 ottoa, 122 merkkiä)?" → "Kyllä (Suositus)" (Ottakaa kiinni, jos saatte! / Huh! / Huh, läheltä
+piti! / Hui! / Melkein!); "Mikä eunukin huuto valitaan?" → "Huuto 1 (Suositus)" = "Teidän majesteettinne!"; "Saako Äänittäjä tehdä eunukille kolme äänikoetta (enintään 66 merkkiä)?" → "Kyllä
+(Suositus)"; "Hidastuuko peli ensimmäisten ohjeiden kohdalla, kunnes pelaaja tekee liikkeen?" → "Kyllä (Suositus)". OMISTAJAN PYYNTÖ klo 08.30 (sanatarkasti): "Pelin voisi vielä lisäksi jaotella
+muutamaan lisätasoon niin, että ensimmäinen taso olisi juoksupelkillä ulkokujilla. Toinen taso olisi, että pelaaja pääsee myös huoneiden sisälle. Ja kolmas taso olisi se, kun pelaaja voi hypätä
+katoille ja niiltä alas sekä katolta toiselle viitan avulla. Eli pelissä olisi yhteensä kolme eri kenttää tai tasoa. Ja ensimmäinen taso olisi enemmän opetuksellinen pelin ohjaimista ja vähän
+lyhyempi, mutta toinen taso, missä on myös huoneet mukana, niin olisi selvästi jo pidempi. Ja viimeinen taso olisi yhtä pitkä, mutta siinä pystyisi sitten tekemään vielä enemmän juttuja." KK:N
+TAVOITE: taso 1 = alkukohtaus, opetus, ulkokujat + aukio (alueet 1–2); taso 2 = huoneet ja salit (alue 3, salin sisäkamera); taso 3 = katot ja viitta (uusi liike, Codexin animaatiot). Muuttaa 18.10.
+linjaa, jossa ensimmäinen rata kulki huoneiden kautta. Tuotanto tasoittain, ei osittaista julkaisua. RAAMATTU 2.177: lisätty KOLME TASOA sekä ALKU JA OPETUS (08.26–08.29).
 ## JUOKSUPELIN KIINNIOTTO, RIMPUILU JA KEISARIN KÄDET (omistaja 27.10. klo 08.35, KK:n välitys) (27.10.2026 klo 08.39)
 
 OMISTAJAN PYYNTÖ klo 08.35 (sanatarkasti): "onko Codex toimittanut jo kaikki juoksupelin uudet hahmojen liikkeet. Voisi tilata vielä lisäksi kiinni ottamisen ja rimpuilun eri liikesarjat. Tällä hetkellä se on todella oudon näköinen, kun siitä puuttuu liikkeitä. Lisäksi keisari voisi käyttää käsiään apuna, kun se menee oviaukoista. Toisella kädellä voi ottaa tukea sekä voisi miettiä, miten muuten käsiä voisi käyttää, koska sekin elävöittäisi peliä." KK:N TAVOITE: kiinnijääminen näyttää uskottavalta ja vaihtelevalta (vartija tarttuu, keisari rimpuilee ja lannistuu, sama ei toistu), ja keisarin kädet tekevät aina jotain järkevää (tarttuvat, tukevat, nostavat kaapua, pitävät tasapainoa) eivätkä roiku. TILA: Codexin viimeiset liikkeet 19.10. (9 perusliikettä + viitta); kiinniotto ja rimpuilu puuttuvat. TYÖNJAKO: PK tilaa kiinnioton ja rimpuilun liikesarjat Codexilta samaan postiin eunukin kanssa; käsien lisäliikkeet omistajan kortilla (KK).
