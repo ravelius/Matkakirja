@@ -458,3 +458,51 @@ tulos. Sisältökirjuri lukee ne tuoreella lukijalla (Raamattu 9.11) ennen kuin 
 - **Tyhjät lajit:** jos kohteen laji on `Paikka` eikä faktoja löydy, kortti sisältää vain nimen, kuvan ja Pulun tekstin
   (jos lähde riittää), muuten kortti ei aukea.
 - **Sisältökirjuri ei muuta kaavaa tai kehotetta Karttasepän puolesta;** muutokset tehdään tähän tiedostoon ja ilmoitetaan.
+
+## Osa 3. Tietokortit 2: kohdetyyppi, ensin 1. kappale, väliotsikot ja kysymykset (omistaja 27.10.2026 klo 13.23)
+
+Omistajan pyyntö sanatarkasti lokissa (PR 5322). Karttasepän osuus: worker ja tämä resepti (kohdat 2, 3, 4 ja 7:n kohdistus);
+Natiivi-UI tekee kortin näkymän (faktojen muotoilu, harmaat krediitit, latauskuvake, tyyppirivi) olemassa olevilla pohjilla.
+
+### 3.1 Kohdetyypit (kiinteä joukko, kohdistus automaattisesti)
+
+Kortin JSON:ssa kenttä `tyyppi: { id, nimi }`. Kohdistus kortin lajista (osa 1.3, Wikidatan P31 → laji), ei mallikutsua; sama paikka
+saa aina saman tyypin, myös jo tallennetut kortit (worker laskee kentän palvellessa). `id` on kuvakkeen nimi (NUI tilaa Codexilta).
+
+| id | Tyyppiteksti | Lajit |
+|---|---|---|
+| kaupunki | Kaupunki | Pääkaupunki, Kaupunki, Pikkukaupunki, Kunta |
+| kyla | Kylä | Kylä, Asutus |
+| luonto | Luonto | Tulivuori, Vuori, Jäätikkö, Laakso, Aavikko, Saari, Niemimaa, Luola, Metsä, Kansallispuisto, Puisto, Puutarha |
+| vesisto | Vesistö | Joki, Järvi, Vesiputous, Meri, Valtameri, Lahti, Salmi, Kanava, Vesistö |
+| historia | Historia | Linna, Palatsi, Linnoitus, Muistomerkki, Patsas, Hautausmaa |
+| arkkitehtuuri | Arkkitehtuuri | Rakennus, Torni, Majakka, Silta, Tunneli, Pato, Tori, Katu, Stadion |
+| uskonto | Uskonto | Tuomiokirkko, Kirkko, Moskeija, Temppeli |
+| kulttuuri | Taide ja kulttuuri | Museo, Teatteri, Kirjasto, Yliopisto |
+| liikenne | Liikenne | Rautatieasema, Lentoasema, Satama |
+| alue | Alue | Maa, Paikka (tuntematon laji) |
+
+### 3.2 Teksti osina (worker: `tehtava: tietoteksti`, `osa`)
+
+- `osa: "johdanto"`: ensimmäinen kappale, 2–3 virkettä (noin 18–50 sanaa), alkaa paikan nimellä. Striimi (pala / loppu).
+- `osa: "lisaa"`: Lue lisää -teksti 2–3 jaksona, jokainen alkaa rivillä `## Väliotsikko` (1–4 sanaa, ei pistettä), kappaleissa yhteensä
+  80–170 sanaa; perään rivi `###KYSYMYKSET###` ja tasan kaksi kysymystä Pululle (≤ 12 sanaa, `?`). Vastauksia ei generoida; peli
+  lähettää kysymyksen Pululle vasta napautuksesta. Syötteessä myös jo näytetty johdanto (tallennettu tai asiakkaan `johdanto`), jotta
+  mitään ei toisteta. Ei uusia faktoja → `###EI-LÄHDETTÄ###` (Lue lisää jää pois).
+- Asiakas pyytää lisaa-osan heti johdannon `loppu`-tapahtuman jälkeen taustalla, jolloin Lue lisää aukeaa viiveettä (KK:n suositus);
+  sama rajapinta toimii myös, jos lisaa pyydetään vasta napautuksesta.
+- Ilman `osa`-kenttää vanha yhden kutsun teksti (osa 2, `###LUE-LISÄÄ###`) junan 211 sovellukselle.
+- Välimuisti: `tietokortti:v4:teksti:t3:<osa>:fi:<qid>`; vain tarkistuksen läpäissyt osa tallennetaan (kaksi uusintaa korjauspalautteella).
+
+### 3.3 Kehotteet
+
+`JOHDANTO_KEHOTE` ja `LISAA_KEHOTE` (tools/pollo/tietokortti.js): oma VASTAUKSEN LAJI ja MUOTO, ja osan 2.2 yhteiset säännöt sanatarkasti
+(LÄHDE, SUUNNAT, KORTIN FAKTAT EIVÄT TOISTU, LUVUT JA VUODET, EI PUHUTTELUA, VIRKKEET LOPPUUN, SAMA FAKTA KERRAN, VIERAAT NIMET,
+SISÄLTÖ, ÄÄNI). Yhteiset säännöt muuttuvat siis yhdessä paikassa (osa 2.2).
+
+### 3.4 Tarkistukset
+
+- Johdanto: 2–3 virkettä, 18–50 sanaa, ei `#`; muut osan 2.4 säännöt.
+- Lue lisää: `###KYSYMYKSET###` kerran; 2–3 väliotsikkoa, jokaisen alla kappale; kappaleet 80–170 sanaa; tasan kaksi kysymystä
+  (`?`, ≤ 14 sanaa, ei aarteita, isoisää eikä peliä). Toisto tarkistetaan johdanto ja Lue lisää yhdessä (sama vuosi, sama pitkä sana,
+  lähes sama virke = hylkäys); muut osan 2.4 säännöt kappaleille.

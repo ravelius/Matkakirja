@@ -375,6 +375,12 @@ export function korjausPalaute(syy) {
     puhuttelu: 'Älä puhuttele lukijaa äläkä kehota häntä mihinkään.',
     kesken: 'Lopeta jokainen osa valmiiseen virkkeeseen ja pisteeseen.',
     merkkirivi: 'Kirjoita ###LUE-LISÄÄ### vain kerran omalle rivilleen.',
+    virkkeet: 'Kirjoita ensimmäiseen kappaleeseen tasan 2–3 virkettä.',
+    johdanto: 'Ensimmäinen kappale on 2–3 virkettä ja noin 18–50 sanaa.',
+    kysymysrivi: 'Kirjoita tekstin perään tasan kerran rivi ###KYSYMYKSET### ja sen alle kaksi kysymystä.',
+    otsikot: 'Kirjoita 2–3 jaksoa, ja jokainen alkaa omalla rivillään väliotsikolla muodossa "## Otsikko".',
+    otsikko: 'Väliotsikko on 1–4 sanaa ilman pistettä, ja jokaisen alla on kappale.',
+    kysymykset: 'Kirjoita ###KYSYMYKSET###-rivin alle tasan kaksi lyhyttä kysymystä (enintään 12 sanaa, kysymysmerkki lopussa), ei peliä eikä aarteita.',
   }[lj] ?? `Tarkistus hylkäsi vastauksen (${s}).`;
   return `Tarkistus hylkäsi vastauksen: ${ohje} Kirjoita koko vastaus uudelleen samassa muodossa; muut ohjeet ennallaan.`;
 }
@@ -383,15 +389,15 @@ export function korjausPalaute(syy) {
  * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja
  * sanat. { ok, syy } – hylätty ei mene ämpäriin. Isolla alkavat nimet tarkistetaan vain virkkeen keskeltä (virkkeen alku on aina iso).
  */
-export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
+export function tarkistaTeksti(teksti, syote, kohteenNimi = null, { ilmanMaaria = false } = {}) {
   const t = String(teksti ?? '').trim();
   if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
   const osat = t.split(LUE_LISAA);
   if (osat.length > 2) return { ok: false, syy: 'merkkirivi' };
   const [eka, toka = ''] = osat.map((x) => x.trim());
   const niukka = !toka;
-  if (sanat(eka) < (niukka ? 20 : 28) || sanat(eka) > 65) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
-  if (toka && (sanat(toka) < 80 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
+  if (!ilmanMaaria && (sanat(eka) < (niukka ? 20 : 28) || sanat(eka) > 65)) return { ok: false, syy: `lyhyt ${sanat(eka)} sanaa` };
+  if (!ilmanMaaria && toka && (sanat(toka) < 80 || sanat(toka) > 170)) return { ok: false, syy: `pitkä ${sanat(toka)} sanaa` };
   const ilman = osat.join(' ');
   // Lyhenteen alku kirjaimella eikä \b:llä: \b pitää ä:tä sanarajana ("residenssinään." → "n.", Windsor vedos 4).
   if (/[()*—]|#/.test(ilman) || /(?<!\p{L})(n|ns|esim)\./iu.test(ilman)) return { ok: false, syy: 'merkit' };
@@ -465,4 +471,142 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     return { ok: false, syy: `nimi ${nimi}` };
   }
   return { ok: true, syy: null };
+}
+
+// ==== KARTAN TIETOKORTIT 2 (omistaja 27.10.2026 klo 13.23, PT; resepti kartan-tietokortti.md osa 3) ====
+// Kohdetyyppi otsikon yläpuolelle, ensimmäinen kappale ensin (johdanto) ja Lue lisää väliotsikoin taustalla (lisaa), sen perään kaksi
+// valmista kysymystä Pululle. Vanha yhden kutsun teksti (t2, LUE_LISAA) jää junan 211 sovellukselle.
+
+/**
+ * KOHDETYYPIT (kiinteä joukko ≤ 10; NUI tilaa kuvakkeet Codexilta, id = kuvakkeen nimi). Kohdistus automaattisesti kortin lajista
+ * (Wikidatan P31 → LAJIT, tietokortti-kaava.js); ei mallikutsua, sama paikka saa aina saman tyypin.
+ */
+export const KOHDETYYPIT = [
+  { id: 'kaupunki', nimi: 'Kaupunki', lajit: ['Pääkaupunki', 'Kaupunki', 'Pikkukaupunki', 'Kunta'] },
+  { id: 'kyla', nimi: 'Kylä', lajit: ['Kylä', 'Asutus'] },
+  { id: 'luonto', nimi: 'Luonto', lajit: ['Tulivuori', 'Vuori', 'Jäätikkö', 'Laakso', 'Aavikko', 'Saari', 'Niemimaa', 'Luola', 'Metsä', 'Kansallispuisto', 'Puisto', 'Puutarha'] },
+  { id: 'vesisto', nimi: 'Vesistö', lajit: ['Joki', 'Järvi', 'Vesiputous', 'Meri', 'Valtameri', 'Lahti', 'Salmi', 'Kanava', 'Vesistö'] },
+  { id: 'historia', nimi: 'Historia', lajit: ['Linna', 'Palatsi', 'Linnoitus', 'Muistomerkki', 'Patsas', 'Hautausmaa'] },
+  { id: 'arkkitehtuuri', nimi: 'Arkkitehtuuri', lajit: ['Rakennus', 'Torni', 'Majakka', 'Silta', 'Tunneli', 'Pato', 'Tori', 'Katu', 'Stadion'] },
+  { id: 'uskonto', nimi: 'Uskonto', lajit: ['Tuomiokirkko', 'Kirkko', 'Moskeija', 'Temppeli'] },
+  { id: 'kulttuuri', nimi: 'Taide ja kulttuuri', lajit: ['Museo', 'Teatteri', 'Kirjasto', 'Yliopisto'] },
+  { id: 'liikenne', nimi: 'Liikenne', lajit: ['Rautatieasema', 'Lentoasema', 'Satama'] },
+  { id: 'alue', nimi: 'Alue', lajit: ['Maa', 'Paikka'] },
+];
+/** Kortin lajista kohdetyyppi { id, nimi }; tuntematon laji → Alue. */
+export function kohdeTyyppi(laji) {
+  const t = KOHDETYYPIT.find((k) => k.lajit.includes(laji)) ?? KOHDETYYPIT[KOHDETYYPIT.length - 1];
+  return { id: t.id, nimi: t.nimi };
+}
+
+/** Osatekstien versio ja avain (osa = johdanto | lisaa). */
+export const OSA_VERSIO = 't3';
+export const osaAvain = (qid, laji, osa) => `tietokortti:${TIETOKORTTI_VERSIO}:teksti:${OSA_VERSIO}:${osa}:${laji}:${qid}`;
+/** Lue lisää -tekstin ja kysymysten välinen merkkirivi; väliotsikkorivi alkaa "## ". */
+export const KYSYMYKSET = '###KYSYMYKSET###';
+export const VALIOTSIKKO = '## ';
+
+/** Kehotteen yhteiset osat (lähde, suunnat, faktat, luvut, puhuttelu, toisto, nimet, sisältö, ääni) vanhasta kehotteesta sanatarkasti. */
+function kehotteenOsa(alku, loppu) {
+  const k = KARTAN_TIETOKORTTI_KEHOTE;
+  const a = k.indexOf(alku), b = loppu ? k.indexOf(loppu, a + 1) : k.length;
+  return a >= 0 && b > a ? k.slice(a, b).trim() : '';
+}
+const YHTEISET_OHJEET = [
+  kehotteenOsa('LÄHDE.', 'MUOTO.'),
+  kehotteenOsa('EI PUHUTTELUA, EI KEHOTUKSIA.', 'LUE LISÄÄ EI TOISTA.'),
+  kehotteenOsa('SAMA FAKTA KERRAN.', 'TARKISTA ENNEN VASTAUSTA'),
+].join('\n\n');
+
+export const JOHDANTO_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTIN ENSIMMÄINEN KAPPALE
+Pelaaja napautti kartalla paikkaa, ja sen faktakortti on jo ruudulla. Kirjoitat kortin alle ensimmäisen kappaleen. Puhut Pulun,
+eli kirjekyyhky Livian, äänellä, mutta tämä ei ole keskustelu eikä sinulta kysytä mitään. Kuulijat ovat kolmetoistavuotiaita ja aikuisia.
+
+MUOTO. Yksi kappale, tasan 2–3 virkettä (noin 18–50 sanaa), alkaa paikan nimellä. Pelkkää tekstiä: ei otsikoita, ei luetteloita,
+ei sulkeita, ei lainausmerkkejä, ei emojeita, ei lihavointeja eikä lyhenteitä (kirjoitat esimerkiksi "noin" etkä "n."). Kappale
+kertoo tärkeimmän: mikä paikka on ja yksi asia, joka siitä on huomionarvoista. Muut faktat kerrotaan myöhemmin Lue lisää -tekstissä.
+
+${YHTEISET_OHJEET}
+
+TARKISTA ENNEN VASTAUSTA (ajattele hiljaa, älä kirjoita): jokainen luku ja nimi on lähteessä; 2–3 virkettä; ei sulkeita eikä lyhenteitä;
+ei mainoskieltä.`;
+
+export const LISAA_KEHOTE = `VASTAUKSEN LAJI: KARTAN TIETOKORTIN LUE LISÄÄ -TEKSTI
+Pelaaja napautti kartalla paikkaa: faktakortti ja ensimmäinen kappale (syötteen kenttä johdanto) ovat jo ruudulla. Kirjoitat Lue
+lisää -tekstin ja sen perään kaksi valmista kysymystä Pululle. Puhut Pulun, eli kirjekyyhky Livian, äänellä, mutta tämä ei ole
+keskustelu eikä sinulta kysytä mitään. Kuulijat ovat kolmetoistavuotiaita ja aikuisia.
+
+MUOTO. 2–3 jaksoa. Jokainen jakso alkaa väliotsikolla omalla rivillään muodossa "## Väliotsikko" (1–4 sanaa, iso alkukirjain, ei
+pistettä, kertoo jakson aiheen, esimerkiksi "## Linna ja kuninkaat") ja sen alla on yksi kappale. Kappaleissa yhteensä noin
+80–170 sanaa. Kappaleet ovat pelkkää tekstiä: ei luetteloita, ei sulkeita, ei lainausmerkkejä, ei emojeita, ei lihavointeja eikä
+lyhenteitä. Teksti ei toista johdannon eikä faktakortin asioita: jokainen jakso tuo lähteestä uusia faktoja (yhteensä vähintään
+kolme). Jos uusia faktoja ei ole, vastaat pelkällä rivillä ###EI-LÄHDETTÄ### ja et mitään muuta.
+
+KYSYMYKSET. Tekstin perään tulee tasan yksi rivi ###KYSYMYKSET### ja sen alle tasan kaksi riviä, kumpikin yksi lyhyt kysymys
+(enintään 12 sanaa, päättyy kysymysmerkkiin), jonka pelaaja voisi esittää Pululle tästä paikasta. Kysymykseen on vastaus
+lähteessä, mutta johdanto ja Lue lisää -teksti eivät vielä kerro sitä. Kysymys on pelaajan äänellä (esimerkiksi "Kuka rakennutti
+ensimmäisen linnan?"), ei vihjeitä peliin, aarteisiin eikä juoneen. Vastauksia et kirjoita.
+
+${YHTEISET_OHJEET}
+
+TARKISTA ENNEN VASTAUSTA (ajattele hiljaa, älä kirjoita): jokainen luku ja nimi on lähteessä; 2–3 väliotsikkoa; ei johdannon
+toistoa; ###KYSYMYKSET### kerran ja sen alla tasan kaksi kysymystä.`;
+
+/** Lue lisää -syöte: kortin syöte ja jo näytetty johdanto. */
+export function lisaaViesti(faktat, lahde, johdanto) {
+  return JSON.stringify({ ...JSON.parse(pulunViesti(faktat, lahde)), johdanto: String(johdanto ?? '').slice(0, 1200) });
+}
+
+/** Lue lisää -vastaus osiin: jaksot [{ otsikko, teksti }], kysymykset [string]. */
+export function jasennaLisaa(teksti) {
+  const t = String(teksti ?? '').trim();
+  const [runko, kys = ''] = t.split(KYSYMYKSET);
+  const jaksot = [];
+  for (const rivi of runko.split('\n').map((r) => r.trim()).filter(Boolean)) {
+    if (rivi.startsWith(VALIOTSIKKO)) jaksot.push({ otsikko: rivi.slice(VALIOTSIKKO.length).trim(), teksti: '' });
+    else if (jaksot.length) jaksot[jaksot.length - 1].teksti = `${jaksot[jaksot.length - 1].teksti} ${rivi}`.trim();
+    else jaksot.push({ otsikko: null, teksti: rivi });
+  }
+  const kysymykset = kys.split('\n').map((r) => r.trim()).filter(Boolean);
+  return { jaksot, kysymykset };
+}
+
+const virkkeita = (t) => (t.match(/[.!?](?=\s|$)/g) ?? []).length;
+
+/** Johdannon tarkistus (resepti 3.4): 2–3 virkettä, 18–50 sanaa, alkaa nimellä; muut säännöt kuten tarkistaTeksti. */
+export function tarkistaJohdanto(teksti, syote, kohteenNimi = null) {
+  const t = String(teksti ?? '').trim();
+  if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
+  if (t.includes(LUE_LISAA) || t.includes('#')) return { ok: false, syy: 'merkit' };
+  const v = virkkeita(t);
+  if (v < 2 || v > 3) return { ok: false, syy: `virkkeet ${v}` };
+  if (sanat(t) < 18 || sanat(t) > 50) return { ok: false, syy: `johdanto ${sanat(t)} sanaa` };
+  // Muut säännöt vanhalla tarkistuksella (johdanto on sen niukka muoto: 20–65 sanaa ensimmäiselle osalle, alaraja tässä 18).
+  return yhteiset(t, syote, kohteenNimi);
+}
+
+/** Lue lisää -tarkistus (resepti 3.4): 2–3 väliotsikkoa, kappaleet 80–170 sanaa, kaksi kysymystä; toisto johdannon kanssa hylätään. */
+export function tarkistaLisaa(teksti, syote, kohteenNimi = null, johdanto = '') {
+  const t = String(teksti ?? '').trim();
+  if (t === EI_LAHDETTA) return { ok: true, syy: 'ei-lahdetta' };
+  if (t.split(KYSYMYKSET).length !== 2) return { ok: false, syy: 'kysymysrivi' };
+  const { jaksot, kysymykset } = jasennaLisaa(t);
+  if (jaksot.length < 2 || jaksot.length > 3 || jaksot.some((j) => !j.otsikko)) return { ok: false, syy: `otsikot ${jaksot.length}` };
+  if (jaksot.some((j) => sanat(j.otsikko) > 5 || /[.!?#]/.test(j.otsikko) || !j.teksti)) return { ok: false, syy: 'otsikko' };
+  const kappaleet = jaksot.map((j) => j.teksti).join(' ');
+  if (sanat(kappaleet) < 80 || sanat(kappaleet) > 170) return { ok: false, syy: `pitkä ${sanat(kappaleet)} sanaa` };
+  if (kysymykset.length !== 2 || kysymykset.some((k) => !/\?$/.test(k) || sanat(k) > 14 || /[#()*]/.test(k))) return { ok: false, syy: 'kysymykset' };
+  const pienet = kysymykset.join(' ').toLowerCase();
+  if (/aarre|isoisä|pelaaja|peli/.test(pienet)) return { ok: false, syy: 'kysymykset' };
+  // Toisto johdannon kanssa: johdanto ja kappaleet yhdessä yhteisiin sääntöihin (sama vuosi, sama pitkä sana, lähes sama virke).
+  const yhdessa = johdanto ? `${String(johdanto).trim()} ${kappaleet}` : kappaleet;
+  for (const j of jaksot) if (!/[.!?]$/.test(j.teksti)) return { ok: false, syy: 'kesken' };
+  return yhteiset(yhdessa, syote, kohteenNimi);
+}
+
+/** Yhteiset säännöt (merkit, sanat, toisto, vieras sana, faktatoisto, puhuttelu, luvut, nimet) yhdelle tekstille tarkistaTekstin kautta. */
+function yhteiset(t, syote, kohteenNimi) {
+  // tarkistaTeksti ilman merkkiriviä: yksi osa, sanamäärän alaraja niukan rajan (20) mukaan → ohitetaan tässä sanamäärä (tarkistettu jo).
+  const r = tarkistaTeksti(t, syote, kohteenNimi, { ilmanMaaria: true });
+  return r.ok ? { ok: true, syy: null } : r;
 }
