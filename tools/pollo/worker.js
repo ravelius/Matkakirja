@@ -3864,8 +3864,11 @@ async function hoidaTietokortti(pyynto, env, kors, runko, ctx) {
     if (t.virhe === 'raja') return vastaa({ virhe: 'raja', viesti: 'Päivän uudet kortit on käytetty.' }, { status: 429, ...kors });
     // Kohdetyyppi (omistaja 27.10. 13.23): kortin lajista, myös jo tallennetuille korteille (ei uutta avainta).
     // Maailmanperintömerkin kortti (UNESCO-koe 14.15): tyyppi Maailmanperintö.
-    const tyyppi = paikka.luokka === 'perinto' ? { id: 'maailmanperinto', nimi: 'Maailmanperintö' } : t.kortti.tyyppi ?? kohdeTyyppi(t.kortti.laji);
-    return vastaa({ ...t.kortti, tyyppi, valmiina: t.valmiina }, kors);
+    const perinto = paikka.luokka === 'perinto';
+    const tyyppi = perinto ? { id: 'maailmanperinto', nimi: 'Maailmanperintö' } : t.kortti.tyyppi ?? kohdeTyyppi(t.kortti.laji);
+    // Alarivi "Maailmanperintökohde · Maa" (Akropoliksen Wikidata-luokka tulkittiin kaupungiksi, 27.10.).
+    const alarivi = perinto ? ['Maailmanperintökohde', t.kortti.sijainti].filter(Boolean).join(' · ') : t.kortti.alarivi;
+    return vastaa({ ...t.kortti, tyyppi, alarivi, valmiina: t.valmiina }, kors);
   } catch (virhe) {
     console.log(`pollo: tietokortti ${paikka.nimi}: ${virhe?.message ?? virhe}`);
     return vastaa({ virhe: 'lahde', viesti: 'Wikidata ei vastannut.' }, { status: 502, ...kors });

@@ -30,7 +30,9 @@ const LUONTO = new Set(['Q8502', 'Q54050', 'Q207326', 'Q23397', 'Q4022', 'Q165',
 const ASUTUSLUOKAT = new Set(['city', 'town', 'village', 'hamlet', 'suburb', 'quarter', 'neighbourhood', 'isolated_dwelling']);
 
 /** Välimuistin avain: luokka, nimi ja piste 0,01°:n tarkkuudella (sama paikka eri palasta = sama kortti). */
-export function korttiAvain({ nimi, lat, lon, luokka }) {
+export function korttiAvain({ nimi, lat, lon, luokka, qid }) {
+  // Maailmanperintömerkki (UNESCO-koe 27.10.2026): kohde tunnuksella, oma avain (nimihaulla tallennettu kortti ei jää voimaan).
+  if (qid) return `tietokortti:${TIETOKORTTI_VERSIO}:${luokka}:${qid}`;
   const n = String(nimi ?? '').trim().toLowerCase().normalize('NFC');
   return `tietokortti:${TIETOKORTTI_VERSIO}:${luokka}:${n}:${Number(lat).toFixed(2)}:${Number(lon).toFixed(2)}`;
 }
@@ -357,7 +359,9 @@ function alueRegex(alue) {
   return new RegExp(`(?<!\\p{L})${osat.join('\\s+')}`, 'iu');
 }
 
-const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
+// "lähde" vain viittauksena lähteeseen (lähteen mukaan, lähdetiedot): vesilähde on sallittu (Akropolis 27.10.: "lähteitä … piirityksen").
+const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata',
+  'lähteen mukaan', 'lähteiden mukaan', 'lähdetied', 'lähteessä', 'lähde kertoo', 'lähteen perusteella', 'lähteistä ei'];
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
 /**
