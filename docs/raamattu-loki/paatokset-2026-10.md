@@ -2807,3 +2807,7 @@ OMISTAJAN PYYNTÖ klo 08.50 (sanatarkasti, kuunneltuaan keisarin repliikit ja eu
 ## JUOKSUPELIN 8 KOEOTTOA JA ÄÄNET OMISTAJALLE VIDEONA (omistaja 27.10. klo 08.43 ja 09.08, KK:n välitys) (27.10.2026 klo 09.08)
 
 OMISTAJAN PÄÄTÖS klo 09.08 (kortti KK:ssa, sanatarkasti): "Saako Äänittäjä tehdä nämä 8 koeottoa (492 merkkiä)?" → "Kyllä (Suositus)". Tekstit: eunukki ×4 uutta hahmoääntä "[panicked] [shouting] Teidän majesteettinne!" (44 mrk); keisari ×4 (3 uutta + nykyinen Kavya vertailuksi) "[mischievous] Ottakaa kiinni, jos saatte! [gasps] [panicked] Huh, läheltä piti!" (79 mrk). Välitetty Äänittäjälle. UUSI TYÖTAPA (omistaja klo 08.43, KK:n välitys): äänet omistajalle aina videona, koska mp3 ei toistu puhelimessa. RAAMATTU: lisätty 5.28 ÄÄNET OMISTAJALLE AINA VIDEONA.
+
+## EUNUKKIEN 3D-MALLIT JA PYYHKÄISYOSOITIN (omistaja 27.10. klo 10.05, KK:n välitys) (27.10.2026 klo 10.05)
+
+OMISTAJAN PÄÄTÖKSET klo 10.05 (kortti KK:ssa, sanatarkasti): "Tehdäänkö kolmesta eunukista 3D-mallit?" → "Kyllä, 2:lle eri väri (Suositus)"; "Käytetäänkö tätä pyyhkäisyosoitinta opetuksessa?" → "Kyllä (Suositus)" (PK:n luonnos: punainen kohta, vaalea jälki ja nuoli; UI-POHJAT: osoitin on tästä lähtien juoksupelin opetuksen pohja). Välitetty PK:lle. OMISTAJAN TOIMI: Codex-sovelluksen uudelleenkäynnistys tai päivitys (browser-service puuttuu, joten Tripo on seis); KK antoi valmiin tekstin Codexille. KK:N KORJAUS: 08.4x ääniotot kysyttiin kortilla vastoin 7.27:ää (omistaja: "Lue ohje äänien lupakyselystä"); korjattu KK:n aloitukseen.
