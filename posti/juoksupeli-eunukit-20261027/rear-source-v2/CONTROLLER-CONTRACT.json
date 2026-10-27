@@ -1,0 +1,22 @@
+{
+  "context": "back catch only; not front/side holds",
+  "synchronizedClocks": true,
+  "entryPose": "caught_hold_back/hold_back at phase0",
+  "loopSwitch": "Existing receiver behavior: first tap blend0.18s, later loop boundaries; 10th tap immediate free blend0.18s. Requires receiver contact/cloth review; no runtime IK added.",
+  "giveUp": "Nonloop, hold last frame; do not jump to idle",
+  "free": "Hold roots until .18s. Puyi Z=.5*(5/.42)*(t-.18)^2 for .18<t<=.6, X=Y=0; ends Z1.05m with speed5m/s. Guard remains at pair.guardOrigin. Contact releases .18-.32s. Continue run at source phase .6 and velocity5, receiver blend QA required.",
+  "rootMotionBaked": false,
+  "sameCoordinates": "Same root placement and common Unity conversion as delivered catch-back; no additional mirror or second yaw.",
+  "crossfadeWarning": {
+    "status": "CONTACT_NOT_PRESERVED_BY_INDEPENDENT_LINEAR_BLEND",
+    "maxProxyDriftM": 0.05909634969821129,
+    "testedPair": "perus-eunukki-1",
+    "assumptions": "Linear blend weight; source continues its loop, target starts at0; roots remain in hold through0.18s; both actors synchronized. Unity runtime not accessed.",
+    "notUnityMeasurement": true,
+    "receiverQuestionCommit": "d6e15eb20c693bc687ad9fd47fe3ffb7e7927f38",
+    "recommendedMitigation": "After animation blending, solve holder hands against Puyi cloth anchors with synchronized hold/release weight. Receiver must implement and verify; not included in GLBs."
+  },
+  "newGeometryWarning": "Old keys, rigs and actor placement retained. Old eunuch palm proxies describe OLD surface, not exact new fingers. No new runtime IK supplied. Original Puyi anchors unchanged; old IK-ANCHORS is historical only.",
+  "cumulativeScope": "All clips in struggle-back-review-v2 preserved. This package is not a replacement for later separately imported Puyi parkour clips.",
+  "noSecondYaw": true
+}

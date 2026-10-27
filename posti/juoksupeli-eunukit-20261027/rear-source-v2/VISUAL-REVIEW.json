@@ -1,0 +1,12 @@
+{
+  "reviewer": "Codex visual inspection",
+  "reviewed": [
+    "Three source four-view sheets",
+    "Six pose columns front and rear for each of three, perus/cape rows",
+    "12m paired rear perspective for each of three, perus/cape rows"
+  ],
+  "rearFaceAndBackButtonsRemoved": true,
+  "visibleExplodingMeshInReviewedPoses": false,
+  "readyForReceiverTrial": true,
+  "gameVerified": false
+}

@@ -1,0 +1,37 @@
+{
+  "checkpoint": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/checkpoint.json",
+  "originalRuntimePackage": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/struggle-back-review-v2",
+  "tripoCalls": 3,
+  "credits": 135,
+  "generatedBackReferences": 3,
+  "sources": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/sources/eunukki-1-rear-source-v2.glb",
+      "sha256": "6b09118bfc0d44acc90a691c979b37423fd0e3b6bef55018520633f5f25079f9"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/sources/eunukki-2-rear-source-v2.glb",
+      "sha256": "3708e6be2192ceed55c626aabe9e980036e2520a2a70ae76a6a690602c033a36"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/sources/eunukki-3-rear-source-v2.glb",
+      "sha256": "3832295da9aa9f4dc774ae6d19c5364eba2ed14f903f6357d373ca1ccc26874e"
+    }
+  ],
+  "references": [
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/references/eunukki-1-back-v1.png",
+      "sha256": "914034028ef330c65d26bbaf0ea1228ffd6db0fba46f319d6842220c879d8bdd"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/references/eunukki-2-back-v1.png",
+      "sha256": "6f5be5b5282e321b58b0c91b18116c35921b91c287beb8436cac9bdfa0adcc64"
+    },
+    {
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-eunukit-20261027/rear-source-v2/references/eunukki-3-back-v1.png",
+      "sha256": "5e246a7ab3c1d3779e9c3aae1a8c0d7470c67506e625aa2cde823e8f38d99577"
+    }
+  ],
+  "method": "H3.1 front/back multiview, uniform fit to old rig and nearest8 old-mesh weight transfer with strongest4 joints; no animation edits. Front reference identity retained; new generated surface is not vertex-identical to old face.",
+  "oldSourcesPreserved": true
+}

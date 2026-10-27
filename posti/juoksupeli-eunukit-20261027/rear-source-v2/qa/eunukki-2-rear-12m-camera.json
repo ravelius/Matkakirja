@@ -1,0 +1,59 @@
+{
+  "eye": [
+    0.0,
+    7.732917236212552,
+    -9.829824531467901
+  ],
+  "target": [
+    0.0,
+    0.85,
+    0.0
+  ],
+  "distanceM": 12,
+  "pitchDegrees": 35,
+  "verticalFovDegrees": 40,
+  "FOVIsPreviewAssumption": true,
+  "actualGameCapture": false,
+  "records": [
+    {
+      "variant": "perus",
+      "pair": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005937556007683694,
+          0.0,
+          -0.38992234056847425
+        ],
+        "relativeYawDegrees": 0
+      },
+      "clip": "struggle_3",
+      "timeS": 0.6499999761581421,
+      "childVisiblePixels": 91,
+      "originalAnimationKeysPreserved": true
+    },
+    {
+      "variant": "viitta",
+      "pair": {
+        "puyiOrigin": [
+          0,
+          0,
+          0
+        ],
+        "guardOrigin": [
+          0.005937601602792133,
+          0.0,
+          -0.2897299589348928
+        ],
+        "relativeYawDegrees": 0
+      },
+      "clip": "struggle_3",
+      "timeS": 0.6499999761581421,
+      "childVisiblePixels": 237,
+      "originalAnimationKeysPreserved": true
+    }
+  ]
+}

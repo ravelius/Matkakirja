@@ -1,0 +1,174 @@
+{
+  "metric": "Unsigned nearest hand vertex distance from old bone-local palm proxy; not triangle collision or signed penetration proof. No runtime IK.",
+  "samplesPerClip": 9,
+  "results": [
+    {
+      "variant": "perus",
+      "clip": "hold_back",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.012648828948712434,
+          0.0126488293083829
+        ],
+        "Right": [
+          0.0068632328788655545,
+          0.006863233099509561
+        ]
+      }
+    },
+    {
+      "variant": "perus",
+      "clip": "hold_struggle_1",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.01079129623387097,
+          0.012648829256103007
+        ],
+        "Right": [
+          0.0068632328788655545,
+          0.006956884587515088
+        ]
+      }
+    },
+    {
+      "variant": "perus",
+      "clip": "hold_struggle_2",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791297318600035,
+          0.012648829256103007
+        ],
+        "Right": [
+          0.0068632328788655545,
+          0.0069568842799237075
+        ]
+      }
+    },
+    {
+      "variant": "perus",
+      "clip": "hold_struggle_3",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791295900983499,
+          0.012648829256103007
+        ],
+        "Right": [
+          0.0068632328788655545,
+          0.006956884843813519
+        ]
+      }
+    },
+    {
+      "variant": "perus",
+      "clip": "hold_struggle_4",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791295715061499,
+          0.012648829256103007
+        ],
+        "Right": [
+          0.0068632328788655545,
+          0.0069568856420974675
+        ]
+      }
+    },
+    {
+      "variant": "perus",
+      "clip": "hold_struggle_give_up",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791296199554583,
+          0.012648829256103007
+        ],
+        "Right": [
+          0.006863233020245953,
+          0.006956882017455908
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_back",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.012648827909120381,
+          0.012648828540122403
+        ],
+        "Right": [
+          0.006863231958937988,
+          0.006863232343290715
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_struggle_1",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791297038393361,
+          0.012648828514349869
+        ],
+        "Right": [
+          0.006863231958937988,
+          0.00695688539900845
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_struggle_2",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791297766807534,
+          0.012648828514349869
+        ],
+        "Right": [
+          0.006863231958937988,
+          0.006956886097749808
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_struggle_3",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791296575998185,
+          0.012648828514349869
+        ],
+        "Right": [
+          0.006863231958937988,
+          0.006956885460729008
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_struggle_4",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791295519337775,
+          0.012648828514349869
+        ],
+        "Right": [
+          0.006863231958937988,
+          0.006956886519296908
+        ]
+      }
+    },
+    {
+      "variant": "viitta",
+      "clip": "hold_struggle_give_up",
+      "oldPalmProxyToNearestNewHandVertexM": {
+        "Left": [
+          0.010791294990350192,
+          0.012648828514349869
+        ],
+        "Right": [
+          0.00686323230147298,
+          0.006956883805963778
+        ]
+      }
+    }
+  ]
+}

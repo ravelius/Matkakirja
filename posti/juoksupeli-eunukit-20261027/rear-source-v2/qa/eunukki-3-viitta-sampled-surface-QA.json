@@ -1,0 +1,356 @@
+{
+  "results": [
+    {
+      "clip": "balance",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.005510521029736766,
+      "minimumOldSurfaceY": 0.001088775749340264,
+      "surfaceFloorDeltaRangeM": [
+        -0.0012377005030825144,
+        0.010938776957360256
+      ]
+    },
+    {
+      "clip": "catch",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.015084320530618534,
+      "minimumOldSurfaceY": 0.007309540612586092,
+      "surfaceFloorDeltaRangeM": [
+        0.0011326384728098104,
+        0.016324980703763647
+      ]
+    },
+    {
+      "clip": "idle",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0009711489382549029,
+      "minimumOldSurfaceY": 0.000570091969501717,
+      "surfaceFloorDeltaRangeM": [
+        -0.0019534965686023626,
+        0.003341604473571491
+      ]
+    },
+    {
+      "clip": "jump",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.01131095537265472,
+      "minimumOldSurfaceY": 0.012422806477651515,
+      "surfaceFloorDeltaRangeM": [
+        -0.0015606173774038133,
+        0.0089410050885316
+      ]
+    },
+    {
+      "clip": "run",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.005043105828430439,
+      "minimumOldSurfaceY": 0.003052190280090683,
+      "surfaceFloorDeltaRangeM": [
+        -0.0012377005030825214,
+        0.011907296197609857
+      ]
+    },
+    {
+      "clip": "slide",
+      "samples": 17,
+      "minimumNewSurfaceY": -0.0018710865173363414,
+      "minimumOldSurfaceY": -8.035992415779933e-05,
+      "surfaceFloorDeltaRangeM": [
+        -0.002382249297580054,
+        0.02712078996463477
+      ]
+    },
+    {
+      "clip": "sprint",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.002166240668527527,
+      "minimumOldSurfaceY": 0.0012583054885164213,
+      "surfaceFloorDeltaRangeM": [
+        -0.001237701135806209,
+        0.011518072234711484
+      ]
+    },
+    {
+      "clip": "stumble",
+      "samples": 17,
+      "minimumNewSurfaceY": -0.00065049865654788,
+      "minimumOldSurfaceY": -0.00036173873499159787,
+      "surfaceFloorDeltaRangeM": [
+        -0.001455640804856443,
+        0.01577314591479137
+      ]
+    },
+    {
+      "clip": "throw",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.005510521029736766,
+      "minimumOldSurfaceY": 0.001088775749340264,
+      "surfaceFloorDeltaRangeM": [
+        -0.0012377005030825144,
+        0.010938776957360256
+      ]
+    },
+    {
+      "clip": "peek",
+      "samples": 17,
+      "minimumNewSurfaceY": -0.008929163436813974,
+      "minimumOldSurfaceY": -0.01035918547868273,
+      "surfaceFloorDeltaRangeM": [
+        0.00016976500394234558,
+        0.008793457573953611
+      ]
+    },
+    {
+      "clip": "call",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0009557405702460952,
+      "minimumOldSurfaceY": 0.0007999611954981136,
+      "surfaceFloorDeltaRangeM": [
+        0.00015577269842988065,
+        0.00038851920673999365
+      ]
+    },
+    {
+      "clip": "catch_back",
+      "samples": 17,
+      "minimumNewSurfaceY": -0.00037172467168375303,
+      "minimumOldSurfaceY": 0.0009024700308670891,
+      "surfaceFloorDeltaRangeM": [
+        -0.0020496359233805714,
+        0.01054473925312464
+      ]
+    },
+    {
+      "clip": "hold_back",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.0020454801578232602,
+        -0.0020454798039882855
+      ]
+    },
+    {
+      "clip": "catch_front",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.0020454801578232602,
+        -0.0020454798039882855
+      ]
+    },
+    {
+      "clip": "hold_front",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.0020454801578232602,
+        -0.0020454798039882855
+      ]
+    },
+    {
+      "clip": "catch_side",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0010898460091020826,
+      "minimumOldSurfaceY": 0.000907690144468204,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110429,
+        0.007637282311606956
+      ]
+    },
+    {
+      "clip": "hold_side",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110443,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_1",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002399039636095949,
+        -0.0015126906961973599
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_2",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002399039636095949,
+        -0.0015126906961973599
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_3",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002399533052722031,
+        -0.0015126906961973599
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_4",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002399399162926777,
+        -0.0015126906961973599
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_give_up",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.003441674312707087,
+      "minimumOldSurfaceY": 0.005487154116695382,
+      "surfaceFloorDeltaRangeM": [
+        -0.0024227428075346354,
+        -0.0015126931158185837
+      ]
+    },
+    {
+      "clip": "hold_struggle_front_free",
+      "samples": 17,
+      "minimumNewSurfaceY": -0.00046888686231317655,
+      "minimumOldSurfaceY": 0.0009999811406977421,
+      "surfaceFloorDeltaRangeM": [
+        -0.002080319922326999,
+        0.004490843087793045
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_1",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110443,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_2",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110443,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_3",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110437,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_4",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110427,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_give_up",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.00388117030663338,
+      "minimumOldSurfaceY": 0.006144168116743803,
+      "surfaceFloorDeltaRangeM": [
+        -0.002262997810110427,
+        -0.002262996669308561
+      ]
+    },
+    {
+      "clip": "hold_struggle_side_free",
+      "samples": 17,
+      "minimumNewSurfaceY": 1.0866520850244012e-05,
+      "minimumOldSurfaceY": 0.0009999967439976805,
+      "surfaceFloorDeltaRangeM": [
+        -0.0022629978101104268,
+        0.004826889525122722
+      ]
+    },
+    {
+      "clip": "hold_struggle_1",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002471144601486539,
+        -0.002045479803988295
+      ]
+    },
+    {
+      "clip": "hold_struggle_2",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.002471144601486539,
+        -0.002045479803988295
+      ]
+    },
+    {
+      "clip": "hold_struggle_3",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.0024707199130237566,
+        -0.002045479803988295
+      ]
+    },
+    {
+      "clip": "hold_struggle_4",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.0034416066706591834,
+      "minimumOldSurfaceY": 0.005487086828482444,
+      "surfaceFloorDeltaRangeM": [
+        -0.0024709062113254603,
+        -0.002045479803988295
+      ]
+    },
+    {
+      "clip": "hold_struggle_give_up",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.003441674312707087,
+      "minimumOldSurfaceY": 0.005487154116695382,
+      "surfaceFloorDeltaRangeM": [
+        -0.002468254687679242,
+        -0.0018718009566709732
+      ]
+    },
+    {
+      "clip": "hold_struggle_free",
+      "samples": 17,
+      "minimumNewSurfaceY": 0.001204252461443719,
+      "minimumOldSurfaceY": 0.0009999786202595342,
+      "surfaceFloorDeltaRangeM": [
+        -0.0023626557273234775,
+        0.004965985696665241
+      ]
+    }
+  ],
+  "allKeysExactAlreadyVerified": true,
+  "fullMotionCollisionQA": false
+}
