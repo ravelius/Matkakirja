@@ -2899,3 +2899,7 @@ voitaisiin mahdollisesti tuoda muuta informaatiota näkyville. Pitää vain miet
 nimeltä kartta. Ja zoomitason ollessa kauempana eri valittavat osat ovat harmaana. Ja sitten kun zoomi menee tarpeeksi lähelle, niin valittavat osat tulevatkin. näkyviin. Ja mahdollisesti jotkut osat,
 jotka toimivat vain kauemmassa zoomissa, poistuisivat sitten näkyvistä." Toinen kysymys (lisäkerros ensin): "ks ed." KK: vuoden 1873 reitit eivät tule; data OpenFreeMap (OpenMapTiles). Raamattu 2.73
 päivitetty poikkeuksella. KK lähettää omistajalle jaottelulistan; vahvistettu jaottelu → KS (kerrokset) + NUI (Kartta-välilehti).
+
+## KARTTA-VÄLILEHDEN JAOTTELU JA MAAILMANPERINTÖ (omistaja 27.10. klo 14.04, KK:n kortti) (27.10.2026 klo 14.04)
+
+1) "Käykö tämä viiden ryhmän jaottelu Kartta-välilehdelle?" → "Kyllä (Suositus)" (selite: "Liikenne, nimet, kohteet, luonto sekä rakennukset ja rajat."). 2) "Mitä kauempaan näkymään tuodaan ensin?" → "Maailmanperintö (Suositus)" (selite: "Unescon maailmanperintökohteet merkkeinä koko maapallolla."). Jaottelu: 1. Liikenne: rautatiet, metro ja raitiotiet, tiet, lauttareitit ja lentokentät 2. Nimet: kadunnimet, kaupunginosat sekä joet ja järvet 3. Kohteet: museot, linnat ja nähtävyydet 4. Luonto: kansallispuistot, metsät ja puistot sekä vuorenhuiput korkeuksineen 5. Rakennukset ja rajat. Kaukonäkymään maailmanperintökohteet (data esim. Wikidata CC0). Raamattu 2.73 päivitetty. Toteutus KS (kerrokset, data) + NUI (Kartta-välilehti), juna 212.
