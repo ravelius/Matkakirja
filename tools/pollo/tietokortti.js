@@ -307,6 +307,32 @@ const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
 /**
+ * Uusinnan korjauspalaute mallille (resepti 2.4/3: hylätty → uusinta): tarkistuksen syy suomeksi ohjeena. Sokea uusinta toisti
+ * saman virheen (vedos 5b: kolme paikkaa, kuusi uusintaa, yksikään ei läpäissyt).
+ */
+export function korjausPalaute(syy) {
+  const s = String(syy ?? '');
+  const [lj, ...loput] = s.split(' ');
+  const mika = loput.join(' ');
+  const ohje = {
+    lyhyt: 'Ensimmäinen osa on liian lyhyt: kirjoita 3–4 kokonaista virkettä (vähintään 28 sanaa).',
+    'pitkä': 'Lue lisää -osa ei ole 80–170 sanaa: kirjoita se 2–3 kappaleeseen, tai jätä se kokonaan pois, jos uusia faktoja ei ole.',
+    toisto: `"${mika}" toistuu: sama erisnimi enintään kahdesti, sama vuosiluku ja sama pitkä sana vain kerran koko vastauksessa. Käytä viittausta (se, kaupunki) tai jätä toisto pois.`,
+    nimi: `Nimeä "${mika}" ei ole lähteessä: käytä vain lähteen nimiä.`,
+    luku: `Lukua ${mika} ei ole lähteessä: käytä vain lähteen lukuja.`,
+    vieras: 'Älä taivuta englannin sanoja (collegelle, Windsor Bridgen): käytä suomea (oppilaitos, silta) tai nimeä taivuttamattomana (Windsor Bridge -silta).',
+    merkit: 'Poista sulkeet, tähdet, ajatusviivat ja lyhenteet (n., ns., esim.).',
+    sana: `Poista sana "${mika}".`,
+    aloitus: 'Älä aloita äännähdyksellä; aloita paikan nimellä.',
+    'lähes': 'Kaksi virkettä sanoo lähes saman: poista toinen.',
+    puhuttelu: 'Älä puhuttele lukijaa äläkä kehota häntä mihinkään.',
+    kesken: 'Lopeta jokainen osa valmiiseen virkkeeseen ja pisteeseen.',
+    merkkirivi: 'Kirjoita ###LUE-LISÄÄ### vain kerran omalle rivilleen.',
+  }[lj] ?? `Tarkistus hylkäsi vastauksen (${s}).`;
+  return `Tarkistus hylkäsi vastauksen: ${ohje} Kirjoita koko vastaus uudelleen samassa muodossa; muut ohjeet ennallaan.`;
+}
+
+/**
  * Automaattiset tarkistukset ennen tallennusta (resepti 2.4): muoto, sanamäärät, numerot ja nimet syötteessä, kielletyt merkit ja
  * sanat. { ok, syy } – hylätty ei mene ämpäriin. Isolla alkavat nimet tarkistetaan vain virkkeen keskeltä (virkkeen alku on aina iso).
  */
