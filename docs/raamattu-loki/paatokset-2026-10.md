@@ -2778,3 +2778,7 @@ ovesta ulos, niin hänen perään voisi heti kurkistaa ensimmäinen eunukki, jok
 keisaria muutaman sekunnin päästä alusta; alkukohtaus = ovesta karkuun, huuto, perään kurkistava eunukki; jokainen ohjausliike opitaan juuri tarvittaessa (ensin oikealle pyyhkäisy), omenan heitto
 vasta ensimmäisen omenan kohdalla; väistörepliikit (huh) generoidaan vasta omistajan ääniluvalla. TYÖNJAKO: KK johtaa (PK + LR + NUI ohjeiden pohja + Äänittäjä luvan jälkeen); juna 212 tai seuraava,
 kun valmis.
+
+## JUOKSUPELIN KIINNIOTTO, RIMPUILU JA KEISARIN KÄDET (omistaja 27.10. klo 08.35, KK:n välitys) (27.10.2026 klo 08.39)
+
+OMISTAJAN PYYNTÖ klo 08.35 (sanatarkasti): "onko Codex toimittanut jo kaikki juoksupelin uudet hahmojen liikkeet. Voisi tilata vielä lisäksi kiinni ottamisen ja rimpuilun eri liikesarjat. Tällä hetkellä se on todella oudon näköinen, kun siitä puuttuu liikkeitä. Lisäksi keisari voisi käyttää käsiään apuna, kun se menee oviaukoista. Toisella kädellä voi ottaa tukea sekä voisi miettiä, miten muuten käsiä voisi käyttää, koska sekin elävöittäisi peliä." KK:N TAVOITE: kiinnijääminen näyttää uskottavalta ja vaihtelevalta (vartija tarttuu, keisari rimpuilee ja lannistuu, sama ei toistu), ja keisarin kädet tekevät aina jotain järkevää (tarttuvat, tukevat, nostavat kaapua, pitävät tasapainoa) eivätkä roiku. TILA: Codexin viimeiset liikkeet 19.10. (9 perusliikettä + viitta); kiinniotto ja rimpuilu puuttuvat. TYÖNJAKO: PK tilaa kiinnioton ja rimpuilun liikesarjat Codexilta samaan postiin eunukin kanssa; käsien lisäliikkeet omistajan kortilla (KK).
