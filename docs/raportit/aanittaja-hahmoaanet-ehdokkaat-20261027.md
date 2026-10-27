@@ -39,3 +39,10 @@ Korvattu samalla nimellä `ulos-lopulliset/`; vanhat `ulos-lopulliset/hylatyt-sa
 Valinta: eunukit Georg ja Sergio otto B; keisari 1 otto 2, 2 otto 1, 3 lisäotto (ulos-uusinnat/keisari-3-huh-lahelta-piti-otto2), 4 otto 1, 5 otto 1.
 Vienti: proto-3d/_valmiit/juoksupeli-hahmoaanet-vienti-20261027 → ämpäri audio/juoksupeli/hahmoaanet-v1/ (7 tiedostoa, ääniportti läpi, 12.49).
 Nimet: eunukki-georg, eunukki-sergio, keisari-1-ottakaa-kiinni, keisari-2-huh, keisari-3-huh-lahelta-piti, keisari-4-hui, keisari-5-melkein (.mp3).
+
+## Rimpuilun repliikit (omistaja 27.10. klo 15.41)
+Kansio: proto-3d/_tyo/juoksupeli-hahmoaanet-haku-20261027/ulos-rimpuilu/ (skripti tee_rimpuilu.py). 9 ottoa, 417 mrk (≈ 0,05 % kiintiöstä). eleven_v4_turbo, fi, stability 0,25, style 0,8; speed 1,15 eunukit / 1,2 keisari. Ei konelitterointia, ei jälkikäsittelyä.
+Eunukki (Georg LRpNiUBlcqgIsKUzcrlN ja Sergio RGbeQtiShYRDVCrd9b9w), tiedostot eunukki-<nimi>-sainpas-otto1..3:
+1 "[triumphant] [shouting] Sainpas sinut!"; 2 "[panicked] [screaming] Sainpas sinut!"; 3 "[terrified] [relieved] Sainpas sinut!"
+Keisari (Kavya bA58y3FqVI6b6gTNh0oT), keisari-rimpuilu-otto1..3 (tauko = "..."):
+1 "[angry] [shouting] Päästä irti! ... Käsken sinua! Päästä irti!"; 2 "[furious] [commanding] Päästä irti! ... Käsken sinua! Päästä irti!"; 3 "[scared] [struggling] Päästä irti! ... Käsken sinua! Päästä irti!"
