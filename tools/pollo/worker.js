@@ -34,7 +34,7 @@ import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyva
 import {
   korttiAvain, tekstiAvain, linkitaWikidata, haeEntiteetti, korjausPalaute, korttiFaktat, wikiLahde, pulunViesti, TIETOKORTTI_TTL_S, KARTAN_TIETOKORTTI_KEHOTE,
   tarkistaTeksti, EI_LAHDETTA, kohdeTyyppi, osaAvain, JOHDANTO_KEHOTE, LISAA_KEHOTE, lisaaViesti, tarkistaJohdanto, tarkistaLisaa, hylkayksenVakavuus,
-  KYSYMYS_KEHOTE, kysymysViesti, tarkistaKysymykset, kelvollisetKysymykset, vaihdaKysymykset, jasennaLisaa, siistiLisaa,
+  KYSYMYS_KEHOTE, kysymysViesti, tarkistaKysymykset, kelvollisetKysymykset, vaihdaKysymykset, jasennaLisaa, siistiLisaa, siivoaMeta,
 } from './tietokortti.js';
 import {
   KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi, jerusalemissa, ilmanMaanNimea,
@@ -4183,7 +4183,8 @@ async function hoidaTietotekstiOsa(pyynto, env, kors, runko, ctx) {
         }
       }
       if (!striimaa) {
-        await laheta('loppu', { vastaus: talteen ?? naytettava?.teksti ?? teksti.trim(), valmiina: false, lahde: lahdeRivi, osa,
+        // Varaversiosta lähdettä koskevat ilmaukset pois ennen näyttämistä (KK 27.10.); hyväksytyssä niitä ei ole (KIELLETYT).
+        await laheta('loppu', { vastaus: talteen ?? siivoaMeta(naytettava?.teksti ?? teksti.trim()), valmiina: false, lahde: lahdeRivi, osa,
           tarkistus: talteen ? 'ok' : (naytettava?.syy ?? 'hylätty') });
       }
       if (talteen) {
