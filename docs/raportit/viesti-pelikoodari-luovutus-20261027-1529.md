@@ -38,3 +38,13 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 ## Opit
 - glTF:n Y-kierto z-peilatussa kehyksessä (DioraamaGlb) vaihtaa merkkiä: −90° → +90°. Varmista kuvasta, mihin suuntaan kasvot osoittavat.
 - todistusajon tap-kohta lukee UI-puun joka napautuksella (~1 s): nopeisiin sarjoihin kiinteät tap-koordinaatit.
+
+## Lisäys 15.35: PT:n vastaus F/G-vertailuun
+1. Kermanvalkoiset kaiteet OK: ne vastaavat marmoria ja havainnekuvia paremmin. Mainitse tämä KK:lle näytteen yhteydessä.
+2. PT kysyi kuvan 4 (g-sivu) etualan isosta harmaasta tasosta.
+   - Vastattu: sama taso on molemmissa kuvissa (rak1/rak0), joten se ei johdu C2:sta.
+   - Paikka 95 −40 osui todennäköisesti jalustan sisään, ja keisarista näkyy vain hattu. Vaihda paikka ja kuvaa uudelleen.
+3. SEURAAVA TYÖ (PT hyväksyi GPU-mittauksen):
+   - Pilko ensin G:n g-jalusta-1063-portaat.glb (390 k kolmiota, yksi verkko) osiin, esimerkiksi ruuduittain tai portaikoittain, jotta näkymättömät osat karsiutuvat (frustum culling).
+   - Sen jälkeen JU kääntää ja LT mittaa A/B: `palatsi c2-rak 1` vs 0 G:n luona. Noudata iPad-ohjetta, ei rinnakkaisajoja.
+   - Tulos PT:lle ennen merge-pyyntöä.
