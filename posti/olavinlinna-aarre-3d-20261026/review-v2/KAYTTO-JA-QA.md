@@ -1,0 +1,9 @@
+# J3/J4 — tekninen vertailutoimitus
+
+J3 hopeapikari: 18 775 kolmiota, 20 cm korkea, kokonaisleveys noin 14,2 cm. Hyväksytyn kuvan mittasuhteet säilytettiin yhtenäisellä skaalauksella. Tilauksen noin 10 cm kupin halkaisija oli tulkinta; toimitus EI täytä 10 cm halkaisijaa. Lavastaja/PT vertaa 14,2 cm leveyden toimivuuden Foggin käteen ja kohtaukseen. Pohjakeskinen origo, +Y ylös, scale 1. Vaakunat ovat etupuolella; toisessa ehdokkaassa takapuolen ylimääräiset kilvet korjaantuivat. Avoimen kupin sisäseinämässä on näkyvä epätasainen kohta (QA-arkin yläviistokuva oikealla): arvioitava pelin valossa, ei peitetä tiedossa olevaa virhettä. Ei uusia ehdokkaita ilman erillistä tilausta, kahden ehdokkaan raja käytetty.
+
+J4 yhtenäinen hopeasisältö: 38 828 kolmiota, 0,476043 × 0,223394 × 0,400000 m (X/Y/Z), rahakasa + kannu, kulho ja lautanen. Mittarajalaatikko 0,55 × 0,30 × 0,40 m täyttyy numeerisella 1 µm toleranssilla; syvyydessä ei ole asennusvaraa. Sijoitus sisälaatikon keskelle X/Z=0 ja pohja Y=0,026606 m sisäpohjasta nostaa korkeimman kohdan 5 cm alle 0,30 m sisäreunan. Tämä on tilauslaatikon sovitus, EI tarkistus todellisen arkku-GLB:n seinä- tai kansitörmäyksistä. Lavastaja sovittaa nykyiseen arkkuun; arkkumallia ei muutettu. Tarvittaessa pienennä sisältöä yhtenäisesti hieman seinävaran saamiseksi ja laske Y uudelleen: 0,25 − mallin korkeus.
+
+Kummassakin yksi materiaali, kolme 2048 px upotettua kuvaa. PBR-kartat säilyvät; esikatselun mattapinta ei osoita pelin metallin kiiltoa. Ei liikettä eikä luurankoa. Näissä museoesineissä ei tehdä tarpeettomia animaatiokorjauksia.
+
+Vastaanottajan codex-3d-tarkistus ajetaan ennen toimitusta, tulos qa/receiver-check.json. Paikalliset geometria- ja kuvatarkastukset eivät tarkoita vastaanottokuittausta, pelin valaistus-/käsi-/arkkusovitusta, KK:ta tai omistajan hyväksyntää. Palautteeseen mallin SHA, kameran kuva ja valaistus sekä mahdollinen kokomuutos.

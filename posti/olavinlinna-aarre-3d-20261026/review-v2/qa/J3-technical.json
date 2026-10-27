@@ -1,0 +1,67 @@
+{
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/models-source/J3-candidate02.glb",
+  "sourceSHA256": "ae4ab7e6a71cda44325db3a9c4dbc9ac6bd53bbab45c4a619a1200c24a6c82f0",
+  "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/review-v2/models/hopeapikari.glb",
+  "sha256": "fb22689dc2f32bbd3fc677125a1f01377fa78c5b6a47f5c4701531cadebb2d3d",
+  "bytes": 7151364,
+  "triangles": 18775,
+  "vertices": 11721,
+  "sourceDimensions_m": [
+    0.6950989365577698,
+    0.97918701171875,
+    0.6940003037452698
+  ],
+  "bakedUniformScale": 0.20425107523530514,
+  "dimensions_m": [
+    0.14197470247745514,
+    0.20000000298023224,
+    0.141750305891037
+  ],
+  "boundsMin_m": [
+    -0.07098735123872757,
+    0.0,
+    -0.0708751529455185
+  ],
+  "boundsMax_m": [
+    0.07098735123872757,
+    0.20000000298023224,
+    0.0708751529455185
+  ],
+  "rootScale": [
+    1,
+    1,
+    1
+  ],
+  "origin": "bottom center",
+  "textures": [
+    {
+      "image": 0,
+      "size": [
+        2048,
+        2048
+      ],
+      "mime": "image/png"
+    },
+    {
+      "image": 1,
+      "size": [
+        2048,
+        2048
+      ],
+      "mime": "image/jpeg"
+    },
+    {
+      "image": 2,
+      "size": [
+        2048,
+        2048
+      ],
+      "mime": "image/jpeg"
+    }
+  ],
+  "textureBytesUnchanged": true,
+  "PBRMapsPreserved": true,
+  "static": true,
+  "visualAcceptance": "PENDING",
+  "gameIntegrated": false
+}

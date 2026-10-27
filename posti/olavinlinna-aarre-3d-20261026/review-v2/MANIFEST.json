@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "scope": "Olavinlinna J3/J4 technical review",
+  "files": [
+    {
+      "path": "models/hopeapikari.glb",
+      "sha256": "fb22689dc2f32bbd3fc677125a1f01377fa78c5b6a47f5c4701531cadebb2d3d",
+      "bytes": 7151364,
+      "triangles": 18775,
+      "liike": "ei liikettä; staattinen",
+      "tyyppi": "esine",
+      "dimensionsM": [
+        0.14197470247745514,
+        0.20000000298023224,
+        0.141750305891037
+      ],
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "origin": "pohjan keskellä",
+      "accepted": false
+    },
+    {
+      "path": "models/arkun-hopeasisalto.glb",
+      "sha256": "96a0674a50ba62a37e3b9be5b7696e4630e8dc00c4dcaa55aa92ac9ed0d6f50b",
+      "bytes": 6841900,
+      "triangles": 38828,
+      "liike": "ei liikettä; staattinen",
+      "tyyppi": "esine",
+      "dimensionsM": [
+        0.4760429561138153,
+        0.22339381277561188,
+        0.4000000059604645
+      ],
+      "rootScale": [
+        1,
+        1,
+        1
+      ],
+      "origin": "pohjan keskellä",
+      "accepted": false
+    }
+  ],
+  "modelGenerationCalls": 3,
+  "tripoCredits": 135,
+  "newImageCallsThisPhase": 0,
+  "receiverAccepted": false,
+  "gameIntegrated": false,
+  "ownerAccepted": false
+}

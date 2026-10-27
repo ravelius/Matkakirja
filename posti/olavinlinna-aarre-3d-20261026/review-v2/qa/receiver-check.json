@@ -1,0 +1,145 @@
+[
+ {
+  "kansio": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-aarre-10171021-20261027/review-v2",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "arkun-hopeasisalto.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "arkun-hopeasisalto.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 38828,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.238,
+       0,
+       -0.2
+      ],
+      "max": [
+       0.238,
+       0.223,
+       0.2
+      ],
+      "koko": [
+       0.476,
+       0.223,
+       0.4
+      ]
+     }
+    },
+    "polku": "models/arkun-hopeasisalto.glb"
+   },
+   {
+    "nimi": "hopeapikari.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "hopeapikari.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 18775,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 jpg",
+      "2048×2048 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -0.071,
+       0,
+       -0.071
+      ],
+      "max": [
+       0.071,
+       0.2,
+       0.071
+      ],
+      "koko": [
+       0.142,
+       0.2,
+       0.142
+      ]
+     }
+    },
+    "polku": "models/hopeapikari.glb"
+   },
+   {
+    "nimi": "J3-four-views.png",
+    "polku": "qa/J3-four-views.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 905
+    }
+   },
+   {
+    "nimi": "J4-four-views.png",
+    "polku": "qa/J4-four-views.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 905
+    }
+   },
+   {
+    "nimi": "1019-pikari-kolmeneljannesta-v2.png",
+    "polku": "sources/1019-pikari-kolmeneljannesta-v2.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   },
+   {
+    "nimi": "1020-pikari-takaa.png",
+    "polku": "sources/1020-pikari-takaa.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   },
+   {
+    "nimi": "1021-arkun-sisalto-kolmeneljannesta.png",
+    "polku": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: hopeapikari.glb ei liikettä, arkun-hopeasisalto.glb ei liikettä"
+  ]
+ }
+]

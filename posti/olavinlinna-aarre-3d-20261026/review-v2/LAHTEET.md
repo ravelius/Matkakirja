@@ -1,0 +1,7 @@
+# Lähteet
+
+Matkakirjan fiktiivinen Aarnivalkea 1499 -aarre; ei aitona historiallisena löytönä esitettävä esine. Lähteet ovat tämän työn aiemmin generoituja, PT:n hyväksymiä havainnekuvia. Hyväksyntä f80740d1124a4c1f3d65c44de82f9c85639129ae: pikari 1019 v2 + takakuva 1020, arkun sisältö 1021. Kuviin ei tehty tässä vaiheessa muutoksia. Sturen kolme mustaa lehteä muistuttavat pelin lähdekuvan mukaisesti patamerkkejä; vastaanottaja hyväksyi tämän tulkinnan. Ei hylätyn 1018 v2 -kuvan käyttöä.
+
+Tripo H3.1 Ultra, PBR, Remove Lighting, 2048 px; omistajan Max-tili. J3 ensimmäinen bfea5258-4356-43cb-88f6-5a8143c83773 hylättiin takapuolen ylimääräisten kilpien vuoksi. Toimitettava toinen J3: 039dd672-b04a-4c95-91c4-b371bdb61f3f, hyväksytty 3/4-kuva Front-kentässä ja takakuva Back-kentässä; likimääräinen kuvapari, ei kalibroitu vastakuvapari. J4: 5df7eae6-4896-417e-ae9b-2962e5370411. Kolme kutsua yhteensä 135 Tripo-krediittiä (45/kutsu), saldohavainnot 17935 → 17800. Tässä vaiheessa ei uusia kuvagenerointeja tai rigityksiä. Alkuperäiset GLB:t ja hylätty ehdokas säilyvät models-source/ ja review-v1/ -kansioissa toimituksen ulkopuolella.
+
+Paikalliset muutokset: yhdenmukainen mittakaava leivottu paikkoihin, pohjakeskitys, juuriskaala 1.0. Upotettujen lähdetekstuurien tavut, UV:t ja PBR-kartat säilytetty. Ei luurankoa eikä animaatioita. QA-arkit ovat oikeiden GLB:iden valaisemattomia CPU-esikatseluja; ne eivät ole pelin metallivalaistuksen hyväksyntä.
