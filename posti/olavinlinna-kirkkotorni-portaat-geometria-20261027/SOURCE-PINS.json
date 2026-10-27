@@ -1,0 +1,60 @@
+{
+  "mail": {
+    "path": "posti/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "commit": "8965de38f95305a8be4403430534ea30a3687950",
+    "blob": "bd34fa9a0af8bf9acc9ee71e00b10f98eaa1e7bd",
+    "sha256": "84e1b2afcb810ed69fb25b43f75b1e7c9109dda1543f0b9110c5f0457ceb4892",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "readInFull": true
+  },
+  "localInputs": [
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/OHJE-CODEXILLE.md",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/OHJE-CODEXILLE.md",
+      "sha256": "1fb9ec2f9f923c0d7885f32cd92ef21863d1cdc94a2252fd7fe46a3d826df13f",
+      "bytes": 6200
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu.json",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/asettelu.json",
+      "sha256": "d7bf69c47ade32fd19314d7f35ed07864ac5ecb69222ff951be80f5776ff504b",
+      "bytes": 9824
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu-kirkkotorni-portaat.glb",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/asettelu-kirkkotorni-portaat.glb",
+      "sha256": "7e605005cbd9007e5b07dc66ab86e4c4c605f24e2673dae46ccfab2a37006f72",
+      "bytes": 977696
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kirkkotorni-portaat-leikkaus-etelasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-leikkaus-etelasta.png",
+      "sha256": "4476853fd219ebbfc6edc4f23d2601d23ef70ff218bf765ed41aed6afbb914a4",
+      "bytes": 1433016
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kirkkotorni-portaat-leikkaus-idasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-leikkaus-idasta.png",
+      "sha256": "101b7ecfabf5b8ef87cf7db7bde7cb3d94004e66772c3adb8ec2059b594a83d8",
+      "bytes": 2516117
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kirkkotorni-portaat-pohja-1-y-2,5.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-pohja-1-y-2,5.png",
+      "sha256": "c8cd81fa0d58879d9d1563d59242c28aa26eecf2ffdb1682fbd84f40b5004397",
+      "bytes": 2380101
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kirkkotorni-portaat-pohja-2-y+3,5.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-pohja-2-y+3,5.png",
+      "sha256": "303a171fcb237ee9484a3ab7923d6824fb8768a4fb0e62d70607bf6e518844c9",
+      "bytes": 3126573
+    },
+    {
+      "source": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/kirkkotorni-portaat-pohja-3-y+9,5.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-pohja-3-y+9,5.png",
+      "sha256": "1288ad7e475b528ab90d454c3ae6a826ef2db4274c392051741a87104f15c92f",
+      "bytes": 3353033
+    }
+  ]
+}

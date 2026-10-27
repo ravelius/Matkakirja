@@ -1,0 +1,124 @@
+[
+ {
+  "kansio": "output/olavinlinna-kirkkotorni-portaat-1106-20261027/delivery",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "kirkkotorni-portaat.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "kirkkotorni-portaat.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 4020,
+     "piirrot": 5,
+     "materiaalit": 5,
+     "solmut": 74,
+     "kuvat": [
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "2048×2048 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg",
+      "1024×1024 jpg"
+     ],
+     "rajat": {
+      "min": [
+       -22.3,
+       -3.04,
+       -19.509
+      ],
+      "max": [
+       -10.703,
+       12.25,
+       5.5
+      ],
+      "koko": [
+       11.597,
+       15.29,
+       25.009
+      ]
+     }
+    },
+    "polku": "kirkkotorni-portaat.glb"
+   },
+   {
+    "nimi": "Kirkkotornin portaat - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "polku": "Kirkkotornin portaat - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1448,
+     "h": 1086
+    }
+   },
+   {
+    "nimi": "chapel-internal.png",
+    "polku": "qa/chapel-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "entrance-internal.png",
+    "polku": "qa/entrance-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "stair-internal.png",
+    "polku": "qa/stair-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "tott-internal.png",
+    "polku": "qa/tott-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   },
+   {
+    "nimi": "upper-stair-internal.png",
+    "polku": "qa/upper-stair-internal.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1280,
+     "h": 960
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: kirkkotorni-portaat.glb ei liikettä"
+  ]
+ }
+]

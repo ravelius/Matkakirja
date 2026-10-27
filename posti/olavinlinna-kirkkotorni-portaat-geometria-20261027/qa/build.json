@@ -1,0 +1,12 @@
+{
+  "markerCount": 72,
+  "duplicateTrianglesRemoved": 0,
+  "sourceArchitectureRetained": true,
+  "sourceWalkAndCollisionGameplayUnchanged": true,
+  "interpretations": [
+    "Tott timber ceiling retained. Chapel lime ceiling edge11.98/crown12.22; stair soffit follows nominal flight at +2.35m with upper landing clearance at least 2.05m; spiral bottom floor -2.74.",
+    "Source grey slate finish for tread solids and all walk surfaces."
+  ],
+  "newProps": false,
+  "callsIssued": 1
+}

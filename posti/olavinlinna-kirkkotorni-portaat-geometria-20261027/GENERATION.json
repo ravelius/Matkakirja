@@ -1,0 +1,15 @@
+{
+  "tool": "image_gen.imagegen",
+  "callsIssued": 1,
+  "successfulOutputs": 1,
+  "retryCalls": 0,
+  "nativeSHA256": "8c50252a69217babb5e2a9eedc36bfa0b2fc4615d847f60ca94c70a69b5c1285",
+  "references": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-pohja-2-y+3,5.png",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-kirkkotorni-portaat-1106-20261027/sources/kirkkotorni-portaat-leikkaus-etelasta.png"
+  ],
+  "prompt": "Create one brand-new landscape 4:3 photorealistic architectural target image for the interior wall staircase of Olavinlinna castle, Finland, interpreted as year 1499. It must look photographed with a real full-frame camera, natural rough surfaces, restrained dynamic range, no illustration, no repeating fake texture or sculpted plastic stone. The supplied plan and section diagrams are our own dimensional references only; do not reproduce diagrams, labels, coloured markers, grids or cutaway effects. Depict one coherent eye-level interior view from the lower landing looking up the narrow dogleg stair inside massive castle masonry. Broad worn grey stone treads rise at their existing regular geometry to a midway landing where the flight bends to the upper level; walls of irregular differently-sized dark granite and paler natural stones in abundant pale lime mortar with partial old lime plaster. Never uniform rectangular ashlar, brick, rusty red flooring or clean modern concrete. Clear walk passage approximately one metre wide, no handrail intruding, no furniture, people, torches, symbols or display text. A subdued small lateral opening at the landing gives cool daylight grazing the stair nosings and lime mortar; interior predominantly dim with readable shadows and believable photographic texture. Modest stone lintels and gently vaulted stone/lime soffit above the passage, ceiling headroom visibly adequate. Keep architectural geometry simple and physically credible, realistic imperfect edge wear without overly dramatic cracks. Natural 28mm lens at standing eye level, no fisheye or extreme forced perspective. Full composition, unframed image, no text or watermarks. Purpose: material/atmosphere target, not evidence of exact historical reconstruction; match the supplied stair massing. Generate exactly one image.",
+  "imagePixelEdits": false,
+  "metadataAdded": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "scope": "Material and atmosphere target. Image does not override source dimensions or add windows."
+}

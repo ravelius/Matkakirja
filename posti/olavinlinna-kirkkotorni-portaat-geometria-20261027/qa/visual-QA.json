@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "reviewedAt": "2026-10-27T12:38:31.210693+00:00",
+  "reviewer": "Codex visual inspection",
+  "inputGLBSHA256": "2637529402094d0ef5a3cb1726f44df4c9e66c6a41c7ee7ac24363c0bcdc31bd",
+  "viewsReviewed": [
+    "stair-internal",
+    "tott-internal",
+    "chapel-internal",
+    "entrance-internal",
+    "upper-stair-internal"
+  ],
+  "checks": [
+    "Irregular stone and lime materials consistent with accepted palace family.",
+    "Grey stone tread/floor material and timber/lime ceilings visible.",
+    "Stair soffits close the former open roof joint; upper landing clearance checked numerically.",
+    "No missing interior floor visible in entrance; bottom spiral landing filled.",
+    "No UI markers, watermarks or text embedded in model views."
+  ],
+  "limitations": [
+    "Angular original stair wall/ceiling junctions preserved rather than rounding gameplay layout.",
+    "Model preview lighting is diagnostic, not final scene lighting.",
+    "Images are internal render QA, not installed game, owner acceptance, or historical survey."
+  ],
+  "targetImageReviewed": true,
+  "targetImageResult": "PASS as material/atmosphere reference only; image window not added to geometry."
+}
