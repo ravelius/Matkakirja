@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "inspectedAt": "2026-10-27T13:55:58.425261+00:00",
+  "inputGLBSHA256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb",
+  "views": [
+    "chamber",
+    "seated-to-door",
+    "air-slit",
+    "vestibule",
+    "crawl-mouth"
+  ],
+  "findings": [
+    "Five final-export views inspected: chamber, seated-to-door, air slit, vestibule and crawl opening.",
+    "Dark irregular masonry, grey flagstones and pale curved lime vault; no labelled helper geometry.",
+    "Door and low crawl opening preserve source positions; small high air slit is clear by nine through rays. Bright side in oblique close-up is a lit stone reveal.",
+    "Source low straw bedding footprints preserved, restrained existing Riet01 material and short fibre surface finish. The low source bedding remains visibly regular in shape.",
+    "QA scene uses fill lighting, not exported into GLB. Receiver assembles original door, keys, bucket, blanket and other existing props."
+  ],
+  "gameAppearanceVerified": false
+}

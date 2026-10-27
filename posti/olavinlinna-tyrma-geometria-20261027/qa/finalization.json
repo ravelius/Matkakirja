@@ -1,0 +1,14 @@
+{
+  "allSourceEmptyMarkersMatchExactly": true,
+  "geometryChangedByFinalizer": false,
+  "compression": [
+    {
+      "image": "slate_driveway_diff_2k",
+      "originalBytes": 3155363,
+      "deliveryBytes": 1856545,
+      "method": "JPEG quality94 4:4:4, dimensions unchanged, standard delivery compression only"
+    }
+  ],
+  "bytes": 14535312,
+  "sha256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb"
+}

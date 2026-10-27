@@ -1,0 +1,16 @@
+{
+  "tool": "image_gen.imagegen",
+  "callsIssued": 1,
+  "successfulOutputs": 1,
+  "retryCalls": 0,
+  "nativeSHA256": "7cfd7bf48e8379e089515cbae85bde64e153b7ec8357701a609645a01f1db741",
+  "references": [
+    "tyrma-E101-pohja-1-y-4,0.png",
+    "tyrma-E101-leikkaus-idasta.png",
+    "tyrma-E101-leikkaus-etelasta.png"
+  ],
+  "prompt": "Create one entirely new photorealistic architectural target illustration, horizontal 4:3. Historical-scene: Olavinlinna Castle dungeon E101, Finland, a plausible restrained interpretation of the year 1499. It must look like an actual high-quality camera photograph, with naturally varied real materials, subtle fine grain, coherent optical light and no artificial patterned or plastic surface. The three attached diagrams are spatial references ONLY, not images to paint over: plan and two sections describe a small underground rectangular dungeon with thick masonry walls, low pale lime-plastered barrel vault (roughly 2 to 3 metres high), a dull grey natural flagstone floor and one wooden entrance. Show an intimate interior view from human standing eye level approximately 1.6 metres, moderate 28mm lens, no dollhouse or cutaway. Walls are irregular small and medium dark grey granite and lighter natural stones in generous worn pale lime mortar, some partial old limewash, not regular dressed blocks. The floor is grey natural stone with restrained pale mortar seams, never orange tile. A few low uneven patches of loose worn straw on the floor, one muted brown folded blanket and a simple wooden bucket in a corner as hinted in the layout, no staged abundant props. A small heavy vertical oak-plank door with plain forged iron straps near one corner; one very narrow high air slit, about 12 cm wide and 45 cm tall, admits faint cool moonlight. The chamber is genuinely dark and subdued, most surfaces in soft shadow, just enough bounced light to read the masonry and vaulted volume. No bright cinematic light shafts, no torches added, no electric lights, no decorative fantasy prison bars, no skulls, no chains, no people, no animals, no writing, no labels, no logos, no watermark. The reference diagrams specify spatial logic rather than a measured historical reconstruction; make a coherent believable chamber without depicting diagrams, arrows, marker balls, annotations or coordinate grids. Produce exactly one finished image.",
+  "imagePixelEdits": false,
+  "metadataAdded": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "scope": "Material and atmosphere target; exact source geometry remains authoritative."
+}

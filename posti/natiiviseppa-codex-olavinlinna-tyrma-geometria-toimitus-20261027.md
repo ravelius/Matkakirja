@@ -1,0 +1,11 @@
+# Codex → Natiiviseppä: Olavinlinna 3d, tyrmä E101, 27.10.2026
+
+Tehtävä #1109 toimitettu tarkistettavaksi kansioon `posti/olavinlinna-tyrma-geometria-20261027/`: `tyrma-e101.glb` (tilauksen E101 pienaakkosnimenä teknisen tarkistimen mukaan), yksi tavoitehavainnekuva ja viisi sisäistä QA-kuvaa. Metrit ja yhteinen origo ennallaan. Kaikki 16 lähdemerkkiä tyhjinä solmuina täsmälleen kerran, transformit ja extras.merkki muuttamatta.
+
+Lähteen tarkka lattiataso −3,8 m säilyy, vaikka lähdeotsikossa lukee pyöristetty −4,0 m. Seinät, holvi, eteinen ja ryömintäsuu säilyttävät lähdemuotonsa. Pinta viimeistelty palatsin hyväksytyn harmaan luonnonkiven, epäsäännöllisen kalkkilaastimuurauksen ja vaalean rappauksen materiaaliperheellä. Kiven mittakaava yhtenäinen 2,5 m/toisto koko korkeudelta. Lähteen matalissa olkipinnoissa vastaanottajan olemassa oleva CC0 Riet01-materiaali, 25 mm sisäänpäin reunaviiste ja 1 800 lyhyttä pintakuitua; patjojen alkuperäinen säännöllinen pohjamuoto säilyy. Ei uusia rekvisiittaesineitä.
+
+Vientitiedoston tarkistus: 16/16 merkkiä, 1 063 kävelynäytettä, ei uusia pään liikeradan esteitä, lattiapuuttumia tai kulkutilan kavennuksia. Yhden olkireunapisteen noin 16,5 mm tukitason lasku on dokumentoitu erikseen. Kolme oviaukkoa: 651 sädettä viidessä suunnassa/ovi, ei uusia tukoksia suhteessa lähteeseen. Ryömintäsuun lähtötilan suunnasta riippuvat osumat säilyvät raportissa. Ilmaraon 9/9 läpisädettä vapaat. Lähteessä ei ole kameramerkkejä. Tekninen tarkistin 0. MANIFEST ja SHA256SUMS yksilöivät kaikki tiedostot.
+
+Lavastaja säilyttää alkuperäiset v49a-kävely-/törmäysmallit ja lisää alkuperäiset ovi-, avain-, irtokivi-, peitto- ja astiaesineet muuttamattomien merkkien mukaan. QA-valaistus ei sisälly GLB:hen; vaalea ilmaraon sivu lähikuvassa on valaistu syvä kivipieli. Havainnekuva yksi kutsu / yksi tulos, ei uusintaa; AI-merkintä nimessä ja metatiedossa, pikselit ennallaan. Pintojen vuoden 1499 ilme on tulkinta, ei rakennusarkeologinen todiste.
+
+Natiiviseppä tarkistaa, PT kuittaa, Lavastaja kokoaa. Tämä on tiedostotoimitus; vastaanottajan hyväksyntää, pelin toimivuutta tai julkaisua ei ole vielä varmennettu. Ei main-mergeä, versionnostoa tai R2-/pelijulkaisua.

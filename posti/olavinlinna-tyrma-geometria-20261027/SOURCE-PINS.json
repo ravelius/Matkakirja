@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu-tyrma-E101.glb",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/asettelu-tyrma-E101.glb",
+      "sha256": "b9d5cd96acdea39182cc8d6f969255e4dc16bc835e9d96a9595bc23fe80f33e3"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/tyrma-E101-pohja-1-y-4,0.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/tyrma-E101-pohja-1-y-4,0.png",
+      "sha256": "da6aa9d18d56203ce56d7e89597ade78be5af0a592d2e3b9a065c5540440586a"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/tyrma-E101-leikkaus-idasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/tyrma-E101-leikkaus-idasta.png",
+      "sha256": "0ce5a6615c43e71561d14803bf8d291d36926e0d9a64d8ad6c800e5cb4876033"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/tyrma-E101-leikkaus-etelasta.png",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/tyrma-E101-leikkaus-etelasta.png",
+      "sha256": "f6cec92792705ea60e4db745ef08e76f7ffe57faa8ab4634a70393b1f7090849"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/OHJE-CODEXILLE.md",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/OHJE-CODEXILLE.md",
+      "sha256": "1fb9ec2f9f923c0d7885f32cd92ef21863d1cdc94a2252fd7fe46a3d826df13f"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-asettelu-6-10-v1/asettelu.json",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-tyrma-e101-1109-20261027/sources/asettelu.json",
+      "sha256": "d7bf69c47ade32fd19314d7f35ed07864ac5ecb69222ff951be80f5776ff504b"
+    }
+  ],
+  "mail": {
+    "path": "posti/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "commit": "8965de38f95305a8be4403430534ea30a3687950",
+    "blob": "bd34fa9a0af8bf9acc9ee71e00b10f98eaa1e7bd",
+    "sha256": "84e1b2afcb810ed69fb25b43f75b1e7c9109dda1543f0b9110c5f0457ceb4892",
+    "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-muurikaytava-1108-20261027/sources/natiiviseppa-codex-olavinlinna-osat3-20261027.md",
+    "readInFull": true
+  },
+  "surfaceFeedback": [
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-kirkkotorni-portaat-kuittaus-20261027.md",
+      "readHead": "84419db6a7b500ceba1e6d7748c7ee1a03029bf1",
+      "blob": "c4aaa03cb1a210267ed634a7bcdf5861c14bb3a1",
+      "sha256": "c6e3d0e5ad61258d0cbc1d756e5196a00efc4ab84d55a1d711b5dae2ac6edb55",
+      "readInFull": true
+    },
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3a-v2-3b-kuittaus-20261027.md",
+      "readHead": "d20b95aaffda52b74898af47b4c6e4bc9dd8516e",
+      "blob": "27cd9cd7567576cb80fe700f65ad2e69930226f5",
+      "sha256": "476a5a2d126e1b66288910f6f1507cc5e5390cb4c2f3abde6f086bb0cbd55967",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/read-sources/natiiviseppa-codex-olavinlinna-3a-v2-3b-kuittaus-20261027.md",
+      "readInFull": true
+    },
+    {
+      "path": "posti/natiiviseppa-codex-olavinlinna-3b-v2-lisays-20261027.md",
+      "readHead": "d20b95aaffda52b74898af47b4c6e4bc9dd8516e",
+      "blob": "61fb102e38971d43a87cf19bb1083a107c9b4efd",
+      "sha256": "f898cb45260efd994e5afba73dbc7c503f92610fd00bb0ea6b6b60de17ce356e",
+      "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-mailbox-work-orders/read-sources/natiiviseppa-codex-olavinlinna-3b-v2-lisays-20261027.md",
+      "readInFull": true
+    }
+  ],
+  "viewedPlans": [
+    "tyrma-E101-pohja-1-y-4,0.png",
+    "tyrma-E101-leikkaus-idasta.png",
+    "tyrma-E101-leikkaus-etelasta.png"
+  ]
+}

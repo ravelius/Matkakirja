@@ -1,0 +1,19 @@
+{
+  "source": "https://polyhaven.com/a/riet_01",
+  "author": "Rob Tuytel",
+  "license": "CC0 1.0",
+  "licenseURL": "https://polyhaven.com/license",
+  "localOriginals": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender-v44/materiaalit",
+  "existingReceiverMaterial": true,
+  "maps": [
+    {
+      "name": "olki-albedo.jpg",
+      "sha256": "837c95d3b196a0ff87b1b12c3b68bd7a02c0b2ddf58adfaae0c07b537e58d8c2"
+    },
+    {
+      "name": "olki-normaali.jpg",
+      "sha256": "71fd670bee98848aec38ea9f25e0d73502b95aa5e3bb50be9a6809c2f315ee99"
+    }
+  ],
+  "note": "Existing receiver normalized detail maps, 0.8m repeat, material factor supplies subdued straw colour. No AI texture generation."
+}

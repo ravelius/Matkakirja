@@ -1,0 +1,122 @@
+{
+  "markerCount": 16,
+  "sourceVisibleArchitectureRetained": true,
+  "sourceFloorLevel": -3.8,
+  "descriptiveFloorLevelInSourceDocument": -4.0,
+  "floorDecision": "Use exact source geometry and marker level -3.8; do not shift model to rounded document level.",
+  "duplicateTrianglesRemoved": 0,
+  "strawChange": "Existing source footprint and top heights retained, 0.025m inward bevel; existing receiver Riet01 material plus 1800 short loose surface fibres 3\u20138mm above bedding. No new placeable props.",
+  "materialAssignments": [
+    {
+      "component": "tyrma-E101-kivi",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.001",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.002",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.003",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.004",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.005",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.006",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.007",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.008",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivi.009",
+      "material": "irregular_fieldstone_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivilattia",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivilattia.001",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-kivilattia.002",
+      "material": "grey_slate_lime_v2"
+    },
+    {
+      "component": "tyrma-E101-olki",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.001",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.002",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.003",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.004",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.005",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.006",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.007",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-olki.008",
+      "material": "existing_riet_01_straw"
+    },
+    {
+      "component": "tyrma-E101-rappaus",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "component": "tyrma-E101-rappaus.001",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "component": "tyrma-E101-rappaus.002",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "component": "tyrma-E101-rappaus.003",
+      "material": "warm_lime_plaster"
+    },
+    {
+      "component": "tyrma-E101-rappaus.004",
+      "material": "warm_lime_plaster"
+    }
+  ],
+  "newProps": false,
+  "gameplayCollisionUnchanged": true,
+  "masonryMetresPerRepeat": 2.5
+}

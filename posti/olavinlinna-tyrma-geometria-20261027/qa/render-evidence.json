@@ -1,0 +1,12 @@
+{
+  "inputGLBSHA256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb",
+  "startedAt": "2026-10-27T13:51:54.792464+00:00",
+  "views": [
+    "chamber",
+    "seated-to-door",
+    "air-slit",
+    "vestibule",
+    "crawl-mouth"
+  ],
+  "kind": "Internal diagnostic renders, no game integration; QA fill lights are not exported."
+}

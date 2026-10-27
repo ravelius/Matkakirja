@@ -1,0 +1,100 @@
+{
+  "task": 1109,
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "sha256": "2c6a3323c802745f8da1e41d96ec3951993dd5952c3204d749360a0413354cee",
+      "bytes": 2565
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "63d38f3891ed736ad8e388c4b0ac62d9e417313607aa4e116e198856e5a5e9aa",
+      "bytes": 2162
+    },
+    {
+      "path": "LUEMINUT.md",
+      "sha256": "5004e7d97d55a5d58fd24b5f218f8125670aac7a30d54ccbceb19ea241d760a4",
+      "bytes": 3178
+    },
+    {
+      "path": "OPIT-PT-LLE.md",
+      "sha256": "ad24cbac85bb691ae28d1f5ce52922314b3166d171a5677edfef86bddda3d50b",
+      "bytes": 347
+    },
+    {
+      "path": "SOURCE-PINS.json",
+      "sha256": "f719fb201585a88d06dd23833944f9f6cc6e0f7ef103a3b3f78a3bcdc057fa15",
+      "bytes": 4164
+    },
+    {
+      "path": "Tyrmä E101 - Havainnekuva. Tekoälyllä tuotettu, ei valokuva. - tavoite.png",
+      "sha256": "d7c5de0f6fd77ff378d5fbe3cd38ab833692094981b86cf1aaff16b3836a54f7",
+      "bytes": 2583072
+    },
+    {
+      "path": "olki-rights.json",
+      "sha256": "62e99801af9c0ccf80f6abc1df2245e3dee8eebaa0d1305bff89d30d2f4263e2",
+      "bytes": 700
+    },
+    {
+      "path": "qa/air-slit.png",
+      "sha256": "adda38fa1a0453a4effeba1a28433a13eff847d7ed1bd3e7f62f89c7a2729656",
+      "bytes": 1466630
+    },
+    {
+      "path": "qa/build.json",
+      "sha256": "8703311c53f00ba98b2e5db3eafad48181fb1fab0a69f2ce37063cb53725e8af",
+      "bytes": 3310
+    },
+    {
+      "path": "qa/chamber.png",
+      "sha256": "2c49e1b76cfc6bac962afb6f1b5474c27ff4c26dc134c2014982349734f7a68d",
+      "bytes": 1565614
+    },
+    {
+      "path": "qa/crawl-mouth.png",
+      "sha256": "53694772f4a41bb879a3e0ac94a98d4b762259e66a35b716b6c3f79e5131a1ec",
+      "bytes": 1895165
+    },
+    {
+      "path": "qa/finalization.json",
+      "sha256": "b9c4265d00d4df32048b2d4d991b4e319461a1957a03fee43e9852848284be7a",
+      "bytes": 426
+    },
+    {
+      "path": "qa/geometry-verification.json",
+      "sha256": "79bae3a880029e10adaefc1a2fb7c10ceb6c8a542591f5e9b975c27139c987dd",
+      "bytes": 4485
+    },
+    {
+      "path": "qa/render-evidence.json",
+      "sha256": "f40eb27df58e1297c23877faead2d503694981b0fea8d5b671a39c8b76deb5e1",
+      "bytes": 344
+    },
+    {
+      "path": "qa/seated-to-door.png",
+      "sha256": "8f60e48edf311f062d2e70b986c276d90e15d7de444c944a5d6ad4f9db9544c0",
+      "bytes": 1690418
+    },
+    {
+      "path": "qa/vestibule.png",
+      "sha256": "7595fc2d7c4feac93eb7a31e5f8a4391d14d202b33f558db2d5d0bea119eb865",
+      "bytes": 1891149
+    },
+    {
+      "path": "qa/visual-QA.json",
+      "sha256": "d2f73b9c3a9e5398497f1f12979b4d7d523ce4afe892a192473713eddaa9acd4",
+      "bytes": 1022
+    },
+    {
+      "path": "tyrma-e101.glb",
+      "sha256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb",
+      "bytes": 14535312,
+      "tyyppi": "maailman osa",
+      "liike": "ei liikettä"
+    }
+  ],
+  "recipientAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

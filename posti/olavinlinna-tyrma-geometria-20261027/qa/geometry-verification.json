@@ -1,0 +1,216 @@
+{
+  "inputGLBSHA256": "7804b7e407d742ccfc4d9d5f2bc2ad34e7b07a02965cb4c564bc4e5f31ce6efb",
+  "sourceMarkers": 16,
+  "exportedMarkers": 16,
+  "changedMarkers": [],
+  "extraMarkers": [],
+  "walkSamples": 1063,
+  "newHeadroomObstructionsCount": 0,
+  "newHeadroomObstructions": [],
+  "missingFloorSamplesCount": 0,
+  "missingFloorSamples": [],
+  "newClearanceNarrowingsCount": 0,
+  "newClearanceNarrowings": [],
+  "beddingBevelSupportChanges": [
+    [
+      [
+        -14.229829788208008,
+        5.989713668823242,
+        -3.799999952316284
+      ],
+      0.059999942779541016,
+      0.043468065559864044
+    ]
+  ],
+  "beddingNote": "Source low bedding edge lowered by inward bevel, headroom additionally tested above the higher source/final support; collision helper unchanged.",
+  "doors": [
+    {
+      "name": "ovi:tyrma",
+      "width": 1.0,
+      "height": 1.9,
+      "checks": [
+        {
+          "widthAxisAngle": -1.0996,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0.4713,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": -1.0996,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 1.5707963267948966,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:tyrma-ryomi",
+      "width": 0.6,
+      "height": 0.55,
+      "checks": [
+        {
+          "widthAxisAngle": 0,
+          "rays": 651,
+          "baselineClear": 434,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0.4713,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": -1.0996,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0,
+          "rays": 651,
+          "baselineClear": 434,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 1.5707963267948966,
+          "rays": 651,
+          "baselineClear": 589,
+          "newlyBlocked": []
+        }
+      ]
+    },
+    {
+      "name": "ovi:tyrma-ulos",
+      "width": 1.0,
+      "height": 1.9,
+      "checks": [
+        {
+          "widthAxisAngle": 0,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0.4713,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": -1.0996,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 0,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        },
+        {
+          "widthAxisAngle": 1.5707963267948966,
+          "rays": 651,
+          "baselineClear": 651,
+          "newlyBlocked": []
+        }
+      ]
+    }
+  ],
+  "airSlit": [
+    {
+      "offset": [
+        -0.045,
+        -0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        -0.045,
+        0
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        -0.045,
+        0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0,
+        -0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0,
+        0
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0,
+        0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0.045,
+        -0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0.045,
+        0
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    },
+    {
+      "offset": [
+        0.045,
+        0.18
+      ],
+      "sourceDistance": 1.2,
+      "finalDistance": 1.2
+    }
+  ],
+  "sourceFloorLevel": -3.8,
+  "gameplayCollisionSourceRetainedByReceiver": true,
+  "toleranceMetres": 0.015
+}
