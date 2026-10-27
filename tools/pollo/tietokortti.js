@@ -321,6 +321,11 @@ function enSanaluku(v) {
   return EN_KYMMENET[Math.floor(v / 10)] + (v % 10 ? `-${EN_YKSIKOT[v % 10]}` : '');
 }
 
+const NIMIMUODOT = { Kaar: ['Charles', 'Carl'], 'Yrjö': ['George'], Juha: ['John'], Jaak: ['James', 'Jacob'], Kust: ['Gustav'],
+  Mari: ['Mary', 'Marie'], Kata: ['Catherine', 'Katharina'], Lauk: ['Lawrence', 'Laurence'], Tapa: ['Stephen'], Pieta: ['Peter'] };
+/** Vertailuasu: pienet kirjaimet, w → v, c → k, ph → f (Vilhelm ~ William, Rikhard ~ Richard). */
+const kirjoitusasu = (t) => String(t).toLowerCase().replace(/ph/g, 'f').replace(/w/g, 'v').replace(/c/g, 'k');
+
 const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä', 'upea', 'mahtava', 'uskomaton', 'wikipedia', 'wikidata', 'lähde'];
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
@@ -417,10 +422,16 @@ export function tarkistaTeksti(teksti, syote, kohteenNimi = null) {
     return { ok: false, syy: `luku ${luku}` };
   }
   const enLahde = lahdeTeksti.includes('Englanninkielinen artikkeli:') || /"kieli":"en"/.test(lahdeTeksti);
-  for (const nimi of ilman.match(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu) ?? []) {
+  for (const osuma of ilman.matchAll(/(?<=[a-zäöå,] )[A-ZÄÖÅ][\p{L}-]{2,}/gu)) {
+    const nimi = osuma[0];
+    // Monisanaisen nimen jatko (Vilhelm Valloittaja, Royal Windsor Way): alku on jo tarkistettu.
+    if (/[A-ZÄÖÅ][\p{L}-]* $/u.test(ilman.slice(Math.max(0, osuma.index - 30), osuma.index))) continue;
     if (lahdeTeksti.includes(nimi.slice(0, Math.max(4, nimi.length - 3)))) continue;
     // Englanninkielinen lähde: suomenkielinen vakiintunut muoto (Lontoo ← London) kelpaa kolmen alkukirjaimen sanana lähteessä.
     if (enLahde && new RegExp(`(?<!\\p{L})${nimi.slice(0, 3)}\\p{L}`, 'u').test(lahdeTeksti)) continue;
+    // Kirjoitusasun erot (Vilhelm ← William, Rikhard ← Richard) ja vakiintuneet suomenkieliset hallitsijanimet (Kaarle ← Charles).
+    if (enLahde && (NIMIMUODOT[nimi.slice(0, 4)] ?? []).some((x) => lahdeTeksti.includes(x))) continue;
+    if (enLahde && kirjoitusasu(lahdeTeksti).includes(` ${kirjoitusasu(nimi.slice(0, 3))}`)) continue;
     return { ok: false, syy: `nimi ${nimi}` };
   }
   return { ok: true, syy: null };

@@ -49,6 +49,8 @@ test('tarkistukset 2.4: muoto, sanat, luvut syötteessä, kielletyt', () => {
   assert.equal(tarkistaTeksti(`${s(40)} Eton Collegessa opiskelee poikia. Collegessa on kirkko.`, college, 'Eton').ok, true, 'nimet eivät ole pitkän sanan toistoa');
   assert.match(tarkistaTeksti(`${s(44)} ihana.`, syote).syy, /sana/);
   assert.match(tarkistaTeksti(`${s(44)} (sulut).`, syote).syy, /merkit/);
+  const kunkut = JSON.stringify({ t: 'Englanninkielinen artikkeli: William the Conqueror and Charles II.' });
+  assert.equal(tarkistaTeksti(`${s(40)} linnan rakennutti Vilhelm Valloittaja, ja sitä laajensi Kaarle toinen.`, kunkut).ok, true, 'suomenkieliset hallitsijanimet');
   assert.match(korjausPalaute('toisto Windsorin'), /"Windsorin" toistuu/);
   assert.match(tarkistaTeksti(`${s(40)} maa lahjoitettiin collegelle.`, syote).syy, /vieras/);
   assert.match(tarkistaTeksti(`${s(40)} Se on Windsor Bridgen vieressä.`, JSON.stringify({ t: 'Windsor Bridge' })).syy, /vieras/);
