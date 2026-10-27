@@ -1,0 +1,781 @@
+{
+  "createdAt": "2026-10-27T14:15:59.207007+00:00",
+  "classification": "havainnekuva",
+  "callBudget": 18,
+  "callsIssued": 18,
+  "callsCompleted": 18,
+  "retries": 0,
+  "assets": [
+    {
+      "id": "u01",
+      "taskNumber": 1113,
+      "subject": "Akropolis (Q131013)",
+      "file": "u01.png",
+      "bytes": 3486894,
+      "sha256": "92901b4c1f583da171b65cb378dfea7d621acd533c48b56597227cd6be9b694b",
+      "nativeSHA256": "e41ff360c3b233c835a54ce50f99c7b73d2056501045bf8e30b68201e9109c50",
+      "decodedRGBA256": "9884b9d14221a4fc352277c305b4e6df7a74000031350d32407a16c4f6d7e15d",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Recognizable southwest Acropolis: Parthenon right, Propylaia left, Erechtheion between, Odeon below; modern Athens and vegetation. Photographic surface, no added text or foreground people. Sky, weather and small urban/scaffold details are synthesized; not documentary evidence.",
+        "at": "2026-10-27T13:59:34.691085+00:00"
+      },
+      "sources": [
+        {
+          "id": "u01",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u01-source.jpg",
+          "title": "File:Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg",
+          "artist": "A.Savin",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "1497ac3d4b054b9e159e2737ce5fbbd0c1abd6ed5ad82be3881db320fac174e1",
+          "description": "View from Philopappos Hill in Athens (Attica, Greece) — Acropolis of Athens"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u02",
+      "taskNumber": 1114,
+      "subject": "Colosseum (Q10285)",
+      "file": "u02.png",
+      "bytes": 3039943,
+      "sha256": "f7f4494574746e4a57b25aa6fd71ab468893f45543eec05849d6c95e33a357b5",
+      "nativeSHA256": "162cd426d95eb697f1c719627bf380794f9d840ad8453e34595a668aab66102c",
+      "decodedRGBA256": "44abf8afdab27fbf53a68d40d58bb311c5a45b1003cc462d97687299d2c38361",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Three arcade levels and upper attic, western buttress and broken lower outer ring match real architectural reference. Photographic travertine, railings and modern pavement. No foreground people or overlay text; distant existing stone plaque is architectural, not a legible new caption. Sky/light and small surface details synthesized.",
+        "at": "2026-10-27T14:01:22.444575+00:00"
+      },
+      "sources": [
+        {
+          "id": "u02",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u02-source.jpg",
+          "title": "File:Colosseo 2020.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg",
+          "artist": "FeaturedPics",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "2533ddeffbf7ac61a433acede2d71c8b99ebcfeeb4637d5aff1782914d8db47c",
+          "description": "Colosseo 2020"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u03",
+      "taskNumber": 1115,
+      "subject": "Stonehenge (Q39671)",
+      "file": "u03.png",
+      "bytes": 3087580,
+      "sha256": "223319299fe4805722f9c4e7c009815b45e2d9b29ed70b6738db0522fc93f7cb",
+      "nativeSHA256": "c82375e9681804ab8f5e392c8d48529a50d5736dd7b709e9e27db3cf385fa3bd",
+      "decodedRGBA256": "f1d20c6cf39b9783ed91c157e36152184753e9c10749a6a17dbbbd1d9857bbb9",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Incomplete Stonehenge arrangement and central fallen stones agree with reference. Natural stone/lichen and grass; no people inside circle or added text. Morning lighting and clouds synthesized, not an exact archaeological record.",
+        "at": "2026-10-27T14:01:23.180330+00:00"
+      },
+      "sources": [
+        {
+          "id": "u03",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u03-source.jpg",
+          "title": "File:Stonehenge Total.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Stonehenge_Total.jpg",
+          "artist": "Stefan Kühn",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "referenceSHA256": "895097d873696570083c056c831f49b8945836c5d50432a35aa97ea0e9069129",
+          "description": "Stonehenge, GB"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u04",
+      "taskNumber": 1116,
+      "subject": "Kiinan muuri (Q12501)",
+      "file": "u04.png",
+      "bytes": 3862062,
+      "sha256": "4b221592b4600c6d6412c2fc02ab473cb19fc53299dbf43576fae24ced5ab928",
+      "nativeSHA256": "e2892131d9ea430e545c2995189d5222164a75c40ab6be68f94bcd78c725a426",
+      "decodedRGBA256": "8641015aee507e045e1ac0850104ed52e83b296ea3d6a3798f5f1d0eb00fcff3",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Recognizable Mutianyu ridge and crenellated wall with watchtowers based on the actual Mutianyu reference; irregular green canopy and stone detail, no text or people. Weather, leaf detail and masonry microstructure synthesized.",
+        "at": "2026-10-27T14:05:38.745019+00:00"
+      },
+      "sources": [
+        {
+          "id": "u04",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u04-source.jpg",
+          "title": "File:The Great Wall (121112481).jpeg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AThe_Great_Wall_%28121112481%29.jpeg",
+          "artist": "Luca Casartelli",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "96930949d4f16ae2bc6be63fdbf840d504a3d9e3ee0f7fd45be64b942470ca14",
+          "description": "500px provided description: The Great Wall [#landscape ,#nature ,#travel ,#China ,#Beijing ,#UNESCO ,#Great Wall ,#Mutianyu]"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u05",
+      "taskNumber": 1117,
+      "subject": "Taj Mahal (Q9141)",
+      "file": "u05.png",
+      "bytes": 2749501,
+      "sha256": "a605e04b9dba4455bc6b5ebc318b6c404adc4ab7d1f3e10e63655249671e96d0",
+      "nativeSHA256": "4ad29ac979f633c855f476cc5414dac765687e8da961bd2a1a3c2c0b15561965",
+      "decodedRGBA256": "89ada96ad2f3adc6e3bf0fe951006b8294f28065facf7f6788fda13ec4d3e5e0",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Four minarets counted; central dome, flanking pavilions, marble facade, axial garden and reflection pool recognizable. Natural marble and foliage; exact inlay and water reflections synthesized, not survey evidence.",
+        "at": "2026-10-27T14:05:39.492131+00:00"
+      },
+      "sources": [
+        {
+          "id": "u05",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u05-source.jpg",
+          "title": "File:Taj Mahal (Edited).jpeg",
+          "url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_%28Edited%29.jpeg",
+          "artist": "Yann ; edited by Jim Carter",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "b6c788b97809e958843776194bce91c597a9672eef21498a37dbd1539b9f66af",
+          "description": "Taj Mahal, Agra . FP on the English Wikipedia ."
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u06",
+      "taskNumber": 1118,
+      "subject": "Angkor Wat (Q43473)",
+      "file": "u06.png",
+      "bytes": 2900766,
+      "sha256": "394c98e2cba546e6dea34610ebdb85d570124076c3e26b52eeef97009dd01f6f",
+      "nativeSHA256": "e2f90920fbf7189a8136190901365abcdaaf72d717b1e687b7325ea631552679",
+      "decodedRGBA256": "b7b75d563d7b84e4756c20487016bb656a973d3fbca182012f86f51017a6f7f8",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Five central sanctuary towers counted with recognizable west facade and pond reflection. Dawn sky, light, flowers and surface detail synthesized; stronger warm dawn colors than other batch views, no invented text or foreground people.",
+        "at": "2026-10-27T14:05:40.239333+00:00"
+      },
+      "sources": [
+        {
+          "id": "u06",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u06-source.jpg",
+          "title": "File:Angkor Wat.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Angkor_Wat.jpg",
+          "artist": "Bjørn Christian Tørrissen",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "7c145f514f775472708aed3c48628706dcf331484c4ab7e41b9a3037fcd9fff6",
+          "description": "Angkor Wat, the front side of the main complex, photographed in the late afternoon"
+        },
+        {
+          "id": "u06-sunrise",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u06-sunrise-source.jpg",
+          "title": "File:Angkor Wat sunrise.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AAngkor_Wat_sunrise.jpg",
+          "artist": "mendhak",
+          "license": "CC BY-SA 2.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
+          "referenceSHA256": "a13d1fccc2058449cfaf37d99c245f832f566f2d90a6cb5e43c5ef377a233b62",
+          "description": "Angkor Wat sunrise"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u07",
+      "taskNumber": 1119,
+      "subject": "Gizan pyramidit (Q12508)",
+      "file": "u07.png",
+      "bytes": 3224956,
+      "sha256": "e144fa3550d0e2ef87e3215f3272c98383f0342358be245283bdf767f5daaa84",
+      "nativeSHA256": "277b710ac76069d8ff3fbae612c7bf5235db7ce9c032819bae57e2a2508a4a15",
+      "decodedRGBA256": "d97a6d649920744bb9993df68624273364273e3eb6965b5551c59e7797a31eac",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Three main pyramids counted, Menkaure left, capped Khafre middle and Khufu right; Sphinx foreground with head/body/paws and urban edge on right. Geographic principal arrangement recognizable from southeast references. Subsidiary ruins, roads, small pyramids and expanded city edge are synthesized and not a survey-accurate record; receiver should review these limits.",
+        "at": "2026-10-27T14:10:45.597789+00:00"
+      },
+      "sources": [
+        {
+          "id": "u07-layout",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u07-layout-source.jpg",
+          "title": "File:Air views of Palestine. Cairo and the pyramids. Pyramids and the Sphinx. Taken from the S.E. LOC matpc.15915.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Air_views_of_Palestine._Cairo_and_the_pyramids._Pyramids_and_the_Sphinx._Taken_from_the_S.E._LOC_matpc.15915.jpg",
+          "artist": "Matson Collection",
+          "license": "Public domain",
+          "licenseURL": "",
+          "referenceSHA256": "e26073a2fb1c0fec19aa6ae230e72d2c29506be3b510b42f67b876bfa183ca97",
+          "description": "Title: Air views of Palestine. Cairo and the pyramids. Pyramids and the Sphinx. Taken from the S.E. Abstract/medium: G. Eric and Edith Matson Photograph Collection Physical description: 1 negative :"
+        },
+        {
+          "id": "u07-sphinx",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u07-sphinx-source.jpg",
+          "title": "File:Sphinx and pyramids of Giza panorama.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3ASphinx_and_pyramids_of_Giza_panorama.jpg",
+          "artist": "kallerna",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "003ee9f738be2cd621450de947f904e6709f98970be81ffbd3d16d7f7875424a",
+          "description": "Panorama of the Great Sphinx of Giza, Khafre's Pyramid and Pyramid of Cheops."
+        },
+        {
+          "id": "u07",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u07-source.jpg",
+          "title": "File:Pyramids of the Giza Necropolis.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg",
+          "artist": "KennyOMG",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "24aed2d248d8df83941ef7daf0b679fb26f7e0dc055775aedeb1583ff15165ec",
+          "description": "Pyramids of the Giza Necropolis ."
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u08",
+      "taskNumber": 1120,
+      "subject": "Victorian putoukset (Q43278)",
+      "file": "u08.png",
+      "bytes": 3653648,
+      "sha256": "4c6c0dcc3f7fb97696062be270288df825acb25618c9af63ef824b0cef1627dd",
+      "nativeSHA256": "3e09d176caccff669f3def0dad5680f5d61a4583b667355b4ddf8af075d6baeb",
+      "decodedRGBA256": "7b22846bfceba287f35495f6b923789d064f8556c47a03b7cdc21f2627f9be4c",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Straight long Victoria Falls lip, Zambezi above, narrow gorge, spray, rainbow and bridge match reference layout. Natural variation in canopy and water; tiny cars and water/rainbow details synthesized.",
+        "at": "2026-10-27T14:08:14.014530+00:00"
+      },
+      "sources": [
+        {
+          "id": "u08",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u08-source.jpg",
+          "title": "File:Cataratas Victoria, Zambia-Zimbabue, 2018-07-27, DD 05.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_05.jpg",
+          "artist": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "ce8d5872bee5fd13ba4dbfb5a4d7c2672df5157e144b0c9cc7317396552604c2",
+          "description": "Victoria Falls, Zambia-Zimbabwe"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u09",
+      "taskNumber": 1121,
+      "subject": "Serengetin kansallispuisto (Q11812902)",
+      "file": "u09.png",
+      "bytes": 3158914,
+      "sha256": "88af15ff462a5c4509fbf20c0beb397281b25807be9f07f0ac22bce79c0116a1",
+      "nativeSHA256": "5b30e4581e3b55f9c33c3875984c3f267f207bf997f5f0020dd495ed12ac8cfb",
+      "decodedRGBA256": "ff1c161cd634364f02eee1969864646cce295175fb1938dc123a9ed816bcd4d3",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Foreground wildebeest anatomy, legs, tails, horns and occlusion checked at native size; no obvious extra/fused limbs. Varied grazing and walking individuals, acacia and dry grass plausible; scene is a synthesized Serengeti habitat, not an exact herd, migration date or geolocated viewpoint.",
+        "at": "2026-10-27T14:08:14.765184+00:00"
+      },
+      "sources": [
+        {
+          "id": "u09",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u09-source.jpg",
+          "title": "File:Serengeti-Landscape-2012.JPG",
+          "url": "https://commons.wikimedia.org/wiki/File:Serengeti-Landscape-2012.JPG",
+          "artist": "Bjørn Christian Tørrissen",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "8ae318460d7812e36aa652f25edd87fbf5dfccb250e23eb19d9810def25e8d09",
+          "description": "A fairly typical example of the scenery in Serengeti National Park in western Tanzania. The plains are wide and full of grass, with trees, mainly acacias, dotted around the landscape."
+        },
+        {
+          "id": "u09-herd",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u09-herd-source.jpg",
+          "title": "File:Wildebeest herd, Northern Serengeti, Tanzania.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AWildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg",
+          "artist": "Christoph Strässler",
+          "license": "CC BY-SA 2.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/2.0",
+          "referenceSHA256": "893722cb389eb136b1b6776a028487c9f32e17b87c551e55126a7f3fad50baea",
+          "description": "Wildebeest herd, Northern Serengeti"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u10",
+      "taskNumber": 1122,
+      "subject": "Grand Canyon (Q118841)",
+      "file": "u10.png",
+      "bytes": 3262344,
+      "sha256": "8f12df59a7d6b4002a1c0e23124e12650e124676574937cde405b463f0413698",
+      "nativeSHA256": "9b3df0a9c4f96d7dca003e5f5b0a850c87596fcd7bde7d2153294afaf3bf07c4",
+      "decodedRGBA256": "8d7abb63f3b8b9da7067099efcb5d4a457d267e5316fc367906fcb90f89eff50",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Recognizable South Rim canyon strata and single Colorado River deep below. Natural rock and shrub textures; wider side formations and afternoon sky are synthesized, not a precisely surveyed Pima Point panorama.",
+        "at": "2026-10-27T14:08:15.502544+00:00"
+      },
+      "sources": [
+        {
+          "id": "u10",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u10-source.jpg",
+          "title": "File:Grand Canyon view from Pima Point 2010.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_view_from_Pima_Point_2010.jpg",
+          "artist": "Chensiyuan",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "d4f475886be8ceadca8cdbc07a4d3dbfd1cfa25f92da3278e84ac3d053573bcb",
+          "description": "Grand Canyon view from Pima Point"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u11",
+      "taskNumber": 1123,
+      "subject": "Yellowstonen kansallispuisto (Q351)",
+      "file": "u11.png",
+      "bytes": 3679009,
+      "sha256": "eece38fbae2032500a046b6d07a04bc0a4747166ff361e434d960ad358a6eaf8",
+      "nativeSHA256": "76353e98a41f72743ad9e157dd0a7e3bebc3ed14637cdfb531c6971c26e39320",
+      "decodedRGBA256": "65fd0fbe7f99a157e5819440f0d083e8960681c23add334b74f23ee78e2690a6",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Grand Prismatic blue center, green/yellow transitions and branching orange microbial mats recognizable with boardwalk and thermal landscape. Small distant visitors are not identifiable. Steam, trees, precise mat edges and visitors synthesized; color is vivid but consistent with the real spring reference.",
+        "at": "2026-10-27T14:10:46.766148+00:00"
+      },
+      "sources": [
+        {
+          "id": "u11",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u11-source.jpg",
+          "title": "File:Grand Prismatic Spring 2013.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_2013.jpg",
+          "artist": "James St. John from Newark, Ohio",
+          "license": "CC BY 2.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+          "referenceSHA256": "e6bf355de0f1d0e643d25361e20330399406ff046ceb38ae58b557f4b10f868e",
+          "description": "Grand Prismatic Spring"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u12",
+      "taskNumber": 1124,
+      "subject": "Chichén Itzá (Q5859)",
+      "file": "u12.png",
+      "bytes": 3052646,
+      "sha256": "e26112634986951c1dae50193abfcd3cd09b59cf3024d0f80b19d6a06b7badfd",
+      "nativeSHA256": "c97d1114ed5dbb92695b00a056cbcd38620b0ca8ac3ecfc2da42a43786c8cab9",
+      "decodedRGBA256": "60a769256dcd30e13f6f0d2568abf2fcff81acc215bb8095cc02826ae4b6d538",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "El Castillo corner silhouette, nine terraced stages, two visible stairways and summit temple recognizable. Weathered stone and natural grass, no visitors or text. Exact individual stones, vegetation, light and clouds synthesized.",
+        "at": "2026-10-27T14:10:47.702467+00:00"
+      },
+      "sources": [
+        {
+          "id": "u12",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u12-source.jpg",
+          "title": "File:Chichen Itza 3.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg",
+          "artist": "Daniel Schwen",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "12ba05e47466e1b172c9eba2393cbf3a6c9e2a930e17f5ea6cc1dd8fc2fa54db",
+          "description": "El Castillo (pyramid of Kukulcán) in Chichén Itzá"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u13",
+      "taskNumber": 1125,
+      "subject": "Machu Picchu (Q676203)",
+      "file": "u13.png",
+      "bytes": 3474279,
+      "sha256": "1e86c210ac82afd6518a3e7bb5816456202bdd8e3cd44f720e912abf9f3ea941",
+      "nativeSHA256": "14c988d16079f9c5e52c52fdce144d841694c8bb2db8857f482b7d008dfbbe92",
+      "decodedRGBA256": "025f5013675914ec39f5725979624e5c1865b1dc8391b67a7057d5089afba97c",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Classic Machu Picchu terrace/ruin ridge and Huayna Picchu silhouette recognizable. Natural random stone and plant detail. Wider peripheral mountain view, clouds and small walls are synthesized; not a ruin-by-ruin architectural inventory.",
+        "at": "2026-10-27T14:12:21.077685+00:00"
+      },
+      "sources": [
+        {
+          "id": "u13",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u13-source.jpg",
+          "title": "File:80 - Machu Picchu - Juin 2009 - edit.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg",
+          "artist": "Martin St-Amant ( S23678 )",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "0245cd04d112e9561a6d3876d962630b54d54774b6bc70ac877485d5a3744c92",
+          "description": "The Macchu Picchu , a UNESCO World Heritage Site near Cusco in Peru , at twilight."
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u14",
+      "taskNumber": 1126,
+      "subject": "Galápagossaaret (Q38095)",
+      "file": "u14.png",
+      "bytes": 3366194,
+      "sha256": "d0376b28268b2aae68d764f29807125f564c797a2d329e16ef2729e1014d9452",
+      "nativeSHA256": "ed43715c8abd21e1ac20f85558d8e0adc52f32838a1683a7fe4847480f4d1ab0",
+      "decodedRGBA256": "f6c95e10ba5164888c1511a7d72ac8bae016c4ac40e3cc988df46812432969d5",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Three marine iguanas counted. Main animal has coherent head, dorsal ridge, visible limbs and one tapering tail; no apparent fused bodies or added limbs. Lava roughness, skin scales and water look photographic. Island/bay composition synthesized and not geolocated; small or occluded toes are not anatomical research evidence.",
+        "at": "2026-10-27T14:12:21.952151+00:00"
+      },
+      "sources": [
+        {
+          "id": "u14",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u14-source.jpg",
+          "title": "File:Juvenile Marine Iguanas (Amblyrhynchus cristatus) on Isabela, Galapagos Islands.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AJuvenile_Marine_Iguanas_%28Amblyrhynchus_cristatus%29_on_Isabela%2C_Galapagos_Islands.jpg",
+          "artist": "Dallas Krentzel",
+          "license": "CC BY 2.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/2.0",
+          "referenceSHA256": "a708a09898ca1633412850f0a7281f21a2d22dbb59c322caf94dad6bcd7c4cab",
+          "description": "This was a nesting ground on an isolated islet off the coast of Isabela. In the background is a small channel full of white tip sharks. I figured they were waiting for baby iguanas to clamber in and get a nice meal, but our guides said the sharks were merely resting in the calm waters and rarely feed on iguanas. Darwin hypothesized that the reason you can't scare a marine iguana into the water is because that's were its only predators are (thet are actually predated by hawks on land too though). A more likely reason would probably be that diving into the water forces one to loose copious amounts of body heat. Only large marine iguanas will dive into the water to feed, as they can retain body heat more easily, and smaller iguanas will feed more in the intertidal zones during low tide. This also helps explain their dark pigmentations, which would help gain heat rapidly during basking after a cold swim."
+        },
+        {
+          "id": "u14-detail",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u14-detail-source.jpg",
+          "title": "File:Iguana marina (Amblyrhynchus cristatus), Las Bachas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-23, DD 23.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AIguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg",
+          "artist": "Diego Delso",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "55a8e559a46498e8b3c2d2e883b0b45359b9c089437e4ab8f875834d70243e5e",
+          "description": "Exemplar of marine iguana ( Amblyrhynchus cristatus ) lying on a rock in the coast of Las Bachas, Santa Cruz Island , Galápagos Islands , Ecuador."
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u15",
+      "taskNumber": 1127,
+      "subject": "Iguassun putoukset (Q36332)",
+      "file": "u15.png",
+      "bytes": 3652959,
+      "sha256": "0963520e69f512478c7f94ebd20c1d382f2ac8d49cb118bd0af06ad92b2fc035",
+      "nativeSHA256": "9aece5182ba71d050efc37a4a7db584d28e0a5affb5308a773fde43a771f7fbd",
+      "decodedRGBA256": "2a729664edb203e2bba3e7c30868ec54a667f5fb17a17c4fc604051d87754b75",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Iguazu oblique waterfall arc, forest islands, tiered cascades and Devils Throat spray recognizable. Natural varied vegetation and irregular water. Flow, foam, tree crowns and tiny paths/buildings synthesized; no exact seasonal flow claim.",
+        "at": "2026-10-27T14:12:44.049369+00:00"
+      },
+      "sources": [
+        {
+          "id": "u15",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u15-source.jpg",
+          "title": "File:Aerial Foz de Iguaçu 26 Nov 2005.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Aerial_Foz_de_Igua%C3%A7u_26_Nov_2005.jpg",
+          "artist": "Mariordo (Mario Roberto Durán Ortiz)",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "45e916ea63979f35b8f7836ff10bef7df5c1e04588762e411649fc3ebf6254b7",
+          "description": "Aerial view of Foz de Iguaçu, Brazil-Argentina border."
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u16",
+      "taskNumber": 1128,
+      "subject": "Iso Valliriutta (Q7343)",
+      "file": "u16.png",
+      "bytes": 3582461,
+      "sha256": "b5cba7fd0976b4ad81eda542c15c6244a7cdc9b693c7ffddbe3fc3bb137bf6ce",
+      "nativeSHA256": "43f2c51aca231ac83c38c494c7547dfc5fbe2a7fac4e16065961c95602d5d4fc",
+      "decodedRGBA256": "6932422e9ba5e573fbc49908902808e75132bbff0afc5da5d7f02e9dce13a28e",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Irregular Heart Reef-like outcrop, pale coral shoals and deeper turquoise channel follow actual aerial reference. Brown coral and small ripples look photographic; no graphic perfect heart or repeating painted water. Precise coral edges and water surface are synthesized.",
+        "at": "2026-10-27T14:14:25.818863+00:00"
+      },
+      "sources": [
+        {
+          "id": "u16",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u16-source.jpg",
+          "title": "File:The heart reef, part of the Great Barrier Reef near Airlie Beach, Whitsunday Islands, Queensland.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AThe_heart_reef%2C_part_of_the_Great_Barrier_Reef_near_Airlie_Beach%2C_Whitsunday_Islands%2C_Queensland.jpg",
+          "artist": "Ayanadak123",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "e57c14a4ac9d8f3d01c642f3b574963cca62382e441b0e43ba217720deec6f74",
+          "description": "The heart reef - apparently the most photographed reef in the world - and the spot for countless proposals, justifies a scenic flight from Airlie Beach"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u17",
+      "taskNumber": 1129,
+      "subject": "Sydneyn oopperatalo (Q45178)",
+      "file": "u17.png",
+      "bytes": 2558700,
+      "sha256": "a6ee459bfd72a9fcae45827e8b62f7d0589f0055e8cf86d4635f8350f71084e1",
+      "nativeSHA256": "443ce6139acdd488cea02aeb31866d8cdca42e53d228d0d8d4336f0dc4a21de8",
+      "decodedRGBA256": "b5a11e89d7ed5798cb98a5b388f6e13de34193f03db1a2b96ff59b38acfd62c2",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Recognizable Opera House shell roofs left with Harbour Bridge behind/right, four stone pylons, daytime harbour water and coherent camera viewpoint. Ceramic tile pattern belongs to architecture. Minor shell facets, city facade details, flags and water are synthesized; building edges partly cropped at far left, principal shells remain visible.",
+        "at": "2026-10-27T14:14:26.611678+00:00"
+      },
+      "sources": [
+        {
+          "id": "u17",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u17-source.jpg",
+          "title": "File:00 1375 Sydney Opera House (Australia).jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:00_1375_Sydney_Opera_House_%28Australia%29.jpg",
+          "artist": "W. Bulach",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "a46d84dc70434b82b48cf06f5f9ca642501b9e7557070ad733ad1cd8a05c530e",
+          "description": "Sydney Opera House. The striking building was erected between 1959 and 1973. Its unique roof with a height of 67 meters is clad with 1.1 million white ceramic tiles. The opera house is a UNESCO heritage site."
+        },
+        {
+          "id": "u17-bridge",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u17-bridge-source.jpg",
+          "title": "File:Harbour Bridge and Opera House.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File%3AHarbour_Bridge_and_Opera_House.jpg",
+          "artist": "Fabiokhaled",
+          "license": "CC BY-SA 4.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0",
+          "referenceSHA256": "b86a11272f135b13486ad0f90617ea3deecbf36cd8d3bc2254f93a782182345f",
+          "description": "This is a photo of a cultural heritage monument of Australia with id: 105888"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    },
+    {
+      "id": "u18",
+      "taskNumber": 1130,
+      "subject": "Uluru (Q33910)",
+      "file": "u18.png",
+      "bytes": 2795349,
+      "sha256": "888b9d8e16cd4e0efa6891413c6a14780619c5c4b7887e5ae5986ed0e8995b8a",
+      "nativeSHA256": "31719fa24edcefce0dc20fe72fb71339031ebcce508cdf30b80812af8b391881",
+      "decodedRGBA256": "24c3d1ed92c9b80e116fa797e3a8afe6ac2154e4d378e253237e4a9cbd69fd0f",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "pixelContentUnchanged": true,
+      "classification": "havainnekuva",
+      "visualQA": {
+        "result": "PASS",
+        "notes": "Uluru broad low silhouette, eroded grooves and flat scrub foreground recognizable. Warm sunset-orange rock follows requested sunset appearance, ordinary sky and varied plant detail, no people or structures. Light, sky, exact shrub distribution and small rock grooves synthesized; sunset color is strong and should be reviewed by receiver.",
+        "at": "2026-10-27T14:14:53.344675+00:00"
+      },
+      "sources": [
+        {
+          "id": "u18",
+          "local": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/unesco-havainnekuvat-1113-1130-20261027/references/u18-source.jpg",
+          "title": "File:Sunset at Uluru on July 30, 2005.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Uluru_on_July_30%2C_2005.jpg",
+          "artist": "Thomas Schoch",
+          "license": "CC BY-SA 3.0",
+          "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0",
+          "referenceSHA256": "66aac937cd8c7fea37c3d294f1bfd1d1fb00b734be5d5ebad2f4528baf63e888",
+          "description": "Sunset at Uluṟu („Ayers Rock“), central Australia"
+        }
+      ],
+      "recipientAccepted": false,
+      "ownerAccepted": false,
+      "gameIntegrationVerified": false,
+      "published": false
+    }
+  ],
+  "receiverReviewPending": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}
