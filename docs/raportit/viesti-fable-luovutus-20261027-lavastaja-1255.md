@@ -375,3 +375,44 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   näyttävät irrallisilta kermanvalkoisilta laatoilta (tarkista pelin valossa VS:n korjauksen jälkeen). Olavinlinna J4: arkun glb:tä ei löytynyt _tyo/_valmiit-hauilla → kysy NS:ltä polku.
 - JATKO (Macin uudelleenkäynnistys): ei pitkiä taustaajoja kesken. Uusinta: zsh K/tyokalut/aja_ketju_v86.zsh (≈ 1 min, myös muurikatteen parikopio), pari: zsh K/tyokalut/aja_v86_pari.zsh [kohdat]
   (REF=<VS:n uusi SHA> ympäristössä).
+
+## LISÄYS 25 klo 23.4x: Olavinlinna J4 arkkuun (valmisteltu, ei vielä pelissä)
+- NS 23.3x: arkku = kavely/merkit.json esine:arkku-komero (_valmiit/olavinlinna-blender-v44/kavely, paikka (−50,397; 14,8; −5,381), kierto_y −1,7453), Kellotornin komero.
+- Mitattu runko: sisäpohja y 0,05, sisäseinät x ±0,275, z ±0,200 (sisätila 0,55 × 0,40), reuna 0,361. J4 0,476 × 0,223 × 0,400 → skaala 0,97 juurisolmuun.
+- _tyo/linnanrakentaja/olavinlinna-j4/: j4_arkkuun.py, esine-arkun-hopeasisalto.glb (T7-lähde SHA 96a0674a…), merkki.json (esine:arkun-hopeasisalto, paikka y +0,051).
+- AVOIN: merkki kavely-pakettiin + mahdollinen ASTC (glb_kuvat_astc6) + vienti JU:lle vasta pelin valon parin ja KK:n jälkeen; kannun kahvan venymä (Codexin J4-four-views) ja
+  arkkujen laakeat sävyt arvioidaan samassa kuvassa; korjauspyyntö Codexille vasta sitten. J3 odottaa Codexin korjattua (ee62a9541).
+
+## LISÄYS 26 klo 00.0x (28.10.): KK-pari kujakivistä
+- VS 23.5x: sävykorjaus 67afc1220 (seinat-211; V4_kujakivi_* kerroin 0,52/0,49/0,45). Pari KK:lle: proto-3d/lokit/havainne-editori-20261027-235149 (02 05 01, linja 2).
+- Worktree wt/proto-lavastaja-havainne: tyokalut/esikatselu.sh + lokikansio.zsh 69bc67131:stä (linja 2, JU/PT 15.5x); ajo: REF=67afc1220 zsh K/tyokalut/aja_v86_pari.zsh.
+- Kuja 01: näkyvä sokkeli (0,7 m) ja reunus ovat avoimet-v57b:n rakennuksissa (paikalliset, instansoidut meshit; V4_sokkeli/V4_kivireunus) → kujakivi_pinnat.py ei käsittele;
+  oma askel (instanssikohtainen maailmakoordinaatti tai paikallinen UV), KK:n vastauksen jälkeen.
+- J4: NS kuvaa `linssi poikki kavely data file://…/olavinlinna-j4/kavely-j4/` -komennolla (aloitus pako, arkku auki); kuvat tulossa NS:ltä.
+
+## LISÄYS 27 klo 00.2x (28.10.): KK:n linja, Codex-tilaus v4, kuja 01 mukana, välipari
+- KK 00.0x: suunta oikein, EI vielä omistajalle eikä junaan. Kivijalassa havainteessa ~8 kerrosta pieniä tiiliä, sävy tiilittäin ja kuluneet reunat; lattiassa
+  tyynylaatat porrastetusti ilman kiemuroita; reunakivi ennallaan; aurinko/varjo vasta leivonnassa. Omistaja näkee parin ennen junaa.
+- Codex-tilaus postissa f0766ed58 (posti/lavastaja-codex-kujakivet-v4-tarkennus-20261028.md; worktree wt/lavastaja-posti): stone-surfaces-v4, samat mitat ja UV-sopimus.
+- Väliaikaisesti VV_SOKKELI=v02, VV_PILARI=v02, VV_LATTIA=v04 (Sonnet: lähimmät), reuna v01 (aja_ketju_v86.zsh; per-laji VV_* kujakivi_pinnat.py:ssä).
+- Kuja 01: AVOIMET=1 YTOP=0.70 → leivottu-sali/avoimet-v58k (avoimet-v57b + pinnat; juuri-v93m:n avoimet-v50 → v58k). Välipari havainne-editori-20261028-001129
+  (02 05 01, REF 67afc1220): 01:n kivijalassa kivikuvio, ei venymää; kaksi vaaleaa vanhaa palaa (01: x≈1360 y≈620 ja x≈105 y≈590, todennäk. taustan pala) ja
+  01:n reunakivissä ruskehtava pinta (ei uusi) → tarkista seuraavalla kierroksella.
+- SEURAAVAKSI: Codexin v4 → K/kujakivi-pinnat-v4 (SHA) → aja_ketju_v86.zsh pinnat-kansio v4:ksi → pari + 2× lähikuvat KK:lle. J4: NS:n komerokuvat.
+- J4 (NS 00.5x): pelin valossa komerossa arkku auki proto-3d/lokit/esikatselu-20261028-005705/ (paras j4g-ylhaalta-y81.png; juna-213 5f80444a5, `poikki kavely data file://…/kavely-j4/`,
+  skenaario proto-3d/tyokalut/natiiviseppa-ajot/sk-komero-j4.txt). Sovitus OK (pohjalla, ei törmäyksiä). Hopea himmeä beige: DioraamaValaistu ei käytä metallisuutta/karheutta
+  (SeikkailuEsineet.cs:762) → PT:lle päätös esineiden metallituesta ennen Codex-korjausta; kahvan venymää ei voi arvioida.
+- PT 01.0x: metallituki ensin (VS kujakivien sävytyksen jälkeen, NS avustaa); Codexilta EI J4-sävykorjausta ennen sitä; J4-kuvaa EI KK:lle ennen metallitukea. Jatka kujakivillä.
+
+## LISÄYS 28 klo 01.4x (28.10.): J4 hopeaksi metallituella; LUOVUTUS (konteksti 30 %)
+- VS 01.1x: metallituki REF 33acd68dd (linssiseppa2/esineet-metalli-213; glb:n metallisuus/karheus, kartan keskiarvo M 0,73 / K 0,49; täysi kartta <glb>-orm-6x6.astcm myöhemmin).
+- Ajot (oma: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 33acd68dd <skenaario> ipad --batch, ~6 min):
+  012404 Tripon väri (pronssi/sepia), 013011 hopea 0,25 + 1,35·L (liian vaalea, liitumainen), 013631 hopea 0,08 + 1,25·L, sävy (0,94, 0,97, 1,00) + lähikuvat j4h/j4i
+  (skenaario _tyo/linnanrakentaja/olavinlinna-j4/sk-komero-j4-lahi.txt). 013631 (Sonnet): hopeaa muistuttava viileä harmaa (kolikot ~140, kulho ~105), ei liian vaalea, mutta litteä: tarvitsee kontrastia ja kirkkaita heijastuksia
+  (karheus alas? VS:n täysi ORM-kartta) → kysy VS:ltä ennen seuraavaa säätöä. j4h näyttää sisällön hyvin; j4i katsoo seinään (kamerapaikka uusiksi); kahva sileä silmukka j4h:ssa.
+- Työkalu olavinlinna-j4/j4_hopea.py (VAL0/VAL1 tiedoston alussa): esine-arkun-hopeasisalto-pronssi.glb (= skaala 0,97, Tripon väri) → esine-arkun-hopeasisalto.glb
+  (+ kopio kavely-j4:ään). Vanha JPEG-kuva jää käyttämättömänä bufferiin (12 Mt) → siivoa ennen vientiä (tai ASTC glb_kuvat_astc6).
+- SEURAAVAKSI: J4-pari (ennen/jälkeen) KK:lle vasta, kun hopea näyttää hopealta (PT 01.0x: ei beigeä KK:lle); kahvan venymä lähikuvasta → Codex-korjaus vasta sitten.
+  Kujakivet: odota Codexin stone-surfaces-v4 (tilaus f0766ed58) → K/kujakivi-pinnat-v4 (SHA) → aja_ketju_v86.zsh (pinnat-kansio v4, VV_*) → pari + 2× lähikuvat KK:lle;
+  kujan 01 kaksi vaaleaa sokkelipalaa ja ruskea reunakivi (välipari 001129) tarkista.
+- Checkout on haarassa lavastaja/luovutus-lisays24 (PR 5392). Ei käynnissä olevia taustaajoja.
