@@ -307,3 +307,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - AVOIN: pilarien beiget kulmakivet ovat jo V4_sokkelia → sävy VS:n varjostimesta (VS:lle 21.0x). v84 EI vielä vientinä (tausta-v61), odottaa VS:n lähikuvaa ja KK:ta.
 - VS 21.1x: kulmakivet mitattu samaa harmaata kuin sokkeli (186/177/170 vs 177/170/163), ei erottelua. VS tekee KK:lle yhdistelmäparin (rosoisuus a1d79e26e + juuri-v90m); KK:n kuittauksen jälkeen v84 → tausta-v61 JU:lle.
 - VS 21.3x: beige kulmakivi = auringon puoleisten pystypintojen valo, korjattu VS:n varjostimessa 1158e9df0 (ei nimenvaihtoa; pilarit ovat taustassa 0-3, eivät avoin-paloissa). Geometriaa ei tarvita lisää.
+- KK 21.2x: välikorjaus loppuun → tausta-v61 = yksikerros-v84 (_valmiit/juoksupeli-kk-tausta-peking-v61-vienti-20261027, SHA256SUMS c24b05fa9218),
+  osoitin lavastaja/tausta-v61-213 da2a83a50 (proto, wt/proto-lavastaja-muoto). Vienti JU:lle + osoitin NS:lle, kun KK kuittaa VS:n yhdistelmäparin. Kansi muutettu vain LOD0:ssa.
+- KK 21.2x: Codex tekee kujien kivet havainteen mukaisina paloina (PK tilaa); mitat PK:lle 21.3x (reunakivi 0,30 × 0,20 × 0,6–0,8; sokkeli 1,20 ilman kansilistaa;
+  pilari ~0,4 ulos × 0,6; lattia kuja ~6,8, laatat 0,6–1,2 × 0,4–0,6). SEURAAVAKSI: kun palat tulevat, LR kokoaa ne nykyisten kivien tilalle → pari KK:lle.
