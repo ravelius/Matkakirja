@@ -1,0 +1,102 @@
+{
+  "status": "FAIL",
+  "source": "output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-1/puyi.glb",
+  "sourceSHA256": "e2a3ed7344e708e607e3f12a02353b52d556309ac3219f87d82170ad541862da",
+  "file": "output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-1/puyi-compact-30.glb",
+  "sha256": "05ff3df9be1349d6cbf7023bcc07db77c0ebdb27d677c2611240d529f0a76e23",
+  "bytes": 15330700,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 3e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "struggle_1",
+      "beforeKeys": 5270,
+      "afterKeys": 3843
+    },
+    {
+      "clip": "struggle_2",
+      "beforeKeys": 5270,
+      "afterKeys": 3955
+    },
+    {
+      "clip": "struggle_3",
+      "beforeKeys": 5654,
+      "afterKeys": 4178
+    },
+    {
+      "clip": "struggle_4",
+      "beforeKeys": 6422,
+      "afterKeys": 4645
+    },
+    {
+      "clip": "struggle_give_up",
+      "beforeKeys": 5345,
+      "afterKeys": 2954
+    },
+    {
+      "clip": "struggle_free",
+      "beforeKeys": 46867,
+      "afterKeys": 8147
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "struggle_1",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 4.7209739759476584e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_2",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 5.780165160248922e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_3",
+      "samples": 625,
+      "maxSkinnedVertexDeltaM": 6.160553191978906e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_4",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 6.498233333105874e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_give_up",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 5.1945964190137635e-05,
+      "pass": true
+    },
+    {
+      "clip": "struggle_free",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 3.8535043775329196e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-1/puyi-compact-30.unpacked.glb",
+    "sourceSHA256": "db1066fbfc945fee35e38c8729b318eca4275dc427b8ca3dfd151a44ae23e550",
+    "file": "output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-1/puyi-compact-30.glb",
+    "sha256": "05ff3df9be1349d6cbf7023bcc07db77c0ebdb27d677c2611240d529f0a76e23",
+    "beforeBytes": 18119200,
+    "afterBytes": 15330700,
+    "sourceAccessors": 14717,
+    "usedAccessors": 10900,
+    "deduplicatedAccessors": 7141,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.8261345829814672,
+    "peakRSSMiB": 309.25
+  },
+  "elapsedSeconds": 69.00914470897987,
+  "peakRSSMiB": 417.28125
+}

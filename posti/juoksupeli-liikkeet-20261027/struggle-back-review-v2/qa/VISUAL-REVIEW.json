@@ -1,0 +1,105 @@
+{
+  "reviewedAt": "2026-10-27T14:49:37.157437+00:00",
+  "readyForReceiverReview": true,
+  "gameVerified": false,
+  "ownerAccepted": false,
+  "pairs": [
+    {
+      "pair": "perus-eunukki-1",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Uneven alternating high and side arm pulls visible. Child body mostly occluded from fixed rear camera; hand/forearm glimpses visible. Side proof shows body lean, rear leg bend and release run. Original eunuch1 rear texture has face/chest-like details, receiver question open.",
+      "clothFinding": "No obvious severe garment-body crossing visible in these sampled stills; not exhaustive.",
+      "sequenceSheetsReviewed": [
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free"
+      ],
+      "sequenceFinding": "Four sampled poses per clip inspected. Alternating raised and outward arms, rear leg lift, surrender slump and separation into run are visible. These stills do not certify temporal smoothness or runtime blends."
+    },
+    {
+      "pair": "viitta-eunukki-1",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Uneven alternating high and side arm pulls visible. Child body mostly occluded from fixed rear camera; hand/forearm glimpses visible. Side proof shows body lean, rear leg bend and release run. Original eunuch1 rear texture has face/chest-like details, receiver question open.",
+      "clothFinding": "Cape strips overlap holder lower-body area in side proof; not a collision-free cloth certification. Full cape correction and receiver cloth QA remain open.",
+      "sequenceSheetsReviewed": [
+        "struggle_1",
+        "struggle_2",
+        "struggle_3",
+        "struggle_4",
+        "struggle_give_up",
+        "struggle_free"
+      ],
+      "sequenceFinding": "Four sampled poses per clip inspected. Alternating raised and outward arms, rear leg lift, surrender slump and separation into run are visible. These stills do not certify temporal smoothness or runtime blends."
+    },
+    {
+      "pair": "perus-vartija",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Actual back of guard shows queue braid and jacket motif. Alternating raised and lateral Puyi hands visible beyond shoulders; child torso mostly occluded. Side views show holder leaning with the child and release separation.",
+      "clothFinding": "No gross crossing obvious in sampled poses; full finger/cloth collision not certified."
+    },
+    {
+      "pair": "viitta-vartija",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Actual back of guard shows queue braid and jacket motif. Alternating raised and lateral Puyi hands visible beyond shoulders; child torso mostly occluded. Side views show holder leaning with the child and release separation.",
+      "clothFinding": "Cape overlaps holder leg/coat area in several side poses, receiver/full cape correction required."
+    },
+    {
+      "pair": "perus-eunukki-2",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Alternating hands/forearms visible at fixed rear camera. Side poses show matched holder contact and active child torso. Eunuch2 also shows face/chest-like details on rear proof; original materials unchanged, source review needed.",
+      "clothFinding": "No severe visible torso/limb crossing in inspected stills, not full collision certification."
+    },
+    {
+      "pair": "viitta-eunukki-2",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "Alternating hands/forearms visible at fixed rear camera. Side poses show matched holder contact and active child torso. Eunuch2 also shows face/chest-like details on rear proof; original materials unchanged, source review needed.",
+      "clothFinding": "Cape strip intersections/occlusion with holder lower body remain open."
+    },
+    {
+      "pair": "perus-eunukki-3",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "High and side hand/forearm motion visible beyond holder in fixed camera; side poses show lean, raised rear foot and release. Eunuch3 rear proof also shows face/chest-like source details, materials unchanged.",
+      "clothFinding": "No gross body crossing evident in sampled poses; not exhaustive cloth/finger certification."
+    },
+    {
+      "pair": "viitta-eunukki-3",
+      "views": [
+        "rear-camera-four-loops.png",
+        "six-struggle-poses.png"
+      ],
+      "observed": "High and side hand/forearm motion visible beyond holder in fixed camera; side poses show lean, raised rear foot and release. Eunuch3 rear proof also shows face/chest-like source details, materials unchanged.",
+      "clothFinding": "Cape cloth crosses/occludes holder leg area in some poses. Receiver/full cape correction remains open."
+    }
+  ],
+  "limits": [
+    "Not a real-time game run or full continuous visual review.",
+    "Linear runtime crossfade contact drift risk remains open.",
+    "No facial controls in source."
+  ],
+  "fullyGameReady": false,
+  "sourceMaterialFinding": "All three eunuchs show similar rear face/chest-like appearance in actual GLB proofs; eunuch1 independently confirmed also in original/WebGL. Guard rear appearance reads correctly. Receiver source review requested."
+}

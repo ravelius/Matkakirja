@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-vartija/vartija-compact-20.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/vartija.glb",
+  "sourceSHA256": "a80a8430e443ea629174dd680127db8fa5b5889767d58c4b49470b81a1ef9d1b",
+  "sha256": "cfe6effabcf0557c5fdf7c760a48442f189ad9f03077fdad14b815cc8682d0f9",
+  "beforeBytes": 8729940,
+  "afterBytes": 8437340,
+  "removedOptionalOutputBounds": 1983,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

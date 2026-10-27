@@ -1,0 +1,621 @@
+{
+  "status": "ANCHOR_DATA_ONLY_NOT_GAME_IMPLEMENTED",
+  "coordinateSystem": "Metres, GLB +Y up,+Z forward,+X anatomical left. Convert axes once at receiver import.",
+  "formula": "After both actor animation blends, surfaceWorld=sum(weight * PuyiJointWorldMatrix * [jointLocalPointM,1]). DesiredPalmWorld=surfaceWorld + PuyiActorRotation*palmGapInPuyiActorAxesM. Solve holder wrist translation so WristWorldMatrix*[palmPointInWristLocalCoordinates,1] matches DesiredPalmWorld; preserve suitable current hand orientation and elbow bend. World joint matrices must already include actor/root transform; do not add root twice.",
+  "warning": "Do not use source vertex number after a mesh importer reorders vertices; joint-local weighted points avoid this dependency. Animator update before IK. Receiver must test cloth contact and joint limits.",
+  "release": "Keep full contact through struggle_free 0.18s, then fade IK out over0.18\u20130.60s with 1-smoothstep((t-.18)/.42), synchronized with both clips. Runtime blend semantics still require receiver verification.",
+  "reconstructionCheck": {
+    "posesPerAnchor": 3,
+    "maxErrorM": 4.242163830647445e-08
+  },
+  "pairs": [
+    {
+      "puyi": "perus",
+      "guard": "vartija",
+      "puyiModelSHA256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+      "guardModelSHA256": "cfe6effabcf0557c5fdf7c760a48442f189ad9f03077fdad14b815cc8682d0f9",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 34432,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9450980424880981,
+              "jointLocalPointM": [
+                -0.022785261273384094,
+                0.13132303953170776,
+                0.031108736991882324
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.054901961237192154,
+              "jointLocalPointM": [
+                -0.01814674586057663,
+                -0.045462071895599365,
+                0.030340135097503662
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -1.0005850344887412e-05,
+            0.027618703991174644,
+            -0.0002927158998015332
+          ]
+        },
+        "Right": {
+          "sourceVertex": 35125,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.95686274766922,
+              "jointLocalPointM": [
+                -0.025466643273830414,
+                0.1257185935974121,
+                -0.03391873836517334
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.04313725605607033,
+              "jointLocalPointM": [
+                0.002758502960205078,
+                -0.05144369602203369,
+                -0.03854238986968994
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            4.015931238731512e-05,
+            0.02704206909984353,
+            -0.00016118123506508322
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-1",
+      "puyiModelSHA256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+      "guardModelSHA256": "2fefe3416fe7fbc9187ad87b26fcbfadab8b8bb43c3b8067487b3ae1208de16c",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 34432,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9450980424880981,
+              "jointLocalPointM": [
+                -0.022785261273384094,
+                0.13132303953170776,
+                0.031108736991882324
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.054901961237192154,
+              "jointLocalPointM": [
+                -0.01814674586057663,
+                -0.045462071895599365,
+                0.030340135097503662
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -0.00019060187041759492,
+            0.03583843850841126,
+            0.0009235714717457591
+          ]
+        },
+        "Right": {
+          "sourceVertex": 35125,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.95686274766922,
+              "jointLocalPointM": [
+                -0.025466643273830414,
+                0.1257185935974121,
+                -0.03391873836517334
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.04313725605607033,
+              "jointLocalPointM": [
+                0.002758502960205078,
+                -0.05144369602203369,
+                -0.03854238986968994
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0016347464794913905,
+            0.03818721224864327,
+            -0.004699376473824205
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-2",
+      "puyiModelSHA256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+      "guardModelSHA256": "d2bfb36ed4eb6c27b8cba46eefaddae61fcf1ba7be4bb2cbf84d93477596cdc0",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 34432,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9450980424880981,
+              "jointLocalPointM": [
+                -0.022785261273384094,
+                0.13132303953170776,
+                0.031108736991882324
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.054901961237192154,
+              "jointLocalPointM": [
+                -0.01814674586057663,
+                -0.045462071895599365,
+                0.030340135097503662
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0008322992051641223,
+            0.02999887454013032,
+            0.0022461079992353613
+          ]
+        },
+        "Right": {
+          "sourceVertex": 35125,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.95686274766922,
+              "jointLocalPointM": [
+                -0.025466643273830414,
+                0.1257185935974121,
+                -0.03391873836517334
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.04313725605607033,
+              "jointLocalPointM": [
+                0.002758502960205078,
+                -0.05144369602203369,
+                -0.03854238986968994
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.000570622024436807,
+            0.03102049368123219,
+            -0.003524816470841552
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "perus",
+      "guard": "eunukki-3",
+      "puyiModelSHA256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+      "guardModelSHA256": "c9dd0c49529c6e938fe9646f2ee32e42a9dd3008d96c8e5aab0ecbd871406f90",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 34432,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9450980424880981,
+              "jointLocalPointM": [
+                -0.022785261273384094,
+                0.13132303953170776,
+                0.031108736991882324
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.054901961237192154,
+              "jointLocalPointM": [
+                -0.01814674586057663,
+                -0.045462071895599365,
+                0.030340135097503662
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -0.00039291428402066263,
+            0.03461136085291699,
+            0.0010501759262600446
+          ]
+        },
+        "Right": {
+          "sourceVertex": 35125,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.95686274766922,
+              "jointLocalPointM": [
+                -0.025466643273830414,
+                0.1257185935974121,
+                -0.03391873836517334
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.04313725605607033,
+              "jointLocalPointM": [
+                0.002758502960205078,
+                -0.05144369602203369,
+                -0.03854238986968994
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0004932155832648151,
+            0.03662802067895729,
+            -0.0041295178389798275
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "vartija",
+      "puyiModelSHA256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42",
+      "guardModelSHA256": "6aecb7b8825c491d24a7130f3e41dcd033867fce39867687305495b7d52c1e31",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 22158,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9764705896377563,
+              "jointLocalPointM": [
+                0.019245721399784088,
+                0.12561959028244019,
+                0.031871259212493896
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.0235294122248888,
+              "jointLocalPointM": [
+                0.023977696895599365,
+                -0.04890996217727661,
+                0.03295785188674927
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -1.0005850344887412e-05,
+            0.027618703991174644,
+            -0.0002927158998015332
+          ]
+        },
+        "Right": {
+          "sourceVertex": 15566,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.9372549057006836,
+              "jointLocalPointM": [
+                0.027856335043907166,
+                0.13179254531860352,
+                -0.035736918449401855
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.062745101749897,
+              "jointLocalPointM": [
+                0.054084599018096924,
+                -0.03453001379966736,
+                -0.0018024444580078125
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            4.015931238731512e-05,
+            0.02704206909984353,
+            -0.00016118123506508322
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-1",
+      "puyiModelSHA256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42",
+      "guardModelSHA256": "3dc3991b3752d1d708e40b79c26bf873aa13bf2a5167d4c07261c5bbea3a9af2",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 22158,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9764705896377563,
+              "jointLocalPointM": [
+                0.019245721399784088,
+                0.12561959028244019,
+                0.031871259212493896
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.0235294122248888,
+              "jointLocalPointM": [
+                0.023977696895599365,
+                -0.04890996217727661,
+                0.03295785188674927
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -0.00019060187041759492,
+            0.03583843850841126,
+            0.0009235714717457591
+          ]
+        },
+        "Right": {
+          "sourceVertex": 15566,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.9372549057006836,
+              "jointLocalPointM": [
+                0.027856335043907166,
+                0.13179254531860352,
+                -0.035736918449401855
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.062745101749897,
+              "jointLocalPointM": [
+                0.054084599018096924,
+                -0.03453001379966736,
+                -0.0018024444580078125
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0016347464794913905,
+            0.03818721224864327,
+            -0.004699376473824205
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-2",
+      "puyiModelSHA256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42",
+      "guardModelSHA256": "3323181e18c077a92a32b49208c94fe8003cc715910d8e0b694eb9d16d5c3790",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 22158,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9764705896377563,
+              "jointLocalPointM": [
+                0.019245721399784088,
+                0.12561959028244019,
+                0.031871259212493896
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.0235294122248888,
+              "jointLocalPointM": [
+                0.023977696895599365,
+                -0.04890996217727661,
+                0.03295785188674927
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0008322992051641223,
+            0.02999887454013032,
+            0.0022461079992353613
+          ]
+        },
+        "Right": {
+          "sourceVertex": 15566,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.9372549057006836,
+              "jointLocalPointM": [
+                0.027856335043907166,
+                0.13179254531860352,
+                -0.035736918449401855
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.062745101749897,
+              "jointLocalPointM": [
+                0.054084599018096924,
+                -0.03453001379966736,
+                -0.0018024444580078125
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.000570622024436807,
+            0.03102049368123219,
+            -0.003524816470841552
+          ]
+        }
+      }
+    },
+    {
+      "puyi": "viitta",
+      "guard": "eunukki-3",
+      "puyiModelSHA256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42",
+      "guardModelSHA256": "a12e027400ad0c62483a30777adad44176365b57032fea90f307e006432693e1",
+      "anchors": {
+        "Left": {
+          "sourceVertex": 22158,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:LeftArm",
+              "weight": 0.9764705896377563,
+              "jointLocalPointM": [
+                0.019245721399784088,
+                0.12561959028244019,
+                0.031871259212493896
+              ]
+            },
+            {
+              "jointName": "mixamorig:LeftForeArm",
+              "weight": 0.0235294122248888,
+              "jointLocalPointM": [
+                0.023977696895599365,
+                -0.04890996217727661,
+                0.03295785188674927
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:LeftHand",
+          "palmPointInWristLocalCoordinates": [
+            -0.00039291428402066263,
+            0.03461136085291699,
+            0.0010501759262600446
+          ]
+        },
+        "Right": {
+          "sourceVertex": 15566,
+          "skinInfluences": [
+            {
+              "jointName": "mixamorig:RightArm",
+              "weight": 0.9372549057006836,
+              "jointLocalPointM": [
+                0.027856335043907166,
+                0.13179254531860352,
+                -0.035736918449401855
+              ]
+            },
+            {
+              "jointName": "mixamorig:RightForeArm",
+              "weight": 0.062745101749897,
+              "jointLocalPointM": [
+                0.054084599018096924,
+                -0.03453001379966736,
+                -0.0018024444580078125
+              ]
+            }
+          ],
+          "palmGapInPuyiActorAxesM": [
+            -0.004,
+            0,
+            0
+          ],
+          "holderWristJoint": "mixamorig:RightHand",
+          "palmPointInWristLocalCoordinates": [
+            0.0004932155832648151,
+            0.03662802067895729,
+            -0.0041295178389798275
+          ]
+        }
+      }
+    }
+  ]
+}

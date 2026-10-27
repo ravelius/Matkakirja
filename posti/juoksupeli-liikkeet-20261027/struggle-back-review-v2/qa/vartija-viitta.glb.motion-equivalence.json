@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/viitta-vartija/vartija.glb",
+  "sourceSHA256": "2dd2dc81b7fb5cdddb14c7a9ce65a6efedfdc6b543d4e7fdbab82152d134d93d",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/viitta-vartija/vartija-compact-20.glb",
+  "sha256": "72b122adf5cd82d1195b25c91bd9b2776e535fa3332392348ff5bb39c3c21d4b",
+  "bytes": 8733088,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 2e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "hold_struggle_1",
+      "beforeKeys": 12158,
+      "afterKeys": 6745
+    },
+    {
+      "clip": "hold_struggle_2",
+      "beforeKeys": 12158,
+      "afterKeys": 6572
+    },
+    {
+      "clip": "hold_struggle_3",
+      "beforeKeys": 13118,
+      "afterKeys": 7125
+    },
+    {
+      "clip": "hold_struggle_4",
+      "beforeKeys": 15038,
+      "afterKeys": 7920
+    },
+    {
+      "clip": "hold_struggle_give_up",
+      "beforeKeys": 14320,
+      "afterKeys": 5539
+    },
+    {
+      "clip": "hold_struggle_free",
+      "beforeKeys": 45580,
+      "afterKeys": 7097
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "hold_struggle_1",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 3.492833157777269e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_2",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 3.492833157777269e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_3",
+      "samples": 625,
+      "maxSkinnedVertexDeltaM": 3.8103254146944535e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_4",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 3.655046304111604e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_give_up",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 4.6079787195755165e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_free",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 5.011110512019882e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/viitta-vartija/vartija-compact-20.unpacked.glb",
+    "sourceSHA256": "24cdd37529c5b613391ea536be1c5d962299ddcc93b3d42e7430f53d97ea2996",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/viitta-vartija/vartija-compact-20.glb",
+    "sha256": "72b122adf5cd82d1195b25c91bd9b2776e535fa3332392348ff5bb39c3c21d4b",
+    "beforeBytes": 15470352,
+    "afterBytes": 8733088,
+    "sourceAccessors": 24222,
+    "usedAccessors": 16945,
+    "deduplicatedAccessors": 4238,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.532402457902208,
+    "peakRSSMiB": 270.75
+  },
+  "elapsedSeconds": 42.62817525002174,
+  "peakRSSMiB": 348.671875
+}

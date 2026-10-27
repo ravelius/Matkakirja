@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/viitta-eunukki-1/eunukki-1-compact-20.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/eunukki-1.glb",
+  "sourceSHA256": "f86ee994c344bda10734290e945dd9e91ae7ac40d8d7b13c44f6d52add1651b0",
+  "sha256": "3dc3991b3752d1d708e40b79c26bf873aa13bf2a5167d4c07261c5bbea3a9af2",
+  "beforeBytes": 8038964,
+  "afterBytes": 7776268,
+  "removedOptionalOutputBounds": 1546,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

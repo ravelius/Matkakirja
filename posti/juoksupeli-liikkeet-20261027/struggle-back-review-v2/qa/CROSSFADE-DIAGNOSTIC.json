@@ -1,0 +1,250 @@
+{
+  "pair": "perus-eunukki-1",
+  "blendS": 0.18,
+  "assumption": "Linear blend weight; source continues its loop, target starts at0; roots remain in hold through0.18s; both actors synchronized. Unity runtime not accessed.",
+  "results": [
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.1,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.02711508070731,
+      "worst": {
+        "timeS": 0.11863636363636362,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.25,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.015755289156893615,
+      "worst": {
+        "timeS": 0.10227272727272727,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.4,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.036370325883626126,
+      "worst": {
+        "timeS": 0.10227272727272727,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.6,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.02039561518275404,
+      "worst": {
+        "timeS": 0.11045454545454544,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.75,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.05322441344253066,
+      "worst": {
+        "timeS": 0.10227272727272727,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_1",
+      "phaseFraction": 0.9,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.01334808744701744,
+      "worst": {
+        "timeS": 0.1268181818181818,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.1,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.03460238743891375,
+      "worst": {
+        "timeS": 0.11863636363636362,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.25,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.015034052299546555,
+      "worst": {
+        "timeS": 0.04499999999999999,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.4,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.03525528353063064,
+      "worst": {
+        "timeS": 0.10636363636363635,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.6,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.010248111727347057,
+      "worst": {
+        "timeS": 0.13499999999999998,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.75,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.04153982738632728,
+      "worst": {
+        "timeS": 0.10636363636363635,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_2",
+      "phaseFraction": 0.9,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.013347614954320715,
+      "worst": {
+        "timeS": 0.1268181818181818,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.1,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.026299294211330978,
+      "worst": {
+        "timeS": 0.11863636363636362,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.25,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.02337889442446679,
+      "worst": {
+        "timeS": 0.11045454545454544,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.4,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.04019875235550809,
+      "worst": {
+        "timeS": 0.06954545454545454,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.6,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.027147591046336118,
+      "worst": {
+        "timeS": 0.10636363636363635,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.75,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.05909634969821129,
+      "worst": {
+        "timeS": 0.10227272727272727,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_3",
+      "phaseFraction": 0.9,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.013347759487166119,
+      "worst": {
+        "timeS": 0.1268181818181818,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.1,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.02869718086089184,
+      "worst": {
+        "timeS": 0.1309090909090909,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.25,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.027243126636439893,
+      "worst": {
+        "timeS": 0.061363636363636356,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.4,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.03688368457318697,
+      "worst": {
+        "timeS": 0.11045454545454544,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.6,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.01208829462143549,
+      "worst": {
+        "timeS": 0.11045454545454544,
+        "side": "Left"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.75,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.05249286482249258,
+      "worst": {
+        "timeS": 0.11045454545454544,
+        "side": "Right"
+      }
+    },
+    {
+      "from": "struggle_4",
+      "phaseFraction": 0.9,
+      "to": "struggle_free",
+      "maxPalmProxyErrorM": 0.013348377496341563,
+      "worst": {
+        "timeS": 0.1268181818181818,
+        "side": "Left"
+      }
+    }
+  ],
+  "maxContactErrorM": 0.05909634969821129,
+  "elapsedSeconds": 22.813214541994967,
+  "peakRSSMiB": 242.921875
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-1/puyi-compact-30.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/puyi.glb",
+  "sourceSHA256": "05ff3df9be1349d6cbf7023bcc07db77c0ebdb27d677c2611240d529f0a76e23",
+  "sha256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e",
+  "beforeBytes": 15330700,
+  "afterBytes": 14422376,
+  "removedOptionalOutputBounds": 5851,
+  "animationSamplesAndAllAccessorBytesExact": true,
+  "inputBoundsAndMeshMetadataUnchanged": true,
+  "rigMaterialsTexturesUnchanged": true
+}

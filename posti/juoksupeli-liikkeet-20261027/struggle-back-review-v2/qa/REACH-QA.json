@@ -1,0 +1,34 @@
+[
+  {
+    "clip": "struggle_1",
+    "maximumHandBeyondTorsoM": {
+      "Left": 0.44911446880192507,
+      "Right": 0.4589025017415784
+    },
+    "maximumHandAboveOwnShoulderM": 0.41835902349672394
+  },
+  {
+    "clip": "struggle_2",
+    "maximumHandBeyondTorsoM": {
+      "Left": 0.43959005202492374,
+      "Right": 0.447871561555584
+    },
+    "maximumHandAboveOwnShoulderM": 0.4162216551716732
+  },
+  {
+    "clip": "struggle_3",
+    "maximumHandBeyondTorsoM": {
+      "Left": 0.4504161730541827,
+      "Right": 0.46106055251436695
+    },
+    "maximumHandAboveOwnShoulderM": 0.4184647611777591
+  },
+  {
+    "clip": "struggle_4",
+    "maximumHandBeyondTorsoM": {
+      "Left": 0.4404964583699855,
+      "Right": 0.4542083660740218
+    },
+    "maximumHandAboveOwnShoulderM": 0.4157276091943102
+  }
+]

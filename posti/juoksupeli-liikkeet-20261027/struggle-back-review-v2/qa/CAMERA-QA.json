@@ -1,0 +1,482 @@
+[
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/puyi.glb",
+        "sha256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/vartija.glb",
+        "sha256": "cfe6effabcf0557c5fdf7c760a48442f189ad9f03077fdad14b815cc8682d0f9"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 93,
+        "rightHandForearmVisiblePixels": 188,
+        "childVisiblePixels": 290,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 163,
+        "rightHandForearmVisiblePixels": 114,
+        "childVisiblePixels": 277,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 117,
+        "rightHandForearmVisiblePixels": 103,
+        "childVisiblePixels": 226,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 209,
+        "rightHandForearmVisiblePixels": 93,
+        "childVisiblePixels": 302,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 18.467222166946158,
+    "peakRSSMiB": 261.828125
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/puyi.glb",
+        "sha256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/eunukki-1.glb",
+        "sha256": "2fefe3416fe7fbc9187ad87b26fcbfadab8b8bb43c3b8067487b3ae1208de16c"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 137,
+        "rightHandForearmVisiblePixels": 314,
+        "childVisiblePixels": 487,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 290,
+        "rightHandForearmVisiblePixels": 171,
+        "childVisiblePixels": 468,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 162,
+        "rightHandForearmVisiblePixels": 219,
+        "childVisiblePixels": 415,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 316,
+        "rightHandForearmVisiblePixels": 148,
+        "childVisiblePixels": 489,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 18.866613665944897,
+    "peakRSSMiB": 257.609375
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/puyi.glb",
+        "sha256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/eunukki-2.glb",
+        "sha256": "d2bfb36ed4eb6c27b8cba46eefaddae61fcf1ba7be4bb2cbf84d93477596cdc0"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 93,
+        "rightHandForearmVisiblePixels": 295,
+        "childVisiblePixels": 444,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 276,
+        "rightHandForearmVisiblePixels": 133,
+        "childVisiblePixels": 431,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 120,
+        "rightHandForearmVisiblePixels": 212,
+        "childVisiblePixels": 385,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 308,
+        "rightHandForearmVisiblePixels": 106,
+        "childVisiblePixels": 461,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 11.300392291042954,
+    "peakRSSMiB": 240.671875
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/puyi.glb",
+        "sha256": "7113c05b3a91ac06995a37898eeb9713020bc354c235d777613198e9abd7d08e"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/perus/models/eunukki-3.glb",
+        "sha256": "c9dd0c49529c6e938fe9646f2ee32e42a9dd3008d96c8e5aab0ecbd871406f90"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 132,
+        "rightHandForearmVisiblePixels": 280,
+        "childVisiblePixels": 422,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 234,
+        "rightHandForearmVisiblePixels": 156,
+        "childVisiblePixels": 390,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 158,
+        "rightHandForearmVisiblePixels": 182,
+        "childVisiblePixels": 346,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 279,
+        "rightHandForearmVisiblePixels": 135,
+        "childVisiblePixels": 417,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 21.505981208058074,
+    "peakRSSMiB": 257.453125
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/puyi.glb",
+        "sha256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/vartija.glb",
+        "sha256": "6aecb7b8825c491d24a7130f3e41dcd033867fce39867687305495b7d52c1e31"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 144,
+        "rightHandForearmVisiblePixels": 175,
+        "childVisiblePixels": 1040,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 139,
+        "rightHandForearmVisiblePixels": 147,
+        "childVisiblePixels": 941,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 182,
+        "rightHandForearmVisiblePixels": 96,
+        "childVisiblePixels": 980,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 183,
+        "rightHandForearmVisiblePixels": 140,
+        "childVisiblePixels": 1097,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 11.937660709023476,
+    "peakRSSMiB": 250.34375
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/puyi.glb",
+        "sha256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/eunukki-1.glb",
+        "sha256": "3dc3991b3752d1d708e40b79c26bf873aa13bf2a5167d4c07261c5bbea3a9af2"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 138,
+        "rightHandForearmVisiblePixels": 276,
+        "childVisiblePixels": 897,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 243,
+        "rightHandForearmVisiblePixels": 162,
+        "childVisiblePixels": 783,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 189,
+        "rightHandForearmVisiblePixels": 194,
+        "childVisiblePixels": 810,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 280,
+        "rightHandForearmVisiblePixels": 142,
+        "childVisiblePixels": 914,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 11.255280832992867,
+    "peakRSSMiB": 245.59375
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/puyi.glb",
+        "sha256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/eunukki-2.glb",
+        "sha256": "3323181e18c077a92a32b49208c94fe8003cc715910d8e0b694eb9d16d5c3790"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 106,
+        "rightHandForearmVisiblePixels": 263,
+        "childVisiblePixels": 902,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 230,
+        "rightHandForearmVisiblePixels": 127,
+        "childVisiblePixels": 782,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 136,
+        "rightHandForearmVisiblePixels": 193,
+        "childVisiblePixels": 832,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 274,
+        "rightHandForearmVisiblePixels": 109,
+        "childVisiblePixels": 931,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 11.080376375000924,
+    "peakRSSMiB": 234.890625
+  },
+  {
+    "camera": {
+      "positionM": [
+        0,
+        2.4,
+        -2.8
+      ],
+      "pitchDownDegrees": 35,
+      "verticalFovDegrees": 55,
+      "fovIsPreviewAssumption": true
+    },
+    "actualExportedPair": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/puyi.glb",
+        "sha256": "7f3ce1a31c20558af4ec2f6ef3031c79cf526ebc2cf9c02b6a42210aa50dca42"
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/final/viitta/models/eunukki-3.glb",
+        "sha256": "a12e027400ad0c62483a30777adad44176365b57032fea90f307e006432693e1"
+      }
+    ],
+    "results": [
+      {
+        "clip": "struggle_1",
+        "timeS": 0.228000009059906,
+        "leftHandForearmVisiblePixels": 151,
+        "rightHandForearmVisiblePixels": 251,
+        "childVisiblePixels": 824,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_2",
+        "timeS": 0.5640000224113464,
+        "leftHandForearmVisiblePixels": 195,
+        "rightHandForearmVisiblePixels": 163,
+        "childVisiblePixels": 696,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_3",
+        "timeS": 1.0269999623298645,
+        "leftHandForearmVisiblePixels": 218,
+        "rightHandForearmVisiblePixels": 162,
+        "childVisiblePixels": 761,
+        "bothForearmsHandsVisible": true
+      },
+      {
+        "clip": "struggle_4",
+        "timeS": 0.705,
+        "leftHandForearmVisiblePixels": 242,
+        "rightHandForearmVisiblePixels": 144,
+        "childVisiblePixels": 816,
+        "bothForearmsHandsVisible": true
+      }
+    ],
+    "allVisible": true,
+    "limitations": "Unlit geometry/texture proof, FOV55 preview assumption. Not a game capture or exhaustive collision proof. Existing source material defects remain unchanged.",
+    "elapsedSeconds": 21.803124958998524,
+    "peakRSSMiB": 237.8125
+  }
+]

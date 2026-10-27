@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-2/eunukki-2.glb",
+  "sourceSHA256": "9b5402664c8440f13a57c1cdeadd8cb48986b294ea04e3463898ca72423b2848",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-2/eunukki-2-compact-20.glb",
+  "sha256": "4d879e7b6bdf808860f177f6778adf809478c3155ce83f81d58220da4568cd51",
+  "bytes": 7865088,
+  "geometryRigTexturesUnchanged": true,
+  "oldAnimationArraysByteExact": true,
+  "newAnimationMotionDeltaGateM": 0.0001,
+  "keyTolerance": {
+    "quaternion": 2e-05,
+    "linear": 1e-06
+  },
+  "keys": [
+    {
+      "clip": "hold_struggle_1",
+      "beforeKeys": 11870,
+      "afterKeys": 6449
+    },
+    {
+      "clip": "hold_struggle_2",
+      "beforeKeys": 11870,
+      "afterKeys": 6267
+    },
+    {
+      "clip": "hold_struggle_3",
+      "beforeKeys": 12830,
+      "afterKeys": 6816
+    },
+    {
+      "clip": "hold_struggle_4",
+      "beforeKeys": 14750,
+      "afterKeys": 7596
+    },
+    {
+      "clip": "hold_struggle_give_up",
+      "beforeKeys": 14032,
+      "afterKeys": 5082
+    },
+    {
+      "clip": "hold_struggle_free",
+      "beforeKeys": 9685,
+      "afterKeys": 6412
+    }
+  ],
+  "sampledMeshQA": [
+    {
+      "clip": "hold_struggle_1",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 3.346558510235057e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_2",
+      "samples": 577,
+      "maxSkinnedVertexDeltaM": 3.346558510235057e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_3",
+      "samples": 625,
+      "maxSkinnedVertexDeltaM": 3.3797800575327157e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_4",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 3.3977407092501477e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_give_up",
+      "samples": 721,
+      "maxSkinnedVertexDeltaM": 3.0069519390770582e-05,
+      "pass": true
+    },
+    {
+      "clip": "hold_struggle_free",
+      "samples": 289,
+      "maxSkinnedVertexDeltaM": 5.195162738193193e-05,
+      "pass": true
+    }
+  ],
+  "losslessRepack": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-2/eunukki-2-compact-20.unpacked.glb",
+    "sourceSHA256": "37cc12af99afdfc9f5e5197ad7be2b2887497ae780917e77152da724da55357d",
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/struggle-back-visual-v13/perus-eunukki-2/eunukki-2-compact-20.glb",
+    "sha256": "4d879e7b6bdf808860f177f6778adf809478c3155ce83f81d58220da4568cd51",
+    "beforeBytes": 12129128,
+    "afterBytes": 7865088,
+    "sourceAccessors": 14713,
+    "usedAccessors": 10394,
+    "deduplicatedAccessors": 1691,
+    "allReferencedArraysAndImagesByteExact": true,
+    "animationSamplesUnchanged": true,
+    "elapsedSeconds": 0.25544454203918576,
+    "peakRSSMiB": 201.296875
+  },
+  "elapsedSeconds": 33.226650916971266,
+  "peakRSSMiB": 264.109375
+}
