@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "perus",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/taunt-run-review-v2/motions/puyi-perus-liikkeet.glb",
+    "bytes": 6929640,
+    "sha256": "6b702dbe99caf689f092ec3c33ee91199e1cdcddd099c5debf69ac8848377b8d"
+  },
+  {
+    "variant": "perus",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-v7/perus/puyi.glb",
+    "bytes": 12841888,
+    "sha256": "c68376047bcd99f949239e6e79364301466b0c0f3bc66b17f0f28b6e4157a874"
+  },
+  {
+    "variant": "viitta",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/taunt-run-review-v2/motions/puyi-liikkeet.glb",
+    "bytes": 7712772,
+    "sha256": "a1763a35566d64c51290e12283ca58ddbb13f54b6d2ab1ca25b9d6d71ff9629b"
+  },
+  {
+    "variant": "viitta",
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/slides-cape-v2/viitta/puyi.glb",
+    "bytes": 14477820,
+    "sha256": "77aa0d1d0295c7cc719a5c3387003929daa2bd99043c66a0ec10ab514d62289b"
+  }
+]

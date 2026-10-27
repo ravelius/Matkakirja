@@ -1,0 +1,25 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/feet-first-review-v1/motions/puyi-perus-liikkeet.glb",
+  "bytes": 8285440,
+  "sha256": "281108acde732f4a74c3912242027ca3b078dfe486cd8b6c67ed3803439f8c17",
+  "clips": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run",
+    "jump_robe",
+    "stairs_robe",
+    "taunt_run",
+    "slide_feet_first"
+  ],
+  "addedOrReplaced": [
+    "slide_feet_first"
+  ],
+  "allOldAndNewClipArraysByteExact": true,
+  "geometryIncluded": false
+}

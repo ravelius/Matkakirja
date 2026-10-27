@@ -1,0 +1,25 @@
+{
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/feet-first-review-v1/motions/puyi-liikkeet.glb",
+  "bytes": 9124840,
+  "sha256": "4dc0bc0dce671f400715baf84be181f27a9c5ebdb099e03671f1cabf22018614",
+  "clips": [
+    "idle",
+    "run",
+    "vault_low",
+    "run_upstairs",
+    "vault_hand",
+    "jump_down",
+    "bar_approach_takeoff",
+    "bar_swing_over",
+    "bar_release_land_run",
+    "jump_robe",
+    "stairs_robe",
+    "taunt_run",
+    "slide_feet_first"
+  ],
+  "addedOrReplaced": [
+    "slide_feet_first"
+  ],
+  "allOldAndNewClipArraysByteExact": true,
+  "geometryIncluded": false
+}

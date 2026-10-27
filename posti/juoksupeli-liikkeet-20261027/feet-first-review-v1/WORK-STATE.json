@@ -1,0 +1,17 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_RUNTIME_AND_OWNER_ACCEPTANCE_PENDING",
+  "newSlideDenseQAPass": true,
+  "allLibraryQAComplete": false,
+  "inheritedLimitations": [
+    "taunt_run boot-skin contact limitation remains as delivered59a6fc",
+    "full cape underarm correction remains open"
+  ],
+  "runtimeVerified": false,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "updatedAt": "2026-10-27T19:00:00.841040+00:00",
+  "visualLimitations": [
+    "Cape hem bunches on floor during seated slide; game-camera review still required",
+    "Existing full cape sleeve/underarm correction remains open"
+  ]
+}
