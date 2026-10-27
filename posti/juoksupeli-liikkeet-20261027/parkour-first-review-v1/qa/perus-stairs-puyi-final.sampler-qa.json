@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/stairs-run-v1/perus/puyi-trim.glb",
+  "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/stairs-run-v1/perus/puyi-final.glb",
+  "beforeBytes": 9813016,
+  "bytes": 9808676,
+  "sha256": "85c1cfeef1d1f10c5b268be90a3028fc7e7327d0cc63734b97aab833019a6f44",
+  "binaryBufferByteExact": true,
+  "everyChannelSamplerIdentical": true,
+  "samplerCounts": [
+    {
+      "clip": "idle",
+      "beforeSamplers": 281,
+      "afterSamplers": 281
+    },
+    {
+      "clip": "run",
+      "beforeSamplers": 285,
+      "afterSamplers": 285
+    },
+    {
+      "clip": "vault_low",
+      "beforeSamplers": 269,
+      "afterSamplers": 269
+    },
+    {
+      "clip": "run_upstairs",
+      "beforeSamplers": 339,
+      "afterSamplers": 258
+    }
+  ]
+}

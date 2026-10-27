@@ -1,0 +1,21 @@
+{
+  "reviewedAt": "2026-10-27T15:40:08.256992+00:00",
+  "actualExportFiles": [
+    "work/stairs-run-v1/perus/puyi-final.glb",
+    "work/stairs-run-v1/viitta/puyi-final.glb"
+  ],
+  "views": [
+    "rear upper oblique",
+    "front upper oblique",
+    "level side with slope rails"
+  ],
+  "findings": [
+    "Both models show alternating knee lift and uphill torso lean.",
+    "The slope rails keep the feet visible; supporting foot is close to reference plane and airborne frames clear it.",
+    "Cape trails behind, no gross clipping with the plane in reviewed samples.",
+    "No per-tread locking, foot-slip acceptance, exhaustive self-collision or game transition test."
+  ],
+  "readyForReceiverReview": true,
+  "gameVerified": false,
+  "ownerApproved": false
+}

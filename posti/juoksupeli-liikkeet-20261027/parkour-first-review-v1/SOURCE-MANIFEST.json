@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "variant": "perus",
+      "priorCompleteLibrary": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/dives-review-v1/models/puyi-perus.glb",
+      "priorCompleteLibrarySHA256": "550f42badf8d84f21b28a7b12bf01ebbfc226c7c2e27a98410ba244ef8be3301",
+      "selectedVaultVersion": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v2/perus",
+      "stairsAuthoring": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/stairs-run-v1/perus",
+      "sourceRigNodesUnchanged": true
+    },
+    {
+      "variant": "viitta",
+      "priorCompleteLibrary": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/dives-review-v1/models/puyi-viitta.glb",
+      "priorCompleteLibrarySHA256": "ac78b0255112fc1536456b1acecc5580f8cc2415cc41940778414870cbc392d1",
+      "selectedVaultVersion": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v4/viitta",
+      "stairsAuthoring": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/stairs-run-v1/viitta",
+      "sourceRigNodesUnchanged": true
+    }
+  ],
+  "workflow": "Local rig derivatives of the existing Tripo source assets; source rights inherited, no new media",
+  "sourceDecision": "b0f2803946414fc9a3c8cb07715d73bae14e4e53",
+  "newTripoCalls": 0,
+  "credits": 0
+}

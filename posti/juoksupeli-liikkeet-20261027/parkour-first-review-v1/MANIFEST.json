@@ -1,0 +1,181 @@
+{
+  "status": "TECHNICAL_REVIEW_READY_IMPORT_FORMAT_AND_GAME_QA_PENDING",
+  "createdAt": "2026-10-27T15:41:00.514280+00:00",
+  "models": [
+    {
+      "file": "models/puyi-perus-parkour.glb",
+      "sha256": "85c1cfeef1d1f10c5b268be90a3028fc7e7327d0cc63734b97aab833019a6f44",
+      "bytes": 9808676,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs"
+      ],
+      "newClips": [
+        "vault_low",
+        "run_upstairs"
+      ],
+      "durationS": {
+        "vault_low": 0.9599999785423279,
+        "run_upstairs": 0.6578947305679321
+      },
+      "stairsQA": {
+        "allPass": true,
+        "samples": 633,
+        "minVerticalPlaneClearanceM": 0.0008918081210715217,
+        "maxVerticalPlaneClearanceM": 0.06415477537133538,
+        "loopPoseDelta": 2.7962366755396317e-08,
+        "maximumEquivalent240HzStepDegrees": 7.006456916396763,
+        "referenceGrade": 0.5,
+        "individualStairFootLocks": false,
+        "gameVerified": false,
+        "limits": "Entire mesh vs smooth inclined plane, loop pose continuity and rotation-step scan only. Mixed tread geometry, foot sliding, runtime transitions and cloth need receiver game QA.",
+        "elapsedSeconds": 8.232738458085805,
+        "peakRSSMiB": 107.53125
+      },
+      "vaultQA": {
+        "results": [
+          {
+            "clip": "vault_low",
+            "samples": 923,
+            "minFloorM": 0.000993752010674821,
+            "maxFootPinErrorM": 4.423255379716088e-05,
+            "middleAirMinM": 0.4550206447128367,
+            "maximumEquivalent240HzStepDegrees": 9.366988431320868,
+            "entryRunDelta": 1.4710189205624502e-08,
+            "exitRunDelta": 5.4740905142125484e-08,
+            "pass": true
+          }
+        ],
+        "allPass": true,
+        "gameVerified": false,
+        "limits": "Sampled mesh floor, defined foot pins, interpolated rotations and run boundary poses; not exhaustive self-collision, obstacle clearance or live game test.",
+        "elapsedSeconds": 7.976313124992885,
+        "peakRSSMiB": 105.015625
+      },
+      "collisionQA": {
+        "status": "PASS",
+        "variant": "perus",
+        "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v2/perus/puyi-parkour.glb",
+        "samples": 462,
+        "wholeTriangleBoxTest": true,
+        "obstacleBounds": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0.002,
+            0.51
+          ],
+          "z": [
+            1.9,
+            2.4
+          ]
+        },
+        "marginIncludes10mmAboveHalfMetreObstacle": true,
+        "collidingSamples": 0,
+        "collisions": [],
+        "minVertexHeightOverObstacleM": 0.5826003326252589,
+        "minFloorM": 0.0009999915122354116,
+        "gameVerified": false,
+        "elapsedSeconds": 6.161381792044267,
+        "peakRSSMiB": 101.6875
+      },
+      "priorSubsetTracksByteExact": true
+    },
+    {
+      "file": "models/puyi-viitta-parkour.glb",
+      "sha256": "53cf3d04a93d06b5e115a2dda9194bf739828f15fde28f044b57ca049f2b0d44",
+      "bytes": 9725292,
+      "clips": [
+        "idle",
+        "run",
+        "vault_low",
+        "run_upstairs"
+      ],
+      "newClips": [
+        "vault_low",
+        "run_upstairs"
+      ],
+      "durationS": {
+        "vault_low": 0.9599999785423279,
+        "run_upstairs": 1.3377193212509155
+      },
+      "stairsQA": {
+        "allPass": true,
+        "samples": 1285,
+        "minVerticalPlaneClearanceM": 0.0006294891047035414,
+        "maxVerticalPlaneClearanceM": 0.06393490362612445,
+        "loopPoseDelta": 2.9618690167154682e-08,
+        "maximumEquivalent240HzStepDegrees": 8.420151708470296,
+        "referenceGrade": 0.5,
+        "individualStairFootLocks": false,
+        "gameVerified": false,
+        "limits": "Entire mesh vs smooth inclined plane, loop pose continuity and rotation-step scan only. Mixed tread geometry, foot sliding, runtime transitions and cloth need receiver game QA.",
+        "elapsedSeconds": 7.586276666028425,
+        "peakRSSMiB": 95.171875
+      },
+      "vaultQA": {
+        "results": [
+          {
+            "clip": "vault_low",
+            "samples": 923,
+            "minFloorM": 0.00014871278680783054,
+            "maxFootPinErrorM": 0.0003061351304746554,
+            "middleAirMinM": 0.42807883083686016,
+            "maximumEquivalent240HzStepDegrees": 13.950135373155161,
+            "entryRunDelta": 5.6636120238096055e-08,
+            "exitRunDelta": 5.960464477539063e-08,
+            "pass": true
+          }
+        ],
+        "allPass": true,
+        "gameVerified": false,
+        "limits": "Sampled mesh floor, defined foot pins, interpolated rotations and run boundary poses; not exhaustive self-collision, obstacle clearance or live game test.",
+        "elapsedSeconds": 5.435368042089976,
+        "peakRSSMiB": 87.09375
+      },
+      "collisionQA": {
+        "status": "PASS",
+        "variant": "viitta",
+        "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v4/viitta/puyi-parkour.glb",
+        "samples": 462,
+        "wholeTriangleBoxTest": true,
+        "obstacleBounds": {
+          "x": [
+            -1.8,
+            1.8
+          ],
+          "y": [
+            0.002,
+            0.51
+          ],
+          "z": [
+            1.9,
+            2.4
+          ]
+        },
+        "marginIncludes10mmAboveHalfMetreObstacle": true,
+        "collidingSamples": 0,
+        "collisions": [],
+        "minVertexHeightOverObstacleM": 0.5342800676039241,
+        "minFloorM": 0.0009999895183590048,
+        "gameVerified": false,
+        "elapsedSeconds": 4.871262624976225,
+        "peakRSSMiB": 88.328125
+      },
+      "priorSubsetTracksByteExact": true
+    }
+  ],
+  "preservation": "Existing complete libraries unchanged. New standalone subset is NOT a replacement; selected source clips, geometry, rig and images unchanged. Only new run_upstairs sampling compressed with under0.1mm measured mesh delta.",
+  "open": [
+    "Receiver import choice44de2de4",
+    "Game transitions, stair cadence/foot sliding and ground path",
+    "Owner visual acceptance",
+    "Full cloth self-intersection and sleeve/underarm correction"
+  ],
+  "newTripoCalls": 0,
+  "credits": 0
+}

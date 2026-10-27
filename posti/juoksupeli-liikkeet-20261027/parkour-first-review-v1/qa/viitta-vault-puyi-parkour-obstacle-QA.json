@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "variant": "viitta",
+  "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v4/viitta/puyi-parkour.glb",
+  "samples": 462,
+  "wholeTriangleBoxTest": true,
+  "obstacleBounds": {
+    "x": [
+      -1.8,
+      1.8
+    ],
+    "y": [
+      0.002,
+      0.51
+    ],
+    "z": [
+      1.9,
+      2.4
+    ]
+  },
+  "marginIncludes10mmAboveHalfMetreObstacle": true,
+  "collidingSamples": 0,
+  "collisions": [],
+  "minVertexHeightOverObstacleM": 0.5342800676039241,
+  "minFloorM": 0.0009999895183590048,
+  "gameVerified": false,
+  "elapsedSeconds": 4.871262624976225,
+  "peakRSSMiB": 88.328125
+}

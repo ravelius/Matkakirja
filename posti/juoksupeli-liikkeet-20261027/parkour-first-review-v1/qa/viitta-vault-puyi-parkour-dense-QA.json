@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "clip": "vault_low",
+      "samples": 923,
+      "minFloorM": 0.00014871278680783054,
+      "maxFootPinErrorM": 0.0003061351304746554,
+      "middleAirMinM": 0.42807883083686016,
+      "maximumEquivalent240HzStepDegrees": 13.950135373155161,
+      "entryRunDelta": 5.6636120238096055e-08,
+      "exitRunDelta": 5.960464477539063e-08,
+      "pass": true
+    }
+  ],
+  "allPass": true,
+  "gameVerified": false,
+  "limits": "Sampled mesh floor, defined foot pins, interpolated rotations and run boundary poses; not exhaustive self-collision, obstacle clearance or live game test.",
+  "elapsedSeconds": 5.435368042089976,
+  "peakRSSMiB": 87.09375
+}

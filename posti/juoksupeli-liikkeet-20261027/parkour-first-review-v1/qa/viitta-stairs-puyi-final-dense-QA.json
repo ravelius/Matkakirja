@@ -1,0 +1,14 @@
+{
+  "allPass": true,
+  "samples": 1285,
+  "minVerticalPlaneClearanceM": 0.0006294891047035414,
+  "maxVerticalPlaneClearanceM": 0.06393490362612445,
+  "loopPoseDelta": 2.9618690167154682e-08,
+  "maximumEquivalent240HzStepDegrees": 8.420151708470296,
+  "referenceGrade": 0.5,
+  "individualStairFootLocks": false,
+  "gameVerified": false,
+  "limits": "Entire mesh vs smooth inclined plane, loop pose continuity and rotation-step scan only. Mixed tread geometry, foot sliding, runtime transitions and cloth need receiver game QA.",
+  "elapsedSeconds": 7.586276666028425,
+  "peakRSSMiB": 95.171875
+}

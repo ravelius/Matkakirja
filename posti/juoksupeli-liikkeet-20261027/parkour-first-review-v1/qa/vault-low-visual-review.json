@@ -1,0 +1,30 @@
+{
+  "reviewedAt": "2026-10-27T15:36:23.375687+00:00",
+  "reviewer": "Codex primary",
+  "actualExportFiles": [
+    "work/vault-low-v2/perus/puyi-parkour.glb",
+    "work/vault-low-v4/viitta/puyi-parkour.glb"
+  ],
+  "views": [
+    "rear upper oblique",
+    "front upper oblique",
+    "side level"
+  ],
+  "posesS": [
+    0.22,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "findings": [
+    "Both feet tuck and clear the half-metre block. Side level images confirm the actual obstacle height.",
+    "Cape trails behind with legs distinguishable; no gross body/obstacle clipping in the reviewed views.",
+    "Low vault has no supporting hand; hand-assisted vault remains separate.",
+    "These are sampled local proofs, not exhaustive cloth collision or game camera tests."
+  ],
+  "readyForReceiverReview": true,
+  "gameVerified": false,
+  "ownerApproved": false
+}

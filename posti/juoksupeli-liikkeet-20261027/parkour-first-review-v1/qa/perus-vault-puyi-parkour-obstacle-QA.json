@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "variant": "perus",
+  "actualFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/vault-low-v2/perus/puyi-parkour.glb",
+  "samples": 462,
+  "wholeTriangleBoxTest": true,
+  "obstacleBounds": {
+    "x": [
+      -1.8,
+      1.8
+    ],
+    "y": [
+      0.002,
+      0.51
+    ],
+    "z": [
+      1.9,
+      2.4
+    ]
+  },
+  "marginIncludes10mmAboveHalfMetreObstacle": true,
+  "collidingSamples": 0,
+  "collisions": [],
+  "minVertexHeightOverObstacleM": 0.5826003326252589,
+  "minFloorM": 0.0009999915122354116,
+  "gameVerified": false,
+  "elapsedSeconds": 6.161381792044267,
+  "peakRSSMiB": 101.6875
+}

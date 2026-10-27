@@ -1,0 +1,25 @@
+{
+  "coordinateSystem": "Metres, +Y up,+Z forward,+X anatomical left",
+  "import": "Additional self-contained review GLBs with the same rig/geometry/textures and only idle,run,vault_low,run_upstairs. Do not replace the existing complete library. Receiver chooses selected-clip import or requests animation-only. Format question44de2de4 pending at packaging.",
+  "vault_low": {
+    "durationS": 0.96,
+    "phase": "u=(t-.058)/.04;T=t-.22*(t-.058)*(1-u*u)^3 if abs(u)<1 else t",
+    "root": "v=(T-.14)/.60; X=0;Y=.50*4*v*(1-v) if0<v<1 else0;Z=5*T;actor yaw0",
+    "exit": "At.96s root(0,0,4.8)m, velocity5m/s, run source phase1.824s modulo run duration",
+    "obstacle": "Reference AABB x[-1.8,1.8],y[0,.5],z[1.9,2.4] relative actor start; full triangle intersection tested at480Hz with top inflated to.510m",
+    "integration": "Clip includes takeoff, landing and exit. Do not blindly overlay land_soft0.12s before end; receiver must choose transitions. No additional regular locomotion on top of root curve. No hand support in this clip."
+  },
+  "run_upstairs": {
+    "referenceGrade": 0.5,
+    "referenceAngleDegrees": 26.565051,
+    "testStairRiseM": 0.16,
+    "testTreadM": 0.32,
+    "loopDurationS": {
+      "models/puyi-perus-parkour.glb": 0.6578947305679321,
+      "models/puyi-viitta-parkour.glb": 1.3377193212509155
+    },
+    "root": "External controller follows existing stair/ramp height profile. Translation not baked. Reference source run playback1.9x. Actor stays upright; lower-body slope alignment already baked, do not pitch whole actor again.",
+    "limits": "Receiver b0f280394 explicitly accepts inclined run without individual tread locking. Reference tilt26.565deg; shallower grades, cadence vs game speed, entry/exit blends and foot sliding require game check. Not an exact stair-contact solution."
+  },
+  "gameVerified": false
+}
