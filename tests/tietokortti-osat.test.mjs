@@ -90,6 +90,14 @@ test('siistiLisaa: otsikoton alkukappale pois, kun perässä on kaksi otsikollis
   assert.equal(siistiLisaa('Vain kappale.\n\n## Yksi\nTeksti.'), 'Vain kappale.\n\n## Yksi\nTeksti.');
 });
 
+test('siivoaMeta: lähdettä koskevat ilmaukset pois varaversiosta (KK 27.10.)', async () => {
+  const { siivoaMeta } = await import('../tools/pollo/tietokortti.js');
+  assert.equal(siivoaMeta('Kukkulalla on asuttu aiemmin: lähteen mukaan asutuksesta on todisteita jo 4. vuosituhannelta eaa.'),
+    'Kukkulalla on asuttu aiemmin: asutuksesta on todisteita jo 4. vuosituhannelta eaa.');
+  assert.equal(siivoaMeta('Lähteen mukaan linna rakennettiin 1070. Silta valmistui myöhemmin.'), 'Linna rakennettiin 1070. Silta valmistui myöhemmin.');
+  assert.equal(siivoaMeta('## Linna\nLinna on vanha. Lähteessä ei kerrota rakentajaa. Se on suuri.'), '## Linna\nLinna on vanha. Se on suuri.');
+});
+
 test('lievin hylkäys valitaan, kun kaikki yritykset hylätään', async () => {
   const { hylkayksenVakavuus } = await import('../tools/pollo/tietokortti.js');
   assert.ok(hylkayksenVakavuus('vastattu') < hylkayksenVakavuus('toisto 1440'));

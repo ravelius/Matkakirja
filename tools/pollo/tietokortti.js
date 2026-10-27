@@ -365,6 +365,28 @@ const KIELLETYT = ['kaikkien aikojen', 'ainutlaatuinen', 'ihana', 'pakko nähdä
 const sanat = (t) => t.split(/\s+/).filter(Boolean).length;
 
 /**
+ * Tekstiä ja lähdettä koskevat ilmaukset pois pelaajan tekstistä (KK 27.10.: varaversion "lähteen mukaan"; lähde näkyy omalla
+ * rivillään). "lähteen mukaan" -tyyppinen sivulause poistetaan virkkeestä; virke, joka puhuu lähteestä itsestään ("lähteessä",
+ * "lähde kertoo", "lähteistä ei"), poistetaan kokonaan. Väliotsikko- ja kysymysrivit säilyvät.
+ */
+export function siivoaMeta(teksti) {
+  const SIVULAUSE = /(^|[\s,:;])(?:(?:lähteen|lähteiden|wikipedian|wikidatan)\s+(?:mukaan|perusteella))\s*,?\s*/giu;
+  const KOKO_VIRKE = /lähteessä|lähde kertoo|lähdetied|lähteistä ei|wikipedia|wikidata/iu;
+  const siivoaRivi = (rivi) => {
+    if (!rivi.trim() || rivi.trim().startsWith('#')) return rivi;
+    const virkkeet = rivi.split(/(?<=[.!?])\s+/).filter((v) => !KOKO_VIRKE.test(v.replace(SIVULAUSE, '$1')));
+    const ALUSSA = /^\s*(?:lähteen|lähteiden|wikipedian|wikidatan)\s+(?:mukaan|perusteella)/iu;
+    return virkkeet.map((v) => {
+      const s = v.replace(SIVULAUSE, '$1');
+      // Iso alkukirjain vain, kun poistettu ilmaus aloitti virkkeen ("Lähteen mukaan linna …" → "Linna …").
+      return (ALUSSA.test(v) ? s.replace(/^(\s*)(\p{Ll})/u, (_, a, c) => a + c.toUpperCase()) : s)
+        .replace(/\s{2,}/g, ' ').replace(/\s+([,.:;])/g, '$1');
+    }).join(' ');
+  };
+  return String(teksti ?? '').split('\n').map(siivoaRivi).join('\n');
+}
+
+/**
  * Uusinnan korjauspalaute mallille (resepti 2.4/3: hylätty → uusinta): tarkistuksen syy suomeksi ohjeena. Sokea uusinta toisti
  * saman virheen (vedos 5b: kolme paikkaa, kuusi uusintaa, yksikään ei läpäissyt).
  */
