@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-muurit-taivas-v3-vienti-20261024/juoksupeli/maailma-v4/taivas-paiva-codex-v1/taivas.jpg",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v2-20261027/sources/taivas-v1.jpg",
+    "bytes": 684279,
+    "sha256": "f8517333b465e98cfbf9776e3f63811a2185c7eb5b0690a2dbb53738866581f1"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-muurit-taivas-v3-vienti-20261024/juoksupeli/maailma-v4/taivas-paiva-codex-v1/taivas.json",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v2-20261027/taivas.json",
+    "bytes": 281,
+    "sha256": "74e8ca33af7f7416220a22b89ea58417aaf1a8671f1413059192620a96217c53"
+  },
+  {
+    "source": "/Users/Shared/Claude/proto-3d/_valmiit/juoksupeli-muurit-taivas-v3-vienti-20261024/LAHTEET.md",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v2-20261027/sources/v1-export-sources.md",
+    "bytes": 1105,
+    "sha256": "1fb31593a94f6ff655863439f8b85e2fc71494e3201188eb89d9bb6729390ebb"
+  },
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/native/paivataivas-panoraama-attempt001.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v2-20261027/sources/paivataivas-native.png",
+    "bytes": 1783901,
+    "sha256": "780349d9229c69d1c4be100d0f14f83f16e93d185968ed91a362e2475778999a"
+  },
+  {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-muurit-tekstuurit-20261024/delivery/paivataivas-panoraama.png",
+    "copy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-taivas-paiva-v2-20261027/sources/paivataivas-original-4096.png",
+    "bytes": 4933672,
+    "sha256": "59f166dbc7368f5908724444ea998acea7bf688f0d5867a1f784d1f9e2b7f087"
+  }
+]

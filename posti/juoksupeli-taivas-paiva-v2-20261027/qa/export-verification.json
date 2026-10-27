@@ -1,0 +1,93 @@
+{
+  "output": {
+    "dimensions": [
+      4096,
+      2048
+    ],
+    "pngBitDepth": 16,
+    "colorType": "RGB",
+    "sha256": "d12d84d705406c7b69072b8a8f969396b24a8743c0e7f29768ca87729bb6bd25",
+    "bytes": 37228843,
+    "fullChroma": true,
+    "lossless": true
+  },
+  "method": "Whole original 1774x887 PNG upsampled in RGB16 using Lanczos. No generative edit, crop, recolor, deband painting, or content changes. Original source was 8-bit; 16-bit interpolated precision is not native 16-bit capture.",
+  "sourceNativeSize": [
+    1774,
+    887
+  ],
+  "deltaVsLosslessV1Master255": {
+    "meanAbsolute": 0.24740682542324066,
+    "p99Absolute": 0.79766845703125,
+    "maxAbsolute": 13.0,
+    "meanChannelDelta": [
+      0.02643304318189621,
+      -0.018631720915436745,
+      0.02362106740474701
+    ]
+  },
+  "deltaVsJpegV1255": {
+    "meanAbsolute": 0.8888661861419678
+  },
+  "upperSkyRegion": [
+    1800,
+    60,
+    2300,
+    360
+  ],
+  "upperSkyUniqueLevelsPerChannel": {
+    "jpeg": [
+      32,
+      34,
+      34
+    ],
+    "originalPNG8": [
+      30,
+      32,
+      32
+    ],
+    "exportPNG16": [
+      7219,
+      7532,
+      7659
+    ]
+  },
+  "verticalIdenticalBlueRunPixels": {
+    "jpeg": {
+      "max": 40,
+      "p95": 8.0,
+      "mean": 3.049462278151619
+    },
+    "originalPNG8": {
+      "max": 27,
+      "p95": 7.0,
+      "mean": 3.034348828741352
+    },
+    "exportPNG16": {
+      "max": 3,
+      "p95": 1.0,
+      "mean": 1.0035122930255895
+    }
+  },
+  "metadataByteIdenticalToV1": true,
+  "newGenerationCalls": 0,
+  "inGameTestPerformed": false,
+  "sunCenterPixels": {
+    "v1LosslessMaster": [
+      2029.5620553359684,
+      783.7667984189724
+    ],
+    "v2": [
+      2029.6270523846756,
+      783.8318999218139
+    ]
+  },
+  "meanColorDeltaSmall": true,
+  "visualQA": {
+    "result": "PASS for lossless source export",
+    "nativeAndFullFrameViewed": true,
+    "upperSkyContrastComparisonViewed": true,
+    "cloudEdgeNativeScaleComparisonViewed": true,
+    "notes": "Same clouds, sun and composition. JPEG block/color-edge artifacts absent from native-master export. Smooth high-precision gradient with native subtle texture. Actual iPad and game loader verification remains Valoseppa task."
+  }
+}
