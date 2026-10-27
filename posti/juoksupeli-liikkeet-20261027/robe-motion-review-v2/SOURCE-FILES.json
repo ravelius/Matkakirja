@@ -1,0 +1,46 @@
+{
+  "sourceDelivery": "f2ab390a368fb222a1d100376a2201ee7fd4e290",
+  "receiverOrder": "f8327a4674a40f4bbc4c51f14a188ef4ebf6307e",
+  "morphPayloadsUnchangedAt": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v1/morph",
+  "rows": [
+    {
+      "variant": "perus",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v2/motions/puyi-perus-liikkeet.glb",
+      "bytes": 3113872,
+      "sha256": "3e673c37995a25330e01d13944200d05ceae708c4531a84a698c794edae6e22d",
+      "baseSHA256": "71b7b357ab6266bd7dc369ee87d9add3244c786fbd139ca907767a51732f40b8",
+      "meshNodeIndex": 113,
+      "meshNodeName": "tripo_node_02205cd6-2369-49a2-a5ae-8f27e92cdd37",
+      "morphName": "robeHemLiftLeft",
+      "weightClips": [
+        "jump_robe",
+        "stairs_robe"
+      ],
+      "allOldAccessorsAndChannelsUnchanged": true,
+      "weightsByteExactToReviewedFullModel": true,
+      "noGeometry": true,
+      "runtimeVerified": false
+    },
+    {
+      "variant": "viitta",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-motion-review-v2/motions/puyi-liikkeet.glb",
+      "bytes": 5385368,
+      "sha256": "636dd50cbbe504dea80407c4d2dddc76126b9e09cf32449566fd1a2a0a5064b5",
+      "baseSHA256": "158489bcedc2d5e9083fd7f067a384df308c2b4b42a3363769d253b695d017c5",
+      "meshNodeIndex": 114,
+      "meshNodeName": "Puyi segmented body and cape",
+      "morphName": "robeHemLiftLeft",
+      "weightClips": [
+        "jump_robe",
+        "stairs_robe"
+      ],
+      "allOldAccessorsAndChannelsUnchanged": true,
+      "weightsByteExactToReviewedFullModel": true,
+      "noGeometry": true,
+      "runtimeVerified": false
+    }
+  ],
+  "newTripoCalls": 0,
+  "credits": 0,
+  "runtimeVerified": false
+}
