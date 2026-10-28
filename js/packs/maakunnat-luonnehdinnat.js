@@ -3476,7 +3476,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Flevoland: {
       lyhyt: 'Flevoland on Alankomaiden nuorin maakunta, perustettu 1986, ja lähes koko sen maa kuivattiin entisestä merenpohjasta.',
-      pitka: `Flevoland on Alankomaiden uusin provinssi, ja se perustettiin vuonna 1986. Se on pääosin kuivattua maata, ja siellä asuu noin 440 000 ihmistä. Ensimmäinen kuivattu alue oli Noordoostpolder vuonna 1942, ja siihen kuuluvat entiset saaret Urk ja Schokland. Flevopolderin koillispuoli kuivattiin vuonna 1957 ja lounaispuoli vuonna 1968. Pääkaupunki on Lelystad, ja väkirikkain kunta on Almere. Oostvaardersplassen on matalien lampien, saarten ja soiden luonnonpuisto. Provinssin pinta-ala on 2 412 neliökilometriä, ja siitä yli 40 prosenttia on vettä. Kuntia on kuusi, ja niitä ovat Almere, Dronten, Lelystad, Noordoostpolder, Urk ja Zeewolde.`,
+      pitka: `Flevoland on Alankomaiden uusin provinssi, ja se perustettiin vuonna 1986. Se on pääosin kuivattua maata, ja siellä asuu noin 440 000 ihmistä. Ensimmäinen kuivattu alue oli Noordoostpolder vuonna 1942, ja siihen kuuluvat entiset saaret Urk ja Schokland. Flevopolderin koillispuoli kuivattiin vuonna 1957 ja lounaispuoli vuonna 1968. Pääkaupunki on Lelystad, ja väkirikkain kunta on Almere. Lelystad on nimetty Cornelis Lelyn mukaan, joka suunnitteli Zuiderzee-merenlahden kuivatushankkeita. Oostvaardersplassen on matalien lampien, saarten ja soiden luonnonpuisto. Provinssin pinta-ala on 2 412 neliökilometriä, ja siitä yli 40 prosenttia on vettä. Kuntia on kuusi.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-flevoland-69c6bdb7.jpg',
@@ -3706,7 +3706,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Utrecht: {
       lyhyt: 'Utrechtin Dom-tornin 465 askelmaa vievät 112 metrin korkeuteen – se on Alankomaiden korkein kirkontorni.',
-      pitka: `Utrecht on Alankomaiden keskiosan provinssi, ja siellä asuu noin 1,4 miljoonaa ihmistä. Provinssin pääkaupunki ja suurin kaupunki on Utrecht. Idässä kohoaa Utrechtse Heuvelrug, jäätikön jättämä kukkulaketju. Etelässä on jokimaisemaa, lännessä niittyjä ja pohjoisessa turpeenoton synnyttämiä järviä. Utrechtin Dom-torni on 112 metriä korkea, ja se on Alankomaiden korkein kirkontorni. Utrechtin yliopisto perustettiin vuonna 1636. Vuonna 1713 kaupungissa allekirjoitettiin Utrechtin rauha, joka päätti Espanjan perimyssodan. Utrechtin piispakunta perustettiin vuonna 695. Utrecht Centraal on Alankomaiden vilkkain rautatieasema. Amersfoortin kaupungissa syntyi taidemaalari Piet Mondriaan, joka kuuluu provinssin tunnetuimpiin syntyperäisiin asukkaisiin.`,
+      pitka: `Utrecht on Alankomaiden keskiosan provinssi, ja siellä asuu noin 1,4 miljoonaa ihmistä. Provinssin pääkaupunki ja suurin kaupunki on Utrecht. Idässä kohoaa Utrechtse Heuvelrug, jäätikön jättämä kukkulaketju. Kukkuloilla on Utrechtse Heuvelrugin kansallispuisto, joka perustettiin vuonna 2003. Siellä on kanervaketoja, hiekkadyynejä ja metsiä. Etelässä on jokimaisemaa, lännessä niittyjä ja pohjoisessa turpeenoton synnyttämiä järviä. Utrechtin Dom-torni on 112 metriä korkea, ja se on Alankomaiden korkein kirkontorni. Utrechtin yliopisto perustettiin vuonna 1636. Amersfoortin kaupungissa syntyi taidemaalari Piet Mondriaan, joka kuuluu provinssin tunnetuimpiin syntyperäisiin asukkaisiin.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/nld-maakunta2-utrecht-vd-ac3d48b4.jpg',
