@@ -72,8 +72,10 @@ oslo | Karl Johans gate | 59.9139, 10.74 | 59.91306, 10.74083 | Q1490775 | 104
 
 ## Korjaukset maakartat.js:ään (SK 28.10.2026, PT:n lupa)
 
-Jokaista riviä verrattiin myös OpenStreetMapin (Nominatim) pisteeseen. Päivitetty Wikidatan pisteeseen 17 kohdetta, joissa Wikidata oli OSM:n mukaan selvästi lähempänä oikeaa: Tampereen tuomiokirkko, Pyynikin näkötorni, Museokeskus Vapriikki, Suomenlinna, Linnanmäki, Artis, Trinity College, Piazza Marina, Belvedere, Polaria, San Giorgio Maggiore, Sevillan Alcázar, Jäämerenkatedraali, Tromssan tuomiokirkko, Oslon tuomiokirkko, Kansallinen kristillinen keskus (Abuja), Lomén suuri tori.
+Jokaista riviä verrattiin myös OpenStreetMapin (Nominatim) pisteeseen. Päivitetty Wikidatan pisteeseen 17 kohdetta, joissa Wikidata oli OSM:n mukaan selvästi lähempänä oikeaa: Tampereen tuomiokirkko, Pyynikin näkötorni, Museokeskus Vapriikki, Suomenlinna, Artis, Trinity College, Piazza Marina, Belvedere, Polaria, San Giorgio Maggiore, Sevillan Alcázar, Jäämerenkatedraali, Tromssan tuomiokirkko, Oslon tuomiokirkko, Kansallinen kristillinen keskus (Abuja), Lomén suuri tori.
 
 Ei muutettu (nykyinen piste oikeampi tai Wikidata ei ole parempi): Eagle Square (Wikidata 19 km pielessä, virhe), State House ja Basotho Hat Shop (Wikidata ~0,9 km pielessä), Albaicínin näköalapaikka, Abujan kansallismoskeija, Saudien moskeija, Rovaniemen kaupungintalo, Lappia-talo, Üsküdar, East Side Gallery, Skansen, Museosaari, Koulouban palatsi, Gellértinvuori, Kansallismuseo (Praha), Vanhasatama, Ouagadougoun suurmoskeija, Luxembourgin puisto, Finlaysonin tehdasalue, Arsenaali, Canal Grande (viivamainen kohde) sekä alueet ja kukkulat, joissa piste on keskus tai huippu (Lykavittós ym.).
+
+Linnanmäki: Wikidatan piste (60,18833; 24,94028) putoaa Helsingin kartan lepotilan näkymän ulkopuolelle (tests/karttareunus.test.mjs), joten piste jätettiin ennalleen (159 m).
 
 Vatikaanin museot: Wikidatan piste (41,90639; 12,45444) olisi 141 m ennallaan oleva piste lähempänä museorakennusta, mutta se rikkoo testin tests/kohdekarttavarat.test.mjs (kohde reunassa iPhonen opasteen alla), joten piste jätettiin ennalleen. Ei varmistettu (ei OSM-osumaa): Nouakchottin yliopisto (Wikidata 8,4 km), Fourah Bay College (2 km), Tallinnan matkustajasatama, Abujan kansalliskokous, Saladinin linnoitus, Hamoudin moskeija; pisteet jätettiin ennalleen.

@@ -4826,7 +4826,7 @@ export const KAUPUNKIKARTAT = {
        * lepotilassa hieman; reunuslaajennus (piirtoRajat) väljentää
        * tämän aikanaan.
        */
-      { nimi: 'Linnanmäki', lat: 60.18833, lon: 24.94028, wiki: 'Linnanmäki' },
+      { nimi: 'Linnanmäki', lat: 60.1869, lon: 24.9401, wiki: 'Linnanmäki' },
       { nimi: 'Päärautatieasema', lat: 60.1719, lon: 24.9414, wiki: 'Helsingin päärautatieasema' },
       { nimi: 'Kaisaniemen puisto', tyyppi: 'luonto', lat: 60.1747, lon: 24.9458, wiki: 'Kaisaniemen puisto' },
       { nimi: 'Kallion kirkko', lat: 60.1842, lon: 24.9492, wiki: 'Kallion kirkko' },
