@@ -453,3 +453,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   laatat isommat/litteämmät; 01:n reunakiven päädyt hieman kellertävät.
 - J4: odottaa Codexin J4-v3:a (LISÄYS 30; KK:n mukaan tulossa c5108dc70).
 - Ei taustaajoja käynnissä.
+
+## LISÄYS 32 klo 09.2x (28.10.): kujakivet v4d pelissä, KK:n "pidä nämä"; odotetaan Codexin v5:tä
+- KK 09.2x (pari 091657, VS REF 003221b36): laattakoko (~1,5 × hartiat, 5–6 poikki), sävy kivittäin, kivijalka ~8 kertaa ja ohuet saumat OK → pidä.
+  Seuraava: Codexin v5 (tilaus claude/postilaatikko 5658e3dfb: lattialaatat-v02 vaakalaatat 2:1 + marmorijuonne, sokkeli-v02 pitkät eripituiset kivet,
+  saumojen paikat JSON:na VS:lle) → koko pari 02/05/01 + 2× → KK → omistaja ennen junaa. Uusille kuville uusi nimi (-v02-), VS lisää jaon varjostimeen.
+- Työkalut (K = …/kielletty-rakennukset/tyokalut): kujakivi_tasaa.py (kivittäinen sävy SATU, ohut sauma SAUMA_PX/SAUMA_SAVY/REUNUS, reunat jatkuvat
+  toiston yli, TUMMA=0 koska VS tummentaa reunan) ja kujakivi_pinnat.py (SK, LK/LKU/LKV). Toisto keskeytyksestä:
+  `SATU=0.05 SAUMA_PX=1.5 TUMMA=0 python3 K/kujakivi_tasaa.py K/../kujakivi-pinnat-v4 K/../kujakivi-pinnat-v4d`
+  `SK=0.82 LKU=1.25 LKV=1.0 PINNAT=K/../kujakivi-pinnat-v4d VV_SOKKELI=v01 VV_PILARI=v01 VV_LATTIA=v01 zsh K/aja_ketju_v86.zsh v01`
+  `REF=003221b36 zsh K/aja_v86_pari.zsh 02 05 01` (lähikuvat: samat rajaukset kuin 082215; v5:llä venytys pois → LKU = LKV).
+- J4: odottaa yhä Codexin J4-v3:a (LISÄYS 30). Ei taustaajoja käynnissä.
