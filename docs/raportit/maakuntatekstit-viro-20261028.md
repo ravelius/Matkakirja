@@ -8,7 +8,7 @@ Harjumaa on Viron pohjoisin maakunta Suomenlahden etelärannalla. Siellä asuu n
 
 ## Hiiu
 
-Hiidenmaa on Viron toiseksi suurin saari Itämerellä, ja maakuntaan kuuluu myös muutama pieni saari. Siellä asuu noin 8 300 ihmistä, ja Hiidenmaa on Viron pienin maakunta sekä väkiluvultaan että pinta-alaltaan. Keskuspaikka on Kärdlan kaupunki saaren koillisosassa. Saaresta lähes 60 prosenttia on metsää. Saarella elää noin 30 nisäkäslajia ja lähes 250 lintulajia. Kõpun majakka valmistui vuonna 1531, ja se on Viron vanhin majakka. Majakan torni on 36 metriä korkea. Kärdlan kohdalla on 455 miljoonaa vuotta vanha kraatteri. Suuremõisan kartano rakennettiin vuosina 1755-1760, ja sen puistossa kasvaa monia puulajeja.
+Hiidenmaa on Viron toiseksi suurin saari Itämerellä, ja maakuntaan kuuluu myös muutama pieni saari. Siellä asuu noin 8 300 ihmistä, ja Hiidenmaa on Viron pienin maakunta sekä väkiluvultaan että pinta-alaltaan. Keskuspaikka on Kärdlan kaupunki saaren koillisosassa. Saaresta lähes 60 prosenttia on metsää. Saarella elää noin 30 nisäkäslajia ja lähes 250 lintulajia. Kõpun majakka valmistui vuonna 1531, ja se on Viron vanhin majakka. Majakan torni on 36 metriä korkea. Kärdlan kohdalla on 455 miljoonaa vuotta vanha kraatteri. Suuremõisan kartano rakennettiin vuosina 1755–1760, ja sen puistossa kasvaa monia puulajeja.
 
 ## Ida-Viru
 
@@ -20,11 +20,11 @@ Jõgevamaa on maakunta Itä-Virossa Peipsijärven länsirannalla, ja siellä asu
 
 ## Järva
 
-Järvamaa on maakunta Viron keskiosassa, ja siellä asuu noin 30 000 ihmistä. Maisema on tasankoa ja loivia kumpuja, ja pohjoisosassa on soita. Maakuntakeskuksessa Paidessa on keskiaikainen linna. Paiden saksalainen nimi Weissenstein tarkoittaa valkoista kiveä, ja se viittaa linnan kalkkikiveen. Linnan kuusikerroksinen Vallitorn eli vallitorni rakennettiin 1260-luvulla. Neuvostojoukot räjäyttivät tornin vuonna 1941, ja se korjattiin vuosina 1990-1993. Tornissa on nykyään osa maakuntamuseota. Säveltäjä Arvo Pärt on syntynyt Paidessa vuonna 1935. Türin kaupungissa pidetään kevätkukkamessut, joita on järjestetty vuodesta 1977. Kaupunki julistettiin Viron kevätpääkaupungiksi vuonna 2000.
+Järvamaa on maakunta Viron keskiosassa, ja siellä asuu noin 30 000 ihmistä. Maisema on tasankoa ja loivia kumpuja, ja pohjoisosassa on soita. Maakuntakeskuksessa Paidessa on keskiaikainen linna. Paiden saksalainen nimi Weissenstein tarkoittaa valkoista kiveä, ja se viittaa linnan kalkkikiveen. Linnan kuusikerroksinen vallitorni (Vallitorn) rakennettiin 1260-luvulla. Neuvostojoukot räjäyttivät tornin vuonna 1941, ja se korjattiin vuosina 1990–1993. Tornissa on nykyään osa maakuntamuseota. Säveltäjä Arvo Pärt on syntynyt Paidessa vuonna 1935. Türin kaupungissa pidetään kevätkukkamessut, joita on järjestetty vuodesta 1977. Kaupunki julistettiin Viron kevätpääkaupungiksi vuonna 2000.
 
 ## Lääne-Viru
 
-Länsi-Virumaa on maakunta Pohjois-Virossa Suomenlahden rannalla, ja siellä asuu noin 58 000 ihmistä. Maakuntakeskus Rakvere on 100 kilometrin päässä Tallinnasta, ja siellä asuu noin 15 000 ihmistä. Rakveren keskiaikainen linna on Vallimägi-kukkulalla. Kukkulan reunalla on pronssinen Tarvas-patsas, joka esittää alkuhärkää ja on noin seitsemän metriä pitkä. Sitä pidetään Baltian maiden suurimpana eläinpatsaana. Kundan kaupungin lähistöltä on löydetty kivikauden asuinpaikkoja noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Lahemaan kansallispuistossa on Palmsen kartano, joka kuului vuosina 1676-1919 Viroon asettuneelle saksalaiselle von der Pahlenin aatelissuvulle. Lahemaan puistossa on myös Käsmun kylä, jossa toimi merikoulu vuosina 1884-1931.
+Länsi-Virumaa on maakunta Pohjois-Virossa Suomenlahden rannalla, ja siellä asuu noin 58 000 ihmistä. Maakuntakeskus Rakvere on 100 kilometrin päässä Tallinnasta, ja siellä asuu noin 15 000 ihmistä. Rakveren keskiaikainen linna on Vallimägi-kukkulalla. Kukkulan reunalla on pronssinen Tarvas-patsas, joka esittää alkuhärkää ja on noin seitsemän metriä pitkä. Sitä pidetään Baltian maiden suurimpana eläinpatsaana. Kundan kaupungin lähistöltä on löydetty kivikauden asuinpaikkoja noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Lahemaan kansallispuistossa on Palmsen kartano, joka kuului vuosina 1676–1919 Viroon asettuneelle saksalaiselle von der Pahlenin aatelissuvulle. Lahemaan puistossa on myös Käsmun kylä, jossa toimi merikoulu vuosina 1884–1931.
 
 ## Lääne
 
@@ -60,5 +60,5 @@ Viljandimaa on Etelä-Viron viljavaa kumpumaata, ja siellä asuu noin 45 000 ihm
 
 ## Võru
 
-Võrumaa on Viron kaakkoiskulman maakunta Latvian ja Venäjän rajalla, ja siellä asuu noin 33 000 ihmistä. Haanjan ylängöllä kohoaa Iso Munamäki, joka on 318 metriä korkea ja Viron korkein kohta. Huipulla on 29 metriä korkea näkötorni. Alueella puhutaan perinteisesti võroa, kuten Põlvamaallakin. Maakuntakeskus Võru on Tamulajärven rannalla ja perustettiin vuonna 1784. Siellä asui lääkärinä Friedrich Reinhold Kreutzwald, joka kirjoitti Viron kansalliseepoksen Kalevipoegin. Setot ovat Viron kaakkoiskulmassa ja Venäjän puolella rajan takana asuva ortodoksinen kansa, ja heidän monistemmainen laulutapansa seto leelo on Unescon aineettoman kulttuuriperinnön luettelossa vuodesta 2009.
+Võrumaa on Viron kaakkoiskulman maakunta Latvian ja Venäjän rajalla, ja siellä asuu noin 33 000 ihmistä. Haanjan ylängöllä kohoaa Iso Munamäki, joka on 318 metriä korkea ja Viron korkein kohta. Huipulla on 29 metriä korkea näkötorni. Alueella puhutaan perinteisesti võroa, kuten Põlvamaallakin. Maakuntakeskus Võru on Tamulajärven rannalla ja perustettiin vuonna 1784. Siellä asui lääkärinä Friedrich Reinhold Kreutzwald, joka kirjoitti Viron kansalliseepoksen Kalevipoegin. Setot ovat ortodoksinen kansa, joka asuu Viron kaakkoiskulmassa ja rajan takana Venäjällä, ja heidän moniääninen laulutapansa seto leelo on Unescon aineettoman kulttuuriperinnön luettelossa vuodesta 2009.
 
