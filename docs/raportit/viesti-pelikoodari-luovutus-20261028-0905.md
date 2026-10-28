@@ -41,3 +41,13 @@ Seuraava Pelikoodari jatkaa tästä. Muisti: pelikoodari-tila-20261018-aamu.md (
 - Jäädytä leikeajasta, ei painon huipusta (0,28 s oli ennen käden pitoa). `kaapupysays <s>` + `estepysays <n> <s>` + siemen → toistettavat parit.
 - todistusajo ilman `--nyt` hylkää ajon, jos toinen simu on käynnissä, vaikka JU antoi SIMU NYT → lisää `--nyt` vain NYT-vuorolla.
 - Videon rajaus: ffmpeg freezedetect (lataus/maali paikallaan) → -ss/-to, 960×1280 (vaaka 1280×960), crf 23.
+
+## Lisäys 09.06: OMISTAJAN PÄÄTÖS 09.05 (KK:n kautta) – dronekamera
+Sanatarkasti: "dronekamera heiluu liikaa ylös alas kun se seuraa pelaajaa. pitäisi olla vain pientä liikettä jokaiseen akselin suuntaan ja
+mahdollisimman pehmeästi, jotta vain tulee se elävän dronekameran tunnelma. eli ylös-alas-vasen-oikea-eteen-taakse ja vaakakierrot ja kaikki
+akselit pitää liikkua kokoajan ja yhtäaikaa mutta pehmeästi, käännöksissä sitten isompi liike mutta pehmeästi"
+KK: kaikki kuusi suuntaa (ylös-alas, vasen-oikea, eteen-taakse, sivukierto, nyökkäys, kallistus) koko ajan yhtä aikaa pienesti ja pehmeästi,
+eri tahdissa; seuranta EI saa periä juoksijan askelheilahdusta (ei pomppua askelten tahdissa); käännöksissä isompi mutta yhtä pehmeä liike.
+Kamerasäännöt ennallaan (yksi pehmeä käyrä, ei läpikulkua, ruutuaikavahti). Samaan seuraavaan VAAKA-videoon kohtien 2–4 kanssa.
+MITTAA ennen | jälkeen kameran pystyheilahdus (cm) suoralla juoksulla ja kerro luku KK:lle. (Huojunta: DroneNosto.Huojunta*, JuoksuV4Maailma
+kameran korkeusjousi kameraKorkeus ja hyppysuoja; pomppu tulee todennäköisesti Puyin pohja-/rintapisteen y:stä katsepisteessä.)
