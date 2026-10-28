@@ -1,6 +1,6 @@
 # Resepti: maakuntatekstit koko maakunnasta (SK 28.10.2026)
 
-Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti kertoo koko maakunnasta (ensin millainen maakunta on nyt; Hiljainen kansa tms. enintään yksityiskohtana). KK:n kuittaama malli: Suomi (PR 5391, mergattu). Odottavat PR:t: Ruotsi 5449, Norja 5452, Tanska 5454, Viro 5455. PT:n järjestys (28.10.): 1) matkan kohdemaat (laudan pysäkkien maat: Ranska, Britannia, Alankomaat, Italia, Saksa jne.), 2) muut Euroopan maat suurimmasta pienimpään; muut maanosat EIVÄT ennen omistajan päätöstä (19.10.). Maa per PR; KK kuittaa useamman kerralla.
+Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti kertoo koko maakunnasta (ensin millainen maakunta on nyt; Hiljainen kansa tms. enintään yksityiskohtana). KK:n kuittaama malli: Suomi (PR 5391, mergattu). Odottavat PR:t: Ruotsi 5449, Norja 5452, Tanska 5454, Viro 5455; kohdemaat 28.10.: Ranska 5458, Britannia 5460, Alankomaat 5461, Italia 5462, Saksa 5463, Espanja 5464, Portugali 5465, Belgia 5466, Itävalta 5467. PT:n järjestys (28.10.): 1) matkan kohdemaat (laudan pysäkkien maat: Ranska, Britannia, Alankomaat, Italia, Saksa jne.), 2) muut Euroopan maat suurimmasta pienimpään; muut maanosat EIVÄT ennen omistajan päätöstä (19.10.). Maa per PR; KK kuittaa useamman kerralla.
 
 ## Työtapa (maa kerrallaan)
 1. Worktree: `tools/uusi-worktree.sh sisaltokirjuri maakunnat-<maa>`. Avaimet: `import { MAAKUNTIEN_LUONNEHDINNAT as M } from './js/packs/maakunnat-luonnehdinnat.js'` ja `Object.keys(M.<ISO3>)`.
@@ -17,6 +17,25 @@ Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti
 - "lääni" (Ruotsi, Norja), "maakunta" (Suomi, Viro); alueen nimi fi-Wikipedian muodossa.
 - Kohdekarttapisteiden testit: tests/karttareunus.test.mjs ja tests/kohdekarttavarat.test.mjs (siirretty piste ei saa pudota lepotilan näkymän ulkopuolelle).
 - Älä käytä `git stash` (jaettu pino).
+
+## Opitut asiat 28.10. (kohdemaat Ranska–Itävalta)
+- Laudan pysäkkimaat: js/packs/europe-countries.js EUROPE_CITY_COUNTRY. Tehty: FRA, GBR, NLD, ITA, DEU, ESP, PRT, BEL, AUT, CHE (PR 5469), IRL (5473), ROU (5475), MDA (5476), UKR (5484), BGR (5485), SRB (5487), HUN (5488), HRV (5489). Jäljellä pysäkkimaita (alueluku): POL 16, GRC 14, CZE 14, SVN 12, SVK 8, ISL 9, MNE 21, MKD 8, ALB 12, MLT 6, CYP 6, LTU 10, LVA 5, BLR 7, LUX 3, TUR/RUS (Euroopan ja Aasian raja: kysy PT:ltä). Sen jälkeen muut Euroopan maat.
+- Agenttijako: 6–8 aluetta per Sonnet-agentti; omat kirjoitusasuohjeet maalle (alue/osavaltio/piirikunta/provinssi, fi-Wikipedian nimi) agentin kehotteeseen. Pienet maat (1–2 agenttia) yhteen lukijaan.
+- Tuore lukija (Sonnet, ei verkkoa) arvailee faktoja: tarkka luku, jonka lähteestä ei ole varmaa (kuntamäärä, pinta-ala, vierailijamäärä, "ainoa/suurin"), poistetaan tai pehmennetään; älä korjaa arvauksella.
+- Johdonmukaisuus: asukasluvut samasta vuodesta koko maassa (Portugalissa väestönlaskenta 2021, ei sekaisin arvioiden kanssa); "maakunta" vain jos se tarkoittaa alueen alajakoa (Espanja: alueet = itsehallintoalue/alue, provincia = maakunta); Belgia: Vallonia (ei Waloonia), Maas-joki; vuosivälit tankoviivalla ”1739–1743”, päivät ”6.–14.”.
+- Avaimet agentille JSON-tiedostona (esim. rou-avaimet-1.json, ~7 per agentti), ei kehotteeseen: diakriitit (Moldovan ş/ș, ţ/ț) eivät silloin vääristy; agentti käyttää avaimia merkki merkiltä. Aja agentit rinnakkain, ne kirjoittavat JSON-tiedostot väliaikaishakemistoon; yhdistä yhdellä skriptillä.
+- Faktat: fi-Wikipedian piirikunta-/aluesivut ovat usein 404 tai vanhoja, joten agentit käyttävät en-Wikipediaa. Tarkista asukasluvut taulukosta WebFetchillä (Romanian en.wikipedia/Counties_of_Romania täsmäsi kaikille 42:lle). Poista lähteettömät ranking-, "suurin/ainoa"-, vuosi- ja sijaintiväitteet; erityisesti pelkän mielikuvan varassa olevat etymologiat ja luvut. Ajalliset väitteet (mestaruuksien määrä) poistetaan.
+- Tuoreen lukijan jälkeen korjaa: aluetyyppi yhtenäiseksi (piirikunta/piiri/kreivikunta/kantoni, ei "maakunta" muille kuin Suomelle ja Virolle), kielen nimi (iiri), nimet yhtenäisiksi (Genevenjärvi, Tapani Suuri, Puškin), ajanlasku (jaa.), käytetty hyphen → pitkä viiva vuosiväleissä, epäselvät sen/siellä-viittaukset. Rakenteen toisto (X on kantoni, asukasluku, keskus) hyväksytään, kun faktat vaihtelevat.
+- Pienet hallintoalueet (esim. Dublinin kolme aluetta, North/South Tipperary, Moldovan Transnistria ja Stîngă Nistrului): mainitse tilanne yhdellä neutraalilla virkkeellä; Stîngă Nistrului = Dubăsarin piiri.
+- Skriptit tiedostoon (ei node -e eikä zsh-laajennuksia kuten ${c^^}); kuten työkalu maakuntateksti-aseta.mjs.
+
+## Opitut asiat 28.10. iltapäivä (Ukraina–Kroatia)
+- Aluetyyppi fi-Wikipedian mukaan, yhdelle tyypille koko maassa: Ukraina ja Bulgaria "alue", Serbia "piiri" (Vojvodinan osat piirejä, Vojvodina "autonominen provinssi"), Unkari "komitaatti", Kroatia "piirikunta" (ei "kreivikunta"). Agentit livahtavat "maakuntaan": hae lopuksi `maakunt` ja korvaa; älä jätä "X on Y-maan alue" -toistoa ("on Etelä-Bulgariassa", ei "on Etelä-Bulgarian alue").
+- Agentit tuottavat silti vääriä tai lähteettömiä väitteitä, vaikka kirjoittavat lähteistä: Sisakin öljynjalostamo "Kroatian suurin", Penkalan "kuulakärkikynä", Bačkan 1883 "ensimmäinen sanomalehti", Stobin "viidesosa unkarilaisia". Tarkista jokainen "suurin/ensimmäinen/ainoa", tarkka luku ja aikaan sidottu väite (esim. 2025 sähköosuus) ja poista tai pehmennä; arvaamalla ei korjata.
+- Sota ja miehitys: yksi neutraali virke (Ukraina: Donetsk, Luhansk, Herson, Zaporižžja, Krim, Sevastopol; Krimillä "kansainvälisesti tunnustetaan Ukrainan osaksi"); ei rintamalinjoja eikä tuoretta uutisointia. Tuore sotavirke poistetaan, jos tilanne elää (Kramatorskin hallinto).
+- Asukasluvun vuosi sama koko maassa ja merkintä sama "(väestönlaskenta 2021)": Ukraina 1.1.2022 arvio (Krim ja Sevastopol 2013), Unkari 2019 (2022-luvut eivät kattaneet kaikkia), Serbia 2022, Bulgaria 2021, Kroatia 2021. Lähteiden ristiriitaiset kaupunkien asukasluvut jätetään pois.
+- Tuore lukija huomaa hyvin viittaukset (sen/siellä/se), selittämättömät sanat (despotaatti, bulla, sotilasraja) ja translitterointien epäjohdonmukaisuuden (š/tš, j/y, ă); korjaa nämä, mutta kaikkia vierasnimien eroja ei kannata yhtenäistää.
+- Työtapa toimii: pääsession skriptit tiedostoihin (yhdista.mjs, korjaa*.mjs lista [vanha, uusi] -korvauksista, jotka kaatuvat, jos vanhaa tekstiä ei löydy), agentit kirjoittavat JSON:in, `maakuntateksti-aseta.mjs` + testi, raportti docs/raportit/, PR per maa.
 
 ## Agenttiohje (kopioi tiedostoon; vaihda <oma worktree> ja MAATUNNUS)
 

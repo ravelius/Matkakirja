@@ -3088,3 +3088,39 @@ Kortti "Kelpaavatko nähtävyysnostot Pariisin lähikartalla?" (NUI:n pari K1/K2
 ## STRIIMIKARTTA: NÄHTÄVYYSPIIRROKSET ISOMMIKSI JA RAKENNUSTEN KEVENNYS (omistaja 28.10. klo 14.23, KK:n välitys) (28.10.2026 klo 14.23)
 
 1) Kortti "Suurennetaanko nähtävyyksien piirroksia vähän?" (NUI:n pari P1/P2, c7cd7a1e0), sanatarkasti: "kyllä ja saako kontrastia lisättyä helposti niihin?" → NUI: piirrokset isommiksi ja kontrastia lisää. 2) Omistajan kysymys, sanatarkasti: "mietin myös että pitäisikö kartalla näkyviä striimi rakennuksia keventää. ja ovatko kaikki rakennukset samaa dataa vai voiko rakennuksia helposti erotella ja sävyttää hieman eri tavalla?" → KS: kevennys (KK:n suositus) ja selvitys rakennusten lajitiedosta; kuvasarja nyt | kevennetty | kevennetty + sävytys, NUI:n piirrokset mukana → PT tarkistaa → KK → omistaja päättää kuvista. 3) KK nollautui omistajan kortilla 14.23 "Kyllä (suositus)".
+
+## R2-POISTO LAAJENNETTU OLAVINLINNAN VANHOIHIN DIORAAMOIHIN (omistaja 28.10. klo 15.33) (28.10.2026 klo 15.38)
+
+Omistajan kortti KK:ssa 15.33: 'Poistetaanko myös Olavinlinnan vanhat dioraamat?' → 'Kyllä (suositus)'. Laajentaa R2:n yhteisen pysyvän poiston (julkaisija-tyokalut/poista-r2-yhteinen-20261028.zsh, 219 kansiota). Komento omistajalla ajettavana; Tehty → JU tarkistaa.
+
+## RAKENNUSTEN KEVENNYS PUOLIVÄLIIN, KATUVIIVAT KEVYEMMIKSI, PIIRROSTEN KONTRASTI MALTILLISEMMAKSI (omistaja 28.10. klo 15.41) (28.10.2026 klo 15.42)
+
+Kortit KK:ssa 'Kevennetäänkö kartan rakennukset?' ja 'Kelpaavatko isommat ja selkeämmät piirrokset?', sanatarkasti: "kevennys hieman liian vahva. Lisäksi katujen viivat pitää keventää myös. ja silloin nähtävyyksiin ei tarvitse lisätä niin paljoa kontrasti kuin nyt esikatselussa" + piirroksista "ks. ed". Toteutus: KS rakennusten peitto nykyisen ja kevennetyn puoliväliin ja katuviivat kevyemmiksi; NUI piirrosten kontrasti maltillisemmaksi, koko ×1,25 säilyy. Uusi yhteispari KS+NUI → PT → KK.
+
+## KARTAN UUSI KEVEYS HYVÄKSYTTY RUNKOON (omistaja 28.10. klo 16.12) (28.10.2026 klo 16.12)
+
+Kortti KK:ssa 'Kelpaako kartan uusi keveys?' (pt-tarkistus-2 nyt | uusi + lähikuva 2×): "Kelpaa (suositus)". Runkoon (juna 213): KS:n rakennukset 110/255 + katujen reunaviiva 150/255 (käännös 3e42df900, rakennukset-213 d0c294363) ja NUI:n piirrokset cc578c208 (×1,25, maltillinen kontrasti). Sävytys lajin mukaan myöhemmin omana parinaan tämän päälle.
+
+## JUNA 213 TESTFLIGHTIIN KUN KARTTAMUUTOKSET VALMIIT (omistaja 28.10. klo 16.16) (28.10.2026 klo 16.17)
+
+KK:n välitys, sanatarkasti: "lähden jo kotiin, niin julkaise test flight, kun karttajutut ovat valmiina, niin näin ne sitten kotona." Toteutus: juna 213 TestFlightiin heti, kun neljä karttamuutosta ovat omistajan hyväksymiä ja vihreässä rungossa: raja (OK 12.35), väistö limittäin, merkittävyysporrastus, nähtävyysnostot + keveys (OK 16.12). Väistö- ja porrastusparit omistajalle puhelimeen kortilla heti valmiina. Julkaisun jälkeen yksi rivi omistajalle KK:n kautta.
+
+## JUNA 213 ILMAN TARKISTUSAJOA (omistaja 28.10. klo 16.20) (28.10.2026 klo 16.20)
+
+Kortti KK:ssa 'Ajetaanko tarkistusajo ennen julkaisua?' (9.11 päiväjuna): "Ei". Juna 213 lähtee TestFlightiin ilman iPad-muistiajoa (muistiajo-213 OHITETTU); automaattiset käännöstarkistukset ajetaan silti; heti kun karttamuutokset on hyväksytty ja runko vihreä.
+
+## LOUVREN JA BIG BENIN VÄISTÖ HYVÄKSYTTY (omistaja 28.10. klo 16.22) (28.10.2026 klo 16.23)
+
+Kortti KK:ssa 'Kelpaako Louvren ja Big Benin uusi väistö?' (KS:n kuva limittain-4 16.03; Big Ben ja pyramidi hieman limittäin nappulan kanssa; sivuvaikutukset Lontoon pallo alas oikealle ja salama pyramidin alle kerrottu): "Kelpaa (suositus)". KS 5c7384369 → NS → juna 213. TF 213 odottaa enää merkittävyysporrastusta.
+
+## STRIIMIKARTAN KOHTEIDEN NIMET VASTA JUURI ENNEN STRIIMIKARTTAA (omistaja 28.10. klo 18.15) (28.10.2026 klo 18.16)
+
+Kortti KK:ssa 'Kelpaako kohteiden porrastus?' (KS:n pari 3), sanatarkasti: "Nimet saavat tulla näkyviin vasta vähän ennen kun siirrytään striimikarttaan." Toteutus: laajoissa näkymissä (Eurooppa, maa) ei kohteiden nimiä; nimet alkavat näkyä juuri ennen siirtymää striimikarttaan. KS uusi pari → KK → omistaja. TF 213 odottaa tätä.
+
+## SUURTEN KAUPUNKIEN NIMET ENSIN, KOHTEIDEN NIMET VASTA STRIIMIKARTASSA (omistaja 28.10. klo 18.42–18.43) (28.10.2026 klo 18.43)
+
+KK:n kortti, pari 4, sanatarkasti 18.42: "Suurten kaupunkien nimet ensin. Yksittäisten kohteiden nimiä ei voi tulla kuin vasta lähempänä." + 18.43 "Kyllä (suositus)": suurimpien kaupunkien nimet näkyvät jo Ranskan näkymässä, yksittäisten kohteiden nimet vasta striimikartassa. KS pari 5 → KK → omistaja; TF 213 odottaa sitä. Löydös (ei porrastuksen syy): Pariisia lähestyttäessä tasolla 9 taustassa ruutusaumoja (todistus-merkittavat-jalkeen-20261028-1824 M2b) → KS selvittää erikseen.
+
+## LIITO OK, VARTIJA LÄHEMMÄKSI; KIVET OK, KATOT IRTI JA LIIAN KORKEALLA (omistaja 28.10. klo 18.57) (28.10.2026 klo 18.58)
+
+KK:n kortit, sanatarkasti. Liito #1222: "Liito Ok. Vartijan pitää vain olla lähempänä jotta puyi onnistuu lentämään vartijan yli" → PK: vartija lähemmäksi, liito junaan. Kujakivet v5: "Kivet Ok mutta katot näyttävät olevan irti ja liian korkealla" → LR korjaa katot ensin, sitten valo VS+LR. J4-v3 KK palautti LR:lle (kaiverrukset ja leimat eivät näy Codexin kuvan tavoin).
