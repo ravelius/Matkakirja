@@ -3080,3 +3080,7 @@ Kohdemaan rajan ohennus (KS:n parit 2b636c158): omistaja "Kelpaa (suositus)" →
 ## KARTTA: KOHDEMERKIN VÄISTÖ LIMITTÄIN (omistaja 28.10. klo 12.36, KK:n välitys; korvaa 12.35:n meriehdon) (28.10.2026 klo 12.36)
 
 Sanatarkasti: "silloin ei haittaa vaikka menisikin vähän meren päälle, koska tajuaa että on todennäköisesti nappulan kanssa samassa kohtaa. ne voisivat itseasiassa olla ihan vähän limittäin, niin se olisi selkeämpi mieltää" → KS: pieni siirto, merkki ja pelaajan nappula vähän limittäin, ei kuvakortin alle; pari KK:lle ennen NS:ää.
+
+## STRIIMIKARTTA: NÄHTÄVYYSNOSTOIHIN KOHDEKARTAN VALMIIT KUVAKKEET (omistaja 28.10. klo 14.04, KK:n välitys) (28.10.2026 klo 14.04)
+
+Kortti "Kelpaavatko nähtävyysnostot Pariisin lähikartalla?" (NUI:n pari K1/K2, f6ca2648b), sanatarkasti: "saatko siirrettyä ne kuvakkeet kartalle, jotka on jo luotu nähtävyyksille ja jotka näkyvät kohdekaupungin omalla nähtävyydet kartalla" → NUI: harmaiden pisteiden tilalle kohdekartan valmiit miniatyyrikuvakkeet (ilman miniatyyrejä olevat kaupungit pitävät pisteet); Louvressa kuvake ja pyramidimalli eivät kasaudu; uusi pari PT:n tarkistamana KK:lle. Nostot eivät vielä junaan. OPPI (periaate 8): olemassa oleva kohdekartan kuvake on pohja, jota omistaja odottaa; PT:n tarkistuksessa verrataan, onko samalle asialle jo valmis kuva pelissä.
