@@ -642,3 +642,33 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   junaan (PK 21a8962da), ei toimia. Porttiparin uusinta: havainne-editori-20261028-215135/215403 (oikea kuja, tausta-v62 linkitetty).
 - J4-v5 (Codex 6c2cc9edd, GLB SHA 58547e56…ba69 täsmää, posti 20/22 + GLB ja CLAUDE-TOIMITUS.md eivät postissa) → olavinlinna-j4/v5/{models,posti,peli};
   j4_orm.py AO=1 säilyttää R:n (R ka 160,6); kavely-j4 = v5. Esikatselu ajossa (scratchpad j4v5.log) → pari j4_pari.py:llä v4 205424 | v5 | 1021 → PT.
+
+## LISÄYS 48 klo 22.3x (28.10.): kuja 01 v108 — KK:n 47/1–2 + 22.2x-korjaukset ja portaat, pari KK:lle (odottaa vastausta)
+- Ketju tyokalut/aja_v108_pari.zsh (kielletty-rakennukset): avoimet-v68k → v71k = avoimet_raystas_havainne.py VAIHEET=1 (vyö: friisi-v01 × 0,8,
+  UV × 2, wrapT repeat) → avoimet_raystas_v2.py (UUSI: lähin räystäsrivi putkitiilinä 'Katto lasitiili' -lipan yli, pystykiekko jokaisen
+  kansitiilirivin päähän u ≡ 0,205 mod 0,25 Codexin kattokuvan mukaan, tippatiilet väleissä; kannakkeet 40/70/75 %, friisipinta + kultainen
+  riippu) → avoimet_ovi_portaat.py (UUSI: alempi askelma + poskikivet ovien eteen, V4_kivireunus). Apuri avoimet_glb.py. juuri-v108m.
+- Parit (pistekerroin 1): havainteen kamera havainne-editori-20261028-222711, pelikamera -222457 → KK 22.3x. Hylätyt: v106 (kiekot isot,
+  lautasina; tasainen sinivihreä sävyttyi pelissä sini-violetiksi → teksturoitu friisi käyttöön), v107 (vain porrastesti).
+- AUKI: ikkunaristikko (V4_ristikko on jo pelissä; kysytty KK:lta mitä muutetaan); valo vasta muodon jälkeen (omistaja 27.10. 10.56).
+
+## LISÄYS 49 klo 22.4x (28.10.): kuja 01 v109 — KK 22.4x (vyö tummaksi, putket erottumaan, ikkunat ruudukoksi), pari KK:lle
+- aja_v109_pari.zsh: avoimet-v72k = vyö FV 0,55 FS 3 → avoimet_raystas_v2.py (LIPPA 0,5, KULTA 0,6, putket RP 0,07 nostettu RP/2; tumma
+  V4_paattotiili_varjo-nauha poistettu, se peitti putket) → portaat → avoimet_ikkunaristikko.py (UUSI: V4_ristikko-kuva → 6 × 8 rimat +
+  sisäkehys V4_ikkunakehys). juuri-v109m. Parit 223834 (havainne) / 223629 (peli) KK:lle 22.4x.
+- KK:n seuraava: 01:n muoto lukkoon → valo (VS aurinko + leivonta). Huom: ohut vaalea rako kiekkojen ja vyön välissä.
+
+## LISÄYS 50 klo 22.5x (28.10.): kuja 01 MUOTO HYVÄKSYTTY (KK) alapinnan tummennuksen jälkeen; 02/05 aloitettu — LUOVUTUS, ALOITA TÄSTÄ
+- KK 22.5x: v109 ok → viimeinen kohta räystään alapinta (vaalea rako kiekkojen ja vyön välissä) tummaksi; VALOA EI NYT (omistaja 27.10. 10.56:
+  ensin kaikki rakennukset ja elementit havainteen mukaisiksi). Pari tasaisessa valossa (46c0add3c:ssä VS:n vertailuvalo oletuksena) KK:lle →
+  omistajalle. aja_v110_pari.zsh (avoimet-v73k, juuri-v110m): avoimet_raystas_v2.py + tumma alalaatta lipan alle (V4_raystas_alapinta_varjo),
+  ruoteet × 0,2 (v110 224407 / 225106: rako näkyy YHÄ vaaleina raitoina kiekkojen välissä → ei ruoteet). Koe: tumma taustalevy kiekkojen
+  taakse (225904) peitti koko räystään (yt = lipan max y nousee nurkkien kaarteissa) → poistettu skriptistä. SEURAAVA: taustalevy riveittäin
+  (yt = paikallinen reunan y + RP·(NOSTO+1)) tai selvitä raidan lähde (lipan reunapinta / putkien avoin alapuoli); aja aja_v110_pari.zsh ja
+  TESTIKAMERA_01="4 6.5 16 45" → kun rako tumma, pari KK:lle (muoto hyväksytty, KK vie omistajalle). PARIA EI VIELÄ LÄHETETTY.
+- 02/05 (KK: friisi → keltatiilinen räystäs + hillitty nauha; sitten porttikujan sivumuurit ja lattia): aja_v111_pari.zsh (UUSI muuri_raystas.py:
+  kiekot + tippatiilet muurikatteen V4_palatsi_katto-lappeiden alareunoille, 740 kpl kujan alueella; vyökäsittely FV 0,55 FS 3 muurikatteeseen
+  ja tausta 0-3/1-3 lod0:aan; muurikate muurikate-v19/pari-v111-v16-nimella, tausta yksikerros-v95, juuri-v111m = juuri-v110m + nämä).
+  Pari 224621 EI KELPAA: pelikameran muurit paljon korkeammat kuin havainteessa → harja jää kuvan yläpuolelle; 05:n vasen yläkulma yhä kirkas
+  nauha ilman kiekkoja (lähde ei muurikate? tutki skannerilla scratchpad friisihaku.py -mallilla: ikkuna x/z kujan 05 kohdalle, kaikki
+  pelin lataamat paketit: muurikate-v16, rakennukset-v48, tausta-v57). Havainteen kamera kujille 02/05 puuttuu (TESTIKAMERA_02/_05).
