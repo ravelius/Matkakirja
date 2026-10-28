@@ -523,7 +523,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Saarland": {
       lyhyt: "Saarbrücken tuntuu vähän Ranskalta – täällä syödään croissantteja ja puhutaan murteessa ranskaa sekaan.",
-      pitka: `Saarland on osavaltio Lounais-Saksassa, ja siellä asuu noin miljoona ihmistä. Se on pinta-alaltaan pienin osavaltio kaupunkivaltioita lukuun ottamatta, ja metsää on noin kolmannes maa-alasta. Pääkaupunki on Saarbrücken. Alue oli vuosina 1947–1957 Ranskan hallinnoima Saarin protektoraatti. Vuonna 1955 äänestäjät hylkäsivät ehdotuksen autonomiasta, ja 1. tammikuuta 1957 alue liittyi Länsi-Saksaan osavaltiona. Völklingenin kaupungissa on rautatehdas, joka toimi vuoteen 1986 ja on Unescon maailmanperintökohde vuodesta 1994. Se on yksi harvoista Euroopassa säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Viimeinen hiilikaivos suljettiin vuonna 2012. Saar-joen Saarschleife on mutka, jossa joki kiertää Cloefin harjannetta.`,
+      pitka: `Saarland on osavaltio Lounais-Saksassa, ja siellä asuu noin miljoona ihmistä. Se on pinta-alaltaan pienin osavaltio kaupunkivaltioita lukuun ottamatta, ja metsää on noin kolmannes maa-alasta. Pääkaupunki on Saarbrücken. Alue oli vuosina 1947–1956 Ranskan hallinnoima Saarin protektoraatti. Vuonna 1955 äänestäjät hylkäsivät ehdotuksen autonomiasta, ja 1. tammikuuta 1957 alue liittyi Länsi-Saksaan osavaltiona. Völklingenin kaupungissa on rautatehdas, joka toimi vuoteen 1986 ja on Unescon maailmanperintökohde vuodesta 1994. Se on yksi harvoista Euroopassa säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Viimeinen hiilikaivos suljettiin vuonna 2012. Saar-joen Saarschleife on mutka, jossa joki kiertää Cloefin harjannetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-saarland-28400314.jpg',
@@ -553,7 +553,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Schleswig-Holstein": {
       lyhyt: "Kahden meren välissä tuulimyllyt pyörivät joka suuntaan – tuulivoima on täällä arkipäivää, ei erikoisuus.",
-      pitka: `Schleswig-Holstein on osavaltio Pohjois-Saksassa, ja siellä asuu noin kolme miljoonaa ihmistä. Osavaltio sijaitsee Jyllannin niemimaan eteläosassa Pohjanmeren ja Itämeren välissä, ja sen pohjoispuolella on Tanska. Pääkaupunki on Kiel. Kielin kanava on 98 kilometriä pitkä ja yhdistää Pohjanmeren ja Itämeren. Keisari Wilhelm II avasi sen vuonna 1895. Kanavaa pitkin kulkee keskimäärin 32 000 laivaa vuodessa. Lyypekin kaupunki oli Hansaliiton johtava kaupunki 1300- ja 1400-luvuilla. Siellä on Holstentor-niminen keskiaikainen kaupunginportti vuodelta 1478, ja kaupunki on tunnettu marsipaanistaan. Wackenin kylässä pidetään joka vuosi Wacken Open Air -metallimusiikkifestivaali. Osavaltion pohjoisosassa asuu tanskalaista vähemmistöä.`,
+      pitka: `Schleswig-Holstein on osavaltio Pohjois-Saksassa, ja siellä asuu noin kolme miljoonaa ihmistä. Osavaltio sijaitsee Jyllannin niemimaan eteläosassa Pohjanmeren ja Itämeren välissä, ja sen pohjoispuolella on Tanska. Pääkaupunki on Kiel. Kielin kanava on 98 kilometriä pitkä ja yhdistää Pohjanmeren ja Itämeren. Keisari Vilhelm II avasi sen vuonna 1895. Kanavaa pitkin kulkee keskimäärin 32 000 laivaa vuodessa. Lyypekin kaupunki oli Hansaliiton johtava kaupunki 1300- ja 1400-luvuilla. Siellä on Holstentor-niminen keskiaikainen kaupunginportti vuodelta 1478, ja kaupunki on tunnettu marsipaanistaan. Wackenin kylässä pidetään joka vuosi Wacken Open Air -metallimusiikkifestivaali. Osavaltion pohjoisosassa asuu tanskalaista vähemmistöä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-maakunta2-schleswig-holstein-v-5cfaf136.jpg',
@@ -793,7 +793,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Hessen": {
       lyhyt: "Frankfurtin pilvenpiirtäjät kohoavat keskellä Saksaa – täällä lyödään Euroopan keskuspankin rahapäätökset.",
-      pitka: `Hessen on Saksan osavaltio, ja siellä asuu noin 6,3 miljoonaa ihmistä. Pääkaupunki on Wiesbaden, mutta suurin kaupunki on Frankfurt am Main, jossa asuu noin 760 000 ihmistä. Frankfurtissa ovat Euroopan keskuspankin ja Saksan keskuspankin Bundesbankin toimipaikat, ja kaupungin lentoasema on yksi Euroopan vilkkaimmista. Frankfurtin ympärillä oleva Rein-Main-alue on Saksan toiseksi suurin suurkaupunkialue. Darmstadt oli 1900-luvun vaihteessa jugendtyylin keskus. Marburgin yliopisto perustettiin vuonna 1527. Osavaltiosta noin 42 prosenttia on metsää. Taunus on kukkulaseutu, jonka tunnettu huippu on Großer Feldberg. Rhönin vuoriston Wasserkuppe on 950 metriä korkea, ja se on Hessenin korkein kohta.`,
+      pitka: `Hessen on osavaltio Keski-Saksassa, ja siellä asuu noin 6,3 miljoonaa ihmistä. Pääkaupunki on Wiesbaden, mutta suurin kaupunki on Frankfurt am Main, jossa asuu noin 760 000 ihmistä. Frankfurtissa ovat Euroopan keskuspankin ja Saksan keskuspankin Bundesbankin toimipaikat, ja kaupungin lentoasema on yksi Euroopan vilkkaimmista. Frankfurtin ympärillä oleva Rein-Main-alue on yksi Saksan suurimmista suurkaupunkialueista. Darmstadt oli 1900-luvun vaihteessa jugendtyylin keskus. Marburgin yliopisto perustettiin vuonna 1527. Osavaltiosta noin 42 prosenttia on metsää. Taunus on kukkulaseutu, jonka tunnettu huippu on Großer Feldberg. Rhönin vuoriston Wasserkuppe on 950 metriä korkea, ja se on Hessenin korkein kohta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-hessen-f7d7cc9a.jpg',
@@ -823,7 +823,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Thüringen": {
       lyhyt: "Thüringenin metsät peittävät suuren osan maakunnasta – siksi sitä kutsutaan Saksan vihreäksi sydämeksi.",
-      pitka: `Thüringen on Saksan osavaltio, ja siellä asuu noin 2,1 miljoonaa ihmistä. Pääkaupunki on Erfurt, jossa on noin 200 000 asukasta. Osavaltiota kutsutaan Saksan vihreäksi sydämeksi, koska siellä on laajoja metsiä. Thüringenin metsävuoristossa kulkee Rennsteig-vaellusreitti, ja vuoriston korkein huippu Großer Beerberg on 983 metriä. Weimar tunnetaan kirjailijoista Goethesta ja Schillerista. Eisenachin kaupungin lähellä on Wartburgin linna, jonka rakentaminen alkoi noin vuonna 1067. Uskonpuhdistaja Martin Luther käänsi siellä Uuden testamentin saksaksi vuosina 1521–1522. Linna on Unescon maailmanperintökohde vuodesta 1999.`,
+      pitka: `Thüringen on osavaltio Keski-Saksassa, ja siellä asuu noin 2,1 miljoonaa ihmistä. Pääkaupunki on Erfurt, jossa on noin 200 000 asukasta. Osavaltiota kutsutaan Saksan vihreäksi sydämeksi, koska siellä on laajoja metsiä. Thüringenin metsävuoristossa kulkee Rennsteig-vaellusreitti, ja vuoriston korkein huippu Großer Beerberg on 983 metriä. Weimar tunnetaan kirjailijoista Goethesta ja Schillerista. Jena on yliopistokaupunki Saale-joen varrella. Eisenachin kaupungin lähellä on Wartburgin linna, jonka rakentaminen alkoi noin vuonna 1067. Uskonpuhdistaja Martin Luther käänsi siellä Uuden testamentin saksaksi vuosina 1521–1522. Linna on Unescon maailmanperintökohde vuodesta 1999.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-thuringen-1393c42b.jpg',
@@ -853,7 +853,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Sachsen-Anhalt": {
       lyhyt: "Dessaussa Bauhaus-rakennukset seisovat pystyssä – muotoilukoulun perintö näkyy koko kaupunkikuvassa.",
-      pitka: `Saksi-Anhalt on Saksan osavaltio, ja siellä asuu noin 2,1 miljoonaa ihmistä. Asukasluku on vähentynyt: vuonna 1990 heitä oli noin 2,9 miljoonaa. Pääkaupunki on Magdeburg Elbe-joen rannalla, ja Halle on osavaltion toinen suuri kaupunki. Hallessa on osavaltion suurin yliopisto, Martin Lutherin yliopisto. Harzin vuoristossa on Brocken, jonka huippu on 1 141 metrin korkeudessa. Se on Pohjois-Saksan korkein vuori. Osavaltiossa on useita Unescon maailmanperintökohteita, esimerkiksi Quedlinburgin vanhakaupunki, Naumburgin tuomiokirkko, Dessaun Bauhaus-rakennukset ja Dessau-Wörlitzin puutarhat. Elbe-joen varrella oleva Wittenberg oli uskonpuhdistaja Martin Lutherin työn keskuspaikka.`,
+      pitka: `Saksi-Anhalt on osavaltio Itä-Saksassa, ja siellä asuu noin 2,1 miljoonaa ihmistä. Asukasluku on vähentynyt: vuonna 1990 heitä oli noin 2,9 miljoonaa. Pääkaupunki on Magdeburg Elbe-joen rannalla, ja Halle on osavaltion toinen suuri kaupunki. Hallessa on osavaltion suurin yliopisto, Martin Lutherin yliopisto. Harzin vuoristossa on Brocken, jonka huippu on 1 141 metrin korkeudessa. Se on Pohjois-Saksan korkein vuori. Osavaltiossa on useita Unescon maailmanperintökohteita, esimerkiksi Quedlinburgin vanhakaupunki, Naumburgin tuomiokirkko, Dessaun Bauhaus-rakennukset ja Dessau-Wörlitzin puutarhat. Elbe-joen varrella oleva Wittenberg oli uskonpuhdistaja Martin Lutherin työn keskuspaikka.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-sachsen-anhalt-a864473c.jpg',
