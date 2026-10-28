@@ -2979,3 +2979,7 @@ KK hyväksyi reunakiviparin 195504 klo 19.59, ja myös PT katsoi sen, mutta kump
 ## Maailmanperintö: pienet violetit pisteet (omistaja 28.10. 07.33) (28.10.2026 klo 07.33)
 
 Omistaja (KK:n kortti) sanatarkasti: 'Hehku liian iso. Voi olla violetilla pieniä pisteitä jotka hehkuvat kevyesti'. Nimet ennallaan. Järvirannat ja lähizoom: Kelpaa, junassa 213. Parkour: hyvä suunta, jatka. Huohotusten poisto: Ei nyt. Iso hehku ei lähde junassa 213; KS korjaa, pari KK:lle.
+
+## Maailmanperintö: violetit pisteet hylätty, liian isot (omistaja 28.10. 08.10) (28.10.2026 klo 08.11)
+
+Omistaja (KK:n kortti) sanatarkasti: 'pisteet ja hehku aivan liian isoja'. Tavoite: piste enintään kaupunkipisteen kokoinen, hehku vain ohut himmeä kehä; uusi pari KK:lle; violetti versio (d8728903d) ei junaan 213. OPPI (KK:n virhe, periaate 1): kun omistaja sanoo 'liian iso' ja 'pieni', puolitus ei riitä; koko verrataan kartan pienimpiin merkkeihin ennen omistajaa.
