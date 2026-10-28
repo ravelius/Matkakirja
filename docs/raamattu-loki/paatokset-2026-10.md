@@ -3132,3 +3132,7 @@ KK:n välitys, sanatarkasti: "Nimet ovat aivan liian isolla". Tavoite (KK): porr
 ## OMISTAJAN PAATOS: PORRASTUS KELPAA, TF 213 LAHTEE (28.10. klo 21.40) (28.10.2026 klo 21.41)
 
 Kortti KK:ssa: "Kelpaako porrastus nyt?" → "Kelpaa (suositus)" (selite "Testiversio 213 lähtee heti."). Kuva docs/raportit/kaappaukset/omistaja-20261028/porrastus-viisi-nakymaa-ennen-jalkeen-2140.jpg = KS:n pari 9, merkittavat-213 f5ea99f7f + 752794a22. Seuraavaksi KS → NS kokoaa rungon → JU tf-kaynnista.sh 213 + pieni iPad. Vartija näytetty omistajalle tiedoksi.
+
+## OMISTAJAN PAATOS: KESKITYSLEIRIT POIS KARTAN NAHTAVYYKSISTA (28.10. klo 21.56) (28.10.2026 klo 21.56)
+
+Kortti KK:ssa: "Poistetaanko keskitysleirit kartan nähtävyyksistä?" → "Poistetaan (suositus)" (selite: "Leirit pois nähtävyyksistä. Muistopaikat voi tuoda myöhemmin omana aiheenaan."). Koskee kaikkia keskitys- ja tuhoamisleirejä (mm. Drancy, Majdanek, Ravensbrück, Chełmno, Auschwitz-Birkenau, Dachau, Mauthausen, Treblinka). Tausta: KK huomasi saumaparissa nimen "Drancy concentration camp" nähtävyyksien joukossa; samalla todettiin, että 2 988/5 231 merkittävällä kohteella ei ole suomenkielistä nimeä (näkyivät englanniksi tasoilla 11–14). PT: ne jäävät piirroksina ilman nimilappua (tai pois datasta, jos ei onnistu turvallisesti), vain suomeksi -linjauksen mukaan. Molemmat KS:n commiteina uuteen TF 213 -runkoon; ensimmäinen 213-ajo (runko a7b9b71d4) peruttu ennen IPA:ta.
