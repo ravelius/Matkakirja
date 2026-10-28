@@ -469,10 +469,13 @@ test('resepti 2026-09-26 = 2026-09-25 + litistys 1 ja syvyyskontrasti 1,35 (löy
   assert.ok(a.pohjaliput.includes('{"syvyys":{"litistys":0.8}}'), '25 ennallaan');
 });
 
-test('resepti 2026-10-26 = 2026-09-26 + tasankokorostus lämpimään reliefiin, ei deltaa', () => {
-  const a = RESEPTIT['2026-09-26']; const b = RESEPTIT['2026-10-26'];
-  for (const k of Object.keys(b)) if (!['kuvaus', 'pohjaliput'].includes(k)) assert.deepEqual(b[k], a[k], k);
-  assert.equal(b.deltaEdelliseen, undefined);
+test('resepti 2026-10-26 = 2026-09-26 + tasankokorostus lämpimään reliefiin + valtamerten nimet elävinä, ei deltaa', () => {
+  const a = RESEPTIT['2026-09-26']; const b0 = RESEPTIT['2026-10-26'];
+  for (const k of Object.keys(b0)) if (!['kuvaus', 'pohjaliput'].includes(k)) assert.deepEqual(b0[k], a[k], k);
+  assert.equal(b0.deltaEdelliseen, undefined);
+  // Omistaja 28.10. 08.39: valtamerten nimet pois kuvasta (natiivi piirtää ne elävinä vaakasuorassa).
+  assert.equal(b0.pohjaliput[b0.pohjaliput.length - 1], '--ilman-valtamerinimia');
+  const b = { ...b0, pohjaliput: b0.pohjaliput.slice(0, -1) };
   assert.equal(b.pohjaliput.length, a.pohjaliput.length);
   const i = a.pohjaliput.indexOf('--reliefi-koe');
   assert.equal(a.pohjaliput[i + 1], 'lammin', '26 ennallaan');

@@ -139,11 +139,11 @@ export const TASANKO_2026_10_26 = Object.freeze({ kerroin: 4, k0: 0.02, pohjaM: 
 const { deltaEdelliseen: _d26, ...R26 } = RESEPTITAULU['2026-09-26'];
 RESEPTITAULU['2026-10-26'] = Object.freeze({
   ...R26,
-  kuvaus: '2026-09-26 + tasankokorostus lämpimään reliefiin (omistaja 26.10.2026 klo 12.45)',
-  pohjaliput: R26.pohjaliput.map((l) => {
+  kuvaus: '2026-09-26 + tasankokorostus lämpimään reliefiin (omistaja 26.10.2026 klo 12.45), valtamerten nimet elävinä (28.10. 08.39)',
+  pohjaliput: [...R26.pohjaliput.map((l) => {
     if (l === 'lammin') return JSON.stringify({ tasanko: TASANKO_2026_10_26 });
     return l === '2026-09-26' ? '2026-10-26' : l;
-  }),
+  }), '--ilman-valtamerinimia'],
 });
 export const RESEPTIT = Object.freeze(RESEPTITAULU);
 
