@@ -613,3 +613,22 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - 05: ovet ovat 3D-lehtiä (ovi_V/ovi_O), peli avaa 90° (PorttiOviKulma); havainteessa ~65° → Pelikoodarin koodi, PT:lle ehdotettu.
 - Ketju `zsh K/tyokalut/aja_v104_pari.zsh` (REF 46c0add3c, ~3 min/ajo); havainteen kamera TESTIKAMERA_0x="4 6.5 16 45".
   Parit: pelikamera havainne-editori-20261028-211708, havainteen kamera …-211930 → PT → KK. Omistajalle vasta, kun 01 näyttää havainteelta.
+
+## LISÄYS 46 klo 21.5x (28.10.): 01 v105 (tiilirivit + koristevyö), 02/05 friisi kesken, porttiovi-pari uusittu tausta-v62:lla — LUOVUTUS, ALOITA TÄSTÄ
+- KK 21.4x: v104m 01 iso parannus, ovi 2,71 OK. Pyynnöt: 1) katon tiilirivit ja päätetiilet näkyviin, 2) räystään alle koristevyö kannakkeineen,
+  sitten 02/05 keltatiilinen räystäs + hillitty nauha. PT 21.5x: porttipari riittää; parit KK:lle (juoksupeli = KK johtaa).
+- 01 TEHTY (aja_v105_pari.zsh, juuri-v105m): avoimet_nauha.py v65k:sta NAUHA_YLA 2,55 DY −0,31 KONSOLI=1 (uusi env: palkinpäät jäävät)
+  → avoimet_korkea.py YLA=2,55 (uusi env; myös katon normaalit loivennuksen mukaan) → avoimet_katto_uv.py (UUSI: V4_palatsi_katto-lappeet
+  1 UV = 1 m Codexin palatsipinnat-v1 KAYTTO:n mukaan, u räystään suunta, v alamäkeen; oli 0,38/m) → avoimet-v68k. Vyö 3,26–3,77, kannakkeet
+  3,03–3,25, ovi 2,71. Parit: pelikamera havainne-editori-20261028-212548, havainteen kamera …-212741 (PT:lle 21.4x). Tiilirivit näkyvät.
+  AUKI 01: vyö kirkkaampi kuin havainteen tumma sinivihreä, kannakkeet ruskeat (V4_konsoli) eikä sinivihreät kuten havainteessa.
+- 02/05 KESKEN: kuja_friisi_hillitty.py (UUSI) siirsi taustan kk-tausta-0-3-lod0:n kujan friisikolmiot (8 kpl) V4_palkkivyöhön → yksikerros-v94
+  (APFS-klooni v93:sta), juuri-v105m:n kielletty-tausta-v57 → v94. Parit 212952 / 213940: vasemman lähimmät isot kirkkaat friisipalat EIVÄT
+  muuttuneet → lähde muualla (tutki: rakennukset-v48 porttirakennelmat / muurikate / solmut joilla rotation/scale — friisihaku-skripti ohitti ne).
+- PORTTIOVET 65° (PT 21.3x, PK 21a8962da): ensimmäinen pari 213543/213715 oli virheellinen: junan 213 koodi lukee kielletty-tausta-v62:ta, jota
+  koejuuressa ei ollut → kuja 05 aukealla. Korjattu: juuri-v104m ja -v105m: kielletty-tausta-v62 → _valmiit/juoksupeli-kk-tausta-peking-v62-
+  vienti-20261027/juoksupeli/maailma-v4/kielletty-tausta-v62. Uusinta ajossa (REF 907f7b752 = 213 + pistekerroin, 2f58aa5bc = porttiovi-65 +
+  pistekerroin; kohta 05 molemmat kamerat) → kk-ovet-90-vs-65.png KK:lle. HUOM: VS-runko 46c0add3c:ssa ei ole porttiovia lainkaan.
+- J4-v5: Codex aloitti (posti 6fd2e5bfd, 21.08, arvio 30–60 min). Kun toimitus tulee: v4/peli-ketju (j4_arkkuun → j4_siivous → astc-mip 4 →
+  j4_orm (HUOM: v5:ssä R = AO, j4_orm.py asettaa R = 255 → muuta säilyttämään R) + astc6) → kavely-j4 → j4_pari.py (v4 205424 | v5 | 1021) → KK.
+- Proto-haarat (wt/proto-lavastaja-havainne): lavastaja/kerroin-2855d8478, -8885a9f54, -60a42b4f0 (907f7b752), -porttiovi65 (2f58aa5bc).
