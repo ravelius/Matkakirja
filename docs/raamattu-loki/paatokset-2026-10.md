@@ -2983,3 +2983,7 @@ Omistaja (KK:n kortti) sanatarkasti: 'Hehku liian iso. Voi olla violetilla pieni
 ## Maailmanperintö: violetit pisteet hylätty, liian isot (omistaja 28.10. 08.10) (28.10.2026 klo 08.11)
 
 Omistaja (KK:n kortti) sanatarkasti: 'pisteet ja hehku aivan liian isoja'. Tavoite: piste enintään kaupunkipisteen kokoinen, hehku vain ohut himmeä kehä; uusi pari KK:lle; violetti versio (d8728903d) ei junaan 213. OPPI (KK:n virhe, periaate 1): kun omistaja sanoo 'liian iso' ja 'pieni', puolitus ei riitä; koko verrataan kartan pienimpiin merkkeihin ennen omistajaa.
+
+## Kartta: kohdemerkit puoleen kauempaa, Louvre kapeammaksi (omistaja 28.10. 08.13) (28.10.2026 klo 08.13)
+
+Omistaja (KK) sanatarkasti: 'Louvre ja muut vastaavat kohteet ovat myös liian isoja kauemmilla zoom-tasoilla. Ne voi pienentää puoleen ja Louvrea pitää pienentää suhteessa muihin pienemmäksi. Se näyttää nyt liian leveältä verrattuna muihin vastaaviin kohteisiin.' Lähizoom ennallaan. KS tekee; pari KK:lle ennen junaa.
