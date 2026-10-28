@@ -74,6 +74,8 @@ jobs:
       AMPARI: ${{ secrets.R2_BUCKET }}
       PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
       JULKINEN: https://media.matkakirja.app
+      # R2-kulut (28.10.2026): mediakuvien alkuperäisten etuliitteet, jotka listataan ennen mittausta (HEAD:n sijaan).
+      MEDIAKUVA_ETULIITTEET: kuvat/ karttanostot/ kohtaamiset/
       PALAUTA: ${{ inputs.palauta }}
     steps:
       - uses: actions/checkout@v4
