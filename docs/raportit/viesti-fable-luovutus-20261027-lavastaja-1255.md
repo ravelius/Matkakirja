@@ -514,3 +514,14 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Pari havainne-editori-20261028-154243 (+ lähikuvat 091657:n rajauksilla) → KK. Sonnet: lattia vaaka-asennossa ja venymätön (parannus), mutta 05/01 laatat kapeat ja
   saumojen vieressä vaalea kaksoisviiva (VS:n v4-saumajako → VS:lle SEAMS.json 15.5x); kivijalassa 05/01 9–10 kerrosta, kivet ohuet.
 - SEURAAVA: KK:n vastaus (ehdotettu: kerrokset Codexin mittaan SK 1,0 + VS:n saumat) → uusi pari. Sitten kohta 3 (räystään ulkonema + friisivyö).
+
+## LISÄYS 38 klo 16.1x (28.10.): KK hyväksyi kujakivet (kohdat 1–3), poikkiviiva korjattu, reunakivi työn alla
+- KK 16.0x: kivijalka Codexin 0,15 m:iin (SK 1,0) ja lattiarivit syvemmiksi → kujakivi_vaihda.py SKALA-kertoimet (aja_v98/v99_pari.zsh). v99 (lattia v ÷ 1,8,
+  VS REF 65b736b1b = OpenGL-normaali) pari 160220 → KK 16.2x: kohdat 1–3 HYVÄKSYTTY, näytetään omistajalle keskeneräisenä. 2× lähikuvassa juonne ei veny → ei Codex-tilausta.
+- Poikkiviiva (VS): kujan lattia on erillisiä poikkikaistoja, liitoksissa raot (raot.py) → K/tyokalut/lattia_alusta.py (tumma alusta lattian alle, toistettava).
+  aja_v100_pari.zsh (juuri-v100m = v99m + alusta); testi 05: havainne-editori-20261028-160928, viiva poissa.
+- KK 16.2x seuraavat: a) REUNAKIVI vaalea, korotettu, pitkäkivinen (LR muoto; tumma etupinta = valo → VS, albedo vaalea); b) kivijalan pystyjuovat (VS);
+  c) lattia lämmin kerma (VS). VS:lle viestit 16.2x ja 16.3x.
+- KÄYNNISSÄ (16.13): `zsh K/tyokalut/aja_v101_pari.zsh` (~40 min; jatko keskeytyksestä: aja uudelleen): aja_ketju_v85r.zsh (= v85, REUNA_H 0,25, URA_L 0,012,
+  URA_VIISTE 1) → yksikerros-v85r → v5-pinnat suoraan (SK 1, LKU 1, LKV 1,8) + palatsipinnat (katto+friisi) + alusta → yksikerros-v93, juuri-v101m, pari REF 65b736b1b.
+  Sitten lähikuvat (lahi.py 091657:n rajauksin) + 05:n reunakivirajaus → KK.
