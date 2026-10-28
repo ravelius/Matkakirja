@@ -3100,3 +3100,7 @@ Kortit KK:ssa 'Kevennetäänkö kartan rakennukset?' ja 'Kelpaavatko isommat ja 
 ## KARTAN UUSI KEVEYS HYVÄKSYTTY RUNKOON (omistaja 28.10. klo 16.12) (28.10.2026 klo 16.12)
 
 Kortti KK:ssa 'Kelpaako kartan uusi keveys?' (pt-tarkistus-2 nyt | uusi + lähikuva 2×): "Kelpaa (suositus)". Runkoon (juna 213): KS:n rakennukset 110/255 + katujen reunaviiva 150/255 (käännös 3e42df900, rakennukset-213 d0c294363) ja NUI:n piirrokset cc578c208 (×1,25, maltillinen kontrasti). Sävytys lajin mukaan myöhemmin omana parinaan tämän päälle.
+
+## JUNA 213 TESTFLIGHTIIN KUN KARTTAMUUTOKSET VALMIIT (omistaja 28.10. klo 16.16) (28.10.2026 klo 16.17)
+
+KK:n välitys, sanatarkasti: "lähden jo kotiin, niin julkaise test flight, kun karttajutut ovat valmiina, niin näin ne sitten kotona." Toteutus: juna 213 TestFlightiin heti, kun neljä karttamuutosta ovat omistajan hyväksymiä ja vihreässä rungossa: raja (OK 12.35), väistö limittäin, merkittävyysporrastus, nähtävyysnostot + keveys (OK 16.12). Väistö- ja porrastusparit omistajalle puhelimeen kortilla heti valmiina. Julkaisun jälkeen yksi rivi omistajalle KK:n kautta.
