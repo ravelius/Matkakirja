@@ -3047,3 +3047,7 @@ Omistaja (KK, NUI:n parit) sanatarkasti: 'värit ok, mutta jätä väri pelkäst
 ## Kartta: perintönimet kelpaa; sama zoom-katto kaikille kartan elementeille (omistaja 28.10. 10.27) (28.10.2026 klo 10.28)
 
 Omistaja (KK, KS:n perintönimipari) sanatarkasti: 'kelpaa. mutta tee kaikille kartan elementeille sama zoom katto kuin louvre yms. eli kuumailmapallot, kohdekaupunkien pisteet, pelaajan nappi yms.' Perintönimierä runkoon; kohdemerkkierä (10.18 + 10.27) KS:lle yhteen pariin; pieni iPad odottaa sen hyväksyntää.
+
+## Suurennuslasi ja välilehtivärit hyväksytty; puistojen nimet Vedet ja vuoret -kytkimeen (omistaja 28.10. 10.37) (28.10.2026 klo 10.37)
+
+Omistaja (KK:n kortti, NUI:n parit): välilehtien värit vain välilehdissä 'Kelpaa'; suurennuslasi (aukeaa vain napautuksesta, lähikartalla Kartta valmiiksi) 'Kelpaa'; puistojen ja metsien nimet Vedet ja vuoret -kytkimeen 'Kyllä' (kaksi nimikytkintä poistavat kaikki nimet; Puistot ja metsät vain alueet). Värit + lasi runkoon; nimijaon uusinta KK:lle.
