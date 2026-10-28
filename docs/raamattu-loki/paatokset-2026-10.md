@@ -3063,3 +3063,12 @@ Omistaja (KK) sanatarkasti: 'ohenna kohdemaan rajausta kun zoomataan ulos. nyt u
 ## Striimikartta: kohteet porrastetaan merkittävyyden mukaan (omistaja 28.10. 12.16/12.21) (28.10.2026 klo 12.21)
 
 Omistaja (KK) 12.16 sanatarkasti: 'saisiko striimikarttaan jotenkin merkittävimmät kohteet näkymään jo heti laajemmassa näkymässä ja vähemmän merkittävät vasta kaikkein lähimmillä zoom asteilla? mitä mahdollisuuksia meillä on?' Päätös 12.21 (kortti): 'Kyllä (suositus)' – 'Kuuluisimmat näkyvät kaukaa, pienemmät tulevat esiin lähestyttäessä.' Toteutus: merkittävyys Wikidata sitelinks -määrästä (CC0) + tilasääntö (nimet eivät päällekkäin, merkittävin voittaa), pehmeä esiintulo, nykyiset merkit ja nimet (UI-POHJAT). Ei ryhmämerkkejä eikä tarinan paikkoja ensin. KS Louvren väistön jälkeen; pari Eurooppa/Ranska/Pariisi KK:lle.
+
+## Cloudflaren säästöpaketti ja nähtävyysnostot striimikartalle (omistaja 28.10. 12.28) (28.10.2026 klo 12.30)
+
+1) Omistaja (KK) n. 12.22 sanatarkasti: 'mikä kaikki kuluttaa tätä? aika kallis kuukausikulu jo tähän mennessä. miten voitaisiin pienentää? vielä ei ole kuin muutama pelaaja.' (Cloudflare 51,86 $
+2.10.–28.10., kaikki R2:ta: säilytys ~13 $, A ~23 $ PutObject, B ~15 $ HeadObject; omista työkaluista, ei pelaajista). Päätös 12.28: 'Kyllä (suositus)' – 'Kirjanpito omalle koneelle, vain muuttuneet
+palat varastoon ja käyttämättömät karttaversiot pois.' JU: a) paikallinen luettelo HEAD:ien sijaan, c) käyttämättömät karttaversiot pois PT:n tarkistaman listan jälkeen; KS: b) poltto vie vain
+muuttuneet palat. Pelaajien lataukset ennallaan. Tavoite ~10–15 $/kk. 2) Omistaja n. 12.24: 'pystyykö striimikartalle tuomaan kohdekaupunkeihin tehtyjä nähtävyysnostoja?' Päätös 12.28: 'Kyllä
+(suositus)' – 'Näkyvät oikeilla paikoillaan, kun lähestyt kaupunkia. Napautus avaa jutun.' Vasta kaupungin lähikartalla (2.9. linja maan tasolla pätee), nykyiset nostomerkit, napautus avaa saman
+jutun; sijainnit SK:lta Wikidatasta; NUI vetää.
