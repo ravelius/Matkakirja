@@ -426,3 +426,17 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - Kujakivet: Codexin v4 (f0766ed58) ei vielä postissa → ohjeet LISÄYS 28.
 - JATKO (Macin uudelleenkäynnistys): ei taustaajoja. J4-uusinta: python3 _tyo/linnanrakentaja/olavinlinna-j4/j4_hopea.py esine-arkun-hopeasisalto-pronssi.glb esine-arkun-hopeasisalto.glb (+ kopio kavely-j4/),
   ajo: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 5681793be <sk-komero-j4-lahi.txt> ipad --batch.
+
+## LISÄYS 30 klo 05.0x (28.10.): J4 odottaa Codexin J4-v3:a; kujakivet edelle
+- Kierros KK:n kanssa (v4 j4-kk-3 → v5 j4-kk-5, lokit/esikatselu-20261028-044256): kirkkaus +29 % VS:n metallivalolla (vain metallille), normaalit ja väri ASTC:nä
+  (NS:n AstcSaatavilla f047065df rungossa). KK 04.4x: EI JUNAAN (halo, läikät, mustat kolikot, leimat puuttuvat, kannun suu). PT 04.5x: vain pelin viat pelissä,
+  mallin viat Codexille, seuraava pari vasta korjatulla mallilla.
+- Codex-pyyntö postissa 23b9fa03b + cb81d74ed (posti/lavastaja-codex-j4-hopea-korjaus-20261028.md + liitteet): albedo tasaiseksi (atlaksen saarten läikät), kohokuviot
+  normaaliin, MR B = 1, kannun suun umpikiekko (5 cm syvyydellä) → syvä tumma aukko. Nimi J4-v3.
+- PELIN PUOLI: VS:n halo-rajaus (metallin ulostulo ≤ 0,92) = esineet-metalli-213 f7fd394da / pari-haara linssiseppa2/j4-pari 2855d8478 (sisältää f047065df).
+  EI f3bee5e07 eikä komeron heijastustäytettä (PT kielsi). Arkun metallivalo 1,2 (SeikkailuKomero.ArkkuValoVoima) on haarassa.
+- J4-v3:n tultua: j4_hopea.py (SAVY viilennys yökuvan SplitToningia vastaan, KARHEUS 0,35, MR-B 255; albedon tasoitus TASO/KOR/SUM vain jos Codexin albedo ei tasainen)
+  → j4_siivous.py <glb> <ulos> <kuvakansio> → astc-mip.swift vari/normaali (j4_normaali.py VOIMA/SUMENNUS) → kavely-j4/ → pari REF 2855d8478 sk-komero-j4-lahi.txt
+  (j4h + j4g) + 2×-rajaukset + vastakoe-esineet rekvisiitta-brass_pot_01 ja -wooden_crate_01 (VS) → PT → KK.
+- kavely-j4 palautettu 044256-tilaan (glb + astcm; tasoituskoe sivussa esine-arkun-hopeasisalto-tasoitettu-koe.glb, ajo -045352, ei arvioitu).
+- Ei taustaajoja käynnissä. Kujakivet: Codexin v4 (f0766ed58) ei vielä postissa → LISÄYS 28.
