@@ -1,0 +1,16 @@
+{
+  "reviewedAt": "2026-10-28T14:12:38.032658+00:00",
+  "selected": "candidate04",
+  "imagesViewed": [
+    "four-views-material.png",
+    "material-before-after.png"
+  ],
+  "observations": [
+    "Uniform neutral silver; dark deep pitcher opening.",
+    "No added coin stamps in bowl interior in selected views.",
+    "Broad engraving and outer coin crosses visible; softer normal field than candidate03."
+  ],
+  "actualGameLightingVerified": false,
+  "ownerAccepted": false,
+  "knownLimits": "See KAYTTO-JA-QA.md, inherited topology and normal-only coin rim detail."
+}

@@ -1,0 +1,53 @@
+{
+  "status": "TECHNICAL_PASS_VISUAL_PENDING",
+  "sha256": "350cfb6b8365e0ff69789db623f94bc4d563e513a5772b0fef499b6f91b25b57",
+  "bytes": 5196772,
+  "sourceGeometryOutsideCapByteEquivalent": true,
+  "oldVerticesAndNormalsExact": true,
+  "oldNonCapFacesExact": true,
+  "dimensionsM": [
+    0.4760429561138153,
+    0.22339381277561188,
+    0.4000000059604645
+  ],
+  "dimensionsUnchanged": true,
+  "topology": {
+    "source": {
+      "boundaryEdges": 41,
+      "nonManifoldEdges": 7,
+      "zeroAreaFaces": 0,
+      "minAreaM2": 1.1798867716183992e-09
+    },
+    "new": {
+      "boundaryEdges": 41,
+      "nonManifoldEdges": 7,
+      "zeroAreaFaces": 0,
+      "minAreaM2": 1.1798867716183992e-09
+    }
+  },
+  "cavityAxisIntersectionsBeforeM": [
+    0.0024305295664817095,
+    0.16889762648505294
+  ],
+  "cavityAxisIntersectionsAfterM": [
+    0.0024305295664817095,
+    0.07500000298023224
+  ],
+  "newInnerVerticesInsideOldVolume": 49,
+  "metallicByteEverywhere": 255,
+  "polishedRoughnessRangeBytes": [
+    77,
+    128
+  ],
+  "interiorRoughnessByte": 179,
+  "albedoSurfaceRangeBytes": [
+    215,
+    227
+  ],
+  "interiorAlbedoByte": 51,
+  "maxNormalLengthQuantizationError": 0.006270230608479643,
+  "normalConvention": "tangent-space OpenGL +Y, derived UV basis; actual game import still needs receiver check",
+  "runtimeVerified": false,
+  "ownerAccepted": false,
+  "static": true
+}

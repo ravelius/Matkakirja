@@ -1,0 +1,11 @@
+{
+  "shader": "CPU normal/metal/roughness with fixed analytic environment; not a game render or full path-tracer",
+  "actualModelUsed": true,
+  "images": [
+    "four-views-material.png",
+    "material-before-after.png"
+  ],
+  "elapsedSeconds": 25.084374500089325,
+  "peakRSSMiB": 216.484375,
+  "viewed": false
+}

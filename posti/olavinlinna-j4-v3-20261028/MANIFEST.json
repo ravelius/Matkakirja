@@ -1,0 +1,105 @@
+{
+  "version": "J4-v3",
+  "createdAt": "2026-10-28T14:12:38.032658+00:00",
+  "files": [
+    {
+      "path": "CLAUDE-TOIMITUS.md",
+      "sha256": "0626a037040051e981bcd57021ad8786201d23e892f637a418364ff81d9d8f60",
+      "bytes": 2819
+    },
+    {
+      "path": "KAYTTO-JA-QA.md",
+      "sha256": "4b5ae29e7e3f080eb880dd41a450899990da1d574340ce28499955111c2375bc",
+      "bytes": 3576
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "49a1200af9a8c3d810b1fab3811a3d928ed5449946bd6b0abe443d51c56d9fe0",
+      "bytes": 941
+    },
+    {
+      "path": "models/arkun-hopeasisalto-j4-v3.glb",
+      "sha256": "350cfb6b8365e0ff69789db623f94bc4d563e513a5772b0fef499b6f91b25b57",
+      "bytes": 5196772,
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "triangles": 38884,
+      "dimensionsM": [
+        0.4760429561138153,
+        0.22339381277561188,
+        0.4000000059604645
+      ]
+    },
+    {
+      "path": "qa/BUILD-QA.json",
+      "sha256": "236a57152b8c9becf1f0d28f5b698c2b29d8e23b148a7c98e2fdbe30b1d58cfb",
+      "bytes": 2270
+    },
+    {
+      "path": "qa/PREVIEW-QA.json",
+      "sha256": "e38aa08356f1ee801f26daf001f34fd2d3073d1bc8c9edfb407be04266460dc6",
+      "bytes": 312
+    },
+    {
+      "path": "qa/SAVED-FILE-QA.json",
+      "sha256": "139bfe849bfff733fee94f424710341aba3b53007af83d6830ddf6832c0401a0",
+      "bytes": 1381
+    },
+    {
+      "path": "qa/VISUAL-REVIEW.json",
+      "sha256": "a82a8c51c10720ad20056c9cdbc3cd2279a440c7465eb79b6545961585525c68",
+      "bytes": 569
+    },
+    {
+      "path": "qa/four-views-ja-hyvaksytty-kuva.png",
+      "sha256": "93471d95cf287523d232fcf3fff46d46cb8d48419017ef795afdec4c00e6be3c",
+      "bytes": 1174750
+    },
+    {
+      "path": "qa/four-views-material.png",
+      "sha256": "bd312b3aaacd56ef90455aad6b1b616852c21078b5a1a77105a23a42b34dd6c8",
+      "bytes": 585210
+    },
+    {
+      "path": "qa/material-before-after.png",
+      "sha256": "d8ac0ae28ae2cf99749c9b63affc43052d95287b36ec98bc886f65617ff6fd61",
+      "bytes": 666037
+    },
+    {
+      "path": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+      "sha256": "c4c95f80218c5f52d41d4b6f5f17c647052f94e58fd526b42c774538be9c56ba",
+      "bytes": 2518897
+    },
+    {
+      "path": "sources/tilaus.md",
+      "sha256": "26eeb5697107330ade81ad5ff23277699785cf8fe3094c628304d817bd97c694",
+      "bytes": 2852
+    },
+    {
+      "path": "textures/albedo.png",
+      "sha256": "bf6fad52a70f6a3fa303d21712602823c957a4fd6146f39ff8de463fc58ae58c",
+      "bytes": 606944
+    },
+    {
+      "path": "textures/metallicRoughness.png",
+      "sha256": "e37ba72b3c9533104ade738216648d55bf25a8656df7d9260f7af99bdad689a7",
+      "bytes": 735841
+    },
+    {
+      "path": "textures/normal-opengl.png",
+      "sha256": "a4452e954b8e10da6ae9d4552fac0e0dd3f017fa005a07ced8556df787c74bad",
+      "bytes": 2779038
+    },
+    {
+      "path": "tools/codex-3d-tarkistus.mjs",
+      "sha256": "5de9ed58f784bdbf9094823b25e6473dddfc9ff72d4d38085974c5cbcdba39c6",
+      "bytes": 24533
+    }
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "receiverAccepted": false,
+  "runtimeVerified": false,
+  "ownerAccepted": false
+}

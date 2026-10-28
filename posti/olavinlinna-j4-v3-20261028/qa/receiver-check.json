@@ -1,0 +1,132 @@
+[
+ {
+  "kansio": "output/olavinlinna-aarre-10171021-20261027/review-v3-j4",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "arkun-hopeasisalto-j4-v3.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "arkun-hopeasisalto-j4-v3.glb",
+     "liike": "ei liikettä",
+     "tyyppi": "esine",
+     "kolmiot": 38884,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 png",
+      "2048×2048 png"
+     ],
+     "rajat": {
+      "min": [
+       -0.238,
+       0,
+       -0.2
+      ],
+      "max": [
+       0.238,
+       0.223,
+       0.2
+      ],
+      "koko": [
+       0.476,
+       0.223,
+       0.4
+      ]
+     }
+    },
+    "polku": "models/arkun-hopeasisalto-j4-v3.glb"
+   },
+   {
+    "nimi": "four-views-ja-hyvaksytty-kuva.png",
+    "polku": "qa/four-views-ja-hyvaksytty-kuva.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1800,
+     "h": 1280
+    }
+   },
+   {
+    "nimi": "four-views-material.png",
+    "polku": "qa/four-views-material.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 1280
+    }
+   },
+   {
+    "nimi": "material-before-after.png",
+    "polku": "qa/material-before-after.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1200,
+     "h": 640
+    }
+   },
+   {
+    "nimi": "1021-arkun-sisalto-kolmeneljannesta.png",
+    "polku": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   },
+   {
+    "nimi": "albedo.png",
+    "polku": "textures/albedo.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallicRoughness.png",
+    "polku": "textures/metallicRoughness.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal-opengl.png",
+    "polku": "textures/normal-opengl.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ],
+  "huomiot": [
+   "LIIKE luettu: arkun-hopeasisalto-j4-v3.glb ei liikettä"
+  ]
+ }
+]
