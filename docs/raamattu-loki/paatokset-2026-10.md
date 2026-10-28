@@ -2999,3 +2999,7 @@ Omistaja (KK:n kortti 'Kelpaako kipinän koko ja hehku?', KS a884e7824): 'Kelpaa
 ## Kartta: tekstit pienemmiksi ja aina vaakasuoraan (omistaja 28.10. 08.39) (28.10.2026 klo 08.40)
 
 Omistaja (KK) sanatarkasti: 'teksti liian iso. tarkista myös että kaikki tekstit ovat aina vaakasuorassa vaikka maapallo olisi kääntyneenä pois pohjois-eteläsuunnasta'. Tavoite: maailmanperintönimet muiden paikannimien kokoluokkaan, kaikki kartan tekstit aina vaakasuorassa. KS (sama erä kuin nimen väli); kipinät junaan 213 vasta tämän parin jälkeen.
+
+## Iso iPad ja simut vaaka-asentoon (omistaja 28.10. 08.59) (28.10.2026 klo 09.00)
+
+Omistaja (KK) sanatarkasti: 'aja ison ipadin simulaattorit mielellään aina vaaka asennossa, niin minun on helpompi seurata niitä koska ipad on omassa telineessä aina vaaka asennossa minulla. mutta mikäli tarpeen niin voit tottakai myös käyttää pystymuotoa mutta muuten mielellään aina vaaka muodossa'. Raamattu 9.11 ISO IPAD VAPAASTI: VAAKA-ASENTO.
