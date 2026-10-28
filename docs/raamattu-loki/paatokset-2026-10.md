@@ -3027,3 +3027,7 @@ Omistaja (KK): NUI:n valikoiden pohjavärit hyväksytty: Linssit vaalea violetti
 ## Huohotukset: omistaja ajaa poiston itse (28.10. 09.4x–09.5x) (28.10.2026 klo 09.51)
 
 Omistaja (KK) sanatarkasti: 'anna koodi jolla poistan hengitysäänet' / 'sinulla oli tuo komento jo aiemmin minulle' / 'mutta jos ei heti löydy niin ei niitä tarvitse poistaa' (kumoaa 07.33 'Ei nyt'). KK antoi komennon: ämpärin 7 huohotus-mp3:ta (juoksupeli/aanet-v1/takaa-ajaja/huohotus-1…3, aanet-v2/hahmo/huohotus-1…4); kuiva-ajo osui täsmälleen niihin. Omistaja ajaa itse.
+
+## Striimikartta: nimet liukuvat vierityksessä, iso pala puretaan kerran (omistaja 28.10. 09.54) (28.10.2026 klo 09.54)
+
+Omistaja (KK:n kortti, NS:n iPad-mittauksen jälkeen): 1) 'Vierityksen aikana nimet liukuvat kartan mukana ja asettuvat uudelleen, kun liike pysähtyy' → Kyllä (KS). 2) 'Iso karttapala puretaan kerran ja jaetaan kaikille sen osille (uusi paikka 10 s → n. 4–5 s)' → Kyllä (PT: NS). Tavoite: lähikartan vieritys ilman nykäyksiä; uusi paikka tarkentuu noin puolet nopeammin, sama kaikilla verkoilla. Mittaus ennen|jälkeen KK:lle ennen junaa.
