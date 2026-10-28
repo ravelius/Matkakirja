@@ -44,11 +44,11 @@ Norrbotten on Ruotsin pohjoisin lääni, ja siellä asuu noin 250 000 ihmistä. 
 
 ## Skåne
 
-Skåne on Ruotsin eteläisin lääni ja tasaista viljelysmaata, ja siellä asuu noin 1,4 miljoonaa ihmistä. Läänin pääkaupunki Malmö on Ruotsin kolmanneksi suurin kaupunki. Malmön ja Tanskan Kööpenhaminan välillä on Juutinrauman silta, joka otettiin käyttöön vuonna 2000. Sillalla kulkevat sekä autot että junat. Lundin yliopisto perustettiin vuonna 1666, ja siellä opiskelee noin 40 000 opiskelijaa. Ystadin kunnassa on Alen kivet (Ales stenar), 67 metriä pitkä laivan muotoon asetettu kivilatomus. Siinä on 59 kiveä, ja se on arviolta 1 400 vuotta vanha.
+Skåne on Ruotsin eteläisin lääni, ja sen maisema on enimmäkseen tasaista viljelysmaata. Siellä asuu noin 1,4 miljoonaa ihmistä. Läänin pääkaupunki Malmö on Ruotsin kolmanneksi suurin kaupunki. Malmön ja Tanskan Kööpenhaminan välillä on Juutinrauman silta, joka otettiin käyttöön vuonna 2000. Sillalla kulkevat sekä autot että junat. Lundin yliopisto perustettiin vuonna 1666, ja siellä opiskelee noin 40 000 opiskelijaa. Ystadin kunnassa on Alen kivet (Ales stenar), 67 metriä pitkä laivan muotoon asetettu kivilatomus. Siinä on 59 kiveä, ja se on arviolta 1 400 vuotta vanha.
 
 ## Stockholm
 
-Tukholman lääni on Ruotsin itärannikolla Itämeren rannalla, ja siellä asuu noin 2,5 miljoonaa ihmistä eli yli viidennes ruotsalaisista. Läänin keskus on Ruotsin pääkaupunki Tukholma. Tukholman saaristo ulottuu noin 60 kilometriä itään, ja siinä on arviolta 30 000 saarta ja luotoa. Vasa-museossa on 1600-luvun sotalaiva Vasa, joka upposi neitsytmatkallaan vuonna 1628 ja nostettiin merenpohjasta vuonna 1961. Mälaren-järven Björkö-saarella oli viikinkiajan kauppakaupunki Birka, jota pidetään Ruotsin ensimmäisenä kaupunkina. Birka on Unescon maailmanperintökohde. Läänin Tyrestan kansallispuistossa on havumetsää, ja sen vanhimmat puut ovat noin 400-vuotiaita.
+Tukholman lääni on Ruotsin itärannikolla, ja siellä asuu noin 2,5 miljoonaa ihmistä eli yli viidennes ruotsalaisista. Läänin keskus on Ruotsin pääkaupunki Tukholma. Tukholman saaristo ulottuu noin 60 kilometriä itään, ja siinä on arviolta 30 000 saarta ja luotoa. Vasa-museossa on 1600-luvun sotalaiva Vasa, joka upposi neitsytmatkallaan vuonna 1628 ja nostettiin merenpohjasta vuonna 1961. Mälaren-järven Björkö-saarella oli viikinkiajan kauppakaupunki Birka, jota pidetään Ruotsin ensimmäisenä kaupunkina. Birka on Unescon maailmanperintökohde. Läänin Tyrestan kansallispuistossa on havumetsää, ja sen vanhimmat puut ovat noin 400-vuotiaita.
 
 ## Södermanland
 
@@ -68,7 +68,7 @@ Västerbotten on Pohjois-Ruotsin rannikkolääni, jonka sisäosa on laajaa, harv
 
 ## Västernorrland
 
-Västernorrland on rannikkolääni Pohjois-Ruotsissa, ja siellä asuu noin 240 000 ihmistä. Läänin keskus on Härnösand, mutta suurin kaupunki on Sundsvall. Sundsvall paloi 25. kesäkuuta 1888, ja keskusta rakennettiin uudelleen kivestä. Siksi Sundsvallia kutsutaan nimellä Stenstaden eli kivikaupunki. Örnsköldsvikin kaupungissa pidettiin vuonna 1976 ensimmäiset talviparalympialaiset. Maakunnassa on Höga Kusten, Korkea rannikko, joka on Unescon maailmanperintökohde vuodesta 2000. Maa kohoaa siellä yhä noin 8 millimetriä vuodessa, koska jääkauden jää ei enää paina maata.
+Västernorrland on rannikkolääni Pohjois-Ruotsissa, ja siellä asuu noin 240 000 ihmistä. Läänin keskus on Härnösand, mutta suurin kaupunki on Sundsvall. Sundsvall paloi 25. kesäkuuta 1888, ja keskusta rakennettiin uudelleen kivestä. Siksi Sundsvallia kutsutaan nimellä Stenstaden eli kivikaupunki. Örnsköldsvikin kaupungissa pidettiin vuonna 1976 ensimmäiset talviparalympialaiset. Läänissä on Höga Kusten, Korkea rannikko, joka on Unescon maailmanperintökohde vuodesta 2000. Maa kohoaa siellä yhä noin 8 millimetriä vuodessa, koska jääkauden jää ei enää paina maata.
 
 ## Västmanland
 
@@ -80,9 +80,9 @@ Länsi-Götanmaa on Ruotsin länsirannikon lääni, ja siellä asuu noin 1,8 mil
 
 ## Orebro
 
-Örebron lääni on Keski-Ruotsissa, jossa asuu noin 310 000 ihmistä. Läänin keskus Örebro on Svartån-joen varrella lähellä Hjälmaren-järveä, joka on Ruotsin neljänneksi suurin järvi ja jonka pinta-ala on noin 480 neliökilometriä. Örebron linna on Svartån-joen saarella, ja se rakennettiin 1200-luvun lopulla. Örebrossa valittiin vuonna 1810 ranskalainen sotamarsalkka Jean-Baptiste Bernadotte Ruotsin kruununprinssiksi, ja hänestä tuli Ruotsin nykyisen kuningassuvun kantaisä. Nora on hyvin säilynyt puukaupunki, jossa on 1700- ja 1800-lukujen puutaloja. Kumlan kaupungissa on vuonna 1965 avattu Ruotsin suurin vankila. Karlskogassa Nobel-palkinnon perustaja Alfred Nobel omisti Bofors-asetehtaan vuosina 1894–1896 ja vietti kesät Björkbornin kartanossa.
+Örebron lääni on Keski-Ruotsissa, ja siellä asuu noin 310 000 ihmistä. Läänin keskus Örebro on Svartån-joen varrella lähellä Hjälmaren-järveä, joka on Ruotsin neljänneksi suurin järvi ja jonka pinta-ala on noin 480 neliökilometriä. Örebron linna on Svartån-joen saarella, ja se rakennettiin 1200-luvun lopulla. Örebrossa valittiin vuonna 1810 ranskalainen sotamarsalkka Jean-Baptiste Bernadotte Ruotsin kruununprinssiksi, ja hänestä tuli Ruotsin nykyisen kuningassuvun kantaisä. Nora on hyvin säilynyt puukaupunki, jossa on 1700- ja 1800-lukujen puutaloja. Kumlan kaupungissa on vuonna 1965 avattu Ruotsin suurin vankila. Karlskogassa Nobel-palkinnon perustaja Alfred Nobel omisti Bofors-asetehtaan vuosina 1894–1896 ja vietti kesät Björkbornin kartanossa.
 
 ## Östergötland
 
-Itä-Götanmaa on Ruotsin kaakkoisosan lääni Vättern-järven ja Itämeren välissä, ja siellä asuu noin 470 000 ihmistä. Läänin keskus Linköping on läänin suurin kaupunki. Siellä valmistetaan Saab-yhtiön Gripen-hävittäjää. Norrköpingissä Motala ström -virran varrella on vanhoja tekstiilitehtaita, jotka ovat nyt teollisuusmuseo- ja kulttuurialuetta. Göta-kanava kulkee Göteborgista Söderköpingiin, ja sen 190 kilometrin matkalla on 58 sulkua. Vadstenan kaupungissa on ruotsalaisen pyhimyksen, pyhän Birgitan, perustama birgittalaisluostari, jonka rakentaminen alkoi 1300-luvulla. Rökin kylässä on riimukivi, jossa on noin 760 riimua. Se on veistetty noin vuonna 800 ja on pisin tunnettu kiveen hakattu riimukirjoitus.
+Itä-Götanmaa on Ruotsin kaakkoisosan lääni Vättern-järven ja Itämeren välissä, ja siellä asuu noin 470 000 ihmistä. Läänin keskus Linköping on läänin suurin kaupunki. Siellä valmistetaan Saab-yhtiön Gripen-hävittäjää. Norrköpingissä Motala ström -virran varrella on vanhoja tekstiilitehtaita, jotka muodostavat nykyään teollisuusmuseo- ja kulttuurialueen. Göta-kanava kulkee Göteborgista Söderköpingiin, ja sen 190 kilometrin matkalla on 58 sulkua. Vadstenan kaupungissa on ruotsalaisen pyhimyksen, pyhän Birgitan, perustama birgittalaisluostari, jonka rakentaminen alkoi 1300-luvulla. Rökin kylässä on riimukivi, jossa on noin 760 riimua. Se on veistetty noin vuonna 800 ja on pisin tunnettu kiveen hakattu riimukirjoitus.
 
