@@ -584,3 +584,61 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   ulkonema ~0,8 m:iin. 05:n portin sivumuurien friisi + räystäs ovat portin mallissa (rakennukset), eivät muuttuneet.
 - J4-v4 #1228 vastaanotettu: GLB SHA 13cb3cc3…41ff3e täsmää, posti SHA256SUMS 22/22 → olavinlinna-j4/v4/ (models + posti). Kuittaus Codexille
   b80de59a5. SEURAAVA: v3:n ketju (j4_arkkuun 0,97 → j4_siivous → astc-mip vari/normaali 4 + j4_orm R255 + astc6) → kavely-j4 → pari v3 | v4 | 1021 → KK.
+
+## LISÄYS 43 klo 20.4x (28.10.): J4-v4 pelikuntoon, pari seis (linja 2 sumea), katot-42-haara tarpeeton
+- J4-v4 ketju ajettu: j4_arkkuun (0,97) → j4_siivous → astc-mip vari/normaali 4 → j4_orm + astc6 → olavinlinna-j4/v4/peli/ (glb 3732820f…, sha1).
+  kavely-j4 palautettu v3:een (tunnettu tila, = v3/*); v4 kopioidaan kavely-j4:ään ennen paria.
+- PARI SEIS: esikatselulinja 2 (2855d8478, ipad --batch) kuvaa koko ruudun sumeana myös v3:lla (seinän terävyys 2,22 → 1,25; 184846 ok, 202114/202821/203710
+  sumeat). PT: VS käytti linjaa 2 19.22–19.55 → pysyvä ajonaikainen asetus, VS korjaa ja ilmoittaa. EI ajeta linjaa 2 ennen sitä.
+  Sitten: v4 kavely-j4:ään, sk-komero-j4-lahi.txt, pari olavinlinna-j4/j4_pari.py (vaihda V4-kansio): j4h täysi 600×540 rajaus (1240,696) v3 (180956) | v4 | 1021 → PT → KK.
+  j4i (kannu) kelvoton (alkuvalikko peittää) → pois parista.
+- lavastaja/katot-42: ei mainista puuttuvaa (vain luovutuksen vanhempi versio ilman lisäystä 41) → ei tarvita.
+- Katto-parit 195528/195925 odottavat edelleen KK:ta.
+
+## LISÄYS 44 klo 21.1x (28.10.): linja 2 korjattu (pistekerroin 1), J4-v4-pari → KK hylkäsi kohdat 1–3 → J4-v5 Codexille; katto-parit uusittu
+- Sumeuden syy (VS/PT): Macista irtosi näyttö 19.07 → editorin pistekerroin 2 → 3D puolella resoluutiolla. NUI:n korjaus b48ecd7f8 poimittu:
+  proto-haarat lavastaja/kerroin-2855d8478 (e367204e2, J4) ja lavastaja/kerroin-8885a9f54 (46c0add3c, katot); työpuu wt/proto-lavastaja-kerroin.
+  editori-lr.sh: T=${HAVAINNE_PUU:-wt/proto-lavastaja-kerroin}; aja_v103_pari.zsh REF oletus 46c0add3c. Kuvan unity.log: "pistekerroin 1".
+- J4-v4-pari esikatselu-20261028-205424 (kavely-j4 = v4). KK 21.0x: kannu OK; 1) kolikot vaaleat/litteät, 2) välit vaaleat (arkun pohja näkyy),
+  3) kulhon kaarinauha ei näy. → Codex-tilaus J4-v5 posti 221f04d6d (AO R-kanavaan, leima + reunarengas jokaiselle kolikolle, välit kiinni / tumma
+  alusta, kulhon nauha). Kun tulee: sama ketju (v4/peli-malli) → pari v4 | v5 | 1021 → PT → KK. Ei omistajalle ennen KK:n OK:ta.
+- Katto-parit terävinä: pelikamera havainne-editori-20261028-210105, havainteen kamera …-210656 → PT → KK (korvaavat 195528/195925). Odottaa KK:ta.
+
+## LISÄYS 45 klo 21.2x (28.10.): KK 21.2x: 01 seinät havainteen korkeuteen + kapea räystäs, 02 tiiliräystäs + hillitty nauha → juuri-v104m
+- 01 K/tyokalut/avoimet_korkea.py (avoimet-v66k → v67k): seinien, julkisivujen, puupaneelien, pilarien ja palkistojen juurisolmut y × SK 1,48
+  (ovi 1,83 → 2,71 ≈ 2 × keisari 1,35; ikkunat 1,61–2,95; seinä 3,52; nauha 3,26–3,52); lattiat/kalusteet ennallaan. Katto: alapinta seinälinjalla
+  = seinän yläreuna, lape × LOIVA 0,75, ulkonema 1,75 → ULK 0,8 (vyöhykkeen puristus + nosto kaltevuudella), harjakoristeet samalla kuvauksella.
+- 02 kuja_kate.py ympäristömuuttujat NAUHA_MAT/LAPE_MAT/NOUSU/OTSA (oletukset = v93): v94 = VYO 0,30 V4_palkkivyo, RAYS 0,75, V4_palatsi_katto
+  -lape (u 0,625/m, v 0,6/m), NOUSU 0,55, OTSA 0,14 → muurikate pari-v94. Auki: vasemman lähimmät isot kirkkaat friisipalat = pilarien hatut taustassa.
+- 05: ovet ovat 3D-lehtiä (ovi_V/ovi_O), peli avaa 90° (PorttiOviKulma); havainteessa ~65° → Pelikoodarin koodi, PT:lle ehdotettu.
+- Ketju `zsh K/tyokalut/aja_v104_pari.zsh` (REF 46c0add3c, ~3 min/ajo); havainteen kamera TESTIKAMERA_0x="4 6.5 16 45".
+  Parit: pelikamera havainne-editori-20261028-211708, havainteen kamera …-211930 → PT → KK. Omistajalle vasta, kun 01 näyttää havainteelta.
+
+## LISÄYS 46 klo 21.5x (28.10.): 01 v105 (tiilirivit + koristevyö), 02/05 friisi kesken, porttiovi-pari uusittu tausta-v62:lla — LUOVUTUS, ALOITA TÄSTÄ
+- KK 21.4x: v104m 01 iso parannus, ovi 2,71 OK. Pyynnöt: 1) katon tiilirivit ja päätetiilet näkyviin, 2) räystään alle koristevyö kannakkeineen,
+  sitten 02/05 keltatiilinen räystäs + hillitty nauha. PT 21.5x: porttipari riittää; parit KK:lle (juoksupeli = KK johtaa).
+- 01 TEHTY (aja_v105_pari.zsh, juuri-v105m): avoimet_nauha.py v65k:sta NAUHA_YLA 2,55 DY −0,31 KONSOLI=1 (uusi env: palkinpäät jäävät)
+  → avoimet_korkea.py YLA=2,55 (uusi env; myös katon normaalit loivennuksen mukaan) → avoimet_katto_uv.py (UUSI: V4_palatsi_katto-lappeet
+  1 UV = 1 m Codexin palatsipinnat-v1 KAYTTO:n mukaan, u räystään suunta, v alamäkeen; oli 0,38/m) → avoimet-v68k. Vyö 3,26–3,77, kannakkeet
+  3,03–3,25, ovi 2,71. Parit: pelikamera havainne-editori-20261028-212548, havainteen kamera …-212741 (PT:lle 21.4x). Tiilirivit näkyvät.
+  AUKI 01: vyö kirkkaampi kuin havainteen tumma sinivihreä, kannakkeet ruskeat (V4_konsoli) eikä sinivihreät kuten havainteessa.
+- 02/05 KESKEN: kuja_friisi_hillitty.py (UUSI) siirsi taustan kk-tausta-0-3-lod0:n kujan friisikolmiot (8 kpl) V4_palkkivyöhön → yksikerros-v94
+  (APFS-klooni v93:sta), juuri-v105m:n kielletty-tausta-v57 → v94. Parit 212952 / 213940: vasemman lähimmät isot kirkkaat friisipalat EIVÄT
+  muuttuneet → lähde muualla (tutki: rakennukset-v48 porttirakennelmat / muurikate / solmut joilla rotation/scale — friisihaku-skripti ohitti ne).
+- PORTTIOVET 65° (PT 21.3x, PK 21a8962da): ensimmäinen pari 213543/213715 oli virheellinen: junan 213 koodi lukee kielletty-tausta-v62:ta, jota
+  koejuuressa ei ollut → kuja 05 aukealla. Korjattu: juuri-v104m ja -v105m: kielletty-tausta-v62 → _valmiit/juoksupeli-kk-tausta-peking-v62-
+  vienti-20261027/juoksupeli/maailma-v4/kielletty-tausta-v62. Uusinta ajossa (REF 907f7b752 = 213 + pistekerroin, 2f58aa5bc = porttiovi-65 +
+  pistekerroin; kohta 05 molemmat kamerat) → kk-ovet-90-vs-65.png KK:lle. HUOM: VS-runko 46c0add3c:ssa ei ole porttiovia lainkaan.
+- J4-v5: Codex aloitti (posti 6fd2e5bfd, 21.08, arvio 30–60 min). Kun toimitus tulee: v4/peli-ketju (j4_arkkuun → j4_siivous → astc-mip 4 →
+  j4_orm (HUOM: v5:ssä R = AO, j4_orm.py asettaa R = 255 → muuta säilyttämään R) + astc6) → kavely-j4 → j4_pari.py (v4 205424 | v5 | 1021) → KK.
+- Proto-haarat (wt/proto-lavastaja-havainne): lavastaja/kerroin-2855d8478, -8885a9f54, -60a42b4f0 (907f7b752), -porttiovi65 (2f58aa5bc).
+
+## LISÄYS 47 klo 22.0x (28.10.): KK 21.5x v105-vastaus (01 katto + tiilirivit OK) → SEURAAVAT TEHTÄVÄT kujaan 01 tässä järjestyksessä
+1) koristevyö havainteen sävyyn: tummempi, himmeämpi sinivihreä, kuviointi pienemmäksi kultaisiksi koukeroiksi (nyt kirkas turkoosi, isot
+   sinikeltaiset kukat vievät katseen seinältä); 2) kannakkeet (V4_konsoli) sinivihreä-kultaisiksi kuten havainteessa (nyt ruskeat palikat);
+3) räystään päätetiilet isommiksi pyöreiksi kiekoiksi tippatiilineen (havainteen lähiräystäs; nyt pienet litteät kaaret);
+4) muodon loput ennen valoa: kiviportaat ovien eteen ja ristikko ikkunoihin.
+→ pari KK:lle kun 1–3 valmiit (havainteen kamera + pelikamera, terävyys tarkistettu: unity.log "pistekerroin 1"). Ovet 65° hyväksytty seuraavaan
+  junaan (PK 21a8962da), ei toimia. Porttiparin uusinta: havainne-editori-20261028-215135/215403 (oikea kuja, tausta-v62 linkitetty).
+- J4-v5 (Codex 6c2cc9edd, GLB SHA 58547e56…ba69 täsmää, posti 20/22 + GLB ja CLAUDE-TOIMITUS.md eivät postissa) → olavinlinna-j4/v5/{models,posti,peli};
+  j4_orm.py AO=1 säilyttää R:n (R ka 160,6); kavely-j4 = v5. Esikatselu ajossa (scratchpad j4v5.log) → pari j4_pari.py:llä v4 205424 | v5 | 1021 → PT.
