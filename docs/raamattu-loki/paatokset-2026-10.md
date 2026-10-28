@@ -3055,3 +3055,7 @@ Omistaja (KK:n kortti, NUI:n parit): välilehtien värit vain välilehdissä 'Ke
 ## Kartta: kohdemerkkierä hyväksytty, Louvre väistää pelaajan nappia (omistaja 28.10. 11.51) (28.10.2026 klo 11.52)
 
 Omistaja (KK, KS:n pari) sanatarkasti: 'jos pelaaja on kohdekaupungissa jossa samassa sijainnissa myös Louvre tms. niin siirrä silloin louvre vähän sivuun, jotta ei mene nappulan kanssa päällekkäin. muuten ok'. Vähimmäiskoko: 'Ei, kelpaa näin' (nappi ja pisteet saavat pienentyä pallolla kartan mukana). Kohdemerkkierä junaan 213; NS:lle lupa pienen iPadin käännökseen; väistö KS:n seuraava pieni erä.
+
+## Kartta: kohdemaan raja ohuemmaksi ulos zoomatessa (omistaja 28.10. 11.52) (28.10.2026 klo 11.53)
+
+Omistaja (KK) sanatarkasti: 'ohenna kohdemaan rajausta kun zoomataan ulos. nyt uloimmilla zoomtasoilla kohdemaan raja on liian paksu. se voisi noudattaa samaa zoom sääntöä kuin muutkin merkit'. KS, samaan erään Louvren väistön kanssa. KK:n päätökset: PK glide_enter/exit nyt (ei Codexia T-asentoon); NS adcb187d2 junaan 213 (lataus 8,3 → 7,8 s); valmiiksipiirto lennon aikana pienen iPadin jälkeen.
