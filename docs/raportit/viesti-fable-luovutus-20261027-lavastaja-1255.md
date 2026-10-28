@@ -539,3 +539,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   muuten keskiarvon. olavinlinna-j4/j4_orm.py (R = 255) + proto-3d/tyokalut/astc6.py → kavely-j4/esine-arkun-hopeasisalto-orm-6x6.astcm. Vastaus Codexille 0c521ec46.
   VIENNISSÄ: orm-6x6.astcm mukaan paketin manifestiin (AstcSaatavilla vaatii manifestin muualla kuin file://).
   Uusi pari esikatselu-20261028-180956 (kk-pari-v2-v3-*.png) → KK 18.1x (korvaa 170508:n). Ero pieni.
+- 18.2x KK: J4-v3 EI VIELÄ (kohta 2: leimat/kaiverrukset ja kiilto, mittari Codexin 1021-kuva). Pelin puolen koe (j4_normaali.py VOIMA=2 SUMENNUS=0,
+  j4_orm.py KG=0.6; esikatselu-20261028-184846) → läikät ja kohina, kaiverrus ei lukeudu → kavely-j4 palautettu v3-karttoihin (v3/*.astcm).
+  Codex-tilaus J4-v4 postissa 991b58c76 (cavity albedoon, kiiltävät harjat, selkeämpi relief). Kun tulee: sama ketju kuin v3 (j4_arkkuun → j4_siivous →
+  astc-mip vari/normaali + j4_orm + astc6) → kavely-j4 → esikatselu → pari v3 | v4 | 1021-kuva → KK.
