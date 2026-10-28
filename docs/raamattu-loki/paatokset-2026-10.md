@@ -3059,3 +3059,7 @@ Omistaja (KK, KS:n pari) sanatarkasti: 'jos pelaaja on kohdekaupungissa jossa sa
 ## Kartta: kohdemaan raja ohuemmaksi ulos zoomatessa (omistaja 28.10. 11.52) (28.10.2026 klo 11.53)
 
 Omistaja (KK) sanatarkasti: 'ohenna kohdemaan rajausta kun zoomataan ulos. nyt uloimmilla zoomtasoilla kohdemaan raja on liian paksu. se voisi noudattaa samaa zoom sääntöä kuin muutkin merkit'. KS, samaan erään Louvren väistön kanssa. KK:n päätökset: PK glide_enter/exit nyt (ei Codexia T-asentoon); NS adcb187d2 junaan 213 (lataus 8,3 → 7,8 s); valmiiksipiirto lennon aikana pienen iPadin jälkeen.
+
+## Striimikartta: kohteet porrastetaan merkittävyyden mukaan (omistaja 28.10. 12.16/12.21) (28.10.2026 klo 12.21)
+
+Omistaja (KK) 12.16 sanatarkasti: 'saisiko striimikarttaan jotenkin merkittävimmät kohteet näkymään jo heti laajemmassa näkymässä ja vähemmän merkittävät vasta kaikkein lähimmillä zoom asteilla? mitä mahdollisuuksia meillä on?' Päätös 12.21 (kortti): 'Kyllä (suositus)' – 'Kuuluisimmat näkyvät kaukaa, pienemmät tulevat esiin lähestyttäessä.' Toteutus: merkittävyys Wikidata sitelinks -määrästä (CC0) + tilasääntö (nimet eivät päällekkäin, merkittävin voittaa), pehmeä esiintulo, nykyiset merkit ja nimet (UI-POHJAT). Ei ryhmämerkkejä eikä tarinan paikkoja ensin. KS Louvren väistön jälkeen; pari Eurooppa/Ranska/Pariisi KK:lle.
