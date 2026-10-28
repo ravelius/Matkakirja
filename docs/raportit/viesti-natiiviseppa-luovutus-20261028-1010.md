@@ -1,19 +1,20 @@
-# Natiivisepän luovutus 28.10.2026 klo 10.35 (konteksti 37 %; juna 213 runko 455269cf6)
+# Natiivisepän luovutus 28.10.2026 klo 10.35 (konteksti 39 %; juna 213 runko 0b470602d)
 
 Vain voimassa oleva tila. Historia: /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna213/jono-213.txt (loppu = uusin).
 Id:t: /Users/Shared/Claude/osoitekirja.md. PT local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31, KK local_d5f31591-21fa-4cb0-bab3-bcd3435d075a,
 JU local_2a7d6c96-c61c-4887-a4f8-57cc335b40fd, KS local_7b57e35a-3a8e-4943-aba1-c960b9eb4671.
 
 ## TILA
-- **Juna 213 runko natiiviseppa/juna-213 = 455269cf6** (wt/proto-natiiviseppa-ehdokas, puhdas; peili natiivi-backup
+- **Juna 213 runko natiiviseppa/juna-213 = 0b470602d** (wt/proto-natiiviseppa-ehdokas, puhdas; peili natiivi-backup
   peili/proto/natiiviseppa/juna-213). Testit VIHREÄT 2213/761/566, tarkista 0. Edellisen luovutuksen (22b23ab46) päälle:
   KS perinto-violetti d8728903d → 634e122e9, perinto-kipina a884e7824 → 05f939e5d (omistaja 08.38 "Kelpaa"),
   suorituskyky a0d9d7503 (nimet liukuvat, omistaja 09.54) → 2b3c09bcd, perinto-kipina e34d24247 (nimien väli, vaakatekstit)
   → fb0ad7367 (omistaja 10.27 hyväksyi), oma MVT-jako 0f5c8fc52 (KK 10.3x) → 455269cf6. KS kohteet-puoleen eb3487b0e oli
   hetken rungossa (6dae4a62b), omistaja palautti 10.18/10.27 (Big Ben väärässä paikassa, pelaajan nappi; sama lukitus kaikille
   kartan merkeille) → runko resetoitu, peili force-pushattu. KS tekee uuden parin.
-- **ODOTTAA KK:n PARIKUITTAUSTA (PT 10.2x):** NUI kartta-kytkimet-213 b81c08ef2 (sis. KS d89dd614e); merge puhdas 2b3c09bcd:n
-  päälle (kokeiltu, peruttu). Kuittauksen jälkeen merge + testit + rivi PT:lle (web PR 5420 samaan aikaan).
+- NUI kartta-kytkimet-213 44e285d4e (KK 10.4x, omistaja 10.23/10.37; sis. KS nimiryhmat) → 0b470602d, testit 2213/761/567.
+  PT mergeää web PR 5420:n (cf87d2faf) samaan aikaan. NUI:n peili oli vanha (28a8f5c3a) → merge tehtiin suoraan commitista.
+- KS kohteet-puoleen-213 (nyt 4c74d291e) EI runkoon ennen omistajan hyväksyntää (KS 10.4x).
 - **JULKAISUEHDOT ennen lukitusta/TF:ää:** taivas-paiva-codex-v2/, tausta-v62, muurikate-v19 ämpäriin (JU);
   HEHKU: KS:n nimien välin lyhennys (30719e325 tms.) runkoon + KK:n 2×-kuittaus, muuten perintöhehku pois (PT 08.4x);
   muistiajo lukitusehdokkaalle (LT: e53794fd9 footprint 4483/4856 Mt, vapaata min 635 Mt).
