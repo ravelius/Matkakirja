@@ -6436,7 +6436,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Braila: {
       lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
-      pitka: `Brăilan piirikunta on tasaista viljelyseutua Romanian kaakkoisosassa Tonavan rannalla. Siellä asuu noin 280 000 ihmistä vuoden 2021 väestönlaskennan mukaan. Suurin osa alueesta on Bărăganin tasankoa, joka on yksi Romanian parhaista viljanviljelyalueista. Tonavan haarojen välissä on Brăilan Suuri saari. Piirikunnan keskus Brăila on tonavasatama, jossa asuu noin 155 000 ihmistä. Keskiajalla se oli Valakian ruhtinaskunnan, eli Romanian eteläosan vanhan valtion, pääsatama. Kaupungin keskustassa on 1800-luvun rakennuksia. Piirikunnassa mitattiin 10. elokuuta 1951 Romanian korkein lämpötila, 44,5 astetta.`,
+      pitka: `Brăilan piirikunta on tasaista viljelyseutua Romanian kaakkoisosassa Tonavan rannalla. Siellä asuu noin 280 000 ihmistä. Suurin osa alueesta on Bărăganin tasankoa, joka on yksi Romanian parhaista viljanviljelyalueista. Tonavan haarojen välissä on Brăilan Suuri saari. Piirikunnan keskus Brăila on tonavasatama, jossa asuu noin 155 000 ihmistä. Keskiajalla se oli Valakian pääsatama, ja 1900-luvulla suurin osa Romanian ulkomaankaupasta kulki sen kautta. Kaupungin keskustassa on 1800-luvun rakennuksia, esimerkiksi kreikkalaisen yhteisön vuosina 1863–1872 rakennuttama kirkko. Piirikunnassa mitattiin 10. elokuuta 1951 Romanian korkein lämpötila, 44,5 astetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-braila-v-f9cb555f.jpg',
@@ -6459,7 +6459,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Brasov: {
       lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
-      pitka: `Brașovin piirikunta on Karpaattien vuorten ympäröimä alue Transilvaniassa Romanian keskiosassa. Siellä asuu noin 550 000 ihmistä vuoden 2021 väestönlaskennan mukaan. Piirikunnan keskus Brașov on noin 240 000 asukkaan kaupunki, ja se on noin 166 kilometrin päässä Bukarestista pohjoiseen. Keskiajalla se oli Transilvanian saksalaisten kauppakaupunki, ja sen goottilainen Mustakirkko on saanut nimensä vuoden 1689 suuren tulipalon noesta. Kaupungin vieressä on Poiana Brașovin hiihtokeskus. Branin kylässä on vuonna 1377 rakennettu Branin linna, jota markkinoidaan Draculan linnana. Ei ole näyttöä, että Bram Stoker tunsi linnan kirjoittaessaan Dracula-romaanin vuonna 1897.`,
+      pitka: `Brașovin piirikunta on Karpaattien vuorten ympäröimä alue Transilvaniassa Romanian keskiosassa. Siellä asuu noin 550 000 ihmistä. Piirikunnan keskus Brașov on noin 240 000 asukkaan kaupunki, ja se on noin 166 kilometrin päässä Bukarestista pohjoiseen. Keskiajalla se oli Transilvanian saksalaisten kauppakaupunki, ja sen goottilainen Mustakirkko on saanut nimensä vuoden 1689 suuren tulipalon noesta. Kaupungin vieressä on Poiana Brașovin hiihtokeskus. Branin kylässä on vuonna 1377 rakennettu Branin linna, jota markkinoidaan Draculan linnana. Ei ole näyttöä, että Bram Stoker tunsi linnan kirjoittaessaan Dracula-romaanin vuonna 1897.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
@@ -6482,7 +6482,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
-      pitka: `Bukarest on Romanian pääkaupunki ja maan suurin kaupunki. Siellä asuu noin 1,7 miljoonaa ihmistä vuoden 2021 väestönlaskennan mukaan. Kaupunki on hallinnollisesti oma yksikkö, joka vastaa piirikuntaa. Se sijaitsee Romanian kaakkoisosassa Dâmbovița-joen varrella, ja sen pohjoisosassa on useita järviä. Bukarest mainittiin ensimmäisen kerran vuonna 1459, ja Romanian pääkaupungiksi se tuli vuonna 1862. Kaupunkia on kutsuttu lempinimellä Idän Pariisi. Parlamentin palatsi on 84 metriä korkea rakennus, jonka kommunistijohtaja Nicolae Ceaușescu tilasi ja joka valmistui vuonna 1997. Metro avattiin vuonna 1979, ja nykyään siinä on viisi linjaa.`,
+      pitka: `Bukarest on Romanian pääkaupunki ja maan suurin kaupunki. Siellä asuu noin 1,7 miljoonaa ihmistä. Kaupunki on hallinnollisesti oma yksikkö, joka vastaa piirikuntaa. Se sijaitsee Romanian kaakkoisosassa Dâmbovița-joen varrella, ja sen pohjoisosassa on useita järviä. Bukarest mainittiin ensimmäisen kerran vuonna 1459, ja Romanian pääkaupungiksi se tuli vuonna 1862. Kaupunkia on kutsuttu lempinimellä Idän Pariisi. Parlamentin palatsi on 84 metriä korkea rakennus, jonka kommunistijohtaja Nicolae Ceaușescu tilasi ja joka valmistui vuonna 1997. Metro avattiin vuonna 1979, ja nykyään siinä on viisi linjaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
@@ -6505,7 +6505,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
-      pitka: `Buzăun piirikunta on Romanian kaakkoisosassa, missä Karpaattien vuoret laskeutuvat kukkuloiden kautta Bărăganin tasangolle. Siellä asuu noin 400 000 ihmistä vuoden 2021 väestönlaskennan mukaan. Pohjoisosan Buzăun vuorilla on yli 1 700 metrin huippuja. Piirikunnan keskus Buzău on Buzău-joen rannalla noin 100 kilometrin päässä Bukarestista koilliseen, ja siellä risteävät tärkeät rautatiet. Bercan kunnan lähellä on mutatulivuorten luonnonsuojelualue. Ne ovat pieniä kartionmuotoisia kumpuja, joista maakaasu työntää mutaa pintaan. Colțin kylässä on meripihkamuseo. Kukkulaseuduilla viljellään viiniä ja hedelmiä, ja piirikunnasta louhitaan suolaa ja öljyä.`,
+      pitka: `Buzăun piirikunta on Romanian kaakkoisosassa, missä Karpaattien vuoret laskeutuvat kukkuloiden kautta Bărăganin tasangolle. Siellä asuu noin 400 000 ihmistä. Pohjoisosan Buzăun vuorilla on yli 1 700 metrin huippuja. Piirikunnan keskus Buzău on Buzău-joen rannalla noin 100 kilometrin päässä Bukarestista koilliseen, ja siellä risteävät tärkeät rautatiet. Bercan kunnan lähellä on mutatulivuorten luonnonsuojelualue. Ne ovat pieniä kartionmuotoisia kumpuja, joista maakaasu työntää mutaa pintaan. Colțin kylässä on meripihkamuseo. Kukkulaseuduilla viljellään viiniä ja hedelmiä, ja piirikunnasta louhitaan suolaa ja öljyä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
@@ -6528,7 +6528,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Calarasi: {
       lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
-      pitka: `Călărașin piirikunta on tasaista maanviljelyaluetta Romanian kaakkoisosassa Bulgarian rajalla. Siellä asuu noin 280 000 ihmistä vuoden 2021 väestönlaskennan mukaan. Alue on enimmäkseen Bărăganin tasangon eteläosaa, ja maatalous on piirikunnan pääelinkeino. Piirikunnan keskus Călărași on Tonavan Borcea-haaran rannalla lähellä Bulgarian rajaa. Kaupungissa on noin 58 000 asukasta sekä iso terästehdas. Oltenița on kaupunki piirikunnan lounaisosassa, noin 64 kilometrin päässä Bukarestista. Kaupungin kohdalla Argeș-joki laskee Tonavaan. Oltenițassa taisteltiin marraskuussa 1853 Krimin sodan alussa, kun ottomaanien joukot ylittivät joen ja aiheuttivat venäläisille raskaat tappiot.`,
+      pitka: `Călărașin piirikunta on tasaista maanviljelyaluetta Romanian kaakkoisosassa Bulgarian rajalla. Siellä asuu noin 280 000 ihmistä. Alue on enimmäkseen Bărăganin tasangon eteläosaa, ja maatalous on piirikunnan pääelinkeino. Piirikunnan keskus Călărași on Tonavan Borcea-haaran rannalla lähellä Bulgarian rajaa. Kaupungissa on noin 58 000 asukasta sekä iso terästehdas. Oltenița on kaupunki piirikunnan lounaisosassa, noin 64 kilometrin päässä Bukarestista. Kaupungin kohdalla Argeș-joki laskee Tonavaan. Oltenițassa taisteltiin marraskuussa 1853 Krimin sodan alussa, kun ottomaanien joukot ylittivät joen ja aiheuttivat venäläisille raskaat tappiot.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
@@ -6551,7 +6551,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Caras-Severin': {
       lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
-      pitka: `Caraș-Severinin piirikunta on vuorten ja jokilaaksojen seutu Romanian lounaisosassa Serbian rajalla. Pinta-alaltaan se on Romanian kolmanneksi suurin piirikunta, mutta asukkaita on vain noin 250 000 vuoden 2021 väestönlaskennan mukaan. Vuoria on noin kaksi kolmasosaa alueesta, ja Tonava virtaa Romaniaan tämän piirikunnan kautta. Suurin osa alueesta kuuluu Banatiin, historialliseen alueeseen, joka oli 1700-luvulla Habsburgien hallussa. Piirikunnan keskus Reșița on noin 58 000 asukkaan teollisuuskaupunki, jossa valmistettiin vuonna 1872 Romanian ensimmäinen veturi. Anina–Oravița-vuoristorata avattiin vuonna 1863, ja se on yhä matkailukäytössä. Băile Herculanen kylpyläkaupungissa roomalaiset kylpivät lämpimissä lähteissä.`,
+      pitka: `Caraș-Severinin piirikunta on vuorten ja jokilaaksojen seutu Romanian lounaisosassa Serbian rajalla. Pinta-alaltaan se on Romanian kolmanneksi suurin piirikunta, mutta asukkaita on vain noin 250 000. Vuoria on noin kaksi kolmasosaa alueesta, ja Tonava virtaa Romaniaan tämän piirikunnan kautta. Suurin osa alueesta kuuluu Banatiin, historialliseen alueeseen, joka oli 1700-luvulla Habsburgien hallussa. Piirikunnan keskus Reșița on noin 58 000 asukkaan teollisuuskaupunki, jossa valmistettiin vuonna 1872 Romanian ensimmäinen veturi. Anina–Oravița-vuoristorata avattiin vuonna 1863, ja se on yhä matkailukäytössä. Băile Herculanen kylpyläkaupungissa roomalaiset kylpivät lämpimissä lähteissä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-caras-severin-v-26ac345e.jpg',
@@ -6574,7 +6574,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cluj: {
       lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
-      pitka: `Clujin piirikunta on Romanian luoteisosassa, Transilvanian historiallisella alueella. Siellä asuu noin 680 000 ihmistä vuoden 2021 väestönlaskennan mukaan. Alue on enimmäkseen kumpuilevaa kukkulaseutua, ja osa siitä kuuluu Apuseni-vuoriin. Piirikunnan keskus Cluj-Napoca on asukasluvultaan Romanian toiseksi suurin kaupunki, noin 290 000 asukasta, ja sitä pidetään Transilvanian epävirallisena pääkaupunkina. Siellä on Babeș-Bolyain yliopisto, joka on maan suurin yliopisto. Kaupungin unkarinkielinen nimi on Kolozsvár, ja piirikunnan asukkaista noin 13 prosenttia on unkarilaisia. Turdan kaupungissa on suolakaivos, jossa on louhittu suolaa antiikista lähtien. Kaivos avattiin matkailijoille vuonna 1992.`,
+      pitka: `Clujin piirikunta on Romanian luoteisosassa, Transilvanian historiallisella alueella. Siellä asuu noin 680 000 ihmistä. Alue on enimmäkseen kumpuilevaa kukkulaseutua, ja osa siitä kuuluu Apuseni-vuoriin. Piirikunnan keskus Cluj-Napoca on asukasluvultaan Romanian toiseksi suurin kaupunki, noin 290 000 asukasta, ja sitä pidetään Transilvanian epävirallisena pääkaupunkina. Siellä on Babeș-Bolyain yliopisto, joka on maan suurin yliopisto. Kaupungin unkarinkielinen nimi on Kolozsvár, ja piirikunnan asukkaista noin 13 prosenttia on unkarilaisia. Turdan kaupungissa on suolakaivos, jossa on louhittu suolaa antiikista lähtien. Kaivos avattiin matkailijoille vuonna 1992.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
@@ -6620,7 +6620,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Covasna: {
       lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
-      pitka: `Covasnan piirikunta on Transilvanian itäosassa, Romanian keskiosan historiallisella alueella. Suuri osa maasta on Itäkarpaattien vuoristoa, ja asukkaita on noin 200 000. Yli kaksi kolmasosaa asukkaista on unkarilaisia, enimmäkseen székelyjä. Székelyt ovat unkarilaisten alaryhmä, ja heidän asuinaluettaan kutsutaan Székelyföldiksi. Piirikunnan keskus Sfântu Gheorghe on Olt-joen rannalla, ja siellä on székelyjen kansallismuseo. Târgu Secuiescin kaupungissa asuu noin 16 000 ihmistä. Covasnan kaupunki on tunnettu luonnon kivennäisvesistään.`,
+      pitka: `Covasnan piirikunta on Transilvanian itäosassa Romanian keskiosassa. Suuri osa maasta on Itäkarpaattien vuoristoa, ja asukkaita on noin 200 000. Yli kaksi kolmasosaa asukkaista on unkarilaisia, enimmäkseen székelyjä. Székelyt ovat unkarilaisten alaryhmä, ja heidän asuinaluettaan kutsutaan Székelyföldiksi. Piirikunnan keskus Sfântu Gheorghe on Olt-joen rannalla, ja siellä on székelyjen kansallismuseo. Târgu Secuiescin kaupungissa asuu noin 16 000 ihmistä. Covasnan kaupunki sijaitsee 550–600 metrin korkeudessa ja on tunnettu luonnon kivennäisvesistään ja mofeteista, eli maasta purkautuvista hiilidioksidikaasun lähteistä. Piirikunnan vuorilla on useita kylpyläkohteita, esimerkiksi Malnaș-Băi ja Vâlcele.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
@@ -6689,7 +6689,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Galati: {
       lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
-      pitka: `Galațin piirikunta on Moldovan alueella Itä-Romaniassa. Moldova on tässä Romanian historiallinen alue, ei Moldovan tasavalta. Alueella Siret ja Prut virtaavat Tonavaan, ja maasto on matalaa tasankoa. Piirikunnassa asuu noin 500 000 ihmistä. Piirikunnan keskus Galați on Tonavan satamakaupunki. Kaupungissa asuu noin 220 000 ihmistä. Kaupungin terästehtaan rakennus aloitettiin vuonna 1960, ja se avattiin vuonna 1966. Galațin lähellä on Barboșin paleontologinen suojelualue, jossa on noin 400 000 vuotta vanhoja nilviäisfossiileja.`,
+      pitka: `Galațin piirikunta on Moldovan alueella Itä-Romaniassa. Moldova on tässä Romanian historiallinen alue, ei Moldovan tasavalta. Alueella Siret ja Prut virtaavat Tonavaan, ja maasto on matalaa tasankoa. Piirikunnassa asuu noin 500 000 ihmistä. Piirikunnan keskus Galați on Tonavan satamakaupunki. Kaupungissa asuu noin 220 000 ihmistä. Kaupungin terästehtaan rakentaminen aloitettiin vuonna 1960, ja tehdas avattiin vuonna 1966. Galațin lähellä on Barboșin paleontologinen suojelualue, jossa on noin 400 000 vuotta vanhoja nilviäisfossiileja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
@@ -6919,7 +6919,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mures: {
       lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
-      pitka: `Mureșin piirikunta on Transilvaniassa Romanian keskiosassa, ja siellä asuu noin 520 000 ihmistä. Piirikunta on nimetty Mureș-joen mukaan. Keskus Târgu Mureș on noin 116 000 asukkaan kaupunki, ja siellä on vuosina 1911–1913 rakennettu Kulttuuripalatsi. Sighișoaran vanha kaupunki on Unescon maailmanperintökohde, ja sen 64 metriä korkea kellotorni on 1300-luvulta. Reghinin kaupunki, jossa asuu noin 30 000 ihmistä, tunnetaan viulujen ja muiden soittimien valmistuksesta. Sovatan kylpyläkaupungissa on suolaisia järviä. Unkarilaisia on noin kolmannes asukkaista. Kulttuuripalatsi edustaa unkarilaista jugendtyyliä. Kaupungissa on myös lääketieteellinen yliopisto, joka perustettiin vuonna 1945.`,
+      pitka: `Mureșin piirikunta on Transilvaniassa Romanian keskiosassa, ja siellä asuu noin 520 000 ihmistä. Piirikunta on nimetty Mureș-joen mukaan. Keskus Târgu Mureș on noin 116 000 asukkaan kaupunki, ja siellä on vuosina 1911–1913 rakennettu Kulttuuripalatsi, joka edustaa unkarilaista jugendtyyliä. Sighișoaran vanha kaupunki on Unescon maailmanperintökohde, ja sen 64 metriä korkea kellotorni on 1300-luvulta. Reghinin kaupunki, jossa asuu noin 30 000 ihmistä, tunnetaan viulujen ja muiden soittimien valmistuksesta. Sovatan kylpyläkaupungissa on suolaisia järviä. Unkarilaisia on noin kolmannes asukkaista. Kaupungissa on myös lääketieteellinen yliopisto, joka perustettiin vuonna 1945.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-mures-v-6c48ef2b.jpg',
@@ -7149,7 +7149,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tulcea: {
       lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
-      pitka: `Tulcean piirikunta on vesien ja luonnon alue Kaakkois-Romaniassa, ja siellä asuu noin 190 000 ihmistä. Se on asukasluvultaan Romanian pienin piirikunta. Alue kuuluu Dobrudžaan, Tonavan ja Mustanmeren väliseen historialliseen alueeseen. Piirikunnan keskus Tulcea on Tonavan rannalla. Tonavan suisto kattaa noin kolmanneksen piirikunnasta, ja se on ollut Unescon maailmanperintökohde vuodesta 1991. Suistossa elää yli 300 lintulajia. Sulinan kaupunki sijaitsee suiston keskimmäisen haaran suulla Mustan meren rannalla. Piirikunnan keskiosassa ovat Măcinin vuoret, jotka kohoavat noin 400 metrin korkeuteen. Piirikunnassa on myös Halmyrisin roomalaisen linnoituksen rauniot.`,
+      pitka: `Tulcean piirikunta on vesien ja luonnon alue Kaakkois-Romaniassa, ja siellä asuu noin 190 000 ihmistä. Se on asukasluvultaan Romanian pienin piirikunta. Alue kuuluu Dobrudžaan, Tonavan ja Mustanmeren väliseen historialliseen alueeseen. Piirikunnan keskus Tulcea on Tonavan rannalla. Tonavan suisto kattaa noin kolmanneksen piirikunnasta, ja se on ollut Unescon maailmanperintökohde vuodesta 1991. Suistossa elää yli 300 lintulajia. Sulinan kaupunki sijaitsee suiston keskimmäisen haaran suulla Mustanmeren rannalla. Piirikunnan keskiosassa ovat Măcinin vuoret, jotka kohoavat noin 400 metrin korkeuteen. Piirikunnassa on myös Halmyrisin roomalaisen linnoituksen rauniot.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
@@ -7172,7 +7172,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
-      pitka: `Vasluin piirikunta on maaseutupiirikunta Itä-Romaniassa, ja siellä asuu noin 370 000 ihmistä. Piirikunnan itärajana on Prut-joki, jonka toisella puolella on Moldovan tasavalta. Alue kuuluu Moldovaan, Romanian itäiseen historialliseen alueeseen, joka on eri asia kuin Moldovan tasavalta. Piirikunnan keskus on Vaslui. Sen lähellä Moldovan ruhtinas Tapani Suuri voitti ottomaanien armeijan tammikuussa 1475. Huși-kaupungissa on viinitarhoja, ja siellä solmittiin vuonna 1711 Prutin rauha. Piirikunnan halki virtaa Bârlad-joki. Vasluin, Bârladin ja Huși-kaupungin kirkot ja luostarit ovat alueen matkailukohteita. Talous perustuu nykyään pääosin maanviljelyyn.`,
+      pitka: `Vasluin piirikunta on maaseutupiirikunta Itä-Romaniassa, ja siellä asuu noin 370 000 ihmistä. Piirikunnan itärajana on Prut-joki, jonka toisella puolella on Moldovan tasavalta. Alue kuuluu Moldovaan, Romanian itäiseen historialliseen alueeseen, joka on eri asia kuin Moldovan tasavalta. Piirikunnan keskus on Vaslui. Sen lähellä Moldovan ruhtinas Tapani Suuri voitti ottomaanien armeijan tammikuussa 1475. Huși-kaupungissa on viinitarhoja, ja siellä solmittiin vuonna 1711 Prutin rauha. Piirikunnan halki virtaa Bârlad-joki. Vasluin kaupungissa on Tapani Suuren vuonna 1490 perustama kirkko, joka on omistettu Johannes Kastajan mestaukselle. Talous perustuu nykyään pääosin maanviljelyyn.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
@@ -7195,7 +7195,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vâlcea': {
       lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
-      pitka: `Vâlcean piirikunta on vuorten ja kylpylöiden alue Etelä-Romaniassa, ja siellä asuu noin 340 000 ihmistä. Alue kuuluu Valakiaan, ja Olt-joki virtaa sen läpi pohjoisesta etelään. Idässä kohoavat Făgărașin vuoret yli 2 200 metriin ja lännessä Lotrun vuoret yli 2 000 metriin. Maakuntakeskuksessa Râmnicu Vâlceassa asuu noin 93 000 ihmistä. Olt-joen rannalla Călimăneștin kaupungin lähellä on Cozian luostari, jonka Valakian ruhtinas Mircea I rakennutti 1380-luvun lopulla. Horezu-kaupungin lähellä on Hurezin luostari, jonka ruhtinas Constantin Brâncoveanu perusti 1690-luvulla. Se kuuluu Unescon maailmanperintöön. Băile Govora ja Băile Olănești ovat kylpylöitä.`,
+      pitka: `Vâlcean piirikunta on vuorten ja kylpylöiden alue Etelä-Romaniassa, ja siellä asuu noin 340 000 ihmistä. Alue kuuluu Valakiaan, ja Olt-joki virtaa sen läpi pohjoisesta etelään. Idässä kohoavat Făgărașin vuoret yli 2 200 metriin ja lännessä Lotrun vuoret yli 2 000 metriin. Piirikunnan keskuksessa Râmnicu Vâlceassa asuu noin 93 000 ihmistä. Olt-joen rannalla Călimăneștin kaupungin lähellä on Cozian luostari, jonka Valakian ruhtinas Mircea I rakennutti 1380-luvun lopulla. Horezu-kaupungin lähellä on Hurezin luostari, jonka ruhtinas Constantin Brâncoveanu perusti 1690-luvulla. Se kuuluu Unescon maailmanperintöön. Băile Govora ja Băile Olănești ovat kylpylöitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
