@@ -12217,7 +12217,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chernivtsi: {
       lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
-      pitka: `Tšernivtsin alue on pinta-alaltaan Ukrainan pienin alue, ja siellä asuu noin 900 000 ihmistä (2022). Alue kuuluu historialliseen Bukovinaan, ja siellä on metsäarojen lisäksi Karpaattien vuoristoa. Habsburgien monarkia sai sen vuonna 1775, se liitettiin Romaniaan vuonna 1918, ja Neuvostoliitto miehitti sen vuonna 1940. Aluekeskuksessa Tšernivtsissa on yliopisto, jonka päärakennus on 1800-luvun historisismia ja Unescon maailmanperintökohde vuodesta 2011. H’otyn on kaupunki Dnestr-joen rannalla, ja siellä on 1300-luvun lopulla aloitettu kivilinnoitus. Vuoden 2001 väestönlaskennassa noin 12 prosenttia asukkaista oli romanialaisia.`,
+      pitka: `Tšernivtsin alue on pinta-alaltaan Ukrainan pienin alue, ja siellä asuu noin 900 000 ihmistä (2022). Alue kuuluu historialliseen Bukovinaan, ja siellä on metsäarojen lisäksi Karpaattien vuoristoa. Habsburgien monarkia sai sen vuonna 1775, se liitettiin Romaniaan vuonna 1918, ja Neuvostoliitto miehitti sen vuonna 1940. Aluekeskuksessa Tšernivtsissä on yliopisto, jonka päärakennus on 1800-luvun historisismia ja Unescon maailmanperintökohde vuodesta 2011. H’otyn on kaupunki Dnestr-joen rannalla, ja siellä on 1300-luvun lopulla aloitettu kivilinnoitus. Vuoden 2001 väestönlaskennassa noin 12 prosenttia asukkaista oli romanialaisia.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-chernivtsi-vc-205593bc.jpg',
@@ -12309,7 +12309,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kharkiv: {
       lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
-      pitka: `Harkovan alue on Ukrainan koillisosassa, ja siellä asuu noin 2,7 miljoonaa ihmistä (2022). Alueen pohjois- ja keskiosa kuuluu historialliseen Sloboda-Ukrainaan. Aluekeskus Harkova on Ukrainan toiseksi suurin kaupunki. Se oli Ukrainan neuvostotasavallan pääkaupunki vuoteen 1934 asti. Harkovan yliopisto perustettiin vuonna 1805. Kaupunki kasvoi 1800-luvun lopulla raskaan teollisuuden keskukseksi Donbassin hiilen ja Kryvyi Rihin rautamalmin ansiosta. Kaupungin Vapaudenaukiolla on Derzhprom, vuonna 1928 valmistunut toimistorakennus. Rakennus oli Neuvostoliiton ensimmäisiä nykyaikaisia pilvenpiirtäjiä. Venäjä miehitti osan alueesta vuonna 2022, ja Ukraina valtasi suuren osan takaisin saman vuoden syksyllä.`,
+      pitka: `Harkovan alue on Ukrainan koillisosassa, ja siellä asuu noin 2,7 miljoonaa ihmistä (2022). Alueen pohjois- ja keskiosa kuuluu historialliseen Sloboda-Ukrainaan. Aluekeskus Harkova on Ukrainan toiseksi suurin kaupunki. Se oli Ukrainan neuvostotasavallan pääkaupunki vuoteen 1934 asti. Kaupungin Vapaudenaukiolla on Derzhprom, vuonna 1928 valmistunut toimistorakennus. Rakennus oli Neuvostoliiton ensimmäisiä nykyaikaisia pilvenpiirtäjiä. Tšuhujivin kaupungissa syntyi vuonna 1844 taidemaalari Ilja Repin. Skovorodynivkan kylässä kuoli vuonna 1794 filosofi Hryhori Skovoroda, ja kylän nykyinen nimi tulee hänen sukunimestään. Venäjä miehitti osan alueesta vuonna 2022, ja Ukraina valtasi suuren osan takaisin saman vuoden syksyllä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
@@ -12332,7 +12332,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kherson: {
       lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
-      pitka: `Hersonin alue on Etelä-Ukrainassa Mustanmeren rannalla, ja sen läpi virtaa Dnepr-joki. Vuonna 2022 alueella asui noin miljoona ihmistä. Aluekeskus Herson perustettiin vuonna 1778 linnoitukseksi ja laivanrakennuksen kaupungiksi. Kaupunki on satama, ja sen telakka avattiin vuonna 1783. Alue tunnetaan Ukrainassa vesimeloneistaan. Askania-Nova on Unescon biosfäärialue. Friedrich Falz-Fein perusti sen vuonna 1898. Biosfäärialueen pinta-ala on noin 333 neliökilometriä. Siellä on neitseellistä aroa ja Przewalskinhevosia. Oleshkyn hiekka-alue on puoliaavikko, jossa on jopa viiden metrin korkuisia dyynejä. Venäjä on miehittänyt Dnepr-joen itäpuolisen alueen vuodesta 2022.`,
+      pitka: `Hersonin alue on Etelä-Ukrainassa Mustanmeren rannalla, ja sen läpi virtaa Dnepr-joki. Vuonna 2022 alueella asui noin miljoona ihmistä. Aluekeskus Herson perustettiin vuonna 1778 linnoitukseksi ja laivanrakennuksen kaupungiksi. Kaupunki on satama, ja sen telakka avattiin vuonna 1783. Alue tunnetaan Ukrainassa vesimeloneistaan. Askania-Nova on Unescon biosfäärialue. Friedrich Falz-Fein perusti sen vuonna 1898. Biosfäärialueen pinta-ala on noin 333 neliökilometriä. Siellä on neitseellistä aroa ja Przewalskinhevosia. Oleškyn hiekka-alue on puoliaavikko, jossa on jopa viiden metrin korkuisia dyynejä. Venäjä on miehittänyt Dnepr-joen itäpuolisen alueen vuodesta 2022.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-kherson-vh-e4b391fd.jpg',
@@ -12355,7 +12355,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Khmel'nyts'kyy": {
       lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
-      pitka: `Hmelnytskyin alue on Länsi-Ukrainassa, ja osa siitä kuuluu historialliseen Podoliaan. Vuonna 2022 alueella asui noin 1,3 miljoonaa ihmistä. Aluekeskus Hmelnytskyi sai nimensä vuonna 1954 kasakkajohtaja Bohdan Hmelnytskyin mukaan. Alueen korkein kohta on 409 metriä korkea Velyka Buhaikha. Kamjanets-Podilskyin vanha kaupunki on kalliolla Smotrych-joen mutkan sisällä, ja vanhan kaupungin vieressä on linnoitus. Kamjanets-Podilskyistä tuli vuonna 1434 Podolian voivodikunnan pääkaupunki. Osmanien valtakunta hallitsi kaupunkia vuosina 1672–1699. Medzhybizh-nimisessä paikassa on linnoitus ja juutalaisen hasidismiliikkeen perustajan Baal Shem Tovin hauta. Netishynissä on Hmelnytskyin ydinvoimala. Dnestr-joki virtaa alueen läpi 160 kilometrin matkan.`,
+      pitka: `Hmelnytskyin alue on Länsi-Ukrainassa, ja osa siitä kuuluu historialliseen Podoliaan. Vuonna 2022 alueella asui noin 1,3 miljoonaa ihmistä. Aluekeskus Hmelnytskyi sai nimensä vuonna 1954 kasakkajohtaja Bohdan Hmelnytskyin mukaan. Alueen korkein kohta on 409 metriä korkea Velyka Buhaikha. Kamjanets-Podilskyin vanha kaupunki on kalliolla Smotrych-joen mutkan sisällä, ja vanhan kaupungin vieressä on linnoitus. Kamjanets-Podilskyistä tuli vuonna 1434 Podolian voivodikunnan pääkaupunki. Osmanien valtakunta hallitsi kaupunkia vuosina 1672–1699. Medžybiž-nimisessä paikassa on linnoitus ja juutalaisen hasidismiliikkeen perustajan Baal Shem Tovin hauta. Netishynissä on Hmelnytskyin ydinvoimala. Dnestr-joki virtaa alueen läpi 160 kilometrin matkan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
@@ -12424,7 +12424,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirovohrad: {
       lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
-      pitka: `Kirovohradin alue on Keski-Ukrainassa, ja vuonna 2022 siellä asui alle miljoona ihmistä. Aluekeskus Kropyvnytskyi on Inhul-joen varrella. Kaupunki perustettiin vuonna 1754 Pyhän Elisabetin linnoituksena, ja vuosina 1939–2016 se oli nimeltään Kirovohrad. Nykyinen nimi tulee näytelmäkirjailija Marko Kropyvnytskyista. Alue on säilyttänyt vanhan nimensä, koska sen muuttaminen vaatii perustuslain muutoksen. Kropyvnytskyissä pidetään vuoden 1882 esitystä ukrainankielisen ammattiteatterin ensimmäisenä. Dnepr-joella Krementšukin tekojärvi ulottuu alueelle, ja se on Dneprin suurin tekojärvi. Dobrovelychkivka-nimisen kylän sanotaan olevan Ukrainan maantieteellinen keskipiste.`,
+      pitka: `Kirovohradin alue on Keski-Ukrainassa, ja vuonna 2022 siellä asui alle miljoona ihmistä. Aluekeskus Kropyvnytskyi on Inhul-joen varrella. Kaupunki perustettiin vuonna 1754 Pyhän Elisabetin linnoituksena, ja vuosina 1939–2016 se oli nimeltään Kirovohrad. Nykyinen nimi tulee näytelmäkirjailija Marko Kropyvnytskyistä. Alue on säilyttänyt vanhan nimensä, koska sen muuttaminen vaatii perustuslain muutoksen. Kropyvnytskyissä pidetään vuoden 1882 esitystä ukrainankielisen ammattiteatterin ensimmäisenä. Dnepr-joella Krementšukin tekojärvi ulottuu alueelle, ja se on Dneprin suurin tekojärvi. Dobrovelychkivka-nimisen kylän sanotaan olevan Ukrainan maantieteellinen keskipiste.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-kirovohrad-v-ed89b435.jpg',
@@ -12539,7 +12539,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Poltava: {
       lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
-      pitka: `Pultavan alue on Keski-Ukrainaa Dneprin vasemmalla puolella, ja siellä asuu noin 1,4 miljoonaa ihmistä (2022). Aluekeskus Pultava on kulttuuri- ja koulutuskaupunki. Sen lähellä käytiin vuonna 1709 Pultavan taistelu, jossa Venäjän tsaari Pietari Suuri voitti Ruotsin kuninkaan Kaarle XII:n armeijan. Vorskla-joen rannalla sijaitseva Opishnia-niminen kylä on ollut koristeellisen keramiikan keskus 1800-luvulta lähtien. Sorotšintsin kylässä syntyi vuonna 1809 kirjailija Nikolai Gogol. Krementšukin kaupungissa on suuri öljynjalostamo, ja Dneprin Krementšukin tekojärvi on alueen lounaisrajalla. Alueella on myös öljy- ja maakaasukaivoja sekä putkistoja.`,
+      pitka: `Pultavan alue on Keski-Ukrainaa Dneprin vasemmalla puolella, ja siellä asuu noin 1,4 miljoonaa ihmistä (2022). Aluekeskus Pultava on kulttuuri- ja koulutuskaupunki. Sen lähellä käytiin vuonna 1709 Pultavan taistelu, jossa Venäjän tsaari Pietari Suuri voitti Ruotsin kuninkaan Kaarle XII:n armeijan. Vorskla-joen rannalla sijaitseva Opišnia-niminen kylä on ollut koristeellisen keramiikan keskus 1800-luvulta lähtien. Sorotšintsin kylässä syntyi vuonna 1809 kirjailija Nikolai Gogol. Krementšukin kaupungissa on suuri öljynjalostamo, ja Dneprin Krementšukin tekojärvi on alueen lounaisrajalla. Alueella on myös öljy- ja maakaasukaivoja sekä putkistoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-poltava-v-a-0ed3087d.jpg',
@@ -12562,7 +12562,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Rivne: {
       lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
-      pitka: `Rivnen alue on metsäinen alue Ukrainan luoteisosassa, historiallisen Volynian alueen keskellä, ja siellä asuu noin 1,1 miljoonaa ihmistä (2022). Alueen pohjoisosa on Polesian metsä- ja suoseudun alankoa, ja pääjoki on Horyn. Alueelta louhitaan meripihkaa ja basalttia. Aluekeskus Rivne mainitaan ensimmäisen kerran vuonna 1283. Ostrohin kaupungissa perustettiin vuonna 1576 akatemia, jota pidetään itäslaavilaisten maiden ensimmäisenä korkeakouluna. Klevanin kaupungin lähellä teollisuusrata kulkee metsän läpi, ja puut muodostavat sen päälle vihreän tunnelin. Tunnelia kutsutaan Rakkauden tunneliksi, ja se on kolmesta viiteen kilometriä pitkä. Varashin kaupungin lähellä on Rivnen ydinvoimala.`,
+      pitka: `Rivnen alue on metsäinen alue Ukrainan luoteisosassa, historiallisen Volynian alueen keskellä, ja siellä asuu noin 1,1 miljoonaa ihmistä (2022). Alueen pohjoisosa on Polesian metsä- ja suoseudun alankoa, ja pääjoki on Horyn. Alueelta louhitaan meripihkaa ja basalttia. Aluekeskus Rivne mainitaan ensimmäisen kerran vuonna 1283. Ostrohin kaupungissa perustettiin vuonna 1576 akatemia, jota pidetään itäslaavilaisten maiden ensimmäisenä korkeakouluna. Klevanin kaupungin lähellä teollisuusrata kulkee metsän läpi, ja puut muodostavat sen päälle vihreän tunnelin. Tunnelia kutsutaan Rakkauden tunneliksi, ja se on kolmesta viiteen kilometriä pitkä. Varašin kaupungin lähellä on Rivnen ydinvoimala.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-rivne-v-a-be361b41.jpg',
@@ -12654,7 +12654,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vinnytsya: {
       lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
-      pitka: `Vinnytsian alue on maatalousvaltainen alue Keski-Ukrainassa, Podolian historiallisella seudulla. Alueella asuu noin 1,6 miljoonaa ihmistä (arvio vuodelta 2022). Aluekeskus Vinnytsia on Etelä-Bug-joen rannalla, ja kaupungin nimi mainitaan ensimmäisen kerran vuonna 1363. Kaupungissa on lääkäri Nikolai Pirogovin entinen kartano, joka on nykyään museo. Pirogov kuoli kartanossa vuonna 1881, ja hänen balsamoitu ruumiinsa on kartanon kirkossa. Alueella syntyi vuonna 1877 säveltäjä Mykola Leontovych. Hän sävelsi laulun Štšedryk vuonna 1914, ja sen englanninkielinen versio tunnetaan nimellä Carol of the Bells. Alueen lounaisrajalla virtaa Dnestr-joki.`,
+      pitka: `Vinnytsian alue on maatalousvaltainen alue Keski-Ukrainassa, Podolian historiallisella seudulla. Alueella asuu noin 1,6 miljoonaa ihmistä (arvio vuodelta 2022). Aluekeskus Vinnytsia on Etelä-Bug-joen rannalla, ja kaupungin nimi mainitaan ensimmäisen kerran vuonna 1363. Kaupungissa on lääkäri Nikolai Pirogovin entinen kartano, joka on nykyään museo. Pirogov kuoli kartanossa vuonna 1881, ja hänen balsamoitu ruumiinsa on kartanon kirkossa. Alueella syntyi vuonna 1877 säveltäjä Mykola Leontovytš. Hän sävelsi laulun Štšedryk vuonna 1914, ja sen englanninkielinen versio tunnetaan nimellä Carol of the Bells. Alueen lounaisrajalla virtaa Dnestr-joki.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
@@ -12677,7 +12677,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Volyn: {
       lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
-      pitka: `Volynin alue on Ukrainan luoteisosassa, ja se rajoittuu Puolaan ja Valko-Venäjään. Alueella asuu noin miljoona ihmistä (arvio vuodelta 2022). Aluekeskus Lutsk on Styr-joen rannalla. Lutskin linna rakennettiin pääosin 1340-luvulla, ja se on kuvattuna Ukrainan rahan, hryvnan, 200 hryvnan setelissä. Alueen luoteisosassa on Šatskin kansallispuisto, joka perustettiin vuonna 1983. Puistossa on yli 30 järveä, ja Svitjaz-järvi on Ukrainan syvin: enimmillään noin 58 metriä. Runoilija Lesja Ukrainka vietti lapsuutensa Volynissa. 1200–1300-luvuilla alue kuului Galitsian–Volynin kuningaskuntaan.`,
+      pitka: `Volynin alue on Ukrainan luoteisosassa, ja se rajoittuu Puolaan ja Valko-Venäjään. Alueella asuu noin miljoona ihmistä (arvio vuodelta 2022). Aluekeskus Lutsk on Styr-joen rannalla. Lutskin linna rakennettiin pääosin 1340-luvulla, ja se on kuvattuna Ukrainan rahan, hryvnan, 200 hryvnan setelissä. Alueen luoteisosassa on Šatskin kansallispuisto, joka perustettiin vuonna 1983. Puistossa on yli 30 järveä, ja Svitjaz-järvi on Ukrainan syvin: enimmillään noin 58 metriä. Runoilija Lesja Ukrainka vietti lapsuutensa Volynissä. 1200–1300-luvuilla alue kuului Galitsian–Volynin kuningaskuntaan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-maakunta2-volyn-v-a-3e34631a.jpg',
@@ -12750,7 +12750,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sevastopol: {
       lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
-      pitka: `Sevastopol on kaupunki Krimin niemimaan lounaiskärjessä. Kiovan tavoin sillä on Ukrainassa erityisasema, eikä se kuulu mihinkään alueeseen. Kaupunki perustettiin vuonna 1783. Asukkaita oli vuonna 2013 noin 340 000. Länsiosassa ovat antiikin Khersonesoksen kaupungin rauniot. Kreikkalaiset uudisasukkaat perustivat kaupungin ennen ajanlaskun alkua, ja rauniot ovat Unescon maailmanperintökohde vuodesta 2013. Krimin sodassa liittoutuneet joukot, muun muassa britit ja ranskalaiset, piirittivät kaupunkia lokakuusta 1854 syyskuuhun 1855. Kaupunki on ollut Venäjän Mustanmeren laivaston tukikohta, ja Venäjä on miehittänyt kaupungin vuodesta 2014; kansainvälisesti se tunnustetaan Ukrainan osaksi.`,
+      pitka: `Sevastopol on kaupunki Krimin niemimaan lounaiskärjessä. Kiovan tavoin sillä on Ukrainassa erityisasema, eikä se kuulu mihinkään alueeseen. Kaupunki perustettiin vuonna 1783. Asukkaita oli vuonna 2013 noin 380 000. Länsiosassa ovat antiikin Khersonesoksen kaupungin rauniot. Kreikkalaiset uudisasukkaat perustivat kaupungin ennen ajanlaskun alkua, ja rauniot ovat Unescon maailmanperintökohde vuodesta 2013. Krimin sodassa liittoutuneet joukot, muun muassa britit ja ranskalaiset, piirittivät kaupunkia lokakuusta 1854 syyskuuhun 1855. Kaupunki on ollut Venäjän Mustanmeren laivaston tukikohta, ja Venäjä on miehittänyt kaupungin vuodesta 2014; kansainvälisesti se tunnustetaan Ukrainan osaksi.`,
     },
   },
   /*
