@@ -3092,3 +3092,7 @@ Kortti "Kelpaavatko nähtävyysnostot Pariisin lähikartalla?" (NUI:n pari K1/K2
 ## R2-POISTO LAAJENNETTU OLAVINLINNAN VANHOIHIN DIORAAMOIHIN (omistaja 28.10. klo 15.33) (28.10.2026 klo 15.38)
 
 Omistajan kortti KK:ssa 15.33: 'Poistetaanko myös Olavinlinnan vanhat dioraamat?' → 'Kyllä (suositus)'. Laajentaa R2:n yhteisen pysyvän poiston (julkaisija-tyokalut/poista-r2-yhteinen-20261028.zsh, 219 kansiota). Komento omistajalla ajettavana; Tehty → JU tarkistaa.
+
+## RAKENNUSTEN KEVENNYS PUOLIVÄLIIN, KATUVIIVAT KEVYEMMIKSI, PIIRROSTEN KONTRASTI MALTILLISEMMAKSI (omistaja 28.10. klo 15.41) (28.10.2026 klo 15.42)
+
+Kortit KK:ssa 'Kevennetäänkö kartan rakennukset?' ja 'Kelpaavatko isommat ja selkeämmät piirrokset?', sanatarkasti: "kevennys hieman liian vahva. Lisäksi katujen viivat pitää keventää myös. ja silloin nähtävyyksiin ei tarvitse lisätä niin paljoa kontrasti kuin nyt esikatselussa" + piirroksista "ks. ed". Toteutus: KS rakennusten peitto nykyisen ja kevennetyn puoliväliin ja katuviivat kevyemmiksi; NUI piirrosten kontrasti maltillisemmaksi, koko ×1,25 säilyy. Uusi yhteispari KS+NUI → PT → KK.
