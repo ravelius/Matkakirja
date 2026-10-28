@@ -3072,3 +3072,7 @@ palat varastoon ja käyttämättömät karttaversiot pois.' JU: a) paikallinen l
 muuttuneet palat. Pelaajien lataukset ennallaan. Tavoite ~10–15 $/kk. 2) Omistaja n. 12.24: 'pystyykö striimikartalle tuomaan kohdekaupunkeihin tehtyjä nähtävyysnostoja?' Päätös 12.28: 'Kyllä
 (suositus)' – 'Näkyvät oikeilla paikoillaan, kun lähestyt kaupunkia. Napautus avaa jutun.' Vasta kaupungin lähikartalla (2.9. linja maan tasolla pätee), nykyiset nostomerkit, napautus avaa saman
 jutun; sijainnit SK:lta Wikidatasta; NUI vetää.
+
+## KARTTA: KOHDEMAAN RAJA JA KOHDEMERKIN VÄISTÖ (omistaja 28.10. klo 12.35, KK:n välitys) (28.10.2026 klo 12.35)
+
+Kohdemaan rajan ohennus (KS:n parit 2b636c158): omistaja "Kelpaa (suositus)" → KS vie NS:lle. Kohdemerkin väistö, sanatarkasti: "ei voi siirtyä meren päälle" (Ranskan näkymässä Big Ben siirtyi rannikolle meren päälle) ja "louvren yms. siirtomatka voi olla myös pienempi, niin että se on hyvin lähellä nappulaa" → KS korjaa: siirto aina maalle, ei kuvakortin alle, pienenä ja vain sen verran, ettei merkki ole nappulan alla; uusi pari KK:lle ennen NS:ää.
