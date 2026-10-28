@@ -17807,7 +17807,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cavan: {
       lyhyt: 'Cuilcaghvuoren juurella on Shannon Pot, 16 metrin levyinen lähdelampi, josta Shannon-joen katsotaan perinteisesti saavan alkunsa.',
-      pitka: `Cavanin kreivikunta on järvien ja kumpuilevien kukkuloiden aluetta Irlannin pohjoisosassa. Kreivikunnassa asuu noin 82 000 ihmistä, ja keskus on Cavanin kaupunki. Kreivikuntaa kutsutaan järvikunnaksi, ja sen sanotaan sisältävän 365 järveä. Pohjoisessa kreivikunta rajoittuu Pohjois-Irlannin Fermanaghin kreivikuntaan. Cuilcagh-vuoren rinteellä on Shannon Pot, Irlannin pisimmän joen, Shannonin, perinteinen lähde. Vuori on noin 665 metriä korkea ja Cavanin kreivikunnan korkein kohta. Maatalous on tärkein elinkeino. Killeshandran kylässä on maito-osuuskunta Lakeland Dairiesin kotipaikka.`,
+      pitka: `Cavanin kreivikunta on järvien ja kumpuilevien kukkuloiden aluetta Irlannin pohjoisosassa. Kreivikunnassa asuu noin 82 000 ihmistä, ja keskus on Cavanin kaupunki. Kreivikuntaa kutsutaan järvien kreivikunnaksi, ja sen sanotaan sisältävän 365 järveä. Pohjoisessa kreivikunta rajoittuu Pohjois-Irlannin Fermanaghin kreivikuntaan. Cuilcagh-vuoren rinteellä on Shannon Pot, Irlannin pisimmän joen, Shannonin, perinteinen lähde. Vuori on noin 665 metriä korkea ja Cavanin kreivikunnan korkein kohta. Maatalous on tärkein elinkeino. Killeshandran kylässä on maito-osuuskunta Lakeland Dairiesin kotipaikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-cavan-9e4a65bb.jpg",
@@ -17830,7 +17830,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Clare: {
       lyhyt: 'Burrenin kalkkikivikarstilla kasvavat arktiset tunturikasvit ja Välimeren kasvit rinnakkain – siellä on yli 70 % Irlannin kukkalajeista.',
-      pitka: `Clarein kreivikunta on Irlannin länsirannikolla Atlantin rannalla, ja siellä asuu noin 130 000 ihmistä. Kreivikunnan keskus on Ennisin kaupunki, jossa on noin 28 000 asukasta. Kaupungin läpi virtaa Fergus-joki. Moherin kalliot ovat noin 14 kilometriä pitkä merenrantajyrkänne, jonka korkein kohta on 214 metriä. Siellä käy vuosittain yli miljoona vierailijaa. Kalliot ovat Burrenin kalkkikivialueen reunalla. Burrenissa kasvaa yli 70 prosenttia Irlannin kukkalajeista. Clare tunnetaan myös irlantilaisesta perinnemusiikista. Ennisissa pidetään toukokuun lopussa Fleadh Nua -perinnemusiikkifestivaali, ja Miltown Malbayn kaupungissa on heinäkuussa Willie Clancy Summer School -musiikkikesäkoulu.`,
+      pitka: `Clarein kreivikunta on Irlannin länsirannikolla Atlantin rannalla, ja siellä asuu noin 130 000 ihmistä. Kreivikunnan keskus on Ennisin kaupunki, jossa on noin 28 000 asukasta. Kaupungin läpi virtaa Fergus-joki. Moherin kalliot ovat noin 14 kilometriä pitkä merenrantajyrkänne, jonka korkein kohta on 214 metriä. Siellä käy vuosittain yli miljoona vierailijaa. Kalliot ovat Burrenin kalkkikivialueen reunalla. Burrenissa kasvaa yli 70 prosenttia Irlannin kukkalajeista. Clare tunnetaan myös irlantilaisesta perinnemusiikista. Ennisissä pidetään toukokuun lopussa Fleadh Nua -perinnemusiikkifestivaali, ja Miltown Malbayn kaupungissa on heinäkuussa Willie Clancy Summer School -musiikkikesäkoulu.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-clare-249fdce7.jpg",
@@ -18175,7 +18175,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mayo: {
       lyhyt: 'Achill on Irlannin suurin saari, ja sen Croaghaunin merijyrkänteet ovat maan korkeimmat – mantereelle pääsee kääntösiltaa pitkin.',
-      pitka: `Mayon kreivikunta on Irlannin länsirannikolla Connachtin maakunnassa, ja siellä asuu noin 140 000 ihmistä. Pinta-alaltaan se on maan kolmanneksi suurin kreivikunta. Keskus on Castlebar. Korkein huippu on Mweelrea, 814 metriä, ja rantaviivaa on 1 168 kilometriä. Achill on Irlannin suurin saari, ja sen ja mantereen välillä on silta. Westportin kaupungin lähellä kohoaa 764 metriä korkea Croagh Patrick -vuori. Pyhiinvaeltajat nousevat sinne perinteisesti heinäkuun viimeisenä sunnuntaina. Pohjoisrannikon Céide Fieldsin alueella on suon alle jääneitä kiviaitoja, jotka ovat noin 5 500 vuotta vanhoja. Kreivikunnassa on myös gaeltacht-alueita, joissa puhutaan arkena iiriä, esimerkiksi Tourmakeadyn ympäristössä.`,
+      pitka: `Mayon kreivikunta on Irlannin länsirannikolla Connachtin maakunnassa, ja siellä asuu noin 140 000 ihmistä. Pinta-alaltaan se on maan kolmanneksi suurin kreivikunta. Keskus on Castlebar. Korkein huippu on Mweelrea, 814 metriä, ja rantaviivaa on 1 168 kilometriä. Achill on Irlannin rannikon suurin saari, ja sen ja mantereen välillä on silta. Westportin kaupungin lähellä kohoaa 764 metriä korkea Croagh Patrick -vuori. Pyhiinvaeltajat nousevat sinne perinteisesti heinäkuun viimeisenä sunnuntaina. Pohjoisrannikon Céide Fieldsin alueella on suon alle jääneitä kiviaitoja, jotka ovat noin 5 500 vuotta vanhoja. Kreivikunnassa on myös gaeltacht-alueita, joissa puhutaan arkena iiriä, esimerkiksi Tourmakeadyn ympäristössä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-mayo-cf62f4b7.jpg",
@@ -18221,7 +18221,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Monaghan: {
       lyhyt: 'Glasloughin Castle Leslien kartanon kirkossa Paul McCartney vihittiin 2002, ja linnan hääjuhlassa oli 300 vierasta.',
-      pitka: `Monaghan on kreivikunta Irlannin pohjoisosassa, Ulsterin historiallisessa maakunnassa, aivan Pohjois-Irlannin rajalla. Siellä asuu noin 65 000 ihmistä. Maisemaa muovaavat drumlinit eli jääkauden jättämät pitkulaiset kumpareet, ja siksi kreivikuntaa kutsutaan drumlinien kreivikunnaksi. Carrickmacross-pitsi on neulalla verkkokankaaseen tehtävää käsityötä, ja sitä on valmistettu noin vuodesta 1820. Clonesin kaupungin stadion on Ulsterin gaelic footballin eli irlantilaisen jalkapallon pääkenttä, ja se mahtuu noin 29 000 katsojaa. Runoilija Patrick Kavanagh syntyi Inniskeenin kylässä vuonna 1904. Keskus on Monaghanin kaupunki, jossa on pyhän Macartanin katolinen katedraali. Kreivikunnan korkein kohta on Slieve Beagh, 373 metriä.`,
+      pitka: `Monaghan on kreivikunta Irlannin pohjoisosassa, Ulsterin historiallisessa maakunnassa, aivan Pohjois-Irlannin rajalla. Siellä asuu noin 65 000 ihmistä. Maisemaa muovaavat drumlinit eli jääkauden jättämät pitkulaiset kumpareet, ja siksi kreivikuntaa kutsutaan drumlinien kreivikunnaksi. Carrickmacross-pitsi on neulalla verkkokankaaseen tehtävää käsityötä, ja sitä on valmistettu noin vuodesta 1820. Clonesin kaupungin stadion on Ulsterin gaelic footballin eli irlantilaisen jalkapallon pääkenttä, ja sinne mahtuu noin 29 000 katsojaa. Runoilija Patrick Kavanagh syntyi Inniskeenin kylässä vuonna 1904. Keskus on Monaghanin kaupunki, jossa on pyhän Macartanin katolinen katedraali. Kreivikunnan korkein kohta on Slieve Beagh, 373 metriä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-monaghan-01016250.jpg",
@@ -18313,7 +18313,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'South Dublin': {
       lyhyt: 'Montpelier Hillin laella on 1725 rakennetun metsästysmajan raunio, jossa Hellfire Clubin herrojen kerrotaan juhlineen ja jonka sanotaan kummittelevan.',
-      pitka: `South Dublin on kreivikunta Dublinin länsi- ja eteläpuolella, Leinsterin historiallisessa maakunnassa. Se perustettiin vuonna 1994, kun entinen Dublinin kreivikunta jaettiin kolmeen osaan. Alueella asuu noin 301 000 ihmistä. Keskus Tallaght on suuri esikaupunki, jossa asuu noin 80 000 ihmistä. Pyhä Maelruain perusti Tallaghtiin luostarin vuonna 769. Clondalkinin esikaupungissa on 25,6 metriä korkea pyöreä torni, joka on rakennettu 700- tai 800-luvulla. Shamrock Rovers pelaa jalkapalloa Tallaght Stadiumilla. Kreivikunnan korkein kohta on Kippure, 757 metriä. Luas-raitiotien punainen linja yhdistää Tallaghtin Dublinin keskustan Heustonin ja Connollyn rautatieasemiin vuodesta 2004.`,
+      pitka: `South Dublin on kreivikunta Dublinin länsi- ja eteläpuolella, Leinsterin historiallisessa maakunnassa. Se perustettiin vuonna 1994, kun entinen Dublinin kreivikunta jaettiin kolmeen osaan. Alueella asuu noin 301 000 ihmistä. Keskus Tallaght on suuri esikaupunki, jossa asuu noin 80 000 ihmistä. Pyhä Maelruain perusti Tallaghtiin luostarin vuonna 769. Clondalkinin esikaupungissa on 25,6 metriä korkea pyöreä torni, joka on rakennettu 700- tai 800-luvulla. Shamrock Rovers pelaa jalkapalloa Tallaght Stadiumilla. Kreivikunnan korkein kohta on Kippure, 757 metriä. Luas-raitiotien punainen linja kulkee Tallaghtista Dublinin keskustaan, Heustonin ja Connollyn rautatieasemille, vuodesta 2004.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-south-dublin-afd3d1fc.jpg",
@@ -18382,7 +18382,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Waterford: {
       lyhyt: 'Waterford on Irlannin vanhin kaupunki, ja aamiaiseksi siellä syödään jauhoisia, neliskanttisia blaa-sämpylöitä, joilla on EU:n suoja.',
-      pitka: `Waterfordin kreivikunta on Irlannin kaakkoisrannikolla Munsterin maakunnassa, ja siellä asuu noin 130 000 ihmistä. Kreivikunnan keskus Waterford on viikinkien vuonna 914 perustama kaupunki, jota pidetään Irlannin vanhimpana. Siellä asuu noin 60 000 ihmistä. Waterfordissa leivotaan blaata, pehmeää vehnäsämpylää, jonka pinta on jauhoinen, jolla on EU:n suojattu maantieteellinen merkintä vuodesta 2013. Waterfordista Dungarvanin kaupunkiin kulkee 46 kilometrin Waterford Greenway, vanhalle rautatielle tehty pyörätie, joka avattiin vuonna 2017. Rannikolla on Copper Coast, Unescon geopuisto. Dungarvanin lähellä on gaeltacht eli alue, jossa puhutaan yhä iiriä. Knockmealdown-vuorilla on kreivikunnan korkein kohta, noin 790 metriä.`,
+      pitka: `Waterfordin kreivikunta on Irlannin kaakkoisrannikolla Munsterin maakunnassa, ja siellä asuu noin 130 000 ihmistä. Kreivikunnan keskus Waterford on viikinkien vuonna 914 perustama kaupunki, jota pidetään Irlannin vanhimpana. Siellä asuu noin 60 000 ihmistä. Waterfordissa leivotaan blaata, pinnaltaan jauhoista vehnäsämpylää, jolla on EU:n suojattu maantieteellinen merkintä vuodesta 2013. Waterfordista Dungarvanin kaupunkiin kulkee 46 kilometrin Waterford Greenway, vanhalle rautatielle tehty pyörätie, joka avattiin vuonna 2017. Rannikolla on Copper Coast, Unescon geopuisto. Dungarvanin lähellä on gaeltacht eli alue, jossa puhutaan yhä iiriä. Knockmealdown-vuorilla on kreivikunnan korkein kohta, noin 790 metriä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-waterford-ba95111b.jpg",
