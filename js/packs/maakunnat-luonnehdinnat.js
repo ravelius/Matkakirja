@@ -9601,7 +9601,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   SRB: {
     'Grad Beograd': {
       lyhyt: 'Kalemegdanin linnoituksen muureilta keskellä Belgradia näkee kohdan, jossa Sava laskee Tonavaan.',
-      pitka: `Belgradin läpi kulkiessa kannattaa poiketa Tesla-museoon Vračarin kaupunginosassa: siellä säilytetään yli 160 000 alkuperäistä asiakirjaa, teknisiä laitteita ja jopa Nikola Teslan tuhkauurna. Kokoelma on niin merkittävä, että Unesco listasi sen maailmanmuistin joukkoon. Kun tiede alkaa tuntua raskaalta, muutaman kadun päässä avautuu Skadarlijan mukulakivikuja, missä runoilijat ja taiteilijat kokoontuivat jo 1800-luvulla ja missä kapakat soittavat elävää musiikkia yhä tänään. Kaupunki osaa yhdistää sähkömiehen laboratorion ja boheemin iltakävelyn samaan iltapäivään.`,
+      pitka: `Belgrad on Serbian pääkaupunki, ja kaupungissa asuu noin 1,7 miljoonaa ihmistä (2022). Se sijaitsee Savan ja Tonavan yhtymäkohdassa, ja jokien yläpuolella kohoaa Kalemegdanin linnoitus. Linnoituksen paikalla on ollut linnake jo roomalaisajalta, ja linnoituksen alueella on nykyään puisto. Vračarin kaupunginosassa on Pyhän Savan kirkko, jonka kupoli on 68,5 metriä korkea. Nikola Teslan museo toimii vuonna 1927 rakennetussa huvilassa. Museon arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja arkisto on Unescon Muisti maailmasta -rekisterissä. Ada Ciganlijan niemellä Savan rannalla on tekojärvi ja noin seitsemän kilometriä soraista rantaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-grad-beograd-7b8452a5.jpg",
@@ -9624,7 +9624,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Borski: {
       lyhyt: 'Lepenski Virin kivikautinen kylä siirrettiin 1971 ylemmäs rinteeseen, kun Rautaportin pato alkoi nostaa Tonavan pintaa.',
-      pitka: `Borin piirin itälaidalla, lähellä Bulgarian ja Romanian rajaa, viinitilat kertovat aivan toisenlaista tarinaa kuin joen rannan esihistoria. Negotinin ympäristö on yksi Serbian arvostetuimmista viinialueista, ja lähikylä Rajac kätkee yli 270 kivistä viinikellaria, jotka on louhittu rinteeseen jo 1700-luvun puolivälistä lähtien. Kellarien alaosa uppoaa pari metriä maan alle viinin valmistusta ja säilytystä varten, yläkerta taas toimi majoituksena viinisadon aikaan. Kun eurooppalaisten viinitarhojen tuho levisi 1800-luvun lopulla, ranskalaiset viininvalmistajat löysivät juuri tämän seudun koskemattomat rypäleet ja maksoivat tynnyristä kultarahalla.`,
+      pitka: `Borin piiri on Itä-Serbiassa, ja se ulottuu Romanian rajalle. Vuonna 2022 piirissä asui noin 100 000 ihmistä. Piirin kuntia ovat Bor, Kladovo, Majdanpek ja Negotin. Tonavan Đerdapin rotkon eli Rautaportin rannoilla on Đerdapin kansallispuisto, joka perustettiin vuonna 1974. Lepenski Virin kivikautinen asuinpaikka Tonavan rannalla on yli 8 000 vuotta vanha, ja siellä on löydetty kalamaisia kasvoja esittäviä kivipatsaita. Asuinpaikka siirrettiin vuonna 1971 korkeammalle, koska Rautaportin padon tekoallas olisi peittänyt sen. Borin kaupungissa on kaivettu kuparia vuodesta 1904. Negotinissa syntyi säveltäjä Stevan Mokranjac.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-borski-e9b574d9.jpg",
@@ -9647,7 +9647,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Branicevski: {
       lyhyt: 'Požarevacin lähellä kaivetaan esiin Viminaciumia, joka oli Rooman Ylä-Moesian maakunnan pääkaupunki ja legioonan leiri.',
-      pitka: `Tonavan rannalla, siinä missä joki kapenee Rautaportin solaksi, kohoaa Golubacin linnoitus kymmenine torneineen – yksi Euroopan vaikuttavimmista keskiaikaisista linnoista. Ensimmäinen maininta linnasta on vuodelta 1335, jolloin se oli unkarilaisen varuskunnan hallussa, mutta seuraavien vuosisatojen aikana Unkari, Serbia ja lopulta Osmanit kävivät siitä ankaraa taistelua sen strategisen sijainnin vuoksi. Jyrkät kalliot ja Tonavan virta suojasivat linnaa luonnostaan, ja se hallitsi kaikkia itä-länsi-suuntaisia teitä ja vesireittejä. Vuosina 2014–2019 EU rahoitti linnoituksen laajan restauroinnin osana Đerdapin kansallispuiston kehitystä, ja nykyään sen torneissa voi kävellä turvallisesti.`,
+      pitka: `Braničevon piiri on Itä-Serbiassa Tonavan varrella, ja siellä asuu noin 160 000 ihmistä (2022). Piirin keskus Požarevac sijaitsee Tonavan, Moravan ja Mlavan jokien välissä. Požarevacin rauha solmittiin kaupungissa vuonna 1718, ja Habsburgit hallitsivat seutua sen jälkeen jonkin aikaa. Kostolacin lähellä on Viminacium, roomalainen legioonaleiri ja Ylä-Moesian provinssin pääkaupunki. Viminacium sai kaupunkioikeudet vuonna 117, ja siellä asui noin 40 000 ihmistä. Viminaciumin alueelta on löytynyt myös noin miljoona vuotta vanha mammutin luuranko. Golubacin linnoitus Tonavan rannalla on rakennettu pääosin 1300-luvun alussa. Linnoitus on Rautaportin rotkon sisäänkäynnillä, ja kunnostettuna se avattiin uudelleen huhtikuussa 2019.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-branicevski-c0a4dead.jpg",
@@ -9670,7 +9670,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Južno-Backi': {
       lyhyt: 'Novi Sadin Petrovaradinin linnoituksen kellossa iso viisari näyttää tunnit, jotta Tonavan kalastajat erottivat ajan kaukaa.',
-      pitka: `Vain kymmenisen kilometriä Novi Sadista löytyy Sremski Karlovci, pikkukaupunki jonka barokkiset kadut kätkevät toistakymmentä viinitilaa kävelymatkan sisään. Viininviljely juontaa juurensa jo Rooman keisari Probuksen aikaan, ja kaupunki tunnetaan myös paikkana, jossa vuonna 1699 käytettiin ensimmäistä kertaa kansainvälisessä diplomatiassa pyöreää neuvottelupöytää. Vuoteen 1848 asti Karlovci toimi serbiortodoksisen kirkon istuimena ja koko Vojvodinan serbien poliittisena keskuksena. Keväällä ja syksyllä kaupunki juhlii viiniä kahdesti: toukokuun viinifestivaalilla ja syyskuun rypäleenpoiminnalla.`,
+      pitka: `Etelä-Bačkan piiri sijaitsee Vojvodinassa, ja siellä asuu noin 610 000 ihmistä (2022). Piirissä on Novi Sadin lisäksi yksitoista kuntaa, kuten Bačka Palanka ja Vrbas. Piirin keskus Novi Sad on Vojvodinan hallinnollinen keskus Tonavan rannalla. Serbikauppiaat perustivat kaupungin vuonna 1694 Petrovaradinin linnoituksen vastarannalle. Habsburgien rakentamassa Petrovaradinin linnoituksessa on yli 16 kilometriä maanalaisia käytäviä. Linnoituksen kellotornin isompi viisari näyttää tunnit, jotta kalastajat näkevät ajan Tonavalta. Novi Sad oli Euroopan kulttuuripääkaupunki vuonna 2022. Bačin kaupungissa on linnoitus, jonka Unkarin kuningas Kaarle Robert rakennutti vuosina 1338–1342.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-jb-v-49fad38e.jpg',
@@ -9693,7 +9693,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Jablanicki: {
       lyhyt: 'Leskovacin pääkatu suljetaan joka syyskuun alussa Roštiljijada-grillijuhlille, joita on pidetty vuodesta 1989.',
-      pitka: `Leskovacista lounaaseen, lähellä Lebanea, piilee Caričin Grad – kaupunki, jonka keisari Justinianus I rakennutti 530-luvulla kunnianosoitukseksi synnyinseudulleen. Kaupungista tehtiin arkkihiippakunnan keskus, jonka valta ulottui koko Pohjois-Illyricumiin, mutta loisto jäi lyhytaikaiseksi: vain noin 80 vuoden kuluttua avaarit ja slaavit hävittivät sen 600-luvun alussa. Kaivaukset ovat paljastaneet kaupungin kadut, kylpylät ja kirkot niin hyvin säilyneinä, että paikka listattiin Serbian tärkeimpien arkeologisten kohteiden joukkoon jo 1979. Tänään rauniot lepäävät hiljaisina pelloilla, kaukana Leskovacin vilskeestä.`,
+      pitka: `Jablanican piiri on Kaakkois-Serbiassa, ja siellä asuu noin 180 000 ihmistä (2022). Leskovacin lisäksi piiriin kuuluu viisi kuntaa, kuten Vlasotince ja Lebane. Piirin keskus Leskovac kasvoi 1800-luvun lopulla tekstiilikaupungiksi, ja sitä kutsuttiin nimellä Pikku Manchester. Leskovacissa pidetään syyskuun alussa Roštiljijada-grillifestivaali, joka on järjestetty vuodesta 1989. Lebanen lähellä on Caričin Gradin rauniokaupunki. Itä-Rooman keisari Justinianus I perusti sen vuonna 535, ja se hylättiin noin vuonna 615. Crna Travan kunnassa on osa Vlasina-järveä. Järven pinnalla kelluu turpeesta irronneita saaria, joita voi olla kerrallaan jopa 30.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-jablanicki-f617ea0a.jpg",
@@ -9716,7 +9716,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Srednje-Banatski': {
       lyhyt: 'Zrenjaninin eteläpuolella on Carska baran kosteikko, jossa on tavattu noin 240 lintulajia ja talvella kymmeniä tuhansia hanhia.',
-      pitka: `Zrenjaninin liepeillä, Begej-joen rannalla, seisoo Kaštel Ečka – metsien ja niittyjen keskelle 1800-luvun alussa rakennettu englantilaistyylinen kartano. Kartanon avajaisissa vuonna 1820 pianoa soitti yhdeksänvuotias poikanero, josta myöhemmin tuli maailmankuulu säveltäjä Franz Liszt. Vuosisatojen aikana kartanoa isännöivät neljä eri sukua, ja sen vieraskirjaan kirjautuivat keisarit, kreivit ja taiteilijat aina 1900-luvun puoliväliin, jolloin omaisuus kansallistettiin. Tänään entinen metsästyslinna seisoo yhä puistonsa keskellä muistuttamassa Banatin aateliston loisteliaasta arjesta.`,
+      pitka: `Keski-Banatin piiri on Vojvodinassa tasaisella Banatin alueella, ja siellä asuu noin 160 000 ihmistä (2022). Serbien lisäksi piirissä asuu unkarilaisia, romaneja, romanialaisia ja slovakkeja. Piirin keskus Zrenjanin on Begej-joen varrella. Muita kuntia ovat Novi Bečej, Nova Crnja, Sečanj ja Žitište. Zrenjaninin nimi oli aiemmin Veliki Bečkerek, ja nykyisen nimensä kaupunki sai vuonna 1946. Zrenjaninin ensimmäinen panimo aloitti toimintansa vuonna 1745. Noin 17 kilometriä kaupungista etelään on Carska Baran suojelualue, jonka nimi tarkoittaa keisarillista lampea. Siellä on tavattu noin 240 lintulajia, ja noin 50 000 tundrahanhea talvehtii alueella.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-sb-v1-2568a958.jpg',
@@ -9739,7 +9739,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kolubarski: {
       lyhyt: 'Valjevon Tešnjar on vanha kauppakortteli Kolubara-joen rannalla, ja sen kivetyillä kujilla istutaan yhä kahviloissa.',
-      pitka: `Valjevon lisäksi Kolubarin piiri muistetaan sodasta: marras-joulukuussa 1914 Kolubara-joen varrella käytiin ratkaiseva taistelu, jossa alle 250 000 huonosti varustautunutta serbisotilasta pysäytti ja löi takaisin 450 000 hengen itävalta-unkarilaisen armeijan. Taistelu levisi laajalle joen molemmin puolin, Valjevosta aina Ub:hen ja Lajkovaciin asti, ja päättyi joulukuun puolivälissä Belgradin vapauttamiseen miehityksestä. Voitto oli yksi ensimmäisen maailmansodan suurimmista yllätyksistä ja nosti pienen Serbian armeijan mainetta ympäri Eurooppaa. Jokilaakso, joka antoi taistelulle nimensä, kulkee yhä rauhallisena piirin halki peltojen ja kylien läpi.`,
+      pitka: `Kolubaran piiri on Länsi-Serbiassa, ja siellä asuu noin 150 000 ihmistä (2022). Valjevon lisäksi piirissä on viisi kuntaa, kuten Ub ja Ljig. Piirin keskus Valjevo on Kolubara-joen varrella, ja kaupunkia ympäröivät Valjevon vuoret. Divčibaren tasanko on noin tuhannen metrin korkeudessa 28 kilometrin päässä Valjevosta. Gradac-joki virtaa Valjevon läpi kanjonissa. Valjevo mainittiin ensimmäisen kerran vuonna 1393. Tešnjar on vanha kivetty katu, jota käytetään historiallisten elokuvien kuvauspaikkana. Ensimmäisessä maailmansodassa Kolubaran taistelu käytiin lähellä Valjevoa, ja kaupungissa toimi suuri sotasairaala. Petnican lähellä on löydetty noin 6 000 vuotta vanha uusikivikautinen asuinpaikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-kolubarski-2c1500f5.jpg",
@@ -9762,7 +9762,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zapadno-Backi': {
       lyhyt: 'Somborin maakuntatalon juhlasalissa riippuu Sentan taistelu, seitsemän metriä leveä öljymaalaus – Serbian suurin.',
-      pitka: `Sombor tunnetaan maalauksesta, mutta piirin toinen kaupunki Apatin tunnetaan oluesta: Apatinin panimo perustettiin jo 1756 keisarillisena panimona, ja se on yksi Serbian vanhimmista yhä toimivista tuotantolaitoksista. 1700-luvulla panimo tuotti noin 12 000 hehtolitraa vuodessa, mutta nykyään kapasiteetti on kasvanut neljään miljoonaan hehtolitraan, ja olutta viedään muun muassa Itävaltaan, Ruotsiin ja Sveitsiin. Panimo siirtyi yksityisomistukseen 1800-luvun lopulla ja on nykyään osa amerikkalaista Molson Coorsia. Tonavan rannalla sijaitseva kaupunki tuoksuu siis mallastukselta yhtä vahvasti kuin joelta.`,
+      pitka: `Länsi-Bačkan piiri on Vojvodinassa Bačkan alueella Tonavan varrella, ja siellä asuu noin 150 000 ihmistä (2022). Piiriin kuuluvat Sombor, Apatin, Kula ja Odžaci. Piirin keskus Sombor tunnetaan vehreydestään ja 1700- ja 1800-lukujen kaupunkikeskustastaan. Se sai vapaan kuninkaallisen kaupungin aseman vuonna 1749. Kaupungin opettajakoulu Preparandija perustettiin vuonna 1778. Somborissa ovat syntyneet koripalloilijat Radivoj Korać ja Nikola Jokić. Tonavan vasemmalla rannalla on Gornje Podunavlje -luonnonsuojelualue, jossa on kaksi suurta kosteikkoa ja noin 66 kilometriä jokea. Alueella on tavattu 248 lintulajia, ja se on Unescon biosfäärialue vuodesta 2017.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-zb-v1-01005c7a.jpg',
@@ -9785,7 +9785,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Macvanski: {
       lyhyt: 'Tršićin kylässä syntyi Vuk Karadžić, joka uudisti serbian kirjakielen niin, että sitä kirjoitetaan niin kuin puhutaan.',
-      pitka: `Tršićin kylän lisäksi Mačvan piiri muistetaan sotahistoriasta: elokuussa 1914 Cer-vuoren ja Šabacin ympäristössä käytiin liittoutuneiden ensimmäinen voitto koko ensimmäisessä maailmansodassa. Noin 180 000 serbisotilasta torjui 200 000 hengen itävalta-unkarilaisen hyökkäyksen ja ajoi vihollisen takaisin Drina-joen yli jo muutamassa päivässä. Taistelun aikana käytiin myös sodan ensimmäinen ilmataistelu kahden lentokoneen välillä. Šabacin kaduilla ja Cer-vuoren rinteillä on yhä muistomerkkejä, jotka kertovat viikoista, jolloin pieni Serbia pysäytti suurvallan etenemisen.`,
+      pitka: `Mačvan piiri on Länsi-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 270 000 ihmistä. Piirin keskus Šabac on Sava-joen rannalla ja perinteinen keskus hedelmälliselle Mačvan alueelle. Šabacin linnoituksen osmanit rakensivat vuonna 1470. Vuonna 1806 serbikapinalliset voittivat osmanit Mišarin taistelussa lähellä Šabacia. Drina-joen varrella, lähellä Bosnian rajaa, on Loznican kaupunki. Loznican lähellä on Tršićin kylä, jossa syntyi vuonna 1787 kielitieteilijä Vuk Karadžić. Hän uudisti serbian kirjakieltä ja keräsi kansanlauluja. Tršićissä pidetään joka syyskuu Vukov Sabor -juhla Vukin muistoksi. Juhla on järjestetty vuodesta 1933 lähtien.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-macvanski-2c68bbcf.jpg",
@@ -9808,7 +9808,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Moravicki: {
       lyhyt: 'Gučan kylässä soi joka elokuu trumpettifestivaali, joka alkoi 1961 neljän orkesterin kisana ja vetää nyt satoja tuhansia kuulijoita.',
-      pitka: `Čačakin länsipuolella Länsi-Moravan kaivertama Ovčar-Kablarin rotko tunnetaan Serbian Athosvuorena: 1300-luvulta lähtien rotkoon rakennettiin yli 30 luostaria, joista kymmenkunta on säilynyt tähän päivään. Suurin osa nykyisistä rakennuksista syntyi osmanivallan aikana, jolloin luostarit toimivat serbiläisen kulttuurin ja uskonnon turvapaikkoina. Vuonna 2001 rotko suojeltiin luonnonmuistomerkkinä ainutlaatuisen maiseman ja tiheän luostarikeskittymän vuoksi. Nykyään patikoijat voivat kulkea samaa polkua, joka yhdistää kymmenen vielä toimivaa luostaria jokivarren kallioiden lomassa.`,
+      pitka: `Moravican piiri on Länsi-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 190 000 ihmistä. Piirin keskus Čačak on Länsi-Morava-joen rannalla. Čačakin lähellä on Ovčar-Kablarin rotko, jossa joki mutkittelee 15 kilometrin matkan. Rotkoon on rakennettu 1300-luvulta lähtien yli 30 luostaria, ja kymmenen niistä on yhä jäljellä. Čačakin keskustassa on roomalaisen kylpylän jäännökset 100–300-luvuilta. Gornji Milanovacin kaupunki perustettiin vuonna 1853, ja se sai nykyisen nimensä ruhtinas Miloš Obrenovićin pyynnöstä vuonna 1859. Guča on Lučanin kunnassa oleva pikkukaupunki. Siellä on vuodesta 1961 pidetty elokuun alussa balkanilaista puhallinorkesterimusiikkia esittelevä festivaali. Ivanjican kunnassa on Golijan vuori, joka on Unescon suojelema biosfäärialue.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-moravicki-0f2fc38f.jpg",
@@ -9831,7 +9831,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Nišavski': {
       lyhyt: 'Niš oli roomalaisten Naissus, jossa syntyi keisari Konstantinus Suuri – hänen Mediana-huvilansa rauniot ovat kaupungin laidalla.',
-      pitka: `Niš kantaa toisenkin, synkemmän muiston: Ćele Kula eli Kallotorni rakennettiin vuoden 1809 Čegarin taistelun jälkeen, kun komentaja Stevan Sinđelić räjäytti itsensä ja miehensä mieluummin kuin antautui turkkilaisille. Voittaja Hurshid-pasha käski koota kaatuneiden serbikapinallisten pääkallot torniksi pelotteeksi – alun perin 952 kalloa neljälle sivulle. Serbien vallattua Niš takaisin 1878 torni katettiin ja sille rakennettiin kappeli, ja se julistettiin suojelluksi muistomerkiksi jo 1948. Nykyään noin 60 kalloa on yhä näkyvissä seinissä, muistuttaen käydystä kovemmin sanoin kuin mikään kyltti.`,
+      pitka: `Nišavan piiri on Kaakkois-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 340 000 ihmistä. Piirin keskus Niš on Nišava-joen laaksossa. Roomalaisaikana kaupungin nimi oli Naissus, ja siellä syntyi todennäköisesti vuonna 272 Rooman keisari Konstantinus Suuri. Nišin linnoitus on osmanien 1700-luvun alussa rakentama. Kaupungissa on myös Ćele kula eli Kalloturni. Osmanit upottivat sen seiniin serbikapinallisten kalloja vuoden 1809 Čegarin taistelun jälkeen. Kaupungissa on kansallisteatteri, joka perustettiin vuonna 1887, ja yliopisto, joka perustettiin vuonna 1965. Niška Banjan kylpylä on yhdeksän kilometrin päässä Nišistä, ja sen pääsuihkulähteen vesi on noin 38 celsiusasteen lämpöistä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-ni-v1-c280d4fe.jpg',
@@ -9854,7 +9854,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Severno-Banatski': {
       lyhyt: 'Kikindan puistojen puihin kerääntyy talveksi satoja sarvipöllöjä, ja kaupunkia kutsutaan Serbian pöllöpääkaupungiksi.',
-      pitka: `Kikindan pöllöjen lisäksi kaupunki tunnetaan yllättävästä löydöstä: joulukuussa 1996 tiilitehtaan savikuopasta paljastui 20 metrin syvyydestä lähes täydellinen mammutin luuranko. Naaraspuoliseksi tunnistettu Kika oli noin 4,7 metriä korkea ja 7 metriä pitkä, ja sen syöksyhampaat olivat peräti 3,5 metriä pitkät. Luiden säilymisaste on noin 90 prosenttia, mikä tekee löydöstä yhden Euroopan parhaiten säilyneistä mammuttilöydöistä. Kika on nykyään esillä Kikindan luonnontieteellisessä museossa ja on kaupungin ylpeys aivan yhtä paljon kuin talvehtivat pöllöt.`,
+      pitka: `Pohjois-Banatin piiri on Vojvodinan piiri Pohjois-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 120 000 ihmistä. Piirin keskus Kikinda tunnetaan sarvipöllöistä, jotka talvehtivat kaupungin puistoissa. Vuonna 2009 niitä laskettiin ennätykselliset 743. Kikindan savikuopasta kaivettiin vuonna 1996 mammutin jäännökset, ja mammutti on kaupungin symboli. Kikindassa pidetään lokakuussa vuodesta 1986 Kurpitsapäivät. Kaupungissa on myös hevosten käyttämä kuivamylly Suvača. Piirin länsiosassa virtaa Tisza-joki, joka erottaa Banatin ja Bačkan alueet. Senta-kaupungissa Tiszan rannalla Eugen Savoijilainen voitti osmanien armeijan vuonna 1697. Piirin asukkaista 44 prosenttia on serbejä ja 43 prosenttia unkarilaisia.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-sbn-v3-45eb1904.jpg',
@@ -9877,7 +9877,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pcinjski: {
       lyhyt: 'Vranjska Banjan lähteistä purkautuu 96-asteista vettä, ja ne ovat Serbian kuumimmat.',
-      pitka: `Vranjessa kirjallisuus kulkee kadunkulmilta oopperalavalle. Kaupungin tunnetuin poika, kirjailija Bora Stanković, kuvasi 1900-luvun alussa tarinoissaan intohimoja ja sukupolvien välisiä ristiriitoja niin raa'asti, että hänen kotikaupunkinsa asukkaat suuttuivat hänelle vuosikymmeniksi. Nykyisin Vranje on ylpeä hänestä: kaupungin lukio kantaa hänen nimeään, ja Unesco on nimennyt kaupungin musiikin kaupungiksi sen elävän romanimusiikkiperinteen ansiosta. Kävele keskustan kujilla ja kuulet yhä samaa säveltä, josta Stanković kirjoitti.`,
+      pitka: `Pčinjan piiri on Etelä-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 190 000 ihmistä. Piirissä asuu serbien lisäksi albaaneja, romaneja ja bulgarialaisia. Keskus Vranje on Etelä-Morava-joen vasemmalla rannalla. Vranjessa on osmanien paikallisherran, pashan, vuonna 1765 rakennuttama asuinrakennus Pašin konak, jossa toimii kansallismuseo. Vranje on kirjailija Borisav Stankovićin kotikaupunki, ja hänen näytelmänsä Koštana sijoittuu sinne. Vranjska Banjan kylpylässä lähdevesi on jopa 96-asteista. Vlasina-järvi sijaitsee osin Surdulican kunnassa 1 211 metrin korkeudessa. Se syntyi 1900-luvun puolivälissä, kun turvesuo padottiin, ja järvellä kelluu turvesaaria.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pcinjski-5425f220.jpg",
@@ -9900,7 +9900,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pirotski: {
       lyhyt: 'Pirotissa kudotaan yhä kilim-mattoja, ja niiden yli sata perinteistä kuviota on suojattu alkuperämerkinnällä vuodesta 2002.',
-      pitka: `Pirotin piirin itälaidalla kohoaa Stara Planina eli Vanha vuori, ja sen huippu Midžor on koko Serbian korkein kohta rajakiistojen ulkopuolella: 2169 metriä. Huipulla pystyssä oleva betonipylväs merkitsee kohtaa, jossa Serbia päättyy ja Bulgaria alkaa. Vaeltajat nousevat huipulle kahta reittiä, ja talvella rinteillä hiihdetään Stara Planinan omalla laskettelukeskuksella. Vuoristo on myös luonnonsuojelualue, jonka rotkoissa piileskelee muun muassa Kopren-vesiputous. Alueen pohjoispuolella kimmeltää Zavojsko-tekojärvi, joka syntyi kun Visočica-joki padottiin voimalaitosta varten.`,
+      pitka: `Pirotin piiri on Kaakkois-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 77 000 ihmistä. Piirin keskus Pirot on Nišava-joen varrella. Pirot tunnetaan ćilim-matoista. Ćilim on villasta pystysuoralla kangaspuulla kudottu sileäpintainen matto, ja Pirotin mattojen maantieteellinen alkuperäsuoja on vuodelta 2002. Pirotin linnoitus on peräisin 1300-luvulta. Pirotin lähellä on Temskan luostari, jonka kirkon freskot ovat vuosilta 1576 ja 1654. Piirin asukkaista 80 prosenttia on serbejä ja noin kuusi prosenttia bulgarialaisia. Dimitrovgradin kunta on lähellä Bulgarian rajaa, ja siellä bulgarialaiset ovat suurin väestöryhmä. Kunnassa on osa Stara Planinan vuoristoa sekä Poganovon luostari Jerman rotkossa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-pirotski-v-102e9570.jpg',
@@ -9923,7 +9923,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Podunavski: {
       lyhyt: 'Smederevon linnoitus rakennettiin Tonavan rantaan 1400-luvulla despootti Đurađ Brankovićin pääkaupungiksi, ja sen tornit seisovat yhä.',
-      pitka: `Velika Planan liepeillä sijaitsee Radovanjski lug, lehto, jossa Serbian modernin valtion isänä pidetty Karađorđe Petrović sai surmansa vuonna 1817 – tapon takana oli poliittinen kilpailija, joka lähetti hänen päänsä lahjaksi Istanbulin sulttaanille. Paikalle on noussut muistomerkkikompleksi, kirkko ja museo, jossa säilytetään muun muassa ensimmäisen kansannousun tykki ja Karađorđen muotokuva. Alue on suojeltu erityisen tärkeänä historiallisena muistomerkkinä jo vuodesta 1979.`,
+      pitka: `Podunavljen piiri on Keski-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 180 000 ihmistä. Piirin keskus Smederevo on Tonavan oikealla rannalla, noin 45 kilometrin päässä Belgradista. Smederevon linnoituksen rakennutti vuosina 1427–1430 Serbian despotaatin eli keskiaikaisen ruhtinaskunnan hallitsija Đurađ Branković, joka tarvitsi uuden pääkaupungin. Linnoituksessa on 25 tornia. Smederevo oli despotaatin pääkaupunki vuodesta 1430 osmanien lopulliseen valloitukseen vuonna 1459, tosin keskeytyksin. Kesäkuussa 1941 linnoitukseen varastoidut ammukset räjähtivät, ja noin kaksi kolmasosaa kaupungin rakennuksista tuhoutui tai vaurioitui. Smederevka-rypälelajike on saanut nimensä kaupungista. Smederevska Palankassa mitattiin 24. heinäkuuta 2007 Serbian lämpöennätys 44,9 astetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-podunavski-v-bbbff6f3.jpg',
@@ -9946,7 +9946,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Severno-Backi': {
       lyhyt: 'Subotican kaupungintalo on unkarilaista jugendia, ja läheisen Palićjärven rannalla on saman aikakauden kylpyläpaviljonkeja.',
-      pitka: `Subotican keskustassa kohoaa Euroopan ainoa säilynyt unkarilaista secessio-tyyliä edustava synagoga, jonka arkkitehdit Dezső Jakab ja Marcell Komor suunnittelivat 1900-luvun alussa. Rakennuksen kupolit on päällystetty sinkillä ja seinät koristeltu ruusuilla, tulppaaneilla ja riikinkukon sulilla Transilvanian kansanperinteen hengessä. 2000-luvun alussa rakennus oli maailman uhanalaisimpien monumenttien listalla, mutta laaja restaurointi on palauttanut sen loiston. Nykyään synagoga toimii konserttisalina ja kulttuurikeskuksena, ei enää säännöllisenä seurakuntana.`,
+      pitka: `Pohjois-Bačkan piiri on Vojvodinassa lähellä Unkarin rajaa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 160 000 ihmistä. Suurin väestöryhmä ovat unkarilaiset, joita on 36 prosenttia, ja serbejä on 30 prosenttia. Piirin keskus Subotica on Vojvodinan toiseksi suurin kaupunki. Subotican kaupungintalo rakennettiin vuosina 1908–1910 unkarilaiseen secession-tyyliin, joka on jugendtyylin muunnos. Kaupungin lähellä on Palić-järvi, jonka pinta-ala on 380 hehtaaria. Palićin rannalla on saman tyylin rakennuksia, esimerkiksi vesitorni. Subotican synagoga valmistui vuonna 1902. Bačka Topolan kunnassa on 1810-luvulta peräisin oleva barokkilinna, jossa toimii museo. Bačka Topolassa pidetään syyskuussa hunajakarnevaali.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-severno-backi-9990214c.jpg",
@@ -9969,7 +9969,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pomoravski: {
       lyhyt: 'Despotovacin Manasijan luostaria ympäröivät linnoitusmuurit ja tornit – despootti Stefan Lazarević rakennutti sen 1400-luvun alussa.',
-      pitka: `Ćuprijan kaupungin alla lepää roomalainen Horreum Margi, aikanaan yksi Via Militariksen tärkeimmistä varuskunnista Konstantinopolin ja Rooman välisellä tiellä. Nimi tarkoittaa suoraan Margi-joen viljavarastoa, ja paikka toimikin koko alueen asejakelun ja viljan keskuksena jopa seitsemännen legioonan kotipesänä. Kaupunki ehti hetkeksi jopa Ylä-Mesian pääkaupungiksi ennen kuin valta siirtyi muualle. Nykyisin kaivauksia ja löytöjä pääsee tutkimaan Horreum Margi -museossa keskellä modernia Ćuprijaa.`,
+      pitka: `Pomoravljen piiri on Keski-Serbiassa Velika Morava -joen laaksossa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 180 000 ihmistä. Piirin keskus on Jagodinan kaupunki, jossa on Đurđevo brdon kaupunkipuistossa vuonna 2006 avattu eläintarha. Despotovacin kaupungin vieressä on Manasijan luostari. Serbian hallitsija Stefan Lazarević rakennutti sen vuosina 1406–1418 omaksi hautakirkokseen. Luostaria ympäröi linnoitusmuuri, jossa on yksitoista tornia. Jelovacin kylän lähellä Despotovacin kunnassa on Resavan luola. Paimenet löysivät sen vuonna 1962, ja matkailijoille se avattiin vuonna 1972. Luolan käytäviä on noin 4,5 kilometriä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pomoravski-26dc66d8.jpg",
@@ -9992,7 +9992,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Raški': {
       lyhyt: 'Kraljevon lähellä oleva Studenican luostari perustettiin 1100-luvun lopulla, ja sen marmorikirkko on Unescon maailmanperintöä.',
-      pitka: `Raškin piirin eteläosassa leviää Pešterin ylätasanko, yksi Balkanin laajimmista ja korkeimmista tasangoista, jota paikalliset kutsuvat Sandžakin Siperiaksi armottomien talvien vuoksi. Karulla, yli tuhannen metrin korkeudessa sijaitsevalla ylängöllä laiduntaa lampaita, joiden maidosta valmistetaan Sjenican juustoa – perinteistä suolavedessä kypsytettyä juustoa, joka on ehdolla Unescon aineettoman kulttuuriperinnön listalle. Alue on myös harvinaisen eristynyt: kylät ovat pieniä ja etäisyydet pitkiä, mikä on säilyttänyt paimentolaiskulttuurin elävänä nykypäivään asti.`,
+      pitka: `Raškan piiri on vuoristoinen piiri Lounais-Serbiassa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 300 000 ihmistä. Piirin keskus Kraljevo on Ibar- ja Länsi-Morava-jokien yhtymäkohdassa. Kraljevon lähellä on Žičan luostari, jossa perinteen mukaan kruunattiin seitsemän Serbian kuningasta. Studenican luostarin perusti 1100-luvun lopulla Stefan Nemanja, Nemanjić-hallitsijasuvun kantaisä. Luostari on Unescon maailmanperintökohde. Novi Pazarin kaupungissa on 1500-luvun alkupuoliskolla rakennettu Altun-Alem-moskeija. Kaupungin lähellä ovat Sopoćanin luostari ja keskiaikaisen Stari Rasin pääkaupungin jäännökset, jotka ovat yhdessä Unescon maailmanperintökohde. Kopaonikin vuoristossa on suuri hiihtokeskus, ja vuoriston korkein huippu on 2 017 metriä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-raski-v-4edc90a0.jpg',
@@ -10015,7 +10015,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Južno-Banatski': {
       lyhyt: 'Deliblaton hiekka-alue on Euroopan suurin sisämaan hiekkakenttä, ja sen dyynejä kutsutaan Euroopan Saharaksi.',
-      pitka: `Vršacin vuorten rinteillä kasvaa Serbian laajin yhtenäinen viinitarha-alue, yli 1700 hehtaaria pelkästään Vršacin ympärillä. Aluetta kutsutaan paikallisesti viinitarhojen mereksi, ja jo roomalaiset legioonalaiset joivat täältä peräisin olevaa viiniä ennen kuin alue tunnettiin Serbiana. Nykyään rinteillä viljellään pääosin valkoviinirypäleitä, erityisesti italialaista rieslingiä, ja viinitiellä voi pysähtyä useissa perheviinitiloissa maistelemaan satoa suoraan tuottajalta. Vršacin torni, keskiaikainen linnoitus kaupungin yllä, tarjoaa parhaan näköalan koko viinimerelle.`,
+      pitka: `Etelä-Banatin piiri kuuluu Vojvodinan autonomiseen provinssiin Pohjois-Serbiassa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 260 000 ihmistä. Piirin keskus Pančevo on Tonavan ja Tamiš-joen rannalla, ja kaupunki mainitaan ensimmäisen kerran vuonna 1153. Kaupungissa on vuonna 1722 perustettu Vajfertin panimo, josta tehtiin panimomuseo vuonna 2016. Deliblaton hiekka-alue on noin 300 neliökilometrin laajuinen luonnonsuojelualue. Vršacin kaupungin ympäristö tunnetaan viinitiloista, ja kaupungin yllä on 1400-luvun puolivälistä peräisin oleva linna. Vršacissa vietetään joka syyskuu rypäleenkorjuun juhlaa. Bela Crkvan järvet ovat suosittu kesäkohde.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-juzno-banatski-v-7bff48cf.jpg',
@@ -10038,7 +10038,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sremski: {
       lyhyt: 'Fruška Gora on Serbian vanhin kansallispuisto, ja sen metsäisillä rinteillä toimii yhä kuusitoista ortodoksista luostaria.',
-      pitka: `Sremska Mitrovican katujen alla lepää Sirmium, joka oli 300-luvulla yksi Rooman valtakunnan neljästä pääkaupungista Trierin, Milanon ja Izmitin rinnalla. Kaupunki synnytti peräti kymmenkunta Rooman keisaria, muun muassa Aurelianuksen ja Probuksen, ja sen keisarillinen palatsi, kylpylät ja foorumi olivat aikansa mahtavimpia. Nykyisin kaivauksissa paljastuu yhä lisää palatsin ja basilikan raunioita keskellä modernia kaupunkia, ja löydöt on koottu Sremin museoon. Harvassa Euroopan kaupungissa kävelee yhtä suoraan valtakunnan ytimen päällä kuin täällä.`,
+      pitka: `Sremin piiri kuuluu Vojvodinaan, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 280 000 ihmistä. Piirin keskus Sremska Mitrovica on Savan rannalla. Kaupungin paikalla oli muinoin Rooman keisarikunnan Sirmium, joka oli 300-luvulla yksi keisarikunnan pääkaupungeista. Keisarillisen palatsin kaivauspaikalla on vierailukeskus. Fruška Gora on noin 80 kilometriä pitkä vuoristo, jonka pohjoispuolella virtaa Tonava. Vuoriston korkein huippu on 539 metriä. Siellä on kansallispuisto vuodelta 1960 ja 16 toimivaa ortodoksista luostaria, esimerkiksi vuosina 1509–1514 rakennettu Krušedol. Obedska Baran -kosteikko on Savan vanhan uoman jäänne, ja siellä on todettu noin 220 lintulajia.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-sremski-v-1d471da7.jpg',
@@ -10061,7 +10061,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šumadijski': {
       lyhyt: 'Kragujevacin autotehtaalla kootaan nykyään Fiatin Grande Panda -malleja, myös sähköautoina.',
-      pitka: `Kragujevacin laidalla leviää Šumaricen muistopuisto, 352 hehtaarin alue, joka pystytettiin muistoksi lokakuun 1941 joukkoteloituksista. Saksalaiset miehitysjoukot ampuivat tuolloin kahdessa päivässä tuhansia kaupungin siviilejä, miehiä ja poikia, myös koulusta suoraan haettuja, kostoksi partisaanien iskuista. Puistossa on 30 joukkohautaa ja kymmenen muistomerkkiä, joista tunnetuin muistuttaa rikkinäisen lentävän linnun muodossa surmattuja koululaisia. Paikka on yksi Serbian raskaimmista mutta tärkeimmistä muistopaikoista, ja sitä käy vuosittain kymmeniätuhansia kävijöitä.`,
+      pitka: `Šumadijan piiri on Keski-Serbiassa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 270 000 ihmistä. Alueen nimi tulee sanasta šuma, joka tarkoittaa metsää. Piirin keskus Kragujevac on Lepenica-joen rannalla. Se oli vuodesta 1818 Serbian ruhtinaskunnan pääkaupunki, kunnes pääkaupunki siirrettiin Belgradiin vuonna 1841. Kragujevacissa julistettiin vuonna 1835 Serbian ensimmäinen perustuslaki. Šumarice-muistopuisto muistuttaa saksalaisten lokakuussa 1941 tappamista noin 2 800 miehestä ja pojasta. Topolan kaupungissa Karađorđe valittiin vuonna 1804 Serbian ensimmäisen kansannousun johtajaksi. Lähellä sijaitsevassa Oplenacin Pyhän Yrjön kirkossa on Karađorđevićin kuningassuvun hautoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-sumadijski-v-cef5c776.jpg',
@@ -10084,7 +10084,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Toplicki: {
       lyhyt: 'Kuršumlijan lähellä on Đavolja varoš eli Paholaisen kaupunki: parisataa maapyramidia, joiden huipuilla keikkuu kivilohkareita.',
-      pitka: `Prokupljen lähellä sijaitseva Pločnikin kaivauspaikka mullisti vuonna 2007 käsityksen ihmiskunnan metallihistoriasta: siellä löytyi maailman toiseksi vanhin näyttö kuparinsulatuksesta, ajalta noin 5500–5000 eaa., mikä siirsi kuparikauden alkua satoja vuosia aiempaan. Vinčan kulttuurin asukkaat rakensivat sulattoihinsa savesta tehtyjä ilmastointiputkia ja savupiippuja kauan ennen kuin vastaavaa tekniikkaa nähtiin muualla. Paikalta on löytynyt myös maailman vanhin tunnettu tinapronssiesine, noin 4650 eaa. valmistettu foliopala. Löydöt tekevät tästä vaatimattomasta kylästä yhden arkeologian tärkeimmistä kohteista koko maailmassa.`,
+      pitka: `Toplican piiri on pieni piiri Etelä-Serbiassa Toplica-joen laaksossa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 77 000 ihmistä. Piirin keskus on Prokupljen kaupunki, jonka linnoitus mainitaan ensimmäisen kerran vuonna 1395. Prokupljen lähellä Pločnikin kylässä on uusikivikautinen asuinpaikka, joka oli asuttu noin vuodesta 5500 noin vuoteen 4700 eaa. Kaivauksissa on löytynyt jälkiä varhaisesta kuparin työstöstä. Kuršumlijan kaupungin lähellä Radan-vuoren rinteillä on Đavolja varoš eli Pirunkaupunki. Siellä on noin 200 eroosion muotoilemaa maapylvästä, jotka ovat 2–15 metriä korkeita. Kuršumlijassa on myös Stefan Nemanjan ennen vuotta 1168 rakennuttama Pyhän Nikolauksen luostari.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-toplicki-e0820d43.jpg",
@@ -10107,7 +10107,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zajecarski: {
       lyhyt: 'Zaječarin lähellä on Felix Romuliana, keisari Galeriuksen palatsi, joka on ollut Unescon maailmanperintöä vuodesta 2007.',
-      pitka: `Negotinin ja Zaječarin välisellä kukkulalla seisoo Rajacin kylä, jonka rinteillä on lähes 270 kivistä viinikellaria eli pimnicaa, rakennettu 1700-luvun puolivälistä 1930-luvulle asti. Kellarit on kaivettu osittain maahan, jotta lämpötila pysyisi tasaisena ympäri vuoden, ja lähikylä Rogljevo tarjoaa vielä 150 lisää samaa perinnettä. Kuudenkymmenen kellarin joukossa toimii yhä viininviljelijöitä, jotka jatkavat satojen vuosien vanhaa käsityötä ja kutsuvat tuotettaan Rajacin aarteeksi. Kokonaisuus on ehdolla Unescon maailmanperintölistalle ainutlaatuisena viininviljelyarkkitehtuurin näytteenä.`,
+      pitka: `Zaječarin piiri on Itä-Serbiassa lähellä Bulgarian rajaa, ja siellä asuu vuoden 2022 väestönlaskennan mukaan noin 97 000 ihmistä. Piirin keskus on Zaječarin kaupunki, jossa pidetään Gitarijada-nimistä rockfestivaalia. Zaječarin lähellä Gamzigradissa on Felix Romuliana, keisari Galeriuksen palatsi. Galerius aloitti sen rakentamisen vuonna 298 ja nimesi sen äitinsä Romulan mukaan. Kaivaukset alkoivat vuonna 1953, ja ne osoittivat paikan palatsiksi eikä sotilasleiriksi. Paikka on Unescon maailmanperintökohde vuodesta 2007. Sokobanja on vuorten ympäröimä kylpyläkaupunki, jossa on roomalaisen kylpylän jäänteitä. Knjaževacin kaupungin kohdalla Stara planina -vuoristossa on Midžor-huippu, joka on 2 169 metriä korkea.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zajecarski-82134d80.jpg",
@@ -10130,7 +10130,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zlatiborski: {
       lyhyt: 'Mokra Goran Šarganin kasi on kapearaiteinen museorata, joka nousee vuoren rinnettä kahdeksikon muotoisena silmukkana.',
-      pitka: `Bajina Baštan yläpuolella, keskellä Drina-jokea kohoavalla kalkkikiviluodolla seisoo pieni talo, jonka nuoret uimarit rakensivat käsin vuonna 1968 löydettyään paikan täydelliseksi rantautumispaikaksi. Tulva on tuhonnut talon jo seitsemän kertaa, mutta paikalliset ovat rakentaneet sen joka kerta uudelleen samalle kivelle. Kun National Geographic julkaisi kuvan talosta päivän kuvanaan, siitä tuli yksi Serbian tunnetuimmista matkailunähtävyyksistä ilman minkäänlaista markkinointia. Ainoa tapa päästä talolle on uida tai soutaa virtaavan joen yli, eikä siltaa ole koskaan rakennettu.`,
+      pitka: `Zlatiborin piiri on vuoristoinen piiri Länsi-Serbiassa. Vuoden 2022 väestönlaskennan mukaan siellä asuu noin 250 000 ihmistä. Piirin keskus Užice on Đetinja-joen rannalla, ja vuonna 1941 se oli partisaanien hallitseman lyhytikäisen alueen pääkaupunki. Zlatibor-vuoristo on suosittu matkailualue, jonka korkein huippu Tornik on 1 496 metriä. Zlatiborin kylästä Tornikin huipulle vie vuonna 2021 avattu 8,95 kilometrin gondolihissi. Taran kansallispuisto perustettiin vuonna 1981, ja Drina-joki on kaivanut sinne syvän rotkon. Mokra Goran kylässä kulkee Šargan Eight -museorautatie. Kylässä on myös elokuvaohjaaja Emir Kusturican rakennuttama Drvengrad eli Puukylä. Uvac-joen jyrkät mutkat kuuluvat luonnonsuojelualueeseen.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-maakunta2-zlatiborski-v-922ba024.jpg',
