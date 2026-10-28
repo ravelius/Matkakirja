@@ -3104,3 +3104,7 @@ Kortti KK:ssa 'Kelpaako kartan uusi keveys?' (pt-tarkistus-2 nyt | uusi + lähik
 ## JUNA 213 TESTFLIGHTIIN KUN KARTTAMUUTOKSET VALMIIT (omistaja 28.10. klo 16.16) (28.10.2026 klo 16.17)
 
 KK:n välitys, sanatarkasti: "lähden jo kotiin, niin julkaise test flight, kun karttajutut ovat valmiina, niin näin ne sitten kotona." Toteutus: juna 213 TestFlightiin heti, kun neljä karttamuutosta ovat omistajan hyväksymiä ja vihreässä rungossa: raja (OK 12.35), väistö limittäin, merkittävyysporrastus, nähtävyysnostot + keveys (OK 16.12). Väistö- ja porrastusparit omistajalle puhelimeen kortilla heti valmiina. Julkaisun jälkeen yksi rivi omistajalle KK:n kautta.
+
+## JUNA 213 ILMAN TARKISTUSAJOA (omistaja 28.10. klo 16.20) (28.10.2026 klo 16.20)
+
+Kortti KK:ssa 'Ajetaanko tarkistusajo ennen julkaisua?' (9.11 päiväjuna): "Ei". Juna 213 lähtee TestFlightiin ilman iPad-muistiajoa (muistiajo-213 OHITETTU); automaattiset käännöstarkistukset ajetaan silti; heti kun karttamuutokset on hyväksytty ja runko vihreä.
