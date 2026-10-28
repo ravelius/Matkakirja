@@ -555,3 +555,16 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   onko iso katto juhlasalin oma (sisempänä/korkeammalla kuin friisi) vai takana olevan hallin (rakennukset-v54 / taustapalat). Mittaustyökalu:
   K/tyokalut/yrange.py <glb> [ymin] (y-välit solmu+materiaali); seuraava askel: sama x/z-bboxeilla ja katon alareunan etäisyys friisin ulkopinnasta.
 - J4: Codex-tilaus J4-v4 991b58c76 odottaa toimitusta (ks. lisäys 39). Ei taustaajoja käynnissä.
+
+## LISÄYS 41 klo 19.3x (28.10.): kujan 01 katot alas ja kiinni (avoimet-v65k), pari PT:lle → KK
+- SYY (värikoodikoe havainne-editori-20261028-191657, K/tyokalut/varikoodi_koe.py): iso katto ON huoneen oma ja häivytys ei vaikuta
+  (koe katto_nimi_koe.py, 190902: sama kuva). "Irti"-vaikutelma = kannatinnauha (V4_kannatin y 2,74–3,29, 0,55 m punainen nauha seinän
+  friisin 2,24–2,80 ja katon välissä) + muurin harjakate (2,87–3,16) nostivat katon alapinnan seinälinjalla 3,31:een.
+- KORJAUS K/tyokalut/avoimet_katto_alas.py: katto + katto_raystas + paatetiilet DY −0,45 (räystäs 3,13 → 2,68, alapinta seinälinjalla 2,86
+  = seinän yläreuna), kannatinnauha ja katon alle jäävät *_harjakate pois (solmut jäävät ilman verkkoa, lapsi-indeksit ennallaan).
+  avoimet-v64k → avoimet-v65k (juhlasali, työhuone, puutarha, varasto). juuri-v102m = v101m + avoimet-v65k.
+  Ajo + pari: `zsh K/tyokalut/aja_v102_pari.zsh [01 02 05]` (~5 min, REF oletus 8885a9f54).
+- PARI lokit/havainne-editori-20261028-192305 + 01/kk-katot-ennen-jalkeen-havainne.png (ennen | jälkeen | havainne): katot lepäävät friisin
+  päällä, punainen rako poissa. Mittarin räystäs 0,19 vs havainne 0,33 = kameran korkeus (havainne ylempää, katot näkyvät päältä), ei malli.
+- AUKI: 02 (kujamuurit: havainteessa muurin päällä katettu räystäs + friisi, pelissä ohut harjakate) ja 05 (taustapalan räystäs oikealla 0,62
+  vs 0,17) eivät muuttuneet tässä erässä; KK:n vastaus ensin. Sitten valo (VS aurinko + LR:n leivonta). J4-v4 odottaa Codexia.
