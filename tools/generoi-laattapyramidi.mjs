@@ -981,12 +981,6 @@ const VARI_ILMAN_RAJAUSTA = lippu('ilman-rajausta');
  */
 const ILMAN_RANTAVIIVAA = lippu('ilman-rantaviivaa');
 /*
- * VALTAMERTEN NIMET POIS POHJASTA (`--ilman-valtamerinimia`; OMISTAJA 28.10.2026 klo 08.39: "kaikki tekstit ovat aina
- * vaakasuorassa vaikka maapallo olisi kääntyneenä pois pohjois-eteläsuunnasta", PT 09.1x): kuvaan poltettu nimi kääntyy pallon
- * mukana; natiivi piirtää valtamerten nimet elävinä vaakasuorassa (Nimikerros.valtameret). Kompassiruusu ja koristeet ennallaan.
- */
-const ILMAN_VALTAMERINIMIA = lippu('ilman-valtamerinimia');
-/*
  * RANNIKON HARVENNUS: pienin sallittu askel asteina, kun meren renkaat
  * luetaan (maailma.mjs meriRenkaat).
  *
@@ -3272,8 +3266,6 @@ function umpimeriSavy(mitat, sarake, rivi, syyt = null) {
   const YKS_PER_VIITE = LAUTA.projektio.leveys / 6400;
   const ASTE = LAUTA.projektio.leveys / 360;
   if (mitat.px <= KALUSTEIDEN_YLARAJA) {
-    // Karsinta ennallaan myös ilman valtamerten nimiä (--ilman-valtamerinimia): sama laattajoukko kuin nimien kanssa, joten
-    // aiemmin poltettu luettelo (syvän sarjan pyramidi.json) täsmää, kun vain z0–z3 poltetaan uudelleen (28.10.).
     for (const m of MERET) {
       // Harvennettu versaaliteksti: leveys noin 0,72 · koko merkkiä kohti.
       const puoliLev = (m.nimi.length * m.koko * 0.72 * YKS_PER_VIITE) / 2 / ASTE;
@@ -4189,7 +4181,7 @@ console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} 
  * molemmissa, kartalla olisi kaksinkertainen viiva.
  */
 const TYYLI = {
-  meret: ILMAN_VALTAMERINIMIA ? [] : MERET, kehys: KEHYS, kompassi: KOMPASSI, koristeet: KORISTEET, asteverkko: false,
+  meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, koristeet: KORISTEET, asteverkko: false,
   ...(ILMAN_RANTAVIIVAA ? { rantaviiva: false } : {}),
 };
 
