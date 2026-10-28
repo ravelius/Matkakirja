@@ -481,3 +481,9 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   mittarin räystäslinja 0,33 vs. havainne 0,18 → geometriaerä (olemassa olevat mallit tai PK tilaa Codexilta), ennen friisien lukitsemista.
 - SEURAAVA: KK:n vastaus pariin 125559 → (3)+(4) → vaihe 3 rappaus (V4_red, rappaus-vNN 4 × 4 m, alalika leivottuna albedoon 1,20–1,70 m).
 - Kujakivet: odottaa Codexin v5:tä (LISÄYS 32). J4: odottaa J4-v3:a. Ei taustaajoja käynnissä.
+
+## LISÄYS 34 klo 13.1x (28.10.): KK:n palaute pariin 125559 (katot + friisit), seuraavan erän järjestys
+- Ei vielä omistajalle. Tiilirivit erottuvat viiruina, eivät pyöreinä kourutiilinä. Friisivyö liian korkea ja kirkas, koska räystään ulkonema ja varjo puuttuvat
+  (havainteessa kapea, tummempi sinivihreä, räystään varjossa).
+- JÄRJESTYS: 1) räystäs + pyöreät päätetiilet + 01:n siniset ruudut (geometriaerä PK:n kanssa), 2) VS:n sävy, 3) friisivyön korkeus ja kirkkaus uudelleen
+  räystään alla → pari 01/02/05 + 2× KK:lle. Rappaus vasta tämän jälkeen.
