@@ -342,11 +342,11 @@
     "valkoinen-16": "rgba(255, 255, 255, 0.16)",
     "musta-80": "rgba(0, 0, 0, 0.8)",
     "valkoinen-08": "rgba(255, 255, 255, 0.08)",
-    "erikois-linssi-hehku-28": "rgba(181, 123, 255, 0.28)",
-    "erikois-linssi-hehku-18": "rgba(181, 123, 255, 0.18)",
-    "erikois-iss-sini-16": "rgba(115, 168, 255, 0.16)",
-    "erikois-iss-sini-26": "rgba(115, 168, 255, 0.26)",
-    "erikois-iss-sini-40": "rgba(115, 168, 255, 0.4)"
+    "erikois-linssi-hehku-24": "rgba(181, 123, 255, 0.24)",
+    "erikois-linssi-hehku-34": "rgba(181, 123, 255, 0.34)",
+    "videopeli-korostus-16": "rgba(127, 196, 255, 0.16)",
+    "videopeli-korostus-26": "rgba(127, 196, 255, 0.26)",
+    "videopeli-korostus-38": "rgba(127, 196, 255, 0.38)"
   },
   "erikois": {
     "_selite": "Vain natiivi (--tk-erikois-*, Tyylikirja.Erikois). Tarkoitukselliset erikoisvärit nykyarvosta ilman ulkoasun muutosta (Päätoimittaja 8.10.2026): astro = astronautti, ISS ja minipulu; tila = oikein, väärin, valmis, varoitus ja tilastot; opas = oppaan linkit ja nauhat; radio; leima = sähkeen, paljastuksen ja kartan leimat; aikajana; elama = elämäpalkki; ihme = ihmenauha ja ihmetähti; kartuscha = kartussin radiovalo; linssi-hehku = linssikaupunkien hohtava violetti piste kartalla hunnun päällä (Topografia, Maailmanradio, Keksinnöt, Ihmisen matka, Taidemuseo; omistaja 11.10.2026, juna 182, Linssiseppä); saa = sää ja lämpövyöt; muu = yksittäiset (lisenssivaroitus, liukusäätimen ura, kytkin, visan tulos). Numero = vaaleusjärjestys perheen sisällä, -aNN = alfa × 100. astro-valkoinen = astro-pintojen sinertävä valkoinen; aktiivinen-oranssi = lukijan ja kaiuttimen aktiivinen tila (pohjavahti 7). radiopaletti = radion kotelo, asteikko ja lasi; isskytkin = ISS-kytkinpöydän metalli, valot ja LCD (pohjavahti 11, Päätoimittaja 8.10.2026). Pohjavahti 6 (Natiivi-UI 12.10.2026, PT): UI-C#:n värivakiot nykyarvosta (lehti, graafi, aikajana, iss, maakayra, radio, maakunta, noppa, pieniliike, pulma, matkakirjakortti, pergamentti, aloitus, maakunnat, kohdekartta). Pohjavahti 12 (Natiivi-UI 13.10.2026, PT): UI-C#:n heksavärit nykyarvosta (ylapalkki, kulta, ilmoitus, pergamentti, kortti-nimivarjo, dialogi-kulta, kysymys, laatta, selite-oletus, radio-puu/-paperi/-lasi/-nuppi, paljastus-viiva; sym-* = webin --sym-*-aihevärit samoilla nimillä).",
