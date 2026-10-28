@@ -3096,3 +3096,7 @@ Omistajan kortti KK:ssa 15.33: 'Poistetaanko myös Olavinlinnan vanhat dioraamat
 ## RAKENNUSTEN KEVENNYS PUOLIVÄLIIN, KATUVIIVAT KEVYEMMIKSI, PIIRROSTEN KONTRASTI MALTILLISEMMAKSI (omistaja 28.10. klo 15.41) (28.10.2026 klo 15.42)
 
 Kortit KK:ssa 'Kevennetäänkö kartan rakennukset?' ja 'Kelpaavatko isommat ja selkeämmät piirrokset?', sanatarkasti: "kevennys hieman liian vahva. Lisäksi katujen viivat pitää keventää myös. ja silloin nähtävyyksiin ei tarvitse lisätä niin paljoa kontrasti kuin nyt esikatselussa" + piirroksista "ks. ed". Toteutus: KS rakennusten peitto nykyisen ja kevennetyn puoliväliin ja katuviivat kevyemmiksi; NUI piirrosten kontrasti maltillisemmaksi, koko ×1,25 säilyy. Uusi yhteispari KS+NUI → PT → KK.
+
+## KARTAN UUSI KEVEYS HYVÄKSYTTY RUNKOON (omistaja 28.10. klo 16.12) (28.10.2026 klo 16.12)
+
+Kortti KK:ssa 'Kelpaako kartan uusi keveys?' (pt-tarkistus-2 nyt | uusi + lähikuva 2×): "Kelpaa (suositus)". Runkoon (juna 213): KS:n rakennukset 110/255 + katujen reunaviiva 150/255 (käännös 3e42df900, rakennukset-213 d0c294363) ja NUI:n piirrokset cc578c208 (×1,25, maltillinen kontrasti). Sävytys lajin mukaan myöhemmin omana parinaan tämän päälle.
