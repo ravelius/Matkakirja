@@ -15706,7 +15706,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Braga: {
       lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
-      pitka: `Braga on Portugalin luoteisosassa, ja piirikunnassa asuu noin 850 000 ihmistä. Piirikunnan keskus Braga on noin 190 000 asukkaan kaupunki. Piirikunnassa on 14 kuntaa. Bragan lähellä on Bom Jesus do Monte -pyhäkkö, joka on Unescon maailmanperintökohde vuodesta 2019. Bragassa toimii Minhon yliopisto. Guimarãesin kaupungissa käytiin 24. kesäkuuta 1128 taistelu, jonka voitti Afonso Henriques, myöhemmin Portugalin ensimmäinen kuningas. Guimarãesin linna toimi aikoinaan Afonso Henriquesin asuinpaikkana. Guimarãesin vanha keskusta on Unescon maailmanperintökohde vuodesta 2001, ja kaupunki oli Euroopan kulttuuripääkaupunki vuonna 2012. Piirikunnan korkein kohta on Serra do Gerês -vuoristo, 1 545 metriä.`,
+      pitka: `Braga on Portugalin luoteisosassa, ja piirikunnassa asuu noin 850 000 ihmistä. Piirikunnan keskus Braga on noin 190 000 asukkaan kaupunki. Piirikunnassa on 14 kuntaa. Bragan lähellä on Bom Jesus do Monte -pyhäkkö, joka on Unescon maailmanperintökohde vuodesta 2019. Bragassa toimii Minhon yliopisto. Guimarãesin kaupungissa käytiin 24. kesäkuuta 1128 taistelu, jonka voitti Afonso Henriques, myöhemmin Portugalin ensimmäinen kuningas. Guimarãesin linna toimi aikoinaan Afonso Henriquesin asuinpaikkana. Guimarãesin vanha keskusta on Unescon maailmanperintökohde vuodesta 2001, ja kaupunki oli Euroopan kulttuuripääkaupunki vuonna 2012. Piirikunnan korkein kohta on Gerêsin vuoristossa, 1 545 metrin korkeudessa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-braga-v-fe81f10e.jpg',
@@ -15775,7 +15775,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Coimbra: {
       lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
-      pitka: `Coimbran piirikunta on Keski-Portugalissa, ja siellä asuu noin 410 000 ihmistä. Piirikunnassa on 17 kuntaa. Piirikunnan keskus Coimbra on Mondego-joen varrella, ja kaupungissa asuu noin 140 000 ihmistä. Coimbra oli keskiajalla Portugalin pääkaupunki. Santa Cruzin luostari perustettiin siellä vuonna 1131, ja luostarissa on haudattuna Portugalin ensimmäinen kuningas Afonso Henriques. Luostarin julkisivu on manuelilaista myöhäisgotiikkaa, Portugalin omaa tyylisuuntaa. Coimbran yliopisto perustettiin vuonna 1290 Lissabonissa, ja se siirrettiin lopullisesti Coimbraan vuonna 1537. Coimbran yliopiston Biblioteca Joanina on 1700-luvulla rakennettu barokkikirjasto. Coimbran yliopisto ja sen ympäristö otettiin Unescon maailmanperintöluetteloon vuonna 2013.`,
+      pitka: `Coimbran piirikunta on Keski-Portugalissa, ja siellä asuu noin 410 000 ihmistä. Piirikunnassa on 17 kuntaa. Piirikunnan keskus Coimbra on Mondego-joen varrella, ja kaupungissa asuu noin 140 000 ihmistä. Coimbra oli keskiajalla Portugalin pääkaupunki. Santa Cruzin luostari perustettiin siellä vuonna 1131, ja luostarissa on haudattuna Portugalin ensimmäinen kuningas Afonso Henriques. Coimbran yliopisto siirrettiin Lissabonista lopullisesti Coimbraan vuonna 1537, ja se on Unescon maailmanperintökohde. Condeixa-a-Novan kunnassa on Conímbriga, yksi Portugalin suurimmista kaivetuista roomalaisista asutuksista. Atlantin rannalla Mondego-joen suulla on Figueira da Fozin kaupunki, jossa on useita rantoja ja suuri kasino.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-coimbra-857658d2.jpg",
@@ -15798,7 +15798,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Évora': {
       lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
-      pitka: `Évoran piirikunta on harvaan asuttu alue Alentejon alueella Etelä-Portugalissa Espanjan rajalla. Siellä asuu noin 150 000 ihmistä. Keskus on Évoran kaupunki, jonka vanhakaupunki on Unescon maailmanperintökohde vuodesta 1986. Kaupungissa on roomalaisaikainen temppeli, joka on omistettu keisari Augustuksen palvonnalle. Sen korinttilaiset pylväät ovat 7,68 metriä korkeat. Pyhän Fransiskuksen kirkossa on luukappeli Capela dos Ossos, jonka seinät on peitetty ihmisluilla. Évoran yliopiston perustivat jesuiitat vuonna 1559. Kaupungin lähellä on Almendresin megaliittikehä eli kivikehä sekä alueen suurin dolmeni eli kivikammio, Anta Grande do Zambujeiro. Évora on valittu vuoden 2027 Euroopan kulttuuripääkaupungiksi.`,
+      pitka: `Évoran piirikunta on harvaan asuttu alue Alentejon alueella Etelä-Portugalissa Espanjan rajalla. Siellä asuu noin 150 000 ihmistä. Keskus on Évoran kaupunki, jonka vanhakaupunki on Unescon maailmanperintökohde vuodesta 1986. Kaupungissa on roomalaisaikainen temppeli, joka on omistettu keisari Augustuksen palvonnalle. Pyhän Fransiskuksen kirkossa on luukappeli Capela dos Ossos, jonka seinät on peitetty ihmisluilla. Estremozin ympäristössä louhitaan marmoria, jota on käytetty muun muassa Batalhan luostarissa. Vila Viçosan kaupungissa on Braganzan herttuoiden entinen palatsi. Évoran lähellä on Almendresin megaliittikehä eli kivikehä sekä alueen suurin dolmeni eli kivikammio, Anta Grande do Zambujeiro. Évora on valittu vuoden 2027 Euroopan kulttuuripääkaupungiksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-evora-a18cacd9.jpg",
@@ -15821,7 +15821,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Faro: {
       lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
-      pitka: `Faron piirikunta on Portugalin eteläisin piirikunta, ja se kattaa koko Algarven alueen. Siellä asuu noin 470 000 ihmistä. Keskus on Faron kaupunki, jonka lentokenttä palvelee Algarven matkailijoita. Algarven rannikolla on Ria Formosan luonnonpuisto, rannikkolaguuni, joka on yli 170 neliökilometrin kokoinen ja tärkeä lintujen pysähdyspaikka. Vila do Bispon kunnassa on Cabo de São Vicenten niemi, Manner-Euroopan lounaisin kärki. Niemen majakan valo näkyy 60 kilometrin päähän. Faron kaupungissa on 1700-luvun karmeliittakirkkoon kuuluva luukappeli Capela dos Ossos. Alueen korkein kohta on Monchiquen vuoristossa, 902 metrissä.`,
+      pitka: `Faron piirikunta on Portugalin eteläisin piirikunta, ja se kattaa koko Algarven alueen. Siellä asuu noin 470 000 ihmistä. Keskus on Faron kaupunki, jossa on Algarven lentokenttä ja yliopisto. Matkailu on alueen tärkeimpiä elinkeinoja, ja rannikko on suosittu lomakohde. Algarven rannikolla on Ria Formosan luonnonpuisto, rannikkolaguuni, joka on yli 170 neliökilometrin kokoinen ja tärkeä lintujen pysähdyspaikka. Vila do Bispon kunnassa on Cabo de São Vicenten niemi, Manner-Euroopan lounaisin kärki. Niemen majakan valo näkyy 60 kilometrin päähän. Alueen korkein kohta on Monchiquen vuoristossa, 902 metrissä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-faro-78a2f0a2.jpg",
@@ -15844,7 +15844,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Guarda: {
       lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
-      pitka: `Guardan piirikunta on vuoristoinen alue Itä-Portugalissa Espanjan rajalla, ja siellä asuu noin 140 000 ihmistä. Keskus Guarda on Manner-Portugalin korkeimmalla sijaitseva kaupunki, 1 056 metrin korkeudessa. Piirikunnassa on osa Serra da Estrelaa, Manner-Portugalin korkeinta vuoristoa. Vuoriston korkein kohta Torre on 1 993 metriä. Vila Nova de Foz Côan kunnassa on Côa-laakson kalliopiirroksia. Vanhimmat niistä ovat noin 22 000 vuotta vanhoja, ja alue on Unescon maailmanperintökohde vuodesta 1998.`,
+      pitka: `Guardan piirikunta on vuoristoinen alue Itä-Portugalissa Espanjan rajalla, ja siellä asuu noin 140 000 ihmistä. Keskus Guarda on Manner-Portugalin korkeimmalla sijaitseva kaupunki, 1 056 metrin korkeudessa. Piirikunnassa on osa Serra da Estrelaa, Manner-Portugalin korkeinta vuoristoa. Vuoriston korkein kohta Torre on 1 993 metriä. Vila Nova de Foz Côan kunnassa on Côa-laakson kalliopiirroksia. Vanhimmat niistä ovat noin 22 000 vuotta vanhoja, ja alue on Unescon maailmanperintökohde vuodesta 1998. Serra da Estrelan vuoristoseudulla valmistetaan lampaanmaidosta Serra da Estrela -juustoa, jonka nimi on suojattu EU:ssa. Juusto on pehmeää, ja nuorena se voi olla lähes nestemäistä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-maakunta2-guarda-v-1c7c963d.jpg',
@@ -15867,7 +15867,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leiria: {
       lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
-      pitka: `Leirian piirikunta on Portugalin länsirannikolla Atlantin rannalla, ja siellä asuu noin 460 000 ihmistä. Keskus on Leiria, jonka linnan päätornin kunnosti kuningas Dinis 1300-luvun alussa. Rannikolla kasvaa Leirian mäntymetsä, jonka puuta tarvittiin 1400- ja 1500-lukujen merimatkojen laivoihin. Batalhan luostari rakennettiin vuosina 1386–1517 kiitokseksi Portugalin ja Kastilian välisen Aljubarrotan taistelun voitosta, ja se on Unescon maailmanperintökohde vuodesta 1983. Nazarén kalastajakaupungin Praia do Norte -rannalla saksalainen surffaaja Sebastian Steudtner ratsasti 26,2 metrin aallolla (mitattu 2020). Óbidosin keskiaikaisessa linnakaupungissa on useita kirjakauppoja, ja siellä pidetään maaliskuussa suklaafestivaali.`,
+      pitka: `Leirian piirikunta on Portugalin länsirannikolla Atlantin rannalla, ja siellä asuu noin 460 000 ihmistä. Keskus on Leiria, jonka linnan päätornin kunnosti kuningas Dinis 1300-luvun alussa. Rannikolla kasvaa Leirian mäntymetsä, jonka puuta tarvittiin 1400- ja 1500-lukujen merimatkojen laivoihin. Batalhan luostari rakennettiin vuosina 1386–1517 kiitokseksi Portugalin ja Kastilian välisen Aljubarrotan taistelun voitosta, ja se on Unescon maailmanperintökohde vuodesta 1983. Nazarén kalastajakaupungin Praia do Norte -rannalla saksalainen surffaaja Sebastian Steudtner surffasi 26,2 metrin aallolla vuonna 2020. Óbidosin keskiaikaisessa linnakaupungissa on useita kirjakauppoja, ja siellä pidetään maaliskuussa suklaafestivaali.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-leiria-b71d8866.jpg",
