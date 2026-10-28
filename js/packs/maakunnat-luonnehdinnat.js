@@ -14965,7 +14965,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CHE: {
     Aargau: {
       lyhyt: 'Habsburgin kylän kukkulalla seisoo noin 1020 rakennettu linna, josta yksi Euroopan mahtavimmista hallitsijasuvuista sai nimensä.',
-      pitka: `Aargau on nykyään Sveitsin niin sanottu Vesilinna — Aare, Reuss ja Limmat yhtyvät kantonin alueella, ja rannoilla kasvaa maan suurimmat omenatarhat, samalla kun Beznaun ydinvoimala Döttingenin lähellä on käynnissä ollein maailman vanhimpia yhä toimivia kaupallisia ydinvoimaloita. Habsburgin linnankukkulalla käy nykyään lähinnä retkeilijöitä ja museovieraita, ei valtiaita: suku menetti Aargaun alueensa sveitsiläisille jo 1415, minkä jälkeen sen painopiste siirtyi Wieniin. Isoisän matkan aikaan 1873 Habsburgit hallitsivat Itävalta-Unkarin suurvaltaa Wienistä käsin, mutta perheen alkuperäinen nimikkolinna oli silloin jo lähes 460 vuotta ollut osa Sveitsiä — vaatimaton maaseutumaisema, ei minkään valtakunnan keskus.`,
+      pitka: `Aargau on Pohjois-Sveitsin kantoni, jossa puhutaan saksaa. Siellä asuu noin 690 000 ihmistä, ja se on väkiluvultaan Sveitsin neljänneksi suurin kantoni. Pääkaupunki on Aarau, jossa asuu noin 22 000 ihmistä. Kantonin nimi tulee Aare-joesta, jonka laaksossa suurin osa alueesta on. Rein-joki on pohjoisessa Saksan rajana. Kantonissa on yli 20 vesivoimalaa, ja kaksi Sveitsin kolmesta toimivasta ydinvoimalasta, Leibstadt ja Beznau, ovat Aargaussa. Badenin kaupunki ja Schinznachin kylä ovat tunnettuja rikkipitoisista kuumista lähteistä. Habsburgin linna rakennettiin noin vuonna 1020, ja siitä sai nimensä Habsburgien hallitsijasuku.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-aargau-v-f3ba213a.jpg',
@@ -14988,7 +14988,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Appenzell Ausserrhoden': {
       lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
-      pitka: `Appenzell Ausserrhodenin vihreät kumpuilevat niityt ja ruskeat karjalaumat ovat nykyään tuttu näky matkailukuvista, ja Heidenin pieni kylä Bodenjärven yllä elää edelleen siitä, että Punaisen Ristin perustaja Henry Dunant vietti siellä elämänsä viimeiset vuodet ja sai 1901 ensimmäisen Nobelin rauhanpalkinnon. Isoisän vuonna 1873 Dunant ei kuitenkaan asunut vielä Heidenissä eikä missään pysyvässä osoitteessa: hän oli konkurssin runtelemana köyhä ja unohdettu, kierteli Euroopan kaupunkeja ja joutui ajoittain nukkumaan kaduilla Pariisissa. Heidenin idylliin hän löysi tiensä vasta 1887, ja maailma ”löysi” hänet uudelleen vasta 1895 — kaksikymmentäkaksi vuotta isoisän matkan jälkeen.`,
+      pitka: `Appenzell Ausserrhoden on Koillis-Sveitsin kantoni, jossa puhutaan saksaa. Siellä asuu noin 55 000 ihmistä. Virallista pääkaupunkia ei ole, mutta hallinto on pääosin Herisaun kaupungissa, jossa asuu noin 15 800 ihmistä. Kantonin tuomioistuimet ovat Trogenissa. Maasto on kumpuilevaa, ja yli puolet maasta on maatalouskäytössä. Korkein kohta on 2 502 metriä korkea Säntis-vuori kantonin eteläkulmassa. Seutu tunnetaan Appenzellin juustosta, ja maatalousperinne on siellä vahva. Seudulla valmistettiin pellavakangasta 1500-luvulta 1920-luvulle. Kantoni syntyi vuonna 1597, kun Appenzell jakautui uskonnon mukaan katoliseen Innerrhodeniin ja protestanttiseen Ausserrhodeniin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-ausserrhoden-4a9fcba1.jpg",
@@ -15011,7 +15011,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Appenzell Innerrhoden': {
       lyhyt: 'Appenzellin aukiolle kokoontuu joka huhtikuu tuhansia kansalaisia päättämään kantonin asioista – naiset pääsivät mukaan vasta 1991.',
-      pitka: `Appenzellin kylän aukio täyttyy huhtikuisin sadoista miekkaa kantavista äänestäjistä, kun Landsgemeinde päättää kantonin asioista käsien nostolla — perinne, joka jatkuu, vaikka naiset pääsivät mukaan vasta 1991. Alpstein-vuoriston ja Säntis-huipun juurella eletään edelleen karjatalouden ja alppijuuston tahdissa, ja kylän värikkäät talonjulkisivut houkuttelevat nykyään turisteja ympäri maailmaa. Isoisän aikaan 1873 tähän syrjäiseen vuoristokantoniin ei ollut vielä rautatietä: ensimmäinen juna kolisi Appenzelliin vasta 1886, joten viimeiset kilometrit laaksoon olisi pitänyt kulkea jalan tai hevosella.`,
+      pitka: `Appenzell Innerrhoden on Koillis-Sveitsin kantoni, jossa puhutaan saksaa. Siellä asuu noin 16 000 ihmistä, ja asukasluvultaan se on Sveitsin pienin kantoni. Pääkaupunki Appenzell on noin 6 000 asukkaan kylä, eli yli kolmannes kantonin väestöstä asuu siellä. Kantonin korkein kohta on Säntis-vuori, 2 502 metriä. Yli puolet maasta on maatalouskäytössä, ja Appenzellin juusto on peräisin tältä seudulta. Joka vuosi huhtikuun viimeisenä sunnuntaina äänioikeutetut kokoontuvat Appenzellin keskusaukiolle Landsgemeinde-kansankokoukseen. Kokouksessa valitaan muun muassa tuomarit ja päätetään isoista rahoitusasioista. Kantonin asioissa naiset saivat äänioikeuden vasta vuonna 1990, viimeisenä Sveitsissä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-innerrhoden-1f22919a.jpg",
@@ -15034,7 +15034,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Basel-Landschaft': {
       lyhyt: 'Augusta Rauricassa oli Alppien pohjoispuolen suurin roomalainen teatteri, ja kaupungista vietiin savustettua sianlihaa ympäri valtakuntaa.',
-      pitka: `Baselin maaseutukantonissa Augusta Raurican roomalaisrauniot houkuttelevat nykyään retkeilijöitä ja koululaisryhmiä, ja pääkaupunki Liestal sekä ympäröivät viinitilat elävät tiiviissä kytköksessä naapurikaupunkiin Baseliin — vaikka poliittinen raja kantonien välillä on jyrkkä. Raja syntyi verissä: maaseudun asukkaat nousivat kapinaan kaupungin herruutta vastaan, ja 1833 Basel jaettiin kahtia, Basel-Landschaftiksi ja Basel-Stadtiksi. Isoisän matkan aikaan 1873 jako oli vain neljäkymmentä vuotta vanha, ja nuori maaseutukantoni rakensi vielä omaa hallintoaan mahtavan kaupunkivaltion rinnalla — kansanäänestykset uudesta yhdistymisestä hylättiin sekä 1969 että 2014.`,
+      pitka: `Basel-Landschaft on Luoteis-Sveitsin kantoni Reinin eteläpuolella, ja siellä puhutaan saksaa. Siellä asuu noin 290 000 ihmistä. Pääkaupunki on Liestal. Kantonissa tuotetaan hedelmiä, maitotuotteita ja lihaa, ja teollisuudenaloja ovat tekstiili-, metalli- ja kemianteollisuus. Kantoni syntyi vuonna 1833, kun Baselin kantoni jakautui kahtia: kaupunkipuoli sai nimen Basel-Stadt ja maaseutu Basel-Landschaft. Augstin kunnan lähellä on Augusta Raurica, antiikin roomalainen kaupunki. Perimätiedon mukaan se perustettiin vuonna 44 eaa., ja sen raunioihin kuuluvat amfiteatteri, basilika ja teatteri. Prattelnin kunnassa toimii Sveitsin suolayhtiö.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-landschaft-d10e8a8a.jpg",
@@ -15057,7 +15057,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Basel-Stadt': {
       lyhyt: 'Baselin Rein-lossit kulkevat ilman moottoria: lossari kääntää veneen vinoon virtaan, ja virta työntää sen vaijeria pitkin toiselle rannalle.',
-      pitka: `Basel on nykyään sveitsiläisen taiteen ja lääketeollisuuden keskus, jonka kapeat kujat ja Reinin rannat täyttyvät kesäisin uimareista, jotka antavat virran kuljettaa itsensä alavirtaan. Reinin ylitys on ollut kaupungille elinehto vuosisatoja, ja lossit täydensivät liikennettä, koska pitkään riitti yksi ainoa silta. Isoisän aikaan 1873 keskiaikainen Mittlere Brücke, rakennettu jo 1225, oli edelleen Baselin ainoa Reinin ylittävä silta, eikä tilanne muuttunut ennen kuin kasvava liikenne pakotti sen purkamaan ja rakentamaan uudelleen vasta 1905.`,
+      pitka: `Basel-Stadt on Luoteis-Sveitsin kantoni ja pinta-alaltaan maan pienin, vain 37 neliökilometriä. Siellä asuu noin 200 000 ihmistä, ja asukastiheys on maan suurin. Kantoni koostuu kolmesta kunnasta: Basel, Riehen ja Bettingen. Basel sijaitsee Reinin molemmilla rannoilla, ja kaupungin kohdalla kohtaavat Sveitsin, Saksan ja Ranskan rajat. Baselin yliopiston perusti paavi Pius II vuonna 1460, ja sitä pidetään Sveitsin vanhimpana. Kaupungissa on yli 30 museota. Fasnacht-karnevaali alkaa tuhkakeskiviikkoa seuraavana maanantaina kello 4 aamulla ja kestää tasan 72 tuntia.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-stadt-f4b409d4.jpg",
@@ -15080,7 +15080,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bern: {
       lyhyt: 'Bernin Kramgassen talossa 49 Albert Einstein kirjoitti 1905 artikkelit, joissa hän esitteli suhteellisuusteoriansa – päivät hän teki töitä patenttivirastossa.',
-      pitka: `Bern on nykyään Sveitsin liittovaltion pääkaupunki, jonka UNESCO-suojeltu vanhakaupunki, Zytglogge-kellotorni ja karhupuisto houkuttelevat miljoonia matkailijoita vuosittain — Einsteinin asunto Kramgassella on yksi suosituimmista pysähdyspaikoista. Vuonna 1873 Bern oli jo vakiintunut liittovaltion hallintokaupunki, mutta liittovaltion valta oli vielä paljon suppeampi kuin nykyään: vasta seuraavana vuonna, 1874, Sveitsi uudisti perustuslakinsa kokonaan ja antoi liittovaltiolle lisää valtaa esimerkiksi puolustuksen, kaupan ja lainsäädännön alalla sekä otti käyttöön kansanäänestykset. Isoisä matkusti siis Berniin juuri sillä hetkellä, kun kantonien liitto oli muuttumassa nykyistä muistuttavammaksi liittovaltioksi.`,
+      pitka: `Bernin kantoni on Sveitsin keskiosassa, ja se on toiseksi suurin sekä asukasluvultaan että pinta-alaltaan. Siellä asuu noin miljoona ihmistä, ja suurin kaupunki on Bern. Kantoni on kaksikielinen: noin 84 prosenttia puhuu saksaa ja noin 11 prosenttia ranskaa. Eteläosa kuuluu Alppeihin, ja Bernin Oberlandissa on useita talviurheilukeskuksia. Jungfrau-huippu, 4 158 metriä, on Bernin ja Valaisin kantonien rajalla. Kantonin pääkaupunki Bern perustettiin vuonna 1191 Aare-joen niemekkeelle. Se on myös liittovaltion hallinnon kaupunki, vaikka Sveitsillä ei ole virallista pääkaupunkia. Bernin vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1983.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-bern-ac989871.jpg",
@@ -15103,7 +15103,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Fribourg: {
       lyhyt: 'Fribourgin köysirataa on vuodesta 1899 liikuttanut jätevesi: yläpään vaunuun lasketaan viemärivettä, ja painava vaunu vetää toisen ylös.',
-      pitka: `Fribourgin vanhakaupunki roikkuu edelleen jyrkän Sarine-joen kanjonin päällä, ja köysirataa pyörittää nykyään viemärivesi, samalla kun kaupungin kaksikielisyys — ranska ja saksa — näkyy kaduilla ja yliopistossa. Isoisän aikaan 1873 kaupungin ylitti Grand Pont Suspendu, vuonna 1834 valmistunut riippusilta, joka oli hetken maailman pisin riippusilta ennen kuin amerikkalainen Wheelingin silta ohitti sen 1849. Fribourgin silta pysyi silti käytössä ja kaupungin ylpeytenä isoisän matkan aikaan ja vielä pitkään sen jälkeen, kunnes se purettiin vasta 1923.`,
+      pitka: `Fribourgin kantoni on Länsi-Sveitsissä, ja se on kaksikielinen. Ranskankielisiä on enemmän kuin saksankielisiä. Kantonissa asuu noin 320 000 ihmistä. Pääkaupunki on Fribourg, ja siellä toimii Fribourgin yliopisto. Maasto on suurelta osin kumpuilevaa tasankoa, ja kaakossa kohoavat Alppien esivuoret. Korkein kohta on Vanil Noir -vuori, 2 389 metriä. Gruyère-juusto on saanut nimensä Gruyères-nimisestä kaupungista kantonissa. Broc-nimisessä kunnassa on suklaateollisuutta. Kantoni liittyi Sveitsin valaliittoon vuonna 1481, ja Murtenin kaupunki liitettiin siihen vuonna 1803.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-fribourg-c92f7545.jpg",
@@ -15126,7 +15126,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Genève': {
       lyhyt: 'Genevessä CERNissä syntyi 1989 World Wide Web, ja 27 kilometrin hiukkaskiihdytin kiertää maan alla Ranskan rajan yli.',
-      pitka: `Geneve on nykyään kansainvälisen diplomatian pääkaupunki, jonka CERN-tutkimuskeskuksessa syntyi 1989 World Wide Web, ja YK:n Euroopan-päämaja sekä sadat kansainväliset järjestöt työllistävät kaupungissa kymmeniätuhansia. Isoisän aikaan 1873 Geneven kansainvälinen rooli oli vasta alkamassa: Punaisen Ristin kansainvälinen komitea oli perustettu kaupunkiin 1863 ja ensimmäinen Geneven sopimus allekirjoitettu 1864, vain yhdeksän vuotta ennen isoisän matkaa — humanitaarisen Geneven maine oli silloin vielä uusi ja vasta vuosikymmenen ikäinen.`,
+      pitka: `Geneve on ranskankielinen kantoni Genevenjärven läntisessä päässä, ja siellä asuu noin 510 000 ihmistä. Rhône-joki virtaa kantonin halki. Ranska on pääkieli noin 81 prosentille asukkaista. Pääkaupunki on Geneve, ja kantonissa on 45 kuntaa. Kantoni on vain noin 280 neliökilometrin kokoinen mutta tiheästi asuttu. Kantonissa toimivat Punaisen Ristin kansainvälinen komitea ja Yhdistyneiden kansakuntien Geneven toimisto. Meyrinin kunnassa on CERN, suuri hiukkasfysiikan tutkimuslaitos. CERNin LHC-hiukkaskiihdytin on noin 27 kilometrin pituisessa tunnelissa. Ulkomaalaisia on noin 40 prosenttia asukkaista. Geneve liittyi Sveitsiin vuonna 1815.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-geneve-fdbfcc5e.jpg",
@@ -15149,7 +15149,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Glarus: {
       lyhyt: 'Glarus laski äänestysiän 16 vuoteen 2007 ensimmäisenä Sveitsin kantonina, ja asioista päättää yhä Landsgemeinde-kansankokous.',
-      pitka: `Glarus on nykyään kapea vuoristolaakso, jossa liuskekaivokset ja Sardonan tektoninen UNESCO-maailmanperintöalue kertovat kantonin geologisesta erikoislaadusta, ja Landsgemeinde-kansankokous päättää edelleen suoraan asioista kylän aukiolla. Isoisän saapuessa 1873 kaupunki näytti silti vielä varsin nuorelta: föhn-tuulen kiihdyttämä tulipalo tuhosi 1861 kaksi kolmasosaa Glaruksesta, ja kaupunki rakennettiin sen jälkeen uudelleen tiiviiseen ruutukaavaan arkkitehtien Johann Caspar Wolffin ja Bernhard Simonin suunnitelmien mukaan. Isoisä olisi siis kävellyt kaduilla, jotka olivat vain kymmenisen vuotta vanhoja — suorat ja säännölliset, toisin kuin useimpien sveitsiläisten kaupunkien mutkittelevat vanhatkaupungit.`,
+      pitka: `Glarus on Itä-Sveitsin saksankielinen vuoristokantoni, ja siellä asuu noin 41 000 ihmistä. Pääkaupunki on Glarus. Kantonin korkein huippu on Tödi, joka on yli 3 600 metriä korkea. Osa Glarusin Alppeja kuuluu Sardonan tektoniseen alueeseen, jossa näkyy vuorten syntyyn liittyvä kallioperän siirros. Alue on Unescon maailmanperintökohde vuodesta 2008. Glarusissa pidetään edelleen Landsgemeinde eli ulkoilmakansankokous, jossa äänestäjät päättävät asioista kättä nostamalla. Vuodesta 2007 siihen ovat saaneet osallistua myös 16-vuotiaat. Ensimmäinen tiedossa oleva kantonin kokous pidettiin vuonna 1387. Vuonna 2011 kantonin 25 kuntaa yhdistettiin kolmeksi. Glarus liittyi valaliittoon vuonna 1352.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-glarus-v-e0b5c3c7.jpg',
@@ -15172,7 +15172,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Graubünden': {
       lyhyt: 'Graubünden on Sveitsin ainoa kolmikielinen kantoni ja ainoa, jossa maan neljäs kansalliskieli retoromaani on virallinen kieli.',
-      pitka: `Nykyään Graubünden on Sveitsin suurin kantoni pinta-alaltaan ja maan ainoa kolmikielinen alue, jossa saksan ja italian rinnalla puhutaan retoromaania – neljättä kansalliskieltä, joka on virallinen vain täällä. Vuoristolaaksot kuten Engadin ja Prättigau elävät nykyisin talviurheilusta ja terveysmatkailusta, Davosin ja St. Moritzin loisto tunnetaan ympäri maailman. Isoisän aikaan 1873 Davos oli vasta muutaman vuoden ollut ilmastoparannuspaikka: ensimmäinen keuhkotautisille tarkoitettu parantola avattiin siellä 1868, ja rikkaat eurooppalaiset alkoivat vasta löytää laakson raikasta ilmaa. Rautatiet eivät vielä ulottuneet syvälle vuoristoon – Rhaetian rata rakennettiin vasta 1889 alkaen – niin isoisä olisi kulkenut Graubündenin läpi hevosvaunulla, ei junalla.`,
+      pitka: `Graubünden on Sveitsin itäisin ja pinta-alaltaan suurin kantoni, ja siellä asuu noin 200 000 ihmistä. Pääkaupunki on Chur. Kantonin korkein huippu on Piz Bernina, 4 049 metriä. Kantonissa on kolme virallista kieltä: saksa, retoromaani ja italia. Retoromaani on vanha alppikieli, jota puhutaan Graubündenin laaksoissa. Davos ja St. Moritz ovat talviurheilukeskuksia, ja St. Moritzissa pidettiin talviolympialaiset vuosina 1928 ja 1948. Retian rautatien Albulan ja Bernina-radan reitit ovat Unescon maailmanperintökohteita. Sveitsin kansallispuisto on Engadinin laaksossa. Graubünden liittyi Sveitsiin vuonna 1803.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-graubunden-1fbdca42.jpg",
@@ -15195,7 +15195,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Jura: {
       lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
-      pitka: `Jura on nykyisin Sveitsin nuorin kantoni ja ranskankielinen saareke, joka tunnetaan hevoskasvatuksesta – Franches-Montagnes on maan ainoa oma hevosrotu – ja keskiaikaisesta Saint-Ursannen kaupungista Doubs-joen mutkassa. Kantonin oma identiteetti syntyi vuosikymmenten kamppailussa Bernin vallan alla, ja se johti vuonna 1979 eroon ja liittymiseen valaliittoon omana kantonina. Isoisän aikaan 1873 alue oli yhä osa Bernia, ja juuri tuolloin kuohui: Sveitsin ”kulttuuritaistelu” katolisen kirkon ja liittovaltion välillä repi erityisesti Juraa, kun Baselin hiippakunnan piispa erotettiin virastaan ja katolinen väestö jakautui. Livia muistuttaa, että se kiista kylvi siemenen, joka itäisi vasta sata vuotta myöhemmin.`,
+      pitka: `Jura on Luoteis-Sveitsin ranskankielinen kantoni, ja siellä asuu noin 80 000 ihmistä. Se on Sveitsin nuorin kantoni. Alue kuului ennen Bernin kantoniin, ja siitä tuli oma kantoninsa vuonna 1979 itsenäisyysliikkeen jälkeen. Pääkaupunki on Delémont. Ederswiler on kantonin ainoa saksankielinen kunta. Kellojen valmistus on kantonin tärkeimpiä teollisuudenaloja. Hevosten kasvatus on myös tärkeää, ja Franches-Montagnesin seudun mukaan on nimetty hevosrotu. Seudun keskus on Saignelégier. Doubs-joki virtaa kantonin läpi ja laskee lopulta Rhône-jokeen. Moutierin kaupunki liittyi Juraan 1. tammikuuta 2026.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-jura-v-2ac1cc68.jpg',
@@ -15218,7 +15218,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Lucerne: {
       lyhyt: 'Luzernin Kapellbrücke on Euroopan vanhin katettu puusilta, mutta tulipalo tuhosi 1993 suuren osan siitä ja sen 1600-luvun maalauksista.',
-      pitka: `Luzernin läpi virtaavan Reussin yli kaartuva Kapellbrücke on Euroopan vanhin katettu puusilta, mutta suuri osa siitä ja sen 1600-luvun kattomaalauksista tuhoutui tulipalossa 1993 – nykyinen silta on osittain jälleenrakennettu. Kaupunki elää edelleen matkailusta, jota vauhditti 1800-luvulla brittiläisten ja saksalaisten yläluokan matkustajien innostus Pilatus- ja Rigi-vuorten näköalapaikkoihin. Isoisän aikaan 1873 Luzern oli juuri menettänyt kuuluisan asukkaansa: säveltäjä Richard Wagner asui Tribschenin huvilassa vuoteen 1872, ja isoisä ehti kaupunkiin vain vuotta liian myöhään tavatakseen hänet enää siellä.`,
+      pitka: `Luzern on saksankielinen kantoni Keski-Sveitsissä, ja siellä asuu noin 420 000 ihmistä. Pääkaupunki on Luzernin kaupunki Luzernin järven rannalla. Reuss-joki lähtee järvestä kaupungin kohdalta. Kaupungissa on puinen, katettu Kapellbrücke-silta, joka on rakennettu noin vuonna 1365. Tulipalo tuhosi suurimman osan sillan kattomaalauksista vuonna 1993, ja silta avattiin uudelleen vuonna 1994. Kantonin korkein kohta on Brienzer Rothorn, 2 350 metriä. Rigi-vuoren rinteillä ovat Weggisin ja Vitznaun kunnat. Sempachin taistelu käytiin vuonna 1386, ja se ajoi Habsburgit pois alueelta. Vuonna 2010 noin 91 prosenttia asukkaista puhui äidinkielenään saksaa. Luzern liittyi valaliittoon vuonna 1332.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-lucerne-ebd74357.jpg",
@@ -15241,7 +15241,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Neuchâtel': {
       lyhyt: 'Absintti syntyi Neuchâtelissa, ja Môtiers’n absinttimuseo toimii entisessä oikeustalossa, jossa kiellon aikana tuomittiin tislaajia.',
-      pitka: `Neuchâtel on nykyään tunnettu kellonvalmistuksen keskuksena ja viinitarhoistaan Neuchâtelinjärven rannalla, mutta kantonin erikoisin vientituote syntyi Val-de-Traversin laaksossa: absintti. Môtiers'n kylän absinttimuseo toimii entisessä oikeustalossa, jossa myöhemmin, kieltolain aikana, tuomittiin salatislaajia. Isoisän aikaan 1873 absintti ei ollut vielä minkään kiellon alla – päinvastoin, Val-de-Travers'n tislaamot kukoistivat vapaasti ja veivät vihreää juomaa ympäri Eurooppaa, sillä liittovaltion absinttikielto säädettiin perustuslakiin vasta 1908. Samaan aikaan Neuchâtelin kellotehtaat kasvattivat vientiään, ja kanton oli jo silloin yksi Sveitsin teollisimmista.`,
+      pitka: `Neuchâtel on ranskankielinen kantoni Jura-vuorten alueella, ja siellä asuu noin 180 000 ihmistä. Pääkaupunki Neuchâtel on Neuchâtelin järven rannalla, ja rannoilla kasvatetaan viiniä. Kantonin suurin kaupunki on Neuchâtel, jossa asuu noin 45 000 ihmistä. Toiseksi suurin kaupunki La Chaux-de-Fonds on noin 1 000 metrin korkeudessa merenpinnasta. La Chaux-de-Fonds ja Le Locle kuuluvat yhdessä Unescon maailmanperintöön vuodesta 2009 kellonvalmistuskaupunkien suunnittelun vuoksi. Kantonissa toimii Neuchâtelin yliopisto. Val-de-Travers on absintin, väkevän alkoholijuoman, syntyseutu. Neuchâtel liittyi Sveitsiin vuonna 1815 ruhtinaskuntana. Preussin kuningashuone hallitsi sitä pitkään, ja vuonna 1848 siitä tuli tasavalta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-neuchatel-v-c852292c.jpg',
@@ -15264,7 +15264,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Nidwalden: {
       lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
-      pitka: `Stanserhornille nousevassa köysiradassa matkustaa nykyään avokattoisessa ”CabriO”-vaunussa, joka oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata – matkalla näkymä avautuu Vierwaldstättersee'lle asti. Pieni Nidwalden elää nykyisin pitkälti tästä näköalamatkailusta sekä pienteollisuudesta Alppien rinteiden juurella. Isoisän aikaan 1873 Stanserhornille ei ollut muuta tietä kuin jalkapolku, ja huipulle kiipeäminen oli varattu harvoille alppivaeltajille – ensimmäinen rautatie sen kupeeseen avattiin vasta 1893.`,
+      pitka: `Nidwalden on saksankielinen kantoni Keski-Sveitsissä Luzernin järven rannalla, ja siellä asuu noin 44 000 ihmistä. Pääkaupunki on Stans, ja kantonissa on 11 kuntaa. Kantoni on vuoristoinen, ja sen korkein kohta Rotstöckli on 2 901 metriä korkea. Stansissa on lentokonevalmistaja Pilatus Aircraftin pääkonttori. Yritys perustettiin vuonna 1939. Stanserhorn-vuori on suosittu matkailukohde. Ranskalaiset joukot hyökkäsivät alueelle vuonna 1798, ja ainakin 400 ihmistä kuoli. Nidwalden oli osa Unterwaldenia, joka liittyi Sveitsin perustajiin vuonna 1291.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-nidwalden-c1a06969.jpg",
@@ -15287,7 +15287,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Obwalden: {
       lyhyt: 'Alpnachstadista Pilatukselle kiipeävä hammasrata on maailman jyrkin: jyrkimmässä kohdassa kaltevuus on 48 prosenttia.',
-      pitka: `Alpnachstadista Pilatukselle kiipeävä hammasrata on nykyään maailman jyrkin rautatie, jonka jyrkimmässä kohdassa kaltevuus on 48 prosenttia – matka ylös vie parisenkymmentä minuuttia näkymien vaihtuessa jyrkästi. Obwalden tunnetaan myös Sachslenista, jonne on haudattu Sveitsin suojeluspyhimys Niklaus von Flüe. Isoisän aikaan 1873 Pilatuksen huipulle ei ollut junaa lainkaan – insinööri Eduard Locherin rohkea hammasratasuunnitelma toteutui vasta 1889, ja isoisä olisi joutunut kiipeämään koko matkan omin jaloin tai muulin selässä.`,
+      pitka: `Obwalden on pieni saksankielinen kantoni Keski-Sveitsissä, ja siellä asuu noin 38 000 ihmistä. Pääkaupunki Sarnen on Sarnersee-järven rannalla. Asutus on keskittynyt Sarner Aa- ja Engelberger Aa -jokien laaksoihin ja järvien rannoille. Kantonissa on seitsemän kuntaa. Kantonin korkein huippu on 3 238 metriä korkea Titlis, jonka lähellä on Engelbergin kylä. Engelbergissä on benediktiiniläisluostari. Alpnachstadin kylästä lähtee Pilatus-vuorelle hammasratajuna, jota sanotaan maailman jyrkimmäksi. Obwalden liittyi Sveitsin valaliittoon vuonna 1291. Vuoteen 1999 asti se oli virallisesti puolikantoni eli Unterwaldenin toinen puoli.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-obwalden-98dc36fd.jpg",
@@ -15310,7 +15310,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Schaffhausen: {
       lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
-      pitka: `Schaffhausen työntyy nykyään kuin niemi Saksan sisään, ja sen kupeessa on Büsingen am Hochrhein, Saksalle kuuluva saareke, jonka ympäröi kokonaan sveitsiläistä aluetta – kantonilla on pidempi raja Saksan kuin minkään muun kantonin kanssa. Kaupungin tunnetuin nähtävyys on Reinin putous, Euroopan suurin tasangolla sijaitseva vesiputous, joka on vetänyt matkailijoita puoleensa vuosisatoja. Isoisän aikaan 1873 putous oli jo vakiintunut osa ”Grand Tourin” reittiä – romantiikan ajan matkailijat olivat vuosikymmeniä aiemmin tehneet siitä yhden Euroopan ihailluimmista luonnonnähtävyyksistä, ja isoisä näki saman veden pauhun kuin nykyinen matkailija.`,
+      pitka: `Schaffhausen on saksankielinen kantoni Sveitsin pohjoisosassa Saksan rajalla, ja siellä asuu noin 82 000 ihmistä. Pääkaupunki Schaffhausen on Reinin pohjoisrannalla. Vuonna 1944 Yhdysvaltain ilmavoimien pommikoneet pommittivat Schaffhausenin kaupunkia erehdyksessä. Schaffhausenin vanhassakaupungissa on 171 erkkeri-ikkunaa, eli seinästä ulos työntyvää ikkunaa. Neuhausen am Rheinfallin kunnassa on Reinin putous, jonka korkeus on 23 metriä ja leveys 150 metriä. Sen virtaama on kesällä keskimäärin 600 kuutiometriä sekunnissa. Kantonin maisema on kumpuilevaa, ja siellä viljellään viiniä. Schaffhausen liittyi Sveitsin valaliittoon vuonna 1501.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schaffhausen-f6e3e88f.jpg",
@@ -15333,7 +15333,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Schwyz: {
       lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
-      pitka: `Koko Sveitsi on saanut nimensä ja punavalkoisen lippunsa Schwyzin kantonilta, ja Schwyzin kaupungin liittokirjamuseossa on yhä nähtävillä vuoden 1291 liittokirja, joka pitää maata kokoavaa tarinaa yllä. Nykyisin kantonin maisemaa hallitsee Rigi, ”vuorten kuningatar”, jonka laelta avautuu näkymä kymmenille järville ja Alpeille. Isoisän aikaan 1873 Rigille pääsi jo junalla: Euroopan ensimmäinen vuoristorautatie, Vitznau–Rigi-rata, avattiin vain kaksi vuotta aiemmin, 1871, ja isoisä olisi hyvinkin voinut nousta huipulle höyryveturin vetämässä vaunussa, kun aiemmat sukupolvet joutuivat kiipeämään.`,
+      pitka: `Schwyz on saksankielinen kantoni Keski-Sveitsissä, ja siellä asuu noin 160 000 ihmistä. Pääkaupunki on Schwyzin kaupunki, jossa on Bundesbriefmuseum eli liittokirjamuseo. Siellä säilytetään vuoden 1291 liittokirjaa. Koko Sveitsi on saanut nimensä tästä kantonista, ja Sveitsin lippu on johdettu kantonin vaakunasta. Schwyz oli yksi Sveitsin valaliiton perustajista. Einsiedelnin kunnassa on benediktiiniläisluostari, joka on perustettu vuonna 934. Rigi-vuoren korkein kohta Rigi Kulm on 1 797 metriä korkealla. Vuonna 1871 avattiin rautatie Vitznausta sen huipulle, ja se oli Euroopan ensimmäinen vuoristorautatie.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-schwyz-v-43942782.jpg',
@@ -15356,7 +15356,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Solothurn: {
       lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
-      pitka: `Solothurnin autoton, barokkirakennusten täyttämä vanhakaupunki tunnetaan nykyään ”yhdentoista luvusta” – kaupungissa kerrotaan olevan yksitoista kirkkoa, tornia ja suihkulähdettä, koska Solothurn liittyi valaliittoon yhdentenätoista kantonina. Kaupunkikuva on peräisin ajalta, jolloin Solothurn oli 1530–1792 Ranskan kuninkaan Sveitsin-lähettilään virka-asuinpaikka, ja Ambassadorenhofin kaltaiset rakennukset muistuttavat siitä yhä. Isoisän aikaan 1873 lähettilään aika oli jo lähes sata vuotta sitten päättynyt Ranskan vallankumouksen myötä, mutta juuri se loisto, jonka lähettiläät toivat mukanaan, oli jättänyt kaupungille sen ylellisen barokkiasun, jota isoisä käveli ihmetellen samoin kuin nykyinen matkailija.`,
+      pitka: `Solothurn on saksankielinen kantoni Aare-joen laaksossa Sveitsin keskiosassa, ja siellä asuu noin 280 000 ihmistä. Pääkaupunki on Solothurn. Kaupungissa asui vuosina 1530–1792 Ranskan lähettiläs, ja ranskalainen vaikutus näkyy kaupungin barokkirakennuksissa. Luku yksitoista on kaupungille tärkeä: kaupungissa on yksitoista kirkkoa ja kappelia, yksitoista kaivoa ja yksitoista tornia. Kantoni oli yhdestoista, joka liittyi Sveitsin valaliittoon, vuonna 1481. Kantonin teollisuuteen kuuluu kellojen valmistus. Kantonin suurimmat kaupungit ovat Olten, Grenchen ja Solothurn. Gösgenin ydinvoimala Dänikenin kunnassa aloitti toimintansa vuonna 1979.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-solothurn-9f4fa816.jpg",
@@ -15379,7 +15379,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sankt Gallen': {
       lyhyt: 'St. Gallenin luostarikirjasto on maailman vanhimpia, ja sen rokokoosalissa lepää keskiaikaisten käsikirjoitusten seassa egyptiläinen muumio.',
-      pitka: `St. Gallenin luostarikirjasto on nykyään Unescon maailmanperintöä, ja sen rokokoosalissa turistit ihailevat keskiaikaisia käsikirjoituksia – ja hätkähtävät hyllyjen välissä lepäävää egyptiläistä muumiota. Kaupunki eli isoisän aikaan toisenlaista kulta-aikaa: 1800-luvun loppupuolella St. Gallenista kasvoi koneellisen pitsikirjonnan maailmanpääkaupunki, ja vuonna 1873 teollisuus oli juuri nousuvaiheessa kohti vuosisadan vaihteen huippuaan. Luostari itse oli lakkautettu jo 1805, joten isoisä näki kirjaston yhtä lailla kantonin hallinnoimana aarteena kuin nykyinen kävijä. Kirjonta on hiipunut, mutta pitsiperinne elää yhä muutamissa erikoistuneissa tekstiilifirmoissa kaupungin laidalla.`,
+      pitka: `Sankt Gallenin kantoni on saksankielinen alue Koillis-Sveitsissä, ja siellä asuu noin 510 000 ihmistä. Kantoni ulottuu Bodenjärven ja Reinin rannoilta Alpeille. Järviä ovat Bodenjärvi ja Walensee-järvi. Pääkaupungissa Sankt Gallenissa asuu noin 76 000 ihmistä, ja se kasvoi noin vuonna 720 perustetun luostarin ympärille. Luostarialue on Unescon maailmanperintökohde. Kaupungista vietiin pellavakankaita jo 1200-luvulta, ja Sankt Gallenin yliopisto perustettiin vuonna 1898. Rapperswil-Jonan kaupungissa asuu noin 27 000 ihmistä. Kantoni liittyi Sveitsin valaliittoon vuonna 1803.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-sankt-gallen-v-ec01b906.jpg',
@@ -15402,7 +15402,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Thurgau: {
       lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
-      pitka: `Thurgaun hedelmätarhat kukkivat keväällä valtoimenaan, ja syksyllä suuri osa sadosta puristetaan siideriksi – kantoni tunnetaan leikkimielisesti nimellä ”Mostindien”, siiderin Intia. Järven rannalla kohoava Arenenbergin linna oli 1800-luvulla Ranskan entisen keisarisuvun turvapaikka: sen kasvatti, pieni Louis-Napoleon, vietti täällä osan lapsuudestaan ennen kuin hänestä tuli aikuisena keisari Napoleon III. Isoisän lähtiessä matkaan tammikuussa 1873 Napoleon III kuoli maanpaossa Englannissa – Thurgaun linna oli näin yhä elossa muistona miehestä, jonka aika Euroopassa päättyi juuri sinä vuonna. Nykyään Arenenberg on museo, ja sen puutarhassa kasvavat samat hedelmäpuulajit kuin ympäröivissä kantonin tarhoissa.`,
+      pitka: `Thurgau on saksankielinen kantoni Koillis-Sveitsissä Bodenjärven rannalla, ja siellä asuu noin 280 000 ihmistä. Maasto on kumpuilevaa, eikä kantonissa ole vuoria. Pääkaupunki on Frauenfeld. Kantonin halki virtaa Thur-joki. Kreuzlingenin kaupunki on Saksan Konstanzin kaupungin vieressä rajan toisella puolella. Hedelmänviljely ja maatalous ovat tärkeitä, ja yli puolet maa-alasta oli maatalouskäytössä vuonna 2009. Salensteinin kunnassa Bodenjärven rannalla on Arenenbergin linna. Siellä kasvoi nuorena Louis Napoléon, josta tuli myöhemmin Ranskan keisari Napoleon III. Linnassa on nykyään Napoleon-museo. Thurgau liittyi Sveitsin valaliittoon vuonna 1803.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-thurgau-c979d9f3.jpg",
@@ -15425,7 +15425,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ticino: {
       lyhyt: 'Luganonjärven yllä kohoavasta Monte San Giorgiosta on kaivettu yli 21 000 fossiilia triaskauden merestä – vuori on Unescon maailmanperintöä.',
-      pitka: `Luganonjärven yllä kohoava Monte San Giorgio kätkee triaskauden meren fossiileja, joita on kaivettu esiin yli 21 000 – vuori on siksi Unescon maailmanperintöä vuodesta 2003. Kantonin pohjoisosassa, Airolon kylän liepeillä, alkoi syyskuussa 1872 toinen, aivan erilainen kaivaus: Gotthardin rautatietunnelin louhinta, joka etenisi vuoriston läpi Uriin päin seuraavan vuosikymmenen ajan. Nykyään alppikylät ja palmuja kasvava Lugano elävät rinnakkain, ja Ticino tuntuu enemmän Italialta kuin muu Sveitsi – kieli, ruoka ja arkkitehtuuri ovat italialaisia. Vuoren fossiilimuseo Meridessa näyttää nykyään kävijöille samoja kalalisko- ja meripihka-löytöjä, jotka tekivät alueesta tiedemaailman kiinnostuksen kohteen jo 1800-luvulla.`,
+      pitka: `Ticino on Sveitsin italiankielinen kantoni Alppien eteläpuolella, ja siellä asuu noin 350 000 ihmistä. Pohjoisosa on Alppien aluetta, ja korkein kohta on 3 402 metriä korkea Rheinwaldhorn, joka on Graubündenin rajalla. Pääkaupunki on Bellinzona. Suurin kaupunki on Lugano, jossa asuu noin 63 000 ihmistä. Eteläosassa ilmasto on lähes välimerellinen. Bellinzonan kolme keskiaikaista linnaa ovat Unescon maailmanperintökohde. Locarnossa järjestetään elokuussa elokuvajuhlat. Gotthardin pohjatunnelin eteläpää on Ticinossa. Ticino liittyi Sveitsin valaliittoon vuonna 1803.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-ticino-v-1c94ce13.jpg',
@@ -15448,7 +15448,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Uri: {
       lyhyt: 'Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli, ja kalliota on enimmillään 2 450 metriä yllä.',
-      pitka: `Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometrin pituudellaan maailman pisin rautatietunneli, ja junat sukeltavat sen kohdalla enimmillään 2 450 metriä kalliota syvemmälle kuin vuoren huippu. Kantonin toisessa päässä, Göschenenin kylässä, alkoi syyskuussa 1872 louhintatyö toista, vanhempaa Gotthard-tunnelia varten – vuonna 1873, isoisän kulkiessa seudulla, työmiehet porasivat yhä vuorta molemmin puolin, ja läpimurto saataisiin vasta 1880, junaliikenteen alkaessa kaksi vuotta myöhemmin. Työ vaati satojen louhijoiden hengen malariaan, onnettomuuksiin ja pölykeuhkoon, ja seudun kylät elivät vuosia rakennustyömaan ehdoilla. Nykyään Uri on hiljainen vuoristokantoni, jonka läpi kulkee sekä vanha että uusi Gotthard-yhteys, mutta arkea leimaavat edelleen enemmän laidunlehmät ja vuoripolut kuin junaliikenne.`,
+      pitka: `Uri on vuoristokantoni Keski-Sveitsissä, ja siellä asuu noin 37 000 ihmistä. Kantonin kieli on saksa. Uri on yksi Sveitsin kolmesta perustajakantonista. Keskus Altdorf on pieni kaupunki, jossa asuu noin 9 400 ihmistä ja jossa on Wilhelm Tellin patsas. Tell on kansantarujen varsijousimies, jonka kerrotaan ampuneen omenan poikansa päästä. Kantoni ulottuu Luzernin järven eteläpäähän, ja Gotthardin solatie yhdistää sen Ticinon kantoniin. Erstfeldistä alkava Gotthardin pohjatunneli avattiin vuonna 2016. Se on 57 kilometrin pituudellaan maailman pisin rautatietunneli. Kantonin korkein kohta on Dammastock, 3 630 metriä. Andermatt on tunnettu hiihtokeskus.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-uri-a30c6997.jpg",
@@ -15471,7 +15471,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Valais: {
       lyhyt: 'Valais’n Hérens-lehmät ottelevat keväisin sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan kuningattarien kuningattareksi.',
-      pitka: `Valais'n Hérens-lehmät ottelevat keväisin laumahierarkiasta sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan jokavuotisessa Combat des Reines -tapahtumassa kuningattarien kuningattareksi. Vuorten juurella hiihtokylät kuten Zermatt ja Verbier täyttyvät nykyään ympäri vuoden ulkomaalaisista matkailijoista, mutta ilmiö juontuu jo isoisän ajalta: Matterhornin ensimmäinen valtaus 1865 päättyi neljän kiipeäjän kuolemaan laskeutuessa, ja tragedia teki vuoresta ja koko Zermattin laaksosta hetkessä koko Euroopan tuntemat nimet. Kun isoisä kulki seudulla 1873, englantilaiset alpinistit olivat jo löytäneet Valais'n vuoret kesäkohteekseen, ja ensimmäiset kestohotellit palvelivat heitä samoilla paikoilla, joilla nykyiset hiihtohotellit seisovat. Rinteiden alla laaksot ovat yhä täynnä perinteisiä ruskeita puuaittoja ja viinitarhoja, jotka kiipeävät jyrkkiä etelänrinteitä kohti aurinkoa.`,
+      pitka: `Valais on Alppien kantoni Lounais-Sveitsissä, ja siellä asuu noin 350 000 ihmistä. Virallisia kieliä ovat ranska ja saksa. Keskus on Sion. Kantoni liittyi Sveitsin valaliittoon vuonna 1815. Rhône-joki saa alkunsa kantonin koillisosan jäätiköltä ja virtaa Genevenjärveen. Sen laakson rinteillä kasvatetaan viiniä. Zermatt on vuoristokylä, jonka yllä kohoaa 4 478 metriä korkea Matterhorn. Matterhorn kiivettiin ensimmäisen kerran vuonna 1865. Kantonin korkein huippu on Dufourspitze, 4 634 metriä. Kantonissa järjestetään Hérens-rotuisten lehmien otteluita, joissa lehmät mittelevät voimiaan sarvet vastakkain. Kantonin alueella on myös osa Jungfrau–Aletschin Unescon maailmanperintökohdetta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-valais-9a079010.jpg",
@@ -15494,7 +15494,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vaud: {
       lyhyt: 'Lausanne on maailman pienin kaupunki, jolla on oma metro, ja siellä on myös Kansainvälisen olympiakomitean päämaja.',
-      pitka: `Lausanne on nykyään maailman pienin kaupunki, jolla on oma metro, ja sen rinteillä sijaitsee myös Kansainvälisen olympiakomitean päämaja – kaupunkia kutsutaan siksi leikkimielisesti olympialiikkeen pääkaupungiksi. Vaudin viinirinteet Lavaux'ssa kiertyvät Genevenjärven yllä terasseina, jotka on viljelty samalla tavalla satojen vuosien ajan, ja alue on ollut Unescon maailmanperintöä vuodesta 2007. Järven toisella puolella Vevey'ssä apteekkari Henri Nestlé oli 1860-luvun lopulla kehittänyt pienessä yrityksessään lapsille tarkoitetun maitojauheen – vuonna 1873 yritys oli vielä nuori, mutta tuote alkoi jo levitä muualle Eurooppaan. Nykyään Nestlé on maailman suurin elintarvikeyhtiö, ja sen päämaja seisoo yhä samalla Veveyn rantakadulla, mistä kaikki alkoi.`,
+      pitka: `Vaud on ranskankielinen kantoni Sveitsin länsiosassa Genevenjärven pohjoisrannalla. Siellä asuu yli 800 000 ihmistä, ja se on asukasluvultaan Sveitsin kolmanneksi suurin kantoni. Keskus Lausanne on kantonin suurin kaupunki, ja siellä asuu noin 140 000 ihmistä. Kaupungissa Kansainvälisen olympiakomitean päämaja on ollut vuodesta 1915. Lausannen länsipuolella on teknillinen yliopisto EPFL. Lavaux'n viinitarhaterassit Genevenjärven rannalla ovat Unescon maailmanperintökohde vuodesta 2007. Terassit ulottuvat noin 30 kilometrin matkalle, ja ne ovat peräisin 1000-luvulta. Kantoni liittyi Sveitsin valaliittoon vuonna 1803. Terasseilla viljellään pääasiassa chasselas-valkoviinirypälettä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-vaud-v-aff2b654.jpg',
@@ -15517,7 +15517,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Zug: {
       lyhyt: 'Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse frangeiksi.',
-      pitka: `Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse takaisin frangeiksi, ja seutu tunnetaan nykyään lempinimellä Crypto Valley. Pieni järvenrantakaupunki näyttää nykyään idylliseltä, mutta 5. heinäkuuta 1887 – vain reilut kymmenen vuotta isoisän matkan jälkeen – osa rantakorttelia luhistui iltaseitsemältä järveen maanvyörynä, ja onnettomuus tuhosi kymmeniä taloja ja vei yhdentoista ihmisen hengen. Kaupunki rakennettiin vyöryn jälkeen uudelleen tukevammalle perustalle, ja nykyinen rantaraitti kulkee samalla paikalla, jossa vanhat talot kerran katosivat veteen — lahtea kutsutaan yhä Katastrophenbuchtiksi, tuhon lahdeksi. Zug on Sveitsin pienimpiä ja vauraimpia kantoneita, ja sen alhaiset verot ovat houkutelleet tuhansia yrityksiä pieneen kaupunkiin järven rannalle.`,
+      pitka: `Zug on pieni kantoni Keski-Sveitsissä, ja sen pinta-ala on vain 239 neliökilometriä. Siellä asuu noin 130 000 ihmistä, ja kieli on saksa. Kantoni liittyi Sveitsin valaliittoon vuonna 1352, ja siinä on 11 kuntaa. Keskus on Zugin kaupunki Zugersee-järven rannalla. Kantoni tunnetaan alhaisista veroistaan. Noin 28 prosenttia asukkaista on ulkomaan kansalaisia. Seutua kutsutaan Crypto Valleyksi, koska siellä on paljon kryptovaluuttayrityksiä. Kantonin korkein kohta on Wildspitz, 1 579 metriä. Zugin kaupungin kaakkoispuolella kohoaa 1 039 metriä korkea Zugerberg-vuori, jolla on ulkoilualueita. Kantonissa valmistetaan myös kirschiä, joka on kirsikoista tislattua kirkasta viinaa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-maakunta2-zug-v-e06b7264.jpg',
@@ -15540,7 +15540,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zürich': {
       lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
-      pitka: `Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen, ja samalla kadulla asui samaan aikaan pakolainen Lenin – kaksi maailmaa mullistavaa ideaa syntyi parin talon päässä toisistaan. Kaupunki oli isoisän aikaan jo eurooppalaisittain edistyksellinen: Zürichin yliopisto oli vuonna 1867 myöntänyt Euroopan ensimmäisen lääketieteen tohtorin arvon naiselle, venäläiselle Nadežda Suslovalle, ja 1870-luvun alussa kaupunkiin virtasi satoja venäläisiä naisopiskelijoita, joille yliopistoura oli kotimaassa mahdoton. Nykyään Zürich on Sveitsin suurin kaupunki ja yksi maailman johtavista pankki- ja vakuutuskeskuksista, ja Limmatin rantaa reunustavat sekä keskiaikaiset kirkontornit että lasiset pankkitornit. Niederdorfin kapeat kujat, joilla Cabaret Voltaire ja Lenin kerran asuivat, ovat nykyään täynnä baareja ja ravintoloita, mutta talojen julkisivut ovat monin paikoin samat kuin sata vuotta sitten.`,
+      pitka: `Zürich on Pohjois-Sveitsin kantoni ja maan väkirikkain, ja siellä asuu noin 1,5 miljoonaa ihmistä. Kieli on saksa, ja kantoni liittyi Sveitsin valaliittoon vuonna 1351. Kantonin keskus Zürichin kaupunki on Sveitsin suurin kaupunki, jossa asuu noin 450 000 ihmistä. Se on Zürichjärven pohjoispäässä ja pankkien ja vakuutusyhtiöiden keskus. Siellä on myös ETH, Sveitsin liittovaltion teknillinen korkeakoulu. Kloten kunnassa on Sveitsin suurin lentokenttä, Zürichin lentokenttä. Winterthur on kantonin toiseksi suurin kaupunki, ja siellä asuu noin 113 000 ihmistä. Zürichissä vietetään huhtikuussa Sechseläuten-kevätjuhlaa, jonka päätteeksi poltetaan talvea esittävä lumiukkoa muistuttava Böögg-hahmo. Kantonin ja Schaffhausenin kantonin rajalla on Reinin putous.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-zurich-78236115.jpg",
