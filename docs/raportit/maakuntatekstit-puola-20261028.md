@@ -60,7 +60,7 @@ Sleesian voivodikunta on Etelä-Puolassa, ja siellä asuu noin 4,3 miljoonaa ihm
 
 ## Świętokrzyskie
 
-Świętokrzyskien voivodikunta on Etelä-Puolassa, ja siellä asuu noin 1,2 miljoonaa ihmistä. Voivodikunnan keskus Kielce on myös sen suurin kaupunki. Nimi tulee Pyhänristinvuorista, jotka ovat yksi Puolan vanhimmista vuoristoista. Niiden korkein huippu on Łysica. Alueella on Świętokrzyskin kansallispuisto, joka perustettiin vuonna 1950, sekä useita maisemapuistoja. Krzemionkin muinaisissa kaivoksissa louhittiin raidallista piikiveä tuhansia vuosia sitten Kaivosalue on Unescon maailmanperintökohde, ja maan alla on 465 metrin pituinen retkeilyreitti. Alue on noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Busko-Zdrój ja Solec-Zdrój ovat kylpyläkaupunkeja.
+Świętokrzyskien voivodikunta on Etelä-Puolassa, ja siellä asuu noin 1,2 miljoonaa ihmistä. Voivodikunnan keskus Kielce on myös sen suurin kaupunki. Nimi tulee Pyhänristinvuorista, jotka ovat yksi Puolan vanhimmista vuoristoista. Niiden korkein huippu on Łysica. Alueella on Świętokrzyskin kansallispuisto, joka perustettiin vuonna 1950, sekä useita maisemapuistoja. Krzemionkin muinaisissa kaivoksissa louhittiin raidallista piikiveä tuhansia vuosia sitten. Kaivosalue on Unescon maailmanperintökohde, ja maan alla on 465 metrin pituinen retkeilyreitti. Alue on noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Busko-Zdrój ja Solec-Zdrój ovat kylpyläkaupunkeja.
 
 ## Opole
 
