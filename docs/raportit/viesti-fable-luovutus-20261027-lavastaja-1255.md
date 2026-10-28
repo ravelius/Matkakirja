@@ -657,3 +657,18 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   V4_paattotiili_varjo-nauha poistettu, se peitti putket) → portaat → avoimet_ikkunaristikko.py (UUSI: V4_ristikko-kuva → 6 × 8 rimat +
   sisäkehys V4_ikkunakehys). juuri-v109m. Parit 223834 (havainne) / 223629 (peli) KK:lle 22.4x.
 - KK:n seuraava: 01:n muoto lukkoon → valo (VS aurinko + leivonta). Huom: ohut vaalea rako kiekkojen ja vyön välissä.
+
+## LISÄYS 50 klo 22.5x (28.10.): kuja 01 MUOTO HYVÄKSYTTY (KK) alapinnan tummennuksen jälkeen; 02/05 aloitettu — LUOVUTUS, ALOITA TÄSTÄ
+- KK 22.5x: v109 ok → viimeinen kohta räystään alapinta (vaalea rako kiekkojen ja vyön välissä) tummaksi; VALOA EI NYT (omistaja 27.10. 10.56:
+  ensin kaikki rakennukset ja elementit havainteen mukaisiksi). Pari tasaisessa valossa (46c0add3c:ssä VS:n vertailuvalo oletuksena) KK:lle →
+  omistajalle. aja_v110_pari.zsh (avoimet-v73k, juuri-v110m): avoimet_raystas_v2.py + tumma alalaatta lipan alle (V4_raystas_alapinta_varjo),
+  ruoteet × 0,2 (v110 224407 / 225106: rako näkyy YHÄ vaaleina raitoina kiekkojen välissä → ei ruoteet). Koe: tumma taustalevy kiekkojen
+  taakse (225904) peitti koko räystään (yt = lipan max y nousee nurkkien kaarteissa) → poistettu skriptistä. SEURAAVA: taustalevy riveittäin
+  (yt = paikallinen reunan y + RP·(NOSTO+1)) tai selvitä raidan lähde (lipan reunapinta / putkien avoin alapuoli); aja aja_v110_pari.zsh ja
+  TESTIKAMERA_01="4 6.5 16 45" → kun rako tumma, pari KK:lle (muoto hyväksytty, KK vie omistajalle). PARIA EI VIELÄ LÄHETETTY.
+- 02/05 (KK: friisi → keltatiilinen räystäs + hillitty nauha; sitten porttikujan sivumuurit ja lattia): aja_v111_pari.zsh (UUSI muuri_raystas.py:
+  kiekot + tippatiilet muurikatteen V4_palatsi_katto-lappeiden alareunoille, 740 kpl kujan alueella; vyökäsittely FV 0,55 FS 3 muurikatteeseen
+  ja tausta 0-3/1-3 lod0:aan; muurikate muurikate-v19/pari-v111-v16-nimella, tausta yksikerros-v95, juuri-v111m = juuri-v110m + nämä).
+  Pari 224621 EI KELPAA: pelikameran muurit paljon korkeammat kuin havainteessa → harja jää kuvan yläpuolelle; 05:n vasen yläkulma yhä kirkas
+  nauha ilman kiekkoja (lähde ei muurikate? tutki skannerilla scratchpad friisihaku.py -mallilla: ikkuna x/z kujan 05 kohdalle, kaikki
+  pelin lataamat paketit: muurikate-v16, rakennukset-v48, tausta-v57). Havainteen kamera kujille 02/05 puuttuu (TESTIKAMERA_02/_05).
