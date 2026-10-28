@@ -7884,7 +7884,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BGR: {
     Blagoevgrad: {
       lyhyt: 'Pirinin rinteellä Melnik on Bulgarian pienin kaupunki, alle 400 asukasta, ja sen takana kohoavat sateen ja tuulen veistämät hiekkapyramidit.',
-      pitka: `Blagoevgradin ydin on nuori ja kansainvälinen: Amerikan yliopisto Bulgariassa avasi ovensa kaupungissa 1991 kommunismin kaatumisen jälkeen, ensimmäisenä amerikkalaistyylisenä yliopistona koko Itä-Euroopassa, ja sen kampuksella opiskelee nykyään nuoria yli neljästäkymmenestä maasta. Pirin-vuorten juurella Banskon hiihtokeskus muuttuu joka elokuu jazzmusiikin näyttämöksi, kun kaupungin tori täyttyy muusikoista lähes kymmeneksi päiväksi. Melnikin viinikellarit on louhittu suoraan hiekkakiveen, ja paikallista Shiroka Melnishka -rypälettä on kasvatettu alueella kerrotusti jo kahdeksantuhatta vuotta – viiniä nautti aikanaan myös Winston Churchill. Vuoristo ja opiskelijakaupunki elävät maakunnassa rinnakkain: toisaalla lasketellaan ja soitetaan jazzia, toisaalla maistellaan vuosisataisia viinejä kellarien viileydessä.`,
+      pitka: `Blagoevgradin alue on Lounais-Bulgariassa Kreikan ja Pohjois-Makedonian rajalla. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 290 000 ihmistä. Alueella on Pirinin, Rilan ja Rodopien vuoristoja. Pirinin kansallispuiston korkein huippu Vihren on 2 914 metriä korkea, ja puisto on Unescon maailmanperintökohde. Banskon kaupunki on hiihtokeskus Pirinin juurella. Melnik on Bulgarian pienin kaupunki, ja siellä asuu alle 400 ihmistä. Kaupunki on tunnettu viinistään jo 1300-luvulta. Sandanskin kaupungissa on lämpimiä lähteitä, ja ilmasto on Bulgarian lämpimimpiä. Aluekeskus Blagoevgrad on opiskelukaupunki, jossa toimii vuonna 1991 perustettu Amerikkalainen yliopisto Bulgariassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-blagoevgrad-dc482d0d.jpg",
@@ -7907,7 +7907,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Burgas: {
       lyhyt: 'Burgasin pohjoispuolella Atanasovskojärvestä nostetaan yhä merisuolaa, ja syksyisin järven yli kulkee lintujen muuttoreitti Via Pontica.',
-      pitka: `Burgasin Merenrantapuisto syntyi 1910, kun arkkitehti Georgi Duhtev muutti rannan ja kaupungin välisen suoalueen puistoksi – nykyään sen satojen kasvilajien joukossa on tuontikasveja jokaiselta mantereelta, ja puiston läpi kulkeva promenadi on kaupunkilaisten suosituin iltakävelyreitti. Heinä-elokuussa lähistön Ezero-puistoon nousee toisenlainen näyttely, kun kansainvälinen hiekkaveistosfestivaali muuttaa sadat tonnit hiekkaa satuhahmoiksi ja historian suurmiehiksi. Burgas tavoittelee parhaillaan Euroopan kulttuuripääkaupungin arvonimeä vuodelle 2032, ja kesäiset festivaalit ovat osa tätä pyrkimystä. Illalla promenadilla kävelevät niin paikalliset kuin turistit, kun Mustanmeren tuulet viilentävät päivän helteen.`,
+      pitka: `Burgasin alue on Kaakkois-Bulgariassa Mustanmeren rannalla Turkin rajalla. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 380 000 ihmistä. Aluekeskus Burgas on satamakaupunki Mustanmeren rannalla. Kaupungin pohjoispuolella Atanasovskojärvestä on tuotettu merisuolaa vuodesta 1906, ja järvi on lintujen muuttoreitin varrella. Nessebarin vanhakaupunki on Unescon maailmanperintökohde, ja siellä on säilynyt noin 40 kirkkoa kokonaan tai osittain. Sozopol on rantakaupunki, jonka kreikkalaiset perustivat 600-luvulla eaa. Sunny Beach on suuri lomakeskus Nessebarin pohjoispuolella. Strandžan luonnonpuisto on Bulgarian suurimpia suojelualueita, ja se ulottuu Turkin rajalle.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-burgas-v-c732b7e8.jpg',
@@ -7930,7 +7930,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Dobrich: {
       lyhyt: 'Baltšikin rannalla on Romanian kuningatar Marian kesäpalatsi, ja sen puutarhassa kasvaa ulkona yksi Euroopan suurimmista kaktuskokoelmista.',
-      pitka: `Dobrichin maakunnan pohjoiskärjessä Kaliakran niemi työntyy punertavana kalkkikivenä Mustaanmereen, ja sen huipulla seisoo muistomerkki neljästäkymmenestä nuoresta naisesta, jotka legendan mukaan hyppäsivät mereen mieluummin kuin antautuivat 1300-luvun hyökkääjille. Nykyään niemi on tiukasti suojeltu luonnonpuisto, jossa pesii harvinaisia lintuja ja josta avautuu näkymä kilometrien päähän aavalle merelle. Sisämaassa Dobrudžan tasango levittäytyy tummana ja hedelmällisenä peltoaukeana, ja seutua kutsutaan Bulgarian viljavarastoksi: sen vehnä- ja auringonkukkasadot kuuluvat maan parhaimpiin. Rannikon dramaattinen historia ja sisämaan rauhallinen viljelymaisema tekevät Dobrichista maakunnan, jossa äärimmäisyydet kohtaavat.`,
+      pitka: `Dobritšin alue on Koillis-Bulgariassa Mustanmeren rannalla Romanian rajalla. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 150 000 ihmistä. Alue kuuluu Etelä-Dobrudžaan, joka oli Romanian hallussa vuosina 1913–1940. Aluekeskus Dobritš on maatalousseudun keskus, ja alueen tuotteita ovat vehnä ja laventeliöljy. Kaliakran niemellä jyrkät kalliot kohoavat 70 metriä meren yläpuolelle, ja siellä on luonnonsuojelualue. Balčikin kaupungissa on Romanian kuningatar Marien vuonna 1925 rakennettu palatsi nimeltä Hiljainen pesä. Šablan niemellä on majakka, joka avattiin vuonna 1856. Albenan lomakeskuksen hiekkaranta on viisi kilometriä pitkä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-dobrich-8bee9277.jpg",
@@ -7952,7 +7952,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Gabrovo: {
       lyhyt: 'Gabrovoa kutsutaan huumorin pääkaupungiksi: kaupunkilaisten kitsaudesta kerrotaan vitsejä, ja kaupungissa on oma Huumorin ja satiirin talo.',
-      pitka: `Gabrovon laidalla, joen varrella, avautuu Etaran ulkoilmamuseo, joka avattiin 1964 esittelemään seudun elämää 1700–1800-lukujen taitteessa. Sivek-joen vesi pyörittää yhä kymmentä eri laitosta peräkkäin – vesimyllyjä, huopatehdasta ja sahaa – ja käsityöläiset työskentelevät samoissa verstaissa kuin sukupolvet ennen heitä, myyden tuotteitaan suoraan kadulla kävelijöille. Museon kivetty käsityöläiskatu on kuin astuisi suoraan menneisyyteen, vaikka vain muutaman kilometrin päässä keskustassa eletään tavallista nykypäivää. Vesivoiman ja käsityön rinnalla Gabrovo on silti tunnetuin huumoristaan, ja moni matkailija yhdistää käynnin Etariin ja kaupungin pilailevaan maineeseen samalla reissulla.`,
+      pitka: `Gabrovon alue on pieni alue Bulgarian keskiosassa, ja Balkanvuoret kulkevat sen poikki. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 98 000 ihmistä. Aluekeskus Gabrovo on Jantra-joen laaksossa, ja se tunnetaan huumorin ja satiirin kansainvälisenä pääkaupunkina. Toukokuussa kaupungissa pidetään vuosittainen huumorikarnevaali. Etarin ulkoilmamuseo avattiin vuonna 1964, ja siellä käsityöläiset esittelevät noin 20 perinteistä ammattia. Božentsin kylä on suojeltu rakennuskokonaisuus vuodesta 1964. Trjavnan kaupungissa on puunveiston ja ikonimaalauksen koulu, ja Daskalovin talon vuodelta 1808 olevissa katoissa on veistettyjä puisia aurinkoja. Trjavnan aukiolla on kellotorni vuodelta 1814.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-gabrovo-178da40b.jpg",
@@ -7974,7 +7974,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Grad Sofiya': {
       lyhyt: 'Sofian keskustaa hallitsevat Aleksanteri Nevskin katedraalin kullatut kupolit, ja kirkkoon mahtuu kerralla viisituhatta ihmistä.',
-      pitka: `Sofian metroa rakennettaessa 2010-luvun alussa kaivinkoneet paljastivat kaupungin alta kokonaisen roomalaisen kaupunginosan: Serdikan aseman ympärille avautuu nykyään maan alle yhdeksäntuhannen neliömetrin alue, jossa kävelijät kulkevat vanhojen katujen, kylpylöiden ja varhaiskristillisen basilikan raunioiden keskellä matkalla junaan. Aivan kaupungin laidalla kohoaa Vitosha-vuori, jonka rinteille pääsee keskustasta vain puolessa tunnissa – talvisin siellä lasketellaan, ja hissi vie hiihtäjät ylös samana aamuna kun he ovat vielä syöneet aamiaisen kotonaan. Harva pääkaupunki tarjoaa yhtä lyhyttä matkaa antiikin raunioilta laskettelurinteelle. Sofia elää näin kahdessa kerroksessa: maan alla lepää Serdica, ja sen yllä nykyaikainen kaupunki kohoaa suoraan vuoren kupeeseen.`,
+      pitka: `Sofian kaupunki on Bulgarian pääkaupunki Länsi-Bulgariassa, ja sillä on oma aluetasoinen asemansa. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 1,3 miljoonaa ihmistä. Kaupunki on Sofian laaksossa Vitošan vuoriston juurella, ja Vitošan luonnonpuisto perustettiin vuonna 1934. Antiikin aikana kaupunki tunnettiin nimellä Serdica, ja Sofia on ollut Bulgarian pääkaupunki vuodesta 1879. Aleksanteri Nevskin katedraali rakennettiin sodassa 1877–1878 kaatuneiden venäläisten sotilaiden muistoksi. Bojanan kirkon freskot ovat vuodelta 1259, ja kirkko on Unescon maailmanperintökohde. Kaupungissa on 49 kivennäis- ja lämpölähdettä. Keskustassa ovat lähekkäin ortodoksinen kirkko, moskeija ja synagoga.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-sofiya-v-718575ad.jpg',
@@ -7997,7 +7997,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Haskovo: {
       lyhyt: 'Haskovon kukkulalla seisoo 32-metrinen Jumalanäidin patsas, joka on päässyt Guinnessin ennätysten kirjaan maailman korkeimpana laatuaan.',
-      pitka: `Haskovon seutu nousi vuoden 1878 jälkeen Bulgarian johtavaksi tupakan viljelyalueeksi, ja 1900-luvun alussa tupakka työllisti kaupungissa enemmän ihmisiä ja pääomaa kuin mikään muu elinkeino. Viimeinen suuri tupakkatehdas suljettiin vasta 2005, ja tänään entisten tupakkapeltojen tilalla kasvaa elintarvike- ja konepajateollisuutta. Kaupungin laidalla leviää Kenanan puisto, yli kaksisataakolmekymmentä hehtaaria metsää, järveä ja kävelyreittejä, jonka keskellä toimii myös pieni eläintarha. Haskovolaiset viettävät kesäiltansa mieluiten juuri Kenanassa, vesillä soutamassa tai puiston kahviloissa – aivan toisenlaisessa tunnelmassa kuin kaupungin patsailla tunnettu keskusta.`,
+      pitka: `Haskovon alue on Etelä-Bulgariassa Kreikan ja Turkin rajalla, ja Maritsa-joki virtaa sen halki. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 210 000 ihmistä. Alue tuli 1800-luvun lopulla tunnetuksi laadukkaasta tupakasta. Aluekeskus Haskovossa on 32 metriä korkea Neitsyt Marian muistomerkki vuodelta 2003. Svilengradin kaupungissa Maritsan yli kulkee Mustafa Pašan silta, joka rakennettiin vuonna 1529. Harmanlissa on ottomaanien aikainen holvisilta vuodelta 1585. Dimitrovgrad on Maritsan rannalla, ja se perustettiin vuonna 1947 uudeksi teollisuuskaupungiksi. Madžarovon pikkukaupunki on Itä-Rodopeilla Arda-joen varrella, ja siellä on korppikotkien suojelualue.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-haskovo-v-eeae489b.jpg',
@@ -8020,7 +8020,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Yambol: {
       lyhyt: 'Jambolin keskustassa seisoo yli viisisataa vuotta vanha katettu kauppahalli Bezisten, joka on nykyään museo.',
-      pitka: `Vain kymmenen kilometrin päässä Yambolista sijaitsee Kabilen muinainen kaupunki, joka oli jo ennen ajanlaskun alkua yksi Traakian tärkeimmistä keskuksista ja traakialaisten kuninkaiden residenssi – kaupungilla oli jopa oma rahapajansa. Alue julistettiin arkeologiseksi suojelualueeksi jo 1965, ja se on ainoa antiikin traakialaiskaupunki, joka on kaivettu esiin ja kunnostettu näin kokonaisvaltaisesti. Paikan päällä toimiva museo esittelee löytöjä, muun muassa harvinaisen täydellisenä säilyneen muinaisen soturin sotisovan. Yambolilaisille Kabile on tuttu retkikohde, jonne pääsee kaupungista puolessa tunnissa – siinä missä keskustassa kävellään yhä keskiaikaisen Bezistenin katujen varrella, muutaman kilometrin päässä kuljetaan kolmituhatvuotisen kuninkaankaupungin raunioilla.`,
+      pitka: `Jambolin alue on Kaakkois-Bulgariassa Turkin rajalla. Vuoden 2021 väestönlaskennan mukaan siellä asuu noin 110 000 ihmistä. Maisema on enimmäkseen kumpuilevaa tasankoa Tundža-joen laaksossa, ja yli kolme neljännestä maasta on maatalouskäytössä. Aluekeskus Jambol sijaitsee joen molemmin puolin. Elhovon kaupunki on Tundžan rannalla alueen eteläosassa. Sen nimi juontuu nimestä Diospolis, "Zeuksen kaupunki", jonka Rooman keisari Diokletianus antoi kaupungille vuonna 293. Elhovon lähellä on traakialaisten muinaiskaupunki Kabile, jossa on roomalaisen linnakkeen ja kylpylän jäänteitä. Jambolin ottomaanien aikainen katettu kauppahalli, Bezisten, avattiin museona vuonna 2015.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-yambol-9780f1a0.jpg",
@@ -8043,7 +8043,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kardzhali: {
       lyhyt: 'Kardžalin lähellä kalliokukkulalla on Perperikon, Balkanin suurin megaliittikohde, jonka vanhimmat jäljet ovat noin 7 000 vuoden takaa.',
-      pitka: `Kardžalin maakunta on Bulgarian ainoa maakuntakeskuksen kunta, jossa enemmistö asukkaista on muslimeja – suurin osa heistä etnisiä turkkilaisia tai pomakkeja, bulgariankielisiä muslimeja – ja moskeijat, kirkot ja torit elävät keskustassa rinnakkain. Arda-joen rotkossa, tunnin ajomatkan päässä kaupungista, kaartuu 1500-luvulla sulttaani Selim I:n käskystä rakennettu kolmikaarinen kivisilta, jota kutsutaan Paholaisen sillaksi – nimi juontuu tarinoista, joiden mukaan mikään aiempi silta ei pysynyt paikallaan samassa kohdassa. Kaupungin lähelle padotun Arda-joen tekojärvi on Bulgarian toiseksi suurin tilavuudeltaan ja tuottaa sähköä koko seudulle. Vuoristo, silta ja moniuskontoinen kaupunki tekevät Kardžalista maakunnan, jossa Rodopien historia ja nykypäivä kulkevat käsi kädessä.`,
+      pitka: `Kardžalin alue on vuoristoinen alue Etelä-Bulgariassa Kreikan rajalla, ja siellä asuu noin 140 000 ihmistä (väestönlaskenta 2021). Alue sijaitsee Rodopivuorten itäosassa. Aluekeskus Kardžali on Arda-joen rannalla, ja aivan kaupungin vieressä on Kardžalin pato, jonka betonimuuri on 103,5 metriä korkea. Kaupungin nimen kerrotaan tulevan 1700-luvun rosvopäällikkö Kırca Alista. Noin 15 kilometriä Kardžalista koilliseen on Perperikon, traakialaisten muinainen kaupunki kallioisella kukkulalla. Keskiajalla paikka toimi linnoituksena. Ardinon kaupungin nähtävyyksiin kuuluu Paholaisen silta, ja Krumovgradin kaupunki on nimetty keskiaikaisen hallitsijan Krumin mukaan. Alueella asuu paljon turkinkielisiä: vuoden 2021 väestönlaskennassa noin kaksi kolmasosaa vastanneista ilmoitti äidinkielekseen turkin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-kardzhali-25035f2f.jpg",
@@ -8066,7 +8066,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kyustendil: {
       lyhyt: 'Rilan juurella Sapareva Banjan keskustassa suihkuaa geysir, jonka mineraalivesi on kuumimmillaan 103-asteista.',
-      pitka: `Kyustendilin seutua kutsutaan Bulgarian hedelmätarhaksi, ja kesäkuun lopulla kaupunki juhlii kirsikkasatoa omalla festivaalillaan – ensimmäinen kansallinen hedelmänviljelynäyttely järjestettiin täällä jo 1896, ja perinne jatkuu yhä. Roomalaisajalla kaupunki tunnettiin nimellä Pautalia, ja sen kylpylät olivat niin kuuluisia, että sinne matkasivat hoitoa hakemaan jopa keisarit Traianus ja Septimius Severus. Kaupungin roomalaiskylpylöiden rauniot ovat yhä nähtävissä keskustassa, samalla kun mineraalilähteet pulppuavat edelleen samoista kallioista kuin kaksituhatta vuotta sitten. Hedelmätarhat ja lämpimät lähteet tekevät Kyustendilistä maakunnan, jossa parantava vesi ja makea kirsikka kulkevat käsi kädessä.`,
+      pitka: `Kjustendilin alue on vuoristoinen alue Länsi-Bulgariassa Serbian ja Pohjois-Makedonian rajalla, ja siellä asuu noin 110 000 ihmistä (väestönlaskenta 2021). Aluekeskus Kjustendil on noin 90 kilometriä Sofiasta lounaaseen, ja se tunnetaan lämpimistä mineraalilähteistään. Kaupungin paikalla oli roomalaisaikana Pautalia-niminen kaupunki. Sapareva Banjan kaupungin keskustassa on vuonna 1957 porauksessa syntynyt geysir, ja kaupungin mineraalivesi on jopa 103 celsiusasteen lämpöistä. Stobin kylän lähellä on kartiomaisia kivipylväitä, jotka ovat jopa 12 metriä korkeita. Rilan vuoristossa on 900-luvulla perustettu Rilan luostari, joka on Unescon maailmanperintökohde. Alueen eteläosassa on Osogovon vuoristo, jonka korkein huippu Ruen on 2 251 metriä korkea ja sijaitsee Pohjois-Makedonian rajalla.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-kyustendil-v-1f60f31b.jpg',
@@ -8089,7 +8089,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Lovech: {
       lyhyt: 'Devetaškin luolan suu on 35 metriä leveä, ja sen holveissa elää lähes 30 000 lepakkoa – luolassa on kuvattu myös Hollywood-elokuva.',
-      pitka: `Lovechin kaupungin tunnusmerkki on katettu silta, jonka itseoppinut rakennusmestari Kolyu Ficheto pystytti Osamin joen yli 1874–1876, kun edellinen silta oli tuhoutunut tulvassa. Alkuperäisellä sillalla oli 64 puukojua, joissa kauppiaat ja käsityöläiset myivät tavaraansa, ja silta selvisi ehjänä sekä sotavuosista että vuoden 1897 suurtulvasta – vasta tulipalo tuhosi sen lopulta 1925. Nykyinen silta on jälleenrakennettu mahdollisimman uskollisena alkuperäiselle, ja sen kaupat palvelevat yhä lovechilaisia ja matkailijoita samaan tapaan kuin sata viisikymmentä vuotta sitten. Kaupunkia kutsutaankin yhä ”katetun sillan kaupungiksi”, ja silta on Lovechin tunnetuin maamerkki aivan yhtä lailla kuin lähistön lepakkoluola.`,
+      pitka: `Lovetšin alue sijaitsee Pohjois-Bulgarian keskiosassa Balkanvuorten pohjoisjuurella, ja siellä asuu noin 120 000 ihmistä (väestönlaskenta 2021). Aluekeskus Lovetš on Osam-joen molemmin puolin. Joen yli kulkee katettu silta, jonka varrella on kauppoja. Nykyinen silta on vuosina 1981–1982 rakennettu jäljennös vuonna 1874 valmistuneesta puusillasta. Devetaška-luola Lovetšin lähellä on ollut ihmisten asuttama noin 70 000 vuoden ajan, ja nykyään siellä elää lähes 30 000 lepakkoa. Prohodna-luolan katossa on kaksi silmiä muistuttavaa aukkoa, ja alueella on osa Keski-Balkanin kansallispuistoa. Trojanin luostari perustettiin viimeistään 1500-luvun lopulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-lovech-55b75026.jpg",
@@ -8112,7 +8112,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Montana: {
       lyhyt: 'Tšiprovtsissa kudotaan yhä käsin kelim-mattoja, ja kylän mattoperinne otettiin Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
-      pitka: `Montanan kaupunki on vaihtanut nimeään neljä kertaa vajaassa sadassa vuodessa: se oli ensin Golyama Kutlovitsa, sitten 1891 Ferdinand ruhtinaan mukaan, 1945 kommunistijohtaja Hristo Mihaylovin mukaan Mihaylovgrad, ja lopulta 1993 se otti nykyisen nimensä roomalaisajan linnoituksesta Castra ad Montanesium. Kaupungin kupeessa lepää Ogosta-tekojärvi, Bulgarian toiseksi suurin, jonka pato valmistui parikymmentä vuotta kestäneen rakennustyön jälkeen 1986. Kun järven pinta laskee kuivina kesinä, veden alle jääneiden vanhojen kylien rauniot nousevat hetkeksi jälleen näkyviin rannoille asti. Nimi on vaihtunut moneen kertaan, mutta järvi ja sen alle hukkuneet kylät muistuttavat, että osa Montanan menneisyydestä on kirjaimellisesti veden alla.`,
+      pitka: `Montanan alue on Luoteis-Bulgariassa, ja se rajoittuu Serbiaan ja Romaniaan ja ulottuu Balkanvuorilta Tonavalle. Siellä asuu noin 120 000 ihmistä (väestönlaskenta 2021). Aluekeskus Montana on Ogosta-joen rannalla, ja sen paikalla oli roomalaisaikana sotilasleiri. Kaupungin lounaispuolella on Ogosta-tekojärvi, jonka pato valmistui vuonna 1986 kahdenkymmenen vuoden rakennustöiden jälkeen. Tšiprovtsin pikkukaupungissa kudotaan käsin kilim-mattoja eli sileäksi kudottuja mattoja, ja tämä käsityö on Unescon aineettoman kulttuuriperinnön luettelossa vuodelta 2014. Varšets on kylpyläkaupunki, jossa on kivennäisvesilähteitä, ja Lom on satamakaupunki Tonavan rannalla. Berkovitsan kaupunki on hiihtokeskus Balkanvuorten rinteellä. Montana oli vuosina 1945–1993 nimeltään Mihailovgrad.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-montana-v-35a0d961.jpg',
@@ -8135,7 +8135,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pazardzhik: {
       lyhyt: 'Rodopien Velingradia kutsutaan Balkanin kylpyläpääkaupungiksi, sillä kaupungissa ja sen ympärillä on yli 90 mineraalilähdettä.',
-      pitka: `Pazardžikin maakuntaan kuuluva Batakin kaupunki kantaa yhä yhtä Bulgarian raskaimmista muistoista: huhtikuun kansannousun kukistuessa 1876 osmanien apujoukot surmasivat kaupungissa tuhansia asukkaita, monet heistä kirkkoon paenneina. Kirkko Sveta Nedelja seisoo yhä samalla paikalla, ja siitä on tehty muistomerkki uhreille – paikka on edelleen tärkeä osa bulgarialaisten kansallista muistia ja suosittu kouluretkien kohde. Vuoret ja historia eivät kuitenkaan hallitse koko maakuntaa: Rodopien pohjoisrinteillä sijaitsevaa Velingradia sanotaan Balkanin kylpyläpääkaupungiksi yli 90 mineraalilähteensä ansiosta, ja sinne matkataan nykyään rentoutumaan, ei muistelemaan. Pazardžik yhdistääkin näin synkän historian ja rennon nykyisyyden saman maakunnan sisällä.`,
+      pitka: `Pazardžikin alue on Etelä-Bulgariassa, ja siellä asuu noin 230 000 ihmistä (väestönlaskenta 2021). Pohjoisessa on Sredna Goran vuorijono, keskellä Ylä-Traakian tasangon läntisin osa ja etelässä Rodopivuoret. Aluekeskus Pazardžik on Maritsa-joen varrella, ja tasangolla viljellään muun muassa omenoita, luumuja, mansikoita ja riisiä. Panagjurišten kaupungin lähellä löydettiin vuonna 1949 traakialainen kultaesineistö, jossa on yhdeksän astiaa. Ne on ajoitettu noin vuoteen 300 eaa. ja painavat yhteensä noin kuusi kiloa. Rodopeilla on Batakin tekojärvi, ja Velingrad on suosittu kylpyläkaupunki. Dorkovon kylän lähellä on keskiaikaisen Tsepinan linnoituksen raunioita. Metsä peittää yli puolet alueen pinta-alasta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pazardzhik-0e9b4b20.jpg",
@@ -8158,7 +8158,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pernik: {
       lyhyt: 'Pernik kasvoi 1900-luvulla hiilikaivosten varaan, ja kaupungissa voi yhä laskeutua maanalaiseen kaivosmuseoon.',
-      pitka: `Tammikuun viimeisenä viikonloppuna Pernikin kadut täyttyvät karvaisista, kellokoristeisista hahmoista, kun Surva-festivaali kokoaa yhteen kymmeniä naamiaisryhmiä eri puolilta Bulgariaa ja ulkomailta. Festivaalia on järjestetty vuodesta 1966, ja sen kukeri-perinteen uskotaan karkottavan pahat henget ja tuovan hyvän sadon – naamiot ja suuret kellot ovat perua vuosisataisista maatalousriiteistä. Tapahtuma kokoaa nykyään tuhansia esiintyjiä ja katsojia, ja Pernikiä kutsutaankin naamiaisperinteiden eurooppalaiseksi pääkaupungiksi. Hiilikaivosten aikaan kasvanut teollisuuskaupunki muuttuu näin joka tammikuu hetkeksi meluisaksi, kellonkalskeen täyttämäksi juhlapaikaksi.`,
+      pitka: `Pernikin alue on pieni alue Länsi-Bulgariassa Sofian lounaispuolella Serbian rajalla, ja siellä asuu noin 110 000 ihmistä (väestönlaskenta 2021). Aluekeskus Pernik on Struma-joen varrella laaksossa, jota ympäröivät Vitoša-, Viskjar- ja Golo Bardo -vuoret. Kaupunki kasvoi 1900-luvulla hiilikaivosten ja teollisuuden keskukseksi, ja siellä on Stomana-niminen terästehdas. Pernikissä pidetään joka tammikuu Surva-festivaali. Siinä tuhannet naamioituneet esiintyjät, joita kutsutaan kukereiksi, kantavat vyöllään raskaita kelloja ja karkottavat pahoja henkiä. Pernikin kaupungin nimi oli vuosina 1949–1962 Dimitrovo, ja 1000-luvulla siellä oli linnoitus, jota hallitsi aatelismies Krakra. Zemenin kaupungin lähellä on 1000-luvulla perustettu Zemenin luostari, jossa on 1300-luvun muotokuvia luostarin lahjoittajista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pernik-ee2b55ca.jpg",
@@ -8181,7 +8181,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pleven: {
       lyhyt: 'Plevenin panoraamamuseossa 115 metriä pitkä maalaus kiertää katsojan ympäri ja kuvaa kaupungin piiritystä vuodelta 1877.',
-      pitka: `Pleveniä ympäröi etelässä Kaylakan puisto, kalkkikivinen laakso, jonka jyrkät seinämät paljastavat miljoonien vuosien takaisia meren pohjaeläinten fossiileja suoraan kallioon painuneina. Laakson pohjalla lymyilevät roomalaisen Storgosia-linnoituksen rauniot, ja puiston keskellä kasvaa harvinainen Himalajan mäntyjen ja Libanoninsetrien lehto, jotka istutettiin sinne vuosikymmeniä sitten. Puisto perustettiin nykymuotoonsa 1946 entisen metsästysalueen paikalle, ja siitä on sittemmin tullut plevenilaisten suosituin retkikohde uimaltaan, veneiltään ja kahviloiltaan. Kaupungin raskas historia ja Kaylakan rauhallinen luonto elävät näin rinnakkain saman maakunnan sisällä.`,
+      pitka: `Plevenin alue on Pohjois-Bulgariassa Tonavan tasangolla, ja siellä asuu noin 230 000 ihmistä (väestönlaskenta 2021). Alueen halki virtaavat Iskar, Vit ja Osam, ja pohjoisessa alue rajoittuu Tonavaan ja Romaniaan. Aluekeskus Pleven, aiemmin Plevna, on noin 170 kilometrin päässä Sofiasta koilliseen. Kaupunkia ympäröivät maatalousalueet ja matalat kalkkikivikukkulat. Kaupunki tunnetaan Venäjän–Turkin sodan Plevnan piirityksestä vuonna 1877, ja piirityksestä kertova panoraama avattiin vuonna 1977. Plevenin Kailakan puistossa on roomalaisen Storgosian linnoituksen raunioita. Nikopolin kaupunki on Tonavan rannalla jyrkkien liitukallioiden juurella, ja sen kukkulalla on linnoitus.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pleven-66b2ff79.jpg",
@@ -8203,7 +8203,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Plovdiv: {
       lyhyt: 'Plovdiv oli Euroopan kulttuuripääkaupunki 2019, ja sen vanhoista Kapanan käsityöläiskujista on tullut kahviloiden ja gallerioiden kortteli.',
-      pitka: `Plovdivia pidetään usein Euroopan vanhimpana yhtäjaksoisesti asuttuna kaupunkina – ensimmäiset asutusjäljet ovat kuudennelta vuosituhannelta ennen ajanlaskun alkua, ja kaupungin kukkuloita kutsutaan yhä nimellä Tepeta. Keskustan alla lepäävä, keisari Trajanuksen aikainen roomalainen teatteri kaivettiin esiin vasta 1970-luvulla, ja sen penkkirivit täyttyvät nykyään kesäisin konserttiyleisöstä aivan kuten pari tuhatta vuotta sitten. Kerrostuneisuus näkyy kaduilla joka askeleella: traakialaisten, roomalaisten, bysanttilaisten ja osmanien jäljet limittyvät nykyaikaisen kahvilakaupungin alla. Kapanan käsityöläiskortteli ja vuoden 2019 kulttuuripääkaupunkititteli ovat tuoneet kaupungille uutta mainetta, mutta Plovdiv on ollut merkittävä risteysasema jo ammoisista ajoista.`,
+      pitka: `Plovdivin alue on Etelä-Bulgariassa, ja siellä asuu noin 630 000 ihmistä (väestönlaskenta 2021). Pohjoisosa on Maritsa-joen tasankoa, jolla viljellään hedelmiä, viiniköynnöksiä ja riisiä. Eteläosassa kohoavat Rodopien vuoret. Aluekeskus Plovdiv on Bulgarian toiseksi suurin kaupunki. Se on rakennettu kukkuloille, ja se oli Euroopan kulttuuripääkaupunki vuonna 2019. Makedonian kuningas Filippos II valloitti kaupungin 300-luvulla eaa. ja antoi sille nimen Filippopolis. Asenovgradin lähellä on Bačkovon luostari, jonka georgialainen sotapäällikkö Gregorios Pakourianos perusti vuonna 1083. Hisarjan kylpyläkaupungissa on roomalaisia kaupunginmuureja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-plovdiv-3008538e.jpg",
@@ -8226,7 +8226,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Razgrad: {
       lyhyt: 'Razgradin arkeologisessa puistossa on Abrituksen raunioita; lähistöllä gootit löivät Rooman armeijan vuonna 251, ja keisari Decius kaatui.',
-      pitka: `Razgradin ympärillä leviää Ludogorien tasankoa, jonka viljapellot ja tammimetsät ovat muokanneet maakunnan elinkeinoa vuosisatojen ajan. Isperihin lähellä sijaitseva Sboryanovon luonnonsuojelualue kätkee traakialaisen Sveshtarin holvihaudan, jonka ainutlaatuiset puolinaiset, puolikasviaiset naishahmot toivat sille Unescon maailmanperintöaseman jo 1985. Samalla alueella seisoo Demir Baba Teke, 1500-luvulla rakennettu alevimuslimien pyhäkkö kalliolähteen äärellä – paikka, jossa on palvottu pyhänä jo traakialaisajoista lähtien ja jossa käy pyhiinvaeltajia yhä nykyään. Razgrad itse on rauhallinen maakuntakeskus, jonka juuret ulottuvat aina roomalaisajan Abritukseen asti.`,
+      pitka: `Razgradin alue on Koillis-Bulgariassa Ludogorien seudulla, ja siellä asuu noin 100 000 ihmistä (väestönlaskenta 2021). Ludogorie on Tonavan tasangon osa. Ludogorien vanha turkinkielinen nimi on Deliorman, joka tarkoittaa villiä metsää. Entiset metsät on raivattu lähes kokonaan pelloiksi. Aluekeskus Razgrad on rakennettu antiikin roomalaisen Abrituksen kaupungin raunioille. Abrituksen luona gootit löivät roomalaisarmeijan vuonna 251, ja keisari Decius kuoli taistelussa. Razgradissa on myös Ibrahim Pašan moskeija vuodelta 1530. Sveštarin kylän lähellä on traakialaishauta 300-luvulta eaa. Hauta on Unescon maailmanperintökohde, ja sen kammion seinillä on kymmenen naishahmoa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-razgrad-d7c21a4c.jpg",
@@ -8248,7 +8248,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ruse: {
       lyhyt: 'Rusesta kulkee Tonavan yli Romaniaan yli kaksikilometrinen Ystävyyden silta, joka oli vuosikymmeniä maiden ainoa yhteinen silta.',
-      pitka: `Rusea kutsutaan usein pieneksi Wieniksi, sillä sen bulevardeja reunustavat 1800-luvun lopun uusklassiset ja art nouveau -rakennukset, joita suunnittelivat osin samat arkkitehdit kuin Wienissä. Kaupunki oli tuolloin Bulgarian eurooppalaisin ja vauras Tonavan satamakaupunki, ja tämä perintö näkyy yhä keskustan suihkulähteissä ja oopperatalossa. Rusessa syntyi 1905 kirjailija Elias Canetti, joka sai myöhemmin Nobelin kirjallisuuspalkinnon 1981 ja kuvasi lapsuutensa monikielistä, monikulttuurista Rusea muistelmissaan. Nykyään kaupungin keskustan kävelykadut ja kahvilat tekevät Rusesta yhden Bulgarian tyylikkäimmistä kaupungeista Tonavan rannalla.`,
+      pitka: `Rusen alue on Pohjois-Bulgariassa Tonavan rannalla, ja siellä asuu noin 190 000 ihmistä (väestönlaskenta 2021). Joen toisella puolella on Romania. Aluekeskus Ruse on Bulgarian suurin Tonavan satamakaupunki. Sen paikalla oli roomalainen Sexaginta Prista -linnoitus. Kaupunkia kutsutaan Pikku Wieniksi, koska siellä on paljon 1800- ja 1900-luvun uusbarokkirakennuksia. Nobel-kirjailija Elias Canetti syntyi Rusessa. Rusea ja Romanian Giurgiua yhdistää ystävyyssilta, joka rakennettiin vuonna 1954. Ivanovon kylän lähellä Rusenski Lom -joen kanjonissa on keskiaikaisia kallioon hakattuja kirkkoja. Ne ovat Unescon maailmanperintökohde, ja niiden seinämaalauksia on 1200- ja 1300-luvuilta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-ruse-v-e463ddda.jpg',
@@ -8271,7 +8271,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Silistra: {
       lyhyt: 'Tonavan rannan Srebarnajärvellä pesivät kiharapelikaanit, ja järven luonnonsuojelualue kuuluu Unescon maailmanperintöön.',
-      pitka: `Silistran alla lepää antiikin Durostorum, roomalaisen XI legioonan tukikohta, joka kasvoi vuosisatojen kuluessa Alatonavan tärkeimmäksi varuskuntakaupungiksi. Kaupungin laidalta löydettiin 1942 sattumalta 300-luvun puolivälissä rakennettu holvihauta, jonka jokainen seinä ja katto on maalattu metsästys- ja perheaiheisilla freskoilla – ainoa täysin maalattu roomalaishauta Bulgariassa. Hauta osoittautui yllättäen tyhjäksi: sen tilannut mies ei koskaan päätynyt lepäämään siihen. Nykyään Silistra on rauhallinen Tonavan rajakaupunki, jonka lähistöllä Srebarnan pelikaanijärvi vetää lintubongareita ympäri Eurooppaa.`,
+      pitka: `Silistran alue on Koillis-Bulgariassa Tonavan etelärannalla Romanian rajalla, ja siellä asuu noin 98 000 ihmistä (väestönlaskenta 2021). Alue kuuluu Etelä-Dobrudžaan. Noin puolet maasta on peltoa, jolla kasvaa viljaa, vihanneksia ja aprikooseja. Aluekeskus Silistra on Tonavan satamakaupunki. Roomalaiset rakensivat sinne linnoituksen vuonna 29 jaa., ja kaupungissa on ottomaanien Medjidi Tabia -linnake. Srebarnan järvi ja sen ympäristö ovat luonnonsuojelualue ja Unescon maailmanperintökohde. Siellä pesii 179 lintulajia, ja lintujen muuttoreitti kulkee sen kautta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-silistra-v-b6451415.jpg',
@@ -8294,7 +8294,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sliven: {
       lyhyt: 'Slivenin yllä kohoavat Siniset kivet, luonnonpuisto, jossa kasvaa yli tuhat kasvilajia – kaupunki tunnetaan myös puuskaisesta bora-tuulestaan.',
-      pitka: `Sliveniä kutsutaan sadan vojvodan kaupungiksi, sillä sen yllä kohoavat jyrkät kalliot tarjosivat 1800-luvulla piilopaikan osmanivaltaa vastustaneille kapinallisjohtajille. Kuuluisin heistä, Hadži Dimitar, syntyi kaupungissa 1840 ja kaatui taisteluissa 1868 – hänen lapsuudenkotinsa toimii nykyään museona keskustassa. Sliven oli myös teollinen edelläkävijä: Dobri Zhelyazkov perusti sinne 1834 koko Osmanivaltakunnan ensimmäisen tehtaan, villakangastehtaan, jonka historiaa esittelee nykyään kaupungin tekstiiliteollisuusmuseo. Karandilan näköalapaikalle nousee yhä sama polku, jota vojvodat käyttivät piiloutuessaan Siniset kivet -luonnonpuiston kallioihin, ja se on nykyään suosittu retkikohde.`,
+      pitka: `Slivenin alue on Kaakkois-Bulgariassa, ja siellä asuu noin 170 000 ihmistä (väestönlaskenta 2021). Aluekeskus Sliven sijaitsee Balkanvuorten juurella Sinite Kamani -kalliomassiivin alla. Kalliomassiivin nimi tarkoittaa Sinisiä kiviä, ja sen alueella on luonnonpuisto, joka kattaa noin 11 000 hehtaaria. Slivenia kutsutaan sadan vojvodan kaupungiksi, koska 1800-luvulla ottomaanien vastaiset kapinalliset johtajat toimivat sen ympäristössä. Vojvoda tarkoittaa johtajaa. Arabialainen maantieteilijä al-Idrisi mainitsi Slivenin suurena kaupunkina jo vuonna 1153. Kaupunkiin perustettiin vuonna 1834 ensimmäinen tehdas Bulgarian alueella. Alueen muita kaupunkeja ovat Nova Zagora ja Kotel.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-sliven-v2-c16b3b0e.jpg',
@@ -8317,7 +8317,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Smolyan: {
       lyhyt: 'Trigradin rotkossa joki syöksyy vesiputouksena Paholaisen kurkun luolaan, ja veden mukana heitetyt puut ovat kadonneet sinne jäljettömiin.',
-      pitka: `Smolyan on Bulgarian korkeimmalla sijaitseva kaupunki, ja sen yllä kohoavan Snežanka-huipun laelle vie nykyään tuolihissi, josta avautuu näkymä yli koko Rodopien vuoriston. Kaupungin liepeillä kimaltaa seitsemän Smoljanin järveä, jäljellä parikymmenestä alkuperäisestä lammesta – paikalliset kutsuvat niitä Rodopien smaragdisilmiksi. Lähellä sijaitseva Pamporovo on Bulgarian eteläisin hiihtokeskus, ja se houkuttelee talvisin laskettelijoita ympäri Balkania. Nykyään alue elää matkailusta, karjanhoidosta ja rodopilaisesta musiikkiperinteestä, jonka juuret ulottuvat kauas menneisyyteen.`,
+      pitka: `Smoljanin alue on vuoristoalue Etelä-Bulgariassa Rodopien vuoristossa Kreikan rajalla, ja siellä asuu noin 96 000 ihmistä (väestönlaskenta 2021). Alueen elinkeinoja ovat matkailu, metsätalous, karjanhoito ja kaivostoiminta. Alueella tuotetaan noin 30 prosenttia Bulgarian perunoista. Aluekeskus Smoljan on noin tuhannen metrin korkeudessa Golyam Perelik -huipun juurella. Huippu on 2 191 metriä korkea. Lähellä on Pamporovon hiihtokeskus, joka sijaitsee noin 1 600 metrin korkeudessa. Länsi-Rodopeilla Trigradin rotkosta pääsee Djavolsko Garlo -luolaan, jonka nimi tarkoittaa Pirun kurkkua. Luolaan syöksyy vesiputous, ja rotkon joen vesi katoaa maan alle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-smolyan-0cccead9.jpg",
@@ -8340,7 +8340,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sofia: {
       lyhyt: 'Koprivštitsan museokaupungissa järjestetään noin viiden vuoden välein Bulgarian kansallinen kansanperinnefestivaali, jo vuodesta 1965.',
-      pitka: `Samokovin kaupunki oli 1700–1800-luvuilla yksi Bulgarian tärkeimmistä ikonimaalauskouluista, ja sen kasvatteja, kuten Zahari Zografia, pidetään yhä maan modernin taiteen edelläkävijöinä. Aivan Samokovin kupeessa sijaitsee Borovets, Bulgarian vanhin hiihtokeskus – ruhtinas Ferdinand rakennutti sinne kesäasuntonsa ja metsästysmajansa 1896, ja aatelisto seurasi perässä omilla huviloillaan. Pirdopin ja Zlatitsan välissä toimii Kaakkois-Euroopan suurin kuparinsulatto, joka nykyään vie katodikuparia ympäri maailmaa. Maakunta yhdistää näin vanhaa käsityöperinnettä, vuoristomatkailua ja raskasta teollisuutta aivan pääkaupungin porteilla.`,
+      pitka: `Sofian alue on vuoristoalue Länsi-Bulgariassa, ja siellä asuu noin 230 000 ihmistä (väestönlaskenta 2021). Se ympäröi pääkaupunkia Sofiaa, joka ei kuulu alueeseen mutta on sen hallinnollinen keskus. Etelässä Rilan vuoristossa kohoaa Musala, joka on 2 925 metriä korkea ja Balkanin niemimaan korkein huippu. Borovets on Rilan rinteillä Samokovin kaupungin lähellä, ja sitä kutsutaan Bulgarian vanhimmaksi talvilomakeskukseksi. Čelopečin kaivoksessa, joka avattiin vuonna 1954, louhitaan kuparia ja kultaa. Pirdopissa on vuonna 1958 aloittanut kuparisulatto. Iskar-joki saa alkunsa Rilalta ja virtaa noin 70 kilometrin pituisen rotkon läpi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-sofia-e8ed6521.jpg",
@@ -8363,7 +8363,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Stara Zagora': {
       lyhyt: 'Kazanlakin traakialaisen hautakammion seinissä on yli 2 000 vuotta vanhoja maalauksia, ja hauta on Unescon maailmanperintöä.',
-      pitka: `Stara Zagoran keskustassa seisoo Neoliittisten asumusten museo, jonka sisällä on Euroopan parhaiten säilyneitä kivikautisia taloja – palanut asumus kaivettiin esiin 1969, ja se on lähes 8 000 vuotta vanha yli 1800 löydöksineen. Kaupunkia kutsutaan myös lehmusten kaupungiksi sen vehreiden puistokatujen vuoksi. Naapurissa Kazanlakin laakso tunnetaan ruusulaaksona: joka kesäkuun ensimmäisenä viikonloppuna siellä juhlitaan Ruusujuhlaa, kun laakson ruusupellot ovat täydessä kukassa ja niistä tislataan ruusuöljyä hajuvesiteollisuuden tarpeisiin. Stara Zagora itse on nykyään Bulgarian viidenneksi suurin kaupunki ja tärkeä liikenteen ja teollisuuden keskus.`,
+      pitka: `Stara Zagoran alue on Keski-Bulgariassa, ja siellä asuu noin 300 000 ihmistä (väestönlaskenta 2021). Aluekeskus Stara Zagora on kaupunki, jonka historia ulottuu antiikkiin Kaupungin Neoliittisten asumusten museossa on vuonna 1968 löydettyjä kivikautisia taloja 6. vuosituhannelta eaa. Kazanlakin kaupunki on Bulgarian ruusuöljyn tuotannon keskus, ja siellä vietetään ruusujuhlaa kesäkuun ensimmäisellä viikolla. Kazanlakin lähellä on traakialainen kupolihauta 300-luvulta eaa., ja sen seinämaalaukset kuuluvat Unescon maailmanperintöön vuodesta 1979. Stara Zagorassa toimii myös Zagorka-olutpanimo. Alueen itäosassa on Maritsa Iztok -energiakompleksi, johon kuuluu voimalaitoksia ja hiilen louhintaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-stara-zagora-617f5d02.jpg",
@@ -8386,7 +8386,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Shumen: {
       lyhyt: 'Šumenin ylängöllä seisoo 1981 rakennettu jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi, ja kaupungin panimo on maan vanhin.',
-      pitka: `Šumenissa seisoo Tombul-moskeija, Bulgarian suurin ja yksi Balkanin suurimmista, valmistunut 1757 – sen 25 metriä korkea kupoli ja koraanijakeilla koristellut seinät tekevät siitä yhä toimivan rukoushuoneen ja suositun käyntikohteen. Kaupungin liepeillä sijaitsevat Pliskan ja Veliki Preslavin rauniot, ensimmäisen ja toisen Bulgarian valtakunnan pääkaupungit, joiden alueella kristinusko julistettiin valtionuskonnoksi 800-luvulla. Šumenin ylängöltä kohoava jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi tuijottaa suoraan noiden muinaisten pääkaupunkien suuntaan. Nykyään kaupunki tunnetaan myös monikulttuurisesta historiastaan, joka näkyy yhä sen vanhoissa kortteleissa moskeijoiden ja kirkkojen rinnakkaiselossa.`,
+      pitka: `Šumenin alue on Koillis-Bulgariassa, ja siellä asuu noin 150 000 ihmistä (väestönlaskenta 2021). Aluekeskus Šumenin yläpuolella ylängöllä on vuonna 1981 valmistunut Bulgarian 1300-vuotismuistomerkki. Sinne johtaa 1 300 porrasta, yksi jokaista vuotta kohti. Šumenin panimo perustettiin vuonna 1882. Madaran kylän lähellä kalliossa on Madaran ratsastaja, varhaiskeskiaikainen kallioreliefi 700-luvun alusta, ja se on Unescon maailmanperintökohde. Ratsastaja on noin 23 metrin korkeudessa lähes pystysuoralla kalliolla. Pliska oli Bulgarian ensimmäisen valtakunnan pääkaupunki vuosina 681–893. Sen jälkeen pääkaupunkina oli Veliki Preslav.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-shumen-aa0cc92e.jpg",
@@ -8409,7 +8409,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Targovishte: {
       lyhyt: 'Targovištessa toimii yksi Euroopan suurimmista lasitehtaista, joka työllistää noin 1 500 ihmistä.',
-      pitka: `Targovišten kaupungin edeltäjä oli Misionis, keisari Justinianus I:n 500-luvulla perustama bysanttilainen linnoitus, joka vartioi kauppareittiä Mustanmeren Odessoksesta, nykyisestä Varnasta, toisen Bulgarian valtakunnan pääkaupunkiin Tarnovoon. Arabialainen tutkimusmatkailija al-Idrisi mainitsi kaupungin kirjoituksissaan jo 1153 tärkeänä kauppapaikkana. Linnoitus tuhoutui osmanien valloituksessa 1300-luvun lopulla, mutta sen rauniot Parkan-alueella ovat nykyään avoinna kävijöille aivan kaupungin liepeillä. Nykyään Targovište elää lasi- ja muusta teollisuudesta, mutta kaupungin nimi, joka tarkoittaa kauppapaikkaa, muistuttaa yhä sen alkuperäisestä roolista kauppareittien solmukohtana.`,
+      pitka: `Targovištan alue on Koillis-Bulgariassa, ja siellä asuu noin 98 000 ihmistä (väestönlaskenta 2021). Aluekeskus Targovište on Vrana-joen molemmin puolin Preslavin vuoriston juurella. Nimi tulee slaavilaisesta sanasta, joka tarkoittaa toria tai markkinapaikkaa. Ottomaanien aikana kaupunki tunnettiin nimellä Eski Cuma, ja 1700- ja 1800-luvuilla se oli eläin- ja käsityömarkkinoistaan tunnettu paikka. Kaupungin lähellä on roomalaisen Missionisin kaupungin raunioita. Nykyään kaupungissa valmistetaan akkuja, huonekaluja ja tekstiilejä, ja siellä toimii viinitehdas sekä lasitehdas. Alueen muita kaupunkeja ovat Popovo ja Omurtag.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-targovishte-3d982d63.jpg",
@@ -8432,7 +8432,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Varna: {
       lyhyt: 'Varnan keskustassa ovat Balkanin suurimmat roomalaiset kylpylät, joiden holvit kohosivat aikanaan yli 20 metrin korkeuteen.',
-      pitka: `Varnan länsilaidan teollisuusalueelta löytyi 1972 vahingossa maailman vanhin tunnettu työstetty kulta, kun kaivinkoneen kuljettaja törmäsi kalkoliittiseen, noin 6 500 vuotta vanhaan hautausmaahan. Haudoista löytyi lopulta lähes 3 000 kultaesinettä, yhteensä noin kuusi kiloa – yksi ainoa hauta sisälsi enemmän kultaa kuin koko muu tunnettu maailma samalta aikakaudelta yhteensä. Löytö muutti käsitystä siitä, milloin ihminen oppi työstämään metalleja, ja aarre on nykyään esillä Varnan arkeologisessa museossa. Kaupunki on Bulgarian meripääkaupunki ja sen kolmanneksi suurin, ja roomalaisten kylpylöiden lisäksi sen kesät täyttyvät festivaaleista ja rantaelämästä Mustanmeren rannalla.`,
+      pitka: `Varnan alue on Bulgarian itärannikolla Mustanmeren rannalla, ja siellä asuu noin 430 000 ihmistä (väestönlaskenta 2021). Aluekeskus Varna on asukasluvultaan Bulgarian kolmanneksi suurin kaupunki, merisatama ja Bulgarian laivaston kotipaikka. Kreikkalaiset siirtolaiset perustivat sen Odessos-nimisenä noin 585–550 eaa. Kaupungin roomalaiset kylpylät ovat 100-luvun lopulta. Kaupungin esihistoriallisesta hautausmaasta löytyi vuonna 1972 yli 3 000 kultaesinettä, ja ne ovat noin 6 500 vuoden ikäisiä. Kaupungin pohjoispuolella on Kultaiset hiekat -lomakeskus. Alueella on myös Pobiti Kamani eli kivimetsä, jossa on kivipilareita. Kamtšija-joen suulla on lähes 13 kilometriä pitkä hiekkaranta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-varna-v-0f8b853b.jpg',
@@ -8455,7 +8455,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Veliko Tarnovo': {
       lyhyt: 'Veliko Tarnovon keskiaikainen Tsarevetsin linnoitus herää iltaisin eloon ääni- ja valonäytöksessä, kun muurit valaistaan värein.',
-      pitka: `Veliko Tarnovo oli toisen Bulgarian valtakunnan pääkaupunki vuosina 1185–1393, ja aikanaan sen sanottiin kilpailevan loistollaan itse Konstantinopolin kanssa. Kaupungin Samovodskan käsityöläiskatu on säilyttänyt yli 500 vuoden ajan samat ammatit: kivijalkatyöpajoissa taotaan yhä kuparia, poltetaan keramiikkaa ja kudotaan kankaita samalla tavalla kuin markkinapäivinä satoja vuosia sitten. Tsarevetsin linnoitusmäki hallitsee yhä kaupunkia, ja sen valo- ja äänishow herättää muurit iltaisin eloon värein. Nykyään Veliko Tarnovo tunnetaan Bulgarian kulttuuripääkaupunkina ja suosittuna yliopistokaupunkina, jonka kadut kiipeävät jyrkkinä mäkinä Jantra-joen mutkien yllä.`,
+      pitka: `Veliko Tarnovon alue on Pohjois-Bulgarian keskiosassa, ja siellä asuu noin 210 000 ihmistä (väestönlaskenta 2021). Aluekeskus Veliko Tarnovo sijaitsee Jantra-joen mutkissa. Se oli toisen Bulgarian valtakunnan pääkaupunki, ja Tsarevetsin linnoitus oli valtakunnan päälinnoitus vuosina 1185–1393. Linnoituksessa järjestetään iltaisin ääni- ja valoesitys. Arbanasin kylässä on 1600- ja 1700-luvun kirkkoja ja kauppiastaloja. Svištovin kaupunki on Tonavan rannalla, ja siellä on Tsenovin kauppakorkeakoulu vuodelta 1936. Svištov oli Venäjän–Turkin sodassa 1877–1878 ensimmäinen vapautettu kaupunki. Gorna Orjahovitsan kaupunki on noin 10 kilometrin päässä aluekeskuksesta. Veliko Tarnovon yliopisto avattiin vuonna 1963.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-veliko-tarnovo-v-f16d46a3.jpg',
@@ -8478,7 +8478,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vidin: {
       lyhyt: 'Tonavan rannalla Vidinissä seisoo Baba Vida, Bulgarian ainoa kokonaan säilynyt keskiaikainen linna.',
-      pitka: `Vidinin maakunnan eteläosassa kohoavat Belogradchikin kalliot, 200 metriä korkeita punaisia hiekkakivimuodostelmia, jotka tuuli ja vesi ovat veistäneet miljoonien vuosien aikana oudoiksi torneiksi ja hahmoiksi. Kallioiden lomaan rakennettu Kaleton linnoitus sai alkunsa roomalaisilta, ja bulgarialaiset ja lopulta osmanit laajensivat sitä aina 1800-luvulle asti hyödyntäen kalliomuodostelmia osana muureja. Muodostelmat olivat 2011 finalistina luonnon seitsemän uuden ihmeen äänestyksessä, ja ne houkuttelevat nykyään kiipeilijöitä ja vaeltajia ympäri Eurooppaa. Vidinin kaupunki itse jatkaa elämäänsä Tonavan rannalla Baba Vidan linnan varjossa, aivan Serbian ja Romanian rajaseudun tuntumassa.`,
+      pitka: `Vidinin alue on Bulgarian luoteiskulmassa Serbian ja Romanian rajalla, ja siellä asuu noin 75 000 ihmistä (väestönlaskenta 2021). Aluekeskus Vidin on Tonavan satamakaupunki. Kaupungissa on Baba Vidan linna, jonka rakentaminen alkoi 900-luvulla. Tonavan yli Romanian Calafatiin johtava silta avattiin vuonna 2013, ja sitä ennen joen ylitti lautta. Belogradčikin kalliomuodostelmat ovat punaisia ja keltaisia hiekkakivikallioita, joista osa nousee 200 metrin korkeuteen. Kallioiden lomaan on rakennettu Belogradčikin linnoitus. Rabišan kylän lähellä on Magura-luola, jonka seinillä on yli 750 esihistoriallista kuvaa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/bgr-maakunta2-vidin-v-59a01a84.jpg',
@@ -8501,7 +8501,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vratsa: {
       lyhyt: 'Rogozenin kylästä löytyi 1985 yli 20 kilon traakialainen hopea-aarre, kun traktorinkuljettaja kaivoi puutarhaansa kasteluputkea varten.',
-      pitka: `Vratsan kaupungin kupeessa avautuu Vratsata-solakuru, jonka pystyt kalkkikivijyrkänteet ovat suosittuja kalliokiipeilijöiden keskuudessa. Lähellä sijaitseva Ledenika-luola avattiin yleisölle 1961, ja sen jäätävät holvit ja tippukivimuodostelmat vetävät nykyään retkeilijöitä ympäri vuoden. Runoilija ja vallankumouksellinen Hristo Botev kaatui taistelussa lähellä sijaitsevalla Okolčican huipulla huhtikuun kapinassa 1876, ja häntä muistetaan yhä joka vuosi kesäkuun alussa, jolloin tuhannet kokoontuvat vuorelle. Vratsa on nykyään portti Vrachanski Balkan -luonnonpuistoon, jonka kalliot, luolat ja putoukset tekevät siitä yhden Bulgarian suosituimmista retkeilyalueista.`,
+      pitka: `Vratsan alue on Luoteis-Bulgariassa Tonavan ja Balkanvuorten välissä, ja siellä asuu noin 150 000 ihmistä (väestönlaskenta 2021). Aluekeskus Vratsa on Vračanski Balkanin luonnonpuiston juurella. Kaupungin nimi tulee läheisestä Vratsatan solasta, ja nimi tarkoittaa pientä porttia. Lähellä on Ledenika-luola, joka avattiin kävijöille vuonna 1961. Vratsan museossa on Rogozenin aarre, yli 20 kiloa painava traakialainen hopea-astioiden löytö 400- ja 300-luvuilta eaa. Aarre löytyi Rogozenin kylästä vuonna 1985. Runoilija ja vallankumouksellinen Hristo Botev kuoli Vratsan lähellä vuonna 1876, ja hänen muistopäiväänsä vietetään kesäkuun alussa. Kozlodujin kaupungin lähellä Tonavan rannalla on Bulgarian ainoa ydinvoimala.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-vratsa-0658d64f.jpg",
