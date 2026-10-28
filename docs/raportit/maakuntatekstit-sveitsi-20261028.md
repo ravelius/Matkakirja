@@ -4,7 +4,7 @@ Resepti: docs/tuotanto/reseptit/maakuntateksti-koko-maakunta.md. Sonnet-agentit 
 
 ## Aargau
 
-Aargau on Pohjois-Sveitsin kantoni, jossa puhutaan saksaa. Siellä asuu noin 690 000 ihmistä, ja se on väkiluvultaan Sveitsin neljänneksi suurin kantoni. Pääkaupunki on Aarau, jossa asuu noin 22 000 ihmistä. Kantonin nimi tulee Aare-joesta, jonka laaksossa suurin osa alueesta on. Rein-joki muodostaa pohjoisrajan Saksaa vasten. Kantonissa on yli 20 vesivoimalaa, ja kaksi Sveitsin neljästä ydinvoimalasta, Leibstadt ja Beznau, ovat Aargaussa. Badenin kaupunki ja Schinznachin kylä ovat tunnettuja rikkipitoisista kuumista lähteistä. Habsburgin linna rakennettiin noin vuonna 1020, ja siitä sai nimensä Habsburgien hallitsijasuku.
+Aargau on Pohjois-Sveitsin kantoni, jossa puhutaan saksaa. Siellä asuu noin 690 000 ihmistä, ja se on väkiluvultaan Sveitsin neljänneksi suurin kantoni. Pääkaupunki on Aarau, jossa asuu noin 22 000 ihmistä. Kantonin nimi tulee Aare-joesta, jonka laaksossa suurin osa alueesta on. Rein-joki on pohjoisessa Saksan rajana. Kantonissa on yli 20 vesivoimalaa, ja kaksi Sveitsin kolmesta toimivasta ydinvoimalasta, Leibstadt ja Beznau, ovat Aargaussa. Badenin kaupunki ja Schinznachin kylä ovat tunnettuja rikkipitoisista kuumista lähteistä. Habsburgin linna rakennettiin noin vuonna 1020, ja siitä sai nimensä Habsburgien hallitsijasuku.
 
 ## Appenzell Ausserrhoden
 
@@ -20,7 +20,7 @@ Basel-Landschaft on Luoteis-Sveitsin kantoni Reinin eteläpuolella, ja siellä p
 
 ## Basel-Stadt
 
-Basel-Stadt on pinta-alaltaan Sveitsin pienin kantoni, vain 37 neliökilometriä. Siellä asuu noin 200 000 ihmistä, ja asukastiheys on maan suurin. Kantoni koostuu kolmesta kunnasta: Basel, Riehen ja Bettingen. Basel sijaitsee Reinin molemmilla rannoilla, ja kaupungin kohdalla kohtaavat Sveitsin, Saksan ja Ranskan rajat. Baselin yliopiston perusti paavi Pius II vuonna 1460, ja sitä pidetään Sveitsin vanhimpana. Kaupungissa on yli 30 museota. Fasnacht-karnevaali alkaa tuhkakeskiviikkoa seuraavana maanantaina kello 4 aamulla ja kestää tasan 72 tuntia.
+Basel-Stadt on Luoteis-Sveitsin kantoni ja pinta-alaltaan maan pienin, vain 37 neliökilometriä. Siellä asuu noin 200 000 ihmistä, ja asukastiheys on maan suurin. Kantoni koostuu kolmesta kunnasta: Basel, Riehen ja Bettingen. Basel sijaitsee Reinin molemmilla rannoilla, ja kaupungin kohdalla kohtaavat Sveitsin, Saksan ja Ranskan rajat. Baselin yliopiston perusti paavi Pius II vuonna 1460, ja sitä pidetään Sveitsin vanhimpana. Kaupungissa on yli 30 museota. Fasnacht-karnevaali alkaa tuhkakeskiviikkoa seuraavana maanantaina kello 4 aamulla ja kestää tasan 72 tuntia.
 
 ## Bern
 
@@ -36,7 +36,7 @@ Geneve on ranskankielinen kantoni Genevenjärven läntisessä päässä, ja siel
 
 ## Glarus
 
-Glarus on saksankielinen vuoristokantoni, ja siellä asuu noin 41 000 ihmistä. Pääkaupunki on Glarus. Kantonin korkein huippu on Tödi, joka on yli 3 600 metriä korkea. Osa Glarusin Alppeja kuuluu Sardonan tektoniseen alueeseen, jossa näkyy vuorten syntyyn liittyvä kallioperän siirros. Alue on Unescon maailmanperintökohde vuodesta 2008. Glarusissa pidetään edelleen Landsgemeinde eli ulkoilmakansankokous, jossa äänestäjät päättävät asioista kättä nostamalla. Vuodesta 2007 siihen ovat saaneet osallistua myös 16-vuotiaat. Ensimmäinen tiedossa oleva kantonin kokous pidettiin vuonna 1387. Vuonna 2011 kantonin 25 kuntaa yhdistettiin kolmeksi. Glarus liittyi valaliittoon vuonna 1352.
+Glarus on Itä-Sveitsin saksankielinen vuoristokantoni, ja siellä asuu noin 41 000 ihmistä. Pääkaupunki on Glarus. Kantonin korkein huippu on Tödi, joka on yli 3 600 metriä korkea. Osa Glarusin Alppeja kuuluu Sardonan tektoniseen alueeseen, jossa näkyy vuorten syntyyn liittyvä kallioperän siirros. Alue on Unescon maailmanperintökohde vuodesta 2008. Glarusissa pidetään edelleen Landsgemeinde eli ulkoilmakansankokous, jossa äänestäjät päättävät asioista kättä nostamalla. Vuodesta 2007 siihen ovat saaneet osallistua myös 16-vuotiaat. Ensimmäinen tiedossa oleva kantonin kokous pidettiin vuonna 1387. Vuonna 2011 kantonin 25 kuntaa yhdistettiin kolmeksi. Glarus liittyi valaliittoon vuonna 1352.
 
 ## Graubünden
 
@@ -44,7 +44,7 @@ Graubünden on Sveitsin itäisin ja pinta-alaltaan suurin kantoni, ja siellä as
 
 ## Jura
 
-Jura on ranskankielinen kantoni, ja siellä asuu noin 74 000 ihmistä vuoden 2020 lukujen mukaan. Se on Sveitsin nuorin kantoni. Alue kuului ennen Bernin kantoniin, ja siitä tuli oma kantoninsa vuonna 1979 itsenäisyysliikkeen jälkeen. Pääkaupunki on Delémont. Ederswiler on kantonin ainoa saksankielinen kunta. Kellojen valmistus on kantonin tärkeimpiä teollisuudenaloja. Hevosten kasvatus on myös tärkeää, ja Franches-Montagnesin seudun mukaan on nimetty hevosrotu. Seudun keskus on Saignelégier. Doubs-joki virtaa kantonin läpi ja laskee lopulta Rhône-jokeen. Moutierin kaupunki liittyi Juraan 1. tammikuuta 2026.
+Jura on Luoteis-Sveitsin ranskankielinen kantoni, ja siellä asuu noin 80 000 ihmistä. Se on Sveitsin nuorin kantoni. Alue kuului ennen Bernin kantoniin, ja siitä tuli oma kantoninsa vuonna 1979 itsenäisyysliikkeen jälkeen. Pääkaupunki on Delémont. Ederswiler on kantonin ainoa saksankielinen kunta. Kellojen valmistus on kantonin tärkeimpiä teollisuudenaloja. Hevosten kasvatus on myös tärkeää, ja Franches-Montagnesin seudun mukaan on nimetty hevosrotu. Seudun keskus on Saignelégier. Doubs-joki virtaa kantonin läpi ja laskee lopulta Rhône-jokeen. Moutierin kaupunki liittyi Juraan 1. tammikuuta 2026.
 
 ## Lucerne
 
@@ -52,7 +52,7 @@ Luzern on saksankielinen kantoni Keski-Sveitsissä, ja siellä asuu noin 420 000
 
 ## Neuchâtel
 
-Neuchâtel on ranskankielinen kantoni Jura-vuorten alueella, ja siellä asuu noin 180 000 ihmistä. Pääkaupunki Neuchâtel on Neuchâtelin järven rannalla, ja rannoilla kasvatetaan viiniä. Kantonin suurin asutuskeskus on La Chaux-de-Fonds, jossa asuu noin 37 000 ihmistä. Kaupunki on noin 1 000 metrin korkeudessa merenpinnasta. La Chaux-de-Fonds ja Le Locle kuuluvat yhdessä Unescon maailmanperintöön vuodesta 2009 kellonvalmistuskaupunkien suunnittelun vuoksi. Kantonissa toimii Neuchâtelin yliopisto. Val-de-Travers on absintin, väkevän alkoholijuoman, syntyseutu. Neuchâtel liittyi Sveitsiin vuonna 1815 ruhtinaskuntana. Preussin kuningashuone hallitsi sitä pitkään, ja vuonna 1848 siitä tuli tasavalta.
+Neuchâtel on ranskankielinen kantoni Jura-vuorten alueella, ja siellä asuu noin 180 000 ihmistä. Pääkaupunki Neuchâtel on Neuchâtelin järven rannalla, ja rannoilla kasvatetaan viiniä. Kantonin suurin kaupunki on Neuchâtel, jossa asuu noin 45 000 ihmistä. Toiseksi suurin kaupunki La Chaux-de-Fonds on noin 1 000 metrin korkeudessa merenpinnasta. La Chaux-de-Fonds ja Le Locle kuuluvat yhdessä Unescon maailmanperintöön vuodesta 2009 kellonvalmistuskaupunkien suunnittelun vuoksi. Kantonissa toimii Neuchâtelin yliopisto. Val-de-Travers on absintin, väkevän alkoholijuoman, syntyseutu. Neuchâtel liittyi Sveitsiin vuonna 1815 ruhtinaskuntana. Preussin kuningashuone hallitsi sitä pitkään, ja vuonna 1848 siitä tuli tasavalta.
 
 ## Nidwalden
 
@@ -104,4 +104,4 @@ Zug on pieni kantoni Keski-Sveitsissä, ja sen pinta-ala on vain 239 neliökilom
 
 ## Zürich
 
-Zürich on Sveitsin väkirikkain kantoni, ja siellä asuu noin 1,5 miljoonaa ihmistä. Kieli on saksa, ja kantoni liittyi Sveitsin valaliittoon vuonna 1351. Kantonin keskus Zürichin kaupunki on Sveitsin suurin kaupunki, jossa asuu noin 450 000 ihmistä. Se on Zürichjärven pohjoispäässä ja pankkien ja vakuutusyhtiöiden keskus. Siellä on myös ETH, Sveitsin liittovaltion teknillinen korkeakoulu. Kloten kunnassa on Sveitsin suurin lentokenttä, Zürichin lentokenttä. Winterthur on kantonin toiseksi suurin kaupunki, ja siellä asuu noin 113 000 ihmistä. Zürichissä vietetään huhtikuussa Sechseläuten-kevätjuhlaa, jonka päätteeksi poltetaan talvea esittävä lumiukkoa muistuttava Böögg-hahmo. Kantonin ja Schaffhausenin kantonin rajalla on Reinin putous.
+Zürich on Pohjois-Sveitsin kantoni ja maan väkirikkain, ja siellä asuu noin 1,5 miljoonaa ihmistä. Kieli on saksa, ja kantoni liittyi Sveitsin valaliittoon vuonna 1351. Kantonin keskus Zürichin kaupunki on Sveitsin suurin kaupunki, jossa asuu noin 450 000 ihmistä. Se on Zürichjärven pohjoispäässä ja pankkien ja vakuutusyhtiöiden keskus. Siellä on myös ETH, Sveitsin liittovaltion teknillinen korkeakoulu. Kloten kunnassa on Sveitsin suurin lentokenttä, Zürichin lentokenttä. Winterthur on kantonin toiseksi suurin kaupunki, ja siellä asuu noin 113 000 ihmistä. Zürichissä vietetään huhtikuussa Sechseläuten-kevätjuhlaa, jonka päätteeksi poltetaan talvea esittävä lumiukkoa muistuttava Böögg-hahmo. Kantonin ja Schaffhausenin kantonin rajalla on Reinin putous.
