@@ -11236,7 +11236,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MDA: {
     'Anenii Noi': {
       lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
-      pitka: `Anenii Noin piiri on Keski-Moldovassa Chișinăun kaakkoispuolella, ja siellä asuu noin 58 000 ihmistä. Piirin keskus Anenii Noi on kaupunki Bîc-joen tasangolla, noin 36 kilometrin päässä Chișinăusta. Bulboacan kylässä on Castel Mimi, vuosina 1900–1901 valmistunut betonirakenteinen viinitila, jonka rakennutti viininviljelijä ja valtiomies Constantin Mimi. Nykyään viinitila on matkailukohde, ja vuonna 2023 siellä pidettiin Euroopan poliittisen yhteisön huippukokous. Varnițan kylässä, noin neljän kilometrin päässä Benderistä, Ruotsin kuningas Kaarle XII piti leiriä 1700-luvun alussa Poltavan tappion jälkeen.`,
+      pitka: `Anenii Noin piiri on Keski-Moldovassa Chișinăun kaakkoispuolella, ja siellä asuu noin 58 000 ihmistä. Maasto on enimmäkseen tasaista, ja pohjoisen kukkuloilla korkeus nousee 200–250 metriin. Piirin keskus Anenii Noi on kaupunki Bîc-joen laaksossa, noin 36 kilometrin päässä Chișinăusta. Bulboacan kylässä on Castel Mimi, vuosina 1900–1901 valmistunut betonirakenteinen viinitila, jonka rakennutti viininviljelijä ja valtiomies Constantin Mimi. Nykyään viinitila on matkailukohde, ja vuonna 2023 siellä pidettiin Euroopan poliittisen yhteisön huippukokous. Varnițan kylässä, noin neljän kilometrin päässä Benderistä, Ruotsin kuningas Kaarle XII piti leiriä 1700-luvun alussa Poltavan tappion jälkeen.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
@@ -11374,7 +11374,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Călărași': {
       lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
-      pitka: `Călărași on metsäinen kukkulapiiri Keski-Moldovassa Codrin alueella, ja siellä asuu noin 44 000 ihmistä. Codri on Moldovan keskiosan metsäistä kukkulaseutua. Piirin keskus on Călărașin kaupunki, jonka nimi tarkoittaa ratsumiehiä. Vuonna 2014 kaupungissa asui noin 10 800 ihmistä. Metsää on noin 31 prosenttia pinta-alasta, ja Plaiul Fagului -luonnonsuojelualue perustettiin vuonna 1992. Piirissä viljellään viinirypäleitä, ja siellä valmistetaan puna- ja valkoviiniä sekä konjakkia. Hîrjauca-kylän luostari sai alkunsa tutkijan mukaan vuonna 1740, kun Neamțin luostarin munkit liittyivät sinne asettuneeseen erakkoon.`,
+      pitka: `Călărași on metsäinen kukkulapiiri Keski-Moldovassa Codrin alueella, ja siellä asuu noin 44 000 ihmistä. Codri on Moldovan keskiosan metsäistä kukkulaseutua. Piirin keskus on Călărașin kaupunki, jonka nimi tarkoittaa ratsumiehiä. Vuonna 2014 kaupungissa asui noin 10 800 ihmistä. Metsää on noin 31 prosenttia pinta-alasta, ja metsissä kasvaa muun muassa pyökkiä, saarnia ja tammea. Piirin läpi virtaavat Dnestrin sivujoet Bîc, Ichel ja Cula. Piirissä viljellään viinirypäleitä, ja siellä valmistetaan puna- ja valkoviiniä sekä konjakkia. Hîrjauca-kylän luostarin kerrotaan syntyneen vuonna 1740, kun Neamțin luostarin munkit liittyivät sinne asettuneeseen erakkoon.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
@@ -11512,7 +11512,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Comrat: {
       lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
-      pitka: `Comrat on Gagauzian autonomisen alueen pääkaupunki Etelä-Moldovassa. Kaupungissa asuu noin 19 000 ihmistä, ja valtaosa heistä on gagauzeja. Gagauzit ovat ortodoksista turkkilaiskansaa, ja gagauzin kieli on kaupungin virallinen kieli. Koko Gagauziassa asuu noin 104 000 ihmistä. Alue sai autonomian vuonna 1995. Kaupunki on Ialpug-joen varrella. Gagauzian virallisia kieliä ovat gagauzi, romania ja venäjä. Comratissa toimii Comratin valtionyliopisto. Seutu on tunnettua viinistä, ja kaupungissa ja sen lähiseudulla toimii noin kymmenen viinitilaa. Alueella on myös elintarvike- ja alkoholiteollisuutta. Kaupungin katedraali valmistui vuonna 1820.`,
+      pitka: `Comrat on Gagauzian autonomisen alueen pääkaupunki Etelä-Moldovassa. Kaupungissa asuu noin 19 000 ihmistä, ja valtaosa heistä on gagauzeja. Gagauzit ovat ortodoksista turkkilaiskansaa, ja gagauzin kieli on yksi virallisista kielistä. Koko Gagauziassa asuu noin 104 000 ihmistä. Alue sai autonomian vuonna 1995. Kaupunki on Ialpug-joen varrella. Gagauzian virallisia kieliä ovat gagauzi, romania ja venäjä. Comratissa toimii Comratin valtionyliopisto. Seutu on tunnettua viinistä, ja kaupungissa ja sen lähiseudulla toimii noin kymmenen viinitilaa. Alueella on myös elintarvike- ja alkoholiteollisuutta. Kaupungin katedraali valmistui vuonna 1820.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
@@ -11535,7 +11535,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Criuleni: {
       lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
-      pitka: `Criuleni on piiri Keski-Moldovassa, lähellä pääkaupunkia Chișinăuta. Piirissä asuu noin 53 000 ihmistä, ja noin 90 prosenttia heistä asuu maaseudulla. Piirin keskus Criulenin kaupunki on Dnestr-joen rannalla, noin 40 kilometrin päässä Chișinăusta. Piiriin kuuluu 43 paikkakuntaa. Maatalousmaata on 63 prosenttia piirin pinta-alasta, ja viinitarhoja on noin 2 400 hehtaaria. Piirissä on kymmenen kalkkikivilouhosta ja seitsemän hiekka- ja soralouhosta. Piirissä sijaitsee myös Peștera Surprizelor eli Yllätysten luola.`,
+      pitka: `Criuleni on piiri Keski-Moldovassa, lähellä pääkaupunkia Chișinăuta. Piirissä asuu noin 53 000 ihmistä, ja noin 90 prosenttia heistä asuu maaseudulla. Piirin keskus Criulenin kaupunki on Dnestr-joen rannalla, noin 40 kilometrin päässä Chișinăusta. Kaupungin nimen kerrotaan tulevan kahden nuoren, Criun ja Lenuțan, rakkaustarinasta. Piiriin kuuluu 43 paikkakuntaa. Maatalousmaata on 63 prosenttia piirin pinta-alasta, ja viinitarhoja on noin 2 400 hehtaaria. Maisemassa vuorottelevat syvät ja leveät laaksot, ja piirin läpi virtaavat Dnestrin sivujoet Răut ja Bîc. Piirissä sijaitsee myös Peștera Surprizelor eli Yllätysten luola.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
@@ -11765,7 +11765,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leova: {
       lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
-      pitka: `Leova on maatalouspiiri Moldovan lounaisosassa Prut-joen varrella, ja siellä asuu noin 29 000 ihmistä. Prutin toisella puolella on Romania. Piirissä on kaksi kaupunkia, Leova ja Iargara. Piirikeskus Leova on noin 7 400 asukkaan kaupunki vuoden 2014 laskennan mukaan, ja se on noin 92 kilometrin päässä Chișinăusta. Kaupungin ensimmäinen asiakirjamaininta on vuodelta 1489. Piirissä kulkee muinainen Trajanuksen valli, joka alkaa Filipenin kylästä. Maatalousmaata on noin 74 prosenttia piirin alasta.`,
+      pitka: `Leova on maatalouspiiri Moldovan lounaisosassa Prut-joen varrella, ja siellä asuu noin 29 000 ihmistä. Prutin toisella puolella on Romania. Piirissä on kaksi kaupunkia, Leova ja Iargara. Piirikeskus Leova on noin 7 400 asukkaan kaupunki vuoden 2014 laskennan mukaan, ja se on noin 92 kilometrin päässä Chișinăusta. Kaupungin ensimmäinen asiakirjamaininta on vuodelta 1489. Piirissä kulkee muinainen Trajanuksen valli, joka alkaa Filipenin kylästä. Kaupunki kehittyi 1500- ja 1600-luvuilla vilkkaaksi kauppapaikaksi, ja sen nimi oli silloin Tîrgul Sărata. Piirin läpi virtaa Prutin sivujoki Sărata.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-maakunta2-leova-v-0ec4fad0.jpg',
@@ -11811,7 +11811,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ocniţa': {
       lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
-      pitka: `Ocnița on Moldovan pohjoisin piiri, ja se rajoittuu Ukrainaan. Siellä asuu noin 32 000 ihmistä. Piirin keskus on Ocnițan kaupunki, jonka rautatieasema on vuodelta 1897. Otacin kaupunki on Dnestr-joen rannalla, ja joen toisella puolella on ukrainalainen Mohyliv-Podilskyi. Moldovan pohjoisin kohta on Naslavcean kylässä. Piirissä on kuusi suojeltua luonnonaluetta, ja metsää on noin 14 prosenttia maa-alasta. Metsissä elää siileitä, villisikoja, kettuja ja mäyriä. Otaci sai kaupunkioikeudet vuonna 1994. Maatalous on alueen tärkein elinkeino.`,
+      pitka: `Ocnița on Moldovan pohjoisin piiri, ja se rajoittuu Ukrainaan. Siellä asuu noin 32 000 ihmistä. Piirin keskus on Ocnițan kaupunki, jonka rautatieasema on vuodelta 1897. Otacin kaupunki on Dnestr-joen rannalla, ja joen toisella puolella on ukrainalainen Mohyliv-Podilskyi. Moldovan pohjoisin kohta on Naslavcean kylässä. Piirissä on kuusi suojeltua luonnonaluetta, ja metsää on noin 14 prosenttia maa-alasta. Lipnicin kylän luona käytiin elokuussa 1470 taistelu, jossa Moldovan ruhtinas Tapani Suuri voitti Krimin khaanikunnan joukot. Otaci sai kaupunkioikeudet vuonna 1994. Maatalous on alueen tärkein elinkeino.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
@@ -11880,7 +11880,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rîşcani': {
       lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
-      pitka: `Rîșcani on maatalouspiiri Luoteis-Moldovassa, ja siellä asuu noin 44 000 ihmistä. Piirin keskus on Rîșcanin kaupunki, ja toinen kaupunki on Costești. Maa-alasta noin 82 prosenttia on maatalouskäytössä. Viljelykasveja ovat viljat, auringonkukka, tupakka ja sokerijuurikas, ja hedelmätarhoissa kasvaa omenoita, kirsikoita ja luumuja. Costeștin lähellä Prut-joella on Costești–Stânca-vesivoimala, joka valmistui vuonna 1978 ja tuottaa 32 megawatin teholla sähköä Moldovalle ja Romanialle. Piirissä on myös luonnonsuojelualueita, kuten Duruitoarean ja Văraticin rotkot. Horodiștein, Recean ja Șaptebanin kylät mainitaan asiakirjoissa jo 1400-luvulla. Vuonna 2014 piirissä asui noin 59 000 ihmistä.`,
+      pitka: `Rîșcani on maatalouspiiri Luoteis-Moldovassa, ja siellä asuu noin 44 000 ihmistä. Piirin keskus on Rîșcanin kaupunki, ja toinen kaupunki on Costești. Maa-alasta noin 82 prosenttia on maatalouskäytössä. Viljelykasveja ovat viljat, auringonkukka, tupakka ja sokerijuurikas, ja hedelmätarhoissa kasvaa omenoita, kirsikoita ja luumuja. Costeștin lähellä Prut-joella on Costești–Stânca-vesivoimala, joka valmistui vuonna 1978 ja tuottaa 32 megawatin teholla sähköä Moldovalle ja Romanialle. Sen tekojärvi on noin 59 neliökilometrin laajuinen. Piirissä on myös luonnonsuojelualueita, kuten Duruitoarean ja Văraticin rotkot. Horodiștein, Recean ja Șaptebanin kylät mainitaan asiakirjoissa jo 1400-luvulla.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-maakunta2-riscani-v-4baa4f12.jpg',
@@ -11903,7 +11903,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sîngerei': {
       lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
-      pitka: `Sîngerein piiri on Pohjois-Moldovassa Bălțin arojen kumpuilevalla tasangolla, ja siellä asuu noin 56 000 ihmistä. Piirin keskus on Sîngerein kaupunki, jossa on noin 10 000 asukasta. Kaupunki mainitaan ensimmäisen kerran asiakirjassa vuonna 1586. Piirin läpi virtaa Răut-joki, joka laskee Dnestriin. Maatalousmaata on yli puolet pinta-alasta. Viljelykasveja ovat viljat, auringonkukka, tupakka ja sokerijuurikas, ja hedelmätarhoissa kasvatetaan omenoita, luumuja, päärynöitä ja kirsikoita. Metsää on vain noin 11 prosenttia. Piirin kukkulat ovat 190–240 metriä korkeita, ja piirissä on 70 asuinpaikkaa. Vuosina 1940–1991 piiri tunnettiin nimellä Lazovsky.`,
+      pitka: `Sîngerein piiri on Pohjois-Moldovassa Bălțin arojen kumpuilevalla tasangolla, ja siellä asuu noin 56 000 ihmistä. Piirin keskus on Sîngerein kaupunki, jossa on noin 10 000 asukasta. Kaupunki mainitaan ensimmäisen kerran asiakirjassa vuonna 1586. Piirin läpi virtaa 286 kilometrin pituinen Răut, joka on Dnestrin suurin sivujoki. Maatalousmaata on yli puolet pinta-alasta. Viljelykasveja ovat viljat, auringonkukka, tupakka ja sokerijuurikas, ja hedelmätarhoissa kasvatetaan omenoita, luumuja, päärynöitä ja kirsikoita. Metsää on vain noin 11 prosenttia. Aroseudun eläimiä ovat jänis, kettu, villisika ja susi, ja linnuista tavataan muun muassa kattohaikaroita ja arokotkia. Vuosina 1940–1991 piiri tunnettiin nimellä Lazovsky.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
@@ -11926,7 +11926,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Şoldăneşti': {
       lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
-      pitka: `Șoldănești on pieni maatalouspiiri Itä-Moldovassa, ja siellä asuu noin 25 000 ihmistä. Piirin ainoa kaupunki ja keskus on Șoldănești. Alue on Dnestrin ylängön kukkulaista maastoa, ja korkein kohta on 338 metriä korkea Zahorna-kukkula. Metsää on noin viidennes pinta-alasta. Piirin pääjoki on Ciorna, joka laskee Dnestriin. Vanhimmat asiakirjoissa mainitut kylät, kuten Dobrușa, Olișcani, Răspopeni ja Salcia, ovat 1400-luvulta. Peltoa on yli puolet pinta-alasta. Șoldănești-kaupunki sijaitsee noin 145 metrin korkeudessa, ja siellä asui vuoden 2014 laskennan mukaan noin 5 900 ihmistä. Tammikuun keskilämpötila on noin −4,5 astetta ja heinäkuun noin 21 astetta.`,
+      pitka: `Șoldănești on pieni maatalouspiiri Itä-Moldovassa, ja siellä asuu noin 25 000 ihmistä. Piirin ainoa kaupunki ja keskus on Șoldănești. Alue on Dnestrin ylängön kukkulaista maastoa, ja korkein kohta on 338 metriä korkea Zahorna-kukkula. Metsää on noin viidennes pinta-alasta. Piirin pääjoki on Ciorna, joka laskee Dnestriin. Vanhimmat asiakirjoissa mainitut kylät, kuten Dobrușa, Olișcani, Răspopeni ja Salcia, ovat 1400-luvulta. Peltoa on yli puolet pinta-alasta. Șoldănești-kaupungissa asui vuoden 2014 laskennan mukaan noin 5 900 ihmistä. Mihulenin kylän lähellä on kalkkikivivarantoja, ja Olișcanissa on soraa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-maakunta2-soldanesti-v-26b3e9cc.jpg',
@@ -12064,7 +12064,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Teleneşti': {
       lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
-      pitka: `Telenești on piiri Moldovan keskiosassa, noin 90 kilometriä Chișinăusta pohjoiseen. Piirissä asuu noin 41 000 ihmistä, lähes yhdeksän kymmenestä maaseudulla. Piirin pinta-ala on noin 850 neliökilometriä, ja maatalousmaata on siitä noin kolme neljäsosaa. Viinitarhoja on 2 900 hehtaaria. Piirin pääjoki on Răut, ja suurin tekojärvi on Verejeni. Seudun vanhimmat kirjalliset kylämaininnat ovat vuodelta 1437. Telenești-kaupungissa syntyi vuonna 1898 taidemaalari Nachum Gutman, joka muutti lapsena perheineen Palestiinaan ja josta tuli israelilainen taiteilija. Hänen museonsa on Tel Avivissa. Kaupungin Pyhän Eliaan katedraalin rakennustyöt alkoivat vuonna 2006.`,
+      pitka: `Telenești on piiri Moldovan keskiosassa, noin 90 kilometriä Chișinăusta pohjoiseen. Piirissä asuu noin 41 000 ihmistä, lähes yhdeksän kymmenestä maaseudulla. Piirin pinta-ala on noin 850 neliökilometriä, ja maatalousmaata on siitä noin kolme neljäsosaa. Viinitarhoja on 2 900 hehtaaria. Piirin pääjoki on Răut, ja suurin tekojärvi on Verejeni. Seudun vanhimmat kirjalliset kylämaininnat ovat vuodelta 1437. Telenești-kaupungissa syntyi vuonna 1898 taidemaalari Nachum Gutman, joka muutti lapsena perheineen Palestiinaan ja josta tuli israelilainen taiteilija. Hänen museonsa on Tel Avivissa. Kaupungin Pyhän Elian katedraalin rakennustyöt alkoivat vuonna 2006.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-maakunta2-telenesti-v-07def0b8.jpg',
