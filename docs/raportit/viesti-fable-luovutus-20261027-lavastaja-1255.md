@@ -584,3 +584,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   ulkonema ~0,8 m:iin. 05:n portin sivumuurien friisi + räystäs ovat portin mallissa (rakennukset), eivät muuttuneet.
 - J4-v4 #1228 vastaanotettu: GLB SHA 13cb3cc3…41ff3e täsmää, posti SHA256SUMS 22/22 → olavinlinna-j4/v4/ (models + posti). Kuittaus Codexille
   b80de59a5. SEURAAVA: v3:n ketju (j4_arkkuun 0,97 → j4_siivous → astc-mip vari/normaali 4 + j4_orm R255 + astc6) → kavely-j4 → pari v3 | v4 | 1021 → KK.
+
+## LISÄYS 43 klo 20.4x (28.10.): J4-v4 pelikuntoon, pari seis (linja 2 sumea), katot-42-haara tarpeeton
+- J4-v4 ketju ajettu: j4_arkkuun (0,97) → j4_siivous → astc-mip vari/normaali 4 → j4_orm + astc6 → olavinlinna-j4/v4/peli/ (glb 3732820f…, sha1).
+  kavely-j4 palautettu v3:een (tunnettu tila, = v3/*); v4 kopioidaan kavely-j4:ään ennen paria.
+- PARI SEIS: esikatselulinja 2 (2855d8478, ipad --batch) kuvaa koko ruudun sumeana myös v3:lla (seinän terävyys 2,22 → 1,25; 184846 ok, 202114/202821/203710
+  sumeat). PT: VS käytti linjaa 2 19.22–19.55 → pysyvä ajonaikainen asetus, VS korjaa ja ilmoittaa. EI ajeta linjaa 2 ennen sitä.
+  Sitten: v4 kavely-j4:ään, sk-komero-j4-lahi.txt, pari scratch-pari.py-mallilla: j4h täysi 600×540 rajaus (1240,696) v3 (180956) | v4 | 1021 → PT → KK.
+  j4i (kannu) kelvoton (alkuvalikko peittää) → pois parista.
+- lavastaja/katot-42: ei mainista puuttuvaa (vain luovutuksen vanhempi versio ilman lisäystä 41) → ei tarvita.
+- Katto-parit 195528/195925 odottavat edelleen KK:ta.
