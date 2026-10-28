@@ -672,3 +672,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   Pari 224621 EI KELPAA: pelikameran muurit paljon korkeammat kuin havainteessa → harja jää kuvan yläpuolelle; 05:n vasen yläkulma yhä kirkas
   nauha ilman kiekkoja (lähde ei muurikate? tutki skannerilla scratchpad friisihaku.py -mallilla: ikkuna x/z kujan 05 kohdalle, kaikki
   pelin lataamat paketit: muurikate-v16, rakennukset-v48, tausta-v57). Havainteen kamera kujille 02/05 puuttuu (TESTIKAMERA_02/_05).
+
+## LISÄYS 51 klo 23.3x (28.10.): kuja 01 räystään rako KORJATTU (v110e), pari KK:lle; 02/05 havainteen kameralla ajossa
+- Värikoe (UUSI tyokalut/varikoodi_raystas.py + aja_v110_koe.zsh, juuri-v110k; materiaalit emissiovärein, doubleSided ennallaan): 1) v110:n
+  alalaatta oli koko lappeen kokoinen ('Katto lasitiili' ulottuu harjaan asti) ja päätysivujen laatta y 3,72 leikkasi pitkien sivujen räystäät
+  (231251) → avoimet_raystas_v2.py: alalaatta RIVI-levyisinä paloina paikallisella reunalla (d ∈ [dmx − ALA 1,0, dmx − 0,02], y = yo − 0,04).
+  2) vaalea rako = lippa ('Katto lasitiili') kiekkojen välissä (231836). Peli EI huomioi lipan baseColorFactoria (LIPPA 0,15 ei näkynyt 232122)
+  → lipalle oma materiaali V4_raystas_lippa_varjo (0,09 0,05 0,02). Vanha skripti: avoimet_raystas_v2-v110.py.bak.
+- aja_v110_pari.zsh (LIPPA 0,15 oletus, vaikutukseton): parit havainteen kamera havainne-editori-20261028-232618, pelikamera -233124 → KK 23.3x.
+- 02/05: aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" ajossa (havainteen kamera puuttui). Auki yhä: pelikameran muurit korkeammat kuin
+  havainteessa (harja kuvan yläpuolella), 05:n vasemman yläkulman kirkas nauha (lähde selvitettävä; värikoe varikoodi_raystas.py-mallilla).
