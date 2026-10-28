@@ -915,7 +915,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ITA: {
     "Piemonte": {
       lyhyt: "Nykyään tunnetaan Barolon ja Barbarescon viinimäistä sekä Bra-kaupungista, josta koko Slow Food -liike sai alkunsa 1980-luvulla.",
-      pitka: `Piemonte on Luoteis-Italian alue, jota Alpit ympäröivät kolmelta puolelta. Asukkaita on noin 4,3 miljoonaa, ja pinta-alaltaan alue on Italian toiseksi suurin. Aluekeskus Torino oli Italian ensimmäinen pääkaupunki vuosina 1861–1865. Po-joki saa alkunsa Monviso-vuoren kupeesta. Brassa on Slow Food -liikkeen päämaja, ja liikkeen aloitti paikallinen Carlo Petrini. Albassa tunnetaan valkoiset tryffelit. Vermutti on keksitty Piemontessa. Langhen ja Monferraton viinitarhamaisema, jossa tehdään Barolo- ja Barbaresco-viinejä, on Unescon maailmanperintökohde vuodesta 2014. Savoijin hallitsijasuvun kuninkaalliset residenssit kuuluvat Unescon maailmanperintöön vuodesta 1997. Torinossa pidettiin talviolympialaiset vuonna 2006.`,
+      pitka: `Piemonte on Luoteis-Italian alue, jota Alpit ympäröivät kolmelta puolelta. Asukkaita on noin 4,3 miljoonaa, ja pinta-alaltaan alue on Italian toiseksi suurin. Aluekeskus Torino oli Italian ensimmäinen pääkaupunki vuosina 1861–1865. Po-joki saa alkunsa Monviso-vuoren kupeesta. Brassa on Slow Food -liikkeen päämaja, ja liikkeen aloitti paikallinen Carlo Petrini. Alba on tunnettu valkoisista tryffeleistään. Vermutti on keksitty Piemontessa. Langhen ja Monferraton viinitarhamaisema, jossa tehdään Barolo- ja Barbaresco-viinejä, on Unescon maailmanperintökohde vuodesta 2014. Savoijin hallitsijasuvun kuninkaalliset residenssit kuuluvat Unescon maailmanperintöön vuodesta 1997. Torinossa pidettiin talviolympialaiset vuonna 2006.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-piemonte-fa3b365d.jpg',
@@ -1095,7 +1095,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Veneto": {
       lyhyt: "Venetsia kelluu turistivirrassa, mutta maaseudulla mäet täyttyvät nykyään prosecco-viinitarhoista.",
-      pitka: `Veneto on Koillis-Italian alue, jossa asuu noin 4,9 miljoonaa ihmistä. Aluekeskus Venetsia on rakennettu laguunin saarille, ja sen vanhassa keskustassa asuu lähes 50 000 ihmistä. Venetsia ja sen laguuni ovat Unescon maailmanperintökohde vuodesta 1987. Veronassa on roomalaisajalta peräisin oleva Arena-amfiteatteri, jossa on järjestetty oopperafestivaali vuodesta 1913. Padovan yliopisto perustettiin vuonna 1222. Dolomiittien vuoristo ulottuu osin Venetoon, ja se on Unescon maailmanperintökohde vuodesta 2009. Gardajärven itäranta kuuluu Venetoon, ja Veneton Adrianmeren-rannikko on noin 200 kilometriä pitkä. Alueen viineihin kuuluvat valkoviinit Prosecco ja Soave.`,
+      pitka: `Veneto on Koillis-Italian alue, jossa asuu noin 4,9 miljoonaa ihmistä. Aluekeskus Venetsia on rakennettu laguunin saarille, ja sen vanhassa keskustassa asuu lähes 50 000 ihmistä. Venetsia ja sen laguuni ovat Unescon maailmanperintökohde vuodesta 1987. Veronassa on roomalaisajalta peräisin oleva Arena-amfiteatteri, jossa on järjestetty oopperafestivaali vuodesta 1913. Padovan yliopisto perustettiin vuonna 1222. Dolomiittien vuoristo ulottuu osin Venetoon, ja se on Unescon maailmanperintökohde vuodesta 2009. Gardajärven itäranta kuuluu Venetoon, ja Veneton Adrianmeren rannikko on noin 200 kilometriä pitkä. Alueen viineihin kuuluvat valkoviinit Prosecco ja Soave.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ita-maakunta-veneto-552f7b59.jpg',
@@ -1395,7 +1395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Friuli-Venezia Giulia": {
       lyhyt: "Triesten satama toimii Euroopan suurimpana kahvin tuontiväylänä, vaikka alue ei kasvata papua grammaakaan.",
-      pitka: `Friuli-Venezia Giulia on Koillis-Italian alue, jonka pohjoisrajalla on Itävalta ja itärajalla Slovenia. Alueella asuu noin 1,2 miljoonaa ihmistä. Pääkaupunki Trieste on Adrianmeren Triesten lahden rannalla. Alueen tunnustettuja kieliä ovat italian lisäksi friuli, sloveeni ja saksa. Pohjoisessa on vuoristoa, ja alueen korkein huippu Jôf di Montasio on 2 754 metriä. Cividale del Friulin kaupunki oli roomalaisaikaan nimeltään Forum Iulii, josta Friulin nimi tulee. Aquileian kaupunki perustettiin vuonna 181 eaa. San Danielen seutu tunnetaan kinkustaan. Triesten Miramaren linnan rakennutti arkkiherttua Maximilian, josta tuli myöhemmin Meksikon keisari.`,
+      pitka: `Friuli-Venezia Giulia on Koillis-Italian alue, jonka pohjoisrajalla on Itävalta ja itärajalla Slovenia. Alueella asuu noin 1,2 miljoonaa ihmistä. Pääkaupunki Trieste on Adrianmeren Triesten lahden rannalla. Alueen tunnustettuja kieliä ovat italian lisäksi friuli, sloveeni ja saksa. Pohjoisessa on vuoristoa, ja alueen korkein huippu on Monte Coglians, 2 780 metriä. Cividale del Friulin kaupunki oli roomalaisaikaan nimeltään Forum Iulii, josta Friulin nimi tulee. Aquileian kaupunki perustettiin vuonna 181 eaa. San Danielen seutu tunnetaan kinkustaan. Triesten Miramaren linnan rakennutti arkkiherttua Maximilian, josta tuli myöhemmin Meksikon keisari.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-maakunta2-friuli-venezia-giulia-v-8a67e4eb.jpg',
