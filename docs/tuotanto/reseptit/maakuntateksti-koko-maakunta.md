@@ -1,6 +1,6 @@
 # Resepti: maakuntatekstit koko maakunnasta (SK 28.10.2026)
 
-Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti kertoo koko maakunnasta (ensin millainen maakunta on nyt; Hiljainen kansa tms. enintään yksityiskohtana). KK:n kuittaama malli: Suomi (PR 5391, mergattu). Odottavat PR:t: Ruotsi 5449, Norja 5452, Tanska 5454, Viro 5455. PT:n järjestys (28.10.): 1) matkan kohdemaat (laudan pysäkkien maat: Ranska, Britannia, Alankomaat, Italia, Saksa jne.), 2) muut Euroopan maat suurimmasta pienimpään; muut maanosat EIVÄT ennen omistajan päätöstä (19.10.). Maa per PR; KK kuittaa useamman kerralla.
+Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti kertoo koko maakunnasta (ensin millainen maakunta on nyt; Hiljainen kansa tms. enintään yksityiskohtana). KK:n kuittaama malli: Suomi (PR 5391, mergattu). Odottavat PR:t: Ruotsi 5449, Norja 5452, Tanska 5454, Viro 5455; kohdemaat 28.10.: Ranska 5458, Britannia 5460, Alankomaat 5461, Italia 5462, Saksa 5463, Espanja 5464, Portugali 5465, Belgia 5466, Itävalta 5467. PT:n järjestys (28.10.): 1) matkan kohdemaat (laudan pysäkkien maat: Ranska, Britannia, Alankomaat, Italia, Saksa jne.), 2) muut Euroopan maat suurimmasta pienimpään; muut maanosat EIVÄT ennen omistajan päätöstä (19.10.). Maa per PR; KK kuittaa useamman kerralla.
 
 ## Työtapa (maa kerrallaan)
 1. Worktree: `tools/uusi-worktree.sh sisaltokirjuri maakunnat-<maa>`. Avaimet: `import { MAAKUNTIEN_LUONNEHDINNAT as M } from './js/packs/maakunnat-luonnehdinnat.js'` ja `Object.keys(M.<ISO3>)`.
@@ -17,6 +17,13 @@ Omistajan päätös 27.10.2026 klo 22.36: jokainen maakuntakortin `pitka`-teksti
 - "lääni" (Ruotsi, Norja), "maakunta" (Suomi, Viro); alueen nimi fi-Wikipedian muodossa.
 - Kohdekarttapisteiden testit: tests/karttareunus.test.mjs ja tests/kohdekarttavarat.test.mjs (siirretty piste ei saa pudota lepotilan näkymän ulkopuolelle).
 - Älä käytä `git stash` (jaettu pino).
+
+## Opitut asiat 28.10. (kohdemaat Ranska–Itävalta)
+- Laudan pysäkkimaat: js/packs/europe-countries.js EUROPE_CITY_COUNTRY. Tehty: FRA, GBR, NLD, ITA, DEU, ESP, PRT, BEL, AUT. Jäljellä pysäkkimaita (suurimmasta alueluvusta): CHE 26, IRL 30, ROU 42 (+MDA 39), UKR 27, BGR 28, SRB 24, HUN 20, HRV 20, POL 16, GRC 14, CZE 14, SVN 12, SVK 8, ISL 9, MNE 21, MKD 8, ALB 12, MLT 6, CYP 6, LTU 10, LVA 5, BLR 7, LUX 3, TUR/RUS (Euroopan ja Aasian raja: kysy PT:ltä). Sen jälkeen muut Euroopan maat.
+- Agenttijako: 6–8 aluetta per Sonnet-agentti; omat kirjoitusasuohjeet maalle (alue/osavaltio/piirikunta/provinssi, fi-Wikipedian nimi) agentin kehotteeseen. Pienet maat (1–2 agenttia) yhteen lukijaan.
+- Tuore lukija (Sonnet, ei verkkoa) arvailee faktoja: tarkka luku, jonka lähteestä ei ole varmaa (kuntamäärä, pinta-ala, vierailijamäärä, "ainoa/suurin"), poistetaan tai pehmennetään; älä korjaa arvauksella.
+- Johdonmukaisuus: asukasluvut samasta vuodesta koko maassa (Portugalissa väestönlaskenta 2021, ei sekaisin arvioiden kanssa); "maakunta" vain jos se tarkoittaa alueen alajakoa (Espanja: alueet = itsehallintoalue/alue, provincia = maakunta); Belgia: Vallonia (ei Waloonia), Maas-joki; vuosivälit tankoviivalla ”1739–1743”, päivät ”6.–14.”.
+- Skriptit tiedostoon (ei node -e eikä zsh-laajennuksia kuten ${c^^}); kuten työkalu maakuntateksti-aseta.mjs.
 
 ## Agenttiohje (kopioi tiedostoon; vaihda <oma worktree> ja MAATUNNUS)
 
