@@ -1,0 +1,189 @@
+{
+  "createdAt": "2026-10-28T13:12:01.286289+00:00",
+  "status": "LOCAL_QA_FOR_RECEIVER_REVIEW",
+  "order": 1208,
+  "newTripoCalls": 0,
+  "credits": 0,
+  "sourceDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-robe-diagnosis-20261028/sources",
+  "candidateDirectory": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/work/receiver-handhold-v13",
+  "files": [
+    {
+      "path": "CLAUDE-TOIMITUS.md",
+      "bytes": 3025,
+      "sha256": "847daece1981a62b2f2fdeca1657c0cdb16f62d6a85828dcec64923f3f23c548",
+      "storedOnT7": true
+    },
+    {
+      "path": "KAYTTO.md",
+      "bytes": 4063,
+      "sha256": "0786a85cbb8fe48f1bd220c3b3f194f479f22938aa834a6116f093dc18e40edf",
+      "storedOnT7": true
+    },
+    {
+      "path": "models/puyi-perus.glb",
+      "bytes": 17341948,
+      "sha256": "91ca4439d66e763fffa35bb2b6aade13a94cb2ef967e7c1bad55d770f038b6e7",
+      "storedOnT7": true
+    },
+    {
+      "path": "models/puyi.glb",
+      "bytes": 15847604,
+      "sha256": "5df8967fa088fade24383ced01b454efc1b0f2a3f1b21d1a09a296a2373de297",
+      "storedOnT7": true
+    },
+    {
+      "path": "morph/perus/jump-forward-morph.bin",
+      "bytes": 1197552,
+      "sha256": "59ff33c27d95b0900c84d27c1247a05fd53eb0f8c75a86dab5a898a067a0293a",
+      "storedOnT7": true
+    },
+    {
+      "path": "morph/perus/morph-manifest.json",
+      "bytes": 3177,
+      "sha256": "770a430bd7f4a492837f16edcbc8a50dcfb1238fbc42e8c8ac436a2de9af7ac9",
+      "storedOnT7": true
+    },
+    {
+      "path": "morph/viitta/jump-forward-morph.bin",
+      "bytes": 643152,
+      "sha256": "38d917f5c50d564d6c4b8ddc27101b45cb54b5a491ece7d06691a5d1a7b69aeb",
+      "storedOnT7": true
+    },
+    {
+      "path": "morph/viitta/morph-manifest.json",
+      "bytes": 3094,
+      "sha256": "526d48f3054a9f54b73d6cba591641dbc4c9959a25d95c0c488561d707c82fd3",
+      "storedOnT7": true
+    },
+    {
+      "path": "motions/puyi-liikkeet.glb",
+      "bytes": 5625240,
+      "sha256": "a912a763a8c215a006438a2f9cbcceb6dc0707a1a20f606c5bb3f045966990ec",
+      "storedOnT7": true
+    },
+    {
+      "path": "motions/puyi-perus-liikkeet.glb",
+      "bytes": 3289216,
+      "sha256": "d4777b96617a2d24e9d9af46b6d8473247a8b499dec7438cd515e05d654f431d",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/INSTALLER-QA.json",
+      "bytes": 925,
+      "sha256": "3097ca47d1ef610c9bb73359945f4508a6b3bd36bd47bfe156616fde06c3ceaa",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/OBSTACLE-LOOP-QA.json",
+      "bytes": 1200,
+      "sha256": "7e3e5f53e9a84c05cac1bb948ef60cc97493d45b22400b5043145e83c6bb52cd",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-BUILD-QA.json",
+      "bytes": 1685,
+      "sha256": "b3afe133f7ac1d693d31ac950bf920d0362fed8a38c1d1a4e2fced1ee4ddd7cd",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-ROUNDTRIP-QA.json",
+      "bytes": 12521,
+      "sha256": "302c8fafa450c33f2176632da6920e18ae1f351bc6f8d94beaa059764f0dc33b",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-jump-edesta.png",
+      "bytes": 181074,
+      "sha256": "0ec11cf7fdd6b5f8196b3016763893c471ab2e6c976c79176b408f0f5c6dc4a9",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-jump-vasemmalta.png",
+      "bytes": 195587,
+      "sha256": "b97c768eb9efd55736409972eea69d79c50d4c8159be2cd5fa53efa8b669b388",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-ote-ja-irrotus.png",
+      "bytes": 660423,
+      "sha256": "84cd9afac56ea872430dc61e6ec65b2766b593f0d065fa41f7fcef84cca78162",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-pelivertailu-edesta.png",
+      "bytes": 677898,
+      "sha256": "3deae77e7298b4c5058345c97afce0e7d4361d8cd82d3f28d806b2c6e76417fd",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-pelivertailu-vasen.png",
+      "bytes": 610608,
+      "sha256": "51871d8a9d265455c7ce6e38f31fb03d1d58d53f6f3a7953de81183e6ebe847a",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-stairs-ote.png",
+      "bytes": 384341,
+      "sha256": "3779b5a71963a2cfbf10def507bb34881ecc84f3e4599d476de34c93d4ffe5e1",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/perus-stairs.png",
+      "bytes": 187019,
+      "sha256": "38e8180e70e253a89e14941008f4b77421c08446aca6e03a574c0ede49a9b97d",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-BUILD-QA.json",
+      "bytes": 1690,
+      "sha256": "8be42c8017b34840bbdedbe4c69d2b6015a48b7d7f05331525ce02e5ce5dc366",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-ROUNDTRIP-QA.json",
+      "bytes": 12458,
+      "sha256": "7f7f0d7507ceb6da9905863203e4346c89d1e2ade1af1fd3f79d6e3ff01128ac",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-jump-edesta.png",
+      "bytes": 203888,
+      "sha256": "ae63fcceb02c22ce251c4f0f73ea45fbea4019feb7bcf605ec31fa0b267dfd23",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-jump-vasemmalta.png",
+      "bytes": 227875,
+      "sha256": "cff0edde3ea2b01457c0e71d41a1d7c5a45d0c23e799535a17d90ffacd428e6f",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-ote-ja-irrotus.png",
+      "bytes": 657630,
+      "sha256": "b427e5186eeca83d7a0902520ac78a5d7176bf644e1b82c0e3ccb0b4ad923633",
+      "storedOnT7": true
+    },
+    {
+      "path": "qa/viitta-stairs.png",
+      "bytes": 200912,
+      "sha256": "c46ca0c610a59d2ab41cea66faf5e93af4bf51e39879f7c29be6ff34c8bb8c5b",
+      "storedOnT7": true
+    },
+    {
+      "path": "tools/apply_robe_handhold.py",
+      "bytes": 4619,
+      "sha256": "e30525a023a2c5b709276bad0e684d276ea5f4f5e1fdb05085794a6be2e0fab9",
+      "storedOnT7": true
+    }
+  ],
+  "receiverAccepted": false,
+  "gameVerified": false,
+  "ownerAccepted": false,
+  "mainGeometryAndOldMorphUnchanged": true,
+  "newMorph": "robeHemJumpForward",
+  "knownLimits": [
+    "Strict0.10mm local floor tolerance fails unchanged cape source by0.16mm; no regression",
+    "Open folded cloth contact probe is not whole-body collision certification",
+    "Actual receiver game image comparison pending"
+  ]
+}

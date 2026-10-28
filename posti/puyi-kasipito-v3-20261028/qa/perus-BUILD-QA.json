@@ -1,0 +1,48 @@
+{
+  "variant": "perus",
+  "sourceMainSHA256": "93448f09d4142620b93e4130ce3726e2d7c5140749251e5dd281ce2602454f21",
+  "sourceMotionSHA256": "3e673c37995a25330e01d13944200d05ceae708c4531a84a698c794edae6e22d",
+  "modelSHA256": "40e2cb14dccfc38f9d60d4664d06356960fdcdedc1dad33d012f808c875415be",
+  "motionSHA256": "d4777b96617a2d24e9d9af46b6d8473247a8b499dec7438cd515e05d654f431d",
+  "originalMorphDeltaMaxDiff": 7.44680167530376e-09,
+  "originalMorphNormalMaxDiff": 5.8169961736354026e-08,
+  "clips": [
+    {
+      "clip": "jump_robe",
+      "samples": 240,
+      "durationS": 0.9599999785423279,
+      "fullContactRangeS": [
+        0.12,
+        0.72
+      ],
+      "maxFullContactArmReachM": 0.0,
+      "maxFullContactPadToEdgeM": 4.683973691631654e-08,
+      "maxFullContactThumbReachM": 0.0,
+      "maxFullContactThumbTargetGapM": 4.2164710344592644e-08,
+      "maxAngularStep240HzDeg": 10.650733971670828,
+      "worstAngularBone": "mixamorig:LeftHand",
+      "worstAngularTime": 0.21704347340956975,
+      "numericPass": true
+    },
+    {
+      "clip": "stairs_robe",
+      "samples": 159,
+      "durationS": 0.6578947305679321,
+      "fullContactRangeS": [
+        0.0,
+        0.6578947305679321
+      ],
+      "maxFullContactArmReachM": 0.0,
+      "maxFullContactPadToEdgeM": 4.56420441608175e-08,
+      "maxFullContactThumbReachM": 0.0,
+      "maxFullContactThumbTargetGapM": 3.3801851738497783e-09,
+      "maxAngularStep240HzDeg": 7.815958107372191,
+      "worstAngularBone": "mixamorig:LeftHand",
+      "worstAngularTime": 0.6204197142697588,
+      "numericPass": true
+    }
+  ],
+  "status": "NUMERIC_PASS_VISUAL_AND_ROUNDTRIP_PENDING",
+  "newTripoCalls": 0,
+  "credits": 0
+}

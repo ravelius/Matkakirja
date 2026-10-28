@@ -1,0 +1,22 @@
+[
+  {
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-handhold-review-v3/models/puyi-perus.glb",
+    "sha256": "91ca4439d66e763fffa35bb2b6aade13a94cb2ef967e7c1bad55d770f038b6e7",
+    "oldAccessorArraysByteExact": true,
+    "existingMorphPreserved": true,
+    "mainAnimationsUnchanged": true,
+    "newMorph": "robeHemJumpForward",
+    "animationWeightsAdded": false,
+    "runtimeVerified": false
+  },
+  {
+    "output": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/juoksupeli-liikkeet-20261027/robe-handhold-review-v3/models/puyi.glb",
+    "sha256": "5df8967fa088fade24383ced01b454efc1b0f2a3f1b21d1a09a296a2373de297",
+    "oldAccessorArraysByteExact": true,
+    "existingMorphPreserved": true,
+    "mainAnimationsUnchanged": true,
+    "newMorph": "robeHemJumpForward",
+    "animationWeightsAdded": false,
+    "runtimeVerified": false
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "variant": "viitta",
+  "sourceMainSHA256": "3e8e0724dc4ddee52875bedfeb552dbe3908c7b4975e15a6fffd5f8104c1e634",
+  "sourceMotionSHA256": "636dd50cbbe504dea80407c4d2dddc76126b9e09cf32449566fd1a2a0a5064b5",
+  "modelSHA256": "339baf29790773982da0d7a4f7e1449845206fd5c2547fbac9fa89569614953e",
+  "motionSHA256": "a912a763a8c215a006438a2f9cbcceb6dc0707a1a20f606c5bb3f045966990ec",
+  "originalMorphDeltaMaxDiff": 1.4862492125899962e-08,
+  "originalMorphNormalMaxDiff": 5.8015813264589156e-08,
+  "clips": [
+    {
+      "clip": "jump_robe",
+      "samples": 240,
+      "durationS": 0.9599999785423279,
+      "fullContactRangeS": [
+        0.12,
+        0.72
+      ],
+      "maxFullContactArmReachM": 0.0,
+      "maxFullContactPadToEdgeM": 3.8155621144891315e-08,
+      "maxFullContactThumbReachM": 0.0,
+      "maxFullContactThumbTargetGapM": 1.4580697696419646e-08,
+      "maxAngularStep240HzDeg": 10.317324833731096,
+      "worstAngularBone": "mixamorig:LeftHand",
+      "worstAngularTime": 0.6427825943283413,
+      "numericPass": true
+    },
+    {
+      "clip": "stairs_robe",
+      "samples": 322,
+      "durationS": 1.3377193212509155,
+      "fullContactRangeS": [
+        0.0,
+        1.3377193212509155
+      ],
+      "maxFullContactArmReachM": 0.0,
+      "maxFullContactPadToEdgeM": 1.9302288097965034e-08,
+      "maxFullContactThumbReachM": 0.0,
+      "maxFullContactThumbTargetGapM": 9.583583308815647e-09,
+      "maxAngularStep240HzDeg": 11.325873533093587,
+      "worstAngularBone": "mixamorig:LeftHand",
+      "worstAngularTime": 0.6626086357597992,
+      "numericPass": true
+    }
+  ],
+  "status": "NUMERIC_PASS_VISUAL_AND_ROUNDTRIP_PENDING",
+  "newTripoCalls": 0,
+  "credits": 0
+}

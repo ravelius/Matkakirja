@@ -1,0 +1,565 @@
+{
+  "variant": "viitta",
+  "sourceAllAccessorsByteExact": true,
+  "unchangedMotionChannelsByteExact": true,
+  "mainAnimationsUnchanged": true,
+  "changedChannels": [
+    [
+      "jump_robe",
+      "mixamorig:LeftShoulder",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftArm",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftForeArm",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHand",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandIndex1",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandIndex2",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandIndex3",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandIndex4",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandMiddle1",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandMiddle2",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandMiddle3",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandMiddle4",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandPinky1",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandPinky2",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandPinky3",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandPinky4",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandRing1",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandRing2",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandRing3",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandRing4",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandThumb1",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandThumb2",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandThumb3",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "mixamorig:LeftHandThumb4",
+      "rotation"
+    ],
+    [
+      "jump_robe",
+      "Puyi segmented body and cape",
+      "weights"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftShoulder",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftArm",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftForeArm",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHand",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandIndex1",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandIndex2",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandIndex3",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandIndex4",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandMiddle1",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandMiddle2",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandMiddle3",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandMiddle4",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandPinky1",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandPinky2",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandPinky3",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandPinky4",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandRing1",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandRing2",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandRing3",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandRing4",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandThumb1",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandThumb2",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandThumb3",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "mixamorig:LeftHandThumb4",
+      "rotation"
+    ],
+    [
+      "stairs_robe",
+      "Puyi segmented body and cape",
+      "weights"
+    ]
+  ],
+  "maximumSkinnedRoundtripErrorM": 7.666424441632458e-05,
+  "unchangedPoseChannelMaxError": 0.0,
+  "maxFullContactIndexPadGapM": 9.88757507834952e-06,
+  "poses": [
+    {
+      "clip": "jump_robe",
+      "time": 0.12,
+      "skinnedRoundtripMaxM": 1.332684737564982e-08,
+      "indexPadContactGapM": 1.0967254761300787e-08,
+      "fullContact": true,
+      "morphWeights": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.3,
+      "skinnedRoundtripMaxM": 8.356828340438938e-09,
+      "indexPadContactGapM": 2.0920601436922554e-08,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.403,
+      "skinnedRoundtripMaxM": 1.3520776636744003e-05,
+      "indexPadContactGapM": 9.88757507834952e-06,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.46,
+      "skinnedRoundtripMaxM": 6.600120394661957e-09,
+      "indexPadContactGapM": 3.1349709638491784e-08,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.516,
+      "skinnedRoundtripMaxM": 1.2384076682692147e-05,
+      "indexPadContactGapM": 2.8512478425168256e-06,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.62,
+      "skinnedRoundtripMaxM": 5.568916661147227e-09,
+      "indexPadContactGapM": 1.0333531566356668e-08,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.69,
+      "skinnedRoundtripMaxM": 1.0279940426682899e-08,
+      "indexPadContactGapM": 3.798518403898806e-08,
+      "fullContact": true,
+      "morphWeights": [
+        0.16308000683784485,
+        0.16308000683784485
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.693,
+      "skinnedRoundtripMaxM": 2.2820817490387668e-05,
+      "indexPadContactGapM": 8.243333036003794e-06,
+      "fullContact": true,
+      "morphWeights": [
+        0.12586958628933642,
+        0.12586958628933642
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.72,
+      "skinnedRoundtripMaxM": 2.050656894292402e-08,
+      "indexPadContactGapM": 2.98336155182616e-08,
+      "fullContact": true,
+      "morphWeights": [
+        6.661338147750939e-16,
+        6.661338147750939e-16
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.76,
+      "skinnedRoundtripMaxM": 7.666424441632458e-05,
+      "indexPadContactGapM": 0.12030630795310031,
+      "fullContact": false,
+      "morphWeights": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.84,
+      "skinnedRoundtripMaxM": 9.295826386424011e-09,
+      "indexPadContactGapM": 0.24861876417765225,
+      "fullContact": false,
+      "morphWeights": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 0.0,
+      "skinnedRoundtripMaxM": 1.3651760749633368e-08,
+      "indexPadContactGapM": 2.5580574680560506e-08,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 0.2,
+      "skinnedRoundtripMaxM": 1.404912473829123e-06,
+      "indexPadContactGapM": 1.3428791944437398e-06,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 0.4,
+      "skinnedRoundtripMaxM": 5.138085684364135e-06,
+      "indexPadContactGapM": 5.994237225771814e-06,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 1.3377193212509155,
+      "skinnedRoundtripMaxM": 2.6711912404220328e-08,
+      "indexPadContactGapM": 4.098114918635505e-08,
+      "fullContact": true,
+      "morphWeights": [
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "surfaceProbes": [
+    {
+      "clip": "jump_robe",
+      "time": 0.3,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 3.5407432984881776e-05,
+        "furtherThan1cmBehind": 60,
+        "negativeOrientedMaxM": 0.04688773998134362
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.00010437005744241053,
+        "furtherThan1cmBehind": 10,
+        "negativeOrientedMaxM": 0.01600041158160317
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 3.5407432984881776e-05,
+        "furtherThan1cmBehind": 24,
+        "negativeOrientedMaxM": 0.026153197047486754
+      }
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.46,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 8.357743096597562e-06,
+        "furtherThan1cmBehind": 52,
+        "negativeOrientedMaxM": 0.024582202554460288
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.00026243885373412423,
+        "furtherThan1cmBehind": 5,
+        "negativeOrientedMaxM": 0.014768084129881155
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 4.003240384190497e-05,
+        "furtherThan1cmBehind": 21,
+        "negativeOrientedMaxM": 0.024045946047004267
+      }
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.62,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 8.507941990002973e-05,
+        "furtherThan1cmBehind": 59,
+        "negativeOrientedMaxM": 0.04607948044112949
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.0004371123148010522,
+        "furtherThan1cmBehind": 8,
+        "negativeOrientedMaxM": 0.014786770110387065
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 0.0001044495338196577,
+        "furtherThan1cmBehind": 24,
+        "negativeOrientedMaxM": 0.02656756768018341
+      }
+    },
+    {
+      "clip": "jump_robe",
+      "time": 0.69,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 7.044803795252554e-05,
+        "furtherThan1cmBehind": 39,
+        "negativeOrientedMaxM": 0.02179684100598197
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.00010817404511775981,
+        "furtherThan1cmBehind": 19,
+        "negativeOrientedMaxM": 0.02179684100598197
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 7.044803795252554e-05,
+        "furtherThan1cmBehind": 16,
+        "negativeOrientedMaxM": 0.018753317837695908
+      }
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 0.0,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 9.107750958430895e-05,
+        "furtherThan1cmBehind": 55,
+        "negativeOrientedMaxM": 0.03976639356156058
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.00031437962779387336,
+        "furtherThan1cmBehind": 0,
+        "negativeOrientedMaxM": 0.001558713836583109
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 0.0013454496609887948,
+        "furtherThan1cmBehind": 24,
+        "negativeOrientedMaxM": 0.025815172859504572
+      }
+    },
+    {
+      "clip": "stairs_robe",
+      "time": 0.2,
+      "LeftHand": {
+        "vertices": 443,
+        "closestSurfaceM": 0.00017197061177226611,
+        "furtherThan1cmBehind": 74,
+        "negativeOrientedMaxM": 0.03758103138251405
+      },
+      "LeftHandThumb": {
+        "vertices": 89,
+        "closestSurfaceM": 0.0033460597714304856,
+        "furtherThan1cmBehind": 0,
+        "negativeOrientedMaxM": 0.0
+      },
+      "LeftHandIndex": {
+        "vertices": 66,
+        "closestSurfaceM": 0.0016015735936031103,
+        "furtherThan1cmBehind": 22,
+        "negativeOrientedMaxM": 0.024120582518975205
+      }
+    }
+  ],
+  "surfaceProbeLimit": "Open cloth and curved folds make oriented signs ambiguous; this is not a whole-body watertight collision certificate.",
+  "runtimeVerified": false,
+  "numericRoundtripPass": true
+}

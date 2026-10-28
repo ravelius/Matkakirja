@@ -1,0 +1,34 @@
+[
+  {
+    "variant": "perus",
+    "samples": 97,
+    "localReferenceObstacleMaxTriangleHits": 0,
+    "originalReceiverObstacleMaxTriangleHits": 0,
+    "floorMinimumM": 0.0009999915122354116,
+    "installerVsCandidateSkinnedMaxM": 0,
+    "stairsLoopChannelDelta": 1.3232704088039782e-07,
+    "scope": "Uses existing local reference vault root curve and obstacle, not the game controller.",
+    "pass": true,
+    "originalReceiverFloorMinimumM": 0.0009999915122354116,
+    "feetUnchangedMaxM": 0,
+    "noNewFloorRegression": true,
+    "strictFloorToleranceM": 0.0001,
+    "regressionPass": true
+  },
+  {
+    "variant": "viitta",
+    "samples": 97,
+    "localReferenceObstacleMaxTriangleHits": 0,
+    "originalReceiverObstacleMaxTriangleHits": 0,
+    "floorMinimumM": -0.00016037663630993042,
+    "installerVsCandidateSkinnedMaxM": 0,
+    "stairsLoopChannelDelta": 5.605769573535646e-07,
+    "scope": "Uses existing local reference vault root curve and obstacle, not the game controller.",
+    "pass": false,
+    "originalReceiverFloorMinimumM": -0.00016037663630993042,
+    "feetUnchangedMaxM": 0,
+    "noNewFloorRegression": true,
+    "strictFloorToleranceM": 0.0001,
+    "regressionPass": true
+  }
+]
