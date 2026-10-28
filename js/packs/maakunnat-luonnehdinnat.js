@@ -6275,7 +6275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ROU: {
     Alba: {
       lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
-      pitka: `Alba Iulia on Romanian kansallisen yhtenäisyyden symboli: kaupungin 1700-luvulla rakennettu tähtilinnoitus houkuttelee vuosittain satojatuhansia kävijöitä, ja sen suojissa julistettiin 1918 Transilvanian liittyminen Romaniaan. Ennen tätä alue kuului vuosisatoja Unkarin kuningaskuntaan, ja lähellä sijaitseva Blaj tunnettiin ”Pienenä Roomana”, Transilvanian romanialaisten kreikkalaiskatolisten kirkollisena ja sivistyksellisenä keskuksena. Kaupungin kaduilla risteilevät nykyään barokkiaikaiset muurit ja museokokoelmat, joissa kansallinen historia on läsnä joka käänteessä.`,
+      pitka: `Alban piirikunta on vuoristoinen piirikunta Transilvaniassa, Romanian länsi-keskiosassa. Siellä asuu noin 330 000 ihmistä. Piirikunnan keskus Alba Iulia on Mureș-joen varrella, ja se oli Transilvanian ruhtinaskunnan pääkaupunki 1500- ja 1600-luvuilla. Mureșin sivujokia ovat Târnava, Sebeș ja Arieș. Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan. Alba Iulian Alba Carolina -linnoitus rakennettiin vuosina 1716–1735. Apusenivuorilla on Scărișoaran jääluola, josta on vanhin maininta vuodelta 1863. Siellä sijaitsee myös Țara Moților, alue, jolla on vahvat romanialaiset perinteet. Roșia Montanăn kylässä on roomalaisajan kultakaivoksia, ja paikka tunnettiin silloin nimellä Alburnus Maior.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-alba-v-bf9ad83b.jpg',
@@ -6298,7 +6298,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Arad: {
       lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
-      pitka: `Aradin keskustaa hallitsee 1700-luvulla rakennettu tähdenmuotoinen linnoitus, joka vartioi yhä Maros-joen ylityspaikkaa ja on osin edelleen armeijan käytössä. Kaupunki oli 1800-luvun lopulla Habsburgien monarkian liikenteellisiä edelläkävijöitä: sen hevosvetoinen raitiotie, avattu 1869, oli yksi koko valtakunnan ensimmäisistä kaupunkiraitioteistä. Nykyään Arad on säilyttänyt asemansa tärkeänä liikenteen risteyskohtana Romanian länsirajalla, ja rautatieyhteydet Budapestiin muistuttavat sen vanhasta roolista alueen kaupallisena solmukohtana.`,
+      pitka: `Aradin piirikunta on Romanian länsiosassa Unkarin rajalla, ja siellä asuu noin 410 000 ihmistä. Itäosa on kukkulaista ja vuoristoista, länsiosa tasankoa. Piirikunnassa on myös Mureșin tulva-alueen luonnonpuisto. Aradin tasankoa pidetään tärkeänä viljan ja vihannesten tuotantoalueena. Piirikunnan keskus Arad on Mureș-joen varrella, ja kaupungissa asuu noin 145 000 ihmistä. Aradissa valmistettiin vuosina 1909–1914 Marta-merkkisiä autoja, ja kaupungin tunnetuimpia rakennuksia on uusgoottilainen Punainen kirkko. Kaupungissa teloitettiin 6. lokakuuta 1849 kolmetoista kapinallista unkarilaiskenraalia. Lipovan ja Moneasan kylpylöissä on kivennäisvesiä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-arad-v-77305a37.jpg',
@@ -6321,7 +6321,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Arges: {
       lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
-      pitka: `Curtea de Argeșin luostarikirkko on Wallachian ruhtinaiden 1500-luvulla rakennuttama helmi, joka toimii nykyään Romanian kuningassuvun leposijana ja vilkkaana pyhiinvaellus- ja matkailukohteena. Ruhtinas Carol I tilasi kirkolle 1875 perinpohjaisen kunnostuksen ranskalaiselta arkkitehti André Lecomte du Noüyltä, jolloin sisätilat ja freskot uusittiin näyttävän uusbysanttilaisiksi. Piteștin kaupungin liepeillä sijaitseva Dacian autotehdas on nykyään yksi Romanian suurimpia työllistäjiä, ja se muistuttaa maakunnan modernista teollisesta puolesta perinteisen kirkkomaiseman rinnalla.`,
+      pitka: `Argeșin piirikunta on Etelä-Romaniassa Muntenian alueella, joka kuuluu historialliseen Valakiaan. Siellä asuu noin 570 000 ihmistä. Pohjoisessa kohoavat Făgărașin vuoret, joissa on Romanian korkein vuorenhuippu Moldoveanu (2 544 metriä). Făgărașin vuorten yli kulkee Transfăgărășan-vuoristotie, joka rakennettiin vuosina 1970–1974. Piirikunnan keskus Pitești on Argeș-joen varrella ja mainitaan ensimmäisen kerran 1300-luvulla. Mioveni-kaupungissa on Dacia-autotehdas. Curtea de Argeșin ortodoksinen katedraali on rakennettu 1500-luvun alussa ruhtinas Neagoe Basarabin aikana. Argeș-joella on Vidrarun pato, joka valmistui vuonna 1966 ja on 166 metriä korkea. Poenarin linnan rauniot kuuluivat Valakian ruhtinaalle Vlad Seivästäjälle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
@@ -6344,7 +6344,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bacau: {
       lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
-      pitka: `Bacăun seutu tunnetaan symbolistirunoilija George Bacovian synkkäsävyisistä runoista, jotka ovat osa Romanian kirjallisuuden kaanonia ja tekevät kaupungista kirjallisen pyhiinvaelluskohteen. Lähellä Moineștiä sijaitsevan Lucăceștin kylän öljylähteet ovat pumpanneet raakaöljyä maan pinnalle 1857 lähtien, ja Romania oli maailman ensimmäinen maa, joka rekisteröi öljyntuotantonsa virallisesti. Vaatimattomista käsityöpajoista kasvoi vuosisadan vaihteeseen tultaessa teollisen mittakaavan öljyteollisuus, jonka juuret näkyvät yhä seudun maisemassa.`,
+      pitka: `Bacăun piirikunta on Romanian Moldovan historiallisella alueella idässä. Romanian Moldova ei ole sama asia kuin Moldovan tasavalta. Piirikunnassa asuu noin 600 000 ihmistä, ja länsiosassa kohoavat Itäkarpaattien vuoret, joissa elää karhuja ja susia. Piirikunnan keskus Bacău on Karpaattien juurella Bistrița-joen varrella, ja kaupungissa asuu noin 136 000 ihmistä. Ghimeșin solaa pitkin pääsee Transilvaniaan. Alue oli kommunismin aikana yksi Romanian teollistuneimmista, ja Onești-kaupungissa on öljynjalostamo. Târgu Ocnan kaupungissa on suolakaivos, joka on 240 metrin syvyydessä. Slănic-Moldova on piirikunnan kylpyläkaupunki.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-bacau-v-75080593.jpg',
@@ -6367,7 +6367,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bihor: {
       lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
-      pitka: `Bihorin pääkaupunki Oradea on nykyään yksi Euroopan parhaiten säilyneistä art nouveau -kaupungeista, ja sen kadut ovat täynnä unkarilaisten ja itävaltalaisten arkkitehtien suunnittelemia kukka- ja liekkikoristeisia julkisivuja. Komea keskusta syntyi vasta vuosisadan vaihteessa, kun kaupunki oli vuosisatoja kuulunut Unkarin kuningaskuntaan vaatimattomampana, pääosin barokkityylisenä piispankaupunkina. Bihorin lääni tunnetaan nykyään myös lämpimistä kylpylälähteistään, jotka pysyvät ympäri vuoden lämpiminä ja houkuttelevat kylpijöitä joka vuodenaikana.`,
+      pitka: `Bihorin piirikunta on Romanian länsiosassa Unkarin rajalla Crișanan historiallisella alueella. Siellä asuu noin 550 000 ihmistä. Idässä ovat Apusenivuoret, ja länteen päin maasto laskee tasangoksi. Vuoristossa ovat myös Stâna de Valen vuoristokeskus ja Padișin luolat. Piirikunnan keskus Oradea on Crișul Repede -joen rannalla, ja kaupungissa asuu noin 183 000 ihmistä. Oradean unkarinkielinen nimi on Nagyvárad, eli suuri linnake. Kaupungissa on keskiaikainen linnoitus ja paljon jugendtyylistä rakennuskantaa. Lähellä on Băile Felixin lämpökylpylä. Chișcăun kylän lähellä on Karhuluola, jonka nimi tulee sieltä löytyneistä sukupuuttoon kuolleiden luolakarhujen luista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
@@ -6390,7 +6390,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bistrita-Nasaud': {
       lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
-      pitka: `Bistrița-Năsăudin vuoristoalueet, erityisesti suojellut Rodnan vuoret, houkuttelevat nykyään vaeltajia ja luonnonystäviä ympäri vuoden. Bistrițan kaupungissa kohoaa saksilaisten 1500-luvulla rakentama evankelinen kirkontorni, yksi Transilvanian korkeimmista, muistona alueen saksilaisesta asutushistoriasta. Näsăudin seudun romanialaiskylissä elää yhä vahva muisto Habsburgien rajavartiorykmentistä, joka hallinnoi aluetta sotilaallisesti aina vuoteen 1851 asti ennen siviilihallintoon siirtymistä.`,
+      pitka: `Bistrița-Năsăudin piirikunta on Transilvanian pohjoisosassa, ja siellä asuu noin 300 000 ihmistä. Kolmasosa alueesta on Itäkarpaattien vuoristoa, johon kuuluvat muun muassa Rodnan ja Călimanin vuoret. Rodnan vuoristossa on Itäkarpaattien korkein huippu Pietrosul Rodnei (2 303 metriä). Piirikunnan keskus Bistrița on Bistrița-joen varrella, ja kaupungissa asuu noin 79 000 ihmistä. Transilvaniansaksalaiset asettuivat alueelle vuonna 1206, ja kaupunki sai vapaan kuninkaallisen kaupungin aseman vuonna 1330. Bram Stokerin Dracula-romaanissa Jonathan Harker vierailee Bistritzissä, joka on kaupungin saksankielinen nimi. Kirjailija Liviu Rebreanu syntyi vuonna 1885 Târlișuan paikkakunnalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
@@ -6413,7 +6413,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Botosani: {
       lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
-      pitka: `Botoșanin lääni on yksi Romanian maatalousvaltaisimmista alueista, ja sen tasaiset pellot ja joenvarret ovat tärkeitä muuttolintujen pesimäalueita. Läänin Liveni-kylässä syntyi 1881 säveltäjä George Enescu, viulunvirtuoosi ja kapellimestari, jonka musiikki tunnetaan nykyään ympäri maailman ja jonka mukaan on nimetty Bukarestin konserttisali ja kansainvälinen musiikkifestivaali. Kylä on nykyään nimetty hänen mukaansa, ja se on suosittu kohde musiikinystäville.`,
+      pitka: `Botoșanin piirikunta on Romanian koillisosassa Moldovan historiallisella alueella, Ukrainan ja Moldovan tasavallan rajalla. Siellä asuu noin 390 000 ihmistä. Alue on Siret- ja Prut-jokien välistä tasankoa, ja piirikunta on pääosin maatalousaluetta. Piirikunnassa on tekstiili-, elintarvike-, lasi- ja posliiniteollisuutta. Piirikunnan keskus Botoșani mainitaan ensimmäisen kerran vuonna 1439, ja Dorohoin kaupunki jo vuonna 1408. Runoilija Mihai Eminescu ja historioitsija Nicolae Iorga ovat kotoisin Botoșanin seudulta. Säveltäjä George Enescu syntyi kylässä, joka on nykyään nimeltään George Enescu ja entiseltä nimeltään Liveni. Prut-joella on Stâncan ja Costeștin pato, joka valmistui vuonna 1978.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
@@ -6436,7 +6436,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Braila: {
       lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
-      pitka: `Brăila on Tonavan tärkeä satamakaupunki, jonka vanha kauppiaskeskusta muistuttaa yhä 1800-luvun kansainvälisestä kukoistuskaudesta, kun kaupunki oli vuodesta 1836 lähtien vapaakauppasatama ja yksi Tonavan vilkkaimmista viljansatamista. Nykyaikaiset betonilaiturit ja jättimäiset viljasiilot, jotka hallitsevat rantaviivaa, rakennutti insinööri Anghel Saligny 1880-luvulla käyttäen Romaniassa ensimmäistä kertaa raudoitettua betonia. Kaupunki on säilyttänyt asemansa tärkeänä Tonavan satamana tähän päivään asti.`,
+      pitka: `Brăilan piirikunta on tasaista viljelyseutua Romanian kaakkoisosassa Tonavan rannalla. Siellä asuu noin 280 000 ihmistä. Suurin osa alueesta on Bărăganin tasankoa, joka on yksi Romanian parhaista viljanviljelyalueista. Tonavan haarojen välissä on Brăilan Suuri saari. Piirikunnan keskus Brăila on tonavasatama, jossa asuu noin 155 000 ihmistä. Keskiajalla se oli Valakian pääsatama, ja 1900-luvulla suurin osa Romanian ulkomaankaupasta kulki sen kautta. Kaupungin keskustassa on 1800-luvun rakennuksia, esimerkiksi kreikkalaisen yhteisön vuosina 1863–1872 rakennuttama kirkko. Piirikunnassa mitattiin 10. elokuuta 1951 Romanian korkein lämpötila, 44,5 astetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-braila-v-f9cb555f.jpg',
@@ -6459,7 +6459,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Brasov: {
       lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
-      pitka: `Brașov — saksaksi Kronstadt — on yksi Romanian suosituimmista matkailukaupungeista, ja sen liepeillä sijaitseva Poiana Brașov on maan suosituin hiihtokeskus. Vanha kaupunki muureineen ja torneineen on säilynyt hyvin transilvaniansaksalaisten kauppiaiden aikaisesta keskiaikaisesta perinnöstä. Kaupungissa perustettiin 1838 Gazeta de Transilvania, ensimmäinen romaniankielinen sanomalehti Transilvaniassa, joka osaltaan sytytti vuoden 1848 kansallisen herätteen ja ilmestyi vuosikymmenten ajan.`,
+      pitka: `Brașovin piirikunta on Karpaattien vuorten ympäröimä alue Transilvaniassa Romanian keskiosassa. Siellä asuu noin 550 000 ihmistä. Piirikunnan keskus Brașov on noin 240 000 asukkaan kaupunki, ja se on noin 166 kilometrin päässä Bukarestista pohjoiseen. Keskiajalla se oli Transilvanian saksalaisten kauppakaupunki, ja sen goottilainen Mustakirkko on saanut nimensä vuoden 1689 suuren tulipalon noesta. Kaupungin vieressä on Poiana Brașovin hiihtokeskus. Branin kylässä on vuonna 1377 rakennettu Branin linna, jota markkinoidaan Draculan linnana. Ei ole näyttöä, että Bram Stoker tunsi linnan kirjoittaessaan Dracula-romaanin vuonna 1897.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
@@ -6482,7 +6482,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
-      pitka: `Bukarest on yli kahden miljoonan asukkaan pääkaupunki, jonka Belle Époque -arkkitehtuuri ja hulppea Parlamentin palatsi hallitsevat katukuvaa. Kaupungin päänäyttämö, vuonna 1852 avattu ”Teatrul cel Mare”, sai 1875 nimensä Kansallisteatteri — nimi, joka on säilynyt siitä lähtien. Cișmigiun puisto on kaupungin vanhin keskustapuisto, ja Romanian Athenaeum-konserttitalo, rakennettu 1880-luvulla, on yksi kaupungin tunnetuimmista maamerkeistä ruhtinas Carol I:n hallituskaudelta periytyvän kaupunkikuvan rinnalla.`,
+      pitka: `Bukarest on Romanian pääkaupunki ja maan suurin kaupunki. Siellä asuu noin 1,7 miljoonaa ihmistä. Kaupunki on hallinnollisesti oma yksikkö, joka vastaa piirikuntaa. Se sijaitsee Romanian kaakkoisosassa Dâmbovița-joen varrella, ja sen pohjoisosassa on useita järviä. Bukarest mainittiin ensimmäisen kerran vuonna 1459, ja Romanian pääkaupungiksi se tuli vuonna 1862. Kaupunkia on kutsuttu lempinimellä Idän Pariisi. Parlamentin palatsi on 84 metriä korkea rakennus, jonka kommunistijohtaja Nicolae Ceaușescu tilasi ja joka valmistui vuonna 1997. Metro avattiin vuonna 1979, ja nykyään siinä on viisi linjaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
@@ -6505,7 +6505,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
-      pitka: `Buzăun läänin kuuluisin aarre, vuonna 1837 löydetty myöhäisantiikin goottilainen kultaesineistö ”Cloșca cu puii de aur”, on nykyään esillä Bukarestin kansallismuseossa yhtenä Romanian arvokkaimmista muinaisjäännöksistä. Vuonna 1875 sirkusakrobaatti nimeltä Dumitru Pantazescu-Popescu varasti aarteen ja tuhosi osan koruista — vain kaksitoista alkuperäisistä kahdestakymmenestäkahdesta kultaesineestä on säilynyt tähän päivään. Löytäjät itse olivat sulattaneet ja myyneet osan koruista hopeana jo ennen kuin viranomaiset saivat tietää löydöstä.`,
+      pitka: `Buzăun piirikunta on Romanian kaakkoisosassa, missä Karpaattien vuoret laskeutuvat kukkuloiden kautta Bărăganin tasangolle. Siellä asuu noin 400 000 ihmistä. Pohjoisosan Buzăun vuorilla on yli 1 700 metrin huippuja. Piirikunnan keskus Buzău on Buzău-joen rannalla noin 100 kilometrin päässä Bukarestista koilliseen, ja siellä risteävät tärkeät rautatiet. Bercan kunnan lähellä on mutatulivuorten luonnonsuojelualue. Ne ovat pieniä kartionmuotoisia kumpuja, joista maakaasu työntää mutaa pintaan. Colțin kylässä on meripihkamuseo. Kukkulaseuduilla viljellään viiniä ja hedelmiä, ja piirikunnasta louhitaan suolaa ja öljyä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
@@ -6528,7 +6528,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Calarasi: {
       lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
-      pitka: `Călărașin lääni on yksi Romanian tärkeimmistä viljanviljelyalueista, ja sen tasaiset pellot ja kastelukanavat tuottavat merkittävän osan maan viljasadosta Baragan-aron laidunmaiden entisillä alueilla, joita Tonavan tulvat muokkasivat vuosittain. Lääninä Călărași on suhteellisen nuori: se syntyi vasta vuonna 1981, kun kommunistihallinto jakoi Ialomițan lääniä kahtia. Kartalla näkyvä raja on siis 1900-luvun lopun hallinnollinen ratkaisu, ei vanha historiallinen rajaviiva.`,
+      pitka: `Călărașin piirikunta on tasaista maanviljelyaluetta Romanian kaakkoisosassa Bulgarian rajalla. Siellä asuu noin 280 000 ihmistä. Alue on enimmäkseen Bărăganin tasangon eteläosaa, ja maatalous on piirikunnan pääelinkeino. Piirikunnan keskus Călărași on Tonavan Borcea-haaran rannalla lähellä Bulgarian rajaa. Kaupungissa on noin 58 000 asukasta sekä iso terästehdas. Oltenița on kaupunki piirikunnan lounaisosassa, noin 64 kilometrin päässä Bukarestista. Kaupungin kohdalla Argeș-joki laskee Tonavaan. Oltenițassa taisteltiin marraskuussa 1853 Krimin sodan alussa, kun ottomaanien joukot ylittivät joen ja aiheuttivat venäläisille raskaat tappiot.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
@@ -6551,7 +6551,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Caras-Severin': {
       lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
-      pitka: `Caraș-Severinin lääni tunnetaan vuoristoluonnostaan ja kansallispuistoistaan, jotka suojelevat Nera-joen kanjoneita ja Semenicin ylänköä. Seudun teollisuusperintö juontuu vuonna 1771 perustetuista Reșițan rautatehtaista, jotka olivat pitkään itävaltalais-ranskalaisen rautatieyhtiön StEG:n omistuksessa ja veturina Banaatin vuoriston teollistumisessa. Nykyisen läänin nimi ja rajat vakiintuivat vasta 1968 kommunistihallinnon läänijaossa — sitä ennen alueella ehti olla useita lyhytikäisiä hallinnollisia yksiköitä, muun muassa Habsburgien Banaatin rajavartiojärjestelmän purkamisen jälkeen 1867.`,
+      pitka: `Caraș-Severinin piirikunta on vuorten ja jokilaaksojen seutu Romanian lounaisosassa Serbian rajalla. Pinta-alaltaan se on Romanian kolmanneksi suurin piirikunta, mutta asukkaita on vain noin 250 000. Vuoria on noin kaksi kolmasosaa alueesta, ja Tonava virtaa Romaniaan tämän piirikunnan kautta. Suurin osa alueesta kuuluu Banatiin, historialliseen alueeseen, joka oli 1700-luvulla Habsburgien hallussa. Piirikunnan keskus Reșița on noin 58 000 asukkaan teollisuuskaupunki, jossa valmistettiin vuonna 1872 Romanian ensimmäinen veturi. Anina–Oravița-vuoristorata avattiin vuonna 1863, ja se on yhä matkailukäytössä. Băile Herculanen kylpyläkaupungissa roomalaiset kylpivät lämpimissä lähteissä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-caras-severin-v-26ac345e.jpg',
@@ -6574,7 +6574,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cluj: {
       lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
-      pitka: `Cluj-Napoca on Romanian toiseksi suurin kaupunki ja maan johtava yliopisto- ja teknologiakeskus, jota kutsutaan usein Romanian piilaaksoksi runsaan IT-alan yritystoimintansa ansiosta. Kaupungin katukuvassa risteilevät keskiaikainen vanha kaupunki ja vilkas opiskelijaelämä, joka juontuu jo vuodesta 1872, kun kaupunkiin perustettiin nykyisen Babeș-Bolyain edeltäjä Franz Joseph -yliopisto — Unkarin toinen moderni yliopisto Budapestin jälkeen. Yliopisto toimi kaupungissa aina vuoteen 1919, jolloin Transilvanian siirryttyä Romanialle instituutio muutti Szegediin.`,
+      pitka: `Clujin piirikunta on Romanian luoteisosassa, Transilvanian historiallisella alueella. Siellä asuu noin 680 000 ihmistä. Alue on enimmäkseen kumpuilevaa kukkulaseutua, ja osa siitä kuuluu Apuseni-vuoriin. Piirikunnan keskus Cluj-Napoca on asukasluvultaan Romanian toiseksi suurin kaupunki, noin 290 000 asukasta, ja sitä pidetään Transilvanian epävirallisena pääkaupunkina. Siellä on Babeș-Bolyain yliopisto, joka on maan suurin yliopisto. Kaupungin unkarinkielinen nimi on Kolozsvár, ja piirikunnan asukkaista noin 13 prosenttia on unkarilaisia. Turdan kaupungissa on suolakaivos, jossa on louhittu suolaa antiikista lähtien. Kaivos avattiin matkailijoille vuonna 1992.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
@@ -6597,7 +6597,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Constanta: {
       lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
-      pitka: `Konstanza on Romanian tärkein satamakaupunki Mustanmeren rannalla, ja sen historia ulottuu kauas roomalaisajan Tomikseen. Kaupunki tunnettiin vielä 1800-luvulla nimellä Küstendje ja kuului Osmanien valtakuntaan osana Tonavan vilajettia; brittiläinen pääoma rakensi sinne rautatien Cernavodăsta 1856–1860. Vasta 1878, Venäjän–Turkin sodan päätyttyä Berliinin sopimukseen, Dobrudža siirtyi Romanialle, ja entinen Küstendje muuttui vähitellen nykyiseksi Konstanzaksi.`,
+      pitka: `Constanțan piirikunta on Mustanmeren rannikkoa Romanian kaakkoisosassa. Se kuuluu Dobrudžaan, historialliseen alueeseen Tonavan alajuoksun ja Mustanmeren välissä. Asukkaita on noin 660 000. Piirikunnan keskus Constanța perustettiin kreikkalaiseksi siirtokunnaksi nimellä Tomis, ja roomalainen runoilija Ovidius karkotettiin sinne vuonna 8 jaa. Constanțan satama on yksi Mustanmeren suurimmista. Mamaia on Constanțan kaupunginosa ja lomakeskus meren rannalla. Cernavodăn kaupungissa on ydinvoimala, jossa on kaksi reaktoria. Cernavodăsta Mustallemerelle kulkee Tonava–Mustameri-kanava, joka avattiin vuonna 1984. Murfatlarin seutu on viinialue. Adamclisin kunnassa on roomalainen Tropaeum Traiani -voitonmonumentti, joka rakennettiin vuonna 109 jaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
@@ -6620,7 +6620,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Covasna: {
       lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
-      pitka: `Covasna on osa Romaniaa, mutta sekeliläinen identiteetti ja unkarin kieli elävät seudulla yhä vahvoina, sillä alue kuului vuosisatojen ajan sekelien (unkariksi székely) autonomiseen Háromszékin istuimeen Unkarin kuningaskunnan osana. Autonomiset istuimet lakkautettiin Unkarin hallinnon uudistuksessa 1876, ja Romania ulottui näille vuorille vasta 1918. Covasnan kylpylässä sydänpotilaita hoidetaan yhä hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa — vanha parantamisperinne, joka jatkuu nykyaikaisin menetelmin.`,
+      pitka: `Covasnan piirikunta on Transilvanian itäosassa Romanian keskiosassa. Suuri osa maasta on Itäkarpaattien vuoristoa, ja asukkaita on noin 200 000. Yli kaksi kolmasosaa asukkaista on unkarilaisia, enimmäkseen székelyjä. Székelyt ovat unkarilaisten alaryhmä, ja heidän asuinaluettaan kutsutaan Székelyföldiksi. Piirikunnan keskus Sfântu Gheorghe on Olt-joen rannalla, ja siellä on székelyjen kansallismuseo. Târgu Secuiescin kaupungissa asuu noin 16 000 ihmistä. Covasnan kaupunki sijaitsee 550–600 metrin korkeudessa ja on tunnettu luonnon kivennäisvesistään ja mofeteista, eli maasta purkautuvista hiilidioksidikaasun lähteistä. Piirikunnan vuorilla on useita kylpyläkohteita, esimerkiksi Malnaș-Băi ja Vâlcele.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
@@ -6643,7 +6643,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dâmbovita': {
       lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
-      pitka: `Pucioasa on yhä toimiva kylpyläkaupunki Dâmbovițan piirikunnassa, jonka rikkipitoiset ”pucioasa”-lähteet — nimi tulee sanasta rikki — houkuttelevat kävijöitä edelleen. Ensimmäinen julkinen kylpylaitos valmistui paikalle 1834, ja lähteiden vedet esiteltiin 1873 Wienin maailmannäyttelyssä, mikä toi kylpyläkeskukselle kansainvälistä huomiota. Piirikunnan nimen antava Dâmbovița-joki virtaa Bucegin vuorilta kohti Bukarestia, ja sen varrella kylpylä on kasvanut vuosikymmenten mittaan yhdeksi Valakian tunnetuimmista.`,
+      pitka: `Dâmbovițan piirikunta on Muntenian alueella Etelä-Romaniassa. Muntenia on Valakian itäinen osa. Valakia oli ruhtinaskunta, joka yhdistyi 1800-luvulla Moldovan kanssa Romaniaksi. Piirikunnassa asuu noin 480 000 ihmistä, ja se on yksi Romanian tiheimmin asutuista piirikunnista. Piirikunnan keskus Târgoviște, jossa on noin 67 000 asukasta, oli pitkään Valakian pääkaupunki. Siellä on Chindia-torni sekä ruhtinas Vlad III Seivästäjän eli Draculan linnan rauniot. Pucioasan kaupunki on lomakeskus Ialomița-joen varrella. Alueella porataan ja jalostetaan öljyä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
@@ -6666,7 +6666,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Dolj: {
       lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
-      pitka: `Craiova on Oltenian vaurastuva keskus, jonka kauppiassuvut — kuten huomattavan omaisuuden kartuttanut Mihailin perhe — rakensivat 1900-luvun alussa komeita palatseja keskustaan. Yksi niistä, Jean Mihailin palatsi, toimii nykyään Craiovan taidemuseona ja säilyttää kokoelmassaan kuusi Constantin Brâncușin nuoruudenveistosta. Kaupungin suora rautatieyhteys Bukarestiin ja maailmalle avautui 1875, ja siitä lähtien Craiova on ollut alueen tärkeä liikenteellinen solmukohta.`,
+      pitka: `Doljin piirikunta on Oltenian alueella Lounais-Romaniassa. Oltenia on historiallinen alue Tonavan, Etelä-Karpaattien ja Olt-joen välissä. Piirikunnan eteläraja on Tonava, ja joen toisella puolella on Bulgaria. Asukkaita on noin 600 000. Piirikunnan keskus Craiova on Lounais-Romanian suurin kaupunki ja Oltenian entinen pääkaupunki. Piirikunnassa viljellään viljaa, vihanneksia ja viinirypäleitä, ja siellä on Fordin autotehdas. Calafatin kaupunki on Tonavan rannalla Bulgarian Vidinin vastapäätä, ja kaupunkien välillä on silta vuodelta 2013. Calafatin ja Dăbulenin välillä on Oltenian Sahara, hiekkainen alue.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
@@ -6689,7 +6689,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Galati: {
       lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
-      pitka: `Galați on yksi Euroopan vilkkaimmista satamakaupungeista, ja sen vapaasatama-asema, myönnetty 1837, teki siitä aikanaan aidosti kansainvälisen risteysaseman, jonne asettui kymmenien maiden konsulaatteja ja kauppahuoneita. Vuoden 1856 Pariisin rauhansopimus teki kaupungista kansainvälisen Tonavan-komission kotipaikan, ja komissio piti päämajaansa Galațissa peräti vuoteen 1939. Nykyään entinen komissiorakennus toimii museona keskellä kaupunkia, muistona tästä kansainvälisestä kaudesta.`,
+      pitka: `Galațin piirikunta on Moldovan alueella Itä-Romaniassa. Moldova on tässä Romanian historiallinen alue, ei Moldovan tasavalta. Alueella Siret ja Prut virtaavat Tonavaan, ja maasto on matalaa tasankoa. Piirikunnassa asuu noin 500 000 ihmistä. Piirikunnan keskus Galați on Tonavan satamakaupunki. Kaupungissa asuu noin 220 000 ihmistä. Kaupungin terästehtaan rakentaminen aloitettiin vuonna 1960, ja tehdas avattiin vuonna 1966. Galațin lähellä on Barboșin paleontologinen suojelualue, jossa on noin 400 000 vuotta vanhoja nilviäisfossiileja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
@@ -6712,7 +6712,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Giurgiu: {
       lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
-      pitka: `Giurgiu on maan tärkein Tonavan satama pääkaupungille, ja kaupungin rautatieyhteys Bukarestiin, valmistunut lokakuussa 1869, oli koko Romanian ensimmäinen rautatie, brittiläisen John Trevor Barkleyn yhtiön rakentama. Yhteys teki radasta aikanaan erityisen tärkeän, koska tavarat ja matkustajat kulkivat laivasta suoraan junaan. Nykyään alkuperäinen rataosuus on sähköistetty ja modernisoitu osana eurooppalaista liikennekäytävää, mutta reitti Bukarestista Giurgiuhun on periaatteessa se sama kuin 1800-luvulla.`,
+      pitka: `Giurgiun piirikunta on Muntenian alueella Etelä-Romaniassa, Tonavan rannalla Bulgarian rajalla. Pinta-alaltaan se on Romanian toiseksi pienin piirikunta, noin 3 500 neliökilometriä, ja asukkaita on noin 260 000. Maisema on tasaista Valakian tasankoa, ja pohjoisessa virtaavat Argeș- ja Dâmbovița-joet. Piirikunnan keskus Giurgiu, jossa asuu noin 55 000 ihmistä, perustettiin luultavasti 1300-luvulla genovalaisten kauppiaiden satamaksi. Kaupungissa on kellotorni, jonka ottomaanien valtakunta rakennutti vuonna 1771 Tonavan liikenteen valvontatorniksi. Tonavan ylittää Ystävyydensilta Bulgarian Ruseen. Silta avattiin vuonna 1954, ja Giurgiu on edelleen tärkeä tavaraliikenteen läpikulkupaikka Romanian ja Bulgarian rajalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
@@ -6735,7 +6735,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Gorj: {
       lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
-      pitka: `Gorjin vuoristoseudun vanhin ja arvostetuin pyhäkkö on Tismanan luostari, perustettu 1370-luvulla Pyhä Nikodemoksen toimesta — Valakian ensimmäinen luostari, joka on toiminut vuosisatojen ajan alueen henkisenä keskuksena, myös Tudor Vladimirescun 1821 kapinan tukikohtana. Gorjin hiili- ja ligniittivarat tekevät alueesta nykyään Romanian energiantuotannon keskuksen. Seudulla syntyi 1876 köyhään paimenperheeseen poika, Constantin Brâncuși, josta tuli 1900-luvun merkittävimpiä kuvanveistäjiä, ja hänen teoksiaan on nähtävillä yhä Târgu Jiun puistossa.`,
+      pitka: `Gorjin piirikunta on Oltenian alueella Lounais-Romaniassa. Alueen läpi virtaa Jiu-joki. Pohjoisosa on Etelä-Karpaattien vuoristoa, ja Parângin vuorten korkein huippu Parângu Mare on 2 519 metriä. Asukkaita on noin 310 000. Piirikunnan keskus Târgu Jiu on Constantin Brâncușin veistosten kaupunki. Kolme veistosta on pystytetty ensimmäisen maailmansodan sankareiden muistoksi, ja Loputon pylväs on 29,3 metriä korkea. Rovinarissa ja Turcenissa on suuria hiilivoimaloita. Tismanassa rakennettiin luostari jo 1300-luvulla, ja Polovragin luostari on rakennettu vuonna 1505.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
@@ -6758,7 +6758,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Harghita: {
       lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
-      pitka: `Harghita on Romanian tiheimmin unkarinkielinen alue, ja sekeliläinen identiteetti elää seudulla vahvana Székelymaan pohjoisosassa. Alue kuului vuosisatojen ajan Unkarin kuningaskuntaan, jossa sekelit hallitsivat itseään Csíkin ja Udvarhelyn autonomisilla istuimilla perinteisten oikeuksiensa mukaan, kunnes Unkarin hallinto lakkautti ne yhtenäistämisuudistuksessa 1876. Romania ulottui näille vuorille vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
+      pitka: `Harghita on vuoristoinen piirikunta Romanian Transilvanian itäosassa, ja siellä asuu noin 290 000 ihmistä. Yli 80 prosenttia asukkaista on unkarilaisia. He ovat székelyjä, Transilvanian itäosan unkarinkielistä väestöryhmää. Keskus Miercurea Ciuc on Olt-joen laaksossa, ja sen Șumuleu Ciuc -kaupunginosassa pidetään vuosittain katolinen pyhiinvaellus. Harghita-vuoret ovat tulivuoriperäinen vuorijono, jonka korkein huippu on 1 801 metriä. Ciomad-tulivuoren kraatterissa on Sfânta Ana -järvi, joka on Romanian ainoa kraatterijärvi. Lacu Roșu eli Punainen järvi syntyi 1830-luvun lopulla, kun maanjäristyksen aiheuttama maanvyörymä padosi Bicaz-joen. Mureș- ja Olt-joet saavat alkunsa piirikunnan alueelta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
@@ -6781,7 +6781,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Hunedoara: {
       lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
-      pitka: `Hunedoaran suuret rautatehtaat, perustettu 1882, tekivät kaupungista Transilvanian teollisuuskeskuksen ja toivat sinne tuhansia työläisiä ympäröivistä kylistä — perintö, joka juontuu alueen rautamalmiin ja metsiin sekä pieniin masuuneihin kuten 1806 valmistuneeseen Govăjdian masuuniin. Transilvania pysyi osana Unkarin kuningaskuntaa aina vuoteen 1918. Nykyään entiset rautatehtaat ovat suurelta osin sammuneet, ja kaupunki etsii uutta suuntaa vanhan teollisuusperintönsä varjossa.`,
+      pitka: `Hunedoara on piirikunta Romanian Transilvanian lounaisosassa, ja siellä asuu noin 360 000 ihmistä. Keskus Deva on Mureș-joen varrella, ja kaupungissa on linnoitus tulivuorikukkulan päällä. Jiun laaksossa louhittiin pitkään kivihiiltä, mutta monet kaivokset suljettiin 1990-luvulla. Laakson keskus Petroșani on noin 31 000 asukkaan kaupunki. Hunedoaran kaupungissa on goottilaistyylinen Hunyadin linna. Orăștie-vuorilla on daakialaisten linnoituksia ensimmäiseltä vuosisadalta eaa. ja jaa. Daakialaiset olivat muinainen kansa nykyisen Romanian alueella. Linnoitukset ovat Unescon maailmanperintökohde vuodesta 1999. Retezatin vuoristossa on luonnonsuojelualue, joka perustettiin vuonna 1935. Siellä on vuoristojärviä ja karhuja.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
@@ -6804,7 +6804,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ialomita: {
       lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
-      pitka: `Bărăganin tasanko Ialomițassa tunnetaan nykyään Romanian leipomona, vaikka se oli vuosisatoja pääasiassa paimentolaisten laidunmaata, jota Karpaattien paimenet käyttivät lampaidensa vuodenaikaisvaellukseen. Vasta 1800-luvun jälkipuoliskolla laajat laitumet alettiin järjestelmällisesti muokata viljapelloiksi, kun Bărăganin mustan mullan hedelmällisyys huomattiin. Ialomița on yhä harvaan asuttua, tasaista seutua, jonka läpi kulkevat leveät viljapellot hallitsevat maisemaa horisontista horisonttiin.`,
+      pitka: `Ialomița on piirikunta Romanian kaakkoisosassa Munteniassa, ja siellä asuu noin 250 000 ihmistä. Alue on lähes tasaista Bărăgan-aroa, jossa viljellään pääasiassa viljaa. Keskus Slobozia on noin 42 000 asukkaan kaupunki. Ialomița-joki on 417 kilometriä pitkä, virtaa piirikunnan poikki lännestä itään ja laskee Tonavan Borcea-haaraan Giurgenin kohdalla. Tonava rajaa piirikuntaa idästä. Fetești-kaupungissa on rautatiesilta Tonavan yli Cernavodăan, ja se valmistui vuonna 1895. Talvella alueella puhaltavat kovat koillistuulet ja lumimyrskyt, ja kesät ovat kuumia ja kuivia.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
@@ -6827,7 +6827,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Iasi: {
       lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
-      pitka: `Iași oli Moldovan ruhtinaskunnan pääkaupunki kolmisen vuosisataa, vuodesta 1564, ja menetti asemansa Bukarestille vasta 1862, kun Moldova ja Valakia yhdistyivät lopullisesti yhdeksi Romaniaksi. Pääkaupunkiaseman menetys jätti kaupunkiin haikean jälkijättöisyyden tunnun, joka näkyy yhä sen lempinimessä ”Romanian kulttuuripääkaupunki”. Iașin yliopisto, perustettu ruhtinas Alexandru Ioan Cuzan asetuksella 1860, oli Romanian ensimmäinen nykyaikainen yliopisto ja on yhä yksi kaupungin sivistyksellisen ylpeyden lähteitä.`,
+      pitka: `Iași on piirikunta Romanian itäosassa lähellä Moldovan tasavallan rajaa. Se kuuluu Romanian Moldovaan, historialliseen alueeseen, joka on eri asia kuin Moldovan tasavalta. Piirikunnassa asuu noin 760 000 ihmistä, joista noin 270 000 asuu keskuksessa Iașissa. Iași oli Moldovan ruhtinaskunnan pääkaupunki vuosina 1564–1859, ja siellä on Romanian vanhin yliopisto. Iașin kulttuuripalatsi toimi vuoteen 1955 hallinto- ja oikeustalona, ja nykyään siinä on museoita. Cotnarin kylä on tunnettu viinialue, ja alueella on luostareita, kuten Hadâmbu ja Dobrovăț. Cucuteni-kylä antoi nimen esihistorialliselle Cucuteni-kulttuurille, joka oli olemassa noin vuodesta 5050 vuoteen 2950 eaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
@@ -6850,7 +6850,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ilfov: {
       lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
-      pitka: `Mogoșoaian palatsi Ilfovin piirikunnassa on museo ja suosittu retkikohde Bukarestin lähellä, jonka ruhtinas Constantin Brâncoveanu rakennutti 1698–1702 omaa ”brâncovenesk”-tyyliään edustavaksi kesäasunnokseen — italialaisten ja ottomaanien vaikutteiden sekoitukseksi, joka oli 1700-luvun alun Valakian arkkitehtuurin huippukohta. Brâncoveanun teloituksen 1714 jälkeen palatsi ryöstettiin ja muuttui majataloksi, ja se koki uuden ryöstön Venäjän–Turkin sodan 1768–1774 aikana. Prinsessa Marta Bibescu kunnosti palatsin loistoonsa vasta 1900-luvun alussa.`,
+      pitka: `Ilfov on Bukarestia ympäröivä piirikunta Munteniassa, ja siellä asuu noin 540 000 ihmistä. Piirikunta on Romanian pienin. Sen hallinnollinen keskus on Bukarest, vaikka kaupunki ei kuulu piirikuntaan. Noin 40 prosenttia asukkaista käy töissä Bukarestissa. Asukasluku kasvoi vuosina 2011–2021 nopeammin kuin missään muussa piirikunnassa, koska monet kylät ovat muuttuneet Bukarestin lähiöiksi. Otopenin kaupungissa on Henri Coandăn lentoasema, joka on nimetty romanialaisen ilmailun pioneerin mukaan ja on maan vilkkain. Snagov-järven saarella on Snagovin luostari, joka mainitaan ensimmäisen kerran vuonna 1408. Mogoșoaian palatsi rakennettiin vuosina 1698–1702. Buftean kaupungissa on elokuvastudioita.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
@@ -6873,7 +6873,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Maramures: {
       lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
-      pitka: `Seitsemän Maramureșin puukirkkoa on nykyään Unescon maailmanperintölistalla — ainutlaatuinen perinne, joka syntyi, kun Habsburgien viranomaiset kielsivät alueen ortodoksisilta romanialaisilta kivikirkkojen rakentamisen. Paikalliset kirvesmiehet pystyttivät sen sijaan korkeita, suippokattoisia puutapuleita vuosisatojen ajan. Maramureș kuului Unkarin kuningaskuntaan vuodesta 1867 Itävalta-Unkarin monarkian osana eikä liittynyt Romaniaan ennen kuin vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
+      pitka: `Maramureș on vuoristoinen piirikunta Pohjois-Romaniassa Ukrainan rajalla, ja siellä asuu noin 450 000 ihmistä. Keskus Baia Mare on noin 109 000 asukkaan kaupunki Săsar-joen varrella. Piirikunnan läpi virtaa Tisa-joki, ja kaakkoisrajalla kohoavat Rodnan vuoret. Alueella on lähes sata puukirkkoa, joissa on korkeat ja kapeat kellotornit, ja kahdeksan niistä on Unescon maailmanperintökohteita. Săpânța-kylän Iloisella hautausmaalla hautakivet on maalattu kirkkain värein, ja niiden tekstit kertovat usein leikillisesti vainajan elämästä. Sighetu Marmației-kaupungissa on kommunismin uhrien muistomerkki ja museo.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
@@ -6896,7 +6896,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mehedinti: {
       lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
-      pitka: `Mehedințin Tonava-rannalla, Rautaporttien kohdalla, virtasi ennen keskellä jokea saari nimeltä Ada Kaleh, turkkilaisasukkaiden saari vuodesta 1699, joka säilyi sulttaanin de jure omaisuutena aina 1920-luvulle asti — sen erikoisasema unohdettiin Berliinin 1878 rauhanneuvotteluissa. Nykyään Ada Kaleh on kokonaan veden alla, upotettuna 1970 Rautaporttien padon rakentamisen yhteydessä. Vuonna 1858 poikkeuksellisen kuivuuden laskettua Tonavan vedenpinnan ennätysmatalaksi joen pohjasta paljastui keisari Trajanuksen 1300 vuotta aiemmin rakennetun sillan pilareita, ja ne ovat yhä nähtävissä Drobeta-Turnu Severinin rannalla.`,
+      pitka: `Mehedinți on piirikunta Romanian lounaiskulmassa Serbian rajalla, ja siellä asuu noin 230 000 ihmistä. Suurin osa piirikunnasta kuuluu historialliseen Oltenian alueeseen, jota kutsutaan myös Vähä-Valakiaksi. Luoteessa kohoavat Mehedințin vuoret. Keskus Drobeta-Turnu Severin on Tonavan rannalla. Kaupungissa on Rooman keisari Trajanuksen rakennuttaman sillan rauniot. Silta valmistui vuonna 105 jaa., ja se oli ensimmäinen silta Tonavan alajuoksun yli. Orșovan kaupungin lähellä Tonava kulkee Rautaportin rotkon läpi, jossa on kaksi vesivoimalaa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-mehedinti-c1-4a1d3c1a.jpg',
@@ -6919,7 +6919,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mures: {
       lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
-      pitka: `Târgu Mureșin keskustaa hallitsee sezessiotyylinen Kulttuuripalatsi, jonka pormestari Bernády György tilasi ja joka valmistui 1911–1913. Rakennuksen katto on katettu Zsolnay-tehtaan värikkäillä keramiikkalaatoilla, ja sen konserttisalissa on soittanut niin Pablo Casals kuin Béla Bartók. Nykyään rakennus toimii kirjastona, museona ja filharmonian kotina — yksi Romanian tunnetuimmista secessio-rakennuksista kaupungissa, joka kuului rakentamisajankohtana yhä Unkarin kuningaskuntaan.`,
+      pitka: `Mureșin piirikunta on Transilvaniassa Romanian keskiosassa, ja siellä asuu noin 520 000 ihmistä. Piirikunta on nimetty Mureș-joen mukaan. Keskus Târgu Mureș on noin 116 000 asukkaan kaupunki, ja siellä on vuosina 1911–1913 rakennettu Kulttuuripalatsi, joka edustaa unkarilaista jugendtyyliä. Sighișoaran vanha kaupunki on Unescon maailmanperintökohde, ja sen 64 metriä korkea kellotorni on 1300-luvulta. Reghinin kaupunki, jossa asuu noin 30 000 ihmistä, tunnetaan viulujen ja muiden soittimien valmistuksesta. Sovatan kylpyläkaupungissa on suolaisia järviä. Unkarilaisia on noin kolmannes asukkaista. Kaupungissa on myös lääketieteellinen yliopisto, joka perustettiin vuonna 1945.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-mures-v-6c48ef2b.jpg',
@@ -6942,7 +6942,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Neamt: {
       lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
-      pitka: `Izvorul Muntelui -tekojärvi Neamțin laaksossa on nykyään suosittu retkeily- ja veneilykohde, jonka rannoilla ei ole enää jälkeäkään sen alle jääneistä kylistä. Bicazin padon valmistuttua 1950–1960 Bistrița-joki hukutti 22 kylää — kaksi niistä, Rapciunița ja Cârnu, katosivat kokonaan veden alle. Insinöörien muuttama maisema on yksi Romanian suurimmista patoaltaista, ja se muutti koko laakson pysyvästi maalaiselämästä moderniksi retkeilyalueeksi.`,
+      pitka: `Neamțin piirikunta on Moldovan historiallisella alueella Koillis-Romaniassa. Tämä Moldova kuuluu Romaniaan, eikä se ole sama kuin Moldovan tasavalta. Piirikunnassa asuu noin 450 000 ihmistä. Keskus Piatra Neamț on Bistrița-joen laaksossa vuorten ympäröimänä. Länsiosassa kohoaa Ceahlăun vuorimassiivi, jonka korkein huippu on 1 907 metriä. Bistrița-joen padon taakse syntyi Izvorul Muntelui -tekojärvi, joka on 40 kilometriä pitkä. Neamțin luostarin kirkko valmistui vuonna 1497. Kirjailija Ion Creangă syntyi Humulești-kylässä, joka kuuluu nykyään Târgu Neamțiin. Hänen tarinansa ja lapsuusmuistelmansa ovat Romaniassa tunnettuja. Târgu Neamțin lähellä on 1300-luvulla rakennettu linnoitus, jonka seiniä Moldovan ruhtinas Tapani Suuri korotti myöhemmin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
@@ -6965,7 +6965,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Olt: {
       lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
-      pitka: `Reșcan kylän lähellä lepää maan alla Romula-Malva, muinaisen Rooman Dacia-provinssin eteläisen osan, Dacia Malvensin, pääkaupunki, joka on nykyään ehdotettu Unescon maailmanperintölistalle. Roomalaiskaupunki oli yli 300 hehtaarin laajuinen, ja siellä toimi maakunnan käskynhaltija sekä laaja kylpylä- ja vesijohtoverkosto — mutta ensimmäiset kaivaukset alkoivat vasta 1900-luvun alussa. Arkeologit kartoittavat aluetta yhä geofysikaalisin menetelmin, ja kokonainen kadonnut kaupunki lepää yhä osin tutkimatta hiljaisen maalaismaiseman alla.`,
+      pitka: `Oltin piirikunta on Etelä-Romaniassa, ja sen eteläraja kulkee Tonavalla Bulgarian vastaisella rajalla. Piirikunnassa asuu noin 380 000 ihmistä, ja yli puolet heistä asuu kylissä. Nimi tulee Olt-joesta, joka virtaa alueen läpi pohjoisesta etelään. Keskus Slatina on noin 63 000 asukkaan kaupunki, jossa on suuri alumiinitehdas Alro. Corabia on Tonavan satamakaupunki, ja sen lähellä on antiikin Sucidavan linnoituksen jäänteet. Reșcan kylässä ovat Romulan rauniot. Romula oli Rooman Dacia-provinssin hallintokaupunki. Scornicești on kommunistijohtaja Nicolae Ceaușescun syntymäkaupunki. Hänen kotitalonsa on edelleen paikallinen nähtävyys.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
@@ -6988,7 +6988,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Prahova: {
       lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
-      pitka: `Ploieștin seutu Prahovassa oli maailman öljyteollisuuden edelläkävijä: kaupungissa toimi vuodesta 1856 lähtien maailman ensimmäinen teollinen öljynjalostamo, jonka Mehedințeanu-veljekset perustivat, ja sen tuottama valopetroli valaisi Bukarestin kadut ensimmäisenä kaupunkina maailmassa. Alue on nykyään yhä Romanian öljynjalostuksen keskus, vaikka suurin osa vanhoista pienjalostamoista on kadonnut suurten teollisuuslaitosten alle. Sinaian Peleșin linna samassa läänissä oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa, oman voimalansa ansiosta.`,
+      pitka: `Prahovan piirikunta on Etelä-Romaniassa Muntenian alueella, ja siellä asuu noin 700 000 ihmistä. Pohjoisessa on Karpaattien vuoria ja etelässä tasankoa. Keskus Ploiești on noin 180 000 asukkaan kaupunki. Siellä valmistui 1850-luvun puolivälissä öljynjalostamo, ja jalostus jatkuu edelleen. Sinaian vuoristokaupungissa on Peleșin linna, jonka rakennutti kuningas Carol I ja joka vihittiin käyttöön vuonna 1883. Sinaian lähellä kohoaa Bucegin vuoristo, jonka korkein huippu Omu on 2 505 metriä. Câmpinan kaupungissa asui taidemaalari Nicolae Grigorescu, jonka muistomuseo on kaupungissa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-prahova-v-de15d8cf.jpg',
@@ -7011,7 +7011,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Salaj: {
       lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
-      pitka: `Sălajin Jiboun kylässä syntyi 1796 paroni Wesselényi Miklós, joka nousi kansallissankariksi kun hän 1838 souti läpi jäätyneen, tulvivan Pestin kaduista toiseen pelastaen ihmisiä katoilta — häntä alettiin kutsua ”tulvan lauttamieheksi”. Hänen sankaritekonsa elävät yhä unkarilaisten koululaisten tarinoissa, ja suvun linna kohoaa edelleen Jiboun keskustassa, nykyään yksityisomistuksessa. Linnan viereen on rakennettu Jiboun kasvitieteellinen puutarha, joka on yksi Romanian suurimmista.`,
+      pitka: `Sălajin piirikunta on kumpuilevaa maata Transilvaniassa, ja siellä asuu noin 210 000 ihmistä. Keskus Zalău on noin 52 000 asukkaan kaupunki. Sen lähellä on Porolissumin roomalainen linnoitus, jonka keisari Trajanus perusti noin vuonna 106. Porolissumissa on myös amfiteatteri, jossa oli noin 5 000 istumapaikkaa. Jibou-kaupungissa on Wesselényin barokkilinna, jonka rakentaminen alkoi vuonna 1778, ja linnan pihalla on kasvitieteellinen puutarha. Piirikunnan korkein kohta on Meseș-vuorten Măgura Priei, 996 metriä. Unkarilaisia on noin viidennes asukkaista. Piirikunta lakkautettiin vuonna 1950 ja perustettiin uudelleen vuonna 1968.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
@@ -7034,7 +7034,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Satu Mare': {
       lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
-      pitka: `Satu Maren keskustassa on runsaasti 1800-luvun lopun ja 1900-luvun alun rakennuksia, jotka nousivat kaupungin vaurastuessa rautatien myötä sen ollessa osa Unkarin kuningaskuntaa. Vuonna 1711 Szatmárin — nykyisen Satu Maren — kaduilla allekirjoitettiin rauha, joka päätti Rákóczin kapinan Habsburgeja vastaan ja toi kaupungille pitkän rauhan ajan. Vanha rauhansopimus on unohtunut monilta, mutta se muutti aikanaan koko Transilvanian kohtaloa vuosisadaksi eteenpäin.`,
+      pitka: `Satu Maren piirikunta on Luoteis-Romaniassa Unkarin ja Ukrainan rajalla, ja siellä asuu noin 330 000 ihmistä. Keskus Satu Mare on Someș-joen varrella, ja siellä asuu noin 92 000 ihmistä. Kaupunki on vain 13 kilometrin päässä Unkarin rajalta. Unkarilaisia on noin kolmannes piirikunnan asukkaista. Carei-kaupungissa on Károlyin linna, joka sai nykyisen muotonsa vuosina 1893–1896. Koillisessa on Oașin maa, vuoristoinen seutu, jonka keskus on Negrești-Oaș. Negrești-Oașissa on kansanperinteen ulkoilmamuseo. Tășnadin kaupungissa on lämpimistä vesistä tunnettu kylpylä. Alueella valmistetaan muun muassa tekstiilejä, autonosia ja elintarvikkeita.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-satu-mare-v-74904efa.jpg',
@@ -7057,7 +7057,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sibiu: {
       lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
-      pitka: `Sibiu on yksi Transilvanian suosituimmista matkailukaupungeista, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007. Sen vuosisatoja vanhat erityisoikeudet — Transilvanian saksien, siebenbürgisaksien, keskiaikaisesta itsehallinnosta periytyvä Universitas Saxonum, joka hallinnoi saksien asioita vuodesta 1486 — katosivat lopullisesti 1876, kun Budapest lakkautti järjestön poliittisen vallan ja sulatti Sibiun tavalliseksi unkarilaiseksi lääniksi. Kaupungin kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja tämä yksityiskohta on yksi Sibiun tunnetuimmista kuriositeeteista.`,
+      pitka: `Sibiun piirikunta on Transilvaniassa Romanian keskiosassa, ja siellä asuu noin 390 000 ihmistä. Keskus Sibiu on noin 134 000 asukkaan kaupunki, joka oli Euroopan kulttuuripääkaupunki vuonna 2007 yhdessä Luxemburgin kanssa. Alueelle asettui 1200-luvulla saksalaisia uudisasukkaita, joita kutsutaan transilvaniansaksalaisiksi. Biertanin kylän linnoituskirkko on Unescon maailmanperintökohde, ja se oli luterilaisten piispojen kotipaikka vuosina 1572–1867. Etelässä kohoavat Făgărașin vuoret, joiden yli kulkee Transfăgărășanin tie, joka avattiin vuonna 1974. Mediașin kaupungissa on noin 70 metriä korkea Trumpetinsoittajan torni.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-sibiu-vb-64f4eea6.jpg',
@@ -7080,7 +7080,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Suceava: {
       lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
-      pitka: `Suceava kuului 1800-luvulla Itävallan keisarikuntaan osana Bukovinan herttuakuntaa, jonka pääkaupunki oli Czernowitz (nykyinen Tšernivtsi Ukrainassa) — Bukovina liittyi Romaniaan vasta 1918. Czernowitziin perustettiin 1875 saksankielinen yliopisto satavuotismuistoksi siitä, kun Bukovina liitettiin Itävaltaan, ja siitä tuli Euroopan itäisin saksankielinen korkeakoulu. Suceava itse on nykyään keskiaikaisen Moldovan vanhan pääkaupungin raunioiden kupeessa sijaitseva piirikunnan kaupunki, jonka historia ulottuu ruhtinaskunnan kulta-aikaan.`,
+      pitka: `Suceavan piirikunta on metsien ja vuorten alue Pohjois-Romaniassa, ja siellä asuu noin 640 000 ihmistä. Pinta-alaltaan se on Romanian toiseksi suurin piirikunta. Suurin osa alueesta kuuluu Bukovinaan, historialliseen alueeseen, jonka nimi tarkoittaa pyökkimaata. Piirikunnan keskus on Suceavan kaupunki, jossa on keskiaikainen Suceavan linnoitus. Alueen kirkkojen ulkoseinät on peitetty maalauksilla, ja kahdeksan kirkkoa kuuluu Unescon maailmanperintöön. Voronețin luostari rakennettiin vuonna 1488 Moldovan ruhtinaan Tapani Suuren käskystä. Tapani Suuri on haudattu Putnan luostariin. Puutavara on tärkeä elinkeino.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
@@ -7103,7 +7103,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Teleorman: {
       lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
-      pitka: `Teleormanin pääkaupunki Alexandria on Romanian harvoja täysin suunnitelmallisesti perustettuja kaupunkeja: valtias Alexandru II Ghica määräsi sen rakennettavaksi tyhjälle tasangolle 1834 ja nimesi sen omalla nimellään. Kaupungin suorat, ruudukkomaiset kadut erottuvat yhä selvästi ympäröivien kylien mutkittelevista poluista, ja alkuperäinen ruutukaava näkyy edelleen keskustan kartassa. Muualla Teleormanissa maisema on avointa lakeutta ja hajanaisia kyliä, tyypillistä Valakian maaseutua.`,
+      pitka: `Teleormanin piirikunta on tasankojen piirikunta Etelä-Romaniassa Bulgarian rajalla, ja siellä asuu noin 320 000 ihmistä. Alue kuuluu Valakiaan, Romanian eteläiseen historialliseen alueeseen. Piirikunnan keskus on Alexandrian kaupunki. Tonavan rannalla oleva Zimnicea on Romanian eteläisin asutuskeskus. Olt-joki laskee Tonavaan Islazin kylän lähellä, ja siellä luettiin kesäkuussa 1848 julki Islazin julistus, joka kertoi Valakian vallankumouksen tavoitteet. Tonavalla ja lammilla kalastetaan. Pääelinkeino on maanviljely, ja osa vihanneksista ja hedelmistä viljellään Bukarestin markkinoille.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-teleorman-v-8ed23ee0.jpg',
@@ -7126,7 +7126,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Timis: {
       lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
-      pitka: `Timișoaran leveät bulevardit ja puistokehä kulkevat vanhojen Vauban-tyylisten linnoitusmuurien paikalla, jotka purettiin vaiheittain 1870-luvulta 1890-luvulle asti — kaupungin maistraatti sai purkuluvan 1872, ja linnoitusstatus lakkautettiin virallisesti 1892. Muurit olivat kahlinneet kaupungin kasvua vuosisatojen ajan sen ollessa osa Unkarin kuningaskuntaa Banaatin alueella. Nykyään näkymätön muisto kadonneesta linnoituksesta elää kaupungin katukuvassa, ja Timișoara tunnetaan siitä, että sen kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.`,
+      pitka: `Timișin piirikunta on tasankojen piirikunta Länsi-Romaniassa Unkarin ja Serbian rajalla, ja siellä asuu noin 650 000 ihmistä. Pinta-alaltaan se on Romanian suurin piirikunta. Alue kuuluu Banatiin, historialliseen alueeseen, jonka Romania, Serbia ja Unkari jakavat. Piirikunnan keskus on Timișoaran kaupunki. Siellä alkoi joulukuussa 1989 Romanian vallankumous, ja kaupunki julistettiin 20. joulukuuta ensimmäiseksi kommunismista vapaaksi kaupungiksi. Timișoara oli vuonna 2023 yksi Euroopan kulttuuripääkaupungeista. Buziașin kylpyläkaupunki kuuluu piirikuntaan, ja Beba Veche on Romanian läntisin paikka. Piirikunnassa on paljon teollisuutta, muun muassa autoteollisuutta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
@@ -7149,7 +7149,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tulcea: {
       lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
-      pitka: `Tulcea on Romanian portti Tonavan suistoon, ja sen väestö on yhä poikkeuksellisen monietninen verrattuna muuhun maahan — turkkilaisia, tataareja, kreikkalaisia, bulgarialaisia, armenialaisia ja romanialaisia asuu rinnakkain satamassa, joka johtaa Tonavan suistoon johtavan haaran varrella. Alue kuului 1873 Ottomaanien valtakunnan Tonava-vilajettiin, uudistusmielisen kenraalikuvernööri Midhat-pašan 1864 perustamaan mallihallintoalueeseen, ja siirtyi Romanialle vasta 1878 Venäjän–Turkin sodan päätteeksi solmitussa Berliinin sopimuksessa. Monikulttuurinen perintö on säilynyt kaupungissa tähän päivään.`,
+      pitka: `Tulcean piirikunta on vesien ja luonnon alue Kaakkois-Romaniassa, ja siellä asuu noin 190 000 ihmistä. Se on asukasluvultaan Romanian pienin piirikunta. Alue kuuluu Dobrudžaan, Tonavan ja Mustanmeren väliseen historialliseen alueeseen. Piirikunnan keskus Tulcea on Tonavan rannalla. Tonavan suisto kattaa noin kolmanneksen piirikunnasta, ja se on ollut Unescon maailmanperintökohde vuodesta 1991. Suistossa elää yli 300 lintulajia. Sulinan kaupunki sijaitsee suiston keskimmäisen haaran suulla Mustanmeren rannalla. Piirikunnan keskiosassa ovat Măcinin vuoret, jotka kohoavat noin 400 metrin korkeuteen. Piirikunnassa on myös Halmyrisin roomalaisen linnoituksen rauniot.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
@@ -7172,7 +7172,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
-      pitka: `Vasluin seudun Pleșeștin kylässä syntyi 1858 kirjailija Alexandru Vlahuță, jonka pääteos ”România pitorească” (”Kuvauksellinen Romania”) kuvasi koko maan maisemia matkakertomuksen muodossa ja tekee hänestä yhden Romanian rakastetuimmista kirjailijoista. Vaslui itse on yhä yksi Romanian rauhallisimmista maakuntakeskuksista, syrjäinen Moldovan pikkukaupunki maatalousseudun keskellä. Vlahuțan syntymäseutu muistetaan nykyään kirjallisuushistoriasta, ja hänen nimeään kantavat koulut ja kadut ympäri Moldovaa.`,
+      pitka: `Vasluin piirikunta on maaseutupiirikunta Itä-Romaniassa, ja siellä asuu noin 370 000 ihmistä. Piirikunnan itärajana on Prut-joki, jonka toisella puolella on Moldovan tasavalta. Alue kuuluu Moldovaan, Romanian itäiseen historialliseen alueeseen, joka on eri asia kuin Moldovan tasavalta. Piirikunnan keskus on Vaslui. Sen lähellä Moldovan ruhtinas Tapani Suuri voitti ottomaanien armeijan tammikuussa 1475. Huși-kaupungissa on viinitarhoja, ja siellä solmittiin vuonna 1711 Prutin rauha. Piirikunnan halki virtaa Bârlad-joki. Vasluin kaupungissa on Tapani Suuren vuonna 1490 perustama kirkko, joka on omistettu Johannes Kastajan mestaukselle. Talous perustuu nykyään pääosin maanviljelyyn.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
@@ -7195,7 +7195,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vâlcea': {
       lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
-      pitka: `Vâlcean Călimăneștin ja Căciulatan lähteiden mineraalivedet palkittiin 1873 Wienin maailmannäyttelyssä, ja lähteen numero yksi vettä pullotettiin ja lähetettiin postivaunulla Pariisiin, Napoleon III:n hoviin, ranskalaisen lääkärin suosituksella. Varsinainen kylpyläkaupunki syntyi vasta 1890, mutta parantavien vesien maine levisi eurooppalaisiin lehtiin jo aiemmin. Nykyään Călimănești-Căciulata on yhä yksi Romanian suosituimmista kylpyläkohteista, ja sen vedet tunnetaan edelleen reumaattisten ja maksavaivojen hoidossa.`,
+      pitka: `Vâlcean piirikunta on vuorten ja kylpylöiden alue Etelä-Romaniassa, ja siellä asuu noin 340 000 ihmistä. Alue kuuluu Valakiaan, ja Olt-joki virtaa sen läpi pohjoisesta etelään. Idässä kohoavat Făgărașin vuoret yli 2 200 metriin ja lännessä Lotrun vuoret yli 2 000 metriin. Piirikunnan keskuksessa Râmnicu Vâlceassa asuu noin 93 000 ihmistä. Olt-joen rannalla Călimăneștin kaupungin lähellä on Cozian luostari, jonka Valakian ruhtinas Mircea I rakennutti 1380-luvun lopulla. Horezu-kaupungin lähellä on Hurezin luostari, jonka ruhtinas Constantin Brâncoveanu perusti 1690-luvulla. Se kuuluu Unescon maailmanperintöön. Băile Govora ja Băile Olănești ovat kylpylöitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
@@ -7218,7 +7218,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vrancea: {
       lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
-      pitka: `Focșanin kaupunki jakautui vuosisatoja kahtia: Milcov-joki oli Moldovan ja Valakian ruhtinaskuntien raja, ja kaupungin läpi kulki kaksi puoliskoa, moldovalainen ja valakialainen, aina vuoteen 1859 asti, kun ruhtinaskunnat yhdistyivät Alexandru Ioan Cuzan alaisuudessa. Focșanissa toimi 1858–1864 yhteinen keskuskomissio, joka valmisteli ruhtinaskuntien hallinnollista yhdistämistä. Vanhan sisärajan muisto elää yhä kaupungin historiassa, vaikka tullipaalut ja rajakivet ovat kadonneet aikaa sitten.`,
+      pitka: `Vrancean piirikunta on vuorten, viinitarhojen ja maanjäristysten alue Itä-Romaniassa, ja siellä asuu noin 340 000 ihmistä. Länsiosassa kohoavat Itäkarpaattien eteläosan vuoret, ja alue on Romanian aktiivisin maanjäristysalue. Vuoden 1977 maanjäristys tappoi yli 1 500 ihmistä Romaniassa ja Bulgariassa. Piirikunnan keskus Focșani on Milcov-joen varrella, ja se oli mukana Moldovan ja Valakian yhdistymisessä vuonna 1859. Vrancea on Romanian suurin viininviljelyalue, ja Panciun ja Odobeștin seuduilla on laajat viinitarhat. Mărășeștin lähellä käytiin elokuussa 1917 ensimmäisen maailmansodan taistelu, jossa romanialaiset ja venäläiset joukot pysäyttivät Saksan 9. armeijan etenemisen. Vuoristossa on Soveja-lomakeskus ja Putna-Vrancean luonnonpuisto.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/rou-maakunta2-vrancea-v-ac4eff6f.jpg',
