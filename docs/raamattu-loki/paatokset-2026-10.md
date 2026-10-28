@@ -2991,3 +2991,7 @@ Omistaja (KK) sanatarkasti: 'Louvre ja muut vastaavat kohteet ovat myös liian i
 ## Kartta: kohdemerkit lukittuina karttaan Ranskan kokoisesta näkymästä ulospäin (omistaja 28.10. 08.15/08.17) (28.10.2026 klo 08.17)
 
 Omistaja (KK) sanatarkasti 08.15: 'olisi hyvä määritellä joku zoom-taso, minkä jälkeen ulos zoomatessa Louvre ja muut vastaavat kohteet eivät enää suurenisi suhteessa karttapalloon. Minusta sopiva koko tai sopiva zoom-etäisyys olisi noin se kokoluokka, kun Ranskan kartta näkyy näytöllä kokonaisena. Eli kun siitä aletaan zoomaamaan ulospäin, kaikki pysyy kartan kanssa lukittuna.' Päätös 08.17: 'Lukitus riittää (Suositus)' = korvaa 08.13:n puolituksen. Louvre kapeammaksi muihin nähden (08.13) pysyy. KS tekee; pari KK:lle.
+
+## Maailmanperintö kipinöinä junaan 213 (omistaja 28.10. 08.38) (28.10.2026 klo 08.38)
+
+Omistaja (KK:n kortti 'Kelpaako kipinän koko ja hehku?', KS a884e7824): 'Kelpaa (Suositus)'. Junaan 213, kun KS on lyhentänyt nimen välin pisteestä (KK:n päätös) ja KK on tarkistanut 2×-parin.
