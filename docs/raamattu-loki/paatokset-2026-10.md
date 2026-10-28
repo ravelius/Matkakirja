@@ -2995,3 +2995,7 @@ Omistaja (KK) sanatarkasti 08.15: 'olisi hyvä määritellä joku zoom-taso, min
 ## Maailmanperintö kipinöinä junaan 213 (omistaja 28.10. 08.38) (28.10.2026 klo 08.38)
 
 Omistaja (KK:n kortti 'Kelpaako kipinän koko ja hehku?', KS a884e7824): 'Kelpaa (Suositus)'. Junaan 213, kun KS on lyhentänyt nimen välin pisteestä (KK:n päätös) ja KK on tarkistanut 2×-parin.
+
+## Kartta: tekstit pienemmiksi ja aina vaakasuoraan (omistaja 28.10. 08.39) (28.10.2026 klo 08.40)
+
+Omistaja (KK) sanatarkasti: 'teksti liian iso. tarkista myös että kaikki tekstit ovat aina vaakasuorassa vaikka maapallo olisi kääntyneenä pois pohjois-eteläsuunnasta'. Tavoite: maailmanperintönimet muiden paikannimien kokoluokkaan, kaikki kartan tekstit aina vaakasuorassa. KS (sama erä kuin nimen väli); kipinät junaan 213 vasta tämän parin jälkeen.
