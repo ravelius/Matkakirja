@@ -529,3 +529,9 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   kujakivi_pinnat.py raja(k) nyt REUNA_JAKSO/REUNA_HAJ-muuttujista (varmuuskopio .ennen-jakso). v101 valmis 16.46 (ei virheitä). VS REF 8885a9f54 (kivijalka sävy kivittäin,
   lattia lämpimämpi, reunakiven etupinta vaalea, ReunusRaja 1,4/0,4). Pari havainne-editori-20261028-164951 + lähikuvat + 05/kk-reunakivi-ennen-jalkeen-2x.png → KK 16.5x.
   Lähikuvatyökalu nyt K/tyokalut/lahi.py (python3 lahi.py <vanha-pari 091657> <uusi-pari>). SEURAAVA: KK:n vastaus, sitten kohta 3 (räystäs + friisivyö).
+
+## LISÄYS 39 klo 17.1x (28.10.): Codexin J4-v3 pelissä, pari KK:lla
+- PT 16.5x: Codexin J4-v3 (posti 20447bcf2; T7 review-v3-j4, SHA 19/19, GLB 350cfb6b…) → olavinlinna-j4/v3/. Kuittaus Codexille 189539926.
+- Kokoaminen sellaisenaan (ei j4_hopea.py:tä): j4_arkkuun.py (0,97) → j4_siivous.py → astc-mip.swift vari/normaali 4 → kavely-j4/ (vanhat talteen kavely-ennen-v3/).
+  Ajo: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 2855d8478 olavinlinna-j4/sk-komero-j4-lahi.txt ipad --batch (~7 min) → esikatselu-20261028-170508.
+- Pari KK:lle: kk-pari-v2-v3-j4h-2x.png (+ j4h/j4g/j4i). Halo ja läikät pois, kannun suu syvä; lautasen kaiverrus himmeämpi, kiilto litteämpi. Odottaa KK:ta.
