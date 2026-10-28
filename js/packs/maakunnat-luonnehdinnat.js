@@ -1517,7 +1517,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ESP: {
     "Castilla y León": {
       lyhyt: "Salamancan satoja vuosia vanha yliopisto opettaa Kastilja ja Leónissa samoissa keskiaikaisissa kivisaleissa.",
-      pitka: "Kastilja ja León tunnetaan ’linnojen maana’ – Ávilan täydellisesti säilyneet keskiaikaiset muurit kiertävät koko vanhankaupungin, ja Segoviassa roomalaisten rakentama vesijohtosilta kantaa yhä vettä ilman tippaakaan laastia liitoksissaan. Alueen laaja ylätasanko on myös viinimaata: Duero-joen varren Ribera del Duero -viinitilat tuottavat joitain Espanjan arvostetuimmista punaviineistä korkealla, viileällä ylängöllä. Kylät ovat harvassa ja etäisyydet pitkiä, mutta juuri se hiljaisuus on tehnyt alueesta suosikin niille, jotka etsivät Espanjasta jotain muuta kuin rantalomaa.",
+      pitka: `Kastilia ja León on Espanjan pohjoisen sisämaan itsehallintoalue, ja siellä asuu noin 2,4 miljoonaa ihmistä. Pinta-alaltaan se on Espanjan suurin itsehallintoalue, ja siihen kuuluu yhdeksän maakuntaa. Alueen hallinto on Valladolidin kaupungissa. Asukastiheys on vain 25,5 asukasta neliökilometrillä. Salamancan yliopisto perustettiin vuonna 1218. Leónissa kokoontuivat vuonna 1188 kuningas Alfonso IX:n kutsumat valtiopäivät, joita pidetään Euroopan ensimmäisenä parlamenttielimenä. Segovian kaupungissa on roomalainen vesijohto, jonka 167 kaarta on rakennettu graniittilohkareista ilman laastia. Vesijohdon suurin korkeus on 28,5 metriä, ja se rakennettiin noin ensimmäisellä vuosisadalla jKr. Burgosin katedraali ja Segovian vanhakaupunki ovat Unescon maailmanperintökohteita. Alueen pohjoisosan halki kulkee Pyhän Jaakobin pyhiinvaellusreitti.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-castilla-y-leon-edf4e8e1.jpg',
@@ -1547,7 +1547,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Andalucía": {
       lyhyt: "Andalusia on maailman suurin oliiviöljyn tuotantoalue – oliivipuiden rivit jatkuvat horisonttiin asti.",
-      pitka: "Andalusian sydämessä kohoaa Granadan Alhambra, maurien rakentama linna- ja puutarhakokonaisuus, jonka kaiverretut seinät ja viileät sisäpihat vetävät puoleensa miljoonia kävijöitä vuosittain. Alueen kaupungit – Sevilla, Córdoba, Cádiz – kantavat yhä näkyvissä kerroksia maurien, juutalaisten ja kristittyjen yhteisestä historiasta. Isoisän matkavuonna 1873 Espanja oli lyhyeksi aikaa tasavalta, ja juuri Andalusiassa se horjui pahiten: Cádiz julistautui heinäkuussa omaksi ’kantonikseen’ ja vaati täyttä itsehallintoa Madridin keskushallinnolta. Kapina levisi useisiin muihinkin andalusialaisiin kaupunkeihin ennen kuin hallitus sai järjestyksen palautettua.",
+      pitka: `Andalusia on Espanjan eteläosan itsehallintoalue, ja siellä asuu noin 8,7 miljoonaa ihmistä. Alueen keskus on Sevilla, ja alueeseen kuuluu kahdeksan maakuntaa. Guadalquivir-joki on 657 kilometriä pitkä ja virtaa Córdoban ja Sevillan kautta. Granadan kaupungissa on Alhambra, linnoitus- ja palatsikompleksi, jonka rakentaminen alkoi vuonna 1238. Se on Unescon maailmanperintökohde. Sierra Nevada -vuoriston korkein huippu Mulhacén on noin 3 480 metriä korkea. Guadalquivirin suistossa on Doñanan kansallispuisto, jossa on rantasoita ja dyynejä sekä yli 300 lintulajia. Flamenco, johon kuuluvat laulu, kitara ja tanssi, on kehittynyt Andalusiassa. Unesco hyväksyi sen ihmiskunnan aineettomaan perintöön vuonna 2010.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-and-c2-5e3504cf.jpg',
@@ -1577,7 +1577,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Castilla-La Mancha": {
       lyhyt: "Consuegran kylässä pyörivät yhä oikeat tuulimyllyt, jotka tekivät La Manchan tasangosta maailmankuulun.",
-      pitka: "Toledo, alueen entinen pääkaupunki, tunnetaan ’kolmen kulttuurin kaupunkina’, sillä sen kapeilla kujilla seisovat yhä rinnakkain kristittyjen, juutalaisten ja muslimien rakentamat rakennukset satojen vuosien takaa. La Manchan aavat pellot eivät kasvata vain tuulimyllyjen näkymää, vaan myös maailman arvostetuinta safrania ja lampaanmaidosta tehtyä Manchego-juustoa, jolla on suojattu alkuperänimitys. Kesät ovat täällä polttavan kuumia ja talvet yllättävän kylmiä – juuri se äärimmäinen mannerilmasto tekee sekä viineistä että juustosta niin voimakkaita.",
+      pitka: `Kastilia-La Mancha on Espanjan keskiosan itsehallintoalue, ja siellä asuu noin 2,1 miljoonaa ihmistä. Alueella on viisi maakuntaa, ja keskus on Toledo Tajo-joen mutkassa. Visigoottien valtakunnan pääkaupunki oli Toledossa 500-luvulta. Kuningas Filip II siirsi hovinsa Toledosta Madridiin vuonna 1561. Toledon vanhakaupunki on Unescon maailmanperintökohde, samoin Cuencan muurien ympäröimä vanhakaupunki. Kaupungissa Huécar-joen rotkon reunalla ovat 1400-luvulla rakennetut riippuvat talot. Miguel de Cervantesin romaani Don Quijote (1605) sijoittuu La Manchaan. Campo de Criptanan kaupungissa näkyy yhä tuulimyllyjä. Manchego on La Manchan lammasmaidosta tehty juusto.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-castilla-la-mancha-a53e8977.jpg',
@@ -1607,7 +1607,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Aragón": {
       lyhyt: "Aragonian Pyreneiden rinteet täyttyvät joka talvi laskettelijoista, kun alueen hiihtokeskukset avaavat ovensa.",
-      pitka: "Aragonian pääkaupungissa Zaragozassa kohoaa Pilarin basilika, jonka mukaan legenda kertoo neitsyt Marian ilmestyneen apostoli Jaakobille pylvään päällä – siitä koko rakennuksen nimi. Kaupungin vanhat tornit ja kirkot yhdistävät goottilaista ja mudéjar-tyyliä, kristittyjen ja maurien käsityöläisten satojen vuosien yhteistyön jälkiä, jotka UNESCO on nostanut maailmanperintöluetteloon. Ebro-joki halkoo koko aluetta pohjoisesta etelään ja on kastellut Aragonian viljelyksiä jo roomalaisajoista lähtien.",
+      pitka: `Aragonia on Koillis-Espanjan itsehallintoalue, ja siellä asuu noin 1,4 miljoonaa ihmistä. Alueella on kolme maakuntaa: Huesca, Teruel ja Zaragoza. Yli puolet asukkaista asuu keskuksessa Zaragozassa Ebro-joen varrella. Zaragozan perusti keisari Augustus roomalaisten veteraanien siirtokunnaksi nimellä Caesaraugusta. Pohjoisessa kohoavat Pyreneet, joiden korkein huippu Aneto on 3 404 metriä. Monte Perdido on 3 355 metriä korkea ja kuuluu Ordesa y Monte Perdidon kansallispuistoon. Teruelin ja Zaragozan alueen mudéjar-rakennukset ovat Unescon maailmanperintökohde. Mudéjar tarkoittaa tyyliä, jossa islamilainen taide vaikuttaa vahvasti ja jota rakensivat usein kristittyjen vallan alle jääneet muslimit. Kohteet ovat 1100–1600-luvuilta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-aragon-58e265db.jpg',
@@ -1637,7 +1637,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Extremadura": {
       lyhyt: "Harvaan asuttu Extremadura on yksi Euroopan parhaista tähtitaivaan katselupaikoista pimeiden, tähtikirkkaiden öidensä ansiosta.",
-      pitka: "Extremadura on harvaan asuttu, mutta historiallisesti yllättävän painava alue: sekä Hernán Cortés että Francisco Pizarro, jotka kaatoivat atsteekkien ja inkojen valtakunnat, syntyivät täällä pienissä kylissä. Roomalaiskaupunki Méridan rauniot – teatteri, amfiteatteri ja silta – ovat parhaiten säilyneitä koko entisen Rooman valtakunnan alueella Italian ulkopuolella. Laajoilla tammimetsäisillä dehesa-laidunmailla kulkevat mustat iberialaissiat syövät talvisin pelkkiä tammenterhoja, mikä antaa alueen kuuluisalle jamón ibéricolle sen pähkinäisen maun.",
+      pitka: `Extremadura on Espanjan itsehallintoalue Kastilian ja Leónin eteläpuolella, ja siellä asuu noin 1,1 miljoonaa ihmistä. Alueella on kaksi maakuntaa, Cáceres ja Badajoz, jotka ovat Espanjan pinta-alaltaan suurimmat. Alueen pääkaupunki on Mérida. Badajozissa asuu noin 150 000 ja Cáceresissa noin 97 000 ihmistä. Roomalaisessa Emerita Augusta -kaupungissa, nykyisessä Méridassa, on teatteri, joka rakennettiin vuosina 16–15 eaa. Méridassa järjestetään klassisen teatterin festivaali vuodesta 1933. Cáceresin vanhakaupunki ja Guadalupen kuninkaallinen luostari ovat Unescon maailmanperintökohteita. Tammimetsissä eli dehesa-laitumilla iberiansiat, joista tehdään arvostettua kinkkua, syövät tammenterhoja. Monfragüen kansallispuisto Tajo-joen laaksossa perustettiin vuonna 2007.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-extremadura-9de6143c.jpg',
@@ -1667,7 +1667,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Cataluña": {
       lyhyt: "Barcelonan entiseen tehdaskortteliin syntynyt 22@-kaupunginosa on tehnyt siitä Espanjan vilkkaimman teknologiakeskuksen.",
-      pitka: "Barcelonan kaupunkikuvaa hallitsee Antoni Gaudín keskeneräinen Sagrada Família -basilika, jota on rakennettu jo yli 140 vuotta ja jonka on määrä valmistua vasta 2020-luvulla. Katalonian kieli ja kulttuuri elävät vahvoina koulussa, kadulla ja mediassa, ja alueen identiteetti on aina ollut vahvasti omaehtoinen. Vuonna 1873 – samana vuonna kun isoisä matkasi maassa – tuo omaehtoisuus nousi Espanjan huipulle asti: barcelonalainen Francesc Pi i Margall toimi lyhytaikaisen ensimmäisen tasavallan presidenttinä ja ajoi koko maalle liittovaltiomallia, jossa Katalonia olisi saanut laajan itsehallinnon. Hänen hallituksensa kaatui vielä saman vuoden aikana, mutta ajatus elää yhä katalonialaisessa politiikassa.",
+      pitka: `Katalonia on Koillis-Espanjan itsehallintoalue, ja siellä asuu noin 8,1 miljoonaa ihmistä. Pääkaupunki on Barcelona, ja alueella on neljä maakuntaa: Barcelona, Girona, Lleida ja Tarragona. Virallisia kieliä ovat katalaani ja espanja, ja Aranin laaksossa myös oksitaani. Barcelonassa on Sagrada Família -kirkko, jonka rakentaminen alkoi vuonna 1882. Antoni Gaudí otti suunnittelun vastuulleen vuonna 1883. Montserrat on vuori noin 40 kilometriä Barcelonasta luoteeseen, ja sen korkein kohta on 1 236 metriä. Gironan maakunnan rannikko Blanesista Ranskan rajalle on Costa Brava eli karu rannikko. Katalonian ihmistorneissa eli castells-perinteessä ihmiset nousevat toistensa harteille. Perinne on dokumentoitu vuodesta 1712, ja Unesco hyväksyi sen aineettomaksi kulttuuriperinnöksi vuonna 2010.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-cataluna-3236b9ba.jpg',
@@ -1697,7 +1697,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Galicia": {
       lyhyt: "Santiago de Compostelaan saapuu satoja tuhansia pyhiinvaeltajia vuosittain pitkin Camino de Santiago -reittiä.",
-      pitka: "Galician rannikkoa pilkkovat syvät ría-lahdet, joissa kasvatetaan simpukoita ja saadaan mustekalaa niin runsaasti, että ne ovat alueen ruokakulttuurin ydin. 1800-luvun jälkipuoliskolla köyhyys ajoi valtavia joukkoja galicialaisia siirtolaisiksi meren taakse, erityisesti Kuubaan ja Argentiinaan; niin moni päätyi Buenos Airesiin, että argentiinalaiset kutsuvat yhä tänäkin päivänä kaikkia espanjalaisia yleisnimellä ’gallegos’. Mantereen luoteisin niemi, Fisterra, tunnettiin roomalaisille maailman läntisimpänä reunana – nimikin tarkoittaa ’maan loppua’, vaikka rannikko jatkuu sen ohi vielä pitkälti pohjoiseen.",
+      pitka: `Galicia on Espanjan luoteisosan itsehallintoalue Atlantin rannalla, ja siellä asuu noin 2,7 miljoonaa ihmistä. Alueeseen kuuluu neljä maakuntaa, ja espanjan lisäksi virallinen kieli on galego eli galicia. Alueen keskus Santiago de Compostela on Pyhän Jaakobin pyhiinvaellusreitin päätepiste. Kaupungin katedraalin rakentaminen alkoi vuonna 1075. Perimätiedon mukaan apostoli Jaakobin hauta löytyi vuonna 813. A Coruñan kaupungissa on Herkuleen torni, roomalaisten rakentama majakka. Se on 55 metriä korkea ja ainoa täysin säilynyt roomalainen majakka, jota käytetään yhä merenkulussa. Torni on Unescon maailmanperintökohde vuodesta 2009. Roomalaiset pitivät Finisterren niemeä tunnetun maailman reunana.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-galicia-387335eb.jpg',
@@ -1727,7 +1727,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Valenciana": {
       lyhyt: "Valencian Tiedeteiden kaupungin valkoiset, valaan luita muistuttavat rakennukset ovat nousseet kaupungin tunnusmerkiksi.",
-      pitka: "Aidon paellan syntysija on Valencian eteläpuolella siintävä Albufera-järvi, jonka ranta-asukkaat keittivät riisiä, etanoita ja kanaa isossa matalassa pannussa jo vuosisatoja ennen kuin ruoasta tuli koko maan tunnetuin vientituote. Kaupunkia ympäröivät appelsiinitarhat tuoksuvat keväisin makealta kukinnalta, ja hedelmää viedään täältä ympäri Eurooppaa. Maaliskuussa koko kaupunki juhlii Las Fallas -festivaalia, jossa kadunkulmiin rakennetaan jättimäisiä pahvi- ja vahapatsaita – ja poltetaan ne yhtenä yönä poroksi satojen vuosien perinteen mukaisesti.",
+      pitka: `Valencia on Espanjan itsehallintoalue Välimeren rannikolla, ja siellä asuu noin 5,4 miljoonaa ihmistä. Alueen pääkaupunki on Valencian kaupunki. Sen eteläpuolella, noin 11 kilometrin päässä, on Albuferan luonnonpuisto, jossa viljellään riisiä. Riisiruoat, kuten paella, ovat alueen tunnetuimpia ruokia. Valencian kaupungissa vietetään maaliskuussa Fallas-juhlaa, ja suuret hahmot poltetaan 19. maaliskuuta keskiyöllä. Unesco otti juhlan aineettoman kulttuuriperinnön luetteloon vuonna 2016. Alicanten maakunnan Elchen kaupungissa on palmulehto, jossa kasvaa taatelipalmuja. Palmulehto on Unescon maailmanperintökohde vuodesta 2000. Alueen virallinen juhlapäivä on 9. lokakuuta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-val-c1-ea35645e.jpg',
@@ -1757,7 +1757,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Asturias": {
       lyhyt: "Asturialaisissa siiderikapakoissa siideri kaadetaan perinteisesti korkealta lasiin, jotta juoma saa raikkaan poreensa.",
-      pitka: "Asturian vuoristo Picos de Europa on jyrkkää kalkkikiveä ja syviä rotkoja, ja sen suojissa elää yhä parisataa ruskeakarhua – yksi Länsi-Euroopan harvoista elinvoimaisista kannoista. Samalla vuoristoalueella sijaitsee Covadongan luola, kristityille pyhä paikka: sinne sijoitetaan vuoden 718 taistelu, josta kahdeksan vuosisataa kestänyt Reconquista sai alkunsa ja josta koko Espanjan kristillinen kuningaskunta lopulta kasvoi. Alue oli 1800-luvulla myös Espanjan hiilikaivosteollisuuden sydän, ja mustat kaivosmontut ja vihreät vuoret elävät yhä rinnakkain maisemassa.",
+      pitka: `Asturia on Espanjan pohjoisrannikon itsehallintoalue, ja siellä asuu noin miljoona ihmistä. Pääkaupunki on Oviedo, ja suurin kaupunki on satamakaupunki Gijón. Etelärajalla kohoavat Kantabrian vuoret. Kantabrian vuoriin kuuluvan Picos de Europan kansallispuiston korkein huippu Torrecerredo nousee 2 648 metriin. Rannikolla on satoja hiekkarantoja ja pieniä poukamia. Perinneruoka fabada on pata, jossa on valkoisia papuja, possua, verimakkaraa ja chorizoa. Alueen siideri on hyvin kuivaa, ja tarjoilija kaataa sen pullosta korkealta lasiin. Asturian kuningaskunta perustettiin vuonna 722. Covadongan taistelun kerrotaan tapahtuneen samana vuonna, vaikka historioitsijat kiistelevät sen merkityksestä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-asturias-cfc720f3.jpg',
@@ -1787,7 +1787,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Murcia": {
       lyhyt: "Murciaa kutsutaan Euroopan vihanneskaapiksi, sillä sen aurinkoiset pellot tuottavat hedelmiä ja vihanneksia ympäri mannerta.",
-      pitka: "Murcian rannikolla makaa Mar Menor, Euroopan suurin rannikkolaguuni, jonka lämmin ja suolainen vesi houkuttelee sekä lomailijoita että flamingoja. Alueen kaivoskaupunki Cartagena kaivoi vuosisatojen ajan hopeaa, lyijyä ja sinkkiä, ja raskas työ synnytti oman musiikkilajinsa, cante de las minas -kaivoslaulun. Vuonna 1873 juuri Cartagena nousi koko Espanjan tasavallan vastarinnan symboliksi: kaupunki julistautui omaksi itsenäiseksi ’kantonikseen’ ja kesti hallituksen joukkojen piirityksen puoli vuotta, kunnes antautui vasta tammikuussa 1874 – pisimpään kestänyt kapinapesäke koko maassa.",
+      pitka: `Murcia on Espanjan kaakkoisosan itsehallintoalue, ja siellä asuu noin 1,6 miljoonaa ihmistä. Pääkaupunki on Murcian kaupunki, mutta alueen parlamentti sijaitsee Cartagenassa. Murcia on yksi Espanjan kuivimmista alueista, ja sadetta tulee paikoin alle 200 millimetriä vuodessa. Segura-joen valuma-alue kattaa suurimman osan alueesta. Maataloudessa tuotetaan salaattia, sitrushedelmiä, manteleita ja viinirypäleitä. Mar Menor on Espanjan suurin laguuni, ja Välimerestä sen erottaa 22 kilometrin pituinen hiekkasärkkä. Satamakaupungin Cartagenan perusti noin vuonna 227 eaa. kartagolainen kenraali Hasdrubal. Cartagenassa on roomalainen teatteri. Moratalan ja Mulan rumpukulkueet kuuluvat Unescon aineettoman kulttuuriperinnön luetteloon.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-mur-b2-5e9b4948.jpg',
@@ -1817,7 +1817,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Foral de Navarra": {
       lyhyt: "Pamplonassa juostaan heinäkuussa sonnien edellä San Fermín -juhlan aikana, joka tunnetaan ympäri maailman.",
-      pitka: "Navarra kätkee sisäänsä kaksi täysin erilaista maisemaa: pohjoisessa vihreät Pyreneiden rinteet ja etelässä Bardenas Realesin kuiva, tuulen kuluttama aavikko, jonka savikukkulat muistuttavat kuunpintaa. Nykyisin aluetta kuvataan usein ilmasta käsin – Bardenasin autiomaa toimi kuvauspaikkana muun muassa Game of Thrones -sarjassa. Vuonna 1873 Navarra oli aivan toisenlaisessa myrskyssä: kun Espanja julistautui tasavallaksi, kuningasmieliset karlistit nostivat kapinan ja tekivät Estellasta saman vuoden elokuussa oman ”pääkaupunkinsa” – sota riehui juuri näillä main vuosia. Nykyään rauha on palannut, ja maaseudun kylät elävät viinistä, lampaanjuustosta ja vaelluksista Pyreneiden poluilla.",
+      pitka: `Navarra on Espanjan pohjoisosan itsehallintoalue, ja siellä asuu noin 680 000 ihmistä. Pääkaupunki on Pamplona. Pohjoisessa kohoavat Pyreneet, ja etelässä on Ebro-joen laakso. Alueen korkein kohta on Mesa de los Tres Reyes, 2 428 metriä. Pamplonassa vietetään joka heinäkuu 6.–14. päivä San Fermín -juhlaa, johon kuuluu härkien juoksu 875 metrin reitillä. Kirjailija Ernest Hemingwayn kuvaukset tekivät juoksun tunnetuksi maailmalla. Alueen kaakossa on Bardenas Reales, jossa vesi ja tuuli ovat muovanneet savesta, liidusta ja hiekkakivestä kanjoneita ja tasanteita. Unesco nimesi alueen biosfäärialueeksi vuonna 2000. Navarra kerää verot lähes kokonaan itse, koska sillä on vanhaan foraalioikeuteen perustuva erityisasema.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-navarra-6008db2e.jpg',
@@ -1847,7 +1847,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Madrid": {
       lyhyt: "Madrid on kasvanut Etelä-Euroopan vilkkaimmaksi startup-keskukseksi, jonne uusia yrityksiä perustetaan joka viikko.",
-      pitka: "Madrid on Espanjan maantieteellinen ja hallinnollinen sydän: Puerta del Solin aukiolla on pieni laatta, ”Kilometri 0”, josta kaikki maan valtatiet lasketaan alkavaksi. Aukio ja sen tuntumassa oleva parlamentin talo, Cortes, ovat nähneet vuosisatojen käänteet, ja kaupunki elää myöhään – Pradon museon Velázquezit ja Goyat vetävät miljoonia kävijöitä Retiro-puiston kupeeseen. Juuri silloin, 11. helmikuuta 1873, tuossa Cortesin salissa tapahtui mullistus: espanjalaiset kansanedustajat julistivat maan tasavallaksi kuningas Amadeon luovuttua kruunusta, ja lyhytikäinen Ensimmäinen tasavalta kesti vajaat kaksi vuotta ennen kuin monarkia palasi. Nykyään madridilaiset kokoontuvat samalle aukiolle joka uudenvuodenyö syömään kaksitoista onnenrypälettä kellon lyödessä keskiyötä.",
+      pitka: `Madrid on Espanjan keskiosan itsehallintoalue, ja siellä asuu noin 7,1 miljoonaa ihmistä. Alueen pääkaupunki Madrid on sen suurin kunta, ja kuntia on yhteensä 179. Pohjoisessa ja lännessä kohoaa Guadarraman vuoristo, jonka korkein huippu Peñalara on 2 428 metriä korkea. Alueen talous nojaa palveluihin, ja tuotanto asukasta kohti on maan korkein. Alcalá de Henaresin kaupunki on Unescon maailmanperintökohde. Alcalássa syntyi kirjailija Miguel de Cervantes vuonna 1547. El Escorialin luostari ja kuninkaanlinna on myös Unescon maailmanperintökohde. Kuningas Filip II rakennutti sen vuosina 1563–1584 noin 45 kilometrin päähän Madridista.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-mad-b1-02028bf9.jpg',
@@ -1877,7 +1877,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "País Vasco": {
       lyhyt: "Bilbaon Guggenheim-museo muutti savuisen teollisuuskaupungin maailmankuuluksi arkkitehtuuri- ja designkohteeksi.",
-      pitka: "Baskimaan rannikkokaupunki San Sebastián eli Donostia tunnetaan pintxos-baareistaan, joissa tiskit notkuvat pieniä suupaloja ja paikalliset kiertävät illalla baarista toiseen kuin ruokareitillä. Baskin kieli, euskera, on Euroopan vanhimpia yhä puhuttuja kieliä eikä sitä ole voitu yhdistää mihinkään muuhun tunnettuun kielikuntaan – se on säilynyt vuoristoisten laaksojen suojassa vuosituhansien ajan. Kolmas karlistisota toi Baskimaahan verisen piirityksen: kapinalliset saartoivat Bilbaon joulukuusta 1873 toukokuuhun 1874, ja kaupunki kesti raskaan pommituksen antautumatta ennen kuin piiritys lopulta murrettiin. Nykyään rauha on palannut, ja vihreät, lammaslaitumien pilkkomat kukkulat laskeutuvat suoraan Biskajanlahden kalastajasatamiin, joissa yhä lastataan tonnikalaa ja sardiinia.",
+      pitka: `Baskimaa on Espanjan itsehallintoalue Biskajanlahden rannalla, ja siellä asuu noin 2,2 miljoonaa ihmistä. Pääkaupunki on Vitoria-Gasteiz, ja suurin kaupunki on Bilbao. Baskin kieli on espanjan kanssa virallinen kieli. Vuonna 2021 baskia puhui sujuvasti 36 prosenttia yli 16-vuotiaista. Bilbaossa Nervión-joen varrella on Guggenheim-museo, jonka suunnitteli arkkitehti Frank Gehry. Se avattiin 18. lokakuuta 1997, ja sen julkisivussa on noin 33 000 titaanilevyä. Gernikan kaupunkia pommitettiin 26. huhtikuuta 1937 Espanjan sisällissodan aikana. Gernikan tammi on baskien perinteisten oikeuksien symboli. Ruokakulttuurissa tunnetaan pintxot, baarien pienet suupalat.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-pais-vasco-f5a00242.jpg',
@@ -1907,7 +1907,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Canary Is.": {
       lyhyt: "Kanariansaarten kirkas ja pilvetön taivas tekee Teneriffasta ja La Palmasta maailman arvostetuimpia tähtitieteen tutkimuspaikkoja.",
-      pitka: "Kanariansaaret ovat tulivuorisaaristo, joka sijaitsee lähempänä Länsi-Saharan rannikkoa kuin Manner-Espanjaa – vain reilun sadan kilometrin päässä Afrikasta. Teneriffan Teide kohoaa 3 715 metriin ja on paitsi Espanjan korkein huippu, myös maailman kolmanneksi korkein tulivuori mitattuna valtameren pohjasta lukien, sillä suurin osa sen massasta piileskelee veden alla. Ikivihreä subtrooppinen ilmasto sallii banaanien ja viinin viljelyn ympäri vuoden, ja maisema vaihtuu mustista laavarannoista sumuisiin laurisilva-metsiin muutaman kilometrin matkalla. Saarilla kasvaa myös harvinainen lohikäärmepuu, drago, jonka kuuluisin yksilö Icod de los Vinosin kaupungissa Tenerifellä on paikallisten mukaan lähes tuhat vuotta vanha ja yhä täydessä lehdessä; nykyään samoihin satamiin saapuu risteilyaluksia, jotka tuovat saarille miljoonia kävijöitä joka vuosi.",
+      pitka: `Kanariansaaret on Espanjan saaristoalue, jossa asuu noin 2,3 miljoonaa ihmistä. Pääsaaria on seitsemän, ja väkirikkain niistä on Tenerife. Hallintokeskuksia on kaksi: Santa Cruz de Tenerife ja Las Palmas de Gran Canaria. Tenerifellä on Teide, Espanjan korkein vuori, jonka korkeus on noin 3 700 metriä. Teiden kansallispuisto on Unescon maailmanperintökohde vuodesta 2007. Lanzarotella on Timanfayan kansallispuisto, ja La Gomeran Garajonayn kansallispuisto on ollut maailmanperintökohde vuodesta 1986. Santa Cruz de Tenerifen karnevaali pidetään kaduilla helmi- ja maaliskuussa. Saarilla viljellään banaaneja. Matkailu on saarten tärkeimpiä elinkeinoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-canarias-81cd1ab3.jpg',
@@ -1937,7 +1937,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Cantabria": {
       lyhyt: "Altamiran luolan kalliomaalaukset Kantabriassa tunnetaan lempinimellä esihistorian Sikstuksen kappeli.",
-      pitka: "Kantabria on Espanjan vihreä, sateinen kaista Biskajanlahden rannalla – paikalliset kutsuvat aluetta usein ”Espanjan luonnolliseksi puutarhaksi”. Picos de Europan jyrkät kalkkikivihuiput kohoavat lähes 2 600 metriin vain parinkymmenen kilometrin päässä rannikosta, ja niiden rinteillä laiduntavat lehmät tuottavat maitoa alueen tunnettuihin juustoihin. Comillasin pikkukaupungissa seisoo El Capricho, ainoa Antoni Gaudín suunnittelema rakennus Kantabriassa – satumainen, keraamisin auringonkukkalaatoin koristeltu huvila 1880-luvulta. Nykyään Santanderin satamakaupunki elää yhä kalastuksesta ja täyttyy kesäisin surffareista, jotka hakevat Atlantin aaltoja pitkin hiekkarantoja.",
+      pitka: `Kantabria on vuorten ja meren alue Pohjois-Espanjassa, ja siellä asuu noin 590 000 ihmistä. Pääkaupunki Santander on Biskajanlahden rannalla ja alueen suurin kaupunki. Alueen pinta-ala on noin 5 300 neliökilometriä. Picos de Europan vuoret kuuluvat osittain Kantabriaan, ja ne nousevat noin 2 500 metrin korkeuteen. Santillana del Marin kunnassa on Altamiran luola, jonka maalaukset löydettiin vuonna 1879. Luola on Unescon maailmanperintökohde vuodesta 1985. Comillasin kaupungissa on Gaudín suunnittelema huvila Capricho de Gaudí. Perinneruokaa on cocido montañés, eli vuoristolaisten pata, jossa on papuja ja kaalia. Pas-joen laaksossa tehdään sobao-kakkua.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-cantabria-ae1f9ebc.jpg',
@@ -1967,7 +1967,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "La Rioja": {
       lyhyt: "La Riojan Harossa kastellaan kesäkuussa toisiaan punaviinillä Batalla del Vino -juhlassa, joka värjää koko kaupungin viininpunaiseksi.",
-      pitka: "La Rioja on Espanjan tunnetuin viinialue: Ebro-joen laakson rinteillä kasvaa tempranillo-rypälettä lähes yhtenäisenä mattona, ja sadonkorjuun aikaan syyskuussa koko maakunta tuoksuu käyvälle rypälemehulle. 1870-luvun alussa, samoihin aikoihin kun isoisän matka vei häntä halki Espanjan, Ranskan viinitarhat tuhoutuivat filloksera-kirvan tuhoisasta iskusta, ja ranskalaiset viinikauppiaat siirtyivät ostamaan ja tuottamaan viiniä Riojasta – he toivat mukanaan tammitynnyrit ja pitkän kypsytyksen tavat, jotka muokkasivat koko alueen viininvalmistusta pysyvästi. Haron rautatieaseman ympärille noussut Barrio de la Estación on yhä täynnä satavuotiaita viinitiloja, jotka ranskalaiset tuolloin perustivat. Nykyään Rioja Alta, Rioja Alavesa ja Rioja Oriental muodostavat yhdessä alueen, jonka viinit tunnetaan ympäri maailmaa laadukkaasta tammileimastaan.",
+      pitka: `La Rioja on viinialue, jossa asuu noin 330 000 ihmistä. Se on asukasluvultaan Espanjan pienin autonominen alue. Pääkaupunki Logroño on Ebro-joen rannalla, ja siellä asuu lähes puolet alueen väestöstä. Logroñossa on yli 50 tapasbaaria muutaman korttelin alueella, ja Camino de Santiagon pyhiinvaellusreitti kulkee kaupungin läpi. Rioja-viineillä on Espanjan korkein alkuperänimitys, Denominación de Origen Calificada. San Millán de la Cogollan Suso- ja Yuso-luostarit ovat Unescon maailmanperintökohde vuodesta 1997. Alueen korkein huippu on Monte San Lorenzo, 2 271 metriä korkea. Haron kaupungissa pidetään Batalla del Vino -juhla, jossa ihmiset kastelevat toisensa viinillä. Luostareissa syntyneissä käsikirjoituksissa on varhaisia kirjoitettuja espanjan kielen muotoja.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/esp-maakunta-la-rioja-e1729cdd.jpg',
@@ -1997,7 +1997,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Islas Baleares": {
       lyhyt: "Baleaareilla peritään nykyään matkailijoilta ympäristömaksua, jolla suojellaan saarten luontoa massaturismin paineessa.",
-      pitka: "Baleaarit koostuvat neljästä hyvin erilaisesta saaresta: vilkas Mallorca, rauhallisempi Menorca, juhliva Ibiza ja pieni Formentera. Menorcalla on yli tuhat esihistoriallista talayot-kivirakennelmaa – pylväitä, torneja ja hautakammioita pronssikaudelta – ja koko saari on nimetty Unescon maailmanperintökohteeksi niiden ansiosta. Rannikko koostuu sadoista pienistä calas-poukamista, joiden turkoosi vesi ja valkoinen hiekka ovat tehneet saarista yhden Euroopan suosituimmista kesäkohteista aina 1950-luvun matkailubuumista lähtien. Ibizan ja Formenteran välistä merta peittävät laajat posidonia-merikasvustot, jotka pitävät veden poikkeuksellisen kirkkaana ja on itsessään nimetty Unescon maailmanperintökohteeksi; nykyään saaret täyttyvät joka kesä miljoonista turisteista, jotka hakevat juuri tätä kirkasta vettä ja valkoista hiekkaa.",
+      pitka: `Baleaarit on Espanjan saaristoalue, jossa asuu noin 1,25 miljoonaa ihmistä. Pääsaaria on neljä: Mallorca, Menorca, Ibiza ja Formentera. Alueen pinta-ala on lähes 5 000 neliökilometriä. Mallorca on suurin saari, ja pääkaupunki Palma sijaitsee sillä. Palman tuomiokirkko on nimeltään La Seu. Mallorcan luoteisosassa kulkevat Serra de Tramuntanan vuoret, jotka kuuluvat Unescon maailmanperintöön kulttuurimaisemana vuodesta 2011. Vuorten korkein huippu on yli 1 400 metriä korkea. Mallorcan perinneleivonnainen on ensaimada, kierteinen hiivaleivonnainen. Majoneesin kerrotaan syntyneen Menorcan Mahónin kaupungissa. Saarilla on kolme kaupallista lentokenttää: Palmassa, Mahónissa ja Ibizalla.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-bal-b1-b83c30db.jpg',
@@ -2027,7 +2027,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ceuta": {
       lyhyt: "Ceuta on Espanjan alue Pohjois-Afrikassa – yksi EU:n vain kahdesta maarajasta Afrikkaan, vartioidun raja-aidan takana.",
-      pitka: "Ceuta on pieni, tiiviisti asuttu kaupunki Gibraltarinsalmen etelärannalla, ja sen yllä kohoava Monte Hacho tunnettiin antiikin aikana yhtenä Herakleen pylväistä yhdessä Gibraltarin kalliovuoren kanssa. Kaupungissa elää rinnakkain neljä uskontokuntaa – kristityt, muslimit, juutalaiset ja hindut – ja paikalliset kutsuvat tätä sopuisaa rinnakkaineloa ”neljän kulttuurin” kaupungiksi. Kirkko, moskeija, synagoga ja hindutemppeli sijaitsevat kaikki muutaman korttelin sisällä toisistaan. Nykyään Ceuta elää satamastaan ja rajakaupasta, ja sen kaduilla kuulee espanjaa ja arabiaa sekaisin samassa keskustelussa.",
+      pitka: `Ceuta on Espanjan autonominen kaupunki Pohjois-Afrikassa, Gibraltarinsalmen eteläpuolella. Siellä asuu noin 84 000 ihmistä, ja pinta-ala on alle 20 neliökilometriä. Portugalilaiset valtasivat kaupungin vuonna 1415, ja vuonna 1668 Portugali tunnusti sen kuuluvan Espanjalle. Autonomisen kaupungin asema vahvistettiin vuonna 1995. Virallinen kieli on espanja. Marokko vaatii kaupunkia itselleen. Maaraja Marokkoon on noin 6,4 kilometriä pitkä, ja sitä suojaa kuuden metrin korkuinen aita. Satamasta on useita lauttavuoroja päivässä Algecirasiin Espanjan mantereelle. Monte Hacho on 204 metrin korkuinen mäki, jolla on sotilastukikohta. Kaupungissa on myös Kuninkaalliset muurit sekä katedraali.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-ceu-c2-661ce904.jpg',
@@ -2057,7 +2057,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Melilla": {
       lyhyt: "Melillassa on Barcelonan jälkeen Espanjan toiseksi eniten modernistisia rakennuksia, vaikka kaupunki sijaitsee Pohjois-Afrikassa.",
-      pitka: "Melillan vanha kaupunginosa, Melilla la Vieja, on kokonainen linnoitettu niemi, jonka muurit, bastionit ja kaivetut käytävät rakennettiin 1500–1600-luvuilla puolustamaan kaupunkia meren ja maan puolelta. Espanja on hallinnut Melillaa vuodesta 1497 lähtien, mikä tekee siitä yhden Euroopan pisimpään yhtäjaksoisesti saman vallan hallitseman kaupungin. Kaupunki on nykyään yhtä monikulttuurinen kuin Ceuta: kristityt, muslimit, juutalaiset ja hindut elävät samalla pienellä niemimaalla, ja jokaisella yhteisöllä on omat pyhäkkönsä katujen varsilla. Vanhan linnoituksen kivimuurien sisällä toimii nykyään museoita ja kahviloita, ja maan alta paljastuu yhä uusia holvattuja käytäviä arkeologisissa kaivauksissa.",
+      pitka: `Melilla on Espanjan autonominen kaupunki Pohjois-Afrikassa, Marokon Välimeren-rannikolla. Siellä asuu noin 87 000 ihmistä, ja pinta-ala on alle 15 neliökilometriä. Espanja valtasi Melillan 17. syyskuuta 1497 lähes ilman väkivaltaa. Vanha linnoitus Melilla la Vieja rakennettiin noin 30 metriä korkealle kummulle. Kaupungissa on Espanjan toiseksi eniten katalaanisen modernismin (art nouveau) tyylisiä rakennuksia Barcelonan jälkeen. Tyyli oli vallalla vuosina 1909–1945, pääasiassa katalaaniarkkitehti Enrique Nieton työn ansiosta. Nieto suunnitteli myös pääsynagogan ja keskusmoskeijan. Espanjan sisällissodan aloittanut sotilaskapina alkoi Melillasta heinäkuussa 1936. Kaupungista on lauttayhteys Almeríaan ja Málagaan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-maakunta2-mel-b3-33f48d15.jpg',
