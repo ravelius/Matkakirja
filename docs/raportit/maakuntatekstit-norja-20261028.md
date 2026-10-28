@@ -4,7 +4,7 @@ Norjan entiset ja nykyiset läänit, Huippuvuoret ja Bouvetinsaari; sama malli k
 
 ## Akershus
 
-Akershus on Oslon ympärillä oleva lääni Itä-Norjassa, ja siellä asuu noin 750 000 ihmistä. Lääni kuului vuosina 2020–2023 Vikenin lääniin, ja se perustettiin uudelleen vuoden 2024 alussa. Läänin hallinto toimii Oslossa, vaikka Oslo on itse oma lääninsä. Eidsvollin kunnassa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814 Eidsvollin rakennuksessa, joka on nykyään museo. Gardermoenin lentoasema Ullensakerin ja Nannestadin kuntien rajalla korvasi Oslon vanhan Fornebun lentoasemann Oslon pääkenttänä 8. lokakuuta 1998. Vuonna 2025 sen kautta kulki noin 27 miljoonaa matkustajaa. Askerin kunnassa on kruununprinssin asuinkartano Skaugum.
+Akershus on Oslon ympärillä oleva lääni Itä-Norjassa, ja siellä asuu noin 750 000 ihmistä. Lääni kuului vuosina 2020–2023 Vikenin lääniin, ja se perustettiin uudelleen vuoden 2024 alussa. Läänin hallinto toimii Oslossa, vaikka Oslo on itse oma lääninsä. Eidsvollin kunnassa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814 Eidsvollin rakennuksessa, joka on nykyään museo. Gardermoenin lentoasema Ullensakerin ja Nannestadin kuntien rajalla korvasi Oslon vanhan Fornebun lentoaseman Oslon pääkenttänä 8. lokakuuta 1998. Vuonna 2025 sen kautta kulki noin 27 miljoonaa matkustajaa. Askerin kunnassa on kruununprinssin asuinkartano Skaugum.
 
 ## Aust-Agder
 
@@ -60,7 +60,7 @@ Rogaland on rannikkolääni Länsi-Norjassa Pohjanmeren rannalla, ja siellä asu
 
 ## Sogn og Fjordane
 
-Sogn og Fjordane oli lääni Länsi-Norjassa vuosina 1919–2019, ja nykyään alue kuuluu Vestlandin lääniin. Alue on harvaan asuttua: asukkaita on noin 110 000, ja suurin kaupunki on Førde. Jostedalsbreen on Manner-Euroopan suurin jäätikkö. Lusterin kunnassa on 1100-luvun Urnesin stavkirke, vanha puinen tolppakirkko. Urnesin kirkko ja Nærøyfjordin vuono ovat Unescon maailmanperintökohteita. Solundin kunnassa on Norjan mantereen läntisin kohta. Aurlandin kunnassa Flåmin rautatie laskeutuu vuoristosta Sognefjordille. Vuonojen ylitykset tehdään usein lautalla. Läänin kaikki kunnat käyttivät virallisena kirjakielenä uusnorjaa eli nynorskia, joka on toinen Norjan kahdesta kirjakielestä.
+Sogn og Fjordane oli lääni Länsi-Norjassa vuosina 1919–2019, ja nykyään alue kuuluu Vestlandin lääniin. Alue on harvaan asuttua: asukkaita on noin 110 000, ja suurin kaupunki on Førde. Jostedalsbreen on Manner-Euroopan suurin jäätikkö. Lusterin kunnassa on 1100-luvun Urnesin stavkirke, vanha puinen tolppakirkko. Urnesin kirkko ja Nærøyfjordin vuono ovat Unescon maailmanperintökohteita. Solundin kunnassa on Norjan läntisin kohta, Holmebåen-luoto. Aurlandin kunnassa Flåmin rautatie laskeutuu vuoristosta Sognefjordille. Vuonojen ylitykset tehdään usein lautalla. Läänin kaikki kunnat käyttivät virallisena kirjakielenä uusnorjaa eli nynorskia, joka on toinen Norjan kahdesta kirjakielestä.
 
 ## Sør-Trøndelag
 
@@ -72,7 +72,7 @@ Telemark on lääni Etelä-Norjassa, ja maisema vaihtuu Hardangervidda-ylängöl
 
 ## Troms
 
-Troms on vuonojen, saarten ja jyrkkien vuorten lääni Pohjois-Norjassa, ja koko lääni on napapiirin pohjoispuolella. Asukkaita on noin 170 000. Lääni oli vuosina 2020–2023 yhdistetty Finnmarkin kanssa, mutta se on taas oma lääninsä. Läänin keskus Tromssa (Tromsø) on kaupunki, jossa on maailman pohjoisin yliopisto. Siellä aurinko ei laske touko-kesäkuun vaihteesta heinäkuun lopulle, ja joulukuussa on kaamos. Lyngenin alpeilla kohoaa läänin korkein vuori Jiehkkevárri, jonka huippu on yli 1 800 metrin korkeudessa. Senjan saarella vuoret nousevat jyrkkinä suoraan merestä. Revontulet näkyvät talvella koko läänissä.
+Troms on vuonojen, saarten ja jyrkkien vuorten lääni Pohjois-Norjassa, ja koko lääni on napapiirin pohjoispuolella. Asukkaita on noin 170 000. Lääni oli vuosina 2020–2023 yhdistetty Finnmarkin kanssa, mutta se on taas oma lääninsä. Läänin keskus Tromssa (Tromsø) on kaupunki, jossa on maailman pohjoisin yliopisto. Siellä aurinko ei laske toukokuun puolivälistä heinäkuun loppuun, ja joulukuussa on kaamos. Lyngenin alpeilla kohoaa läänin korkein vuori Jiehkkevárri, jonka huippu on yli 1 800 metrin korkeudessa. Senjan saarella vuoret nousevat jyrkkinä suoraan merestä. Revontulet näkyvät talvella koko läänissä.
 
 ## Vest-Agder
 
@@ -80,9 +80,9 @@ Vest-Agder oli lääni Norjan eteläisimmässä osassa vuosina 1919–2019. Nyky
 
 ## Vestfold
 
-Vestfold on rannikkolääni Oslovuonon länsirannalla Kaakkois-Norjassa, ja siellä asuu noin 260 000 ihmistä. Tønsbergia pidetään Norjan vanhimpana kaupunkina, ja Tønsbergin läheltä Osebergin hautakummusta on löydetty 800-luvun viikinkilaiva. Alueella on yli 1 400 saarta, joista suurin on Nøtterøy. Larvikin kunnassa Mølenin rannalla on Norjan suurin kivikkoranta. Larvikin mukaan on nimetty larvikiitti, kiiltävä sinertävä kivilaji ja Norjan kansalliskivi. Sandefjord oli nykyaikaisen valaanpyynnin keskus, ja kaupungissa on valaanpyyntimuseo. Færderin kansallispuisto Oslovuonon suulla on yksi Norjan kahdesta merellisestä kansallispuistosta. Vestfold ja Telemark olivat vuosina 2020–2023 yhtenä lääninä, mutta ovat nyt taas erillään.
+Vestfold on rannikkolääni Oslovuonon länsirannalla Kaakkois-Norjassa, ja siellä asuu noin 260 000 ihmistä. Tønsbergia pidetään Norjan vanhimpana kaupunkina, ja Tønsbergin läheltä Osebergin hautakummusta on löydetty 800-luvun viikinkilaiva. Alueella on yli 1 400 saarta, joista suurin on Nøtterøy. Larvikin kunnassa Mølenin rannalla on Norjan suurin kivikkoranta. Larvikin mukaan on nimetty larvikiitti, kiiltävä sinertävä kivilaji ja Norjan kansalliskivi. Sandefjord oli nykyaikaisen valaanpyynnin keskus, ja kaupungissa on valaanpyyntimuseo. Færderin kansallispuisto Oslovuonon suulla on yksi Norjan merellisistä kansallispuistoista. Vestfold ja Telemark olivat vuosina 2020–2023 yhtenä lääninä, mutta ovat nyt taas erillään.
 
 ## Østfold
 
-Østfold on Norjan kaakkoisin lääni Oslovuonon ja Ruotsin rajan välissä. Asukkaita on noin 310 000, ja keskus on Sarpsborg. Suurin osa asuu rannikon ja Glomman varren kaupungeissa Fredrikstadissa, Sarpsborgissa, Mossissa ja Haldenissa. Tie E6 kulkee läänin halki Oslosta Göteborgiin. Norjan pisin joki Glomma laskee mereen Fredrikstadissa. Fredrikstadin vanha osa Gamlebyen on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki, ja kaupunki perustettiin vuonna 1567. Hvalerin saaristossa on Ytre Hvalerin kansallispuisto, joka perustettiin vuonna 2009 Norjan ensimmäiseksi merelliseksi kansallispuistoksi. Vuonna 2018 arkeologit löysivät Østfoldista maatutkalla maan alta löydetyn viikinkilaivan. Østfold oli vuosina 2020–2023 osa Vikenin lääniä.
+Østfold on Norjan kaakkoisin lääni Oslovuonon ja Ruotsin rajan välissä. Asukkaita on noin 310 000, ja keskus on Sarpsborg. Suurin osa asuu rannikon ja Glomman varren kaupungeissa Fredrikstadissa, Sarpsborgissa, Mossissa ja Haldenissa. Tie E6 kulkee läänin halki Oslosta Göteborgiin. Norjan pisin joki Glomma laskee mereen Fredrikstadissa. Fredrikstadin vanha osa Gamlebyen on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki, ja kaupunki perustettiin vuonna 1567. Hvalerin saaristossa on Ytre Hvalerin kansallispuisto, joka perustettiin vuonna 2009 Norjan ensimmäiseksi merelliseksi kansallispuistoksi. Vuonna 2018 arkeologit löysivät Østfoldista maatutkalla maan alta viikinkilaivan. Østfold oli vuosina 2020–2023 osa Vikenin lääniä.
 

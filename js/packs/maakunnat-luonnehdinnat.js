@@ -17221,7 +17221,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   NOR: {
     Akershus: {
       lyhyt: 'Eidsvollin kartanossa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nyt museo ja kansallismonumentti.',
-      pitka: `Akershus on Oslon ympärillä oleva lääni Itä-Norjassa, ja siellä asuu noin 750 000 ihmistä. Lääni kuului vuosina 2020–2023 Vikenin lääniin, ja se perustettiin uudelleen vuoden 2024 alussa. Läänin hallinto toimii Oslossa, vaikka Oslo on itse oma lääninsä. Eidsvollin kunnassa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814 Eidsvollin rakennuksessa, joka on nykyään museo. Gardermoenin lentoasema Ullensakerin ja Nannestadin kuntien rajalla korvasi Oslon vanhan Fornebun lentoasemann Oslon pääkenttänä 8. lokakuuta 1998. Vuonna 2025 sen kautta kulki noin 27 miljoonaa matkustajaa. Askerin kunnassa on kruununprinssin asuinkartano Skaugum.`,
+      pitka: `Akershus on Oslon ympärillä oleva lääni Itä-Norjassa, ja siellä asuu noin 750 000 ihmistä. Lääni kuului vuosina 2020–2023 Vikenin lääniin, ja se perustettiin uudelleen vuoden 2024 alussa. Läänin hallinto toimii Oslossa, vaikka Oslo on itse oma lääninsä. Eidsvollin kunnassa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814 Eidsvollin rakennuksessa, joka on nykyään museo. Gardermoenin lentoasema Ullensakerin ja Nannestadin kuntien rajalla korvasi Oslon vanhan Fornebun lentoaseman Oslon pääkenttänä 8. lokakuuta 1998. Vuonna 2025 sen kautta kulki noin 27 miljoonaa matkustajaa. Askerin kunnassa on kruununprinssin asuinkartano Skaugum.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-akershus-846b62b1.jpg",
@@ -17541,7 +17541,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sogn og Fjordane': {
       lyhyt: 'Vuonojen kuninkaaksi kutsuttu Sognefjord työntyy 205 kilometriä sisämaahan, ja syvimmillään se ulottuu 1 308 metriä merenpinnan alle.',
-      pitka: `Sogn og Fjordane oli lääni Länsi-Norjassa vuosina 1919–2019, ja nykyään alue kuuluu Vestlandin lääniin. Alue on harvaan asuttua: asukkaita on noin 110 000, ja suurin kaupunki on Førde. Jostedalsbreen on Manner-Euroopan suurin jäätikkö. Lusterin kunnassa on 1100-luvun Urnesin stavkirke, vanha puinen tolppakirkko. Urnesin kirkko ja Nærøyfjordin vuono ovat Unescon maailmanperintökohteita. Solundin kunnassa on Norjan mantereen läntisin kohta. Aurlandin kunnassa Flåmin rautatie laskeutuu vuoristosta Sognefjordille. Vuonojen ylitykset tehdään usein lautalla. Läänin kaikki kunnat käyttivät virallisena kirjakielenä uusnorjaa eli nynorskia, joka on toinen Norjan kahdesta kirjakielestä.`,
+      pitka: `Sogn og Fjordane oli lääni Länsi-Norjassa vuosina 1919–2019, ja nykyään alue kuuluu Vestlandin lääniin. Alue on harvaan asuttua: asukkaita on noin 110 000, ja suurin kaupunki on Førde. Jostedalsbreen on Manner-Euroopan suurin jäätikkö. Lusterin kunnassa on 1100-luvun Urnesin stavkirke, vanha puinen tolppakirkko. Urnesin kirkko ja Nærøyfjordin vuono ovat Unescon maailmanperintökohteita. Solundin kunnassa on Norjan läntisin kohta, Holmebåen-luoto. Aurlandin kunnassa Flåmin rautatie laskeutuu vuoristosta Sognefjordille. Vuonojen ylitykset tehdään usein lautalla. Läänin kaikki kunnat käyttivät virallisena kirjakielenä uusnorjaa eli nynorskia, joka on toinen Norjan kahdesta kirjakielestä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sogn-og-fjordane-b1a39b62.jpg",
@@ -17610,7 +17610,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Troms: {
       lyhyt: 'Tromsøssa keskiyön aurinko pysyy kesällä taivaalla 71 vuorokautta yhtä mittaa, ja talvella kaamos kestää lähes seitsemän viikkoa.',
-      pitka: `Troms on vuonojen, saarten ja jyrkkien vuorten lääni Pohjois-Norjassa, ja koko lääni on napapiirin pohjoispuolella. Asukkaita on noin 170 000. Lääni oli vuosina 2020–2023 yhdistetty Finnmarkin kanssa, mutta se on taas oma lääninsä. Läänin keskus Tromssa (Tromsø) on kaupunki, jossa on maailman pohjoisin yliopisto. Siellä aurinko ei laske touko-kesäkuun vaihteesta heinäkuun lopulle, ja joulukuussa on kaamos. Lyngenin alpeilla kohoaa läänin korkein vuori Jiehkkevárri, jonka huippu on yli 1 800 metrin korkeudessa. Senjan saarella vuoret nousevat jyrkkinä suoraan merestä. Revontulet näkyvät talvella koko läänissä.`,
+      pitka: `Troms on vuonojen, saarten ja jyrkkien vuorten lääni Pohjois-Norjassa, ja koko lääni on napapiirin pohjoispuolella. Asukkaita on noin 170 000. Lääni oli vuosina 2020–2023 yhdistetty Finnmarkin kanssa, mutta se on taas oma lääninsä. Läänin keskus Tromssa (Tromsø) on kaupunki, jossa on maailman pohjoisin yliopisto. Siellä aurinko ei laske toukokuun puolivälistä heinäkuun loppuun, ja joulukuussa on kaamos. Lyngenin alpeilla kohoaa läänin korkein vuori Jiehkkevárri, jonka huippu on yli 1 800 metrin korkeudessa. Senjan saarella vuoret nousevat jyrkkinä suoraan merestä. Revontulet näkyvät talvella koko läänissä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-maakunta2-troms-v-f82d9012.jpg',
@@ -17656,7 +17656,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vestfold: {
       lyhyt: 'Tønsbergin lähellä hautakummusta kaivettiin 1904 Osebergin viikinkilaiva, johon kaksi naista oli haudattu syksyllä 834.',
-      pitka: `Vestfold on rannikkolääni Oslovuonon länsirannalla Kaakkois-Norjassa, ja siellä asuu noin 260 000 ihmistä. Tønsbergia pidetään Norjan vanhimpana kaupunkina, ja Tønsbergin läheltä Osebergin hautakummusta on löydetty 800-luvun viikinkilaiva. Alueella on yli 1 400 saarta, joista suurin on Nøtterøy. Larvikin kunnassa Mølenin rannalla on Norjan suurin kivikkoranta. Larvikin mukaan on nimetty larvikiitti, kiiltävä sinertävä kivilaji ja Norjan kansalliskivi. Sandefjord oli nykyaikaisen valaanpyynnin keskus, ja kaupungissa on valaanpyyntimuseo. Færderin kansallispuisto Oslovuonon suulla on yksi Norjan kahdesta merellisestä kansallispuistosta. Vestfold ja Telemark olivat vuosina 2020–2023 yhtenä lääninä, mutta ovat nyt taas erillään.`,
+      pitka: `Vestfold on rannikkolääni Oslovuonon länsirannalla Kaakkois-Norjassa, ja siellä asuu noin 260 000 ihmistä. Tønsbergia pidetään Norjan vanhimpana kaupunkina, ja Tønsbergin läheltä Osebergin hautakummusta on löydetty 800-luvun viikinkilaiva. Alueella on yli 1 400 saarta, joista suurin on Nøtterøy. Larvikin kunnassa Mølenin rannalla on Norjan suurin kivikkoranta. Larvikin mukaan on nimetty larvikiitti, kiiltävä sinertävä kivilaji ja Norjan kansalliskivi. Sandefjord oli nykyaikaisen valaanpyynnin keskus, ja kaupungissa on valaanpyyntimuseo. Færderin kansallispuisto Oslovuonon suulla on yksi Norjan merellisistä kansallispuistoista. Vestfold ja Telemark olivat vuosina 2020–2023 yhtenä lääninä, mutta ovat nyt taas erillään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-vestfold-e850f89c.jpg",
@@ -17679,7 +17679,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Østfold': {
       lyhyt: 'Norjan pisin joki Glomma laskee mereen Fredrikstadissa, jonka itärannalla on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki.',
-      pitka: `Østfold on Norjan kaakkoisin lääni Oslovuonon ja Ruotsin rajan välissä. Asukkaita on noin 310 000, ja keskus on Sarpsborg. Suurin osa asuu rannikon ja Glomman varren kaupungeissa Fredrikstadissa, Sarpsborgissa, Mossissa ja Haldenissa. Tie E6 kulkee läänin halki Oslosta Göteborgiin. Norjan pisin joki Glomma laskee mereen Fredrikstadissa. Fredrikstadin vanha osa Gamlebyen on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki, ja kaupunki perustettiin vuonna 1567. Hvalerin saaristossa on Ytre Hvalerin kansallispuisto, joka perustettiin vuonna 2009 Norjan ensimmäiseksi merelliseksi kansallispuistoksi. Vuonna 2018 arkeologit löysivät Østfoldista maatutkalla maan alta löydetyn viikinkilaivan. Østfold oli vuosina 2020–2023 osa Vikenin lääniä.`,
+      pitka: `Østfold on Norjan kaakkoisin lääni Oslovuonon ja Ruotsin rajan välissä. Asukkaita on noin 310 000, ja keskus on Sarpsborg. Suurin osa asuu rannikon ja Glomman varren kaupungeissa Fredrikstadissa, Sarpsborgissa, Mossissa ja Haldenissa. Tie E6 kulkee läänin halki Oslosta Göteborgiin. Norjan pisin joki Glomma laskee mereen Fredrikstadissa. Fredrikstadin vanha osa Gamlebyen on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki, ja kaupunki perustettiin vuonna 1567. Hvalerin saaristossa on Ytre Hvalerin kansallispuisto, joka perustettiin vuonna 2009 Norjan ensimmäiseksi merelliseksi kansallispuistoksi. Vuonna 2018 arkeologit löysivät Østfoldista maatutkalla maan alta viikinkilaivan. Østfold oli vuosina 2020–2023 osa Vikenin lääniä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-maakunta2-ostfold-v-94a173b1.jpg',
