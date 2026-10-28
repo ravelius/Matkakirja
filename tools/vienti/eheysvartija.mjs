@@ -3,7 +3,10 @@
  * EHEYSVARTIJA (Siirtoseppä 27.9.2026, Fablen tilaus): Euroopan eheystarkistus pysyvänä
  * (docs/raportit/siirtoseppa-eurooppa-eheys-20260927.md).
  *
- *   node tools/vienti/eheysvartija.mjs [--kaikki] [--ulos <kansio>] [--rinnakkain 32] [--versio N]
+ *   node tools/vienti/eheysvartija.mjs [--kaikki] [--ulos <kansio>] [--rinnakkain 32] [--versio N] [--head]
+ *
+ * Olemassaolo luetaan ensin ämpäriluettelosta (tools/vienti/ampariluettelo.mjs, 28.10.2026); vain luettelosta
+ * puuttuvat HEAD:lla. --head: kaikki HEAD:lla kuten ennen.
  *
  * Lukee tuotannon sisältöpaketin (sisalto/1/uusin.json → vN) ja tarkistaa Euroopan maat (offline.json
  * ryhmat.europe; --kaikki = kaikki maat):
@@ -24,6 +27,7 @@ import { appendFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
+import { osoitteidenKoot } from './ampariluettelo.mjs';
 
 const JUURI = 'https://media.matkakirja.app/';
 const aja = promisify(execFile);
@@ -58,7 +62,7 @@ export function laatat(z, valit) {
   return ulos;
 }
 
-export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null } = {}) {
+export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null, luettelo = true } = {}) {
   const osoitin = await hae('sisalto/1/uusin.json');
   const polku = versio ? `sisalto/1/v${versio}/` : osoitin.polku;
   const offline = await hae(`${polku}offline.json`);
@@ -85,7 +89,13 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
     }
   }
   const osoitteet = [...lahde.keys()];
-  const koodit = await pool(osoitteet, rinnakkain, koodi);
+  // Julkaisija 28.10.2026 (R2-kulut): luettelossa oleva avain = olemassa (ei HEAD:ia; 72 000 HEAD:ia / ajo oli
+  // suurin HeadObject-lähde). Luettelosta puuttuvat tarkistetaan HEAD:lla kuten ennen, joten vanhentunut
+  // luettelo ei tee vääriä hälytyksiä. --head tai AMPARI_LUETTELO=pois: kaikki HEAD:lla.
+  const luettelosta = luettelo ? await osoitteidenKoot(osoitteet) : null;
+  const verkosta = luettelosta ? osoitteet.filter((u) => !luettelosta.has(u)) : osoitteet;
+  const verkkokoodit = new Map((await pool(verkosta, rinnakkain, koodi)).map((c, k) => [verkosta[k], c]));
+  const koodit = osoitteet.map((u) => (luettelosta?.has(u) ? 200 : verkkokoodit.get(u)));
   // Kertaalleen epäonnistuneet (0/5xx) uudelleen hitaammin: rinnakkaiskuorma antaa satunnaisia 500:ia.
   const uusittavat = osoitteet.map((u, k) => [u, k]).filter(([, k]) => koodit[k] === 0 || koodit[k] >= 500);
   const uusitut = await pool(uusittavat, 4, ([u]) => koodi(u));
@@ -120,7 +130,7 @@ export async function tarkista({ kaikki = false, rinnakkain = 32, versio = null 
   return {
     aika: new Date().toISOString(), versio: osoitin.versio, tarkistettuVersio: versio ?? osoitin.versio,
     skeemaversio: osoitin.skeemaversio, laajuus: kaikki ? 'kaikki' : 'europe', maita: maat.length,
-    kaupunkeja: tarkasteltavat.length, tarkistettu: osoitteet.length,
+    kaupunkeja: tarkasteltavat.length, tarkistettu: osoitteet.length, luettelosta: luettelosta?.size ?? 0, headPyyntoja: verkosta.length,
     puuttuvat, orvot, lehdetPuuttuu, ylitykset,
   };
 }
@@ -140,7 +150,7 @@ export function yhteenveto(t) {
 
 function markdown(t, osat) {
   const r = [`# Eheysvartija ${t.aika.slice(0, 16).replace('T', ' ')} UTC — v${t.tarkistettuVersio} (${t.skeemaversio}), ${t.laajuus}`, '',
-    `${t.maita} maata, ${t.kaupunkeja} kaupunkia, ${t.tarkistettu} tiedostoa HEAD-tarkistettu (vain media.matkakirja.app).`, '',
+    `${t.maita} maata, ${t.kaupunkeja} kaupunkia, ${t.tarkistettu} tiedostoa tarkistettu (luettelosta ${t.luettelosta ?? 0}, HEAD ${t.headPyyntoja ?? t.tarkistettu}; vain media.matkakirja.app).`, '',
     osat.length ? `**VIKA:** ${osat.join('; ')}` : '**Kunnossa.**', ''];
   if (t.puuttuvat.length) {
     r.push('## Puuttuvat (ei 200)', '', '| Maa | Laji | Koodi | Osoite |', '|---|---|---|---|');
@@ -158,14 +168,14 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const arvo = (nimi, oletus) => { const i = process.argv.indexOf(nimi); return i > 0 ? process.argv[i + 1] : oletus; };
   const ulos = resolve(arvo('--ulos', '/Users/Shared/Claude/proto-3d/lokit/eheysvartija'));
   const t = await tarkista({ kaikki: process.argv.includes('--kaikki'), rinnakkain: Number(arvo('--rinnakkain', 32)),
-    versio: arvo('--versio', null) });
+    versio: arvo('--versio', null), luettelo: !process.argv.includes('--head') });
   const osat = yhteenveto(t);
   mkdirSync(ulos, { recursive: true });
   writeFileSync(join(ulos, 'tulos.json'), `${JSON.stringify(t, null, 1)}\n`);
   writeFileSync(join(ulos, 'tulos.md'), markdown(t, osat));
   const rivi = osat.length ? `EHEYSVARTIJA v${t.tarkistettuVersio} ${t.aika.slice(0, 16)}Z: ${osat.join('; ')} — ${join(ulos, 'tulos.md')}` : '';
   writeFileSync(join(ulos, 'VIKA.txt'), rivi ? `${rivi}\n` : '');
-  appendFileSync(join(ulos, 'historia.log'), `${t.aika} v${t.tarkistettuVersio} ${t.laajuus} ${t.tarkistettu} tiedostoa: ${osat.length ? osat.join('; ') : 'kunnossa'}\n`);
+  appendFileSync(join(ulos, 'historia.log'), `${t.aika} v${t.tarkistettuVersio} ${t.laajuus} ${t.tarkistettu} tiedostoa (luettelosta ${t.luettelosta}, HEAD ${t.headPyyntoja}): ${osat.length ? osat.join('; ') : 'kunnossa'}\n`);
   console.log(osat.length ? `VIKA: ${osat.join('; ')}` : `Kunnossa: v${t.tarkistettuVersio}, ${t.tarkistettu} tiedostoa, ${t.maita} maata.`);
   if (osat.length && process.env.GITHUB_ACTIONS) console.log(`::warning::${rivi}`);
 }

@@ -13,10 +13,16 @@
  * --kansio: jokainen paikallinen tiedosto (HEAD, koko sama kuin paikallisesti)
  * ja jokainen manifestin polku on kansiossa. Ilman --kansiota: manifest.json
  * haetaan osoitteesta ja sen polut tarkistetaan (olemassa olevan paketin tarkistus).
+ *
+ * --luettelo <tsv> [--otos 16] (Julkaisija 28.10.2026, R2-kulut): paketin etuliitteen ListObjectsV2-listaus
+ * (avain<TAB>koko<TAB>etag, ks. tools/vienti/ampariluettelo.mjs). Tiedosto, joka on listauksessa samankokoisena,
+ * on kunnossa ilman HEAD:ia; muut tarkistetaan HEAD:lla kuten ennen. Julkinen luettavuus varmistetaan
+ * otoksella (manifest.json + tasavälein --otos tiedostoa, HEAD). Ennen ~930 HEAD:ia / paketti, nyt ~17.
  */
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avainOsoitteesta, luettelonKoot } from './ampariluettelo.mjs';
 
 /** Manifestin kaikki tiedostopolut (kokoelmat, moduulit, lisätiedostot, skeemat, web, media, offline, lisenssit). */
 export function manifestinPolut(manifest) {
@@ -85,11 +91,26 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     const manifest = await (await fetch(`${juuri}manifest.json`)).json();
     tiedostot = manifestinPolut(manifest).map((polku) => ({ polku }));
   }
-  virheet.push(...await tarkistaAmpari(juuri, tiedostot));
+  let tarkistettavat = tiedostot; let luettelosta = 0;
+  const luettelo = arg('--luettelo');
+  if (luettelo) {
+    const etu = avainOsoitteesta(juuri) ?? new URL(juuri).pathname.slice(1);
+    const koot = await luettelonKoot(tiedostot.map((t) => etu + t.polku), { polku: resolve(luettelo) });
+    const otosN = Number(arg('--otos') ?? 16);
+    const askel = Math.max(1, Math.floor(tiedostot.length / otosN));
+    tarkistettavat = tiedostot.filter((t, k) => {
+      const koko = koot.get(etu + t.polku);
+      const listattu = koko !== undefined && (t.koko === undefined || koko === t.koko);
+      if (listattu) luettelosta += 1;
+      return !listattu || t.polku === 'manifest.json' || k % askel === 0;
+    });
+  }
+  virheet.push(...await tarkistaAmpari(juuri, tarkistettavat));
   if (virheet.length) {
     console.error(`Ämpäritarkistus: ${virheet.length} virhettä (${tiedostot.length} tiedostoa):`);
     for (const v of virheet.slice(0, 50)) console.error(`  ${v}`);
     process.exit(1);
   }
-  console.log(`Ämpäritarkistus: ${tiedostot.length}/${tiedostot.length} tiedostoa luettavissa (${juuri})`);
+  console.log(`Ämpäritarkistus: ${tiedostot.length}/${tiedostot.length} tiedostoa luettavissa (${juuri})`
+    + (luettelo ? `; listauksesta ${luettelosta}, HEAD ${tarkistettavat.length}` : ''));
 }
