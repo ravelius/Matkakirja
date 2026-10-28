@@ -416,3 +416,13 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   Kujakivet: odota Codexin stone-surfaces-v4 (tilaus f0766ed58) → K/kujakivi-pinnat-v4 (SHA) → aja_ketju_v86.zsh (pinnat-kansio v4, VV_*) → pari + 2× lähikuvat KK:lle;
   kujan 01 kaksi vaaleaa sokkelipalaa ja ruskea reunakivi (välipari 001129) tarkista.
 - Checkout on haarassa lavastaja/luovutus-lisays24 (PR 5392). Ei käynnissä olevia taustaajoja.
+
+## LISÄYS 29 klo 02.5x (28.10.): J4 hopea KK:lle (PT välitti)
+- VS:n linja: metallin perusväri = F0 (hopea sRGB ~225–235); komerossa EI valoluotaimia → VS:n korjaus 5681793be (esineet-metalli-213: ilman luotainta taivas heijastuksessa × 0,35).
+  Pääsyy huntuun oli glb: metallicFactor puuttui → metalli = MR-kartan B ≈ 0,73. j4_hopea.py nyt: VAL0/VAL1 0,40/1,15 (albedo ka ~224), roughnessFactor 0,35, MR-kartan B = 255.
+- Ajot (sk-komero-j4-lahi.txt, linja 2): 015103 → 015815 → 020611 → 021342 → 022852 → 024427 (REF 5681793be, hyväksytty). Pari: proto-3d/lokit/esikatselu-20261028-024427/j4-pari-kk.png (+ -ylhaalta, cmp7).
+- PT:n huomio KK:lle: kiilto hyvä, sävy lämpimän ruskea ja kolikot tummia → mahdollinen palaute sävystä (viilennys: tint j4_hopea.py:n rivillä np.array([0.94, 0.97, 1.0])).
+- AVOIN J4: KK:n palaute; vanhat JPEG-kuvat jäävät bufferiin (glb 14 Mt) → siivous/ASTC ennen vientiä; merkki kavely-pakettiin; kahvan venymä (Codex) vasta KK:n jälkeen.
+- Kujakivet: Codexin v4 (f0766ed58) ei vielä postissa → ohjeet LISÄYS 28.
+- JATKO (Macin uudelleenkäynnistys): ei taustaajoja. J4-uusinta: python3 _tyo/linnanrakentaja/olavinlinna-j4/j4_hopea.py esine-arkun-hopeasisalto-pronssi.glb esine-arkun-hopeasisalto.glb (+ kopio kavely-j4/),
+  ajo: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 5681793be <sk-komero-j4-lahi.txt> ipad --batch.
