@@ -505,3 +505,33 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - PARI lokit/havainne-editori-20261028-135114 (01/05/02) + 01/kk-raystas-ennen-jalkeen-2x.png → KK.
 - AUKI: taustapalojen (lähimmät kujakatot) päätetiilet (leivottuja: uusi primitiivi ilman UV1:tä omaan ryhmäänsä, pohjaväri 0,999 – tarkista),
   räystään ulkonema ja friisivyön korkeus/kirkkaus (kohta 3). PK: harjakoristeet ovat jo 3D (koristeet.json), päätetiilistä ei Codex-tilausta.
+
+## LISÄYS 37 klo 15.5x (28.10.): Codexin kujakivet v5 pelissä, pari KK:lla
+- PT 15.4x: Codexin v5 (claude/postilaatikko posti/juoksupeli-kujakivet-20261028/stone-surfaces-v5, SHA 39/39) → K/kujakivi-pinnat-v5. Kuittaus Codexille b4603a3e8.
+- K/tyokalut/kujakivi_vaihda.py: vaihtaa valmiiden glb:iden V4_kujakivi_*-kuvat v02:ksi (reunakivi v01 ennallaan) ja kertoo lattian UV0.u:n 1,25:llä (LKU 1,25 → 1,0, ei venytystä).
+  v5:n kivijalassa sama 8 kerran jako kuin v4d:ssä → SK 0,82 ennallaan. Ketju + pari: `zsh K/tyokalut/aja_v97_pari.zsh [02 05 01]` (~4 min; yksikerros-v87 → v89,
+  avoimet-v60k → v61k, muurikate pari-v87 → pari-v89, juuri-v97m = v95m + nämä; REF oletus ac8b06780).
+- Pari havainne-editori-20261028-154243 (+ lähikuvat 091657:n rajauksilla) → KK. Sonnet: lattia vaaka-asennossa ja venymätön (parannus), mutta 05/01 laatat kapeat ja
+  saumojen vieressä vaalea kaksoisviiva (VS:n v4-saumajako → VS:lle SEAMS.json 15.5x); kivijalassa 05/01 9–10 kerrosta, kivet ohuet.
+- SEURAAVA: KK:n vastaus (ehdotettu: kerrokset Codexin mittaan SK 1,0 + VS:n saumat) → uusi pari. Sitten kohta 3 (räystään ulkonema + friisivyö).
+
+## LISÄYS 38 klo 16.1x (28.10.): KK hyväksyi kujakivet (kohdat 1–3), poikkiviiva korjattu, reunakivi työn alla
+- KK 16.0x: kivijalka Codexin 0,15 m:iin (SK 1,0) ja lattiarivit syvemmiksi → kujakivi_vaihda.py SKALA-kertoimet (aja_v98/v99_pari.zsh). v99 (lattia v ÷ 1,8,
+  VS REF 65b736b1b = OpenGL-normaali) pari 160220 → KK 16.2x: kohdat 1–3 HYVÄKSYTTY, näytetään omistajalle keskeneräisenä. 2× lähikuvassa juonne ei veny → ei Codex-tilausta.
+- Poikkiviiva (VS): kujan lattia on erillisiä poikkikaistoja, liitoksissa raot (raot.py) → K/tyokalut/lattia_alusta.py (tumma alusta lattian alle, toistettava).
+  aja_v100_pari.zsh (juuri-v100m = v99m + alusta); testi 05: havainne-editori-20261028-160928, viiva poissa.
+- KK 16.2x seuraavat: a) REUNAKIVI vaalea, korotettu, pitkäkivinen (LR muoto; tumma etupinta = valo → VS, albedo vaalea); b) kivijalan pystyjuovat (VS);
+  c) lattia lämmin kerma (VS). VS:lle viestit 16.2x ja 16.3x.
+- KÄYNNISSÄ (16.13): `zsh K/tyokalut/aja_v101_pari.zsh` (~40 min; jatko keskeytyksestä: aja uudelleen): aja_ketju_v85r.zsh (= v85, REUNA_H 0,25, URA_L 0,012,
+  URA_VIISTE 1) → yksikerros-v85r → v5-pinnat suoraan (SK 1, LKU 1, LKV 1,8) + palatsipinnat (katto+friisi) + alusta → yksikerros-v93, juuri-v101m, pari REF 65b736b1b.
+  Sitten lähikuvat (lahi.py 091657:n rajauksin) + 05:n reunakivirajaus → KK.
+- 16.5x: KK 16.3x tarkennus (kampa = liian tiheät saumat) → REUNA_JAKSO 0,7 → 1,4, HAJ 0,4, urat ohuina ennallaan (URA_L 0,006, URA_VIISTE 0), REUNA_H 0,25;
+  kujakivi_pinnat.py raja(k) nyt REUNA_JAKSO/REUNA_HAJ-muuttujista (varmuuskopio .ennen-jakso). v101 valmis 16.46 (ei virheitä). VS REF 8885a9f54 (kivijalka sävy kivittäin,
+  lattia lämpimämpi, reunakiven etupinta vaalea, ReunusRaja 1,4/0,4). Pari havainne-editori-20261028-164951 + lähikuvat + 05/kk-reunakivi-ennen-jalkeen-2x.png → KK 16.5x.
+  Lähikuvatyökalu nyt K/tyokalut/lahi.py (python3 lahi.py <vanha-pari 091657> <uusi-pari>). SEURAAVA: KK:n vastaus, sitten kohta 3 (räystäs + friisivyö).
+
+## LISÄYS 39 klo 17.1x (28.10.): Codexin J4-v3 pelissä, pari KK:lla
+- PT 16.5x: Codexin J4-v3 (posti 20447bcf2; T7 review-v3-j4, SHA 19/19, GLB 350cfb6b…) → olavinlinna-j4/v3/. Kuittaus Codexille 189539926.
+- Kokoaminen sellaisenaan (ei j4_hopea.py:tä): j4_arkkuun.py (0,97) → j4_siivous.py → astc-mip.swift vari/normaali 4 → kavely-j4/ (vanhat talteen kavely-ennen-v3/).
+  Ajo: cd wt/proto-lavastaja-havainne; PROTO_LINJA=2 zsh tyokalut/esikatselu.sh 2855d8478 olavinlinna-j4/sk-komero-j4-lahi.txt ipad --batch (~7 min) → esikatselu-20261028-170508.
+- Pari KK:lle: kk-pari-v2-v3-j4h-2x.png (+ j4h/j4g/j4i). Halo ja läikät pois, kannun suu syvä; lautasen kaiverrus himmeämpi, kiilto litteämpi. Odottaa KK:ta.
