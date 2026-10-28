@@ -3011,3 +3011,7 @@ Omistaja (KK) sanatarkasti: 'dronekamera heiluu liikaa ylös alas kun se seuraa 
 ## Kartta: poltettuja nimiä ei suoristeta; nimet pienemmiksi pallotasolla (omistaja 28.10. 09.16/09.17) (28.10.2026 klo 09.17)
 
 Omistaja (KK) 09.16 sanatarkasti: 'poltettuja nimiä ei tarvitse suoristaa, ainoastaan nämä striiminimet, joita ole poltettu, mutta onko valtamerien nimiä poltettu?' → valtamerinimet ovat poltettuja; uudelleenpoltto peruttu. Nimien koko: 'Kelpaa (Suositus)'. 09.17: 'tässä näkymässä nimet liian isolla, muut ok. pidä oletuksena harmaan kipit poissa näkyvistä.' KS: nimet pienemmiksi kaukaisella pallotasolla; 'harmaan kipit' KK varmistaa omistajalta.
+
+## Kartta: harmaat kuumailmapallot pois, vain kohdekaupungit (omistaja 28.10. 09.18) (28.10.2026 klo 09.19)
+
+Omistaja (KK) sanatarkasti: 'kohdekaupungit saavat näkyä, muut pois. tarkoitin kipillä harmaita kuumailmapalloja'. KS: harmaat kuumailmapallot oletuksena pois, kaupunkipisteistä vain kohdekaupungit; samaan erään nimien kanssa ennen pienen iPadin asennusta.
