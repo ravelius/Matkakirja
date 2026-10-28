@@ -3001,7 +3001,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   GRC: {
     Attiki: {
       lyhyt: 'Ateenan Akropolis kohoaa yhä keskustan yllä, mutta rannikolla Ateenan Riviera houkuttelee uimaan aivan kaupungin kupeessa.',
-      pitka: 'Ateena on nykyään yli kolmen miljoonan asukkaan metropoli, mutta kun siitä tehtiin pääkaupunki 1834, se oli sodan runtelema noin 4000 asukkaan pikkukaupunki Akropoliin juurella. Isoisän aikaan 1873 Akropoliin laella seisoi yhä keskiaikainen frankkitorni, joka purettiin vasta 1874–1875 Heinrich Schliemannin rahoilla, jotta kukkula näyttäisi taas antiikkiselta. Samoihin aikoihin koko maa kuohui Lavrionin kaivoksista: ranskalais-italialainen yhtiö rikastui antiikin kaivosmiesten jättämästä kuonasta, ja kiista valtion kanssa ratkesi vasta helmikuussa 1873 tehdyllä sopimuksella. Sounionin niemellä Poseidonin temppelin pylväät katsovat yhä merelle Attikan eteläkärjessä.',
+      pitka: `Attikan alue sijaitsee Kreikan itäosassa Egeanmeren rannalla, ja siellä asuu noin 3,8 miljoonaa ihmistä. Alueen keskus on Kreikan pääkaupunki Ateena. Ateenan Akropolis on kalliokukkula, jonka laella on 400-luvulla eaa. rakennettu Parthenon-temppeli. Akropolis on Unescon maailmanperintökohde. Pireuksen satama on Kreikan tärkein satama. Marathonin kaupungin luona ateenalaiset voittivat persialaiset vuonna 490 eaa. Legendan mukaan viestinviejä juoksi sieltä Ateenaan, ja tämä juoksu on maratonjuoksun esikuva. Sounionin niemellä on Poseidonin temppelin rauniot. Parnitha-vuori Ateenan pohjoispuolella on Attikan korkein, 1 413 metriä, ja suuri osa siitä on kansallispuistoa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-attiki-v-fac96967.jpg',
@@ -3024,7 +3024,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kentriki Makedonia': {
       lyhyt: 'Thessaloniki on Kreikan toiseksi suurin kaupunki, ja sen rantabulevardilla Valkoinen torni katsoo yhä Thermaisenlahdelle.',
-      pitka: 'Thessalonikissa bysanttilaiset kirkot, osmanien kylpylät ja 1900-luvun kerrostalot seisovat samoilla kaduilla, ja kaupungin yllä näkyy kirkkaalla säällä Olymposvuori. Vuonna 1873 kaupunki oli osmanien Selanik eikä kuulunut Kreikkaan – se liitettiin Kreikkaan vasta Balkanin sodassa 1912. Rantabulevardin tornia kutsuttiin silloin vielä Veritorniksi, sillä se oli pahamaineinen vankila; valkoiseksi sen kalkitsi vasta 1890 vanki, joka sai työstä vapautensa. Kaupungin suurin väestöryhmä olivat 1400-luvun lopulla Espanjasta karkotettujen juutalaisten jälkeläiset, jotka puhuivat juutalaisespanjaa – yhteisö tuhottiin lähes kokonaan, kun natsit karkottivat sen Auschwitziin 1943.',
+      pitka: `Keski-Makedonian alue on Pohjois-Kreikassa, ja siellä asuu noin 1,8 miljoonaa ihmistä. Se on Kreikan toiseksi väkirikkain alue Attikan jälkeen. Makedonian hallitsija Kassandros perusti alueen keskuksen Thessalonikin vuonna 315 eaa. ja nimesi sen vaimonsa mukaan. Olympos on Kreikan korkein vuori, 2 918 metriä, ja se kohoaa Thessalian ja Makedonian rajalla. Pella oli muinaisen Makedonian pääkaupunki, ja siellä syntyi Aleksanteri Suuri vuonna 356 eaa. Verginan pikkukaupungin kohdalla oli Aigai, Makedonian ensimmäinen pääkaupunki. Aigain arkeologinen alue on Unescon maailmanperintökohde. Halkidikin niemimaa Egeanmerellä on suosittu kesämatkailukohde. Halkidikin itäosassa on itsehallinnollinen Athos, joka ei kuulu Keski-Makedonian alueeseen.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kentriki-makedonia-5c601f8c.jpg',
@@ -3047,7 +3047,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kriti: {
       lyhyt: 'Kreeta on Kreikan suurin saari, ja sen vuoristoisella Samarian rotkolla vaeltaa tuhansia retkeilijöitä joka kesä.',
-      pitka: 'Kreeta on kuin oma pieni mantereensa: Valkoisten vuorten huiput, oliivilehdot ja oma murre, jolla lauletaan yhä improvisoituja mantinades-säkeitä lyyran säestyksellä. Vuonna 1873 saari kuului vielä Osmanivaltakuntaan, ja suuren kapinan muisto oli tuore: 1866 Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa mieluummin kuin antautuivat, ja uutinen herätti myötätuntoa kaikkialla Euroopassa. Kreeta sai itsehallinnon 1898 ja liitettiin Kreikkaan vasta 1913. Knossoksen palatsi odotti isoisän aikaan vielä maan alla – ensimmäiset kaivaukset tehtiin 1878 ja suuret Arthur Evansin johdolla vasta vuodesta 1900.',
+      pitka: `Kreeta on Kreikan eteläisin alue, ja se käsittää Kreikan suurimman saaren Egeanmeren eteläreunalla. Alueella asuu noin 620 000 ihmistä. Keskus Heraklion on saaren pohjoisrannikolla, ja sen lähellä ovat Knossoksen minolaisen palatsin rauniot. Minolainen kulttuuri oli yksi Euroopan vanhimmista korkeakulttuureista. Saaren länsiosassa kohoavat Lefka Ori -vuoret eli Valkoiset vuoret. Niiden rotkoista tunnetuin on 16 kilometriä pitkä Samarian rotko, joka on kansallispuisto. Saaren korkein kohta on Psiloritis-vuori, 2 456 metriä. Chanian kaupungissa on venetsialaisten rakentama vanhakaupunki ja satama. Saaren eteläpuolella on Libyanmeri.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-kriti-30918314.jpg',
@@ -3070,7 +3070,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Peloponnisos: {
       lyhyt: 'Korinton kanava halkaisee Peloponnesoksen niemimaan kapeasta kannaksesta, ja sillalta autoilijat katsovat yli 70 metriä alas.',
-      pitka: 'Peloponnesos on vuorten, oliivitarhojen ja pienten satamien niemimaa, jonka eteläkärjessä Manin kivitorneissa asui aikoinaan sukuja, jotka kävivät verikostoa keskenään sukupolvesta toiseen. Täällä on myös itsenäisen Kreikan ensimmäinen pääkaupunki Nafplio, jonka kirkon portailla maan ensimmäinen valtionpäämies Ioannis Kapodistrias murhattiin 1831. Isoisän kulkiessa 1873 laivalla ei vielä päässyt Korintin kannaksen läpi, sillä kanavaa alettiin kaivaa vasta 1881. Myös Mykenen kuninkaanhaudat olivat löytämättä: leijonaportti oli näkyvissä, mutta Heinrich Schliemann kaivoi kultaiset kuolinnaamiot esiin vasta 1876.',
+      pitka: `Peloponnesoksen alue on Etelä-Kreikassa, ja se kattaa suurimman osan samannimistä niemimaata. Alueella asuu noin 540 000 ihmistä. Keskus on Tripoli, mutta suurin kaupunki on Kalamata. Korintin kanava yhdistää Korintinlahden ja Saroninlahden. Kanava on 6,3 kilometriä pitkä, ja se valmistui vuonna 1893. Mykenen rauniot ovat pronssikauden linnoitettu keskus, ja siellä on Leijonaportti-niminen portti. Epidauroksen antiikin teatteri ja Asklepioksen parannuspyhäkkö ovat Unescon maailmanperintökohde. Nafplion kaupunki oli itsenäisen Kreikan ensimmäinen pääkaupunki vuodesta 1829. Lakonian alueyksikössä Mystras on hyvin säilynyt bysanttilainen kaupunki ja Unescon maailmanperintökohde. Taygetos-vuoriston korkein huippu on yli 2 400 metriä korkea.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-peloponnisos-v-d6cc501c.jpg',
@@ -3093,7 +3093,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Thessalia: {
       lyhyt: 'Thessalian pystyjen kalliopylväiden laella kohoavat Meteoran luostarit, joihin munkit kiipesivät ennen tikapuilla ja köysillä.',
-      pitka: 'Thessalia on Kreikan viljakamari: laaja, tasainen tasanko, jota vuoret kiertävät joka puolelta ja jonka keskellä Larisa on kasvanut maakunnan suurimmaksi kaupungiksi. Vuonna 1873 isoisä ei olisi löytänyt täältä Kreikkaa lainkaan, sillä Thessalia kuului yhä Osmanivaltakuntaan ja siirtyi Kreikalle vasta Konstantinopolin sopimuksella 1881. Itärannikolla Volosin sataman yllä kohoaa Pelionin vuori, jonka rinteillä tarun mukaan asuivat kentaurit ja jonka kylissä on yhä kivikattoisia kartanoita. Volosin seudulta myyttinen Iason lähti Argo-laivallaan etsimään kultaista taljaa.',
+      pitka: `Thessalian alue on Kreikan mantereella Pindos-vuoriston itäpuolella, ja siellä asuu noin 690 000 ihmistä. Alueella on Thessalian tasanko. Keskus Larisa on myös alueen suurin kaupunki. Volos on satamakaupunki Pagasitikoslahden pohjukassa. Volosin vieressä kohoaa Pelion-vuori, joka täyttää niemimaan Pagasitikoslahden ja Egeanmeren välissä. Antiikin myytin mukaan Pelion oli kentauri Kheironin kotiseutu, ja Kheiron opetti sankareita, esimerkiksi Akhilleusta. Meteorassa kalliopylväiden laelle perustettiin 1300-luvun jälkipuoliskolta alkaen 24 luostaria, joista kuusi on yhä toiminnassa. Meteora on Unescon maailmanperintökohde. Suurin osa Thessaliasta liitettiin Kreikkaan vuonna 1881. Alueeseen kuuluvat myös Egeanmeren saaret Pohjoiset Sporadit, kuten Skiathos, Skopelos ja Alonnisos.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-thessalia-v-37312a55.jpg',
@@ -3116,7 +3116,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ipeiros: {
       lyhyt: 'Epeiroksen Vikosin rotko on maailman syvimpiä suhteessa leveyteensä, ja sen reunoilla vanhat kivikylät ovat yhä asuttuja.',
-      pitka: 'Epeiros on Kreikan vuoristoisin kolkka: Pindoksen harjanteita, jyrkkiä rotkoja ja Zagorin kylien kivisiä kaarisiltoja, joita pitkin muulit kulkivat ennen teiden aikaa. Alueen pääkaupunki Ioannina lepää Pamvotisjärven rannalla, ja järven saarella tapettiin 1822 mahtava Ali-pasa, joka oli hallinnut Epeirosta lähes kuin omaa valtakuntaansa. Vuonna 1873 koko Epeiros kuului vielä Osmanivaltakuntaan; Artan seutu siirtyi Kreikalle 1881, mutta Ioannina vasta helmikuussa 1913 Balkanin sodassa. Ioanninan hopeasepät jatkavat yhä vuosisataista taitoaan vanhan linnoituksen kujilla.',
+      pitka: `Epeiroksen alue on Luoteis-Kreikassa, ja siellä asuu noin 320 000 ihmistä. Maasto on vuoristoista, ja alueen korkein kohta on Smolikas-vuori, 2 637 metriä. Keskus Ioannina on Pamvotida-järven rannalla. Zagorin seudulla Pindos-vuoristossa on noin 46 kylää, joita yhdistävät vuoristotiet ja kaarevat kivisillat. Zagori on Unescon maailmanperintökohde. Vikosin rotko on Guinnessin ennätyskirjan mukaan maailman syvin rotko leveyteensä nähden. Dodonassa oli vanhin kreikkalainen oraakkeli eli ennustuspaikka, joka Homeroksen mukaan oli Zeuksen oraakkeli. Metsovo on Pindos-vuoriston kaupunki, jossa asuu valakkeja, romaanista kieltä puhuvaa vähemmistöä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-ipeiros-v-ef081869.jpg',
@@ -3139,7 +3139,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dytiki Makedonia': {
       lyhyt: 'Kastorian kaupunki kiertää turkiskaupasta vaurastuneen järven ympäri, ja talvisin sen kapea niemi peittyy usein usvaan.',
-      pitka: 'Länsi-Makedonia on Kreikan ainoa maakunta, jolla ei ole rantaviivaa: korkeiden vuorten ja järvien ylänkö, jossa talvet ovat kylmiä ja lumisia. Kastorian turkkurit toimittivat jo Bysantin hoville hermeliininnahkoja, ja kaupungissa on yhä yli 50 bysanttilaista tai keskiaikaista kirkkoa. Vuonna 1873 alue kuului Osmanivaltakuntaan, ja Kastoria liitettiin Kreikkaan vasta 1912. Pohjoisessa Prespajärvet ovat kolmen maan rajalla, ja niiden kaislikoissa pesii kiharapelikaaneja; Kozanin ja Ptolemaidan avolouhoksista taas on kaivettu ruskohiiltä, joka oli pitkään Kreikan tärkein sähkönlähde.',
+      pitka: `Länsi-Makedonian alue on Luoteis-Kreikassa, ja siellä asuu noin 250 000 ihmistä. Alue on vuoristoinen, eikä sillä ole merenrantaa. Alueeseen kuuluu neljä alueyksikköä: Florina, Grevena, Kastoria ja Kozani, ja keskus on Kozanin kaupunki. Kastorian kaupunki on Orestiada-järven rannalla, ja sen nimi tulee kreikan sanasta kastori, joka tarkoittaa majavaa. Turkisten valmistus on perinteinen ala Kastoriassa ja Siatistassa. Dispilion kylässä lähellä Kastoriaa on kivikautisen järviasutuksen jäännökset. Kreikka, Albania ja Pohjois-Makedonia jakavat Prespanjärvet, ja Kreikan puolella on Prespan kansallispuisto. Alueen tuotteita ovat muun muassa Kozanin sahrami ja Florinan paprikat.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-makedonia-10cd285c.jpg',
@@ -3162,7 +3162,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dytiki Ellada': {
       lyhyt: 'Rio–Antirrion silta yhdistää Peloponnesoksen manner-Kreikkaan, ja Patran karnevaali on koko maan suurin katujuhla.',
-      pitka: 'Länsi-Kreikka ulottuu Patraksen satamasta Messolonkin laguuneille ja Olympian laaksoon, jossa antiikin kisoja pidettiin yli tuhannen vuoden ajan. Isoisän kulkiessa 1873 alue kuului jo Kreikkaan, mutta Olympia oli yhä jopa kahdeksan metrin maakerroksen alla: saksalaiset aloittivat järjestelmälliset kaivaukset vasta 1875. Patras vaurastui tuohon aikaan korintinrusinoiden viennistä, ja baijerilainen Gustav Clauss oli perustanut kaupungin yläpuolelle viinitilan jo 1861 – sen makeaa mavrodafni-viiniä valmistetaan yhä. Messolongissa taas muistetaan lordi Byronia, joka kuoli siellä kuumeeseen 1824 kesken Kreikan vapaussodan.',
+      pitka: `Länsi-Kreikan alue sijaitsee Peloponnesoksen niemimaan luoteisosassa ja manner-Kreikan länsiosassa, ja siellä asuu noin 650 000 ihmistä. Aluekeskus Patras on satamakaupunki, jossa järjestetään vuosittain yksi Kreikan suurimmista karnevaaleista. Olympian kylän vieressä on antiikin Olympian pyhäkkö, jossa olympialaiset pidettiin 700-luvulta eaa. 300-luvulle jaa. Rion ja Antirrion kaupunkien välisen salmen yli kulkee vuonna 2004 avattu silta. Kalavrytan vuoristokaupungista kulkee Diakopton kaupunkiin hammasrautatie, joka rakennettiin vuosina 1885–1895. Aitolia-Akarnanian alueyksikössä on Trichonida-järvi, joka on Kreikan suurin luonnonjärvi ja jonka ympäristössä elää runsaasti lintuja. Messolonghin kaupunki tunnetaan Kreikan vapaussodan piirityksestä, ja runoilija lordi Byron kuoli kaupungissa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-dytiki-ellada-2c0708f5.jpg',
@@ -3185,7 +3185,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Stereá Elláda': {
       lyhyt: 'Delfoin oraakkelin rauniot kohoavat Parnassosvuoren rinteellä – antiikin kreikkalaiset pitivät paikkaa maailman napana.',
-      pitka: 'Keski-Kreikka kuului itsenäiseen Kreikkaan alusta asti, ja se ulottuu Parnassoksen rinteiltä Termopylain solaan ja Euboian suurelle saarelle. Isoisän aikaan Delfoissa ei vielä näkynyt Apollonin pyhäkköä, sillä raunioiden päällä seisoi Kastrin kylä noin 400 taloineen; kylä siirrettiin pois vasta 1892, kun ranskalaiset aloittivat suuren kaivauksensa. Termopylain kapeaa solaa, jossa spartalaiset taistelivat 480 eaa., ei enää ole, sillä rantaviiva on siirtynyt jokien kerrostumien myötä paikoin jopa yhdeksän kilometriä kauemmas. Boiotian vuorilla Hosios Loukasin luostarin tuhatvuotiaat kultamosaiikit hohtavat yhä kupolien alla.',
+      pitka: `Keski-Kreikan alue sijaitsee manner-Kreikan keskiosassa Attikan pohjoispuolella, ja siihen kuuluu myös Euboian saari. Alueella asuu noin 510 000 ihmistä, ja aluekeskus on Lamia. Parnassos-vuori kohoaa yli 2 400 metrin korkeuteen. Sen rinteellä on Delfoin antiikin ennustuspaikka, joka on Unescon maailmanperintökohde. Termopylain solassa kreikkalaiset taistelivat persialaisia vastaan vuonna 480 eaa. Euboia on Kreetan jälkeen Kreikan toiseksi suurin saari. Distomon kaupungin lähellä on Hosios Loukasin luostari, joka on perustettu 900-luvun puolivälissä ja kuuluu Unescon maailmanperintökohteisiin.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-sterea-ellada-b756c201.jpg',
@@ -3208,7 +3208,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Anatoliki Makedonia kai Thraki': {
       lyhyt: 'Traakiassa asuu Kreikan suurin muslimivähemmistö, ja rajajoki Evros erottaa alueen naapurimaasta Turkista.',
-      pitka: 'Itä-Makedonia ja Traakia ulottuu Kavalan satamasta Rodopivuorten kautta Evrosjoelle, ja sen kylissä voi kuulla kreikan lisäksi turkkia ja pomakkia. Vuonna 1873 koko seutu kuului Osmanivaltakuntaan: Kavala liitettiin Kreikkaan Balkanin sotien jälkeen 1913, ja Länsi-Traakia oli välillä Bulgarian hallussa ja siirtyi Kreikalle vasta 1920. Kavalassa varttui Muhammad Ali, josta tuli Egyptin hallitsija, ja hänen kotikaupungilleen 1813 rakennuttamansa imaret on nykyään hotelli. Myöhemmin Kavala vaurastui tupakasta, jonka lehtiä kuivattiin ja lajiteltiin sataman suurissa varastoissa.',
+      pitka: `Itä-Makedonian ja Traakian alue on Pohjois-Kreikan itäosassa Egeanmeren rannalla, ja siellä asuu noin 560 000 ihmistä. Aluekeskus on Komotini. Kavalan satamakaupungin lähellä on antiikin Filippoin kaupungin arkeologinen alue, joka on Unescon maailmanperintökohde. Thasoksen saaren marmori ja viini olivat tunnettuja jo antiikissa. Samothrakin saarelta löydettiin vuonna 1863 voitonjumalatar Niken patsas, joka on nykyään Pariisin Louvressa. Evroksen alueyksikössä lähellä Turkin rajaa on Dadian metsä, joka tunnetaan runsaasta petolintukannastaan. Länsi-Traakiassa asuu muslimivähemmistö, jonka juuret ovat ottomaanien ajassa. Xanthin kaupungissa pidetään vuosittain karnevaali.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-anatoliki-makedonia-kai-thraki-c1ab2e80.jpg',
@@ -3230,7 +3230,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ionioi Nisoi': {
       lyhyt: 'Korfun venetsialaistyylinen vanhakaupunki on Unescon listalla, ja Joonianmeren saaristo makaa Kreikan läntisimpänä.',
-      pitka: 'Joonianmeren saaret ovat vihreämpiä kuin muu Kreikka, ja niiden kaupungeissa näkyy vuosisatojen venetsialaisvalta: kellotornit, holvikäytävät ja italialaisvaikutteinen musiikki. Isoisän käydessä 1873 saaret olivat olleet osa Kreikkaa vasta yhdeksän vuotta – Britannia oli hallinnut niitä protektoraattina 1815–1864 ja luovuttanut ne lahjaksi Kreikan uudelle kuninkaalle Yrjö I:lle. Brittien perintönä Korfun keskusaukiolla Spianadalla pelataan yhä krikettiä, jota muualla Kreikassa tuskin tunnetaan. Kefalonian vanhoista kaupungeista taas ei ole paljon jäljellä, sillä vuoden 1953 maanjäristys tuhosi lähes kaiken.',
+      pitka: `Joonian saarten alue sijaitsee Kreikan länsirannikon edustalla Joonianmerellä, ja siellä asuu noin 200 000 ihmistä. Aluekeskus on Korfun saaren Korfun kaupunki, jonka vanhakaupunki kuuluu Unescon maailmanperintökohteisiin. Venetsia hallitsi saaria suurelta osin 1400-luvulta vuoteen 1797, ja Britannia hallitsi niitä suojelusvaltiona vuosina 1815–1864. Kefalonia on alueen suurin saari. Sen asutus tuhoutui lähes kokonaan elokuun 1953 maanjäristyksissä. Zakynthoksen saaren Laganasinlahdella on kansallinen meripuisto, ja lahden rannat ovat valekarettikilpikonnan tärkeä pesimäalue. Lefkaksen saari on yhdistetty mantereeseen penkereellä ja kelluvalla sillalla. Homeroksen Odysseiassa Odysseuksen kotipaikka on Ithaka, mutta tutkijat ovat kiistelleet, onko Odysseuksen Ithaka sama kuin nykyinen Ithakan saari.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ionioi-nisoi-e9284910.jpg',
@@ -3253,7 +3253,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Notio Aigaio': {
       lyhyt: 'Etelä-Egean saariin kuuluvat sekä Santorinin tulivuorikaldera että Rodoksen keskiaikainen ritarilinnoitus.',
-      pitka: 'Etelä-Egeaan kuuluu kaksi saariryhmää, joiden historia on aivan erilainen: Kykladit, valkoisten kylien ja tuulimyllyjen saaret, sekä idempänä Turkin rannikon tuntumassa Dodekanesia. Kun isoisä matkusti 1873, Kykladit olivat jo Kreikkaa, ja Syroksen Ermoupoli oli koko maan vilkkain satama- ja telakkakaupunki, kunnes Pireus ohitti sen 1800-luvun lopulla. Santorinin kalderassa Nea Kamenin tulivuori oli juuri purkautunut 1866–1870, joten sen laava oli isoisän aikaan vielä tuoretta. Rodos ja muut Dodekanesian saaret taas kuuluivat osmaneille vuoteen 1912, sitten Italialle, ja liitettiin Kreikkaan vasta vuoden 1947 rauhansopimuksen jälkeen.',
+      pitka: `Etelä-Egeanmeren alue koostuu Kykladien ja Dodekanesian saarista Egeanmeren eteläosassa. Alueella asuu noin 330 000 ihmistä, ja aluekeskus on Syroksen saaren Ermoupoli. Santorinin saaren kaldera, tulivuoren romahtamisessa syntynyt suuri allas, syntyi noin 3 600 vuotta sitten valtavassa tulivuorenpurkauksessa. Dodekanesian nimi tarkoittaa kahtatoista saarta, mutta ryhmään kuuluu 15 suurempaa saarta sekä lukuisia pienempiä. Rodos on Dodekanesian suurin saari, ja sen keskiaikainen vanhakaupunki on Unescon maailmanperintökohde. Johanneksen ritarikunta, keskiaikainen kristillinen ritarikunta, hallitsi Rodosta vuosina 1310–1522. Delos-saari oli antiikin myyttien mukaan Apollonin ja Artemiksen syntymäpaikka, ja sen arkeologinen alue kuuluu maailmanperintöön. Patmoksen saarella apostoli Johannes kirjoitti kristillisen perinteen mukaan Ilmestyskirjan.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-notio-aigaio-v-c9e225c1.jpg',
@@ -3276,7 +3276,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Voreio Aigaio': {
       lyhyt: 'Lesboksen saaren kivettynyt metsä on 17–20 miljoonaa vuotta vanha, ja saari tunnetaan yhä anisviina ouzon tislauksesta.',
-      pitka: 'Pohjois-Egean saaret – Lesbos, Khios, Samos, Ikaria ja Limnos – ovat lähempänä Turkin rannikkoa kuin Ateenaa, ja kirkkaalla säällä niiden satamista näkyvät Anatolian vuoret. Vuonna 1873 saaret eivät kuuluneet Kreikkaan: Lesbos ja Khios olivat osmanien saaria, ja Samos oli erikoinen ruhtinaskunta, jolla oli oma lippu ja sulttaanin nimittämä kristitty ruhtinas ja joka maksoi Konstantinopoliin vuotuista veroa. Saaret liittyivät Kreikkaan Balkanin sodan aikana 1912–1913. Lesboksella syntynyt kansanmaalari Theofilos kiersi myöhemmin saaren kyliä ja maalasi kahviloiden ja kauppojen seiniä usein pelkkää ruokaa vastaan.',
+      pitka: `Pohjois-Egeanmeren alue käsittää Egeanmeren koillisosan saaria, joista suurimmat ovat Lesbos, Chios, Samos ja Lemnos. Alueella asuu noin 190 000 ihmistä, ja aluekeskus on Lesboksen saaren Mytilini. Lesbos on Kreikan kolmanneksi suurin saari. Eressoksen, Antissan ja Sigrin kylien välissä on kivettynyt metsä, joka syntyi, kun tulivuorenpurkaukset peittivät saaren laavalla ja tuhkalla 17–20 miljoonaa vuotta sitten. Lesboksella syntyi myös runoilija Sappho, ja Plomarin kaupunki tunnetaan ouzo-nimisen väkijuoman valmistuksesta. Chioksen saari tunnetaan mastiksihartsista, jota saadaan mastiksipuusta. Samoksen saari on matemaatikko Pythagoraan syntymäpaikka, ja Pythagoreionin kaupunki ja Heran temppelialue ovat maailmanperintökohde.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/grc-maakunta2-voreio-aigaio-v-995babb4.jpg',
@@ -3299,7 +3299,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ayion Oros': {
       lyhyt: 'Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan.',
-      pitka: 'Athoksen niemimaa on metsäinen, jyrkkä vuorenharjanne, jonka rannoilla ja rinteillä on 20 luostaria sekä lukuisia pienempiä munkkiyhteisöjä ja erakkomajoja. Munkkitasavallan juuret ovat vuodessa 963, jolloin Athanasios perusti Suuren Lavran luostarin Bysantin keisarin tuella, ja itsehallinto on säilynyt kaikkien valtojen alla. Vuonna 1873 niemimaa kuului muodollisesti Osmanivaltakuntaan, mutta munkit hallitsivat itse itseään kuten nykyäänkin; Kreikan hallintaan Athos siirtyi Balkanin sodassa 1912. Isoisän aikaan vuorelle virtasi munkkeja erityisesti Venäjältä, ja Pyhän Panteleimonin luostarissa asui 1900-luvun alussa jo lähes 1500 venäläistä munkkia.',
+      pitka: `Athos eli Pyhä Vuori on itsehallinnollinen luostarivaltio Pohjois-Kreikassa, Halkidikin niemimaan itäisimmällä niemellä Egeanmerellä. Se ei kuulu mihinkään Kreikan alueeseen. Niemi on noin 50 kilometriä pitkä, ja sen kärjessä kohoaa yli 2 000 metriä korkea Athosvuori. Alueella saavat asua vain munkit. Niemellä on 20 ortodoksista pääluostaria sekä pienempiä luostareita ja erakkomajoja. Vanhin pääluostareista, Suuri Lavra, on perustettu vuonna 963. Hallinnollinen keskus on Karyesin kylä niemen keskiosassa. Athos on Unescon maailmanperintökohde, ja vierailuun tarvitaan erillinen lupa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/grc-maakunta-ayion-oros-f8e6edc2.jpg',
