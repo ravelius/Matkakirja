@@ -2693,7 +2693,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   AUT: {
     "Niederösterreich": {
       lyhyt: "Wienin ympärillä leviää Ala-Itävalta, jonka Wachaun jokilaakso on täynnä viinitarhoja aina Tonavan rantaan asti.",
-      pitka: "Ala-Itävalta ulottui vuonna 1873 aina Wienin ytimeen asti, sillä pääkaupunki irtautui omaksi osavaltiokseen vasta vuonna 1922 – siihen saakka Wien oli virallisesti tämän maakunnan hallintokeskus. Nykyisin maakunnan oma pääkaupunki on St. Pölten, mutta komein rakennus löytyy silti muualta – Melkin barokkiluostari kohoaa jyrkällä kalliolla Tonavan yllä, ja sen kultainen kirjastosali hämmästyttää kävijöitä yhä kuten munkkeja vuosisatoja sitten. Etelämpänä Semmeringin rautatie kiemurtelee Alppien yli niin taidokkaasti, että vuonna 1854 valmistunut rata on koko Euroopan ensimmäinen vuoristorautatie ja nykyään UNESCOn maailmanperintökohde. Ala-Itävalta on siis maakunta, jossa keisarikunnan pääkaupunki ja hiljaiset kylät jakoivat pitkään saman osoitteen.",
+      pitka: `Ala-Itävalta on osavaltio Tšekin ja Slovakian rajalla, ja siellä asuu noin 1,7 miljoonaa ihmistä. Pääkaupunki on Sankt Pölten vuodesta 1986 lähtien. Sitä ennen osavaltion hallinto toimi Wienissä. Tonavan laaksossa Melkin ja Kremsin kaupunkien välillä on 36 kilometrin pituinen Wachau, joka tunnetaan viininviljelystä ja on Unescon maailmanperintökohde. Melkin luostari perustettiin vuonna 1089, ja nykyinen barokkirakennus valmistui vuosina 1702–1736. Schneeberg-vuori on 2 076 metriä korkea. Marchfeldin tasangolla käytiin vuonna 1278 taistelu, jossa Rudolf Habsburg voitti Böömin kuninkaan Ottokar II:n ja Habsburgien valta vahvistui.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/aut-maakunta2-niederosterreich-v-cf34019c.jpg',
@@ -2723,7 +2723,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Steiermark": {
       lyhyt: "Steiermarkia kutsutaan Itävallan vihreäksi sydämeksi – täällä kurpitsansiemenöljy on lähes joka ruoan mauste.",
-      pitka: "Steiermarkia kutsutaan Itävallassa lempinimellä ’vihreä maakunta’, sillä yli 60 prosenttia sen pinta-alasta on metsää – enemmän kuin missään muussa osavaltiossa. Pohjoisessa maisemaa hallitsee silti toisenlainen jättiläinen: Erzbergin rautavuori Eisenerzin kupeessa on tuottanut malmia yli 1300 vuotta, ja vuodesta 1890 louhinta on muovannut siitä valtavan portaikkomaisen pyramidin, joka näkyy kauas ympäristöön. Graz tunnetaan nykyään muotoilun kaupunkina, mutta rautavuori muistuttaa siitä, mistä koko Steiermarkin vauraus aikanaan kasvoi. Kurpitsansiemenöljyn rinnalla malmi on siis se toinen, raskaampi aine, joka on muovannut aluetta vuosisatojen ajan.",
+      pitka: `Steiermark on vuoristoinen osavaltio, ja siellä asuu noin 1,3 miljoonaa ihmistä. Se on pinta-alaltaan Itävallan toiseksi suurin osavaltio, ja metsää on noin 60 prosenttia maa-alasta. Siksi sitä kutsutaan Itävallan vihreäksi sydämeksi. Pääkaupunki Graz on Mur-joen rannalla. Grazin vanha keskusta on Unescon maailmanperintökohde, ja Grazin yliopisto on perustettu vuonna 1585. Kaupungin Schlossberg-kukkulalla on kellotorni, joka on Grazin tunnus. Red Bull Ring -radalla ajettiin vuonna 2020 Itävallan Grand Prix ja sen jälkeen Steiermarkin Grand Prix. Admontin luostarin kirjasto on osavaltion nähtävyys.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-steiermark-a030f180.jpg',
@@ -2753,7 +2753,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Tirol": {
       lyhyt: "Tirolissa vuoret määräävät arjen: Innsbruckista pääsee hiihtämään tunnissa, ja moni asukas tekee sen töiden jälkeen.",
-      pitka: "Rajat olivat vuonna 1873 toisenlaiset: Tirol ulottui tuolloin Brennerin solan yli aina Bolzanoon ja Trentoon asti, kunnes ensimmäisen maailmansodan jälkeinen Saint-Germainin rauha 1919 luovutti eteläisen puoliskon Italialle. Innsbruckin kupeessa kohoava Bergisel-mäki on nähnyt kumpaakin Tirolin aikakautta: vuonna 1809 talonpoikaiskapinallinen Andreas Hofer taisteli täällä Baijerin ja Ranskan joukkoja vastaan, ja sama rinne on nykyään moderni mäkihyppyrinne, jolla Innsbruck isännöi talviolympialaiset sekä 1964 että 1976. Hiihto on tänään arkipäivää, mutta vuori on aina ollut myös rajalinja ja taistelupaikka. Puolet vanhasta Tirolista jäi siis rajan taakse – toinen puoli näkyy yhä Etelä-Tirolina Italian kartalla.",
+      pitka: `Tirol on Alppien osavaltio, ja siellä asuu noin 780 000 ihmistä. Pääkaupunki Innsbruck on Inn-joen rannalla, ja nimi tarkoittaa Inn-joen siltaa. Kaupunki järjesti talviolympialaiset vuosina 1964 ja 1976, ja Innsbruckin yliopisto on perustettu vuonna 1669. Kitzbühel, Ischgl ja St. Anton ovat tunnettuja hiihtokeskuksia. Matkailu on tärkeä elinkeino, ja matkailukaudella 2024–2025 osavaltiossa vieraili 12,4 miljoonaa matkailijaa. Itä-Tirol on osavaltion eteläinen osa, jolla ei ole maayhteyttä Pohjois-Tiroliin: välissä ovat Salzburgin osavaltion kaistale ja Italian Etelä-Tirol. Itä-Tirolin keskus on Lienz.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-tirol-00a94eaa.jpg',
@@ -2783,7 +2783,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Oberösterreich": {
       lyhyt: "Linzin tehdaskaupunki on muuttunut digitaalisen taiteen keskukseksi, kun Ars Electronica täyttää kadut valoilla.",
-      pitka: "Ylä-Itävallan tunnetuin aarre ei ole Linzin digitaide vaan suola: Hallstattin kaivos Salzkammergutin järvialueella on maailman vanhin yhä toimiva suolakaivos, ja siellä on louhittu suolaa lähes 7000 vuoden ajan. Pieni puutalokylä on niin kuvankaunis, että se on viime vuosina hukkunut omaan suosioonsa – aasialaisten televisiosarjojen innoittamat matkailijalaumat täyttävät rannan niin tiiviisti, että paikalliset ovat vaatineet risteilybussien määrän rajoittamista. Linzin teollisuuskaupunki ja Hallstattin idyllinen kylä ovat saman maakunnan kaksi ääripäätä: toinen katsoo tulevaisuuteen valoteoksin, toinen kantaa nimessään koko esihistoriallista Hallstatt-kulttuuria, joka sai alkunsa juuri täältä. Kumpikin vetää väkeä puoleensa syistä, jotka eivät voisi olla erilaisempia.",
+      pitka: `Ylä-Itävalta on Itävallan merkittävä teollisuusalue, ja siellä asuu noin 1,5 miljoonaa ihmistä. Pääkaupunki Linz on Tonavan rannalla ja asukasluvultaan Itävallan kolmanneksi suurin kaupunki. Linz oli Euroopan kulttuuripääkaupunki vuonna 2009, ja siellä pidetään syyskuun alussa Ars Electronica -festivaali. Salzkammergutin järvialueella on Hallstattin kylä Hallstätter See -järven rannalla. Hallstattin suolakaivosta on käytetty jo pronssikaudelta alkaen, ja kylä antoi nimensä rautakauden Hallstattin kulttuurille. Hallstatt-Dachsteinin ja Salzkammergutin kulttuurimaisema on Unescon maailmanperintökohde vuodesta 1997.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-oberosterreich-6c333129.jpg',
@@ -2813,7 +2813,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Kärnten": {
       lyhyt: "Kärntenin kirkkaat vuoristojärvet, etenkin Wörthersee, täyttyvät kesäisin uimareista ja purjelautailijoista.",
-      pitka: "Klagenfurtin torilla lojuu outo hirviö: pronssinen Lindwurm-lohikäärme, jonka pää valettiin vuonna 1590 keskiajalla löydetyn kallon muotoiseksi. Aikalaiset pitivät kalloa todisteena lohikäärmeestä, mutta 1800-luvun tutkijat tunnistivat sen lopulta jääkauden villakarvaisen sarvikuonon fossiiliksi – yksi varhaisimmista tieteellisistä eläinrekonstruktioista. Legendan mukaan kaupunki sai nimensäkin tästä hirviöstä: ritarit onkivat sen joesta härkää syöttinä käyttäen, ja ”Klagenfurt” viittaa siihen valituksen täyttämään kahlaamoon. Kesäisin järvien rannoilla uivien kärntenläisten arkeen mahtuu siis yhä tämä keskiaikainen kauhutarina, joka katsoo torilta ohikulkijoita silmästä silmään.",
+      pitka: `Kärnten on vuorten ja järvien osavaltio Itävallan eteläosassa, ja siellä asuu noin 570 000 ihmistä. Pääkaupunki Klagenfurt on Wörthersee-järven itäpäässä. Järvi on 16,5 kilometriä pitkä ja enimmillään 85 metriä syvä, ja kesällä veden pinta lämpenee jopa 25 asteeseen. Klagenfurtissa jaetaan vuosittain Ingeborg Bachmann -palkinto, joka on yksi saksankielisen kirjallisuuden tunnetuimmista palkinnoista. Itävallan korkein vuori Grossglockner on 3 798 metriä korkea, ja se on Kärntenin ja Itä-Tirolin rajalla. Osavaltion etelä- ja kaakkoisosassa asuu tunnustettu sloveenivähemmistö.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-karnten-85a85d1a.jpg',
@@ -2843,7 +2843,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Salzburg": {
       lyhyt: "Salzburgin vanhakaupunki elää yhä Mozartista: kesän musiikkijuhlat täyttävät torit ja kirkot joka ilta.",
-      pitka: "Kaupungin nimi tulee suolasta, ei musiikista: Salzburg tarkoittaa suolalinnaa, ja keskiajalla juuri suolakauppa teki paikallisista arkkipiispoista niin rikkaita, että he rakensivat kalliolle Hohensalzburgin linnoituksen – yhden Euroopan suurimmista ja parhaiten säilyneistä keskiaikaisista linnoista. Linnoitusta ei koskaan vallattu taistelussa; ainoa kerta kun se antautui, oli vuonna 1800, jolloin se luovutettiin ranskalaisille ilman taistelua kaupungin säästämiseksi. Mozart-kesäjuhlien ja vanhankaupungin kahviloiden alla kolkuttaakin siis varsin toisenlainen historia – valtaa ja vaurautta, joka rakennettiin suolan, ei nuottien, päälle. Linnoitus kohoaa yhä kaupungin yllä muistuttamassa, että Salzburg oli ennen kaikkea kauppapaikka jo kauan ennen Mozartia.",
+      pitka: `Salzburg on osavaltio, jossa asuu noin 570 000 ihmistä. Nimi tarkoittaa suolalinnaa, koska suolaa kuljetettiin proomuilla Salzach-jokea pitkin. Pääkaupunki on samanniminen Salzburg, joka on säveltäjä Wolfgang Amadeus Mozartin syntymäkaupunki. Mozart syntyi vuonna 1756 Getreidegasse-kadun varrella olevassa talossa. Kaupungin vanha keskusta on Unescon maailmanperintökohde, ja Hohensalzburgin linnoituksen rakentaminen aloitettiin vuonna 1077. Salzburgin festivaali on pidetty kesäisin vuodesta 1920, ja Hugo von Hofmannsthalin Jedermann-näytelmää esitetään tuomiokirkon aukiolla joka vuosi. Osavaltiossa on Hohe Tauern -vuoristo, ja Osavaltion järviä on muun muassa Wolfgangsee.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-salzburg-74edb5a4.jpg',
@@ -2873,7 +2873,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Burgenland": {
       lyhyt: "Burgenland on Itävallan nuorin osavaltio, ja Neusiedler-järven ruovikot ovat nyt Euroopan tärkeimpiä lintualueita.",
-      pitka: "Vuonna 1873 Burgenlandia ei ollut olemassa edes kartalla: koko alue kuului tuolloin Unkarin kuningaskuntaan, eikä isoisä olisi löytänyt sitä Itävallan puolelta ollenkaan. Vasta ensimmäisen maailmansodan jälkeen, vuonna 1921, entinen Länsi-Unkari liitettiin uuteen Itävaltaan ja sai nimensä Burgenland – siksi se on maan nuorin osavaltio. Alueen musiikkihistoria on silti vanhaa: säveltäjä Joseph Haydn toimi lähes koko työuransa, vuosina 1761–1803, Esterházyn ruhtinassuvun kapellimestarina Eisenstadtissa, ja suuri osa hänen sinfonioistaan syntyi juuri siellä. Neusiedler-järven lintuparvien lisäksi Burgenlandissa kaikuu siis yhä 1700-luvun hovimusiikki – vaikka koko maakunta puuttui vielä tuolloin kartalta kokonaan.",
+      pitka: `Burgenland on Itävallan itäosassa Unkarin rajalla, ja siellä asuu noin 300 000 ihmistä. Pääkaupunki on Eisenstadt. Alue kuului ennen vuotta 1920 Unkarille, ja nimi Burgenland vahvistettiin lailla vuonna 1921. Unkarin rajalla on Neusiedler See -järvi. Sen pinta-ala on 315 neliökilometriä, mutta vettä on keskimäärin vain metrin syvyydeltä. Ruoko ympäröi suurta osaa rantaa, ja järvellä on havaittu yli 300 lintulajia. Järven seutu on Unescon maailmanperintökohde, ja seudulla tuotetaan viiniä. Mörbischissä pidetään kesäisin järvifestivaalit. Burgenlandissa asuu kroatian- ja unkarinkielisiä vähemmistöjä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/aut-maakunta2-burgenland-vb-ba4b73a8.jpg',
@@ -2903,7 +2903,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Vorarlberg": {
       lyhyt: "Vorarlbergissa tekstiiliteollisuuden perintö näkyy nyt rohkeana arkkitehtuurina, josta Bregenzerwaldin kylät ovat kuuluisia.",
-      pitka: "Vuonna 1919 Vorarlbergin asukkaat äänestivät kansanäänestyksessä yllättävän selvästi: 80,7 prosenttia halusi liittää maakunnan Sveitsiin eikä jäädä Itävaltaan. Suurvallat eivät kuitenkaan antaneet asialle tilaa Saint-Germainin rauhansopimuksessa, joten Vorarlberg jäi Itävaltaan – ajatus elää silti yhä paikallisena vitsinä ja pienenä identiteettikysymyksenä. Kesäisin Bregenzin järvifestivaalilla nähdään maailman suurin vedenpäällinen näyttämö, jolla oopperoita lavastetaan keskellä Bodenjärveä satojen tuhansien katsojien edessä. Vuorten eristämä Vorarlberg on siis aina katsonut länteen vähintään yhtä usein kuin itään, kohti muuta Itävaltaa.",
+      pitka: `Vorarlberg on Itävallan läntisin osavaltio, ja siellä asuu noin 410 000 ihmistä. Pinta-alaltaan vain Wien on sitä pienempi. Pääkaupunki Bregenz on Bodenjärven rannalla. Bregenzin festivaali on pidetty heinä- ja elokuussa vuodesta 1946, ja suuri lava on järvellä. Lavan edessä on noin 7 000 istumapaikkaa. Arlbergin hiihtoalueella on 305 kilometriä rinteitä, ja se on ollut Itävallan suurin yhtenäinen hiihtoalue vuodesta 2016. Osavaltion korkein huippu Piz Buin on 3 312 metriä korkea. Suurin osa asukkaista puhuu alemannin murretta, joka eroaa muun Itävallan murteista.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-vorarlberg-29106fd2.jpg',
@@ -2933,7 +2933,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Wien": {
       lyhyt: "Wien nousee joka vuosi maailman parhaiten asuttavien kaupunkien kärkeen – kahvilakulttuuri on siihen yksi syy.",
-      pitka: "Isoisä saapui Wieniin täydellisenä vuonna: 1873 kaupunki isännöi maailmannäyttelyn, johon saapui yli seitsemän miljoonaa kävijää ja 53 000 näytteilleasettajaa 35 maasta – ensimmäistä kertaa mukana oli myös Japani. Näyttelyalue sijaitsi Praterin puistossa, ja sen keskellä kohosi Rotunda, tuolloin maailman suurin kupolirakennus, kaksi kertaa Pietarinkirkkoa leveämpi; se paloi lopulta 1937, mutta Prater on yhä Wienin suosituin huvipuisto. Hallinnollisesti kaupunki oli tuolloin yhä osa Ala-Itävaltaa – omaksi osavaltiokseen se irtautui vasta 1922. Isoisän päiväkirja ja nykyinen huvipuisto kohtaavat siis juuri Praterissa: sama maaperä, mutta täysin eri vuosisadan ihmeet.",
+      pitka: `Wien on Itävallan pääkaupunki ja samalla yksi maan yhdeksästä osavaltiosta, joten se on myös kaupunkivaltio. Siellä asuu noin 2,0 miljoonaa ihmistä. Kaupunki on Tonavan molemmin puolin. Tonavalle rakennettiin 1970- ja 1980-luvuilla Donauinsel-keinosaari tulvasuojaksi ja virkistysalueeksi. Wienin vanha keskusta on Unescon maailmanperintökohde. Pratersin huvipuiston sisäänkäynnillä on vuonna 1897 rakennettu Riesenrad-maailmanpyörä, joka on 64,75 metriä korkea. Schönbrunnin palatsissa on 1 441 huonetta, ja se oli Habsburgien hallitsijoiden pääasiallinen kesäasunto. Wienissä vaikuttivat säveltäjät Beethoven, Mozart ja Schubert.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/aut-maakunta-wien-21260241.jpg',
