@@ -505,3 +505,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - PARI lokit/havainne-editori-20261028-135114 (01/05/02) + 01/kk-raystas-ennen-jalkeen-2x.png → KK.
 - AUKI: taustapalojen (lähimmät kujakatot) päätetiilet (leivottuja: uusi primitiivi ilman UV1:tä omaan ryhmäänsä, pohjaväri 0,999 – tarkista),
   räystään ulkonema ja friisivyön korkeus/kirkkaus (kohta 3). PK: harjakoristeet ovat jo 3D (koristeet.json), päätetiilistä ei Codex-tilausta.
+
+## LISÄYS 37 klo 15.5x (28.10.): Codexin kujakivet v5 pelissä, pari KK:lla
+- PT 15.4x: Codexin v5 (claude/postilaatikko posti/juoksupeli-kujakivet-20261028/stone-surfaces-v5, SHA 39/39) → K/kujakivi-pinnat-v5. Kuittaus Codexille b4603a3e8.
+- K/tyokalut/kujakivi_vaihda.py: vaihtaa valmiiden glb:iden V4_kujakivi_*-kuvat v02:ksi (reunakivi v01 ennallaan) ja kertoo lattian UV0.u:n 1,25:llä (LKU 1,25 → 1,0, ei venytystä).
+  v5:n kivijalassa sama 8 kerran jako kuin v4d:ssä → SK 0,82 ennallaan. Ketju + pari: `zsh K/tyokalut/aja_v97_pari.zsh [02 05 01]` (~4 min; yksikerros-v87 → v89,
+  avoimet-v60k → v61k, muurikate pari-v87 → pari-v89, juuri-v97m = v95m + nämä; REF oletus ac8b06780).
+- Pari havainne-editori-20261028-154243 (+ lähikuvat 091657:n rajauksilla) → KK. Sonnet: lattia vaaka-asennossa ja venymätön (parannus), mutta 05/01 laatat kapeat ja
+  saumojen vieressä vaalea kaksoisviiva (VS:n v4-saumajako → VS:lle SEAMS.json 15.5x); kivijalassa 05/01 9–10 kerrosta, kivet ohuet.
+- SEURAAVA: KK:n vastaus (ehdotettu: kerrokset Codexin mittaan SK 1,0 + VS:n saumat) → uusi pari. Sitten kohta 3 (räystään ulkonema + friisivyö).
