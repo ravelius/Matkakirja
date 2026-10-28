@@ -3,7 +3,7 @@
 Tila: KK:n tarkistuksen (aluetekstit-tarkistus-20261028.md) korjaukset on tehty ja pushattu 20 PR:ään (5449, 5452, 5455, 5461–5467, 5469, 5473, 5475, 5476, 5484, 5485, 5487, 5488, 5491); uudet maat: Puola 5491, Kreikka 5499, Tšekki 5501, Slovenia 5503. Merge KK:n kuittauksella. Konteksti kasvanut, luovutus omasta aloitteesta.
 
 ## Avoimet
-- Kroatia: Požega-Slavonia puuttuu kartta-aineistosta (maakunnat-nimet.js HRV, 20 avainta); Karttaseppä lisää avaimen porrastuksen ja TF 213:n jälkeen, sen jälkeen SK lisää tekstin (ehdotus reseptin "Avoimet"-kohdassa, PR 5499).
+- Požega-Slavonia (HRV) ja Rasinski (SRB) tekstitetty KS:n PR 5505:n (uudet kartta-alueet) pohjalta: Požega PR 5508 (HRV 21), Rasinski Serbian PR 5487:ssä (SRB 25), kummassakin 2 Pulu-paria. Molemmat riippuvat PR 5505:n mergestä (mergejärjestys 5505 ensin). Tekstiehdotus on myös reseptin Avoimet-kohdassa (PR 5499), poistettavissa mergen jälkeen.
 - Resepti (PR 5501): yksi worktree, uusi haara per maa. Levy oli täynnä: 13 mergattua worktreetä poistettu. Avointen PR:ien worktreet (alankomaat, bulgaria, irl, mda, puola, serbia, ukraina, unkari, viro, kreikka, tsekki) poistetaan mergen jälkeen `tools/uusi-worktree.sh --poista <nimi>` + `git branch -D`.
 
 ## Jatkokomento
