@@ -590,7 +590,7 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
   kavely-j4 palautettu v3:een (tunnettu tila, = v3/*); v4 kopioidaan kavely-j4:ään ennen paria.
 - PARI SEIS: esikatselulinja 2 (2855d8478, ipad --batch) kuvaa koko ruudun sumeana myös v3:lla (seinän terävyys 2,22 → 1,25; 184846 ok, 202114/202821/203710
   sumeat). PT: VS käytti linjaa 2 19.22–19.55 → pysyvä ajonaikainen asetus, VS korjaa ja ilmoittaa. EI ajeta linjaa 2 ennen sitä.
-  Sitten: v4 kavely-j4:ään, sk-komero-j4-lahi.txt, pari scratch-pari.py-mallilla: j4h täysi 600×540 rajaus (1240,696) v3 (180956) | v4 | 1021 → PT → KK.
+  Sitten: v4 kavely-j4:ään, sk-komero-j4-lahi.txt, pari olavinlinna-j4/j4_pari.py (vaihda V4-kansio): j4h täysi 600×540 rajaus (1240,696) v3 (180956) | v4 | 1021 → PT → KK.
   j4i (kannu) kelvoton (alkuvalikko peittää) → pois parista.
 - lavastaja/katot-42: ei mainista puuttuvaa (vain luovutuksen vanhempi versio ilman lisäystä 41) → ei tarvita.
 - Katto-parit 195528/195925 odottavat edelleen KK:ta.
