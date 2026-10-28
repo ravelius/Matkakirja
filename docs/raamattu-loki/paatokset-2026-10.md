@@ -3128,3 +3128,7 @@ KK:n kortit, sanatarkasti. Liito #1222: "Liito Ok. Vartijan pitää vain olla l�
 ## STRIIMIKARTAN KAUPUNKIEN NIMET PIENEMMIKSI (omistaja 28.10. klo 21.03) (28.10.2026 klo 21.03)
 
 KK:n välitys, sanatarkasti: "Nimet ovat aivan liian isolla". Tavoite (KK): porrastuksen kaupunkien nimet selvästi pienemmiksi ja hillityiksi (kokoluokka kuten vanha LONTOO); kartta ei saa näyttää täyteen kirjoitetulta. KS pari 8 (Lontoon pallokorjauksen kanssa) → KK → omistaja; TF 213 odottaa sitä.
+
+## OMISTAJAN PAATOS: PORRASTUS KELPAA, TF 213 LAHTEE (28.10. klo 21.40) (28.10.2026 klo 21.41)
+
+Kortti KK:ssa: "Kelpaako porrastus nyt?" → "Kelpaa (suositus)" (selite "Testiversio 213 lähtee heti."). Kuva docs/raportit/kaappaukset/omistaja-20261028/porrastus-viisi-nakymaa-ennen-jalkeen-2140.jpg = KS:n pari 9, merkittavat-213 f5ea99f7f + 752794a22. Seuraavaksi KS → NS kokoaa rungon → JU tf-kaynnista.sh 213 + pieni iPad. Vartija näytetty omistajalle tiedoksi.
