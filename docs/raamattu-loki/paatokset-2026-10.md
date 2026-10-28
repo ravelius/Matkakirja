@@ -3003,3 +3003,7 @@ Omistaja (KK) sanatarkasti: 'teksti liian iso. tarkista myös että kaikki tekst
 ## Iso iPad ja simut vaaka-asentoon (omistaja 28.10. 08.59) (28.10.2026 klo 09.00)
 
 Omistaja (KK) sanatarkasti: 'aja ison ipadin simulaattorit mielellään aina vaaka asennossa, niin minun on helpompi seurata niitä koska ipad on omassa telineessä aina vaaka asennossa minulla. mutta mikäli tarpeen niin voit tottakai myös käyttää pystymuotoa mutta muuten mielellään aina vaaka muodossa'. Raamattu 9.11 ISO IPAD VAPAASTI: VAAKA-ASENTO.
+
+## Juoksupeli: dronekamera pehmeämmäksi (omistaja 28.10. 09.05) (28.10.2026 klo 09.06)
+
+Omistaja (KK) sanatarkasti: 'dronekamera heiluu liikaa ylös alas kun se seuraa pelaajaa. pitäisi olla vain pientä liikettä jokaiseen akselin suuntaan ja mahdollisimman pehmeästi, jotta vain tulee se elävän dronekameran tunnelma. eli ylös-alas-vasen-oikea-eteen-taakse ja vaakakierrot ja kaikki akselit pitää liikkua kokoajan ja yhtäaikaa mutta pehmeästi, käännöksissä sitten isompi liike mutta pehmeästi'. PK, seuraavaan vaakavideoon (KK johtaa juoksupeliä).
