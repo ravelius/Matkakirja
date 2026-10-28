@@ -16521,7 +16521,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tolna: {
       lyhyt: 'Szekszárdin kupeessa Gemencin tulvametsässä elää saksanhirviä, joiden mahtavat sarvet ovat maailmankuulut.',
-      pitka: `Tolnan komitaatti on Tonavan länsirannalla Unkarissa, ja siellä asuu noin 220 000 ihmistä (2019). Komitaatin keskus Szekszárd tunnetaan viinialueestaan. Alueen tunnettu viini on täyteläinen ja mausteinen punaviini Szekszárdi Bikavér eli Szekszárdin häränveri. Szekszárdin Augusz-kartanossa vieraili säveltäjä Franz Liszt. Maakunnan suurimmat kaupungit Szekszárdin jälkeen ovat Paks ja Dombóvár. Tonavan varrella on Gemenc-niminen tulva-alueen metsä, joka on noin 340 neliökilometrin kokoinen. Metsä kuuluu Tonavan ja Draavan kansallispuistoon. Paksin kaupungin lähellä on ydinvoimala, jossa on neljä reaktoria.`,
+      pitka: `Tolnan komitaatti on Tonavan länsirannalla Unkarissa, ja siellä asuu noin 220 000 ihmistä (2019). Komitaatin keskus Szekszárd tunnetaan viinialueestaan. Alueen tunnettu viini on täyteläinen ja mausteinen punaviini Szekszárdi Bikavér eli Szekszárdin häränveri. Szekszárdin Augusz-kartanossa vieraili säveltäjä Franz Liszt. Komitaatin suurimmat kaupungit Szekszárdin jälkeen ovat Paks ja Dombóvár. Tonavan varrella on Gemenc-niminen tulva-alueen metsä, joka on noin 340 neliökilometrin kokoinen. Metsä kuuluu Tonavan ja Draavan kansallispuistoon. Paksin kaupungin lähellä on ydinvoimala, jossa on neljä reaktoria.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-tolna-b8e7c105.jpg",
@@ -16567,7 +16567,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Veszprém': {
       lyhyt: 'Herendin tehtaassa on maalattu posliinia käsin vuodesta 1839, ja 1800-luvulla sen astioita toimitettiin Habsburgien hoville.',
-      pitka: `Veszprémin komitaatti on Balatonin pohjoisrannalla, ja siellä asuu noin 340 000 ihmistä (2019). Maakunnassa on Bakony-vuoristoa ja Balatonin rantaa. Veszprémin lisäksi suuria kaupunkeja ovat Pápa ja Ajka. Komitaatin keskus Veszprém tunnetaan nimellä Kuningattarien kaupunki, koska kaupungin piispa kruunasi Unkarin kuningattaret. Veszprémin linnamäki on yksi seitsemästä mäestä, joille kaupungin kerrotaan perustetun. Tihanyn niemimaalla on vuonna 1055 perustettu benediktiiniluostari. Luostarin perustamiskirja on vanhin säilynyt kirjallinen jälki unkarin kielestä. Herendin pikkukaupungissa on vuonna 1826 perustettu posliinitehdas, joka valmistaa käsinmaalattua posliinia. Badacsony on Balatonin rannalla kohoava tulivuoriperäinen vuori, jonka rinteillä kasvatetaan viiniä.`,
+      pitka: `Veszprémin komitaatti on Balatonin pohjoisrannalla, ja siellä asuu noin 340 000 ihmistä (2019). Komitaatissa on Bakony-vuoristoa ja Balatonin rantaa. Veszprémin lisäksi suuria kaupunkeja ovat Pápa ja Ajka. Komitaatin keskus Veszprém tunnetaan nimellä Kuningattarien kaupunki, koska kaupungin piispa kruunasi Unkarin kuningattaret. Veszprémin linnamäki on yksi seitsemästä mäestä, joille kaupungin kerrotaan perustetun. Tihanyn niemimaalla on vuonna 1055 perustettu benediktiiniluostari. Luostarin perustamiskirja on vanhin säilynyt kirjallinen jälki unkarin kielestä. Herendin pikkukaupungissa on vuonna 1826 perustettu posliinitehdas, joka valmistaa käsinmaalattua posliinia. Badacsony on Balatonin rannalla kohoava tulivuoriperäinen vuori, jonka rinteillä kasvatetaan viiniä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-veszprem-d68d4e82.jpg",
