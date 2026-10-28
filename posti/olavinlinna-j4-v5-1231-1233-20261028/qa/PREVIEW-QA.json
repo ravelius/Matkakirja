@@ -1,0 +1,19 @@
+{
+  "actualSavedModelsUsed": true,
+  "shader": "bounded CPU raster normal/metal/roughness + ORM.R AO, fixed analytic light; no game engine or ASTC emulation",
+  "angles": {
+    "yaw": 0,
+    "pitch": 28
+  },
+  "targetProjectedWidth": 275,
+  "mipStressMapSize": 512,
+  "darkLinearMultiplier": 0.12,
+  "images": [
+    "material-v4-v5-reference.png",
+    "readability-275px.png",
+    "top-coverage.png"
+  ],
+  "elapsedSeconds": 19.951235999935307,
+  "peakRSSMiB": 235.40625,
+  "viewed": true
+}

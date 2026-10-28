@@ -1,0 +1,164 @@
+[
+ {
+  "kansio": "output/olavinlinna-aarre-10171021-20261027/review-v5-j4",
+  "virheet": [],
+  "tiedostot": [
+   {
+    "nimi": "arkun-hopeasisalto-j4-v5.glb",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "nimi": "arkun-hopeasisalto-j4-v5.glb",
+     "tyyppi": "esine",
+     "kolmiot": 39036,
+     "piirrot": 1,
+     "materiaalit": 1,
+     "solmut": 1,
+     "kuvat": [
+      "2048×2048 png",
+      "2048×2048 png",
+      "2048×2048 png"
+     ],
+     "rajat": {
+      "min": [
+       -0.238,
+       0,
+       -0.2
+      ],
+      "max": [
+       0.238,
+       0.223,
+       0.2
+      ],
+      "koko": [
+       0.476,
+       0.223,
+       0.4
+      ]
+     }
+    },
+    "polku": "models/arkun-hopeasisalto-j4-v5.glb"
+   },
+   {
+    "nimi": "material-v4-v5-reference.png",
+    "polku": "qa/material-v4-v5-reference.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1800,
+     "h": 650
+    }
+   },
+   {
+    "nimi": "readability-275px.png",
+    "polku": "qa/readability-275px.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 975,
+     "h": 760
+    }
+   },
+   {
+    "nimi": "top-coverage.png",
+    "polku": "qa/top-coverage.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 600,
+     "h": 600
+    }
+   },
+   {
+    "nimi": "v5-reference-angle.png",
+    "polku": "qa/v5-reference-angle.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 600,
+     "h": 600
+    }
+   },
+   {
+    "nimi": "1021-arkun-sisalto-kolmeneljannesta.png",
+    "polku": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1254,
+     "h": 1254
+    }
+   },
+   {
+    "nimi": "peli-v3-v4-1021-2x.png",
+    "polku": "sources/peli-v3-v4-1021-2x.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 1764,
+     "h": 540
+    }
+   },
+   {
+    "nimi": "peli-v4-koko-kuva.png",
+    "polku": "sources/peli-v4-koko-kuva.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2752,
+     "h": 2064
+    }
+   },
+   {
+    "nimi": "albedo.png",
+    "polku": "textures/albedo.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "metallicRoughness.png",
+    "polku": "textures/metallicRoughness.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   },
+   {
+    "nimi": "normal-opengl.png",
+    "polku": "textures/normal-opengl.png",
+    "virheet": [],
+    "huomiot": [],
+    "tiedot": {
+     "tyyppi": "kuva",
+     "muoto": "png",
+     "w": 2048,
+     "h": 2048
+    }
+   }
+  ]
+ }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_FOR_RECEIVER_GAME_COMPARISON",
+  "candidate": "candidate04",
+  "viewedAt": "2026-10-28T19:19:54.985649+00:00",
+  "viewed": [
+    "material-v4-v5-reference.png",
+    "readability-275px.png",
+    "top-coverage.png"
+  ],
+  "findings": [
+    "Central and perimeter coins now have contrasting relief patches; no large blank central field.",
+    "Low backing prevents pale underlying chest floor showing through interior gaps. Thin dark outer edge remains visible from some angles.",
+    "Broad bowl band visible at275px and with512px map downsampling; interior ornament removed to keep band outside.",
+    "Protected plate recess restored after candidate03 showed two dark mask leaks. Current plate and pitcher retain their approved appearance."
+  ],
+  "limits": [
+    "Local CPU material comparisons only; actual game light, ASTC, receiver, KK and owner acceptance pending.",
+    "Partially hidden coins may show only a rim or partial motif;302 is a patch count, not a verified coin count."
+  ],
+  "newPaidCalls": 0
+}

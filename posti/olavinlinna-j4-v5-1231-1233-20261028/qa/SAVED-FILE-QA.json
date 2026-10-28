@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "checks": {
+    "nodesOriginScaleExact": true,
+    "POSITIONOriginalPrefixExact": true,
+    "NORMALOriginalPrefixExact": true,
+    "TEXCOORD_0OriginalPrefixExact": true,
+    "originalFacesExact": true,
+    "exactDimensionsPreserved": true,
+    "oneMeshMaterialAndUnder40k": true,
+    "normal-opengl.pngApprovedVesselPixelsExact": true,
+    "albedo.pngApprovedVesselPixelsExact": true,
+    "metallicRoughness.pngApprovedVesselPixelsExact": true,
+    "ORM_AOEmbeddedAndBound": true,
+    "backingSeparateVerticesAndLow": true,
+    "backingTopFanClosed": true
+  },
+  "statistics": {
+    "normal-opengl.png": {
+      "sha256": "c471c2f08aaea2d794e119509aa928c19915d148d0d58cd1a7fc5166bc1f7135",
+      "protectedPixelsCompared": 535695
+    },
+    "albedo.png": {
+      "sha256": "9d743fb1c8c43201c4d3f5712b677d8c31f5aec85a6180429b692185a3e16b4e",
+      "protectedPixelsCompared": 535695
+    },
+    "metallicRoughness.png": {
+      "sha256": "ea1b580019e6d5bf42f370d0b8966b8b496a773666433a6f2fca34281483da56",
+      "protectedPixelsCompared": 535695
+    },
+    "coin": {
+      "mappedPixels": 1718498,
+      "AO_quantiles": [
+        0.11764705882352941,
+        0.2,
+        0.21176470588235294,
+        0.7372549019607844,
+        1.0
+      ],
+      "AO_02to04_pixels": 1110703,
+      "albedoQuantiles": [
+        92.0,
+        121.0,
+        176.0,
+        198.0,
+        229.0
+      ]
+    },
+    "bowl": {
+      "mappedPixels": 176992,
+      "AO_quantiles": [
+        0.1411764705882353,
+        0.25098039215686274,
+        0.7686274509803922,
+        0.9137254901960784,
+        1.0
+      ],
+      "AO_02to04_pixels": 46156,
+      "albedoQuantiles": [
+        114.0,
+        225.0,
+        227.0,
+        227.0,
+        227.0
+      ]
+    },
+    "triangles": 39036,
+    "vertices": 26316,
+    "addedTriangles": 152,
+    "addedVertices": 78,
+    "dimensionsMetres": [
+      0.4760429561138153,
+      0.22339381277561188,
+      0.4000000059604645
+    ],
+    "modelBytes": 6653692,
+    "modelSHA256": "58547e569f7f160ea4d4d3ca6d785a09db9ee5c0113f3dcd927031ee3114ba69"
+  },
+  "limit": "Local material previews do not establish actual game, ASTC, KK or owner acceptance."
+}

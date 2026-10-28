@@ -1,0 +1,130 @@
+{
+  "version": "J4-v5",
+  "tasks": [
+    1231,
+    1232,
+    1233
+  ],
+  "createdAt": "2026-10-28T19:20:16.522118+00:00",
+  "files": [
+    {
+      "path": "CLAUDE-TOIMITUS.md",
+      "sha256": "89ed7d75da608d3f3e9e064cfc737a9a29c8f2168140f9c271a670047f893a87",
+      "bytes": 3215
+    },
+    {
+      "path": "KAYTTO-JA-QA.md",
+      "sha256": "89489808b842a905188e98b280d9c0363798f40f19417d8d1238e1cc1b588146",
+      "bytes": 2213
+    },
+    {
+      "path": "LAHTEET.md",
+      "sha256": "f78e715a2442b73366ed5b40e98bf1ff0861d85fe0894d5928a4292650ab661b",
+      "bytes": 1041
+    },
+    {
+      "path": "models/arkun-hopeasisalto-j4-v5.glb",
+      "sha256": "58547e569f7f160ea4d4d3ca6d785a09db9ee5c0113f3dcd927031ee3114ba69",
+      "bytes": 6653692,
+      "liike": "ei liikettä",
+      "tyyppi": "esine",
+      "triangles": 39036,
+      "dimensionsM": [
+        0.4760429561138153,
+        0.22339381277561188,
+        0.4000000059604645
+      ]
+    },
+    {
+      "path": "qa/BUILD-QA.json",
+      "sha256": "3aec0ac79bc281cd92b6b8e1558a1b59be6f9901cfb64ecd65201bfcde3c5843",
+      "bytes": 3519
+    },
+    {
+      "path": "qa/PREVIEW-QA.json",
+      "sha256": "5c95331e6161eb977a1039d3842c2c13fa8b8123bc74ca9077ba72933acd0795",
+      "bytes": 491
+    },
+    {
+      "path": "qa/SAVED-FILE-QA.json",
+      "sha256": "cadac95bca580f03524577a4cd9083fe17eba95f0164da3ee6ecd93afbde77cb",
+      "bytes": 2191
+    },
+    {
+      "path": "qa/VISUAL-REVIEW.json",
+      "sha256": "0a7d9b5fe4a973df0067680a574504dfd1ebb6b58f89ca08c4cb62a2e59450df",
+      "bytes": 1034
+    },
+    {
+      "path": "qa/material-v4-v5-reference.png",
+      "sha256": "c67d29780e8f7fa16411b1a3f79ad6367ec1b91cf5a747734a78de3cad7288af",
+      "bytes": 809395
+    },
+    {
+      "path": "qa/readability-275px.png",
+      "sha256": "cd5c260a0ef74872459a761b1c6fe7f356887d1d4985b369712704d054658036",
+      "bytes": 210016
+    },
+    {
+      "path": "qa/receiver-check.json",
+      "sha256": "d8a73ae7a41edec27f16d15e35a1a3229504a60ea224e47cf0146b2e3e995495",
+      "bytes": 3021
+    },
+    {
+      "path": "qa/top-coverage.png",
+      "sha256": "a042ad21cf2360eda6134a4396ee549a8fb215f2f81fde932c8fbf00516042af",
+      "bytes": 220077
+    },
+    {
+      "path": "qa/v5-reference-angle.png",
+      "sha256": "a196331508c542b654bde5aa27f4feb25e1e5cd9ce1b70bebe63dd8d53015537",
+      "bytes": 127323
+    },
+    {
+      "path": "sources/1021-arkun-sisalto-kolmeneljannesta.png",
+      "sha256": "c4c95f80218c5f52d41d4b6f5f17c647052f94e58fd526b42c774538be9c56ba",
+      "bytes": 2518897
+    },
+    {
+      "path": "sources/lavastaja-codex-j4-v5-kolikot-20261028.md",
+      "sha256": "2445115d714aa300dee6fc3dd11105f91efdecf4c109d3e7139d7f8a489c45d0",
+      "bytes": 2261
+    },
+    {
+      "path": "sources/peli-v3-v4-1021-2x.png",
+      "sha256": "67cb51019fb4988e21fb4bc410610bd83a3a74f44577955c8bed4cf7268c83b2",
+      "bytes": 1005877
+    },
+    {
+      "path": "sources/peli-v4-koko-kuva.png",
+      "sha256": "2df1a2ab34d7a9aacfc073176042da6af17670a7042a2ee9382fa0ebbb7bc14d",
+      "bytes": 4941834
+    },
+    {
+      "path": "textures/albedo.png",
+      "sha256": "9d743fb1c8c43201c4d3f5712b677d8c31f5aec85a6180429b692185a3e16b4e",
+      "bytes": 1225767
+    },
+    {
+      "path": "textures/metallicRoughness.png",
+      "sha256": "ea1b580019e6d5bf42f370d0b8966b8b496a773666433a6f2fca34281483da56",
+      "bytes": 1626553
+    },
+    {
+      "path": "textures/normal-opengl.png",
+      "sha256": "c471c2f08aaea2d794e119509aa928c19915d148d0d58cd1a7fc5166bc1f7135",
+      "bytes": 1415030
+    },
+    {
+      "path": "tools/codex-3d-tarkistus.mjs",
+      "sha256": "5de9ed58f784bdbf9094823b25e6473dddfc9ff72d4d38085974c5cbcdba39c6",
+      "bytes": 24533
+    }
+  ],
+  "newTripoCalls": 0,
+  "newImageCalls": 0,
+  "credits": 0,
+  "receiverAccepted": false,
+  "runtimeVerified": false,
+  "ownerAccepted": false
+}
