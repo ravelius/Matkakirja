@@ -3031,3 +3031,7 @@ Omistaja (KK) sanatarkasti: 'anna koodi jolla poistan hengitysäänet' / 'sinull
 ## Striimikartta: nimet liukuvat vierityksessä, iso pala puretaan kerran (omistaja 28.10. 09.54) (28.10.2026 klo 09.54)
 
 Omistaja (KK:n kortti, NS:n iPad-mittauksen jälkeen): 1) 'Vierityksen aikana nimet liukuvat kartan mukana ja asettuvat uudelleen, kun liike pysähtyy' → Kyllä (KS). 2) 'Iso karttapala puretaan kerran ja jaetaan kaikille sen osille (uusi paikka 10 s → n. 4–5 s)' → Kyllä (PT: NS). Tavoite: lähikartan vieritys ilman nykäyksiä; uusi paikka tarkentuu noin puolet nopeammin, sama kaikilla verkoilla. Mittaus ennen|jälkeen KK:lle ennen junaa.
+
+## Huohotukset poistettu ämpäristä (omistaja 28.10. 09.5x) (28.10.2026 klo 09.55)
+
+Omistaja ajoi poiston itse; KK todensi: ämpärissä 0 huohotus-mp3:ta, julkiset URLit 404 × 7. Ei muita toimia.
