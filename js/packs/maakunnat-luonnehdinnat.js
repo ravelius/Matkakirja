@@ -433,7 +433,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   DEU: {
     "Sachsen": {
       lyhyt: "Leipzig sykkii nyt musiikista ja startupeista, ja kevään kirjamessut täyttävät kadut lukijoista!",
-      pitka: "Dresden kylpee Elben rannalla barokkihuviloiden keskellä, ja kaupunkia kutsuttiin sen upean arkkitehtuurin ansiosta jo 1800-luvulla ”Elbin Firenzeksi”. Vuonna 1873 Sachsen oli yhä oma kuningaskuntansa uuden Saksan keisarikunnan sisällä, ja kuningas Johann hallitsi juuri tästä kaupungista. Toisen maailmansodan pommitukset polttivat Frauenkirchen kirkon raunioiksi vuonna 1945, ja mustuneet kivet lojuivat kasassa lähes viisikymmentä vuotta ennen kuin kirkko rakennettiin uudelleen samoista kivistä 2005. Tumman ja vaalean kiven kuvio seinässä näkyy yhä matkailijoille todisteena siitä, mikä selvisi ja mikä rakennettiin uudestaan.",
+      pitka: `Saksi on osavaltio Itä-Saksassa, ja siellä asuu noin 4,1 miljoonaa ihmistä. Osavaltion pääkaupunki on Dresden Elbe-joen rannalla. Dresdenin Frauenkirche-kirkko tuhoutui vuonna 1945 pommituksissa, ja uudelleen rakennettu kirkko vihittiin käyttöön vuonna 2005. Kirkko on noin 91 metriä korkea. Meissenin kaupungissa aloitettiin vuonna 1710 Euroopan ensimmäisen kovaposliinin valmistus. Osavaltion suurin kaupunki on Leipzig, joka on ollut messukaupunki satojen vuosien ajan. Osavaltion eteläosassa Erzgebirge eli Malmivuoret kohoaa Tšekin rajalla, ja osavaltion korkein kohta on Fichtelberg, 1 215 metriä. Bautzenin seudulla asuu sorbeja, slaavilaista vähemmistöä, jolla on oma kielensä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-sachsen-924f99ca.jpg',
@@ -463,7 +463,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Bayern": {
       lyhyt: "München yhdistää nykyään Oktoberfest-perinteen ja huipputeknologian – BMW:n tehtaat hurisevat keskustan kupeessa.",
-      pitka: "Etelässä Alpit kohoavat Baijerin taustalla, ja kuningas Ludvig II rakennutti satulinnaansa Neuschwansteinia vuoresta toiseen 1870-luvulla. Juuri silloin, kun isoisä kulki Baijerissa, linnan portti valmistui, ja kuningas asui siellä jo ennen kuin koko linna oli valmis. Nykyään linna on Saksan suosituin nähtävyys, ja sen tornit ovat innoittaneet muun muassa Disneyn satulinnojen ulkonäköä. Baijerilaisuus näkyy yhä ylpeänä omana identiteettinä – murre, oluttarhat ja valkosinivalkoinen lippu erottavat sen selvästi muusta Saksasta.",
+      pitka: `Baijeri on osavaltio Etelä-Saksassa, ja siellä asuu noin 13 miljoonaa ihmistä. Pääkaupunki München on osavaltion suurin kaupunki. Siellä pidetään syys–lokakuussa Oktoberfest-kansanjuhla, joka järjestettiin ensimmäisen kerran vuonna 1810 kruununprinssi Ludvigin häiden kunniaksi. Nykyään juhlassa käy noin seitsemän miljoonaa kävijää vuodessa. Nürnbergissä on joulumarkkinat, joilla käy yli miljoona ihmistä, ja kaupungin erikoisuus on Lebkuchen-piparkakku. Zugspitze on Saksan korkein vuori, 2 962 metriä, ja sen huippualueen yli kulkee Itävallan raja. Neuschwansteinin linnan rakennutti Baijerin kuningas Ludvig II, ja työ alkoi vuonna 1869. Linnassa käy vuosittain yli miljoona vierasta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-bayern-5a2ccc82.jpg',
@@ -493,7 +493,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Rheinland-Pfalz": {
       lyhyt: "Mosel- ja Rheinjoen rinteillä viljellään uskomattoman jyrkkiä viinitarhoja, joista osa vaatii köysiä työntekoon.",
-      pitka: "Trier on Saksan vanhin kaupunki, ja sen mustunut roomalainen kaupunginportti Porta Nigra on seissyt paikallaan lähes kaksituhatta vuotta. Kaupungissa syntyi myös Karl Marx vuonna 1818, ja hänen lapsuudenkotinsa on nykyään museo, jossa joka kolmas kävijä saapuu Kiinasta. Vuonna 2018 Kiina lahjoitti kaupungille yli viisi metriä korkean pronssipatsaan Marxista syntymän 200-vuotispäivän kunniaksi – lahja herätti kaupungissa kiivasta väittelyä. Mosel-joki mutkittelee Trieristä pohjoiseen niin jyrkkien viinirinteiden välissä, että osa tarhoista joudutaan yhä hoitamaan pienillä raiteilla kulkevilla junilla, koska rinne on liian jyrkkä traktorille.",
+      pitka: `Rheinland-Pfalz on osavaltio Lounais-Saksassa, ja siellä asuu noin 4,1 miljoonaa ihmistä. Pääkaupunki Mainz on Reinin rannalla. Mainzissa syntyi kirjapainotaidon keksijä Johannes Gutenberg, ja kaupungin Gutenberg-museossa on alkuperäinen Gutenbergin Raamattu. Mainzin tuomiokirkko on yli tuhat vuotta vanha. Koblenzin ja Bingenin välinen 65 kilometrin osuus Reinin laaksoa on Unescon maailmanperintökohde vuodesta 2002, ja sen varrelle on rakennettu noin 40 linnaa. Trier on Mosel-joen kaupunki, jota pidetään Saksan vanhimpana kaupunkina. Roomalaiset perustivat sen noin vuonna 16 eaa. Osavaltiossa kasvatetaan suurin osa Saksan viinirypäleistä. Ludwigshafenissa toimii kemianyhtiö BASF.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-rheinland-pfalz-998d00c4.jpg',
@@ -523,7 +523,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Saarland": {
       lyhyt: "Saarbrücken tuntuu vähän Ranskalta – täällä syödään croissantteja ja puhutaan murteessa ranskaa sekaan.",
-      pitka: "Saarin joki kiemurtelee jyrkän silmukan Mettlachin kohdalla – Saarschleife on alueen tunnetuin näköalapaikka ja vetää nykyään patikoijia joka puolelta Saksaa. Alue on pinta-alaltaan Saksan pienimpiä osavaltioita, mutta hiili ja teräs tekivät siitä 1900-luvulla yllättävän vauraan teollisuusseudun, jonka kaivoskuilut ulottuivat kilometrikaupalla Ranskan rajan alle. Saarland liittyi nykyisessä muodossaan Saksaan vasta 1957, kansanäänestyksen jälkeen – ennen sitä alue oli sekä Kansainliiton hallinnassa että osa Ranskan talousaluetta. Siksi Saarbrückenissä tuntuu yhä ranskalaiselta, vaikka raja on nykyään vain viivalla kartalla.",
+      pitka: `Saarland on osavaltio Lounais-Saksassa, ja siellä asuu noin miljoona ihmistä. Se on pinta-alaltaan pienin osavaltio kaupunkivaltioita lukuun ottamatta, ja metsää on noin kolmannes maa-alasta. Pääkaupunki on Saarbrücken. Alue oli vuosina 1947–1956 Ranskan hallinnoima Saarin protektoraatti. Vuonna 1955 äänestäjät hylkäsivät ehdotuksen autonomiasta, ja 1. tammikuuta 1957 alue liittyi Länsi-Saksaan osavaltiona. Völklingenin kaupungissa on rautatehdas, joka toimi vuoteen 1986 ja on Unescon maailmanperintökohde vuodesta 1994. Se on yksi harvoista Euroopassa säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Viimeinen hiilikaivos suljettiin vuonna 2012. Saar-joen Saarschleife on mutka, jossa joki kiertää Cloefin harjannetta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-saarland-28400314.jpg',
@@ -553,7 +553,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Schleswig-Holstein": {
       lyhyt: "Kahden meren välissä tuulimyllyt pyörivät joka suuntaan – tuulivoima on täällä arkipäivää, ei erikoisuus.",
-      pitka: "Vain yhdeksän vuotta ennen isoisän matkaa, vuonna 1864, Preussi ja Itävalta kävivät sotaa Tanskaa vastaan juuri Schleswigistä ja Holsteinista, ja alue liitettiin Preussiin 1867. Kiista oli niin sekava, että Britannian pääministeri lordi Palmerston vitsaili myöhemmin, että vain kolme ihmistä maailmassa oli koskaan ymmärtänyt koko asian – ja yksi heistä oli kuollut, toinen tullut hulluksi, ja hän itse oli unohtanut kaiken. Nykyään maakunta lepää rauhallisesti kahden meren, Pohjanmeren ja Itämeren, välissä, ja rannikkokaupungit elävät yhä purjehduksesta ja kalastuksesta. Kielin viikko on nykyään maailman suurin purjehdustapahtuma ja kokoaa kesäisin tuhansia veneitä kaupungin edustalle.",
+      pitka: `Schleswig-Holstein on osavaltio Pohjois-Saksassa, ja siellä asuu noin kolme miljoonaa ihmistä. Osavaltio sijaitsee Jyllannin niemimaan eteläosassa Pohjanmeren ja Itämeren välissä, ja sen pohjoispuolella on Tanska. Pääkaupunki on Kiel. Kielin kanava on 98 kilometriä pitkä ja yhdistää Pohjanmeren ja Itämeren. Keisari Vilhelm II avasi sen vuonna 1895. Kanavaa pitkin kulkee keskimäärin 32 000 laivaa vuodessa. Lyypekin kaupunki oli Hansaliiton johtava kaupunki 1300- ja 1400-luvuilla. Siellä on Holstentor-niminen keskiaikainen kaupunginportti vuodelta 1478, ja kaupunki on tunnettu marsipaanistaan. Wackenin kylässä pidetään joka vuosi Wacken Open Air -metallimusiikkifestivaali. Osavaltion pohjoisosassa asuu tanskalaista vähemmistöä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-maakunta2-schleswig-holstein-v-5cfaf136.jpg',
@@ -583,7 +583,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Niedersachsen": {
       lyhyt: "Wolfsburgissa Volkswagenin tehdas on kaupungin sydän – koko kaupunki tuntuu rakentuneen autotehtaan ympärille.",
-      pitka: "Lüneburgin nummi on laaja kanervikko, jolla harmaat nummilammaslaumat laiduntavat yhä syksyisin kanervan kukkiessa violettina silmänkantamattomiin. Kun isoisä kulki näillä main, Hannover oli vasta äskettäin liitetty Preussiin – kuningas Yrjö V menetti valtaistuimensa 1866 eikä koskaan hyväksynyt tappiotaan, vaan eli loppuelämänsä maanpaossa väittäen yhä olevansa Hannoverin laillinen hallitsija. Preussi takavarikoi kuninkaan omaisuuden niin sanottuun Welfenfondsiin, josta rahoitettiin salaa vastavakoilua Euroopassa vuosikymmeniä. Nykyään Hannover on messukaupunki ja Niedersachsenin pääkaupunki, ja nummen rauha ja tehtaiden humina elävät maakunnassa rinnakkain.",
+      pitka: `Ala-Saksi on osavaltio Pohjois-Saksassa, ja siellä asuu noin kahdeksan miljoonaa ihmistä. Pääkaupunki on Hannover. Pohjanmeren rannikon edustalla on seitsemän asuttua Itä-Friisin saarta, joita matkailijat suosivat. Useimmilla saarilla autot on kielletty, ja saarille kuljetaan lautalla. Wolfsburgin kaupunki perustettiin vuonna 1938 Volkswagenin autotehtaan työntekijöiden asuinpaikaksi, ja yhtiön pääkonttori on yhä siellä. Harz-vuoriston Wurmberg on osavaltion korkein kohta, 971 metriä. Koillisessa on Lüneburger Heide, Saksan laajin nummialue. Lüneburgin kaupunki rikastui keskiajalla suolakaupalla. Hildesheimin tuomiokirkko ja Goslarin vanhakaupunki ovat Unescon maailmanperintökohteita. Goslarin Rammelsbergin kaivoksessa louhittiin hopeapitoista lyijymalmia vuoteen 1988 asti.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-niedersachsen-2fc45d88.jpg',
@@ -613,7 +613,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Nordrhein-Westfalen": {
       lyhyt: "Ruhrin alueen entiset kaivokset ovat nyt taidemuseoita ja konserttisaleja – teollisuusromantiikka vetää turisteja.",
-      pitka: "Kölnin tuomiokirkko oli yhä rakenteilla 1870-luvulla – työt olivat olleet pysähdyksissä vuosisatoja, kunnes ne käynnistettiin uudelleen 1842 ja jatkuivat läpi koko vuosikymmenen. Kirkko valmistui lopulta vasta 1880, yhteensä 632 vuoden rakennustyön jälkeen, ja siitä tuli hetkeksi maailman korkein rakennus. Nykyään kaksitorninen jättiläinen hallitsee yhä Kölnin siluettia, ja sen edustalla junat pysähtyvät suoraan päärautatieasemalle keskelle kaupunkia. Ruhrin alueella teollisuushistoria ja tuomiokirkon keskiaikainen kunnianhimo elävät rinnakkain saman osavaltion sisällä.",
+      pitka: `Nordrhein-Westfalen on osavaltio Länsi-Saksassa, ja siellä asuu noin 18 miljoonaa ihmistä. Se on Saksan väkirikkain osavaltio. Pääkaupunki on Düsseldorf, ja suurin kaupunki on Köln. Kölnin tuomiokirkon rakentaminen alkoi vuonna 1248 ja päättyi vuonna 1880. Kirkko on Unescon maailmanperintökohde, ja sen kaksi tornia ovat noin 157 metriä korkeat. Ruhrin teollisuusalueella Essenin kaupungissa toimi Zollvereinin hiilikaivos, jossa louhinta päättyi vuonna 1986. Kaivosalueella on nykyään muun muassa Ruhr-museo, ja se on Unescon maailmanperintökohde vuodesta 2001. Aachenin tuomiokirkon ytimenä on palatsikappeli, jonka rakennutti Kaarle Suuri noin vuonna 796. Aachenissa kruunattiin saksalaisia kuninkaita vuosina 936–1531.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-maakunta2-nordrhein-westfalen-v-64d6fb22.jpg',
@@ -643,7 +643,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Baden-Württemberg": {
       lyhyt: "Stuttgartissa Mercedes-Benzin tehtaat hurisevat keskustan kupeessa – autoteollisuus on täällä lähes uskonto.",
-      pitka: "Mustametsä eli Schwarzwald peittää osavaltion lounaiskulman, ja sen kylistä ovat lähtöisin sekä käkikellot että Schwarzwälder Kirschtorte -kakku, joka tunnetaan maailmalla nimellä Black Forest -kakku. Heidelbergissä sijaitsee Saksan vanhin yliopisto vuodelta 1386, ja kaupungin yllä kohoava linnaraunio on yksi maan romanttisimmista näkymistä – amerikkalainen kirjailija Mark Twain ihastui kaupunkiin niin, että omisti sille kokonaisen luvun matkakertomuksessaan. Bodenjärvi rajaa osavaltiota etelässä, ja sen rannoilla Sveitsi, Itävalta ja Saksa kohtaavat saman veden äärellä. Autoteollisuuden rinnalla osavaltio on nykyään myös yksi Saksan suurimmista viinintuottajista.",
+      pitka: `Baden-Württemberg on osavaltio Lounais-Saksassa, ja siellä asuu noin 11 miljoonaa ihmistä. Pääkaupunki Stuttgart on Neckar-joen laaksossa, ja sekä Mercedes-Benz että Porsche ovat sijoittaneet pääkonttorinsa kaupunkiin. Stuttgartissa pidetään Cannstatter Volksfest -kansanjuhlaa, joka aloitettiin vuonna 1818. Schwarzwald eli Mustametsä on vuoristoalue Reinin laakson itäpuolella, ja sen korkein huippu Feldberg on 1 493 metriä. Tonava saa alkunsa Schwarzwaldissa, jossa Brigach- ja Breg-joet yhtyvät. Heidelbergin yliopisto perustettiin vuonna 1386, ja se on Saksan vanhin. Karlsruhessa toimii Saksan perustuslakituomioistuin. Bodenjärvi on järvi Saksan, Sveitsin ja Itävallan rajalla. Rustin kunnassa on Europa-Park, Saksan suurin huvipuisto.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-baden-wurttemberg-1481318b.jpg',
@@ -673,7 +673,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Brandenburg": {
       lyhyt: "Potsdamin palatsit ja puistot ympäröivät Berliiniä kuin vihreä rengas – Sanssouci vetää päivämatkalaisia täyteen.",
-      pitka: "Spreewaldin metsässä joki haarautuu sadoiksi pieniksi kanaviksi, ja paikalliset kuljettavat postia, ruokaa ja turisteja yhä perinteisillä soutuveneillä kylästä toiseen. Alueella asuu Saksan slaavilainen vähemmistö sorbit, joilla on oma kieli ja omat kaksikieliset tiekyltit kylissä. Brandenburg ympäröi Berliiniä joka suunnalta kuin rengas, mutta ei itse kuulu pääkaupunkiin – kaksi aluetta hallitaan yhä erikseen, vaikka rajaa ei arjessa juuri huomaa. Maakunnan mäntymetsät ja hiekkaperäinen maaperä tekivät siitä pitkään Preussin köyhintä seutua, mutta nykyään Berliinin läheisyys on tuonut uutta elinvoimaa moneen kylään.",
+      pitka: `Brandenburg on Saksan osavaltio, joka ympäröi Saksan pääkaupunkia Berliiniä. Siellä asuu noin 2,6 miljoonaa ihmistä, ja osavaltion pääkaupunki on Potsdam. Alue on enimmäkseen hiekkaista tasankoa, jossa on mäntymetsiä ja yli 3 000 järveä. Spreewald on Spree-joen sisämaan suisto, jossa on noin 1 300 kilometriä pieniä kanavia. Kanavilla kuljetaan perinteisillä litteäpohjaisilla veneillä. Alue on Unescon biosfäärialue vuodesta 1991. Kaakkois-Brandenburgissa asuu sorbeja, slaavilaista vähemmistöä, ja alueen kylteissä on saksan lisäksi alasorbinkielinen teksti. Potsdamissa on Sanssoucin palatsi, Fredrik Suuren entinen kesäpalatsi ja Unescon maailmanperintökohde.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-brandenburg-fd0729be.jpg',
@@ -703,7 +703,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Mecklenburg-Vorpommern": {
       lyhyt: "Itämeren rannalla on Saksan hiljaisimmat rannat – Rügenin liidukalliot vetävät kesäisin väkeä valokuvaamaan.",
-      pitka: "Sisämaassa avautuu tuhannen järven maa, Mecklenburgin järviylänkö, jossa kanoottia voi meloa viikkokausia näkemättä samaa rantaa kahdesti. Rannikolla hansakaupungit Stralsund ja Wismar ovat säilyttäneet punatiiliset kauppiastalonsa niin hyvin, että Unesco otti molemmat maailmanperintölistalleen samalla kertaa vuonna 2002. Alue on Saksan harvimmin asuttuja, ja moni kylä tyhjeni itäblokin aikana – nyt kesäasukkaat ja purjehtijat täyttävät satamat joka kesä uudelleen. Naapurisaaret Usedom ja Hiddensee tarjoavat saman Itämeren rauhallisemmin, ilman Rügenin kesäruuhkia.",
+      pitka: `Mecklenburg-Vorpommern on Saksan osavaltio Pohjois-Saksassa Itämeren rannalla. Siellä asuu noin 1,6 miljoonaa ihmistä, ja se on Saksan harvimmin asuttu osavaltio. Pääkaupunki on Schwerin, mutta suurin kaupunki on Rostock. Rostockin yliopisto perustettiin vuonna 1419, ja kaupungissa asuu noin 205 000 ihmistä. Rügenin saarella on Jasmundin kansallispuisto, jossa liitukallio Königsstuhl kohoaa 118 metriä Itämeren yläpuolelle. Stralsund ja Wismar ovat entisiä hansakaupunkeja, ja niiden tiiligotiikkaa edustavat vanhatkaupungit ovat Unescon maailmanperintökohteita. Müritz-järven rannalla on Müritzin kansallispuisto. Osavaltiota sanotaan tuhannen järven maaksi. Heiligendammin Grand Hotelissa pidettiin G8-maiden huippukokous vuonna 2007.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-mecklenburg-vorpommern-ba752db4.jpg',
@@ -733,7 +733,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Bremen": {
       lyhyt: "Bremenin kaupunginmuusikot seisovat raatihuoneen kupeessa, ja Weserin satama on yhä kaupungin elinehto.",
-      pitka: "Bremenin satamakaupunki Bremerhaven oli 1800-luvulla Euroopan vilkkaimpia lähtöportteja Amerikkaan – yhteensä noin seitsemän miljoonaa ihmistä nousi täältä laivaan matkalla uuteen elämään vuosien 1830 ja 1971 välillä. Lähtijöiden määrä oli suurimmillaan juuri 1870-luvulla, kun Saksasta pakeni sekä köyhyyttä että sotien jälkiä. Nykyään entisen odotussalin paikalla toimii Saksan siirtolaismuseo, jossa voi hakea tietoja Amerikkaan lähteneistä sukulaisista tietokannoista. Bremenin ja Bremerhavenin satamat elävät yhä ulkomaankaupasta, vaikka matkustajat ovat vaihtuneet konteiksi.",
+      pitka: `Bremen on kaupunkivaltio Pohjois-Saksassa, ja sen virallinen nimi on Bremenin vapaa hansakaupunki. Osavaltioon kuuluu kaksi erillistä aluetta: Bremenin kaupunki ja Pohjanmeren rannalla oleva satamakaupunki Bremerhaven. Niissä asuu yhteensä noin 700 000 ihmistä. Bremen osti Bremerhavenin alueen Hannoverin kuningaskunnalta vuonna 1827. Bremenin kaupungintalo ja Rolandin patsas ovat Unescon maailmanperintökohteita vuodesta 2004. Kaupungintalon lähellä on patsas Grimmin veljesten sadun Bremenin kaupunginmuusikoista. Bremenissä valmistetaan Mercedes-Benzin C-sarjan autoja, ja Airbus tekee siellä lentokoneiden osia. Kaupungissa valmistetaan myös Beck's-olutta. Bremen sai vapaan keisarillisen kaupungin aseman vuonna 1646.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-bremen-44fd3670.jpg',
@@ -763,7 +763,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Hamburg": {
       lyhyt: "Hampurin uusin maamerkki on Elbphilharmonia – aaltoileva konserttitalo kohoaa sataman yllä ja vetää kuulijoita ympäri maailmaa!",
-      pitka: "Hampuri piti itsepintaisesti kiinni vapaakaupungin asemastaan vielä pitkään isoisän matkan jälkeenkin – kaupunki liittyi Saksan tulliliittoon vasta 1888, kun suurin osa maasta oli ollut sen sisällä jo vuosikymmeniä. Vapaasatama-alue sai pitää erioikeutensa neuvottelemalla, ja se vaikutti siihen, millaiseksi koko satama-alue myöhemmin rakennettiin. Nykyään entisten tullivarastojen tilalla kohoaa punatiilinen Speicherstadt, maailman suurin yhtenäinen varastorakennusten alue, joka on nykyään Unescon maailmanperintöä. Elben suulla sijaitseva satama on yhä Euroopan vilkkaimpia, ja rahtilaivat kulkevat päivittäin ohi kaupungin keskustan.",
+      pitka: `Hampuri on kaupunkivaltio Pohjois-Saksassa, ja sen virallinen nimi on Hampurin vapaa hansakaupunki. Siellä asuu noin 1,9 miljoonaa ihmistä, ja se on Saksan toiseksi suurin kaupunki Berliinin jälkeen. Hampurin satama on Saksan suurin satama ja Euroopan kolmanneksi suurin Rotterdamin ja Antwerpenin jälkeen. Kaupungissa on noin 2 500 siltaa. Binnenalster ja Außenalster ovat Alster-joen padottuja järviä keskustassa. Speicherstadt-varastokaupunginosa ja Kontorhausviertel ovat Unescon maailmanperintökohde vuodesta 2015. Elbphilharmonie-konserttitalo avattiin tammikuussa 2017. Beatles asui ja esiintyi Hampurissa elokuusta 1960 joulukuuhun 1962. Hampuri liittyi keskiaikaiseen Hansaliittoon vuonna 1321. Uutislehti Der Spiegel ja sanomalehti Die Zeit toimivat kaupungissa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-hamburg-fdf690e7.jpg',
@@ -793,7 +793,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Hessen": {
       lyhyt: "Frankfurtin pilvenpiirtäjät kohoavat keskellä Saksaa – täällä lyödään Euroopan keskuspankin rahapäätökset.",
-      pitka: "Frankfurt oli vielä vuoteen 1866 asti oma itsenäinen vapaakaupunkinsa, kunnes Preussi valtasi sen sotilaallisesti Saksan sisäisen sodan jälkeen – kaupungin vapaa lehdistö oli ärsyttänyt Preussia, ja tilaisuus tuli käyttöön. Frankfurtilaiset ovat juoneet omenaviiniä eli Apfelweinia niin uskollisesti, että perinteisiä kapakoita kutsutaan yhä nimellä Apfelwein-Wirtschaft, ja juomaa tarjoillaan harmaista kivikannuista. Satuja keränneet Grimmin veljekset kasvoivat Hessenissä, ja heidän kirjaamansa kansansadut – muun muassa Punahilkka ja Tuhkimo – tunnetaan nykyään ympäri maailmaa. Nykyisin Frankfurtin pilvenpiirtäjien varjossa Hessenin pienemmät kaupungit, kuten kylpyläkaupunki Wiesbaden, elävät rauhallisempaa elämää viinitarhojen keskellä.",
+      pitka: `Hessen on osavaltio Keski-Saksassa, ja siellä asuu noin 6,3 miljoonaa ihmistä. Pääkaupunki on Wiesbaden, mutta suurin kaupunki on Frankfurt am Main, jossa asuu noin 760 000 ihmistä. Frankfurtissa ovat Euroopan keskuspankin ja Saksan keskuspankin Bundesbankin toimipaikat, ja kaupungin lentoasema on yksi Euroopan vilkkaimmista. Frankfurtin ympärillä oleva Rein-Main-alue on yksi Saksan suurimmista suurkaupunkialueista. Darmstadt oli 1900-luvun vaihteessa jugendtyylin keskus. Marburgin yliopisto perustettiin vuonna 1527. Osavaltiosta noin 42 prosenttia on metsää. Taunus on kukkulaseutu, jonka tunnettu huippu on Großer Feldberg. Rhönin vuoriston Wasserkuppe on 950 metriä korkea, ja se on Hessenin korkein kohta.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-hessen-f7d7cc9a.jpg',
@@ -823,7 +823,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Thüringen": {
       lyhyt: "Thüringenin metsät peittävät suuren osan maakunnasta – siksi sitä kutsutaan Saksan vihreäksi sydämeksi.",
-      pitka: "Wartburgin linnassa Martti Luther käänsi Uuden testamentin saksaksi piileskellessään siellä 1500-luvulla, ja linna kohoaa yhä metsäisen mäen laella Eisenachin yllä. Weimarissa puolestaan Goethe ja Schiller loivat saksalaisen klassismin kulta-ajan, ja kaupungin pieni koko tekee sen kirjallisesta perinnöstä entistäkin vaikuttavamman. Thüringenin oma erikoisuus, Thüringer Rostbratwurst, on niin arvostettu, että sen valmistusohje mainitaan paikallisissa asiakirjoissa jo 1400-luvulta lähtien, ja EU myönsi makkaralle suojatun alkuperänimityksen vuonna 2003. Nykyinen osavaltio syntyi vasta 1920, kun alueen pienet ruhtinaskunnat yhdistyivät yhdeksi Thüringeniksi.",
+      pitka: `Thüringen on osavaltio Keski-Saksassa, ja siellä asuu noin 2,1 miljoonaa ihmistä. Pääkaupunki on Erfurt, jossa on noin 200 000 asukasta. Osavaltiota kutsutaan Saksan vihreäksi sydämeksi, koska siellä on laajoja metsiä. Thüringenin metsävuoristossa kulkee Rennsteig-vaellusreitti, ja vuoriston korkein huippu Großer Beerberg on 983 metriä. Weimar tunnetaan kirjailijoista Goethesta ja Schillerista. Jena on yliopistokaupunki Saale-joen varrella. Eisenachin kaupungin lähellä on Wartburgin linna, jonka rakentaminen alkoi noin vuonna 1067. Uskonpuhdistaja Martin Luther käänsi siellä Uuden testamentin saksaksi vuosina 1521–1522. Linna on Unescon maailmanperintökohde vuodesta 1999.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-thuringen-1393c42b.jpg',
@@ -853,7 +853,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Sachsen-Anhalt": {
       lyhyt: "Dessaussa Bauhaus-rakennukset seisovat pystyssä – muotoilukoulun perintö näkyy koko kaupunkikuvassa.",
-      pitka: "Wittenbergissä Martti Luther naulasi perinteen mukaan 95 teesiään kirkon oveen vuonna 1517, ja koko kaupunki elää yhä tästä hetkestä – kadut, kirkot ja museot on nimetty uskonpuhdistuksen mukaan. Harzin vuoristossa kohoaa Brocken, Pohjois-Saksan korkein huippu, jonka ympärille on kudottu satoja vuosia noitasatuja – huippua sanotaan yhä paikaksi, jonne noidat kokoontuivat valpurinyönä. Bauhaus-koulun rakennukset Dessaussa muistuttavat, että sama osavaltio on tuottanut sekä uskonpuhdistuksen että 1900-luvun modernin muotoilun. Nykyään Sachsen-Anhalt on yksi Saksan väkiluvultaan eniten pienenevistä osavaltioista, mutta sen historiallinen painoarvo on suhteettoman suuri.",
+      pitka: `Saksi-Anhalt on osavaltio Itä-Saksassa, ja siellä asuu noin 2,1 miljoonaa ihmistä. Asukasluku on vähentynyt: vuonna 1990 heitä oli noin 2,9 miljoonaa. Pääkaupunki on Magdeburg Elbe-joen rannalla, ja Halle on osavaltion toinen suuri kaupunki. Hallessa on osavaltion suurin yliopisto, Martin Lutherin yliopisto. Harzin vuoristossa on Brocken, jonka huippu on 1 141 metrin korkeudessa. Se on Pohjois-Saksan korkein vuori. Osavaltiossa on useita Unescon maailmanperintökohteita, esimerkiksi Quedlinburgin vanhakaupunki, Naumburgin tuomiokirkko, Dessaun Bauhaus-rakennukset ja Dessau-Wörlitzin puutarhat. Elbe-joen varrella oleva Wittenberg oli uskonpuhdistaja Martin Lutherin työn keskuspaikka.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-sachsen-anhalt-a864473c.jpg',
@@ -883,7 +883,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Berlin": {
       lyhyt: "Berliinin yöelämä on legendaarista – klubit, kuten Berghain, aukeavat vasta puolilta öin ja pyörivät päivään asti!",
-      pitka: "Berliinistä tuli 1871 tuoreen Saksan keisarikunnan pääkaupunki, ja seuraavat pari vuotta kaupunki eli railakasta rakennus- ja pörssibuumia, jota kutsutaan nimellä Gründerzeit – rahaa virtasi kaupunkiin Ranskalta saaduista sotakorvauksista. Samana vuonna kun isoisä matkusti Eurooppaan, buumi romahti pörssikriisiin, jota kutsutaan Gründerkrachiksi: toukokuussa 1873 osakekurssit vaipuivat joka puolella Eurooppaa, ja moni äkkirikastunut menetti omaisuutensa yhtä nopeasti kuin oli sen saanut. Nykyään entisistä tehdaskortteleista on tullut klubeja ja galleria-alueita, ja kaupungin yöelämä elää edelleen samasta rajattomasta energiasta. Berliini on ainoa osavaltio, joka on samalla myös kokonainen kaupunki – ja koko Saksan pääkaupunki jo toista kertaa historiassa.",
+      pitka: `Berliini on Saksan pääkaupunki ja samalla kaupunkivaltio, joka on yksi Saksan osavaltioista. Siellä asuu noin 3,7 miljoonaa ihmistä, ja Brandenburgin osavaltio ympäröi kaupunkia. Berliinin muuri rakennettiin vuonna 1961, ja se jakoi kaupungin kahtia, kunnes muuri murtui 9. marraskuuta 1989. Brandenburgin portti on yksi kaupungin tunnetuimmista symboleista. Saksan parlamentti, liittopäivät, kokoontuu Reichstagin eli valtiopäivätalon rakennuksessa. Fernsehturm-televisiotorni on 368 metriä korkea, ja se valmistui vuonna 1969. Spree-joki virtaa keskustan läpi ja yhtyy länsiosassa Havel-jokeen. Berliinissä on kolme Unescon maailmanperintökohdetta, ja Museosaari on yksi niistä. Noin kolmannes kaupungin pinta-alasta on metsiä, puistoja, puutarhoja, jokia, kanavia ja järviä.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/deu-maakunta-berlin-8be6fb1a.jpg',
