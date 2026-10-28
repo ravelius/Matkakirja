@@ -682,3 +682,12 @@ OMISTAJAN PÄÄTÖS 27.10. 10.56 voimassa: valon leivonta SEIS, muoto havainteen
 - aja_v110_pari.zsh (LIPPA 0,15 oletus, vaikutukseton): parit havainteen kamera havainne-editori-20261028-232618, pelikamera -233124 → KK 23.3x.
 - 02/05: aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" ajossa (havainteen kamera puuttui). Auki yhä: pelikameran muurit korkeammat kuin
   havainteessa (harja kuvan yläpuolella), 05:n vasemman yläkulman kirkas nauha (lähde selvitettävä; värikoe varikoodi_raystas.py-mallilla).
+
+## LISÄYS 52 klo 23.4x (28.10.): 02/05 pari havainteen kameralla KK:lle; pakettivärikoe → muurit tausta-v57:ssä, harjat muurikate-v16:ssa
+- aja_v111_pari.zsh TESTIKAMERA_02/_05="4 6.5 16 45" → havainne-editori-20261028-233608 (harja kuvassa, kiekot näkyvät 02:n muurilla) → KK 23.4x.
+- UUSI tyokalut/varikoodi_paketti.py + aja_v111_koe.zsh (juuri-v111k, koe-v111/): paketti kerrallaan tasavärillä. Tulos 234526: lattia + muurit =
+  kielletty-tausta-v57 (yksikerros-v95), muurin harjat + pilasterit = kielletty-muurikate-v16, portit = kielletty-rakennukset-v48. Ladatut paketit
+  unity.logista: ulkorengas-v5, tausta-v57, rakennukset-v48, lahipuut-v6, kulmatorni-v1b (+ muurikate).
+- OPPI: peli KORVAA tunnetut materiaalinimet omillaan → baseColorFactor-muutokset tunnetuille nimille eivät näy (koe ilman nimenvaihtoa 234252
+  ei muuttunut lainkaan). Sävymuutos = oma materiaalinimi (kuten V4_raystas_lippa_varjo). Tarkista tämä myös aiemmista FV/LIPPA/KULTA-säädöistä.
+- Auki: pelikameralla (ilman TESTIKAMERAa) muurit yhä korkeammat kuin havainteessa; 02:n vasemmat pilasterihatut kirkkaat (muurikate-v16).
