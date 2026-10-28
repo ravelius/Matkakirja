@@ -3124,3 +3124,7 @@ KK:n kortti, pari 4, sanatarkasti 18.42: "Suurten kaupunkien nimet ensin. Yksitt
 ## LIITO OK, VARTIJA LÄHEMMÄKSI; KIVET OK, KATOT IRTI JA LIIAN KORKEALLA (omistaja 28.10. klo 18.57) (28.10.2026 klo 18.58)
 
 KK:n kortit, sanatarkasti. Liito #1222: "Liito Ok. Vartijan pitää vain olla lähempänä jotta puyi onnistuu lentämään vartijan yli" → PK: vartija lähemmäksi, liito junaan. Kujakivet v5: "Kivet Ok mutta katot näyttävät olevan irti ja liian korkealla" → LR korjaa katot ensin, sitten valo VS+LR. J4-v3 KK palautti LR:lle (kaiverrukset ja leimat eivät näy Codexin kuvan tavoin).
+
+## STRIIMIKARTAN KAUPUNKIEN NIMET PIENEMMIKSI (omistaja 28.10. klo 21.03) (28.10.2026 klo 21.03)
+
+KK:n välitys, sanatarkasti: "Nimet ovat aivan liian isolla". Tavoite (KK): porrastuksen kaupunkien nimet selvästi pienemmiksi ja hillityiksi (kokoluokka kuten vanha LONTOO); kartta ei saa näyttää täyteen kirjoitetulta. KS pari 8 (Lontoon pallokorjauksen kanssa) → KK → omistaja; TF 213 odottaa sitä.
