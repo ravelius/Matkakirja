@@ -3023,3 +3023,7 @@ Omistaja (KK) sanatarkasti: 1) 'suurennuslasissa kartta kohdassa on kohta nimet,
 ## Valikoiden pohjavärit; KK:n kortit vasta Remote Controlin kanssa (omistaja 28.10. 09.45) (28.10.2026 klo 09.46)
 
 Omistaja (KK): NUI:n valikoiden pohjavärit hyväksytty: Linssit vaalea violetti, Pelit vaalea kulta, Kartta vaalea merensininen; hyvin kevyt sävy välilehdessä ja pohjassa. Toinen päätös 09.45: KK ei esitä korttia ennen kuin sen oma Remote Control on päällä (muuten omistaja ei voi vastata etänä). Postivahti kytkee RC:n nollauksessa; KK tarkistaa ennen ensimmäistä korttia.
+
+## Huohotukset: omistaja ajaa poiston itse (28.10. 09.4x–09.5x) (28.10.2026 klo 09.51)
+
+Omistaja (KK) sanatarkasti: 'anna koodi jolla poistan hengitysäänet' / 'sinulla oli tuo komento jo aiemmin minulle' / 'mutta jos ei heti löydy niin ei niitä tarvitse poistaa' (kumoaa 07.33 'Ei nyt'). KK antoi komennon: ämpärin 7 huohotus-mp3:ta (juoksupeli/aanet-v1/takaa-ajaja/huohotus-1…3, aanet-v2/hahmo/huohotus-1…4); kuiva-ajo osui täsmälleen niihin. Omistaja ajaa itse.
